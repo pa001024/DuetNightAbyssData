@@ -11988,14 +11988,14 @@
     "name": "Into the Nightveil",
     "icon": "T_Mounts_Gesture_0701",
     "rarity": 6,
-    "desc": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight."
+    "desc": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight.\nNo Reputation Perk is required to pilot this mount."
   },
   {
     "id": 49990,
     "name": "Nekral",
     "icon": "T_Mounts_Gesture_0703",
     "rarity": 6,
-    "desc": "Night draws its veil across heaven and earth. Hoarse whistles echo beneath it."
+    "desc": "Night draws its veil across heaven and earth. Hoarse whistles echo beneath it.\nNo Reputation Perk is required to pilot this mount."
   },
   {
     "id": 49991,
@@ -15427,8 +15427,8 @@
         ]
       }
     ],
-    "desc": "A kind of pigment suitable for oil painting.",
-    "desc2": "A kind of pigment perfect for painting starry skies."
+    "desc": "White pigment, suitable for oil painting.",
+    "desc2": "White pigment, perfect for painting starry skies."
   },
   {
     "id": 3000019,

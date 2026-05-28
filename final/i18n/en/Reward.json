@@ -35681,12 +35681,6 @@
         "t": "Resource",
         "c": 6,
         "n": "Weapon Manual Ⅲ"
-      },
-      {
-        "id": 1001201,
-        "t": "Resource",
-        "c": 30,
-        "n": "Thought: Phoxhunter – Umbro"
       }
     ]
   },
@@ -35717,12 +35711,6 @@
         "t": "Resource",
         "c": 6,
         "n": "Combat Melody Ⅲ"
-      },
-      {
-        "id": 1001201,
-        "t": "Resource",
-        "c": 30,
-        "n": "Thought: Phoxhunter – Umbro"
       }
     ]
   },
@@ -35759,12 +35747,6 @@
         "t": "Resource",
         "c": 5,
         "n": "Combat Melody Ⅲ"
-      },
-      {
-        "id": 1001201,
-        "t": "Resource",
-        "c": 30,
-        "n": "Thought: Phoxhunter – Umbro"
       }
     ]
   },
@@ -35795,12 +35777,6 @@
         "t": "Resource",
         "c": 6,
         "n": "Combat Melody Ⅲ"
-      },
-      {
-        "id": 1001201,
-        "t": "Resource",
-        "c": 30,
-        "n": "Thought: Phoxhunter – Umbro"
       }
     ]
   },
@@ -35845,10 +35821,27 @@
         "n": "Soulprint: Tapestry"
       },
       {
-        "id": 1001201,
-        "t": "Resource",
-        "c": 60,
-        "n": "Thought: Phoxhunter – Umbro"
+        "id": 50549,
+        "t": "Reward",
+        "c": 1
+      }
+    ]
+  },
+  {
+    "id": 50549,
+    "m": "Gender",
+    "icon": "T_Resource_CallPhantom_Empty",
+    "child": [
+      {
+        "id": 1201,
+        "t": "Char",
+        "c": 1,
+        "p": 1
+      },
+      {
+        "id": 120101,
+        "t": "Char",
+        "c": 1
       }
     ]
   },
@@ -66616,11 +66609,11 @@
         "n": "Weapon Manual Ⅳ"
       },
       {
-        "id": 209,
+        "id": 2014,
         "t": "Resource",
         "c": 2,
         "p": 2,
-        "n": "Commission Manual: Volume Ⅳ"
+        "n": "Combat Melody Ⅳ"
       },
       {
         "id": 101,
@@ -66720,16 +66713,16 @@
         "n": "Coin"
       },
       {
-        "id": 209,
+        "id": 2014,
         "t": "Resource",
-        "c": 40000,
+        "c": 2,
         "p": 2,
-        "n": "Commission Manual: Volume Ⅳ"
+        "n": "Combat Melody Ⅳ"
       },
       {
         "id": 2010,
         "t": "Resource",
-        "c": 40000,
+        "c": 2,
         "p": 2,
         "n": "Weapon Manual Ⅳ"
       },
@@ -69632,7 +69625,7 @@
         "c": 1,
         "p": 10,
         "d": 1,
-        "n": "Focus·Celerity"
+        "n": "Focus – Celerity"
       },
       {
         "id": 52011,
@@ -69640,7 +69633,7 @@
         "c": 1,
         "p": 30,
         "d": 1,
-        "n": "Rage·Momentum"
+        "n": "Rage – Momentum"
       },
       {
         "id": 52012,
@@ -69648,7 +69641,7 @@
         "c": 1,
         "p": 30,
         "d": 1,
-        "n": "Impetus·Dropshot"
+        "n": "Impetus – Dropshot"
       }
     ]
   },
@@ -87877,14 +87870,14 @@
         "c": 1,
         "p": 8,
         "d": 1,
-        "n": "Resolve·Volition"
+        "n": "Resolve – Volition"
       },
       {
         "id": 41757,
         "t": "Mod",
         "c": 1,
         "p": 200,
-        "n": "Resolve·Volition"
+        "n": "Resolve – Volition"
       },
       {
         "id": 41751,
@@ -87989,14 +87982,14 @@
         "c": 1,
         "p": 8,
         "d": 1,
-        "n": "Morale·Refinement"
+        "n": "Morale – Refinement"
       },
       {
         "id": 41747,
         "t": "Mod",
         "c": 1,
         "p": 200,
-        "n": "Morale·Refinement"
+        "n": "Morale – Refinement"
       },
       {
         "id": 41741,
@@ -88045,14 +88038,14 @@
         "c": 1,
         "p": 8,
         "d": 1,
-        "n": "Volition·Awakening"
+        "n": "Volition – Awakening"
       },
       {
         "id": 41727,
         "t": "Mod",
         "c": 1,
         "p": 200,
-        "n": "Volition·Awakening"
+        "n": "Volition – Awakening"
       },
       {
         "id": 41721,
@@ -88101,14 +88094,14 @@
         "c": 1,
         "p": 8,
         "d": 1,
-        "n": "Volition·Refinement"
+        "n": "Volition – Refinement"
       },
       {
         "id": 41767,
         "t": "Mod",
         "c": 1,
         "p": 200,
-        "n": "Volition·Refinement"
+        "n": "Volition – Refinement"
       },
       {
         "id": 41761,
@@ -88157,14 +88150,14 @@
         "c": 1,
         "p": 8,
         "d": 1,
-        "n": "Morale·Volition"
+        "n": "Morale – Volition"
       },
       {
         "id": 41717,
         "t": "Mod",
         "c": 1,
         "p": 200,
-        "n": "Morale·Volition"
+        "n": "Morale – Volition"
       },
       {
         "id": 41711,
@@ -88213,7 +88206,7 @@
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Resolve·Volition"
+        "n": "Resolve – Volition"
       },
       {
         "id": 102,
@@ -88255,7 +88248,7 @@
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Morale·Refinement"
+        "n": "Morale – Refinement"
       },
       {
         "id": 102,
@@ -88276,7 +88269,7 @@
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Volition·Awakening"
+        "n": "Volition – Awakening"
       },
       {
         "id": 102,
@@ -88297,7 +88290,7 @@
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Volition·Refinement"
+        "n": "Volition – Refinement"
       },
       {
         "id": 102,
@@ -88318,7 +88311,7 @@
         "c": 1,
         "p": 1,
         "d": 1,
-        "n": "Morale·Volition"
+        "n": "Morale – Volition"
       },
       {
         "id": 102,

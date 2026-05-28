@@ -91,32 +91,25 @@ function M:RecvParam(RetCode, EventId, LeftTime, bInvited)
   end
 end
 
-function M:SendGetGuildInfo(GuildId, bCached)
-  self.bCachedCurrGuild = bCached
-  if bCached then
-    local RequestGuildId = tonumber(GuildId or self:GetAvatar() and self:GetAvatar().GuildId or 0) or 0
-    self._CachedCurrGuildInfoRequestMap = self._CachedCurrGuildInfoRequestMap or {}
-    self._CachedCurrGuildInfoRequestMap[RequestGuildId] = true
+function M:SendGetGuildInfo(GuildId)
+  GuildId = GuildId or self:GetAvatar().GuildId
+  if not GuildId then
+    DebugPrint(ErrorTag, "SendGetGuildInfo:没有公会ID")
+    return
   end
   self:GetAvatar():GetGuildInfo(nil, GuildId)
 end
 
 function M:RecvGetGuildInfo(SrcParams, Ret, ServerGuildInfo)
-  local Info = GuildFullInfo.New(ServerGuildInfo)
-  local bCachedCurrGuild = self.bCachedCurrGuild
-  local RequestGuildId = tonumber(SrcParams and SrcParams[1] or 0) or 0
-  local InfoGuildId = tonumber(Info and Info.GuildId or RequestGuildId) or 0
-  if self._CachedCurrGuildInfoRequestMap and self._CachedCurrGuildInfoRequestMap[InfoGuildId] then
-    bCachedCurrGuild = true
-    self._CachedCurrGuildInfoRequestMap[InfoGuildId] = nil
-  end
-  if Ret == ErrorCode.RET_SUCCESS and bCachedCurrGuild and InfoGuildId == tonumber(self:GetAvatar() and self:GetAvatar().GuildId or 0) then
-    self:GetModel():SetCurrGuild(Info)
-    if Info then
+  local Info
+  local GuildId = table.unpack(SrcParams)
+  if Ret == ErrorCode.RET_SUCCESS then
+    Info = GuildFullInfo.New(ServerGuildInfo)
+    if GuildId == self:GetAvatar().GuildId then
+      self.GetModel():SetCurrGuild(Info)
       ChatController:LoadGuildChannelSnapshot(nil, Info.GuildMessages, Info.GuildId)
     end
   end
-  self.bCachedCurrGuild = nil
   self:RecvCommon(Ret, GuildCommon.EventID.OnGetGuildInfo, Info)
 end
 

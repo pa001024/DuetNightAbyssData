@@ -7448,7 +7448,7 @@
   },
   {
     "id": 100446,
-    "name": "神秘人",
+    "name": "Figure mystérieuse",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -22364,6 +22364,10 @@
     "type": "Normal"
   },
   {
+    "id": 700453,
+    "name": "Snow"
+  },
+  {
     "id": 700501,
     "name": "Clara",
     "camp": "NPC",
@@ -24802,7 +24806,7 @@
           },
           {
             "id": 51202227,
-            "content": "<I>Oui. Mais peut-être que quelqu’un d’autre, non.</>",
+            "content": "<I>Moi, ça ne me dérangerait pas. Mais peut-être que quelqu’un d’autre, si.</>",
             "next": 51202228
           }
         ]
@@ -24821,12 +24825,12 @@
       },
       {
         "id": 51202223,
-        "content": "Vous détachez un chèque et le tendez à Leon.",
+        "content": "Vous détachez un chèque et le tendez à Somi.",
         "next": 51202224
       },
       {
         "id": 51202228,
-        "content": "Vous arrachez plusieurs chèques et les tendez à Leon.",
+        "content": "Vous arrachez plusieurs chèques et les tendez à Somi.",
         "next": 51202229
       },
       {
@@ -24896,7 +24900,7 @@
       },
       {
         "id": 51202231,
-        "content": "Felix... joli prénom. Pendant que vous allez acheter les billets, Leon, n’oubliez pas de déposer une plainte au guichet des réclamations. Ce n’est pas trop difficile, j’espère ?",
+        "content": "Felix... joli prénom. Pendant que vous allez acheter les billets, Somi, n’oubliez pas de déposer une plainte au guichet des réclamations. Ce n’est pas trop difficile, j’espère ?",
         "npc": 100001,
         "next": 51202232
       },

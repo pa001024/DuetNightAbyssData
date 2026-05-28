@@ -196,6 +196,12 @@ return {
             startPort = "Out",
             endQuest = "177772045534914953110",
             endPort = "In"
+          },
+          {
+            startQuest = "177772045534914953107",
+            startPort = "QuestStart",
+            endQuest = "1779787486825797",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -331,7 +337,7 @@ return {
             key = "177772045534914953119",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1278.1764313137382, y = 129.93989103299296},
+            pos = {x = 1187.1050027423096, y = 14.225605318707238},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 272640060,
@@ -414,7 +420,7 @@ return {
             key = "177772167199224300208",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 990.8571428571427, y = 44.28571428571433},
+            pos = {x = 942.6428571428569, y = 41.07142857142861},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_HaluojiEnd",
@@ -493,6 +499,23 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["1779787486825797"] = {
+            key = "1779787486825797",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1027.4343706307902, y = -165.2717615717614},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt03/0080_story_the_abandoned_theme.0080_story_the_abandoned_theme'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },

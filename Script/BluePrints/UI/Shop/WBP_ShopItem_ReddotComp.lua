@@ -24,8 +24,8 @@ function Component:UpdateReddotCommon(ShopItemData)
   end
 end
 
-function Component:DecreaseReddotCommon()
-  local ShopTabConf = DataMgr.ShopTabSub[self.ShopItemData.SubTabId]
+function Component:DecreaseReddotCommon(ShopItemData)
+  local ShopTabConf = DataMgr.ShopTabSub[ShopItemData.SubTabId]
   local NodeName = ShopTabConf and ShopTabConf.ReddotNode
   if NodeName and not self.IsFree and not self.bNewShopItem and ReddotManager.DecreaseLeafNodeCount(ShopTabConf.ReddotNode, 1, {
     ShopItemId = self.ShopId

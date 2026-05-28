@@ -129052,7 +129052,7 @@ local QuestGuidePointLoc = {
   },
   Npc_Bai_322480136 = {
     X = -32980.0,
-    Y = -6530.0,
+    Y = -6525.0,
     Z = 2208.0,
     R = 0.0,
     SubRegionId = 106001,
@@ -131437,7 +131437,7 @@ local QuestGuidePointLoc = {
   },
   Mechanism_Storeroom_2480211 = {
     X = -17097.730469,
-    Y = -4634.859863,
+    Y = -4664.859863,
     Z = 1328.599976,
     R = 0.0,
     SubRegionId = 106001,
@@ -135405,26 +135405,26 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   Drop_Dengdai_272480422 = {
-    X = -17220.0,
-    Y = -4960.0,
-    Z = 1120.0,
+    X = -20637.583984,
+    Y = -67.625549,
+    Z = 1064.999878,
     R = 0.0,
     SubRegionId = 106001,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
   },
   Npc_aoge_272480423 = {
-    X = -16870.0,
-    Y = -4700.0,
-    Z = 1010.0,
+    X = -20767.583984,
+    Y = 62.374451,
+    Z = 1005.000061,
     R = 0.0,
     SubRegionId = 106001,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
   },
   Npc_Xiaobai_272480424 = {
-    X = -17270.0,
-    Y = -4850.0,
+    X = -20760.0,
+    Y = -180.0,
     Z = 1010.0,
     R = 0.0,
     SubRegionId = 106001,
@@ -135432,9 +135432,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
   },
   BP_Dengdai_272480422 = {
-    X = -17220.0,
-    Y = -4960.0,
-    Z = 1240.0,
+    X = -20637.583984,
+    Y = -67.625549,
+    Z = 1064.999878,
     R = 0.0,
     SubRegionId = 106001,
     FloorId = 0,
@@ -135448,6 +135448,15 @@ local QuestGuidePointLoc = {
     SubRegionId = 106001,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bai_Kong_242480426 = {
+    X = -32980.0,
+    Y = -6525.0,
+    Z = 2208.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
   }
 }
 return QuestGuidePointLoc

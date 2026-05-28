@@ -15,7 +15,7 @@ function M:Construct()
   self.SearchCoolDownPercent = 0
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildSearch then
-      self:GuildListSearch(...)
+      self:GuildListSearchSuccessful(...)
     elseif EventId == GuildCommon.EventID.OnGuildSearchFail then
       self:GuildListSearchFail()
     elseif EventId == GuildCommon.EventID.OnGuildGetListCDTick then
@@ -74,14 +74,19 @@ end
 
 function M:SetData(AllGuildList, SetGuildInfoFuncInfo, Parent)
   self.Parent = Parent
-  if self.IsRefresh then
-    self.IsRefresh = false
-    self:PlayAnimation(self.Refresh)
-  end
   self.SetGuildInfoFuncInfo = SetGuildInfoFuncInfo
   self.AllGuildList = AllGuildList
   self.CurShowGuildList = self.AllGuildList
-  self:ShowGuildList()
+  if self.DelayToShowContentItemTimer then
+    self:RemoveTimer(self.DelayToShowContentItemTimer)
+  end
+  if self.IsRefresh then
+    self.IsRefresh = false
+    self:PlayAnimation(self.Refresh)
+    self:DelayShowGuildList()
+  else
+    self:ShowGuildList()
+  end
   self:UpdateGamePadIcon()
   self.Bar_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
@@ -110,6 +115,7 @@ function M:ShowGuildList()
     self.List_Guild:AddItem(Content)
     if 1 == Index then
       Content.bSelected = true
+      Content.IsFocus = true
       self.SetGuildInfoFuncInfo.Func(self.SetGuildInfoFuncInfo.Obj, Content)
     else
       Content.bSelected = false
@@ -141,6 +147,9 @@ function M:ShowGuildList()
       self.Bar_CD:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
+  end
+  if (self.List_Guild:HasAnyUserFocus() or self.List_Guild:HasFocusedDescendants() or self.ParentWidget:HasAnyUserFocus()) and 0 == #self.CurShowGuildList then
+    self.ParentWidget:SetFocus()
   end
 end
 
@@ -178,7 +187,7 @@ function M:ForbiddenSearchGuild()
   end
 end
 
-function M:GuildListSearch(GuildList)
+function M:GuildListSearchSuccessful(GuildList)
   self.SearchGuildList = GuildList
   self.CurShowGuildList = self.SearchGuildList
   self:ShowGuildList()
@@ -194,6 +203,7 @@ function M:GuildListSearchFail()
   self.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Bar_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.ParentWidget:SetFocus()
 end
 
 function M:JoinAllGuild()
@@ -215,8 +225,8 @@ function M:SearcRefreshGuildList()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_RefreshOnCooldown"))
     return
   end
-  GuildController:SendGuildGetList()
   self.IsRefresh = true
+  GuildController:SendGuildGetList()
 end
 
 function M:ForbiddenSearcRefreshGuildList()
@@ -341,6 +351,100 @@ function M:UpdateGamePadIcon(CurInputDevice, CurGamepadName)
     self.Panel_Controller_Search:SetVisibility(UIConst.VisibilityOp.Visable)
   else
     self.Panel_Controller_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:DelayShowGuildList()
+  self.List_Guild:ClearListItems()
+  self.DelayItemIndex = 1
+  self.DelayToShowContentItemTimer = self:AddTimer(0.06, function()
+    if self.DelayItemIndex > #self.CurShowGuildList then
+      if self.DelayItemIndex <= self:GetMaxItemNumPerPanel() then
+        local Content = NewObject(UIUtils.GetCommonItemContentClass())
+        Content.IsEmpty = true
+        Content.Parent = self
+        self.List_Guild:AddItem(Content)
+      else
+        if self:GetMaxItemNumPerPanel() > #self.CurShowGuildList then
+          self.List_Guild:SetEmptyGridItemCount(self:GetMaxItemNumPerPanel() - #self.CurShowGuildList)
+        else
+          self.List_Guild:SetEmptyGridItemCount(0)
+        end
+        if self.DelayToShowContentItemTimer then
+          self:RemoveTimer(self.DelayToShowContentItemTimer)
+          self.DelayToShowContentItemTimer = nil
+        end
+      end
+    else
+      local Data = self.CurShowGuildList[self.DelayItemIndex]
+      local Content = NewObject(UIUtils.GetCommonItemContentClass())
+      Content.Index = self.DelayItemIndex
+      Content.ClickCallbackInfo = {
+        Func = self.OnGuildListItemClick,
+        Obj = self
+      }
+      Content.Parent = self
+      Content.Name = Data.Name
+      Content.AuditStatus = Data.AuditStatus
+      Content.MemberLimit = Data.MemberLimit
+      Content.GuildId = Data.GuildId
+      Content.Declaration = Data.Declaration
+      Content.Level = Data.Level
+      Content.MemberCount = Data.MemberCount
+      Content.LogoInfo = Data.LogoInfo
+      Content.Score = Data.Score
+      Content.ActivityLevel = Data.ActivityLevel
+      Content.AutoAgreeJoinRequest = Data.AutoAgreeJoinRequest
+      self.List_Guild:AddItem(Content)
+      if 1 == self.DelayItemIndex then
+        Content.bSelected = true
+        Content.IsFocus = true
+        self.SetGuildInfoFuncInfo.Func(self.SetGuildInfoFuncInfo.Obj, Content)
+      else
+        Content.bSelected = false
+      end
+    end
+    self.DelayItemIndex = self.DelayItemIndex + 1
+  end, true, nil, nil, true)
+  if 0 == #self.CurShowGuildList then
+    self.WS_Type:SetActiveWidgetIndex(1)
+    self.Text_Empty:SetText(GText("UI_NoGuild"))
+    self.SetGuildInfoFuncInfo.Func(self.SetGuildInfoFuncInfo.Obj, nil)
+    self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Bar_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.WS_Type:SetActiveWidgetIndex(0)
+    self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if #self.CurShowGuildList ~= #self.AllGuildList and 1 == #self.CurShowGuildList then
+      self.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Bar_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      self.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Bar_CD:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  end
+  if (self.List_Guild:HasAnyUserFocus() or self.List_Guild:HasFocusedDescendants() or self.ParentWidget:HasAnyUserFocus()) and 0 == #self.CurShowGuildList then
+    self.ParentWidget:SetFocus()
+  end
+end
+
+function M:GetMaxItemNumPerPanel()
+  if self.MaxItemNumPerPanel then
+    return self.MaxItemNumPerPanel
+  end
+  if self.List_Guild:GetNumItems() > 0 then
+    local ForgeItemWidgets = self.List_Guild:GetDisplayedEntryWidgets()
+    if 0 ~= ForgeItemWidgets:Length() then
+      self.MaxItemNumPerPanel = UIUtils.GetListViewContentMaxCount(self.List_Guild, ForgeItemWidgets)
+      return self.MaxItemNumPerPanel
+    else
+      return 10
+    end
+  else
+    return 10
   end
 end
 

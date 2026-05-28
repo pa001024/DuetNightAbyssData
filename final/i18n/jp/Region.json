@@ -766,7 +766,7 @@
   },
   {
     "id": 1060,
-    "name": "百花车站",
+    "name": "フラワー駅",
     "type": "Main",
     "mapId": 205,
     "mapImage": "WBP_Map_Reg_Chapter03_Station_AG",
@@ -798,7 +798,7 @@
   },
   {
     "id": 1061,
-    "name": "科赛托斯省远郊",
+    "name": "コキュートス領郊外",
     "type": "Main",
     "mapId": 205,
     "mapScale": [
@@ -823,7 +823,7 @@
   },
   {
     "id": 1063,
-    "name": "锻铁厂",
+    "name": "鍛鉄工場",
     "type": "Main",
     "mapId": 206,
     "mapImage": "WBP_Map_Reg_Chapter03_Station_UG",

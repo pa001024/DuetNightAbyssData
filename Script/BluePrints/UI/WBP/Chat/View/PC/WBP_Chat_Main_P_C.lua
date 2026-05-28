@@ -147,6 +147,9 @@ function M:Construct()
     end
     self:InitDefaultFocusWidget(ChatEventType.Team, EventId)
   end)
+  if self.Com_MidKeyTips and self.Com_MidKeyTips.BindOnRemovedFromFocusPathEvent then
+    self.Com_MidKeyTips:BindOnRemovedFromFocusPathEvent(self, self.OnMidKeyTipsFocusLost)
+  end
   if self.Key_DontDisturb then
     self.Key_DontDisturb:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -348,6 +351,9 @@ function M:ResetUI()
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
   self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Group_ListTitle then
+    self.Group_ListTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self.List_Dialog:ClearListItems()
   self.Btn_Sent:SetText("")
 end
@@ -810,6 +816,12 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self:UpdateUIStyleInPlatform()
 end
 
+function M:OnMidKeyTipsFocusLost()
+  if self.FocusStateType == ChatFocusType.ScrollBox then
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+  end
+end
+
 function M:CheckIsOpenHeadBtnList()
   local IsOpenHead = false
   if self.CurrSelectPlayer and IsValid(self.CurrSelectPlayer.UI) then
@@ -997,16 +1009,29 @@ function M:UpdateUIStyleInPlatform()
           Desc = GText("UI_CTL_PlayerOptions")
         })
         if self.CurrSelectChatItem.IsShowCheckPlan and self.CurrSelectChatItem:IsShowCheckPlan() then
-          table.insert(BottomKeyInfo, {
-            KeyInfoList = {
-              {
-                Type = "Img",
-                ImgShortPath = "X",
-                Owner = self
-              }
-            },
-            Desc = GText("UI_CTL_CheckPlan")
-          })
+          if not self.CurrSelectChatItem.MsgWrap.AsyncCombatRoomInfo then
+            table.insert(BottomKeyInfo, {
+              KeyInfoList = {
+                {
+                  Type = "Img",
+                  ImgShortPath = "X",
+                  Owner = self
+                }
+              },
+              Desc = GText("UI_CTL_CheckPlan")
+            })
+          else
+            table.insert(BottomKeyInfo, {
+              KeyInfoList = {
+                {
+                  Type = "Img",
+                  ImgShortPath = "X",
+                  Owner = self
+                }
+              },
+              Desc = GText("UI_Controller_Check")
+            })
+          end
         end
       end
       table.insert(BottomKeyInfo, {
@@ -1303,19 +1328,53 @@ function M:SetFocusStateType(FocusStateType)
   self.FocusStateType = FocusStateType
 end
 
+function M:OnDMPlayerListEmptyShown()
+  if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+    return
+  end
+  if self.FocusStateType ~= ChatFocusType.PlayerList then
+    return
+  end
+  self._PendingRestoreDMPlayerListFocus = true
+  self:SetScrollBoxFocus()
+end
+
+function M:OnDMPlayerListItemsReady()
+  if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+    return
+  end
+  if not self.List_Player or self.List_Player:GetNumItems() <= 0 then
+    return
+  end
+  if not self._PendingRestoreDMPlayerListFocus and self.FocusStateType ~= ChatFocusType.Default then
+    return
+  end
+  self._PendingRestoreDMPlayerListFocus = nil
+  self:SetPlayerListFocus()
+end
+
 function M:SetPlayerListFocus()
   if self.CurrChannel ~= ChatCommon.ChannelDef.Friend and self.CurrChannel ~= ChatCommon.ChannelDef.InTeam then
     return
   end
+  if not self.List_Player or self.List_Player:GetNumItems() <= 0 then
+    if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+      return
+    end
+    self:SetScrollBoxFocus()
+    return
+  end
+  local TargetIndex = math.clamp(self.SelectedPlayerIndex or 0, 0, self.List_Player:GetNumItems() - 1)
   if self.FocusStateType == ChatFocusType.Default then
     if self:HasAnyFocus() then
       self.List_Player:SetFocus()
     end
-    self.List_Player:NavigateToIndex(self.SelectedPlayerIndex or 0)
   else
     self.List_Player:SetFocus()
   end
+  self.List_Player:NavigateToIndex(TargetIndex)
   self:SetFocusStateType(ChatFocusType.PlayerList)
+  self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   self:UpdateUIStyleInPlatform()
 end
 
@@ -1393,10 +1452,16 @@ function M:BP_GetDesiredFocusTarget()
     return self.Com_MidKeyTips
   end
   local IsPlayerListChannel = self.CurrChannel == ChatCommon.ChannelDef.Friend or self.CurrChannel == ChatCommon.ChannelDef.InTeam
-  if FocusStateType == ChatFocusType.PlayerList and IsPlayerListChannel then
+  local bHasPlayerItems = self.List_Player and self.List_Player:GetNumItems() > 0
+  if FocusStateType == ChatFocusType.PlayerList and IsPlayerListChannel and bHasPlayerItems then
     return self.List_Player
   end
-  if self.CurrChannel == ChatCommon.ChannelDef.Friend then
+  if FocusStateType == ChatFocusType.PlayerList and IsPlayerListChannel then
+    self:SetFocusStateType(ChatFocusType.ScrollBox)
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+    return self.Com_MidKeyTips
+  end
+  if self.CurrChannel == ChatCommon.ChannelDef.Friend and bHasPlayerItems then
     return self.List_Player
   end
   if FocusStateType == ChatFocusType.SelectChat then

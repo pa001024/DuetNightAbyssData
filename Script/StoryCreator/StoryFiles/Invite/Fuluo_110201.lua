@@ -118,7 +118,7 @@ return {
               SoundStateType = 0,
               SoundPriority = 1,
               SoundType = 0,
-              SoundPath = "event:/bgm/cbt01/0016_judian",
+              SoundPath = "event:/bgm/1_4/0167_story_fuluo_theme",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},

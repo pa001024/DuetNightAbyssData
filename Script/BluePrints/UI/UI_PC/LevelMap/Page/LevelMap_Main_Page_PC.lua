@@ -29,12 +29,21 @@ function M:Construct()
   self.DispatchId = -1
   self.DispatchAgentList = nil
   ReddotManager.AddListener(DataMgr.ReddotNode.Dispatch.Name, self, self.OnReddotChange)
+  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
+    local MaxFPS = 10
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. MaxFPS)
+    self.bOpenHarmonyUIMaxFPSLimited = true
+  end
 end
 
 function M:Destruct()
   M.Super.Destruct(self)
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   ReddotManager.RemoveListener(DataMgr.ReddotNode.Dispatch.Name, self)
+  if self.bOpenHarmonyUIMaxFPSLimited then
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS 0")
+    self.bOpenHarmonyUIMaxFPSLimited = false
+  end
 end
 
 function M:OnLoaded(...)
@@ -453,6 +462,7 @@ function M:OnTabItemClick(TabWidget)
 end
 
 function M:UpdateWildMapKeys()
+  self:UpdateDispatchKeyVisibility()
   if not self.DeviceInPc or not self.RealWildMap then
     return
   end
@@ -490,6 +500,9 @@ function M:UpdateWildMapKeys()
   else
     self.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
+end
+
+function M:UpdateDispatchKeyVisibility()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -912,6 +925,7 @@ function M:OnClickDispatch()
   self.Panel_UI:SetVisibility(ESlateVisibility.Collapsed)
   self:ShoworHideTopTab(false)
   self.DispatchList = self:CreateWidgetNew("DispatchList")
+  self.OriginalRegionId = self.RealWildMap.RegionID
   if self.DispatchList == nil then
     return
   end
@@ -932,7 +946,7 @@ function M:OnCloseDispatch()
   self.DispatchDetail = nil
   self.DispatchList = nil
   self.Dispatch = nil
-  self.RealWildMap:BackToOriginalRegion()
+  self.RealWildMap:BackToOriginalRegion(self.OriginalRegionId)
   self:InitBottomTab()
 end
 

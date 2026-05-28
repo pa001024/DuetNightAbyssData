@@ -994,6 +994,12 @@ return {
             startPort = "Out",
             endQuest = "17784941294453417288",
             endPort = "In"
+          },
+          {
+            startQuest = "176777803505410204178",
+            startPort = "QuestStart",
+            endQuest = "177980144408615026895",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1114,6 +1120,23 @@ return {
               MessageType = "GameMode",
               MessageContent = "ShowAllYWDoor",
               UnitId = -1
+            }
+          },
+          ["177980144408615026895"] = {
+            key = "177980144408615026895",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 919.4782608695651, y = -30.459096109839827},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },
@@ -3697,9 +3720,9 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
             }
           }
         },
@@ -3765,6 +3788,12 @@ return {
             startQuest = "17796902324701937413",
             startPort = "Out",
             endQuest = "177451403108812170",
+            endPort = "In"
+          },
+          {
+            startQuest = "177451402999412083",
+            startPort = "QuestStart",
+            endQuest = "177980054136812121858",
             endPort = "In"
           }
         },
@@ -3845,7 +3874,7 @@ return {
             key = "17796902324701937413",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 999.5, y = 284.75000000000006},
+            pos = {x = 997.4310344827586, y = 298.198275862069},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_ZLTalk01",
@@ -3854,6 +3883,23 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = true,
               IsWhite = false
+            }
+          },
+          ["177980054136812121858"] = {
+            key = "177980054136812121858",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 788.6518732175269, y = 102.6179154783511},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0169_cs_tiaoche.0169_cs_tiaoche'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },

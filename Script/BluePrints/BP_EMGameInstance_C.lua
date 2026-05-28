@@ -1739,8 +1739,23 @@ function BP_EMGameInstance_C:UnBindGamepadEvent()
   end
 end
 
+local function ParseGMBlockActivity(BlockActivity)
+  local Result = {}
+  if not BlockActivity or "" == BlockActivity then
+    return Result
+  end
+  for ActivityIdStr in string.gmatch(tostring(BlockActivity), "[^,]+") do
+    local ActivityId = tonumber(ActivityIdStr)
+    if ActivityId then
+      Result[ActivityId] = true
+    end
+  end
+  return Result
+end
+
 function BP_EMGameInstance_C:LoadGMHyperLink()
   self.GMHyperLink = ""
+  self.GMBlockActivityMap = {}
   local Path = "/PakJumpUrl/PakJumpUrl.json"
   CdnTool:GetGMUrlLink(Path, function(UrlLinkTable)
     DebugPrint("ReceiveInit GetGMUrlLink enter callback")
@@ -1749,6 +1764,7 @@ function BP_EMGameInstance_C:LoadGMHyperLink()
       for _, Info in pairs(UrlLinkTable) do
         DebugPrint("ReceiveInit GetGMUrlLink enter callback print ChannelID: ", Info.ChannelId)
         DebugPrint("ReceiveInit GetGMUrlLink enter callback print MirrorChannelId: ", Info.ImgChannelId)
+        DebugPrint("ReceiveInit GetGMUrlLink enter callback print blockActivity: ", Info.blockActivity)
         if Info.ChannelId and Info.ChannelId == HeroUSDKSubsystem(self):GetChannelId() then
           DebugPrint("ReceiveInit GetGMUrlLink enter callback ChannelID matched: ", Info.ChannelId)
           local MirrorChannelID = Info.ImgChannelId
@@ -1760,7 +1776,9 @@ function BP_EMGameInstance_C:LoadGMHyperLink()
           if MirrorChannelID == SDKMirrorChannelID then
             DebugPrint("ReceiveInit GetGMUrlLink enter callback MirrorChannelID matched: ", MirrorChannelID)
             self.GMHyperLink = Info.JumpUrl or ""
+            self.GMBlockActivityMap = ParseGMBlockActivity(Info.blockActivity)
             DebugPrint("ReceiveInit GetGMUrlLink enter callback Info.JumpUrl: ", Info.JumpUrl)
+            DebugPrint("ReceiveInit GetGMUrlLink enter callback Info.blockActivity: ", Info.blockActivity)
             break
           end
         end
@@ -2630,38 +2648,6 @@ function BP_EMGameInstance_C:OnTalkHiddenGameUIChange()
 end
 
 function BP_EMGameInstance_C:OnConditionComplete(ConditionId)
-  if DataMgr.ConditionId2ModArchiveId and DataMgr.ConditionId2ModArchiveId[ConditionId] then
-    for _, ModArchiveId in pairs(DataMgr.ConditionId2ModArchiveId[ConditionId]) do
-      if ModArchiveId then
-        local ModArchiveInfo = DataMgr.ModGuideBookArchive[ModArchiveId]
-        if ModArchiveInfo then
-          local NewNum = #ModArchiveInfo.ModList
-          local ReddotNode = DataMgr.ModGuideBookArchiveTab[ModArchiveInfo.TabId].ReddotNode
-          if not ReddotManager.GetTreeNode("ModArchive") then
-            ReddotManager.AddNodeEx("ModArchive")
-          end
-          local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
-          CacheDetail = CacheDetail or {}
-          if not CacheDetail.NewNum then
-            CacheDetail.NewNum = 0
-          end
-          if not CacheDetail.States then
-            CacheDetail.States = {}
-          end
-          for i = 1, #ModArchiveInfo.ModList do
-            local ModId = ModArchiveInfo.ModList[i]
-            if not CacheDetail.States[ModId] then
-              CacheDetail.States[ModId] = true
-            else
-              NewNum = NewNum - 1
-            end
-          end
-          CacheDetail.NewNum = CacheDetail.NewNum + NewNum
-          ReddotManager.IncreaseLeafNodeCount(ReddotNode, NewNum, CacheDetail)
-        end
-      end
-    end
-  end
 end
 
 function BP_EMGameInstance_C:CloseLoadingUI()

@@ -390,7 +390,7 @@ function RegionDataMgrSubsystem_C:GetQuestChainData(QuestChainId)
 end
 
 function RegionDataMgrSubsystem_C:DeleteQuestChainDataNotInClientCache(QuestChainId)
-  local Table = self.DataPool.QuestChainId2Data[QuestChainId]
+  local Table = CommonUtils.DeepCopy(self.DataPool.QuestChainId2Data[QuestChainId])
   if not Table then
     return
   end

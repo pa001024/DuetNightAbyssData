@@ -5,7 +5,7 @@ function M:OnLoaded(OwnerPlayer)
   self.OwnerPlayer = OwnerPlayer
   self:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:AddTimer(1.6, function()
-    self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     self:StopAllAnimations()
     self:PlayAnimation(self.In)
   end, false, 0, "PlayInAnim")

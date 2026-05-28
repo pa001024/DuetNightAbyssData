@@ -2723,7 +2723,7 @@
   },
   {
     "id": 151717,
-    "n": "Morale·Volition",
+    "n": "Morale – Volition",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2735,7 +2735,7 @@
     "x": [
       {
         "id": 41717,
-        "n": "Morale·Volition",
+        "n": "Morale – Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -2828,7 +2828,7 @@
   },
   {
     "id": 151727,
-    "n": "Volition·Awakening",
+    "n": "Volition – Awakening",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -2840,7 +2840,7 @@
     "x": [
       {
         "id": 41727,
-        "n": "Volition·Awakening",
+        "n": "Volition – Awakening",
         "c": 5,
         "t": "Mod"
       }
@@ -3092,7 +3092,7 @@
   },
   {
     "id": 151747,
-    "n": "Morale·Refinement",
+    "n": "Morale – Refinement",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3104,7 +3104,7 @@
     "x": [
       {
         "id": 41747,
-        "n": "Morale·Refinement",
+        "n": "Morale – Refinement",
         "c": 5,
         "t": "Mod"
       }
@@ -3251,7 +3251,7 @@
   },
   {
     "id": 151757,
-    "n": "Resolve·Volition",
+    "n": "Resolve – Volition",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3263,7 +3263,7 @@
     "x": [
       {
         "id": 41757,
-        "n": "Resolve·Volition",
+        "n": "Resolve – Volition",
         "c": 5,
         "t": "Mod"
       }
@@ -3410,7 +3410,7 @@
   },
   {
     "id": 151767,
-    "n": "Volition·Refinement",
+    "n": "Volition – Refinement",
     "r": 5,
     "v": "1.0",
     "t": "Mod",
@@ -3422,7 +3422,7 @@
     "x": [
       {
         "id": 41767,
-        "n": "Volition·Refinement",
+        "n": "Volition – Refinement",
         "c": 5,
         "t": "Mod"
       }
@@ -3989,7 +3989,7 @@
   },
   {
     "id": 152010,
-    "n": "Focus·Celerity",
+    "n": "Focus – Celerity",
     "r": 5,
     "v": "1.4",
     "t": "Mod",
@@ -4016,7 +4016,7 @@
   },
   {
     "id": 152011,
-    "n": "Rage·Momentum",
+    "n": "Rage – Momentum",
     "r": 5,
     "v": "1.4",
     "t": "Mod",
@@ -4043,7 +4043,7 @@
   },
   {
     "id": 152012,
-    "n": "Impetus·Dropshot",
+    "n": "Impetus – Dropshot",
     "r": 5,
     "v": "1.4",
     "t": "Mod",
@@ -4178,7 +4178,7 @@
   },
   {
     "id": 152204,
-    "n": "Fortune·Threshold",
+    "n": "Fortune – Threshold",
     "r": 5,
     "v": "1.4",
     "t": "Mod",

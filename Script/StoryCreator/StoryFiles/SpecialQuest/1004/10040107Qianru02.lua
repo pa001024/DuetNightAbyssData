@@ -567,6 +567,18 @@ return {
             startPort = "Out",
             endQuest = "17797087841102907241",
             endPort = "In"
+          },
+          {
+            startQuest = "177815586490024644493",
+            startPort = "Out",
+            endQuest = "177979088912111148130",
+            endPort = "In"
+          },
+          {
+            startQuest = "177979088912111148130",
+            startPort = "Out",
+            endQuest = "177979065558410179828",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1103,6 +1115,20 @@ return {
               GuideType = "M",
               GuidePointName = "Mechanism_QiaobanGuide_272890116"
             }
+          },
+          ["177979065558410179828"] = {
+            key = "177979065558410179828",
+            type = "ShowGuideMainNode",
+            name = "显示图文引导",
+            pos = {x = 1093.5, y = 231.375},
+            propsData = {GuideId = 154}
+          },
+          ["177979088912111148130"] = {
+            key = "177979088912111148130",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 798, y = 295.875},
+            propsData = {WaitTime = 2}
           }
         },
         commentData = {}

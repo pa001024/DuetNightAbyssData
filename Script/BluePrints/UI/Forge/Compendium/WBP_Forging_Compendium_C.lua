@@ -376,6 +376,11 @@ function WBP_Forging_Compendium_C:SelectDraftItem(Content)
   ItemDetailParam.bHideGamePad = true
   self.ItemDetails:PlayAnimation(self.ItemDetails.Change)
   self.ItemDetails:RefreshItemInfo(ItemDetailParam, true)
+  if DataMgr.Draft[Content.Id].NotDraftTree then
+    self.ItemDetails.Btn02_Mod:ForbidBtn(true)
+  else
+    self.ItemDetails.Btn02_Mod:ForbidBtn(false)
+  end
   self.ItemDetails:InitButtonEvent({
     ButtonClickCallBack = function()
       self:ShowDraftPath(Content.Id)

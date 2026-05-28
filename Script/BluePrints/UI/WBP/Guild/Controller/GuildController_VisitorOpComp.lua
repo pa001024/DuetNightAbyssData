@@ -32,9 +32,9 @@ function Component:RecvRequestJoinGuild(SrcParams, Ret)
     if 1 == bInvited then
       local UIManager = GWorld.GameInstance:GetGameUIManager()
       UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("GuildSuccessJoin_2"))
+      local Avatar = self:GetAvatar()
       local Timer = self:AddTimer(0.5, function()
         if Avatar.GuildId and 0 ~= Avatar.GuildId then
-          local Avatar = self:GetAvatar()
           UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("AlreadyInThisGuild"))
         end
       end, nil, nil, nil, true)

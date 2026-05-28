@@ -1565,7 +1565,7 @@ local Data = {
         voice_kr_char_Fuluo_vo_birthday = {
           ProgrammerSoundPath = "event:/voice/kr/char/Fuluo/vo",
           SelectKey = "voice_kr_char_Fuluo_vo_birthday",
-          SoundLength = 43500
+          SoundLength = 36630
         },
         voice_kr_char_Fuluo_vo_companio_01 = {
           ProgrammerSoundPath = "event:/voice/kr/char/Fuluo/vo",

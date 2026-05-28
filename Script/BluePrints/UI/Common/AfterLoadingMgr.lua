@@ -77,56 +77,62 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
     if GameState and GameState.IsInRegion and GameState:IsInRegion() then
       local ExitDungeonInfo = GWorld.GameInstance:GetExitDungeonData()
       if ExitDungeonInfo then
-        GWorld.GameInstance:ClearExitDungeonData()
-        if "Abyss" == ExitDungeonInfo.Type then
-          local AbyssId = ExitDungeonInfo.AbyssId
-          local AbyssLevelId = ExitDungeonInfo.AbyssLevelId
-          local AbyssDungeonIndex = ExitDungeonInfo.AbyssDungeonIndex
-          PageJumpUtils:JumpToAbyssLevelInfoPage(AbyssId, AbyssLevelId, AbyssDungeonIndex)
-        elseif ExitDungeonInfo.Type == "Rouge" then
-          PageJumpUtils:JumpToRougeMain("ExitFromRouge", true)
-        elseif ExitDungeonInfo.Type == "TryOut" then
-          local CurTabIndex = ExitDungeonInfo.CurTabIndex
-          local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
-          local ActivityId = ExitDungeonInfo.ActivityId
-          PageJumpUtils:JumpToTryOut(CurTabIndex, ActivityId, CurSelectIndex)
-        elseif ExitDungeonInfo.Type == "Paotai" then
-          local CurTabIndex = ExitDungeonInfo.CurTabIndex
-          local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
-          PageJumpUtils:JumpToPaotai(CurTabIndex, CurSelectIndex)
-        elseif ExitDungeonInfo.Type == "FeinaEvent" then
-          local CurTabIndex = ExitDungeonInfo.CurTabIndex
-          PageJumpUtils:JumpToFeinaEvent(CurTabIndex)
-        elseif ExitDungeonInfo.Type == "Depute" then
-          if not ExitDungeonInfo.IsFromRegionMechanism then
-            local DeputeType = ExitDungeonInfo.DeputeType
-            PageJumpUtils:JumpToStyleOfPlaySubUI("NewDeputeRoot", true, DeputeType)
-          end
-        elseif ExitDungeonInfo.Type == "GuildWar" then
-          local JumpId = ExitDungeonInfo.JumpId
-          PageJumpUtils:JumpToTargetPageByJumpId(JumpId, false, false, true)
-        elseif ExitDungeonInfo.Type == "Temple" then
-          local CurTabIndex = ExitDungeonInfo.CurTabIndex
-          PageJumpUtils:JumpToTempleSolo(CurTabIndex)
-        elseif ExitDungeonInfo.Type == "MonsterRush" then
-          local CurTabIndex = ExitDungeonInfo.CurTabIndex
-          local EventId = ExitDungeonInfo.EventId
-          local DungeonId = ExitDungeonInfo.DungeonId
-          PageJumpUtils:JumpToMonsterRush(CurTabIndex, EventId, DungeonId)
-        elseif ExitDungeonInfo.Type == "AutoChess" then
-          PageJumpUtils:JumpToAutoChessMain()
-        elseif ExitDungeonInfo.Type == "SoloTreasure" then
-          if 1 == ExitDungeonInfo.Mode then
-            local EventId = ExitDungeonInfo.EventId
-            local Mode = ExitDungeonInfo.Mode
-            local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
-            local EventDungeonId = ExitDungeonInfo.EventDungeonId
-            PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
-          end
-        elseif ExitDungeonInfo.Type == "AsyncCombat" then
-          local CurTabIndex = ExitDungeonInfo.CurTabIndex
-          PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
+        local BattleView = UIManager():GetUIObj("BattleMain")
+        if BattleView then
+          BattleView:SetVisibility(UIConst.VisibilityOp.Collapsed)
         end
+        GWorld.GameInstance:AddTimer(0.1, function()
+          GWorld.GameInstance:ClearExitDungeonData()
+          if ExitDungeonInfo.Type == "Abyss" then
+            local AbyssId = ExitDungeonInfo.AbyssId
+            local AbyssLevelId = ExitDungeonInfo.AbyssLevelId
+            local AbyssDungeonIndex = ExitDungeonInfo.AbyssDungeonIndex
+            PageJumpUtils:JumpToAbyssLevelInfoPage(AbyssId, AbyssLevelId, AbyssDungeonIndex)
+          elseif ExitDungeonInfo.Type == "Rouge" then
+            PageJumpUtils:JumpToRougeMain("ExitFromRouge", true)
+          elseif ExitDungeonInfo.Type == "TryOut" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
+            local ActivityId = ExitDungeonInfo.ActivityId
+            PageJumpUtils:JumpToTryOut(CurTabIndex, ActivityId, CurSelectIndex)
+          elseif ExitDungeonInfo.Type == "Paotai" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
+            PageJumpUtils:JumpToPaotai(CurTabIndex, CurSelectIndex)
+          elseif ExitDungeonInfo.Type == "FeinaEvent" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            PageJumpUtils:JumpToFeinaEvent(CurTabIndex)
+          elseif ExitDungeonInfo.Type == "Depute" then
+            if not ExitDungeonInfo.IsFromRegionMechanism then
+              local DeputeType = ExitDungeonInfo.DeputeType
+              PageJumpUtils:JumpToStyleOfPlaySubUI("NewDeputeRoot", true, DeputeType)
+            end
+          elseif ExitDungeonInfo.Type == "GuildWar" then
+            local JumpId = ExitDungeonInfo.JumpId
+            PageJumpUtils:JumpToTargetPageByJumpId(JumpId, false, false, true)
+          elseif ExitDungeonInfo.Type == "Temple" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            PageJumpUtils:JumpToTempleSolo(CurTabIndex)
+          elseif ExitDungeonInfo.Type == "MonsterRush" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            local EventId = ExitDungeonInfo.EventId
+            local DungeonId = ExitDungeonInfo.DungeonId
+            PageJumpUtils:JumpToMonsterRush(CurTabIndex, EventId, DungeonId)
+          elseif ExitDungeonInfo.Type == "AutoChess" then
+            PageJumpUtils:JumpToAutoChessMain()
+          elseif ExitDungeonInfo.Type == "SoloTreasure" then
+            if 1 == ExitDungeonInfo.Mode then
+              local EventId = ExitDungeonInfo.EventId
+              local Mode = ExitDungeonInfo.Mode
+              local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
+              local EventDungeonId = ExitDungeonInfo.EventDungeonId
+              PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
+            end
+          elseif ExitDungeonInfo.Type == "AsyncCombat" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
+          end
+        end)
       end
     end
   end

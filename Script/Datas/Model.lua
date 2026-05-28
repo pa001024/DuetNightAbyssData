@@ -1566,6 +1566,7 @@ return ReadOnly("Model", {
   [1007] = {
     AudioPrefix = "yewei_",
     BirthTime = -1,
+    FootType = "Yewei",
     ModelId = 1007,
     SkeletonMeshPath = "Asset/Char/Mount/Mnt006_Yewei/Mesh/Mnt006_Yewei_SM.Mnt006_Yewei_SM"
   },

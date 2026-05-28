@@ -25,8 +25,8 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "DROP_QuestPlay_20040202",
-        QuestDeatil = "Description_10040307_01",
+        QuestDescription = "Content_10040307_05",
+        QuestDeatil = "Description_10040307_02",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -203,14 +203,14 @@ return {
             key = "17782428113396680845",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 484.68181818181813, y = 852.4545454545455},
+            pos = {x = -113.24125874125879, y = 746.6468531468532},
             propsData = {}
           },
           ["17782428113396680846"] = {
             key = "17782428113396680846",
             type = "BranchQuestStartNode",
             name = "子任务开始节点",
-            pos = {x = 458.98205741626805, y = 253.1042378673959},
+            pos = {x = 452.92622615075936, y = 227.4888532520113},
             propsData = {
               AllQuestOptions = {
                 {
@@ -460,7 +460,7 @@ return {
             key = "17782428113416680852",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 406.00436920059326, y = -166.31496383098215},
+            pos = {x = 456.88154041647414, y = -233.93034844636676},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -478,7 +478,7 @@ return {
             key = "17782428113416680853",
             type = "TalkNode",
             name = "广播对话",
-            pos = {x = 151.69565217391303, y = 258.32142857142856},
+            pos = {x = 150.19565217391303, y = 240.32142857142856},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -487,7 +487,7 @@ return {
               TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
-              BlendOutTime = 2,
+              BlendOutTime = 0,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -542,14 +542,14 @@ return {
             key = "17783048456926682231",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 150.59514170040495, y = 403.02834008097176},
+            pos = {x = -428.63562753036433, y = 406.4898785425102},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["1778740514345761"] = {
             key = "1778740514345761",
             type = "AtmosphereNpcHideNode",
             name = "隐藏氛围",
-            pos = {x = -759.664296487826, y = -140.35749299719888},
+            pos = {x = -442.24121956474914, y = -113.47287761258349},
             propsData = {
               IsHide = true,
               AtmosphereTagList = {"Story_YT", "Story_BHCZ"}
@@ -559,14 +559,14 @@ return {
             key = "17787503049716808370",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 157.14875467669646, y = 838.368398113754},
+            pos = {x = -419.1973991694574, y = 734.1760904214462},
             propsData = {}
           },
           ["177891740477778710633"] = {
             key = "177891740477778710633",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 149, y = 607.5},
+            pos = {x = -425.6153846153847, y = 565.9615384615385},
             propsData = {
               TargetTime = 19,
               NeedLerp = false,
@@ -578,7 +578,7 @@ return {
             key = "1779421207812963",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = -458.8638402306502, y = 149.2},
+            pos = {x = -435.78691715372713, y = 236.8923076923077},
             propsData = {
               VarName = "First10040307",
               VarValue = 1
@@ -588,13 +588,13 @@ return {
             key = "17797160375921943299",
             type = "PickUpInteractiveNode",
             name = "任务交互",
-            pos = {x = -179.25458066521787, y = 195.04177141004098},
+            pos = {x = -131.574679920801, y = 234.6075282338623},
             propsData = {
               StaticCreatorId = 272480422,
               UnitId = 10101,
               bGuideUIEnable = true,
               GuidePointName = "BP_Dengdai_272480422",
-              LongPressTime = 3,
+              LongPressTime = 0,
               MontageName = "",
               bFocusEnable = false,
               SequencePath = ""
@@ -604,10 +604,10 @@ return {
             key = "17797161269141943893",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 435.38827647763935, y = 80.75605712432666},
+            pos = {x = 452.8560184131232, y = 80.75605712432666},
             propsData = {
               NewDescription = "Content_10040307_01",
-              NewDetail = "",
+              NewDetail = "Description_10040307_01",
               SubTaskTargetIndex = 0
             }
           },
@@ -615,36 +615,28 @@ return {
             key = "17797161728262911948",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = -365.4537870144241, y = -56.0098158915464},
+            pos = {x = -438.14609470673184, y = 70.91326103153054},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {
-                272480422,
-                272480423,
-                272480424
-              }
+              StaticCreatorIdList = {272480423, 272480424}
             }
           },
           ["17797162590523880361"] = {
             key = "17797162590523880361",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 145.98598614503052, y = -95.31537144710194},
+            pos = {x = 456.8246958224499, y = -81.14911834536497},
             propsData = {
               ActiveEnable = false,
-              EnableBlackScreenSync = false,
+              EnableBlackScreenSync = true,
               EnableFadeIn = false,
-              EnableFadeOut = false,
+              EnableFadeOut = true,
               NewTargetPointName = "",
-              StaticCreatorIdList = {
-                272480422,
-                272480423,
-                272480424
-              }
+              StaticCreatorIdList = {272480423, 272480424}
             }
           }
         },

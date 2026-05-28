@@ -339,7 +339,7 @@ function M:FormatMessageText(MessageData)
     if "GuildCreateSuccess" == RawMsgType then
       return Template
     elseif "ChangeGuildName" == RawMsgType then
-      return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.EditorUid))
+      return SafeStringFormat(Template, FormatText.OldName or "", FormatText.NewName)
     elseif "ChangedDecl" == RawMsgType then
       return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.EditorUid))
     elseif "ChangedLogo" == RawMsgType then

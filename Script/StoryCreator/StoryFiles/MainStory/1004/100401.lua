@@ -1812,12 +1812,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17779702098376110579",
-            startPort = "false",
-            endQuest = "17779702098376110581",
-            endPort = "In"
-          },
-          {
             startQuest = "17779702098376110581",
             startPort = "Out",
             endQuest = "17779702098376110582",
@@ -1864,6 +1858,42 @@ return {
             startPort = "true",
             endQuest = "17779702098376110578",
             endPort = "In"
+          },
+          {
+            startQuest = "17779702098376110579",
+            startPort = "false",
+            endQuest = "17798841976397274179",
+            endPort = "In"
+          },
+          {
+            startQuest = "17798841976397274179",
+            startPort = "Region_1",
+            endQuest = "17798834786055819941",
+            endPort = "In"
+          },
+          {
+            startQuest = "17798841976397274179",
+            startPort = "Region_2",
+            endQuest = "17779702098376110581",
+            endPort = "In"
+          },
+          {
+            startQuest = "17798834786055819941",
+            startPort = "Out",
+            endQuest = "17798842191137274854",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17798842191137274854",
+            startPort = "True",
+            endQuest = "17779702098376110576",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17798842191137274854",
+            startPort = "False",
+            endQuest = "17779702098376110583",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1871,7 +1901,7 @@ return {
             key = "17779702098376110575",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 251.3568376068376, y = 352.0405982905983},
+            pos = {x = 182.6068376068376, y = 364.5405982905983},
             propsData = {ModeType = 0}
           },
           ["17779702098376110576"] = {
@@ -1929,7 +1959,7 @@ return {
             key = "17779702098376110581",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 727.7999768006372, y = 689.8939049466719},
+            pos = {x = 737.7999768006372, y = 602.3939049466719},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2510002,
@@ -1941,14 +1971,14 @@ return {
             key = "17779702098376110582",
             type = "ShowPopupUINode",
             name = "显示弹窗",
-            pos = {x = 1028.5280444816126, y = 704.7523451176119},
+            pos = {x = 981.0280444816126, y = 713.5023451176119},
             propsData = {PopupId = 100110}
           },
           ["17779702098376110583"] = {
             key = "17779702098376110583",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1378.1138638390096, y = 732.5995219257873},
+            pos = {x = 1521.8638638390096, y = 920.0995219257873},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_DixiaQianruEnd",
@@ -1958,6 +1988,35 @@ return {
               bForceAsyncLoading = true,
               IsWhite = false
             }
+          },
+          ["17798834786055819941"] = {
+            key = "17798834786055819941",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 681.9880382775123, y = 875.3815789473684},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 272480208,
+              GuideType = "M",
+              GuidePointName = "Mechanism_DixiaQianruEleEnd_272480208"
+            }
+          },
+          ["17798841976397274179"] = {
+            key = "17798841976397274179",
+            type = "JudgeRegionNode",
+            name = "判断位于区域",
+            pos = {x = 456.9880382775121, y = 639.1315789473683},
+            propsData = {
+              IsWaitingEnterRegion = false,
+              RegionIds = {106001, 106301}
+            }
+          },
+          ["17798842191137274854"] = {
+            key = "17798842191137274854",
+            type = "ShowPopupUINode",
+            name = "显示弹窗",
+            pos = {x = 953.238038277512, y = 896.6315789473684},
+            propsData = {PopupId = 100110}
           }
         },
         commentData = {}

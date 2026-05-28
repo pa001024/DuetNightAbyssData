@@ -419,6 +419,9 @@ function Component:ReceiveEnterStateComp()
     }
     self.EnhanceWidget:UpdateWidgetData(Params)
   end
+  if self.IsInit then
+    self:RefreshListComp()
+  end
 end
 
 function Component:OnItemAddClickCallback()

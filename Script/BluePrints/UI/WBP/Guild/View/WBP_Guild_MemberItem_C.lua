@@ -54,6 +54,9 @@ function M:OnClickBtnFucntion()
     DebugPrint("GuildMemberItem OnClickBtnFucntion: 需要 Uid 参数")
     return
   end
+  if self.ParentWidget then
+    self.ParentWidget.ChatOpenFromMember = true
+  end
   ChatController:OpenView(nil)
   ChatController:SelectGuildMemberToChat(TargetUid, self.Info)
 end

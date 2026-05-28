@@ -1177,8 +1177,8 @@ return {
       propsData = {
         QuestId = 10040307,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040307_01",
-        QuestDeatil = "Description_10040307_01",
+        QuestDescription = "Content_10040307_05",
+        QuestDeatil = "Description_10040307_02",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,

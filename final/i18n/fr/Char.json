@@ -991,7 +991,7 @@
         "id": 110203,
         "名称": "Invitation florale",
         "类型": "Passive",
-        "描述": "Lorsqu’un DGT d’arme de mêlée inflige un coup critique, la cible devient une [Marionnette du bal], et le personnage obtient 1 cumul de [Reprise], cumulable jusqu’à {int}42 cumuls. Cet effet ne peut accorder qu’un cumul de [Reprise] à intervalles réguliers.\nLorsque la cible possède au moins 6 cumuls d’[Épine florale], l’attaque chargée de l’arme de mêlée est remplacée par [Finale].",
+        "描述": "Lorsqu’une arme de mêlée inflige un coup critique, la cible devient une [Marionnette du bal], et le personnage obtient 1 cumul de [Reprise], cumulable jusqu’à {int}42 cumuls. Cet effet ne peut accorder qu’un cumul de [Reprise] après un certain délai.\nLorsque la cible possède au moins 6 cumuls d’[Épine florale], l’attaque chargée de l’arme de mêlée est remplacée par [Finale].",
         "icon": "FuLuo03",
         "字段": [
           {
@@ -7781,7 +7781,7 @@
           }
         ],
         "术语解释": {
-          "Désarmement": "Retire définitivement la capacité d’utiliser des armes à distance."
+          "Désarmement": "Empêche définitivement l’utilisation des armes à distance."
         }
       },
       {

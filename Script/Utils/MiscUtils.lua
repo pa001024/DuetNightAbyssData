@@ -834,7 +834,7 @@ function Utils.GetNPCCreateSubSystem_Lua(context)
 end
 
 function Utils.StringToByteTable(Data)
-  Len = string.len(Data)
+  local Len = string.len(Data)
   local ByteTable = {}
   for i = 1, Len do
     ByteTable[i] = string.byte(Data, i)

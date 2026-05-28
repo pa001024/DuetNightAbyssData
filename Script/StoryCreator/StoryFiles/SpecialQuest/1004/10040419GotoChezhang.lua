@@ -204,12 +204,6 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "177874857057527269580",
-            startPort = "Out",
-            endQuest = "177892759714099946161",
-            endPort = "In"
-          },
-          {
             startQuest = "177892759714099946161",
             startPort = "Out",
             endQuest = "177874861824327270548",
@@ -244,6 +238,18 @@ return {
             startPort = "Out",
             endQuest = "177970785631172124937",
             endPort = "In"
+          },
+          {
+            startQuest = "177874857057527269580",
+            startPort = "Out",
+            endQuest = "17797787926622912150",
+            endPort = "In"
+          },
+          {
+            startQuest = "17797787926622912150",
+            startPort = "Out",
+            endQuest = "177892759714099946161",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -258,7 +264,7 @@ return {
             key = "177874857057527269575",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3046.5075348627984, y = 421.5913180386865},
+            pos = {x = 3176.8921502474136, y = 421.5913180386865},
             propsData = {ModeType = 0}
           },
           ["177874857057527269576"] = {
@@ -341,7 +347,12 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = true,
               NewTargetPointName = "",
-              StaticCreatorIdList = {172640004, 172640005}
+              StaticCreatorIdList = {
+                172640004,
+                172640005,
+                172640156,
+                172640157
+              }
             }
           },
           ["177874857057527269580"] = {
@@ -363,7 +374,7 @@ return {
             key = "177874857057527269581",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 2478.2215962882437, y = 300.82033590314495},
+            pos = {x = 2366.2985193651666, y = 273.1280282108373},
             propsData = {
               NewDescription = "Content_10040419_02",
               NewDetail = "",
@@ -561,14 +572,14 @@ return {
             key = "177874861824327270548",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2872.054625199362, y = 399.88496810207346},
+            pos = {x = 3025.5161636609005, y = 404.5003527174581},
             propsData = {}
           },
           ["177892759714099946161"] = {
             key = "177892759714099946161",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 2644.687115516063, y = 392.22248803827756},
+            pos = {x = 2858.1486539776015, y = 396.8378726536622},
             propsData = {WaitTime = 3}
           },
           ["17791777790911932476"] = {
@@ -643,6 +654,20 @@ return {
               MessageType = "GameMode",
               MessageContent = "CloseGate05Front",
               UnitId = -1
+            }
+          },
+          ["17797787926622912150"] = {
+            key = "17797787926622912150",
+            type = "ChangeStaticCreatorNode",
+            name = "生成怪物",
+            pos = {x = 2633.158138733882, y = 406.9994216310003},
+            propsData = {
+              ActiveEnable = false,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {172640156, 172640157}
             }
           }
         },

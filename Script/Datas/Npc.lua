@@ -11796,6 +11796,12 @@ return ReadOnly("Npc", {
     UnitId = 700452,
     UnitName = "UI_Npc_Name_Bai"
   },
+  [700453] = {
+    CollisionLevel = 999,
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/BP_EmptyNpcActor",
+    UnitId = 700453,
+    UnitName = "UI_Npc_Name_Bai"
+  },
   [700501] = {
     Camp = "NPC",
     CollisionLevel = 999,

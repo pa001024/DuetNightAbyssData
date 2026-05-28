@@ -1475,7 +1475,7 @@ end
 
 function Component:GetDefenceCore(UnitId)
   local Mechanisms = self.MechanismMap:FindRef("DefenceCore")
-  if nil ~= Mechanisms then
+  if nil ~= Mechanisms and Mechanisms.Array then
     Mechanisms = Mechanisms.Array
     for _, Mechanism in pairs(Mechanisms:ToTable()) do
       if Mechanism.UnitId == UnitId then
@@ -1487,8 +1487,12 @@ function Component:GetDefenceCore(UnitId)
 end
 
 function Component:OnRep_PetDefenceKilled()
-  self:UpdatePetDefenseProgress()
-  self:MarkPetDefenceKilledNumAsDirtyData()
+  if self.DungeonUIEventName ~= "None" then
+    self:UpdateDungeonRandomEventProgress()
+  else
+    self:UpdatePetDefenseProgress()
+    self:MarkPetDefenceKilledNumAsDirtyData()
+  end
 end
 
 function Component:SelectTicket_Lua()
@@ -2133,6 +2137,11 @@ end
 function Component:UpdateDungeonRandomEventProgress(TotalVal, CurVal)
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   local BattleMain = UIManager:GetUIObj("BattleMain")
+  if IsStandAlone(self) then
+  else
+    CurVal = self.PetDefenceKilledNum
+    TotalVal = self.DungeonUIEventName == "UI_DUNGEON_TYPE_SURPRISEBOX" and 6 or 15
+  end
   if BattleMain then
     local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
     DynamicEventUI:UpdateDungeonRandomEventProgress(TotalVal, CurVal)

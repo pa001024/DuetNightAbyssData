@@ -112,8 +112,10 @@ function BP_RockTrap_C:OnCrash(HitLoc)
   end
   local FXObject = self.FXComponent:PlayFX(self.CrashFX, self.Mesh, self:GetCurrentModelInfo().DamageFXSockets[1], self.Crash:K2_GetComponentLocation(), FRotator(0, 0, 0), true, nil)
   FXObject:SetRelativeScale3D(self.CrashFXScale)
-  self:EMActorDestroy(EDestroyReason.MechanismDead)
   self.IsActive = false
+  self:AddTimer(0.1, function()
+    self:EMActorDestroy(EDestroyReason.MechanismDead)
+  end, false, 0)
 end
 
 function BP_RockTrap_C:TryToShakeCamera()

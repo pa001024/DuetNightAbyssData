@@ -498,8 +498,16 @@ function M:_SetDMSubTabVisible(bVisible)
   end
 end
 
+function M:_SetListTitleVisible(bVisible)
+  if self.Group_ListTitle then
+    local Visibility = bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
+    self.Group_ListTitle:SetVisibility(Visibility)
+  end
+end
+
 function M:_SetUpDMChannelLayout(bKeepBottomState)
   self:_SetDMSubTabVisible(true)
+  self:_SetListTitleVisible(false)
   self.Group_ChatEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -519,6 +527,7 @@ end
 
 function M:_SetUpPublicChannelLayout()
   self:_SetDMSubTabVisible(false)
+  self:_SetListTitleVisible(false)
   if self.WS_PlayerList then
     self.WS_PlayerList:SetActiveWidgetIndex(0)
   end
@@ -540,6 +549,7 @@ end
 
 function M:_SetUpInTeamChannelLayout(bHasTeam)
   self:_SetDMSubTabVisible(false)
+  self:_SetListTitleVisible(bHasTeam and self.RefreshTeamMemberListInPC ~= nil)
   if self.WS_PlayerList then
     self.WS_PlayerList:SetActiveWidgetIndex(0)
   end
@@ -1115,6 +1125,9 @@ function M:_HandleRefreshFriendInPrivateChannel()
   if SelectedPlayerIndex then
     self.List_Player:ScrollIndexIntoView(SelectedPlayerIndex + 1)
   end
+  if self.OnDMPlayerListItemsReady then
+    self:OnDMPlayerListItemsReady()
+  end
   self.Com_Input:SetText("")
 end
 
@@ -1199,6 +1212,9 @@ function M:_UpdateGuildPrivatePlayerItem(Uid)
       self._PendingGuildPrivateScrollUid = Uid
       self:_ScheduleGuildPrivatePlayerScrollRetry(Uid, 0)
     end
+  end
+  if self.OnDMPlayerListItemsReady then
+    self:OnDMPlayerListItemsReady()
   end
 end
 
@@ -1692,6 +1708,9 @@ function M:_HandleRefreshGuildInPrivateChannel(Uid, bSkipPeerInfoRefresh)
     self:_ApplyGuildPrivateInputAreaState(SelectedUid, false)
   end
   self:_ScrollGuildPrivatePlayerItem(SelectedIdx, self.List_Player:GetListItems():Get(SelectedIdx))
+  if self.OnDMPlayerListItemsReady then
+    self:OnDMPlayerListItemsReady()
+  end
   if not bSkipPeerInfoRefresh then
     self:_RefreshGuildPrivatePeerInfos(Uids)
   end
@@ -1822,7 +1841,7 @@ function M:_RefreshGuildPrivatePeerInfos(Uids)
     for _, Uid in ipairs(FallbackUids) do
       self:_QueryGuildPeerInfo(Uid)
     end
-  end, Uids)
+  end, Uids, true)
 end
 
 function M:_QueryGuildPeerInfo(Uid)
@@ -1865,6 +1884,11 @@ function M:_QueryGuildPeerInfo(Uid)
 end
 
 function M:_ShowDMPlayerListEmpty(EmptyText, CTAType, DialogEmptyText)
+  if self.CurrSelectPlayer and IsValid(self.CurrSelectPlayer.UI) then
+    self.CurrSelectPlayer.UI:UnSelect()
+  end
+  self.CurrSelectPlayer = nil
+  self.SelectedPlayerIndex = nil
   if self.WS_PlayerList then
     self.WS_PlayerList:SetActiveWidgetIndex(1)
     if self.Text_ChatTabListEmpty then
@@ -1891,6 +1915,9 @@ function M:_ShowDMPlayerListEmpty(EmptyText, CTAType, DialogEmptyText)
   end
   if self.WS_Dialoglist then
     self.WS_Dialoglist:SetActiveWidgetIndex(1)
+  end
+  if self.OnDMPlayerListEmptyShown then
+    self:OnDMPlayerListEmptyShown()
   end
 end
 

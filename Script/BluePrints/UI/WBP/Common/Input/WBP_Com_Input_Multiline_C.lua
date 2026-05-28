@@ -70,7 +70,7 @@ end
 function M:UpdateGamePadFocusKey()
   if self.IsShowGamPadKey then
     if self.CurInputDeviceType == ECommonInputType.Gamepad then
-      if self.Text_Input:HasAnyUserFocus() then
+      if self.Text_Input:HasAnyUserFocus() or not self:IsShowGamePad() then
         self.HB_ControllerChoose:SetVisibility(UIConst.VisibilityOp.Collapsed)
       else
         self.HB_ControllerChoose:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)

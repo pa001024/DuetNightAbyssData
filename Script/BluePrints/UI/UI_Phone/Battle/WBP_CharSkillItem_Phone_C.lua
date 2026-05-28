@@ -334,7 +334,7 @@ function M:CalculateSkillCostSp(Skill)
     local SkillNodeConfig = DataMgr.SkillNode[SkillNodeId] or {}
     CostSpNum = SkillNodeConfig.CostSp or 0
   end
-  local ModifyValue = self.OwnerPlayer.BuffManager:GetBuffSpModify(Skill.SkillId)
+  local ModifyValue = SkillUtils.CalcBuffSpModify(self.OwnerPlayer.BuffManager, Skill.SkillId)
   CostSpNum = math.max(math.ceil(CostSpNum + ModifyValue), 0)
   return self.OwnerPlayer:ApplySkillEfficiency(CostSpNum) or 0
 end

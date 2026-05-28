@@ -129,6 +129,7 @@ function M:OnHelperBecomeViewTarget(PC)
     self.OnFirstBecomeViewTarget()
     self.OnFirstBecomeViewTarget = nil
     self:HidePlayerActor("ActorController_ChangeViewTarget", false)
+    self:HidePlayerActor("ActorController_PlayDisappearFX", false)
     self:HideWeaponActor("ActorController_ChangeViewTarget", false)
     self:HidePetActor("ActorController_ChangeViewTarget", false)
     self:RefreshEnvironment(true)
@@ -148,6 +149,7 @@ function M:OnHelperBecomeViewTarget(PC)
     end
   end
   self:HidePlayerActor("ActorController_ChangeViewTarget", false)
+  self:HidePlayerActor("ActorController_PlayDisappearFX", false)
   self:HideWeaponActor("ActorController_ChangeViewTarget", false)
   self:HidePetActor("ActorController_ChangeViewTarget", false)
   if self.ViewActorType == self.ViewActorTypes.Player then
@@ -430,14 +432,14 @@ function M:SetMontageAndCamera(Type, Tag, Behavior, ExtraTag)
   self.LastExtraTag = ExtraTag
   if self.DelayFrame and self.DelayFrame > 0 then
     ArmoryPlayer:SetArmoryTag("None")
-    self:HidePlayerActor(self.UIName, true)
+    self:HidePlayerActor("ActorController_PlayDisappearFX", true)
     self.LastMontageTag, self.bShowOrHideWeapon = self:CalcArmoryMontageTag(self.LastMontageAndCameraType, self.LastMontageAndCameraTag, self.LastMontageAndCameraBehavior)
     self:PlayDisappearFX(ArmoryPlayer.FXComponent, function()
       if self.bClosed or self.bDestructed or not self.IsControled then
         return
       end
       self:PlayAppearFX(ArmoryPlayer.FXComponent)
-      self:HidePlayerActor(self.UIName, false)
+      self:HidePlayerActor("ActorController_PlayDisappearFX", false)
       self:RealPlayMontageAndCamera(self.LastMontageTag, self.bShowOrHideWeapon, self.LastDelayCameraTags)
     end)
   else
@@ -1061,6 +1063,7 @@ end
 function M:DestroyCreature(Key)
   if self.Creatures[Key] then
     self.Creatures[Key]:DestroyEffectCreature()
+    self.LastCreateIds[Key] = nil
     self.Creatures[Key] = nil
   end
 end
@@ -1073,6 +1076,7 @@ function M:DestroyAllCreature()
       end
     end
     self.Creatures = nil
+    self.LastCreateIds = nil
   end
   if self.ArmoryPlayer then
     self.ArmoryPlayer:RemoveAllEffectCreature(false)
@@ -1139,6 +1143,7 @@ function M:Init(Params)
   self.Event_AfterEndViewTarget = Params.AfterEndViewTarget
   self.ViewActorTypes = {Player = 1, SingleWeapon = 2}
   self.Creatures = {}
+  self.LastCreateIds = {}
   self.Reflections = {}
   self.ReflectionOwners = {}
   self.ObjId = SelfObjCount

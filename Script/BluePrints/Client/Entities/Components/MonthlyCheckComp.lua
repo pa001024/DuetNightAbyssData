@@ -13,8 +13,10 @@ function Component:MonthlyCheckGetTotalReward(Step, Callback)
 end
 
 function Component:_OnPropChangeMonthlyCheck()
-  DebugPrint("Yihan@ _OnPropChangeMonthlyCheck")
-  MonthSignInController:TryPopUpMonthSignIn()
+  local LoginMainPage = UIManager(self):GetUIObj("LoginMainPage")
+  if not LoginMainPage then
+    MonthSignInController:TryPopUpMonthSignIn()
+  end
 end
 
 function Component:EnterWorld()

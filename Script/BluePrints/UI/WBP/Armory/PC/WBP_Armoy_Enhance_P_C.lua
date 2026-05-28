@@ -115,6 +115,9 @@ function M:EnhanceItem(Level)
 end
 
 function M:OnClickGoEnhance()
+  if self.IsPreviewMode then
+    return
+  end
   DebugPrint("OnClickGoEnhance")
   local UIConfig = DataMgr.SystemUI.ArmoryCardLevelWeapon
   local Params = {BehaviourType = "Enhance"}

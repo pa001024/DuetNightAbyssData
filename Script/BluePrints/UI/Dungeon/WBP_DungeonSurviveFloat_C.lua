@@ -576,12 +576,24 @@ function WBP_DungeonSurviveFloat_C:ShowSpecialMonsterGuideLoop()
   if not SceneManager then
     return
   end
+  local AliveSpecialMonsterEidList = {}
   for _, Eid in pairs(self.SpecialMonsterEidList) do
     local GuideUIName = SceneManager.GuideIcons:FindRef(Eid)
     local GuideIcon = UIManager(self):GetUIObj(GuideUIName)
     if GuideIcon then
       GuideIcon:PlayLoopAnim()
     end
+    local PoisonMonster = Battle(self):GetEntity(Eid)
+    if IsValid(PoisonMonster) then
+      table.insert(AliveSpecialMonsterEidList, Eid)
+    end
+  end
+  self.SpecialMonsterEidList = AliveSpecialMonsterEidList
+  self.SpecialMonsterAliveCount = #AliveSpecialMonsterEidList
+  if 0 == self.SpecialMonsterAliveCount then
+    self.bShouldContinueAnim = false
+    self:ConditionalPlayAnimation()
+    self:StopSpecialMonsterGuideLoop()
   end
 end
 

@@ -99,19 +99,27 @@ end
 
 function M:InitAnimationState()
   self:InitCardState()
-  local AniName
+  self.CurPlayingAnimation = nil
   if self.CardState == StateEnum.Locked then
-    AniName = self.Locked
+    self.CurPlayingAnimation = self.Locked
   elseif self.CardState == StateEnum.UnlockedInactive then
-    AniName = self.UnAct
+    self.CurPlayingAnimation = self.UnAct
   elseif self.CardState == StateEnum.UnlockedActivatable then
-    AniName = self.Actived
+    self.CurPlayingAnimation = self.Actived
   elseif self.CardState == StateEnum.Activated then
-    AniName = self.UnLocked
+    self.CurPlayingAnimation = self.UnLocked
   end
-  if AniName then
-    self:StopAllAnimations()
-    self:PlayAnimation(AniName)
+  if not self.CurPlayingAnimation then
+    return
+  end
+  self.StopProcess = true
+  self:StopAllAnimations()
+  self:PlayAnimation(self.CurPlayingAnimation)
+end
+
+function M:OnAnimationFinished(Animation)
+  if Animation == self.CurPlayingAnimation then
+    self.StopProcess = false
   end
 end
 
@@ -131,12 +139,14 @@ function M:UnlockCardLevel(FinishedObj, FinishedCallback)
     if FinishedObj and FinishedCallback then
       FinishedCallback(FinishedObj)
     end
+    self.StopProcess = false
   end
   
   self:BindToAnimationFinished(self.Unlock_In, {self, OnUnLockFinished})
   if RootWidget then
     RootWidget:BlockAllUIInput(true)
   end
+  self.StopProcess = true
   self:StopAllAnimations()
   self:PlayAnimation(self.Unlock_In)
   AudioManager(self):PlayUISound(self, "event:/ui/common/skin_upgrade", nil, nil)
@@ -157,7 +167,9 @@ end
 function M:PlayActInAnimation()
   self:InitCardState()
   if self.CardState == StateEnum.UnlockedActivatable then
+    self.StopProcess = true
     self:StopAllAnimations()
+    self.CurPlayingAnimation = self.Act_In
     self:PlayAnimation(self.Act_In)
   end
 end

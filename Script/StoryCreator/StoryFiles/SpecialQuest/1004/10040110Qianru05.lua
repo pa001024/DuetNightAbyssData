@@ -373,7 +373,19 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "177816111617563890724",
+            startPort = "Out",
+            endQuest = "17795204926001577",
+            endPort = "In"
+          },
+          {
             startQuest = "177816111617563890723",
+            startPort = "Out",
+            endQuest = "1779867370706754",
+            endPort = "In"
+          },
+          {
+            startQuest = "177816111617563890727",
             startPort = "Out",
             endQuest = "1779520323568669",
             endPort = "In"
@@ -381,7 +393,7 @@ return {
           {
             startQuest = "177816111617563890724",
             startPort = "Out",
-            endQuest = "17795204926001577",
+            endQuest = "17798682570012147",
             endPort = "In"
           }
         },
@@ -510,7 +522,7 @@ return {
             key = "177816111617563890727",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 444.700565995807, y = 350.01411521741653},
+            pos = {x = 368.450565995807, y = 237.51411521741653},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -579,7 +591,7 @@ return {
             key = "1779009288566114438292",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 488.45988446726585, y = -182.78818998716304},
+            pos = {x = 412.20988446726585, y = -210.28818998716304},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -597,7 +609,7 @@ return {
             key = "1779188781189133287888",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 26.782787762088276, y = -42.94929396662387},
+            pos = {x = -14.467212237911731, y = -221.69929396662388},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -625,7 +637,7 @@ return {
             key = "1779520323568669",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 456.22652848506505, y = 54.442525090722015},
+            pos = {x = 773.726528485065, y = -159.30747490927803},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -647,6 +659,28 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["1779867370706754"] = {
+            key = "1779867370706754",
+            type = "PlayNormalSoundNode",
+            name = "播放普通音效",
+            pos = {x = 375.6250000000002, y = 56.87500000000003},
+            propsData = {
+              EventPath = "event:/sfx/common/story/03/tool_drop",
+              TargetPointName = "",
+              EventKey = "JingjieBattle",
+              PlayAs2D = false
+            }
+          },
+          ["17798682570012147"] = {
+            key = "17798682570012147",
+            type = "StopNormalSoundNode",
+            name = "停止普通音效",
+            pos = {x = 986.125, y = 590.6250000000001},
+            propsData = {
+              TargetPointName = "event:/sfx/common/story/03/tool_drop",
+              EventKey = "JingjieBattle"
             }
           }
         },

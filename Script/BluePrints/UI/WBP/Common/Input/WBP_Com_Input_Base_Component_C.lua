@@ -30,6 +30,7 @@ function M:Construct()
   self.DefaultFocusKeyName = "X"
   self.DefaultPasteKeyName = "LS"
   self:PlayAnimation(self.Normal)
+  self:SetIsShowGamePad(true)
 end
 
 function M:Destruct()
@@ -487,6 +488,14 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     end
   end
   return UIUtils.Unhandled
+end
+
+function M:SetIsShowGamePad(IsShow)
+  self.IsShowGamePadIcon = IsShow
+end
+
+function M:IsShowGamePad()
+  return self.IsShowGamePadIcon
 end
 
 return M

@@ -399,7 +399,7 @@ return ReadOnly("QuestChain", {
   },
   [100401] = {
     ChapterName = "UI_ChapterName_01",
-    ChapterNumber = "UI_ChapterName_03",
+    ChapterNumber = "UI_ChapterNumber_03",
     Episode = "Episode_03",
     EpisodeName = "Episode_03_01",
     IfAutoStart = true,
@@ -424,7 +424,7 @@ return ReadOnly("QuestChain", {
   },
   [100402] = {
     ChapterName = "UI_ChapterName_01",
-    ChapterNumber = "UI_ChapterName_03",
+    ChapterNumber = "UI_ChapterNumber_03",
     Episode = "Episode_03",
     EpisodeName = "Episode_03_02",
     IfAutoStart = true,
@@ -448,7 +448,7 @@ return ReadOnly("QuestChain", {
   },
   [100403] = {
     ChapterName = "UI_ChapterName_01",
-    ChapterNumber = "UI_ChapterName_03",
+    ChapterNumber = "UI_ChapterNumber_03",
     Episode = "Episode_03",
     EpisodeName = "Episode_03_03",
     IfAutoStart = true,
@@ -464,7 +464,7 @@ return ReadOnly("QuestChain", {
   },
   [100404] = {
     ChapterName = "UI_ChapterName_01",
-    ChapterNumber = "UI_ChapterName_03",
+    ChapterNumber = "UI_ChapterNumber_03",
     Episode = "Episode_03",
     EpisodeName = "Episode_03_04",
     IfAutoStart = true,
@@ -480,7 +480,7 @@ return ReadOnly("QuestChain", {
   },
   [100405] = {
     ChapterName = "UI_ChapterName_01",
-    ChapterNumber = "UI_ChapterName_03",
+    ChapterNumber = "UI_ChapterNumber_03",
     Episode = "Episode_03",
     EpisodeName = "Episode_03_05",
     IfAutoStart = true,

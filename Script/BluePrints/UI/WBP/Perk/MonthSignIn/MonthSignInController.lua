@@ -38,14 +38,12 @@ function M:TryPopUpMonthSignIn()
   if not UIUnlocked then
     return
   end
-  local CurTimestamp = TimeUtils.NowTime()
-  local PreLoadingTime = EMCache:Get("PreLoadingTime", true)
-  DebugPrint("Yihan@ TryPopUpMonthSignIn", CurTimestamp, PreLoadingTime)
-  if not PreLoadingTime then
+  local PreCheckCount = EMCache:Get("PreCheckCount", true)
+  if not PreCheckCount then
     self:GetUIMgr():LoadUINew("MonthSignInPopMain")
   else
-    DebugPrint("Yihan@ TryPopUpMonthSignIn:GetIntervalDay", TimeUtils.GetIntervalDay(CurTimestamp, PreLoadingTime))
-    if 0 ~= TimeUtils.GetIntervalDay(CurTimestamp, PreLoadingTime) then
+    DebugPrint("Yihan@ TryPopUpMonthSignIn", PreCheckCount ~= Avatar.MonthlyCheck.MonthlyCheckCount)
+    if PreCheckCount ~= Avatar.MonthlyCheck.MonthlyCheckCount then
       self:GetUIMgr():LoadUINew("MonthSignInPopMain")
     end
   end

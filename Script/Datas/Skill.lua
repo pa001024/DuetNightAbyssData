@@ -1990,8 +1990,8 @@ T.RT_254 = {
   SkillGrade = T.RT_2,
   SkillId = 110221,
   SkillLevel = T.RT_8,
-  SkillType = "Skill2",
-  bEnablePrediction = true
+  SkillTags = T.RT_198,
+  SkillType = "Skill2"
 }
 T.RT_255 = {
   [0] = T.RT_254,

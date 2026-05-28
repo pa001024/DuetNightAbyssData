@@ -486,8 +486,6 @@ return ReadOnly("WeaponSkin", {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Polearm_Huanyu.T_Bust_Polearm_Huanyu'",
     Dec = "UI_WeaponSkin_Des_3010408",
     DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Polearm_Huanyu.T_Bust_Polearm_Huanyu'",
-    ExcludeCollect = true,
-    ExcludeCollectServer = true,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Polearm_Huanyu.T_Head_Polearm_Huanyu'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Polearm_Huanyu.T_Gacha_Polearm_Huanyu'",
     Name = "UI_WeaponSkin_Name_3010408",

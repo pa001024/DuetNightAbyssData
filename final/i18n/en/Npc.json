@@ -7448,7 +7448,7 @@
   },
   {
     "id": 100446,
-    "name": "神秘人",
+    "name": "Mysterious Figure",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -22364,6 +22364,10 @@
     "type": "Normal"
   },
   {
+    "id": 700453,
+    "name": "Snow"
+  },
+  {
     "id": 700501,
     "name": "Clara",
     "camp": "NPC",
@@ -23421,7 +23425,7 @@
       },
       {
         "id": 51201325,
-        "content": "(The man clutches his cheek and stares at you in disbelief.)",
+        "content": "(The man clutches his cheek, his face full of disbelief.)",
         "next": 51201326
       },
       {
@@ -24821,12 +24825,12 @@
       },
       {
         "id": 51202223,
-        "content": "(You tear a cheque from the book and hand it to Leon.)",
+        "content": "(You tear a cheque from the book and hand it to Somi.)",
         "next": 51202224
       },
       {
         "id": 51202228,
-        "content": "(You tear several cheques from the book and hand them to Leon.)",
+        "content": "(You tear several cheques from the book and hand them to Somi.)",
         "next": 51202229
       },
       {
@@ -24896,7 +24900,7 @@
       },
       {
         "id": 51202231,
-        "content": "Felix, is it? While you're sorting out the tickets, Leon, make sure you leave a complaint with the station office too. That shouldn't be too difficult.",
+        "content": "Felix, is it? While you're sorting out the tickets, Somi, make sure you leave a complaint with the station office too. That shouldn't be too difficult.",
         "npc": 100001,
         "next": 51202232
       },
@@ -25572,7 +25576,7 @@
       },
       {
         "id": 51202536,
-        "content": "That's right. Not a coin. I'm not here because they need me to keep my brother from leaving. That's all I am.",
+        "content": "That's right. Not a coin. I'm here only because they need me to keep my brother from leaving. That's all I am.",
         "npc": 700524,
         "options": [
           {

@@ -35238,7 +35238,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10041803] = {
           Content = "喂！军团专列禁止靠近！",
-          ContentJP = "ここは軍団専用列車、部外者は立ち入り禁止だ！",
+          ContentJP = "おい！車両に近づくな！",
           DialogueId = 10041803,
           GUID = "19237B4E",
           SpeakNpcId = 100422,
@@ -36886,9 +36886,10 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10042901] = {
           Content = "闲杂人等禁止靠近！",
-          ContentJP = "ここは軍団専用列車、部外者は立ち入り禁止だ！",
+          ContentJP = "ここは関係者以外、立ち入り禁止だ！",
           DialogueId = 10042901,
           GUID = "19242F72",
+          NextDialogue = 10042902,
           RelatedWikiId = {
             [1] = 408022,
             [2] = 101004,
@@ -36903,6 +36904,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "アイゼンバーン駅長の命で、捜査に協力してる月狩り人です。",
           DialogueId = 10042902,
           GUID = "19242F9C",
+          NextDialogue = 10042903,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100429/19242F9C"
         },
@@ -36911,6 +36913,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "……なるほど。駅長殿がおっしゃっていた、容疑の月狩り人というのはあんたたちか。駅長殿の指示なら、好きに調べてくれて構わない。",
           DialogueId = 10042903,
           GUID = "19242FC6",
+          NextDialogue = 10042904,
           SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FC6"
         },
@@ -36919,7 +36922,8 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "おい、くれぐれも手荒な真似はするなよ。物を壊すんじゃないぞ。",
           DialogueId = 10042904,
           GUID = "19242FF0",
-          SpeakNpcId = 100415,
+          NextDialogue = 10042905,
+          SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FF0"
         },
         [10042905] = {
@@ -37327,7 +37331,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10043507] = {
           Content = "希尔妲也很厉害。多亏了你，犯人终于有眉目了。并且话说回来，你真的只是普通的女仆吗……",
-          ContentJP = "{性别:ヒルダさんも大したものだ。おかげで、ようやく犯人のやり方が見えてきた。それにしても、あなた本当にただのメイドなのか？|ヒルダさんも大したものだね。おかげで、ようやく犯人のやり方が見えてきたわ。それにしても、あなた本当にただのメイドなの？}",
+          ContentJP = "{性别:ヒルダさんも大したものだ。おかげで、ようやく犯人のやり方が見えてきた。それにしても、あなたは本当にただのメイドなのか？|ヒルダさんも大したものだね。おかげで、ようやく犯人のやり方が見えてきたわ。それにしても、あなたは本当にただのメイドなの？}",
           DialogueId = 10043507,
           GUID = "192492DE",
           SpeakNpcId = 100001,
@@ -38210,7 +38214,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10043838] = {
           Content = "你这个小兔崽子，我当初在战场上替你挡枪，现在倒好，主动把我拉过去挡枪。",
-          ContentJP = "この青二才め……昔は俺が前に立って、庇ってやったってのに。俺弾除けにする気か。",
+          ContentJP = "この青二才め……昔は俺が前に立って、庇ってやったってのに。俺を弾除けにする気か。",
           DialogueId = 10043838,
           GUID = "1924C92C",
           NextDialogue = 10043839,
@@ -38246,7 +38250,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10043842] = {
           Content = "到此为止吧。现在不是耍脾气的时候，配合一下，服从命令。就当是为了帝国的荣耀，可以吗？老英雄施蒂尔上尉。",
-          ContentJP = "そのへんにしておけ。今は意地を張っている場合じゃない。協力してくれ。命令だ。……帝国のためだと思ってくれないか。帝国の英雄－－スティラー大尉。",
+          ContentJP = "そのへんにしておけ。今は意地を張っている場合じゃない。協力してくれ。命令だ。……帝国のためだと思ってくれないか。『帝国の英雄』――スティラー大尉。",
           DialogueId = 10043842,
           GUID = "1924C9D4",
           NextDialogue = 10043843,
@@ -38895,6 +38899,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10044336] = {
           Content = "没错。知道炸弹是在仓库组装的人是极少数，写下这封信的人根本不应该知道这种事情。",
+          ContentJP = "ええ、そこです。爆弾が倉庫で組み上げられたと知っている者は、ほんの一握りしかおりません。この手紙の書き手が、その事実を知っているはずがないのです。",
           DialogueId = 10044336,
           GUID = "19251AE0",
           VoiceName = "voice/$Locale$/story/1004/100443/19251AE0"
@@ -44032,7 +44037,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10048106] = {
           Content = "别这么失礼，胡乱揣测别人并不会让你显得很有家教。",
-          ContentJP = "……少しは口を慎んだらどうだ。人を決めつけたところで、品位が上がるわけでもあるまい。",
+          ContentJP = "……少しは口を慎んだらどう。人を決めつけたところで、品位が上がるわけでもあるまい。",
           DialogueId = 10048106,
           GUID = "19278564",
           SpeakNpcId = 100440,
@@ -44350,7 +44355,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10048309] = {
           Content = "你要是芙罗蒂娅公主那我就是尤利乌斯皇帝。要不是我知道公主正在寒鸦号上，即将抵达皇都，我还真信了你这女人的鬼话。",
-          ContentJP = "おまえがフフロレンティア皇女なら、私は皇帝陛下だっての。殿下はカラス号に乗って、帝都へ向かっていると聞かされている。危うく口車に乗るところだったぜ。",
+          ContentJP = "おまえがフロレンティア皇女なら、私は皇帝陛下だっての。殿下はカラス号に乗って、帝都へ向かっていると聞かされている。危うく口車に乗るところだったぜ。",
           DialogueId = 10048309,
           GUID = "1927A6B2",
           SnapShot = "BROADCAST",
@@ -44604,6 +44609,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "……",
           DialogueId = 10048340,
           GUID = "1927ABC8",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927ABC8"
         },
@@ -44620,6 +44626,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "攻撃を中止しろ！ただちにカラス号に、フロレンティア殿下の所在を確認しろ！",
           DialogueId = 10048342,
           GUID = "1927AC1C",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC1C"
         },
@@ -44628,6 +44635,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "ひとまず安全を確保しよう。帝国の貴族と平民が、こうして同じ場所に立つ姿を見るのは初めてだ。……やはり皇族でなければ、成しえないことなのだろう。",
           DialogueId = 10048343,
           GUID = "1927AC46",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC46"
         },
@@ -44812,7 +44820,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10048505] = {
           Content = "嗯，拜托了。",
-          ContentJP = "ありがと。",
+          ContentJP = "ありがとう。",
           DialogueId = 10048505,
           GUID = "1927C6DA",
           SpeakNpcId = 100001,
@@ -44826,6 +44834,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 403014
           },
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C704"
         },
@@ -44842,6 +44851,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "砲弾装填完了。射撃補正開始。",
           DialogueId = 10048508,
           GUID = "1927C758",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C758"
         },
@@ -44850,6 +44860,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "補正完了……発射準備……",
           DialogueId = 10048509,
           GUID = "1927C782",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C782"
         },
@@ -44866,6 +44877,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "3……",
           DialogueId = 10048511,
           GUID = "1927C7D6",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C7D6"
         },
@@ -44874,6 +44886,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "2……",
           DialogueId = 10048512,
           GUID = "1927C800",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C800"
         },
@@ -44882,6 +44895,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "1……",
           DialogueId = 10048513,
           GUID = "1927C82A",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C82A"
         },
@@ -45292,6 +45306,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "緊急速報。本日、フォーセイクン同盟がコキュートス領南部で「オーロラ号」を襲撃。その後、先頭車両に搭載されていた列車砲を用いて、救援に向かった帝国飛空艇を撃墜しました。",
           DialogueId = 10049007,
           GUID = "19281936",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281936"
         },
@@ -45300,6 +45315,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentJP = "飛空艇は巨大な天上樹の付近で爆発し、その影響で天上樹が炎上。\n 天上樹への放火は、今年に入ってこれで二件目です。第六軍団はすでに救援を増派していますが、現在、オーロラ号の乗客とは全員連絡が取れておらず、生死は不明です。",
           DialogueId = 10049008,
           GUID = "19281960",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281960"
         },
@@ -45514,6 +45530,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "（那还是我自己来吧，只要呼喊神的名字的话，他们总得有点什么回应才是，否则这片雾海也太过质朴了。）",
           ContentJP = "（……なら、自分で呼ぶしかないかな。神の名を呼べば、さすがに何か返ってくるはず。そうでもなきゃ、このニヴルヘイム、あまりに味気なさすぎる。）",
           DialogueId = 10049107,
+          DisableMouth = 1,
           GUID = "1928299E",
           SnapShot = "HEART",
           SpeakNpcId = 1001,
@@ -251183,6 +251200,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200201] = {
           Content = "噫噫噫！！！从哪里冒出来一堆这么大的老鼠？",
+          ContentJP = "ギャアアアアッ！！ネズミだらけじゃん！いったいどこから湧いてきたんだ！",
           DialogueId = 51200201,
           GUID = "802CA0FA",
           NextDialogue = 51200202,
@@ -251190,6 +251208,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200202] = {
           Content = "这里可是冰湖城，冰湖城里出现老鼠不是很正常吗？",
+          ContentJP = "ここはアイスレイク城なんだから、ネズミくらい出るでしょ。",
           DialogueId = 51200202,
           GUID = "802CA124",
           NextDialogue = 51200203,
@@ -251197,6 +251216,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200203] = {
           Content = "小仆从，快去把那些老鼠消灭掉啊，它们在撞击你踮脚的梯子！",
+          ContentJP = "ちょ、ちょっと、下僕！？早くこいつらをやっつけて！足元の梯子にガンガンぶつかってきてる！",
           DialogueId = 51200203,
           GUID = "802CA14E",
           NextDialogue = 51200204,
@@ -251204,6 +251224,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200204] = {
           Content = "明明是你在晃……算了，我去清掉。",
+          ContentJP = "それはスノウが震えて、梯子を揺らしているせい{性别:だろ|でしょ}……まあいい。片づけて{性别:やる|あげるね}。",
           DialogueId = 51200204,
           GUID = "802CA178",
           SpeakNpcId = 100001
@@ -258567,7 +258588,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51202223] = {
           Content = "（你从支票簿里抽出一张递给索米。）",
-          ContentJP = "あなたは小切手を一枚切って、レオンに差し出した。",
+          ContentJP = "あなたは小切手を一枚切って、スオミに差し出した。",
           DialogueId = 51202223,
           GUID = "802DECB6",
           NextDialogue = 51202224
@@ -258604,7 +258625,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51202228] = {
           Content = "（你从支票簿里抽出几张递给索米。）",
-          ContentJP = "あなたは小切手を何枚か切って、レオンに差し出した。",
+          ContentJP = "あなたは小切手を何枚か切って、スオミに差し出した。",
           DialogueId = 51202228,
           GUID = "802DED88",
           NextDialogue = 51202229
@@ -266461,6 +266482,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160006] = {
           Content = "来点惊喜，笑一笑。",
+          ContentJP = "サプライズ～ぼーっとしてないで、ちゃんと笑いなさいよ～",
           DialogueId = 60160006,
           Duration = 2.4,
           GUID = "969AB0FC",
@@ -266469,6 +266491,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160007] = {
           Content = "极光号将会以最快的速度抵达远方——",
+          ContentJP = "オーロラ号は最速で彼方まで――",
           DialogueId = 60160007,
           Duration = 3.5,
           GUID = "969AB126",
@@ -266477,6 +266500,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160008] = {
           Content = "听说你们一直在找炸弹？",
+          ContentJP = "キャハハ、爆弾を探してるんだって～？",
           DialogueId = 60160008,
           Duration = 2.3,
           GUID = "969AB150",
@@ -266485,6 +266509,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160009] = {
           Content = "别躲嘛，别害羞。",
+          ContentJP = "避けないでよ、もう！恥ずかしがり屋なんだから～",
           DialogueId = 60160009,
           Duration = 3.4,
           GUID = "969AB17A",
@@ -335893,7 +335918,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [100499106] = {
           Content = "你这件袍子，怎么和我上次见到的不太一样，加了花边？",
-          ContentJP = "そのローブ、この前見た時とちょっと違わない？袖に飾り、つけた？",
+          ContentJP = "そのローブ、この前見た時とちょっと違わない？袖に飾りつけた？",
           DialogueId = 100499106,
           GUID = "100499106",
           SpeakNpcId = 100434,
@@ -336299,7 +336324,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [100499157] = {
           Content = "当然，鉴于我所见过的每一位帝国的帮凶都是死硬的顽固分子，那么，有必要让你们先流点血。相信这会成为你们生命中难以忘怀的一天。",
-          ContentJP = "私がこれまで見てきた帝国の犬どもは、救いようのない石頭ばかりだったね。だからまあ、多少は血を流してもらうことになるかな～？でも安心しなよ。今日はきっと――テメェらにとって、一生忘れられない日になるから。",
+          ContentJP = "私がこれまで見てきた帝国の犬どもは、救いようのない石頭ばかりだったね。だから多少は血を流してもらうことになるかな～？でも安心しなよ。今日はきっと――テメェらにとって、一生忘れられない日になるから。",
           DialogueId = 100499157,
           GUID = "100499157",
           SnapShot = "BROADCAST",
@@ -336534,6 +336559,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         [100499202] = {DialogueId = 100499202, GUID = "100499202"},
         [100499203] = {
           Content = "士兵从巨大的烟囱中鱼贯而出，自老妇人的背后擒住了她。",
+          ContentJP = "巨大な煙突の中から現れた兵士たちが背後から老婦人を取り押さえた。",
           DialogueId = 100499203,
           GUID = "100499203"
         },
@@ -336609,16 +336635,19 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [100499401] = {
           Content = "史蒂芬前往车厢角落，打开暗门，里面是史蒂芬的父亲卡诺",
+          ContentJP = "ステファンが車両の隅へ駆け寄り、隠し扉を開く。その奥にいたのは、ステファンの父、カルノーだった。",
           DialogueId = 100499401,
           GUID = "100499401"
         },
         [100499402] = {
           Content = "（芙罗拉打开了从车长车厢拿到的对讲机。）",
+          ContentJP = "フローラは車掌室で手に入れた通信機を起動した。",
           DialogueId = 100499402,
           GUID = "100499402"
         },
         [100499403] = {
           Content = "史蒂芬与刚刚挺身而出的乘客们陆续回到了车厢……",
+          ContentJP = "ステファンと乗客たちは、次々と車両に戻っていった。",
           DialogueId = 100499403,
           GUID = "100499403"
         },
@@ -336647,6 +336676,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [100499503] = {
           Content = "唉……爸爸，你为什么要这么做……",
+          ContentJP = "はぁ…お父さん、どうして……",
           DialogueId = 100499503,
           GUID = "100499503",
           SpeakNpcId = 100415

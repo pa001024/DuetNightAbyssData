@@ -157,7 +157,7 @@ return ReadOnly("Skin", {
   },
   [1201] = {
     CharId = 1201,
-    Des = "UI_Skin_Des_1201",
+    Des = "UI_Skin_Des_1601",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Nvzhu02",
@@ -165,10 +165,10 @@ return ReadOnly("Skin", {
     NpcSkinModelId = 1201,
     Rarity = 5,
     ReleaseVersion = 140,
-    SkinDescribe = "UI_Skin_Des_1201",
+    SkinDescribe = "UI_Skin_Des_1601",
     SkinId = 1201,
     SkinModelId = 1201,
-    SkinName = "UI_Skin_Name_1201",
+    SkinName = "UI_Skin_Name_1601",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [1501] = {
@@ -763,7 +763,7 @@ return ReadOnly("Skin", {
   },
   [120101] = {
     CharId = 120101,
-    Des = "UI_Skin_Des_1201",
+    Des = "UI_Skin_Des_1601",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Nanzhu02",
@@ -771,10 +771,10 @@ return ReadOnly("Skin", {
     NpcSkinModelId = 120101,
     Rarity = 5,
     ReleaseVersion = 140,
-    SkinDescribe = "UI_Skin_Des_1201",
+    SkinDescribe = "UI_Skin_Des_1601",
     SkinId = 120101,
     SkinModelId = 120101,
-    SkinName = "UI_Skin_Name_1201",
+    SkinName = "UI_Skin_Name_1601",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [150201] = {

@@ -69993,7 +69993,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_ch_story_1004_100499_100499156 = {
     ProgrammerSoundPath = "event:/voice/ch/story/1004",
     SelectKey = "voice_ch_story_1004_100499_100499156",
-    SoundLength = 7910
+    SoundLength = 7950
   },
   voice_ch_story_1004_100499_100499157 = {
     ProgrammerSoundPath = "event:/voice/ch/story/1004",
@@ -290026,7 +290026,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_kr_char_Fuluo_vo_birthday = {
     ProgrammerSoundPath = "event:/voice/kr/char/Fuluo/vo",
     SelectKey = "voice_kr_char_Fuluo_vo_birthday",
-    SoundLength = 43500
+    SoundLength = 36630
   },
   voice_kr_char_Fuluo_vo_companio_01 = {
     ProgrammerSoundPath = "event:/voice/kr/char/Fuluo/vo",

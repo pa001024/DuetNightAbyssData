@@ -150,12 +150,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177772131390820562141",
-            startPort = "true",
-            endQuest = "17791578296201745",
-            endPort = "In"
-          },
-          {
             startQuest = "17791578296201745",
             startPort = "Out",
             endQuest = "177772041576114019398",
@@ -189,6 +183,18 @@ return {
             startQuest = "17791991573273865468",
             startPort = "Out",
             endQuest = "17797190308532425181",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772131390820562141",
+            startPort = "true",
+            endQuest = "17798724048563879013",
+            endPort = "In"
+          },
+          {
+            startQuest = "17798724048563879013",
+            startPort = "Out",
+            endQuest = "17791578296201745",
             endPort = "In"
           }
         },
@@ -384,7 +390,7 @@ return {
             key = "17791578296201745",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 300.0774860263353, y = 391.29061134943504},
+            pos = {x = 668.0774860263352, y = 83.29061134943504},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_TrailnPaotaiStart",
@@ -411,7 +417,7 @@ return {
             key = "17791992171914830701",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1425.4048703125295, y = 251.99887488560267},
+            pos = {x = 1815.4048703125295, y = 213.24887488560267},
             propsData = {
               NewDescription = "Content_10040501_04",
               NewDetail = "",
@@ -436,7 +442,7 @@ return {
             key = "177969792015337745366",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1138.767857142857, y = 218.64285714285705},
+            pos = {x = 1077.9783834586465, y = 162.59022556390968},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
@@ -451,6 +457,23 @@ return {
             propsData = {
               VarName = "StateHaluo100405",
               VarValue = 1
+            }
+          },
+          ["17798724048563879013"] = {
+            key = "17798724048563879013",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 274, y = 108},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },
@@ -723,7 +746,7 @@ return {
             key = "1779520994099968656",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1051.0977443609024, y = 410.0187969924812},
+            pos = {x = 537.9398496240603, y = 449.4924812030075},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,

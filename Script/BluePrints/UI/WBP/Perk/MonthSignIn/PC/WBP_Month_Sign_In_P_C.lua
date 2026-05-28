@@ -99,9 +99,6 @@ function M:Construct()
     self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.KeyReward:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  local CurTimestamp = TimeUtils.NowTime()
-  DebugPrint("Yihan@ CurTimestamp", CurTimestamp)
-  EMCache:Set("PreLoadingTime", CurTimestamp, true)
 end
 
 function M:OnEnterState_MonthCard()
@@ -193,6 +190,8 @@ function M:ResetDynamicNode()
     end
   elseif UIUtils.IsKeyboardInput() then
     BottomKeyInfo = self.BottomKeyInfo.KeyBoardInfo
+  else
+    return
   end
   self.Panel_Key:ClearChildren()
   self.ComKeys = {}

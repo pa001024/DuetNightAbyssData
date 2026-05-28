@@ -1134,7 +1134,7 @@ return ReadOnly("Draft", {
     FoundryCost = {
       [101] = 880000
     },
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Ticket04.T_Resource_Ticket04",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_Coin_Zaie.T_Resource_Coin_Zaie",
     IsInfinity = true,
     NotDraftTree = true,
     ProductId = 1001,

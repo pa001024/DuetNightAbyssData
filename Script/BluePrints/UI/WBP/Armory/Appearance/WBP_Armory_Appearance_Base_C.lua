@@ -19,12 +19,14 @@ function M:Init(Params)
   self.IsTargetUnowned = Params.IsTargetUnowned
   self.IsCharacterTrialMode = Params.IsCharacterTrialMode
   self.NoReddot = true
-  if self.bFormPersonalPage then
+  if self.bFormPersonalPage or self.IsPreviewMode or self.IsCharacterTrialMode then
     self.GridPanel_Char:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Btn_Appearence:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Weapon_Skin:GetParent():SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
     self.GridPanel_Char:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Btn_Appearence:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Weapon_Skin:GetParent():SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
   self:InitDispatcher()
   self:ResetTarget()

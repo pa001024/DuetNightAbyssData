@@ -35695,7 +35695,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10041803] = {
           Content = "喂！军团专列禁止靠近！",
-          ContentEN = "Legion train! Keep away!",
+          ContentEN = "Oi! Kid. That's close enough.",
           DialogueId = 10041803,
           GUID = "19237B4E",
           SpeakNpcId = 100422,
@@ -37343,9 +37343,10 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10042901] = {
           Content = "闲杂人等禁止靠近！",
-          ContentEN = "Legion train! Keep away!",
+          ContentEN = "Back off. No one goes in.",
           DialogueId = 10042901,
           GUID = "19242F72",
+          NextDialogue = 10042902,
           RelatedWikiId = {
             [1] = 408022,
             [2] = 101004,
@@ -37360,6 +37361,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "We're Phoxhunters. The Stationmaster sent us to assist with the investigation.",
           DialogueId = 10042902,
           GUID = "19242F9C",
+          NextDialogue = 10042903,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100429/19242F9C"
         },
@@ -37368,6 +37370,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Ah. So you're the Phoxhunters the boss mentioned. The suspects. If it's his order, go on — have at it.",
           DialogueId = 10042903,
           GUID = "19242FC6",
+          NextDialogue = 10042904,
           SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FC6"
         },
@@ -37376,7 +37379,8 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "And mind where you step. Don't go breaking anything else.",
           DialogueId = 10042904,
           GUID = "19242FF0",
-          SpeakNpcId = 100415,
+          NextDialogue = 10042905,
+          SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FF0"
         },
         [10042905] = {
@@ -39352,6 +39356,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10044336] = {
           Content = "没错。知道炸弹是在仓库组装的人是极少数，写下这封信的人根本不应该知道这种事情。",
+          ContentEN = "Exactly. Only a handful of people know the bomb was put together in the storehouse. This writer shouldn't.",
           DialogueId = 10044336,
           GUID = "19251AE0",
           VoiceName = "voice/$Locale$/story/1004/100443/19251AE0"
@@ -45061,6 +45066,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "...",
           DialogueId = 10048340,
           GUID = "1927ABC8",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927ABC8"
         },
@@ -45077,6 +45083,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Cease fire! Verify Princess Flodia's presence aboard the Jackdaw!",
           DialogueId = 10048342,
           GUID = "1927AC1C",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC1C"
         },
@@ -45085,6 +45092,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "You're safe for now. I've never seen nobles and commoners stand together like this. I didn't think anyone but royalty could pull it off.",
           DialogueId = 10048343,
           GUID = "1927AC46",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC46"
         },
@@ -45283,6 +45291,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 403014
           },
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C704"
         },
@@ -45299,6 +45308,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Round loaded. Computing firing solution.",
           DialogueId = 10048508,
           GUID = "1927C758",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C758"
         },
@@ -45307,6 +45317,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Solution confirmed. Preparing to fire.",
           DialogueId = 10048509,
           GUID = "1927C782",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C782"
         },
@@ -45323,6 +45334,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Three...",
           DialogueId = 10048511,
           GUID = "1927C7D6",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C7D6"
         },
@@ -45331,6 +45343,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Two...",
           DialogueId = 10048512,
           GUID = "1927C800",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C800"
         },
@@ -45339,6 +45352,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "One...",
           DialogueId = 10048513,
           GUID = "1927C82A",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C82A"
         },
@@ -45749,6 +45763,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "Breaking news. Earlier today, the Forsakens seized the Aurora Express on the southern edge of the Cocytus Region. An Imperial airship moved in to intervene. The hijackers responded by firing the train-mounted cannon.",
           DialogueId = 10049007,
           GUID = "19281936",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281936"
         },
@@ -45757,6 +45772,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentEN = "The airship was hit and detonated near a massive Heaventree, setting it alight. This is the second Heaventree fire reported this year. The 6th Legion has dispatched additional units. All Aurora Express passengers remain unaccounted for. Their condition is unknown.",
           DialogueId = 10049008,
           GUID = "19281960",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281960"
         },
@@ -45971,6 +45987,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "（那还是我自己来吧，只要呼喊神的名字的话，他们总得有点什么回应才是，否则这片雾海也太过质朴了。）",
           ContentEN = "(Fine. I'll do it myself. If I call the goddess's name, someone has to answer... otherwise this Misty Sea is a little too empty.)",
           DialogueId = 10049107,
+          DisableMouth = 1,
           GUID = "1928299E",
           SnapShot = "HEART",
           SpeakNpcId = 1001,
@@ -251688,6 +251705,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200201] = {
           Content = "噫噫噫！！！从哪里冒出来一堆这么大的老鼠？",
+          ContentEN = "Eeek!!! Where did all these giant rats come from?",
           DialogueId = 51200201,
           GUID = "802CA0FA",
           NextDialogue = 51200202,
@@ -251695,6 +251713,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200202] = {
           Content = "这里可是冰湖城，冰湖城里出现老鼠不是很正常吗？",
+          ContentEN = "This is Icelake. What's so strange about a few rats?",
           DialogueId = 51200202,
           GUID = "802CA124",
           NextDialogue = 51200203,
@@ -251702,6 +251721,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200203] = {
           Content = "小仆从，快去把那些老鼠消灭掉啊，它们在撞击你踮脚的梯子！",
+          ContentEN = "Little minion, go get rid of them! They're ramming the ladder you're standing on!",
           DialogueId = 51200203,
           GUID = "802CA14E",
           NextDialogue = 51200204,
@@ -251709,6 +251729,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200204] = {
           Content = "明明是你在晃……算了，我去清掉。",
+          ContentEN = "Obviously, you're the one shaking it... Fine, I'll clear them out.",
           DialogueId = 51200204,
           GUID = "802CA178",
           SpeakNpcId = 100001
@@ -257111,7 +257132,7 @@ Knock what off?]],
         },
         [51201325] = {
           Content = "（男人捂着脸，一脸不可置信。）",
-          ContentEN = "(The man clutches his cheek and stares at you in disbelief.)",
+          ContentEN = "(The man clutches his cheek, his face full of disbelief.)",
           DialogueId = 51201325,
           GUID = "802D5962",
           NextDialogue = 51201326
@@ -259074,7 +259095,7 @@ Knock what off?]],
         },
         [51202223] = {
           Content = "（你从支票簿里抽出一张递给索米。）",
-          ContentEN = "(You tear a cheque from the book and hand it to Leon.)",
+          ContentEN = "(You tear a cheque from the book and hand it to Somi.)",
           DialogueId = 51202223,
           GUID = "802DECB6",
           NextDialogue = 51202224
@@ -259111,7 +259132,7 @@ Knock what off?]],
         },
         [51202228] = {
           Content = "（你从支票簿里抽出几张递给索米。）",
-          ContentEN = "(You tear several cheques from the book and hand them to Leon.)",
+          ContentEN = "(You tear several cheques from the book and hand them to Somi.)",
           DialogueId = 51202228,
           GUID = "802DED88",
           NextDialogue = 51202229
@@ -259134,7 +259155,7 @@ Knock what off?]],
         },
         [51202231] = {
           Content = "费利克斯……不错的名字，你去买票的时候，记得向车站里的检举窗口投递一封信，这点小事不麻烦吧？",
-          ContentEN = "Felix, is it? While you're sorting out the tickets, Leon, make sure you leave a complaint with the station office too. That shouldn't be too difficult.",
+          ContentEN = "Felix, is it? While you're sorting out the tickets, Somi, make sure you leave a complaint with the station office too. That shouldn't be too difficult.",
           DialogueId = 51202231,
           GUID = "802DEE06",
           NextDialogue = 51202232,
@@ -260100,7 +260121,7 @@ Knock what off?]],
         },
         [51202536] = {
           Content = "对，我没工资，我在这里的意义就是充当一个木桩，把我哥这匹牛马拴在岗上。这就是我进来的原因。",
-          ContentEN = "That's right. Not a coin. I'm not here because they need me to keep my brother from leaving. That's all I am.",
+          ContentEN = "That's right. Not a coin. I'm here only because they need me to keep my brother from leaving. That's all I am.",
           DialogueId = 51202536,
           GUID = "802E2010",
           NextOptions = {
@@ -266968,6 +266989,7 @@ Knock what off?]],
         },
         [60160006] = {
           Content = "来点惊喜，笑一笑。",
+          ContentEN = "Surprise~ Smile for me.",
           DialogueId = 60160006,
           Duration = 2.4,
           GUID = "969AB0FC",
@@ -266976,6 +266998,7 @@ Knock what off?]],
         },
         [60160007] = {
           Content = "极光号将会以最快的速度抵达远方——",
+          ContentEN = "The Aurora Express is now proceeding at maximum speed.",
           DialogueId = 60160007,
           Duration = 3.5,
           GUID = "969AB126",
@@ -266984,6 +267007,7 @@ Knock what off?]],
         },
         [60160008] = {
           Content = "听说你们一直在找炸弹？",
+          ContentEN = "Oh? Hunting for explosives~?",
           DialogueId = 60160008,
           Duration = 2.3,
           GUID = "969AB150",
@@ -266992,6 +267016,7 @@ Knock what off?]],
         },
         [60160009] = {
           Content = "别躲嘛，别害羞。",
+          ContentEN = "Come on, don't be so shy~",
           DialogueId = 60160009,
           Duration = 3.4,
           GUID = "969AB17A",
@@ -337197,6 +337222,7 @@ To be surrounded at all hours, hands kissed, blessings murmured with reverence, 
         [100499202] = {DialogueId = 100499202, GUID = "100499202"},
         [100499203] = {
           Content = "士兵从巨大的烟囱中鱼贯而出，自老妇人的背后擒住了她。",
+          ContentEN = "Soldiers slip in from the ventilation shaft and seize the old woman from behind.",
           DialogueId = 100499203,
           GUID = "100499203"
         },
@@ -337272,16 +337298,19 @@ To be surrounded at all hours, hands kissed, blessings murmured with reverence, 
         },
         [100499401] = {
           Content = "史蒂芬前往车厢角落，打开暗门，里面是史蒂芬的父亲卡诺",
+          ContentEN = "Stéphane rushes to the corner and opens a concealed hatch. Carnot is inside.",
           DialogueId = 100499401,
           GUID = "100499401"
         },
         [100499402] = {
           Content = "（芙罗拉打开了从车长车厢拿到的对讲机。）",
+          ContentEN = "Flora turned on the radio handset she had taken from the conductor's carriage.",
           DialogueId = 100499402,
           GUID = "100499402"
         },
         [100499403] = {
           Content = "史蒂芬与刚刚挺身而出的乘客们陆续回到了车厢……",
+          ContentEN = "Stéphane and the passengers who had stepped forward returned to the carriage one by one.",
           DialogueId = 100499403,
           GUID = "100499403"
         },
@@ -337310,6 +337339,7 @@ To be surrounded at all hours, hands kissed, blessings murmured with reverence, 
         },
         [100499503] = {
           Content = "唉……爸爸，你为什么要这么做……",
+          ContentEN = "Dad... why did you do it...?",
           DialogueId = 100499503,
           GUID = "100499503",
           SpeakNpcId = 100415

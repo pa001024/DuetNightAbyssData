@@ -126,7 +126,7 @@ return ReadOnly("ChannelInfo", {
     SDKChannelId = 3
   },
   [270] = {
-    AccountPrefix = "harmony",
+    AccountPrefix = "hero",
     ChannelId = 270,
     DeviceType = "mobile",
     Name = "鸿蒙",

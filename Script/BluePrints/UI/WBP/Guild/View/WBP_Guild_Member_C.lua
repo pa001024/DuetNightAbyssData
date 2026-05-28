@@ -52,6 +52,9 @@ function M:Construct()
   ChatController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == ChatCommon.EventID.RefreshGuildMemberChatStatus then
       self:RefreshGuildMemberChatStatus()
+    elseif EventId == ChatCommon.EventID.CloseMainView and self.ChatOpenFromMember then
+      self.ChatOpenFromMember = false
+      self:FocusToMemberList(true)
     end
   end)
   ReddotManager.AddListenerEx("GuildNewRequest", self, self.RefreshReddot)
@@ -84,6 +87,7 @@ function M:Init()
   self.Sort:BindEventOnSortTypeChanged(self, self.OnSortTypeChanged)
   self.IsMoreOpen = false
   self:InitMemberInfos()
+  GuildController:SendGetGuildInfo()
 end
 
 function M:RefreshUIInfo()

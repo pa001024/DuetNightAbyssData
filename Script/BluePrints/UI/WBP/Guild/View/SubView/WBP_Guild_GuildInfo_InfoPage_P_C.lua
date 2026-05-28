@@ -107,7 +107,7 @@ function M:InitView(ParentWidget, GuildInfo)
   self.Btn_Edit:SetText(GText("UI_EditGuildInfo"))
   self:InitBtnEdit()
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
-  GuildController:SendGetGuildInfo(self.CurrGuildInfo.GuildId, false)
+  GuildController:SendGetGuildInfo(self.CurrGuildInfo.GuildId)
 end
 
 function M:GetGuildFullInfo(Info)

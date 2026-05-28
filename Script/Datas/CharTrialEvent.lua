@@ -188,8 +188,8 @@ return ReadOnly("CharTrialEvent", {
     CharTrialId = 101029,
     ColorVarName = "Type_Water",
     Eventld = 105102023,
-    GachaTabId = 6,
     HideBPNode = T.RT_1,
+    InterfaceJumpId = 113,
     SkinId = 210101,
     TrialReward = 20000,
     TrialType = "Skin"

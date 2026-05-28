@@ -876,7 +876,12 @@ return ReadOnly("UIGuide", {
     MainGuideTitle = "MAINUIGUIDE_TITLE_GuildChat_1"
   },
   [154] = {
-    ChildGuideId = {15401},
+    ChildGuideId = {
+      15401,
+      15402,
+      15403,
+      15404
+    },
     GuideId = 154,
     MainGuideTitle = "MAINUIGUIDE_TITLE_Conveyor_1"
   },

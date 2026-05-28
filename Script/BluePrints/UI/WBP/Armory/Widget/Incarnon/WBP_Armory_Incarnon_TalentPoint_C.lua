@@ -79,25 +79,32 @@ end
 
 function M:InitAnimationState()
   self:InitTalentState()
-  local AniName
+  self.CurPlayingAnimation = nil
   if self.TalentState == StateEnum.Locked then
-    AniName = self.Locked
+    self.CurPlayingAnimation = self.Locked
   elseif self.TalentState == StateEnum.UnlockedInactive then
-    AniName = self.UnAct
+    self.CurPlayingAnimation = self.UnAct
   elseif self.TalentState == StateEnum.UnlockedActivatable then
-    AniName = self.Act
+    self.CurPlayingAnimation = self.Act
   elseif self.TalentState == StateEnum.Activated then
-    AniName = self.UnLock
+    self.CurPlayingAnimation = self.UnLock
   end
-  if not AniName then
+  if not self.CurPlayingAnimation then
     return
   end
+  self.StopProcess = true
   self:StopAllAnimations()
-  self:PlayAnimation(AniName)
-  if AniName == self.Act then
+  self:PlayAnimation(self.CurPlayingAnimation)
+  if self.CurPlayingAnimation == self.Act then
     self.IsAnimationActPlaying = true
   else
     self.IsAnimationActPlaying = false
+  end
+end
+
+function M:OnAnimationFinished(AnimationName)
+  if AnimationName == self.CurPlayingAnimation then
+    self.StopProcess = false
   end
 end
 
@@ -178,19 +185,21 @@ function M:UnlockTalent(FinishedObj, FinishedCallback)
   
   local function OnUnLockFinished()
     self:UnbindAllFromAnimationFinished(self.Unlock_In)
-    if RootWidget then
-      RootWidget:BlockAllUIInput(false)
-    end
     self:InitAnimationState()
     if FinishedObj and FinishedCallback then
       FinishedCallback(FinishedObj)
     end
+    if RootWidget then
+      RootWidget:BlockAllUIInput(false)
+    end
+    self.StopProcess = false
   end
   
   self:BindToAnimationFinished(self.Unlock_In, {self, OnUnLockFinished})
   if RootWidget then
     RootWidget:BlockAllUIInput(true)
   end
+  self.StopProcess = true
   self:StopAllAnimations()
   self:PlayAnimation(self.Unlock_In)
   AudioManager(self):PlayUISound(self, "event:/ui/common/skin_upgrade", nil, nil)
@@ -206,7 +215,9 @@ function M:PlayActInAnimation()
     if self.IsAnimationActPlaying then
       return
     end
+    self.StopProcess = true
     self:StopAllAnimations()
+    self.CurPlayingAnimation = self.Act_In
     self:PlayAnimation(self.Act_In)
     self.IsAnimationActPlaying = true
   end

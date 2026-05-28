@@ -127,7 +127,7 @@
   {
     "id": 1009,
     "name": "Nekral",
-    "des": "Le voile de la nuit recouvre ciel et terre, tandis qu’un sifflement rauque résonne dans l’obscurité.",
+    "des": "Le voile de la nuit recouvre ciel et terre, tandis qu’un sifflement rauque résonne dans l’obscurité.\nAucun avantage de réputation n’est requis pour le vol.",
     "icon": "Mounts_0011",
     "resourceIcon": "Icon_Mounts_0011",
     "rarity": 6,
@@ -140,7 +140,7 @@
   {
     "id": 1010,
     "name": "Vers les ténèbres",
-    "des": "Deux ailes d’un noir absolu déchirent la nuit et s’élancent silencieusement vers une rive que même la lumière de la lune ne peut atteindre.",
+    "des": "Deux ailes d’un noir absolu déchirent la nuit et s’élancent silencieusement vers une rive que même la lumière de la lune ne peut atteindre.\nVitesse de vol +50 %. Aucun avantage de réputation n’est requis pour le vol.",
     "icon": "Mounts_0010",
     "resourceIcon": "Icon_Mounts_0010",
     "rarity": 6,

@@ -1145,6 +1145,8 @@ function M:InitAccessoryListCommon()
   self.List_Accessory:RequestPlayEntriesAnim()
 end
 
+local bFirstJump = true
+
 function M:OnModBtnClicked()
   if self.Type == CommonConst.ArmoryType.Weapon then
     ModController:SetActorController(self.ActorController)
@@ -1163,6 +1165,10 @@ function M:OnModBtnClicked()
       local Time = 1 * (ViewportSize.X / ViewportSize.Y / 1.77)
       if Time < 1 then
         Time = 1
+      end
+      if bFirstJump then
+        Time = 1.5
+        bFirstJump = false
       end
       self:AddTimer(Time, function()
         local SlotIds = ModController:GetModel():GetSlotIdsWhichEquiped(PendingSelectMod.Uuid)

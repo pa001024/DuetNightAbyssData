@@ -20,13 +20,31 @@ function M:IsTodaySigned()
 end
 
 function M:GetTodayYear()
-  local Obj = TimeUtils.TimestampToDataObj(TimeUtils.TimestampLastClock(5))
-  return Obj.year
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    if 0 == Avatar.MonthlyCheck.Year then
+      local Now = TimeUtils.NowTime()
+      local GameDayTimestamp = Now - TimeUtils.GetSec(table.unpack(TimeUtils.RefreshHMS))
+      local d = TimeUtils.TimestampToDataObj(GameDayTimestamp)
+      return d.year
+    else
+      return Avatar.MonthlyCheck.Year
+    end
+  end
 end
 
 function M:GetTodayMonth()
-  local Obj = TimeUtils.TimestampToDataObj(TimeUtils.TimestampLastClock(5))
-  return Obj.month
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    if 0 == Avatar.MonthlyCheck.Month then
+      local Now = TimeUtils.NowTime()
+      local GameDayTimestamp = Now - TimeUtils.GetSec(table.unpack(TimeUtils.RefreshHMS))
+      local d = TimeUtils.TimestampToDataObj(GameDayTimestamp)
+      return d.month
+    else
+      return Avatar.MonthlyCheck.Month
+    end
+  end
 end
 
 function M:GetTodaySignInDay()
@@ -92,21 +110,16 @@ function M:IsPopUpMonthSignInReward()
   if not Avatar then
     return
   end
-  local CurTimestamp = TimeUtils.NowTime()
-  local PrePopUpTime = EMCache:Get("PrePopUpTime", true)
-  DebugPrint("Yihan@ IsPopUpMonthSignInReward", CurTimestamp, PrePopUpTime)
-  if not PrePopUpTime then
-    EMCache:Set("PrePopUpTime", CurTimestamp, true)
+  local PreCheckCount = EMCache:Get("PreCheckCount", true)
+  if not PreCheckCount then
     return true
   else
-    DebugPrint("Yihan@ IsPopUpMonthSignInReward", TimeUtils.GetIntervalDay(CurTimestamp, PrePopUpTime))
-    if 0 ~= TimeUtils.GetIntervalDay(CurTimestamp, PrePopUpTime) then
-      EMCache:Set("PrePopUpTime", CurTimestamp, true)
+    DebugPrint("Yihan@ TryPopUpMonthSignIn")
+    if PreCheckCount ~= Avatar.MonthlyCheck.MonthlyCheckCount then
       return true
-    else
-      return false
     end
   end
+  return false
 end
 
 function M:MergeRewardIds(MonthSignInRewardId)

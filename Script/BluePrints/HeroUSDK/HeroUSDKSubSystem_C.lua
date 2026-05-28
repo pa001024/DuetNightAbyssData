@@ -4,6 +4,29 @@ local Json = require("rapidjson")
 local EMCache = require("EMCache.EMCache")
 local MiscUtils = require("Utils.MiscUtils")
 local HeroUSDKSubSystem_C = Class()
+local RequestExitChannels = {
+  [303] = {
+    [0] = true
+  },
+  [255] = {
+    [0] = true
+  },
+  [2] = {
+    [0] = true
+  }
+}
+
+local function IsRequestExitChannel()
+  local SDK = HeroUSDKSubsystem()
+  local ChannelId = SDK:GetChannelId()
+  local MirrorChannelId = SDK:GetMirrorChannelId()
+  if nil == MirrorChannelId or MirrorChannelId <= 0 then
+    MirrorChannelId = 0
+  end
+  local bIsRequestExitChannel = RequestExitChannels[ChannelId] and RequestExitChannels[ChannelId][MirrorChannelId] or false
+  DebugPrint("HeroUSDKSubSystem_C:IsRequestExitChannel ChannelId:", ChannelId, "MirrorChannelId:", MirrorChannelId, "bIsRequestExitChannel:", bIsRequestExitChannel)
+  return bIsRequestExitChannel
+end
 
 function HeroUSDKSubSystem_C:LoadCloudGameCursorTexture()
   DebugPrint("HeroUSDKSubSystem_C:LoadCloudGameCursorTexture")
@@ -94,7 +117,10 @@ end
 
 function HeroUSDKSubSystem_C:OnExit(Result, Msg)
   DebugPrint("USDK OnExit: Result:", Result, "Msg:", Msg)
-  if HeroUSDKSubsystem():IsBilibili() then
+  local bIsBilibili = HeroUSDKSubsystem():IsBilibili()
+  local bIsRequestExitChannel = IsRequestExitChannel()
+  DebugPrint("USDK OnExit RequestExit Check, bIsBilibili:", bIsBilibili, "bIsRequestExitChannel:", bIsRequestExitChannel)
+  if bIsBilibili or bIsRequestExitChannel then
     HeroUSDKSubsystem():EMRequestExit()
   end
 end

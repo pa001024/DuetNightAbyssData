@@ -8367,7 +8367,8 @@ return ReadOnly("RewardView", {
       [6] = "DropTag_AccessoryDropOther",
       [7] = "DropTag_AccessoryDropOther",
       [8] = "DropTag_AccessoryDropOther",
-      [9] = "DropTag_AccessoryDropOther"
+      [9] = "DropTag_AccessoryDropOther",
+      [10] = "DropTag_AccessoryDropOther"
     },
     Id = {
       [1] = 33010141,
@@ -8378,12 +8379,14 @@ return ReadOnly("RewardView", {
       [6] = 120003,
       [7] = 112,
       [8] = 1009,
-      [9] = 211
+      [9] = 100,
+      [10] = 211
     },
     Quantity = {
       [6] = T.RT_3,
-      [7] = T.RT_15,
-      [8] = T.RT_3
+      [7] = T.RT_47,
+      [8] = T.RT_5,
+      [9] = T.RT_43
     },
     RewardViewId = 10302002,
     Type = {
@@ -8395,7 +8398,8 @@ return ReadOnly("RewardView", {
       [6] = "Resource",
       [7] = "Resource",
       [8] = "Resource",
-      [9] = "Resource"
+      [9] = "Resource",
+      [10] = "Resource"
     }
   },
   [10302101] = {

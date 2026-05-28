@@ -249,13 +249,7 @@ function WBP_ModArchive_Main_C:OnShowTipsClose()
 end
 
 function WBP_ModArchive_Main_C:RefreshData()
-  self.RewardGets = {}
   local Avatar = GWorld:GetAvatar()
-  local ModBookCompleteConditions = {}
-  local PreCompleteConditions = EMCache:Get("ModBookCompleteConditions", true)
-  local ModShows = {}
-  local ModUnlocks = {}
-  local ModBookCanGetRewards = {}
   local ModArchiveNewByViewState = false
   self.ModBookModsViewState = EMCache:Get("ModBookModsViewState", true)
   if not self.ModBookModsViewState then
@@ -263,68 +257,29 @@ function WBP_ModArchive_Main_C:RefreshData()
   end
   local Data = DataMgr.ModGuideBookArchive
   for i, v in pairs(Data) do
-    if v.ShowCondition and ConditionUtils.CheckCondition(Avatar, v.ShowCondition) then
-      if not ModBookCompleteConditions[i] then
-        ModBookCompleteConditions[i] = {}
-      end
-      ModBookCompleteConditions[i][1] = true
-      ModBookCompleteConditions[i][2] = ModBookCompleteConditions[i][2] or false
-      if not (PreCompleteConditions and PreCompleteConditions[i]) or not PreCompleteConditions[i][1] then
-        for k = 1, #v.ModList do
-          table.insert(ModShows, v.ModList[k])
-        end
-      end
-    end
-    if v.UnlockCondition and ConditionUtils.CheckCondition(Avatar, v.UnlockCondition) then
-      if not ModBookCompleteConditions[i] then
-        ModBookCompleteConditions[i] = {}
-      end
-      ModBookCompleteConditions[i][2] = true
-      ModBookCompleteConditions[i][1] = ModBookCompleteConditions[i][1] or false
-      if not (PreCompleteConditions and PreCompleteConditions[i]) or not PreCompleteConditions[i][2] then
-        for k = 1, #v.ModList do
-          table.insert(ModUnlocks, v.ModList[k])
-        end
-      end
-    end
-    if (v.ShowCondition or v.UnlockCondition) and (v.ShowCondition and ConditionUtils.CheckCondition(Avatar, v.ShowCondition) or v.UnlockCondition and ConditionUtils.CheckCondition(Avatar, v.UnlockCondition)) and not self.ModBookModsViewState[i] then
+    if not self.ModBookModsViewState[i] or not next(self.ModBookModsViewState[i]) then
       self.ModBookModsViewState[i] = {}
       for Id = 1, #v.ModList do
         local ModId = v.ModList[Id]
+        if Avatar.HoldMods[ModId] then
+          self.ModBookModsViewState[i][ModId] = true
+          ModArchiveNewByViewState = true
+        end
+      end
+    end
+    if not self.ModBookModsViewState[i] then
+      self.ModBookModsViewState[i] = {}
+    end
+    for Id = 1, #v.ModList do
+      local ModId = v.ModList[Id]
+      if not self.ModBookModsViewState[i][ModId] and self.ModBookModsViewState[i][ModId] ~= false and Avatar.HoldMods[ModId] then
         self.ModBookModsViewState[i][ModId] = true
         ModArchiveNewByViewState = true
       end
     end
-    local CanGet = true
-    if not (not v.ShowCondition or ConditionUtils.CheckCondition(Avatar, v.ShowCondition)) or v.UnlockCondition and not ConditionUtils.CheckCondition(Avatar, v.UnlockCondition) then
-      CanGet = false
-    else
-      for k = 1, #v.ModList do
-        local ModId = v.ModList[k]
-        if not Avatar.HoldMods[ModId] then
-          CanGet = false
-          break
-        end
-      end
-    end
-    if CanGet and Avatar.HoldModRewards[i] then
-      CanGet = false
-    end
-    self.RewardGets[i] = CanGet
-    ModBookCanGetRewards[i] = CanGet
-    if CanGet then
-      self.ShowArchiveReddot = true
-    end
   end
-  EMCache:Set("ModBookCompleteConditions", ModBookCompleteConditions, true)
-  EMCache:Set("ModBookCanGetRewards", ModBookCanGetRewards, true)
   EMCache:Set("ModBookModsViewState", self.ModBookModsViewState, true)
   EMCache:Set("ModArchiveNewByViewState", ModArchiveNewByViewState, true)
-  if #ModShows > 0 or #ModUnlocks > 0 then
-    DebugPrint("加载弹窗 ")
-    self.TipsModShows = ModShows
-    self.TipsModUnlocks = ModUnlocks
-  end
 end
 
 function WBP_ModArchive_Main_C:RefreshDot()
@@ -333,19 +288,6 @@ function WBP_ModArchive_Main_C:RefreshDot()
 end
 
 function WBP_ModArchive_Main_C:RefreshReddot()
-  local ModBookCanGetRewards = EMCache:Get("ModBookCanGetRewards", true) or {}
-  local Groups = DataMgr.ModGuideBookArchive
-  local SubTabRed = {}
-  local ArchiveTabRed = false
-  for i, v in pairs(ModBookCanGetRewards) do
-    if v then
-      DebugPrint("应该有红点 ", tonumber(i))
-      local ArchiveId = tonumber(i)
-      local TabId = DataMgr.ModGuideBookArchive[ArchiveId].TabId
-      SubTabRed[TabId] = true
-      ArchiveTabRed = true
-    end
-  end
   local TaskTabRed = false
   local ReddotNode = "ModArchive_Task"
   local Avatar = GWorld:GetAvatar()
@@ -388,7 +330,6 @@ end
 function WBP_ModArchive_Main_C:RefreshNewdot()
   local ModBookModsViewState = EMCache:Get("ModBookModsViewState", true) or {}
   local ModArchiveNewByViewState = false
-  local HasNewTabs = {}
   local SubTabNew = {}
   local MainTabNew = false
   for i, v in pairs(ModBookModsViewState) do
@@ -396,7 +337,6 @@ function WBP_ModArchive_Main_C:RefreshNewdot()
       if IsNew then
         DebugPrint("哪个是new ", ModIdString, i)
         local ArchiveId = tonumber(i)
-        HasNewTabs[ArchiveId] = true
         if DataMgr.ModGuideBookArchive[ArchiveId] and DataMgr.ModGuideBookArchive[ArchiveId].TabId then
           local TabId = DataMgr.ModGuideBookArchive[ArchiveId].TabId
           if not SubTabNew[TabId] then

@@ -21,6 +21,7 @@ function WBP_ModArchive_Archive_C:Construct()
     Obj.IsEmpty = true
     return Obj
   end)
+  self:InitModId2ArchiveId()
   self:InitModRewardTips()
   self:CheckRewardReddot()
   self:UpdateOnInputDeviceTypeChange()
@@ -216,7 +217,8 @@ function WBP_ModArchive_Archive_C:AddModArchiveListItemContent(Entry, listIdx, M
   else
     Content.bShadow = false
   end
-  if ModBookModsViewState and ModBookModsViewState[Entry.GroupId] and ModBookModsViewState[Entry.GroupId][Content.Id] then
+  local ArchiveId = self.ModId2ArchiveId and self.ModId2ArchiveId[Content.Id] or 0
+  if ModBookModsViewState and ModBookModsViewState[ArchiveId] and ModBookModsViewState[ArchiveId][Content.Id] == true then
     Content.RedDotType = UIConst.RedDotType.NewRedDot
   end
   local HasThisMod = self.HasMod and self.HasMod[Content.Id]
@@ -231,9 +233,24 @@ function WBP_ModArchive_Archive_C:AddModArchiveListItemContent(Entry, listIdx, M
       self.FirstInitDone = true
       self:SetTipsInfo(CurModInfo, Entry.LockState)
       Widget:SetSelected(true)
+      Widget:SetRedDot(nil)
+      Widget.Content.RedDotType = nil
       self.CurItemWidget = Widget
       if self.IsInPolarityView or not self.IsInSearchView then
       end
+      if ModBookModsViewState[ArchiveId] and ModBookModsViewState[ArchiveId][CurModInfo.Id] then
+        ModBookModsViewState[ArchiveId][CurModInfo.Id] = false
+      end
+      local ReddotNode = DataMgr.ModGuideBookArchiveTab[self.CurTab].ReddotNode
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
+      if CacheDetail.NewNum then
+        CacheDetail.NewNum = CacheDetail.NewNum - 1
+        if CacheDetail.States and CacheDetail.States[CurModInfo.Id] then
+          CacheDetail.States[CurModInfo.Id] = false
+        end
+      end
+      ReddotManager.DecreaseLeafNodeCount(ReddotNode, 1, CacheDetail)
+      EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
     end
     Widget:PlayAnimation(Widget.In)
   end
@@ -306,12 +323,14 @@ function WBP_ModArchive_Archive_C:OnItemClicked(ModInfo, LockState, WidgetIndex,
   end
   self.IsInViewTips = false
   local ModBookModsViewState = EMCache:Get("ModBookModsViewState", true)
-  if ModBookModsViewState[GroupId] and ModBookModsViewState[GroupId][ModInfo.Id] then
-    ModBookModsViewState[GroupId][ModInfo.Id] = false
+  local ArchiveId = self.ModId2ArchiveId and self.ModId2ArchiveId[ModInfo.Id] or 0
+  if ModBookModsViewState[ArchiveId] and ModBookModsViewState[ArchiveId][ModInfo.Id] then
+    ModBookModsViewState[ArchiveId][ModInfo.Id] = false
     Widget:SetRedDot(nil)
+    Widget.Content.RedDotType = nil
     local ReddotNode = DataMgr.ModGuideBookArchiveTab[self.CurTab].ReddotNode
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
-    if CacheDetail.NewNum then
+    if CacheDetail and CacheDetail.NewNum then
       CacheDetail.NewNum = CacheDetail.NewNum - 1
       if CacheDetail.States and CacheDetail.States[ModInfo.Id] then
         CacheDetail.States[ModInfo.Id] = false
@@ -551,9 +570,6 @@ function WBP_ModArchive_Archive_C:AddTabReddotListen()
       ReddotManager.AddListenerEx(ReddotName, self, function(self, Count, RdType, RdName)
         if Count > 0 then
           if RdType == EReddotType.Normal then
-            if self.ArchiveTab then
-              self.ArchiveTab:ShowTabRedDot(i, false, true)
-            end
           elseif RdType == EReddotType.New and self.ArchiveTab then
             self.ArchiveTab:ShowTabRedDot(i, true, false)
           end
@@ -1273,6 +1289,18 @@ function WBP_ModArchive_Archive_C:CheckRewardReddot()
     self.Key_Reward.Reddot:SetVisibility(ESlateVisibility.Visible)
   else
     self.Key_Reward.Reddot:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function WBP_ModArchive_Archive_C:InitModId2ArchiveId()
+  if self.ModId2ArchiveId then
+    return
+  end
+  self.ModId2ArchiveId = {}
+  for ArchiveId, ArchiveInfo in pairs(DataMgr.ModGuideBookArchive) do
+    for Index, ModId in pairs(ArchiveInfo.ModList) do
+      self.ModId2ArchiveId[ModId] = ArchiveId
+    end
   end
 end
 

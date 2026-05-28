@@ -65,6 +65,16 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["172640156"] = {
+      CreatorId = 172640156,
+      UnitType = "Mechanism",
+      UnitId = 11003
+    },
+    ["172640157"] = {
+      CreatorId = 172640157,
+      UnitType = "Mechanism",
+      UnitId = 11003
+    },
     ["172640021"] = {
       CreatorId = 172640021,
       UnitType = "Mechanism",

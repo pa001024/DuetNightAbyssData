@@ -76,8 +76,8 @@
   },
   {
     "id": 1201,
-    "name": "{nickname}的衣饰（待包装）",
-    "desc": "暗主（待包装）",
+    "name": "{nickname}的衣飾",
+    "desc": "一人，一劍，一襲白衣。跨過汪洋與寒夜，只為在黎明的盡頭相逢。",
     "icon": "T_Head_Nvzhu02",
     "rarity": 5,
     "charId": 1201,
@@ -736,8 +736,8 @@
   },
   {
     "id": 120101,
-    "name": "{nickname}的衣饰（待包装）",
-    "desc": "暗主（待包装）",
+    "name": "{nickname}的衣飾",
+    "desc": "一人，一劍，一襲白衣。跨過汪洋與寒夜，只為在黎明的盡頭相逢。",
     "icon": "T_Head_Nanzhu02",
     "rarity": 5,
     "charId": 120101,

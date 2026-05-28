@@ -104,6 +104,9 @@ function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime
   if not Avatar.ActivityTimeOpen then
     return false
   end
+  if GWorld.GameInstance.GMBlockActivityMap and GWorld.GameInstance.GMBlockActivityMap[EventID] then
+    return false
+  end
   if not EventMainExcel.EventExamReview and Avatar.IsCurrentServerExamine then
     return false
   end

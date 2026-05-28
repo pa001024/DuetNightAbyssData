@@ -26,7 +26,7 @@ return {
         QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040310_01",
-        QuestDeatil = "Description_10040310_01",
+        QuestDeatil = "Description_10040309_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,

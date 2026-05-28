@@ -76,8 +76,8 @@
   },
   {
     "id": 1201,
-    "name": "{nickname}的衣饰（待包装）",
-    "desc": "暗主（待包装）",
+    "name": "Tenue de {nickname}",
+    "desc": "Un être, une lame, une robe immaculée. Traverser l’océan et la nuit glacée, pour enfin se retrouver à l’orée de l’aube.",
     "icon": "T_Head_Nvzhu02",
     "rarity": 5,
     "charId": 1201,
@@ -736,8 +736,8 @@
   },
   {
     "id": 120101,
-    "name": "{nickname}的衣饰（待包装）",
-    "desc": "暗主（待包装）",
+    "name": "Tenue de {nickname}",
+    "desc": "Un être, une lame, une robe immaculée. Traverser l’océan et la nuit glacée, pour enfin se retrouver à l’orée de l’aube.",
     "icon": "T_Head_Nanzhu02",
     "rarity": 5,
     "charId": 120101,

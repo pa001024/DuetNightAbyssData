@@ -697,4 +697,23 @@ function SkillUtils.SafeCeil(x)
   end
 end
 
+function SkillUtils.CalcBuffSpModify(buffManager, skillId)
+  local total = 0
+  for buffId, buffInfo in pairs(DataMgr.Buff) do
+    local spModifyTable = buffInfo.BuffSpModify
+    if spModifyTable then
+      local entry = spModifyTable[skillId]
+      if entry then
+        local buff = buffManager:FindBuffById(buffId)
+        if buff then
+          local layer = buff.Layer or 0
+          local value = entry.Value or 0
+          total = total + layer * value
+        end
+      end
+    end
+  end
+  return total
+end
+
 return SkillUtils

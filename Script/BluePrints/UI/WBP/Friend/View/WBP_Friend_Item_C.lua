@@ -80,7 +80,7 @@ function M:Construct()
   FriendController:OverrideButtonSound(self.Button_No, "event:/ui/common/click_btn_cancel", nil)
   self.Button_No:BindEventOnReleased(self, self.OnBtnYesOrNoRelease, false)
   self.Head_Friend:BindOnClickEvent(function()
-    self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid, self.PersonData)
+    self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid)
   end)
   self.Button_Gift:BindEventOnClicked(self, self.OnBtnGiftClick)
   self.Button_Gift:BindForbidStateExecuteEvent(self, self.OnGiftForbidClick)
@@ -751,7 +751,7 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == UIConst.GamePadKey.SpecialLeft and not IsValid(ChatController:GetView(self)) then
-    self.Head_Anchor:Open(true)
+    self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid)
   end
   return ParentHandled
 end
@@ -803,7 +803,7 @@ function M:WaitCardGuildInfoCallback()
   end
 end
 
-function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
+function M:GetCardGuildInfo(GuildId, Uid)
   self.WaitCardGuildInfo = 2
   self.Owner:BlockAllUIInput(true, "SP_DisplayOnly")
   self.CardGuildFullInfo = nil

@@ -165,8 +165,12 @@ function M:_SetUpChatContent(MsgWrap)
   end
   self.Head:SetHoldUp(true)
   self.Head:BindOnClickEvent(function()
-    self:GetCardGuildInfo(AvatarInfo.GuildId, AvatarInfo.Uid, AvatarInfo)
+    self:GetCardGuildInfo(AvatarInfo.GuildId, AvatarInfo.Uid)
   end)
+  self.CardGuildInfoParams = {
+    GuildId = AvatarInfo.GuildId,
+    Uid = AvatarInfo.Uid
+  }
   self:SetupAnchor(self.HeadAnchor, self.Head, AvatarInfo, false, MessageContent)
   self.Head:SetHeadIconById(AvatarInfo.HeadIconId)
   self.Head:SetHeadFrame(AvatarInfo.HeadFrameId)
@@ -322,7 +326,7 @@ function M:IsShowCheckPlan(InKeyName)
   if not MsgWrap then
     return false
   end
-  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo
+  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo or MsgWrap.AsyncCombatRoomInfo
 end
 
 function M:OnCheckPlanGamePadDown()
@@ -350,6 +354,11 @@ function M:OnCheckPlanGamePadDown()
       self.GuildInvite:OnClickBtnOpenGuildDetail()
     end
     IsEventHandled = true
+  elseif self.MsgWrap.AsyncCombatRoomInfo then
+    if self.ChatCardCoop and self.ChatCardCoop.OnClicked then
+      self.ChatCardCoop:OnClicked()
+    end
+    IsEventHandled = true
   end
   return IsEventHandled
 end
@@ -365,7 +374,7 @@ function M:OnGamePadDown(InKeyName)
     end
   elseif InKeyName == Const.GamepadFaceButtonDown then
     if not self.IsOpen and self.Owner.FocusStateType == ChatFocusType.SelectChat and self.HeadAnchor then
-      self.HeadAnchor:Open(true)
+      self:GetCardGuildInfo(self.CardGuildInfoParams.GuildId, self.CardGuildInfoParams.Uid)
       self.Head:BtnAreaOnHovered()
       IsEventHandled = true
     end
@@ -472,7 +481,7 @@ function M:WaitCardGuildInfoCallback()
   end
 end
 
-function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
+function M:GetCardGuildInfo(GuildId, Uid)
   self.WaitCardGuildInfo = 2
   self.Owner:BlockAllUIInput(true, "SP_DisplayOnly")
   self.CardGuildFullInfo = nil

@@ -255,7 +255,7 @@
     "desc": "Complete commissions during the event to claim rewards",
     "startTime": 1777514400,
     "endTime": 1779051599,
-    "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Use Starglow Coins to open them.\n2. Complete Commissions to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.",
+    "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Each Gift requires 3 Starglow Coins to open.\n2. Complete Commissions to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.",
     "boxDrop": {
       "boxCoinId": 221,
       "boxMaximum": 21,
@@ -554,7 +554,7 @@
     "desc": "Lunotoot wants everyone to see how fun railways can be! So she mimicked the fun Lunos' once had at Galea Theater, hopping and cheering in Forecourt Rotunda.",
     "startTime": 1780538400,
     "endTime": 1782334800,
-    "rule": "<H>Luno's Special Theatre Event Rules</>\n1. After the event starts, you can sign up for the event with <H>Lunotoot</> at <H>Bloomfield Station</>.\n2. In <H>Lunoball</>, follow Luno's instructions on the stage and display the matching <H>Geniemon</> and <H>posture</> to receive rewards. To meet the requirement, you can simply display the same type of Geniemon. Release the skill of Miraculous Bro Boxie to meet the requirement of <H>Shiny Bro Boxie</> and <H>Ardent Bro Boxie</>.\n3. If you meet one or more requirements in each <H>Lunoball</>, you can get <H>premium rewards</> at the end of the ball. Each account can get <H>Premium Rewards</> <H>5</> times at most during the event period, and after that, even if more reqirements are met, only <H>regular rewards</> will be granted. The interval between two <H>Lunoballs</> is half an hour.\n4. In <H>Festive Gathering: Bloomfield Station</>, rewards will be sent via mail after a certain progress of delivering materials.\n5. In <H>Festive Gathering: Bloomfield Station</>, clicking [Auto-Add] will automatically add deliverable materials according to the quality of the materials.\n6. In <H>Festive Gathering: Bloomfield Station</>, the [Auto-Add] function becomes unavailable once all delivery milestones are complete. You can still manually add and deliver materials to finish quests and claim rewards."
+    "rule": "<H>Luno's Rail Rumpus Event Rules</>\n1. After the event starts, you can sign up for the event with <H>Lunotoot</> at <H>Bloomfield Station</>.\n2. In <H>Lunoball</>, follow Luno's instructions on the stage and display the matching <H>Geniemon</> and <H>posture</> to receive rewards. To meet the requirement, you can simply display the same type of Geniemon. Release the skill of Miraculous Bro Boxie to meet the requirement of <H>Shiny Bro Boxie</> and <H>Ardent Bro Boxie</>.\n3. If you meet one or more requirements in each <H>Lunoball</>, you can get <H>premium rewards</> at the end of the ball. Each account can get <H>Premium Rewards</> <H>5</> times at most during the event period, and after that, even if more reqirements are met, only <H>regular rewards</> will be granted. The interval between two <H>Lunoballs</> is half an hour.\n4. In <H>Festive Gathering: Bloomfield Station</>, rewards will be sent via mail after a certain progress of delivering materials.\n5. In <H>Festive Gathering: Bloomfield Station</>, clicking [Auto-Add] will automatically add deliverable materials according to the quality of the materials.\n6. In <H>Festive Gathering: Bloomfield Station</>, the [Auto-Add] function becomes unavailable once all delivery milestones are complete. You can still manually add and deliver materials to finish quests and claim rewards."
   },
   {
     "id": 10302001,
@@ -562,7 +562,7 @@
     "desc": "Complete commissions during the event to claim rewards",
     "startTime": 1782352800,
     "endTime": 1783889999,
-    "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Use Starglow Coins to open them.\n2. Complete Commissions to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.",
+    "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Each Gift requires 3 Starglow Coins to open.\n2. Complete Commissions to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.",
     "boxDrop": {
       "boxCoinId": 223,
       "boxMaximum": 38,

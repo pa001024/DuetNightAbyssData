@@ -167,6 +167,8 @@ function M:Construct()
   else
     local IsRefresh = GuildController:SendGuildGetList()
     if IsRefresh then
+      self.AllGuildList = {}
+      self:ShowInfo()
       self:BlockAllUIInput(true, "SP_DisplayOnly")
     else
       self:OnGetGuildList()
@@ -337,7 +339,7 @@ function M:OnSpecialRightLongPressEnd()
 end
 
 function M:OnGetGuildList()
-  self.AllGuildList = GuildController:GetModel():GetGuildList()
+  self.AllGuildList = GuildController:GetModel():GetGuildList() or {}
   self:ShowInfo()
 end
 
@@ -684,13 +686,34 @@ function M:SetTopGamepadIconVisibility(bVisible)
   end
 end
 
-function M:SetGuildJoinGamePadIconVisible(IsShow)
+function M:SetBottomGamepadIconVisibility(bVisible)
+  if not UIUtils.IsGamepadInput() then
+    return
+  end
+  if bVisible then
+    self.Tab.Com_KeyTips.Panel_Key:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Tab.Com_KeyTips.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:SetGuildJoinGamePadIconVisible(IsShow, Top, Bottom)
   if IsShow then
     self.GuildJoin.GuildList:ShowAllGamePadIcon()
     self.GuildJoin.GuildInfo:ShowAllGamePadIcon()
   else
     self.GuildJoin.GuildList:HideAllGamePadIcon()
     self.GuildJoin.GuildInfo:HideAllGamePadIcon()
+  end
+  if nil == Top then
+    self:SetTopGamepadIconVisibility(IsShow)
+  else
+    self:SetBottomGamepadIconVisibility(Top)
+  end
+  if nil == Bottom then
+    self:SetBottomGamepadIconVisibility(IsShow)
+  else
+    self:SetBottomGamepadIconVisibility(Bottom)
   end
 end
 

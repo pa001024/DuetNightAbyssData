@@ -171,5 +171,10 @@ return ReadOnly("QuestionnaireMail", {
   [362621237] = {MailId = 10019, QuestionnaireId = 362621237},
   [362621500] = {MailId = 10019, QuestionnaireId = 362621500},
   [362621558] = {MailId = 10019, QuestionnaireId = 362621558},
-  [362621657] = {MailId = 10019, QuestionnaireId = 362621657}
+  [362621657] = {MailId = 10019, QuestionnaireId = 362621657},
+  [365516821] = {MailId = 10019, QuestionnaireId = 365516821},
+  [365516865] = {MailId = 10019, QuestionnaireId = 365516865},
+  [365517125] = {MailId = 10019, QuestionnaireId = 365517125},
+  [365517205] = {MailId = 10019, QuestionnaireId = 365517205},
+  [365517266] = {MailId = 10019, QuestionnaireId = 365517266}
 })

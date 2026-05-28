@@ -8,6 +8,7 @@ local CharacterCommon = require("BluePrints.Client.CustomTypes.CharacterCommon")
 local WeaponCom = require("BluePrints.Client.CustomTypes.Weapon")
 local ModCom = require("BluePrints.Client.CustomTypes.Mod")
 local PetCom = require("BluePrints.Client.CustomTypes.Pet")
+local EMCache = require("EMCache.EMCache")
 local M = {}
 M.ArmoryMainTabNames = {
   Char = CommonConst.ArmoryTag.Char,
@@ -792,7 +793,10 @@ function ReddotCreateFunctions.CreateModReddotInfos(M)
   local AllModIds = {}
   for Uuid, Mod in pairs(Avatar.Mods) do
     if Mod.Count > 0 and 0 == Mod.Level then
-      M:TryAddNewModReddot(Mod, Mod.ModId)
+      if Mod:Data() then
+        local NodeName = CommonConst.DataType.Mod .. Mod.ApplicationType
+        M:_TryAddNewReddotCommon(Mod.ModId, NodeName)
+      end
       AllModIds[Mod.ModId] = CommonUtils.ObjId2Str(Uuid)
     end
   end
@@ -1467,34 +1471,53 @@ function M:TryAddNewModReddot(Mod, ModId)
 end
 
 function M:TryAddNewModBookReddot(Mod, ModId)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar.HoldMods and Avatar.HoldMods[ModId] then
+  if nil == ModId then
+    ModId = Mod.ModId
+  end
+  ModId = tonumber(ModId)
+  if not ModId then
     return
   end
-  local ArchiveId = DataMgr.ModId2ArchiveId[ModId]
+  local ArchiveId = DataMgr.ModId2ArchiveId and DataMgr.ModId2ArchiveId[ModId]
   if not ArchiveId then
     return
   end
-  if Avatar.HoldModRewards and Avatar.HoldModRewards[ArchiveId] then
+  local ModArchiveInfo = DataMgr.ModGuideBookArchive[ArchiveId]
+  if not ModArchiveInfo then
     return
   end
-  local ModList = DataMgr.ModGuideBookArchive[ArchiveId].ModList
-  for i = 1, #ModList do
-    if ModId ~= ModList[i] and not Avatar.HoldMods[ModList[i]] then
-      return
-    end
+  local TabConf = DataMgr.ModGuideBookArchiveTab[ModArchiveInfo.TabId]
+  if not TabConf or not TabConf.ReddotNode then
+    return
   end
-  local ReddotNode = DataMgr.ModGuideBookArchiveTab[DataMgr.ModGuideBookArchive[ArchiveId].TabId].ReddotNode
+  local ReddotNode = TabConf.ReddotNode
   if not ReddotManager.GetTreeNode("ModArchive") then
     ReddotManager.AddNodeEx("ModArchive")
   end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(ReddotNode)
   CacheDetail = CacheDetail or {}
-  if not CacheDetail.RedNum then
-    CacheDetail.RedNum = 0
+  if not CacheDetail.NewNum then
+    CacheDetail.NewNum = 0
   end
-  CacheDetail.RedNum = CacheDetail.RedNum + 1
+  if not CacheDetail.States then
+    CacheDetail.States = {}
+  end
+  local ModBookModsViewState = EMCache:Get("ModBookModsViewState", true) or {}
+  if not ModBookModsViewState[ArchiveId] then
+    ModBookModsViewState[ArchiveId] = {}
+  end
+  local ViewState = ModBookModsViewState[ArchiveId][ModId]
+  if CacheDetail.States[ModId] == true then
+    return
+  end
+  if CacheDetail.States[ModId] == false or false == ViewState then
+    return
+  end
+  CacheDetail.States[ModId] = true
+  CacheDetail.NewNum = CacheDetail.NewNum + 1
   ReddotManager.IncreaseLeafNodeCount(ReddotNode, 1, CacheDetail)
+  ModBookModsViewState[ArchiveId][ModId] = true
+  EMCache:Set("ModBookModsViewState", ModBookModsViewState, true)
 end
 
 function M:TryAddNewWeaponReddot(Weapon, UuidStr)

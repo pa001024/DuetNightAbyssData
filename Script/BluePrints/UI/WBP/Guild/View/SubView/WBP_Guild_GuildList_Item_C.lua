@@ -25,6 +25,10 @@ function M:OnListItemObjectSet(Content)
   else
     self:SetSelected(false)
   end
+  if Content.IsFocus then
+    Content.IsFocus = false
+    self:SetFocus()
+  end
 end
 
 function M:SetSelected(bIsChecked)

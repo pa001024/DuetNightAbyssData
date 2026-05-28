@@ -7827,34 +7827,74 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 55003
   },
   [55004] = {
+    ContentEN = "Glamour Gallery does not exist",
+    ContentFR = "Galerie d’éclat inexistante",
+    ContentJP = "外見ギャラリーが見つかりません",
+    ContentKR = "빛나는 진열실이 존재하지 않습니다.",
+    ContentTC = "華彩陳列室不存在",
     ErrorCodeContent = "华彩陈列室不存在",
     ErrorCodeId = 55004
   },
   [55005] = {
+    ContentEN = "Incorrect reward information",
+    ContentFR = "Informations de récompense invalides",
+    ContentJP = "報酬データにエラー発生",
+    ContentKR = "보상 정보에 오류가 있습니다.",
+    ContentTC = "獎勵信息有誤",
     ErrorCodeContent = "奖励信息有误",
     ErrorCodeId = 55005
   },
   [55006] = {
+    ContentEN = "Reward claim requirements not met",
+    ContentFR = "Conditions de récupération de la récompense non remplies",
+    ContentJP = "報酬受取条件を満たしていません",
+    ContentKR = "보상 수령 조건을 만족하지 않습니다.",
+    ContentTC = "不滿足獎勵領取要求",
     ErrorCodeContent = "不满足奖励领取要求",
     ErrorCodeId = 55006
   },
   [55007] = {
+    ContentEN = "Reward already claimed",
+    ContentFR = "Récompense déjà réclamée",
+    ContentJP = "報酬受取済み",
+    ContentKR = "이미 보상을 수령했습니다.",
+    ContentTC = "獎勵已領取",
     ErrorCodeContent = "奖励已领取",
     ErrorCodeId = 55007
   },
   [55008] = {
+    ContentEN = "Error in Glamour Score acquisition",
+    ContentFR = "Erreur lors de l’obtention du score d’éclat",
+    ContentJP = "外見スコアデータにエラー発生",
+    ContentKR = "찬란도 획득에 오류가 있습니다.",
+    ContentTC = "獲取華彩值有誤",
     ErrorCodeContent = "获取华彩值有误",
     ErrorCodeId = 55008
   },
   [55009] = {
+    ContentEN = "Reward does not exist",
+    ContentFR = "Récompense de score d’éclat inexistante",
+    ContentJP = "報酬が見つかりません",
+    ContentKR = "보상이 존재하지 않습니다.",
+    ContentTC = "獎勵不存在",
     ErrorCodeContent = "奖励不存在",
     ErrorCodeId = 55009
   },
   [55010] = {
+    ContentEN = "Reward claim requirements not met",
+    ContentFR = "Conditions de récupération de la récompense non remplies",
+    ContentJP = "報酬受取条件を満たしていません",
+    ContentKR = "보상 수령 조건을 만족하지 않습니다.",
+    ContentTC = "不滿足獎勵領取要求",
     ErrorCodeContent = "不满足奖励领取要求",
     ErrorCodeId = 55010
   },
   [55011] = {
+    ContentEN = "Reward already claimed",
+    ContentFR = "Récompense déjà réclamée",
+    ContentJP = "報酬受取済み",
+    ContentKR = "이미 보상을 수령했습니다.",
+    ContentTC = "獎勵已領取",
     ErrorCodeContent = "奖励已领取",
     ErrorCodeId = 55011
   },
@@ -11157,6 +11197,11 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 97044
   },
   [97045] = {
+    ContentEN = "This player cannot join a guild at this time",
+    ContentFR = "Ce joueur ne peut actuellement pas rejoindre la guilde",
+    ContentJP = "このプレイヤーは協会に参加できません",
+    ContentKR = "해당 유저는 현재 길드에 가입할 수 없습니다.",
+    ContentTC = "該玩家當前無法加入協會",
     ErrorCodeContent = "该玩家当前无法加入协会",
     ErrorCodeId = 97045
   },

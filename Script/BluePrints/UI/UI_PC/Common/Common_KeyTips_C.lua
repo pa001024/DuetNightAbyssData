@@ -56,4 +56,15 @@ function M:ClearChildren()
   self.ComKeys = nil
 end
 
+function M:BindOnRemovedFromFocusPathEvent(Obj, Event)
+  self.Obj_RemovedFromFocusPath = Obj
+  self.Event_RemovedFromFocusPath = Event
+end
+
+function M:OnRemovedFromFocusPath(InFocusEvent)
+  if self.Event_RemovedFromFocusPath then
+    self.Event_RemovedFromFocusPath(self.Obj_RemovedFromFocusPath)
+  end
+end
+
 return M

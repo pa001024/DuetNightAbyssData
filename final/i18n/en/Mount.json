@@ -127,7 +127,7 @@
   {
     "id": 1009,
     "name": "Nekral",
-    "des": "Night draws its veil across heaven and earth. Hoarse whistles echo beneath it.",
+    "des": "Night draws its veil across heaven and earth. Hoarse whistles echo beneath it.\nNo Reputation Perk is required to pilot this mount.",
     "icon": "Mounts_0011",
     "resourceIcon": "Icon_Mounts_0011",
     "rarity": 6,
@@ -140,7 +140,7 @@
   {
     "id": 1010,
     "name": "Into the Nightveil",
-    "des": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight.",
+    "des": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight.\nNo Reputation Perk is required to pilot this mount.",
     "icon": "Mounts_0010",
     "resourceIcon": "Icon_Mounts_0010",
     "rarity": 6,

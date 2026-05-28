@@ -4,6 +4,7 @@ local M = Class({
 })
 
 function M:Construct()
+  self.bGamepadIconVisible = true
   self.Btn_Area.OnClicked:Add(self, self.OnClick)
   self.Btn_Area:SetVisibility(UIConst.VisibilityOp.Visable)
   self:BindInputMethodChangedDelegate()
@@ -23,7 +24,8 @@ function M:Construct()
   self.VX_Forbbiden:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
 end
 
-function M:SetData()
+function M:SetData(Params)
+  self.Params = Params
   local ResourceId = GuildCommon.GuildCreateItemId
   self.Icon_Piece:Init({
     Id = ResourceId,
@@ -86,8 +88,10 @@ function M:OnResourceClick()
     ItemId = Icon_Coin.Id,
     Uuid = Icon_Coin.Uuid,
     MenuPlacement = Icon_Coin.MenuPlacement,
+    IsShowDetails = true,
     UIName = Icon_Coin.UIName,
-    HandleKeyDown = Icon_Coin.HandleKeyDown
+    HandleKeyDown = Icon_Coin.HandleKeyDown,
+    OnItemRemovedFromFocusPathEvent = self.Params.ItemDetailCloseCallback
   }
   Icon_Coin.ItemDetails_MenuAnchor:OpenItemDetailsWidget(false, Content)
   Icon_Coin.Content.IsShowTips = true
@@ -111,8 +115,13 @@ function M:UnBindInputMethodChangedDelegate()
   end
 end
 
+function M:SetGamepadIconVisibility(bShow)
+  self.bGamepadIconVisible = bShow
+  self:OnInputMethodChanged(UIUtils.UtilsGetCurrentInputType())
+end
+
 function M:OnInputMethodChanged(NewGameInputType, NewGamepadName)
-  if NewGameInputType == ECommonInputType.Gamepad then
+  if NewGameInputType == ECommonInputType.Gamepad and self.bGamepadIconVisible then
     self.Key_Consume:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Key_Unlock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else

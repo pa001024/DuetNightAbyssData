@@ -324,12 +324,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177847399602354",
-            startPort = "Out",
-            endQuest = "177847399602681",
-            endPort = "In"
-          },
-          {
             startQuest = "177847399602465",
             startPort = "Out",
             endQuest = "177847399602467",
@@ -360,12 +354,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177847399602354",
-            startPort = "Out",
-            endQuest = "177936857346369142033",
-            endPort = "In"
-          },
-          {
             startQuest = "177847399603094",
             startPort = "Out",
             endQuest = "177942985543579296281",
@@ -387,6 +375,24 @@ return {
             startQuest = "1779520559294969478",
             startPort = "Out",
             endQuest = "177847399602984",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847399602249",
+            startPort = "QuestStart",
+            endQuest = "1779781428718990",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847399602357",
+            startPort = "Out",
+            endQuest = "177847399602681",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847399602356",
+            startPort = "Out",
+            endQuest = "177936857346369142033",
             endPort = "In"
           }
         },
@@ -459,7 +465,7 @@ return {
             key = "177847399602354",
             type = "TalkNode",
             name = "第二段演出",
-            pos = {x = 1124.9146404320322, y = 658.8390092431015},
+            pos = {x = 1137.1368626542544, y = 665.5056759097681},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -508,7 +514,7 @@ return {
             key = "177847399602355",
             type = "ChangeRoleNode",
             name = "切换奥哥",
-            pos = {x = 1450.146395633352, y = 459.2732387816788},
+            pos = {x = 1459.035284522241, y = 173.7176832261232},
             propsData = {QuestRoleId = 51020201, IsPlayFX = false}
           },
           ["177847399602356"] = {
@@ -837,7 +843,7 @@ return {
             key = "177847399602681",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1908.5788587808993, y = 515.7168830063044},
+            pos = {x = 1888.578858780899, y = 402.38354967297107},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -1056,7 +1062,7 @@ return {
             key = "17784942695454875762",
             type = "TalkNode",
             name = "第二段演出",
-            pos = {x = 1483.3825931823073, y = 708.5324960127592},
+            pos = {x = 1501.6434627475248, y = 703.3151047084114},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -1191,7 +1197,7 @@ return {
             key = "177936857346369142033",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1902.787878787879, y = 395.9999999999999},
+            pos = {x = 2427.232323232324, y = 522.6666666666665},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "CZLightChangeStart",
@@ -1235,6 +1241,16 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["1779781428718990"] = {
+            key = "1779781428718990",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = -1021.0614035087723, y = 213.75657894736847},
+            propsData = {
+              VarName = "FirstStateChaos100402",
+              VarValue = 1
             }
           }
         },

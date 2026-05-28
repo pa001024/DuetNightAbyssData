@@ -236,16 +236,11 @@ return ReadOnly("SpecialLoading", {
   [10043] = {
     Id = 10043,
     LoadingId = 10110701,
-    Region = {SubId = 101701}
+    Region = {SubId = 101107}
   },
   [10044] = {
     Id = 10044,
     LoadingId = 10600103,
     Region = {SpawnPoint = 10, SubId = 106001}
-  },
-  [10045] = {
-    Id = 10045,
-    LoadingId = 10610101,
-    Region = {SpawnPoint = 2, SubId = 106101}
   }
 })

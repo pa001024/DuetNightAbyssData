@@ -19267,7 +19267,7 @@
       },
       {
         "id": 10040303,
-        "name": "Draw a conclusion",
+        "name": "Share your findings",
         "desc": "Speak with the soldier"
       },
       {
@@ -19403,8 +19403,8 @@
       },
       {
         "id": 10040307,
-        "name": "Investigate the storehouse keeper's reputation",
-        "desc": "To find the suspicious person who entered the storehouse, the station broadcast announced that the storehouse manager was the culprit. This should pressure the real culprit into trying to shift the blame onto him.\nWhile we wait for the results, let's look into the storehouse manager's reputation."
+        "name": "Wait for the PA announcement",
+        "desc": "After some discussion, you decided to put forward a false suspect to throw the real culprit off the trail. The storehouse keeper naturally became the chosen scapegoat. Now all that's left is to wait for PA to announce your fabricated findings."
       },
       {
         "id": 10040308,
@@ -19597,7 +19597,7 @@
             "dialogues": [
               {
                 "id": 100499503,
-                "content": "唉……爸爸，你为什么要这么做……",
+                "content": "Dad... why did you do it...?",
                 "npc": 100415
               }
             ]
@@ -19945,12 +19945,12 @@
       },
       {
         "id": 10040413,
-        "name": "Head to the back of the train to get on the roof",
+        "name": "Move forward through the train",
         "desc": "To help Stéphane, you start moving toward the front of the train."
       },
       {
         "id": 10040414,
-        "name": "Head to the back of the train to get on the roof",
+        "name": "Move forward through the train",
         "desc": "To help Stéphane, you start moving toward the front of the train."
       },
       {
@@ -19965,7 +19965,7 @@
       },
       {
         "id": 10040417,
-        "name": "Head to the back of the train to get on the roof",
+        "name": "Move forward through the train",
         "desc": "To figure out the Forsaken's goal, keep moving forward until you reach the first-class carriage."
       },
       {
@@ -19975,7 +19975,7 @@
       },
       {
         "id": 10040419,
-        "name": "Head to the back of the train to get on the roof",
+        "name": "Move forward through the train",
         "desc": "To figure out the Forsaken's goal, keep moving forward until you reach the first-class carriage."
       },
       {
@@ -19990,7 +19990,7 @@
       },
       {
         "id": 10040422,
-        "name": "Head to the back of the train to get on the roof",
+        "name": "Move forward through the train",
         "desc": "Even though the escape plan is about to start, Miss Flora is still focused on her painting.\nPrepare some tea and refreshments for her.",
         "nodes": [
           {
@@ -92434,7 +92434,7 @@
             "srId": 106001,
             "pos": [
               -32980,
-              -6530
+              -6525
             ],
             "dialogues": [
               {
@@ -93113,7 +93113,7 @@
             "srId": 106001,
             "pos": [
               -32980,
-              -6530
+              -6525
             ],
             "dialogues": [
               {

@@ -428,8 +428,8 @@ function Component:OnDispatchComplete(Id)
   end
 end
 
-function Component:BackToOriginalRegion()
-  self:ChangeRegion(self.OriginalRegionId, function()
+function Component:BackToOriginalRegion(OriginalRegionId)
+  self:ChangeRegion(OriginalRegionId, function()
     self:ShowMissionIndicatorsInRegionMap()
   end)
 end

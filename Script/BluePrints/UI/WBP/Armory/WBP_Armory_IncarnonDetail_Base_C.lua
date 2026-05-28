@@ -47,6 +47,7 @@ function M:OnLoaded(...)
   self.Params.OnLevelWidgetAddToFocusPath = self.OnLevelWidgetAddToFocusPath
   self.Params.OnTalentWidgetAddToFocusPath = self.OnTalentWidgetAddToFocusPath
   self.Params.SkipClickSound = false
+  self.Params.ProcessLeftThumbstick = true
   self.Armory_Incarnon:Init(self.Params)
   self.Avatar = GWorld:GetAvatar()
   self.WeaponId = self.Target.WeaponId
@@ -157,7 +158,7 @@ function M:RefreshCardDetailPanel(Widget, CardLevel)
   local CardState = HyperWeaponUtils.GetCardState(self.Avatar, self.WeaponUuid, CardLevel)
   self.WS_Title:SetActiveWidgetIndex(0)
   self.Text_SmeltLevel:SetText(CardLevel)
-  self.Text_Smelt:SetText(GText("UI_WeaponStrength_Level") .. CardLevel)
+  self.Text_Smelt:SetText(GText("UI_Amory_HyperWeaponCardLevel") .. CardLevel)
   self.WS_Page:SetActiveWidgetIndex(0)
   if CardState ~= StateEnum.Activated then
     self.Text_Unlock:SetText(GText("UI_HyperWeapon_CardLevelUnlockTalent"))
@@ -363,7 +364,7 @@ function M:InitCardDetailButtonState(CardLevel)
         end,
         ShortText = "UI_HyperWeapon_ResourceConsumePopUpText",
         ShortTextParams = {
-          GText("UI_WeaponStrength_Level") .. CardLevel
+          GText("UI_Amory_HyperWeaponCardLevel") .. CardLevel
         }
       }
       Params.ItemList = self:GetPopupItemList(CardLevel)

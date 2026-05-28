@@ -34824,6 +34824,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "闲杂人等禁止靠近！",
           DialogueId = 10042901,
           GUID = "19242F72",
+          NextDialogue = 10042902,
           RelatedWikiId = {
             [1] = 408022,
             [2] = 101004,
@@ -34837,6 +34838,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "我们并非闲杂人等，而是奉了艾森巴恩站长的命令，辅助调查的狩月人。",
           DialogueId = 10042902,
           GUID = "19242F9C",
+          NextDialogue = 10042903,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100429/19242F9C"
         },
@@ -34844,6 +34846,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "原来艾森巴恩大人提到的有嫌疑的狩月人就是你们几个。既然是艾森巴恩大人的命令，那么请各位自便。",
           DialogueId = 10042903,
           GUID = "19242FC6",
+          NextDialogue = 10042904,
           SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FC6"
         },
@@ -34851,7 +34854,8 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "都伶俐点，别毛手毛脚碰坏了东西。",
           DialogueId = 10042904,
           GUID = "19242FF0",
-          SpeakNpcId = 100415,
+          NextDialogue = 10042905,
+          SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FF0"
         },
         [10042905] = {
@@ -41623,6 +41627,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "……",
           DialogueId = 10048340,
           GUID = "1927ABC8",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927ABC8"
         },
@@ -41637,6 +41642,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "停止开火！向寒鸦号确认芙罗蒂娅殿下的行踪！",
           DialogueId = 10048342,
           GUID = "1927AC1C",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC1C"
         },
@@ -41644,6 +41650,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "你们暂时安全了，不得不承认，这是我第一次见到帝国的贵族与平民们能够站在一起。我想不是皇室成员，是没有办法做到这种事的。",
           DialogueId = 10048343,
           GUID = "1927AC46",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC46"
         },
@@ -41818,6 +41825,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 403014
           },
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C704"
         },
@@ -41832,6 +41840,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "炮弹已装填，开始进行射击诸元校正。",
           DialogueId = 10048508,
           GUID = "1927C758",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C758"
         },
@@ -41839,6 +41848,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "校正完毕……准备发射……",
           DialogueId = 10048509,
           GUID = "1927C782",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C782"
         },
@@ -41853,6 +41863,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "3……",
           DialogueId = 10048511,
           GUID = "1927C7D6",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C7D6"
         },
@@ -41860,6 +41871,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "2……",
           DialogueId = 10048512,
           GUID = "1927C800",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C800"
         },
@@ -41867,6 +41879,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "1……",
           DialogueId = 10048513,
           GUID = "1927C82A",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C82A"
         },
@@ -42228,6 +42241,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "紧急新闻。今日，神弃者同盟在科赛托斯省南缘劫持了“极光号”列车，随后利用列车头部装载的列车炮击坠前来救援的帝国飞艇。",
           DialogueId = 10049007,
           GUID = "19281936",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281936"
         },
@@ -42235,6 +42249,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "飞艇在一棵巨大天之树处爆炸，致使天之树燃烧。这是今年发生的第二起点燃天之树事件。第六军团已增派救援，目前极光号乘客全部失联，生死不明。",
           DialogueId = 10049008,
           GUID = "19281960",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281960"
         },
@@ -42424,6 +42439,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         [10049107] = {
           Content = "（那还是我自己来吧，只要呼喊神的名字的话，他们总得有点什么回应才是，否则这片雾海也太过质朴了。）",
           DialogueId = 10049107,
+          DisableMouth = 1,
           GUID = "1928299E",
           SnapShot = "HEART",
           SpeakNpcId = 1001,
@@ -248498,6 +248514,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149002] = {
           Content = "可恶！怎么是你，再再再见。",
+          ContentDE = "Ach, nicht du schon wieder! H... H... H... Hab einen schönen Tag, tschüss!",
           DialogueId = 60149002,
           Duration = 3.8,
           GUID = "9693A3A4",
@@ -248506,6 +248523,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149003] = {
           Content = "留留留下买路财！啧，怎么今天一上来就碰到硬茬子，告辞。",
+          ContentDE = "D... D... Dein Geld oder dein Leben! Gott! Wie soll ich denn ein wandelndes Waffenarsenal ausrauben? Mach’s gut!",
           DialogueId = 60149003,
           Duration = 6.7,
           GUID = "9693A3CE",
@@ -248514,6 +248532,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149004] = {
           Content = "除了打劫，逃跑我也是专业的！",
+          ContentDE = "Also hör zu, ich bin auch ein Experte im Abhauen!",
           DialogueId = 60149004,
           Duration = 3.5,
           GUID = "9693A3F8",
@@ -248522,6 +248541,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149005] = {
           Content = "舍不得孩子套不着狼，这些都给你，别再追啦！",
+          ContentDE = "Luno, die stiehlt und rennt geschwind, lebt weiter, um zu stehlen wie der Wind. Nimm das hier und lass mich verduften!",
           DialogueId = 60149005,
           Duration = 5.1,
           GUID = "9693A422",
@@ -248530,6 +248550,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149006] = {
           Content = "咋还在追我啊，这个给你行了吧。",
+          ContentDE = "Nimm das einfach und lass mich in Ruhe!",
           DialogueId = 60149006,
           Duration = 3.5,
           GUID = "9693A44C",
@@ -248538,6 +248559,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149007] = {
           Content = "你使那么大劲干啥呢！",
+          ContentDE = "Aaah! Das hat wehgetan!",
           DialogueId = 60149007,
           Duration = 2.5,
           GUID = "9693A476",
@@ -248546,6 +248568,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149008] = {
           Content = "可恶，以后走夜路小心点！",
+          ContentDE = "Uah, das ist noch nicht vorbei! Pass nachts lieber auf deinen Rücken auf!",
           DialogueId = 60149008,
           Duration = 3.2,
           GUID = "9693A4A0",
@@ -248554,6 +248577,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149009] = {
           Content = "啊啊啊啊啊，我要生气了！",
+          ContentDE = "Aaaaah!!! Jetzt bin ich richtig wütend!",
           DialogueId = 60149009,
           Duration = 3.4,
           GUID = "9693A4CA",
@@ -248562,6 +248586,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149010] = {
           Content = "笨笨笨蛋，追不上我吧，桀桀桀桀桀桀~",
+          ContentDE = "Du Rie... Rie... Riesentrottel bist zu blöd, um mich zu fangen! Hah hah hah!",
           DialogueId = 60149010,
           Duration = 6,
           GUID = "9693A4F4",
@@ -248570,6 +248595,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149011] = {
           Content = "这次是我大意了，下次我一定要把你打得抱头大哭，呜……",
+          ContentDE = "Verdammt, alles vermasselt! Beim nächsten Mal kriegst du dein Fett weg. Warte nur! Buhuhu ...",
           DialogueId = 60149011,
           Duration = 10.4,
           GUID = "9693A51E",
@@ -248578,6 +248604,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149012] = {
           Content = "东西南北四条街，打听打听谁是爹，道上谁不知道我打劫皎皎的名号！",
+          ContentDE = "Nord, Süd, Ost und West! Ich bin euer Boss und ich bin der Beste!\nFrag rum, dann weißt du's. Gib dein Geld dieser Luno!",
           DialogueId = 60149012,
           Duration = 6.9,
           GUID = "9693A548",
@@ -248586,6 +248613,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149013] = {
           Content = "跟我斗，你还是太年轻了呀~",
+          ContentDE = "Ha! Grünschnabel! Jetzt wirst du plattgemacht!",
           DialogueId = 60149013,
           Duration = 5.7,
           GUID = "9693A572",
@@ -248594,6 +248622,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149014] = {
           Content = "哼，我打打打劫皎皎可不是好惹的。",
+          ContentDE = "Hmpf, ich bin keiner, mit dem man sich anlegt!",
           DialogueId = 60149014,
           Duration = 4.8,
           GUID = "9693A59C",
@@ -248602,6 +248631,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149015] = {
           Content = "呼，呼……你咋还不累呢，吃啥玩意长大的啊。",
+          ContentDE = "Huff ... huff ... Bist du immer noch nicht müde? Was haben die dir bloß zu essen gegeben?",
           DialogueId = 60149015,
           Duration = 8.8,
           GUID = "9693A5C6",

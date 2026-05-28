@@ -19429,19 +19429,19 @@
         "id": 52010,
         "t": "Mod",
         "d": 1,
-        "n": "Focus·Celerity"
+        "n": "Focus – Celerity"
       },
       {
         "id": 52011,
         "t": "Mod",
         "d": 1,
-        "n": "Rage·Momentum"
+        "n": "Rage – Momentum"
       },
       {
         "id": 52012,
         "t": "Mod",
         "d": 1,
-        "n": "Impetus·Dropshot"
+        "n": "Impetus – Dropshot"
       }
     ]
   },
@@ -25370,12 +25370,12 @@
       {
         "id": 41717,
         "t": "Mod",
-        "n": "Morale·Volition"
+        "n": "Morale – Volition"
       },
       {
         "id": 41727,
         "t": "Mod",
-        "n": "Volition·Awakening"
+        "n": "Volition – Awakening"
       },
       {
         "id": 41737,
@@ -25385,17 +25385,17 @@
       {
         "id": 41747,
         "t": "Mod",
-        "n": "Morale·Refinement"
+        "n": "Morale – Refinement"
       },
       {
         "id": 41757,
         "t": "Mod",
-        "n": "Resolve·Volition"
+        "n": "Resolve – Volition"
       },
       {
         "id": 41767,
         "t": "Mod",
-        "n": "Volition·Refinement"
+        "n": "Volition – Refinement"
       }
     ]
   },
@@ -27801,14 +27801,20 @@
       {
         "id": 112,
         "t": "Resource",
-        "c": 10,
+        "c": 30,
         "n": "Starglint"
       },
       {
         "id": 1009,
         "t": "Resource",
-        "c": 1,
+        "c": 2,
         "n": "Starweave Thread"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 300,
+        "n": "Phoxene"
       },
       {
         "id": 211,

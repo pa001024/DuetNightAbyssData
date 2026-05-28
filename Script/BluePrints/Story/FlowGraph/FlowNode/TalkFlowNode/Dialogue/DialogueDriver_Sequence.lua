@@ -76,6 +76,10 @@ function SequenceDriver:TryStartSequence()
     DebugPrint("WXT__DialogueDriver_Sequence:TryStartSequence", "LevelSequence invalid")
     return false
   end
+  local FlowAsset = Node:GetFlowAsset()
+  if IsValid(FlowAsset) and FlowAsset:IsCutsceneFlow() then
+    UE4.UMovieSceneSequenceExtensions.SetClockSource(LevelSequence, UE4.EUpdateClockSource.Platform)
+  end
   Node:PlaySequence()
   if not IsValid(Node.SequencePlayer) or not IsValid(Node.RuntimeProxy) then
     DebugPrint("WXT__DialogueDriver_Sequence:TryStartSequence", "SequencePlayer/RuntimeProxy invalid")

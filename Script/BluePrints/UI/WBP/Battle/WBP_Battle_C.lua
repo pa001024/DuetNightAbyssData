@@ -2285,9 +2285,6 @@ function WBP_Battle_C:EMAfterInitialize()
       self:ArrangeSingleWidgetWithInvalidBox(self.HB_UID, "CustomInvalidationBox_UID")
     end
     if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.MOBILE].UI_WRAPPING_WITH_RETAINERBOX then
-      if self:CheckOptimizeSwitch_ForTaskBar() then
-        self:ArrangeSingleWidgetWithRetainerBox(self.Pos_TaskBar, "CustomRetainerBox_TaskBar", 1, 10)
-      end
       self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Drops, "CustomRetainerBox_CommonDrops", 2, 10)
       self:ArrangeSingleWidgetWithRetainerBox(self.Char_Skill, "CustomRetainerBox_Skill", 1, 3)
       self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Entry, "CustomRetainerBox_Entry", 3, 15)

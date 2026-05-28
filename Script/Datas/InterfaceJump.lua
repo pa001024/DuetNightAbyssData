@@ -830,7 +830,7 @@ return ReadOnly("InterfaceJump", {
     JumpParameter5 = "GuildShop",
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = {4191},
-    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+    PortalUnlockTips = "UI_Locked_Des_Shop"
   },
   [103] = {
     InterfaceJumpId = 103,
@@ -907,6 +907,17 @@ return ReadOnly("InterfaceJump", {
     JumpParameter4 = "nil",
     JumpParameter5 = "Shop",
     JumpType = "SelfDefinedJump"
+  },
+  [113] = {
+    InterfaceJumpId = 113,
+    JumpParameter1 = "JumpToShopPage",
+    JumpParameter2 = "140",
+    JumpParameter3 = "1401",
+    JumpParameter4 = "nil",
+    JumpParameter5 = "Shop",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
   },
   [1101] = {
     InterfaceJumpId = 1101,

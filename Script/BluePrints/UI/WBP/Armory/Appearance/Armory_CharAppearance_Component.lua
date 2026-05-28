@@ -263,14 +263,12 @@ function M:BeforeSelectSkin(Content)
     return
   end
   if SkinData.AutoHair then
-    if self.SelectedHairId then
-      local Content = self.HairMap and self.HairMap[self.SelectedHairId]
-      if Content then
-        self:ChangeSelectedHairContent(Content)
-      end
+    self.JumpToHairId = SkinData.AutoHair
+    local Content = self.HairMap and self.HairMap[self.JumpToHairId]
+    if Content then
+      self:ChangeSelectedHairContent(Content)
     end
-    self.SelectedHairId = SkinData.AutoHair
-    self.JumpToHairId = self.SelectedHairId
+    self.SelectedHairId = self.JumpToHairId
   end
 end
 
@@ -282,6 +280,9 @@ function M:OnCharSkinConfirmBtnClicked()
     self:BlockAllUIInput(true, "ChangeCharAppearanceSkin")
     local Avatar = GWorld:GetAvatar()
     Avatar:ChangeCharAppearanceSkin(self.Target.Uuid, self.AppearanceSuitIndex, self.SelectedSkinId)
+  end
+  if self.CurrentTopTabIdx ~= self.SkinTabIdx then
+    return
   end
   self:ChangeCharSkinLevel()
 end
@@ -1681,20 +1682,22 @@ function M:RefreshLevelUpReddot()
           CurContent.Widget:SetReddot()
         end
       end
-      local NewLevelWidget = self["WBP_Armory_Skin_LevelUp_" .. NewLevel]
-      if NewLevelWidget then
-        NewLevelWidget:SetReddotState(IsShowReddot)
-      end
-      if CurLevel ~= NewLevel then
-        local CurLevelWidget = self["WBP_Armory_Skin_LevelUp_" .. CurLevel]
-        if CurLevelWidget then
-          CurLevelWidget:SetReddotState(false)
+      if self.LastCharSkinId == SkinId then
+        local NewLevelWidget = self["WBP_Armory_Skin_LevelUp_" .. NewLevel]
+        if NewLevelWidget then
+          NewLevelWidget:SetReddotState(IsShowReddot)
         end
-      end
-      if NewLevel == self.SelectedSkinLevel then
-        self:OnLevelUpWidgetClicked(NewLevel, true)
-      else
-        self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        if CurLevel ~= NewLevel then
+          local CurLevelWidget = self["WBP_Armory_Skin_LevelUp_" .. CurLevel]
+          if CurLevelWidget then
+            CurLevelWidget:SetReddotState(false)
+          end
+        end
+        if NewLevel == self.SelectedSkinLevel then
+          self:OnLevelUpWidgetClicked(NewLevel, true)
+        else
+          self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        end
       end
       CacheDetail[SkinId] = SkinData.Level
     end

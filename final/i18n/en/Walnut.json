@@ -8113,7 +8113,7 @@
         "id": 51717,
         "type": "Mod",
         "count": 1,
-        "name": "Morale·Volition",
+        "name": "Morale – Volition",
         "d": 1
       },
       {
@@ -8413,7 +8413,7 @@
         "id": 51727,
         "type": "Mod",
         "count": 1,
-        "name": "Volition·Awakening",
+        "name": "Volition – Awakening",
         "d": 1
       },
       {
@@ -9133,7 +9133,7 @@
         "id": 51747,
         "type": "Mod",
         "count": 1,
-        "name": "Morale·Refinement",
+        "name": "Morale – Refinement",
         "d": 1
       },
       {
@@ -9553,7 +9553,7 @@
         "id": 51757,
         "type": "Mod",
         "count": 1,
-        "name": "Resolve·Volition",
+        "name": "Resolve – Volition",
         "d": 1
       },
       {
@@ -9973,7 +9973,7 @@
         "id": 51767,
         "type": "Mod",
         "count": 1,
-        "name": "Volition·Refinement",
+        "name": "Volition – Refinement",
         "d": 1
       },
       {
@@ -10633,7 +10633,7 @@
         "id": 52204,
         "type": "Mod",
         "count": 1,
-        "name": "Fortune·Threshold",
+        "name": "Fortune – Threshold",
         "d": 1
       },
       {

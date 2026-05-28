@@ -91,7 +91,7 @@ function M:OnClearReddot()
 end
 
 function M:OnSubItemClick()
-  self:DecreaseReddotCommon()
+  self:DecreaseReddotCommon(self.ItemData)
 end
 
 return M

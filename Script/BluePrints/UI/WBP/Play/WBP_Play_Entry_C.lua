@@ -242,6 +242,10 @@ function WBP_Play_Entry_C:Destruct()
   AudioManager(self):StopSound(self, "SystemOpenSound")
   self:RecoverCamera()
   self.Super.Destruct(self)
+  local BattleView = UIManager():GetUIObj("BattleMain")
+  if BattleView then
+    BattleView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
 end
 
 function WBP_Play_Entry_C:PlayNPCAnim(NpcAnimId)

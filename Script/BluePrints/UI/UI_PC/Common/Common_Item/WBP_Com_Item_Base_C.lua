@@ -139,10 +139,12 @@ end
 
 function M:SetHeadDynamicPath(WidgetPath)
   self:AsyncLoadWidgetCommon(nil, "SetHeadDynamicPathTask", function(CoroutineObj)
-    if self.WidgetMap[self.HeadDynamicWidget] then
-      self:RemoveWidgetFromNode(self.HeadDynamicWidget)
+    if not IsValid(self.HeadDynamicWidget) then
+      if self.WidgetMap[self.HeadDynamicWidget] then
+        self:RemoveWidgetFromNode(self.HeadDynamicWidget)
+      end
+      self.HeadDynamicWidget = self:CreateWidgetAsync(nil, CoroutineObj, WidgetPath)
     end
-    self.HeadDynamicWidget = self:CreateWidgetAsync(nil, CoroutineObj, WidgetPath)
     self:AddWidgetToNode(self.HeadDynamicWidget)
   end)
 end
@@ -670,7 +672,9 @@ function M:SetIsGot(IsGot)
       if not self.WidgetMap[self.IsGotWidget] and not IsValid(self.IsGotWidget) then
         self.IsGotWidget = self:CreateWidgetAsync("ComItemHasGot", CoroutineObj)
       end
+      self.IsGotWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
       self:AddWidgetToNode(self.IsGotWidget)
+      self:CheckWidgetIsTop(self.IsGotWidget)
     elseif self.WidgetMap[self.IsGotWidget] then
       self:RemoveWidgetFromNode(self.IsGotWidget)
     end

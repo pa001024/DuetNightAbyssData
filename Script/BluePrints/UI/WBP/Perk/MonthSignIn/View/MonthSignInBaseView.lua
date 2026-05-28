@@ -74,17 +74,21 @@ function M:UpdateStaticWidget()
   self.TextDate:SetText(string.format(GText(MonthSignInCommon.MontlyCheckDay), TodaySignInDay))
   self.TextDone:SetText(GText(MonthSignInCommon.MontlyCheckCheckDone))
   self.BtnSwitch.Ws_Icon:SetActiveWidgetIndex(0)
-  self:IsShowTextDoneAndSwitchBtn()
+  if MonthSignInModel:IsTodaySigned() then
+    self:IsShowTextDoneAndSwitchBtn(true)
+  else
+    self:IsShowTextDoneAndSwitchBtn(false)
+  end
 end
 
-function M:IsShowTextDoneAndSwitchBtn()
-  if MonthSignInModel:IsTodaySigned() then
+function M:IsShowTextDoneAndSwitchBtn(bShow)
+  DebugPrint("Yihan@  IsShowTextDoneAndSwitchBtn: ", bShow)
+  if bShow then
     self.TextDone:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.BtnSwitch:SetVisibility(UE4.ESlateVisibility.Visible)
   else
     self.TextDone:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.BtnSwitch:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+  self.BtnSwitch:SetVisibility(UE4.ESlateVisibility.Visible)
 end
 
 function M:UpdateMonthCardRegionInfo()
@@ -119,15 +123,13 @@ function M:UpdateMonthCardRewardInfo()
     DebugPrint("Yihan@ UpdateMonthCardRewardInfo: ", Content.Id, Content.ItemType, Content.Count, Content.Rarity, Content.Icon)
     DebugPrint("Yihan@ UpdateMonthCardRewardInfo: ", IsHasMonthCard, IsMonthCardSigned)
     if IsHasMonthCard then
+      self.TextTime:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.Group_BtnBuy:SetVisibility(UE4.ESlateVisibility.Visible)
+      self.TextTime:SetText(string.format(GText(MonthSignInCommon.MontlyCheckRemain), MonthCardModel:GetMonthCardLeftTimes()))
       if not IsMonthCardSigned then
-        self.TextTime:SetVisibility(UE4.ESlateVisibility.Collapsed)
-        self.Group_BtnBuy:SetVisibility(UE4.ESlateVisibility.Collapsed)
       else
         Content.bHasGot = true
-        self.TextTime:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-        self.Group_BtnBuy:SetVisibility(UE4.ESlateVisibility.Visible)
         self:PlayAnimation(self.BuyBtn_In)
-        self.TextTime:SetText(string.format(GText(MonthSignInCommon.MontlyCheckRemain), MonthCardModel:GetMonthCardLeftTimes()))
       end
     else
       Content.LockType = 1
@@ -206,7 +208,6 @@ function M:PlayGetAnimation(Item, Widget)
     return
   end
   self.bIsInGetAnimation = true
-  local Avatar = GWorld:GetAvatar()
   Widget:PlayAnimation(Widget.GetNow)
   AudioManager(self):PlayUISound(self, "event:/ui/common/month_signin_daily_gift_in", nil, nil)
   local IsHasMonthCard = MonthCardModel:HasMonthCard()
@@ -236,7 +237,11 @@ function M:ShowGetItemPage(Content)
   local RewardToShow = MonthSignInModel:MergeRewardIds(Content.RewardId)
   UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardToShow, false, function()
     local Item = self.List:GetItemAt(MonthSignInModel:GetTodaySignInDay() - 1)
-    self:IsShowTextDoneAndSwitchBtn()
+    self:IsShowTextDoneAndSwitchBtn(true)
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      EMCache:Set("PreCheckCount", Avatar.MonthlyCheck.MonthlyCheckCount, true)
+    end
     Item.UI:SetFocus()
   end, self, true)
 end

@@ -23,7 +23,7 @@ return {
       name = "回复芙罗拉",
       pos = {x = 1048.6857142857145, y = 85.82857142857154},
       propsData = {
-        QuestId = 10040312,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040312_01",
         QuestDeatil = "Description_10040312_01",
@@ -100,18 +100,6 @@ return {
             endPort = "Input"
           },
           {
-            startQuest = "177824401290211462366",
-            startPort = "Out",
-            endQuest = "177969557527513543008",
-            endPort = "In"
-          },
-          {
-            startQuest = "177969557527513543008",
-            startPort = "Out",
-            endQuest = "177824401290211462367",
-            endPort = "In"
-          },
-          {
             startQuest = "177824401290211462367",
             startPort = "Out",
             endQuest = "177969558325413543288",
@@ -130,24 +118,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177824401290211462362",
-            startPort = "Out",
-            endQuest = "177971704451610172816",
-            endPort = "In"
-          },
-          {
-            startQuest = "177971704451610172816",
-            startPort = "Out",
-            endQuest = "177969555969913542774",
-            endPort = "In"
-          },
-          {
-            startQuest = "177969555969913542774",
-            startPort = "Out",
-            endQuest = "17784881786571467308",
-            endPort = "In"
-          },
-          {
             startQuest = "177824401290211462368",
             startPort = "Out",
             endQuest = "177971712698411141831",
@@ -163,6 +133,24 @@ return {
             startQuest = "177969558325413543288",
             startPort = "Out",
             endQuest = "177824401290211462368",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824401290211462366",
+            startPort = "Out",
+            endQuest = "177824401290211462367",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824401290211462362",
+            startPort = "Out",
+            endQuest = "17784881786571467308",
+            endPort = "In"
+          },
+          {
+            startQuest = "17784881786571467308",
+            startPort = "Out",
+            endQuest = "177969555969913542774",
             endPort = "In"
           }
         },
@@ -319,7 +307,7 @@ return {
             key = "177824401290211462366",
             type = "TalkNode",
             name = "车厢内对话",
-            pos = {x = 2338.4000000000005, y = 336.75000000000006},
+            pos = {x = 2337.0956521739135, y = 338.054347826087},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -369,7 +357,7 @@ return {
             key = "177824401290211462367",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "传送出车厢",
-            pos = {x = 2781.6116379310342, y = 355.33189655172407},
+            pos = {x = 2698.1741379310342, y = 349.70689655172407},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "Point_Teleport_10040312",
@@ -520,7 +508,7 @@ return {
             key = "177969555969913542774",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1738.654024767802, y = 175.07279227480484},
+            pos = {x = 1718.998852354009, y = 123.34865434377033},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -531,17 +519,6 @@ return {
               RelatedRegionId = {},
               ClientRelatedRegionId = {106001},
               bStoreToServer = false
-            }
-          },
-          ["177969557527513543008"] = {
-            key = "177969557527513543008",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 2599.4945420091817, y = 191.98011986101173},
-            propsData = {
-              SoundStateType = 3,
-              SoundPriority = 0,
-              SoundType = 0
             }
           },
           ["177969558325413543288"] = {
@@ -576,17 +553,6 @@ return {
               RelatedRegionId = {},
               ClientRelatedRegionId = {106001},
               bStoreToServer = false
-            }
-          },
-          ["177971704451610172816"] = {
-            key = "177971704451610172816",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 1413.494360902256, y = 87.80545112781977},
-            propsData = {
-              SoundStateType = 3,
-              SoundPriority = 0,
-              SoundType = 0
             }
           },
           ["177971712698411141831"] = {

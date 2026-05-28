@@ -32,7 +32,7 @@ return ReadOnly("CharVoice2Gacha", {
   [1102] = {
     [1] = {
       [1] = {
-        VoiceId = 11006,
+        VoiceId = 11012,
         VoiceRes = T.RT_3,
         VoiceText = {
           [1] = "voice_ch_char_Fuluo_vo_gain_01"
@@ -42,7 +42,7 @@ return ReadOnly("CharVoice2Gacha", {
         GachaVoiceCondition = {
           [1] = 100405
         },
-        VoiceId = 11007,
+        VoiceId = 11013,
         VoiceRes = T.RT_2,
         VoiceText = {
           [1] = "voice_ch_char_Fuluo_vo_gain_02"
@@ -119,7 +119,7 @@ return ReadOnly("CharVoice2Gacha", {
   [2101] = {
     [1] = {
       [1] = {
-        VoiceId = 10041,
+        VoiceId = 21010011,
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Shuimu_vo_gain"

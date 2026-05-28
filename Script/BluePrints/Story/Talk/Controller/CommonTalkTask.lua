@@ -915,6 +915,11 @@ function CommonTalkTask:PlayDialogue(bPauseResume, bSkipping)
   local DialogueData = SimpleDialogueData_C.New(self, CurrentDialogueId, self.TalkContext)
   self:RecordDialogueCompleted(DialogueData.DialogueId)
   self.DialogueWikiComponent:CompletePlayDialogue(Dialogue.RelatedWikiId)
+  if DialogueData.bIsBlack then
+    self:TryShowDialogueBlackUI()
+  else
+    self:TryHideDialogueBlackUI()
+  end
   if bSkipping then
     self:RunDSL(DialogueData)
     self.UI:PlayDialogue(self, DialogueData, self.TalkTaskData, true)
@@ -933,11 +938,6 @@ function CommonTalkTask:PlayDialogue(bPauseResume, bSkipping)
     return
   end
   self:OnPlayingDialogue(Dialogue)
-  if DialogueData.bIsBlack then
-    self:TryShowDialogueBlackUI()
-  else
-    self:TryHideDialogueBlackUI()
-  end
   self.bAutoToNext = DialogueData.bAutoToNext
   local PanelType = DialogueData.DialoguePanelType
   self.bForceAutoPlay = "None" == PanelType or "AllHide" == PanelType

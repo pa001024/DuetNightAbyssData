@@ -14,6 +14,7 @@ function M:Init(Params)
   self.CallbackObj = Params.CallbackObj
   self.LevelAddToFocusPathCallback = Params.OnLevelWidgetAddToFocusPath
   self.TalentAddToFocusPathCallback = Params.OnTalentWidgetAddToFocusPath
+  self.ProcessLeftThumbstick = Params.ProcessLeftThumbstick
   self._OnAddedToFocusPath = Params.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Params.OnRemovedFromFocusPath
   self:InitCardNavigation()
@@ -100,7 +101,7 @@ function M:OnParentKeyDown(MyGeometry, InKeyEvent)
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
     self.Button_More:OnViewInfoClick()
     return UE4.UWidgetBlueprintLibrary.Handled(), true
-  elseif InKeyName == UIConst.GamePadKey.LeftThumb then
+  elseif InKeyName == UIConst.GamePadKey.LeftThumb and self.ProcessLeftThumbstick then
     self:FocusToFirstWidget()
     return UE4.UWidgetBlueprintLibrary.Handled(), true
   end

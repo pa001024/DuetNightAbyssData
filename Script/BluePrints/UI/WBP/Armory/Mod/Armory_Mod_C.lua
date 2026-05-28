@@ -1521,10 +1521,19 @@ function M:DoModItemSelected(ModUuid, bSelected, bJumpList)
     SelectedContent.IsSelected = bSelected
     if IsValid(SelectedContent.UI) then
       SelectedContent.UI:SetIsSelected(bSelected)
+    else
+      bListUnprepared = true
     end
   end
   if bJumpList then
     self.List_Select_Mod:BP_ScrollItemIntoView(SelectedContent)
+    if bListUnprepared then
+      self:AddTimer(0.01, function()
+        if IsValid(SelectedContent.UI) then
+          SelectedContent.UI:SetIsSelected(bSelected)
+        end
+      end)
+    end
   end
 end
 

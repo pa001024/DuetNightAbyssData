@@ -448,6 +448,7 @@ function M:StopSequence()
   if self.SequenceActorController and self.SequenceActorController.SequenceInfo then
     StopSequenceInternal(self.SequenceActorController)
   end
+  self:UpdateAudioListener()
 end
 
 function M:ClearLastSequenceInfo()

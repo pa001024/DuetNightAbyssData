@@ -510,6 +510,7 @@ return ReadOnly("Mail", {
     MailContent = "Mail_Content_10072",
     MailId = 10072,
     MailSenderId = 81801,
+    MailTimeLimit = -1,
     MailTitle = "Mail_Title_10072"
   },
   [10073] = {

@@ -21,9 +21,34 @@ function BP_SkillCreature_C:InitCreature_Lua()
     self.DirectSource = self:GetDirectSource()
     if self.DirectSource then
       self.AttachEffectCreature = self.DirectSource:CreateEffectCreature(ConfigData.EffectCreatureID, self:GetTransform(), false)
-      self.AttachEffectCreature:K2_AttachToActor(self, "", UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld)
+      if self.AttachEffectCreature then
+        self.AttachEffectCreature:K2_AttachToActor(self, "", UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld, UE4.EAttachmentRule.KeepWorld)
+      end
     end
   end
+end
+
+function BP_SkillCreature_C:DestroyAttachEffectCreature_Lua()
+  local EffectCreature = self.AttachEffectCreature
+  if not EffectCreature then
+    return
+  end
+  if EffectCreature.IsDestroy then
+    self.AttachEffectCreature = nil
+    return
+  end
+  local Owner = EffectCreature:GetOwner()
+  if Owner then
+    Owner:RemoveEffectCreatureByRef(EffectCreature)
+  else
+    EffectCreature:DestroyEffectCreature()
+  end
+  self.AttachEffectCreature = nil
+end
+
+function BP_SkillCreature_C:ReceiveEndPlay(EndPlayReason)
+  self:DestroyAttachEffectCreature_Lua()
+  self.Overridden.ReceiveEndPlay(self, EndPlayReason)
 end
 
 function BP_SkillCreature_C:ClearCreature_Lua()

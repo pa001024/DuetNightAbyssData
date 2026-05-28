@@ -1,7 +1,7 @@
 local Data = {
   {
     MinKey = "AFDayEvent_ClaimItem",
-    MaxKey = "Access_Collecting_Prologue02",
+    MaxKey = "Access_Collecting_Kuangkeng",
     Loader = function()
       return {
         AFDayEvent_ClaimItem = {
@@ -736,6 +736,14 @@ local Data = {
           ContentES = "Recolectar",
           TextMapId = "Access_Collecting"
         },
+        Access_Collecting_BHCZ = {
+          ContentES = "Recolección en La Estación de las Cien Flores",
+          TextMapId = "Access_Collecting_BHCZ"
+        },
+        Access_Collecting_CZDX = {
+          ContentES = "Recolección en las Instalaciones de forja",
+          TextMapId = "Access_Collecting_CZDX"
+        },
         Access_Collecting_EX01 = {
           ContentES = "Recolectar en Fortaleza de Lonza",
           TextMapId = "Access_Collecting_EX01"
@@ -795,7 +803,15 @@ local Data = {
         Access_Collecting_Kuangkeng = {
           ContentES = "Recolectar en Mina de Glevum",
           TextMapId = "Access_Collecting_Kuangkeng"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Access_Collecting_Prologue01",
+    MaxKey = "BackpackEventDes_10301512",
+    Loader = function()
+      return {
         Access_Collecting_Prologue01 = {
           ContentES = "Recolectar en Isla del Purgatorio: Aldea Invadida por Filthoids",
           TextMapId = "Access_Collecting_Prologue01"
@@ -803,15 +819,7 @@ local Data = {
         Access_Collecting_Prologue02 = {
           ContentES = "Recolectar en Isla del Purgatorio: Ruinas Arcanas: Planta Media",
           TextMapId = "Access_Collecting_Prologue02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Access_Collecting_Prologue03",
-    MaxKey = "BackpackEventTitle_10301502",
-    Loader = function()
-      return {
+        },
         Access_Collecting_Prologue03 = {
           ContentES = "Recolectar en Isla del Purgatorio: Ruinas Arcanas",
           TextMapId = "Access_Collecting_Prologue03"
@@ -850,15 +858,15 @@ local Data = {
         },
         Add = {ContentES = "Num +", TextMapId = "Add"},
         AllQuest_Over = {
-          ContentES = "Noch nicht zu Ende",
+          ContentES = "Continuará",
           TextMapId = "AllQuest_Over"
         },
         AllQuest_OverTips = {
-          ContentES = "Alle Hauptaufträge dieser Version sind abgeschlossen. Bleibe dran für kommende Inhalte.",
+          ContentES = "Todas las Misiones principales de esta versión están completas. Mantente al tanto del contenido próximo.",
           TextMapId = "AllQuest_OverTips"
         },
         AllQuest_Over_Description = {
-          ContentES = "Alle Hauptaufträge dieser Version sind abgeschlossen. Bleibe dran für kommende Inhalte.",
+          ContentES = "Todas las Misiones principales de esta versión están completas. Mantente al tanto del contenido próximo.",
           TextMapId = "AllQuest_Over_Description"
         },
         AlreadyInChannel = {
@@ -1591,7 +1599,15 @@ local Data = {
         BackpackEventDes_10301512 = {
           ContentES = "Ordena los objetos y colócalos todos en la mochila. Usa tu creatividad.",
           TextMapId = "BackpackEventDes_10301512"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "BackpackEventTitle_10301501",
+    MaxKey = "Buff_Title_13211",
+    Loader = function()
+      return {
         BackpackEventTitle_10301501 = {
           ContentES = "Cribar oro I",
           TextMapId = "BackpackEventTitle_10301501"
@@ -1599,15 +1615,7 @@ local Data = {
         BackpackEventTitle_10301502 = {
           ContentES = "Cribar oro II",
           TextMapId = "BackpackEventTitle_10301502"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "BackpackEventTitle_10301503",
-    MaxKey = "Buff_Title_13222",
-    Loader = function()
-      return {
+        },
         BackpackEventTitle_10301503 = {
           ContentES = "Cribar oro III",
           TextMapId = "BackpackEventTitle_10301503"
@@ -2399,7 +2407,15 @@ local Data = {
         Buff_Title_13211 = {
           ContentES = "Allegro Agitato: Tras el Horizonte",
           TextMapId = "Buff_Title_13211"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Buff_Title_13212",
+    MaxKey = "ChatCharacter23",
+    Loader = function()
+      return {
         Buff_Title_13212 = {
           ContentES = "Adagio Coordinado: Autoflagelación",
           TextMapId = "Buff_Title_13212"
@@ -2407,15 +2423,7 @@ local Data = {
         Buff_Title_13222 = {
           ContentES = "Adagio Coordinado: A la Deriva en la Tormenta",
           TextMapId = "Buff_Title_13222"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Buff_Title_14111",
-    MaxKey = "ChatCharacter25",
-    Loader = function()
-      return {
+        },
         Buff_Title_14111 = {
           ContentES = "Furia exaltada: Furia ardiente",
           TextMapId = "Buff_Title_14111"
@@ -2847,31 +2855,31 @@ local Data = {
           TextMapId = "ChapterIntroWd_Icelake"
         },
         ChapterIntroWd_LonzaFortress = {
-          ContentES = "Lonza-Festung",
+          ContentES = "Lonza Fortress",
           TextMapId = "ChapterIntroWd_LonzaFortress"
         },
         ChapterIntroWd_PurgatorioIsland = {
-          ContentES = "Purgatorio-Insel",
+          ContentES = "Purgatorio Island",
           TextMapId = "ChapterIntroWd_PurgatorioIsland"
         },
         ChapterIntroWd_SandrealmintheDream = {
-          ContentES = "Sandreich im Traum",
+          ContentES = "Sandrealm in the Dream",
           TextMapId = "ChapterIntroWd_SandrealmintheDream"
         },
         ChapterIntro_Icelake = {
-          ContentES = "Icelake",
+          ContentES = "Lago Glacial",
           TextMapId = "ChapterIntro_Icelake"
         },
         ChapterIntro_LonzaFortress = {
-          ContentES = "Lonza-Festung",
+          ContentES = "Fortaleza de Lonza",
           TextMapId = "ChapterIntro_LonzaFortress"
         },
         ChapterIntro_PurgatorioIsland = {
-          ContentES = "Purgatorio-Insel",
+          ContentES = "Isla del Purgatorio",
           TextMapId = "ChapterIntro_PurgatorioIsland"
         },
         ChapterIntro_SandrealmintheDream = {
-          ContentES = "Sandreich im Traum",
+          ContentES = "Reino de las Arenas en el Sueño",
           TextMapId = "ChapterIntro_SandrealmintheDream"
         },
         CharSkill_LevelUp_Success = {
@@ -3033,7 +3041,15 @@ local Data = {
         ChatCharacter23 = {
           ContentES = "Dama Nifle",
           TextMapId = "ChatCharacter23"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "ChatCharacter24",
+    MaxKey = "Content_10040204_01_04",
+    Loader = function()
+      return {
         ChatCharacter24 = {
           ContentES = "Yale y Oliver",
           TextMapId = "ChatCharacter24"
@@ -3041,15 +3057,7 @@ local Data = {
         ChatCharacter25 = {
           ContentES = "Phantasio",
           TextMapId = "ChatCharacter25"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ChatCharacter26",
-    MaxKey = "Content_110110_5",
-    Loader = function()
-      return {
+        },
         ChatCharacter26 = {
           ContentES = "Margie",
           TextMapId = "ChatCharacter26"
@@ -3683,6 +3691,238 @@ local Data = {
           ContentES = "Confirmar cambio",
           TextMapId = "ConfirmSwitch"
         },
+        Content_10040101_01 = {
+          ContentES = "Dirígete a Los Asfódelos",
+          TextMapId = "Content_10040101_01"
+        },
+        Content_10040102_01 = {
+          ContentES = "Ve a la Estación de las Cien Flores",
+          TextMapId = "Content_10040102_01"
+        },
+        Content_10040103_01 = {
+          ContentES = "Sigue a Lunoferromosa.",
+          TextMapId = "Content_10040103_01"
+        },
+        Content_10040104_01 = {
+          ContentES = "Dirígete al torniquete",
+          TextMapId = "Content_10040104_01"
+        },
+        Content_10040105_01 = {
+          ContentES = "Prepárate para solicitar el trabajo",
+          TextMapId = "Content_10040105_01"
+        },
+        Content_10040106_01 = {
+          ContentES = "Completa la prueba de contratación",
+          TextMapId = "Content_10040106_01"
+        },
+        Content_10040106_01_01 = {
+          ContentES = "Completa la prueba de contratación: limpia las cajas de madera abandonadas",
+          TextMapId = "Content_10040106_01_01"
+        },
+        Content_10040106_01_02 = {
+          ContentES = "Completa la prueba de contratación: limpia el polvo de la estructura de acero",
+          TextMapId = "Content_10040106_01_02"
+        },
+        Content_10040106_01_03 = {
+          ContentES = "Completa la prueba de contratación: repara los cristales del vestíbulo de la estación",
+          TextMapId = "Content_10040106_01_03"
+        },
+        Content_10040107_01 = {
+          ContentES = "Informa al reclutador",
+          TextMapId = "Content_10040107_01"
+        },
+        Content_10040107_02 = {
+          ContentES = "Usa la cheque con el capataz",
+          TextMapId = "Content_10040107_02"
+        },
+        Content_10040107_03 = {
+          ContentES = "Comunícale la buena noticia al periodista",
+          TextMapId = "Content_10040107_03"
+        },
+        Content_10040108_01 = {
+          ContentES = "Prepárate para infiltrarte en las instalaciones de forja",
+          TextMapId = "Content_10040108_01"
+        },
+        Content_10040109_01 = {
+          ContentES = "Adéntrate en las instalaciones de forja",
+          TextMapId = "Content_10040109_01"
+        },
+        Content_10040109_01_01 = {
+          ContentES = "Repara el lugar de pruebas dañado",
+          TextMapId = "Content_10040109_01_01"
+        },
+        Content_10040109_01_02 = {
+          ContentES = "Repara el tubo de condensación",
+          TextMapId = "Content_10040109_01_02"
+        },
+        Content_10040109_01_03 = {
+          ContentES = "Intenta restaurar la iluminación",
+          TextMapId = "Content_10040109_01_03"
+        },
+        Content_10040109_01_04 = {
+          ContentES = "Reinicia el motor de la locomotora",
+          TextMapId = "Content_10040109_01_04"
+        },
+        Content_10040109_02 = {
+          ContentES = "Derrota a los robots guardianes",
+          TextMapId = "Content_10040109_02"
+        },
+        Content_10040109_03 = {
+          ContentES = "Activa el ascensor para llegar al vestíbulo de la estación",
+          TextMapId = "Content_10040109_03"
+        },
+        Content_10040109_04 = {
+          ContentES = "Busca otra entrada para acceder al vestíbulo",
+          TextMapId = "Content_10040109_04"
+        },
+        Content_10040109_05 = {
+          ContentES = "Repara el lugar de pruebas dañado",
+          TextMapId = "Content_10040109_05"
+        },
+        Content_10040109_06 = {
+          ContentES = "Sigue el camino por el tejado de la estación",
+          TextMapId = "Content_10040109_06"
+        },
+        Content_10040201_01 = {
+          ContentES = "Sigue el camino por el tejado de la estación",
+          TextMapId = "Content_10040201_01"
+        },
+        Content_10040201_01_02 = {
+          ContentES = "Sigue el camino por el tejado de la estación",
+          TextMapId = "Content_10040201_01_02"
+        },
+        Content_10040201_01_03 = {
+          ContentES = "Sigue el camino por el tejado de la estación",
+          TextMapId = "Content_10040201_01_03"
+        },
+        Content_10040201_01_04 = {
+          ContentES = "Escucha a escondidas a los soldados y sigue avanzando",
+          TextMapId = "Content_10040201_01_04"
+        },
+        Content_10040201_01_05 = {
+          ContentES = "Escucha a escondidas a los soldados y sigue avanzando",
+          TextMapId = "Content_10040201_01_05"
+        },
+        Content_10040201_01_06 = {
+          ContentES = "Escucha a escondidas a los soldados y sigue avanzando",
+          TextMapId = "Content_10040201_01_06"
+        },
+        Content_10040201_01_07 = {
+          ContentES = "Escucha a escondidas a los soldados y sigue avanzando",
+          TextMapId = "Content_10040201_01_07"
+        },
+        Content_10040201_01_08 = {
+          ContentES = "Salta al tren que entra en la estación",
+          TextMapId = "Content_10040201_01_08"
+        },
+        Content_10040203_01 = {
+          ContentES = "Prepárate para ir a la enfermería",
+          TextMapId = "Content_10040203_01"
+        },
+        Content_10040203_01_02 = {
+          ContentES = "Evita a los guardias y busca una salida",
+          TextMapId = "Content_10040203_01_02"
+        },
+        Content_10040203_01_03 = {
+          ContentES = "Derriba la carga para distraer a los soldados",
+          TextMapId = "Content_10040203_01_03"
+        },
+        Content_10040203_01_04 = {
+          ContentES = "Ve a la enfermería",
+          TextMapId = "Content_10040203_01_04"
+        },
+        Content_10040204_01_01 = {
+          ContentES = "Toma la pinza hemostática sin desinfectar",
+          TextMapId = "Content_10040204_01_01"
+        },
+        Content_10040204_01_02 = {
+          ContentES = "Desinfecta la pinza hemostática en el crisol",
+          TextMapId = "Content_10040204_01_02"
+        },
+        Content_10040204_01_03 = {
+          ContentES = "Entrega la pinza hemostática al médico militar",
+          TextMapId = "Content_10040204_01_03"
+        },
+        Content_10040204_01_04 = {
+          ContentES = "Abre la caja fuerte y consigue los analgésicos",
+          TextMapId = "Content_10040204_01_04"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_10040204_01_05",
+    MaxKey = "Content_120103_8_1",
+    Loader = function()
+      return {
+        Content_10040204_01_05 = {
+          ContentES = "Usa los analgésicos para tratar al herido",
+          TextMapId = "Content_10040204_01_05"
+        },
+        Content_10040204_01_06 = {
+          ContentES = "Pregunta al médico militar por información",
+          TextMapId = "Content_10040204_01_06"
+        },
+        Content_10040205_01 = {
+          ContentES = "Acércate al tren especial de la 13.ª Legión",
+          TextMapId = "Content_10040205_01"
+        },
+        Content_10040206_01 = {
+          ContentES = "Prepárate para causar caos",
+          TextMapId = "Content_10040206_01"
+        },
+        Content_10040206_01_01 = {
+          ContentES = "Ajusta el reloj de la estación",
+          TextMapId = "Content_10040206_01_01"
+        },
+        Content_10040206_01_02 = {
+          ContentES = "Apaga la iluminación de la estación",
+          TextMapId = "Content_10040206_01_02"
+        },
+        Content_10040206_01_03 = {
+          ContentES = "Aprovecha el caos para subir a La Grajilla",
+          TextMapId = "Content_10040206_01_03"
+        },
+        Content_10040207_01 = {
+          ContentES = "Dirígete a la oficina de la estación",
+          TextMapId = "Content_10040207_01"
+        },
+        Content_10040207_02 = {
+          ContentES = "Busca información útil en la oficina",
+          TextMapId = "Content_10040207_02"
+        },
+        Content_10040208_01 = {
+          ContentES = "Sal del vestíbulo sin levantar sospechas",
+          TextMapId = "Content_10040208_01"
+        },
+        Content_10040209_01 = {
+          ContentES = "Derrota a los guardias de la estación e intenta salir",
+          TextMapId = "Content_10040209_01"
+        },
+        Content_10040210_01 = {
+          ContentES = "Sigue a Hilda",
+          TextMapId = "Content_10040210_01"
+        },
+        Content_10040211_01 = {
+          ContentES = "Sigue a Hilda para escapar del cerco de los soldados",
+          TextMapId = "Content_10040211_01"
+        },
+        Content_10040301_01 = {
+          ContentES = "Prepárate para ir al lugar de la explosión",
+          TextMapId = "Content_10040301_01"
+        },
+        Content_10040301_01_01 = {
+          ContentES = "Habla con Hilda",
+          TextMapId = "Content_10040301_01_01"
+        },
+        Content_10040301_01_02 = {
+          ContentES = "Llega al lugar de la explosión y comienza la investigación",
+          TextMapId = "Content_10040301_01_02"
+        },
+        Content_10040302_01 = {
+          ContentES = "Recolecta pistas útiles",
+          TextMapId = "Content_10040302_01"
+        },
         Content_10040302_01_01 = {
           ContentES = "Observa la forma de los escombros en la escena.",
           TextMapId = "Content_10040302_01_01"
@@ -3695,230 +3935,450 @@ local Data = {
           ContentES = "Observa el impacto de la explosión.",
           TextMapId = "Content_10040302_01_03"
         },
+        Content_10040303_01 = {
+          ContentES = "Llega a una conclusión",
+          TextMapId = "Content_10040303_01"
+        },
+        Content_10040303_02 = {
+          ContentES = "Habla con Snow",
+          TextMapId = "Content_10040303_02"
+        },
+        Content_10040303_03 = {
+          ContentES = "Pregunta a un guardia",
+          TextMapId = "Content_10040303_03"
+        },
+        Content_10040305_01 = {
+          ContentES = "Ve al almacén a investigar el contrabando",
+          TextMapId = "Content_10040305_01"
+        },
+        Content_10040305_02 = {
+          ContentES = "Busca materiales para bombas en el almacén",
+          TextMapId = "Content_10040305_02"
+        },
+        Content_10040305_03 = {
+          ContentES = "Revisa el objeto metálico de la esquina",
+          TextMapId = "Content_10040305_03"
+        },
+        Content_10040305_04 = {
+          ContentES = "Revisa las cajas apiladas",
+          TextMapId = "Content_10040305_04"
+        },
+        Content_10040305_05 = {
+          ContentES = "Revisa las botellas con olor extraño",
+          TextMapId = "Content_10040305_05"
+        },
+        Content_10040306_01 = {
+          ContentES = "Fabrica una bomba con el contrabando",
+          TextMapId = "Content_10040306_01"
+        },
+        Content_10040306_02 = {
+          ContentES = "Silencia a los robots guardianes",
+          TextMapId = "Content_10040306_02"
+        },
+        Content_10040307_01 = {
+          ContentES = "Investiga la reputación del encargado del almacén",
+          TextMapId = "Content_10040307_01"
+        },
+        Content_10040307_02 = {
+          ContentES = "Pregunta a un guardia de la estación",
+          TextMapId = "Content_10040307_02"
+        },
+        Content_10040307_03 = {
+          ContentES = "Pregunta a otro guardia",
+          TextMapId = "Content_10040307_03"
+        },
+        Content_10040307_04 = {
+          ContentES = "Pregunta al trabajador de la fábrica",
+          TextMapId = "Content_10040307_04"
+        },
+        Content_10040308_01 = {
+          ContentES = "Pregunta a Eisenbahn sobre el progreso de la investigación",
+          TextMapId = "Content_10040308_01"
+        },
+        Content_10040309_01 = {
+          ContentES = "Busca a Stéphane",
+          TextMapId = "Content_10040309_01"
+        },
+        Content_10040310_01 = {
+          ContentES = "Avanza en busca de Carnot",
+          TextMapId = "Content_10040310_01"
+        },
+        Content_10040310_02 = {
+          ContentES = "Derrota a los miembros de Los Abandonados",
+          TextMapId = "Content_10040310_02"
+        },
+        Content_10040311_01 = {
+          ContentES = "Informa a Eisenbahn",
+          TextMapId = "Content_10040311_01"
+        },
+        Content_10040312_01 = {
+          ContentES = "Regresa a La Grajilla para buscar al supervisor militar",
+          TextMapId = "Content_10040312_01"
+        },
+        Content_10040313_01 = {
+          ContentES = "Habla con el encargado del almacén",
+          TextMapId = "Content_10040313_01"
+        },
+        Content_10040313_02 = {
+          ContentES = "Revisa el registro de accesos al almacén",
+          TextMapId = "Content_10040313_02"
+        },
+        Content_10040401_01 = {
+          ContentES = "Sigue al supervisor militar al vagón",
+          TextMapId = "Content_10040401_01"
+        },
+        Content_10040403_01 = {
+          ContentES = "Dirígete a la parte trasera del tren para subir al techo",
+          TextMapId = "Content_10040403_01"
+        },
+        Content_10040403_02 = {
+          ContentES = "Dirígete a la parte trasera del tren para subir al techo",
+          TextMapId = "Content_10040403_02"
+        },
+        Content_10040403_03 = {
+          ContentES = "Dirígete a la parte trasera del tren para subir al techo",
+          TextMapId = "Content_10040403_03"
+        },
+        Content_10040404_01 = {
+          ContentES = "Prepara té y bocadillos para Flora",
+          TextMapId = "Content_10040404_01"
+        },
+        Content_10040404_02 = {
+          ContentES = "Llévale el té y los bocadillos a Flora",
+          TextMapId = "Content_10040404_02"
+        },
+        Content_10040404_03 = {
+          ContentES = "Consigue el pigmento",
+          TextMapId = "Content_10040404_03"
+        },
+        Content_10040404_04 = {
+          ContentES = "Entrega el pigmento a Flora",
+          TextMapId = "Content_10040404_04"
+        },
+        Content_10040405_01 = {
+          ContentES = "Prepárate para ayudar a Flora a escapar",
+          TextMapId = "Content_10040405_01"
+        },
+        Content_10040406_01 = {
+          ContentES = "Prepárate para rescatar a Flora",
+          TextMapId = "Content_10040406_01"
+        },
+        Content_10040408_01 = {
+          ContentES = "Sigue a Stéphane hasta el vagón común",
+          TextMapId = "Content_10040408_01"
+        },
+        Content_10040409_01 = {
+          ContentES = "Charla con los pasajeros del vagón común",
+          TextMapId = "Content_10040409_01"
+        },
+        Content_10040409_02 = {
+          ContentES = "Habla con Stéphane",
+          TextMapId = "Content_10040409_02"
+        },
+        Content_10040410_01 = {
+          ContentES = "Pregúntale a Flora qué piensa",
+          TextMapId = "Content_10040410_01"
+        },
+        Content_10040415_01 = {
+          ContentES = "Oculta tus rastros para evitar que te descubran",
+          TextMapId = "Content_10040415_01"
+        },
+        Content_10040416_01 = {
+          ContentES = "Encuentra herramientas para desactivar la bomba",
+          TextMapId = "Content_10040416_01"
+        },
+        Content_10040416_02 = {
+          ContentES = "Desactiva la bomba",
+          TextMapId = "Content_10040416_02"
+        },
+        Content_10040418_01 = {
+          ContentES = "Acércate al piano y demuestra que eres el \"pianista\"",
+          TextMapId = "Content_10040418_01"
+        },
+        Content_10040418_02 = {
+          ContentES = "Empieza a tocar",
+          TextMapId = "Content_10040418_02"
+        },
+        Content_10040419_01 = {
+          ContentES = "Sigue avanzando hasta llegar al vagón del jefe de tren",
+          TextMapId = "Content_10040419_01"
+        },
+        Content_10040419_02 = {
+          ContentES = "Elimina a Los Abandonados",
+          TextMapId = "Content_10040419_02"
+        },
+        Content_10040420_01 = {
+          ContentES = "Investiga el vagón del jefe de tren",
+          TextMapId = "Content_10040420_01"
+        },
+        Content_10040421_01 = {
+          ContentES = "Investiga el ruido en el vagón",
+          TextMapId = "Content_10040421_01"
+        },
+        Content_10040423_01 = {
+          ContentES = "Desactiva las bombas del tren",
+          TextMapId = "Content_10040423_01"
+        },
+        Content_10040501_01 = {
+          ContentES = "Opera la torreta y repele los ataques del dirigible",
+          TextMapId = "Content_10040501_01"
+        },
+        Content_10040501_02 = {
+          ContentES = "Opera la torreta y repele los ataques del dirigible",
+          TextMapId = "Content_10040501_02"
+        },
+        Content_10040501_03 = {
+          ContentES = "Escucha lo que piensa Flora",
+          TextMapId = "Content_10040501_03"
+        },
+        Content_10040501_04 = {
+          ContentES = "Regresa al vagón junto a Flora",
+          TextMapId = "Content_10040501_04"
+        },
+        Content_10040503_01 = {
+          ContentES = "Derrota a Halogi",
+          TextMapId = "Content_10040503_01"
+        },
+        Content_10040505_01 = {
+          ContentES = "Ve a detener a Katya",
+          TextMapId = "Content_10040505_01"
+        },
+        Content_10040505_02 = {
+          ContentES = "Destruye el cañón principal de la Aurora Express",
+          TextMapId = "Content_10040505_02"
+        },
+        Content_10040505_03 = {
+          ContentES = "Detén el motor del tren fuera de control",
+          TextMapId = "Content_10040505_03"
+        },
+        Content_10040506_01 = {
+          ContentES = "Entra en la locomotora y encuentra la forma de detener el tren",
+          TextMapId = "Content_10040506_01"
+        },
+        Content_10040506_02 = {
+          ContentES = "Intenta entrar en la cabina y detener el tren",
+          TextMapId = "Content_10040506_02"
+        },
+        Content_10040507_01 = {
+          ContentES = "¿Qué es este lugar...?",
+          TextMapId = "Content_10040507_01"
+        },
         Content_110101_1 = {
-          ContentES = "Eine Stimme scheint von jenseits zu rufen ...",
+          ContentES = "Una voz parece llamarte desde más allá…",
           TextMapId = "Content_110101_1"
         },
         Content_110101_2 = {
-          ContentES = "Lass dich nicht davon einfangen. Gehe weiter und entkomme dem Albtraum.",
+          ContentES = "No dejes que te atrape. Avanza y escapa de la pesadilla.",
           TextMapId = "Content_110101_2"
         },
         Content_110102_1 = {
-          ContentES = "Du wachst aus dem Albtraum auf und siehst dich den messerscharfen Reißzähnen der Filthoiden gegenüber.",
+          ContentES = "Despiertas de la pesadilla, enfrentando los colmillos afilados de los Filthoids.",
           TextMapId = "Content_110102_1"
         },
         Content_110102_2 = {
-          ContentES = "Deine Truppe wurde von wilden Filthoiden überfallen. Besiege sie und schließe dich wieder deiner Truppe an.",
+          ContentES = "Tu escuadrón ha sido emboscado por feroces Filthoids. Derrótalos y reúnete con tu escuadrón.",
           TextMapId = "Content_110102_2"
         },
         Content_110103_1 = {
-          ContentES = "Nachdem du die plötzliche Bedrohung durch die Filthoiden neutralisiert hast, begib dich zur Notfallstation, um dich mit deiner Truppe wieder zu vereinen.",
+          ContentES = "Tras neutralizar la amenaza repentina, ve al puesto de ayuda para reagruparte.",
           TextMapId = "Content_110103_1"
         },
         Content_110103_2 = {
-          ContentES = "Der Kampf hat deiner Truppe schwer zugesetzt. Die Sanitäterin Daphne hat dich um Hilfe gebeten, um die Verwundeten zu versorgen.\n In der Zwischenzeit plant sie, medizinische Vorräte aus dem Lagerhaus zu holen. Aus Sicherheitsgründen beschließt du, an ihrer Stelle zu gehen.",
+          ContentES = "La batalla ha pasado factura a tu escuadrón. La médica Daphne te pide ayuda para consolar a los heridos.\nMientras tanto, planea recuperar suministros médicos del almacén. Por seguridad, decides ir en su lugar.",
           TextMapId = "Content_110103_2"
         },
         Content_110103_3 = {
-          ContentES = "Eine plötzliche Welle von Filthoiden nähert sich aus dem Korridor, aber die Verwundeten sind nicht in der Lage zu kämpfen. Als Truppführer und letzter Überlebender musst du die Stellung halten und deine Kameraden beschützen.",
+          ContentES = "Una oleada repentina se aproxima por el corredor, pero los heridos no pueden luchar. Como líder del escuadrón y último en pie, debes resistir y proteger a tus camaradas.",
           TextMapId = "Content_110103_3"
         },
         Content_110103_3_2 = {
-          ContentES = "Avars rechtzeitiges Eintreffen hat das Blatt gewendet. Nutze diesen Moment, um den Anführer der Filthoiden zu besiegen und den Kampf zu beenden!",
+          ContentES = "La llegada oportuna de Avar cambia el rumbo de la batalla. Aprovecha el momento para derrotar al líder de Filthoid y poner fin al combate.",
           TextMapId = "Content_110103_3_2"
         },
         Content_110103_4 = {
-          ContentES = "Zusammen mit Avar hast du die Filthoiden erfolgreich zurückgeschlagen. Zeit, zum Sanitätsposten zurückzukehren, um die nächsten Schritte zu besprechen.",
+          ContentES = "Junto a Avar, has repelido con éxito a los Filthoids. Es hora de volver al puesto médico para discutir el siguiente paso.",
           TextMapId = "Content_110103_4"
         },
         Content_110104_1 = {
-          ContentES = "Avar weist Daphne und die Verwundeten an, am Posten zu bleiben und auf Verstärkung zu warten. Währenddessen dringen du und Avar weiter in das Herz der Festung vor, um die Mission fortzusetzen.",
+          ContentES = "Avar instruye a Daphne y a los heridos a quedarse en el puesto y esperar refuerzos. Mientras tanto, tú y Avar avanzan hacia el corazón de la Fortaleza para continuar la misión.",
           TextMapId = "Content_110104_1"
         },
         Content_110104_2 = {
-          ContentES = "Avar schätzt die Lage ein und glaubt, dass die Verlassenen die Operationspläne des Imperiums vorausgesehen haben, was euch in eine strategisch ungünstige Lage bringt.\n Um das Blatt zu wenden, beschließt er, den Phoxichor-Tank im Maschinenraum zu sabotieren, um die Verteidigungsanlagen der Festung außer Gefecht zu setzen und so die Lage für eure eingeschlossenen Kameraden zu erleichtern.",
+          ContentES = "Evaluando la situación, Avar cree que los Abandonados anticiparon los planes del Imperio, poniéndote en desventaja estratégica.\nPara cambiar las tornas, decide sabotear el tanque de Phoxichor en la sala de máquinas y desactivar las defensas de la Fortaleza, facilitando la salida de tus camaradas atrapados.",
           TextMapId = "Content_110104_2"
         },
         Content_110104_3 = {
-          ContentES = "Avar schätzt die Lage ein und glaubt, dass die Verlassenen die Operationspläne des Imperiums vorausgesehen haben, was euch in eine strategisch ungünstige Lage bringt.\n Um das Blatt zu wenden, beschließt er, den Phoxichor-Tank im Maschinenraum zu sabotieren, um die Verteidigungsanlagen der Festung außer Gefecht zu setzen und so die Lage für eure eingeschlossenen Kameraden zu erleichtern.",
+          ContentES = "Evaluando la situación, Avar cree que los Abandonados anticiparon los planes del Imperio, poniéndote en desventaja estratégica.\nPara cambiar las tornas, decide sabotear el tanque de Phoxichor en la sala de máquinas y desactivar las defensas de la Fortaleza, facilitando la salida de tus camaradas atrapados.",
           TextMapId = "Content_110104_3"
         },
         Content_110105_1 = {
-          ContentES = "Du begegnest zwei Mitgliedern der Einheit „Schneewölfe“. Doch einer von ihnen ist im Kern des Maschinenraums eingeschlossen.\n Arbeite mit Avar zusammen, um die Kraftquelle zu zerstören und deinen gefangenen Kameraden zu retten.",
+          ContentES = "Te encuentras con dos miembros del Escuadrón Lobos de Nieve. Sin embargo, uno de ellos está atrapado en el corazón de la sala de máquinas.\nTrabaja con Avar para cortar la energía y rescatar a tu camarada atrapado.",
           TextMapId = "Content_110105_1"
         },
         Content_110105_2 = {
-          ContentES = "Du hast den Maschinenraum erfolgreich erreicht. Es ist Zeit, den Strom abzuschalten.",
+          ContentES = "Has llegado con éxito a la Sala de máquinas. Es hora de cortar la energía.",
           TextMapId = "Content_110105_2"
         },
         Content_110105_3 = {
-          ContentES = "Du hast drei Kraftquellen abgeschaltet – doch plötzlich ertönt ein Alarm von den Phoxichor-Tanks im Maschinenraum ...",
+          ContentES = "Has desactivado tres fuentes de energía, pero una alarma suena de repente desde los tanques de Phoxichor…",
           TextMapId = "Content_110105_3"
         },
         Content_110105_4 = {
-          ContentES = "Über Funk schlägt Avar vor, die Phoxichor-Tanks zu überlasten, falls die normale Abschaltung fehlschlägt – um sie damit vollständig zu zerstören.",
+          ContentES = "Por radio, Avar sugiere sobrecargar los tanques de Phoxichor si el apagado estándar falla, destruyéndolos por completo.",
           TextMapId = "Content_110105_4"
         },
         Content_110106_1 = {
-          ContentES = [[
-Auch wenn Vic gefallen ist, musst du die Mission fortsetzen.
- Arbeite mit Avar zusammen, um die Mechanismen im Maschinenraum zu deaktivieren, und achte auf lauernde Filthoiden.]],
+          ContentES = "Aunque Vic ha caído, debes continuar la misión.\nTrabaja con Avar para desactivar los mecanismos en la sala de máquinas y mantente alerta ante los Filthoids.",
           TextMapId = "Content_110106_1"
         },
         Content_110106_2 = {
-          ContentES = "Du hast die Kraftquelle erfolgreich deaktiviert, aber dadurch wurde die Selbstzerstörungssequenz des Phoxichor-Tanks aktiviert. Entkomme aus dem Maschinenraum, bevor der Countdown abläuft.",
+          ContentES = "Has desactivado la fuente de energía, pero al hacerlo se activó la secuencia de autodestrucción del tanque de Phoxichor. Escapa de la sala de máquinas antes de que la cuenta regresiva llegue a cero.",
           TextMapId = "Content_110106_2"
         },
         Content_110106_3 = {
-          ContentES = "Obwohl Fulvis, der Oberbefehlshaber, darauf besteht, die Mission fortzusetzen, erweist sich Avars Einschätzung als richtig. Statt eines riskanten Angriffs, der euch das Leben kosten könnte, konzentriert ihr euch zuerst darauf, die Greifen zu retten.",
+          ContentES = "Aunque Fulvis, el comandante en jefe, insiste en continuar la misión, el juicio de Avar resulta acertado. En lugar de un ataque imprudente que podría costarles la vida, decides centrarte en rescatar primero a los Grifos.",
           TextMapId = "Content_110106_3"
         },
         Content_110106_4 = {
-          ContentES = "Du triffst auf Simon, der von Filthoiden eingekesselt ist. Besiege die Filthoiden.",
+          ContentES = "Encuentras a Simon, asediado por Filthoids. Elimínalos.",
           TextMapId = "Content_110106_4"
         },
         Content_110106_5 = {
-          ContentES = "Du hast Simon gefunden, aber er ist von Filthoiden umzingelt und sein Zustand sieht schlimm aus.",
+          ContentES = "Has encontrado a Simon, pero está rodeado y su estado es grave.",
           TextMapId = "Content_110106_5"
         },
         Content_110107_1 = {
-          ContentES = "Es war zu spät, um Simon zu retten, aber seine letzten Worte verraten, dass noch weitere Kameraden in der Nähe der Bahngleise gefangen sind.\n Mach weiter, um diejenigen zu retten, die du noch retten kannst.",
+          ContentES = "Aunque llegaste demasiado tarde para salvar a Simon, sus últimas palabras revelan más camaradas atrapados cerca de las vías.\nAvanza para rescatar a los que aún puedes.",
           TextMapId = "Content_110107_1"
         },
         Content_110107_2 = {
-          ContentES = "Unterwegs stößt du auf Filthoiden. Besiege sie schnell – lass dich nicht aufhalten.",
+          ContentES = "En el camino te topas con Filthoids. Elimínalos rápido, no dejes que te retrasen.",
           TextMapId = "Content_110107_2"
         },
         Content_110107_3 = {
-          ContentES = "Ein kurzes Gespräch mit Daphne verschafft dir einen Moment der Zuversicht. Geh weiter vorwärts.",
+          ContentES = "Una breve llamada con Daphne te da un momento de tranquilidad. Sigue avanzando.",
           TextMapId = "Content_110107_3"
         },
         Content_110108_1 = {
-          ContentES = "Ein kurzes Gespräch mit Daphne verschafft dir einen Moment der Zuversicht. Geh weiter vorwärts.",
+          ContentES = "Una breve llamada con Daphne te da un momento de tranquilidad. Sigue avanzando.",
           TextMapId = "Content_110108_1"
         },
         Content_110108_2 = {
-          ContentES = "Du hörst die Rufe deiner Kameraden, doch Filthoiden versperren dir den Weg. Besiege sie und schließe dich wieder deinem Trupp an.",
+          ContentES = "Escuchas a tus compañeros de escuadrón llamarte, pero los Filthoids bloquean el paso. Derrótalos y reagrúpate con tu escuadrón.",
           TextMapId = "Content_110108_2"
         },
         Content_110108_3 = {
-          ContentES = "Du hast die Filthoiden besiegt. Es ist Zeit, zu deinem Trupp zurückzukehren.",
+          ContentES = "Ya has acabado con los Filthoids. Es hora de reunirte con tu escuadrón.",
           TextMapId = "Content_110108_3"
         },
         Content_110108_4 = {
-          ContentES = "Dein Team traf auf zwei Charons. Die junge Frau erklärte, sie seien unschuldige Bewohner, die von den Verlassenen versklavt wurden. Da ihre Identität nicht überprüft werden konnte, beschlossen du und dein Team, vorsichtig in die Richtung weiterzugehen, die der Ältere angab – in der Hoffnung, Avar wiederzufinden.",
+          ContentES = "Tu equipo se topa con dos Charons. La joven explica que eran habitantes inocentes esclavizados por los Abandonados. Incapaz de verificar sus identidades, decides avanzar con cautela en la dirección indicada por el anciano, esperando reunirte con Avar.",
           TextMapId = "Content_110108_4"
         },
         Content_110108_6 = {
-          ContentES = "Dein Team traf auf zwei Charons. Die junge Frau erklärte, sie seien unschuldige Bewohner, die von den Verlassenen versklavt wurden. Da ihre Identität nicht überprüft werden konnte, beschlossen du und dein Team, vorsichtig in die Richtung weiterzugehen, die der Ältere angab – in der Hoffnung, Avar wiederzufinden.",
+          ContentES = "Tu equipo se topa con dos Charons. La joven explica que eran habitantes inocentes esclavizados por los Abandonados. Incapaz de verificar sus identidades, decides avanzar con cautela en la dirección indicada por el anciano, esperando reunirte con Avar.",
           TextMapId = "Content_110108_6"
         },
         Content_110109_1 = {
-          ContentES = "Avar plant, das Tor zum zentralen Kontrollraum mit einem Geschützturm aufzubrechen. Da der Maschinenraum außer Betrieb ist, müsst ihr das simulierte Schlachtfeld mit Notstrom wiederherstellen, um den Geschützturm neu zu positionieren.",
+          ContentES = "Avar planea abrir la puerta de la sala de control central usando una torreta. Con la sala de máquinas desconectada, necesitarás restaurar el campo de batalla simulado con energía de emergencia para reposicionar la torreta.",
           TextMapId = "Content_110109_1"
         },
         Content_110109_2 = {
-          ContentES = "Der Geschützturm bewegt sich entlang der Schiene. Beschütze ihn gemeinsam mit Avar vor herannahenden Filthoiden, bis er sein Ziel erreicht.",
+          ContentES = "La torreta avanza por la vía. Protégela de los Filthoids entrantes junto a Avar hasta que llegue a destino.",
           TextMapId = "Content_110109_2"
         },
         Content_110109_2_1 = {
-          ContentES = "Um das Tor zum zentralen Kontrollraum aufzubrechen, musst du den Geschützturm neu positionieren. Aktiviere den Steuerungsmechanismus, um ihn entlang der Schiene zu bewegen.",
+          ContentES = "Para abrir la puerta de la sala de control central, debes reposicionar la torreta. Activa el mecanismo de control para moverla por la vía.",
           TextMapId = "Content_110109_2_1"
         },
         Content_110109_3 = {
-          ContentES = "Avar plant, das Tor zum zentralen Kontrollraum mit einem Geschützturm aufzubrechen. Da der Maschinenraum außer Betrieb ist, müsst ihr das simulierte Schlachtfeld mit Notstrom wiederherstellen, um den Geschützturm neu zu positionieren.",
+          ContentES = "Avar planea abrir la puerta de la sala de control central usando una torreta. Con la sala de máquinas desconectada, necesitarás restaurar el campo de batalla simulado con energía de emergencia para reposicionar la torreta.",
           TextMapId = "Content_110109_3"
         },
         Content_110110_1 = {
-          ContentES = "Nutze den Geschützturm, um den Durchgang zum zentralen Kontrollraum aufzubrechen.",
+          ContentES = "Usa la torreta para volar el pasaje hacia la sala de control central.",
           TextMapId = "Content_110110_1"
         },
         Content_110110_2 = {
-          ContentES = "Nach dem Beschuss ist die Seitentür zum zentralen Kontrollraum geöffnet. Untersuche den Bereich mit Avar.",
+          ContentES = "Tras el bombardeo, la puerta lateral de la sala de control central está abierta. Investiga el área con Avar.",
           TextMapId = "Content_110110_2"
         },
         Content_110110_3 = {
-          ContentES = "Katya griff dich plötzlich an, doch Avar reagierte schnell und vereitelte ihren Plan.\n Besprich die aktuelle Situation mit Avar.",
+          ContentES = "Katya lanza un ataque contra ti, pero Avar reacciona rápido y frustra su plan.\nDiscute la situación con Avar.",
           TextMapId = "Content_110110_3"
         },
         Content_110110_4 = {
-          ContentES = "Du hast eine Pause gemacht. Während Avar sich erholt, befrage Katya, um herauszufinden, warum sie versucht hat, dich zu ermorden.\n Außerdem scheint Avar während des Kampfes ein Foto verloren zu haben – vielleicht kannst du ihm helfen, es zu finden.",
+          ContentES = "Te detienes a descansar. Mientras Avar se recupera, interroga a Katya para descubrir sus motivos.\nAdemás, parece que Avar perdió una fotografía durante la pelea, quizá puedas ayudarlo a encontrarla.",
           TextMapId = "Content_110110_4"
         },
         Content_110110_5 = {
-          ContentES = "Katya weigert sich, die Wahrheit zu sagen, und versucht eindeutig, dich zu provozieren. Ihre Unverschämtheit ruft dir diese vertraute Stimme in Erinnerung. Doch du behältst einen klaren Kopf.\n Sprich nun mit Avar, um deinen nächsten Schritt zu planen.",
+          ContentES = [[
+Katya no quiere decir la verdad, intentando provocarte. Su insolencia trae de vuelta esa voz familiar en tu mente. Mantienes la calma.
+Ahora, habla con Avar para planear el siguiente paso.]],
           TextMapId = "Content_110110_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_110110_6",
-    MaxKey = "Content_120202_5",
-    Loader = function()
-      return {
+        },
         Content_110110_6 = {
-          ContentES = "Avar plant zunächst, allein zum zentralen Kontrollraum zu gehen, doch seine Kameraden wollen ihn nicht allein der Gefahr aussetzen. Nach einiger Überredung willigt Avar ein, gemeinsam mit der Gruppe weiterzugehen.",
+          ContentES = "Avar inicialmente planea dirigirse solo a la sala de control central, pero los soldados no quieren dejarlo enfrentar el peligro en solitario. Tras cierta persuasión, Avar acepta avanzar con el grupo.",
           TextMapId = "Content_110110_6"
         },
         Content_110110_7 = {
-          ContentES = "Auf dem Weg zum zentralen Kontrollraum stößt ihr auf einen mächtigen Filthoid, der als Kriegsveteran bekannt ist. Du vertraust auf Avar, deinen Mentor und Kameraden, und bist zuversichtlich, dass ihr diesen mächtigen Gegner gemeinsam besiegen werdet.",
+          ContentES = "En el camino, te enfrentas a un Filthoid poderoso conocido como el Maestro de Batalla. Confiando en Avar, tu mentor y camarada, estás seguro de que juntos derrotarán a este formidable enemigo.",
           TextMapId = "Content_110110_7"
         },
         Content_110110_8 = {
-          ContentES = "Du hast den mächtigen Filthoid besiegt. Geh weiter vorwärts.",
+          ContentES = "Has derrotado al formidable Filthoid. Sigue avanzando.",
           TextMapId = "Content_110110_8"
         },
         Content_110111_1 = {
-          ContentES = "Als du den zentralen Kontrollraum erreichst, findest du ihn unerwartet leer vor – keine Spur vom Feind oder von Fallen.\n Untersuche die Umgebung und suche nach Hinweisen.",
+          ContentES = "Al llegar a la sala de control central, la encuentras inesperadamente vacía, sin enemigos ni trampas.\nInvestiga los alrededores y busca pistas.",
           TextMapId = "Content_110111_1"
         },
         Content_110111_2 = {
-          ContentES = "Plötzlich richtet Avar seine Waffe auf dich.",
+          ContentES = "De repente, Avar apunta su arma hacia ti.",
           TextMapId = "Content_110111_2"
         },
         Content_110111_3 = {
-          ContentES = "Als du wieder zu dir kommst, stellst du fest, dass du noch lebst. Verschaffe dir einen Überblick über die Umgebung und schätze deine Lage ein.",
+          ContentES = "Al recobrar el sentido, te das cuenta de que sigues con vida. Observa tu entorno y evalúa la situación.",
           TextMapId = "Content_110111_3"
         },
         Content_110111_4 = {
-          ContentES = "Avar zeigt keine Lebenszeichen.\n Durch die Rundfunkübertragung erfährst du, dass die Legion einen Haftbefehl wegen Spionage gegen Daphne erlassen hat – eine Anschuldigung, die du als falsch erkennst. Du musst aus dem zentralen Kontrollraum fliehen und sie so schnell wie möglich finden.",
+          ContentES = "Avar no muestra signos de vida.\nPor la transmisión, escuchas que la Legión ha emitido una orden de arresto contra Daphne, acusándola de espionaje, un cargo que sabes que es falso. Debes escapar de la sala de control central y encontrarla lo antes posible.",
           TextMapId = "Content_110111_4"
         },
         Content_110111_5 = {
-          ContentES = "Du findest Daphne, doch aus irgendeinem Grund richtet sie eine Waffe auf dich.",
+          ContentES = "Encuentras a Daphne, aunque por alguna razón te apunta con un arma.",
           TextMapId = "Content_110111_5"
         },
         Content_110111_6 = {
-          ContentES = "Du hast Daphne gefunden. Trotz ihrer Panik bemüht sie sich, ruhig zu bleiben und ihre Aufgaben als Sanitäterin zu erfüllen.\n Die Festung ist nicht mehr sicher. Entfliehe gemeinsam mit ihr durch die Kanalisation.",
+          ContentES = "Has encontrado a Daphne. A pesar de su pánico, hace lo posible por mantener la calma y cumplir con sus deberes como médica.\nLa Fortaleza ya no es segura. Escapa con ella por las alcantarillas.",
           TextMapId = "Content_110111_6"
         },
         Content_110111_7 = {
-          ContentES = "Hol den Schlüssel zurück",
+          ContentES = "Recupera la llave",
           TextMapId = "Content_110111_7"
         },
         Content_110112_1 = {
-          ContentES = "Die komplexe Anlage der Kanalisation erfordert eine sorgfältige Navigation. Gehe vorsichtig vor und finde einen Fluchtweg.",
+          ContentES = "El complejo diseño de las alcantarillas exige una navegación cuidadosa. Avanza con cautela y encuentra una ruta de escape.",
           TextMapId = "Content_110112_1"
         },
         Content_110112_2 = {
-          ContentES = "Der Feind versucht, die Kanalisation zu fluten, um deine Flucht zu verhindern. Aktiviere das Entwässerungssystem und setze deine Suche nach einem Ausgang fort.",
+          ContentES = "El enemigo intenta inundar las alcantarillas para impedir tu huida. Activa el sistema de drenaje y continúa tu búsqueda de una salida.",
           TextMapId = "Content_110112_2"
         },
         Content_110113_1 = {
-          ContentES = "Du und Daphne habt in der Hoffnung auf eine Überlebenschance Großkommandantin Sibylle in der Lonza-Festung gefunden. Kurz darauf werdet ihr als Verdächtige der Spionage in das imperiale Militärgefängnis zur Befragung gebracht.\n Um dich und Daphne zu schützen und Avars Opfer für die Gerechtigkeit zu ehren, musst du der Wächterin die Wahrheit beweisen.",
+          ContentES = "Tú y Daphne, buscando una oportunidad de sobrevivir, lograron encontrar a la Jefa Sibylle dentro de la Fortaleza de Lonza. Poco después, son llevados a la Prisión Militar Real para ser interrogados como sospechosos de espionaje.\nPara protegerte a ti y a Daphne, y honrar el sacrificio de Avar por la justicia, debes demostrar la verdad a la Carcelera.",
           TextMapId = "Content_110113_1"
         },
         Content_110113_2 = {
-          ContentES = "Die Wächterin verabreicht dir ein Hypnotikum. Nach einem Moment der Benommenheit findest du dich in einem bizarren Raum wieder, der der Lonza-Festung ähnelt.\n Offenbar steht dir eine besondere Form des „Verhörs“ bevor.",
+          ContentES = "La Carcelera te administra una droga hipnótica. Tras un momento de mareo, te encuentras en un espacio extraño que se asemeja a la Fortaleza de Lonza.\nParece que estás a punto de soportar un \"interrogatorio\" especial.",
           TextMapId = "Content_110113_2"
         },
         Content_110113_3 = {
-          ContentES = "Bestehe die feurige Prüfung der Wächterin, um deine Unschuld zu beweisen.",
+          ContentES = "Soporta la prueba de fuego de la Carcelera para demostrar tu inocencia.",
           TextMapId = "Content_110113_3"
         },
         Content_110113_4 = {
-          ContentES = "Du erklärst der Wächterin, was sich im zentralen Kontrollraum wirklich passiert ist – Avar hat seinen Verrat vorgetäuscht, um wichtige Beweise zu sichern, und sein Leben geopfert, um eine Aufzeichnung zu hinterlassen. Leider hat Fulvis' Adjutant Falsi die Aufzeichnung an sich genommen.\n Nachdem sie deine Aussage gehört hat, stimmt der Wächterin zu, den Fall weiter zu untersuchen.",
+          ContentES = "Explicas a la Carcelera lo que realmente ocurrió en la sala de control central: Avar fingió su traición para asegurar pruebas vitales, sacrificando su vida para dejar una grabación. Desafortunadamente, el ayudante de Fulvis, Falsi, tomó la grabación.\nTras escuchar tu testimonio, la Carcelera acepta investigar más a fondo el caso.",
           TextMapId = "Content_110113_4"
         },
         Content_120001_1 = {
@@ -4202,7 +4662,15 @@ El muelle vibra con las llamadas de vendedores y viajeros por igual. Si tienes t
         Content_120103_8_1 = {
           ContentES = "Tras un inesperado malentendido respecto a tu aprendizaje, el Maestro Gongshang recupera la compostura y comienza a enseñarte el uso del Nexo Mecánico.\nHabla con él para continuar con el tutorial.",
           TextMapId = "Content_120103_8_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_120103_8_2",
+    MaxKey = "Content_120206_27",
+    Loader = function()
+      return {
         Content_120103_8_2 = {
           ContentES = "Tras un inesperado malentendido respecto a tu aprendizaje, el Maestro Gongshang recupera la compostura y comienza a enseñarte el uso del Nexo Mecánico.\nIntenta usarlo para absorber una Runa de Taixu.",
           TextMapId = "Content_120103_8_2"
@@ -4552,15 +5020,15 @@ Uno de los segmentos del sello se tambalea y Zhiliu no puede abandonar su puesto
           TextMapId = "Content_120114_9_1"
         },
         Content_120201_1 = {
-          ContentES = "Betritt die dunkle Kammer",
+          ContentES = "En el momento en que se selló a Zhuyin, Zhiliu se volvió de repente contra ti y te atrapó. Con la ayuda de Fushu y Kezhou, que llegaron justo a tiempo, lograste liberarte del hechizo de Zhiliu.\nPensaste que el peligro había pasado, pero apenas termina una crisis, comienza otra. Cuando salían del Mar de Polvo, Snow y tú fueron alcanzados por un hechizo en una esquina. Tus recuerdos se cortan ahí.",
           TextMapId = "Content_120201_1"
         },
         Content_120201_10 = {
-          ContentES = "Geh zur Halle des Handwerks, um den Räucherofen abzuholen",
+          ContentES = "A diferencia de la bulliciosa Sala del Incienso, la Sala de la Artesanía está tranquila y casi vacía.\nBusca a un miembro del personal de la Sala de la Artesanía.",
           TextMapId = "Content_120201_10"
         },
         Content_120201_11 = {
-          ContentES = "Hole den Räucherofen ab",
+          ContentES = "Encuentras al artesano, ya dejó el incensario en los escalones de al lado.",
           TextMapId = "Content_120201_11"
         },
         Content_120201_11_2 = {
@@ -4568,11 +5036,11 @@ Uno de los segmentos del sello se tambalea y Zhiliu no puede abandonar su puesto
           TextMapId = "Content_120201_11_2"
         },
         Content_120201_12 = {
-          ContentES = "Überprüfe das Schwarze Brett und sieh nach, was los ist.",
+          ContentES = "De pronto resuena la campana de la Sala de Adjudicación. Según el artesano, es algo que no ocurría desde hace siglos. Solo suena cuando aparece un crimen tan intrincado y tan difícil de juzgar que supera lo habitual.\nSi quieres conocer la verdad, ve a la plaza frente a la Sala de Adjudicación y revisa el tablón de anuncios.",
           TextMapId = "Content_120201_12"
         },
         Content_120201_2 = {
-          ContentES = "Betritt Huaxu – Phase Ⅱ",
+          ContentES = "Cuando salían del Mar de Polvo, Snow y tú fueron alcanzados por una maldición en una esquina. Tus recuerdos se cortan ahí.\nParece que tú y Zhiliu tuvieron alguna vez un enfrentamiento feroz en algún lugar y por algún motivo desconocido. ¿Fue real o solo una alucinación tejida por tu mente?",
           TextMapId = "Content_120201_2"
         },
         Content_120201_22 = {
@@ -4596,27 +5064,27 @@ Uno de los segmentos del sello se tambalea y Zhiliu no puede abandonar su puesto
           TextMapId = "Content_120201_25"
         },
         Content_120201_3 = {
-          ContentES = "Ruh dich aus",
+          ContentES = "Cuando vuelves en ti, descubres que caminas junto a Snow y Zhiliu por las bulliciosas calles de Haojing. Según Snow, tras celebrar la derrota de Zhuyin decidieron ir todos a Haojing, pero antes siquiera de ponerse en marcha empezaste a sentirte mal. Ante el recordatorio de Snow, afloran fragmentos vagos de memoria, aunque nada nítido.\nAl ver tu rostro pálido, Zhiliu sugiere detenerse en la farmacia que hay más adelante para comprar medicina y dejarte descansar antes de continuar el viaje.",
           TextMapId = "Content_120201_3"
         },
         Content_120201_4 = {
-          ContentES = "Kaufe Medizin",
+          ContentES = "El Mercado Oriental está abarrotado de visitantes. Como insistes en que estás bien, envías a Snow a adelantar y guardar sitio mientras tú y Zhiliu van a la Farmacia Zesheng por la medicina.",
           TextMapId = "Content_120201_4"
         },
         Content_120201_5 = {
-          ContentES = "Bring Snow die Medizin zurück",
+          ContentES = "Zhiliu parece completamente normal. ¿De verdad solo estás paranoico?\nLa medicina ya está en tus manos. Es hora de volver con Snow.",
           TextMapId = "Content_120201_5"
         },
         Content_120201_6 = {
-          ContentES = "Passiere auf dem Weg zur Halle der Quellen die Halle des Gerichts",
+          ContentES = "Mientras descansas, varios transeúntes cerca de ustedes discuten a voz en cuello sobre la Sala de Adjudicación, y tanto Snow como tú sienten curiosidad.\nDa la casualidad de que Zhiliu tiene un encargo para ustedes relacionado con el Gran Rito del Incienso, uno que además les permitirá contemplar la Sala de Adjudicación desde dentro.\nAcompaña a Zhiliu a la Sala de las Fuentes, en el Distrito Oeste, para recoger una ficha.",
           TextMapId = "Content_120201_6"
         },
         Content_120201_7 = {
-          ContentES = "Begib dich zur Halle der Quellen",
+          ContentES = "Mientras descansas, varios transeúntes cerca de ustedes discuten a voz en cuello sobre la Sala de Adjudicación, y tanto Snow como tú sienten curiosidad.\nDa la casualidad de que Zhiliu tiene un encargo para ustedes relacionado con el Gran Rito del Incienso, uno que además les permitirá contemplar la Sala de Adjudicación desde dentro.\nAcompaña a Zhiliu a la Sala de las Fuentes, en el Distrito Oeste, para recoger una ficha.",
           TextMapId = "Content_120201_7"
         },
         Content_120201_8 = {
-          ContentES = "Liefere die Waren ab",
+          ContentES = "Después de despedirse de Zhiliu, Snow y tú parten hacia el Puerto de las Estrellas Partidas, la Sala del Incienso y la Sala de la Artesanía para reunir suministros para el Gran Rito del Incienso.\nPrimero, ve al Puerto de las Estrellas Partidas y busca al capitán del puerto.",
           TextMapId = "Content_120201_8"
         },
         Content_120201_8_1 = {
@@ -4624,7 +5092,7 @@ Uno de los segmentos del sello se tambalea y Zhiliu no puede abandonar su puesto
           TextMapId = "Content_120201_8_1"
         },
         Content_120201_9 = {
-          ContentES = "Begib dich zur Halle des Weihrauchs",
+          ContentES = "Tras algunos contratiempos, consigues recuperar la seda fina de Xiaoyao, un Wishen travieso.\nAhora dirígete a la Sala del Incienso, en la Ciudad Interior, para continuar con tu encargo.",
           TextMapId = "Content_120201_9"
         },
         Content_120202_1 = {
@@ -4666,15 +5134,7 @@ Uno de los segmentos del sello se tambalea y Zhiliu no puede abandonar su puesto
         Content_120202_5 = {
           ContentES = "Con la Prueba por disputa cada vez más cerca, la persona a la que has venido a rescatar sigue retenida en lo alto de la Sala de Adjudicación.\n No olvides el encargo de Zhiliu. Entrega primero los suministros del Gran Rito del Incienso al ayudante de dentro.",
           TextMapId = "Content_120202_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_120202_6",
-    MaxKey = "Content_200213_4",
-    Loader = function()
-      return {
+        },
         Content_120202_6 = {
           ContentES = "Con el Juicio por disputa cada vez más cerca, la persona a la que vinieron a rescatar sigue retenida en lo alto de la Sala de Adjudicación.\n Usando el encargo de Zhiliu como pretexto, logran infiltrarse en la Sala de Adjudicación. Busquen una forma de subir hasta la cima.",
           TextMapId = "Content_120202_6"
@@ -5016,7 +5476,15 @@ Fushu trae noticias de que un descendiente de la Secta Wuqiongzang vive retirado
         Content_120206_27 = {
           ContentES = "Zhiliu te pide que des un paseo con ella.",
           TextMapId = "Content_120206_27"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_120206_28",
+    MaxKey = "Content_200236_2",
+    Loader = function()
+      return {
         Content_120206_28 = {
           ContentES = "Zhiliu te pide que des un paseo con ella.",
           TextMapId = "Content_120206_28"
@@ -5480,15 +5948,7 @@ Consigue la tierra apropiada para ella.]],
         Content_200213_4 = {
           ContentES = "Después de investigar las historias detrás de los tres objetos, es hora de reunirte con Margie y contarle tus hallazgos.",
           TextMapId = "Content_200213_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_200215_1",
-    MaxKey = "Content_200402_1",
-    Loader = function()
-      return {
+        },
         Content_200215_1 = {
           ContentES = "Marcus, un chef apasionado por los experimentos culinarios, siempre busca nuevos ingredientes. Sabes de un buen lugar de pesca cerca del Lago Lamentoso. Ve allí y trata de atrapar algo especial para él.",
           TextMapId = "Content_200215_1"
@@ -5828,7 +6288,15 @@ Consigue la tierra apropiada para ella.]],
         Content_200236_2 = {
           ContentES = "En el Arsenal, usa los Pensamientos de [Truffle y Filbert] para completar Reminiscencia y desbloquear el personaje.",
           TextMapId = "Content_200236_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_200237_1",
+    MaxKey = "Content_Batt02_05_01",
+    Loader = function()
+      return {
         Content_200237_1 = {
           ContentES = "Ya llevas varios días fuera de Lago Glacial. Ahora que volviste, sería bueno pasarte por el Santuario… pero ¿adónde fue Snow?",
           TextMapId = "Content_200237_1"
@@ -5894,23 +6362,23 @@ Consigue la tierra apropiada para ella.]],
           TextMapId = "Content_200302_1"
         },
         Content_200302_2 = {
-          ContentES = "Nachdem du mit dem Sternweber gesprochen hast, erklärst du dich bereit, ihn eine Zeit lang zu begleiten. Hilf ihm nun, die erste Lieferung einzusammeln.",
+          ContentES = "Después de hablar con el Tejestrellas, aceptas acompañarlo por un tiempo. Ahora, ayúdale a recoger la primera carga.",
           TextMapId = "Content_200302_2"
         },
         Content_200302_3 = {
-          ContentES = "Auf dem Weg, die Waren abzuholen, versperren mehrere Zobel-Bi'an deinen Pfad. Vertreibe sie.",
+          ContentES = "En el camino, varios Bi'an Sombríos bloquean tu ruta. ¡Elimínalos!",
           TextMapId = "Content_200302_3"
         },
         Content_200302_4 = {
-          ContentES = "Nachdem du die kandierten Früchte für die Vidofnir-Gebirge gesammelt hast, bittet Zhao Qian dich, mit ihm die zweite Lieferung abzuholen. Nach einer kurzen Rast machst du dich erneut auf den Weg.",
+          ContentES = "Una vez recuperados los frutos confitados destinados a las Montañas Vidofnir, Zhao Qian te pide que le acompañes a buscar la segunda carga. Tras una breve pausa, retomáis la ruta.",
           TextMapId = "Content_200302_4"
         },
         Content_200302_5 = {
-          ContentES = "Mit den Waren bereit bleibt nur noch, sie zum Sternkai zu bringen.",
+          ContentES = "Las mercancías están listas. Solo queda transportarlas hasta el Muelle Estelar.",
           TextMapId = "Content_200302_5"
         },
         Content_200302_6 = {
-          ContentES = "Der Ladeplatz am Sternkai ist aus irgendeinem Grund von kleinen Tieren überfüllt. Räume sie weg, lade die Waren ab und warte zusammen mit Zhao Qian auf das Eintreffen des Frachtschiffs.",
+          ContentES = "El punto de carga del Muelle Estelar está invadido por pequeños animales. Dispérsalos, completa la descarga y luego espera la llegada del barco de carga con Zhao Qian.",
           TextMapId = "Content_200302_6"
         },
         Content_200303_1 = {
@@ -5934,43 +6402,43 @@ Consigue la tierra apropiada para ella.]],
           TextMapId = "Content_200303_5"
         },
         Content_200304_1 = {
-          ContentES = "Snow hat von einem Stand in der Nähe von Nebelkai gehört, der hervorragende Osmanthus-Kuchen verkauft. Geh mit ihr hin und sieh ihn dir an.",
+          ContentES = "Snow ha oído hablar de una tienda de pasteles de osmanto famosa por su sabor auténtico, situada en los muelles del Puerto de las Brumas. Acompáñala para ir a echar un vistazo.",
           TextMapId = "Content_200304_1"
         },
         Content_200304_10 = {
-          ContentES = "Nachdem Li die Geschichte von Yuming und Kezhou erzählt hat, verabschiedet er sich. Überbringe die Nachricht, die Kezhou dir anvertraut hat, an Yuming.",
+          ContentES = "Tras relatar el pasado de Yuming y Kezhou, el anciano se despide. Aprovecha para transmitirle a Yuming el mensaje que Kezhou te había confiado.",
           TextMapId = "Content_200304_10"
         },
         Content_200304_2 = {
-          ContentES = "Du entdeckst den Osmanthus-Kuchenstand, den Snow vorher erwähnt hat, vor dir. Gehe hin und stelle dich in die Schlange.",
+          ContentES = "Ves el puesto de pasteles de osmanto del que te habló Snow. Dirígete a hacer la fila.",
           TextMapId = "Content_200304_2"
         },
         Content_200304_3 = {
-          ContentES = "Zwei kleine Jungen lösen das Rätsel, erhalten ihre kostenlosen Osmanthus-Kuchen und gehen zufrieden davon. Als du ihnen zusiehst, bekommst du selbst Lust, das Rätselspiel des Standes auszuprobieren.",
+          ContentES = "Dos niños resuelven el acertijo, reciben sus pasteles de osmanto y se marchan contentos. Al verlos, decides intentar tú también la prueba.",
           TextMapId = "Content_200304_3"
         },
         Content_200304_4 = {
-          ContentES = "Gerade als du deinen Osmanthus-Kuchen erhältst, hörst du, dass der Standbesitzer möglicherweise in Gefahr ist. Schließe dich mit Li Huan zusammen und suche nach ihm.",
+          ContentES = "Justo cuando recibes tu pastel de osmanto, escuchas que el dueño del puesto podría estar en peligro. Acompaña a Li Huan para ir a buscarlo.",
           TextMapId = "Content_200304_4"
         },
         Content_200304_5 = {
-          ContentES = "Li Huan folgend, findest du den Standbesitzer zusammen mit den beiden Jungen von vorher, umzingelt von einem Rudel Zobel-Bi'an. Beeile dich, sie zu retten.",
+          ContentES = "Siguiendo a Li Huan, encuentras al dueño del puesto, pero descubres que está rodeado junto con los dos niños por Bi'an Sombríos. ¡Rápido, socórrelos!",
           TextMapId = "Content_200304_5"
         },
         Content_200304_6 = {
-          ContentES = "Während du die Zobel-Bi'an abwehrst, taucht ein unerwarteter Verbündeter, Yuming, auf. Mit seiner Hilfe vertreibt ihr die Bestien mühelos. Sprich mit Li, dem Osmanthus-Kuchen-Hersteller, um zu erfahren, was geschehen ist.",
+          ContentES = "Mientras enfrentas a los Bi'an Sombríos, aparece un aliado inesperado, Yuming. Con su ayuda, ahuyentas fácilmente a las bestias. Habla con Li, el pastelero de osmanto, para averiguar lo sucedido.",
           TextMapId = "Content_200304_6"
         },
         Content_200304_7 = {
-          ContentES = "Nach dem Gespräch begleitest du Li auf einem kurzen Spaziergang und bringst ihn sicher nach Hause.",
+          ContentES = "Tras la conversación, acompaña a Li en un breve paseo y asegúrate de que llegue sano y salvo a casa.",
           TextMapId = "Content_200304_7"
         },
         Content_200304_8 = {
-          ContentES = "Die Zobel-Bi'an kehren zurück und unterbrechen euer Gespräch. Vertreibe sie.",
+          ContentES = "Los Bi'an Sombríos vuelven a aparecer e interrumpen la conversación. ¡Repúlsalos!",
           TextMapId = "Content_200304_8"
         },
         Content_200304_9 = {
-          ContentES = "Sobald die Bedrohung vorüber ist, verstummt der alte Mann und seufzt. Gehe zu ihm und höre, was er zu sagen hat.",
+          ContentES = "Una vez pasada la amenaza, el anciano guarda silencio y suspira. Acércate y escucha lo que tiene que decir.",
           TextMapId = "Content_200304_9"
         },
         Content_200305_1 = {
@@ -6288,15 +6756,7 @@ Consigue la tierra apropiada para ella.]],
         Content_200402_1 = {
           ContentES = "El comerciante ambulante les mostró una caja extraña que parecía tener mucho tiempo... no podían evitar la duda: ¿de verdad habría algo valioso en una caja tan pequeña?",
           TextMapId = "Content_200402_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Content_200402_2",
-    MaxKey = "DROP_QUEST_CheckRubishBin01",
-    Loader = function()
-      return {
+        },
         Content_200402_2 = {
           ContentES = "Pagaste una fortuna por la caja del comerciante ambulante. Snow la examinó por todos lados, incapaz de creer que semejante suma solo hubiera servido para conseguir una caja corriente. Estaba a punto de recurrir a métodos poco convencionales para descubrir su secreto cuando un transeúnte la detuvo.",
           TextMapId = "Content_200402_2"
@@ -6394,31 +6854,31 @@ Consigue la tierra apropiada para ella.]],
           TextMapId = "Content_200403_6"
         },
         Content_400111_1 = {
-          ContentES = "Einst erfüllt von fröhlichem Geplauder, liegt über der Asphodel nun eine schwere Stimmung voller Seufzer. Gehe nachsehen, was passiert.",
+          ContentES = "Antes llenas de risas, Los Asfódelos ahora parecen invadidas por suspiros. Será mejor ir a ver qué está sucediendo.",
           TextMapId = "Content_400111_1"
         },
         Content_400111_2 = {
-          ContentES = "Um das Lachen nach Icelake zurückzubringen, benötigst du die Anleitung einiger Luno-Ältesten!",
+          ContentES = "¡Para devolver la sonrisa a Lago Glacial, habrá que consultar la opinión de varias antiguas Luno!",
           TextMapId = "Content_400111_2"
         },
         Content_400111_3 = {
-          ContentES = "Die Methode der Luno-Schmiedin funktioniert nicht, also ist es Zeit, dass Luno-Dienerin die Bühne betritt.",
+          ContentES = "Los métodos de Lunoherrera, no parecen muy efectivos… Es hora de dejar que Lunosirvienta, entre en escena.",
           TextMapId = "Content_400111_3"
         },
         Content_400111_4 = {
-          ContentES = "Versuchen wir als Nächstes die Methode der Luno-Abenteurerin. Es wird schon klappen! Wahrscheinlich.",
+          ContentES = "Probemos ahora el método de Lunoexploradora. ¡Seguro que funcionará… probablemente!",
           TextMapId = "Content_400111_4"
         },
         Content_400111_5 = {
-          ContentES = "Während du draußen in der Wildnis unterwegs bist, gerätst du unerwartet in Gefahr. Hilf den Kindern, in Sicherheit zu gelangen.",
+          ContentES = "Apenas llegas al corazón de la naturaleza, surge un peligro inesperado. Ayuda a los niños a ponerse a salvo.",
           TextMapId = "Content_400111_5"
         },
         Content_400111_6 = {
-          ContentES = "Du hast alles versucht, was dir einfällt. Gibt es wirklich keinen anderen Weg, die Menschen zum Lächeln zu bringen? Denk nach ... wirklich nach ... da muss doch etwas sein.",
+          ContentES = "Se han probado todas las ideas… ¿Realmente no hay otra manera de devolver la sonrisa? ¡Piensa de nuevo… de nuevo…!",
           TextMapId = "Content_400111_6"
         },
         Content_400111_7 = {
-          ContentES = "Harte Arbeit lässt eine wahrhaft entschlossene Seele nie im Stich ... nein – eine wahrhaft entschlossene Snow! Es mag Zufall gewesen sein, aber es hat die Stimmung aller gehoben. Nennen wir das ein glückliches Ende!",
+          ContentES = "El esfuerzo siempre termina dando frutos… ¡al menos cuando Snow se involucra! Aunque todo haya sido cuestión de azar, el entusiasmo se ha contagiado. ¡Se puede llamar un final feliz!",
           TextMapId = "Content_400111_7"
         },
         Content_400121_1 = {
@@ -6636,7 +7096,15 @@ Consigue la tierra apropiada para ella.]],
         Content_Batt02_05_01 = {
           ContentES = "Alerta por su presa, la grandiosa Matriz de Caza de las Mil Trampas emerge del suelo con un estruendo ensordecedor. Te encuentras atrapado en un antiguo dispositivo mecánico.\nSeparado accidentalmente del Sr. Qiu, conoces a un hombre llamado Kezhou. Con vuestros destinos ahora entrelazados, avanzad juntos para encontrar una salida.",
           TextMapId = "Content_Batt02_05_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Content_Batt03_01_01",
+    MaxKey = "DUNGEON_DEFENCE_109",
+    Loader = function()
+      return {
         Content_Batt03_01_01 = {
           ContentES = "Alerta por su presa, la grandiosa Matriz de Caza de las Mil Trampas emerge del suelo con un estruendo ensordecedor. Te encuentras atrapado en un antiguo dispositivo mecánico.\nLa salida está justo enfrente: apresúrate a salir de este lugar.",
           TextMapId = "Content_Batt03_01_01"
@@ -6650,7 +7118,7 @@ Consigue la tierra apropiada para ella.]],
           TextMapId = "Content_Batt03_03_01"
         },
         Content_Nai01_01_01 = {
-          ContentES = "Von einem Hilferuf angezogen bist du in den Vergessensspalt gefallen — ein lichtloses Reich, in dem alles ins Vergessen gleitet.\n Finde einen Ausweg, bevor du diejenigen vergisst, die dir am Herzen liegen.",
+          ContentES = "Atraído por un grito de auxilio, te has precipitado en la Grieta del Olvido: un reino sin luz donde todo se pierde en la nada.\nEncuentra la salida antes de que olvides a quienes más amas.",
           TextMapId = "Content_Nai01_01_01"
         },
         Content_Nai02_01_01 = {
@@ -6658,7 +7126,7 @@ Consigue la tierra apropiada para ella.]],
           TextMapId = "Content_Nai02_01_01"
         },
         Content_Nai03_01_01 = {
-          ContentES = "Fushus Geist war noch von Zweifel getrübt, und sie konnte dem Äolischen Klangspiel keine Antwort entlocken — sodass sie dem Vergessensspalt nicht entkommen konnte. Zum Glück fand sie mit der Hilfe des Wishen endlich ihren Weg zurück, und eine längst vergessene Erinnerung erwachte erneut.\n Jetzt, da Fushu wieder bei dir ist, bleibt keine Zeit zum Ausruhen. Mach weiter und finde den Ausgang aus diesem Ort.",
+          ContentES = "El espíritu de Fushu seguía invadido por la duda. Privada de la respuesta del Carillón de los Vientos, casi quedó atrapada en la Grieta del Olvido. Gracias a la ayuda del Wishen, finalmente logró encontrar el camino de regreso, y un recuerdo largamente olvidado resurgió.\nAhora, Fushu y {nickname} se han reunido… pero el peligro no ha desaparecido. Apresúrate a salir de este lugar y encontrar una vía de supervivencia.",
           TextMapId = "Content_Nai03_01_01"
         },
         Content__120301_1 = {
@@ -6844,23 +7312,23 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Convert_Select_Tips"
         },
         Cp2CharacterName01 = {
-          ContentES = "???",
+          ContentES = "¿¿¿???",
           TextMapId = "Cp2CharacterName01"
         },
         Cp2CharacterName02 = {
-          ContentES = "Subjekt 47",
+          ContentES = "Sujeto 47",
           TextMapId = "Cp2CharacterName02"
         },
         Cp2CharacterName03 = {
-          ContentES = "Subjekt 36",
+          ContentES = "Sujeto 36",
           TextMapId = "Cp2CharacterName03"
         },
         Cp2CharacterName04 = {
-          ContentES = "Kalte Stimme",
+          ContentES = "Voz fría",
           TextMapId = "Cp2CharacterName04"
         },
         Cp2CharacterName05 = {
-          ContentES = "Junge Stimme",
+          ContentES = "Voz joven",
           TextMapId = "Cp2CharacterName05"
         },
         Cp2CharacterName06 = {
@@ -6872,11 +7340,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Cp2CharacterName07"
         },
         Cp2CharacterName08 = {
-          ContentES = "Tiefe Stimme",
+          ContentES = "Voz profunda",
           TextMapId = "Cp2CharacterName08"
         },
         Cp2CharacterName09 = {
-          ContentES = "„Blues“",
+          ContentES = "\"Blues\"",
           TextMapId = "Cp2CharacterName09"
         },
         Cp2CharacterName10 = {
@@ -6888,55 +7356,55 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Cp2CharacterName11"
         },
         Cp2CharacterName12 = {
-          ContentES = "Ängstlicher Darsteller",
+          ContentES = "Intérprete ansioso",
           TextMapId = "Cp2CharacterName12"
         },
         Cp2CharacterName13 = {
-          ContentES = "Requisitenmeisterin",
+          ContentES = "Maestro de utilería",
           TextMapId = "Cp2CharacterName13"
         },
         Cp2CharacterName14 = {
-          ContentES = "Panischer Fischer",
+          ContentES = "Pescador pánico",
           TextMapId = "Cp2CharacterName14"
         },
         Cp2CharacterName15 = {
-          ContentES = "Panischer Mann",
+          ContentES = "Hombre pánico",
           TextMapId = "Cp2CharacterName15"
         },
         Cp2CharacterName16 = {
-          ContentES = "Gebrechlicher Mann",
+          ContentES = "Hombre débil",
           TextMapId = "Cp2CharacterName16"
         },
         Cp2CharacterName17 = {
-          ContentES = "Konvoisoldat",
+          ContentES = "Soldado de transporte",
           TextMapId = "Cp2CharacterName17"
         },
         Cp2CharacterName18 = {
-          ContentES = "Soldat der Eskorte",
+          ContentES = "Soldado de la Escolta",
           TextMapId = "Cp2CharacterName18"
         },
         Cp2CharacterName19 = {
-          ContentES = "Theatermitarbeiter",
+          ContentES = "Empleado del teatro",
           TextMapId = "Cp2CharacterName19"
         },
         Cp2CharacterName20 = {
-          ContentES = "„Betrüger“ der Verlassenen",
+          ContentES = "\"Engañador\" de los Abandonados",
           TextMapId = "Cp2CharacterName20"
         },
         Cp2CharacterName21 = {
-          ContentES = "Soldat der 6. Legion",
+          ContentES = "Soldado de La 6.ª Legión",
           TextMapId = "Cp2CharacterName21"
         },
         Cp2CharacterName22 = {
-          ContentES = "Alchemist",
+          ContentES = "Alquimista",
           TextMapId = "Cp2CharacterName22"
         },
         Cp2CharacterName23 = {
-          ContentES = "Alchemist",
+          ContentES = "Alquimista",
           TextMapId = "Cp2CharacterName23"
         },
         Cp2CharacterName24 = {
-          ContentES = "Soldat der Eskorte",
+          ContentES = "Soldado de la Escolta",
           TextMapId = "Cp2CharacterName24"
         },
         Cp2CharacterName25 = {
@@ -6944,35 +7412,35 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Cp2CharacterName25"
         },
         Cp2CharacterName26 = {
-          ContentES = "Soldat aus Lynns Einheit",
+          ContentES = "Soldado de la unidad de Lynn",
           TextMapId = "Cp2CharacterName26"
         },
         Cp2CharacterName27 = {
-          ContentES = "Soldat aus Rhythms Einheit",
+          ContentES = "Soldado de la unidad de Rhythm",
           TextMapId = "Cp2CharacterName27"
         },
         Cp2CharacterName28 = {
-          ContentES = "Soldat aus Rhythms Einheit",
+          ContentES = "Soldado de la unidad de Rhythm",
           TextMapId = "Cp2CharacterName28"
         },
         Cp2CharacterName29 = {
-          ContentES = "Katze",
+          ContentES = "Gato",
           TextMapId = "Cp2CharacterName29"
         },
         Cp2CharacterName30 = {
-          ContentES = "Übertragung",
+          ContentES = "Difusión",
           TextMapId = "Cp2CharacterName30"
         },
         Cp2CharacterName31 = {
-          ContentES = "Gefangener elysischer Soldat",
+          ContentES = "Soldado Elysiano capturado",
           TextMapId = "Cp2CharacterName31"
         },
         Cp2CharacterName32 = {
-          ContentES = "Stimme innerhalb der Alchemie-Akademie",
+          ContentES = "Voz dentro de la Academia de Alquimia",
           TextMapId = "Cp2CharacterName32"
         },
         Cp2CharacterName33 = {
-          ContentES = "Überschwänglicher Zivilist",
+          ContentES = "Civil exuberante",
           TextMapId = "Cp2CharacterName33"
         },
         Current = {
@@ -7052,11 +7520,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "DROP_QUEST_200209D3"
         },
         DROP_QUEST_BODY01 = {
-          ContentES = "Verschleiere die Wunden",
+          ContentES = "Oculta las heridas",
           TextMapId = "DROP_QUEST_BODY01"
         },
         DROP_QUEST_BODY02 = {
-          ContentES = "Verschleiere die Wunden",
+          ContentES = "Oculta las heridas",
           TextMapId = "DROP_QUEST_BODY02"
         },
         DROP_QUEST_BackYYG = {
@@ -7098,15 +7566,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DROP_QUEST_CheckRubishBin01 = {
           ContentES = "Basurero pequeño",
           TextMapId = "DROP_QUEST_CheckRubishBin01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DROP_QUEST_CheckRubishBin02",
-    MaxKey = "DUNGEON_NAME_81202",
-    Loader = function()
-      return {
+        },
         DROP_QUEST_CheckRubishBin02 = {
           ContentES = "Basurero grande",
           TextMapId = "DROP_QUEST_CheckRubishBin02"
@@ -7148,7 +7608,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "DROP_QUEST_East00toNight"
         },
         DROP_QUEST_FISHDOOR = {
-          ContentES = "Klopfen",
+          ContentES = "Llamar a la puerta",
           TextMapId = "DROP_QUEST_FISHDOOR"
         },
         DROP_QUEST_FIXFLOWER = {
@@ -7208,11 +7668,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "DROP_QUEST_GOTOEX01"
         },
         DROP_QUEST_GOTOTHEA = {
-          ContentES = "Betritt das Galea-Theater",
+          ContentES = "Entra en Teatro Galea",
           TextMapId = "DROP_QUEST_GOTOTHEA"
         },
         DROP_QUEST_GOTOVOID = {
-          ContentES = "Zurück zum Basispunkt und ausruhen",
+          ContentES = "Regresa al Santuario y descansa",
           TextMapId = "DROP_QUEST_GOTOVOID"
         },
         DROP_QUEST_GUN = {
@@ -7264,11 +7724,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "DROP_QUEST_PILE"
         },
         DROP_QUEST_PickUpBomb = {
-          ContentES = "Pulverfass aufnehmen",
+          ContentES = "Recoge el barril de pólvora",
           TextMapId = "DROP_QUEST_PickUpBomb"
         },
         DROP_QUEST_PlaceBomb = {
-          ContentES = "Platziere das Pulverfass",
+          ContentES = "Coloca el barril de pólvora",
           TextMapId = "DROP_QUEST_PlaceBomb"
         },
         DROP_QUEST_REST = {
@@ -7292,7 +7752,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "DROP_QUEST_Shangxiang"
         },
         DROP_QUEST_THEAACTOR = {
-          ContentES = "Beende den letzten Akt",
+          ContentES = "Completa el Acto Final",
           TextMapId = "DROP_QUEST_THEAACTOR"
         },
         DROP_QUEST_TRAVELINGEXPENSE = {
@@ -7446,7 +7906,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DUNGEON_DEFENCE_109 = {
           ContentES = "El sistema de drenaje se autodestruirá en 40 s. ¡Abre la válvula ahora!",
           TextMapId = "DUNGEON_DEFENCE_109"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DUNGEON_DEFENCE_110",
+    MaxKey = "DUNGEON_SURVIVALMINIPRO_103",
+    Loader = function()
+      return {
         DUNGEON_DEFENCE_110 = {
           ContentES = "El sistema de drenaje se autodestruirá en 30 s. ¡Abre la válvula ahora!",
           TextMapId = "DUNGEON_DEFENCE_110"
@@ -7906,15 +8374,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DUNGEON_NAME_81202 = {
           ContentES = "Disparo desde cobertura Ⅱ",
           TextMapId = "DUNGEON_NAME_81202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DUNGEON_NAME_81203",
-    MaxKey = "DailyTaskDes_10000105",
-    Loader = function()
-      return {
+        },
         DUNGEON_NAME_81203 = {
           ContentES = "Disparo desde cobertura Ⅲ",
           TextMapId = "DUNGEON_NAME_81203"
@@ -8254,7 +8714,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DUNGEON_SURVIVALMINIPRO_103 = {
           ContentES = "Localiza la Estación de pociones y derrota a los enemigos cercanos para recuperar el suero.",
           TextMapId = "DUNGEON_SURVIVALMINIPRO_103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DUNGEON_SURVIVALMINIPRO_104",
+    MaxKey = "Description_10040416_01",
+    Loader = function()
+      return {
         DUNGEON_SURVIVALMINIPRO_104 = {
           ContentES = "El encargo se completa cuando el suero en la Estación de pociones alcanza <Highlight>100%</>",
           TextMapId = "DUNGEON_SURVIVALMINIPRO_104"
@@ -8714,15 +9182,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DailyTaskDes_10000105 = {
           ContentES = "Completa <Highlight>1</> Encargo",
           TextMapId = "DailyTaskDes_10000105"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DailyTaskDes_10000106",
-    MaxKey = "Description_120102_10",
-    Loader = function()
-      return {
+        },
         DailyTaskDes_10000106 = {
           ContentES = "Derrota a <Highlight>50</> enemigos",
           TextMapId = "DailyTaskDes_10000106"
@@ -8892,460 +9352,690 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "¿¿¿???",
           TextMapId = "Description_100103_6"
         },
+        Description_10040101_01 = {
+          ContentES = "Faltan cinco días para la fecha que mencionó Rhythm, cuando la Legión escoltará al misterioso prisionero. Es momento de preparar un plan. Vayamos a Los Asfódelos para discutirlo con todos.",
+          TextMapId = "Description_10040101_01"
+        },
+        Description_10040102_01 = {
+          ContentES = "El plan ya está listo. ¡Partamos hacia La Estación de las Cien Flores!",
+          TextMapId = "Description_10040102_01"
+        },
+        Description_10040103_01 = {
+          ContentES = "La estación es enorme, pero por suerte Lunoferromosa nos explica amablemente cómo funciona. Síguela y compra un boleto según sus indicaciones.",
+          TextMapId = "Description_10040103_01"
+        },
+        Description_10040104_01 = {
+          ContentES = "¡Un imprevisto! Parece que esta estación tampoco es muy tranquila, pero esto no debería afectar el plan. Compra el boleto y prepárate para entrar al vestíbulo a investigar.",
+          TextMapId = "Description_10040104_01"
+        },
+        Description_10040105_01 = {
+          ContentES = "Debido al incidente reciente, la inspección en la estación se volvió más estricta y ya no es posible entrar directamente. Habrá que buscar otra forma: quizá disfrazarse de trabajador para infiltrarse.",
+          TextMapId = "Description_10040105_01"
+        },
+        Description_10040106_01 = {
+          ContentES = "Para conseguir el puesto de trabajador e infiltrarte en la estación, primero debes demostrar tus capacidades...",
+          TextMapId = "Description_10040106_01"
+        },
+        Description_10040107_01 = {
+          ContentES = "Has completado la prueba de contratación. Vuelve con el reclutador.",
+          TextMapId = "Description_10040107_01"
+        },
+        Description_10040108_01 = {
+          ContentES = "Prepárate para infiltrarte en las Instalaciones de forja y entrar a la estación.",
+          TextMapId = "Description_10040108_01"
+        },
+        Description_10040109_01 = {
+          ContentES = "Continúa avanzando por la línea de producción de las Instalaciones de forja.",
+          TextMapId = "Description_10040109_01"
+        },
+        Description_10040201_01 = {
+          ContentES = "Has llegado a la parte superior de La Estación de las Cien Flores. Avanza por las estructuras metálicas y busca una ruta para bajar al suelo.",
+          TextMapId = "Description_10040201_01"
+        },
+        Description_10040203_01 = {
+          ContentES = "El tren está lleno de soldados que regresan del frente y se dirigen a la enfermería. Tal vez, si los sigues, puedas encontrar la enfermería y obtener más información.",
+          TextMapId = "Description_10040203_01"
+        },
+        Description_10040204_01 = {
+          ContentES = "El médico militar está muy ocupado; si no esperas a que termine, no podrás preguntarle nada. Sigue sus instrucciones y ayúdalo a terminar su trabajo.",
+          TextMapId = "Description_10040204_01"
+        },
+        Description_10040205_01 = {
+          ContentES = "El tren especial de la 13.ª Legión está en el andén 1, a lo lejos. Ve a echar un vistazo.",
+          TextMapId = "Description_10040205_01"
+        },
+        Description_10040206_01 = {
+          ContentES = "El tren especial La Grajilla está fuertemente custodiado; hay que encontrar una forma de atravesar la seguridad y acercarse para investigar.\nStéphane proporcionó información útil: durante el cambio de guardia, la vigilancia del tren es más débil. Ese será el mejor momento para actuar.",
+          TextMapId = "Description_10040206_01"
+        },
+        Description_10040207_01 = {
+          ContentES = "Una mujer llamada Hilda bloqueó el camino y lanzó una advertencia. No queda más remedio que retirarse por ahora, pero antes puedes investigar la oficina de la estación que mencionó Stéphane.",
+          TextMapId = "Description_10040207_01"
+        },
+        Description_10040208_01 = {
+          ContentES = "Un anuncio resonó por toda la estación: parece que Los Abandonados lanzó una amenaza y algo explotó dentro de la estación.\nSi te quedas en la sala de transmisiones, te tomarán por un miembro de Los Abandonados. Escapa rápido por el elevador que usaste para infiltrarte.",
+          TextMapId = "Description_10040208_01"
+        },
+        Description_10040209_01 = {
+          ContentES = "Un anuncio resonó por toda la estación: parece que Los Abandonados lanzó una amenaza y algo explotó dentro de la estación.\nSi te quedas en la sala de transmisiones, te tomarán por un miembro de Los Abandonados. Escapa rápido por el elevador que usaste para infiltrarte.\nLos guardias de la estación te interceptaron. Deshazte de ellos.",
+          TextMapId = "Description_10040209_01"
+        },
+        Description_10040210_01 = {
+          ContentES = "Al llegar al elevador, te encuentras con Eisenbahn, el jefe de estación. Sospecha que ustedes causaron la explosión. Justo entonces apareció Hilda, a quien conociste a bordo de La Grajilla, y contuvo a los hombres de Eisenbahn. Síguela.",
+          TextMapId = "Description_10040210_01"
+        },
+        Description_10040301_01 = {
+          ContentES = "Cuando Eisenbahn te tenía rodeado, el supervisor militar de la Legión de La Grajilla intervino para ayudarte. Aunque Outsider quedó retenido, obtuvo la oportunidad de limpiar su nombre investigando el caso.\nVe al lugar de la explosión y busca al culpable.",
+          TextMapId = "Description_10040301_01"
+        },
+        Description_10040303_01 = {
+          ContentES = "Llega al lugar de la explosión e inicia la investigación.",
+          TextMapId = "Description_10040303_01"
+        },
+        Description_10040303_02 = {
+          ContentES = "Habla con el soldado",
+          TextMapId = "Description_10040303_02"
+        },
+        Description_10040305_01 = {
+          ContentES = "Ve al almacén para buscar los objetos confiscados.",
+          TextMapId = "Description_10040305_01"
+        },
+        Description_10040306_01 = {
+          ContentES = "Investiga los distintos objetos de contrabando del almacén y averigua cuáles podrían servir para fabricar una bomba.",
+          TextMapId = "Description_10040306_01"
+        },
+        Description_10040307_01 = {
+          ContentES = "Para identificar a los sospechosos entre las treinta y dos personas que entraron y salieron del almacén, la estación emitió un anuncio acusando al encargado del almacén. Así, el verdadero culpable intentará echarle la culpa para librarse de sospechas.\nMientras esperas los resultados, investiga la reputación del encargado del almacén.",
+          TextMapId = "Description_10040307_01"
+        },
+        Description_10040308_01 = {
+          ContentES = "La situación da un giro inesperado: Carnot, a quien conociste en las Instalaciones de forja, defendió al encargado del almacén... pero reveló que sabía que la bomba había sido ensamblada, algo que un extraño no debería saber. Ahora Carnot es el principal sospechoso. Busca a Stéphane y pregúntale dónde está.",
+          TextMapId = "Description_10040308_01"
+        },
+        Description_10040309_01 = {
+          ContentES = "Carnot parece estar hablando con miembros de Los Abandonados. Ve a ver qué sucede.",
+          TextMapId = "Description_10040309_01"
+        },
+        Description_10040311_01 = {
+          ContentES = "Has capturado con éxito a miembros de Los Abandonados. Informa a Eisenbahn: ¡el caso de la explosión en la estación ha sido resuelto!",
+          TextMapId = "Description_10040311_01"
+        },
+        Description_10040312_01 = {
+          ContentES = "Outsider recuperó la libertad. Es momento de volver al objetivo principal e investigar al misterioso prisionero de La Grajilla.\nRegresa a buscar al supervisor militar de La Grajilla.",
+          TextMapId = "Description_10040312_01"
+        },
+        Description_10040313_01 = {
+          ContentES = "Mientras negociabas con el problemático encargado del almacén, Eisenbahn recibió un informe de sus subordinados y vino a revisar el progreso de la investigación. Habla con él.",
+          TextMapId = "Description_10040313_01"
+        },
+        Description_10040401_01 = {
+          ContentES = "Flora, quien hasta ahora no tenía ninguna relación con el Imperio, ahora nos ha pedido ayuda para escapar.\nPrepárate para abordar el tren y poner el plan en marcha.",
+          TextMapId = "Description_10040401_01"
+        },
+        Description_10040402_01 = {
+          ContentES = "La noche anterior, el equipo de Phoxcazador elaboró un plan detallado para rescatar a Flora. Antes de ponerlo en marcha, repasa los pasos.",
+          TextMapId = "Description_10040402_01"
+        },
+        Description_10040403_01 = {
+          ContentES = "Dirígete a la parte trasera del tren para subir al techo.",
+          TextMapId = "Description_10040403_01"
+        },
+        Description_10040405_01 = {
+          ContentES = "Aturde a los soldados de la Legión y prepárate para ayudar a Flora a escapar.",
+          TextMapId = "Description_10040405_01"
+        },
+        Description_10040406_01 = {
+          ContentES = "Has llegado a La Grajilla, pero aún hay soldados vigilando el techo. Elimínalos y prepárate para rescatar a Flora.",
+          TextMapId = "Description_10040406_01"
+        },
+        Description_10040407_01 = {
+          ContentES = "Junto con Flora, saltaron desde La Grajilla y usaron un gancho para caterrizar en la Aurora Express, pero \"Lata de Ratones\" se encontraron con pasajeros poco amistosos... por suerte, Stéphane aparece para {性别:ayudarlos|ayudarlas}.\nSigue a Stéphane al vagón común.",
+          TextMapId = "Description_10040407_01"
+        },
+        Description_10040408_01 = {
+          ContentES = "Has llegado al vagón común. Los pasajeros conversan animadamente; habla con ellos para aliviar el ambiente.",
+          TextMapId = "Description_10040408_01"
+        },
+        Description_10040410_01 = {
+          ContentES = "Stéphane sigue preocupado por Carnot, que también está en este tren. Ya que te ayudó antes en \"Lata de Ratones\", ahora es tu turno de ayudarlo. Habla con Flora sobre qué hacer.",
+          TextMapId = "Description_10040410_01"
+        },
+        Description_10040411_01 = {
+          ContentES = "Habla con Stéphane y prepárate para avanzar hacia la parte delantera del tren.",
+          TextMapId = "Description_10040411_01"
+        },
+        Description_10040413_01 = {
+          ContentES = "Para ayudar a Stéphane, comienzan a avanzar hacia la parte delantera del tren.",
+          TextMapId = "Description_10040413_01"
+        },
+        Description_10040414_01 = {
+          ContentES = "Para descubrir el objetivo de Los Abandonados, sigue avanzando hasta el vagón de los nobles.",
+          TextMapId = "Description_10040414_01"
+        },
+        Description_10040415_01 = {
+          ContentES = "¡Los sirvientes del vagón de servicio parecen estar tramando algo! Escóndete y escucha lo que dicen.",
+          TextMapId = "Description_10040415_01"
+        },
+        Description_10040416_01 = {
+          ContentES = [[
+Otra vez Los Abandonados. Otra vez bombas. Pero esta vez quieren destruir el tren; no puedes permitirlo.
+Encuentra herramientas e intenta desactivar la bomba.]],
+          TextMapId = "Description_10040416_01"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_10040418_01",
+    MaxKey = "Description_120103_5_1",
+    Loader = function()
+      return {
+        Description_10040418_01 = {
+          ContentES = "Has llegado al vagón de primera clase. Las miradas de los pasajeros son un obstáculo difícil de superar; debes disipar sus sospechas.\nAcércate al piano y demuestra que eres {性别:un|una} \"pianista\".",
+          TextMapId = "Description_10040418_01"
+        },
+        Description_10040419_01 = {
+          ContentES = "Los dos sirvientes disfrazados de miembros de Los Abandonados ya llegaron al vagón del jefe de tren. Acaba con ellos.",
+          TextMapId = "Description_10040419_01"
+        },
+        Description_10040420_01 = {
+          ContentES = "El conductor del tren ha muerto. Investiga si dejó alguna pista.",
+          TextMapId = "Description_10040420_01"
+        },
+        Description_10040421_01 = {
+          ContentES = "Antes de morir, el jefe de tren envió una señal de auxilio. Justo entonces se escucha un ruido; investiga qué sucede.",
+          TextMapId = "Description_10040421_01"
+        },
+        Description_10040422_01 = {
+          ContentES = "Aunque el plan de escape está por comenzar, la señorita Flora sigue concentrada en su pintura.\nPrepárale té y bocadillos.",
+          TextMapId = "Description_10040422_01"
+        },
+        Description_10040423_01 = {
+          ContentES = "El tren ha sido secuestrado. Katya, miembro de Los Abandonados, colocó bombas por todo el tren. Flora fue a negociar con Katya; aprovecha ese momento para desactivar las bombas.",
+          TextMapId = "Description_10040423_01"
+        },
+        Description_10040424_01 = {
+          ContentES = "¡Lleven a Flora lejos de la Grajilla y salten hacia la libertad!",
+          TextMapId = "Description_10040424_01"
+        },
+        Description_10040501_01 = {
+          ContentES = "Aunque logramos detener a Katya, la señal de auxilio que envió el conductor antes de morir atrajo a los dirigibles de la Legión, dispuesto a destruir el tren junto con Los Abandonados. Usa la torreta del tren para detenerlos.",
+          TextMapId = "Description_10040501_01"
+        },
+        Description_10040503_01 = {
+          ContentES = "Los cañones de los dirigibles han dejado de disparar.",
+          TextMapId = "Description_10040503_01"
+        },
+        Description_10040505_01 = {
+          ContentES = "Katya comenzó a controlar el cañón del tren para atacar al dirigible. Hay que detenerla.\nDestruye el cañón principal de la Aurora Express.",
+          TextMapId = "Description_10040505_01"
+        },
+        Description_10040506_01 = {
+          ContentES = "Katya fue derrotada y huyó, pero el tren no se detuvo; incluso entró en estado de sobrecarga. Hay que llegar a la locomotora y encontrar la forma de detenerlo.\nIntenta entrar a la cabina y frenar el tren.",
+          TextMapId = "Description_10040506_01"
+        },
+        Description_10040507_01 = {
+          ContentES = "¿Qué es este lugar...? ¿El Mar Nebuloso? Explora los alrededores.",
+          TextMapId = "Description_10040507_01"
+        },
         Description_110101_1 = {
-          ContentES = "Traum von Sandreich",
+          ContentES = "Sueño del Reino de las Arenas",
           TextMapId = "Description_110101_1"
         },
         Description_110101_2 = {
-          ContentES = "Sandreich verlassen",
+          ContentES = "Sal del Reino de las Arenas",
           TextMapId = "Description_110101_2"
         },
         Description_110102_1 = {
-          ContentES = "Erwachen",
+          ContentES = "Despertar",
           TextMapId = "Description_110102_1"
         },
         Description_110102_2 = {
-          ContentES = "Besiege die Filthoiden",
+          ContentES = "Derrota a los Filthoids",
           TextMapId = "Description_110102_2"
         },
         Description_110103_1 = {
-          ContentES = "Gehe zur Notfallstation",
+          ContentES = "Dirígete al puesto de ayuda de emergencia",
           TextMapId = "Description_110103_1"
         },
         Description_110103_2 = {
-          ContentES = "Kümmere dich um die Verletzten",
+          ContentES = "Revisa a los heridos",
           TextMapId = "Description_110103_2"
         },
         Description_110103_2_1 = {
-          ContentES = "Sprich mit Anita",
+          ContentES = "Habla con Anita",
           TextMapId = "Description_110103_2_1"
         },
         Description_110103_2_2 = {
-          ContentES = "Sprich mit Urien",
+          ContentES = "Habla con Urien",
           TextMapId = "Description_110103_2_2"
         },
         Description_110103_2_3 = {
-          ContentES = "Suche nach einem Erste-Hilfe-Kasten",
+          ContentES = "Busca un botiquín de primeros auxilios.",
           TextMapId = "Description_110103_2_3"
         },
         Description_110103_2_4 = {
-          ContentES = "Benutze die Transformatoren, um das Tor zu öffnen",
+          ContentES = "Usa los transformadores para abrir la puerta",
           TextMapId = "Description_110103_2_4"
         },
         Description_110103_2_5 = {
-          ContentES = "Durchsuche den Lagerraum nach Medikamenten",
+          ContentES = "Busca medicinas en el almacén",
           TextMapId = "Description_110103_2_5"
         },
         Description_110103_2_6 = {
-          ContentES = "Verlasse den Lagerraum",
+          ContentES = "Sal del almacén",
           TextMapId = "Description_110103_2_6"
         },
         Description_110103_3 = {
-          ContentES = "Bringe die Medikamente zu Daphne",
+          ContentES = "Entrega la medicina a Daphne",
           TextMapId = "Description_110103_3"
         },
         Description_110103_3_2 = {
-          ContentES = "Besiege das Mitglied der Verlassenen",
+          ContentES = "Derrota al miembro de los Abandonados",
           TextMapId = "Description_110103_3_2"
         },
         Description_110103_3_sp = {
-          ContentES = "Verteidige das Tor und wehr die Filthoiden ab",
+          ContentES = "Defiende la puerta y repele a los Filthoids",
           TextMapId = "Description_110103_3_sp"
         },
         Description_110103_4 = {
-          ContentES = "Sprich mit Daphne",
+          ContentES = "Habla con Daphne",
           TextMapId = "Description_110103_4"
         },
         Description_110103_5 = {
-          ContentES = "Wehre die Filthoiden ab",
+          ContentES = "Repele a los Filthoids",
           TextMapId = "Description_110103_5"
         },
         Description_110104_1 = {
-          ContentES = "Dringe tiefer in die Festung vor",
+          ContentES = "Avanza más adentro de la Fortaleza",
           TextMapId = "Description_110104_1"
         },
         Description_110104_2 = {
-          ContentES = "Begib dich zum Maschinenraum",
+          ContentES = "Dirígete a la Sala de máquinas",
           TextMapId = "Description_110104_2"
         },
         Description_110104_3 = {
-          ContentES = "Begib dich zum Maschinenraum",
+          ContentES = "Dirígete a la Sala de máquinas",
           TextMapId = "Description_110104_3"
         },
         Description_110104_4 = {
-          ContentES = "Untersuche das Bedienfeld",
+          ContentES = "Examina la Consola de control",
           TextMapId = "Description_110104_4"
         },
         Description_110105_1 = {
-          ContentES = "Betritt den Maschinenraum",
+          ContentES = "Entra en la Sala de máquinas",
           TextMapId = "Description_110105_1"
         },
         Description_110105_2 = {
-          ContentES = "Deaktiviere die Mechanismen",
+          ContentES = "Desactiva los mecanismos",
           TextMapId = "Description_110105_2"
         },
         Description_110105_2_1 = {
-          ContentES = "Schalte aktive Phoxynamo-Räder oder Transformatoren ab: 1/3",
+          ContentES = "Apaga las Ruedas Phoxynamo o transformadores activos: 1/3",
           TextMapId = "Description_110105_2_1"
         },
         Description_110105_2_2 = {
-          ContentES = "Schalte aktive Phoxynamo-Räder oder Transformatoren ab: 2/3",
+          ContentES = "Apaga las Ruedas Phoxynamo o transformadores activos: 2/3",
           TextMapId = "Description_110105_2_2"
         },
         Description_110105_2_3 = {
-          ContentES = "Schalte aktive Phoxynamo-Räder oder Transformatoren ab: 3/3",
+          ContentES = "Apaga las Ruedas Phoxynamo o transformadores activos: 3/3",
           TextMapId = "Description_110105_2_3"
         },
         Description_110105_2_4 = {
-          ContentES = "Untersuche den östlichen Kesselraum",
+          ContentES = "Investiga la sala de calderas oriental",
           TextMapId = "Description_110105_2_4"
         },
         Description_110105_2_5 = {
-          ContentES = "Untersuche die nördlichen Transformatoren",
+          ContentES = "Investiga los transformadores del norte",
           TextMapId = "Description_110105_2_5"
         },
         Description_110105_2_6 = {
-          ContentES = "Untersuche die südöstliche Steuerkonsole",
+          ContentES = "Investiga la Consola de control principal del sureste",
           TextMapId = "Description_110105_2_6"
         },
         Description_110105_3 = {
-          ContentES = "Untersuche die Phoxichor-Tanks",
+          ContentES = "Examina los tanques de Phoxichor",
           TextMapId = "Description_110105_3"
         },
         Description_110105_4 = {
-          ContentES = "Schalte das Tor zum Untergeschoss des Maschinenraums frei",
+          ContentES = "Desbloquea la puerta al piso inferior de la Sala de máquinas",
           TextMapId = "Description_110105_4"
         },
         Description_110105_5 = {
-          ContentES = "(Optional) Suche nach Vic",
+          ContentES = "(Opcional) Busca a Vic",
           TextMapId = "Description_110105_5"
         },
         Description_110106_1 = {
-          ContentES = "Begib dich ins Untergeschoss des Maschinenraums",
+          ContentES = "Avanza al nivel inferior de la Sala de máquinas",
           TextMapId = "Description_110106_1"
         },
         Description_110106_1_1 = {
-          ContentES = "Aktiviere das Ersatz-Phoxynamo-Rad 1",
+          ContentES = "Activa la Rueda Phoxynamo de respaldo #1",
           TextMapId = "Description_110106_1_1"
         },
         Description_110106_1_2 = {
-          ContentES = "Finde und deaktiviere das aktive Phoxynamo-Rad",
+          ContentES = "Localiza y apaga la Rueda Phoxynamo activa",
           TextMapId = "Description_110106_1_2"
         },
         Description_110106_1_3 = {
-          ContentES = "Aktiviere das Ersatz-Phoxynamo-Rad 2",
+          ContentES = "Activa la Rueda Phoxynamo de respaldo #2",
           TextMapId = "Description_110106_1_3"
         },
         Description_110106_1_4 = {
-          ContentES = "Aktiviere das Ersatz-Phoxynamo-Rad 3",
+          ContentES = "Activa la Rueda Phoxynamo de respaldo #3",
           TextMapId = "Description_110106_1_4"
         },
         Description_110106_1_5 = {
-          ContentES = "Warte, bis Avar die Steuerung des Ersatz-Phoxynamo-Rads freischaltet",
+          ContentES = "Espera a que Avar desbloquee los controles de la Rueda Phoxynamo de respaldo",
           TextMapId = "Description_110106_1_5"
         },
         Description_110106_1_6 = {
-          ContentES = "Aktiviere das Ersatz-Phoxynamo-Rad 4",
+          ContentES = "Activa la Rueda Phoxynamo de respaldo #4",
           TextMapId = "Description_110106_1_6"
         },
         Description_110106_1_7 = {
-          ContentES = "Warte, bis Avar die Steuerung des Ersatz-Phoxynamo-Rads freischaltet",
+          ContentES = "Espera a que Avar desbloquee los controles de la Rueda Phoxynamo de respaldo",
           TextMapId = "Description_110106_1_7"
         },
         Description_110106_1_8 = {
-          ContentES = "Warte, bis Avar die Steuerung des Ersatz-Phoxynamo-Rads freischaltet",
+          ContentES = "Espera a que Avar desbloquee los controles de la Rueda Phoxynamo de respaldo",
           TextMapId = "Description_110106_1_8"
         },
         Description_110106_1_9 = {
-          ContentES = "Warte, bis Avar die Steuerung des Ersatz-Phoxynamo-Rads freischaltet",
+          ContentES = "Espera a que Avar desbloquee los controles de la Rueda Phoxynamo de respaldo",
           TextMapId = "Description_110106_1_9"
         },
         Description_110106_2 = {
-          ContentES = "Fliehe aus dem Maschinenraum",
+          ContentES = "Escapa de la Sala de máquinas",
           TextMapId = "Description_110106_2"
         },
         Description_110106_3 = {
-          ContentES = "Rette die festsitzenden Kameraden in der Nähe der Bahngleise",
+          ContentES = "Rescata a los compañeros de escuadrón varados cerca de las vías",
           TextMapId = "Description_110106_3"
         },
         Description_110106_4 = {
-          ContentES = "Kümmere dich um die Filthoiden",
+          ContentES = "Enfréntate a los Filthoids",
           TextMapId = "Description_110106_4"
         },
         Description_110106_5 = {
-          ContentES = "Sprich mit Simon",
+          ContentES = "Habla con Simon",
           TextMapId = "Description_110106_5"
         },
         Description_110107_1 = {
-          ContentES = "Begib dich zu den Bahngleisen",
+          ContentES = "Dirígete a las vías",
           TextMapId = "Description_110107_1"
         },
         Description_110107_2 = {
-          ContentES = "Besiege die Filthoiden",
+          ContentES = "Derrota a los Filthoids",
           TextMapId = "Description_110107_2"
         },
         Description_110107_3 = {
-          ContentES = "Geh weiter bis zu den Bahngleisen",
+          ContentES = "Sigue avanzando hacia las vías",
           TextMapId = "Description_110107_3"
         },
         Description_110108_1 = {
-          ContentES = "Weiter zu den Bahngleisen",
+          ContentES = "Sigue hacia las vías",
           TextMapId = "Description_110108_1"
         },
         Description_110108_2 = {
-          ContentES = "Besiege die Filthoiden",
+          ContentES = "Derrota a los Filthoids",
           TextMapId = "Description_110108_2"
         },
         Description_110108_3 = {
-          ContentES = "Triff die gefangenen Kameraden",
+          ContentES = "Reúnete con los compañeros atrapados",
           TextMapId = "Description_110108_3"
         },
         Description_110108_4 = {
-          ContentES = "Geh durch die Kanalisation in Richtung Geschützturm",
+          ContentES = "Avanza por las alcantarillas hacia la torreta",
           TextMapId = "Description_110108_4"
         },
         Description_110108_5 = {
-          ContentES = "Folge den Flüchtlingen und verlasse dieses Gebiet",
+          ContentES = "Sigue a los refugiados y abandona esta zona",
           TextMapId = "Description_110108_5"
         },
         Description_110108_6 = {
-          ContentES = "Triff dich mit Avar",
+          ContentES = "Reúnete con Avar",
           TextMapId = "Description_110108_6"
         },
         Description_110109_1 = {
-          ContentES = "Aktiviere die Phoxynamo-Räder oder Transformatoren",
+          ContentES = "Activa las Ruedas Phoxynamo o transformadores.",
           TextMapId = "Description_110109_1"
         },
         Description_110109_1_1 = {
-          ContentES = "Untersuche die Transformatoren",
+          ContentES = "Inspecciona los transformadores",
           TextMapId = "Description_110109_1_1"
         },
         Description_110109_1_2 = {
-          ContentES = "Aktiviere die Phoxynamo-Räder im nördlichen Raum",
+          ContentES = "Activa las Ruedas Phoxynamo en la sala norte",
           TextMapId = "Description_110109_1_2"
         },
         Description_110109_1_3 = {
-          ContentES = "Aktiviere den südwestlichen Phoxynamo-Rad-Cluster",
+          ContentES = "Activa el grupo de Ruedas Phoxynamo del suroeste",
           TextMapId = "Description_110109_1_3"
         },
         Description_110109_1_4 = {
-          ContentES = "Kehre zum Geschützturm zurück",
+          ContentES = "Regresa a la torreta",
           TextMapId = "Description_110109_1_4"
         },
         Description_110109_1_5 = {
-          ContentES = "Stelle die Stromversorgung des simulierten Schlachtfelds wieder her",
+          ContentES = "Restaura la energía al campo de batalla simulado",
           TextMapId = "Description_110109_1_5"
         },
         Description_110109_1_6 = {
-          ContentES = "Starte das simulierte Schlachtfeld neu",
+          ContentES = "Reinicia el campo de batalla simulado",
           TextMapId = "Description_110109_1_6"
         },
         Description_110109_1_7 = {
-          ContentES = "Melde dich bei Avar",
+          ContentES = "Informa a Avar",
           TextMapId = "Description_110109_1_7"
         },
         Description_110109_2 = {
-          ContentES = "Beschütze den Geschützturm",
+          ContentES = "Protege la torreta",
           TextMapId = "Description_110109_2"
         },
         Description_110109_2_1 = {
-          ContentES = "Bewege den Geschützturm",
+          ContentES = "Reubica la torreta",
           TextMapId = "Description_110109_2_1"
         },
         Description_110110_1_1 = {
-          ContentES = "Aktiviere den Geschützturm",
+          ContentES = "Activa la torreta",
           TextMapId = "Description_110110_1_1"
         },
         Description_110110_1_2 = {
-          ContentES = "Eliminiere die ankommenden Filthoiden und beschütze den Geschützturm",
+          ContentES = "Elimina a los Filthoids entrantes y protege la torreta",
           TextMapId = "Description_110110_1_2"
         },
         Description_110110_1_3 = {
-          ContentES = "Nutze Hochexplosivgeschosse, um die Seitentür zum zentralen Kontrollraum aufzubrechen",
+          ContentES = "Usa Proyectiles de Alta Explosividad para abrir la puerta lateral de la sala de control central",
           TextMapId = "Description_110110_1_3"
         },
         Description_110110_1_4 = {
-          ContentES = "Verlasse den Geschützturm und überprüfe die Öffnung",
+          ContentES = "Sal de la torreta y revisa la brecha",
           TextMapId = "Description_110110_1_4"
         },
         Description_110110_2 = {
-          ContentES = "Begib dich zusammen mit Avar zum zentralen Kontrollraum",
+          ContentES = "Dirígete a la Sala de control central junto a Avar",
           TextMapId = "Description_110110_2"
         },
         Description_110110_3 = {
-          ContentES = "Sprich mit Avar",
+          ContentES = "Habla con Avar",
           TextMapId = "Description_110110_3"
         },
         Description_110110_3_1 = {
-          ContentES = "Suche nach Avars verlorenem Foto",
+          ContentES = "Busca la fotografía perdida de Avar",
           TextMapId = "Description_110110_3_1"
         },
         Description_110110_3_2 = {
-          ContentES = "Befrage Katya",
+          ContentES = "Interroga a Katya",
           TextMapId = "Description_110110_3_2"
         },
         Description_110110_4 = {
-          ContentES = "Mache eine kurze Pause",
+          ContentES = "Tómate un breve descanso",
           TextMapId = "Description_110110_4"
         },
         Description_110110_5 = {
-          ContentES = "Sprich mit Avar",
+          ContentES = "Habla con Avar",
           TextMapId = "Description_110110_5"
         },
         Description_110110_6 = {
-          ContentES = "Begib dich zum zentralen Kontrollraum",
+          ContentES = "Dirígete a la Sala de control central",
           TextMapId = "Description_110110_6"
         },
         Description_110110_7 = {
-          ContentES = "Besiege den Kriegsveteran",
+          ContentES = "Derrota al Maestro de Batalla",
           TextMapId = "Description_110110_7"
         },
         Description_110110_8 = {
-          ContentES = "Begib dich zum zentralen Kontrollraum",
+          ContentES = "Dirígete a la Sala de control central",
           TextMapId = "Description_110110_8"
         },
         Description_110110_9 = {
-          ContentES = "Gib Avar das Foto zurück",
+          ContentES = "Devuelve la foto a Avar",
           TextMapId = "Description_110110_9"
         },
         Description_110111_1 = {
-          ContentES = "Untersuche den zentralen Kontrollraum",
+          ContentES = "Investiga la sala de control central",
           TextMapId = "Description_110111_1"
         },
         Description_110111_10 = {
-          ContentES = "Versuche erneut, den Weg zu der Kanalisation freizuschalten",
+          ContentES = "Intenta de nuevo desbloquear el camino hacia las alcantarillas",
           TextMapId = "Description_110111_10"
         },
         Description_110111_11 = {
-          ContentES = "Besiege die herannahenden Soldaten von dem Narwal",
+          ContentES = "Derrota a los soldados Narval que se aproximan",
           TextMapId = "Description_110111_11"
         },
         Description_110111_12 = {
-          ContentES = "Benutze die Steuerkonsole, den Weg zu der Kanalisation freizuschalten",
+          ContentES = "Usa la Consola de control para desbloquear el camino hacia las alcantarillas",
           TextMapId = "Description_110111_12"
         },
         Description_110111_13 = {
-          ContentES = "Sieh nach deinen Kameraden",
+          ContentES = "Revisa a tus compañeros",
           TextMapId = "Description_110111_13"
         },
+        Description_110111_2 = {
+          ContentES = "Traición",
+          TextMapId = "Description_110111_2"
+        },
         Description_110111_3 = {
-          ContentES = "Untersuche die Umgebung",
+          ContentES = "Investiga los alrededores",
           TextMapId = "Description_110111_3"
         },
         Description_110111_4 = {
-          ContentES = "Verlasse den zentralen Kontrollraum",
+          ContentES = "Sal de la sala de control central",
           TextMapId = "Description_110111_4"
         },
         Description_110111_5 = {
-          ContentES = "Sprich mit Daphne",
+          ContentES = "Habla con Daphne",
           TextMapId = "Description_110111_5"
         },
         Description_110111_6 = {
-          ContentES = "Entfliehe aus der Festung durch die Kanalisation",
+          ContentES = "Escapa de la Fortaleza por las alcantarillas",
           TextMapId = "Description_110111_6"
         },
         Description_110111_6_1 = {
-          ContentES = "Besiege die verfolgenden Legionsoffiziere",
+          ContentES = "Derrota a los oficiales de la Legión que te persiguen",
           TextMapId = "Description_110111_6_1"
         },
         Description_110111_7 = {
-          ContentES = "Hol den Schlüssel zurück",
+          ContentES = "Recupera la llave",
           TextMapId = "Description_110111_7"
         },
         Description_110111_8 = {
-          ContentES = "Versuche, den Verteidigungsmechanismus zu deaktivieren",
+          ContentES = "Intenta desactivar el mecanismo de defensa",
           TextMapId = "Description_110111_8"
         },
         Description_110111_9 = {
-          ContentES = "Benutze die Steuerkonsole, um das Tor zu öffnen",
+          ContentES = "Usa la Consola de control para abrir la puerta",
           TextMapId = "Description_110111_9"
         },
         Description_110112_1 = {
-          ContentES = "Finde einen Weg aus der Festung",
+          ContentES = "Encuentra una salida de la Fortaleza",
           TextMapId = "Description_110112_1"
         },
         Description_110112_2 = {
-          ContentES = "Beschütze den Entwässerungsmechanismus und öffne die Ventile",
+          ContentES = "Protege el mecanismo de drenaje y abre las válvulas",
           TextMapId = "Description_110112_2"
         },
         Description_110112_3 = {
-          ContentES = "Aktiviere das Entwässerungssystem",
+          ContentES = "Activa el sistema de drenaje",
           TextMapId = "Description_110112_3"
         },
         Description_110113_1 = {
-          ContentES = "Der Verhörraum",
+          ContentES = "Sala de interrogatorios",
           TextMapId = "Description_110113_1"
         },
         Description_110113_2 = {
-          ContentES = "Das Verhör durch die Wächterin",
+          ContentES = "La Interrogación de la Carcelera",
           TextMapId = "Description_110113_2"
         },
         Description_110113_2_1 = {
-          ContentES = "Sprich mit „Leon“",
+          ContentES = "Habla con \"Leon\"",
           TextMapId = "Description_110113_2_1"
         },
         Description_110113_2_10 = {
-          ContentES = "Besiege das, was deinen Geist trübt",
+          ContentES = "Derrota lo que nubla tu mente",
           TextMapId = "Description_110113_2_10"
         },
         Description_110113_2_11 = {
-          ContentES = "Bediene die Steuerkonsole",
+          ContentES = "Opera la Consola de control",
           TextMapId = "Description_110113_2_11"
         },
         Description_110113_2_12 = {
-          ContentES = "Sieh dir den seltsamen Stuhl an",
+          ContentES = "Examina la silla extraña",
           TextMapId = "Description_110113_2_12"
         },
         Description_110113_2_13 = {
-          ContentES = "Untersuche den seltsamen Raum",
+          ContentES = "Investiga la sala extraña",
           TextMapId = "Description_110113_2_13"
         },
         Description_110113_2_2 = {
-          ContentES = "Sprich mit „Marco“",
+          ContentES = "Habla con \"Marco\"",
           TextMapId = "Description_110113_2_2"
         },
         Description_110113_2_3 = {
-          ContentES = "Sprich mit „Daphne“",
+          ContentES = "Habla con \"Daphne\"",
           TextMapId = "Description_110113_2_3"
         },
         Description_110113_2_4 = {
-          ContentES = "Sprich mit „Avar“",
+          ContentES = "Habla con \"Avar\"",
           TextMapId = "Description_110113_2_4"
         },
         Description_110113_2_5 = {
-          ContentES = "Schalte die Steuerkonsole ein",
+          ContentES = "Activa la Consola de control",
           TextMapId = "Description_110113_2_5"
         },
         Description_110113_2_6 = {
-          ContentES = "Nach vorne bewegen",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_110113_2_6"
         },
         Description_110113_2_7 = {
-          ContentES = "Verlasse den Raum",
+          ContentES = "Sal de la sala",
           TextMapId = "Description_110113_2_7"
         },
         Description_110113_2_8 = {
-          ContentES = "Untersuche die ungewöhnliche Steuerkonsole",
+          ContentES = "Inspecciona la Consola de control inusual",
           TextMapId = "Description_110113_2_8"
         },
         Description_110113_2_9 = {
-          ContentES = "Triff deine Wahl",
+          ContentES = "Toma tu decisión",
           TextMapId = "Description_110113_2_9"
         },
         Description_110113_3 = {
-          ContentES = "„Inferno“",
+          ContentES = "\"Infierno\"",
           TextMapId = "Description_110113_3"
         },
         Description_110113_4 = {
-          ContentES = "Erwarte das Urteil der Wächterin",
+          ContentES = "Espera el juicio de la Carcelera",
           TextMapId = "Description_110113_4"
         },
         Description_110113_5 = {
-          ContentES = "Warte, bis die Untersuchung abgeschlossen ist",
+          ContentES = "Espera a que termine la investigación",
           TextMapId = "Description_110113_5"
         },
         Description_110113_6 = {
-          ContentES = "Lies die Anmerkungen der Wächterin",
+          ContentES = "Lee las notas de la Carcelera",
           TextMapId = "Description_110113_6"
         },
         Description_12000103_1 = {
@@ -9519,15 +10209,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_120102_10 = {
           ContentES = "Atiende al herido Yuming",
           TextMapId = "Description_120102_10"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_120102_11",
-    MaxKey = "Description_120203_7_3",
-    Loader = function()
-      return {
+        },
         Description_120102_11 = {
           ContentES = "Sal de la Caverna de Mareas",
           TextMapId = "Description_120102_11"
@@ -9647,7 +10329,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_120103_5_1 = {
           ContentES = "Sal del área",
           TextMapId = "Description_120103_5_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_120103_6",
+    MaxKey = "Description_120204_maze6",
+    Loader = function()
+      return {
         Description_120103_6 = {
           ContentES = "Regresa a revisar la chica",
           TextMapId = "Description_120103_6"
@@ -9709,7 +10399,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120104_10"
         },
         Description_120104_10_1 = {
-          ContentES = "Zerstöre die drei Verdorbenen Knospen in der Reihenfolge von oben nach unten",
+          ContentES = "Destruye los tres brotes en orden, de arriba hacia abajo.",
           TextMapId = "Description_120104_10_1"
         },
         Description_120104_11 = {
@@ -9749,7 +10439,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120104_3"
         },
         Description_120104_3_01 = {
-          ContentES = "Überprüfe die zweite Etage",
+          ContentES = "Ve al segundo piso",
           TextMapId = "Description_120104_3_01"
         },
         Description_120104_4 = {
@@ -9769,11 +10459,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120104_7"
         },
         Description_120104_7_1 = {
-          ContentES = "Zerstöre die Felsen, die den Weg versperren",
+          ContentES = "Rompe las rocas que bloquean el paso",
           TextMapId = "Description_120104_7_1"
         },
         Description_120104_7_2 = {
-          ContentES = "Zerstöre die drei Verdorbenen Knospen, um das Gebiet zu reinigen",
+          ContentES = "Destruye tres brotes contaminados para purificar la zona",
           TextMapId = "Description_120104_7_2"
         },
         Description_120104_8 = {
@@ -10073,11 +10763,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120114_9_1"
         },
         Description_120201_1 = {
-          ContentES = "Betritt die dunkle Kammer",
+          ContentES = "Ve a Haojing a través del registro de misiones",
           TextMapId = "Description_120201_1"
         },
         Description_120201_10 = {
-          ContentES = "Geh zur Halle des Handwerks, um den Räucherofen abzuholen",
+          ContentES = "Encuentra a un trabajador de la Sala de la Artesanía",
           TextMapId = "Description_120201_10"
         },
         Description_120201_10_1 = {
@@ -10093,7 +10783,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120201_10_3"
         },
         Description_120201_11 = {
-          ContentES = "Hole den Räucherofen ab",
+          ContentES = "Recoge el incensario",
           TextMapId = "Description_120201_11"
         },
         Description_120201_11_2 = {
@@ -10101,11 +10791,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120201_11_2"
         },
         Description_120201_12 = {
-          ContentES = "Überprüfe das Schwarze Brett und sieh nach, was los ist.",
+          ContentES = "Dirígete a la plaza frente a la Sala de Adjudicación",
           TextMapId = "Description_120201_12"
         },
         Description_120201_2 = {
-          ContentES = "Betritt Huaxu – Phase Ⅱ",
+          ContentES = "Viaja a Haojing",
           TextMapId = "Description_120201_2"
         },
         Description_120201_22 = {
@@ -10141,27 +10831,27 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120201_25"
         },
         Description_120201_3 = {
-          ContentES = "Ruh dich aus",
+          ContentES = "Busca un lugar para descansar",
           TextMapId = "Description_120201_3"
         },
         Description_120201_4 = {
-          ContentES = "Kaufe Medizin",
+          ContentES = "Compra medicina en la Farmacia Zesheng",
           TextMapId = "Description_120201_4"
         },
         Description_120201_5 = {
-          ContentES = "Bring Snow die Medizin zurück",
+          ContentES = "Vuelve con Snow",
           TextMapId = "Description_120201_5"
         },
         Description_120201_6 = {
-          ContentES = "Passiere auf dem Weg zur Halle der Quellen die Halle des Gerichts",
+          ContentES = "Ve al Ministerio de la Fortuna",
           TextMapId = "Description_120201_6"
         },
         Description_120201_7 = {
-          ContentES = "Begib dich zur Halle der Quellen",
+          ContentES = "Ve al Ministerio de la Fortuna",
           TextMapId = "Description_120201_7"
         },
         Description_120201_8 = {
-          ContentES = "Liefere die Waren ab",
+          ContentES = "Encuentra al encargado del puerto",
           TextMapId = "Description_120201_8"
         },
         Description_120201_8_1 = {
@@ -10169,7 +10859,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_120201_8_1"
         },
         Description_120201_9 = {
-          ContentES = "Begib dich zur Halle des Weihrauchs",
+          ContentES = "Dirígete a la Sala del Incienso",
           TextMapId = "Description_120201_9"
         },
         Description_120202_1 = {
@@ -10327,15 +11017,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_120203_7_3 = {
           ContentES = "Busca al contacto de los Picos Exteriores",
           TextMapId = "Description_120203_7_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_120203_7_4",
-    MaxKey = "Description_200207_3",
-    Loader = function()
-      return {
+        },
         Description_120203_7_4 = {
           ContentES = "Repele a los perseguidores",
           TextMapId = "Description_120203_7_4"
@@ -10455,7 +11137,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_120204_maze6 = {
           ContentES = "Busca el camino hacia la torre",
           TextMapId = "Description_120204_maze6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_120204_maze6_1",
+    MaxKey = "Description_200212_5",
+    Loader = function()
+      return {
         Description_120204_maze6_1 = {
           ContentES = "Repele a los guardias",
           TextMapId = "Description_120204_maze6_1"
@@ -11135,15 +11825,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_200207_3 = {
           ContentES = "Encuentra a la anciana que mencionó Emma",
           TextMapId = "Description_200207_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_200207_4",
-    MaxKey = "Description_200310_3",
-    Loader = function()
-      return {
+        },
         Description_200207_4 = {
           ContentES = "Habla con la anciana",
           TextMapId = "Description_200207_4"
@@ -11263,7 +11945,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_200212_5 = {
           ContentES = "Habla con Larry",
           TextMapId = "Description_200212_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_200212_6",
+    MaxKey = "Description_20031704_01",
+    Loader = function()
+      return {
         Description_200212_6 = {
           ContentES = "Dirígete a Lago Glacial para investigar el origen del Phoxene ensangrentado",
           TextMapId = "Description_200212_6"
@@ -11769,43 +12459,43 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_200303_7"
         },
         Description_200304_1 = {
-          ContentES = "Wo der Osmanthus blühte",
+          ContentES = "Donde floreció el osmanto",
           TextMapId = "Description_200304_1"
         },
         Description_200304_10 = {
-          ContentES = "Sprich mit Yuming",
+          ContentES = "Habla con Yuming",
           TextMapId = "Description_200304_10"
         },
         Description_200304_2 = {
-          ContentES = "Gehe zum Osmanthus-Kuchenstand",
+          ContentES = "Ve a la tienda de pasteles de osmanto",
           TextMapId = "Description_200304_2"
         },
         Description_200304_3 = {
-          ContentES = "Sprich mit Li Huan",
+          ContentES = "Habla con Li Huan",
           TextMapId = "Description_200304_3"
         },
         Description_200304_4 = {
-          ContentES = "Sieh nach dem alten Mann",
+          ContentES = "Asegurade que Li, el pastelero de osmanto esté sano y salvo",
           TextMapId = "Description_200304_4"
         },
         Description_200304_5 = {
-          ContentES = "Vertreibe die Zobel-Bi'an",
+          ContentES = "Repele al Bi'an Sombrío",
           TextMapId = "Description_200304_5"
         },
         Description_200304_6 = {
-          ContentES = "Sprich mit dem alten Mann",
+          ContentES = "Habla con el anciano",
           TextMapId = "Description_200304_6"
         },
         Description_200304_7 = {
-          ContentES = "Mache einen Spaziergang mit dem alten Mann",
+          ContentES = "Pasea con el anciano",
           TextMapId = "Description_200304_7"
         },
         Description_200304_8 = {
-          ContentES = "Vertreibe die Zobel-Bi'an",
+          ContentES = "Repele al Bi'an Sombrío",
           TextMapId = "Description_200304_8"
         },
         Description_200304_9 = {
-          ContentES = "Sprich mit Li",
+          ContentES = "Habla con Li",
           TextMapId = "Description_200304_9"
         },
         Description_200305_1 = {
@@ -11943,15 +12633,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_200310_3 = {
           ContentES = "Repele a los Filthoids",
           TextMapId = "Description_200310_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_200310_4",
-    MaxKey = "Description_Nai03_01_02",
-    Loader = function()
-      return {
+        },
         Description_200310_4 = {
           ContentES = "Habla con el hombre",
           TextMapId = "Description_200310_4"
@@ -12071,7 +12753,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Description_20031704_01 = {
           ContentES = "Dirígete a la Aldea Jiaolan",
           TextMapId = "Description_20031704_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Description_20031704_02",
+    MaxKey = "DropTypeText_Fixed",
+    Loader = function()
+      return {
         Description_20031704_02 = {
           ContentES = "Pregunta al hombre cercano",
           TextMapId = "Description_20031704_02"
@@ -12293,31 +12983,31 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_200403_6"
         },
         Description_400111_1 = {
-          ContentES = "Begib dich zur Asphodel",
+          ContentES = "Dirígete a Los Asfódelos",
           TextMapId = "Description_400111_1"
         },
         Description_400111_2 = {
-          ContentES = "Gehe zur Raststätte",
+          ContentES = "Dirígete al Santuario",
           TextMapId = "Description_400111_2"
         },
         Description_400111_3 = {
-          ContentES = "Gehe zum Silberfrieden-Platz",
+          ContentES = "Dirígete a la Plaza de la Paz Plateada",
           TextMapId = "Description_400111_3"
         },
         Description_400111_4 = {
-          ContentES = "Gehe zum Klagenden See",
+          ContentES = "Dirígete a la Orilla del Lago Lamentoso",
           TextMapId = "Description_400111_4"
         },
         Description_400111_5 = {
-          ContentES = "Hilf den Kindern in Gefahr",
+          ContentES = "Ayuda a los niños en apuros",
           TextMapId = "Description_400111_5"
         },
         Description_400111_6 = {
-          ContentES = "Zurück zum Silberfrieden-Platz",
+          ContentES = "Regresa a la Plaza de la Paz Plateada",
           TextMapId = "Description_400111_6"
         },
         Description_400111_7 = {
-          ContentES = "Gehe zum Galea-Theater",
+          ContentES = "Ve al Teatro Galea",
           TextMapId = "Description_400111_7"
         },
         Description_400121_1 = {
@@ -12565,99 +13255,99 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_Batt03_03_01"
         },
         Description_Nai01_01_00 = {
-          ContentES = "Hä??",
+          ContentES = "¿¿¿???",
           TextMapId = "Description_Nai01_01_00"
         },
         Description_Nai01_01_01 = {
-          ContentES = "Folge Fushus Anweisungen und schreite voran",
+          ContentES = "Avanza siguiendo las indicaciones de Fushu",
           TextMapId = "Description_Nai01_01_01"
         },
         Description_Nai01_01_02 = {
-          ContentES = "Gehe zur Laternenblüte",
+          ContentES = "Acércate a la Flor-linterna",
           TextMapId = "Description_Nai01_01_02"
         },
         Description_Nai01_01_03 = {
-          ContentES = "Bewege dich weiter vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai01_01_03"
         },
         Description_Nai01_01_04 = {
-          ContentES = "Wehre die Filthoiden unter dem Schutz der Laternenblüte ab",
+          ContentES = "Repele a los Filthoids bajo la protección de la Flor-linterna",
           TextMapId = "Description_Nai01_01_04"
         },
         Description_Nai01_01_04_01 = {
-          ContentES = "Gehe zur Laternenblüte",
+          ContentES = "Acércate a la Flor-linterna",
           TextMapId = "Description_Nai01_01_04_01"
         },
         Description_Nai01_01_05 = {
-          ContentES = "Bewege dich weiter vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai01_01_05"
         },
         Description_Nai01_01_06 = {
-          ContentES = "Gehe auf die vertraute Gestalt zu",
+          ContentES = "Acércate a la silueta familiar",
           TextMapId = "Description_Nai01_01_06"
         },
         Description_Nai01_01_07 = {
-          ContentES = "Läute das Äolische Klangspiel",
+          ContentES = "Haz resonar el Carillón de los Vientos",
           TextMapId = "Description_Nai01_01_07"
         },
         Description_Nai01_02_00 = {
-          ContentES = "Bewege dich weiter vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai01_02_00"
         },
         Description_Nai01_02_01 = {
-          ContentES = "Nutze die Laternenblüte, um den Fluss des Vergessens zu überqueren",
+          ContentES = "Usa la Flor-linterna para cruzar el Río del Olvido",
           TextMapId = "Description_Nai01_02_01"
         },
         Description_Nai01_02_02 = {
-          ContentES = "Gehe zur Laternenblüte",
+          ContentES = "Acércate a la Flor-linterna",
           TextMapId = "Description_Nai01_02_02"
         },
         Description_Nai01_02_03 = {
-          ContentES = "Wehre die Filthoiden unter dem Schutz der Laternenblüte ab",
+          ContentES = "Repele a los Filthoids bajo la protección de la Flor-linterna",
           TextMapId = "Description_Nai01_02_03"
         },
         Description_Nai01_02_04 = {
-          ContentES = "Bewege dich weiter vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai01_02_04"
         },
         Description_Nai01_02_05 = {
-          ContentES = "Gehe auf die vertraute Gestalt zu",
+          ContentES = "Acércate a la silueta familiar",
           TextMapId = "Description_Nai01_02_05"
         },
         Description_Nai01_02_06 = {
-          ContentES = "Läute das Äolische Klangspiel",
+          ContentES = "Haz resonar el Carillón de los Vientos",
           TextMapId = "Description_Nai01_02_06"
         },
         Description_Nai01_03_00 = {
-          ContentES = "Bewege dich weiter vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai01_03_00"
         },
         Description_Nai01_03_01 = {
-          ContentES = "Steuere das Kanu",
+          ContentES = "Maniobra la embarcación",
           TextMapId = "Description_Nai01_03_01"
         },
         Description_Nai01_03_02 = {
-          ContentES = "Setze die Fahrt im Kanu fort",
+          ContentES = "Continúa a bordo de la embarcación",
           TextMapId = "Description_Nai01_03_02"
         },
         Description_Nai01_03_03 = {
-          ContentES = "Steuere das Kanu",
+          ContentES = "Maniobra la embarcación",
           TextMapId = "Description_Nai01_03_03"
         },
         Description_Nai01_03_04 = {
-          ContentES = "Setze die Fahrt im Kanu fort",
+          ContentES = "Continúa a bordo de la embarcación",
           TextMapId = "Description_Nai01_03_04"
         },
         Description_Nai01_03_05 = {
-          ContentES = "Steuere das Kanu",
+          ContentES = "Maniobra la embarcación",
           TextMapId = "Description_Nai01_03_05"
         },
         Description_Nai01_03_06 = {
-          ContentES = "Setze die Fahrt im Kanu fort",
+          ContentES = "Continúa a bordo de la embarcación",
           TextMapId = "Description_Nai01_03_06"
         },
         Description_Nai01_04_00 = {
-          ContentES = "Verlasse den Vergessensspalt",
+          ContentES = "Sal de la Grieta del Olvido",
           TextMapId = "Description_Nai01_04_00"
         },
         Description_Nai02_01_01 = {
@@ -12741,111 +13431,103 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Description_Nai02_03_08"
         },
         Description_Nai03_01_00 = {
-          ContentES = "Bewege dich weiter vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai03_01_00"
         },
         Description_Nai03_01_01 = {
-          ContentES = "Folge dem Leuchtenden Jade",
+          ContentES = "Sigue la Jade luminosa",
           TextMapId = "Description_Nai03_01_01"
         },
         Description_Nai03_01_02 = {
-          ContentES = "Untersuche die Quelle der Hilferufe vor dir",
+          ContentES = "Examina el origen de los llamados de auxilio",
           TextMapId = "Description_Nai03_01_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Description_Nai03_01_03",
-    MaxKey = "DynQuest_KuangkengSonghuo_Title",
-    Loader = function()
-      return {
+        },
         Description_Nai03_01_03 = {
-          ContentES = "Wehre die Filthoiden ab",
+          ContentES = "Repele a los Filthoids",
           TextMapId = "Description_Nai03_01_03"
         },
         Description_Nai03_01_04 = {
-          ContentES = "Sprich mit dem Wishen",
+          ContentES = "Habla con el Wishen",
           TextMapId = "Description_Nai03_01_04"
         },
         Description_Nai03_02_01 = {
-          ContentES = "Folge dem Leuchtenden Jade",
+          ContentES = "Sigue la Jade luminosa",
           TextMapId = "Description_Nai03_02_01"
         },
         Description_Nai03_02_02 = {
-          ContentES = "Löse das Rätsel",
+          ContentES = "Resuelve el acertijo",
           TextMapId = "Description_Nai03_02_02"
         },
         Description_Nai03_02_03 = {
-          ContentES = "Folge dem Leuchtenden Jade",
+          ContentES = "Sigue la Jade luminosa",
           TextMapId = "Description_Nai03_02_03"
         },
         Description_Nai03_02_04 = {
-          ContentES = "Verlasse die Höhle",
+          ContentES = "Sal de la caverna",
           TextMapId = "Description_Nai03_02_04"
         },
         Description_Nai03_02_05 = {
-          ContentES = "Sprich mit dem Wishen vor dir",
+          ContentES = "Habla con el Wishen que tienes delante",
           TextMapId = "Description_Nai03_02_05"
         },
         Description_Nai03_03_01 = {
-          ContentES = "Gehe mit dem Wishen weiter",
+          ContentES = "Avanza junto al Wishen",
           TextMapId = "Description_Nai03_03_01"
         },
         Description_Nai03_03_02 = {
-          ContentES = "Zerstöre den Verdorbenen Blütenkern",
+          ContentES = "Destruye el corazón de flor contaminada",
           TextMapId = "Description_Nai03_03_02"
         },
         Description_Nai03_03_03 = {
-          ContentES = "Wehre die Filthoiden ab",
+          ContentES = "Resiste a los Filthoids",
           TextMapId = "Description_Nai03_03_03"
         },
         Description_Nai03_03_04 = {
-          ContentES = "Reinige den Blütenkern mit der Macht des Wishen",
+          ContentES = "Purifica el corazón de flor contaminada con el poder del Wishen",
           TextMapId = "Description_Nai03_03_04"
         },
         Description_Nai03_03_05 = {
-          ContentES = "Sprich mit dem Wishen",
+          ContentES = "Habla con el Wishen",
           TextMapId = "Description_Nai03_03_05"
         },
         Description_Nai03_04_01 = {
-          ContentES = "Gehe mit dem Wishen weiter",
+          ContentES = "Avanza junto al Wishen",
           TextMapId = "Description_Nai03_04_01"
         },
         Description_Nai03_04_02 = {
-          ContentES = "Zerstöre den Verdorbenen Blütenkern",
+          ContentES = "Destruye el corazón de flor contaminada",
           TextMapId = "Description_Nai03_04_02"
         },
         Description_Nai03_04_03 = {
-          ContentES = "Wehre die Filthoiden ab",
+          ContentES = "Resiste a los Filthoids",
           TextMapId = "Description_Nai03_04_03"
         },
         Description_Nai03_04_04 = {
-          ContentES = "Reinige den Blütenkern mit der Macht des Wishen",
+          ContentES = "Purifica el corazón de flor contaminada con el poder del Wishen",
           TextMapId = "Description_Nai03_04_04"
         },
         Description_Nai03_04_05 = {
-          ContentES = "Sprich mit dem Wishen",
+          ContentES = "Habla con el Wishen",
           TextMapId = "Description_Nai03_04_05"
         },
         Description_Nai03_05_01 = {
-          ContentES = "Bewege dich vorwärts",
+          ContentES = "Seguir avanzando",
           TextMapId = "Description_Nai03_05_01"
         },
         Description_Nai03_05_02 = {
-          ContentES = "Verlasse den Vergessensspalt",
+          ContentES = "Sal de la Grieta del Olvido",
           TextMapId = "Description_Nai03_05_02"
         },
         Description_Nai03_06_01 = {
-          ContentES = "Verlasse den Vergessensspalt",
+          ContentES = "Sal de la Grieta del Olvido",
           TextMapId = "Description_Nai03_06_01"
         },
         Description_Nai03_06_02 = {
-          ContentES = "Besiege den Verschlinger",
+          ContentES = "Derrota al Devorador",
           TextMapId = "Description_Nai03_06_02"
         },
         Description_Nai_Back = {
-          ContentES = "Verlasse den Vergessensspalt",
+          ContentES = "Sal de la Grieta del Olvido",
           TextMapId = "Description_Nai_Back"
         },
         Dispatch_RewardPreview = {
@@ -12873,7 +13555,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DropTypeText_Fixed = {
           ContentES = "Botín garantizado",
           TextMapId = "DropTypeText_Fixed"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DropTypeText_Prob",
+    MaxKey = "DynQuest_TakePhoto_Des",
+    Loader = function()
+      return {
         DropTypeText_Prob = {
           ContentES = "Botín posible",
           TextMapId = "DropTypeText_Prob"
@@ -13553,15 +14243,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DynQuest_KuangkengSonghuo_Title = {
           ContentES = "Luno Express — ¡Veloz como el viento!",
           TextMapId = "DynQuest_KuangkengSonghuo_Title"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "DynQuest_KuangkengTestskill_Des",
-    MaxKey = "EntryTitle_405013",
-    Loader = function()
-      return {
+        },
         DynQuest_KuangkengTestskill_Des = {
           ContentES = "Esquiva las trampas del contrabandista",
           TextMapId = "DynQuest_KuangkengTestskill_Des"
@@ -13681,7 +14363,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         DynQuest_TakePhoto_Des = {
           ContentES = "Toma una foto para el turista",
           TextMapId = "DynQuest_TakePhoto_Des"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "DynQuest_TakePhoto_Target1",
+    MaxKey = "EntryTitle_407012",
+    Loader = function()
+      return {
         DynQuest_TakePhoto_Target1 = {
           ContentES = "Habla con el turista",
           TextMapId = "DynQuest_TakePhoto_Target1"
@@ -14352,15 +15042,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         EntryTitle_405013 = {
           ContentES = "Pabellón de lo Efímero",
           TextMapId = "EntryTitle_405013"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "EntryTitle_405014",
-    MaxKey = "Event_10301801_Title03",
-    Loader = function()
-      return {
+        },
         EntryTitle_405014 = {
           ContentES = "Gran Rito del Incienso",
           TextMapId = "EntryTitle_405014"
@@ -14480,7 +15162,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         EntryTitle_407012 = {
           ContentES = "Sala de la Artesanía",
           TextMapId = "EntryTitle_407012"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "EntryTitle_407013",
+    MaxKey = "Event_Des_103010",
+    Loader = function()
+      return {
         EntryTitle_407013 = {
           ContentES = "Juicio por disputa",
           TextMapId = "EntryTitle_407013"
@@ -14618,31 +15308,31 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "EntryTitle_409008"
         },
         EpisodeName_100301 = {
-          ContentES = "Aus den Tiefen der Nacht",
+          ContentES = "Desde las profundidades de la noche",
           TextMapId = "EpisodeName_100301"
         },
         EpisodeName_100302 = {
-          ContentES = "Wo die Schatten lauern",
+          ContentES = "Donde acechan las sombras",
           TextMapId = "EpisodeName_100302"
         },
         EpisodeName_100303 = {
-          ContentES = "Alte Wunden",
+          ContentES = "Viejas heridas",
           TextMapId = "EpisodeName_100303"
         },
         EpisodeName_100304 = {
-          ContentES = "Ein unerwarteter Besucher",
+          ContentES = "Un visitante inesperado",
           TextMapId = "EpisodeName_100304"
         },
         EpisodeName_100305 = {
-          ContentES = "Wie das Leuchtfeuer",
+          ContentES = "Como un faro en la noche",
           TextMapId = "EpisodeName_100305"
         },
         EpisodeName_100306 = {
-          ContentES = "Sternenlicht im Jetzt",
+          ContentES = "Las estrellas del presente",
           TextMapId = "EpisodeName_100306"
         },
         EpisodeName_100307 = {
-          ContentES = "Wohin nun?",
+          ContentES = "¿A dónde ahora?",
           TextMapId = "EpisodeName_100307"
         },
         Episode_00 = {
@@ -14698,63 +15388,63 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Episode_01_08"
         },
         Episode_02 = {
-          ContentES = "Kinder aus dem Schneeland",
+          ContentES = "Niños del Campo de Nieve",
           TextMapId = "Episode_02"
         },
         Episode_02_01 = {
-          ContentES = "Das verlorene Kind",
+          ContentES = "El Chico Perdido",
           TextMapId = "Episode_02_01"
         },
         Episode_02_02 = {
-          ContentES = "Schatten des Unheils",
+          ContentES = "Sombras del Temor",
           TextMapId = "Episode_02_02"
         },
         Episode_02_03 = {
-          ContentES = "Zeit der Unschuld",
+          ContentES = "Tiempo de Inocencia",
           TextMapId = "Episode_02_03"
         },
         Episode_02_04 = {
-          ContentES = "Herannahender Winter",
+          ContentES = "Invierno Inminente",
           TextMapId = "Episode_02_04"
         },
         Episode_02_05 = {
-          ContentES = "Das Scharlachrote Land",
+          ContentES = "La Tierra Escarlata",
           TextMapId = "Episode_02_05"
         },
         Episode_02_06 = {
-          ContentES = "Herz der Unschuld",
+          ContentES = "Corazón de Inocencia",
           TextMapId = "Episode_02_06"
         },
         Episode_02_07 = {
-          ContentES = "Requiem für die Namenlosen",
+          ContentES = "Réquiem por los Anónimos",
           TextMapId = "Episode_02_07"
         },
         Episode_02_cp1 = {
-          ContentES = "Kinder aus dem Schneefeld (I)",
+          ContentES = "Niños del Campo de Nieve (I)",
           TextMapId = "Episode_02_cp1"
         },
         Episode_02_cp2 = {
-          ContentES = "Kinder aus dem Schneefeld (Ⅱ)",
+          ContentES = "Niños del Campo de Nieve (Ⅱ)",
           TextMapId = "Episode_02_cp2"
         },
         Episode_02_cp3 = {
-          ContentES = "Kinder aus dem Schneefeld (Ⅲ)",
+          ContentES = "Niños del Campo de Nieve (Ⅲ)",
           TextMapId = "Episode_02_cp3"
         },
         Episode_02_cp4 = {
-          ContentES = "Kinder aus dem Schneefeld (Ⅳ)",
+          ContentES = "Niños del Campo de Nieve (Ⅳ)",
           TextMapId = "Episode_02_cp4"
         },
         Episode_02_cp5 = {
-          ContentES = "Kinder aus dem Schneefeld (Ⅴ)",
+          ContentES = "Niños del Campo de Nieve (Ⅴ)",
           TextMapId = "Episode_02_cp5"
         },
         Episode_02_cp6 = {
-          ContentES = "Kinder aus dem Schneefeld (Ⅵ)",
+          ContentES = "Niños del Campo de Nieve (Ⅵ)",
           TextMapId = "Episode_02_cp6"
         },
         Episode_02_cp7 = {
-          ContentES = "Kinder aus dem Schneefeld (Ⅶ)",
+          ContentES = "Niños del Campo de Nieve (Ⅶ)",
           TextMapId = "Episode_02_cp7"
         },
         Episode_03 = {
@@ -15154,15 +15844,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Event_10301801_Title03 = {
           ContentES = "Publica <H>3</> fotos en \"Rincón creativo\"",
           TextMapId = "Event_10301801_Title03"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Event_10301801_Title04",
-    MaxKey = "Event_TargetDes_11400113",
-    Loader = function()
-      return {
+        },
         Event_10301801_Title04 = {
           ContentES = "Da \"Me gusta\" a fotos de otros durante <H>5</> días",
           TextMapId = "Event_10301801_Title04"
@@ -15282,10 +15964,22 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Event_Des_103010 = {
           ContentES = "Cuando un joven ruiseñor deja su nido, descubre la inmensidad del cielo, roza los suaves campos... pero también enfrenta la lluvia helada y los vientos furiosos.\nSin embargo, la niña no dará marcha atrás: con su pincel mágico, pintará un sueño en cada tono. Y en este mundo duro y implacable, buscará un rincón de cielo eternamente claro, cálido como en los cuentos que la hacen soñar.",
           TextMapId = "Event_Des_103010"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Event_Des_103011",
+    MaxKey = "Event_Title_103006",
+    Loader = function()
+      return {
         Event_Des_103011 = {
           ContentES = "Cuando la Carnaval de la Vela de Plata terminó entre una serie de incidentes imprevistos, una nueva sombra se abatió sobre Lago Glacial.\nEn este momento crítico, aún lleno de incertidumbre, apareció quien se proclama la Reina Demoníaca de la Luz.",
           TextMapId = "Event_Des_103011"
+        },
+        Event_Des_10301101 = {
+          ContentES = "Lunoferromosa quiere que todos descubran lo maravilloso del ferrocarril, así que imita el espectáculo que los Luno armaron antes en el Teatro Galea, cantando y bailando bajo la cúpula de entrada.",
+          TextMapId = "Event_Des_10301101"
         },
         Event_Des_103012 = {
           ContentES = "Completa el Laberinto místico I a VI para obtener recompensas, incluyendo el [Fragmento de pensamiento: Lisbell].",
@@ -15324,7 +16018,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Event_Des_103020"
         },
         Event_Des_103021 = {
-          ContentES = "Durante el evento, podrás obtener apariencias de la serie [Susurros no dichos] y otras recompensas de apariencia.",
+          ContentES = "Durante el evento, podrás obtener aspectos de la serie [Susurros no dichos] y otras recompensas de aspecto.",
           TextMapId = "Event_Des_103021"
         },
         Event_Des_10302101 = {
@@ -15412,7 +16106,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Event_Des_WorldLan_101001"
         },
         Event_FreeAppearance_AppearanceReward = {
-          ContentES = "Recompensas de apariencia",
+          ContentES = "Recompensas de aspecto",
           TextMapId = "Event_FreeAppearance_AppearanceReward"
         },
         Event_FreeAppearance_Btn01 = {
@@ -15520,8 +16214,12 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Event_Rule_103002"
         },
         Event_Rule_103011 = {
-          ContentES = "<H>Reglas del evento del Teatro especial de Luno</>\n\n1. Tras completar la misión « <H>Teatro especial de Luno</> », puedes inscribirte en el evento con la Directora Putsch en el <H>Teatro Galea</>.\n2. Durante el <H>Baile de Luno</>, sigue las instrucciones de Luno en el escenario y presenta el <H>Geniemon</> y la <H>postura</> correspondientes para recibir recompensas. Para cumplir con el requisito, basta con mostrar un Geniemon del mismo tipo. Activar la habilidad de Big Box también cumple con el requisito de <H>Big Box Brillante</> y <H>Big Box Ardiente</>.\n3. Si cumples uno o más requisitos en cada <H>Baile de Luno</>, podrás obtener <H>recompensas avanzadas</> al final del baile. Cada cuenta puede obtener hasta <H>5</> <H>recompensas avanzadas</> durante el período del evento. Después de eso, aunque cumplas más requisitos, solo se otorgarán <H>recompensas normales</>. El intervalo entre dos <H>Bailes de Luno</> es de media hora.\n4. Durante un <H>Encuentro Festivo</>, las recompensas se enviarán por correo una vez alcanzado cierto progreso en la entrega de materiales.\n5. Durante un <H>Encuentro Festivo</>, al hacer clic en [Autoañadir] se agregarán automáticamente los materiales entregables según su calidad.\n6. Durante un <H>Encuentro Festivo</>, la función [Autoañadir] se desactivará una vez completados todos los hitos de entrega. Aun así, podrás agregar y entregar materiales manualmente para completar las misiones y reclamar recompensas.",
+          ContentES = "<H>Reglas del evento del Teatro especial de Luno</>\n\n1. Tras completar la misión « <H>Teatro especial de Luno</> », puedes inscribirte en el evento con la Directora Putsch en el <H>Teatro Galea</>.\n2. Durante el <H>Baile de Luno</>, sigue las instrucciones de Luno en el escenario y presenta el <H>Geniemon</> y la <H>postura</> correspondientes para recibir recompensas. Para cumplir con el requisito, basta con mostrar un Geniemon del mismo tipo. Activar la habilidad de Big Box también cumple con el requisito de <H>Big Box Brillante</> y <H>Big Box Ardiente</>.\n3. Si cumples uno o más requisitos en cada <H>Baile de Luno</>, podrás obtener <H>recompensas avanzadas</> al final del baile. Cada cuenta puede obtener hasta <H>5</> <H>recompensas avanzadas</> durante el período del evento. Después de eso, aunque cumplas más requisitos, solo se otorgarán <H>recompensas normales</>. El intervalo entre dos <H>Bailes de Luno</> es de media hora.\n4. Durante un <H>Encuentro Festivo: Estación de las Cien Flores</>, las recompensas se enviarán por correo una vez alcanzado cierto progreso en la entrega de materiales.\n5. Durante un <H>Encuentro Festivo: Estación de las Cien Flores</>, al hacer clic en [Autoañadir] se agregarán automáticamente los materiales entregables según su calidad.\n6. Durante un <H>Encuentro Festivo: Estación de las Cien Flores</>, la función [Autoañadir] se desactivará una vez completados todos los hitos de entrega. Aun así, podrás agregar y entregar materiales manualmente para completar las misiones y reclamar recompensas.",
           TextMapId = "Event_Rule_103011"
+        },
+        Event_Rule_10301101 = {
+          ContentES = "<H>Reglas del evento del Teatro especial de Luno</>\n\n1. Una vez iniciado el evento, podrás inscribirte en el evento con <H>Lunoferromosa</> en La <H>Estación de las Cien Flores</>.\n2. Durante el <H>Baile de Luno</>, sigue las instrucciones de Luno en el escenario y presenta el <H>Geniemon</> y la <H>postura</> correspondientes para recibir recompensas. Para cumplir con el requisito, basta con mostrar un Geniemon del mismo tipo. Activar la habilidad de Big Box también cumple con el requisito de <H>Big Box Brillante</> y <H>Big Box Ardiente</>.\n3. Si cumples uno o más requisitos en cada <H>Baile de Luno</>, podrás obtener <H>recompensas avanzadas</> al final del baile. Cada cuenta puede obtener hasta <H>5</> <H>recompensas avanzadas</> durante el período del evento. Después de eso, aunque cumplas más requisitos, solo se otorgarán <H>recompensas normales</>. El intervalo entre dos <H>Bailes de Luno</> es de media hora.\n4. Durante un <H>Encuentro Festivo: Estación de las Cien Flores</>, las recompensas se enviarán por correo una vez alcanzado cierto progreso en la entrega de materiales.\n5. Durante un <H>Encuentro Festivo</>, al hacer clic en [Autoañadir] se agregarán automáticamente los materiales entregables según su calidad.\n6. Durante un <H>Encuentro Festivo: Estación de las Cien Flores</>, la función [Autoañadir] se desactivará una vez completados todos los hitos de entrega. Aun así, podrás agregar y entregar materiales manualmente para completar las misiones y reclamar recompensas.",
+          TextMapId = "Event_Rule_10301101"
         },
         Event_Rule_103016 = {
           ContentES = "Desde tiempos antiguos, siempre ha habido quienes discuten acaloradamente sobre quién es más fuerte entre personajes sin relación alguna. Ahora, gracias al maestro Gongshang, ya no es necesario recurrir a citas ni teorías: basta con observar la victoria o derrota de estos Mecatíteres en el tablero para obtener un veredicto.",
@@ -15536,15 +16234,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Event_Rule_103020"
         },
         Event_Rule_103021 = {
-          ContentES = "1. Este evento tiene 2 rondas de recompensas. Cada ronda contiene 8 recompensas, una de ellas es la apariencia destacada. Cuando obtengas la apariencia destacada de una ronda, recibirás de inmediato todas las recompensas restantes de esa ronda.\n2. Antes de realizar el primer tejido de una ronda, puedes ajustar libremente la apariencia destacada y las recompensas elegidas de esa ronda. Después de hacer 1 tejido en esa ronda, ya no podrás cambiarlas.\n3. Las recompensas de una misma ronda no se repetirán. A medida que disminuya el número de recompensas restantes, la probabilidad de obtener cada una aumentará proporcionalmente. Al completar la ronda, las probabilidades volverán a sus valores iniciales.\n4. Las probabilidades iniciales de cada recompensa son las siguientes:\nApariencia de personaje: 0.08%\nEfecto de Salto Espiral: 0.92%\nPlaca dorsal superior: 1%\nAdorno de cabeza: 2%\nMarco de avatar: 13%\nAvatar: 13%\nTinte iridiscente ×3: 35%\nManual de encargo: tomo III ×6: 35%\n5. Los hilos de tejido estelar consumidos aumentan con la cantidad de tejidos realizados. Al completar la ronda, la cantidad consumida volverá al valor inicial.\nHilos de tejido estelar necesarios por tejido:\n1.er tejido: hilo de tejido estelar ×1\n2.º tejido: hilo de tejido estelar ×3\n3.er tejido: hilo de tejido estelar ×6\n4.º tejido: hilo de tejido estelar ×10\n5.º tejido: hilo de tejido estelar ×15\n6.º tejido: hilo de tejido estelar ×20\n7.º tejido: hilo de tejido estelar ×25\n8.º tejido: hilo de tejido estelar ×30",
+          ContentES = "1. Este evento tiene 2 rondas de recompensas. Cada ronda contiene 8 recompensas, una de ellas es el aspecto destacado. Cuando obtengasel aspecto destacado de una ronda, recibirás de inmediato todas las recompensas restantes de esa ronda.\n2. Antes de realizar el primer tejido de una ronda, puedes ajustar libremente el aspecto destacado y las recompensas elegidas de esa ronda. Después de hacer 1 tejido en esa ronda, ya no podrás cambiarlas.\n3. Las recompensas de una misma ronda no se repetirán. A medida que disminuya el número de recompensas restantes, la probabilidad de obtener cada una aumentará proporcionalmente. Al completar la ronda, las probabilidades volverán a sus valores iniciales.\n4. Las probabilidades iniciales de cada recompensa son las siguientes:\nAspecto de personaje: 0.08%\nEfecto de Salto Espiral: 0.92%\nPlaca dorsal superior: 1%\nAdorno de cabeza: 2%\nMarco de avatar: 13%\nAvatar: 13%\nTinte iridiscente ×3: 35%\nManual de encargo: tomo III ×6: 35%\n5. Los hilos de tejido estelar consumidos aumentan con la cantidad de tejidos realizados. Al completar la ronda, la cantidad consumida volverá al valor inicial.\nHilos de tejido estelar necesarios por tejido:\n1.er tejido: hilo de tejido estelar ×1\n2.º tejido: hilo de tejido estelar ×3\n3.er tejido: hilo de tejido estelar ×6\n4.º tejido: hilo de tejido estelar ×10\n5.º tejido: hilo de tejido estelar ×15\n6.º tejido: hilo de tejido estelar ×20\n7.º tejido: hilo de tejido estelar ×25\n8.º tejido: hilo de tejido estelar ×30",
           TextMapId = "Event_Rule_103021"
         },
         Event_Rule_10302101 = {
-          ContentES = "1. Este evento tiene 2 rondas de recompensas. Cada ronda contiene 8 recompensas, una de ellas es la apariencia destacada. Cuando obtengas la apariencia destacada de una ronda, recibirás de inmediato todas las recompensas restantes de esa ronda.\n2. Antes de realizar el primer tejido de una ronda, puedes ajustar libremente la apariencia destacada y las recompensas elegidas de esa ronda. Después de hacer 1 tejido en esa ronda, ya no podrás cambiarlas.\n3. Las recompensas de una misma ronda no se repetirán. A medida que disminuya el número de recompensas restantes, la probabilidad de obtener cada una aumentará proporcionalmente. Al completar la ronda, las probabilidades volverán a sus valores iniciales.\n4. Las probabilidades iniciales de cada recompensa son las siguientes:\nApariencia de personaje: 0.08%\nEfecto de Salto Helicoidal: 0.92%\nAdorno de espalda superior: 1%\nAdorno de cabeza: 2%\nMarco de avatar: 13%\nAvatar: 13%\nTinte iridiscente ×3: 35%\nManual de encargo: tomo III ×6: 35%\n5. Los hilos de tejido estelar consumidos aumentan con la cantidad de tejidos realizados. Al completar la ronda, la cantidad consumida volverá al valor inicial.\nHilos de tejido estelar necesarios por tejido:\n1.er tejido: hilo de tejido estelar ×1\n2.º tejido: hilo de tejido estelar ×3\n3.er tejido: hilo de tejido estelar ×6\n4.º tejido: hilo de tejido estelar ×10\n5.º tejido: hilo de tejido estelar ×15\n6.º tejido: hilo de tejido estelar ×20\n7.º tejido: hilo de tejido estelar ×25\n8.º tejido: hilo de tejido estelar ×30",
+          ContentES = "1. Este evento tiene 2 rondas de recompensas. Cada ronda contiene 8 recompensas, una de ellas es el aspecto destacado. Cuando obtengas el aspecto destacado de una ronda, recibirás de inmediato todas las recompensas restantes de esa ronda.\n2. Antes de realizar el primer tejido de una ronda, puedes ajustar libremente el aspecto destacado y las recompensas elegidas de esa ronda. Después de hacer 1 tejido en esa ronda, ya no podrás cambiarlas.\n3. Las recompensas de una misma ronda no se repetirán. A medida que disminuya el número de recompensas restantes, la probabilidad de obtener cada una aumentará proporcionalmente. Al completar la ronda, las probabilidades volverán a sus valores iniciales.\n4. Las probabilidades iniciales de cada recompensa son las siguientes:\nAspecto de personaje: 0.08%\nEfecto de Salto Helicoidal: 0.92%\nAdorno de espalda superior: 1%\nAdorno de cabeza: 2%\nMarco de avatar: 13%\nAvatar: 13%\nTinte iridiscente ×3: 35%\nManual de encargo: tomo III ×6: 35%\n5. Los hilos de tejido estelar consumidos aumentan con la cantidad de tejidos realizados. Al completar la ronda, la cantidad consumida volverá al valor inicial.\nHilos de tejido estelar necesarios por tejido:\n1.er tejido: hilo de tejido estelar ×1\n2.º tejido: hilo de tejido estelar ×3\n3.er tejido: hilo de tejido estelar ×6\n4.º tejido: hilo de tejido estelar ×10\n5.º tejido: hilo de tejido estelar ×15\n6.º tejido: hilo de tejido estelar ×20\n7.º tejido: hilo de tejido estelar ×25\n8.º tejido: hilo de tejido estelar ×30",
           TextMapId = "Event_Rule_10302101"
         },
         Event_Rule_103024 = {
-          ContentES = "Completa las tareas de colección de la lista de apariencias para obtener puntos de apariencia. Desbloquea recompensas con Phoxene para conseguir valiosas recompensas.",
+          ContentES = "Completa las tareas de colección de la lista de aspectos para obtener puntos de aspecto. Desbloquea recompensas con Phoxene para conseguir valiosas recompensas.",
           TextMapId = "Event_Rule_103024"
         },
         Event_SERIES_100002 = {
@@ -15962,15 +16660,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Event_TargetDes_11400113 = {
           ContentES = "Inicia sesión <H>3</> días en total",
           TextMapId = "Event_TargetDes_11400113"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Event_TargetDes_11400114",
-    MaxKey = "GRADEUP_1103_01",
-    Loader = function()
-      return {
+        },
         Event_TargetDes_11400114 = {
           ContentES = "Completa <H>15</> encargos",
           TextMapId = "Event_TargetDes_11400114"
@@ -16082,7 +16772,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Event_Title_103006 = {
           ContentES = "Juegos amistosos",
           TextMapId = "Event_Title_103006"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Event_Title_103007",
+    MaxKey = "GRADEUP_1503_05",
+    Loader = function()
+      return {
         Event_Title_103007 = {
           ContentES = "Ejercicios retumbantes",
           TextMapId = "Event_Title_103007"
@@ -16240,7 +16938,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Explore_Fort_Lift_Play3_Warning"
         },
         FailBlackScreenHode_1 = {
-          ContentES = "Auftrag gescheitert. Bitte versuche es erneut.",
+          ContentES = "Misión fallida. Inténtalo de nuevo.",
           TextMapId = "FailBlackScreenHode_1"
         },
         FailureGuidance_Text_1001 = {
@@ -16758,15 +17456,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         GRADEUP_1103_01 = {
           ContentES = "La [Inmersión] obtenida con [Dúo] aumenta a #1 de la Cordura Máx.",
           TextMapId = "GRADEUP_1103_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "GRADEUP_1103_02",
-    MaxKey = "Guide_Message_ModArchiveUI_15",
-    Loader = function()
-      return {
+        },
         GRADEUP_1103_02 = {
           ContentES = "Al usar el 3.º golpe de [Garra Furiosa] o [Aullido Lamentable], reduce el daño recibido en #2 y la probabilidad de aplicar [Adagio] mediante [Concierto] pasa al 100%.",
           TextMapId = "GRADEUP_1103_02"
@@ -16878,7 +17568,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         GRADEUP_1503_05 = {
           ContentES = "[Sables de Luz Cortan Corrientes Estrelladas] nivel +2; [La vida deriva, las fuerzas se invierten] nivel +1.",
           TextMapId = "GRADEUP_1503_05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "GRADEUP_1503_06",
+    MaxKey = "GuildAcceptAllApplication",
+    Loader = function()
+      return {
         GRADEUP_1503_06 = {
           ContentES = "Al activar un efecto adicional, Kezhou obtiene 1 acumulación de penetración de atributo +#6 durante #7s, hasta 18 acumulaciones.",
           TextMapId = "GRADEUP_1503_06"
@@ -17566,15 +18264,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Guide_Message_ModArchiveUI_15 = {
           ContentES = "Se ha desbloqueado una nueva Cuña Demoníaca. Haz clic en cualquier lugar para volver a la página de la Arqueta de Cuña Demoníaca.",
           TextMapId = "Guide_Message_ModArchiveUI_15"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Guide_Message_ModArchiveUI_15_Pad",
-    MaxKey = "HomePianoDes_1005002",
-    Loader = function()
-      return {
+        },
         Guide_Message_ModArchiveUI_15_Pad = {
           ContentES = "Se ha desbloqueado una nueva Cuña Demoníaca. Presiona para volver a la página de la Arqueta de Cuña Demoníaca.",
           TextMapId = "Guide_Message_ModArchiveUI_15_Pad"
@@ -17686,7 +18376,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         GuildAcceptAllApplication = {
           ContentES = "Has aceptado todas las solicitudes",
           TextMapId = "GuildAcceptAllApplication"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "GuildAcceptApplication",
+    MaxKey = "HomePianoDes_1007009",
+    Loader = function()
+      return {
         GuildAcceptApplication = {
           ContentES = "Has aceptado la solicitud de %s",
           TextMapId = "GuildAcceptApplication"
@@ -17719,6 +18417,10 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         GuildIsFull = {
           ContentES = "Este gremio está lleno",
           TextMapId = "GuildIsFull"
+        },
+        GuildJoinConfirmData = {
+          ContentES = "Solicitud de ingreso aceptada. Los datos se confirmarán cuando el jugador inicie sesión.",
+          TextMapId = "GuildJoinConfirmData"
         },
         GuildListSearchHint = {
           ContentES = "Ingresa nombre o ID del gremio",
@@ -17833,23 +18535,23 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "GuildTitel_2"
         },
         GuildUpgradeDes_1 = {
-          ContentES = "Capacidad de miembros del gremio +%s",
+          ContentES = "Capacidad de miembros del gremio +5",
           TextMapId = "GuildUpgradeDes_1"
         },
         GuildUpgradeDes_2 = {
-          ContentES = "Capacidad de miembros del gremio +%s",
+          ContentES = "Capacidad de miembros del gremio +5",
           TextMapId = "GuildUpgradeDes_2"
         },
         GuildUpgradeDes_3 = {
-          ContentES = "Capacidad de miembros del gremio +%s",
+          ContentES = "Capacidad de miembros del gremio +5",
           TextMapId = "GuildUpgradeDes_3"
         },
         GuildUpgradeDes_4 = {
-          ContentES = "Capacidad de miembros del gremio +%s",
+          ContentES = "Capacidad de miembros del gremio +5",
           TextMapId = "GuildUpgradeDes_4"
         },
         GuildUpgradeDes_5 = {
-          ContentES = "Capacidad de miembros del gremio +%s",
+          ContentES = "Capacidad de miembros del gremio +5",
           TextMapId = "GuildUpgradeDes_5"
         },
         GuildUpgradeDes_6 = {
@@ -17870,123 +18572,123 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         },
         Home = {ContentES = "Inicio", TextMapId = "Home"},
         HomePianoAcc_1001001 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1001001"
         },
         HomePianoAcc_1001002 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Flüstern des Sandes“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Susurros de las arenas\"",
           TextMapId = "HomePianoAcc_1001002"
         },
         HomePianoAcc_1001003 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Flucht von der Purgatorio-Insel“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Escapar de la Isla del Purgatorio\"",
           TextMapId = "HomePianoAcc_1001003"
         },
         HomePianoAcc_1001004 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Flucht von der Purgatorio-Insel“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Escapar de la Isla del Purgatorio\"",
           TextMapId = "HomePianoAcc_1001004"
         },
         HomePianoAcc_1001005 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Flucht von der Purgatorio-Insel“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Escapar de la Isla del Purgatorio\"",
           TextMapId = "HomePianoAcc_1001005"
         },
         HomePianoAcc_1001006 = {
-          ContentES = "Quelle: Erkunde Arkane Ruinen – Obere Ebene, Purgatorio-Insel",
+          ContentES = "Fuente: Explora las Ruinas Arcanas: Planta Superior, Isla del Purgatorio",
           TextMapId = "HomePianoAcc_1001006"
         },
         HomePianoAcc_1002001 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Grabstätte der Zeit“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Tierra de sepultura del tiempo\"",
           TextMapId = "HomePianoAcc_1002001"
         },
         HomePianoAcc_1002002 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1002002"
         },
         HomePianoAcc_1002003 = {
-          ContentES = "Quelle: Erkunde die Arkane Ruinen – Mittlere Ebene, Purgatorio-Insel",
+          ContentES = "Fuente: Explora las Ruinas Arcanas: Planta Media, Isla del Purgatorio",
           TextMapId = "HomePianoAcc_1002003"
         },
         HomePianoAcc_1003001 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1003001"
         },
         HomePianoAcc_1003002 = {
-          ContentES = "Quelle: Erkunde Arkane Ruinen – Obere Ebene, Purgatorio-Insel",
+          ContentES = "Fuente: Explora las Ruinas Arcanas: Planta Superior, Isla del Purgatorio",
           TextMapId = "HomePianoAcc_1003002"
         },
         HomePianoAcc_1003003 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1003003"
         },
         HomePianoAcc_1003004 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1003004"
         },
         HomePianoAcc_1004001 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Auf einer sanften Brise“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la Misión principal \"En una suave brisa\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1004001"
         },
         HomePianoAcc_1004002 = {
-          ContentES = "Quelle: Erkunde Icelake",
+          ContentES = "Fuente: Explora Lago Glacial",
           TextMapId = "HomePianoAcc_1004002"
         },
         HomePianoAcc_1004003 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Die Wiedergeburt“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Renacimiento\"",
           TextMapId = "HomePianoAcc_1004003"
         },
         HomePianoAcc_1004004 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1004004"
         },
         HomePianoAcc_1004005 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Die Kunst des Überlebens“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"El arte de sobrevivir\"",
           TextMapId = "HomePianoAcc_1004005"
         },
         HomePianoAcc_1004006 = {
-          ContentES = "Quelle: Erkunde die Asphodel",
+          ContentES = "Fuente: Explora Los Asfódelos",
           TextMapId = "HomePianoAcc_1004006"
         },
         HomePianoAcc_1004007 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Auf einer sanften Brise“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la Misión principal \"En una suave brisa\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1004007"
         },
         HomePianoAcc_1004008 = {
-          ContentES = "Quelle: Erkunde Icelake",
+          ContentES = "Fuente: Explora Lago Glacial",
           TextMapId = "HomePianoAcc_1004008"
         },
         HomePianoAcc_1005001 = {
-          ContentES = "Quelle: Erkunde die Tiefen der Glevum-Grube",
+          ContentES = "Fuente: Explora las profundidades de la Mina de Glevum",
           TextMapId = "HomePianoAcc_1005001"
         },
         HomePianoAcc_1005002 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1005002"
         },
         HomePianoAcc_1005003 = {
-          ContentES = "Quelle: Erkunde das Ufer des Klagenden Sees",
+          ContentES = "Fuente: Explora la orilla del Lago Lamentoso",
           TextMapId = "HomePianoAcc_1005003"
         },
         HomePianoAcc_1005004 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Auf einer sanften Brise“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la Misión principal \"En una suave brisa\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1005004"
         },
         HomePianoAcc_1005005 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1005005"
         },
         HomePianoAcc_1005006 = {
-          ContentES = "Quelle: Erkunde Icelake",
+          ContentES = "Fuente: Explora Lago Glacial",
           TextMapId = "HomePianoAcc_1005006"
         },
         HomePianoAcc_1005007 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Auf einer sanften Brise“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la Misión principal \"En una suave brisa\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1005007"
         },
         HomePianoAcc_1005008 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1005008"
         },
         HomePianoAcc_1005009 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1005009"
         },
         HomePianoAcc_1005010 = {
@@ -17994,79 +18696,79 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoAcc_1005010"
         },
         HomePianoAcc_1006001 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Die Kunst des Überlebens“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"El arte de sobrevivir\"",
           TextMapId = "HomePianoAcc_1006001"
         },
         HomePianoAcc_1006002 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „In der Tiefe des Winters“ ab",
+          ContentES = "Completa la Misión principal \"En las profundidades del invierno\"",
           TextMapId = "HomePianoAcc_1006002"
         },
         HomePianoAcc_1006003 = {
-          ContentES = "Quelle: Erkunde Hypnos’ Haus",
+          ContentES = "Fuente: Explora la Casa de Hypnos",
           TextMapId = "HomePianoAcc_1006003"
         },
         HomePianoAcc_1006004 = {
-          ContentES = "Quelle: Erkunde das Ufer des Klagenden Sees",
+          ContentES = "Fuente: Explora la orilla del Lago Lamentoso",
           TextMapId = "HomePianoAcc_1006004"
         },
         HomePianoAcc_1006005 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Auf einer sanften Brise“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la Misión principal \"En una suave brisa\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1006005"
         },
         HomePianoAcc_1006006 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Auf einer sanften Brise“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"En una suave brisa\"",
           TextMapId = "HomePianoAcc_1006006"
         },
         HomePianoAcc_1006007 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Auf einer sanften Brise“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"En una suave brisa\"",
           TextMapId = "HomePianoAcc_1006007"
         },
         HomePianoAcc_1006008 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Auf einer sanften Brise“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"En una suave brisa\"",
           TextMapId = "HomePianoAcc_1006008"
         },
         HomePianoAcc_1006009 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Auf einer sanften Brise“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"En una suave brisa\"",
           TextMapId = "HomePianoAcc_1006009"
         },
         HomePianoAcc_1006010 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Auf einer sanften Brise“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la Misión principal \"En una suave brisa\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1006010"
         },
         HomePianoAcc_1007001 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1007001"
         },
         HomePianoAcc_1007002 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Jenseits des Sandes“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Más allá de las arenas\"",
           TextMapId = "HomePianoAcc_1007002"
         },
         HomePianoAcc_1007003 = {
-          ContentES = "Quelle: Erkunde Lonza-Festung",
+          ContentES = "Fuente: Explora la Fortaleza de Lonza",
           TextMapId = "HomePianoAcc_1007003"
         },
         HomePianoAcc_1007004 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1007004"
         },
         HomePianoAcc_1007005 = {
-          ContentES = "Quelle: Erkunde die Kanalisation der Lonza-Festung",
+          ContentES = "Fuente: Explora las alcantarillas de la Fortaleza de Lonza",
           TextMapId = "HomePianoAcc_1007005"
         },
         HomePianoAcc_1007006 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Kanonen und Ranken“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Armas y viñas\"",
           TextMapId = "HomePianoAcc_1007006"
         },
         HomePianoAcc_1007007 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Tod oder Leben“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Muerto o vivo\"",
           TextMapId = "HomePianoAcc_1007007"
         },
         HomePianoAcc_1007008 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Tag des Gerichts“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"El Día del juicio\"",
           TextMapId = "HomePianoAcc_1007008"
         },
         HomePianoAcc_1007009 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1007009"
         },
         HomePianoAcc_1007010 = {
@@ -18074,7 +18776,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoAcc_1007010"
         },
         HomePianoAcc_1008001 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1008001"
         },
         HomePianoAcc_1008002 = {
@@ -18090,35 +18792,35 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoAcc_1008004"
         },
         HomePianoAcc_1009001 = {
-          ContentES = "Quelle: Bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1009001"
         },
         HomePianoAcc_1009002 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Zeit der Unschuld“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Tiempo de inocencia\"",
           TextMapId = "HomePianoAcc_1009002"
         },
         HomePianoAcc_1009003 = {
-          ContentES = "Quelle: Erkunde Galea-Theater",
+          ContentES = "Fuente: Explora el Teatro Galea",
           TextMapId = "HomePianoAcc_1009003"
         },
         HomePianoAcc_1009004 = {
-          ContentES = "Quelle: Erkunde die Icelake-Kanalisation",
+          ContentES = "Fuente: Explora las alcantarillas de Lago Glacial",
           TextMapId = "HomePianoAcc_1009004"
         },
         HomePianoAcc_1009005 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Das Scharlachrote Land“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"La tierra escarlata\"",
           TextMapId = "HomePianoAcc_1009005"
         },
         HomePianoAcc_1009006 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Requiem für die Namenlosen“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la misión principal \"Réquiem por los Anónimos\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1009006"
         },
         HomePianoAcc_1009007 = {
-          ContentES = "Quelle: Schließe den Hauptauftrag „Herz der Unschuld“ ab",
+          ContentES = "Fuente: Completa la Misión principal \"Corazón de inocencia\"",
           TextMapId = "HomePianoAcc_1009007"
         },
         HomePianoAcc_1009008 = {
-          ContentES = "Quelle: Nach Abschluss des Hauptauftrags „Requiem für die Namenlosen“ bei Lunoeggy auf dem Silberfrieden-Platz kaufen",
+          ContentES = "Fuente: Tras completar la misión principal \"Réquiem por los Anónimos\", comprar a Lunoeggy en la Plaza de la Paz Plateada",
           TextMapId = "HomePianoAcc_1009008"
         },
         HomePianoAcc_1010001 = {
@@ -18278,131 +18980,123 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoAcc_1013011"
         },
         HomePianoDes_1001001 = {
-          ContentES = "In der Dämmerung badend segelten wir durch die grenzenlose Dunkelheit – gemeinsam, immer weiter, der Morgendämmerung entgegen.",
+          ContentES = "Bañados en el crepúsculo, navegamos por la oscuridad infinita juntos, siempre hacia el amanecer.",
           TextMapId = "HomePianoDes_1001001"
         },
         HomePianoDes_1001002 = {
-          ContentES = "Hinter Staub und Sand lauert das Schicksal.",
+          ContentES = "El destino acecha tras el polvo y la arena.",
           TextMapId = "HomePianoDes_1001002"
         },
         HomePianoDes_1001003 = {
-          ContentES = "Blick niemals zurück.",
+          ContentES = "Nunca mires atrás.",
           TextMapId = "HomePianoDes_1001003"
         },
         HomePianoDes_1001004 = {
-          ContentES = "Die Insel war einst ein Ort der Ruhe, bis sie in Vergessenheit geriet.",
+          ContentES = "La isla fue una vez un refugio de tranquilidad, hasta que se desvaneció en el recuerdo.",
           TextMapId = "HomePianoDes_1001004"
         },
         HomePianoDes_1001005 = {
-          ContentES = "Wenn sich der erste Morgennebel lichtet, brichst auch du auf.",
+          ContentES = "Al elevarse la primera neblina de la mañana, también tú emprendes el camino.",
           TextMapId = "HomePianoDes_1001005"
         },
         HomePianoDes_1001006 = {
-          ContentES = "Bis wir uns eines Tages wiedersehen.",
+          ContentES = "Hasta el día en que nos volvamos a encontrar.",
           TextMapId = "HomePianoDes_1001006"
         },
         HomePianoDes_1002001 = {
-          ContentES = "Niemand weiß, ob der Blick der Schicksalsgöttin ein Segen oder ein Fluch ist.",
+          ContentES = "Nadie sabe si ser observado por la Diosa del Destino es una bendición o una maldición.",
           TextMapId = "HomePianoDes_1002001"
         },
         HomePianoDes_1002002 = {
-          ContentES = "Wir flehen das Schicksal an, uns gnädig zu sein.",
+          ContentES = "Suplicamos al destino que nos mire con bondad.",
           TextMapId = "HomePianoDes_1002002"
         },
         HomePianoDes_1002003 = {
-          ContentES = "Wir flehen das Schicksal an, uns gnädig zu sein. oder wir erheben unsere Schwerter gegen es.",
+          ContentES = "Suplicamos al destino que nos mire con bondad. O levantamos nuestras espadas contra él.",
           TextMapId = "HomePianoDes_1002003"
         },
         HomePianoDes_1003001 = {
-          ContentES = "Hand in Hand fliehen sie – einem einzigen Funken Hoffnung hinterher.",
+          ContentES = "De la mano, huyen. Persiguiendo un único hilo de esperanza.",
           TextMapId = "HomePianoDes_1003001"
         },
         HomePianoDes_1003002 = {
-          ContentES = "Wandelnd auf der Messerklinge der Vergangenheit.",
+          ContentES = "Caminando sobre el filo del pasado.",
           TextMapId = "HomePianoDes_1003002"
         },
         HomePianoDes_1003003 = {
-          ContentES = "Der Kampf eines eingekesselten Tieres.",
+          ContentES = "La lucha de una bestia acorralada.",
           TextMapId = "HomePianoDes_1003003"
         },
         HomePianoDes_1003004 = {
-          ContentES = "Wenn du all dies retten willst.",
+          ContentES = "Si deseas salvar todo esto.",
           TextMapId = "HomePianoDes_1003004"
         },
         HomePianoDes_1004001 = {
-          ContentES = "Diese Tür heißt Fremde nicht willkommen.",
+          ContentES = "Esa puerta no da la bienvenida a extraños.",
           TextMapId = "HomePianoDes_1004001"
         },
         HomePianoDes_1004002 = {
-          ContentES = "Die unerbittliche Kälte und die Schneestürme dienen als ihre treuesten Wächter.",
+          ContentES = "El frío interminable y la nieve azotante son la guardia más segura sobre sus muros.",
           TextMapId = "HomePianoDes_1004002"
         },
         HomePianoDes_1004003 = {
-          ContentES = "Bis das letzte Ziel erreicht ist, wird dieser Ort immer Heimat bleiben.",
+          ContentES = "Antes de llegar al destino final, este lugar siempre será hogar.",
           TextMapId = "HomePianoDes_1004003"
         },
         HomePianoDes_1004004 = {
-          ContentES = "Ein stacheliger Schlagabtausch – ein bemerkenswerter Auftakt.",
+          ContentES = "Un intercambio punzante sirve como apertura.",
           TextMapId = "HomePianoDes_1004004"
         },
         HomePianoDes_1004005 = {
-          ContentES = "Herzlichen Glückwunsch – du hast die Chance gewonnen, {性别:deinem Bruder von einer anderen Mutter|deiner Schwester von einem anderen Vater} zu begegnen.",
+          ContentES = "Felicitaciones, ganaste la oportunidad de encontrarte con tu {性别:hermano de otra madre | hermana de otra madre}.",
           TextMapId = "HomePianoDes_1004005"
         },
         HomePianoDes_1004006 = {
-          ContentES = "Getränke, Missionen, Gerüchte, Geheimnisse – alles, was man handeln kann, wechselt hier den Besitzer.",
+          ContentES = "Bebidas, encargos, anécdotas, secretos, todo lo que puede intercambiarse cambia de manos aquí.",
           TextMapId = "HomePianoDes_1004006"
         },
         HomePianoDes_1004007 = {
-          ContentES = "Ein Haus, in dem Geheimnisse schlummern.",
+          ContentES = "Una casa donde los secretos duermen.",
           TextMapId = "HomePianoDes_1004007"
         },
         HomePianoDes_1004008 = {
-          ContentES = "Zuhause, süßes Zuhause – es gibt nichts Besseres.",
+          ContentES = "Hogar, dulce hogar. No hay nada igual.",
           TextMapId = "HomePianoDes_1004008"
         },
         HomePianoDes_1005001 = {
-          ContentES = "Der erste Vorgeschmack auf Glück für {性别:einen unerfahrenen Phoxjäger|eine unerfahrene Phoxjägerin}.",
+          ContentES = "La primera sensación de fortuna de un Phoxcazador novato.",
           TextMapId = "HomePianoDes_1005001"
         },
         HomePianoDes_1005002 = {
-          ContentES = "Der Beginn einer langen Reise.",
+          ContentES = "El inicio de una larga travesía.",
           TextMapId = "HomePianoDes_1005002"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "HomePianoDes_1005003",
-    MaxKey = "HuaXu_Event_Des_10200114",
-    Loader = function()
-      return {
+        },
         HomePianoDes_1005003 = {
-          ContentES = "Im heulenden Sturm zählst du jeden Schritt, der dich zu ihr führt.",
+          ContentES = "En el vendaval aúllante, cuentas cada paso hacia ella.",
           TextMapId = "HomePianoDes_1005003"
         },
         HomePianoDes_1005004 = {
-          ContentES = "Im Rückblick weißt du, dass es eine Geschichte der Mutigen war.",
+          ContentES = "En retrospectiva, sabes que fue un relato de valientes.",
           TextMapId = "HomePianoDes_1005004"
         },
         HomePianoDes_1005005 = {
-          ContentES = "Wenn du lange in einen Abgrund starrst, starrt der Abgrund auch in dich hinein.",
+          ContentES = "Si miras largo tiempo en un abismo, el abismo también te mira a ti.",
           TextMapId = "HomePianoDes_1005005"
         },
         HomePianoDes_1005006 = {
-          ContentES = "Wir lachen, wenn wir über den Tod sprechen, und weinen, während wir weiterleben.",
+          ContentES = "Reímos al hablar de la muerte, y lloramos al seguir viviendo.",
           TextMapId = "HomePianoDes_1005006"
         },
         HomePianoDes_1005007 = {
-          ContentES = "Er bringt den Tod – und ebenso das Leben.",
+          ContentES = "Él trae la muerte y también la vida.",
           TextMapId = "HomePianoDes_1005007"
         },
         HomePianoDes_1005008 = {
-          ContentES = "{性别:Verlorener Reisender|Verlorene Reisende}, kehre zu diesem Traum zurück – der Vogelgeist ist nie fortgegangen.",
+          ContentES = "Viajero perdido, regresa a ese sueño, el Ave espiritual nunca se fue.",
           TextMapId = "HomePianoDes_1005008"
         },
         HomePianoDes_1005009 = {
-          ContentES = "{性别:Verlorener Reisender|Verlorene Reisende}, verlasse diesen Traum jetzt – der Vogelgeist ist davongeflogen.",
+          ContentES = "Viajero perdido, deja este sueño ahora, el Ave espiritual ha emprendido vuelo.",
           TextMapId = "HomePianoDes_1005009"
         },
         HomePianoDes_1005010 = {
@@ -18410,87 +19104,95 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoDes_1005010"
         },
         HomePianoDes_1006001 = {
-          ContentES = "Man sagt, dass es in Icelake keinen Sommer gibt. Du siehst das anders.",
+          ContentES = "Dicen que Lago Glacial no tiene verano. Tú piensas lo contrario.",
           TextMapId = "HomePianoDes_1006001"
         },
         HomePianoDes_1006002 = {
-          ContentES = "Selbst eine Eintagsfliege hat das Recht zu träumen.",
+          ContentES = "Incluso una efímera tiene derecho a soñar.",
           TextMapId = "HomePianoDes_1006002"
         },
         HomePianoDes_1006003 = {
-          ContentES = "Diese Blume muss noch zu ihrer vollen Pracht erblühen.",
+          ContentES = "Esa flor aún no ha florecido.",
           TextMapId = "HomePianoDes_1006003"
         },
         HomePianoDes_1006004 = {
-          ContentES = "Die Kamera ist der beste Jäger – nur sie kann die flüchtige Zeit einfangen.",
+          ContentES = "La cámara es el mejor cazador, solo ella puede atrapar el tiempo escurridizo.",
           TextMapId = "HomePianoDes_1006004"
         },
         HomePianoDes_1006005 = {
-          ContentES = "Alles Licht eilt seinem Erlöschen entgegen.",
+          ContentES = "Toda luz corre hacia su extinción.",
           TextMapId = "HomePianoDes_1006005"
         },
         HomePianoDes_1006006 = {
-          ContentES = "Die Geschichte ihres Lebens.",
+          ContentES = "La historia de su vida.",
           TextMapId = "HomePianoDes_1006006"
         },
         HomePianoDes_1006007 = {
-          ContentES = "Was bedeutet „Tod“?",
+          ContentES = "¿El significado de la \"muerte\"?",
           TextMapId = "HomePianoDes_1006007"
         },
         HomePianoDes_1006008 = {
-          ContentES = "Was bedeutet „Leben“?",
+          ContentES = "¿El significado de la \"vida\"?",
           TextMapId = "HomePianoDes_1006008"
         },
         HomePianoDes_1006009 = {
-          ContentES = "Ihre Antwort.",
+          ContentES = "Su respuesta.",
           TextMapId = "HomePianoDes_1006009"
         },
         HomePianoDes_1006010 = {
-          ContentES = "Blühend auf gefrorenem Boden.",
+          ContentES = "Floreciendo sobre tierra helada.",
           TextMapId = "HomePianoDes_1006010"
         },
         HomePianoDes_1007001 = {
-          ContentES = "Für die bald bevorstehende erbitterte Schlacht.",
+          ContentES = "Para la feroz batalla que pronto vendrá.",
           TextMapId = "HomePianoDes_1007001"
         },
         HomePianoDes_1007002 = {
-          ContentES = "Vorstoß durch den Bauch des eisernen Ungetüms.",
+          ContentES = "Avanzando por las entrañas del coloso de hierro.",
           TextMapId = "HomePianoDes_1007002"
         },
         HomePianoDes_1007003 = {
-          ContentES = "Ein Lebenselixier namens Phoxichor durchströmt jede Ader Hyperboreas.",
+          ContentES = "Una sangre vital llamada Phoxichor recorre cada vena de Hiperbórea.",
           TextMapId = "HomePianoDes_1007003"
         },
         HomePianoDes_1007004 = {
-          ContentES = "Niemand weiß, woher die nächste Kugel kommen wird.",
+          ContentES = "Nadie sabe de dónde vendrá la próxima bala.",
           TextMapId = "HomePianoDes_1007004"
         },
         HomePianoDes_1007005 = {
-          ContentES = "Seid mutig und lebt weiter – gemeinsam.",
+          ContentES = "Sean valientes, y sigan viviendo juntos.",
           TextMapId = "HomePianoDes_1007005"
         },
         HomePianoDes_1007006 = {
-          ContentES = "Bis die Maske fällt, weiß niemand, ob sie das Gesicht eines Engels oder eines Dämons verbirgt.",
+          ContentES = "Hasta que se levante la máscara, nadie puede decir si oculta el rostro de un ángel o un demonio.",
           TextMapId = "HomePianoDes_1007006"
         },
         HomePianoDes_1007007 = {
-          ContentES = "„Heute Nacht regnet es in Dismania.“",
+          ContentES = "\"Está lloviendo esta noche en Dismania.\"",
           TextMapId = "HomePianoDes_1007007"
         },
         HomePianoDes_1007008 = {
-          ContentES = "Doch klarer Himmel wird kommen.",
+          ContentES = "Los cielos despejados llegarán.",
           TextMapId = "HomePianoDes_1007008"
         },
         HomePianoDes_1007009 = {
-          ContentES = "Im Namen der Gerechtigkeit verhängt der Inquisitor ein feuriges Urteil.",
+          ContentES = "En nombre de la justicia, la inquisidora lanza una prueba de fuego.",
           TextMapId = "HomePianoDes_1007009"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "HomePianoDes_1007010",
+    MaxKey = "Hyphen",
+    Loader = function()
+      return {
         HomePianoDes_1007010 = {
           ContentES = "¿Qué forjó la gloria de Hiperbórea: Phoxene, hierro negro, guerra... u otra cosa?",
           TextMapId = "HomePianoDes_1007010"
         },
         HomePianoDes_1008001 = {
-          ContentES = "Ihre Wanderungen mögen wohl hundertmal das weite Atlasia durchquert haben.",
+          ContentES = "Su andar quizá haya recorrido la extensión de Atlasia cien veces de sobra.",
           TextMapId = "HomePianoDes_1008001"
         },
         HomePianoDes_1008002 = {
@@ -18506,35 +19208,35 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoDes_1008004"
         },
         HomePianoDes_1009001 = {
-          ContentES = "Webe Logik zu einem Netz, um eine Scherbe der Wahrheit zu fangen.",
+          ContentES = "Teje la lógica en una red para atrapar un fragmento de verdad.",
           TextMapId = "HomePianoDes_1009001"
         },
         HomePianoDes_1009002 = {
-          ContentES = "Junge, leidenschaftliche Herzen schlagen für eine Zukunft in voller Farbe.",
+          ContentES = "Corazones jóvenes y ardientes laten por un futuro lleno de color.",
           TextMapId = "HomePianoDes_1009002"
         },
         HomePianoDes_1009003 = {
-          ContentES = "Selbst das feinste Drama ist nur ein Fragment des Lebens.",
+          ContentES = "Incluso el mejor drama no es más que un fragmento de la vida.",
           TextMapId = "HomePianoDes_1009003"
         },
         HomePianoDes_1009004 = {
-          ContentES = "Wir liegen alle in der Gosse, aber einige von uns blicken zu den Sternen.",
+          ContentES = "Todos estamos en el fango, pero algunos de nosotros miramos las estrellas.",
           TextMapId = "HomePianoDes_1009004"
         },
         HomePianoDes_1009005 = {
-          ContentES = "Schau wieder nach oben – nur Phantome, gebrochen im zersplitterten Glas.",
+          ContentES = "Vuelve a mirar hacia arriba, solo fantasmas refractados en vidrio hecho añicos.",
           TextMapId = "HomePianoDes_1009005"
         },
         HomePianoDes_1009006 = {
-          ContentES = "Wenn die Götter uns verlassen haben, wo liegt dann die Erlösung?",
+          ContentES = "Si los dioses nos abandonan, ¿dónde queda la redención?",
           TextMapId = "HomePianoDes_1009006"
         },
         HomePianoDes_1009007 = {
-          ContentES = "Zum ersten Mal öffne ich mein Herz und umfange die sanfte Gleichgültigkeit der Welt.",
+          ContentES = "Por primera vez, abro mi corazón y abrazo la suave indiferencia del mundo.",
           TextMapId = "HomePianoDes_1009007"
         },
         HomePianoDes_1009008 = {
-          ContentES = "Nur der Schnee erinnert sich.",
+          ContentES = "Solo la nieve recuerda.",
           TextMapId = "HomePianoDes_1009008"
         },
         HomePianoDes_1010001 = {
@@ -18694,235 +19396,235 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoDes_1013011"
         },
         HomePianoNAme_1001001 = {
-          ContentES = "Duet Night Abyss Titelsong",
+          ContentES = "Duet Night Abyss Main Theme —Tema Principal",
           TextMapId = "HomePianoNAme_1001001"
         },
         HomePianoNAme_1001002 = {
-          ContentES = "Durch das Sandreich",
+          ContentES = "One from the Other Shore — A través del Reino de las Arenas",
           TextMapId = "HomePianoNAme_1001002"
         },
         HomePianoNAme_1001003 = {
-          ContentES = "Die Ruhe meiner vergangenen Tage",
+          ContentES = "Tranquility of My Yesterdays — Tranquilidad de Ayer",
           TextMapId = "HomePianoNAme_1001003"
         },
         HomePianoNAme_1001004 = {
-          ContentES = "Das verlassene Dorf",
+          ContentES = "The Deserted Village — La Aldea Desierta",
           TextMapId = "HomePianoNAme_1001004"
         },
         HomePianoNAme_1001005 = {
-          ContentES = "Morgennebel",
+          ContentES = "Morning Mist — Niebla Matinal",
           TextMapId = "HomePianoNAme_1001005"
         },
         HomePianoNAme_1001006 = {
-          ContentES = "Ein langer Abschied",
+          ContentES = "A Long Farewell — Una Larga Despedida",
           TextMapId = "HomePianoNAme_1001006"
         },
         HomePianoNAme_1002001 = {
-          ContentES = "Der Schicksalsseher",
+          ContentES = "The Fategazer — El Vidente del Destino",
           TextMapId = "HomePianoNAme_1002001"
         },
         HomePianoNAme_1002002 = {
-          ContentES = "Unser Heiliges Schicksal Ⅰ",
+          ContentES = "Our Sacred Destiny I — Nuestro Destino Sagrado Ⅰ",
           TextMapId = "HomePianoNAme_1002002"
         },
         HomePianoNAme_1002003 = {
-          ContentES = "Unser Heiliges Schicksal Ⅱ",
+          ContentES = "Our Sacred Destiny II — Nuestro Destino Sagrado Ⅱ",
           TextMapId = "HomePianoNAme_1002003"
         },
         HomePianoNAme_1003001 = {
-          ContentES = "Auf dem Spiel",
+          ContentES = "At Stake — En Juego",
           TextMapId = "HomePianoNAme_1003001"
         },
         HomePianoNAme_1003002 = {
-          ContentES = "Der falsche Weg",
+          ContentES = "The Wrong Way — El Camino Equivocado",
           TextMapId = "HomePianoNAme_1003002"
         },
         HomePianoNAme_1003003 = {
-          ContentES = "Kämpfe oder stirb Ⅰ",
+          ContentES = "Fight, or Die I — Lucha, o Muere Ⅰ",
           TextMapId = "HomePianoNAme_1003003"
         },
         HomePianoNAme_1003004 = {
-          ContentES = "Kämpfe oder stirb Ⅱ",
+          ContentES = "Fight, or Die II —Lucha, o Muere Ⅱ",
           TextMapId = "HomePianoNAme_1003004"
         },
         HomePianoNAme_1004001 = {
-          ContentES = "Die verschlossene Tür",
+          ContentES = "The Closed Door — La Puerta Cerrada",
           TextMapId = "HomePianoNAme_1004001"
         },
         HomePianoNAme_1004002 = {
-          ContentES = "Der eiserne Käfig",
+          ContentES = "The Iron Cage —La Jaula de Hierro",
           TextMapId = "HomePianoNAme_1004002"
         },
         HomePianoNAme_1004003 = {
-          ContentES = "Wiegenlied für einen Reisenden",
+          ContentES = "Lullaby for a Voyager — Canción de Cuna para un Viajero",
           TextMapId = "HomePianoNAme_1004003"
         },
         HomePianoNAme_1004004 = {
-          ContentES = "Schlechte Witze",
+          ContentES = "Bad Jokes — Chistes Malos",
           TextMapId = "HomePianoNAme_1004004"
         },
         HomePianoNAme_1004005 = {
-          ContentES = "Freuden des Lebens",
+          ContentES = "Joys of Life — Gozos de la Vida",
           TextMapId = "HomePianoNAme_1004005"
         },
         HomePianoNAme_1004006 = {
-          ContentES = "Die Asphodel",
+          ContentES = "The Asphodel — Los Asfódelos",
           TextMapId = "HomePianoNAme_1004006"
         },
         HomePianoNAme_1004007 = {
-          ContentES = "Hypnos’ Haus",
+          ContentES = "The Hypnos' House —La Casa de Hypnos",
           TextMapId = "HomePianoNAme_1004007"
         },
         HomePianoNAme_1004008 = {
-          ContentES = "Mein süßes kleines Zuhause",
+          ContentES = "My Sweet Little Home — Mi Dulce Pequeño Hogar",
           TextMapId = "HomePianoNAme_1004008"
         },
         HomePianoNAme_1005001 = {
-          ContentES = "Glevum-Grube",
+          ContentES = "Glevum Pit — Mina de Glevum",
           TextMapId = "HomePianoNAme_1005001"
         },
         HomePianoNAme_1005002 = {
-          ContentES = "Über das gefrorene Land",
+          ContentES = "Over the Frozen Land — Sobre la Tierra Helada",
           TextMapId = "HomePianoNAme_1005002"
         },
         HomePianoNAme_1005003 = {
-          ContentES = "Schneesturm",
+          ContentES = "Snowstorm — Tormenta de Nieve",
           TextMapId = "HomePianoNAme_1005003"
         },
         HomePianoNAme_1005004 = {
-          ContentES = "Der Kristallophage",
+          ContentES = "The Crystal Devourer — El Cristalófilo",
           TextMapId = "HomePianoNAme_1005004"
         },
         HomePianoNAme_1005005 = {
-          ContentES = "Die Lauern­den",
+          ContentES = "The Lurkers — Los Acechadores",
           TextMapId = "HomePianoNAme_1005005"
         },
         HomePianoNAme_1005006 = {
-          ContentES = "Unter willkürlicher Herrschaft",
+          ContentES = "Under Arbitrary Authority — Como Cordero al Matadero",
           TextMapId = "HomePianoNAme_1005006"
         },
         HomePianoNAme_1005007 = {
-          ContentES = "Die schreckliche Wahrheit",
+          ContentES = "The Awful Truth — La Terrible Verdad",
           TextMapId = "HomePianoNAme_1005007"
         },
         HomePianoNAme_1005008 = {
-          ContentES = "Prüfungen des Vogelgeistes Ⅰ",
+          ContentES = "Avian Spirit Trials I — Pruebas de Ave Espiritual Ⅰ",
           TextMapId = "HomePianoNAme_1005008"
         },
         HomePianoNAme_1005009 = {
-          ContentES = "Prüfungen des Vogelgeistes Ⅱ",
+          ContentES = "Avian Spirit Trials II — Pruebas de Ave Espiritual Ⅱ",
           TextMapId = "HomePianoNAme_1005009"
         },
         HomePianoNAme_1006001 = {
-          ContentES = "Die erste Begegnung mit Psyche",
+          ContentES = "First Met With Psyche — Primer Encuentro con Psyche",
           TextMapId = "HomePianoNAme_1006001"
         },
         HomePianoNAme_1006002 = {
-          ContentES = "Psyche: Tagtraum im Kokon",
+          ContentES = "Psyche - Daydream in a Chrysalis — Psyche: Ensueño en una Crisálida",
           TextMapId = "HomePianoNAme_1006002"
         },
         HomePianoNAme_1006003 = {
-          ContentES = "Unvollendete Blüte",
+          ContentES = "Florescence Unmet — Floración Inacabada",
           TextMapId = "HomePianoNAme_1006003"
         },
         HomePianoNAme_1006004 = {
-          ContentES = "Erinnerungen, die wir tragen",
+          ContentES = "Memories that We Take — Recuerdos que Llevamos",
           TextMapId = "HomePianoNAme_1006004"
         },
         HomePianoNAme_1006005 = {
-          ContentES = "Vorbestimmtes Ende",
+          ContentES = "Destined End —Final Destinado",
           TextMapId = "HomePianoNAme_1006005"
         },
         HomePianoNAme_1006006 = {
-          ContentES = "Schritte ihres Lebens",
+          ContentES = "Footsteps of Her Lifetime — Sobre Sus Huellas",
           TextMapId = "HomePianoNAme_1006006"
         },
         HomePianoNAme_1006007 = {
-          ContentES = "Welchen Traum webt der Kokon?",
+          ContentES = "For What Dream Does Chrysalis Weave — Por Qué Sueño Teje la Crisálida",
           TextMapId = "HomePianoNAme_1006007"
         },
         HomePianoNAme_1006008 = {
-          ContentES = "Auf welcher Brise erheben sich Flügel",
+          ContentES = "On What Breeze Do Wings Rise — En Qué Brisa Se Alzan las Alas",
           TextMapId = "HomePianoNAme_1006008"
         },
         HomePianoNAme_1006009 = {
-          ContentES = "Weil ich hier geboren wurde",
+          ContentES = "Cause I Was Born Here — Porque Nací Aquí",
           TextMapId = "HomePianoNAme_1006009"
         },
         HomePianoNAme_1006010 = {
-          ContentES = "Amaranth",
+          ContentES = "Amaranth — Amaranto",
           TextMapId = "HomePianoNAme_1006010"
         },
         HomePianoNAme_1007001 = {
-          ContentES = "Vor dem Krieg",
+          ContentES = "Before the War — Antes de la Guerra",
           TextMapId = "HomePianoNAme_1007001"
         },
         HomePianoNAme_1007002 = {
-          ContentES = "Notfallmaßnahme",
+          ContentES = "Emergency Action — Acción de Emergencia",
           TextMapId = "HomePianoNAme_1007002"
         },
         HomePianoNAme_1007003 = {
-          ContentES = "Ein pulsierendes Herz",
+          ContentES = "A Vibrant Heart — Un Corazón Vibrante",
           TextMapId = "HomePianoNAme_1007003"
         },
         HomePianoNAme_1007004 = {
-          ContentES = "In Gefahr",
+          ContentES = "In Danger — En Peligro",
           TextMapId = "HomePianoNAme_1007004"
         },
         HomePianoNAme_1007005 = {
-          ContentES = "Flucht",
+          ContentES = "Escape — Escape",
           TextMapId = "HomePianoNAme_1007005"
         },
         HomePianoNAme_1007006 = {
-          ContentES = "Katya: Kanonen und Ranken",
+          ContentES = "Katya - Guns and Vines — Katya: Armas y Viñas",
           TextMapId = "HomePianoNAme_1007006"
         },
         HomePianoNAme_1007007 = {
-          ContentES = "Daphne: Es regnet in Dismania",
+          ContentES = "Daphne - It's Raining in Dismania — Daphne: Está Lloviendo en Dismania",
           TextMapId = "HomePianoNAme_1007007"
         },
         HomePianoNAme_1007008 = {
-          ContentES = "Nach dem Regen",
+          ContentES = "After Rain — Después de la Lluvia",
           TextMapId = "HomePianoNAme_1007008"
         },
         HomePianoNAme_1007009 = {
-          ContentES = "Brennender Abgrund",
+          ContentES = "Burning Abyss — Abismo Ardiente",
           TextMapId = "HomePianoNAme_1007009"
         },
         HomePianoNAme_1008001 = {
-          ContentES = "Die wandernde Luno-Schmiedin",
+          ContentES = "The Wandering Lunosmith — Lunoherrera Errante",
           TextMapId = "HomePianoNAme_1008001"
         },
         HomePianoNAme_1009001 = {
-          ContentES = "Netz der Logik",
+          ContentES = "Web of Logic — Red de Lógica",
           TextMapId = "HomePianoNAme_1009001"
         },
         HomePianoNAme_1009002 = {
-          ContentES = "Die Fischers: Unsere vergangenen Tage",
+          ContentES = "The Fischers - Our Bygone Days — Los Fischers: Nuestros Días Pasados",
           TextMapId = "HomePianoNAme_1009002"
         },
         HomePianoNAme_1009003 = {
-          ContentES = "Galea-Theater",
+          ContentES = "Galea Theatre — Teatro Galea",
           TextMapId = "HomePianoNAme_1009003"
         },
         HomePianoNAme_1009004 = {
-          ContentES = "Sterne über der Gosse",
+          ContentES = "Stars Shining Over the Gutter — Estrellas Brillando sobre el Fango",
           TextMapId = "HomePianoNAme_1009004"
         },
         HomePianoNAme_1009005 = {
-          ContentES = "Wie das Leuchtfeuer",
+          ContentES = "A Light Like a Beacon — Como un Faro en la Noche",
           TextMapId = "HomePianoNAme_1009005"
         },
         HomePianoNAme_1009006 = {
-          ContentES = "Erlösung",
+          ContentES = "Redemption — Redención",
           TextMapId = "HomePianoNAme_1009006"
         },
         HomePianoNAme_1009007 = {
-          ContentES = "Herz der Unschuld",
+          ContentES = "Heart of Innocence — Corazón de Inocencia",
           TextMapId = "HomePianoNAme_1009007"
         },
         HomePianoNAme_1009008 = {
-          ContentES = "Requiem für die Namenlosen",
+          ContentES = "Requiem for the Nameless — Réquiem por los Anónimos",
           TextMapId = "HomePianoNAme_1009008"
         },
         HomePianoName_1005010 = {
@@ -19102,47 +19804,47 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "HomePianoName_1013011"
         },
         HomePiano_AlreadySet = {
-          ContentES = "Bereits verwendet",
+          ContentES = "Ya en uso",
           TextMapId = "HomePiano_AlreadySet"
         },
         HomePiano_GoBack = {
-          ContentES = "Zurück",
+          ContentES = "Atrás",
           TextMapId = "HomePiano_GoBack"
         },
         HomePiano_HandlePlayback = {
-          ContentES = "Abspielen",
+          ContentES = "Reproducir",
           TextMapId = "HomePiano_HandlePlayback"
         },
         HomePiano_HandleViewing = {
-          ContentES = "Ansehen",
+          ContentES = "Ver",
           TextMapId = "HomePiano_HandleViewing"
         },
         HomePiano_HomePiano = {
-          ContentES = "Sonate von Innen",
+          ContentES = "Sonata interior",
           TextMapId = "HomePiano_HomePiano"
         },
         HomePiano_MusicDetails = {
-          ContentES = "Titel",
+          ContentES = "Pista",
           TextMapId = "HomePiano_MusicDetails"
         },
         HomePiano_MusicScoreDetails = {
-          ContentES = "Partitur",
+          ContentES = "Partitura",
           TextMapId = "HomePiano_MusicScoreDetails"
         },
         HomePiano_NoMusicBeenIncluded = {
-          ContentES = "Dieser Partitur wurde kein Titel hinzugefügt",
+          ContentES = "No se han añadido pistas a esta partitura",
           TextMapId = "HomePiano_NoMusicBeenIncluded"
         },
         HomePiano_PlayMusic = {
-          ContentES = "Abspielen",
+          ContentES = "Reproducir",
           TextMapId = "HomePiano_PlayMusic"
         },
         HomePiano_SetAsHome = {
-          ContentES = "Als Musik an der Raststätte festlegen",
+          ContentES = "Establecer como música del Santuario",
           TextMapId = "HomePiano_SetAsHome"
         },
         HomePiano_SetAsHomeAlready = {
-          ContentES = "Dieser Titel wird bereits verwendet",
+          ContentES = "Esta pista ya está en uso",
           TextMapId = "HomePiano_SetAsHomeAlready"
         },
         HuaXu_Event_Des_10200107 = {
@@ -19176,15 +19878,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         HuaXu_Event_Des_10200114 = {
           ContentES = "Derrota a Coloso Terrestre",
           TextMapId = "HuaXu_Event_Des_10200114"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "HuaXu_Event_Des_10200115",
-    MaxKey = "MAINUIGUIDE_TITLE_PET",
-    Loader = function()
-      return {
+        },
         HuaXu_Event_Des_10200115 = {
           ContentES = "Derrota a Yuming",
           TextMapId = "HuaXu_Event_Des_10200115"
@@ -19289,7 +19983,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "Completa la misión secundaria \"Forjar arma de calamidad III\".",
           TextMapId = "HyperWeaponQuest_1040814"
         },
-        Hyphen = {ContentES = "-", TextMapId = "Hyphen"},
+        Hyphen = {ContentES = "-", TextMapId = "Hyphen"}
+      }
+    end
+  },
+  {
+    MinKey = "INFINITY_SYMBOL",
+    MaxKey = "MAINUIGUIDE_TITLE_SPECIALDESTRUCTIBLE_4",
+    Loader = function()
+      return {
         INFINITY_SYMBOL = {
           ContentES = "∞",
           TextMapId = "INFINITY_SYMBOL"
@@ -19331,7 +20033,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Impression_Name_Wisdom"
         },
         Impression_Repeat_Dice = {
-          ContentES = "1 Würfel ausgeben, um erneut zu prüfen",
+          ContentES = "Gasta 1 dado para volver a tirar",
           TextMapId = "Impression_Repeat_Dice"
         },
         Impression_UI_Back = {
@@ -19395,7 +20097,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Impression_UI_Middle"
         },
         Impression_UI_Read = {
-          ContentES = "Diese Option wurde bereits gewählt.",
+          ContentES = "Ya exploraste esta opción.",
           TextMapId = "Impression_UI_Read"
         },
         Impression_UI_Recheck_01 = {
@@ -19584,6 +20286,10 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "Señales secretas de los Vagabundos",
           TextMapId = "MAINUIGUIDE_TITLE_AnHao_1"
         },
+        MAINUIGUIDE_TITLE_Appearance_1 = {
+          ContentES = "Cosméticos",
+          TextMapId = "MAINUIGUIDE_TITLE_Appearance_1"
+        },
         MAINUIGUIDE_TITLE_AutoChess_1 = {
           ContentES = "Reglas de la partida",
           TextMapId = "MAINUIGUIDE_TITLE_AutoChess_1"
@@ -19640,9 +20346,17 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "Encargo: Captura",
           TextMapId = "MAINUIGUIDE_TITLE_Capture"
         },
+        MAINUIGUIDE_TITLE_ChangeElem_1 = {
+          ContentES = "Atributos del Phoxcazador",
+          TextMapId = "MAINUIGUIDE_TITLE_ChangeElem_1"
+        },
         MAINUIGUIDE_TITLE_ChenMo_1 = {
-          ContentES = "Gritblight",
+          ContentES = "Polvo corrompido",
           TextMapId = "MAINUIGUIDE_TITLE_ChenMo_1"
+        },
+        MAINUIGUIDE_TITLE_Conveyor_1 = {
+          ContentES = "Cinta transportadora de las instalaciones de forja",
+          TextMapId = "MAINUIGUIDE_TITLE_Conveyor_1"
         },
         MAINUIGUIDE_TITLE_DAMAGEMECHANISM = {
           ContentES = "Mecanismos de autodefensa",
@@ -19685,11 +20399,11 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_DefenceMove"
         },
         MAINUIGUIDE_TITLE_DengHua_1 = {
-          ContentES = "Laternenblüte",
+          ContentES = "Flor-linterna",
           TextMapId = "MAINUIGUIDE_TITLE_DengHua_1"
         },
         MAINUIGUIDE_TITLE_DianFeng_1 = {
-          ContentES = "Apex-Ranglisten",
+          ContentES = "Clasificación suprema",
           TextMapId = "MAINUIGUIDE_TITLE_DianFeng_1"
         },
         MAINUIGUIDE_TITLE_ELEVATOR = {
@@ -19733,79 +20447,79 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_FORT"
         },
         MAINUIGUIDE_TITLE_FanZhuan_1 = {
-          ContentES = "Stein-Drehungen",
+          ContentES = "Volteo de piedras",
           TextMapId = "MAINUIGUIDE_TITLE_FanZhuan_1"
         },
         MAINUIGUIDE_TITLE_FangShu_1 = {
-          ContentES = "Mechanische Nexus",
+          ContentES = "Nexo Mecánico",
           TextMapId = "MAINUIGUIDE_TITLE_FangShu_1"
         },
         MAINUIGUIDE_TITLE_FangShu_2 = {
-          ContentES = "Mechanische Nexus: Ziehen",
+          ContentES = "Nexo Mecánico: Atracción",
           TextMapId = "MAINUIGUIDE_TITLE_FangShu_2"
         },
         MAINUIGUIDE_TITLE_FangShu_3 = {
-          ContentES = "Mechanische Nexus: Scannen",
+          ContentES = "Nexo Mecánico: Escanear",
           TextMapId = "MAINUIGUIDE_TITLE_FangShu_3"
         },
         MAINUIGUIDE_TITLE_FangShu_4 = {
-          ContentES = "Rufe die Mechanische Nexus zurück",
+          ContentES = "Recupera el Nexo mecánico",
           TextMapId = "MAINUIGUIDE_TITLE_FangShu_4"
         },
         MAINUIGUIDE_TITLE_Feina_1 = {
-          ContentES = "Pigment: Färben",
+          ContentES = "Pigmento: Colorear",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_1"
         },
         MAINUIGUIDE_TITLE_Feina_10 = {
-          ContentES = "Edelsteine: Nebel vertreiben",
+          ContentES = "Gemas: Disipar nieblas",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_10"
         },
         MAINUIGUIDE_TITLE_Feina_11 = {
-          ContentES = "Nachtigall: Sichere Zone",
+          ContentES = "Ruiseñor: Zona segura",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_11"
         },
         MAINUIGUIDE_TITLE_Feina_12 = {
-          ContentES = "Gravierte Scheibe",
+          ContentES = "Disco grabado",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_12"
         },
         MAINUIGUIDE_TITLE_Feina_2 = {
-          ContentES = "Weiße Federn",
+          ContentES = "Plumas blancas",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_2"
         },
         MAINUIGUIDE_TITLE_Feina_3 = {
-          ContentES = "Pigment: Farbe wechseln",
+          ContentES = "Pigmento: Cambiar color",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_3"
         },
         MAINUIGUIDE_TITLE_Feina_4 = {
-          ContentES = "Blume: Färben",
+          ContentES = "Flor: Colorear",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_4"
         },
         MAINUIGUIDE_TITLE_Feina_5 = {
-          ContentES = "Blume: Verblassen",
+          ContentES = "Flor: Desvanecer",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_5"
         },
         MAINUIGUIDE_TITLE_Feina_6 = {
-          ContentES = "Verzauberter Trog",
+          ContentES = "Palangana encantada",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_6"
         },
         MAINUIGUIDE_TITLE_Feina_7 = {
-          ContentES = "Dornen",
+          ContentES = "Espinas",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_7"
         },
         MAINUIGUIDE_TITLE_Feina_8 = {
-          ContentES = "Nachtigall: Dornen entfernen",
+          ContentES = "Ruiseñor: Eliminar espinas",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_8"
         },
         MAINUIGUIDE_TITLE_Feina_9 = {
-          ContentES = "Nebel",
+          ContentES = "Nieblas",
           TextMapId = "MAINUIGUIDE_TITLE_Feina_9"
         },
         MAINUIGUIDE_TITLE_FenZuSai_1 = {
-          ContentES = "Gruppenphase",
+          ContentES = "Fase de grupos",
           TextMapId = "MAINUIGUIDE_TITLE_FenZuSai_1"
         },
         MAINUIGUIDE_TITLE_FuWen_1 = {
-          ContentES = "Taixu-Rune",
+          ContentES = "Runa de Taixu",
           TextMapId = "MAINUIGUIDE_TITLE_FuWen_1"
         },
         MAINUIGUIDE_TITLE_GUNANDAMMO = {
@@ -19815,6 +20529,14 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MAINUIGUIDE_TITLE_GongFeng_1 = {
           ContentES = "Cesta de ofrendas",
           TextMapId = "MAINUIGUIDE_TITLE_GongFeng_1"
+        },
+        MAINUIGUIDE_TITLE_GuildChat_1 = {
+          ContentES = "Chat privado de gremio",
+          TextMapId = "MAINUIGUIDE_TITLE_GuildChat_1"
+        },
+        MAINUIGUIDE_TITLE_GuildQuest_1 = {
+          ContentES = "Misiones de gremio",
+          TextMapId = "MAINUIGUIDE_TITLE_GuildQuest_1"
         },
         MAINUIGUIDE_TITLE_HARDBOSS = {
           ContentES = "Ecos nocturnos",
@@ -19833,20 +20555,24 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_Hijack"
         },
         MAINUIGUIDE_TITLE_HuaBan_1 = {
-          ContentES = "Treibende Blütenblätter",
+          ContentES = "Pétalos danzantes",
           TextMapId = "MAINUIGUIDE_TITLE_HuaBan_1"
         },
         MAINUIGUIDE_TITLE_HuaBao_1 = {
-          ContentES = "Verdorbene Knospen",
+          ContentES = "Brotes contaminados",
           TextMapId = "MAINUIGUIDE_TITLE_HuaBao_1"
         },
         MAINUIGUIDE_TITLE_HuaRui_1 = {
-          ContentES = "Verdorbener Blütenkern",
+          ContentES = "Corazón de flor contaminada",
           TextMapId = "MAINUIGUIDE_TITLE_HuaRui_1"
         },
         MAINUIGUIDE_TITLE_HuiYu_1 = {
-          ContentES = "Leuchtender Jade",
+          ContentES = "Jade luminoso",
           TextMapId = "MAINUIGUIDE_TITLE_HuiYu_1"
+        },
+        MAINUIGUIDE_TITLE_Hyper_1 = {
+          ContentES = "Armas de calamidad",
+          TextMapId = "MAINUIGUIDE_TITLE_Hyper_1"
         },
         MAINUIGUIDE_TITLE_IMPRESSIONCHECK = {
           ContentES = "Prueba de impresión",
@@ -19860,12 +20586,16 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "Impresiones",
           TextMapId = "MAINUIGUIDE_TITLE_IMPRESSIONSYSTEM"
         },
+        MAINUIGUIDE_TITLE_IronExp_1 = {
+          ContentES = "Encargos abisales",
+          TextMapId = "MAINUIGUIDE_TITLE_IronExp_1"
+        },
         MAINUIGUIDE_TITLE_JiGuanZhen_1 = {
-          ContentES = "Rätselanordnung",
+          ContentES = "Matriz de rompecabezas",
           TextMapId = "MAINUIGUIDE_TITLE_JiGuanZhen_1"
         },
         MAINUIGUIDE_TITLE_JiaSu_1 = {
-          ContentES = "Beschleunigungs-Rune",
+          ContentES = "Runa de aceleración",
           TextMapId = "MAINUIGUIDE_TITLE_JiaSu_1"
         },
         MAINUIGUIDE_TITLE_JieSuan_1 = {
@@ -19877,7 +20607,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_JingYing_1"
         },
         MAINUIGUIDE_TITLE_JuYuan_1 = {
-          ContentES = "Lunos Spezialtheater",
+          ContentES = "Teatro especial de Luno",
           TextMapId = "MAINUIGUIDE_TITLE_JuYuan_1"
         },
         MAINUIGUIDE_TITLE_LAYEREDMAP = {
@@ -19897,7 +20627,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_LTRELAYMECHANISM"
         },
         MAINUIGUIDE_TITLE_LongLin_1 = {
-          ContentES = "Zhuyin-Schuppe",
+          ContentES = "Escama de Zhuyin",
           TextMapId = "MAINUIGUIDE_TITLE_LongLin_1"
         },
         MAINUIGUIDE_TITLE_MOD = {
@@ -19975,15 +20705,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MAINUIGUIDE_TITLE_PET = {
           ContentES = "Encuentro con Geniemon",
           TextMapId = "MAINUIGUIDE_TITLE_PET"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MAINUIGUIDE_TITLE_PETTRAIN",
-    MaxKey = "MESSAGE_LOADING_12_PC",
-    Loader = function()
-      return {
+        },
         MAINUIGUIDE_TITLE_PETTRAIN = {
           ContentES = "Rasgo de Geniemon",
           TextMapId = "MAINUIGUIDE_TITLE_PETTRAIN"
@@ -19997,7 +20719,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_PinTu_1"
         },
         MAINUIGUIDE_TITLE_QiTianDeng_1 = {
-          ContentES = "Himmelslaterne",
+          ContentES = "Linterna celeste",
           TextMapId = "MAINUIGUIDE_TITLE_QiTianDeng_1"
         },
         MAINUIGUIDE_TITLE_QianKun_1 = {
@@ -20063,7 +20785,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MAINUIGUIDE_TITLE_SPECIALDESTRUCTIBLE_4 = {
           ContentES = "Destructible especial: Escudo Lumino",
           TextMapId = "MAINUIGUIDE_TITLE_SPECIALDESTRUCTIBLE_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MAINUIGUIDE_TITLE_SUPERSHIELD",
+    MaxKey = "MESSAGE_LOADING_210_PC",
+    Loader = function()
+      return {
         MAINUIGUIDE_TITLE_SUPERSHIELD = {
           ContentES = "Escudo Ultra",
           TextMapId = "MAINUIGUIDE_TITLE_SUPERSHIELD"
@@ -20081,15 +20811,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_SabotagePro"
         },
         MAINUIGUIDE_TITLE_Saiqi_1 = {
-          ContentES = "Chrysalis-Traumgewebe",
+          ContentES = "Tejido de Crisálida Onírica",
           TextMapId = "MAINUIGUIDE_TITLE_Saiqi_1"
         },
         MAINUIGUIDE_TITLE_Saiqi_2 = {
-          ContentES = "Fluoreszierende Eklosion",
+          ContentES = "Eclosión Fluorescente",
           TextMapId = "MAINUIGUIDE_TITLE_Saiqi_2"
         },
         MAINUIGUIDE_TITLE_ShanYe_1 = {
-          ContentES = "Doppelpropeller",
+          ContentES = "Alas giratorias",
           TextMapId = "MAINUIGUIDE_TITLE_ShanYe_1"
         },
         MAINUIGUIDE_TITLE_ShenJi_1 = {
@@ -20177,7 +20907,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_TianQi_1"
         },
         MAINUIGUIDE_TITLE_TongLv_1 = {
-          ContentES = "Resonanzwaffe",
+          ContentES = "Arma de Consonancia",
           TextMapId = "MAINUIGUIDE_TITLE_TongLv_1"
         },
         MAINUIGUIDE_TITLE_Treasure = {
@@ -20197,7 +20927,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_WIKI"
         },
         MAINUIGUIDE_TITLE_WangXi_1 = {
-          ContentES = "Vergessensspalt",
+          ContentES = "Grieta del Olvido",
           TextMapId = "MAINUIGUIDE_TITLE_WangXi_1"
         },
         MAINUIGUIDE_TITLE_WuYou_1 = {
@@ -20205,7 +20935,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_WuYou_1"
         },
         MAINUIGUIDE_TITLE_XiQiu_1 = {
-          ContentES = "Perle in der Flasche",
+          ContentES = "Perla en la botella",
           TextMapId = "MAINUIGUIDE_TITLE_XiQiu_1"
         },
         MAINUIGUIDE_TITLE_XianJing_1 = {
@@ -20213,7 +20943,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_XianJing_1"
         },
         MAINUIGUIDE_TITLE_XiaoChuan_1 = {
-          ContentES = "Kanu",
+          ContentES = "Embarcación pequeña",
           TextMapId = "MAINUIGUIDE_TITLE_XiaoChuan_1"
         },
         MAINUIGUIDE_TITLE_XiaoYao_1 = {
@@ -20221,7 +20951,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_XiaoYao_1"
         },
         MAINUIGUIDE_TITLE_XingShi_1 = {
-          ContentES = "Erleuchtungsstele",
+          ContentES = "Estela de la Iluminación",
           TextMapId = "MAINUIGUIDE_TITLE_XingShi_1"
         },
         MAINUIGUIDE_TITLE_XuanYong_1 = {
@@ -20237,7 +20967,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_YanQue_1"
         },
         MAINUIGUIDE_TITLE_YanShi_1 = {
-          ContentES = "Zerstörbare Felsen",
+          ContentES = "Rocas destructibles",
           TextMapId = "MAINUIGUIDE_TITLE_YanShi_1"
         },
         MAINUIGUIDE_TITLE_YinZong_1 = {
@@ -20249,7 +20979,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_YuBo_1"
         },
         MAINUIGUIDE_TITLE_ZhanFeng_1 = {
-          ContentES = "Äolische Klangspiel",
+          ContentES = "Carillón de los Vientos",
           TextMapId = "MAINUIGUIDE_TITLE_ZhanFeng_1"
         },
         MAINUIGUIDE_TITLE_ZhenLv_1 = {
@@ -20277,7 +21007,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MAINUIGUIDE_TITLE_ZhengLi_Main"
         },
         MAINUIGUIDE_TITLE_ZhouYe_1 = {
-          ContentES = "Zeitzyklus",
+          ContentES = "Ciclo de tiempo",
           TextMapId = "MAINUIGUIDE_TITLE_ZhouYe_1"
         },
         MAINUIGUIDE_TITLE_ZhuanZhou_1 = {
@@ -20780,15 +21510,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MESSAGE_LOADING_12_PC = {
           ContentES = "La raza que nació con \"magia\" es llamada Charon, un nombre que posee un peso muy distinto de una nación a otra. Aquí, dentro del Imperio Hiperbóreo, llevan el ominoso título de \"Hijos del demonio\".",
           TextMapId = "MESSAGE_LOADING_12_PC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MESSAGE_LOADING_13_PC",
-    MaxKey = "MESSAGE_TITLE_LOADING_227_PC",
-    Loader = function()
-      return {
+        },
         MESSAGE_LOADING_13_PC = {
           ContentES = "Entre los Charons, aquellos con talentos únicos que poseen diversos poderes mágicos, marcados como \"artes demoníacas\" dentro del Imperio Hiperbóreo.",
           TextMapId = "MESSAGE_LOADING_13_PC"
@@ -20868,7 +21590,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MESSAGE_LOADING_210_PC = {
           ContentES = "Sustancia ampliamente utilizada en Huaxu, elaborada mediante procesos precisos a partir de ingredientes seleccionados, que permite comunicarse con las deidades. Incensarios encienden el país entero, y su aroma impregna el aire de manera constante. Muchos también llevan bolsitas de incienso consigo. El incienso es una de las marcas culturales de Huaxu.",
           TextMapId = "MESSAGE_LOADING_210_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_LOADING_211_PC",
+    MaxKey = "MESSAGE_TITLE_LOADING_310_PC",
+    Loader = function()
+      return {
         MESSAGE_LOADING_211_PC = {
           ContentES = "Un dios malévolo surgido de las leyendas antiguas de Huaxu, enemigo jurado de Taihao, actualmente sellado en los alrededores del Puerto de las Brumas. Su poder desquiciado se escapó de su prisión, dando origen al Azote de Zhuyin.",
           TextMapId = "MESSAGE_LOADING_211_PC"
@@ -21342,15 +22072,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MESSAGE_SKILL3_2_PC_1st"
         },
         MESSAGE_SKILL3_GAMEPAD = {
-          ContentES = "Halte &GamepadUseSkill& und drücke &Skill3&, um die Unterstützungsfähigkeit einzusetzen",
+          ContentES = "Mantén presionando &GamepadUseSkill& y luego pulsa &Skill3& para usar la habilidad de apoyo",
           TextMapId = "MESSAGE_SKILL3_GAMEPAD"
         },
         MESSAGE_SKILL3_PC = {
-          ContentES = "Klicke auf &Skill3&, um die Unterstützungsfähigkeit einzusetzen",
+          ContentES = "Presiona &Skill3& para usar la habilidad de apoyo",
           TextMapId = "MESSAGE_SKILL3_PC"
         },
         MESSAGE_SKILL3_PHONE = {
-          ContentES = "Tippe auf die Taste, um die Unterstützungsfähigkeit einzusetzen",
+          ContentES = "Pulsa el botón para usar la habilidad de apoyo",
           TextMapId = "MESSAGE_SKILL3_PHONE"
         },
         MESSAGE_SLIDE_PC = {
@@ -21588,15 +22318,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MESSAGE_TITLE_LOADING_227_PC = {
           ContentES = "Wishen",
           TextMapId = "MESSAGE_TITLE_LOADING_227_PC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MESSAGE_TITLE_LOADING_22_PC",
-    MaxKey = "MOD_FUNCTION_RANGE",
-    Loader = function()
-      return {
+        },
         MESSAGE_TITLE_LOADING_22_PC = {
           ContentES = "Impresiones",
           TextMapId = "MESSAGE_TITLE_LOADING_22_PC"
@@ -21676,7 +22398,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MESSAGE_TITLE_LOADING_310_PC = {
           ContentES = "Callejón Youlai",
           TextMapId = "MESSAGE_TITLE_LOADING_310_PC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MESSAGE_TITLE_LOADING_311_PC",
+    MaxKey = "MOD_NAME_102002",
+    Loader = function()
+      return {
         MESSAGE_TITLE_LOADING_311_PC = {
           ContentES = "Laberinto de Yanyin",
           TextMapId = "MESSAGE_TITLE_LOADING_311_PC"
@@ -22396,15 +23126,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MOD_FUNCTION_RANGE = {
           ContentES = "Cuña Demoníaca para armas a distancia",
           TextMapId = "MOD_FUNCTION_RANGE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_NAME_1001",
-    MaxKey = "MOD_NAME_3008",
-    Loader = function()
-      return {
+        },
         MOD_NAME_1001 = {
           ContentES = "Llama",
           TextMapId = "MOD_NAME_1001"
@@ -22484,7 +23206,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MOD_NAME_102002 = {
           ContentES = "Eco de Onda de Choque",
           TextMapId = "MOD_NAME_102002"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_102003",
+    MaxKey = "MOD_NAME_3202",
+    Loader = function()
+      return {
         MOD_NAME_102003 = {
           ContentES = "Embestida Imponente",
           TextMapId = "MOD_NAME_102003"
@@ -23204,15 +23934,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MOD_NAME_3008 = {
           ContentES = "Furia · Atadura",
           TextMapId = "MOD_NAME_3008"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "MOD_NAME_3009",
-    MaxKey = "Mail_Title_10016",
-    Loader = function()
-      return {
+        },
         MOD_NAME_3009 = {
           ContentES = "Enfoque · Coacción",
           TextMapId = "MOD_NAME_3009"
@@ -23292,7 +24014,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         MOD_NAME_3202 = {
           ContentES = "Flecha",
           TextMapId = "MOD_NAME_3202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "MOD_NAME_3203",
+    MaxKey = "Mail_Title_10061",
+    Loader = function()
+      return {
         MOD_NAME_3203 = {
           ContentES = "Destreza",
           TextMapId = "MOD_NAME_3203"
@@ -23809,6 +24539,10 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "La atmósfera festiva del evento Encuentro Festivo se ha intensificado. El Teatro Galea desea agradecerle y ofrecerle este obsequio como muestra de gratitud por su contribución a la renovación de Lago Glacial.",
           TextMapId = "Mail_Content_10034"
         },
+        Mail_Content_10035 = {
+          ContentES = "La atmósfera festiva del evento [Encuentro Festivo: Estación de las Cien Flores] se ha intensificado. Este es un regalo de Lunoferromosa.",
+          TextMapId = "Mail_Content_10035"
+        },
         Mail_Content_10037 = {
           ContentES = "{性别:Querido Phoxcazador|Querida Phoxcazadora},\nLas recompensas diarias de Pensamientos entrelazados están adjuntas a este correo. Reclámalas a tiempo.",
           TextMapId = "Mail_Content_10037"
@@ -24012,15 +24746,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Mail_Title_10016 = {
           ContentES = "Correo de recompensa de pensamiento",
           TextMapId = "Mail_Title_10016"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mail_Title_10018",
-    MaxKey = "Message_Guide_Dungeon_19_Pad",
-    Loader = function()
-      return {
+        },
         Mail_Title_10018 = {
           ContentES = "Recompensas de la tienda de Lunosirvienta",
           TextMapId = "Mail_Title_10018"
@@ -24096,7 +24822,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Mail_Title_10061 = {
           ContentES = "[Pase de escuadrón] Aviso de caducidad",
           TextMapId = "Mail_Title_10061"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mail_Title_10062",
+    MaxKey = "Message_Guide_Dungeon_8",
+    Loader = function()
+      return {
         Mail_Title_10062 = {
           ContentES = "Agradecimientos de Alegría: Forja al ritmo del baile",
           TextMapId = "Mail_Title_10062"
@@ -24268,6 +25002,38 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_Alt = {
           ContentES = "Mantén pulsado <H>&ShowCursor&</> para mostrar el cursor.",
           TextMapId = "Message_Guide_Alt"
+        },
+        Message_Guide_Appearance_1 = {
+          ContentES = "<H>Cosméticos</> desbloqueados",
+          TextMapId = "Message_Guide_Appearance_1"
+        },
+        Message_Guide_Appearance_2 = {
+          ContentES = "Haz clic para abrir la interfaz de <H>Cosméticos</>",
+          TextMapId = "Message_Guide_Appearance_2"
+        },
+        Message_Guide_Appearance_2_Pad = {
+          ContentES = "Pulsa para abrir la interfaz de <H>Cosméticos</>",
+          TextMapId = "Message_Guide_Appearance_2_Pad"
+        },
+        Message_Guide_Appearance_3 = {
+          ContentES = "Aquí puedes editar tus preajustes de cosméticos",
+          TextMapId = "Message_Guide_Appearance_3"
+        },
+        Message_Guide_Appearance_4 = {
+          ContentES = "Aquí puedes exportar y compartir tus preajustes de cosméticos, o importar los de otros jugadores",
+          TextMapId = "Message_Guide_Appearance_4"
+        },
+        Message_Guide_Appearance_5 = {
+          ContentES = "Aquí puedes ver los distintos tipos de cosméticos",
+          TextMapId = "Message_Guide_Appearance_5"
+        },
+        Message_Guide_Appearance_6 = {
+          ContentES = "Haz clic para acceder a la <H>Galería de esplendor</>",
+          TextMapId = "Message_Guide_Appearance_6"
+        },
+        Message_Guide_Appearance_6_Pad = {
+          ContentES = "Pulsa para acceder a la <H>Galería de esplendor</>",
+          TextMapId = "Message_Guide_Appearance_6_Pad"
         },
         Message_Guide_AutoChess_1 = {
           ContentES = "Antes de empezar, repasemos algunos datos básicos.",
@@ -24622,63 +25388,63 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Message_Guide_ChangeWeapon_9_Pad"
         },
         Message_Guide_Dispatch_01 = {
-          ContentES = "In dieser Welt passieren verschiedene dynamische Aufträge. Wenn du überfordert bist, kannst du deine Gefährten auf Expeditionsaufträge schicken, um diese plötzlichen Situationen für dich zu bewältigen.",
+          ContentES = "Variados eventos inesperados ocurren en este mundo. Cuando estés sobrecargado, puedes enviar a tus compañeros en misiones de expedición para manejar estas situaciones.",
           TextMapId = "Message_Guide_Dispatch_01"
         },
         Message_Guide_Dispatch_02 = {
-          ContentES = "Wähle hier, um die Liste der entsendbaren Figuren anzuzeigen",
+          ContentES = "Selecciona aquí para ver la lista de personajes disponibles para expedición",
           TextMapId = "Message_Guide_Dispatch_02"
         },
         Message_Guide_Dispatch_02_Pad = {
-          ContentES = "Drücke, um die Entsendungsliste anzuzeigen",
+          ContentES = "Pulsa para ver la lista de expediciones",
           TextMapId = "Message_Guide_Dispatch_02_Pad"
         },
         Message_Guide_Dispatch_03 = {
-          ContentES = "Hier kannst du die aktuell laufenden dynamischen Aufträge anzeigen.",
+          ContentES = "Aquí puedes ver las misiones de expedición en curso.",
           TextMapId = "Message_Guide_Dispatch_03"
         },
         Message_Guide_Dispatch_04 = {
-          ContentES = "Hier kannst du die Details des ausgewählten dynamischen Auftrags überprüfen.",
+          ContentES = "Aquí puedes revisar los detalles de la misión seleccionada.",
           TextMapId = "Message_Guide_Dispatch_04"
         },
         Message_Guide_Dispatch_05 = {
-          ContentES = "Für den Abschluss von dynamischen Auftragen erhältst du sowohl Standardbelohnungen als auch zusätzliche Belohnungen.",
+          ContentES = "Completar misiones de expedición otorga recompensas estándar y adicionales.",
           TextMapId = "Message_Guide_Dispatch_05"
         },
         Message_Guide_Dispatch_06 = {
-          ContentES = "Wenn du dynamische Aufträge selbst abschließt, kannst du die Standardbelohnungen schnell erhalten.",
+          ContentES = "Completar misiones en persona puede dar recompensas estándar más rápido.",
           TextMapId = "Message_Guide_Dispatch_06"
         },
         Message_Guide_Dispatch_07 = {
-          ContentES = "Wähle hier, um die Liste der entsendbaren Figuren zu öffnen",
+          ContentES = "Selecciona aquí para abrir la lista de personajes disponibles.",
           TextMapId = "Message_Guide_Dispatch_07"
         },
         Message_Guide_Dispatch_07_Pad = {
-          ContentES = "Drücke, um die Figurenliste anzuzeigen",
+          ContentES = "Pulsa para ver la lista de personajes.",
           TextMapId = "Message_Guide_Dispatch_07_Pad"
         },
         Message_Guide_Dispatch_08 = {
-          ContentES = "In der Liste kannst du die entsendbaren Figuren und ihre Eigenschaften anzeigen.",
+          ContentES = "Aquí puedes ver los personajes disponibles y sus rasgos.",
           TextMapId = "Message_Guide_Dispatch_08"
         },
         Message_Guide_Dispatch_09 = {
-          ContentES = "Wähle „Auto-Auswahl”, um Figuren sofort zu entsenden.",
+          ContentES = "Selecciona la auto-selección para enviar personajes de inmediato.",
           TextMapId = "Message_Guide_Dispatch_09"
         },
         Message_Guide_Dispatch_09_Pad = {
-          ContentES = "Drücke hier, um Figuren automatisch auszuwählen.",
+          ContentES = "Pulsa para auto-seleccionar personajes.",
           TextMapId = "Message_Guide_Dispatch_09_Pad"
         },
         Message_Guide_Dispatch_10 = {
-          ContentES = "Figuren mit der empfohlenen Eigenschaft erhöhen die Erfolgsrate der Entsendung erheblich.",
+          ContentES = "Los personajes con el rasgo recomendado aumentarán significativamente la tasa de éxito de la expedición.",
           TextMapId = "Message_Guide_Dispatch_10"
         },
         Message_Guide_Dispatch_11 = {
-          ContentES = "Wähle hier, um Gefährten zu entsenden.",
+          ContentES = "Selecciona aquí para enviar compañeros.",
           TextMapId = "Message_Guide_Dispatch_11"
         },
         Message_Guide_Dispatch_12 = {
-          ContentES = "Gefährten können nur zu dynamischen Aufträgen entsandt werden, die du bereits einmal abgeschlossen hast. ",
+          ContentES = "Los compañeros solo pueden enviarse a Misiones dinámicas que ya hayas completado una vez.",
           TextMapId = "Message_Guide_Dispatch_12"
         },
         Message_Guide_DungeonSec_1 = {
@@ -24820,15 +25586,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_Dungeon_19_Pad = {
           ContentES = "Presiona para entrar en <H>Encargo: Cobertura</>.",
           TextMapId = "Message_Guide_Dungeon_19_Pad"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_Dungeon_1_PC",
-    MaxKey = "Message_Guide_RougeContract_4",
-    Loader = function()
-      return {
+        },
         Message_Guide_Dungeon_1_PC = {
           ContentES = "Mantén <H>&ShowCursor&</> para mostrar el cursor, luego selecciona <H>Aventura</> para abrir la página de aventura.",
           TextMapId = "Message_Guide_Dungeon_1_PC"
@@ -24872,7 +25630,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_Dungeon_8 = {
           ContentES = "Edita la configuración de tu equipo preajuste para las batallas de encargos aquí.",
           TextMapId = "Message_Guide_Dungeon_8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_Dungeon_8_Pad",
+    MaxKey = "Message_Guide_ReplaceChar_8",
+    Loader = function()
+      return {
         Message_Guide_Dungeon_8_Pad = {
           ContentES = "Presiona para editar la configuración de tu equipo para las batallas de encargos.",
           TextMapId = "Message_Guide_Dungeon_8_Pad"
@@ -24882,23 +25648,23 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Message_Guide_Dungeon_9"
         },
         Message_Guide_Fish01 = {
-          ContentES = "Wähle hier, um die Angelrute zu wechseln",
+          ContentES = "Selecciona aquí para cambiar caña",
           TextMapId = "Message_Guide_Fish01"
         },
         Message_Guide_Fish02 = {
-          ContentES = "Wähle hier, um den Köder zu wechseln",
+          ContentES = "Selecciona aquí para cambiar cebo",
           TextMapId = "Message_Guide_Fish02"
         },
         Message_Guide_Fish03 = {
-          ContentES = "Wähle hier, um mit dem Angeln zu beginnen",
+          ContentES = "Selecciona aquí para empezar a pescar",
           TextMapId = "Message_Guide_Fish03"
         },
         Message_Guide_Fish04 = {
-          ContentES = "Wähle hier, um die Angel auszuwerfen",
+          ContentES = "Selecciona aquí para lanzar la línea",
           TextMapId = "Message_Guide_Fish04"
         },
         Message_Guide_Fish05 = {
-          ContentES = "Wähle hier, um die Angel einzuholen",
+          ContentES = "Selecciona aquí para recoger",
           TextMapId = "Message_Guide_Fish05"
         },
         Message_Guide_Forge_1 = {
@@ -25001,6 +25767,38 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           ContentES = "Presiona para seleccionar \"reclamar todo\" y recolectar todas las recompensas del evento disponibles",
           TextMapId = "Message_Guide_GameEvent_3_Pad"
         },
+        Message_Guide_GuildQuest_1 = {
+          ContentES = "Haz clic para consultar las <H>Misiones de Gremio</>",
+          TextMapId = "Message_Guide_GuildQuest_1"
+        },
+        Message_Guide_GuildQuest_1_Pad = {
+          ContentES = "Pulsa para consultar las <H>Misiones de Gremio</>",
+          TextMapId = "Message_Guide_GuildQuest_1_Pad"
+        },
+        Message_Guide_GuildQuest_2 = {
+          ContentES = "Las Misiones de gremio se dividen en misiones diarias y semanales. Al completarlas, aumentarás tu actividad personal.",
+          TextMapId = "Message_Guide_GuildQuest_2"
+        },
+        Message_Guide_GuildQuest_3 = {
+          ContentES = "Completar <H>Notas</> también aumenta tu actividad personal. Incrementa tu actividad para obtener grandes recompensas.",
+          TextMapId = "Message_Guide_GuildQuest_3"
+        },
+        Message_Guide_Guild_1 = {
+          ContentES = "<H>Gremio</> desbloqueado",
+          TextMapId = "Message_Guide_Guild_1"
+        },
+        Message_Guide_Guild_2 = {
+          ContentES = "Haz clic para acceder a la interfaz de <H>Gremio</>",
+          TextMapId = "Message_Guide_Guild_2"
+        },
+        Message_Guide_Guild_2_Pad = {
+          ContentES = "Pulsa para acceder a la interfaz de <H>Gremio</>",
+          TextMapId = "Message_Guide_Guild_2_Pad"
+        },
+        Message_Guide_Guild_3 = {
+          ContentES = "Seleccionar un gremio",
+          TextMapId = "Message_Guide_Guild_3"
+        },
         Message_Guide_HardBoss_2 = {
           ContentES = "Haz clic para entrar en <H>Ecos nocturnos</>.",
           TextMapId = "Message_Guide_HardBoss_2"
@@ -25024,6 +25822,34 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_HardBoss_5_Pad = {
           ContentES = "Presiona para seleccionar <H>Iniciar desafío</> para ver detalles sobre la etapa y viajar rápidamente al sitio de la batalla.",
           TextMapId = "Message_Guide_HardBoss_5_Pad"
+        },
+        Message_Guide_Hyper_1 = {
+          ContentES = "Las <H>Armas de calamidad</> tienen una ruta de crecimiento única y efectos de potencial exclusivos.",
+          TextMapId = "Message_Guide_Hyper_1"
+        },
+        Message_Guide_Hyper_2 = {
+          ContentES = "Haz clic para ver las armas cuerpo a cuerpo",
+          TextMapId = "Message_Guide_Hyper_2"
+        },
+        Message_Guide_Hyper_2_Pad = {
+          ContentES = "Pulsa para ver las armas cuerpo a cuerpo",
+          TextMapId = "Message_Guide_Hyper_2_Pad"
+        },
+        Message_Guide_Hyper_3 = {
+          ContentES = "Haz clic para filtrar las Armas de calamidad",
+          TextMapId = "Message_Guide_Hyper_3"
+        },
+        Message_Guide_Hyper_3_Pad = {
+          ContentES = "Pulsa para filtrar las Armas de calamidad",
+          TextMapId = "Message_Guide_Hyper_3_Pad"
+        },
+        Message_Guide_Hyper_4 = {
+          ContentES = "Haz clic <H>Fundición de calamidad</>",
+          TextMapId = "Message_Guide_Hyper_4"
+        },
+        Message_Guide_Hyper_4_Pad = {
+          ContentES = "Pulsa <H>Fundición de calamidad</>",
+          TextMapId = "Message_Guide_Hyper_4_Pad"
         },
         Message_Guide_Impression_1 = {
           ContentES = "¿Sientes curiosidad por saber cómo nos ve el resto de Atlasia? ¡Echa un vistazo a las \"Impresiones\" que recibimos en diferentes regiones!",
@@ -25084,6 +25910,50 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_Intron_7_Pad = {
           ContentES = "Presiona para usar <H>Pensamientos</> y desbloquear <H>Intron I</>.",
           TextMapId = "Message_Guide_Intron_7_Pad"
+        },
+        Message_Guide_IronExp_1 = {
+          ContentES = "En <H>Encargos abisales</> puedes obtener materiales de Armas de calamidad.",
+          TextMapId = "Message_Guide_IronExp_1"
+        },
+        Message_Guide_IronExp_10 = {
+          ContentES = "Cuantas más rondas completas, mayor será el nivel de la <H>Brújula abisal</> obtenida y mejores serán las recompensas.",
+          TextMapId = "Message_Guide_IronExp_10"
+        },
+        Message_Guide_IronExp_4 = {
+          ContentES = "Haz clic para cambiar a <H>Encargos abisales</>",
+          TextMapId = "Message_Guide_IronExp_4"
+        },
+        Message_Guide_IronExp_4_Pad = {
+          ContentES = "Pulsa para cambiar a <H>Encargos abisales</>",
+          TextMapId = "Message_Guide_IronExp_4_Pad"
+        },
+        Message_Guide_IronExp_5 = {
+          ContentES = "Haz clic para acceder a la <H>Expedición abisal</>",
+          TextMapId = "Message_Guide_IronExp_5"
+        },
+        Message_Guide_IronExp_5_Pad = {
+          ContentES = "Pulsa para acceder a la <H>Expedición abisal</>",
+          TextMapId = "Message_Guide_IronExp_5_Pad"
+        },
+        Message_Guide_IronExp_6 = {
+          ContentES = "Aquí puedes cambiar el tipo de materiales de Armas de calamidad obtenidas",
+          TextMapId = "Message_Guide_IronExp_6"
+        },
+        Message_Guide_IronExp_7 = {
+          ContentES = "Se necesita una <H>Brújula abisal</> para entrar en la <H>Expedición abisal</>",
+          TextMapId = "Message_Guide_IronExp_7"
+        },
+        Message_Guide_IronExp_8 = {
+          ContentES = "Haz clic para seleccionar una <H>Brújula abisal</>",
+          TextMapId = "Message_Guide_IronExp_8"
+        },
+        Message_Guide_IronExp_8_Pad = {
+          ContentES = "Pulsa para seleccionar una <H>Brújula abisal</>",
+          TextMapId = "Message_Guide_IronExp_8_Pad"
+        },
+        Message_Guide_IronExp_9 = {
+          ContentES = "Las <H>Brújulas abisales</> pueden obtenerse mediante forja o completando los <H>Encargos abisales</>.",
+          TextMapId = "Message_Guide_IronExp_9"
         },
         Message_Guide_MaerJ = {
           ContentES = "Haz clic en el botón Reminiscencia para combinar Pensamientos en un personaje.",
@@ -25390,7 +26260,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Message_Guide_PetTrain_6"
         },
         Message_Guide_PetTrain_7 = {
-          ContentES = "Im Eigenschaftskompendium kannst du alle Geniemon-Eigenschaften einsehen und die automatische Sperre für neu erworbene Geniemons mit ausgewählten Eigenschaften ein- oder ausschalten.",
+          ContentES = "En el Archivo de rasgos de Geniemon, puedes consultar todos los rasgos de los Geniemons, así como activar o desactivar el bloqueo automático de los Gsniemon recién obtenidos que posean rasgos específicos.",
           TextMapId = "Message_Guide_PetTrain_7"
         },
         Message_Guide_PetTraits_1 = {
@@ -25490,19 +26360,19 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Message_Guide_Pet_11_PHONE"
         },
         Message_Guide_Qianji_1 = {
-          ContentES = "{性别:Kleiner Diener|Kleine Dienerin}, rüste die <H>Mechanische Nexus</> aus! Zeigen wir Meister Gongshang, was wir können!",
+          ContentES = "¡Fiel secuaz, equipa rápido el <H>Nexo Mecánico</> y demuestra al Maestro Gongshang de lo que somos capaces!",
           TextMapId = "Message_Guide_Qianji_1"
         },
         Message_Guide_Qianji_2 = {
-          ContentES = "Klicke hier, um auf die <H>Mechanische Nexus</> und andere Erkundungswerkzeuge zuzugreifen.",
+          ContentES = "Haz clic aquí para acceder al <H>Nexo mecánico</> y a otros objetos de exploración.",
           TextMapId = "Message_Guide_Qianji_2"
         },
         Message_Guide_Qianji_2_Pad = {
-          ContentES = "Tippe hier, um auf die <H>Mechanische Nexus</> und andere Erkundungswerkzeuge zuzugreifen.",
+          ContentES = "Toca aquí para acceder al <H>Nexo mecánico</> y a otros objetos de exploración.",
           TextMapId = "Message_Guide_Qianji_2_Pad"
         },
         Message_Guide_Qianji_3 = {
-          ContentES = "Ziehe die <H>Mechanische Nexus</> in deinen Taktischen Rucksack, um ihn während der Erkundung zu benutzen.",
+          ContentES = "Arrastra el <H>Nexo mecánico</> al Mochila táctica para poder usarlo durante la exploración.",
           TextMapId = "Message_Guide_Qianji_3"
         },
         Message_Guide_Quest_1 = {
@@ -25568,7 +26438,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_ReplaceChar_8 = {
           ContentES = "Selecciona el <H>botón \"+\"</> para <H>mejorar tu personaje</>.",
           TextMapId = "Message_Guide_ReplaceChar_8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Message_Guide_ReplaceChar_9",
+    MaxKey = "Minigame_Textmap_100336",
+    Loader = function()
+      return {
         Message_Guide_ReplaceChar_9 = {
           ContentES = "Luego de reemplazar personajes o mejorarlos, recuerda equiparlos con las armas cuerpo a cuerpo y a distancia adecuadas.",
           TextMapId = "Message_Guide_ReplaceChar_9"
@@ -25628,15 +26506,7 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Message_Guide_RougeContract_4 = {
           ContentES = "Selecciona <H>Confirmar</> para guardar su configuración actual del abismo.",
           TextMapId = "Message_Guide_RougeContract_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Message_Guide_RougeContract_5",
-    MaxKey = "Minigame_Textmap_BaiTips09",
-    Loader = function()
-      return {
+        },
         Message_Guide_RougeContract_5 = {
           ContentES = "Selecciona <H>Restablecer</> para cancelar y restaurar la configuración anterior.",
           TextMapId = "Message_Guide_RougeContract_5"
@@ -26234,159 +27104,167 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "MiddleMouseButton"
         },
         Minigame_Textmap_100301 = {
-          ContentES = "Mit der Deduktion beginnen",
+          ContentES = "Comenzar la deducción",
           TextMapId = "Minigame_Textmap_100301"
         },
         Minigame_Textmap_100302 = {
-          ContentES = "Deduktion abgeschlossen",
+          ContentES = "Deducción completa",
           TextMapId = "Minigame_Textmap_100302"
         },
         Minigame_Textmap_100303 = {
-          ContentES = "Neuer Hinweis",
+          ContentES = "Nueva pista",
           TextMapId = "Minigame_Textmap_100303"
         },
         Minigame_Textmap_100304 = {
-          ContentES = "Schlussfolgern",
+          ContentES = "Deducir",
           TextMapId = "Minigame_Textmap_100304"
         },
         Minigame_Textmap_100305 = {
-          ContentES = "Hinweis erhalten:",
+          ContentES = "Pista adquirida:",
           TextMapId = "Minigame_Textmap_100305"
         },
         Minigame_Textmap_100306 = {
-          ContentES = "Deduktionsprotokoll",
+          ContentES = "Registro de deducción",
           TextMapId = "Minigame_Textmap_100306"
         },
         Minigame_Textmap_100307 = {
-          ContentES = "Deduktionsprotokoll",
+          ContentES = "Registro de deducción",
           TextMapId = "Minigame_Textmap_100307"
         },
         Minigame_Textmap_100308 = {
-          ContentES = "Fallakte",
+          ContentES = "Archivo del caso",
           TextMapId = "Minigame_Textmap_100308"
         },
         Minigame_Textmap_100309 = {
-          ContentES = "Keine Hinweise verfügbar",
+          ContentES = "No hay pistas disponibles",
           TextMapId = "Minigame_Textmap_100309"
         },
         Minigame_Textmap_100310 = {
-          ContentES = "Löse Rätsel, um neue Hinweise aufzudecken",
+          ContentES = "Resuelve misterios para descubrir nuevas pistas",
           TextMapId = "Minigame_Textmap_100310"
         },
         Minigame_Textmap_100311 = {
-          ContentES = "Handlung läuft. Das Deduktionsprotokoll ist derzeit nicht verfügbar.",
+          ContentES = "Historia en progreso. Registro de deducción no disponible por ahora.",
           TextMapId = "Minigame_Textmap_100311"
         },
         Minigame_Textmap_100312 = {
-          ContentES = "Keine Hinweise verfügbar",
+          ContentES = "No hay pistas disponibles",
           TextMapId = "Minigame_Textmap_100312"
         },
         Minigame_Textmap_100313 = {
-          ContentES = "Reflektieren",
+          ContentES = "Meditar",
           TextMapId = "Minigame_Textmap_100313"
         },
         Minigame_Textmap_100314 = {
-          ContentES = "Hinweise zum Kombinieren auswählen",
+          ContentES = "Selecciona pistas para combinar",
           TextMapId = "Minigame_Textmap_100314"
         },
         Minigame_Textmap_100315 = {
-          ContentES = "Reflektieren (%s/%s)",
+          ContentES = "Meditar (%s/%s)",
           TextMapId = "Minigame_Textmap_100315"
         },
         Minigame_Textmap_100316 = {
-          ContentES = "Wähle mindestens zwei Hinweise aus, um fortzufahren",
+          ContentES = "Selecciona al menos dos pistas para continuar",
           TextMapId = "Minigame_Textmap_100316"
         },
         Minigame_Textmap_100317 = {
-          ContentES = "Kombination fehlgeschlagen",
+          ContentES = "Combinación fallida",
           TextMapId = "Minigame_Textmap_100317"
         },
         Minigame_Textmap_100318 = {
-          ContentES = "Kombination erfolgreich",
+          ContentES = "Combinación exitosa",
           TextMapId = "Minigame_Textmap_100318"
         },
         Minigame_Textmap_100319 = {
-          ContentES = "Neuer Hinweis freigeschaltet",
+          ContentES = "Nueva pista desbloqueada",
           TextMapId = "Minigame_Textmap_100319"
         },
         Minigame_Textmap_100320 = {
-          ContentES = "Hinweis einreichen",
+          ContentES = "Presentar pista",
           TextMapId = "Minigame_Textmap_100320"
         },
         Minigame_Textmap_100321 = {
-          ContentES = "Deduktion erfolgreich",
+          ContentES = "Deducción exitosa",
           TextMapId = "Minigame_Textmap_100321"
         },
         Minigame_Textmap_100322 = {
-          ContentES = "Deduktion fehlgeschlagen",
+          ContentES = "Deducción fallida",
           TextMapId = "Minigame_Textmap_100322"
         },
         Minigame_Textmap_100323 = {
-          ContentES = "Unstimmigkeit behoben",
+          ContentES = "Inconsistencia resuelta",
           TextMapId = "Minigame_Textmap_100323"
         },
         Minigame_Textmap_100324 = {
-          ContentES = "Eingereicht",
+          ContentES = "Presentada",
           TextMapId = "Minigame_Textmap_100324"
         },
         Minigame_Textmap_100325 = {
-          ContentES = "Eingereicht",
+          ContentES = "Presentada",
           TextMapId = "Minigame_Textmap_100325"
         },
         Minigame_Textmap_100326 = {
-          ContentES = "Fallhinweise",
+          ContentES = "Pistas del caso",
           TextMapId = "Minigame_Textmap_100326"
         },
         Minigame_Textmap_100327 = {
-          ContentES = "Deduktion abgeschlossen",
+          ContentES = "Deducción completa",
           TextMapId = "Minigame_Textmap_100327"
         },
         Minigame_Textmap_100328 = {
-          ContentES = "Wähle einen Hinweis zum Einreichen",
+          ContentES = "Selecciona una pista para presentarla",
           TextMapId = "Minigame_Textmap_100328"
         },
         Minigame_Textmap_100329 = {
-          ContentES = "Wähle mehrere Hinweise zum Einreichen",
+          ContentES = "Selecciona varias pistas para presentarlas",
           TextMapId = "Minigame_Textmap_100329"
         },
         Minigame_Textmap_100330 = {
-          ContentES = "Keine Hinweise verfügbar",
+          ContentES = "No hay pistas disponibles",
           TextMapId = "Minigame_Textmap_100330"
         },
         Minigame_Textmap_100331 = {
-          ContentES = "Erhalten über [%s]",
+          ContentES = "Obtenido mediante [%s]",
           TextMapId = "Minigame_Textmap_100331"
         },
         Minigame_Textmap_100332 = {
-          ContentES = "Hinweis zur Fallakte hinzugefügt",
+          ContentES = "Pista añadida al caso",
           TextMapId = "Minigame_Textmap_100332"
         },
         Minigame_Textmap_100333 = {
-          ContentES = "Unterschiedliche Hinweise können zu unterschiedlichen Ergebnissen führen. Wähle mit Bedacht.",
+          ContentES = "Diferentes pistas pueden llevar a distintos desenlaces. Elige con cuidado.",
           TextMapId = "Minigame_Textmap_100333"
         },
         Minigame_Textmap_100334 = {
-          ContentES = "Deduktion abgeschlossen",
+          ContentES = "Deducción completa",
           TextMapId = "Minigame_Textmap_100334"
         },
         Minigame_Textmap_100335 = {
-          ContentES = "Deduktion abgeschlossen",
+          ContentES = "Deducción completa",
           TextMapId = "Minigame_Textmap_100335"
         },
         Minigame_Textmap_100336 = {
-          ContentES = "Unstimmigkeit: %s",
+          ContentES = "Inconsistencia: %s",
           TextMapId = "Minigame_Textmap_100336"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Minigame_Textmap_100337",
+    MaxKey = "Mon_DesDetail_6007001",
+    Loader = function()
+      return {
         Minigame_Textmap_100337 = {
-          ContentES = "Liste schließen",
+          ContentES = "Cerrar lista",
           TextMapId = "Minigame_Textmap_100337"
         },
         Minigame_Textmap_100338 = {
-          ContentES = "Beenden",
+          ContentES = "Salir",
           TextMapId = "Minigame_Textmap_100338"
         },
         Minigame_Textmap_100339 = {
-          ContentES = "Hinweise fehlen",
+          ContentES = "Faltan pistas",
           TextMapId = "Minigame_Textmap_100339"
         },
         Minigame_Textmap_100340 = {
@@ -26402,55 +27280,47 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
           TextMapId = "Minigame_Textmap_100342"
         },
         Minigame_Textmap_BaiTips01 = {
-          ContentES = "Ein neuer Hinweis ... Könnte dies der Schlüssel zur Lösung des Rätsels sein?",
+          ContentES = "Una nueva pista… ¿Podría ser la clave para resolver el misterio?",
           TextMapId = "Minigame_Textmap_BaiTips01"
         },
         Minigame_Textmap_BaiTips02 = {
-          ContentES = "Diese Hinweise scheinen nichts miteinander zu tun zu haben. Versuche einen anderen Ansatz.",
+          ContentES = "Estas pistas no parecen relacionadas. Intenta otro enfoque.",
           TextMapId = "Minigame_Textmap_BaiTips02"
         },
         Minigame_Textmap_BaiTips03 = {
-          ContentES = "Das ist alles – das muss die Lösung sein!",
+          ContentES = "Eso es todo, esta debe ser la respuesta.",
           TextMapId = "Minigame_Textmap_BaiTips03"
         },
         Minigame_Textmap_BaiTips04 = {
-          ContentES = "Diese Hinweise passen nicht zu dem Problem. Versuche es erneut.",
+          ContentES = "Estas pistas no coinciden con el problema. Inténtalo de nuevo.",
           TextMapId = "Minigame_Textmap_BaiTips04"
         },
         Minigame_Textmap_BaiTips05 = {
-          ContentES = "Ein neuer Hinweis ... Könnte dies der Schlüssel zur Lösung des Rätsels sein?",
+          ContentES = "Una nueva pista… ¿Podría ser la clave para resolver el caso?",
           TextMapId = "Minigame_Textmap_BaiTips05"
         },
         Minigame_Textmap_BaiTips06 = {
-          ContentES = "Diese Hinweise scheinen nichts miteinander zu tun zu haben. Versuche einen anderen Ansatz.",
+          ContentES = "Estas pistas no parecen relacionadas. Intenta otro enfoque.",
           TextMapId = "Minigame_Textmap_BaiTips06"
         },
         Minigame_Textmap_BaiTips07 = {
-          ContentES = "Das ist alles – das muss die Lösung sein!",
+          ContentES = "Eso es todo, esta debe ser la respuesta.",
           TextMapId = "Minigame_Textmap_BaiTips07"
         },
         Minigame_Textmap_BaiTips08 = {
-          ContentES = "Diese Hinweise passen nicht zu dem Problem. Versuche es erneut.",
+          ContentES = "Estas pistas no coinciden con el problema. Inténtalo de nuevo.",
           TextMapId = "Minigame_Textmap_BaiTips08"
         },
         Minigame_Textmap_BaiTips09 = {
-          ContentES = "Irgendetwas fühlt sich noch unvollständig an ...",
+          ContentES = "Algo aún parece incompleto…",
           TextMapId = "Minigame_Textmap_BaiTips09"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Minigame_Textmap_BaiTips10",
-    MaxKey = "Mon_DesDetail_7006001",
-    Loader = function()
-      return {
+        },
         Minigame_Textmap_BaiTips10 = {
-          ContentES = "Reflektieren ...",
+          ContentES = "Meditando…",
           TextMapId = "Minigame_Textmap_BaiTips10"
         },
         Minigame_Textmap_BaiTips11 = {
-          ContentES = "Könnte die Kombination dieser Hinweise eine neue Wahrheit offenbaren?",
+          ContentES = "¿Podría la combinación de estas pistas revelar una nueva verdad?",
           TextMapId = "Minigame_Textmap_BaiTips11"
         },
         ModArchive_Name_Char_1010 = {
@@ -27184,7 +28054,15 @@ Entraste en el Laberinto con la llave que Xiaoxiang te dio. Derrotaste al Coloso
         Mon_DesDetail_6007001 = {
           ContentES = "Uno de los Filthoids más comunes. Sobresalen por contener enemigos. Es posible que en el pasado fueran unos titanes del pensamiento, capaces de plasmar ideas brillantes sobre la página… no de convertir sus \"inspiraciones\" en llamas reales.",
           TextMapId = "Mon_DesDetail_6007001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_DesDetail_6011001",
+    MaxKey = "Mon_Name_6002017",
+    Loader = function()
+      return {
         Mon_DesDetail_6011001 = {
           ContentES = "Uno de los Filthoids mutantes más comunes. Sobresalen por lanzarse a toda velocidad contra su objetivo y destrozarlo en cuestión de segundos. Sus extremidades especiales le permiten aferrarse sin esfuerzo a muros y techos. Sus fauces y garras implacables, fueron consideradas una amenaza significativa para los viajeros. Si el aullido de un lobo da tiempo para poder escapar, el rugido ronco de un Filthoid solo es el aviso de una muerte anunciada para quienes van desarmados.",
           TextMapId = "Mon_DesDetail_6011001"
@@ -27246,15 +28124,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_DesDetail_7006001 = {
           ContentES = "Los dispositivos de apoyo estándar de las Legiones de Hiperbórea. Son capaces de flotar alrededor del campo de batalla y curar a los soldados heridos. Su diseño modular les permite operar de forma lógica y autónoma. Su uso generalizado confirma uno de los principios fundamentales de la Academia de Alquimia: incluso los procesos repetitivos y tediosos pueden dar lugar a unos milagros extraordinarios.",
           TextMapId = "Mon_DesDetail_7006001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_DesDetail_7007001",
-    MaxKey = "Mon_Name_6003014",
-    Loader = function()
-      return {
+        },
         Mon_DesDetail_7007001 = {
           ContentES = "Los dispositivos de apoyo estándar de las Legiones de Hiperbórea. Son capaces de detener y restringir brevemente a los enemigos. Su diseño modular les permite operar de forma lógica y autónoma. Su uso generalizado confirma uno de los principios fundamentales de la Academia de Alquimia: incluso los procesos repetitivos y tediosos pueden dar lugar a unos milagros extraordinarios.",
           TextMapId = "Mon_DesDetail_7007001"
@@ -27994,7 +28864,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_6002017 = {
           ContentES = "Filthoid Guerrillero - Guardián",
           TextMapId = "Mon_Name_6002017"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_6002018",
+    MaxKey = "Mon_Name_7002017",
+    Loader = function()
+      return {
         Mon_Name_6002018 = {
           ContentES = "Filthoid Guerrillero - Venganza",
           TextMapId = "Mon_Name_6002018"
@@ -28054,15 +28932,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_6003014 = {
           ContentES = "Filthoid Flotante - Trueno",
           TextMapId = "Mon_Name_6003014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_6003015",
-    MaxKey = "Mon_Name_7003014",
-    Loader = function()
-      return {
+        },
         Mon_Name_6003015 = {
           ContentES = "Filthoid Flotante - Putrefacción",
           TextMapId = "Mon_Name_6003015"
@@ -28802,7 +29672,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_7002017 = {
           ContentES = "Soldado Hendedor - Guardián",
           TextMapId = "Mon_Name_7002017"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7002018",
+    MaxKey = "Mon_Name_7018022",
+    Loader = function()
+      return {
         Mon_Name_7002018 = {
           ContentES = "Soldado Hendedor - Venganza",
           TextMapId = "Mon_Name_7002018"
@@ -28862,15 +29740,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_7003014 = {
           ContentES = "Soldado Explorador - Trueno",
           TextMapId = "Mon_Name_7003014"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7003015",
-    MaxKey = "Mon_Name_7019022",
-    Loader = function()
-      return {
+        },
         Mon_Name_7003015 = {
           ContentES = "Soldado Explorador - Putrefacción",
           TextMapId = "Mon_Name_7003015"
@@ -29610,7 +30480,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_7018022 = {
           ContentES = "Centinela de Puño de Acero - Tormenta Eléctrica",
           TextMapId = "Mon_Name_7018022"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_7018023",
+    MaxKey = "Mon_Name_9003016",
+    Loader = function()
+      return {
         Mon_Name_7018023 = {
           ContentES = "Centinela de Puño de Acero - Baño de Sangre",
           TextMapId = "Mon_Name_7018023"
@@ -29670,15 +30548,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_7019022 = {
           ContentES = "Centinela de la Camisa Roja - Tormenta Eléctrica",
           TextMapId = "Mon_Name_7019022"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_7019023",
-    MaxKey = "Mon_Name_9005013",
-    Loader = function()
-      return {
+        },
         Mon_Name_7019023 = {
           ContentES = "Centinela de la Camisa Roja - Baño de Sangre",
           TextMapId = "Mon_Name_7019023"
@@ -30418,7 +31288,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_9003016 = {
           ContentES = "\"Juguetero\" - Marchitar",
           TextMapId = "Mon_Name_9003016"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Mon_Name_9003017",
+    MaxKey = "Name_120302",
+    Loader = function()
+      return {
         Mon_Name_9003017 = {
           ContentES = "\"Juguetero\" - Guardián",
           TextMapId = "Mon_Name_9003017"
@@ -30478,15 +31356,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Mon_Name_9005013 = {
           ContentES = "\"Bombadicto\" - Corrosión",
           TextMapId = "Mon_Name_9005013"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Mon_Name_9005014",
-    MaxKey = "Name_200205",
-    Loader = function()
-      return {
+        },
         Mon_Name_9005014 = {
           ContentES = "\"Bombadicto\" - Trueno",
           TextMapId = "Mon_Name_9005014"
@@ -30957,43 +31827,43 @@ Pueden utilizar robots como ayuda durante el combate.]],
         },
         Multiply = {ContentES = "Num *", TextMapId = "Multiply"},
         MusicScoreName_1001 = {
-          ContentES = "Morgendämmerung jenseits der Nacht",
+          ContentES = "Amanecer más allá de la noche",
           TextMapId = "MusicScoreName_1001"
         },
         MusicScoreName_10011 = {
-          ContentES = "Gesang der Dämmerung und Nacht",
+          ContentES = "La canción del crepúsculo y la noche",
           TextMapId = "MusicScoreName_10011"
         },
         MusicScoreName_1002 = {
-          ContentES = "Das Garn, das sie spann",
+          ContentES = "El hilo que ella tejió",
           TextMapId = "MusicScoreName_1002"
         },
         MusicScoreName_1003 = {
-          ContentES = "Schatten der Vergangenheit",
+          ContentES = "Sombras del pasado",
           TextMapId = "MusicScoreName_1003"
         },
         MusicScoreName_1004 = {
-          ContentES = "Werke und Tage",
+          ContentES = "Obras y días",
           TextMapId = "MusicScoreName_1004"
         },
         MusicScoreName_1005 = {
-          ContentES = "Die Wiege aus Schwarzstahl",
+          ContentES = "La cuna de hierro negro",
           TextMapId = "MusicScoreName_1005"
         },
         MusicScoreName_1006 = {
-          ContentES = "Der Frühling kommt spät",
+          ContentES = "La primavera llega tarde",
           TextMapId = "MusicScoreName_1006"
         },
         MusicScoreName_1007 = {
-          ContentES = "Königs Gambit",
+          ContentES = "Gambito del rey",
           TextMapId = "MusicScoreName_1007"
         },
         MusicScoreName_1008 = {
-          ContentES = "Luno-Tondichtung",
+          ContentES = "Poema tonal de Luno",
           TextMapId = "MusicScoreName_1008"
         },
         MusicScoreName_1009 = {
-          ContentES = "Begrabt mich mit Melodie",
+          ContentES = "Entiérrame con melodía",
           TextMapId = "MusicScoreName_1009"
         },
         MusicScoreName_1010 = {
@@ -31057,31 +31927,31 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "Name_100208"
         },
         Name_100301 = {
-          ContentES = "Akt Ⅰ",
+          ContentES = "Acto I",
           TextMapId = "Name_100301"
         },
         Name_100302 = {
-          ContentES = "Akt Ⅱ",
+          ContentES = "Acto II",
           TextMapId = "Name_100302"
         },
         Name_100303 = {
-          ContentES = "Akt Ⅲ",
+          ContentES = "Acto III",
           TextMapId = "Name_100303"
         },
         Name_100304 = {
-          ContentES = "Akt Ⅳ",
+          ContentES = "Acto IV",
           TextMapId = "Name_100304"
         },
         Name_100305 = {
-          ContentES = "Akt Ⅴ",
+          ContentES = "Acto V",
           TextMapId = "Name_100305"
         },
         Name_100306 = {
-          ContentES = "Finaler Akt",
+          ContentES = "Acto Final",
           TextMapId = "Name_100306"
         },
         Name_100307 = {
-          ContentES = "Epilog",
+          ContentES = "Epílogo",
           TextMapId = "Name_100307"
         },
         Name_100401 = {
@@ -31223,7 +32093,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Name_120302 = {
           ContentES = "Contienda de talentos",
           TextMapId = "Name_120302"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Name_120303",
+    MaxKey = "PET_407_SKILL",
+    Loader = function()
+      return {
         Name_120303 = {
           ContentES = "Su pasado al viento",
           TextMapId = "Name_120303"
@@ -31283,15 +32161,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Name_200205 = {
           ContentES = "Más allá del mar",
           TextMapId = "Name_200205"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Name_200206",
-    MaxKey = "PET_416_PASSIVE",
-    Loader = function()
-      return {
+        },
         Name_200206 = {
           ContentES = "Ladrón de inspiración",
           TextMapId = "Name_200206"
@@ -31441,7 +32311,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "Name_200303"
         },
         Name_200304 = {
-          ContentES = "Wo der Osmanthus blühte",
+          ContentES = "Donde floreció el osmanto",
           TextMapId = "Name_200304"
         },
         Name_200305 = {
@@ -31537,7 +32407,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "Name_400107"
         },
         Name_400111 = {
-          ContentES = "Lunos Spezialtheater",
+          ContentES = "Teatro especial de Luno",
           TextMapId = "Name_400111"
         },
         Name_400121 = {
@@ -32001,7 +32871,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PET_407_SKILL = {
           ContentES = "Inflige daño equivalente a #1 del ATQ del personaje principal a los enemigos cercanos. Detecta 1 Geniemon y 1 cofre en un radio de 100 m y marca su posición durante 30 s.",
           TextMapId = "PET_407_SKILL"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PET_408_PASSIVE",
+    MaxKey = "Pack_Name_Dye_Green_Shop",
+    Loader = function()
+      return {
         PET_408_PASSIVE = {
           ContentES = "Velocidad de Salto +#1, velocidad de Salto Espiral +#2, Fricción Deslizante -#3.",
           TextMapId = "PET_408_PASSIVE"
@@ -32061,15 +32939,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PET_416_PASSIVE = {
           ContentES = "Aumenta el ATQ Lumino para el personaje principal y los Compañeros de combate en #1, y las estadísticas proporcionadas por Cuñas Demoníacas con el prefijo [Fénix] en #2.",
           TextMapId = "PET_416_PASSIVE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PET_416_SKILL",
-    MaxKey = "Pack_Name_Globule_Plenty",
-    Loader = function()
-      return {
+        },
         PET_416_SKILL = {
           ContentES = "Inflige Daño Lumino igual a #1 del ATQ del personaje principal a los enemigos dentro del alcance y aumenta el Daño de Habilidad que reciben en #2 durante #3 s.",
           TextMapId = "PET_416_SKILL"
@@ -32259,7 +33129,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "Pack_Des_MainChar_General_4"
         },
         Pack_Des_MainChar_General_5 = {
-          ContentES = "Contiene apariencias del tema Indómito para Phoxcazador.",
+          ContentES = "Contiene aspectos del tema Indómito para Phoxcazador.",
           TextMapId = "Pack_Des_MainChar_General_5"
         },
         Pack_Des_Mod_01 = {
@@ -32495,7 +33365,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "Pack_Name_13_Gacha9"
         },
         Pack_Name_13_MainChar = {
-          ContentES = "Cofre de apariencia de Phoxcazador: Indómito",
+          ContentES = "Cofre de aspecto de Phoxcazador: Indómito",
           TextMapId = "Pack_Name_13_MainChar"
         },
         Pack_Name_13_Random = {
@@ -32561,6 +33431,18 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pack_Name_14_HyperWeapon3 = {
           ContentES = "Cofre de suministros de armas de calamidad III",
           TextMapId = "Pack_Name_14_HyperWeapon3"
+        },
+        Pack_Name_14_Limited1 = {
+          ContentES = "Cofre de suministro de Hilo tejido de estrellas I",
+          TextMapId = "Pack_Name_14_Limited1"
+        },
+        Pack_Name_14_Limited2 = {
+          ContentES = "Cofre de suministros de Hilo tejido de estrellas II",
+          TextMapId = "Pack_Name_14_Limited2"
+        },
+        Pack_Name_14_Limited3 = {
+          ContentES = "Cofre de suministros de Hilo tejido de estrellas Ⅲ",
+          TextMapId = "Pack_Name_14_Limited3"
         },
         Pack_Name_14_Random1 = {
           ContentES = "Cofre sorpresa de Dragón ascendente",
@@ -32797,7 +33679,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pack_Name_Dye_Green_Shop = {
           ContentES = "Conjunto de tinte básico: Madera",
           TextMapId = "Pack_Name_Dye_Green_Shop"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pack_Name_Dye_Orange_Shop",
+    MaxKey = "PartyReward_Description_240104",
+    Loader = function()
+      return {
         Pack_Name_Dye_Orange_Shop = {
           ContentES = "Conjunto de tinte básico: Duna",
           TextMapId = "Pack_Name_Dye_Orange_Shop"
@@ -32869,15 +33759,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pack_Name_Globule_Plenty = {
           ContentES = "Cofre de suministro de Glóbulos carmín II",
           TextMapId = "Pack_Name_Globule_Plenty"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pack_Name_IronTicket_1001",
-    MaxKey = "PartyReward_Description_320203",
-    Loader = function()
-      return {
+        },
         Pack_Name_IronTicket_1001 = {
           ContentES = "Paquete de brújula abisal",
           TextMapId = "Pack_Name_IronTicket_1001"
@@ -33599,7 +34481,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PartyReward_Description_240104 = {
           ContentES = "Aunque la lámpara de plata aún arde, temo que nuestro reencuentro no fue más que un sueño fugaz.",
           TextMapId = "PartyReward_Description_240104"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyReward_Description_310101",
+    MaxKey = "PartyTopic_Description_320103",
+    Loader = function()
+      return {
         PartyReward_Description_310101 = {
           ContentES = "Una bebida atrevida y picante para quienes buscan un impulso más fuerte. El primer sorbo abre el apetito y el segundo enciende el ánimo: una bebida perfecta para romper el hielo.",
           TextMapId = "PartyReward_Description_310101"
@@ -33671,15 +34561,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PartyReward_Description_320203 = {
           ContentES = "Un trago cálido baja con facilidad. Por un momento, casi crees que puedes dejar atrás los arrepentimientos de ayer.",
           TextMapId = "PartyReward_Description_320203"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyReward_Description_330101",
-    MaxKey = "PartyTopic_Description_420103",
-    Loader = function()
-      return {
+        },
         PartyReward_Description_330101 = {
           ContentES = "Después de un largo día recorriendo la mansión de los Kossak, Margie y tú han reunido un verdadero tesoro. Esperemos que valga la pena el esfuerzo y el dolor de brazos.",
           TextMapId = "PartyReward_Description_330101"
@@ -34407,7 +35289,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PartyTopic_Description_320103 = {
           ContentES = "El gusto por lo dulce es un instinto, porque las personas siempre tienden, de manera inconsciente, a aferrarse a recuerdos de alegría y bienestar, aunque el consumo excesivo pueda pasar factura al cuerpo.",
           TextMapId = "PartyTopic_Description_320103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PartyTopic_Description_320104",
+    MaxKey = "Pet_IpDes_422",
+    Loader = function()
+      return {
         PartyTopic_Description_320104 = {
           ContentES = "Como un cuchillo que atraviesa la garganta, solo quien lo bebe sabe lo que abre y desgarra en su interior.",
           TextMapId = "PartyTopic_Description_320104"
@@ -34479,15 +35369,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PartyTopic_Description_420103 = {
           ContentES = "Cuando la hoja se mancha de sangre, al volver la vista atrás ya no es fácil encontrar el camino de regreso.",
           TextMapId = "PartyTopic_Description_420103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PartyTopic_Description_420104",
-    MaxKey = "Pet_Name_4013",
-    Loader = function()
-      return {
+        },
         PartyTopic_Description_420104 = {
           ContentES = "Cuando el polvo se asienta y las nubes se abren, ¿a dónde va un viajero que alguna vez perdió el rumbo?",
           TextMapId = "PartyTopic_Description_420104"
@@ -35200,7 +36082,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pet_IpDes_422 = {
           ContentES = "Un Geniemon de rareza legendaria, cuyo cuerpo brilla con el lustre de la iolita. Durante mucho tiempo, se creyó que solo existía en las baladas de los bardos y en los sueños de los juglares.",
           TextMapId = "Pet_IpDes_422"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Pet_IpDes_423",
+    MaxKey = "PlayerLevel_WeaponProgress",
+    Loader = function()
+      return {
         Pet_IpDes_423 = {
           ContentES = "Un Geniemon de rareza legendaria, cuyo cuerpo brilla con el lustre de la cornalina. Durante mucho tiempo, se creyó que solo existía en las baladas de los bardos y en los sueños de los juglares.",
           TextMapId = "Pet_IpDes_423"
@@ -35272,15 +36162,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pet_Name_4013 = {
           ContentES = "Equinex brillante",
           TextMapId = "Pet_Name_4013"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Pet_Name_402",
-    MaxKey = "Positioning_Des_HP",
-    Loader = function()
-      return {
+        },
         Pet_Name_402 = {
           ContentES = "Gotita",
           TextMapId = "Pet_Name_402"
@@ -35706,11 +36588,11 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "PhantomTalk_1504_Chest"
         },
         PhantomTalk_160101_Chest = {
-          ContentES = "Vaya, qué agradable sorpresa.",
+          ContentES = "Vaya, qué sorpresa agradable.",
           TextMapId = "PhantomTalk_160101_Chest"
         },
         PhantomTalk_1601_Chest = {
-          ContentES = "Vaya, qué agradable sorpresa.",
+          ContentES = "Vaya, qué sorpresa agradable.",
           TextMapId = "PhantomTalk_1601_Chest"
         },
         PhantomTalk_1801_Chest = {
@@ -35846,7 +36728,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
           TextMapId = "PhotoEvent_Day7_2"
         },
         Piano_NoMusic = {
-          ContentES = "Du hast noch keine Musikstücke. Sammle Partituren, um sie abspielen zu können.",
+          ContentES = "No hay piezas disponibles. Recolecta partituras para reproducir.",
           TextMapId = "Piano_NoMusic"
         },
         PlayerBuff_LockedTips_1 = {
@@ -36008,7 +36890,15 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PlayerLevel_WeaponProgress = {
           ContentES = "Progresión de arma",
           TextMapId = "PlayerLevel_WeaponProgress"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PlayerLevel_WeaponSmelt",
+    MaxKey = "QuestDesc_100303sp105",
+    Loader = function()
+      return {
         PlayerLevel_WeaponSmelt = {
           ContentES = "Fusión de armas",
           TextMapId = "PlayerLevel_WeaponSmelt"
@@ -36080,15 +36970,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Positioning_Des_HP = {
           ContentES = "Los efectos principales de habilidad se basan en los PV máximos del personaje.",
           TextMapId = "Positioning_Des_HP"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Positioning_Des_Heal",
-    MaxKey = "QuestDesc_10030508",
-    Loader = function()
-      return {
+        },
         Positioning_Des_Heal = {
           ContentES = "Restaura los PV a los aliados.",
           TextMapId = "Positioning_Des_Heal"
@@ -36175,23 +37057,23 @@ Pueden utilizar robots como ayuda durante el combate.]],
         },
         Process = {ContentES = "Fluido", TextMapId = "Process"},
         Prologue_ChangeGender = {
-          ContentES = "Geschlecht wechseln",
+          ContentES = "Cambiar género",
           TextMapId = "Prologue_ChangeGender"
         },
         Prologue_ChooseDreamOne = {
-          ContentES = "Bitte wähle eine Figur aus",
+          ContentES = "Por favor, selecciona un personaje",
           TextMapId = "Prologue_ChooseDreamOne"
         },
         Prologue_ChooseGender_Female = {
-          ContentES = "Rechts auswählen",
+          ContentES = "Selecciona derecha",
           TextMapId = "Prologue_ChooseGender_Female"
         },
         Prologue_ChooseGender_Male = {
-          ContentES = "Links auswählen",
+          ContentES = "Selecciona izquierda",
           TextMapId = "Prologue_ChooseGender_Male"
         },
         Prologue_ChooseMoonhunter = {
-          ContentES = "Bitte wähle eine Figur aus",
+          ContentES = "Por favor, selecciona un personaje",
           TextMapId = "Prologue_ChooseMoonhunter"
         },
         QUEST_INSPECIALQUEST_MSG = {
@@ -36625,439 +37507,439 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "QuestDesc_10029901"
         },
         QuestDesc_10030101 = {
-          ContentES = "Nach Tagen der Orientierungslosigkeit in vollkommener Dunkelheit beginnt dein Bewusstsein endlich wieder aufzutauchen.",
+          ContentES = "Tras días a la deriva en la oscuridad, tu conciencia finalmente comienza a despertar…",
           TextMapId = "QuestDesc_10030101"
         },
         QuestDesc_10030102 = {
-          ContentES = "Du erwachst in der Raststätte, nachdem du fünf Tage lang bewusstlos warst. Das erste Gesicht, das du siehst, ist Camillas. Sprich mit ihr – vielleicht kann sie dir erzählen, was während deiner Bewusstlosigkeit geschehen ist.",
+          ContentES = "Despiertas en el Santuario después de cinco días inconsciente. El primer rostro que ves es el de Camilla. Habla con ella, puede contarte lo que ocurrió mientras estabas fuera.",
           TextMapId = "QuestDesc_10030102"
         },
         QuestDesc_10030103 = {
-          ContentES = "Camilla sagt dir, dass du als Einzige den Angriff vor fünf Tagen überlebt hast. Was die Details angeht, bleibt sie jedoch verschlossen. Stattdessen schlägt sie vor, zur Asphodel zu gehen, um die Wahrheit von deinen besorgten Freunden zu erfahren.",
+          ContentES = "Camilla te dice que fuiste {性别:el único|la única} sobreviviente del ataque de hace cinco días. En cuanto a los detalles, guarda silencio. En su lugar, sugiere ir al Asfódeo para escuchar la verdad de tus amigos preocupados.",
           TextMapId = "QuestDesc_10030103"
         },
         QuestDesc_10030104 = {
-          ContentES = "Die Straßen von Icelake sind mit festlichen Dekorationen geschmückt, wirken jedoch seltsam still. Ein paar nervöse Passanten eilen vorbei – die unruhige Stille in der Luft ist unverkennbar. Wenn du die Wahrheit erfahren willst, solltest du zur Asphodel gehen und mit deinen Freunden sprechen.",
+          ContentES = "Las calles del Lago Glacial están adornadas con decoraciones festivas, pero extrañamente silenciosas. Algunos transeúntes apresurados pasan, la calma inquietante bajo la superficie es inconfundible. Si quieres la verdad, lo mejor es ir al Asfódeo y hablar con tus amigos.",
           TextMapId = "QuestDesc_10030104"
         },
         QuestDesc_10030105 = {
-          ContentES = "Auch Rhythm untersucht die Jagd auf Charon. Nach reiflicher Überlegung beschließt du, ihr zu folgen – vielleicht ist dies deine Chance, Frieden in Icelake zu sichern und etwas über Berenica aus der Legion zu erfahren.",
+          ContentES = "Rhythm también está investigando la Caza de Charon. Tras evaluar tus opciones, decides seguirla. Podría ser tu oportunidad de asegurar la paz en el Lago Glacial, y quizá aprender algo sobre Berenica de la Legión.",
           TextMapId = "QuestDesc_10030105"
         },
         QuestDesc_10030106 = {
-          ContentES = "Du und Rhythm vereinbaren, bei der Jagd auf Charon zusammenzuarbeiten. Erster Schritt: den Tatort absuchen und Hinweise sammeln, die auf den Aufenthaltsort des Täters schließen lassen.",
+          ContentES = "Tú y Rhythm acuerdan unir fuerzas en el caso de la Caza de Charon. Primer paso: examinar la escena en busca de pistas que puedan llevar al culpable.",
           TextMapId = "QuestDesc_10030106"
         },
         QuestDesc_10030107 = {
-          ContentES = "Die Hinweise am Tatort deuten auf eine Verbindung zum Theater oder zur Fabrik hin. Als Leitung der Nachtfahrer führst du dein Team zum Galea-Theater, während Rhythm allein die Fabrik untersucht.",
+          ContentES = "Las pistas de la escena sugieren un vínculo con el teatro o la fábrica. Como capitán de los Noctoviajeros, lideras a tu escuadrón hacia el Teatro Galea, mientras Rhythm investiga la fábrica por su cuenta.",
           TextMapId = "QuestDesc_10030107"
         },
         QuestDesc_10030108 = {
-          ContentES = "Eine ältere Frau winkt dich aus der Ferne – vermutlich die Theaterleiterin. Sprich mit ihr und versuche, einige Hinweise zu dem Fall zu erhalten.",
+          ContentES = "Una anciana te hace señas desde lejos, probablemente la administradora del teatro. Habla con ella y ve si puedes obtener pistas sobre el caso.",
           TextMapId = "QuestDesc_10030108"
         },
         QuestDesc_10030109 = {
-          ContentES = "Frau Putsch scheint mehr mit den Proben für das Silberkerzen-Karneval beschäftigt zu sein als mit dem laufenden Fall. Nach einem kurzen Gespräch kehrt sie zu ihrer Arbeit zurück – aber zumindest hindert sie dich nicht daran, dich umzusehen.\n Die Requisitenmeisterin, die für alle Materiallieferungen zuständig ist, könnte nützlichere Informationen haben.",
+          ContentES = "Doña Putsch parece más preocupada por el ensayo del Carnaval de la Vela de Plata que por el caso en curso. Tras un breve intercambio, regresa a su trabajo. Pero al menos no te impide mirar alrededor.\nEl maestro de utilería, encargado de todas las entregas de material, podría tener información más útil.",
           TextMapId = "QuestDesc_10030109"
         },
         QuestDesc_10030110 = {
-          ContentES = "Laut dem Requisitenbuch hat die Truppe den ganzen Monat über ununterbrochen geprobt – kaum verdächtig. Also richtest du deine Aufmerksamkeit auf die elegante Frau auf der Bühne und den nervösen jungen Mann an ihrer Seite. Sein zittriges Verhalten weckt Ihren Verdacht – könnte er etwas mit dem Fall zu tun haben?",
+          ContentES = "Según el registro de utilería, la compañía ha estado ensayando sin parar todo el mes, nada sospechoso. Tu atención se dirige entonces a la elegante mujer en el escenario y al joven ansioso a su lado. Su actitud nerviosa despierta sospechas, ¿podría estar involucrado?",
           TextMapId = "QuestDesc_10030110"
         },
         QuestDesc_10030111 = {
-          ContentES = "Die Truppe scheint weder ein Motiv noch eine Gelegenheit für das Verbrechen gehabt zu haben. Da es hier keine hilfreichen Hinweise gibt, ist es der Zeit, sich mit Rhythm zu treffen und zu erfahren, ob sie in der Fabrik etwas herausfinden konnte.",
+          ContentES = "La compañía parece carecer tanto de motivo como de oportunidad para cometer el crimen. Sin pistas útiles aquí, es momento de reagruparse y ver si Rhythm encontró algo en la fábrica.",
           TextMapId = "QuestDesc_10030111"
         },
         QuestDesc_10030112 = {
-          ContentES = "Rhythm erzählt dir von einem kürzlichen Diebstahl von Phoxichor in der Fabrik – der echte Vorrat wurde durch Fischöl ersetzt. Das würde die starken Phoxichor-Flecken auf dem Täter erklären. Du verdächtigst nun die Fischer der Icelake-Fischerei. Begib dich nach Mist Aken und spüre sie auf.",
+          ContentES = "Rhythm te cuenta sobre un reciente robo de Phoxichor en la fábrica, el verdadero stock fue reemplazado con aceite de pescado. Eso explicaría las fuertes manchas de Phoxichor en el agresor. Ahora sospechas de los pescadores en las Pesquerías del Lago Glacial. Ve a la Zona Nebulosa y rastrea a los pescadores.",
           TextMapId = "QuestDesc_10030112"
         },
         QuestDesc_10030113 = {
-          ContentES = "Du nimmst das Fischöl von Rhythm – und die Katze wird sofort munter, schnurrt und wedelt mit dem Schweif, als wolle sie dich irgendwohin führen. Offenbar möchte sie, dass du ihr folgst. Warum also nicht sehen, wohin?",
+          ContentES = "Tomas el aceite de pescado de Rhythm y el gato inmediatamente se anima, ronroneando y moviendo la cola como si te invitara a seguirlo. Claramente quiere que lo sigas. Será mejor ver a dónde conduce.",
           TextMapId = "QuestDesc_10030113"
         },
         QuestDesc_10030114 = {
-          ContentES = "Die Katze führt dich direkt zu einem sichtlich erschütterten Fischer. Noch bevor du ein Wort sagen kannst, fällt er auf die Knie, weinend und flehend um ein Geständnis. Irgendetwas stimmt hier nicht – es ist Zeit, genauer nachzuforschen.",
+          ContentES = "El gato te lleva directamente a un pescador visiblemente alterado. Antes de que puedas hablar, cae de rodillas, sollozando y rogando confesar. Algo no está bien, es momento de investigar más a fondo.",
           TextMapId = "QuestDesc_10030114"
         },
         QuestDesc_10030201 = {
-          ContentES = "Du bist in der Kanalisation in der Nähe der Fabrik angekommen. Wohin jetzt? Am besten Rhythm fragen – sie hat vielleicht eine Idee.",
+          ContentES = "Has llegado a las alcantarillas cerca de la fábrica. ¿Qué camino tomar ahora? Será mejor consultar a Rhythm, quizá tenga algunas ideas.",
           TextMapId = "QuestDesc_10030201"
         },
         QuestDesc_10030202 = {
-          ContentES = "Ein paar Schritte in die Kanäle hinein hört Outsider plötzlich seltsame Geräusche vor sich. Geh am besten vorsichtig weiter.",
+          ContentES = "A pocos pasos dentro de las alcantarillas, Outsider escucha de repente ruidos extraños más adelante. Lo mejor es avanzar con precaución.",
           TextMapId = "QuestDesc_10030202"
         },
         QuestDesc_10030203 = {
-          ContentES = "Hilferufe hallen durch den Tunnel. Bevor du reagieren kannst, stürmt Rhythm auf das Geräusch zu. Bleib nah bei ihr und folge ihr.",
+          ContentES = "Gritos de auxilio resuenan por el túnel. Antes de que puedas reaccionar, Rhythm corre hacia el sonido. Mantente cerca y sigue su ejemplo.",
           TextMapId = "QuestDesc_10030203"
         },
         QuestDesc_10030204 = {
-          ContentES = "Du hast den ersten eingeschlossenen Zivilisten gerettet und das versiegelte Tor geöffnet. Weiter vorwärts – es gibt noch jemanden, der Hilfe braucht.",
+          ContentES = "Has rescatado al primer civil atrapado y abierto la puerta sellada. Es momento de seguir adelante, aún hay alguien más que necesita ayuda.",
           TextMapId = "QuestDesc_10030204"
         },
         QuestDesc_10030205 = {
-          ContentES = "Der Zivilist sagt, sein Begleiter sei gleich voraus. Beeile dich.",
+          ContentES = "Según el civil, su compañero está justo más adelante. Muévete rápido.",
           TextMapId = "QuestDesc_10030205"
         },
         QuestDesc_10030206 = {
-          ContentES = "Du hörst den zweiten Zivilisten ganz in der Nähe rufen. Beeile dich und sieh nach ihm.",
+          ContentES = "Escuchas al segundo civil llamando cerca. Apresúrate y revísalo.",
           TextMapId = "QuestDesc_10030206"
         },
         QuestDesc_10030207 = {
-          ContentES = "Beide Zivilisten sind in Sicherheit. Sprich mit Rhythm – schau, wie es ihr nach der Rettung geht.",
+          ContentES = "Ambos civiles están a salvo. Habla con Rhythm, ve cómo se encuentra después del rescate.",
           TextMapId = "QuestDesc_10030207"
         },
         QuestDesc_10030208 = {
-          ContentES = "Nachdem das Abwasser abgelaufen ist, kannst du das Knurren des Täters durch die Dunkelheit hallen hören. Bleib wachsam und geh weiter.",
+          ContentES = "Con las aguas residuales drenadas, puedes escuchar los gruñidos del agresor resonando en la oscuridad. Mantente alerta y sigue avanzando.",
           TextMapId = "QuestDesc_10030208"
         },
         QuestDesc_10030210 = {
-          ContentES = "Niemand hätte erwartet, dass bei der Jagd auf Charon nicht nur ein Angreifer, sondern gleich zwei auftauchen würden. Rhythm wurde schwer verletzt, als sie dich vor dem zweiten Angreifer schützte. Da Verstärkung eintrifft, wird die Legion von hier aus übernehmen. Nach kurzer Diskussion beschließen die Nachtfahrer, sie im medizinischen Zentrum zu besuchen – teilweise wegen der Belohnung, vor allem aber, um ihr dafür zu danken, dass sie dir das Leben gerettet hat.",
+          ContentES = "Nadie esperaba que la Caza de Charon involucrara no a uno, sino a dos atacantes. Rhythm resultó gravemente herida al protegerte del segundo agresor. Con la llegada de refuerzos, la Legión se hará cargo de aquí en adelante. Tras discutirlo, los Noctoviajeros acuerdan visitarla en el centro médico, en parte por la recompensa, pero sobre todo para agradecerle por salvar tu vida.",
           TextMapId = "QuestDesc_10030210"
         },
         QuestDesc_10030211 = {
-          ContentES = "Niemand hätte erwartet, dass bei der Jagd auf Charon nicht nur ein Angreifer, sondern gleich zwei auftauchen würden. Rhythm wurde schwer verletzt, als sie dich vor dem zweiten Angreifer schützte. Da Verstärkung eintrifft, wird die Legion von hier aus übernehmen. Nach kurzer Diskussion beschließen die Nachtfahrer, sie im medizinischen Zentrum zu besuchen – teilweise wegen der Belohnung, vor allem aber, um ihr dafür zu danken, dass sie dir das Leben gerettet hat.",
+          ContentES = "Nadie esperaba que la Caza de Charon involucrara no a uno, sino a dos atacantes. Rhythm resultó gravemente herida al protegerte del segundo agresor. Con la llegada de refuerzos, la Legión se hará cargo de aquí en adelante. Tras discutirlo, los Noctoviajeros acuerdan visitarla en el centro médico, en parte por la recompensa, pero sobre todo para agradecerle por salvar tu vida.",
           TextMapId = "QuestDesc_10030211"
         },
         QuestDesc_10030212 = {
-          ContentES = "Die Legion versprach eine Eskorte – doch hier ist niemand. Stattdessen sind die Wände voller Einschusslöcher: Spuren eines heftigen Gefechts. Es scheint, als seien die hier stationierten Soldaten dem Täter begegnet. Da du sowieso aufbrechen willst, folgst du am besten den Spuren und schaust, wohin sie führen.",
+          ContentES = "La Legión prometió enviar una escolta, pero al llegar, no hay nadie a la vista. En cambio, las paredes están llenas de agujeros de bala, evidencia de un feroz tiroteo. Parece que los soldados apostados aquí se cruzaron con el culpable. Ya que vas a salir igual, lo mejor es seguir el rastro y ver a dónde conduce.",
           TextMapId = "QuestDesc_10030212"
         },
         QuestDesc_10030213 = {
-          ContentES = "Du findest einen Tunnel, den der Täter wahrscheinlich bei seiner Flucht benutzt hat. Er führt bis zum äußeren Ausgang der Kanäle. Geh vorsichtig weiter.",
+          ContentES = "Descubres un túnel probablemente usado por el atacante durante su escape. Conduce hasta la salida exterior de las alcantarillas. Avanza con cuidado.",
           TextMapId = "QuestDesc_10030213"
         },
         QuestDesc_10030214 = {
-          ContentES = "Am Ende der Kanäle herrscht eine bedrückende, unheimliche Stille. Hier ist eindeutig etwas passiert. Bleib aufmerksam.",
+          ContentES = "Una pesada e inquietante quietud llena el aire cerca del final de las alcantarillas. Algo claramente ocurrió aquí. Mantente alerta.",
           TextMapId = "QuestDesc_10030214"
         },
         QuestDesc_10030215 = {
-          ContentES = "Der Ausgang ist ein Bild des Grauens. Giftspuren – keine Standardausrüstung der imperialen Streitkräfte – deuten auf etwas weitaus Dunkleres hinter der Jagd auf Charon hin. Nach kurzer Diskussion bleibt Outsider zurück, um der Legion Bericht zu erstatten. Du und Snow haltet euch an den Plan und besucht Rhythm im Krankenhaus.",
+          ContentES = "La salida es una escena de carnicería. Restos de veneno — no estándar en las fuerzas imperiales — sugieren algo mucho más oscuro detrás de la Caza de Charon. Tras discutirlo, Outsider se queda para informar a la Legión. Tú y Snow siguen el plan y se dirigen al hospital para visitar a Rhythm.",
           TextMapId = "QuestDesc_10030215"
         },
         QuestDesc_10030216 = {
-          ContentES = "Einige Tage später erwacht Rhythm endlich aus ihrem Koma. Nachdem du sie über alles auf den neuesten Stand gebracht hast, dankt sie dir – und bittet dich als Zeichen ihrer Wertschätzung, ein silbernes Siegel aus ihrem geheimen Basispunkt zu holen. Noch ans Bett gefesselt, will sie persönliche Briefe schreiben, um Verbündete zu erreichen und mehr Informationen über Berenica zu sammeln.",
+          ContentES = "Días después, Rhythm finalmente despierta de su coma. Después de ponerla al tanto de todo lo ocurrido, te agradece y como gesto de gratitud, te pide recuperar un sello plateado de su base secreta. Aunque sigue en cama, planea escribir cartas personales a aliados de confianza, esperando reunir más noticias sobre Berenica para ti.",
           TextMapId = "QuestDesc_10030216"
         },
         QuestDesc_10030217 = {
-          ContentES = "Einige Tage später erwacht Rhythm endlich aus ihrem Koma. Nachdem du sie über alles auf den neuesten Stand gebracht hast, dankt sie dir – und bittet dich als Zeichen ihrer Wertschätzung, ein silbernes Siegel aus ihrem geheimen Basispunkt zu holen. Noch ans Bett gefesselt, will sie persönliche Briefe schreiben, um Verbündete zu erreichen und mehr Informationen über Berenica zu sammeln.",
+          ContentES = "Días después, Rhythm finalmente despierta de su coma. Después de ponerla al tanto de todo lo ocurrido, te agradece y como gesto de gratitud, te pide recuperar un sello plateado de su base secreta. Aunque sigue en cama, planea escribir cartas personales a aliados de confianza, esperando reunir más noticias sobre Berenica para ti.",
           TextMapId = "QuestDesc_10030217"
         },
         QuestDesc_10030218 = {
-          ContentES = "Du bist an Rhythms geheimem Basispunkt angekommen. Durchsuche den Ort – das silberne Siegel mit ihrem Namen sollte hier irgendwo sein.",
+          ContentES = "Has llegado a la base oculta de Rhythm. Revisa el lugar, el sello plateado con su nombre debería estar en algún sitio.",
           TextMapId = "QuestDesc_10030218"
         },
         QuestDesc_10030219 = {
-          ContentES = "Du bist an Rhythms geheimem Basispunkt angekommen. Durchsuche den Ort – das silberne Siegel mit ihrem Namen sollte hier irgendwo sein.",
+          ContentES = "Has llegado a la base oculta de Rhythm. Revisa el lugar, el sello plateado con su nombre debería estar en algún sitio.",
           TextMapId = "QuestDesc_10030219"
         },
         QuestDesc_100302sp101 = {
-          ContentES = "Zwei Zivilisten wurden von einem Monster in der Kanalisation gefangen genommen – wahrscheinlich handelt es sich um den Täter aus der Jagd auf Charon. Du bist definitiv auf der richtigen Spur. Die Kreatur ist vorerst verschwunden, also konzentriere dich darauf, das Tor zu öffnen und die Zivilisten in Sicherheit zu bringen.",
+          ContentES = "Dos civiles han quedado atrapados en las alcantarillas por un monstruo, probablemente el culpable de la Caza de Charon. Sin duda estás en el camino correcto. El monstruo se ha ido por ahora, así que concéntrate en desbloquear la puerta y poner a salvo a los civiles.",
           TextMapId = "QuestDesc_100302sp101"
         },
         QuestDesc_100302sp102 = {
-          ContentES = "Um die Steuerkonsole wieder zu aktivieren, musst du die verstopften Rohre in diesem Bereich reinigen. Sobald das Abwassersystem aktiviert wird, schwärmen jedoch Filthoiden herein. Halte sie auf und beschütze den Zivilisten!",
+          ContentES = "Para reactivar la Consola de control, necesitas despejar las tuberías bloqueadas en esta área. Pero en cuanto el sistema de drenaje se activa, los Filthoids aparecen en masa. Resístelos y protege al civil.",
           TextMapId = "QuestDesc_100302sp102"
         },
         QuestDesc_100302sp103 = {
-          ContentES = "Alle verstopften Rohre wurden gereinigt. Versuche erneut, das Tor zu öffnen.",
+          ContentES = "Todas las tuberías bloqueadas han sido despejadas. Intenta desbloquear la puerta otra vez.",
           TextMapId = "QuestDesc_100302sp103"
         },
         QuestDesc_100302sp104 = {
-          ContentES = "Um die Steuerkonsole wieder zu aktivieren, musst du die verstopften Rohre in diesem Bereich reinigen. Sobald das Abwassersystem aktiviert wird, schwärmen jedoch Filthoiden herein. Halte sie auf und beschütze den Zivilisten!",
+          ContentES = "Para reactivar la Consola de control, necesitas despejar las tuberías bloqueadas en esta área. Pero en cuanto el sistema de drenaje se activa, los Filthoids aparecen en masa. Resístelos y protege al civil.",
           TextMapId = "QuestDesc_100302sp104"
         },
         QuestDesc_100302sp201 = {
-          ContentES = "Der zweite Zivilist ist hinter den Abwehrmechanismen der Kanalisation eingeschlossen. Bediene die Steuerkonsole, um die Sicherheitsvorrichtungen zu deaktivieren und ihn zu retten.",
+          ContentES = "El segundo civil está atrapado detrás de las defensas de las alcantarillas. Desactiva los mecanismos de seguridad desde la Consola de control y sácalo a salvo.",
           TextMapId = "QuestDesc_100302sp201"
         },
         QuestDesc_100302sp202 = {
-          ContentES = "Dasselbe Problem wie zuvor – die Steuerkonsole ist hinter verstopften Rohren versiegelt. Öffne die Ventile, beseitige die Blockade und bring das System wieder in Betrieb.",
+          ContentES = "El mismo problema otra vez, la Consola de control está sellada tras tuberías bloqueadas. Abre las válvulas, despeja la obstrucción y vuelve a poner el sistema en línea.",
           TextMapId = "QuestDesc_100302sp202"
         },
         QuestDesc_100302sp203 = {
-          ContentES = "Der zweite Zivilist ist hinter den Abwehrmechanismen der Kanalisation eingeschlossen. Bediene die Steuerkonsole, um die Sicherheitsvorrichtungen zu deaktivieren und ihn zu retten.",
+          ContentES = "El segundo civil está atrapado detrás de las defensas de las alcantarillas. Desactiva los mecanismos de seguridad desde la Consola de control y sácalo a salvo.",
           TextMapId = "QuestDesc_100302sp203"
         },
         QuestDesc_100302sp301 = {
-          ContentES = "Der Täter der Jagd auf Charon bricht mit einem wilden Gebrüll hervor. Stell dich ihm direkt – es ist Zeit, das zu beenden.",
+          ContentES = "El perpetrador de la Caza de Charon irrumpe con un rugido salvaje. Enfréntalo de una vez, es hora de terminar esto.",
           TextMapId = "QuestDesc_100302sp301"
         },
         QuestDesc_10030301 = {
-          ContentES = "Zurück in Rhythms geheimem Basispunkt findest du das silberne Siegel – zusammen mit ein paar Andenken aus ihrer Vergangenheit. Während du sie durchsuchst, wird dir etwas klar: Vielleicht war die Distanz zwischen euch nie so groß, wie sie schien. Bring ihr das Siegel und hör dir an, was sie zu sagen hat.",
+          ContentES = "De vuelta en la base secreta de Rhythm, encuentras el sello plateado junto con algunos recuerdos de su pasado. Mientras los revisas, algo cambia: quizá la distancia entre ustedes nunca fue tan grande como parecía. Lleva el sello de regreso y escucha lo que tiene que decir.",
           TextMapId = "QuestDesc_10030301"
         },
         QuestDesc_10030302 = {
-          ContentES = "Um unnötigen Ärger zu vermeiden, ist es am besten, vorerst mit der 13. Legion in Icelake zusammenarbeiten.",
+          ContentES = "Para evitar problemas innecesarios, conviene colaborar con las acciones de la 13.ª Legión en Lago Glacial por el momento.",
           TextMapId = "QuestDesc_10030302"
         },
         QuestDesc_10030303 = {
-          ContentES = "Die Jagd auf Charon ist in eine neue Phase getreten. Auf Befehl von Clive begibst du dich in die Kanalisation unter dem Silberfrieden-Platz. Nimm dort erneut Kontakt auf und warte auf weitere Anweisungen.",
+          ContentES = "La Caza de Charon ha entrado en una nueva fase. Siguiendo las órdenes de Clive, te diriges a las alcantarillas bajo la Plaza de la Paz Plateada. Una vez allí, restablece contacto y espera más instrucciones.",
           TextMapId = "QuestDesc_10030303"
         },
         QuestDesc_10030304 = {
-          ContentES = "Nachdem du Rhythm über Berry informiert hast, platzt Kommandantin Lynn aus der 13. Legion ins Krankenzimmer. Sie erklärt ohne Umschweife, dass ihre Einheit die Jagd auf Charon übernimmt. Zum Glück scheint sie nichts von deiner Verbindung zu Sibylle zu wissen – und bietet dir sogar ihre Zusammenarbeit an. Jetzt ist nicht der Moment, Misstrauen zu wecken. Spiele vorerst mit und gib dich kooperativ.",
+          ContentES = "Después de que terminas de actualizar a Rhythm sobre Berry, la comandante Lynn de la 13.ª Legión irrumpe en la sala. Anuncia sin rodeos que su unidad tomará el control de la Caza de Charon. Afortunadamente, parece no estar al tanto de tus vínculos con Sibylle e incluso ofrece cooperar. No es momento de levantar sospechas. Lo mejor es aparentar cooperación por ahora.",
           TextMapId = "QuestDesc_10030304"
         },
         QuestDesc_100303sp101 = {
-          ContentES = "Du hast zugestimmt, bei den Ermittlungen zur Jagd auf Charon zu helfen. Ohne Zeit zu verlieren, weist Lynn dir deine erste Aufgabe zu: Triff Clive aus der 13. Legion außerhalb von Icelake und hilf dabei, die ankommenden Vorräte zu verarbeiten.",
+          ContentES = "Has acordado ayudar en la investigación de la Caza de Charon. Lynn te asigna tu primera tarea: reunirte con Clive de la 13.ª Legión fuera de Lago Glacial y ayudar a procesar los suministros entrantes.",
           TextMapId = "QuestDesc_100303sp101"
         },
         QuestDesc_100303sp102 = {
-          ContentES = "Nach mehreren Tagen hast du die Aufgaben der 13. Legion endlich abgeschlossen. Aber Rhythm taucht nicht am vereinbarten Treffpunkt auf. Ist ihr vielleicht etwas zugestoßen? Durchsuche die Gegend und vergewissere dich, dass sie sicher ist.",
+          ContentES = "Varios días después, finalmente completas las tareas de la 13.ª Legión. Pero Rhythm no aparece en el punto de encuentro acordado. ¿Pudo haber pasado algo? Revisa el área y asegúrate de que esté a salvo.",
           TextMapId = "QuestDesc_100303sp102"
         },
         QuestDesc_100303sp103 = {
-          ContentES = "Um den Bewohnern zu helfen, deren Alltag durch die 13. Legion gestört wurde, sammelt Rhythm wichtige Vorräte. Als ihre Verbündeten bietet ihr eure Hilfe an.",
+          ContentES = "Para ayudar a los pobladores cuyos hogares fueron afectados por la 13.ª Legión, Rhythm está reuniendo suministros esenciales. Como su aliado, te ofreces a ayudar.",
           TextMapId = "QuestDesc_100303sp103"
         },
         QuestDesc_100303sp104 = {
-          ContentES = "Angeln abgeschlossen. Du hast alles, was die Stadtbewohner brauchen – es ist Zeit, die Vorräte abzuliefern.",
+          ContentES = "Pesca completada. Ya tienes todo lo que la gente necesita, es hora de entregar los bienes.",
           TextMapId = "QuestDesc_100303sp104"
         },
         QuestDesc_100303sp105 = {
-          ContentES = "Kaum hast du Margie die Vorräte übergeben, trifft schon ein neuer Auftrag von Clive ein. Anscheinend ist die 13. Legion unterwegs – mach dich auf den Weg und melde dich.",
+          ContentES = "Apenas entregas los suministros a Margie, llega una nueva orden de Clive. Parece que la 13.ª Legión está en movimiento, sal y repórtate.",
           TextMapId = "QuestDesc_100303sp105"
-        },
-        QuestDesc_100303sp201 = {
-          ContentES = "Soldaten der 13. Legion sind in der Kanalisation stationiert und patrouillieren jeweils ihre Sektoren. Die Tunnel sind von Spannung erfüllt. Geh zu dem Bereich, den Clive die Nachtfahrer zugeteilt hat.",
-          TextMapId = "QuestDesc_100303sp201"
-        },
-        QuestDesc_100303sp202 = {
-          ContentES = "Soldaten der 13. Legion sind in der Kanalisation stationiert und patrouillieren jeweils ihre Sektoren. Die Tunnel sind von Spannung erfüllt. Geh zu dem Bereich, den Clive die Nachtfahrer zugeteilt hat.",
-          TextMapId = "QuestDesc_100303sp202"
-        },
-        QuestDesc_100303sp203 = {
-          ContentES = "Der Bereich, den Clive dir zugewiesen hat, ist derzeit unzugänglich – wie immer: Die Steuerkonsole ist vom Abwasser abgeschottet. Lass es ab, um die Sperre aufzuheben und zu deinem Sektor vorzurücken.",
-          TextMapId = "QuestDesc_100303sp203"
-        },
-        QuestDesc_100303sp204 = {
-          ContentES = "Nach einigen Verzögerungen erhältst du endlich Zugang zu dem Bereich, den Clive zugewiesen hat. Beeile dich.",
-          TextMapId = "QuestDesc_100303sp204"
-        },
-        QuestDesc_100303sp205 = {
-          ContentES = "Du versuchst, nach der Erkundung des Gebiets an Clive zu berichten – doch Rhythms Funkterminal versagt und die Nachricht bricht ab. Sieh nach, ob du es reparieren kannst. Versuche, es zu reparieren.",
-          TextMapId = "QuestDesc_100303sp205"
-        },
-        QuestDesc_100303sp206 = {
-          ContentES = "Kaum ist das Funkterminal wieder online, erfährst du, dass der Täter die Blockade der Legion durchbrochen hat und direkt auf dich zukommt. Zum Glück trifft Lynn rechtzeitig mit Verstärkung ein. Jetzt – bring es zu Ende!",
-          TextMapId = "QuestDesc_100303sp206"
-        },
-        QuestDesc_10030401 = {
-          ContentES = "Obwohl die Legion den Fall als gelöst erklärt und im Triumph in die Hauptstadt zurückgekehrt ist, wissen du und Rhythm die Wahrheit: Es ist bei weitem noch nicht vorbei.",
-          TextMapId = "QuestDesc_10030401"
-        },
-        QuestDesc_10030402 = {
-          ContentES = "Die bisherigen Hinweise deuten darauf hin, dass der Täter eine Verbindung zur Oper hatte. Die unheimliche Melodie, die er summte, könnte aus einer Arie stammen – und wenn du sie identifizieren könntest, würde das den Kreis der Verdächtigen eingrenzen. Rhythms jüngerer Bruder Blues ist ein großer Opernfan. In ihrem geheimen Basispunkt hat er eine Sammlung von Kassetten hinterlassen. Es ist zwar unwahrscheinlich, aber einen Versuch wert.",
-          TextMapId = "QuestDesc_10030402"
-        },
-        QuestDesc_10030403 = {
-          ContentES = "Jetzt beginnt der schwierige Teil. Teste dein Gedächtnis und deine Ohren – eine Kassette nach der anderen.",
-          TextMapId = "QuestDesc_10030403"
-        },
-        QuestDesc_10030404 = {
-          ContentES = "Stunden vergehen, während du die Aufnahmen durchgehst. Rhythm ist kurz rausgegangen, um frische Luft zu schnappen. Die Suche ist langsam, mühsam – und anstrengend. Mach jetzt erst einmal eine Pause. Schau nach, wie es ihr geht.",
-          TextMapId = "QuestDesc_10030404"
-        },
-        QuestDesc_10030501 = {
-          ContentES = "Es gab nie Ehre darin, ein Lorbeerkranz-Charon zu werden – der Titel war nur Köder. Was in der Innenstadt wirklich auf dich wartete, war der kalte Operationstisch der Alchemie-Akademie. Jetzt, als Monster, kannst du nur noch gehorchen.",
-          TextMapId = "QuestDesc_10030501"
-        },
-        QuestDesc_10030502 = {
-          ContentES = "Nicht mehr menschlich. Keine Gedanken. Kein Wille. Nur die Aufgabe zählt: Eliminiere die Gegner.",
-          TextMapId = "QuestDesc_10030502"
-        },
-        QuestDesc_10030503 = {
-          ContentES = "Nicht mehr menschlich – ohne Gedanken, ohne Wahl. Begib dich zum Testgelände. Eliminiere die Gegner.",
-          TextMapId = "QuestDesc_10030503"
-        },
-        QuestDesc_10030504 = {
-          ContentES = "Nicht mehr menschlich – ohne Gedanken, ohne Wahl. Begib dich zum Testgelände. Eliminiere die Gegner.",
-          TextMapId = "QuestDesc_10030504"
-        },
-        QuestDesc_10030505 = {
-          ContentES = "Nicht mehr menschlich – ohne Gedanken, ohne Wahl. Begib dich zum Testgelände. Eliminiere die Gegner.",
-          TextMapId = "QuestDesc_10030505"
-        },
-        QuestDesc_10030506 = {
-          ContentES = "Der naive Narr hat es tatsächlich geschafft ... Es gibt kein Zurück mehr. Raus hier – und tu es als Mensch.",
-          TextMapId = "QuestDesc_10030506"
-        },
-        QuestDesc_10030507 = {
-          ContentES = "Der naive Narr hat es tatsächlich geschafft ... Es gibt kein Zurück mehr. Raus hier – und tu es als Mensch.",
-          TextMapId = "QuestDesc_10030507"
-        },
-        QuestDesc_10030508 = {
-          ContentES = "Der naive Narr hat es tatsächlich geschafft ... Es gibt kein Zurück mehr. Raus hier – und tu es als Mensch.",
-          TextMapId = "QuestDesc_10030508"
         }
       }
     end
   },
   {
-    MinKey = "QuestDesc_10030601",
-    MaxKey = "QuestName_10030219",
+    MinKey = "QuestDesc_100303sp201",
+    MaxKey = "QuestName_10030114",
     Loader = function()
       return {
+        QuestDesc_100303sp201 = {
+          ContentES = "Soldados de la 13.ª Legión patrullan las alcantarillas, cada uno en su sección asignada. Los túneles están cargados de tensión. Dirígete al área que Clive designó para los Noctoviajeros.",
+          TextMapId = "QuestDesc_100303sp201"
+        },
+        QuestDesc_100303sp202 = {
+          ContentES = "Soldados de la 13.ª Legión patrullan las alcantarillas, cada uno en su sección asignada. Los túneles están cargados de tensión. Dirígete al área que Clive designó para los Noctoviajeros.",
+          TextMapId = "QuestDesc_100303sp202"
+        },
+        QuestDesc_100303sp203 = {
+          ContentES = "El área asignada por Clive está inaccesible, la Consola de control está bloqueada por aguas residuales. Drena el sistema para levantar el bloqueo y avanzar a tu sector.",
+          TextMapId = "QuestDesc_100303sp203"
+        },
+        QuestDesc_100303sp204 = {
+          ContentES = "Tras algunos retrasos, finalmente accedes al área asignada por Clive. Avanza rápido.",
+          TextMapId = "QuestDesc_100303sp204"
+        },
+        QuestDesc_100303sp205 = {
+          ContentES = "Intentas reportarte con Clive tras inspeccionar el área, pero el terminal de Rhythm falla, cortando el mensaje. Ve si puedes arreglarlo.",
+          TextMapId = "QuestDesc_100303sp205"
+        },
+        QuestDesc_100303sp206 = {
+          ContentES = "En cuanto la radio vuelve a funcionar, te enteras de que el perpetrador ha roto el bloqueo de la Legión y viene hacia ti. Afortunadamente, Lynn llega con refuerzos. Ahora acaba con esto.",
+          TextMapId = "QuestDesc_100303sp206"
+        },
+        QuestDesc_10030401 = {
+          ContentES = "Aunque la Legión declaró el caso cerrado y regresó triunfante a la capital, tú y Rhythm saben la verdad: está lejos de terminar.",
+          TextMapId = "QuestDesc_10030401"
+        },
+        QuestDesc_10030402 = {
+          ContentES = "Revisando las pistas hasta ahora, sospechas que el asesino tenía una conexión con la ópera. Esa inquietante melodía que tarareó podría provenir de un aria, identificarla podría acotar la búsqueda. El hermano menor de Rhythm, Blues, es un fanático de la ópera. Dejó una colección de cintas de casete en su base secreta. Es una posibilidad remota, pero vale la pena intentarlo.",
+          TextMapId = "QuestDesc_10030402"
+        },
+        QuestDesc_10030403 = {
+          ContentES = "Ahora viene la parte difícil. Es momento de poner a prueba tu memoria y tu oído, una cinta a la vez.",
+          TextMapId = "QuestDesc_10030403"
+        },
+        QuestDesc_10030404 = {
+          ContentES = "Las horas pasan mientras revisas las grabaciones. Rhythm ha salido a tomar aire. La búsqueda es lenta, tediosa y agotadora. Por ahora, toma un descanso. Ve a ver cómo está.",
+          TextMapId = "QuestDesc_10030404"
+        },
+        QuestDesc_10030501 = {
+          ContentES = "Nunca hubo gloria en convertirse en un Charon Laureado, el título no era más que un señuelo. Lo que esperaba en la ciudad interior era la fría mesa de operaciones de la Academia de Alquimia. Ahora, como monstruo, lo único que puedes hacer es obedecer.",
+          TextMapId = "QuestDesc_10030501"
+        },
+        QuestDesc_10030502 = {
+          ContentES = "Ya no eres humano. No tienes pensamientos ni elección. Dirígete al campo de pruebas. Elimina al objetivo.",
+          TextMapId = "QuestDesc_10030502"
+        },
+        QuestDesc_10030503 = {
+          ContentES = "Ya no eres humano. No tienes pensamientos ni elección. Dirígete al campo de pruebas. Elimina al objetivo.",
+          TextMapId = "QuestDesc_10030503"
+        },
+        QuestDesc_10030504 = {
+          ContentES = "Ya no eres humano. No tienes pensamientos ni elección. Dirígete al campo de pruebas. Elimina al objetivo.",
+          TextMapId = "QuestDesc_10030504"
+        },
+        QuestDesc_10030505 = {
+          ContentES = "Ya no eres humano. No tienes pensamientos ni elección. Dirígete al campo de pruebas. Elimina al objetivo.",
+          TextMapId = "QuestDesc_10030505"
+        },
+        QuestDesc_10030506 = {
+          ContentES = "Ese ingenuo tonto realmente lo logró… No hay vuelta atrás. Sal y hazlo como humano.",
+          TextMapId = "QuestDesc_10030506"
+        },
+        QuestDesc_10030507 = {
+          ContentES = "Ese ingenuo tonto realmente lo logró… No hay vuelta atrás. Sal y hazlo como humano.",
+          TextMapId = "QuestDesc_10030507"
+        },
+        QuestDesc_10030508 = {
+          ContentES = "Ese ingenuo tonto realmente lo logró… No hay vuelta atrás. Sal y hazlo como humano.",
+          TextMapId = "QuestDesc_10030508"
+        },
         QuestDesc_10030601 = {
-          ContentES = "Der Titel „Lorbeerkranz-Charon“ ist nichts als eine grausame Täuschung. Du kannst Rhythm nicht einem Traum hinterherjagen lassen, der auf Lügen beruht. Sag ihr die Wahrheit über die Alchemie-Akademie ... und tue, was getan werden muss.",
+          ContentES = "El título de Charon Laureado no es más que una cruel farsa. No puedes dejar que Rhythm persiga un sueño tejido con engaños. Dile la verdad sobre la Academia de Alquimia… y luego haz lo que deba hacerse.",
           TextMapId = "QuestDesc_10030601"
         },
         QuestDesc_10030602 = {
-          ContentES = "Im Galea-Theater ist der Silberkerzen-Karneval in vollem Gange. Beim Silberkerzen-Karneval herrscht ausgelassene Maskenpracht – ein perfektes Versteck für ein Monster wie dich. Schlüpfe durch die Feierlichkeiten und finde deinen Kontakt.",
+          ContentES = "En el Teatro Galea, el Carnaval de la Vela de Plata está en pleno auge. El lugar bulle con máscaras y disfraces extravagantes, el velo perfecto para un monstruo como tú. Escabúllete entre la fiesta y encuentra a tu contacto.",
           TextMapId = "QuestDesc_10030602"
         },
         QuestDesc_10030603 = {
-          ContentES = "Seit dem Aufbruch der 13. Legion sind schon einige Tage vergangen. Rhythm scheint sich – wenn auch nur langsam – von dem Verlust von Blues zu erholen. Vielleicht hat sie noch mehr zu sagen. Geh und höre ihr zu.",
+          ContentES = "Han pasado días desde la partida de la 13.ª Legión. Rhythm parece recuperarse — aunque apenas — de la pérdida de Blues. Puede que aún tenga más que decir. Ve y escucha.",
           TextMapId = "QuestDesc_10030603"
         },
         QuestDesc_10030604 = {
-          ContentES = "Die Jagd auf Charon ist vorbei. Der Einfluss der Verlassenen in der Region Cocytus wurde zerschlagen. Doch dies ist kein Ende – nur die stille Pause vor dem nächsten Sturm.",
+          ContentES = "La Caza de Charon ha terminado. El alcance de los Abandonados en la Región Cocytus ha sido cortado. Pero esto no es un final, solo la próxima calma antes de la tormenta.",
           TextMapId = "QuestDesc_10030604"
         },
         QuestDesc_1003plus01 = {
-          ContentES = "Zwischen nachhallendem Schmerz und schweren Abschieden geht dieser lange Tag schließlich zu Ende.\n Heute Nacht bleibt dir der Schlaf fern – vielleicht hilft dir ein stiller Spaziergang durch die Stadt, deine Gedanken zu ordnen.",
+          ContentES = "Entre el dolor persistente y las despedidas, el largo día finalmente llega a su fin.\nEl sueño te evade esta noche, quizá un paseo tranquilo por la ciudad te ayude a despejar la mente.",
           TextMapId = "QuestDesc_1003plus01"
         },
         QuestDesc_1003plus02 = {
-          ContentES = "Von Outsider und Snow erfährst du, dass du in die Jagd auf Charon verwickelt warst – eine Reihe von Morden, die sich vor fünf Tagen ereignet haben. Bevor du das alles begreifen kannst, erscheint Rhythm ohne Vorwarnung und beendet das Gespräch abrupt. Du kannst ihr jetzt nicht mehr ausweichen – hör dir lieber an, was sie zu sagen hat.",
+          ContentES = "Te enteras por Outsider y Snow que quedaste atrapado en la Caza de Charon, una serie de asesinatos ocurridos hace cinco días. Antes de que puedas asimilarlo, Rhythm aparece sin previo aviso y termina abruptamente la conversación. Ya no puedes evitarla, lo mejor es escuchar lo que tiene que decir.",
           TextMapId = "QuestDesc_1003plus02"
         },
         QuestDesc_1003plus03 = {
-          ContentES = "Du hast mehrere vielversprechende Hinweise gesammelt – alle stehen möglicherweise in Verbindung mit der Jagd auf Charon. Wenn die Spur ins Leere führt, versuche, Hinweise miteinander zu kombinieren. Vielleicht ergibt sich daraus eine neue Spur.",
+          ContentES = "Has reunido varias pistas prometedoras, todas posiblemente vinculadas a la Caza de Charon. Cuando el rastro se enfríe, intenta combinarlas. Podría surgir una nueva pista.",
           TextMapId = "QuestDesc_1003plus03"
         },
         QuestDesc_1003plus04 = {
-          ContentES = "Du und Rhythm vereinbaren, bei der Jagd auf Charon zusammenzuarbeiten. Erster Schritt: den Tatort absuchen und Hinweise sammeln, die auf den Aufenthaltsort des Täters schließen lassen.",
+          ContentES = "Tú y Rhythm acuerdan unir fuerzas en el caso de la Caza de Charon. Primer paso: examinar la escena en busca de pistas que puedan llevar al culpable.",
           TextMapId = "QuestDesc_1003plus04"
         },
         QuestDesc_1003plus05 = {
-          ContentES = "Eine Reihe übergroßer Plakate am Eingang des Theaters springt dir sofort ins Auge. Vielleicht verraten sie etwas über die jüngsten Ereignisse – ein Blick lohnt sich.",
+          ContentES = "Una fila de carteles gigantes en la entrada del teatro llama inmediatamente tu atención. Podrían arrojar luz sobre hechos recientes, vale la pena revisarlos.",
           TextMapId = "QuestDesc_1003plus05"
         },
         QuestDesc_1003plus06 = {
-          ContentES = "Die Requisitenmeisterin bestreitet entschieden, dass der am Tatort gefundene Vorhang aus dem Galea-Theater stammt. Sie behauptet, alles werde sorgfältig dokumentiert – und eine von mehreren Mitarbeitern unterzeichnete Liste bestätigt das. Sieh lieber selbst nach.",
+          ContentES = "El maestro de utilería niega rotundamente que la cortina encontrada en la escena provenga del Teatro Galea. Afirma que todos los objetos están cuidadosamente registrados y una lista firmada por varios miembros del personal lo respalda. Mejor échale un vistazo tú mismo.",
           TextMapId = "QuestDesc_1003plus06"
         },
         QuestDesc_1003plus07 = {
-          ContentES = "Ein müde aussehender Schauspieler erklärt, dass die Truppe ununterbrochen für den bevorstehenden Silberkerzen-Karneval geprobt hat. Eine nahegelegene Anwesenheitsliste verzeichnet die Probenzeiten aller Beteiligten – sieh sie dir an.",
+          ContentES = "Un actor cansado explica que la compañía ha estado ensayando sin parar para el próximo Carnaval de la Vela de Plata. Una hoja de asistencia cercana registra las horas de ensayo de todos,revísala.",
           TextMapId = "QuestDesc_1003plus07"
         },
         QuestDesc_1003plus08 = {
-          ContentES = "Während du die Anwesenheitsliste durchgehst, hörst du ein Geräusch von oben. Sieh nach.",
+          ContentES = "Al terminar de revisar el registro, un sonido desde arriba atrae tu atención. Ve a echar un vistazo.",
           TextMapId = "QuestDesc_1003plus08"
         },
         QuestDesc_1003plus09 = {
-          ContentES = "Du bist in den Unterkünften der Fischer angekommen. Zeit für eine gründliche Suche – Tür für Tür.",
+          ContentES = "Has llegado a los dormitorios de los pescadores. Es momento de una inspección puerta por puerta.",
           TextMapId = "QuestDesc_1003plus09"
         },
         QuestDesc_1003plus10 = {
-          ContentES = "Niemand antwortet – aber hinter dir taucht eine Katze auf, die eindringlich miaut, als hätte sie eine Spur aufgenommen. Es könnte sich lohnen, ihr zu folgen.",
+          ContentES = "Nadie responde, pero un gato aparece detrás de ti, maullando con urgencia como si hubiera captado un rastro. Podría valer la pena seguirlo.",
           TextMapId = "QuestDesc_1003plus10"
         },
         QuestDesc_1003plus11 = {
-          ContentES = "Du hast den Phoxichor-Dieb gefasst – doch er ist nicht der Mörder. Dennoch gibt er dir einen Hinweis: Der Täter könnte sich in der Kanalisation verstecken. Übergib ihn dem Sicherheitsbüro und triff dich dann wieder mit Rhythm, um euren nächsten Schritt zu besprechen.",
+          ContentES = "Has atrapado al ladrón de Phoxichor, pero no es el asesino. Aun así, te da una pista: el culpable podría estar escondido en las alcantarillas. Entrégalo a la Oficina de Seguridad y luego reúnete con Rhythm para decidir el siguiente paso.",
           TextMapId = "QuestDesc_1003plus11"
         },
         QuestDesc_1003plus12 = {
-          ContentES = "Nachdem der Fischer übergeben wurde, triffst du Rhythm in der Kanalisation, um den wahren Täter aufzuspüren. Erst wenn sein Aufenthaltsort bestätigt ist, kann sie Unterstützung von der 6. Legion anfordern – und die Jagd auf Charon beenden.",
+          ContentES = "Con el pescador entregado, te unes a Rhythm en las alcantarillas para rastrear al verdadero sospechoso. Solo cuando hayas confirmado su paradero podrá llamar a la 6ª Legión y poner fin a la Caza de Charon.",
           TextMapId = "QuestDesc_1003plus12"
         },
         QuestDesc_1003plus13 = {
-          ContentES = "Du hast die Zivilisten in Sicherheit gebracht – doch kaum weicht die Anspannung, ertönt ein monströses Brüllen aus der Tiefe. Es klingt wie die Kreatur, vor der du gewarnt wurdest. Lass das Abwasser ab und setze die Verfolgung fort.",
+          ContentES = "Has puesto a salvo a los civiles, pero justo cuando llega el alivio, un rugido monstruoso surge desde abajo. Parece la criatura de la que te advirtieron. Drena las aguas residuales y continúa la persecución.",
           TextMapId = "QuestDesc_1003plus13"
         },
         QuestDesc_1003plus14 = {
-          ContentES = "Ein paar Tage später wacht Rhythm endlich auf. Bring sie auf den neuesten Stand, was passiert ist, während sie bewusstlos war.",
+          ContentES = "Unos días después, Rhythm finalmente despierta. Ponla al tanto de lo ocurrido mientras estaba inconsciente.",
           TextMapId = "QuestDesc_1003plus14"
         },
         QuestDesc_1003plus15 = {
-          ContentES = "Du bist an Rhythms geheimem Basispunkt angekommen. Durchsuche den Ort – das silberne Siegel mit ihrem Namen sollte hier irgendwo sein.",
+          ContentES = "Has llegado a la base oculta de Rhythm. Revisa el lugar, el sello plateado con su nombre debería estar en algún sitio.",
           TextMapId = "QuestDesc_1003plus15"
         },
         QuestDesc_1003plus16 = {
-          ContentES = "Du bist an Rhythms geheimem Basispunkt angekommen. Durchsuche den Ort – das silberne Siegel mit ihrem Namen sollte hier irgendwo sein.",
+          ContentES = "Has llegado a la base oculta de Rhythm. Revisa el lugar, el sello plateado con su nombre debería estar en algún sitio.",
           TextMapId = "QuestDesc_1003plus16"
         },
         QuestDesc_1003plus17 = {
-          ContentES = "Soldaten der 13. Legion sind in der Kanalisation stationiert und patrouillieren jeweils ihre Sektoren. Die Tunnel sind von Spannung erfüllt. Geh zu dem Bereich, den Clive die Nachtfahrer zugeteilt hat.",
+          ContentES = "Soldados de la 13.ª Legión patrullan las alcantarillas, cada uno en su sección asignada. Los túneles están cargados de tensión. Dirígete al área que Clive designó para los Noctoviajeros.",
           TextMapId = "QuestDesc_1003plus17"
         },
         QuestDesc_1003plus18 = {
-          ContentES = "Du hast den Sektor erreicht, den Clive deinem Team zugewiesen hat. Sieh dich gründlich um und prüfe die Umgebung.",
+          ContentES = "Has llegado al sector que Clive asignó a tu equipo. Examina con cuidado y evalúa el entorno.",
           TextMapId = "QuestDesc_1003plus18"
         },
         QuestDesc_1003plus19 = {
-          ContentES = "Gehe die gesammelten Hinweise erneut durch – einer davon könnte auf die Identität des Mörders hindeuten. Mit einem frischen Blick wird sich dir vielleicht das fehlende Puzzleteil offenbaren.",
+          ContentES = "Repasa las pistas reunidas, alguna podría señalar la identidad del asesino. Con ojos frescos, quizá el eslabón perdido se revele.",
           TextMapId = "QuestDesc_1003plus19"
         },
         QuestDesc_1003plus20 = {
-          ContentES = "Rhythm summt eine Melodie – unheimlich ähnlich jener, die der Mörder in jener Nacht sang. Sie stammt aus „Kinder aus dem Schneefeld“, einer bekannten Oper. Ihr habt gerade darüber gesprochen, wie ihr diesen Hinweis nutzen könnt, um den Täter anzulocken ... doch offenbar hat er euch zuerst gefunden.",
+          ContentES = "Rhythm tararea una melodía, inquietantemente similar a la que el asesino cantó esa noche. Es de <I>Niños del campo de nieve</>, una ópera muy conocida. Estaban discutiendo cómo usar esa pista para atraer al asesino… pero parece que él vino primero.",
           TextMapId = "QuestDesc_1003plus20"
         },
         QuestDesc_1003plus20_1 = {
-          ContentES = "Rhythm summt eine Melodie – unheimlich ähnlich jener, die der Mörder in jener Nacht sang. Sie stammt aus „Kinder aus dem Schneefeld“, einer bekannten Oper. Ihr habt gerade darüber gesprochen, wie ihr diesen Hinweis nutzen könnt, um den Täter anzulocken ... doch offenbar hat er euch zuerst gefunden.",
+          ContentES = "Rhythm tararea una melodía, inquietantemente similar a la que el asesino cantó esa noche. Es de <I>Niños del campo de nieve</>, una ópera muy conocida. Estaban discutiendo cómo usar esa pista para atraer al asesino… pero parece que él vino primero.",
           TextMapId = "QuestDesc_1003plus20_1"
         },
         QuestDesc_1003plus21 = {
-          ContentES = "Im Galea-Theater ist der Silberkerzen-Karneval in vollem Gange. Beim Silberkerzen-Karneval herrscht ausgelassene Maskenpracht – ein perfektes Versteck für ein Monster wie dich. Schlüpfe durch die Feierlichkeiten und finde deinen Kontakt.",
+          ContentES = "En el Teatro Galea, el Carnaval de la Vela de Plata está en pleno auge. El lugar bulle con máscaras y disfraces extravagantes, el velo perfecto para un monstruo como tú. Escabúllete entre la fiesta y encuentra a tu contacto.",
           TextMapId = "QuestDesc_1003plus21"
         },
         QuestDesc_1003plus22 = {
-          ContentES = "Dein Kontakt sollte ganz in der Nähe sein. Geh hin und nimm das Treffen wahr.",
+          ContentES = "Tu contacto de los Abandonados debería estar cerca. Ve y haz la cita.",
           TextMapId = "QuestDesc_1003plus22"
         },
         QuestDesc_1003plus23 = {
-          ContentES = "Die Verlassenen sind eine weitere Bedrohung, die über dieser Stadt schwebt. Eliminiere sie.",
+          ContentES = "Los Abandonados son otra amenaza latente para esta ciudad. Elimínalos.",
           TextMapId = "QuestDesc_1003plus23"
         },
         QuestDesc_1003plus24 = {
-          ContentES = "Gerade als die Schlacht zu Ende ist, stürmen Soldaten der 13. Legion herein. Wenn sie einen Kampf wollen, dann sollen sie ihn bekommen – keiner von ihnen wird hier lebend wegkommen.",
+          ContentES = "Justo cuando termina la batalla, soldados de la 13.ª Legión irrumpen. Si quieren pelea, la tendrán ninguno saldrá con vida.",
           TextMapId = "QuestDesc_1003plus24"
         },
         QuestDesc_1003plus25 = {
-          ContentES = "Du weißt nicht, wie Rhythm und die Phoxjäger dich aufgespürt haben – aber du hast keine Zeit, darüber nachzudenken. Die Legion ist noch hier, und der Kampf ist nicht vorbei.",
+          ContentES = "No sabes cómo Rhythm y los Phoxcazadores te rastrearon, pero no hay tiempo para pensarlo. La Legión aún está aquí, y la batalla no ha terminado.",
           TextMapId = "QuestDesc_1003plus25"
         },
         QuestDesc_1003plus26 = {
-          ContentES = "Deine Darbietung als Blues war makellos. Rhythm wird niemals erfahren, dass sie ihren eigenen Bruder getötet hat. Weder die 13. Legion noch die Verlassenen werden das Blutvergießen jemals mit ihr oder den Phoxjägern in Verbindung bringen.\n Doch der Vorhang für diese Rolle ist gefallen. Es ist Zeit, ein letztes Mal die Bühne zu betreten – diesmal als Parsifal.",
+          ContentES = "Tu actuación como Blues fue impecable. Rhythm nunca sabrá que mató a su propio hermano. Ni la 13.ª Legión ni los Abandonados vincularán la masacre con ella o los Phoxcazadores.\nPero el telón de ese papel ha caído. Es hora de subir al escenario una última vez. Esta vez, como Parsifal.",
           TextMapId = "QuestDesc_1003plus26"
         },
         QuestDesc_1003plus27 = {
-          ContentES = "Lass den Vorhang sich heben – und mit ihm alles enden.",
+          ContentES = "Que se levante el telón y con él, que todo termine.",
           TextMapId = "QuestDesc_1003plus27"
         },
         QuestDesc_1003plus28 = {
-          ContentES = "Der Lärm beim Ablassen des Abwassers hat einen Schwarm Filthoiden angelockt. Vertreibe sie.",
+          ContentES = "El ruido de drenar las aguas residuales ha atraído a una horda de Filthoids. Ahuyéntalos.",
           TextMapId = "QuestDesc_1003plus28"
         },
         QuestDesc_1003plus29 = {
-          ContentES = "Der Lärm beim Ablassen des Abwassers hat einen Schwarm Filthoiden angelockt. Vertreibe sie.",
+          ContentES = "El ruido de drenar las aguas residuales ha atraído a una horda de Filthoids. Ahuyéntalos.",
           TextMapId = "QuestDesc_1003plus29"
         },
         QuestDesc_1003plus30 = {
-          ContentES = "Der Bereich, den Clive dir zugewiesen hat, ist derzeit unzugänglich – wie immer: Die Steuerkonsole ist vom Abwasser abgeschottet. Lass es ab, um die Sperre aufzuheben und zu deinem Sektor vorzurücken.",
+          ContentES = "El área asignada por Clive está inaccesible, la Consola de control está bloqueada por aguas residuales. Drena el sistema para levantar el bloqueo y avanzar a tu sector.",
           TextMapId = "QuestDesc_1003plus30"
         },
         QuestDesc_1003plus31 = {
-          ContentES = "Rhythm scheint Fragen zu dem Phoxichor zu haben, der im Schnee gefunden wurde. Sprich mit ihr und teile ihr deine Erkenntnisse mit – das könnte zu neuen Entdeckungen führen.",
+          ContentES = "Rhythm parece tener preguntas sobre el Phoxichor hallado en la nieve. Habla con ella y comparte tus hallazgos, podría llevar a nuevos descubrimientos.",
           TextMapId = "QuestDesc_1003plus31"
         },
         QuestDesc_1003plus32 = {
-          ContentES = "Nach einer kurzen Suche findest du in der Nähe des Eingangsbereichs nichts Auffälliges. Geh weiter hinein und sprich mit dem Personal des Galea-Theaters.",
+          ContentES = "Tras una breve búsqueda, no se encuentra nada relevante cerca del corredor de entrada. Avanza más adentro y habla con el personal del Teatro Galea.",
           TextMapId = "QuestDesc_1003plus32"
         },
         QuestDesc_1003plus33 = {
-          ContentES = "Den Hilferufen folgend findest du den zweiten Eingeschlossenen. Finde einen Weg, ihn zu befreien.",
+          ContentES = "Siguiendo los gritos de auxilio, encuentras al segundo ciudadano atrapado. Busca la manera de liberarlo.",
           TextMapId = "QuestDesc_1003plus33"
         },
         QuestDesc_1003plus34 = {
-          ContentES = "Nach einem kurzen Austausch beschließt du, mit der 13. Legion zusammenzuarbeiten. Höre dir jetzt die Befehle von Kommandantin Lynn an.",
+          ContentES = "Tras un breve intercambio, decides cooperar con la 13.ª Legión. Ahora escucha las órdenes de la comandante Lynn.",
           TextMapId = "QuestDesc_1003plus34"
         },
         QuestDesc_1003plus35 = {
-          ContentES = "Als du Clive triffst, vertreibt er bereits Schneewölfe in der Nähe des Abgabepunkts. Hilf ihm, das Gebiet zu sichern, und warte gemeinsam auf das Lieferteam.",
+          ContentES = "Cuando te encuentras con Clive, ya está ahuyentando Lobos de Nieve cerca del punto de entrega. Ayúdalo a asegurar el área y espera juntos a la cuadrilla de suministros.",
           TextMapId = "QuestDesc_1003plus35"
         },
         QuestDesc_400101 = {
@@ -37573,439 +38455,439 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "QuestName_10029901"
         },
         QuestName_10030101 = {
-          ContentES = "Aus der Bewusstlosigkeit erwachen",
+          ContentES = "Despierta de la inconsciencia",
           TextMapId = "QuestName_10030101"
         },
         QuestName_10030102 = {
-          ContentES = "Sprich mit Camilla",
+          ContentES = "Habla con Camilla",
           TextMapId = "QuestName_10030102"
         },
         QuestName_10030103 = {
-          ContentES = "Verlasse die Raststätte",
+          ContentES = "Sal del Santuario",
           TextMapId = "QuestName_10030103"
         },
         QuestName_10030104 = {
-          ContentES = "Begib dich zur Asphodel und sprich mit Outsider",
+          ContentES = "Ve al Asfódeo y habla con Outsider",
           TextMapId = "QuestName_10030104"
         },
         QuestName_10030105 = {
-          ContentES = "Folge Rhythm, um das Gespräch an einem ruhigeren Ort fortzusetzen",
+          ContentES = "Sigue a Rhythm para continuar la conversación en un lugar más tranquilo",
           TextMapId = "QuestName_10030105"
         },
         QuestName_10030106 = {
-          ContentES = "Untersuche den Tatort",
+          ContentES = "Investiga la escena del crimen",
           TextMapId = "QuestName_10030106"
         },
         QuestName_10030107 = {
-          ContentES = "Gehe zum Galea-Theater",
+          ContentES = "Ve al Teatro Galea",
           TextMapId = "QuestName_10030107"
         },
         QuestName_10030108 = {
-          ContentES = "Sprich mit Putsch",
+          ContentES = "Habla con Putsch",
           TextMapId = "QuestName_10030108"
         },
         QuestName_10030109 = {
-          ContentES = "Sprich mit der Requisitenmeisterin",
+          ContentES = "Habla con el maestro de utilería",
           TextMapId = "QuestName_10030109"
         },
         QuestName_10030110 = {
-          ContentES = "Sprich mit Violetta",
+          ContentES = "Habla con Violetta",
           TextMapId = "QuestName_10030110"
         },
         QuestName_10030111 = {
-          ContentES = "Verlasse das Galea-Theater",
+          ContentES = "Sal del teatro Galea",
           TextMapId = "QuestName_10030111"
         },
         QuestName_10030112 = {
-          ContentES = "Begib dich zu Mist Aken",
+          ContentES = "Ve a la Zona Nebulosa",
           TextMapId = "QuestName_10030112"
         },
         QuestName_10030113 = {
-          ContentES = "Folge der Katze",
+          ContentES = "Sigue al gato",
           TextMapId = "QuestName_10030113"
         },
         QuestName_10030114 = {
-          ContentES = "Sprich mit dem panischen Fischer",
+          ContentES = "Habla con el pescador pánico",
           TextMapId = "QuestName_10030114"
-        },
-        QuestName_10030201 = {
-          ContentES = "Spüre den Täter auf",
-          TextMapId = "QuestName_10030201"
-        },
-        QuestName_10030202 = {
-          ContentES = "Bewege dich weiter",
-          TextMapId = "QuestName_10030202"
-        },
-        QuestName_10030203 = {
-          ContentES = "Bewege dich weiter",
-          TextMapId = "QuestName_10030203"
-        },
-        QuestName_10030204 = {
-          ContentES = "Bewege dich weiter",
-          TextMapId = "QuestName_10030204"
-        },
-        QuestName_10030205 = {
-          ContentES = "Bewege dich weiter",
-          TextMapId = "QuestName_10030205"
-        },
-        QuestName_10030206 = {
-          ContentES = "Bewege dich weiter",
-          TextMapId = "QuestName_10030206"
-        },
-        QuestName_10030207 = {
-          ContentES = "Sprich mit Rhythm",
-          TextMapId = "QuestName_10030207"
-        },
-        QuestName_10030208 = {
-          ContentES = "Bewege dich weiter",
-          TextMapId = "QuestName_10030208"
-        },
-        QuestName_10030210 = {
-          ContentES = "Verlasse die Kanalisation",
-          TextMapId = "QuestName_10030210"
-        },
-        QuestName_10030211 = {
-          ContentES = "Verlasse die Kanalisation",
-          TextMapId = "QuestName_10030211"
-        },
-        QuestName_10030212 = {
-          ContentES = "Verlasse die Kanalisation",
-          TextMapId = "QuestName_10030212"
-        },
-        QuestName_10030213 = {
-          ContentES = "Verlasse die Kanalisation",
-          TextMapId = "QuestName_10030213"
-        },
-        QuestName_10030214 = {
-          ContentES = "Verlasse die Kanalisation",
-          TextMapId = "QuestName_10030214"
-        },
-        QuestName_10030215 = {
-          ContentES = "Begib dich zum medizinischen Zentrum der Legion",
-          TextMapId = "QuestName_10030215"
-        },
-        QuestName_10030216 = {
-          ContentES = "Begib dich zum Rhythms geheimen Basispunkt",
-          TextMapId = "QuestName_10030216"
-        },
-        QuestName_10030217 = {
-          ContentES = "Begib dich zum Rhythms geheimen Basispunkt",
-          TextMapId = "QuestName_10030217"
-        },
-        QuestName_10030218 = {
-          ContentES = "Suche nach dem silbernen Siegel",
-          TextMapId = "QuestName_10030218"
-        },
-        QuestName_10030219 = {
-          ContentES = "Suche nach dem silbernen Siegel",
-          TextMapId = "QuestName_10030219"
         }
       }
     end
   },
   {
-    MinKey = "QuestName_100302sp101",
-    MaxKey = "READ_DESC_2000096",
+    MinKey = "QuestName_10030201",
+    MaxKey = "READ_DESC_2000073",
     Loader = function()
       return {
+        QuestName_10030201 = {
+          ContentES = "Rastrea al agresor",
+          TextMapId = "QuestName_10030201"
+        },
+        QuestName_10030202 = {
+          ContentES = "Seguir avanzando",
+          TextMapId = "QuestName_10030202"
+        },
+        QuestName_10030203 = {
+          ContentES = "Seguir avanzando",
+          TextMapId = "QuestName_10030203"
+        },
+        QuestName_10030204 = {
+          ContentES = "Seguir avanzando",
+          TextMapId = "QuestName_10030204"
+        },
+        QuestName_10030205 = {
+          ContentES = "Seguir avanzando",
+          TextMapId = "QuestName_10030205"
+        },
+        QuestName_10030206 = {
+          ContentES = "Seguir avanzando",
+          TextMapId = "QuestName_10030206"
+        },
+        QuestName_10030207 = {
+          ContentES = "Habla con Rhythm",
+          TextMapId = "QuestName_10030207"
+        },
+        QuestName_10030208 = {
+          ContentES = "Seguir avanzando",
+          TextMapId = "QuestName_10030208"
+        },
+        QuestName_10030210 = {
+          ContentES = "Sal de las alcantarillas",
+          TextMapId = "QuestName_10030210"
+        },
+        QuestName_10030211 = {
+          ContentES = "Sal de las alcantarillas",
+          TextMapId = "QuestName_10030211"
+        },
+        QuestName_10030212 = {
+          ContentES = "Sal de las alcantarillas",
+          TextMapId = "QuestName_10030212"
+        },
+        QuestName_10030213 = {
+          ContentES = "Sal de las alcantarillas",
+          TextMapId = "QuestName_10030213"
+        },
+        QuestName_10030214 = {
+          ContentES = "Sal de las alcantarillas",
+          TextMapId = "QuestName_10030214"
+        },
+        QuestName_10030215 = {
+          ContentES = "Ve al Centro Médico de la Legión",
+          TextMapId = "QuestName_10030215"
+        },
+        QuestName_10030216 = {
+          ContentES = "Ve a la base secreta de Fischer",
+          TextMapId = "QuestName_10030216"
+        },
+        QuestName_10030217 = {
+          ContentES = "Ve a la base secreta de Fischer",
+          TextMapId = "QuestName_10030217"
+        },
+        QuestName_10030218 = {
+          ContentES = "Busca el sello plateado",
+          TextMapId = "QuestName_10030218"
+        },
+        QuestName_10030219 = {
+          ContentES = "Busca el sello plateado",
+          TextMapId = "QuestName_10030219"
+        },
         QuestName_100302sp101 = {
-          ContentES = "Öffne das Tor",
+          ContentES = "Desbloquea la puerta",
           TextMapId = "QuestName_100302sp101"
         },
         QuestName_100302sp102 = {
-          ContentES = "Verteidige den Zivilisten",
+          ContentES = "Defiende al civil",
           TextMapId = "QuestName_100302sp102"
         },
         QuestName_100302sp103 = {
-          ContentES = "Öffne das Tor",
+          ContentES = "Desbloquea la puerta",
           TextMapId = "QuestName_100302sp103"
         },
         QuestName_100302sp104 = {
-          ContentES = "Verteidige den Zivilisten",
+          ContentES = "Defiende al civil",
           TextMapId = "QuestName_100302sp104"
         },
         QuestName_100302sp201 = {
-          ContentES = "Rette den eingeschlossenen Zivilisten",
+          ContentES = "Rescata al civil atrapado",
           TextMapId = "QuestName_100302sp201"
         },
         QuestName_100302sp202 = {
-          ContentES = "Reaktiviere die Steuerkonsole",
+          ContentES = "Reactiva la Consola de control",
           TextMapId = "QuestName_100302sp202"
         },
         QuestName_100302sp203 = {
-          ContentES = "Rette den eingeschlossenen Zivilisten",
+          ContentES = "Rescata al civil atrapado",
           TextMapId = "QuestName_100302sp203"
         },
         QuestName_100302sp301 = {
-          ContentES = "Schalte den Täter aus",
+          ContentES = "Acaba con el perpetrador",
           TextMapId = "QuestName_100302sp301"
         },
         QuestName_10030301 = {
-          ContentES = "Begib dich zum medizinischen Zentrum der Legion",
+          ContentES = "Ve al Centro Médico de la Legión",
           TextMapId = "QuestName_10030301"
         },
         QuestName_10030302 = {
-          ContentES = "Hilf der 13. Legion",
+          ContentES = "Ayuda a la 13.ª Legión",
           TextMapId = "QuestName_10030302"
         },
         QuestName_10030303 = {
-          ContentES = "Begib dich zur Kanalisation",
+          ContentES = "Dirígete a las alcantarillas",
           TextMapId = "QuestName_10030303"
         },
         QuestName_10030304 = {
-          ContentES = "Sprich mit Lynn",
+          ContentES = "Habla con Lynn",
           TextMapId = "QuestName_10030304"
         },
         QuestName_100303sp101 = {
-          ContentES = "Sprich mit Clive",
+          ContentES = "Habla con Clive",
           TextMapId = "QuestName_100303sp101"
         },
         QuestName_100303sp102 = {
-          ContentES = "Suche nach Rhythm",
+          ContentES = "Busca a Rhythm",
           TextMapId = "QuestName_100303sp102"
         },
         QuestName_100303sp103 = {
-          ContentES = "Sammle drei Fische",
+          ContentES = "Reúne tres peces",
           TextMapId = "QuestName_100303sp103"
         },
         QuestName_100303sp104 = {
-          ContentES = "Begib dich zu Mist Aken",
+          ContentES = "Ve a la Zona Nebulosa",
           TextMapId = "QuestName_100303sp104"
         },
         QuestName_100303sp105 = {
-          ContentES = "Sprich mit Clive",
+          ContentES = "Habla con Clive",
           TextMapId = "QuestName_100303sp105"
         },
         QuestName_100303sp201 = {
-          ContentES = "Begib dich zum zugewiesenen Gebiet",
+          ContentES = "Dirígete al área designada",
           TextMapId = "QuestName_100303sp201"
         },
         QuestName_100303sp202 = {
-          ContentES = "Begib dich zum zugewiesenen Gebiet",
+          ContentES = "Dirígete al área designada",
           TextMapId = "QuestName_100303sp202"
         },
         QuestName_100303sp203 = {
-          ContentES = "Lass das Abwasser ab",
+          ContentES = "Drena las aguas residuales",
           TextMapId = "QuestName_100303sp203"
         },
         QuestName_100303sp204 = {
-          ContentES = "Begib dich zum zugewiesenen Gebiet",
+          ContentES = "Dirígete al área designada",
           TextMapId = "QuestName_100303sp204"
         },
         QuestName_100303sp205 = {
-          ContentES = "Repariere das Funkterminal",
+          ContentES = "Repara el terminal de comunicaciones",
           TextMapId = "QuestName_100303sp205"
         },
         QuestName_100303sp206 = {
-          ContentES = "Schalte den Täter aus",
+          ContentES = "Acaba con el perpetrador",
           TextMapId = "QuestName_100303sp206"
         },
         QuestName_10030401 = {
-          ContentES = "Sprich mit Rhythm",
+          ContentES = "Habla con Rhythm",
           TextMapId = "QuestName_10030401"
         },
         QuestName_10030402 = {
-          ContentES = "Begib dich zum Rhythms geheimen Basispunkt",
+          ContentES = "Ve a la base secreta de Fischer",
           TextMapId = "QuestName_10030402"
         },
         QuestName_10030403 = {
-          ContentES = "Suche nach einer bekannten Melodie",
+          ContentES = "Busca una melodía familiar",
           TextMapId = "QuestName_10030403"
         },
         QuestName_10030404 = {
-          ContentES = "Sprich mit Rhythm",
+          ContentES = "Habla con Rhythm",
           TextMapId = "QuestName_10030404"
         },
         QuestName_10030501 = {
-          ContentES = "Begib dich zum Testgelände",
+          ContentES = "Dirígete al campo de pruebas",
           TextMapId = "QuestName_10030501"
         },
         QuestName_10030502 = {
-          ContentES = "Besiege die Gegner",
+          ContentES = "Derrota al enemigo",
           TextMapId = "QuestName_10030502"
         },
         QuestName_10030503 = {
-          ContentES = "Begib dich zum Testgelände und eliminiere die Gegner",
+          ContentES = "Dirígete al campo de pruebas y elimina al objetivo",
           TextMapId = "QuestName_10030503"
         },
         QuestName_10030504 = {
-          ContentES = "Begib dich zum Testgelände und eliminiere die Gegner",
+          ContentES = "Dirígete al campo de pruebas y elimina al objetivo",
           TextMapId = "QuestName_10030504"
         },
         QuestName_10030505 = {
-          ContentES = "Begib dich zum Testgelände und eliminiere die Gegner",
+          ContentES = "Dirígete al campo de pruebas y elimina al objetivo",
           TextMapId = "QuestName_10030505"
         },
         QuestName_10030506 = {
-          ContentES = "Entkomme aus der Alchemie-Akademie",
+          ContentES = "Escapa de la Academia de Alquimia",
           TextMapId = "QuestName_10030506"
         },
         QuestName_10030507 = {
-          ContentES = "Entkomme aus der Alchemie-Akademie",
+          ContentES = "Escapa de la Academia de Alquimia",
           TextMapId = "QuestName_10030507"
         },
         QuestName_10030508 = {
-          ContentES = "Entkomme aus der Alchemie-Akademie",
+          ContentES = "Escapa de la Academia de Alquimia",
           TextMapId = "QuestName_10030508"
         },
         QuestName_10030601 = {
-          ContentES = "Sprich mit Rhythm",
+          ContentES = "Habla con Rhythm",
           TextMapId = "QuestName_10030601"
         },
         QuestName_10030602 = {
-          ContentES = "Gehe zum Galea-Theater",
+          ContentES = "Ve al Teatro Galea",
           TextMapId = "QuestName_10030602"
         },
         QuestName_10030603 = {
-          ContentES = "Sprich mit Rhythm",
+          ContentES = "Habla con Rhythm",
           TextMapId = "QuestName_10030603"
         },
         QuestName_10030604 = {
-          ContentES = "Weit entfernt in der imperialen Hauptstadt braut sich in der 13. Legion etwas zusammen.",
+          ContentES = "En la Capital Imperial, algo se gesta dentro de la 13.ª Legión.",
           TextMapId = "QuestName_10030604"
         },
         QuestName_1003plus01 = {
-          ContentES = "Der Schlaf will dir nicht kommen. Mach einen Spaziergang draußen.",
+          ContentES = "El sueño se te escapa. Sal a caminar al aire libre.",
           TextMapId = "QuestName_1003plus01"
         },
         QuestName_1003plus02 = {
-          ContentES = "Sprich mit Rhythm",
+          ContentES = "Habla con Rhythm",
           TextMapId = "QuestName_1003plus02"
         },
         QuestName_1003plus03 = {
-          ContentES = "Hinweise",
+          ContentES = "Pistas",
           TextMapId = "QuestName_1003plus03"
         },
         QuestName_1003plus04 = {
-          ContentES = "Untersuche den Tatort",
+          ContentES = "Investiga la escena del crimen",
           TextMapId = "QuestName_1003plus04"
         },
         QuestName_1003plus05 = {
-          ContentES = "Sieh dir die Plakate an",
+          ContentES = "Revisa los carteles",
           TextMapId = "QuestName_1003plus05"
         },
         QuestName_1003plus06 = {
-          ContentES = "Überprüfe das Requisitenbuch",
+          ContentES = "Revisa el registro de utilería",
           TextMapId = "QuestName_1003plus06"
         },
         QuestName_1003plus07 = {
-          ContentES = "Überprüfe die Anwesenheitsliste",
+          ContentES = "Revisa la hoja de asistencia",
           TextMapId = "QuestName_1003plus07"
         },
         QuestName_1003plus08 = {
-          ContentES = "Über der Bühne regt sich etwas. Sieh nach.",
+          ContentES = "Algo se agita sobre el escenario. Ve a echar un vistazo.",
           TextMapId = "QuestName_1003plus08"
         },
         QuestName_1003plus09 = {
-          ContentES = "Suche nach den Fischern",
+          ContentES = "Busca a los pescadores",
           TextMapId = "QuestName_1003plus09"
         },
         QuestName_1003plus10 = {
-          ContentES = "Sieh nach der Katze",
+          ContentES = "Revisa al gato",
           TextMapId = "QuestName_1003plus10"
         },
         QuestName_1003plus11 = {
-          ContentES = "Begib dich zur Sicherheitsbehörde",
+          ContentES = "Dirígete a la Oficina de Seguridad",
           TextMapId = "QuestName_1003plus11"
         },
         QuestName_1003plus12 = {
-          ContentES = "Begib dich zu der Kanalisation",
+          ContentES = "Dirígete a las alcantarillas",
           TextMapId = "QuestName_1003plus12"
         },
         QuestName_1003plus13 = {
-          ContentES = "Lass das Abwasser ab und setze die Verfolgung des Täters fort",
+          ContentES = "Drena las aguas residuales y continúa la persecución",
           TextMapId = "QuestName_1003plus13"
         },
         QuestName_1003plus14 = {
-          ContentES = "Sprich mit Rhythm",
+          ContentES = "Habla con Rhythm",
           TextMapId = "QuestName_1003plus14"
         },
         QuestName_1003plus15 = {
-          ContentES = "Suche nach dem silbernen Siegel",
+          ContentES = "Busca el sello plateado",
           TextMapId = "QuestName_1003plus15"
         },
         QuestName_1003plus16 = {
-          ContentES = "Suche nach dem silbernen Siegel",
+          ContentES = "Busca el sello plateado",
           TextMapId = "QuestName_1003plus16"
         },
         QuestName_1003plus17 = {
-          ContentES = "Begib dich zum zugewiesenen Gebiet",
+          ContentES = "Dirígete al área designada",
           TextMapId = "QuestName_1003plus17"
         },
         QuestName_1003plus18 = {
-          ContentES = "Untersuche das zugewiesene Gebiet",
+          ContentES = "Investiga el área designada",
           TextMapId = "QuestName_1003plus18"
         },
         QuestName_1003plus19 = {
-          ContentES = "Überprüfe die Hinweise und setze die Ermittlungen zur Jagd auf Charon fort",
+          ContentES = "Revisa pistas y continúa la investigación de la Caza de Charon",
           TextMapId = "QuestName_1003plus19"
         },
         QuestName_1003plus20 = {
-          ContentES = "Konfrontiere den Täter",
+          ContentES = "Enfrenta al agresor",
           TextMapId = "QuestName_1003plus20"
         },
         QuestName_1003plus20_1 = {
-          ContentES = "Konfrontiere den Täter",
+          ContentES = "Enfrenta al agresor",
           TextMapId = "QuestName_1003plus20_1"
         },
         QuestName_1003plus21 = {
-          ContentES = "Gehe zum Galea-Theater",
+          ContentES = "Ve al Teatro Galea",
           TextMapId = "QuestName_1003plus21"
         },
         QuestName_1003plus22 = {
-          ContentES = "Triff den Kontakt der Verlassenen",
+          ContentES = "Reúnete con el contacto de los Abandonados",
           TextMapId = "QuestName_1003plus22"
         },
         QuestName_1003plus23 = {
-          ContentES = "Besiege die Mitglieder der Verlassenen",
+          ContentES = "Derrota a los miembros de los Abandonados",
           TextMapId = "QuestName_1003plus23"
         },
         QuestName_1003plus24 = {
-          ContentES = "Besiege die Soldaten der 13. Legion",
+          ContentES = "Derrota a los soldados de la 13.ª Legión",
           TextMapId = "QuestName_1003plus24"
         },
         QuestName_1003plus25 = {
-          ContentES = "Besiege die Soldaten der 13. Legion",
+          ContentES = "Derrota a los soldados de la 13.ª Legión",
           TextMapId = "QuestName_1003plus25"
         },
         QuestName_1003plus26 = {
-          ContentES = "Betritt ein letztes Mal die Bühne",
+          ContentES = "Sube al escenario por última vez",
           TextMapId = "QuestName_1003plus26"
         },
         QuestName_1003plus27 = {
-          ContentES = "Gib deine letzte Vorstellung",
+          ContentES = "Entrega la actuación final",
           TextMapId = "QuestName_1003plus27"
         },
         QuestName_1003plus28 = {
-          ContentES = "Wehre die Filthoiden ab",
+          ContentES = "Repele a los Filthoids",
           TextMapId = "QuestName_1003plus28"
         },
         QuestName_1003plus29 = {
-          ContentES = "Wehre die Filthoiden ab",
+          ContentES = "Repele a los Filthoids",
           TextMapId = "QuestName_1003plus29"
         },
         QuestName_1003plus30 = {
-          ContentES = "Lass das Abwasser ab",
+          ContentES = "Drena las aguas residuales",
           TextMapId = "QuestName_1003plus30"
         },
         QuestName_1003plus31 = {
-          ContentES = "Sprich mit Rhythm über die Hinweise, die du entdeckt hast",
+          ContentES = "Discute con Rhythm las pistas descubiertas",
           TextMapId = "QuestName_1003plus31"
         },
         QuestName_1003plus32 = {
-          ContentES = "Bewege dich weiter",
+          ContentES = "Seguir avanzando",
           TextMapId = "QuestName_1003plus32"
         },
         QuestName_1003plus33 = {
-          ContentES = "Rette den eingeschlossenen Zivilisten",
+          ContentES = "Rescata al civil atrapado",
           TextMapId = "QuestName_1003plus33"
         },
         QuestName_1003plus34 = {
-          ContentES = "Sprich mit Lynn",
+          ContentES = "Habla con Lynn",
           TextMapId = "QuestName_1003plus34"
         },
         QuestName_1003plus35 = {
-          ContentES = "Wehre die Schneewölfe ab",
+          ContentES = "Repele a los Lobos de Nieve",
           TextMapId = "QuestName_1003plus35"
         },
         QuestName_400101 = {
@@ -38068,6 +38950,14 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           ContentES = "Berenica ha salido del equipo",
           TextMapId = "Quest_Chapter01_HeitaoLeave_Toast"
         },
+        Quest_Tips_10040401 = {
+          ContentES = "Tiempo restante para la detonación",
+          TextMapId = "Quest_Tips_10040401"
+        },
+        Quest_Tips_10040402 = {
+          ContentES = "Tiempo restante",
+          TextMapId = "Quest_Tips_10040402"
+        },
         Quest_Tips_20031306 = {
           ContentES = "Tiempo restante",
           TextMapId = "Quest_Tips_20031306"
@@ -38085,7 +38975,7 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "Quest_Tips_QuestTrackLock"
         },
         Quest_ToBeContinued = {
-          ContentES = "Noch nicht zu Ende",
+          ContentES = "Continuará",
           TextMapId = "Quest_ToBeContinued"
         },
         READSERIES_1001 = {
@@ -38427,7 +39317,15 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         READ_DESC_2000073 = {
           ContentES = "Una obra deteriorada, cubierta de tachaduras. El autor registró numerosos ejemplos destinados a enseñar cómo imponerse en una discusión. Abandonada aquí, se desconoce por quién.",
           TextMapId = "READ_DESC_2000073"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_DESC_2000074",
+    MaxKey = "READ_NAME_20634",
+    Loader = function()
+      return {
         READ_DESC_2000074 = {
           ContentES = "Una canción supuestamente para alabar a la Secta Jishu. La letra es confusa e incomprensible; solo con leerla ya se imagina a alguien cantándola desafinado.",
           TextMapId = "READ_DESC_2000074"
@@ -38507,15 +39405,7 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         READ_DESC_2000096 = {
           ContentES = "Un diario dejado en la Mina de Glevum. El tono sugiere que podría pertenecer a un erudito.",
           TextMapId = "READ_DESC_2000096"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_DESC_2000097",
-    MaxKey = "READ_TEXT_2000007",
-    Loader = function()
-      return {
+        },
         READ_DESC_2000097 = {
           ContentES = "Un diario dejado en la Mina de Glevum, teñido de rojo oscuro. La letra coincide con la del diario anterior. La última parte es extremadamente desordenada, como si hubiera sido garabateada con mucha prisa.",
           TextMapId = "READ_DESC_2000097"
@@ -39235,7 +40125,15 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         READ_NAME_20634 = {
           ContentES = "Puerto de las Brumas (V)",
           TextMapId = "READ_NAME_20634"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_NAME_20640",
+    MaxKey = "RESOURCE_DESC_10023",
+    Loader = function()
+      return {
         READ_NAME_20640 = {
           ContentES = "Haojing: I",
           TextMapId = "READ_NAME_20640"
@@ -39269,23 +40167,23 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "READ_NAME_20654"
         },
         READ_NAME_JailInves01 = {
-          ContentES = "Anmerkungen der Wächterin (I)",
+          ContentES = "Notas de la Carcelera (Ⅰ)",
           TextMapId = "READ_NAME_JailInves01"
         },
         READ_NAME_JailInves02 = {
-          ContentES = "Anmerkungen der Wächterin (Ⅱ)",
+          ContentES = "Notas de la Carcelera (Ⅱ)",
           TextMapId = "READ_NAME_JailInves02"
         },
         READ_NAME_fushuyian01 = {
-          ContentES = "Fallakte 1",
+          ContentES = "Registro médico 1",
           TextMapId = "READ_NAME_fushuyian01"
         },
         READ_NAME_fushuyian02 = {
-          ContentES = "Fallakte 2",
+          ContentES = "Registro médico 2",
           TextMapId = "READ_NAME_fushuyian02"
         },
         READ_NAME_fushuyian03 = {
-          ContentES = "Fallakte 3",
+          ContentES = "Registro médico 3",
           TextMapId = "READ_NAME_fushuyian03"
         },
         READ_TEXT_2000001 = {
@@ -39315,15 +40213,7 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         READ_TEXT_2000007 = {
           ContentES = "...\nEl Deterioro afecta predominantemente a individuos Charon de entre diecisiete y veinte años. La causa se desconoce y la afección es invariablemente mortal.\nEn las primeras etapas, los indicadores fisiológicos del paciente no muestran anomalías significativas. Sin embargo, a medida que la afección progresa, comienzan a manifestarse en la piel marcas similares a quemaduras, conocidas como Huellas de Deterioro, cuya ubicación y patrón varían entre individuos.\nEn la etapa intermedia, las funciones corporales del paciente se deterioran rápidamente. Externamente, pueden parecer normales, pero internamente, sus tejidos comienzan a mutar, asemejándose a los de los Filthoids. Finalmente, la mutación supera los límites del cuerpo, provocando un colapso irreversible, marcando la fase terminal de la enfermedad. En este punto, se produce una grotesca hiperplasia externa, borrando cualquier rastro de su antigua forma humana. <H>Al iniciarse la fase final, la existencia humana cesa por completo</>, dando paso a un Filthoid naciente y depredador que emerge de su antiguo caparazón. Parece casi una cruel <H>maldición</>: quienes una vez fueron ciegos pueden adquirir una visión extraordinaria como Filthoids, y los anémicos pueden manipular su propia sangre como arma. Solo en esta forma monstruosa alcanzan cuerpos capaces de soportar tales aflicciones.",
           TextMapId = "READ_TEXT_2000007"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_TEXT_2000008",
-    MaxKey = "RESOURCE_DESC_10205",
-    Loader = function()
-      return {
+        },
         READ_TEXT_2000008 = {
           ContentES = "Escrito por \"Fufeng\", este tomo parece ser un texto farmacológico. A juzgar por la peculiar encuadernación, el exótico nombre del autor y su estilo, parece tener su origen fuera de los círculos académicos del Imperio. Tanto las intrincadas anotaciones como el texto principal son crípticos, con la frase \"Cristal estelar\" apareciendo repetidamente en las notas.",
           TextMapId = "READ_TEXT_2000008"
@@ -39925,23 +40815,23 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "READ_TEXT_20654"
         },
         READ_TEXT_JailInves01 = {
-          ContentES = "※ Eid der Treue\n \n \n \n Quelle: Zeugenaussage von Calem, Soldat des Narwals\n Laut Calem hat seine Vorgesetzte Falsi dieses Dokument kurz vor der Explosion aus dem Zentralraum gerettet.\n Es handelt sich um einen Brief der Überläuferschaft, in dem die Treue zu den Verlassenen geschworen wird – unterzeichnet von Avar Hrodland.\n \n Anmerkung von Hellfire:\n Handschrift und Fingerabdrücke bestätigt.\n Dennoch – könnte es gefälscht sein?\n \n \n ※ Korrespondenz von Avar Hrodland\n \n Der Brief enthält konkrete Anweisungen an {nickname2} und Theodore bezüglich Störmaßnahmen während des Angriffs.\n \n \n ※ Steuerkonsole: Zentrale Kontrollraum\n \n Status: Daten aufgrund der Explosion beschädigt.\n Über Klassifizierten Recorder wiederhergestellt – Zugriffsprotokolle der letzten drei Tage:\n • 18. November: Keine Einträge\n • 19. November: Keine Einträge\n • 20. November: Avar Hrodland, {nickname2} \n \n Anmerkung von Hellfire:\n Beachtenswert.\n \n \n ※ Audioaufzeichnung\n \n Gefunden im Flur von Catto (der Narwal), offenbar während des Rückzugs der Verlassenen fallen gelassen.\n Bei Zeitmarke 33:17 ist eine Stimme zu hören, die Avar Hrodland ähneln könnte, im Gespräch mit einem unbekannten Mitglied der Verlassenen.\n \n Anmerkung von Hellfire:\n Kann nützlich sein, um eine Ereigniskette zu rekonstruieren. Glaubwürdigkeit unklar.\n \n \n ※ Zeugenaussage von Calem (der Narwal)\n \n • „Ich sah Kommandant {nickname2} der Greifen den zentralen Kontrollraum allein verlassen – mit Blut über {性别2:seiner|ihrer} Brust.“\n • „{性别2:Er|Sie} sagte uns, wir sollen Position halten, während {性别2:er|sie} die Kanalisation nach verbleibenden Verlassenen überprüft.“\n • „Zwei Minuten später ertönte der Alarm. Kommandant Falsi und ich stürmten hinein – und fanden Kommandant Avar von dem Schneewolf in einer Blutlache liegend vor. Die Selbstzerstörung war bereits aktiviert.“\n \n Anmerkung von Hellfire:\n Innere Konflikt?\n \n \n ※ Offene Fragen\n \n • Warum wurde der Zentralraum gesprengt?\n → Zur Beseitigung weiterer Beweise?\n \n Widersprüchliche Aussagen:\n → Die Zeugenaussagen von {nickname2} und Theodore widersprechen den obigen Befunden direkt.",
+          ContentES = "※ Juramento de lealtad\n\nFuente: Testimonio de Calem, soldado de los Narvales. Según Calem, su oficial al mando, Falsi, recuperó este documento de la sala de control central poco antes de la explosión.\nEs una carta de deserción, jurando lealtad a los Abandonados, firmada por Avar Hrodland.\n\nNota de Hellfire:\nEscritura y huellas confirmadas\nAun así, ¿podría ser falsificada?\n\n\n※ Correspondencia de Avar Hrodland\nEsta carta contiene instrucciones específicas dirigidas a {nickname2} y Theodore, detallando actos de sabotaje a realizar durante el asalto.\n\n\n※ Consola de control: Sala de control central\nEstado: Datos comprometidos por daños de la explosión.\nRecuperado mediante grabadora clasificada, registros de acceso de los últimos tres días:\n18 de noviembre: Sin entradas\n19 de noviembre: Sin entradas\n20 de noviembre: Avar Hrodland, {nickname2} \n\nNota de Hellfire:\nCabe destacar.\n\n\n※ Grabadora de audio \nRecuperada del pasillo por Catto (unidad de Narval), supuestamente caída durante la retirada de los Abandonados.\nEn la marca de tiempo 33:17, se escucha una voz similar a la de Avar Hrodland conversando con un operativo no identificado de los Abandonados.\n\nNota de Hellfire:\nPodría ser útil para establecer una cronología. La credibilidad sigue en duda.\n\n\n※ Testimonio de Calem (unidad de Narval)\nDeclaraciones:\n• \" Vi {性别2:al capitán|a la capitana} {nickname2} de los Grifos salir {性别2:solo|sola} del control central, con el pecho cubierto de sangre.\"\n• \"{性别2:Él|Ella} nos ordenó mantener la posición, afirmando que {性别2:él|ella} iría a revisar la Sala de control central para detectar posibles Abandonados ocultos.\"\n• \"Dos minutos después, sonó la alarma. La capitana Falsi y yo entramos corriendo: el capitán Avar de los Lobos Blancos yacía en un charco de sangre. La secuencia de autodestrucción ya había sido activado.\"\n\nNota de Hellfire:\n¿Conflicto interno?\n\n\n※ Preguntas pendientes\n• ¿Por qué fue destruida la sala de control central?\n→ ¿Un encubrimiento para eliminar más pruebas?\n\nRelatos contradictorios:\n→ Testimonios de {nickname2} y Theodore contradicen directamente los hallazgos anteriores.",
           TextMapId = "READ_TEXT_JailInves01"
         },
         READ_TEXT_JailInves02 = {
-          ContentES = "※ Untersuchung des familiären Hintergrunds von Daphne Theodore\n \n Die Familie Theodore lebt derzeit in der königlichen Hauptstadt Dismania. Mehrere Familienmitglieder sind an der Königlichen Alchemie-Akademie beschäftigt. Bemerkenswert ist, dass sowohl Marcus Theodore (Daphnes mütterlicher Großvater) als auch Claudia Theodore (ihre Mutter) mit dem Erstklassigen Smaragdorden des Aeolipile ausgezeichnet wurden.\n Die Familie Theodore weist keinerlei Vorstrafen auf.\n Weitere Untersuchungen ergaben, dass Daphnes leiblicher Vater Avar Hrodland ist. Obwohl Avar und Claudia vor fünf Jahren offiziell geschieden wurden, hat Avar seitdem weiterhin Kontakt zu Daphne gehalten.\n \n \n ※ Untersuchung des familiären Hintergrunds von {nickname2}\n \n {nickname2} ist {性别2:ein bestätigterÜberlebender|eine bestätigte Überlebende} des Alexis-Luftschiffabsturzes, {性别2:der|die} sich vor drei Jahren während einer Militäroperation gegen die elysische Kirche ereignete. Laut {nickname2} leidet {性别2:er|sie} unter Gedächtnisverlust, zeigt jedoch keinerlei Anzeichen kognitiver Beeinträchtigung. Bemerkenswert ist, dass Augenzeugenberichte anderer Überlebender bestätigen, dass {nickname2} ursprünglich nicht zu den Passagieren der Alexis gehörte. Mit anderen Worten: <H>{nickname2} war ein echter „Geisterpassagier“</>. Zu dieser Zeit führte die 13. Legion eine umfassende Untersuchung von {nickname2}s Hintergrund durch, konnte die Identität jedoch nicht bestätigen. Die Möglichkeit, dass {nickname2} ein Spion der Elysischen Kirche sei, wurde jedoch definitiv ausgeschlossen. Eine führende Theorie besagt, dass {nickname2} möglicherweise ein örtlicher Zivilist war, der während des Bombardements Schutz im Wrack suchte und dabei eine Kopfverletzung erlitt, die zu teilweisem Gedächtnisverlust führte. Unter strenger Beobachtung der 13. Legion und mit Prinz Vergilius als Bürge erhielt {nickname2} Aufnahme an der Kaiserlichen Militärakademie. {性别2:Er|Sie} schloss das Studium mit Auszeichnung ab. Während dieser Zeit fungierte Avar Hrodland als einer der Ausbilder von {nickname2}.",
+          ContentES = "※ Investigación sobre la familia de Daphne Theodore\nLa familia Theodore reside actualmente en la capital real, Dismania. Varios miembros sirven en la Real Academia de Alquimia. En particular, tanto Marcus Theodore (abuelo materno de Daphne) como Claudia Theodore (su madre) han recibido la Medalla Esmeralda de Primera Clase por la Academia Aeolipile.\nNo se ha encontrado registro criminal vinculado a la familia Theodore.\nInvestigaciones adicionales revelan que el padre biológico de Daphne es Avar Hrodland. Aunque Avar y Claudia se divorciaron oficialmente hace cinco años, Avar ha mantenido contacto con Daphne desde entonces.\n\n\n※ Investigación sobre el origen familiar de {nickname2}\n{nickname2} es {性别2:un superviviente confirmado|una superviviente confirmada} del accidente del dirigible Alexis, ocurrido hace tres años durante una operación militar contra la Iglesia Elysiana. Según {nickname2}, {性别2:él|ella} sufre de pérdida de memoria, aunque no presenta signos de disfunción cognitiva. Cabe señalar que, según los testimonios de otros supervivientes, {nickname2} no figuraba en la lista de pasajeros registrados del Alexis. En otras palabras, <H>{性别2:él era un auténtico \"pasajero fantasma\"|ella era una auténtica \"pasajera fantasma\"}</>.\nEn ese momento, la 13.ª Legión llevó a cabo una investigación exhaustiva sobre su identidad sin lograr autenticarla, descartando definitivamente la hipótesis de que {性别2:él fuera un espía|ella fuera una espía} de la Iglesia Elysiana. Una de las teorías principales sugiere que {性别2:él podría haber sido un civil local|ella podría haber sido una civil local} que buscó refugio en los restos durante el bombardeo y sufrió una lesión en la cabeza, lo que resultó en amnesia parcial.\nBajo estrecha observación de la 13.ª Legión, y con el príncipe Vergilius como garante, se le concedió a {nickname2} el ingreso al Colegio Militar Imperial. Se graduó con distinción. Durante ese tiempo, Avar Hrodland fue uno de sus instructores.",
           TextMapId = "READ_TEXT_JailInves02"
         },
         READ_TEXT_fushuyian01 = {
-          ContentES = "Informationen: Liu, weiblich, 12 Jahre alt. Konsultation am 6. Tag des 11. Monats.\n \n Hauptbeschwerde: Ging gestern nach draußen spielen im Schnee. Nach der Rückkehr nach Hause plötzlich Schwindel und ein schweres Gefühl im Kopf. Bis zum Abend entwickelten sich Schüttelfrost und Fieber, Kopfschmerzen, Gliederschmerzen, fehlendes Schwitzen sowie gelegentlicher Husten mit dünnem, klarem Auswurf.\n \n Vier Diagnostische Methoden:\n Beobachtung: blasse Gesichtsfarbe; Zunge mit dünnem weißen Belag.\n Auskultation: Stimme etwas schwer; Husten leicht verschleimt.\n Inquiry: Appetit mäßig; Stuhl und Urin normal; Kopfschmerzen verhindern Schlaf in der Nacht.\n Palpation: Puls schwebend und gespannt.\n \n Musterdiagnose: Kälte bindet die Außenseite, hemmt das Abwehr-Qi und unterdrückt die Diffusion des Lungen-Qi. Behandlung & Rezeptur: Scharf-warme Methode, um die Außenseite zu öffnen, die Diffusion des Lungen-Qi zu fördern und Kälte zu vertreiben. Verschreibung: Ma-Huang Dekokt.",
+          ContentES = "Información: Liu, sexo femenino, doce años de edad. Consulta realizada el sexto día del undécimo mes.\n\nMotivo de consulta: Ayer salió a jugar en la nieve. Al regresar a casa, presentó de forma repentina mareo y sensación de pesadez en la cabeza. Al anochecer aparecieron escalofríos y fiebre, cefalea, dolor corporal, ausencia de sudoración y tos ocasional con expectoración clara y fluida.\n\nCuatro métodos diagnósticos: \nObservación: tez pálida; lengua con saburra blanca y fina.\nAuscultación: voz algo apagada; tos ligeramente congestionada.\nInterrogatorio: apetito aceptable; heces y orina normales; cefalea que impide conciliar el sueño por la noche.\nPalpación: pulso flotante y tenso.\n\nDiagnóstico del patrón: Frío retenido en el exterior, qi defensivo bloqueado, dispersión del qi pulmonar comprometida.\n\nTratamiento y fórmula: Método acre y cálido para liberar el exterior, favorecer la difusión del qi pulmonar y dispersar el frío.\nPrescripción: Decocción de Ma Huang.",
           TextMapId = "READ_TEXT_fushuyian01"
         },
         READ_TEXT_fushuyian02 = {
-          ContentES = "Informationen: Chen, weiblich, 31 Jahre alt. Erste Konsultation im 12. Monat.\n \n Hauptbeschwerde: Studiert seit einem halben Jahr spät in die Nacht. In den letzten Monaten verschwommene Sicht; Augen trocken, schmerzhaft und gespannt, tränend bei Wind. Gelegentlicher Schwindel und Ohrensausen.\n \n Vier Diagnostische Methoden:\n Beobachtung: blasse Gesichtsfarbe, dunkle Schatten um die Augen; Zunge rot, wenig Flüssigkeit, dünner weißer Belag.\n Auskultation: Stimme klar und hell; gelegentlicher trockener Husten.\n Inquiry: Lernt bis spät in die Nacht vor dem Schlafen; geht tagsüber selten nach draußen; fühlt sich oft unruhig und leicht ermüdet.\n Palpation: Puls fein und drahtig.\n \n Musterdiagnose: Leber-Blut-Mangel, der die Augen nicht ausreichend nährt, begleitet von Yin-Mangel und überaktiver Hitze.\n \n Behandlung & Rezeptur: Methode zur Stärkung von Leber und Blut, Bereicherung des Yin und Klärung der Augen. Verschreibung: Bright-Eye Dekokt.",
+          ContentES = "Información: Chen, sexo femenino, treinta y un años de edad. Primera consulta en el duodécimo mes.\n\nMotivo de consulta: Durante los últimos seis meses ha estudiado hasta altas horas de la noche. En los últimos meses presenta visión borrosa; ojos secos, doloridos y con sensación de presión, con lagrimeo al exponerse al viento. Ocasionalmente presenta mareo y acúfenos.\n\nCuatro métodos diagnósticos:\nObservación: tez pálida, con ojeras marcadas; lengua roja, con escasos líquidos y saburra blanca fina.\nAuscultación: voz clara y sonora; tos seca ocasional.\nInterrogatorio: estudia hasta altas horas antes de dormir; rara vez sale al exterior durante el día; suele sentirse irritable y fatigada.\nPalpación: pulso fino y tenso.\n\nDiagnóstico del patrón: Deficiencia de sangre hepática que impide nutrir los ojos, acompañada de deficiencia de yin con hiperactividad de fuego.\n\nTratamiento y fórmula: Nutrir hígado y sangre, tonificar el yin y mejorar la visión.\nPrescripción: Decocción para aclarar la vista.",
           TextMapId = "READ_TEXT_fushuyian02"
         },
         READ_TEXT_fushuyian03 = {
-          ContentES = "Informationen: Liu, männlich, vierzig Jahre alt. Konsultation im dritten Frühlingsmonat.\n \n Hauptbeschwerde: Die Ehefrau verstarb vor vier Jahren an Krankheit. Seitdem ist er zunehmend zurückgezogen und kann nachts nicht schlafen. Oft sitzt er allein im Zimmer seiner verstorbenen Frau, ruft ihren Namen und spricht, als wäre sie noch bei ihm – näht oder ruft ihn zum Essen. Tagsüber ist sein Geist stumpf und unkonzentriert; Appetit gering; Körper fortschreitend abgemagert.\n \n Vier Diagnostische Methoden:\n Beobachtung: Teint blass-gelblich; Augen leer; Haare trocken und spröde; Zunge mit dünnem, trockenem, weißem Belag.\n Auskultation: Stimme leise und schwach; gelegentliches Murmeln, meist an seine verstorbene Frau gerichtet.\n Inquiry: ...\n Palpation: ...\n \n Musterdiagnose: Lang anhaltende Trauer verursacht emotionale Verletzung; Leber-Qi blockiert, Herz mangelt an Nahrung, was den Geist unruhig und unbeständig macht.\n \n Behandlung & Rezeptur: Methode zur Ernährung des Herzens und Beruhigung des Geistes, zur Beruhigung der Leber und Linderung von Blockaden, zugleich Qi und Blut tonisieren. Verschreibung: selbst formuliertes Dekokt zur Beruhigung des Geistes.",
+          ContentES = "Información: Liu, sexo masculino, cuarenta años de edad. Consulta realizada en el tercer mes de la primavera.\n\nMotivo de consulta: Hace cuatro años falleció su esposa por enfermedad. Desde entonces se ha vuelto retraído, con insomnio nocturno. Suele permanecer solo en la habitación de su difunta esposa, llamándola y hablándole, diciendo que aún estaba a su lado cosiendo o que oía su voz llamándolo a comer. Durante el día se muestra distraído, con poco apetito y pérdida progresiva de peso.\n\nCuatro métodos diagnósticos:\nObservación: tez amarillenta y pálida; mirada vacía; cabello seco y marchito; lengua con saburra blanca fina y seca.\nAuscultación: voz baja y débil; murmullos ocasionales, en su mayoría dirigidos a su difunta esposa.\nInterrogatorio: …\nPalpación: …\n\nDiagnóstico del patrón: Daño emocional por duelo prolongado; estancamiento del qi hepático; falta de nutrición del corazón, con espíritu inestable y errante.\n\nTratamiento y fórmula: Nutrir el corazón y calmar el espíritu, aliviar el estancamiento del hígado, y tonificar qi y sangre.\nPrescripción: Decocción calmante formulada de manera personalizada.",
           TextMapId = "READ_TEXT_fushuyian03"
         },
         RESOURCE_DESC_100 = {
@@ -40047,7 +40937,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_10023 = {
           ContentES = "El Noctilunismo, en oposición a los Nueve Dioses, venera al \"Abismo\". La conservación de sus doctrinas es considerada tabú, pero lo prohibido siempre resulta seductor. Con suficiente voluntad, la puerta hacia un nuevo mundo puede abrirse en cualquier momento.",
           TextMapId = "RESOURCE_DESC_10023"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_10024",
+    MaxKey = "RESOURCE_DESC_12140",
+    Loader = function()
+      return {
         RESOURCE_DESC_10024 = {
           ContentES = "Este recipiente de reacción sellado, procedente del Imperio Hiperbóreo, contiene líquido celular de Filthoid. Antes de abrirse parece solo una caja negra, incluso puede que no cumpla con el objetivo previsto, sin embargo, también podría esconder grandes sorpresas y horrores.",
           TextMapId = "RESOURCE_DESC_10024"
@@ -40065,7 +40963,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_DESC_1007"
         },
         RESOURCE_DESC_1009 = {
-          ContentES = "Un hilo radiante que centellea con luz estelar. Úsalo para obtener apariencias en eventos específicos.",
+          ContentES = "Un hilo radiante que centellea con luz estelar. Úsalo para obtener aspectos en eventos específicos.",
           TextMapId = "RESOURCE_DESC_1009"
         },
         RESOURCE_DESC_101 = {
@@ -40127,15 +41025,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_10205 = {
           ContentES = "Abriendo la mente y explorando el propio yo, uno puede alcanzar crecimiento interior y exterior.",
           TextMapId = "RESOURCE_DESC_10205"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_10206",
-    MaxKey = "RESOURCE_DESC_12161",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_10206 = {
           ContentES = "La administración de medicinas es un oficio que depende en gran medida de la experiencia. Solo las lecciones aprendidas a lo largo del aprendizaje permiten que un médico administre la dosis más adecuada en cualquier situación.",
           TextMapId = "RESOURCE_DESC_10206"
@@ -40227,6 +41117,10 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_110055 = {
           ContentES = "Posibles recompensas y probabilidades, redondeadas a 4 decimales:\nGema de Phoxene ×36: 22.0507%\nGema de Phoxene ×48: 51.4517%\nGema de Phoxene ×68: 22.0507%\nGema de Phoxene ×100: 3.6751%\nGema de Phoxene ×120: 0.7350%\nGema de Phoxene ×888: 0.0368%",
           TextMapId = "RESOURCE_DESC_110055"
+        },
+        RESOURCE_DESC_110056 = {
+          ContentES = "Al usarlo, puedes elegir un material entre Cristal Hydro o Cristal Umbro.",
+          TextMapId = "RESOURCE_DESC_110056"
         },
         RESOURCE_DESC_11006 = {
           ContentES = "Componente de Arma Avanzado fabricado con precisión según los planos. No importa si su hoja es curva o recta, ligera o pesada, su filo solo existe para el combate.",
@@ -40851,7 +41745,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_12140 = {
           ContentES = "Componente de Dualidad celestial fabricado con precisión según los planos. No importa si su hoja es curva o recta, ligera o pesada, su filo solo existe para el combate.",
           TextMapId = "RESOURCE_DESC_12140"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12141",
+    MaxKey = "RESOURCE_DESC_4010015",
+    Loader = function()
+      return {
         RESOURCE_DESC_12141 = {
           ContentES = "Componente de Musa trígona fabricado con precisión según los planos. Una vez se aprieta el gatillo no hay marcha atrás, al igual que el compromiso que sella un momento decisivo.",
           TextMapId = "RESOURCE_DESC_12141"
@@ -40935,15 +41837,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_12161 = {
           ContentES = "Componente de Pacto Crepuscular fabricado con precisión según los planos. Forjado en acero de alta resistencia, también puede usarse como arma contundente o lanzarse como proyectil cuando se agotan las balas.",
           TextMapId = "RESOURCE_DESC_12161"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_12162",
-    MaxKey = "RESOURCE_DESC_41011",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_12162 = {
           ContentES = "Componente de Pacto Crepuscular fabricado con precisión según los planos. Es de donde se disparan las balas; en cada ráfaga, el cañón y el corazón del soldado se calientan por igual.",
           TextMapId = "RESOURCE_DESC_12162"
@@ -41356,6 +42250,38 @@ pero el tesoro yace donde arraiga la hierba.]],
           ContentES = "Una llave finamente elaborada, extrañamente familiar pero cuyo origen no logras recordar. Quizás algún día, en el momento adecuado, abrirá un secreto largamente enterrado.",
           TextMapId = "RESOURCE_DESC_3000011"
         },
+        RESOURCE_DESC_3000018 = {
+          ContentES = "Pigmento blanco, ideal para pintar al óleo.",
+          TextMapId = "RESOURCE_DESC_3000018"
+        },
+        RESOURCE_DESC_3000019 = {
+          ContentES = "Analgésico guardado en una caja fuerte.",
+          TextMapId = "RESOURCE_DESC_3000019"
+        },
+        RESOURCE_DESC_3000020 = {
+          ContentES = "Tarjeta de deshollinador.",
+          TextMapId = "RESOURCE_DESC_3000020"
+        },
+        RESOURCE_DESC_3000021 = {
+          ContentES = "Un fajo de cheques, cada uno con un valor de cinco monedas de oro.",
+          TextMapId = "RESOURCE_DESC_3000021"
+        },
+        RESOURCE_DESC_3000022 = {
+          ContentES = "Pinza hemostática médica.",
+          TextMapId = "RESOURCE_DESC_3000022"
+        },
+        RESOURCE_DESC_3000023 = {
+          ContentES = "Petaca metálica aplanada.",
+          TextMapId = "RESOURCE_DESC_3000023"
+        },
+        RESOURCE_DESC_3000024 = {
+          ContentES = "Abrigo acolchado de contrabando; la mitad del relleno ya fue retirada.",
+          TextMapId = "RESOURCE_DESC_3000024"
+        },
+        RESOURCE_DESC_3000025 = {
+          ContentES = "Poción común entre alquimistas, con un fuerte olor ácido.",
+          TextMapId = "RESOURCE_DESC_3000025"
+        },
         RESOURCE_DESC_30001 = {
           ContentES = "Material de consistencia gelatinosa utilizado para fabricar Módulos de cambio de afinidad. Su composición no contiene impurezas, se disuelve fácilmente en agua y se desactiva a altas temperaturas, por lo que requiere almacenarse en condiciones estrictas. A pesar de ello, tiene muchas funcionalidades útiles, por lo que vale la pena llevarlo consigo.",
           TextMapId = "RESOURCE_DESC_30001"
@@ -41627,7 +42553,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_4010015 = {
           ContentES = "Un cristal nacido del Azote de Zhuyin. Su mera presencia inhibe el crecimiento de toda vegetación circundante, sumiendo el ecosistema local en una prolongada estasis. Debido a su naturaleza brutal e irracional, recibe el nombre de Piedra reacia.",
           TextMapId = "RESOURCE_DESC_4010015"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_4010016",
+    MaxKey = "RESOURCE_DESC_MONSTERITEM_Jiaohui",
+    Loader = function()
+      return {
         RESOURCE_DESC_4010016 = {
           ContentES = "Fragmentos de armas dañadas, hallados en grandes cantidades en la Hondonada del canto del cuervo, algunos de los cuales incluso han derivado hasta el Mercado Velado. Son testigos mudos del oscuro pasado del conflicto entre las Sectas Xuanheng y Jishu; estas reliquias albergan una memoria silenciosa. Si pudieran hablar y relatar fielmente lo que presenciaron, quizá Huaxu sería hoy muy diferente.",
           TextMapId = "RESOURCE_DESC_4010016"
@@ -41743,15 +42677,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_41011 = {
           ContentES = "¡Socorro! La cama no me deja levantarme!",
           TextMapId = "RESOURCE_DESC_41011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_41012",
-    MaxKey = "RESOURCE_FUNCTION_110021",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_41012 = {
           ContentES = "Toca una pieza que narre sobre el verano y las violetas.",
           TextMapId = "RESOURCE_DESC_41012"
@@ -41989,7 +42915,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_DESC_49997"
         },
         RESOURCE_DESC_49998 = {
-          ContentES = "Desarrollado por Gongshang, este vehículo mecanizado adopta la forma del Señor Dragón Argento. En todo Huaxu existe una sola unidad, exhibido como pieza de colección en el taller de su creador. Por fortuna, es única; si las réplicas de Taihao surcara los cielos por doquier, el Ministerio de Ritos no tardaría en presentarse a exigir explicaciones. Pero a Gongshang no le preocupa en lo más mínimo. Está decidido a producirlo en masa. Deseémosle buena suerte.\nVelocidad de volar +50%, no se requiere ventaja de reputación para pilotar este vehículo.",
+          ContentES = "Desarrollado por Gongshang, este vehículo mecanizado adopta la forma del Señor Dragón Argento. En todo Huaxu existe una sola unidad, exhibido como pieza de colección en el taller de su creador. Por fortuna, es única; si las réplicas de Taihao surcara los cielos por doquier, el Ministerio de Ritos no tardaría en presentarse a exigir explicaciones. Pero a Gongshang no le preocupa en lo más mínimo. Está decidido a producirlo en masa. Deseémosle buena suerte.\nVelocidad de volar +50%, no se requiere licencia de prestigio para pilotar este vehículo.",
           TextMapId = "RESOURCE_DESC_49998"
         },
         RESOURCE_DESC_49999 = {
@@ -42405,7 +43331,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_DESC_GENERALSKIN_4"
         },
         RESOURCE_DESC_GENERALSKIN_5 = {
-          ContentES = "Permite elegir una apariencia de personaje entre Berenica, Lisbell, Dama Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle y Filbert, Psyche y Daphne.",
+          ContentES = "Permite elegir un aspecto de personaje entre Berenica, Lisbell, Dama Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle y Filbert, Psyche y Daphne.",
           TextMapId = "RESOURCE_DESC_GENERALSKIN_5"
         },
         RESOURCE_DESC_GENERALSKIN_6 = {
@@ -42435,7 +43361,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_MONSTERITEM_Jiaohui = {
           ContentES = "Insignia obtenida al derrotar enemigos de la Iglesia Elysiana. La fe se quebró en la larga noche, y el asceta maldijo al sol que tardaba en salir.\nPuede usarse para forjar Armas de calamidad.",
           TextMapId = "RESOURCE_DESC_MONSTERITEM_Jiaohui"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_MONSTERITEM_Tongmeng",
+    MaxKey = "RESOURCE_NAME_1003301",
+    Loader = function()
+      return {
         RESOURCE_DESC_MONSTERITEM_Tongmeng = {
           ContentES = "Insignia obtenida al derrotar miembros de Los Abandonados. Abandonados por el mundo, y ellos respondieron con matanza. ¿Pero puede la sangre redimirlos?\nPuede usarse para forjar Armas de calamidad.",
           TextMapId = "RESOURCE_DESC_MONSTERITEM_Tongmeng"
@@ -42475,6 +43409,10 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_VOUCHER_2 = {
           ContentES = "Gasta Gema de Phoxene ×480 para ahorrar Gema de Phoxene ×300",
           TextMapId = "RESOURCE_DESC_VOUCHER_2"
+        },
+        RESOURCE_DESC_VOUCHER_3 = {
+          ContentES = "Gasta Gema de Phoxene ×680 para ahorrar Gema de Phoxene ×360",
+          TextMapId = "RESOURCE_DESC_VOUCHER_3"
         },
         RESOURCE_DESC_WEAPONPIECE = {
           ContentES = "El poder siempre tiene el mismo origen, ya sea en una herramienta o en un arma. Así como la hoz nació para el trabajo, las armas de fuego para los fuegos artificiales.\nSe obtiene por medios especiales y puede usarse como material de fundición para Armas de calamidad.",
@@ -42551,15 +43489,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_FUNCTION_110021 = {
           ContentES = "Úsalo para obtener una cuña demoníaca Fénix azul aleatoria.",
           TextMapId = "RESOURCE_FUNCTION_110021"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_FUNCTION_110022",
-    MaxKey = "RESOURCE_NAME_1011502",
-    Loader = function()
-      return {
+        },
         RESOURCE_FUNCTION_110022 = {
           ContentES = "Úsalo para obtener una cuña demoníaca Fénix púrpura aleatoria.",
           TextMapId = "RESOURCE_FUNCTION_110022"
@@ -42653,19 +43583,19 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_FUNCTION_110050"
         },
         RESOURCE_FUNCTION_110051 = {
-          ContentES = "Úsalo para obtener recompensas. En un máximo de 50 usos, obtendrás garantizado el efecto de movimiento: Dragón ascendente.",
+          ContentES = "Úsalo para obtener recompensas. En un máximo de 50 usos, obtendrás garantizado el efecto de movimiento: Dragón ascendente. Solo puede obtenerse una vez.",
           TextMapId = "RESOURCE_FUNCTION_110051"
         },
         RESOURCE_FUNCTION_110052 = {
-          ContentES = "Úsalo para obtener recompensas. En un máximo de 30 usos, obtendrás garantizado el aspecto de arma: Violín de latón.",
+          ContentES = "Úsalo para obtener recompensas. En un máximo de 30 usos, obtendrás garantizado el aspecto de arma: Violín de latón. Solo puede obtenerse una vez.",
           TextMapId = "RESOURCE_FUNCTION_110052"
         },
         RESOURCE_FUNCTION_110053 = {
-          ContentES = "Úsalo para obtener recompensas. En un máximo de 30 usos, obtendrás garantizado el aspecto de arma: Invitación cósmica: Espada Látigo",
+          ContentES = "Úsalo para obtener recompensas. En un máximo de 30 usos, obtendrás garantizado el aspecto de arma: Invitación cósmica: Espada Látigo. Solo puede obtenerse una vez.",
           TextMapId = "RESOURCE_FUNCTION_110053"
         },
         RESOURCE_FUNCTION_110054 = {
-          ContentES = "Úsalo para obtener recompensas. En un máximo de 30 usos, obtendrás garantizado el aspecto de arma: Invitación cósmica: Katana.",
+          ContentES = "Úsalo para obtener recompensas. En un máximo de 30 usos, obtendrás garantizado el aspecto de arma: Invitación cósmica: Katana. Solo puede obtenerse una vez.",
           TextMapId = "RESOURCE_FUNCTION_110054"
         },
         RESOURCE_FUNCTION_110056 = {
@@ -42913,7 +43843,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_FUNCTION_LASTROOT"
         },
         RESOURCE_FUNCTION_LIMPRIZE = {
-          ContentES = "Úsalo para obtener apariencias en eventos específicos.",
+          ContentES = "Úsalo para obtener aspectos en eventos específicos.",
           TextMapId = "RESOURCE_FUNCTION_LIMPRIZE"
         },
         RESOURCE_FUNCTION_MODCOIN = {
@@ -42985,7 +43915,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_FUNCTION_SKILL"
         },
         RESOURCE_FUNCTION_SKINUPGRADE = {
-          ContentES = "Úsalo para mejorar el Aspecto de un personaje.",
+          ContentES = "Úsalo para mejorar el aspecto de un personaje.",
           TextMapId = "RESOURCE_FUNCTION_SKINUPGRADE"
         },
         RESOURCE_FUNCTION_TASK = {
@@ -43001,7 +43931,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_FUNCTION_TIANFUCOIN"
         },
         RESOURCE_FUNCTION_VOUCHER_1 = {
-          ContentES = "Ofrece un precio con descuento en apariencias de arma de la serie Amor duro.",
+          ContentES = "Ofrece un precio con descuento en aspectos de arma de la serie Amor duro.",
           TextMapId = "RESOURCE_FUNCTION_VOUCHER_1"
         },
         RESOURCE_FUNCTION_VOUCHER_2 = {
@@ -43239,7 +44169,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_1003301 = {
           ContentES = "Pensamientos: Margie",
           TextMapId = "RESOURCE_NAME_1003301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_1004",
+    MaxKey = "RESOURCE_NAME_12063",
+    Loader = function()
+      return {
         RESOURCE_NAME_1004 = {
           ContentES = "Reloj de arena prismático (Tiempo limitado)",
           TextMapId = "RESOURCE_NAME_1004"
@@ -43359,15 +44297,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_1011502 = {
           ContentES = "Sello: Dama Nifle",
           TextMapId = "RESOURCE_NAME_1011502"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_1011503",
-    MaxKey = "RESOURCE_NAME_12093",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_1011503 = {
           ContentES = "Sello: Kezhou",
           TextMapId = "RESOURCE_NAME_1011503"
@@ -43529,7 +44459,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_NAME_103"
         },
         RESOURCE_NAME_104 = {
-          ContentES = "Notenblatt",
+          ContentES = "Partitura musical",
           TextMapId = "RESOURCE_NAME_104"
         },
         RESOURCE_NAME_105 = {
@@ -43573,7 +44503,7 @@ pero el tesoro yace donde arraiga la hierba.]],
           TextMapId = "RESOURCE_NAME_110016"
         },
         RESOURCE_NAME_110017 = {
-          ContentES = "Selección de apariencia de personaje: Indómito",
+          ContentES = "Selección de aspecto de personaje: Indómito",
           TextMapId = "RESOURCE_NAME_110017"
         },
         RESOURCE_NAME_110018 = {
@@ -44047,7 +44977,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_12063 = {
           ContentES = "Luminiscencia Efímera: Armazón",
           TextMapId = "RESOURCE_NAME_12063"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_12064",
+    MaxKey = "RESOURCE_NAME_203",
+    Loader = function()
+      return {
         RESOURCE_NAME_12064 = {
           ContentES = "Luminiscencia Efímera: Cañón",
           TextMapId = "RESOURCE_NAME_12064"
@@ -44167,15 +45105,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_12093 = {
           ContentES = "Fervor Sagrado: Hoja",
           TextMapId = "RESOURCE_NAME_12093"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12094",
-    MaxKey = "RESOURCE_NAME_29003",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12094 = {
           ContentES = "Fervor Sagrado: Decoración",
           TextMapId = "RESOURCE_NAME_12094"
@@ -44855,7 +45785,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_203 = {
           ContentES = "Brasa",
           TextMapId = "RESOURCE_NAME_203"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_204",
+    MaxKey = "RESOURCE_NAME_40003",
+    Loader = function()
+      return {
         RESOURCE_NAME_204 = {
           ContentES = "Tónico de energía",
           TextMapId = "RESOURCE_NAME_204"
@@ -44975,15 +45913,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_29003 = {
           ContentES = "Esfera de exploración: Fortaleza de Lonza",
           TextMapId = "RESOURCE_NAME_29003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_29004",
-    MaxKey = "RESOURCE_NAME_4030001",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_29004 = {
           ContentES = "Esfera de exploración: Puerto de las Brumas",
           TextMapId = "RESOURCE_NAME_29004"
@@ -45039,6 +45969,38 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_3000011 = {
           ContentES = "Llave antigua",
           TextMapId = "RESOURCE_NAME_3000011"
+        },
+        RESOURCE_NAME_3000018 = {
+          ContentES = "Pigmento blanco",
+          TextMapId = "RESOURCE_NAME_3000018"
+        },
+        RESOURCE_NAME_3000019 = {
+          ContentES = "Analgésico",
+          TextMapId = "RESOURCE_NAME_3000019"
+        },
+        RESOURCE_NAME_3000020 = {
+          ContentES = "Tarjeta de trabajador de la estación",
+          TextMapId = "RESOURCE_NAME_3000020"
+        },
+        RESOURCE_NAME_3000021 = {
+          ContentES = "Un fajo de cheques",
+          TextMapId = "RESOURCE_NAME_3000021"
+        },
+        RESOURCE_NAME_3000022 = {
+          ContentES = "Pinza hemostática",
+          TextMapId = "RESOURCE_NAME_3000022"
+        },
+        RESOURCE_NAME_3000023 = {
+          ContentES = "Petaca de licor de contrabando",
+          TextMapId = "RESOURCE_NAME_3000023"
+        },
+        RESOURCE_NAME_3000024 = {
+          ContentES = "Abrigo acolchado de contrabando",
+          TextMapId = "RESOURCE_NAME_3000024"
+        },
+        RESOURCE_NAME_3000025 = {
+          ContentES = "Poción alquímica ácida",
+          TextMapId = "RESOURCE_NAME_3000025"
         },
         RESOURCE_NAME_30001 = {
           ContentES = "Esencia vital",
@@ -45631,7 +46593,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_40003 = {
           ContentES = "Caja de suministros de munición I",
           TextMapId = "RESOURCE_NAME_40003"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_4001",
+    MaxKey = "RESOURCE_NAME_5027011",
+    Loader = function()
+      return {
         RESOURCE_NAME_4001 = {
           ContentES = "Actividad personal",
           TextMapId = "RESOURCE_NAME_4001"
@@ -45783,15 +46753,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_4030001 = {
           ContentES = "Residuo festivo",
           TextMapId = "RESOURCE_NAME_4030001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_4030002",
-    MaxKey = "RESOURCE_NAME_5030051",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_4030002 = {
           ContentES = "Martillo indestructible",
           TextMapId = "RESOURCE_NAME_4030002"
@@ -46439,7 +47401,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_5027011 = {
           ContentES = "Pez sable variante",
           TextMapId = "RESOURCE_NAME_5027011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_5027020",
+    MaxKey = "RESOURCE_TEXT_20029",
+    Loader = function()
+      return {
         RESOURCE_NAME_5027020 = {
           ContentES = "Perca flor",
           TextMapId = "RESOURCE_NAME_5027020"
@@ -46591,15 +47561,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_5030051 = {
           ContentES = "Cresta carmesí variante",
           TextMapId = "RESOURCE_NAME_5030051"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_5031010",
-    MaxKey = "RESOURCE_TEXT_30102",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_5031010 = {
           ContentES = "Apestoso",
           TextMapId = "RESOURCE_NAME_5031010"
@@ -47247,7 +48209,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_TEXT_20029 = {
           ContentES = "\"Pocos saben que el apoyo Gad fue el primer invento en solicitar una patente. Cuando el sistema acababa de ponerse en marcha, nadie se atrevía a arriesgar su medio de vida, y ya que el armazón Gad no tenía gran complejidad técnica, terminó siendo el elegido para probar suerte. El resultado fue un éxito rotundo. El viejo Gad podría haberse hecho millonario gracias a esa patente, pero dijo: 'En toda mi vida solo pude fabricar un apoyo auxiliar. Me alegra que les guste. Llévenselo, puede usarlo cualquiera'. Verdaderamente conmovedor, ¿no les parece?\"\n\n— Dylan, el Sabelotodo, <I>Rincones desconocidos</>",
           TextMapId = "RESOURCE_TEXT_20029"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_2003",
+    MaxKey = "RESOURCE_TEXT_gongshen",
+    Loader = function()
+      return {
         RESOURCE_TEXT_2003 = {
           ContentES = "Los registros incluyen tanto objetivos a largo plazo como pequeñas tareas cotidianas. Sirven como testimonio de cada progreso, prueba de que ningún esfuerzo pasa desapercibido.",
           TextMapId = "RESOURCE_TEXT_2003"
@@ -47352,6 +48322,38 @@ pero el tesoro yace donde arraiga la hierba.]],
           ContentES = "En el Lejano Oriente se alza una gran ciudad, donde los pabellones y las terrazas junto al agua levantados por manos antiguas han perdurado intactos durante mil años, como si fueran a resistir hasta que se desgasten el mar y la piedra.\n\nPero incluso las canciones que pasan de siglo en siglo acabarán encontrando un verso nuevo, y las historias familiares recibirán rostros desconocidos. Bajo la bóveda del cielo, los vientos se alzan y las mareas empiezan a cambiar.\n\nVe a explorar, a mirar y a escuchar en Haojing, una ciudad a punto de renacer.",
           TextMapId = "RESOURCE_TEXT_29006"
         },
+        RESOURCE_TEXT_3000018 = {
+          ContentES = "Pigmento blanco, ideal para pintar cielos estrellados.",
+          TextMapId = "RESOURCE_TEXT_3000018"
+        },
+        RESOURCE_TEXT_3000019 = {
+          ContentES = "Analgésico, el favorito de los soldados heridos. Debido a su carácter adictivo, suele mantenerse bajo estricta vigilancia.",
+          TextMapId = "RESOURCE_TEXT_3000019"
+        },
+        RESOURCE_TEXT_3000020 = {
+          ContentES = "Tarjeta de deshollinador de La Estación de las Cien Flores, con un retrato que apenas se parece al portador. Aun así, cualquiera que la vea creerá sin dudar que pertenece a un trabajador honrado.",
+          TextMapId = "RESOURCE_TEXT_3000020"
+        },
+        RESOURCE_TEXT_3000021 = {
+          ContentES = "Aunque solo es un montón de papel, por alguna razón parece brillar como el oro. Quien la vea pensará que su dueño es un joven rico generoso... o simplemente alguien con dinero de sobra.",
+          TextMapId = "RESOURCE_TEXT_3000021"
+        },
+        RESOURCE_TEXT_3000022 = {
+          ContentES = "Pinza hemostática quirúrgica, parecida a unas tijeras. Pero durante una operación no debe apretarse demasiado, o el paciente podría morir. No te preocupes: el médico que la sostiene no correrá la misma suerte.",
+          TextMapId = "RESOURCE_TEXT_3000022"
+        },
+        RESOURCE_TEXT_3000023 = {
+          ContentES = "Una petaca que debería estar llena de licor de contrabando, pero ahora está completamente vacía. Quién sabe quién terminó bebiéndose todo su contenido.",
+          TextMapId = "RESOURCE_TEXT_3000023"
+        },
+        RESOURCE_TEXT_3000024 = {
+          ContentES = "Todo el mundo sabe que el algodón es extremadamente inflamable y puede utilizarse para fabricar explosivos.",
+          TextMapId = "RESOURCE_TEXT_3000024"
+        },
+        RESOURCE_TEXT_3000025 = {
+          ContentES = "Poción alquímica ácida, corrosiva y extremadamente peligrosa. Nadie en su sano juicio intentaría subirla a un tren... a menos que lo haga a propósito.",
+          TextMapId = "RESOURCE_TEXT_3000025"
+        },
         RESOURCE_TEXT_30001 = {
           ContentES = "\"La pureza siempre ha sido una espada de doble filo. La simplicidad potencia el efecto, pero reduce su duración. Mi trabajo consiste únicamente en regular las impurezas, en busca del equilibrio entre poder y durabilidad. De hecho, este principio no rige solo la alquimia, sino cualquier colectivo.\"\n\n— Ecodna, jefa de Biología Aplicada de La Academia Spathatoi, <I>Descomposición y recomposición: Biología Filthoid</>",
           TextMapId = "RESOURCE_TEXT_30001"
@@ -47399,15 +48401,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_TEXT_30102 = {
           ContentES = "\"Los basureros del oeste de la ciudad, con pequeñas flores verdes pintadas, son de Leoni; los de la mina abandonada, con piedrecillas grises dibujadas, son de Edwin; y todos los demás, con grandes soles amarillos, son míos. Pero ver siempre el mismo color termina cansando, así que de vez en cuando cambiamos los colores de los basureros que cada uno cuida. Ese es nuestro secreto para no aburrirnos.\"\n\n— Margie, recicladora de Lago Glacial",
           TextMapId = "RESOURCE_TEXT_30102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_30103",
-    MaxKey = "RLBlessingGroup_Desc_503",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_30103 = {
           ContentES = "\"Los basureros del oeste de la ciudad, con pequeñas flores verdes pintadas, son de Leoni; los de la mina abandonada, con piedrecillas grises dibujadas, son de Edwin; y todos los demás, con grandes soles amarillos, son míos. Pero ver siempre el mismo color termina cansando, así que de vez en cuando cambiamos los colores de los basureros que cada uno cuida. Ese es nuestro secreto para no aburrirnos.\"\n\n— Margie, recicladora de Lago Glacial",
           TextMapId = "RESOURCE_TEXT_30103"
@@ -48023,7 +49017,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_TEXT_gongshen = {
           ContentES = "\"Si un arco no da en el blanco, no es más que un palo bonito. Tiene que haber alguna manera de mejorar la precisión.\"\n\n— Un arquero artesano anónimo",
           TextMapId = "RESOURCE_TEXT_gongshen"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_gongxian",
+    MaxKey = "RLBlessing_Name_213",
+    Loader = function()
+      return {
         RESOURCE_TEXT_gongxian = {
           ContentES = "\"Sólido, y lo suficientemente flexible. Me atrevería a decir que, en manos de un asesino, sería un arma de lo más elegante.\"\n\n— Un novelista anónimo en busca de inspiración",
           TextMapId = "RESOURCE_TEXT_gongxian"
@@ -48207,15 +49209,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessingGroup_Desc_503 = {
           ContentES = "Restaura <Highlight>2</> de Cordura por segundo por cada 10 acumulaciones de [Devorador de sombras].",
           TextMapId = "RLBlessingGroup_Desc_503"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessingGroup_Desc_504",
-    MaxKey = "RLBlessing_Name_514",
-    Loader = function()
-      return {
+        },
         RLBlessingGroup_Desc_504 = {
           ContentES = "[Polvo de escamas], [Alas de viento] y [Ala de espada] infligen un ataque adicional basado en el ATQ y la Cordura Máx. del personaje (<Highlight>1% × ATQ × Cordura Máx.</>).",
           TextMapId = "RLBlessingGroup_Desc_504"
@@ -48831,7 +49825,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessing_Name_213 = {
           ContentES = "Francotirador afilado",
           TextMapId = "RLBlessing_Name_213"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Name_214",
+    MaxKey = "RLBlessing_UnlockCon_205",
+    Loader = function()
+      return {
         RLBlessing_Name_214 = {
           ContentES = "Aguijón del océano",
           TextMapId = "RLBlessing_Name_214"
@@ -49015,15 +50017,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessing_Name_514 = {
           ContentES = "Invocador del viento",
           TextMapId = "RLBlessing_Name_514"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Name_515",
-    MaxKey = "RLBlessing_UnlockCon_510",
-    Loader = function()
-      return {
+        },
         RLBlessing_Name_515 = {
           ContentES = "Rompecrisálida",
           TextMapId = "RLBlessing_Name_515"
@@ -49639,7 +50633,15 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessing_UnlockCon_205 = {
           ContentES = "Mecha no desbloqueada",
           TextMapId = "RLBlessing_UnlockCon_205"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_UnlockCon_206",
+    MaxKey = "RLTreasure_Desc_10210",
+    Loader = function()
+      return {
         RLBlessing_UnlockCon_206 = {
           ContentES = "Mecha no desbloqueada",
           TextMapId = "RLBlessing_UnlockCon_206"
@@ -49823,15 +50825,7 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessing_UnlockCon_510 = {
           ContentES = "Mecha no desbloqueada",
           TextMapId = "RLBlessing_UnlockCon_510"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_UnlockCon_511",
-    MaxKey = "RLTreasure_IPDesc_10103",
-    Loader = function()
-      return {
+        },
         RLBlessing_UnlockCon_511 = {
           ContentES = "Mecha no desbloqueada",
           TextMapId = "RLBlessing_UnlockCon_511"
@@ -50449,7 +51443,15 @@ Activo solo en [Abisoides].]],
         RLTreasure_Desc_10210 = {
           ContentES = "Obtén <Highlight>@2</> Brasas por cada <Highlight>@1</> Comandante(s) derrotado(s).",
           TextMapId = "RLTreasure_Desc_10210"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_Desc_10211",
+    MaxKey = "RLTreasure_SimpleDesc_10213",
+    Loader = function()
+      return {
         RLTreasure_Desc_10211 = {
           ContentES = "Tu próxima elección de Mecha de Abisoide penumbral o disperso será al menos de calidad de rareza <Highlight>Morada</>.",
           TextMapId = "RLTreasure_Desc_10211"
@@ -50633,15 +51635,7 @@ Activo solo en [Abisoides].]],
         RLTreasure_IPDesc_10103 = {
           ContentES = "Ella es la más devota de los creyentes, alinea cada palabra y acción meticulosamente con la doctrina divina, manteniendo una piedad perfecta incluso cuando ningún ojo mortal podría presenciarla. A los que luchan, ella les brinda ayuda; a los desposeídos les da generosamente; incluso a los disidentes les ofrece consejo paciente, instándolos a apreciar la misericordia de los Nueve Dioses.",
           TextMapId = "RLTreasure_IPDesc_10103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_IPDesc_10104",
-    MaxKey = "RLTreasure_UnlockCon_10108",
-    Loader = function()
-      return {
+        },
         RLTreasure_IPDesc_10104 = {
           ContentES = "\"¿Qué pasa si los dioses no son tan perfectos como crees? ¿Aún importaría tu devoción?\" —preguntó la gente.\n\"Por supuesto\", sonríe ella serenamente. \"La verdadera fe no busca recompensa, sino que disciplina. Siempre que mis acciones estén en consonancia con mi conciencia, ¿qué diferencia hay si los dioses son reales o justos?\"",
           TextMapId = "RLTreasure_IPDesc_10104"
@@ -51259,7 +52253,15 @@ Activo solo en [Abisoides].]],
         RLTreasure_SimpleDesc_10213 = {
           ContentES = "Obtén inmediatamente <Highlight>1</> Mecha [Corazón de fuego] y aumenta ligeramente tus posibilidades de descubrirlas.",
           TextMapId = "RLTreasure_SimpleDesc_10213"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_SimpleDesc_10214",
+    MaxKey = "RecurringTask_Rarity3",
+    Loader = function()
+      return {
         RLTreasure_SimpleDesc_10214 = {
           ContentES = "Obtén inmediatamente <Highlight>1</> Mecha [Luna marina] y aumenta ligeramente tus posibilidades de descubrirlas.",
           TextMapId = "RLTreasure_SimpleDesc_10214"
@@ -51443,15 +52445,7 @@ Activo solo en [Abisoides].]],
         RLTreasure_UnlockCon_10108 = {
           ContentES = "Artefacto no desbloqueado",
           TextMapId = "RLTreasure_UnlockCon_10108"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_UnlockCon_10109",
-    MaxKey = "RegionReputation_RecurringTask_10",
-    Loader = function()
-      return {
+        },
         RLTreasure_UnlockCon_10109 = {
           ContentES = "Artefacto no desbloqueado",
           TextMapId = "RLTreasure_UnlockCon_10109"
@@ -51941,7 +52935,7 @@ Activo solo en [Abisoides].]],
           TextMapId = "RaidDungeon_Rank_CharList"
         },
         RaidDungeon_Rank_Empty = {
-          ContentES = "No hay clasificaciones disponibles",
+          ContentES = "-",
           TextMapId = "RaidDungeon_Rank_Empty"
         },
         RaidDungeon_Rank_History = {
@@ -52067,7 +53061,15 @@ Activo solo en [Abisoides].]],
         RecurringTask_Rarity3 = {
           ContentES = "Extremo",
           TextMapId = "RecurringTask_Rarity3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RecurringTask_Rarity3_Locked",
+    MaxKey = "RougeMiniGamePointsReach",
+    Loader = function()
+      return {
         RecurringTask_Rarity3_Locked = {
           ContentES = "Se desbloquea al completar la <highlight>dificultad Difícil</>",
           TextMapId = "RecurringTask_Rarity3_Locked"
@@ -52251,15 +53253,7 @@ Activo solo en [Abisoides].]],
         RegionReputation_RecurringTask_10 = {
           ContentES = "Completa cualquier Encargo con un personaje Umbro <highlight>%s</> veces",
           TextMapId = "RegionReputation_RecurringTask_10"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RegionReputation_RecurringTask_11",
-    MaxKey = "SKILL_10299_07_Name",
-    Loader = function()
-      return {
+        },
         RegionReputation_RecurringTask_11 = {
           ContentES = "Sobrevive a <highlight>3</> oleadas o más en cualquier Encargo ∞",
           TextMapId = "RegionReputation_RecurringTask_11"
@@ -52869,7 +53863,15 @@ Activo solo en [Abisoides].]],
         RougeMiniGamePointsReach = {
           ContentES = "Total de puntos acumulados",
           TextMapId = "RougeMiniGamePointsReach"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RougeMiniGameTotalPoints",
+    MaxKey = "SKILL_20599_09_Name",
+    Loader = function()
+      return {
         RougeMiniGameTotalPoints = {
           ContentES = "Puntuación total",
           TextMapId = "RougeMiniGameTotalPoints"
@@ -53053,15 +54055,7 @@ Activo solo en [Abisoides].]],
         SKILL_10299_07_Name = {
           ContentES = "Interminable – Agotamiento",
           TextMapId = "SKILL_10299_07_Name"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_10299_08_Name",
-    MaxKey = "SKILL_310103_NAME",
-    Loader = function()
-      return {
+        },
         SKILL_10299_08_Name = {
           ContentES = "Incansable – Alcance",
           TextMapId = "SKILL_10299_08_Name"
@@ -53677,7 +54671,15 @@ Activo solo en [Abisoides].]],
         SKILL_20599_09_Name = {
           ContentES = "Réquiem – Moral",
           TextMapId = "SKILL_20599_09_Name"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_20599_10_Name",
+    MaxKey = "SKILL_DESC_1103MaxAtk",
+    Loader = function()
+      return {
         SKILL_20599_10_Name = {
           ContentES = "Espinas – Putrefacción",
           TextMapId = "SKILL_20599_10_Name"
@@ -53861,15 +54863,7 @@ Activo solo en [Abisoides].]],
         SKILL_310103_NAME = {
           ContentES = "Disparo Rápido Táctico",
           TextMapId = "SKILL_310103_NAME"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_310104_DESC",
-    MaxKey = "SKILL_DESC_1503Passive2LastTime",
-    Loader = function()
-      return {
+        },
         SKILL_310104_DESC = {
           ContentES = "Cuando el contador de [Herida Lacerada] alcanza su límite, se elimina [Laceración] e inflige daño.",
           TextMapId = "SKILL_310104_DESC"
@@ -54485,7 +55479,15 @@ Activo solo en [Abisoides].]],
         SKILL_DESC_1103MaxAtk = {
           ContentES = "Límite de aumento de ATQ",
           TextMapId = "SKILL_DESC_1103MaxAtk"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_1103RayDamage",
+    MaxKey = "SKILL_DESC_5101FallAtkDamage",
+    Loader = function()
+      return {
         SKILL_DESC_1103RayDamage = {
           ContentES = "Daño de Rayo de [Aullido Lamentable]",
           TextMapId = "SKILL_DESC_1103RayDamage"
@@ -54669,15 +55671,7 @@ Activo solo en [Abisoides].]],
         SKILL_DESC_1503Passive2LastTime = {
           ContentES = "Duración de [El Errante Marca el Cambio]",
           TextMapId = "SKILL_DESC_1503Passive2LastTime"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_1503PassiveValue",
-    MaxKey = "SKILL_DESC_ComboDamage5",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_1503PassiveValue = {
           ContentES = "Porcentaje de Efecto de [Intención de Espada]/[Intención de Cuerda]",
           TextMapId = "SKILL_DESC_1503PassiveValue"
@@ -55293,7 +56287,15 @@ Activo solo en [Abisoides].]],
         SKILL_DESC_5101FallAtkDamage = {
           ContentES = "Daño del Ataque de Descenso de Filbert",
           TextMapId = "SKILL_DESC_5101FallAtkDamage"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_5101GoalDamage",
+    MaxKey = "SKILL_SECTIONDESC_1801_Skill03_01",
+    Loader = function()
+      return {
         SKILL_DESC_5101GoalDamage = {
           ContentES = "Daño de Punto Final",
           TextMapId = "SKILL_DESC_5101GoalDamage"
@@ -55477,15 +56479,7 @@ Activo solo en [Abisoides].]],
         SKILL_DESC_ComboDamage5 = {
           ContentES = "Daño de 5.º golpe",
           TextMapId = "SKILL_DESC_ComboDamage5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_ComboDamageRadius",
-    MaxKey = "SkinGacha_Warning_Special_5",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_ComboDamageRadius = {
           ContentES = "Radio de Daño de Golpe Normal",
           TextMapId = "SKILL_DESC_ComboDamageRadius"
@@ -56101,7 +57095,15 @@ Activo solo en [Abisoides].]],
         SKILL_SECTIONDESC_1801_Skill03_01 = {
           ContentES = "Pluma Tejedora de Cuentos",
           TextMapId = "SKILL_SECTIONDESC_1801_Skill03_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_SECTIONDESC_2401_Skill02_01",
+    MaxKey = "System_Des_Armory",
+    Loader = function()
+      return {
         SKILL_SECTIONDESC_2401_Skill02_01 = {
           ContentES = "Terapia de las Nueve Agujas",
           TextMapId = "SKILL_SECTIONDESC_2401_Skill02_01"
@@ -56267,21 +57269,13 @@ Activo solo en [Abisoides].]],
           TextMapId = "SkinGacha_Warning_Special_3"
         },
         SkinGacha_Warning_Special_4 = {
-          ContentES = "<Title>Objeto dorado garantizado</>\nBúsquedas actuales: <highlight>%d</>/90\n\n<Title>Probabilidades de la miríada exclusiva del evento</>\nLa probabilidad base de obtener un objeto de calidad dorada por búsqueda es de <highlight>0.3%%</>. La probabilidad total, incluyendo garantías, es de <highlight>1.42%%</>. Se garantiza un objeto de calidad dorada en un máximo de <highlight>90</> búsquedas. Probabilidades individuales:\nVerdor Alado: <highlight>0.641%%</>\nPrisma iridiscente ×25: <highlight>0.641%%</>\nPrisma iridiscente ×50: <highlight>0.142%%</>\nLa probabilidad base de obtener un objeto de calidad púrpura por búsqueda es de <highlight>5.1%%</>. La probabilidad total, incluyendo garantías, es de <highlight>12.46%%</>. Se garantiza un objeto de calidad púrpura en un máximo de <highlight>10</> búsquedas. Al activar la garantía, la probabilidad de obtener un objeto de calidad púrpura es de <highlight>99.7%%</> y la de obtener un objeto de calidad dorada es de <highlight>0.3%%</>.\nEn casos de aumento de probabilidad, garantías u otros efectos, consulta las reglas específicas del banner.\n\n<Title>Información sobre duplicados</>\nSi obtienes un duplicado de la apariencia dorada Verdor Alado, se convertirá en Prisma iridiscente ×<highlight>25</>.\nSi obtienes una apariencia púrpura o azul que ya posees, se convertirá en Prisma lúcido:\nCada apariencia púrpura duplicada se convertirá en Prisma lúcido ×<highlight>4</>.\nCada apariencia azul duplicada se convertirá en Prisma lúcido ×<highlight>1</>.\n\n<Title>Información sobre el progreso de búsqueda</>\nEl número de búsquedas en <highlight>Voluntad bajo las alas</> se calcula de forma independiente y no se combina con otras miríadas de evento.",
+          ContentES = "<Title>Objeto dorado garantizado</>\nBúsquedas actuales: <highlight>%d</>/90\n\n<Title>Probabilidades de la miríada exclusiva del evento</>\nLa probabilidad base de obtener un objeto de calidad dorada por búsqueda es de <highlight>0.3%%</>. La probabilidad total, incluyendo garantías, es de <highlight>1.42%%</>. Se garantiza un objeto de calidad dorada en un máximo de <highlight>90</> búsquedas. Probabilidades individuales:\nVerdor Alado: <highlight>0.641%%</>\nPrisma iridiscente ×25: <highlight>0.641%%</>\nPrisma iridiscente ×50: <highlight>0.142%%</>\nLa probabilidad base de obtener un objeto de calidad púrpura por búsqueda es de <highlight>5.1%%</>. La probabilidad total, incluyendo garantías, es de <highlight>12.46%%</>. Se garantiza un objeto de calidad púrpura en un máximo de <highlight>10</> búsquedas. Al activar la garantía, la probabilidad de obtener un objeto de calidad púrpura es de <highlight>99.7%%</> y la de obtener un objeto de calidad dorada es de <highlight>0.3%%</>.\nEn casos de aumento de probabilidad, garantías u otros efectos, consulta las reglas específicas del banner.\n\n<Title>Información sobre duplicados</>\nSi obtienes un duplicado del aspecto dorado Verdor Alado, se convertirá en Prisma iridiscente ×<highlight>25</>.\nSi obtienes un aspecto púrpura o azul que ya posees, se convertirá en Prisma lúcido:\nCada aspecto púrpura duplicado se convertirá en Prisma lúcido ×<highlight>4</>.\nCada aspecto azul duplicado se convertirá en Prisma lúcido ×<highlight>1</>.\n\n<Title>Información sobre el progreso de búsqueda</>\nEl número de búsquedas en <highlight>Voluntad bajo las alas</> se calcula de forma independiente y no se combina con otras miríadas de evento.",
           TextMapId = "SkinGacha_Warning_Special_4"
         },
         SkinGacha_Warning_Special_5 = {
           ContentES = "<Title>>Objeto dorado garantizado</>\nInvocaciones actuales: <highlight>%d</>/90\n\n<Title>Probabilidades de la Miríada exclusiva del evento</>\nLa probabilidad base de obtener un objeto de rareza Dorada por invocación es <highlight>0.3 %%</>. Probabilidad total (incluyendo la garantía): <highlight>1.42 %%</>. Un objeto de rareza Dorada está garantizado dentro de <highlight>90</> invocaciones.\nLas probabilidades de obtención de cada objeto son las siguientes:\nEl Absolvedor: <highlight>0.641%%</>\nPrisma iridiscente ×25: <highlight>0.641%%</>\nPrisma iridiscente ×50: <highlight>0.142%%</>\n\nLa probabilidad base de obtener un objeto de rareza Morada: <highlight>5.1 %%</>. Probabilidad total (incluyendo la garantía): <highlight>12.46 %%</>. Un objeto de rareza Morada está garantizado dentro de <highlight>10</> invocaciones.\nCuando se activa la garantía, la probabilidad de recibir un objeto de rareza Morada es <highlight>99.7 %%</>, y un objeto de rareza Dorada <highlight>0.3 %%</>.\nEn caso de aumento de probabilidades o ajustes de garantía, consulte las reglas específicas del banner.\n<Title>Acerca de duplicados</>\nAl obtener el aspecto de rareza dorada \"El Absolvedor\" que ya posees, se convierte en Prisma Iridiscente ×<highlight>25</>.\nAl obtener otros aspectos que ya posees, se convierten en Prisma lúcido:\nCada duplicado de aspecto de rareza Morada se convierte en Prisma lúcido ×<highlight>4</>.\nCada duplicado de aspecto de rareza Azul se convierte en Prisma lúcido ×<highlight>1</>.\n\n<Title>Acerca del progreso de Miríada</>\nLas invocaciones de <highlight>Clemencia en la noche serena</> se contabilizan por separado y no se transfieren a otros banners de Miríada.",
           TextMapId = "SkinGacha_Warning_Special_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SkinTrialEvent_Des_210101",
-    MaxKey = "System_Des_StarterQuest",
-    Loader = function()
-      return {
+        },
         SkinTrialEvent_Des_210101 = {
           ContentES = "Bailemos juntos y hagamos de este momento algo eterno.",
           TextMapId = "SkinTrialEvent_Des_210101"
@@ -56881,7 +57875,7 @@ Activo solo en [Abisoides].]],
           TextMapId = "System_Des_Achievement"
         },
         System_Des_AppearanceScore = {
-          ContentES = "<Highlight>Apariencias</> desbloqueadas. Ya puedes verlas y editarlas.",
+          ContentES = "<Highlight>Cosméticos</> desbloqueados. Ya puedes verlos y editarlos.",
           TextMapId = "System_Des_AppearanceScore"
         },
         System_Des_Archive = {
@@ -56891,7 +57885,15 @@ Activo solo en [Abisoides].]],
         System_Des_Armory = {
           ContentES = "<Highlight>Arsenal</> desbloqueado. Configura tus cargas y prepárate para más desafíos.",
           TextMapId = "System_Des_Armory"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "System_Des_Bag",
+    MaxKey = "TERMEXP_Rou_10102_MiniSeaborneMoons",
+    Loader = function()
+      return {
         System_Des_Bag = {
           ContentES = "<Highlight>Inventario</> desbloqueado. Puedes ver todos los objetos que posees allí.",
           TextMapId = "System_Des_Bag"
@@ -57075,15 +58077,7 @@ Activo solo en [Abisoides].]],
         System_Des_StarterQuest = {
           ContentES = "<Highlight>Guía para principiantes</> desbloqueada. ¡Completa los encargos de la Srta. Camilla para ganar reputación en el Lago Glacial!",
           TextMapId = "System_Des_StarterQuest"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "System_Des_SwitchMaster",
-    MaxKey = "TERM_3102_Debuff",
-    Loader = function()
-      return {
+        },
         System_Des_SwitchMaster = {
           ContentES = "<Highlight>Cambio de protagonista</> desbloqueado. Ahora puedes establecer al protagonista como tu personaje jugable.",
           TextMapId = "System_Des_SwitchMaster"
@@ -57701,7 +58695,15 @@ Opcional: Consigue suministros del Ave espiritual]],
         TERMEXP_Rou_10102_MiniSeaborneMoons = {
           ContentES = "Las [Mini Lunas marinas] se consideran botín. Al recoger una, se restauran PV, Cordura y munición.",
           TextMapId = "TERMEXP_Rou_10102_MiniSeaborneMoons"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERMEXP_Rou_10102_PhantomDrift",
+    MaxKey = "TextMap_AnswerDetail_200202",
+    Loader = function()
+      return {
         TERMEXP_Rou_10102_PhantomDrift = {
           ContentES = "Aumenta el Daño de Armas a distancia en <Highlight>6%</> durante <Highlight>15</> s y se acumula hasta <Highlight>10</> veces.",
           TextMapId = "TERMEXP_Rou_10102_PhantomDrift"
@@ -57885,15 +58887,7 @@ Opcional: Consigue suministros del Ave espiritual]],
         TERM_3102_Debuff = {
           ContentES = "Desarmar",
           TextMapId = "TERM_3102_Debuff"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERM_3103_Skill02",
-    MaxKey = "TextMap_AnswerName_100303",
-    Loader = function()
-      return {
+        },
         TERM_3103_Skill02 = {
           ContentES = "Laboratorio de Pesadilla",
           TextMapId = "TERM_3103_Skill02"
@@ -58337,6 +59331,10 @@ Emparejamiento cancelado.]],
           ContentES = "Obtén la recompensa máxima en <H>%s</> minijuegos",
           TextMapId = "Target_Theater_13"
         },
+        Target_Theater_14 = {
+          ContentES = "Completa <H>%s</> recolecciones",
+          TextMapId = "Target_Theater_14"
+        },
         Target_Theater_2 = {
           ContentES = "Hazte amigo con <H>%s</> Geniemons",
           TextMapId = "Target_Theater_2"
@@ -58374,175 +59372,183 @@ Emparejamiento cancelado.]],
           TextMapId = "TempleSolo_Total_Time"
         },
         TextMap_AnswerDetail_100003 = {
-          ContentES = "Der Bühnenvorhang-Fetzen weist auf das Galea-Theater, und das unheilvolle, opernhafte Summen des Täters verstärkt diesen Verdacht. Das Theater verdient eine gründliche Untersuchung.",
+          ContentES = "El retazo de telón apunta al Teatro Galea, y el inquietante tarareo operático del agresor refuerza el vínculo. El teatro merece una búsqueda exhaustiva.",
           TextMapId = "TextMap_AnswerDetail_100003"
         },
         TextMap_AnswerDetail_100004 = {
-          ContentES = "Der Täter floh nach Südwesten – und die einzige Einrichtung in dieser Richtung mit nennenswerten Phoxichor-Vorräten ist die lokale Fabrik. Sie verdient eine gründliche Untersuchung.",
+          ContentES = "El agresor huyó al suroeste y la única instalación en esa dirección con grandes reservas de Phoxichor es la fábrica local. Merece una búsqueda exhaustiva.",
           TextMapId = "TextMap_AnswerDetail_100004"
         },
         TextMap_AnswerDetail_100005 = {
-          ContentES = "Das Versteck des Täters war mit Bühnenrequisiten dekoriert, und während des Angriffs summte er eine Opernmelodie. Diese Hinweise deuten darauf hin, dass er ein Opernliebhaber sein könnte. Vielleicht liegt der Schlüssel zu seiner Identität in der Melodie selbst.",
+          ContentES = "El escondite del agresor estaba decorado con utilería teatral, y durante el ataque tarareó una melodía operática. Estas pistas sugieren que podría ser un entusiasta de la ópera. La melodía misma podría ser la clave de su identidad.",
           TextMapId = "TextMap_AnswerDetail_100005"
         },
         TextMap_AnswerDetail_100101 = {
-          ContentES = "Basierend auf der Position des Mondes zur Tatzeit wird der Angriff auf zwischen 4 und 5 Uhr morgens geschätzt.",
+          ContentES = "Basado en la posición de la luna en el momento del incidente, se estima que el ataque ocurrió entre las 4 y las 5 de la mañana.",
           TextMapId = "TextMap_AnswerDetail_100101"
         },
         TextMap_AnswerDetail_100201 = {
-          ContentES = "Die frisch gebrochene Wetterfahne ist vermutlich gesplittert, als der Täter auf dem Dach landete. Zusammen mit weiteren Hinweisen könnte sie zusätzliche Informationen liefern.",
+          ContentES = "La veleta rota probablemente se quebró cuando el agresor aterrizó en el tejado. Junto con otras pistas, podría aportar más información.",
           TextMapId = "TextMap_AnswerDetail_100201"
         },
         TextMap_AnswerDetail_100202 = {
-          ContentES = "Das Fundament der Wetterfahne ist nach Südwesten verbogen. Zusammen mit weiteren Hinweisen könnte sie zusätzliche Informationen liefern.",
+          ContentES = "Base de la veleta doblada apunta al suroeste. Junto con otras pistas, podría aportar más información.",
           TextMapId = "TextMap_AnswerDetail_100202"
         },
         TextMap_AnswerDetail_100203 = {
-          ContentES = "Bruchmuster der Fahne und ihres Fundaments passen perfekt zusammen – sie wurde während der Flucht über die Dächer abgerissen.\n Die zusammengesetzte Fahne zeigt nach Südwesten und bestätigt die Fluchtrichtung.",
+          ContentES = "El patrón de ruptura y la base doblada confirman que se desprendió durante la fuga por los tejados.\nLa veleta ensamblada apunta al suroeste, confirmando la dirección de huida.",
           TextMapId = "TextMap_AnswerDetail_100203"
         },
         TextMap_AnswerDetail_100301 = {
-          ContentES = "In dieser Nacht summte der Täter mit rauer Stimme eine Opernmelodie. Könnte es sich um einen Sänger oder einfach nur um einen Musikliebhaber handeln?",
+          ContentES = "Esa noche, el agresor tarareó una melodía operática con una voz áspera. ¿Podría ser un cantante, o simplemente un amante de la música?",
           TextMapId = "TextMap_AnswerDetail_100301"
         },
         TextMap_AnswerDetail_100302 = {
-          ContentES = "Am Tatort wurde ein Stück Samtvorhang gefunden – identisch mit dem Vorhang, der im Galea-Theater verwendet wird. Könnte dies auf eine Verbindung zum Theater hindeuten? Um diesen Zusammenhang zu bestätigen, sind weitere Beweise erforderlich.",
+          ContentES = "Un retazo de terciopelo de telón fue hallado en la escena del crimen, idéntico al usado en el Teatro Galea. ¿Podría esto señalar la implicación del teatro? Se necesita más evidencia para confirmar el vínculo.",
           TextMapId = "TextMap_AnswerDetail_100302"
         },
         TextMap_AnswerDetail_100303 = {
-          ContentES = "Der Bühnenvorhang-Fetzen weist auf das Galea-Theater, und das opernhafte Summen des Täters verstärkt diesen Verdacht. Das Theater verdient eine gründliche Untersuchung.",
+          ContentES = "El retazo de telón apunta al Teatro Galea, y el tarareo operático del agresor refuerza la conexión. El teatro merece una búsqueda exhaustiva.",
           TextMapId = "TextMap_AnswerDetail_100303"
         },
         TextMap_AnswerDetail_100401 = {
-          ContentES = "Der Täter floh in Richtung Südwesten – ein Gebiet mit vielen Wohnhäusern, Schulen und einer Fabrik. Die Untersuchung von Rhythm ist ins Stocken geraten, da das Gebiet ohne weitere Hinweise zu groß ist. Es sind weitere Hinweise erforderlich, um die Suche einzugrenzen.",
+          ContentES = "El agresor huyó al suroeste, un área densa con casas, escuelas y una fábrica. La investigación de Rhythm se ha estancado, ya que la zona es demasiado amplia sin más pistas. Se necesitan más indicios para acotar la búsqueda.",
           TextMapId = "TextMap_AnswerDetail_100401"
         },
         TextMap_AnswerDetail_100402 = {
-          ContentES = "In der Nähe des Tatorts wurden Spuren von Phoxichor im Schnee entdeckt. Es wurden jedoch keine Lecks aus nahegelegenen Anlagen gemeldet. Es wäre besser, Rhythm wegen der Falldetails zu konsultieren, um weitere Hinweise zu sammeln.",
+          ContentES = "Se descubrieron rastros de Phoxichor en la nieve cerca de la escena del crimen. Sin embargo, no se han reportado fugas en instalaciones cercanas. Será mejor consultar a Rhythm sobre los detalles del caso para reunir más pistas.",
           TextMapId = "TextMap_AnswerDetail_100402"
         },
         TextMap_AnswerDetail_100403 = {
-          ContentES = "Du erinnerst dich an einen stechenden Geruch, der dem Täter anhaftete – ein eindeutiges Zeichen starker Phoxichor-Kontamination. Nur sehr wenige Standorte in Icelake könnten solche Werte aufweisen. Abgleich mit anderen Hinweisen könnte die Spur eingrenzen.",
+          ContentES = "Recuerdas un olor penetrante impregnando al agresor, clara evidencia de una fuerte contaminación de Phoxichor. Muy pocos sitios en el Lago Glacial podrían explicar niveles tan altos. Cruza estas pistas para reducir las posibilidades.",
           TextMapId = "TextMap_AnswerDetail_100403"
         },
         TextMap_AnswerDetail_100404 = {
-          ContentES = "Der Täter floh nach Südwesten – und die einzige Einrichtung in dieser Richtung mit nennenswerten Phoxichor-Vorräten ist die lokale Fabrik. Könnte die sein Versteck sein? Sie verdient eine gründliche Untersuchung.",
+          ContentES = "El agresor huyó al suroeste y la única instalación en esa dirección con grandes reservas de Phoxichor es la fábrica local. ¿Podría ser su escondite? Merece una búsqueda exhaustiva.",
           TextMapId = "TextMap_AnswerDetail_100404"
         },
         TextMap_AnswerDetail_100501 = {
-          ContentES = "In der Kanalisation fandest du Samtvorhänge und Schaufensterpuppen, die wie Schauspieler mitten in einer Aufführung posierten. Wer immer diese Szene arrangierte, sieht sich selbst womöglich als Teil der Vorstellung. Abgleich mit anderen Hinweisen – vielleicht offenbart es die wahre Identität dieser Person.",
+          ContentES = "En las alcantarillas encontraste cortinas de terciopelo y maniquíes dispuestos como actores en plena actuación. Quien montó esta escena posiblemente se ve a sí mismo como parte de una obra. Cruza estas pistas, podrían revelar quién es en realidad.",
           TextMapId = "TextMap_AnswerDetail_100501"
         },
         TextMap_AnswerDetail_100502 = {
-          ContentES = "In dieser Nacht summte der Täter mit rauer Stimme eine Opernmelodie. Könnte es sich um einen Sänger oder einfach nur um einen Musikliebhaber handeln?",
+          ContentES = "Esa noche, el agresor tarareó una melodía operática con una voz áspera. ¿Podría ser un cantante, o simplemente un amante de la música?",
           TextMapId = "TextMap_AnswerDetail_100502"
         },
         TextMap_AnswerDetail_100503 = {
-          ContentES = "Das Versteck des Täters war mit Bühnenrequisiten dekoriert, und während des Angriffs summte er eine Opernmelodie. Diese Hinweise deuten darauf hin, dass er ein Opernliebhaber sein könnte. Vielleicht liegt der Schlüssel zu seiner Identität in der Melodie selbst.",
+          ContentES = "El escondite del agresor estaba decorado con utilería teatral, y durante el ataque tarareó una melodía operática. Estas pistas sugieren que podría ser un entusiasta de la ópera. La melodía misma podría ser la clave de su identidad.",
           TextMapId = "TextMap_AnswerDetail_100503"
         },
         TextMap_AnswerDetail_200101 = {
-          ContentES = "Herr Buck trinkt in der Asphodel nur Saft und Milch. Er verträgt keinen Alkohol – schon ein einziger Schluck reicht aus, um ihn bewusstlos zu machen.",
+          ContentES = "El señor Buck solo bebe jugo y leche en Los Asfódelos. No tiene tolerancia al alcohol un sorbo basta para dejarlo inconsciente",
           TextMapId = "TextMap_AnswerDetail_200101"
         },
         TextMap_AnswerDetail_200102 = {
-          ContentES = "Jemand hat heimlich Alkohol in Herr Bucks Milch gemischt – eindeutig mit der Absicht, ihn bewusstlos zu machen. Auf dem Krug ist noch ein klebriger Handabdruck in Kindergröße zu sehen.",
+          ContentES = "Alguien mezcló secretamente alcohol en su leche, claramente para tumbarlo. Una huella pegajosa de niño permanece visible en la jarra.",
           TextMapId = "TextMap_AnswerDetail_200102"
         },
         TextMap_AnswerDetail_200103 = {
-          ContentES = "Kleine Fußspuren führen von der Straße zu Herr Bucks Fensterbank – ein deutliches Zeichen dafür, dass ein Kind eingebrochen ist und etwas im Haus angerichtet hat.",
+          ContentES = "Un rastro de pequeñas huellas conduce desde la calle hasta el alféizar de la ventana del Sr. Buck, señales claras de que un niño entró e hizo algo dentro.",
           TextMapId = "TextMap_AnswerDetail_200103"
         },
         TextMap_AnswerDetail_200104 = {
-          ContentES = "Einige Popcornstücke liegen in der Nähe der Fußspuren – vermutlich blieben sie am Eindringling hängen und fielen ab, als er durchs Fenster kletterte.",
+          ContentES = "Unas palomitas esparcidas cerca de las huellas, probablemente se pegaron al intruso y se desprendieron al trepar por la ventana.",
           TextMapId = "TextMap_AnswerDetail_200104"
         },
         TextMap_AnswerDetail_200105 = {
-          ContentES = "Ein zitternder Charon-Junge verkauft Bier, Popcorn, Opernkarten und Poster in der Nähe des Ticketschalters des Galea-Theaters.",
+          ContentES = "Un joven Charon tembloroso vendiendo cerveza, palomitas, entradas de ópera y carteles cerca del Teatro Galea.",
           TextMapId = "TextMap_AnswerDetail_200105"
         },
         TextMap_AnswerDetail_200106 = {
-          ContentES = "Ein bestimmtes Kind, das wusste, dass Buck keinen Alkohol verträgt, schlich sich in sein Haus und mischte ihm etwas in die Milch – gerade genug, um ihn bewusstlos zu machen. Deshalb ist Buck in letzter Zeit ungewöhnlich früh eingeschlafen.",
+          ContentES = "Un niño, sabiendo que Buck no soportaba el alcohol, entró en su casa y adulteró su leche, lo suficiente para dejarlo inconsciente. Por eso Buck se ha estado durmiendo inusualmente temprano.",
           TextMapId = "TextMap_AnswerDetail_200106"
         },
         TextMap_AnswerDetail_200107 = {
-          ContentES = "Ein betrunkener Mann liegt zusammengesackt neben dem Mülleimer, stinkend nach Alkohol. Er passt nicht zum Profil eines Kindes und scheint auch nicht der Typ zu sein, der sein Getränk verschenkt.",
+          ContentES = "Un hombre borracho está desplomado junto al basurero, apestando a alcohol. No encaja con el perfil de un niño, ni parece del tipo que regalaría su bebida.",
           TextMapId = "TextMap_AnswerDetail_200107"
         },
         TextMap_AnswerDetail_200108 = {
-          ContentES = "Ein kleines Mädchen, das seinen strengen Vater ständig um Popcorn bittet. Sie passt zwar zum Profil eines Kindes, aber es ist klar, dass das Popcorn unter Bucks Fenster nicht von ihr stammt.",
+          ContentES = "Una niña pequeña insiste una y otra vez a su estricto padre para que le dé palomitas. Aunque encaja con el perfil de una niña, está claro que las palomitas bajo la ventana de Buck no vinieron de ella.",
           TextMapId = "TextMap_AnswerDetail_200108"
         },
         TextMap_AnswerDetail_200201 = {
-          ContentES = "Vor sechzehn Jahren inszenierte Sigs Freund Donat eine Entführung. Das Opfer, Enola, kam während des Vorfalls unerwartet ums Leben. Sig wurde zum Tode verurteilt.",
+          ContentES = "Hace dieciséis años, el amigo de Donat, Sig, organizó un secuestro. La víctima, Enola, murió accidentalmente durante el incidente, y Sig fue condenado a muerte.",
           TextMapId = "TextMap_AnswerDetail_200201"
         },
         TextMap_AnswerDetail_200202 = {
-          ContentES = "Giselle, die Phoxjägerin, diente einst in der Eskorte. Doch vor sechzehn Jahren trat sie zurück, nachdem ein Urteil sie in Konflikt mit ihrem Vorgesetzten brachte.",
+          ContentES = "Giselle, la Phoxcazadora, trabajaba antes para la Escolta. Pero hace dieciséis años, renunció después de que un veredicto en un caso la pusiera en desacuerdo con su superior.",
           TextMapId = "TextMap_AnswerDetail_200202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerDetail_200203",
+    MaxKey = "TitleFrame_10023",
+    Loader = function()
+      return {
         TextMap_AnswerDetail_200203 = {
-          ContentES = "Violet, Sigs Schwester, verließ Icelake vor sechzehn Jahren. Nun scheint sie zurückgekehrt zu sein. Jemand hat ein violettes Band auf seinem Grab hinterlassen, höchstwahrscheinlich sie.",
+          ContentES = "La hermana de Sig, Violet, que había dejado Lago Glacial dieciséis años antes, parece haber regresado. Se encontró una cinta violeta en la tumba de su hermano.",
           TextMapId = "TextMap_AnswerDetail_200203"
         },
         TextMap_AnswerDetail_200204 = {
-          ContentES = "Violetta trägt bei jedem Auftritt ein violettes Band. Sie sagt, es sei ein Andenken an eine liebe Freundin. Es ist zu ihrem Erkennungszeichen geworden.",
+          ContentES = "Violetta siempre lleva una cinta violeta en el escenario. Ella afirma que es un recuerdo de una amiga querida, una pieza característica que siempre lleva consigo.",
           TextMapId = "TextMap_AnswerDetail_200204"
         },
         TextMap_AnswerDetail_200205 = {
-          ContentES = "Rosalind, die Tochter von Earl Magnus, wird vermisst – vermutlich entführt. Ihre Eltern hatten ihr kürzlich einen Gesangslehrerin engagiert.",
+          ContentES = "Rosalind, la hija del Conde Magnus, ha desaparecido, se cree que ha sido secuestrada. Sus padres habían contratado recientemente a una profesora de canto.",
           TextMapId = "TextMap_AnswerDetail_200205"
         },
         TextMap_AnswerDetail_200206 = {
-          ContentES = "Eine von Violettas Schülerinnen wurde entführt. Der Erpresserbrief nimmt in rätselhafter Weise Bezug auf Ereignisse vor sechzehn Jahren.",
+          ContentES = "Una de las alumnas de Violetta fue secuestrada. La carta de rescate hacía referencia a eventos ocurridos hace dieciséis años.",
           TextMapId = "TextMap_AnswerDetail_200206"
         },
         TextMap_AnswerDetail_200207 = {
-          ContentES = "Vor sechzehn Jahren gehörte Giselle zu dem Team, das den Entführungsfall untersuchte. Das Urteil erschütterte sie so sehr, dass sie sich entschloss, aus der Eskorte auszutreten.",
+          ContentES = "Hace dieciséis años, Giselle formaba parte del equipo encargado de investigar el secuestro. El veredicto final la perturbó tanto que decidió renunciar a la Escolta.",
           TextMapId = "TextMap_AnswerDetail_200207"
         },
         TextMap_AnswerDetail_200208 = {
-          ContentES = "Die violetten Bänder sind in Farbe und Stil vollkommen identisch. In Verbindung mit ihren fast gleichlautenden Namen wird deutlich, dass Violetta und Violet in enger Beziehung stehen.",
+          ContentES = "El color y la forma de ambas cintas son idénticos. Junto con sus nombres similares, está claro que Violetta y Violet comparten una conexión cercana.",
           TextMapId = "TextMap_AnswerDetail_200208"
         },
         TextMap_AnswerDetail_200209 = {
-          ContentES = "Es ist höchst wahrscheinlich, dass Violettas vermisste Schülerin Rosalind ist, die Tochter von Graf Magnus. Der Hinweis des Erpresserbriefs auf die Ereignisse vor sechzehn Jahren deutet auf eine tiefere Verbindung zu Violetta selbst hin.",
+          ContentES = "La alumna desaparecida de Violetta es muy probable que sea Rosalind, la hija del Conde Magnus. La referencia a eventos ocurridos hace dieciséis años en la carta de rescate podría sugerir una conexión más profunda entre Violetta y el caso.",
           TextMapId = "TextMap_AnswerDetail_200209"
         },
         TextMap_AnswerDetail_200210 = {
-          ContentES = "Rosalinds Entführung steht eindeutig in Zusammenhang mit dem Fall von damals, und Violetta weiß genau, was wirklich geschehen ist.",
+          ContentES = "El secuestro de Rosalind está claramente relacionado con el secuestro de hace dieciséis años, y Violetta sabe exactamente lo que ocurrió en ese entonces.",
           TextMapId = "TextMap_AnswerDetail_200210"
         },
         TextMap_AnswerDetail_200211 = {
-          ContentES = "Der alte Fall verbarg Wahrheiten, die Violetta schon lange kannte. Giselle inszenierte die jüngste „Entführung” ihrer Schülerin, um diese Wahrheiten ans Licht zu bringen.",
+          ContentES = "El viejo caso escondía verdades ocultas, y Violetta las conocía. Giselle fingió el \"secuestro\" de su alumna para sacar esas verdades a la luz.",
           TextMapId = "TextMap_AnswerDetail_200211"
         },
         TextMap_AnswerDetail_200301 = {
-          ContentES = "Auf der Fensterbank steht ein Strauß Skylilien, deren Blütenblätter noch vom Morgentau feucht sind – jemand muss sie erst kürzlich dort hingestellt haben.",
+          ContentES = "Un grupo de Lirios celestes descansa en la ventana, aún húmedos con el rocío de la mañana, alguien debió colocarlos allí recientemente.",
           TextMapId = "TextMap_AnswerDetail_200301"
         },
         TextMap_AnswerDetail_200302 = {
-          ContentES = "Diese ruhige Ecke von EverSpring ist unberührt geblieben. Keine Fußspuren außer Linglings ... nichts ist fehl am Platz.",
+          ContentES = "Este rincón tranquilo de Primavera Eterna permanece intacto. Ninguna huella salvo las de Lingling… nada fuera de lugar.",
           TextMapId = "TextMap_AnswerDetail_200302"
         },
         TextMap_AnswerDetail_200303 = {
-          ContentES = "Nahe der Eingangstür gefunden, ist das Album voller Familienfotos. Auf einem davon hält eine jüngere Lingling einen Strauß Skylilien in der Hand und lächelt neben ihrer Großmuter – direkt vor diesem Haus.",
+          ContentES = "Encontrado cerca de la entrada, lleno de fotos familiares. En una, una Lingling más joven sostiene un ramo de Lirios celestes, sonriendo junto a Nana, justo afuera de esta misma casa.",
           TextMapId = "TextMap_AnswerDetail_200303"
         },
         TextMap_AnswerDetail_200304 = {
-          ContentES = "Ein Brief, der erklärt, dass Linglings Eltern sie wegen der Arbeit aus Haojing zurück nach Nebelkai brachten – vorübergehend wohnen sie wieder im alten Arbeiterwohnheim, das einst ihr Zuhause war.",
+          ContentES = "Explica que los padres de Lingling la trajeron de Haojing a Puerto de las Brumas por trabajo, quedándose temporalmente en el viejo dormitorio de obreros que solían llamar hogar.",
           TextMapId = "TextMap_AnswerDetail_200304"
         },
         TextMap_AnswerDetail_200305 = {
-          ContentES = "Jemand hat den Blumenstrauß zurückgelassen, ohne eine einzige Spur zu hinterlassen.",
+          ContentES = "Alguien dejó el ramo sin dejar rastro.",
           TextMapId = "TextMap_AnswerDetail_200305"
         },
         TextMap_AnswerDetail_200306 = {
-          ContentES = "Der „Geist“ kannte dieses bescheidene kleine Haus gut und schätzte das Album sehr. Vielleicht gehörte er einst zu dieser Familie.",
+          ContentES = "El \"fantasma\" conocía bien esta humilde casa y apreciaba el álbum. Quizá alguna vez fue parte de esta familia.",
           TextMapId = "TextMap_AnswerDetail_200306"
         },
         TextMap_AnswerDetail_200307 = {
-          ContentES = "Der Skylilien-Strauß, das Familienfotoalbum und die Vertrautheit des Wishen mit dem alten Haus – all das deutet auf die Rückkehr einer schmerzlich vermissten Person hin.",
+          ContentES = "El ramo de Lirios celestes, el álbum familiar, la familiaridad con la antigua casa… Todo converge hacia la misma conclusión: un ser querido ha regresado bajo otra forma.",
           TextMapId = "TextMap_AnswerDetail_200307"
         },
         TextMap_AnswerDetail_200401 = {
@@ -58630,183 +59636,175 @@ Emparejamiento cancelado.]],
           TextMapId = "TextMap_AnswerDetail_200607"
         },
         TextMap_AnswerName_100003 = {
-          ContentES = "Galea-Theater – Mögliches Versteck",
+          ContentES = "Teatro Galea — Posible escondite",
           TextMapId = "TextMap_AnswerName_100003"
         },
         TextMap_AnswerName_100004 = {
-          ContentES = "Fabrik – Mögliches Versteck",
+          ContentES = "Fábrica — Posible escondite",
           TextMapId = "TextMap_AnswerName_100004"
         },
         TextMap_AnswerName_100005 = {
-          ContentES = "Opernmelodie, die während des Angriffs zu hören war",
+          ContentES = "Melodía operática escuchada durante el ataque",
           TextMapId = "TextMap_AnswerName_100005"
         },
         TextMap_AnswerName_100101 = {
-          ContentES = "Geschätzte Zeit des Angriffs – 4 bis 5 Uhr morgens",
+          ContentES = "Hora estimada del ataque — de las 4 y las 5 de la mañana.",
           TextMapId = "TextMap_AnswerName_100101"
         },
         TextMap_AnswerName_100201 = {
-          ContentES = "Frisch beschädigte Wetterfahne",
+          ContentES = "Veleta recién dañada",
           TextMapId = "TextMap_AnswerName_100201"
         },
         TextMap_AnswerName_100202 = {
-          ContentES = "Verbogenes Fundament der Wetterfahnen weist nach Südwesten",
+          ContentES = "Base de la veleta doblada apunta en una dirección",
           TextMapId = "TextMap_AnswerName_100202"
         },
         TextMap_AnswerName_100203 = {
-          ContentES = "Zusammengefügte Fahne zeigt Fluchtrichtung Südwest",
+          ContentES = "Veleta ensamblada indica ruta de escape al suroeste",
           TextMapId = "TextMap_AnswerName_100203"
         },
         TextMap_AnswerName_100301 = {
-          ContentES = "Unheimlich Singstimme des Angreifers",
+          ContentES = "Voz inquietante del agresor cantando",
           TextMapId = "TextMap_AnswerName_100301"
         },
         TextMap_AnswerName_100302 = {
-          ContentES = "Bühnenvorhang-Fetzen am Tatort gefunden",
+          ContentES = "Retazo de telón encontrado en la escena",
           TextMapId = "TextMap_AnswerName_100302"
         },
         TextMap_AnswerName_100303 = {
-          ContentES = "Galea-Theater – MöglichesVersteck",
+          ContentES = "Teatro Galea — Posible escondite",
           TextMapId = "TextMap_AnswerName_100303"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerName_100401",
-    MaxKey = "Title_10038",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerName_100401 = {
-          ContentES = "Erweitertes Suchgebiet im Südwesten: Fabrik, Wohnhäuser, Schulen",
+          ContentES = "Zona de búsqueda ampliada en el suroeste: Fábrica, Casas, Escuelas",
           TextMapId = "TextMap_AnswerName_100401"
         },
         TextMap_AnswerName_100402 = {
-          ContentES = "Phoxichor-Flecken im Schnee",
+          ContentES = "Manchas de Phoxichor en la nieve",
           TextMapId = "TextMap_AnswerName_100402"
         },
         TextMap_AnswerName_100403 = {
-          ContentES = "Täter stark mit Phoxichor verschmutzt",
+          ContentES = "El agresor está fuertemente manchado de Phoxichor",
           TextMapId = "TextMap_AnswerName_100403"
         },
         TextMap_AnswerName_100404 = {
-          ContentES = "Fabrik – Mögliches Versteck",
+          ContentES = "Fábrica — Posible escondite",
           TextMapId = "TextMap_AnswerName_100404"
         },
         TextMap_AnswerName_100501 = {
-          ContentES = "Täter könnte Opernliebhaber sein",
+          ContentES = "El agresor podría ser un entusiasta de la ópera",
           TextMapId = "TextMap_AnswerName_100501"
         },
         TextMap_AnswerName_100502 = {
-          ContentES = "Unheimlich Singstimme des Angreifers",
+          ContentES = "Voz inquietante del agresor cantando",
           TextMapId = "TextMap_AnswerName_100502"
         },
         TextMap_AnswerName_100503 = {
-          ContentES = "Opernmelodie, die während des Angriffs zu hören war",
+          ContentES = "Melodía operática escuchada durante el ataque",
           TextMapId = "TextMap_AnswerName_100503"
         },
         TextMap_AnswerName_200101 = {
-          ContentES = "Herr Buck wird schon nach einem einzigen Schluck Alkohol ohnmächtig",
+          ContentES = "El señor Buck se desmaya incluso con un solo sorbo de alcohol",
           TextMapId = "TextMap_AnswerName_200101"
         },
         TextMap_AnswerName_200102 = {
-          ContentES = "Jemand hat Alkohol in die Milchkanne gemischt",
+          ContentES = "Alguien adulteró la jarra de leche con alcohol",
           TextMapId = "TextMap_AnswerName_200102"
         },
         TextMap_AnswerName_200103 = {
-          ContentES = "Auf Herr Bucks Fensterbank wurden Fußspuren in Kindergröße gefunden",
+          ContentES = "Huellas de niño fueron halladas en la ventana del señor Buck",
           TextMapId = "TextMap_AnswerName_200103"
         },
         TextMap_AnswerName_200104 = {
-          ContentES = "In der Nähe der Fußspuren wurde Popcorn gefunden",
+          ContentES = "Se encontró palomitas cerca de las huellas",
           TextMapId = "TextMap_AnswerName_200104"
         },
         TextMap_AnswerName_200105 = {
-          ContentES = "Ein junger Junge wurde dabei gesehen, wie er in der Nähe des Ticketschalters Bier und Popcorn verkaufte",
+          ContentES = "Un niño fue visto vendiendo cerveza y palomitas cerca de la taquilla.",
           TextMapId = "TextMap_AnswerName_200105"
         },
         TextMap_AnswerName_200106 = {
-          ContentES = "Ein Kind ist in Herr Bucks Haus eingebrochen und hat ihn betrunken gemacht",
+          ContentES = "Un niño entró en la casa del señor Buck y lo emborrachó",
           TextMapId = "TextMap_AnswerName_200106"
         },
         TextMap_AnswerName_200107 = {
-          ContentES = "Ein Betrunkener liegt zusammengesunken neben dem Mülleimer und schreit nach mehr Alkohol",
+          ContentES = "Un borracho yace desplomado junto al bote de basura, gritando por más alcohol",
           TextMapId = "TextMap_AnswerName_200107"
         },
         TextMap_AnswerName_200108 = {
-          ContentES = "Ein kleines Mädchen bittet ihren Vater ums Popcorn",
+          ContentES = "Una niña suplica a su padre un poco de palomitas",
           TextMapId = "TextMap_AnswerName_200108"
         },
         TextMap_AnswerName_200201 = {
-          ContentES = "Der Entführungsfall vor sechzehn Jahren",
+          ContentES = "El secuestro de hace dieciséis años",
           TextMapId = "TextMap_AnswerName_200201"
         },
         TextMap_AnswerName_200202 = {
-          ContentES = "Giselles Rücktritt von der Eskorte vor sechzehn Jahren",
+          ContentES = "La dimisión de Giselle de la Escolta",
           TextMapId = "TextMap_AnswerName_200202"
         },
         TextMap_AnswerName_200203 = {
-          ContentES = "Das violette Band an Sigs Grab",
+          ContentES = "La cinta violeta en la tumba de Sig",
           TextMapId = "TextMap_AnswerName_200203"
         },
         TextMap_AnswerName_200204 = {
-          ContentES = "Violettas charakteristisches Band",
+          ContentES = "La cinta característica de Violetta",
           TextMapId = "TextMap_AnswerName_200204"
         },
         TextMap_AnswerName_200205 = {
-          ContentES = "Die entführte Gräfinstochter",
+          ContentES = "La heredera secuestrada",
           TextMapId = "TextMap_AnswerName_200205"
         },
         TextMap_AnswerName_200206 = {
-          ContentES = "Violettas vermisste Schülerin",
+          ContentES = "La alumna desaparecida de Violetta",
           TextMapId = "TextMap_AnswerName_200206"
         },
         TextMap_AnswerName_200207 = {
-          ContentES = "Giselles Rücktritt steht mit dem Fall in Zusammenhang",
+          ContentES = "Giselle renunció debido al caso de secuestro",
           TextMapId = "TextMap_AnswerName_200207"
         },
         TextMap_AnswerName_200208 = {
-          ContentES = "Eine Verbindung zwischen Violetta und Violet",
+          ContentES = "Una conexión entre Violetta y Violet",
           TextMapId = "TextMap_AnswerName_200208"
         },
         TextMap_AnswerName_200209 = {
-          ContentES = "Die entführte Gräfinstochter könnte Violettas vermisste Schülerin sein",
+          ContentES = "La heredera secuestrada es probablemente la alumna desaparecida de Violetta",
           TextMapId = "TextMap_AnswerName_200209"
         },
         TextMap_AnswerName_200210 = {
-          ContentES = "Violetta kennt die Wahrheit über die Entführung vor sechzehn Jahren",
+          ContentES = "Violetta sabe la verdad sobre el secuestro de hace dieciséis años",
           TextMapId = "TextMap_AnswerName_200210"
         },
         TextMap_AnswerName_200211 = {
-          ContentES = "Giselle inszenierte die jüngste Entführung",
+          ContentES = "Giselle orquestó el secuestro reciente",
           TextMapId = "TextMap_AnswerName_200211"
         },
         TextMap_AnswerName_200301 = {
-          ContentES = "Ein Blumenstrauß",
+          ContentES = "Un ramo de flores",
           TextMapId = "TextMap_AnswerName_200301"
         },
         TextMap_AnswerName_200302 = {
-          ContentES = "Sauberer Boden und saubere Fenster",
+          ContentES = "Pisos y ventanas limpios",
           TextMapId = "TextMap_AnswerName_200302"
         },
         TextMap_AnswerName_200303 = {
-          ContentES = "Familienfotoalbum",
+          ContentES = "Álbum familiar",
           TextMapId = "TextMap_AnswerName_200303"
         },
         TextMap_AnswerName_200304 = {
-          ContentES = "Ein Brief über den Umzug",
+          ContentES = "Una carta sobre la mudanza",
           TextMapId = "TextMap_AnswerName_200304"
         },
         TextMap_AnswerName_200305 = {
-          ContentES = "Ein geisterhafter Besucher",
+          ContentES = "Un visitante fantasmal",
           TextMapId = "TextMap_AnswerName_200305"
         },
         TextMap_AnswerName_200306 = {
-          ContentES = "Eine anhaltende Verbundenheit mit dem Zuhause",
+          ContentES = "Un apego persistente al hogar",
           TextMapId = "TextMap_AnswerName_200306"
         },
         TextMap_AnswerName_200307 = {
-          ContentES = "Der Geist ist ein Wishen – geboren aus einem Mitglied von Linglings Familie.",
+          ContentES = "El fantasma es un Wishen, nacido de la familia de Lingling.",
           TextMapId = "TextMap_AnswerName_200307"
         },
         TextMap_AnswerName_200401 = {
@@ -58894,35 +59892,35 @@ Emparejamiento cancelado.]],
           TextMapId = "TextMap_AnswerName_200607"
         },
         TextMap_Inference_1000 = {
-          ContentES = "Die Jagd auf Charon",
+          ContentES = "La Caza de Charon",
           TextMapId = "TextMap_Inference_1000"
         },
         TextMap_Inference_1001 = {
-          ContentES = "Wann genau fand der Angriff statt?",
+          ContentES = "¿Cuándo ocurrió exactamente el ataque?",
           TextMapId = "TextMap_Inference_1001"
         },
         TextMap_Inference_1002 = {
-          ContentES = "In welche Richtung floh der Täter?",
+          ContentES = "¿Hacia dónde huyó el agresor?",
           TextMapId = "TextMap_Inference_1002"
         },
         TextMap_Inference_1003 = {
-          ContentES = "Wo könnte sich der Täter versteckt haben? (Ⅰ)",
+          ContentES = "¿Dónde podría estar escondido el agresor? (Ⅰ)",
           TextMapId = "TextMap_Inference_1003"
         },
         TextMap_Inference_1004 = {
-          ContentES = "Wo könnte sich der Täter versteckt haben? (Ⅱ)",
+          ContentES = "¿Dónde podría estar escondido el agresor? (Ⅱ)",
           TextMapId = "TextMap_Inference_1004"
         },
         TextMap_Inference_1005 = {
-          ContentES = "Gibt es Hinweise auf die Identität des Täters?",
+          ContentES = "¿Hay pistas que puedan identificar al agresor?",
           TextMapId = "TextMap_Inference_1005"
         },
         TextMap_Inference_2001 = {
-          ContentES = "Finde heraus, wer der Dieb der Inspiration ist",
+          ContentES = "Averigua quién es el Ladrón de inspiración",
           TextMapId = "TextMap_Inference_2001"
         },
         TextMap_Inference_2002 = {
-          ContentES = "{$Huozai04Tag$|Verbinde die Hinweise und enthülle die verborgene Wahrheit: ???}",
+          ContentES = "{$Huozai04Tag$|Conecta las pistas y descubre la verdad oculta:¿¿¿???}",
           TextMapId = "TextMap_Inference_2002"
         },
         TextMap_Inference_2003 = {
@@ -58937,32 +59935,36 @@ Emparejamiento cancelado.]],
           ContentES = "Deduce quién es el cadáver y cómo murió",
           TextMapId = "TextMap_Inference_2005"
         },
+        TextMap_Inference_2006 = {
+          ContentES = "Investiga el lugar de la explosión",
+          TextMapId = "TextMap_Inference_2006"
+        },
         TextMap_ResultTips_10010101 = {
-          ContentES = "Geschätzte Zeit des Angriffs – 4 bis 5 Uhr morgens",
+          ContentES = "Hora estimada del ataque — de las 4 y las 5 de la mañana.",
           TextMapId = "TextMap_ResultTips_10010101"
         },
         TextMap_ResultTips_10020101 = {
-          ContentES = "Zusammengefügte Fahne zeigt Fluchtrichtung Südwest",
+          ContentES = "Veleta ensamblada indica ruta de escape al suroeste",
           TextMapId = "TextMap_ResultTips_10020101"
         },
         TextMap_ResultTips_10030101 = {
-          ContentES = "Galea-Theater – Mögliches Versteck",
+          ContentES = "Teatro Galea — Posible escondite",
           TextMapId = "TextMap_ResultTips_10030101"
         },
         TextMap_ResultTips_10040101 = {
-          ContentES = "Fabrik – Mögliches Versteck",
+          ContentES = "Fábrica — Posible escondite",
           TextMapId = "TextMap_ResultTips_10040101"
         },
         TextMap_ResultTips_10050101 = {
-          ContentES = "Opernmelodie, die während des Angriffs zu hören war",
+          ContentES = "Melodía operática escuchada durante el ataque",
           TextMapId = "TextMap_ResultTips_10050101"
         },
         TextMap_ResultTips_20010101 = {
-          ContentES = "Es stellt sich heraus, dass der Dieb der Inspiration der Charon-Junge namens Arnaud ist",
+          ContentES = "Resulta que el Ladrón de inspiración es Arnaud, el joven Charon.",
           TextMapId = "TextMap_ResultTips_20010101"
         },
         TextMap_ResultTips_20020101 = {
-          ContentES = "Giselle inszenierte die jüngste Entführung",
+          ContentES = "Giselle orquestó el secuestro reciente",
           TextMapId = "TextMap_ResultTips_20020101"
         },
         TextMap_ResultTips_20030101 = {
@@ -59054,15 +60056,15 @@ Emparejamiento cancelado.]],
           TextMapId = "Text_SellWeapon"
         },
         Textmap_NodeText001 = {
-          ContentES = "Für ein optimales Audio‑Visuelles Erlebnis werden Kopfhörer empfohlen",
+          ContentES = "Auriculares recomendados para una experiencia audiovisual óptima.",
           TextMapId = "Textmap_NodeText001"
         },
         Textmap_UnlockContent = {
-          ContentES = "Erhöhe deine Prüfungsstufe und schließe bestimmte Nebenaufträge ab, um den Hauptauftrag fortzusetzen.\n So kannst du EP verdienen:\n 1. <H>Das Sammeln und Verbessern von Figuren</>, <H>Waffen</>, <H>Geniemon</> sowie <H>das Sammeln von Dämonenkeilen</>\n 2. Die Interaktion mit Einheimischen und das Abschließen von <H>Nebenaufträgen</>",
+          ContentES = "Sube tu Rango de Aventura y completa ciertas Misiones secundarias para continuar la Misión principal.\nPuedes ganar EXP mediante:\n1. <H>Recolecta y mejora personajes</>, <H>armas</>, <H>Geniemons</> y <H>recolecta Cuñas Demoníacas</>\n2. Interactúa con los residentes locales y completa <H>Misiones secundarias</>",
           TextMapId = "Textmap_UnlockContent"
         },
         Textmap_UnlockTitle = {
-          ContentES = "Erfülle die Anforderungen, um den Hauptauftrag fortzusetzen",
+          ContentES = "Cumple los requisitos para continuar la Misión principal",
           TextMapId = "Textmap_UnlockTitle"
         },
         TheaterOnline_Donate_AutoPut = {
@@ -59278,7 +60280,15 @@ Emparejamiento cancelado.]],
         TitleFrame_10023 = {
           ContentES = "Phoxcazador rango S III",
           TextMapId = "TitleFrame_10023"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TitleFrame_10024",
+    MaxKey = "Title_20060",
+    Loader = function()
+      return {
         TitleFrame_10024 = {
           ContentES = "Phoxcazador rango A III",
           TextMapId = "TitleFrame_10024"
@@ -59312,8 +60322,44 @@ Emparejamiento cancelado.]],
           TextMapId = "TitleFrame_10032"
         },
         TitleFrame_10033 = {
-          ContentES = "Salón de esplendores",
+          ContentES = "Salón de esplendores I",
           TextMapId = "TitleFrame_10033"
+        },
+        TitleFrame_10034 = {
+          ContentES = "Salón de esplendores II",
+          TextMapId = "TitleFrame_10034"
+        },
+        TitleFrame_10035 = {
+          ContentES = "Salón de esplendores III",
+          TextMapId = "TitleFrame_10035"
+        },
+        TitleFrame_10036 = {
+          ContentES = "Salón de esplendores IV",
+          TextMapId = "TitleFrame_10036"
+        },
+        TitleFrame_10037 = {
+          ContentES = "Salón de esplendores V",
+          TextMapId = "TitleFrame_10037"
+        },
+        TitleFrame_10038 = {
+          ContentES = "Salón de esplendores VI",
+          TextMapId = "TitleFrame_10038"
+        },
+        TitleFrame_10039 = {
+          ContentES = "Salón de esplendores VII",
+          TextMapId = "TitleFrame_10039"
+        },
+        TitleFrame_10040 = {
+          ContentES = "Salón de esplendores VIII",
+          TextMapId = "TitleFrame_10040"
+        },
+        TitleFrame_10041 = {
+          ContentES = "Salón de esplendores IX",
+          TextMapId = "TitleFrame_10041"
+        },
+        TitleFrame_10042 = {
+          ContentES = "Salón de esplendores X",
+          TextMapId = "TitleFrame_10042"
         },
         TitleFrame_Des = {
           ContentES = "Equípalo en [Título] - [Marco]",
@@ -59470,15 +60516,7 @@ Emparejamiento cancelado.]],
         Title_10038 = {
           ContentES = "Iluminado",
           TextMapId = "Title_10038"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_10039",
-    MaxKey = "UIGUIDE_PARTIALDAMAGE_02",
-    Loader = function()
-      return {
+        },
         Title_10039 = {
           ContentES = "Bien acompañado",
           TextMapId = "Title_10039"
@@ -60050,7 +61088,15 @@ Emparejamiento cancelado.]],
         Title_20060 = {
           ContentES = "Guerrero",
           TextMapId = "Title_20060"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Title_20061",
+    MaxKey = "UIGuide_HardBoss_02",
+    Loader = function()
+      return {
         Title_20061 = {
           ContentES = "Maestro de la vagancia",
           TextMapId = "Title_20061"
@@ -60275,15 +61321,7 @@ Emparejamiento cancelado.]],
         UIGUIDE_PARTIALDAMAGE_02 = {
           ContentES = "Cuando los PV de una parte destructible sean reducidos a 0, el enemigo entrará en <Highlight>Estado de destrucción</>, lo que <Highlight>debilita significativamente la Postura del enemigo</>.",
           TextMapId = "UIGUIDE_PARTIALDAMAGE_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGUIDE_PARTIALDAMAGE_03",
-    MaxKey = "UIGuide_Phantom_2_1",
-    Loader = function()
-      return {
+        },
         UIGUIDE_PARTIALDAMAGE_03 = {
           ContentES = "Cuando su Postura se debilite hasta cierto punto, el enemigo <Highlight>perderá su equilibrio</>.",
           TextMapId = "UIGUIDE_PARTIALDAMAGE_03"
@@ -60408,6 +61446,18 @@ Emparejamiento cancelado.]],
           ContentES = "Atacar una señal cifrada libera un mecaave fantasma que vuela al siguiente lugar y crea otra señal.\n Sigue las marcas para encontrar la señal que dejaron los Vagabundos.\n Si hay enemigos cerca, atacar la señal no tendrá efecto.",
           TextMapId = "UIGuide_AnHao_2"
         },
+        UIGuide_Appearance_1 = {
+          ContentES = "Coleccionar cosméticos o teñirlos aumenta el punto de esplendor",
+          TextMapId = "UIGuide_Appearance_1"
+        },
+        UIGuide_Appearance_2 = {
+          ContentES = "Al aumentar el punto de esplendor, puedes obtener recompensas",
+          TextMapId = "UIGuide_Appearance_2"
+        },
+        UIGuide_Appearance_3 = {
+          ContentES = "Al aumentar el punto de esplendor, podrás mostrar tu estilo en la clasificación de esplendor",
+          TextMapId = "UIGuide_Appearance_3"
+        },
         UIGuide_AssistanceSkill = {
           ContentES = "Los <H>Geniemons</> proveen una variedad de asistencias de combate.",
           TextMapId = "UIGuide_AssistanceSkill"
@@ -60476,12 +61526,16 @@ Emparejamiento cancelado.]],
           ContentES = "Inclina la cámara hacia arriba y usa el Salto Espiral para llegar a áreas <H>elevadas</>.",
           TextMapId = "UIGuide_BulletJump_2"
         },
+        UIGuide_ChangeElem_1 = {
+          ContentES = "En <H>Arsenal</> puedes cambiar los atributos del Phoxcazador.",
+          TextMapId = "UIGuide_ChangeElem_1"
+        },
         UIGuide_ChenMo_1 = {
-          ContentES = "Aufgrund der Plage von Zhuyin sind einige figure, Truhen und Mechanismen in bestimmten Bereichen von Nebelkai unter <H>Gritblight</> begraben. In diesem Zustand können sie nicht normal genutzt werden.",
+          ContentES = "Bajo el efecto de el Azote de Zhuyin, algunos personajes, cofres y mecanismos del Puerto de las Brumas están sepultados bajo el <H>Polvo corrompido</>. En este estado, toda interacción es imposible.",
           TextMapId = "UIGuide_ChenMo_1"
         },
         UIGuide_ChenMo_2 = {
-          ContentES = "Nutze den Ziehmodus der Mechanischen Nexus, um <H>Gritblight</> zu entfernen.",
+          ContentES = "Utiliza la función Atracción del Nexo Mecánico para disipar el <H>Polvo corrompido</>.",
           TextMapId = "UIGuide_ChenMo_2"
         },
         UIGuide_Chest_1 = {
@@ -60504,6 +61558,22 @@ Emparejamiento cancelado.]],
           ContentES = "Un mecanismo de cerradura de puerta común. Arrastra la pieza hexagonal a lo largo del camino correcto hasta el punto final dentro del tiempo asignado para desbloquear este tipo de cerradura mágica.",
           TextMapId = "UIGuide_ConnectMechanism"
         },
+        UIGuide_Conveyor_1 = {
+          ContentES = "En la cinta transportadora de las instalaciones de forja, a veces sale vapor a alta temperatura que impide avanzar.",
+          TextMapId = "UIGuide_Conveyor_1"
+        },
+        UIGuide_Conveyor_2 = {
+          ContentES = "Cuando una pieza pase por la cinta transportadora, aprovecha el momento en que bloquea el vapor para cruzar.",
+          TextMapId = "UIGuide_Conveyor_2"
+        },
+        UIGuide_Conveyor_3 = {
+          ContentES = "Cuando el indicador del interruptor esté en rojo, la cinta transportadora está detenida.",
+          TextMapId = "UIGuide_Conveyor_3"
+        },
+        UIGuide_Conveyor_4 = {
+          ContentES = "Ataca el interruptor para poner en marcha la cinta transportadora.",
+          TextMapId = "UIGuide_Conveyor_4"
+        },
         UIGuide_CursorActivation = {
           ContentES = "Mantén &ShowCursor& para mostrar el cursor e interactuar con los iconos de la página.",
           TextMapId = "UIGuide_CursorActivation"
@@ -60517,19 +61587,19 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_DamageMechanism_2"
         },
         UIGuide_Deduce_1 = {
-          ContentES = "Denke über einen oder mehrere Hinweise nach, um neue Spuren zu entdecken.",
+          ContentES = "Analiza una o más pistas para descubrir nuevas pistas.",
           TextMapId = "UIGuide_Deduce_1"
         },
         UIGuide_Deduce_2 = {
-          ContentES = "Lege entscheidende Hinweise vor, um die Deduktion abzuschließen.",
+          ContentES = "Presenta pistas clave para completar la deducción.",
           TextMapId = "UIGuide_Deduce_2"
         },
         UIGuide_Deduce_SubTitle_1 = {
-          ContentES = "Reflektieren",
+          ContentES = "Meditar",
           TextMapId = "UIGuide_Deduce_SubTitle_1"
         },
         UIGuide_Deduce_SubTitle_2 = {
-          ContentES = "Hinweis einreichen",
+          ContentES = "Presentar pista",
           TextMapId = "UIGuide_Deduce_SubTitle_2"
         },
         UIGuide_Delivery_01 = {
@@ -60549,7 +61619,7 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_Delivery_02_phone"
         },
         UIGuide_DengHua_1 = {
-          ContentES = "<H>Laternenblüten</> liegen verstreut im Vergessensspalt und tragen die Wünsche der Lebenden in sich. In ihrem Licht erholst du stetig LP und bist vor der Zersetzung des Spaltes geschützt.",
+          ContentES = "<H>Flores-linterna</> están dispersas por la Grieta del Olvido, portando las oraciones de los vivos. Bajo su luz, recuperas gradualmente PV y estás protegido de la erosión de la Grieta del Olvido.",
           TextMapId = "UIGuide_DengHua_1"
         },
         UIGuide_Destructible = {
@@ -60557,19 +61627,19 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_Destructible"
         },
         UIGuide_DianFeng_1 = {
-          ContentES = "In den Apex-Ranglisten treffen Phoxjäger auf <H>extrem gefährliche Gegner</> zusammen mit Wellen von <H>weitaus gefährlicheren Feinden als üblich</>.",
+          ContentES = "Durante la Clasificación suprema, los Phoxcazadores se enfrentan a <H>enemigos de amenaza extrema</> además de oleadas de enemigos <H>mucho más peligrosos de lo habitual</>.",
           TextMapId = "UIGuide_DianFeng_1"
         },
         UIGuide_DianFeng_2 = {
-          ContentES = "Extrem gefährliche Gegner haben außergewöhnlich hohe LP. Das Besiegen normaler Einheiten reduziert ihre LP.",
+          ContentES = "Los enemigos de amenaza extrema tienen un PV excepcionalmente alto. Derrotar unidades normales reduce su PV.",
           TextMapId = "UIGuide_DianFeng_2"
         },
         UIGuide_DianFeng_3 = {
-          ContentES = "Besiege die extrem gefährlichen Gegner innerhalb des Zeitlimits, um deinen Platz in den Apex-Ranglisten zu sichern.",
+          ContentES = "Derrota a los enemigos de amenaza extrema dentro del tiempo límite para asegurar tu posición en la Clasificación suprema.",
           TextMapId = "UIGuide_DianFeng_3"
         },
         UIGuide_DianFeng_4 = {
-          ContentES = "Phoxjäger erhalten Rangpunkte basierend auf der verbleibenden LP der extrem gefährlichen Gegner und der verbleibenden Zeit.",
+          ContentES = "Los Phoxcazadores obtienen puntos de clasificación según PV restante de los enemigos de amenaza extrema y el tiempo disponible.",
           TextMapId = "UIGuide_DianFeng_4"
         },
         UIGuide_Dodge_PC = {
@@ -60625,107 +61695,107 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_ExplorationMechanism_3"
         },
         UIGuide_FanZhuan_1 = {
-          ContentES = "Das Betätigen des Schalters lässt die Blöcke auf beiden Seiten der Tür rotieren und zeigt ihre gemusterten Flächen.",
+          ContentES = "Interactúa con el mecanismo de rotación hace girar horizontalmente los bloques de piedra a ambos lados de la puerta, revelando su cara decorada con motivos.",
           TextMapId = "UIGuide_FanZhuan_1"
         },
         UIGuide_FanZhuan_2 = {
-          ContentES = "Ein erneutes Betätigen dreht die Steine weiter und zeigt ihre ringförmigen Flächen. Nutze den Ziehmodus der Mechanischen Nexus, um den gemusterten Block herauszuziehen und die Truhe zu öffnen.",
+          ContentES = "Una nueva interacción provoca una rotación adicional, revelando la cara con anillos. Utiliza la función Atracción del Nexo Mecánico para extraer el bloque decorado y desbloquear el cofre.",
           TextMapId = "UIGuide_FanZhuan_2"
         },
         UIGuide_FangShu_1 = {
-          ContentES = "Du kannst die <H>Mechanische Nexus</> aus deinem Taktischen Rucksack ausrüsten und beschwören.",
+          ContentES = "El Nexo Mecánico puede equiparse e invocarse desde la <H>Mochila táctica</>.",
           TextMapId = "UIGuide_FangShu_1"
         },
         UIGuide_FangShu_2 = {
-          ContentES = "Nachdem du die Mechanische Nexus beschworen hast, halte &Fire&, um den Ziehmodus zu aktivieren, und interagiere mit den Mechanismen und Rätseln der Jishu-Sekte.",
+          ContentES = "Después de invocar el Nexo Mecánico, mantén &Fire& para entrar en modo Atracción e interactuar con los mecanismos de la Secta Jishu.",
           TextMapId = "UIGuide_FangShu_2"
         },
         UIGuide_FangShu_2_Phone = {
-          ContentES = "Nachdem du die Mechanische Nexus beschworen hast, halte die Taste gedrückt, um in den Ziehmodus zu wechseln und mit den Mechanismen und Rätseln der Jishu-Sekte zu interagieren.",
+          ContentES = "Tras invocar el Nexo mecánico, mantén pulsado el botón para activar el modo Atracción e interactuar con los mecanismos de la Secta Jishu.",
           TextMapId = "UIGuide_FangShu_2_Phone"
         },
         UIGuide_FangShu_3 = {
-          ContentES = "Nachdem du die Mechanische Nexus beschworen hast, drücke &Skill&, um nach interaktiven Mechanismen in der Nähe zu scannen.",
+          ContentES = "Después de invocar el Nexo Mecánico, pulsa &Skill3& para escanear los mecanismos interactivos cercanos.",
           TextMapId = "UIGuide_FangShu_3"
         },
         UIGuide_FangShu_3_Phone = {
-          ContentES = "Nachdem du die Mechanische Nexus beschworen hast, drücke die Taste, um nach interaktiven Mechanismen in der Nähe zu scannen.",
+          ContentES = "ras invocar el Nexo mecánico, pulsa el botón para escanear los mecanismos interactivos cercanos.",
           TextMapId = "UIGuide_FangShu_3_Phone"
         },
         UIGuide_FangShu_4 = {
-          ContentES = "Nachdem du die Mechanische Nexus beschworen hast, öffne deinen Taktischen Rucksack und wähle das Gerät aus, um es zurückzurufen. Dadurch erhältst du wieder Zugriff auf Fernkampfwaffenangriffe und Geniemon-Fähigkeiten.",
+          ContentES = "Después de invocar el Nexo mecánico, abre de nuevo la Mochila táctica y selecciona el Nexo mecánico para recuperarlo. Una vez retirado, los ataques a distancia y las habilidades de Geniemon estarán nuevamente disponibles.",
           TextMapId = "UIGuide_FangShu_4"
         },
         UIGuide_Feina_1 = {
-          ContentES = "In diesem unvollendeten Märchen liegt alles in Graustufen. Klicke auf &Fire&, um die Welt mit Traumgewebe-Pigment zu bemalen und der Geschichte Farbe zu verleihen.",
+          ContentES = "En este cuento inconcluso, todo está en escala de grises. Haz clic en &Fire& para pintar el mundo con <H>Pigmento Tejesueños</> y darle color al relato.",
           TextMapId = "UIGuide_Feina_1"
         },
         UIGuide_Feina_10 = {
-          ContentES = "Beobachte die <H>Umgebung</> jedes Edelsteins und bemale ihn in der richtigen Farbe, um sein Licht zu entfachen und den Nebel zu vertreiben.",
+          ContentES = "Observa el <H>entorno</> de cada gema y píntala con el color correcto para encender su luz y disipar las nieblas.",
           TextMapId = "UIGuide_Feina_10"
         },
         UIGuide_Feina_11 = {
-          ContentES = "Das Aufnehmen der Edelsteinenergie erzeugt eine schützende Aura um die kleine Nachtigall, die sie vor dem Nebel bewahrt. Die Aura verblasst mit der Zeit – entzünde schnell weitere Edelsteine, um ihre Stärke zu erneuern.",
+          ContentES = "Absorber la energía de una gema forma un aura protectora alrededor del pequeño Ruiseñor, protegiéndolo de las nieblas. El aura se desvanece con el tiempo, ilumina gemas rápidamente para renovar su fuerza.",
           TextMapId = "UIGuide_Feina_11"
         },
         UIGuide_Feina_12 = {
-          ContentES = "Triff eine gravierte Scheibe mit Pigment <H>derselben Farbe</>, um sie zu zerbrechen und den Weg freizugeben.",
+          ContentES = "Golpea un disco grabado con pigmento <H>del color correspondiente</> para romperlo y abrir el camino.",
           TextMapId = "UIGuide_Feina_12"
         },
         UIGuide_Feina_1_Phone = {
-          ContentES = "In diesem unvollendeten Märchen liegt alles in Graustufen. Tippe, um die Welt mit <H>Traumgewebe-Pigment</> zu bemalen und ihr Farbe zu verleihen.",
+          ContentES = "En este cuento inconcluso, todo está en escala de grises. Pulsa para pintar el mundo con <H>Pigmento Tejesueños</> y darle color al relato.",
           TextMapId = "UIGuide_Feina_1_Phone"
         },
         UIGuide_Feina_2 = {
-          ContentES = "<H>Weiße Federn</> sind im gesamten Märchenreich verstreut. Sammle genug davon, um Bonusbelohnungen zu erhalten.",
+          ContentES = "<H>Plumas blancas</> están esparcidas por el reino de cuento. Reúne suficientes para obtener recompensas extra.",
           TextMapId = "UIGuide_Feina_2"
         },
         UIGuide_Feina_3 = {
-          ContentES = "Einige Geräte lassen sich nur mit bestimmten Farben aktivieren. Klicke auf &ChargeBullet&, um zwischen Pigmenten zu wechseln.",
+          ContentES = "Algunos dispositivos solo pueden activarse con ciertos colores. Haz clic en &ChargeBullet& para cambiar entre pigmentos.",
           TextMapId = "UIGuide_Feina_3"
         },
         UIGuide_Feina_3_Gamepad = {
-          ContentES = "Einige Geräte lassen sich nur mit einer bestimmten Farbe aktivieren. Drücke &GamepadUseSkill& + &Fire&, um zwischen verschiedenen Pigmenten zu wechseln.",
+          ContentES = "Algunos dispositivos solo pueden activarse con un color específico. Presiona &GamepadUseSkill& + &Fire& para alternar entre diferentes pigmentos.",
           TextMapId = "UIGuide_Feina_3_Gamepad"
         },
         UIGuide_Feina_3_Phone = {
-          ContentES = "Einige Geräte lassen sich nur mit bestimmten Farben aktivieren. Tippe auf die Schaltfläche, um zwischen Pigmenten zu wechseln.",
+          ContentES = "Algunos dispositivos solo pueden activarse con ciertos colores. Pulsa el botón para cambiar entre pigmentos.",
           TextMapId = "UIGuide_Feina_3_Phone"
         },
         UIGuide_Feina_4 = {
-          ContentES = "Einige Blumen bleiben farblos. Sieh dich nach Blumen <H>derselben Form</> um und bemale sie mit der passenden Farbe.",
+          ContentES = "Algunas flores permanecen sin color. Observa flores cercanas de <H>la misma forma</> y píntalas con el color correspondiente.",
           TextMapId = "UIGuide_Feina_4"
         },
         UIGuide_Feina_5 = {
-          ContentES = "Einige Blumen verlieren mit der Zeit ihre Farbe. <H>Stelle sie alle rechtzeitig wieder her</>, um das Gerät zu aktivieren.",
+          ContentES = "Algunas flores perderán su color tras un tiempo. <H>Píntalas todas correctamente a tiempo</> para activar el mecanismo.",
           TextMapId = "UIGuide_Feina_5"
         },
         UIGuide_Feina_6 = {
-          ContentES = "Bemale den Trog, um magisches Licht derselben Farbe freizusetzen. Beobachte die Umgebung und nutze die <H>richtige Farbe</>, um den Trog zu erleuchten und das Gerät zu aktivieren.",
+          ContentES = "Aplica un pigment a la palangana para que emita luz mágica del mismo color. Observa el entorno y usa <H>el color correcto</> para activar el mecanismo.",
           TextMapId = "UIGuide_Feina_6"
         },
         UIGuide_Feina_7 = {
-          ContentES = "Folge dem Leuchten des Edelsteins und <H>bemale alle Dornen in der richtigen Farbe</>, um ihre bindenden Zweige zu zerbrechen.",
+          ContentES = "Sigue el brillo de la gema y <H>pinta todas las espinas con el color correcto</> para despejar las ramas entrelazadas.",
           TextMapId = "UIGuide_Feina_7"
         },
         UIGuide_Feina_8 = {
-          ContentES = "Sind alle Dornen gefärbt, nutzt die kleine Nachtigall die Kraft des Edelsteins, um Fina den Weg zu öffnen.",
+          ContentES = "Una vez que todas las espinas estén coloreadas, el pequeño Ruiseñor usará el poder de la gema para ayudar a Fina a abrir el camino.",
           TextMapId = "UIGuide_Feina_8"
         },
         UIGuide_Feina_9 = {
-          ContentES = "Gefährliche Nebel durchziehen den Wald. Bleibst du zu lange darin, verliert Fina ihren Weg.",
+          ContentES = "Nieblas peligrosas invaden el bosque. Si permaneces demasiado tiempo, Fina perderá el rumbo.",
           TextMapId = "UIGuide_Feina_9"
         },
         UIGuide_FenZuSai_1 = {
-          ContentES = "In der Gruppenphase treffen Phoxjäger auf Wellen von Gegnern, die <H>weitaus gefährlicher als üblich</> sind.",
+          ContentES = "Durante la Fase de grupos, los Phoxcazadores se enfrentan a oleadas de enemigos <H>mucho más peligrosos de lo habitual</>.",
           TextMapId = "UIGuide_FenZuSai_1"
         },
         UIGuide_FenZuSai_2 = {
-          ContentES = "Besiege die erforderliche Anzahl an Gegnern innerhalb des Zeitlimits, um die Gruppenphase zu bestehen.",
+          ContentES = "Derrotar el número requerido de enemigos dentro del tiempo establecido permite superar la Fase de grupos.",
           TextMapId = "UIGuide_FenZuSai_2"
         },
         UIGuide_FenZuSai_3 = {
-          ContentES = "Phoxjäger erhalten Rangpunkte basierend auf der Anzahl der besiegten Gegner und der verbleibenden Zeit.",
+          ContentES = "Los Phoxcazadores obtienen puntos de clasificación según el número de enemigos derrotados y el tiempo restante.",
           TextMapId = "UIGuide_FenZuSai_3"
         },
         UIGuide_FireMechanism = {
@@ -60733,47 +61803,47 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_FireMechanism"
         },
         UIGuide_Fish_01 = {
-          ContentES = "Sobald du die Angel ausgeworfen hast, achte auf den blinkenden Einhol-Button – das bedeutet, dass ein Fisch angebissen hat! Hol ihn schnell ein, bevor er entwischt.",
+          ContentES = "Una vez que hayas lanzado la línea, espera a que el botón del carrete parpadee, eso significa que un pez ha mordido el anzuelo. Recoge la línea rápidamente antes de que se escape.",
           TextMapId = "UIGuide_Fish_01"
         },
         UIGuide_Fish_02 = {
-          ContentES = "Behalte während des Einholens die Anzeige rechts im Auge. Halte den Einhol-Button gedrückt, um Spannung aufzubauen – richte die Anzeige auf die Fischmarkierung aus und halte sie dort, bis der Fang dir gehört!",
+          ContentES = "Durante la recogida, mantén la vista en el indicador a la derecha. Mantén presionado el botón del carrete para aplicar tensión, alinea el indicador con la marca del pez y sostén firme hasta que la captura sea tuya.",
           TextMapId = "UIGuide_Fish_02"
         },
         UIGuide_Fish_03 = {
-          ContentES = "Ein besonders großer Fang kann eine Chance <H>auf größere Fische angeln</> auslösen! Nutze deinen aktuellen Fang als Köder und wirf erneut aus – vielleicht sicherst du dir so einen noch selteneren Fang.",
+          ContentES = "Atrapar una presa grande puede activar la <H>Oportunidad de Pescar peces más grandes</>. Usa tu captura actual como cebo y lanza de nuevo, podrías conseguir un premio aún más raro.",
           TextMapId = "UIGuide_Fish_03"
         },
         UIGuide_Fish_04 = {
-          ContentES = "Beim Angeln mit einem Geniemon mit der Eigenschaft „Angeln“ erfolgt das Einholen automatisch.",
+          ContentES = "Cuando pescas con un Geniemon con el rasgo \"En paz\", la recogida es automática.",
           TextMapId = "UIGuide_Fish_04"
         },
         UIGuide_Fish_05 = {
-          ContentES = "Manche Fische erscheinen nur zu bestimmten Tageszeiten. Du kannst die Tageszeit über das Menü <H>Zeitzyklus</> ändern.",
+          ContentES = "Algunas especies solo aparecen en momentos específicos. Puedes cambiar la hora actual desde la interfaz de <H>Ciclo de tiempo</>.",
           TextMapId = "UIGuide_Fish_05"
         },
         UIGuide_Fish_SubTitle_1 = {
-          ContentES = "Auswerfen und Einholen",
+          ContentES = "Lanzar y recoger",
           TextMapId = "UIGuide_Fish_SubTitle_1"
         },
         UIGuide_Fish_SubTitle_2 = {
-          ContentES = "Kampf mit der Angelrolle",
+          ContentES = "Combate de carrete",
           TextMapId = "UIGuide_Fish_SubTitle_2"
         },
         UIGuide_Fish_SubTitle_3 = {
-          ContentES = "Auf größere Fische angeln",
+          ContentES = "Pescar peces más grandes",
           TextMapId = "UIGuide_Fish_SubTitle_3"
         },
         UIGuide_Fish_SubTitle_4 = {
-          ContentES = "Angeln mit Geniemon",
+          ContentES = "Pesca con Geniemons",
           TextMapId = "UIGuide_Fish_SubTitle_4"
         },
         UIGuide_Fish_SubTitle_5 = {
-          ContentES = "Fische bei Tag und Nacht",
+          ContentES = "Los peces pican tanto de día como de noche",
           TextMapId = "UIGuide_Fish_SubTitle_5"
         },
         UIGuide_Fish_Title = {
-          ContentES = "Zeit für eine aufregende Angelsession!",
+          ContentES = "Hora de una emocionante sesión de pesca.",
           TextMapId = "UIGuide_Fish_Title"
         },
         UIGuide_Fort_1_PC = {
@@ -60789,16 +61859,32 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_Fort_2"
         },
         UIGuide_FuWen_1 = {
-          ContentES = "Taixu-Runen treiben durch die Luft in Huaxu. Nutze den Ziehmodus der Mechanischen Nexus, um sie zu sammeln.",
+          ContentES = "Runa de Taixu flotan en el aire de Huaxu. Usa la función Atracción del Nexo Mecánico para recogerlas.",
           TextMapId = "UIGuide_FuWen_1"
         },
         UIGuide_FuWen_2 = {
-          ContentES = "Taixu-Runen können beim Stand von Karp-Luno’s Glücksei gegen Belohnungen eingetauscht werden.",
+          ContentES = "Las Runas de Taixu se pueden intercambiar por recompensas en la tienda de Huevos de la Suerte de Lunocarpa.",
           TextMapId = "UIGuide_FuWen_2"
         },
         UIGuide_GongFeng_1 = {
           ContentES = "Aparecerán <Highlight>cestas de ofrendas</> aleatoriamente por la arena. Puedes colocar en ellas reliquias del saco de tesoros como ofrenda para el Señor Dragón Argento. Según el valor de la ofrenda, el Señor Dragón Argento concederá pruebas de distinta dificultad: cuanto mayor sea el valor, más fuertes serán los enemigos.\nCada <Highlight>cesta de ofrendas</> solo puede usarse una vez. Tras realizar una ofrenda con éxito, no podrá volver a utilizarse.",
           TextMapId = "UIGuide_GongFeng_1"
+        },
+        UIGuide_GuildChat_1 = {
+          ContentES = "Puedes enviar mensajes privados a los miembros del gremio",
+          TextMapId = "UIGuide_GuildChat_1"
+        },
+        UIGuide_GuildChat_2 = {
+          ContentES = "En la interfaz de chat puedes activar o desactivar el chat privado.",
+          TextMapId = "UIGuide_GuildChat_2"
+        },
+        UIGuide_GuildQuest_1 = {
+          ContentES = "Las Misiones de gremio se dividen en misiones diarias y semanales. Al completarlas, aumentarás tu actividad personal.",
+          TextMapId = "UIGuide_GuildQuest_1"
+        },
+        UIGuide_GuildQuest_2 = {
+          ContentES = "Completar <H>Notas</> también aumenta tu actividad personal. Incrementa tu actividad para obtener grandes recompensas.",
+          TextMapId = "UIGuide_GuildQuest_2"
         },
         UIGuide_HardBoss_01 = {
           ContentES = "Derrotar a los jefes de ciertas misiones principales desbloqueará los desafíos de <H>Ecos nocturnos</> correspondientes.",
@@ -60807,7 +61893,15 @@ Emparejamiento cancelado.]],
         UIGuide_HardBoss_02 = {
           ContentES = "Los jefes que se encuentran en los desafíos Ecos nocturnos son mucho más poderosos. Puedes obtener recompensas hasta <H>5 veces por semana</>.",
           TextMapId = "UIGuide_HardBoss_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Hook_PC",
+    MaxKey = "UIGuide_Title_ModTendency_5",
+    Loader = function()
+      return {
         UIGuide_Hook_PC = {
           ContentES = "Los puntos de enganche están dispersos por el mundo. Presiona &Interactive& para lanzar el gancho y desplazarte más rápido.",
           TextMapId = "UIGuide_Hook_PC"
@@ -60817,36 +61911,48 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_Hook_Phone"
         },
         UIGuide_HuaBan_1 = {
-          ContentES = "Nutze den Ziehmodus der Mechanischen Nexus, um die treibenden Blütenblätter wegzufegen und den versteckten Wishen zu enthüllen.",
+          ContentES = "Usa la función Atracción del Nexo Mecánico para dispersar los pétalos danzantes y revelar los Wishen ocultos.",
           TextMapId = "UIGuide_HuaBan_1"
         },
         UIGuide_HuaBao_1 = {
-          ContentES = "Manche Knospen wurden vom Gritblight korrumpiert und verschmutzen ständig die Umgebung.",
+          ContentES = "Algunos brotes, corrompidos por el <H>Polvo corrompido</>, contaminan continuamente su entorno.",
           TextMapId = "UIGuide_HuaBao_1"
         },
         UIGuide_HuaBao_2 = {
-          ContentES = "Zerstöre alle Gruppen verdorbener Knospen innerhalb des Zeitlimits, um das Gebiet zu reinigen.",
+          ContentES = "Destruye todos los grupos de brotes contaminados dentro del tiempo límite permite purificar la zona.",
           TextMapId = "UIGuide_HuaBao_2"
         },
         UIGuide_HuaRui_1 = {
-          ContentES = "Ein Verdorbener Blütenkern verschmutzt kontinuierlich seine Umgebung.",
+          ContentES = "Un Corazón de flor contaminada contamina continuamente su entorno.",
           TextMapId = "UIGuide_HuaRui_1"
         },
         UIGuide_HuaRui_2 = {
-          ContentES = "Greife einen Verdorbenen Blütenkern mit Fernkampfwaffen oder Wishen-Fähigkeiten an, um seine Blütenblätter zu schließen und Filthoiden anzuziehen.",
+          ContentES = "Ataca un Corazón de flor contaminada con armas a distancia o habilidades de Wishen hace que sus pétalos se cierren y atrae a los Filthoids.",
           TextMapId = "UIGuide_HuaRui_2"
         },
         UIGuide_HuaRui_3 = {
-          ContentES = "Sobald alle Filthoiden besiegt sind, öffnen sich die Blütenblätter wieder und geben den Kern frei. Schlage den Kern mit einer Wishen-Fähigkeit, um den Blütenkern zu zerstören und das Gebiet zu reinigen.",
+          ContentES = "Una vez eliminados todos los Filthoids, los pétalos se abren nuevamente, exponiendo el corazón. Golpearlo con una habilidad de Wishen destruye el Corazón de flor contaminada y purifica la zona.",
           TextMapId = "UIGuide_HuaRui_3"
         },
         UIGuide_HuiYu_1 = {
-          ContentES = "Schlage einen Leuchtenden Jade mit einer Wishen-Fähigkeit an, um ihn zu aktivieren.",
+          ContentES = "Golpea un Jade luminoso con una habilidad de Wishen lo ilumina.",
           TextMapId = "UIGuide_HuiYu_1"
         },
         UIGuide_HuiYu_2 = {
-          ContentES = "Zünde innerhalb des Zeitlimits eine gesamte Gruppe von Leuchtenden Jades an, um die Truhe zu öffnen und die Belohnungen zu erhalten.",
+          ContentES = "Ilumina un grupo completo de Jades luminosos dentro del tiempo límite desbloquea un cofre y permite obtener sus recompensas.",
           TextMapId = "UIGuide_HuiYu_2"
+        },
+        UIGuide_Hyper_1 = {
+          ContentES = "Las <H>Armas de calamidad</> tienen una ruta de crecimiento única y efectos de potencial exclusivos. Al aumentar el <H>nivel de Fundición de calamidad</>, desbloquearás los potenciales correspondientes a ese nivel.",
+          TextMapId = "UIGuide_Hyper_1"
+        },
+        UIGuide_Hyper_2 = {
+          ContentES = "Completa misiones de nivel del Horno de calamidad para aumentar el <H>nivel del Horno de calamidad</> y así incrementar el <H>límite de nivel de fundición</> de todas las Armas de calamidad.",
+          TextMapId = "UIGuide_Hyper_2"
+        },
+        UIGuide_Hyper_3 = {
+          ContentES = "Cada personaje <H>solo puede equipar un Arma de calamidad a la vez</>. Además, los potenciales solo se activarán si el <H>tipo de arma preferida del personaje coincide con el del Arma de calamidad</>.",
+          TextMapId = "UIGuide_Hyper_3"
         },
         UIGuide_ImpressionCheck_1 = {
           ContentES = "Ocasionalmente, Pruebas de impresión se activan durante Misiones secundarias y diálogos de PNJ. Superar con éxito estas pruebas avanza el diálogo y otorga recompensas. Obtén puntos de Impresión en las 5 dimensiones para mejorar tus chances de superar estas pruebas.",
@@ -60876,20 +61982,32 @@ Emparejamiento cancelado.]],
           ContentES = "<H>Lunoeggy</> admira a aquellos con personalidad. Una vez que hayas construido una sólida reputación, con suficiente puntos de Impresión, podrás retar a <H>Lunoeggy</> en la ciudad a un juego de dados por una oportunidad de ganar las <H>recompensas de Lunoeggy</>.",
           TextMapId = "UIGuide_ImpressionSystem_3"
         },
+        UIGuide_IronExp_1 = {
+          ContentES = "En los <H>Encargos abisales</> tienes probabilidad de obtener los materiales seleccionados de Armas de calamidad. Antes de entrar en Encargos abisales, puedes cambiar los materiales deseados.",
+          TextMapId = "UIGuide_IronExp_1"
+        },
+        UIGuide_IronExp_2 = {
+          ContentES = "Para entrar en Encargos abisales debes usar una <H>Brújula abisal</>. Cuanto mayor sea el nivel de la Brújula abisal, mejores serán las recompensas.",
+          TextMapId = "UIGuide_IronExp_2"
+        },
+        UIGuide_IronExp_3 = {
+          ContentES = "Cuantas más rondas completes en Encargos abisales, mayor será el nivel de la Brújula abisal.",
+          TextMapId = "UIGuide_IronExp_3"
+        },
         UIGuide_JiGuanZhen_1 = {
-          ContentES = "Das Schlagen bestimmter <H>Erleuchtungsstelen</> offenbart einen Pfad aus ineinandergreifenden Fliesen.",
+          ContentES = "Al golpear ciertas <H>Estela de la Iluminación</>, se revela un camino formado por losas mecánicas.",
           TextMapId = "UIGuide_JiGuanZhen_1"
         },
         UIGuide_JiGuanZhen_2 = {
-          ContentES = "Betritt man die richtige Fliese, leuchten goldene Muster auf. Betritt alle Fliesen in der korrekten Reihenfolge, um die nächste Erleuchtungsstele freizuschalten.",
+          ContentES = "Al pisar la losa correcta, aparecen patrones dorados. Pisa todas las losas en el orden correcto para desbloquear la siguiente Estela de la Iluminación.",
           TextMapId = "UIGuide_JiGuanZhen_2"
         },
         UIGuide_JiGuanZhen_3 = {
-          ContentES = "Betritt man eine falsche Fliese, wirst du zum Startpunkt zurückgesetzt und die Rätselanordnung beginnt von vorn.",
+          ContentES = "Al pisar una losa incorrecta, serás enviado de regreso al inicio y se reinicia la matriz del rompecabezas.",
           TextMapId = "UIGuide_JiGuanZhen_3"
         },
         UIGuide_JiaSu_1 = {
-          ContentES = "Das Berühren einer Beschleunigungs-Rune erhöht deine Bewegungs-GES und die Reichweite des Spiralsprungs erheblich.",
+          ContentES = "Toca una Runa de aceleración aumenta considerablemente la velocidad de movimiento y la distancia del Salto Espiral.",
           TextMapId = "UIGuide_JiaSu_1"
         },
         UIGuide_JieSuan_1 = {
@@ -60901,15 +62019,15 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_JingYing_1"
         },
         UIGuide_JuYuan_1 = {
-          ContentES = "Nachdem du <H>Lunos Spezialtheater</> abgeschlossen hast, kannst du dich für den Ball anmelden, indem du mit Direktor Putsch im <H>Galea-Theater</> sprichst.",
+          ContentES = "Una vez finalizado el <H>Teatro especial de Luno</>, puedes inscribirte en el evento con la Directora Putsch en el <H>Teatro Galea</>.",
           TextMapId = "UIGuide_JuYuan_1"
         },
         UIGuide_JuYuan_2 = {
-          ContentES = "Das <H>Galea-Theater</> veranstaltet alle 30 Minuten den <H>Luno-Ball</>. Folge Lunos Hinweisen und führe die richtigen Bewegungen aus, um Belohnungen zu erhalten – je genauer deine Bewegungen sind, desto besser die Belohnungen!",
+          ContentES = "El <H>Teatro Galea</> organiza el <H>Baile de Luno</> cada treinta minutos. Sigue las indicaciones de los Lunarios, realiza los movimientos correctos y gana recompensas: ¡cuanto más precisos sean tus movimientos, mayores serán las recompensas!",
           TextMapId = "UIGuide_JuYuan_2"
         },
         UIGuide_JuYuan_3 = {
-          ContentES = "Spende Vorräte an Direktor Putsch, um beim Wiederaufbau des Theaters zu helfen und Belohnungen zu verdienen.",
+          ContentES = "Dona recursos a la Directora Putsch para ayudar a reconstruir el teatro y obtener recompensas.",
           TextMapId = "UIGuide_JuYuan_3"
         },
         UIGuide_LayeredMap_1 = {
@@ -60929,19 +62047,19 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_LockMonster_Phone"
         },
         UIGuide_LongLin_1 = {
-          ContentES = "Wenn die Basis einer Zhuyin-Schuppe unter Gritblight begraben ist, kann sie nicht direkt geerntet werden.",
+          ContentES = "Cuando la base de una Escama de Zhuyin está cubierta por Polvo corrompido, no puede recolectarse directamente.",
           TextMapId = "UIGuide_LongLin_1"
         },
         UIGuide_LongLin_2 = {
-          ContentES = "Nutze den Ziehmodus der Mechanischen Nexus, um <H>Gritblight</> zu entfernen.",
+          ContentES = "Utiliza la función Atracción del Nexo Mecánico para disipar el <H>Polvo corrompido</>.",
           TextMapId = "UIGuide_LongLin_2"
         },
         UIGuide_LongLin_3 = {
-          ContentES = "Sobald das Gritblight vollständig beseitigt ist, zieht die aktivierte Zhuyin-Schuppe Filthoiden an. Gleichzeitig taucht in der Nähe mehr Gritblight auf und verdichtet sich allmählich.",
+          ContentES = "Una vez que el Polvo corrompido se disipa por completo, la Escama de Zhuyin activada atrae a los Filthoids. Entonces, el Polvo corrompido reaparece cerca y se condensa progresivamente.",
           TextMapId = "UIGuide_LongLin_3"
         },
         UIGuide_LongLin_4 = {
-          ContentES = "Besiege alle Filthoiden, bevor sich das Gritblight vollständig verdichtet, um die Zhuyin-Schuppe erfolgreich zu ernten.",
+          ContentES = "Elimina a todos los Filthoids antes de que el Polvo corrompido se condense por completo permite recolectar la Escama de Zhuyin con éxito.",
           TextMapId = "UIGuide_LongLin_4"
         },
         UIGuide_LongPressedSkills = {
@@ -60957,7 +62075,7 @@ Emparejamiento cancelado.]],
           TextMapId = "UIGuide_MiShi_2"
         },
         UIGuide_MirrorPuzzle_1 = {
-          ContentES = "Dieses Messgerät wurde von der Luno-Abenteurerin hier platziert. Einmal aktiviert, sammelt es die von ihr benötigten Daten. Drehe es in die richtige Position und aktiviere es, um die Belohnungen zu erhalten, die sie für gutherzige Reisende hinterlassen hat.",
+          ContentES = "Este dispositivo de medición fue colocado aquí por Lunoexploradora. Una vez activado, reúne los datos que ella busca. Gíralo a la posición correcta y actívalo para reclamar las recompensas que dejó para los viajeros bondadosos.",
           TextMapId = "UIGuide_MirrorPuzzle_1"
         },
         UIGuide_ModTendency_1 = {
@@ -61083,15 +62201,7 @@ Emparejamiento cancelado.]],
         UIGuide_Phantom_2_1 = {
           ContentES = "Mientras exploras el <H>mundo</>, puedes usar <H>Sello: Recordatorio</> para <H>retirar</> a tus Compañeros de combate en cualquier momento.",
           TextMapId = "UIGuide_Phantom_2_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Phantom_2_2",
-    MaxKey = "UIGuide_YanQueFeiXing_3",
-    Loader = function()
-      return {
+        },
         UIGuide_Phantom_2_2 = {
           ContentES = "Durante los <h>Encargos</> o al desafiar <H>Ecos nocturnos</>, <H>no puedes retirar</> a tus Compañeros de combate.",
           TextMapId = "UIGuide_Phantom_2_2"
@@ -61123,7 +62233,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_PinTu_1"
         },
         UIGuide_QiTianDeng_1 = {
-          ContentES = "<H>Himmelslaternen</> schweben über den Wassern des Vergessens. Zerstört man eine mit einer Fernkampfwaffe, fallen ihre Laternenblüten herab und bilden eine sich ständig verkleinernde sichere Zone auf der Wasseroberfläche, die dir hilft, der Zersetzung des Spaltes zu widerstehen. Innerhalb dieser Zone kannst du dich bewegen und LP stetig wiederherstellen.",
+          ContentES = "<H>Linternas celestes</> flotan sobre las aguas del Río del Olvido. Destruirlas con un arma a distancia hace caer sus Flores-linterna, creando en la superficie del agua una zona de refugio que se reduce progresivamente, ayudándote a resistir la erosión de la Grieta del Olvido. Puedes moverte dentro de esta zona y recuperar PV.",
           TextMapId = "UIGuide_QiTianDeng_1"
         },
         UIGuide_QianKun_1 = {
@@ -61199,27 +62309,27 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_SIDEWAYSJUMP"
         },
         UIGuide_Saiqi_1 = {
-          ContentES = "Drücke &Skill1&, damit Psyche 1 [Trugbild] erschafft und flitzt dann nach vorne. Diese Fähigkeit kann jederzeit eingesetzt werden, ohne dass Psyche ihre aktuelle Aktion unterbrechen muss.",
+          ContentES = "Presiona &Skill1& para que Psyche cree 1 [Fantasma] y luego se proyecte hacia adelante. Esta habilidad se puede usar en cualquier momento sin interrumpir la acción actual de Psyche.",
           TextMapId = "UIGuide_Saiqi_1"
         },
         UIGuide_Saiqi_1_Gamepad = {
-          ContentES = "Drücke &GamepadUseSkill& + &Attack&, damit Psyche 1 [Trugbild] erschafft und flitzt dann nach vorne. Diese Fähigkeit kann jederzeit eingesetzt werden, ohne dass Psyche ihre aktuelle Aktion unterbrechen muss.",
+          ContentES = "Presiona &GamepadUseSkill& + &Attack& para que Psyche cree 1 [Fantasma] y luego se proyecte hacia adelante. Esta habilidad se puede usar en cualquier momento sin interrumpir la acción actual de Psyche.",
           TextMapId = "UIGuide_Saiqi_1_Gamepad"
         },
         UIGuide_Saiqi_1_Phone = {
-          ContentES = "Drücke die Taste, damit Psyche 1 [Trugbild] erschafft und flitzt dann nach vorne. Diese Fähigkeit kann jederzeit eingesetzt werden, ohne dass Psyche ihre aktuelle Aktion unterbrechen muss.",
+          ContentES = "Presiona el botón para que Psyche cree 1 [Fantasma] y luego se proyecte hacia adelante. Esta habilidad se puede usar en cualquier momento sin interrumpir la acción actual de Psyche.",
           TextMapId = "UIGuide_Saiqi_1_Phone"
         },
         UIGuide_Saiqi_2 = {
-          ContentES = "Drücke &Skill2&, damit Psyche in den Zustand [Schlüpfen] eintritt und die Fähigkeit zu fliegen erhält. Im Zustand [Schlüpfen] kann Psyche nur Fähigkeiten einsetzen und schießen. Im Zustand [Schlüpfen] wird [Chrysalis-Traumgewebe] durch [Phototaxis] ersetzt. Psyche stürmt vorwärts und feuert [Ätherisches Pulver], das automatisch ein zufälliges Ziel anvisiert und bei Treffer Anemo-SCH verursacht.",
+          ContentES = "Presiona &Skill2& para que Psyche entre en estado [Metamorfosis Radiante] y obtenga la habilidad de volar. En estado [Metamorfosis Radiante], Psyche solo puede usar habilidades y disparar. En estado [Metamorfosis Radiante], [Tejido de Crisálida Onírica] se reemplaza por [Fototaxis]: Se lanza hacia adelante y dispara [Polvo Etéreo] que se fija automáticamente en un enemigo aleatorio, causando Daño Anemo al impactar.",
           TextMapId = "UIGuide_Saiqi_2"
         },
         UIGuide_Saiqi_2_Gamepad = {
-          ContentES = "Drücke &GamepadUseSkill& + &Interactive&, damit Psyche in den Zustand [Schlüpfen] eintritt und die Fähigkeit zu fliegen erhält. Im Zustand [Schlüpfen] kann Psyche nur Fähigkeiten einsetzen und schießen. Im Zustand [Schlüpfen] wird [Chrysalis-Traumgewebe] mit [Phototaxis] ersetzt. Psyche stürmt vorwärts und feuert [Ätherisches Pulver], das automatisch ein zufälliges Ziel anvisiert und bei Treffer Anemo-SCH verursacht.",
+          ContentES = "Presiona &GamepadUseSkill& + &Interactive& para que Psyche entre en estado [Metamorfosis Radiante] y obtenga la habilidad de volar. En estado [Metamorfosis Radiante], Psyche solo puede usar habilidades y disparar. En estado [Metamorfosis Radiante], [Tejido de Crisálida Onírica] se reemplaza por [Fototaxis]: Se lanza hacia adelante y dispara [Polvo Etéreo] que se fija automáticamente en un enemigo aleatorio, causando Daño Anemo al impactar.",
           TextMapId = "UIGuide_Saiqi_2_Gamepad"
         },
         UIGuide_Saiqi_2_Phone = {
-          ContentES = "Drücke die Taste, damit Psyche in den Zustand [Schlüpfen] eintritt und die Fähigkeit zu fliegen erhält. Im Zustand [Schlüpfen] kann Psyche nur Fähigkeiten einsetzen und schießen. Im Zustand [Schlüpfen] wird [Chrysalis-Traumgewebe] mit [Phototaxis] ersetzt. Psyche stürmt vorwärts und feuert [Ätherisches Pulver], das automatisch ein zufälliges Ziel anvisiert und bei Treffer Anemo-SCH verursacht.",
+          ContentES = "Presiona el botón para que Psyche entre en estado [Metamorfosis Radiante] y obtenga la habilidad de volar. En estado [Metamorfosis Radiante], Psyche solo puede usar habilidades y disparar. En estado [Metamorfosis Radiante], [Tejido de Crisálida Onírica] se reemplaza por [Fototaxis]: Se lanza hacia adelante y dispara [Polvo Etéreo] que se fija automáticamente en un enemigo aleatorio, causando Daño Anemo al impactar.",
           TextMapId = "UIGuide_Saiqi_2_Phone"
         },
         UIGuide_Shadow_1 = {
@@ -61231,7 +62341,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_Shadow_2"
         },
         UIGuide_ShanYe_1 = {
-          ContentES = "Nutze den Ziehmodus der Mechanischen Nexus, um die Blätter zu drehen, Wind zu erzeugen und das Tor zu öffnen.",
+          ContentES = "Utiliza la función Atracción del Nexo Mecánico para hacer girar las aspas, generar una corriente de aire y abrir la puerta mecánica.",
           TextMapId = "UIGuide_ShanYe_1"
         },
         UIGuide_ShenJi_1 = {
@@ -61263,47 +62373,47 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_ShouHu_2"
         },
         UIGuide_Sojourns_01 = {
-          ContentES = "<Highlight>Gesprächswellen</> freigeschaltet. Wähle in der Raststätte das entsprechende Symbol, um darauf zuzugreifen.",
+          ContentES = "<Highlight>Fragmentos de memoria</> desbloqueados. Selecciona el icono en el Santuario para acceder.",
           TextMapId = "UIGuide_Sojourns_01"
         },
         UIGuide_Sojourns_01_Pad = {
-          ContentES = "<Highlight>Gesprächswellen</> ist jetzt freigeschaltet. Drücke in der Raststätte, um darauf zuzugreifen",
+          ContentES = "<Highlight>Fragmentos de memoria</> ahora desbloqueados. Pulsa en el Santuario para acceder.",
           TextMapId = "UIGuide_Sojourns_01_Pad"
         },
         UIGuide_Sojourns_02 = {
-          ContentES = "<Highlight>Gesprächswellen</> halten Fragmente von Zeit und Erinnerung fest.",
+          ContentES = "Los <Highlight>Fragmentos de memoria</> capturan fragmentos de tiempo y memoria.",
           TextMapId = "UIGuide_Sojourns_02"
         },
         UIGuide_Sojourns_03 = {
-          ContentES = "Besuche die <Highlight>Chronik der Zeit</>, um dir Geschichten aus verschiedenen Phasen im Leben einer Figur anzusehen.",
+          ContentES = "Visita <Highlight>Antología del tiempo</> para ver historias de las diferentes etapas de la vida de un personaje.",
           TextMapId = "UIGuide_Sojourns_03"
         },
         UIGuide_Sojourns_03_Pad = {
-          ContentES = "Drücke, um <Highlight>Chronik der Zeit</> zu besuchen und Geschichten aus verschiedenen Lebensabschnitten einer Figur zu entdecken.",
+          ContentES = "Pulsa para visitar <Highlight>Antología del tiempo</> y explorar historias de distintas etapas de la experiencia de un personaje.",
           TextMapId = "UIGuide_Sojourns_03_Pad"
         },
         UIGuide_Sojourns_04 = {
-          ContentES = "Jede Figur hat ihre eigene Sammlung an Geschichten.",
+          ContentES = "Cada personaje tiene su propio conjunto de historias.",
           TextMapId = "UIGuide_Sojourns_04"
         },
         UIGuide_Sojourns_04_Pad = {
-          ContentES = "Drücke, um die einzigartige Geschichte jeder Figur zu erkunden.",
+          ContentES = "Pulsa para explorar la historia única de cada personaje.",
           TextMapId = "UIGuide_Sojourns_04_Pad"
         },
         UIGuide_Sojourns_05 = {
-          ContentES = "Nutze <Highlight>Seelenabdrücke</>, um diese Geschichten zusammenzusetzen. Einige Einträge haben besondere Freischaltbedingungen.",
+          ContentES = "Usa <Highlight>Huella del alma</> para reconstruir estas historias. Algunas entradas tienen requisitos especiales.",
           TextMapId = "UIGuide_Sojourns_05"
         },
         UIGuide_Sojourns_06 = {
-          ContentES = "Erfülle die Freischaltbedingungen, um Geschichten freizuschalten und Belohnungen zu erhalten.",
+          ContentES = "Cumple los requisitos para desbloquear historias y ganar recompensas.",
           TextMapId = "UIGuide_Sojourns_06"
         },
         UIGuide_Sojourns_06_Pad = {
-          ContentES = "Die Geschichten werden freigeschaltet, sobald die Freischaltbedingungen erfüllt sind. Drücke, um die entsprechenden Belohnungen zu erhalten.",
+          ContentES = "Las historias se desbloquearán una vez cumplidos los requisitos. Pulsa para reclamar las recompensas asociadas",
           TextMapId = "UIGuide_Sojourns_06_Pad"
         },
         UIGuide_Sojourns_07 = {
-          ContentES = "Freigeschaltete Geschichten können in <Highlight>Die Reise antreten</> erneut angesehen werden.",
+          ContentES = "Las historias desbloqueadas pueden revisitar en <Highlight>Instante eterno</>.",
           TextMapId = "UIGuide_Sojourns_07"
         },
         UIGuide_Sp = {
@@ -61593,7 +62703,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UIGuide_Title_ModTendency_5 = {
           ContentES = "Afinidades diferentes",
           TextMapId = "UIGuide_Title_ModTendency_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Title_MonsterExitMechanism",
+    MaxKey = "UI_Accessory_Desc_10115",
+    Loader = function()
+      return {
         UIGuide_Title_MonsterExitMechanism = {
           ContentES = "Zona de peligro",
           TextMapId = "UIGuide_Title_MonsterExitMechanism"
@@ -61751,7 +62869,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_Title_WallJump"
         },
         UIGuide_TongLv_1 = {
-          ContentES = "Einige figure besitzen einzigartige Resonanzwaffen. Diese Waffen steigen mit dem figur auf und können nicht separat ersetzt oder verbessert werden, können aber mit Dämonenkeilen ausgerüstet werden.",
+          ContentES = "Algunos personajes poseen Armas de Consonancia únicas. Estas armas suben de nivel junto con el personaje y no pueden reemplazarse ni mejorarse de forma independiente, pero pueden equiparse con Cuñas demoníacas.",
           TextMapId = "UIGuide_TongLv_1"
         },
         UIGuide_TrainingGround_1 = {
@@ -61779,11 +62897,11 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_TrainingGround_4_Phone"
         },
         UIGuide_TrialRank_1 = {
-          ContentES = "Erhalte EP durch die Verbesserung von Figuren, Waffen, Geniemon und Dämonenkeilen oder durch das Abschließen von Aufträgen, um deine Prüfungsstufe zu erhöhen.",
+          ContentES = "Gana EXP mediante la progresión de personajes, armas, Geniemons y Cuñas Demoníacas, o completando misiones, para subir tu Rango de Aventura.",
           TextMapId = "UIGuide_TrialRank_1"
         },
         UIGuide_TrialRank_2 = {
-          ContentES = "Die Erhöhung der Prüfungsstufe gewährt wertvolle Belohnungen und mächtige Buffs.",
+          ContentES = "Avanzar a Rangos de Aventura más altos otorga recompensas valiosas y poderosos beneficios.",
           TextMapId = "UIGuide_TrialRank_2"
         },
         UIGuide_TriggerEffect_1 = {
@@ -61823,15 +62941,15 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_WallJump_Phone"
         },
         UIGuide_WangXi_1 = {
-          ContentES = "Der Vergessensspalt zersetzt kontinuierlich jedes Lebewesen, das in ihn fällt. Solange du dich in seinem Einflussbereich befindest, sinkt deine LP stetig.",
+          ContentES = "La Grieta del Olvido erosiona continuamente a cualquier ser vivo que caiga en ella. Mientras permanezcas en este entorno, tus PV disminuirán constantemente.",
           TextMapId = "UIGuide_WangXi_1"
         },
         UIGuide_WangXi_2 = {
-          ContentES = "Überall im Vergessensspalt liegen die Wasser des Vergessens. Mit ihnen in Kontakt zu kommen, beschleunigt den LP-Verlust erheblich.",
+          ContentES = "La Grieta del Olvido está atravesada por las aguas del Río del Olvido. Entrar en contacto con estas aguas acelera considerablemente la pérdida de PV.",
           TextMapId = "UIGuide_WangXi_2"
         },
         UIGuide_WangXi_3 = {
-          ContentES = "Die richtige Nutzung der von Laternenblüten geschaffenen sicheren Zonen ist entscheidend, um dem Vergessensspalt zu entkommen.",
+          ContentES = "Aprovechar sabiamente las zonas de refugio formadas por las Flores-linterna es clave para salir de la Grieta del Olvido.",
           TextMapId = "UIGuide_WangXi_3"
         },
         UIGuide_WuYou_1 = {
@@ -61847,7 +62965,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_WuYou_3"
         },
         UIGuide_XiQiu_1 = {
-          ContentES = "Nutze den Ziehmodus der Mechanischen Nexus, um die Jishu-Kugeln in ihre passenden Sockel zu ziehen und das Rätsel zu lösen.",
+          ContentES = "Utiliza la función Atracción del Nexo Mecánico para atraer las esferas del mecanismo hacia su base correspondiente y desbloquear el dispositivo.",
           TextMapId = "UIGuide_XiQiu_1"
         },
         UIGuide_XianJing_1 = {
@@ -61855,7 +62973,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_XianJing_1"
         },
         UIGuide_XiaoChuan_1 = {
-          ContentES = "Ein <H>Kanu</> treibt auf den Wassern des Vergessens. Wird es angezündet, erzeugt es eine sichere, sich ständig bewegende Zone um sich herum, die dir hilft, der Zersetzung des Spaltes zu widerstehen. Innerhalb dieser Zone kannst du dich bewegen und LP stetig wiederherstellen.",
+          ContentES = "<H>Embarcaciones pequeñas</> flotan sobre las aguas del Río del Olvido. Cuando se encienden, generan a su alrededor una zona de refugio móvil, ayudándote a resistir la erosión de la Grieta del Olvido. Puedes moverte dentro de esta zona y recuperar PV.",
           TextMapId = "UIGuide_XiaoChuan_1"
         },
         UIGuide_XiaoYao_1 = {
@@ -61875,7 +62993,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_XiaoYao_4"
         },
         UIGuide_XingShi_1 = {
-          ContentES = "Klopfe auf eine <H>Erleuchtungsstele</>, um die Mechanismen der Vielfach-Fangjagd-Formation zu aktivieren und die Struktur des Gebiets zu verändern.",
+          ContentES = "Golpea la <H>Estela de la Iluminación</> activa los mecanismos de la Matriz de Caza de las Mil Trampas y permite modificar su estructura.",
           TextMapId = "UIGuide_XingShi_1"
         },
         UIGuide_XuanYong_1 = {
@@ -61893,15 +63011,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UIGuide_YanQueFeiXing_3 = {
           ContentES = "Durante el vuelo, el Yanfinch puede soltar al azar [Pieza: unidad de reparación] desde su almacenamiento interno. Atácala con [Nexo mecánico: Exorcismo] para cargarla y reparar al Yanfinch.",
           TextMapId = "UIGuide_YanQueFeiXing_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_YanQueFeiXing_4",
-    MaxKey = "UI_Accessory_Desc_30005",
-    Loader = function()
-      return {
+        },
         UIGuide_YanQueFeiXing_4 = {
           ContentES = "Durante el vuelo, el Yanfinch puede soltar al azar [Batería: unidad de aceleración] desde su almacenamiento interno. Atácala con [Nexo mecánico: Exorcismo] para impulsar al Yanfinch y aumentar su velocidad.",
           TextMapId = "UIGuide_YanQueFeiXing_4"
@@ -61923,11 +63033,11 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_YanQue_2"
         },
         UIGuide_YanShi_1 = {
-          ContentES = "Einige Höhleneingänge werden von Felsen blockiert.",
+          ContentES = "La entrada de algunas cavernas está bloqueada por rocas.",
           TextMapId = "UIGuide_YanShi_1"
         },
         UIGuide_YanShi_2 = {
-          ContentES = "Diese Felsen können mit Nah- oder Fernkampfwaffen zerstört werden – Nahkampfangriffe sind effizienter.",
+          ContentES = "Estas rocas pueden destruirse con armas cuerpo a cuerpo o a distancia; los ataques cuerpo a cuerpo son más efectivos.",
           TextMapId = "UIGuide_YanShi_2"
         },
         UIGuide_YinZong_1 = {
@@ -61955,7 +63065,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_YuBo_5"
         },
         UIGuide_ZhanFeng_1 = {
-          ContentES = "Läute das <H>Äolische Klangspiel</>, und es wird auf deinen Wunsch reagieren, verborgene Mechanismen oder Erinnerungen vergangener Tage erwachen lassen.",
+          ContentES = "Haz resonar el <H>Carillón de los Vientos</>: responderá a tu deseo, activando mecanismos ocultos o recuerdos de otra época.",
           TextMapId = "UIGuide_ZhanFeng_1"
         },
         UIGuide_ZhenLv_1 = {
@@ -61983,7 +63093,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_ZhengLi_4"
         },
         UIGuide_ZhouYe_1 = {
-          ContentES = "In Huaxu kannst du die Tageszeit über das Menü <H>Zeitzyklus</> ändern.",
+          ContentES = "En Huaxu, puedes abrir la interfaz de <H>Ciclo de tiempo</> para modificar la hora actual.",
           TextMapId = "UIGuide_ZhouYe_1"
         },
         UIGuide_ZhuanZhou_1 = {
@@ -61995,7 +63105,7 @@ Algunas plataformas muestran fragmentos de una imagen.
           TextMapId = "UIGuide_ZhuanZhou_2"
         },
         UIGuide_ZuoQi_1 = {
-          ContentES = "Haz clic para abrir la interfaz de <H>Monturas</>. Aquí puedes previsualizar todas las Monturas.",
+          ContentES = "En la pestaña <H>Monturas</> de la interfaz de <H>Cosméticos</>, puedes previsualizar todas las monturas.",
           TextMapId = "UIGuide_ZuoQi_1"
         },
         UIGuide_ZuoQi_2 = {
@@ -62392,7 +63502,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Accessory_Desc_10115 = {
           ContentES = "Confinar la vida dentro del acero y la maquinaria siempre ha sido uno de los temas de investigación de los alquimistas.",
           TextMapId = "UI_Accessory_Desc_10115"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_10116",
+    MaxKey = "UI_Accessory_Name_10050",
+    Loader = function()
+      return {
         UI_Accessory_Desc_10116 = {
           ContentES = "La noche larga siempre tiene un fin; que estas luces iluminen tu camino a casa.",
           TextMapId = "UI_Accessory_Desc_10116"
@@ -62692,15 +63810,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Accessory_Desc_30005 = {
           ContentES = "Una lámpara de minero que disipa la oscuridad en las profundidades subterráneas.",
           TextMapId = "UI_Accessory_Desc_30005"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_30006",
-    MaxKey = "UI_Accessory_Name_10126",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_30006 = {
           ContentES = "Linterna comúnmente usada en construcciones que ilumina el camino a casa para niños perdidos.",
           TextMapId = "UI_Accessory_Desc_30006"
@@ -63202,7 +64312,15 @@ Tocado de Lynn
         UI_Accessory_Name_10050 = {
           ContentES = "Ruiseñor onírico",
           TextMapId = "UI_Accessory_Name_10050"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_10052",
+    MaxKey = "UI_Accessory_Name_20035",
+    Loader = function()
+      return {
         UI_Accessory_Name_10052 = {
           ContentES = "Accesorio de buena suerte",
           TextMapId = "UI_Accessory_Name_10052"
@@ -63502,15 +64620,7 @@ Tocado de Lynn
         UI_Accessory_Name_10126 = {
           ContentES = "Barricada: Rojo óxido",
           TextMapId = "UI_Accessory_Name_10126"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_10127",
-    MaxKey = "UI_Accessory_Name_30019",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_10127 = {
           ContentES = "Barricada: Verde esmeralda",
           TextMapId = "UI_Accessory_Name_10127"
@@ -64010,7 +65120,15 @@ Tocado de Lynn
         UI_Accessory_Name_20035 = {
           ContentES = "Pluma de los cielos: Blanco opaco",
           TextMapId = "UI_Accessory_Name_20035"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_20036",
+    MaxKey = "UI_Accessory_Name_70002",
+    Loader = function()
+      return {
         UI_Accessory_Name_20036 = {
           ContentES = "Sueño de mariposa: Azul grisáceo",
           TextMapId = "UI_Accessory_Name_20036"
@@ -64310,15 +65428,7 @@ Tocado de Lynn
         UI_Accessory_Name_30019 = {
           ContentES = "Muñeco de escarcha estelar",
           TextMapId = "UI_Accessory_Name_30019"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_30020",
-    MaxKey = "UI_Accessory_Unlock_BattlePass",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_30020 = {
           ContentES = "Cetro celestial: Dorado fluido",
           TextMapId = "UI_Accessory_Name_30020"
@@ -64818,7 +65928,15 @@ Tocado de Lynn
         UI_Accessory_Name_70002 = {
           ContentES = "Fuerza del patito: Azul grisáceo",
           TextMapId = "UI_Accessory_Name_70002"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_70003",
+    MaxKey = "UI_Achievement_Des_17002026",
+    Loader = function()
+      return {
         UI_Accessory_Name_70003 = {
           ContentES = "Flor de llamarada: Dorado",
           TextMapId = "UI_Accessory_Name_70003"
@@ -65118,15 +66236,7 @@ Tocado de Lynn
         UI_Accessory_Unlock_BattlePass = {
           ContentES = "Available through Tomo del bardo",
           TextMapId = "UI_Accessory_Unlock_BattlePass"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Unlock_Char",
-    MaxKey = "UI_Achievement_Des_210010101",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Unlock_Char = {
           ContentES = "Se obtiene al desbloquear el personaje",
           TextMapId = "UI_Accessory_Unlock_Char"
@@ -65626,7 +66736,15 @@ Tocado de Lynn
         UI_Achievement_Des_17002026 = {
           ContentES = "Lee por completo la Antología del tiempo de Daphne en los Fragmentos de memoria del Santuario.",
           TextMapId = "UI_Achievement_Des_17002026"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_17002027",
+    MaxKey = "UI_Achievement_Des_50903",
+    Loader = function()
+      return {
         UI_Achievement_Des_17002027 = {
           ContentES = "Lee por completo la Antología del tiempo de Flora en los Fragmentos de memoria del Santuario.",
           TextMapId = "UI_Achievement_Des_17002027"
@@ -65926,15 +67044,7 @@ Tocado de Lynn
         UI_Achievement_Des_210010101 = {
           ContentES = "Tomar <highlight>5</> fotos",
           TextMapId = "UI_Achievement_Des_210010101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_2101",
-    MaxKey = "UI_Achievement_Des_70121",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_2101 = {
           ContentES = "Derrota a un <highlight>Comandante - Infierno Gélido</> en encargo en solitario sin recibir daño de su [Infierno Gélido]",
           TextMapId = "UI_Achievement_Des_2101"
@@ -66434,7 +67544,15 @@ Tocado de Lynn
         UI_Achievement_Des_50903 = {
           ContentES = "Completa por primera vez [Encargo:Excavación ∞]",
           TextMapId = "UI_Achievement_Des_50903"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_50904",
+    MaxKey = "UI_Achievement_Name_1010306",
+    Loader = function()
+      return {
         UI_Achievement_Des_50904 = {
           ContentES = "Completa por primera vez [Encargo: Captura]",
           TextMapId = "UI_Achievement_Des_50904"
@@ -66734,15 +67852,7 @@ Tocado de Lynn
         UI_Achievement_Des_70121 = {
           ContentES = "Sobrecarga el depósito Phoxichor para destruir la sala de máquinas.",
           TextMapId = "UI_Achievement_Des_70121"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_70122",
-    MaxKey = "UI_Achievement_Name_140030301",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_70122 = {
           ContentES = "Usar la torreta para abrir el camino hacia la Sala de control central.",
           TextMapId = "UI_Achievement_Des_70122"
@@ -66772,47 +67882,47 @@ Tocado de Lynn
           TextMapId = "UI_Achievement_Des_70128"
         },
         UI_Achievement_Des_70131 = {
-          ContentES = "Schließe den Auftrag „Zeit der Unschuld“ ab",
+          ContentES = "Completa la misión \"Tiempo de inocencia\"",
           TextMapId = "UI_Achievement_Des_70131"
         },
         UI_Achievement_Des_70132 = {
-          ContentES = "Schließe den Auftrag „Das Scharlachrote Land“ ab",
+          ContentES = "Completa la misión \"La tierra escarlata\"",
           TextMapId = "UI_Achievement_Des_70132"
         },
         UI_Achievement_Des_70133 = {
-          ContentES = "Schließe den Auftrag „Requiem für die Namenlosen“ ab",
+          ContentES = "Completa la misión \"Réquiem por los Anónimos\"",
           TextMapId = "UI_Achievement_Des_70133"
         },
         UI_Achievement_Des_70134 = {
-          ContentES = "Leite das wahrscheinliche Versteck des Täters im Fall „Jagd auf Charon“ ab.",
+          ContentES = "Deduce el probable escondite del asesino en el caso de la Caza de Charon.",
           TextMapId = "UI_Achievement_Des_70134"
         },
         UI_Achievement_Des_70135 = {
-          ContentES = "Stelle dich den Monstern, die dich einst verwundet haben.",
+          ContentES = "Enfrenta a los monstruos que una vez te hirieron.",
           TextMapId = "UI_Achievement_Des_70135"
         },
         UI_Achievement_Des_70136 = {
-          ContentES = "„Ich werde nie wieder zulassen, dass jemand durch Filthoiden stirbt.“",
+          ContentES = "\"Nunca dejaré que nadie muera a manos de Filthoids otra vez.\"",
           TextMapId = "UI_Achievement_Des_70136"
         },
         UI_Achievement_Des_70137 = {
-          ContentES = "Fange einen großen Fisch für die Bewohner von Mist Aken.",
+          ContentES = "Consigue un pez grande para los residentes de la Zona Nebulosa.",
           TextMapId = "UI_Achievement_Des_70137"
         },
         UI_Achievement_Des_70138 = {
-          ContentES = "Wir liegen alle in der Gosse, aber einige von uns blicken zu den Sternen.",
+          ContentES = "Todos estamos en el fango, pero algunos de nosotros miramos las estrellas.",
           TextMapId = "UI_Achievement_Des_70138"
         },
         UI_Achievement_Des_70139 = {
-          ContentES = "Ich habe mir unser Wiedersehen unzählige Male vorgestellt – aber niemals so.",
+          ContentES = "Imaginé nuestro reencuentro incontables veces, pero nunca así.",
           TextMapId = "UI_Achievement_Des_70139"
         },
         UI_Achievement_Des_70140 = {
-          ContentES = "Zerreiße den Käfig – auch wenn deine Hände dabei zerfetzt werden.",
+          ContentES = "Desgarra la jaula, aunque te deje las manos hechas trizas.",
           TextMapId = "UI_Achievement_Des_70140"
         },
         UI_Achievement_Des_70141 = {
-          ContentES = "„Auf die einzige gelungene Vorstellung meines Lebens.“",
+          ContentES = "A la única actuación exitosa de mi vida.",
           TextMapId = "UI_Achievement_Des_70141"
         },
         UI_Achievement_Des_70142 = {
@@ -67242,7 +68352,15 @@ Tocado de Lynn
         UI_Achievement_Name_1010306 = {
           ContentES = "Entre suspiros",
           TextMapId = "UI_Achievement_Name_1010306"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_1010601",
+    MaxKey = "UI_Achievement_Name_201301",
+    Loader = function()
+      return {
         UI_Achievement_Name_1010601 = {
           ContentES = "Cazador de tesoros: Isla del Purgatorio",
           TextMapId = "UI_Achievement_Name_1010601"
@@ -67542,15 +68660,7 @@ Tocado de Lynn
         UI_Achievement_Name_140030301 = {
           ContentES = "Próxima parada: Maestro de Geniemon Ⅲ",
           TextMapId = "UI_Achievement_Name_140030301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_150010101",
-    MaxKey = "UI_Achievement_Name_3020202",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_150010101 = {
           ContentES = "Obra maestra atemporal",
           TextMapId = "UI_Achievement_Name_150010101"
@@ -68050,7 +69160,15 @@ Tocado de Lynn
         UI_Achievement_Name_201301 = {
           ContentES = "Cuidado con la cabeza Ⅰ",
           TextMapId = "UI_Achievement_Name_201301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_201302",
+    MaxKey = "UI_Achievement_Name_50510101",
+    Loader = function()
+      return {
         UI_Achievement_Name_201302 = {
           ContentES = "Cuidado con la cabeza Ⅱ",
           TextMapId = "UI_Achievement_Name_201302"
@@ -68350,15 +69468,7 @@ Tocado de Lynn
         UI_Achievement_Name_3020202 = {
           ContentES = "Susurros de la bruja Ⅱ",
           TextMapId = "UI_Achievement_Name_3020202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_3020301",
-    MaxKey = "UI_Achievement_Name_5210101",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_3020301 = {
           ContentES = "Rugido del encadenado Ⅰ",
           TextMapId = "UI_Achievement_Name_3020301"
@@ -68858,7 +69968,15 @@ Tocado de Lynn
         UI_Achievement_Name_50510101 = {
           ContentES = "Así habló Paniemon Ⅰ",
           TextMapId = "UI_Achievement_Name_50510101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_50510102",
+    MaxKey = "UI_Achievement_Name_940301",
+    Loader = function()
+      return {
         UI_Achievement_Name_50510102 = {
           ContentES = "Así habló Paniemon Ⅱ",
           TextMapId = "UI_Achievement_Name_50510102"
@@ -69158,15 +70276,7 @@ Tocado de Lynn
         UI_Achievement_Name_5210101 = {
           ContentES = "El gran defensor de Luno",
           TextMapId = "UI_Achievement_Name_5210101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_5220101",
-    MaxKey = "UI_AppearanceCollect_AppearanceCollectTask",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_5220101 = {
           ContentES = "Inmune al veneno",
           TextMapId = "UI_Achievement_Name_5220101"
@@ -69380,47 +70490,47 @@ Tocado de Lynn
           TextMapId = "UI_Achievement_Name_7012801"
         },
         UI_Achievement_Name_7013101 = {
-          ContentES = "Gestern nicht mehr",
+          ContentES = "Ayer ya no más",
           TextMapId = "UI_Achievement_Name_7013101"
         },
         UI_Achievement_Name_7013201 = {
-          ContentES = "Zersplittertes Glas",
+          ContentES = "Vidrio hecho añicos",
           TextMapId = "UI_Achievement_Name_7013201"
         },
         UI_Achievement_Name_7013301 = {
-          ContentES = "Der Mut, weiterzuleben",
+          ContentES = "El valor de seguir viviendo",
           TextMapId = "UI_Achievement_Name_7013301"
         },
         UI_Achievement_Name_7013401 = {
-          ContentES = "Nur eine Wahrheit",
+          ContentES = "Solo una verdad",
           TextMapId = "UI_Achievement_Name_7013401"
         },
         UI_Achievement_Name_7013501 = {
-          ContentES = "Die Vergelter",
+          ContentES = "Los Vengadores",
           TextMapId = "UI_Achievement_Name_7013501"
         },
         UI_Achievement_Name_7013601 = {
-          ContentES = "Die Entschlossenheit eines Mädchens",
+          ContentES = "La resolución de una chica",
           TextMapId = "UI_Achievement_Name_7013601"
         },
         UI_Achievement_Name_7013701 = {
-          ContentES = "Nie leer ausgegangen",
+          ContentES = "Nunca con las manos vacías",
           TextMapId = "UI_Achievement_Name_7013701"
         },
         UI_Achievement_Name_7013801 = {
-          ContentES = "Phantom in der Gosse",
+          ContentES = "Fantasma en el fango",
           TextMapId = "UI_Achievement_Name_7013801"
         },
         UI_Achievement_Name_7013901 = {
-          ContentES = "Zu welchem Gruß?",
+          ContentES = "¿Con qué saludo?",
           TextMapId = "UI_Achievement_Name_7013901"
         },
         UI_Achievement_Name_7014001 = {
-          ContentES = "Für die Freiheit",
+          ContentES = "Por la libertad",
           TextMapId = "UI_Achievement_Name_7014001"
         },
         UI_Achievement_Name_7014101 = {
-          ContentES = "Ein vollendeter letzter Vorhang",
+          ContentES = "Un perfecto saludo final",
           TextMapId = "UI_Achievement_Name_7014101"
         },
         UI_Achievement_Name_7014201 = {
@@ -69666,7 +70776,15 @@ Tocado de Lynn
         UI_Achievement_Name_940301 = {
           ContentES = "Guardián de la linterna: Polilla nocturna",
           TextMapId = "UI_Achievement_Name_940301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_940401",
+    MaxKey = "UI_Armory_Introduce",
+    Loader = function()
+      return {
         UI_Achievement_Name_940401 = {
           ContentES = "Guardián de la linterna: Luciérnaga brillante",
           TextMapId = "UI_Achievement_Name_940401"
@@ -69960,18 +71078,22 @@ Tocado de Lynn
           ContentES = "Haz clic en cualquier parte para abrir",
           TextMapId = "UI_Anyplace_Open"
         },
+        UI_AppearanceCollectEvent_Task1 = {
+          ContentES = "Eventos de tiempo limitado",
+          TextMapId = "UI_AppearanceCollectEvent_Task1"
+        },
+        UI_AppearanceCollectEvent_Task2 = {
+          ContentES = "Venta directa en tienda",
+          TextMapId = "UI_AppearanceCollectEvent_Task2"
+        },
+        UI_AppearanceCollectEvent_Task3 = {
+          ContentES = "Colección especial",
+          TextMapId = "UI_AppearanceCollectEvent_Task3"
+        },
         UI_AppearanceCollect_AppearanceCollectTask = {
           ContentES = "Colección de aspectos",
           TextMapId = "UI_AppearanceCollect_AppearanceCollectTask"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AppearanceCollect_ConfirmUnlock",
-    MaxKey = "UI_AsyncCombat_ChallengeEnd",
-    Loader = function()
-      return {
+        },
         UI_AppearanceCollect_ConfirmUnlock = {
           ContentES = "¿Seguro que quieres consumir <highlight> Phoxene ×900 </> para desbloquear las recompensas?",
           TextMapId = "UI_AppearanceCollect_ConfirmUnlock"
@@ -70081,11 +71203,11 @@ Tocado de Lynn
           TextMapId = "UI_AppearanceScore_Import"
         },
         UI_AppearanceScore_ImportCompleteToast = {
-          ContentES = "Importación del preajuste de apariencias completada",
+          ContentES = "Importación del preajuste de cosmético completada",
           TextMapId = "UI_AppearanceScore_ImportCompleteToast"
         },
         UI_AppearanceScore_ImportLack = {
-          ContentES = "No tienes las siguientes apariencias, no se puede completar la importación.",
+          ContentES = "No tienes los siguientes cosméticos, no se puede completar la importación.",
           TextMapId = "UI_AppearanceScore_ImportLack"
         },
         UI_AppearanceScore_Nickname = {
@@ -70169,11 +71291,11 @@ Tocado de Lynn
           TextMapId = "UI_AppearanceScore_ScoreTitle"
         },
         UI_AppearanceScore_Solution = {
-          ContentES = "Preajuste de apariencias",
+          ContentES = "Preajuste de cosmético",
           TextMapId = "UI_AppearanceScore_Solution"
         },
         UI_AppearanceScore_SolutionShare = {
-          ContentES = "[Preajuste de apariencia: %s]",
+          ContentES = "[Preajuste de cosmético: %s]",
           TextMapId = "UI_AppearanceScore_SolutionShare"
         },
         UI_Appearance_Head_Current = {
@@ -70459,7 +71581,15 @@ Tocado de Lynn
         UI_Armory_Introduce = {
           ContentES = "Info. de habilidades",
           TextMapId = "UI_Armory_Introduce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Armory_JumpToForgeArchive",
+    MaxKey = "UI_AutoChess_BuffName1",
+    Loader = function()
+      return {
         UI_Armory_JumpToForgeArchive = {
           ContentES = "Ver proceso de forja",
           TextMapId = "UI_Armory_JumpToForgeArchive"
@@ -70771,15 +71901,7 @@ Tocado de Lynn
         UI_AsyncCombat_ChallengeEnd = {
           ContentES = "Actuación finalizada",
           TextMapId = "UI_AsyncCombat_ChallengeEnd"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AsyncCombat_ChallengeEnd2",
-    MaxKey = "UI_AutoChess_NewMissionRemain",
-    Loader = function()
-      return {
+        },
         UI_AsyncCombat_ChallengeEnd2 = {
           ContentES = "Actuación finalizada",
           TextMapId = "UI_AsyncCombat_ChallengeEnd2"
@@ -71267,7 +72389,15 @@ Tocado de Lynn
         UI_AutoChess_BuffName1 = {
           ContentES = "Unidades desgastadas",
           TextMapId = "UI_AutoChess_BuffName1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AutoChess_BuffName2",
+    MaxKey = "UI_Bag_Sell_Amount",
+    Loader = function()
+      return {
         UI_AutoChess_BuffName2 = {
           ContentES = "Unidades sobrecargadas",
           TextMapId = "UI_AutoChess_BuffName2"
@@ -71579,15 +72709,7 @@ Tocado de Lynn
         UI_AutoChess_NewMissionRemain = {
           ContentES = "La partida comienza en:",
           TextMapId = "UI_AutoChess_NewMissionRemain"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AutoChess_NoCostToast",
-    MaxKey = "UI_BattlePass_ClaimConfirmButton",
-    Loader = function()
-      return {
+        },
         UI_AutoChess_NoCostToast = {
           ContentES = "Límite de carga excedido. No se puede desplegar",
           TextMapId = "UI_AutoChess_NoCostToast"
@@ -72072,7 +73194,15 @@ Tocado de Lynn
         UI_Bag_Sell_Amount = {
           ContentES = "Cantidad",
           TextMapId = "UI_Bag_Sell_Amount"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Bag_Sell_Batch",
+    MaxKey = "UI_CHAR_DATA_TEXT_11010305",
+    Loader = function()
+      return {
         UI_Bag_Sell_Batch = {
           ContentES = "Selección múltiple",
           TextMapId = "UI_Bag_Sell_Batch"
@@ -72158,11 +73288,11 @@ Tocado de Lynn
           TextMapId = "UI_Banner_3010304S"
         },
         UI_Banner_GeneralTips = {
-          ContentES = "Ve a la pestaña [Cofre de regalos] para comprar el Cofre de aspecto de Phoxcazador. \nVe a la pestaña [Aspectos] para comprar el Cofre de selección de aspectos.",
+          ContentES = "Ve a la pestaña [Cofre de regalos] para comprar el Cofre de aspecto de Phoxcazador. \nVe a la pestaña [Cosméticos] para comprar el Cofre de selección de aspectos.",
           TextMapId = "UI_Banner_GeneralTips"
         },
         UI_Banner_GeneralTips2 = {
-          ContentES = "Los cofres de selección de apariencia están disponibles en la pestaña Cosméticos.",
+          ContentES = "Los cofres de selección de aspecto están disponibles en la pestaña Cosméticos.",
           TextMapId = "UI_Banner_GeneralTips2"
         },
         UI_Banner_GeneralTipsEntry = {
@@ -72222,11 +73352,11 @@ Tocado de Lynn
           TextMapId = "UI_Banner_SkinPreview"
         },
         UI_Banner_SubBow02 = {
-          ContentES = "Apariencia de arco largo",
+          ContentES = "Aspecto de arco largo",
           TextMapId = "UI_Banner_SubBow02"
         },
         UI_Banner_SubClaymore = {
-          ContentES = "Apariencia de Espadón",
+          ContentES = "Aspecto de Espadón",
           TextMapId = "UI_Banner_SubClaymore"
         },
         UI_Banner_SubKatana = {
@@ -72270,7 +73400,7 @@ Tocado de Lynn
           TextMapId = "UI_Banner_Tab_NewSkin"
         },
         UI_Banner_Tab_NewSkinShort = {
-          ContentES = "Nueva apariencia",
+          ContentES = "Nuevo aspecto",
           TextMapId = "UI_Banner_Tab_NewSkinShort"
         },
         UI_Banner_Tab_NewWeapon = {
@@ -72324,6 +73454,10 @@ Tocado de Lynn
         UI_Banner_Tab_Sale140 = {
           ContentES = "Oferta por tiempo limitado: 83% de descuento",
           TextMapId = "UI_Banner_Tab_Sale140"
+        },
+        UI_Banner_Tab_Sale141 = {
+          ContentES = "Oferta por tiempo limitado: 86% de descuento",
+          TextMapId = "UI_Banner_Tab_Sale141"
         },
         UI_Banner_Tab_SaleForNew = {
           ContentES = "Paquete con bonificación del 2930%",
@@ -72384,15 +73518,7 @@ Tocado de Lynn
         UI_BattlePass_ClaimConfirmButton = {
           ContentES = "Confirmar",
           TextMapId = "UI_BattlePass_ClaimConfirmButton"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_BattlePass_ClaimConfirmTitle",
-    MaxKey = "UI_CHAR_DATA_TEXT_15020304",
-    Loader = function()
-      return {
+        },
         UI_BattlePass_ClaimConfirmTitle = {
           ContentES = "Obtener",
           TextMapId = "UI_BattlePass_ClaimConfirmTitle"
@@ -72659,11 +73785,11 @@ Tocado de Lynn
           TextMapId = "UI_BreakItemTriggerSuc"
         },
         UI_Button01_SaiqiBossWarning = {
-          ContentES = "Bestätigen",
+          ContentES = "Confirmar",
           TextMapId = "UI_Button01_SaiqiBossWarning"
         },
         UI_Button02_SaiqiBossWarning = {
-          ContentES = "Zur Bewaffnung",
+          ContentES = "Ir al Arsenal",
           TextMapId = "UI_Button02_SaiqiBossWarning"
         },
         UI_CAN_MULTIPLAY = {
@@ -72839,7 +73965,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_11010201"
         },
         UI_CHAR_DATA_TEXT_11010202 = {
-          ContentES = "Era una mañana de pleno verano, un día por lo demás normal en la isla del Purgatorio. Los pescadores madrugaron, recogiendo redes y velas recién remendadas de sus esposas antes de dirigirse al pequeño muelle donde los esperaban sus barcos. Se preparaban para afrontar la brisa salada del mar durante días, con la esperanza de regresar cargados de pescado para mantener a sus familias en las próximas semanas.\nEn medio del bullicio de las despedidas en el muelle, nadie notó a una joven, Abigail, escabullirse en dirección contraria, subiendo por el embarrado sendero de la montaña. Mientras corría, el clamor de la aldea se apagó y el viento silbando entre las ramas carbonizadas llenó el aire de sonidos lúgubres. Abigail se aseguró de que no eran los Filthoids, llevándose una mano al pecho para calmar su corazón acelerado antes de seguir adelante.\nPara los aldeanos, las montañas no eran un lugar para visitar en estos días. Apenas dos días antes, habían escuchado un rugido ensordecedor proveniente del templo abandonado en las montañas, seguido de un incendio que afortunadamente fue extinguido por un aguacero repentino. Algunos afirmaban que era la diosa castigándolos por su irreverencia; otros susurraban que era obra de la mujer que vivía en las montañas, o que los Filthoids se habían despertado. A pesar de las diversas teorías, todos coincidían en una cosa: mantenerse alejados de la montaña, al menos por ahora.\nPero Abigail no tenía otra opción. La quiragra de su madre había empeorado, y había oído los gemidos de dolor de su madre resonando en la noche. Conocía una hierba medicinal cerca del templo que podría aliviarla. A pesar de los riesgos, decidió emprender el viaje.\nPreocupada por su destino, no se dio cuenta de lo que se escondía entre la maleza y algo blando la derribó. Frotándose la rodilla magullada, miró hacia la espesura, y la visión la hizo jadear y retroceder aterrorizada..\n\"¡¡¡Un cadáver...!!!\"\nEra una niña de unos cinco o seis años, con rasgos delicados que sugerían que era una niña. La pequeña estaba cubierta de hollín y mugre, con su otrora hermoso cabello plateado enmarañado con barro. Acurrucada como una recién nacida, yacía rodeada de los cuerpos sin vida de varios Filthoids, junto con un cuchillo ennegrecido..\n¿La habían atacado los Filthoids? Pero, de ser así, ¿quién mató a esas bestias?\n\"Tú...\" Tras superar la sorpresa inicial, la preocupación se apoderó de Abigail. Se agarró el pecho palpitante y, vacilante, le dio un golpecito en el hombro a la niña. \"Oye, ¿estás... viva?\".\nYa fuera porque Abigail la había pisado sin querer o porque su voz la despertó, el cadáver se estremeció de repente, seguido de un temblor intenso. ¡Está viva! Abigail sintió un gran alivio. \"¡Gracias a Dios! ¡Déjame ayudarte a levantarte!\"\nAl intentar agarrar la mano de la niña, Abigail se encontró con los brazos cruzados sobre algo que tenía apretado contra el pecho. Por mucho que tiraba, la niña no la soltaba. \"Tienes que darme la mano\", suspiró Abigail, girándose para encarar a la niña. \"No te preocupes, estoy aquí para ayudarte\".\nLa niña se esforzaba por abrir los ojos, observando con recelo a Abigail, y su mirada se cruzó con la de ella, sincera y bondadosa. Se mordió los labios agrietados, como si se debatiera ante una decisión difícil. Finalmente, con un fuerte asentimiento, pareció decidirse, aflojando los brazos a regañadientes.\nMientras la luz del amanecer se filtraba entre los árboles, Abigail finalmente vio lo que la niña había estado protegiendo con tanta desesperación: {性别:era otro niño, aún más pequeño.|era otra niña, aún más pequeña.}",
+          ContentES = "Era una mañana de pleno verano, un día por lo demás normal en la isla del Purgatorio. Los pescadores madrugaron, recogiendo redes y velas recién remendadas de sus esposas antes de dirigirse al pequeño muelle donde los esperaban sus barcos. Se preparaban para afrontar la brisa salada del mar durante días, con la esperanza de regresar cargados de pescado para mantener a sus familias en las próximas semanas.\nEn medio del bullicio de las despedidas en el muelle, nadie notó a una joven, Abigail, escabullirse en dirección contraria, subiendo por el embarrado sendero de la montaña. Mientras corría, el clamor de la aldea se apagó y el viento silbando entre las ramas carbonizadas llenó el aire de sonidos lúgubres. Abigail se aseguró de que no eran los Filthoids, llevándose una mano al pecho para calmar su corazón acelerado antes de seguir adelante.\nPara los aldeanos, las montañas no eran un lugar para visitar en estos días. Apenas dos días antes, habían escuchado un rugido ensordecedor proveniente del templo abandonado en las montañas, seguido de un incendio que afortunadamente fue extinguido por un aguacero repentino. Algunos afirmaban que era la diosa castigándolos por su irreverencia; otros susurraban que era obra de la mujer que vivía en las montañas, o que los Filthoids se habían despertado. A pesar de las diversas teorías, todos coincidían en una cosa: mantenerse alejados de la montaña, al menos por ahora.\nPero Abigail no tenía otra opción. La quiragra de su madre había empeorado, y había oído los gemidos de dolor de su madre resonando en la noche. Conocía una hierba medicinal cerca del templo que podría aliviarla. A pesar de los riesgos, decidió emprender el viaje.\nPreocupada por su destino, no se dio cuenta de lo que se escondía entre la maleza y algo blando la derribó. Frotándose la rodilla magullada, miró hacia la espesura, y la visión la hizo jadear y retroceder aterrorizada..\n\"¡¡¡Un cadáver...!!!\"\nEra una niña de unos siete o ocho años, con rasgos delicados que sugerían que era una niña. La pequeña estaba cubierta de hollín y mugre, con su otrora hermoso cabello plateado enmarañado con barro. Acurrucada como una recién nacida, yacía rodeada de los cuerpos sin vida de varios Filthoids, junto con un cuchillo ennegrecido..\n¿La habían atacado los Filthoids? Pero, de ser así, ¿quién mató a esas bestias?\n\"Tú...\" Tras superar la sorpresa inicial, la preocupación se apoderó de Abigail. Se agarró el pecho palpitante y, vacilante, le dio un golpecito en el hombro a la niña. \"Oye, ¿estás... viva?\".\nYa fuera porque Abigail la había pisado sin querer o porque su voz la despertó, el cadáver se estremeció de repente, seguido de un temblor intenso. ¡Está viva! Abigail sintió un gran alivio. \"¡Gracias a Dios! ¡Déjame ayudarte a levantarte!\"\nAl intentar agarrar la mano de la niña, Abigail se encontró con los brazos cruzados sobre algo que tenía apretado contra el pecho. Por mucho que tiraba, la niña no la soltaba. \"Tienes que darme la mano\", suspiró Abigail, girándose para encarar a la niña. \"No te preocupes, estoy aquí para ayudarte\".\nLa niña se esforzaba por abrir los ojos, observando con recelo a Abigail, y su mirada se cruzó con la de ella, sincera y bondadosa. Se mordió los labios agrietados, como si se debatiera ante una decisión difícil. Finalmente, con un fuerte asentimiento, pareció decidirse, aflojando los brazos a regañadientes.\nMientras la luz del amanecer se filtraba entre los árboles, Abigail finalmente vio lo que la niña había estado protegiendo con tanta desesperación: {性别:era otro niño, aún más pequeño.|era otra niña, aún más pequeña.}",
           TextMapId = "UI_CHAR_DATA_TEXT_11010202"
         },
         UI_CHAR_DATA_TEXT_11010203 = {
@@ -72873,9 +73999,17 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_11010305 = {
           ContentES = "Berenica siempre ha considerado su misión primordial protegerte, viéndote como {性别:un niño más pequeño y menos robusto|una niña más pequeña y menos robusta} que no podría vivir sin ella. Sin embargo, aquel día en el acantilado, cuando te vio hacer esa señal por primera vez, de repente se dio cuenta de que era ella quien no podía vivir sin ti.",
           TextMapId = "UI_CHAR_DATA_TEXT_11010305"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_11010401",
+    MaxKey = "UI_CHAR_DATA_TEXT_31010202",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_11010401 = {
-          ContentES = "Los aldeanos de la Isla del Purgatorio solían tender redes de pesca a lo largo de la playa, aprovechando las mareas para pescar. Tras recoger todo lo que veían, quedaban algunos peces y camarones más pequeños; estos restos se convirtieron en la principal fuente de alimento para Berenica y {nickname} antes de que tuvieran edad suficiente para trabajar. Vadeando la arena que dejaban las capturas de otros pescadores, los dos niños recorrieron las turbias aguas en busca de peces y camarones pequeños. Esta tarea no solo era tediosa y agotadora, sino que también les daba pocos frutos. Sin embargo, lograron hacerlo divertido convirtiéndolo en una competencia para ver quién podía reunir más \"tesoros\".\n\"¡Mira, Berry! ¡He pescado uno grande!\", exclamó {nickname} desde lejos, sosteniendo con orgullo un pez del tamaño de una mano. Los pescadores jamás se molestarían en agacharse por un pez de ese tamaño, pero para {性别:ellos|ellas}, era un premio generoso.\n\"Impresionante\", respondió Berenica con una sonrisa.\nSatisfecho con el reconocimiento, {nickname} no puso inmediatamente el pescado en la cesta. En cambio, lo sostuvo con orgullo por un momento, saboreando la victoria, hasta que la afilada aleta del pez pinchó su palma, dejando una \"herida de batalla\". Cuando llegó el momento de contar sus hallazgos, quedó claro que Berenica había salido victoriosa. Sin querer admitir la derrota, protestó: \"¡Si no me hubiera lastimado, habría ganado! Es culpa de ese pez... Vamos a guisarlo esta noche\".\n\" —No seas un mal perdedor. Recuerda tener más cuidado la próxima vez\" —dijo Berenica, solo para darse cuenta de que {nickname} ya se había colgado la canasta al hombro y se había ido a casa.\n\" ¡Una carrera hasta casa!\" gritó desde lejos, saludando a Berenica.\nCon una sonrisa resignada, Berenica ajustó su propia cesta y salió a participar en aquella carrera desleal. Apenas había empezado, el tiempo cambió de repente, lloviendo a cántaros y empapándolos por completo. \"¡Qué mala suerte la mía!\", pensó Berenica con tristeza, pero antes de que pudiera pensarlo, la animada voz de {nickname} resonó entre el aguacero: \"¡Mira, Berry, está lloviendo!\". Extendió la mano para atrapar las gotas de lluvia, riendo entre dientes. \"Ahora no tenemos que subir a la montaña a buscar agua. Debe ser un regalo de los dioses... ¡Qué suerte tenemos! ¡Más suerte que esos príncipes y princesas del palacio!\".\nBerenica no pudo evitar sonreír. No creía en dioses. Para ella, la lluvia era solo un fenómeno natural. Pero en ese último punto estaba de acuerdo: el tiempo que pasé con {nickname} no tenía precio.\n\"Mańana debería dejar que {性别:él|ella} gane\", pensó Berenica, acelerando el paso para alcanzarlo.",
+          ContentES = "Los aldeanos de la Isla del Purgatorio solían tender redes de pesca a lo largo de la playa, aprovechando las mareas para pescar. Tras recoger todo lo que veían, quedaban algunos peces y camarones más pequeños; estos restos se convirtieron en la principal fuente de alimento para Berenica y {nickname} antes de que tuvieran edad suficiente para trabajar. Vadeando la arena que dejaban las capturas de otros pescadores, los dos niños recorrieron las turbias aguas en busca de peces y camarones pequeños. Esta tarea no solo era tediosa y agotadora, sino que también les daba pocos frutos. Sin embargo, lograron hacerlo divertido convirtiéndolo en una competencia para ver quién podía reunir más \"tesoros\".\n\"¡Mira, Berry! ¡He pescado uno grande!\", exclamó {nickname} desde lejos, sosteniendo con orgullo un pez del tamaño de una mano. Los pescadores jamás se molestarían en agacharse por un pez de ese tamaño, pero para {性别:ellos|ellas}, era un premio generoso.\n\"Impresionante\", respondió Berenica con una sonrisa.\nSatisfecho con el reconocimiento, {nickname} no puso inmediatamente el pescado en la cesta. En cambio, lo sostuvo con orgullo por un momento, saboreando la victoria, hasta que la afilada aleta del pez pinchó su palma, dejando una \"herida de batalla\". Cuando llegó el momento de contar sus hallazgos, quedó claro que Berenica había salido victoriosa. Sin querer admitir la derrota, protestó: \"¡Si no me hubiera lastimado, habría ganado! Es culpa de ese pez... Vamos a guisarlo esta noche\".\n\" —No seas un mal perdedor. Recuerda tener más cuidado la próxima vez —dijo Berenica, solo para darse cuenta de que {nickname} ya se había colgado la canasta al hombro y se había ido a casa.\n\" ¡Una carrera hasta casa!\" gritó desde lejos, saludando a Berenica.\nCon una sonrisa resignada, Berenica ajustó su propia cesta y salió a participar en aquella carrera desleal. Apenas había empezado, el tiempo cambió de repente, lloviendo a cántaros y empapándolos por completo. \"¡Qué mala suerte la mía!\", pensó Berenica con tristeza, pero antes de que pudiera pensarlo, la animada voz de {nickname} resonó entre el aguacero: \"¡Mira, Berry, está lloviendo!\". Extendió la mano para atrapar las gotas de lluvia, riendo entre dientes. \"Ahora no tenemos que subir a la montaña a buscar agua. Debe ser un regalo de los dioses... ¡Qué suerte tenemos! ¡Más suerte que esos príncipes y princesas del palacio!\".\nBerenica no pudo evitar sonreír. No creía en dioses. Para ella, la lluvia era solo un fenómeno natural. Pero en ese último punto estaba de acuerdo: el tiempo que pasé con {nickname} no tenía precio.\n\"Mańana debería dejar que {性别:él|ella} gane\", pensó Berenica, acelerando el paso para alcanzarlo.",
           TextMapId = "UI_CHAR_DATA_TEXT_11010401"
         },
         UI_CHAR_DATA_TEXT_11010402 = {
@@ -72887,7 +74021,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_11010403"
         },
         UI_CHAR_DATA_TEXT_11010404 = {
-          ContentES = "\"Berenica, querida, escúchame bien\", dijo la mujer, agachándose y abrazándola con fuerza antes de apartarla. Su voz, siempre amable, ahora estaba cargada de ansiedad e inquietud. \"Rápido, lleva a {nickname} al pueblo al pie de la montaña.\" Hizo una pausa y rebuscó en un cajón para sacar varias joyas finas y un reloj de bolsillo. \"Llévate esto. Los aldeanos podrían acogerte. Solo diles que son huérfanos que llegaron a la costa sin saber nada del mundo exterior, y que estas eran las pertenencias de tu madre.\"\n\"¿No vienes con nosotros?\", preguntó Berenica.\n\"No puedo.\"\nBerenica se quedó paralizada, con la mente en blanco. Parpadeó con incredulidad. \"¿Nos... vas a dejar?\"\n\"Nunca tendrán una vida tranquila conmigo cerca. Simplemente váyanse, protege a {nickname} y vivan sus vidas {性别:juntos|juntas}. Olvídense del Imperio Hiperbórean, la 13.ª Legión y el N.º 0. Recuerden, solo son una niña común. Eres Berenica. Solo Berenica.\"\nRecitó sus instrucciones rápidamente y luego acarició con ternura el cabello de Berenica una vez más. Hubo una fugaz vacilación, una reticencia a separarse, que Berenica sintió profundamente en su tacto. Pero la mujer retiró rápidamente la mano como si le ardiera, se dio la vuelta y endureció la voz. \"No hay tiempo que perder. ¿Recuerdan su entrenamiento de velocidad? Tienen diez minutos. Salgan del templo y lleguen al camino del pueblo en diez minutos. Es una orden.\"\nEl tono autoritario de la mujer revivió los primeros recuerdos de Berenica: obedecer todas las órdenes sin rechistar. Eso se le había inculcado desde que tenía memoria. Respondió instintivamente: \"Sí, señora\". Pero entonces se detuvo, sacudiendo la cabeza y mirando desesperada a la mujer, como rogándole que anulara la orden. \"¿Por qué...? No entiendo...\"\n\"Berenica, olvídate de mí y de todo lo del pasado. No vuelvas nunca más.\"\nBerenica retrocedió instintivamente cuando la puerta del templo se cerró con un estruendo ante ella. Ni siquiera vio cuándo la mujer pulsó el botón para activar el mecanismo. {nickname}, sintiendo un sobresalto por el repentino ruido, se aferró a su brazo con miedo.\nCon una última mirada a la puerta cerrada, Berenica tomó a {nickname} en brazos y partió sin volverse.\n\"Tengo diez minutos\", repitió la orden, \"protege a {nickname} y sigue viviendo...\" Murmuró en voz baja: \"Puedo hacerlo.\"\nDiez minutos después, mientras Berenica caminaba por el sendero de la montaña, una explosión ensordecedora se escuchó desde atrás. No sabía exactamente qué había ocurrido, pero tenía una idea bastante clara. Parpadeó, pero sus ojos permanecieron secos; las lágrimas habían sido desconocidas para ella desde hacía mucho tiempo. Sin embargo, algo en su interior pareció desbordarse, como los escombros que caían de la montaña tras ella.\nEsa noche hubo fuego en la montaña y un diluvio, y para Berenica, la lluvia de esa noche no cesó.\nDespués, Berenica y {nickname} escaparon por poco de la muerte a manos de los Filthoids y fueron rescatadas por una bondadosa chica de la aldea. A pesar de todo, lograron sobrevivir.\nMás tarde, Berenica regresó a la entrada del templo varias veces, aunque nunca se atrevió a romper su promesa girando la \"llave\". En cambio, permaneció afuera en silencio, esperando. Esperaba que un día la puerta se abriera de repente y la mujer saliera, sonriendo tiernamente, se inclinara para acariciarle la cabeza y decirle: \"Todo está bien. He vuelto.\"\nLas estaciones cambiaban, pero la puerta permanecía cerrada, y esperar se convirtió en una costumbre. No fue hasta que una granada seca cayó y golpeó a Berenica en la cabeza un día que volvió a la realidad de repente. Recogió la granada y recordó cómo, cada año, cuando la fruta maduraba, esa mujer recogía algunas para llevarlas a casa, las lavaba y se las daba a ella y a {nickname} para que las comieran.\nAgarrando la fruta arrugada y ya incomestible, Berenica finalmente comprendió que la mujer nunca regresaría. De ahora en adelante, solo serían ella y {nickname}.\n\"Cumpliré mi promesa\", juró en silencio. \"Cuidaré bien de {nickname} y no te decepcionaré.\"",
+          ContentES = "\"Berenica, querida, escúchame bien\", dijo la mujer, agachándose y abrazándola con fuerza antes de apartarla. Su voz, siempre amable, ahora estaba cargada de ansiedad e inquietud. \"Rápido, lleva a {nickname} al pueblo al pie de la montaña.\" Hizo una pausa y rebuscó en un cajón para sacar varias joyas finas y un reloj de bolsillo. \"Llévate esto. Los aldeanos podrían acogerte. Solo diles que son huérfanos que llegaron a la costa sin saber nada del mundo exterior, y que estas eran las pertenencias de tu madre.\"\n\"¿No vienes con nosotros?\", preguntó Berenica.\n\"No puedo.\"\nBerenica se quedó paralizada, con la mente en blanco. Parpadeó con incredulidad. \"¿Nos... vas a dejar?\"\n\"Nunca tendrán una vida tranquila conmigo cerca. Simplemente váyanse, protege a {nickname} y vivan sus vidas {性别:juntos|juntas}. Olvídense del Imperio Hiperbóreo, la 13.ª Legión y el N.º 0. Recuerden, solo son una niña común. Eres Berenica. Solo Berenica.\"\nRecitó sus instrucciones rápidamente y luego acarició con ternura el cabello de Berenica una vez más. Hubo una fugaz vacilación, una reticencia a separarse, que Berenica sintió profundamente en su tacto. Pero la mujer retiró rápidamente la mano como si le ardiera, se dio la vuelta y endureció la voz. \"No hay tiempo que perder. ¿Recuerdan su entrenamiento de velocidad? Tienen diez minutos. Salgan del templo y lleguen al camino del pueblo en diez minutos. Es una orden.\"\nEl tono autoritario de la mujer revivió los primeros recuerdos de Berenica: obedecer todas las órdenes sin rechistar. Eso se le había inculcado desde que tenía memoria. Respondió instintivamente: \"Sí, señora\". Pero entonces se detuvo, sacudiendo la cabeza y mirando desesperada a la mujer, como rogándole que anulara la orden. \"¿Por qué...? No entiendo...\"\n\"Berenica, olvídate de mí y de todo lo del pasado. No vuelvas nunca más.\"\nBerenica retrocedió instintivamente cuando la puerta del templo se cerró con un estruendo ante ella. Ni siquiera vio cuándo la mujer pulsó el botón para activar el mecanismo. {nickname}, sintiendo un sobresalto por el repentino ruido, se aferró a su brazo con miedo.\nCon una última mirada a la puerta cerrada, Berenica tomó a {nickname} en brazos y partió sin volverse.\n\"Tengo diez minutos\", repitió la orden, \"protege a {nickname} y sigue viviendo...\" Murmuró en voz baja: \"Puedo hacerlo.\"\nDiez minutos después, mientras Berenica caminaba por el sendero de la montaña, una explosión ensordecedora se escuchó desde atrás. No sabía exactamente qué había ocurrido, pero tenía una idea bastante clara. Parpadeó, pero sus ojos permanecieron secos; las lágrimas habían sido desconocidas para ella desde hacía mucho tiempo. Sin embargo, algo en su interior pareció desbordarse, como los escombros que caían de la montaña tras ella.\nEsa noche hubo fuego en la montaña y un diluvio, y para Berenica, la lluvia de esa noche no cesó.\nDespués, Berenica y {nickname} escaparon por poco de la muerte a manos de los Filthoids y fueron rescatadas por una bondadosa chica de la aldea. A pesar de todo, lograron sobrevivir.\nMás tarde, Berenica regresó a la entrada del templo varias veces, aunque nunca se atrevió a romper su promesa girando la \"llave\". En cambio, permaneció afuera en silencio, esperando. Esperaba que un día la puerta se abriera de repente y la mujer saliera, sonriendo tiernamente, se inclinara para acariciarle la cabeza y decirle: \"Todo está bien. He vuelto.\"\nLas estaciones cambiaban, pero la puerta permanecía cerrada, y esperar se convirtió en una costumbre. No fue hasta que una granada seca cayó y golpeó a Berenica en la cabeza un día que volvió a la realidad de repente. Recogió la granada y recordó cómo, cada año, cuando la fruta maduraba, esa mujer recogía algunas para llevarlas a casa, las lavaba y se las daba a ella y a {nickname} para que las comieran.\nAgarrando la fruta arrugada y ya incomestible, Berenica finalmente comprendió que la mujer nunca regresaría. De ahora en adelante, solo serían ella y {nickname}.\n\"Cumpliré mi promesa\", juró en silencio. \"Cuidaré bien de {nickname} y no te decepcionaré.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_11010404"
         },
         UI_CHAR_DATA_TEXT_11010405 = {
@@ -73003,7 +74137,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_11030202"
         },
         UI_CHAR_DATA_TEXT_11030203 = {
-          ContentES = "El banquete comenzó.\n\nBajo las luces brillantes, las copas en las manos de las personas y las gemas en sus vestidos parecían haberse convertido en pequeñas lámparas, haciendo que cada rincón del salón de banquetes fluyera con un resplandor dorado. Como en cada banquete similar, este lugar estaba lleno de adoración y deseo por la fama y la riqueza, por todas partes había cortesía y adulación falsas; pero también aquí estaba a punto de comenzar un encuentro romántico como de cuento de hadas, entre un hombre y una mujer.\n\nEl hombre era la primera vez que venía a un banquete tan elegante, aunque vestía ropas finas y se comportaba adecuadamente, la inquietud que se asomaba involuntariamente en sus ojos y la sutil rigidez en sus movimientos corporales lo delataban. Era un joven comerciante prometedor, inteligente, que había obtenido este boleto a la alta sociedad gracias a la riqueza acumulada del negocio del acero; sin embargo, nada de esto podía cambiar su humilde origen, todos los presentes, incluido él mismo, lo sabían bien. Todos lo examinaban con miradas divertidas, aceptaban sus saludos con sonrisas condescendientes, se daban vuelta y se burlaban descaradamente con sus compañeros de su gusto anticuado y sus palabras tensas. Después de ser molestado por cierto noble cruel y beber tres copas enteras de vino amargo, el hombre tuvo que retirarse silenciosamente a un rincón del salón, pidió en voz baja un vaso de agua al mesero y comenzó a beberlo a sorbos pequeños.\n\nLa mujer era una Cortesana muy popular en la Ciudad Interior, era una habitual en este tipo de banquetes de alta sociedad. Manejaba Bajo control a los pretendientes que se acercaban sin cesar, haciendo que cada uno creyera que había recibido un favor especial, e incluso detuvo hábilmente a dos jóvenes que casi se pelean por ella. Después, con el rabillo del ojo vio al barón que días atrás le había enviado joyas preciosas, a su lado estaba una hermosa mujer desconocida. La mujer no se sorprendió por esto, sabía muy bien que a los ojos de estos nobles ella no era diferente de un objeto, como un jarrón caro comprado con dinero, si se rompía, se ensuciaba o se cansaban de él, lo reemplazarían sin piedad por otro. Sin embargo, a diferencia de un jarrón, ella podía hablar y reír, podía despertar de nuevo la compasión del otro con su gracia encantadora y su lengua hábil; en este juego, ella siempre era la ganadora. Justo cuando levantó su falda preparándose para desplegar sus tácticas, por alguna razón se sintió algo mareada, tal vez porque el vino que acababa de beber era muy fuerte. Así que se dirigió hacia la mesa de comida y encontró un plato de limones recién cortados, extendió la mano y tomó un trozo. Comer limón crudo era un pequeño hábito personal suyo, ese Sabor agrio la ayudaba a mantenerse alerta.\n\nPara evitar manchar su vestido blanco, se metió un trozo grande de limón entero en la boca. Al levantar la cabeza, descubrió que el hombre la estaba mirando boquiabierto con su vaso de agua.\n\n\"¿No está agrio?\" le preguntó.\nNo podía abrir la boca, así que solo asintió con la cabeza y emitió confusamente el sonido \"agrio\".\n\"¿Entonces por qué lo comes?\" volvió a preguntar.\nElla se señaló la cabeza, indicando que quería usarlo para despejarse.\nEl hombre la miró fijamente por un momento, no se sabía si había entendido su intención. Lo vio también tomar un trozo de limón, imitándola al metérselo en la boca, y las cinco facciones de su rostro se arrugaron instantáneamente.\nLa mujer se rió, usó su pañuelo para cubrir elegantemente su boca y escupir la cáscara de limón, luego preguntó con calma: \"¿Se siente más despierto, señor?\"\n\"Sí, sí... gracias, hermosa señorita.\" respondió el hombre torpemente entre grandes tragos de agua. Esta \"hermosa señorita\" más que un halago parecía una burla, pero era las palabras más sinceras que la mujer había escuchado ese día.\n\n\"Me llamo Herzeleide Snowfield.\" dijo ella, \"No la había visto antes, ¿puedo preguntar quién es usted?\"\n\"Morris Grenville. Un comerciante.\"\n\"¿Comerciante? ¿Qué tipo de negocios hace?\" Los ojos de la mujer mostraron curiosidad, sin ningún desprecio.\nEl hombre entonces sonrió y respondió: \"Muchos. El próximo paso planeo probar con el comercio de frutas, por ejemplo, importar algunos limones que no sean tan agrios.\"\nLa mujer soltó una risita y el hombre también se rió.\n\nAsí fue como dos almas solitarias se encontraron, en un pequeño rincón oscuro de este mundo brillante y reluciente, como limón cayendo en agua, el Sabor agrio diluido en la proporción justa.\nPero los cuentos de hadas son cuentos de hadas precisamente porque siempre pueden detenerse en el lugar \"justo\", conservando la máxima dignidad. Cuando el cuento de hadas termina, lo que queda es solo la realidad incómoda y fría.",
+          ContentES = "El banquete comenzó.\n\nBajo las luces brillantes, las copas en las manos de las personas y las gemas en sus vestidos parecían haberse convertido en pequeñas lámparas, haciendo que cada rincón del salón de banquetes fluyera con un resplandor dorado. Como en cada banquete similar, este lugar estaba lleno de adoración y deseo por la fama y la riqueza, por todas partes había cortesía y adulación falsas; pero también aquí estaba a punto de comenzar un encuentro romántico como de cuento de hadas, entre un hombre y una mujer.\n\nEl hombre era la primera vez que venía a un banquete tan elegante, aunque vestía ropas finas y se comportaba adecuadamente, la inquietud que se asomaba involuntariamente en sus ojos y la sutil rigidez en sus movimientos corporales lo delataban. Era un joven comerciante prometedor, inteligente, que había obtenido este boleto a la alta sociedad gracias a la riqueza acumulada del negocio del acero; sin embargo, nada de esto podía cambiar su humilde origen, todos los presentes, incluido él mismo, lo sabían bien. Todos lo examinaban con miradas divertidas, aceptaban sus saludos con sonrisas condescendientes, se daban vuelta y se burlaban descaradamente con sus compañeros de su gusto anticuado y sus palabras tensas. Después de ser molestado por cierto noble cruel y beber tres copas enteras de vino amargo, el hombre tuvo que retirarse silenciosamente a un rincón del salón, pidió en voz baja un vaso de agua al mesero y comenzó a beberlo a sorbos pequeños.\n\nLa mujer era una Cortesana muy popular en la Ciudad Interior, era una habitual en este tipo de banquetes de alta sociedad. Manejaba Bajo control a los pretendientes que se acercaban sin cesar, haciendo que cada uno creyera que había recibido un favor especial, e incluso detuvo hábilmente a dos jóvenes que casi se pelean por ella. Después, con el rabillo del ojo vio al barón que días atrás le había enviado joyas preciosas, a su lado estaba una hermosa mujer desconocida. La mujer no se sorprendió por esto, sabía muy bien que a los ojos de estos nobles ella no era diferente de un objeto, como un jarrón caro comprado con dinero, si se rompía, se ensuciaba o se cansaban de él, lo reemplazarían sin piedad por otro. Sin embargo, a diferencia de un jarrón, ella podía hablar y reír, podía despertar de nuevo la compasión del otro con su gracia encantadora y su lengua hábil; en este juego, ella siempre era la ganadora. Justo cuando levantó su falda preparándose para desplegar sus tácticas, por alguna razón se sintió algo mareada, tal vez porque el vino que acababa de beber era muy fuerte. Así que se dirigió hacia la mesa de comida y encontró un plato de limones recién cortados, extendió la mano y tomó un trozo. Comer limón crudo era un pequeño hábito personal suyo, ese Sabor agrio la ayudaba a mantenerse alerta.\n\nPara evitar manchar su vestido blanco, se metió un trozo grande de limón entero en la boca. Al levantar la cabeza, descubrió que el hombre la estaba mirando boquiabierto con su vaso de agua.\n\n\"¿No está agrio?\" le preguntó.\n No podía abrir la boca, así que solo asintió con la cabeza y emitió confusamente el sonido \"agrio\".\n\"¿Entonces por qué lo comes?\" volvió a preguntar.\nElla se señaló la cabeza, indicando que quería usarlo para despejarse.\nEl hombre la miró fijamente por un momento, no se sabía si había entendido su intención. Lo vio también tomar un trozo de limón, imitándola al metérselo en la boca, y las cinco facciones de su rostro se arrugaron instantáneamente.\nLa mujer se rió, usó su pañuelo para cubrir elegantemente su boca y escupir la cáscara de limón, luego preguntó con calma: \"¿Se siente más despierto, señor?\"\n\"Sí, sí... gracias, hermosa señorita.\" respondió el hombre torpemente entre grandes tragos de agua. Esta \"hermosa señorita\" más que un halago parecía una burla, pero era las palabras más sinceras que la mujer había escuchado ese día.\n\n\"Me llamo Herzeleide Snowfield.\" dijo ella, \"No la había visto antes, ¿puedo preguntar quién es usted?\"\n\"Morris Grenville. Un comerciante.\"\n\"¿Comerciante? ¿Qué tipo de negocios hace?\" Los ojos de la mujer mostraron curiosidad, sin ningún desprecio.\nEl hombre entonces sonrió y respondió: \"Muchos. El próximo paso planeo probar con el comercio de frutas, por ejemplo, importar algunos limones que no sean tan agrios.\"\nLa mujer soltó una risita y el hombre también se rió.\n\nAsí fue como dos almas solitarias se encontraron, en un pequeño rincón oscuro de este mundo brillante y reluciente, como limón cayendo en agua, el Sabor agrio diluido en la proporción justa.\nPero los cuentos de hadas son cuentos de hadas precisamente porque siempre pueden detenerse en el lugar \"justo\", conservando la máxima dignidad. Cuando el cuento de hadas termina, lo que queda es solo la realidad incómoda y fría.",
           TextMapId = "UI_CHAR_DATA_TEXT_11030203"
         },
         UI_CHAR_DATA_TEXT_11030204 = {
@@ -73035,7 +74169,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_11030305"
         },
         UI_CHAR_DATA_TEXT_11030401 = {
-          ContentES = "Nací en una familia común de la Ciudad Exterior... aunque no tan \"común\" en realidad. Desde pequeño nunca conocí a mi padre; mi madre me crió sola.\n\nAntes de que su enfermedad empeorara tanto que no pudiera salir de la cama, mi madre era una persona muy enérgica. Trabajaba en el Teatro Galea haciendo labores de limpieza. Su trabajo diario consistía en organizar la escenografía, limpiar las butacas y revisar las instalaciones del teatro. Por su trabajo, podía escuchar todo tipo de óperas. Al llegar a casa, las cantaba por su cuenta. Le encantaba cantar; ya fuera descansando o haciendo las tareas domésticas, siempre tarareaba melodías. Yo la escuchaba y poco a poco fui aprendiendo, hasta que empecé a cantar con ella.\n\nAunque vivíamos con pocos recursos, como siempre había música en casa, no me sentía agobiado. Todo cambió cuando mi madre se enfermó. Ya no recuerdo claramente cuándo empezó su enfermedad, solo que en un invierno especialmente frío, su estado de salud empeoró de repente. Antes solo se sentía mal ocasionalmente y mejoraba después de descansar unos días, pero esa vez, incluso después de que pasara todo el invierno y llegara la primavera, siguió postrada en cama. El médico dijo que mi madre había caído enferma porque ya era frágil de por sí y se había agotado por años de trabajo duro. Su enfermedad no tenía cura, solo podía guardar reposo y confiar en el destino.\n\nAl perder nuestra fuente de ingresos, la situación económica en casa se volvió muy difícil. Un día, mi madre me llamó a su cama con un tono muy serio y me pidió que sacara una caja que tenía escondida debajo de la cama. Nunca había visto esa caja. Se veía muy elegante, no como algo que nuestra familia pudiera permitirse. Al abrir la caja, me llevé una gran sorpresa.\nLa caja contenía varias joyas lujosas que claramente valían una fortuna. Lo que más me sorprendió fue que en el centro de estas joyas había un emblema de \"Charon Laureada\" con el nombre de mi madre grabado. Me di cuenta de que el pasado de mi madre era probablemente mucho más complejo de lo que imaginaba.\n\n\"Vende estas joyas, debería ser suficiente para mantenernos un tiempo. Mi madre me instruyó: \"Recuerda no ir tú solo, pide ayuda a tus amigos de la compañía teatral, o no podrás venderlas a un precio justo. \"\n\"Entiendo. Asentí con la cabeza y saqué las joyas como mi madre me había dicho. Noté que la caja también contenía muchas cartas. Mi madre les echó un vistazo y me pidió que pusiera la caja de vuelta en su lugar.\nAunque no le pregunté nada, probablemente notó mi confusión y dijo suavemente: \"Son cosas del pasado, de cuando vivía en la Ciudad Interior. \"\n\"¿Usted antes... era rica? \" Le pregunté.\n\"Si solo hablamos de dinero, supongo que sí. \" Mi madre recordó con naturalidad: \"En esa época mi armario siempre estaba lleno de vestidos hermosos para fiestas, y si alguno se ensuciaba o se rompía, no me importaba en absoluto. Tenía tantas joyas que podría haber usado una diferente cada día sin repetir. Si quería algo nuevo, no tenía que comprarlo yo misma; solo tenía que decir que me gustaba y en unos días alguien me lo traía. A cambio, solo tenía que acompañar a esa persona a bailar una o dos piezas en el siguiente baile. Si no hubiera dejado la Ciudad Interior, probablemente ahora la casa estaría llena de ramos de flores y suplementos costosos que me habrían enviado. Si no me hubiera ido de la Ciudad Interior, probablemente mi casa ya estaría llena de ramos de flores y suplementos costosos que me habrían enviado. \"\nMientras decía esto, el sol del atardecer iluminaba el rostro demacrado de mi madre, creando una belleza melancólica especial. No pude descifrar la emoción en su rostro. ¿Era nostalgia? ¿Era pesar?\n\n\"¿Se arrepiente de haberse ido?\" Le pregunté.\n\n\"¿Arrepentirme?\" Sonrió. Esa sonrisa la hizo ver aún más frágil, pero también más hermosa. \"Los recuerdos de esos diez años en la Ciudad Interior son para mí como burbujas bajo el sol: a primera vista parecen hermosas y fantásticas, pero se rompen al menor toque. A veces hasta dudo si realmente viví esas experiencias. \"\n\"Pero después de dejar la Ciudad Interior, cada minuto y cada segundo que he pasado aquí ha sido real. Recuerdo la primera vez que entendí la estructura del teatro, la primera vez que memoricé dónde iba cada herramienta, la primera vez que organicé toda la sala de espectadores por mi cuenta. Recuerdo cuando se me formó el primer callo en los dedos, cuando me dolieron las rodillas por primera vez, cuando apareció la primera arruga en mis ojos. Y también te recuerdo a ti, Parsifal. \" Extendió su mano y acarició suavemente mi rostro. Pude sentir las huellas que el tiempo había dejado en sus palmas: ásperas pero tiernas. \"Recuerdo la primera vez que cantaste imitándome, la primera vez que memorizaste todas las notas de una partitura, la primera vez que cantaste con fluidez toda una escena. \"\n\"Nunca me he arrepentido. \" Me miró a los ojos y dijo con seriedad: \"Dejar la Ciudad Interior fue la decisión más acertada de mi vida. \"\n\nNo conocía la Ciudad Interior ni podía imaginar cómo era la vida allí, pero creía en mi madre. Aunque al final perdió mucho, ese fue el precio que estuvo dispuesta a pagar por su propia decisión. Pensé que yo también quería vivir como ella, sin remordimientos.",
+          ContentES = "Nací en una familia común de la Ciudad Exterior... aunque no tan \"común\" en realidad. Desde pequeño nunca conocí a mi padre; mi madre me crió sola.\n\nAntes de que su enfermedad empeorara tanto que no pudiera salir de la cama, mi madre era una persona muy enérgica. Trabajaba en el Teatro Galea haciendo labores de limpieza. Su trabajo diario consistía en organizar la escenografía, limpiar las butacas y revisar las instalaciones del teatro. Por su trabajo, podía escuchar todo tipo de óperas. Al llegar a casa, las cantaba por su cuenta. Le encantaba cantar; ya fuera descansando o haciendo las tareas domésticas, siempre tarareaba melodías. Yo la escuchaba y poco a poco fui aprendiendo, hasta que empecé a cantar con ella.\n\nAunque vivíamos con pocos recursos, como siempre había música en casa, no me sentía agobiado. Todo cambió cuando mi madre se enfermó. Ya no recuerdo claramente cuándo empezó su enfermedad, solo que en un invierno especialmente frío, su estado de salud empeoró de repente. Antes solo se sentía mal ocasionalmente y mejoraba después de descansar unos días, pero esa vez, incluso después de que pasara todo el invierno y llegara la primavera, siguió postrada en cama. El médico dijo que mi madre había caído enferma porque ya era frágil de por sí y se había agotado por años de trabajo duro. Su enfermedad no tenía cura, solo podía guardar reposo y confiar en el destino.\n\nAl perder nuestra fuente de ingresos, la situación económica en casa se volvió muy difícil. Un día, mi madre me llamó a su cama con un tono muy serio y me pidió que sacara una caja que tenía escondida debajo de la cama. Nunca había visto esa caja. Se veía muy elegante, no como algo que nuestra familia pudiera permitirse. Al abrir la caja, me llevé una gran sorpresa.\n La caja contenía varias joyas lujosas que claramente valían una fortuna. Lo que más me sorprendió fue que en el centro de estas joyas había un emblema de \"Charon Laureada\" con el nombre de mi madre grabado. Me di cuenta de que el pasado de mi madre era probablemente mucho más complejo de lo que imaginaba.\n\n\"Vende estas joyas, debería ser suficiente para mantenernos un tiempo. Mi madre me instruyó: \"Recuerda no ir tú solo, pide ayuda a tus amigos de la compañía teatral, o no podrás venderlas a un precio justo. \"\n \"Entiendo. Asentí con la cabeza y saqué las joyas como mi madre me había dicho. Noté que la caja también contenía muchas cartas. Mi madre les echó un vistazo y me pidió que pusiera la caja de vuelta en su lugar.\n Aunque no le pregunté nada, probablemente notó mi confusión y dijo suavemente: \"Son cosas del pasado, de cuando vivía en la Ciudad Interior. \"\n \"¿Usted antes... era rica? \" Le pregunté.\n \"Si solo hablamos de dinero, supongo que sí. \" Mi madre recordó con naturalidad: \"En esa época mi armario siempre estaba lleno de vestidos hermosos para fiestas, y si alguno se ensuciaba o se rompía, no me importaba en absoluto. Tenía tantas joyas que podría haber usado una diferente cada día sin repetir. Si quería algo nuevo, no tenía que comprarlo yo misma; solo tenía que decir que me gustaba y en unos días alguien me lo traía. A cambio, solo tenía que acompañar a esa persona a bailar una o dos piezas en el siguiente baile. Si no hubiera dejado la Ciudad Interior, probablemente ahora la casa estaría llena de ramos de flores y suplementos costosos que me habrían enviado. Si no me hubiera ido de la Ciudad Interior, probablemente mi casa ya estaría llena de ramos de flores y suplementos costosos que me habrían enviado. \"\n Mientras decía esto, el sol del atardecer iluminaba el rostro demacrado de mi madre, creando una belleza melancólica especial. No pude descifrar la emoción en su rostro. ¿Era nostalgia? ¿Era pesar?\n\n\"¿Se arrepiente de haberse ido?\" Le pregunté.\n\n\"¿Arrepentirme?\" Sonrió. Esa sonrisa la hizo ver aún más frágil, pero también más hermosa. \"Los recuerdos de esos diez años en la Ciudad Interior son para mí como burbujas bajo el sol: a primera vista parecen hermosas y fantásticas, pero se rompen al menor toque. A veces hasta dudo si realmente viví esas experiencias. \"\n \"Pero después de dejar la Ciudad Interior, cada minuto y cada segundo que he pasado aquí ha sido real. Recuerdo la primera vez que entendí la estructura del teatro, la primera vez que memoricé dónde iba cada herramienta, la primera vez que organicé toda la sala de espectadores por mi cuenta. Recuerdo cuando se me formó el primer callo en los dedos, cuando me dolieron las rodillas por primera vez, cuando apareció la primera arruga en mis ojos. Y también te recuerdo a ti, Parsifal. \" Extendió su mano y acarició suavemente mi rostro. Pude sentir las huellas que el tiempo había dejado en sus palmas: ásperas pero tiernas. \"Recuerdo la primera vez que cantaste imitándome, la primera vez que memorizaste todas las notas de una partitura, la primera vez que cantaste con fluidez toda una escena. \"\n\"Nunca me he arrepentido. \" Me miró a los ojos y dijo con seriedad: \"Dejar la Ciudad Interior fue la decisión más acertada de mi vida. \"\n\nNo conocía la Ciudad Interior ni podía imaginar cómo era la vida allí, pero creía en mi madre. Aunque al final perdió mucho, ese fue el precio que estuvo dispuesta a pagar por su propia decisión. Pensé que yo también quería vivir como ella, sin remordimientos.",
           TextMapId = "UI_CHAR_DATA_TEXT_11030401"
         },
         UI_CHAR_DATA_TEXT_11030402 = {
@@ -73189,15 +74323,7 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_15020304 = {
           ContentES = "Aunque la sangre de Nifle tiene el poder de prolongar la vida de otra persona, en todos sus largos años, solo ha invocado un verdadero milagro una vez.\nFue para una niña nacida en el camino de la Gran Migración. La compañía con la que viajaba había sido tragada por un pantano, y cuando finalmente la encontraron, solo quedaba una sola bebé, sostenida por encima del lodo por los brazos temblorosos de quienes ya estaban enterrados. Esa niña, contra todo pronóstico, sobrevivió a las guerras y a los años de vagar, y finalmente alcanzó una época de paz, solo para caer víctima de la peste.\nLos médicos estaban indefensos. Pero Nifle se negó a dejarla ir. La noche en que la niña se debatía entre la vida y la muerte, se abrió las venas una y otra vez, ofreciendo su sangre en lugar de la de la niña, cayendo inconsciente más de una vez por la pérdida. Y tal vez, si los dioses realmente existen, se sintieron conmovidos por su desesperación. Pues al amanecer, la fiebre de la niña había desaparecido, sus heridas se habían cerrado milagrosamente y le habían empezado a crecer cuernos, como los de Nifle.\nNifle la crio como si fuera suya, con la esperanza de compartir los largos años venideros. Pero la niña envejeció, como todos los mortales. Y con el tiempo, ya no parecía la hija de Nifle, sino su hermana, su madre, su abuela.\nY Nifle comprendió: los milagros que podía traer al mundo eran finitos. El camino a la inmortalidad es estrecho. Los dioses le habían concedido el paso. Pero no le habían concedido compañía.",
           TextMapId = "UI_CHAR_DATA_TEXT_15020304"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_15020305",
-    MaxKey = "UI_CHAR_DATA_TEXT_32020304",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_15020305 = {
           ContentES = "Dicen que los sueños se forjan con los deseos profundamente arraigados en la mente. Quizás por eso Nifle rara vez sueña: ya no queda nada en este mundo que la atraiga.\nY, sin embargo, de vez en cuando, sueña con sus padres. Sus rostros se han desvanecido con el tiempo, pero aún recuerda cómo se sentía: tomar la mano callosa de su padre, mirar los ojos suaves y entrecerrados de su madre. Esa sensación, ella sabe, se llamaba \"calidez\".",
           TextMapId = "UI_CHAR_DATA_TEXT_15020305"
@@ -73423,23 +74549,23 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_18010305"
         },
         UI_CHAR_DATA_TEXT_18010401 = {
-          ContentES = "En la edad en que apenas podía caminar y solo recordaba fragmentos, Fina recuerda que sus padres a menudo mencionaban una palabra, \"Canon Elysiano\", con un tono reverente y sincero.\nFina no entendía el significado de esta palabra, así que con su pronunciación aún poco clara le preguntó a su madre: \"¿Qué es esto?\"\n\"Es aquello en lo que papá y mamá creemos firmemente.\" respondió su madre. \"Todos nosotros, Solas y Charons, fuimos tallados por la deidad primordial del árbol sagrado. Sus ramas son nuestro cuerpo, sus hojas son nuestro cabello, y su savia es nuestra alma. Toda vida inteligente en este mundo tiene un alma igualmente preciosa.\"\nLa pequeña Fina la miró con total confusión. \"Solas\", \"Charons\", \"alma\"... estas palabras eran demasiado difíciles para una niña de tres años. Su madre reflexionó un momento, acarició suavemente la cabeza de Fina, tomó un libro ilustrado del estante y dibujó dos figuras: dos personitas, una con la cabeza lisa, otra con dos cuernos en la frente.\n\"Mira, este es un Sola, este es un duendecito. Vienen de familias diferentes. Sus familias dicen que nacieron siendo enemigos, porque tienen apariencias diferentes.\"\n\"Pero...\" Fina se mordió suavemente el labio inferior, \"¿por qué no pueden ser amigos?\"\n\"Originalmente no podían. Pero un día, ambos recibieron un libro de manos de un hada: el 'Canon Elysiano'. Entendieron que tenían la misma alma, que debían amarse mutuamente en lugar de lastimarse.\"\n\"¡Ah... como mamá y papá!\" Fina pareció entender. \"Papá tiene cuernos, pero mamá no. Pero se enamoraron y tuvieron a Fina.\"\n\"Sí.\" Su madre besó tiernamente la frente de Fina. \"Así como mamá ama a papá y también te ama a ti.\"\nLos cuentos de hadas comenzaron por el \"Canon Elysiano\" y también terminaron por él.\nLos guardias de Lago Glacial irrumpieron sin permiso en la puerta de la casa de Fina, buscando algo de manera violenta. Su madre la abrazó y se escondieron en el entrepiso del sótano, mientras el ruido de las botas militares caía como lluvia torrencial. Ella escuchó la acalorada discusión entre su padre y los guardias, algo sobre \"violar la prohibición al poseer textos Elysianos en privado\", \"adorar a los falsos dioses Elysianos\"... Luego vinieron los sonidos de forcejeo, el ruido sordo de objetos pesados golpeando cuerpos... La boca de Fina estaba firmemente tapada por su madre, no podía gritar ni llorar, solo contenía la respiración y abrazaba el miedo en la desesperación.\n\"Papá se fue a un país lejano. Ya no va a regresar.\" Esa noche, su madre le susurró a Fina mientras contemplaba el desastre que había quedado como después de una tormenta.\nEl ruiseñor de papá había caído. Fina sabía que su cuento de hadas había terminado.",
+          ContentES = "En la edad en que apenas podía caminar y solo recordaba fragmentos, Fina recuerda que sus padres a menudo mencionaban una palabra, \"Canon Elysiano\", con un tono reverente y sincero.\n Fina no entendía el significado de esta palabra, así que con su pronunciación aún poco clara le preguntó a su madre: \"¿Qué es esto?\"\n \"Es aquello en lo que papá y mamá creemos firmemente.\" respondió su madre. \"Todos nosotros, Solas y Charons, fuimos tallados por la deidad primordial del árbol sagrado. Sus ramas son nuestro cuerpo, sus hojas son nuestro cabello, y su savia es nuestra alma. Toda vida inteligente en este mundo tiene un alma igualmente preciosa.\"\n La pequeña Fina la miró con total confusión. \"Solas\", \"Charons\", \"alma\"... estas palabras eran demasiado difíciles para una niña de tres años. Su madre reflexionó un momento, acarició suavemente la cabeza de Fina, tomó un libro ilustrado del estante y dibujó dos figuras: dos personitas, una con la cabeza lisa, otra con dos cuernos en la frente.\n \"Mira, este es un Sola, este es un duendecito. Vienen de familias diferentes. Sus familias dicen que nacieron siendo enemigos, porque tienen apariencias diferentes.\"\n \"Pero...\" Fina se mordió suavemente el labio inferior, \"¿por qué no pueden ser amigos?\"\n \"Originalmente no podían. Pero un día, ambos recibieron un libro de manos de un hada: el 'Canon Elysiano'. Entendieron que tenían la misma alma, que debían amarse mutuamente en lugar de lastimarse.\"\n \"¡Ah... como mamá y papá!\" Fina pareció entender. \"Papá tiene cuernos, pero mamá no. Pero se enamoraron y tuvieron a Fina.\"\n \"Sí.\" Su madre besó tiernamente la frente de Fina. \"Así como mamá ama a papá y también te ama a ti.\"\nLos cuentos de hadas comenzaron por el \"Canon Elysiano\" y también terminaron por él.\n Los guardias de Lago Glacial irrumpieron sin permiso en la puerta de la casa de Fina, buscando algo de manera violenta. Su madre la abrazó y se escondieron en el entrepiso del sótano, mientras el ruido de las botas militares caía como lluvia torrencial. Ella escuchó la acalorada discusión entre su padre y los guardias, algo sobre \"violar la prohibición al poseer textos Elysianos en privado\", \"adorar a los falsos dioses Elysianos\"... Luego vinieron los sonidos de forcejeo, el ruido sordo de objetos pesados golpeando cuerpos... La boca de Fina estaba firmemente tapada por su madre, no podía gritar ni llorar, solo contenía la respiración y abrazaba el miedo en la desesperación.\n \"Papá se fue a un país lejano. Ya no va a regresar.\" Esa noche, su madre le susurró a Fina mientras contemplaba el desastre que había quedado como después de una tormenta.\n El ruiseñor de papá había caído. Fina sabía que su cuento de hadas había terminado.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010401"
         },
         UI_CHAR_DATA_TEXT_18010402 = {
-          ContentES = "\"Tsss...\"\nSu madre encendió un fósforo. Una pequeña llama alegre y amarilla brotó de la punta de la vela azul, iluminando el pequeño pastel de crema que estaba debajo. Este era el primer cumpleaños que Fina pasaba en esta mansión.\nFina y su madre habían llegado a esta mansión hacía ya varios años. Era una casa grande y hermosa, como un castillo de cuentos de hadas, con una lámpara de cristal dorado que proyectaba luz magnífica sobre el papel tapiz lujoso. Cada vez que veía encenderse la lámpara, Fina recordaba la caja de hierro del circo que había visto de pequeña: el lugar donde esperaban los animales artistas antes de que comenzara el espectáculo. Esa caja de metal tenía una cerradura de bronce muy pesada en la puerta que brillaba dorada bajo el sol, con un color bastante parecido al de esta lámpara.\nEn la casa grande, los \"cumpleaños\" eran un privilegio que pertenecía a sus hermanastros. Fina solo podía, después de que terminaran las fiestas animadas, escabullirse sigilosamente al salón de visitas y pedirles a las criadas un pedazo de pastel pelado, al que ya le habían quitado todo el chocolate y las frutas. Pero hoy, el dueño de la casa grande casualmente había salido de viaje por negocios. Así que, después de muchos años, Fina finalmente volvió a tener una fiesta de cumpleaños solo para ella.\n\"¡Feliz cumpleaños, Fina!\" Le dijo su madre con una sonrisa.\nFina parpadeó y se esforzó por devolverle una sonrisa igual. Pero su mirada no podía apartarse de los moretones en el brazo de su madre. Fina sabía que eran heridas del bastón de su padrastro, las conocía muy bien. El temperamento de su padrastro era impredecible: el aumento del precio del Phoxene, las negociaciones comerciales que no iban bien, la mala suerte en las apuestas de cartas, e incluso que los refrigerios no fueran de su agrado, todo podía hacerlo estallar en cólera y castigar a la hijastra Charon que le traía mala suerte, aunque estas cosas no tuvieran absolutamente nada que ver con Fina. Y cuando su madre se interponía para proteger su frágil cuerpo, el bastón caía igualmente sin piedad sobre ella, produciendo un sonido sordo.\nSu madre, vestida con ropas lujosas, era un canario dorado en esta gran mansión, y le resultaba muy difícil incluso proteger al polluelo bajo sus alas. Aun así, Fina no tenía tanto miedo. El día de su madre pertenecía al dueño de la mansión, a sus hermanastros de diferente padre, a las copas y la elegancia del salón de visitas y la pista de baile; pero las noches de su madre le pertenecían a ella. Su madre venía cada medianoche al pequeño cuarto del ático, se sentaba junto a la cama de Fina y le contaba fascinantes cuentos de buenas noches, esperando a que se durmiera profundamente entre el tarareo de canciones de cuna.\nA diferencia de Fina, que a menudo lloraba, su madre rara vez lo hacía. Cuando perdió a sus padres y a su esposo, no lloró y organizó sola sus funerales; cuando los parientes lejanos codiciosos la obligaron a casarse de nuevo, no lloró, sino que usó las reliquias familiares como moneda de cambio para obtener del hombre la oportunidad de criar a Fina a su lado; frente a la ira que su nuevo esposo podía desatar en cualquier momento, tampoco lloraba nunca, aunque su expresión obstinada solo provocara más insultos e incluso golpes. Siempre le decía a Fina con una sonrisa: \"No te preocupes, estas pequeñas heridas, si las soplo un poco, ya no van a doler.\"\nAl notar la mirada de Fina, su madre discretamente se echó el chal sobre los hombros para cubrir el brazo y acarició suavemente la cabeza de Fina: \"Pide un deseo.\" Fina asintió y cerró los ojos. En su corazón pidió en silencio: \"Señor divino, por favor haz que me vuelva una persona fuerte y valiente como mamá.\"\nCuando abrió los ojos, su madre había desaparecido y en su lugar había una enorme muñeca del ave blanca. Tenía plumas largas y densas, blancas como el cabello plateado de Fina; sus amplias alas eran más largas que los brazos de Fina.\n\"¡Pío pío, hola, señorita Fina, soy tu regalo de cumpleaños!\" Llegó la voz de su madre desde detrás de la muñeca. \"¡Seamos buenos amigos!\"\n\"¡Guau... hola, señor Pájaro Blanco!\" Fina extendió los brazos y abrazó al gran pájaro blanco. Las suaves plumas de la muñeca se pegaron a sus mejillas, haciéndole cosquillas y dándole mucho calor.\n\"Se parece a papá.\" Dijo Fina en voz baja. \"Papá también tenía brazos tan amplios que podían abrazar a Fina y a mamá al mismo tiempo.\"\nAunque no lo dijeron claramente, ambas sabían muy bien a cuál \"papá\" se refería. Después de un breve silencio, Fina de repente escuchó un llanto bajo. Rápidamente soltó las manos, se asomó por encima de la muñeca del pájaro blanco y miró a su madre. Por primera vez descubrió lágrimas en los ojos de su madre.\n\"Perdón... Fina...\" Su madre se cubrió los ojos con la mano. \"En aquel momento debería haberte sacado de aquí... Mamá fue muy tonta, pensé que solo una familia completa te permitiría crecer bien.\"\nEn ese momento, en el rostro delgado de su madre, Fina se vio a sí misma: a sí misma esforzándose por contener las lágrimas para no preocupar a su madre, negándose a llorar y fingiendo ser fuerte. Entonces Fina entendió que su madre también había sido una niña pequeña, una niña que sabía reír y también llorar. Su madre había escondido las lágrimas y se había vuelto fuerte y valiente por ella.\n\"No pasa nada, mamá...\" Fina agarró con ambas manos las amplias alas de la muñeca del pájaro blanco y la hizo abrazar a su madre. \"Cuando Fina crezca, también tendrá alas amplias. Fina va a proteger a mamá.\"\nPor su madre, tenía que crecer rápido. Fina pensó que quería volverse muy, muy fuerte como los caballeros imponentes de los cuentos, para ahuyentar a todos los malos. Fue justo después de este cumpleaños que Fina vio por primera vez el destello de la magia en las puntas de sus dedos.",
+          ContentES = "\"Tsss...\"\n Su madre encendió un fósforo. Una pequeña llama alegre y amarilla brotó de la punta de la vela azul, iluminando el pequeño pastel de crema que estaba debajo. Este era el primer cumpleaños que Fina pasaba en esta mansión.\nFina y su madre habían llegado a esta mansión hacía ya varios años. Era una casa grande y hermosa, como un castillo de cuentos de hadas, con una lámpara de cristal dorado que proyectaba luz magnífica sobre el papel tapiz lujoso. Cada vez que veía encenderse la lámpara, Fina recordaba la caja de hierro del circo que había visto de pequeña: el lugar donde esperaban los animales artistas antes de que comenzara el espectáculo. Esa caja de metal tenía una cerradura de bronce muy pesada en la puerta que brillaba dorada bajo el sol, con un color bastante parecido al de esta lámpara.\nEn la casa grande, los \"cumpleaños\" eran un privilegio que pertenecía a sus hermanastros. Fina solo podía, después de que terminaran las fiestas animadas, escabullirse sigilosamente al salón de visitas y pedirles a las criadas un pedazo de pastel pelado, al que ya le habían quitado todo el chocolate y las frutas. Pero hoy, el dueño de la casa grande casualmente había salido de viaje por negocios. Así que, después de muchos años, Fina finalmente volvió a tener una fiesta de cumpleaños solo para ella.\n\"¡Feliz cumpleaños, Fina!\" Le dijo su madre con una sonrisa.\n Fina parpadeó y se esforzó por devolverle una sonrisa igual. Pero su mirada no podía apartarse de los moretones en el brazo de su madre. Fina sabía que eran heridas del bastón de su padrastro, las conocía muy bien. El temperamento de su padrastro era impredecible: el aumento del precio del Phoxene, las negociaciones comerciales que no iban bien, la mala suerte en las apuestas de cartas, e incluso que los refrigerios no fueran de su agrado, todo podía hacerlo estallar en cólera y castigar a la hijastra Charon que le traía mala suerte, aunque estas cosas no tuvieran absolutamente nada que ver con Fina. Y cuando su madre se interponía para proteger su frágil cuerpo, el bastón caía igualmente sin piedad sobre ella, produciendo un sonido sordo.\nSu madre, vestida con ropas lujosas, era un canario dorado en esta gran mansión, y le resultaba muy difícil incluso proteger al polluelo bajo sus alas. Aun así, Fina no tenía tanto miedo. El día de su madre pertenecía al dueño de la mansión, a sus hermanastros de diferente padre, a las copas y la elegancia del salón de visitas y la pista de baile; pero las noches de su madre le pertenecían a ella. Su madre venía cada medianoche al pequeño cuarto del ático, se sentaba junto a la cama de Fina y le contaba fascinantes cuentos de buenas noches, esperando a que se durmiera profundamente entre el tarareo de canciones de cuna.\nA diferencia de Fina, que a menudo lloraba, su madre rara vez lo hacía. Cuando perdió a sus padres y a su esposo, no lloró y organizó sola sus funerales; cuando los parientes lejanos codiciosos la obligaron a casarse de nuevo, no lloró, sino que usó las reliquias familiares como moneda de cambio para obtener del hombre la oportunidad de criar a Fina a su lado; frente a la ira que su nuevo esposo podía desatar en cualquier momento, tampoco lloraba nunca, aunque su expresión obstinada solo provocara más insultos e incluso golpes. Siempre le decía a Fina con una sonrisa: \"No te preocupes, estas pequeñas heridas, si las soplo un poco, ya no van a doler.\"\nAl notar la mirada de Fina, su madre discretamente se echó el chal sobre los hombros para cubrir el brazo y acarició suavemente la cabeza de Fina: \"Pide un deseo.\" Fina asintió y cerró los ojos. En su corazón pidió en silencio: \"Señor divino, por favor haz que me vuelva una persona fuerte y valiente como mamá.\"\nCuando abrió los ojos, su madre había desaparecido y en su lugar había una enorme muñeca del ave blanca. Tenía plumas largas y densas, blancas como el cabello plateado de Fina; sus amplias alas eran más largas que los brazos de Fina.\n\"¡Pío pío, hola, señorita Fina, soy tu regalo de cumpleaños!\" Llegó la voz de su madre desde detrás de la muñeca. \"¡Seamos buenos amigos!\"\n \"¡Guau... hola, señor Pájaro Blanco!\" Fina extendió los brazos y abrazó al gran pájaro blanco. Las suaves plumas de la muñeca se pegaron a sus mejillas, haciéndole cosquillas y dándole mucho calor.\n \"Se parece a papá.\" Dijo Fina en voz baja. \"Papá también tenía brazos tan amplios que podían abrazar a Fina y a mamá al mismo tiempo.\"\nAunque no lo dijeron claramente, ambas sabían muy bien a cuál \"papá\" se refería. Después de un breve silencio, Fina de repente escuchó un llanto bajo. Rápidamente soltó las manos, se asomó por encima de la muñeca del pájaro blanco y miró a su madre. Por primera vez descubrió lágrimas en los ojos de su madre.\n \"Perdón... Fina...\" Su madre se cubrió los ojos con la mano. \"En aquel momento debería haberte sacado de aquí... Mamá fue muy tonta, pensé que solo una familia completa te permitiría crecer bien.\"\nEn ese momento, en el rostro delgado de su madre, Fina se vio a sí misma: a sí misma esforzándose por contener las lágrimas para no preocupar a su madre, negándose a llorar y fingiendo ser fuerte. Entonces Fina entendió que su madre también había sido una niña pequeña, una niña que sabía reír y también llorar. Su madre había escondido las lágrimas y se había vuelto fuerte y valiente por ella.\n \"No pasa nada, mamá...\" Fina agarró con ambas manos las amplias alas de la muñeca del pájaro blanco y la hizo abrazar a su madre. \"Cuando Fina crezca, también tendrá alas amplias. Fina va a proteger a mamá.\"\nPor su madre, tenía que crecer rápido. Fina pensó que quería volverse muy, muy fuerte como los caballeros imponentes de los cuentos, para ahuyentar a todos los malos. Fue justo después de este cumpleaños que Fina vio por primera vez el destello de la magia en las puntas de sus dedos.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010402"
         },
         UI_CHAR_DATA_TEXT_18010403 = {
-          ContentES = "\"Ya arreglé todo con la 6.ª Legión, la semana que viene la mandamos para allá. Esta niña no nos sirve para nada quedándose en la familia Grenville, mejor la mandamos allá, a lo mejor hasta ganamos un par de medallas.\"\n\"¡¿De qué está hablando?! Morris, ella solo tiene trece años, ¿cómo puede ir al ejército? ¡Usted sabe que está débil, se va a morir ahí!\"\n\"No importa, lo que quiere la Legión es su magia. Que se entrene un poco en el ejército, a lo mejor hasta se mejora físicamente. Así tú también te puedes relajar y cuidar tranquila a nuestros hijos.\"\n\"¡Pero...!\"\nLa discusión resonó por toda la sala, mientras Fina se escondía en la esquina del pasillo del segundo piso escuchando a escondidas, abrazando con desconcierto a su muñeca del pájaro blanco.\nDespués de descubrir que podía usar magia, Fina corrió alegremente desde el ático, abrazó a su madre por la espalda y le contó la buena noticia. Sin embargo, su madre no parecía contenta por esto. Tenía el rostro lleno de preocupación y le advirtió repetidamente a Fina que no debía contarle esto a nadie más.\nFina pensó que seguramente era porque aún no era lo suficientemente fuerte, por eso su madre no podía estar tranquila. Así que Fina aprovechaba cualquier oportunidad para esconderse en su cuarto y practicar en secreto. Sin libros de texto ni maestros, usó los cuentos de hadas como libros de texto y a las hadas de los cuentos como maestras... Poco a poco aprendió la magia para invitar a los \"amigos\" de los cuentos de hadas a la realidad.\nUna tarde en que su madre y padrastro no estaban, Fina vio a su pequeño hermanastro llorando en el jardín, sin que los sirvientes estuvieran por ningún lado. \"Sin papá y mamá cerca, debe estar muy angustiado\", pensó Fina. Dudó un momento, pero finalmente se armó de valor, se acercó, extendió la mano y envolvió las manitas tiernas del niño.\n\"Shh.\" Fina sopló suavemente sobre el dorso de la mano: \"No llores, ¿te hago un regalo?\"\nCuando Fina soltó las manos, varias mariposas salieron revoloteando de sus palmas y comenzaron a danzar ligeramente en el jardín invernal desnudo. El niño pequeño persiguió con curiosidad y torpeza a estos hermosos animalitos y dejó de llorar con una sonrisa. \"Efectivamente, la magia puede traer felicidad\", pensó Fina. Miraba la sonrisa de su hermanastro sin darse cuenta para nada de la mirada fría de los sirvientes detrás de ella.\nFina no entendía por qué los sirvientes tenían que reportar este asunto al padrastro, así como tampoco entendía por qué existía en el mundo un lugar llamado \"Legión\" que se llevaba por la fuerza a los niños Charon con talento de al lado de sus familias.\nEntre la acalorada discusión del padrastro y su madre y el sonido de cristales rompiéndose, Fina solo entendió una cosa: La magia, esta fuerza que había obtenido para proteger a su madre, ahora las iba a separar.\n\"¿Por qué las cosas habían terminado así?\" Le preguntó al señor Pájaro Blanco.\nEl señor Pájaro Blanco no respondió, solo la miró con sus ojitos redondos y negros.\n\"Si las alas del señor Pájaro Blanco realmente pudieran volar, ¿podría llevarse a mamá y a Fina juntas y alejarse de este lugar triste?\"\nEl señor Pájaro Blanco no respondió, solo se acurrucó contra Fina con sus grandes alas peludas.\nEsa medianoche, Fina fue despertada de su sueño por su madre. Su madre no hizo ruido, solo las gotas de lluvia golpeaban violentamente el vidrio de la ventana del ático. Fina abrió los ojos adormilada y descubrió que su madre se había puesto una capa negra.\n\"Mamá, ¿qué pasa?\" preguntó. \"¿Vamos a salir?\"\n\"Sí. Te voy a enseñar un sitio.\" Su madre la levantó suavemente y le puso el abrigo. \"Una nueva casa, como las cabañitas de los cuentos de hadas.\"\n\"¿El señor Pájaro Blanco viene con nosotras?\" Preguntó Fina.\nSu madre se quedó inmóvil un momento y respondió dudando: \"No podemos... llevar muchas cosas. Lo siento, Fina.\"\nAl ver la expresión compleja en el rostro de su madre, Fina finalmente se dio cuenta de que esto no era un viaje común, sino una... \"huida\".\n\"¡Entonces dejemos que el señor Pájaro Blanco se quede a jugar con mis hermanitos!\" Fina se envolvió con la bufanda que le pasó su madre y se hizo un nudo. \"A Fina le basta con estar junto a mamá.\"\n\"Bien.\" Su madre le acarició la cabeza con cariño. \"Cuando lleguemos a la nueva casa, mamá va a trabajar duro para ganar dinero y traerle a Fina muchos más buenos amigos. No solo el señor Pájaro Blanco, sino también perritos, caballitos, mariposas... Todos los amigos que le gustan a Fina, mamá los va a traer a casa.\"\n\"¡Sí!\" Fina asintió. Se dirigió hacia la puerta, pero regresó, y con cuidado le puso una manta al muñeco del pájaro blanco, asegurándose de que sus alas no quedaran afuera para que no se enfriara.\n\"Adiós, señor Pájaro Blanco.\" Le susurró al oído de la muñeca del pájaro blanco. \"No te preocupes por mí, porque mamá va a estar con Fina. Señor Pájaro Blanco, tú también cuídate mucho.\"\nPareció ver al señor Pájaro Blanco parpadear y agitar las alas: \"¡Pío pío, pequeño ruiseñor, que tengas un viaje seguro!\"\nFina se puso en puntas de pie y siguió a su madre, bajando sigilosamente por la escalera de caracol. Por última vez, Fina alzó la vista hacia esa lámpara de cristal. En medio de la oscuridad, brillaba con una luz dorada tenue, como si hubiera abierto incontables ojos dorados observándola.\nEn el instante que abrieron la puerta, un rayo atravesó el cielo, la lluvia fría les golpeó la cara y Fina encogió el cuello. Su madre levantó el paraguas, creando un pequeño y silencioso refugio en medio de la cortina de lluvia, y la llamó suavemente: \"Vámonos, Fina.\"\nEsta llamada hizo que la lluvia torrencial, los rayos y los truenos ya no fueran temibles. Fina tomó la mano de su madre y pisó con determinación la lluvia.",
+          ContentES = "\"Ya arreglé todo con la 6.ª Legión, la semana que viene la mandamos para allá. Esta niña no nos sirve para nada quedándose en la familia Grenville, mejor la mandamos allá, a lo mejor hasta ganamos un par de medallas.\"\n \"¡¿De qué está hablando?! Morris, ella solo tiene trece años, ¿cómo puede ir al ejército? ¡Usted sabe que está débil, se va a morir ahí!\"\n \"No importa, lo que quiere la Legión es su magia. Que se entrene un poco en el ejército, a lo mejor hasta se mejora físicamente. Así tú también te puedes relajar y cuidar tranquila a nuestros hijos.\"\n \"¡Pero...!\"\nLa discusión resonó por toda la sala, mientras Fina se escondía en la esquina del pasillo del segundo piso escuchando a escondidas, abrazando con desconcierto a su muñeca del pájaro blanco.\n Después de descubrir que podía usar magia, Fina corrió alegremente desde el ático, abrazó a su madre por la espalda y le contó la buena noticia. Sin embargo, su madre no parecía contenta por esto. Tenía el rostro lleno de preocupación y le advirtió repetidamente a Fina que no debía contarle esto a nadie más.\n Fina pensó que seguramente era porque aún no era lo suficientemente fuerte, por eso su madre no podía estar tranquila. Así que Fina aprovechaba cualquier oportunidad para esconderse en su cuarto y practicar en secreto. Sin libros de texto ni maestros, usó los cuentos de hadas como libros de texto y a las hadas de los cuentos como maestras... Poco a poco aprendió la magia para invitar a los \"amigos\" de los cuentos de hadas a la realidad.\nUna tarde en que su madre y padrastro no estaban, Fina vio a su pequeño hermanastro llorando en el jardín, sin que los sirvientes estuvieran por ningún lado. \"Sin papá y mamá cerca, debe estar muy angustiado\", pensó Fina. Dudó un momento, pero finalmente se armó de valor, se acercó, extendió la mano y envolvió las manitas tiernas del niño.\n \"Shh.\" Fina sopló suavemente sobre el dorso de la mano: \"No llores, ¿te hago un regalo?\"\n Cuando Fina soltó las manos, varias mariposas salieron revoloteando de sus palmas y comenzaron a danzar ligeramente en el jardín invernal desnudo. El niño pequeño persiguió con curiosidad y torpeza a estos hermosos animalitos y dejó de llorar con una sonrisa. \"Efectivamente, la magia puede traer felicidad\", pensó Fina. Miraba la sonrisa de su hermanastro sin darse cuenta para nada de la mirada fría de los sirvientes detrás de ella.\nFina no entendía por qué los sirvientes tenían que reportar este asunto al padrastro, así como tampoco entendía por qué existía en el mundo un lugar llamado \"Legión\" que se llevaba por la fuerza a los niños Charon con talento de al lado de sus familias.\n Entre la acalorada discusión del padrastro y su madre y el sonido de cristales rompiéndose, Fina solo entendió una cosa: La magia, esta fuerza que había obtenido para proteger a su madre, ahora las iba a separar.\n\"¿Por qué las cosas habían terminado así?\" Le preguntó al señor Pájaro Blanco.\n El señor Pájaro Blanco no respondió, solo la miró con sus ojitos redondos y negros.\n \"Si las alas del señor Pájaro Blanco realmente pudieran volar, ¿podría llevarse a mamá y a Fina juntas y alejarse de este lugar triste?\"\n El señor Pájaro Blanco no respondió, solo se acurrucó contra Fina con sus grandes alas peludas.\nEsa medianoche, Fina fue despertada de su sueño por su madre. Su madre no hizo ruido, solo las gotas de lluvia golpeaban violentamente el vidrio de la ventana del ático. Fina abrió los ojos adormilada y descubrió que su madre se había puesto una capa negra.\n\"Mamá, ¿qué pasa?\" preguntó. \"¿Vamos a salir?\"\n \"Sí. Te voy a enseñar un sitio.\" Su madre la levantó suavemente y le puso el abrigo. \"Una nueva casa, como las cabañitas de los cuentos de hadas.\"\n \"¿El señor Pájaro Blanco viene con nosotras?\" Preguntó Fina.\n Su madre se quedó inmóvil un momento y respondió dudando: \"No podemos... llevar muchas cosas. Lo siento, Fina.\"\nAl ver la expresión compleja en el rostro de su madre, Fina finalmente se dio cuenta de que esto no era un viaje común, sino una... \"huida\".\n \"¡Entonces dejemos que el señor Pájaro Blanco se quede a jugar con mis hermanitos!\" Fina se envolvió con la bufanda que le pasó su madre y se hizo un nudo. \"A Fina le basta con estar junto a mamá.\"\n \"Bien.\" Su madre le acarició la cabeza con cariño. \"Cuando lleguemos a la nueva casa, mamá va a trabajar duro para ganar dinero y traerle a Fina muchos más buenos amigos. No solo el señor Pájaro Blanco, sino también perritos, caballitos, mariposas... Todos los amigos que le gustan a Fina, mamá los va a traer a casa.\"\n \"¡Sí!\" Fina asintió. Se dirigió hacia la puerta, pero regresó, y con cuidado le puso una manta al muñeco del pájaro blanco, asegurándose de que sus alas no quedaran afuera para que no se enfriara.\n \"Adiós, señor Pájaro Blanco.\" Le susurró al oído de la muñeca del pájaro blanco. \"No te preocupes por mí, porque mamá va a estar con Fina. Señor Pájaro Blanco, tú también cuídate mucho.\"\n Pareció ver al señor Pájaro Blanco parpadear y agitar las alas: \"¡Pío pío, pequeño ruiseñor, que tengas un viaje seguro!\"\nFina se puso en puntas de pie y siguió a su madre, bajando sigilosamente por la escalera de caracol. Por última vez, Fina alzó la vista hacia esa lámpara de cristal. En medio de la oscuridad, brillaba con una luz dorada tenue, como si hubiera abierto incontables ojos dorados observándola.\nEn el instante que abrieron la puerta, un rayo atravesó el cielo, la lluvia fría les golpeó la cara y Fina encogió el cuello. Su madre levantó el paraguas, creando un pequeño y silencioso refugio en medio de la cortina de lluvia, y la llamó suavemente: \"Vámonos, Fina.\"\n Esta llamada hizo que la lluvia torrencial, los rayos y los truenos ya no fueran temibles. Fina tomó la mano de su madre y pisó con determinación la lluvia.",
           TextMapId = "UI_CHAR_DATA_TEXT_18010403"
         },
         UI_CHAR_DATA_TEXT_18010404 = {
-          ContentES = "\"Fina, ya llegué...\"\nLa noche se hacía más densa, en medio de la nieve y el viento, Outsider cargaba los ingredientes rebajados que había seleccionado cuidadosamente de los puestos callejeros y empujó la puerta de madera pintada con el dibujo de un pajarito. Esta casa humilde y pequeña era ahora el hogar de Fina.\nAquí no había vestidos bonitos, ni platos lujosos, ni oro brillante... Pero justamente por eso, ya no tenía que preocuparse por tropezarse con vestidos bonitos al no recordar las etiquetas estrictas, ya no tenía que comer sobras frías servidas en platos lujosos, y ya no tenía que temer que un elegante bastón de oro le dejara el cuerpo lleno de moretones. En su lugar, había encajes cosidos con cuidado usando tela áspera y rota, sopa caliente y humeante servida en tazones de madera astillados, y pequeñas lámparas nocturnas hechas con cristal desechado que brillaban como joyas.\nLa nieve en Outsider se derritió y se convirtió en gotas de agua. Se secó descuidadamente con una toalla y se dirigió a la estufa para preparar la cena. Poco después, un aroma tentador se elevó desde la estufa. Fina cerró el libro de ilustraciones que estaba pintando a medias, lo puso cuidadosamente en su regazo y le cedió la mesa a Outsider para la sopa que traía.\nEsta habría sido una noche más común y corriente, hasta que esa puerta de madera vieja fue golpeada violentamente. Un caballero vestido con ropas lujosas estaba parado en la puerta. Al ver ese bastón dorado familiar, el tenedor y el cuchillo de Fina cayeron con un \"cling\" y el libro de ilustraciones y los lápices de su regazo se esparcieron por el suelo.\n\n\"¿Es usted el señor Outsider?\" El caballero se quitó cortésmente el sombrero. \"Soy Morris Grenville. Gracias por haber cuidado estos días a Serafina, mi hija perdida. Vengo a llevarla a casa.\"\nOutsider volteó y vio a Fina escondida en el rincón, encogida como un bebé en una pequeña bolita. Ella levantó la cabeza temblando, con los ojos llenos de lágrimas de terror. Entonces, Outsider supo cuál era su respuesta.\nDio un paso adelante y se puso frente a la niña. \"Por favor, váyase. Ella es mi hermana, no su hija.\"\n\n\"Tal vez usted malinterpretó algo, señor.\" Los labios del caballero se curvaron hacia arriba, pero su mirada se volvió aún más fría. \"Quién es ella no lo decide un despreciable pueblo Charon.\" Sacó una pistola del bolsillo de su abrigo y apuntó el agujero negro del cañón hacia Outsider: \"Tal vez haya escuchado mi nombre. Odio las negociaciones aburridas. Relájese, no tenga miedo. Mientras entienda su posición, no voy a perseguir su falta de respeto y hasta le voy a pagar una recompensa considerable como premio por haber cuidado a mi hija estos días.\"\nEl caballero luego miró hacia Fina en el rincón. \"Buena hija, no seas caprichosa. Devuélvele a papá la caja que te dio mamá y ven conmigo a casa.\"\nNinguno de los dos respondió. Tal vez impaciente con este monólogo, el caballero alzó la voz y puso la pistola contra la frente de Outsider. \"No agoten mi paciencia. Voy a contar hasta diez, si no aceptan esta negociación, voy a tener que usar algunos métodos no muy decorosos.\"\n\n\"Diez.\"\nFina miró fijamente esa pistola. Recordó esa noche lluviosa de hace dos semanas, cuando esa misma pistola le quitó la vida a su madre. La bala originalmente iba dirigida a Fina, pero su madre usó su cuerpo de carne y hueso para detener esa bala. Cayó al suelo, la sangre brotaba a borbotones del agujero de la bala, como flores rojas que se extendían en un charco de lluvia.\nRepetía una y otra vez la misma frase: \"Fina, corre, no mires atrás.\"\n\n\"Nueve.\"\nFina miró hacia Outsider. Tenía las manos detrás de la espalda, los dedos tocaron sigilosamente el mango de la daga. Pero temblaba ligeramente. Incluso Fina, que rara vez salía de casa, había escuchado de los sirvientes qué les pasaba a los Charons que usaban violencia contra los humanos.\n\n\"Ocho.\"\nFina recordó esa noche lluviosa. Corrió con todas sus fuerzas, mientras los pasos de su padrastro y los sirvientes la perseguían implacablemente. Invocó al señor Pájaro Blanco de los cuentos de hadas y bloqueó brevemente su camino. Pero cuando jadeaba pesadamente y finalmente creyó que estaba a salvo, de repente resbaló.\nEn medio de la oscuridad total, pudo sentir una corriente de agua rápida y fría como la lluvia que la rodeaba y la llevaba hacia un lugar aún más profundo que la noche lluviosa. Luchó desesperadamente, pero solo pudo tocar algunas tablas rotas que no eran suficientes para soportar su peso y hacerla flotar; también tocó vegetales podridos, espinas de pescado afiladas y un líquido viscoso y resbaladizo sobre las espinas. Finalmente, ya no tenía fuerzas para agarrarse de nada y solo pudo dejar que la corriente la arrastrara hacia un lugar desconocido.\n\n\"Siete.\"\nFina recordó esa noche lluviosa. \"Yo también voy a ir con papá y mamá a otro país.\" Pensó Fina, sintió que muchas cosas se estaban separando lentamente de su cuerpo: la consciencia, los recuerdos y la vida misma. \"Mamá.\" Gritó, con una voz cada vez más débil. \"Mamá.\"\nTal vez su grito llegó al país de las hadas. Pareció escuchar pasos que se detuvieron a su lado, unas manos la levantaron suavemente y la sacaron de esa oscuridad. Esa debía ser mamá, pensó. Finalmente, se durmió profundamente.\n\n\"Seis.\"\nFina recordó una mañana. Finalmente despertó de su sueño y se encontró acostada en una pequeña casa extraña. El cuarto era pequeño, más pequeño que su cuarto del ático; la cama era dura, más dura que las camas de los sirvientes. Pero un rayo de sol se coló a escondidas por un pequeño agujero en el techo, pequeñas partículas de polvo danzaban alegremente en ese rayo de luz y finalmente se posaron en la espalda de una persona. No conocía a esa persona, pero no tenía miedo. Porque recordó cuando era muy, muy pequeña, cuando aún tenía un \"hogar\", al despertar de sus sueños a menudo veía a su madre así de ocupada, con pasos ligeros.\n\"Mamá.\" Le gritó suavemente a esa espalda con su garganta ronca. \"Mamá.\"\n\n\"Cinco.\"\nFina recordó cuando le gritó \"mamá\" a Outsider, él cruzó los brazos con la cara llena de confusión: \"Si vas a gritar, debería ser 'papá', ¿no? Ah no, no soy tan viejo... Mejor dime 'hermano'.\"\nPero su cabeza estaba aturdida y no pudo cambiar rápidamente. \"Mamá.\" Siguió murmurando así. Entonces Outsider negó con la cabeza y suspiró de mala gana: \"Como sea, di lo que quieras.\"\n\n\"Cuatro.\"\nLas manos de Fina tantearon a su alrededor. Desde que se cayó al alcantarillado y se lastimó gravemente, su pequeña magia aún no se había recuperado. Solo podía buscar a tientas, a ver si había alguna herramienta que la pudiera ayudar un poco.\nDe repente, su mano tocó algo duro y frío. Recordó que también era una pistola, la pistola de Outsider.\n\n\"Tres.\"\nFina recordó cuando recién se mudó a esta casa, Outsider aún no sabía cómo cuidar niños. Ella siempre recordaba a su madre y no podía parar de llorar. Outsider se desesperó tanto que se rascó y rascó el cabello, de repente tuvo una idea, chasqueó los dedos y sacó una pistola del armario. Sacó las balas una por una y le tiró la carcasa. \"Esto es para ti, es muy divertido, me encantaba jugar con esto cuando era pequeño.\"\nAl recordar que era justamente esta cosa llamada \"pistola\" la que le había quitado la vida a su madre, Fina lloró aún más fuerte.\n\n\"Dos.\"\nFina recordó cuando tiró la pistola, Outsider se quedó en silencio. Pero al final, recogió la pistola y se la puso en las manos. Reflexionó un momento y finalmente habló, con un tono serio pero gentil.\n\"No tengas miedo, te voy a enseñar a domesticar esta pistola.\" Dijo. \"Puede quitarle la vida a alguien. Pero también es lo único que puede protegerte a ti y proteger a las personas que valoras.\"\n\n\"Uno.\"\nFina recordó esa pequeña fiesta de cumpleaños que era solo para ella. Fina envolvió a su madre con las alas de la muñeca del pájaro blanco.\n\"Fina va a proteger a mamá.\"\n\n\"Cero.\"\nLas plumas de la muñeca del pájaro blanco cayeron como nieve, tapando su vista.\n\n\"¡Bang!\"\nSonó el disparo.\nMorris Grenville cayó pesadamente hacia atrás, produciendo el ruido sordo de un objeto pesado golpeando el suelo. Una expresión de incredulidad se congeló en su rostro, una daga atravesó su corazón y una bala le había dado en el pecho.\n\"Clic.\" La pistola humeante se cayó de las manos de Fina. \"Outsider,\" levantó la cabeza y una sonrisa dulce y triste floreció en su rostro, \"ahora los dos somos 'magos malvados', ¿verdad?\"",
+          ContentES = "\"Fina, ya llegué...\"\n La noche se hacía más densa, en medio de la nieve y el viento, Outsider cargaba los ingredientes rebajados que había seleccionado cuidadosamente de los puestos callejeros y empujó la puerta de madera pintada con el dibujo de un pajarito. Esta casa humilde y pequeña era ahora el hogar de Fina.\n Aquí no había vestidos bonitos, ni platos lujosos, ni oro brillante... Pero justamente por eso, ya no tenía que preocuparse por tropezarse con vestidos bonitos al no recordar las etiquetas estrictas, ya no tenía que comer sobras frías servidas en platos lujosos, y ya no tenía que temer que un elegante bastón de oro le dejara el cuerpo lleno de moretones. En su lugar, había encajes cosidos con cuidado usando tela áspera y rota, sopa caliente y humeante servida en tazones de madera astillados, y pequeñas lámparas nocturnas hechas con cristal desechado que brillaban como joyas.\n La nieve en Outsider se derritió y se convirtió en gotas de agua. Se secó descuidadamente con una toalla y se dirigió a la estufa para preparar la cena. Poco después, un aroma tentador se elevó desde la estufa. Fina cerró el libro de ilustraciones que estaba pintando a medias, lo puso cuidadosamente en su regazo y le cedió la mesa a Outsider para la sopa que traía.\nEsta habría sido una noche más común y corriente, hasta que esa puerta de madera vieja fue golpeada violentamente. Un caballero vestido con ropas lujosas estaba parado en la puerta. Al ver ese bastón dorado familiar, el tenedor y el cuchillo de Fina cayeron con un \"cling\" y el libro de ilustraciones y los lápices de su regazo se esparcieron por el suelo.\n\n\"¿Es usted el señor Outsider?\" El caballero se quitó cortésmente el sombrero. \"Soy Morris Grenville. Gracias por haber cuidado estos días a Serafina, mi hija perdida. Vengo a llevarla a casa.\"\nOutsider volteó y vio a Fina escondida en el rincón, encogida como un bebé en una pequeña bolita. Ella levantó la cabeza temblando, con los ojos llenos de lágrimas de terror. Entonces, Outsider supo cuál era su respuesta.\n Dio un paso adelante y se puso frente a la niña. \"Por favor, váyase. Ella es mi hermana, no su hija.\"\n\n\"Tal vez usted malinterpretó algo, señor.\" Los labios del caballero se curvaron hacia arriba, pero su mirada se volvió aún más fría. \"Quién es ella no lo decide un despreciable pueblo Charon.\" Sacó una pistola del bolsillo de su abrigo y apuntó el agujero negro del cañón hacia Outsider: \"Tal vez haya escuchado mi nombre. Odio las negociaciones aburridas. Relájese, no tenga miedo. Mientras entienda su posición, no voy a perseguir su falta de respeto y hasta le voy a pagar una recompensa considerable como premio por haber cuidado a mi hija estos días.\"\n El caballero luego miró hacia Fina en el rincón. \"Buena hija, no seas caprichosa. Devuélvele a papá la caja que te dio mamá y ven conmigo a casa.\"\nNinguno de los dos respondió. Tal vez impaciente con este monólogo, el caballero alzó la voz y puso la pistola contra la frente de Outsider. \"No agoten mi paciencia. Voy a contar hasta diez, si no aceptan esta negociación, voy a tener que usar algunos métodos no muy decorosos.\"\n\n\"Diez.\"\n Fina miró fijamente esa pistola. Recordó esa noche lluviosa de hace dos semanas, cuando esa misma pistola le quitó la vida a su madre. La bala originalmente iba dirigida a Fina, pero su madre usó su cuerpo de carne y hueso para detener esa bala. Cayó al suelo, la sangre brotaba a borbotones del agujero de la bala, como flores rojas que se extendían en un charco de lluvia.\n Repetía una y otra vez la misma frase: \"Fina, corre, no mires atrás.\"\n\n\"Nueve.\"\n Fina miró hacia Outsider. Tenía las manos detrás de la espalda, los dedos tocaron sigilosamente el mango de la daga. Pero temblaba ligeramente. Incluso Fina, que rara vez salía de casa, había escuchado de los sirvientes qué les pasaba a los Charons que usaban violencia contra los humanos.\n\n\"Ocho.\"\n Fina recordó esa noche lluviosa. Corrió con todas sus fuerzas, mientras los pasos de su padrastro y los sirvientes la perseguían implacablemente. Invocó al señor Pájaro Blanco de los cuentos de hadas y bloqueó brevemente su camino. Pero cuando jadeaba pesadamente y finalmente creyó que estaba a salvo, de repente resbaló.\n En medio de la oscuridad total, pudo sentir una corriente de agua rápida y fría como la lluvia que la rodeaba y la llevaba hacia un lugar aún más profundo que la noche lluviosa. Luchó desesperadamente, pero solo pudo tocar algunas tablas rotas que no eran suficientes para soportar su peso y hacerla flotar; también tocó vegetales podridos, espinas de pescado afiladas y un líquido viscoso y resbaladizo sobre las espinas. Finalmente, ya no tenía fuerzas para agarrarse de nada y solo pudo dejar que la corriente la arrastrara hacia un lugar desconocido.\n\n\"Siete.\"\n Fina recordó esa noche lluviosa. \"Yo también voy a ir con papá y mamá a otro país.\" Pensó Fina, sintió que muchas cosas se estaban separando lentamente de su cuerpo: la consciencia, los recuerdos y la vida misma. \"Mamá.\" Gritó, con una voz cada vez más débil. \"Mamá.\"\n Tal vez su grito llegó al país de las hadas. Pareció escuchar pasos que se detuvieron a su lado, unas manos la levantaron suavemente y la sacaron de esa oscuridad. Esa debía ser mamá, pensó. Finalmente, se durmió profundamente.\n\n\"Seis.\"\n Fina recordó una mañana. Finalmente despertó de su sueño y se encontró acostada en una pequeña casa extraña. El cuarto era pequeño, más pequeño que su cuarto del ático; la cama era dura, más dura que las camas de los sirvientes. Pero un rayo de sol se coló a escondidas por un pequeño agujero en el techo, pequeñas partículas de polvo danzaban alegremente en ese rayo de luz y finalmente se posaron en la espalda de una persona. No conocía a esa persona, pero no tenía miedo. Porque recordó cuando era muy, muy pequeña, cuando aún tenía un \"hogar\", al despertar de sus sueños a menudo veía a su madre así de ocupada, con pasos ligeros.\n \"Mamá.\" Le gritó suavemente a esa espalda con su garganta ronca. \"Mamá.\"\n\n\"Cinco.\"\n Fina recordó cuando le gritó \"mamá\" a Outsider, él cruzó los brazos con la cara llena de confusión: \"Si vas a gritar, debería ser 'papá', ¿no? Ah no, no soy tan viejo... Mejor dime 'hermano'.\"\n Pero su cabeza estaba aturdida y no pudo cambiar rápidamente. \"Mamá.\" Siguió murmurando así. Entonces Outsider negó con la cabeza y suspiró de mala gana: \"Como sea, di lo que quieras.\"\n\n\"Cuatro.\"\n Las manos de Fina tantearon a su alrededor. Desde que se cayó al alcantarillado y se lastimó gravemente, su pequeña magia aún no se había recuperado. Solo podía buscar a tientas, a ver si había alguna herramienta que la pudiera ayudar un poco.\n De repente, su mano tocó algo duro y frío. Recordó que también era una pistola, la pistola de Outsider.\n\n\"Tres.\"\n Fina recordó cuando recién se mudó a esta casa, Outsider aún no sabía cómo cuidar niños. Ella siempre recordaba a su madre y no podía parar de llorar. Outsider se desesperó tanto que se rascó y rascó el cabello, de repente tuvo una idea, chasqueó los dedos y sacó una pistola del armario. Sacó las balas una por una y le tiró la carcasa. \"Esto es para ti, es muy divertido, me encantaba jugar con esto cuando era pequeño.\"\n Al recordar que era justamente esta cosa llamada \"pistola\" la que le había quitado la vida a su madre, Fina lloró aún más fuerte.\n\n\"Dos.\"\n Fina recordó cuando tiró la pistola, Outsider se quedó en silencio. Pero al final, recogió la pistola y se la puso en las manos. Reflexionó un momento y finalmente habló, con un tono serio pero gentil.\n \"No tengas miedo, te voy a enseñar a domesticar esta pistola.\" Dijo. \"Puede quitarle la vida a alguien. Pero también es lo único que puede protegerte a ti y proteger a las personas que valoras.\"\n\n\"Uno.\"\n Fina recordó esa pequeña fiesta de cumpleaños que era solo para ella. Fina envolvió a su madre con las alas de la muñeca del pájaro blanco.\n \"Fina va a proteger a mamá.\"\n\n\"Cero.\"\n Las plumas de la muñeca del pájaro blanco cayeron como nieve, tapando su vista.\n\n\"¡Bang!\"\n Sonó el disparo.\n Morris Grenville cayó pesadamente hacia atrás, produciendo el ruido sordo de un objeto pesado golpeando el suelo. Una expresión de incredulidad se congeló en su rostro, una daga atravesó su corazón y una bala le había dado en el pecho.\n \"Clic.\" La pistola humeante se cayó de las manos de Fina. \"Outsider,\" levantó la cabeza y una sonrisa dulce y triste floreció en su rostro, \"ahora los dos somos 'magos malvados', ¿verdad?\"",
           TextMapId = "UI_CHAR_DATA_TEXT_18010404"
         },
         UI_CHAR_DATA_TEXT_18010405 = {
-          ContentES = "Fina y Outsider juntos enterraron al padrastro y su bastón dorado bajo un pino en la Orilla del Lago Lamentoso.\nElla cerró los ojos. Una vez había odiado y temido profundamente a este hombre que le trajo desgracia, pero ahora todos los recuerdos sobre él se habían vuelto como nieve que caía en su cabello, derritiéndose gradualmente, volviéndose transparente y finalmente convirtiéndose en un vacío lejano.\nSu cabello se había vuelto más largo, Outsider la ayudó a teñir su cabello plateado de un hermoso azul profundo, como el agua del Lago Lamentoso y sus ojos. Así, incluso si salía, la gente no la reconocería fácilmente. Y el nombre \"Serafina Grenville\" también fue dispersado gradualmente por el viento de Lago Glacial. Ahora ella era Fina, la hermana de Outsider. La historia había abierto una nueva página.\nUna tarde soleada, Fina abrió un cuaderno en blanco, tomó una pluma y escribió cuidadosamente el nombre de su nueva historia: Canción del Ruiseñor Blanco.\nDe repente, un sonido de tintineo interrumpió sus pensamientos. Dejó la pluma, pensando en pedirle a su hermano que hiciera menos ruido, pero lo vio acercarse cargando una caja de cartón.\n\n\"A ver si hay algo útil aquí,\" Outsider puso la caja sobre la mesa. \"Se me olvidó decirte antes, esto estaba en un paquete junto a ti cuando te encontré en el alcantarillado. ¿Tal vez son tus cosas?\"\n\"Esto es...\" Fina tomó sorprendida una caja. La caja estaba llena de lodo y polvo, pero aún se podía ver vagamente su construcción delicada. \"El... tesoro hereditario de la familia de mamá.\"\n\"¡Guau, increíble! Veamos qué tesoro es, a lo mejor nos hacemos ricos y podemos comprar una casa más grande.\" Outsider tomó la caja y quitó el lodo. \"Eh, ¿cómo es que tiene una cerradura de combinación...?\"\n\"¡Espera!\" Fina de repente recordó algo. \"¡No abras esa caja! ¡Mamá dijo que si pones mal la combinación, va a explotar!\"\nSe levantó ansiosamente para quitarle la caja, pero escuchó un sonido claro y cristalino.\n\"No explotó.\" Outsider tenía la cara llena de confusión. \"¿No es que probé cualquier número al azar y se abrió? Pero no hay nada adentro, solo un papel.\" De repente pensó en algo y rápidamente le pasó la caja a Fina. \"Este papel, mejor lo lees tú.\"\n\n¿Qué sería?\n\"¿Será... un mapa del tesoro?\" Fina ladeó la cabeza y abrió el papel. De repente se le hizo un nudo en la garganta y las manos le temblaron sin parar. Outsider se acercó rápidamente. Era una hoja de papel delgada con solo una línea escrita en letra elegante:\n\n<H>\"Mi querida niña, que puedas obtener tu propia felicidad.\"</H>\nLos pensamientos de Fina regresaron a una medianoche de muchos años atrás. En aquel entonces acababa de despertarse de una pesadilla, corrió en pánico por las escaleras buscando a su madre, pero escuchó la conversación entre su madre y su padrastro frente al dormitorio.\n\"Morris, prometí que le ofrecería el tesoro de la caja.\"\n\"Pero no ahora, sino el día que Serafina cumpla la mayoría de edad.\" Dijo su madre, con voz firme y decidida: \"A cambio, quiero que me prometa que Serafina crecerá sana y salva.\"",
+          ContentES = "Fina y Outsider juntos enterraron al padrastro y su bastón dorado bajo un pino en la Orilla del Lago Lamentoso.\n Ella cerró los ojos. Una vez había odiado y temido profundamente a este hombre que le trajo desgracia, pero ahora todos los recuerdos sobre él se habían vuelto como nieve que caía en su cabello, derritiéndose gradualmente, volviéndose transparente y finalmente convirtiéndose en un vacío lejano.\nSu cabello se había vuelto más largo, Outsider la ayudó a teñir su cabello plateado de un hermoso azul profundo, como el agua del Lago Lamentoso y sus ojos. Así, incluso si salía, la gente no la reconocería fácilmente. Y el nombre \"Serafina Grenville\" también fue dispersado gradualmente por el viento de Lago Glacial. Ahora ella era Fina, la hermana de Outsider. La historia había abierto una nueva página.\nUna tarde soleada, Fina abrió un cuaderno en blanco, tomó una pluma y escribió cuidadosamente el nombre de su nueva historia: Canción del Ruiseñor Blanco.\nDe repente, un sonido de tintineo interrumpió sus pensamientos. Dejó la pluma, pensando en pedirle a su hermano que hiciera menos ruido, pero lo vio acercarse cargando una caja de cartón.\n\n\"A ver si hay algo útil aquí,\" Outsider puso la caja sobre la mesa. \"Se me olvidó decirte antes, esto estaba en un paquete junto a ti cuando te encontré en el alcantarillado. ¿Tal vez son tus cosas?\"\n\"Esto es...\" Fina tomó sorprendida una caja. La caja estaba llena de lodo y polvo, pero aún se podía ver vagamente su construcción delicada. \"El... tesoro hereditario de la familia de mamá.\"\n\"¡Guau, increíble! Veamos qué tesoro es, a lo mejor nos hacemos ricos y podemos comprar una casa más grande.\" Outsider tomó la caja y quitó el lodo. \"Eh, ¿cómo es que tiene una cerradura de combinación...?\"\n\"¡Espera!\" Fina de repente recordó algo. \"¡No abras esa caja! ¡Mamá dijo que si pones mal la combinación, va a explotar!\"\nSe levantó ansiosamente para quitarle la caja, pero escuchó un sonido claro y cristalino.\n\"No explotó.\" Outsider tenía la cara llena de confusión. \"¿No es que probé cualquier número al azar y se abrió? Pero no hay nada adentro, solo un papel.\" De repente pensó en algo y rápidamente le pasó la caja a Fina. \"Este papel, mejor lo lees tú.\"\n\n¿Qué sería?\n\"¿Será... un mapa del tesoro?\" Fina ladeó la cabeza y abrió el papel. De repente se le hizo un nudo en la garganta y las manos le temblaron sin parar. Outsider se acercó rápidamente. Era una hoja de papel delgada con solo una línea escrita en letra elegante:\n\n <H>\"Mi querida niña, que puedas obtener tu propia felicidad.\"</>\nLos pensamientos de Fina regresaron a una medianoche de muchos años atrás. En aquel entonces acababa de despertarse de una pesadilla, corrió en pánico por las escaleras buscando a su madre, pero escuchó la conversación entre su madre y su padrastro frente al dormitorio.\n\"Morris, prometí que le ofrecería el tesoro de la caja.\"\n\"Pero no ahora, sino el día que Serafina cumpla la mayoría de edad.\" Dijo su madre, con voz firme y decidida: \"A cambio, quiero que me prometa que Serafina crecerá sana y salva.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_18010405"
         },
         UI_CHAR_DATA_TEXT_21010101 = {
@@ -73639,15 +74765,15 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_24010305"
         },
         UI_CHAR_DATA_TEXT_24010401 = {
-          ContentES = "Fushu se sentó a bordo de la nave que la llevaba a casa.\nLa vestimenta de los viajeros ya no se parecía a nada de hace un siglo, e incluso la nave estaba construida con una complejidad desconocida en su tiempo.\nEntre los pasajeros había forasteros que hablaban en voz baja de su trabajo: comerciantes que transportaban mercancías desde Luca para comerciar en Puerto de las Brumas.\nParecían bien familiarizados con Huaxu. Cuando su charla de negocios se apagaba, sus voces se volvían relatos del camino.\nHablaban del paisaje de Puerto de las Brumas, más hermoso que cualquier cosa en Haojing, y de planes para ir de excursión juntos cuando el tiempo lo permitiera. Uno mencionó haber visto un Pinzón Esmeralda pasar sobre un valle. Otro se rió y la corrigió, diciendo que los Pinzones Esmeralda solo planean, pues sus pesadas plumas de la cola hacen imposible un vuelo real. Luego su conversación derivó a Primavera Eterna y a cómo, durante la temporada de festivales, la propietaria Zhiliu enviaba lujosas cajas de regalo a sus socios, cada una con una moneda conmemorativa de oro. Un hombre cercano comentó con una risa suave que prefería las tiras curadas de Jabalí pequeño que contenía, un acompañante ideal para las largas millas de viaje.\nFushu escuchaba en silencio, atraída a pesar de sí misma. Sus palabras le resultaban a la vez extrañas y familiares.\nSus pensamientos se dirigieron hacia el borde desgastado de la memoria. ¿Había ella, hace un siglo, visto un Pinzón Esmeralda planear por el cielo? ¿Había recorrido todas las calles y callejones de Puerto de las Brumas, observando pasar sus estaciones? Y los bocadillos que había apreciado de niña, ¿eran los mismos de los que hablaban estos viajeros? ¿Eran picantes, dulces o salados?\nQuizá sí; quizá no. Ya no podía decirlo.\nMuchas de sus memorias se habían vuelto difusas. Como huellas presionadas en la arena, incluso los rastros más claros se aplastan cuando la marea del tiempo los barre, dejando la orilla lisa y haciéndola dudar del camino que alguna vez recorrió.\nSe sentó en tranquila reflexión, insegura y pensativa por igual, y la pregunta surgió sin invitación: Quizá por eso regreso a Puerto de las Brumas, por eso debo dirigir mis pasos hacia el Pabellón de lo Efímero.\nQuizá su mirada se demoró demasiado en los comerciantes, pues pronto la notaron y la miraron con curiosidad. Una de las mujeres de negocios, vestida con moda extranjera, sonrió y se acercó a ella. \"Su atuendo es encantador. Solo he visto ropa así en los libros de historia de Huaxu, así que no pudimos evitar mirar. Es un placer viajar con una dama tan hermosa. Si no le importa que lo pregunte, ¿también se dirige al Puerto de las Brumas?\"\nFushu guardó silencio por un momento antes de responder suavemente: \"Yo viví allí una vez.\"\nLa mujer inhaló ligeramente, fingiendo sorpresa. \"¿De verdad? Qué coincidencia. Nos dirigimos a Puerto de las Brumas por negocios. Además de licores y cristalería, hemos traído algunas curiosidades pequeñas.\"\nAbrió la palma para mostrar un reloj de bolsillo finamente elaborado. Su caja estaba grabada con un gran árbol, cuyo follaje rodeaba una luna luminosa — una vista familiar para Fushu — aunque bajo las ramas se veían aleros y pasadizos cubiertos que ella no reconocía, pertenecientes al siglo que había pasado sin ella.\nCon un suave clic, la mujer abrió la caja, mostrando las manecillas en movimiento — segundos, minutos, horas — todas marcando el tiempo con precisión. Ajustó la corona con destreza. \"Nuestros clientes suelen quejarse de que poner la hora es complicado, así que añadimos algunas mejoras a este modelo. Me pregunto si la gente de Puerto de las Brumas — ¡oh!\"\nDe algún modo, las manecillas comenzaron a girar hacia atrás. \"Lo siento muchísimo\", dijo, sonrojándose de vergüenza. \"Este debe estar defectuoso. Los demás funcionan perfectamente. Puedo traerle otro.\"\n\"No hace falta.\"\nLa mirada de Fushu permaneció fija en las manecillas que giraban hacia atrás.\n\"Prefiero esta\", dijo.\n\"¿Me la vendería?\"",
+          ContentES = "Fushu se sentó a bordo de la nave que la llevaba a casa.\nLa vestimenta de los viajeros ya no se parecía a nada de hace un siglo, e incluso la nave estaba construida con una complejidad desconocida en su tiempo.\n Entre los pasajeros había forasteros que hablaban en voz baja de su trabajo: comerciantes que transportaban mercancías desde Luca para comerciar en Puerto de las Brumas.\n Parecían bien familiarizados con Huaxu. Cuando su charla de negocios se apagaba, sus voces se volvían relatos del camino.\n Hablaban del paisaje de Puerto de las Brumas, más hermoso que cualquier cosa en Haojing, y de planes para ir de excursión juntos cuando el tiempo lo permitiera. Uno mencionó haber visto un Pinzón Esmeralda pasar sobre un valle. Otro se rió y la corrigió, diciendo que los Pinzones Esmeralda solo planean, pues sus pesadas plumas de la cola hacen imposible un vuelo real. Luego su conversación derivó a Primavera Eterna y a cómo, durante la temporada de festivales, la propietaria Zhiliu enviaba lujosas cajas de regalo a sus socios, cada una con una moneda conmemorativa de oro. Un hombre cercano comentó con una risa suave que prefería las tiras curadas de Petit Jabalí que contenía, un acompañante ideal para las largas millas de viaje.\nFushu escuchaba en silencio, atraída a pesar de sí misma. Sus palabras le resultaban a la vez extrañas y familiares.\n Sus pensamientos se dirigieron hacia el borde desgastado de la memoria. ¿Había ella, hace un siglo, visto un Pinzón Esmeralda planear por el cielo? ¿Había recorrido todas las calles y callejones de Puerto de las Brumas, observando pasar sus estaciones? Y los bocadillos que había apreciado de niña, ¿eran los mismos de los que hablaban estos viajeros? ¿Eran picantes, dulces o salados?\nQuizá sí; quizá no. Ya no podía decirlo.\nMuchas de sus memorias se habían vuelto difusas. Como huellas presionadas en la arena, incluso los rastros más claros se aplastan cuando la marea del tiempo los barre, dejando la orilla lisa y haciéndola dudar del camino que alguna vez recorrió.\n Se sentó en tranquila reflexión, insegura y pensativa por igual, y la pregunta surgió sin invitación: Quizá por eso regreso a Puerto de las Brumas, por eso debo dirigir mis pasos hacia el Pabellón de lo Efímero.\n Quizá su mirada se demoró demasiado en los comerciantes, pues pronto la notaron y la miraron con curiosidad. Una de las mujeres de negocios, vestida con moda extranjera, sonrió y se acercó a ella. \"Su atuendo es encantador. Solo he visto ropa así en los libros de historia de Huaxu, así que no pudimos evitar mirar. Es un placer viajar con una dama tan hermosa. Si no le importa que lo pregunte, ¿también se dirige al Puerto de las Brumas?\"\nFushu guardó silencio por un momento antes de responder suavemente: \"Yo viví allí una vez.\"\nLa mujer inhaló ligeramente, fingiendo sorpresa. \"¿De verdad? Qué coincidencia. Nos dirigimos a Puerto de las Brumas por negocios. Además de licores y cristalería, hemos traído algunas curiosidades pequeñas.\"\n Abrió la palma para mostrar un reloj de bolsillo finamente elaborado. Su caja estaba grabada con un gran árbol, cuyo follaje rodeaba una luna luminosa — una vista familiar para Fushu — aunque bajo las ramas se veían aleros y pasadizos cubiertos que ella no reconocía, pertenecientes al siglo que había pasado sin ella.\n Con un suave clic, la mujer abrió la caja, mostrando las manecillas en movimiento — segundos, minutos, horas — todas marcando el tiempo con precisión. Ajustó la corona con destreza. \"Nuestros clientes suelen quejarse de que poner la hora es complicado, así que añadimos algunas mejoras a este modelo. Me pregunto si la gente de Puerto de las Brumas — ¡oh!\"\n De algún modo, las manecillas comenzaron a girar hacia atrás. \"Lo siento muchísimo\", dijo, sonrojándose de vergüenza. \"Este debe estar defectuoso. Los demás funcionan perfectamente. Puedo traerle otro.\"\n \"No hace falta.\"\n La mirada de Fushu permaneció fija en las manecillas que giraban hacia atrás.\n \"Prefiero esta\", dijo.\n \"¿Me la vendería?\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010401"
         },
         UI_CHAR_DATA_TEXT_24010402 = {
-          ContentES = "Fufeng y yo éramos gemelas, idénticas en todo lo visible.\nY siempre he… resentido ese hecho en silencio. Aunque algún día los ríos corrieran hacia atrás, los cielos se derrumbaran y el Señor Dragón Argento apartara Su mirada del mundo, dudo que alguna vez pudiera aceptarlo.\nEn cuanto al porqué… no es una historia breve.\nFufeng poseía un don innato para provocarme; eso jamás cambió, desde nuestros primeros años. Mucho antes de concebir sus ideas heterodoxas, su diversión favorita era imitarme. Hiciera yo lo que hiciera, ella lo copiaba — y podía hacerlo a la perfección si así lo quería. Incluso nuestros padres no podían distinguirnos.\nEso por sí solo no me enfurecía; si acaso, me complacía. Para soportar la miasma extraída de los enfermos, una Zhuyou debe vivir con disciplina: días ordenados, dieta medida, hábitos constantes. Yo seguía esas reglas con fidelidad. Fufeng, en cambio, se deleitaba en engatusar a los mayores, un dulce más, un poco menos de entrenamiento, un instante más bajo las mantas.\nA menudo pensaba que, si de verdad pudiera reflejarme y convertirse en otra Zhuyou correcta y diligente, sería un alivio para todos.\nNunca expresé esos pensamientos, pero sospecho que Fufeng, con la extraña intuición que comparten los gemelos, los percibía igualmente. ¿De qué otro modo podría equivocarse siempre \"por accidente\" al imitarme, creando versiones de \"Fushu\" que jamás habían existido? \"Fushu cometiendo errores\". \"Fushu eludiendo sus deberes\". \"Fushu torpe y necia\". Calumnias sin fundamento y desesperantes.\nA la gente le gusta decir que los gemelos son espejos el uno del otro. Pero el mío era un espejo deformado, que solo reflejaba parodias absurdas de mí, aunque yo jamás hubiera actuado así en realidad.\nEn represalia, una vez intenté imitarla. Imité su postura torpe durante las lecciones de combate, cuando no lograba mantener la apertura y el instructor la presionaba hacia abajo hasta hacerla llorar. Imité sus movimientos descompuestos cuando se negaba a levantarse, revolviéndose en la cama con la misma despreocupación imprudente que siempre mostraba. Imité su lucha con el Arte de lo Efímero, logrando convocar apenas unos pocos copos de nieve delgados tras un largo esfuerzo, con los hombros hundiéndose en la derrota.\nY sin embargo, aunque recuerdo cada uno de esos momentos con absoluta claridad, nunca pude reproducirlos como ella los vivía: con su risa sin freno, sus lágrimas sin reserva, su emoción sin defensas.\nCada uno de mis intentos no fue más que esto: \"una Fushu ligeramente inquieta\", \"una Fushu un poco rígida\", \"una Fushu simplemente demasiado dura consigo misma\".\nNuestros padres no podían distinguir cuando Fufeng fingía ser yo, pero me reconocían de inmediato cada vez que yo fingía ser ella.\nUna vez les pregunté por qué. Dijeron: \"Fushu, eres una Zhuyou demasiado correcta. Tu hermana… todavía es solo una niña\".\nEn aquel entonces acepté esas palabras como un elogio evidente. Yo era quien se parecía a lo que una Zhuyou debía ser: la más cercana a ese honor, a esa responsabilidad.\nMi hermana, aún demasiado joven de espíritu para semejante llamado, no podía soportar su peso. Pero yo sí. Incluso llegué a creer que podía cargar también con el suyo. Si ella no estaba hecha para los deberes de una Zhuyou, entonces la labor de sanar todas las vidas podía recaer únicamente sobre mí.\nEn retrospectiva, quizá todo comenzó con perder —de forma absoluta e irrevocable— en aquel juego infantil de imitación. Y en algún intento enterrado de remediar el escozor de esa derrota, busqué la victoria en el ámbito en el que creía ser más fuerte: en ser una Zhuyou correcta.\nEse pensamiento —puedo cargar con esto yo sola— echó raíces como una semilla. Y el día en que corté todo lazo con Fufeng, brotó de la tierra, se enredó en mí y jamás aflojó su agarre. No hasta el día en que morí.",
+          ContentES = "Fufeng y yo éramos gemelas, idénticas en todo lo visible.\n Y siempre he… resentido ese hecho en silencio. Aunque algún día los ríos corrieran hacia atrás, los cielos se derrumbaran y el Señor Dragón Argento apartara Su mirada del mundo, dudo que alguna vez pudiera aceptarlo.\nEn cuanto al porqué… no es una historia breve.\nFufeng poseía un don innato para provocarme; eso jamás cambió, desde nuestros primeros años. Mucho antes de concebir sus ideas heterodoxas, su diversión favorita era imitarme. Hiciera yo lo que hiciera, ella lo copiaba — y podía hacerlo a la perfección si así lo quería. Incluso nuestros padres no podían distinguirnos.\nEso por sí solo no me enfurecía; si acaso, me complacía. Para soportar la miasma extraída de los enfermos, una Zhuyou debe vivir con disciplina: días ordenados, dieta medida, hábitos constantes. Yo seguía esas reglas con fidelidad. Fufeng, en cambio, se deleitaba en engatusar a los mayores, un dulce más, un poco menos de entrenamiento, un instante más bajo las mantas.\nA menudo pensaba que, si de verdad pudiera reflejarme y convertirse en otra Zhuyou correcta y diligente, sería un alivio para todos.\nNunca expresé esos pensamientos, pero sospecho que Fufeng, con la extraña intuición que comparten los gemelos, los percibía igualmente. ¿De qué otro modo podría equivocarse siempre \"por accidente\" al imitarme, creando versiones de \"Fushu\" que jamás habían existido? \"Fushu cometiendo errores\". \"Fushu eludiendo sus deberes\". \"Fushu torpe y necia\". Calumnias sin fundamento y desesperantes.\nA la gente le gusta decir que los gemelos son espejos el uno del otro. Pero el mío era un espejo deformado, que solo reflejaba parodias absurdas de mí, aunque yo jamás hubiera actuado así en realidad.\nEn represalia, una vez intenté imitarla. Imité su postura torpe durante las lecciones de combate, cuando no lograba mantener la apertura y el instructor la presionaba hacia abajo hasta hacerla llorar. Imité sus movimientos descompuestos cuando se negaba a levantarse, revolviéndose en la cama con la misma despreocupación imprudente que siempre mostraba. Imité su lucha con el Arte de lo Efímero, logrando convocar apenas unos pocos copos de nieve delgados tras un largo esfuerzo, con los hombros hundiéndose en la derrota.\nY sin embargo, aunque recuerdo cada uno de esos momentos con absoluta claridad, nunca pude reproducirlos como ella los vivía: con su risa sin freno, sus lágrimas sin reserva, su emoción sin defensas.\nCada uno de mis intentos no fue más que esto: \"una Fushu ligeramente inquieta\", \"una Fushu un poco rígida\", \"una Fushu simplemente demasiado dura consigo misma\".\nNuestros padres no podían distinguir cuando Fufeng fingía ser yo, pero me reconocían de inmediato cada vez que yo fingía ser ella.\nUna vez les pregunté por qué. Dijeron: \"Fushu, eres una Zhuyou demasiado correcta. Tu hermana… todavía es solo una niña\".\nEn aquel entonces acepté esas palabras como un elogio evidente. Yo era quien se parecía a lo que una Zhuyou debía ser: la más cercana a ese honor, a esa responsabilidad.\nMi hermana, aún demasiado joven de espíritu para semejante llamado, no podía soportar su peso. Pero yo sí. Incluso llegué a creer que podía cargar también con el suyo. Si ella no estaba hecha para los deberes de una Zhuyou, entonces la labor de sanar todas las vidas podía recaer únicamente sobre mí.\nEn retrospectiva, quizá todo comenzó con perder —de forma absoluta e irrevocable— en aquel juego infantil de imitación. Y en algún intento enterrado de remediar el escozor de esa derrota, busqué la victoria en el ámbito en el que creía ser más fuerte: en ser una Zhuyou correcta.\nEse pensamiento —puedo cargar con esto yo sola— echó raíces como una semilla. Y el día en que corté todo lazo con Fufeng, brotó de la tierra, se enredó en mí y jamás aflojó su agarre. No hasta el día en que morí.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010402"
         },
         UI_CHAR_DATA_TEXT_24010403 = {
-          ContentES = "Cuando la madre de Fushu alcanzó su quietud final, Fushu estaba tomando su descanso del mediodía.\nLos Zhuyou vivían vidas breves, por lo que cuidaban su fuerza con gran esmero: se levantaban con el sol, descansaban al caer, mantenían su respiración tranquila y el corazón en paz.\nUna siesta ligera de dos cuartos al mediodía era una parte fija de su rutina diaria.\nFushu siempre seguía las reglas. Fufeng, libre y despreocupada como era, rara vez lo hacía. Sin embargo, incluso ella cedía ante la mirada severa de su madre. A los diez, lo peor que hacía era picotear su comida, dar vueltas en la cama cuando debería dormir, o escabullirse a jugar donde ni madre ni hermana podían encontrarla.\nEse día no fue diferente.\nCuando sacudieron a Fushu para despertarla, sintió un destello de irritación, pero la ira dañaba el espíritu, y violar los \"Trece Máximos del Cuidado Vital\" de la familia era impensable. Contuvo el impulso y simplemente preguntó por qué Fufeng la había molestado.\nEl rostro de Fufeng había perdido todo color, con sudor frío corriendo por sus sienes. No dijo nada; solo agarró la mano de Fushu y la arrastró por el pasillo serpenteante. Fushu reconoció esa expresión al instante, no solo miedo, sino desconcierto. Como un zorro agotado, con la trampa delante y los sabuesos detrás, un ave luchando entre sus fauces y sus crías esperando indefensas en el nido, sin lugar a dónde huir, sin dónde esconderse. Tal criatura debe sentirse exactamente como Fufeng se sentía ahora: temblando, acorralada, perdida.\n¿Qué podría aterrorizar incluso a Fufeng, que se reía incluso durante una severa reprimenda?\nFushu se mordió el labio inferior.\nSiempre había creído que afrontaría tales momentos con calma. Desde la infancia temprana, había comprendido el destino que aguardaba a una Zhuyou.\nVivía según las reglas, sin jamás considerar la idea de resistirse al designio del Señor Dragón Argento. Si había entrado al mundo en silenciosa aceptación, debía dejarlo de la misma manera.\nLas flores florecen y caen. La luna crece y mengua. Los sanados siguen viviendo; quienes los salvan pagan el precio. Tal era la voluntad de lo Divino, y tal había sido el camino de todas las edades. ¿Qué, entonces, había que temer?\nCuando tenía cinco años, su padre murió ante sus ojos, consumido como una lámpara cuyo aceite se había agotado. Se había creído valiente. Pero en verdad, sentía como si su alma hubiera sido arrancada de su cuerpo. Con los ojos abiertos, se obligó a permanecer quieta, recorriendo las líneas de la palma de su padre mientras murmuraba casualmente, como si hablara de los asuntos diarios más triviales: \"Tu padre tiene debilidad por un buen trago. Cuando llegue mi aniversario de muerte, recuerda verter una jarra de buen vino en mi tumba.\"\nSu tono era irónico, casi juguetón. Solo más tarde Fushu se dio cuenta: Fufeng había heredado eso de él.\nLa sangre oscurecida comenzó a filtrarse por las aperturas de su rostro. Por inútil que supiera que era, todavía intentó con todas sus fuerzas limpiarla, pero no salía. Entonces la luz del sol atravesó la ventana, convirtiendo esa sangre mancillada en un dorado cegador, un último tributo a un gran Zhuyou.\nHabía pensado que enfrentaría tales momentos con calma.\nSu madre, siempre estricta, ahora estaba encorvada bajo el sol abrasador, sosteniendo una taza de té fuerte. Un paquete de papel estaba abierto a su lado, con más de una docena de pasteles. Probaba cada uno con concentración, migas de sésamo adheridas a sus labios.\nFushu nunca la había visto tan a gusto. Tampoco la había visto sonreír, apenada como un niño sorprendido robando dulces: \"Ah. Me atrapaste.\"\nFushu observó cómo los ojos de su madre se volvían lentamente vidriosos, aunque la mujer parecía no darse cuenta. Murmuraba suavemente: \"El shortbread de nuez está demasiado seco... raspa la garganta. Los pasteles de almendra... nunca me han gustado mucho. Los pasteles de loto son crujientes, pero solo apariencia, nada de sustancia. Después de todos estos años, todavía prefiero los bizcochos de azúcar. Saben igual que cuando era niña.\"\nSe limpió las migas de las manos, reunió a sus dos hijos en su regazo y miró hacia las montañas y los pájaros a lo lejos. Fufeng miraba fijamente al sol del mediodía, negándose a parpadear hasta estornudar una y otra vez.\nFushu, mientras tanto, apretó su manga y habló suavemente a su madre, cuyas uñas ya se habían afilado más allá de la forma humana: \"Madre... no se preocupe. Me comportaré, como siempre lo he hecho. Cuidaré de Fufeng. Mantendremos este lugar... tal como usted y papá lo hicieron.\" Esta vez no derramó lágrimas. Tampoco sintió miedo. A diferencia de su hermana, que solo deseaba negar lo que estaba sucediendo, Fushu quería que su madre se fuera sin cargas.\nPero la mujer solo sonrió. No respondió a Fushu. En cambio, preguntó: \"Cariño... ¿cuál pastel te gusta más?\"\nFushu se quedó paralizada. No sabía cómo responder, una vida vivida bajo estrictas reglas la había dejado casi sin memoria de tales dulces.\nSu madre no la presionó. Su voz ya se quebraba, y estas fueron las últimas palabras que pronunció:\n\"Olvida todo eso. Vivid vuestras vidas... de la manera que realmente desee vuestro corazón.\"",
+          ContentES = "Cuando la madre de Fushu alcanzó su quietud final, Fushu estaba tomando su descanso del mediodía.\nLos Zhuyou vivían vidas breves, por lo que cuidaban su fuerza con gran esmero: se levantaban con el sol, descansaban al caer, mantenían su respiración tranquila y el corazón en paz.\n Una siesta ligera de dos cuartos al mediodía era una parte fija de su rutina diaria.\n Fushu siempre seguía las reglas. Fufeng, libre y despreocupada como era, rara vez lo hacía. Sin embargo, incluso ella cedía ante la mirada severa de su madre. A los diez, lo peor que hacía era picotear su comida, dar vueltas en la cama cuando debería dormir, o escabullirse a jugar donde ni madre ni hermana podían encontrarla.\nEse día no fue diferente.\nCuando sacudieron a Fushu para despertarla, sintió un destello de irritación, pero la ira dañaba el espíritu, y violar los \"Trece Máximos del Cuidado Vital\" de la familia era impensable. Contuvo el impulso y simplemente preguntó por qué Fufeng la había molestado.\nEl rostro de Fufeng había perdido todo color, con sudor frío corriendo por sus sienes. No dijo nada; solo agarró la mano de Fushu y la arrastró por el pasillo serpenteante. Fushu reconoció esa expresión al instante, no solo miedo, sino desconcierto. Como un zorro agotado, con la trampa delante y los sabuesos detrás, un ave luchando entre sus fauces y sus crías esperando indefensas en el nido, sin lugar a dónde huir, sin dónde esconderse. Tal criatura debe sentirse exactamente como Fufeng se sentía ahora: temblando, acorralada, perdida.\n¿Qué podría aterrorizar incluso a Fufeng, que se reía incluso durante una severa reprimenda?\n Fushu se mordió el labio inferior.\nSiempre había creído que afrontaría tales momentos con calma. Desde la infancia temprana, había comprendido el destino que aguardaba a una Zhuyou.\n Vivía según las reglas, sin jamás considerar la idea de resistirse al designio del Señor Dragón Argento. Si había entrado al mundo en silenciosa aceptación, debía dejarlo de la misma manera.\n Las flores florecen y caen. La luna crece y mengua. Los sanados siguen viviendo; quienes los salvan pagan el precio. Tal era la voluntad de lo Divino, y tal había sido el camino de todas las edades. ¿Qué, entonces, había que temer?\nCuando tenía cinco años, su padre murió ante sus ojos, consumido como una lámpara cuyo aceite se había agotado. Se había creído valiente. Pero en verdad, sentía como si su alma hubiera sido arrancada de su cuerpo. Con los ojos abiertos, se obligó a permanecer quieta, recorriendo las líneas de la palma de su padre mientras murmuraba casualmente, como si hablara de los asuntos diarios más triviales: \"Tu padre tiene debilidad por un buen trago. Cuando llegue mi aniversario de muerte, recuerda verter una jarra de buen vino en mi tumba.\"\nSu tono era irónico, casi juguetón. Solo más tarde Fushu se dio cuenta: Fufeng había heredado eso de él.\n La sangre oscurecida comenzó a filtrarse por las aperturas de su rostro. Por inútil que supiera que era, todavía intentó con todas sus fuerzas limpiarla, pero no salía. Entonces la luz del sol atravesó la ventana, convirtiendo esa sangre mancillada en un dorado cegador, un último tributo a un gran Zhuyou.\nHabía pensado que enfrentaría tales momentos con calma.\n Su madre, siempre estricta, ahora estaba encorvada bajo el sol abrasador, sosteniendo una taza de té fuerte. Un paquete de papel estaba abierto a su lado, con más de una docena de pasteles. Probaba cada uno con concentración, migas de sésamo adheridas a sus labios.\nFushu nunca la había visto tan a gusto. Tampoco la había visto sonreír, apenada como un niño sorprendido robando dulces: \"Ah. Me atrapaste.\"\nFushu observó cómo los ojos de su madre se volvían lentamente vidriosos, aunque la mujer parecía no darse cuenta. Murmuraba suavemente: \"El shortbread de nuez está demasiado seco... raspa la garganta. Los pasteles de almendra... nunca me han gustado mucho. Los pasteles de loto son crujientes, pero solo apariencia, nada de sustancia. Después de todos estos años, todavía prefiero los bizcochos de azúcar. Saben igual que cuando era niña.\"\nSe limpió las migas de las manos, reunió a sus dos hijos en su regazo y miró hacia las montañas y los pájaros a lo lejos. Fufeng miraba fijamente al sol del mediodía, negándose a parpadear hasta estornudar una y otra vez.\nFushu, mientras tanto, apretó su manga y habló suavemente a su madre, cuyas uñas ya se habían afilado más allá de la forma humana: \"Madre... no se preocupe. Me comportaré, como siempre lo he hecho. Cuidaré de Fufeng. Mantendremos este lugar... tal como usted y papá lo hicieron.\" Esta vez no derramó lágrimas. Tampoco sintió miedo. A diferencia de su hermana, que solo deseaba negar lo que estaba sucediendo, Fushu quería que su madre se fuera sin cargas.\nPero la mujer solo sonrió. No respondió a Fushu. En cambio, preguntó: \"Cariño... ¿cuál pastel te gusta más?\"\nFushu se quedó paralizada. No sabía cómo responder, una vida vivida bajo estrictas reglas la había dejado casi sin memoria de tales dulces.\n Su madre no la presionó. Su voz ya se quebraba, y estas fueron las últimas palabras que pronunció:\n\"Olvida todo eso. Vivid vuestras vidas... de la manera que realmente desee vuestro corazón.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010403"
         },
         UI_CHAR_DATA_TEXT_24010404 = {
@@ -73681,7 +74807,15 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_31010202 = {
           ContentES = "Aunque Lynn goza ahora de gran confianza en la Legión, al principio no era así. Acostumbrada a su soledad y a su comportamiento espabilado, destacaba como una forastera entre los soldados entrenados en la academia militar. Incluso corrían rumores de que había asesinado brutalmente a compañeros de la Legión y se había infiltrado en la 13.ª Legión por todos los medios. Estos rumores ambiguos alimentaron el resentimiento contra ella con el tiempo. Dondequiera que Lynn iba, oía palabras frías y burlas. \"¿Lynn? ¡Ay, esa escoria oportunista! Dicen que asesinó a sus propios camaradas...\"",
           TextMapId = "UI_CHAR_DATA_TEXT_31010202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_31010203",
+    MaxKey = "UI_CHAR_DATA_TEXT_51010204",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_31010203 = {
           ContentES = "Mientras los niños Solarianos del Imperio aún cursaban la secundaria, Lynn ya se había incorporado al mercado laboral. Había trabajado en las minas recolectando Phoxenes, cargado barriles en tabernas y servido como criada en casas adineradas. Más tarde, se convirtió en Phoxcazadora, una asesina a sueldo. Su excepcional talento y refinadas habilidades le formaron rápidamente una reputación, y cada vez más clientes acudían a ella con encargos. Estos encargos evolucionaron desde tareas de caza mundanas hasta operaciones cada vez más encubiertas. Algunos incluso se saltaban Los Asfódelos, invitando a Lynn a encargarse directamente de algunos \"trabajos privados\".\nY así, durante los dos años que transcurrieron entre los dieciocho y los veinte, Lynn fue conocida públicamente como \"mensajera\". Noche tras noche, recibía \"cartas\" de sus empleadores en los carruajes dorados que llegaban del centro de la ciudad. Lynn cumplía con los cañones de sus armas los anhelos intensos, fervientes y a veces casi desquiciados de sus empleadores. Luego, antes del amanecer, emprendía su viaje de \"reparto\", regresando después de muchos días, resistiendo al viento y la nieve en el proceso.\nEn los recuerdos de Camilla Scarlet, la joven Lynn siempre entraba a la taberna al anochecer, sacudiéndose los copos de nieve de la capa. Compraba la bebida más barata, se sentaba sola junto a la ventana y permanecía en silencio hasta la hora de cerrar. En una rara ocasión, Lynn empezó a hablar con Camilla y le pidió una toalla.\n\"No quiero que mi familia me vea\", susurró suavemente, \"Tengo… algo en la cara\".\nCamilla miró la mancha roja oscura en su rostro y frunció el ceño. Tenía un olfato agudo y podía detectar el penetrante olor que emanaba de la mancha.\n\"Gracias\", dijo Lynn mientras aceptaba la toalla que Camilla le tendía. Su rostro helado se iluminó con una leve sonrisa, y luego desapareció entre el viento y la nieve.",
           TextMapId = "UI_CHAR_DATA_TEXT_31010203"
@@ -73723,7 +74857,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_31010403"
         },
         UI_CHAR_DATA_TEXT_31010404 = {
-          ContentES = "Al regresar a Lago Glacial, Lynn vio que todo en su pueblo natal seguía igual.\nCerca de la estatua familiar en la pequeña plaza, grupos de dos o tres niños jugaban con piedritas. A Lynn no le gustaban muchos los niños, pero el rostro inocente de una niña le provocó una extraña familiaridad. Lynn extendió la mano y le preguntó su nombre.\nLa niña desordenada no respondió. Atraída por el extraño rostro de Lynn, le preguntó:\n—¿Quién eres? ¡Nunca te había visto!\nSus ojos llorosos contemplaron el uniforme finamente confeccionado de Lynn y la pulida pistola que llevaba en la cadera. Llena de asombro y curiosidad, extendió la mano y tocó el brazalete del brazo de Lynn. La inocencia del gesto le recordó a Lynn su propia actitud intrépida de niña. Intentó esbozar una sonrisa, algo a lo que no estaba acostumbrada.\nSin embargo, el momento fue interrumpido repentinamente por gritos lejanos. Una joven se apresuró a apartar a la niña de Lynn. Retrocediendo unos pasos, hizo repetidas reverencias con una mezcla de miedo y respeto, encogiéndose y bajando la voz:\n—Lo siento, oficial, no entiende. Le pido disculpas por cualquier ofensa. ¡Por favor, perdónela!\nEl repentino giro de los acontecimientos dejó a Lynn momentáneamente atónita mientras observaba a la mujer. De sus rostros demacrados y pálidos, un fragmento del pasado resurgió gradualmente en su memoria. La madre de esta niña no era otra que una amiga con la que solía jugar en la calle.\nLa alegría del reencuentro tras una larga separación atravesó el corazón de Lynn, pero la vieja amiga, arrodillada ante ella, sumisa y temblorosa, le impidió pronunciar palabras alegres de reencuentro. Estaban al alcance de la mano, pero Lynn carecía de fuerzas para ayudar a su amiga a ponerse de pie. En el silencio sofocante, Lynn solo logró pronunciar unas palabras de perdón:\n—Está bien…\nSe giró presa del pánico al oír a la mujer reprendiendo a su hija y a la niña llorar. El sonido se sintió como innumerables agujas diminutas atravesando el corazón de Lynn.",
+          ContentES = "Al regresar a Lago Glacial, Lynn vio que todo en su pueblo natal seguía igual.\nCerca de la estatua familiar en la pequeña plaza, grupos de dos o tres niños jugaban con piedritas. A Lynn no le gustaban muchos los niños, pero el rostro inocente de una niña le provocó una extraña familiaridad. Lynn extendió la mano y le preguntó su nombre.\nLa niña desordenada no respondió. Atraída por el extraño rostro de Lynn, le preguntó:\n —¿Quién eres? ¡Nunca te había visto!\nSus ojos llorosos contemplaron el uniforme finamente confeccionado de Lynn y la pulida pistola que llevaba en la cadera. Llena de asombro y curiosidad, extendió la mano y tocó el brazalete del brazo de Lynn. La inocencia del gesto le recordó a Lynn su propia actitud intrépida de niña. Intentó esbozar una sonrisa, algo a lo que no estaba acostumbrada.\nSin embargo, el momento fue interrumpido repentinamente por gritos lejanos. Una joven se apresuró a apartar a la niña de Lynn. Retrocediendo unos pasos, hizo repetidas reverencias con una mezcla de miedo y respeto, encogiéndose y bajando la voz:\n —Lo siento, oficial, no entiende. Le pido disculpas por cualquier ofensa. ¡Por favor, perdónela!\nEl repentino giro de los acontecimientos dejó a Lynn momentáneamente atónita mientras observaba a la mujer. De sus rostros demacrados y pálidos, un fragmento del pasado resurgió gradualmente en su memoria. La madre de esta niña no era otra que una amiga con la que solía jugar en la calle.\nLa alegría del reencuentro tras una larga separación atravesó el corazón de Lynn, pero la vieja amiga, arrodillada ante ella, sumisa y temblorosa, le impidió pronunciar palabras alegres de reencuentro. Estaban al alcance de la mano, pero Lynn carecía de fuerzas para ayudar a su amiga a ponerse de pie. En el silencio sofocante, Lynn solo logró pronunciar unas palabras de perdón:\n —Está bien…\nSe giró presa del pánico al oír a la mujer reprendiendo a su hija y a la niña llorar. El sonido se sintió como innumerables agujas diminutas atravesando el corazón de Lynn.",
           TextMapId = "UI_CHAR_DATA_TEXT_31010404"
         },
         UI_CHAR_DATA_TEXT_31020101 = {
@@ -73819,7 +74953,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_31030105"
         },
         UI_CHAR_DATA_TEXT_31030201 = {
-          ContentES = "Enclavada en un rincón apartado de Río Escarlata, una destartalada y pequeña juguetería conocida como \"¡Pum-pum!\" se alza silenciosamente. Curiosamente, a diferencia de las típicas jugueterías que reciben a los primeros visitantes con las puertas abiertas, esta permanece firmemente cerrada, incluso durante el día.\nUnos niños particularmente curiosos se animaron a abrir la puerta y se llevaron juguetes peculiares, presumiblemente una recompensa por su valentía. Entre estos tesoros se encontraban caleidoscopios que deslumbraban, patos de madera que se movían y se contoneaban por el suelo, y el más intrigante de todos: una piruleta mágica. Al encenderse su cola, salía disparada con un silbido y estallaba en un magnífico fuego artificial, provocando vítores de los niños.\nPero aún más misterioso que los extravagantes juguetes era el propio dueño: Yale, un niño de baja estatura que parecía estar perpetuamente envuelto en un aura de enigma. Curiosamente, muchos afirmaron haber oído dos voces distintas que resonaban dentro de la tienda, lo que acentuó aún más el misterio que la rodeaba. Cuenta la leyenda que una noche sin luna, impulsados por una curiosidad irreprimible, un grupo de niños intrépidos se coló por una ventana apenas asegurada. Su aventura terminó abruptamente cuando huyeron de casa aterrorizados.\n\"La pelota... naranja... podía... hablar... y... me... gritó...\", relató un niño entre sollozos, luchando por recuperar el aliento entre las lágrimas.",
+          ContentES = "Enclavada en un rincón apartado de Río Escarlata, una destartalada y pequeña juguetería conocida como \"¡Pum-pum!\" se alza silenciosamente. Curiosamente, a diferencia de las típicas jugueterías que reciben a los primeros visitantes con las puertas abiertas, esta permanece firmemente cerrada, incluso durante el día.\n Unos niños particularmente curiosos se animaron a abrir la puerta y se llevaron juguetes peculiares, presumiblemente una recompensa por su valentía. Entre estos tesoros se encontraban caleidoscopios que deslumbraban, patos de madera que se movían y se contoneaban por el suelo, y el más intrigante de todos: una piruleta mágica. Al encenderse su cola, salía disparada con un silbido y estallaba en un magnífico fuego artificial, provocando vítores de los niños.\n Pero aún más misterioso que los extravagantes juguetes era el propio dueño: Yale, un niño de baja estatura que parecía estar perpetuamente envuelto en un aura de enigma. Curiosamente, muchos afirmaron haber oído dos voces distintas que resonaban dentro de la tienda, lo que acentuó aún más el misterio que la rodeaba. Cuenta la leyenda que una noche sin luna, impulsados por una curiosidad irreprimible, un grupo de niños intrépidos se coló por una ventana apenas asegurada. Su aventura terminó abruptamente cuando huyeron de casa aterrorizados.\n \"La pelota... naranja... podía... hablar... y... me... gritó...\", relató un niño entre sollozos, luchando por recuperar el aliento entre las lágrimas.",
           TextMapId = "UI_CHAR_DATA_TEXT_31030201"
         },
         UI_CHAR_DATA_TEXT_31030202 = {
@@ -73827,11 +74961,11 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_31030202"
         },
         UI_CHAR_DATA_TEXT_31030203 = {
-          ContentES = "\"Recientemente, ocurrió un grave accidente de incendio en los suburbios de Río Escarlata, que ha causado gran preocupación entre los ciudadanos. A continuación, el reporte detallado de este incendio.\nSegún se informa, en la madrugada del 13 de julio, hora local, el Instituto de Investigación Alquímica ubicado en la base de la 9.ª Legión en las afueras de Río Escarlata explotó súbitamente y se incendió. Según testigos, cuando ocurrió el incendio las llamas fueron feroces, el humo denso se elevó y el fuego se extendió rápidamente a los edificios cercanos, la situación en el lugar era extremadamente crítica. La 9.ª Legión llegó rápidamente al lugar y desplegó operaciones de rescate de emergencia, los residentes de las áreas circundantes también se organizaron espontáneamente para ayudar a evacuar personal y trasladar materiales. Después de un día y una noche de trabajo de rescate, el fuego ya está controlado, el reporte de víctimas de este desastre aún se está contabilizando. \nSegún la investigación preliminar, la causa del accidente fue que durante una investigación en La Academia Spathatoi de la 9.ª Legión, el personal relacionado operó descuidadamente causando la fuga de materiales peligrosos, que al encontrar una fuente de ignición explotaron y produjeron ondas expansivas de gran alcance. Actualmente ya se ha responsabilizado a varios miembros del personal relacionados con el accidente. \"\n——<I>El Diario de Río Escarlata</>, edición 1012, I",
+          ContentES = "\"Recientemente, ocurrió un grave accidente de incendio en los suburbios de Río Escarlata, que ha causado gran preocupación entre los ciudadanos. A continuación, el reporte detallado de este incendio.\nSegún se informa, en la madrugada del 13 de julio, hora local, el Instituto de Investigación Alquímica ubicado en la base de la 9.ª Legión en las afueras de Río Escarlata explotó súbitamente y se incendió. Según testigos, cuando ocurrió el incendio las llamas fueron feroces, el humo denso se elevó y el fuego se extendió rápidamente a los edificios cercanos, la situación en el lugar era extremadamente crítica. La 9.ª Legión llegó rápidamente al lugar y desplegó operaciones de rescate de emergencia, los residentes de las áreas circundantes también se organizaron espontáneamente para ayudar a evacuar personal y trasladar materiales. Después de un día y una noche de trabajo de rescate, el fuego ya está controlado, el reporte de víctimas de este desastre aún se está contabilizando. \nSegún la investigación preliminar, la causa del accidente fue que durante una investigación en La Academia Spathatoi de la 9.ª Legión, el personal relacionado operó descuidadamente causando la fuga de materiales peligrosos, que al encontrar una fuente de ignición explotaron y produjeron ondas expansivas de gran alcance. Actualmente ya se ha responsabilizado a varios miembros del personal relacionados con el accidente. \"\n— <I>El Diario de Río Escarlata</>, edición 1012, I",
           TextMapId = "UI_CHAR_DATA_TEXT_31030203"
         },
         UI_CHAR_DATA_TEXT_31030204 = {
-          ContentES = "Una vez, un psicólogo de gran renombre fue invitado a realizar una evaluación psicológica a los sujetos experimentales de La Academia Spathatoi. Por principios de confidencialidad, el doctor y el sujeto solo podían conversar separados por una tela blanca opaca. La voz algo tímida del niño llegó desde detrás de la tela blanca. Aunque él ya se esforzaba mucho por disimular, este médico aún podía notar que tenía cierto grado de trastorno del habla.\n—Desde ahora, diré una palabra, no pienses, dime la primera palabra que aparezca en tu mente.\n\"Bien, está bien.\"\n—Mañana.\n\"Ven-ventana.\"\n—Ropa.\n\"Blanco.\"\n—Experimento.\n\"Esperar.\"\n—Libertad.\n\"Pared.\"\n—Manzana.\n\"La mitad.\"\n—Yale.\n\"Buen niño.\"\n—La última, tu investigador, Jones.\nAl escuchar esta pregunta, el niño que antes respondía rápidamente de repente se quedó sin voz, la pluma del médico ocupado en anotar también se detuvo, inmediatamente después un rugido lleno de lucha y odio llegó a través de la cortina:\n\"¡Jones! ¡Él es un... maldito, bastardo!\"\nJusto cuando el doctor sospechaba que el sujeto presentaba riesgo de pérdida de control y se preparaba para reportar, después de unos gemidos de dolor, esa voz gentil, temerosa y algo tartamudeante volvió a transmitirse:\n\"Disculpe, señor, no escuché bien, ¿puede pre, preguntar otra vez?\"\nEste psicólogo suspiró aliviado en secreto, mientras repetía cautelosamente una vez más.\n—Tu investigador... Jones.\nLa voz del joven no tuvo ninguna vacilación:\n\"Padre.\"",
+          ContentES = "Una vez, un psicólogo de gran renombre fue invitado a realizar una evaluación psicológica a los sujetos experimentales de La Academia Spathatoi. Por principios de confidencialidad, el doctor y el sujeto solo podían conversar separados por una tela blanca opaca. La voz algo tímida del niño llegó desde detrás de la tela blanca. Aunque él ya se esforzaba mucho por disimular, este médico aún podía notar que tenía cierto grado de trastorno del habla.\n—Desde ahora, diré una palabra, no pienses, dime la primera palabra que aparezca en tu mente.\n \"Bien, está bien.\"\n —Mañana.\n \"Ven-ventana.\"\n —Ropa.\n \"Blanco.\"\n —Experimento.\n \"Esperar.\"\n —Libertad.\n \"Pared.\"\n —Manzana.\n \"La mitad.\"\n —Yale.\n \"Buen niño.\"\n —La última, tu investigador, Jones.\nAl escuchar esta pregunta, el niño que antes respondía rápidamente de repente se quedó sin voz, la pluma del médico ocupado en anotar también se detuvo, inmediatamente después un rugido lleno de lucha y odio llegó a través de la cortina:\n \"¡Jones! ¡Él es un... maldito, bastardo!\"\nJusto cuando el doctor sospechaba que el sujeto presentaba riesgo de pérdida de control y se preparaba para reportar, después de unos gemidos de dolor, esa voz gentil, temerosa y algo tartamudeante volvió a transmitirse:\n \"Disculpe, señor, no escuché bien, ¿puede pre, preguntar otra vez?\"\nEste psicólogo suspiró aliviado en secreto, mientras repetía cautelosamente una vez más.\n —Tu investigador... Jones.\n La voz del joven no tuvo ninguna vacilación:\n \"Padre.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_31030204"
         },
         UI_CHAR_DATA_TEXT_31030205 = {
@@ -73863,19 +74997,19 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_31030401"
         },
         UI_CHAR_DATA_TEXT_31030402 = {
-          ContentES = "\"Copia.\"\nYale aún recordaba la sensación de la primera vez que escuchó esa voz. Como si él mismo fuera una piedra arrojada al agua cristalina de un lago, despertó de golpe. Sin embargo, alrededor no había nada excepto las paredes blancas.\nEl hombre de bata blanca volvió a visitar con las piezas negras, otra vez la familiar orden de \"ensámblalas\", como en incontables recuerdos.\nYale volvió a tomar las piezas, acariciándolas. Pero esta vez, ya no se sentía perdido —sintió que sus manos parecían tener memoria, las piezas precisas en sus manos eran como los bloques de construcción más simples para niños, una por una fueron colocadas en su posición original, como un niño manipulando su juguete más familiar— como si Yale supiera instintivamente cómo ensamblarlas.\nLa última pieza también fue ensamblada perfectamente, emitiendo un sonido claro y agradable como una llave insertándose en una cerradura. Yale miró atontado esa pequeña cosa negra, hasta que la pluma del hombre de bata blanca cayó al suelo. Sus ojos siempre indiferentes brillaban con éxtasis, como un buitre hambriento viendo un cordero moribundo. Abrazó fuertemente a Yale, \"Excelente.\" Repetía una y otra vez, \"Lo lograste, excelente.\"\nYale finalmente se atrevió a hacer la pregunta que tenía en su corazón: \"¿Quién eres?\"\n\"Soy un investigador\", respondió el hombre, \"puedes llamarme señor Jones.\"\n\"Señor Jones. Investigador.\" Yale murmuró silenciosamente este nombre, \"Investigador. Señor Jones.\" Lo pensó una y otra vez, y preguntó: \"Entonces, ¿quién soy yo?\"\n\"Eres Yale\", respondió el señor Jones, \"eres mi obra.\"\nYale asintió, luego negó con la cabeza, medio entendiendo. En ese momento aún no sabía qué significaba exactamente \"obra.\"",
+          ContentES = "\"Copia.\"\n Yale aún recordaba la sensación de la primera vez que escuchó esa voz. Como si él mismo fuera una piedra arrojada al agua cristalina de un lago, despertó de golpe. Sin embargo, alrededor no había nada excepto las paredes blancas.\n El hombre de bata blanca volvió a visitar con las piezas negras, otra vez la familiar orden de \"ensámblalas\", como en incontables recuerdos.\n Yale volvió a tomar las piezas, acariciándolas. Pero esta vez, ya no se sentía perdido —sintió que sus manos parecían tener memoria, las piezas precisas en sus manos eran como los bloques de construcción más simples para niños, una por una fueron colocadas en su posición original, como un niño manipulando su juguete más familiar— como si Yale supiera instintivamente cómo ensamblarlas.\n La última pieza también fue ensamblada perfectamente, emitiendo un sonido claro y agradable como una llave insertándose en una cerradura. Yale miró atontado esa pequeña cosa negra, hasta que la pluma del hombre de bata blanca cayó al suelo. Sus ojos siempre indiferentes brillaban con éxtasis, como un buitre hambriento viendo un cordero moribundo. Abrazó fuertemente a Yale, \"Excelente.\" Repetía una y otra vez, \"Lo lograste, excelente.\"\n Yale finalmente se atrevió a hacer la pregunta que tenía en su corazón: \"¿Quién eres?\"\n \"Soy un investigador\", respondió el hombre, \"puedes llamarme señor Jones.\"\n \"Señor Jones. Investigador.\" Yale murmuró silenciosamente este nombre, \"Investigador. Señor Jones.\" Lo pensó una y otra vez, y preguntó: \"Entonces, ¿quién soy yo?\"\n \"Eres Yale\", respondió el señor Jones, \"eres mi obra.\"\n Yale asintió, luego negó con la cabeza, medio entendiendo. En ese momento aún no sabía qué significaba exactamente \"obra.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_31030402"
         },
         UI_CHAR_DATA_TEXT_31030403 = {
-          ContentES = "Antes de que Yale conociera el nombre de Oliver, su relación no era buena.\nPor un lado, era porque la voz que ocasionalmente aparecía en su cerebro tenía una actitud realmente poco amigable hacia él, incluso un niño solitario como Yale no podía sentir simpatía por ella. Por supuesto, solo decir \"poco amigable\" no era preciso. La actitud de la voz en su cerebro era terriblemente mala, no solo lo llamaba \"copia\" constantemente, sino que también mezclaba ocasionalmente algunas maldiciones venenosas y estridentes, como si Yale realmente hubiera hecho algo que dañara el cielo y la tierra, que ni siquiera el Mar Nebuloso podía lavar los pecados de su cuerpo. A veces Yale se enojaba tanto por las acusaciones falsas que le arrojaba, que quería decir algo para refutar, pero debido a su problema de tartamudeo, en cuanto abría la boca solo decía \"tú, tú, tú...\" sin parar. Como era de esperarse, Oliver solo se burlaría aún más sin piedad.\nY lo más importante, probablemente era la expresión que mostraba el señor Jones cuando se enteró de la existencia de la otra voz. Este hombre serio de mediana edad rara vez caía en la locura, agarraba los hombros tiernos del joven frente a él, temblando, temblando mientras clavaba con fuerza las puntas de los dedos en la carne del omóplato del joven.\n\"Escuchaste su voz, ¿verdad? ¡Lo escuchaste! ¿No es así? No puedes perder contra él, buen niño, mi tesoro, eres mi única obra, tienes que controlarlo, vencerlo, ¡y luego matarlo! ¿Escuchaste? ¡Habla! ¡Te estoy preguntando si escuchaste o no!\"\nEl rostro del hombre estaba lleno de obsesión retorcida, su frente presionaba contra la frente de Yale, la saliva de su boca se esparcía descontroladamente en la cara del joven. Esta sensación era muy desagradable. Hasta que más tarde el investigador le describió las definiciones de varias emociones, él vagamente entendió que esta emoción se llamaba miedo, un miedo extremadamente profundo. El confundido Yale no podía saber la razón del cambio del señor Jones, solo podía culpar secretamente a la extraña voz en su cerebro.\nAsí continuaron sin gustarse mutuamente durante mucho tiempo, hasta que el investigador puso un tocadiscos en la habitación de Yale.\nEl tocadiscos trajo colores distintos al blanco y negro a esta habitación, por eso a Yale le gustaba mucho. Cada noche esperaba con ansias qué tipo de disco sería puesto en esta máquina y qué tipo de música fluiría de ella. Mientras que Oliver era exactamente lo opuesto, odiaba el tocadiscos, o más bien odiaba el sonido de estática inevitable del tocadiscos, que hacía que Oliver se volviera más sensible e inquieto. Después de darse cuenta de esto, Yale tuvo una idea extraña —tal vez el dueño de la voz en su cerebro tenía miedo de ese sonido de estática. Y casualmente, Yale entendía la sensación de miedo, sabía lo mucho que quería escapar cuando tenía miedo. Así que, la siguiente vez que el investigador trajo un disco, Yale le impidió ponerlo en la máquina.\n\"¿Ya no te gusta este disco?\"\n\"Me, me gusta mucho, pero yo, yo no quiero escucharlo.\"\nEl niño que no sabía mentir no podía resolver la confusión del investigador, solo podía repetir sin parar su petición de no querer escuchar el disco, finalmente los investigadores se llevaron el disco de vuelta.\nSin las canciones relajantes del tocadiscos, Yale tardaba más en dormirse que antes. Entre sueños, escuchó un tarareo extraño pero familiar, la melodía tarareada era tranquila y suave, como un niño durmiendo pacíficamente en una cuna.",
+          ContentES = "Antes de que Yale conociera el nombre de Oliver, su relación no era buena.\n Por un lado, era porque la voz que ocasionalmente aparecía en su cerebro tenía una actitud realmente poco amigable hacia él, incluso un niño solitario como Yale no podía sentir simpatía por ella. Por supuesto, solo decir \"poco amigable\" no era preciso. La actitud de la voz en su cerebro era terriblemente mala, no solo lo llamaba \"copia\" constantemente, sino que también mezclaba ocasionalmente algunas maldiciones venenosas y estridentes, como si Yale realmente hubiera hecho algo que dañara el cielo y la tierra, que ni siquiera el Mar Nebuloso podía lavar los pecados de su cuerpo. A veces Yale se enojaba tanto por las acusaciones falsas que le arrojaba, que quería decir algo para refutar, pero debido a su problema de tartamudeo, en cuanto abría la boca solo decía \"tú, tú, tú...\" sin parar. Como era de esperarse, Oliver solo se burlaría aún más sin piedad.\n Y lo más importante, probablemente era la expresión que mostraba el señor Jones cuando se enteró de la existencia de la otra voz. Este hombre serio de mediana edad rara vez caía en la locura, agarraba los hombros tiernos del joven frente a él, temblando, temblando mientras clavaba con fuerza las puntas de los dedos en la carne del omóplato del joven.\n \"Escuchaste su voz, ¿verdad? ¡Lo escuchaste! ¿No es así? No puedes perder contra él, buen niño, mi tesoro, eres mi única obra, tienes que controlarlo, vencerlo, ¡y luego matarlo! ¿Escuchaste? ¡Habla! ¡Te estoy preguntando si escuchaste o no!\"\n El rostro del hombre estaba lleno de obsesión retorcida, su frente presionaba contra la frente de Yale, la saliva de su boca se esparcía descontroladamente en la cara del joven. Esta sensación era muy desagradable. Hasta que más tarde el investigador le describió las definiciones de varias emociones, él vagamente entendió que esta emoción se llamaba miedo, un miedo extremadamente profundo. El confundido Yale no podía saber la razón del cambio del señor Jones, solo podía culpar secretamente a la extraña voz en su cerebro.\n Así continuaron sin gustarse mutuamente durante mucho tiempo, hasta que el investigador puso un tocadiscos en la habitación de Yale.\n El tocadiscos trajo colores distintos al blanco y negro a esta habitación, por eso a Yale le gustaba mucho. Cada noche esperaba con ansias qué tipo de disco sería puesto en esta máquina y qué tipo de música fluiría de ella. Mientras que Oliver era exactamente lo opuesto, odiaba el tocadiscos, o más bien odiaba el sonido de estática inevitable del tocadiscos, que hacía que Oliver se volviera más sensible e inquieto. Después de darse cuenta de esto, Yale tuvo una idea extraña —tal vez el dueño de la voz en su cerebro tenía miedo de ese sonido de estática. Y casualmente, Yale entendía la sensación de miedo, sabía lo mucho que quería escapar cuando tenía miedo. Así que, la siguiente vez que el investigador trajo un disco, Yale le impidió ponerlo en la máquina.\n \"¿Ya no te gusta este disco?\"\n \"Me, me gusta mucho, pero yo, yo no quiero escucharlo.\"\n El niño que no sabía mentir no podía resolver la confusión del investigador, solo podía repetir sin parar su petición de no querer escuchar el disco, finalmente los investigadores se llevaron el disco de vuelta.\n Sin las canciones relajantes del tocadiscos, Yale tardaba más en dormirse que antes. Entre sueños, escuchó un tarareo extraño pero familiar, la melodía tarareada era tranquila y suave, como un niño durmiendo pacíficamente en una cuna.",
           TextMapId = "UI_CHAR_DATA_TEXT_31030403"
         },
         UI_CHAR_DATA_TEXT_31030404 = {
-          ContentES = "Yale no intentó liberarse de las correas negras de la mesa de operaciones, ni siquiera entendía por qué era necesario atarlo con estas correas resistentes, cuando claramente no tenía intención de resistirse.\nEn el suelo se esparcían docenas de archivos marcados con letras rojas confidenciales, y el investigador Jones se volvió loco otra vez cuando vio que Yale había leído estos archivos. Fijó bruscamente al joven en la mesa de operaciones y usó una jeringa para inyectar en el cuerpo de Yale el catalizador que solo se necesitaba usar en el experimento final de varios meses después.\n\"Niño malo desobediente, viste algo que no debías ver —quiero que lo mates inmediatamente, ¡ahora! ¡Mátalo!\" \nLos vasos sanguíneos de Yale parecían haber sido llenados con lava, su cuerpo también produjo un dolor insoportable, haciendo que el niño que normalmente hablaba en voz baja y suave también emitiera un lamento estridente. \n\nYale no intentó liberarse de las correas negras de la mesa de operaciones, ni siquiera entendía por qué era necesario atarlo con estas correas resistentes, cuando claramente no tenía intención de resistirse.\nEn el suelo se esparcían docenas de archivos marcados con letras rojas confidenciales, y el investigador Jones se volvió loco otra vez cuando vio que Yale había leído estos archivos. Fijó bruscamente al joven en la mesa de operaciones y usó una jeringa para inyectar en el cuerpo de Yale el catalizador que solo se necesitaba usar en el experimento final de varios meses después.\n\"Niño malo desobediente, viste algo que no debías ver —quiero que lo mates inmediatamente, ¡ahora! ¡Mátalo!\"\nLos vasos sanguíneos de Yale parecían haber sido llenados con lava, su cuerpo también produjo un dolor insoportable, haciendo que el niño que normalmente hablaba en voz baja y suave también emitiera un lamento estridente.\n\"Oye, copia.\"\nLa voz familiar pero extraña irrumpió en su mente, Yale abrió bruscamente los ojos, lo que se reflejó en sus ojos no era la mesa de operaciones, sino unos ojos tan tranquilos como los suyos —el dueño de la voz tenía exactamente la misma cara que Yale. Y bajo sus pies, había un mar de lava que se agitaba como sangre.\n\"¿Quién eres?\"\nLa otra persona no respondió, sino que decisivamente sujetó el cuello de Yale, una fuerza anormal bloqueó la respiración de Yale, quien comenzó a luchar sin control. En ese momento el dueño de esas manos pareció finalmente tener tiempo libre, y respondió lenta y rencorosamente:\n\"Soy Oliver... yo soy el verdadero dueño de este cuerpo, y tú solo eres una copia —deja de fingir, ya lo sabes.\"\nYale miró atontado los ojos de Oliver, recordando ese archivo confidencial titulado \"Experimento de personalidad controlada\". Esa pila de reportes registraba claramente el proceso del experimento, estaba llena de datos peligrosos sobre las pruebas de personalidad iniciales, pero el nombre registrado era Oliver, Oliver, Oliver, cada página que volteaba era Oliver.\nHasta la última página, el nombre de Yale apareció abruptamente en el reporte, anunciando el éxito del experimento de reemplazo de personalidad.\n—Yale, te convertirás en mi obra más perfecta.\nObra, así que este era el significado de obra. Una infancia feliz, recuerdos fuera del laboratorio, familiares queridos —la razón por la que estas cosas hermosas estaban en blanco no era porque Yale pensara que las había olvidado, sino porque nunca las había poseído.\n¿Quién era él realmente? Él era Yale, ¿quién era Yale? Ah, cierto, Yale era un tipo cobarde y despreciable, que solo sabía obedecer las órdenes del investigador, era una obra imperfecta, era un mal engendro que ocupaba el nido de otros.\nEsta vez, Yale decidió ayudar a ese pobre huevo de pájaro. Soltó las manos que agarraban firmemente a Oliver, como si quisiera hundirse en la lava, abrazar la muerte ardiente.\nLa asfixia esperada no llegó, Yale fue levantado bruscamente. Acompañando las maldiciones de Oliver, parecía que innumerables bombas explotaron en este espacio, un zumbido violento como balas atravesando ambos oídos, haciendo que el líquido en el cerebro se agitara.\nToda esa ira, inquietud, odio, todo brotó en el instante de la explosión, y acompañado del rugido se extinguió a regañadientes.\nYale levantó la cabeza para mirar a Oliver, cuya expresión aún no era amable, sintió que algo había cambiado silenciosamente, pero claramente nada había cambiado.\n\"¡Oye! Copia, en realidad hay una manera de que ambos sobrevivamos, ¿te animas?\"",
+          ContentES = "Yale no intentó liberarse de las correas negras de la mesa de operaciones, ni siquiera entendía por qué era necesario atarlo con estas correas resistentes, cuando claramente no tenía intención de resistirse.\nEn el suelo se esparcían docenas de archivos marcados con letras rojas confidenciales, y el investigador Jones se volvió loco otra vez cuando vio que Yale había leído estos archivos. Fijó bruscamente al joven en la mesa de operaciones y usó una jeringa para inyectar en el cuerpo de Yale el catalizador que solo se necesitaba usar en el experimento final de varios meses después.\n\"Niño malo desobediente, viste algo que no debías ver —quiero que lo mates inmediatamente, ¡ahora! ¡Mátalo!\" \nLos vasos sanguíneos de Yale parecían haber sido llenados con lava, su cuerpo también produjo un dolor insoportable, haciendo que el niño que normalmente hablaba en voz baja y suave también emitiera un lamento estridente. \n\nYale no intentó liberarse de las correas negras de la mesa de operaciones, ni siquiera entendía por qué era necesario atarlo con estas correas resistentes, cuando claramente no tenía intención de resistirse.\n En el suelo se esparcían docenas de archivos marcados con letras rojas confidenciales, y el investigador Jones se volvió loco otra vez cuando vio que Yale había leído estos archivos. Fijó bruscamente al joven en la mesa de operaciones y usó una jeringa para inyectar en el cuerpo de Yale el catalizador que solo se necesitaba usar en el experimento final de varios meses después.\n \"Niño malo desobediente, viste algo que no debías ver —quiero que lo mates inmediatamente, ¡ahora! ¡Mátalo!\"\n Los vasos sanguíneos de Yale parecían haber sido llenados con lava, su cuerpo también produjo un dolor insoportable, haciendo que el niño que normalmente hablaba en voz baja y suave también emitiera un lamento estridente.\n\"Oye, copia.\"\n La voz familiar pero extraña irrumpió en su mente, Yale abrió bruscamente los ojos, lo que se reflejó en sus ojos no era la mesa de operaciones, sino unos ojos tan tranquilos como los suyos —el dueño de la voz tenía exactamente la misma cara que Yale. Y bajo sus pies, había un mar de lava que se agitaba como sangre.\n \"¿Quién eres?\"\n La otra persona no respondió, sino que decisivamente sujetó el cuello de Yale, una fuerza anormal bloqueó la respiración de Yale, quien comenzó a luchar sin control. En ese momento el dueño de esas manos pareció finalmente tener tiempo libre, y respondió lenta y rencorosamente:\n \"Soy Oliver... yo soy el verdadero dueño de este cuerpo, y tú solo eres una copia —deja de fingir, ya lo sabes.\"\nYale miró atontado los ojos de Oliver, recordando ese archivo confidencial titulado \"Experimento de personalidad controlada\". Esa pila de reportes registraba claramente el proceso del experimento, estaba llena de datos peligrosos sobre las pruebas de personalidad iniciales, pero el nombre registrado era Oliver, Oliver, Oliver, cada página que volteaba era Oliver.\n Hasta la última página, el nombre de Yale apareció abruptamente en el reporte, anunciando el éxito del experimento de reemplazo de personalidad.\n —Yale, te convertirás en mi obra más perfecta.\nObra, así que este era el significado de obra. Una infancia feliz, recuerdos fuera del laboratorio, familiares queridos —la razón por la que estas cosas hermosas estaban en blanco no era porque Yale pensara que las había olvidado, sino porque nunca las había poseído.\n ¿Quién era él realmente? Él era Yale, ¿quién era Yale? Ah, cierto, Yale era un tipo cobarde y despreciable, que solo sabía obedecer las órdenes del investigador, era una obra imperfecta, era un mal engendro que ocupaba el nido de otros.\n Esta vez, Yale decidió ayudar a ese pobre huevo de pájaro. Soltó las manos que agarraban firmemente a Oliver, como si quisiera hundirse en la lava, abrazar la muerte ardiente.\n La asfixia esperada no llegó, Yale fue levantado bruscamente. Acompañando las maldiciones de Oliver, parecía que innumerables bombas explotaron en este espacio, un zumbido violento como balas atravesando ambos oídos, haciendo que el líquido en el cerebro se agitara.\n Toda esa ira, inquietud, odio, todo brotó en el instante de la explosión, y acompañado del rugido se extinguió a regañadientes.\n Yale levantó la cabeza para mirar a Oliver, cuya expresión aún no era amable, sintió que algo había cambiado silenciosamente, pero claramente nada había cambiado.\n \"¡Oye! Copia, en realidad hay una manera de que ambos sobrevivamos, ¿te animas?\"",
           TextMapId = "UI_CHAR_DATA_TEXT_31030404"
         },
         UI_CHAR_DATA_TEXT_31030405 = {
-          ContentES = "El dolor intenso trajo a Yale de vuelta a la realidad, las correas de sujeción en su cuerpo ya habían sido desatadas en algún momento. Yale lentamente levantó la cabeza para mirar a los ojos de Jones, los ojos de Jones llenos de venas rojas revelaban un éxtasis increíble.\nYale, quien nunca había mentido, tenía que engañar a Jones.\nSe acercó poco a poco a Jones, cada paso que daba era extremadamente difícil. Y cada vez que sus pasos se detenían, las lágrimas se deslizaban silenciosamente, trazando una pequeña vía láctea en el instituto de investigación sin luz del día.\nEl señor Jones parecía sonreír, seguramente pensaba que Yale lloraba por la muerte de Oliver, este cobarde sujeto experimental después de todo era un niño obediente, era una obra perfecta que no desobedecería órdenes.\nTal vez solo Yale en este mundo sabía por qué lloraba. Esta fue la primera vez que abrazó activamente a Jones, ese hombre imponente y temible ya no daba miedo.\n\"Maté a Oliver.\"\nYale sollozó aún más fuerte, lloró descontroladamente en los brazos de Jones, incluso sintió que Jones rara vez, gentilmente, le acarició la cabeza, como el padre que había imaginado.\nPero todo esto era frágil, aunque las manos de Jones fueran tan cálidas y gruesas, habían destruido personalmente sus vidas y la de Oliver en innumerables experimentos —era hora de alejarse de esas manos.\nYale sacó lo que ensamblaba todos los días —la cosa que Oliver llamaba microbomba. Solo tenía que presionarla contra el cuerpo de Jones, y luego escapar aprovechando el caos del fuego, podría ver el vasto mundo, ya no tendría que quedarse en este mundo blanco.\n\"Hazlo, Yale. Puedes llorar por la muerte de este hombre.\"\nEl gran fuego de la Academia de Alquimia ardía descontroladamente, las llamas se extendían rápidamente, el cielo nocturno se tiñó de un hermoso pero feroz rojo carmesí, hasta contaminar completamente todo el blanco.\nYale corrió con todas sus fuerzas, cambiando alegremente de cuerpo con Oliver, respirando a grandes bocanadas el aire fuera de la habitación blanca. El aire estaba lleno del olor del humo denso, Yale sabía que ese era el sabor del \"fuego\", acre pero dulce. Ya nadie los detenía, dejaron a Jones atrás, dejaron el laboratorio atrás, dejaron la Academia de Alquimia atrás.\nHasta que Yale cayó al suelo agotado, pero el paisaje deslumbrante lo hacía no querer cerrar los ojos, el viento de la libertad lo hacía fantasear con poder luchar para ponerse de pie.\nAntes de perder la conciencia, Yale escuchó otra vez la voz de Oliver, pero con un tono de calma que nunca había escuchado antes, anunciando que la placa de identificación en el cuerpo de Yale se había desprendido completamente.\n\"Desde ahora, Yale ya no es la obra de nadie.\"",
+          ContentES = "El dolor intenso trajo a Yale de vuelta a la realidad, las correas de sujeción en su cuerpo ya habían sido desatadas en algún momento. Yale lentamente levantó la cabeza para mirar a los ojos de Jones, los ojos de Jones llenos de venas rojas revelaban un éxtasis increíble.\n Yale, quien nunca había mentido, tenía que engañar a Jones.\n Se acercó poco a poco a Jones, cada paso que daba era extremadamente difícil. Y cada vez que sus pasos se detenían, las lágrimas se deslizaban silenciosamente, trazando una pequeña vía láctea en el instituto de investigación sin luz del día.\n El señor Jones parecía sonreír, seguramente pensaba que Yale lloraba por la muerte de Oliver, este cobarde sujeto experimental después de todo era un niño obediente, era una obra perfecta que no desobedecería órdenes.\n Tal vez solo Yale en este mundo sabía por qué lloraba. Esta fue la primera vez que abrazó activamente a Jones, ese hombre imponente y temible ya no daba miedo.\n \"Maté a Oliver.\"\n Yale sollozó aún más fuerte, lloró descontroladamente en los brazos de Jones, incluso sintió que Jones rara vez, gentilmente, le acarició la cabeza, como el padre que había imaginado.\n Pero todo esto era frágil, aunque las manos de Jones fueran tan cálidas y gruesas, habían destruido personalmente sus vidas y la de Oliver en innumerables experimentos —era hora de alejarse de esas manos.\n Yale sacó lo que ensamblaba todos los días —la cosa que Oliver llamaba microbomba. Solo tenía que presionarla contra el cuerpo de Jones, y luego escapar aprovechando el caos del fuego, podría ver el vasto mundo, ya no tendría que quedarse en este mundo blanco.\n \"Hazlo, Yale. Puedes llorar por la muerte de este hombre.\"\nEl gran fuego de la Academia de Alquimia ardía descontroladamente, las llamas se extendían rápidamente, el cielo nocturno se tiñó de un hermoso pero feroz rojo carmesí, hasta contaminar completamente todo el blanco.\n Yale corrió con todas sus fuerzas, cambiando alegremente de cuerpo con Oliver, respirando a grandes bocanadas el aire fuera de la habitación blanca. El aire estaba lleno del olor del humo denso, Yale sabía que ese era el sabor del \"fuego\", acre pero dulce. Ya nadie los detenía, dejaron a Jones atrás, dejaron el laboratorio atrás, dejaron la Academia de Alquimia atrás.\n Hasta que Yale cayó al suelo agotado, pero el paisaje deslumbrante lo hacía no querer cerrar los ojos, el viento de la libertad lo hacía fantasear con poder luchar para ponerse de pie.\n Antes de perder la conciencia, Yale escuchó otra vez la voz de Oliver, pero con un tono de calma que nunca había escuchado antes, anunciando que la placa de identificación en el cuerpo de Yale se había desprendido completamente.\n \"Desde ahora, Yale ya no es la obra de nadie.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_31030405"
         },
         UI_CHAR_DATA_TEXT_32010101 = {
@@ -73997,15 +75131,7 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_32020304 = {
           ContentES = "La cicatriz en el rostro de Camilla fue hecha por su madre, quien usó el emblema familiar para golpearla. Camilla era demasiado pequeña para comprender lo que significaba. Todo lo que recordaba, era cómo el emblema brillaba a la luz, frío y hermoso.",
           TextMapId = "UI_CHAR_DATA_TEXT_32020304"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_32020305",
-    MaxKey = "UI_CHAR_DATA_UNLOCK_task08",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_32020305 = {
           ContentES = "Camilla había pensado en acabar con su vida junto a la de su madre, pero se detuvo en el último momento. Años después, cuando su madre falleció, nadie la lloró más profundamente que Camilla… y nadie se sintió más aliviada.",
           TextMapId = "UI_CHAR_DATA_TEXT_32020305"
@@ -74047,7 +75173,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_33010105"
         },
         UI_CHAR_DATA_TEXT_33010201 = {
-          ContentES = "Cuando un residente de Lago Glacial tiene todo en orden, el nombre \"Margie\" nunca llegará a sus oídos. Pero si un día, la desgracia toca a la puerta de la casa de este residente, el viento helado de Lago Glacial se lleva todo lo que poseía, el nombre \"Margie\" muy probablemente se convertirá en el último salvavidas en su vida miserable.\nCuando este residente burlado por la desgracia recibe monedas, comida, ropa de invierno de las manos de Margie, probablemente preguntará con sospecha y cautela como muchos que recién han caído al Barrio Bajo, cuál es la razón de que ella haga esto, si espera algo a cambio, o si usa la caridad condescendiente para satisfacer el deseo de moralidad.\nSin excepción, ninguno de ellos pudo encontrar una respuesta seria en las risas de la joven. Pero después de que las manos de la joven los guiaran más de una vez a través del largo invierno de Lago Glacial, la pregunta se convirtió en un desecho que nadie quería, arrojado lejos al basurero de los recuerdos.",
+          ContentES = "Cuando un residente de Lago Glacial tiene todo en orden, el nombre \"Margie\" nunca llegará a sus oídos. Pero si un día, la desgracia toca a la puerta de la casa de este residente, el viento helado de Lago Glacial se lleva todo lo que poseía, el nombre  \"Margie\" muy probablemente se convertirá en el último salvavidas en su vida miserable.\nCuando este residente burlado por la desgracia recibe monedas, comida, ropa de invierno de las manos de Margie, probablemente preguntará con sospecha y cautela como muchos que recién han caído al Barrio Bajo, cuál es la razón de que ella haga esto, si espera algo a cambio, o si usa la caridad condescendiente para satisfacer el deseo de moralidad.\nSin excepción, ninguno de ellos pudo encontrar una respuesta seria en las risas de la joven. Pero después de que las manos de la joven los guiaran más de una vez a través del largo invierno de Lago Glacial, la pregunta se convirtió en un desecho que nadie quería, arrojado lejos al basurero de los recuerdos.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010201"
         },
         UI_CHAR_DATA_TEXT_33010202 = {
@@ -74083,11 +75209,11 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_33010305"
         },
         UI_CHAR_DATA_TEXT_33010401 = {
-          ContentES = "La primavera de Lago Glacial es especialmente preciosa por lo breve que resulta.\nLas flores florecen, las aves migratorias regresan, las mariposas verdes danzan elegantemente y el clima es excepcionalmente agradable. Si una se queda enterrada en el trabajo y deja que una temporada tan hermosa se escape entre los dedos, cuando llegue el próximo largo invierno seguramente se arrepentirá tanto que querrá saltar y golpearse la cabeza un par de veces.\nMargie se convenció fácilmente a sí misma. La chica que siempre giraba como un trompo ya no tenía prisa por llegar al siguiente destino, sino que eligió acurrucarse perezosamente en un banco.\nCuando entrecerró los ojos y comenzó a adormilarse bajo el cálido sol primaveral, una conversación sobre gatos callejeros llegó flotando hasta sus oídos.\n\"¡Mira, mamá, me está lamiendo la mano! \" \"El gatito sin hogar da mucha lástima, ¿puedo llevármelo a casa?\"\n\"Querida, puedo prometerte eso. Pero tienes que saber que hay un montón de perros y gatos callejeros por ahí, ¿acaso puedes cuidar a todos? Así que mamá solo puede prometerte esto una vez. ¿Seguro que quieres criarlo?\"\nLa conversación se cortó abruptamente, no porque la charla entre madre e hijo hubiera terminado, sino porque Margie finalmente se quedó dormida entre la duda de \"por una vez debería estar bien holgazanear un poquito...\"\nCuando recobró la conciencia, el atardecer ya casi había desaparecido completamente tras las murallas del Lago Glacial. Justo cuando iba a frotarse los ojos somnolientos, sintió algo peludo y suave cubriendo su mano.\nFue entonces cuando se dio cuenta de que junto a su mano yacía un pequeño gato negro. Cuando el sol se ocultó, se fue fusionando gradualmente con la oscuridad de la noche. Tal vez sintiendo frío, se había acurrucado junto a ella, esa fuente de calor inmóvil, esperando obtener algo de calidez. Margie lo levantó cuidadosamente con las palmas de sus manos, pero no pudo evitar reírse de su aspecto: un gatito flaco y desnutrido, pero con un par de largas cejas blancas en forma de ocho que lo hacían parecer un extraño gatito anciano. Esta probablemente era la razón por la que madre e hijo finalmente no se lo llevaron a casa.\nMargie se quitó el abrigo y envolvió a este pequeño gato de aspecto senil, y bajo la luz que se derramaba de miles de hogares, atravesó el Barrio Bajo, respondiendo con una sonrisa a los diversos saludos de los residentes, y regresó a su pequeña casa. Consoló al pequeño gato acurrucado en sus brazos y dijo con una sonrisa: \"Ya sean Sola, Charon o tú, todos necesitamos que nos cuiden de vez en cuando.\"\nEl pequeño gato negro que parecía viejo y joven a la vez no entendía lo que decía la chica, pero aun así aceptó tímidamente sus caricias y guardó las garras que había sacado sigilosamente. La joven reflexionó por un momento, luego rápida como un rayo agarró la cola del pequeño gato que se movía de un lado a otro y la apretó y amasó, diciendo alegremente: \"De ahora en adelante, te llamaré Colanegra... ¡ay!\"\nAl día siguiente, Margie tenía tres arañazos en la cara y hacía con pesar el trabajo que no había terminado el día anterior. Ni siquiera el cálido sol del Lago Glacial logró hacerla reír. Sin embargo, todos sabían que a más tardar después del almuerzo, la risueña Margie volvería a estar con todos.",
+          ContentES = "La primavera de Lago Glacial es especialmente preciosa por lo breve que resulta.\n Las flores florecen, las aves migratorias regresan, las mariposas verdes danzan elegantemente y el clima es excepcionalmente agradable. Si una se queda enterrada en el trabajo y deja que una temporada tan hermosa se escape entre los dedos, cuando llegue el próximo largo invierno seguramente se arrepentirá tanto que querrá saltar y golpearse la cabeza un par de veces.\nMargie se convenció fácilmente a sí misma. La chica que siempre giraba como un trompo ya no tenía prisa por llegar al siguiente destino, sino que eligió acurrucarse perezosamente en un banco.\n Cuando entrecerró los ojos y comenzó a adormilarse bajo el cálido sol primaveral, una conversación sobre gatos callejeros llegó flotando hasta sus oídos.\n \"¡Mira, mamá, me está lamiendo la mano! \" \"El gatito sin hogar da mucha lástima, ¿puedo llevármelo a casa?\"\n \"Querida, puedo prometerte eso. Pero tienes que saber que hay un montón de perros y gatos callejeros por ahí, ¿acaso puedes cuidar a todos? Así que mamá solo puede prometerte esto una vez. ¿Seguro que quieres criarlo?\"\nLa conversación se cortó abruptamente, no porque la charla entre madre e hijo hubiera terminado, sino porque Margie finalmente se quedó dormida entre la duda de \"por una vez debería estar bien holgazanear un poquito...\"\nCuando recobró la conciencia, el atardecer ya casi había desaparecido completamente tras las murallas del Lago Glacial. Justo cuando iba a frotarse los ojos somnolientos, sintió algo peludo y suave cubriendo su mano.\n Fue entonces cuando se dio cuenta de que junto a su mano yacía un pequeño gato negro. Cuando el sol se ocultó, se fue fusionando gradualmente con la oscuridad de la noche. Tal vez sintiendo frío, se había acurrucado junto a ella, esa fuente de calor inmóvil, esperando obtener algo de calidez. Margie lo levantó cuidadosamente con las palmas de sus manos, pero no pudo evitar reírse de su aspecto: un gatito flaco y desnutrido, pero con un par de largas cejas blancas en forma de ocho que lo hacían parecer un extraño gatito anciano. Esta probablemente era la razón por la que madre e hijo finalmente no se lo llevaron a casa.\nMargie se quitó el abrigo y envolvió a este pequeño gato de aspecto senil, y bajo la luz que se derramaba de miles de hogares, atravesó el Barrio Bajo, respondiendo con una sonrisa a los diversos saludos de los residentes, y regresó a su pequeña casa. Consoló al pequeño gato acurrucado en sus brazos y dijo con una sonrisa: \"Ya sean Sola, Charon o tú, todos necesitamos que nos cuiden de vez en cuando.\"\nEl pequeño gato negro que parecía viejo y joven a la vez no entendía lo que decía la chica, pero aun así aceptó tímidamente sus caricias y guardó las garras que había sacado sigilosamente. La joven reflexionó por un momento, luego rápida como un rayo agarró la cola del pequeño gato que se movía de un lado a otro y la apretó y amasó, diciendo alegremente: \"De ahora en adelante, te llamaré Colanegra... ¡ay!\"\nAl día siguiente, Margie tenía tres arañazos en la cara y hacía con pesar el trabajo que no había terminado el día anterior. Ni siquiera el cálido sol del Lago Glacial logró hacerla reír. Sin embargo, todos sabían que a más tardar después del almuerzo, la risueña Margie volvería a estar con todos.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010401"
         },
         UI_CHAR_DATA_TEXT_33010402 = {
-          ContentES = "l día de Margie comienza cuando se coloca el casco perfectamente derecho en la cabeza.\nLuego saca su mapa y libreta que nunca la abandonan, y basándose en su conocimiento de cada basurero y en lo que vio y escuchó en las calles el día anterior, decide la ruta de inspección de hoy. Finalmente arrastra su saco, carga su pala y se prepara saltando de alegría para buscar el botín del día en cada basurero de la ruta.\nCuando pasa cantando por la esquina, la tía Sarah siempre le hace señas con sus manos enrojecidas por el frío mientras lava la ropa, el tío Rett, que es carpintero, le arroja una o dos virutas de madera como si fueran pétalos de flores, y la hija del dueño de la floristería de enfrente siempre se ríe sin parar al ver esta escena...\nEsta es la vida diaria de Margie, le gusta mucho así y siempre saluda a todos con una sonrisa.\nPero hay una excepción: cuando Kennice, la pequeña hija del carpintero, le hace una reverencia teatral y la saluda con voz elevada: \"Buenos días, querida princesa, que el Dios del Basurero la bendiga para siempre...\" Antes de terminar de hablar, la niña ya había huido del lugar como un rayo entre las risas de los adultos. La razón era simple: Margie, que momentos antes sonreía, ahora tenía las cejas fruncidas y le había abierto su gran saco, con toda la intención de reciclarla también como si fuera basura.\nMás que el título de princesa heredado de su padre, conocido como el \"Rey del Basurero\", ella prefiere llamarse \"la señorita Margie, detective taciturna que camina solitario por el reverso de la ciudad\".\nTal vez la \"bendición\" de Kennice surtió efecto, porque el botín de hoy fue especialmente abundante: cortinas de terciopelo desechadas por un señor noble, una estantería vieja de casi dos metros de altura, y en el compartimento de una mochila vieja encontró varias monedas de plata olvidadas por su dueño... Además de esto, Margie tuvo un hallazgo inesperado en el basurero de una mansión: algunas cartas que despedían olor a desinfectante y una pila de papeles llenos de fórmulas complejas.\nLas alarmas de detective sonaron en la mente de Margie. Su intuición le decía que el dueño de estos objetos no era una persona común. No entendía los procesos de deducción que parecían jeroglíficos, pero esas cartas sin firma ni dirección del destinatario tal vez le revelarían algunos secretos desconocidos.\nCon el corazón latiendo fuertemente, Margie leyó una carta tras otra.\n\"Hija mía, si aún estás viva, esas risas tuyas que siempre rondan mis oídos resonarán realmente en esta casa...\"\n\"Lo que me atormenta no es lo correcto o incorrecto, sino la pérdida irreparable...\"\n\"Rechacé a los padres de esa niña. Realmente no puedo soportar que esa pesadilla del pasado se repita una vez más. He decidido interrumpir la investigación. Hayley, ¿aceptarás mi decisión?\"\n\"Ojalá no llegue el día en que me arrepienta...\"\nLas cartas no tenían firma, pero Margie ya había vislumbrado la imagen de un médico recluido y lo que imaginaba de su pasado.\nLos basureros no solo contienen sobras y objetos innecesarios, también esconden gran cantidad de información y secretos. Estas historias tienen momentos tristes y alegres, contienen las penas y luchas de innumerables personas, pero aun así, en esta enorme y estrecha prisión, la gente sigue viviendo con todas sus fuerzas.\nLa noche estaba a punto de caer y Margie, que había terminado el trabajo del día, regresó cargada de tesoros.\nLa pequeña hija del carpintero ya la esperaba temprano en la esquina, sosteniendo una flor en la mano y disculpándose torpemente: \"Lo siento, no debería haberte llamado así sabiendo que no te gusta...\"\nMargie levantó la cabeza y vio a la hija del dueño de la floristería que, desde la ventana, le guiñó un ojo mientras regaba las plantas.\nSonrió con complicidad y le dio unas palmaditas en el hombro a Kennice: \"¡Está bien! Después de todo, fui yo quien faltó a su palabra primero, no cumplí la promesa de traerte un regalo, pero hay que culpar al Dios del Basurero de ayer que no me favoreció.\"\nLuego, como si hiciera magia, sacó del saco una mochila vieja que ya había limpiado: \"¡Gracias a tu buena suerte, hoy mi fortuna fue excelente! Este es mi regalo atrasado.\" Recibió esa pequeña flor amarillo anaranjado: \"¡Y acepto tu disculpa! Ahora estamos a mano, ¿verdad?\"\n\"¡Exacto!\" La niña se rió y le hizo otra reverencia: \"¡Gracias! ¡Estimada señora Detective Taciturna!\"",
+          ContentES = "l día de Margie comienza cuando se coloca el casco perfectamente derecho en la cabeza.\n Luego saca su mapa y libreta que nunca la abandonan, y basándose en su conocimiento de cada basurero y en lo que vio y escuchó en las calles el día anterior, decide la ruta de inspección de hoy. Finalmente arrastra su saco, carga su pala y se prepara saltando de alegría para buscar el botín del día en cada basurero de la ruta.\nCuando pasa cantando por la esquina, la tía Sarah siempre le hace señas con sus manos enrojecidas por el frío mientras lava la ropa, el tío Rett, que es carpintero, le arroja una o dos virutas de madera como si fueran pétalos de flores, y la hija del dueño de la floristería de enfrente siempre se ríe sin parar al ver esta escena...\n Esta es la vida diaria de Margie, le gusta mucho así y siempre saluda a todos con una sonrisa.\nPero hay una excepción: cuando Kennice, la pequeña hija del carpintero, le hace una reverencia teatral y la saluda con voz elevada: \"Buenos días, querida princesa, que el Dios del Basurero la bendiga para siempre...\" Antes de terminar de hablar, la niña ya había huido del lugar como un rayo entre las risas de los adultos. La razón era simple: Margie, que momentos antes sonreía, ahora tenía las cejas fruncidas y le había abierto su gran saco, con toda la intención de reciclarla también como si fuera basura.\nMás que el título de princesa heredado de su padre, conocido como el \"Rey del Basurero\", ella prefiere llamarse \"la señorita Margie, detective taciturna que camina solitario por el reverso de la ciudad\".\nTal vez la \"bendición\" de Kennice surtió efecto, porque el botín de hoy fue especialmente abundante: cortinas de terciopelo desechadas por un señor noble, una estantería vieja de casi dos metros de altura, y en el compartimento de una mochila vieja encontró varias monedas de plata olvidadas por su dueño... Además de esto, Margie tuvo un hallazgo inesperado en el basurero de una mansión: algunas cartas que despedían olor a desinfectante y una pila de papeles llenos de fórmulas complejas.\nLas alarmas de detective sonaron en la mente de Margie. Su intuición le decía que el dueño de estos objetos no era una persona común. No entendía los procesos de deducción que parecían jeroglíficos, pero esas cartas sin firma ni dirección del destinatario tal vez le revelarían algunos secretos desconocidos.\n Con el corazón latiendo fuertemente, Margie leyó una carta tras otra.\n\"Hija mía, si aún estás viva, esas risas tuyas que siempre rondan mis oídos resonarán realmente en esta casa...\"\n \"Lo que me atormenta no es lo correcto o incorrecto, sino la pérdida irreparable...\"\n \"Rechacé a los padres de esa niña. Realmente no puedo soportar que esa pesadilla del pasado se repita una vez más. He decidido interrumpir la investigación. Hayley, ¿aceptarás mi decisión?\"\n \"Ojalá no llegue el día en que me arrepienta...\"\nLas cartas no tenían firma, pero Margie ya había vislumbrado la imagen de un médico recluido y lo que imaginaba de su pasado.\n Los basureros no solo contienen sobras y objetos innecesarios, también esconden gran cantidad de información y secretos. Estas historias tienen momentos tristes y alegres, contienen las penas y luchas de innumerables personas, pero aun así, en esta enorme y estrecha prisión, la gente sigue viviendo con todas sus fuerzas.\nLa noche estaba a punto de caer y Margie, que había terminado el trabajo del día, regresó cargada de tesoros.\n La pequeña hija del carpintero ya la esperaba temprano en la esquina, sosteniendo una flor en la mano y disculpándose torpemente: \"Lo siento, no debería haberte llamado así sabiendo que no te gusta...\"\nMargie levantó la cabeza y vio a la hija del dueño de la floristería que, desde la ventana, le guiñó un ojo mientras regaba las plantas.\n Sonrió con complicidad y le dio unas palmaditas en el hombro a Kennice: \"¡Está bien! Después de todo, fui yo quien faltó a su palabra primero, no cumplí la promesa de traerte un regalo, pero hay que culpar al Dios del Basurero de ayer que no me favoreció.\"\n Luego, como si hiciera magia, sacó del saco una mochila vieja que ya había limpiado: \"¡Gracias a tu buena suerte, hoy mi fortuna fue excelente! Este es mi regalo atrasado.\" Recibió esa pequeña flor amarillo anaranjado: \"¡Y acepto tu disculpa! Ahora estamos a mano, ¿verdad?\"\n \"¡Exacto!\" La niña se rió y le hizo otra reverencia: \"¡Gracias! ¡Estimada señora Detective Taciturna!\"",
           TextMapId = "UI_CHAR_DATA_TEXT_33010402"
         },
         UI_CHAR_DATA_TEXT_33010403 = {
@@ -74095,15 +75221,15 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_33010403"
         },
         UI_CHAR_DATA_TEXT_33010404 = {
-          ContentES = "Cuando Margie se paró por primera vez frente al Lago Glacial, su mente fue completamente cautivada por el coloso que tenía ante ella.\nDespués de una fiebre alta, sus recuerdos ya borrosos de su tierra natal se habían vuelto una masa confusa. En su conocimiento restante, la llanura nevada sin fin, el frío extremo, depredadores y presas, el cielo estrellado y una solitaria fogata, así como su único compañero de viaje y padre, eran todo en su vida.\nJusto entonces, el Lago Glacial, ese destino que solo existía en las palabras de su padre, apareció abruptamente ante sus ojos. En ese momento, su impresión del Lago Glacial solo podía describirse con las palabras más simples y directas: ¡Guau! ¡Qué campamento tan grande! ¡Cuánta gente! ¡Cuántos aromas que nunca había olido!\nMargie era como una vagabunda que por primera vez encontraba a su tribu. No tenía miedo ni estaba nerviosa, solo una sensación de pertenencia sin precedentes se grabó profundamente en su corazón: resulta que en este mundo no solo estaban su padre y ella. Y el Lago Glacial después del anochecer le causó a Margie un impacto enorme e inolvidable. Si una fogata en la noche era suficiente para hacerla sentir calidez, entonces en el Lago Glacial después del anochecer, las innumerables luces que salían de las ventanas formaban una corriente de calor inimaginable.\n\nCuando su padre le preguntó si quería quedarse a vivir aquí, asintió sin dudar. Inmediatamente después, una hermana llamada Camilla le informó una larga lista de \"cosas que no se pueden hacer y lugares a los que no se puede ir en el Lago Glacial\". La pequeña Margie escuchó hasta quedarse medio dormida. Cuando Camilla la despertó por cuarta vez, finalmente no pudo evitar expresar su duda: \"¡Vivir en la llanura nevada no tenía tantas reglas! ¿Acaso este lugar es más peligroso que el campo salvaje?\"\nCamilla y su padre cayeron en un largo silencio. Cuando Margie casi se quedó dormida otra vez, su padre le acarició la cabeza: \"Querida, tal vez las cosas son tal como dices.\"\nCuando Margie llegó por segunda vez a la puerta del Lago Glacial, sus pies se dirigían hacia afuera. El coloso ante sus ojos ya había cambiado de forma, parecía una bestia silenciosa y gigante, y la puerta de la ciudad era su boca abierta. Su estado de ánimo ya no tenía la alegría y el júbilo de la primera vez que llegó aquí; la confusión y la incomprensión llenaban su corazón.\nNo entendía por qué no temer al frío y tener cuernos naturales era suficiente para constituir su crimen, tampoco entendía por qué solo querer escaparse a explorar la \"Ciudad Interior\" podría resultar en una ejecución. Lo más terrible era que todos se habían acostumbrado a esto; incluso los niños humanos podían arrojarle piedras sin dudar, como si ella fuera la extraña entre la multitud. En ese momento, Margie se dio cuenta tardíamente de que pensó que había regresado al \"hábitat\" de su tribu, pero este lugar nunca le había dado la bienvenida.\nTal vez la niña que creció en la llanura nevada tenía su destino en la nieve infinita.\nAsí que se dio la vuelta, conteniendo las lágrimas que estaban a punto de caer, y comenzó una aventura en solitario.",
+          ContentES = "Cuando Margie se paró por primera vez frente al Lago Glacial, su mente fue completamente cautivada por el coloso que tenía ante ella.\n Después de una fiebre alta, sus recuerdos ya borrosos de su tierra natal se habían vuelto una masa confusa. En su conocimiento restante, la llanura nevada sin fin, el frío extremo, depredadores y presas, el cielo estrellado y una solitaria fogata, así como su único compañero de viaje y padre, eran todo en su vida.\n Justo entonces, el Lago Glacial, ese destino que solo existía en las palabras de su padre, apareció abruptamente ante sus ojos. En ese momento, su impresión del Lago Glacial solo podía describirse con las palabras más simples y directas: ¡Guau! ¡Qué campamento tan grande! ¡Cuánta gente! ¡Cuántos aromas que nunca había olido!\nMargie era como una vagabunda que por primera vez encontraba a su tribu. No tenía miedo ni estaba nerviosa, solo una sensación de pertenencia sin precedentes se grabó profundamente en su corazón: resulta que en este mundo no solo estaban su padre y ella. Y el Lago Glacial después del anochecer le causó a Margie un impacto enorme e inolvidable. Si una fogata en la noche era suficiente para hacerla sentir calidez, entonces en el Lago Glacial después del anochecer, las innumerables luces que salían de las ventanas formaban una corriente de calor inimaginable.\n\nCuando su padre le preguntó si quería quedarse a vivir aquí, asintió sin dudar. Inmediatamente después, una hermana llamada Camilla le informó una larga lista de \"cosas que no se pueden hacer y lugares a los que no se puede ir en el Lago Glacial\". La pequeña Margie escuchó hasta quedarse medio dormida. Cuando Camilla la despertó por cuarta vez, finalmente no pudo evitar expresar su duda: \"¡Vivir en la llanura nevada no tenía tantas reglas! ¿Acaso este lugar es más peligroso que el campo salvaje?\"\nCamilla y su padre cayeron en un largo silencio. Cuando Margie casi se quedó dormida otra vez, su padre le acarició la cabeza: \"Querida, tal vez las cosas son tal como dices.\"\nCuando Margie llegó por segunda vez a la puerta del Lago Glacial, sus pies se dirigían hacia afuera. El coloso ante sus ojos ya había cambiado de forma, parecía una bestia silenciosa y gigante, y la puerta de la ciudad era su boca abierta. Su estado de ánimo ya no tenía la alegría y el júbilo de la primera vez que llegó aquí; la confusión y la incomprensión llenaban su corazón.\n No entendía por qué no temer al frío y tener cuernos naturales era suficiente para constituir su crimen, tampoco entendía por qué solo querer escaparse a explorar la \"Ciudad Interior\" podría resultar en una ejecución. Lo más terrible era que todos se habían acostumbrado a esto; incluso los niños humanos podían arrojarle piedras sin dudar, como si ella fuera la extraña entre la multitud. En ese momento, Margie se dio cuenta tardíamente de que pensó que había regresado al \"hábitat\" de su tribu, pero este lugar nunca le había dado la bienvenida.\nTal vez la niña que creció en la llanura nevada tenía su destino en la nieve infinita.\n Así que se dio la vuelta, conteniendo las lágrimas que estaban a punto de caer, y comenzó una aventura en solitario.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010404"
         },
         UI_CHAR_DATA_TEXT_33010405 = {
-          ContentES = "Frío, frío, y más frío.\nSin necesidad de abrir los ojos, esa blancura infinita apareció otra vez ante Margie, día tras día, mes tras mes, como si... nunca fueran a salir de allí.\nMargie, aún pequeña de estatura, se alejó del Lago Glacial y caminó hacia las profundidades de la llanura nevada. Todavía estaba furiosa por la destrucción de sus sueños sobre el Lago Glacial, prefiriendo alejarse de ese lugar lleno de injusticias. Solo que mientras más se adentraba, más su mente se abría como las páginas de un libro viejo, regresando a las escenas de cuando vino con el viejo Martin:\n\nCuando recién entraron a esta tierra helada, Margie le preguntaba a su padre todos los días: \"¿Cuánto falta?\"\nMartin le daba un número cada día. Aunque la pequeña Margie no tenía una sensación real de la \"distancia\", sabía que cuando ese número llegara a cero, esta larga caminata llegaría a su fin.\nSin embargo, el número no solo se reducía. Cuando se perdían en la llanura nevada y daban vueltas hasta regresar al campamento de la noche anterior, el número aumentaba. Cuando alguno de ellos se lastimaba, la velocidad de reducción del número no era satisfactoria. Y cuando ella finalmente no pudo resistir el ambiente hostil y se enfermó tanto que ni siquiera podía ponerse de pie, ese número se estancó por mucho tiempo.\nLa fiebre alta de varios días hizo que la pequeña Margie pareciera un pequeño carbón ardiente, pero en su conciencia borrosa, los sueños sobre el verano y el sol cálido ya no aparecían, solo quedaba el frío que se filtraba por todas partes. Pero cuando estaba un poco más consciente, seguía haciendo la misma pregunta con una voz cada vez más débil: \"¿Cuánto falta?\"\nSin embargo, solo le respondían el silencio y las manos temblorosas de su padre acariciando su frente.\nEn otra noche fría, Margie tuvo un sueño. Soñó que una estrella cayó en sus brazos. Durante la larga caída, la estrella ya solo tenía un brillo tenue a punto de extinguirse, pero para ella era tan ardiente.\nAl día siguiente, cuando la luz matutina iluminó el rostro de Margie, la enfermedad parecía haberla abandonado de la noche a la mañana. Su cuerpo estaba cálido y ligero, casi dudó de estar en otro sueño, porque en sus brazos realmente había algo pequeño y cálido. Sin embargo, el abrazo de su padre que casi la ahogaba le hizo entender que realmente había ocurrido un milagro.\nEsa cosita cálida era el prototipo del muñeco que Margie llevaría consigo en el futuro, llamado \"Colagorda\". Solo que en ese momento aún era una pequeña bestia escuálida. Margie supuso que también se había separado de su familia, y su pelaje ralo no era suficiente para protegerla del frío, así que antes de morir congelada, por instinto de supervivencia se acercó a Margie, que tenía fiebre. Probablemente era la única fuente de calor segura que pudo encontrar.\nEn los días siguientes, sus compañeros de viaje aumentaron en una pequeña bestia. Esta bestia astuta era muy vigilante y no se acercaba, solo observaba desde lejos con curiosidad. Solo cuando Margie ponía la mejor carne seca frente a ella y retrocedía unos pasos, Colagorda, después de olfatear desesperadamente como si quisiera distinguir todos los olores del aire, se acercaba a llevarse la carne seca...\nUn agudo canto de pájaro interrumpió los recuerdos de Margie, recordándole que en ese momento caminaba por un sendero completamente opuesto al pasado. Suspiró suavemente e intentó contar números otra vez, pero ya no sabía desde qué número empezar la cuenta regresiva.\n¿A dónde debería ir? Margie no lo sabía. La tierra natal del viejo Martin no era su hogar, el Lago Glacial tampoco. Entonces, ¿dónde estaba el lugar que pertenecía a Margie? ¿Esta llanura nevada sin fin?\nLa nieve seguía cayendo, como las cintas de colores que los nobles hacían explotar en el aire durante sus procesiones, cayendo sobre Margie.\nSin saber cuántos días y noches habían pasado, la nieve caía cada vez más fuerte, los ojos de Margie se volvían cada vez más borrosos. Alguien desconocido la había cubierto con una manta plateada, y el sonido del viento parecía una suave canción de cuna que la arrullaba en el suelo como una manta de lana.\nDespués de mucho tiempo volvió a sentir ese frío familiar... pero el sueño de Margie era muy animado. Soñó con muchas personas riéndose y cantando a su alrededor, el dolor había abandonado sus rostros, la gente la llamaba \"princesa\", la llamaba \"querida\", la llamaba \"pequeña detective\"... Vio a Camilla, vio a Kennice, vio a la hija del dueño de la floristería, todos tenían las mejillas sonrosadas y saludables, como si ya no fueran azotados por el viento y la nieve.\nAl final, vio a Colagorda, esa pequeña bestia que no había vuelto a ver después de dejar la llanura nevada, su primer amigo... Cuando se separaron en el pasado, aún era muy pequeño, ahora ya había crecido tanto.\nNo, esto no era un sueño. Margie despertó de repente. Colagorda era real, porque ya era diferente de como lo recordaba. Se había vuelto más ágil, cazaba pequeños animales en la llanura nevada y especialmente le guardaba un pedazo para dárselo a Margie, que aún estaba débil. Los huesos que dejaba después de comer atraían a pájaros regordetes, e incluso las sobras podían alimentar bien a estas aves que parecían débiles.\nMargie se tranquilizó completamente: Colagorda, como cazador, no solo podía alimentarse a sí mismo, sino también alimentar a los débiles de la llanura helada. Más importante aún: ya había encontrado su propia forma de vivir.\n\nVolvió a recordar el sueño de hace un momento, ese sueño donde los rostros demacrados del Barrio Bajo ya no estaban abatidos. Aunque solo era un sueño, Margie de repente sintió que sabía qué hacer.\n\"¡Viejo Martin, ya regresé!\" Se dio la vuelta y gritó hacia la dirección de donde vino: \"¡Desde hoy voy a revisar contigo todos los basureros del Lago Glacial!\"\n\"¡Adiós, Colagorda!\" Le hizo señas al gatito en la llanura nevada y caminó nuevamente hacia el Lago Glacial, dirigiéndose una vez más a esa ciudad enorme, llena de injusticias, pero también llena de toda clase de posibilidades.",
+          ContentES = "Frío, frío, y más frío.\n Sin necesidad de abrir los ojos, esa blancura infinita apareció otra vez ante Margie, día tras día, mes tras mes, como si... nunca fueran a salir de allí.\n Margie, aún pequeña de estatura, se alejó del Lago Glacial y caminó hacia las profundidades de la llanura nevada. Todavía estaba furiosa por la destrucción de sus sueños sobre el Lago Glacial, prefiriendo alejarse de ese lugar lleno de injusticias. Solo que mientras más se adentraba, más su mente se abría como las páginas de un libro viejo, regresando a las escenas de cuando vino con el viejo Martin:\n\nCuando recién entraron a esta tierra helada, Margie le preguntaba a su padre todos los días: \"¿Cuánto falta?\"\n Martin le daba un número cada día. Aunque la pequeña Margie no tenía una sensación real de la \"distancia\", sabía que cuando ese número llegara a cero, esta larga caminata llegaría a su fin.\n Sin embargo, el número no solo se reducía. Cuando se perdían en la llanura nevada y daban vueltas hasta regresar al campamento de la noche anterior, el número aumentaba. Cuando alguno de ellos se lastimaba, la velocidad de reducción del número no era satisfactoria. Y cuando ella finalmente no pudo resistir el ambiente hostil y se enfermó tanto que ni siquiera podía ponerse de pie, ese número se estancó por mucho tiempo.\nLa fiebre alta de varios días hizo que la pequeña Margie pareciera un pequeño carbón ardiente, pero en su conciencia borrosa, los sueños sobre el verano y el sol cálido ya no aparecían, solo quedaba el frío que se filtraba por todas partes. Pero cuando estaba un poco más consciente, seguía haciendo la misma pregunta con una voz cada vez más débil: \"¿Cuánto falta?\"\n Sin embargo, solo le respondían el silencio y las manos temblorosas de su padre acariciando su frente.\nEn otra noche fría, Margie tuvo un sueño. Soñó que una estrella cayó en sus brazos. Durante la larga caída, la estrella ya solo tenía un brillo tenue a punto de extinguirse, pero para ella era tan ardiente.\n Al día siguiente, cuando la luz matutina iluminó el rostro de Margie, la enfermedad parecía haberla abandonado de la noche a la mañana. Su cuerpo estaba cálido y ligero, casi dudó de estar en otro sueño, porque en sus brazos realmente había algo pequeño y cálido. Sin embargo, el abrazo de su padre que casi la ahogaba le hizo entender que realmente había ocurrido un milagro.\nEsa cosita cálida era el prototipo del muñeco que Margie llevaría consigo en el futuro, llamado \"Colagorda\". Solo que en ese momento aún era una pequeña bestia escuálida. Margie supuso que también se había separado de su familia, y su pelaje ralo no era suficiente para protegerla del frío, así que antes de morir congelada, por instinto de supervivencia se acercó a Margie, que tenía fiebre. Probablemente era la única fuente de calor segura que pudo encontrar.\nEn los días siguientes, sus compañeros de viaje aumentaron en una pequeña bestia. Esta bestia astuta era muy vigilante y no se acercaba, solo observaba desde lejos con curiosidad. Solo cuando Margie ponía la mejor carne seca frente a ella y retrocedía unos pasos, Colagorda, después de olfatear desesperadamente como si quisiera distinguir todos los olores del aire, se acercaba a llevarse la carne seca...\nUn agudo canto de pájaro interrumpió los recuerdos de Margie, recordándole que en ese momento caminaba por un sendero completamente opuesto al pasado. Suspiró suavemente e intentó contar números otra vez, pero ya no sabía desde qué número empezar la cuenta regresiva.\n ¿A dónde debería ir? Margie no lo sabía. La tierra natal del viejo Martin no era su hogar, el Lago Glacial tampoco. Entonces, ¿dónde estaba el lugar que pertenecía a Margie? ¿Esta llanura nevada sin fin?\n La nieve seguía cayendo, como las cintas de colores que los nobles hacían explotar en el aire durante sus procesiones, cayendo sobre Margie.\n Sin saber cuántos días y noches habían pasado, la nieve caía cada vez más fuerte, los ojos de Margie se volvían cada vez más borrosos. Alguien desconocido la había cubierto con una manta plateada, y el sonido del viento parecía una suave canción de cuna que la arrullaba en el suelo como una manta de lana.\nDespués de mucho tiempo volvió a sentir ese frío familiar... pero el sueño de Margie era muy animado. Soñó con muchas personas riéndose y cantando a su alrededor, el dolor había abandonado sus rostros, la gente la llamaba \"princesa\", la llamaba \"querida\", la llamaba \"pequeña detective\"... Vio a Camilla, vio a Kennice, vio a la hija del dueño de la floristería, todos tenían las mejillas sonrosadas y saludables, como si ya no fueran azotados por el viento y la nieve.\n Al final, vio a Colagorda, esa pequeña bestia que no había vuelto a ver después de dejar la llanura nevada, su primer amigo... Cuando se separaron en el pasado, aún era muy pequeño, ahora ya había crecido tanto.\n No, esto no era un sueño. Margie despertó de repente. Colagorda era real, porque ya era diferente de como lo recordaba. Se había vuelto más ágil, cazaba pequeños animales en la llanura nevada y especialmente le guardaba un pedazo para dárselo a Margie, que aún estaba débil. Los huesos que dejaba después de comer atraían a pájaros regordetes, e incluso las sobras podían alimentar bien a estas aves que parecían débiles.\nMargie se tranquilizó completamente: Colagorda, como cazador, no solo podía alimentarse a sí mismo, sino también alimentar a los débiles de la llanura helada. Más importante aún: ya había encontrado su propia forma de vivir.\n\nVolvió a recordar el sueño de hace un momento, ese sueño donde los rostros demacrados del Barrio Bajo ya no estaban abatidos. Aunque solo era un sueño, Margie de repente sintió que sabía qué hacer.\n \"¡Viejo Martin, ya regresé!\" Se dio la vuelta y gritó hacia la dirección de donde vino: \"¡Desde hoy voy a revisar contigo todos los basureros del Lago Glacial!\"\n \"¡Adiós, Colagorda!\" Le hizo señas al gatito en la llanura nevada y caminó nuevamente hacia el Lago Glacial, dirigiéndose una vez más a esa ciudad enorme, llena de injusticias, pero también llena de toda clase de posibilidades.",
           TextMapId = "UI_CHAR_DATA_TEXT_33010405"
         },
         UI_CHAR_DATA_TEXT_41010101 = {
-          ContentES = "Rhythm no es buena con la música, ni siquiera puede entender los símbolos más simples de una partitura, pero puede tocar la melodía del <I>Réquiem por los anónimos</> con la armónica.",
+          ContentES = "Rhythm no es buena con la música, ni siquiera puede entender los símbolos más simples de una partitura, pero puede tocar la melodía del <I>Réquiem por los Anónimos</> con la armónica.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010101"
         },
         UI_CHAR_DATA_TEXT_41010102 = {
@@ -74151,11 +75277,11 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_41010304"
         },
         UI_CHAR_DATA_TEXT_41010305 = {
-          ContentES = "La música siempre tiene un poder mágico, sana la tristeza de las personas y las inspira a seguir adelante. En el pasado, cada vez que Rhythm sentía que ya no podía seguir, tocaba esa pieza <I>Réquiem por los anónimos</>, se reanimaba rápidamente y se dedicaba más activamente a sus misiones.\nPero ahora, por alguna razón, sin importar cuánto toque, la tristeza no se va, sino que empeora cada vez más. Ahora solo puede conseguir un breve respiro a través del trabajo infinito y los encargos, permitiendo que el entumecimiento expulse brevemente el dolor de su cerebro.",
+          ContentES = "La música siempre tiene un poder mágico, sana la tristeza de las personas y las inspira a seguir adelante. En el pasado, cada vez que Rhythm sentía que ya no podía seguir, tocaba esa pieza <I>Réquiem por los Anónimos</>, se reanimaba rápidamente y se dedicaba más activamente a sus misiones.\nPero ahora, por alguna razón, sin importar cuánto toque, la tristeza no se va, sino que empeora cada vez más. Ahora solo puede conseguir un breve respiro a través del trabajo infinito y los encargos, permitiendo que el entumecimiento expulse brevemente el dolor de su cerebro.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010305"
         },
         UI_CHAR_DATA_TEXT_41010401 = {
-          ContentES = "\"Los reservistas naturalmente tienen que sufrir, ustedes los Charons naturalmente sufren aún más. Rhythm Fischer, tienes mucho talento, si estás dispuesta a sufrir, tal vez puedas convertirte en una Charon Laureada en el futuro. Así que, ahora limpia el alcantarillado del área de la Oficina de Seguridad.\"\nAsí le dijo el líder del escuadrón a Rhythm cuando recién se convirtió en miembro reservista de La Escolta.\n\"Los nuevos reclutas naturalmente tienen que sufrir, ustedes los Charons naturalmente sufren aún más. Rhythm Fischer, tienes mucho talento, si estás dispuesta a sufrir, tal vez puedas convertirte en Charon Laureada en el futuro. Así que, ese Filthoid feroz, tú te encargas de exterminarlo.\"\nAsí le dijo el alférez a Rhythm cuando se esforzaba por convertirse en soldado raso de La Escolta.\n\"Los suboficiales de rango inferior naturalmente tienen que sufrir, ustedes los Charons naturalmente sufren aún más. Rhythm Fischer, tienes mucho talento, si estás dispuesta a sufrir, tal vez puedas convertirte en Charon Laureado en el futuro. Ese miembro de los Abandonados exiliados es un 'Daimon' nato, el escuadrón anterior ya fue aniquilado por completo, así que su escuadrón se encargará de la siguiente operación.\"\nAsí le dijo el teniente a Rhythm cuando finalmente logró ascender a alférez con gran esfuerzo.\nAhora Rhythm ya no recuerda si estas diferentes personas realmente dijeron las mismas palabras, o si sus palabras eran tan similares que inconscientemente las había confundido. Cuando cada noche profunda vendaba una nueva herida, Rhythm finalmente podía acostarse en la cama y disfrutar de un momento de tranquilidad. La Legión tiene tantos rangos militares, como un árbol gigante con ramas y hojas frondosas, y la medalla de Charon Laureada es el fruto brillante que adorna las ramas y hojas. Siempre sentía que esa hermosa fruta estaba cerca, que solo necesitaba trepar un poco más para alcanzarla; pero cuando se esforzaba por subir más alto, descubría que esa fruta, como una traviesa burbuja de jabón, había volado a un lugar aún más alto.\n¿Cuándo podría realmente alcanzarla? Rhythm no lo sabía. ¿Realmente llegaría el día en que la alcanzara? Rhythm se sentía algo confundida. Pero luego pensó que sus tres comidas diarias habían cambiado del pan negro duro a conservas de carne sabrosa, tenía más ropa de repuesto que antes, y cuando estaba de buen humor incluso tenía tiempo de mirarse en el espejo para observar ese cuerno que no era muy bonito. Los días finalmente se estaban volviendo cada vez mejores, pensó Rhythm, luego se tapó con la manta fría como hierro y se durmió ligeramente.\nAunque sea solo un poquito cada vez, pero siempre mejoraría. Porque cada gota de sudor derramada se convertiría en los escalones que la llevarían hacia Charon Laureada, así lo creía firmemente en el pasado.",
+          ContentES = "\"Los reservistas naturalmente tienen que sufrir, ustedes los Charons naturalmente sufren aún más. Rhythm Fischer, tienes mucho talento, si estás dispuesta a sufrir, tal vez puedas convertirte en una Charon Laureada en el futuro. Así que, ahora limpia el alcantarillado del área de la Oficina de Seguridad.\"\n Así le dijo el líder del escuadrón a Rhythm cuando recién se convirtió en miembro reservista de La Escolta.\n\"Los nuevos reclutas naturalmente tienen que sufrir, ustedes los Charons naturalmente sufren aún más. Rhythm Fischer, tienes mucho talento, si estás dispuesta a sufrir, tal vez puedas convertirte en Charon Laureada en el futuro. Así que, ese Filthoid feroz, tú te encargas de exterminarlo.\"\n Así le dijo el alférez a Rhythm cuando se esforzaba por convertirse en soldado raso de La Escolta.\n\"Los suboficiales de rango inferior naturalmente tienen que sufrir, ustedes los Charons naturalmente sufren aún más. Rhythm Fischer, tienes mucho talento, si estás dispuesta a sufrir, tal vez puedas convertirte en Charon Laureado en el futuro. Ese miembro de los Abandonados exiliados es un 'Daimon' nato, el escuadrón anterior ya fue aniquilado por completo, así que su escuadrón se encargará de la siguiente operación.\"\n Así le dijo el teniente a Rhythm cuando finalmente logró ascender a alférez con gran esfuerzo.\nAhora Rhythm ya no recuerda si estas diferentes personas realmente dijeron las mismas palabras, o si sus palabras eran tan similares que inconscientemente las había confundido. Cuando cada noche profunda vendaba una nueva herida, Rhythm finalmente podía acostarse en la cama y disfrutar de un momento de tranquilidad. La Legión tiene tantos rangos militares, como un árbol gigante con ramas y hojas frondosas, y la medalla de Charon Laureada es el fruto brillante que adorna las ramas y hojas. Siempre sentía que esa hermosa fruta estaba cerca, que solo necesitaba trepar un poco más para alcanzarla; pero cuando se esforzaba por subir más alto, descubría que esa fruta, como una traviesa burbuja de jabón, había volado a un lugar aún más alto.\n¿Cuándo podría realmente alcanzarla? Rhythm no lo sabía. ¿Realmente llegaría el día en que la alcanzara? Rhythm se sentía algo confundida. Pero luego pensó que sus tres comidas diarias habían cambiado del pan negro duro a conservas de carne sabrosa, tenía más ropa de repuesto que antes, y cuando estaba de buen humor incluso tenía tiempo de mirarse en el espejo para observar ese cuerno que no era muy bonito. Los días finalmente se estaban volviendo cada vez mejores, pensó Rhythm, luego se tapó con la manta fría como hierro y se durmió ligeramente.\nAunque sea solo un poquito cada vez, pero siempre mejoraría. Porque cada gota de sudor derramada se convertiría en los escalones que la llevarían hacia Charon Laureada, así lo creía firmemente en el pasado.",
           TextMapId = "UI_CHAR_DATA_TEXT_41010401"
         },
         UI_CHAR_DATA_TEXT_41010402 = {
@@ -74255,7 +75381,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_42010104"
         },
         UI_CHAR_DATA_TEXT_42010105 = {
-          ContentES = "Próximamente",
+          ContentES = "Con Zhuyin de nuevo en su lugar y los Nueve Capítulos de Dafeng reiniciados, el sistema de justicia se vio inevitablemente sacudido. Los Bi'an, ejecutores guiados más por el instinto animal que por el juicio humano, fueron retirados temporalmente. Los Magistrados de Yingtian, que antes habían servido bajo las órdenes de Taihao y no podían escapar a las ataduras de los Nueve Capítulos, por fin recuperaron la libertad y pudieron volver a una vida común como miembros corrientes del Clan Dragón. Y, aun así, Yuming siguió cumpliendo su deber como Magistrado de Yingtian.\n\nComo la reforma alteró de forma temporal el funcionamiento del sistema, cada vez más asuntos menores de seguridad quedaron en manos de los magistrados. No faltaban las disputas vecinales ni los problemas domésticos. Aunque la gente seguía profesándoles un profundo respeto, cuando sus propios intereses estaban en juego se enfrentaban unos a otros sin ceder ni un ápice.\n\n¿Seguía desempeñándose como Magistrado de Yingtian por pura inercia, por costumbre adormecida? No lo sabía. Simplemente dejaba que una nimiedad tras otra llenara sus días. Así siguió hasta aquella tarde en que, tras perseguir a un ladronzuelo del Clan Dragón especialmente escurridizo, Yuming logró recuperar una paleta helada y devolvérsela a su dueña antes de que se derritiera. La niña saltó de alegría, revolvió su cesta y le metió en brazos varias frutas maduras mientras le daba las gracias una y otra vez, con el rostro infantil rebosante de felicidad.\n\n\"…¿Buxia?\" Se quedó paralizado.\n\nEn ese instante, sintió que por fin entendía por qué seguía adelante. Quería ver esa misma sonrisa inocente florecer en los rostros de los niños, colmada de alegría. Eso era lo que ahora deseaba aferrar con todas sus fuerzas.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010105"
         },
         UI_CHAR_DATA_TEXT_42010201 = {
@@ -74291,7 +75417,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_42010304"
         },
         UI_CHAR_DATA_TEXT_42010305 = {
-          ContentES = "Próximamente",
+          ContentES = "Yuming llegó a creer que el tiempo se había detenido para él, que quedaría atrapado para siempre en aquel instante ensangrentado del pasado, cargando con una culpa que jamás podría soltar.\n\nHasta que un día advirtió, de repente, que en sus sueños los rostros de su maestro y de Buxia habían empezado a volverse borrosos.\n\nCuando despertó, permaneció largo rato sentado, aturdido.\n\nSolo entonces comprendió que el tiempo fluye como un río y no se detiene por nadie. Por mucho que los vivos se aferren a lo que aman, la corriente lo arrastra lejos de todos modos.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010305"
         },
         UI_CHAR_DATA_TEXT_42010401 = {
@@ -74307,7 +75433,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_42010403"
         },
         UI_CHAR_DATA_TEXT_42010404 = {
-          ContentES = "Próximamente",
+          ContentES = "Aquel día, guiado por la silueta del zorro Pequeña mandarina, al que había criado tiempo atrás, Yuming regresó a Picos Exteriores antes siquiera de darse cuenta.\n\nEl lugar había cambiado desde la última vez que estuvo allí. Incluso la vegetación parecía distinta, y la base estaba llena de rostros jóvenes y vibrantes. Xu Hong, que siempre lo había recibido con el ceño fruncido, no estaba por ninguna parte. Quizá había bajado de la montaña para visitar a su familia.\n\nAhora que los Nueve Capítulos de Dafeng ya no perseguían a los Errantes, el ambiente del lugar parecía más relajado, casi apacible.\n\nCuando Kezhou lo vio llegar, primero se quedó incrédulo y luego estalló de alegría. Lo agarró del brazo y se puso a hablarle durante horas.\n\nAl principio, Yuming aún se sentía algo fuera de lugar y mantuvo una cortesía distante. Pero al final, derrotado por la insistencia incansable de Kezhou, bajó la guardia. Como en los viejos tiempos, terminó golpeándolo con la culata de la lanza.\n\nPara cuando concluyó aquel pequeño altercado, la luna ya brillaba alta en un cielo claro y salpicado de estrellas. Kezhou sacó una jarra de vino y ambos se sentaron en el bosque de bambú, bebiendo uno junto al otro en silencio. En esa quietud, el pasado parecía, por fin, un poco más llevadero.",
           TextMapId = "UI_CHAR_DATA_TEXT_42010404"
         },
         UI_CHAR_DATA_TEXT_42020101 = {
@@ -74371,7 +75497,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_42020402"
         },
         UI_CHAR_DATA_TEXT_42020403 = {
-          ContentES = "Los hijos siempre rechazan a sus padres. En la juventud, esto se atribuye a la negligencia paterna y la falta de amor paternal. Al madurar, uno se da cuenta de que es porque la similitud grabada en la sangre los condena a no poder coexistir.\nSe unió a la Legión para demostrar que nunca se convertiría en su padre, o eso pensaba. Pero cuando finalmente estuvo en el centro de la formación de soldados Hiperbórean, sintió miedo: Había una fuerza que lo atraía, intentando atarlo para siempre a los vehículos blindados, cañones o cabinas de aeronaves bajo sus pies, fusionándolo con ese acero frío.\nFinalmente comprendió qué significaban los cuernos en su cabeza y la magia que solía usar como juego. No eran un accesorio bonito ni un truco asombroso, ¡eran una maldición, una maldición y otra maldición más! Su padre severo le ordenó brutalmente aprender artes de combate, pero con ternura ocultó lo más cruel de Hiperbórea.\nFinalmente comprendió qué significaban esas medallas relucientes que su padre siempre pulía con tanto cuidado. Eran las limosnas de la manada de lobos al perro pastor, los huesos que escupían después de masticarlos. Esos huesos protegían a los perros de las mordidas y ocasionalmente les daban la ilusión de poder bailar con los lobos.\nFinalmente comprendió qué significaba realmente que su padre se esforzara tanto en hacerlo practicar combate. Debía tomar el relevo de su padre y mantener el título de \"Charon Laureado\" de la familia Howard, junto con todo lo que ese título otorgaba: una vida próspera, dignidad intacta, las sonrisas inocentes de sus hermanas e incluso la supervivencia misma.\nPara conseguir todo eso, debía convertirse en parte del carro de guerra de Hiperbórea, en una gota de agua del torrente de acero o, si tenía más suerte, en una ola.\nDebía hacerlo, debía convertirse en un segundo padre.\nPero... ¿quién era él? ¿Quién es Randy Howard ahora?\n\"Despierta, viejo\". Randy se sienta frente a la cama y observa al hombre de mediana edad en coma. \"Lo entiendes, ¿verdad? Dime... la respuesta.\"\nEl hombre en la cama permanece en silencio.\nRandy suspira y coloca una pequeña pistola en el pecho del hombre. Es lo que protegió desesperadamente contra su pecho cuando resultó gravemente herido, y también el primer regalo que Randy le dio de niño. Se aleja de la cama, pero regresa para enderezar la pequeña pistola.",
+          ContentES = "Los hijos siempre rechazan a sus padres. En la juventud, esto se atribuye a la negligencia paterna y la falta de amor paternal. Al madurar, uno se da cuenta de que es porque la similitud grabada en la sangre los condena a no poder coexistir.\nSe unió a la Legión para demostrar que nunca se convertiría en su padre, o eso pensaba. Pero cuando finalmente estuvo en el centro de la formación de soldados Hiperbóreos, sintió miedo: Había una fuerza que lo atraía, intentando atarlo para siempre a los vehículos blindados, cañones o cabinas de aeronaves bajo sus pies, fusionándolo con ese acero frío.\nFinalmente comprendió qué significaban los cuernos en su cabeza y la magia que solía usar como juego. No eran un accesorio bonito ni un truco asombroso, ¡eran una maldición, una maldición y otra maldición más! Su padre severo le ordenó brutalmente aprender artes de combate, pero con ternura ocultó lo más cruel de Hiperbórea.\n Finalmente comprendió qué significaban esas medallas relucientes que su padre siempre pulía con tanto cuidado. Eran las limosnas de la manada de lobos al perro pastor, los huesos que escupían después de masticarlos. Esos huesos protegían a los perros de las mordidas y ocasionalmente les daban la ilusión de poder bailar con los lobos.\nFinalmente comprendió qué significaba realmente que su padre se esforzara tanto en hacerlo practicar combate. Debía tomar el relevo de su padre y mantener el título de \"Charon Laureado\" de la familia Howard, junto con todo lo que ese título otorgaba: una vida próspera, dignidad intacta, las sonrisas inocentes de sus hermanas e incluso la supervivencia misma.\nPara conseguir todo eso, debía convertirse en parte del carro de guerra de Hiperbórea, en una gota de agua del torrente de acero o, si tenía más suerte, en una ola.\nDebía hacerlo, debía convertirse en un segundo padre.\nPero... ¿quién era él? ¿Quién es Randy Howard ahora?\n\"Despierta, viejo\". Randy se sienta frente a la cama y observa al hombre de mediana edad en coma. \"Lo entiendes, ¿verdad? Dime... la respuesta.\"\nEl hombre en la cama permanece en silencio.\nRandy suspira y coloca una pequeña pistola en el pecho del hombre. Es lo que protegió desesperadamente contra su pecho cuando resultó gravemente herido, y también el primer regalo que Randy le dio de niño. Se aleja de la cama, pero regresa para enderezar la pequeña pistola.",
           TextMapId = "UI_CHAR_DATA_TEXT_42020403"
         },
         UI_CHAR_DATA_TEXT_42020404 = {
@@ -74427,7 +75553,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_43010302"
         },
         UI_CHAR_DATA_TEXT_43010303 = {
-          ContentES = "La 13.ª Legión que ahora lidera Sibylle es una legión directamente subordinada al Emperador, solo se inclina ante los deseos del Emperador, es el sabueso más fiel y confiable junto al Emperador. El Emperador incluso le otorgó a Sibylle el privilegio especial de portar armas al entrar al palacio. Que un ciudadano Charon reciba tal honor solo ocurriría en las historias de fantasía que ellos mismos escriben, pero Sibylle lo convirtió en realidad.\nPor supuesto, precisamente por la confianza y el trato preferencial del Emperador, los miembros del Senado critican cada vez más su humilde origen y su arrogancia desmedida.\nPero solo Sibylle sabe que \"Toda la Gloria pertenece al Emperador\" no es más que una frase táctica habitual. A quien realmente vale la pena ser leal ahora es solo a sí misma.",
+          ContentES = "La 13.ª Legión que ahora lidera Sibylle es una legión directamente subordinada al Emperador, solo se inclina ante los deseos del Emperador, es el sabueso más fiel y confiable junto al Emperador. El Emperador incluso le otorgó a Sibylle el privilegio especial de portar armas al entrar al palacio. Que un ciudadano Charon reciba tal honor solo ocurriría en las historias de fantasía que ellos mismos escriben, pero Sibylle lo convirtió en realidad.\nPor supuesto, precisamente por la confianza y el trato preferencial del Emperador, los miembros del Senado critican cada vez más su humilde origen y su arrogancia desmedida.\nPero solo Sibylle sabe que \"Toda la gloria a nuestro Emperador\" no es más que una frase táctica habitual. A quien realmente vale la pena ser leal ahora es solo a sí misma.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010303"
         },
         UI_CHAR_DATA_TEXT_43010304 = {
@@ -74439,11 +75565,11 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_43010401"
         },
         UI_CHAR_DATA_TEXT_43010402 = {
-          ContentES = "Cuando Sibylle era pequeña, tuvo un cuervo.\nEl cuervo cayó del cielo justo frente a su precaria choza y la asustó. El cuervo herido tenía los ojos llorosos, así que la bondadosa Sibylle lo llevó a casa, le vendó las heridas, lo alimentó y lo bañó. Al ver cómo sus heridas sanaban poco a poco, cómo empezaba a picotear comida de su palma, cómo comenzaba a caminar y a volar con dificultad, Sibylle sonreía con genuina alegría. Incluso un cuervo feo que había caído al barro seguramente podría volver a volar por el cielo, ¿no? Eso pensaba ella.\nPero un día, varios niños vagabundos de su edad tocaron a su puerta para pedirle limosna. También tenían los ojos llorosos, así que la bondadosa Sibylle les dio su cena: el poco pan y agua caliente que tenía. Sin embargo, no se fueron. Irrumpieron en su casa, robaron la poca comida que le quedaba y se llevaron las reliquias de sus padres. Cuando Sibylle intentó detenerlos, la arrastraron y golpearon hasta dejarle la cara hinchada y amoratada.\nEl cuervo pareció darse cuenta de lo que pasaba y voló aleteando sobre sus cabezas para picotear a esos intrusos. Pero el cuervo, apenas recuperado, solo podía volar torpemente, por lo que pronto fue atrapado por los furiosos vagabundos.\n\"Pequeño bicho\", dijo con desprecio el líder del grupo, apretando al cuervo en su mano. \"Te atreves a picotearme, qué valiente eres.\"\n\"¡Por favor, suéltenlo!\" Sibylle pareció intuir lo que iba a pasar y luchó desesperadamente por liberarse. \"¡Llévense toda la comida, pero no lo toquen!\"\nLa niña gritaba desgarradoramente, con la voz ronca. Pero su pequeño cuerpo fue inmovilizado por dos personas que le presionaron la cabeza contra el suelo, y sus lágrimas se mezclaron con el barro.\nA través de sus ojos inyectados en sangre, vio cómo arrojaban al cuervo con fuerza contra el suelo, y luego escuchó el sonido de algo pesado pisoteando el piso...\nDespués de que se fueron, Sibylle finalmente logró levantarse con dificultad, abrazó al cuervo y besó en silencio su cuerpo frío. No sabía cuánta sangre había derramado el cuervo, porque tenía alas negras como la noche. ¡Esta pequeña vida oscura ocultaba incluso su sangre en las sombras, y hasta su muerte fue silenciosa!\nAños después, Sibylle, ya graduada de la Academia Spathatoi y convertida en una estrella en ascenso de la Legión, visitó de nuevo aquella choza. Le pareció escuchar el aleteo del cuervo, o quizás era su imaginación. Cuando aguzó el oído, en la casa vacía solo resonaban sus propios pasos. Una vez más recordó aquella lejana noche cuando tenía ocho años. Por aquella vida frágil, por su propia impotencia, lloró a gritos por última vez. La oscuridad de la noche se tragó sus lágrimas. Nadie escuchó el llanto de una niña de ocho años.",
+          ContentES = "Cuando Sibylle era pequeña, tuvo un cuervo.\n El cuervo cayó del cielo justo frente a su precaria choza y la asustó. El cuervo herido tenía los ojos llorosos, así que la bondadosa Sibylle lo llevó a casa, le vendó las heridas, lo alimentó y lo bañó. Al ver cómo sus heridas sanaban poco a poco, cómo empezaba a picotear comida de su palma, cómo comenzaba a caminar y a volar con dificultad, Sibylle sonreía con genuina alegría. Incluso un cuervo feo que había caído al barro seguramente podría volver a volar por el cielo, ¿no? Eso pensaba ella.\n Pero un día, varios niños vagabundos de su edad tocaron a su puerta para pedirle limosna. También tenían los ojos llorosos, así que la bondadosa Sibylle les dio su cena: el poco pan y agua caliente que tenía. Sin embargo, no se fueron. Irrumpieron en su casa, robaron la poca comida que le quedaba y se llevaron las reliquias de sus padres. Cuando Sibylle intentó detenerlos, la arrastraron y golpearon hasta dejarle la cara hinchada y amoratada.\n El cuervo pareció darse cuenta de lo que pasaba y voló aleteando sobre sus cabezas para picotear a esos intrusos. Pero el cuervo, apenas recuperado, solo podía volar torpemente, por lo que pronto fue atrapado por los furiosos vagabundos.\n \"Pequeño bicho\", dijo con desprecio el líder del grupo, apretando al cuervo en su mano. \"Te atreves a picotearme, qué valiente eres.\"\n \"¡Por favor, suéltenlo!\" Sibylle pareció intuir lo que iba a pasar y luchó desesperadamente por liberarse. \"¡Llévense toda la comida, pero no lo toquen!\"\n La niña gritaba desgarradoramente, con la voz ronca. Pero su pequeño cuerpo fue inmovilizado por dos personas que le presionaron la cabeza contra el suelo, y sus lágrimas se mezclaron con el barro.\n A través de sus ojos inyectados en sangre, vio cómo arrojaban al cuervo con fuerza contra el suelo, y luego escuchó el sonido de algo pesado pisoteando el piso...\n Después de que se fueron, Sibylle finalmente logró levantarse con dificultad, abrazó al cuervo y besó en silencio su cuerpo frío. No sabía cuánta sangre había derramado el cuervo, porque tenía alas negras como la noche. ¡Esta pequeña vida oscura ocultaba incluso su sangre en las sombras, y hasta su muerte fue silenciosa!\nAños después, Sibylle, ya graduada de la Academia Spathatoi y convertida en una estrella en ascenso de la Legión, visitó de nuevo aquella choza. Le pareció escuchar el aleteo del cuervo, o quizás era su imaginación. Cuando aguzó el oído, en la casa vacía solo resonaban sus propios pasos. Una vez más recordó aquella lejana noche cuando tenía ocho años. Por aquella vida frágil, por su propia impotencia, lloró a gritos por última vez. La oscuridad de la noche se tragó sus lágrimas. Nadie escuchó el llanto de una niña de ocho años.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010402"
         },
         UI_CHAR_DATA_TEXT_43010403 = {
-          ContentES = "El cuchillo del bandido presionaba firmemente contra el cuello de Flamel, y esta estudiosa que pasaba la mayor parte del tiempo en el laboratorio soltó un largo suspiro.\n\"Niños, deberían saber lo que están haciendo\", les advirtió con calma. \"Cada milímetro de herida en mí se convertirá en la guillotina que acabará con ustedes y sus seres queridos. \"\nLos dos bandidos no le hicieron caso. Le metieron un trapo en la boca a Flamel, la ataron brutalmente con una cuerda de cáñamo y la arrojaron en un rincón como si fuera una caja de mercancía. La puerta del almacén se cerró de golpe. El olor a moho del trapo casi la asfixiaba, y el sucio trozo de tela bloqueaba sus palabras más cruciales: \"Libérenme y recibirán una recompensa suficiente para mantener a toda una calle sin preocupaciones\". \"\nFlamel cerró los ojos e intentó recuperar fuerzas tanto como pudo. Ya entrada la noche, se escucharon ruidos extraños en la claraboya del almacén. Flamel levantó la vista y vio a una niña ágil que saltó al suelo. Bajo la tenue luz de las estrellas, pudo distinguir que era una chica toda sucia, con el pelo corto morado pegado a las orejas, pero con unos ojos brillantes y vivaces.\n\"Shh\", le quitó el trapo de la boca a Flamel y le devolvió la mochila robada. \"No se preocupe, ya están dormidos. Vine a rescatarla. Disculpe, mis hermanos vieron a alguien importante de la capital y perdieron la cabeza por un momento. \"\n\"Gracias, pero todavía hay algo que debo hacer\", dijo Flamel. \"Niña, ¿puedes llevarme al lugar donde me secuestraron ayer? Te pagaré diez monedas de oro como recompensa. Soy una estudiosa y no puedo regresar hasta terminar mi investigación. \"\nAtravesaron el valle en plena noche. Esta zona no estaba cultivada, así que llegar al pueblo más cercano requería varias horas de caminata. Si no fuera porque aquí se detectó un Filthoid aún no registrado, Flamel nunca se habría aventurado sola a un área tan remota.\nEl viento de la noche de otoño era suficiente para hacer temblar a cualquiera. Flamel caminaba cada vez con más dificultad, y la chica se detenía a esperarla cada vez con más frecuencia.\n\"¿Conoces un Filthoid llamado 'Filthoid de Physalis' por aquí? Ustedes, los locales, probablemente lo llaman...\"\n\"Lo llamamos 'Flor de mano gigante'\", respondió la chica. \"Parece una planta, pero devora todo lo que se le acerca. ¿De verdad quiere ir? \"\nFlamel asintió y se dirigieron hacia el bosque del oeste.\n\"No le tienes nada de miedo a los Filthoids\", dijo Flamel con aprobación. \"¿Eres una Daimon? \"\n\"Sí. Y creo que los Filthoids son una especie fascinante\", dijo la chica volteándose, con una mirada decidida en sus ojos: \"Si leyó el libro de la señora Maxima Flamel del año pasado, <I>Investigación sobre el origen de los Filthoids y Charon</>, también le interesarían... ¡Ah, no! Como vino a investigar la 'Flor de mano gigante', seguro ya leyó ese libro. Porque en él se menciona que la 'Flor de mano gigante' es el Filthoid más antiguo que se conoce. \"\nFlamel sonrió sin decir nada. Se dirigieron al bosque rocoso del oeste. Al pasar junto a una roca grande, la chica de repente extendió el brazo para bloquear el paso de Flamel. Como si el aire tranquilo hubiera sido rasgado de repente, docenas de rayos eléctricos cruzaron el cielo.\n\"La 'Flor de mano gigante' acaba de esconderse bajo tierra. Si hubiéramos seguido, estaríamos muertas. Pero ya no hay problema, está paralizada. Puede investigarla con tranquilidad\", dijo la chica con tono indiferente, mientras el sudor cubría su frente en finas gotas. Seguramente esos rayos le habían costado bastante poder mágico.\nFlamel le agradeció, abrió su mochila y sacó sus herramientas. \"Leíste <I>Investigación sobre el origen de los Filthoids y Charon</>\", dijo Flamel mientras cortaba, separaba y colocaba con destreza el tejido del Filthoid en placas de cultivo. \"Entonces sabes que la autora de ese libro confirmó la teoría de que 'todos los hijos de Charon y los Filthoids comparten el mismo origen' a través del descubrimiento de la 'Hélice'. ¿No te da miedo? No solo los Deterioradores: todos los hijos de Charon llevan sangre de Filthoid. Tú también. \"\n\"No hay nada que temer. No me importa lo que fui en el pasado, solo me importa en qué me convertiré en el futuro. Además\", la chica sonrió, sus pupilas moradas reflejaban una determinación clara, \"solo sabiendo qué es tu poder puedes entender cómo usarlo y dominarlo. \"\n\"Ya terminé de organizar las muestras. Gracias, es una subespecie muy rara de Filthoid de Physalis. Escóltame al pueblo cercano\", dijo Flamel poniéndose de pie. \"Por cierto, ¿cómo te llamas?\"\n\"Sibylle Mason\", respondió la chica.\n\"Bien, Sibylle Mason\", sonrió Flamel. El viento nocturno del valle se levantó, haciendo ondear su abrigo con fuerza. \"Te daré una dirección. Si te interesan los Filthoids y el poder de los Daimon, ve a esa mansión y di tu nombre. Te estaré esperando allí\". \"\n\"¡Traidora! Sibylle, ¡fuiste tú la que nos dijo que secuestráramos a esa tipa! ¿Y ahora la sueltas? ¿Qué significa esto? \"\n\"¿Diez monedas de oro no son suficientes para ustedes? \"\n\"¡Pero dijiste que era una persona importante de la capital, que si íbamos a pescar, pescáramos algo grande! ¿Y ahora te echas para atrás? Si era solo por esas diez monedas, ¡deberíamos haberla matado y listo! \"\nLos dos bandidos estaban atados espalda con espalda en un banco, rodeados de botellas de alcohol tiradas por todas partes, mientras gritaban furiosos a Sibylle: \"¡Maldita sea, ten el valor de no atacar mientras dormimos! Bastarda sin madre, siempre eres la más indecisa y cobarde. Ya me tenías harto, tarde o temprano vas a terminar como ese cuervo de hace años...\"\nSibylle se levantó, entornó los ojos y abrió a la fuerza una de las bocas que más maldecía. \"Crac\", fue el sonido de la mandíbula rompiéndose. Sibylle metió las monedas de oro una por una en la boca de su antiguo cómplice, y sus maldiciones se fueron debilitando poco a poco.\n\"Idiotas. Sus vidas de mierda terminan aquí, pero la mía nunca será así. \"\nSibylle apretó el papel que Flamel había arrancado de su libreta, se dio la vuelta y emprendió el camino de regreso a la Capital Imperial, Dismania.",
+          ContentES = "El cuchillo del bandido presionaba firmemente contra el cuello de Flamel, y esta estudiosa que pasaba la mayor parte del tiempo en el laboratorio soltó un largo suspiro.\n \"Niños, deberían saber lo que están haciendo\", les advirtió con calma. \"Cada milímetro de herida en mí se convertirá en la guillotina que acabará con ustedes y sus seres queridos. \"\n Los dos bandidos no le hicieron caso. Le metieron un trapo en la boca a Flamel, la ataron brutalmente con una cuerda de cáñamo y la arrojaron en un rincón como si fuera una caja de mercancía. La puerta del almacén se cerró de golpe. El olor a moho del trapo casi la asfixiaba, y el sucio trozo de tela bloqueaba sus palabras más cruciales: \"Libérenme y recibirán una recompensa suficiente para mantener a toda una calle sin preocupaciones\". \"\n Flamel cerró los ojos e intentó recuperar fuerzas tanto como pudo. Ya entrada la noche, se escucharon ruidos extraños en la claraboya del almacén. Flamel levantó la vista y vio a una niña ágil que saltó al suelo. Bajo la tenue luz de las estrellas, pudo distinguir que era una chica toda sucia, con el pelo corto morado pegado a las orejas, pero con unos ojos brillantes y vivaces.\n \"Shh\", le quitó el trapo de la boca a Flamel y le devolvió la mochila robada. \"No se preocupe, ya están dormidos. Vine a rescatarla. Disculpe, mis hermanos vieron a alguien importante de la capital y perdieron la cabeza por un momento. \"\n \"Gracias, pero todavía hay algo que debo hacer\", dijo Flamel. \"Niña, ¿puedes llevarme al lugar donde me secuestraron ayer? Te pagaré diez monedas de oro como recompensa. Soy una estudiosa y no puedo regresar hasta terminar mi investigación. \"\n Atravesaron el valle en plena noche. Esta zona no estaba cultivada, así que llegar al pueblo más cercano requería varias horas de caminata. Si no fuera porque aquí se detectó un Filthoid aún no registrado, Flamel nunca se habría aventurado sola a un área tan remota.\n El viento de la noche de otoño era suficiente para hacer temblar a cualquiera. Flamel caminaba cada vez con más dificultad, y la chica se detenía a esperarla cada vez con más frecuencia.\n \"¿Conoces un Filthoid llamado 'Filthoid de Physalis' por aquí? Ustedes, los locales, probablemente lo llaman...\"\n \"Lo llamamos 'Flor de mano gigante'\", respondió la chica. \"Parece una planta, pero devora todo lo que se le acerca. ¿De verdad quiere ir? \"\n Flamel asintió y se dirigieron hacia el bosque del oeste.\n \"No le tienes nada de miedo a los Filthoids\", dijo Flamel con aprobación. \"¿Eres una Daimon? \"\n \"Sí. Y creo que los Filthoids son una especie fascinante\", dijo la chica volteándose, con una mirada decidida en sus ojos: \"Si leyó el libro de la señora Maxima Flamel del año pasado, 'Investigación sobre el origen de los Filthoids y Charon', también le interesarían... ¡Ah, no! Como vino a investigar la 'Flor de mano gigante', seguro ya leyó ese libro. Porque en él se menciona que la 'Flor de mano gigante' es el Filthoid más antiguo que se conoce. \"\n Flamel sonrió sin decir nada. Se dirigieron al bosque rocoso del oeste. Al pasar junto a una roca grande, la chica de repente extendió el brazo para bloquear el paso de Flamel. Como si el aire tranquilo hubiera sido rasgado de repente, docenas de rayos eléctricos cruzaron el cielo.\n \"La 'Flor de mano gigante' acaba de esconderse bajo tierra. Si hubiéramos seguido, estaríamos muertas. Pero ya no hay problema, está paralizada. Puede investigarla con tranquilidad\", dijo la chica con tono indiferente, mientras el sudor cubría su frente en finas gotas. Seguramente esos rayos le habían costado bastante poder mágico.\n Flamel le agradeció, abrió su mochila y sacó sus herramientas. \"Leíste 'Investigación sobre el origen de los Filthoids y Charon'\", dijo Flamel mientras cortaba, separaba y colocaba con destreza el tejido del Filthoid en placas de cultivo. \"Entonces sabes que la autora de ese libro confirmó la teoría de que 'todos los hijos de Charon y los Filthoids comparten el mismo origen' a través del descubrimiento de la 'Hélice'. ¿No te da miedo? No solo los Deterioradores: todos los hijos de Charon llevan sangre de Filthoid. Tú también. \"\n \"No hay nada que temer. No me importa lo que fui en el pasado, solo me importa en qué me convertiré en el futuro. Además\", la chica sonrió, sus pupilas moradas reflejaban una determinación clara, \"solo sabiendo qué es tu poder puedes entender cómo usarlo y dominarlo. \"\n \"Ya terminé de organizar las muestras. Gracias, es una subespecie muy rara de Filthoid de Physalis. Escóltame al pueblo cercano\", dijo Flamel poniéndose de pie. \"Por cierto, ¿cómo te llamas?\"\n \"Sibylle Mason\", respondió la chica.\n \"Bien, Sibylle Mason\", sonrió Flamel. El viento nocturno del valle se levantó, haciendo ondear su abrigo con fuerza. \"Te daré una dirección. Si te interesan los Filthoids y el poder de los Daimon, ve a esa mansión y di tu nombre. Te estaré esperando allí\". \"\n\"¡Traidora! Sibylle, ¡fuiste tú la que nos dijo que secuestráramos a esa tipa! ¿Y ahora la sueltas? ¿Qué significa esto? \"\n \"¿Diez monedas de oro no son suficientes para ustedes? \"\n \"¡Pero dijiste que era una persona importante de la capital, que si íbamos a pescar, pescáramos algo grande! ¿Y ahora te echas para atrás? Si era solo por esas diez monedas, ¡deberíamos haberla matado y listo! \"\n Los dos bandidos estaban atados espalda con espalda en un banco, rodeados de botellas de alcohol tiradas por todas partes, mientras gritaban furiosos a Sibylle: \"¡Maldita sea, ten el valor de no atacar mientras dormimos! Bastarda sin madre, siempre eres la más indecisa y cobarde. Ya me tenías harto, tarde o temprano vas a terminar como ese cuervo de hace años...\"\n Sibylle se levantó, entornó los ojos y abrió a la fuerza una de las bocas que más maldecía. \"Crac\", fue el sonido de la mandíbula rompiéndose. Sibylle metió las monedas de oro una por una en la boca de su antiguo cómplice, y sus maldiciones se fueron debilitando poco a poco.\n \"Idiotas. Sus vidas de mierda terminan aquí, pero la mía nunca será así. \"\n Sibylle apretó el papel que Flamel había arrancado de su libreta, se dio la vuelta y emprendió el camino de regreso a la Capital Imperial, Dismania.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010403"
         },
         UI_CHAR_DATA_TEXT_43010404 = {
@@ -74451,7 +75577,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_43010404"
         },
         UI_CHAR_DATA_TEXT_43010405 = {
-          ContentES = "Varios cuervos se posaron en el alféizar de la ventana, alisándose sus plumas negras y relucientes. Flamel no pudo evitar recordar su otro nombre: pájaros de la muerte. Sí, anunciar la llegada de la desgracia siempre ha sido la misión de los cuervos.\nDebido a la naturaleza secreta de las investigaciones, muy pocas habitaciones en la Academia de Alquimia tenían ventanas. En su lugar, había lámparas que nunca se apagaban, como un sol pálido que colgaba eternamente en las tierras de noche perpetua. Pero Flamel insistió en abrir una ventana en su oficina, como si con esa ventana aún mantuviera alguna conexión con el paisaje exterior.\nPero hoy, esa ventana estrecha había sido ocupada por varios cuervos de plumaje negro.\nFlamel estaba sentada en su escritorio, con la espalda recta y el cabello recogido impecablemente detrás de la cabeza. Cuando sonó el golpe en la puerta, ella solo miró tranquilamente hacia la ventana, sin conceder ni una pizca de atención a quien llamaba: su antigua alumna, ahora Comandante de la Legión, Sibylle.\n\"Señora Maxima Flamel\", Sibylle rompió el silencio incómodo. \"Vengo a informarle: Debido a su acto indirecto de traición al imperio, se le revocarán todos sus cargos en la Academia Spathatoi, así como el título de 'Primera Alquimista'. Por supuesto, miró a su antigua maestra y pronunció el perdón que había conseguido humillándose y suplicando: \"Gracias a sus grandes contribuciones pasadas al imperio, no será trasladada a la Prisión Militar Real. Si aún ama la investigación, incluso puede conservar un laboratorio en la Academia de Alquimia, aunque, por supuesto, toda investigación será supervisada.\"\nFlamel no respondió. Después de un largo rato, finalmente suspiró profundamente y volteó: \"Comandante, ¿eso es todo lo que tienes que decir?\"\nSibylle evitó la mirada de su maestra: \"Sí, eso es todo。\"\n\"La primera vez que te vi, aún eras bajita. En ese momento, yo era tu prisionera, igual que hoy\", preguntó Flamel: \"Ese secuestro, desde el principio lo planeaste tú, ¿verdad?\"\nSibylle negó con la cabeza: \"Recordar el pasado no tiene sentido, señora Flamel. Lo importante es el presente。\"\n\"La Academia de Alquimia debería ser un lugar para buscar conocimiento, pero tú y Julius la convirtieron en la vergüenza de Hiperbórea\", dijo la estudiosa, que ya no era joven, mirando a su alumna e intentando en vano hacerla recapacitar una vez más: \"El conocimiento existe para hacer del mundo un lugar mejor. Pero tú lo usas como...\"\n\"Como escalera para trepar al poder. Ya me lo dijo antes\", dijo Sibylle: \"Sus ideales son nobles, mi actitud hacia el conocimiento es desvergonzada y vil. Nunca lo he negado. Pero, ¿lo ha pensado? Tener ideales nobles es un privilegio de quienes nacen en la nobleza como usted. Su vida tiene infinitos caminos de escape, pero ese cuervo en el alféizar solo tiene dos: o vuela con todas sus fuerzas, o es derribado por la honda de un niño.\"\n\"Además, lo que usted no sabe es\", continuó Sibylle, \"que los cuervos también tienen ideales. Vuelan lo suficientemente alto como para ver cosas que los humanos que caminan en el suelo no pueden ver. Por eso pueden hacer cosas que solo ellos pueden hacer: cosas que realmente pueden cambiar a la humanidad.\"\n\"¡Comandante, no, Sibylle, dime con honestidad!\", Flamel se levantó de golpe, la silla cayó al suelo y asustó a los cuervos del alféizar, que salieron volando agitando sus alas: \"Ese día, en la Torre de la Iglesia Elysiana, ustedes... ¿qué vieron exactamente?\"\nSibylle no respondió. El sol del atardecer finalmente se proyectó a través de la ventana, iluminando su rostro. Por un instante, Flamel sintió que el rostro de su alumna parecía una estatua sagrada tallada por la Iglesia: fría y compasiva.\n\"Nada, señora Flamel\", dijo Sibylle: \"Volvamos al tema. Si planea seguir investigando en la Academia de Alquimia, firme este documento. Tiene tres días para pensarlo.\"\nLa mujer que era comandante de la Legión se dio la vuelta y se fue sin mirar atrás. Atravesó el profundo pasillo, dejó esa oficina muy atrás, y solo entonces finalmente se volteó e hizo una profunda reverencia hacia esa habitación.\n\"Adiós, maestra.\"",
+          ContentES = "Varios cuervos se posaron en el alféizar de la ventana, alisándose sus plumas negras y relucientes. Flamel no pudo evitar recordar su otro nombre: pájaros de la muerte. Sí, anunciar la llegada de la desgracia siempre ha sido la misión de los cuervos.\n Debido a la naturaleza secreta de las investigaciones, muy pocas habitaciones en la Academia de Alquimia tenían ventanas. En su lugar, había lámparas que nunca se apagaban, como un sol pálido que colgaba eternamente en las tierras de noche perpetua. Pero Flamel insistió en abrir una ventana en su oficina, como si con esa ventana aún mantuviera alguna conexión con el paisaje exterior.\n Pero hoy, esa ventana estrecha había sido ocupada por varios cuervos de plumaje negro.\n Flamel estaba sentada en su escritorio, con la espalda recta y el cabello recogido impecablemente detrás de la cabeza. Cuando sonó el golpe en la puerta, ella solo miró tranquilamente hacia la ventana, sin conceder ni una pizca de atención a quien llamaba: su antigua alumna, ahora Comandante de la Legión, Sibylle.\n\"Señora Maxima Flamel\", Sibylle rompió el silencio incómodo. \"Vengo a informarle: Debido a su acto indirecto de traición al imperio, se le revocarán todos sus cargos en la Academia Spathatoi, así como el título de 'Primera Alquimista'. Por supuesto, miró a su antigua maestra y pronunció el perdón que había conseguido humillándose y suplicando: \"Gracias a sus grandes contribuciones pasadas al imperio, no será trasladada a la Prisión Militar Real. Si aún ama la investigación, incluso puede conservar un laboratorio en la Academia de Alquimia, aunque, por supuesto, toda investigación será supervisada.\"\n Flamel no respondió. Después de un largo rato, finalmente suspiró profundamente y volteó: \"Comandante, ¿eso es todo lo que tienes que decir?\"\n Sibylle evitó la mirada de su maestra: \"Sí, eso es todo。\"\n \"La primera vez que te vi, aún eras bajita. En ese momento, yo era tu prisionera, igual que hoy\", preguntó Flamel: \"Ese secuestro, desde el principio lo planeaste tú, ¿verdad?\"\n Sibylle negó con la cabeza: \"Recordar el pasado no tiene sentido, señora Flamel. Lo importante es el presente。\"\n \"La Academia de Alquimia debería ser un lugar para buscar conocimiento, pero tú y Julius la convirtieron en la vergüenza de Hiperbórea\", dijo la estudiosa, que ya no era joven, mirando a su alumna e intentando en vano hacerla recapacitar una vez más: \"El conocimiento existe para hacer del mundo un lugar mejor. Pero tú lo usas como...\"\n \"Como escalera para trepar al poder. Ya me lo dijo antes\", dijo Sibylle: \"Sus ideales son nobles, mi actitud hacia el conocimiento es desvergonzada y vil. Nunca lo he negado. Pero, ¿lo ha pensado? Tener ideales nobles es un privilegio de quienes nacen en la nobleza como usted. Su vida tiene infinitos caminos de escape, pero ese cuervo en el alféizar solo tiene dos: o vuela con todas sus fuerzas, o es derribado por la honda de un niño.\"\n \"Además, lo que usted no sabe es\", continuó Sibylle, \"que los cuervos también tienen ideales. Vuelan lo suficientemente alto como para ver cosas que los humanos que caminan en el suelo no pueden ver. Por eso pueden hacer cosas que solo ellos pueden hacer: cosas que realmente pueden cambiar a la humanidad.\"\n \"¡Comandante, no, Sibylle, dime con honestidad!\", Flamel se levantó de golpe, la silla cayó al suelo y asustó a los cuervos del alféizar, que salieron volando agitando sus alas: \"Ese día, en la Torre de la Iglesia Elysiana, ustedes... ¿qué vieron exactamente?\"\nSibylle no respondió. El sol del atardecer finalmente se proyectó a través de la ventana, iluminando su rostro. Por un instante, Flamel sintió que el rostro de su alumna parecía una estatua sagrada tallada por la Iglesia: fría y compasiva.\n \"Nada, señora Flamel\", dijo Sibylle: \"Volvamos al tema. Si planea seguir investigando en la Academia de Alquimia, firme este documento. Tiene tres días para pensarlo.\"\n La mujer que era comandante de la Legión se dio la vuelta y se fue sin mirar atrás. Atravesó el profundo pasillo, dejó esa oficina muy atrás, y solo entonces finalmente se volteó e hizo una profunda reverencia hacia esa habitación.\n \"Adiós, maestra.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_43010405"
         },
         UI_CHAR_DATA_TEXT_51010101 = {
@@ -74489,7 +75615,15 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_51010204 = {
           ContentES = "El puesto de Comisaria de Provisiones no es permanente. Normalmente solo lo necesitan ciudades muy, muy grandes o lugares que no producen alimentos, para gestionar el flujo de provisiones de distintas regiones.\nEn la pequeña ciudad donde vive Truffle no se necesitaba ese puesto. No es un frente de batalla ni un lugar de minería o tala de madera.\nAsí que los visitantes de paso inevitablemente se preguntan por qué Truffle tiene ese puesto de Comisaria de Provisiones, y por qué Filbert, que la acompaña, puede llamarse Comisaria Especial de Provisiones.\nPero todos los residentes permanentes de la ciudad, al mencionar el tema, responden con entusiasmo a los curiosos visitantes: \"Truffle y Filbert alimentaron a toda la ciudad durante una gran hambruna. \"\nY la mayoría de los visitantes que escuchan esto lo toman como una anécdota curiosa, se ríen y no indagan más. Ay, qué gente tan poco lista.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010204"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_51010205",
+    MaxKey = "UI_CMName_Name_XidunWenhao",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_51010205 = {
           ContentES = "Filbert es más inteligente de lo que parece. Emite un gruñido especial de felicidad cuando ayuda a alguien a llenar su estómago, y se acurruca en una esquina cuando se burlan de ella. Pero no necesita mucho consuelo de Truffle. Después de medio día, siempre vuelve a menear la cabeza y la cola como siempre.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010205"
@@ -74519,15 +75653,15 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_51010401"
         },
         UI_CHAR_DATA_TEXT_51010402 = {
-          ContentES = "No se sabe desde cuándo, pero junto a esa niña que vagaba por las calles apareció una cerdita inseparable. A veces aparecían juntas ayudando en las cocinas de los restaurantes, a veces bajo los robles buscando frutos para saciar el hambre.\nTruffle se preocupó mucho tiempo por ponerle un nombre, hasta que justo cuando mordía una dura avellana se le cayó su primer diente de leche.\nTruffle había escuchado a los ancianos decir que cambiar los dientes significa crecer. Ella deseaba desesperadamente crecer: Crecer era algo muy bueno. Al crecer se volvería fuerte y ya no pasaría hambre. Así, esa \"avellana\" que simbolizaba el crecimiento tuvo la suerte de convertirse en el nombre de la única amiga de Truffle.\nPero su separación llegó más rápido de lo que Truffle imaginaba. Mientras recogía hongos al borde de un acantilado, resbaló y cayó rodando. Cuando volvió a abrir los ojos, estaba acostada en una cama suave y esponjosa, con velas altas y el aire sin olor a tierra. Era una pequeña habitación del santuario de la Iglesia. La sacerdotisa McGuffin había encontrado a Truffle inconsciente al pie del acantilado y la llevó de regreso.\nUna cama suave y firme, vendas y medicinas en las heridas, agua limpia y comida: todo eso eran cosas que Truffle solo podía tener en sueños. Se quedó ahí aturdida, sin atreverse siquiera a pellizcarse.\nLos bondadosos sacerdotes de la Iglesia le preguntaron uno por uno dónde vivía, si tenía familia, con la intención de llevarla a casa cuando se recuperara.\n\"Yo... no tengo familia, pero tengo una amiga que sigue esperándome afuera.\"\n\"Filbert, ese nombre no es muy común.\"\n\"¡Sí! Filbert es una cerda muy, muy buena.\"\n\"¿¡Una cerda!?\" Los sacerdotes se miraron entre sí: \"Eso no puede ser, el santuario no permite mascotas grandes.\"\n\"¡Filbert no es mi mascota, es mi amiga!.\"\nJusto cuando Truffle no se rendía e iba a decir algo más, la sacerdotisa McGuffin, quien la había traído del campo, la interrumpió de repente: \"No pierdas tiempo, Truffle. Elige tú misma: quedarte aquí o ir a buscar a tu cerda.\"\nComo si volviera a ese invierno, Truffle se apoyó contra una gruesa pared y aún podía escuchar a los niños dentro de la casa cantando bajo la protección de sus familias.\nNo le quedaba mucho tiempo para decidir. Pensó en la cama suave y esponjosa de la pequeña habitación y en el pan apilado como una montaña. Finalmente tomó la mano de la sacerdotisa. El sol del atardecer, impregnado de aroma a naranja, nubló un poco su vista.\nParecía que Truffle finalmente había encontrado un hogar cálido, y todos esos recuerdos de vagabundeo del pasado se hundían en la oscuridad como el sol a punto de caer.\nSin embargo, en la segunda mitad de esa noche, cuando todos dormían, Truffle salió sigilosamente de la casa cálida y caminó hacia ese lugar que apenas recordaba vagamente.\nLas casas alrededor eran altas, de vez en cuando se escuchaba el \"cu-cú\" de algún pájaro. Truffle sentía un poco de miedo, pero siguió caminando. Aunque sus heridas aún no sanaban completamente y le dolía el pie, sabía que debía ir a ese lugar, solo tenía que llegar a ese lugar...\nMás cerca, más cerca... Era esa enorme ventana panorámica que vio en aquella noche de invierno. Ya no salían melodías ni aromas, así que Truffle no podía estar completamente segura de que fuera ese lugar, hasta que vio esa silueta que ahora era mucho más grande que en sus recuerdos.\nComo en una historia romántica de dramaturgo, en una noche muy, muy silenciosa, Truffle echó a correr y se lanzó sobre esa enorme silueta:\n\"¡Filbert!.\"\nUn rayo de sol asomó en el horizonte, iluminando las lágrimas brillantes en el rostro de Truffle.",
+          ContentES = "No se sabe desde cuándo, pero junto a esa niña que vagaba por las calles apareció una cerdita inseparable. A veces aparecían juntas ayudando en las cocinas de los restaurantes, a veces bajo los robles buscando frutos para saciar el hambre.\n Truffle se preocupó mucho tiempo por ponerle un nombre, hasta que justo cuando mordía una dura avellana se le cayó su primer diente de leche.\n Truffle había escuchado a los ancianos decir que cambiar los dientes significa crecer. Ella deseaba desesperadamente crecer: Crecer era algo muy bueno. Al crecer se volvería fuerte y ya no pasaría hambre. Así, esa \"avellana\" que simbolizaba el crecimiento tuvo la suerte de convertirse en el nombre de la única amiga de Truffle.\n Pero su separación llegó más rápido de lo que Truffle imaginaba. Mientras recogía hongos al borde de un acantilado, resbaló y cayó rodando. Cuando volvió a abrir los ojos, estaba acostada en una cama suave y esponjosa, con velas altas y el aire sin olor a tierra. Era una pequeña habitación del santuario de la Iglesia. La sacerdotisa McGuffin había encontrado a Truffle inconsciente al pie del acantilado y la llevó de regreso.\n Una cama suave y firme, vendas y medicinas en las heridas, agua limpia y comida: todo eso eran cosas que Truffle solo podía tener en sueños. Se quedó ahí aturdida, sin atreverse siquiera a pellizcarse.\n Los bondadosos sacerdotes de la Iglesia le preguntaron uno por uno dónde vivía, si tenía familia, con la intención de llevarla a casa cuando se recuperara.\n \"Yo... no tengo familia, pero tengo una amiga que sigue esperándome afuera.\"\n \"Filbert, ese nombre no es muy común.\"\n \"¡Sí! Filbert es una cerda muy, muy buena.\"\n \"¿¡Una cerda!?\" Los sacerdotes se miraron entre sí: \"Eso no puede ser, el santuario no permite mascotas grandes.\"\n \"¡Filbert no es mi mascota, es mi amiga!.\"\n Justo cuando Truffle no se rendía e iba a decir algo más, la sacerdotisa McGuffin, quien la había traído del campo, la interrumpió de repente: \"No pierdas tiempo, Truffle. Elige tú misma: quedarte aquí o ir a buscar a tu cerda.\"\n Como si volviera a ese invierno, Truffle se apoyó contra una gruesa pared y aún podía escuchar a los niños dentro de la casa cantando bajo la protección de sus familias.\n No le quedaba mucho tiempo para decidir. Pensó en la cama suave y esponjosa de la pequeña habitación y en el pan apilado como una montaña. Finalmente tomó la mano de la sacerdotisa. El sol del atardecer, impregnado de aroma a naranja, nubló un poco su vista.\n Parecía que Truffle finalmente había encontrado un hogar cálido, y todos esos recuerdos de vagabundeo del pasado se hundían en la oscuridad como el sol a punto de caer.\nSin embargo, en la segunda mitad de esa noche, cuando todos dormían, Truffle salió sigilosamente de la casa cálida y caminó hacia ese lugar que apenas recordaba vagamente.\n Las casas alrededor eran altas, de vez en cuando se escuchaba el \"cu-cú\" de algún pájaro. Truffle sentía un poco de miedo, pero siguió caminando. Aunque sus heridas aún no sanaban completamente y le dolía el pie, sabía que debía ir a ese lugar, solo tenía que llegar a ese lugar...\n Más cerca, más cerca... Era esa enorme ventana panorámica que vio en aquella noche de invierno. Ya no salían melodías ni aromas, así que Truffle no podía estar completamente segura de que fuera ese lugar, hasta que vio esa silueta que ahora era mucho más grande que en sus recuerdos.\n Como en una historia romántica de dramaturgo, en una noche muy, muy silenciosa, Truffle echó a correr y se lanzó sobre esa enorme silueta:\n \"¡Filbert!.\"\n Un rayo de sol asomó en el horizonte, iluminando las lágrimas brillantes en el rostro de Truffle.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010402"
         },
         UI_CHAR_DATA_TEXT_51010403 = {
-          ContentES = "Poco después de que Truffle se convirtiera en miembro de la Iglesia, la pequeña ciudad sufrió una hambruna. Las provisiones almacenadas por la Iglesia casi se agotaron, y los huérfanos acogidos naturalmente tampoco podían comer hasta saciarse.\nCada noche, los sonidos de los estómagos hambrientos de los niños resonaban uno tras otro en el silencio del dormitorio, como una sinfonía.\nAlgunos niños pequeños, incapaces de dormir por el hambre, solo podían acurrucarse bajo las mantas y sollozar. Truffle, con el estómago igual de vacío, al escuchar sus llantos se arrastraba sin fuerzas hasta ellos para consolarlos.\n\"No llores, no llores. Duérmete, cuando te duermas ya no sentirás hambre.\"\n\"Pero tengo tanta hambre que no puedo dormir... ¿Tú no tienes hambre?\"\nTruffle se tocó su propia barriga vacía, bajó las cejas, torció la boca y suspiró.\n\"En realidad yo también tengo mucha hambre, pero no te preocupes. Te enseñaré cómo puedes dormirte. ¡Primero cierra los ojos!\"\nTruffle cubrió los ojos de su amiga con su manita caliente y le susurró al oído su propia canción infantil inventada, llena de errores: \"Imagina un campo de trigo muy, muy grande. Eres un topo en ese trigal y en tu madriguera hay muchas, muchas papas. Las cuentas y cuentas: una papa, dos papas, tres papas, cuatro papas...\"\n\"Veintisiete papas, veintiocho papas, veintinueve papas...\"\n\"Cincuenta y tres papas... cincuenta y cuatro papas... cin... cincuenta y seis papas... cincuenta y siete... cincuen... zzz... zzz...\"\nLa sinfonía de los estómagos se fue apagando poco a poco, y el último timbal provino del estómago de Truffle.\nTruffle recordó los días en que vagaba con Filbert y se decidió a hacer algo... por ella misma y por todos.",
+          ContentES = "Poco después de que Truffle se convirtiera en miembro de la Iglesia, la pequeña ciudad sufrió una hambruna. Las provisiones almacenadas por la Iglesia casi se agotaron, y los huérfanos acogidos naturalmente tampoco podían comer hasta saciarse.\n Cada noche, los sonidos de los estómagos hambrientos de los niños resonaban uno tras otro en el silencio del dormitorio, como una sinfonía.\n Algunos niños pequeños, incapaces de dormir por el hambre, solo podían acurrucarse bajo las mantas y sollozar. Truffle, con el estómago igual de vacío, al escuchar sus llantos se arrastraba sin fuerzas hasta ellos para consolarlos.\n \"No llores, no llores. Duérmete, cuando te duermas ya no sentirás hambre.\"\n \"Pero tengo tanta hambre que no puedo dormir... ¿Tú no tienes hambre?\"\n Truffle se tocó su propia barriga vacía, bajó las cejas, torció la boca y suspiró.\n \"En realidad yo también tengo mucha hambre, pero no te preocupes. Te enseñaré cómo puedes dormirte. ¡Primero cierra los ojos!\"\n Truffle cubrió los ojos de su amiga con su manita caliente y le susurró al oído su propia canción infantil inventada, llena de errores: \"Imagina un campo de trigo muy, muy grande. Eres un topo en ese trigal y en tu madriguera hay muchas, muchas papas. Las cuentas y cuentas: una papa, dos papas, tres papas, cuatro papas...\"\n \"Veintisiete papas, veintiocho papas, veintinueve papas...\"\n \"Cincuenta y tres papas... cincuenta y cuatro papas... cin... cincuenta y seis papas... cincuenta y siete... cincuen... zzz... zzz...\"\n La sinfonía de los estómagos se fue apagando poco a poco, y el último timbal provino del estómago de Truffle.\n Truffle recordó los días en que vagaba con Filbert y se decidió a hacer algo... por ella misma y por todos.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010403"
         },
         UI_CHAR_DATA_TEXT_51010404 = {
-          ContentES = "En esa noche en que Truffle tenía la cabeza mareada de hambre, decidió que no quería volver a escuchar la sinfonía de los estómagos.\nAsí que al día siguiente, bajo la mirada atónita de todos, salió de la Iglesia, se dirigió al bosque frente a ella y silbó. Antes, Truffle solo se atrevía a jugar con ella en secreto por las noches, sin alejarse ni hacer mucho ruido, por miedo a que la severa sacerdotisa McGuffin la descubriera. Pero hoy era diferente, porque en la cabecita de Truffle ya había madurado un gran plan.\nJunto con el sonido \"ta-ta-ta\" apareció naturalmente su buena amiga Filbert. Filbert no había sido afectada por la hambruna y seguía igual de redonda, incluso más grande que en los recuerdos de Truffle.\n\"Filbert, ¿recuerdas cuando éramos vagabundas?\"\nTruffle empezó a recordar con Filbert cuando recién se conocieron. Filbert la llevó moribunda a muchos lugares: Fueron al río recién descongelado y atraparon muchos pececillos, fueron a un bosque desolado y encontraron muchas nueces, y después fueron al borde de un acantilado y recogieron muchos hongos. Fue entonces cuando Truffle se dio cuenta de que en lugares donde nunca había estado, aún había muchísima comida.\nEntonces, si ahora no hay suficiente comida en la ciudad, ¡hay que ir a buscarla al campo!\nAsí, Truffle le contó su gran plan a Filbert, y una persona y una cerda... ay no, dos buenas amigas partieron juntas.\nLlegaron al río y descubrieron que ambas orillas estaban llenas de gente intentando pescar para saciar el hambre, pero parecía que nadie había pescado nada.\nLlegaron al bosque, pero hasta la corteza y las hojas de los árboles habían sido arrancadas por la gente para comer.\nRenunciaron a ir al acantilado, porque sin pensarlo ya sabían cuál sería el resultado...\nComo si el mundo entero también tuviera el estómago vacío, casi toda la comida había sido devorada a grandes bocados. Peces, reptiles, aves, bestias: todos aprovechaban cada oportunidad para devorarse entre sí, pero nunca era suficiente. Al final caían con el estómago vacío, se descomponían...\nEn ese momento, Truffle también había agotado sus últimas fuerzas y yacía bajo el tronco de un árbol lleno de agujeros por las mordidas.\nEsa sensación era familiar, igual que en aquella noche nevada: tanto frío... tanta hambre... Filbert frente a ella también se volvía cada vez más borrosa...\nPero justo entonces, Filbert, también desanimada, pareció oler algo y corrió hacia un árbol cercano. Con sus últimas fuerzas, empezó a escarbar.\n…\nUn olor algo punzante llenó de repente la nariz de Truffle y la despertó. Frente a ella, Filbert, como aquella vez, acercó un alimento a su boca.\nPor su amor a la comida, Truffle entendió de inmediato qué era: Era seta roja, un alimento muy raro, enterrado profundamente bajo los árboles. Pero como la ubicación de la seta roja es difícil de detectar y se necesita mucha fuerza para desenterrarlo, nadie había pensado en excavarlos.\nMmm... aunque el sabor era muy extraño, mientras masticaba, Truffle fue recuperando fuerzas poco a poco, y Filbert ya había desenterrado más de diez setas rojas a su lado.\nCon las idas y venidas de Truffle y Filbert, las sacerdotisas de la Iglesia descubrieron con asombro que en la puerta se había acumulado una montaña de setas rojas. Comenzaron a saciarse y luego repartieron comida entre los hambrientos de los alrededores.\nAsí, cuando el bosque volvió a brotar en primavera, la hambruna también llegó a su fin. Pero Truffle no estaba tan feliz como imaginaba, pues surgió en ella una nueva preocupación: Ahora que todos estaban saciados, ya no necesitaban que Filbert y ella buscaran comida, lo que significaba que ya no podría pasar todo el día con Filbert.\nCon el rostro decaído, quiso preguntarle a la sacerdotisa McGuffin si podía jugar un rato más con Filbert, pero no se atrevía. Solo pudo caminar de un lado a otro frente a la Congregación hasta que chocó de lleno con la sacerdotisa McGuffin, que regresaba de la ciudad.\n\"Yo... ese... Filbert... eh...\"\nJusto cuando Truffle intentaba organizar sus palabras para que la seria sacerdotisa frente a ella aceptara su pequeña petición, la sacerdotisa sacó una carta y se la entregó con una sonrisa. Truffle no podía leerla bien y solo pudo entender vagamente:\n\"Árbol Celestial en las alturas... en nombre de la luz de los Nueve Dioses... la ciudadana llamada Truffle, con su algo no sé leer... salvó la emergencia... y la criatura Filbert... juntas se esforzaron con sus cuatro patas... se nombra a Truffle especialista en granos no sé qué, y a Filbert especialista especial en granos no sé qué...\"\n\"No entiendo, sacerdotisa McGuffin. ¿Necesitan que haga algo? También menciona a Filbert... Ah, cierto, ¿podrías no echar a Filbert? Ella ayudó a todos, quiero jugar un poco más con ella, ¿puedo?\"\nLa sacerdotisa seguía sonriendo, se agachó y le dijo a Truffle: \"Esta carta significa que tú y Filbert podrán estar juntas para siempre.\"\n\"¿De verdad?\" Truffle abrió los ojos de par en par, casi sin poder creerlo: \"Gracias a los dioses, gracias, sacerdotisa McGuffin.\"\n\"No, debería ser yo quien les agradezca, Truffle, y también a Filbert. Ustedes son el milagro más grande que he visto con mis propios ojos.\"\nTruffle seguía sin entender del todo, solo sonrió alegremente, porque todo lo que quería ya se había cumplido.",
+          ContentES = "En esa noche en que Truffle tenía la cabeza mareada de hambre, decidió que no quería volver a escuchar la sinfonía de los estómagos.\n Así que al día siguiente, bajo la mirada atónita de todos, salió de la Iglesia, se dirigió al bosque frente a ella y silbó. Antes, Truffle solo se atrevía a jugar con ella en secreto por las noches, sin alejarse ni hacer mucho ruido, por miedo a que la severa sacerdotisa McGuffin la descubriera. Pero hoy era diferente, porque en la cabecita de Truffle ya había madurado un gran plan.\n Junto con el sonido \"ta-ta-ta\" apareció naturalmente su buena amiga Filbert. Filbert no había sido afectada por la hambruna y seguía igual de redonda, incluso más grande que en los recuerdos de Truffle.\n \"Filbert, ¿recuerdas cuando éramos vagabundas?\"\n Truffle empezó a recordar con Filbert cuando recién se conocieron. Filbert la llevó moribunda a muchos lugares: Fueron al río recién descongelado y atraparon muchos pececillos, fueron a un bosque desolado y encontraron muchas nueces, y después fueron al borde de un acantilado y recogieron muchos hongos. Fue entonces cuando Truffle se dio cuenta de que en lugares donde nunca había estado, aún había muchísima comida.\n Entonces, si ahora no hay suficiente comida en la ciudad, ¡hay que ir a buscarla al campo!\n Así, Truffle le contó su gran plan a Filbert, y una persona y una cerda... ay no, dos buenas amigas partieron juntas.\n Llegaron al río y descubrieron que ambas orillas estaban llenas de gente intentando pescar para saciar el hambre, pero parecía que nadie había pescado nada.\n Llegaron al bosque, pero hasta la corteza y las hojas de los árboles habían sido arrancadas por la gente para comer.\n Renunciaron a ir al acantilado, porque sin pensarlo ya sabían cuál sería el resultado...\n Como si el mundo entero también tuviera el estómago vacío, casi toda la comida había sido devorada a grandes bocados. Peces, reptiles, aves, bestias: todos aprovechaban cada oportunidad para devorarse entre sí, pero nunca era suficiente. Al final caían con el estómago vacío, se descomponían...\n En ese momento, Truffle también había agotado sus últimas fuerzas y yacía bajo el tronco de un árbol lleno de agujeros por las mordidas.\n Esa sensación era familiar, igual que en aquella noche nevada: tanto frío... tanta hambre... Filbert frente a ella también se volvía cada vez más borrosa...\n Pero justo entonces, Filbert, también desanimada, pareció oler algo y corrió hacia un árbol cercano. Con sus últimas fuerzas, empezó a escarbar.\n …\n Un olor algo punzante llenó de repente la nariz de Truffle y la despertó. Frente a ella, Filbert, como aquella vez, acercó un alimento a su boca.\n Por su amor a la comida, Truffle entendió de inmediato qué era: Era seta roja, un alimento muy raro, enterrado profundamente bajo los árboles. Pero como la ubicación de la seta roja es difícil de detectar y se necesita mucha fuerza para desenterrarlo, nadie había pensado en excavarlos.\n Mmm... aunque el sabor era muy extraño, mientras masticaba, Truffle fue recuperando fuerzas poco a poco, y Filbert ya había desenterrado más de diez setas rojas a su lado.\n Con las idas y venidas de Truffle y Filbert, las sacerdotisas de la Iglesia descubrieron con asombro que en la puerta se había acumulado una montaña de setas rojas. Comenzaron a saciarse y luego repartieron comida entre los hambrientos de los alrededores.\n Así, cuando el bosque volvió a brotar en primavera, la hambruna también llegó a su fin. Pero Truffle no estaba tan feliz como imaginaba, pues surgió en ella una nueva preocupación: Ahora que todos estaban saciados, ya no necesitaban que Filbert y ella buscaran comida, lo que significaba que ya no podría pasar todo el día con Filbert.\n Con el rostro decaído, quiso preguntarle a la sacerdotisa McGuffin si podía jugar un rato más con Filbert, pero no se atrevía. Solo pudo caminar de un lado a otro frente a la Congregación hasta que chocó de lleno con la sacerdotisa McGuffin, que regresaba de la ciudad.\n \"Yo... ese... Filbert... eh...\"\n Justo cuando Truffle intentaba organizar sus palabras para que la seria sacerdotisa frente a ella aceptara su pequeña petición, la sacerdotisa sacó una carta y se la entregó con una sonrisa. Truffle no podía leerla bien y solo pudo entender vagamente:\n \"Árbol Celestial en las alturas... en nombre de la luz de los Nueve Dioses... la ciudadana llamada Truffle, con su algo no sé leer... salvó la emergencia... y la criatura Filbert... juntas se esforzaron con sus cuatro patas... se nombra a Truffle especialista en granos no sé qué, y a Filbert especialista especial en granos no sé qué...\"\n \"No entiendo, sacerdotisa McGuffin. ¿Necesitan que haga algo? También menciona a Filbert... Ah, cierto, ¿podrías no echar a Filbert? Ella ayudó a todos, quiero jugar un poco más con ella, ¿puedo?\"\n La sacerdotisa seguía sonriendo, se agachó y le dijo a Truffle: \"Esta carta significa que tú y Filbert podrán estar juntas para siempre.\"\n \"¿De verdad?\" Truffle abrió los ojos de par en par, casi sin poder creerlo: \"Gracias a los dioses, gracias, sacerdotisa McGuffin.\"\n \"No, debería ser yo quien les agradezca, Truffle, y también a Filbert. Ustedes son el milagro más grande que he visto con mis propios ojos.\"\nTruffle seguía sin entender del todo, solo sonrió alegremente, porque todo lo que quería ya se había cumplido.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010404"
         },
         UI_CHAR_DATA_TEXT_51020101 = {
@@ -74659,15 +75793,15 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_53010401"
         },
         UI_CHAR_DATA_TEXT_53010402 = {
-          ContentES = "\"¡No juegues con ella!\"\nDesde pequeña, Psyche había escuchado innumerables veces esa advertencia de diferentes adultos. Después de esa frase, los amigos que acababa de conocer eran arrastrados por esos adultos y nunca más aparecían.\nSin embargo, una vez encontró una excepción. Era una niña Sola de su edad que conoció por casualidad en la floristería. Esa niña estaba llena de interés por Psyche y, haciendo caso omiso de las advertencias de los sirvientes a su lado, corría a la floristería a jugar con ella. Incluso llevó a Psyche a su amplia y elegante casa para jugar juntas con lindos bloques de construcción.\n\"Mira, esta figurita soy yo, esta con cuernos eres tú... —decía emocionada mientras acomodaba los bloques— estamos jugando juntas...\"\n\"¿Tú... no crees que mi cuerno es aterrador?\" Psyche preguntó con cuidado.\n\"¡No, creo que tu cuerno es muy bonito!\" La niña respondió sin dudarlo. \"¡Ah, cierto...! Pongámosle accesorios lindos a tu cuerno.\"\nLa niña se levantó de un salto y comenzó a elegir cuidadosamente entre las cintas y moños que llenaban el armario: \"Mmm... este rojo es muy lindo, pero no combina mucho con el color de tu ropa. ¿Qué tal este dorado...?\"\nCuando se levantó, su falda ondeante derribó la figurita con cuernos. Psyche lo notó, enderezó con cuidado la figurita y la colocó junto a la otra, luego sonrió.\n\"Psyche, ¿cuál te gusta? ¡Dime!\" La niña corrió de vuelta y le metió en el regazo un montón de accesorios coloridos. \"Puedes llevarte todos los que te gusten.\"\n\"Yo...\"\nLa respuesta de Psyche fue interrumpida por el sonido de una puerta abriéndose. La madre de la niña —una mujer bien vestida— entró en la habitación con el rostro lleno de ira y repugnancia, como si Psyche reflejada en sus ojos no fuera una niña pequeña, sino un perro callejero sucio. Lo que sucedió después fue como siempre: Psyche ya estaba acostumbrada a esos reproches y maldiciones. Cuando la echaban de la mansión, Psyche escuchó a la niña forcejear y gritarle: \"¡Psyche, lo siento...! ¡Iré a buscarte para jugar otra vez!\"\nPero desde ese día, la niña fue encerrada en casa por sus padres. Incluso pusieron candados en las ventanas de su habitación y las cubrieron con papel opaco.\nPsyche ya había previsto ese resultado, pero \"me gusta todo lo que me des\": al menos debía encontrar la oportunidad de decir esa respuesta en voz alta, o si no sería una falta de respeto hacia la buena intención de esa niña.\nEsa frase permaneció guardada en el corazón de Psyche durante mucho, mucho tiempo, hasta que muchos años después, un día en la calle, chocó accidentalmente con un niño Sola ricamente vestido que pasaba. Antes de que pudiera disculparse, una joven igualmente vestida con lujo jaló al niño. \"¡Hermana te ha dicho mil veces que te alejes de esa gente con cuernos! Y tú, Charon, ¿no tienes ojos? Te atreves a empujar...\"\nLa reprimenda se ahogó repentinamente. La mirada de la joven se encontró con el cuerno en la cabeza de Psyche, y su dedo acusador quedó torpemente congelado en el aire. Psyche también reconoció la identidad de la joven frente a ella: la antigua niña rica, la amiga por la que siempre se había sentido culpable.\n\"¿Psyche...? Tú...\" La joven comenzó a hablar sin saber qué hacer. \"Yo...\"\n\"Se equivoca de persona, señorita.\" Psyche le sonrió con disculpa. \"Lo siento mucho, hace un momento me mareé y no vi bien el camino.\"\nSe dio la vuelta y se fue. Esa respuesta guardada en su corazón terminó siendo arrojada al basurero del tiempo, como aquellos accesorios y bloques de construcción que había tocado años atrás.",
+          ContentES = "\"¡No juegues con ella!\"\n Desde pequeña, Psyche había escuchado innumerables veces esa advertencia de diferentes adultos. Después de esa frase, los amigos que acababa de conocer eran arrastrados por esos adultos y nunca más aparecían.\n Sin embargo, una vez encontró una excepción. Era una niña Sola de su edad que conoció por casualidad en la floristería. Esa niña estaba llena de interés por Psyche y, haciendo caso omiso de las advertencias de los sirvientes a su lado, corría a la floristería a jugar con ella. Incluso llevó a Psyche a su amplia y elegante casa para jugar juntas con lindos bloques de construcción.\n \"Mira, esta figurita soy yo, esta con cuernos eres tú... —decía emocionada mientras acomodaba los bloques— estamos jugando juntas...\"\n \"¿Tú... no crees que mi cuerno es aterrador?\" Psyche preguntó con cuidado.\n \"¡No, creo que tu cuerno es muy bonito!\" La niña respondió sin dudarlo. \"¡Ah, cierto...! Pongámosle accesorios lindos a tu cuerno.\"\n La niña se levantó de un salto y comenzó a elegir cuidadosamente entre las cintas y moños que llenaban el armario: \"Mmm... este rojo es muy lindo, pero no combina mucho con el color de tu ropa. ¿Qué tal este dorado...?\"\n Cuando se levantó, su falda ondeante derribó la figurita con cuernos. Psyche lo notó, enderezó con cuidado la figurita y la colocó junto a la otra, luego sonrió.\n \"Psyche, ¿cuál te gusta? ¡Dime!\" La niña corrió de vuelta y le metió en el regazo un montón de accesorios coloridos. \"Puedes llevarte todos los que te gusten.\"\n \"Yo...\"\n La respuesta de Psyche fue interrumpida por el sonido de una puerta abriéndose. La madre de la niña —una mujer bien vestida— entró en la habitación con el rostro lleno de ira y repugnancia, como si Psyche reflejada en sus ojos no fuera una niña pequeña, sino un perro callejero sucio. Lo que sucedió después fue como siempre: Psyche ya estaba acostumbrada a esos reproches y maldiciones. Cuando la echaban de la mansión, Psyche escuchó a la niña forcejear y gritarle: \"¡Psyche, lo siento...! ¡Iré a buscarte para jugar otra vez!\"\n Pero desde ese día, la niña fue encerrada en casa por sus padres. Incluso pusieron candados en las ventanas de su habitación y las cubrieron con papel opaco.\n Psyche ya había previsto ese resultado, pero \"me gusta todo lo que me des\": al menos debía encontrar la oportunidad de decir esa respuesta en voz alta, o si no sería una falta de respeto hacia la buena intención de esa niña.\n Esa frase permaneció guardada en el corazón de Psyche durante mucho, mucho tiempo, hasta que muchos años después, un día en la calle, chocó accidentalmente con un niño Sola ricamente vestido que pasaba. Antes de que pudiera disculparse, una joven igualmente vestida con lujo jaló al niño. \"¡Hermana te ha dicho mil veces que te alejes de esa gente con cuernos! Y tú, Charon, ¿no tienes ojos? Te atreves a empujar...\"\n La reprimenda se ahogó repentinamente. La mirada de la joven se encontró con el cuerno en la cabeza de Psyche, y su dedo acusador quedó torpemente congelado en el aire. Psyche también reconoció la identidad de la joven frente a ella: la antigua niña rica, la amiga por la que siempre se había sentido culpable.\n \"¿Psyche...? Tú...\" La joven comenzó a hablar sin saber qué hacer. \"Yo...\"\n \"Se equivoca de persona, señorita.\" Psyche le sonrió con disculpa. \"Lo siento mucho, hace un momento me mareé y no vi bien el camino.\"\n Se dio la vuelta y se fue. Esa respuesta guardada en su corazón terminó siendo arrojada al basurero del tiempo, como aquellos accesorios y bloques de construcción que había tocado años atrás.",
           TextMapId = "UI_CHAR_DATA_TEXT_53010402"
         },
         UI_CHAR_DATA_TEXT_53010403 = {
-          ContentES = "\"¡Psyche, hasta mañana!\"\n\"Sí, hasta mañana.\"\nEra una noche común. Psyche agitó la mano hacia {性别:ese amigo Phoxcazador recién conocido|esa amiga Phoxcazadora recién conocida} y observó a {性别:él|ella} salir por la puerta de la Casa de Hypnos. Parecía solo una despedida ordinaria, pero ella siguió mirando esa figura hasta que desapareció al final de la calle, y luego permaneció en la puerta durante mucho, mucho tiempo antes de regresar con nostalgia a su habitación para descansar.\n\"Hasta mañana\": esa promesa que surgía naturalmente en cada despedida tenía para Psyche un matiz especial de amargura y desolación. Porque cada noche, cuando cerraba los ojos, no sabía si ese \"mañana\" realmente llegaría.\n\"Por favor...\" En el último momento antes de dormirse, rezaba devotamente a los dioses en su corazón: \"Déjame despertar bien.\"\nLa larga noche pasó en silencio, el amable amanecer abrazó la tierra y Psyche despertó de su sueño. Se incorporó lentamente en la cama, tocó su brazo, confirmando que era la realidad, confirmando que aún no se había convertido en un monstruo. Había recibido otro \"mañana\" como regalo de la vida.\nQué bien, pensó feliz, cumplí la promesa una vez más.",
+          ContentES = "\"¡Psyche, hasta mañana!\"\n \"Sí, hasta mañana.\"\n Era una noche común. Psyche agitó la mano hacia {性别:ese amigo Phoxcazador recién conocido|esa amiga Phoxcazadora recién conocida} y observó a {性别:él|ella} salir por la puerta de la Casa de Hypnos. Parecía solo una despedida ordinaria, pero ella siguió mirando esa figura hasta que desapareció al final de la calle, y luego permaneció en la puerta durante mucho, mucho tiempo antes de regresar con nostalgia a su habitación para descansar.\n \"Hasta mañana\": esa promesa que surgía naturalmente en cada despedida tenía para Psyche un matiz especial de amargura y desolación. Porque cada noche, cuando cerraba los ojos, no sabía si ese \"mañana\" realmente llegaría.\n \"Por favor...\" En el último momento antes de dormirse, rezaba devotamente a los dioses en su corazón: \"Déjame despertar bien.\"\n La larga noche pasó en silencio, el amable amanecer abrazó la tierra y Psyche despertó de su sueño. Se incorporó lentamente en la cama, tocó su brazo, confirmando que era la realidad, confirmando que aún no se había convertido en un monstruo. Había recibido otro \"mañana\" como regalo de la vida.\n Qué bien, pensó feliz, cumplí la promesa una vez más.",
           TextMapId = "UI_CHAR_DATA_TEXT_53010403"
         },
         UI_CHAR_DATA_TEXT_53010404 = {
-          ContentES = "\"Te pregunto por última vez. Psyche, ¿realmente estás decidida?\"\nPsyche asintió solemnemente. Luego escuchó el largo y pesado suspiro de Henrik, pero ya no podía ver nada. No sabía qué expresión tenía Henrik en ese momento, solo podía reconstruir su apariencia con recuerdos.\nEn el recuerdo más antiguo de Psyche sobre el doctor Henrik, ese hombre era melancólico, indiferente, siempre se veía cansado y decadente, como si un alma vieja habitara en un cuerpo de mediana edad. Solo al mirar la fotografía sobre el escritorio mostraba ocasionalmente algo de \"emoción humana\". Sobre la identidad de la joven en la fotografía, Psyche había adivinado algo, pero nunca preguntó: no quería tocar las heridas secretas en el corazón de otros. Así que solo colocaba en silencio una flor fresca cada día en el escritorio de Henrik.\nHenrik seguía siendo parco en palabras, seguía repitiendo su rutina simple y monótona. Pero Psyche podía ver que en sus ojos gradualmente comenzaba a haber luz, como si una madera quemada y marchita de repente brotara una rama nueva.\nUn día, abrió el candado del librero. El polvo acumulado por años voló, Psyche sintió un dolor punzante y se cubrió los ojos involuntariamente. A través de las rendijas entre sus dedos, Psyche vio el polvo en toda la habitación como nieve fina. Henrik tosía violentamente mientras revisaba documentos y notas, murmurando sin parar palabras como \"reacción de bloqueo\" y \"Cristal estelar\". Psyche no entendía mucho, pero recordaba el último murmullo de Henrik:\n\"Hayley, quiero intentarlo una vez más... Esta vez, ¿crees que habrá un resultado diferente?\"\nDespués de eso, Henrik se encerró en su oficina, manipulando día y noche esos frascos y recipientes, esas placas de cultivo y líquidos de diversos colores. Psyche no lo detuvo, porque nunca había visto a Henrik perseguir algo con tanta urgencia. En el pasado, él era como un dios indiferente y misericordioso que solo necesitaba emitir su veredicto a tiempo para terminar con el sufrimiento de la gente. Pero en ese momento, Henrik era como un náufrago aferrándose desesperadamente a un salvavidas, o como un niño persiguiendo con fervor su juguete favorito.\nNunca había sido tan mortal.\n...\n\"Bébelo.\"\nLa voz de Henrik devolvió a Psyche a sus pensamientos. Un objeto frío fue colocado en su mano. Psyche tocó su contorno: era un frasco pequeño, cuya superficie no era lisa y tenía una textura algo áspera al tacto. Lo acarició repetidamente: era pequeño, ligero, pero cargaba el peso de la vida. Sabía que ese era el resultado de los días y noches de trabajo incansable de Henrik. Con fortuna, podría salvarla de un destino sin solución, y si no tenía suerte... también habría ayudado a Henrik a verificar los resultados de su investigación, contribuyendo a que salvara a más personas, ¿no?\nImaginó el color del líquido: como se elaboraba con Cristal estelar como ingrediente importante, probablemente sería cristalino y transparente, con destellos de luz, ¿verdad? Al pensar en eso, Psyche sonrió.\n\"El Cristal estelar es un tesoro que encontré junto con {nickname}, estoy segura de que me traerá buena suerte.\" Pensó.",
+          ContentES = "\"Te pregunto por última vez. Psyche, ¿realmente estás decidida?\"\n Psyche asintió solemnemente. Luego escuchó el largo y pesado suspiro de Henrik, pero ya no podía ver nada. No sabía qué expresión tenía Henrik en ese momento, solo podía reconstruir su apariencia con recuerdos.\n En el recuerdo más antiguo de Psyche sobre el doctor Henrik, ese hombre era melancólico, indiferente, siempre se veía cansado y decadente, como si un alma vieja habitara en un cuerpo de mediana edad. Solo al mirar la fotografía sobre el escritorio mostraba ocasionalmente algo de \"emoción humana\". Sobre la identidad de la joven en la fotografía, Psyche había adivinado algo, pero nunca preguntó: no quería tocar las heridas secretas en el corazón de otros. Así que solo colocaba en silencio una flor fresca cada día en el escritorio de Henrik.\n Henrik seguía siendo parco en palabras, seguía repitiendo su rutina simple y monótona. Pero Psyche podía ver que en sus ojos gradualmente comenzaba a haber luz, como si una madera quemada y marchita de repente brotara una rama nueva.\n Un día, abrió el candado del librero. El polvo acumulado por años voló, Psyche sintió un dolor punzante y se cubrió los ojos involuntariamente. A través de las rendijas entre sus dedos, Psyche vio el polvo en toda la habitación como nieve fina. Henrik tosía violentamente mientras revisaba documentos y notas, murmurando sin parar palabras como \"reacción de bloqueo\" y \"Cristal estelar\". Psyche no entendía mucho, pero recordaba el último murmullo de Henrik:\n \"Hayley, quiero intentarlo una vez más... Esta vez, ¿crees que habrá un resultado diferente?\"\n Después de eso, Henrik se encerró en su oficina, manipulando día y noche esos frascos y recipientes, esas placas de cultivo y líquidos de diversos colores. Psyche no lo detuvo, porque nunca había visto a Henrik perseguir algo con tanta urgencia. En el pasado, él era como un dios indiferente y misericordioso que solo necesitaba emitir su veredicto a tiempo para terminar con el sufrimiento de la gente. Pero en ese momento, Henrik era como un náufrago aferrándose desesperadamente a un salvavidas, o como un niño persiguiendo con fervor su juguete favorito.\n Nunca había sido tan mortal.\n...\n\"Bébelo.\"\n La voz de Henrik devolvió a Psyche a sus pensamientos. Un objeto frío fue colocado en su mano. Psyche tocó su contorno: era un frasco pequeño, cuya superficie no era lisa y tenía una textura algo áspera al tacto. Lo acarició repetidamente: era pequeño, ligero, pero cargaba el peso de la vida. Sabía que ese era el resultado de los días y noches de trabajo incansable de Henrik. Con fortuna, podría salvarla de un destino sin solución, y si no tenía suerte... también habría ayudado a Henrik a verificar los resultados de su investigación, contribuyendo a que salvara a más personas, ¿no?\n Imaginó el color del líquido: como se elaboraba con Cristal estelar como ingrediente importante, probablemente sería cristalino y transparente, con destellos de luz, ¿verdad? Al pensar en eso, Psyche sonrió.\n \"El Cristal estelar es un tesoro que encontré junto con {nickname}, estoy segura de que me traerá buena suerte.\" Pensó.",
           TextMapId = "UI_CHAR_DATA_TEXT_53010404"
         },
         UI_CHAR_DATA_TEXT_53010405 = {
@@ -74695,7 +75829,7 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_DATA_TEXT_54010105"
         },
         UI_CHAR_DATA_TEXT_54010201 = {
-          ContentES = "Para llegar a las salas desde el ala de tratamiento del Hospital de las Dos Orillas, había que recorrer un pasillo largo y estrecho.\nA diferencia de los demás hospitales de Dismania, Hospital de las Dos Orillas albergaba principalmente a pacientes con enfermedades crónicas persistentes, de esas que no se resuelven rápidamente, solo sufren lentamente. No eran dolencias que convertían a las personas en cadáveres de la noche a la mañana, sino que con el paso de los años las convertían en lo que los médicos llamaban \"locos\".\nDesde los siete años, había estado corriendo de un lado a otro por ese pasillo. Mis manos eran rápidas, mis pies más veloces, incluso que los de la mayoría de los enfermeros Solarianos adultos. Y como lo único que pedía era comida y un lugar donde dormir, amablemente le permitieron a una niñita Charon de baja cuna con cuernos, trabajar en sus dominios. Mis tareas eran casi siempre de lo más vil: retirar la ropa de cama sucia, barrer los cristales que tiraban los pacientes, arrastrarlos al baño o al vertedero. De vez en cuando, alguna enfermera que pasaba me metía en los brazos una caja de medicamentos o un fajo de viales para que se los entregara. La mayoría de las veces, me encontraba tambaleándome por ese pasillo con cajas más altas que yo. Me impedían la vista, así que a menudo chocaba con la gente que pasaba corriendo, y cada vez, recibía un torrente de maldiciones por ello.\nUna vez oí a un bardo en la plaza decir que los Hiperbóreanos eran la gente más irascible de toda Atlasia. Si eso es cierto, entonces, según mis cálculos, los del Hospital de las Dos Orillas eran los más furiosos de todos: pacientes, médicos, enfermeras, incluso los familiares que venían de visita. Más tarde comprendí que eran esas largas y prolongadas enfermedades las que los llevaban al límite. Pero aun así, cada vez que alguien me ladraba, les levantaba el dedo medio desafiante a su espalda que se alejaba.\nSolo una vez alguien chocó conmigo y no maldijo, sino que se disculpó. Su nombre, como supe mucho después, era Daphne Theodore. Lo recuerdo con claridad. Una tarde, llevaba un montón de compresas al baño cuando choqué en la esquina del pasillo con una joven rubia. Mis compresas y sus flores salieron volando, esparcidas por el suelo. Sin dudarlo, me agaché y lloré a todo pulmón, más fuerte que el paciente más atormentado. No estaba herida, ni siquiera molesta por el desastre. Era solo una treta: si aullaba así, los adultos que pudieran regañarme o golpearme se estremecerían y retrocederían, como si hubieran rozado algo sucio.\nPero la mujer rubia no maldijo ni salió corriendo como esperaba. En cambio, se arrodilló a mi lado, me acarició la espalda con suavidad y me preguntó con voz preocupada si estaba herida. Parecía más inquieta que yo. Cuando no respondí, lo intentó de nuevo, esta vez incluso más suave, aunque el temblor en sus dedos la delató.\nNo recuerdo qué le respondí; quizá solo un \"No me duele\". Fuera lo que fuese, alivió la arruga de su frente. Me ayudó a ponerme de pie y juntas recogimos las compresas y las flores aplastadas.\n\"Lo siento\", dijo, dándome una ligera palmadita en la cabeza. \"Pequeña, ¿qué sabor de dulces te gustan? Te traigo algunos la próxima vez, ¿sí?\".\n\"Fresa\", le dije. No debería haber aceptado su disculpa; después de todo, era yo quien no había estado mirando. Pero su pregunta me conmovió. Recordé lo último que mi madre, postrada en cama, murmuró antes de morir: que había caramelos de fresa en el cajón del armario. Cuando miré, no había nada. Solo más tarde descubrí que mi hermano, el glotón, se los había llevado todos.\n\"Fresa. Lo recordaré\". La mujer rubia recogió sus flores y siguió caminando hacia el fondo del pasillo. Era de estatura mediana, delgada y menuda. El sol de la tarde iluminó su horquilla mate, y por un instante brilló con un tenue resplandor dorado.\nNunca supe su nombre, así que en mi corazón le puse uno: Señorita Dulces de Fresa. Aparte de mi madre, nadie me había preguntado nunca con tanta delicadeza si tenía dolor.\n\n— Del diario de Tiori Stone",
+          ContentES = "Para llegar a las salas desde el ala de tratamiento del Hospital de las Dos Orillas, había que recorrer un pasillo largo y estrecho.\nA diferencia de los demás hospitales de Dismania, Hospital de las Dos Orillas albergaba principalmente a pacientes con enfermedades crónicas persistentes, de esas que no se resuelven rápidamente, solo sufren lentamente. No eran dolencias que convertían a las personas en cadáveres de la noche a la mañana, sino que con el paso de los años las convertían en lo que los médicos llamaban \"locos\".\nDesde los siete años, había estado corriendo de un lado a otro por ese pasillo. Mis manos eran rápidas, mis pies más veloces, incluso que los de la mayoría de los enfermeros Solarianos adultos. Y como lo único que pedía era comida y un lugar donde dormir, amablemente le permitieron a una niñita Charon de baja cuna con cuernos, trabajar en sus dominios. Mis tareas eran casi siempre de lo más vil: retirar la ropa de cama sucia, barrer los cristales que tiraban los pacientes, arrastrarlos al baño o al vertedero. De vez en cuando, alguna enfermera que pasaba me metía en los brazos una caja de medicamentos o un fajo de viales para que se los entregara. La mayoría de las veces, me encontraba tambaleándome por ese pasillo con cajas más altas que yo. Me impedían la vista, así que a menudo chocaba con la gente que pasaba corriendo, y cada vez, recibía un torrente de maldiciones por ello.\nUna vez oí a un bardo en la plaza decir que los Hiperbóreos eran la gente más irascible de toda Atlasia. Si eso es cierto, entonces, según mis cálculos, los del Hospital de las Dos Orillas eran los más furiosos de todos: pacientes, médicos, enfermeras, incluso los familiares que venían de visita. Más tarde comprendí que eran esas largas y prolongadas enfermedades las que los llevaban al límite. Pero aun así, cada vez que alguien me ladraba, les levantaba el dedo medio desafiante a su espalda que se alejaba.\nSolo una vez alguien chocó conmigo y no maldijo, sino que se disculpó. Su nombre, como supe mucho después, era Daphne Theodore. Lo recuerdo con claridad. Una tarde, llevaba un montón de compresas al baño cuando choqué en la esquina del pasillo con una joven rubia. Mis compresas y sus flores salieron volando, esparcidas por el suelo. Sin dudarlo, me agaché y lloré a todo pulmón, más fuerte que el paciente más atormentado. No estaba herida, ni siquiera molesta por el desastre. Era solo una treta: si aullaba así, los adultos que pudieran regañarme o golpearme se estremecerían y retrocederían, como si hubieran rozado algo sucio.\nPero la mujer rubia no maldijo ni salió corriendo como esperaba. En cambio, se arrodilló a mi lado, me acarició la espalda con suavidad y me preguntó con voz preocupada si estaba herida. Parecía más inquieta que yo. Cuando no respondí, lo intentó de nuevo, esta vez incluso más suave, aunque el temblor en sus dedos la delató.\nNo recuerdo qué le respondí; quizá solo un \"No me duele\". Fuera lo que fuese, alivió la arruga de su frente. Me ayudó a ponerme de pie y juntas recogimos las compresas y las flores aplastadas.\n\"Lo siento\", dijo, dándome una ligera palmadita en la cabeza. \"Pequeña, ¿qué sabor de dulces te gustan? Te traigo algunos la próxima vez, ¿sí?\".\n\"Fresa\", le dije. No debería haber aceptado su disculpa; después de todo, era yo quien no había estado mirando. Pero su pregunta me conmovió. Recordé lo último que mi madre, postrada en cama, murmuró antes de morir: que había caramelos de fresa en el cajón del armario. Cuando miré, no había nada. Solo más tarde descubrí que mi hermano, el glotón, se los había llevado todos.\n\"Fresa. Lo recordaré\". La mujer rubia recogió sus flores y siguió caminando hacia el fondo del pasillo. Era de estatura mediana, delgada y menuda. El sol de la tarde iluminó su horquilla mate, y por un instante brilló con un tenue resplandor dorado.\nNunca supe su nombre, así que en mi corazón le puse uno: Señorita Dulces de Fresa. Aparte de mi madre, nadie me había preguntado nunca con tanta delicadeza si tenía dolor.\n\n— Del diario de Tiori Stone",
           TextMapId = "UI_CHAR_DATA_TEXT_54010201"
         },
         UI_CHAR_DATA_TEXT_54010202 = {
@@ -74805,15 +75939,7 @@ Tocado de Lynn
         UI_CHAR_DATA_UNLOCK_task08 = {
           ContentES = "El personaje alcanza el Niv. 20\nCompleta la misión: Réquiem por los anónimos",
           TextMapId = "UI_CHAR_DATA_UNLOCK_task08"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_UNLOCK_task09",
-    MaxKey = "UI_CMNpc_Name_Aimi",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_UNLOCK_task09 = {
           ContentES = "El personaje alcanza el Niv. 30\nCompleta la misión: Réquiem por los anónimos",
           TextMapId = "UI_CHAR_DATA_UNLOCK_task09"
@@ -75175,15 +76301,15 @@ Tocado de Lynn
           TextMapId = "UI_CHAR_SUBTITLE_5401"
         },
         UI_CMName_Name_AotePhantom = {
-          ContentES = "Phantom von Outsider",
+          ContentES = "Fantasma de Outsider",
           TextMapId = "UI_CMName_Name_AotePhantom"
         },
         UI_CMName_Name_BaiPhantom = {
-          ContentES = "Phantom von Snow",
+          ContentES = "Fantasma de Snow",
           TextMapId = "UI_CMName_Name_BaiPhantom"
         },
         UI_CMName_Name_DevoutPilgrims = {
-          ContentES = "Frommer Pilger",
+          ContentES = "Peregrino devoto",
           TextMapId = "UI_CMName_Name_DevoutPilgrims"
         },
         UI_CMName_Name_FuJinChuanLai = {
@@ -75199,11 +76325,11 @@ Tocado de Lynn
           TextMapId = "UI_CMName_Name_FushuPhantom"
         },
         UI_CMName_Name_HeiShiXiaoDi = {
-          ContentES = "Handlanger des Schwarzmarkts",
+          ContentES = "Secuaz del mercado negro",
           TextMapId = "UI_CMName_Name_HeiShiXiaoDi"
         },
         UI_CMName_Name_HeitaoPhantom = {
-          ContentES = "Phantom von Berenica",
+          ContentES = "Fantasma de Berry",
           TextMapId = "UI_CMName_Name_HeitaoPhantom"
         },
         UI_CMName_Name_HuanzhePhantom = {
@@ -75227,11 +76353,11 @@ Tocado de Lynn
           TextMapId = "UI_CMName_Name_JvSangDeNvHai"
         },
         UI_CMName_Name_KamiPhantom = {
-          ContentES = "Phantom von Camilla",
+          ContentES = "Fantasma de Camilla",
           TextMapId = "UI_CMName_Name_KamiPhantom"
         },
         UI_CMName_Name_MatureWuyou = {
-          ContentES = "Reifer Wishen",
+          ContentES = "Wishen experimentado",
           TextMapId = "UI_CMName_Name_MatureWuyou"
         },
         UI_CMName_Name_NanHai = {
@@ -75243,11 +76369,11 @@ Tocado de Lynn
           TextMapId = "UI_CMName_Name_Photo"
         },
         UI_CMName_Name_SaTuoBuJi = {
-          ContentES = "Ungebundener Mann",
+          ContentES = "Hombre de espíritu libre",
           TextMapId = "UI_CMName_Name_SaTuoBuJi"
         },
         UI_CMName_Name_SaiqiPhantom = {
-          ContentES = "Phantom von Psyche",
+          ContentES = "Fantasma de Psyche",
           TextMapId = "UI_CMName_Name_SaiqiPhantom"
         },
         UI_CMName_Name_SanRenTongShi = {
@@ -75287,7 +76413,7 @@ Tocado de Lynn
           TextMapId = "UI_CMName_Name_WuyouWuyan"
         },
         UI_CMName_Name_WuyoushengZhanglao = {
-          ContentES = "Alter Wishen",
+          ContentES = "Anciano Wishen",
           TextMapId = "UI_CMName_Name_WuyoushengZhanglao"
         },
         UI_CMName_Name_Xidun = {
@@ -75297,7 +76423,15 @@ Tocado de Lynn
         UI_CMName_Name_XidunWenhao = {
           ContentES = "¿¿¿???",
           TextMapId = "UI_CMName_Name_XidunWenhao"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMName_Name_XingShang",
+    MaxKey = "UI_CMNpc_Name_Kongkongjiaojiao",
+    Loader = function()
+      return {
         UI_CMName_Name_XingShang = {
           ContentES = "Comerciante ambulante",
           TextMapId = "UI_CMName_Name_XingShang"
@@ -75478,6 +76612,10 @@ Tocado de Lynn
           ContentES = "Walter, el viejo mecánico",
           TextMapId = "UI_CMNpc_Chezhan_Name_Woerte"
         },
+        UI_CMNpc_Chezhan_Name_Workers = {
+          ContentES = "Trabajadores",
+          TextMapId = "UI_CMNpc_Chezhan_Name_Workers"
+        },
         UI_CMNpc_Chezhan_Name_WuguPassenger = {
           ContentES = "Viajero inocente",
           TextMapId = "UI_CMNpc_Chezhan_Name_WuguPassenger"
@@ -75613,15 +76751,7 @@ Tocado de Lynn
         UI_CMNpc_Name_Aimi = {
           ContentES = "Emilia",
           TextMapId = "UI_CMNpc_Name_Aimi"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Album",
-    MaxKey = "UI_CMNpc_Name_Teleisha",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Album = {
           ContentES = "Compendio de Imágenes",
           TextMapId = "UI_CMNpc_Name_Album"
@@ -75939,7 +77069,7 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Name_GuiFu200401"
         },
         UI_CMNpc_Name_GuiHuaLi = {
-          ContentES = "Li, der Osmanthuskuchen-Bäcker",
+          ContentES = "Li, el pastelero de osmanto",
           TextMapId = "UI_CMNpc_Name_GuiHuaLi"
         },
         UI_CMNpc_Name_GuiZu200401 = {
@@ -76101,7 +77231,15 @@ Tocado de Lynn
         UI_CMNpc_Name_Kongkongjiaojiao = {
           ContentES = "Lunoholgazana",
           TextMapId = "UI_CMNpc_Name_Kongkongjiaojiao"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Laina",
+    MaxKey = "UI_COMMONPOP_TEXT_100038",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Laina = {
           ContentES = "Lina",
           TextMapId = "UI_CMNpc_Name_Laina"
@@ -76421,15 +77559,7 @@ Tocado de Lynn
         UI_CMNpc_Name_Teleisha = {
           ContentES = "[La Emperatriz] Teresa",
           TextMapId = "UI_CMNpc_Name_Teleisha"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_TongkuHuanzhe",
-    MaxKey = "UI_COMMONPOP_TEXT_100229",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_TongkuHuanzhe = {
           ContentES = "Paciente afligido",
           TextMapId = "UI_CMNpc_Name_TongkuHuanzhe"
@@ -76579,7 +77709,7 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Name_ZeshengXuetu"
         },
         UI_CMNpc_Name_ZhaoShu = {
-          ContentES = "Onkel Zhao",
+          ContentES = "Tío Zhao",
           TextMapId = "UI_CMNpc_Name_ZhaoShu"
         },
         UI_CMNpc_Name_ZhiYuan = {
@@ -76607,15 +77737,15 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Seal"
         },
         UI_CMNpc_Yanjindu_Name_Bird = {
-          ContentES = "Vogel",
+          ContentES = "Pájaro",
           TextMapId = "UI_CMNpc_Yanjindu_Name_Bird"
         },
         UI_CMNpc_Yanjindu_Name_Deer = {
-          ContentES = "Hirsch",
+          ContentES = "Ciervo",
           TextMapId = "UI_CMNpc_Yanjindu_Name_Deer"
         },
         UI_CMNpc_Yanjindu_Name_DrHuang = {
-          ContentES = "Apotheker Huang",
+          ContentES = "Boticario Huang",
           TextMapId = "UI_CMNpc_Yanjindu_Name_DrHuang"
         },
         UI_CMNpc_Yanjindu_Name_DuPing = {
@@ -76631,7 +77761,7 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Yanjindu_Name_JiangZhengyi"
         },
         UI_CMNpc_Yanjindu_Name_JiuPiaoZi = {
-          ContentES = "Alter Krug",
+          ContentES = "Viejo Jarra",
           TextMapId = "UI_CMNpc_Yanjindu_Name_JiuPiaoZi"
         },
         UI_CMNpc_Yanjindu_Name_JuMu = {
@@ -76663,19 +77793,19 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Yanjindu_Name_LuoYan"
         },
         UI_CMNpc_Yanjindu_Name_MrCheng = {
-          ContentES = "Alter Mann Cheng",
+          ContentES = "Cheng el Viejo",
           TextMapId = "UI_CMNpc_Yanjindu_Name_MrCheng"
         },
         UI_CMNpc_Yanjindu_Name_MrsCheng = {
-          ContentES = "Frau Cheng",
+          ContentES = "Señora Cheng",
           TextMapId = "UI_CMNpc_Yanjindu_Name_MrsCheng"
         },
         UI_CMNpc_Yanjindu_Name_MysteryWhite = {
-          ContentES = "Phantom-Luno",
+          ContentES = "Luno, el espectro",
           TextMapId = "UI_CMNpc_Yanjindu_Name_MysteryWhite"
         },
         UI_CMNpc_Yanjindu_Name_PresentMan = {
-          ContentES = "Der Geschenkbringer",
+          ContentES = "El hombre que trae regalos",
           TextMapId = "UI_CMNpc_Yanjindu_Name_PresentMan"
         },
         UI_CMNpc_Yanjindu_Name_QingQing = {
@@ -76703,7 +77833,7 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Yanjindu_Name_XiaoYun"
         },
         UI_CMNpc_Yanjindu_Name_Yang = {
-          ContentES = "Yangs Vater",
+          ContentES = "Padre de Yang",
           TextMapId = "UI_CMNpc_Yanjindu_Name_Yang"
         },
         UI_CMNpc_Yanjindu_Name_YangJR = {
@@ -76727,7 +77857,7 @@ Tocado de Lynn
           TextMapId = "UI_CMNpc_Yanjindu_Name_YuXian"
         },
         UI_CMNpc_Yanjindu_Name_Zhang = {
-          ContentES = "Zhangs Vater",
+          ContentES = "Padre de Zhang",
           TextMapId = "UI_CMNpc_Yanjindu_Name_Zhang"
         },
         UI_CMNpc_Yanjindu_Name_ZhangJR = {
@@ -76909,7 +78039,15 @@ Tocado de Lynn
         UI_COMMONPOP_TEXT_100038 = {
           ContentES = "Los objetos equipados se quitarán automáticamente al venderse",
           TextMapId = "UI_COMMONPOP_TEXT_100038"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TEXT_100044",
+    MaxKey = "UI_CTL_Focus_ModList",
+    Loader = function()
+      return {
         UI_COMMONPOP_TEXT_100044 = {
           ContentES = "%s está siendo usado por %s. ¿Intercambiar?",
           TextMapId = "UI_COMMONPOP_TEXT_100044"
@@ -77229,15 +78367,7 @@ Tocado de Lynn
         UI_COMMONPOP_TEXT_100229 = {
           ContentES = "Aspecto ya poseído. Los duplicados se convertirán en recursos.",
           TextMapId = "UI_COMMONPOP_TEXT_100229"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TEXT_100275",
-    MaxKey = "UI_CameraSystem_PlayerPersonalInformation",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TEXT_100275 = {
           ContentES = "¿Confirma la <H>finalización anticipada</> del Capítulo 1 del Capítulo Noctoviajero?",
           TextMapId = "UI_COMMONPOP_TEXT_100275"
@@ -77714,7 +78844,15 @@ Tocado de Lynn
         UI_CTL_Focus_ModList = {
           ContentES = "Enfocar",
           TextMapId = "UI_CTL_Focus_ModList"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CTL_Fold",
+    MaxKey = "UI_Chat_Imagine15",
+    Loader = function()
+      return {
         UI_CTL_Fold = {
           ContentES = "Colapsar",
           TextMapId = "UI_CTL_Fold"
@@ -77884,7 +79022,7 @@ Tocado de Lynn
           TextMapId = "UI_CTL_Shop_Main"
         },
         UI_CTL_SkinPreview = {
-          ContentES = "Previsualización de aspecto",
+          ContentES = "Previsualización de cosméticos",
           TextMapId = "UI_CTL_SkinPreview"
         },
         UI_CTL_Squad_AdjustSorting = {
@@ -78034,15 +79172,7 @@ Tocado de Lynn
         UI_CameraSystem_PlayerPersonalInformation = {
           ContentES = "Información personal",
           TextMapId = "UI_CameraSystem_PlayerPersonalInformation"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CameraSystem_QuestFailed_Default",
-    MaxKey = "UI_Chat_Imagine88",
-    Loader = function()
-      return {
+        },
         UI_CameraSystem_QuestFailed_Default = {
           ContentES = "No se encontraron objetivos",
           TextMapId = "UI_CameraSystem_QuestFailed_Default"
@@ -78121,7 +79251,7 @@ Tocado de Lynn
           TextMapId = "UI_Chapter03_Transition02"
         },
         UI_ChapterIntro_GaChaDialogue = {
-          ContentES = "???: Dieser Sand besteht aus unseren gemeinsamen Erinnerungen – eine Brücke zwischen Vergangenheit, Gegenwart und Zukunft.",
+          ContentES = "¿¿¿???: \"Estas arenas son nuestros recuerdos compartidos, uniendo pasado, presente y futuro\".",
           TextMapId = "UI_ChapterIntro_GaChaDialogue"
         },
         UI_ChapterName_00 = {
@@ -78519,7 +79649,15 @@ Tocado de Lynn
         UI_Chat_Imagine15 = {
           ContentES = "Furioso",
           TextMapId = "UI_Chat_Imagine15"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chat_Imagine16",
+    MaxKey = "UI_Content_SaiqiBossWarning",
+    Loader = function()
+      return {
         UI_Chat_Imagine16 = {
           ContentES = "¡Bah!",
           TextMapId = "UI_Chat_Imagine16"
@@ -78839,15 +79977,7 @@ Tocado de Lynn
         UI_Chat_Imagine88 = {
           ContentES = "Triste",
           TextMapId = "UI_Chat_Imagine88"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_Imagine89",
-    MaxKey = "UI_CustomLayout_WidgetName22",
-    Loader = function()
-      return {
+        },
         UI_Chat_Imagine89 = {
           ContentES = "Ofrecer incienso",
           TextMapId = "UI_Chat_Imagine89"
@@ -79325,9 +80455,17 @@ Tocado de Lynn
           TextMapId = "UI_Consume_Select_Skin"
         },
         UI_Content_SaiqiBossWarning = {
-          ContentES = "Du stehst kurz vor einem schwierigen Kampf. Stelle sicher, dass dein <H>taktischer Rucksack</> <H>Kampfbegleiter-Siegel</> enthält und deine Figur mit einer gut aufgestiegenen <H>Fernkampfwaffe</> ausgerüstet ist.",
+          ContentES = "Estás a punto de entrar en una batalla difícil. Asegúrate de que tu <H>Mochila táctica</> incluya <H>Sello de compañero de combate</> y que tu personaje tenga equipada un <H>Arma a Distancia</> bien nivelada.",
           TextMapId = "UI_Content_SaiqiBossWarning"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Controller_Check",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_22",
+    Loader = function()
+      return {
         UI_Controller_Check = {
           ContentES = "Ver",
           TextMapId = "UI_Controller_Check"
@@ -79644,15 +80782,7 @@ Tocado de Lynn
         UI_CustomLayout_WidgetName22 = {
           ContentES = "Mochila táctica",
           TextMapId = "UI_CustomLayout_WidgetName22"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CustomLayout_WidgetName23",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_95",
-    Loader = function()
-      return {
+        },
         UI_CustomLayout_WidgetName23 = {
           ContentES = "Salto Espiral derecho",
           TextMapId = "UI_CustomLayout_WidgetName23"
@@ -80129,7 +81259,15 @@ Tocado de Lynn
         UI_DUNGEON_AUTOCHESS_22 = {
           ContentES = "Partida sin fin 002",
           TextMapId = "UI_DUNGEON_AUTOCHESS_22"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_23",
+    MaxKey = "UI_DUNGEON_DROP_RangedWEAPONMOD",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_23 = {
           ContentES = "Partida sin fin 003",
           TextMapId = "UI_DUNGEON_AUTOCHESS_23"
@@ -80449,15 +81587,7 @@ Tocado de Lynn
         UI_DUNGEON_AUTOCHESS_95 = {
           ContentES = "Partida sin fin 075",
           TextMapId = "UI_DUNGEON_AUTOCHESS_95"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_96",
-    MaxKey = "UI_DailyPack_DailyReward",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_96 = {
           ContentES = "Partida sin fin 076",
           TextMapId = "UI_DUNGEON_AUTOCHESS_96"
@@ -80937,7 +82067,15 @@ Tocado de Lynn
         UI_DUNGEON_DROP_RangedWEAPONMOD = {
           ContentES = "Cuñas Demoníacas para armas a distancia",
           TextMapId = "UI_DUNGEON_DROP_RangedWEAPONMOD"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_DROP_SKILL",
+    MaxKey = "UI_Dispatch_TimeToDone",
+    Loader = function()
+      return {
         UI_DUNGEON_DROP_SKILL = {
           ContentES = "Materiales de mejora de habilidades",
           TextMapId = "UI_DUNGEON_DROP_SKILL"
@@ -81257,15 +82395,7 @@ Tocado de Lynn
         UI_DailyPack_DailyReward = {
           ContentES = "Recibido diariamente por correo durante 5 días tras la compra",
           TextMapId = "UI_DailyPack_DailyReward"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DailyPack_MainRewardDes",
-    MaxKey = "UI_Drop_Rukou",
-    Loader = function()
-      return {
+        },
         UI_DailyPack_MainRewardDes = {
           ContentES = "Obtenido tras %d días de inicio de sesión acumulados",
           TextMapId = "UI_DailyPack_MainRewardDes"
@@ -81404,7 +82534,7 @@ Tocado de Lynn
           TextMapId = "UI_Disabled_Des_Achievement"
         },
         UI_Disabled_Des_AppearanceScore = {
-          ContentES = "Apariencia no disponible por el momento",
+          ContentES = "Aspecto no disponible por el momento",
           TextMapId = "UI_Disabled_Des_AppearanceScore"
         },
         UI_Disabled_Des_Archive = {
@@ -81742,7 +82872,15 @@ Tocado de Lynn
         UI_Dispatch_TimeToDone = {
           ContentES = "antes del fin de la expedición",
           TextMapId = "UI_Dispatch_TimeToDone"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Dispatch_Toast_AgentFull",
+    MaxKey = "UI_ElementDes_General",
+    Loader = function()
+      return {
         UI_Dispatch_Toast_AgentFull = {
           ContentES = "Límite de expediciones alcanzado",
           TextMapId = "UI_Dispatch_Toast_AgentFull"
@@ -82031,6 +83169,14 @@ Tocado de Lynn
           ContentES = "\"Arreglar\" al Yanfinch",
           TextMapId = "UI_Drop_Jiqir"
         },
+        UI_Drop_JumpToTrain = {
+          ContentES = "Saltar hacia la Aurora Express",
+          TextMapId = "UI_Drop_JumpToTrain"
+        },
+        UI_Drop_JumpToZL = {
+          ContentES = "Saltar hacia La Grajilla",
+          TextMapId = "UI_Drop_JumpToZL"
+        },
         UI_Drop_JuqueBoss = {
           ContentES = "Entrar en el laberinto",
           TextMapId = "UI_Drop_JuqueBoss"
@@ -82059,18 +83205,18 @@ Tocado de Lynn
           ContentES = "Recoger el incensario",
           TextMapId = "UI_Drop_Naxianglu"
         },
+        UI_Drop_OpenDoorTrain = {
+          ContentES = "Abre la puerta del vagón",
+          TextMapId = "UI_Drop_OpenDoorTrain"
+        },
+        UI_Drop_PickupYanliao = {
+          ContentES = "Mantén presionado para recoger el pigmento",
+          TextMapId = "UI_Drop_PickupYanliao"
+        },
         UI_Drop_Rukou = {
           ContentES = "Entrar",
           TextMapId = "UI_Drop_Rukou"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Drop_Sheniao",
-    MaxKey = "UI_Event_MidTerm_Settled",
-    Loader = function()
-      return {
+        },
         UI_Drop_Sheniao = {
           ContentES = "Darle una lección a la Gaviota Velaria",
           TextMapId = "UI_Drop_Sheniao"
@@ -82079,6 +83225,14 @@ Tocado de Lynn
           ContentES = "Hablar",
           TextMapId = "UI_Drop_SuyiKz"
         },
+        UI_Drop_TakeClamp = {
+          ContentES = "Recoge la pinza hemostática",
+          TextMapId = "UI_Drop_TakeClamp"
+        },
+        UI_Drop_TakePainkiller = {
+          ContentES = "Recoge los analgésicos",
+          TextMapId = "UI_Drop_TakePainkiller"
+        },
         UI_Drop_Touxi = {
           ContentES = "Emboscar",
           TextMapId = "UI_Drop_Touxi"
@@ -82086,6 +83240,14 @@ Tocado de Lynn
         UI_Drop_Tuimen = {
           ContentES = "Rescata a Kezhou",
           TextMapId = "UI_Drop_Tuimen"
+        },
+        UI_Drop_TurnInYanliao = {
+          ContentES = "Entrega el pigmento",
+          TextMapId = "UI_Drop_TurnInYanliao"
+        },
+        UI_Drop_TurninZhixueqian = {
+          ContentES = "Entrega la pinza hemostática",
+          TextMapId = "UI_Drop_TurninZhixueqian"
         },
         UI_Drop_Wait = {
           ContentES = "Esperar",
@@ -82518,7 +83680,15 @@ Tocado de Lynn
         UI_ElementDes_General = {
           ContentES = "El daño de elementos ventajosos aumenta un <H>400%</>, mientras que el de elementos <H>no ventajosos</> se reduce un <H>50 %</>.",
           TextMapId = "UI_ElementDes_General"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ElementDes_Light",
+    MaxKey = "UI_Extraction_TM_48",
+    Loader = function()
+      return {
         UI_ElementDes_Light = {
           ContentES = "Inflige daño <H>Lumino</> periódico y actualiza el tiempo restante de todos los efectos <H>elementales</> activos",
           TextMapId = "UI_ElementDes_Light"
@@ -82870,15 +84040,7 @@ Tocado de Lynn
         UI_Event_MidTerm_Settled = {
           ContentES = "Los puntos de ayer se han convertido en:",
           TextMapId = "UI_Event_MidTerm_Settled"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Event_MidTerm_Settled_End",
-    MaxKey = "UI_FORGING_CANTFORGE",
-    Loader = function()
-      return {
+        },
         UI_Event_MidTerm_Settled_End = {
           ContentES = "Los puntos se han convertido en:",
           TextMapId = "UI_Event_MidTerm_Settled_End"
@@ -83326,7 +84488,15 @@ Tocado de Lynn
         UI_Extraction_TM_48 = {
           ContentES = "Sin botín",
           TextMapId = "UI_Extraction_TM_48"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Extraction_TM_49",
+    MaxKey = "UI_Friend_RequestTime",
+    Loader = function()
+      return {
         UI_Extraction_TM_49 = {
           ContentES = "Contenedor",
           TextMapId = "UI_Extraction_TM_49"
@@ -83678,15 +84848,7 @@ Tocado de Lynn
         UI_FORGING_CANTFORGE = {
           ContentES = "Este objeto no se puede forjar",
           TextMapId = "UI_FORGING_CANTFORGE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FORGING_CASH_NOTENOUGH",
-    MaxKey = "UI_GameEvent_TrialRewardClaimed",
-    Loader = function()
-      return {
+        },
         UI_FORGING_CASH_NOTENOUGH = {
           ContentES = "Monedas insuficientes",
           TextMapId = "UI_FORGING_CASH_NOTENOUGH"
@@ -84131,7 +85293,15 @@ Tocado de Lynn
         UI_Friend_RequestTime = {
           ContentES = "Hora de la solicitud",
           TextMapId = "UI_Friend_RequestTime"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Friend_SearchBtn",
+    MaxKey = "UI_HardBoss_Difficulty_Des_Open_5",
+    Loader = function()
+      return {
         UI_Friend_SearchBtn = {
           ContentES = "Buscar",
           TextMapId = "UI_Friend_SearchBtn"
@@ -84483,15 +85653,7 @@ Tocado de Lynn
         UI_GameEvent_TrialRewardClaimed = {
           ContentES = "Reclamado",
           TextMapId = "UI_GameEvent_TrialRewardClaimed"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_GameEvent_TrialToBeFinished",
-    MaxKey = "UI_HeadFrame_Name_10011",
-    Loader = function()
-      return {
+        },
         UI_GameEvent_TrialToBeFinished = {
           ContentES = "Por completar",
           TextMapId = "UI_GameEvent_TrialToBeFinished"
@@ -84741,6 +85903,10 @@ Tocado de Lynn
           ContentES = "Próximamente",
           TextMapId = "UI_GuildSystemNotAvailable"
         },
+        UI_GuildTaskTab = {
+          ContentES = "Misiones de gremio",
+          TextMapId = "UI_GuildTaskTab"
+        },
         UI_GuildTerritory = {
           ContentES = "Sede del gremio",
           TextMapId = "UI_GuildTerritory"
@@ -84932,7 +86098,15 @@ Tocado de Lynn
         UI_HardBoss_Difficulty_Des_Open_5 = {
           ContentES = "Pesadilla Ⅴ",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HardBoss_Difficulty_Des_Open_6",
+    MaxKey = "UI_Interactive_ChabeiXier",
+    Loader = function()
+      return {
         UI_HardBoss_Difficulty_Des_Open_6 = {
           ContentES = "Pesadilla Ⅵ",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_6"
@@ -85288,15 +86462,7 @@ Tocado de Lynn
         UI_HeadFrame_Name_10011 = {
           ContentES = "Mariposa: Verde esmeralda",
           TextMapId = "UI_HeadFrame_Name_10011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HeadFrame_Name_10012",
-    MaxKey = "UI_LOGIN_ENTERGAME",
-    Loader = function()
-      return {
+        },
         UI_HeadFrame_Name_10012 = {
           ContentES = "Mariposa: Celeste",
           TextMapId = "UI_HeadFrame_Name_10012"
@@ -85703,7 +86869,7 @@ Tocado de Lynn
           TextMapId = "UI_InsufficientPermissions"
         },
         UI_Interact_Detective = {
-          ContentES = "Untersuchen",
+          ContentES = "Investigar",
           TextMapId = "UI_Interact_Detective"
         },
         UI_Interact_Player = {
@@ -85726,6 +86892,86 @@ Tocado de Lynn
           ContentES = "Recoger todo",
           TextMapId = "UI_Interaction_Drop_All"
         },
+        UI_Interactive_Bow = {
+          ContentES = "Mantén presionado para hacer una reverencia",
+          TextMapId = "UI_Interactive_Bow"
+        },
+        UI_Interactive_BuyTicket = {
+          ContentES = "Comprar boleto",
+          TextMapId = "UI_Interactive_BuyTicket"
+        },
+        UI_Interactive_ChabeiXier = {
+          ContentES = "Mantén presionado para dejar la taza",
+          TextMapId = "UI_Interactive_ChabeiXier"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Interactive_ChahuXier",
+    MaxKey = "UI_Locked_Des_4030008",
+    Loader = function()
+      return {
+        UI_Interactive_ChahuXier = {
+          ContentES = "Mantén presionado para preparar té",
+          TextMapId = "UI_Interactive_ChahuXier"
+        },
+        UI_Interactive_CleanClamp = {
+          ContentES = "Mantén presionado para desinfectar",
+          TextMapId = "UI_Interactive_CleanClamp"
+        },
+        UI_Interactive_Eavesdrop = {
+          ContentES = "Escuchar a escondidas",
+          TextMapId = "UI_Interactive_Eavesdrop"
+        },
+        UI_Interactive_Fanzhao = {
+          ContentES = "Mantén presionado para buscar",
+          TextMapId = "UI_Interactive_Fanzhao"
+        },
+        UI_Interactive_GotoBHCZ = {
+          ContentES = "Ve a la Estación de las Cien Flores",
+          TextMapId = "UI_Interactive_GotoBHCZ"
+        },
+        UI_Interactive_GotoCKYT = {
+          ContentES = "Ve al vestíbulo",
+          TextMapId = "UI_Interactive_GotoCKYT"
+        },
+        UI_Interactive_GotoCXQ = {
+          ContentES = "Ve a la vías subterráneas",
+          TextMapId = "UI_Interactive_GotoCXQ"
+        },
+        UI_Interactive_GotoGZYT = {
+          ContentES = "Ve al andén de trabajo",
+          TextMapId = "UI_Interactive_GotoGZYT"
+        },
+        UI_Interactive_HidePuren = {
+          ContentES = "Mantén presionado para esconderte",
+          TextMapId = "UI_Interactive_HidePuren"
+        },
+        UI_Interactive_HoldingResearch = {
+          ContentES = "Mantén presionado para investigar",
+          TextMapId = "UI_Interactive_HoldingResearch"
+        },
+        UI_Interactive_OpenSafeBox = {
+          ContentES = "Abre la caja fuerte",
+          TextMapId = "UI_Interactive_OpenSafeBox"
+        },
+        UI_Interactive_REGotoYWS = {
+          ContentES = "Ve a la enfermería",
+          TextMapId = "UI_Interactive_REGotoYWS"
+        },
+        UI_Interactive_REZZZ = {
+          ContentES = "Prepárate para seguir a Hilda",
+          TextMapId = "UI_Interactive_REZZZ"
+        },
+        UI_Interactive_Research = {
+          ContentES = "Investigar",
+          TextMapId = "UI_Interactive_Research"
+        },
+        UI_Interactive_SetPainkiller = {
+          ContentES = "Coloca los analgésicos",
+          TextMapId = "UI_Interactive_SetPainkiller"
+        },
         UI_Interactive_SubmitProp = {
           ContentES = "Entregar objeto",
           TextMapId = "UI_Interactive_SubmitProp"
@@ -85733,6 +86979,14 @@ Tocado de Lynn
         UI_Interactive_WipeGlass = {
           ContentES = "Mantén presionado para limpiar la ventana",
           TextMapId = "UI_Interactive_WipeGlass"
+        },
+        UI_Interactive_ZhadanFuluo = {
+          ContentES = "Mantén presionado para desactivar la bomba",
+          TextMapId = "UI_Interactive_ZhadanFuluo"
+        },
+        UI_Interactive_ZhengshiShenfen = {
+          ContentES = "Verifica de identidad",
+          TextMapId = "UI_Interactive_ZhengshiShenfen"
         },
         UI_IronMode_Des_100376 = {
           ContentES = "Acerca de los Encargos abisales:\n1. Se requiere una Brújula abisal para iniciar un Encargo abisal. Cuanto mayor sea el nivel de la Brújula abisal, mayores serán las recompensas.\n2. Sobrevive a más rondas en los Encargos abisales para aumentar el nivel de la Brújula abisal.\n3. Al derrotar enemigos en los Encargos abisales, existe la posibilidad de obtener botín dirigido. Antes de entrar a un Encargo abisal, puedes ajustar el botín que deseas obtener.\n4. Los Encargos abisales permiten la entrada de hasta 3 Phoxcazadores en equipo. En modo cooperativo, solo el líder necesita usar una Brújula abisal.\n5. A medida que sube el nivel de las rondas, los enemigos se vuelven más fuertes: A partir del nivel 120, los atributos de los monstruos aumentan de forma significativa y el Comandante porta dos habilidades. A partir del nivel 160, los atributos de los monstruos de cada ronda aumentan de forma significativa y el Comandante porta tres habilidades.",
@@ -86093,15 +87347,7 @@ Tocado de Lynn
         UI_LOGIN_ENTERGAME = {
           ContentES = "Toca para empezar",
           TextMapId = "UI_LOGIN_ENTERGAME"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_LOGIN_HoldPress",
-    MaxKey = "UI_LotteryDescription_3031",
-    Loader = function()
-      return {
+        },
         UI_LOGIN_HoldPress = {
           ContentES = "(Mantener) Salir",
           TextMapId = "UI_LOGIN_HoldPress"
@@ -86259,7 +87505,7 @@ Tocado de Lynn
           TextMapId = "UI_LimitedPrizePool_BeginCheck"
         },
         UI_LimitedPrizePool_BestLuck = {
-          ContentES = "¡La estética está de tu lado! Obtuviste la apariencia destacada en solo %d intento(s).",
+          ContentES = "¡La estética está de tu lado! Obtuviste el aspecto destacado en solo %d intento(s).",
           TextMapId = "UI_LimitedPrizePool_BestLuck"
         },
         UI_LimitedPrizePool_BuyTicket = {
@@ -86279,11 +87525,11 @@ Tocado de Lynn
           TextMapId = "UI_LimitedPrizePool_EndPool"
         },
         UI_LimitedPrizePool_FirstSelect = {
-          ContentES = "Apariencia destacada",
+          ContentES = "Aspecto destacado",
           TextMapId = "UI_LimitedPrizePool_FirstSelect"
         },
         UI_LimitedPrizePool_GetAllDes = {
-          ContentES = "Cuando obtengas la apariencia destacada, también recibirás todas las recompensas restantes de este pozo.",
+          ContentES = "Cuando obtengas el aspecto destacado, también recibirás todas las recompensas restantes de este pozo.",
           TextMapId = "UI_LimitedPrizePool_GetAllDes"
         },
         UI_LimitedPrizePool_GetAllResult = {
@@ -86291,7 +87537,7 @@ Tocado de Lynn
           TextMapId = "UI_LimitedPrizePool_GetAllResult"
         },
         UI_LimitedPrizePool_GoodLuck = {
-          ContentES = "¡Chispa de inspiración! Obtuviste la apariencia destacada en el intento %d.",
+          ContentES = "¡Chispa de inspiración! Obtuviste el aspecto destacado en el intento %d.",
           TextMapId = "UI_LimitedPrizePool_GoodLuck"
         },
         UI_LimitedPrizePool_History = {
@@ -86315,7 +87561,7 @@ Tocado de Lynn
           TextMapId = "UI_LimitedPrizePool_OthSelect"
         },
         UI_LimitedPrizePool_PleaseSelectFirstPrize = {
-          ContentES = "Elige una apariencia destacada",
+          ContentES = "Elige un aspecto destacado",
           TextMapId = "UI_LimitedPrizePool_PleaseSelectFirstPrize"
         },
         UI_LimitedPrizePool_PleaseSelectPrize = {
@@ -86447,11 +87693,11 @@ Tocado de Lynn
           TextMapId = "UI_Locked_Des_4030003"
         },
         UI_Locked_Des_4030004 = {
-          ContentES = "Obtener todas las apariencias de arma \"Fortuna Dulce\"",
+          ContentES = "Obtener todos los aspectos de arma \"Fortuna Dulce\"",
           TextMapId = "UI_Locked_Des_4030004"
         },
         UI_Locked_Des_4030005 = {
-          ContentES = "Obtén todas las apariencias de montura de Taixu Rover",
+          ContentES = "Obtén todos los aspectos de montura de Taixu Rover",
           TextMapId = "UI_Locked_Des_4030005"
         },
         UI_Locked_Des_4030006 = {
@@ -86465,7 +87711,15 @@ Tocado de Lynn
         UI_Locked_Des_4030008 = {
           ContentES = "Obtén Fantasía Jishu: Rojo óxido",
           TextMapId = "UI_Locked_Des_4030008"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Locked_Des_4030009",
+    MaxKey = "UI_MECHANISM_113",
+    Loader = function()
+      return {
         UI_Locked_Des_4030009 = {
           ContentES = "Obtén Fantasía Jishu: Jade oscuro",
           TextMapId = "UI_Locked_Des_4030009"
@@ -86519,7 +87773,7 @@ Tocado de Lynn
           TextMapId = "UI_Locked_Des_4030021"
         },
         UI_Locked_Des_4030022 = {
-          ContentES = "Obtén todas las apariencias de arma \"El grito\"",
+          ContentES = "Obtén todos los aspectos de arma \"El grito\"",
           TextMapId = "UI_Locked_Des_4030022"
         },
         UI_Locked_Des_451001 = {
@@ -86559,7 +87813,7 @@ Tocado de Lynn
           TextMapId = "UI_Locked_Des_Achievement"
         },
         UI_Locked_Des_AppearanceScore = {
-          ContentES = "Apariencia aún no desbloqueada",
+          ContentES = "Aspecto aún no desbloqueado",
           TextMapId = "UI_Locked_Des_AppearanceScore"
         },
         UI_Locked_Des_Archive = {
@@ -86901,15 +88155,7 @@ Tocado de Lynn
         UI_LotteryDescription_3031 = {
           ContentES = "Al menos 3 [piezas de colección] en la Bolsa del tesoro: Fichas civiles totales de la ronda ×1,5",
           TextMapId = "UI_LotteryDescription_3031"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_LotteryDescription_3032",
-    MaxKey = "UI_Mail_Date_Recieve",
-    Loader = function()
-      return {
+        },
         UI_LotteryDescription_3032 = {
           ContentES = "Al menos 4 [piezas de colección] en la Bolsa del tesoro: Fichas civiles totales de la ronda ×2",
           TextMapId = "UI_LotteryDescription_3032"
@@ -87159,7 +88405,7 @@ Tocado de Lynn
           TextMapId = "UI_MECHANISM_10463"
         },
         UI_MECHANISM_10475 = {
-          ContentES = "Verlassene Aushänge",
+          ContentES = "Avisos abandonados",
           TextMapId = "UI_MECHANISM_10475"
         },
         UI_MECHANISM_105 = {
@@ -87273,7 +88519,15 @@ Tocado de Lynn
         UI_MECHANISM_113 = {
           ContentES = "Registra la ubicación actual",
           TextMapId = "UI_MECHANISM_113"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_114",
+    MaxKey = "UI_ModGuideBook_Task_Title_Collect_01",
+    Loader = function()
+      return {
         UI_MECHANISM_114 = {
           ContentES = "Sacude el polvo",
           TextMapId = "UI_MECHANISM_114"
@@ -87462,6 +88716,14 @@ Tocado de Lynn
           ContentES = "Ve a la Estación de las Cien Flores",
           TextMapId = "UI_MECHANISM_CHEZHAN_ENTER"
         },
+        UI_MECHANISM_CleanAsh = {
+          ContentES = "Limpiar",
+          TextMapId = "UI_MECHANISM_CleanAsh"
+        },
+        UI_MECHANISM_ClockInter = {
+          ContentES = "Apaga las luces",
+          TextMapId = "UI_MECHANISM_ClockInter"
+        },
         UI_MECHANISM_DISHANGCHEZHAN_ENTER = {
           ContentES = "Ve a la Estación de las Cien Flores",
           TextMapId = "UI_MECHANISM_DISHANGCHEZHAN_ENTER"
@@ -87502,6 +88764,10 @@ Tocado de Lynn
           ContentES = "Entra en Los Asfódelos",
           TextMapId = "UI_MECHANISM_ENTER_TAVERN"
         },
+        UI_MECHANISM_FixGlass = {
+          ContentES = "Reparar",
+          TextMapId = "UI_MECHANISM_FixGlass"
+        },
         UI_MECHANISM_HAOJING_ENTER = {
           ContentES = "Ir a Haojing",
           TextMapId = "UI_MECHANISM_HAOJING_ENTER"
@@ -87537,6 +88803,10 @@ Tocado de Lynn
         UI_MECHANISM_LEAVE_TAVERN = {
           ContentES = "Sal de Los Asfódelos",
           TextMapId = "UI_MECHANISM_LEAVE_TAVERN"
+        },
+        UI_MECHANISM_LightSwitchInter = {
+          ContentES = "Adelanta el reloj",
+          TextMapId = "UI_MECHANISM_LightSwitchInter"
         },
         UI_MECHANISM_OFFICE_ENTER = {
           ContentES = "Entra en la Morada del Dragón Oculto",
@@ -87709,15 +88979,7 @@ Tocado de Lynn
         UI_Mail_Date_Recieve = {
           ContentES = "Tiempo recibido",
           TextMapId = "UI_Mail_Date_Recieve"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Mail_Date_Remain",
-    MaxKey = "UI_NPC_Name_Fulong_Sce",
-    Loader = function()
-      return {
+        },
         UI_Mail_Date_Remain = {
           ContentES = "Tiempo restante:",
           TextMapId = "UI_Mail_Date_Remain"
@@ -88065,7 +89327,15 @@ Tocado de Lynn
         UI_ModGuideBook_Task_Title_Collect_01 = {
           ContentES = "Colección de Cuña Demoníaca I",
           TextMapId = "UI_ModGuideBook_Task_Title_Collect_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ModGuideBook_Task_Title_Collect_02",
+    MaxKey = "UI_NPC_Name_jingshuo_Sce",
+    Loader = function()
+      return {
         UI_ModGuideBook_Task_Title_Collect_02 = {
           ContentES = "Colección de Cuña Demoníaca II",
           TextMapId = "UI_ModGuideBook_Task_Title_Collect_02"
@@ -88461,7 +89731,7 @@ Tocado de Lynn
           TextMapId = "UI_NPC_Name_Atu_Sce"
         },
         UI_NPC_Name_Bainianchungongzuorenyuan_Sce = {
-          ContentES = "Mitarbeiter von EverSpring",
+          ContentES = "Empleado de Primavera Eterna",
           TextMapId = "UI_NPC_Name_Bainianchungongzuorenyuan_Sce"
         },
         UI_NPC_Name_Baiwen_Sce = {
@@ -88477,7 +89747,7 @@ Tocado de Lynn
           TextMapId = "UI_NPC_Name_Chizhatian_Sce"
         },
         UI_NPC_Name_Congxiansheng_Sce = {
-          ContentES = "Herr Cong",
+          ContentES = "Sr. Cong",
           TextMapId = "UI_NPC_Name_Congxiansheng_Sce"
         },
         UI_NPC_Name_Dali_Sce = {
@@ -88511,17 +89781,9 @@ Tocado de Lynn
         UI_NPC_Name_Fulong_Sce = {
           ContentES = "Fulong",
           TextMapId = "UI_NPC_Name_Fulong_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_Guishou_Sce",
-    MaxKey = "UI_NPC_Name_xiaowan_Sce",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_Guishou_Sce = {
-          ContentES = "Geisterhand",
+          ContentES = "Mano fantasma",
           TextMapId = "UI_NPC_Name_Guishou_Sce"
         },
         UI_NPC_Name_Guoguosheng_Sce = {
@@ -88545,11 +89807,11 @@ Tocado de Lynn
           TextMapId = "UI_NPC_Name_Jiaxiasheng_Sce"
         },
         UI_NPC_Name_Jiuye_Sce = {
-          ContentES = "Herr Neun",
+          ContentES = "Sr. Nueve",
           TextMapId = "UI_NPC_Name_Jiuye_Sce"
         },
         UI_NPC_Name_Laoliutou_Sce = {
-          ContentES = "Alter Mann Liu",
+          ContentES = "Liu el Viejo",
           TextMapId = "UI_NPC_Name_Laoliutou_Sce"
         },
         UI_NPC_Name_Lianxin_Sce = {
@@ -88589,7 +89851,7 @@ Tocado de Lynn
           TextMapId = "UI_NPC_Name_Maxiu_Sce"
         },
         UI_NPC_Name_Qianlaoban_Sce = {
-          ContentES = "Chef Qian",
+          ContentES = "Patrón Qian",
           TextMapId = "UI_NPC_Name_Qianlaoban_Sce"
         },
         UI_NPC_Name_Qiaofeng_Sce = {
@@ -88613,7 +89875,7 @@ Tocado de Lynn
           TextMapId = "UI_NPC_Name_Shimisi_Sce"
         },
         UI_NPC_Name_Shouwurandebian_Sce = {
-          ContentES = "Verderbter Bi’an",
+          ContentES = "Bi'an corrupto",
           TextMapId = "UI_NPC_Name_Shouwurandebian_Sce"
         },
         UI_NPC_Name_Tieguaimu_Sce = {
@@ -88641,7 +89903,7 @@ Tocado de Lynn
           TextMapId = "UI_NPC_Name_Yuewanwan_Sce"
         },
         UI_NPC_Name_ZhixingkeJiaojiao = {
-          ContentES = "Luno-Sternweberin",
+          ContentES = "Luno, la Tejestrellas",
           TextMapId = "UI_NPC_Name_ZhixingkeJiaojiao"
         },
         UI_NPC_Name_Zhuangye_Sce = {
@@ -88867,7 +90129,15 @@ Tocado de Lynn
         UI_NPC_Name_jingshuo_Sce = {
           ContentES = "Jing Shuo",
           TextMapId = "UI_NPC_Name_jingshuo_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_jingtian_Sce",
+    MaxKey = "UI_Name_Walnut_151415",
+    Loader = function()
+      return {
         UI_NPC_Name_jingtian_Sce = {
           ContentES = "Jingtian",
           TextMapId = "UI_NPC_Name_jingtian_Sce"
@@ -89319,15 +90589,7 @@ Tocado de Lynn
         UI_NPC_Name_xiaowan_Sce = {
           ContentES = "Wan",
           TextMapId = "UI_NPC_Name_xiaowan_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_xiaoyu_Sce",
-    MaxKey = "UI_Name_Walnut_2025",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_xiaoyu_Sce = {
           ContentES = "Yu",
           TextMapId = "UI_NPC_Name_xiaoyu_Sce"
@@ -89675,7 +90937,15 @@ Tocado de Lynn
         UI_Name_Walnut_151415 = {
           ContentES = "Carta secreta: Supremo del Typhon – Exaltación",
           TextMapId = "UI_Name_Walnut_151415"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_151421",
+    MaxKey = "UI_Npc_Name_240007",
+    Loader = function()
+      return {
         UI_Name_Walnut_151421 = {
           ContentES = "Carta secreta: Supremo del Typhon – Moral",
           TextMapId = "UI_Name_Walnut_151421"
@@ -90127,15 +91397,7 @@ Tocado de Lynn
         UI_Name_Walnut_2025 = {
           ContentES = "Carta secreta: Desgarralmas",
           TextMapId = "UI_Name_Walnut_2025"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_2026",
-    MaxKey = "UI_Npc_Name_AomanT",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_2026 = {
           ContentES = "Carta secreta: Grillete del Lobo Solitario",
           TextMapId = "UI_Name_Walnut_2026"
@@ -90477,7 +91739,15 @@ Tocado de Lynn
         UI_Npc_Name_240007 = {
           ContentES = "Mujer en la fila",
           TextMapId = "UI_Npc_Name_240007"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_240008",
+    MaxKey = "UI_Npc_Name_Fuer",
+    Loader = function()
+      return {
         UI_Npc_Name_240008 = {
           ContentES = "Oficial del incienso",
           TextMapId = "UI_Npc_Name_240008"
@@ -90929,15 +92199,7 @@ Tocado de Lynn
         UI_Npc_Name_AomanT = {
           ContentES = "\"Hombre arrogante\"",
           TextMapId = "UI_Npc_Name_AomanT"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Aote",
-    MaxKey = "UI_Npc_Name_Paxi",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Aote = {
           ContentES = "Outsider",
           TextMapId = "UI_Npc_Name_Aote"
@@ -91285,7 +92547,15 @@ Tocado de Lynn
         UI_Npc_Name_Fuer = {
           ContentES = "Fulvis",
           TextMapId = "UI_Npc_Name_Fuer"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Fuer2",
+    MaxKey = "UI_Npc_Name_Woman_7",
+    Loader = function()
+      return {
         UI_Npc_Name_Fuer2 = {
           ContentES = "¿Fulvis?",
           TextMapId = "UI_Npc_Name_Fuer2"
@@ -91737,15 +93007,7 @@ Tocado de Lynn
         UI_Npc_Name_Paxi = {
           ContentES = "Parsifal",
           TextMapId = "UI_Npc_Name_Paxi"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Photo",
-    MaxKey = "UI_OPTION_DEFAULT",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Photo = {
           ContentES = "Turista",
           TextMapId = "UI_Npc_Name_Photo"
@@ -92093,7 +93355,15 @@ Tocado de Lynn
         UI_Npc_Name_Woman_7 = {
           ContentES = "Jovencita melancólica",
           TextMapId = "UI_Npc_Name_Woman_7"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Won1",
+    MaxKey = "UI_OPTION_MFSR",
+    Loader = function()
+      return {
         UI_Npc_Name_Won1 = {
           ContentES = "Cuna cubierta de polvo",
           TextMapId = "UI_Npc_Name_Won1"
@@ -92447,7 +93717,7 @@ Tocado de Lynn
           TextMapId = "UI_OPTION_AutoBulletJump"
         },
         UI_OPTION_AutoFashion = {
-          ContentES = "Usar apariencia personalizada del protagonista en escenas de historia",
+          ContentES = "Usar aspecto personalizado del protagonista en escenas de historia",
           TextMapId = "UI_OPTION_AutoFashion"
         },
         UI_OPTION_AutoJoin = {
@@ -92545,15 +93815,7 @@ Tocado de Lynn
         UI_OPTION_DEFAULT = {
           ContentES = "Restaurar los valores por defecto",
           TextMapId = "UI_OPTION_DEFAULT"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_DISPLAY",
-    MaxKey = "UI_Option_Area_13",
-    Loader = function()
-      return {
+        },
         UI_OPTION_DISPLAY = {
           ContentES = "Pantalla",
           TextMapId = "UI_OPTION_DISPLAY"
@@ -92901,7 +94163,15 @@ Tocado de Lynn
         UI_OPTION_MFSR = {
           ContentES = "GSR Móvil",
           TextMapId = "UI_OPTION_MFSR"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_MaterialFilter",
+    MaxKey = "UI_Party_Maze_Claer_Great",
+    Loader = function()
+      return {
         UI_OPTION_MaterialFilter = {
           ContentES = "Filtrado de texturas",
           TextMapId = "UI_OPTION_MaterialFilter"
@@ -93353,15 +94623,7 @@ Tocado de Lynn
         UI_Option_Area_13 = {
           ContentES = "Idioma de voz",
           TextMapId = "UI_Option_Area_13"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Option_Area_2",
-    MaxKey = "UI_Pet_SuccessRate",
-    Loader = function()
-      return {
+        },
         UI_Option_Area_2 = {
           ContentES = "Idioma",
           TextMapId = "UI_Option_Area_2"
@@ -93709,7 +94971,15 @@ Tocado de Lynn
         UI_Party_Maze_Claer_Great = {
           ContentES = "¡Bravo! Etapa de bonificación desbloqueada.",
           TextMapId = "UI_Party_Maze_Claer_Great"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Party_Maze_StageStart",
+    MaxKey = "UI_PlayerHead_Name_30001",
+    Loader = function()
+      return {
         UI_Party_Maze_StageStart = {
           ContentES = "Modo de exploración iniciado. ¡Comienza la cuenta regresiva!",
           TextMapId = "UI_Party_Maze_StageStart"
@@ -93903,7 +95173,7 @@ Tocado de Lynn
           TextMapId = "UI_PersonInfo_Saved"
         },
         UI_PersonInfo_Select_Appearance = {
-          ContentES = "Seleccionar preajuste de cosméticos",
+          ContentES = "Seleccionar preajuste de cosmético",
           TextMapId = "UI_PersonInfo_Select_Appearance"
         },
         UI_PersonInfo_Select_Mod = {
@@ -94161,15 +95431,7 @@ Tocado de Lynn
         UI_Pet_SuccessRate = {
           ContentES = "Tasa de éxito",
           TextMapId = "UI_Pet_SuccessRate"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Pet_ThrowFood_PC",
-    MaxKey = "UI_PlayerHead_Name_30117",
-    Loader = function()
-      return {
+        },
         UI_Pet_ThrowFood_PC = {
           ContentES = "Lanzar la lata",
           TextMapId = "UI_Pet_ThrowFood_PC"
@@ -94439,7 +95701,7 @@ Tocado de Lynn
           TextMapId = "UI_PlayerHead_Name_10021"
         },
         UI_PlayerHead_Name_10022 = {
-          ContentES = "Retrato: Flora",
+          ContentES = "Retrato: Princesa de las Cien Flores",
           TextMapId = "UI_PlayerHead_Name_10022"
         },
         UI_PlayerHead_Name_10023 = {
@@ -94502,10 +95764,30 @@ Tocado de Lynn
           ContentES = "Retrato: Señorita Jishu — Cielo despejado",
           TextMapId = "UI_PlayerHead_Name_20006"
         },
+        UI_PlayerHead_Name_20007 = {
+          ContentES = "Retrato: Princesa de las Cien Flores – Gracia",
+          TextMapId = "UI_PlayerHead_Name_20007"
+        },
+        UI_PlayerHead_Name_20008 = {
+          ContentES = "Retrato: La Barquera del Mar Nebuloso – Plegarias",
+          TextMapId = "UI_PlayerHead_Name_20008"
+        },
+        UI_PlayerHead_Name_20009 = {
+          ContentES = "Retrato: El que se niega a sí mismo – Plegarias",
+          TextMapId = "UI_PlayerHead_Name_20009"
+        },
         UI_PlayerHead_Name_30001 = {
           ContentES = "Aturdimiento",
           TextMapId = "UI_PlayerHead_Name_30001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30002",
+    MaxKey = "UI_QUEST_SUBTAB_NAME_Activity",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30002 = {
           ContentES = "Aturdimiento",
           TextMapId = "UI_PlayerHead_Name_30002"
@@ -94969,15 +96251,7 @@ Tocado de Lynn
         UI_PlayerHead_Name_30117 = {
           ContentES = "Prueba del Incienso",
           TextMapId = "UI_PlayerHead_Name_30117"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30118",
-    MaxKey = "UI_Raid_Boss_KillCount",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30118 = {
           ContentES = "Travesía estelar",
           TextMapId = "UI_PlayerHead_Name_30118"
@@ -95067,11 +96341,11 @@ Tocado de Lynn
           TextMapId = "UI_PlayerHead_Name_30139"
         },
         UI_PlayerHead_Name_30140 = {
-          ContentES = "Plegarias resonantes: Jade oscuro",
+          ContentES = "Pluma gris",
           TextMapId = "UI_PlayerHead_Name_30140"
         },
         UI_PlayerHead_Name_30141 = {
-          ContentES = "Plegarias resonantes: Azul grisáceo",
+          ContentES = "Plegarias resonantes",
           TextMapId = "UI_PlayerHead_Name_30141"
         },
         UI_PlayerHead_Name_30142 = {
@@ -95313,7 +96587,15 @@ Tocado de Lynn
         UI_QUEST_SUBTAB_NAME_Activity = {
           ContentES = "Misiones de evento",
           TextMapId = "UI_QUEST_SUBTAB_NAME_Activity"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_QUEST_SUBTAB_NAME_DAILY",
+    MaxKey = "UI_ResetLangLater",
+    Loader = function()
+      return {
         UI_QUEST_SUBTAB_NAME_DAILY = {
           ContentES = "Misión diaria",
           TextMapId = "UI_QUEST_SUBTAB_NAME_DAILY"
@@ -95439,7 +96721,7 @@ Tocado de Lynn
           TextMapId = "UI_Quest_TargetArea"
         },
         UI_Quest_WaitDafu = {
-          ContentES = "Warte, bis die Untersuchung abgeschlossen ist",
+          ContentES = "Espera a que termine la investigación",
           TextMapId = "UI_Quest_WaitDafu"
         },
         UI_QuitGuild = {
@@ -95581,6 +96863,22 @@ Tocado de Lynn
         UI_REGION_NAME_1057 = {
           ContentES = "Altar de Zhuyin",
           TextMapId = "UI_REGION_NAME_1057"
+        },
+        UI_REGION_NAME_1060 = {
+          ContentES = "La Estación de las Cien Flores",
+          TextMapId = "UI_REGION_NAME_1060"
+        },
+        UI_REGION_NAME_1061 = {
+          ContentES = "Periferia de Cocytus",
+          TextMapId = "UI_REGION_NAME_1061"
+        },
+        UI_REGION_NAME_1062 = {
+          ContentES = "¿¿¿???",
+          TextMapId = "UI_REGION_NAME_1062"
+        },
+        UI_REGION_NAME_1063 = {
+          ContentES = "Instalaciones de forja",
+          TextMapId = "UI_REGION_NAME_1063"
         },
         UI_REGION_NAME_2101 = {
           ContentES = "Santuario",
@@ -95759,15 +97057,7 @@ Tocado de Lynn
         UI_Raid_Boss_KillCount = {
           ContentES = "Enemigos sin amenaza alta derrotados:",
           TextMapId = "UI_Raid_Boss_KillCount"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Raid_MaxScore",
-    MaxKey = "UI_SHOP_Fishing_East01",
-    Loader = function()
-      return {
+        },
         UI_Raid_MaxScore = {
           ContentES = "Límite de Puntuación",
           TextMapId = "UI_Raid_MaxScore"
@@ -96081,7 +97371,15 @@ Tocado de Lynn
         UI_ResetLangLater = {
           ContentES = "Ahora no",
           TextMapId = "UI_ResetLangLater"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ResetLangNow",
+    MaxKey = "UI_SHOWNPC_DESC_SCENE3",
+    Loader = function()
+      return {
         UI_ResetLangNow = {
           ContentES = "Cambiar ahora",
           TextMapId = "UI_ResetLangNow"
@@ -96561,15 +97859,7 @@ Tocado de Lynn
         UI_SHOP_Fishing_East01 = {
           ContentES = "Las Pesquerías de Haojing",
           TextMapId = "UI_SHOP_Fishing_East01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SHOP_ITEMOWNED",
-    MaxKey = "UI_SUBREGION_NAME_104506",
-    Loader = function()
-      return {
+        },
         UI_SHOP_ITEMOWNED = {
           ContentES = "Poseído: %d",
           TextMapId = "UI_SHOP_ITEMOWNED"
@@ -96889,7 +98179,15 @@ Tocado de Lynn
         UI_SHOWNPC_DESC_SCENE3 = {
           ContentES = "¿Qué puedes ver a través de esa ventana, una ciudad bulliciosa o el pasado congelado en recuerdos?",
           TextMapId = "UI_SHOWNPC_DESC_SCENE3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOWNPC_LABEL_1",
+    MaxKey = "UI_SendGift_ConditionTitle",
+    Loader = function()
+      return {
         UI_SHOWNPC_LABEL_1 = {
           ContentES = "Selecciona un personaje de la lista a la izquierda",
           TextMapId = "UI_SHOWNPC_LABEL_1"
@@ -97369,15 +98667,7 @@ Tocado de Lynn
         UI_SUBREGION_NAME_104506 = {
           ContentES = "Sala de Adjudicación",
           TextMapId = "UI_SUBREGION_NAME_104506"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SUBREGION_NAME_104601",
-    MaxKey = "UI_SkinPreview_Accessory_FX_HelixLeap",
-    Loader = function()
-      return {
+        },
         UI_SUBREGION_NAME_104601 = {
           ContentES = "Matriz de Caza de las Mil Trampas",
           TextMapId = "UI_SUBREGION_NAME_104601"
@@ -97429,6 +98719,38 @@ Tocado de Lynn
         UI_SUBREGION_NAME_105701 = {
           ContentES = "Altar de Zhuyin",
           TextMapId = "UI_SUBREGION_NAME_105701"
+        },
+        UI_SUBREGION_NAME_106001 = {
+          ContentES = "Cúpula de entrada",
+          TextMapId = "UI_SUBREGION_NAME_106001"
+        },
+        UI_SUBREGION_NAME_106002 = {
+          ContentES = "Nivel inferior de las instalaciones de forja",
+          TextMapId = "UI_SUBREGION_NAME_106002"
+        },
+        UI_SUBREGION_NAME_106003 = {
+          ContentES = "Nivel superior de las instalaciones de forja",
+          TextMapId = "UI_SUBREGION_NAME_106003"
+        },
+        UI_SUBREGION_NAME_106004 = {
+          ContentES = "Vestíbulo de la estación",
+          TextMapId = "UI_SUBREGION_NAME_106004"
+        },
+        UI_SUBREGION_NAME_106005 = {
+          ContentES = "Vías subterráneas",
+          TextMapId = "UI_SUBREGION_NAME_106005"
+        },
+        UI_SUBREGION_NAME_106006 = {
+          ContentES = "Enfermería de la estación",
+          TextMapId = "UI_SUBREGION_NAME_106006"
+        },
+        UI_SUBREGION_NAME_106101 = {
+          ContentES = "Sur de Cocytus",
+          TextMapId = "UI_SUBREGION_NAME_106101"
+        },
+        UI_SUBREGION_NAME_106201 = {
+          ContentES = "¿¿¿???",
+          TextMapId = "UI_SUBREGION_NAME_106201"
         },
         UI_SUBREGION_NAME_210101 = {
           ContentES = "Santuario",
@@ -97662,7 +98984,15 @@ Tocado de Lynn
         UI_SendGift_ConditionTitle = {
           ContentES = "Condiciones de regalo",
           TextMapId = "UI_SendGift_ConditionTitle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SendGift_CurrentFriend",
+    MaxKey = "UI_Skin_Name_0011",
+    Loader = function()
+      return {
         UI_SendGift_CurrentFriend = {
           ContentES = "Selección actual",
           TextMapId = "UI_SendGift_CurrentFriend"
@@ -98174,15 +99504,7 @@ Tocado de Lynn
         UI_SkinPreview_Accessory_FX_HelixLeap = {
           ContentES = "Efecto de Salto Espiral",
           TextMapId = "UI_SkinPreview_Accessory_FX_HelixLeap"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SkinPreview_Accessory_FX_PlungingATK",
-    MaxKey = "UI_SoloTreasure_NormalMode",
-    Loader = function()
-      return {
+        },
         UI_SkinPreview_Accessory_FX_PlungingATK = {
           ContentES = "Efecto de Ataque Descendente",
           TextMapId = "UI_SkinPreview_Accessory_FX_PlungingATK"
@@ -98460,7 +99782,7 @@ Tocado de Lynn
           TextMapId = "UI_Skin_HasSkin_Short"
         },
         UI_Skin_Name = {
-          ContentES = "Atuendo",
+          ContentES = "Aspecto",
           TextMapId = "UI_Skin_Name"
         },
         UI_Skin_Name_0010 = {
@@ -98470,7 +99792,15 @@ Tocado de Lynn
         UI_Skin_Name_0011 = {
           ContentES = "Serenidad verde",
           TextMapId = "UI_Skin_Name_0011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Name_0121",
+    MaxKey = "UI_Squad_SwitchChar_Toast",
+    Loader = function()
+      return {
         UI_Skin_Name_0121 = {
           ContentES = "Fantasía gélida",
           TextMapId = "UI_Skin_Name_0121"
@@ -98668,7 +99998,7 @@ Tocado de Lynn
           TextMapId = "UI_Skin_Preview"
         },
         UI_Skin_Upgrade_Confirm = {
-          ContentES = "¿Consumir recursos para mejorar esta apariencia?",
+          ContentES = "¿Consumir recursos para mejorar este aspecto?",
           TextMapId = "UI_Skin_Upgrade_Confirm"
         },
         UI_Skin_Upgrade_Cost = {
@@ -98982,15 +100312,7 @@ Tocado de Lynn
         UI_SoloTreasure_NormalMode = {
           ContentES = "Normal",
           TextMapId = "UI_SoloTreasure_NormalMode"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SoloTreasure_PermanentBigRewardDes",
-    MaxKey = "UI_TEMPLE_80404",
-    Loader = function()
-      return {
+        },
         UI_SoloTreasure_PermanentBigRewardDes = {
           ContentES = "Se obtiene al avanzar en el evento",
           TextMapId = "UI_SoloTreasure_PermanentBigRewardDes"
@@ -99091,6 +100413,10 @@ Tocado de Lynn
           ContentES = "Guardia cortés",
           TextMapId = "UI_SpeakName_LimaoWeibing"
         },
+        UI_SpeakName_QingweiShengyin = {
+          ContentES = "Voz tenue",
+          TextMapId = "UI_SpeakName_QingweiShengyin"
+        },
         UI_SpeakName_RenzhenWeibing = {
           ContentES = "Guardia diligente",
           TextMapId = "UI_SpeakName_RenzhenWeibing"
@@ -99106,6 +100432,10 @@ Tocado de Lynn
         UI_SpeakName_WeiyanGongren = {
           ContentES = "Trabajador imponente",
           TextMapId = "UI_SpeakName_WeiyanGongren"
+        },
+        UI_SpeakName_XihuanHuoche = {
+          ContentES = "Niño amante de los trenes",
+          TextMapId = "UI_SpeakName_XihuanHuoche"
         },
         UI_SpeakName_YansuShibing = {
           ContentES = "Soldado estricto",
@@ -99133,15 +100463,15 @@ Tocado de Lynn
           TextMapId = "UI_Squad_Adjust_Sort"
         },
         UI_Squad_Appearance_TITLE1 = {
-          ContentES = "Preajuste de apariencias I",
+          ContentES = "Preajuste I",
           TextMapId = "UI_Squad_Appearance_TITLE1"
         },
         UI_Squad_Appearance_TITLE2 = {
-          ContentES = "Preajuste de apariencias II",
+          ContentES = "Preajuste II",
           TextMapId = "UI_Squad_Appearance_TITLE2"
         },
         UI_Squad_Appearance_TITLE3 = {
-          ContentES = "Preajuste de apariencias III",
+          ContentES = "Preajuste III",
           TextMapId = "UI_Squad_Appearance_TITLE3"
         },
         UI_Squad_BattleWheel_TITLE1 = {
@@ -99267,7 +100597,15 @@ Tocado de Lynn
         UI_Squad_SwitchChar_Toast = {
           ContentES = "%s ha sido asignado a una casilla de personaje principal",
           TextMapId = "UI_Squad_SwitchChar_Toast"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Squad_SwitchSigil_Toast",
+    MaxKey = "UI_TEMPLE_DES_80705",
+    Loader = function()
+      return {
         UI_Squad_SwitchSigil_Toast = {
           ContentES = "%s ha sido asignado a%s",
           TextMapId = "UI_Squad_SwitchSigil_Toast"
@@ -99633,7 +100971,7 @@ Tocado de Lynn
           TextMapId = "UI_TELEPORTPOINT_NAME_105701_1"
         },
         UI_TELEPORTPOINT_NAME_106001_1 = {
-          ContentES = "Rotonda de acceso",
+          ContentES = "Cúpula de entrada",
           TextMapId = "UI_TELEPORTPOINT_NAME_106001_1"
         },
         UI_TELEPORTPOINT_NAME_106001_2 = {
@@ -99787,15 +101125,7 @@ Tocado de Lynn
         UI_TEMPLE_80404 = {
           ContentES = "Dispara a los objetos a distancia para ganar puntos.\n(¡Cuidado! ¡No golpees a los rojos!)",
           TextMapId = "UI_TEMPLE_80404"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_80501",
-    MaxKey = "UI_TempleEvent_RewardDes",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_80501 = {
           ContentES = "Derrota a los enemigos dentro del límite de tiempo",
           TextMapId = "UI_TEMPLE_80501"
@@ -100075,7 +101405,15 @@ Tocado de Lynn
         UI_TEMPLE_DES_80705 = {
           ContentES = "Al pisar una baldosa se cambia su color",
           TextMapId = "UI_TEMPLE_DES_80705"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_DES_80706",
+    MaxKey = "UI_Toast_Fishing_Forbid",
+    Loader = function()
+      return {
         UI_TEMPLE_DES_80706 = {
           ContentES = "Asegúrate de que el patrón y el color de las baldosas del suelo coincidan con los de la salida.",
           TextMapId = "UI_TEMPLE_DES_80706"
@@ -100595,15 +101933,7 @@ Tocado de Lynn
         UI_TempleEvent_RewardDes = {
           ContentES = "Recompensas: %s",
           TextMapId = "UI_TempleEvent_RewardDes"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TempleEvent_RewardProgress",
-    MaxKey = "UI_WEAPON_DESC_10499",
-    Loader = function()
-      return {
+        },
         UI_TempleEvent_RewardProgress = {
           ContentES = "Progreso de recompensa",
           TextMapId = "UI_TempleEvent_RewardProgress"
@@ -100701,15 +102031,15 @@ Tocado de Lynn
           TextMapId = "UI_Testing_Watermark"
         },
         UI_TextMap_Cat_Inter01 = {
-          ContentES = "Spiel mit",
+          ContentES = "Jugar con",
           TextMapId = "UI_TextMap_Cat_Inter01"
         },
         UI_TextMap_Cat_Inter02 = {
-          ContentES = "Sprich",
+          ContentES = "Hablar",
           TextMapId = "UI_TextMap_Cat_Inter02"
         },
         UI_TextMap_Talk_levelTwo = {
-          ContentES = "Sprich",
+          ContentES = "Hablar",
           TextMapId = "UI_TextMap_Talk_levelTwo"
         },
         UI_Text_ExitTime = {
@@ -100849,7 +102179,7 @@ Tocado de Lynn
           TextMapId = "UI_Title_Popup_RecordVedio_Cont"
         },
         UI_Title_SaiqiBossWarning = {
-          ContentES = "Warnung",
+          ContentES = "Advertencia",
           TextMapId = "UI_Title_SaiqiBossWarning"
         },
         UI_Title_Third = {
@@ -100883,7 +102213,15 @@ Tocado de Lynn
         UI_Toast_Fishing_Forbid = {
           ContentES = "Pescar actualmente no disponible",
           TextMapId = "UI_Toast_Fishing_Forbid"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Toast_Friend_AddBlcakListSuccess",
+    MaxKey = "UI_WEAPON_NAME_10202",
+    Loader = function()
+      return {
         UI_Toast_Friend_AddBlcakListSuccess = {
           ContentES = "%s ha sido añadido a tu lista de jugadores bloqueados",
           TextMapId = "UI_Toast_Friend_AddBlcakListSuccess"
@@ -101397,15 +102735,7 @@ Tocado de Lynn
         UI_WEAPON_DESC_10499 = {
           ContentES = "Un sable curvo forjado con la tecnología más avanzada de refinamiento, el arma predilecta de los caminantes solitarios.",
           TextMapId = "UI_WEAPON_DESC_10499"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_10501",
-    MaxKey = "UI_WORLDMAP_REGIONNAME_2",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_10501 = {
           ContentES = "Un sueño del pasado que mira hacia el futuro.",
           TextMapId = "UI_WEAPON_DESC_10501"
@@ -101685,7 +103015,15 @@ Tocado de Lynn
         UI_WEAPON_NAME_10202 = {
           ContentES = "Alabarda de Jade Primaveral",
           TextMapId = "UI_WEAPON_NAME_10202"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_10203",
+    MaxKey = "UI_WeaponAccessory_Name_10008",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_10203 = {
           ContentES = "Pecado Imperdonable",
           TextMapId = "UI_WEAPON_NAME_10203"
@@ -102205,15 +103543,7 @@ Tocado de Lynn
         UI_WORLDMAP_REGIONNAME_2 = {
           ContentES = "Huaxu",
           TextMapId = "UI_WORLDMAP_REGIONNAME_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WORLDMAP_REGIONNAME_3",
-    MaxKey = "UI_WeaponSkin_Name_3010505",
-    Loader = function()
-      return {
+        },
         UI_WORLDMAP_REGIONNAME_3 = {
           ContentES = "Iglesia Elysiana",
           TextMapId = "UI_WORLDMAP_REGIONNAME_3"
@@ -102459,7 +103789,7 @@ Tocado de Lynn
           TextMapId = "UI_WeaponAccessory_Desc_20001"
         },
         UI_WeaponAccessory_Desc_20002 = {
-          ContentES = "Para usar con la Cuña Demoníaca del Dragón ascendente.",
+          ContentES = "Se usa con la cuña demoníaca de variante de movimiento: Resonancia perforante.",
           TextMapId = "UI_WeaponAccessory_Desc_20002"
         },
         UI_WeaponAccessory_Name_10001 = {
@@ -102493,7 +103823,15 @@ Tocado de Lynn
         UI_WeaponAccessory_Name_10008 = {
           ContentES = "Lazo: Menta",
           TextMapId = "UI_WeaponAccessory_Name_10008"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponAccessory_Name_10009",
+    MaxKey = "UI_Wiki_MainTab_Civilization",
+    Loader = function()
+      return {
         UI_WeaponAccessory_Name_10009 = {
           ContentES = "Rosa: Rojo óxido",
           TextMapId = "UI_WeaponAccessory_Name_10009"
@@ -103013,15 +104351,7 @@ Tocado de Lynn
         UI_WeaponSkin_Name_3010505 = {
           ContentES = "Grito: Rifle de Asalto",
           TextMapId = "UI_WeaponSkin_Name_3010505"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponSkin_Name_3010601",
-    MaxKey = "VoiceDes071",
-    Loader = function()
-      return {
+        },
         UI_WeaponSkin_Name_3010601 = {
           ContentES = "Amor duro: Hojas Dobles",
           TextMapId = "UI_WeaponSkin_Name_3010601"
@@ -103301,7 +104631,15 @@ Tocado de Lynn
         UI_Wiki_MainTab_Civilization = {
           ContentES = "Civilizaciones",
           TextMapId = "UI_Wiki_MainTab_Civilization"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Wiki_MainTab_Customs",
+    MaxKey = "VoiceDes141",
+    Loader = function()
+      return {
         UI_Wiki_MainTab_Customs = {
           ContentES = "Naturaleza",
           TextMapId = "UI_Wiki_MainTab_Customs"
@@ -103818,15 +105156,7 @@ Tocado de Lynn
         VoiceDes071 = {
           ContentES = "Sobre la batalla",
           TextMapId = "VoiceDes071"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes072",
-    MaxKey = "WikiText_20300107",
-    Loader = function()
-      return {
+        },
         VoiceDes072 = {
           ContentES = "Sobre tu identidad",
           TextMapId = "VoiceDes072"
@@ -104106,7 +105436,15 @@ Tocado de Lynn
         VoiceDes141 = {
           ContentES = "Habilidad de combate: V",
           TextMapId = "VoiceDes141"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes142",
+    MaxKey = "WikiText_30400204",
+    Loader = function()
+      return {
         VoiceDes142 = {
           ContentES = "Sobre las técnicas",
           TextMapId = "VoiceDes142"
@@ -104626,15 +105964,7 @@ Tocado de Lynn
         WikiText_20300107 = {
           ContentES = "Cuando Zhiliu era niña, una vez quedó atrapada en una cueva tras un derrumbe. Como no llegaba ningún rescate, uno de los atrapados se desesperó e intentó matarla para comer. Keming, el padre de Kezhou, lo detuvo. Durante el forcejeo, el agresor se golpeó contra una roca afilada y murió en el acto. Cuando llegó el Magistrado de Yingtian, dictaminó que Keming había quebrantado la Amonestación y lo ejecutó allí mismo. Desde entonces, su familia quedó marcada como la de un criminal y no recibió más que desprecio.\n\nAquella experiencia le mostró a Zhiliu hasta qué punto los Nueve Capítulos de Dafeng habían moldeado la forma de pensar de la gente, y no hizo más que endurecer su determinación de derrocarlos.",
           TextMapId = "WikiText_20300107"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20300108",
-    MaxKey = "WikiText_40801801",
-    Loader = function()
-      return {
+        },
         WikiText_20300108 = {
           ContentES = "Zhiliu nunca quiso convertirse en una diosa. Su verdadero objetivo era liberar al pueblo de Huaxu de su dependencia de los dioses, para que aprendiera de nuevo a afrontar con sus propias manos el Deterioro, la guerra, el sufrimiento y el crimen, y así forjar un nuevo orden para Huaxu.",
           TextMapId = "WikiText_20300108"
@@ -104914,7 +106244,15 @@ Tocado de Lynn
         WikiText_30400204 = {
           ContentES = "Según Zhiliu, la verdadera naturaleza de la Resonancia reside en su poder de guiar y controlar. Fue gracias a esa fuerza que Yang, antepasada de Huaxu, fundó los Nueve Capítulos de Dafeng.",
           TextMapId = "WikiText_30400204"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_30400301",
+    MaxKey = "voice_ch_char_Aote_vo_skill02_r02",
+    Loader = function()
+      return {
         WikiText_30400301 = {
           ContentES = "La ley suprema que rige todo Huaxu.\nTodos dentro de sus fronteras deben obedecer sus amonestaciones, o enfrentar el castigo aplicado por Bi'an o el Magistrado de Yingtian. Más allá de prohibir actos como matar y robar, puede suprimir a los Filthoids dentro de su dominio, privándolos de su ferocidad.\nLa deidad venerada del pueblo, Taihao, es la encarnación viviente de su voluntad.",
           TextMapId = "WikiText_30400301"
@@ -105434,15 +106772,7 @@ Tocado de Lynn
         WikiText_40801801 = {
           ContentES = "Se dice que los Picos Exteriores se ocultan entre montañas veladas por nubes. Son difíciles de encontrar, y precisamente por eso sirven de refugio ideal para quienes se oponen a los Nueve Capítulos de Dafeng. Es la base secreta de los Errantes.",
           TextMapId = "WikiText_40801801"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40801901",
-    MaxKey = "voice_ch_char_Dafu_vo_topic_04_3",
-    Loader = function()
-      return {
+        },
         WikiText_40801901 = {
           ContentES = "Un palacio subterráneo construido por la Secta Jishu durante su antigua época de esplendor. Se dice que en sus profundidades yace una reliquia dejada por un antepasado de la secta, con poder suficiente para cambiar el curso de una batalla. Sin embargo, sus mecanismos defensivos son tan complejos que, hasta hoy, nadie ha logrado llegar al final.",
           TextMapId = "WikiText_40801901"
@@ -105456,7 +106786,7 @@ Tocado de Lynn
           TextMapId = "WikiText_40802101"
         },
         WikiText_40802201 = {
-          ContentES = "La estación ubicada en la ciudad interior de Lago Glacial, cuyo nombre oficial es la Estación de las Cien Flores de Flodia. Le dieron ese nombre porque su inauguración coincidió con el nacimiento de la princesa Flodia, hija mayor del emperador anterior. Actualmente cuenta con seis vías y siete andenes, y es el principal nudo de transporte de la Provincia de Cocytus. Debajo hay una fábrica que sigue creciendo.",
+          ContentES = "La estación ubicada en la ciudad interior de Lago Glacial, cuyo nombre oficial es la Estación de las Cien Flores de Flodia. Le dieron ese nombre porque su inauguración coincidió con el nacimiento de la princesa Flodia, hija mayor del emperador anterior. Actualmente cuenta con siete vías y ocho andenes, y es el principal nudo de transporte de la Provincia de Cocytus. Debajo hay una fábrica que sigue creciendo.",
           TextMapId = "WikiText_40802201"
         },
         WikiText_40900101 = {
@@ -105719,7 +107049,15 @@ Tocado de Lynn
         voice_ch_char_Aote_vo_skill02_r02 = {
           ContentES = "Se acabó el tiempo de prueba, ahora toca seriedad.",
           TextMapId = "voice_ch_char_Aote_vo_skill02_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Aote_vo_skill02_r03",
+    MaxKey = "voice_ch_char_Fuluo_vo_skill01_r02",
+    Loader = function()
+      return {
         voice_ch_char_Aote_vo_skill02_r03 = {
           ContentES = "Aprecia tu último vistazo del mundo.",
           TextMapId = "voice_ch_char_Aote_vo_skill02_r03"
@@ -106239,15 +107577,7 @@ Tocado de Lynn
         voice_ch_char_Dafu_vo_topic_04_3 = {
           ContentES = "Sí, lo es. Pero cuando dejo de pensar en mis piernas cansadas y miro hacia arriba, veo los campos de trigo extendiéndose más allá de la ciudad y las casitas en el horizonte, escucho el crujido de los molinos de viento y el silbido de los pastores. Siempre me hace sentir mucho mejor.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_04_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Dafu_vo_topic_04_4",
-    MaxKey = "voice_ch_char_Kami_vo_topic_03_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Dafu_vo_topic_04_4 = {
           ContentES = "Porque... correr por ese camino me da la sensación de estar protegiendo esas cosas sencillas y preciosas de que sean arrebatadas.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_04_4"
@@ -106527,7 +107857,15 @@ Tocado de Lynn
         voice_ch_char_Fuluo_vo_skill01_r02 = {
           ContentES = "Ya no tengo más dudas.",
           TextMapId = "voice_ch_char_Fuluo_vo_skill01_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Fuluo_vo_skill02_r01",
+    MaxKey = "voice_ch_char_Landi_vo_topic_01_2",
+    Loader = function()
+      return {
         voice_ch_char_Fuluo_vo_skill02_r01 = {
           ContentES = "Por un futuro que nunca he conocido.",
           TextMapId = "voice_ch_char_Fuluo_vo_skill02_r01"
@@ -107047,15 +108385,7 @@ Tocado de Lynn
         voice_ch_char_Kami_vo_topic_03_3 = {
           ContentES = "Dime, ¿no crees que el dinero es muy importante?",
           TextMapId = "voice_ch_char_Kami_vo_topic_03_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kami_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Maer_vo_victory",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kami_vo_topic_04_1 = {
           ContentES = "Lamentablemente nada, llevo tantos años en Lago Glacial y aun así fue la primera vez que vi a esa persona. Iba completamente envuelta en una capa y hablaba usando un modulador de voz. De dónde venía, si era hombre o mujer, incluso su edad… no tengo ni idea.",
           TextMapId = "voice_ch_char_Kami_vo_topic_04_1"
@@ -107335,7 +108665,15 @@ Tocado de Lynn
         voice_ch_char_Landi_vo_topic_01_2 = {
           ContentES = "¡No, no, nada de eso! ¡E-Ellas son absolutamente encantadoras, inteligentes, amables, dulces, con mucho encanto, hermosas y casi perfectas! Sin embargo, un poco más de decoro sería bueno...",
           TextMapId = "voice_ch_char_Landi_vo_topic_01_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Landi_vo_topic_02_1",
+    MaxKey = "voice_ch_char_Nifu_vo_topic_04_3",
+    Loader = function()
+      return {
         voice_ch_char_Landi_vo_topic_02_1 = {
           ContentES = "¡Anda, tú eres de los que no saben apreciar un buen descanso! Escucha bien: las camas son refugios, donde el alma encuentra la paz; los tejados son santuarios, donde desaparecen las preocupaciones. En los jardines por la tarde, la luz del sol brilla, la siesta es una melodía de los dulces sueños...",
           TextMapId = "voice_ch_char_Landi_vo_topic_02_1"
@@ -107855,15 +109193,7 @@ Tocado de Lynn
         voice_ch_char_Maer_vo_victory = {
           ContentES = "¡Qué gran botín hoy!",
           TextMapId = "voice_ch_char_Maer_vo_victory"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Maer_vo_welcome",
-    MaxKey = "voice_ch_char_Songlu_vo_revive",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Maer_vo_welcome = {
           ContentES = "¡He quitado la nieve de la entrada de tu casa de camino aquí! ¿Te ha impresionado, verdad? Seguramente estás pensando en invitarme a una taza de chocolate~",
           TextMapId = "voice_ch_char_Maer_vo_welcome"
@@ -108143,7 +109473,15 @@ Tocado de Lynn
         voice_ch_char_Nifu_vo_topic_04_3 = {
           ContentES = "En los anales de la historia y los relatos de héroes, suelen ser retratados como el Sabio que desveló el velo de ignorancia de los dioses, y la Heroína que dio su vida por la causa del Sabio...",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_topic_04_4",
+    MaxKey = "voice_ch_char_Suyi_vo_topic_04_1",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_topic_04_4 = {
           ContentES = "Pero en mis recuerdos, simplemente eran Lexis y Erika.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_4"
@@ -108663,15 +110001,7 @@ Tocado de Lynn
         voice_ch_char_Songlu_vo_revive = {
           ContentES = "La comida de emergencia es asquerosa... Bueno, al menos me llena el estómago.",
           TextMapId = "voice_ch_char_Songlu_vo_revive"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_skill01_r01",
-    MaxKey = "voice_ch_char_Xier_vo_topic_04_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_skill01_r01 = {
           ContentES = "¡Te voy a hacer volar!",
           TextMapId = "voice_ch_char_Songlu_vo_skill01_r01"
@@ -108951,7 +110281,15 @@ Tocado de Lynn
         voice_ch_char_Suyi_vo_topic_04_1 = {
           ContentES = "¿Picos Exteriores…? Mmm, buena pregunta.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Yuming_vo_topic_01_1",
+    Loader = function()
+      return {
         voice_ch_char_Suyi_vo_topic_04_2 = {
           ContentES = "Nos juntamos por circunstancias similares y tenemos un mismo objetivo. Nos entendemos y confiamos los unos en los otros. En la batalla, nos cubrimos la espalda, y en los momentos de cansancio, nos apoyamos… Es un lugar verdaderamente hermoso.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_2"
@@ -109471,15 +110809,7 @@ Tocado de Lynn
         voice_ch_char_Xier_vo_topic_04_3 = {
           ContentES = "No te preocupes, confía en mí, no dejaré que eso ocurra.",
           TextMapId = "voice_ch_char_Xier_vo_topic_04_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xier_vo_topic_05_1",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xier_vo_topic_05_1 = {
           ContentES = "¿Eh? ¿D-dónde? Según su calendario, no debería estar aquí hoy...",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_1"
@@ -109759,7 +111089,15 @@ Tocado de Lynn
         voice_ch_char_Yuming_vo_topic_01_1 = {
           ContentES = "... Ve a leer un tomo o busca otra compañía para tales discursos triviales. Quizás los Tejestrellas que venden sus artesanías puedan satisfacer tu curiosidad.",
           TextMapId = "voice_ch_char_Yuming_vo_topic_01_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yuming_vo_topic_01_2",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yuming_vo_topic_01_2 = {
           ContentES = "A menudo estoy absorto en mis pensamientos, por eso mi perspectiva suele ser bastante subjetiva. Si realmente sientes curiosidad, una visita a ese lugar te resultará mucho más reveladora que cualquier relato de segunda mano.",
           TextMapId = "voice_ch_char_Yuming_vo_topic_01_2"

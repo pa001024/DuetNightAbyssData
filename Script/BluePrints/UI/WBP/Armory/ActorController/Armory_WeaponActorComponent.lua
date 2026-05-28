@@ -205,27 +205,28 @@ end
 function M:DestroyPlayerWeapon(PlayCharacter, WeaponTag)
   WeaponTag = WeaponTag or "Melee"
   PlayCharacter = PlayCharacter or self.ArmoryPlayer
-  local PlayerWeapon = PlayCharacter[WeaponTag .. "Weapon"]
-  if PlayerWeapon then
-    PlayCharacter.Weapons:Remove(PlayerWeapon.WeaponId)
-    PlayerWeapon:Destroy()
-  end
-  PlayCharacter[WeaponTag .. "Weapon"] = nil
-end
-
-function M:DestroyAllPlayerWeapons()
-  local function DestroyAllPlayerWeaponsInternal(PlayCharacter)
+  
+  local function DestroyPlayerWeaponInternal(PlayCharacter)
     if nil == PlayCharacter then
       return
     end
-    self:DestroyPlayerWeapon(PlayCharacter, "Melee")
-    self:DestroyPlayerWeapon(PlayCharacter, "Ranged")
+    local PlayerWeapon = PlayCharacter[WeaponTag .. "Weapon"]
+    if PlayerWeapon then
+      PlayCharacter.Weapons:Remove(PlayerWeapon.WeaponId)
+      PlayerWeapon:Destroy()
+    end
+    PlayCharacter[WeaponTag .. "Weapon"] = nil
   end
   
-  local PlayCharacter = self:GetPlayerActor()
-  DestroyAllPlayerWeaponsInternal(PlayCharacter)
+  DestroyPlayerWeaponInternal(PlayCharacter)
   local PlayerReflection = self:GetReflectionActor(PlayCharacter)
-  DestroyAllPlayerWeaponsInternal(PlayerReflection)
+  DestroyPlayerWeaponInternal(PlayerReflection)
+end
+
+function M:DestroyAllPlayerWeapons()
+  local PlayCharacter = self:GetPlayerActor()
+  self:DestroyPlayerMeleeWeapon(PlayCharacter)
+  self:DestroyPlayerRangedWeapon(PlayCharacter)
 end
 
 function M:AddPlayerUltraWeapons(Player)

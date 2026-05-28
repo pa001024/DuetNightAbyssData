@@ -35406,6 +35406,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Atrás. Aquí no entra nadie.",
           DialogueId = 10042901,
           GUID = "19242F72",
+          NextDialogue = 10042902,
           RelatedWikiId = {
             [1] = 408022,
             [2] = 101004,
@@ -35420,6 +35421,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Somos Phoxcazadores. El jefe de estación nos ha enviado para ayudar con la investigación.",
           DialogueId = 10042902,
           GUID = "19242F9C",
+          NextDialogue = 10042903,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100429/19242F9C"
         },
@@ -35428,6 +35430,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Ah. Así que son los Phoxcazadores que mencionó el jefe. Los sospechosos. Si es orden suya, adelante.",
           DialogueId = 10042903,
           GUID = "19242FC6",
+          NextDialogue = 10042904,
           SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FC6"
         },
@@ -35436,7 +35439,8 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Y cuiden dónde pisan. No vayan a romper nada más.",
           DialogueId = 10042904,
           GUID = "19242FF0",
-          SpeakNpcId = 100415,
+          NextDialogue = 10042905,
+          SpeakNpcId = 100422,
           VoiceName = "voice/$Locale$/story/1004/100429/19242FF0"
         },
         [10042905] = {
@@ -37412,6 +37416,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10044336] = {
           Content = "没错。知道炸弹是在仓库组装的人是极少数，写下这封信的人根本不应该知道这种事情。",
+          ContentES = "Exacto. Muy poca gente sabe que la bomba se montó en el almacén. Quien escribió esta carta no debería conocer ese detalle.",
           DialogueId = 10044336,
           GUID = "19251AE0",
           VoiceName = "voice/$Locale$/story/1004/100443/19251AE0"
@@ -43121,6 +43126,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "…",
           DialogueId = 10048340,
           GUID = "1927ABC8",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927ABC8"
         },
@@ -43137,6 +43143,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "¡Cesen el fuego! ¡Verifiquen si la princesa Flodia está a bordo de La Grajilla!",
           DialogueId = 10048342,
           GUID = "1927AC1C",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC1C"
         },
@@ -43145,6 +43152,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Por ahora están a salvo. Nunca había visto a nobles y gente común mantenerse unidos así. No pensé que nadie, salvo alguien de sangre real, pudiera lograr algo así.",
           DialogueId = 10048343,
           GUID = "1927AC46",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_FeitingZhihui",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AC46"
         },
@@ -43343,6 +43351,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 403014
           },
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C704"
         },
@@ -43359,6 +43368,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Proyectil cargado. Calculando solución de tiro.",
           DialogueId = 10048508,
           GUID = "1927C758",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C758"
         },
@@ -43367,6 +43377,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Solución confirmada. Preparando el disparo.",
           DialogueId = 10048509,
           GUID = "1927C782",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C782"
         },
@@ -43383,6 +43394,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Tres…",
           DialogueId = 10048511,
           GUID = "1927C7D6",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C7D6"
         },
@@ -43391,6 +43403,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Dos…",
           DialogueId = 10048512,
           GUID = "1927C800",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C800"
         },
@@ -43399,6 +43412,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Uno…",
           DialogueId = 10048513,
           GUID = "1927C82A",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100485/1927C82A"
         },
@@ -43809,6 +43823,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "Última hora. Hoy, Los Abandonados se apoderaron del Aurora Express en la zona sur de la región de Cocytus. Un aerobarco imperial acudió para intervenir. Los secuestradores respondieron disparando el cañón montado en el tren.",
           DialogueId = 10049007,
           GUID = "19281936",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281936"
         },
@@ -43817,6 +43832,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentES = "El aerobarco fue alcanzado y explotó cerca de un enorme Árbol Celestial, que terminó ardiendo. Este es el segundo incendio de un Árbol Celestial del que se informa este año. La 6.ª Legión ha enviado refuerzos. Todos los pasajeros del Aurora Express siguen desaparecidos. Se desconoce en qué estado se encuentran.",
           DialogueId = 10049008,
           GUID = "19281960",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Shouyinji",
           VoiceName = "voice/$Locale$/story/1004/100490/19281960"
         },
@@ -44031,6 +44047,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "（那还是我自己来吧，只要呼喊神的名字的话，他们总得有点什么回应才是，否则这片雾海也太过质朴了。）",
           ContentES = "(Da igual. Lo haré yo mismo. Si llamo a la diosa por su nombre, alguien tendrá que responder… porque si no, este Mar Nebuloso está demasiado vacío).",
           DialogueId = 10049107,
+          DisableMouth = 1,
           GUID = "1928299E",
           SnapShot = "HEART",
           SpeakNpcId = 1001,
@@ -196814,25 +196831,25 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105841] = {
           Content = "使用动作“技能五子棋”，参加庆典",
-          ContentES = "Usa la postura “Gomoku de habilidades” para participar en la celebración",
+          ContentES = "Usa la postura \"Gomoku de habilidades\" para participar en la celebración",
           DialogueId = 51105841,
           GUID = "7FF0280A"
         },
         [51105842] = {
           Content = "使用动作“请求”，参加庆典",
-          ContentES = "Usa la postura “Súplica” para participar en la celebración",
+          ContentES = "Usa la postura \"Súplica\" para participar en la celebración",
           DialogueId = 51105842,
           GUID = "7FF02834"
         },
         [51105843] = {
           Content = "使用动作“休息一式”，参加庆典",
-          ContentES = "Usa la postura “Descanso I” para participar en la celebración",
+          ContentES = "Usa la postura \"Descanso I\" para participar en la celebración",
           DialogueId = 51105843,
           GUID = "7FF0285E"
         },
         [51105844] = {
           Content = "使用动作“休息二式”，参加庆典",
-          ContentES = "Usa la postura “Descanso II” para participar en la celebración",
+          ContentES = "Usa la postura \"Descanso II\" para participar en la celebración",
           DialogueId = 51105844,
           GUID = "7FF02888"
         },
@@ -251049,7 +251066,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51202231] = {
           Content = "费利克斯……不错的名字，你去买票的时候，记得向车站里的检举窗口投递一封信，这点小事不麻烦吧？",
-          ContentES = "Felix, ¿verdad? Mientras arreglas lo de los boletos, Leon, asegúrate también de dejar una queja en la oficina de la estación. No debería ser tan difícil.",
+          ContentES = "Felix, ¿verdad? Mientras arreglas lo de los boletos, Somi, asegúrate también de dejar una queja en la oficina de la estación. No debería ser tan difícil.",
           DialogueId = 51202231,
           GUID = "802DEE06",
           NextDialogue = 51202232,
@@ -258662,6 +258679,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149002] = {
           Content = "可恶！怎么是你，再再再见。",
+          ContentES = "¡Argh! ¿Otra vez tú? B-B-Buen día, adiós…",
           DialogueId = 60149002,
           Duration = 3.8,
           GUID = "9693A3A4",
@@ -258670,6 +258688,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149003] = {
           Content = "留留留下买路财！啧，怎么今天一上来就碰到硬茬子，告辞。",
+          ContentES = "¡T-T-Tu dinero o tu vida…! ¡Vaya! ¿Cómo se supone que voy a atracar un arsenal ambulante? ¡Nos vemos!",
           DialogueId = 60149003,
           Duration = 6.7,
           GUID = "9693A3CE",
@@ -258678,6 +258697,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149004] = {
           Content = "除了打劫，逃跑我也是专业的！",
+          ContentES = "¿Sabes qué? ¡Yo también soy experta en escaparme!",
           DialogueId = 60149004,
           Duration = 3.5,
           GUID = "9693A3F8",
@@ -258686,6 +258706,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149005] = {
           Content = "舍不得孩子套不着狼，这些都给你，别再追啦！",
+          ContentES = "¡Robaré, huiré… y volveré a robar mañana! ¡Así que toma todo esto y deja de perseguirme!",
           DialogueId = 60149005,
           Duration = 5.1,
           GUID = "9693A422",
@@ -258694,6 +258715,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149006] = {
           Content = "咋还在追我啊，这个给你行了吧。",
+          ContentES = "Eh, ¿ya dejas de perseguirme? ¡Toma esto y déjalo correr!",
           DialogueId = 60149006,
           Duration = 3.5,
           GUID = "9693A44C",
@@ -258702,6 +258724,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149007] = {
           Content = "你使那么大劲干啥呢！",
+          ContentES = "¡Ay! ¡Eso duele!",
           DialogueId = 60149007,
           Duration = 2.5,
           GUID = "9693A476",
@@ -258710,6 +258733,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149008] = {
           Content = "可恶，以后走夜路小心点！",
+          ContentES = "Pff, ¡esto no ha terminado! ¡Cuidado por la noche!",
           DialogueId = 60149008,
           Duration = 3.2,
           GUID = "9693A4A0",
@@ -258718,6 +258742,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149009] = {
           Content = "啊啊啊啊啊，我要生气了！",
+          ContentES = "¡RAAAARGH!! ¡Ahora estoy enfadada!",
           DialogueId = 60149009,
           Duration = 3.4,
           GUID = "9693A4CA",
@@ -258726,6 +258751,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149010] = {
           Content = "笨笨笨蛋，追不上我吧，桀桀桀桀桀桀~",
+          ContentES = "¡Tú, tu-tu-tontorrón, eres demasiado tonto para atraparme! ¡HYA-HYA-HYA!",
           DialogueId = 60149010,
           Duration = 6,
           GUID = "9693A4F4",
@@ -258734,6 +258760,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149011] = {
           Content = "这次是我大意了，下次我一定要把你打得抱头大哭，呜……",
+          ContentES = "¡Lo he estropeado todo! La próxima vez te las verás conmigo… ya verás. Snif…",
           DialogueId = 60149011,
           Duration = 10.4,
           GUID = "9693A51E",
@@ -258742,6 +258769,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149012] = {
           Content = "东西南北四条街，打听打听谁是爹，道上谁不知道我打劫皎皎的名号！",
+          ContentES = "¡Norte, sur, este y oeste! ¡Soy la jefa del saqueo! ¡Pregunta por ahí y lo sabrás, dale tu dinero a esta Luno!",
           DialogueId = 60149012,
           Duration = 6.9,
           GUID = "9693A548",
@@ -258750,6 +258778,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149013] = {
           Content = "跟我斗，你还是太年轻了呀~",
+          ContentES = "¡Ja! ¡{性别:novato|novata}! ¡Te están haciendo trampa!",
           DialogueId = 60149013,
           Duration = 5.7,
           GUID = "9693A572",
@@ -258758,6 +258787,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149014] = {
           Content = "哼，我打打打劫皎皎可不是好惹的。",
+          ContentES = "Hmpf, ¡Lulu, la saqueadora de botín no es alguien con quien te puedas meter!",
           DialogueId = 60149014,
           Duration = 4.8,
           GUID = "9693A59C",
@@ -258766,6 +258796,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60149015] = {
           Content = "呼，呼……你咋还不累呢，吃啥玩意长大的啊。",
+          ContentES = "Juff… juff… ¿nunca te cansas? ¿Qué te han dado de comer?",
           DialogueId = 60149015,
           Duration = 8.8,
           GUID = "9693A5C6",
@@ -258864,6 +258895,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160006] = {
           Content = "来点惊喜，笑一笑。",
+          ContentES = "Sorpresa, y sonríe.",
           DialogueId = 60160006,
           Duration = 2.4,
           GUID = "969AB0FC",
@@ -258872,6 +258904,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160007] = {
           Content = "极光号将会以最快的速度抵达远方——",
+          ContentES = "El Aurora se dirige a la lejanía a máxima velocidad.",
           DialogueId = 60160007,
           Duration = 3.5,
           GUID = "969AB126",
@@ -258880,6 +258913,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160008] = {
           Content = "听说你们一直在找炸弹？",
+          ContentES = "He oído que están buscando las bombas...",
           DialogueId = 60160008,
           Duration = 2.3,
           GUID = "969AB150",
@@ -258888,6 +258922,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60160009] = {
           Content = "别躲嘛，别害羞。",
+          ContentES = "Vamos, no seas tan tímido.",
           DialogueId = 60160009,
           Duration = 3.4,
           GUID = "969AB17A",
@@ -259499,6 +259534,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60800101] = {
           Content = "没有钥匙……在附近找找看吧。",
+          ContentES = "No hay llave... hay que buscar por los alrededores.",
           DialogueId = 60800101,
           Duration = 5,
           GUID = "9834E892",

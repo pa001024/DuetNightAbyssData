@@ -135,8 +135,15 @@ function M:BindPresident(PlayerInfo)
   self.Head_Anchor_President.OnMenuOpenChanged:Add(self, self.PresidentHeadMenuOpenChanged)
 end
 
-function M:PresidentHeadMenuOpenChanged()
+function M:PresidentHeadMenuOpenChanged(bIsOpen)
   self.Head_President:SetFocus()
+  if self.MainView == "GuildMain" then
+    if bIsOpen then
+      self.ParentWidget:SetGuildJoinGamePadIconVisible(false)
+    else
+      self.ParentWidget:SetGuildJoinGamePadIconVisible(false, false, true)
+    end
+  end
 end
 
 function M:BindVice(PlayerInfo)
@@ -144,8 +151,15 @@ function M:BindVice(PlayerInfo)
   self.Head_Anchor_Vice.OnMenuOpenChanged:Add(self, self.ViceHeadMenuOpenChanged)
 end
 
-function M:ViceHeadMenuOpenChanged()
+function M:ViceHeadMenuOpenChanged(bIsOpen)
   self.Head_Vice:SetFocus()
+  if self.MainView == "GuildMain" then
+    if bIsOpen then
+      self.ParentWidget:SetGuildJoinGamePadIconVisible(false)
+    else
+      self.ParentWidget:SetGuildJoinGamePadIconVisible(false, false, true)
+    end
+  end
 end
 
 function M:SetPresidentInfo(OtherUid, HeadIcon, TextName, TextNumLevel, BindFunc)
@@ -235,6 +249,7 @@ function M:RefreshDeviceUI()
 end
 
 function M:ReportLongClick()
+  self.Controller_Report:OnShortCutReleased()
   self:Report()
   self.ReportLongClickState = true
 end
@@ -296,7 +311,7 @@ function M:OnContentKeyDown(MyGeometry, InKeyEvent)
         }
       }
       self.ParentWidget:UpdateComTab(BottomKeyInfo)
-      self.ParentWidget:SetGuildJoinGamePadIconVisible(false)
+      self.ParentWidget:SetGuildJoinGamePadIconVisible(false, nil, true)
       IsHandled = true
     elseif self.MainView == "CheckGuildPage" then
       self:HideAllGamePadIcon()
@@ -321,7 +336,7 @@ function M:OnContentKeyUp(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsHandled = false
-  if self.MainView == "GuildMain" and InKeyName == UIConst.GamePadKey.SpecialRight then
+  if InKeyName == UIConst.GamePadKey.SpecialRight then
     self.Controller_Report:OnShortCutReleased()
     IsHandled = self.ReportLongClickState
   end

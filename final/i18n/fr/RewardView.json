@@ -27801,14 +27801,20 @@
       {
         "id": 112,
         "t": "Resource",
-        "c": 10,
+        "c": 30,
         "n": "Éclat astral"
       },
       {
         "id": 1009,
         "t": "Resource",
-        "c": 1,
+        "c": 2,
         "n": "Fil stellaire"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 300,
+        "n": "Phoxène"
       },
       {
         "id": 211,

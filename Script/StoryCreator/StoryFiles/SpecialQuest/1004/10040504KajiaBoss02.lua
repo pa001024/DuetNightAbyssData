@@ -180,18 +180,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177772053087715887757",
-            startPort = "Out",
-            endQuest = "177969861933443552924",
-            endPort = "In"
-          },
-          {
-            startQuest = "177969861933443552924",
-            startPort = "Out",
-            endQuest = "177969863473044520369",
-            endPort = "In"
-          },
-          {
             startQuest = "177772053087715887760",
             startPort = "Out",
             endQuest = "177969865796344520572",
@@ -201,6 +189,12 @@ return {
             startQuest = "177772053087715887754",
             startPort = "QuestStart",
             endQuest = "177970738134071155648",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772053087715887757",
+            startPort = "Out",
+            endQuest = "177969863473044520369",
             endPort = "In"
           }
         },
@@ -482,17 +476,6 @@ return {
               RelatedRegionId = {},
               ClientRelatedRegionId = {106101},
               bStoreToServer = false
-            }
-          },
-          ["177969861933443552924"] = {
-            key = "177969861933443552924",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 1182.7142857142853, y = 110.47058823529403},
-            propsData = {
-              SoundStateType = 3,
-              SoundPriority = 0,
-              SoundType = 0
             }
           },
           ["177969863473044520369"] = {

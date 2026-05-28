@@ -1,4 +1,5 @@
 local TimeUtils = require("Utils.TimeUtils")
+local EMCache = require("EMCache.EMCache")
 local ReddotTreeNode_ModArchive = Class("BluePrints.UI.Reddot.ReddotTreeNode")
 
 function ReddotTreeNode_ModArchive:OnInitNodeCache(NodeCache)
@@ -23,26 +24,17 @@ function ReddotTreeNode_ModArchive:OnInitNodeCache(NodeCache)
         local ArchiveTabId = v.TabId
         for _, ArchiveInfo in pairs(DataMgr.ModGuideBookArchive) do
           if ArchiveInfo.TabId == ArchiveTabId then
-            local bCanGet = true
-            for __, ModId in ipairs(ArchiveInfo.ModList) do
-              if not Avatar.HoldMods[ModId] or Avatar.HoldModRewards[ArchiveInfo.ArchiveId] then
-                bCanGet = false
-                break
-              end
-            end
-            if bCanGet then
-              NodeCache.Detail.RedNum = NodeCache.Detail.RedNum + 1
-            end
             if not NodeCache.Detail.States then
               NodeCache.Detail.States = {}
             end
-            local Condition = ArchiveInfo.ShowCondition
-            if Condition and ConditionUtils.CheckCondition(Avatar, Condition) then
-              self:CheckFirstNew(ArchiveInfo, NodeCache)
-            end
-            Condition = ArchiveInfo.UnlockCondition
-            if Condition and ConditionUtils.CheckCondition(Avatar, Condition) then
-              self:CheckFirstNew(ArchiveInfo, NodeCache)
+            local ModBookModsViewState = EMCache:Get("ModBookModsViewState", true) or {}
+            for __, ModId in ipairs(ArchiveInfo.ModList) do
+              if Avatar.HoldMods[ModId] then
+                local ViewState = ModBookModsViewState[ArchiveInfo.ArchiveId]
+                if ViewState and true == ViewState[ModId] then
+                  NodeCache.Detail.States[ModId] = true
+                end
+              end
             end
           end
         end
@@ -85,16 +77,6 @@ function ReddotTreeNode_ModArchive:RefreshInfo()
     self.Count = self.Cache.Detail.RedNum + self.Cache.Detail.NewNum
   end
   self:UpdateRdType()
-end
-
-function ReddotTreeNode_ModArchive:CheckFirstNew(ArchiveInfo, NodeCache)
-  local NewNum = #ArchiveInfo.ModList
-  for i = 1, NewNum do
-    local ModId = ArchiveInfo.ModList[i]
-    if NodeCache.Detail.States[ModId] == nil then
-      NodeCache.Detail.States[ModId] = true
-    end
-  end
 end
 
 return ReddotTreeNode_ModArchive

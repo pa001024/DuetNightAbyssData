@@ -931,7 +931,7 @@ return {
             pos = {x = 1417.3706293706293, y = 295.76223776223793},
             propsData = {
               IsNpcNode = true,
-              NpcNodeInteractiveName = "",
+              NpcNodeInteractiveName = "UI_CMName_Name_TuoLan01",
               NpcId = 700398,
               GuideUIEnable = true,
               GuideType = "N",
@@ -1046,7 +1046,7 @@ return {
             pos = {x = 2102.4680056785323, y = 321.24512329775524},
             propsData = {
               IsNpcNode = true,
-              NpcNodeInteractiveName = "",
+              NpcNodeInteractiveName = "UI_CMName_Name_TuoLan01",
               NpcId = 700398,
               GuideUIEnable = true,
               GuideType = "N",
@@ -2067,7 +2067,11 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {322480135, 322480136}
+              StaticCreatorIdList = {
+                322480135,
+                322480136,
+                242480426
+              }
             }
           },
           ["17752186349403564262"] = {
@@ -2139,17 +2143,15 @@ return {
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
-              NpcId = 700452,
+              NpcId = 700453,
               GuideUIEnable = true,
               GuideType = "N",
               GuidePointName = "Npc_Bai_322480136",
               DelayShowGuideTime = 0,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = false,
-              AllowSurroundDialogue = false,
               FirstDialogueId = 51200622,
               FlowAssetPath = "",
-              TalkType = "FreeSimple",
+              TalkType = "FixSimple",
+              TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "BlendIn",
@@ -2175,19 +2177,15 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Npc",
-                  TalkActorId = 700452,
-                  TalkActorVisible = true
-                }
-              },
+              TalkActors = {},
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -2215,7 +2213,11 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = true,
               NewTargetPointName = "",
-              StaticCreatorIdList = {322480135, 322480136}
+              StaticCreatorIdList = {
+                322480135,
+                322480136,
+                242480426
+              }
             }
           },
           ["17758088994484459"] = {
@@ -3519,7 +3521,8 @@ return {
               StaticCreatorIdList = {
                 322480141,
                 322480135,
-                322480136
+                322480136,
+                242480426
               }
             }
           },
@@ -3653,17 +3656,15 @@ return {
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
-              NpcId = 700452,
+              NpcId = 700453,
               GuideUIEnable = true,
               GuideType = "N",
               GuidePointName = "Npc_Bai_322480136",
               DelayShowGuideTime = 0,
-              IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = false,
-              AllowSurroundDialogue = false,
               FirstDialogueId = 51200707,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "QuestImpression",
+              TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "BlendIn",
@@ -3690,19 +3691,15 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {
-                {
-                  TalkActorType = "Npc",
-                  TalkActorId = 700452,
-                  TalkActorVisible = true
-                }
-              },
+              TalkActors = {},
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
-              PlayerSwitchEmoIdle = true,
+              bNpcActionKeepIn = false,
+              bNpcActionKeepOut = false,
+              bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
             }
@@ -3760,7 +3757,8 @@ return {
                 322480141,
                 322480135,
                 322480136,
-                322480134
+                322480134,
+                242480426
               }
             }
           },

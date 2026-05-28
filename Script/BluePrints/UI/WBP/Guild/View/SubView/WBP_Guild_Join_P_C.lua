@@ -13,6 +13,7 @@ function M:Construct()
 end
 
 function M:SetData(AllGuildList)
+  self.GuildList.ParentWidget = self.ParentWidget
   self.GuildList:SetData(AllGuildList, {
     Func = self.SetGuildInfo,
     Obj = self

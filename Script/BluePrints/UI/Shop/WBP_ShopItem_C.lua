@@ -424,7 +424,7 @@ function M:OnBtnPressed()
   end
   self.StartPressTime = os.clock()
   self.Item_Shop:PlayAnimation(self.Item_Shop.Press)
-  self:DecreaseReddotCommon()
+  self:DecreaseReddotCommon(self.ShopItemData)
 end
 
 function M:OnBtnReleased()

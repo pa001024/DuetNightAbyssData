@@ -19212,7 +19212,7 @@
       },
       {
         "id": 10040303,
-        "name": "Tirer une conclusion",
+        "name": "Présenter les conclusions",
         "desc": "Allez parler avec les soldats."
       },
       {
@@ -19274,7 +19274,7 @@
               },
               {
                 "id": 10043508,
-                "content": "Bien sûr. Disons simplement qu’en restant longtemps aux côtés de Madame, j’ai acquis quelques connaissances militaires. Quoi qu’il en soit... nous pouvons tirer une conclusion.",
+                "content": "Bien sûr. Disons simplement qu’en restant longtemps aux côtés de Mademoiselle, j’ai acquis quelques connaissances militaires. Quoi qu’il en soit... nous pouvons tirer une conclusion.",
                 "voice": "story/1004/100435/19249308",
                 "npc": 100403
               },
@@ -19348,8 +19348,8 @@
       },
       {
         "id": 10040307,
-        "name": "Enquêter sur la réputation du responsable de l’entrepôt",
-        "desc": "Afin d’identifier le suspect parmi les trente-deux personnes ayant accédé à l’entrepôt, une annonce a été diffusée dans toute la gare, accusant le responsable de l’entrepôt d’être le coupable. Le véritable criminel cherchera probablement à détourner les soupçons en l’accablant davantage.\nEn attendant que quelqu’un morde à l’hameçon, enquêtez sur la réputation du responsable."
+        "name": "Attendre l’annonce diffusée dans la gare",
+        "desc": "Après en avoir discuté, vous avez décidé de désigner un faux coupable afin de détourner l’attention du véritable criminel. Et naturellement, le choix s’est porté sur le responsable de l’entrepôt.Il ne reste plus qu’à attendre que la gare diffuse votre faux rapport d’enquête."
       },
       {
         "id": 10040308,
@@ -19542,7 +19542,7 @@
             "dialogues": [
               {
                 "id": 100499503,
-                "content": "唉……爸爸，你为什么要这么做……",
+                "content": "Papa... pourquoi tu as fait ça... ?",
                 "npc": 100415
               }
             ]
@@ -19890,12 +19890,12 @@
       },
       {
         "id": 10040413,
-        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "name": "Progresser vers l’avant du train",
         "desc": "Afin d’aider Stéphane, vous commencez à progresser vers l’avant du train."
       },
       {
         "id": 10040414,
-        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "name": "Progresser vers l’avant du train",
         "desc": "Afin d’aider Stéphane, vous commencez à progresser vers l’avant du train."
       },
       {
@@ -19910,7 +19910,7 @@
       },
       {
         "id": 10040417,
-        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "name": "Progresser vers l’avant du train",
         "desc": "Pour découvrir le véritable objectif des Déchus, continuez d’avancer jusqu’aux wagons réservés à la noblesse."
       },
       {
@@ -19920,7 +19920,7 @@
       },
       {
         "id": 10040419,
-        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "name": "Progresser vers l’avant du train",
         "desc": "Pour découvrir le véritable objectif des Déchus, continuez d’avancer jusqu’aux wagons réservés à la noblesse."
       },
       {
@@ -19935,7 +19935,7 @@
       },
       {
         "id": 10040422,
-        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "name": "Progresser vers l’avant du train",
         "desc": "Même si le plan d’évasion est sur le point d’être lancé, Mademoiselle Flora reste concentrée sur sa peinture. Préparez-lui du thé et quelques pâtisseries.",
         "nodes": [
           {
@@ -20928,7 +20928,7 @@
               },
               {
                 "id": 10049109,
-                "content": "<I>Ah ! C’est </><I spec=\"H\">Embla</><I>.</>",
+                "content": "<I>Ah ! C’est </> <I spec=\"H\">Embla</> <I>.</>",
                 "voice": "story/1004/100491/192829F2",
                 "npc": 1001
               },
@@ -92129,7 +92129,7 @@
             "srId": 106001,
             "pos": [
               -32980,
-              -6530
+              -6525
             ],
             "dialogues": [
               {
@@ -92276,7 +92276,7 @@
               },
               {
                 "id": 51200640,
-                "content": "En attendant, vous pouvez déjà choisir un emplacement. Le champ de vision n’est pas très dégagé ici, alors il faut bien soigner son angle.",
+                "content": "En attendant, vous pouvez déjà choisir un emplacement. Le champ de vision n’est pas très dégagé ici, alors il faut bien soigner son angle. ",
                 "npc": 700398,
                 "next": 51200641
               },
@@ -92808,7 +92808,7 @@
             "srId": 106001,
             "pos": [
               -32980,
-              -6530
+              -6525
             ],
             "dialogues": [
               {

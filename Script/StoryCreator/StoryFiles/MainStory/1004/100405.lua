@@ -793,7 +793,7 @@ return {
               ModeType = 1,
               Id = 210101,
               StartIndex = 1,
-              LoadingId = 0,
+              LoadingId = 10610102,
               IsWhite = false
             }
           },
@@ -808,7 +808,7 @@ return {
             key = "17739992114523939815",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1320, y = 364},
+            pos = {x = 1318.3783783783783, y = 365.6216216216216},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1166,12 +1166,6 @@ return {
             endPort = "Input"
           },
           {
-            startQuest = "17772722224284168078",
-            startPort = "Out",
-            endQuest = "177969904019450811865",
-            endPort = "In"
-          },
-          {
             startQuest = "17739991462953938790",
             startPort = "Out",
             endQuest = "177969904848350812026",
@@ -1182,6 +1176,12 @@ return {
             startPort = "Out",
             endQuest = "17739991462953938788",
             endPort = "Success"
+          },
+          {
+            startQuest = "17739991462953938787",
+            startPort = "QuestStart",
+            endQuest = "177969904019450811865",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1189,7 +1189,7 @@ return {
             key = "17739991462953938787",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 806, y = 317},
             propsData = {ModeType = 0}
           },
           ["17739991462953938788"] = {
@@ -1293,7 +1293,7 @@ return {
             key = "177969904019450811865",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1414, y = 554},
+            pos = {x = 1236, y = 504},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -1359,12 +1359,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "177772100396130765168",
-            startPort = "QuestStart",
-            endQuest = "177772112498630766226",
-            endPort = "In"
-          },
-          {
             startQuest = "177772112498630766226",
             startPort = "Success",
             endQuest = "177772100396130765171",
@@ -1393,6 +1387,18 @@ return {
             startPort = "Fail",
             endQuest = "177875894688342880295",
             endPort = "In"
+          },
+          {
+            startQuest = "177772100396130765168",
+            startPort = "QuestStart",
+            endQuest = "17797874344247271808",
+            endPort = "In"
+          },
+          {
+            startQuest = "17797874344247271808",
+            startPort = "Out",
+            endQuest = "177772112498630766226",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1400,7 +1406,7 @@ return {
             key = "177772100396130765168",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 800, y = 360},
             propsData = {ModeType = 0}
           },
           ["177772100396130765171"] = {
@@ -1449,6 +1455,23 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = true,
               IsWhite = false
+            }
+          },
+          ["17797874344247271808"] = {
+            key = "17797874344247271808",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 942.8574645303543, y = 202.7135746606335},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },

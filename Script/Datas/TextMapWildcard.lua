@@ -229,6 +229,18 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Content_Nai03_01_01",
     WildcardClassification = "Story"
   },
+  Description_10040401_01 = {
+    TextMapId = "Description_10040401_01",
+    WildcardClassification = "Story"
+  },
+  Description_10040407_01 = {
+    TextMapId = "Description_10040407_01",
+    WildcardClassification = "Story"
+  },
+  Description_10040418_01 = {
+    TextMapId = "Description_10040418_01",
+    WildcardClassification = "Story"
+  },
   Description_120111_3_4 = {
     TextMapId = "Description_120111_3_4",
     WildcardClassification = "Story"
@@ -285,20 +297,12 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "HomePianoDes_1004005",
     WildcardClassification = "Story"
   },
-  HomePianoDes_1005001 = {
-    TextMapId = "HomePianoDes_1005001",
-    WildcardClassification = "Story"
-  },
-  HomePianoDes_1005008 = {
-    TextMapId = "HomePianoDes_1005008",
-    WildcardClassification = "Story"
-  },
-  HomePianoDes_1005009 = {
-    TextMapId = "HomePianoDes_1005009",
-    WildcardClassification = "Story"
-  },
   HomePianoDes_1008003 = {
     TextMapId = "HomePianoDes_1008003",
+    WildcardClassification = "Story"
+  },
+  Impression_UI_CheckSuccRate = {
+    TextMapId = "Impression_UI_CheckSuccRate",
     WildcardClassification = "Story"
   },
   MESSAGE_LOADING_312_PC = {
@@ -471,10 +475,6 @@ return ReadOnly("TextMapWildcard", {
   },
   Mail_Title_10033 = {
     TextMapId = "Mail_Title_10033",
-    WildcardClassification = "Story"
-  },
-  Message_Guide_Qianji_1 = {
-    TextMapId = "Message_Guide_Qianji_1",
     WildcardClassification = "Story"
   },
   MonsterRushEvent_Wuyou_DungeonDes03 = {
@@ -1213,6 +1213,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_AppearanceScore_Score",
     WildcardClassification = "Story"
   },
+  UI_AppearanceScore_ScoreName = {
+    TextMapId = "UI_AppearanceScore_ScoreName",
+    WildcardClassification = "Story"
+  },
   UI_ArchiveCollectionReward = {
     TextMapId = "UI_ArchiveCollectionReward",
     WildcardClassification = "Story"
@@ -1243,6 +1247,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_AsyncCombat_HostBonus = {
     TextMapId = "UI_AsyncCombat_HostBonus",
+    WildcardClassification = "Story"
+  },
+  UI_AsyncCombat_JoinLimit = {
+    TextMapId = "UI_AsyncCombat_JoinLimit",
     WildcardClassification = "Story"
   },
   UI_AsyncCombat_MVPBonus = {
@@ -1605,6 +1613,34 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_LOGO_DIALOGUE_10018202",
     WildcardClassification = "Story"
   },
+  UI_LevelFinish_HL_Damage = {
+    TextMapId = "UI_LevelFinish_HL_Damage",
+    WildcardClassification = "Story"
+  },
+  UI_LevelFinish_HL_DamageSingle = {
+    TextMapId = "UI_LevelFinish_HL_DamageSingle",
+    WildcardClassification = "Story"
+  },
+  UI_LevelFinish_HL_Damaged = {
+    TextMapId = "UI_LevelFinish_HL_Damaged",
+    WildcardClassification = "Story"
+  },
+  UI_LevelFinish_HL_Destroy = {
+    TextMapId = "UI_LevelFinish_HL_Destroy",
+    WildcardClassification = "Story"
+  },
+  UI_LevelFinish_HL_Heal = {
+    TextMapId = "UI_LevelFinish_HL_Heal",
+    WildcardClassification = "Story"
+  },
+  UI_LevelFinish_HL_HitCount = {
+    TextMapId = "UI_LevelFinish_HL_HitCount",
+    WildcardClassification = "Story"
+  },
+  UI_LevelFinish_HL_Kill = {
+    TextMapId = "UI_LevelFinish_HL_Kill",
+    WildcardClassification = "Story"
+  },
   UI_MOD_Effect = {
     TextMapId = "UI_MOD_Effect",
     WildcardClassification = "Story"
@@ -1823,6 +1859,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_TEMPLE_MEASURE_COUNT = {
     TextMapId = "UI_TEMPLE_MEASURE_COUNT",
+    WildcardClassification = "Story"
+  },
+  UI_TEMPLE_SUCRULE_SCORE = {
+    TextMapId = "UI_TEMPLE_SUCRULE_SCORE",
     WildcardClassification = "Story"
   },
   UI_Time_Day = {

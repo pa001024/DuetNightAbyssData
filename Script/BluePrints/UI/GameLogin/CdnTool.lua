@@ -167,11 +167,12 @@ function CdnTool:GetCdnHideData(HostId)
           print("执行GetCdnHideData出错，ExamineKey为空,CdnPath:" .. tostring(CdnPath:CdnUrl(HostId)) .. HideDataPath)
           return
         end
-        if not Infos[ExamineKey] then
+        local HideInfo = Infos[ExamineKey] or Infos[tostring(ExamineKey)]
+        if not HideInfo then
           print("执行GetCdnHideData出错，收到的数据中没有对应ExamineKey数据,CdnPath:" .. tostring(CdnPath:CdnUrl(HostId)) .. HideDataPath, "当前ExamineKey:" .. ExamineKey)
           return
         end
-        Avatar.CdnHideData = Infos[ExamineKey]
+        Avatar.CdnHideData = HideInfo
         PrintTable(Avatar.CdnHideData, 10, "CdnHideData")
         print("[CdnTool] 执行GetCdnHideData成功, Url:", HideDataPath, ",可以通过gm PrintTable(A.CdnHideData)查看详细数据。")
       end,

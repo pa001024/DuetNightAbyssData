@@ -191,6 +191,7 @@ end
 function WBP_Battle_TaskBar_DynamicEvent_C:HideDungeonRandomEventProgress(DungeonRandomEventSuccess, DungeonRandomEventFail, DungeonRandomEventSuccessState)
   self.Pos_Progress:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  DungeonRandomEventSuccessState = true
   if DungeonRandomEventSuccessState then
     self:PlaySuccessAnim(DungeonRandomEventSuccess)
   else

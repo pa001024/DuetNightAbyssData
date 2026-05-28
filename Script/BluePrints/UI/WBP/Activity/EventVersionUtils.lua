@@ -1,4 +1,5 @@
 local TimeUtils = require("Utils.TimeUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local EventVersionUtils = {}
 
 function EventVersionUtils.ShowVersionHit(showVersions, currentVer)
@@ -61,7 +62,7 @@ function EventVersionUtils.GetVersionPreviewEventBuckets(ver, now)
             table.insert(incoming, eventId)
           elseif nil ~= endSec and now > endSec then
             table.insert(lock, eventId)
-          else
+          elseif ActivityUtils.CheckEventIsOpen(eventId) then
             table.insert(ing, eventId)
           end
         end

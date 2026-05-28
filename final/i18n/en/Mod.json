@@ -2810,7 +2810,7 @@
   {
     "id": 41717,
     "icon": "Mephisto01_Black",
-    "名称": "Morale·Volition",
+    "名称": "Morale – Volition",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "紫",
@@ -2913,7 +2913,7 @@
   {
     "id": 41727,
     "icon": "Mephisto01_Blue",
-    "名称": "Volition·Awakening",
+    "名称": "Volition – Awakening",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "紫",
@@ -3117,7 +3117,7 @@
   {
     "id": 41747,
     "icon": "Mephisto01_Purple",
-    "名称": "Morale·Refinement",
+    "名称": "Morale – Refinement",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "紫",
@@ -3220,7 +3220,7 @@
   {
     "id": 41757,
     "icon": "Mephisto01_Green",
-    "名称": "Resolve·Volition",
+    "名称": "Resolve – Volition",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "紫",
@@ -3322,7 +3322,7 @@
   {
     "id": 41767,
     "icon": "Mephisto01_Orange",
-    "名称": "Volition·Refinement",
+    "名称": "Volition – Refinement",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "紫",
@@ -5533,7 +5533,7 @@
   {
     "id": 51717,
     "icon": "Mephisto01_Black",
-    "名称": "Morale·Volition",
+    "名称": "Morale – Volition",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "金",
@@ -5651,7 +5651,7 @@
   {
     "id": 51727,
     "icon": "Mephisto01_Blue",
-    "名称": "Volition·Awakening",
+    "名称": "Volition – Awakening",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "金",
@@ -5891,7 +5891,7 @@
   {
     "id": 51747,
     "icon": "Mephisto01_Purple",
-    "名称": "Morale·Refinement",
+    "名称": "Morale – Refinement",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "金",
@@ -6015,7 +6015,7 @@
   {
     "id": 51757,
     "icon": "Mephisto01_Green",
-    "名称": "Resolve·Volition",
+    "名称": "Resolve – Volition",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "金",
@@ -6138,7 +6138,7 @@
   {
     "id": 51767,
     "icon": "Mephisto01_Orange",
-    "名称": "Volition·Refinement",
+    "名称": "Volition – Refinement",
     "版本": "1.4",
     "系列": "Covenanter's ",
     "品质": "金",
@@ -6566,7 +6566,7 @@
   {
     "id": 52010,
     "icon": "Cerberus01",
-    "名称": "Focus·Celerity",
+    "名称": "Focus – Celerity",
     "版本": "1.4",
     "系列": "Cerberus's ",
     "品质": "金",
@@ -6582,7 +6582,7 @@
   {
     "id": 52011,
     "icon": "Cerberus01",
-    "名称": "Rage·Momentum",
+    "名称": "Rage – Momentum",
     "版本": "1.4",
     "系列": "Cerberus's ",
     "品质": "金",
@@ -6598,7 +6598,7 @@
   {
     "id": 52012,
     "icon": "Cerberus01",
-    "名称": "Impetus·Dropshot",
+    "名称": "Impetus – Dropshot",
     "版本": "1.4",
     "系列": "Cerberus's ",
     "品质": "金",
@@ -6678,7 +6678,7 @@
   {
     "id": 52204,
     "icon": "Fenrir01",
-    "名称": "Fortune·Threshold",
+    "名称": "Fortune – Threshold",
     "版本": "1.4",
     "系列": "Fenrir's ",
     "品质": "金",

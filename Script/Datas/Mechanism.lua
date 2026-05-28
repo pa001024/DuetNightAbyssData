@@ -9234,7 +9234,7 @@ return ReadOnly("Mechanism", {
   },
   [161005] = {
     BattleRoleId = 8519510,
-    Camp = "Monster",
+    Camp = "Player",
     FirstStateId = 1610050,
     StateIdList = T.RT_84,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_SplineTrain_A.BP_SplineTrain_A",
@@ -9243,7 +9243,7 @@ return ReadOnly("Mechanism", {
   },
   [161006] = {
     BattleRoleId = 8519511,
-    Camp = "Monster",
+    Camp = "Player",
     FirstStateId = 1610050,
     StateIdList = T.RT_84,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_SplineTrain_B.BP_SplineTrain_B",
@@ -9252,7 +9252,7 @@ return ReadOnly("Mechanism", {
   },
   [161007] = {
     BattleRoleId = 8519512,
-    Camp = "Monster",
+    Camp = "Player",
     FirstStateId = 1610052,
     StateIdList = T.RT_84,
     UnitBPPath = "/Game/AssetDesign/Item/Station/BP_SplineTrain_D.BP_SplineTrain_D",
@@ -10107,7 +10107,7 @@ return ReadOnly("Mechanism", {
     UnitRealType = "Mechanism"
   },
   [390184] = {
-    BattleRoleId = 39006,
+    BattleRoleId = 390006,
     Camp = "Hostile",
     FirstStateId = 3901800,
     GuideIconAni = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Mech_Level2.WBP_GuidePoint_Mech_Level2",
