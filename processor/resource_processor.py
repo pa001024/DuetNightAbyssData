@@ -91,6 +91,10 @@ class ResourceProcessor(BaseProcessor):
             "icon": icon,
             "rarity": resource_data.get("Rarity", 1),
         }
+        if resource_data.get("UseEffectType") == "RandomSelectPack":
+            pack = self._to_int(resource_data.get("UseParam"))
+            if pack is not None:
+                processed_resource["pack"] = pack
         source = self._get_resource_sources().get(resource_id)
         if source:
             filtered_source = [

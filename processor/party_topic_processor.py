@@ -23,6 +23,8 @@ class PartyTopicProcessor(QuestStoryProcessor):
 
             char_id = npc_data.get("CharId")
             topic_list = npc_data.get("PartyTopicList", [])
+            if char_id == 3102:
+                mapping[310204] = int(char_id)
             if not char_id or not isinstance(topic_list, list):
                 continue
 

@@ -12128,127 +12128,148 @@
     "name": "반짝반짝 밤하늘 깜짝 아이템 상자",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
+    "pack": 12169,
     "desc": "상세 확률 및 수량 (소수점 5번째 자리에서 반올림)\n월석의 싹x10: 29.4010%\n월석의 싹x16: 44.1014%\n월석의 싹x18: 22.0507%\n월석의 싹x40: 3.6751%\n월석의 싹x100: 0.7350%\n월석의 싹x888: 0.0368%"
   },
   {
     "id": 110019,
     "name": "파란색 근접 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_01",
-    "rarity": 3
+    "rarity": 3,
+    "pack": 350000
   },
   {
     "id": 110020,
     "name": "보라색 근접 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_01",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350001
   },
   {
     "id": 110021,
     "name": "파란색 불사조 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_02",
-    "rarity": 3
+    "rarity": 3,
+    "pack": 350002
   },
   {
     "id": 110022,
     "name": "보라색 불사조 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_02",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350003
   },
   {
     "id": 110023,
     "name": "파란색 원거리 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_03",
-    "rarity": 3
+    "rarity": 3,
+    "pack": 350004
   },
   {
     "id": 110024,
     "name": "보라색 원거리 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_03",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350005
   },
   {
     "id": 110025,
     "name": "보라색 그리핀 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_04",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350006
   },
   {
     "id": 110026,
     "name": "보라색 바람 속성 티폰 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_05",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350007
   },
   {
     "id": 110027,
     "name": "보라색 불 속성 티폰 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_06",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350008
   },
   {
     "id": 110028,
     "name": "보라색 번개 속성 티폰 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_07",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350009
   },
   {
     "id": 110029,
     "name": "보라색 물 속성 티폰 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_08",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350010
   },
   {
     "id": 110030,
     "name": "보라색 빛 속성 티폰 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_09",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350011
   },
   {
     "id": 110031,
     "name": "보라색 어둠 속성 티폰 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_10",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350012
   },
   {
     "id": 110032,
     "name": "보라색 바람 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_11",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350013
   },
   {
     "id": 110033,
     "name": "보라색 불 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_16",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350014
   },
   {
     "id": 110034,
     "name": "보라색 번개 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_12",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350015
   },
   {
     "id": 110035,
     "name": "보라색 물 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_13",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350016
   },
   {
     "id": 110036,
     "name": "보라색 빛 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_14",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350017
   },
   {
     "id": 110037,
     "name": "보라색 어둠 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_15",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 350018
   },
   {
     "id": 110038,
     "name": "나이팅게일 양의 초상화·신록",
     "icon": "T_Head_Other0014",
-    "rarity": 4
+    "rarity": 4,
+    "pack": 114100
   },
   {
     "id": 110039,
@@ -12286,43 +12307,50 @@
     "id": 110045,
     "name": "바람 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_11",
-    "rarity": 5
+    "rarity": 5,
+    "pack": 350019
   },
   {
     "id": 110046,
     "name": "불 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_16",
-    "rarity": 5
+    "rarity": 5,
+    "pack": 350020
   },
   {
     "id": 110047,
     "name": "번개 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_12",
-    "rarity": 5
+    "rarity": 5,
+    "pack": 350021
   },
   {
     "id": 110048,
     "name": "물 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_13",
-    "rarity": 5
+    "rarity": 5,
+    "pack": 350022
   },
   {
     "id": 110049,
     "name": "빛 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_14",
-    "rarity": 5
+    "rarity": 5,
+    "pack": 350023
   },
   {
     "id": 110050,
     "name": "어둠 속성 메피스토 악마의 쐐기 상자",
     "icon": "T_Pack_RandomMod_15",
-    "rarity": 5
+    "rarity": 5,
+    "pack": 350024
   },
   {
     "id": 110051,
     "name": "비상하는 용 깜짝 패키지",
     "icon": "T_Pack_ModFx",
     "rarity": 5,
+    "pack": 12176,
     "desc": "상세 확률 및 수량:\n비상하는 용x1: 2%\n배척의 결정x1: 8%\n황금 모래x1: 8%\n쿠퍼x10000: 10%\n쿠퍼x20000: 16%\n쿠퍼x50000: 26%\n쿠퍼x100000: 30%"
   },
   {
@@ -12330,6 +12358,7 @@
     "name": "황동 바이올린 깜짝 패키지",
     "icon": "T_Pack_Machinegun_Huangtong",
     "rarity": 5,
+    "pack": 12177,
     "desc": "상세 확률 및 수량:\n황동 바이올린x1: 3%\n배척의 결정x1: 10%\n황금 모래x1: 10%\n쿠퍼x10000: 10%\n쿠퍼x20000: 13%\n쿠퍼x50000: 23%\n쿠퍼x100000: 30%"
   },
   {
@@ -12337,6 +12366,7 @@
     "name": "온 세상의 부름·칼날 채찍 깜짝 패키지",
     "icon": "T_Pack_Swordwhip_Huanyu",
     "rarity": 5,
+    "pack": 12178,
     "desc": "상세 확률 및 수량:\n온 세상의 부름·칼날 채찍x1: 3%\n배척의 결정x1: 10%\n황금 모래x1: 10%\n쿠퍼x10000: 10%\n쿠퍼x20000: 13%\n쿠퍼x50000: 23%\n쿠퍼x100000: 30%"
   },
   {
@@ -12344,6 +12374,7 @@
     "name": "온 세상의 부름·대도 깜짝 패키지",
     "icon": "T_Pack_Katana_Huanyu",
     "rarity": 5,
+    "pack": 12179,
     "desc": "상세 확률 및 수량:\n온 세상의 부름·대도x1: 3%\n배척의 결정x1: 10%\n황금 모래x1: 10%\n쿠퍼x10000: 10%\n쿠퍼x20000: 13%\n쿠퍼x50000: 23%\n쿠퍼x100000: 30%"
   },
   {
@@ -12351,6 +12382,7 @@
     "name": "반짝반짝 밤하늘 깜짝 아이템 상자",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
+    "pack": 12180,
     "desc": "상세 확률 및 수량 (소수점 5번째 자리에서 반올림)\n월석의 싹x36: 22.0507%\n월석의 싹x48: 51.4517%\n월석의 싹x68: 22.0507%\n월석의 싹x100: 3.6751%\n월석의 싹x120: 0.7350%\n월석의 싹x888: 0.0368%"
   },
   {
