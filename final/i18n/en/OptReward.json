@@ -1,0 +1,1324 @@
+[
+  {
+    "id": 1001,
+    "child": [
+      {
+        "id": 20601,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Searing Sandwhisper"
+      },
+      {
+        "id": 20305,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Silverwhite Edict"
+      },
+      {
+        "id": 10601,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Momiji Itteki"
+      },
+      {
+        "id": 10302,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Ironforger"
+      }
+    ]
+  },
+  {
+    "id": 1002,
+    "child": [
+      {
+        "id": 10101,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Blade Amberglow"
+      },
+      {
+        "id": 10206,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Wanewraith"
+      },
+      {
+        "id": 10303,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Pyrothirst"
+      },
+      {
+        "id": 10403,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Fathomless Sharkgaze"
+      },
+      {
+        "id": 10503,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Tetherlash"
+      },
+      {
+        "id": 10602,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Withershade"
+      },
+      {
+        "id": 20102,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Rendhusk"
+      },
+      {
+        "id": 20201,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Excresduo"
+      },
+      {
+        "id": 20303,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Destructo"
+      },
+      {
+        "id": 20401,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Screamshot"
+      },
+      {
+        "id": 20604,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Soulrend"
+      },
+      {
+        "id": 20501,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Osteobreaker"
+      },
+      {
+        "id": 10104,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Ingenious Tactics"
+      },
+      {
+        "id": 10201,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Siren's Kiss"
+      },
+      {
+        "id": 10302,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Ironforger"
+      },
+      {
+        "id": 10401,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Exiled Fangs"
+      },
+      {
+        "id": 10501,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Undying Oneiros"
+      },
+      {
+        "id": 10601,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Momiji Itteki"
+      },
+      {
+        "id": 20101,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Entropic Singularity"
+      },
+      {
+        "id": 20203,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Bluecurrent Pulse"
+      },
+      {
+        "id": 20305,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Silverwhite Edict"
+      },
+      {
+        "id": 20402,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Silent Sower"
+      },
+      {
+        "id": 20503,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Flamme De Epuration"
+      },
+      {
+        "id": 20601,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Searing Sandwhisper"
+      },
+      {
+        "id": 10103,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Remanent Reminiscence"
+      },
+      {
+        "id": 10105,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Wandering Rose"
+      },
+      {
+        "id": 20103,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Sacrosanct Decree"
+      },
+      {
+        "id": 20502,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Exiled Thunderwyrm"
+      },
+      {
+        "id": 20507,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Submerged Serenade"
+      },
+      {
+        "id": 10202,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Vernal Jade Halberd"
+      },
+      {
+        "id": 10504,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Viridis Reefs"
+      },
+      {
+        "id": 20304,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Guixu Ratchet"
+      },
+      {
+        "id": 10102,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Shackle of Lonewolf"
+      },
+      {
+        "id": 20205,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Sacrosanct Chorus"
+      },
+      {
+        "id": 20301,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Stellar Finality"
+      },
+      {
+        "id": 20405,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Blast Artistry"
+      },
+      {
+        "id": 10301,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Punitive Inferno"
+      },
+      {
+        "id": 20403,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Day of Sacred Verdict"
+      },
+      {
+        "id": 20603,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Embla Inflorescence"
+      },
+      {
+        "id": 20602,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Arclight Apocalypses"
+      },
+      {
+        "id": 10603,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Sacred Favour"
+      },
+      {
+        "id": 10402,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Aureate Yore"
+      },
+      {
+        "id": 20504,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Daybreak Hymn"
+      },
+      {
+        "id": 10204,
+        "t": "Weapon",
+        "c": 1,
+        "n": "Elpides Abound"
+      }
+    ]
+  },
+  {
+    "id": 2001,
+    "child": [
+      {
+        "id": 5101,
+        "t": "Char",
+        "c": 1
+      }
+    ]
+  },
+  {
+    "id": 3001,
+    "child": [
+      {
+        "id": 4151,
+        "t": "Pet",
+        "c": 1,
+        "n": "Miraculous Dandemeow"
+      }
+    ]
+  },
+  {
+    "id": 4001,
+    "child": [
+      {
+        "id": 20512,
+        "t": "Resource",
+        "c": 5,
+        "n": "Lost Silver Coin"
+      }
+    ]
+  },
+  {
+    "id": 4002,
+    "child": [
+      {
+        "id": 10101,
+        "t": "Resource",
+        "c": 1,
+        "n": "Ring of Severed Fear"
+      },
+      {
+        "id": 10102,
+        "t": "Resource",
+        "c": 1,
+        "n": "Ring of Escaped Entropy"
+      },
+      {
+        "id": 10103,
+        "t": "Resource",
+        "c": 1,
+        "n": "Ring of Chronal Reversion"
+      },
+      {
+        "id": 10104,
+        "t": "Resource",
+        "c": 1,
+        "n": "Ring of Justice Rekindled"
+      }
+    ]
+  },
+  {
+    "id": 4003,
+    "child": [
+      {
+        "id": 11003,
+        "t": "Resource",
+        "c": 1,
+        "n": "Advanced Weapon Component: Grip"
+      },
+      {
+        "id": 11006,
+        "t": "Resource",
+        "c": 1,
+        "n": "Advanced Weapon Component: Blade"
+      },
+      {
+        "id": 11009,
+        "t": "Resource",
+        "c": 1,
+        "n": "Advanced Weapon Component: Decoration"
+      },
+      {
+        "id": 11012,
+        "t": "Resource",
+        "c": 1,
+        "n": "Advanced Weapon Component: Barrel"
+      },
+      {
+        "id": 11015,
+        "t": "Resource",
+        "c": 1,
+        "n": "Advanced Weapon Component: Bolt"
+      },
+      {
+        "id": 11018,
+        "t": "Resource",
+        "c": 1,
+        "n": "Advanced Weapon Component: Frame"
+      }
+    ]
+  },
+  {
+    "id": 4004,
+    "child": [
+      {
+        "id": 15031,
+        "t": "Resource",
+        "c": 1,
+        "n": "Hydro Crystal"
+      },
+      {
+        "id": 15036,
+        "t": "Resource",
+        "c": 1,
+        "n": "Umbro Crystal"
+      }
+    ]
+  },
+  {
+    "id": 4005,
+    "child": [
+      {
+        "id": 1001101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Berenica"
+      },
+      {
+        "id": 1003301,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Margie"
+      },
+      {
+        "id": 1004202,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Randy"
+      },
+      {
+        "id": 1005102,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Outsider"
+      },
+      {
+        "id": 1005401,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Daphne"
+      },
+      {
+        "id": 1001502,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Lady Nifle"
+      },
+      {
+        "id": 1002101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Rebecca"
+      },
+      {
+        "id": 1003101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Lynn"
+      },
+      {
+        "id": 1004301,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Sibylle"
+      },
+      {
+        "id": 1002301,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Tabethe"
+      },
+      {
+        "id": 1001501,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Lisbell"
+      },
+      {
+        "id": 1004101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Rhythm"
+      },
+      {
+        "id": 1003201,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Hellfire"
+      },
+      {
+        "id": 1005101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Truffle and Filbert"
+      },
+      {
+        "id": 1003103,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Yale and Oliver"
+      },
+      {
+        "id": 1001103,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Phantasio"
+      },
+      {
+        "id": 1005301,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Psyche"
+      }
+    ]
+  },
+  {
+    "id": 5001,
+    "child": [
+      {
+        "id": 11010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 11030010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 15010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 15020010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 18010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 21010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 23010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 31010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 31030010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 32010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 33010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 41010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 42020010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 43010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 51010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 51020010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 53010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      },
+      {
+        "id": 54010010,
+        "t": "Skin",
+        "c": 1,
+        "n": "Starry Hopes"
+      }
+    ]
+  },
+  {
+    "id": 5002,
+    "child": [
+      {
+        "id": 210102,
+        "t": "Skin",
+        "c": 1,
+        "n": "Veils and Whispers"
+      }
+    ]
+  },
+  {
+    "id": 5003,
+    "child": [
+      {
+        "id": 11010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 11030011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 15010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 15020011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 15030011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 18010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 21010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 23010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 24010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 31010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 31030011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 32010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 33010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 41010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 42020011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 43010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 51010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 51020011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 53010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      },
+      {
+        "id": 54010011,
+        "t": "Skin",
+        "c": 1,
+        "n": "Verdant Serenity"
+      }
+    ]
+  },
+  {
+    "id": 5004,
+    "child": [
+      {
+        "id": 11010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 11030122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 15010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 15020122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 15030122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 18010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 21010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 23010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 24010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 31010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 31030122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 32010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 33010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 41010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 41020122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 42010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 42020122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 43010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 51010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 51020122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 53010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      },
+      {
+        "id": 54010122,
+        "t": "Skin",
+        "c": 1,
+        "n": "Fleeting Traces"
+      }
+    ]
+  },
+  {
+    "id": 5005,
+    "child": [
+      {
+        "id": 11010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 11030121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 15010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 15020121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 15030121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 18010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 21010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 23010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 24010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 31010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 31030121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 32010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 33010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 41010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 41020121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 42010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 42020121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 43010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 51010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 51020121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 53010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      },
+      {
+        "id": 54010121,
+        "t": "Skin",
+        "c": 1,
+        "n": "Frosty Fantasy"
+      }
+    ]
+  },
+  {
+    "id": 5006,
+    "child": [
+      {
+        "id": 11010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 15010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 15020131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 15030131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 15040131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 18010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 21010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 24010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 31010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 32020131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 41010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 41020131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 42010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 43010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 51010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 53010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      },
+      {
+        "id": 54010131,
+        "t": "Skin",
+        "c": 1,
+        "n": "Rebel Riff"
+      }
+    ]
+  },
+  {
+    "id": 5007,
+    "child": [
+      {
+        "id": 11020141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 15020141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 15040141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 18010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 21010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 24010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 31010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 31020141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 32010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 32020141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 41010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 41020141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      },
+      {
+        "id": 53010141,
+        "t": "Skin",
+        "c": 1,
+        "n": "Black Gospel"
+      }
+    ]
+  },
+  {
+    "id": 5008,
+    "child": [
+      {
+        "id": 1004101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Rhythm"
+      },
+      {
+        "id": 1001103,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Phantasio"
+      },
+      {
+        "id": 1002101,
+        "t": "Resource",
+        "c": 30,
+        "n": "Thought: Rebecca"
+      }
+    ]
+  },
+  {
+    "id": 5101,
+    "child": [
+      {
+        "id": 3010101,
+        "t": "WeaponSkin",
+        "c": 1,
+        "n": "Victory by Receipt"
+      }
+    ]
+  },
+  {
+    "id": 5201,
+    "child": [
+      {
+        "id": 10005,
+        "t": "CharAccessory",
+        "c": 1,
+        "n": "Verdant Sprout"
+      },
+      {
+        "id": 10006,
+        "t": "CharAccessory",
+        "c": 1,
+        "n": "Verdant Sprout: Gilt"
+      },
+      {
+        "id": 10007,
+        "t": "CharAccessory",
+        "c": 1,
+        "n": "Verdant Sprout: Celeste"
+      },
+      {
+        "id": 10008,
+        "t": "CharAccessory",
+        "c": 1,
+        "n": "Verdant Sprout: Rust Red"
+      }
+    ]
+  },
+  {
+    "id": 5301,
+    "child": [
+      {
+        "id": 10001,
+        "t": "WeaponAccessory",
+        "c": 1,
+        "n": "Music Note: Dark Jade"
+      }
+    ]
+  },
+  {
+    "id": 5401,
+    "child": [
+      {
+        "id": 41004,
+        "t": "Resource",
+        "c": 1,
+        "n": "Secret Hideout"
+      }
+    ]
+  }
+]

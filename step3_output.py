@@ -12,6 +12,7 @@ from processor.monster_processor import MonsterProcessor
 from processor.draft_processor import DraftProcessor
 from processor.dungeon_processor import DungeonProcessor
 from processor.reward_processor import RewardProcessor
+from processor.opt_reward_processor import OptRewardProcessor
 from processor.pet_processor import PetProcessor
 from processor.abyss_buff_processor import AbyssBuffProcessor
 from processor.abyss_dungeon_processor import AbyssDungeonProcessor
@@ -315,6 +316,7 @@ class FinalProcessor:
             "Draft": DraftProcessor,
             "Dungeon": DungeonProcessor,
             "Reward": RewardProcessor,
+            "OptReward": OptRewardProcessor,
             "Pet": PetProcessor,
             "AbyssBuff": AbyssBuffProcessor,
             "AbyssDungeon": AbyssDungeonProcessor,
@@ -484,6 +486,7 @@ if __name__ == "__main__":
         "Dungeon",
         "Draft",
         "Reward",
+        "OptReward",
         "Pet",
         "AbyssBuff",
         "AbyssDungeon",

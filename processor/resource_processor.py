@@ -16,7 +16,9 @@ class ResourceProcessor(BaseProcessor):
     _shared_level_to_sub_region_id_cache: Dict[str, Dict[str, int]] = {}
     _shared_design_data_dirs_cache: Dict[str, List[Path]] = {}
     _shared_design_dir_files_cache: Dict[str, List[Path]] = {}
-    _shared_random_rule_to_resource_ids_cache: Dict[str, Dict[int, List[Tuple[int, Optional[int]]]]] = {}
+    _shared_random_rule_to_resource_ids_cache: Dict[
+        str, Dict[int, List[Tuple[int, Optional[int]]]]
+    ] = {}
     _shared_design_level_unit_id_cache: Dict[str, Dict[int, int]] = {}
 
     def __init__(self, data_loader):
@@ -91,22 +93,24 @@ class ResourceProcessor(BaseProcessor):
             "icon": icon,
             "rarity": resource_data.get("Rarity", 1),
         }
-        if resource_data.get("UseEffectType") == "RandomSelectPack":
-            pack = self._to_int(resource_data.get("UseParam"))
-            if pack is not None:
-                processed_resource["pack"] = pack
-        source = self._get_resource_sources().get(resource_id)
-        if source:
-            filtered_source = [
-                item for item in source if item.get("srId") != 210101
-            ]
-            if filtered_source:
-                filtered_source.sort(key=self._sort_source_items_key)
-                processed_resource["source"] = filtered_source
         if resource_desc:
             processed_resource["desc"] = resource_desc
         if resource_desc2:
             processed_resource["desc2"] = resource_desc2
+        if resource_data.get("UseEffectType") == "RandomSelectPack":
+            pack = self._to_int(resource_data.get("UseParam"))
+            if pack is not None:
+                processed_resource["pack"] = pack
+        if resource_data.get("UseEffectType") == "SelectResource":
+            select = self._to_int(resource_data.get("UseParam"))
+            if select is not None:
+                processed_resource["select"] = select
+        source = self._get_resource_sources().get(resource_id)
+        if source:
+            filtered_source = [item for item in source if item.get("srId") != 210101]
+            if filtered_source:
+                filtered_source.sort(key=self._sort_source_items_key)
+                processed_resource["source"] = filtered_source
 
         return processed_resource
 
@@ -171,7 +175,9 @@ class ResourceProcessor(BaseProcessor):
             if cached is not None:
                 return cached
 
-        build_lock = self._get_shared_build_lock(("resource_processor", cache_key, "resource_sources"))
+        build_lock = self._get_shared_build_lock(
+            ("resource_processor", cache_key, "resource_sources")
+        )
         with build_lock:
             with self._shared_build_locks_lock:
                 cached = self._shared_resource_sources_cache.get(cache_key)
@@ -244,7 +250,11 @@ class ResourceProcessor(BaseProcessor):
                     continue
                 level_name = info.get("SubRegionLevel")
                 sub_region_id = self._to_int(info.get("SubRegionId"))
-                if isinstance(level_name, str) and level_name and sub_region_id is not None:
+                if (
+                    isinstance(level_name, str)
+                    and level_name
+                    and sub_region_id is not None
+                ):
                     level_to_sub_region_id[level_name.lower()] = sub_region_id
             with self._shared_build_locks_lock:
                 self._shared_level_to_sub_region_id_cache[
@@ -257,14 +267,20 @@ class ResourceProcessor(BaseProcessor):
 
         design_map_paths: List[Path] = []
         for level_name in level_order:
-            design_map_paths.extend(self._resolve_design_map_paths_for_level(level_name))
+            design_map_paths.extend(
+                self._resolve_design_map_paths_for_level(level_name)
+            )
 
         design_map_paths.sort(key=lambda p: str(p))
         for json_path in design_map_paths:
-            sub_region_id = level_to_sub_region_id.get(self._normalize_level_map_key(json_path))
+            sub_region_id = level_to_sub_region_id.get(
+                self._normalize_level_map_key(json_path)
+            )
             if sub_region_id is None:
                 continue
-            self._collect_resource_sources_for_design_job(json_path, sub_region_id, sources)
+            self._collect_resource_sources_for_design_job(
+                json_path, sub_region_id, sources
+            )
 
     def _get_shared_level_to_sub_region_id_map(self) -> Optional[Dict[str, int]]:
         """读取共享的 SubRegionLevel -> SubRegionId 索引。"""
@@ -326,7 +342,9 @@ class ResourceProcessor(BaseProcessor):
                 for pos in source_item.get("pos", []):
                     self._append_source_pos(target_item, pos)
 
-    def _build_design_level_scope(self, design_json_path: Path, level_data: Any) -> List[Any]:
+    def _build_design_level_scope(
+        self, design_json_path: Path, level_data: Any
+    ) -> List[Any]:
         """构建设计层可用的数据范围，只加载当前设计层。"""
         combined_level_data: List[Any] = []
         self._append_level_data(combined_level_data, level_data)
@@ -352,7 +370,9 @@ class ResourceProcessor(BaseProcessor):
             if cached is not None:
                 return cached
 
-        build_lock = self._get_shared_build_lock(("resource_processor", cache_key[0], f"design_paths:{level_name}"))
+        build_lock = self._get_shared_build_lock(
+            ("resource_processor", cache_key[0], f"design_paths:{level_name}")
+        )
         with build_lock:
             with self._shared_build_locks_lock:
                 cached = self._shared_design_map_paths_cache.get(cache_key)
@@ -385,7 +405,17 @@ class ResourceProcessor(BaseProcessor):
             if candidate.is_dir():
                 return candidate
 
-        default_root = Path("..") / "dna-unpack" / "Fmodel" / "Output" / "Exports" / "EM" / "Content" / "Maps" / "Levels"
+        default_root = (
+            Path("..")
+            / "dna-unpack"
+            / "Fmodel"
+            / "Output"
+            / "Exports"
+            / "EM"
+            / "Content"
+            / "Maps"
+            / "Levels"
+        )
         if default_root.is_dir():
             return default_root
         return None
@@ -397,7 +427,11 @@ class ResourceProcessor(BaseProcessor):
             if not isinstance(info, dict):
                 continue
             level_name = info.get("SubRegionLevel")
-            if isinstance(level_name, str) and level_name and level_name not in level_order:
+            if (
+                isinstance(level_name, str)
+                and level_name
+                and level_name not in level_order
+            ):
                 level_order.append(level_name.lower())
         return level_order
 
@@ -512,7 +546,9 @@ class ResourceProcessor(BaseProcessor):
     ) -> None:
         """从设计层数据提取资源来源。"""
         treasure_actor_names = self._collect_treasure_actor_names(level_data)
-        candidate_nodes: List[Tuple[dict, List[Tuple[int, Optional[int]]], Optional[int], Optional[int]]] = []
+        candidate_nodes: List[
+            Tuple[dict, List[Tuple[int, Optional[int]]], Optional[int], Optional[int]]
+        ] = []
         unit_based_resource_ids = set()
         for node in self._iter_design_level_nodes(level_data):
             if not isinstance(node, dict):
@@ -540,9 +576,7 @@ class ResourceProcessor(BaseProcessor):
             if unit_id is not None or static_creator_id is not None:
                 for resource_id, _ in resource_ids:
                     unit_based_resource_ids.add(resource_id)
-            candidate_nodes.append(
-                (node, resource_ids, unit_id, static_creator_id)
-            )
+            candidate_nodes.append((node, resource_ids, unit_id, static_creator_id))
 
         for node, resource_ids, unit_id, static_creator_id in candidate_nodes:
             if (
@@ -559,7 +593,9 @@ class ResourceProcessor(BaseProcessor):
                 continue
             for resource_id, reward_id in resource_ids:
                 resource_sources = sources.setdefault(resource_id, [])
-                source_item = self._get_or_create_source_item(resource_sources, sub_region_id, reward_id)
+                source_item = self._get_or_create_source_item(
+                    resource_sources, sub_region_id, reward_id
+                )
                 if not source_item:
                     continue
                 self._append_source_pos(source_item, pos)
@@ -589,7 +625,9 @@ class ResourceProcessor(BaseProcessor):
                 treasure_actor_names.add(name)
         return treasure_actor_names
 
-    def _is_treasure_drop_component(self, node: dict, treasure_actor_names: Set[str]) -> bool:
+    def _is_treasure_drop_component(
+        self, node: dict, treasure_actor_names: Set[str]
+    ) -> bool:
         """判断 Drop 组件是否属于 Explore_Treasure_C。"""
         outer = node.get("Outer")
         outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
@@ -631,7 +669,9 @@ class ResourceProcessor(BaseProcessor):
                 continue
             for resource_id, reward_id in resource_ids:
                 resource_sources = sources.setdefault(resource_id, [])
-                source_item = self._get_or_create_source_item(resource_sources, sub_region_id, reward_id)
+                source_item = self._get_or_create_source_item(
+                    resource_sources, sub_region_id, reward_id
+                )
                 if not source_item:
                     continue
                 for pos in points:
@@ -662,14 +702,20 @@ class ResourceProcessor(BaseProcessor):
         self._ensure_resource_link_maps()
         resource_ids: List[Tuple[int, Optional[int]]] = []
 
-        def has_resource_pair(candidate_id: Optional[int], candidate_reward_id: Optional[int]) -> bool:
+        def has_resource_pair(
+            candidate_id: Optional[int], candidate_reward_id: Optional[int]
+        ) -> bool:
             return any(
                 item_id == candidate_id and reward_id == candidate_reward_id
                 for item_id, reward_id in resource_ids
             )
 
         resource_id = self._to_int(props.get("ResourceId"))
-        if resource_id is not None and resource_id in self.resource_map and not has_resource_pair(resource_id, None):
+        if (
+            resource_id is not None
+            and resource_id in self.resource_map
+            and not has_resource_pair(resource_id, None)
+        ):
             resource_ids.append((resource_id, None))
 
         unit_id = self._to_int(props.get("UnitId"))
@@ -681,24 +727,36 @@ class ResourceProcessor(BaseProcessor):
 
         if resolved_unit_id is not None:
             for resource_id in self.drop_to_resource_ids.get(resolved_unit_id, []):
-                if resource_id in self.resource_map and not has_resource_pair(resource_id, None):
+                if resource_id in self.resource_map and not has_resource_pair(
+                    resource_id, None
+                ):
                     resource_ids.append((resource_id, None))
 
-        if (unit_id is not None or static_creator_id is not None) and rarely_id is not None:
+        if (
+            unit_id is not None or static_creator_id is not None
+        ) and rarely_id is not None:
             for drop_id in self.rarely_to_drop_ids.get(rarely_id, []):
                 for resource_id in self.drop_to_resource_ids.get(drop_id, []):
-                    if resource_id in self.resource_map and not has_resource_pair(resource_id, None):
+                    if resource_id in self.resource_map and not has_resource_pair(
+                        resource_id, None
+                    ):
                         resource_ids.append((resource_id, None))
 
         mechanism_id = resolved_unit_id
         if mechanism_id is not None:
-            for resource_id, reward_id in self.mechanism_to_resource_ids.get(mechanism_id, []):
-                if resource_id in self.resource_map and not has_resource_pair(resource_id, reward_id):
+            for resource_id, reward_id in self.mechanism_to_resource_ids.get(
+                mechanism_id, []
+            ):
+                if resource_id in self.resource_map and not has_resource_pair(
+                    resource_id, reward_id
+                ):
                     resource_ids.append((resource_id, reward_id))
 
         return resource_ids
 
-    def _get_unit_id_by_static_creator_id(self, static_creator_id: int) -> Optional[int]:
+    def _get_unit_id_by_static_creator_id(
+        self, static_creator_id: int
+    ) -> Optional[int]:
         """通过 StaticCreatorId 反查对应的 UnitId。"""
         self._ensure_resource_link_maps()
         if self.design_level_unit_ids is None:
@@ -713,7 +771,9 @@ class ResourceProcessor(BaseProcessor):
             if cached is not None:
                 return cached
 
-        build_lock = self._get_shared_build_lock(("resource_processor", cache_key, "design_level_unit_ids"))
+        build_lock = self._get_shared_build_lock(
+            ("resource_processor", cache_key, "design_level_unit_ids")
+        )
         with build_lock:
             with self._shared_build_locks_lock:
                 cached = self._shared_design_level_unit_id_cache.get(cache_key)
@@ -746,12 +806,18 @@ class ResourceProcessor(BaseProcessor):
                 ] = mapping
             return mapping
 
-    def _collect_design_level_unit_ids(self, design_level_data: Any, mapping: Dict[int, int]) -> None:
+    def _collect_design_level_unit_ids(
+        self, design_level_data: Any, mapping: Dict[int, int]
+    ) -> None:
         """递归收集 DesignLevel_data 中的 CreatorId -> UnitId。"""
         if isinstance(design_level_data, dict):
             creator_id = self._to_int(design_level_data.get("CreatorId"))
             unit_id = self._to_int(design_level_data.get("UnitId"))
-            if creator_id is not None and unit_id is not None and creator_id not in mapping:
+            if (
+                creator_id is not None
+                and unit_id is not None
+                and creator_id not in mapping
+            ):
                 mapping[creator_id] = unit_id
             for value in design_level_data.values():
                 self._collect_design_level_unit_ids(value, mapping)
@@ -842,7 +908,9 @@ class ResourceProcessor(BaseProcessor):
                         mapping[unit_id].append(pair)
         return mapping
 
-    def _build_random_rule_to_resource_ids(self) -> Dict[int, List[Tuple[int, Optional[int]]]]:
+    def _build_random_rule_to_resource_ids(
+        self,
+    ) -> Dict[int, List[Tuple[int, Optional[int]]]]:
         """构建 RandomRuleId -> ResourceId/RewardId 列表映射。"""
         cache_key = self._shared_cache_key("random_rule_to_resource_ids")
         with BaseProcessor._shared_items_cache_lock:
@@ -852,7 +920,9 @@ class ResourceProcessor(BaseProcessor):
 
         shared_cache_key = self._get_exports_root_cache_key()
         with self._shared_build_locks_lock:
-            cached = self._shared_random_rule_to_resource_ids_cache.get(shared_cache_key)
+            cached = self._shared_random_rule_to_resource_ids_cache.get(
+                shared_cache_key
+            )
             if cached is not None:
                 return cached
 
@@ -872,14 +942,21 @@ class ResourceProcessor(BaseProcessor):
                 unit_id = self._to_int(unit_info.get("UnitId"))
                 if unit_id is None:
                     continue
-                for resource_id, reward_id in self.mechanism_to_resource_ids.get(unit_id, []):
-                    if resource_id in self.resource_map and (resource_id, reward_id) not in resource_ids:
+                for resource_id, reward_id in self.mechanism_to_resource_ids.get(
+                    unit_id, []
+                ):
+                    if (
+                        resource_id in self.resource_map
+                        and (resource_id, reward_id) not in resource_ids
+                    ):
                         resource_ids.append((resource_id, reward_id))
             if resource_ids:
                 mapping[rule_id] = resource_ids
 
         with self._shared_build_locks_lock:
-            cached = self._shared_random_rule_to_resource_ids_cache.get(shared_cache_key)
+            cached = self._shared_random_rule_to_resource_ids_cache.get(
+                shared_cache_key
+            )
             if cached is not None:
                 return cached
             self._shared_random_rule_to_resource_ids_cache[shared_cache_key] = mapping
@@ -887,7 +964,9 @@ class ResourceProcessor(BaseProcessor):
             BaseProcessor._shared_items_cache[cache_key] = mapping
         return mapping
 
-    def _get_resource_ids_by_random_rule(self, random_rule_id: Any) -> List[Tuple[int, Optional[int]]]:
+    def _get_resource_ids_by_random_rule(
+        self, random_rule_id: Any
+    ) -> List[Tuple[int, Optional[int]]]:
         """根据 RandomRuleId 读取资源 ID 和 RewardId。"""
         self._ensure_resource_link_maps()
         rule_id = self._to_int(random_rule_id)
@@ -959,7 +1038,9 @@ class ResourceProcessor(BaseProcessor):
             cached = self._shared_design_map_json_cache.get(cache_key)
             if cached is not None:
                 return cached
-        build_lock = self._get_shared_build_lock(("resource_processor", cache_key, "design_map_json"))
+        build_lock = self._get_shared_build_lock(
+            ("resource_processor", cache_key, "design_map_json")
+        )
         with build_lock:
             with self._shared_build_locks_lock:
                 cached = self._shared_design_map_json_cache.get(cache_key)
@@ -978,7 +1059,9 @@ class ResourceProcessor(BaseProcessor):
             self._shared_design_map_json_cache[cache_key] = data
         return data
 
-    def _get_random_actor_points_by_rule(self, json_path: Path) -> Dict[str, List[List]]:
+    def _get_random_actor_points_by_rule(
+        self, json_path: Path
+    ) -> Dict[str, List[List]]:
         """提取关卡随机点位：RandomRuleId -> [[x,y,z], ...]。"""
         if not isinstance(json_path, Path):
             return {}
@@ -1040,7 +1123,9 @@ class ResourceProcessor(BaseProcessor):
             self._shared_design_map_json_cache[cache_name] = rule_points
         return rule_points
 
-    def _resolve_random_actor_root_location(self, arr: List[dict]) -> Optional[List[float]]:
+    def _resolve_random_actor_root_location(
+        self, arr: List[dict]
+    ) -> Optional[List[float]]:
         """读取随机生成器根节点偏移。"""
         by_outer_name, by_name, by_path = self._build_object_maps(arr)
         for obj in arr:
@@ -1052,7 +1137,9 @@ class ResourceProcessor(BaseProcessor):
             if obj.get("Type") != "BP_RandomActorDataManager_C":
                 continue
             root_ref = props.get("DefaultSceneRoot")
-            root_obj = BaseProcessor._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
+            root_obj = BaseProcessor._resolve_ref_object(
+                root_ref, by_outer_name, by_name, by_path
+            )
             if not isinstance(root_obj, dict):
                 continue
             root_props = root_obj.get("Properties", {})
@@ -1064,7 +1151,9 @@ class ResourceProcessor(BaseProcessor):
         return None
 
     @staticmethod
-    def _build_object_maps(arr: List[dict]) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
+    def _build_object_maps(
+        arr: List[dict],
+    ) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
         """构建对象查找索引。"""
         by_outer_name: Dict[Tuple[str, str], dict] = {}
         by_name: Dict[str, List[dict]] = {}
@@ -1090,7 +1179,9 @@ class ResourceProcessor(BaseProcessor):
         return by_outer_name, by_name, by_path
 
     @staticmethod
-    def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
+    def _ref_outer_and_name(
+        object_name: Optional[str],
+    ) -> Tuple[Optional[str], Optional[str]]:
         """解析对象引用的 Outer 与短名。"""
         if not object_name:
             return None, None
@@ -1117,7 +1208,11 @@ class ResourceProcessor(BaseProcessor):
         object_name = ref_obj.get("ObjectName")
         object_path = ref_obj.get("ObjectPath")
         outer_name, short_name = ResourceProcessor._ref_outer_and_name(object_name)
-        if by_path is not None and isinstance(object_path, str) and object_path in by_path:
+        if (
+            by_path is not None
+            and isinstance(object_path, str)
+            and object_path in by_path
+        ):
             return by_path[object_path]
         if outer_name and short_name:
             found = by_outer_name.get((outer_name, short_name))
@@ -1156,7 +1251,11 @@ class ResourceProcessor(BaseProcessor):
         return rounded
 
     def _format_vec3(self, vec: List[float]) -> List:
-        return [self._format_num(vec[0]), self._format_num(vec[1]), self._format_num(vec[2])]
+        return [
+            self._format_num(vec[0]),
+            self._format_num(vec[1]),
+            self._format_num(vec[2]),
+        ]
 
     def _extract_design_level_pos(
         self,
@@ -1172,10 +1271,19 @@ class ResourceProcessor(BaseProcessor):
         if not isinstance(props, dict):
             return None
 
-        if node.get("Type") == "BP_StaticCreatorComponent_C" and node.get("Name") == "FinishMechanism":
+        if (
+            node.get("Type") == "BP_StaticCreatorComponent_C"
+            and node.get("Name") == "FinishMechanism"
+        ):
             attach_parent_ref = props.get("AttachParent")
-            if attach_parent_ref is not None and by_outer_name is not None and by_name is not None:
-                pos = self._extract_ref_location(attach_parent_ref, by_outer_name, by_name, by_path)
+            if (
+                attach_parent_ref is not None
+                and by_outer_name is not None
+                and by_name is not None
+            ):
+                pos = self._extract_ref_location(
+                    attach_parent_ref, by_outer_name, by_name, by_path
+                )
                 if pos is not None:
                     return [pos[0], pos[1]]
 
@@ -1210,8 +1318,14 @@ class ResourceProcessor(BaseProcessor):
                 return [pos[0], pos[1]]
 
         attach_parent_ref = props.get("AttachParent")
-        if attach_parent_ref is not None and by_outer_name is not None and by_name is not None:
-            pos = self._extract_ref_location(attach_parent_ref, by_outer_name, by_name, by_path)
+        if (
+            attach_parent_ref is not None
+            and by_outer_name is not None
+            and by_name is not None
+        ):
+            pos = self._extract_ref_location(
+                attach_parent_ref, by_outer_name, by_name, by_path
+            )
             if pos is not None:
                 return [pos[0], pos[1]]
 
@@ -1221,21 +1335,31 @@ class ResourceProcessor(BaseProcessor):
                 continue
             if by_outer_name is None or by_name is None:
                 continue
-            pos = self._extract_ref_location(component_ref, by_outer_name, by_name, by_path)
+            pos = self._extract_ref_location(
+                component_ref, by_outer_name, by_name, by_path
+            )
             if pos is not None:
                 return [pos[0], pos[1]]
 
         blueprint_components = props.get("BlueprintCreatedComponents")
-        if isinstance(blueprint_components, list) and by_outer_name is not None and by_name is not None:
+        if (
+            isinstance(blueprint_components, list)
+            and by_outer_name is not None
+            and by_name is not None
+        ):
             for component_ref in blueprint_components:
-                pos = self._extract_ref_location(component_ref, by_outer_name, by_name, by_path)
+                pos = self._extract_ref_location(
+                    component_ref, by_outer_name, by_name, by_path
+                )
                 if pos is not None:
                     return [pos[0], pos[1]]
 
         return None
 
     @staticmethod
-    def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
+    def _ref_outer_and_name(
+        object_name: Optional[str],
+    ) -> Tuple[Optional[str], Optional[str]]:
         """解析对象引用的 Outer 与短名。"""
         if not object_name:
             return None, None
@@ -1250,7 +1374,9 @@ class ResourceProcessor(BaseProcessor):
         return None, None
 
     @staticmethod
-    def _build_object_maps(arr: List[dict]) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
+    def _build_object_maps(
+        arr: List[dict],
+    ) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
         """构建对象查找索引。"""
         by_outer_name: Dict[Tuple[str, str], dict] = {}
         by_name: Dict[str, List[dict]] = {}
@@ -1303,7 +1429,11 @@ class ResourceProcessor(BaseProcessor):
         object_name = ref_obj.get("ObjectName")
         object_path = ref_obj.get("ObjectPath")
         outer_name, short_name = self._ref_outer_and_name(object_name)
-        if by_path is not None and isinstance(object_path, str) and object_path in by_path:
+        if (
+            by_path is not None
+            and isinstance(object_path, str)
+            and object_path in by_path
+        ):
             return by_path[object_path]
         if outer_name and short_name:
             found = by_outer_name.get((outer_name, short_name))
@@ -1323,7 +1453,9 @@ class ResourceProcessor(BaseProcessor):
         by_path: Optional[Dict[str, dict]] = None,
     ) -> Optional[List[float]]:
         """从引用对象中提取位置。"""
-        resolved_obj = self._resolve_ref_object(ref_obj, by_outer_name, by_name, by_path)
+        resolved_obj = self._resolve_ref_object(
+            ref_obj, by_outer_name, by_name, by_path
+        )
         if not isinstance(resolved_obj, dict):
             return None
         props = resolved_obj.get("Properties", {})
@@ -1342,13 +1474,18 @@ class ResourceProcessor(BaseProcessor):
 
     @staticmethod
     def _get_or_create_source_item(
-        resource_sources: List[Dict[str, Any]], sub_region_id: int, reward_id: Optional[int] = None
+        resource_sources: List[Dict[str, Any]],
+        sub_region_id: int,
+        reward_id: Optional[int] = None,
     ) -> Optional[Dict[str, Any]]:
         """获取同 srId 的 source 项，必要时新建。"""
         if sub_region_id == 210101:
             return None
         for source_item in resource_sources:
-            if source_item.get("srId") == sub_region_id and source_item.get("rewardId") == reward_id:
+            if (
+                source_item.get("srId") == sub_region_id
+                and source_item.get("rewardId") == reward_id
+            ):
                 return source_item
         source_item = {"srId": sub_region_id}
         if reward_id is not None:
@@ -1383,14 +1520,28 @@ class ResourceProcessor(BaseProcessor):
         )
 
     @staticmethod
-    def _sort_source_items_key(source_item: Dict[str, Any]) -> Tuple[bool, int, int, float, float]:
+    def _sort_source_items_key(
+        source_item: Dict[str, Any],
+    ) -> Tuple[bool, int, int, float, float]:
         """固定 source 输出顺序，避免缓存改变插入顺序。"""
         reward_id = source_item.get("rewardId")
         sr_id = source_item.get("srId")
         pos = source_item.get("pos", [])
         first_pos = pos[0] if isinstance(pos, list) and pos else []
-        x = float(first_pos[0]) if isinstance(first_pos, list) and len(first_pos) >= 1 and first_pos[0] is not None else 0.0
-        y = float(first_pos[1]) if isinstance(first_pos, list) and len(first_pos) >= 2 and first_pos[1] is not None else 0.0
+        x = (
+            float(first_pos[0])
+            if isinstance(first_pos, list)
+            and len(first_pos) >= 1
+            and first_pos[0] is not None
+            else 0.0
+        )
+        y = (
+            float(first_pos[1])
+            if isinstance(first_pos, list)
+            and len(first_pos) >= 2
+            and first_pos[1] is not None
+            else 0.0
+        )
         return (
             reward_id is None,
             sr_id if isinstance(sr_id, int) else 0,
