@@ -3,7 +3,8 @@ local M = Class()
 
 function M:ReceiveBeginPlay()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName or "IOS" == PlatformName or "OpenHarmony" == PlatformName then
+  self.bMeshLodBudgetEnable = false
+  if "IOS" == PlatformName or "OpenHarmony" == PlatformName then
     self.bMeshLodBudgetEnable = true
   else
     self.bMeshLodBudgetEnable = false

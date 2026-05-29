@@ -183,6 +183,7 @@ function Component:RegionSyncAddRoleToCreate(ObjId, RoleInfo)
   SuitTalble.AccessorySuit = CharInfo.AccessorySuit
   SuitTalble.Colors = CharInfo.Colors
   SuitTalble.SkinId = CharInfo.SkinId
+  SuitTalble.SkinLevel = CharInfo.SkinLevel
   SuitTalble.HairId = CharInfo.HairId
   SuitTalble.HairColors = CharInfo.HairColors
   SuitTalble.AccessoryCustomParams = CharInfo.AccessoryCustomParams
@@ -233,6 +234,7 @@ function Component:RegionSyncChangeRoleInfo(ObjId, RoleInfo)
   SuitTalble.AccessorySuit = CharInfo.AccessorySuit
   SuitTalble.Colors = CharInfo.Colors
   SuitTalble.SkinId = CharInfo.SkinId
+  SuitTalble.SkinLevel = CharInfo.SkinLevel
   SuitTalble.HairId = CharInfo.HairId
   SuitTalble.HairColors = CharInfo.HairColors
   SuitTalble.AccessoryCustomParams = CharInfo.AccessoryCustomParams

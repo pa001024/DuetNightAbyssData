@@ -36862,7 +36862,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10042901] = {
           Content = "闲杂人等禁止靠近！",
-          ContentFR = "Interdiction d’approcher du train ! Reculez !",
+          ContentFR = "Les civils n’ont rien à faire ici. Reculez !",
           DialogueId = 10042901,
           GUID = "19242F72",
           NextDialogue = 10042902,
@@ -36877,7 +36877,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10042902] = {
           Content = "我们并非闲杂人等，而是奉了艾森巴恩站长的命令，辅助调查的狩月人。",
-          ContentFR = "Nous sommes des Chasseurs de Phoxène envoyés par le chef de gare Eisenbahn afin d’assister à l’enquête.",
+          ContentFR = "Nous ne sommes pas de simples civils. Nous sommes des Chasseurs de Phoxène envoyés par le chef de gare Eisenbahn pour assister à l’enquête.",
           DialogueId = 10042902,
           GUID = "19242F9C",
           NextDialogue = 10042903,
@@ -42456,7 +42456,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           VoiceName = "voice/$Locale$/story/1004/100471/1926E1FC"
         },
         [10047111] = {
-          Content = "你们有点太刻薄了，平时的教养到哪里去了。这么大反应，何必为了卡戎这么大反应呢？",
+          Content = "你们有点太刻薄了，平时的教养到哪里去了。何必为了卡戎这么大反应呢？",
           ContentFR = "Cela suffit. Vous vous montrez d’une bassesse embarrassante. Où sont donc passées vos bonnes manières ?",
           DialogueId = 10047111,
           GUID = "1926E226",
@@ -42610,7 +42610,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           SnapShot = "HEART"
         },
         [10047212] = {
-          Content = "我们三人自由失去父母，四处为家，是大表姐学习钢琴后到处表演养活我们。",
+          Content = "我们三人自幼失去父母，四处为家，是大表姐学习钢琴后到处表演养活我们。",
           ContentFR = "Nous avons perdu nos parents très jeunes. Depuis, nous vivons d’un endroit à l’autre. Notre grande cousine a appris le piano et joue où elle peut pour nous faire vivre.",
           DialogueId = 10047212,
           GUID = "1926F2B8",
@@ -44442,6 +44442,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048322,
           GUID = "1927A8D4",
           SpeakNpcId = 100430,
+          SpeakNpcName = "UI_SpeakName_Zhongren9",
           VoiceName = "voice/$Locale$/story/1004/100483/1927A8D4"
         },
         [10048323] = {
@@ -44450,6 +44451,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048323,
           GUID = "1927A8FE",
           SpeakNpcId = 100430,
+          SpeakNpcName = "UI_SpeakName_Zhongren9",
           VoiceName = "voice/$Locale$/story/1004/100483/1927A8FE"
         },
         [10048324] = {
@@ -44466,6 +44468,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048325,
           GUID = "1927A952",
           SpeakNpcId = 100439,
+          SpeakNpcName = "UI_SpeakName_Zhongren10",
           VoiceName = "voice/$Locale$/story/1004/100483/1927A952"
         },
         [10048326] = {
@@ -44474,6 +44477,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048326,
           GUID = "1927A97C",
           SpeakNpcId = 100441,
+          SpeakNpcName = "UI_SpeakName_Zhongren11",
           VoiceName = "voice/$Locale$/story/1004/100483/1927A97C"
         },
         [10048327] = {
@@ -44490,6 +44494,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048328,
           GUID = "1927A9D0",
           SpeakNpcId = 100431,
+          SpeakNpcName = "UI_SpeakName_Zhongren1",
           VoiceName = "voice/$Locale$/story/1004/100483/1927A9D0"
         },
         [10048329] = {
@@ -44506,6 +44511,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048330,
           GUID = "1927AA24",
           SpeakNpcId = 100433,
+          SpeakNpcName = "UI_SpeakName_Zhongren2",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AA24"
         },
         [10048331] = {
@@ -44522,6 +44528,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048332,
           GUID = "1927AA78",
           SpeakNpcId = 100426,
+          SpeakNpcName = "UI_SpeakName_Zhongren3",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AA78"
         },
         [10048333] = {
@@ -44530,6 +44537,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048333,
           GUID = "1927AAA2",
           SpeakNpcId = 100440,
+          SpeakNpcName = "UI_SpeakName_Zhongren5",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AAA2"
         },
         [10048334] = {
@@ -44538,6 +44546,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048334,
           GUID = "1927AACC",
           SpeakNpcId = 100435,
+          SpeakNpcName = "UI_SpeakName_Zhongren6",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AACC"
         },
         [10048335] = {
@@ -44546,6 +44555,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048335,
           GUID = "1927AAF6",
           SpeakNpcId = 100442,
+          SpeakNpcName = "UI_SpeakName_Zhongren7",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AAF6"
         },
         [10048336] = {
@@ -44554,6 +44564,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10048336,
           GUID = "1927AB20",
           SpeakNpcId = 100434,
+          SpeakNpcName = "UI_SpeakName_Zhongren8",
           VoiceName = "voice/$Locale$/story/1004/100483/1927AB20"
         },
         [10048337] = {
@@ -45309,6 +45320,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10049010,
           GUID = "192819B4",
           SpeakNpcId = 100414,
+          SpeakNpcName = "UI_SpeakName_Yinyoushiren",
           VoiceName = "voice/$Locale$/story/1004/100490/192819B4"
         },
         [10049011] = {
@@ -45317,6 +45329,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10049011,
           GUID = "192819DE",
           SpeakNpcId = 100414,
+          SpeakNpcName = "UI_SpeakName_Yinyoushiren",
           VoiceName = "voice/$Locale$/story/1004/100490/192819DE"
         },
         [10049012] = {
@@ -45325,6 +45338,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10049012,
           GUID = "19281A08",
           SpeakNpcId = 100414,
+          SpeakNpcName = "UI_SpeakName_Yinyoushiren",
           VoiceName = "voice/$Locale$/story/1004/100490/19281A08"
         },
         [10049013] = {
@@ -45991,6 +46005,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           },
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284972"
         },
         [10049302] = {
@@ -46004,6 +46019,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           },
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/1928499C"
         },
         [10049303] = {
@@ -46032,6 +46048,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284A1A",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284A1A"
         },
         [10049306] = {
@@ -46041,6 +46058,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284A44",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284A44"
         },
         [10049307] = {
@@ -46066,6 +46084,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284AC2",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284AC2"
         },
         [10049310] = {
@@ -46075,6 +46094,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284AEC",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284AEC"
         },
         [10049311] = {
@@ -46100,6 +46120,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284B6A",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284B6A"
         },
         [10049314] = {
@@ -46109,6 +46130,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284B94",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284B94"
         },
         [10049315] = {
@@ -46118,6 +46140,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284BBE",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284BBE"
         },
         [10049316] = {
@@ -46127,6 +46150,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "19284BE8",
           SnapShot = "MYSTERIOUS",
           SpeakNpcId = 100446,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100493/19284BE8"
         },
         [10049401] = {
@@ -46655,6 +46679,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10049801,
           GUID = "19289B7A",
           SpeakNpcId = 100414,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100498/19289B7A"
         },
         [10049802] = {
@@ -46663,6 +46688,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10049802,
           GUID = "19289BA4",
           SpeakNpcId = 100414,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100498/19289BA4"
         },
         [10049803] = {
@@ -46671,6 +46697,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10049803,
           GUID = "19289BCE",
           SpeakNpcId = 100414,
+          SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100498/19289BCE"
         },
         [10049901] = {
@@ -90904,7 +90931,7 @@ PlayAnimation{ActorId{110040},AnimationId{"Explain01_Start"},Duration{2}}
         },
         [11016908] = {
           Content = "在龙莎一役的一场爆炸中，她不慎跌落到要塞外。士兵们在河岸发现了她染血的配枪。虽然军团仍在搜寻她的下落，但依照目前推测，她很可能已经死亡。",
-          ContentFR = "Lors d’une explosion à la Forteresse de Lonza, elle est tombée hors de la structure. Les soldats ont retrouvé son pistolet ensanglanté sur la rive. Le régiment cherche encore, mais d’après ce que l’on suppose, elle est probablement morte.",
+          ContentFR = "Lors d’une explosion à la Forteresse de Lonza, elle a chuté hors de la forteresse. Les soldats ont retrouvé son pistolet ensanglanté sur la rive. La Légion poursuit encore les recherches, mais d’après ce que l’on suppose, elle est probablement morte.",
           DialogueId = 11016908,
           GUID = "1B946578",
           NextDialogue = 11016909,
@@ -252824,7 +252851,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200566] = {
           Content = "呃……这个，这个，是的！我是来自华胥的香官皎皎，这位是我的领主，换算成海伯利亚爵位的话……大概算是个伯爵吧！",
-          ContentFR = "Euh... oui, c’est ça ! Je suis Luno, officiante de l’encens venue de Huaxu, et voici {性别:mon maître|ma maîtresse}. Si l’on convertit son rang selon les titres d’Hyperborea... il serait sans doute comte !",
+          ContentFR = "Euh... oui, c’est ça ! Je suis Luno, officiante de l’encens venue de Huaxu, et voici {性别:mon maître|ma maîtresse}. Si l’on convertit son rang selon la noblesse d’Hyperborea... il serait sans doute comte !",
           DialogueId = 51200566,
           GUID = "802CDCDC",
           NextDialogue = 51200567,
@@ -255564,7 +255591,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200978] = {
           Content = "《芙罗蒂娅百花车站年度账目明细》……？",
-          ContentFR = "« Relevé détaillé des comptes annuels de la Gare des Cent-Fleurs de Flodia »... ?",
+          ContentFR = "« Registre des comptes annuels de la Gare des Cent-Fleurs »... ?",
           DialogueId = 51200978,
           GUID = "802D2074",
           NextDialogue = 51200979,

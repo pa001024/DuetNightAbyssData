@@ -27,7 +27,7 @@
   {
     "id": 1102,
     "name": "Flora's Accessory",
-    "desc": "芙罗拉[原皮]（待包装）",
+    "desc": "Wherever she goes, the shadow of Hyperborea hangs over her — a dark, invisible cage that never lifts.",
     "icon": "T_Head_Fuluo",
     "rarity": 5,
     "charId": 1102,
@@ -347,7 +347,7 @@
   {
     "id": 3102,
     "name": "Hilda's Accessory",
-    "desc": "希尔妲[原皮]（待包装）",
+    "desc": "A delicate bouquet in her hands, a hidden arsenal beneath her skirt. Like the black and white of her dress, she walks the line between light and shadow, each day a quiet verse in a maid's silent devotion.",
     "icon": "T_Head_Xier",
     "rarity": 5,
     "charId": 3102,

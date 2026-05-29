@@ -126,6 +126,14 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
   return UWidgetBlueprintLibrary.Unhandled()
 end
 
+function M:OnTouchEnded(MyGeometry, TouchEvent)
+  return self:OnMouseButtonUp(MyGeometry, TouchEvent)
+end
+
+function M:OnTouchStarted(MyGeometry, TouchEvent)
+  return self:OnMouseButtonDown(MyGeometry, TouchEvent)
+end
+
 function M:OnAnimationFinished(InAnimation)
   if InAnimation == self.Icon_UnHover and not self.IsHovering then
     self:PlayAnimationForward(self.Icon_Normal)

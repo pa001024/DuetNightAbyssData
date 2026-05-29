@@ -548,7 +548,8 @@ function M:SetEditPlanName()
   if not PlanData then
     return
   end
-  local PlanName = PlanData.HudPlanName or "Default"
+  local DefaultPlanName = GText("UI_CustomLayout_DefaultPlanName" .. tostring(math.ceil(self.CurEditPlan / 2)))
+  local PlanName = PlanData.HudPlanName or DefaultPlanName
   self.PlanName = PlanName
   self.Text_PlanName:SetText(PlanName)
 end

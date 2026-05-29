@@ -3255,8 +3255,24 @@ return ReadOnly("EffectCreature", {
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Common/BP_EffectCreature_Rou_10102.BP_EffectCreature_Rou_10102",
     SocketName = "pelvis"
   },
-  [100403001] = {EffectCreatureId = 100403001},
-  [100403002] = {EffectCreatureId = 100403002},
+  [100403001] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char023_Xier/Animation/Montage/Interactive/MechInteractive/Xier_Interactive_MakeTea_Montage.Xier_Interactive_MakeTea_Montage",
+    EffectCreatureId = 100403001,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Others/BP_EffectCreature_Story_Crossbow_Chahu.BP_EffectCreature_Story_Crossbow_Chahu",
+    SocketName = "hook_arm_r"
+  },
+  [100403002] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char016_Fuluo/Animation/Montage/Interactive/Fuluo_Story_Drawing_Montage.Fuluo_Story_Drawing_Montage",
+    EffectCreatureId = 100403002,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Others/BP_EffectCreature_Story_Crossbow_Huaban.BP_EffectCreature_Story_Crossbow_Huaban",
+    SocketName = "hand_l"
+  },
+  [100403003] = {
+    EffectCreatureAnimPath = "/Game/Asset/Char/Player/Char016_Fuluo/Animation/Montage/Interactive/Fuluo_Story_Drawing_Montage.Fuluo_Story_Drawing_Montage",
+    EffectCreatureId = 100403003,
+    EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/Others/BP_EffectCreature_Story_Crossbow_Huabi.BP_EffectCreature_Story_Crossbow_Huabi",
+    SocketName = "hand_r"
+  },
   [100417001] = {
     EffectCreatureAnimPath = "/Game/Asset/Char/Npc/Npc_Custom/CM_Laonian/Animation/Montage/Interactive/Npc_Laonian_F_Story_Attack_Montage.Npc_Laonian_F_Story_Attack_Montage",
     EffectCreatureId = 100417001,

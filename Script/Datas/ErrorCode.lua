@@ -1000,7 +1000,7 @@ return ReadOnly("ErrorCode", {
   [3030] = {
     ContentEN = "This weapon is selected as smelting material",
     ContentFR = "Cette arme est sélectionnée comme matériau de fusion",
-    ContentJP = "該当武器は熔錬に使用されてます",
+    ContentJP = "該当武器は製錬に使用されてます",
     ContentKR = "무기 용해 시 소모되는 무기에 현재 무기가 포함되어 있습니다.",
     ContentTC = "武器熔煉所消耗的武器包含當前武器",
     ErrorCodeContent = "武器熔炼所消耗的武器包含当前武器",

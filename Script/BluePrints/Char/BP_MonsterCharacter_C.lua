@@ -541,6 +541,9 @@ end
 function BP_MonsterCharacter_C:CommonOnEMActorDestroy(DestroyReason)
 end
 
+function BP_MonsterCharacter_C:MonsterSkeletonLodLua_Stamp()
+end
+
 function BP_MonsterCharacter_C:SetHitCapsuleBeginplayState(bEnableEnd)
   DebugPrint("@gulinan SetHitCapsuleBeginplayState " .. tostring(bEnableEnd))
   self.bHitCapsuleBeginplay = bEnableEnd

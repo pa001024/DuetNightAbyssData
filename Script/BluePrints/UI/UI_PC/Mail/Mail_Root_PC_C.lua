@@ -50,7 +50,8 @@ function M:InitRpcEvent()
   self:AddDispatcher(EventID.OnDeleteMail, self, self.OnDeleteMail)
   self:AddDispatcher(EventID.OnMarkMailReaded, self, self.OnMarkMailReaded)
   self:AddDispatcher(EventID.OnGetAllMailReward, self, self.OnGetAllMailReward)
-  self:AddDispatcher(EventID.OnChangePropMailUniqueID, self, self.InitMailMain)
+  self:AddDispatcher(EventID.OnChangePropMailInbox, self, self.InitMailMain)
+  self:AddDispatcher(EventID.OnChangePropStarMails, self, self.InitMailMain)
 end
 
 function M:InitCommonTab()
@@ -1247,12 +1248,14 @@ function M:OnCancelMailStar(Ret, UniqueID)
     self:PlayAnimation(self.UnCollect)
     self.CurContent.IsStar = false
     local TempData = self.StarMailList[UniqueID]
-    self.StarMailList[UniqueID] = nil
-    self.NormalMailList[UniqueID] = TempData
-    self.NormalMailList[UniqueID].IsStar = false
+    if TempData then
+      self.StarMailList[UniqueID] = nil
+      self.NormalMailList[UniqueID] = TempData
+      self.NormalMailList[UniqueID].IsStar = false
+      self.StarMailNums = self.StarMailNums - 1
+      self.NorMailNums = self.NorMailNums + 1
+    end
     local SelectMailIndex = self.CurContent.Id
-    self.StarMailNums = self.StarMailNums - 1
-    self.NorMailNums = self.NorMailNums + 1
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Tosat_Mail_Remove"))
     if self:IsExistTimer("CancelStar") then
       self:RemoveTimer("CancelStar")

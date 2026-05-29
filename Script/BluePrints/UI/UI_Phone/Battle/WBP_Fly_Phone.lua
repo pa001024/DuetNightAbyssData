@@ -42,7 +42,8 @@ function M:OnPressed()
   local bInAir = self.OwnerPlayer.IsInAir
   DebugPrint("[Fly] OnPressed bFlying:", bFlying, "bJumpPressed:", self.bJumpPressed, "IsInAir:", bInAir)
   if bFlying then
-    self:ReleaseJumpHold("PressedWhileFlying")
+    self.bJumpPressed = false
+    self.OwnerPanel:TryToStopTargetCommand("Jump", true)
     return
   end
   if self.bJumpPressed and bInAir then

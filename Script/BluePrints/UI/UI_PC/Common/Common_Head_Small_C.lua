@@ -228,12 +228,12 @@ function M:SetDisableAction(bDisable)
   self.bDisableAction = bDisable
 end
 
-function M:HeadIconSetupAnchor(Head_Anchor, PlayerInfo, GuildInfo)
+function M:HeadIconSetupAnchor(Head_Anchor, PlayerInfo, GuildInfo, NotShowOpreationBtn, NotShowGuildSendPrivateChat)
   self:SetHoldUp(true)
   self:BindOnClickEvent(function()
     Head_Anchor:Open(true)
   end)
-  self:SetGuildFullInfo(GuildInfo)
+  self:SetGuildFullInfo(GuildInfo, NotShowOpreationBtn, NotShowGuildSendPrivateChat)
   self:SetupAnchor(Head_Anchor, self, PlayerInfo, true)
 end
 

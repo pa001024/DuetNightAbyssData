@@ -55,7 +55,7 @@ function M:InitGamePadView()
       Desc = GText("UI_CTL_Select")
     })
   end
-  if #self.IsChoosedTbl > 0 then
+  if self.IsChoosedTbl and #self.IsChoosedTbl > 0 then
     if self.WBP_Com_KeyImg then
       self.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     end

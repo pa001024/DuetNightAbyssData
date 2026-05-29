@@ -5,15 +5,6 @@ local M = Class({
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 
 function M:Construct()
-  GuildController:RegisterEvent(self, function(self, EventId, ...)
-    if not self.Info then
-      return
-    end
-    local Info = (...)
-    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.Info.GuildId == Info.GuildId then
-      self:OnGetGuildFullInfo(Info)
-    end
-  end)
   self.BGColorTable = {
     [1] = self.Color_BG_01,
     [2] = self.Color_BG_02,
@@ -127,7 +118,22 @@ function M:OnListItemObjectSet(Content)
   end
   self:RefreshChatStatus()
   self:SetDismissState(Info.Title, Info.LastLogin)
-  self:GetCardGuildInfo(Info.GuildId, Info.Uid, Info)
+  self.Head_Friend:SetHoldUp(true)
+  self.Head_Friend:SetupAnchor(self.Head_Anchor, self.Head_Friend, Info, true)
+  self.Head_Friend:BindOnClickEvent(function()
+    self:GetCardGuildInfo(Info.GuildId, Info.Uid)
+  end)
+  GuildController:UnRegisterEvent(self)
+  GuildController:RegisterEvent(self, function(self, EventId, ...)
+    if not self.Info then
+      return
+    end
+    local Info = (...)
+    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.WaitGuildId == Info.GuildId then
+      self.WaitGuildId = nil
+      self:OnGetGuildFullInfo(Info)
+    end
+  end)
 end
 
 function M:SetOnlineState(IsOnline, IsInDungeon, LastLogoutTime)
@@ -346,7 +352,7 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
     self:OnChatBtnClick()
     IsHandled = true
   elseif InKeyName == UIConst.GamePadKey.SpecialLeft then
-    self.Head_Anchor:Open(true)
+    self:GetCardGuildInfo(self.Info.GuildId, self.Info.Uid)
     IsHandled = true
   elseif InKeyName == UIConst.GamePadKey.DPadRight and self.Btn_Dismiss:GetVisibility() ~= ESlateVisibility.Collapsed then
     self.Btn_Dismiss:OnBtnClick()
@@ -359,44 +365,48 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:WaitCardGuildInfoCallback()
+  if not self.WaitCardGuildInfo then
+    return
+  end
   self.WaitCardGuildInfo = self.WaitCardGuildInfo - 1
   if 0 == self.WaitCardGuildInfo then
-    self.CardGuildFullInfo.CardGuildChatOpen = self.CardGuildChatOpen
-    self.Head_Friend:HeadIconSetupAnchor(self.Head_Anchor, self.Info, self.CardGuildFullInfo)
+    if self.CardGuildFullInfo then
+      self.CardGuildFullInfo.CardGuildChatOpen = self.CardGuildChatOpen
+    end
+    self.Head_Friend:SetGuildFullInfo(self.CardGuildFullInfo)
+    self.Head_Anchor:Open(true)
+    self.CardGuildFullInfo = nil
+    self.CardGuildChatOpen = nil
+    self.WaitCardGuildInfo = nil
   end
 end
 
-function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
-  if not GuildId or 0 == GuildId then
-    return
-  end
-  if not GuildId or self.WaitCardGuildInfo and self.WaitCardGuildInfo > 0 then
-    return
-  end
-  GuildController:SendGetGuildInfo(GuildId)
+function M:GetCardGuildInfo(GuildId, Uid)
   self.WaitCardGuildInfo = 2
-  
-  local function SetInfo(OtherPlayerInfo)
-    local Avatar = GWorld:GetAvatar()
-    Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
-      if Ret ~= ErrorCode.RET_SUCCESS then
-        return
-      end
-      self.CardGuildChatOpen = IsOpen
-      self:WaitCardGuildInfoCallback()
-    end, OtherPlayerInfo.Uid or OtherPlayerInfo.Uuid)
-  end
-  
-  if AvatarInfo then
-    SetInfo(AvatarInfo)
-  else
-    local FriendData = FriendController:GetModel():GetFriendDict()[Uid]
-    if FriendData then
-      SetInfo(FriendData.Info)
-    else
-      GWorld:GetAvatar():GetOtherPlayerPersonallInfo(Uid, {Func = SetInfo})
+  self.CardGuildFullInfo = nil
+  self.WaitGuildId = nil
+  local Avatar = ChatController:GetAvatar()
+  self.Content.Parent.IsOpeningHeadAnchor = true
+  Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+    if not IsValid(self) then
+      return
     end
-  end
+    local Info = MemberInfos[Uid]
+    if Info.GuildId and 0 ~= Info.GuildId then
+      self.WaitGuildId = Info.GuildId
+      GuildController:SendGetGuildInfo(Info.GuildId)
+      Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
+        if Ret ~= ErrorCode.RET_SUCCESS then
+          return
+        end
+        self.CardGuildChatOpen = IsOpen
+        self:WaitCardGuildInfoCallback()
+      end, Info.Uid)
+    else
+      self:WaitCardGuildInfoCallback()
+      self:WaitCardGuildInfoCallback()
+    end
+  end, {Uid})
 end
 
 function M:OnGetGuildFullInfo(Info)

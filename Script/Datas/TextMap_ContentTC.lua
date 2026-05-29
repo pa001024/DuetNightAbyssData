@@ -25830,7 +25830,7 @@ local Data = {
           TextMapId = "Message_Guide_Guild_2_Pad"
         },
         Message_Guide_Guild_3 = {
-          ContentTC = "選擇協會",
+          ContentTC = "在此處可以查看並加入協會",
           TextMapId = "Message_Guide_Guild_3"
         },
         Message_Guide_HardBoss_2 = {
@@ -70706,7 +70706,7 @@ local Data = {
   },
   {
     MinKey = "UI_Achievement_Name_920302",
-    MaxKey = "UI_Armory_Dress",
+    MaxKey = "UI_Armory_Dispatch_Locked",
     Loader = function()
       return {
         UI_Achievement_Name_920302 = {
@@ -71029,6 +71029,10 @@ local Data = {
         UI_Already_Have_Char_Skin = {
           ContentTC = "已擁有該角色形象",
           TextMapId = "UI_Already_Have_Char_Skin"
+        },
+        UI_Amory_HyperWeaponCardLevel = {
+          ContentTC = "熔煉等級",
+          TextMapId = "UI_Amory_HyperWeaponCardLevel"
         },
         UI_Amount_Billion = {
           ContentTC = "B",
@@ -71501,19 +71505,19 @@ local Data = {
         UI_Armory_Dispatch_Locked = {
           ContentTC = "突破至%s階後解鎖",
           TextMapId = "UI_Armory_Dispatch_Locked"
-        },
-        UI_Armory_Dress = {
-          ContentTC = "裝飾",
-          TextMapId = "UI_Armory_Dress"
         }
       }
     end
   },
   {
-    MinKey = "UI_Armory_Dye_Common",
-    MaxKey = "UI_Attr_Default_Name",
+    MinKey = "UI_Armory_Dress",
+    MaxKey = "UI_Attr_Dark_Name",
     Loader = function()
       return {
+        UI_Armory_Dress = {
+          ContentTC = "裝飾",
+          TextMapId = "UI_Armory_Dress"
+        },
         UI_Armory_Dye_Common = {
           ContentTC = "染色",
           TextMapId = "UI_Armory_Dye_Common"
@@ -72309,19 +72313,19 @@ local Data = {
         UI_Attr_Dark_Name = {
           ContentTC = "暗屬性",
           TextMapId = "UI_Attr_Dark_Name"
-        },
-        UI_Attr_Default_Name = {
-          ContentTC = "無屬性",
-          TextMapId = "UI_Attr_Default_Name"
         }
       }
     end
   },
   {
-    MinKey = "UI_Attr_Fire_Name",
-    MaxKey = "UI_Bag_Fish_Weight",
+    MinKey = "UI_Attr_Default_Name",
+    MaxKey = "UI_Bag_Equipped",
     Loader = function()
       return {
+        UI_Attr_Default_Name = {
+          ContentTC = "無屬性",
+          TextMapId = "UI_Attr_Default_Name"
+        },
         UI_Attr_Fire_Name = {
           ContentTC = "火屬性",
           TextMapId = "UI_Attr_Fire_Name"
@@ -73114,19 +73118,19 @@ local Data = {
         UI_Bag_Equipped = {
           ContentTC = "裝備中",
           TextMapId = "UI_Bag_Equipped"
-        },
-        UI_Bag_Fish_Weight = {
-          ContentTC = "尺寸：",
-          TextMapId = "UI_Bag_Fish_Weight"
         }
       }
     end
   },
   {
-    MinKey = "UI_Bag_IgnoreEquipped",
-    MaxKey = "UI_CHAR_DATA_TEXT_11010101",
+    MinKey = "UI_Bag_Fish_Weight",
+    MaxKey = "UI_CHAR_DATA_DES_10010401",
     Loader = function()
       return {
+        UI_Bag_Fish_Weight = {
+          ContentTC = "尺寸：",
+          TextMapId = "UI_Bag_Fish_Weight"
+        },
         UI_Bag_IgnoreEquipped = {
           ContentTC = "忽略已裝備",
           TextMapId = "UI_Bag_IgnoreEquipped"
@@ -73919,19 +73923,19 @@ local Data = {
         UI_CHAR_DATA_DES_10010401 = {
           ContentTC = "追憶第一條解鎖條件",
           TextMapId = "UI_CHAR_DATA_DES_10010401"
-        },
-        UI_CHAR_DATA_TEXT_11010101 = {
-          ContentTC = "自你擁有記憶以來，貝蕾妮卡一直陪伴在你身邊。\n也許你已經是這個世界上陪她度過最長時光的人，但你依舊不曾完全瞭解她，正如你並不完全瞭解你自己。\n你是什麼人，她是什麼人，你們從何而來，又因何而遇……每當問到這些問題的時候，貝蕾妮卡都會猶豫，閃爍其詞，最後陷入長久的沉默。久而久之，你便不再詢問。\n你有太多不知道的事，但唯獨一件事你很清楚——\n無論何時，你都可以信任她。",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010101"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_11010102",
-    MaxKey = "UI_CHAR_DATA_TEXT_24010302",
+    MinKey = "UI_CHAR_DATA_TEXT_11010101",
+    MaxKey = "UI_CHAR_DATA_TEXT_24010301",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_11010101 = {
+          ContentTC = "自你擁有記憶以來，貝蕾妮卡一直陪伴在你身邊。\n也許你已經是這個世界上陪她度過最長時光的人，但你依舊不曾完全瞭解她，正如你並不完全瞭解你自己。\n你是什麼人，她是什麼人，你們從何而來，又因何而遇……每當問到這些問題的時候，貝蕾妮卡都會猶豫，閃爍其詞，最後陷入長久的沉默。久而久之，你便不再詢問。\n你有太多不知道的事，但唯獨一件事你很清楚——\n無論何時，你都可以信任她。",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010101"
+        },
         UI_CHAR_DATA_TEXT_11010102 = {
           ContentTC = "貝蕾妮卡是個直白、赤誠的人，她從來不會說謊，也很難理解言語背後的隱晦深意。貧瘠的生活教會了人們用虛與委蛇、口是心非的說辭來粉飾一切，可貝蕾妮卡一開口便總能戳穿所有的矯飾，所有的謊言，讓場面一度尷尬萬分。早些年人們還能容忍一個孩子的稚語童言，但當她漸漸長大，這樣的性子便讓她在村莊中格外不受歡迎。\n所以在年紀尚幼的時候，你便學會了察言觀色，以及用花樣百出的的話術應付不同人的本事——如果是貝蕾不喜歡、不擅長的事，就由自己來代勞吧。你這樣想，你會成為她的面具，她的唇齒。",
           TextMapId = "UI_CHAR_DATA_TEXT_11010102"
@@ -74727,19 +74731,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_24010301 = {
           ContentTC = "煙津渡枯榮閣是扶疏的故鄉。\n\n她於皓京結束了百年長眠。姐姐的學生們待她極好，他們告訴她這百年的變遷，為她剖析病理，竭盡全力為她調理身體，帶著她熟悉皓京。\n剛剛甦醒的扶疏難免為自己的未來感到迷茫。沒有人要求她去做什麼，也沒有人催促她去貫徹自己的使命。\n她花了很長的時間去理解，祝由不再是一個被人所迫切需要的職業。百年後的一切，什麼都很陌生，她學得很慢。當她終於勉強出師，做出的第一個決定就是要回到煙津渡的枯榮閣。\n\n也許是重活一世的惶惑不安，也許是想親眼見證祝由扶氏的結局，也許只是最簡單的故土難離……她有一千個回去的理由，也有一千個居留皓京的理由，但無論如何，她的雙腳自己選擇了落點。\n\n仿佛被執念裹挾，仿佛被因果牽引，扶疏無可抑制地踏上了歸途。",
           TextMapId = "UI_CHAR_DATA_TEXT_24010301"
-        },
-        UI_CHAR_DATA_TEXT_24010302 = {
-          ContentTC = "扶疏與扶風的關係充滿矛盾，但她們的徹底決裂則是因為扶風拋卻了祝由的身份，嘗試去探索另一條不以祝由的生命為代價，也可治病救人的道路。\n這是一條未知的道路，也足夠驚世駭俗。這意味著她背叛了枯榮閣，背叛了親人，也背叛了白龍神君所賜予的力量。\n\n時至今日，人們的生活早已離不開扶風建立的學說，人們心知肚明——為了祛除痛苦，人們默許了她對太皓權威的背叛。\n不管怎樣引經據典地將扶風包裝為「獲得太皓啟示的藥聖」，去除種種矯飾，在人們的意識深處，白龍神君的全知全能都被潛移默化地打上了小小的折扣。\n——因為那個女人，居然在神賜的恩澤之外，偷來了生死的權柄。",
-          TextMapId = "UI_CHAR_DATA_TEXT_24010302"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_24010303",
-    MaxKey = "UI_CHAR_DATA_TEXT_43010304",
+    MinKey = "UI_CHAR_DATA_TEXT_24010302",
+    MaxKey = "UI_CHAR_DATA_TEXT_43010303",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_24010302 = {
+          ContentTC = "扶疏與扶風的關係充滿矛盾，但她們的徹底決裂則是因為扶風拋卻了祝由的身份，嘗試去探索另一條不以祝由的生命為代價，也可治病救人的道路。\n這是一條未知的道路，也足夠驚世駭俗。這意味著她背叛了枯榮閣，背叛了親人，也背叛了白龍神君所賜予的力量。\n\n時至今日，人們的生活早已離不開扶風建立的學說，人們心知肚明——為了祛除痛苦，人們默許了她對太皓權威的背叛。\n不管怎樣引經據典地將扶風包裝為「獲得太皓啟示的藥聖」，去除種種矯飾，在人們的意識深處，白龍神君的全知全能都被潛移默化地打上了小小的折扣。\n——因為那個女人，居然在神賜的恩澤之外，偷來了生死的權柄。",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010302"
+        },
         UI_CHAR_DATA_TEXT_24010303 = {
           ContentTC = "扶風與扶疏姐妹倆曾在枯榮閣的庭院一起種下一棵杏樹。\n那年，一位被扶疏母親治癒的有龍氏感念枯榮閣恩情，彼時別無長物的他在枯榮閣的庭院施下術法，那術法賦予土地豐饒。據說此後在這枯榮閣的園子種下植物，那植物便能一年開花結果兩次，並且永遠生機勃勃。\n年幼的扶風好奇這豐饒的術法，便央求母親買來一棵杏樹苗，在後園找了片空地，拉著扶疏一起把這樹苗種下了。扶風貪玩而好動，輕輕一推，便把扶疏埋好的樹苗推倒了幾分。看著妹妹咬緊嘴唇泫然欲泣，她又趕緊回屋翻出珍藏的鐵皮罐子，嘩啦啦倒出一小堆蜜餞作為補償，扶疏方才破涕為笑。\n最終那棵樹還是這樣歪歪斜斜地種下去了。\n「許個願吧，」母親溫柔地對姐妹倆笑著，「你們的願望都能實現，就像這棵樹將結出甘甜的杏子。」\n\n扶疏仍不知道扶風當年究竟許下了怎樣的願望。\n但她還記得自己的心願——「如果我注定短壽，那便讓這棵杏樹代替我活下去，見證百代光陰，滄海桑田。」\n\n飛光飛光，來煎我壽，\n但願老者不死，少者不哭。\n枯骨榮百草，病樹春萬木。\n浩浩神君鑒，終不負所托。",
           TextMapId = "UI_CHAR_DATA_TEXT_24010303"
@@ -75535,19 +75539,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_43010303 = {
           ContentTC = "西比爾如今率領的十三軍團是皇帝直屬軍團，只為皇帝的夙願躬身，是陛下身旁最忠實可靠的獵犬。皇帝甚至給予了西比爾可以攜帶武器進入宮殿的特權。卡戎之民獲得這種榮譽，原本只會出現在他們撰寫的幻想故事中，但西比爾讓它成為了現實。\n當然，也正是因為皇帝的信賴與重用，元老院眾人愈發詰難她卑微的出身和囂張的氣焰。\n但只有西比爾自己知道，「榮耀盡歸吾皇」不過是一句慣用的話術，真正值得效忠的，現在只剩下自己。",
           TextMapId = "UI_CHAR_DATA_TEXT_43010303"
-        },
-        UI_CHAR_DATA_TEXT_43010304 = {
-          ContentTC = "「將知識視作攀登權力的階梯，抱著這樣的想法，你永遠無法掌握想獲取的知識。」\n西比爾以首席煉金師座下最優秀的學生之名畢業，但她敬重的老師卻只在畢業狀上留下這樣一句話。房間靜得恐怖，空氣裡只有西比爾壓抑的呼吸。",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010304"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_43010401",
-    MaxKey = "UI_CMName_Name_MatureWuyou",
+    MinKey = "UI_CHAR_DATA_TEXT_43010304",
+    MaxKey = "UI_CMName_Name_KamiPhantom",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_43010304 = {
+          ContentTC = "「將知識視作攀登權力的階梯，抱著這樣的想法，你永遠無法掌握想獲取的知識。」\n西比爾以首席煉金師座下最優秀的學生之名畢業，但她敬重的老師卻只在畢業狀上留下這樣一句話。房間靜得恐怖，空氣裡只有西比爾壓抑的呼吸。",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010304"
+        },
         UI_CHAR_DATA_TEXT_43010401 = {
           ContentTC = "在西比爾的記憶中，帝國的天空是從進入煉金院的那天才藍起來的。在那之前的很長一段時間，她的生活永遠都與泥濘骯髒的東西聯繫在一起，破爛的衣服、惡臭的垃圾、吵鬧的蚊蠅。那時的西比爾從來沒有仰望過天空，她知道頭頂上的是一片沉重的陰霾，沒有任何值得一看的東西。\n十歲的西比爾把將小腿折進特製的褲管中，熟練地偽裝成殘疾人匍匐在地上呻吟乞討，呼喚著路過的老爺善人們分點錢幣或食物。若是真有善心者想要施捨這個「殘疾孩子」，西比爾就會看準時機跳起搶奪他們的錢袋或提包，將人撞翻在地，接著以極快地速度跑入曲折的小巷，把惱怒的呵斥與追趕遠遠甩在身後。\n西比爾非常清楚自己在做什麼，她是得益於自己跑得快、力氣還不小才搶得了這份食物，她戰勝了善人們孱弱的同情，而此刻的飽腹變成了她的戰利品，因為這就是弱肉強食的法則。\n若是有一天她跑得不夠快了，或是藏身之處暴露，接著被人們抓住拳打腳踢直到斷氣——就像巷子裡那只跛腳的黑貓，西比爾也沒有一絲一毫的怨言，因為這就是弱肉強食的法則。",
           TextMapId = "UI_CHAR_DATA_TEXT_43010401"
@@ -76343,19 +76347,19 @@ local Data = {
         UI_CMName_Name_KamiPhantom = {
           ContentTC = "卡蜜拉的幻影",
           TextMapId = "UI_CMName_Name_KamiPhantom"
-        },
-        UI_CMName_Name_MatureWuyou = {
-          ContentTC = "老成的無由生",
-          TextMapId = "UI_CMName_Name_MatureWuyou"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMName_Name_NanHai",
-    MaxKey = "UI_CMNpc_Name_Jiasi",
+    MinKey = "UI_CMName_Name_MatureWuyou",
+    MaxKey = "UI_CMNpc_Name_JiaojiQNM",
     Loader = function()
       return {
+        UI_CMName_Name_MatureWuyou = {
+          ContentTC = "老成的無由生",
+          TextMapId = "UI_CMName_Name_MatureWuyou"
+        },
         UI_CMName_Name_NanHai = {
           ContentTC = "男孩",
           TextMapId = "UI_CMName_Name_NanHai"
@@ -77151,19 +77155,19 @@ local Data = {
         UI_CMNpc_Name_JiaojiQNM = {
           ContentTC = "焦急的青年",
           TextMapId = "UI_CMNpc_Name_JiaojiQNM"
-        },
-        UI_CMNpc_Name_Jiasi = {
-          ContentTC = "加斯頓",
-          TextMapId = "UI_CMNpc_Name_Jiasi"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMNpc_Name_JidongHuangzhe",
-    MaxKey = "UI_COMMONPOP_TEXT_100012",
+    MinKey = "UI_CMNpc_Name_Jiasi",
+    MaxKey = "UI_COMMONPOP_TEXT_100011",
     Loader = function()
       return {
+        UI_CMNpc_Name_Jiasi = {
+          ContentTC = "加斯頓",
+          TextMapId = "UI_CMNpc_Name_Jiasi"
+        },
         UI_CMNpc_Name_JidongHuangzhe = {
           ContentTC = "激動的患者",
           TextMapId = "UI_CMNpc_Name_JidongHuangzhe"
@@ -77959,19 +77963,19 @@ local Data = {
         UI_COMMONPOP_TEXT_100011 = {
           ContentTC = "是否恢復當前分頁下的默認設置",
           TextMapId = "UI_COMMONPOP_TEXT_100011"
-        },
-        UI_COMMONPOP_TEXT_100012 = {
-          ContentTC = "該按鍵已經被[%s]佔用，是否交換二者按鍵設置？",
-          TextMapId = "UI_COMMONPOP_TEXT_100012"
         }
       }
     end
   },
   {
-    MinKey = "UI_COMMONPOP_TEXT_100013",
-    MaxKey = "UI_CTL_CloseModList",
+    MinKey = "UI_COMMONPOP_TEXT_100012",
+    MaxKey = "UI_CTL_Clear",
     Loader = function()
       return {
+        UI_COMMONPOP_TEXT_100012 = {
+          ContentTC = "該按鍵已經被[%s]佔用，是否交換二者按鍵設置？",
+          TextMapId = "UI_COMMONPOP_TEXT_100012"
+        },
         UI_COMMONPOP_TEXT_100013 = {
           ContentTC = "請先閱讀並同意協議",
           TextMapId = "UI_COMMONPOP_TEXT_100013"
@@ -78764,19 +78768,19 @@ local Data = {
         UI_CTL_Clear = {
           ContentTC = "清除",
           TextMapId = "UI_CTL_Clear"
-        },
-        UI_CTL_CloseModList = {
-          ContentTC = "收起推薦面板",
-          TextMapId = "UI_CTL_CloseModList"
         }
       }
     end
   },
   {
-    MinKey = "UI_CTL_CloseTips",
-    MaxKey = "UI_Chat_GotoTeamUp",
+    MinKey = "UI_CTL_CloseModList",
+    MaxKey = "UI_Chat_DyeSuitFormat",
     Loader = function()
       return {
+        UI_CTL_CloseModList = {
+          ContentTC = "收起推薦面板",
+          TextMapId = "UI_CTL_CloseModList"
+        },
         UI_CTL_CloseTips = {
           ContentTC = "關閉提示",
           TextMapId = "UI_CTL_CloseTips"
@@ -79285,6 +79289,10 @@ local Data = {
           ContentTC = "第二章",
           TextMapId = "UI_ChapterNumber_02"
         },
+        UI_ChapterNumber_03 = {
+          ContentTC = "第三章",
+          TextMapId = "UI_ChapterNumber_03"
+        },
         UI_ChapterNumber_E0 = {
           ContentTC = "華胥",
           TextMapId = "UI_ChapterNumber_E0"
@@ -79568,7 +79576,15 @@ local Data = {
         UI_Chat_DyeSuitFormat = {
           ContentTC = "【染色方案：%s】",
           TextMapId = "UI_Chat_DyeSuitFormat"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chat_GotoLeague",
+    MaxKey = "UI_ConfirmPrivateChatClosure",
+    Loader = function()
+      return {
         UI_Chat_GotoLeague = {
           ContentTC = "前往公會",
           TextMapId = "UI_Chat_GotoLeague"
@@ -79576,15 +79592,7 @@ local Data = {
         UI_Chat_GotoTeamUp = {
           ContentTC = "前往組隊頻道",
           TextMapId = "UI_Chat_GotoTeamUp"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_Ignore",
-    MaxKey = "UI_ConfirmRoleAdjustment",
-    Loader = function()
-      return {
+        },
         UI_Chat_Ignore = {
           ContentTC = "消息免打擾",
           TextMapId = "UI_Chat_Ignore"
@@ -80376,7 +80384,15 @@ local Data = {
         UI_ConfirmPrivateChatClosure = {
           ContentTC = "關閉私聊後當前訊息記錄不可恢復，是否確認關閉？",
           TextMapId = "UI_ConfirmPrivateChatClosure"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ConfirmQuitGuild",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_15",
+    Loader = function()
+      return {
         UI_ConfirmQuitGuild = {
           ContentTC = "是否確認退出當前協會？",
           TextMapId = "UI_ConfirmQuitGuild"
@@ -80384,15 +80400,7 @@ local Data = {
         UI_ConfirmRoleAdjustment = {
           ContentTC = "是否確認將該玩家的職位從%s調整至<H>%s</>？",
           TextMapId = "UI_ConfirmRoleAdjustment"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Consumable_CardLevel_Max",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_151",
-    Loader = function()
-      return {
+        },
         UI_Consumable_CardLevel_Max = {
           ContentTC = "是否確認獲得 <highlight>%s</>×1？\n（該角色溯源已達第六根源）",
           TextMapId = "UI_Consumable_CardLevel_Max"
@@ -81178,7 +81186,15 @@ local Data = {
         UI_DUNGEON_AUTOCHESS_15 = {
           ContentTC = "公尚的棋局15",
           TextMapId = "UI_DUNGEON_AUTOCHESS_15"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_150",
+    MaxKey = "UI_DUNGEON_DES_TRAINING_5",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_150 = {
           ContentTC = "無盡棋局130",
           TextMapId = "UI_DUNGEON_AUTOCHESS_150"
@@ -81186,15 +81202,7 @@ local Data = {
         UI_DUNGEON_AUTOCHESS_151 = {
           ContentTC = "無盡棋局131",
           TextMapId = "UI_DUNGEON_AUTOCHESS_151"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_152",
-    MaxKey = "UI_DUNGEON_DES_TRAINING_7",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_152 = {
           ContentTC = "無盡棋局132",
           TextMapId = "UI_DUNGEON_AUTOCHESS_152"
@@ -81986,7 +81994,15 @@ local Data = {
         UI_DUNGEON_DES_TRAINING_5 = {
           ContentTC = "%d名敵人已生成",
           TextMapId = "UI_DUNGEON_DES_TRAINING_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_DES_TRAINING_6",
+    MaxKey = "UI_DispatchTag_Lucky",
+    Loader = function()
+      return {
         UI_DUNGEON_DES_TRAINING_6 = {
           ContentTC = "有敵人存在，無法進行整備",
           TextMapId = "UI_DUNGEON_DES_TRAINING_6"
@@ -81994,15 +82010,7 @@ local Data = {
         UI_DUNGEON_DES_TRAINING_7 = {
           ContentTC = "當前狀態不可進行整備",
           TextMapId = "UI_DUNGEON_DES_TRAINING_7"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_DES_TRAINING_8",
-    MaxKey = "UI_DispatchTag_Morality",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_DES_TRAINING_8 = {
           ContentTC = "最多生成%d名敵人",
           TextMapId = "UI_DUNGEON_DES_TRAINING_8"
@@ -82791,7 +82799,15 @@ local Data = {
         UI_DispatchTag_Lucky = {
           ContentTC = "諸神寵兒",
           TextMapId = "UI_DispatchTag_Lucky"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DispatchTag_Mine",
+    MaxKey = "UI_EXPLORE_KEY",
+    Loader = function()
+      return {
         UI_DispatchTag_Mine = {
           ContentTC = "地質員",
           TextMapId = "UI_DispatchTag_Mine"
@@ -82799,15 +82815,7 @@ local Data = {
         UI_DispatchTag_Morality = {
           ContentTC = "印象：道德",
           TextMapId = "UI_DispatchTag_Morality"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DispatchTag_Pet",
-    MaxKey = "UI_EXPLORE_STONE",
-    Loader = function()
-      return {
+        },
         UI_DispatchTag_Pet = {
           ContentTC = "訓練師",
           TextMapId = "UI_DispatchTag_Pet"
@@ -83599,7 +83607,15 @@ local Data = {
         UI_EXPLORE_KEY = {
           ContentTC = "儲物箱開啟失敗",
           TextMapId = "UI_EXPLORE_KEY"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_EXPLORE_PETCHEST_TOAST",
+    MaxKey = "UI_Extraction_TM_30",
+    Loader = function()
+      return {
         UI_EXPLORE_PETCHEST_TOAST = {
           ContentTC = "幫助弱小魔靈擺脫困境，拔劍吧！",
           TextMapId = "UI_EXPLORE_PETCHEST_TOAST"
@@ -83607,15 +83623,7 @@ local Data = {
         UI_EXPLORE_STONE = {
           ContentTC = "沒有足夠的祈福石！",
           TextMapId = "UI_EXPLORE_STONE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_EXPLORE_STONE_2",
-    MaxKey = "UI_Extraction_TM_32",
-    Loader = function()
-      return {
+        },
         UI_EXPLORE_STONE_2 = {
           ContentTC = "沒有足夠的礦石！",
           TextMapId = "UI_EXPLORE_STONE_2"
@@ -84407,7 +84415,15 @@ local Data = {
         UI_Extraction_TM_30 = {
           ContentTC = "比賽詳情",
           TextMapId = "UI_Extraction_TM_30"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Extraction_TM_31",
+    MaxKey = "UI_Friend_NoSignature",
+    Loader = function()
+      return {
         UI_Extraction_TM_31 = {
           ContentTC = "籌數不足",
           TextMapId = "UI_Extraction_TM_31"
@@ -84415,15 +84431,7 @@ local Data = {
         UI_Extraction_TM_32 = {
           ContentTC = "接取任務",
           TextMapId = "UI_Extraction_TM_32"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Extraction_TM_33",
-    MaxKey = "UI_Friend_OfflineNDay",
-    Loader = function()
-      return {
+        },
         UI_Extraction_TM_33 = {
           ContentTC = "任務開始",
           TextMapId = "UI_Extraction_TM_33"
@@ -85212,7 +85220,15 @@ local Data = {
         UI_Friend_NoSignature = {
           ContentTC = "該玩家暫無簽名",
           TextMapId = "UI_Friend_NoSignature"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Friend_OffLineToday",
+    MaxKey = "UI_HardBoss_Difficulty_Des_1011",
+    Loader = function()
+      return {
         UI_Friend_OffLineToday = {
           ContentTC = "1天內在線",
           TextMapId = "UI_Friend_OffLineToday"
@@ -85220,15 +85236,7 @@ local Data = {
         UI_Friend_OfflineNDay = {
           ContentTC = "已離線超過%s天",
           TextMapId = "UI_Friend_OfflineNDay"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Friend_OfflineOver30Day",
-    MaxKey = "UI_HardBoss_Difficulty_Des_1013",
-    Loader = function()
-      return {
+        },
         UI_Friend_OfflineOver30Day = {
           ContentTC = "已離線超過30天",
           TextMapId = "UI_Friend_OfflineOver30Day"
@@ -85860,7 +85868,7 @@ local Data = {
           TextMapId = "UI_GuildNameChangeCooldown"
         },
         UI_GuildNameChanged = {
-          ContentTC = "%s修改協會名稱",
+          ContentTC = "協會名稱從%s變更為%s",
           TextMapId = "UI_GuildNameChanged"
         },
         UI_GuildNameDuplicate = {
@@ -86014,7 +86022,15 @@ local Data = {
         UI_HardBoss_Difficulty_Des_1011 = {
           ContentTC = "格雷姆的死神。出現在格雷姆礦坑深處的巨大穢獸，機械性地重複著挖掘通道與吞噬發光物的行為。",
           TextMapId = "UI_HardBoss_Difficulty_Des_1011"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HardBoss_Difficulty_Des_1012",
+    MaxKey = "UI_ImpressionShop_UnlockCondition_02",
+    Loader = function()
+      return {
         UI_HardBoss_Difficulty_Des_1012 = {
           ContentTC = "格雷姆的死神。出現在格雷姆礦坑深處的巨大穢獸，機械性地重複著挖掘通道與吞噬發光物的行為。",
           TextMapId = "UI_HardBoss_Difficulty_Des_1012"
@@ -86022,15 +86038,7 @@ local Data = {
         UI_HardBoss_Difficulty_Des_1013 = {
           ContentTC = "格雷姆的死神。出現在格雷姆礦坑深處的巨大穢獸，機械性地重複著挖掘通道與吞噬發光物的行為。",
           TextMapId = "UI_HardBoss_Difficulty_Des_1013"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HardBoss_Difficulty_Des_1014",
-    MaxKey = "UI_Impression_Click",
-    Loader = function()
-      return {
+        },
         UI_HardBoss_Difficulty_Des_1014 = {
           ContentTC = "格雷姆的死神。出現在格雷姆礦坑深處的巨大穢獸，機械性地重複著挖掘通道與吞噬發光物的行為。",
           TextMapId = "UI_HardBoss_Difficulty_Des_1014"
@@ -86819,7 +86827,15 @@ local Data = {
         UI_ImpressionShop_UnlockCondition_02 = {
           ContentTC = "%s屬性達到%d後解鎖",
           TextMapId = "UI_ImpressionShop_UnlockCondition_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Impression_Again",
+    MaxKey = "UI_Loading_Downloading",
+    Loader = function()
+      return {
         UI_Impression_Again = {
           ContentTC = "再次擲骰",
           TextMapId = "UI_Impression_Again"
@@ -86827,15 +86843,7 @@ local Data = {
         UI_Impression_Click = {
           ContentTC = "點擊擲骰",
           TextMapId = "UI_Impression_Click"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Impression_Continue",
-    MaxKey = "UI_Loading_Pausing",
-    Loader = function()
-      return {
+        },
         UI_Impression_Continue = {
           ContentTC = "放棄",
           TextMapId = "UI_Impression_Continue"
@@ -87624,7 +87632,15 @@ local Data = {
         UI_Loading_Downloading = {
           ContentTC = "下載資源中…",
           TextMapId = "UI_Loading_Downloading"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Loading_NeedRestart",
+    MaxKey = "UI_MECHANISM_10616",
+    Loader = function()
+      return {
         UI_Loading_NeedRestart = {
           ContentTC = "本次更新需要重新開機遊戲後生效",
           TextMapId = "UI_Loading_NeedRestart"
@@ -87632,15 +87648,7 @@ local Data = {
         UI_Loading_Pausing = {
           ContentTC = "下載已暫停",
           TextMapId = "UI_Loading_Pausing"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Loading_Remain",
-    MaxKey = "UI_MECHANISM_10618",
-    Loader = function()
-      return {
+        },
         UI_Loading_Remain = {
           ContentTC = "預計下載剩餘",
           TextMapId = "UI_Loading_Remain"
@@ -88432,7 +88440,15 @@ local Data = {
         UI_MECHANISM_10616 = {
           ContentTC = "香料動力裝置",
           TextMapId = "UI_MECHANISM_10616"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_10617",
+    MaxKey = "UI_ModGuideBook_Task",
+    Loader = function()
+      return {
         UI_MECHANISM_10617 = {
           ContentTC = "發光植物",
           TextMapId = "UI_MECHANISM_10617"
@@ -88440,15 +88456,7 @@ local Data = {
         UI_MECHANISM_10618 = {
           ContentTC = "沉船",
           TextMapId = "UI_MECHANISM_10618"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_10619",
-    MaxKey = "UI_ModGuideBook_Task_Collecting",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_10619 = {
           ContentTC = "千樞狩陣·核心",
           TextMapId = "UI_MECHANISM_10619"
@@ -89240,7 +89248,15 @@ local Data = {
         UI_ModGuideBook_Task = {
           ContentTC = "魔之楔任務",
           TextMapId = "UI_ModGuideBook_Task"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ModGuideBook_Task_Block",
+    MaxKey = "UI_NPC_Name_guibeifa_Sce",
+    Loader = function()
+      return {
         UI_ModGuideBook_Task_Block = {
           ContentTC = "暫無選中魔之楔",
           TextMapId = "UI_ModGuideBook_Task_Block"
@@ -89248,15 +89264,7 @@ local Data = {
         UI_ModGuideBook_Task_Collecting = {
           ContentTC = "收集進度",
           TextMapId = "UI_ModGuideBook_Task_Collecting"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ModGuideBook_Task_Complete",
-    MaxKey = "UI_NPC_Name_guolaosou_Sce",
-    Loader = function()
-      return {
+        },
         UI_ModGuideBook_Task_Complete = {
           ContentTC = "任務完成",
           TextMapId = "UI_ModGuideBook_Task_Complete"
@@ -90039,7 +90047,15 @@ local Data = {
         UI_NPC_Name_guibeifa_Sce = {
           ContentTC = "桂北發",
           TextMapId = "UI_NPC_Name_guibeifa_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_guizhao_Sce",
+    MaxKey = "UI_Name_Walnut_1024",
+    Loader = function()
+      return {
         UI_NPC_Name_guizhao_Sce = {
           ContentTC = "桂棹",
           TextMapId = "UI_NPC_Name_guizhao_Sce"
@@ -90047,15 +90063,7 @@ local Data = {
         UI_NPC_Name_guolaosou_Sce = {
           ContentTC = "郭老叟",
           TextMapId = "UI_NPC_Name_guolaosou_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_guowenzhao_Sce",
-    MaxKey = "UI_Name_Walnut_151321",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_guowenzhao_Sce = {
           ContentTC = "郭文昭",
           TextMapId = "UI_NPC_Name_guowenzhao_Sce"
@@ -90847,7 +90855,15 @@ local Data = {
         UI_Name_Walnut_1024 = {
           ContentTC = "密函：蘇乙",
           TextMapId = "UI_Name_Walnut_1024"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_1025",
+    MaxKey = "UI_Npc_DreamMaerke",
+    Loader = function()
+      return {
         UI_Name_Walnut_1025 = {
           ContentTC = "密函：芙羅拉",
           TextMapId = "UI_Name_Walnut_1025"
@@ -90855,15 +90871,7 @@ local Data = {
         UI_Name_Walnut_151321 = {
           ContentTC = "密函：獅鷲之虛無・燎原",
           TextMapId = "UI_Name_Walnut_151321"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_151322",
-    MaxKey = "UI_Npc_HelpVoice",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_151322 = {
           ContentTC = "密函：獅鷲之駭浪・燎原",
           TextMapId = "UI_Name_Walnut_151322"
@@ -91652,7 +91660,15 @@ local Data = {
         UI_Npc_DreamMaerke = {
           ContentTC = "瑪爾科？",
           TextMapId = "UI_Npc_DreamMaerke"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_EnemySoldier",
+    MaxKey = "UI_Npc_Name_FindSaiqiNpc3",
+    Loader = function()
+      return {
         UI_Npc_EnemySoldier = {
           ContentTC = "士兵",
           TextMapId = "UI_Npc_EnemySoldier"
@@ -91660,15 +91676,7 @@ local Data = {
         UI_Npc_HelpVoice = {
           ContentTC = "呼救的聲音",
           TextMapId = "UI_Npc_HelpVoice"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_HurtVoice",
-    MaxKey = "UI_Npc_Name_FindSaiqiNpc5",
-    Loader = function()
-      return {
+        },
         UI_Npc_HurtVoice = {
           ContentTC = "（痛苦的嗚咽聲）",
           TextMapId = "UI_Npc_HurtVoice"
@@ -92460,7 +92468,15 @@ local Data = {
         UI_Npc_Name_FindSaiqiNpc3 = {
           ContentTC = "強作鎮定的士兵",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_FindSaiqiNpc4",
+    MaxKey = "UI_Npc_Name_Waisongjiaojiao",
+    Loader = function()
+      return {
         UI_Npc_Name_FindSaiqiNpc4 = {
           ContentTC = "強作鎮定的士兵",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc4"
@@ -92468,15 +92484,7 @@ local Data = {
         UI_Npc_Name_FindSaiqiNpc5 = {
           ContentTC = "驚慌的平民",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_FindSaiqiNpc6",
-    MaxKey = "UI_Npc_Name_Wanzu2",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_FindSaiqiNpc6 = {
           ContentTC = "憤怒的平民",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc6"
@@ -93268,7 +93276,15 @@ local Data = {
         UI_Npc_Name_Waisongjiaojiao = {
           ContentTC = "外送皎皎",
           TextMapId = "UI_Npc_Name_Waisongjiaojiao"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Wanzu1",
+    MaxKey = "UI_OPTION_Language_NoDownload",
+    Loader = function()
+      return {
         UI_Npc_Name_Wanzu1 = {
           ContentTC = "腕足1號",
           TextMapId = "UI_Npc_Name_Wanzu1"
@@ -93276,15 +93292,7 @@ local Data = {
         UI_Npc_Name_Wanzu2 = {
           ContentTC = "腕足2號",
           TextMapId = "UI_Npc_Name_Wanzu2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Wanzu3",
-    MaxKey = "UI_OPTION_Language_Unload",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Wanzu3 = {
           ContentTC = "腕足3號",
           TextMapId = "UI_Npc_Name_Wanzu3"
@@ -94076,7 +94084,15 @@ local Data = {
         UI_OPTION_Language_NoDownload = {
           ContentTC = "未下載",
           TextMapId = "UI_OPTION_Language_NoDownload"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_Language_Pause_Unable",
+    MaxKey = "UI_PATCH_DOWNLOADING",
+    Loader = function()
+      return {
         UI_OPTION_Language_Pause_Unable = {
           ContentTC = "當前階段無法暫停",
           TextMapId = "UI_OPTION_Language_Pause_Unable"
@@ -94084,15 +94100,7 @@ local Data = {
         UI_OPTION_Language_Unload = {
           ContentTC = "卸載",
           TextMapId = "UI_OPTION_Language_Unload"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_Language_Unload_Confirm",
-    MaxKey = "UI_PATCH_ENSURE",
-    Loader = function()
-      return {
+        },
         UI_OPTION_Language_Unload_Confirm = {
           ContentTC = "是否確認卸載%s語音包？",
           TextMapId = "UI_OPTION_Language_Unload_Confirm"
@@ -94884,7 +94892,15 @@ local Data = {
         UI_PATCH_DOWNLOADING = {
           ContentTC = "正在下載",
           TextMapId = "UI_PATCH_DOWNLOADING"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PATCH_DOWNLOADSPEED",
+    MaxKey = "UI_PlayerHead_Name_10021",
+    Loader = function()
+      return {
         UI_PATCH_DOWNLOADSPEED = {
           ContentTC = "%.2fKB/秒,剩餘時間:%.0f秒",
           TextMapId = "UI_PATCH_DOWNLOADSPEED"
@@ -94892,15 +94908,7 @@ local Data = {
         UI_PATCH_ENSURE = {
           ContentTC = "確定",
           TextMapId = "UI_PATCH_ENSURE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PATCH_GETREMOTEPAKLISTFAILED",
-    MaxKey = "UI_PlayerHead_Name_10023",
-    Loader = function()
-      return {
+        },
         UI_PATCH_GETREMOTEPAKLISTFAILED = {
           ContentTC = "獲取遠端版本資訊失敗，是否重新嘗試？",
           TextMapId = "UI_PATCH_GETREMOTEPAKLISTFAILED"
@@ -95689,7 +95697,15 @@ local Data = {
         UI_PlayerHead_Name_10021 = {
           ContentTC = "一體雙生的肖像",
           TextMapId = "UI_PlayerHead_Name_10021"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10022",
+    MaxKey = "UI_PrivateChatNotEnabled",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10022 = {
           ContentTC = "百花公主的肖像",
           TextMapId = "UI_PlayerHead_Name_10022"
@@ -95697,15 +95713,7 @@ local Data = {
         UI_PlayerHead_Name_10023 = {
           ContentTC = "生意人的肖像",
           TextMapId = "UI_PlayerHead_Name_10023"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10024",
-    MaxKey = "UI_Prop_ExploreItem",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10024 = {
           ContentTC = "飄零劍客的肖像",
           TextMapId = "UI_PlayerHead_Name_10024"
@@ -96497,7 +96505,15 @@ local Data = {
         UI_PrivateChatNotEnabled = {
           ContentTC = "該玩家暫未開啟私聊",
           TextMapId = "UI_PrivateChatNotEnabled"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Prompt_QuestTrans",
+    MaxKey = "UI_RegionOnline_NoApplication",
+    Loader = function()
+      return {
         UI_Prompt_QuestTrans = {
           ContentTC = "是否前往",
           TextMapId = "UI_Prompt_QuestTrans"
@@ -96505,15 +96521,7 @@ local Data = {
         UI_Prop_ExploreItem = {
           ContentTC = "探索道具",
           TextMapId = "UI_Prop_ExploreItem"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Prop_Notenough",
-    MaxKey = "UI_RegionOnline_NoPlayer",
-    Loader = function()
-      return {
+        },
         UI_Prop_Notenough = {
           ContentTC = "材料不足",
           TextMapId = "UI_Prop_Notenough"
@@ -97302,7 +97310,15 @@ local Data = {
         UI_RegionOnline_NoApplication = {
           ContentTC = "暫無申請",
           TextMapId = "UI_RegionOnline_NoApplication"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RegionOnline_NoInvitation",
+    MaxKey = "UI_SHOP_SUBTAB_NAME_Prism",
+    Loader = function()
+      return {
         UI_RegionOnline_NoInvitation = {
           ContentTC = "暫無邀請",
           TextMapId = "UI_RegionOnline_NoInvitation"
@@ -97310,15 +97326,7 @@ local Data = {
         UI_RegionOnline_NoPlayer = {
           ContentTC = "暫無可邀請的玩家",
           TextMapId = "UI_RegionOnline_NoPlayer"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RegionOnline_Occupied",
-    MaxKey = "UI_SHOP_SUBTAB_NAME_RESOURCE_High",
-    Loader = function()
-      return {
+        },
         UI_RegionOnline_Occupied = {
           ContentTC = "占用中",
           TextMapId = "UI_RegionOnline_Occupied"
@@ -98110,7 +98118,15 @@ local Data = {
         UI_SHOP_SUBTAB_NAME_Prism = {
           ContentTC = "常駐兌換",
           TextMapId = "UI_SHOP_SUBTAB_NAME_Prism"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOP_SUBTAB_NAME_RESOURCE",
+    MaxKey = "UI_Select_Price",
+    Loader = function()
+      return {
         UI_SHOP_SUBTAB_NAME_RESOURCE = {
           ContentTC = "純白砂礫",
           TextMapId = "UI_SHOP_SUBTAB_NAME_RESOURCE"
@@ -98118,15 +98134,7 @@ local Data = {
         UI_SHOP_SUBTAB_NAME_RESOURCE_High = {
           ContentTC = "璀璨砂礫",
           TextMapId = "UI_SHOP_SUBTAB_NAME_RESOURCE_High"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SHOP_SUBTAB_NAME_ReSPPrism",
-    MaxKey = "UI_Select_Time",
-    Loader = function()
-      return {
+        },
         UI_SHOP_SUBTAB_NAME_ReSPPrism = {
           ContentTC = "限時復刻",
           TextMapId = "UI_SHOP_SUBTAB_NAME_ReSPPrism"
@@ -98912,7 +98920,15 @@ local Data = {
         UI_Select_Price = {
           ContentTC = "售價",
           TextMapId = "UI_Select_Price"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Select_Server",
+    MaxKey = "UI_Skin_Des_3201",
+    Loader = function()
+      return {
         UI_Select_Server = {
           ContentTC = "選擇服務器",
           TextMapId = "UI_Select_Server"
@@ -98920,15 +98936,7 @@ local Data = {
         UI_Select_Time = {
           ContentTC = "上架時間",
           TextMapId = "UI_Select_Time"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Select_Unique",
-    MaxKey = "UI_Skin_Des_410101",
-    Loader = function()
-      return {
+        },
         UI_Select_Unique = {
           ContentTC = "稀有度",
           TextMapId = "UI_Select_Unique"
@@ -99625,6 +99633,10 @@ local Data = {
           ContentTC = "黑色是夜晚的顏色，它為大地罩起寧靜而安心的面紗；黑色是影子的顏色，它能形影不離地守在至親之人的身旁。貝蕾妮卡喜歡這個顏色。",
           TextMapId = "UI_Skin_Des_1101"
         },
+        UI_Skin_Des_1102 = {
+          ContentTC = "無論她走到何處，海伯利亞那巨大的陰影彷彿都投射在她的身上，化作無形的漆黑囚籠。",
+          TextMapId = "UI_Skin_Des_1102"
+        },
         UI_Skin_Des_110201 = {
           ContentTC = "高潔的天使執起裁決的劍，她必將那有罪者審判，她必將那無罪者寬恕。",
           TextMapId = "UI_Skin_Des_110201"
@@ -99705,6 +99717,10 @@ local Data = {
           ContentTC = "縱使世間再無神跡，仍有凡人之軀願為信仰負重前行。",
           TextMapId = "UI_Skin_Des_310101"
         },
+        UI_Skin_Des_3102 = {
+          ContentTC = "裙襬之上，捧著精心裁剪的花束；裙襬之下，藏著危險致命的槍火。一如裙襬的黑白兩色，在光與影之間，寫下一位女僕忙碌的一日。",
+          TextMapId = "UI_Skin_Des_3102"
+        },
         UI_Skin_Des_3103 = {
           ContentTC = "燃燒的紅與白，深鎖了一位瘋子的爆炸狂想，縫合出一位少年的無瑕夢鄉。",
           TextMapId = "UI_Skin_Des_3103"
@@ -99712,7 +99728,15 @@ local Data = {
         UI_Skin_Des_3201 = {
           ContentTC = "身負的鎖鏈與棘刺不僅是對罪惡的懲戒，同時也是對心中正義之火的約束。",
           TextMapId = "UI_Skin_Des_3201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Des_3202",
+    MaxKey = "UI_SpeakName_Zhongren9",
+    Loader = function()
+      return {
         UI_Skin_Des_3202 = {
           ContentTC = "瑰麗的光澤勾勒出令人屏息的曲線，舉手投足，盡是酒香與夜色交融的氤氳吐息。",
           TextMapId = "UI_Skin_Des_3202"
@@ -99728,15 +99752,7 @@ local Data = {
         UI_Skin_Des_410101 = {
           ContentTC = "一汪幽影灑月夜，半卷書籤話鬼神。",
           TextMapId = "UI_Skin_Des_410101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Des_4102",
-    MaxKey = "UI_Squad_Edit",
-    Loader = function()
-      return {
+        },
         UI_Skin_Des_4102 = {
           ContentTC = "初陽融化了金箔，傾倒在瑰麗的錦緞上，連同變革的意志一起，燃燒在金黃的瞳孔中。",
           TextMapId = "UI_Skin_Des_4102"
@@ -100465,6 +100481,10 @@ local Data = {
           ContentTC = "嚴肅的士兵",
           TextMapId = "UI_SpeakName_YansuShibing"
         },
+        UI_SpeakName_Yinyoushiren = {
+          ContentTC = "等候的吟遊詩人",
+          TextMapId = "UI_SpeakName_Yinyoushiren"
+        },
         UI_SpeakName_YouyaShengyin = {
           ContentTC = "優雅的聲音",
           TextMapId = "UI_SpeakName_YouyaShengyin"
@@ -100473,6 +100493,58 @@ local Data = {
           ContentTC = "眾人",
           TextMapId = "UI_SpeakName_Zhongren"
         },
+        UI_SpeakName_Zhongren1 = {
+          ContentTC = "麵包店僱員切達·培根",
+          TextMapId = "UI_SpeakName_Zhongren1"
+        },
+        UI_SpeakName_Zhongren10 = {
+          ContentTC = "提圖斯·法斯圖斯子爵",
+          TextMapId = "UI_SpeakName_Zhongren10"
+        },
+        UI_SpeakName_Zhongren11 = {
+          ContentTC = "庫普里烏斯男爵",
+          TextMapId = "UI_SpeakName_Zhongren11"
+        },
+        UI_SpeakName_Zhongren2 = {
+          ContentTC = "裁縫蘇珊娜",
+          TextMapId = "UI_SpeakName_Zhongren2"
+        },
+        UI_SpeakName_Zhongren3 = {
+          ContentTC = "邋遢的勒龐大叔",
+          TextMapId = "UI_SpeakName_Zhongren3"
+        },
+        UI_SpeakName_Zhongren4 = {
+          ContentTC = "水道修理工勒龐",
+          TextMapId = "UI_SpeakName_Zhongren4"
+        },
+        UI_SpeakName_Zhongren5 = {
+          ContentTC = "報紙主編莉薇婭",
+          TextMapId = "UI_SpeakName_Zhongren5"
+        },
+        UI_SpeakName_Zhongren6 = {
+          ContentTC = "吟遊詩人艾里斯",
+          TextMapId = "UI_SpeakName_Zhongren6"
+        },
+        UI_SpeakName_Zhongren7 = {
+          ContentTC = "司法官米蘭達",
+          TextMapId = "UI_SpeakName_Zhongren7"
+        },
+        UI_SpeakName_Zhongren8 = {
+          ContentTC = "洗衣工漢娜",
+          TextMapId = "UI_SpeakName_Zhongren8"
+        },
+        UI_SpeakName_Zhongren9 = {
+          ContentTC = "鍛鐵工迪米特里",
+          TextMapId = "UI_SpeakName_Zhongren9"
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SpecialQuest_GiveUp",
+    MaxKey = "UI_TEMPLE_81403",
+    Loader = function()
+      return {
         UI_SpecialQuest_GiveUp = {
           ContentTC = "中止任務",
           TextMapId = "UI_SpecialQuest_GiveUp"
@@ -100536,15 +100608,7 @@ local Data = {
         UI_Squad_Edit = {
           ContentTC = "編輯預設",
           TextMapId = "UI_Squad_Edit"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Squad_Elemental_Weakness",
-    MaxKey = "UI_TEMPLE_Catch_1",
-    Loader = function()
-      return {
+        },
         UI_Squad_Elemental_Weakness = {
           ContentTC = "推薦使用%s角色進行挑戰",
           TextMapId = "UI_Squad_Elemental_Weakness"
@@ -101280,7 +101344,15 @@ local Data = {
         UI_TEMPLE_81403 = {
           ContentTC = "追擊打打打打打劫皎皎，獲取金幣",
           TextMapId = "UI_TEMPLE_81403"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_81501",
+    MaxKey = "UI_Theater_Donate_Step",
+    Loader = function()
+      return {
         UI_TEMPLE_81501 = {
           ContentTC = "射擊旋轉機關，改變圖案，消除機關",
           TextMapId = "UI_TEMPLE_81501"
@@ -101344,15 +101416,7 @@ local Data = {
         UI_TEMPLE_Catch_1 = {
           ContentTC = "困住敵人啦！",
           TextMapId = "UI_TEMPLE_Catch_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_Catch_2",
-    MaxKey = "UI_Time_Minute_NotHighlight",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_Catch_2 = {
           ContentTC = "敵人多多！雙倍積分！",
           TextMapId = "UI_TEMPLE_Catch_2"
@@ -102088,7 +102152,15 @@ local Data = {
         UI_Theater_Donate_Step = {
           ContentTC = "%s階段",
           TextMapId = "UI_Theater_Donate_Step"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Theater_Donate_Success",
+    MaxKey = "UI_WEAPON_DESC_20402",
+    Loader = function()
+      return {
         UI_Theater_Donate_Success = {
           ContentTC = "提交成功",
           TextMapId = "UI_Theater_Donate_Success"
@@ -102152,15 +102224,7 @@ local Data = {
         UI_Time_Minute_NotHighlight = {
           ContentTC = "%s分",
           TextMapId = "UI_Time_Minute_NotHighlight"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Time_Second",
-    MaxKey = "UI_WEAPON_DESC_20511",
-    Loader = function()
-      return {
+        },
         UI_Time_Second = {
           ContentTC = "<highlight>%s</>秒",
           TextMapId = "UI_Time_Second"
@@ -102887,7 +102951,15 @@ local Data = {
         UI_WEAPON_DESC_20402 = {
           ContentTC = "將花種註入身軀，令毀滅從中綻放。",
           TextMapId = "UI_WEAPON_DESC_20402"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_20403",
+    MaxKey = "UI_Walnut_Toast_LackWalnut",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_20403 = {
           ContentTC = "艾利西安傳頌會神聖鳶尾騎士團的騎士們使用的槍械——聖哉！吾等誓讓九神的福音響徹阿特拉西亞的每個角落。",
           TextMapId = "UI_WEAPON_DESC_20403"
@@ -102951,15 +103023,7 @@ local Data = {
         UI_WEAPON_DESC_20511 = {
           ContentTC = "以鮮血，銘刻薄暮的誓約。",
           TextMapId = "UI_WEAPON_DESC_20511"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_20512",
-    MaxKey = "UI_WeaponAccessory_Desc_10022",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_20512 = {
           ContentTC = "蕩漾的琥珀光澤，在半醉半醒間反射著爐火的餘溫。",
           TextMapId = "UI_WEAPON_DESC_20512"
@@ -103695,7 +103759,15 @@ local Data = {
         UI_Walnut_Toast_LackWalnut = {
           ContentTC = "當前密函數量不足",
           TextMapId = "UI_Walnut_Toast_LackWalnut"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Walnut_Type_Des_1",
+    MaxKey = "UI_WeaponSkin_Preview",
+    Loader = function()
+      return {
         UI_Walnut_Type_Des_1 = {
           ContentTC = "角色的密函",
           TextMapId = "UI_Walnut_Type_Des_1"
@@ -103759,15 +103831,7 @@ local Data = {
         UI_WeaponAccessory_Desc_10022 = {
           ContentTC = "龍在任何時代都擁有萬千擁躉，它強大、野性卻又因鮮有人見而顯得疏遠朦朧。正是這朦朧的概念，為人們搭建起肆意揮灑想像的無垠熱土。",
           TextMapId = "UI_WeaponAccessory_Desc_10022"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponAccessory_Desc_10023",
-    MaxKey = "UI_Weapon_BreakRewardAutoCollect",
-    Loader = function()
-      return {
+        },
         UI_WeaponAccessory_Desc_10023 = {
           ContentTC = "蛋殼之下還是蛋殼，蛋殼之下就是蛋殼，絕對不是皎皎，絕對！",
           TextMapId = "UI_WeaponAccessory_Desc_10023"
@@ -104503,7 +104567,15 @@ local Data = {
         UI_WeaponSkin_Preview = {
           ContentTC = "武器形象預覽",
           TextMapId = "UI_WeaponSkin_Preview"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponStrength_After",
+    MaxKey = "VoiceDes104",
+    Loader = function()
+      return {
         UI_WeaponStrength_After = {
           ContentTC = "熔煉後效果",
           TextMapId = "UI_WeaponStrength_After"
@@ -104567,15 +104639,7 @@ local Data = {
         UI_Weapon_BreakRewardAutoCollect = {
           ContentTC = "<H>%s</>未領取的突破獎勵已自動領取",
           TextMapId = "UI_Weapon_BreakRewardAutoCollect"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Weapon_Enhancement",
-    MaxKey = "VoiceDes120",
-    Loader = function()
-      return {
+        },
         UI_Weapon_Enhancement = {
           ContentTC = "武器整備",
           TextMapId = "UI_Weapon_Enhancement"
@@ -105308,7 +105372,15 @@ local Data = {
         VoiceDes104 = {
           ContentTC = "關於秘密",
           TextMapId = "VoiceDes104"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes105",
+    MaxKey = "WikiText_20400105",
+    Loader = function()
+      return {
         VoiceDes105 = {
           ContentTC = "關於夢",
           TextMapId = "VoiceDes105"
@@ -105372,15 +105444,7 @@ local Data = {
         VoiceDes120 = {
           ContentTC = "關於口琴Ⅱ",
           TextMapId = "VoiceDes120"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes121",
-    MaxKey = "WikiText_30300201",
-    Loader = function()
-      return {
+        },
         VoiceDes121 = {
           ContentTC = "關於軍團Ⅰ",
           TextMapId = "VoiceDes121"
@@ -106116,7 +106180,15 @@ local Data = {
         WikiText_20400105 = {
           ContentTC = "只擁有最近幾年的記憶，對自己的過去和來處一無所知。",
           TextMapId = "WikiText_20400105"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20400201",
+    MaxKey = "WuyoushengEvent_Pet604_SkillDesLv_2",
+    Loader = function()
+      return {
         WikiText_20400201 = {
           ContentTC = "在某個夜晚出現在水仙平原酒館，花費重金要求卡蜜拉前往冰湖城外搭救{nickname}的神秘人物。",
           TextMapId = "WikiText_20400201"
@@ -106180,15 +106252,7 @@ local Data = {
         WikiText_30300201 = {
           ContentTC = "外表類似人類孩童且擁有高等智慧的生物種族，以白皙的膚色和髮色為主要外貌特徵，壽命較長卻不會衰老。皎皎之民十分親近人類，在阿特拉西亞大陸的各個地區都能見到她們與人類一同生活的融洽景象。",
           TextMapId = "WikiText_30300201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_30300202",
-    MaxKey = "ZhiLiuEntrust_Objective",
-    Loader = function()
-      return {
+        },
         WikiText_30300202 = {
           ContentTC = "雖然外表大多相似，但每個皎皎之民都有著不同的擅長領域，例如鍛造、經商、投資等等。水仙平原的白似乎是個例外；又或許她的特長便是自吹自擂。",
           TextMapId = "WikiText_30300202"
@@ -106924,7 +106988,15 @@ local Data = {
         WuyoushengEvent_Pet604_SkillDesLv_2 = {
           ContentTC = "技能範圍提高100%，技能耐久提高100%",
           TextMapId = "WuyoushengEvent_Pet604_SkillDesLv_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WuyoushengEvent_Pet604_SkillDesLv_3",
+    MaxKey = "voice_ch_char_Feina_vo_skill01_r01",
+    Loader = function()
+      return {
         WuyoushengEvent_Pet604_SkillDesLv_3 = {
           ContentTC = "支援技能冷卻時間減少50%",
           TextMapId = "WuyoushengEvent_Pet604_SkillDesLv_3"
@@ -106985,15 +107057,7 @@ local Data = {
         ZhiLiuEntrust_Objective = {
           ContentTC = "委託目標",
           TextMapId = "ZhiLiuEntrust_Objective"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "ZhiLiuEntrust_Progress",
-    MaxKey = "voice_ch_char_Feina_vo_topic_05_1",
-    Loader = function()
-      return {
+        },
         ZhiLiuEntrust_Progress = {
           ContentTC = "委託完成進度",
           TextMapId = "ZhiLiuEntrust_Progress"
@@ -107729,7 +107793,15 @@ local Data = {
         voice_ch_char_Feina_vo_skill01_r01 = {
           ContentTC = "♪ 星星～閃閃發亮～",
           TextMapId = "voice_ch_char_Feina_vo_skill01_r01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Feina_vo_skill01_r02",
+    MaxKey = "voice_ch_char_Kezhou_vo_skill01_r02",
+    Loader = function()
+      return {
         voice_ch_char_Feina_vo_skill01_r02 = {
           ContentTC = "♪ 我最美麗的~花園~",
           TextMapId = "voice_ch_char_Feina_vo_skill01_r02"
@@ -107793,15 +107865,7 @@ local Data = {
         voice_ch_char_Feina_vo_topic_05_1 = {
           ContentTC = "他是最偉大的魔法師，是說話最好聽的人，是全世界最溫柔最溫柔的人……",
           TextMapId = "voice_ch_char_Feina_vo_topic_05_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_topic_05_2",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_03_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_topic_05_2 = {
           ContentTC = "唔，你看起來有很多很多問題，我哪裡說的不對嗎？",
           TextMapId = "voice_ch_char_Feina_vo_topic_05_2"
@@ -108537,7 +108601,15 @@ local Data = {
         voice_ch_char_Kezhou_vo_skill01_r02 = {
           ContentTC = "留步於此！",
           TextMapId = "voice_ch_char_Kezhou_vo_skill01_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_skill02_r01",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_skill01_r02",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_skill02_r01 = {
           ContentTC = "十步以內，寸草不生。",
           TextMapId = "voice_ch_char_Kezhou_vo_skill02_r01"
@@ -108601,15 +108673,7 @@ local Data = {
         voice_ch_char_Kezhou_vo_topic_03_3 = {
           ContentTC = "但是，如果碰見能痛快打上一場的對手，我肯定會拔出劍來，全力以赴。",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_03_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Nifu_vo_die_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_topic_04_1 = {
           ContentTC = "確實，你這麼一問我能想到不少。啥啥一哥，什麼王，某仙之類，用動物來做外號的尤其多，龍虎獅鶴，飛禽走獸都有，非常熱鬧。",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_04_1"
@@ -109345,7 +109409,15 @@ local Data = {
         voice_ch_char_NanzhuLight_vo_skill01_r02 = {
           ContentTC = "飛光。",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill01_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_NanzhuLight_vo_skill02_r01",
+    MaxKey = "voice_ch_char_Suyi01_vo_appear",
+    Loader = function()
+      return {
         voice_ch_char_NanzhuLight_vo_skill02_r01 = {
           ContentTC = "這次，輪到我來保護別人。",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r01"
@@ -109409,15 +109481,7 @@ local Data = {
         voice_ch_char_Nifu_vo_die_r02 = {
           ContentTC = "只需享受這片刻沉眠。",
           TextMapId = "voice_ch_char_Nifu_vo_die_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_fail",
-    MaxKey = "voice_ch_char_Suyi_vo_die_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_fail = {
           ContentTC = "無妨，勝敗只是一時，重振旗鼓從頭再來便是。",
           TextMapId = "voice_ch_char_Nifu_vo_fail"
@@ -110153,7 +110217,15 @@ local Data = {
         voice_ch_char_Suyi01_vo_appear = {
           ContentTC = "天巡柒型，出擊準備就緒。",
           TextMapId = "voice_ch_char_Suyi01_vo_appear"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi01_vo_battlestart",
+    MaxKey = "voice_ch_char_Yeer_vo_idle",
+    Loader = function()
+      return {
         voice_ch_char_Suyi01_vo_battlestart = {
           ContentTC = "試圖挑起紛爭之人，由我來驅逐。",
           TextMapId = "voice_ch_char_Suyi01_vo_battlestart"
@@ -110217,15 +110289,7 @@ local Data = {
         voice_ch_char_Suyi_vo_die_r02 = {
           ContentTC = "乙鳥的歸宿是……天空……",
           TextMapId = "voice_ch_char_Suyi_vo_die_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_fail",
-    MaxKey = "voice_ch_char_Yeer_vo_topic_03_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_fail = {
           ContentTC = "功率……模塊……引擎……到底是哪裡出了問題？",
           TextMapId = "voice_ch_char_Suyi_vo_fail"
@@ -110961,7 +111025,15 @@ local Data = {
         voice_ch_char_Yeer_vo_idle = {
           ContentTC = "耶爾：紅鯉魚，有頭小綠、綠，綠鯉，綠驢，綠縷魚…….\n奧利弗：是「紅鯉魚有頭小綠驢，綠鯉魚有頭小紅驢！」笨蛋耶爾，快跟我念！\n耶爾：好、好的！紅、紅鯉魚……",
           TextMapId = "voice_ch_char_Yeer_vo_idle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_lvup",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_lvup = {
           ContentTC = "耶爾：嗯嗯！奧利弗，我們兩個一起成長了哦。",
           TextMapId = "voice_ch_char_Yeer_vo_lvup"
@@ -111025,15 +111097,7 @@ local Data = {
         voice_ch_char_Yeer_vo_topic_03_2 = {
           ContentTC = "耶爾：還、還好，有時候奧利弗會幫我說......而且，旁邊沒有人的時候，奧利弗總會把我想說的話聽完的。",
           TextMapId = "voice_ch_char_Yeer_vo_topic_03_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_topic_04_1 = {
           ContentTC = "耶爾：我沒有「小時候」……我從記事的時候，就在這個大孩子的身體裡了。奧利弗也許有吧。",
           TextMapId = "voice_ch_char_Yeer_vo_topic_04_1"

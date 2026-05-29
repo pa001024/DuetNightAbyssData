@@ -203,6 +203,10 @@ function M:InitMemberInfos()
 end
 
 function M:OnReceiveMemberInfo(MemberInfos)
+  if self.IsOpeningHeadAnchor then
+    self.IsOpeningHeadAnchor = false
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return

@@ -1201,6 +1201,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_ActionPoint_RemainPurchaseTimes",
     WildcardClassification = "Story"
   },
+  UI_Amory_HyperWeaponCardLevel = {
+    TextMapId = "UI_Amory_HyperWeaponCardLevel",
+    WildcardClassification = "Story"
+  },
   UI_AppearanceCollect_CurrentScore = {
     TextMapId = "UI_AppearanceCollect_CurrentScore",
     WildcardClassification = "Story"

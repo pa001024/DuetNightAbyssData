@@ -19,9 +19,10 @@ function Component:SetupAnchor(Anchor, Head, AvatarInfo, bSetUpEvent, MessageCon
   end
 end
 
-function Component:SetGuildFullInfo(GuildInfo, NotShowOpreationBtn)
+function Component:SetGuildFullInfo(GuildInfo, NotShowOpreationBtn, NotShowGuildSendPrivateChat)
   self.GuildInfo = GuildInfo
   self.GuildNotShowOpreationBtn = NotShowOpreationBtn
+  self.NotShowGuildSendPrivateChat = NotShowGuildSendPrivateChat
 end
 
 function Component:CleanUpAnchor()
@@ -96,7 +97,7 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
       RemoveActionById(ActionIds, MenuActionId.AddFriendOrChat)
     end
   end
-  AddGuildAction(ActionIds, self.GuildInfo, self._AvatarInfo, self.GuildNotShowOpreationBtn)
+  AddGuildAction(ActionIds, self.GuildInfo, self._AvatarInfo, self.GuildNotShowOpreationBtn, self.NotShowGuildSendPrivateChat)
   local ConfigActionIds = self._MenuConfig and self._MenuConfig.VisibleActionIds
   if "table" == type(ConfigActionIds) then
     ActionIds = CopyActionIds(ConfigActionIds)
@@ -143,7 +144,7 @@ function RemoveActionById(ActionIds, TargetActionId)
   end
 end
 
-function AddGuildAction(ActionIds, GuildInfo, AvatarInfo, GuildNotShowOpreationBtn)
+function AddGuildAction(ActionIds, GuildInfo, AvatarInfo, GuildNotShowOpreationBtn, NotShowGuildSendPrivateChat)
   local IsInGuild = GuildController:GetModel():IsInGuild()
   if not IsInGuild then
     return
@@ -169,7 +170,9 @@ function AddGuildAction(ActionIds, GuildInfo, AvatarInfo, GuildNotShowOpreationB
   end
   local SelfGuildInfo = GuildController:GetModel():GetCurrGuild()
   if GuildInfo.GuildId == SelfGuildInfo.GuildId then
-    table.insert(ActionIds, MenuActionId.GuildSendPrivateChat)
+    if not NotShowGuildSendPrivateChat then
+      table.insert(ActionIds, MenuActionId.GuildSendPrivateChat)
+    end
     local SelfMember = GuildController.GetGuildMember(SelfGuildInfo.Members, ChatController:GetAvatar().Uid)
     local CurMember = GuildController.GetGuildMember(GuildInfo.Members, MemberUid)
     local SelfTitle = SelfMember.Title

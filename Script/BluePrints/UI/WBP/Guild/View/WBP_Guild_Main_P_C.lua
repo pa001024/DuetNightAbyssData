@@ -40,7 +40,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       self.Tab:TabToRight()
       IsHandled = true
     elseif "Escape" == InKeyName then
-      self:Close()
+      if UIManager():GetUIObj("CommonDialog") then
+        UIManager():GetUIObj("CommonDialog"):OnClose()
+      else
+        self:Close()
+      end
+      IsHandled = true
     end
   end
   if IsHandled then

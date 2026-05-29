@@ -25,6 +25,7 @@ end
 
 function M:SetData(Info)
   self.GuildInfo:SetData(Info, true, "CheckGuildPage")
+  self.GuildInfo:SetNotShowGuildSendPrivateChat(true)
   self.GuildInfo:OnGetGuildFullInfo(Info)
   self.GuildInfo.ParentWidget = self
   self:AddTimer(0.03, function()

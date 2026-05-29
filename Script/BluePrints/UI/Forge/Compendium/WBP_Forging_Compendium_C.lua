@@ -282,7 +282,9 @@ function WBP_Forging_Compendium_C:Handle_KeyDownOnGamePad(InKeyName)
       self.ControllerFSM:Enter(CompendiumState.FocusSort)
       IsEventHandled = true
     elseif InKeyName == Const.GamepadFaceButtonUp then
-      self:ShowDraftPath(self.CurSelectedContent.Id)
+      if not DataMgr.Draft[self.CurSelectedContent.Id].NotDraftTree then
+        self:ShowDraftPath(self.CurSelectedContent.Id)
+      end
       IsEventHandled = true
     end
   end

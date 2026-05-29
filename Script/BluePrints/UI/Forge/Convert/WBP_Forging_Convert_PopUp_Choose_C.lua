@@ -407,7 +407,7 @@ end
 
 function WBP_Forging_Convert_PopUp_Choose_C:UpdateChoosedText()
   DebugPrint("Yihan@ WBP_Forging_Convert_PopUp_Choose_C:UpdateChoosedText")
-  local NowCount = #self.IsChoosedTbl
+  local NowCount = self.IsChoosedTbl and #self.IsChoosedTbl or 0
   local LimitCount = 0
   local Choosed = self.ChoosedContent or self.ConvertContent
   if Choosed and Choosed.Idx and DataMgr.Convert[Choosed.Idx] then

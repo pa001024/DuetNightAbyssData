@@ -280,6 +280,10 @@ function M:CleanupPreviousPreviewEffects()
   if not self.Params or self.Params.AccessoryType ~= CommonConst.CharAccessoryTypes.MVP then
     self.ActorController:TryDestroySequenceActorController()
   end
+  if self.ActorController.bEnableReflectionBeforeGesture ~= nil then
+    self.ActorController.bEnableReflection = self.ActorController.bEnableReflectionBeforeGesture
+  end
+  self.ActorController:HidePlayerActorInternal(self.ActorController:GetReflectionActor(self.ActorController:GetPlayerActor()), "ReflectionHideByGesture", false)
   self.ActorController:StopPlayerFX()
   self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Dead)
   self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Body)
@@ -374,6 +378,12 @@ function M:SetupInitialGesturePreview(ItemData)
   local ResourceData = DataMgr.Resource[ItemData.TypeId]
   if ResourceData then
     self:ClearCharAccessory()
+    if ItemData.TypeId == 41034 or ItemData.TypeId == 41035 then
+      local Player = self.ActorController:GetPlayerActor()
+      self.ActorController:HidePlayerActorInternal(self.ActorController:GetReflectionActor(Player), "ReflectionHideByGesture", true)
+      self.ActorController.bEnableReflectionBeforeGesture = self.ActorController.bEnableReflection
+      self.ActorController.bEnableReflection = false
+    end
     self.ActorController:ChangeWeaponModel(self.Avatar.Weapons[self.Avatar.MeleeWeapon])
     self.ActorController:ChangeWeaponModel(self.Avatar.Weapons[self.Avatar.RangedWeapon])
     self.ActorController:ClearPlayerGestureHideTags()
@@ -561,6 +571,12 @@ end
 
 function M:UpdateToGesturePreview(ItemData)
   self:SetupDefaultCharacterModel()
+  if ItemData.TypeId == 41034 or ItemData.TypeId == 41035 then
+    local Player = self.ActorController:GetPlayerActor()
+    self.ActorController:HidePlayerActorInternal(self.ActorController:GetReflectionActor(Player), "ReflectionHideByGesture", true)
+    self.ActorController.bEnableReflectionBeforeGesture = self.ActorController.bEnableReflection
+    self.ActorController.bEnableReflection = false
+  end
   self.ActorController:SetArmoryMontageTag("Armory")
   self.ActorController:PlayResourceMotion(ItemData.TypeId)
   local GestureData = DataMgr.Resource[ItemData.TypeId]

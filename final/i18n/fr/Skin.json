@@ -27,7 +27,7 @@
   {
     "id": 1102,
     "name": "Tenue de Flora",
-    "desc": "芙罗拉[原皮]（待包装）",
+    "desc": "Où qu’elle aille, l’immense ombre d’Hyperborea semble toujours peser sur elle, se changeant en une prison obscure et invisible.",
     "icon": "T_Head_Fuluo",
     "rarity": 5,
     "charId": 1102,
@@ -347,7 +347,7 @@
   {
     "id": 3102,
     "name": "Tenue d’Hilda",
-    "desc": "希尔妲[原皮]（待包装）",
+    "desc": "Au-dessus de l’ourlet, un bouquet soigneusement arrangé ; en dessous, le feu meurtrier des armes à feu. Comme le noir et le blanc de cette tenue, une journée bien remplie de servante s’écrit entre lumière et obscurité.",
     "icon": "T_Head_Xier",
     "rarity": 5,
     "charId": 3102,

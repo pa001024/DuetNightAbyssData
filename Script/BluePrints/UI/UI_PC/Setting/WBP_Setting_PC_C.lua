@@ -931,7 +931,13 @@ function WBP_Setting_PC_C:IsNonHeroChannel()
   end
   local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
   local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
-  self._IsNonHeroChannel = nil ~= ChannelInfo and ChannelInfo.AccountPrefix ~= "hero"
+  if nil == ChannelInfo then
+    self._IsNonHeroChannel = true
+  elseif ChannelInfo.ChannelId == 270 then
+    self._IsNonHeroChannel = true
+  else
+    self._IsNonHeroChannel = ChannelInfo.AccountPrefix ~= "hero"
+  end
   return self._IsNonHeroChannel
 end
 

@@ -83,6 +83,9 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:BP_OnEntryReleased()
+  if self.Head_Anchor and self.Head_Anchor:IsOpen() then
+    self.Head_Anchor:Close()
+  end
   if self.Content then
     self.Content.SelfWidget = nil
   end
@@ -91,7 +94,7 @@ end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
   if self.ParentWidget and self.ParentWidget:IsRankItemSelectable() then
-    self.ParentWidget:OnListRankItemClicked(self.Content)
+    self.ParentWidget:OnListRankItemClicked(self.Content, true)
   end
   return UIUtils.Handled
 end

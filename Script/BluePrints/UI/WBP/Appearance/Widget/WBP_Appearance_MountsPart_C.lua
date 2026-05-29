@@ -37,6 +37,22 @@ function M:Construct()
 end
 
 function M:Destruct()
+  self:CleanupMountPreviewState()
+end
+
+function M:CleanupMountPreviewState()
+  if self.ActorController and self.ActorController.CancelPendingDelayFramePreview then
+    self.ActorController:CancelPendingDelayFramePreview()
+  end
+  self.IsRiderMount = true
+  self:DestroyPreviewMount()
+  local Character = self.ActorController and self.ActorController.GetPlayerActor and self.ActorController:GetPlayerActor()
+  if Character and Character.EMAnimInstance and Character.GetCharacterTag then
+    local CharacterTag = Character:GetCharacterTag()
+    if Character.EMAnimInstance.CharacterTag ~= CharacterTag then
+      Character.EMAnimInstance.CharacterTag = CharacterTag
+    end
+  end
 end
 
 function M:Init(Params)
@@ -451,18 +467,7 @@ end
 
 function M:OnTabChangeToOther()
   self:RefreshParentHideButton(false)
-  if self.ActorController and self.ActorController.CancelPendingDelayFramePreview then
-    self.ActorController:CancelPendingDelayFramePreview()
-  end
-  self.IsRiderMount = true
-  self:DestroyPreviewMount()
-  local Character = self.ActorController and self.ActorController.GetPlayerActor and self.ActorController:GetPlayerActor()
-  if Character and Character.EMAnimInstance and Character.GetCharacterTag then
-    local CharacterTag = Character:GetCharacterTag()
-    if Character.EMAnimInstance.CharacterTag ~= CharacterTag then
-      Character.EMAnimInstance.CharacterTag = CharacterTag
-    end
-  end
+  self:CleanupMountPreviewState()
   self:PlayOutAnim()
 end
 
@@ -477,6 +482,7 @@ function M:OnTabChangeToSelf()
 end
 
 function M:OnClose()
+  self:CleanupMountPreviewState()
   self:PlayOutAnim()
 end
 

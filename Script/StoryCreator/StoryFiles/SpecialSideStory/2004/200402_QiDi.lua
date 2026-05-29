@@ -230,7 +230,7 @@ return {
               ShowAutoPlayButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
-              SkipToOption = false,
+              SkipToOption = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
               PauseTimeElapse = false,
@@ -352,12 +352,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1775201272468889320",
-            startPort = "Out",
-            endQuest = "1775201316578889730",
-            endPort = "In"
-          },
-          {
             startQuest = "1775201316578889730",
             startPort = "Out",
             endQuest = "1775201337739890144",
@@ -385,6 +379,12 @@ return {
             startQuest = "1775201272468889320",
             startPort = "Out",
             endQuest = "17763299375205489346",
+            endPort = "In"
+          },
+          {
+            startQuest = "17763299375205489346",
+            startPort = "Out",
+            endQuest = "1775201316578889730",
             endPort = "In"
           }
         },
@@ -3347,12 +3347,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17752222400044458317",
-            startPort = "Out",
-            endQuest = "177574408217815268",
-            endPort = "In"
-          },
-          {
             startQuest = "177574408217815268",
             startPort = "Out",
             endQuest = "1775199911490886506",
@@ -3380,6 +3374,12 @@ return {
             startQuest = "17752220557124456273",
             startPort = "Out",
             endQuest = "17758092706996025",
+            endPort = "In"
+          },
+          {
+            startQuest = "17757362003392729965",
+            startPort = "Out",
+            endQuest = "177574408217815268",
             endPort = "In"
           }
         },
@@ -3736,7 +3736,7 @@ return {
             name = "显示休息室内NPC",
             pos = {x = 2392.458962090541, y = 448.6532940743467},
             propsData = {
-              IsHide = true,
+              IsHide = false,
               AtmosphereTagList = {
                 "story_200402"
               }

@@ -4,11 +4,21 @@ local M = {}
 function M:Init(Params)
 end
 
+function M:_ResetMountPreviewTransitionState()
+  if not self.bWatingForDelayFrame and not self.DisappearFXPlaying and not self.LTweenHandle_PlayDisappearFX then
+    return
+  end
+  self:CancelPendingDelayFramePreview()
+  self:HidePlayerActor("ActorController_PlayDisappearFX", false)
+  self:HidePlayerAndMount(false)
+end
+
 function M:CreateMount(MountId)
   local Player = self:GetPlayerActor()
   if not Player then
     return
   end
+  self:_ResetMountPreviewTransitionState()
   local MountConfig = DataMgr.Mount[MountId]
   if not MountConfig.BattleMountId then
     return
@@ -119,7 +129,8 @@ function M:HidePlayerActorOnDisplayMount(Tag, IsHidden, bDontSaveTag)
   if not IsValid(self.ArmoryPlayer) then
     return
   end
-  if not bDontSaveTag then
+  local bIsMountPreviewTempTag = "ActorController_HidePlayerPlayMount" == Tag or "ActorController_HidePlayerBeforeMount" == Tag
+  if not bDontSaveTag and not bIsMountPreviewTempTag then
     if true == IsHidden then
       self.PlayerActorHideTags[Tag] = true
     else

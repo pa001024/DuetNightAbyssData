@@ -139,9 +139,12 @@ function M:ButtonBulletJumpUp(Index, WidgetLocalPos, LastWidgetTouchPos, EndTouc
     self.OwnerPlayer:SetCanInteractiveTrigger(true, "BulletJumpAim")
     self:ChangeBattleWheelState(true)
     if self.HasAutoBulletJump then
+      local wasActive = self.BulletJumpRetryTimer ~= nil
       self:StopAutoRetryTimer()
       self.IsBtnDown = false
-      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
+      if wasActive then
+        EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
+      end
     else
       if ScreenSpacePos and USlateBlueprintLibrary.IsUnderLocation(self.CancelBtn:GetCachedGeometry(), ScreenSpacePos) then
         EMUIAnimationSubsystem:EMStopAnimation(self.CancelBtn, self.CancelBtn.Loop)
@@ -161,10 +164,13 @@ function M:ButtonBulletJumpUp(Index, WidgetLocalPos, LastWidgetTouchPos, EndTouc
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
     end
   elseif self.HasAutoBulletJump then
+    local wasActive = self.BulletJumpRetryTimer ~= nil
     self:StopAutoRetryTimer()
     self.IsBtnDown = false
     EventManager:FireEvent(EventID.OnQuitBulletJumpAim)
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
+    if wasActive then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
+    end
   else
     self.OwnerPanel:TryToStopTargetCommand("BulletJump")
   end

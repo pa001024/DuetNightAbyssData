@@ -191,6 +191,9 @@ function Jump_Phone_C:HandleStateWhenUp()
       self.OwnerPanel:TryToStopTargetCommand("Jump", true)
     else
       self.OwnerPanel:TryToPlayTargetCommand("Jump", true)
+      if self.OwnerPlayer.bJetJump then
+        self.OwnerPanel:TryToStopTargetCommand("Jump", true)
+      end
     end
     self.StartSlide = false
   elseif self.CurButtonState == "Attack" then

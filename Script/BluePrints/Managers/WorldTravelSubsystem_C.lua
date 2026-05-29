@@ -6,6 +6,7 @@ function WorldTravelSubsystem_C:ReceiveInitialize()
   self.ChangeSceneUIPath = UIConst.COMMONCHANGESCENE
   DebugPrint("ChangeSceneUIPath", self.ChangeSceneUIPath)
   EventManager:AddEvent(EventID.CloseLoading, self, self.OnCloseLoading)
+  EventManager:AddEvent(EventID.InLoading, self, self.OnInLoading)
 end
 
 function WorldTravelSubsystem_C:SetLevelLoadJsonName(DungeonId)
@@ -48,8 +49,17 @@ function WorldTravelSubsystem_C:OnCloseLoading()
   self:OnWorldTravelEnd()
 end
 
+function WorldTravelSubsystem_C:OnInLoading()
+  DebugPrint("WorldTravelSubsystem_C OnInLoading LoadGMHyperLink")
+  local GameInstance = GWorld.GameInstance or UE4.UGameplayStatics.GetGameInstance(self)
+  if GameInstance and GameInstance.LoadGMHyperLink then
+    GameInstance:LoadGMHyperLink()
+  end
+end
+
 function WorldTravelSubsystem_C:ReceiveDeinitialize()
   EventManager:RemoveEvent(EventID.CloseLoading, self)
+  EventManager:RemoveEvent(EventID.InLoading, self)
 end
 
 return WorldTravelSubsystem_C

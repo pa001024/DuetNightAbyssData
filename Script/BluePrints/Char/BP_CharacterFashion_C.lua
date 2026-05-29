@@ -629,8 +629,8 @@ function BP_CharacterFashion_C:RefreshUncoloredSkinColors(Colors)
   if not _Owner then
     return
   end
-  local SkinId = self.AppearanceSuitInfo and self.AppearanceSuitInfo.SkinId
   local DefaultSkinId = self:GetDefaultSkinId(_Owner, SkinId)
+  local SkinId = self.AppearanceSuitInfo and self.AppearanceSuitInfo.SkinId or DefaultSkinId
   local IsOriginalSkin = DefaultSkinId and SkinId == DefaultSkinId
   if IsOriginalSkin then
     return

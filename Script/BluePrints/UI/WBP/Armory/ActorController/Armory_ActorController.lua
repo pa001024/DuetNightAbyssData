@@ -612,6 +612,9 @@ function M:SetArmoryMontageTag(Tag, bShowOrHideWeapon)
         self:AddPlayerUltraWeapons(PlayerCharacter)
       end
       PlayerCharacter:SetArmoryTag(Tag)
+      if PlayerCharacter.EMAnimInstance.CharacterTag ~= PlayerCharacter:GetCharacterTag() then
+        PlayerCharacter.EMAnimInstance.CharacterTag = PlayerCharacter:GetCharacterTag()
+      end
     end
     
     SetArmoryTag(Player)

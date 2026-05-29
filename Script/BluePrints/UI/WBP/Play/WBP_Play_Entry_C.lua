@@ -244,7 +244,7 @@ function WBP_Play_Entry_C:Destruct()
   self.Super.Destruct(self)
   local BattleView = UIManager():GetUIObj("BattleMain")
   if BattleView then
-    BattleView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    BattleView:Show("Temp1.4Fix")
   end
 end
 

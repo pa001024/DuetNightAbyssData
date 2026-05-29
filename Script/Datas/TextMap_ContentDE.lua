@@ -68380,7 +68380,7 @@ Algunas plataformas muestran fragmentos de una imagen.
   },
   {
     MinKey = "UI_ChapterName_00",
-    MaxKey = "UI_CommonPopup_SaveLayout_Content",
+    MaxKey = "UI_CommonQuestRefresh",
     Loader = function()
       return {
         UI_ChapterName_00 = {
@@ -68410,10 +68410,6 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_ChapterNumber_02 = {
           ContentDE = "Capítulo 2",
           TextMapId = "UI_ChapterNumber_02"
-        },
-        UI_ChapterNumber_03 = {
-          ContentDE = "Capítulo 3",
-          TextMapId = "UI_ChapterNumber_03"
         },
         UI_ChapterNumber_E0 = {
           ContentDE = "Huaxu",
@@ -69182,19 +69178,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CommonPopup_SaveLayout_Content = {
           ContentDE = "¿Desea guardar los cambios?",
           TextMapId = "UI_CommonPopup_SaveLayout_Content"
+        },
+        UI_CommonQuestRefresh = {
+          ContentDE = "La nueva fase ha comenzado y el contenido se ha restablecido.",
+          TextMapId = "UI_CommonQuestRefresh"
         }
       }
     end
   },
   {
-    MinKey = "UI_CommonQuestRefresh",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_4",
+    MinKey = "UI_CommonQuestRefreshTitle",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_40",
     Loader = function()
       return {
-        UI_CommonQuestRefresh = {
-          ContentDE = "La nueva fase ha comenzado y el contenido se ha restablecido.",
-          TextMapId = "UI_CommonQuestRefresh"
-        },
         UI_CommonQuestRefreshTitle = {
           ContentDE = "Tareas diarias",
           TextMapId = "UI_CommonQuestRefreshTitle"
@@ -69984,19 +69980,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_DUNGEON_AUTOCHESS_4 = {
           ContentDE = "Tablero del Maestro Gongshang 04",
           TextMapId = "UI_DUNGEON_AUTOCHESS_4"
+        },
+        UI_DUNGEON_AUTOCHESS_40 = {
+          ContentDE = "Partida sin fin 020",
+          TextMapId = "UI_DUNGEON_AUTOCHESS_40"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_AUTOCHESS_40",
-    MaxKey = "UI_DUNGEON_TYPE_RESCUE",
+    MinKey = "UI_DUNGEON_AUTOCHESS_41",
+    MaxKey = "UI_DUNGEON_TYPE_SABOTAGE",
     Loader = function()
       return {
-        UI_DUNGEON_AUTOCHESS_40 = {
-          ContentDE = "Partida sin fin 020",
-          TextMapId = "UI_DUNGEON_AUTOCHESS_40"
-        },
         UI_DUNGEON_AUTOCHESS_41 = {
           ContentDE = "Partida sin fin 021",
           TextMapId = "UI_DUNGEON_AUTOCHESS_41"
@@ -70792,19 +70788,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_DUNGEON_TYPE_RESCUE = {
           ContentDE = "Eskorte",
           TextMapId = "UI_DUNGEON_TYPE_RESCUE"
+        },
+        UI_DUNGEON_TYPE_SABOTAGE = {
+          ContentDE = "Vermittlung",
+          TextMapId = "UI_DUNGEON_TYPE_SABOTAGE"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_TYPE_SABOTAGE",
-    MaxKey = "UI_Dress_Face",
+    MinKey = "UI_DUNGEON_TYPE_SABOTAGEPRO",
+    MaxKey = "UI_Dress_Head",
     Loader = function()
       return {
-        UI_DUNGEON_TYPE_SABOTAGE = {
-          ContentDE = "Vermittlung",
-          TextMapId = "UI_DUNGEON_TYPE_SABOTAGE"
-        },
         UI_DUNGEON_TYPE_SABOTAGEPRO = {
           ContentDE = "Zerlegen",
           TextMapId = "UI_DUNGEON_TYPE_SABOTAGEPRO"
@@ -71597,19 +71593,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Dress_Face = {
           ContentDE = "Rostro",
           TextMapId = "UI_Dress_Face"
+        },
+        UI_Dress_Head = {
+          ContentDE = "Cabeza",
+          TextMapId = "UI_Dress_Head"
         }
       }
     end
   },
   {
-    MinKey = "UI_Dress_Head",
-    MaxKey = "UI_Event_MidTerm_RefreshTask",
+    MinKey = "UI_Dress_Tail",
+    MaxKey = "UI_Event_MidTerm_RepeatCount",
     Loader = function()
       return {
-        UI_Dress_Head = {
-          ContentDE = "Cabeza",
-          TextMapId = "UI_Dress_Head"
-        },
         UI_Dress_Tail = {
           ContentDE = "Espalda inferior",
           TextMapId = "UI_Dress_Tail"
@@ -72405,19 +72401,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Event_MidTerm_RefreshTask = {
           ContentDE = "Se desbloquea tras liquidar la colección",
           TextMapId = "UI_Event_MidTerm_RefreshTask"
+        },
+        UI_Event_MidTerm_RepeatCount = {
+          ContentDE = "Completados: %d",
+          TextMapId = "UI_Event_MidTerm_RepeatCount"
         }
       }
     end
   },
   {
-    MinKey = "UI_Event_MidTerm_RepeatCount",
-    MaxKey = "UI_GACHA_NOHISTORY",
+    MinKey = "UI_Event_MidTerm_RepeatTask",
+    MaxKey = "UI_GACHA_ONE",
     Loader = function()
       return {
-        UI_Event_MidTerm_RepeatCount = {
-          ContentDE = "Completados: %d",
-          TextMapId = "UI_Event_MidTerm_RepeatCount"
-        },
         UI_Event_MidTerm_RepeatTask = {
           ContentDE = "Juegos repetibles",
           TextMapId = "UI_Event_MidTerm_RepeatTask"
@@ -73210,19 +73206,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_GACHA_NOHISTORY = {
           ContentDE = "Sin registros",
           TextMapId = "UI_GACHA_NOHISTORY"
+        },
+        UI_GACHA_ONE = {
+          ContentDE = "Invocar %d veces",
+          TextMapId = "UI_GACHA_ONE"
         }
       }
     end
   },
   {
-    MinKey = "UI_GACHA_ONE",
-    MaxKey = "UI_HeadFrame_Des_10009",
+    MinKey = "UI_GACHA_OVERDUE",
+    MaxKey = "UI_HeadFrame_Des_10010",
     Loader = function()
       return {
-        UI_GACHA_ONE = {
-          ContentDE = "Invocar %d veces",
-          TextMapId = "UI_GACHA_ONE"
-        },
         UI_GACHA_OVERDUE = {
           ContentDE = "La información del Myriad ha sido actualizada. Selecciona “Confirmar” para regresar.",
           TextMapId = "UI_GACHA_OVERDUE"
@@ -74015,19 +74011,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_HeadFrame_Des_10009 = {
           ContentDE = "Meine Überlegungen und meine Abwägungen.",
           TextMapId = "UI_HeadFrame_Des_10009"
+        },
+        UI_HeadFrame_Des_10010 = {
+          ContentDE = "Meine Empathie und mein Wohlwollen.",
+          TextMapId = "UI_HeadFrame_Des_10010"
         }
       }
     end
   },
   {
-    MinKey = "UI_HeadFrame_Des_10010",
-    MaxKey = "UI_LOGIN_ENSURE",
+    MinKey = "UI_HeadFrame_Des_10011",
+    MaxKey = "UI_LOGIN_ENTERGAME",
     Loader = function()
       return {
-        UI_HeadFrame_Des_10010 = {
-          ContentDE = "Meine Empathie und mein Wohlwollen.",
-          TextMapId = "UI_HeadFrame_Des_10010"
-        },
         UI_HeadFrame_Des_10011 = {
           ContentDE = "Still ... störe sie nicht.",
           TextMapId = "UI_HeadFrame_Des_10011"
@@ -74820,19 +74816,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_LOGIN_ENSURE = {
           ContentDE = "Confirmar",
           TextMapId = "UI_LOGIN_ENSURE"
+        },
+        UI_LOGIN_ENTERGAME = {
+          ContentDE = "Toca para empezar",
+          TextMapId = "UI_LOGIN_ENTERGAME"
         }
       }
     end
   },
   {
-    MinKey = "UI_LOGIN_ENTERGAME",
-    MaxKey = "UI_MECHANISM_113",
+    MinKey = "UI_LOGIN_HoldPress",
+    MaxKey = "UI_MECHANISM_114",
     Loader = function()
       return {
-        UI_LOGIN_ENTERGAME = {
-          ContentDE = "Toca para empezar",
-          TextMapId = "UI_LOGIN_ENTERGAME"
-        },
         UI_LOGIN_HoldPress = {
           ContentDE = "(Mantener) Salir",
           TextMapId = "UI_LOGIN_HoldPress"
@@ -75628,19 +75624,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_MECHANISM_113 = {
           ContentDE = "Zeichne diesen Vogelturm auf",
           TextMapId = "UI_MECHANISM_113"
+        },
+        UI_MECHANISM_114 = {
+          ContentDE = "Klopfe den Staub ab",
+          TextMapId = "UI_MECHANISM_114"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_114",
-    MaxKey = "UI_Mod_NotOwned_Weapon",
+    MinKey = "UI_MECHANISM_115",
+    MaxKey = "UI_Mod_Not_Get",
     Loader = function()
       return {
-        UI_MECHANISM_114 = {
-          ContentDE = "Klopfe den Staub ab",
-          TextMapId = "UI_MECHANISM_114"
-        },
         UI_MECHANISM_115 = {
           ContentDE = "Staple die Blöcke",
           TextMapId = "UI_MECHANISM_115"
@@ -76436,19 +76432,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Mod_NotOwned_Weapon = {
           ContentDE = "Arma no poseída",
           TextMapId = "UI_Mod_NotOwned_Weapon"
+        },
+        UI_Mod_Not_Get = {
+          ContentDE = "No poseído",
+          TextMapId = "UI_Mod_Not_Get"
         }
       }
     end
   },
   {
-    MinKey = "UI_Mod_Not_Get",
-    MaxKey = "UI_Name_Walnut_151941",
+    MinKey = "UI_Mod_Polarity_Btn",
+    MaxKey = "UI_Name_Walnut_151951",
     Loader = function()
       return {
-        UI_Mod_Not_Get = {
-          ContentDE = "No poseído",
-          TextMapId = "UI_Mod_Not_Get"
-        },
         UI_Mod_Polarity_Btn = {
           ContentDE = "Ajustar afinidad de casilla",
           TextMapId = "UI_Mod_Polarity_Btn"
@@ -77238,19 +77234,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Name_Walnut_151941 = {
           ContentDE = "Carta secreta: Trueno Devorador de Summanus",
           TextMapId = "UI_Name_Walnut_151941"
+        },
+        UI_Name_Walnut_151951 = {
+          ContentDE = "Carta secreta: Céfiro Susurrante de Hastur",
+          TextMapId = "UI_Name_Walnut_151951"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_151951",
-    MaxKey = "UI_Npc_Name_Dig2",
+    MinKey = "UI_Name_Walnut_151952",
+    MaxKey = "UI_Npc_Name_Dig3",
     Loader = function()
       return {
-        UI_Name_Walnut_151951 = {
-          ContentDE = "Carta secreta: Céfiro Susurrante de Hastur",
-          TextMapId = "UI_Name_Walnut_151951"
-        },
         UI_Name_Walnut_151952 = {
           ContentDE = "Carta secreta: Ciclón Turbulento de Hastur",
           TextMapId = "UI_Name_Walnut_151952"
@@ -78043,19 +78039,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Npc_Name_Dig2 = {
           ContentDE = "Vuelve a cavar",
           TextMapId = "UI_Npc_Name_Dig2"
+        },
+        UI_Npc_Name_Dig3 = {
+          ContentDE = "Vuelve a cavar",
+          TextMapId = "UI_Npc_Name_Dig3"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Dig3",
-    MaxKey = "UI_Npc_Name_Tanzhu",
+    MinKey = "UI_Npc_Name_Dog",
+    MaxKey = "UI_Npc_Name_TiaoxiangStudent",
     Loader = function()
       return {
-        UI_Npc_Name_Dig3 = {
-          ContentDE = "Vuelve a cavar",
-          TextMapId = "UI_Npc_Name_Dig3"
-        },
         UI_Npc_Name_Dog = {
           ContentDE = "Perro feroz",
           TextMapId = "UI_Npc_Name_Dog"
@@ -78851,19 +78847,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Npc_Name_Tanzhu = {
           ContentDE = "Vendedor de refrigerios",
           TextMapId = "UI_Npc_Name_Tanzhu"
+        },
+        UI_Npc_Name_TiaoxiangStudent = {
+          ContentDE = "Estudiante angustiado",
+          TextMapId = "UI_Npc_Name_TiaoxiangStudent"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_TiaoxiangStudent",
-    MaxKey = "UI_OPTION_Language_Using",
+    MinKey = "UI_Npc_Name_TiaoxiangTeacher",
+    MaxKey = "UI_OPTION_Layout",
     Loader = function()
       return {
-        UI_Npc_Name_TiaoxiangStudent = {
-          ContentDE = "Estudiante angustiado",
-          TextMapId = "UI_Npc_Name_TiaoxiangStudent"
-        },
         UI_Npc_Name_TiaoxiangTeacher = {
           ContentDE = "Maestro estricto",
           TextMapId = "UI_Npc_Name_TiaoxiangTeacher"
@@ -79659,19 +79655,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_OPTION_Language_Using = {
           ContentDE = "En uso",
           TextMapId = "UI_OPTION_Language_Using"
+        },
+        UI_OPTION_Layout = {
+          ContentDE = "Configuración de combate",
+          TextMapId = "UI_OPTION_Layout"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_Layout",
-    MaxKey = "UI_Party_MiniQuest_CoinTriple",
+    MinKey = "UI_OPTION_LeftBulletJumpShow",
+    MaxKey = "UI_Party_MiniQuest_ExtraCoin",
     Loader = function()
       return {
-        UI_OPTION_Layout = {
-          ContentDE = "Configuración de combate",
-          TextMapId = "UI_OPTION_Layout"
-        },
         UI_OPTION_LeftBulletJumpShow = {
           ContentDE = "Botón de Salto Espiral mano izquierda",
           TextMapId = "UI_OPTION_LeftBulletJumpShow"
@@ -80467,19 +80463,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Party_MiniQuest_CoinTriple = {
           ContentDE = "Der aufnehmende Spieler erhält 20 Sek. lang die 3×-Münzeneffizienz.",
           TextMapId = "UI_Party_MiniQuest_CoinTriple"
+        },
+        UI_Party_MiniQuest_ExtraCoin = {
+          ContentDE = "Eine Ladung Bonusmünzen wurde freigegeben!",
+          TextMapId = "UI_Party_MiniQuest_ExtraCoin"
         }
       }
     end
   },
   {
-    MinKey = "UI_Party_MiniQuest_ExtraCoin",
-    MaxKey = "UI_PlayerHead_Name_30018",
+    MinKey = "UI_Party_MiniQuest_LaserSlow",
+    MaxKey = "UI_PlayerHead_Name_30019",
     Loader = function()
       return {
-        UI_Party_MiniQuest_ExtraCoin = {
-          ContentDE = "Eine Ladung Bonusmünzen wurde freigegeben!",
-          TextMapId = "UI_Party_MiniQuest_ExtraCoin"
-        },
         UI_Party_MiniQuest_LaserSlow = {
           ContentDE = "Horizontale Laser für 10 Sek. deaktiviert",
           TextMapId = "UI_Party_MiniQuest_LaserSlow"
@@ -81275,19 +81271,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_PlayerHead_Name_30018 = {
           ContentDE = "Hallo, Welt",
           TextMapId = "UI_PlayerHead_Name_30018"
+        },
+        UI_PlayerHead_Name_30019 = {
+          ContentDE = "Der Perfektionist",
+          TextMapId = "UI_PlayerHead_Name_30019"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Name_30019",
-    MaxKey = "UI_RLArchive_Progress",
+    MinKey = "UI_PlayerHead_Name_30020",
+    MaxKey = "UI_RLArchive_Reward",
     Loader = function()
       return {
-        UI_PlayerHead_Name_30019 = {
-          ContentDE = "Der Perfektionist",
-          TextMapId = "UI_PlayerHead_Name_30019"
-        },
         UI_PlayerHead_Name_30020 = {
           ContentDE = "Nach ganz oben",
           TextMapId = "UI_PlayerHead_Name_30020"
@@ -82083,19 +82079,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_RLArchive_Progress = {
           ContentDE = "Progreso de colección",
           TextMapId = "UI_RLArchive_Progress"
+        },
+        UI_RLArchive_Reward = {
+          ContentDE = "Recompensas de colección",
+          TextMapId = "UI_RLArchive_Reward"
         }
       }
     end
   },
   {
-    MinKey = "UI_RLArchive_Reward",
-    MaxKey = "UI_Rougebag_BagSubTab_Name_107",
+    MinKey = "UI_RL_BtnContinue",
+    MaxKey = "UI_Rougelike_Contract_Confirm",
     Loader = function()
       return {
-        UI_RLArchive_Reward = {
-          ContentDE = "Recompensas de colección",
-          TextMapId = "UI_RLArchive_Reward"
-        },
         UI_RL_BtnContinue = {
           ContentDE = "Continuar la exploración",
           TextMapId = "UI_RL_BtnContinue"
@@ -82867,19 +82863,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Rougebag_BagSubTab_Name_107 = {
           ContentDE = "Flor vampírica",
           TextMapId = "UI_Rougebag_BagSubTab_Name_107"
+        },
+        UI_Rougelike_Contract_Confirm = {
+          ContentDE = "Confirmar",
+          TextMapId = "UI_Rougelike_Contract_Confirm"
         }
       }
     end
   },
   {
-    MinKey = "UI_Rougelike_Contract_Confirm",
-    MaxKey = "UI_SUBREGION_NAME_101901",
+    MinKey = "UI_Rougelike_Contract_Detail",
+    MaxKey = "UI_SUBREGION_NAME_102101",
     Loader = function()
       return {
-        UI_Rougelike_Contract_Confirm = {
-          ContentDE = "Confirmar",
-          TextMapId = "UI_Rougelike_Contract_Confirm"
-        },
         UI_Rougelike_Contract_Detail = {
           ContentDE = "1. Abismo solo está disponible en el nivel de dificultad más alto.\n2. Selecciona una zona con sabiduría. Mayores profundidades te esperan donde las intensidades son más fuertes.\n3. Un abismo más profundo otorga más Puntos de rastro.",
           TextMapId = "UI_Rougelike_Contract_Detail"
@@ -83675,19 +83671,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_SUBREGION_NAME_101901 = {
           ContentDE = "Galea-Theater",
           TextMapId = "UI_SUBREGION_NAME_101901"
+        },
+        UI_SUBREGION_NAME_102101 = {
+          ContentDE = "Lagerbereich",
+          TextMapId = "UI_SUBREGION_NAME_102101"
         }
       }
     end
   },
   {
-    MinKey = "UI_SUBREGION_NAME_102101",
-    MaxKey = "UI_SkinPreview_Accessory_Back",
+    MinKey = "UI_SUBREGION_NAME_102102",
+    MaxKey = "UI_SkinPreview_Accessory_FX_Body",
     Loader = function()
       return {
-        UI_SUBREGION_NAME_102101 = {
-          ContentDE = "Lagerbereich",
-          TextMapId = "UI_SUBREGION_NAME_102101"
-        },
         UI_SUBREGION_NAME_102102 = {
           ContentDE = "Zentralbereich",
           TextMapId = "UI_SUBREGION_NAME_102102"
@@ -84480,19 +84476,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_SkinPreview_Accessory_Back = {
           ContentDE = "Placa dorsal superior",
           TextMapId = "UI_SkinPreview_Accessory_Back"
+        },
+        UI_SkinPreview_Accessory_FX_Body = {
+          ContentDE = "Aura",
+          TextMapId = "UI_SkinPreview_Accessory_FX_Body"
         }
       }
     end
   },
   {
-    MinKey = "UI_SkinPreview_Accessory_FX_Body",
-    MaxKey = "UI_TELEPORTPOINT_NAME_100103_1",
+    MinKey = "UI_SkinPreview_Accessory_FX_Dead",
+    MaxKey = "UI_TELEPORTPOINT_NAME_100103_2",
     Loader = function()
       return {
-        UI_SkinPreview_Accessory_FX_Body = {
-          ContentDE = "Aura",
-          TextMapId = "UI_SkinPreview_Accessory_FX_Body"
-        },
         UI_SkinPreview_Accessory_FX_Dead = {
           ContentDE = "Efectos de derrota",
           TextMapId = "UI_SkinPreview_Accessory_FX_Dead"
@@ -85285,19 +85281,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_TELEPORTPOINT_NAME_100103_1 = {
           ContentDE = "Arkane Ruinen – Obere Ebene",
           TextMapId = "UI_TELEPORTPOINT_NAME_100103_1"
+        },
+        UI_TELEPORTPOINT_NAME_100103_2 = {
+          ContentDE = "Nocturne-Echos: Sibylle",
+          TextMapId = "UI_TELEPORTPOINT_NAME_100103_2"
         }
       }
     end
   },
   {
-    MinKey = "UI_TELEPORTPOINT_NAME_100103_2",
-    MaxKey = "UI_Team_PersonalData",
+    MinKey = "UI_TELEPORTPOINT_NAME_101101_1",
+    MaxKey = "UI_Team_PlayerInDungeon",
     Loader = function()
       return {
-        UI_TELEPORTPOINT_NAME_100103_2 = {
-          ContentDE = "Nocturne-Echos: Sibylle",
-          TextMapId = "UI_TELEPORTPOINT_NAME_100103_2"
-        },
         UI_TELEPORTPOINT_NAME_101101_1 = {
           ContentDE = "Platz, Icelake-Vorstadt",
           TextMapId = "UI_TELEPORTPOINT_NAME_101101_1"
@@ -86093,19 +86089,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Team_PersonalData = {
           ContentDE = "Perfil",
           TextMapId = "UI_Team_PersonalData"
+        },
+        UI_Team_PlayerInDungeon = {
+          ContentDE = "Jugador en una comisión",
+          TextMapId = "UI_Team_PlayerInDungeon"
         }
       }
     end
   },
   {
-    MinKey = "UI_Team_PlayerInDungeon",
-    MaxKey = "UI_WEAPON_DESC_10209",
+    MinKey = "UI_Team_PlayerInSpecaiDungeon",
+    MaxKey = "UI_WEAPON_DESC_10298",
     Loader = function()
       return {
-        UI_Team_PlayerInDungeon = {
-          ContentDE = "Jugador en una comisión",
-          TextMapId = "UI_Team_PlayerInDungeon"
-        },
         UI_Team_PlayerInSpecaiDungeon = {
           ContentDE = "El jugador está actualmente en una misión especial",
           TextMapId = "UI_Team_PlayerInSpecaiDungeon"
@@ -86895,19 +86891,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WEAPON_DESC_10209 = {
           ContentDE = "Die blutgetränkte Klinge sticht direkt ins Herz. Ehe die sengende Lava sich verfestigt, bleibt ein kurzer Moment, den man zur Flucht nutzen kann.",
           TextMapId = "UI_WEAPON_DESC_10209"
+        },
+        UI_WEAPON_DESC_10298 = {
+          ContentDE = "Eine Lanze, die mit den neuesten Verfahren der Oberflächenbehandlung veredelt wurde – beliebt bei unerschütterlichen Wachen, die standhaft ihre Stellung halten.",
+          TextMapId = "UI_WEAPON_DESC_10298"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_DESC_10298",
-    MaxKey = "UI_WORLDMAP_RETURNHOMEBASE",
+    MinKey = "UI_WEAPON_DESC_10299",
+    MaxKey = "UI_WORLDMAP_TAB",
     Loader = function()
       return {
-        UI_WEAPON_DESC_10298 = {
-          ContentDE = "Eine Lanze, die mit den neuesten Verfahren der Oberflächenbehandlung veredelt wurde – beliebt bei unerschütterlichen Wachen, die standhaft ihre Stellung halten.",
-          TextMapId = "UI_WEAPON_DESC_10298"
-        },
         UI_WEAPON_DESC_10299 = {
           ContentDE = "Eine gewöhnliche Lanze. Aus dem billigsten Metall hergestellt, also ist es nicht schlimm, wenn sie zerbricht.",
           TextMapId = "UI_WEAPON_DESC_10299"
@@ -87703,19 +87699,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WORLDMAP_RETURNHOMEBASE = {
           ContentDE = "Kehre zur Raststätte zurück",
           TextMapId = "UI_WORLDMAP_RETURNHOMEBASE"
+        },
+        UI_WORLDMAP_TAB = {
+          ContentDE = "Teleportiere an diesen Ort",
+          TextMapId = "UI_WORLDMAP_TAB"
         }
       }
     end
   },
   {
-    MinKey = "UI_WORLDMAP_TAB",
-    MaxKey = "UI_WuyoushengEvent_GuideDes1",
+    MinKey = "UI_WORLDMAP_TIMELINE_EX",
+    MaxKey = "UI_WuyoushengEvent_GuideDes2",
     Loader = function()
       return {
-        UI_WORLDMAP_TAB = {
-          ContentDE = "Teleportiere an diesen Ort",
-          TextMapId = "UI_WORLDMAP_TAB"
-        },
         UI_WORLDMAP_TIMELINE_EX = {
           ContentDE = "Wechsle zu Kapitel Dämmerung",
           TextMapId = "UI_WORLDMAP_TIMELINE_EX"
@@ -88511,19 +88507,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WuyoushengEvent_GuideDes1 = {
           ContentDE = "Derrota enemigos para subir de nivel a Wishen",
           TextMapId = "UI_WuyoushengEvent_GuideDes1"
+        },
+        UI_WuyoushengEvent_GuideDes2 = {
+          ContentDE = "Derrota al enemigo de alta amenaza",
+          TextMapId = "UI_WuyoushengEvent_GuideDes2"
         }
       }
     end
   },
   {
-    MinKey = "UI_WuyoushengEvent_GuideDes2",
-    MaxKey = "WeaponType_Polearm",
+    MinKey = "UI_WuyoushengEvent_LevelBuff",
+    MaxKey = "WeaponType_Shotgun",
     Loader = function()
       return {
-        UI_WuyoushengEvent_GuideDes2 = {
-          ContentDE = "Derrota al enemigo de alta amenaza",
-          TextMapId = "UI_WuyoushengEvent_GuideDes2"
-        },
         UI_WuyoushengEvent_LevelBuff = {
           ContentDE = "Efecto de etapa",
           TextMapId = "UI_WuyoushengEvent_LevelBuff"
@@ -89316,19 +89312,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         WeaponType_Polearm = {
           ContentDE = "Stangenwaffe",
           TextMapId = "WeaponType_Polearm"
+        },
+        WeaponType_Shotgun = {
+          ContentDE = "Schrotflinte",
+          TextMapId = "WeaponType_Shotgun"
         }
       }
     end
   },
   {
-    MinKey = "WeaponType_Shotgun",
-    MaxKey = "WikiText_40800302",
+    MinKey = "WeaponType_Sword",
+    MaxKey = "WikiText_40800303",
     Loader = function()
       return {
-        WeaponType_Shotgun = {
-          ContentDE = "Schrotflinte",
-          TextMapId = "WeaponType_Shotgun"
-        },
         WeaponType_Sword = {
           ContentDE = "Schwert",
           TextMapId = "WeaponType_Sword"
@@ -90124,21 +90120,21 @@ Algunas plataformas muestran fragmentos de una imagen.
         WikiText_40800302 = {
           ContentDE = "Vor etwa 150 Jahren erlebte Icelake durch einen Aufschwung der alchemistischen Forschung und den Fortschritt der Phoxichor-Technologie eine Blütezeit. Der nahegelegene Himmelbaum reicherte die örtlichen Phoxichor-Adern an und trieb so eine rasante industrielle Entwicklung sowie die Ausdehnung der Stadt voran. Heute jedoch sind die Adern nahezu erschöpft: Der einstige Wohlstand ist verblasst, und die ehemals florierende Industrie befindet sich im Niedergang.",
           TextMapId = "WikiText_40800302"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40800303",
-    MaxKey = "voice_ch_char_Dafu_vo_topic_03_5",
-    Loader = function()
-      return {
+        },
         WikiText_40800303 = {
           ContentDE = [[
 Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
  Die Innenstadt, auch als Altstadt bekannt, beherbergt die Ratshalle, die Alchemie-Akademie und das Hauptquartier der Legion. Zugang und Wohnrecht sind streng reglementiert: Nur Adlige, hochrangige Beamte, wohlhabende Kaufleute sowie Personen in ihrem Dienst ist der Zutritt gestattet.]],
           TextMapId = "WikiText_40800303"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40800304",
+    MaxKey = "voice_ch_char_Dafu_vo_topic_04_1",
+    Loader = function()
+      return {
         WikiText_40800304 = {
           ContentDE = "Die Elendsviertel der Stadt werden gemeinhin Mist Aken genannt – ein Ausdruck aus dem lokalen Dialekt, der „Nebelbezirk“ bedeutet. Das Gebiet liegt nahe den Abluftschächten der Kerninfrastruktur von Icelake und ist aufgrund der kontinuierlichen Emission von Abgasen dauerhaft in Dunst gehüllt. Obwohl die Umwelt erhebliche Gesundheitsrisiken birgt, haben die durch die Dämpfe verursachten leicht erhöhten Temperaturen Mist Aken paradoxerweise zu einem Zufluchtsort für körperlich schwache oder kälteempfindliche Charon gemacht. Trotz mangelhafter Strafverfolgung hat das weitgehende Fehlen des Einflusses der Solarian den Bezirk in mancher Hinsicht zum sichersten Ort für die Charon-Unterschicht in Icelake werden lassen.",
           TextMapId = "WikiText_40800304"
@@ -90931,19 +90927,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Dafu_vo_topic_03_5 = {
           ContentDE = "Ich hoffe ... wenn ihre Familien kommen, um sich von ihnen zu verabschieden, dass sie diese in Frieden ruhen sehen, so als würden sie schlafen ... Nachdem sie so lange voneinander getrennt waren, sollten keine Eltern ihr Kind mit schmerzerfülltem Gesicht sehen.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_03_5"
+        },
+        voice_ch_char_Dafu_vo_topic_04_1 = {
+          ContentDE = "Ach, es ist nicht schlimm! ... Nun, zumindest ein bisschen ... Die Lektionen für Notfallfürsorge und Pflege sind nicht so schlimm. Aber die körperlichen Fitnesstests machen mir wirklich zu schaffen.",
+          TextMapId = "voice_ch_char_Dafu_vo_topic_04_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Dafu_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_02_3",
+    MinKey = "voice_ch_char_Dafu_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_02_4",
     Loader = function()
       return {
-        voice_ch_char_Dafu_vo_topic_04_1 = {
-          ContentDE = "Ach, es ist nicht schlimm! ... Nun, zumindest ein bisschen ... Die Lektionen für Notfallfürsorge und Pflege sind nicht so schlimm. Aber die körperlichen Fitnesstests machen mir wirklich zu schaffen.",
-          TextMapId = "voice_ch_char_Dafu_vo_topic_04_1"
-        },
         voice_ch_char_Dafu_vo_topic_04_2 = {
           ContentDE = "Obwohl ich früher als alle anderen aufstehe, um zusätzlich zu trainieren, bestehe ich gerade so die Tests ... Ach, mache dich nicht über mich lustig. Ausdauer zu entwickeln, ist viel schwerer, als zu lernen.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_04_2"
@@ -91739,19 +91735,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Kezhou_vo_topic_02_3 = {
           ContentDE = "Es sind die Bedenken eines Schwertkämpfers: Nur als ein Beispiel ... Wenn du zuerst Schwertkunst erlernst, folgst du den Schwertkampfanweisungen Bewegung für Bewegung. Nicht wahr? Gegen gewöhnliche Gegner reicht das aus. Dein Schwert bewegt sich instinktiv.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_02_3"
+        },
+        voice_ch_char_Kezhou_vo_topic_02_4 = {
+          ContentDE = "Aber wenn du zu starr an der Anweisungen festhältst und nicht spontan reagieren kannst, ist dein Schwert nicht mehr wert als ein Stück Schrott – stumpf, unbeholfen, nutzlos. Begegnet dir etwas Unerwartetes, fuchtelst du herum wie ein kopfloses Huhn.",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_4"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_02_4",
-    MaxKey = "voice_ch_char_Nifu_vo_companio_01",
+    MinKey = "voice_ch_char_Kezhou_vo_topic_02_5",
+    MaxKey = "voice_ch_char_Nifu_vo_companio_02",
     Loader = function()
       return {
-        voice_ch_char_Kezhou_vo_topic_02_4 = {
-          ContentDE = "Aber wenn du zu starr an der Anweisungen festhältst und nicht spontan reagieren kannst, ist dein Schwert nicht mehr wert als ein Stück Schrott – stumpf, unbeholfen, nutzlos. Begegnet dir etwas Unerwartetes, fuchtelst du herum wie ein kopfloses Huhn.",
-          TextMapId = "voice_ch_char_Kezhou_vo_topic_02_4"
-        },
         voice_ch_char_Kezhou_vo_topic_02_5 = {
           ContentDE = "Meiner Meinung nach ist Huaxu wie ein unbeholfener Schwertkämpfer, der steif an den Neun Kapiteln von Dafeng festhält. Sie werden noch nicht einmal mit einem Herumstreuner wie mir fertig. Was für eine Chance haben sie gegen eine echte Bedrohung? Sie werden früher oder später scheitern.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_02_5"
@@ -92547,19 +92543,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Nifu_vo_companio_01 = {
           ContentDE = "Man kann seiner Vergangenheit nicht wirklich entkommen. Eines Tages wirst du dich ihr stellen müssen ... Ich hoffe, bis dahin hast du die Kraft, ihr entgegenzutreten.",
           TextMapId = "voice_ch_char_Nifu_vo_companio_01"
+        },
+        voice_ch_char_Nifu_vo_companio_02 = {
+          ContentDE = "Mädchen, du trägst eine Aura, die mir sehr vertraut ist. Bist du vielleicht, so wie ich, jemand aus alter Zeit?",
+          TextMapId = "voice_ch_char_Nifu_vo_companio_02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_companio_02",
-    MaxKey = "voice_ch_char_Tuosi_vo_battlestart",
+    MinKey = "voice_ch_char_Nifu_vo_companio_03",
+    MaxKey = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01",
     Loader = function()
       return {
-        voice_ch_char_Nifu_vo_companio_02 = {
-          ContentDE = "Mädchen, du trägst eine Aura, die mir sehr vertraut ist. Bist du vielleicht, so wie ich, jemand aus alter Zeit?",
-          TextMapId = "voice_ch_char_Nifu_vo_companio_02"
-        },
         voice_ch_char_Nifu_vo_companio_03 = {
           ContentDE = "Hallo, Kind. Hehe ... ja, wir tragen ähnliche Hörner. Vielleicht verbindet uns etwas aus der Vergangenheit. Aber das ist keine Geschichte von dir. Leg sie beiseite und folge dem Weg, den dein Herz begehrt.",
           TextMapId = "voice_ch_char_Nifu_vo_companio_03"
@@ -93355,19 +93351,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Tuosi_vo_battlestart = {
           ContentDE = "Nun präsentieren wir eine Geschichte voller Abenteuer und Pracht.",
           TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
+        },
+        voice_ch_char_Tuosi_vo_be_hit_heavy_r01 = {
+          ContentDE = "Mir geht es gut.",
+          TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Zhangyu_vo_be_hit_r02",
+    MinKey = "voice_ch_char_Tuosi_vo_be_hit_heavy_r02",
+    MaxKey = "voice_ch_char_Zhangyu_vo_birthday",
     Loader = function()
       return {
-        voice_ch_char_Tuosi_vo_be_hit_heavy_r01 = {
-          ContentDE = "Mir geht es gut.",
-          TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01"
-        },
         voice_ch_char_Tuosi_vo_be_hit_heavy_r02 = {
           ContentDE = "Ganz schön tragisch.",
           TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r02"
@@ -94165,19 +94161,19 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhangyu_vo_be_hit_r02 = {
           ContentDE = "Ugh!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"
+        },
+        voice_ch_char_Zhangyu_vo_birthday = {
+          ContentDE = "Ich habe meinen Geburtstag noch nie gefeiert, also weiß ich nicht genau, was man da sagen soll. Also wünsche ich dir, dass du niemals erfahren musst, wie es ist, zu hungern oder zum Überleben zu stehlen. Wie war das?!",
+          TextMapId = "voice_ch_char_Zhangyu_vo_birthday"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Zhangyu_vo_birthday",
+    MinKey = "voice_ch_char_Zhangyu_vo_companio_01",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
-        voice_ch_char_Zhangyu_vo_birthday = {
-          ContentDE = "Ich habe meinen Geburtstag noch nie gefeiert, also weiß ich nicht genau, was man da sagen soll. Also wünsche ich dir, dass du niemals erfahren musst, wie es ist, zu hungern oder zum Überleben zu stehlen. Wie war das?!",
-          TextMapId = "voice_ch_char_Zhangyu_vo_birthday"
-        },
         voice_ch_char_Zhangyu_vo_companio_01 = {
           ContentDE = "Du willst mich fangen? Aber ich bin doch keine Böse! Ich stehle nur von anderen Dieben. Das ist keine große Sache ... Hey, bleib weg von mir! Aua! Das hat gebrannt!",
           TextMapId = "voice_ch_char_Zhangyu_vo_companio_01"

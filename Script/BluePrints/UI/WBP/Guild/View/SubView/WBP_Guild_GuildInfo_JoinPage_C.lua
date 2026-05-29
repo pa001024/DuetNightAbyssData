@@ -130,8 +130,12 @@ function M:OnGetGuildFullInfo(Info)
   end
 end
 
+function M:SetNotShowGuildSendPrivateChat(bVisible)
+  self.NotShowGuildSendPrivateChat = bVisible
+end
+
 function M:BindPresident(PlayerInfo)
-  self.Head_President:HeadIconSetupAnchor(self.Head_Anchor_President, PlayerInfo, self.GuildFullInfo)
+  self.Head_President:HeadIconSetupAnchor(self.Head_Anchor_President, PlayerInfo, self.GuildFullInfo, nil, self.NotShowGuildSendPrivateChat)
   self.Head_Anchor_President.OnMenuOpenChanged:Add(self, self.PresidentHeadMenuOpenChanged)
 end
 
@@ -147,7 +151,7 @@ function M:PresidentHeadMenuOpenChanged(bIsOpen)
 end
 
 function M:BindVice(PlayerInfo)
-  self.Head_Vice:HeadIconSetupAnchor(self.Head_Anchor_Vice, PlayerInfo, self.GuildFullInfo)
+  self.Head_Vice:HeadIconSetupAnchor(self.Head_Anchor_Vice, PlayerInfo, self.GuildFullInfo, nil, self.NotShowGuildSendPrivateChat)
   self.Head_Anchor_Vice.OnMenuOpenChanged:Add(self, self.ViceHeadMenuOpenChanged)
 end
 
@@ -192,6 +196,9 @@ function M:SetPresidentInfo(OtherUid, HeadIcon, TextName, TextNumLevel, BindFunc
       end
       self.GuildFullInfo.CardGuildChatOpen = IsOpen
     end, OtherPlayerInfo.Uid or OtherPlayerInfo.Uuid)
+    if not OtherPlayerInfo.Uid then
+      OtherPlayerInfo.Uid = OtherPlayerInfo.Uuid
+    end
     BindFunc(self, OtherPlayerInfo)
   end
   

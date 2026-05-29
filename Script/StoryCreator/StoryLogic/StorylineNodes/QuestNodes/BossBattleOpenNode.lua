@@ -34,10 +34,6 @@ end
 function M:Clear()
   self.Player:RemoveClearInputCache()
   self.Player:RemoveDisableInputTag(PauseTag)
-  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if GameState then
-    GameState:ClientHideHardBossDgActor(false, "Boss")
-  end
 end
 
 function M:PlaySequence()
@@ -71,9 +67,6 @@ function M:PlaySequence()
   self.SequencePlayer:Play()
   local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)
-  if GameState then
-    GameState:ClientHideHardBossDgActor(true, "Boss")
-  end
 end
 
 function M:ShowUI()
@@ -110,6 +103,12 @@ function M:UnShowUI()
   TeamController:GetModel():SetIsInOpenCoop(false)
   self.HideAllMonstersComponent:ResumeHide()
   self.HideAllNpcsComponent:ResumeHide()
+  if UIManager then
+    local DoubleBossUI = UIManager:GetUIObj("DoubleBossBlood") or UIManager:LoadUINew("DoubleBossBlood")
+    if DoubleBossUI then
+      DoubleBossUI:Show("Talk")
+    end
+  end
 end
 
 function M:OnSequencePlayFinished()

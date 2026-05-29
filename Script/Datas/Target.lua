@@ -169,24 +169,6 @@ T.RT_69 = {"Morality"}
 T.RT_70 = {"Empathy"}
 T.RT_71 = {"Weapon"}
 T.RT_72 = {
-  "Defence",
-  "DefenceMove",
-  "Excavation",
-  "Capture",
-  "SurvivalMini",
-  "SurvivalMiniPro",
-  "Sabotage",
-  "Hijack",
-  "Exterminate",
-  "Rescue",
-  "ExtermPro",
-  "SabotagePro",
-  "Synthesis"
-}
-T.RT_73 = {
-  [1] = T.RT_72
-}
-T.RT_74 = {
   "90102",
   "90104",
   "90106",
@@ -251,112 +233,131 @@ T.RT_74 = {
   "90606",
   "90607"
 }
-T.RT_75 = {
-  [1] = T.RT_74,
+T.RT_73 = {
+  [1] = T.RT_72,
   [2] = T.RT_1
 }
-T.RT_76 = {1000006}
-T.RT_77 = {1000006, 1000205}
-T.RT_78 = {"108001"}
-T.RT_79 = {"false"}
-T.RT_80 = {"60004"}
-T.RT_81 = {
-  [1] = T.RT_80
+T.RT_74 = {1000006}
+T.RT_75 = {1000006, 1000205}
+T.RT_76 = {"108001"}
+T.RT_77 = {"false"}
+T.RT_78 = {"60004"}
+T.RT_79 = {
+  [1] = T.RT_78
 }
-T.RT_82 = {"Melee"}
-T.RT_83 = {
-  [1] = T.RT_82,
+T.RT_80 = {"Melee"}
+T.RT_81 = {
+  [1] = T.RT_80,
   [2] = T.RT_45
 }
-T.RT_84 = {"Ranged"}
-T.RT_85 = {
-  [1] = T.RT_84,
+T.RT_82 = {"Ranged"}
+T.RT_83 = {
+  [1] = T.RT_82,
   [2] = T.RT_1
 }
-T.RT_86 = {
+T.RT_84 = {
   [1] = T.RT_40,
   [2] = T.RT_1
 }
-T.RT_87 = {
+T.RT_85 = {
   [1] = T.RT_40,
   [2] = T.RT_37
 }
-T.RT_88 = {
+T.RT_86 = {
   [1] = T.RT_37,
   [2] = T.RT_9
 }
-T.RT_89 = {"10101"}
-T.RT_90 = {1000151}
-T.RT_91 = {1000152}
-T.RT_92 = {1000153}
-T.RT_93 = {1000154}
-T.RT_94 = {1000155}
-T.RT_95 = {"1008"}
-T.RT_96 = {"610011"}
-T.RT_97 = {"610017"}
-T.RT_98 = {"610019"}
-T.RT_99 = {"701003"}
-T.RT_100 = {"701063"}
-T.RT_101 = {"701033"}
-T.RT_102 = {1000006, 1000305}
-T.RT_103 = {1000006, 1000306}
-T.RT_104 = {1000006, 1000307}
-T.RT_105 = {1000006, 1000308}
-T.RT_106 = {1000006, 1000310}
-T.RT_107 = {"180"}
-T.RT_108 = {"90311"}
-T.RT_109 = {"300"}
-T.RT_110 = {"90"}
-T.RT_111 = {"90507"}
-T.RT_112 = {"90807"}
-T.RT_113 = {"420"}
-T.RT_114 = {"90907"}
-T.RT_115 = {"91007"}
-T.RT_116 = {"Defence"}
+T.RT_87 = {"10101"}
+T.RT_88 = {1000151}
+T.RT_89 = {1000152}
+T.RT_90 = {1000153}
+T.RT_91 = {1000154}
+T.RT_92 = {1000155}
+T.RT_93 = {"1008"}
+T.RT_94 = {"610011"}
+T.RT_95 = {"610017"}
+T.RT_96 = {"610019"}
+T.RT_97 = {"701003"}
+T.RT_98 = {"701063"}
+T.RT_99 = {"701033"}
+T.RT_100 = {1000006, 1000305}
+T.RT_101 = {1000006, 1000306}
+T.RT_102 = {1000006, 1000307}
+T.RT_103 = {1000006, 1000308}
+T.RT_104 = {1000006, 1000310}
+T.RT_105 = {"180"}
+T.RT_106 = {"90311"}
+T.RT_107 = {"300"}
+T.RT_108 = {"90"}
+T.RT_109 = {"90507"}
+T.RT_110 = {"90807"}
+T.RT_111 = {"420"}
+T.RT_112 = {"90907"}
+T.RT_113 = {"91007"}
+T.RT_114 = {"Defence"}
+T.RT_115 = {
+  [1] = T.RT_114
+}
+T.RT_116 = {
+  "DefenceMove"
+}
 T.RT_117 = {
   [1] = T.RT_116
 }
-T.RT_118 = {
-  "DefenceMove"
-}
+T.RT_118 = {"Excavation"}
 T.RT_119 = {
   [1] = T.RT_118
 }
-T.RT_120 = {"Excavation"}
+T.RT_120 = {"Capture"}
 T.RT_121 = {
   [1] = T.RT_120
 }
-T.RT_122 = {"Capture"}
+T.RT_122 = {
+  "SurvivalMini"
+}
 T.RT_123 = {
   [1] = T.RT_122
 }
 T.RT_124 = {
-  "SurvivalMini"
+  "SurvivalMiniPro"
 }
 T.RT_125 = {
   [1] = T.RT_124
 }
-T.RT_126 = {
-  "SurvivalMiniPro"
-}
+T.RT_126 = {"Sabotage"}
 T.RT_127 = {
   [1] = T.RT_126
 }
-T.RT_128 = {"Sabotage"}
+T.RT_128 = {"Hijack"}
 T.RT_129 = {
   [1] = T.RT_128
 }
-T.RT_130 = {"Hijack"}
+T.RT_130 = {
+  "Exterminate"
+}
 T.RT_131 = {
   [1] = T.RT_130
 }
-T.RT_132 = {
-  "Exterminate"
-}
+T.RT_132 = {"Rescue"}
 T.RT_133 = {
   [1] = T.RT_132
 }
-T.RT_134 = {"Rescue"}
+T.RT_134 = {
+  "Defence",
+  "DefenceMove",
+  "Excavation",
+  "Capture",
+  "SurvivalMini",
+  "SurvivalMiniPro",
+  "Sabotage",
+  "Hijack",
+  "Exterminate",
+  "Rescue",
+  "ExtermPro",
+  "SabotagePro",
+  "Synthesis",
+  "IronSurvival"
+}
 T.RT_135 = {
   [1] = T.RT_134
 }
@@ -619,37 +620,37 @@ return ReadOnly("Target", {
   },
   [2041] = {
     BattleAchiTargetTypeId = 2041,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2041
   },
   [2042] = {
     BattleAchiTargetTypeId = 2042,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2042
   },
   [2043] = {
     BattleAchiTargetTypeId = 2043,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2043
   },
   [2044] = {
     BattleAchiTargetTypeId = 2044,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2044
   },
   [2045] = {
     BattleAchiTargetTypeId = 2045,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2045
   },
   [2046] = {
     BattleAchiTargetTypeId = 2046,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2046
   },
   [2047] = {
     BattleAchiTargetTypeId = 2047,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2047
   },
   [2051] = {
@@ -659,47 +660,47 @@ return ReadOnly("Target", {
   },
   [2052] = {
     BattleAchiTargetTypeId = 2052,
-    ConditionId = T.RT_77,
+    ConditionId = T.RT_75,
     TargetId = 2052
   },
   [2053] = {
     BattleAchiTargetTypeId = 2053,
-    ConditionId = T.RT_77,
+    ConditionId = T.RT_75,
     TargetId = 2053
   },
   [2101] = {
     BattleAchiTargetTypeId = 2101,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2101
   },
   [2102] = {
     BattleAchiTargetTypeId = 2102,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2102
   },
   [2103] = {
     BattleAchiTargetTypeId = 2103,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2103
   },
   [2104] = {
     BattleAchiTargetTypeId = 2104,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2104
   },
   [2105] = {
     BattleAchiTargetTypeId = 2105,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2105
   },
   [2106] = {
     BattleAchiTargetTypeId = 2106,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2106
   },
   [2107] = {
     BattleAchiTargetTypeId = 2107,
-    ConditionId = T.RT_76,
+    ConditionId = T.RT_74,
     TargetId = 2107
   },
   [2201] = {
@@ -800,67 +801,67 @@ return ReadOnly("Target", {
   },
   [5001] = {
     BattleAchiTargetTypeId = 5001,
-    ConditionId = T.RT_90,
+    ConditionId = T.RT_88,
     IndividualRule = "less",
     TargetId = 5001
   },
   [5002] = {
     BattleAchiTargetTypeId = 5001,
-    ConditionId = T.RT_91,
+    ConditionId = T.RT_89,
     IndividualRule = "less",
     TargetId = 5002
   },
   [5003] = {
     BattleAchiTargetTypeId = 5001,
-    ConditionId = T.RT_92,
+    ConditionId = T.RT_90,
     IndividualRule = "less",
     TargetId = 5003
   },
   [5004] = {
     BattleAchiTargetTypeId = 5001,
-    ConditionId = T.RT_93,
+    ConditionId = T.RT_91,
     IndividualRule = "less",
     TargetId = 5004
   },
   [5005] = {
     BattleAchiTargetTypeId = 5001,
-    ConditionId = T.RT_94,
+    ConditionId = T.RT_92,
     IndividualRule = "less",
     TargetId = 5005
   },
   [5011] = {
     BattleAchiTargetTypeId = 5011,
-    ConditionId = T.RT_90,
+    ConditionId = T.RT_88,
     TargetId = 5011
   },
   [5012] = {
     BattleAchiTargetTypeId = 5011,
-    ConditionId = T.RT_91,
+    ConditionId = T.RT_89,
     TargetId = 5012
   },
   [5013] = {
     BattleAchiTargetTypeId = 5011,
-    ConditionId = T.RT_92,
+    ConditionId = T.RT_90,
     TargetId = 5013
   },
   [5014] = {
     BattleAchiTargetTypeId = 5011,
-    ConditionId = T.RT_93,
+    ConditionId = T.RT_91,
     TargetId = 5014
   },
   [5015] = {
     BattleAchiTargetTypeId = 5011,
-    ConditionId = T.RT_94,
+    ConditionId = T.RT_92,
     TargetId = 5015
   },
   [5021] = {
     BattleAchiTargetTypeId = 5021,
-    ConditionId = T.RT_102,
+    ConditionId = T.RT_100,
     TargetId = 5021
   },
   [5022] = {
     BattleAchiTargetTypeId = 5021,
-    ConditionId = T.RT_103,
+    ConditionId = T.RT_101,
     TargetId = 5022
   },
   [5023] = {
@@ -870,12 +871,12 @@ return ReadOnly("Target", {
   },
   [5024] = {
     BattleAchiTargetTypeId = 5021,
-    ConditionId = T.RT_104,
+    ConditionId = T.RT_102,
     TargetId = 5024
   },
   [5025] = {
     BattleAchiTargetTypeId = 5021,
-    ConditionId = T.RT_105,
+    ConditionId = T.RT_103,
     TargetId = 5025
   },
   [5026] = {
@@ -885,7 +886,7 @@ return ReadOnly("Target", {
   },
   [5027] = {
     BattleAchiTargetTypeId = 5021,
-    ConditionId = T.RT_106,
+    ConditionId = T.RT_104,
     TargetId = 5027
   },
   [5031] = {
@@ -937,42 +938,42 @@ return ReadOnly("Target", {
   },
   [5051] = {
     BattleAchiTargetTypeId = 5041,
-    ConditionId = T.RT_90,
+    ConditionId = T.RT_88,
     TargetId = 5051
   },
   [5052] = {
     BattleAchiTargetTypeId = 5041,
-    ConditionId = T.RT_91,
+    ConditionId = T.RT_89,
     TargetId = 5052
   },
   [5053] = {
     BattleAchiTargetTypeId = 5041,
-    ConditionId = T.RT_92,
+    ConditionId = T.RT_90,
     TargetId = 5053
   },
   [5054] = {
     BattleAchiTargetTypeId = 5041,
-    ConditionId = T.RT_93,
+    ConditionId = T.RT_91,
     TargetId = 5054
   },
   [5055] = {
     BattleAchiTargetTypeId = 5041,
-    ConditionId = T.RT_94,
+    ConditionId = T.RT_92,
     TargetId = 5055
   },
   [5071] = {
     BattleAchiTargetTypeId = 5051,
-    ConditionId = T.RT_90,
+    ConditionId = T.RT_88,
     TargetId = 5071
   },
   [5072] = {
     BattleAchiTargetTypeId = 5052,
-    ConditionId = T.RT_91,
+    ConditionId = T.RT_89,
     TargetId = 5072
   },
   [5073] = {
     BattleAchiTargetTypeId = 5053,
-    ConditionId = T.RT_92,
+    ConditionId = T.RT_90,
     IndividualRule = "less",
     TargetId = 5073
   },
@@ -2040,25 +2041,25 @@ return ReadOnly("Target", {
   },
   [30501] = {
     TargetId = 30501,
-    TargetParam = T.RT_83,
+    TargetParam = T.RT_81,
     TargetType = 10305
   },
   [30502] = {
     TargetId = 30502,
     TargetParam = {
-      [1] = T.RT_84,
+      [1] = T.RT_82,
       [2] = T.RT_45
     },
     TargetType = 10305
   },
   [30503] = {
     TargetId = 30503,
-    TargetParam = T.RT_83,
+    TargetParam = T.RT_81,
     TargetType = 10305
   },
   [30504] = {
     TargetId = 30504,
-    TargetParam = T.RT_85,
+    TargetParam = T.RT_83,
     TargetType = 10305
   },
   [30601] = {
@@ -2087,7 +2088,7 @@ return ReadOnly("Target", {
   },
   [30604] = {
     TargetId = 30604,
-    TargetParam = T.RT_86,
+    TargetParam = T.RT_84,
     TargetType = 10306
   },
   [30605] = {
@@ -2102,7 +2103,7 @@ return ReadOnly("Target", {
   },
   [30607] = {
     TargetId = 30607,
-    TargetParam = T.RT_87,
+    TargetParam = T.RT_85,
     TargetType = 10306
   },
   [30608] = {
@@ -2112,7 +2113,7 @@ return ReadOnly("Target", {
   },
   [30609] = {
     TargetId = 30609,
-    TargetParam = T.RT_88,
+    TargetParam = T.RT_86,
     TargetType = 10306
   },
   [30610] = {
@@ -2151,7 +2152,7 @@ return ReadOnly("Target", {
   },
   [30615] = {
     TargetId = 30615,
-    TargetParam = T.RT_88,
+    TargetParam = T.RT_86,
     TargetType = 10306
   },
   [30701] = {
@@ -2237,19 +2238,19 @@ return ReadOnly("Target", {
   },
   [40401] = {
     TargetId = 40401,
-    TargetParam = T.RT_85,
+    TargetParam = T.RT_83,
     TargetType = 10404
   },
   [40501] = {
     TargetId = 40501,
     TargetParam = {
-      [1] = T.RT_89
+      [1] = T.RT_87
     },
     TargetType = 10405
   },
   [40601] = {
     TargetId = 40601,
-    TargetParam = T.RT_87,
+    TargetParam = T.RT_85,
     TargetType = 10406
   },
   [40602] = {
@@ -2260,7 +2261,7 @@ return ReadOnly("Target", {
   [40701] = {
     TargetId = 40701,
     TargetParam = {
-      [1] = T.RT_89,
+      [1] = T.RT_87,
       [2] = T.RT_37
     },
     TargetType = 10407
@@ -2277,7 +2278,7 @@ return ReadOnly("Target", {
   [50119] = {
     TargetId = 50119,
     TargetParam = {
-      [1] = T.RT_95,
+      [1] = T.RT_93,
       [2] = {"610014"},
       [3] = T.RT_36
     },
@@ -2305,7 +2306,7 @@ return ReadOnly("Target", {
     TargetId = 50122,
     TargetParam = {
       [1] = {"1010"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2314,7 +2315,7 @@ return ReadOnly("Target", {
     TargetId = 50123,
     TargetParam = {
       [1] = {"1005"},
-      [2] = T.RT_97,
+      [2] = T.RT_95,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2322,7 +2323,7 @@ return ReadOnly("Target", {
   [50124] = {
     TargetId = 50124,
     TargetParam = {
-      [1] = T.RT_95,
+      [1] = T.RT_93,
       [2] = {"610015"},
       [3] = T.RT_36
     },
@@ -2332,7 +2333,7 @@ return ReadOnly("Target", {
     TargetId = 50125,
     TargetParam = {
       [1] = T.RT_64,
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2341,7 +2342,7 @@ return ReadOnly("Target", {
     TargetId = 50126,
     TargetParam = {
       [1] = {"1012"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2350,7 +2351,7 @@ return ReadOnly("Target", {
     TargetId = 50127,
     TargetParam = {
       [1] = {"1004"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2359,7 +2360,7 @@ return ReadOnly("Target", {
     TargetId = 50128,
     TargetParam = {
       [1] = {"1017"},
-      [2] = T.RT_97,
+      [2] = T.RT_95,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2368,7 +2369,7 @@ return ReadOnly("Target", {
     TargetId = 50129,
     TargetParam = {
       [1] = {"1018"},
-      [2] = T.RT_97,
+      [2] = T.RT_95,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2377,7 +2378,7 @@ return ReadOnly("Target", {
     TargetId = 50130,
     TargetParam = {
       [1] = T.RT_29,
-      [2] = T.RT_98,
+      [2] = T.RT_96,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2386,7 +2387,7 @@ return ReadOnly("Target", {
     TargetId = 50131,
     TargetParam = {
       [1] = T.RT_63,
-      [2] = T.RT_98,
+      [2] = T.RT_96,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2395,7 +2396,7 @@ return ReadOnly("Target", {
     TargetId = 50132,
     TargetParam = {
       [1] = {"1028"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2404,7 +2405,7 @@ return ReadOnly("Target", {
     TargetId = 50133,
     TargetParam = {
       [1] = {"1029"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2422,7 +2423,7 @@ return ReadOnly("Target", {
     TargetId = 50135,
     TargetParam = {
       [1] = {"1036"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2431,7 +2432,7 @@ return ReadOnly("Target", {
     TargetId = 50136,
     TargetParam = {
       [1] = {"1037"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2440,7 +2441,7 @@ return ReadOnly("Target", {
     TargetId = 50137,
     TargetParam = {
       [1] = {"1038"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2449,7 +2450,7 @@ return ReadOnly("Target", {
     TargetId = 50138,
     TargetParam = {
       [1] = {"1039"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2458,7 +2459,7 @@ return ReadOnly("Target", {
     TargetId = 50139,
     TargetParam = {
       [1] = {"1040"},
-      [2] = T.RT_96,
+      [2] = T.RT_94,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -2467,7 +2468,7 @@ return ReadOnly("Target", {
     TargetId = 50308,
     TargetParam = {
       [1] = T.RT_4,
-      [2] = T.RT_107
+      [2] = T.RT_105
     },
     TargetType = 10503
   },
@@ -2475,123 +2476,123 @@ return ReadOnly("Target", {
     TargetId = 50309,
     TargetParam = {
       [1] = T.RT_6,
-      [2] = T.RT_107
+      [2] = T.RT_105
     },
     TargetType = 10503
   },
   [50401] = {
     TargetId = 50401,
-    TargetParam = T.RT_75,
+    TargetParam = T.RT_73,
     TargetType = 10504
   },
   [50901] = {
     TargetId = 50901,
-    TargetParam = T.RT_117,
+    TargetParam = T.RT_115,
     TargetType = 10509
   },
   [50902] = {
     TargetId = 50902,
-    TargetParam = T.RT_119,
+    TargetParam = T.RT_117,
     TargetType = 10509
   },
   [50903] = {
     TargetId = 50903,
-    TargetParam = T.RT_121,
+    TargetParam = T.RT_119,
     TargetType = 10509
   },
   [50904] = {
     TargetId = 50904,
-    TargetParam = T.RT_123,
+    TargetParam = T.RT_121,
     TargetType = 10509
   },
   [50905] = {
     TargetId = 50905,
-    TargetParam = T.RT_125,
+    TargetParam = T.RT_123,
     TargetType = 10509
   },
   [50906] = {
     TargetId = 50906,
-    TargetParam = T.RT_127,
+    TargetParam = T.RT_125,
     TargetType = 10509
   },
   [50907] = {
     TargetId = 50907,
-    TargetParam = T.RT_129,
+    TargetParam = T.RT_127,
     TargetType = 10509
   },
   [50908] = {
     TargetId = 50908,
-    TargetParam = T.RT_131,
+    TargetParam = T.RT_129,
     TargetType = 10509
   },
   [50909] = {
     TargetId = 50909,
-    TargetParam = T.RT_133,
+    TargetParam = T.RT_131,
     TargetType = 10509
   },
   [50910] = {
     TargetId = 50910,
-    TargetParam = T.RT_135,
+    TargetParam = T.RT_133,
     TargetType = 10509
   },
   [50920] = {
     TargetId = 50920,
-    TargetParam = T.RT_117,
+    TargetParam = T.RT_115,
     TargetType = 10514
   },
   [50921] = {
     TargetId = 50921,
-    TargetParam = T.RT_119,
+    TargetParam = T.RT_117,
     TargetType = 10514
   },
   [50922] = {
     TargetId = 50922,
-    TargetParam = T.RT_121,
+    TargetParam = T.RT_119,
     TargetType = 10514
   },
   [50923] = {
     TargetId = 50923,
-    TargetParam = T.RT_123,
+    TargetParam = T.RT_121,
     TargetType = 10514
   },
   [50924] = {
     TargetId = 50924,
-    TargetParam = T.RT_125,
+    TargetParam = T.RT_123,
     TargetType = 10514
   },
   [50925] = {
     TargetId = 50925,
-    TargetParam = T.RT_127,
+    TargetParam = T.RT_125,
     TargetType = 10514
   },
   [50926] = {
     TargetId = 50926,
-    TargetParam = T.RT_129,
+    TargetParam = T.RT_127,
     TargetType = 10514
   },
   [50927] = {
     TargetId = 50927,
-    TargetParam = T.RT_131,
+    TargetParam = T.RT_129,
     TargetType = 10514
   },
   [50928] = {
     TargetId = 50928,
-    TargetParam = T.RT_133,
+    TargetParam = T.RT_131,
     TargetType = 10514
   },
   [50929] = {
     TargetId = 50929,
-    TargetParam = T.RT_135,
+    TargetParam = T.RT_133,
     TargetType = 10514
   },
   [50930] = {
     TargetId = 50930,
-    TargetParam = T.RT_73,
+    TargetParam = T.RT_135,
     TargetType = 10514
   },
   [50931] = {
     TargetId = 50931,
-    TargetParam = T.RT_73,
+    TargetParam = T.RT_135,
     TargetType = 10515
   },
   [50932] = {
@@ -2986,7 +2987,7 @@ return ReadOnly("Target", {
   },
   [60601] = {
     TargetId = 60601,
-    TargetParam = T.RT_86,
+    TargetParam = T.RT_84,
     TargetType = 10606
   },
   [60602] = {
@@ -3365,7 +3366,7 @@ return ReadOnly("Target", {
   },
   [70153] = {
     TargetId = 70153,
-    TargetParam = T.RT_81,
+    TargetParam = T.RT_79,
     TargetType = 10502
   },
   [70154] = {
@@ -3870,7 +3871,7 @@ return ReadOnly("Target", {
     TargetId = 501301,
     TargetParam = {
       [1] = {"70100"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3879,7 +3880,7 @@ return ReadOnly("Target", {
     TargetId = 501302,
     TargetParam = {
       [1] = {"70101"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3888,7 +3889,7 @@ return ReadOnly("Target", {
     TargetId = 501303,
     TargetParam = {
       [1] = {"70102"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3897,7 +3898,7 @@ return ReadOnly("Target", {
     TargetId = 501304,
     TargetParam = {
       [1] = {"70105"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3906,7 +3907,7 @@ return ReadOnly("Target", {
     TargetId = 501305,
     TargetParam = {
       [1] = {"70106"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3915,7 +3916,7 @@ return ReadOnly("Target", {
     TargetId = 501306,
     TargetParam = {
       [1] = {"70107"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3924,7 +3925,7 @@ return ReadOnly("Target", {
     TargetId = 501307,
     TargetParam = {
       [1] = {"70108"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3933,7 +3934,7 @@ return ReadOnly("Target", {
     TargetId = 501308,
     TargetParam = {
       [1] = {"70109"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3951,7 +3952,7 @@ return ReadOnly("Target", {
     TargetId = 501310,
     TargetParam = {
       [1] = {"70111"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3960,7 +3961,7 @@ return ReadOnly("Target", {
     TargetId = 501311,
     TargetParam = {
       [1] = {"70112"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3969,7 +3970,7 @@ return ReadOnly("Target", {
     TargetId = 501312,
     TargetParam = {
       [1] = {"70113"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3978,7 +3979,7 @@ return ReadOnly("Target", {
     TargetId = 501313,
     TargetParam = {
       [1] = {"70114"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -3987,7 +3988,7 @@ return ReadOnly("Target", {
     TargetId = 501314,
     TargetParam = {
       [1] = {"70115"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4023,7 +4024,7 @@ return ReadOnly("Target", {
     TargetId = 501319,
     TargetParam = {
       [1] = {"70103"},
-      [2] = T.RT_101,
+      [2] = T.RT_99,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4032,7 +4033,7 @@ return ReadOnly("Target", {
     TargetId = 501320,
     TargetParam = {
       [1] = {"70116"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4041,7 +4042,7 @@ return ReadOnly("Target", {
     TargetId = 501321,
     TargetParam = {
       [1] = {"70117"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4050,7 +4051,7 @@ return ReadOnly("Target", {
     TargetId = 501322,
     TargetParam = {
       [1] = {"70118"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4059,7 +4060,7 @@ return ReadOnly("Target", {
     TargetId = 501323,
     TargetParam = {
       [1] = {"70119"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4068,7 +4069,7 @@ return ReadOnly("Target", {
     TargetId = 501324,
     TargetParam = {
       [1] = {"70120"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4077,7 +4078,7 @@ return ReadOnly("Target", {
     TargetId = 501325,
     TargetParam = {
       [1] = {"70121"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4086,7 +4087,7 @@ return ReadOnly("Target", {
     TargetId = 501326,
     TargetParam = {
       [1] = {"70122"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4095,7 +4096,7 @@ return ReadOnly("Target", {
     TargetId = 501327,
     TargetParam = {
       [1] = {"70123"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4104,7 +4105,7 @@ return ReadOnly("Target", {
     TargetId = 501328,
     TargetParam = {
       [1] = {"70150"},
-      [2] = T.RT_101,
+      [2] = T.RT_99,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4113,7 +4114,7 @@ return ReadOnly("Target", {
     TargetId = 501329,
     TargetParam = {
       [1] = {"70151"},
-      [2] = T.RT_101,
+      [2] = T.RT_99,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4122,7 +4123,7 @@ return ReadOnly("Target", {
     TargetId = 501330,
     TargetParam = {
       [1] = {"70152"},
-      [2] = T.RT_101,
+      [2] = T.RT_99,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4131,7 +4132,7 @@ return ReadOnly("Target", {
     TargetId = 501331,
     TargetParam = {
       [1] = {"70125"},
-      [2] = T.RT_101,
+      [2] = T.RT_99,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4140,7 +4141,7 @@ return ReadOnly("Target", {
     TargetId = 501332,
     TargetParam = {
       [1] = {"70124"},
-      [2] = T.RT_101,
+      [2] = T.RT_99,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4149,7 +4150,7 @@ return ReadOnly("Target", {
     TargetId = 501333,
     TargetParam = {
       [1] = {"70154"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4158,7 +4159,7 @@ return ReadOnly("Target", {
     TargetId = 501334,
     TargetParam = {
       [1] = {"70155"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4167,7 +4168,7 @@ return ReadOnly("Target", {
     TargetId = 501335,
     TargetParam = {
       [1] = {"70156"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4176,7 +4177,7 @@ return ReadOnly("Target", {
     TargetId = 501336,
     TargetParam = {
       [1] = {"70157"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4185,7 +4186,7 @@ return ReadOnly("Target", {
     TargetId = 501337,
     TargetParam = {
       [1] = {"70104"},
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10501
@@ -4546,7 +4547,7 @@ return ReadOnly("Target", {
         "2080099",
         "2060174"
       },
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10520
@@ -4555,7 +4556,7 @@ return ReadOnly("Target", {
     TargetId = 520202,
     TargetParam = {
       [1] = {"2080091", "2080094"},
-      [2] = T.RT_99,
+      [2] = T.RT_97,
       [3] = T.RT_36
     },
     TargetType = 10520
@@ -4568,7 +4569,7 @@ return ReadOnly("Target", {
         "2080089",
         "2060158"
       },
-      [2] = T.RT_100,
+      [2] = T.RT_98,
       [3] = T.RT_36
     },
     TargetType = 10520
@@ -5098,8 +5099,8 @@ return ReadOnly("Target", {
   [2200101] = {
     TargetId = 2200101,
     TargetParam = {
-      [1] = T.RT_78,
-      [2] = T.RT_79,
+      [1] = T.RT_76,
+      [2] = T.RT_77,
       [3] = T.RT_43
     },
     TargetType = 22001
@@ -5107,8 +5108,8 @@ return ReadOnly("Target", {
   [2200102] = {
     TargetId = 2200102,
     TargetParam = {
-      [1] = T.RT_78,
-      [2] = T.RT_79,
+      [1] = T.RT_76,
+      [2] = T.RT_77,
       [3] = T.RT_47
     },
     TargetType = 22001
@@ -5116,8 +5117,8 @@ return ReadOnly("Target", {
   [2200103] = {
     TargetId = 2200103,
     TargetParam = {
-      [1] = T.RT_78,
-      [2] = T.RT_79,
+      [1] = T.RT_76,
+      [2] = T.RT_77,
       [3] = T.RT_62
     },
     TargetType = 22001
@@ -5125,7 +5126,7 @@ return ReadOnly("Target", {
   [2200104] = {
     TargetId = 2200104,
     TargetParam = {
-      [1] = T.RT_78,
+      [1] = T.RT_76,
       [2] = {"true"},
       [3] = T.RT_1
     },
@@ -5148,7 +5149,7 @@ return ReadOnly("Target", {
   },
   [2200501] = {
     TargetId = 2200501,
-    TargetParam = T.RT_81,
+    TargetParam = T.RT_79,
     TargetType = 10502
   },
   [2200601] = {TargetId = 2200601, TargetType = 22006},
@@ -5197,137 +5198,137 @@ return ReadOnly("Target", {
   },
   [2300201] = {TargetId = 2300201, TargetType = 23002},
   [5061001] = {
-    ConditionId = T.RT_102,
+    ConditionId = T.RT_100,
     TargetId = 5061001,
     TargetParam = {
-      [1] = T.RT_108,
-      [2] = T.RT_109
+      [1] = T.RT_106,
+      [2] = T.RT_107
     },
     TargetType = 10503
   },
   [5061002] = {
-    ConditionId = T.RT_102,
+    ConditionId = T.RT_100,
     TargetId = 5061002,
     TargetParam = {
-      [1] = T.RT_108,
-      [2] = T.RT_107
+      [1] = T.RT_106,
+      [2] = T.RT_105
     },
     TargetType = 10503
   },
   [5061003] = {
-    ConditionId = T.RT_102,
+    ConditionId = T.RT_100,
     TargetId = 5061003,
     TargetParam = {
-      [1] = T.RT_108,
-      [2] = T.RT_110
+      [1] = T.RT_106,
+      [2] = T.RT_108
     },
     TargetType = 10503
   },
   [5062001] = {
-    ConditionId = T.RT_103,
+    ConditionId = T.RT_101,
     TargetId = 5062001,
     TargetParam = {
-      [1] = T.RT_111,
-      [2] = T.RT_109
+      [1] = T.RT_109,
+      [2] = T.RT_107
     },
     TargetType = 10503
   },
   [5062002] = {
-    ConditionId = T.RT_103,
+    ConditionId = T.RT_101,
     TargetId = 5062002,
     TargetParam = {
-      [1] = T.RT_111,
-      [2] = T.RT_107
+      [1] = T.RT_109,
+      [2] = T.RT_105
     },
     TargetType = 10503
   },
   [5062003] = {
-    ConditionId = T.RT_103,
+    ConditionId = T.RT_101,
     TargetId = 5062003,
     TargetParam = {
-      [1] = T.RT_111,
-      [2] = T.RT_110
+      [1] = T.RT_109,
+      [2] = T.RT_108
     },
     TargetType = 10503
   },
   [5063001] = {
-    ConditionId = T.RT_104,
+    ConditionId = T.RT_102,
     TargetId = 5063001,
     TargetParam = {
-      [1] = T.RT_112,
-      [2] = T.RT_113
+      [1] = T.RT_110,
+      [2] = T.RT_111
     },
     TargetType = 10503
   },
   [5063002] = {
-    ConditionId = T.RT_104,
+    ConditionId = T.RT_102,
     TargetId = 5063002,
     TargetParam = {
-      [1] = T.RT_112,
-      [2] = T.RT_109
+      [1] = T.RT_110,
+      [2] = T.RT_107
     },
     TargetType = 10503
   },
   [5063003] = {
-    ConditionId = T.RT_104,
+    ConditionId = T.RT_102,
     TargetId = 5063003,
+    TargetParam = {
+      [1] = T.RT_110,
+      [2] = T.RT_105
+    },
+    TargetType = 10503
+  },
+  [5064001] = {
+    ConditionId = T.RT_103,
+    TargetId = 5064001,
+    TargetParam = {
+      [1] = T.RT_112,
+      [2] = T.RT_111
+    },
+    TargetType = 10503
+  },
+  [5064002] = {
+    ConditionId = T.RT_103,
+    TargetId = 5064002,
     TargetParam = {
       [1] = T.RT_112,
       [2] = T.RT_107
     },
     TargetType = 10503
   },
-  [5064001] = {
-    ConditionId = T.RT_105,
-    TargetId = 5064001,
-    TargetParam = {
-      [1] = T.RT_114,
-      [2] = T.RT_113
-    },
-    TargetType = 10503
-  },
-  [5064002] = {
-    ConditionId = T.RT_105,
-    TargetId = 5064002,
-    TargetParam = {
-      [1] = T.RT_114,
-      [2] = T.RT_109
-    },
-    TargetType = 10503
-  },
   [5064003] = {
-    ConditionId = T.RT_105,
+    ConditionId = T.RT_103,
     TargetId = 5064003,
     TargetParam = {
-      [1] = T.RT_114,
-      [2] = T.RT_107
+      [1] = T.RT_112,
+      [2] = T.RT_105
     },
     TargetType = 10503
   },
   [5065001] = {
-    ConditionId = T.RT_106,
+    ConditionId = T.RT_104,
     TargetId = 5065001,
     TargetParam = {
-      [1] = T.RT_115,
-      [2] = T.RT_109
-    },
-    TargetType = 10503
-  },
-  [5065002] = {
-    ConditionId = T.RT_106,
-    TargetId = 5065002,
-    TargetParam = {
-      [1] = T.RT_115,
+      [1] = T.RT_113,
       [2] = T.RT_107
     },
     TargetType = 10503
   },
+  [5065002] = {
+    ConditionId = T.RT_104,
+    TargetId = 5065002,
+    TargetParam = {
+      [1] = T.RT_113,
+      [2] = T.RT_105
+    },
+    TargetType = 10503
+  },
   [5065003] = {
-    ConditionId = T.RT_106,
+    ConditionId = T.RT_104,
     TargetId = 5065003,
     TargetParam = {
-      [1] = T.RT_115,
-      [2] = T.RT_110
+      [1] = T.RT_113,
+      [2] = T.RT_108
     },
     TargetType = 10503
   },
@@ -6147,7 +6148,23 @@ return ReadOnly("Target", {
   },
   [20100101] = {
     TargetId = 20100101,
-    TargetParam = T.RT_73,
+    TargetParam = {
+      [1] = {
+        "Defence",
+        "DefenceMove",
+        "Excavation",
+        "Capture",
+        "SurvivalMini",
+        "SurvivalMiniPro",
+        "Sabotage",
+        "Hijack",
+        "Exterminate",
+        "Rescue",
+        "ExtermPro",
+        "SabotagePro",
+        "Synthesis"
+      }
+    },
     TargetType = 10514
   },
   [20200102] = {TargetId = 20200102, TargetType = 10301},
@@ -6246,13 +6263,13 @@ return ReadOnly("Target", {
   },
   [20200112] = {
     TargetId = 20200112,
-    TargetParam = T.RT_75,
+    TargetParam = T.RT_73,
     TargetType = 10504
   },
   [20200113] = {
     TargetId = 20200113,
     TargetParam = {
-      [1] = T.RT_74,
+      [1] = T.RT_72,
       [2] = T.RT_43
     },
     TargetType = 10504
@@ -6260,7 +6277,7 @@ return ReadOnly("Target", {
   [20200114] = {
     TargetId = 20200114,
     TargetParam = {
-      [1] = T.RT_74,
+      [1] = T.RT_72,
       [2] = T.RT_9
     },
     TargetType = 10504

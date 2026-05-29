@@ -654,6 +654,11 @@ return {
       CreatorId = 272640152,
       UnitType = "Phantom",
       UnitId = 0
+    },
+    ["172640158"] = {
+      CreatorId = 172640158,
+      UnitType = "Mechanism",
+      UnitId = 11009
     }
   },
   ManualItem = {

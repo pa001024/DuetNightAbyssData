@@ -79,7 +79,7 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
       if ExitDungeonInfo then
         local BattleView = UIManager():GetUIObj("BattleMain")
         if BattleView then
-          BattleView:SetVisibility(UIConst.VisibilityOp.Collapsed)
+          BattleView:Hide("Temp1.4Fix")
         end
         GWorld.GameInstance:AddTimer(0.1, function()
           GWorld.GameInstance:ClearExitDungeonData()

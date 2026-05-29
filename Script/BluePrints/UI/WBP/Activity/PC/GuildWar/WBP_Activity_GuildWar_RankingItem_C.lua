@@ -75,7 +75,12 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:BP_OnEntryReleased()
-  self.Content.SelfWidget = nil
+  if self.Head_Anchor and self.Head_Anchor:IsOpen() then
+    self.Head_Anchor:Close()
+  end
+  if self.Content then
+    self.Content.SelfWidget = nil
+  end
   self:PlayAnimation(self.Normal)
 end
 

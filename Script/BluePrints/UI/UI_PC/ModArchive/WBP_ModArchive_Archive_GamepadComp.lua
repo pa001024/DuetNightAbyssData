@@ -3,6 +3,8 @@ local ModModel = ModController:GetModel()
 
 function Component:InitGamePad()
   if ModController:IsMobile() then
+    self.Key_Reward:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Key_Reward.Img:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
   self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
@@ -183,14 +185,18 @@ function Component:SwitchToGamePad()
   self.List_Item:NavigateToIndex(0)
   self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.IsInPolarityView = false
-  self.Key_Rewards:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  if self.Key_Rewards then
+    self.Key_Rewards:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
   self.Key_Search:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
 end
 
 function Component:SwitchToPC()
   self.Key_Reward.Img:SetVisibility(ESlateVisibility.Collapsed)
   self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Key_Rewards:SetVisibility(ESlateVisibility.Collapsed)
+  if self.Key_Rewards then
+    self.Key_Rewards:SetVisibility(ESlateVisibility.Collapsed)
+  end
   self.Key_Search:SetVisibility(ESlateVisibility.Collapsed)
 end
 

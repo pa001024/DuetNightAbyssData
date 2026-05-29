@@ -38,6 +38,9 @@ function M:TryPopUpMonthSignIn()
   if not UIUnlocked then
     return
   end
+  if Avatar:IsInDungeon() then
+    return
+  end
   local PreCheckCount = EMCache:Get("PreCheckCount", true)
   if not PreCheckCount then
     self:GetUIMgr():LoadUINew("MonthSignInPopMain")
