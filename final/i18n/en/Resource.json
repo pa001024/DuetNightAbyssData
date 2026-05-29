@@ -12065,28 +12065,32 @@
     "name": "Beginner Weapon Selection (Ⅰ)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "desc": "Grants a weapon of your choice."
+    "desc": "Grants a weapon of your choice.",
+    "select": 1001
   },
   {
     "id": 110002,
     "name": "Beginner Weapon Selection (Ⅰ)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "desc": "Grants a weapon of your choice."
+    "desc": "Grants a weapon of your choice.",
+    "select": 5201
   },
   {
     "id": 110006,
     "name": "Beginner Character Skin Selection - Starlit",
     "icon": "T_Pack_Christmas",
     "rarity": 5,
-    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Fina, Rebecca, Tabethe, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
+    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Fina, Rebecca, Tabethe, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne.",
+    "select": 5001
   },
   {
     "id": 110012,
     "name": "Serenity Character Skin Selection – Dark Jade",
     "icon": "T_Pack_Common02",
     "rarity": 5,
-    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
+    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne.",
+    "select": 5003
   },
   {
     "id": 110013,
@@ -12109,21 +12113,24 @@
     "name": "Glimmer Character Skin Selection – Fleeting Traces",
     "icon": "T_Pack_JKSkin",
     "rarity": 5,
-    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
+    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne.",
+    "select": 5004
   },
   {
     "id": 110016,
     "name": "Glimmer Character Skin Selection – Frosty",
     "icon": "T_Pack_SnowmanSkin",
     "rarity": 5,
-    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
+    "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne.",
+    "select": 5005
   },
   {
     "id": 110017,
     "name": "Character Skin Selection – Untamed",
     "icon": "T_Pack_Common03",
     "rarity": 5,
-    "desc": "Grants a character skin from: Berenica, Lisbell, Lady Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle and Filbert, Psyche, and Daphne."
+    "desc": "Grants a character skin from: Berenica, Lisbell, Lady Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle and Filbert, Psyche, and Daphne.",
+    "select": 5006
   },
   {
     "id": 110018,
@@ -12296,7 +12303,8 @@
     "name": "Character Skin Selection – Dusky",
     "icon": "T_Pack_Common04",
     "rarity": 5,
-    "desc": "Grants a character skin from: Flora, Lady Nifle, Su Yi, Fina, Rebecca, Fushu, Lynn, Hilda, Hellfire, Camilla, Rhythm, Zhiliu, and Psyche."
+    "desc": "Grants a character skin from: Flora, Lady Nifle, Su Yi, Fina, Rebecca, Fushu, Lynn, Hilda, Hellfire, Camilla, Rhythm, Zhiliu, and Psyche.",
+    "select": 5007
   },
   {
     "id": 110043,
@@ -12401,7 +12409,8 @@
     "name": "Beginner Weapon Selection Chest",
     "icon": "T_Pack_Char_Choose",
     "rarity": 5,
-    "desc": "Grants a weapon from: Blade Amberglow, Wanewraith, Pyrothirst, Fathomless Sharkgaze, Tetherlash, Withershade, Rendhusk, Excresduo, Destructo, Screamshot, Soulrend, Osteobreaker, Ingenious Tactics, Siren's Kiss, Ironforger, Exiled Fangs, Undying Oneiros, Momiji Itteki, Entropic Singularity, Bluecurrent Pulse, Silverwhite Edict, Silent Sower, Flamme De Epuration, Searing Sandwhisper, Remanent Reminiscence, Wandering Rose, Sacrosanct Decree, Exiled Thunderwyrm, Submerged Serenade, Vernal Jade Halberd, Viridis Reefs, Guixu Ratchet, Shackle of Lonewolf, Sacrosanct Chorus, Stellar Finality, Blast Artistry, Punitive Inferno, Day of Sacred Verdict, Embla Inflorescence, Arclight Apocalypses, Sacred Favour, Aureate Yore, Daybreak Hymn, or Elpides Abound."
+    "desc": "Grants a weapon from: Blade Amberglow, Wanewraith, Pyrothirst, Fathomless Sharkgaze, Tetherlash, Withershade, Rendhusk, Excresduo, Destructo, Screamshot, Soulrend, Osteobreaker, Ingenious Tactics, Siren's Kiss, Ironforger, Exiled Fangs, Undying Oneiros, Momiji Itteki, Entropic Singularity, Bluecurrent Pulse, Silverwhite Edict, Silent Sower, Flamme De Epuration, Searing Sandwhisper, Remanent Reminiscence, Wandering Rose, Sacrosanct Decree, Exiled Thunderwyrm, Submerged Serenade, Vernal Jade Halberd, Viridis Reefs, Guixu Ratchet, Shackle of Lonewolf, Sacrosanct Chorus, Stellar Finality, Blast Artistry, Punitive Inferno, Day of Sacred Verdict, Embla Inflorescence, Arclight Apocalypses, Sacred Favour, Aureate Yore, Daybreak Hymn, or Elpides Abound.",
+    "select": 1002
   },
   {
     "id": 110058,

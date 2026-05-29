@@ -689,7 +689,7 @@
         "id": 110201,
         "名称": "Petal Pirouette",
         "类型": "DMG",
-        "描述": "Tap to perform [Petit Pas], dealing Umbro DMG to enemies ahead. This counts as Melee Weapon DMG and grants {int}10 stacks of [Symphony].\nHold to perform [Grand Jeté]. Release to end the skill early. Dash forward, dealing Umbro AoE DMG up to 5 times along the path. This counts as Melee Weapon DMG and grants {int}10 stacks of [Symphony].\n[Symphony] stacks up to {int}30 times. At max stacks, performing [Petit Pas] or [Grand Jeté] consumes no Sanity.",
+        "描述": "Tap to perform [Petit Pas], dealing Umbro DMG to enemies ahead. This counts as Melee Weapon DMG and grants 10 stacks of [Symphony].\nHold to perform [Grand Jeté]. Release to end the skill early. Dash forward, dealing Umbro AoE DMG up to 5 times along the path. This counts as Melee Weapon DMG and grants 10 stacks of [Symphony].\n[Symphony] stacks up to 30 times. At max stacks, performing [Petit Pas] or [Grand Jeté] consumes no Sanity.",
         "icon": "FuLuo01",
         "实体": [
           {
@@ -991,7 +991,7 @@
         "id": 110203,
         "名称": "Invitation of Blossoms",
         "类型": "Passive",
-        "描述": "When Melee Weapon DMG dealt by the caster lands a CRIT, the target becomes a [Courtly Marionette], and the caster gains 1 stack of [Reprise], up to {int}42 stacks. This effect can grant [Reprise] only once at regular intervals.\nWhen the target has 6 or more stacks of [Thorns], the caster's Melee Weapon Charged Attack is replaced with [Finale].",
+        "描述": "When Melee Weapon DMG dealt by the caster lands a CRIT, the target becomes a [Courtly Marionette], and the caster gains 1 stack of [Reprise], up to 42 stacks. This effect can grant [Reprise] only once at regular intervals.\nWhen the target has 6 or more stacks of [Thorns], the caster's Melee Weapon Charged Attack is replaced with [Finale].",
         "icon": "FuLuo03",
         "字段": [
           {
@@ -1108,7 +1108,7 @@
         "id": 110204,
         "名称": "Entranced",
         "类型": "Passive",
-        "描述": "Each stack of [Symphony] or [Reprise] consumed restores {int}1 Sanity.",
+        "描述": "Each stack of [Symphony] or [Reprise] consumed restores 1 Sanity.",
         "icon": "ExtraPassive"
       },
       {
@@ -7877,7 +7877,7 @@
         "id": 310204,
         "名称": "Multitasking",
         "类型": "Passive",
-        "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile, the probability equals to [30%+20%×Hilda's Ranged Weapon Multishot].\nIncreases the damage of [Hyperthermal Purgejet] by [30%+20%×Hilda's Ranged Weapon Multishot], up to {int}100%.",
+        "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile, the probability equals to [30%+20%×Hilda's Ranged Weapon Multishot].\nIncreases the damage of [Hyperthermal Purgejet] by [30%+20%×Hilda's Ranged Weapon Multishot], up to 100%.",
         "icon": "ExtraPassive"
       },
       {

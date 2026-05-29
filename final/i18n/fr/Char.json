@@ -689,7 +689,7 @@
         "id": 110201,
         "名称": "Pirouette florale",
         "类型": "Dégâts",
-        "描述": "Appuyez pour utiliser [Petit pas], infligeant des Dégâts Umbro aux ennemis devant vous. Ces dégâts sont considérés comme des DGT d’arme de mêlée et confèrent {int}10 cumul de [Symphonie].\nMaintenez pour utiliser [Grand jeté]. Relâchez pour y mettre fin plus tôt. Fonce vers l’avant en infligeant jusqu’à 5 fois des Dégâts Umbro de zone sur la trajectoire. Ces dégâts sont considérés comme des DGT d’arme de mêlée et confèrent {int}10 cumul de [Symphonie].\n[Symphonie] peut être cumulée jusqu’à {int}30 fois. Lorsque le maximum de cumuls est atteint, [Petit pas] et [Grand jeté] ne consomment plus de Lucidité.",
+        "描述": "Appuyez pour utiliser [Petit pas], infligeant des Dégâts Umbro aux ennemis devant vous. Ces dégâts sont considérés comme des DGT d’arme de mêlée et confèrent 10 cumul de [Symphonie].\nMaintenez pour utiliser [Grand jeté]. Relâchez pour y mettre fin plus tôt. Fonce vers l’avant en infligeant jusqu’à 5 fois des Dégâts Umbro de zone sur la trajectoire. Ces dégâts sont considérés comme des DGT d’arme de mêlée et confèrent 10 cumul de [Symphonie].\n[Symphonie] peut être cumulée jusqu’à 30 fois. Lorsque le maximum de cumuls est atteint, [Petit pas] et [Grand jeté] ne consomment plus de Lucidité.",
         "icon": "FuLuo01",
         "实体": [
           {
@@ -991,7 +991,7 @@
         "id": 110203,
         "名称": "Invitation florale",
         "类型": "Passive",
-        "描述": "Lorsqu’une arme de mêlée inflige un coup critique, la cible devient une [Marionnette du bal], et le personnage obtient 1 cumul de [Reprise], cumulable jusqu’à {int}42 cumuls. Cet effet ne peut accorder qu’un cumul de [Reprise] après un certain délai.\nLorsque la cible possède au moins 6 cumuls d’[Épine florale], l’attaque chargée de l’arme de mêlée est remplacée par [Finale].",
+        "描述": "Lorsqu’une arme de mêlée inflige un coup critique, la cible devient une [Marionnette du bal], et le personnage obtient 1 cumul de [Reprise], cumulable jusqu’à 42 cumuls. Cet effet ne peut accorder qu’un cumul de [Reprise] après un certain délai.\nLorsque la cible possède au moins 6 cumuls d’[Épine florale], l’attaque chargée de l’arme de mêlée est remplacée par [Finale].",
         "icon": "FuLuo03",
         "字段": [
           {
@@ -1108,7 +1108,7 @@
         "id": 110204,
         "名称": "Transe",
         "类型": "Passive",
-        "描述": "Chaque cumul de [Symphonie] ou de [Reprise] consommé restaure {int}1 de Lucidité.",
+        "描述": "Chaque cumul de [Symphonie] ou de [Reprise] consommé restaure 1 de Lucidité.",
         "icon": "ExtraPassive"
       },
       {
@@ -7877,7 +7877,7 @@
         "id": 310204,
         "名称": "Multitâche",
         "类型": "Passive",
-        "描述": "Les [Crassinators] ont une chance de tirer 1 projectile supplémentaire.\nLa probabilité est égale à : 30 % + 20 % × Taux de Tir multiple de l’arme à distance d’Hilda.\nAugmente également les dégâts des [Rayons incinérateurs] selon la même formule, jusqu’à un maximum de {int}100%.",
+        "描述": "Les [Crassinators] ont une chance de tirer 1 projectile supplémentaire.\nLa probabilité est égale à : 30 % + 20 % × Taux de Tir multiple de l’arme à distance d’Hilda.\nAugmente également les dégâts des [Rayons incinérateurs] selon la même formule, jusqu’à un maximum de 100%.",
         "icon": "ExtraPassive"
       },
       {

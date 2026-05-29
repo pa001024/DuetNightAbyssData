@@ -662,6 +662,7 @@ class CharProcessor(BaseProcessor):
         skill_desc = self._replace_skill_desc_placeholders(
             skill_desc, skill_info.get("SkillDescValues", []), skill_id
         )
+        skill_desc = re.sub(r"\{[Ii][Nn][Tt]\}", "", skill_desc)
 
         # 获取技能最大等级
         max_level = min(

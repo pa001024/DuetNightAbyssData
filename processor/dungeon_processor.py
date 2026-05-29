@@ -28,10 +28,16 @@ class DungeonProcessor(BaseProcessor):
         self.mod_dungeon_mon_reward_data = data_loader.load_json(
             "ModDungeonMonReward.json"
         )
+        self.elite_rush_select_dungeon_data = data_loader.load_json(
+            "EliteRushSelectDungeon.json"
+        )
         self.monster_spawn_data = data_loader.load_json("MonsterSpawn.json")
         self.monster_group_data = data_loader.load_json("MonsterGroup.json")
         self.monster_group_spawn_data = data_loader.load_json("MonsterGroupSpawn.json")
         self.relation_spawn_data = data_loader.load_json("RelationSpawn.json")
+        self.dungeon_mod_condition_map = self._build_dungeon_mod_condition_map()
+        self.elite_rush_dungeon_ids = self._build_elite_rush_dungeon_ids()
+        self.dungeon_mod_condition_direct_map = self._build_dungeon_mod_condition_direct_map()
         self.spawn_source_file_names = [
             "DefencePro.json",
             "Defence.json",
@@ -98,6 +104,14 @@ class DungeonProcessor(BaseProcessor):
 
         if processed["ts"].startswith("DUNGEON_NAME_") or processed["ts"] == "":
             del processed["ts"]
+
+        mod_condition = self.dungeon_mod_condition_map.get(dungeon_id)
+        if mod_condition is None:
+            mod_condition = self.dungeon_mod_condition_direct_map.get(dungeon_id)
+        if mod_condition is not None:
+            processed["mod"] = mod_condition
+            if dungeon_id in self.elite_rush_dungeon_ids:
+                processed["rush"] = 1
 
         # 处理Dungeon描述
         if "DungeonDes" in dungeon_data:
@@ -217,6 +231,80 @@ class DungeonProcessor(BaseProcessor):
         if spawn_waves:
             return spawn_waves
         return self._get_raid_dungeon_spawn(dungeon_data)
+
+    def _build_dungeon_mod_condition_map(self):
+        """构建 DungeonID 到 EliteRush 条件的映射。"""
+        dungeon_mod_condition_map = {}
+        if not isinstance(self.elite_rush_select_dungeon_data, dict):
+            return dungeon_mod_condition_map
+
+        for elite_rush_item in self.elite_rush_select_dungeon_data.values():
+            condition = elite_rush_item.get("Condition")
+            if isinstance(condition, list):
+                condition = condition[0] if condition else None
+            if condition is None:
+                continue
+
+            mod_condition = condition - 100
+            mon_reward_ids = elite_rush_item.get("MonRewardIdList", [])
+            if not isinstance(mon_reward_ids, list):
+                continue
+
+            for mon_reward_id in mon_reward_ids:
+                reward_entry = self.mod_dungeon_mon_reward_data.get(str(mon_reward_id))
+                if not isinstance(reward_entry, dict):
+                    reward_entry = self.mod_dungeon_mon_reward_data.get(mon_reward_id, {})
+                if not isinstance(reward_entry, dict):
+                    continue
+
+                for dungeon_id in reward_entry.get("DungeonList", []):
+                    if dungeon_id not in dungeon_mod_condition_map:
+                        dungeon_mod_condition_map[dungeon_id] = mod_condition
+
+        return dungeon_mod_condition_map
+
+    def _build_elite_rush_dungeon_ids(self):
+        """构建出现在 EliteRushSelectDungeon 中的 DungeonID 集合。"""
+        elite_rush_dungeon_ids = set()
+        if not isinstance(self.elite_rush_select_dungeon_data, dict):
+            return elite_rush_dungeon_ids
+
+        for elite_rush_item in self.elite_rush_select_dungeon_data.values():
+            mon_reward_ids = elite_rush_item.get("MonRewardIdList", [])
+            if not isinstance(mon_reward_ids, list):
+                continue
+
+            for mon_reward_id in mon_reward_ids:
+                reward_entry = self.mod_dungeon_mon_reward_data.get(str(mon_reward_id))
+                if not isinstance(reward_entry, dict):
+                    reward_entry = self.mod_dungeon_mon_reward_data.get(mon_reward_id, {})
+                if not isinstance(reward_entry, dict):
+                    continue
+
+                for dungeon_id in reward_entry.get("DungeonList", []):
+                    elite_rush_dungeon_ids.add(dungeon_id)
+
+        return elite_rush_dungeon_ids
+
+    def _build_dungeon_mod_condition_direct_map(self):
+        """构建 DungeonID 到 Mod 条件的直接映射。"""
+        dungeon_mod_condition_map = {}
+        if not isinstance(self.mod_dungeon_mon_reward_data, dict):
+            return dungeon_mod_condition_map
+
+        for reward_entry in self.mod_dungeon_mon_reward_data.values():
+            condition = reward_entry.get("Condition")
+            if isinstance(condition, list):
+                condition = condition[0] if condition else None
+            if condition is None:
+                continue
+
+            mod_condition = condition - 100
+            for dungeon_id in reward_entry.get("DungeonList", []):
+                if dungeon_id not in dungeon_mod_condition_map:
+                    dungeon_mod_condition_map[dungeon_id] = mod_condition
+
+        return dungeon_mod_condition_map
 
     def _append_spawn_rule_waves(
         self, target_waves, raw_spawn_rule, split_list_items=False

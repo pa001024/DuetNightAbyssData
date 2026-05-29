@@ -101,7 +101,8 @@ class ResourceProcessor(BaseProcessor):
             pack = self._to_int(resource_data.get("UseParam"))
             if pack is not None:
                 processed_resource["pack"] = pack
-        if resource_data.get("UseEffectType") == "SelectResource":
+        use_effect_type = resource_data.get("UseEffectType", "")
+        if isinstance(use_effect_type, str) and use_effect_type.startswith("Select"):
             select = self._to_int(resource_data.get("UseParam"))
             if select is not None:
                 processed_resource["select"] = select

@@ -12065,28 +12065,32 @@
     "name": "Sélecteur d’arme de départ (I)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "desc": "À utiliser pour choisir une arme dans la liste."
+    "desc": "À utiliser pour choisir une arme dans la liste.",
+    "select": 1001
   },
   {
     "id": 110002,
     "name": "Sélecteur d’arme de départ (I)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "desc": "À utiliser pour choisir une arme dans la liste."
+    "desc": "À utiliser pour choisir une arme dans la liste.",
+    "select": 5201
   },
   {
     "id": 110006,
     "name": "Coffret de sélection d’apparence – Lueur astrale",
     "icon": "T_Pack_Christmas",
     "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Fina, Rebecca, Tabethe, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche, ou Daphne."
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Fina, Rebecca, Tabethe, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche, ou Daphne.",
+    "select": 5001
   },
   {
     "id": 110012,
     "name": "Coffret de sélection d’apparence Sérénité – Jade noir",
     "icon": "T_Pack_Common02",
     "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne."
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne.",
+    "select": 5003
   },
   {
     "id": 110013,
@@ -12109,21 +12113,24 @@
     "name": "Coffret d’apparence (Sélection) – En fuite",
     "icon": "T_Pack_JKSkin",
     "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne."
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne.",
+    "select": 5004
   },
   {
     "id": 110016,
     "name": "Coffret d’apparence (Sélection) – Hivernal",
     "icon": "T_Pack_SnowmanSkin",
     "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne."
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne.",
+    "select": 5005
   },
   {
     "id": 110017,
     "name": "Coffret de sélection d’apparence – Indomptable",
     "icon": "T_Pack_Common03",
     "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Lisbell, Dame Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle et Filbert, Psyche ou Daphne."
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Lisbell, Dame Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle et Filbert, Psyche ou Daphne.",
+    "select": 5006
   },
   {
     "id": 110018,
@@ -12296,7 +12303,8 @@
     "name": "Coffret de sélection d’apparence – Nocturne",
     "icon": "T_Pack_Common04",
     "rarity": 5,
-    "desc": "Permet de choisir une apparence parmi les personnages suivants : Flora, Dame Nifle, Su Yi, Fina, Rebecca, Fushu, Lynn, Hilda, Vulcera, Camilla, Rhythm, Zhiliu ou Psyche."
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Flora, Dame Nifle, Su Yi, Fina, Rebecca, Fushu, Lynn, Hilda, Vulcera, Camilla, Rhythm, Zhiliu ou Psyche.",
+    "select": 5007
   },
   {
     "id": 110043,
@@ -12401,7 +12409,8 @@
     "name": "Coffret de sélection d’armes de départ",
     "icon": "T_Pack_Char_Choose",
     "rarity": 5,
-    "desc": "Permet de choisir une récompense parmi : Trancheur d’ambre, Sépulture errante, Désir incandescent, Regard du requin abyssal, Étreinte brisée, Ombre fanée, Dépouilleur, Duo infâme, Désintégrateur, Hurlement balistique, Déchire-âme, Disloqueur, Stratagème habile, Baiser de la sirène, Brise-fer, Crocs de l’exilé, Oneiros éternel, Momiji Itteki, Singularité entropique, Pulsation azurée, Édit argenté, Semeur silencieux, Brasier salvateur, Soupir du désert, Écho du passé, Rose vagabonde, Hiérophanie, Colère proscrite, Ode des profondeurs, Hallebarde de jade printanier, Vagues sinueuse, Résonance de Guixu, Entraves du solitaire, Pneuma, Jugement stellaire, Art de la détonation, Fureur incandescente, Aube du verdict, Inflorescence d’Embla, Lumière de l’Apocalypse, Grâce sacrée, Mémoire dorée, Hymne de l’aube ou Moisson de l’espoir."
+    "desc": "Permet de choisir une récompense parmi : Trancheur d’ambre, Sépulture errante, Désir incandescent, Regard du requin abyssal, Étreinte brisée, Ombre fanée, Dépouilleur, Duo infâme, Désintégrateur, Hurlement balistique, Déchire-âme, Disloqueur, Stratagème habile, Baiser de la sirène, Brise-fer, Crocs de l’exilé, Oneiros éternel, Momiji Itteki, Singularité entropique, Pulsation azurée, Édit argenté, Semeur silencieux, Brasier salvateur, Soupir du désert, Écho du passé, Rose vagabonde, Hiérophanie, Colère proscrite, Ode des profondeurs, Hallebarde de jade printanier, Vagues sinueuse, Résonance de Guixu, Entraves du solitaire, Pneuma, Jugement stellaire, Art de la détonation, Fureur incandescente, Aube du verdict, Inflorescence d’Embla, Lumière de l’Apocalypse, Grâce sacrée, Mémoire dorée, Hymne de l’aube ou Moisson de l’espoir.",
+    "select": 1002
   },
   {
     "id": 110058,
