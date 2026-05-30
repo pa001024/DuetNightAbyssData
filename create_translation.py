@@ -3,11 +3,11 @@
 创建翻译映射文件
 从final/i18n文件夹读取各个语言的JSON文件,提取指定字段的翻译
 """
+
 import json
 import os
 from pathlib import Path
 from typing import Dict, List
-
 
 # ============================================================================
 # 配置区域 - 在这里配置需要提取的字段
@@ -55,7 +55,7 @@ allow_types = [
     "Pet",
     "Dungeon",
     "Resource",
-    # "Npc",
+    "Npc",
     "QuestChain",
     "SubRegion",
 ]
@@ -142,6 +142,19 @@ EX_FIELDS = [
     "档案",
     "语音",
     "势力",
+    "全部类型",
+    "单手剑",
+    "长柄",
+    "重剑",
+    "双刀",
+    "鞭刃",
+    "太刀",
+    "手枪",
+    "双枪",
+    "榴炮",
+    "霰弹枪",
+    "突击枪",
+    "弓",
 ]
 
 # 是否在输出时添加字段前缀 (例如: "效果:xxx" -> "Effect:xxx")

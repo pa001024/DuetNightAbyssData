@@ -3428,6 +3428,48 @@
     ]
   },
   {
+    "id": 8500603,
+    "n": "Sibylle",
+    "t": "Boss",
+    "atk": 12,
+    "def": 300,
+    "hp": 26700,
+    "tn": 8400,
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8500604,
+    "n": "Sibylle",
+    "t": "Boss",
+    "atk": 14,
+    "def": 300,
+    "hp": 52100,
+    "tn": 8400,
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8500605,
+    "n": "Sibylle",
+    "t": "Boss",
+    "atk": 16,
+    "def": 300,
+    "hp": 90000,
+    "tn": 8400,
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8501001,
     "n": "Battle Maven",
     "t": "Boss",
@@ -3462,6 +3504,62 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 6000,
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8501602,
+    "n": "Battle Maven",
+    "t": "Boss",
+    "atk": 20,
+    "def": 300,
+    "hp": 22500,
+    "tn": 6000,
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8501603,
+    "n": "Battle Maven",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 53300,
+    "tn": 6000,
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8501604,
+    "n": "Battle Maven",
+    "t": "Boss",
+    "atk": 28,
+    "def": 300,
+    "hp": 104200,
+    "tn": 6000,
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8501605,
+    "n": "Battle Maven",
+    "t": "Boss",
+    "atk": 32,
+    "def": 300,
+    "hp": 180000,
     "tn": 6000,
     "icon": "Boss_04_Lizhan",
     "tags": [
@@ -3627,6 +3725,62 @@
     ]
   },
   {
+    "id": 8505603,
+    "n": "The Warden of the Inferno",
+    "t": "Boss",
+    "atk": 40,
+    "def": 300,
+    "hp": 33800,
+    "tn": 8400,
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8505604,
+    "n": "The Warden of the Inferno",
+    "t": "Boss",
+    "atk": 48,
+    "def": 300,
+    "hp": 80000,
+    "tn": 8400,
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8505605,
+    "n": "The Warden of the Inferno",
+    "t": "Boss",
+    "atk": 56,
+    "def": 300,
+    "hp": 156300,
+    "tn": 8400,
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8505606,
+    "n": "The Warden of the Inferno",
+    "t": "Boss",
+    "atk": 64,
+    "def": 300,
+    "hp": 270000,
+    "tn": 8400,
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8509001,
     "n": "???",
     "t": "Boss",
@@ -3661,6 +3815,62 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 3000,
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8509603,
+    "n": "???",
+    "t": "Boss",
+    "atk": 30,
+    "def": 300,
+    "hp": 22500,
+    "tn": 3000,
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8509604,
+    "n": "???",
+    "t": "Boss",
+    "atk": 36,
+    "def": 300,
+    "hp": 53300,
+    "tn": 3000,
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8509605,
+    "n": "???",
+    "t": "Boss",
+    "atk": 42,
+    "def": 300,
+    "hp": 104200,
+    "tn": 3000,
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8509606,
+    "n": "???",
+    "t": "Boss",
+    "atk": 48,
+    "def": 300,
+    "hp": 180000,
     "tn": 3000,
     "icon": "Boss_Tuosi",
     "tags": [
@@ -3781,6 +3991,62 @@
     ]
   },
   {
+    "id": 8512603,
+    "n": "\"Beast From the Snowfield\"",
+    "t": "Boss",
+    "atk": 50,
+    "def": 300,
+    "hp": 56300,
+    "tn": 10000,
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8512604,
+    "n": "\"Beast From the Snowfield\"",
+    "t": "Boss",
+    "atk": 60,
+    "def": 300,
+    "hp": 133300,
+    "tn": 10000,
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8512605,
+    "n": "\"Beast From the Snowfield\"",
+    "t": "Boss",
+    "atk": 70,
+    "def": 300,
+    "hp": 260400,
+    "tn": 10000,
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8512606,
+    "n": "\"Beast From the Snowfield\"",
+    "t": "Boss",
+    "atk": 80,
+    "def": 300,
+    "hp": 450000,
+    "tn": 10000,
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8513001,
     "n": "Blessed Ascetic",
     "t": "Boss",
@@ -3801,6 +4067,62 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 2000,
+    "icon": "Boss_Kuxiu",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8513602,
+    "n": "Blessed Ascetic",
+    "t": "Boss",
+    "atk": 10,
+    "def": 300,
+    "hp": 11300,
+    "tn": 2000,
+    "icon": "Boss_Kuxiu",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8513603,
+    "n": "Blessed Ascetic",
+    "t": "Boss",
+    "atk": 12,
+    "def": 300,
+    "hp": 26700,
+    "tn": 2000,
+    "icon": "Boss_Kuxiu",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8513604,
+    "n": "Blessed Ascetic",
+    "t": "Boss",
+    "atk": 14,
+    "def": 300,
+    "hp": 52100,
+    "tn": 2000,
+    "icon": "Boss_Kuxiu",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8513605,
+    "n": "Blessed Ascetic",
+    "t": "Boss",
+    "atk": 16,
+    "def": 300,
+    "hp": 90000,
     "tn": 2000,
     "icon": "Boss_Kuxiu",
     "tags": [
@@ -3859,6 +4181,62 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 4500,
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8514602,
+    "n": "Blessed Arbiter",
+    "t": "Boss",
+    "atk": 30,
+    "def": 300,
+    "hp": 33800,
+    "tn": 4500,
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8514603,
+    "n": "Blessed Arbiter",
+    "t": "Boss",
+    "atk": 36,
+    "def": 300,
+    "hp": 80000,
+    "tn": 4500,
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8514604,
+    "n": "Blessed Arbiter",
+    "t": "Boss",
+    "atk": 42,
+    "def": 300,
+    "hp": 156300,
+    "tn": 4500,
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8514605,
+    "n": "Blessed Arbiter",
+    "t": "Boss",
+    "atk": 48,
+    "def": 300,
+    "hp": 270000,
     "tn": 4500,
     "icon": "Boss_Shenpan",
     "tags": [
@@ -3934,6 +4312,62 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 1000,
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8515602,
+    "n": "The Devourer",
+    "t": "Boss",
+    "atk": 20,
+    "def": 300,
+    "hp": 22500,
+    "tn": 1000,
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8515603,
+    "n": "The Devourer",
+    "t": "Boss",
+    "atk": 24,
+    "def": 300,
+    "hp": 53300,
+    "tn": 1000,
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8515604,
+    "n": "The Devourer",
+    "t": "Boss",
+    "atk": 28,
+    "def": 300,
+    "hp": 104200,
+    "tn": 1000,
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8515605,
+    "n": "The Devourer",
+    "t": "Boss",
+    "atk": 32,
+    "def": 300,
+    "hp": 180000,
     "tn": 1000,
     "icon": "Boss_Jushi",
     "tags": [
@@ -4067,6 +4501,62 @@
     ]
   },
   {
+    "id": 8521602,
+    "n": "Halogi the Deceiver",
+    "t": "Boss",
+    "atk": 40,
+    "def": 300,
+    "hp": 33800,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward"
+    ]
+  },
+  {
+    "id": 8521603,
+    "n": "Halogi the Deceiver",
+    "t": "Boss",
+    "atk": 48,
+    "def": 300,
+    "hp": 80000,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward"
+    ]
+  },
+  {
+    "id": 8521604,
+    "n": "Halogi the Deceiver",
+    "t": "Boss",
+    "atk": 56,
+    "def": 300,
+    "hp": 156300,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward"
+    ]
+  },
+  {
+    "id": 8521605,
+    "n": "Halogi the Deceiver",
+    "t": "Boss",
+    "atk": 64,
+    "def": 300,
+    "hp": 270000,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward"
+    ]
+  },
+  {
     "id": 8522001,
     "n": "Eclosis",
     "t": "Boss",
@@ -4087,6 +4577,62 @@
     "atk": 15,
     "def": 300,
     "hp": 6000,
+    "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8522602,
+    "n": "Eclosis",
+    "t": "Boss",
+    "atk": 10,
+    "def": 300,
+    "hp": 11300,
+    "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8522603,
+    "n": "Eclosis",
+    "t": "Boss",
+    "atk": 12,
+    "def": 300,
+    "hp": 26700,
+    "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8522604,
+    "n": "Eclosis",
+    "t": "Boss",
+    "atk": 14,
+    "def": 300,
+    "hp": 52100,
+    "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8522605,
+    "n": "Eclosis",
+    "t": "Boss",
+    "atk": 16,
+    "def": 300,
+    "hp": 90000,
     "tn": 4500,
     "icon": "HX_Tuisheng",
     "tags": [

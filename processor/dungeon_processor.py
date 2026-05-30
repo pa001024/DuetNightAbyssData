@@ -28,6 +28,7 @@ class DungeonProcessor(BaseProcessor):
         self.mod_dungeon_mon_reward_data = data_loader.load_json(
             "ModDungeonMonReward.json"
         )
+        self.async_combat_data = data_loader.load_json("AsyncCombat.json")
         self.elite_rush_select_dungeon_data = data_loader.load_json(
             "EliteRushSelectDungeon.json"
         )
@@ -37,7 +38,10 @@ class DungeonProcessor(BaseProcessor):
         self.relation_spawn_data = data_loader.load_json("RelationSpawn.json")
         self.dungeon_mod_condition_map = self._build_dungeon_mod_condition_map()
         self.elite_rush_dungeon_ids = self._build_elite_rush_dungeon_ids()
-        self.dungeon_mod_condition_direct_map = self._build_dungeon_mod_condition_direct_map()
+        self.dungeon_mod_condition_direct_map = (
+            self._build_dungeon_mod_condition_direct_map()
+        )
+        self.async_combat_map = self._build_async_combat_map()
         self.spawn_source_file_names = [
             "DefencePro.json",
             "Defence.json",
@@ -67,6 +71,9 @@ class DungeonProcessor(BaseProcessor):
             "Thunder": "雷",
             "Wind": "风",
         }
+        self.dungeon_name_override_map = {
+            "UI_DUNGEON_ASYNCCOMBAT_1": "联袂演绎",
+        }
 
     def process_item(self, dungeon_data, language):
         """处理单个Dungeon数据
@@ -81,10 +88,15 @@ class DungeonProcessor(BaseProcessor):
         dungeon_id = dungeon_data.get("DungeonID", 0)
         if not dungeon_id or dungeon_id < 20000:
             return None
+        dungeon_type = dungeon_data.get("DungeonType", "")
 
         # 获取翻译后的Dungeon名称
         dungeon_name_key = dungeon_data.get("DungeonName", "")
         dungeon_name = self.get_translated_text(dungeon_name_key)
+        if language == "cn":
+            dungeon_name = self.dungeon_name_override_map.get(
+                dungeon_name_key, dungeon_name
+            )
         if dungeon_name.startswith("DUNGEON_NAME_"):
             return None
 
@@ -113,6 +125,10 @@ class DungeonProcessor(BaseProcessor):
             if dungeon_id in self.elite_rush_dungeon_ids:
                 processed["rush"] = 1
 
+        async_combat_list = self.async_combat_map.get(dungeon_id, [])
+        if async_combat_list:
+            processed["ac"] = async_combat_list
+
         # 处理Dungeon描述
         if "DungeonDes" in dungeon_data:
             processed["desc"] = self.get_translated_text(dungeon_data.get("DungeonDes"))
@@ -129,7 +145,9 @@ class DungeonProcessor(BaseProcessor):
                 bp_special_monsters.append(monster_id)
         if bp_special_monsters:
             processed["sm"] = list(
-                OrderedDict.fromkeys([*(processed.get("sm") or []), *bp_special_monsters])
+                OrderedDict.fromkeys(
+                    [*(processed.get("sm") or []), *bp_special_monsters]
+                )
             )
 
         if "DungeonInitGuideUnitId" in dungeon_data:
@@ -163,7 +181,9 @@ class DungeonProcessor(BaseProcessor):
 
             processed["m"] = dungeon_monsters
         else:
-            return None
+            if dungeon_type != "AsyncCombat":
+                return None
+            processed["m"] = self._build_async_combat_monsters(dungeon_id)
 
         # 处理副本怪物刷新波次
         spawn_data = self._get_dungeon_spawn(dungeon_data)
@@ -176,7 +196,8 @@ class DungeonProcessor(BaseProcessor):
             if len(processed["r"]) == 1 and processed["r"][0] == 50100:
                 return None
         else:
-            return None
+            if dungeon_type != "AsyncCombat":
+                return None
 
         # 处理DungeonUIBG
         # if "DungeonUIBG" in dungeon_data:
@@ -206,11 +227,21 @@ class DungeonProcessor(BaseProcessor):
         self._append_spawn_rule_waves(
             spawn_rule_waves, spawn_source.get("MonsterFirstSpawnId")
         )
-        self._append_spawn_rule_waves(spawn_rule_waves, spawn_source.get("MonsterSpawnId"))
-        self._append_spawn_rule_waves(spawn_rule_waves, spawn_source.get("MonsterSpawnIds"))
-        self._append_spawn_rule_waves(spawn_rule_waves, spawn_source.get("OnInitSpawnRule"))
-        self._append_spawn_rule_waves(spawn_rule_waves, spawn_source.get("NormalSpawnRule"))
-        self._append_spawn_rule_waves(spawn_rule_waves, spawn_source.get("EliteSpawnRule"))
+        self._append_spawn_rule_waves(
+            spawn_rule_waves, spawn_source.get("MonsterSpawnId")
+        )
+        self._append_spawn_rule_waves(
+            spawn_rule_waves, spawn_source.get("MonsterSpawnIds")
+        )
+        self._append_spawn_rule_waves(
+            spawn_rule_waves, spawn_source.get("OnInitSpawnRule")
+        )
+        self._append_spawn_rule_waves(
+            spawn_rule_waves, spawn_source.get("NormalSpawnRule")
+        )
+        self._append_spawn_rule_waves(
+            spawn_rule_waves, spawn_source.get("EliteSpawnRule")
+        )
         self._append_spawn_rule_waves(
             spawn_rule_waves, spawn_source.get("SpMonsterSpawnId")
         )
@@ -253,7 +284,9 @@ class DungeonProcessor(BaseProcessor):
             for mon_reward_id in mon_reward_ids:
                 reward_entry = self.mod_dungeon_mon_reward_data.get(str(mon_reward_id))
                 if not isinstance(reward_entry, dict):
-                    reward_entry = self.mod_dungeon_mon_reward_data.get(mon_reward_id, {})
+                    reward_entry = self.mod_dungeon_mon_reward_data.get(
+                        mon_reward_id, {}
+                    )
                 if not isinstance(reward_entry, dict):
                     continue
 
@@ -277,7 +310,9 @@ class DungeonProcessor(BaseProcessor):
             for mon_reward_id in mon_reward_ids:
                 reward_entry = self.mod_dungeon_mon_reward_data.get(str(mon_reward_id))
                 if not isinstance(reward_entry, dict):
-                    reward_entry = self.mod_dungeon_mon_reward_data.get(mon_reward_id, {})
+                    reward_entry = self.mod_dungeon_mon_reward_data.get(
+                        mon_reward_id, {}
+                    )
                 if not isinstance(reward_entry, dict):
                     continue
 
@@ -305,6 +340,53 @@ class DungeonProcessor(BaseProcessor):
                     dungeon_mod_condition_map[dungeon_id] = mod_condition
 
         return dungeon_mod_condition_map
+
+    def _build_async_combat_map(self):
+        """构建 DungeonID 到 AsyncCombat 奖励信息的映射。"""
+        async_combat_map = {}
+        if not isinstance(self.async_combat_data, list):
+            return async_combat_map
+
+        for async_combat_item in self.async_combat_data:
+            if not isinstance(async_combat_item, dict):
+                continue
+
+            dungeon_id = async_combat_item.get("DungeonID")
+            if not dungeon_id:
+                continue
+
+            boss_unit_ids = async_combat_item.get("BossUnitID", [])
+            if not isinstance(boss_unit_ids, list):
+                boss_unit_ids = [boss_unit_ids] if boss_unit_ids else []
+
+            ac_item = {
+                "id": async_combat_item.get("ID", 0),
+                # "lv": async_combat_item.get("Level", 0),
+                "c": async_combat_item.get("Count", 0),
+            }
+
+            async_combat_map.setdefault(dungeon_id, []).append(ac_item)
+
+        return async_combat_map
+
+    def _build_async_combat_monsters(self, dungeon_id):
+        """构建 AsyncCombat 副本的 m 字段。"""
+        async_combat_monsters = []
+        if not isinstance(self.async_combat_data, list):
+            return async_combat_monsters
+
+        for async_combat_item in self.async_combat_data:
+            if not isinstance(async_combat_item, dict):
+                continue
+            if async_combat_item.get("DungeonID") != dungeon_id:
+                continue
+
+            boss_unit_ids = async_combat_item.get("BossUnitID", [])
+            if not isinstance(boss_unit_ids, list):
+                boss_unit_ids = [boss_unit_ids] if boss_unit_ids else []
+            async_combat_monsters.extend(boss_unit_ids)
+
+        return list(OrderedDict.fromkeys(async_combat_monsters))
 
     def _append_spawn_rule_waves(
         self, target_waves, raw_spawn_rule, split_list_items=False
@@ -483,9 +565,9 @@ class DungeonProcessor(BaseProcessor):
 
     def _get_monster_group_members(self, group_id):
         """展开 MonsterGroup 为真实怪物成员列表"""
-        group_data = self.monster_group_data.get(str(group_id)) or self.monster_group_data.get(
-            group_id
-        )
+        group_data = self.monster_group_data.get(
+            str(group_id)
+        ) or self.monster_group_data.get(group_id)
         if not group_data:
             return []
 

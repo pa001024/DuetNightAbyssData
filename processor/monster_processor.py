@@ -90,6 +90,16 @@ class MonsterProcessor(BaseProcessor):
             if abyss_dungeon_info.get("DungeonMonsters", []):
                 for monster_id in abyss_dungeon_info.get("DungeonMonsters", []):
                     self.valid_monster_ids.add(monster_id)
+        async_combat_data = data_loader.load_json("AsyncCombat.json")
+        for async_combat_info in async_combat_data:
+            if not isinstance(async_combat_info, dict):
+                continue
+            boss_unit_ids = async_combat_info.get("BossUnitID", [])
+            if not isinstance(boss_unit_ids, list):
+                boss_unit_ids = [boss_unit_ids] if boss_unit_ids else []
+            for monster_id in boss_unit_ids:
+                if monster_id:
+                    self.valid_monster_ids.add(monster_id)
         # 加载HardBossMain.json并提取MonsterId
         hard_boss_main_data = data_loader.load_json("HardBossMain.json")
         for hard_boss_info in hard_boss_main_data:
