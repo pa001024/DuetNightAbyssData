@@ -1,4 +1,5 @@
 from processor.base_processor import BaseProcessor
+from processor._util import P_MAP
 import re
 import os
 import json
@@ -28,40 +29,7 @@ class ModProcessor(BaseProcessor):
         self.quality_names = ["白", "绿", "蓝", "紫", "金"]
         # 极性值映射
         self.polarity_values = ["", "A", "D", "V", "O"]
-        self.p_map = {
-            "最大神智": "神智",
-            "暴击率": "暴击",
-            "暴击伤害": "暴伤",
-            "触发概率": "触发",
-            "切割攻击": "物理",
-            "贯穿攻击": "物理",
-            "震荡攻击": "物理",
-            "攻击速度": "攻速",
-            "远程武器": "远程",
-            "近战武器": "近战",
-            "近战同律武器": "同律近战",
-            "远程同律武器": "同律远程",
-            "角色": "角色",
-            "暗属性攻击": "属性伤",
-            "水属性攻击": "属性伤",
-            "火属性攻击": "属性伤",
-            "雷属性攻击": "属性伤",
-            "风属性攻击": "属性伤",
-            "光属性攻击": "属性伤",
-            "ExtraComboProb": "额外连击",
-            "多重射击": "多重",
-            "最大弹药": "弹药",
-            "弹匣容量": "弹匣",
-            "子弹装填速度": "装填",
-            "GrRate": "歧视",
-            "JtRate": "歧视",
-            "JhRate": "歧视",
-            "SqRate": "歧视",
-            "触发贯穿额外效果时对生命伤害": "触发倍率",
-            "触发切割额外效果时对护盾伤害": "触发倍率",
-            "ExplodeBulletRate": "爆炸伤害",
-            "RayCreatureRate": "射线伤害",
-        }
+        self.p_map = P_MAP
 
     def _format_desc_numeric(self, value):
         """格式化描述数值，避免固定1位小数导致精度丢失"""

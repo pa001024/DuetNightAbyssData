@@ -1,4 +1,5 @@
 from processor.base_processor import BaseProcessor
+from processor._util import P_MAP
 from processor.skill_creature_utils import extract_skill_creatures
 import re
 import os
@@ -25,6 +26,7 @@ class WeaponProcessor(BaseProcessor):
         self.hyper_weapon_skill_tree_data = data_loader.load_json(
             "HyperWeaponSkillTree.json"
         )
+        self.buff_data = data_loader.load_json("Buff.json")
         self.attribute_data = data_loader.load_json("Attribute.json")
         self.skill_effects_data = data_loader.load_json("SkillEffects.json")
         self.skill_node_data = data_loader.load_json("SkillNode.json")
@@ -65,7 +67,11 @@ class WeaponProcessor(BaseProcessor):
         )
         furnace = self._process_furnace(weapon_id, battle_weapon)
         if furnace:
-            processed["熔炉"] = furnace
+            furnace_rows, furnace_addon = furnace
+            if furnace_rows:
+                processed["熔炉"] = furnace_rows
+            if furnace_addon:
+                processed["加成"].update(furnace_addon)
         try:
             skills, reload_value, shooting_interval = self._process_skills(
                 battle_weapon, weapon_id
@@ -673,38 +679,7 @@ class WeaponProcessor(BaseProcessor):
         attributes = {}
         # 尝试从AddAttrs中找到ATK属性
         anmap = {
-            "最大神智": "神智",
-            "暴击率": "暴击",
-            "暴击伤害": "暴伤",
-            "触发概率": "触发",
-            "切割攻击": "物理",
-            "贯穿攻击": "物理",
-            "震荡攻击": "物理",
-            "攻击速度": "攻速",
-            "远程武器": "远程",
-            "近战武器": "近战",
-            "近战同律武器": "同律近战",
-            "远程同律武器": "同律远程",
-            "角色": "角色",
-            "暗属性攻击": "属性伤",
-            "水属性攻击": "属性伤",
-            "火属性攻击": "属性伤",
-            "雷属性攻击": "属性伤",
-            "风属性攻击": "属性伤",
-            "光属性攻击": "属性伤",
-            "ExtraComboProb": "额外连击",
-            "多重射击": "多重",
-            "最大弹药": "弹药",
-            "弹匣容量": "弹匣",
-            "子弹装填速度": "装填",
-            "GrRate": "歧视",
-            "JtRate": "歧视",
-            "JhRate": "歧视",
-            "SqRate": "歧视",
-            "触发贯穿额外效果时对生命伤害": "触发倍率",
-            "触发切割额外效果时对护盾伤害": "触发倍率",
-            "ExplodeBulletRate": "爆炸伤害",
-            "RayCreatureRate": "射线伤害",
+            **P_MAP,
         }
         for attr in add_attrs:
             attr_name = attr.get("AttrName", "")
@@ -739,7 +714,7 @@ class WeaponProcessor(BaseProcessor):
             attr_key = f"ATK_{attr_name}"
             if attr_key in battle_weapon:
                 if attr_name == "Psionic":
-                    attributes["伤害类型"] = "灵能"
+                    attributes["伤害类型"] = "灾厄"
                     attributes["攻击"] = battle_weapon[attr_key]
                     continue
                 attr_config = self.attr_config.get(attr_key, {})
@@ -803,7 +778,7 @@ class WeaponProcessor(BaseProcessor):
             card_level_rows = []
 
         if not card_level_rows:
-            return []
+            return [], {}
 
         skill_tree_rows = []
         for skill_id, skill_tree in self.hyper_weapon_skill_tree_data.items():
@@ -824,6 +799,7 @@ class WeaponProcessor(BaseProcessor):
         )
 
         furnace_rows = []
+        furnace_addon = {}
         for card_level_row in card_level_rows:
             if not isinstance(card_level_row, dict):
                 continue
@@ -859,8 +835,20 @@ class WeaponProcessor(BaseProcessor):
                 skill_addon = self._build_hyper_weapon_skill_addon(
                     battle_weapon, skill_tree.get("WeaponSkillId", 0)
                 )
+                if not skill_addon:
+                    skill_addon = self._build_hyper_weapon_skill_addon_from_desc(
+                        skill_tree
+                    )
                 if skill_addon:
-                    skill_row["加成"] = skill_addon
+                    if (
+                        "追加伤害" in skill_addon
+                        and isinstance(skill_row.get("描述"), str)
+                        and "追加伤害" in skill_row["描述"]
+                    ):
+                        furnace_addon["追加伤害"] = skill_addon["追加伤害"]
+                        skill_row.pop("描述", None)
+                    if skill_addon:
+                        skill_row["加成"] = skill_addon
 
                 unlock_map = self._build_resource_map(
                     skill_tree.get("ResourceId", []),
@@ -876,7 +864,7 @@ class WeaponProcessor(BaseProcessor):
 
             furnace_rows.append(row)
 
-        return furnace_rows
+        return furnace_rows, furnace_addon
 
     def _build_resource_map(self, resource_ids, resource_nums):
         """将资源 id/num 列表转换成突破同款字典。"""
@@ -916,9 +904,7 @@ class WeaponProcessor(BaseProcessor):
             )
             desc = desc.replace(f"#{idx}", str(calculated_value))
 
-        return self._format_float_templates(desc).replace("<H>", "").replace(
-            "</>", ""
-        )
+        return self._format_float_templates(desc).replace("<H>", "").replace("</>", "")
 
     def _build_hyper_weapon_skill_addon(self, battle_weapon, skill_tree_id):
         """按 HyperWeaponSkillTreeID 反查技能加成。"""
@@ -949,6 +935,52 @@ class WeaponProcessor(BaseProcessor):
             fkey = fkeymap.get(fkey, fkey)
             rst[fkey] = self.round_value(attr.get("Rate") or attr.get("Value", 0))
         return rst
+
+    def _build_hyper_weapon_skill_addon_from_desc(self, skill_tree):
+        """从技能描述参数回推熔炉技能加成。"""
+        if not isinstance(skill_tree, dict):
+            return {}
+
+        params = skill_tree.get("SkillDescParameter", [])
+        if not isinstance(params, list) or not params:
+            return {}
+
+        rst = {}
+        for desc_value in params:
+            buff_id = self._extract_buff_id_from_expression(desc_value)
+            if not buff_id:
+                continue
+
+            buff_info = self.buff_data.get(str(buff_id), {})
+            if not isinstance(buff_info, dict):
+                buff_info = self.buff_data.get(buff_id, {})
+            if not isinstance(buff_info, dict):
+                continue
+
+            for attr in buff_info.get("AddAttrs", []):
+                if not isinstance(attr, dict):
+                    continue
+                attr_name = attr.get("AttrName", "")
+                if attr_name == "BonusDamage":
+                    rst["追加伤害"] = self.round_value(
+                        attr.get("Value", attr.get("Rate", 0))
+                    )
+
+            if rst:
+                break
+
+        return rst
+
+    def _extract_buff_id_from_expression(self, expr):
+        """从表达式中提取Buff ID。"""
+        if not isinstance(expr, str) or "Buff[" not in expr:
+            return 0
+
+        match = re.search(r"Buff\[(\d+)\]", expr)
+        if not match:
+            return 0
+
+        return int(match.group(1))
 
     def _extract_icon_name(self, icon_value):
         """从图标路径中提取短名，和其他技能图标保持一致。"""

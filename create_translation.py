@@ -90,6 +90,7 @@ EX_FIELDS = [
     "第四根源",
     "第五根源",
     "第六根源",
+    "第七根源",
     "技能",
     "溯源",
     "下落攻击",
@@ -155,7 +156,19 @@ EX_FIELDS = [
     "霰弹枪",
     "突击枪",
     "弓",
+    "防御",
+    "技能穿透",
+    "受到的伤害",
+    "灾厄熔炉",
+    "灾厄熔炼",
 ]
+
+EX_T = {
+    # 额外翻译表
+    "属性穿透": "全属性穿透",
+    "技能伤害": "造成技能伤害",
+    "增伤": "造成的伤害",
+}
 
 # 是否在输出时添加字段前缀 (例如: "效果:xxx" -> "Effect:xxx")
 # 对于嵌套对象,前缀格式为 "字段名:键名" (如 "奖励:委托密函线索")
@@ -640,6 +653,80 @@ def process_ex_fields(base_path: Path, lang_code: str):
         print("  跳过: 没有找到扩展字段的翻译")
 
 
+def process_ex_t(base_path: Path, lang_code: str):
+    """
+    处理EX_T映射，按key导出到zh-CN，并为其他语言导出对应翻译
+
+    Args:
+        base_path: 基础路径
+        lang_code: 语言代码
+    """
+    if not EX_T:
+        return
+
+    print(f"\n处理EX_T映射: 语言: {lang_code}")
+
+    output_file = base_path / lang_code / "translation.json"
+    ex_t_mapping = {}
+
+    if lang_code == "cn":
+        ex_t_mapping.update(EX_T)
+    else:
+        textmap_file = Path("./out/TextMap_I18n.json")
+        if not textmap_file.exists():
+            print(f"  跳过: TextMap_I18n.json 文件不存在")
+            return
+
+        with open(textmap_file, "r", encoding="utf-8") as f:
+            textmap_data = json.load(f)
+
+        for key, cn_value in EX_T.items():
+            target_value = find_translation_by_cn_value(
+                textmap_data, cn_value, lang_code
+            )
+            if target_value and target_value != key:
+                ex_t_mapping[key] = target_value.replace("{空格}", " ")
+                print(f"  找到EX_T翻译: {key} -> {target_value}")
+
+    if not ex_t_mapping:
+        print("  跳过: 没有找到EX_T的翻译")
+        return
+
+    if output_file.exists():
+        try:
+            with open(output_file, "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+            existing_data.update(ex_t_mapping)
+            ex_t_mapping = existing_data
+            print(f"  合并EX_T到现有文件: 共 {len(ex_t_mapping)} 个条目")
+        except Exception as e:
+            print(f"  警告: 无法读取现有文件,将创建新文件: {e}")
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(ex_t_mapping, f, ensure_ascii=False, indent=2)
+
+    print(f"  已保存EX_T映射: {output_file.name} ({len(ex_t_mapping)} 个条目)")
+
+
+def find_translation_by_cn_value(textmap_data: Dict, cn_value: str, lang_code: str):
+    """按中文内容查找对应语言翻译"""
+    lang_field_map = {
+        "cn": "TextMapContent",
+        "en": "ContentEN",
+        "jp": "ContentJP",
+        "kr": "ContentKR",
+        "tc": "ContentTC",
+        "fr": "ContentFR",
+    }
+
+    target_field = lang_field_map.get(lang_code, "TextMapContent")
+    for _, text_entry in textmap_data.items():
+        if text_entry.get("TextMapContent") == cn_value:
+            return text_entry.get(target_field, cn_value)
+
+    return ""
+
+
 def extract_root_keys_and_values(base_path: Path) -> Dict[str, str]:
     """
     从zh-CN文件中提取最外层的键值对
@@ -836,6 +923,9 @@ def main():
 
         # 处理扩展字段
         process_ex_fields(base_path, lang_code)
+
+        # 处理EX_T映射
+        process_ex_t(base_path, lang_code)
 
         # 处理最外层键值对
         process_root_keys(base_path, lang_code, root_key_values)
