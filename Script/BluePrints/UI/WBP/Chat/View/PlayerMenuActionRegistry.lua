@@ -2,6 +2,7 @@ local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local FriendModel = FriendController:GetModel()
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
+local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local M = {}
 M.ActionId = {
   ShowRecord = "SHOW_RECORD",
@@ -26,7 +27,10 @@ function M:BuildMenuFuncList(ActionIds, Context)
   for _, ActionId in ipairs(ActionIds or {}) do
     local Builder = ActionBuilders[ActionId]
     if Builder then
-      table.insert(FuncList, Builder(Context))
+      local Func = Builder(Context)
+      if Func then
+        table.insert(FuncList, Func)
+      end
     end
   end
   return FuncList
@@ -43,7 +47,23 @@ local function CloseMenu(Context)
   end
 end
 
+local function IsPersonInfoPageOpen()
+  local UIManagerComp = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
+  if not UIManagerComp then
+    return false
+  end
+  local TopState = UIManagerComp.GetCurrentState and UIManagerComp:GetCurrentState() or nil
+  if TopState and TopState.GetUIConfigName and TopState:GetUIConfigName() == PersonInfoCommon.UIName then
+    return true
+  end
+  local View = UIManagerComp:GetUIObj(PersonInfoCommon.UIName)
+  return View and View.IsVisible and View:IsVisible()
+end
+
 local function BuildShowRecord(Context)
+  if IsPersonInfoPageOpen() then
+    return nil
+  end
   return function(Content, AvatarInfo, GuildFullInfo)
     Content.Text = GText("UI_Chat_ShowRecord")
     

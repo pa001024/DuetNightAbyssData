@@ -4,6 +4,10 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
+function M:Destruct()
+  GuildController:UnRegisterEvent(self)
+end
+
 function M:Construct()
   self.Btn_Click.OnClicked:Add(self, self.OnClickBtnGuild)
   self.Btn_Guild.OnClicked:Add(self, self.OnClickBtnOpenGuildDetail)
@@ -22,6 +26,19 @@ function M:Construct()
     }
   })
   self.Key_Name:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  GuildController:RegisterEvent(self, function(self, EventId, ...)
+    if EventId == GuildCommon.EventID.OnGetGuildInfo then
+      local Info = (...)
+      if self.GuildInviteInfo and self.GuildInviteInfo.GuildId == Info.GuildId then
+        self:OnGetGuildFullInfo(Info)
+      end
+    elseif EventId == GuildCommon.EventID.OnGetGuildInfoFail then
+      local GuildId = (...)
+      if self.GuildInviteInfo and self.GuildInviteInfo.GuildId == GuildId then
+        self:OnGetGuildFullInfoFail()
+      end
+    end
+  end)
 end
 
 function M:InitGuildInviteItem(GuildInviteInfo, isFromOther)
@@ -61,7 +78,8 @@ function M:OnClickBtnGuild()
   if GuildId <= 0 then
     return
   end
-  GuildController:SendRequestJoinGuild(GuildId, 0)
+  GuildController:SendGetGuildInfo(self.GuildInviteInfo.GuildId)
+  self.IsRequestJoinGuild = true
 end
 
 function M:OnClickBtnOpenGuildDetail()
@@ -70,7 +88,8 @@ function M:OnClickBtnOpenGuildDetail()
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_COMMONPOP_TITLE_100059"))
     return
   end
-  GuildController:OpenGuildDetailPopup(self, self.GuildInviteInfo.GuildId)
+  GuildController:SendGetGuildInfo(self.GuildInviteInfo.GuildId)
+  self.IsOpenGuildDetail = true
 end
 
 function M:OnPressBtnGuild()
@@ -79,6 +98,22 @@ end
 
 function M:OnPressBtnOpenGuildDetail()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+end
+
+function M:OnGetGuildFullInfo(Info)
+  if self.IsOpenGuildDetail then
+    GuildController:OpenGuildDetailPopup(self, self.GuildInviteInfo.GuildId)
+  end
+  if self.IsRequestJoinGuild then
+    GuildController:SendRequestJoinGuild(self.GuildInviteInfo.GuildId, 0)
+  end
+  self.IsOpenGuildDetail = false
+  self.IsRequestJoinGuild = false
+end
+
+function M:OnGetGuildFullInfoFail()
+  self.IsOpenGuildDetail = false
+  self.IsRequestJoinGuild = false
 end
 
 return M

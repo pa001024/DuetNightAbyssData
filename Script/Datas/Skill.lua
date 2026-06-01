@@ -8709,7 +8709,7 @@ T.RT_1015 = {
 }
 T.RT_1016 = {
   [1] = "$#PassiveEffect[310201].Vars.IncreaseAttackSpeed*100$%",
-  [2] = "$#PassiveEffect[310201].Vars.PassiveBuffLastTime$"
+  [2] = "$#PassiveEffect[310201].Vars.PassiveBuffLastTime$$GText(\"SKILL_DESC_Second\")$"
 }
 T.RT_1017 = {
   AllowSkillIntensity = true,

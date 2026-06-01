@@ -202,6 +202,9 @@ function ActivityUtils.IsComeBackEvent(EventID)
 end
 
 function ActivityUtils.CheckComeBackEventIsOpen(EventID)
+  if GWorld.GameInstance.GMBlockActivityMap and GWorld.GameInstance.GMBlockActivityMap[EventID] then
+    return false
+  end
   local Avatar = GWorld:GetAvatar()
   local EventMainExcel = DataMgr.EventMain[EventID]
   if ConditionUtils.CheckCondition(Avatar, EventMainExcel.EventUnlockCondition) == false then

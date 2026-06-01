@@ -148,6 +148,12 @@ return {
             startPort = "Out",
             endQuest = "177874520492713633669",
             endPort = "In"
+          },
+          {
+            startQuest = "177874504266413632399",
+            startPort = "Out",
+            endQuest = "1780057881864679",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -346,7 +352,7 @@ return {
             key = "177969628728015478056",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2549.70634898036, y = 167.08628009380138},
+            pos = {x = 2558.8367837629685, y = 133.1732366155405},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -368,6 +374,23 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["1780057881864679"] = {
+            key = "1780057881864679",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2309.5331807780326, y = 120.1235697940503},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },

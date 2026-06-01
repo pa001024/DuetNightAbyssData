@@ -211,7 +211,6 @@ function M:JoinAllGuild()
   local AllDisplayedEntries = self.List_Guild:GetDisplayedEntryWidgets()
   for _, Entry in pairs(AllDisplayedEntries) do
     table.insert(GuildIdList, Entry.Content.GuildId)
-    DebugPrint("HZQ GuildName: ", Entry.Content.Name)
   end
   if 0 == #GuildIdList then
     return

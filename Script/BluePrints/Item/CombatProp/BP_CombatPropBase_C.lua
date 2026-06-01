@@ -201,6 +201,11 @@ function BP_CombatPropBase_C:CreateReward(KillMineRoleEid)
       UniqueSign = self.Eid,
       SourceEid = KillMineRoleEid
     }
+    local Killer = Battle(self):GetEntity(KillMineRoleEid)
+    if Killer.IsPhantom and Killer:IsPhantom() and IsValid(Killer.PhantomOwner) then
+      ExtraInfo.SourceEid = Killer.PhantomOwner.Eid
+      DebugPrint("BP_CombatPropBase_C:CreateReward killed by phantom, reward to player " .. Killer.PhantomOwner.Eid)
+    end
     if GameMode:IsInRegion() then
       ExtraInfo.WorldRegionEid = self.WorldRegionEid
       ExtraInfo.RegionDataType = self.RegionDataType

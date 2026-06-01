@@ -50,6 +50,7 @@ GuildCommon.EventID = {
   OnGuildCreateAuditRejected = "OnGuildCreateAuditRejected",
   OnGetGuildSimpleInfo = "OnGetGuildSimpleInfo",
   OnGetGuildInfo = "OnGetGuildInfo",
+  OnGetGuildInfoFail = "OnGetGuildInfoFail",
   OnNotifyGuildRecvNewJoinRequest = "OnNotifyGuildRecvNewJoinRequest",
   OnGuildQuestGetReward = "OnGuildQuestGetReward",
   OnGuildGetListCDTick = "OnGuildGetListCDTick",

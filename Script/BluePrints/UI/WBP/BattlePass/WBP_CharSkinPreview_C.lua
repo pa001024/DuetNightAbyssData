@@ -1000,7 +1000,7 @@ function M:OnBackKeyDown()
 end
 
 function M:OnConfirmKeyDown()
-  if self.Btn_Confirm.IsEnabled ~= false and not self.bSelfHidden then
+  if self.Btn_Confirm.IsEnabled ~= false and not self.bSelfHidden and self.Params.Mode ~= "Preview" then
     self:OnConfirmClicked()
   end
 end

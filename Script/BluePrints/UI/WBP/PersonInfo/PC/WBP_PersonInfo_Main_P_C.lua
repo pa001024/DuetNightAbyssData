@@ -22,6 +22,9 @@ function M:Construct()
       {Type = "Img", ImgShortPath = "View"}
     }
   })
+  if UIManager():GetUIObj("CheckGuildPage") then
+    UIManager():GetUIObj("CheckGuildPage"):Close()
+  end
 end
 
 function M:OnGamePadDown(InKeyName)

@@ -923,7 +923,7 @@ return ReadOnly("SystemGuide", {
   [2111] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
-    GuideSkip = 1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Appearance.story",
     IsInRegion = 1,

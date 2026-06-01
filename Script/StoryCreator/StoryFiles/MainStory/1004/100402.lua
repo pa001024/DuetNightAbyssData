@@ -187,12 +187,6 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "177847433979010205179",
-            startPort = "Out",
-            endQuest = "17776326329055282",
-            endPort = "Fail"
-          },
-          {
             startQuest = "177815772155858676369",
             startPort = "True",
             endQuest = "177848614909321906823",
@@ -251,6 +245,12 @@ return {
             startPort = "QuestStart",
             endQuest = "17797124105732838",
             endPort = "In"
+          },
+          {
+            startQuest = "177847433979010205179",
+            startPort = "Out",
+            endQuest = "17776326329055282",
+            endPort = "Fail"
           }
         },
         nodeData = {
@@ -265,14 +265,14 @@ return {
             key = "17776326329055279",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1854.9760765550238, y = 352.10526315789474},
+            pos = {x = 1876.2260765550238, y = 202.10526315789474},
             propsData = {ModeType = 0}
           },
           ["17776326329055282"] = {
             key = "17776326329055282",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2466.0706256109484, y = 648.3166340827631},
+            pos = {x = 2491.0706256109484, y = 722.0666340827631},
             propsData = {}
           },
           ["17776335608241402332"] = {
@@ -344,7 +344,7 @@ return {
             key = "177847433979010205179",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1849.5, y = 722.1249999999999},
+            pos = {x = 2061.230769230769, y = 619.6249999999999},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_DixiaQianruEleEnd",
@@ -1218,7 +1218,7 @@ return {
             key = "17785031907865840580",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 822.9295665634677, y = 375.78308823529414},
+            pos = {x = 824.3581379920391, y = 384.03308823529414},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2530017,
@@ -1240,7 +1240,7 @@ return {
             key = "17785044105718760184",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 821.229391738293, y = 561.7600570550051},
+            pos = {x = 825.729391738293, y = 552.7600570550051},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2530017,
@@ -1342,12 +1342,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "177763795417816773252",
-            startPort = "Out",
-            endQuest = "177763795417816773249",
-            endPort = "Success"
-          },
-          {
             startQuest = "177763795417816773248",
             startPort = "QuestStart",
             endQuest = "17797131316471940065",
@@ -1358,6 +1352,18 @@ return {
             startPort = "Out",
             endQuest = "177763795417816773252",
             endPort = "In"
+          },
+          {
+            startQuest = "177763795417816773252",
+            startPort = "Out",
+            endQuest = "17800554634351458143",
+            endPort = "In"
+          },
+          {
+            startQuest = "17800554634351458143",
+            startPort = "Out",
+            endQuest = "177763795417816773249",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -1399,7 +1405,7 @@ return {
             key = "177763795417816773252",
             type = "TalkNode",
             name = "希尔妲救场",
-            pos = {x = 210.20177604653406, y = 338.18167115142904},
+            pos = {x = 115.75733160208961, y = 318.18167115142904},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1450,6 +1456,23 @@ return {
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
             pos = {x = -189.0450270743749, y = 312.0659596442205},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0164_cs_xier_show.0164_cs_xier_show'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["17800554634351458143"] = {
+            key = "17800554634351458143",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 421.6161029802672, y = 357.33025333425786},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -1780,7 +1803,7 @@ return {
             key = "177763795518716773324",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 660.8467459264874, y = 271.1390678287232},
+            pos = {x = 572.6649277446693, y = 284.77543146508685},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1869,7 +1892,7 @@ return {
             key = "177969503433828552394",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 129.50097862368017, y = 535.8036726943855},
+            pos = {x = 224.0464331691347, y = 507.62185451256727},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -2125,18 +2148,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177763838346920967015",
-            startPort = "Out",
-            endQuest = "17797127871004359771",
-            endPort = "In"
-          },
-          {
-            startQuest = "17797127871004359771",
-            startPort = "Out",
-            endQuest = "17797127232322907865",
-            endPort = "In"
-          },
-          {
             startQuest = "177763838346920967016",
             startPort = "Out",
             endQuest = "17797128954755811826",
@@ -2152,6 +2163,12 @@ return {
             startQuest = "177763838346920967017",
             startPort = "Out",
             endQuest = "177969915780753717908",
+            endPort = "In"
+          },
+          {
+            startQuest = "177763838346920967015",
+            startPort = "Out",
+            endQuest = "17797127232322907865",
             endPort = "In"
           }
         },
@@ -2382,17 +2399,6 @@ return {
               bStoreToServer = false
             }
           },
-          ["17797127871004359771"] = {
-            key = "17797127871004359771",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 920.2744047619046, y = 48.57976190476191},
-            propsData = {
-              SoundStateType = 3,
-              SoundPriority = 0,
-              SoundType = 0
-            }
-          },
           ["17797128954755811826"] = {
             key = "17797128954755811826",
             type = "PlayOrStopBGMNode",
@@ -2528,7 +2534,7 @@ return {
             key = "17778012387711868769",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1592, y = 232},
+            pos = {x = 1543.25, y = -38},
             propsData = {ModeType = 0}
           },
           ["17778012387711868770"] = {
@@ -2542,7 +2548,7 @@ return {
             key = "17778012387711868771",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = 1179.9318181818182, y = 282.6818181818182},
+            pos = {x = 1077.4318181818182, y = 183.9318181818182},
             propsData = {SpecialConfigId = 10040206, BlackScreenImmediately = true}
           },
           ["17778012387711868772"] = {
@@ -2573,7 +2579,7 @@ return {
             key = "17778018267781871164",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1322.9670714103565, y = 594.7514469226425},
+            pos = {x = 1407.2527856960708, y = 230.64430406549954},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_YWSEnd",
@@ -2611,7 +2617,7 @@ return {
             key = "177926724668819361185",
             type = "CameraControlClearNode",
             name = "镜头恢复",
-            pos = {x = 1638, y = 524},
+            pos = {x = 1674.25, y = 521.5},
             propsData = {Duration = 0}
           }
         },
@@ -2732,12 +2738,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177919982128613044296",
-            startPort = "Out",
-            endQuest = "17784742306538745834",
-            endPort = "In"
-          },
-          {
             startQuest = "17784742306538745834",
             startPort = "Out",
             endQuest = "177936863678471558006",
@@ -2760,6 +2760,12 @@ return {
             startPort = "true",
             endQuest = "17784740583465828097",
             endPort = "In"
+          },
+          {
+            startQuest = "177919982128613044296",
+            startPort = "Out",
+            endQuest = "17784742306538745834",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -2781,7 +2787,7 @@ return {
             key = "17784740583465828096",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2338.988558352403, y = 772.3166215935095},
+            pos = {x = 3084.988558352403, y = 838.3166215935095},
             propsData = {}
           },
           ["17784740583465828097"] = {
@@ -2841,7 +2847,7 @@ return {
             key = "17784742306538745834",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 1624.2476905382473, y = 634.2108487822112},
+            pos = {x = 1650.2476905382473, y = 716.2108487822112},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_MTEnd",
@@ -2863,7 +2869,7 @@ return {
             key = "177866872146927302411",
             type = "SplineMoveEndNode",
             name = "结束沿Spline移动节点",
-            pos = {x = 1481.4812030075186, y = 400.8120300751879},
+            pos = {x = 1481.4812030075186, y = 389.19912684938146},
             propsData = {SplineActorIndex = 1004020601, ExitBlendTime = 0}
           },
           ["177866872814727302541"] = {

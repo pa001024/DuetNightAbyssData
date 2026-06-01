@@ -632,16 +632,16 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "17787400820564390709",
-            startPort = "Out",
-            endQuest = "1779187432316130871476",
-            endPort = "In"
-          },
-          {
             startQuest = "1779187432316130871476",
             startPort = "Out",
             endQuest = "176776893806210194948",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17787400820564390709",
+            startPort = "Out",
+            endQuest = "1779187432316130871476",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -684,7 +684,7 @@ return {
             key = "1779187432316130871476",
             type = "SkipRegionNode",
             name = "跨区域传送设置玩家位置",
-            pos = {x = 508, y = 522},
+            pos = {x = 514.5419354838709, y = 514.7612903225806},
             propsData = {
               ModeType = 1,
               Id = 106001,
@@ -1199,12 +1199,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177874593607713146288",
-            startPort = "Out",
-            endQuest = "177875913044144349470",
-            endPort = "In"
-          },
-          {
             startQuest = "177875913044144349470",
             startPort = "Out",
             endQuest = "176778351307910205593",
@@ -1227,6 +1221,12 @@ return {
             startPort = "Out",
             endQuest = "177874562929911686919",
             endPort = "In"
+          },
+          {
+            startQuest = "177874593607713146288",
+            startPort = "Out",
+            endQuest = "177875913044144349470",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1248,7 +1248,7 @@ return {
             key = "176778351307910205593",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2150, y = 501.66666666666663},
+            pos = {x = 2319.090909090909, y = 422.5757575757575},
             propsData = {}
           },
           ["177874562929911686919"] = {
@@ -1314,7 +1314,7 @@ return {
       key = "176778525695010207183",
       type = "StoryNode",
       name = "与史蒂芬交谈",
-      pos = {x = 1501.7803322408586, y = 808.1077666295062},
+      pos = {x = 1503.0846800669456, y = 808.1077666295062},
       propsData = {
         QuestId = 10040409,
         QuestDescriptionComment = "",
@@ -1359,6 +1359,12 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177875913798544349747",
+            startPort = "Out",
+            endQuest = "176778525695010207190",
+            endPort = "Fail"
+          },
+          {
             startQuest = "177874613498113147996",
             startPort = "Fail",
             endQuest = "177875913798544349747",
@@ -1369,12 +1375,6 @@ return {
             startPort = "PassiveFail",
             endQuest = "177875913798544349747",
             endPort = "In"
-          },
-          {
-            startQuest = "177875913798544349747",
-            startPort = "Out",
-            endQuest = "176778525695010207190",
-            endPort = "Fail"
           }
         },
         nodeData = {
@@ -1427,7 +1427,7 @@ return {
       key = "176778550565810210051",
       type = "StoryNode",
       name = "与芙罗拉交谈",
-      pos = {x = 1830.2352839812518, y = 793.2777175310073},
+      pos = {x = 1831.2352839812518, y = 793.2777175310073},
       propsData = {
         QuestId = 10040410,
         QuestDescriptionComment = "",
@@ -1472,6 +1472,12 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177875914659344350012",
+            startPort = "Out",
+            endQuest = "176778550565810210058",
+            endPort = "Fail"
+          },
+          {
             startQuest = "177874674867214608717",
             startPort = "Fail",
             endQuest = "177875914659344350012",
@@ -1482,12 +1488,6 @@ return {
             startPort = "PassiveFail",
             endQuest = "177875914659344350012",
             endPort = "In"
-          },
-          {
-            startQuest = "177875914659344350012",
-            startPort = "Out",
-            endQuest = "176778550565810210058",
-            endPort = "Fail"
           }
         },
         nodeData = {
@@ -1585,6 +1585,12 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177875916019944350447",
+            startPort = "Out",
+            endQuest = "176778606188810211901",
+            endPort = "Fail"
+          },
+          {
             startQuest = "177874677858714609298",
             startPort = "Fail",
             endQuest = "177875916019944350447",
@@ -1595,12 +1601,6 @@ return {
             startPort = "PassiveFail",
             endQuest = "177875916019944350447",
             endPort = "In"
-          },
-          {
-            startQuest = "177875916019944350447",
-            startPort = "Out",
-            endQuest = "176778606188810211901",
-            endPort = "Fail"
           }
         },
         nodeData = {
@@ -1692,18 +1692,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "177874699079416069080",
-            startPort = "Fail",
-            endQuest = "177875917007744350820",
-            endPort = "In"
-          },
-          {
-            startQuest = "177874699079416069080",
-            startPort = "PassiveFail",
-            endQuest = "177875917007744350820",
-            endPort = "In"
-          },
-          {
             startQuest = "177875917007744350820",
             startPort = "Out",
             endQuest = "176778625965610213277",
@@ -1720,6 +1708,18 @@ return {
             startPort = "Out",
             endQuest = "177874699079416069080",
             endPort = "In"
+          },
+          {
+            startQuest = "177874699079416069080",
+            startPort = "Fail",
+            endQuest = "177875917007744350820",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874699079416069080",
+            startPort = "PassiveFail",
+            endQuest = "177875917007744350820",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1727,7 +1727,7 @@ return {
             key = "176778625965610213271",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 1090.6901709401711, y = 323.8611111111111},
+            pos = {x = 884.0235042735044, y = 93.86111111111109},
             propsData = {ModeType = 0}
           },
           ["176778625965610213274"] = {
@@ -1741,7 +1741,7 @@ return {
             key = "176778625965610213277",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2037.7777777777778, y = 551.1111111111111},
+            pos = {x = 2519.4444444444443, y = 542.7777777777777},
             propsData = {}
           },
           ["177874699079416069080"] = {
@@ -1755,7 +1755,7 @@ return {
             key = "177875917007744350820",
             type = "SkipRegionNode",
             name = "跨区域传送设置玩家位置",
-            pos = {x = 1756.9565217391305, y = 481.28260869565213},
+            pos = {x = 1993.6231884057972, y = 519.6159420289855},
             propsData = {
               ModeType = 1,
               Id = 106001,
@@ -1828,6 +1828,12 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177875917983944351190",
+            startPort = "Out",
+            endQuest = "176778725057110214403",
+            endPort = "Fail"
+          },
+          {
             startQuest = "177874810440617530346",
             startPort = "Fail",
             endQuest = "177875917983944351190",
@@ -1838,12 +1844,6 @@ return {
             startPort = "PassiveFail",
             endQuest = "177875917983944351190",
             endPort = "In"
-          },
-          {
-            startQuest = "177875917983944351190",
-            startPort = "Out",
-            endQuest = "176778725057110214403",
-            endPort = "Fail"
           }
         },
         nodeData = {
@@ -1941,6 +1941,12 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177875918763844351477",
+            startPort = "Out",
+            endQuest = "176786069773210215209",
+            endPort = "Fail"
+          },
+          {
             startQuest = "177874819763018990339",
             startPort = "Fail",
             endQuest = "177875918763844351477",
@@ -1951,12 +1957,6 @@ return {
             startPort = "PassiveFail",
             endQuest = "177875918763844351477",
             endPort = "In"
-          },
-          {
-            startQuest = "177875918763844351477",
-            startPort = "Out",
-            endQuest = "176786069773210215209",
-            endPort = "Fail"
           }
         },
         nodeData = {
@@ -2009,7 +2009,7 @@ return {
       key = "17684456530463185",
       type = "StoryNode",
       name = "芙罗拉寻找剪刀",
-      pos = {x = 2721.8831467764962, y = 954.6912294546886},
+      pos = {x = 2720.8831467764962, y = 953.6912294546886},
       propsData = {
         QuestId = 10040416,
         QuestDescriptionComment = "",
@@ -2066,16 +2066,16 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "177874831416220450824",
-            startPort = "Out",
-            endQuest = "177875919772644351845",
-            endPort = "In"
-          },
-          {
             startQuest = "177875919772644351845",
             startPort = "Out",
             endQuest = "17684456530473192",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177874831416220450824",
+            startPort = "Out",
+            endQuest = "177875919772644351845",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -2135,7 +2135,7 @@ return {
       key = "17684466206656025",
       type = "StoryNode",
       name = "进入贵族车厢",
-      pos = {x = 1535.6285714285707, y = 1230.5015851795263},
+      pos = {x = 1531.6285714285707, y = 1230.5015851795263},
       propsData = {
         QuestId = 10040417,
         QuestDescriptionComment = "",
@@ -2180,6 +2180,12 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177875920480144352095",
+            startPort = "Out",
+            endQuest = "17684466206656032",
+            endPort = "Fail"
+          },
+          {
             startQuest = "177874841232520451661",
             startPort = "Fail",
             endQuest = "177875920480144352095",
@@ -2190,12 +2196,6 @@ return {
             startPort = "PassiveFail",
             endQuest = "177875920480144352095",
             endPort = "In"
-          },
-          {
-            startQuest = "177875920480144352095",
-            startPort = "Out",
-            endQuest = "17684466206656032",
-            endPort = "Fail"
           }
         },
         nodeData = {
@@ -2217,7 +2217,7 @@ return {
             key = "17684466206656032",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1581.25, y = 492.625},
+            pos = {x = 2263.25, y = 500.625},
             propsData = {}
           },
           ["177874841232520451661"] = {
@@ -2231,7 +2231,7 @@ return {
             key = "177875920480144352095",
             type = "SkipRegionNode",
             name = "跨区域传送设置玩家位置",
-            pos = {x = 1264, y = 486},
+            pos = {x = 1892, y = 454},
             propsData = {
               ModeType = 1,
               Id = 106001,
@@ -2305,12 +2305,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "177874850781820453118",
-            startPort = "Out",
-            endQuest = "177875921161744352348",
-            endPort = "In"
-          },
-          {
             startQuest = "177875921161744352348",
             startPort = "Out",
             endQuest = "17684469557387677",
@@ -2326,6 +2320,12 @@ return {
             startQuest = "177936866751373008529",
             startPort = "Out",
             endQuest = "177874850781820453118",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874850781820453118",
+            startPort = "Out",
+            endQuest = "177875921161744352348",
             endPort = "In"
           }
         },
@@ -2348,7 +2348,7 @@ return {
             key = "17684469557387677",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2225.308270676692, y = 527.3233082706766},
+            pos = {x = 2551.9749373433583, y = 428.9899749373433},
             propsData = {}
           },
           ["177495601301026267273"] = {
@@ -2376,7 +2376,7 @@ return {
             key = "177875921161744352348",
             type = "SkipRegionNode",
             name = "跨区域传送设置玩家位置",
-            pos = {x = 1736.8646616541353, y = 455.012987012987},
+            pos = {x = 2206.8646616541355, y = 316.67965367965365},
             propsData = {
               ModeType = 1,
               Id = 106001,
@@ -2388,7 +2388,7 @@ return {
             key = "177936866751373008529",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1370, y = 626.2857142857142},
+            pos = {x = 1236.6666666666667, y = 611.2857142857142},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "YWPianoLightClose",
@@ -2756,7 +2756,7 @@ return {
         bIsEndQuest = false,
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
-        bIsEndChapter = true,
+        bIsEndChapter = false,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
@@ -3526,7 +3526,7 @@ return {
         TaskSubRegionReName = "",
         RecommendLevel = -1,
         bIsStartQuest = false,
-        bIsEndQuest = false,
+        bIsEndQuest = true,
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
@@ -3555,27 +3555,27 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177364904417822135541",
+            startPort = "Out",
+            endQuest = "177969785361036293785",
+            endPort = "In"
+          },
+          {
             startQuest = "177364900966722134814",
             startPort = "QuestStart",
+            endQuest = "17800595418937283176",
+            endPort = "In"
+          },
+          {
+            startQuest = "17800595418937283176",
+            startPort = "Out",
             endQuest = "177364904417822135541",
             endPort = "In"
           },
           {
-            startQuest = "177364904417822135541",
+            startQuest = "177969785361036293785",
             startPort = "Out",
             endQuest = "177364906021122135839",
-            endPort = "In"
-          },
-          {
-            startQuest = "177364900966722134814",
-            startPort = "QuestStart",
-            endQuest = "177969784794636293646",
-            endPort = "In"
-          },
-          {
-            startQuest = "177969784794636293646",
-            startPort = "Out",
-            endQuest = "177969785361036293785",
             endPort = "In"
           }
         },
@@ -3605,7 +3605,7 @@ return {
             key = "177364904417822135541",
             type = "TalkNode",
             name = "飞艇出场",
-            pos = {x = 1156.9217391304348, y = 268.4},
+            pos = {x = 1255.3217391304347, y = 290},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -3655,7 +3655,7 @@ return {
             key = "177364906021122135839",
             type = "TalkNode",
             name = "飞艇出场后",
-            pos = {x = 1597.4454937511, y = 294.3774853801169},
+            pos = {x = 1626.2454937511, y = 295.5774853801169},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -3701,18 +3701,11 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["177969784794636293646"] = {
-            key = "177969784794636293646",
-            type = "WaitOfTimeNode",
-            name = "延迟等待",
-            pos = {x = 1178.870813397129, y = 507.1729323308271},
-            propsData = {WaitTime = 3}
-          },
           ["177969785361036293785"] = {
             key = "177969785361036293785",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1463.870813397129, y = 552.1729323308272},
+            pos = {x = 1609.070813397129, y = 535.3729323308272},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -3723,6 +3716,23 @@ return {
               RelatedRegionId = {106101},
               ClientRelatedRegionId = {},
               bStoreToServer = true
+            }
+          },
+          ["17800595418937283176"] = {
+            key = "17800595418937283176",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1120.65, y = 531.125},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },

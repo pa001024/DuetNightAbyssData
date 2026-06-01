@@ -541,9 +541,6 @@ end
 function BP_MonsterCharacter_C:CommonOnEMActorDestroy(DestroyReason)
 end
 
-function BP_MonsterCharacter_C:MonsterSkeletonLodLua_Stamp()
-end
-
 function BP_MonsterCharacter_C:SetHitCapsuleBeginplayState(bEnableEnd)
   DebugPrint("@gulinan SetHitCapsuleBeginplayState " .. tostring(bEnableEnd))
   self.bHitCapsuleBeginplay = bEnableEnd
@@ -552,6 +549,9 @@ end
 function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
   Battle(self):ShowError_Monster_Inner_Lua("PhysStateErrorReset_Lua" .. self:GetName())
   self.Mesh:TermBodiesBelow("Root")
+end
+
+function BP_MonsterCharacter_C:MonsterSkeletonLodLua_Stamp()
 end
 
 AssembleComponents(BP_MonsterCharacter_C)

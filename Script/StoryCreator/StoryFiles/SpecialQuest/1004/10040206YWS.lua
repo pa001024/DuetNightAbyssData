@@ -144,22 +144,10 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177780107980148558079",
-            startPort = "Out",
-            endQuest = "17780683283561654",
-            endPort = "In"
-          },
-          {
             startQuest = "177780107980148558081",
             startPort = "false",
             endQuest = "177780107979948558071",
             endPort = "Success"
-          },
-          {
-            startQuest = "17780683283561652",
-            startPort = "Out",
-            endQuest = "177780107980148558082",
-            endPort = "In"
           },
           {
             startQuest = "177780107979948558070",
@@ -180,15 +168,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177780188640549492977",
+            startQuest = "177780107980148558077",
+            startPort = "Out",
+            endQuest = "177780107980148558081",
+            endPort = "In"
+          },
+          {
+            startQuest = "177780107980148558082",
             startPort = "Out",
             endQuest = "177780107980148558077",
             endPort = "In"
           },
           {
-            startQuest = "177780107980148558077",
+            startQuest = "177780107980148558079",
             startPort = "Out",
-            endQuest = "177780107980148558081",
+            endQuest = "177780107980148558082",
             endPort = "In"
           }
         },
@@ -296,7 +290,7 @@ return {
             key = "177780107980148558077",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = -384.9737033531728, y = 97.17995258195828},
+            pos = {x = -328.1315980900149, y = 294.5483736345899},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = true,
@@ -320,7 +314,7 @@ return {
             key = "177780107980148558079",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = -602.8175614431339, y = -10.64659425242931},
+            pos = {x = -637.3175614431339, y = 64.35340574757069},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177780107980148558080"] = {
@@ -424,7 +418,7 @@ return {
             key = "17780683283561655",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = -344.79869372185385, y = -121.07965025983339},
+            pos = {x = -283.29869372185385, y = -128.5796502598334},
             propsData = {
               WeaponTags = {"Melee"},
               bForbid = true,

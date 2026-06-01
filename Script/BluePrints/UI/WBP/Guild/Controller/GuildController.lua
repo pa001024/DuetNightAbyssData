@@ -109,6 +109,8 @@ function M:RecvGetGuildInfo(SrcParams, Ret, ServerGuildInfo)
       self.GetModel():SetCurrGuild(Info)
       ChatController:LoadGuildChannelSnapshot(nil, Info.GuildMessages, Info.GuildId)
     end
+  else
+    self:NotifyEvent(GuildCommon.EventID.OnGetGuildInfoFail, GuildId)
   end
   self:RecvCommon(Ret, GuildCommon.EventID.OnGetGuildInfo, Info)
 end

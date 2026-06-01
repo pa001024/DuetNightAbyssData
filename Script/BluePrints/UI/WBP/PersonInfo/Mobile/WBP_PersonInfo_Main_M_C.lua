@@ -10,6 +10,9 @@ M._components = {
 
 function M:Construct()
   self:InitBaseView()
+  if UIManager():GetUIObj("CheckGuildPage") then
+    UIManager():GetUIObj("CheckGuildPage"):Close()
+  end
 end
 
 function M:InitPage(Data)

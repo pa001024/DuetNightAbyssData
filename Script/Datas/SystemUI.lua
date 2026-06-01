@@ -2214,11 +2214,6 @@ return ReadOnly("SystemUI", {
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/MonthlySignIn/WBP_Shop_MonthlySignIn_PopUpMain.WBP_Shop_MonthlySignIn_PopUpMain'",
     PauseAfterLoadingState = T.RT_16,
     Popup = true,
-    SpecialUINameList = {
-      "GuideTextBox",
-      "GuideTouch"
-    },
-    StateTag = 2,
     UIName = "MonthSignInPopMain",
     ZOrder = 60
   },

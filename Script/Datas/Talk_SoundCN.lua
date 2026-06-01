@@ -70544,7 +70544,7 @@ local Data = {
         voice_ch_story_1004_100499_100499156 = {
           ProgrammerSoundPath = "event:/voice/ch/story/1004",
           SelectKey = "voice_ch_story_1004_100499_100499156",
-          SoundLength = 7950
+          SoundLength = 8500
         },
         voice_ch_story_1004_100499_100499157 = {
           ProgrammerSoundPath = "event:/voice/ch/story/1004",
