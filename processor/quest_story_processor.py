@@ -15,6 +15,8 @@ class QuestStoryProcessor(BaseProcessor):
         self.dialogue_flow_cache = {}
         self.sub_region_data = data_loader.load_json("SubRegion.json")
         self.sub_region_center_by_id = self._build_sub_region_center_by_id()
+        self.special_quest_config_data = data_loader.load_json("SpecialQuestConfig.json")
+        self.special_quest_story_path_by_id = self._build_special_quest_story_path_by_id()
 
     def load_items(self, file_path):
         """加载任务链数据（兼容接口）
@@ -122,6 +124,34 @@ class QuestStoryProcessor(BaseProcessor):
             mapping[sub_region_id] = self._format_vec2(center)
         return mapping
 
+    def _build_special_quest_story_path_by_id(self):
+        """构建特殊任务 ID 到 StoryPath 的索引。"""
+        mapping = {}
+        data = self.special_quest_config_data
+        if isinstance(data, dict):
+            items = data.values()
+        elif isinstance(data, list):
+            items = data
+        else:
+            return mapping
+
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            special_config_id = self._to_int(item.get("SpecialConfigId"))
+            story_path = item.get("StoryPath")
+            if special_config_id and story_path:
+                mapping[special_config_id] = story_path
+
+        return mapping
+
+    def _get_special_quest_story_path(self, special_config_id):
+        """获取特殊任务对应的故事文件路径。"""
+        special_config_id = self._to_int(special_config_id)
+        if not special_config_id:
+            return ""
+        return self.special_quest_story_path_by_id.get(special_config_id, "")
+
     def _extract_story_context(self, story_node_data):
         """提取外层故事节点的真实导引点上下文。"""
         return self._resolve_guide_point_context(story_node_data)
@@ -224,6 +254,45 @@ class QuestStoryProcessor(BaseProcessor):
             if answer_ids:
                 node_item["answer_ids"] = answer_ids
         return node_item
+
+    def _extract_quest_id_from_text_key(self, text_key):
+        """从任务文本 key 中提取任务 ID。"""
+        if not text_key:
+            return None
+
+        match = re.search(r"_(\d+)_", str(text_key))
+        if not match:
+            return None
+
+        try:
+            return int(match.group(1))
+        except ValueError:
+            return None
+
+    def _story_node_matches_quest(self, story_node, quest_id):
+        """判断 StoryNode 是否归属指定任务。"""
+        props_data = story_node.get("propsData", {})
+        if props_data.get("QuestId") == quest_id:
+            return True
+
+        if props_data.get("QuestId") not in (None, 0):
+            return False
+
+        for key in ("QuestDescription", "QuestDeatil"):
+            if self._extract_quest_id_from_text_key(props_data.get(key)) == quest_id:
+                return True
+
+        return False
+
+    def _is_quest_flow_edge(self, edge):
+        """判断任务节点边是否应参与顺序遍历。"""
+        start_port = edge.get("startPort")
+        start_port_key = str(start_port).lower()
+        if start_port_key == "queststart":
+            return False
+        if start_port_key in ("fail", "passivefail", "false"):
+            return False
+        return True
 
     def load_story_file(self, story_path):
         """加载故事文件
@@ -453,7 +522,7 @@ class QuestStoryProcessor(BaseProcessor):
                     if dialogue_id not in dialogue_seen:
                         dialogue_seen.add(dialogue_id)
                         dialogue_ids.append(dialogue_id)
-            elif self._extract_flow_option_dialogue_ids(node):
+            elif node_type in ("FlowNode_Option", "FlowNode_ImpressingOption"):
                 option_node_guids.append(current_guid)
 
             for conn in props.get("Connections", []) or []:
@@ -497,7 +566,7 @@ class QuestStoryProcessor(BaseProcessor):
                         emitted_option_ids.add(str(option_id))
 
         if option_node_guids:
-            option_dialogue_ids = set()
+            attached_option_dialogue_ids = set()
             for option_node_guid in option_node_guids:
                 option_node = guid_to_node.get(option_node_guid)
                 if not isinstance(option_node, dict):
@@ -506,12 +575,9 @@ class QuestStoryProcessor(BaseProcessor):
                 parent_dialogue_id = self._resolve_upstream_dialogue_tail_id(
                     option_node_guid, guid_to_node, incoming_map
                 )
-                if not parent_dialogue_id:
-                    continue
-
-                parent_item = dialogue_item_map.get(str(parent_dialogue_id))
-                if not isinstance(parent_item, dict):
-                    continue
+                parent_item = None
+                if parent_dialogue_id:
+                    parent_item = dialogue_item_map.get(str(parent_dialogue_id))
 
                 option_ids = self._extract_flow_option_dialogue_ids(option_node)
                 if not option_ids:
@@ -554,7 +620,9 @@ class QuestStoryProcessor(BaseProcessor):
                     if key_str.startswith("Option_"):
                         fallback_option_pins.append(key_str)
 
-                existing_options = parent_item.get("options", [])
+                existing_options = []
+                if isinstance(parent_item, dict):
+                    existing_options = parent_item.get("options", [])
                 option_map = {}
                 for option in existing_options:
                     if not isinstance(option, dict):
@@ -622,27 +690,46 @@ class QuestStoryProcessor(BaseProcessor):
                         ):
                             existing_item["content"] = option_item["content"]
                     else:
-                        existing_options.append(option_item)
-                        option_map[option_key] = option_item
+                        if isinstance(parent_item, dict):
+                            existing_options.append(option_item)
+                            option_map[option_key] = option_item
+                        else:
+                            dialogue_chain.append(option_item)
+                            emitted_ids.add(option_key)
+                            dialogue_item_map[option_key] = option_item
 
-                    option_dialogue_ids.add(option_key)
+                    if isinstance(parent_item, dict):
+                        attached_option_dialogue_ids.add(option_key)
 
-                if existing_options:
+                if isinstance(parent_item, dict) and existing_options:
                     parent_item["options"] = existing_options
                     parent_item.pop("next", None)
 
-            if option_dialogue_ids:
+            if attached_option_dialogue_ids:
                 filtered_chain = []
                 for item in dialogue_chain:
                     item_id = item.get("id")
                     if item_id is None:
                         filtered_chain.append(item)
                         continue
-                    if str(item_id) in option_dialogue_ids:
+                    if str(item_id) in attached_option_dialogue_ids:
                         continue
                     filtered_chain.append(item)
                 dialogue_chain = filtered_chain
 
+        return dialogue_chain
+
+    def _get_talk_node_dialogue_chain(
+        self, first_dialogue_id=0, flow_asset_path="", language=""
+    ):
+        """按剧情节点配置解析对白链，优先使用 FlowAssetPath。"""
+        dialogue_chain = []
+        if flow_asset_path:
+            dialogue_chain = self.get_dialogue_chain_from_flow_asset(
+                flow_asset_path, language
+            )
+        if not dialogue_chain and first_dialogue_id:
+            dialogue_chain = self.get_dialogue_chain(first_dialogue_id, language)
         return dialogue_chain
 
     def find_talk_nodes_for_quest(self, story_data, quest_id):
@@ -664,8 +751,7 @@ class QuestStoryProcessor(BaseProcessor):
         # 遍历所有故事节点
         for node_key, node_data in self._iter_story_nodes(story_data):
             # 检查该故事节点是否包含指定的 QuestId
-            props_data = node_data.get("propsData", {})
-            if props_data.get("QuestId") != quest_id:
+            if not self._story_node_matches_quest(node_data, quest_id):
                 continue
 
             # 优先检查 questNodeData.nodeData 中的节点
@@ -781,8 +867,7 @@ class QuestStoryProcessor(BaseProcessor):
         # 遍历所有故事节点
         for node_key, node_data in story_node_data.items():
             # 检查该故事节点是否包含指定的 QuestId
-            props_data = node_data.get("propsData", {})
-            if props_data.get("QuestId") != quest_id:
+            if not self._story_node_matches_quest(node_data, quest_id):
                 continue
 
             # 优先检查 questNodeData.nodeData 中的节点
@@ -815,7 +900,7 @@ class QuestStoryProcessor(BaseProcessor):
                 for edge in self.quest_line_data:
                     if not isinstance(edge, dict):
                         continue
-                    if edge.get("startPort") == "QuestStart":
+                    if not self._is_quest_flow_edge(edge):
                         continue
                     start_quest = edge.get("startQuest")
                     end_quest = edge.get("endQuest")
@@ -840,9 +925,10 @@ class QuestStoryProcessor(BaseProcessor):
                         # 收集当前节点的所有后继（Out/PC/Success），并去重
                         edges_from_current = []
                         for edge in self.quest_line_data:
-                            if edge["startQuest"] == current_node and edge[
-                                "startPort"
-                            ] in ["Out", "PC", "Success"]:
+                            if (
+                                edge["startQuest"] == current_node
+                                and self._is_quest_flow_edge(edge)
+                            ):
                                 edges_from_current.append(edge)
 
                         next_node_ids = []
@@ -1061,8 +1147,7 @@ class QuestStoryProcessor(BaseProcessor):
         for story_node in story_node_data.values():
             if not isinstance(story_node, dict):
                 continue
-            props_data = story_node.get("propsData", {})
-            if props_data.get("QuestId") != quest_id:
+            if not self._story_node_matches_quest(story_node, quest_id):
                 continue
 
             quest_node_data = story_node.get("questNodeData", {})
@@ -1073,7 +1158,7 @@ class QuestStoryProcessor(BaseProcessor):
             for edge in line_data:
                 if not isinstance(edge, dict):
                     continue
-                if edge.get("startPort") == "QuestStart":
+                if not self._is_quest_flow_edge(edge):
                     continue
 
                 start_quest = edge.get("startQuest")
@@ -1088,6 +1173,67 @@ class QuestStoryProcessor(BaseProcessor):
                     incoming_map[end_key].append(start_key)
 
         return incoming_map
+
+    def _find_special_quest_nodes(self, story_data, quest_id):
+        """查找主线任务引用的特殊任务对话节点。"""
+        nodes = []
+        if not isinstance(story_data, dict):
+            return nodes
+
+        story_node_data = story_data.get("storyNodeData", {})
+        if not isinstance(story_node_data, dict):
+            return nodes
+
+        for story_node in story_node_data.values():
+            if not isinstance(story_node, dict):
+                continue
+            if not self._story_node_matches_quest(story_node, quest_id):
+                continue
+
+            props_data = story_node.get("propsData", {})
+            candidate_quest_ids = [quest_id]
+            for key in ("QuestDescription", "QuestDeatil"):
+                text_quest_id = self._extract_quest_id_from_text_key(
+                    props_data.get(key)
+                )
+                if text_quest_id and text_quest_id not in candidate_quest_ids:
+                    candidate_quest_ids.append(text_quest_id)
+
+            quest_node_data = story_node.get("questNodeData", {})
+            node_data_dict = quest_node_data.get("nodeData", {})
+            if not isinstance(node_data_dict, dict):
+                continue
+
+            for node in node_data_dict.values():
+                if not isinstance(node, dict):
+                    continue
+                if node.get("type") != "WaitingSpecialQuestStartAndFinishNode":
+                    continue
+
+                props_data = node.get("propsData", {})
+                story_path = self._get_special_quest_story_path(
+                    props_data.get("SpecialConfigId")
+                )
+                if not story_path:
+                    continue
+
+                special_story_data = self.load_story_file(story_path)
+                if not special_story_data:
+                    continue
+
+                for candidate_quest_id in candidate_quest_ids:
+                    special_nodes = self.process_quest_nodes_order(
+                        special_story_data, candidate_quest_id
+                    )
+                    if not special_nodes:
+                        special_nodes = self.find_talk_nodes_for_quest(
+                            special_story_data, candidate_quest_id
+                        )
+                    for special_node in special_nodes:
+                        special_node.pop("next", None)
+                    nodes.extend(special_nodes)
+
+        return nodes
 
     def process_quest_chain(self, quest_chain_data, stl_quest_chain_data, language=""):
         """处理单个任务链
@@ -1137,8 +1283,8 @@ class QuestStoryProcessor(BaseProcessor):
             quest_name = ""
             quest_desc = ""
             for story_node in story_data.get("storyNodeData", {}).values():
-                props_data = story_node.get("propsData", {})
-                if props_data.get("QuestId") == quest_id:
+                if self._story_node_matches_quest(story_node, quest_id):
+                    props_data = story_node.get("propsData", {})
                     quest_name = self.data_loader.translate(
                         props_data.get("QuestDescription", "")
                     )
@@ -1153,6 +1299,9 @@ class QuestStoryProcessor(BaseProcessor):
             # 如果没有按顺序的节点，使用原来的方法
             if not nodes:
                 nodes = self.find_talk_nodes_for_quest(story_data, quest_id)
+            special_nodes = self._find_special_quest_nodes(story_data, quest_id)
+            if special_nodes:
+                nodes.extend(special_nodes)
 
             # 无对话节点但存在任务名称/描述时也要保留任务
             if not nodes and not (quest_name or quest_desc):
@@ -1176,25 +1325,12 @@ class QuestStoryProcessor(BaseProcessor):
 
                 # 如果是对话节点，获取对话链
                 if node["type"] == "TalkNode":
-                    dialogue_chain = []
-
                     first_dialogue_id = node.get("first_dialogue_id", 0)
                     props_data = node.get("props_data", {})
                     flow_asset_path = props_data.get("FlowAssetPath", "")
-                    use_flow_asset_actors = bool(props_data.get("bUseFlowAssetActors"))
-
-                    if use_flow_asset_actors and flow_asset_path:
-                        dialogue_chain = self.get_dialogue_chain_from_flow_asset(
-                            flow_asset_path, language
-                        )
-                    if not dialogue_chain and first_dialogue_id:
-                        dialogue_chain = self.get_dialogue_chain(
-                            first_dialogue_id, language
-                        )
-                    if not dialogue_chain and flow_asset_path:
-                        dialogue_chain = self.get_dialogue_chain_from_flow_asset(
-                            flow_asset_path, language
-                        )
+                    dialogue_chain = self._get_talk_node_dialogue_chain(
+                        first_dialogue_id, flow_asset_path, language
+                    )
 
                     if dialogue_chain:
                         node_info["dialogues"] = dialogue_chain

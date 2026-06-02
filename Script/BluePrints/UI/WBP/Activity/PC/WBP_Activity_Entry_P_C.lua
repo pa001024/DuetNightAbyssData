@@ -115,6 +115,10 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.OnReturnToActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnLeaveActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnActivityComplete, self)
+  local BattleView = UIManager():GetUIObj("BattleMain")
+  if BattleView then
+    BattleView:Show("Temp1.4Fix")
+  end
   self.NeedShowVersionView = nil
   self.Super.Destruct(self)
 end

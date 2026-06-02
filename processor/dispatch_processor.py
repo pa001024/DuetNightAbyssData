@@ -262,13 +262,9 @@ class DispatchProcessor(BaseProcessor):
                 if node_next:
                     node_item["next"] = node_next
 
-                dialogues = []
-                if first_dialogue_id:
-                    dialogues = self.get_dialogue_chain(first_dialogue_id, language)
-                if not dialogues and flow_asset_path:
-                    dialogues = self._get_dialogue_chain_from_flow_asset(
-                        flow_asset_path, language
-                    )
+                dialogues = self._get_talk_node_dialogue_chain(
+                    first_dialogue_id, flow_asset_path, language
+                )
                 if dialogues:
                     node_item["dialogues"] = dialogues
 
@@ -921,7 +917,7 @@ class DispatchProcessor(BaseProcessor):
                     if dialogue_id not in dialogue_seen:
                         dialogue_seen.add(dialogue_id)
                         dialogue_ids.append(dialogue_id)
-            elif self._extract_flow_option_dialogue_ids(node):
+            elif node_type in ("FlowNode_Option", "FlowNode_ImpressingOption"):
                 option_node_guids.append(current_guid)
 
             for conn in props.get("Connections", []) or []:
@@ -965,7 +961,7 @@ class DispatchProcessor(BaseProcessor):
                         emitted_option_ids.add(str(option_id))
 
         if option_node_guids:
-            option_dialogue_ids = set()
+            attached_option_dialogue_ids = set()
             for option_node_guid in option_node_guids:
                 option_node = guid_to_node.get(option_node_guid)
                 if not isinstance(option_node, dict):
@@ -974,12 +970,9 @@ class DispatchProcessor(BaseProcessor):
                 parent_dialogue_id = self._resolve_upstream_dialogue_tail_id(
                     option_node_guid, guid_to_node, incoming_map
                 )
-                if not parent_dialogue_id:
-                    continue
-
-                parent_item = dialogue_item_map.get(str(parent_dialogue_id))
-                if not isinstance(parent_item, dict):
-                    continue
+                parent_item = None
+                if parent_dialogue_id:
+                    parent_item = dialogue_item_map.get(str(parent_dialogue_id))
 
                 option_ids = self._extract_flow_option_dialogue_ids(option_node)
                 if not option_ids:
@@ -1022,7 +1015,9 @@ class DispatchProcessor(BaseProcessor):
                     if key_str.startswith("Option_"):
                         fallback_option_pins.append(key_str)
 
-                existing_options = parent_item.get("options", [])
+                existing_options = []
+                if isinstance(parent_item, dict):
+                    existing_options = parent_item.get("options", [])
                 option_map = {}
                 for option in existing_options:
                     if not isinstance(option, dict):
@@ -1104,25 +1099,43 @@ class DispatchProcessor(BaseProcessor):
                         ):
                             existing_item["content"] = option_item["content"]
                     else:
-                        existing_options.append(option_item)
-                        option_map[option_key] = option_item
+                        if isinstance(parent_item, dict):
+                            existing_options.append(option_item)
+                            option_map[option_key] = option_item
+                        else:
+                            dialogue_chain.append(option_item)
+                            emitted_ids.add(option_key)
+                            dialogue_item_map[option_key] = option_item
 
-                    option_dialogue_ids.add(option_key)
+                    if isinstance(parent_item, dict):
+                        attached_option_dialogue_ids.add(option_key)
 
-                if existing_options:
+                if isinstance(parent_item, dict) and existing_options:
                     parent_item["options"] = existing_options
                     parent_item.pop("next", None)
 
-            if option_dialogue_ids:
+            if attached_option_dialogue_ids:
                 filtered_chain = []
                 for item in dialogue_chain:
                     item_id = item.get("id")
                     if item_id is None:
                         filtered_chain.append(item)
                         continue
-                    if str(item_id) in option_dialogue_ids:
+                    if str(item_id) in attached_option_dialogue_ids:
                         continue
                     filtered_chain.append(item)
                 dialogue_chain = filtered_chain
 
+        return dialogue_chain
+
+    def _get_talk_node_dialogue_chain(
+        self, first_dialogue_id=0, flow_asset_path="", language=""
+    ):
+        dialogue_chain = []
+        if flow_asset_path:
+            dialogue_chain = self._get_dialogue_chain_from_flow_asset(
+                flow_asset_path, language
+            )
+        if not dialogue_chain and first_dialogue_id:
+            dialogue_chain = self.get_dialogue_chain(first_dialogue_id, language)
         return dialogue_chain

@@ -22,9 +22,10 @@ class QuestChainProcessor(BaseProcessor):
         # 将 quest_chain_id 转换为字符串以便在字典中查找
         quest_chain_id_str = str(quest_chain_id)
         if quest_chain_id_str in self.stl_export_quest_chain_data:
-            obj = self.stl_export_quest_chain_data[quest_chain_id_str].get("Quests", {})
+            chain_data = self.stl_export_quest_chain_data[quest_chain_id_str]
+            obj = chain_data.get("Quests", {})
             rst = []
-            for quest_id, quest_data in obj.items():
+            for quest_id, quest_data in self._iter_ordered_quests(chain_data):
                 item = {
                     "id": int(quest_id),
                     "sr": quest_data.get("SubRegionId", 0),
@@ -38,6 +39,53 @@ class QuestChainProcessor(BaseProcessor):
             if rst:
                 return rst
         return {}
+
+    def _iter_ordered_quests(self, chain_data):
+        """按 nextQuestIds 排序任务，Success 分支优先。"""
+        quests = chain_data.get("Quests", {})
+        if not isinstance(quests, dict):
+            return []
+
+        ordered = []
+        visited = set()
+
+        def iter_next_ids(quest_data):
+            next_quest_ids = quest_data.get("nextQuestIds", {})
+            if not isinstance(next_quest_ids, dict):
+                return []
+
+            next_ids = []
+            if next_quest_ids.get("Success") is not None:
+                next_ids.append(next_quest_ids.get("Success"))
+
+            for key, next_id in next_quest_ids.items():
+                if key == "Success":
+                    continue
+                if next_id is not None:
+                    next_ids.append(next_id)
+            return next_ids
+
+        def visit(quest_id):
+            quest_key = str(quest_id)
+            if quest_key in visited or quest_key not in quests:
+                return
+
+            visited.add(quest_key)
+            quest_data = quests[quest_key]
+            ordered.append((quest_key, quest_data))
+
+            for next_id in iter_next_ids(quest_data):
+                visit(next_id)
+
+        start_quest_id = chain_data.get("StartQuestId")
+        if start_quest_id is not None:
+            visit(start_quest_id)
+
+        for quest_id, quest_data in quests.items():
+            if str(quest_id) not in visited:
+                visit(quest_id)
+
+        return ordered
 
     def process_item(self, quest_chain_data, language):
         """处理单个任务链数据

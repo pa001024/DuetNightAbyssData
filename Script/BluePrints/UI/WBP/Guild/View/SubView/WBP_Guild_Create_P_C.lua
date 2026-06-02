@@ -12,25 +12,32 @@ function M:Construct()
       self:CreateGuildSuccessful()
     end
   end)
+  if UIUtils.IsMobileInput() then
+    self.Input_Name_Input = self.Input_Name
+    self.Input_Intro_Input = self.Input_Intro
+  else
+    self.Input_Name_Input = self.Input_Name.Input
+    self.Input_Intro_Input = self.Input_Intro.Input
+  end
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildCreateNameDuplicate then
       local Text = ErrorCode:GetText(ErrorCode.RET_GUILD_CREATE_NAME_DUPLICATE)
       AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
-      self.Input_Name.Input:ShowTips(Text, 1, 2)
+      self.Input_Name_Input:ShowTips(Text, 1, 2)
     end
   end)
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildCreateNameInvalid then
       local Text = ErrorCode:GetText(ErrorCode.RET_GUILD_CREATE_NAME_INVALID)
       AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
-      self.Input_Name.Input:ShowTips(Text, 1, 2)
+      self.Input_Name_Input:ShowTips(Text, 1, 2)
     end
   end)
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildCreateDescInvalid then
       local Text = ErrorCode:GetText(ErrorCode.RET_GUILD_CREATE_DECL_INVALID)
       AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
-      self.Input_Intro.Input:ShowTips(Text, 1, 2)
+      self.Input_Intro_Input:ShowTips(Text, 1, 2)
     end
   end)
   self.Btn_Edit:SetGamePadImg("X")
@@ -38,13 +45,13 @@ function M:Construct()
   self.Btn_Edit:BindEventOnClicked(self, self.OpenEditLogoView)
   self.Btn_Edit:SetGamepadIconVisibility(true)
   self.Text_Name:SetText(GText("UI_GuildName"))
-  self.Input_Name.Input:Init({
+  self.Input_Name_Input:Init({
     bNeedPasteBtn = false,
     Owner = self,
     Events = {
       OnTextChanged = function(Owner, Text)
-        local GuildName = self.Input_Name.Input:GetText()
-        local GuildIntro = self.Input_Intro.Input:GetText()
+        local GuildName = self.Input_Name_Input:GetText()
+        local GuildIntro = self.Input_Intro_Input:GetText()
         if "" == GuildName or "" == GuildIntro then
           self.Btn_Create:SetState(false)
         else
@@ -62,16 +69,18 @@ function M:Construct()
     FocusKey = UIConst.GamePadImgKey.FaceButtonRight,
     BackFocusWidget = self.Input_Name
   })
-  self.Input_Name.Input:SetIsShowGamePad(false)
-  self.Input_Name:HideGamePadIcon()
+  self.Input_Name_Input:SetIsShowGamePad(false)
+  if not UIUtils.IsMobileInput() then
+    self.Input_Name:HideGamePadIcon()
+  end
   self.Text_Intro:SetText(GText("UI_GuildDeclaration"))
-  self.Input_Intro.Input:Init({
+  self.Input_Intro_Input:Init({
     bNeedPasteBtn = false,
     Owner = self,
     Events = {
       OnTextChanged = function(Owner, Text)
-        local GuildName = self.Input_Name.Input:GetText()
-        local GuildIntro = self.Input_Intro.Input:GetText()
+        local GuildName = self.Input_Name_Input:GetText()
+        local GuildIntro = self.Input_Intro_Input:GetText()
         if "" == GuildName or "" == GuildIntro then
           self.Btn_Create:SetState(false)
         else
@@ -88,8 +97,10 @@ function M:Construct()
     FocusKey = UIConst.GamePadImgKey.FaceButtonRight,
     BackFocusWidget = self.Input_Intro
   })
-  self.Input_Intro.Input:SetIsShowGamePad(false)
-  self.Input_Intro:HideGamePadIcon()
+  self.Input_Intro_Input:SetIsShowGamePad(false)
+  if not UIUtils.IsMobileInput() then
+    self.Input_Intro:HideGamePadIcon()
+  end
   self.Text_Apply:SetText(GText("UI_JoinMethod"))
   self.CheckBox_Manual:BindEventOnClicked({
     Inst = self,
@@ -115,15 +126,17 @@ function M:Construct()
   self.Text_Auto:SetText(GText("UI_AutoApproval"))
   self.CheckBox_Manual:SetIsCheckedWithoutCallback(true)
   self.CheckBox_Auto:SetIsCheckedWithoutCallback(false)
-  self.Input_Name:SetNavigationRuleExplicit(EUINavigation.Down, self.Input_Intro)
-  self.Input_Intro:SetNavigationRuleExplicit(EUINavigation.Up, self.Input_Name)
-  self.Input_Intro:SetNavigationRuleExplicit(EUINavigation.Down, self.CheckBox_Manual)
-  self.CheckBox_Manual:SetNavigationRuleExplicit(EUINavigation.Up, self.Input_Intro)
-  self.CheckBox_Manual:SetNavigationRuleExplicit(EUINavigation.Right, self.CheckBox_Auto)
-  self.CheckBox_Auto:SetNavigationRuleExplicit(EUINavigation.Left, self.CheckBox_Manual)
-  self.Btn_Create.Icon_Piece.ItemDetails_MenuAnchor:SetLastFocusWidget(self.Input_Name)
-  self.CheckBox_Manual:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
-  self.CheckBox_Auto:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  if not UIUtils.IsMobileInput() then
+    self.Input_Name:SetNavigationRuleExplicit(EUINavigation.Down, self.Input_Intro)
+    self.Input_Intro:SetNavigationRuleExplicit(EUINavigation.Up, self.Input_Name)
+    self.Input_Intro:SetNavigationRuleExplicit(EUINavigation.Down, self.CheckBox_Manual)
+    self.CheckBox_Manual:SetNavigationRuleExplicit(EUINavigation.Up, self.Input_Intro)
+    self.CheckBox_Manual:SetNavigationRuleExplicit(EUINavigation.Right, self.CheckBox_Auto)
+    self.CheckBox_Auto:SetNavigationRuleExplicit(EUINavigation.Left, self.CheckBox_Manual)
+    self.Btn_Create.Icon_Piece.ItemDetails_MenuAnchor:SetLastFocusWidget(self.Input_Name)
+    self.CheckBox_Manual:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+    self.CheckBox_Auto:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  end
 end
 
 function M:OnCheckBoxManualClick(IsChecked)
@@ -150,21 +163,21 @@ function M:CreateConfirm()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_ItemInsufficient"), ResourceName))
     return
   end
-  local GuildName = self.Input_Name.Input:GetText()
-  local GuildIntro = self.Input_Intro.Input:GetText()
+  local GuildName = self.Input_Name_Input:GetText()
+  local GuildIntro = self.Input_Intro_Input:GetText()
   if "" == GuildName then
     AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
-    self.Input_Name.Input:ShowTips(GText("GuildCreateFillName"), 2, 2)
+    self.Input_Name_Input:ShowTips(GText("GuildCreateFillName"), 2, 2)
     return
   end
   if "" == GuildIntro then
     AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
-    self.Input_Intro.Input:ShowTips(GText("GuildCreateFillDecl"), 2, 2)
+    self.Input_Intro_Input:ShowTips(GText("GuildCreateFillDecl"), 2, 2)
     return
   end
   if self:IsAllDigits(GuildName) then
     AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
-    self.Input_Name.Input:ShowTips(GText("GuildNameNoPureNumber"), 1, 2)
+    self.Input_Name_Input:ShowTips(GText("GuildNameNoPureNumber"), 1, 2)
     return
   end
   local Params = {
@@ -204,21 +217,21 @@ function M:OnContentKeyDown(MyGeometry, InKeyEvent)
     IsHandled = true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
     if self.Input_Name:HasAnyUserFocus() then
-      self.Input_Name.Input:SetFocus()
+      self.Input_Name_Input:SetFocus()
       IsHandled = true
     elseif self.Input_Intro:HasAnyUserFocus() then
-      self.Input_Intro.Input:SetFocus()
+      self.Input_Intro_Input:SetFocus()
       IsHandled = true
     end
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
-    if self.Input_Name.Input.Text_Input:HasAnyUserFocus() then
-      if self.Input_Name.Input:GetText() ~= "" then
-        self.Input_Name.Input:DeleteText()
+    if self.Input_Name_Input.Text_Input:HasAnyUserFocus() then
+      if self.Input_Name_Input:GetText() ~= "" then
+        self.Input_Name_Input:DeleteText()
       end
       IsHandled = true
-    elseif self.Input_Intro.Input.Text_Input:HasAnyUserFocus() then
-      if self.Input_Intro.Input:GetText() ~= "" then
-        self.Input_Intro.Input:DeleteText()
+    elseif self.Input_Intro_Input.Text_Input:HasAnyUserFocus() then
+      if self.Input_Intro_Input:GetText() ~= "" then
+        self.Input_Intro_Input:DeleteText()
       end
       IsHandled = true
     end
@@ -256,8 +269,8 @@ end
 
 function M:UpdateBtnCreate()
   self.Btn_Create:UpdatePrice()
-  local GuildName = self.Input_Name.Input:GetText()
-  local GuildIntro = self.Input_Intro.Input:GetText()
+  local GuildName = self.Input_Name_Input:GetText()
+  local GuildIntro = self.Input_Intro_Input:GetText()
   if "" == GuildName or "" == GuildIntro then
     self.Btn_Create:SetState(false)
   else

@@ -205,13 +205,9 @@ class DynQuestProcessor(QuestStoryProcessor):
                     # 对齐 QuestStory: next 字段在 dialogues 之前输出
                     node_item["next"] = node_next
 
-                dialogues = []
-                if first_dialogue_id:
-                    dialogues = self.get_dialogue_chain(first_dialogue_id, language)
-                if not dialogues and flow_asset_path:
-                    dialogues = self.get_dialogue_chain_from_flow_asset(
-                        flow_asset_path, language
-                    )
+                dialogues = self._get_talk_node_dialogue_chain(
+                    first_dialogue_id, flow_asset_path, language
+                )
                 if dialogues:
                     node_item["dialogues"] = dialogues
 
@@ -465,14 +461,9 @@ class DynQuestProcessor(QuestStoryProcessor):
             first_dialogue_id = talk_node.get("first_dialogue_id", 0)
             flow_asset_path = talk_node.get("flow_asset_path", "")
 
-            chain = []
-            if first_dialogue_id:
-                chain = self.get_dialogue_chain(first_dialogue_id, language)
-
-            if not chain and flow_asset_path:
-                chain = self.get_dialogue_chain_from_flow_asset(
-                    flow_asset_path, language
-                )
+            chain = self._get_talk_node_dialogue_chain(
+                first_dialogue_id, flow_asset_path, language
+            )
 
             for item in chain:
                 item_id = str(item.get("id"))

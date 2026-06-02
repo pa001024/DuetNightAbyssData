@@ -15,6 +15,10 @@ end
 function WBP_Abyss_Main_C:Destruct()
   self:DestructMgr()
   self:DestructAbyssMain()
+  local BattleView = UIManager():GetUIObj("BattleMain")
+  if BattleView then
+    BattleView:Show("Temp1.4Fix")
+  end
   self.Super.Destruct(self)
 end
 

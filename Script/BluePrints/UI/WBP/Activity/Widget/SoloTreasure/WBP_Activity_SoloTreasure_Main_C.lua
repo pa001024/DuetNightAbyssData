@@ -40,6 +40,14 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   end
 end
 
+function M:Destruct()
+  local BattleView = UIManager():GetUIObj("BattleMain")
+  if BattleView then
+    BattleView:Show("Temp1.4Fix")
+  end
+  self.Super.Destruct(self)
+end
+
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)

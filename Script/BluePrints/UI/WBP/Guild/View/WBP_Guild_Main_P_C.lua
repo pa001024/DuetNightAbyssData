@@ -607,6 +607,9 @@ function M:UpdateComTab(BottomKeyInfo)
 end
 
 function M:SetGamepadIconVisibility(Visable)
+  if UIUtils.IsMobileInput() then
+    return
+  end
   if Visable then
     self.Key_Controller:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else

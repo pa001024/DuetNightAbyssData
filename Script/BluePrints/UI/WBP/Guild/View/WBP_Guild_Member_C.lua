@@ -622,7 +622,9 @@ function M:RefreshGuildMemberChatStatus()
 end
 
 function M:InitGamepadView()
-  self.Controller_More:CreateGamepadKey(UIConst.GamePadImgKey.RightThumb)
+  if self.Controller_More then
+    self.Controller_More:CreateGamepadKey(UIConst.GamePadImgKey.RightThumb)
+  end
   self.Btn_Apply:SetGamePadImg(UIConst.GamePadImgKey.SpecialRight)
   self.Btn_Recruit:SetGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
   self.CheckBox_Online:InitGamepadKey(UIConst.GamePadImgKey.FaceButtonLeft)
@@ -652,12 +654,16 @@ function M:RefreshGamepadView(NeedFocus)
     if NeedFocus then
       self:FocusToMemberList()
     end
-    self.Controller_More:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.Controller_More then
+      self.Controller_More:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   end
 end
 
 function M:RefreshKeyboardView()
-  self.Controller_More:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Controller_More then
+    self.Controller_More:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnContentKeyDown(MyGeometry, InKeyEvent)
@@ -834,7 +840,9 @@ end
 function M:SetOtherGamePadInfoVisibility(bVisible)
   self.OtherGamePadInfoVisibility = bVisible
   if bVisible then
-    self.Controller_More:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.Controller_More then
+      self.Controller_More:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
     self.Btn_Apply:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Btn_Recruit:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Sort:SetControllerKeyHidden(false)
@@ -843,7 +851,9 @@ function M:SetOtherGamePadInfoVisibility(bVisible)
       self.ParentWidget:SetTopGamepadIconVisibility(true)
     end
   else
-    self.Controller_More:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Controller_More then
+      self.Controller_More:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     self.Btn_Apply:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
     self.Btn_Recruit:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
     self.Sort:SetControllerKeyHidden(true)
