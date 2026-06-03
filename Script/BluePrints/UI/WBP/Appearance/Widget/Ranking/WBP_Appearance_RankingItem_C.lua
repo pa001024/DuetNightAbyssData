@@ -1,6 +1,7 @@
 require("UnLua")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
+local GuildBaseInfo = require("BluePrints.UI.WBP.Guild.Common.GuildBaseInfo")
 local FriendModel = FriendController:GetModel()
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
@@ -15,6 +16,24 @@ local RankPatternPath = {
   "Texture2D'/Game/UI/Texture/Static/Image/Activity/GuildWar/T_Activity_GuideWar_PatternRanking_L_3.T_Activity_GuideWar_PatternRanking_L_3'"
 }
 
+local function CanOpenGuildMenuDirectly(RankInfo)
+  if type(RankInfo) ~= "table" then
+    return true
+  end
+  local GuildSimpleInfo = "table" == type(RankInfo.GuildSimpleInfo) and RankInfo.GuildSimpleInfo or nil
+  if GuildSimpleInfo then
+    return true
+  end
+  if RankInfo.GuildName ~= nil and RankInfo.GuildName ~= "" then
+    return true
+  end
+  if nil ~= RankInfo.GuildLogoInfo or nil ~= RankInfo.GuildLogo then
+    return true
+  end
+  local GuildId = tonumber(RankInfo.GuildId or RankInfo.GuildID or 0) or 0
+  return GuildId <= 0
+end
+
 function M:Construct()
   self.RankIconTexture = {}
   for _, Path in ipairs(RankIconPath) do
@@ -28,9 +47,7 @@ function M:Construct()
   end
   if self.Head_Player and self.Head_Player.BindOnClickEvent then
     self.Head_Player:BindOnClickEvent(function()
-      if self.Head_Anchor then
-        self.Head_Anchor:Open(true)
-      end
+      self:OpenHeadAnchorMenu()
       if self.ParentWidget and self.ParentWidget:IsRankItemSelectable() then
         self.ParentWidget:OnListRankItemClicked(self.Content)
       end
@@ -217,6 +234,54 @@ function M:InitPlayerPoint()
   end
 end
 
+function M:TryPrepareGuildSimpleInfoBeforeOpen(OpenCallback)
+  if type(OpenCallback) ~= "function" then
+    return
+  end
+  if not self.RankInfo or CanOpenGuildMenuDirectly(self.RankInfo) then
+    OpenCallback()
+    return
+  end
+  local Avatar = GWorld and GWorld:GetAvatar() or nil
+  local GuildId = tonumber(self.RankInfo.GuildId or self.RankInfo.GuildID or 0) or 0
+  if not Avatar or GuildId <= 0 then
+    OpenCallback()
+    return
+  end
+  local QueryToken = (self._GuildSimpleInfoQueryToken or 0) + 1
+  self._GuildSimpleInfoQueryToken = QueryToken
+  self._PendingOpenHeadAnchor = true
+  Avatar:GetGuildSimpleInfo(function(Ret, ServerGuildSimpleInfo)
+    if not IsValid(self) or self._GuildSimpleInfoQueryToken ~= QueryToken then
+      return
+    end
+    self._PendingOpenHeadAnchor = false
+    if ErrorCode:Check(Ret) then
+      local GuildSimpleInfo = GuildBaseInfo.New(ServerGuildSimpleInfo)
+      if GuildSimpleInfo then
+        self.RankInfo.GuildSimpleInfo = GuildSimpleInfo
+        self.RankInfo.GuildName = GuildSimpleInfo.Name or self.RankInfo.GuildName
+        self.RankInfo.GuildLogoInfo = GuildSimpleInfo.LogoInfo or self.RankInfo.GuildLogoInfo
+        self.RankInfo.GuildLogo = GuildSimpleInfo.LogoInfo or self.RankInfo.GuildLogo
+        self.RankInfo.GuildId = tonumber(GuildSimpleInfo.GuildId or GuildId) or GuildId
+      end
+    end
+    OpenCallback()
+  end, GuildId)
+end
+
+function M:OpenHeadAnchorMenu()
+  if not self.Head_Anchor or self._PendingOpenHeadAnchor then
+    return
+  end
+  self:TryPrepareGuildSimpleInfoBeforeOpen(function()
+    if not IsValid(self) or not self.Head_Anchor then
+      return
+    end
+    self.Head_Anchor:Open(true)
+  end)
+end
+
 function M:OnAnchorGetUserMenuContent()
   if not self.RankInfo then
     return {}
@@ -269,8 +334,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     if "Gamepad_FaceButton_Bottom" == InKeyName then
-      if self.Head_Anchor then
-        self.Head_Anchor:Open(true)
+      if self.Head_Anchor and not self._PendingOpenHeadAnchor then
+        self:OpenHeadAnchorMenu()
         IsEventHandled = true
       end
     elseif "Gamepad_FaceButton_Right" == InKeyName and self.Head_Anchor and self.Head_Anchor:IsOpen() then

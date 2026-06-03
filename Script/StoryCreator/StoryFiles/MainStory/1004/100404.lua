@@ -3555,12 +3555,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "177364904417822135541",
-            startPort = "Out",
-            endQuest = "177969785361036293785",
-            endPort = "In"
-          },
-          {
             startQuest = "177364900966722134814",
             startPort = "QuestStart",
             endQuest = "17800595418937283176",
@@ -3573,7 +3567,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177969785361036293785",
+            startQuest = "177364904417822135541",
             startPort = "Out",
             endQuest = "177364906021122135839",
             endPort = "In"
@@ -3699,23 +3693,6 @@ return {
               bForceWaitNavLoaded = false,
               NormalOptions = {},
               OverrideFailBlend = false
-            }
-          },
-          ["177969785361036293785"] = {
-            key = "177969785361036293785",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 1609.070813397129, y = 535.3729323308272},
-            propsData = {
-              SoundStateType = 0,
-              SoundPriority = 0,
-              SoundType = 0,
-              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
-              ParamKey = "",
-              ParamValue = 0,
-              RelatedRegionId = {106101},
-              ClientRelatedRegionId = {},
-              bStoreToServer = true
             }
           },
           ["17800595418937283176"] = {

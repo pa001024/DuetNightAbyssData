@@ -54,6 +54,7 @@ function M:Destruct()
   self.PressLogics = {}
   self.ReleaseLogics = {}
   self.IsDestroied = true
+  self.PressedScreenPos = nil
 end
 
 function M:BindEventOnClicked(Obj, Event, ...)
@@ -265,6 +266,26 @@ function M:PlayButtonPressAnim()
   end
 end
 
+function M:IsDragRelease()
+  if not self.PressedScreenPos then
+    return false
+  end
+  local CurPos = UE4.UWidgetLayoutLibrary.GetMousePositionOnViewport(self)
+  local Delta = CurPos - self.PressedScreenPos
+  local Res = Delta:SizeSquared() >= 10
+  if Res then
+    self.PressedScreenPos = nil
+    if self.IsForbidden ~= true then
+      if not self.IsHovering then
+        self:PlayButtonReleaseAndUnHoverAnim()
+      else
+        self:PlayButtonReleaseButHoverAnim()
+      end
+    end
+  end
+  return Res
+end
+
 function M:OnBtnPressed()
   if self.IsForbidden == true then
     self.CurrentClickIsForbid = true
@@ -272,6 +293,7 @@ function M:OnBtnPressed()
     return
   end
   self.PressTime = os.clock()
+  self.PressedScreenPos = UE4.UWidgetLayoutLibrary.GetMousePositionOnViewport(self)
   if self.AudioEventPath == "" then
     self.SoundFunc(self)
   elseif self.AudioPlayCase == EUIAudioPlayCase.OnMouseDown then
@@ -323,6 +345,10 @@ end
 
 function M:OnBtnReleased()
   self.IsPressing = false
+  if self:IsDragRelease() then
+    return
+  end
+  self.PressedScreenPos = nil
   if self.IsForbidden ~= true and not self.IsHovering then
     self:PlayButtonReleaseAndUnHoverAnim()
   elseif self.IsForbidden ~= true then

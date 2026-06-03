@@ -54038,7 +54038,7 @@ local Data = {
           TextMapId = "SKILL_10299_04_Name"
         },
         SKILL_10299_05_DESC = {
-          ContentJP = "災厄値を<H>100</>消費するたびに、<H>#2</>秒間【降霊】を1スタック獲得する。最大<H>#3</>スタックまで重ねがけ可能。重ねがけすると残り時間がリセットされる。【降霊】1スタックごとに召喚物の攻撃速度が<H>#1</>アップする。\n 戦闘開始時に、<H>#2</>秒間自身に【降霊】を<H>#4</>スタック獲得する。",
+          ContentJP = "災厄値を<H>100</>消費するたびに、<H>#4</>秒間【降霊】を1スタック獲得する。最大<H>#3</>スタックまで重ねがけ可能。重ねがけすると残り時間がリセットされる。【降霊】1スタックごとに召喚物の攻撃速度が<H>#1</>アップする。\n戦闘開始時に、<H>#3</>秒間自身に【降霊】を<H>#4</>スタック獲得する。",
           TextMapId = "SKILL_10299_05_DESC"
         },
         SKILL_10299_05_Name = {
@@ -54626,7 +54626,7 @@ local Data = {
           TextMapId = "SKILL_20599_01_Name"
         },
         SKILL_20599_02_DESC = {
-          ContentJP = "戦闘開始時に災厄値を<H>#2</>獲得する。コンボポイントを消費すると、<H>[#1×消費量]]</>の災厄値を獲得する。",
+          ContentJP = "戦闘開始時に災厄値を<H>#2</>獲得する。コンボポイントを消費すると、<H>[#1×消費量]</>の災厄値を獲得する。",
           TextMapId = "SKILL_20599_02_DESC"
         },
         SKILL_20599_02_Name = {
@@ -63452,7 +63452,7 @@ local Data = {
   },
   {
     MinKey = "UI_Accessory_Desc_10102",
-    MaxKey = "UI_Accessory_Name_10035",
+    MaxKey = "UI_Accessory_Name_10034",
     Loader = function()
       return {
         UI_Accessory_Desc_10102 = {
@@ -63546,6 +63546,10 @@ local Data = {
         UI_Accessory_Desc_10124 = {
           ContentJP = "しなやかで、明るくキュートで、美しい……世の中のすべての萌えが色あせて見える。これこそ、オオカミのしっぽの持つ抗えない魔力……この台詞、どこかで言った気がするけど、気のせいだよね。",
           TextMapId = "UI_Accessory_Desc_10124"
+        },
+        UI_Accessory_Desc_10125 = {
+          ContentJP = "残光が燃え尽きる時、真の恐怖が、ついに具現化するであろう。",
+          TextMapId = "UI_Accessory_Desc_10125"
         },
         UI_Accessory_Desc_11002 = {
           ContentJP = "咲き誇る花火は、魂をのせて、孤独な星海へと沈んでゆく。",
@@ -64250,19 +64254,19 @@ local Data = {
         UI_Accessory_Name_10034 = {
           ContentJP = "居眠りカピバラ",
           TextMapId = "UI_Accessory_Name_10034"
-        },
-        UI_Accessory_Name_10035 = {
-          ContentJP = "猫の髪飾り・原色",
-          TextMapId = "UI_Accessory_Name_10035"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_10036",
-    MaxKey = "UI_Accessory_Name_20020",
+    MinKey = "UI_Accessory_Name_10035",
+    MaxKey = "UI_Accessory_Name_20019",
     Loader = function()
       return {
+        UI_Accessory_Name_10035 = {
+          ContentJP = "猫の髪飾り・原色",
+          TextMapId = "UI_Accessory_Name_10035"
+        },
         UI_Accessory_Name_10036 = {
           ContentJP = "凛雪の星芒",
           TextMapId = "UI_Accessory_Name_10036"
@@ -65058,19 +65062,19 @@ local Data = {
         UI_Accessory_Name_20019 = {
           ContentJP = "眼帯-スカイブルー",
           TextMapId = "UI_Accessory_Name_20019"
-        },
-        UI_Accessory_Name_20020 = {
-          ContentJP = "生命維持者",
-          TextMapId = "UI_Accessory_Name_20020"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_20021",
-    MaxKey = "UI_Accessory_Name_40073",
+    MinKey = "UI_Accessory_Name_20020",
+    MaxKey = "UI_Accessory_Name_40072",
     Loader = function()
       return {
+        UI_Accessory_Name_20020 = {
+          ContentJP = "生命維持者",
+          TextMapId = "UI_Accessory_Name_20020"
+        },
         UI_Accessory_Name_20021 = {
           ContentJP = "天翼の瞳",
           TextMapId = "UI_Accessory_Name_20021"
@@ -65866,19 +65870,19 @@ local Data = {
         UI_Accessory_Name_40072 = {
           ContentJP = "ダークタイド・ジェットブラック",
           TextMapId = "UI_Accessory_Name_40072"
-        },
-        UI_Accessory_Name_40073 = {
-          ContentJP = "ダークタイド・キャラメル",
-          TextMapId = "UI_Accessory_Name_40073"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_40074",
-    MaxKey = "UI_Achievement_Des_17002016",
+    MinKey = "UI_Accessory_Name_40073",
+    MaxKey = "UI_Achievement_Des_17002015",
     Loader = function()
       return {
+        UI_Accessory_Name_40073 = {
+          ContentJP = "ダークタイド・キャラメル",
+          TextMapId = "UI_Accessory_Name_40073"
+        },
         UI_Accessory_Name_40074 = {
           ContentJP = "ダークタイド・アイボリー",
           TextMapId = "UI_Accessory_Name_40074"
@@ -66674,19 +66678,19 @@ local Data = {
         UI_Achievement_Des_17002015 = {
           ContentJP = "屋敷の「記憶の断片」でヘルファイアの星霜のアンソロジーをすべて読む",
           TextMapId = "UI_Achievement_Des_17002015"
-        },
-        UI_Achievement_Des_17002016 = {
-          ContentJP = "屋敷の「記憶の断片」でカミラの星霜のアンソロジーをすべて読む",
-          TextMapId = "UI_Achievement_Des_17002016"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_17002017",
-    MaxKey = "UI_Achievement_Des_5064002",
+    MinKey = "UI_Achievement_Des_17002016",
+    MaxKey = "UI_Achievement_Des_5064001",
     Loader = function()
       return {
+        UI_Achievement_Des_17002016 = {
+          ContentJP = "屋敷の「記憶の断片」でカミラの星霜のアンソロジーをすべて読む",
+          TextMapId = "UI_Achievement_Des_17002016"
+        },
         UI_Achievement_Des_17002017 = {
           ContentJP = "屋敷の「記憶の断片」でマギーの星霜のアンソロジーをすべて読む",
           TextMapId = "UI_Achievement_Des_17002017"
@@ -67482,19 +67486,19 @@ local Data = {
         UI_Achievement_Des_5064001 = {
           ContentJP = "ソロで最高難易度の「護送」依頼を<highlight>420</>秒以内にクリア",
           TextMapId = "UI_Achievement_Des_5064001"
-        },
-        UI_Achievement_Des_5064002 = {
-          ContentJP = "ソロで最高難易度の「護送」依頼を<highlight>300</>秒以内にクリア",
-          TextMapId = "UI_Achievement_Des_5064002"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_5064003",
-    MaxKey = "UI_Achievement_Name_1010102",
+    MinKey = "UI_Achievement_Des_5064002",
+    MaxKey = "UI_Achievement_Name_1010101",
     Loader = function()
       return {
+        UI_Achievement_Des_5064002 = {
+          ContentJP = "ソロで最高難易度の「護送」依頼を<highlight>300</>秒以内にクリア",
+          TextMapId = "UI_Achievement_Des_5064002"
+        },
         UI_Achievement_Des_5064003 = {
           ContentJP = "ソロで最高難易度の「護送」依頼を<highlight>180</>秒以内にクリア",
           TextMapId = "UI_Achievement_Des_5064003"
@@ -68290,19 +68294,19 @@ local Data = {
         UI_Achievement_Name_1010101 = {
           ContentJP = "歓喜の響き Ⅰ",
           TextMapId = "UI_Achievement_Name_1010101"
-        },
-        UI_Achievement_Name_1010102 = {
-          ContentJP = "歓喜の響き Ⅱ",
-          TextMapId = "UI_Achievement_Name_1010102"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_1010103",
-    MaxKey = "UI_Achievement_Name_20102",
+    MinKey = "UI_Achievement_Name_1010102",
+    MaxKey = "UI_Achievement_Name_20101",
     Loader = function()
       return {
+        UI_Achievement_Name_1010102 = {
+          ContentJP = "歓喜の響き Ⅱ",
+          TextMapId = "UI_Achievement_Name_1010102"
+        },
         UI_Achievement_Name_1010103 = {
           ContentJP = "歓喜の響き Ⅲ",
           TextMapId = "UI_Achievement_Name_1010103"
@@ -69098,19 +69102,19 @@ local Data = {
         UI_Achievement_Name_20101 = {
           ContentJP = "運命の旋律を奏でる Ⅰ",
           TextMapId = "UI_Achievement_Name_20101"
-        },
-        UI_Achievement_Name_20102 = {
-          ContentJP = "運命の旋律を奏でる Ⅱ",
-          TextMapId = "UI_Achievement_Name_20102"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_20103",
-    MaxKey = "UI_Achievement_Name_503202",
+    MinKey = "UI_Achievement_Name_20102",
+    MaxKey = "UI_Achievement_Name_503201",
     Loader = function()
       return {
+        UI_Achievement_Name_20102 = {
+          ContentJP = "運命の旋律を奏でる Ⅱ",
+          TextMapId = "UI_Achievement_Name_20102"
+        },
         UI_Achievement_Name_20103 = {
           ContentJP = "運命の旋律を奏でる Ⅲ",
           TextMapId = "UI_Achievement_Name_20103"
@@ -69906,19 +69910,19 @@ local Data = {
         UI_Achievement_Name_503201 = {
           ContentJP = "永遠のルーナ族の守護者‐無双 Ⅰ",
           TextMapId = "UI_Achievement_Name_503201"
-        },
-        UI_Achievement_Name_503202 = {
-          ContentJP = "永遠のルーナ族の守護者‐無双 Ⅱ",
-          TextMapId = "UI_Achievement_Name_503202"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_503203",
-    MaxKey = "UI_Achievement_Name_920502",
+    MinKey = "UI_Achievement_Name_503202",
+    MaxKey = "UI_Achievement_Name_920501",
     Loader = function()
       return {
+        UI_Achievement_Name_503202 = {
+          ContentJP = "永遠のルーナ族の守護者‐無双 Ⅱ",
+          TextMapId = "UI_Achievement_Name_503202"
+        },
         UI_Achievement_Name_503203 = {
           ContentJP = "永遠のルーナ族の守護者‐無双 Ⅲ",
           TextMapId = "UI_Achievement_Name_503203"
@@ -70714,19 +70718,19 @@ local Data = {
         UI_Achievement_Name_920501 = {
           ContentJP = "バタフライエフェクト Ⅰ",
           TextMapId = "UI_Achievement_Name_920501"
-        },
-        UI_Achievement_Name_920502 = {
-          ContentJP = "バタフライエフェクト Ⅱ",
-          TextMapId = "UI_Achievement_Name_920502"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_920601",
-    MaxKey = "UI_Armory_Dye_Toast",
+    MinKey = "UI_Achievement_Name_920502",
+    MaxKey = "UI_Armory_Dye_Special",
     Loader = function()
       return {
+        UI_Achievement_Name_920502 = {
+          ContentJP = "バタフライエフェクト Ⅱ",
+          TextMapId = "UI_Achievement_Name_920502"
+        },
         UI_Achievement_Name_920601 = {
           ContentJP = "蛍の森 Ⅰ",
           TextMapId = "UI_Achievement_Name_920601"
@@ -71519,19 +71523,19 @@ local Data = {
         UI_Armory_Dye_Special = {
           ContentJP = "全体カラーリング",
           TextMapId = "UI_Armory_Dye_Special"
-        },
-        UI_Armory_Dye_Toast = {
-          ContentJP = "下書き%dをロードしました",
-          TextMapId = "UI_Armory_Dye_Toast"
         }
       }
     end
   },
   {
-    MinKey = "UI_Armory_Exit",
-    MaxKey = "UI_Attr_Water_Name",
+    MinKey = "UI_Armory_Dye_Toast",
+    MaxKey = "UI_Attr_Thunder_Name",
     Loader = function()
       return {
+        UI_Armory_Dye_Toast = {
+          ContentJP = "下書き%dをロードしました",
+          TextMapId = "UI_Armory_Dye_Toast"
+        },
         UI_Armory_Exit = {
           ContentJP = "退出",
           TextMapId = "UI_Armory_Exit"
@@ -72327,19 +72331,19 @@ local Data = {
         UI_Attr_Thunder_Name = {
           ContentJP = "雷属性",
           TextMapId = "UI_Attr_Thunder_Name"
-        },
-        UI_Attr_Water_Name = {
-          ContentJP = "水属性",
-          TextMapId = "UI_Attr_Water_Name"
         }
       }
     end
   },
   {
-    MinKey = "UI_Attr_Wind_Name",
-    MaxKey = "UI_Bag_ModExtract_Delete",
+    MinKey = "UI_Attr_Water_Name",
+    MaxKey = "UI_Bag_ModExtract",
     Loader = function()
       return {
+        UI_Attr_Water_Name = {
+          ContentJP = "水属性",
+          TextMapId = "UI_Attr_Water_Name"
+        },
         UI_Attr_Wind_Name = {
           ContentJP = "風属性",
           TextMapId = "UI_Attr_Wind_Name"
@@ -73132,19 +73136,19 @@ local Data = {
         UI_Bag_ModExtract = {
           ContentJP = "抽出",
           TextMapId = "UI_Bag_ModExtract"
-        },
-        UI_Bag_ModExtract_Delete = {
-          ContentJP = "本日抽出できる深紅のビーズは上限に達しています。確定すると抽出アイテムは直接削除されます。",
-          TextMapId = "UI_Bag_ModExtract_Delete"
         }
       }
     end
   },
   {
-    MinKey = "UI_Bag_ModExtract_Forbid",
-    MaxKey = "UI_CHAR_DATA_TEXT_11010105",
+    MinKey = "UI_Bag_ModExtract_Delete",
+    MaxKey = "UI_CHAR_DATA_TEXT_11010104",
     Loader = function()
       return {
+        UI_Bag_ModExtract_Delete = {
+          ContentJP = "本日抽出できる深紅のビーズは上限に達しています。確定すると抽出アイテムは直接削除されます。",
+          TextMapId = "UI_Bag_ModExtract_Delete"
+        },
         UI_Bag_ModExtract_Forbid = {
           ContentJP = "抽出不可",
           TextMapId = "UI_Bag_ModExtract_Forbid"
@@ -73937,19 +73941,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_11010104 = {
           ContentJP = "大多数の人々は晩年になろうとも「子供時代」と呼ばれる人生最初期の思い出を語ることを好む。\n彼らの「子供時代」はきっと喜びに満ち溢れていたのだろう——あの頃はと語り出すだけで笑みをこぼし、目元に喜びのシワを作るのだから。あなたも例外ではなく、ベレと一緒にパーガトリー島で過ごした日々を思い出せば、同じように口元を綻ばせてしまうはずだ。\nしかし自分の「子供時代」について何も語ろうとしない人間がいるとすれば、それは触れられたくない痛みを隠しているのか、幾重にもカサブタで覆っているのか、何かしらが「子供時代」にあったのだと思われる。\nある日、突如としてあなたはこの道理を理解したのだ。以降のあなたは自分の持つ記憶よりも昔のことをベレニカに対して聞かなくなった。代わりベレニカと約束した——もし言いたくないのなら無理に問い詰めたりはしない。だけど打ち明けたくなった時は必ず教えて欲しい。一緒に全てを背負わせてほしいと。",
           TextMapId = "UI_CHAR_DATA_TEXT_11010104"
-        },
-        UI_CHAR_DATA_TEXT_11010105 = {
-          ContentJP = "帝国に来てからあなたは合法、非合法問わずに複数のルートからベレニカの行方を探ろうとしたが、価値のある手がかりはなんら得られなかった。アスフォデロスで依頼を受ける際、帝国の牢獄にいる謎のターゲットを救い出すようにという、出所不明の情報がたまに舞い込んでくる。そのたびに現地へと赴き、解放した独房から記憶の中で最も馴染みのある声が聞こえてくることを密かに期待するが……実際に聞けたことは一度もない。\nしかし純白の剣を振るうたびに、彼女がまだ近くにいるような気がしてならないのだ。あなたは必ず再会できると信じている——あなたは約束を裏切らないし、ベレニカもまた裏切らないから。",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010105"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_11010201",
-    MaxKey = "UI_CHAR_DATA_TEXT_24010401",
+    MinKey = "UI_CHAR_DATA_TEXT_11010105",
+    MaxKey = "UI_CHAR_DATA_TEXT_24010305",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_11010105 = {
+          ContentJP = "帝国に来てからあなたは合法、非合法問わずに複数のルートからベレニカの行方を探ろうとしたが、価値のある手がかりはなんら得られなかった。アスフォデロスで依頼を受ける際、帝国の牢獄にいる謎のターゲットを救い出すようにという、出所不明の情報がたまに舞い込んでくる。そのたびに現地へと赴き、解放した独房から記憶の中で最も馴染みのある声が聞こえてくることを密かに期待するが……実際に聞けたことは一度もない。\nしかし純白の剣を振るうたびに、彼女がまだ近くにいるような気がしてならないのだ。あなたは必ず再会できると信じている——あなたは約束を裏切らないし、ベレニカもまた裏切らないから。",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010105"
+        },
         UI_CHAR_DATA_TEXT_11010201 = {
           ContentJP = "人々は世間から隔絶された場所に美しいイメージを抱いているが、決してその限りではない。海に浮かぶ孤島のパーガトリー島も例に漏れず、楽園と呼ぶには程遠い場所である。貧しさのなかで育まれる悪意は、美しい島だろうと有り触れたものなのだ。強者が弱者に牙を向け、弱者は更なる弱者に爪を向ける。それはパーガトリー島の村人たちも理解している自然の法則であり、実践している生存の掟だ。\nしかしベレニカという女の子には、この「生存の掟」が通用しなかった。\n明らかに身寄りのない孤児であるのにも関わらず、どのような試練に直面しようと辞書に忍耐や妥協といった文字を書き加えない。何かを主張し始めたら、乱暴に威嚇されようと甘言で誘惑されようと一歩も引いたりしない。たとえパーガトリー島で最も屈強な漁師が相手だとしても、彼女から何かを奪うことは不可能だった——彼女が子供と思えないほどに強かったからだけでなく、言うなれば凶暴な小獣かのごとき抵抗力。生えたばかりの乳歯で必死に噛みついてくるからである。そんな彼女に執着が少なかったのは幸いか。食い意地が張っているわけでもなく、守銭奴というわけでもない。{nickname}という子供に関してぐらいしか拘りは持っていなかったので、島内で特に大きな問題になることはなかった。\nもちろん、それはずっと昔のこと。少し成長して背が半分ほどの高さまで伸びると、ベレニカはパーガトリー島の大人たちを同時に相手しても勝てるほどに強くなっていた。彼らは彼女に対して恐怖の目を向けるようになった——もしかしたら怪物かもしれないと。\nしかし怪物とは利己的な存在だ。本当に怪物であれば、こんなにも他人を大切にするだろうか？",
           TextMapId = "UI_CHAR_DATA_TEXT_11010201"
@@ -74745,19 +74749,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_24010305 = {
           ContentJP = "澤生閣の、少し年配の薬師たちは皆、こう語る――祖師・フーフォンには、何十年も変わらぬひとつの習慣があった、と。\n 祝由の術を捨て、枯栄閣を離れ、澤生閣を興した後も、フーフォンはずっと、人を雇って枯栄閣の世話を続けていた。その旧居の机も椅子も、棚も帳も、若き日の彼女がいた頃と寸分違わぬまま、何十年もの時が流れた。たとえ、そこにもう彼女の大切な人々がいなくなってしまっていても。\n 薬師たちは、もうひとつ知っている。毎年欠かさず――フーフォンは、枯栄閣の後園に、自らの手で杏の木を一本、植えていたということを。\n 髪が黒から白へと変わっても。やがて歩くのに杖が必要になっても。\n 薬方の字がかすんで読めなくなっても。その習慣だけは、決して手放すことはなかった。\n その意味を、あるとき現閣主が恩師に尋ねたことがある。白髪の薬師は微笑み、静かにこう答えた。\n 「いつか、彼女が目を覚ましたとき、あの庭いっぱいに咲く杏の林を見てもらいたかったのさ」",
           TextMapId = "UI_CHAR_DATA_TEXT_24010305"
-        },
-        UI_CHAR_DATA_TEXT_24010401 = {
-          ContentJP = "フーシュは、帰郷の船に身を任せていた。\n \n 行き交う人々の装いは、百年前とはまるで違い、船の構造もずっと複雑で精巧になっていた。見知らぬ土地の商人たちが乗り合わせ、ルッカから運んだ品を煙津渡で売るのだと、低い声で話していた。\n 彼らは華胥に慣れているようで、商談の後は道中の話に花を咲かせていた。煙津渡の景色は皓京より美しいだとか、次は皆で回遊に行こうだとか。スイヘイジャクが谷を越えて飛ぶのを見たと言えば、別の者が「滑空だよ、あれは尾羽が重すぎて長くは飛べないはずだ」と訂正した。百年春が節句に贈る豪華な贈り物の話になり、シリュウさんの太っ腹ぶりに触れ、記念金貨が入っていたと語る者もいた。するとある男が、「自分はあの珍猪の干し肉の方が好きだ」と笑った。旅の合間のつまみにちょうどいいのだと。\n \n フーシュは黙って耳を傾けていた。\n 語られる「故郷」は、なぜか懐かしく、それでいて見知らぬ場所のようでもあった。百年前、私はスイヘイジャクが空を滑るのを見たことがあっただろうか。煙津渡の四季を歩き尽くしただろうか。子どもの頃に好きだったおやつは、あれと同じ味だったろうか。辛かったか、甘じょっぱかったか──\n \n たぶん、そうだった。いや、違ったかもしれない。今となってははっきりとは思い出せない。\n \n 曖昧な記憶ばかりだ。まるで、足跡を残して歩いた砂浜が、時間の波にさらわれ、すべてを飲み込んでしまったかのように。だから私は──煙津渡へ、枯栄閣へ戻るのだろうか。\n \n 商人を見つめていた視線に気づかれたのか、何人かがこちらを振り返った。やがて一人の女商人が、異国風のスカートを翻しながら近づいてきて、笑顔で言った。\n 「そのお召し物、とても素敵ですね。歴史書でしか見たことのない装いで、思わず見とれてしまいました。こんなに美しい方と同じ船なんてうれしい。もしよければ、目的地を教えていただけますか？あなたも煙津渡へ？」\n \n フーシュは少し間を置いて答えた。「昔、住んでいたゆえ」\n \n 「まあ、偶然！」商人は明るく笑った。「私たちも商売でそちらに。酒やガラス器のほかに、ちょっとした雑貨も……」と言いながら、小さな懐中時計を手のひらに乗せて見せた。\n 月を囲む巨木が精緻に彫られた表面に、フーシュは見覚えのある風景を感じた。だが、木の下の廊橋や飛檐は知らないものだった。それは、彼女の知らない百年の風景だ。\n 商人が懐中時計を開くと、針が静かに動いていた。「時刻合わせが面倒だという声が多くて、ちょっとした工夫をしてあるんです。煙津渡でも気に入ってもらえるといいんですが──あら？」\n 針が逆回転を始めた。「ごめんなさい、不良品かしら……今すぐ別のを──」\n \n 「いいえ、これで構いませんよ」\n フーシュは逆回転する針を見つめたまま言った。\n 「気に入りました。これを売っていただけませんか？」",
-          TextMapId = "UI_CHAR_DATA_TEXT_24010401"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_24010402",
-    MaxKey = "UI_CHAR_DATA_TEXT_43010404",
+    MinKey = "UI_CHAR_DATA_TEXT_24010401",
+    MaxKey = "UI_CHAR_DATA_TEXT_43010403",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_24010401 = {
+          ContentJP = "フーシュは、帰郷の船に身を任せていた。\n \n 行き交う人々の装いは、百年前とはまるで違い、船の構造もずっと複雑で精巧になっていた。見知らぬ土地の商人たちが乗り合わせ、ルッカから運んだ品を煙津渡で売るのだと、低い声で話していた。\n 彼らは華胥に慣れているようで、商談の後は道中の話に花を咲かせていた。煙津渡の景色は皓京より美しいだとか、次は皆で回遊に行こうだとか。スイヘイジャクが谷を越えて飛ぶのを見たと言えば、別の者が「滑空だよ、あれは尾羽が重すぎて長くは飛べないはずだ」と訂正した。百年春が節句に贈る豪華な贈り物の話になり、シリュウさんの太っ腹ぶりに触れ、記念金貨が入っていたと語る者もいた。するとある男が、「自分はあの珍猪の干し肉の方が好きだ」と笑った。旅の合間のつまみにちょうどいいのだと。\n \n フーシュは黙って耳を傾けていた。\n 語られる「故郷」は、なぜか懐かしく、それでいて見知らぬ場所のようでもあった。百年前、私はスイヘイジャクが空を滑るのを見たことがあっただろうか。煙津渡の四季を歩き尽くしただろうか。子どもの頃に好きだったおやつは、あれと同じ味だったろうか。辛かったか、甘じょっぱかったか──\n \n たぶん、そうだった。いや、違ったかもしれない。今となってははっきりとは思い出せない。\n \n 曖昧な記憶ばかりだ。まるで、足跡を残して歩いた砂浜が、時間の波にさらわれ、すべてを飲み込んでしまったかのように。だから私は──煙津渡へ、枯栄閣へ戻るのだろうか。\n \n 商人を見つめていた視線に気づかれたのか、何人かがこちらを振り返った。やがて一人の女商人が、異国風のスカートを翻しながら近づいてきて、笑顔で言った。\n 「そのお召し物、とても素敵ですね。歴史書でしか見たことのない装いで、思わず見とれてしまいました。こんなに美しい方と同じ船なんてうれしい。もしよければ、目的地を教えていただけますか？あなたも煙津渡へ？」\n \n フーシュは少し間を置いて答えた。「昔、住んでいたゆえ」\n \n 「まあ、偶然！」商人は明るく笑った。「私たちも商売でそちらに。酒やガラス器のほかに、ちょっとした雑貨も……」と言いながら、小さな懐中時計を手のひらに乗せて見せた。\n 月を囲む巨木が精緻に彫られた表面に、フーシュは見覚えのある風景を感じた。だが、木の下の廊橋や飛檐は知らないものだった。それは、彼女の知らない百年の風景だ。\n 商人が懐中時計を開くと、針が静かに動いていた。「時刻合わせが面倒だという声が多くて、ちょっとした工夫をしてあるんです。煙津渡でも気に入ってもらえるといいんですが──あら？」\n 針が逆回転を始めた。「ごめんなさい、不良品かしら……今すぐ別のを──」\n \n 「いいえ、これで構いませんよ」\n フーシュは逆回転する針を見つめたまま言った。\n 「気に入りました。これを売っていただけませんか？」",
+          TextMapId = "UI_CHAR_DATA_TEXT_24010401"
+        },
         UI_CHAR_DATA_TEXT_24010402 = {
           ContentJP = "私はフーフォンと双子だ。顔は、驚くほど似ている。\n ……そのことを、私はずっと、ひどく嫌っていた。たとえ天地が覆り、河が逆流し、白龍様がこの世を捨てても――この気持ちだけは変わらないだろう。\n なぜかと聞かれれば長くなる。\n フーフォンは昔から、私を苛立たせるのが得意だった。\n その癖は、小さな頃から今に至るまで、一度として変わったことがない。\n 彼女がまだ道を踏み外していなかった頃、いちばん得意だったのは私の真似だった。私がすることは、彼女もする。望むなら、寸分違わず再現できた。父も母も見分けがつかないほどに。\n それだけなら、別に腹も立たなかった。むしろ、少し誇らしかった。病の穢れを引き受ける祝由は、起居を整え、食も慎まねばならない。私はそうした決まりを律儀に守ってきたが、フーフォンはいつも交渉を始める。\n 菓子をもう一口食べたい、稽古を少しでも早く切り上げたい、朝はもう少し寝ていたい――そんなことで長輩とやり合っていた。\n だからこそ思った。もし彼女が私を完全に真似られたなら、皆がどれほど安堵しただろうと。\n 口に出したことはないが、双子ゆえの勘で、それが伝わっていたのかもしれない。\n でなければ、どうして彼女は、いつもわざとらしく粗を残すのだろう。\n 「やらかしたフーシュ」「規律を破ったフーシュ」「不器用なフーシュ」――彼女は現実ではありえない「私」を演じては、楽しげに笑っていた。\n 双子は鏡のようなものだと、誰かが言っていた。けれど、私にとっての鏡は、いつも滑稽に歪んでいた。映るのは、知らない私ばかり。\n 私もやり返したことがある。脚が割れず、師匠に押し広げられて涙ぐむ姿。朝布団にしがみつき、理屈もなく駄々をこねる寝起き。枯栄術の修練で、頑張っても雪片ひとつしか落とせず、しょんぼりする背中。\n そのひとつひとつを、今でも細部まで思い出せるのに、どうしても彼女のようにはなれなかった。笑うことも、泣くことも、全身で演じることもできなかった。\n 私の模倣はいつも、「少し辛そうなフーシュ」「どこかぎこちないフーシュ」「自分に厳しすぎるフーシュ」になってしまった。\n 両親は、フーフォンの演じる私を見抜けなかったのに、私が演じるフーフォンだけは、すぐに見破った。\n 理由を尋ねたとき、ふたりはこう言った。「お前は、『祝由』の型が抜けないからな。お前の姉さんは……幼稚すぎる」\n あのときの私は、それを当然の褒め言葉として受け取った。姉よりも祝由らしく、誰よりも祝由に近いのは自分なのだと。姉が背負えないものなら、自分が代わって引き受ければいい――そう思っていた。\n けれど今になって思えば、私はきっと、「真似ごとに敗れた」悔しさを、祝由としての模範で埋めようとしていただけだった。\n 「私ひとりで大丈夫」\n その思いは、何気ない一滴の水のように、心の奥で静かに染みていき、フーフォンとの決裂の日に芽を出し、私が死ぬ日まで、ずっと根を張り続けていた。",
           TextMapId = "UI_CHAR_DATA_TEXT_24010402"
@@ -75553,19 +75557,19 @@ local Data = {
         UI_CHAR_DATA_TEXT_43010403 = {
           ContentJP = "ナイフがフラメルの首に突きつけられる。長らく研究室で籠りきりだった学者は深くため息を吐いた。\n「承知であるならば是非は問わないが、やめておいた方が賢明だと思うぞ」彼女は穏やかに戒める。「私の傷の1mmが、君や君の身内を葬る断頭台の刃に成り兼ねない」\nそう警告しても2人組の強盗は聞く耳を持たなかった。口に布を捻じ込んで、麻縄で乱暴に縛り上げて、荷物でも扱うかのようにフラメルを隅に放り投げる。倉庫の扉が「ガシャン」と音を立てて閉まった。カビ臭い布切れで遮られた最も重要な言葉をそこに置いてけぼりにして——「私を解放すれば街の通りひとつ分ぐらいの住民たちを飢えさせないほどの報奨を渡せるが」\n可能な限り体力を回復するべくフラメルは目をつむる。そうして時の流れるままに深夜までジッとしていると、倉庫の天窓から微かに何かの音が聞こえてきた。思わず見上げた瞬間、子供が軽快な身のこなしで飛び降りてきた。微かな星の光が姿を映し出す。汚れた身なりで紫色の短髪、キラキラと輝く目をした少女だ。\n「シーッ」少女はフラメルの口に入っていた布切れを抜き取って、強盗が奪っていったはずのフラメルのバックパックを手に差し出す。「心配しないで、兄貴分たちはもう眠ったから助けられると思います。本当にごめんなさいね？帝都から貴族が来たって欲に目が眩んだみたいで」\n「これ幸いな申し出でありがたいのだが、実はやらねばならないことを残していてだな」フラメルは言った。「お嬢さん。報酬として金貨10枚を支払うから、昨日に私が捕まった場所まで連れて行ってはくれないかい？学者の身として、調査を終える前に帰るなどはできんのさ」\n学者と少女が深夜の渓谷を進む。現在の地域は人の手が行き届いていない、最寄りの町に行くのにも数時間はかかるような場所だ——未確認の穢獣（エジュウ）が発見されたという報告がなければ、こんな人里離れた地で冒険などはしなかっただろう。\n秋の夜風は骨まで伝わるほどに冷たく、フラメルの足取りを重くした。次第にふらつく回数が増えてきて、少女の待つ回数も相対的に増えていく。\n「『鬼灯の穢獣（エジュウ）』という名は存じているかな？地元だと確か——」\n「私たちは『トロールハンド』と呼んでいます」少女はフラメルの問いかけに答えた。「植物のように見えて、近づく者を全て捕食するヤツですが……本当に行きますか？」\nフラメルは頷いた。そしてふたりは西側の森に向かって進む。\n「君は穢獣（エジュウ）を少しも恐れないのだな」フラメルは少女を素直に称賛した。「もしや君は『骸』？」\n「はい。あと穢獣（エジュウ）は面白い生物だと思っていますから」振り返った少女は目をキラキラと輝かせる。「マクシマ・フラメル女史が昨年に出した『穢獣（エジュウ）とカロンの起源に関する研究』という本を読めば、きっと興味が湧くようになると思います……あ、でも『トロールハンド』を調べるために来たのだから、そもそも読んでいますよね！？『トロールハンド）』は現在考証のできる最古の穢獣（エジュウ）だって書かれていましたし」\n嬉々として話す少女に対して、フラメルはただ何も言わずに微笑んだ。西側の森から巨大な岩の近くを通りすぎたところで、少女が両手を広げてフラメルの足を止める。それから静寂を切り裂くかのように電光が突如として発生した。10を超える光の筋が空中を走り抜ける。\n「あそこの地中に『トロールハンド』がいます。不用意に近づくのは危険ですが、今はもう大丈夫です。麻痺させたので、自由に調査ができるはず」淡々とした口調で少女は話すが、額には小さな汗の粒が滲み出ていた。先ほどの電光は少女の魔法によるもので、かなりの魔力を消耗したに違いない。\nフラメルは感謝の言葉を述べながらバックパックを開いて道具を取り出す。「君は『穢獣（エジュウ）とカロンの根源』を読んだことがあると言っていたな」穢獣（エジュウ）の身体組織を器用に切断して分離させた後、培養容器へと投入する。「その本の著者は『螺旋』という発見を通じて『全てのカロン族は穢獣（エジュウ）と同じルーツを持っている』という理論を証明したのだが、それについて恐れはないのかい？穢蝕者だけではない——全てのカロン族も穢獣（エジュウ）の血が流れている。君もだ」\n「恐れなんてありません。過去の自分が何かというより、未来の自分が何になるのか気になります。それに——」少女は笑顔を見せる。紫色の瞳に明確な決意を見せた。「自分の力が何なのかを知ってこそ、それをどう使うか、どう支配するかを学べますから」\n「サンプルの採取は完了した。とても珍しい鬼灯の穢獣（エジュウ）の亜種だったよ。さて、近くの町までの護送も頼めるかい？」フラメルは立ち上がる。「そうだ、お名前は？」\n「シビル・メイソンです」と少女は答える。\n「うむ、シビル・メイソンだね」フラメルは笑った。谷間の夜風が吹き荒び、バタバタと彼女のコートがはためく。「ひとつの住所を教えようではないか——穢獣（エジュウ）や骸の力に興味があるならば、そこで名前を告げてくれ。君が来るのを期待して待っておく」\n\n「おい、シビル、この裏切り者が！あの雌を拉致しろって提案したのはテメェだろうが！なのに逃げるよう手引きするったぁどういうことだよ！？」\n「金貨10枚じゃ足りなかったかしら？」\n「大物を釣るならとことん大きくって、帝都から来た大物をわざわざ捕らえる形にしたんだろうが！それをこんな風に手のひら返されちゃ意味が分からんだろう！？金貨10枚ぽっちなら、アイツを殺せばさっさと済む話だったし！」\nシビルに向かって怒鳴り声を上げている2人組の強盗は、椅子に背中合わせに縛られていた。周囲には酒瓶が散乱している。「寝ている間に好き勝手しやがって！母なし子のクソガキが！ほんっとテメェのどっちつかずでコロコロと変わる態度は気に食わねえ！さっさと殺しときゃよかったぜ！あの時のカラスみたいに——」\nその言葉を聞いた瞬間にシビルは立ち上がった。強盗を睨みつけると、聞くに堪えない罵倒を吐き出すばかりの口を無理矢理こじ開ける。「バキッ」と音が響いた。下顎の骨が砕ける音だ。かつての仲間の口に金貨を1枚ずつ押し込めていく。彼らの罵声が徐々に弱まってくる。\n「愚かしいわね。貴方の人生はゴミクズみたいな幕引きがお似合い。でも私の人生は貴方と違うのよ」\nシビルはフラメルからもらったメモをしっかりと握りしめる。踵を返して、帝都ディズマニアへの帰路についた。",
           TextMapId = "UI_CHAR_DATA_TEXT_43010403"
-        },
-        UI_CHAR_DATA_TEXT_43010404 = {
-          ContentJP = "シビルは過去に地獄から生還したと自負している。\n \n 地獄とはどのようなものだったのか？それは炎の海、逃れようとしても火の手がすぐに押し寄せてくる灼熱だった。空気を吸うたびに粘つく液体が鼻に入り込むような感覚に襲われ、耳元では常にパチパチと音がしていた。\n 上空では炎を飛び越えようとした鳥たちが盲目のカラスの群れになり果て、焦げた大地に墜落して炎の波紋が広がる。\n \n 世間に周知する予定はなかった極秘の軍事作戦にて、指揮官は出発前にありとあらゆる可能性を計算していた。しかし、礼賛会の核心部がどれほどの防衛力を有しているのかを知る術はなかった。 \n 三日三晩の検討を重ねた末に、指揮官が下したのは決死の作戦案だ。できるだけ少人数の精鋭部隊を編制し、最新型の飛行船で目的地に強襲を仕掛ける「斬首作戦」を実行する。 \n リスクしかない冒険のように見える作戦だが、すべての計画の中で最も勝利に近い選択だった。集められた13名の「骸」は完全武装をしたうえで、普通の兵士と同じ装いで送り出される。別れや励ましの言葉もなく、まるで軍需品を輸送するかのように、死の淵へと向かう遠征が始まった。 \n そうだ。最悪の覚悟はしていた遠征だった。しかし、真に「神」の災厄を知ったのは、至高者の視線に直面してからだった。\n \n 夜空を引き裂く光線が次々と放たれ、永遠に消えない業火が周囲を飲み込んだ。 \n 灼熱の中心から少し離れた場所にいるシビルの目にしたものは、焼け焦げた枝やかつて動物だったものの残骸――それらを見分ける気力も湧かない。 \n 幸いなことにシビルは攻撃部隊から外され、塔の外へ潜入し最後の切り札となった。仲間たちが塔の奥深くを攻略する間、死角に隠れた飛行船を操縦し、作戦が無事に完了した後に友軍を回収する。作戦がうまくいかなかったとしても、負傷した戦友をできるだけ多く回収して、死傷者を最小限に抑える手はずだった。\n \n 塔の奥で仲間たちが何に遭遇したのかは分からない。しかし、眼前に広がる地獄の光景は、想定した無数の状況の中でも明らかに最悪の結末を迎えていた。 \n 塔にいた12名のうち、出てこれたのは3名のみ。 背後から迫るのは、背筋を凍らせるほどの光の奔流。その光が触れた場所はことごとく炎に包まれ、石すらも穿たれていく。だが、それは騎士の放った攻撃ではなかった——まるで神が天罰を下しているかのように。 重傷で意識を失った長官をシビルへ託すと、二人の同僚は自らも血にまみれた身体を引きずりながら遠方へと駆けた。彼らが選んだのは、最後の守りを担う道だった。\n \n 重傷を負いながらも骸の強靭な体に鞭を打ち、2名の戦友は剣を支えに立ち上がった。 \n 周囲の火勢が弱まったので呼吸は落ち着いている様子だ。先ほどのように灼熱の鮮血を口と鼻から流してはいない。\n しかし、炎が消えた後に現れたのは武装した騎士たちだった。甲冑や銃器を見るまでもなく、足音を聞くだけで判断できた。全員が精鋭であり、眼前の敵兵を捕虜にする気などなく、侵入者は全員抹殺せよという命令を受けていることを。\n 普通であれば骸を前にした人間はウサギのように逃げ出すはずだ。しかし、翼や爪を奪われた大鷹が相手と知れば、アリの群れでさえ食い尽くすことができる。 \n 殺意に満ちた銃弾の雨が、ジリジリと剣技の防御を突破し、布を千切るかのように2名の体を貫いた。 \n 距離を取って銃撃していたエリュシオンの騎士たちは徐々に接近し、2名の脊椎に斬撃を叩き込める距離まで残り数歩――\n \n シビルはただただ眺めるしかなかった。つい先日まで自分と一緒に作戦を練っていた仲間が、今や生死の境に立たされている。 \n 彼らは最後の力を振り絞り、互いの背中に寄りかかって立ち続ける。そして意識してか無意識かわからないが、横を向いてシビルの飛空艇の方向に目を向けた。 \n 理性、そして体に刻み込まれた本能が、命令に従い眼前の仲間を見捨てるべきだと叫んでいる。しかし、かすかな声が心の底から聞こえてくる。全身全霊で叫んでいる。違う、彼らを見捨てるべきではないと。 \n 彼らとの関係も悪くはなかった。ともに帝国へ忠誠を誓い、功績を打ち立てようとしていた。彼らにも自分と同じように順風満帆とは言えない過去があった。幾度も野営地の薄暗い明かりの下で、自分の過去や将来の理想を語り合った。友人などいないと自認しているシビルにとっても、彼らは最も友人に近い存在であったのかもしれない。 \n そんな友とも呼べる存在が、死へと赴く最後の瞬間に自分を見つめている。 \n 彼らの目はいったい何を訴えているのだろうか？助けを求めている？後悔している？憎しみか、それとも何かほかの感情か……\n \n 何も考えるべきではない。ただ命令を遵守するべきと、自分の心に存在する最後の感情を押し殺すべきと理解している。 \n だけど……本当にそれでいいのだろうか？本当に友を見殺しにしてもいいのだろうか？ \n 彼女は、虚しく目を閉じることにした。現実に起こる出来事を見ないために、地獄のような選択から逃れるかのように。 \n だが彼女が目を閉じようとしたその瞬間、2名は彼女のために決断を下した。一切のためらいはなかった。初めから決意していたかのように躊躇はなかった。彼らは互いの腰からナイフを抜き、互いの首へと深く突き刺した。そして微笑みながら倒れ込んだ。\n \n ほぼ同時に、シビルは飛空艇のエンジンを作動した。エンジン音が響き渡るなか、シビルは胸に詰まっていた息をゆっくりと吐き出した。 \n 彼女は数回の瞬きをした。誰も見たことのない涙が自分の頬を伝っていることに気づいた。シビルには仲間たちが最後に向けてきた視線の意味を理解できなかった。 \n 命令に背くか否か悩む必要がなくなった喜びなのか、それとも何かほかの理由なのかもわからない。彼らがシビルに向けた視線に内にある意味も、何も、わからない。\n \n ………… \n 実質上、神の塔に踏み入れたため、今回の作戦は結果的に勝利とされた。同時に、シビルを除く全員が戦死したというお触れが出された。\n 後に軍団長に昇進したシビルは、この作戦を「地獄からの生還」と名づけた。",
-          TextMapId = "UI_CHAR_DATA_TEXT_43010404"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_43010405",
-    MaxKey = "UI_CMName_Name_SaiqiPhantom",
+    MinKey = "UI_CHAR_DATA_TEXT_43010404",
+    MaxKey = "UI_CMName_Name_SaTuoBuJi",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_43010404 = {
+          ContentJP = "シビルは過去に地獄から生還したと自負している。\n \n 地獄とはどのようなものだったのか？それは炎の海、逃れようとしても火の手がすぐに押し寄せてくる灼熱だった。空気を吸うたびに粘つく液体が鼻に入り込むような感覚に襲われ、耳元では常にパチパチと音がしていた。\n 上空では炎を飛び越えようとした鳥たちが盲目のカラスの群れになり果て、焦げた大地に墜落して炎の波紋が広がる。\n \n 世間に周知する予定はなかった極秘の軍事作戦にて、指揮官は出発前にありとあらゆる可能性を計算していた。しかし、礼賛会の核心部がどれほどの防衛力を有しているのかを知る術はなかった。 \n 三日三晩の検討を重ねた末に、指揮官が下したのは決死の作戦案だ。できるだけ少人数の精鋭部隊を編制し、最新型の飛行船で目的地に強襲を仕掛ける「斬首作戦」を実行する。 \n リスクしかない冒険のように見える作戦だが、すべての計画の中で最も勝利に近い選択だった。集められた13名の「骸」は完全武装をしたうえで、普通の兵士と同じ装いで送り出される。別れや励ましの言葉もなく、まるで軍需品を輸送するかのように、死の淵へと向かう遠征が始まった。 \n そうだ。最悪の覚悟はしていた遠征だった。しかし、真に「神」の災厄を知ったのは、至高者の視線に直面してからだった。\n \n 夜空を引き裂く光線が次々と放たれ、永遠に消えない業火が周囲を飲み込んだ。 \n 灼熱の中心から少し離れた場所にいるシビルの目にしたものは、焼け焦げた枝やかつて動物だったものの残骸――それらを見分ける気力も湧かない。 \n 幸いなことにシビルは攻撃部隊から外され、塔の外へ潜入し最後の切り札となった。仲間たちが塔の奥深くを攻略する間、死角に隠れた飛行船を操縦し、作戦が無事に完了した後に友軍を回収する。作戦がうまくいかなかったとしても、負傷した戦友をできるだけ多く回収して、死傷者を最小限に抑える手はずだった。\n \n 塔の奥で仲間たちが何に遭遇したのかは分からない。しかし、眼前に広がる地獄の光景は、想定した無数の状況の中でも明らかに最悪の結末を迎えていた。 \n 塔にいた12名のうち、出てこれたのは3名のみ。 背後から迫るのは、背筋を凍らせるほどの光の奔流。その光が触れた場所はことごとく炎に包まれ、石すらも穿たれていく。だが、それは騎士の放った攻撃ではなかった——まるで神が天罰を下しているかのように。 重傷で意識を失った長官をシビルへ託すと、二人の同僚は自らも血にまみれた身体を引きずりながら遠方へと駆けた。彼らが選んだのは、最後の守りを担う道だった。\n \n 重傷を負いながらも骸の強靭な体に鞭を打ち、2名の戦友は剣を支えに立ち上がった。 \n 周囲の火勢が弱まったので呼吸は落ち着いている様子だ。先ほどのように灼熱の鮮血を口と鼻から流してはいない。\n しかし、炎が消えた後に現れたのは武装した騎士たちだった。甲冑や銃器を見るまでもなく、足音を聞くだけで判断できた。全員が精鋭であり、眼前の敵兵を捕虜にする気などなく、侵入者は全員抹殺せよという命令を受けていることを。\n 普通であれば骸を前にした人間はウサギのように逃げ出すはずだ。しかし、翼や爪を奪われた大鷹が相手と知れば、アリの群れでさえ食い尽くすことができる。 \n 殺意に満ちた銃弾の雨が、ジリジリと剣技の防御を突破し、布を千切るかのように2名の体を貫いた。 \n 距離を取って銃撃していたエリュシオンの騎士たちは徐々に接近し、2名の脊椎に斬撃を叩き込める距離まで残り数歩――\n \n シビルはただただ眺めるしかなかった。つい先日まで自分と一緒に作戦を練っていた仲間が、今や生死の境に立たされている。 \n 彼らは最後の力を振り絞り、互いの背中に寄りかかって立ち続ける。そして意識してか無意識かわからないが、横を向いてシビルの飛空艇の方向に目を向けた。 \n 理性、そして体に刻み込まれた本能が、命令に従い眼前の仲間を見捨てるべきだと叫んでいる。しかし、かすかな声が心の底から聞こえてくる。全身全霊で叫んでいる。違う、彼らを見捨てるべきではないと。 \n 彼らとの関係も悪くはなかった。ともに帝国へ忠誠を誓い、功績を打ち立てようとしていた。彼らにも自分と同じように順風満帆とは言えない過去があった。幾度も野営地の薄暗い明かりの下で、自分の過去や将来の理想を語り合った。友人などいないと自認しているシビルにとっても、彼らは最も友人に近い存在であったのかもしれない。 \n そんな友とも呼べる存在が、死へと赴く最後の瞬間に自分を見つめている。 \n 彼らの目はいったい何を訴えているのだろうか？助けを求めている？後悔している？憎しみか、それとも何かほかの感情か……\n \n 何も考えるべきではない。ただ命令を遵守するべきと、自分の心に存在する最後の感情を押し殺すべきと理解している。 \n だけど……本当にそれでいいのだろうか？本当に友を見殺しにしてもいいのだろうか？ \n 彼女は、虚しく目を閉じることにした。現実に起こる出来事を見ないために、地獄のような選択から逃れるかのように。 \n だが彼女が目を閉じようとしたその瞬間、2名は彼女のために決断を下した。一切のためらいはなかった。初めから決意していたかのように躊躇はなかった。彼らは互いの腰からナイフを抜き、互いの首へと深く突き刺した。そして微笑みながら倒れ込んだ。\n \n ほぼ同時に、シビルは飛空艇のエンジンを作動した。エンジン音が響き渡るなか、シビルは胸に詰まっていた息をゆっくりと吐き出した。 \n 彼女は数回の瞬きをした。誰も見たことのない涙が自分の頬を伝っていることに気づいた。シビルには仲間たちが最後に向けてきた視線の意味を理解できなかった。 \n 命令に背くか否か悩む必要がなくなった喜びなのか、それとも何かほかの理由なのかもわからない。彼らがシビルに向けた視線に内にある意味も、何も、わからない。\n \n ………… \n 実質上、神の塔に踏み入れたため、今回の作戦は結果的に勝利とされた。同時に、シビルを除く全員が戦死したというお触れが出された。\n 後に軍団長に昇進したシビルは、この作戦を「地獄からの生還」と名づけた。",
+          TextMapId = "UI_CHAR_DATA_TEXT_43010404"
+        },
         UI_CHAR_DATA_TEXT_43010405 = {
           ContentJP = "何羽かのカラスが窓際に留まって、黒く煌めく羽を整えている。フラメルはその鳥が持つ別の意味を——不吉の象徴であることを想起せずにはいられなかった。つまりはそう、不幸の到来を告げることがカラスの使命なのだ。\n錬金院での研究は極秘となるため、窓のある部屋が基本的にない。代わりに昼夜を問わず光り続ける照明灯が設置されている。極圏地帯にて永遠に白い輝きを放つ太陽のようなものだ。代替として十分な代物であると考えられるが、それでもフラメルは自分のオフィスに窓がない状況を許さなかった。少しでも外の景色や世界との繋がりを感じたかったみたいだ。\nしかし今日は数羽の黒々としたカラスたちによって占拠されている。\nフラメルは背筋を伸ばしながら机の前に座って髪を後ろに束ねた。ノックの音がしても彼女はただ窓を静かに眺めるばかり。その音を立てた人物に一瞥もしなかった——訪れたのはシビル。かつての教え子であり、現在は大軍団長である。\n\n「マクシマ・フラメル女史」シビルは重たい静寂を打ち破る。「お伝えします。帝国への間接的な背信行為によりサーベル錬金院での全職務執行を停止、及び『首席錬金術師』の称号も剥奪となります。しかしながら——」かつての恩師を見つめて、彼女は自分のプライドを捨ててまで懇願し得た恩赦について口にする。「女史による帝国への多大な貢献を鑑みないわけにはいきません。皇立軍事監獄への送致は見送りとの形に成りました。継続して研究するおつもりがあれば錬金院にて研究室を保有することも可能です——当然ながら全ての研究は監視下に置かれますが」\nその言葉にもフラメルは何も答えなかったが、しばらくすると長いため息を吐きながら振り向いた。「それで全てかい軍団長？君が言いたいのは」\nシビルは師匠の眼差しから逃れるように目を背ける。「ええ、以上です」\n「初めて出会った時の君は今よりも身長が低かった。あの時も私は君の捕虜だったな。今日と同じように」フラメルは尋ねる。「あの誘拐は君の差し金なのだろう？」\nシビルはただ首を横に振った。「過去を掘り起こすことに意味はありません。重要なのは今この時です、フラメル女史」\n「元来の錬金院は知識の追求に努める場所であったのだが、今や君とジュリアスの手によりヒュペリアの恥部へと変わり果てた」年老いてしまった学者は自分の教え子を見つめると、徒労に終わると理解しつつも悔悟を促した。「知識の存在意義とは、世界をよりよくするためにある。だけど君はそれを——」\n「権力の座に上り詰めるためのハシゴと見なしている。ずっと前に女史から承った言葉です」シビルは言葉を遮った。「貴女の理想は高潔です。比べて私の知識に対する態度は、卑劣で恥知らずだと認めざるを得ません。ですがお考えになられたことはございますか？高尚な理想を有するのは、貴女のような高貴な生まれを持つ者にのみ許される特権であることを。貴女の人生には数えきれないほどの逃げ道があります。しかしそこの窓際にいるカラスには2本の道しか用意されておりません。全力を尽くして飛ぶか、子供の手にしたパチンコで戯れに撃ち落とされるか」\n「それに、女史はご存じないでしょうけど——」シビルは話しを続ける。「カラスにはカラスの理想があります。飛べば飛ぶほど地上の人間には見えないものが見えてくる。だからこそ自分にしかできないことが——真にヒトの変革を促せられるかもしれません」\n「軍団長、いや、シビル！正直に話しなさい！」フラメルが勢いよく立ち上がった。椅子がバタンとひっくり返る。その音に驚いた窓際のカラスが羽をバタつかせて飛んでいく。「あの日、君たちは……エリュシオン礼賛会の『塔』で、いったい君たちは何を見たと言うんだい？」\n\nその問いにシビルは返事をしなかった。夕日が窓から差し込み、彼女の顔を照らす。刹那、教え子の表情が礼賛会でよく見る聖像の彫刻のように、冷たく、そして慈悲深く見えた。\n「何もありませんでしたよ。フラメル女史」シビルはそうとだけ言った。「本題に戻りましょう。錬金院での研究継続をお考えであればこの書類にサインを。ご決断を今すぐにとは言いません。猶予は3日間ございます」\n軍団長は背を向けて、振り返ることなく立ち去った。長い廊下を歩き続けて、先ほどの部屋より幾分か遠のいてから、ようやく振り返ってその部屋へ深々と頭を下げる。\n「さようなら、師匠」",
           TextMapId = "UI_CHAR_DATA_TEXT_43010405"
@@ -76361,19 +76365,19 @@ local Data = {
         UI_CMName_Name_SaTuoBuJi = {
           ContentJP = "飄々としている男",
           TextMapId = "UI_CMName_Name_SaTuoBuJi"
-        },
-        UI_CMName_Name_SaiqiPhantom = {
-          ContentJP = "サイキの幻影",
-          TextMapId = "UI_CMName_Name_SaiqiPhantom"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMName_Name_SanRenTongShi",
-    MaxKey = "UI_CMNpc_Name_Jiexi",
+    MinKey = "UI_CMName_Name_SaiqiPhantom",
+    MaxKey = "UI_CMNpc_Name_JiduZNM",
     Loader = function()
       return {
+        UI_CMName_Name_SaiqiPhantom = {
+          ContentJP = "サイキの幻影",
+          TextMapId = "UI_CMName_Name_SaiqiPhantom"
+        },
         UI_CMName_Name_SanRenTongShi = {
           ContentJP = "ルーナ族の鍛冶師&ルーナ族のバーテンダー&ルーナ族の探検家",
           TextMapId = "UI_CMName_Name_SanRenTongShi"
@@ -77169,19 +77173,19 @@ local Data = {
         UI_CMNpc_Name_JiduZNM = {
           ContentJP = "嫉妬深い中年",
           TextMapId = "UI_CMNpc_Name_JiduZNM"
-        },
-        UI_CMNpc_Name_Jiexi = {
-          ContentJP = "ジェシカ",
-          TextMapId = "UI_CMNpc_Name_Jiexi"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMNpc_Name_Jimu",
-    MaxKey = "UI_COMMONPOP_TEXT_100016",
+    MinKey = "UI_CMNpc_Name_Jiexi",
+    MaxKey = "UI_COMMONPOP_TEXT_100015",
     Loader = function()
       return {
+        UI_CMNpc_Name_Jiexi = {
+          ContentJP = "ジェシカ",
+          TextMapId = "UI_CMNpc_Name_Jiexi"
+        },
         UI_CMNpc_Name_Jimu = {
           ContentJP = "ジム",
           TextMapId = "UI_CMNpc_Name_Jimu"
@@ -77977,19 +77981,19 @@ local Data = {
         UI_COMMONPOP_TEXT_100015 = {
           ContentJP = "以上のアイテムが返却されます",
           TextMapId = "UI_COMMONPOP_TEXT_100015"
-        },
-        UI_COMMONPOP_TEXT_100016 = {
-          ContentJP = "このアイテムは販売が終了しました。ショップへ戻りましょう",
-          TextMapId = "UI_COMMONPOP_TEXT_100016"
         }
       }
     end
   },
   {
-    MinKey = "UI_COMMONPOP_TEXT_100018",
-    MaxKey = "UI_CTL_Details",
+    MinKey = "UI_COMMONPOP_TEXT_100016",
+    MaxKey = "UI_CTL_DeputeInfo",
     Loader = function()
       return {
+        UI_COMMONPOP_TEXT_100016 = {
+          ContentJP = "このアイテムは販売が終了しました。ショップへ戻りましょう",
+          TextMapId = "UI_COMMONPOP_TEXT_100016"
+        },
         UI_COMMONPOP_TEXT_100018 = {
           ContentJP = "%s×%dを消費して製造を加速しますか？",
           TextMapId = "UI_COMMONPOP_TEXT_100018"
@@ -78782,19 +78786,19 @@ local Data = {
         UI_CTL_DeputeInfo = {
           ContentJP = "依頼内容",
           TextMapId = "UI_CTL_DeputeInfo"
-        },
-        UI_CTL_Details = {
-          ContentJP = "詳細",
-          TextMapId = "UI_CTL_Details"
         }
       }
     end
   },
   {
-    MinKey = "UI_CTL_DownloadAll",
-    MaxKey = "UI_Chat_Imagine1",
+    MinKey = "UI_CTL_Details",
+    MaxKey = "UI_Chat_Ignore_Detail",
     Loader = function()
       return {
+        UI_CTL_Details = {
+          ContentJP = "詳細",
+          TextMapId = "UI_CTL_Details"
+        },
         UI_CTL_DownloadAll = {
           ContentJP = "すべてをダウンロードする",
           TextMapId = "UI_CTL_DownloadAll"
@@ -79590,19 +79594,19 @@ local Data = {
         UI_Chat_Ignore_Detail = {
           ContentJP = "通知遮断モードを有効にすると、該当チャンネルのチャットバブルは表示されません",
           TextMapId = "UI_Chat_Ignore_Detail"
-        },
-        UI_Chat_Imagine1 = {
-          ContentJP = "笑",
-          TextMapId = "UI_Chat_Imagine1"
         }
       }
     end
   },
   {
-    MinKey = "UI_Chat_Imagine10",
-    MaxKey = "UI_Consumable_Choose_Confirm",
+    MinKey = "UI_Chat_Imagine1",
+    MaxKey = "UI_Consumable_Choose",
     Loader = function()
       return {
+        UI_Chat_Imagine1 = {
+          ContentJP = "笑",
+          TextMapId = "UI_Chat_Imagine1"
+        },
         UI_Chat_Imagine10 = {
           ContentJP = "もうだめ",
           TextMapId = "UI_Chat_Imagine10"
@@ -80398,19 +80402,19 @@ local Data = {
         UI_Consumable_Choose = {
           ContentJP = "獲得する%sを選択してください",
           TextMapId = "UI_Consumable_Choose"
-        },
-        UI_Consumable_Choose_Confirm = {
-          ContentJP = "<highlight>%s</>を獲得しますか？",
-          TextMapId = "UI_Consumable_Choose_Confirm"
         }
       }
     end
   },
   {
-    MinKey = "UI_Consumable_Choose_Confirm_Have_Skin",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_153",
+    MinKey = "UI_Consumable_Choose_Confirm",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_152",
     Loader = function()
       return {
+        UI_Consumable_Choose_Confirm = {
+          ContentJP = "<highlight>%s</>を獲得しますか？",
+          TextMapId = "UI_Consumable_Choose_Confirm"
+        },
         UI_Consumable_Choose_Confirm_Have_Skin = {
           ContentJP = "既にこのキャラスキンを所持しています。交換を続けますか？（重複分は資源に変換されます）",
           TextMapId = "UI_Consumable_Choose_Confirm_Have_Skin"
@@ -81200,19 +81204,19 @@ local Data = {
         UI_DUNGEON_AUTOCHESS_152 = {
           ContentJP = "無限の棋局132",
           TextMapId = "UI_DUNGEON_AUTOCHESS_152"
-        },
-        UI_DUNGEON_AUTOCHESS_153 = {
-          ContentJP = "無限の棋局133",
-          TextMapId = "UI_DUNGEON_AUTOCHESS_153"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_AUTOCHESS_154",
-    MaxKey = "UI_DUNGEON_DES_TRAINING_9",
+    MinKey = "UI_DUNGEON_AUTOCHESS_153",
+    MaxKey = "UI_DUNGEON_DES_TRAINING_8",
     Loader = function()
       return {
+        UI_DUNGEON_AUTOCHESS_153 = {
+          ContentJP = "無限の棋局133",
+          TextMapId = "UI_DUNGEON_AUTOCHESS_153"
+        },
         UI_DUNGEON_AUTOCHESS_154 = {
           ContentJP = "無限の棋局134",
           TextMapId = "UI_DUNGEON_AUTOCHESS_154"
@@ -82008,19 +82012,19 @@ local Data = {
         UI_DUNGEON_DES_TRAINING_8 = {
           ContentJP = "最大%d体の敵を生成",
           TextMapId = "UI_DUNGEON_DES_TRAINING_8"
-        },
-        UI_DUNGEON_DES_TRAINING_9 = {
-          ContentJP = "敵の図鑑は未解放",
-          TextMapId = "UI_DUNGEON_DES_TRAINING_9"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_DONGGUOCHARGE_FA",
-    MaxKey = "UI_DispatchTag_Rigorous",
+    MinKey = "UI_DUNGEON_DES_TRAINING_9",
+    MaxKey = "UI_DispatchTag_Pet",
     Loader = function()
       return {
+        UI_DUNGEON_DES_TRAINING_9 = {
+          ContentJP = "敵の図鑑は未解放",
+          TextMapId = "UI_DUNGEON_DES_TRAINING_9"
+        },
         UI_DUNGEON_DONGGUOCHARGE_FA = {
           ContentJP = "鎮律の石人・衡",
           TextMapId = "UI_DUNGEON_DONGGUOCHARGE_FA"
@@ -82813,19 +82817,19 @@ local Data = {
         UI_DispatchTag_Pet = {
           ContentJP = "訓練士",
           TextMapId = "UI_DispatchTag_Pet"
-        },
-        UI_DispatchTag_Rigorous = {
-          ContentJP = "観察眼",
-          TextMapId = "UI_DispatchTag_Rigorous"
         }
       }
     end
   },
   {
-    MinKey = "UI_DispatchTag_Skilled",
-    MaxKey = "UI_EastFil_CountDown_1",
+    MinKey = "UI_DispatchTag_Rigorous",
+    MaxKey = "UI_EXPLORE_STONE_2",
     Loader = function()
       return {
+        UI_DispatchTag_Rigorous = {
+          ContentJP = "観察眼",
+          TextMapId = "UI_DispatchTag_Rigorous"
+        },
         UI_DispatchTag_Skilled = {
           ContentJP = "世渡り上手",
           TextMapId = "UI_DispatchTag_Skilled"
@@ -83621,19 +83625,19 @@ local Data = {
         UI_EXPLORE_STONE_2 = {
           ContentJP = "鉱石が足りません",
           TextMapId = "UI_EXPLORE_STONE_2"
-        },
-        UI_EastFil_CountDown_1 = {
-          ContentJP = "燭陰の鱗復元中",
-          TextMapId = "UI_EastFil_CountDown_1"
         }
       }
     end
   },
   {
-    MinKey = "UI_EditGuildBanner",
-    MaxKey = "UI_Extraction_TM_34",
+    MinKey = "UI_EastFil_CountDown_1",
+    MaxKey = "UI_Extraction_TM_33",
     Loader = function()
       return {
+        UI_EastFil_CountDown_1 = {
+          ContentJP = "燭陰の鱗復元中",
+          TextMapId = "UI_EastFil_CountDown_1"
+        },
         UI_EditGuildBanner = {
           ContentJP = "協会エンブレムを編集",
           TextMapId = "UI_EditGuildBanner"
@@ -84429,19 +84433,19 @@ local Data = {
         UI_Extraction_TM_33 = {
           ContentJP = "クエスト開始",
           TextMapId = "UI_Extraction_TM_33"
-        },
-        UI_Extraction_TM_34 = {
-          ContentJP = "クエスト報酬",
-          TextMapId = "UI_Extraction_TM_34"
         }
       }
     end
   },
   {
-    MinKey = "UI_Extraction_TM_35",
-    MaxKey = "UI_Friend_OnMission",
+    MinKey = "UI_Extraction_TM_34",
+    MaxKey = "UI_Friend_OfflineOver30Day",
     Loader = function()
       return {
+        UI_Extraction_TM_34 = {
+          ContentJP = "クエスト報酬",
+          TextMapId = "UI_Extraction_TM_34"
+        },
         UI_Extraction_TM_35 = {
           ContentJP = "宝物容器が攻撃を受けている",
           TextMapId = "UI_Extraction_TM_35"
@@ -85234,19 +85238,19 @@ local Data = {
         UI_Friend_OfflineOver30Day = {
           ContentJP = "30日間以上ログインしていません",
           TextMapId = "UI_Friend_OfflineOver30Day"
-        },
-        UI_Friend_OnMission = {
-          ContentJP = "クエスト進行中",
-          TextMapId = "UI_Friend_OnMission"
         }
       }
     end
   },
   {
-    MinKey = "UI_Friend_Online",
-    MaxKey = "UI_HardBoss_Difficulty_Des_1021",
+    MinKey = "UI_Friend_OnMission",
+    MaxKey = "UI_HardBoss_Difficulty_Des_1014",
     Loader = function()
       return {
+        UI_Friend_OnMission = {
+          ContentJP = "クエスト進行中",
+          TextMapId = "UI_Friend_OnMission"
+        },
         UI_Friend_Online = {
           ContentJP = "オンライン",
           TextMapId = "UI_Friend_Online"
@@ -86036,19 +86040,19 @@ local Data = {
         UI_HardBoss_Difficulty_Des_1014 = {
           ContentJP = "グルビュームの死神。\nグルビューム鉱山の奥に現れる巨大な穢獣、絶えずに通路を掘り進み、光るものの摂取を繰り返す。",
           TextMapId = "UI_HardBoss_Difficulty_Des_1014"
-        },
-        UI_HardBoss_Difficulty_Des_1021 = {
-          ContentJP = "凍土の種は、夜のとばりへと安らかに羽ばたく機会を逃してしまった。",
-          TextMapId = "UI_HardBoss_Difficulty_Des_1021"
         }
       }
     end
   },
   {
-    MinKey = "UI_HardBoss_Difficulty_Des_1022",
-    MaxKey = "UI_Impression_Fail",
+    MinKey = "UI_HardBoss_Difficulty_Des_1021",
+    MaxKey = "UI_Impression_Continue",
     Loader = function()
       return {
+        UI_HardBoss_Difficulty_Des_1021 = {
+          ContentJP = "凍土の種は、夜のとばりへと安らかに羽ばたく機会を逃してしまった。",
+          TextMapId = "UI_HardBoss_Difficulty_Des_1021"
+        },
         UI_HardBoss_Difficulty_Des_1022 = {
           ContentJP = "凍土の種は、夜のとばりへと安らかに羽ばたく機会を逃してしまった。",
           TextMapId = "UI_HardBoss_Difficulty_Des_1022"
@@ -86683,7 +86687,7 @@ local Data = {
           TextMapId = "UI_HyperWeapon_PreviousTalentLocked"
         },
         UI_HyperWeapon_ResourceConsumePopUpText = {
-          ContentJP = "以下の素材を消費して<H>潜在能力%s</>を解放しますか？",
+          ContentJP = "以下の素材を消費して<H>%s</>を解放しますか？",
           TextMapId = "UI_HyperWeapon_ResourceConsumePopUpText"
         },
         UI_HyperWeapon_ResourceFree = {
@@ -86841,19 +86845,19 @@ local Data = {
         UI_Impression_Continue = {
           ContentJP = "キャンセル",
           TextMapId = "UI_Impression_Continue"
-        },
-        UI_Impression_Fail = {
-          ContentJP = "5つのフィーリングステータスを上げるとチェック成功率が上がります",
-          TextMapId = "UI_Impression_Fail"
         }
       }
     end
   },
   {
-    MinKey = "UI_Impression_Throw",
-    MaxKey = "UI_Loading_Testing",
+    MinKey = "UI_Impression_Fail",
+    MaxKey = "UI_Loading_Remain",
     Loader = function()
       return {
+        UI_Impression_Fail = {
+          ContentJP = "5つのフィーリングステータスを上げるとチェック成功率が上がります",
+          TextMapId = "UI_Impression_Fail"
+        },
         UI_Impression_Throw = {
           ContentJP = "ダイスを振る",
           TextMapId = "UI_Impression_Throw"
@@ -87649,19 +87653,19 @@ local Data = {
         UI_Loading_Remain = {
           ContentJP = "ダウンロード予測残り時間",
           TextMapId = "UI_Loading_Remain"
-        },
-        UI_Loading_Testing = {
-          ContentJP = "本バージョンは開発段階のものです。仕様およびクオリティに関して、正式リリース版とは異なりますのでご了承ください",
-          TextMapId = "UI_Loading_Testing"
         }
       }
     end
   },
   {
-    MinKey = "UI_Loading_Verifying",
-    MaxKey = "UI_MECHANISM_10620",
+    MinKey = "UI_Loading_Testing",
+    MaxKey = "UI_MECHANISM_10619",
     Loader = function()
       return {
+        UI_Loading_Testing = {
+          ContentJP = "本バージョンは開発段階のものです。仕様およびクオリティに関して、正式リリース版とは異なりますのでご了承ください",
+          TextMapId = "UI_Loading_Testing"
+        },
         UI_Loading_Verifying = {
           ContentJP = "リソースを検証中…",
           TextMapId = "UI_Loading_Verifying"
@@ -88457,19 +88461,19 @@ local Data = {
         UI_MECHANISM_10619 = {
           ContentJP = "千枢狩陣・コア",
           TextMapId = "UI_MECHANISM_10619"
-        },
-        UI_MECHANISM_10620 = {
-          ContentJP = "香塔",
-          TextMapId = "UI_MECHANISM_10620"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_10621",
-    MaxKey = "UI_ModGuideBook_Task_Des_01",
+    MinKey = "UI_MECHANISM_10620",
+    MaxKey = "UI_ModGuideBook_Task_Complete",
     Loader = function()
       return {
+        UI_MECHANISM_10620 = {
+          ContentJP = "香塔",
+          TextMapId = "UI_MECHANISM_10620"
+        },
         UI_MECHANISM_10621 = {
           ContentJP = "塵砂化した巨木",
           TextMapId = "UI_MECHANISM_10621"
@@ -89265,19 +89269,19 @@ local Data = {
         UI_ModGuideBook_Task_Complete = {
           ContentJP = "クェスト完了",
           TextMapId = "UI_ModGuideBook_Task_Complete"
-        },
-        UI_ModGuideBook_Task_Des_01 = {
-          ContentJP = "累計で任意キャラの魔の楔<highlight>1個</>を装備",
-          TextMapId = "UI_ModGuideBook_Task_Des_01"
         }
       }
     end
   },
   {
-    MinKey = "UI_ModGuideBook_Task_Des_02",
-    MaxKey = "UI_NPC_Name_hananshi_Sce",
+    MinKey = "UI_ModGuideBook_Task_Des_01",
+    MaxKey = "UI_NPC_Name_guowenzhao_Sce",
     Loader = function()
       return {
+        UI_ModGuideBook_Task_Des_01 = {
+          ContentJP = "累計で任意キャラの魔の楔<highlight>1個</>を装備",
+          TextMapId = "UI_ModGuideBook_Task_Des_01"
+        },
         UI_ModGuideBook_Task_Des_02 = {
           ContentJP = "累計で<highlight>1個</>の魔の楔を<highlight>レベル3</>以上アップ",
           TextMapId = "UI_ModGuideBook_Task_Des_02"
@@ -90067,19 +90071,19 @@ local Data = {
         UI_NPC_Name_guowenzhao_Sce = {
           ContentJP = "ブンショウ",
           TextMapId = "UI_NPC_Name_guowenzhao_Sce"
-        },
-        UI_NPC_Name_hananshi_Sce = {
-          ContentJP = "カンアンセ",
-          TextMapId = "UI_NPC_Name_hananshi_Sce"
         }
       }
     end
   },
   {
-    MinKey = "UI_NPC_Name_hanlaodie_Sce",
-    MaxKey = "UI_Name_Walnut_151323",
+    MinKey = "UI_NPC_Name_hananshi_Sce",
+    MaxKey = "UI_Name_Walnut_151322",
     Loader = function()
       return {
+        UI_NPC_Name_hananshi_Sce = {
+          ContentJP = "カンアンセ",
+          TextMapId = "UI_NPC_Name_hananshi_Sce"
+        },
         UI_NPC_Name_hanlaodie_Sce = {
           ContentJP = "カン親父",
           TextMapId = "UI_NPC_Name_hanlaodie_Sce"
@@ -90875,19 +90879,19 @@ local Data = {
         UI_Name_Walnut_151322 = {
           ContentJP = "密書：グリフォンの波浪・焦土",
           TextMapId = "UI_Name_Walnut_151322"
-        },
-        UI_Name_Walnut_151323 = {
-          ContentJP = "密書：グリフォンの焚炎・焦土",
-          TextMapId = "UI_Name_Walnut_151323"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_151324",
-    MaxKey = "UI_Npc_Hurtsoldier",
+    MinKey = "UI_Name_Walnut_151323",
+    MaxKey = "UI_Npc_HurtVoice",
     Loader = function()
       return {
+        UI_Name_Walnut_151323 = {
+          ContentJP = "密書：グリフォンの焚炎・焦土",
+          TextMapId = "UI_Name_Walnut_151323"
+        },
         UI_Name_Walnut_151324 = {
           ContentJP = "密書：グリフォンの雷鳴・焦土",
           TextMapId = "UI_Name_Walnut_151324"
@@ -91680,19 +91684,19 @@ local Data = {
         UI_Npc_HurtVoice = {
           ContentJP = "（痛みの呻き声）",
           TextMapId = "UI_Npc_HurtVoice"
-        },
-        UI_Npc_Hurtsoldier = {
-          ContentJP = "負傷した「鷲獅子」隊の隊員",
-          TextMapId = "UI_Npc_Hurtsoldier"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_KarongGirl",
-    MaxKey = "UI_Npc_Name_FindSaiqiNpc7",
+    MinKey = "UI_Npc_Hurtsoldier",
+    MaxKey = "UI_Npc_Name_FindSaiqiNpc6",
     Loader = function()
       return {
+        UI_Npc_Hurtsoldier = {
+          ContentJP = "負傷した「鷲獅子」隊の隊員",
+          TextMapId = "UI_Npc_Hurtsoldier"
+        },
         UI_Npc_KarongGirl = {
           ContentJP = "懇願するカロン族の少女",
           TextMapId = "UI_Npc_KarongGirl"
@@ -92488,19 +92492,19 @@ local Data = {
         UI_Npc_Name_FindSaiqiNpc6 = {
           ContentJP = "怒った平民",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc6"
-        },
-        UI_Npc_Name_FindSaiqiNpc7 = {
-          ContentJP = "平静を装う兵士",
-          TextMapId = "UI_Npc_Name_FindSaiqiNpc7"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_FindSaiqiNpc8",
-    MaxKey = "UI_Npc_Name_Wanzu4",
+    MinKey = "UI_Npc_Name_FindSaiqiNpc7",
+    MaxKey = "UI_Npc_Name_Wanzu3",
     Loader = function()
       return {
+        UI_Npc_Name_FindSaiqiNpc7 = {
+          ContentJP = "平静を装う兵士",
+          TextMapId = "UI_Npc_Name_FindSaiqiNpc7"
+        },
         UI_Npc_Name_FindSaiqiNpc8 = {
           ContentJP = "怒った平民",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc8"
@@ -93296,19 +93300,19 @@ local Data = {
         UI_Npc_Name_Wanzu3 = {
           ContentJP = "触腕3号",
           TextMapId = "UI_Npc_Name_Wanzu3"
-        },
-        UI_Npc_Name_Wanzu4 = {
-          ContentJP = "触腕4号",
-          TextMapId = "UI_Npc_Name_Wanzu4"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Wanzu5",
-    MaxKey = "UI_OPTION_Language_Unload_Fail",
+    MinKey = "UI_Npc_Name_Wanzu4",
+    MaxKey = "UI_OPTION_Language_Unload_Confirm",
     Loader = function()
       return {
+        UI_Npc_Name_Wanzu4 = {
+          ContentJP = "触腕4号",
+          TextMapId = "UI_Npc_Name_Wanzu4"
+        },
         UI_Npc_Name_Wanzu5 = {
           ContentJP = "触腕5号",
           TextMapId = "UI_Npc_Name_Wanzu5"
@@ -94104,19 +94108,19 @@ local Data = {
         UI_OPTION_Language_Unload_Confirm = {
           ContentJP = "%sボイスパックをアンインストールしますか？",
           TextMapId = "UI_OPTION_Language_Unload_Confirm"
-        },
-        UI_OPTION_Language_Unload_Fail = {
-          ContentJP = "アンインストール失敗",
-          TextMapId = "UI_OPTION_Language_Unload_Fail"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_Language_Unload_Success",
-    MaxKey = "UI_PATCH_GETREMOTEVERSIONFAILED",
+    MinKey = "UI_OPTION_Language_Unload_Fail",
+    MaxKey = "UI_PATCH_GETREMOTEPAKLISTFAILED",
     Loader = function()
       return {
+        UI_OPTION_Language_Unload_Fail = {
+          ContentJP = "アンインストール失敗",
+          TextMapId = "UI_OPTION_Language_Unload_Fail"
+        },
         UI_OPTION_Language_Unload_Success = {
           ContentJP = "アンインストール成功",
           TextMapId = "UI_OPTION_Language_Unload_Success"
@@ -94912,19 +94916,19 @@ local Data = {
         UI_PATCH_GETREMOTEPAKLISTFAILED = {
           ContentJP = "リモートバージョン情報を取得できませんでした。再度試しますか？",
           TextMapId = "UI_PATCH_GETREMOTEPAKLISTFAILED"
-        },
-        UI_PATCH_GETREMOTEVERSIONFAILED = {
-          ContentJP = "リモートバージョン情報を取得できませんでした。再度試しますか？",
-          TextMapId = "UI_PATCH_GETREMOTEVERSIONFAILED"
         }
       }
     end
   },
   {
-    MinKey = "UI_PATCH_MOUNTASSTES",
-    MaxKey = "UI_PlayerHead_Name_10025",
+    MinKey = "UI_PATCH_GETREMOTEVERSIONFAILED",
+    MaxKey = "UI_PlayerHead_Name_10024",
     Loader = function()
       return {
+        UI_PATCH_GETREMOTEVERSIONFAILED = {
+          ContentJP = "リモートバージョン情報を取得できませんでした。再度試しますか？",
+          TextMapId = "UI_PATCH_GETREMOTEVERSIONFAILED"
+        },
         UI_PATCH_MOUNTASSTES = {
           ContentJP = "リソースをインストール中",
           TextMapId = "UI_PATCH_MOUNTASSTES"
@@ -95717,19 +95721,19 @@ local Data = {
         UI_PlayerHead_Name_10024 = {
           ContentJP = "放浪剣士の肖像",
           TextMapId = "UI_PlayerHead_Name_10024"
-        },
-        UI_PlayerHead_Name_10025 = {
-          ContentJP = "月狩り人の肖像",
-          TextMapId = "UI_PlayerHead_Name_10025"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Name_10026",
-    MaxKey = "UI_QUESTPANEL_BUTTON_PAUSE",
+    MinKey = "UI_PlayerHead_Name_10025",
+    MaxKey = "UI_Prop_Notenough",
     Loader = function()
       return {
+        UI_PlayerHead_Name_10025 = {
+          ContentJP = "月狩り人の肖像",
+          TextMapId = "UI_PlayerHead_Name_10025"
+        },
         UI_PlayerHead_Name_10026 = {
           ContentJP = "月狩り人の肖像",
           TextMapId = "UI_PlayerHead_Name_10026"
@@ -96525,19 +96529,19 @@ local Data = {
         UI_Prop_Notenough = {
           ContentJP = "素材が不足しています",
           TextMapId = "UI_Prop_Notenough"
-        },
-        UI_QUESTPANEL_BUTTON_PAUSE = {
-          ContentJP = "クエスト一時停止中",
-          TextMapId = "UI_QUESTPANEL_BUTTON_PAUSE"
         }
       }
     end
   },
   {
-    MinKey = "UI_QUESTPANEL_CONDITION_PAUSE",
-    MaxKey = "UI_RegionOnline_Position",
+    MinKey = "UI_QUESTPANEL_BUTTON_PAUSE",
+    MaxKey = "UI_RegionOnline_Occupied",
     Loader = function()
       return {
+        UI_QUESTPANEL_BUTTON_PAUSE = {
+          ContentJP = "クエスト一時停止中",
+          TextMapId = "UI_QUESTPANEL_BUTTON_PAUSE"
+        },
         UI_QUESTPANEL_CONDITION_PAUSE = {
           ContentJP = "以下のクエストを完了すると、本クエストを続行できます。",
           TextMapId = "UI_QUESTPANEL_CONDITION_PAUSE"
@@ -97333,19 +97337,19 @@ local Data = {
         UI_RegionOnline_Occupied = {
           ContentJP = "使用中",
           TextMapId = "UI_RegionOnline_Occupied"
-        },
-        UI_RegionOnline_Position = {
-          ContentJP = "位置を選択してください",
-          TextMapId = "UI_RegionOnline_Position"
         }
       }
     end
   },
   {
-    MinKey = "UI_RegionOnline_PositionNum",
-    MaxKey = "UI_SHOP_SUBTAB_NAME_SPPrism",
+    MinKey = "UI_RegionOnline_Position",
+    MaxKey = "UI_SHOP_SUBTAB_NAME_ReSPPrism",
     Loader = function()
       return {
+        UI_RegionOnline_Position = {
+          ContentJP = "位置を選択してください",
+          TextMapId = "UI_RegionOnline_Position"
+        },
         UI_RegionOnline_PositionNum = {
           ContentJP = "%s番スロット",
           TextMapId = "UI_RegionOnline_PositionNum"
@@ -98141,19 +98145,19 @@ local Data = {
         UI_SHOP_SUBTAB_NAME_ReSPPrism = {
           ContentJP = "期間限定復刻",
           TextMapId = "UI_SHOP_SUBTAB_NAME_ReSPPrism"
-        },
-        UI_SHOP_SUBTAB_NAME_SPPrism = {
-          ContentJP = "期間限定交換",
-          TextMapId = "UI_SHOP_SUBTAB_NAME_SPPrism"
         }
       }
     end
   },
   {
-    MinKey = "UI_SHOP_SUBTAB_NAME_WEAPON",
-    MaxKey = "UI_Select_Unlock",
+    MinKey = "UI_SHOP_SUBTAB_NAME_SPPrism",
+    MaxKey = "UI_Select_Unique",
     Loader = function()
       return {
+        UI_SHOP_SUBTAB_NAME_SPPrism = {
+          ContentJP = "期間限定交換",
+          TextMapId = "UI_SHOP_SUBTAB_NAME_SPPrism"
+        },
         UI_SHOP_SUBTAB_NAME_WEAPON = {
           ContentJP = "武器",
           TextMapId = "UI_SHOP_SUBTAB_NAME_WEAPON"
@@ -98943,19 +98947,19 @@ local Data = {
         UI_Select_Unique = {
           ContentJP = "レアリティ",
           TextMapId = "UI_Select_Unique"
-        },
-        UI_Select_Unlock = {
-          ContentJP = "アンロック",
-          TextMapId = "UI_Select_Unlock"
         }
       }
     end
   },
   {
-    MinKey = "UI_SendGift_AlreadyGet",
-    MaxKey = "UI_Skin_Des_4102",
+    MinKey = "UI_Select_Unlock",
+    MaxKey = "UI_Skin_Des_410101",
     Loader = function()
       return {
+        UI_Select_Unlock = {
+          ContentJP = "アンロック",
+          TextMapId = "UI_Select_Unlock"
+        },
         UI_SendGift_AlreadyGet = {
           ContentJP = "ギフトを受け取りました",
           TextMapId = "UI_SendGift_AlreadyGet"
@@ -99751,19 +99755,19 @@ local Data = {
         UI_Skin_Des_410101 = {
           ContentJP = "影はひとたまり、月夜に降り注ぎ、半巻のしおりにて鬼神を語る。",
           TextMapId = "UI_Skin_Des_410101"
-        },
-        UI_Skin_Des_4102 = {
-          ContentJP = "朝陽が金箔を溶かし、絢爛な錦に降り注ぐ。変革の意志と共に、その金色の瞳に燃え上がる。",
-          TextMapId = "UI_Skin_Des_4102"
         }
       }
     end
   },
   {
-    MinKey = "UI_Skin_Des_410201",
-    MaxKey = "UI_Squad_Adjust_Sort",
+    MinKey = "UI_Skin_Des_4102",
+    MaxKey = "UI_Squad_Add",
     Loader = function()
       return {
+        UI_Skin_Des_4102 = {
+          ContentJP = "朝陽が金箔を溶かし、絢爛な錦に降り注ぐ。変革の意志と共に、その金色の瞳に燃え上がる。",
+          TextMapId = "UI_Skin_Des_4102"
+        },
         UI_Skin_Des_410201 = {
           ContentJP = "杯が交う夜宴には、声なき殺伐が次々と流れている。",
           TextMapId = "UI_Skin_Des_410201"
@@ -100559,19 +100563,19 @@ local Data = {
         UI_Squad_Add = {
           ContentJP = "プリセット追加",
           TextMapId = "UI_Squad_Add"
-        },
-        UI_Squad_Adjust_Sort = {
-          ContentJP = "編成を押しながらドラッグすると並び順を調整できます",
-          TextMapId = "UI_Squad_Adjust_Sort"
         }
       }
     end
   },
   {
-    MinKey = "UI_Squad_Appearance_TITLE1",
-    MaxKey = "UI_TEMPLE_81701",
+    MinKey = "UI_Squad_Adjust_Sort",
+    MaxKey = "UI_TEMPLE_81602",
     Loader = function()
       return {
+        UI_Squad_Adjust_Sort = {
+          ContentJP = "編成を押しながらドラッグすると並び順を調整できます",
+          TextMapId = "UI_Squad_Adjust_Sort"
+        },
         UI_Squad_Appearance_TITLE1 = {
           ContentJP = "セット1",
           TextMapId = "UI_Squad_Appearance_TITLE1"
@@ -101367,19 +101371,19 @@ local Data = {
         UI_TEMPLE_81602 = {
           ContentJP = "敵をすべて倒してポイントを獲得",
           TextMapId = "UI_TEMPLE_81602"
-        },
-        UI_TEMPLE_81701 = {
-          ContentJP = "檻を撃ち落とし、敵を閉じ込めよう",
-          TextMapId = "UI_TEMPLE_81701"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_81702",
-    MaxKey = "UI_Theater_Start",
+    MinKey = "UI_TEMPLE_81701",
+    MaxKey = "UI_Theater_Round",
     Loader = function()
       return {
+        UI_TEMPLE_81701 = {
+          ContentJP = "檻を撃ち落とし、敵を閉じ込めよう",
+          TextMapId = "UI_TEMPLE_81701"
+        },
         UI_TEMPLE_81702 = {
           ContentJP = "檻の中の敵が多いほど、ポイント倍率が上がります",
           TextMapId = "UI_TEMPLE_81702"
@@ -102175,19 +102179,19 @@ local Data = {
         UI_Theater_Round = {
           ContentJP = "今日第%sラウンド",
           TextMapId = "UI_Theater_Round"
-        },
-        UI_Theater_Start = {
-          ContentJP = "%s後スタート",
-          TextMapId = "UI_Theater_Start"
         }
       }
     end
   },
   {
-    MinKey = "UI_Theater_Started",
-    MaxKey = "UI_WEAPON_DESC_20498",
+    MinKey = "UI_Theater_Start",
+    MaxKey = "UI_WEAPON_DESC_20407",
     Loader = function()
       return {
+        UI_Theater_Start = {
+          ContentJP = "%s後スタート",
+          TextMapId = "UI_Theater_Start"
+        },
         UI_Theater_Started = {
           ContentJP = "進行中",
           TextMapId = "UI_Theater_Started"
@@ -102974,19 +102978,19 @@ local Data = {
         UI_WEAPON_DESC_20407 = {
           ContentJP = "群れから離れし孤影は機枢を廻らし、一羽で天を回らす。",
           TextMapId = "UI_WEAPON_DESC_20407"
-        },
-        UI_WEAPON_DESC_20498 = {
-          ContentJP = "最新技術で鍛えられた散弾銃。熟練の狩人たちに好まれている。",
-          TextMapId = "UI_WEAPON_DESC_20498"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_DESC_20499",
-    MaxKey = "UI_Walnut_Type_Name_2",
+    MinKey = "UI_WEAPON_DESC_20498",
+    MaxKey = "UI_Walnut_Type_Name_1",
     Loader = function()
       return {
+        UI_WEAPON_DESC_20498 = {
+          ContentJP = "最新技術で鍛えられた散弾銃。熟練の狩人たちに好まれている。",
+          TextMapId = "UI_WEAPON_DESC_20498"
+        },
         UI_WEAPON_DESC_20499 = {
           ContentJP = "ありふれた散弾銃。最安価な金属で作られているので、壊れても惜しくない。",
           TextMapId = "UI_WEAPON_DESC_20499"
@@ -103782,19 +103786,19 @@ local Data = {
         UI_Walnut_Type_Name_1 = {
           ContentJP = "キャラクター",
           TextMapId = "UI_Walnut_Type_Name_1"
-        },
-        UI_Walnut_Type_Name_2 = {
-          ContentJP = "武器",
-          TextMapId = "UI_Walnut_Type_Name_2"
         }
       }
     end
   },
   {
-    MinKey = "UI_Walnut_Type_Name_3",
-    MaxKey = "UI_WeaponStrength_Curent",
+    MinKey = "UI_Walnut_Type_Name_2",
+    MaxKey = "UI_WeaponStrength_Clear",
     Loader = function()
       return {
+        UI_Walnut_Type_Name_2 = {
+          ContentJP = "武器",
+          TextMapId = "UI_Walnut_Type_Name_2"
+        },
         UI_Walnut_Type_Name_3 = {
           ContentJP = "魔の楔",
           TextMapId = "UI_Walnut_Type_Name_3"
@@ -104590,19 +104594,19 @@ local Data = {
         UI_WeaponStrength_Clear = {
           ContentJP = "取り消し",
           TextMapId = "UI_WeaponStrength_Clear"
-        },
-        UI_WeaponStrength_Curent = {
-          ContentJP = "現在のパッシブ効果",
-          TextMapId = "UI_WeaponStrength_Curent"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponStrength_Forbid",
-    MaxKey = "VoiceDes109",
+    MinKey = "UI_WeaponStrength_Curent",
+    MaxKey = "VoiceDes108",
     Loader = function()
       return {
+        UI_WeaponStrength_Curent = {
+          ContentJP = "現在のパッシブ効果",
+          TextMapId = "UI_WeaponStrength_Curent"
+        },
         UI_WeaponStrength_Forbid = {
           ContentJP = "この武器は製錬できません",
           TextMapId = "UI_WeaponStrength_Forbid"
@@ -105395,19 +105399,19 @@ local Data = {
         VoiceDes108 = {
           ContentJP = "肌の色について",
           TextMapId = "VoiceDes108"
-        },
-        VoiceDes109 = {
-          ContentJP = "仕事のこと",
-          TextMapId = "VoiceDes109"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes110",
-    MaxKey = "WikiText_30100201",
+    MinKey = "VoiceDes109",
+    MaxKey = "WikiText_30100101",
     Loader = function()
       return {
+        VoiceDes109 = {
+          ContentJP = "仕事のこと",
+          TextMapId = "VoiceDes109"
+        },
         VoiceDes110 = {
           ContentJP = "正義とは",
           TextMapId = "VoiceDes110"
@@ -106203,19 +106207,19 @@ local Data = {
         WikiText_30100101 = {
           ContentJP = "私たちが暮らすこの大陸の総称。",
           TextMapId = "WikiText_30100101"
-        },
-        WikiText_30100201 = {
-          ContentJP = "ヒュペリア帝国北部にそびえる山脈。アトラシア大陸を横断するように連なり、その壮麗な姿は遥か遠くからでも望むことができる。この山脈を越えてさらに北へ進めば、大陸の果て――カロンの古き部族が今なお暮らす、峡湾地帯アースガルドへと辿り着く。そこは、「真なる極北」と呼ばれる、過酷にして神秘の土地である。",
-          TextMapId = "WikiText_30100201"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_30100301",
-    MaxKey = "Zero",
+    MinKey = "WikiText_30100201",
+    MaxKey = "Wuyousheng_Target_LevelLimitTime",
     Loader = function()
       return {
+        WikiText_30100201 = {
+          ContentJP = "ヒュペリア帝国北部にそびえる山脈。アトラシア大陸を横断するように連なり、その壮麗な姿は遥か遠くからでも望むことができる。この山脈を越えてさらに北へ進めば、大陸の果て――カロンの古き部族が今なお暮らす、峡湾地帯アースガルドへと辿り着く。そこは、「真なる極北」と呼ばれる、過酷にして神秘の土地である。",
+          TextMapId = "WikiText_30100201"
+        },
         WikiText_30100301 = {
           ContentJP = "アトラシア全域に点在する、特異な結晶構造体――その外観が木々の姿に似ていることから、「天上樹」と呼ばれている。その大きさは芽吹いたばかりの小さな若枝から、空に届くかのような巨木までさまざまで、内部は透き通るように輝き、ほのかに青白い光を放つのが特徴である。天の樹の枝や芽から採掘される結晶は「月ノ石」と呼ばれ、古くから貴重なエネルギー資源として利用されてきた。\n天上樹は人類よりもはるか昔から存在していたとされ、その起源はいまだ解明されていない。古代エリュシオンの学者たちは、天上樹を「天より授けられし恩寵」と信じ、その敬意を込めて「天上樹」と名づけたという。アトラシア大陸に存在する各文明ごとにそれぞれ異なる呼び名を持ち、数多くの原始的な宗教信仰が、天上樹への崇拝を起源としている。\nなお、天上樹が生み出すエネルギーは無限ではない。長年にわたる採掘によって枝芽は次第に枯れ果て、やがては月ノ石を産出できなくなる。",
           TextMapId = "WikiText_30100301"
@@ -107011,16 +107015,16 @@ local Data = {
         Wuyousheng_Target_LevelLimitTime = {
           ContentJP = "%s秒以内に挑戦をクリア",
           TextMapId = "Wuyousheng_Target_LevelLimitTime"
-        },
-        Zero = {ContentJP = "0", TextMapId = "Zero"}
+        }
       }
     end
   },
   {
-    MinKey = "ZhiLiuEntrustGrandRewardTips",
-    MaxKey = "voice_ch_char_Feina_vo_topic_01_1",
+    MinKey = "Zero",
+    MaxKey = "voice_ch_char_Feina_vo_skill02_r03",
     Loader = function()
       return {
+        Zero = {ContentJP = "0", TextMapId = "Zero"},
         ZhiLiuEntrustGrandRewardTips = {
           ContentJP = "すべての依頼をクリアすると受け取れる",
           TextMapId = "ZhiLiuEntrustGrandRewardTips"
@@ -107816,19 +107820,19 @@ local Data = {
         voice_ch_char_Feina_vo_skill02_r03 = {
           ContentJP = "出撃せよ、フィーナの勇敢な兵士たち――",
           TextMapId = "voice_ch_char_Feina_vo_skill02_r03"
-        },
-        voice_ch_char_Feina_vo_topic_01_1 = {
-          ContentJP = "えっとね、背が伸びるキャンディーがあったらなって考えてたの。もしあるなら食べてみたいなあって……",
-          TextMapId = "voice_ch_char_Feina_vo_topic_01_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Feina_vo_topic_01_2",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_01_2",
+    MinKey = "voice_ch_char_Feina_vo_topic_01_1",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_01_1",
     Loader = function()
       return {
+        voice_ch_char_Feina_vo_topic_01_1 = {
+          ContentJP = "えっとね、背が伸びるキャンディーがあったらなって考えてたの。もしあるなら食べてみたいなあって……",
+          TextMapId = "voice_ch_char_Feina_vo_topic_01_1"
+        },
         voice_ch_char_Feina_vo_topic_01_2 = {
           ContentJP = "そしたら雲よりも背が高くなって、お空に浮かぶお星さまを、なでてあげられるでしょう？",
           TextMapId = "voice_ch_char_Feina_vo_topic_01_2"
@@ -108624,19 +108628,19 @@ local Data = {
         voice_ch_char_Kezhou_vo_topic_01_1 = {
           ContentJP = "なかなかいい剣を持ってるじゃないか。あんたも剣術に興味があるのか？もしや流儀を一つや二つ叩き込まれてたり……ま、百聞は一見に如かずってな。ちょっくら腕試ししようぜ。",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_1"
-        },
-        voice_ch_char_Kezhou_vo_topic_01_2 = {
-          ContentJP = "正直、互角に渡り合えるやつなんて久しぶりだぜ。だが師匠には、素直すぎて駆け引きが下手だってよく言われたもんさ。俺もまだまだ修行が足りねぇな。",
-          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_2"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_01_3",
-    MaxKey = "voice_ch_char_Nifu_vo_appear",
+    MinKey = "voice_ch_char_Kezhou_vo_topic_01_2",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_victory",
     Loader = function()
       return {
+        voice_ch_char_Kezhou_vo_topic_01_2 = {
+          ContentJP = "正直、互角に渡り合えるやつなんて久しぶりだぜ。だが師匠には、素直すぎて駆け引きが下手だってよく言われたもんさ。俺もまだまだ修行が足りねぇな。",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_2"
+        },
         voice_ch_char_Kezhou_vo_topic_01_3 = {
           ContentJP = "俺はそうは思わないんだが、師匠は剣の扱いにおいて駆け引きは欠かせないって言ってたよ。「技を隠して妙を成す」、「戦わずして勝つが上策」、「多をもって少を制す」――聞いたことあるだろ？これらと同じで、上等な剣術なんだってさ。",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_3"
@@ -109432,19 +109436,19 @@ local Data = {
         voice_ch_char_NanzhuLight_vo_victory = {
           ContentJP = "また一歩、前へ進んだ。こうして一歩ずつ重ねていけば、いつかきっと......",
           TextMapId = "voice_ch_char_NanzhuLight_vo_victory"
-        },
-        voice_ch_char_Nifu_vo_appear = {
-          ContentJP = "最善を尽くしましょう。",
-          TextMapId = "voice_ch_char_Nifu_vo_appear"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_battleidle",
-    MaxKey = "voice_ch_char_Suyi_vo_battleidle",
+    MinKey = "voice_ch_char_Nifu_vo_appear",
+    MaxKey = "voice_ch_char_Songlu_vo_victory",
     Loader = function()
       return {
+        voice_ch_char_Nifu_vo_appear = {
+          ContentJP = "最善を尽くしましょう。",
+          TextMapId = "voice_ch_char_Nifu_vo_appear"
+        },
         voice_ch_char_Nifu_vo_battleidle = {
           ContentJP = "お疲れでしたら、どうか無理をせず、ここで少し休まれてはいかがでしょう。",
           TextMapId = "voice_ch_char_Nifu_vo_battleidle"
@@ -109889,6 +109893,30 @@ local Data = {
           ContentJP = "サファイヤのような薄絹に、深紅の色を染めよう。",
           TextMapId = "voice_ch_char_Shuimu01_vo_skill02_r01"
         },
+        voice_ch_char_Shuimu02_vo_appear = {
+          ContentJP = "アモーレ·ミーオよ、どうか私のべールを上げて。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_appear"
+        },
+        voice_ch_char_Shuimu02_vo_battlestart = {
+          ContentJP = "どうやら招かれざる客たちが、私たちの宴を邪魔しに来たみたいね。\nせっかくだから、きちんともてなしてあげないと。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_battlestart"
+        },
+        voice_ch_char_Shuimu02_vo_gain = {
+          ContentJP = "愛しているわ。\nたとえこの身が昏く朽ち、衰え、堕ちて、やがて水底に沈みゆく運命であっても――あなたを深く愛し続けるわ。\n愛の神はここにいる。私たちの誓いに耳を傾け、この約束を見届けているの。\nだから……私を裏切らないでね？フフ、約束よ。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_gain"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r01 = {
+          ContentJP = "これこそが……愛の新生！",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r02 = {
+          ContentJP = "みんなの祝福を聞かせてちょうだい！",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r02"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r03 = {
+          ContentJP = "騒がしすぎるお客さんには、罰を与えますよ。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r03"
+        },
         voice_ch_char_Shuimu_vo_appear = {
           ContentJP = "ふふ、デートのお誘いかしら？",
           TextMapId = "voice_ch_char_Shuimu_vo_appear"
@@ -110216,7 +110244,15 @@ local Data = {
         voice_ch_char_Songlu_vo_victory = {
           ContentJP = "やった、お祝いパーティーだ！……あっ、忘れてください、食べ物を節約しなくちゃ。",
           TextMapId = "voice_ch_char_Songlu_vo_victory"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_welcome",
+    MaxKey = "voice_ch_char_Yeer_vo_fail",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_welcome = {
           ContentJP = "お日さまがポカポカで、雲はふわふわで、早起きの鳥さんたちももうお腹いっぱいだよ。あなたのお腹も、鳥さんたちみたいにグーグー鳴ってるの？",
           TextMapId = "voice_ch_char_Songlu_vo_welcome"
@@ -110244,15 +110280,7 @@ local Data = {
         voice_ch_char_Suyi_vo_battleidle = {
           ContentJP = "もう大丈夫そう…… 「風神」3号機、待機モードへ移行。",
           TextMapId = "voice_ch_char_Suyi_vo_battleidle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_battlestart",
-    MaxKey = "voice_ch_char_Yeer_vo_skill02_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_battlestart = {
           ContentJP = "警備型機巧「風神」3号機、稼働実験を開始する。",
           TextMapId = "voice_ch_char_Suyi_vo_battlestart"
@@ -111024,7 +111052,15 @@ local Data = {
         voice_ch_char_Yeer_vo_fail = {
           ContentJP = "オリバー：ふん、覚えとけ。次は逃がさねぇからよ。",
           TextMapId = "voice_ch_char_Yeer_vo_fail"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_gain",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_gain = {
           ContentJP = "イェール：……こんにち、は……イェール、です。あ、あの、君も、「きゅ、きゅきゅきゅ、キュートちゃん」を、かい、買いに来たの、ですかね？\nオリバー：チッ、またコイツは噛みまくりじゃねぇかよ、ちっとも上達しねぇぜ。",
           TextMapId = "voice_ch_char_Yeer_vo_gain"
@@ -111052,15 +111088,7 @@ local Data = {
         voice_ch_char_Yeer_vo_skill02_r01 = {
           ContentJP = "オリバー：待たせたな！",
           TextMapId = "voice_ch_char_Yeer_vo_skill02_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_skill02_r02",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_skill02_r02 = {
           ContentJP = "オリバー：この天才様の最高傑作を楽しんでけよ！",
           TextMapId = "voice_ch_char_Yeer_vo_skill02_r02"

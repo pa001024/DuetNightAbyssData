@@ -109415,7 +109415,7 @@ local Data = {
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Suyi01_vo_appear",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_04_3",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_skill02_r01 = {
@@ -109882,6 +109882,30 @@ local Data = {
           ContentTC = "讓那藍寶石般的七層紗染上殷紅。",
           TextMapId = "voice_ch_char_Shuimu01_vo_skill02_r01"
         },
+        voice_ch_char_Shuimu02_vo_appear = {
+          ContentTC = "愛人啊，請你揭開我的頭紗。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_appear"
+        },
+        voice_ch_char_Shuimu02_vo_battlestart = {
+          ContentTC = "好像有客人們想要打擾我們的宴會，得要好好招待他們才行。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_battlestart"
+        },
+        voice_ch_char_Shuimu02_vo_gain = {
+          ContentTC = "我愛你，哪怕昏聵、衰朽、墜落直至溺於水底，我都將深愛著你。愛之神就在這裡，傾聽我們的誓言，見證我們的約定。你，可不要背約喲。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_gain"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r01 = {
+          ContentTC = "育誕……愛的新生！",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r02 = {
+          ContentTC = "讓我聽到你們的祝福！",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r02"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r03 = {
+          ContentTC = "太過吵鬧的客人，會受到懲戒哦。",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r03"
+        },
         voice_ch_char_Shuimu_vo_appear = {
           ContentTC = "誒，這是要和我出去約會？",
           TextMapId = "voice_ch_char_Shuimu_vo_appear"
@@ -110193,7 +110217,15 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_04_3 = {
           ContentTC = "所以，哎……要是哪天，沒有人挨餓了，我就拜託婆婆再把這條褲子改回去！",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_05_1",
+    MaxKey = "voice_ch_char_Yeer_vo_companio_02",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_05_1 = {
           ContentTC = "才不是發呆，是在冥想。不管怎麼說我都是傳頌會的一員，所以偶爾也會像這樣用力想事情的。",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_1"
@@ -110217,15 +110249,7 @@ local Data = {
         voice_ch_char_Suyi01_vo_appear = {
           ContentTC = "天巡柒型，出擊準備就緒。",
           TextMapId = "voice_ch_char_Suyi01_vo_appear"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi01_vo_battlestart",
-    MaxKey = "voice_ch_char_Yeer_vo_idle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi01_vo_battlestart = {
           ContentTC = "試圖挑起紛爭之人，由我來驅逐。",
           TextMapId = "voice_ch_char_Suyi01_vo_battlestart"
@@ -111001,7 +111025,15 @@ local Data = {
         voice_ch_char_Yeer_vo_companio_02 = {
           ContentTC = "榛子……是你的朋友嗎？我也有很好的朋友，他像榛、榛子一樣可靠。\n奧利弗：你罵誰呢？",
           TextMapId = "voice_ch_char_Yeer_vo_companio_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_companio_03",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_companio_03 = {
           ContentTC = "耶爾：唔啊……你、你不要生氣，我的炸彈實驗都是符！符符符符合安全規定的……",
           TextMapId = "voice_ch_char_Yeer_vo_companio_03"
@@ -111025,15 +111057,7 @@ local Data = {
         voice_ch_char_Yeer_vo_idle = {
           ContentTC = "耶爾：紅鯉魚，有頭小綠、綠，綠鯉，綠驢，綠縷魚…….\n奧利弗：是「紅鯉魚有頭小綠驢，綠鯉魚有頭小紅驢！」笨蛋耶爾，快跟我念！\n耶爾：好、好的！紅、紅鯉魚……",
           TextMapId = "voice_ch_char_Yeer_vo_idle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_lvup",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_lvup = {
           ContentTC = "耶爾：嗯嗯！奧利弗，我們兩個一起成長了哦。",
           TextMapId = "voice_ch_char_Yeer_vo_lvup"

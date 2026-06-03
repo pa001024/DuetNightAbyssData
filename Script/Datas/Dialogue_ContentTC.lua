@@ -42482,7 +42482,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10047111] = {
           Content = "你们有点太刻薄了，平时的教养到哪里去了。何必为了卡戎这么大反应呢？",
-          ContentTC = "你們有點太刻薄了，平時的教養到哪裡去了。這麼大反應，何必為了卡戎這麼大反應呢？",
+          ContentTC = "你們有點太刻薄了，平時的教養到哪裡去了。何必為了卡戎這麼大反應呢？",
           DialogueId = 10047111,
           GUID = "1926E226",
           SpeakNpcId = 100440,
@@ -42636,7 +42636,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10047212] = {
           Content = "我们三人自幼失去父母，四处为家，是大表姐学习钢琴后到处表演养活我们。",
-          ContentTC = "我們三人自由失去父母，四處為家，是大表姐學習鋼琴後到處表演養活我們。",
+          ContentTC = "我們三人自幼失去父母，四處為家，是大表姐學習鋼琴後到處表演養活我們。",
           DialogueId = 10047212,
           GUID = "1926F2B8",
           SpeakNpcId = 100001,

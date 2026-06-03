@@ -173,8 +173,16 @@ function Component:SetGuildChatOpen(Callback, IsOpen)
   CallGuildRpc(self, "SetGuildChatOpen", Callback, IsOpen and true or false)
 end
 
-function Component:QueryGuildChatOpen(Callback, Uid)
-  CallGuildRpc(self, "QueryGuildChatOpen", Callback, Uid)
+function Component:QueryGuildChatOpen(Callback, Uid, bCallbackOnly)
+  if bCallbackOnly then
+    self:CallServer("QueryGuildChatOpen", function(...)
+      if Callback then
+        Callback(...)
+      end
+    end, Uid)
+  else
+    CallGuildRpc(self, "QueryGuildChatOpen", Callback, Uid)
+  end
 end
 
 function Component:QueryGuildMemberInfo(Callback, Uids, bCallbackOnly)

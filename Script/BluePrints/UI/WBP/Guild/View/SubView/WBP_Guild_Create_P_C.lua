@@ -95,7 +95,8 @@ function M:Construct()
     FocusKeyName = "A",
     PasteKeyName = "RS",
     FocusKey = UIConst.GamePadImgKey.FaceButtonRight,
-    BackFocusWidget = self.Input_Intro
+    BackFocusWidget = self.Input_Intro,
+    bLimitBr = true
   })
   self.Input_Intro_Input:SetIsShowGamePad(false)
   if not UIUtils.IsMobileInput() then

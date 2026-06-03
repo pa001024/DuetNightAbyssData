@@ -388,13 +388,20 @@ function M:GetCardGuildInfo(GuildId, Uid)
   local Avatar = ChatController:GetAvatar()
   self.Content.Parent.IsOpeningHeadAnchor = true
   Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+    if Ret ~= ErrorCode.RET_SUCCESS then
+      return
+    end
     if not IsValid(self) then
       return
     end
     local Info = MemberInfos[Uid]
     if Info.GuildId and 0 ~= Info.GuildId then
       self.WaitGuildId = Info.GuildId
-      GuildController:SendGetGuildInfo(Info.GuildId)
+      if Info.GuildId == GuildController:GetAvatar().GuildId then
+        self:OnGetGuildFullInfo(GuildController:GetModel():GetCurrGuild())
+      else
+        GuildController:SendGetGuildInfo(Info.GuildId)
+      end
       Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
         if Ret ~= ErrorCode.RET_SUCCESS then
           return

@@ -28,7 +28,7 @@ return ReadOnly("PartyNpc", {
     bEnableParty = true
   },
   [1102] = {
-    AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Heitao.T_Icon_Heitao'",
+    AvatarIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Fuluo.T_Icon_Fuluo'",
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1102,
     MainCameraName = "Fuluo_Main",

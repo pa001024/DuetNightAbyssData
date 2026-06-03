@@ -35043,7 +35043,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10041302] = {
           Content = "这车站还真是意料之外的警备森严，进来没法走正道，还要费这么大工夫。",
-          ContentEN = "Security here's tighter than I expected. Can't even get in the usual way. We've had to jump through so manyhoops.",
+          ContentEN = "Security here's tighter than I expected. Can't even get in the usual way. We've had to jump through so many hoops.",
           DialogueId = 10041302,
           GUID = "1923291C",
           SpeakNpcId = 100401,

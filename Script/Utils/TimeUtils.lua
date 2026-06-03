@@ -87,13 +87,10 @@ end
 
 function TimeUtils.TimestampNextClock(next_clock)
   local now = TimeUtils.NowTime()
-  local dateTable = os.date("*t", now)
-  dateTable.hour = next_clock
-  dateTable.min = 0
-  dateTable.sec = 0
-  local next_clock_timestamp = os.time(dateTable)
-  if now > next_clock_timestamp then
-    next_clock_timestamp = next_clock_timestamp + 86400
+  local dateTable = TimeUtils.TimestampToDataObj(now)
+  local next_clock_timestamp = TimeUtils.DataToTimestamp(dateTable.year, dateTable.month, dateTable.day, next_clock, 0, 0)
+  if now >= next_clock_timestamp then
+    next_clock_timestamp = TimeUtils.DataToTimestamp(dateTable.year, dateTable.month, dateTable.day + 1, next_clock, 0, 0)
   end
   return next_clock_timestamp
 end

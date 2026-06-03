@@ -6990,42 +6990,42 @@
     "charId": 2101,
     "name": "Apparence de personnage : Première rencontre",
     "res": "char_Shuimu02_vo_gain",
-    "text": "我爱你，哪怕昏聩、衰朽、坠落直至溺于水底，我都将深爱着你。爱之神就在这里，倾听我们的誓言，见证我们的约定。你，可不要背约哟。"
+    "text": "Je vous aimerai toujours... à travers l’égarement, la décrépitude et la chute, jusqu’à me noyer dans les abysses. Le dieu de l’Amour est ici... il entend nos serments et veille sur notre union. Vous... ne songeriez pas à la trahir, n’est-ce pas ?"
   },
   {
     "id": 21010002,
     "charId": 2101,
     "name": "Apparence de personnage : Prêt à l’action",
     "res": "char_Shuimu02_vo_appear",
-    "text": "爱人啊，请你揭开我的头纱。"
+    "text": "Mon aimé... venez donc soulever mon voile."
   },
   {
     "id": 21010003,
     "charId": 2101,
     "name": "Apparence de personnage : Début du combat",
     "res": "char_Shuimu02_vo_battlestart",
-    "text": "\n好像有客人们想要打扰我们的宴会，得要好好招待他们才行。"
+    "text": "On dirait que des invités veulent troubler notre banquet... Offrons-leur l’accueil qu’ils méritent."
   },
   {
     "id": 21010004,
     "charId": 2101,
     "name": "Apparence de personnage : Compétence ultimeI",
     "res": "char_Shuimu02_vo_skill02_r01",
-    "text": "育诞……爱的新生！"
+    "text": "Advienne... le renouveau de l’Amour !"
   },
   {
     "id": 21010005,
     "charId": 2101,
     "name": "Apparence de personnage : Compétence ultimeII",
     "res": "char_Shuimu02_vo_skill02_r02",
-    "text": "让我听到你们的祝福！"
+    "text": "Laissez-moi entendre vos bénédictions !"
   },
   {
     "id": 21010006,
     "charId": 2101,
     "name": "Apparence de personnage : Compétence ultimeIII",
     "res": "char_Shuimu02_vo_skill02_r03",
-    "text": "太过吵闹的客人，会受到惩戒哦。"
+    "text": "Les invités un peu trop bruyants... recevront une douce punition."
   },
   {
     "id": 21010007,

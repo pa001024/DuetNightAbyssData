@@ -2218,7 +2218,7 @@ return ReadOnly("Npc", {
   [100445] = {
     Camp = "NPC",
     CollisionLevel = 999,
-    ModelId = 30056,
+    ModelId = 30055,
     MouthProfile = "LipSync_10009",
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNF_Shoupiao",

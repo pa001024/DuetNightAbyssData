@@ -503,6 +503,7 @@ function M:OpenEditGuildDeclarationDialog()
       TextLimit = GuildCommon.GuildDeclMaxLen,
       HintText = GText("UI_Chat_InputHint"),
       bLimitSpaces = true,
+      bLimitBr = true,
       Text = self.CurrGuildInfo.Declaration or "",
       bNeedCheckStringSensitive = true,
       OnCheckStringSensitive = function(_, bSuccess, Name)

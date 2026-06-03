@@ -109431,7 +109431,7 @@ Tirer sur les cibles pour marquer des points.
   },
   {
     MinKey = "voice_ch_char_Nifu_vo_die_r01",
-    MaxKey = "voice_ch_char_Suyi_vo_skill02_r05",
+    MaxKey = "voice_ch_char_Suyi_vo_skill01_r01",
     Loader = function()
       return {
         voice_ch_char_Nifu_vo_die_r01 = {
@@ -109785,6 +109785,30 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Shuimu01_vo_skill02_r01 = {
           ContentFR = "Que ce voile de sept couches, tel un saphir, se teigne de cramoisi.",
           TextMapId = "voice_ch_char_Shuimu01_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu02_vo_appear = {
+          ContentFR = "Mon aimé... venez donc soulever mon voile.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_appear"
+        },
+        voice_ch_char_Shuimu02_vo_battlestart = {
+          ContentFR = "On dirait que des invités veulent troubler notre banquet... Offrons-leur l’accueil qu’ils méritent.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_battlestart"
+        },
+        voice_ch_char_Shuimu02_vo_gain = {
+          ContentFR = "Je vous aimerai toujours... à travers l’égarement, la décrépitude et la chute, jusqu’à me noyer dans les abysses. Le dieu de l’Amour est ici... il entend nos serments et veille sur notre union. Vous... ne songeriez pas à la trahir, n’est-ce pas ?",
+          TextMapId = "voice_ch_char_Shuimu02_vo_gain"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r01 = {
+          ContentFR = "Advienne... le renouveau de l’Amour !",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r02 = {
+          ContentFR = "Laissez-moi entendre vos bénédictions !",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r02"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r03 = {
+          ContentFR = "Les invités un peu trop bruyants... recevront une douce punition.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r03"
         },
         voice_ch_char_Shuimu_vo_appear = {
           ContentFR = "Eh, c’est un rendez-vous que tu me proposes ?",
@@ -110209,7 +110233,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Suyi_vo_skill01_r01 = {
           ContentFR = "Mode Poursuite du soleil activé.",
           TextMapId = "voice_ch_char_Suyi_vo_skill01_r01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi_vo_skill01_r02",
+    MaxKey = "voice_ch_char_Yuming_vo_appear",
+    Loader = function()
+      return {
         voice_ch_char_Suyi_vo_skill01_r02 = {
           ContentFR = "Équilibre... stable.",
           TextMapId = "voice_ch_char_Suyi_vo_skill01_r02"
@@ -110233,15 +110265,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Suyi_vo_skill02_r05 = {
           ContentFR = "Ouah... voler comme ça, c’est génial !",
           TextMapId = "voice_ch_char_Suyi_vo_skill02_r05"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_topic_01_1",
-    MaxKey = "voice_ch_char_Yuming_vo_companio_02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_topic_01_1 = {
           ContentFR = "Assembler des mécanismes, polir des engrenages, chercher de nouveaux matériaux... et bricoler jusqu’à obtenir une version encore meilleure.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_01_1"
@@ -111019,7 +111043,15 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Yuming_vo_appear = {
           ContentFR = "C’est un honneur.",
           TextMapId = "voice_ch_char_Yuming_vo_appear"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yuming_vo_battleidle",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yuming_vo_battleidle = {
           ContentFR = "Ne doute pas.",
           TextMapId = "voice_ch_char_Yuming_vo_battleidle"
@@ -111043,15 +111075,7 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Yuming_vo_companio_02 = {
           ContentFR = "Nous ne sommes plus les camarades d’autrefois. Comme le vent qui passe, les gens vont et viennent. Mieux vaut laisser le passé derrière soi.",
           TextMapId = "voice_ch_char_Yuming_vo_companio_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yuming_vo_companio_03",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yuming_vo_companio_03 = {
           ContentFR = "Ta détermination et ton respect des règles m’impressionnent. As-tu déjà été assailli par le doute ?",
           TextMapId = "voice_ch_char_Yuming_vo_companio_03"

@@ -23,6 +23,7 @@ local function BuildAccessoryRankSelfInfo(RankPayload)
   local Avatar = GWorld and GWorld:GetAvatar() or nil
   local FinalSelfRankInfo = SelfRankInfo or {}
   local MatchedRankInfo
+  local LocalAccessoryScore = 0
   if Avatar then
     FinalSelfRankInfo.Uid = FinalSelfRankInfo.Uid or Avatar.Uid
     FinalSelfRankInfo.HeadIconId = FinalSelfRankInfo.HeadIconId or Avatar.HeadIconId
@@ -32,6 +33,7 @@ local function BuildAccessoryRankSelfInfo(RankPayload)
     FinalSelfRankInfo.TitleBefore = FinalSelfRankInfo.TitleBefore or Avatar.TitleBefore
     FinalSelfRankInfo.TitleAfter = FinalSelfRankInfo.TitleAfter or Avatar.TitleAfter
     FinalSelfRankInfo.TitleFrame = FinalSelfRankInfo.TitleFrame or Avatar.TitleFrame
+    LocalAccessoryScore = tonumber(Avatar.AccssoryScore or 0) or 0
   end
   if Avatar and Avatar.Uid and TopNInfo then
     local AvatarUid = tonumber(Avatar.Uid) or Avatar.Uid
@@ -55,7 +57,7 @@ local function BuildAccessoryRankSelfInfo(RankPayload)
     FinalSelfRankInfo.TitleFrame = FinalSelfRankInfo.TitleFrame or MatchedRankInfo.TitleFrame
   end
   if FinalSelfRankInfo.Score == nil then
-    FinalSelfRankInfo.Score = MatchedRankInfo and MatchedRankInfo.Score or 0
+    FinalSelfRankInfo.Score = MatchedRankInfo and MatchedRankInfo.Score or LocalAccessoryScore
   end
   return FinalSelfRankInfo, TopNInfo
 end

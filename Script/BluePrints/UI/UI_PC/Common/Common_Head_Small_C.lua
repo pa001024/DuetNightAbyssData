@@ -20,7 +20,7 @@ end
 function M:Construct()
   self.Button_Area.OnHovered:Add(self, self.BtnAreaOnHovered)
   self.Button_Area.OnUnhovered:Add(self, self.BtnAreaOnUnhovered)
-  self.Button_Area.OnReleased:Add(self, self.BtnAreaOnClicked)
+  self.Button_Area.OnClicked:Add(self, self.BtnAreaOnClicked)
   self.Button_Area.OnPressed:Add(self, self.BtnAreaOnPressed)
 end
 
@@ -31,21 +31,21 @@ function M:Destruct()
   self.bSelected = nil
   self.Button_Area.OnHovered:Remove(self, self.BtnAreaOnHovered)
   self.Button_Area.OnUnhovered:Remove(self, self.BtnAreaOnUnhovered)
-  self.Button_Area.OnReleased:Remove(self, self.BtnAreaOnClicked)
+  self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
   self.Button_Area.OnPressed:Remove(self, self.BtnAreaOnPressed)
 end
 
-function M:BtnAreaOnPressed(MyGeometry, MouseEvent)
+function M:BtnAreaOnPressed()
   DebugPrint(LXYTag, "Common_Head_Small_C:BtnAreaOnPressed")
   if self.bDisableAction then
-    return Handled
+    return
   end
   if self.bSelected then
-    return Handled
+    return
   end
   self:StopAllAnimations()
   self:PlayAnimation(self.Press)
-  return Handled
+  return
 end
 
 function M:SetHeadFrame(HeadFrameId)
@@ -86,10 +86,10 @@ function M:SetHeadFrame(HeadFrameId)
   end
 end
 
-function M:BtnAreaOnClicked(MyGeometry, MouseEvent)
+function M:BtnAreaOnClicked()
   DebugPrint(LXYTag, "Common_Head_Small_C:BtnAreaOnClicked")
   if self.bDisableAction then
-    return Handled
+    return
   end
   if self.bHead then
     AudioManager(self):PlayUISound(self, "event:/ui/common/team_avatar_click", nil, nil)
@@ -102,7 +102,6 @@ function M:BtnAreaOnClicked(MyGeometry, MouseEvent)
   if self.ClickFunc then
     self.ClickFunc()
   end
-  return Handled
 end
 
 function M:SetHeadIcon(HeadIcon, bUseBigHead)
@@ -121,6 +120,9 @@ function M:SetHeadIcon(HeadIcon, bUseBigHead)
 end
 
 function M:SetHeadIconById(HeadIconId, bUseBigHead)
+  if not HeadIconId then
+    return
+  end
   self.DynamicHead:ClearChildren()
   self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local HeadData = DataMgr.HeadSculpture[HeadIconId]
@@ -145,6 +147,17 @@ function M:SetHeadIconById(HeadIconId, bUseBigHead)
       local Slot = UWidgetLayoutLibrary.SlotAsBorderSlot(Widget)
       Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
       Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+      if self:IsPlayingAnimation(self.Add) then
+        local Delegate
+        Delegate = {
+          self,
+          function()
+            self.Panel_Img:SetActiveWidgetIndex(5)
+            self:UnbindFromAnimationFinished(self.Add, Delegate)
+          end
+        }
+        self:BindToAnimationFinished(self.Add, Delegate)
+      end
     end, HeadData.DynamicPath)
   end
 end

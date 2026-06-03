@@ -54,7 +54,11 @@ function M:AddTeammateUI(Member, bAnim, HeadUI, Index)
 end
 
 function M:DelTeammateUI(Uid)
-  local DelIndex = self.Teammate2UI[Uid].Index
+  local MemberUI = self.Teammate2UI[Uid]
+  if not MemberUI then
+    return
+  end
+  local DelIndex = MemberUI.Index
   if self.TeammateCount >= MaxTeammate then
     local Slot = UWidgetLayoutLibrary.SlotAsHorizontalBoxSlot(self.WB_Player)
     Rule.SizeRule = UE.ESlateSizeRule.Automatic

@@ -39762,7 +39762,7 @@ local Data = {
           TextMapId = "READ_NAME_2000046"
         },
         READ_NAME_2000047 = {
-          ContentKR = "제왕의 애끼반지 훈장",
+          ContentKR = "황제의 애끼반지 훈장",
           TextMapId = "READ_NAME_2000047"
         },
         READ_NAME_2000048 = {
@@ -40414,7 +40414,7 @@ local Data = {
           TextMapId = "READ_TEXT_2000046"
         },
         READ_TEXT_2000047 = {
-          ContentKR = "코퀴투스 주 아이스레이크 시티 제6군단 소속 방위대, <H>리듬 페실</>은 수년간, 여러 차례의 <H>필토이드 토벌 작전</>을 현명한 판단과 용맹한 전투로 신속하게 마무리 지었다.\n지역 치안을 유지하는 과정에서 더할 나위 없이 핵심적인 작용을 발휘했다.\n군단의 평가를 거쳐, 황제 폐하 율리우스의 이름으로 리듬 페실에게 황제 새끼손가락 반지 훈장과 함께 준위의 계급을 수여하니 모든 군인은 이를 모범으로 삼아 정진하고 성장하기를 바란다.\n황제 폐하께 영광을.",
+          ContentKR = "코퀴투스 주 아이스레이크 시티 제6군단 소속 방위대, <H>리듬 페실</>은 수년간, 여러 차례의 <H>필토이드 토벌 작전</>을 현명한 판단과 용맹한 전투로 신속하게 마무리 지었다.\n지역 치안을 유지하는 과정에서 더할 나위 없이 핵심적인 작용을 발휘했다.\n군단의 평가를 거쳐, 황제 폐하 율리우스의 이름으로 리듬 페실에게 황제 애끼반지 훈장과 함께 준위의 계급을 수여하니 모든 군인은 이를 모범으로 삼아 정진하고 성장하기를 바란다.\n황제 폐하께 영광을.",
           TextMapId = "READ_TEXT_2000047"
         },
         READ_TEXT_2000048 = {
@@ -79278,7 +79278,7 @@ local Data = {
           TextMapId = "UI_Channel_Name_8"
         },
         UI_Chapter03_Transition01 = {
-          ContentKR = "열차 출발까지",
+          ContentKR = "열차 출발까지{空格}",
           TextMapId = "UI_Chapter03_Transition01"
         },
         UI_Chapter03_Transition02 = {
@@ -96562,7 +96562,7 @@ local Data = {
           TextMapId = "UI_PrivateChatNotEnabled"
         },
         UI_Prompt_QuestTrans = {
-          ContentKR = "이동하시겠습니까?",
+          ContentKR = "(으)로 이동하시겠습니까?",
           TextMapId = "UI_Prompt_QuestTrans"
         },
         UI_Prop_ExploreItem = {
@@ -109421,7 +109421,7 @@ local Data = {
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_fail",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_05_1",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_02_4",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_fail = {
@@ -109908,6 +109908,30 @@ local Data = {
           ContentKR = "저 사파이어와도 같은 일곱 겹 베일을 진홍빛으로 물들여 볼까요.",
           TextMapId = "voice_ch_char_Shuimu01_vo_skill02_r01"
         },
+        voice_ch_char_Shuimu02_vo_appear = {
+          ContentKR = "내 사랑, 제 베일을 열어 주세요.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_appear"
+        },
+        voice_ch_char_Shuimu02_vo_battlestart = {
+          ContentKR = "우리 파티를 방해하려는 손님들이 있나 보네요. 정중히 환대해 줘야겠어요.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_battlestart"
+        },
+        voice_ch_char_Shuimu02_vo_gain = {
+          ContentKR = "사랑해요. 눈이 멀고, 늙고 병들어 깊은 바닥까지 추락한다 해도, 언제나 당신을 사랑할 거예요. 사랑의 신이 지금 여기서 우리 맹세를 듣고, 우리 약속을 지켜봐 주실 거예요. 그러니까, 절대 배신하지 말아요.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_gain"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r01 = {
+          ContentKR = "탄생하라... 새로운 사랑이여!",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r02 = {
+          ContentKR = "모두의 축복을 들려 주세요!",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r02"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r03 = {
+          ContentKR = "너무 시끄러운 손님은, 벌을 받을 텐데요.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r03"
+        },
         voice_ch_char_Shuimu_vo_appear = {
           ContentKR = "엇? 저한테 데이트 신청하시는 건가요?",
           TextMapId = "voice_ch_char_Shuimu_vo_appear"
@@ -110199,7 +110223,15 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_02_4 = {
           ContentKR = "맞아! 사람들을 배고프게 만드는 녀석들은 헤이즐넛이 날려버릴 거야!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_02_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_03_1",
+    MaxKey = "voice_ch_char_Yeer_vo_battlestart_r02",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_03_1 = {
           ContentKR = "많이 먹어. 다만 따로 음식을 준비할 필요는 없어. 알아서 찾아 먹거든. 먼 곳에 있는 잘 익은 베리의 냄새도 맡을 수 있는 데다가, 나를 업고 달려갈 수 있어서 엄청 대단하다구.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_03_1"
@@ -110223,15 +110255,7 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_05_1 = {
           ContentKR = "멍하니 있는 게 아니라 명상하는 거야. 어쨌든 난 교회의 일원이잖아. 가끔 이렇게 열심히 고민하기도 해.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_05_2",
-    MaxKey = "voice_ch_char_Yeer_vo_companio_03",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_05_2 = {
           ContentKR = "전에는 했었지. 다만 수사님들이 그런 생각을 하는 건 신성 고독...? 이래. 그래서 그런 생각은 안 해.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_2"
@@ -111007,7 +111031,15 @@ local Data = {
         voice_ch_char_Yeer_vo_battlestart_r02 = {
           ContentKR = "예일: 실험 시작이에요. 조, 조심해요.",
           TextMapId = "voice_ch_char_Yeer_vo_battlestart_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_be_hit_heavy_r01",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_be_hit_heavy_r01 = {
           ContentKR = "(올리버) 두고 보자.",
           TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r01"
@@ -111031,15 +111063,7 @@ local Data = {
         voice_ch_char_Yeer_vo_companio_03 = {
           ContentKR = "예일: 으아... 화, 화내지 마세요. 제 폭탄 실험은 다 아! 아, 아, 아, 안전 규칙에 부합한다고요...",
           TextMapId = "voice_ch_char_Yeer_vo_companio_03"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_die_r01",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_die_r01 = {
           ContentKR = "(올리버) 예일도... 아프겠지...",
           TextMapId = "voice_ch_char_Yeer_vo_die_r01"

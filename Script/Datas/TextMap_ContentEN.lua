@@ -112016,7 +112016,7 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Suyi01_vo_appear",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_04_3",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_skill02_r01 = {
@@ -112489,6 +112489,30 @@ Delicious ones, you say?]],
           ContentEN = "Let's tint the seven-ply sapphire gauze with crimson.",
           TextMapId = "voice_ch_char_Shuimu01_vo_skill02_r01"
         },
+        voice_ch_char_Shuimu02_vo_appear = {
+          ContentEN = "My love, lift my veil.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_appear"
+        },
+        voice_ch_char_Shuimu02_vo_battlestart = {
+          ContentEN = "Some guests wish to intrude. Best we give them a proper welcome.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_battlestart"
+        },
+        voice_ch_char_Shuimu02_vo_gain = {
+          ContentEN = "I will love you still, even through the haze, through ruin, through the fall — down to the depths. Let Heaven bear witness now, to the vow we speak, and the promise we make. You won't break it, will you?",
+          TextMapId = "voice_ch_char_Shuimu02_vo_gain"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r01 = {
+          ContentEN = "A birth… of love divine!",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r01"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r02 = {
+          ContentEN = "Your blessings… I'm listening.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r02"
+        },
+        voice_ch_char_Shuimu02_vo_skill02_r03 = {
+          ContentEN = "Guests who make too much noise… will be punished.",
+          TextMapId = "voice_ch_char_Shuimu02_vo_skill02_r03"
+        },
         voice_ch_char_Shuimu_vo_appear = {
           ContentEN = "Are you inviting me on a date?",
           TextMapId = "voice_ch_char_Shuimu_vo_appear"
@@ -112802,7 +112826,15 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_topic_04_3 = {
           ContentEN = "But if the day comes, when no one's starving anymore, I'll have them changed back into a dress!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_05_1",
+    MaxKey = "voice_ch_char_Yeer_vo_companio_02",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_05_1 = {
           ContentEN = "Oh, I was meditating, not zoning out. I'm a member of the Elysian Church after all, so I do try to give some deep thought occasionally.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_1"
@@ -112826,15 +112858,7 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Suyi01_vo_appear = {
           ContentEN = "Skypatroller Sapta, ready and raring.",
           TextMapId = "voice_ch_char_Suyi01_vo_appear"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi01_vo_battlestart",
-    MaxKey = "voice_ch_char_Yeer_vo_idle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi01_vo_battlestart = {
           ContentEN = "Those who seek to stir up conflict, shall be expelled by me.",
           TextMapId = "voice_ch_char_Suyi01_vo_battlestart"
@@ -113622,7 +113646,15 @@ Oliver: Hmph, just another victim.]],
 Yale: Is Filbert... your friend? I have a good friend too. He's as r-reliable as F-Filbert.
 Oliver: Wait, seriously?]],
           TextMapId = "voice_ch_char_Yeer_vo_companio_02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_companio_03",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_companio_03 = {
           ContentEN = "Yale: Uh... p-please don't be mad, a-all my bomb experiments are up to s-s-s-safety s-standards...",
           TextMapId = "voice_ch_char_Yeer_vo_companio_03"
@@ -113651,15 +113683,7 @@ Yale: Peter Piker p-picked a peck of p-p-peckled peppers...
  Oliver: It's "Peter Piper picked a peck of pickled peppers!" Come on, Yale, keep up!
  Yale: O-Okay! P-Peter Piker p-picked...]],
           TextMapId = "voice_ch_char_Yeer_vo_idle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_lvup",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_lvup = {
           ContentEN = "Yale: Yay! Oliver, we've grown stronger together.",
           TextMapId = "voice_ch_char_Yeer_vo_lvup"

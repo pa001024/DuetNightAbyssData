@@ -61,6 +61,7 @@ function M:InitPageView()
   self:UpdateMonthSignInRewardInfo()
   self:UpdateCumulativeRewardInfo()
   self:UpdateCumulativeSignInText()
+  self:UpdatePrice()
 end
 
 function M:UpdateStaticWidget()

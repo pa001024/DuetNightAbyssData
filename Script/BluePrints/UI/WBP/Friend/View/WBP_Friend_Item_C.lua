@@ -115,8 +115,11 @@ function M:Construct()
   })
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     local Info = (...)
-    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.PersonData.GuildId == Info.GuildId then
+    local GuildId = (...)
+    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.WaitGuildId == Info.GuildId then
       self:OnGetGuildFullInfo(Info)
+    elseif EventId == GuildCommon.EventID.OnGetGuildInfoFail and self.WaitGuildId == GuildId then
+      self:OnGetGuildFullInfo(nil)
     end
   end)
 end
@@ -799,24 +802,29 @@ function M:WaitCardGuildInfoCallback()
     end
     self.WaitGuildId = nil
     self.Head_Anchor:Open(true)
-    self.Owner:BlockAllUIInput(false)
   end
 end
 
 function M:GetCardGuildInfo(GuildId, Uid)
   self.WaitCardGuildInfo = 2
-  self.Owner:BlockAllUIInput(true, "SP_DisplayOnly")
   self.CardGuildFullInfo = nil
   self.WaitGuildId = nil
   local Avatar = ChatController:GetAvatar()
   Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+    if Ret ~= ErrorCode.RET_SUCCESS then
+      return
+    end
     if not IsValid(self) then
       return
     end
     local Info = MemberInfos[Uid]
     if Info.GuildId and 0 ~= Info.GuildId then
       self.WaitGuildId = Info.GuildId
-      GuildController:SendGetGuildInfo(Info.GuildId)
+      if Info.GuildId == GuildController:GetAvatar().GuildId then
+        self:OnGetGuildFullInfo(GuildController:GetModel():GetCurrGuild())
+      else
+        GuildController:SendGetGuildInfo(Info.GuildId)
+      end
       Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
         if Ret ~= ErrorCode.RET_SUCCESS then
           return
@@ -828,7 +836,7 @@ function M:GetCardGuildInfo(GuildId, Uid)
       self:WaitCardGuildInfoCallback()
       self:WaitCardGuildInfoCallback()
     end
-  end, {Uid})
+  end, {Uid}, true)
 end
 
 function M:OnGetGuildFullInfo(Info)
