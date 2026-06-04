@@ -32,4 +32,48 @@ P_MAP = {
     "触发切割额外效果时对护盾伤害": "触发倍率",
     "ExplodeBulletRate": "爆炸伤害",
     "RayCreatureRate": "射线伤害",
+    "全属性穿透": "属性穿透",
 }
+
+
+def get_attr_config_key_from_attr_data(attr_data, attr_config=None, unique_name=""):
+    """按客户端 AvatarUtils 规则拼接属性键。"""
+    if not isinstance(attr_data, dict):
+        return ""
+
+    attr_name = attr_data.get("AttrName", "")
+    if not attr_name:
+        return ""
+
+    attr_config = attr_config or {}
+
+    if attr_name in ("DamageRate", "DamagedRate"):
+        if attr_data.get("IndividualRateZone"):
+            key = f"{attr_name}_NoTag_{unique_name}"
+            if key in attr_config:
+                return key
+        tag = attr_data.get("DamageTag")
+        rate_zone = attr_data.get("RateZone")
+        if tag or rate_zone:
+            tag = tag or "NoTag"
+            rate_zone = rate_zone or "Normal"
+            client_key = f"{attr_name}_{tag}_{rate_zone}"
+            if client_key in attr_config:
+                return client_key
+            zone_key = f"{attr_name}_{rate_zone}"
+            if zone_key in attr_config:
+                return zone_key
+        if attr_name in attr_config:
+            return attr_name
+        if tag or rate_zone:
+            return client_key
+        return attr_name
+
+    if attr_name in attr_config:
+        return attr_name
+
+    normal_key = f"{attr_name}_Normal"
+    if normal_key in attr_config:
+        return normal_key
+
+    return attr_name

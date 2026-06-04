@@ -36,6 +36,7 @@ class DungeonProcessor(BaseProcessor):
         self.monster_group_data = data_loader.load_json("MonsterGroup.json")
         self.monster_group_spawn_data = data_loader.load_json("MonsterGroupSpawn.json")
         self.relation_spawn_data = data_loader.load_json("RelationSpawn.json")
+        self.iron_survival_data = data_loader.load_json("IronSurvival.json")
         self.dungeon_mod_condition_map = self._build_dungeon_mod_condition_map()
         self.elite_rush_dungeon_ids = self._build_elite_rush_dungeon_ids()
         self.dungeon_mod_condition_direct_map = (
@@ -176,9 +177,13 @@ class DungeonProcessor(BaseProcessor):
                     processed["sr"] = sr
 
         # 处理DungeonMonsters
-        if "DungeonMonsters" in dungeon_data:
+        if dungeon_type == "IronSurvival":
+            iron_survival_monsters = self._get_iron_survival_monsters(dungeon_id)
+            if not iron_survival_monsters:
+                return None
+            processed["m"] = iron_survival_monsters
+        elif "DungeonMonsters" in dungeon_data:
             dungeon_monsters = dungeon_data.get("DungeonMonsters", [])
-
             processed["m"] = dungeon_monsters
         else:
             if dungeon_type != "AsyncCombat":
@@ -212,6 +217,65 @@ class DungeonProcessor(BaseProcessor):
         #     processed["启用战术地图"] = dungeon_data.get("EnableTacmap")
 
         return processed
+
+    def _get_iron_survival_monsters(self, dungeon_id):
+        """收集 IronSurvival 副本所有波次里引用到的怪物 ID。"""
+        dungeon_spawn = self.iron_survival_data.get(str(dungeon_id)) or self.iron_survival_data.get(
+            dungeon_id
+        )
+        if not dungeon_spawn:
+            return []
+
+        monster_ids = set()
+        for spawn_id in self._collect_iron_survival_spawn_ids(dungeon_spawn):
+            self._collect_iron_survival_monster_ids(monster_ids, spawn_id)
+        return sorted(monster_ids)
+
+    def _collect_iron_survival_spawn_ids(self, value):
+        """递归展开 IronSurvival 的波次 id 结构。"""
+        spawn_ids = []
+        self._collect_iron_survival_spawn_ids_recursive(spawn_ids, value)
+        return spawn_ids
+
+    def _collect_iron_survival_spawn_ids_recursive(self, target_ids, value):
+        """递归收集 IronSurvival 中的 spawn id。"""
+        if value is None:
+            return
+
+        if isinstance(value, dict):
+            for item in value.values():
+                self._collect_iron_survival_spawn_ids_recursive(target_ids, item)
+            return
+
+        if isinstance(value, list):
+            for item in value:
+                self._collect_iron_survival_spawn_ids_recursive(target_ids, item)
+            return
+
+        try:
+            target_ids.append(int(value))
+        except (TypeError, ValueError):
+            pass
+
+    def _collect_iron_survival_monster_ids(self, target_ids, spawn_id):
+        """从单个 MonsterSpawnId 中收集实际怪物 ID。"""
+        spawn_config = self.monster_spawn_data.get(str(spawn_id)) or self.monster_spawn_data.get(
+            spawn_id
+        )
+        if not spawn_config:
+            return
+
+        for monster_spawn_info in spawn_config.get("MonsterSpawnInfos", []):
+            if not isinstance(monster_spawn_info, dict):
+                continue
+            monster_id = monster_spawn_info.get("UnitId")
+            try:
+                target_ids.add(int(monster_id))
+            except (TypeError, ValueError):
+                pass
+
+        if spawn_config.get("OpenGroupSpawn"):
+            self._append_group_spawn_info({}, spawn_config)
 
     def _get_dungeon_spawn(self, dungeon_data):
         """根据副本配置获取怪物刷新波次"""

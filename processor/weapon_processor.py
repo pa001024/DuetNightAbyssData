@@ -1,5 +1,5 @@
 from processor.base_processor import BaseProcessor
-from processor._util import P_MAP
+from processor._util import P_MAP, get_attr_config_key_from_attr_data
 from processor.skill_creature_utils import extract_skill_creatures
 import re
 import os
@@ -35,6 +35,15 @@ class WeaponProcessor(BaseProcessor):
         self._asset_root = os.path.join(self._project_root, "out", "Asset")
         self._anim_path_cache = {}
         self._anim_meta_cache = {}
+
+    def _get_attr_config(self, attr_data, unique_name=""):
+        """按拼接后的属性键获取 AttrConfig。"""
+        attr_key = get_attr_config_key_from_attr_data(
+            attr_data, self.attr_config, unique_name
+        )
+        if not attr_key:
+            return {}
+        return self.attr_config.get(attr_key, {})
 
     def process_item(self, item_data, language):
         weapon_data = item_data
@@ -682,24 +691,21 @@ class WeaponProcessor(BaseProcessor):
             **P_MAP,
         }
         for attr in add_attrs:
-            attr_name = attr.get("AttrName", "")
-            if (
-                attr_name in self.attr_config
-                or attr_name + "_Normal" in self.attr_config
-            ):
-                cfg = self.attr_config.get(attr_name) or self.attr_config.get(
-                    attr_name + "_Normal", {}
-                )
-                an = self.get_translated_text(cfg.get("Name", ""), "cn")
-                # 确保attr对象有正确的Type字段
-                if "Type" not in attr:
-                    attr = dict(attr)  # 创建副本避免修改原始数据
-                    attr["Type"] = "BattleWeapon"
-                if an in anmap:
-                    an = anmap[an]
-                attributes[an] = self._calc_attr_by_level(attr, weapon_id, 1)
-            else:
+            cfg = self._get_attr_config(attr, weapon_id)
+            attr_name_key = cfg.get("Name", "")
+            if not attr_name_key:
+                attr_name = attr.get("AttrName", "")
                 attributes[attr_name] = attr_name
+                continue
+
+            an = self.get_translated_text(attr_name_key, "cn")
+            # 确保attr对象有正确的Type字段
+            if "Type" not in attr:
+                attr = dict(attr)  # 创建副本避免修改原始数据
+                attr["Type"] = "BattleWeapon"
+            if an in anmap:
+                an = anmap[an]
+            attributes[an] = self._calc_attr_by_level(attr, weapon_id, 1)
         return attributes
 
     def _process_attributes(self, battle_weapon, weapon_id):
@@ -781,12 +787,17 @@ class WeaponProcessor(BaseProcessor):
             return [], {}
 
         skill_tree_rows = []
+        base_skill_tree_rows = []
         for skill_id, skill_tree in self.hyper_weapon_skill_tree_data.items():
             if not isinstance(skill_tree, dict):
                 continue
             if skill_tree.get("WeaponId") != weapon_id:
                 continue
-            if skill_tree.get("WeaponCardLevel", 0) <= 0:
+            skill_card_level = skill_tree.get("WeaponCardLevel", 0)
+            if skill_card_level < 0:
+                continue
+            if skill_card_level == 0:
+                base_skill_tree_rows.append((skill_id, skill_tree))
                 continue
             skill_tree_rows.append((skill_id, skill_tree))
 
@@ -797,10 +808,54 @@ class WeaponProcessor(BaseProcessor):
                 item[1].get("WeaponSkillId", 0),
             )
         )
+        base_skill_tree_rows.sort(
+            key=lambda item: (
+                item[1].get("WeaponCardLevel", 0),
+                item[1].get("SkillIndex", 0),
+                item[1].get("WeaponSkillId", 0),
+            )
+        )
 
         furnace_rows = []
         furnace_addon = {}
-        for card_level_row in card_level_rows:
+        if base_skill_tree_rows:
+            base_row = {
+                "lv": 0,
+                "技能": [],
+            }
+            for skill_id, skill_tree in base_skill_tree_rows:
+                skill_row = {
+                    "id": skill_tree.get("WeaponSkillId", skill_id),
+                    "名称": self.get_translated_text(
+                        skill_tree.get("WeaponSkillName", "")
+                    ),
+                    "icon": self._extract_icon_name(skill_tree.get("SkillIcon", "")),
+                }
+                skill_desc = self._build_hyper_weapon_skill_desc(skill_tree, weapon_id)
+                if skill_desc:
+                    skill_row["描述"] = skill_desc
+
+                skill_addon = self._build_hyper_weapon_skill_addon(
+                    battle_weapon, skill_tree.get("WeaponSkillId", 0)
+                )
+                if not skill_addon:
+                    skill_addon = self._build_hyper_weapon_skill_addon_from_desc(
+                        skill_tree
+                    )
+                if skill_addon:
+                    skill_row["加成"] = skill_addon
+
+                unlock_map = self._build_resource_map(
+                    skill_tree.get("ResourceId", []),
+                    skill_tree.get("ResourceNum", []),
+                )
+                if unlock_map:
+                    skill_row["解锁"] = unlock_map
+
+                base_row["技能"].append(skill_row)
+            furnace_rows.append(base_row)
+
+        for index, card_level_row in enumerate(card_level_rows):
             if not isinstance(card_level_row, dict):
                 continue
 
@@ -817,9 +872,13 @@ class WeaponProcessor(BaseProcessor):
             }
 
             level_skills = []
+            level_skill_tree_rows = []
             for skill_id, skill_tree in skill_tree_rows:
                 if skill_tree.get("WeaponCardLevel", 0) != level:
                     continue
+                level_skill_tree_rows.append((skill_id, skill_tree))
+
+            for skill_id, skill_tree in level_skill_tree_rows:
 
                 skill_row = {
                     "id": skill_tree.get("WeaponSkillId", skill_id),
@@ -922,8 +981,7 @@ class WeaponProcessor(BaseProcessor):
             if attr.get("HyperWeaponSkillTreeID") != skill_tree_id:
                 continue
 
-            attr_name = attr.get("AttrName", "")
-            attr_config = self.attr_config.get(attr_name, {})
+            attr_config = self._get_attr_config(attr, skill_tree_id)
             attr_name_key = attr_config.get("Name", "")
             if not attr_name_key:
                 continue
@@ -933,6 +991,7 @@ class WeaponProcessor(BaseProcessor):
                 "武器多重射击": "多重",
             }
             fkey = fkeymap.get(fkey, fkey)
+            fkey = P_MAP.get(fkey, fkey)
             rst[fkey] = self.round_value(attr.get("Rate") or attr.get("Value", 0))
         return rst
 

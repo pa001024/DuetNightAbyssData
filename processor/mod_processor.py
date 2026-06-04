@@ -1,5 +1,5 @@
 from processor.base_processor import BaseProcessor
-from processor._util import P_MAP
+from processor._util import P_MAP, get_attr_config_key_from_attr_data
 import re
 import os
 import json
@@ -121,7 +121,8 @@ class ModProcessor(BaseProcessor):
                 continue
 
             # 获取中文属性名称
-            attr_config = self.attr_config.get(attr_name, {})
+            attr_key = get_attr_config_key_from_attr_data(attr, self.attr_config)
+            attr_config = self.attr_config.get(attr_key, {})
             attr_name_key = attr_config.get("Name", "")
             attr_chinese_name = self._translate_attribute_name(attr_name_key, language)
 

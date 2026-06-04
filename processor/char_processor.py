@@ -1,4 +1,5 @@
 from processor.base_processor import BaseProcessor
+from processor._util import get_attr_config_key_from_attr_data
 from processor.skill_creature_utils import (
     extract_skill_creatures,
 )
@@ -405,7 +406,8 @@ class CharProcessor(BaseProcessor):
             if not attr:
                 continue
             attr_name = attr.get("AttrName", "")
-            attr_config = self.attr_config.get(attr_name, {})
+            attr_key = get_attr_config_key_from_attr_data(attr, self.attr_config)
+            attr_config = self.attr_config.get(attr_key, {})
             attr_name_key = attr_config.get("Name", "")
             fkey = self.get_translated_text(attr_name_key)
             fkeymap = {
@@ -514,7 +516,10 @@ class CharProcessor(BaseProcessor):
                     value = base_value * grow_factor
 
                     # 获取属性中文名
-                    attr_config = self.attr_config.get(attr_name, {})
+                    attr_key = get_attr_config_key_from_attr_data(
+                        {"AttrName": attr_name}, self.attr_config
+                    )
+                    attr_config = self.attr_config.get(attr_key, {})
                     attr_name_key = attr_config.get("Name", "")
                     attr_chinese_name = self.get_translated_text(attr_name_key, "cn")
 
