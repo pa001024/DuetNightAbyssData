@@ -142,7 +142,7 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020504,
-    "extraBuffDesc": "Buff Effect: When taking damage, gains +25.0% DEF for 10s, stacking up to 3.0 times.",
+    "extraBuffDesc": "Buff Effect: When taking damage, gains +25.0% ATK for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020204,
     "unlockQuestId": 10300106,
     "shield": 0.9

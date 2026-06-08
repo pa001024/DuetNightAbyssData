@@ -249503,7 +249503,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200014] = {
           Content = "等等，好像哪儿不对劲……",
-          ContentFR = "Exactement ! Je vais aller prévenir le chef de gare, et les gardes viendront vous châtier !",
+          ContentFR = "<I>Attends... quelque chose ne colle pas.</>",
           DialogueId = 51200014,
           GUID = "802C824C",
           ImprPlusId = 1003,
@@ -249511,7 +249511,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200015] = {
           Content = "管你是谁，今天我就招惹了。",
-          ContentFR = "<I>Attends... quelque chose ne colle pas.</>",
+          ContentFR = "<I>Peu importe qui vous êtes. Aujourd’hui, je vais m’en mêler.</>",
           DialogueId = 51200015,
           GUID = "802C8276",
           ImprPlusId = 1005,
@@ -249519,7 +249519,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200016] = {
           Content = "就是就是，我要去找站长大人，让卫兵来制裁你们！",
-          ContentFR = "Qu’est-ce qui ne colle pas ?! Ils osent faire ça devant tout le monde ! Il faut prévenir les gardes de la gare !",
+          ContentFR = "Exactement ! Je vais aller prévenir le chef de gare, et les gardes viendront vous châtier !",
           DialogueId = 51200016,
           GUID = "802C82A0",
           NextDialogue = 51200019,
@@ -249527,7 +249527,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200017] = {
           Content = "什么不对劲呀！他们在大庭广众之下居然敢做出这种事情，我们得报告给车站卫兵！",
-          ContentFR = "<I>Peu importe qui vous êtes. Aujourd’hui, je vais m’en mêler.</>",
+          ContentFR = "Qu’est-ce qui ne colle pas ?! Ils osent faire ça devant tout le monde ! Il faut prévenir les gardes de la gare !",
           DialogueId = 51200017,
           GUID = "802C82CA",
           NextDialogue = 51200019,

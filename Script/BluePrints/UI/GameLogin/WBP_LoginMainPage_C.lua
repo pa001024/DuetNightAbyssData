@@ -1315,8 +1315,15 @@ function WBP_GameStartMainPage_C:OnClickSet()
 end
 
 function WBP_GameStartMainPage_C:OnClickSupport()
+  DebugPrint("---------WBP_GameStartMainPage_C:OnClickSupport---------")
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
-  HeroUSDKSubsystem(self):OpenService()
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+  if "OpenHarmony" == PlatformName then
+    DebugPrint("---------WBP_GameStartMainPage_C:OnClickSupport OpenHarmony---------")
+    HeroUSDKSubsystem(self):JumpInternalBrowser("kefu", "kefu")
+  else
+    HeroUSDKSubsystem(self):OpenService()
+  end
 end
 
 function WBP_GameStartMainPage_C:OnAccountTextChanged(Text)

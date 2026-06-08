@@ -156,12 +156,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177822564215039949869",
-            startPort = "Out",
-            endQuest = "177822592386240901787",
-            endPort = "In"
-          },
-          {
             startQuest = "177822367523325683558",
             startPort = "Out",
             endQuest = "177822564215039949869",
@@ -174,12 +168,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177822631740445659009",
-            startPort = "Out",
-            endQuest = "1778210834533124",
-            endPort = "Success"
-          },
-          {
             startQuest = "1778210834532116",
             startPort = "QuestStart",
             endQuest = "1778211224235951425",
@@ -190,6 +178,18 @@ return {
             startPort = "Out",
             endQuest = "177822631740445659009",
             endPort = "In"
+          },
+          {
+            startQuest = "177822564215039949869",
+            startPort = "Out",
+            endQuest = "17804670797261483",
+            endPort = "In"
+          },
+          {
+            startQuest = "17804670797261483",
+            startPort = "Out",
+            endQuest = "1778210834533124",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -545,7 +545,7 @@ return {
             key = "177822564215039949869",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1918.745436706874, y = 975.8808189496692},
+            pos = {x = 1918.745436706874, y = 977.3093903522903},
             propsData = {
               ShowEnable = true,
               MessageId = 304207,
@@ -576,7 +576,7 @@ return {
             key = "177822592386240901787",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 2268.745438641866, y = 971.5329928386753},
+            pos = {x = 1608.745450630914, y = 1202.9615600632947},
             propsData = {
               ShowEnable = true,
               MessageId = 304208,
@@ -664,6 +664,13 @@ return {
               MessageLoc = "Right",
               MessageLocOffset = {X = 0, Y = 0}
             }
+          },
+          ["17804670797261483"] = {
+            key = "17804670797261483",
+            type = "ShowGuideMainNode",
+            name = "显示图文引导",
+            pos = {x = 2257.1428639158908, y = 976.2857091216003},
+            propsData = {GuideId = 150}
           }
         },
         commentData = {}

@@ -99745,7 +99745,7 @@
                   },
                   {
                     "id": 51200014,
-                    "content": "Exactly! I'm going straight to Stationmaster Eisenbahn and having the guards deal with the two of you!",
+                    "content": "Wait. Something about this feels off...",
                     "next": 51200017,
                     "impr": [
                       1011,
@@ -99755,7 +99755,7 @@
                   },
                   {
                     "id": 51200015,
-                    "content": "Wait. Something about this feels off...",
+                    "content": "I don't care who you are. You're picking a fight with me.",
                     "next": 51200018,
                     "impr": [
                       1011,
@@ -99767,13 +99767,13 @@
               },
               {
                 "id": 51200016,
-                "content": "What are you talking about? How can they do something like this in front of everyone? We have to get the station guards!",
+                "content": "Exactly! I'm going straight to Stationmaster Eisenbahn and having the guards deal with the two of you!",
                 "npc": 200002,
                 "next": 51200019
               },
               {
                 "id": 51200017,
-                "content": "I don't care who you are. You're picking a fight with me.",
+                "content": "What are you talking about? How can they do something like this in front of everyone? We have to get the station guards!",
                 "npc": 200002,
                 "next": 51200019
               },

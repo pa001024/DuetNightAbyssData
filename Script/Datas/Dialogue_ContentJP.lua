@@ -41191,7 +41191,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10046202] = {
           Content = "能想出这个方法，然后还能做出来的你们真是不折不扣的疯子……如果下次还有这么帅气的计划，能不能也带上我……不，还是算了。",
-          ContentJP = "そんな無茶な作戦を思いついた上に、執行するなんてどうかしてるよ……次にまた、そんなかっこいい作戦があるなら、僕も――ううん、やっぱり今のはなし。",
+          ContentJP = "そんな無茶な作戦を思いついた上に、実行するなんてどうかしてるよ……次にまた、そんなかっこいい作戦があるなら、僕も――ううん、やっぱり今のはなし。",
           DialogueId = 10046202,
           GUID = "19264D04",
           SpeakNpcId = 100415,
@@ -46915,7 +46915,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10049923] = {
           Content = "用卡诺给的钩锁向前走吧。",
-          ContentJP = "カルノーにもらったフックロープで進も。",
+          ContentJP = "カルノーにもらったフックロープで進もう。",
           DialogueId = 10049923,
           GUID = "1928AF7E",
           SpeakNpcId = 100402,
@@ -249755,7 +249755,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200014] = {
           Content = "等等，好像哪儿不对劲……",
-          ContentJP = "そうだよ！駅長さんに言って、衛兵を呼んでもらうからね！",
+          ContentJP = "……待って。何かおかしい。",
           DialogueId = 51200014,
           GUID = "802C824C",
           ImprPlusId = 1003,
@@ -249763,7 +249763,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200015] = {
           Content = "管你是谁，今天我就招惹了。",
-          ContentJP = "……待って。何かおかしい。",
+          ContentJP = "相手が誰だろうと知るもんか。",
           DialogueId = 51200015,
           GUID = "802C8276",
           ImprPlusId = 1005,
@@ -249771,7 +249771,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200016] = {
           Content = "就是就是，我要去找站长大人，让卫兵来制裁你们！",
-          ContentJP = "何がおかしいの？こんな人目のある場所で、こんなことしてるんだよ？駅の衛兵に知らせなきゃ！",
+          ContentJP = "そうだよ！駅長さんに言って、衛兵を呼んでもらうからね！",
           DialogueId = 51200016,
           GUID = "802C82A0",
           NextDialogue = 51200019,
@@ -249779,7 +249779,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200017] = {
           Content = "什么不对劲呀！他们在大庭广众之下居然敢做出这种事情，我们得报告给车站卫兵！",
-          ContentJP = "相手が誰だろうと知るもんか。",
+          ContentJP = "何がおかしいの？こんな人目のある場所で、こんなことしてるんだよ？駅の衛兵に知らせなきゃ！",
           DialogueId = 51200017,
           GUID = "802C82CA",
           NextDialogue = 51200019,

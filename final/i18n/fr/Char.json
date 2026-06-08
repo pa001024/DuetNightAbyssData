@@ -6378,7 +6378,7 @@
         "id": 230103,
         "名称": "Pan ! Encore un !",
         "类型": "Passive",
-        "描述": "Lorsqu’une arme à distance inflige un DGT CRIT, Tabethe a une chance d’invoquer 1 [Tentacule] près de la cible. Cet effet ne peut se produire qu’une fois par seconde. Un maximum de 18 [Tentacules] peuvent être présents simultanément.",
+        "描述": "Lorsqu’une arme à distance inflige un coup critique, Tabethe a une chance d’invoquer 1 [Tentacule] près de la cible. Cet effet ne peut se produire qu’une fois par seconde. Un maximum de 18 [Tentacules] peuvent être présents simultanément.",
         "icon": "Zhangyu03",
         "字段": [
           {
@@ -14023,7 +14023,7 @@
         "id": 530103,
         "名称": "Lueur changeante",
         "类型": "Passive",
-        "描述": "Lorsqu’elle inflige un DGT CRIT, Psyche obtient aléatoirement l’un des bonus suivants :\n– Attaque augmentée\n– Puissance de compétence augmentée\n– Ténacité renforcée\nElle voit en plus ses dégâts augmenter pour chaque bonus dont elle bénéficie, jusqu’à un total de 12 bonus comptabilisés.",
+        "描述": "Lorsqu’elle inflige un coup critique, Psyche obtient aléatoirement l’un des bonus suivants :\n– Attaque augmentée\n– Puissance de compétence augmentée\n– Ténacité renforcée\nElle voit en plus ses dégâts augmenter pour chaque bonus dont elle bénéficie, jusqu’à un total de 12 bonus comptabilisés.",
         "icon": "Saiqi03",
         "字段": [
           {

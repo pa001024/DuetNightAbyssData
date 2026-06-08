@@ -6185,7 +6185,7 @@
     "name": "Exiled Thunderwyrm: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Exiled Thunderwyrm. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc": "Crafted with precision from the blueprint of Exiled Thunderwyrm. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
@@ -11988,7 +11988,7 @@
     "name": "Into the Nightveil",
     "icon": "T_Mounts_Gesture_0701",
     "rarity": 6,
-    "desc": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight.\nNo Reputation Perk is required to pilot this mount."
+    "desc": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight.\nFly Speed ＋50%. No Reputation Perk is required to pilot this mount."
   },
   {
     "id": 49990,
@@ -12933,7 +12933,7 @@
     "name": "Sigil: Void",
     "icon": "T_Resource_CallPhantom_Empty",
     "rarity": 4,
-    "desc": "A sigil for retracting a summoning. \nAlthough the gathering is brief, the longing does not cease, and perhaps the next reunion is just a blink away. ",
+    "desc": "A sigil for retracting a summoning. \nThe companionship might be fleeting, yet the friendship endures. Perhaps the next reunion is merely a heartbeat away.",
     "desc2": "\"Child, do not revel in companionship nor weep at parting, for we are but fleeting moments in time.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
   },
   {

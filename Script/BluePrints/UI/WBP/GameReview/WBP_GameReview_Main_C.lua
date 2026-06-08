@@ -67,7 +67,12 @@ end
 function M:JumpToFeedback()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
   if HeroUSDKSubsystem():IsHeroSDKEnable() then
-    HeroUSDKSubsystem(self):OpenService()
+    local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+    if "OpenHarmony" == PlatformName then
+      HeroUSDKSubsystem(self):JumpInternalBrowser("kefu")
+    else
+      HeroUSDKSubsystem(self):OpenService()
+    end
   end
   self:CloseUI()
 end

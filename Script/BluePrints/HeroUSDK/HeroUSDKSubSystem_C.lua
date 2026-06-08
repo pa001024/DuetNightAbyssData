@@ -475,7 +475,7 @@ end
 
 function HeroUSDKSubSystem_C:EMHeroSDKSwitchAccount()
   local Platform = UE4.UUIFunctionLibrary.GetDevicePlatformName()
-  if ("Android" == Platform or "OpenHarmony" == Platform) and not self:IsGlobalSDK() then
+  if "Android" == Platform and not self:IsGlobalSDK() then
     DebugPrint("HeroUSDKSubSystem_C HeroSDKLogout")
     self:HeroSDKLogout()
   else

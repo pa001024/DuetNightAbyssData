@@ -32877,7 +32877,7 @@ Pueden utilizar robots como ayuda durante el combate.]],
   },
   {
     MinKey = "PET_408_PASSIVE",
-    MaxKey = "Pack_Name_Dye_Green_Shop",
+    MaxKey = "Pack_Name_Dye_Blue_Shop",
     Loader = function()
       return {
         PET_408_PASSIVE = {
@@ -33055,6 +33055,10 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PROLOGUE_SELECTGUN_TIP_1 = {
           ContentES = "Selección de arma",
           TextMapId = "PROLOGUE_SELECTGUN_TIP_1"
+        },
+        PROLOGUE_SELECTGUN_TIP_2 = {
+          ContentES = "{空格}",
+          TextMapId = "PROLOGUE_SELECTGUN_TIP_2"
         },
         PROLOGUE_SELECTGUN_TIP_3 = {
           ContentES = "Selecciona un arma",
@@ -33675,19 +33679,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pack_Name_Dye_Blue_Shop = {
           ContentES = "Conjunto de tinte básico: Sal marina",
           TextMapId = "Pack_Name_Dye_Blue_Shop"
-        },
-        Pack_Name_Dye_Green_Shop = {
-          ContentES = "Conjunto de tinte básico: Madera",
-          TextMapId = "Pack_Name_Dye_Green_Shop"
         }
       }
     end
   },
   {
-    MinKey = "Pack_Name_Dye_Orange_Shop",
-    MaxKey = "PartyReward_Description_240104",
+    MinKey = "Pack_Name_Dye_Green_Shop",
+    MaxKey = "PartyReward_Description_240103",
     Loader = function()
       return {
+        Pack_Name_Dye_Green_Shop = {
+          ContentES = "Conjunto de tinte básico: Madera",
+          TextMapId = "Pack_Name_Dye_Green_Shop"
+        },
         Pack_Name_Dye_Orange_Shop = {
           ContentES = "Conjunto de tinte básico: Duna",
           TextMapId = "Pack_Name_Dye_Orange_Shop"
@@ -34477,19 +34481,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PartyReward_Description_240103 = {
           ContentES = "De apariencia extraña, en Huaxu es un preciado símbolo de longevidad.",
           TextMapId = "PartyReward_Description_240103"
-        },
-        PartyReward_Description_240104 = {
-          ContentES = "Aunque la lámpara de plata aún arde, temo que nuestro reencuentro no fue más que un sueño fugaz.",
-          TextMapId = "PartyReward_Description_240104"
         }
       }
     end
   },
   {
-    MinKey = "PartyReward_Description_310101",
-    MaxKey = "PartyTopic_Description_320103",
+    MinKey = "PartyReward_Description_240104",
+    MaxKey = "PartyTopic_Description_320102",
     Loader = function()
       return {
+        PartyReward_Description_240104 = {
+          ContentES = "Aunque la lámpara de plata aún arde, temo que nuestro reencuentro no fue más que un sueño fugaz.",
+          TextMapId = "PartyReward_Description_240104"
+        },
         PartyReward_Description_310101 = {
           ContentES = "Una bebida atrevida y picante para quienes buscan un impulso más fuerte. El primer sorbo abre el apetito y el segundo enciende el ánimo: una bebida perfecta para romper el hielo.",
           TextMapId = "PartyReward_Description_310101"
@@ -35285,19 +35289,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PartyTopic_Description_320102 = {
           ContentES = "En realidad, se trata de un licor muy fuerte y concentrado con extractos de plantas. Se le conoce como \"amargo\", pero su sabor no es agrio o simple, es complejo y cambia en el paladar.",
           TextMapId = "PartyTopic_Description_320102"
-        },
-        PartyTopic_Description_320103 = {
-          ContentES = "El gusto por lo dulce es un instinto, porque las personas siempre tienden, de manera inconsciente, a aferrarse a recuerdos de alegría y bienestar, aunque el consumo excesivo pueda pasar factura al cuerpo.",
-          TextMapId = "PartyTopic_Description_320103"
         }
       }
     end
   },
   {
-    MinKey = "PartyTopic_Description_320104",
-    MaxKey = "Pet_IpDes_422",
+    MinKey = "PartyTopic_Description_320103",
+    MaxKey = "Pet_IpDes_421",
     Loader = function()
       return {
+        PartyTopic_Description_320103 = {
+          ContentES = "El gusto por lo dulce es un instinto, porque las personas siempre tienden, de manera inconsciente, a aferrarse a recuerdos de alegría y bienestar, aunque el consumo excesivo pueda pasar factura al cuerpo.",
+          TextMapId = "PartyTopic_Description_320103"
+        },
         PartyTopic_Description_320104 = {
           ContentES = "Como un cuchillo que atraviesa la garganta, solo quien lo bebe sabe lo que abre y desgarra en su interior.",
           TextMapId = "PartyTopic_Description_320104"
@@ -36078,19 +36082,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         Pet_IpDes_421 = {
           ContentES = "Un Geniemon de rareza legendaria, cuyo cuerpo brilla con el lustre de la obsidiana. Durante mucho tiempo, se creyó que solo existía en las baladas de los bardos y en los sueños de los juglares.",
           TextMapId = "Pet_IpDes_421"
-        },
-        Pet_IpDes_422 = {
-          ContentES = "Un Geniemon de rareza legendaria, cuyo cuerpo brilla con el lustre de la iolita. Durante mucho tiempo, se creyó que solo existía en las baladas de los bardos y en los sueños de los juglares.",
-          TextMapId = "Pet_IpDes_422"
         }
       }
     end
   },
   {
-    MinKey = "Pet_IpDes_423",
-    MaxKey = "PlayerLevel_WeaponProgress",
+    MinKey = "Pet_IpDes_422",
+    MaxKey = "PlayerLevel_WeaponBreak",
     Loader = function()
       return {
+        Pet_IpDes_422 = {
+          ContentES = "Un Geniemon de rareza legendaria, cuyo cuerpo brilla con el lustre de la iolita. Durante mucho tiempo, se creyó que solo existía en las baladas de los bardos y en los sueños de los juglares.",
+          TextMapId = "Pet_IpDes_422"
+        },
         Pet_IpDes_423 = {
           ContentES = "Un Geniemon de rareza legendaria, cuyo cuerpo brilla con el lustre de la cornalina. Durante mucho tiempo, se creyó que solo existía en las baladas de los bardos y en los sueños de los juglares.",
           TextMapId = "Pet_IpDes_423"
@@ -36886,19 +36890,19 @@ Pueden utilizar robots como ayuda durante el combate.]],
         PlayerLevel_WeaponBreak = {
           ContentES = "Ascensión de arma",
           TextMapId = "PlayerLevel_WeaponBreak"
-        },
-        PlayerLevel_WeaponProgress = {
-          ContentES = "Progresión de arma",
-          TextMapId = "PlayerLevel_WeaponProgress"
         }
       }
     end
   },
   {
-    MinKey = "PlayerLevel_WeaponSmelt",
-    MaxKey = "QuestDesc_100303sp105",
+    MinKey = "PlayerLevel_WeaponProgress",
+    MaxKey = "QuestDesc_100303sp104",
     Loader = function()
       return {
+        PlayerLevel_WeaponProgress = {
+          ContentES = "Progresión de arma",
+          TextMapId = "PlayerLevel_WeaponProgress"
+        },
         PlayerLevel_WeaponSmelt = {
           ContentES = "Fusión de armas",
           TextMapId = "PlayerLevel_WeaponSmelt"
@@ -37697,19 +37701,19 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         QuestDesc_100303sp104 = {
           ContentES = "Pesca completada. Ya tienes todo lo que la gente necesita, es hora de entregar los bienes.",
           TextMapId = "QuestDesc_100303sp104"
-        },
-        QuestDesc_100303sp105 = {
-          ContentES = "Apenas entregas los suministros a Margie, llega una nueva orden de Clive. Parece que la 13.ª Legión está en movimiento, sal y repórtate.",
-          TextMapId = "QuestDesc_100303sp105"
         }
       }
     end
   },
   {
-    MinKey = "QuestDesc_100303sp201",
-    MaxKey = "QuestName_10030114",
+    MinKey = "QuestDesc_100303sp105",
+    MaxKey = "QuestName_10030113",
     Loader = function()
       return {
+        QuestDesc_100303sp105 = {
+          ContentES = "Apenas entregas los suministros a Margie, llega una nueva orden de Clive. Parece que la 13.ª Legión está en movimiento, sal y repórtate.",
+          TextMapId = "QuestDesc_100303sp105"
+        },
         QuestDesc_100303sp201 = {
           ContentES = "Soldados de la 13.ª Legión patrullan las alcantarillas, cada uno en su sección asignada. Los túneles están cargados de tensión. Dirígete al área que Clive designó para los Noctoviajeros.",
           TextMapId = "QuestDesc_100303sp201"
@@ -38505,19 +38509,19 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         QuestName_10030113 = {
           ContentES = "Sigue al gato",
           TextMapId = "QuestName_10030113"
-        },
-        QuestName_10030114 = {
-          ContentES = "Habla con el pescador pánico",
-          TextMapId = "QuestName_10030114"
         }
       }
     end
   },
   {
-    MinKey = "QuestName_10030201",
-    MaxKey = "READ_DESC_2000073",
+    MinKey = "QuestName_10030114",
+    MaxKey = "READ_DESC_2000072",
     Loader = function()
       return {
+        QuestName_10030114 = {
+          ContentES = "Habla con el pescador pánico",
+          TextMapId = "QuestName_10030114"
+        },
         QuestName_10030201 = {
           ContentES = "Rastrea al agresor",
           TextMapId = "QuestName_10030201"
@@ -39313,19 +39317,19 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         READ_DESC_2000072 = {
           ContentES = "Relato oral de un superviviente del Azote de Zhuyin, recogido de un granjero que vive en las montañas que rodean el Puerto de las Brumas.",
           TextMapId = "READ_DESC_2000072"
-        },
-        READ_DESC_2000073 = {
-          ContentES = "Una obra deteriorada, cubierta de tachaduras. El autor registró numerosos ejemplos destinados a enseñar cómo imponerse en una discusión. Abandonada aquí, se desconoce por quién.",
-          TextMapId = "READ_DESC_2000073"
         }
       }
     end
   },
   {
-    MinKey = "READ_DESC_2000074",
-    MaxKey = "READ_NAME_20634",
+    MinKey = "READ_DESC_2000073",
+    MaxKey = "READ_NAME_20633",
     Loader = function()
       return {
+        READ_DESC_2000073 = {
+          ContentES = "Una obra deteriorada, cubierta de tachaduras. El autor registró numerosos ejemplos destinados a enseñar cómo imponerse en una discusión. Abandonada aquí, se desconoce por quién.",
+          TextMapId = "READ_DESC_2000073"
+        },
         READ_DESC_2000074 = {
           ContentES = "Una canción supuestamente para alabar a la Secta Jishu. La letra es confusa e incomprensible; solo con leerla ya se imagina a alguien cantándola desafinado.",
           TextMapId = "READ_DESC_2000074"
@@ -40121,19 +40125,19 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
         READ_NAME_20633 = {
           ContentES = "Puerto de las Brumas (IV)",
           TextMapId = "READ_NAME_20633"
-        },
-        READ_NAME_20634 = {
-          ContentES = "Puerto de las Brumas (V)",
-          TextMapId = "READ_NAME_20634"
         }
       }
     end
   },
   {
-    MinKey = "READ_NAME_20640",
-    MaxKey = "RESOURCE_DESC_10023",
+    MinKey = "READ_NAME_20634",
+    MaxKey = "RESOURCE_DESC_10022",
     Loader = function()
       return {
+        READ_NAME_20634 = {
+          ContentES = "Puerto de las Brumas (V)",
+          TextMapId = "READ_NAME_20634"
+        },
         READ_NAME_20640 = {
           ContentES = "Haojing: I",
           TextMapId = "READ_NAME_20640"
@@ -40933,19 +40937,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_10022 = {
           ContentES = "En Aethyrie, la obsidiana simboliza la inspiración nacida de la noche. Cada erudito de los Charons recibe esta llave al graduarse, aunque solo ellos comprenden su verdadero significado.",
           TextMapId = "RESOURCE_DESC_10022"
-        },
-        RESOURCE_DESC_10023 = {
-          ContentES = "El Noctilunismo, en oposición a los Nueve Dioses, venera al \"Abismo\". La conservación de sus doctrinas es considerada tabú, pero lo prohibido siempre resulta seductor. Con suficiente voluntad, la puerta hacia un nuevo mundo puede abrirse en cualquier momento.",
-          TextMapId = "RESOURCE_DESC_10023"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_10024",
-    MaxKey = "RESOURCE_DESC_12140",
+    MinKey = "RESOURCE_DESC_10023",
+    MaxKey = "RESOURCE_DESC_12139",
     Loader = function()
       return {
+        RESOURCE_DESC_10023 = {
+          ContentES = "El Noctilunismo, en oposición a los Nueve Dioses, venera al \"Abismo\". La conservación de sus doctrinas es considerada tabú, pero lo prohibido siempre resulta seductor. Con suficiente voluntad, la puerta hacia un nuevo mundo puede abrirse en cualquier momento.",
+          TextMapId = "RESOURCE_DESC_10023"
+        },
         RESOURCE_DESC_10024 = {
           ContentES = "Este recipiente de reacción sellado, procedente del Imperio Hiperbóreo, contiene líquido celular de Filthoid. Antes de abrirse parece solo una caja negra, incluso puede que no cumpla con el objetivo previsto, sin embargo, también podría esconder grandes sorpresas y horrores.",
           TextMapId = "RESOURCE_DESC_10024"
@@ -41741,19 +41745,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_12139 = {
           ContentES = "Componente de Dualidad celestial fabricado con precisión según los planos. No importa si su hoja es curva o recta, ligera o pesada, su filo solo existe para el combate.",
           TextMapId = "RESOURCE_DESC_12139"
-        },
-        RESOURCE_DESC_12140 = {
-          ContentES = "Componente de Dualidad celestial fabricado con precisión según los planos. No importa si su hoja es curva o recta, ligera o pesada, su filo solo existe para el combate.",
-          TextMapId = "RESOURCE_DESC_12140"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_12141",
-    MaxKey = "RESOURCE_DESC_4010015",
+    MinKey = "RESOURCE_DESC_12140",
+    MaxKey = "RESOURCE_DESC_4010014",
     Loader = function()
       return {
+        RESOURCE_DESC_12140 = {
+          ContentES = "Componente de Dualidad celestial fabricado con precisión según los planos. No importa si su hoja es curva o recta, ligera o pesada, su filo solo existe para el combate.",
+          TextMapId = "RESOURCE_DESC_12140"
+        },
         RESOURCE_DESC_12141 = {
           ContentES = "Componente de Musa trígona fabricado con precisión según los planos. Una vez se aprieta el gatillo no hay marcha atrás, al igual que el compromiso que sella un momento decisivo.",
           TextMapId = "RESOURCE_DESC_12141"
@@ -42549,19 +42553,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_4010014 = {
           ContentES = "La flor más común y esencial de Huaxu. Cuando florece, su fragancia única impregna el aire, y es uno de los ingredientes principales en la elaboración de incienso en Huaxu. Sin embargo, estas plantas frágiles —que pueden romperse con un solo gesto— se han convertido en la fuerza que sostiene el funcionamiento de los Nueve Capítulos de Dafeng.",
           TextMapId = "RESOURCE_DESC_4010014"
-        },
-        RESOURCE_DESC_4010015 = {
-          ContentES = "Un cristal nacido del Azote de Zhuyin. Su mera presencia inhibe el crecimiento de toda vegetación circundante, sumiendo el ecosistema local en una prolongada estasis. Debido a su naturaleza brutal e irracional, recibe el nombre de Piedra reacia.",
-          TextMapId = "RESOURCE_DESC_4010015"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_4010016",
-    MaxKey = "RESOURCE_DESC_MONSTERITEM_Jiaohui",
+    MinKey = "RESOURCE_DESC_4010015",
+    MaxKey = "RESOURCE_DESC_MONSTERITEM_Huishou",
     Loader = function()
       return {
+        RESOURCE_DESC_4010015 = {
+          ContentES = "Un cristal nacido del Azote de Zhuyin. Su mera presencia inhibe el crecimiento de toda vegetación circundante, sumiendo el ecosistema local en una prolongada estasis. Debido a su naturaleza brutal e irracional, recibe el nombre de Piedra reacia.",
+          TextMapId = "RESOURCE_DESC_4010015"
+        },
         RESOURCE_DESC_4010016 = {
           ContentES = "Fragmentos de armas dañadas, hallados en grandes cantidades en la Hondonada del canto del cuervo, algunos de los cuales incluso han derivado hasta el Mercado Velado. Son testigos mudos del oscuro pasado del conflicto entre las Sectas Xuanheng y Jishu; estas reliquias albergan una memoria silenciosa. Si pudieran hablar y relatar fielmente lo que presenciaron, quizá Huaxu sería hoy muy diferente.",
           TextMapId = "RESOURCE_DESC_4010016"
@@ -43357,19 +43361,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_DESC_MONSTERITEM_Huishou = {
           ContentES = "Insignia obtenida al derrotar Filthoids. El recuerdo de la hoja rajando el inmundo caparazón del monstruo sigue grabado en tu mente; ni una gota de sangre brotó de las heridas.\nPuede usarse para forjar Armas de calamidad.",
           TextMapId = "RESOURCE_DESC_MONSTERITEM_Huishou"
-        },
-        RESOURCE_DESC_MONSTERITEM_Jiaohui = {
-          ContentES = "Insignia obtenida al derrotar enemigos de la Iglesia Elysiana. La fe se quebró en la larga noche, y el asceta maldijo al sol que tardaba en salir.\nPuede usarse para forjar Armas de calamidad.",
-          TextMapId = "RESOURCE_DESC_MONSTERITEM_Jiaohui"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_MONSTERITEM_Tongmeng",
-    MaxKey = "RESOURCE_NAME_1003301",
+    MinKey = "RESOURCE_DESC_MONSTERITEM_Jiaohui",
+    MaxKey = "RESOURCE_NAME_1003202",
     Loader = function()
       return {
+        RESOURCE_DESC_MONSTERITEM_Jiaohui = {
+          ContentES = "Insignia obtenida al derrotar enemigos de la Iglesia Elysiana. La fe se quebró en la larga noche, y el asceta maldijo al sol que tardaba en salir.\nPuede usarse para forjar Armas de calamidad.",
+          TextMapId = "RESOURCE_DESC_MONSTERITEM_Jiaohui"
+        },
         RESOURCE_DESC_MONSTERITEM_Tongmeng = {
           ContentES = "Insignia obtenida al derrotar miembros de Los Abandonados. Abandonados por el mundo, y ellos respondieron con matanza. ¿Pero puede la sangre redimirlos?\nPuede usarse para forjar Armas de calamidad.",
           TextMapId = "RESOURCE_DESC_MONSTERITEM_Tongmeng"
@@ -44165,19 +44169,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_1003202 = {
           ContentES = "Pensamientos: Camilla",
           TextMapId = "RESOURCE_NAME_1003202"
-        },
-        RESOURCE_NAME_1003301 = {
-          ContentES = "Pensamientos: Margie",
-          TextMapId = "RESOURCE_NAME_1003301"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_1004",
-    MaxKey = "RESOURCE_NAME_12063",
+    MinKey = "RESOURCE_NAME_1003301",
+    MaxKey = "RESOURCE_NAME_12062",
     Loader = function()
       return {
+        RESOURCE_NAME_1003301 = {
+          ContentES = "Pensamientos: Margie",
+          TextMapId = "RESOURCE_NAME_1003301"
+        },
         RESOURCE_NAME_1004 = {
           ContentES = "Reloj de arena prismático (Tiempo limitado)",
           TextMapId = "RESOURCE_NAME_1004"
@@ -44973,19 +44977,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_12062 = {
           ContentES = "Luminiscencia Efímera: Cerrojo",
           TextMapId = "RESOURCE_NAME_12062"
-        },
-        RESOURCE_NAME_12063 = {
-          ContentES = "Luminiscencia Efímera: Armazón",
-          TextMapId = "RESOURCE_NAME_12063"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_12064",
-    MaxKey = "RESOURCE_NAME_203",
+    MinKey = "RESOURCE_NAME_12063",
+    MaxKey = "RESOURCE_NAME_202",
     Loader = function()
       return {
+        RESOURCE_NAME_12063 = {
+          ContentES = "Luminiscencia Efímera: Armazón",
+          TextMapId = "RESOURCE_NAME_12063"
+        },
         RESOURCE_NAME_12064 = {
           ContentES = "Luminiscencia Efímera: Cañón",
           TextMapId = "RESOURCE_NAME_12064"
@@ -45781,19 +45785,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_202 = {
           ContentES = "Módulo de cambio de afinidad de arma",
           TextMapId = "RESOURCE_NAME_202"
-        },
-        RESOURCE_NAME_203 = {
-          ContentES = "Brasa",
-          TextMapId = "RESOURCE_NAME_203"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_204",
-    MaxKey = "RESOURCE_NAME_40003",
+    MinKey = "RESOURCE_NAME_203",
+    MaxKey = "RESOURCE_NAME_40002",
     Loader = function()
       return {
+        RESOURCE_NAME_203 = {
+          ContentES = "Brasa",
+          TextMapId = "RESOURCE_NAME_203"
+        },
         RESOURCE_NAME_204 = {
           ContentES = "Tónico de energía",
           TextMapId = "RESOURCE_NAME_204"
@@ -46589,19 +46593,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_40002 = {
           ContentES = "Sal volátil concentrada I",
           TextMapId = "RESOURCE_NAME_40002"
-        },
-        RESOURCE_NAME_40003 = {
-          ContentES = "Caja de suministros de munición I",
-          TextMapId = "RESOURCE_NAME_40003"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_4001",
-    MaxKey = "RESOURCE_NAME_5027011",
+    MinKey = "RESOURCE_NAME_40003",
+    MaxKey = "RESOURCE_NAME_5027010",
     Loader = function()
       return {
+        RESOURCE_NAME_40003 = {
+          ContentES = "Caja de suministros de munición I",
+          TextMapId = "RESOURCE_NAME_40003"
+        },
         RESOURCE_NAME_4001 = {
           ContentES = "Actividad personal",
           TextMapId = "RESOURCE_NAME_4001"
@@ -47397,19 +47401,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_NAME_5027010 = {
           ContentES = "Pez sable",
           TextMapId = "RESOURCE_NAME_5027010"
-        },
-        RESOURCE_NAME_5027011 = {
-          ContentES = "Pez sable variante",
-          TextMapId = "RESOURCE_NAME_5027011"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_5027020",
-    MaxKey = "RESOURCE_TEXT_20029",
+    MinKey = "RESOURCE_NAME_5027011",
+    MaxKey = "RESOURCE_TEXT_20028",
     Loader = function()
       return {
+        RESOURCE_NAME_5027011 = {
+          ContentES = "Pez sable variante",
+          TextMapId = "RESOURCE_NAME_5027011"
+        },
         RESOURCE_NAME_5027020 = {
           ContentES = "Perca flor",
           TextMapId = "RESOURCE_NAME_5027020"
@@ -48205,19 +48209,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_TEXT_20028 = {
           ContentES = "\"La inspiración vino de la caza. En mi familia éramos cazadores, y había que satisfacer las distintas exigencias de los clientes. Si solo querían una presa grande, bastaba que la bala fuera lo suficientemente potente; si no querían dañar la piel, la bala solo tenía que afectar el interior del animal; y si lo que querían era una mascota, el daño causado tenía que ser lo bastante leve como para poder curarlo… ¡Un verdadero suplicio! En fin, solo quería que mi padre tuviera una vida un poco más tranquila, nunca pensé en emprender nada grandioso. Lástima que este tipo de proyectiles acabara utilizándose en el campo de batalla, ni siquiera un casquillo llegó a pasar por sus manos.\"\n\n— Conversación del Maestro de armas, Nisaya, de La Academia Aeolipile durante una reunión secreta del té, recopilado en <I>Encuentros bajo el jazmín nocturno</>",
           TextMapId = "RESOURCE_TEXT_20028"
-        },
-        RESOURCE_TEXT_20029 = {
-          ContentES = "\"Pocos saben que el apoyo Gad fue el primer invento en solicitar una patente. Cuando el sistema acababa de ponerse en marcha, nadie se atrevía a arriesgar su medio de vida, y ya que el armazón Gad no tenía gran complejidad técnica, terminó siendo el elegido para probar suerte. El resultado fue un éxito rotundo. El viejo Gad podría haberse hecho millonario gracias a esa patente, pero dijo: 'En toda mi vida solo pude fabricar un apoyo auxiliar. Me alegra que les guste. Llévenselo, puede usarlo cualquiera'. Verdaderamente conmovedor, ¿no les parece?\"\n\n— Dylan, el Sabelotodo, <I>Rincones desconocidos</>",
-          TextMapId = "RESOURCE_TEXT_20029"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_TEXT_2003",
-    MaxKey = "RESOURCE_TEXT_gongshen",
+    MinKey = "RESOURCE_TEXT_20029",
+    MaxKey = "RESOURCE_TEXT_gongbi",
     Loader = function()
       return {
+        RESOURCE_TEXT_20029 = {
+          ContentES = "\"Pocos saben que el apoyo Gad fue el primer invento en solicitar una patente. Cuando el sistema acababa de ponerse en marcha, nadie se atrevía a arriesgar su medio de vida, y ya que el armazón Gad no tenía gran complejidad técnica, terminó siendo el elegido para probar suerte. El resultado fue un éxito rotundo. El viejo Gad podría haberse hecho millonario gracias a esa patente, pero dijo: 'En toda mi vida solo pude fabricar un apoyo auxiliar. Me alegra que les guste. Llévenselo, puede usarlo cualquiera'. Verdaderamente conmovedor, ¿no les parece?\"\n\n— Dylan, el Sabelotodo, <I>Rincones desconocidos</>",
+          TextMapId = "RESOURCE_TEXT_20029"
+        },
         RESOURCE_TEXT_2003 = {
           ContentES = "Los registros incluyen tanto objetivos a largo plazo como pequeñas tareas cotidianas. Sirven como testimonio de cada progreso, prueba de que ningún esfuerzo pasa desapercibido.",
           TextMapId = "RESOURCE_TEXT_2003"
@@ -49013,19 +49017,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RESOURCE_TEXT_gongbi = {
           ContentES = "\"Flexible, pero resistente: justo lo que se necesita para un buen arco.\"\n\n— Lunoherrera",
           TextMapId = "RESOURCE_TEXT_gongbi"
-        },
-        RESOURCE_TEXT_gongshen = {
-          ContentES = "\"Si un arco no da en el blanco, no es más que un palo bonito. Tiene que haber alguna manera de mejorar la precisión.\"\n\n— Un arquero artesano anónimo",
-          TextMapId = "RESOURCE_TEXT_gongshen"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_TEXT_gongxian",
-    MaxKey = "RLBlessing_Name_213",
+    MinKey = "RESOURCE_TEXT_gongshen",
+    MaxKey = "RLBlessing_Name_212",
     Loader = function()
       return {
+        RESOURCE_TEXT_gongshen = {
+          ContentES = "\"Si un arco no da en el blanco, no es más que un palo bonito. Tiene que haber alguna manera de mejorar la precisión.\"\n\n— Un arquero artesano anónimo",
+          TextMapId = "RESOURCE_TEXT_gongshen"
+        },
         RESOURCE_TEXT_gongxian = {
           ContentES = "\"Sólido, y lo suficientemente flexible. Me atrevería a decir que, en manos de un asesino, sería un arma de lo más elegante.\"\n\n— Un novelista anónimo en busca de inspiración",
           TextMapId = "RESOURCE_TEXT_gongxian"
@@ -49821,19 +49825,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessing_Name_212 = {
           ContentES = "Tentáculos arcoíris",
           TextMapId = "RLBlessing_Name_212"
-        },
-        RLBlessing_Name_213 = {
-          ContentES = "Francotirador afilado",
-          TextMapId = "RLBlessing_Name_213"
         }
       }
     end
   },
   {
-    MinKey = "RLBlessing_Name_214",
-    MaxKey = "RLBlessing_UnlockCon_205",
+    MinKey = "RLBlessing_Name_213",
+    MaxKey = "RLBlessing_UnlockCon_204",
     Loader = function()
       return {
+        RLBlessing_Name_213 = {
+          ContentES = "Francotirador afilado",
+          TextMapId = "RLBlessing_Name_213"
+        },
         RLBlessing_Name_214 = {
           ContentES = "Aguijón del océano",
           TextMapId = "RLBlessing_Name_214"
@@ -50629,19 +50633,19 @@ pero el tesoro yace donde arraiga la hierba.]],
         RLBlessing_UnlockCon_204 = {
           ContentES = "Mecha no desbloqueada",
           TextMapId = "RLBlessing_UnlockCon_204"
-        },
-        RLBlessing_UnlockCon_205 = {
-          ContentES = "Mecha no desbloqueada",
-          TextMapId = "RLBlessing_UnlockCon_205"
         }
       }
     end
   },
   {
-    MinKey = "RLBlessing_UnlockCon_206",
-    MaxKey = "RLTreasure_Desc_10210",
+    MinKey = "RLBlessing_UnlockCon_205",
+    MaxKey = "RLTreasure_Desc_10209",
     Loader = function()
       return {
+        RLBlessing_UnlockCon_205 = {
+          ContentES = "Mecha no desbloqueada",
+          TextMapId = "RLBlessing_UnlockCon_205"
+        },
         RLBlessing_UnlockCon_206 = {
           ContentES = "Mecha no desbloqueada",
           TextMapId = "RLBlessing_UnlockCon_206"
@@ -51439,19 +51443,19 @@ Activo solo en [Abisoides].]],
         RLTreasure_Desc_10209 = {
           ContentES = "Selecciona una Mecha de rareza <Highlight>Azul</> de Abisoide penumbral o disperso para mejorarlo instantáneamente.",
           TextMapId = "RLTreasure_Desc_10209"
-        },
-        RLTreasure_Desc_10210 = {
-          ContentES = "Obtén <Highlight>@2</> Brasas por cada <Highlight>@1</> Comandante(s) derrotado(s).",
-          TextMapId = "RLTreasure_Desc_10210"
         }
       }
     end
   },
   {
-    MinKey = "RLTreasure_Desc_10211",
-    MaxKey = "RLTreasure_SimpleDesc_10213",
+    MinKey = "RLTreasure_Desc_10210",
+    MaxKey = "RLTreasure_SimpleDesc_10212",
     Loader = function()
       return {
+        RLTreasure_Desc_10210 = {
+          ContentES = "Obtén <Highlight>@2</> Brasas por cada <Highlight>@1</> Comandante(s) derrotado(s).",
+          TextMapId = "RLTreasure_Desc_10210"
+        },
         RLTreasure_Desc_10211 = {
           ContentES = "Tu próxima elección de Mecha de Abisoide penumbral o disperso será al menos de calidad de rareza <Highlight>Morada</>.",
           TextMapId = "RLTreasure_Desc_10211"
@@ -52249,19 +52253,19 @@ Activo solo en [Abisoides].]],
         RLTreasure_SimpleDesc_10212 = {
           ContentES = "Al adquirir este Artefacto se obtiene <Highlight>1</> Mecha adicional de tu categoría más abundante.",
           TextMapId = "RLTreasure_SimpleDesc_10212"
-        },
-        RLTreasure_SimpleDesc_10213 = {
-          ContentES = "Obtén inmediatamente <Highlight>1</> Mecha [Corazón de fuego] y aumenta ligeramente tus posibilidades de descubrirlas.",
-          TextMapId = "RLTreasure_SimpleDesc_10213"
         }
       }
     end
   },
   {
-    MinKey = "RLTreasure_SimpleDesc_10214",
-    MaxKey = "RecurringTask_Rarity3",
+    MinKey = "RLTreasure_SimpleDesc_10213",
+    MaxKey = "RecurringTask_Rarity2_Locked",
     Loader = function()
       return {
+        RLTreasure_SimpleDesc_10213 = {
+          ContentES = "Obtén inmediatamente <Highlight>1</> Mecha [Corazón de fuego] y aumenta ligeramente tus posibilidades de descubrirlas.",
+          TextMapId = "RLTreasure_SimpleDesc_10213"
+        },
         RLTreasure_SimpleDesc_10214 = {
           ContentES = "Obtén inmediatamente <Highlight>1</> Mecha [Luna marina] y aumenta ligeramente tus posibilidades de descubrirlas.",
           TextMapId = "RLTreasure_SimpleDesc_10214"
@@ -53057,19 +53061,19 @@ Activo solo en [Abisoides].]],
         RecurringTask_Rarity2_Locked = {
           ContentES = "Se desbloquea al completar la <highlight>dificultad Fácil</>",
           TextMapId = "RecurringTask_Rarity2_Locked"
-        },
-        RecurringTask_Rarity3 = {
-          ContentES = "Extremo",
-          TextMapId = "RecurringTask_Rarity3"
         }
       }
     end
   },
   {
-    MinKey = "RecurringTask_Rarity3_Locked",
-    MaxKey = "RougeMiniGamePointsReach",
+    MinKey = "RecurringTask_Rarity3",
+    MaxKey = "RougeMiniGamePointsLv3",
     Loader = function()
       return {
+        RecurringTask_Rarity3 = {
+          ContentES = "Extremo",
+          TextMapId = "RecurringTask_Rarity3"
+        },
         RecurringTask_Rarity3_Locked = {
           ContentES = "Se desbloquea al completar la <highlight>dificultad Difícil</>",
           TextMapId = "RecurringTask_Rarity3_Locked"
@@ -53859,19 +53863,19 @@ Activo solo en [Abisoides].]],
         RougeMiniGamePointsLv3 = {
           ContentES = "★★★ Puntos:",
           TextMapId = "RougeMiniGamePointsLv3"
-        },
-        RougeMiniGamePointsReach = {
-          ContentES = "Total de puntos acumulados",
-          TextMapId = "RougeMiniGamePointsReach"
         }
       }
     end
   },
   {
-    MinKey = "RougeMiniGameTotalPoints",
-    MaxKey = "SKILL_20599_09_Name",
+    MinKey = "RougeMiniGamePointsReach",
+    MaxKey = "SKILL_20599_08_Name",
     Loader = function()
       return {
+        RougeMiniGamePointsReach = {
+          ContentES = "Total de puntos acumulados",
+          TextMapId = "RougeMiniGamePointsReach"
+        },
         RougeMiniGameTotalPoints = {
           ContentES = "Puntuación total",
           TextMapId = "RougeMiniGameTotalPoints"
@@ -54667,19 +54671,19 @@ Activo solo en [Abisoides].]],
         SKILL_20599_08_Name = {
           ContentES = "Réquiem – Persecución",
           TextMapId = "SKILL_20599_08_Name"
-        },
-        SKILL_20599_09_Name = {
-          ContentES = "Réquiem – Moral",
-          TextMapId = "SKILL_20599_09_Name"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_20599_10_Name",
-    MaxKey = "SKILL_DESC_1103MaxAtk",
+    MinKey = "SKILL_20599_09_Name",
+    MaxKey = "SKILL_DESC_1103MarkSustain",
     Loader = function()
       return {
+        SKILL_20599_09_Name = {
+          ContentES = "Réquiem – Moral",
+          TextMapId = "SKILL_20599_09_Name"
+        },
         SKILL_20599_10_Name = {
           ContentES = "Espinas – Putrefacción",
           TextMapId = "SKILL_20599_10_Name"
@@ -55475,19 +55479,19 @@ Activo solo en [Abisoides].]],
         SKILL_DESC_1103MarkSustain = {
           ContentES = "Duración de [Adagio]",
           TextMapId = "SKILL_DESC_1103MarkSustain"
-        },
-        SKILL_DESC_1103MaxAtk = {
-          ContentES = "Límite de aumento de ATQ",
-          TextMapId = "SKILL_DESC_1103MaxAtk"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_DESC_1103RayDamage",
-    MaxKey = "SKILL_DESC_5101FallAtkDamage",
+    MinKey = "SKILL_DESC_1103MaxAtk",
+    MaxKey = "SKILL_DESC_5101DecreasePerScd",
     Loader = function()
       return {
+        SKILL_DESC_1103MaxAtk = {
+          ContentES = "Límite de aumento de ATQ",
+          TextMapId = "SKILL_DESC_1103MaxAtk"
+        },
         SKILL_DESC_1103RayDamage = {
           ContentES = "Daño de Rayo de [Aullido Lamentable]",
           TextMapId = "SKILL_DESC_1103RayDamage"
@@ -56283,19 +56287,19 @@ Activo solo en [Abisoides].]],
         SKILL_DESC_5101DecreasePerScd = {
           ContentES = "Disminución de [Pasión por el Trabajo] por segundo",
           TextMapId = "SKILL_DESC_5101DecreasePerScd"
-        },
-        SKILL_DESC_5101FallAtkDamage = {
-          ContentES = "Daño del Ataque de Descenso de Filbert",
-          TextMapId = "SKILL_DESC_5101FallAtkDamage"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_DESC_5101GoalDamage",
-    MaxKey = "SKILL_SECTIONDESC_1801_Skill03_01",
+    MinKey = "SKILL_DESC_5101FallAtkDamage",
+    MaxKey = "SKILL_SECTIONDESC_1601_Skill02_01",
     Loader = function()
       return {
+        SKILL_DESC_5101FallAtkDamage = {
+          ContentES = "Daño del Ataque de Descenso de Filbert",
+          TextMapId = "SKILL_DESC_5101FallAtkDamage"
+        },
         SKILL_DESC_5101GoalDamage = {
           ContentES = "Daño de Punto Final",
           TextMapId = "SKILL_DESC_5101GoalDamage"
@@ -57091,19 +57095,19 @@ Activo solo en [Abisoides].]],
         SKILL_SECTIONDESC_1601_Skill02_01 = {
           ContentES = "Incandescencia",
           TextMapId = "SKILL_SECTIONDESC_1601_Skill02_01"
-        },
-        SKILL_SECTIONDESC_1801_Skill03_01 = {
-          ContentES = "Pluma Tejedora de Cuentos",
-          TextMapId = "SKILL_SECTIONDESC_1801_Skill03_01"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_SECTIONDESC_2401_Skill02_01",
-    MaxKey = "System_Des_Armory",
+    MinKey = "SKILL_SECTIONDESC_1801_Skill03_01",
+    MaxKey = "System_Des_Archive",
     Loader = function()
       return {
+        SKILL_SECTIONDESC_1801_Skill03_01 = {
+          ContentES = "Pluma Tejedora de Cuentos",
+          TextMapId = "SKILL_SECTIONDESC_1801_Skill03_01"
+        },
         SKILL_SECTIONDESC_2401_Skill02_01 = {
           ContentES = "Terapia de las Nueve Agujas",
           TextMapId = "SKILL_SECTIONDESC_2401_Skill02_01"
@@ -57881,19 +57885,19 @@ Activo solo en [Abisoides].]],
         System_Des_Archive = {
           ContentES = "<Highlight>Archivo</> desbloqueado: un registro de tus aventuras y las historias que cuentan.",
           TextMapId = "System_Des_Archive"
-        },
-        System_Des_Armory = {
-          ContentES = "<Highlight>Arsenal</> desbloqueado. Configura tus cargas y prepárate para más desafíos.",
-          TextMapId = "System_Des_Armory"
         }
       }
     end
   },
   {
-    MinKey = "System_Des_Bag",
-    MaxKey = "TERMEXP_Rou_10102_MiniSeaborneMoons",
+    MinKey = "System_Des_Armory",
+    MaxKey = "TERMEXP_Rou_10101_MoltenBlazeSabre",
     Loader = function()
       return {
+        System_Des_Armory = {
+          ContentES = "<Highlight>Arsenal</> desbloqueado. Configura tus cargas y prepárate para más desafíos.",
+          TextMapId = "System_Des_Armory"
+        },
         System_Des_Bag = {
           ContentES = "<Highlight>Inventario</> desbloqueado. Puedes ver todos los objetos que posees allí.",
           TextMapId = "System_Des_Bag"
@@ -58691,19 +58695,19 @@ Opcional: Consigue suministros del Ave espiritual]],
         TERMEXP_Rou_10101_MoltenBlazeSabre = {
           ContentES = "Inflige daño equivalente al <Highlight>563%</> del ATQ del personaje.",
           TextMapId = "TERMEXP_Rou_10101_MoltenBlazeSabre"
-        },
-        TERMEXP_Rou_10102_MiniSeaborneMoons = {
-          ContentES = "Las [Mini Lunas marinas] se consideran botín. Al recoger una, se restauran PV, Cordura y munición.",
-          TextMapId = "TERMEXP_Rou_10102_MiniSeaborneMoons"
         }
       }
     end
   },
   {
-    MinKey = "TERMEXP_Rou_10102_PhantomDrift",
-    MaxKey = "TextMap_AnswerDetail_200202",
+    MinKey = "TERMEXP_Rou_10102_MiniSeaborneMoons",
+    MaxKey = "TextMap_AnswerDetail_200201",
     Loader = function()
       return {
+        TERMEXP_Rou_10102_MiniSeaborneMoons = {
+          ContentES = "Las [Mini Lunas marinas] se consideran botín. Al recoger una, se restauran PV, Cordura y munición.",
+          TextMapId = "TERMEXP_Rou_10102_MiniSeaborneMoons"
+        },
         TERMEXP_Rou_10102_PhantomDrift = {
           ContentES = "Aumenta el Daño de Armas a distancia en <Highlight>6%</> durante <Highlight>15</> s y se acumula hasta <Highlight>10</> veces.",
           TextMapId = "TERMEXP_Rou_10102_PhantomDrift"
@@ -59474,19 +59478,19 @@ Emparejamiento cancelado.]],
         TextMap_AnswerDetail_200201 = {
           ContentES = "Hace dieciséis años, el amigo de Donat, Sig, organizó un secuestro. La víctima, Enola, murió accidentalmente durante el incidente, y Sig fue condenado a muerte.",
           TextMapId = "TextMap_AnswerDetail_200201"
-        },
-        TextMap_AnswerDetail_200202 = {
-          ContentES = "Giselle, la Phoxcazadora, trabajaba antes para la Escolta. Pero hace dieciséis años, renunció después de que un veredicto en un caso la pusiera en desacuerdo con su superior.",
-          TextMapId = "TextMap_AnswerDetail_200202"
         }
       }
     end
   },
   {
-    MinKey = "TextMap_AnswerDetail_200203",
-    MaxKey = "TitleFrame_10023",
+    MinKey = "TextMap_AnswerDetail_200202",
+    MaxKey = "TitleFrame_10022",
     Loader = function()
       return {
+        TextMap_AnswerDetail_200202 = {
+          ContentES = "Giselle, la Phoxcazadora, trabajaba antes para la Escolta. Pero hace dieciséis años, renunció después de que un veredicto en un caso la pusiera en desacuerdo con su superior.",
+          TextMapId = "TextMap_AnswerDetail_200202"
+        },
         TextMap_AnswerDetail_200203 = {
           ContentES = "La hermana de Sig, Violet, que había dejado Lago Glacial dieciséis años antes, parece haber regresado. Se encontró una cinta violeta en la tumba de su hermano.",
           TextMapId = "TextMap_AnswerDetail_200203"
@@ -60276,19 +60280,19 @@ Emparejamiento cancelado.]],
         TitleFrame_10022 = {
           ContentES = "Phoxcazador rango SS III",
           TextMapId = "TitleFrame_10022"
-        },
-        TitleFrame_10023 = {
-          ContentES = "Phoxcazador rango S III",
-          TextMapId = "TitleFrame_10023"
         }
       }
     end
   },
   {
-    MinKey = "TitleFrame_10024",
-    MaxKey = "Title_20060",
+    MinKey = "TitleFrame_10023",
+    MaxKey = "Title_20059",
     Loader = function()
       return {
+        TitleFrame_10023 = {
+          ContentES = "Phoxcazador rango S III",
+          TextMapId = "TitleFrame_10023"
+        },
         TitleFrame_10024 = {
           ContentES = "Phoxcazador rango A III",
           TextMapId = "TitleFrame_10024"
@@ -61084,19 +61088,19 @@ Emparejamiento cancelado.]],
         Title_20059 = {
           ContentES = "Mago",
           TextMapId = "Title_20059"
-        },
-        Title_20060 = {
-          ContentES = "Guerrero",
-          TextMapId = "Title_20060"
         }
       }
     end
   },
   {
-    MinKey = "Title_20061",
-    MaxKey = "UIGuide_HardBoss_02",
+    MinKey = "Title_20060",
+    MaxKey = "UIGuide_HardBoss_01",
     Loader = function()
       return {
+        Title_20060 = {
+          ContentES = "Guerrero",
+          TextMapId = "Title_20060"
+        },
         Title_20061 = {
           ContentES = "Maestro de la vagancia",
           TextMapId = "Title_20061"
@@ -61889,19 +61893,19 @@ Emparejamiento cancelado.]],
         UIGuide_HardBoss_01 = {
           ContentES = "Derrotar a los jefes de ciertas misiones principales desbloqueará los desafíos de <H>Ecos nocturnos</> correspondientes.",
           TextMapId = "UIGuide_HardBoss_01"
-        },
-        UIGuide_HardBoss_02 = {
-          ContentES = "Los jefes que se encuentran en los desafíos Ecos nocturnos son mucho más poderosos. Puedes obtener recompensas hasta <H>5 veces por semana</>.",
-          TextMapId = "UIGuide_HardBoss_02"
         }
       }
     end
   },
   {
-    MinKey = "UIGuide_Hook_PC",
-    MaxKey = "UIGuide_Title_ModTendency_5",
+    MinKey = "UIGuide_HardBoss_02",
+    MaxKey = "UIGuide_Title_ModTendency_4",
     Loader = function()
       return {
+        UIGuide_HardBoss_02 = {
+          ContentES = "Los jefes que se encuentran en los desafíos Ecos nocturnos son mucho más poderosos. Puedes obtener recompensas hasta <H>5 veces por semana</>.",
+          TextMapId = "UIGuide_HardBoss_02"
+        },
         UIGuide_Hook_PC = {
           ContentES = "Los puntos de enganche están dispersos por el mundo. Presiona &Interactive& para lanzar el gancho y desplazarte más rápido.",
           TextMapId = "UIGuide_Hook_PC"
@@ -62699,19 +62703,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UIGuide_Title_ModTendency_4 = {
           ContentES = "Afinidades correspondientes",
           TextMapId = "UIGuide_Title_ModTendency_4"
-        },
-        UIGuide_Title_ModTendency_5 = {
-          ContentES = "Afinidades diferentes",
-          TextMapId = "UIGuide_Title_ModTendency_5"
         }
       }
     end
   },
   {
-    MinKey = "UIGuide_Title_MonsterExitMechanism",
-    MaxKey = "UI_Accessory_Desc_10115",
+    MinKey = "UIGuide_Title_ModTendency_5",
+    MaxKey = "UI_Accessory_Desc_10114",
     Loader = function()
       return {
+        UIGuide_Title_ModTendency_5 = {
+          ContentES = "Afinidades diferentes",
+          TextMapId = "UIGuide_Title_ModTendency_5"
+        },
         UIGuide_Title_MonsterExitMechanism = {
           ContentES = "Zona de peligro",
           TextMapId = "UIGuide_Title_MonsterExitMechanism"
@@ -63498,19 +63502,19 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Accessory_Desc_10114 = {
           ContentES = "En cada festividad, la gente los cuelga en bancos y portales; se mecen con la brisa y proyectan sombras de luz encantadoras.",
           TextMapId = "UI_Accessory_Desc_10114"
-        },
-        UI_Accessory_Desc_10115 = {
-          ContentES = "Confinar la vida dentro del acero y la maquinaria siempre ha sido uno de los temas de investigación de los alquimistas.",
-          TextMapId = "UI_Accessory_Desc_10115"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Desc_10116",
-    MaxKey = "UI_Accessory_Name_10050",
+    MinKey = "UI_Accessory_Desc_10115",
+    MaxKey = "UI_Accessory_Name_10049",
     Loader = function()
       return {
+        UI_Accessory_Desc_10115 = {
+          ContentES = "Confinar la vida dentro del acero y la maquinaria siempre ha sido uno de los temas de investigación de los alquimistas.",
+          TextMapId = "UI_Accessory_Desc_10115"
+        },
         UI_Accessory_Desc_10116 = {
           ContentES = "La noche larga siempre tiene un fin; que estas luces iluminen tu camino a casa.",
           TextMapId = "UI_Accessory_Desc_10116"
@@ -64308,19 +64312,19 @@ Tocado de Lynn
         UI_Accessory_Name_10049 = {
           ContentES = "Aureola de escarcha estelar",
           TextMapId = "UI_Accessory_Name_10049"
-        },
-        UI_Accessory_Name_10050 = {
-          ContentES = "Ruiseñor onírico",
-          TextMapId = "UI_Accessory_Name_10050"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_10052",
-    MaxKey = "UI_Accessory_Name_20035",
+    MinKey = "UI_Accessory_Name_10050",
+    MaxKey = "UI_Accessory_Name_20034",
     Loader = function()
       return {
+        UI_Accessory_Name_10050 = {
+          ContentES = "Ruiseñor onírico",
+          TextMapId = "UI_Accessory_Name_10050"
+        },
         UI_Accessory_Name_10052 = {
           ContentES = "Accesorio de buena suerte",
           TextMapId = "UI_Accessory_Name_10052"
@@ -65116,19 +65120,19 @@ Tocado de Lynn
         UI_Accessory_Name_20034 = {
           ContentES = "Botonero: Menta",
           TextMapId = "UI_Accessory_Name_20034"
-        },
-        UI_Accessory_Name_20035 = {
-          ContentES = "Pluma de los cielos: Blanco opaco",
-          TextMapId = "UI_Accessory_Name_20035"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_20036",
-    MaxKey = "UI_Accessory_Name_70002",
+    MinKey = "UI_Accessory_Name_20035",
+    MaxKey = "UI_Accessory_Name_70001",
     Loader = function()
       return {
+        UI_Accessory_Name_20035 = {
+          ContentES = "Pluma de los cielos: Blanco opaco",
+          TextMapId = "UI_Accessory_Name_20035"
+        },
         UI_Accessory_Name_20036 = {
           ContentES = "Sueño de mariposa: Azul grisáceo",
           TextMapId = "UI_Accessory_Name_20036"
@@ -65924,19 +65928,19 @@ Tocado de Lynn
         UI_Accessory_Name_70001 = {
           ContentES = "Trayectoria oscilante",
           TextMapId = "UI_Accessory_Name_70001"
-        },
-        UI_Accessory_Name_70002 = {
-          ContentES = "Fuerza del patito: Azul grisáceo",
-          TextMapId = "UI_Accessory_Name_70002"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_70003",
-    MaxKey = "UI_Achievement_Des_17002026",
+    MinKey = "UI_Accessory_Name_70002",
+    MaxKey = "UI_Achievement_Des_17002025",
     Loader = function()
       return {
+        UI_Accessory_Name_70002 = {
+          ContentES = "Fuerza del patito: Azul grisáceo",
+          TextMapId = "UI_Accessory_Name_70002"
+        },
         UI_Accessory_Name_70003 = {
           ContentES = "Flor de llamarada: Dorado",
           TextMapId = "UI_Accessory_Name_70003"
@@ -66732,19 +66736,19 @@ Tocado de Lynn
         UI_Achievement_Des_17002025 = {
           ContentES = "Lee por completo la Antología del tiempo de Psyche en los Fragmentos de memoria del Santuario.",
           TextMapId = "UI_Achievement_Des_17002025"
-        },
-        UI_Achievement_Des_17002026 = {
-          ContentES = "Lee por completo la Antología del tiempo de Daphne en los Fragmentos de memoria del Santuario.",
-          TextMapId = "UI_Achievement_Des_17002026"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_17002027",
-    MaxKey = "UI_Achievement_Des_50903",
+    MinKey = "UI_Achievement_Des_17002026",
+    MaxKey = "UI_Achievement_Des_50902",
     Loader = function()
       return {
+        UI_Achievement_Des_17002026 = {
+          ContentES = "Lee por completo la Antología del tiempo de Daphne en los Fragmentos de memoria del Santuario.",
+          TextMapId = "UI_Achievement_Des_17002026"
+        },
         UI_Achievement_Des_17002027 = {
           ContentES = "Lee por completo la Antología del tiempo de Flora en los Fragmentos de memoria del Santuario.",
           TextMapId = "UI_Achievement_Des_17002027"
@@ -67540,19 +67544,19 @@ Tocado de Lynn
         UI_Achievement_Des_50902 = {
           ContentES = "Completa por primera vez [Encargo: Defensa]",
           TextMapId = "UI_Achievement_Des_50902"
-        },
-        UI_Achievement_Des_50903 = {
-          ContentES = "Completa por primera vez [Encargo:Excavación ∞]",
-          TextMapId = "UI_Achievement_Des_50903"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_50904",
-    MaxKey = "UI_Achievement_Name_1010306",
+    MinKey = "UI_Achievement_Des_50903",
+    MaxKey = "UI_Achievement_Name_1010305",
     Loader = function()
       return {
+        UI_Achievement_Des_50903 = {
+          ContentES = "Completa por primera vez [Encargo:Excavación ∞]",
+          TextMapId = "UI_Achievement_Des_50903"
+        },
         UI_Achievement_Des_50904 = {
           ContentES = "Completa por primera vez [Encargo: Captura]",
           TextMapId = "UI_Achievement_Des_50904"
@@ -68348,19 +68352,19 @@ Tocado de Lynn
         UI_Achievement_Name_1010305 = {
           ContentES = "Socio de investigación de Theo",
           TextMapId = "UI_Achievement_Name_1010305"
-        },
-        UI_Achievement_Name_1010306 = {
-          ContentES = "Entre suspiros",
-          TextMapId = "UI_Achievement_Name_1010306"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_1010601",
-    MaxKey = "UI_Achievement_Name_201301",
+    MinKey = "UI_Achievement_Name_1010306",
+    MaxKey = "UI_Achievement_Name_201203",
     Loader = function()
       return {
+        UI_Achievement_Name_1010306 = {
+          ContentES = "Entre suspiros",
+          TextMapId = "UI_Achievement_Name_1010306"
+        },
         UI_Achievement_Name_1010601 = {
           ContentES = "Cazador de tesoros: Isla del Purgatorio",
           TextMapId = "UI_Achievement_Name_1010601"
@@ -69156,19 +69160,19 @@ Tocado de Lynn
         UI_Achievement_Name_201203 = {
           ContentES = "La fortuna favorece a los audaces Ⅲ",
           TextMapId = "UI_Achievement_Name_201203"
-        },
-        UI_Achievement_Name_201301 = {
-          ContentES = "Cuidado con la cabeza Ⅰ",
-          TextMapId = "UI_Achievement_Name_201301"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_201302",
-    MaxKey = "UI_Achievement_Name_50510101",
+    MinKey = "UI_Achievement_Name_201301",
+    MaxKey = "UI_Achievement_Name_505101",
     Loader = function()
       return {
+        UI_Achievement_Name_201301 = {
+          ContentES = "Cuidado con la cabeza Ⅰ",
+          TextMapId = "UI_Achievement_Name_201301"
+        },
         UI_Achievement_Name_201302 = {
           ContentES = "Cuidado con la cabeza Ⅱ",
           TextMapId = "UI_Achievement_Name_201302"
@@ -69964,19 +69968,19 @@ Tocado de Lynn
         UI_Achievement_Name_505101 = {
           ContentES = "Fin de la pesadilla — Sin igual: Sibylle",
           TextMapId = "UI_Achievement_Name_505101"
-        },
-        UI_Achievement_Name_50510101 = {
-          ContentES = "Así habló Paniemon Ⅰ",
-          TextMapId = "UI_Achievement_Name_50510101"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_50510102",
-    MaxKey = "UI_Achievement_Name_940301",
+    MinKey = "UI_Achievement_Name_50510101",
+    MaxKey = "UI_Achievement_Name_940201",
     Loader = function()
       return {
+        UI_Achievement_Name_50510101 = {
+          ContentES = "Así habló Paniemon Ⅰ",
+          TextMapId = "UI_Achievement_Name_50510101"
+        },
         UI_Achievement_Name_50510102 = {
           ContentES = "Así habló Paniemon Ⅱ",
           TextMapId = "UI_Achievement_Name_50510102"
@@ -70772,19 +70776,19 @@ Tocado de Lynn
         UI_Achievement_Name_940201 = {
           ContentES = "Solo un disparo: Laberinto místico",
           TextMapId = "UI_Achievement_Name_940201"
-        },
-        UI_Achievement_Name_940301 = {
-          ContentES = "Guardián de la linterna: Polilla nocturna",
-          TextMapId = "UI_Achievement_Name_940301"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_940401",
-    MaxKey = "UI_Armory_Introduce",
+    MinKey = "UI_Achievement_Name_940301",
+    MaxKey = "UI_Armory_Information",
     Loader = function()
       return {
+        UI_Achievement_Name_940301 = {
+          ContentES = "Guardián de la linterna: Polilla nocturna",
+          TextMapId = "UI_Achievement_Name_940301"
+        },
         UI_Achievement_Name_940401 = {
           ContentES = "Guardián de la linterna: Luciérnaga brillante",
           TextMapId = "UI_Achievement_Name_940401"
@@ -71577,19 +71581,19 @@ Tocado de Lynn
         UI_Armory_Information = {
           ContentES = "Perfil",
           TextMapId = "UI_Armory_Information"
-        },
-        UI_Armory_Introduce = {
-          ContentES = "Info. de habilidades",
-          TextMapId = "UI_Armory_Introduce"
         }
       }
     end
   },
   {
-    MinKey = "UI_Armory_JumpToForgeArchive",
-    MaxKey = "UI_AutoChess_BuffName1",
+    MinKey = "UI_Armory_Introduce",
+    MaxKey = "UI_AutoChess_BuffInfo",
     Loader = function()
       return {
+        UI_Armory_Introduce = {
+          ContentES = "Info. de habilidades",
+          TextMapId = "UI_Armory_Introduce"
+        },
         UI_Armory_JumpToForgeArchive = {
           ContentES = "Ver proceso de forja",
           TextMapId = "UI_Armory_JumpToForgeArchive"
@@ -72385,19 +72389,19 @@ Tocado de Lynn
         UI_AutoChess_BuffInfo = {
           ContentES = "Potencial estratégico",
           TextMapId = "UI_AutoChess_BuffInfo"
-        },
-        UI_AutoChess_BuffName1 = {
-          ContentES = "Unidades desgastadas",
-          TextMapId = "UI_AutoChess_BuffName1"
         }
       }
     end
   },
   {
-    MinKey = "UI_AutoChess_BuffName2",
-    MaxKey = "UI_Bag_Sell_Amount",
+    MinKey = "UI_AutoChess_BuffName1",
+    MaxKey = "UI_Bag_RemainOne",
     Loader = function()
       return {
+        UI_AutoChess_BuffName1 = {
+          ContentES = "Unidades desgastadas",
+          TextMapId = "UI_AutoChess_BuffName1"
+        },
         UI_AutoChess_BuffName2 = {
           ContentES = "Unidades sobrecargadas",
           TextMapId = "UI_AutoChess_BuffName2"
@@ -73190,19 +73194,19 @@ Tocado de Lynn
         UI_Bag_RemainOne = {
           ContentES = "Conservar uno",
           TextMapId = "UI_Bag_RemainOne"
-        },
-        UI_Bag_Sell_Amount = {
-          ContentES = "Cantidad",
-          TextMapId = "UI_Bag_Sell_Amount"
         }
       }
     end
   },
   {
-    MinKey = "UI_Bag_Sell_Batch",
-    MaxKey = "UI_CHAR_DATA_TEXT_11010305",
+    MinKey = "UI_Bag_Sell_Amount",
+    MaxKey = "UI_CHAR_DATA_TEXT_11010304",
     Loader = function()
       return {
+        UI_Bag_Sell_Amount = {
+          ContentES = "Cantidad",
+          TextMapId = "UI_Bag_Sell_Amount"
+        },
         UI_Bag_Sell_Batch = {
           ContentES = "Selección múltiple",
           TextMapId = "UI_Bag_Sell_Batch"
@@ -73995,19 +73999,19 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_11010304 = {
           ContentES = "Berenica siempre ha sido vagamente consciente de los extraordinarios poderes que posee. En los cuentos de trovadores y bardos, los personajes dotados de una fuerza considerable suelen tener grandes destinos, como salvar el mundo o ascender al trono. Pero Berenica no alberga ningún interés en tales destinos. Si alguna vez llega a dominar sus poderes al máximo, pretende usarlos únicamente para proteger a sus seres queridos. Aunque otros podrían considerarlo un desperdicio, para Berenica, proteger a su familia es lo más importante.",
           TextMapId = "UI_CHAR_DATA_TEXT_11010304"
-        },
-        UI_CHAR_DATA_TEXT_11010305 = {
-          ContentES = "Berenica siempre ha considerado su misión primordial protegerte, viéndote como {性别:un niño más pequeño y menos robusto|una niña más pequeña y menos robusta} que no podría vivir sin ella. Sin embargo, aquel día en el acantilado, cuando te vio hacer esa señal por primera vez, de repente se dio cuenta de que era ella quien no podía vivir sin ti.",
-          TextMapId = "UI_CHAR_DATA_TEXT_11010305"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_11010401",
-    MaxKey = "UI_CHAR_DATA_TEXT_31010202",
+    MinKey = "UI_CHAR_DATA_TEXT_11010305",
+    MaxKey = "UI_CHAR_DATA_TEXT_31010201",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_11010305 = {
+          ContentES = "Berenica siempre ha considerado su misión primordial protegerte, viéndote como {性别:un niño más pequeño y menos robusto|una niña más pequeña y menos robusta} que no podría vivir sin ella. Sin embargo, aquel día en el acantilado, cuando te vio hacer esa señal por primera vez, de repente se dio cuenta de que era ella quien no podía vivir sin ti.",
+          TextMapId = "UI_CHAR_DATA_TEXT_11010305"
+        },
         UI_CHAR_DATA_TEXT_11010401 = {
           ContentES = "Los aldeanos de la Isla del Purgatorio solían tender redes de pesca a lo largo de la playa, aprovechando las mareas para pescar. Tras recoger todo lo que veían, quedaban algunos peces y camarones más pequeños; estos restos se convirtieron en la principal fuente de alimento para Berenica y {nickname} antes de que tuvieran edad suficiente para trabajar. Vadeando la arena que dejaban las capturas de otros pescadores, los dos niños recorrieron las turbias aguas en busca de peces y camarones pequeños. Esta tarea no solo era tediosa y agotadora, sino que también les daba pocos frutos. Sin embargo, lograron hacerlo divertido convirtiéndolo en una competencia para ver quién podía reunir más \"tesoros\".\n\"¡Mira, Berry! ¡He pescado uno grande!\", exclamó {nickname} desde lejos, sosteniendo con orgullo un pez del tamaño de una mano. Los pescadores jamás se molestarían en agacharse por un pez de ese tamaño, pero para {性别:ellos|ellas}, era un premio generoso.\n\"Impresionante\", respondió Berenica con una sonrisa.\nSatisfecho con el reconocimiento, {nickname} no puso inmediatamente el pescado en la cesta. En cambio, lo sostuvo con orgullo por un momento, saboreando la victoria, hasta que la afilada aleta del pez pinchó su palma, dejando una \"herida de batalla\". Cuando llegó el momento de contar sus hallazgos, quedó claro que Berenica había salido victoriosa. Sin querer admitir la derrota, protestó: \"¡Si no me hubiera lastimado, habría ganado! Es culpa de ese pez... Vamos a guisarlo esta noche\".\n\" —No seas un mal perdedor. Recuerda tener más cuidado la próxima vez —dijo Berenica, solo para darse cuenta de que {nickname} ya se había colgado la canasta al hombro y se había ido a casa.\n\" ¡Una carrera hasta casa!\" gritó desde lejos, saludando a Berenica.\nCon una sonrisa resignada, Berenica ajustó su propia cesta y salió a participar en aquella carrera desleal. Apenas había empezado, el tiempo cambió de repente, lloviendo a cántaros y empapándolos por completo. \"¡Qué mala suerte la mía!\", pensó Berenica con tristeza, pero antes de que pudiera pensarlo, la animada voz de {nickname} resonó entre el aguacero: \"¡Mira, Berry, está lloviendo!\". Extendió la mano para atrapar las gotas de lluvia, riendo entre dientes. \"Ahora no tenemos que subir a la montaña a buscar agua. Debe ser un regalo de los dioses... ¡Qué suerte tenemos! ¡Más suerte que esos príncipes y princesas del palacio!\".\nBerenica no pudo evitar sonreír. No creía en dioses. Para ella, la lluvia era solo un fenómeno natural. Pero en ese último punto estaba de acuerdo: el tiempo que pasé con {nickname} no tenía precio.\n\"Mańana debería dejar que {性别:él|ella} gane\", pensó Berenica, acelerando el paso para alcanzarlo.",
           TextMapId = "UI_CHAR_DATA_TEXT_11010401"
@@ -74803,19 +74807,19 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_31010201 = {
           ContentES = "La Mayor Lynn, de la 13.ª Legión, es una oficial de gran confianza entre sus soldados. No es tan estricta como Sibylle ni tan astuta como Randy, pero aun así posee un encanto único. Es inequívoca y decidida, y nunca abandona a sus aliados al realizar misiones. Se queja de la sobrecarga de trabajo, pero siempre termina cada tarea según lo requerido. Como líder, ha experimentado mucha amargura y sufrimiento, por lo que comprende bien los problemas de los soldados rasos. Por lo tanto, para sus hombres, Lynn es más auténtica y accesible que los demás oficiales.",
           TextMapId = "UI_CHAR_DATA_TEXT_31010201"
-        },
-        UI_CHAR_DATA_TEXT_31010202 = {
-          ContentES = "Aunque Lynn goza ahora de gran confianza en la Legión, al principio no era así. Acostumbrada a su soledad y a su comportamiento espabilado, destacaba como una forastera entre los soldados entrenados en la academia militar. Incluso corrían rumores de que había asesinado brutalmente a compañeros de la Legión y se había infiltrado en la 13.ª Legión por todos los medios. Estos rumores ambiguos alimentaron el resentimiento contra ella con el tiempo. Dondequiera que Lynn iba, oía palabras frías y burlas. \"¿Lynn? ¡Ay, esa escoria oportunista! Dicen que asesinó a sus propios camaradas...\"",
-          TextMapId = "UI_CHAR_DATA_TEXT_31010202"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_31010203",
-    MaxKey = "UI_CHAR_DATA_TEXT_51010204",
+    MinKey = "UI_CHAR_DATA_TEXT_31010202",
+    MaxKey = "UI_CHAR_DATA_TEXT_51010203",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_31010202 = {
+          ContentES = "Aunque Lynn goza ahora de gran confianza en la Legión, al principio no era así. Acostumbrada a su soledad y a su comportamiento espabilado, destacaba como una forastera entre los soldados entrenados en la academia militar. Incluso corrían rumores de que había asesinado brutalmente a compañeros de la Legión y se había infiltrado en la 13.ª Legión por todos los medios. Estos rumores ambiguos alimentaron el resentimiento contra ella con el tiempo. Dondequiera que Lynn iba, oía palabras frías y burlas. \"¿Lynn? ¡Ay, esa escoria oportunista! Dicen que asesinó a sus propios camaradas...\"",
+          TextMapId = "UI_CHAR_DATA_TEXT_31010202"
+        },
         UI_CHAR_DATA_TEXT_31010203 = {
           ContentES = "Mientras los niños Solarianos del Imperio aún cursaban la secundaria, Lynn ya se había incorporado al mercado laboral. Había trabajado en las minas recolectando Phoxenes, cargado barriles en tabernas y servido como criada en casas adineradas. Más tarde, se convirtió en Phoxcazadora, una asesina a sueldo. Su excepcional talento y refinadas habilidades le formaron rápidamente una reputación, y cada vez más clientes acudían a ella con encargos. Estos encargos evolucionaron desde tareas de caza mundanas hasta operaciones cada vez más encubiertas. Algunos incluso se saltaban Los Asfódelos, invitando a Lynn a encargarse directamente de algunos \"trabajos privados\".\nY así, durante los dos años que transcurrieron entre los dieciocho y los veinte, Lynn fue conocida públicamente como \"mensajera\". Noche tras noche, recibía \"cartas\" de sus empleadores en los carruajes dorados que llegaban del centro de la ciudad. Lynn cumplía con los cañones de sus armas los anhelos intensos, fervientes y a veces casi desquiciados de sus empleadores. Luego, antes del amanecer, emprendía su viaje de \"reparto\", regresando después de muchos días, resistiendo al viento y la nieve en el proceso.\nEn los recuerdos de Camilla Scarlet, la joven Lynn siempre entraba a la taberna al anochecer, sacudiéndose los copos de nieve de la capa. Compraba la bebida más barata, se sentaba sola junto a la ventana y permanecía en silencio hasta la hora de cerrar. En una rara ocasión, Lynn empezó a hablar con Camilla y le pidió una toalla.\n\"No quiero que mi familia me vea\", susurró suavemente, \"Tengo… algo en la cara\".\nCamilla miró la mancha roja oscura en su rostro y frunció el ceño. Tenía un olfato agudo y podía detectar el penetrante olor que emanaba de la mancha.\n\"Gracias\", dijo Lynn mientras aceptaba la toalla que Camilla le tendía. Su rostro helado se iluminó con una leve sonrisa, y luego desapareció entre el viento y la nieve.",
           TextMapId = "UI_CHAR_DATA_TEXT_31010203"
@@ -75611,19 +75615,19 @@ Tocado de Lynn
         UI_CHAR_DATA_TEXT_51010203 = {
           ContentES = "El mejor récord de concentración de Truffle leyendo los textos de la Iglesia es de siete minutos, y no importa cuántas veces los lea, en cuanto cierra el libro lo olvida todo rápidamente. Por eso, el clero de la Iglesia se preocupó sinceramente por el futuro de Truffle, e incluso hubo un comentario que en su momento pareció muy cruel pero que ahora es una broma:\n\"¡Dejar que esta niña se quede aquí es un desperdicio de comida!. \"",
           TextMapId = "UI_CHAR_DATA_TEXT_51010203"
-        },
-        UI_CHAR_DATA_TEXT_51010204 = {
-          ContentES = "El puesto de Comisaria de Provisiones no es permanente. Normalmente solo lo necesitan ciudades muy, muy grandes o lugares que no producen alimentos, para gestionar el flujo de provisiones de distintas regiones.\nEn la pequeña ciudad donde vive Truffle no se necesitaba ese puesto. No es un frente de batalla ni un lugar de minería o tala de madera.\nAsí que los visitantes de paso inevitablemente se preguntan por qué Truffle tiene ese puesto de Comisaria de Provisiones, y por qué Filbert, que la acompaña, puede llamarse Comisaria Especial de Provisiones.\nPero todos los residentes permanentes de la ciudad, al mencionar el tema, responden con entusiasmo a los curiosos visitantes: \"Truffle y Filbert alimentaron a toda la ciudad durante una gran hambruna. \"\nY la mayoría de los visitantes que escuchan esto lo toman como una anécdota curiosa, se ríen y no indagan más. Ay, qué gente tan poco lista.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51010204"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_51010205",
-    MaxKey = "UI_CMName_Name_XidunWenhao",
+    MinKey = "UI_CHAR_DATA_TEXT_51010204",
+    MaxKey = "UI_CMName_Name_Xidun",
     Loader = function()
       return {
+        UI_CHAR_DATA_TEXT_51010204 = {
+          ContentES = "El puesto de Comisaria de Provisiones no es permanente. Normalmente solo lo necesitan ciudades muy, muy grandes o lugares que no producen alimentos, para gestionar el flujo de provisiones de distintas regiones.\nEn la pequeña ciudad donde vive Truffle no se necesitaba ese puesto. No es un frente de batalla ni un lugar de minería o tala de madera.\nAsí que los visitantes de paso inevitablemente se preguntan por qué Truffle tiene ese puesto de Comisaria de Provisiones, y por qué Filbert, que la acompaña, puede llamarse Comisaria Especial de Provisiones.\nPero todos los residentes permanentes de la ciudad, al mencionar el tema, responden con entusiasmo a los curiosos visitantes: \"Truffle y Filbert alimentaron a toda la ciudad durante una gran hambruna. \"\nY la mayoría de los visitantes que escuchan esto lo toman como una anécdota curiosa, se ríen y no indagan más. Ay, qué gente tan poco lista.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51010204"
+        },
         UI_CHAR_DATA_TEXT_51010205 = {
           ContentES = "Filbert es más inteligente de lo que parece. Emite un gruñido especial de felicidad cuando ayuda a alguien a llenar su estómago, y se acurruca en una esquina cuando se burlan de ella. Pero no necesita mucho consuelo de Truffle. Después de medio día, siempre vuelve a menear la cabeza y la cola como siempre.",
           TextMapId = "UI_CHAR_DATA_TEXT_51010205"
@@ -76419,19 +76423,19 @@ Tocado de Lynn
         UI_CMName_Name_Xidun = {
           ContentES = "Seaton",
           TextMapId = "UI_CMName_Name_Xidun"
-        },
-        UI_CMName_Name_XidunWenhao = {
-          ContentES = "¿¿¿???",
-          TextMapId = "UI_CMName_Name_XidunWenhao"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMName_Name_XingShang",
-    MaxKey = "UI_CMNpc_Name_Kongkongjiaojiao",
+    MinKey = "UI_CMName_Name_XidunWenhao",
+    MaxKey = "UI_CMNpc_Name_KongDaLi",
     Loader = function()
       return {
+        UI_CMName_Name_XidunWenhao = {
+          ContentES = "¿¿¿???",
+          TextMapId = "UI_CMName_Name_XidunWenhao"
+        },
         UI_CMName_Name_XingShang = {
           ContentES = "Comerciante ambulante",
           TextMapId = "UI_CMName_Name_XingShang"
@@ -77227,19 +77231,19 @@ Tocado de Lynn
         UI_CMNpc_Name_KongDaLi = {
           ContentES = "Kong Dali",
           TextMapId = "UI_CMNpc_Name_KongDaLi"
-        },
-        UI_CMNpc_Name_Kongkongjiaojiao = {
-          ContentES = "Lunoholgazana",
-          TextMapId = "UI_CMNpc_Name_Kongkongjiaojiao"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMNpc_Name_Laina",
-    MaxKey = "UI_COMMONPOP_TEXT_100038",
+    MinKey = "UI_CMNpc_Name_Kongkongjiaojiao",
+    MaxKey = "UI_COMMONPOP_TEXT_100037",
     Loader = function()
       return {
+        UI_CMNpc_Name_Kongkongjiaojiao = {
+          ContentES = "Lunoholgazana",
+          TextMapId = "UI_CMNpc_Name_Kongkongjiaojiao"
+        },
         UI_CMNpc_Name_Laina = {
           ContentES = "Lina",
           TextMapId = "UI_CMNpc_Name_Laina"
@@ -78035,19 +78039,19 @@ Tocado de Lynn
         UI_COMMONPOP_TEXT_100037 = {
           ContentES = "¿Seguro que quieres teletransportarte al Santuario?",
           TextMapId = "UI_COMMONPOP_TEXT_100037"
-        },
-        UI_COMMONPOP_TEXT_100038 = {
-          ContentES = "Los objetos equipados se quitarán automáticamente al venderse",
-          TextMapId = "UI_COMMONPOP_TEXT_100038"
         }
       }
     end
   },
   {
-    MinKey = "UI_COMMONPOP_TEXT_100044",
-    MaxKey = "UI_CTL_Focus_ModList",
+    MinKey = "UI_COMMONPOP_TEXT_100038",
+    MaxKey = "UI_CTL_Focus_List",
     Loader = function()
       return {
+        UI_COMMONPOP_TEXT_100038 = {
+          ContentES = "Los objetos equipados se quitarán automáticamente al venderse",
+          TextMapId = "UI_COMMONPOP_TEXT_100038"
+        },
         UI_COMMONPOP_TEXT_100044 = {
           ContentES = "%s está siendo usado por %s. ¿Intercambiar?",
           TextMapId = "UI_COMMONPOP_TEXT_100044"
@@ -78840,19 +78844,19 @@ Tocado de Lynn
         UI_CTL_Focus_List = {
           ContentES = "Enfocar lista",
           TextMapId = "UI_CTL_Focus_List"
-        },
-        UI_CTL_Focus_ModList = {
-          ContentES = "Enfocar",
-          TextMapId = "UI_CTL_Focus_ModList"
         }
       }
     end
   },
   {
-    MinKey = "UI_CTL_Fold",
-    MaxKey = "UI_Chat_Imagine15",
+    MinKey = "UI_CTL_Focus_ModList",
+    MaxKey = "UI_Chat_Imagine14",
     Loader = function()
       return {
+        UI_CTL_Focus_ModList = {
+          ContentES = "Enfocar",
+          TextMapId = "UI_CTL_Focus_ModList"
+        },
         UI_CTL_Fold = {
           ContentES = "Colapsar",
           TextMapId = "UI_CTL_Fold"
@@ -79645,19 +79649,19 @@ Tocado de Lynn
         UI_Chat_Imagine14 = {
           ContentES = "…",
           TextMapId = "UI_Chat_Imagine14"
-        },
-        UI_Chat_Imagine15 = {
-          ContentES = "Furioso",
-          TextMapId = "UI_Chat_Imagine15"
         }
       }
     end
   },
   {
-    MinKey = "UI_Chat_Imagine16",
-    MaxKey = "UI_Content_SaiqiBossWarning",
+    MinKey = "UI_Chat_Imagine15",
+    MaxKey = "UI_Consume_Select_Skin",
     Loader = function()
       return {
+        UI_Chat_Imagine15 = {
+          ContentES = "Furioso",
+          TextMapId = "UI_Chat_Imagine15"
+        },
         UI_Chat_Imagine16 = {
           ContentES = "¡Bah!",
           TextMapId = "UI_Chat_Imagine16"
@@ -80453,19 +80457,19 @@ Tocado de Lynn
         UI_Consume_Select_Skin = {
           ContentES = "Consume el objeto para desbloquear",
           TextMapId = "UI_Consume_Select_Skin"
-        },
-        UI_Content_SaiqiBossWarning = {
-          ContentES = "Estás a punto de entrar en una batalla difícil. Asegúrate de que tu <H>Mochila táctica</> incluya <H>Sello de compañero de combate</> y que tu personaje tenga equipada un <H>Arma a Distancia</> bien nivelada.",
-          TextMapId = "UI_Content_SaiqiBossWarning"
         }
       }
     end
   },
   {
-    MinKey = "UI_Controller_Check",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_22",
+    MinKey = "UI_Content_SaiqiBossWarning",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_21",
     Loader = function()
       return {
+        UI_Content_SaiqiBossWarning = {
+          ContentES = "Estás a punto de entrar en una batalla difícil. Asegúrate de que tu <H>Mochila táctica</> incluya <H>Sello de compañero de combate</> y que tu personaje tenga equipada un <H>Arma a Distancia</> bien nivelada.",
+          TextMapId = "UI_Content_SaiqiBossWarning"
+        },
         UI_Controller_Check = {
           ContentES = "Ver",
           TextMapId = "UI_Controller_Check"
@@ -81255,19 +81259,19 @@ Tocado de Lynn
         UI_DUNGEON_AUTOCHESS_21 = {
           ContentES = "Partida sin fin 001",
           TextMapId = "UI_DUNGEON_AUTOCHESS_21"
-        },
-        UI_DUNGEON_AUTOCHESS_22 = {
-          ContentES = "Partida sin fin 002",
-          TextMapId = "UI_DUNGEON_AUTOCHESS_22"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_AUTOCHESS_23",
-    MaxKey = "UI_DUNGEON_DROP_RangedWEAPONMOD",
+    MinKey = "UI_DUNGEON_AUTOCHESS_22",
+    MaxKey = "UI_DUNGEON_DROP_RESOURCE",
     Loader = function()
       return {
+        UI_DUNGEON_AUTOCHESS_22 = {
+          ContentES = "Partida sin fin 002",
+          TextMapId = "UI_DUNGEON_AUTOCHESS_22"
+        },
         UI_DUNGEON_AUTOCHESS_23 = {
           ContentES = "Partida sin fin 003",
           TextMapId = "UI_DUNGEON_AUTOCHESS_23"
@@ -82063,19 +82067,19 @@ Tocado de Lynn
         UI_DUNGEON_DROP_RESOURCE = {
           ContentES = "Materiales de forja",
           TextMapId = "UI_DUNGEON_DROP_RESOURCE"
-        },
-        UI_DUNGEON_DROP_RangedWEAPONMOD = {
-          ContentES = "Cuñas Demoníacas para armas a distancia",
-          TextMapId = "UI_DUNGEON_DROP_RangedWEAPONMOD"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_DROP_SKILL",
-    MaxKey = "UI_Dispatch_TimeToDone",
+    MinKey = "UI_DUNGEON_DROP_RangedWEAPONMOD",
+    MaxKey = "UI_Dispatch_StopConfirm_Waring",
     Loader = function()
       return {
+        UI_DUNGEON_DROP_RangedWEAPONMOD = {
+          ContentES = "Cuñas Demoníacas para armas a distancia",
+          TextMapId = "UI_DUNGEON_DROP_RangedWEAPONMOD"
+        },
         UI_DUNGEON_DROP_SKILL = {
           ContentES = "Materiales de mejora de habilidades",
           TextMapId = "UI_DUNGEON_DROP_SKILL"
@@ -82868,19 +82872,19 @@ Tocado de Lynn
         UI_Dispatch_StopConfirm_Waring = {
           ContentES = "La expedición en curso será terminada y no podrá reanudarse.",
           TextMapId = "UI_Dispatch_StopConfirm_Waring"
-        },
-        UI_Dispatch_TimeToDone = {
-          ContentES = "antes del fin de la expedición",
-          TextMapId = "UI_Dispatch_TimeToDone"
         }
       }
     end
   },
   {
-    MinKey = "UI_Dispatch_Toast_AgentFull",
-    MaxKey = "UI_ElementDes_General",
+    MinKey = "UI_Dispatch_TimeToDone",
+    MaxKey = "UI_ElementDes_Fire",
     Loader = function()
       return {
+        UI_Dispatch_TimeToDone = {
+          ContentES = "antes del fin de la expedición",
+          TextMapId = "UI_Dispatch_TimeToDone"
+        },
         UI_Dispatch_Toast_AgentFull = {
           ContentES = "Límite de expediciones alcanzado",
           TextMapId = "UI_Dispatch_Toast_AgentFull"
@@ -83676,19 +83680,19 @@ Tocado de Lynn
         UI_ElementDes_Fire = {
           ContentES = "Inflige daño <H>Pyro</> periódico",
           TextMapId = "UI_ElementDes_Fire"
-        },
-        UI_ElementDes_General = {
-          ContentES = "El daño de elementos ventajosos aumenta un <H>400%</>, mientras que el de elementos <H>no ventajosos</> se reduce un <H>50 %</>.",
-          TextMapId = "UI_ElementDes_General"
         }
       }
     end
   },
   {
-    MinKey = "UI_ElementDes_Light",
-    MaxKey = "UI_Extraction_TM_48",
+    MinKey = "UI_ElementDes_General",
+    MaxKey = "UI_Extraction_TM_47",
     Loader = function()
       return {
+        UI_ElementDes_General = {
+          ContentES = "El daño de elementos ventajosos aumenta un <H>400%</>, mientras que el de elementos <H>no ventajosos</> se reduce un <H>50 %</>.",
+          TextMapId = "UI_ElementDes_General"
+        },
         UI_ElementDes_Light = {
           ContentES = "Inflige daño <H>Lumino</> periódico y actualiza el tiempo restante de todos los efectos <H>elementales</> activos",
           TextMapId = "UI_ElementDes_Light"
@@ -84484,19 +84488,19 @@ Tocado de Lynn
         UI_Extraction_TM_47 = {
           ContentES = "Salir de la partida",
           TextMapId = "UI_Extraction_TM_47"
-        },
-        UI_Extraction_TM_48 = {
-          ContentES = "Sin botín",
-          TextMapId = "UI_Extraction_TM_48"
         }
       }
     end
   },
   {
-    MinKey = "UI_Extraction_TM_49",
-    MaxKey = "UI_Friend_RequestTime",
+    MinKey = "UI_Extraction_TM_48",
+    MaxKey = "UI_Friend_RequestHint",
     Loader = function()
       return {
+        UI_Extraction_TM_48 = {
+          ContentES = "Sin botín",
+          TextMapId = "UI_Extraction_TM_48"
+        },
         UI_Extraction_TM_49 = {
           ContentES = "Contenedor",
           TextMapId = "UI_Extraction_TM_49"
@@ -85289,19 +85293,19 @@ Tocado de Lynn
         UI_Friend_RequestHint = {
           ContentES = "Escribe un mensaje",
           TextMapId = "UI_Friend_RequestHint"
-        },
-        UI_Friend_RequestTime = {
-          ContentES = "Hora de la solicitud",
-          TextMapId = "UI_Friend_RequestTime"
         }
       }
     end
   },
   {
-    MinKey = "UI_Friend_SearchBtn",
-    MaxKey = "UI_HardBoss_Difficulty_Des_Open_5",
+    MinKey = "UI_Friend_RequestTime",
+    MaxKey = "UI_HardBoss_Difficulty_Des_Open_4",
     Loader = function()
       return {
+        UI_Friend_RequestTime = {
+          ContentES = "Hora de la solicitud",
+          TextMapId = "UI_Friend_RequestTime"
+        },
         UI_Friend_SearchBtn = {
           ContentES = "Buscar",
           TextMapId = "UI_Friend_SearchBtn"
@@ -86094,19 +86098,19 @@ Tocado de Lynn
         UI_HardBoss_Difficulty_Des_Open_4 = {
           ContentES = "Pesadilla IV",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_4"
-        },
-        UI_HardBoss_Difficulty_Des_Open_5 = {
-          ContentES = "Pesadilla Ⅴ",
-          TextMapId = "UI_HardBoss_Difficulty_Des_Open_5"
         }
       }
     end
   },
   {
-    MinKey = "UI_HardBoss_Difficulty_Des_Open_6",
-    MaxKey = "UI_Interactive_ChabeiXier",
+    MinKey = "UI_HardBoss_Difficulty_Des_Open_5",
+    MaxKey = "UI_Interactive_BuyTicket",
     Loader = function()
       return {
+        UI_HardBoss_Difficulty_Des_Open_5 = {
+          ContentES = "Pesadilla Ⅴ",
+          TextMapId = "UI_HardBoss_Difficulty_Des_Open_5"
+        },
         UI_HardBoss_Difficulty_Des_Open_6 = {
           ContentES = "Pesadilla Ⅵ",
           TextMapId = "UI_HardBoss_Difficulty_Des_Open_6"
@@ -86899,19 +86903,19 @@ Tocado de Lynn
         UI_Interactive_BuyTicket = {
           ContentES = "Comprar boleto",
           TextMapId = "UI_Interactive_BuyTicket"
-        },
-        UI_Interactive_ChabeiXier = {
-          ContentES = "Mantén presionado para dejar la taza",
-          TextMapId = "UI_Interactive_ChabeiXier"
         }
       }
     end
   },
   {
-    MinKey = "UI_Interactive_ChahuXier",
-    MaxKey = "UI_Locked_Des_4030008",
+    MinKey = "UI_Interactive_ChabeiXier",
+    MaxKey = "UI_Locked_Des_4030007",
     Loader = function()
       return {
+        UI_Interactive_ChabeiXier = {
+          ContentES = "Mantén presionado para dejar la taza",
+          TextMapId = "UI_Interactive_ChabeiXier"
+        },
         UI_Interactive_ChahuXier = {
           ContentES = "Mantén presionado para preparar té",
           TextMapId = "UI_Interactive_ChahuXier"
@@ -87707,19 +87711,19 @@ Tocado de Lynn
         UI_Locked_Des_4030007 = {
           ContentES = "Obtén Fantasía Jishu: Blanco opaco",
           TextMapId = "UI_Locked_Des_4030007"
-        },
-        UI_Locked_Des_4030008 = {
-          ContentES = "Obtén Fantasía Jishu: Rojo óxido",
-          TextMapId = "UI_Locked_Des_4030008"
         }
       }
     end
   },
   {
-    MinKey = "UI_Locked_Des_4030009",
-    MaxKey = "UI_MECHANISM_113",
+    MinKey = "UI_Locked_Des_4030008",
+    MaxKey = "UI_MECHANISM_112",
     Loader = function()
       return {
+        UI_Locked_Des_4030008 = {
+          ContentES = "Obtén Fantasía Jishu: Rojo óxido",
+          TextMapId = "UI_Locked_Des_4030008"
+        },
         UI_Locked_Des_4030009 = {
           ContentES = "Obtén Fantasía Jishu: Jade oscuro",
           TextMapId = "UI_Locked_Des_4030009"
@@ -88515,19 +88519,19 @@ Tocado de Lynn
         UI_MECHANISM_112 = {
           ContentES = "Activa el dispositivo",
           TextMapId = "UI_MECHANISM_112"
-        },
-        UI_MECHANISM_113 = {
-          ContentES = "Registra la ubicación actual",
-          TextMapId = "UI_MECHANISM_113"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_114",
-    MaxKey = "UI_ModGuideBook_Task_Title_Collect_01",
+    MinKey = "UI_MECHANISM_113",
+    MaxKey = "UI_ModGuideBook_Task_Des_14",
     Loader = function()
       return {
+        UI_MECHANISM_113 = {
+          ContentES = "Registra la ubicación actual",
+          TextMapId = "UI_MECHANISM_113"
+        },
         UI_MECHANISM_114 = {
           ContentES = "Sacude el polvo",
           TextMapId = "UI_MECHANISM_114"
@@ -89323,19 +89327,19 @@ Tocado de Lynn
         UI_ModGuideBook_Task_Des_14 = {
           ContentES = "Colecciona todas las siguientes <highlight>Cuñas Demoníacas de arma a distancia</>",
           TextMapId = "UI_ModGuideBook_Task_Des_14"
-        },
-        UI_ModGuideBook_Task_Title_Collect_01 = {
-          ContentES = "Colección de Cuña Demoníaca I",
-          TextMapId = "UI_ModGuideBook_Task_Title_Collect_01"
         }
       }
     end
   },
   {
-    MinKey = "UI_ModGuideBook_Task_Title_Collect_02",
-    MaxKey = "UI_NPC_Name_jingshuo_Sce",
+    MinKey = "UI_ModGuideBook_Task_Title_Collect_01",
+    MaxKey = "UI_NPC_Name_jingping_Sce",
     Loader = function()
       return {
+        UI_ModGuideBook_Task_Title_Collect_01 = {
+          ContentES = "Colección de Cuña Demoníaca I",
+          TextMapId = "UI_ModGuideBook_Task_Title_Collect_01"
+        },
         UI_ModGuideBook_Task_Title_Collect_02 = {
           ContentES = "Colección de Cuña Demoníaca II",
           TextMapId = "UI_ModGuideBook_Task_Title_Collect_02"
@@ -90125,19 +90129,19 @@ Tocado de Lynn
         UI_NPC_Name_jingping_Sce = {
           ContentES = "Jing He",
           TextMapId = "UI_NPC_Name_jingping_Sce"
-        },
-        UI_NPC_Name_jingshuo_Sce = {
-          ContentES = "Jing Shuo",
-          TextMapId = "UI_NPC_Name_jingshuo_Sce"
         }
       }
     end
   },
   {
-    MinKey = "UI_NPC_Name_jingtian_Sce",
-    MaxKey = "UI_Name_Walnut_151415",
+    MinKey = "UI_NPC_Name_jingshuo_Sce",
+    MaxKey = "UI_Name_Walnut_151414",
     Loader = function()
       return {
+        UI_NPC_Name_jingshuo_Sce = {
+          ContentES = "Jing Shuo",
+          TextMapId = "UI_NPC_Name_jingshuo_Sce"
+        },
         UI_NPC_Name_jingtian_Sce = {
           ContentES = "Jingtian",
           TextMapId = "UI_NPC_Name_jingtian_Sce"
@@ -90933,19 +90937,19 @@ Tocado de Lynn
         UI_Name_Walnut_151414 = {
           ContentES = "Carta secreta: Supremo del Typhon – Serenidad",
           TextMapId = "UI_Name_Walnut_151414"
-        },
-        UI_Name_Walnut_151415 = {
-          ContentES = "Carta secreta: Supremo del Typhon – Exaltación",
-          TextMapId = "UI_Name_Walnut_151415"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_151421",
-    MaxKey = "UI_Npc_Name_240007",
+    MinKey = "UI_Name_Walnut_151415",
+    MaxKey = "UI_Npc_Name_240006",
     Loader = function()
       return {
+        UI_Name_Walnut_151415 = {
+          ContentES = "Carta secreta: Supremo del Typhon – Exaltación",
+          TextMapId = "UI_Name_Walnut_151415"
+        },
         UI_Name_Walnut_151421 = {
           ContentES = "Carta secreta: Supremo del Typhon – Moral",
           TextMapId = "UI_Name_Walnut_151421"
@@ -91735,19 +91739,19 @@ Tocado de Lynn
         UI_Npc_Name_240006 = {
           ContentES = "Transeúnte",
           TextMapId = "UI_Npc_Name_240006"
-        },
-        UI_Npc_Name_240007 = {
-          ContentES = "Mujer en la fila",
-          TextMapId = "UI_Npc_Name_240007"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_240008",
-    MaxKey = "UI_Npc_Name_Fuer",
+    MinKey = "UI_Npc_Name_240007",
+    MaxKey = "UI_Npc_Name_FuShuSuYi",
     Loader = function()
       return {
+        UI_Npc_Name_240007 = {
+          ContentES = "Mujer en la fila",
+          TextMapId = "UI_Npc_Name_240007"
+        },
         UI_Npc_Name_240008 = {
           ContentES = "Oficial del incienso",
           TextMapId = "UI_Npc_Name_240008"
@@ -92543,19 +92547,19 @@ Tocado de Lynn
         UI_Npc_Name_FuShuSuYi = {
           ContentES = "Fushu y Su Yi",
           TextMapId = "UI_Npc_Name_FuShuSuYi"
-        },
-        UI_Npc_Name_Fuer = {
-          ContentES = "Fulvis",
-          TextMapId = "UI_Npc_Name_Fuer"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Fuer2",
-    MaxKey = "UI_Npc_Name_Woman_7",
+    MinKey = "UI_Npc_Name_Fuer",
+    MaxKey = "UI_Npc_Name_Woman_6",
     Loader = function()
       return {
+        UI_Npc_Name_Fuer = {
+          ContentES = "Fulvis",
+          TextMapId = "UI_Npc_Name_Fuer"
+        },
         UI_Npc_Name_Fuer2 = {
           ContentES = "¿Fulvis?",
           TextMapId = "UI_Npc_Name_Fuer2"
@@ -93351,19 +93355,19 @@ Tocado de Lynn
         UI_Npc_Name_Woman_6 = {
           ContentES = "Muchacha débil",
           TextMapId = "UI_Npc_Name_Woman_6"
-        },
-        UI_Npc_Name_Woman_7 = {
-          ContentES = "Jovencita melancólica",
-          TextMapId = "UI_Npc_Name_Woman_7"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Won1",
-    MaxKey = "UI_OPTION_MFSR",
+    MinKey = "UI_Npc_Name_Woman_7",
+    MaxKey = "UI_OPTION_LongPressLockShooting",
     Loader = function()
       return {
+        UI_Npc_Name_Woman_7 = {
+          ContentES = "Jovencita melancólica",
+          TextMapId = "UI_Npc_Name_Woman_7"
+        },
         UI_Npc_Name_Won1 = {
           ContentES = "Cuna cubierta de polvo",
           TextMapId = "UI_Npc_Name_Won1"
@@ -94159,19 +94163,19 @@ Tocado de Lynn
         UI_OPTION_LongPressLockShooting = {
           ContentES = "Mantener presionado para bloquear y disparar",
           TextMapId = "UI_OPTION_LongPressLockShooting"
-        },
-        UI_OPTION_MFSR = {
-          ContentES = "GSR Móvil",
-          TextMapId = "UI_OPTION_MFSR"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_MaterialFilter",
-    MaxKey = "UI_Party_Maze_Claer_Great",
+    MinKey = "UI_OPTION_MFSR",
+    MaxKey = "UI_Party_Maze_Claer_Good",
     Loader = function()
       return {
+        UI_OPTION_MFSR = {
+          ContentES = "GSR Móvil",
+          TextMapId = "UI_OPTION_MFSR"
+        },
         UI_OPTION_MaterialFilter = {
           ContentES = "Filtrado de texturas",
           TextMapId = "UI_OPTION_MaterialFilter"
@@ -94967,19 +94971,19 @@ Tocado de Lynn
         UI_Party_Maze_Claer_Good = {
           ContentES = "¡Buen trabajo! Siguiente etapa desbloqueada.",
           TextMapId = "UI_Party_Maze_Claer_Good"
-        },
-        UI_Party_Maze_Claer_Great = {
-          ContentES = "¡Bravo! Etapa de bonificación desbloqueada.",
-          TextMapId = "UI_Party_Maze_Claer_Great"
         }
       }
     end
   },
   {
-    MinKey = "UI_Party_Maze_StageStart",
-    MaxKey = "UI_PlayerHead_Name_30001",
+    MinKey = "UI_Party_Maze_Claer_Great",
+    MaxKey = "UI_PlayerHead_Name_20009",
     Loader = function()
       return {
+        UI_Party_Maze_Claer_Great = {
+          ContentES = "¡Bravo! Etapa de bonificación desbloqueada.",
+          TextMapId = "UI_Party_Maze_Claer_Great"
+        },
         UI_Party_Maze_StageStart = {
           ContentES = "Modo de exploración iniciado. ¡Comienza la cuenta regresiva!",
           TextMapId = "UI_Party_Maze_StageStart"
@@ -95775,19 +95779,19 @@ Tocado de Lynn
         UI_PlayerHead_Name_20009 = {
           ContentES = "Retrato: El que se niega a sí mismo – Plegarias",
           TextMapId = "UI_PlayerHead_Name_20009"
-        },
-        UI_PlayerHead_Name_30001 = {
-          ContentES = "Aturdimiento",
-          TextMapId = "UI_PlayerHead_Name_30001"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Name_30002",
-    MaxKey = "UI_QUEST_SUBTAB_NAME_Activity",
+    MinKey = "UI_PlayerHead_Name_30001",
+    MaxKey = "UI_QUEST_SUBTAB_NAME_ALL",
     Loader = function()
       return {
+        UI_PlayerHead_Name_30001 = {
+          ContentES = "Aturdimiento",
+          TextMapId = "UI_PlayerHead_Name_30001"
+        },
         UI_PlayerHead_Name_30002 = {
           ContentES = "Aturdimiento",
           TextMapId = "UI_PlayerHead_Name_30002"
@@ -96583,19 +96587,19 @@ Tocado de Lynn
         UI_QUEST_SUBTAB_NAME_ALL = {
           ContentES = "Todas las misiones",
           TextMapId = "UI_QUEST_SUBTAB_NAME_ALL"
-        },
-        UI_QUEST_SUBTAB_NAME_Activity = {
-          ContentES = "Misiones de evento",
-          TextMapId = "UI_QUEST_SUBTAB_NAME_Activity"
         }
       }
     end
   },
   {
-    MinKey = "UI_QUEST_SUBTAB_NAME_DAILY",
-    MaxKey = "UI_ResetLangLater",
+    MinKey = "UI_QUEST_SUBTAB_NAME_Activity",
+    MaxKey = "UI_Report_Tab3",
     Loader = function()
       return {
+        UI_QUEST_SUBTAB_NAME_Activity = {
+          ContentES = "Misiones de evento",
+          TextMapId = "UI_QUEST_SUBTAB_NAME_Activity"
+        },
         UI_QUEST_SUBTAB_NAME_DAILY = {
           ContentES = "Misión diaria",
           TextMapId = "UI_QUEST_SUBTAB_NAME_DAILY"
@@ -97367,19 +97371,19 @@ Tocado de Lynn
         UI_Report_Tab3 = {
           ContentES = "Juego limpio",
           TextMapId = "UI_Report_Tab3"
-        },
-        UI_ResetLangLater = {
-          ContentES = "Ahora no",
-          TextMapId = "UI_ResetLangLater"
         }
       }
     end
   },
   {
-    MinKey = "UI_ResetLangNow",
-    MaxKey = "UI_SHOWNPC_DESC_SCENE3",
+    MinKey = "UI_ResetLangLater",
+    MaxKey = "UI_SHOWNPC_DESC_SCENE2",
     Loader = function()
       return {
+        UI_ResetLangLater = {
+          ContentES = "Ahora no",
+          TextMapId = "UI_ResetLangLater"
+        },
         UI_ResetLangNow = {
           ContentES = "Cambiar ahora",
           TextMapId = "UI_ResetLangNow"
@@ -98175,19 +98179,19 @@ Tocado de Lynn
         UI_SHOWNPC_DESC_SCENE2 = {
           ContentES = "{性别:Viajero agotado|Viajera agotada} descansa junto a la cálida chimenea. Que tengas dulces sueños esta noche.",
           TextMapId = "UI_SHOWNPC_DESC_SCENE2"
-        },
-        UI_SHOWNPC_DESC_SCENE3 = {
-          ContentES = "¿Qué puedes ver a través de esa ventana, una ciudad bulliciosa o el pasado congelado en recuerdos?",
-          TextMapId = "UI_SHOWNPC_DESC_SCENE3"
         }
       }
     end
   },
   {
-    MinKey = "UI_SHOWNPC_LABEL_1",
-    MaxKey = "UI_SendGift_ConditionTitle",
+    MinKey = "UI_SHOWNPC_DESC_SCENE3",
+    MaxKey = "UI_SendGift_Condition4",
     Loader = function()
       return {
+        UI_SHOWNPC_DESC_SCENE3 = {
+          ContentES = "¿Qué puedes ver a través de esa ventana, una ciudad bulliciosa o el pasado congelado en recuerdos?",
+          TextMapId = "UI_SHOWNPC_DESC_SCENE3"
+        },
         UI_SHOWNPC_LABEL_1 = {
           ContentES = "Selecciona un personaje de la lista a la izquierda",
           TextMapId = "UI_SHOWNPC_LABEL_1"
@@ -98980,19 +98984,19 @@ Tocado de Lynn
         UI_SendGift_Condition4 = {
           ContentES = "Cupo de regalo",
           TextMapId = "UI_SendGift_Condition4"
-        },
-        UI_SendGift_ConditionTitle = {
-          ContentES = "Condiciones de regalo",
-          TextMapId = "UI_SendGift_ConditionTitle"
         }
       }
     end
   },
   {
-    MinKey = "UI_SendGift_CurrentFriend",
-    MaxKey = "UI_Skin_Name_0011",
+    MinKey = "UI_SendGift_ConditionTitle",
+    MaxKey = "UI_Skin_Name_0010",
     Loader = function()
       return {
+        UI_SendGift_ConditionTitle = {
+          ContentES = "Condiciones de regalo",
+          TextMapId = "UI_SendGift_ConditionTitle"
+        },
         UI_SendGift_CurrentFriend = {
           ContentES = "Selección actual",
           TextMapId = "UI_SendGift_CurrentFriend"
@@ -99788,19 +99792,19 @@ Tocado de Lynn
         UI_Skin_Name_0010 = {
           ContentES = "Esperanzas estrelladas",
           TextMapId = "UI_Skin_Name_0010"
-        },
-        UI_Skin_Name_0011 = {
-          ContentES = "Serenidad verde",
-          TextMapId = "UI_Skin_Name_0011"
         }
       }
     end
   },
   {
-    MinKey = "UI_Skin_Name_0121",
-    MaxKey = "UI_Squad_SwitchChar_Toast",
+    MinKey = "UI_Skin_Name_0011",
+    MaxKey = "UI_Squad_SigilMiss_Toast",
     Loader = function()
       return {
+        UI_Skin_Name_0011 = {
+          ContentES = "Serenidad verde",
+          TextMapId = "UI_Skin_Name_0011"
+        },
         UI_Skin_Name_0121 = {
           ContentES = "Fantasía gélida",
           TextMapId = "UI_Skin_Name_0121"
@@ -100593,19 +100597,19 @@ Tocado de Lynn
         UI_Squad_SigilMiss_Toast = {
           ContentES = "Selecciona un Compañero de combate primero",
           TextMapId = "UI_Squad_SigilMiss_Toast"
-        },
-        UI_Squad_SwitchChar_Toast = {
-          ContentES = "%s ha sido asignado a una casilla de personaje principal",
-          TextMapId = "UI_Squad_SwitchChar_Toast"
         }
       }
     end
   },
   {
-    MinKey = "UI_Squad_SwitchSigil_Toast",
-    MaxKey = "UI_TEMPLE_DES_80705",
+    MinKey = "UI_Squad_SwitchChar_Toast",
+    MaxKey = "UI_TEMPLE_DES_80704",
     Loader = function()
       return {
+        UI_Squad_SwitchChar_Toast = {
+          ContentES = "%s ha sido asignado a una casilla de personaje principal",
+          TextMapId = "UI_Squad_SwitchChar_Toast"
+        },
         UI_Squad_SwitchSigil_Toast = {
           ContentES = "%s ha sido asignado a%s",
           TextMapId = "UI_Squad_SwitchSigil_Toast"
@@ -101401,19 +101405,19 @@ Tocado de Lynn
         UI_TEMPLE_DES_80704 = {
           ContentES = "Al pisar una baldosa se cambia su color",
           TextMapId = "UI_TEMPLE_DES_80704"
-        },
-        UI_TEMPLE_DES_80705 = {
-          ContentES = "Al pisar una baldosa se cambia su color",
-          TextMapId = "UI_TEMPLE_DES_80705"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_DES_80706",
-    MaxKey = "UI_Toast_Fishing_Forbid",
+    MinKey = "UI_TEMPLE_DES_80705",
+    MaxKey = "UI_Toast_Firend_RefreshCd",
     Loader = function()
       return {
+        UI_TEMPLE_DES_80705 = {
+          ContentES = "Al pisar una baldosa se cambia su color",
+          TextMapId = "UI_TEMPLE_DES_80705"
+        },
         UI_TEMPLE_DES_80706 = {
           ContentES = "Asegúrate de que el patrón y el color de las baldosas del suelo coincidan con los de la salida.",
           TextMapId = "UI_TEMPLE_DES_80706"
@@ -102209,19 +102213,19 @@ Tocado de Lynn
         UI_Toast_Firend_RefreshCd = {
           ContentES = "Actualización en curso",
           TextMapId = "UI_Toast_Firend_RefreshCd"
-        },
-        UI_Toast_Fishing_Forbid = {
-          ContentES = "Pescar actualmente no disponible",
-          TextMapId = "UI_Toast_Fishing_Forbid"
         }
       }
     end
   },
   {
-    MinKey = "UI_Toast_Friend_AddBlcakListSuccess",
-    MaxKey = "UI_WEAPON_NAME_10202",
+    MinKey = "UI_Toast_Fishing_Forbid",
+    MaxKey = "UI_WEAPON_NAME_10201",
     Loader = function()
       return {
+        UI_Toast_Fishing_Forbid = {
+          ContentES = "Pescar actualmente no disponible",
+          TextMapId = "UI_Toast_Fishing_Forbid"
+        },
         UI_Toast_Friend_AddBlcakListSuccess = {
           ContentES = "%s ha sido añadido a tu lista de jugadores bloqueados",
           TextMapId = "UI_Toast_Friend_AddBlcakListSuccess"
@@ -103011,19 +103015,19 @@ Tocado de Lynn
         UI_WEAPON_NAME_10201 = {
           ContentES = "Beso de Sirena",
           TextMapId = "UI_WEAPON_NAME_10201"
-        },
-        UI_WEAPON_NAME_10202 = {
-          ContentES = "Alabarda de Jade Primaveral",
-          TextMapId = "UI_WEAPON_NAME_10202"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_NAME_10203",
-    MaxKey = "UI_WeaponAccessory_Name_10008",
+    MinKey = "UI_WEAPON_NAME_10202",
+    MaxKey = "UI_WeaponAccessory_Name_10007",
     Loader = function()
       return {
+        UI_WEAPON_NAME_10202 = {
+          ContentES = "Alabarda de Jade Primaveral",
+          TextMapId = "UI_WEAPON_NAME_10202"
+        },
         UI_WEAPON_NAME_10203 = {
           ContentES = "Pecado Imperdonable",
           TextMapId = "UI_WEAPON_NAME_10203"
@@ -103819,19 +103823,19 @@ Tocado de Lynn
         UI_WeaponAccessory_Name_10007 = {
           ContentES = "Lazo: Rojo óxido",
           TextMapId = "UI_WeaponAccessory_Name_10007"
-        },
-        UI_WeaponAccessory_Name_10008 = {
-          ContentES = "Lazo: Menta",
-          TextMapId = "UI_WeaponAccessory_Name_10008"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponAccessory_Name_10009",
-    MaxKey = "UI_Wiki_MainTab_Civilization",
+    MinKey = "UI_WeaponAccessory_Name_10008",
+    MaxKey = "UI_Wiki_MainTab_Character",
     Loader = function()
       return {
+        UI_WeaponAccessory_Name_10008 = {
+          ContentES = "Lazo: Menta",
+          TextMapId = "UI_WeaponAccessory_Name_10008"
+        },
         UI_WeaponAccessory_Name_10009 = {
           ContentES = "Rosa: Rojo óxido",
           TextMapId = "UI_WeaponAccessory_Name_10009"
@@ -104627,19 +104631,19 @@ Tocado de Lynn
         UI_Wiki_MainTab_Character = {
           ContentES = "Personajes",
           TextMapId = "UI_Wiki_MainTab_Character"
-        },
-        UI_Wiki_MainTab_Civilization = {
-          ContentES = "Civilizaciones",
-          TextMapId = "UI_Wiki_MainTab_Civilization"
         }
       }
     end
   },
   {
-    MinKey = "UI_Wiki_MainTab_Customs",
-    MaxKey = "VoiceDes141",
+    MinKey = "UI_Wiki_MainTab_Civilization",
+    MaxKey = "VoiceDes140",
     Loader = function()
       return {
+        UI_Wiki_MainTab_Civilization = {
+          ContentES = "Civilizaciones",
+          TextMapId = "UI_Wiki_MainTab_Civilization"
+        },
         UI_Wiki_MainTab_Customs = {
           ContentES = "Naturaleza",
           TextMapId = "UI_Wiki_MainTab_Customs"
@@ -105432,19 +105436,19 @@ Tocado de Lynn
         VoiceDes140 = {
           ContentES = "Habilidad de combate: IV",
           TextMapId = "VoiceDes140"
-        },
-        VoiceDes141 = {
-          ContentES = "Habilidad de combate: V",
-          TextMapId = "VoiceDes141"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes142",
-    MaxKey = "WikiText_30400204",
+    MinKey = "VoiceDes141",
+    MaxKey = "WikiText_30400203",
     Loader = function()
       return {
+        VoiceDes141 = {
+          ContentES = "Habilidad de combate: V",
+          TextMapId = "VoiceDes141"
+        },
         VoiceDes142 = {
           ContentES = "Sobre las técnicas",
           TextMapId = "VoiceDes142"
@@ -106240,19 +106244,19 @@ Tocado de Lynn
         WikiText_30400203 = {
           ContentES = "Hace varias décadas, un individuo capaz de manipular la Resonancia provocó graves disturbios dentro del Imperio. Finalmente, fue ejecutado mediante el Suplicio Arbórea, el castigo supremo de Hiperbórea.",
           TextMapId = "WikiText_30400203"
-        },
-        WikiText_30400204 = {
-          ContentES = "Según Zhiliu, la verdadera naturaleza de la Resonancia reside en su poder de guiar y controlar. Fue gracias a esa fuerza que Yang, antepasada de Huaxu, fundó los Nueve Capítulos de Dafeng.",
-          TextMapId = "WikiText_30400204"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_30400301",
-    MaxKey = "voice_ch_char_Aote_vo_skill02_r02",
+    MinKey = "WikiText_30400204",
+    MaxKey = "voice_ch_char_Aote_vo_skill02_r01",
     Loader = function()
       return {
+        WikiText_30400204 = {
+          ContentES = "Según Zhiliu, la verdadera naturaleza de la Resonancia reside en su poder de guiar y controlar. Fue gracias a esa fuerza que Yang, antepasada de Huaxu, fundó los Nueve Capítulos de Dafeng.",
+          TextMapId = "WikiText_30400204"
+        },
         WikiText_30400301 = {
           ContentES = "La ley suprema que rige todo Huaxu.\nTodos dentro de sus fronteras deben obedecer sus amonestaciones, o enfrentar el castigo aplicado por Bi'an o el Magistrado de Yingtian. Más allá de prohibir actos como matar y robar, puede suprimir a los Filthoids dentro de su dominio, privándolos de su ferocidad.\nLa deidad venerada del pueblo, Taihao, es la encarnación viviente de su voluntad.",
           TextMapId = "WikiText_30400301"
@@ -107045,19 +107049,19 @@ Tocado de Lynn
         voice_ch_char_Aote_vo_skill02_r01 = {
           ContentES = "¡Relájate! Es por tu propio bien.",
           TextMapId = "voice_ch_char_Aote_vo_skill02_r01"
-        },
-        voice_ch_char_Aote_vo_skill02_r02 = {
-          ContentES = "Se acabó el tiempo de prueba, ahora toca seriedad.",
-          TextMapId = "voice_ch_char_Aote_vo_skill02_r02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Aote_vo_skill02_r03",
-    MaxKey = "voice_ch_char_Fuluo_vo_skill01_r02",
+    MinKey = "voice_ch_char_Aote_vo_skill02_r02",
+    MaxKey = "voice_ch_char_Fuluo_vo_skill01_r01",
     Loader = function()
       return {
+        voice_ch_char_Aote_vo_skill02_r02 = {
+          ContentES = "Se acabó el tiempo de prueba, ahora toca seriedad.",
+          TextMapId = "voice_ch_char_Aote_vo_skill02_r02"
+        },
         voice_ch_char_Aote_vo_skill02_r03 = {
           ContentES = "Aprecia tu último vistazo del mundo.",
           TextMapId = "voice_ch_char_Aote_vo_skill02_r03"
@@ -107853,19 +107857,19 @@ Tocado de Lynn
         voice_ch_char_Fuluo_vo_skill01_r01 = {
           ContentES = "El anochecer ha llegado.",
           TextMapId = "voice_ch_char_Fuluo_vo_skill01_r01"
-        },
-        voice_ch_char_Fuluo_vo_skill01_r02 = {
-          ContentES = "Ya no tengo más dudas.",
-          TextMapId = "voice_ch_char_Fuluo_vo_skill01_r02"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Fuluo_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Landi_vo_topic_01_2",
+    MinKey = "voice_ch_char_Fuluo_vo_skill01_r02",
+    MaxKey = "voice_ch_char_Landi_vo_topic_01_1",
     Loader = function()
       return {
+        voice_ch_char_Fuluo_vo_skill01_r02 = {
+          ContentES = "Ya no tengo más dudas.",
+          TextMapId = "voice_ch_char_Fuluo_vo_skill01_r02"
+        },
         voice_ch_char_Fuluo_vo_skill02_r01 = {
           ContentES = "Por un futuro que nunca he conocido.",
           TextMapId = "voice_ch_char_Fuluo_vo_skill02_r01"
@@ -108661,19 +108665,19 @@ Tocado de Lynn
         voice_ch_char_Landi_vo_topic_01_1 = {
           ContentES = "¿Mi familia? Mis padres llevan años sin preocuparse por mí. Solo mis dos hermanas intentan mandarme de vez en cuando. Pero ahora que estoy en la Legión, fuera de su alcance.",
           TextMapId = "voice_ch_char_Landi_vo_topic_01_1"
-        },
-        voice_ch_char_Landi_vo_topic_01_2 = {
-          ContentES = "¡No, no, nada de eso! ¡E-Ellas son absolutamente encantadoras, inteligentes, amables, dulces, con mucho encanto, hermosas y casi perfectas! Sin embargo, un poco más de decoro sería bueno...",
-          TextMapId = "voice_ch_char_Landi_vo_topic_01_2"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Landi_vo_topic_02_1",
-    MaxKey = "voice_ch_char_Nifu_vo_topic_04_3",
+    MinKey = "voice_ch_char_Landi_vo_topic_01_2",
+    MaxKey = "voice_ch_char_Nifu_vo_topic_04_2",
     Loader = function()
       return {
+        voice_ch_char_Landi_vo_topic_01_2 = {
+          ContentES = "¡No, no, nada de eso! ¡E-Ellas son absolutamente encantadoras, inteligentes, amables, dulces, con mucho encanto, hermosas y casi perfectas! Sin embargo, un poco más de decoro sería bueno...",
+          TextMapId = "voice_ch_char_Landi_vo_topic_01_2"
+        },
         voice_ch_char_Landi_vo_topic_02_1 = {
           ContentES = "¡Anda, tú eres de los que no saben apreciar un buen descanso! Escucha bien: las camas son refugios, donde el alma encuentra la paz; los tejados son santuarios, donde desaparecen las preocupaciones. En los jardines por la tarde, la luz del sol brilla, la siesta es una melodía de los dulces sueños...",
           TextMapId = "voice_ch_char_Landi_vo_topic_02_1"
@@ -109469,19 +109473,19 @@ Tocado de Lynn
         voice_ch_char_Nifu_vo_topic_04_2 = {
           ContentES = "Sin embargo, cuando oigo esa palabra, los primeros en venirme a la mente son Lexis y Erika, quienes me sacaron de Elysium.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_2"
-        },
-        voice_ch_char_Nifu_vo_topic_04_3 = {
-          ContentES = "En los anales de la historia y los relatos de héroes, suelen ser retratados como el Sabio que desveló el velo de ignorancia de los dioses, y la Heroína que dio su vida por la causa del Sabio...",
-          TextMapId = "voice_ch_char_Nifu_vo_topic_04_3"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_topic_04_4",
-    MaxKey = "voice_ch_char_Suyi_vo_topic_04_1",
+    MinKey = "voice_ch_char_Nifu_vo_topic_04_3",
+    MaxKey = "voice_ch_char_Suyi_vo_topic_03_6",
     Loader = function()
       return {
+        voice_ch_char_Nifu_vo_topic_04_3 = {
+          ContentES = "En los anales de la historia y los relatos de héroes, suelen ser retratados como el Sabio que desveló el velo de ignorancia de los dioses, y la Heroína que dio su vida por la causa del Sabio...",
+          TextMapId = "voice_ch_char_Nifu_vo_topic_04_3"
+        },
         voice_ch_char_Nifu_vo_topic_04_4 = {
           ContentES = "Pero en mis recuerdos, simplemente eran Lexis y Erika.",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_4"
@@ -110277,19 +110281,19 @@ Tocado de Lynn
         voice_ch_char_Suyi_vo_topic_03_6 = {
           ContentES = "Algunos animales sí pueden ser mascotas, pero la Gaviota de alas celestes no está hecha para eso. Su pico afilado y sus alas adaptadas a resistir el viento son prueba suficiente de ello, pertenece al cielo, no en la jaula de nadie.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_03_6"
-        },
-        voice_ch_char_Suyi_vo_topic_04_1 = {
-          ContentES = "¿Picos Exteriores…? Mmm, buena pregunta.",
-          TextMapId = "voice_ch_char_Suyi_vo_topic_04_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Suyi_vo_topic_04_2",
-    MaxKey = "voice_ch_char_Yuming_vo_topic_01_1",
+    MinKey = "voice_ch_char_Suyi_vo_topic_04_1",
+    MaxKey = "voice_ch_char_Yuming_vo_skill02_r03",
     Loader = function()
       return {
+        voice_ch_char_Suyi_vo_topic_04_1 = {
+          ContentES = "¿Picos Exteriores…? Mmm, buena pregunta.",
+          TextMapId = "voice_ch_char_Suyi_vo_topic_04_1"
+        },
         voice_ch_char_Suyi_vo_topic_04_2 = {
           ContentES = "Nos juntamos por circunstancias similares y tenemos un mismo objetivo. Nos entendemos y confiamos los unos en los otros. En la batalla, nos cubrimos la espalda, y en los momentos de cansancio, nos apoyamos… Es un lugar verdaderamente hermoso.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_2"
@@ -111085,19 +111089,19 @@ Tocado de Lynn
         voice_ch_char_Yuming_vo_skill02_r03 = {
           ContentES = "Alma al acero.",
           TextMapId = "voice_ch_char_Yuming_vo_skill02_r03"
-        },
-        voice_ch_char_Yuming_vo_topic_01_1 = {
-          ContentES = "... Ve a leer un tomo o busca otra compañía para tales discursos triviales. Quizás los Tejestrellas que venden sus artesanías puedan satisfacer tu curiosidad.",
-          TextMapId = "voice_ch_char_Yuming_vo_topic_01_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Yuming_vo_topic_01_2",
+    MinKey = "voice_ch_char_Yuming_vo_topic_01_1",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Yuming_vo_topic_01_1 = {
+          ContentES = "... Ve a leer un tomo o busca otra compañía para tales discursos triviales. Quizás los Tejestrellas que venden sus artesanías puedan satisfacer tu curiosidad.",
+          TextMapId = "voice_ch_char_Yuming_vo_topic_01_1"
+        },
         voice_ch_char_Yuming_vo_topic_01_2 = {
           ContentES = "A menudo estoy absorto en mis pensamientos, por eso mi perspectiva suele ser bastante subjetiva. Si realmente sientes curiosidad, una visita a ese lugar te resultará mucho más reveladora que cualquier relato de segunda mano.",
           TextMapId = "voice_ch_char_Yuming_vo_topic_01_2"

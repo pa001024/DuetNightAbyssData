@@ -358,7 +358,6 @@ return ReadOnly("Hair", {
   [5101] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Songlu.T_Icon_Songlu'",
     CharId = 5101,
-    CharPartId = 510102,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     HairId = 5101,

@@ -4520,9 +4520,15 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17806284270774513",
+            startPort = "Out",
+            endQuest = "176312419540926042480",
+            endPort = "In"
+          },
+          {
             startQuest = "176312640036926054739",
             startPort = "false",
-            endQuest = "176312419540926042480",
+            endQuest = "17806284270774513",
             endPort = "In"
           }
         },
@@ -5084,6 +5090,17 @@ return {
               VarInfos = {
                 {VarName = "Value", VarValue = "0"}
               }
+            }
+          },
+          ["17806284270774513"] = {
+            key = "17806284270774513",
+            type = "SendMessageNode",
+            name = "发送消息-StoneInOrder03Unlock",
+            pos = {x = 1304.25, y = 401.2857142857144},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "StoneInOrder03Unlock",
+              UnitId = -1
             }
           }
         },

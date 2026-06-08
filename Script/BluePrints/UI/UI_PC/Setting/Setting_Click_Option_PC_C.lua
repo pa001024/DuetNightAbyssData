@@ -253,8 +253,15 @@ function S:SetCustomerServiceKeyText()
 end
 
 function S:OnCustomerServiceClicked()
+  DebugPrint("---------Setting_Click_Option_PC_C OnCustomerServiceClicked---------")
   local Avatar = GWorld:GetAvatar()
-  HeroUSDKSubsystem(self):OpenService()
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+  if "OpenHarmony" == PlatformName then
+    DebugPrint("---------Setting_Click_Option_PC_C OnCustomerServiceClicked OpenHarmony---------")
+    HeroUSDKSubsystem(self):JumpInternalBrowser("kefu", "kefu")
+  else
+    HeroUSDKSubsystem(self):OpenService()
+  end
   ReddotManager.ClearLeafNodeCount("Setting_Service")
   Avatar:ClearCustomerServiceRedDot()
 end

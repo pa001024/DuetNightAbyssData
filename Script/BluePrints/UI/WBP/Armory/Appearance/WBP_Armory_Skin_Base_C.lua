@@ -563,7 +563,8 @@ function M:UpdateSkinDetails(Content)
   end
   self.Text_Name:SetText(Content.Name)
   self.Text_Info:SetText(Content.Text)
-  self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(Content.ItemType, Content.Rarity) or "")
+  local Avatar = GWorld:GetAvatar()
+  self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(Content.ItemType, Content.SkinId) or "")
   self.Text_SkinName_World:SetText(Content.Name_World)
   self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
@@ -982,15 +983,16 @@ function M:UpdateAccessoryDetails(Content)
     return
   end
   local Data
+  local Avatar = GWorld:GetAvatar()
   if self.Type == CommonConst.ArmoryType.Char then
     Data = DataMgr.CharAccessory[Content.AccessoryId] or DataMgr.CharPartMesh[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap[Data.AccessoryType] or ""))
-    self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(CommonConst.DataType.CharAccessory, Data.Rarity) or "")
+    self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.CharAccessory, Content.AccessoryId) or "")
   else
     Data = DataMgr.WeaponAccessory[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap.WeaponAccessory))
     self:UpdateWeaponStanceFXInfo(Content)
-    self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(CommonConst.DataType.WeaponAccessory, Data.Rarity) or "")
+    self.Num_Fenghua:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.WeaponAccessory, Content.AccessoryId) or "")
   end
   self:UpdateAccessoryVideo(Data)
   if Data.Rarity and self.NameFont[Data.Rarity] and self[self.NameFont[Data.Rarity]] then

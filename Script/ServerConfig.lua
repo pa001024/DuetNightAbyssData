@@ -332,7 +332,7 @@ return {
     Area = "China",
     DevFlag = "Public",
     GroupId = 7001,
-    Name = "1.2国内给力服",
+    Name = "1.4国内给力服",
     ServerID = 7001
   },
   [7002] = {
@@ -346,7 +346,7 @@ return {
     Area = "Asian",
     DevFlag = "Public",
     GroupId = 8001,
-    Name = "1.2海外给力服",
+    Name = "1.4海外给力服",
     ServerID = 8001
   },
   [8002] = {

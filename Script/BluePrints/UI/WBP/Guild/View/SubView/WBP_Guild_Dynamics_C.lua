@@ -47,6 +47,7 @@ function M:Initialize(Initializer)
   rawset(self, "MemberNameCache", {})
   rawset(self, "PendingMemberNameQuery", {})
   rawset(self, "FailedMemberNameQuery", {})
+  rawset(self, "bDestroyed", false)
 end
 
 function M:Construct()
@@ -58,6 +59,8 @@ function M:Construct()
 end
 
 function M:Destruct()
+  self.bDestroyed = true
+  GuildController:UnRegisterEvent(self)
   self.Super.Destruct(self)
 end
 
@@ -81,10 +84,14 @@ function M:OnAnimationFinished(Animation)
 end
 
 function M:Init()
+  self.bDestroyed = false
+  self.SelectedTabId = nil
+  self.SelectedTabEntry = nil
   self:InitListTab()
   if self.In then
     self:PlayAnimation(self.In, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1)
   end
+  GuildController:UnRegisterEvent(self)
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGetGuildInfo then
       self:OnGetGuildInfo(...)
@@ -183,6 +190,7 @@ function M:RefreshMessages(GuildMessages)
   if not GuildMessages or 0 == #GuildMessages then
     return
   end
+  self:PreloadMessageMemberNames(GuildMessages)
   local SortedMessages = {}
   for _, Msg in ipairs(GuildMessages) do
     table.insert(SortedMessages, Msg)
@@ -221,6 +229,9 @@ function M:RefreshMessages(GuildMessages)
 end
 
 function M:OnGetGuildInfo(GuildFullInfo)
+  if not IsValid(self) or self.bDestroyed then
+    return
+  end
   if not GuildFullInfo then
     return
   end
@@ -252,42 +263,109 @@ function M:CacheMemberName(Uid, MemberName)
   self.MemberNameCache[Uid] = MemberName
 end
 
-function M:RequestMemberName(Uid)
+function M:TryCacheGuildMemberName(Uid)
   Uid = tonumber(Uid) or 0
   if Uid <= 0 then
+    return false
+  end
+  local CurrGuild = GuildController:GetModel():GetCurrGuild()
+  local Member = CurrGuild and CurrGuild.GetMemberByUid and CurrGuild:GetMemberByUid(Uid) or nil
+  local MemberName = Member and (Member.Nickname or Member.Name) or nil
+  if MemberName and "" ~= MemberName then
+    self:CacheMemberName(Uid, MemberName)
+    return true
+  end
+  return false
+end
+
+function M:RequestMemberNames(Uids)
+  if not Uids or 0 == #Uids then
     return
   end
   self.MemberNameCache = self.MemberNameCache or {}
   self.PendingMemberNameQuery = self.PendingMemberNameQuery or {}
   self.FailedMemberNameQuery = self.FailedMemberNameQuery or {}
-  if self.MemberNameCache[Uid] or self.PendingMemberNameQuery[Uid] or self.FailedMemberNameQuery[Uid] then
+  local QueryUids = {}
+  for _, Uid in ipairs(Uids) do
+    Uid = tonumber(Uid) or 0
+    local bCanQuery = Uid > 0 and not self.MemberNameCache[Uid] and not self.PendingMemberNameQuery[Uid] and not self.FailedMemberNameQuery[Uid]
+    if bCanQuery and not self:TryCacheGuildMemberName(Uid) then
+      self.PendingMemberNameQuery[Uid] = true
+      table.insert(QueryUids, Uid)
+    end
+  end
+  if 0 == #QueryUids then
     return
   end
-  self.PendingMemberNameQuery[Uid] = true
   local Avatar = GuildController and GuildController:GetAvatar()
   if not Avatar or not Avatar.QueryGuildMemberInfo then
-    self.PendingMemberNameQuery[Uid] = nil
-    self.FailedMemberNameQuery[Uid] = true
+    for _, Uid in ipairs(QueryUids) do
+      self.PendingMemberNameQuery[Uid] = nil
+      self.FailedMemberNameQuery[Uid] = true
+    end
     return
   end
   Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
-    self.PendingMemberNameQuery[Uid] = nil
-    if Ret ~= ErrorCode.RET_SUCCESS then
-      self.FailedMemberNameQuery[Uid] = true
+    if not IsValid(self) or self.bDestroyed then
       return
     end
-    local MemberInfo = MemberInfos and (MemberInfos[Uid] or MemberInfos[tostring(Uid)]) or nil
-    local MemberName = MemberInfo and (MemberInfo.Nickname or MemberInfo.Name) or nil
-    if MemberName and "" ~= MemberName then
-      self:CacheMemberName(Uid, MemberName)
-      self.FailedMemberNameQuery[Uid] = nil
-      if 1 == self.SelectedTabId then
-        self:RefreshContent()
-      end
-    else
-      self.FailedMemberNameQuery[Uid] = true
+    for _, Uid in ipairs(QueryUids) do
+      self.PendingMemberNameQuery[Uid] = nil
     end
-  end, {Uid})
+    if Ret ~= ErrorCode.RET_SUCCESS then
+      return
+    end
+    local bHasNewName = false
+    for _, Uid in ipairs(QueryUids) do
+      local MemberInfo = MemberInfos and (MemberInfos[Uid] or MemberInfos[tostring(Uid)]) or nil
+      local MemberName = MemberInfo and (MemberInfo.Nickname or MemberInfo.Name) or nil
+      if MemberName and "" ~= MemberName then
+        self:CacheMemberName(Uid, MemberName)
+        self.FailedMemberNameQuery[Uid] = nil
+        bHasNewName = true
+      else
+        self.FailedMemberNameQuery[Uid] = true
+      end
+    end
+    if bHasNewName and 1 == self.SelectedTabId then
+      self:RefreshContent()
+    end
+  end, QueryUids, true)
+end
+
+function M:RequestMemberName(Uid)
+  self:RequestMemberNames({Uid})
+end
+
+function M:PreloadMessageMemberNames(GuildMessages)
+  if not GuildMessages or 0 == #GuildMessages then
+    return
+  end
+  local Uids = {}
+  local UidSet = {}
+  
+  local function AddUid(Uid)
+    Uid = tonumber(Uid) or 0
+    if Uid <= 0 or UidSet[Uid] then
+      return
+    end
+    if self:GetMemberNameFromCache(Uid) or self:TryCacheGuildMemberName(Uid) then
+      return
+    end
+    UidSet[Uid] = true
+    table.insert(Uids, Uid)
+  end
+  
+  for _, Msg in ipairs(GuildMessages) do
+    local FormatText = Msg and Msg.FormatText
+    if FormatText then
+      AddUid(FormatText.EditorUid)
+      AddUid(FormatText.Uid)
+      AddUid(FormatText.RequestUid)
+      AddUid(FormatText.TargetUid)
+    end
+  end
+  self:RequestMemberNames(Uids)
 end
 
 function M:GetMemberDisplayName(Uid)
@@ -295,14 +373,10 @@ function M:GetMemberDisplayName(Uid)
   if Uid <= 0 then
     return ""
   end
-  local CurrGuild = GuildController:GetModel():GetCurrGuild()
-  local Member = CurrGuild and CurrGuild.GetMemberByUid and CurrGuild:GetMemberByUid(Uid) or nil
-  local MemberName = Member and (Member.Nickname or Member.Name) or nil
-  if MemberName and "" ~= MemberName then
-    self:CacheMemberName(Uid, MemberName)
-    return MemberName
+  if self:TryCacheGuildMemberName(Uid) then
+    return self:GetMemberNameFromCache(Uid)
   end
-  MemberName = self:GetMemberNameFromCache(Uid)
+  local MemberName = self:GetMemberNameFromCache(Uid)
   if MemberName then
     return MemberName
   end

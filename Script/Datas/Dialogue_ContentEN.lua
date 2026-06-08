@@ -250260,7 +250260,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200014] = {
           Content = "等等，好像哪儿不对劲……",
-          ContentEN = "Exactly! I'm going straight to Stationmaster Eisenbahn and having the guards deal with the two of you!",
+          ContentEN = "Wait. Something about this feels off...",
           DialogueId = 51200014,
           GUID = "802C824C",
           ImprPlusId = 1003,
@@ -250268,7 +250268,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200015] = {
           Content = "管你是谁，今天我就招惹了。",
-          ContentEN = "Wait. Something about this feels off...",
+          ContentEN = "I don't care who you are. You're picking a fight with me.",
           DialogueId = 51200015,
           GUID = "802C8276",
           ImprPlusId = 1005,
@@ -250276,7 +250276,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200016] = {
           Content = "就是就是，我要去找站长大人，让卫兵来制裁你们！",
-          ContentEN = "What are you talking about? How can they do something like this in front of everyone? We have to get the station guards!",
+          ContentEN = "Exactly! I'm going straight to Stationmaster Eisenbahn and having the guards deal with the two of you!",
           DialogueId = 51200016,
           GUID = "802C82A0",
           NextDialogue = 51200019,
@@ -250284,7 +250284,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200017] = {
           Content = "什么不对劲呀！他们在大庭广众之下居然敢做出这种事情，我们得报告给车站卫兵！",
-          ContentEN = "I don't care who you are. You're picking a fight with me.",
+          ContentEN = "What are you talking about? How can they do something like this in front of everyone? We have to get the station guards!",
           DialogueId = 51200017,
           GUID = "802C82CA",
           NextDialogue = 51200019,

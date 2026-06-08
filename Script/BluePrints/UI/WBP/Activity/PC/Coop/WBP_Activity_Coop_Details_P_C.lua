@@ -664,7 +664,7 @@ function M:OnBeHostBtnClick()
     GText(DataMgr.Resource[self.RoomData.RateResId].ResourceName)
   }
   local RemainTimes = self.WeekLimit - CreateRoomTimes
-  local WeekTimeText = string.format(": %d", RemainTimes)
+  local WeekTimeText = string.format(" %d", RemainTimes)
   Params.Tips = {
     GText("UI_AsyncCombat_WeeklyRemain") .. WeekTimeText
   }

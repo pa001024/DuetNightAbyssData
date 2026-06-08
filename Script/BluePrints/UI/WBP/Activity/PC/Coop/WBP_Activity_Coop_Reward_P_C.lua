@@ -173,6 +173,11 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
     end
     self.BtnItem:SetVisibility(UE4.ESlateVisibility.Visible)
   end
+  if not self.UsingGamepad then
+    self.Item_S.bIsFocusable = true
+  else
+    self.Item_S.bIsFocusable = false
+  end
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
@@ -233,6 +238,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   elseif InKeyName == Const.GamepadRightThumbstick and self.Content.IsMultiSelectable then
     self:OnBtnItemClickSelected()
     return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  if self.Content and self.Content.Rec == "Reward" and self.Content.ParentWidget.WBP_Com_Tips and InKeyName ~= UIConst.GamePadKey.DPadUp and InKeyName ~= UIConst.GamePadKey.DPadDown and InKeyName ~= UIConst.GamePadKey.DPadLeft and InKeyName ~= UIConst.GamePadKey.DPadRight and self.Content.ParentWidget.WBP_Com_Tips.Btn02_Mod:GetVisibility() ~= UIConst.VisibilityOp.Collapsed then
+    self.Content.ParentWidget.WBP_Com_Tips:OnKeyDown(MyGeometry, InKeyEvent)
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end

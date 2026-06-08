@@ -358,6 +358,11 @@ function View:MenuOpenChanged(bIsOpen)
 end
 
 function View:OnFocusReceived(MyGeometry, InFocusEvent)
+  local Create = UIManager(self):GetUIObj("CoopCreate")
+  if Create then
+    Create:SetFocus()
+    return UIUtils.Handled
+  end
   if not self:IsMobile() then
     self.WBP_Com_Tab.WBP_Com_Tab_ResourceBar:OnGamePadTipReleased()
   end
@@ -375,7 +380,10 @@ function View:SetFocusTargetDelay()
     return
   end
   self:AddTimer(0.1, function()
-    self:SetFocusFirstListItem()
+    local CoopCreate = UIManager(self):GetUIObj("CoopCreate")
+    if not CoopCreate then
+      self:SetFocusFirstListItem()
+    end
   end, nil, nil, "AsyncCombatDelaySetFocusTarget", true)
 end
 

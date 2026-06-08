@@ -35435,7 +35435,11 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_468,
+    Param = {
+      [1] = 30,
+      [2] = 30,
+      [3] = 30
+    },
     RewardId = 137008,
     Type = T.RT_469
   },

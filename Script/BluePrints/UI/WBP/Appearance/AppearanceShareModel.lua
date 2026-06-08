@@ -8,7 +8,10 @@ local CachedAppearancePlanInfo
 local AppearanceVersion = 3
 local CompactMarker = "S"
 local CompactNoCustomMarker = "N"
+local CompactEmptyMarker = "T"
+local CompactEmptyNoCustomMarker = "M"
 local CommunityPrefix = "A2"
+local CommunityPrefixWithEmptyMask = "A3"
 local DefaultPlanNameKey = "UI_Squad_Appearance_TITLE"
 local PlaceholderFormatKey = "UI_AppearanceScore_SolutionShare"
 local EmptyAccessoryId = DataMgr and DataMgr.GlobalConstant and DataMgr.GlobalConstant.EmptyCharAccessoryID and DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue or 0
@@ -197,9 +200,11 @@ end
 
 local function EncodeAccessorySuit(CharId, AccessorySuit)
   local Mask = 0
+  local EmptyMask = 0
   local Body = {}
   for Offset, AccessoryTypeIndex in ipairs(AccessoryTypeOrder) do
-    local AccessoryId = SafeNumber(AccessorySuit and AccessorySuit[AccessoryTypeIndex], 0)
+    local RawAccessoryId = AccessorySuit and AccessorySuit[AccessoryTypeIndex] or nil
+    local AccessoryId = SafeNumber(RawAccessoryId, 0)
     if AccessoryId > 0 and AccessoryId ~= EmptyAccessoryId then
       local LocalIndex = AccessoryIdToLocalIndex[AccessoryTypeIndex] and AccessoryIdToLocalIndex[AccessoryTypeIndex][AccessoryId]
       if not LocalIndex then
@@ -207,12 +212,14 @@ local function EncodeAccessorySuit(CharId, AccessorySuit)
       end
       Mask = Mask + Pow2(Offset - 1)
       Body[#Body + 1] = NumberToFixedBase64(LocalIndex, 2)
+    elseif nil ~= RawAccessoryId and AccessoryId == EmptyAccessoryId then
+      EmptyMask = EmptyMask + Pow2(Offset - 1)
     end
   end
-  return NumberToFixedBase64(Mask, 3) .. table.concat(Body)
+  return NumberToFixedBase64(Mask, 3) .. NumberToFixedBase64(EmptyMask, 3) .. table.concat(Body)
 end
 
-local function DecodeAccessorySuit(Code)
+local function DecodeAccessorySuit(Code, HasEmptyMask)
   if not Code or string.len(Code) < 3 then
     return nil
   end
@@ -221,7 +228,15 @@ local function DecodeAccessorySuit(Code)
     return nil
   end
   local Result = {}
+  local EmptyMask = 0
   local Pos = 4
+  if HasEmptyMask then
+    EmptyMask = FixedBase64ToNumber(string.sub(Code, Pos, Pos + 2))
+    if nil == EmptyMask then
+      return nil
+    end
+    Pos = Pos + 3
+  end
   for Offset, AccessoryTypeIndex in ipairs(AccessoryTypeOrder) do
     if HasBitFlag(Mask, Offset - 1) then
       local LocalIndex = FixedBase64ToNumber(string.sub(Code, Pos, Pos + 1))
@@ -231,6 +246,8 @@ local function DecodeAccessorySuit(Code)
       end
       Result[AccessoryTypeIndex] = AccessoryId
       Pos = Pos + 2
+    elseif HasEmptyMask and HasBitFlag(EmptyMask, Offset - 1) then
+      Result[AccessoryTypeIndex] = EmptyAccessoryId
     end
   end
   if Pos <= string.len(Code) then
@@ -441,7 +458,7 @@ local function EncodeAppearanceInfoCompact(AppearanceInfo, PlanIndex, IncludeCus
   return table.concat(Parts)
 end
 
-local function DecodeAppearanceInfoCompact(Code, HasCustomParams)
+local function DecodeAppearanceInfoCompact(Code, HasCustomParams, HasEmptyMask)
   if not Code or "" == Code then
     return nil
   end
@@ -481,7 +498,10 @@ local function DecodeAppearanceInfoCompact(Code, HasCustomParams)
       AccessoryCodeLength = AccessoryCodeLength + 2
     end
   end
-  local AccessorySuit = DecodeAccessorySuit(ReadChunk(AccessoryCodeLength))
+  if HasEmptyMask then
+    AccessoryCodeLength = AccessoryCodeLength + 3
+  end
+  local AccessorySuit = DecodeAccessorySuit(ReadChunk(AccessoryCodeLength), HasEmptyMask)
   if not AccessorySuit then
     return nil, nil
   end
@@ -569,14 +589,14 @@ local function BuildChatSharePayload(AppearancePlanInfo)
   local NormalizedInfo = NormalizeAppearancePlanInfo(AppearancePlanInfo)
   local BaseCode = EncodeAppearanceInfoCompact(NormalizedInfo.AppearanceInfo, NormalizedInfo.PlanIndex, true)
   if BaseCode then
-    local Payload = ChatCommon.AppearancePlanCopyHeader .. CompactMarker .. BaseCode
+    local Payload = ChatCommon.AppearancePlanCopyHeader .. CompactEmptyMarker .. BaseCode
     if string.len(Payload) <= ChatMessageMaxLen then
       return Payload
     end
   end
   BaseCode = EncodeAppearanceInfoCompact(NormalizedInfo.AppearanceInfo, NormalizedInfo.PlanIndex, false)
   if BaseCode then
-    local Payload = ChatCommon.AppearancePlanCopyHeader .. CompactNoCustomMarker .. BaseCode
+    local Payload = ChatCommon.AppearancePlanCopyHeader .. CompactEmptyNoCustomMarker .. BaseCode
     if string.len(Payload) <= ChatMessageMaxLen then
       return Payload
     end
@@ -591,7 +611,7 @@ local function BuildCommunityShareCode(AppearancePlanInfo)
     return ""
   end
   local Parts = {
-    CommunityPrefix,
+    CommunityPrefixWithEmptyMask,
     NumberToFixedBase64(NormalizedInfo.TargetId, 3),
     NumberToFixedBase64(NormalizedInfo.PlanIndex, 1),
     EncodeShareText(NormalizedInfo.PlanName or ""),
@@ -606,7 +626,26 @@ local function BuildCommunityShareCode(AppearancePlanInfo)
 end
 
 local function ParseCompactChatPayload(Code, HasCustomParams)
-  local AppearanceInfo, PlanIndex = DecodeAppearanceInfoCompact(Code, HasCustomParams)
+  local AppearanceInfo, PlanIndex = DecodeAppearanceInfoCompact(Code, HasCustomParams, false)
+  if not AppearanceInfo then
+    return nil
+  end
+  local TargetId = AppearanceInfo.CharId
+  local CharData = DataMgr.Char and DataMgr.Char[TargetId] or nil
+  local TargetName = CharData and SafeGText(CharData.CharName) or ""
+  return NormalizeAppearancePlanInfo({
+    Version = AppearanceVersion,
+    ShareType = "CharAppearancePlan",
+    TargetType = "Char",
+    TargetId = TargetId,
+    TargetName = TargetName,
+    PlanIndex = PlanIndex,
+    AppearanceInfo = AppearanceInfo
+  })
+end
+
+local function ParseCompactChatPayloadWithEmptyMask(Code, HasCustomParams)
+  local AppearanceInfo, PlanIndex = DecodeAppearanceInfoCompact(Code, HasCustomParams, true)
   if not AppearanceInfo then
     return nil
   end
@@ -626,14 +665,15 @@ end
 
 local function ParseCommunityShareCode(Code)
   local Parts = string.split(Code or "", "|")
-  if 6 ~= #Parts and 7 ~= #Parts or Parts[1] ~= CommunityPrefix then
+  local HasEmptyMask = Parts[1] == CommunityPrefixWithEmptyMask
+  if 6 ~= #Parts and 7 ~= #Parts or Parts[1] ~= CommunityPrefix and not HasEmptyMask then
     return nil
   end
   local TargetId = FixedBase64ToNumber(Parts[2])
   local PlanIndex = FixedBase64ToNumber(Parts[3])
   local PlanName = DecodeShareText(Parts[4])
   local TargetName = DecodeShareText(Parts[5])
-  local AppearanceInfo, PlanIndexFromPayload = DecodeAppearanceInfoCompact(Parts[6], true)
+  local AppearanceInfo, PlanIndexFromPayload = DecodeAppearanceInfoCompact(Parts[6], true, HasEmptyMask)
   local SharerInfo = DecodeSharerInfo(Parts[7])
   if Parts[7] and "" ~= Parts[7] and not SharerInfo then
     return nil
@@ -705,10 +745,14 @@ function M.ParseAppearanceShareMsg(RawText)
       return ParseCompactChatPayload(Body, true)
     elseif Marker == CompactNoCustomMarker then
       return ParseCompactChatPayload(Body, false)
+    elseif Marker == CompactEmptyMarker then
+      return ParseCompactChatPayloadWithEmptyMask(Body, true)
+    elseif Marker == CompactEmptyNoCustomMarker then
+      return ParseCompactChatPayloadWithEmptyMask(Body, false)
     end
     return nil
   end
-  if string.startswith(Content, CommunityPrefix .. "|") then
+  if string.startswith(Content, CommunityPrefix .. "|") or string.startswith(Content, CommunityPrefixWithEmptyMask .. "|") then
     return ParseCommunityShareCode(Content)
   end
   return nil

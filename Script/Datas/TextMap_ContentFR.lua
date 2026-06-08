@@ -2052,7 +2052,7 @@ local Data = {
           TextMapId = "BossSkillToast_Linen_Skill11"
         },
         BossSkillToast_OnBossLiecheBattleStartP1 = {
-          ContentFR = "Le Canon principal de l’Express Aurora est protégé. Éliminez d’abord le Poing de fer bionique.",
+          ContentFR = "Le Canon de l’Express Aurora est protégé. Éliminez d’abord le Poing de fer bionique.",
           TextMapId = "BossSkillToast_OnBossLiecheBattleStartP1"
         },
         BossSkillToast_OnBossLiecheCoreRemove = {
@@ -4072,7 +4072,7 @@ local Data = {
           TextMapId = "Content_10040505_01"
         },
         Content_10040505_02 = {
-          ContentFR = "Vaincre le Canon principal de l’Express Aurora",
+          ContentFR = "Vaincre le Canon de l’Express Aurora",
           TextMapId = "Content_10040505_02"
         },
         Content_10040505_03 = {
@@ -9455,7 +9455,7 @@ local Data = {
           TextMapId = "Description_10040503_01"
         },
         Description_10040505_01 = {
-          ContentFR = "Katya commence à utiliser le canon du train pour attaquer le dirigeable. Il faut l’arrêter.\nNeutralisez le Canon principal de l’Express Aurora.",
+          ContentFR = "Katya commence à utiliser le canon du train pour attaquer le dirigeable. Il faut l’arrêter.\nNeutralisez le Canon de l’Express Aurora.",
           TextMapId = "Description_10040505_01"
         },
         Description_10040506_01 = {
@@ -31055,7 +31055,7 @@ local Data = {
           TextMapId = "Mon_Name_8518001"
         },
         Mon_Name_8519001 = {
-          ContentFR = "Canon principal de l’Express Aurora",
+          ContentFR = "Canon de l’Express Aurora",
           TextMapId = "Mon_Name_8519001"
         },
         Mon_Name_8519002 = {
@@ -54722,7 +54722,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "SKILL_230102_NAME"
         },
         SKILL_230103_DESC = {
-          ContentFR = "Lorsqu’une arme à distance inflige un DGT CRIT, Tabethe a une chance d’invoquer 1 [Tentacule] près de la cible. Cet effet ne peut se produire qu’une fois par seconde. Un maximum de 18 [Tentacules] peuvent être présents simultanément.",
+          ContentFR = "Lorsqu’une arme à distance inflige un coup critique, Tabethe a une chance d’invoquer 1 [Tentacule] près de la cible. Cet effet ne peut se produire qu’une fois par seconde. Un maximum de 18 [Tentacules] peuvent être présents simultanément.",
           TextMapId = "SKILL_230103_DESC"
         },
         SKILL_230103_NAME = {
@@ -55286,7 +55286,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "SKILL_530102_NAME"
         },
         SKILL_530103_DESC = {
-          ContentFR = "Lorsqu’elle inflige un DGT CRIT, Psyche obtient aléatoirement l’un des bonus suivants :\n– Attaque augmentée\n– Puissance de compétence augmentée\n– Ténacité renforcée\nElle voit en plus ses dégâts augmenter pour chaque bonus dont elle bénéficie, jusqu’à un total de 12 bonus comptabilisés.",
+          ContentFR = "Lorsqu’elle inflige un coup critique, Psyche obtient aléatoirement l’un des bonus suivants :\n– Attaque augmentée\n– Puissance de compétence augmentée\n– Ténacité renforcée\nElle voit en plus ses dégâts augmenter pour chaque bonus dont elle bénéficie, jusqu’à un total de 12 bonus comptabilisés.",
           TextMapId = "SKILL_530103_DESC"
         },
         SKILL_530103_NAME = {
@@ -71835,7 +71835,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_AsyncCombat_BecomeHost"
         },
         UI_AsyncCombat_BecomeHostTips = {
-          ContentFR = "Confirmer la consommation de <H>Tentative de création de scène ×1</> et de <H>%s×1</> pour prendre le premier rôle ? Vous pourrez ensuite obtenir les récompenses associées.",
+          ContentFR = "Confirmer la consommation de <H>Tentative de création de scène ×1</> et de <H>%s ×1</> pour prendre le premier rôle ? Vous pourrez ensuite obtenir les récompenses associées.",
           TextMapId = "UI_AsyncCombat_BecomeHostTips"
         },
         UI_AsyncCombat_BossRemainHP = {
@@ -85956,7 +85956,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_HardBoss_Des_6"
         },
         UI_HardBoss_Des_7 = {
-          ContentFR = "Canon à propulsion Phoxichor monté à l’avant du train.\nCalibre 210 mm, canon lisse doté d’une excellente capacité de pénétration.\nCombiné aux autres armes embarquées du train, il peut anéantir tout ennemi à portée de vue.",
+          ContentFR = "Canon Phoxichor installé à l’avant du train.\nCalibre 210 mm, canon lisse à forte pénétration.\nCombiné aux armes du train, il détruit tout ennemi en vue.",
           TextMapId = "UI_HardBoss_Des_7"
         },
         UI_HardBoss_Detail = {
@@ -86036,7 +86036,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_HardBoss_Difficulty_Des_1051"
         },
         UI_HardBoss_Difficulty_Des_1061 = {
-          ContentFR = "Canon à propulsion Phoxichor monté à l’avant du train.\nCalibre 210 mm, canon lisse doté d’une excellente capacité de pénétration.\nCombiné aux autres armes embarquées du train, il peut anéantir tout ennemi à portée de vue.",
+          ContentFR = "Canon Phoxichor installé à l’avant du train.\nCalibre 210 mm, canon lisse à forte pénétration.\nCombiné aux armes du train, il détruit tout ennemi en vue.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1061"
         },
         UI_HardBoss_Difficulty_Des_Open_1 = {
@@ -86108,7 +86108,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_HardBoss_Name_6"
         },
         UI_HardBoss_Name_7 = {
-          ContentFR = "Canon principal de l’Express Aurora",
+          ContentFR = "Canon de l’Express Aurora",
           TextMapId = "UI_HardBoss_Name_7"
         },
         UI_HardBoss_Preview = {
@@ -88701,7 +88701,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_MECHANISM_ENTER_KUANGKENG"
         },
         UI_MECHANISM_ENTER_LIECHEBOSS = {
-          ContentFR = "Défier le « Canon principal de l’Express Aurora »",
+          ContentFR = "Défier le « Canon de l’Express Aurora »",
           TextMapId = "UI_MECHANISM_ENTER_LIECHEBOSS"
         },
         UI_MECHANISM_ENTER_OUTSIDERHOME = {
@@ -97132,7 +97132,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_RegionMap_ImpressionTitle"
         },
         UI_RegionMap_Mark = {
-          ContentFR = "Marquer",
+          ContentFR = "Marqueur",
           TextMapId = "UI_RegionMap_Mark"
         },
         UI_RegionMap_MarkedNum = {

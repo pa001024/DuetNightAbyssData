@@ -5,12 +5,14 @@ function M:OnInitNodeCache(NodeCache)
   EventManager:AddEvent(EventID.OnActivityTimeOpen, self, self.OnRefreshWithActivityOpen)
   EventManager:AddEvent(EventID.OnActivityTimeOpenClose, self, self.OnRefreshWithActivityClose)
   EventManager:AddEvent(EventID.OnWeeklyRefresh, self, self.OnWeeklyRefresh)
+  EventManager:AddEvent(EventID.OnSystemUnlockEnding, self, self.OnSystemUnlockEnding)
 end
 
 function M:OnDisposeNode()
   EventManager:RemoveEvent(EventID.OnActivityTimeOpen, self)
   EventManager:RemoveEvent(EventID.OnActivityTimeOpenClose, self)
   EventManager:RemoveEvent(EventID.OnWeeklyRefresh, self)
+  EventManager:RemoveEvent(EventID.OnSystemUnlockEnding, self)
 end
 
 function M:OnWeeklyRefresh()
@@ -24,6 +26,15 @@ function M:OnWeeklyRefresh()
       if Avatar then
         Avatar:RefreshAsyncCombatNew()
       end
+    end
+  end
+end
+
+function M:OnSystemUnlockEnding(SystemIDs)
+  if SystemIDs.Contains and SystemIDs:Contains("GameEvent") then
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:RefreshAsyncCombatNew()
     end
   end
 end

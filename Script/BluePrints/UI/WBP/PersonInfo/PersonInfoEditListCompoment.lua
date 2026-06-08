@@ -479,7 +479,12 @@ function Component:OnExchangeCodeClicked()
 end
 
 function Component:OnCustomerServiceClicked()
-  HeroUSDKSubsystem(self):OpenService()
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+  if "OpenHarmony" == PlatformName then
+    HeroUSDKSubsystem(self):JumpInternalBrowser("kefu")
+  else
+    HeroUSDKSubsystem(self):OpenService()
+  end
 end
 
 function Component:OnClickChangeTitle()

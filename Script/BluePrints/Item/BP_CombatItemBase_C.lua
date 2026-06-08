@@ -52,6 +52,28 @@ function BP_CombatItemBase_C:AuthorityInitInfo(Info)
   end
 end
 
+function BP_CombatItemBase_C:AddBuffManager_Hotfix473015()
+  if self._AddBuffManagerHotfix473015 then
+    return
+  end
+  self._AddBuffManagerHotfix473015 = true
+  local RealBuffManager = self.BuffManager
+  if not IsValid(RealBuffManager) then
+    self:AddBuffManager()
+    RealBuffManager = self.BuffManager
+  end
+  if not IsValid(RealBuffManager) then
+    return
+  end
+  self:GetBuffNum()
+  self:AddBuffManager()
+  local TempBuffManager = self.BuffManager
+  self.BuffManager = RealBuffManager
+  if IsValid(TempBuffManager) and TempBuffManager ~= RealBuffManager then
+    TempBuffManager:K2_DestroyComponent(TempBuffManager)
+  end
+end
+
 function BP_CombatItemBase_C:ClientInitInfo(Info)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if GameState then

@@ -68,6 +68,9 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
     return
   end
   AudioManager(GWorld.GameInstance):AddAuANotifyForbidTag(self.UnitKey)
+  if self.TalkTaskData.Key == "176778347795010204954" then
+    GWorld.GameInstance:ReloadLightingScenario()
+  end
   if DisableMotionBlurTalkIdMap[self.TalkTaskData.Key] then
     local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     if IsValid(PlayerController) then

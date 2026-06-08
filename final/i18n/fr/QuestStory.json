@@ -25354,7 +25354,7 @@
       {
         "id": 10040503,
         "name": "Arrêter Katya",
-        "desc": "Katya commence à utiliser le canon du train pour attaquer le dirigeable. Il faut l’arrêter.\nNeutralisez le Canon principal de l’Express Aurora.",
+        "desc": "Katya commence à utiliser le canon du train pour attaquer le dirigeable. Il faut l’arrêter.\nNeutralisez le Canon de l’Express Aurora.",
         "nodes": [
           {
             "id": "177772045534914953121",
@@ -99440,7 +99440,7 @@
                   },
                   {
                     "id": 51200014,
-                    "content": "Exactement ! Je vais aller prévenir le chef de gare, et les gardes viendront vous châtier !",
+                    "content": "<I>Attends... quelque chose ne colle pas.</>",
                     "next": 51200017,
                     "impr": [
                       1011,
@@ -99450,7 +99450,7 @@
                   },
                   {
                     "id": 51200015,
-                    "content": "<I>Attends... quelque chose ne colle pas.</>",
+                    "content": "<I>Peu importe qui vous êtes. Aujourd’hui, je vais m’en mêler.</>",
                     "next": 51200018,
                     "impr": [
                       1011,
@@ -99462,13 +99462,13 @@
               },
               {
                 "id": 51200016,
-                "content": "Qu’est-ce qui ne colle pas ?! Ils osent faire ça devant tout le monde ! Il faut prévenir les gardes de la gare !",
+                "content": "Exactement ! Je vais aller prévenir le chef de gare, et les gardes viendront vous châtier !",
                 "npc": 200002,
                 "next": 51200019
               },
               {
                 "id": 51200017,
-                "content": "<I>Peu importe qui vous êtes. Aujourd’hui, je vais m’en mêler.</>",
+                "content": "Qu’est-ce qui ne colle pas ?! Ils osent faire ça devant tout le monde ! Il faut prévenir les gardes de la gare !",
                 "npc": 200002,
                 "next": 51200019
               },

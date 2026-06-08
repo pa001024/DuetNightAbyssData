@@ -102,9 +102,7 @@ function M:OnResourcesChanged(ResourceId)
       end
     end
   end
-  if IsChanged then
-    self:RefreshDetailPanelByLastSelectedItem()
-  end
+  self:RefreshDetailPanelByLastSelectedItem()
   self:BlockAllUIInput(false)
 end
 

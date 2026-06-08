@@ -7,14 +7,6 @@ M.AppearanceMainTabNames = {
   Gesture = "Gesture"
 }
 
-function M.CalcAppearanceScore(AppearanceType, Rarity)
-  for key, value in pairs(DataMgr.AppearanceScore) do
-    if AppearanceType == value.Type and Rarity == value.Rarity then
-      return value.Score
-    end
-  end
-end
-
 function M.GetCharAppearanceReddot(CharId)
   local Avatar = GWorld:GetAvatar()
   local CommonChar = Avatar.CommonChars[CharId]

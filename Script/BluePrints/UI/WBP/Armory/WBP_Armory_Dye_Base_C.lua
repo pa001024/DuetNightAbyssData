@@ -74,6 +74,7 @@ function M:Construct()
   self.Text_Default:SetText(GText("UI_Dye_Default"))
   self.Text_Default_1:SetText(GText("UI_Armory_Dye_Default"))
   self.Text_Title_R:SetText(GText("UI_Dye_Total"))
+  self.Text_Fenghua:SetText(GText("UI_AppearanceScore_Score"))
   rawset(self, "AllPlanNames", {
     "UI_Squad_Appearance_TITLE1",
     "UI_Squad_Appearance_TITLE2",

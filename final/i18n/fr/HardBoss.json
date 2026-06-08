@@ -248,9 +248,9 @@
   },
   {
     "id": 7,
-    "name": "Canon principal de l’Express Aurora",
+    "name": "Canon de l’Express Aurora",
     "icon": "T_Permanent_HardBoss_Lieche_S",
-    "desc": "Canon à propulsion Phoxichor monté à l’avant du train.\nCalibre 210 mm, canon lisse doté d’une excellente capacité de pénétration.\nCombiné aux autres armes embarquées du train, il peut anéantir tout ennemi à portée de vue.",
+    "desc": "Canon Phoxichor installé à l’avant du train.\nCalibre 210 mm, canon lisse à forte pénétration.\nCombiné aux armes du train, il détruit tout ennemi en vue.",
     "diff": [
       {
         "id": 1061,

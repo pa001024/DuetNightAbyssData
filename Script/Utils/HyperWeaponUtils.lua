@@ -16,7 +16,7 @@ function HyperWeaponUtils.IsHyperWeapon(WeaponId)
   return WeaponSubType == CommonConst.WeaponSubType.Hyper
 end
 
-function HyperWeaponUtils.IsHyperWeaponSkillActivated(WeaponId, HyperWeaponSkillId)
+function HyperWeaponUtils.IsHyperWeaponSkillActivated(WeaponId, HyperWeaponSkillId, OwnerPS)
   if Const and Const.bEditorUnlockAllHyperWeaponSkills then
     return true
   end
@@ -24,8 +24,11 @@ function HyperWeaponUtils.IsHyperWeaponSkillActivated(WeaponId, HyperWeaponSkill
   local GameState = UE4 and UE4.UGameplayStatics.GetGameState(GWorld and GWorld.GameInstance)
   local HyperWeapon = HyperWeaponUtils.GetCurHyperWeapon(WeaponId)
   if GameState and GameState:IsInDungeon() and not HyperWeapon then
-    local PC = UE4 and UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
-    local PS = PC and PC.PlayerState
+    local PS = OwnerPS
+    if not PS then
+      local PC = UE4 and UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+      PS = PC and PC.PlayerState
+    end
     if not PS or not PS.HyperWeaponSkillIds then
       return false
     end

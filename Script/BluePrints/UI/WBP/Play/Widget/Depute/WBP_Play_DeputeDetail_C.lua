@@ -118,6 +118,7 @@ function M:Destruct()
   M.Super.Destruct(self)
   M.bOpened = false
   M.SelectedDungeonId = nil
+  M.SelectedSquadId = nil
   self.Button_Multi:UnBindEventOnClickedByObj(self)
   self.Button_Solo:UnBindEventOnClickedByObj(self)
   self.Button_DoubleMod:UnBindEventOnClickedByObj(self)
@@ -612,6 +613,12 @@ function M:OnTypeClicked(TypeId, bDefault)
   self.CurSelectedDungeonId = TypeId
   M.SelectedDungeonId = TypeId
   self:RefreshLevelCellContent(TypeId)
+  if self.isIron and self.SelectedIronItemId then
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:SetIronRareDrop(nil, self.CurSelectedDungeonId, self.SelectedIronItemId)
+    end
+  end
 end
 
 function M:IsShowAttributeTips()
@@ -680,10 +687,14 @@ function M:InitListCellInfo(DungeonId)
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       local SquadId = Avatar.DungeonSquad[DungeonType] and Avatar.DungeonSquad[DungeonType] or 0
+      self.SquadId = SquadId
+      M.SelectedSquadId = SquadId
       local bDisablePhantom = "Rouge" == DungeonType or false
       self.DefaultList:Init(self, bDisablePhantom, SquadId, self.CurSelectedDungeonId)
     end
   else
+    M.SelectedSquadId = nil
+    self.SquadId = nil
     self.DefaultList:SetVisibility(ESlateVisibility.Collapsed)
   end
   if Dungeon2SubDungeon[DungeonId] then
@@ -2338,6 +2349,7 @@ function M:OnDungeonsUpdate()
 end
 
 function M:OnCurrentSquadChange(SquadId, IsComMissing)
+  M.SelectedSquadId = SquadId
   self.SquadId = SquadId
   self.IsComMissing = IsComMissing
   self:IsShowAttributeTips()

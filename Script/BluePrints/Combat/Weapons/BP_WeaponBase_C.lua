@@ -399,7 +399,9 @@ function BP_WeaponBase_C:IsHyperWeaponSkillActivated(HyperWeaponSkillId)
       return false
     end
   end
-  return HyperWeaponUtils.IsHyperWeaponSkillActivated(self.WeaponId, HyperWeaponSkillId)
+  local Owner = self:GetOwner()
+  local OwnerPS = Owner and Owner.PlayerState
+  return HyperWeaponUtils.IsHyperWeaponSkillActivated(self.WeaponId, HyperWeaponSkillId, OwnerPS)
 end
 
 AssembleComponents(BP_WeaponBase_C)

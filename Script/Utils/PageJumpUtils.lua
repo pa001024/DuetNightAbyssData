@@ -317,6 +317,10 @@ function PageJumpUtils:CloseFrontDialog()
   if ActivityLimitTimeRewardPreview then
     ActivityLimitTimeRewardPreview:Close()
   end
+  local CoopCreate = UIManager:GetUIObj("CoopCreate")
+  if CoopCreate then
+    CoopCreate:Close()
+  end
 end
 
 function PageJumpUtils:SortAccessItem(ItemsContainer)

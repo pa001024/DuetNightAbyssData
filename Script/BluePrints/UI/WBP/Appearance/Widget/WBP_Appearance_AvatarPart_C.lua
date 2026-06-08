@@ -212,7 +212,10 @@ function M:TryOpenAppearanceImportByShareText(ShareText)
     Parent = self.Parent or self,
     CharUuid = self.MainModel and self.MainModel:GetSelectedChar() and self.MainModel:GetSelectedChar().Uuid or nil,
     AppearanceIndex = self.MainModel and self.MainModel:GetSelectedCharAppearanceIndex() or 1,
-    SourceText = ShareText
+    SourceText = ShareText,
+    OnCloseCallback = function()
+      self:RefreshAfterAppearanceImport()
+    end
   })
   return true
 end
@@ -382,6 +385,23 @@ function M:OnCharAppearanceChanged(Ret, CharUuid, AppearanceIndex)
   end
   self:InitCharAppearanceSuits()
   self.List_Appearance:PlayInAnim()
+end
+
+function M:RefreshAfterAppearanceImport()
+  local SelectedChar = self.MainModel and self.MainModel:GetSelectedChar() or nil
+  if not SelectedChar then
+    return
+  end
+  local AppearanceIndex = self.MainModel:GetSelectedCharAppearanceIndex()
+  if self.ActorController and self.ActorController.ArmoryPlayer then
+    local AppearanceSuit = SelectedChar.DumpAppearanceSuit and SelectedChar:DumpAppearanceSuit(GWorld:GetAvatar(), AppearanceIndex) or nil
+    if AppearanceSuit then
+      self.ActorController:ChangeCharAppearance(AppearanceSuit)
+      self.ActorController.DelayFrame = 30
+      self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, CommonConst.ArmoryTag.Appearance)
+    end
+  end
+  self:InitCharAppearanceSuits()
 end
 
 function M:OnListItemClicked(Content)

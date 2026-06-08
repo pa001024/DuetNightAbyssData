@@ -39232,15 +39232,15 @@ local Data = {
           TextMapId = "READ_DESC_2000031"
         },
         READ_DESC_2000032 = {
-          ContentTC = "記錄在龍莎要塞模擬戰場控制台中的對戰記錄，以規範的格式記錄了帝國士兵在模擬戰場中對戰的戰績，並根據對戰過程中各編隊的表現給出了中肯的評價和建議。\n\n最後幾條記錄的行文風格突然發生了極大變化，顯然並非出自軍團之手，更像是神棄者同盟的人留下的。",
+          ContentTC = "記錄在龍莎要塞模擬戰場控制台中的對戰記錄，以規範的格式記錄了帝國士兵在模擬戰場中對戰的戰績，並根據對戰過程中各編隊的表現給出了中肯的評價和建議。\n最後幾條記錄的行文風格突然發生了極大變化，顯然並非出自軍團之手，更像是神棄者同盟的人留下的。",
           TextMapId = "READ_DESC_2000032"
         },
         READ_DESC_2000033 = {
-          ContentTC = "似乎是某位負責管理軍犬的帝國士兵記錄的一份非正式軍犬名冊，被小心地塞在這輛戰車的儲物箱深處。\n\n最後的部分沾著水漬，有些難以分辨。",
+          ContentTC = "似乎是某位負責管理軍犬的帝國士兵記錄的一份非正式軍犬名冊，被小心地塞在這輛戰車的儲物箱深處。\n最後的部分沾著水漬，有些難以分辨。",
           TextMapId = "READ_DESC_2000033"
         },
         READ_DESC_2000034 = {
-          ContentTC = "一份臨時的救治記錄，省去了不必要的格式和措辭方面的講究，只簡明扼要地記錄了現場傷員各自的傷情和已經接受的應急處置。\n\n在記錄醫療物資剩余數量的頁面上，隨著數字一點點變小，字跡也變得越來越潦草，書寫者內心的擔憂和焦慮透過紙面清晰地浮現出來。",
+          ContentTC = "一份臨時的救治記錄，省去了不必要的格式和措辭方面的講究，只簡明扼要地記錄了現場傷員各自的傷情和已經接受的應急處置。\n在記錄醫療物資剩余數量的頁面上，隨著數字一點點變小，字跡也變得越來越潦草，書寫者內心的擔憂和焦慮透過紙面清晰地浮現出來。",
           TextMapId = "READ_DESC_2000034"
         },
         READ_DESC_2000035 = {
@@ -52760,11 +52760,11 @@ local Data = {
           TextMapId = "RL_Event321_Select_1"
         },
         RL_Event321_Select_2 = {
-          ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。\n \n ",
+          ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。",
           TextMapId = "RL_Event321_Select_2"
         },
         RL_Event322_Select_1 = {
-          ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>[燭芯]。\n \n ",
+          ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>[燭芯]。",
           TextMapId = "RL_Event322_Select_1"
         },
         RL_Event322_Select_2 = {
@@ -52776,11 +52776,11 @@ local Data = {
           TextMapId = "RL_Event323_Select_1"
         },
         RL_Event323_Select_2 = {
-          ContentTC = "選取一個<Highlight>藍色</>或<Highlight>紫色</>[遺物]。\n \n ",
+          ContentTC = "選取一個<Highlight>藍色</>或<Highlight>紫色</>[遺物]。",
           TextMapId = "RL_Event323_Select_2"
         },
         RL_Event324_Select_1 = {
-          ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[遺物]。\n \n ",
+          ContentTC = "獲得一個隨機<Highlight>藍色</>或<Highlight>紫色</>[遺物]。",
           TextMapId = "RL_Event324_Select_1"
         },
         RL_Event324_Select_2 = {
@@ -52792,7 +52792,7 @@ local Data = {
           TextMapId = "RL_Event325_Select_1"
         },
         RL_Event325_Select_2 = {
-          ContentTC = "選取一個<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。\n \n ",
+          ContentTC = "選取一個<Highlight>藍色</>或<Highlight>紫色</>[燭芯]。",
           TextMapId = "RL_Event325_Select_2"
         },
         RL_Event326_Select_1 = {
@@ -52800,7 +52800,7 @@ local Data = {
           TextMapId = "RL_Event326_Select_1"
         },
         RL_Event326_Select_2 = {
-          ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>或<Highlight>金色</>[燭芯]。\n \n ",
+          ContentTC = "進入戰鬥，勝利後獲得一個隨機<Highlight>紫色</>或<Highlight>金色</>[燭芯]。",
           TextMapId = "RL_Event326_Select_2"
         },
         RL_Event327_Select_1 = {
@@ -72287,7 +72287,7 @@ local Data = {
           TextMapId = "UI_AsyncCombat_TotalStages"
         },
         UI_AsyncCombat_WeeklyRemain = {
-          ContentTC = "本週剩餘次數",
+          ContentTC = "本週剩餘次數：",
           TextMapId = "UI_AsyncCombat_WeeklyRemain"
         },
         UI_AsyncCombat_WorldChannel = {

@@ -8,12 +8,6 @@ M._components = {
 }
 local ResolveDisplayAppearanceSuit, ResolveAccessorySuit
 
-local function IsEmptyAccessorySlot(AccessoryId, NoneAccessoryId)
-  AccessoryId = tonumber(AccessoryId) or 0
-  NoneAccessoryId = tonumber(NoneAccessoryId) or 0
-  return AccessoryId <= 0 or NoneAccessoryId > 0 and AccessoryId == NoneAccessoryId
-end
-
 function M:Construct()
   self.AccessoryWidget2Type = {
     [self.Head_Skin] = CommonConst.CharAccessoryTypes.Head,
@@ -173,8 +167,9 @@ function M:Init(MainModel, Params)
   local PartMeshAccessoryId, PartMeshAccessoryType = Target:GetPartMeshAccessoryInfo(SkinId)
   local AccessorySuit = ResolveAccessorySuit(AppearanceSuit)
   for CharAccessoryType, AccessoryTypeIdx in pairs(CommonConst.NewCharAccessoryTypes) do
-    local AccessoryId = AccessorySuit[AccessoryTypeIdx] or self.NoneAccessoryId
-    if IsEmptyAccessorySlot(AccessoryId, self.NoneAccessoryId) and PartMeshAccessoryType and PartMeshAccessoryType == CharAccessoryType then
+    local RawAccessoryId = AccessorySuit[AccessoryTypeIdx]
+    local AccessoryId = RawAccessoryId or self.NoneAccessoryId
+    if (not RawAccessoryId or RawAccessoryId <= 0) and PartMeshAccessoryType and PartMeshAccessoryType == CharAccessoryType then
       AccessoryId = PartMeshAccessoryId
     end
     local Widget = self.AccessoryType2Widget[CharAccessoryType]

@@ -35,6 +35,8 @@ function M:Construct()
   self.Btn.Button_Area.OnClicked:Add(self, self.CreateRoom)
   self.BtnClose01.Btn_Close.OnClicked:Add(self, self.ClickClose)
   self.BtnCloseFull.OnClicked:Add(self, self.ClickClose)
+  local DesiredWidget = UE4.FWidgetChild()
+  self.DesiredFocusWidget = DesiredWidget
 end
 
 function M:Destruct()
@@ -213,6 +215,8 @@ function M:InitReward()
 end
 
 function M:RefreshTips(Content)
+  self.WBP_Com_Tips.Btn02_Mod:UnBindEventOnClickedByObj(self.WBP_Com_Tips)
+  self.WBP_Com_Tips.Btn01_Mod:UnBindEventOnClickedByObj(self.WBP_Com_Tips)
   self.WBP_Com_Tips:SetVisibility(UE4.ESlateVisibility.Visible)
   self.WBP_Com_Tips:RefreshItemInfo(Content, true)
   self.WBP_Com_Tips.Key_Back:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -740,6 +744,22 @@ function M:GetPlayerInGuild()
     return false
   end
   return true
+end
+
+function M:OnTipsAddToFocusPath()
+end
+
+function M:OnTipsRemovedFromFocusPath()
+end
+
+function M:OnFocusReceived()
+  DebugPrint("lxc: CoopCreate OnFocusReceived")
+  if self.UsingGamepad and self.GamepadReward and self.GamepadReward.UI then
+    self.GamepadReward.UI:SetFocus()
+  else
+    self.ListReward:SetFocus()
+  end
+  return UE4.FEventReply(true)
 end
 
 return M

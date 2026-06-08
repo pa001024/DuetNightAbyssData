@@ -109,6 +109,12 @@ function GuildFullInfo.New(ServerInfo)
   for i, MsgInfo in pairs(ServerInfo.GuildMessages or {}) do
     NewObj:AddDynMessage(MsgInfo)
   end
+  if not NewObj.JoinRequestUids then
+    NewObj.JoinRequestUids = {}
+  end
+  if not NewObj.ClosedPermission then
+    NewObj.ClosedPermission = {}
+  end
   return NewObj
 end
 

@@ -245,8 +245,9 @@ function M:InitCharAppearanceSuits()
   self.Hair_Skin:OnListItemObjectSet(HairItemContent)
   local PartMeshAccessoryId, PartMeshAccessoryType = self.Target:GetPartMeshAccessoryInfo(SkinId)
   for CharAccessoryType, AccessoryTypeIdx in pairs(CommonConst.NewCharAccessoryTypes) do
-    local AccessoryId = AppearanceSuit.Accessory[AccessoryTypeIdx] or self.NoneAccessoryId
-    if AccessoryId <= 0 and PartMeshAccessoryType and PartMeshAccessoryType == CharAccessoryType then
+    local RawAccessoryId = AppearanceSuit.Accessory[AccessoryTypeIdx]
+    local AccessoryId = RawAccessoryId or self.NoneAccessoryId
+    if (not RawAccessoryId or RawAccessoryId <= 0) and PartMeshAccessoryType and PartMeshAccessoryType == CharAccessoryType then
       AccessoryId = PartMeshAccessoryId
     end
     local Widget = self.AccessoryType2Widget[CharAccessoryType]

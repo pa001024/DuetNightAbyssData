@@ -906,6 +906,7 @@ return ReadOnly("Skin", {
     Des = "UI_Skin_Des_210101",
     DisplayPath = "WidgetBlueprint'/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetShuimu02.WBP_Get_Avatar_WidgetShuimu02'",
     GetDisplayType = 2,
+    GoShopTypeId = {140360},
     Icon = "/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Shuimu02",
     LevelUpEffectCreatures = {
       [210143] = T.RT_18
@@ -3701,7 +3702,7 @@ return ReadOnly("Skin", {
     SkinId = 43010141,
     SkinModelId = 43010141,
     SkinName = "UI_Skin_Name_0141",
-    SkinSeries = "BP_05",
+    SkinSeries = "BP_05_1",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [51010010] = {
@@ -4161,7 +4162,7 @@ return ReadOnly("Skin", {
     SkinId = 54010141,
     SkinModelId = 54010141,
     SkinName = "UI_Skin_Name_0141",
-    SkinSeries = "BP_05",
+    SkinSeries = "BP_05_1",
     Sound = "SOUND_ITEM_NORMAL"
   }
 })

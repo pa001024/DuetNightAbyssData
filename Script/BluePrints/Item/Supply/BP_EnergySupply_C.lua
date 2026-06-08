@@ -50,7 +50,7 @@ function BP_EnergySupply_C:AuthorityInitInfo(Info)
   self.HasFindPlayer = false
   self.HasAllEnergyGuideCloseLua = {}
   self:SetCamp(Info.Camp or self.Data.Camp)
-  self:AddBuffManager()
+  self:AddBuffManager_Hotfix473015()
 end
 
 function BP_EnergySupply_C:CommonInitInfo(Info)

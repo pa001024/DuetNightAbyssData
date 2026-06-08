@@ -2640,7 +2640,7 @@
     "名称": "Blooms of Bloodshed Ⅰ",
     "分类": "Labyrinthine Garden",
     "品质": 3,
-    "描述": "Entered [Combat · Scattered Abyssoid] 1 times in \"Mystic Maze\"",
+    "描述": "Entered [Scattered Abyssoid] 1 times in \"Mystic Maze\"",
     "版本": "1.0",
     "奖励": {
       "Coin": 2000
@@ -2651,7 +2651,7 @@
     "名称": "Blooms of Bloodshed Ⅱ",
     "分类": "Labyrinthine Garden",
     "品质": 2,
-    "描述": "Entered [Combat · Scattered Abyssoid] 12 times in \"Mystic Maze\"",
+    "描述": "Entered [Scattered Abyssoid] 12 times in \"Mystic Maze\"",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1
@@ -3203,7 +3203,7 @@
     "名称": "Tales of the Redleaf",
     "分类": "Wish List",
     "品质": 2,
-    "描述": "Collect all four chapters of Redleaf: A Chronicle of Rebellion within Galea Theatre",
+    "描述": "Collect all four chapters of Momiji: A Chronicle of Rebellion within Galea Theatre",
     "版本": "1.0",
     "奖励": {
       "Secret Letter Clue": 1

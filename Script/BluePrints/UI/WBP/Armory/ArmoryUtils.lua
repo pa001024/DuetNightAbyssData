@@ -1559,12 +1559,12 @@ function M:TryAddWeaponAppearanceReddot(WeaponId)
     if ContrastData and ContrastData.WeaponTagfilter == "MeleeType" then
       NewMeleeAppearanceChildNodes[LeafNodeName] = 1
       if not ReddotManager.GetTreeNode(LeafNodeName) then
-        ReddotManager.AddNode(LeafNodeName)
+        ReddotManager.AddNode(LeafNodeName, nil, 1)
       end
     elseif ContrastData and ContrastData.WeaponTagfilter == "RangedType" then
       NewRangedAppearanceChildNodes[LeafNodeName] = 1
       if not ReddotManager.GetTreeNode(LeafNodeName) then
-        ReddotManager.AddNode(LeafNodeName)
+        ReddotManager.AddNode(LeafNodeName, nil, 1)
       end
     end
   end

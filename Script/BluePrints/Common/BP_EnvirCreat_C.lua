@@ -13,6 +13,7 @@ function BP_EnvirCreat:OnLightingScenarioLoaded(LevelName)
     print("BP_EnvirCreate ReloadCurrentLightingScenario")
     self:ReloadCurrentLightingScenario()
   else
+    self.ReloadLightingScenario = false
     print("BP_EnvirCreate RefreshReflectionCapture")
     self:RefreshReflectionCapture()
   end

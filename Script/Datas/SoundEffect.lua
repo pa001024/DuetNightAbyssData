@@ -1552,7 +1552,7 @@ return ReadOnly("SoundEffect", {
   },
   [310201] = {
     SoundId = 310201,
-    SoundPath = "event:/sfx/common/player/hit/weapon/spearHit_light"
+    SoundPath = "event:/sfx/player/Xier/hit01"
   },
   [310202] = {
     SoundId = 310202,

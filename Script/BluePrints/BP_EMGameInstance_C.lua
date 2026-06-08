@@ -2647,6 +2647,40 @@ function BP_EMGameInstance_C:OnTalkHiddenGameUIChange()
   }, 0.01, false, 0)
 end
 
+function BP_EMGameInstance_C:ReloadLightingScenario()
+  print("ReloadLightingScenario unload")
+  if self.ReloadLightingHandle then
+    UE4.UKismetSystemLibrary.K2_ClearAndInvalidateTimerHandle(self, self.ReloadLightingHandle)
+  end
+  
+  local function unloadfunction(self)
+    UE4.UGameplayStatics.UnloadStreamLevel(self, "Haiboliya_Chezhan_YW_Main_Art_Light_Day", false)
+  end
+  
+  coroutine.resume(coroutine.create(unloadfunction), self)
+  UE4.UKismetSystemLibrary.CollectGarbage()
+  self.ReloadGCNumber = 0
+  self.ReloadLightingHandle = UE4.UKismetSystemLibrary.K2_SetTimerDelegate({
+    self,
+    function()
+      self.ReloadGCNumber = self.ReloadGCNumber + 1
+      UE4.UKismetSystemLibrary.CollectGarbage()
+      print("ReloadLightingScenario", self.ReloadGCNumber)
+      if self.ReloadGCNumber > 5 then
+        UE4.UKismetSystemLibrary.K2_ClearAndInvalidateTimerHandle(self, self.ReloadLightingHandle)
+        self.ReloadLightingHandle = nil
+        print("ReloadLightingScenario load")
+        
+        local function loadfunction(self)
+          UE4.UGameplayStatics.LoadStreamLevel(self, "Haiboliya_Chezhan_YW_Main_Art_Light_Day", true, false)
+        end
+        
+        coroutine.resume(coroutine.create(loadfunction), self)
+      end
+    end
+  }, 0.2, true, 0.01)
+end
+
 function BP_EMGameInstance_C:OnConditionComplete(ConditionId)
 end
 

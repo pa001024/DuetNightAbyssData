@@ -29,6 +29,9 @@ function M:Construct()
 end
 
 function M:Destruct()
+  if not self.SquadFolding then
+    self:SetInputUIOnly(false)
+  end
   self:ResetMatchPanel()
   self:ClearLoopSound()
   TeamController:SetTeamPopupBarOpen(false)
@@ -728,13 +731,53 @@ function M:GetSquadInfo(DungeonId)
   return {}, 0
 end
 
+function M:IsSquadIdValid(SquadId)
+  if nil == SquadId then
+    return false
+  end
+  if 0 == SquadId then
+    return true
+  end
+  local Avatar = GWorld:GetAvatar()
+  return Avatar and Avatar.Squad and nil ~= Avatar.Squad[SquadId]
+end
+
+function M:GetDeputeDetailSquadId()
+  if not DeputeDetail or not DeputeDetail.bOpened then
+    return nil
+  end
+  local SelectedDungeonId = DeputeDetail.SelectedDungeonId
+  local SelectedDungeonInfo = SelectedDungeonId and DataMgr.Dungeon[SelectedDungeonId]
+  local MatchDungeonInfo = self.DungeonId and DataMgr.Dungeon[self.DungeonId]
+  if not SelectedDungeonInfo or not MatchDungeonInfo then
+    return nil
+  end
+  if SelectedDungeonInfo.DungeonType ~= MatchDungeonInfo.DungeonType then
+    DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetDeputeDetailSquadId TypeMismatch", SelectedDungeonId, self.DungeonId, SelectedDungeonInfo.DungeonType, MatchDungeonInfo.DungeonType)
+    return nil
+  end
+  local SquadId = DeputeDetail.SelectedSquadId
+  if self:IsSquadIdValid(SquadId) then
+    DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetDeputeDetailSquadId UI", SelectedDungeonId, self.DungeonId, SquadId)
+    return SquadId
+  end
+  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetDeputeDetailSquadId Invalid", SelectedDungeonId, self.DungeonId, SquadId)
+  return nil
+end
+
 function M:GetSquadId()
-  if self.DefaultList and self.DefaultList.CurrentSquad then
+  if self.DefaultList and self.DefaultList:GetVisibility() ~= ESlateVisibility.Collapsed and self.DefaultList.CurrentSquad then
     DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetSquadId", self.DefaultList.CurrentSquad)
     return self.DefaultList.CurrentSquad
   end
-  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetSquadId000")
-  return 0
+  local DetailSquadId = self:GetDeputeDetailSquadId()
+  if nil ~= DetailSquadId then
+    DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetSquadId DeputeDetailFallback", DetailSquadId)
+    return DetailSquadId
+  end
+  local _, SquadId = self:GetSquadInfo(self.DungeonId)
+  DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:GetSquadId DungeonSquadFallback", SquadId)
+  return SquadId or 0
 end
 
 function M:InSameDungeonType()

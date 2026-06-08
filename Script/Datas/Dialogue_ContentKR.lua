@@ -31330,7 +31330,7 @@ CameraMoveTo{TargetPosition{"252.603516,-1139.067505,153.863281,0.000024,-1.3470
         [10037522] = {
           Camera = "13.171875,-186.607422,138.582764,0.000934,-2.604645,97.007713,40.000011,335.778412,false,Manual,3.301423,16:9 Digital Film",
           Content = "这和贝蕾妮卡的信息对得上。如果真的是她，那<H>一个月后的列车</>，也许是你唯一的机会。",
-          ContentKR = "이건 베레니카의 정보와 일치합니다. 정말 베레니카가 맞으면 <H>한달 뒤의 열차가</> 당신의 유일한 기회일 수도 있어요.",
+          ContentKR = "이건 베레니카의 정보와 일치합니다. 정말 베레니카가 맞다면 <H>한 달 뒤의 열차</>가 당신의 유일한 기회일 수도 있어요.",
           DialogueId = 10037522,
           FinalCamera = "11.713867,-174.760498,138.040771,0.000934,-2.604645,96.607719,40.000011,335.778412,false,Manual,3.301423,16:9 Digital Film",
           GUID = "1920BCF4",
@@ -32554,7 +32554,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10040118] = {
           Content = "这和贝蕾妮卡的信息对得上。如果真的是她，那<H>一个月后的列车</>，也许是你唯一的机会。",
-          ContentKR = "이건 베레니카의 정보와 일치합니다. 정말 베레니카가 맞으면 <H>한 달 뒤의 열차</>가 당신의 유일한 기회일 수도 있어요.",
+          ContentKR = "이건 베레니카의 정보와 일치합니다. 정말 베레니카가 맞다면 <H>한 달 뒤의 열차</>가 당신의 유일한 기회일 수도 있어요.",
           DialogueId = 10040118,
           GUID = "192266DC",
           RelatedWikiId = {
@@ -35627,7 +35627,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10041933] = {
           Content = "还真不知道……要不你去档案室翻翻档案？那边平时没什么人，也就是需要广播的时候会有人过去。我小的时候就喜欢偷偷溜进去查火车数据。",
-          ContentKR = "그건 저도 모르겠어요... 아니면 기록 보관실에 가서 자료 한 번 뒤져 볼래요? 거긴 방송할 일 있을 때 아니면 사람이 없거든요. 저도 진짜 어릴 땐 몰래 들어가서 차량 제원 같은 거 찾아보고 그랬어요.",
+          ContentKR = "그건 진짜 모르겠어요... 아니면 기록 보관실에 가서 자료 한 번 뒤져 볼래요? 거긴 방송할 일 있을 때 아니면 사람이 없거든요. 저도 진짜 어릴 땐 몰래 들어가서 차량 제원 같은 거 찾아보고 그랬어요.",
           DialogueId = 10041933,
           GUID = "192390A2",
           SpeakNpcId = 100415,
@@ -41283,7 +41283,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10046307] = {
           Content = "啊，嗯，我是史蒂芬的{性别：二表哥|二表姐}，这位是他的大表姐。",
-          ContentKR = "아, 음, 저는 스테판의 {性别:사촌 형이고|둘째 사촌 누나고}, 이쪽은 {性别:저희 누나|저희 언니}예요.",
+          ContentKR = "아, 음, 저는 스테판의 {性别:사촌 형이고|사촌 누나고}, 이쪽은 {性别:저희 누나|저희 언니}예요.",
           DialogueId = 10046307,
           GUID = "19265E3E",
           SpeakNpcId = 100001,
@@ -249757,7 +249757,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200014] = {
           Content = "等等，好像哪儿不对劲……",
-          ContentKR = "맞아, 맞아! 역장님한테 경비병을 보내서, 조치를 취해 달라고 할 거야!",
+          ContentKR = "잠깐, 뭔가 이상해...",
           DialogueId = 51200014,
           GUID = "802C824C",
           ImprPlusId = 1003,
@@ -249765,7 +249765,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200015] = {
           Content = "管你是谁，今天我就招惹了。",
-          ContentKR = "잠깐, 뭔가 이상해...",
+          ContentKR = "그쪽이 누군진 모르겠지만, 너 오늘 나 제대로 건드렸어.",
           DialogueId = 51200015,
           GUID = "802C8276",
           ImprPlusId = 1005,
@@ -249773,7 +249773,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200016] = {
           Content = "就是就是，我要去找站长大人，让卫兵来制裁你们！",
-          ContentKR = "이상하긴 뭐가 이상해! 이렇게 사람 많은 데서 대놓고 이런 짓을 하는데! 얼른 경비병한테 말해야 한다니까!",
+          ContentKR = "맞아, 맞아! 역장님한테 경비병을 보내서, 조치를 취해 달라고 할 거야!",
           DialogueId = 51200016,
           GUID = "802C82A0",
           NextDialogue = 51200019,
@@ -249781,7 +249781,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200017] = {
           Content = "什么不对劲呀！他们在大庭广众之下居然敢做出这种事情，我们得报告给车站卫兵！",
-          ContentKR = "그쪽이 누군진 모르겠지만, 너 오늘 나 제대로 건드렸어.",
+          ContentKR = "이상하긴 뭐가 이상해! 이렇게 사람 많은 데서 대놓고 이런 짓을 하는데! 얼른 경비병한테 말해야 한다니까!",
           DialogueId = 51200017,
           GUID = "802C82CA",
           NextDialogue = 51200019,
@@ -336133,7 +336133,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [100499129] = {
           Content = "嗯。",
-          ContentKR = "네",
+          ContentKR = "네.",
           DialogueId = 100499129,
           GUID = "100499129",
           SpeakNpcId = 100404,

@@ -136,6 +136,20 @@ local function IsPartMeshAccessoryId(AccessoryId)
   return AccessoryId > 0 and DataMgr.CharPartMesh ~= nil and DataMgr.CharPartMesh[AccessoryId] ~= nil
 end
 
+local function HasExplicitEmptyPartMeshSlot(AppearanceInfo, SkinId)
+  local _, PartMeshAccessoryType = GetPartMeshAccessoryInfoBySkinId(SkinId)
+  if not PartMeshAccessoryType or not CommonConst.NewCharAccessoryTypes then
+    return false
+  end
+  local AccessoryTypeIndex = CommonConst.NewCharAccessoryTypes[PartMeshAccessoryType]
+  if not AccessoryTypeIndex then
+    return false
+  end
+  local AccessorySuit = AppearanceInfo and (AppearanceInfo.AccessorySuit or AppearanceInfo.Accessory) or nil
+  local AccessoryId = AccessorySuit and AccessorySuit[AccessoryTypeIndex] or nil
+  return nil ~= AccessoryId and SafeNumber(AccessoryId, 0) == EmptyAccessoryId
+end
+
 local function CalcAppearancePartScore(ItemType, ItemId)
   ItemId = SafeNumber(ItemId, 0)
   if ItemId <= 0 then
@@ -570,7 +584,7 @@ function M:BuildOwnershipState()
     end
   end
   local PartMeshAccessoryId = GetPartMeshAccessoryInfoBySkinId(SkinId)
-  if PartMeshAccessoryId and PartMeshAccessoryId > 0 and nil == AccessoryEnoughMap[PartMeshAccessoryId] then
+  if PartMeshAccessoryId and PartMeshAccessoryId > 0 and not HasExplicitEmptyPartMeshSlot(self.PreviewAppearanceInfo, SkinId) and nil == AccessoryEnoughMap[PartMeshAccessoryId] then
     local IsEnough = SkinEnough
     AccessoryEnoughMap[PartMeshAccessoryId] = IsEnough
     AccessoryTypeMap[PartMeshAccessoryId] = "CharPartMesh"

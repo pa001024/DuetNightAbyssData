@@ -249755,7 +249755,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200014] = {
           Content = "等等，好像哪儿不对劲……",
-          ContentTC = "就是就是，我要去找站長大人，讓衛兵來制裁你們！",
+          ContentTC = "等等，好像哪兒不對勁……",
           DialogueId = 51200014,
           GUID = "802C824C",
           ImprPlusId = 1003,
@@ -249763,7 +249763,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200015] = {
           Content = "管你是谁，今天我就招惹了。",
-          ContentTC = "等等，好像哪兒不對勁……",
+          ContentTC = "管你是誰，今天我就招惹了。",
           DialogueId = 51200015,
           GUID = "802C8276",
           ImprPlusId = 1005,
@@ -249771,7 +249771,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200016] = {
           Content = "就是就是，我要去找站长大人，让卫兵来制裁你们！",
-          ContentTC = "什麼不對勁呀！他們在大庭廣眾之下居然敢做出這種事情，我們得報告給車站衛兵！",
+          ContentTC = "就是就是，我要去找站長大人，讓衛兵來制裁你們！",
           DialogueId = 51200016,
           GUID = "802C82A0",
           NextDialogue = 51200019,
@@ -249779,7 +249779,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51200017] = {
           Content = "什么不对劲呀！他们在大庭广众之下居然敢做出这种事情，我们得报告给车站卫兵！",
-          ContentTC = "管你是誰，今天我就招惹了。",
+          ContentTC = "什麼不對勁呀！他們在大庭廣眾之下居然敢做出這種事情，我們得報告給車站衛兵！",
           DialogueId = 51200017,
           GUID = "802C82CA",
           NextDialogue = 51200019,

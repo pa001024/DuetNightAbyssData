@@ -1,5 +1,6 @@
 local EMCache = require("EMCache.EMCache")
 local Component = {}
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 
 function Component:AsyncCombatCreateRoom(InCallback, RoomId, Rate, Permission)
   local function Callback(ErrorCode, RoomInfo)
@@ -151,13 +152,16 @@ function Component:RefreshAsyncCombatNew()
     ReddotManager.AddNode(NodeName)
   end
   ReddotManager.ClearLeafNodeCount(NodeName, true)
-  local AsyncCombatCreateBtnCickTime = EMCache:Get("AsyncCombatBtnTime", true)
-  if not AsyncCombatCreateBtnCickTime then
-    ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
-  else
-    local TimeCheck = TimeUtils.IsTimestampFromPreviousWeek(AsyncCombatCreateBtnCickTime or 0)
-    if true == TimeCheck then
+  local ActivityID = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+  if ActivityUtils.CheckEventIsOpen(ActivityID) then
+    local AsyncCombatCreateBtnCickTime = EMCache:Get("AsyncCombatBtnTime", true)
+    if not AsyncCombatCreateBtnCickTime then
       ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
+    else
+      local TimeCheck = TimeUtils.IsTimestampFromPreviousWeek(AsyncCombatCreateBtnCickTime or 0)
+      if true == TimeCheck then
+        ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
+      end
     end
   end
 end

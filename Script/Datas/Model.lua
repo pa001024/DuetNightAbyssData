@@ -1644,7 +1644,7 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Nvzhu/ABP_Dark_Nvzhu.ABP_Dark_Nvzhu_C'",
     ArmoryMontagePrefix = "Nvzhu_Dark_",
     AssistSockets = T.RT_1,
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuDark_",
     AvatarExpressionPrefix = "Nvzhu_",
     DamageFXSockets = T.RT_1,
     FootType = "heeledMid",
@@ -4889,7 +4889,7 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Nanzhu/ABP_Dark_Nanzhu.ABP_Dark_Nanzhu_C'",
     ArmoryMontagePrefix = "Nanzhu_Dark_",
     AssistSockets = T.RT_1,
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuDark_",
     AvatarExpressionPrefix = "Nanzhu_",
     DamageFXSockets = T.RT_1,
     FootType = "bootLight",
@@ -8938,7 +8938,7 @@ return ReadOnly("Model", {
   },
   [12010010] = {
     ArmoryMontagePrefix = "Nvzhu_Dark_",
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010010,
@@ -8951,7 +8951,7 @@ return ReadOnly("Model", {
   },
   [12010011] = {
     ArmoryMontagePrefix = "Nvzhu_Dark_",
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010011,
@@ -8964,7 +8964,7 @@ return ReadOnly("Model", {
   },
   [12010110] = {
     ArmoryMontagePrefix = "Nanzhu_Dark_",
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010110,
@@ -8977,7 +8977,7 @@ return ReadOnly("Model", {
   },
   [12010111] = {
     ArmoryMontagePrefix = "Nanzhu_Dark_",
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010111,
@@ -8990,7 +8990,7 @@ return ReadOnly("Model", {
   },
   [12010121] = {
     ArmoryMontagePrefix = "Nvzhu_Dark_",
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010121,
@@ -9003,7 +9003,7 @@ return ReadOnly("Model", {
   },
   [12010122] = {
     ArmoryMontagePrefix = "Nvzhu_Dark_",
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010122,
@@ -9016,7 +9016,7 @@ return ReadOnly("Model", {
   },
   [12010131] = {
     ArmoryMontagePrefix = "Nvzhu_Dark_",
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010131,
@@ -9029,7 +9029,7 @@ return ReadOnly("Model", {
   },
   [12010221] = {
     ArmoryMontagePrefix = "Nanzhu_Dark_",
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010221,
@@ -9042,7 +9042,7 @@ return ReadOnly("Model", {
   },
   [12010222] = {
     ArmoryMontagePrefix = "Nanzhu_Dark_",
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010222,
@@ -9055,7 +9055,7 @@ return ReadOnly("Model", {
   },
   [12010231] = {
     ArmoryMontagePrefix = "Nanzhu_Dark_",
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuDark_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 12010231,
@@ -9281,7 +9281,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char032_Suyi/Mesh/Suyi_Face_SM.Suyi_Face_SM"
   },
   [16010010] = {
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010010,
@@ -9293,7 +9293,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Face_SM.Nvzhu_Face_SM"
   },
   [16010011] = {
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010011,
@@ -9305,7 +9305,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Face_SM.Nvzhu_Face_SM"
   },
   [16010110] = {
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010110,
@@ -9317,7 +9317,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Face_SM.Nanzhu_Face_SM"
   },
   [16010111] = {
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010111,
@@ -9329,7 +9329,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Face_SM.Nanzhu_Face_SM"
   },
   [16010121] = {
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010121,
@@ -9341,7 +9341,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Face_SM.Nvzhu_Face_SM"
   },
   [16010122] = {
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010122,
@@ -9353,7 +9353,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Face_SM.Nvzhu_Face_SM"
   },
   [16010131] = {
-    AudioPrefix = "Nvzhu_",
+    AudioPrefix = "NvzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010131,
@@ -9365,7 +9365,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC001_Nvzhu/Mesh/Nvzhu_Face_SM.Nvzhu_Face_SM"
   },
   [16010221] = {
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010221,
@@ -9377,7 +9377,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Face_SM.Nanzhu_Face_SM"
   },
   [16010222] = {
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010222,
@@ -9389,7 +9389,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/NPC002_Nanzhu/Mesh/Nanzhu_Face_SM.Nanzhu_Face_SM"
   },
   [16010231] = {
-    AudioPrefix = "Nanzhu_",
+    AudioPrefix = "NanzhuLight_",
     IsMaximuBone = true,
     IsSkinModel = true,
     ModelId = 16010231,

@@ -33065,7 +33065,7 @@ local Data = {
           TextMapId = "PROLOGUE_SELECTGUN_TIP_1"
         },
         PROLOGUE_SELECTGUN_TIP_2 = {
-          ContentJP = "タップ",
+          ContentJP = "{空格}",
           TextMapId = "PROLOGUE_SELECTGUN_TIP_2"
         },
         PROLOGUE_SELECTGUN_TIP_3 = {
@@ -72289,7 +72289,7 @@ local Data = {
           TextMapId = "UI_AsyncCombat_TotalStages"
         },
         UI_AsyncCombat_WeeklyRemain = {
-          ContentJP = "今週の残り回数",
+          ContentJP = "今週の残り回数:{空格}",
           TextMapId = "UI_AsyncCombat_WeeklyRemain"
         },
         UI_AsyncCombat_WorldChannel = {
@@ -98953,7 +98953,7 @@ local Data = {
   },
   {
     MinKey = "UI_Select_Unlock",
-    MaxKey = "UI_Skin_Des_410101",
+    MaxKey = "UI_Skin_Des_4101",
     Loader = function()
       return {
         UI_Select_Unlock = {
@@ -99516,6 +99516,10 @@ local Data = {
           ContentJP = "万華タイプ",
           TextMapId = "UI_SkinGacha_Type"
         },
+        UI_SkinPreview_Accessory_Back = {
+          ContentJP = "バック・上",
+          TextMapId = "UI_SkinPreview_Accessory_Back"
+        },
         UI_SkinPreview_Accessory_FX_Body = {
           ContentJP = "ヘイロー",
           TextMapId = "UI_SkinPreview_Accessory_FX_Body"
@@ -99751,19 +99755,19 @@ local Data = {
         UI_Skin_Des_4101 = {
           ContentJP = "制服に散る青白い星光は守護の意思であり、未来への憧憬でもある。",
           TextMapId = "UI_Skin_Des_4101"
-        },
-        UI_Skin_Des_410101 = {
-          ContentJP = "影はひとたまり、月夜に降り注ぎ、半巻のしおりにて鬼神を語る。",
-          TextMapId = "UI_Skin_Des_410101"
         }
       }
     end
   },
   {
-    MinKey = "UI_Skin_Des_4102",
-    MaxKey = "UI_Squad_Add",
+    MinKey = "UI_Skin_Des_410101",
+    MaxKey = "UI_SquadName_Change",
     Loader = function()
       return {
+        UI_Skin_Des_410101 = {
+          ContentJP = "影はひとたまり、月夜に降り注ぎ、半巻のしおりにて鬼神を語る。",
+          TextMapId = "UI_Skin_Des_410101"
+        },
         UI_Skin_Des_4102 = {
           ContentJP = "朝陽が金箔を溶かし、絢爛な錦に降り注ぐ。変革の意志と共に、その金色の瞳に燃え上がる。",
           TextMapId = "UI_Skin_Des_4102"
@@ -100559,19 +100563,19 @@ local Data = {
         UI_SquadName_Change = {
           ContentJP = "編成プリセット名を変更",
           TextMapId = "UI_SquadName_Change"
-        },
-        UI_Squad_Add = {
-          ContentJP = "プリセット追加",
-          TextMapId = "UI_Squad_Add"
         }
       }
     end
   },
   {
-    MinKey = "UI_Squad_Adjust_Sort",
-    MaxKey = "UI_TEMPLE_81602",
+    MinKey = "UI_Squad_Add",
+    MaxKey = "UI_TEMPLE_81601",
     Loader = function()
       return {
+        UI_Squad_Add = {
+          ContentJP = "プリセット追加",
+          TextMapId = "UI_Squad_Add"
+        },
         UI_Squad_Adjust_Sort = {
           ContentJP = "編成を押しながらドラッグすると並び順を調整できます",
           TextMapId = "UI_Squad_Adjust_Sort"
@@ -101367,19 +101371,19 @@ local Data = {
         UI_TEMPLE_81601 = {
           ContentJP = "敵をすべて倒してポイントを獲得",
           TextMapId = "UI_TEMPLE_81601"
-        },
-        UI_TEMPLE_81602 = {
-          ContentJP = "敵をすべて倒してポイントを獲得",
-          TextMapId = "UI_TEMPLE_81602"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_81701",
-    MaxKey = "UI_Theater_Round",
+    MinKey = "UI_TEMPLE_81602",
+    MaxKey = "UI_Theater_PremiumReward",
     Loader = function()
       return {
+        UI_TEMPLE_81602 = {
+          ContentJP = "敵をすべて倒してポイントを獲得",
+          TextMapId = "UI_TEMPLE_81602"
+        },
         UI_TEMPLE_81701 = {
           ContentJP = "檻を撃ち落とし、敵を閉じ込めよう",
           TextMapId = "UI_TEMPLE_81701"
@@ -102175,19 +102179,19 @@ local Data = {
         UI_Theater_PremiumReward = {
           ContentJP = "上級報酬",
           TextMapId = "UI_Theater_PremiumReward"
-        },
-        UI_Theater_Round = {
-          ContentJP = "今日第%sラウンド",
-          TextMapId = "UI_Theater_Round"
         }
       }
     end
   },
   {
-    MinKey = "UI_Theater_Start",
-    MaxKey = "UI_WEAPON_DESC_20407",
+    MinKey = "UI_Theater_Round",
+    MaxKey = "UI_WEAPON_DESC_20406",
     Loader = function()
       return {
+        UI_Theater_Round = {
+          ContentJP = "今日第%sラウンド",
+          TextMapId = "UI_Theater_Round"
+        },
         UI_Theater_Start = {
           ContentJP = "%s後スタート",
           TextMapId = "UI_Theater_Start"
@@ -102974,19 +102978,19 @@ local Data = {
         UI_WEAPON_DESC_20406 = {
           ContentJP = "敵を退けるのは砲撃の響きのみならず、鋼鉄の鋸歯もまた然り。",
           TextMapId = "UI_WEAPON_DESC_20406"
-        },
-        UI_WEAPON_DESC_20407 = {
-          ContentJP = "群れから離れし孤影は機枢を廻らし、一羽で天を回らす。",
-          TextMapId = "UI_WEAPON_DESC_20407"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_DESC_20498",
-    MaxKey = "UI_Walnut_Type_Name_1",
+    MinKey = "UI_WEAPON_DESC_20407",
+    MaxKey = "UI_Walnut_Type_Des_3",
     Loader = function()
       return {
+        UI_WEAPON_DESC_20407 = {
+          ContentJP = "群れから離れし孤影は機枢を廻らし、一羽で天を回らす。",
+          TextMapId = "UI_WEAPON_DESC_20407"
+        },
         UI_WEAPON_DESC_20498 = {
           ContentJP = "最新技術で鍛えられた散弾銃。熟練の狩人たちに好まれている。",
           TextMapId = "UI_WEAPON_DESC_20498"
@@ -103782,19 +103786,19 @@ local Data = {
         UI_Walnut_Type_Des_3 = {
           ContentJP = "魔の楔の密書",
           TextMapId = "UI_Walnut_Type_Des_3"
-        },
-        UI_Walnut_Type_Name_1 = {
-          ContentJP = "キャラクター",
-          TextMapId = "UI_Walnut_Type_Name_1"
         }
       }
     end
   },
   {
-    MinKey = "UI_Walnut_Type_Name_2",
-    MaxKey = "UI_WeaponStrength_Clear",
+    MinKey = "UI_Walnut_Type_Name_1",
+    MaxKey = "UI_WeaponStrength_CantAdd",
     Loader = function()
       return {
+        UI_Walnut_Type_Name_1 = {
+          ContentJP = "キャラクター",
+          TextMapId = "UI_Walnut_Type_Name_1"
+        },
         UI_Walnut_Type_Name_2 = {
           ContentJP = "武器",
           TextMapId = "UI_Walnut_Type_Name_2"
@@ -104590,19 +104594,19 @@ local Data = {
         UI_WeaponStrength_CantAdd = {
           ContentJP = "製錬レベルの上限に達しているため、素材の追加はできません",
           TextMapId = "UI_WeaponStrength_CantAdd"
-        },
-        UI_WeaponStrength_Clear = {
-          ContentJP = "取り消し",
-          TextMapId = "UI_WeaponStrength_Clear"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponStrength_Curent",
-    MaxKey = "VoiceDes108",
+    MinKey = "UI_WeaponStrength_Clear",
+    MaxKey = "VoiceDes107",
     Loader = function()
       return {
+        UI_WeaponStrength_Clear = {
+          ContentJP = "取り消し",
+          TextMapId = "UI_WeaponStrength_Clear"
+        },
         UI_WeaponStrength_Curent = {
           ContentJP = "現在のパッシブ効果",
           TextMapId = "UI_WeaponStrength_Curent"
@@ -105395,19 +105399,19 @@ local Data = {
         VoiceDes107 = {
           ContentJP = "アウトサイダーについて",
           TextMapId = "VoiceDes107"
-        },
-        VoiceDes108 = {
-          ContentJP = "肌の色について",
-          TextMapId = "VoiceDes108"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes109",
-    MaxKey = "WikiText_30100101",
+    MinKey = "VoiceDes108",
+    MaxKey = "WikiText_20400401",
     Loader = function()
       return {
+        VoiceDes108 = {
+          ContentJP = "肌の色について",
+          TextMapId = "VoiceDes108"
+        },
         VoiceDes109 = {
           ContentJP = "仕事のこと",
           TextMapId = "VoiceDes109"
@@ -106203,19 +106207,19 @@ local Data = {
         WikiText_20400401 = {
           ContentJP = "雪解けの洞窟に現れた謎の女性。自らをニヴルヘイムの導き手と名乗り、亡者の魂が抱える想いを視ることができると語る。彼女は迷える魂たちをニヴルヘイムへと導き、安らぎへと還す役目を担っている。\n彼女の言葉によれば、{nickname}は並外れた運命を背負っており、いつの日か生命の川へと辿り着き、ニヴルヘイムにて過去の魂たちと再び相まみえることになるかもしれないという。",
           TextMapId = "WikiText_20400401"
-        },
-        WikiText_30100101 = {
-          ContentJP = "私たちが暮らすこの大陸の総称。",
-          TextMapId = "WikiText_30100101"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_30100201",
-    MaxKey = "Wuyousheng_Target_LevelLimitTime",
+    MinKey = "WikiText_30100101",
+    MaxKey = "Wuyousheng_Target_FinishLevel",
     Loader = function()
       return {
+        WikiText_30100101 = {
+          ContentJP = "私たちが暮らすこの大陸の総称。",
+          TextMapId = "WikiText_30100101"
+        },
         WikiText_30100201 = {
           ContentJP = "ヒュペリア帝国北部にそびえる山脈。アトラシア大陸を横断するように連なり、その壮麗な姿は遥か遠くからでも望むことができる。この山脈を越えてさらに北へ進めば、大陸の果て――カロンの古き部族が今なお暮らす、峡湾地帯アースガルドへと辿り着く。そこは、「真なる極北」と呼ばれる、過酷にして神秘の土地である。",
           TextMapId = "WikiText_30100201"
@@ -107011,19 +107015,19 @@ local Data = {
         Wuyousheng_Target_FinishLevel = {
           ContentJP = "現在の挑戦を完了",
           TextMapId = "Wuyousheng_Target_FinishLevel"
-        },
-        Wuyousheng_Target_LevelLimitTime = {
-          ContentJP = "%s秒以内に挑戦をクリア",
-          TextMapId = "Wuyousheng_Target_LevelLimitTime"
         }
       }
     end
   },
   {
-    MinKey = "Zero",
-    MaxKey = "voice_ch_char_Feina_vo_skill02_r03",
+    MinKey = "Wuyousheng_Target_LevelLimitTime",
+    MaxKey = "voice_ch_char_Feina_vo_skill02_r02",
     Loader = function()
       return {
+        Wuyousheng_Target_LevelLimitTime = {
+          ContentJP = "%s秒以内に挑戦をクリア",
+          TextMapId = "Wuyousheng_Target_LevelLimitTime"
+        },
         Zero = {ContentJP = "0", TextMapId = "Zero"},
         ZhiLiuEntrustGrandRewardTips = {
           ContentJP = "すべての依頼をクリアすると受け取れる",
@@ -107816,19 +107820,19 @@ local Data = {
         voice_ch_char_Feina_vo_skill02_r02 = {
           ContentJP = "お庭の平和を乱さないで！",
           TextMapId = "voice_ch_char_Feina_vo_skill02_r02"
-        },
-        voice_ch_char_Feina_vo_skill02_r03 = {
-          ContentJP = "出撃せよ、フィーナの勇敢な兵士たち――",
-          TextMapId = "voice_ch_char_Feina_vo_skill02_r03"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Feina_vo_topic_01_1",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_01_1",
+    MinKey = "voice_ch_char_Feina_vo_skill02_r03",
+    MaxKey = "voice_ch_char_Kezhou_vo_skill02_r03",
     Loader = function()
       return {
+        voice_ch_char_Feina_vo_skill02_r03 = {
+          ContentJP = "出撃せよ、フィーナの勇敢な兵士たち――",
+          TextMapId = "voice_ch_char_Feina_vo_skill02_r03"
+        },
         voice_ch_char_Feina_vo_topic_01_1 = {
           ContentJP = "えっとね、背が伸びるキャンディーがあったらなって考えてたの。もしあるなら食べてみたいなあって……",
           TextMapId = "voice_ch_char_Feina_vo_topic_01_1"
@@ -108624,19 +108628,19 @@ local Data = {
         voice_ch_char_Kezhou_vo_skill02_r03 = {
           ContentJP = "この剣の切れ味、試させてもらうぞ。",
           TextMapId = "voice_ch_char_Kezhou_vo_skill02_r03"
-        },
-        voice_ch_char_Kezhou_vo_topic_01_1 = {
-          ContentJP = "なかなかいい剣を持ってるじゃないか。あんたも剣術に興味があるのか？もしや流儀を一つや二つ叩き込まれてたり……ま、百聞は一見に如かずってな。ちょっくら腕試ししようぜ。",
-          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_01_2",
-    MaxKey = "voice_ch_char_NanzhuLight_vo_victory",
+    MinKey = "voice_ch_char_Kezhou_vo_topic_01_1",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_skill02_r03",
     Loader = function()
       return {
+        voice_ch_char_Kezhou_vo_topic_01_1 = {
+          ContentJP = "なかなかいい剣を持ってるじゃないか。あんたも剣術に興味があるのか？もしや流儀を一つや二つ叩き込まれてたり……ま、百聞は一見に如かずってな。ちょっくら腕試ししようぜ。",
+          TextMapId = "voice_ch_char_Kezhou_vo_topic_01_1"
+        },
         voice_ch_char_Kezhou_vo_topic_01_2 = {
           ContentJP = "正直、互角に渡り合えるやつなんて久しぶりだぜ。だが師匠には、素直すぎて駆け引きが下手だってよく言われたもんさ。俺もまだまだ修行が足りねぇな。",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_01_2"
@@ -109432,19 +109436,19 @@ local Data = {
         voice_ch_char_NanzhuLight_vo_skill02_r03 = {
           ContentJP = "ニヴルヘイムに帰れ",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r03"
-        },
-        voice_ch_char_NanzhuLight_vo_victory = {
-          ContentJP = "また一歩、前へ進んだ。こうして一歩ずつ重ねていけば、いつかきっと......",
-          TextMapId = "voice_ch_char_NanzhuLight_vo_victory"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Nifu_vo_appear",
-    MaxKey = "voice_ch_char_Songlu_vo_victory",
+    MinKey = "voice_ch_char_NanzhuLight_vo_victory",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_05_3",
     Loader = function()
       return {
+        voice_ch_char_NanzhuLight_vo_victory = {
+          ContentJP = "また一歩、前へ進んだ。こうして一歩ずつ重ねていけば、いつかきっと......",
+          TextMapId = "voice_ch_char_NanzhuLight_vo_victory"
+        },
         voice_ch_char_Nifu_vo_appear = {
           ContentJP = "最善を尽くしましょう。",
           TextMapId = "voice_ch_char_Nifu_vo_appear"
@@ -110240,19 +110244,19 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_05_3 = {
           ContentJP = "ふあ～ぁ、あの人たちの話って私にはよくわからないの。いつも「暴食はとても重い罪だ」って言うけど……食いしん坊な人ほど偉い肩書きをもってたりするのになぁ。",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_3"
-        },
-        voice_ch_char_Songlu_vo_victory = {
-          ContentJP = "やった、お祝いパーティーだ！……あっ、忘れてください、食べ物を節約しなくちゃ。",
-          TextMapId = "voice_ch_char_Songlu_vo_victory"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Songlu_vo_welcome",
-    MaxKey = "voice_ch_char_Yeer_vo_fail",
+    MinKey = "voice_ch_char_Songlu_vo_victory",
+    MaxKey = "voice_ch_char_Yeer_vo_die_r02",
     Loader = function()
       return {
+        voice_ch_char_Songlu_vo_victory = {
+          ContentJP = "やった、お祝いパーティーだ！……あっ、忘れてください、食べ物を節約しなくちゃ。",
+          TextMapId = "voice_ch_char_Songlu_vo_victory"
+        },
         voice_ch_char_Songlu_vo_welcome = {
           ContentJP = "お日さまがポカポカで、雲はふわふわで、早起きの鳥さんたちももうお腹いっぱいだよ。あなたのお腹も、鳥さんたちみたいにグーグー鳴ってるの？",
           TextMapId = "voice_ch_char_Songlu_vo_welcome"
@@ -111048,19 +111052,19 @@ local Data = {
         voice_ch_char_Yeer_vo_die_r02 = {
           ContentJP = "イェール：大丈夫だよオリバー……僕も、一緒だから……",
           TextMapId = "voice_ch_char_Yeer_vo_die_r02"
-        },
-        voice_ch_char_Yeer_vo_fail = {
-          ContentJP = "オリバー：ふん、覚えとけ。次は逃がさねぇからよ。",
-          TextMapId = "voice_ch_char_Yeer_vo_fail"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Yeer_vo_gain",
+    MinKey = "voice_ch_char_Yeer_vo_fail",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
+        voice_ch_char_Yeer_vo_fail = {
+          ContentJP = "オリバー：ふん、覚えとけ。次は逃がさねぇからよ。",
+          TextMapId = "voice_ch_char_Yeer_vo_fail"
+        },
         voice_ch_char_Yeer_vo_gain = {
           ContentJP = "イェール：……こんにち、は……イェール、です。あ、あの、君も、「きゅ、きゅきゅきゅ、キュートちゃん」を、かい、買いに来たの、ですかね？\nオリバー：チッ、またコイツは噛みまくりじゃねぇかよ、ちっとも上達しねぇぜ。",
           TextMapId = "voice_ch_char_Yeer_vo_gain"

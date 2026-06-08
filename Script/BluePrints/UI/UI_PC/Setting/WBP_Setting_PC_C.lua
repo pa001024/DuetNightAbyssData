@@ -931,7 +931,11 @@ function WBP_Setting_PC_C:IsNonHeroChannel()
   end
   local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
   local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
-  self._IsNonHeroChannel = nil ~= ChannelInfo and ChannelInfo.AccountPrefix ~= "hero"
+  if nil == ChannelInfo then
+    self._IsNonHeroChannel = true
+  else
+    self._IsNonHeroChannel = ChannelInfo.AccountPrefix ~= "hero"
+  end
   return self._IsNonHeroChannel
 end
 
@@ -946,7 +950,13 @@ function WBP_Setting_PC_C:CheckIsExamineDistribution(OptionId)
   elseif "CustomerService" == OptionId then
     return self:IsNonHeroChannel()
   elseif "LogOffAccount" == OptionId then
-    return self:IsNonHeroChannel()
+    local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+    local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
+    if ChannelInfo and ChannelInfo.ChannelId == 270 then
+      return true
+    else
+      return self:IsNonHeroChannel()
+    end
   else
     return false
   end

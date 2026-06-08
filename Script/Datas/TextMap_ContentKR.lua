@@ -4022,7 +4022,7 @@ local Data = {
           TextMapId = "Content_10040403_02"
         },
         Content_10040403_03 = {
-          ContentKR = "열차 뛰어넘기",
+          ContentKR = "열차 앞쪽으로 가기",
           TextMapId = "Content_10040403_03"
         },
         Content_10040404_01 = {
@@ -21859,7 +21859,7 @@ local Data = {
           TextMapId = "MESSAGE_LOADING_426"
         },
         MESSAGE_LOADING_427 = {
-          ContentKR = "사람들이 오가는 곳. 이곳에는 다양한 신분의 여행객이 모여들며, 이들은 잠깐의 만남 후각자의 열차에 올라 새로운 미래를 향해 떠난다.",
+          ContentKR = "사람들이 오가는 곳. 이곳에는 다양한 신분의 여행객이 모여들며, 이들은 잠깐의 만남 후, 각자의 열차에 올라 새로운 미래를 향해 떠난다.",
           TextMapId = "MESSAGE_LOADING_427"
         },
         MESSAGE_LOADING_428 = {
@@ -33099,7 +33099,7 @@ local Data = {
           TextMapId = "PROLOGUE_SELECTGUN_TIP_1"
         },
         PROLOGUE_SELECTGUN_TIP_2 = {
-          ContentKR = "ㅤ",
+          ContentKR = "{空格}",
           TextMapId = "PROLOGUE_SELECTGUN_TIP_2"
         },
         PROLOGUE_SELECTGUN_TIP_3 = {
@@ -54560,7 +54560,7 @@ local Data = {
           TextMapId = "SKILL_20301_DESC"
         },
         SKILL_20302_DESC = {
-          ContentKR = "다중 사격+<H>#1</>. 불 속성 캐릭터가 회피 시, 스킬 대미지 및 다중 사격 상승 <H>#2</> 효과를 1단계 획득한다. 지속 시간 <H>#3</>초, 최대 <H>#4</>단계 중첩.",
+          ContentKR = "다중 사격+<H>#1</>. 불 속성 캐릭터가 회피 시, 스킬 대미지 및 다중 사격 <H>#2</> 상승 효과를 1단계 획득한다. 지속 시간 <H>#3</>초, 최대 <H>#4</>단계 중첩.",
           TextMapId = "SKILL_20302_DESC"
         },
         SKILL_20303_DESC = {
@@ -54932,7 +54932,7 @@ local Data = {
           TextMapId = "SKILL_310203_NAME"
         },
         SKILL_310204_DESC = {
-          ContentKR = "[청소기]사격 시, 일정 확률로 1발의 탄환을 추가로 발사한다. 확률은 [30%+20%×자신의 원거리 무기 다중 사격 속성치]와 동일. [고온 정화 화염] 대미지가 상승한다. 상승 배율은 [30%+20%×자신의 원거리 무기 다중 사격 속성치]와 동일. 최대 {int}#1 증가.",
+          ContentKR = "[청소기] 사격 시, 일정 확률로 1발의 탄환을 추가로 발사한다. 확률은 [30%+20%×자신의 원거리 무기 다중 사격 속성치]와 동일. [고온 정화 화염] 대미지가 상승한다. 상승 배율은 [30%+20%×자신의 원거리 무기 다중 사격 속성치]와 동일. 최대 {int}#1 증가.",
           TextMapId = "SKILL_310204_DESC"
         },
         SKILL_310204_NAME = {
@@ -72320,7 +72320,7 @@ local Data = {
           TextMapId = "UI_AsyncCombat_TotalStages"
         },
         UI_AsyncCombat_WeeklyRemain = {
-          ContentKR = "이번 주 남은 횟수",
+          ContentKR = "이번 주 남은 횟수:{空格}",
           TextMapId = "UI_AsyncCombat_WeeklyRemain"
         },
         UI_AsyncCombat_WorldChannel = {
@@ -89674,7 +89674,7 @@ local Data = {
           TextMapId = "UI_MontlyCheck_Day"
         },
         UI_MontlyCheck_Month = {
-          ContentKR = "%d개월",
+          ContentKR = "%d월",
           TextMapId = "UI_MontlyCheck_Month"
         },
         UI_MontlyCheck_MonthlyCard = {

@@ -259,7 +259,12 @@ function M:OnClearClick()
 end
 
 function M:OnClickSupport()
-  HeroUSDKSubsystem(self):OpenService()
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+  if "OpenHarmony" == PlatformName then
+    HeroUSDKSubsystem(self):JumpInternalBrowser("kefu")
+  else
+    HeroUSDKSubsystem(self):OpenService()
+  end
 end
 
 function M:SwitchFocus(NewIndex)

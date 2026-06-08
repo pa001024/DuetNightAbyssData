@@ -162,7 +162,7 @@
   {
     "id": 108,
     "name": "Domain of Clamor",
-    "desc": "<Highlight>#1</> more elite enemies appear in Combat · Atrocious Abyssoid.",
+    "desc": "<Highlight>#1</> more elite enemies appear in Atrocious Abyssoid.",
     "desc_values": [
       "$#GlobalPassiveData[30103002].Vars.Count$"
     ],

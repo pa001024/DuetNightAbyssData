@@ -302,14 +302,7 @@ function Avatar:_OnPropChangeLevel()
 end
 
 function Avatar:_OnPropChangeMailUniqueID()
-end
-
-function Avatar:_OnPropChangeMailInbox()
-  EventManager:FireEvent(EventID.OnChangePropMailInbox)
-end
-
-function Avatar:_OnPropChangeStarMails()
-  EventManager:FireEvent(EventID.OnChangePropStarMails)
+  EventManager:FireEvent(EventID.OnChangePropMailUniqueID)
 end
 
 function Avatar:_OnPropChangeActionPoint()

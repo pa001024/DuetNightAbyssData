@@ -228,7 +228,7 @@ function Component:CheckAppearanceCollectType(TargetId, TargetType)
   if not TableData then
     return nil
   end
-  if TableData.ExcludeCollect == true then
+  if TableData.ExcludeCollectServer == true then
     return nil
   end
   if EntranceInfo.FieldName and EntranceInfo.SubTypes then
