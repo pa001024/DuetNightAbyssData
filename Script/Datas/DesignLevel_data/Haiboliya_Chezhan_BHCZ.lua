@@ -1280,6 +1280,11 @@ return {
       UnitType = "Phantom",
       UnitId = 0
     },
+    ["242480427"] = {
+      CreatorId = 242480427,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["2480314"] = {
       CreatorId = 2480314,
       UnitType = "Monster",

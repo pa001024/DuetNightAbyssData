@@ -55470,7 +55470,7 @@ Algunas plataformas muestran fragmentos de una imagen.
   },
   {
     MinKey = "UIGuide_XingShi_1",
-    MaxKey = "UI_Accessory_Name_10034",
+    MaxKey = "UI_Accessory_Name_10032",
     Loader = function()
       return {
         UIGuide_XingShi_1 = {
@@ -56019,6 +56019,14 @@ Algunas plataformas muestran fragmentos de una imagen.
           ContentDE = "Einige wurden nach dem Bericht des erfahrenen Reisenden zu echten Fans der Phoxfuchses. Dieses Hüftteil zu tragen, ist eine der Möglichkeiten, wie man das zeigen kann.",
           TextMapId = "UI_Accessory_Desc_40016"
         },
+        UI_Accessory_Desc_50004 = {
+          ContentDE = "{空格}",
+          TextMapId = "UI_Accessory_Desc_50004"
+        },
+        UI_Accessory_Desc_60001 = {
+          ContentDE = "{空格}",
+          TextMapId = "UI_Accessory_Desc_60001"
+        },
         UI_Accessory_Desc_60002 = {
           ContentDE = "Winke den Sternen zum Abschied.",
           TextMapId = "UI_Accessory_Desc_60002"
@@ -56258,7 +56266,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Accessory_Name_10032 = {
           ContentDE = "Langschwanz-Schleife",
           TextMapId = "UI_Accessory_Name_10032"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_10033",
+    MaxKey = "UI_AchievementToast_Progress",
+    Loader = function()
+      return {
         UI_Accessory_Name_10033 = {
           ContentDE = "Axt-Unfall",
           TextMapId = "UI_Accessory_Name_10033"
@@ -56266,15 +56282,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Accessory_Name_10034 = {
           ContentDE = "Schläfriger Capybara",
           TextMapId = "UI_Accessory_Name_10034"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_10035",
-    MaxKey = "UI_Achievement_Des_1001",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_10035 = {
           ContentDE = "Katzen-Kopfschmuck",
           TextMapId = "UI_Accessory_Name_10035"
@@ -57066,7 +57074,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_AchievementToast_Progress = {
           ContentDE = "Progreso",
           TextMapId = "UI_AchievementToast_Progress"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AchievementType_Quest",
+    MaxKey = "UI_Achievement_Des_5031",
+    Loader = function()
+      return {
         UI_AchievementType_Quest = {
           ContentDE = "Historia",
           TextMapId = "UI_AchievementType_Quest"
@@ -57074,15 +57090,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Des_1001 = {
           ContentDE = "Stelle insgesamt <H>#1</> Punkte LP wieder her",
           TextMapId = "UI_Achievement_Des_1001"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_100101",
-    MaxKey = "UI_Achievement_Des_50401",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_100101 = {
           ContentDE = "Führe insgesamt <highlight>#1</> Mal Weben aus",
           TextMapId = "UI_Achievement_Des_100101"
@@ -57874,7 +57882,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Des_5031 = {
           ContentDE = "Sichere in [Mission: Expedition ∞] auf höchster Schwierigkeit einen Sieg und besiege dabei mindestens <H>#1</> Gegner.",
           TextMapId = "UI_Achievement_Des_5031"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_5032",
+    MaxKey = "UI_Achievement_Name_100102",
+    Loader = function()
+      return {
         UI_Achievement_Des_5032 = {
           ContentDE = "Sichere in [Mission: Verteidigung ∞] auf höchster Schwierigkeit einen Sieg und besiege dabei mindestens <H>#1</> Gegner.",
           TextMapId = "UI_Achievement_Des_5032"
@@ -57882,15 +57898,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Des_50401 = {
           ContentDE = "Schließe 3 Wellen in einer beliebigen Mission im ∞-Modus ab",
           TextMapId = "UI_Achievement_Des_50401"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_5041",
-    MaxKey = "UI_Achievement_Name_1005160101",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_5041 = {
           ContentDE = "Erziele einmal Sieg in [Nocturne-Echos: Sibylle]",
           TextMapId = "UI_Achievement_Des_5041"
@@ -58682,7 +58690,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Name_100102 = {
           ContentDE = "Den Sensenmann warten lassen Ⅱ",
           TextMapId = "UI_Achievement_Name_100102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_100103",
+    MaxKey = "UI_Achievement_Name_202101",
+    Loader = function()
+      return {
         UI_Achievement_Name_100103 = {
           ContentDE = "Den Sensenmann warten lassen Ⅲ",
           TextMapId = "UI_Achievement_Name_100103"
@@ -58690,15 +58706,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Name_1005160101 = {
           ContentDE = "Nur ein Vorbeigehender Ⅰ",
           TextMapId = "UI_Achievement_Name_1005160101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_1005160102",
-    MaxKey = "UI_Achievement_Name_202103",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_1005160102 = {
           ContentDE = "Nur ein Vorbeigehender Ⅱ",
           TextMapId = "UI_Achievement_Name_1005160102"
@@ -59490,7 +59498,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Name_202101 = {
           ContentDE = "Du bist erledigt Ⅰ",
           TextMapId = "UI_Achievement_Name_202101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_202102",
+    MaxKey = "UI_Achievement_Name_5090501",
+    Loader = function()
+      return {
         UI_Achievement_Name_202102 = {
           ContentDE = "Du bist erledigt Ⅱ",
           TextMapId = "UI_Achievement_Name_202102"
@@ -59498,15 +59514,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Name_202103 = {
           ContentDE = "Du bist erledigt Ⅲ",
           TextMapId = "UI_Achievement_Name_202103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_202201",
-    MaxKey = "UI_Achievement_Name_5090701",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_202201 = {
           ContentDE = "Legendärer Blitz: Fertigkeit Ⅰ",
           TextMapId = "UI_Achievement_Name_202201"
@@ -60298,7 +60306,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Name_5090501 = {
           ContentDE = "Herzensguter Ermittler Ⅰ",
           TextMapId = "UI_Achievement_Name_5090501"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_5090601",
+    MaxKey = "UI_ActionPoint_PurchaseTimeShortage",
+    Loader = function()
+      return {
         UI_Achievement_Name_5090601 = {
           ContentDE = "Legendärer Ermittler Ⅰ",
           TextMapId = "UI_Achievement_Name_5090601"
@@ -60306,15 +60322,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Achievement_Name_5090701 = {
           ContentDE = "Physische Mediation Ⅰ",
           TextMapId = "UI_Achievement_Name_5090701"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_5090801",
-    MaxKey = "UI_ActionPoint_RecoverFailure",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_5090801 = {
           ContentDE = "Kein Rennfahrer geboren Ⅰ",
           TextMapId = "UI_Achievement_Name_5090801"
@@ -61106,7 +61114,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_ActionPoint_PurchaseTimeShortage = {
           ContentDE = "Intentos de compra insuficientes",
           TextMapId = "UI_ActionPoint_PurchaseTimeShortage"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ActionPoint_RecoverAP",
+    MaxKey = "UI_AsyncCombat_CurrentContribution",
+    Loader = function()
+      return {
         UI_ActionPoint_RecoverAP = {
           ContentDE = "Consume <H>%s</> pociones de energía para restaurar <H>%d</> energía",
           TextMapId = "UI_ActionPoint_RecoverAP"
@@ -61114,15 +61130,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_ActionPoint_RecoverFailure = {
           ContentDE = "Excediendo el límite. Error al recuperar energía.",
           TextMapId = "UI_ActionPoint_RecoverFailure"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ActionPoint_RecoverMax",
-    MaxKey = "UI_AsyncCombat_Difficulty",
-    Loader = function()
-      return {
+        },
         UI_ActionPoint_RecoverMax = {
           ContentDE = "La recuperación de energía no puede exceder el límite máximo",
           TextMapId = "UI_ActionPoint_RecoverMax"
@@ -61911,7 +61919,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_AsyncCombat_CurrentContribution = {
           ContentDE = "Contribución actual",
           TextMapId = "UI_AsyncCombat_CurrentContribution"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AsyncCombat_CurrentHostCount",
+    MaxKey = "UI_AutoChess_RewardInfo",
+    Loader = function()
+      return {
         UI_AsyncCombat_CurrentHostCount = {
           ContentDE = "Protagonistas actuales: %d",
           TextMapId = "UI_AsyncCombat_CurrentHostCount"
@@ -61919,15 +61935,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_AsyncCombat_Difficulty = {
           ContentDE = "Dificultad",
           TextMapId = "UI_AsyncCombat_Difficulty"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AsyncCombat_EndInTime",
-    MaxKey = "UI_AutoChess_ShopName",
-    Loader = function()
-      return {
+        },
         UI_AsyncCombat_EndInTime = {
           ContentDE = "Termina en:{空格}",
           TextMapId = "UI_AsyncCombat_EndInTime"
@@ -62719,7 +62727,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_AutoChess_RewardInfo = {
           ContentDE = "Recompensas de partida",
           TextMapId = "UI_AutoChess_RewardInfo"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AutoChess_SaveLineup",
+    MaxKey = "UI_Branch",
+    Loader = function()
+      return {
         UI_AutoChess_SaveLineup = {
           ContentDE = "Guardar formación",
           TextMapId = "UI_AutoChess_SaveLineup"
@@ -62727,15 +62743,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_AutoChess_ShopName = {
           ContentDE = "Regalo de Gongshang",
           TextMapId = "UI_AutoChess_ShopName"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AutoChess_StatisticsATK",
-    MaxKey = "UI_BreakItemTriggerMis",
-    Loader = function()
-      return {
+        },
         UI_AutoChess_StatisticsATK = {
           ContentDE = "Daño infligido",
           TextMapId = "UI_AutoChess_StatisticsATK"
@@ -63521,7 +63529,15 @@ Algunas plataformas muestran fragmentos de una imagen.
           ContentDE = "Debilidad expuesta",
           TextMapId = "UI_BossPenalize_Enter"
         },
-        UI_Branch = {ContentDE = "%s m(s)", TextMapId = "UI_Branch"},
+        UI_Branch = {ContentDE = "%s m(s)", TextMapId = "UI_Branch"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_BreakItemTriggerFail",
+    MaxKey = "UI_CHAR_DATA_TEXT_24010302",
+    Loader = function()
+      return {
         UI_BreakItemTriggerFail = {
           ContentDE = "No activado",
           TextMapId = "UI_BreakItemTriggerFail"
@@ -63529,15 +63545,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_BreakItemTriggerMis = {
           ContentDE = "Inmune",
           TextMapId = "UI_BreakItemTriggerMis"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_BreakItemTriggerSuc",
-    MaxKey = "UI_CHAR_DATA_TEXT_24010304",
-    Loader = function()
-      return {
+        },
         UI_BreakItemTriggerSuc = {
           ContentDE = "Activado",
           TextMapId = "UI_BreakItemTriggerSuc"
@@ -64329,7 +64337,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CHAR_DATA_TEXT_24010302 = {
           ContentDE = "Die Beziehung zwischen Fushu und Fufeng war voller Widersprüche. Doch ihre endgültige Entzweiung kam, als Fufeng die Identität der Zhuyou abstreifte und einen anderen Weg suchte, der heilen und retten konnte, ohne den Preis eines Zhuyou-Lebens zu fordern.\n Es war ein unbekannter Weg, und skandalös genug, um die Welt zu erschüttern. Denn es bedeutete: Sie verriet die Halle der Vergänglichkeit. Sie verriet ihre Familie. Und sie verriet die Kraft, die der Lord Argent verliehen hatte.\n \n Heute ist das Leben der Menschen längst untrennbar mit Fufengs Lehre verknüpft. Sie wissen es im Innersten: Um den Schmerz zu vertreiben, haben sie ihren Verrat an Taihaos Autorität stillschweigend hingenommen.\n Man mag Fufeng noch so gelehrt als „Medizinheilige, die Taihaos Offenbarung empfing“ ausschmücken, streift man alle Zier ab, bleibt tief im Bewusstsein der Menschen ein feiner Riss: Die Allwissenheit und Allmacht des Lord Argent hat unmerklich einen kleinen Abzug bekommen.\n Weil diese Frau es tatsächlich geschafft hatte, außerhalb göttlicher Gnade das Vorrecht über Leben und Tod zu stehlen.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010302"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_24010303",
+    MaxKey = "UI_CHAR_DATA_TEXT_43010403",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_24010303 = {
           ContentDE = "Fufeng und Fushu hatten einst im Hof der Halle der Vergänglichkeit gemeinsam einen Aprikosenbaum gepflanzt.\n Damals war ein Loongscion, den Fushus Mutter geheilt hatte, der Halle der Vergänglichkeit dankbar. Er besaß nicht viel, also wirkte er im Hof eine Kunst, die dem Boden Fruchtbarkeit schenkte. Man sagte: Von da an blühten und trugen Pflanzen, die man in diesem Garten setzte, zweimal im Jahr Früchte und blieben ewig voller Lebenskraft.\n Die junge Fufeng war neugierig auf diese Fruchtbarkeitskunst. Sie bat die Mutter, einen Aprikosensetzling zu kaufen, suchte im hinteren Garten eine freie Stelle und zog Fushu mit sich, um ihn dort einzupflanzen. Fufeng war verspielt und voller Bewegung. Mit einem leichten Schubs brachte sie den Setzling, den Fushu gerade vergraben hatte, wieder ein Stück aus dem Lot. Als sie sah, wie ihre Schwester die Lippen zusammenpresste und die Tränen hochstiegen, rannte sie hastig ins Haus, kramte ihre gehütete Blechdose hervor und schüttete klirrend eine kleine Handvoll kandierter Früchte aus, als Entschädigung. Erst da lächelte Fushu wieder.\n Am Ende wurde der Baum eben schief und krumm gepflanzt.\n „Wünscht euch etwas“, sagte die Mutter und lächelte die Schwestern sanft an. „Eure Wünsche werden in Erfüllung gehen, so wie dieser Baum süße Aprikosen tragen wird.“\n \n Fushu wusste bis heute nicht, welchen Wunsch Fufeng damals ausgesprochen hatte.\n Doch ihren eigenen erinnerte sie noch: „Wenn mein Leben ohnehin kurz sein soll, dann soll dieser Aprikosenbaum an meiner Stelle weiterleben – Generationen kommen und gehen sehen, und die Welt sich wandeln wie Meer und Land.“\n \n Fliehendes Licht, fliehendes Licht, du verzehrst meine Lebenszeit,\n Möge der Alte nicht sterben, möge der Junge nicht weinen.\n Dürre Gebeine lassen hundert Kräuter erblühen, kranke Stämme zehntausend Bäumen ergrünen.\n Der erhabene Gottfürst sei Zeuge; niemals werde ich das mir Anvertraute enttäuschen.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010303"
@@ -64337,15 +64353,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CHAR_DATA_TEXT_24010304 = {
           ContentDE = "Fushu erlebte nie das Erlöschen, das jedem Zhuyou bestimmt war.\n \n Noch bevor sie sich zu wandeln begann, war Fufeng an ihrer Seite angekommen. Sie war immer noch so laut und lärmend, redete unaufhörlich Unsinn, so stolz und überheblich. Sie bestand darauf, dass sie sie retten würde, dass sie sie retten könne. Wenn ein Jahr nicht ausreichen würde, dann zehn – und wenn zehn scheiterten, dann hundert. Irgendwann werde der Tag kommen, an dem sie sie wieder wecken könne. Deshalb umklammerte Fufeng fest ihre Hand: „Egal, was passiert ... Du musst bis zu jenem Tag ausharren.“\n \n „Mit Taihao um jemanden zu ringen, ist zu schwer ... zu schwer ...“ Fushus Bewusstsein wurde allmählich trüber; sie hatte keine Kraft mehr, die restlichen Worte auszusprechen, aber vielleicht würde Fufeng verstehen –\n Ihre Angst und ihr unwilliges Herz, weil sie noch nicht bereit war, ihr Leben zu Ende gehen zu lassen.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010304"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_24010305",
-    MaxKey = "UI_CHAR_DATA_TEXT_43010405",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_24010305 = {
           ContentDE = "Alle etwas älteren Apotheker der Zesheng-Apotheke wussten, dass die Ahnmeisterin Fufeng seit Jahrzehnten Tag für Tag dieselbe Gewohnheit hatte.\n Obwohl Fufeng der Zhuyou-Kunst längst abgeschworen, die Halle der Vergänglichkeit verlassen und mit der Zesheng-Apotheke ein eigenes Haus gegründet hatte, bezahlte sie dennoch stets jemanden dafür, die Halle der Vergänglichkeit zu betreuen. Seit Jahrzehnten war dort jedes Stück – ein Tisch, ein Stuhl, jedes Arrangement – genau wie in ihrer Jugend, als hätte sich nichts verändert, obwohl dort längst niemand von ihren alten Vertrauten mehr wohnte.\n Sie wussten auch, dass diese Ahnmeisterin jedes Jahr im hinteren Garten von der Halle der Vergänglichkeit eigenhändig einen Aprikosenbaum pflanzte – vom schwarzen Haar bis zum grauen, bis sie beim Gehen gestützt werden musste, bis sie die Schrift auf den Rezepten nicht mehr erkennen konnte; dennoch hielt sie an dieser Gewohnheit fest.\n Der amtierende Vorsteher hat seine verehrte Meisterin einst gefragt, was dieses Tun denn eigentlich bedeute.\n Die weißhaarige Apothekerin lächelte: „Möge sie, wenn sie eines Tages erwacht, im Garten die Aprikosenbäume sehen, die endlich zu einem ganzen Hain herangewachsen sind.“",
           TextMapId = "UI_CHAR_DATA_TEXT_24010305"
@@ -65137,7 +65145,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CHAR_DATA_TEXT_43010403 = {
           ContentDE = "Die Gauner pressten Flame das Messer an die Kehle. Die Gelehrte, die fast ihr ganzes Leben im Labor verbracht hatte, stieß einen langen Seufzer aus.\n „Kinder“, sagte sie ruhig, „ihr solltet genau wissen, was ihr da tut. Jeder Millimeter, den ihr mir schneidet, wird euch und euren Leuten zum Verhängnis.“\n Die beiden hörten nicht einmal hin. Sie stopften ihr einen muffigen Lappen in den Mund, zurrten sie grob mit einem Hanfseil fest und warfen sie wie eine Kiste in die Ecke. Mit einem dumpfen Krachen fiel das Lagertor ins Schloss. Der schimmelige Gestank nahm ihr fast die Luft und der Drecklappen erstickte den wichtigsten Satz, den sie hätte sagen müssen: „Lasst mich gehen, und ihr bekommt genug Geld, damit eine ganze Straße davon satt wird.“\n Flame schloss die Augen und zwang sich, ruhig zu atmen. Kräfte sparen. Warten. Erst tief in der Nacht kam vom Oberlicht ein verdächtiges Geräusch. Flame hob den Blick und sah ein Kind, das sich behände hineinschwang und lautlos auf dem Boden landete. Im dünnen Sternenlicht erkannte sie ein Mädchen, von oben bis unten verdreckt. Violette kurze Haare klebten ihr an den Ohren, doch ihre Augen waren hell und wach.\n „Psst.“ Sie zog Flame den Lappen aus dem Mund, drückte ihr den gestohlenen Rucksack in die Hände und flüsterte: „Keine Angst. Die schlafen. Ich bring Sie hier raus. Es tut mir leid ... meine Brüder haben beim Anblick einer wichtigen Person aus der Kaiserstadt den Kopf verloren.“\n „Danke“, sagte Flame, „aber ich muss noch etwas erledigen.“ Dann wandte sie sich an das Mädchen: „Kannst du mich zu dem Ort bringen, an dem sie mich gestern gepackt haben? Zehn Goldmünzen, wenn du’s machst. Ich bin Gelehrte – ich kann nicht zurück, bevor meine Untersuchung abgeschlossen ist.“\n Sie gingen durch die nächtlichen Hänge und Senken. Diese Gegend war noch nicht erschlossen; bis zur nächsten Stadt wären es Stunden zu Fuß gewesen. Wenn hier nicht ein unbekannter Filthoid gesichtet worden wäre hätte Flame sich nie allein in so ein menschenleeres Gebiet gewagt.\n Der Herbstwind biss kalt und Flame geriet immer häufiger ins Taumeln. Das Mädchen blieb zunehmend häufiger stehen, um auf sie zu warten.\n „Kennst du hier in der Nähe einen Filthoid, den man ‚Physalis-Filthoid‘ nennt? Bei euch heißt er doch ...“\n „Wir nennen ihn ‚Klaueblume‘“, antwortete das Mädchen. „Er sieht aus wie eine Pflanze, aber schnappt nach allem, was ihm zu nahe kommt. Wollen Sie da wirklich hin?“\n Flame nickte und sie schlugen den Weg nach Westen ein, hinein in den Wald.\n „Du hast ja überhaupt keine Angst vor Filthoiden“, sagte Flame anerkennend. „Du bist ein ‚Daimon‘?“\n „Ja. Und ich finde Filthoiden spannend.“ Das Mädchen drehte sich um, ihr Blick war klar und scharf: „Wenn Sie das Buch ‚Studien zu Filthoiden und dem Ursprung der Charons‘ von Maxima Flame vom letzten Jahr gelesen hätten, dann würden Sie sich auch für sie interessieren ... Ah, Quatsch! Wenn Sie für die Klaueblume hier sind, haben Sie das Buch bestimmt gelesen. Da steht nämlich, dass die Handblume der älteste nachweisbare Filthoid ist.“\n Flame lächelte nur. Sie erreichten den Felswald im Westen. Als sie an einem großen Stein vorbeiwollten, riss das Mädchen plötzlich den Arm hoch und hielt Flame zurück. Die Stille zerschnitt wie ein Riss und Dutzende Lichtbögen zuckten durch die Luft.\n „Gerade hat sich die Klaueblume in den Boden zurückgezogen. Wenn wir weitergegangen wären, wären wir erledigt gewesen. Jetzt ist’s gut. Ich habe sie gelähmt. Sie können untersuchen, was Sie wollen.“ Ihre Stimme blieb erstaunlich ruhig, doch auf ihrer Stirn standen feine Schweißperlen. Wahrscheinlich haben die paar Entladungen eben sie eine Menge Mana gekostet.\n Flame bedankte sich, öffnete den Rucksack und holte ihr Werkzeug heraus. „Du hast ‚Studien zu Filthoiden und dem Ursprung der Charons‘ gelesen“, sagte Flame und schnitt routiniert Gewebe heraus, trennte es sauber und legte es in Petrischalen. „Dann weißt du auch, dass der Autor über die Entdeckung der ‚Helix‘ die Theorie bestätigt hat, dass alle Charons und Filthoiden denselben Ursprung haben. Hast du keine Angst? Nicht nur die Verdorbenen ... in allen Charons fließt Filthoiden-Blut. Auch in dir.“\n „Wovor denn? Mir ist egal, was ich einmal gewesen bin. Mich interessiert nur, was ich noch werden kann. Und außerdem ...“ Dann lächelte sie, und in ihren violetten Augen lag klare Entschlossenheit. „Nur wenn man weiß, was die eigene Kraft wirklich ist, kann man lernen, sie zu nutzen und zu beherrschen.“\n „Ich bin fertig mit den Proben. Danke. Das ist eine extrem seltene Unterart des Physalis-Filthoids. Bring mich bis zur nächsten Stadt.“ Flame richtete sich auf. „Ach ja ... wie heißt du?“\n „Sibylle Mason“, antwortete das Mädchen.\n „Gut, Sibylle Mason.“ Flame lächelte. Der Nachtwind im Tal kam auf und ließ ihren Mantel schlagen. „Ich gebe dir eine Adresse. Wenn du dich für Filthoiden interessierst – und für die Kraft der ‚Daimonen‘, dann komm zu diesem Anwesen und gib deinen Namen an. Ich werde dort auf dich warten.“\n \n „Verräterin! Sibylle, du warst diejenige, die uns die Alte überhaupt auf den Hals gehetzt hat! Und jetzt lässt du sie einfach laufen ... was soll das?!“\n „Reichen euch zehn Goldmünzen nicht?“\n „Du hast doch selbst gesagt, das ist ein hohes Tier aus der Kaiserstadt ... wenn schon, dann dicke Beute! Und jetzt kriegst du kalte Füße? Wenn’s dir nur um die paar Münzen ging, hätten wir sie gleich abstechen sollen, dann wäre Ruhe!“\n Die zwei Gauner waren Rücken an Rücken an eine Bank gefesselt. Um sie herum lagen umgestoßene Flaschen. Sie zerrten an den Seilen und brüllten Sibylle an: „Feigling! Greif doch an, wenn wir wach sind! Du dreckiges, mutterloses Bastardkind! Immer bist du diejenige, die rumzögert und rumeiert. Ich hab dich schon lange satt – irgendwann werden wir dich abstechen wie damals diesen Raben ...“\n Sibylle stand auf, hob müde die Lider und packte dem Jungen, der am lautesten tobte, den Kiefer. Sie riss ihm den Mund auf. Knack. Das war das Geräusch von brechenden Knochen. Sibylle stopfte ihm eine Goldmünze nach der anderen zwischen die Zähne. Das Geschrei wurde zu Würgen, dann zu einem heiseren Röcheln.\n „Idioten. Euer beschissenes Leben endet hier. Meins ganz sicher nicht.“\n Sie ballte das Blatt Papier, das Flame aus ihrem Notizbuch gerissen hatte, fest in der Faust und machte sich auf den Weg zurück in die Kaiserstadt Dismania.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010403"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_43010404",
+    MaxKey = "UI_CMName_Name_WeiGuanDeLuRen",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_43010404 = {
           ContentDE = "Sibylle war überzeugt, dass sie einmal aus der Hölle zurückgekommen war.\n Wie sieht die Hölle aus? Ein Meer aus Flammen. Selbst wenn man fliehen will, drängt das Feuer immer wieder. Glühende Luft, zäh wie Flüssigkeit, kriecht in die Nase und knistert direkt am Ohr.\n Über der Feueroberfläche werden alle Vögel, die noch fliegen wollen, zu blinden Krähen – und stürzen in die verkohlte Erde, wo ihr Aufprall nur ein paar Wellen aus Feuer schlägt.\n \n Eigentlich sollte es eine streng geheime Militäroperation sein. Der Kommandant hatte vor dem Aufbruch unzählige Möglichkeiten durchgespielt – doch niemand wusste wirklich, wie stark die Verteidigung im Kerngebiet der Kirche war.\n Nach drei Tagen und drei Nächten des Abwägens entschied er sich schließlich für alles oder nichts: eine kleine, aber extrem schlagkräftige Einheit mit dem neuesten Luftschiff des Imperiums im Hochtempo zum Ziel. Ein Enthauptungsschlag.\n Riskant, aber von allen Plänen der einzige, der dem Sieg am nächsten kam. Also bewaffneten sich dreizehn „Daimonen“ bis an die Zähne und zogen sich Uniformen über, die von gewöhnlichen Soldaten nicht zu unterscheiden waren. Kein Abschied. Keine Ansprachen. So nüchtern, als würde man Nachschub ausliefern, begann eine Expedition, die jederzeit in den Tod führen konnte.\n Doch selbst mit der schlimmsten Erwartung im Kopf begriffen sie erst, als sie wirklich dem Blick der Höchsten begegneten, was „Gott“ bedeutete ... und wie furchteinflößend die Götter waren.\n \n Strahl um Strahl brannte durch die Nacht, riss den Himmel auf wie ewiges Feuer und verschlang alles und jeden.\n Und Sibylle, die sich am Rande des infernalischen Glühens befand, sah vor allem nur noch Feuerlicht. Alles andere waren verkohlte Äste oder Tierfetzen. Sie hatte längst keine Kraft mehr, den Unterschied zu erkennen.\n Sie hatte Glück: Sie konnte sich aus dem Angriffstrupp zurückziehen und außerhalb des Turms als letzte Trumpfkarte in Deckung gehen. Wenn der Plan aufging, würden ihre Kameraden tief in den Turm eindringen, den Auftrag erledigen und sie würde aus einem Schatten, den der Feind nicht wahrnahm, das Luftschiff heranführen und sie herausholen. Und wenn alles schiefging, würde sie wenigstens so viele Verwundete wie möglich mitnehmen, um die Verluste so niedrig wie möglich zu halten.\n Sie wusste nicht, was ihre Kameraden tief im Inneren des Turms wirklich erlebt hatten ... aber das Inferno vor ihr war offensichtlich der schlimmste Ausgang, der in all den Planspielen überhaupt möglich gewesen war.\n Von den zwölf, die in den Turm gegangen waren, kamen nur drei wieder heraus. Ein grausiges Licht jagte ihnen im Rücken nach. Wo es hinfiel, ging alles in Flammen auf – selbst Felsen wurde durchbohrt. Und sie war nicht die Macht eines Ritters. Es war, als hätte ein Gott persönlich das Urteil gesprochen.\n Zwei der Überlebenden stießen ihr den schwer verletzten, bewusstlosen Kommandanten in die Arme, dann schleppten sie sich mit ihren zerfetzten Körpern in die andere Richtung. Sie hatten entschieden, den Rückzug zu decken.\n \n Dank der zähen Konstitution der Daimonen konnten sie überhaupt noch stehen. Einer schaffte es sogar, das Schwert zu ziehen, nur um sich an ihm festzuklammern.\n Das Feuer um sie herum ließ kurz nach und ihr Keuchen wurde ebenmäßiger – nicht mehr wie eben, als ihnen mit jedem Atemzug heißes Blut aus Mund und Nase lief.\n Doch kaum ebbten die Flammen ab, tauchten sie auf: schwer bewaffnete Ritter. Man musste weder ihre Rüstung noch ihre Waffen sehen – ihre Schritte reichten, um zu wissen, dass sie Elite waren. Und sie kamen nicht, um Gefangene zu nehmen. Sie waren hier, um die Eindringlinge auszulöschen.\n Normalerweise rennen gewöhnliche Feinde vor einem Daimon wie Hasen davon. Aber wenn einem Adler die Flügel gebrochen und die Schwungfedern ausgerissen werden, können selbst Ameisen ihn bei lebendigem Leib zerlegen.\n Ein dichter, von blanker Tötungsabsicht getragener Kugelhagel durchbrach das inzwischen langsamer werdende Klingenwirbeln und durchbohrte die beiden Widerständler, als würde Stoff zerfetzt.\n Die elysischen Ritter, die anfangs nur aus der Distanz geschossen hatten, rückten immer weiter vor. Noch ein paar Schritte und sie wären nah genug gewesen, um mit der Klinge die Wirbelsäule ihres „Großfeinds“ aufzuschneiden.\n \n Sibylle war wie benommen. Vor nicht langer Zeit hatten diese Daimonen mit ihr Seite an Seite den Einsatz durchgeplant und jetzt standen sie auf entgegengesetzten Seiten von Leben und Tod.\n Sie hatten ihre letzten Kräfte aufgebraucht. Um nicht umzufallen, lehnten sie Rücken an Rücken gegeneinander, schräg im Stand, und warfen – ob bewusst oder nicht – immer wieder Blicke in die Richtung, die Sibylle zum Luftschiff nehmen musste.\n Sibylles Verstand – sogar ihre Instinkte, die ihr über Jahre in den Körper gebrannt worden waren – sagten ihr, sie solle den Befehl befolgen. Nicht hinschauen. Nicht zögern. Doch da war auch diese kleine, heimliche Stimme – und trotzdem schrie sie aus voller Kehle, dass das falsch war.\n Sie waren nicht schlecht zu ihr gewesen. Loyal zum Imperium, genauso ehrgeizig und genauso mit einer Vergangenheit, die man nicht stolz herumzeigte. An vielen Abenden hatten sie im Lager unter flackerndem Licht über das gesprochen, was hinter ihnen lag ... und darüber, was aus ihnen irgendwann werden sollte. In Sibylles Welt, in der sie sich eingeredet hatte, mutterseelenallein zu sein, waren sie vermutlich das, was am ehesten an Freunde heranreichte.\n Und jetzt, im letzten Augenblick vor ihrem Tod, sahen genau diese Menschen sie an.\n Was bedeuteten ihre Blicke? Hilfe? Zögern? Hass? Oder etwas ganz anderes?\n \n Sibylle wusste, dass sie darüber nicht nachdenken durfte. Sie musste hart bleiben. Den Befehl befolgen. Hier, an diesem Ort, diese letzte, unzulässige Regung Menschlichkeit in sich selbst ersticken.\n Aber ... sollte sie das wirklich tun? Sollte sie ihre Freunde wirklich sterben lassen?\n Sie schloss die Augen, als könnte sie dieser Höllenentscheidung entkommen, wenn sie nichts mehr wahrnahm.\n Doch in dem Moment, in dem ihre Lider zufielen, trafen die beiden die Entscheidung für sie: Sie zogen die Dolche vom jeweils anderen Gürtel, setzten die Klingen an die Kehle des Gegenübers – und stießen zu. Tief. Ohne Zögern, als wäre es längst beschlossene Sache. Dann sanken sie mit einem Lächeln zu Boden. Gleichzeitig ließ Sibylle die Triebwerke des Luftschiffs an.\n \n Im mechanischen Dröhnen stieß sie endlich Luft aus, die sie so lange in der Brust festgehalten hatte. Sie blinzelte schnell und merkte, dass ihr etwas über die Wange kullerte. Eine Träne, die niemand je an ihr gesehen hatte. Sibylle verstand nicht, was diese Träne bedeutete. Genauso wenig wie sie verstand, was für ein Blick ihr in jenem letzten Moment gegolten hatte.\n Vielleicht Erleichterung, weil sie nicht mehr entscheiden musste, ob sie einen Befehl brechen sollte. Vielleicht etwas anderes.\n \n ...\n Weil es ihnen gelungen war, den Turm der „Götter“ überhaupt zu betreten, erklärte das Imperium die Operation am Ende zum Sieg. In der offiziellen Todesmeldung hieß es: alle gefallen – außer Sibylle.\n Sibylle stieg danach schnell zur Großkommandantin auf und nannte diesen Einsatz später „Rückkehr aus der Hölle“.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010404"
@@ -65145,15 +65161,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CHAR_DATA_TEXT_43010405 = {
           ContentDE = "Ein paar Raben hockten auf der Fensterbank und strichen sich ihr schwarz schimmerndes Gefieder glatt. Flame musste an ihren anderen Namen denken: Todesboten. Ja. Unglück anzukündigen war schon immer die Aufgabe der Raben gewesen.\n Weil die Forschung in der Alchemie-Akademie geheim war, hatten nur die wenigsten Räume überhaupt Fenster. Stattdessen brannten dort Tag und Nacht Lampen wie eine blasse Sonne, die in einer Polarnacht niemals untergeht. Doch Flame hatte sich in ihrem Büro stur ein schmales Fenster einbauen lassen, als würde sie mit dieser einen Öffnung noch irgendwie mit der Welt da draußen verbunden bleiben.\n Heute war dieses Fenster von schwarzen Raben besetzt.\n Flame saß kerzengerade an ihrem Schreibtisch. Der Rücken aufrecht, das Haar makellos im Nacken gebunden. Als es klopfte, sah sie weiterhin nur zum Fenster hinaus. Sie würdigte die Person an der Tür keines Blickes – ihre ehemalige Schülerin, jetzt Großkommandantin Sibylle.\n \n „Frau Maxima Flame“, durchbrach Sybil schließlich die peinliche Stille. „Ich bin hier, um Ihnen Folgendes mitzuteilen: Aufgrund Ihres Verhaltens, das einer indirekten Treueverletzung gegenüber dem Imperium gleichkommt, werden Ihnen alle Ämter an der Spathatoi aberkannt – ebenso der Titel ‚Chef-Alchemistin‘. Allerdings ...“ Sie hielt kurz inne, sah ihre einstige Mentorin an und sprach dann die Gnade aus, die sie unter Verlust ihrer Würde hatte erbetteln müssen: „Wegen Ihrer großen Verdienste im Namen des Imperiums werden Sie nicht ins Königliches Militärgefängnis überstellt. Wenn Sie weiterhin forschen möchten, dürfen Sie sogar einen Forschungsraum in der Alchemie-Akademie behalten – selbstverständlich unter Aufsicht. Jede Ihrer Arbeiten wird überwacht.“\n Flame antwortete nicht. Erst nach einer langen Weile stieß sie einen tiefen Seufzer aus, drehte sich um und sagte: „Großkommandantin, ist das alles, was du mir zu sagen hast?“\n Sibylle wich dem Blick ihrer Lehrerin aus: „Ja. Mehr gibt es nicht.“\n „Als ich dich zum ersten Mal gesehen habe, warst du noch so klein. Damals war ich deine Gefangene. Genau wie heute.“ Dann fragte Flame: „Diese Entführung ... war von Anfang an dein Plan, stimmt’s?“\n Sibylle schüttelte den Kopf: „In alten Erinnerungen zu schwelgen bringt nichts, Frau Flame. Entscheidend ist das Hier und Jetzt.“\n „Die Alchemie-Akademie war einmal ein Ort, an dem man Wissen gesucht hat. Aber du und Julius habt sie zu Hyperboreas Schande gemacht.“ Die längst nicht mehr junge Gelehrte sah ihre Schülerin an und versuchte ein weiteres Mal vergeblich, sie zur Vernunft zu bringen: „Wissen hat einen Sinn: die Welt besser zu machen. Aber du hast es nur als ...“\n „Als Leiter zur Macht benutzt. Das haben Sie mir schonmal gesagt.“ Sibylle sprach: „Ihre Ideale sind edel. Meine Haltung gegenüber Wissen ist schamlos und niederträchtig – das habe ich nie bestritten. Aber haben Sie je darüber nachgedacht? Sich so hehre Ideale leisten zu können, ist ein Privileg für Menschen von Ihrer Herkunft. Sie haben unzählige Auswege. Und der Rabe dort am Fensterbrett ... hat nur zwei. Entweder fliegt er mit allem, was er hat oder er wird von der Steinschleuder eines Kindes vom Himmel geholt.“\n „Und was Sie nicht wissen“, fuhr Sybil fort, „ist: Raben haben auch ihre eigenen Ideale. Sie fliegen hoch genug, um Dinge zu sehen, die Menschen am Boden nie sehen werden. Und deshalb können sie tun, was nur sie können – sie können die Menschen wirklich verändern.“\n „Großkommandantin ... nein. Sibylle. Sag es mir ehrlich!“ Flame sprang so abrupt auf, dass der Stuhl hinter ihr scheppernd umkippte. Die Raben auf dem Fensterbrett flatterten erschrocken davon. „An jenem Tag im ‚Turm‘ der Elysischen Kirche ... was habt ihr dort wirklich gesehen?“\n \n Sibylle antwortete nicht. Das Abendlicht fiel endlich durch das Fenster und erhellte ihr Gesicht. Für einen Augenblick kam Flame das Antlitz ihrer Schülerin wie eine heilige Statue der Kirche vor – kalt und zugleich gütig.\n „Nichts Besonderes, Frau Flame“. Sibylle sprach: „Zurück zum Wesentlichen. Wenn Sie in der Alchemie-Akademie weiterforschen wollen, unterschreiben Sie dieses Dokument. Sie haben drei Tage Bedenkzeit.“\n Die Frau, die nun Großkommandantin war, drehte sich um und ging, ohne sich noch einmal umzusehen. Erst als sie den langen, dunklen Korridor durchquert und das Büro weit hinter sich gelassen hatte, blieb sie stehen, wandte sich zurück – und verbeugte sich tief in Richtung der geschlossenen Tür.\n „Lebwohl, Lehrerin.“",
           TextMapId = "UI_CHAR_DATA_TEXT_43010405"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_51010101",
-    MaxKey = "UI_CMName_Name_WuyouShengSY",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_51010101 = {
           ContentDE = "Wenn die Leute in der Stadt von Filbert sprechen, denken sie weniger an ein Schwein mit vollgepacktem Futterkorb und mehr an den bebenden Boden, wenn es vorbeidonnert und an den Windstoß, den es dabei aufwirbelt.\n Warum? Na ja ...\n Das hat wohl damit zu tun, dass in der Stadt hin und wieder schiefstehende Mauern stehen oder ein Marktstand plattgedrückt wird. Keine Sorge: Das ist nur ein Beweis, dass Filbert hier war. Und natürlich folgen ein paar Beschwerdebriefe an die Elysische Kirche. \n Nur: Jeder dieser kleinen „Unfälle“ bedeutet auch, dass Filbert wieder einmal mit reicher Beute zurückgekehrt ist. Deshalb liest man zwischen den Zeilen meist mehr Freude als Ärger.\n „Diese alte Mauer gehört praktisch zur Familie! Jetzt hat sie einen ordentlichen Rempler abbekommen – Truffle soll uns zur Entschädigung ein paar Stücke Brot mehr geben!“\n Oh ... und aus der Ferne kommt schon wieder ein „BUMM“ ...",
           TextMapId = "UI_CHAR_DATA_TEXT_51010101"
@@ -65945,7 +65953,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CMName_Name_WeiGuanDeLuRen = {
           ContentDE = "Tran­seúnte curioso",
           TextMapId = "UI_CMName_Name_WeiGuanDeLuRen"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMName_Name_WeiGuanZhe",
+    MaxKey = "UI_CMNpc_Name_Stranger",
+    Loader = function()
+      return {
         UI_CMName_Name_WeiGuanZhe = {
           ContentDE = "Espectador",
           TextMapId = "UI_CMName_Name_WeiGuanZhe"
@@ -65953,15 +65969,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CMName_Name_WuyouShengSY = {
           ContentDE = "Voz de Wishen",
           TextMapId = "UI_CMName_Name_WuyouShengSY"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMName_Name_WuyouWuyan",
-    MaxKey = "UI_CMNpc_Name_Teacher",
-    Loader = function()
-      return {
+        },
         UI_CMName_Name_WuyouWuyan = {
           ContentDE = "Wishen mudo",
           TextMapId = "UI_CMName_Name_WuyouWuyan"
@@ -66753,7 +66761,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CMNpc_Name_Stranger = {
           ContentDE = "Charon extraño",
           TextMapId = "UI_CMNpc_Name_Stranger"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Sushan",
+    MaxKey = "UI_COMMONPOP_TEXT_100278",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Sushan = {
           ContentDE = "Susanna",
           TextMapId = "UI_CMNpc_Name_Sushan"
@@ -66761,15 +66777,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CMNpc_Name_Teacher = {
           ContentDE = "Señorita Lisse",
           TextMapId = "UI_CMNpc_Name_Teacher"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Teleisha",
-    MaxKey = "UI_COMMONPOP_TIPS_100275",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Teleisha = {
           ContentDE = "[La Emperatriz] Teresa",
           TextMapId = "UI_CMNpc_Name_Teleisha"
@@ -67561,7 +67569,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_COMMONPOP_TEXT_100278 = {
           ContentDE = "¿Confirma la <H>progresión completa</> de este capítulo?",
           TextMapId = "UI_COMMONPOP_TEXT_100278"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TEXT_100279",
+    MaxKey = "UI_Chapter03_Transition01",
+    Loader = function()
+      return {
         UI_COMMONPOP_TEXT_100279 = {
           ContentDE = "Se omitirá el tutorial actual",
           TextMapId = "UI_COMMONPOP_TEXT_100279"
@@ -67569,15 +67585,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_COMMONPOP_TIPS_100275 = {
           ContentDE = "Esta acción es irreversible. Será enviado automáticamente a la pantalla de inicio de sesión.",
           TextMapId = "UI_COMMONPOP_TIPS_100275"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TIPS_100277",
-    MaxKey = "UI_ChapterIntro_GaChaDialogue",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TIPS_100277 = {
           ContentDE = "Esta acción es irreversible.",
           TextMapId = "UI_COMMONPOP_TIPS_100277"
@@ -68366,7 +68374,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Chapter03_Transition01 = {
           ContentDE = "Tiempo hasta la salida del tren:{空格}",
           TextMapId = "UI_Chapter03_Transition01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chapter03_Transition02",
+    MaxKey = "UI_CommonPopup_SaveLayout_Button02",
+    Loader = function()
+      return {
         UI_Chapter03_Transition02 = {
           ContentDE = "hora(s)",
           TextMapId = "UI_Chapter03_Transition02"
@@ -68374,15 +68390,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_ChapterIntro_GaChaDialogue = {
           ContentDE = "¿¿¿???: “Estas arenas son nuestros recuerdos compartidos, uniendo pasado, presente y futuro”.",
           TextMapId = "UI_ChapterIntro_GaChaDialogue"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ChapterName_00",
-    MaxKey = "UI_CommonQuestRefresh",
-    Loader = function()
-      return {
+        },
         UI_ChapterName_00 = {
           ContentDE = "Preludio",
           TextMapId = "UI_ChapterName_00"
@@ -69174,7 +69182,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CommonPopup_SaveLayout_Button02 = {
           ContentDE = "Guardar y salir",
           TextMapId = "UI_CommonPopup_SaveLayout_Button02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CommonPopup_SaveLayout_Content",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_39",
+    Loader = function()
+      return {
         UI_CommonPopup_SaveLayout_Content = {
           ContentDE = "¿Desea guardar los cambios?",
           TextMapId = "UI_CommonPopup_SaveLayout_Content"
@@ -69182,15 +69198,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_CommonQuestRefresh = {
           ContentDE = "La nueva fase ha comenzado y el contenido se ha restablecido.",
           TextMapId = "UI_CommonQuestRefresh"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CommonQuestRefreshTitle",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_40",
-    Loader = function()
-      return {
+        },
         UI_CommonQuestRefreshTitle = {
           ContentDE = "Tareas diarias",
           TextMapId = "UI_CommonQuestRefreshTitle"
@@ -69976,7 +69984,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_DUNGEON_AUTOCHESS_39 = {
           ContentDE = "Partida sin fin 019",
           TextMapId = "UI_DUNGEON_AUTOCHESS_39"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_4",
+    MaxKey = "UI_DUNGEON_TYPE_PETDEFENCE",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_4 = {
           ContentDE = "Tablero del Maestro Gongshang 04",
           TextMapId = "UI_DUNGEON_AUTOCHESS_4"
@@ -69984,15 +70000,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_DUNGEON_AUTOCHESS_40 = {
           ContentDE = "Partida sin fin 020",
           TextMapId = "UI_DUNGEON_AUTOCHESS_40"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_41",
-    MaxKey = "UI_DUNGEON_TYPE_SABOTAGE",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_41 = {
           ContentDE = "Partida sin fin 021",
           TextMapId = "UI_DUNGEON_AUTOCHESS_41"
@@ -70784,7 +70792,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_DUNGEON_TYPE_PETDEFENCE = {
           ContentDE = "Rettung",
           TextMapId = "UI_DUNGEON_TYPE_PETDEFENCE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_TYPE_RESCUE",
+    MaxKey = "UI_Dress_Back",
+    Loader = function()
+      return {
         UI_DUNGEON_TYPE_RESCUE = {
           ContentDE = "Eskorte",
           TextMapId = "UI_DUNGEON_TYPE_RESCUE"
@@ -70792,15 +70808,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_DUNGEON_TYPE_SABOTAGE = {
           ContentDE = "Vermittlung",
           TextMapId = "UI_DUNGEON_TYPE_SABOTAGE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_TYPE_SABOTAGEPRO",
-    MaxKey = "UI_Dress_Head",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_TYPE_SABOTAGEPRO = {
           ContentDE = "Zerlegen",
           TextMapId = "UI_DUNGEON_TYPE_SABOTAGEPRO"
@@ -71589,7 +71597,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Dress_Back = {
           ContentDE = "Espalda superior",
           TextMapId = "UI_Dress_Back"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Dress_Face",
+    MaxKey = "UI_Event_MidTerm_Progress",
+    Loader = function()
+      return {
         UI_Dress_Face = {
           ContentDE = "Rostro",
           TextMapId = "UI_Dress_Face"
@@ -71597,15 +71613,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Dress_Head = {
           ContentDE = "Cabeza",
           TextMapId = "UI_Dress_Head"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dress_Tail",
-    MaxKey = "UI_Event_MidTerm_RepeatCount",
-    Loader = function()
-      return {
+        },
         UI_Dress_Tail = {
           ContentDE = "Espalda inferior",
           TextMapId = "UI_Dress_Tail"
@@ -72397,7 +72405,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Event_MidTerm_Progress = {
           ContentDE = "Hito alcanzado: %s puntos",
           TextMapId = "UI_Event_MidTerm_Progress"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Event_MidTerm_RefreshTask",
+    MaxKey = "UI_GACHA_NEXT",
+    Loader = function()
+      return {
         UI_Event_MidTerm_RefreshTask = {
           ContentDE = "Se desbloquea tras liquidar la colección",
           TextMapId = "UI_Event_MidTerm_RefreshTask"
@@ -72405,15 +72421,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Event_MidTerm_RepeatCount = {
           ContentDE = "Completados: %d",
           TextMapId = "UI_Event_MidTerm_RepeatCount"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Event_MidTerm_RepeatTask",
-    MaxKey = "UI_GACHA_ONE",
-    Loader = function()
-      return {
+        },
         UI_Event_MidTerm_RepeatTask = {
           ContentDE = "Juegos repetibles",
           TextMapId = "UI_Event_MidTerm_RepeatTask"
@@ -73202,7 +73210,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_GACHA_NEXT = {
           ContentDE = "Haz clic para continuar",
           TextMapId = "UI_GACHA_NEXT"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_GACHA_NOHISTORY",
+    MaxKey = "UI_HeadFrame_Des_10008",
+    Loader = function()
+      return {
         UI_GACHA_NOHISTORY = {
           ContentDE = "Sin registros",
           TextMapId = "UI_GACHA_NOHISTORY"
@@ -73210,15 +73226,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_GACHA_ONE = {
           ContentDE = "Invocar %d veces",
           TextMapId = "UI_GACHA_ONE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_GACHA_OVERDUE",
-    MaxKey = "UI_HeadFrame_Des_10010",
-    Loader = function()
-      return {
+        },
         UI_GACHA_OVERDUE = {
           ContentDE = "La información del Myriad ha sido actualizada. Selecciona “Confirmar” para regresar.",
           TextMapId = "UI_GACHA_OVERDUE"
@@ -74007,7 +74015,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_HeadFrame_Des_10008 = {
           ContentDE = "Meine Moral und meine Prinzipien.",
           TextMapId = "UI_HeadFrame_Des_10008"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HeadFrame_Des_10009",
+    MaxKey = "UI_LOGIN_ACCOUNT",
+    Loader = function()
+      return {
         UI_HeadFrame_Des_10009 = {
           ContentDE = "Meine Überlegungen und meine Abwägungen.",
           TextMapId = "UI_HeadFrame_Des_10009"
@@ -74015,15 +74031,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_HeadFrame_Des_10010 = {
           ContentDE = "Meine Empathie und mein Wohlwollen.",
           TextMapId = "UI_HeadFrame_Des_10010"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HeadFrame_Des_10011",
-    MaxKey = "UI_LOGIN_ENTERGAME",
-    Loader = function()
-      return {
+        },
         UI_HeadFrame_Des_10011 = {
           ContentDE = "Still ... störe sie nicht.",
           TextMapId = "UI_HeadFrame_Des_10011"
@@ -74812,7 +74820,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_LOGIN_ACCOUNT = {
           ContentDE = "Ingresa tu cuenta",
           TextMapId = "UI_LOGIN_ACCOUNT"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_LOGIN_ENSURE",
+    MaxKey = "UI_MECHANISM_112",
+    Loader = function()
+      return {
         UI_LOGIN_ENSURE = {
           ContentDE = "Confirmar",
           TextMapId = "UI_LOGIN_ENSURE"
@@ -74820,15 +74836,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_LOGIN_ENTERGAME = {
           ContentDE = "Toca para empezar",
           TextMapId = "UI_LOGIN_ENTERGAME"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_LOGIN_HoldPress",
-    MaxKey = "UI_MECHANISM_114",
-    Loader = function()
-      return {
+        },
         UI_LOGIN_HoldPress = {
           ContentDE = "(Mantener) Salir",
           TextMapId = "UI_LOGIN_HoldPress"
@@ -75620,7 +75628,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_MECHANISM_112 = {
           ContentDE = "Aktiviere das Gerät",
           TextMapId = "UI_MECHANISM_112"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_113",
+    MaxKey = "UI_Mod_NotOwned_Char",
+    Loader = function()
+      return {
         UI_MECHANISM_113 = {
           ContentDE = "Zeichne diesen Vogelturm auf",
           TextMapId = "UI_MECHANISM_113"
@@ -75628,15 +75644,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_MECHANISM_114 = {
           ContentDE = "Klopfe den Staub ab",
           TextMapId = "UI_MECHANISM_114"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_115",
-    MaxKey = "UI_Mod_Not_Get",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_115 = {
           ContentDE = "Staple die Blöcke",
           TextMapId = "UI_MECHANISM_115"
@@ -76428,7 +76436,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Mod_NotOwned_Char = {
           ContentDE = "Personaje no poseído",
           TextMapId = "UI_Mod_NotOwned_Char"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Mod_NotOwned_Weapon",
+    MaxKey = "UI_Name_Walnut_151931",
+    Loader = function()
+      return {
         UI_Mod_NotOwned_Weapon = {
           ContentDE = "Arma no poseída",
           TextMapId = "UI_Mod_NotOwned_Weapon"
@@ -76436,15 +76452,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Mod_Not_Get = {
           ContentDE = "No poseído",
           TextMapId = "UI_Mod_Not_Get"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Mod_Polarity_Btn",
-    MaxKey = "UI_Name_Walnut_151951",
-    Loader = function()
-      return {
+        },
         UI_Mod_Polarity_Btn = {
           ContentDE = "Ajustar afinidad de casilla",
           TextMapId = "UI_Mod_Polarity_Btn"
@@ -77230,7 +77238,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Name_Walnut_151931 = {
           ContentDE = "Carta secreta: Incendio Devorador de Ifrit",
           TextMapId = "UI_Name_Walnut_151931"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_151941",
+    MaxKey = "UI_Npc_Name_Dig",
+    Loader = function()
+      return {
         UI_Name_Walnut_151941 = {
           ContentDE = "Carta secreta: Trueno Devorador de Summanus",
           TextMapId = "UI_Name_Walnut_151941"
@@ -77238,15 +77254,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Name_Walnut_151951 = {
           ContentDE = "Carta secreta: Céfiro Susurrante de Hastur",
           TextMapId = "UI_Name_Walnut_151951"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_151952",
-    MaxKey = "UI_Npc_Name_Dig3",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_151952 = {
           ContentDE = "Carta secreta: Ciclón Turbulento de Hastur",
           TextMapId = "UI_Name_Walnut_151952"
@@ -78035,7 +78043,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Npc_Name_Dig = {
           ContentDE = "Intenta cavar",
           TextMapId = "UI_Npc_Name_Dig"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Dig2",
+    MaxKey = "UI_Npc_Name_Tanxianjiaojiao",
+    Loader = function()
+      return {
         UI_Npc_Name_Dig2 = {
           ContentDE = "Vuelve a cavar",
           TextMapId = "UI_Npc_Name_Dig2"
@@ -78043,15 +78059,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Npc_Name_Dig3 = {
           ContentDE = "Vuelve a cavar",
           TextMapId = "UI_Npc_Name_Dig3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Dog",
-    MaxKey = "UI_Npc_Name_TiaoxiangStudent",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Dog = {
           ContentDE = "Perro feroz",
           TextMapId = "UI_Npc_Name_Dog"
@@ -78843,7 +78851,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Npc_Name_Tanxianjiaojiao = {
           ContentDE = "Lunoexploradora",
           TextMapId = "UI_Npc_Name_Tanxianjiaojiao"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Tanzhu",
+    MaxKey = "UI_OPTION_Language_Unload_Using",
+    Loader = function()
+      return {
         UI_Npc_Name_Tanzhu = {
           ContentDE = "Vendedor de refrigerios",
           TextMapId = "UI_Npc_Name_Tanzhu"
@@ -78851,15 +78867,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Npc_Name_TiaoxiangStudent = {
           ContentDE = "Estudiante angustiado",
           TextMapId = "UI_Npc_Name_TiaoxiangStudent"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_TiaoxiangTeacher",
-    MaxKey = "UI_OPTION_Layout",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_TiaoxiangTeacher = {
           ContentDE = "Maestro estricto",
           TextMapId = "UI_Npc_Name_TiaoxiangTeacher"
@@ -79651,7 +79659,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_OPTION_Language_Unload_Using = {
           ContentDE = "No se puede desinstalar un paquete de voz en uso",
           TextMapId = "UI_OPTION_Language_Unload_Using"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_Language_Using",
+    MaxKey = "UI_Party_Maze_StageStart",
+    Loader = function()
+      return {
         UI_OPTION_Language_Using = {
           ContentDE = "En uso",
           TextMapId = "UI_OPTION_Language_Using"
@@ -79659,15 +79675,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_OPTION_Layout = {
           ContentDE = "Configuración de combate",
           TextMapId = "UI_OPTION_Layout"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_LeftBulletJumpShow",
-    MaxKey = "UI_Party_MiniQuest_ExtraCoin",
-    Loader = function()
-      return {
+        },
         UI_OPTION_LeftBulletJumpShow = {
           ContentDE = "Botón de Salto Espiral mano izquierda",
           TextMapId = "UI_OPTION_LeftBulletJumpShow"
@@ -80459,7 +80467,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Party_Maze_StageStart = {
           ContentDE = "Erforschungsmodus gestartet. Der Countdown läuft!",
           TextMapId = "UI_Party_Maze_StageStart"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Party_MiniQuest_CoinTriple",
+    MaxKey = "UI_PlayerHead_Name_30017",
+    Loader = function()
+      return {
         UI_Party_MiniQuest_CoinTriple = {
           ContentDE = "Der aufnehmende Spieler erhält 20 Sek. lang die 3×-Münzeneffizienz.",
           TextMapId = "UI_Party_MiniQuest_CoinTriple"
@@ -80467,15 +80483,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Party_MiniQuest_ExtraCoin = {
           ContentDE = "Eine Ladung Bonusmünzen wurde freigegeben!",
           TextMapId = "UI_Party_MiniQuest_ExtraCoin"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Party_MiniQuest_LaserSlow",
-    MaxKey = "UI_PlayerHead_Name_30019",
-    Loader = function()
-      return {
+        },
         UI_Party_MiniQuest_LaserSlow = {
           ContentDE = "Horizontale Laser für 10 Sek. deaktiviert",
           TextMapId = "UI_Party_MiniQuest_LaserSlow"
@@ -81267,7 +81275,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_PlayerHead_Name_30017 = {
           ContentDE = "Mehr als nur Zahlen",
           TextMapId = "UI_PlayerHead_Name_30017"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30018",
+    MaxKey = "UI_RLArchiveTitle_Treasure",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30018 = {
           ContentDE = "Hallo, Welt",
           TextMapId = "UI_PlayerHead_Name_30018"
@@ -81275,15 +81291,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_PlayerHead_Name_30019 = {
           ContentDE = "Der Perfektionist",
           TextMapId = "UI_PlayerHead_Name_30019"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30020",
-    MaxKey = "UI_RLArchive_Reward",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30020 = {
           ContentDE = "Nach ganz oben",
           TextMapId = "UI_PlayerHead_Name_30020"
@@ -82075,7 +82083,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_RLArchiveTitle_Treasure = {
           ContentDE = "Artefactos",
           TextMapId = "UI_RLArchiveTitle_Treasure"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RLArchive_Progress",
+    MaxKey = "UI_Rougebag_BagSubTab_Name_106",
+    Loader = function()
+      return {
         UI_RLArchive_Progress = {
           ContentDE = "Progreso de colección",
           TextMapId = "UI_RLArchive_Progress"
@@ -82083,15 +82099,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_RLArchive_Reward = {
           ContentDE = "Recompensas de colección",
           TextMapId = "UI_RLArchive_Reward"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RL_BtnContinue",
-    MaxKey = "UI_Rougelike_Contract_Confirm",
-    Loader = function()
-      return {
+        },
         UI_RL_BtnContinue = {
           ContentDE = "Continuar la exploración",
           TextMapId = "UI_RL_BtnContinue"
@@ -82859,7 +82867,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Rougebag_BagSubTab_Name_106 = {
           ContentDE = "Luciérnaga brillante",
           TextMapId = "UI_Rougebag_BagSubTab_Name_106"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Rougebag_BagSubTab_Name_107",
+    MaxKey = "UI_SUBREGION_NAME_101702",
+    Loader = function()
+      return {
         UI_Rougebag_BagSubTab_Name_107 = {
           ContentDE = "Flor vampírica",
           TextMapId = "UI_Rougebag_BagSubTab_Name_107"
@@ -82867,15 +82883,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Rougelike_Contract_Confirm = {
           ContentDE = "Confirmar",
           TextMapId = "UI_Rougelike_Contract_Confirm"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Rougelike_Contract_Detail",
-    MaxKey = "UI_SUBREGION_NAME_102101",
-    Loader = function()
-      return {
+        },
         UI_Rougelike_Contract_Detail = {
           ContentDE = "1. Abismo solo está disponible en el nivel de dificultad más alto.\n2. Selecciona una zona con sabiduría. Mayores profundidades te esperan donde las intensidades son más fuertes.\n3. Un abismo más profundo otorga más Puntos de rastro.",
           TextMapId = "UI_Rougelike_Contract_Detail"
@@ -83667,7 +83675,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_SUBREGION_NAME_101702 = {
           ContentDE = "Rohrleitungsgebiet",
           TextMapId = "UI_SUBREGION_NAME_101702"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SUBREGION_NAME_101901",
+    MaxKey = "UI_SkinGacha_Type",
+    Loader = function()
+      return {
         UI_SUBREGION_NAME_101901 = {
           ContentDE = "Galea-Theater",
           TextMapId = "UI_SUBREGION_NAME_101901"
@@ -83675,15 +83691,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_SUBREGION_NAME_102101 = {
           ContentDE = "Lagerbereich",
           TextMapId = "UI_SUBREGION_NAME_102101"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SUBREGION_NAME_102102",
-    MaxKey = "UI_SkinPreview_Accessory_FX_Body",
-    Loader = function()
-      return {
+        },
         UI_SUBREGION_NAME_102102 = {
           ContentDE = "Zentralbereich",
           TextMapId = "UI_SUBREGION_NAME_102102"
@@ -84472,7 +84480,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_SkinGacha_Type = {
           ContentDE = "Tipo de invocación",
           TextMapId = "UI_SkinGacha_Type"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SkinPreview_Accessory_Back",
+    MaxKey = "UI_TELEPORTPOINT_NAME_100102_1",
+    Loader = function()
+      return {
         UI_SkinPreview_Accessory_Back = {
           ContentDE = "Placa dorsal superior",
           TextMapId = "UI_SkinPreview_Accessory_Back"
@@ -84480,15 +84496,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_SkinPreview_Accessory_FX_Body = {
           ContentDE = "Aura",
           TextMapId = "UI_SkinPreview_Accessory_FX_Body"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SkinPreview_Accessory_FX_Dead",
-    MaxKey = "UI_TELEPORTPOINT_NAME_100103_2",
-    Loader = function()
-      return {
+        },
         UI_SkinPreview_Accessory_FX_Dead = {
           ContentDE = "Efectos de derrota",
           TextMapId = "UI_SkinPreview_Accessory_FX_Dead"
@@ -85277,7 +85285,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_TELEPORTPOINT_NAME_100102_1 = {
           ContentDE = "Arkane Ruinen – Mittlere Ebene",
           TextMapId = "UI_TELEPORTPOINT_NAME_100102_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_100103_1",
+    MaxKey = "UI_Team_Leave",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_100103_1 = {
           ContentDE = "Arkane Ruinen – Obere Ebene",
           TextMapId = "UI_TELEPORTPOINT_NAME_100103_1"
@@ -85285,15 +85301,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_TELEPORTPOINT_NAME_100103_2 = {
           ContentDE = "Nocturne-Echos: Sibylle",
           TextMapId = "UI_TELEPORTPOINT_NAME_100103_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TELEPORTPOINT_NAME_101101_1",
-    MaxKey = "UI_Team_PlayerInDungeon",
-    Loader = function()
-      return {
+        },
         UI_TELEPORTPOINT_NAME_101101_1 = {
           ContentDE = "Platz, Icelake-Vorstadt",
           TextMapId = "UI_TELEPORTPOINT_NAME_101101_1"
@@ -86085,7 +86093,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Team_Leave = {
           ContentDE = "Abandonar equipo",
           TextMapId = "UI_Team_Leave"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_PersonalData",
+    MaxKey = "UI_WEAPON_DESC_10208",
+    Loader = function()
+      return {
         UI_Team_PersonalData = {
           ContentDE = "Perfil",
           TextMapId = "UI_Team_PersonalData"
@@ -86093,15 +86109,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_Team_PlayerInDungeon = {
           ContentDE = "Jugador en una comisión",
           TextMapId = "UI_Team_PlayerInDungeon"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Team_PlayerInSpecaiDungeon",
-    MaxKey = "UI_WEAPON_DESC_10298",
-    Loader = function()
-      return {
+        },
         UI_Team_PlayerInSpecaiDungeon = {
           ContentDE = "El jugador está actualmente en una misión especial",
           TextMapId = "UI_Team_PlayerInSpecaiDungeon"
@@ -86887,7 +86895,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WEAPON_DESC_10208 = {
           ContentDE = "Eine Taube, die schwor, die Würde zu verteidigen, und jede Feder für den Frieden opfert.",
           TextMapId = "UI_WEAPON_DESC_10208"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_10209",
+    MaxKey = "UI_WORLDMAP_REGIONNAME_3",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_10209 = {
           ContentDE = "Die blutgetränkte Klinge sticht direkt ins Herz. Ehe die sengende Lava sich verfestigt, bleibt ein kurzer Moment, den man zur Flucht nutzen kann.",
           TextMapId = "UI_WEAPON_DESC_10209"
@@ -86895,15 +86911,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WEAPON_DESC_10298 = {
           ContentDE = "Eine Lanze, die mit den neuesten Verfahren der Oberflächenbehandlung veredelt wurde – beliebt bei unerschütterlichen Wachen, die standhaft ihre Stellung halten.",
           TextMapId = "UI_WEAPON_DESC_10298"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_10299",
-    MaxKey = "UI_WORLDMAP_TAB",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_10299 = {
           ContentDE = "Eine gewöhnliche Lanze. Aus dem billigsten Metall hergestellt, also ist es nicht schlimm, wenn sie zerbricht.",
           TextMapId = "UI_WEAPON_DESC_10299"
@@ -87695,7 +87703,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WORLDMAP_REGIONNAME_3 = {
           ContentDE = "Die Elysische Kirche",
           TextMapId = "UI_WORLDMAP_REGIONNAME_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WORLDMAP_RETURNHOMEBASE",
+    MaxKey = "UI_WuyoushengEvent_GoToEdit",
+    Loader = function()
+      return {
         UI_WORLDMAP_RETURNHOMEBASE = {
           ContentDE = "Kehre zur Raststätte zurück",
           TextMapId = "UI_WORLDMAP_RETURNHOMEBASE"
@@ -87703,15 +87719,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WORLDMAP_TAB = {
           ContentDE = "Teleportiere an diesen Ort",
           TextMapId = "UI_WORLDMAP_TAB"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WORLDMAP_TIMELINE_EX",
-    MaxKey = "UI_WuyoushengEvent_GuideDes2",
-    Loader = function()
-      return {
+        },
         UI_WORLDMAP_TIMELINE_EX = {
           ContentDE = "Wechsle zu Kapitel Dämmerung",
           TextMapId = "UI_WORLDMAP_TIMELINE_EX"
@@ -88503,7 +88511,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WuyoushengEvent_GoToEdit = {
           ContentDE = "Ir al Arsenal",
           TextMapId = "UI_WuyoushengEvent_GoToEdit"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WuyoushengEvent_GuideDes1",
+    MaxKey = "WeaponType_Pistol",
+    Loader = function()
+      return {
         UI_WuyoushengEvent_GuideDes1 = {
           ContentDE = "Derrota enemigos para subir de nivel a Wishen",
           TextMapId = "UI_WuyoushengEvent_GuideDes1"
@@ -88511,15 +88527,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         UI_WuyoushengEvent_GuideDes2 = {
           ContentDE = "Derrota al enemigo de alta amenaza",
           TextMapId = "UI_WuyoushengEvent_GuideDes2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WuyoushengEvent_LevelBuff",
-    MaxKey = "WeaponType_Shotgun",
-    Loader = function()
-      return {
+        },
         UI_WuyoushengEvent_LevelBuff = {
           ContentDE = "Efecto de etapa",
           TextMapId = "UI_WuyoushengEvent_LevelBuff"
@@ -89308,7 +89316,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         WeaponType_Pistol = {
           ContentDE = "Pistole",
           TextMapId = "WeaponType_Pistol"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WeaponType_Polearm",
+    MaxKey = "WikiText_40800301",
+    Loader = function()
+      return {
         WeaponType_Polearm = {
           ContentDE = "Stangenwaffe",
           TextMapId = "WeaponType_Polearm"
@@ -89316,15 +89332,7 @@ Algunas plataformas muestran fragmentos de una imagen.
         WeaponType_Shotgun = {
           ContentDE = "Schrotflinte",
           TextMapId = "WeaponType_Shotgun"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WeaponType_Sword",
-    MaxKey = "WikiText_40800303",
-    Loader = function()
-      return {
+        },
         WeaponType_Sword = {
           ContentDE = "Schwert",
           TextMapId = "WeaponType_Sword"
@@ -90116,7 +90124,15 @@ Algunas plataformas muestran fragmentos de una imagen.
         WikiText_40800301 = {
           ContentDE = "Die größte Stadt im Norden Hyperboreas. Südlich des Vidofnir-Gebirges gelegen, untersteht sie der Verwaltung der Provinz Cocytus. Ihren Namen verdankt die Stadt dem nahegelegenen Klagenden See, der aufgrund des rauen Klimas den Großteil des Jahres über zugefroren ist. Nur während der dreimonatigen „Tauperiode“ beginnt das Eis zu schmelzen.\n Gegründet während der Großen Migration von Dis I., dem ersten Herrscher des Imperiums, gehörte Icelake zu den frühesten Städten Hyperboreas. Über Jahrhunderte hinweg diente sie als Festungsstadt zur Sicherung der nördlichen Grenze des Imperiums.",
           TextMapId = "WikiText_40800301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40800302",
+    MaxKey = "voice_ch_char_Dafu_vo_topic_03_4",
+    Loader = function()
+      return {
         WikiText_40800302 = {
           ContentDE = "Vor etwa 150 Jahren erlebte Icelake durch einen Aufschwung der alchemistischen Forschung und den Fortschritt der Phoxichor-Technologie eine Blütezeit. Der nahegelegene Himmelbaum reicherte die örtlichen Phoxichor-Adern an und trieb so eine rasante industrielle Entwicklung sowie die Ausdehnung der Stadt voran. Heute jedoch sind die Adern nahezu erschöpft: Der einstige Wohlstand ist verblasst, und die ehemals florierende Industrie befindet sich im Niedergang.",
           TextMapId = "WikiText_40800302"
@@ -90126,15 +90142,7 @@ Algunas plataformas muestran fragmentos de una imagen.
 Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
  Die Innenstadt, auch als Altstadt bekannt, beherbergt die Ratshalle, die Alchemie-Akademie und das Hauptquartier der Legion. Zugang und Wohnrecht sind streng reglementiert: Nur Adlige, hochrangige Beamte, wohlhabende Kaufleute sowie Personen in ihrem Dienst ist der Zutritt gestattet.]],
           TextMapId = "WikiText_40800303"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40800304",
-    MaxKey = "voice_ch_char_Dafu_vo_topic_04_1",
-    Loader = function()
-      return {
+        },
         WikiText_40800304 = {
           ContentDE = "Die Elendsviertel der Stadt werden gemeinhin Mist Aken genannt – ein Ausdruck aus dem lokalen Dialekt, der „Nebelbezirk“ bedeutet. Das Gebiet liegt nahe den Abluftschächten der Kerninfrastruktur von Icelake und ist aufgrund der kontinuierlichen Emission von Abgasen dauerhaft in Dunst gehüllt. Obwohl die Umwelt erhebliche Gesundheitsrisiken birgt, haben die durch die Dämpfe verursachten leicht erhöhten Temperaturen Mist Aken paradoxerweise zu einem Zufluchtsort für körperlich schwache oder kälteempfindliche Charon gemacht. Trotz mangelhafter Strafverfolgung hat das weitgehende Fehlen des Einflusses der Solarian den Bezirk in mancher Hinsicht zum sichersten Ort für die Charon-Unterschicht in Icelake werden lassen.",
           TextMapId = "WikiText_40800304"
@@ -90923,7 +90931,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Dafu_vo_topic_03_4 = {
           ContentDE = "Die Grausamkeit des Todes beraubt die Menschen nicht nur ihres Lebens, sondern auch ihrer Würde.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_03_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Dafu_vo_topic_03_5",
+    MaxKey = "voice_ch_char_Kezhou_vo_topic_02_2",
+    Loader = function()
+      return {
         voice_ch_char_Dafu_vo_topic_03_5 = {
           ContentDE = "Ich hoffe ... wenn ihre Familien kommen, um sich von ihnen zu verabschieden, dass sie diese in Frieden ruhen sehen, so als würden sie schlafen ... Nachdem sie so lange voneinander getrennt waren, sollten keine Eltern ihr Kind mit schmerzerfülltem Gesicht sehen.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_03_5"
@@ -90931,15 +90947,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Dafu_vo_topic_04_1 = {
           ContentDE = "Ach, es ist nicht schlimm! ... Nun, zumindest ein bisschen ... Die Lektionen für Notfallfürsorge und Pflege sind nicht so schlimm. Aber die körperlichen Fitnesstests machen mir wirklich zu schaffen.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_04_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Dafu_vo_topic_04_2",
-    MaxKey = "voice_ch_char_Kezhou_vo_topic_02_4",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Dafu_vo_topic_04_2 = {
           ContentDE = "Obwohl ich früher als alle anderen aufstehe, um zusätzlich zu trainieren, bestehe ich gerade so die Tests ... Ach, mache dich nicht über mich lustig. Ausdauer zu entwickeln, ist viel schwerer, als zu lernen.",
           TextMapId = "voice_ch_char_Dafu_vo_topic_04_2"
@@ -91731,7 +91739,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Kezhou_vo_topic_02_2 = {
           ContentDE = "Ich bin mein ganzes Leben ein Freigeist gewesen. Immer wenn ich Ungerechtigkeit gesehen habe, habe ich mein Schwert gezogen. Ich wollte von meinem Meister und großem Bruder nur die Dinge hören, die mir in den Kram passten. Es ging zu einem Ohr rein und beim anderen wieder heraus. Warum sollte ich mich also von irgendwelchen Fesseln einschränken lassen?",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_02_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_topic_02_3",
+    MaxKey = "voice_ch_char_Nifu_vo_birthday",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_topic_02_3 = {
           ContentDE = "Es sind die Bedenken eines Schwertkämpfers: Nur als ein Beispiel ... Wenn du zuerst Schwertkunst erlernst, folgst du den Schwertkampfanweisungen Bewegung für Bewegung. Nicht wahr? Gegen gewöhnliche Gegner reicht das aus. Dein Schwert bewegt sich instinktiv.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_02_3"
@@ -91739,15 +91755,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Kezhou_vo_topic_02_4 = {
           ContentDE = "Aber wenn du zu starr an der Anweisungen festhältst und nicht spontan reagieren kannst, ist dein Schwert nicht mehr wert als ein Stück Schrott – stumpf, unbeholfen, nutzlos. Begegnet dir etwas Unerwartetes, fuchtelst du herum wie ein kopfloses Huhn.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_02_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_topic_02_5",
-    MaxKey = "voice_ch_char_Nifu_vo_companio_02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_topic_02_5 = {
           ContentDE = "Meiner Meinung nach ist Huaxu wie ein unbeholfener Schwertkämpfer, der steif an den Neun Kapiteln von Dafeng festhält. Sie werden noch nicht einmal mit einem Herumstreuner wie mir fertig. Was für eine Chance haben sie gegen eine echte Bedrohung? Sie werden früher oder später scheitern.",
           TextMapId = "voice_ch_char_Kezhou_vo_topic_02_5"
@@ -92539,7 +92547,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Nifu_vo_birthday = {
           ContentDE = "Kind, du hast ein weiteres Jahr heil überstanden. Das freut mich von Herzen.\nKomm, wünsch dir etwas. In deinem Alter solltest du voller Sehnsucht und Hoffnung in die Zukunft blicken.\nKein Fluss fließt ewig ruhig. Doch selbst wenn dich Dornen verletzen oder dich Irrwege in die Irre führen, wünsche ich dir, dass du mutig weitergehst – und eines Tages, wenn du das Ufer erreichst, deine gesamte Reise von Herzen lieben kannst.\nWenn du dich verloren oder hilflos fühlst, oder einfach nur eine Geschichte hören möchtest, werde ich dich immer mit offenen Armen empfangen. Ich werde für dich beten, dich segnen ... für immer.",
           TextMapId = "voice_ch_char_Nifu_vo_birthday"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_companio_01",
+    MaxKey = "voice_ch_char_Tuosi_vo_battleidle",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_companio_01 = {
           ContentDE = "Man kann seiner Vergangenheit nicht wirklich entkommen. Eines Tages wirst du dich ihr stellen müssen ... Ich hoffe, bis dahin hast du die Kraft, ihr entgegenzutreten.",
           TextMapId = "voice_ch_char_Nifu_vo_companio_01"
@@ -92547,15 +92563,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Nifu_vo_companio_02 = {
           ContentDE = "Mädchen, du trägst eine Aura, die mir sehr vertraut ist. Bist du vielleicht, so wie ich, jemand aus alter Zeit?",
           TextMapId = "voice_ch_char_Nifu_vo_companio_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_companio_03",
-    MaxKey = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_companio_03 = {
           ContentDE = "Hallo, Kind. Hehe ... ja, wir tragen ähnliche Hörner. Vielleicht verbindet uns etwas aus der Vergangenheit. Aber das ist keine Geschichte von dir. Leg sie beiseite und folge dem Weg, den dein Herz begehrt.",
           TextMapId = "voice_ch_char_Nifu_vo_companio_03"
@@ -93347,7 +93355,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Tuosi_vo_battleidle = {
           ContentDE = "Wie sah ich nur aus, frage ich mich ...",
           TextMapId = "voice_ch_char_Tuosi_vo_battleidle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Tuosi_vo_battlestart",
+    MaxKey = "voice_ch_char_Zhangyu_vo_be_hit_r01",
+    Loader = function()
+      return {
         voice_ch_char_Tuosi_vo_battlestart = {
           ContentDE = "Nun präsentieren wir eine Geschichte voller Abenteuer und Pracht.",
           TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
@@ -93355,15 +93371,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Tuosi_vo_be_hit_heavy_r01 = {
           ContentDE = "Mir geht es gut.",
           TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Tuosi_vo_be_hit_heavy_r02",
-    MaxKey = "voice_ch_char_Zhangyu_vo_birthday",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Tuosi_vo_be_hit_heavy_r02 = {
           ContentDE = "Ganz schön tragisch.",
           TextMapId = "voice_ch_char_Tuosi_vo_be_hit_heavy_r02"
@@ -94157,7 +94165,15 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhangyu_vo_be_hit_r01 = {
           ContentDE = "Aua!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhangyu_vo_be_hit_r02",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Zhangyu_vo_be_hit_r02 = {
           ContentDE = "Ugh!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"
@@ -94165,15 +94181,7 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhangyu_vo_birthday = {
           ContentDE = "Ich habe meinen Geburtstag noch nie gefeiert, also weiß ich nicht genau, was man da sagen soll. Also wünsche ich dir, dass du niemals erfahren musst, wie es ist, zu hungern oder zum Überleben zu stehlen. Wie war das?!",
           TextMapId = "voice_ch_char_Zhangyu_vo_birthday"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Zhangyu_vo_companio_01",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Zhangyu_vo_companio_01 = {
           ContentDE = "Du willst mich fangen? Aber ich bin doch keine Böse! Ich stehle nur von anderen Dieben. Das ist keine große Sache ... Hey, bleib weg von mir! Aua! Das hat gebrannt!",
           TextMapId = "voice_ch_char_Zhangyu_vo_companio_01"

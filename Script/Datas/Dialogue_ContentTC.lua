@@ -37500,7 +37500,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10043609] = {
           Content = "好好，我都说，为什么都说。",
-          ContentTC = "好好，我都說，為什麼都說。",
+          ContentTC = "好好，我都說，我什麼都說。",
           DialogueId = 10043609,
           GUID = "1924A39A",
           NextDialogue = 10043611,

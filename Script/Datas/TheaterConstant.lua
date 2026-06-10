@@ -57,7 +57,7 @@ return ReadOnly("TheaterConstant", {
     ConstantName = "Reward2ReqNum",
     ConstantValue = 1
   },
-  RewardMax = {ConstantName = "RewardMax", ConstantValue = 5},
+  RewardMax = {ConstantName = "RewardMax", ConstantValue = 10},
   SettleStepNum = {
     ConstantName = "SettleStepNum",
     ConstantValue = 12

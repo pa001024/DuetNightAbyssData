@@ -141,7 +141,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 12
   },
   [13] = {
-    ConditionID = 8044,
+    ConditionID = 4220,
     Des = "Target_Theater_13",
     RewardId = 110515,
     RewardViewId = 1030099,

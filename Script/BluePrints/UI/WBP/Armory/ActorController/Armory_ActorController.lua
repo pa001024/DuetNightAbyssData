@@ -1043,6 +1043,9 @@ function M:GetAvatar()
 end
 
 function M:UpdateAudioListener()
+  if self.bDestructed then
+    return
+  end
   if self.ArmoryPlayer then
     self:SetAudioListener(self.ArmoryPlayer.AudioListener)
   else

@@ -41,7 +41,7 @@ function M:InitItemInfo()
   self:SetBannerItemIcon(self.Image_ItemIcon02, self.SwitchBannerList[self.CurrentIndex].BannerIcon)
   self:SetItemInfo()
   self.List_Progress:ClearListItems()
-  if #self.SwitchBannerList > 1 then
+  if #self.SwitchBannerList >= 1 then
     for index, v in ipairs(self.SwitchBannerList) do
       local Content = NewObject(UIUtils.GetCommonItemContentClass())
       if index == self.CurrentIndex then

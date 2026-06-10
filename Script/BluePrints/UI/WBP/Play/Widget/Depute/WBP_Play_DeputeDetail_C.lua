@@ -50,7 +50,7 @@ function M:Construct()
   self:AddDispatcher(EventID.FoucsDungeonSelectLevel, self, self.OnSelectCellFocus)
   self:AddDispatcher(EventID.OnDisableEscOnDungeonLoading, self, self.DisableEscOnDungeonLoading)
   TeamController:RegisterEvent(self, function(self, EventId, ...)
-    if EventId == TeamCommon.EventId.TeamOnInit or EventId == TeamCommon.EventId.TeamLeave then
+    if EventId == TeamCommon.EventId.TeamOnInit or EventId == TeamCommon.EventId.TeamLeave or EventId == TeamCommon.EventId.TeamOnChangeLeader then
       self:RefreshBtnState()
     end
   end)
@@ -2397,6 +2397,7 @@ function M:RefreshBtnState(bInIsMatching)
     IsMatching = self:IsMatching()
   end
   local bIsInTeam = Avatar:IsInTeam()
+  local teamLeaderId = bIsInTeam and TeamController:GetModel():GetTeamLeaderId() or ""
   local _, IsEliteRushDungeon = self:CheckDungeonType(self.CurSelectedDungeonId)
   self.ContinuousCombat = IsEliteRushDungeon
   local ShowDouble = self:IsDoubleMod()
@@ -2420,6 +2421,7 @@ function M:RefreshBtnState(bInIsMatching)
     tostring(ShowDouble or false),
     tostring(RemainOK),
     tostring(bIsInTeam),
+    tostring(teamLeaderId),
     tostring(self.ContinuousCombat),
     tostring(self.isIron or false)
   }, "|")

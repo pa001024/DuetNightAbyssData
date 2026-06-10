@@ -346,12 +346,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1775199040207882592",
-            startPort = "QuestStart",
-            endQuest = "1775201272468889320",
-            endPort = "In"
-          },
-          {
             startQuest = "1775201316578889730",
             startPort = "Out",
             endQuest = "1775201337739890144",
@@ -386,6 +380,18 @@ return {
             startPort = "Out",
             endQuest = "1775201316578889730",
             endPort = "In"
+          },
+          {
+            startQuest = "1775199040207882592",
+            startPort = "QuestStart",
+            endQuest = "17809925984863214",
+            endPort = "In"
+          },
+          {
+            startQuest = "17809925984863214",
+            startPort = "Out",
+            endQuest = "1775201272468889320",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -414,7 +420,7 @@ return {
             key = "1775201272468889320",
             type = "TalkNode",
             name = "白大手一挥",
-            pos = {x = 1190, y = 298},
+            pos = {x = 1190.9375, y = 298},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -596,6 +602,18 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {322480404}
+            }
+          },
+          ["17809925984863214"] = {
+            key = "17809925984863214",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1097.5832748948105, y = 106.10123221799233},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 242480427,
+              GuideType = "M",
+              GuidePointName = "Mechanism_TalkStageNew_20040201_242480427"
             }
           }
         },

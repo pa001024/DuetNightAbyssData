@@ -121,7 +121,7 @@
     "id": 303,
     "icon": "Common",
     "n": "Andante furioso : L’oiseau avide de mana",
-    "d": "Quand un allié inflige des DGT d’arme, le taux de critique de cette attaque augmente de 20% par Effet supplémentaire élémentaire présent sur la cible (jusqu’à 4 cumuls).",
+    "d": "Quand un allié inflige des DGT d’arme, le Taux CRIT de cette attaque augmente de 20% par Effet supplémentaire élémentaire présent sur la cible (jusqu’à 4 cumuls).",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },

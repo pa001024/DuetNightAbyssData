@@ -25056,7 +25056,7 @@ local Data = {
           TextMapId = "Message_Guide_Alt"
         },
         Message_Guide_Appearance_1 = {
-          ContentKR = "<H>외형</>이 해제되었습니다.",
+          ContentKR = "<H>외형</>이 해제됐어.",
           TextMapId = "Message_Guide_Appearance_1"
         },
         Message_Guide_Appearance_2 = {
@@ -25836,7 +25836,7 @@ local Data = {
           TextMapId = "Message_Guide_GuildQuest_3"
         },
         Message_Guide_Guild_1 = {
-          ContentKR = "<H>길드</>가 해제되었습니다.",
+          ContentKR = "<H>길드</>가 해제됐어.",
           TextMapId = "Message_Guide_Guild_1"
         },
         Message_Guide_Guild_2 = {
@@ -25876,7 +25876,7 @@ local Data = {
           TextMapId = "Message_Guide_HardBoss_5_Pad"
         },
         Message_Guide_Hyper_1 = {
-          ContentKR = "<H>재앙 무기</>는 고유한 성장 루트와 잠재력 효과를 지닙니다.",
+          ContentKR = "<H>재앙 무기</>는 고유한 성장 루트와 잠재력 효과를 갖고 있다네.",
           TextMapId = "Message_Guide_Hyper_1"
         },
         Message_Guide_Hyper_2 = {
@@ -25964,7 +25964,7 @@ local Data = {
           TextMapId = "Message_Guide_Intron_7_Pad"
         },
         Message_Guide_IronExp_1 = {
-          ContentKR = "<H>심층 의뢰</>에서 재앙 무기 재료를 획득할 수 있습니다.",
+          ContentKR = "<H>심층 의뢰</>에서 재앙 무기 재료를 획득할 수 있어.",
           TextMapId = "Message_Guide_IronExp_1"
         },
         Message_Guide_IronExp_10 = {

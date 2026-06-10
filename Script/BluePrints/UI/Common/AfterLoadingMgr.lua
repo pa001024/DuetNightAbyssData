@@ -127,6 +127,13 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
               local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
               local EventDungeonId = ExitDungeonInfo.EventDungeonId
               PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
+            else
+              GWorld.GameInstance:AddTimer(0.1, function()
+                local BattleView = UIManager():GetUIObj("BattleMain")
+                if BattleView then
+                  BattleView:Show("Temp1.4Fix")
+                end
+              end)
             end
           elseif ExitDungeonInfo.Type == "AsyncCombat" then
             local CurTabIndex = ExitDungeonInfo.CurTabIndex
