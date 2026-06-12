@@ -1107,7 +1107,7 @@ return ReadOnly("EventMain", {
     EventBgBPPathPC = "/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_Bg.WBP_Activity_Coop_Bg",
     EventBgSound = "/ui/activity/lianmeiyanyi_entrance_loop",
     EventDes = "UI_AsyncCombat_Tips",
-    EventEndTime = LocalTimeProxy(1783544400),
+    EventEndTime = LocalTimeProxy(1785142800),
     EventId = 121001,
     EventName = "UI_AsyncCombat_Name",
     EventNameBPPath = "/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_CoopTitle.WBP_Activity_CoopTitle",

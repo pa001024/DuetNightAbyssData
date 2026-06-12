@@ -236,7 +236,7 @@ return {
             key = "177874504266413632400",
             type = "TalkNode",
             name = "过场-希尔妲出手相救",
-            pos = {x = 2319.1175979233485, y = 310.4810021675379},
+            pos = {x = 2319.1175979233485, y = 309.17665434145096},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -250,7 +250,7 @@ return {
               ShowSkipButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
-              PauseGameGlobal = true,
+              PauseGameGlobal = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,

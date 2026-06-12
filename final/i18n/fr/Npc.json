@@ -150,7 +150,7 @@
       },
       {
         "id": 90030603,
-        "content": "{性别:Comme ça, même si je ne suis pas là… tu ne te sentiras plus seul.|Comme ça, même si je ne suis pas là… tu ne te sentiras plus seule. }",
+        "content": "{性别:Comme ça, même si je ne suis pas là... tu ne te sentiras plus seul.|Comme ça, même si je ne suis pas là... tu ne te sentiras plus seule. }",
         "voice": "char/Heitao/vo_topic_05_2",
         "npc": 81101,
         "options": [
@@ -184,7 +184,7 @@
       },
       {
         "id": 90030304,
-        "content": "Je me souviens, en hiver, tes mains étaient toujours gelées… Viens, donne-moi tes mains, je vais te les réchauffer.",
+        "content": "Je me souviens, en hiver, tes mains étaient toujours gelées... Viens, donne-moi tes mains, je vais te les réchauffer.",
         "voice": "char/Heitao/vo_topic_03_2",
         "npc": 81101,
         "options": [
@@ -201,7 +201,7 @@
       },
       {
         "id": 90030404,
-        "content": "Oui, moi aussi… plus que tout. Puissions-nous un jour nous retrouver… pour de vrai.",
+        "content": "Oui, moi aussi... plus que tout. Puissions-nous un jour nous retrouver... pour de vrai.",
         "voice": "char/Heitao/vo_topic_01_2",
         "npc": 81101,
         "options": [
@@ -32162,13 +32162,13 @@
     "talks": [
       {
         "id": 51126001,
-        "content": "Maman me ment, c’est sûr. Elle disait que quand je serais grand, j’en aurais. L’an dernier elle disait « l’an prochain », et avant encore « l’an prochain »... et toujours rien...",
+        "content": "Maman me ment, c’est sûr. Elle disait que quand je serais grande, j’en aurais. L’an dernier elle disait « l’an prochain », et avant encore « l’an prochain »... et toujours rien...",
         "npc": 701045,
         "next": 51126002
       },
       {
         "id": 51126002,
-        "content": "Et si elles ne poussent pas ? Non... je ne veux pas être un Enfant de la Terre. Je veux devenir un glorieux Descendant draconique !",
+        "content": "Et si elles ne poussent pas ? Non... je ne veux pas être un Enfant de la Terre. Je veux devenir une glorieuse Descendante draconique !",
         "npc": 701045,
         "options": [
           {
@@ -32195,7 +32195,7 @@
       },
       {
         "id": 51126004,
-        "content": "Pas bien du tout ! Les Enfants de la Terres n’ont pas de magie ! Seuls les Descendants draconiques sont puissants, et seuls eux peuvent servir le Dragon d’Argent à Huaxu !",
+        "content": "Pas bien du tout ! Les Enfants de la Terre n’ont pas de magie ! Seuls les Descendants draconiques sont puissants, et seuls eux peuvent servir le Dragon d’Argent à Huaxu !",
         "npc": 701045
       },
       {

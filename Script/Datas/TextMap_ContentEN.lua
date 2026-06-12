@@ -88257,7 +88257,7 @@ The list below shows how many points each item awards:]],
           TextMapId = "UI_Hair_Name"
         },
         UI_HardBossDg_BattleStart = {
-          ContentEN = "[Nocturnal Echoes",
+          ContentEN = "Nocturnal Echoes",
           TextMapId = "UI_HardBossDg_BattleStart"
         },
         UI_HardBossDg_LoadingTimeOut = {

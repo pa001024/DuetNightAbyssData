@@ -1817,6 +1817,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_SHOWNPC_DESC_SCENE2",
     WildcardClassification = "Story"
   },
+  UI_SPECIALPOP_COMMON_TITLE = {
+    TextMapId = "UI_SPECIALPOP_COMMON_TITLE",
+    WildcardClassification = "Story"
+  },
   UI_SendGift_Pay1 = {
     TextMapId = "UI_SendGift_Pay1",
     WildcardClassification = "Story"

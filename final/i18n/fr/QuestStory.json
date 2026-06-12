@@ -2050,7 +2050,7 @@
             "dialogues": [
               {
                 "id": 10101701,
-                "content": "<I>Trop de choses se sont enchaînées... Des rêves étranges, ce mystérieux manteau blanc, Sibylle, et \"n° 0\"... Tout semble lié, mais je n’arrive pas à assembler les pièces.</>",
+                "content": "<I>Trop de choses se sont enchaînées... Des rêves étranges, ce mystérieux manteau blanc, Sibylle, et « n° 0 »... Tout semble lié, mais je n’arrive pas à assembler les pièces.</>",
                 "voice": "story/1002/101017/1949DE52",
                 "npc": 100001,
                 "next": 10101702
@@ -67515,7 +67515,7 @@
               },
               {
                 "id": 20000610,
-                "content": "Regarde bien ! J’ai des cornes démoniaques sur la tête — aucun autre Luno n’a ça !",
+                "content": "Regarde bien ! J’ai des cornes démoniaques sur la tête — aucune autre Luno n’a ça !",
                 "voice": "story/2001/200006/3211C614",
                 "npc": 200002,
                 "next": 20000611
@@ -94412,7 +94412,7 @@
       {
         "id": 20031003,
         "name": "Examiner les environs",
-        "desc": "Snow et vous entendez des appels au loin. Quelqu’un semble en difficulté… allez lui porter secours.",
+        "desc": "Snow et vous entendez des appels au loin. Quelqu’un semble en difficulté... allez lui porter secours.",
         "nodes": [
           {
             "id": "17674952875645808",

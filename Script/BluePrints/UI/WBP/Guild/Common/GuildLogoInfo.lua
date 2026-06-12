@@ -19,20 +19,28 @@ function GuildLogoInfo.BuildGuildLogoInfo(LogoColor, LogoMat, LogoIcon, BgColor,
 end
 
 function GuildLogoInfo.New(LogoStr)
-  if not LogoStr then
-    return nil
+  if not LogoStr or "" == LogoStr then
+    return GuildLogoInfo.Default()
+  end
+  local Parts = string.split(LogoStr, "|")
+  local Logo = Parts[1]
+  local Bg = Parts[2]
+  if not Logo or not Bg then
+    return GuildLogoInfo.Default()
+  end
+  local LogoParts = string.split(Logo, ",")
+  local BgParts = string.split(Bg, ",")
+  if 3 ~= #LogoParts or 3 ~= #BgParts then
+    return GuildLogoInfo.Default()
   end
   local NewObj = {}
   setmetatable(NewObj, GuildLogoInfo)
-  local Logo, Bg = table.unpack(string.split(LogoStr, "|"))
-  NewObj.LogoColor, NewObj.LogoMat, NewObj.LogoIcon = table.unpack(string.split(Logo, ","))
-  NewObj.BgColor, NewObj.BgMat, NewObj.BgIcon = table.unpack(string.split(Bg, ","))
-  NewObj.LogoColor = tonumber(NewObj.LogoColor)
-  NewObj.LogoMat = tonumber(NewObj.LogoMat)
-  NewObj.LogoIcon = tonumber(NewObj.LogoIcon)
-  NewObj.BgColor = tonumber(NewObj.BgColor)
-  NewObj.BgMat = tonumber(NewObj.BgMat)
-  NewObj.BgIcon = tonumber(NewObj.BgIcon)
+  NewObj.LogoColor = tonumber(LogoParts[1])
+  NewObj.LogoMat = tonumber(LogoParts[2])
+  NewObj.LogoIcon = tonumber(LogoParts[3])
+  NewObj.BgColor = tonumber(BgParts[1])
+  NewObj.BgMat = tonumber(BgParts[2])
+  NewObj.BgIcon = tonumber(BgParts[3])
   return NewObj
 end
 

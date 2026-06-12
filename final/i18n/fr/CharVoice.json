@@ -25,7 +25,7 @@
     "charId": 1101,
     "name": "DiscussionPourquoi es-tu ici ?II",
     "res": "char_Heitao_vo_topic_01_2",
-    "text": "Oui, moi aussi… plus que tout. Puissions-nous un jour nous retrouver… pour de vrai."
+    "text": "Oui, moi aussi... plus que tout. Puissions-nous un jour nous retrouver... pour de vrai."
   },
   {
     "id": 10005,
@@ -53,7 +53,7 @@
     "charId": 1101,
     "name": "DiscussionÀ propos de GivrelacII",
     "res": "char_Heitao_vo_topic_03_2",
-    "text": "Je me souviens, en hiver, tes mains étaient toujours gelées… Viens, donne-moi tes mains, je vais te les réchauffer."
+    "text": "Je me souviens, en hiver, tes mains étaient toujours gelées... Viens, donne-moi tes mains, je vais te les réchauffer."
   },
   {
     "id": 10009,
@@ -88,7 +88,7 @@
     "charId": 1101,
     "name": "DiscussionÀ propos d’une nouvelle vieII",
     "res": "char_Heitao_vo_topic_05_2",
-    "text": "{性别:Comme ça, même si je ne suis pas là… tu ne te sentiras plus seul.|Comme ça, même si je ne suis pas là… tu ne te sentiras plus seule. }"
+    "text": "{性别:Comme ça, même si je ne suis pas là... tu ne te sentiras plus seul.|Comme ça, même si je ne suis pas là... tu ne te sentiras plus seule. }"
   },
   {
     "id": 10014,

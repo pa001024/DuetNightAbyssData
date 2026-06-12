@@ -93,7 +93,7 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
     if bNotInvitable and ShouldCheckInviteTeam then
       RemoveActionById(ActionIds, MenuActionId.InviteTeam)
     end
-    if (Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend) and FriendModel:GetFriendDict()[self._AvatarInfo.Uid] then
+    if (Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend) and FriendModel:GetFriendDict()[self._AvatarInfo.Uid] and IsValid(ChatController:GetView()) then
       RemoveActionById(ActionIds, MenuActionId.AddFriendOrChat)
     end
   end

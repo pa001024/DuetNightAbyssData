@@ -7561,7 +7561,7 @@ Une <H>lanterne</>.]],
         },
         [10011705] = {
           Content = "十几年过去了，确实比较困难……不过，海上分队已经拦截了逃亡村民的船只，说不定能问出什——",
-          ContentFR = "Dix ans de recherches, évidemment que c’est compliqué... Mais nos unités maritimes ont intercepté plusieurs bateaux de fuyards. Avec un peu de chance, on pourra leur arracher quelques",
+          ContentFR = "Dix ans de recherches, évidemment que c’est compliqué... Mais nos unités maritimes ont intercepté plusieurs bateaux de fuyards. Avec un peu de chance, on pourra leur arracher quelques—",
           DialogueId = 10011705,
           DisableMouth = 1,
           Duration = 9.5,
@@ -49300,7 +49300,7 @@ PlayAnimation{ActorId{200003},AnimationId{"Think_Start"},Duration{1}}
         [10100819] = {
           Camera = "-3.067383,-50.891113,144.484375,0.00118,-1.90149,144.27504,35.000008,98.568146,false,Manual,2.8,16:9 Digital Film",
           Content = "（嗯……果然，回去并不是件容易事。要先想办法准备一笔钱，以及，刚才那位士兵提到的“通行证”。）",
-          ContentFR = "<I>... Donc rentrer n’est pas simple. Il me faut d’abord de l’argent... et ce fameux \"permis de circulation\" dont parlait le soldat.</>",
+          ContentFR = "<I>... Donc rentrer n’est pas simple. Il me faut d’abord de l’argent... et ce fameux « permis de circulation » dont parlait le soldat.</>",
           DialogueId = 10100819,
           DisableMouth = 1,
           ExStoryInfo = "Player",
@@ -50783,7 +50783,7 @@ CameraMoveTo{_delay{8},TargetPosition{"-37.588226,45.485596,139.596191,0.001205,
           Camera = "246.411194,114.218262,109.373657,0.001183,-13.29721,-168.309631,50.000011,93.339378,false,Manual,5.0,16:9 Digital Film",
           CameraBlendCurve = "easeInQuad",
           Content = "（太多事，发生了太多事......奇怪的梦、神秘的白斗篷、西比尔和“零号”……它们似乎有着某种关联，但我无法理清它们的头绪。）",
-          ContentFR = "<I>Trop de choses se sont enchaînées... Des rêves étranges, ce mystérieux manteau blanc, Sibylle, et \"n° 0\"... Tout semble lié, mais je n’arrive pas à assembler les pièces.</>",
+          ContentFR = "<I>Trop de choses se sont enchaînées... Des rêves étranges, ce mystérieux manteau blanc, Sibylle, et « n° 0 »... Tout semble lié, mais je n’arrive pas à assembler les pièces.</>",
           DialogueId = 10101701,
           DisableMouth = 1,
           ExStoryInfo = "Player",
@@ -52153,7 +52153,7 @@ PlayAnimation{ActorId{200003},AnimationId{"SpecialUnInterested_Start"},Duration{
         [10102507] = {
           Camera = "81.471924,-18.664062,159.626953,0.000213,-10.598773,-163.809616,48.734837,175.980392,false,Manual,4.0,16:9 Digital Film",
           Content = "那能不能稍微……那个，便宜点……或者用其他的东西交换也可以！我想想，那句话怎么说来着——",
-          ContentFR = "Alors… pourriez-vous au moins… proposer un petit arrangement… ou accepter un autre échange ? Attendez, comment disait-on déjà...",
+          ContentFR = "Alors... pourriez-vous au moins... proposer un petit arrangement... ou accepter un autre échange ? Attendez, comment disait-on déjà...",
           DialogueId = 10102507,
           GUID = "194A628E",
           NextDialogue = 10102508,
@@ -151590,7 +151590,7 @@ CameraMoveTo{_delay{4.7},TargetPosition{"-287.599518,-128.604248,69.15966,0.0000
         [20000610] = {
           Camera = "-124.017761,-72.534912,96.158783,0.000383,-4.797825,32.343403,30.0,153.148956,false,Manual,3.33564,16:9 Digital Film",
           Content = "那个那个，你能看到吧！白头上长着恶魔的犄角，和所有皎皎都不一样！",
-          ContentFR = "Regarde bien ! J’ai des cornes démoniaques sur la tête — aucun autre Luno n’a ça !",
+          ContentFR = "Regarde bien ! J’ai des cornes démoniaques sur la tête — aucune autre Luno n’a ça !",
           DialogueId = 20000610,
           Duration = 3,
           FacialId = {
@@ -211367,7 +211367,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51126001] = {
           Content = "妈妈说的都是骗我的，什么叫我大了就可以长出角，前年说去年长，去年说今年长。结果还是什么都没有……",
-          ContentFR = "Maman me ment, c’est sûr. Elle disait que quand je serais grand, j’en aurais. L’an dernier elle disait « l’an prochain », et avant encore « l’an prochain »... et toujours rien...",
+          ContentFR = "Maman me ment, c’est sûr. Elle disait que quand je serais grande, j’en aurais. L’an dernier elle disait « l’an prochain », et avant encore « l’an prochain »... et toujours rien...",
           DialogueId = 51126001,
           GUID = "7FFD138A",
           NextDialogue = 51126002,
@@ -211375,7 +211375,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51126002] = {
           Content = "难道我根本长不出角吗？不要啊，我不想当抟土氏，我想当光荣的有龙氏。",
-          ContentFR = "Et si elles ne poussent pas ? Non... je ne veux pas être un Enfant de la Terre. Je veux devenir un glorieux Descendant draconique !",
+          ContentFR = "Et si elles ne poussent pas ? Non... je ne veux pas être un Enfant de la Terre. Je veux devenir une glorieuse Descendante draconique !",
           DialogueId = 51126002,
           GUID = "7FFD13B4",
           NextOptions = {
@@ -211394,7 +211394,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51126004] = {
           Content = "不好不好，当然不好，只有成为有龙才有强大的魔法，只有成为有龙才能在华胥为神君效力。",
-          ContentFR = "Pas bien du tout ! Les Enfants de la Terres n’ont pas de magie ! Seuls les Descendants draconiques sont puissants, et seuls eux peuvent servir le Dragon d’Argent à Huaxu !",
+          ContentFR = "Pas bien du tout ! Les Enfants de la Terre n’ont pas de magie ! Seuls les Descendants draconiques sont puissants, et seuls eux peuvent servir le Dragon d’Argent à Huaxu !",
           DialogueId = 51126004,
           GUID = "7FFD1408",
           SpeakNpcId = 701045
@@ -211562,7 +211562,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51126025] = {
           Content = "好了好了，我骗你的，你迟早会长出角，成为有龙氏。",
-          ContentFR = "D’accord, d’accord... je plaisantais. Un jour, tu feras pousser des cornes et tu deviendras un Descendant draconique.",
+          ContentFR = "D’accord, d’accord... je plaisantais. Un jour, tu feras pousser des cornes et tu deviendras une Descendante draconique.",
           DialogueId = 51126025,
           GUID = "7FFD177A",
           NextDialogue = 51126026,
@@ -211570,7 +211570,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51126026] = {
           Content = "哼……这就对了嘛，成为有龙氏是我的梦想……",
-          ContentFR = "Hmpf... voilà qui est mieux. Devenir un Descendant draconique, c’est mon rêve...",
+          ContentFR = "<I>Hmpf...</> voilà qui est mieux. Devenir une Descendante draconique, c’est mon rêve...",
           DialogueId = 51126026,
           GUID = "7FFD17A4",
           SpeakNpcId = 701045
@@ -327183,7 +327183,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [90030304] = {
           Content = "以前每到冬天，你的手都会变得很凉……来，手给我，我帮你暖一暖。",
-          ContentFR = "Je me souviens, en hiver, tes mains étaient toujours gelées… Viens, donne-moi tes mains, je vais te les réchauffer.",
+          ContentFR = "Je me souviens, en hiver, tes mains étaient toujours gelées... Viens, donne-moi tes mains, je vais te les réchauffer.",
           DialogueId = 90030304,
           GUID = "E161A46C",
           NextOptions = {
@@ -327223,7 +327223,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [90030404] = {
           Content = "嗯，我也想，非常想……但愿有一天，我们能够真正重逢。",
-          ContentFR = "Oui, moi aussi… plus que tout. Puissions-nous un jour nous retrouver… pour de vrai.",
+          ContentFR = "Oui, moi aussi... plus que tout. Puissions-nous un jour nous retrouver... pour de vrai.",
           DialogueId = 90030404,
           GUID = "E161B528",
           NextOptions = {
@@ -327293,7 +327293,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [90030603] = {
           Content = "这样一来，就算我不在你身边，你也不会觉得孤单了。",
-          ContentFR = "{性别:Comme ça, même si je ne suis pas là… tu ne te sentiras plus seul.|Comme ça, même si je ne suis pas là… tu ne te sentiras plus seule. }",
+          ContentFR = "{性别:Comme ça, même si je ne suis pas là... tu ne te sentiras plus seul.|Comme ça, même si je ne suis pas là... tu ne te sentiras plus seule. }",
           DialogueId = 90030603,
           GUID = "E161D5A4",
           NextOptions = {

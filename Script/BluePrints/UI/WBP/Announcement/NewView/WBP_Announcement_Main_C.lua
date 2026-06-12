@@ -69,9 +69,17 @@ function M:Construct()
     if self.bWebFailed then
       return
     end
-    self:SetWebContentVisible(false)
-    self:SetActiveWidgetIndexWrap(2)
-    self:SetLoadingVisible(true)
+    if UGameplayStatics.GetPlatformName() ~= "IOS" then
+      if not IsValid(self) then
+        return
+      end
+      if self.bWebFailed then
+        return
+      end
+      self:SetWebContentVisible(false)
+      self:SetActiveWidgetIndexWrap(2)
+      self:SetLoadingVisible(true)
+    end
   end)
   self.Btn_Refresh.OnClicked:Add(self, self.ClickRetry)
   self.Btn_Close:Init("Close", self, function()

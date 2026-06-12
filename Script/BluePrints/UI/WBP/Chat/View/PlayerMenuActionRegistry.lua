@@ -105,6 +105,7 @@ local function BuildAddFriendOrChat(Context)
       Content.Text = GText("UI_Chat_SendMsg")
       
       function Content.Callback()
+        ChatController:OpenView(self)
         ChatController:SelectPlayerToChat(TargetUid)
         CloseMenu(Context)
       end
