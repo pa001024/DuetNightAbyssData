@@ -699,7 +699,6 @@ class BaseProcessor:
             dialogue_text = self.get_dialogue_content(current_dialogue_id, language)
             if not dialogue_text:
                 continue
-
             dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
             voice_name = self.get_dialogue_voice_name(current_dialogue_id, language)
             if voice_name:

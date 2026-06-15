@@ -728,7 +728,9 @@ class QuestStoryProcessor(BaseProcessor):
             dialogue_chain = self.get_dialogue_chain_from_flow_asset(
                 flow_asset_path, language
             )
-        if not dialogue_chain and first_dialogue_id:
+            if dialogue_chain is not None:
+                return dialogue_chain
+        if first_dialogue_id:
             dialogue_chain = self.get_dialogue_chain(first_dialogue_id, language)
         return dialogue_chain
 
@@ -846,12 +848,12 @@ class QuestStoryProcessor(BaseProcessor):
 
         return False
 
-    def process_quest_nodes_order(self, story_data, quest_id):
-        """处理任务节点的顺序
+    def _process_story_nodes_order(self, story_data, quest_id=None):
+        """处理故事节点的顺序。
 
         Args:
             story_data: 故事数据
-            quest_id: 任务ID
+            quest_id: 任务ID，传入 None 时不做任务归属过滤。
 
         Returns:
             list: 按顺序排列的节点列表
@@ -863,11 +865,15 @@ class QuestStoryProcessor(BaseProcessor):
             return nodes
 
         story_node_data = story_data["storyNodeData"]
+        all_quest_next_map = {}
+        all_quest_incoming_map = {}
 
         # 遍历所有故事节点
         for node_key, node_data in story_node_data.items():
-            # 检查该故事节点是否包含指定的 QuestId
-            if not self._story_node_matches_quest(node_data, quest_id):
+            # 仅在指定 quest_id 时做任务归属过滤
+            if quest_id is not None and not self._story_node_matches_quest(
+                node_data, quest_id
+            ):
                 continue
 
             # 优先检查 questNodeData.nodeData 中的节点
@@ -989,11 +995,26 @@ class QuestStoryProcessor(BaseProcessor):
                     current_nodes = next_nodes
 
                 if ordered_nodes:
-                    self.quest_next_map = quest_next_map
-                    self.quest_incoming_map = quest_incoming_map
-                    return ordered_nodes
+                    nodes.extend(ordered_nodes)
+                    for start_key, next_ids in quest_next_map.items():
+                        all_quest_next_map.setdefault(start_key, [])
+                        for next_id in next_ids:
+                            if next_id not in all_quest_next_map[start_key]:
+                                all_quest_next_map[start_key].append(next_id)
+                    for end_key, start_ids in quest_incoming_map.items():
+                        all_quest_incoming_map.setdefault(end_key, [])
+                        for start_id in start_ids:
+                            if start_id not in all_quest_incoming_map[end_key]:
+                                all_quest_incoming_map[end_key].append(start_id)
 
+        if nodes:
+            self.quest_next_map = all_quest_next_map
+            self.quest_incoming_map = all_quest_incoming_map
         return nodes
+
+    def process_quest_nodes_order(self, story_data, quest_id):
+        """处理任务节点的顺序。"""
+        return self._process_story_nodes_order(story_data, quest_id)
 
     def _resolve_next_output_nodes(self, next_ids, output_node_ids):
         """将 next 解析到最终输出节点，允许跨越被过滤节点。"""
@@ -1190,15 +1211,6 @@ class QuestStoryProcessor(BaseProcessor):
             if not self._story_node_matches_quest(story_node, quest_id):
                 continue
 
-            props_data = story_node.get("propsData", {})
-            candidate_quest_ids = [quest_id]
-            for key in ("QuestDescription", "QuestDeatil"):
-                text_quest_id = self._extract_quest_id_from_text_key(
-                    props_data.get(key)
-                )
-                if text_quest_id and text_quest_id not in candidate_quest_ids:
-                    candidate_quest_ids.append(text_quest_id)
-
             quest_node_data = story_node.get("questNodeData", {})
             node_data_dict = quest_node_data.get("nodeData", {})
             if not isinstance(node_data_dict, dict):
@@ -1211,26 +1223,20 @@ class QuestStoryProcessor(BaseProcessor):
                     continue
 
                 props_data = node.get("propsData", {})
-                story_path = self._get_special_quest_story_path(
-                    props_data.get("SpecialConfigId")
-                )
+                special_config_id = self._to_int(props_data.get("SpecialConfigId"))
+                if not special_config_id:
+                    special_config_id = quest_id
+                story_path = self._get_special_quest_story_path(special_config_id)
                 if not story_path:
                     continue
 
                 special_story_data = self.load_story_file(story_path)
                 if not special_story_data:
                     continue
-
-                for candidate_quest_id in candidate_quest_ids:
-                    special_nodes = self.process_quest_nodes_order(
-                        special_story_data, candidate_quest_id
-                    )
-                    if not special_nodes:
-                        special_nodes = self.find_talk_nodes_for_quest(
-                            special_story_data, candidate_quest_id
-                        )
-                    for special_node in special_nodes:
-                        special_node.pop("next", None)
+                special_nodes = self.process_quest_nodes_order(
+                    special_story_data, None
+                )
+                if special_nodes:
                     nodes.extend(special_nodes)
 
         return nodes
