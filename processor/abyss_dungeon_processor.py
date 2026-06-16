@@ -170,6 +170,17 @@ class AbyssDungeonProcessor(BaseProcessor):
                         if not processed["mb"].get(chinese_attr):
                             processed["mb"][chinese_attr] = 4
 
+        mb_data = processed.get("mb") or {}
+        if isinstance(mb_data, dict):
+            positive_mb_count = 0
+            for value in mb_data.values():
+                if isinstance(value, (int, float)) and value > 0:
+                    positive_mb_count += 1
+            if positive_mb_count > 1:
+                art = processed.get("art")
+                if isinstance(art, str) and art:
+                    processed["art"] = art.replace("热映", "不朽")
+
         # 尝试获取关联的Dungeon名称
         # if str(dungeon_id) in self.dungeon_data:
         #     dungeon_name_key = self.dungeon_data[str(dungeon_id)].get("DungeonName", "")
