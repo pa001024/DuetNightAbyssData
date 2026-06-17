@@ -1,6 +1,6 @@
 require("UnLua")
 local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
-local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.UI.BP_UIState_C"

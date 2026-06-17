@@ -273346,7 +273346,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008505] = {
           Content = "这样安全隐患就小很多了，拿上吧，这些都是给你的报酬。",
-          ContentKR = "이제 훨씬 안전해였겠지. 자, 이건 네게 주는 수고비야.",
+          ContentKR = "이제 훨씬 안전해졌겠지. 자, 이건 네게 주는 수고비야.",
           DialogueId = 71008505,
           GUID = "B1C328DA",
           SpeakNpcId = 818039
@@ -325831,7 +325831,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80260136] = {
           Content = "被军团包围的时候，我知道我要做的是活下去，哪怕是像只狗儿一样匍匐在叔父脚边向他卑微乞怜。",
-          ContentKR = "군단의 병사들에게 포위당했을 때 난 알았어. 숙부의 발밑에 개처럼 납작 엎으려 목숨을 구걸하는 한이 있더라도, 살아남아야 한다는 걸.",
+          ContentKR = "군단의 병사들에게 포위당했을 때 난 알았어. 숙부의 발밑에 개처럼 납작 엎드려 목숨을 구걸하는 한이 있더라도, 살아남아야 한다는 걸.",
           DialogueId = 80260136,
           GUID = "C8EC3E90",
           NextDialogue = 80260137,

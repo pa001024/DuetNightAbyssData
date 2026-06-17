@@ -4,6 +4,7 @@ local M = Class({
 })
 
 function M:InitContent(Params, PopupData, Owner)
+  self.Text_Fenghua:SetText(GText("UI_AppearanceScore_ScoreName"))
   self.Text_DyeCost:SetText(GText("UI_COMMONPOP_TEXT_100100"))
   self.DyeAddScore = AddScore
   local IsMaxScore = false

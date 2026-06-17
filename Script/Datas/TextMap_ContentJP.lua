@@ -13560,7 +13560,7 @@ local Data = {
           TextMapId = "DynQuest_Bian_Title"
         },
         DynQuest_ChezhanPet_Des = {
-          ContentJP = "敵を倒し、魔霊を救出する",
+          ContentJP = "敵を倒し、ジェネモンを救出する",
           TextMapId = "DynQuest_ChezhanPet_Des"
         },
         DynQuest_ChezhanPet_Title = {
@@ -81618,7 +81618,7 @@ local Data = {
           TextMapId = "UI_DUNGEON_BACKROOM"
         },
         UI_DUNGEON_CHEST_START = {
-          ContentJP = "この前はかばってくれてありがとう。まさかカードで遊んでいるだけの間に、ちょうど親方の見回りが来るなんて……君の機転に助けられたよ。でも次は別の理由にしてくれないかな。腹を壊してズボンに漏らした、なんてあまりにも体裁が悪すぎる……とにかくありがとう。今日は珍しくいい手が来てたんだ。親方に連れ戻されてたら、本当に泣くに泣けなかったよ。勝ち分は君の分もあるから、<H>炉のそば</>に置いておいた。忘れずに取りに行ってくれ。",
+          ContentJP = "宝箱を探す",
           TextMapId = "UI_DUNGEON_CHEST_START"
         },
         UI_DUNGEON_CHEST_SUCCESS = {
@@ -109442,7 +109442,7 @@ local Data = {
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_victory",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_05_3",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_01_3",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_victory = {
@@ -109644,6 +109644,62 @@ local Data = {
         voice_ch_char_Nifu_vo_welcome = {
           ContentJP = "まあ、いらっしゃったのね。ごきげんよう。どうなさいましたの？",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentJP = "たとえ一度は死に抱かれたとしても、{性别:僕|私}はなお同じやり方で万物に向き合う――過去の自分を否定することこそ、本当の死なのだから。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentJP = "しばし休み、やがて再び旅立とう。道中にあまり立ち止ま{性别:るべきではない|らないようにね}。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentJP = "いまだニヴルヘイムの呼び声が聞こえる。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentJP = "ごめん……約束、守れなかった。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentJP = "今回もやっぱり……ダメだった……",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentJP = "ささいなつまずきにすぎない、まだ落ち込む時じゃない。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentJP = "鍛錬を積まねば、より遠くへは行けない。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentJP = "{性别:僕|私}はニヴルヘイムから帰ってきた。今度はあなたたちの番{性别:だ|よ}。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentJP = "あなたの運命は{性别:僕|私}の手の中にある。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentJP = "闇に堕ち{性别:ろ|なさい}。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentJP = "あなたに安らかな永眠を。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentJP = "陰翳は安らぎをもたらす。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentJP = "ニヴルヘイムにて、安らかに眠れ。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentJP = "今までと違う未来にまた一步近づいた。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
         },
         voice_ch_char_NvzhuLight_vo_appear = {
           ContentJP = "パーガトリー島の外の世界は、本の中よりもずっと広くて、そして残酷だった......こんな世界であっていいはずがない。だから{性别:僕|私}は動く。",
@@ -110188,7 +110244,15 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_01_3 = {
           ContentJP = "ちなみに、ヒゲおじさんと値段交渉するのも、私のお仕事なのです！えっへん~",
           TextMapId = "voice_ch_char_Songlu_vo_topic_01_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_01_4",
+    MaxKey = "voice_ch_char_Xier_vo_victory_r03",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_01_4 = {
           ContentJP = "そいつは違います。他の食糧補給官って頭の良さそうな人が多くて。申請やら手続きやらの書類をペペっと書きあげたかと思えば、汽車が山ほど食べ物を運んでくるの。",
           TextMapId = "voice_ch_char_Songlu_vo_topic_01_4"
@@ -110244,15 +110308,7 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_05_3 = {
           ContentJP = "ふあ～ぁ、あの人たちの話って私にはよくわからないの。いつも「暴食はとても重い罪だ」って言うけど……食いしん坊な人ほど偉い肩書きをもってたりするのになぁ。",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_victory",
-    MaxKey = "voice_ch_char_Yeer_vo_die_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_victory = {
           ContentJP = "やった、お祝いパーティーだ！……あっ、忘れてください、食べ物を節約しなくちゃ。",
           TextMapId = "voice_ch_char_Songlu_vo_victory"
@@ -110996,7 +111052,15 @@ local Data = {
         voice_ch_char_Xier_vo_victory_r03 = {
           ContentJP = "清掃完了。ふぅ、あとはお花の手入れだけですね。",
           TextMapId = "voice_ch_char_Xier_vo_victory_r03"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_victory_r04",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_victory_r04 = {
           ContentJP = "清掃完了。ふぅ、あとはフローラ様のお召し物を仕立てるだけですね。",
           TextMapId = "voice_ch_char_Xier_vo_victory_r04"
@@ -111052,15 +111116,7 @@ local Data = {
         voice_ch_char_Yeer_vo_die_r02 = {
           ContentJP = "イェール：大丈夫だよオリバー……僕も、一緒だから……",
           TextMapId = "voice_ch_char_Yeer_vo_die_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_fail",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_fail = {
           ContentJP = "オリバー：ふん、覚えとけ。次は逃がさねぇからよ。",
           TextMapId = "voice_ch_char_Yeer_vo_fail"

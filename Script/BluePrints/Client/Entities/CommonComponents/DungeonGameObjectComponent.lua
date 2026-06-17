@@ -2,6 +2,11 @@ local DungeonFactory = require("BluePrints.DungeonObject.DungeonFactory")
 local Component = {}
 local DungeonObject, DungeonNetGuid
 
+function Component:EnterWorld()
+  DungeonObject = nil
+  DungeonNetGuid = nil
+end
+
 function Component:NotifyServerDungeonEvent(EventName, ...)
   self:NotifyServerDungeonEventWithCallback(-1, EventName, ...)
 end

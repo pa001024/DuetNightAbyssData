@@ -1,5 +1,5 @@
 require("UnLua")
-local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local EMCache = require("EMCache.EMCache")

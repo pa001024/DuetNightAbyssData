@@ -1225,6 +1225,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_ArchiveCollectionReward",
     WildcardClassification = "Story"
   },
+  UI_Armory_NextStage = {
+    TextMapId = "UI_Armory_NextStage",
+    WildcardClassification = "Story"
+  },
   UI_Armory_WalnutNumber = {
     TextMapId = "UI_Armory_WalnutNumber",
     WildcardClassification = "Story"
@@ -1727,6 +1731,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_PlayerHead_Name_30074 = {
     TextMapId = "UI_PlayerHead_Name_30074",
+    WildcardClassification = "Story"
+  },
+  UI_Player_Level = {
+    TextMapId = "UI_Player_Level",
     WildcardClassification = "Story"
   },
   UI_PopupText_PlayerAttrChanged = {
@@ -2419,6 +2427,26 @@ return ReadOnly("TextMapWildcard", {
   },
   voice_ch_char_Nifu_vo_welcome = {
     TextMapId = "voice_ch_char_Nifu_vo_welcome",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuDark_vo_appear = {
+    TextMapId = "voice_ch_char_NvzhuDark_vo_appear",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuDark_vo_battleidle = {
+    TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuDark_vo_revive = {
+    TextMapId = "voice_ch_char_NvzhuDark_vo_revive",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+    TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+    TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02",
     WildcardClassification = "Story"
   },
   voice_ch_char_NvzhuLight_vo_appear = {

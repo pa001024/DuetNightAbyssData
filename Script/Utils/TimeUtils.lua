@@ -140,7 +140,7 @@ function TimeUtils.DataToTimestamp(year, month, day, hour, minute, second, use_t
   if use_timezone then
     result = current_time + (current_timezone - timezone) * 3600
   end
-  return result
+  return math.floor(result)
 end
 
 function TimeUtils.DataToTimestampForArea(year, month, day, hour, minute, second, area)
@@ -155,7 +155,7 @@ function TimeUtils.DataToTimestampForArea(year, month, day, hour, minute, second
     min = minute,
     sec = second
   })
-  return current_time + (current_timezone - timezone) * 3600
+  return math.floor(current_time + (current_timezone - timezone) * 3600)
 end
 
 function TimeUtils.TimestampToData(time, use_timezone)

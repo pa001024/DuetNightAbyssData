@@ -178,6 +178,8 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   Obj.bPauseNpcBT = TalkNodeData.PauseNpcBT
   Obj.QuestChainId = TalkNodeData.QuestChainId
   Obj.PlayerSwitchEmoIdle = TalkNodeData.PlayerSwitchEmoIdle
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
+  local bOpenHarmony = "OpenHarmony" == PlatformName
   Obj.SequencePath = TalkNodeData.ShowFilePath
   if Obj.SequencePath and "" ~= Obj.SequencePath then
     local World = Obj.TalkContext:GetWorld()
@@ -190,6 +192,11 @@ function CommonTalkTaskData_C.New(TalkNodeData)
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.Talk, "Seqeuence资源缺失/配置错误", Message)
     else
       UE4.UMovieSceneSequenceExtensions.SetClockSource(Sequence, UE4.EUpdateClockSource.Platform)
+      if bOpenHarmony and (string.find(Obj.SequencePath, "SQ_OBT0101_SC003") or string.find(Obj.SequencePath, "SQ_OBT0101_SC008")) then
+        UE4.UMovieSceneSequenceExtensions.SetEvaluationType(Sequence, UE4.EMovieSceneEvaluationType.FrameLocked)
+        local FrameRate = UE4.UKismetMathLibrary.MakeFrameRate(10, 1)
+        UE4.UMovieSceneSequenceExtensions.SetDisplayRate(Sequence, FrameRate)
+      end
       SequenceActor:SetSequence(Sequence)
       Obj.Sequence = Sequence
     end

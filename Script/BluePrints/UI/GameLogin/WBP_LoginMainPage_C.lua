@@ -207,6 +207,7 @@ function WBP_GameStartMainPage_C:Construct()
     self.MediaPlayer.OnEndReached:Add(self, function()
       self.MediaPlayer:Reopen()
     end)
+    self.Btn_Support:SetVisibility(ESlateVisibility.Collapsed)
   end
   self.Text_Product:SetText("Product_")
   self.Text_Version:SetText(TotalVersionNumber)
@@ -845,6 +846,7 @@ function WBP_GameStartMainPage_C:OnHeroSDKLogin(Result, UserInfoStr, Msg)
   local Json = require("rapidjson")
   if 0 == Result then
     self:SetSwitchBtnVisable(true)
+    self:SetSupportBtnVisible()
     DebugPrint("HeroSDK登录成功: ", UserInfoStr, Msg)
     DebugPrint("sdk user id", HeroUSDKUtils.GetUserInfo().sdkUserId, type(HeroUSDKUtils.GetUserInfo().sdkUserId))
     HeroUSDKSubsystem(self):SetNewBDCPublicAttriubuteOnInit()
@@ -1023,7 +1025,7 @@ function WBP_GameStartMainPage_C:SwitchAccount()
     self.bSwitchCountCD = false
   end)
   local Platform = UE4.UUIFunctionLibrary.GetDevicePlatformName()
-  if ("Android" == Platform or "OpenHarmony" == Platform) and not HeroUSDKSubsystem(self):IsGlobalSDK() then
+  if "Android" == Platform and not HeroUSDKSubsystem(self):IsGlobalSDK() then
     self.bSwitchingAccount = true
   end
   HeroUSDKSubsystem(self):EMHeroSDKSwitchAccount()
@@ -1648,9 +1650,8 @@ function WBP_GameStartMainPage_C:OnPatchFinished(bFrist)
     self:LoadLoginInfo(true)
     self:BindDelegates()
   end
-  self.Btn_Support:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  if AHotUpdateGameMode.IsExamineDistribution() or self:IsNonHeroChannel() or UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
-    self.Btn_Support:SetVisibility(ESlateVisibility.Collapsed)
+  if UGameplayStatics.GetPlatformName() ~= "OpenHarmony" then
+    self:SetSupportBtnVisible()
   end
   UIManager(self):UnLoadUI("CommonDialog")
   self.bGroupPatchOutPlaying = self:IsAnimationPlaying(self.Group_Patches_Out)
@@ -1908,10 +1909,18 @@ function WBP_GameStartMainPage_C:SetSwitchBtnVisable(bShow)
   local bIsWegameChannel = UE4.UUsdkSettings:GetDefaultObject().Channel == UE4.EHeroUSDKChannel.WeGame
   local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
   local bIsHideSwitchAccountChannel = IsChannelIdInList(ChannelId)
-  if bShow and not bIsWegameChannel and not bIsHideSwitchAccountChannel and not UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
+  local bIsForceShowSwitchAccountChannel = HeroUSDKSubsystem(self):GetAppChannelId() == "P39476A"
+  if bShow and not bIsWegameChannel and (bIsForceShowSwitchAccountChannel or not bIsHideSwitchAccountChannel) and not UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
     self.Btn_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self.Btn_Back:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function WBP_GameStartMainPage_C:SetSupportBtnVisible()
+  self.Btn_Support:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  if AHotUpdateGameMode.IsExamineDistribution() or self:IsNonHeroChannel() or UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
+    self.Btn_Support:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
@@ -2120,13 +2129,14 @@ function WBP_GameStartMainPage_C:SetServerInfo(SInfo)
 end
 
 function WBP_GameStartMainPage_C:IsNonHeroChannel()
-  if self._IsNonHeroChannel ~= nil then
-    return self._IsNonHeroChannel
-  end
   local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
-  local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
-  self._IsNonHeroChannel = nil ~= ChannelInfo and ChannelInfo.AccountPrefix ~= "hero"
-  return self._IsNonHeroChannel
+  local CachedChannelId = rawget(self, "_CachedChannelId")
+  if nil == CachedChannelId or CachedChannelId ~= ChannelId then
+    local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
+    rawset(self, "_IsNonHeroChannel", nil ~= ChannelInfo and ChannelInfo.AccountPrefix ~= "hero")
+    rawset(self, "_CachedChannelId", ChannelId)
+  end
+  return rawget(self, "_IsNonHeroChannel")
 end
 
 AssembleComponents(WBP_GameStartMainPage_C)

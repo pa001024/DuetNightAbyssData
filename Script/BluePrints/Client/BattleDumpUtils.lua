@@ -289,11 +289,14 @@ function BattleDumpUtils:GetSquadInfoByTemplate(Avatar, Squad)
     end
   end
   if Squad.Pet.bTrial then
-    ExtraSquad.Pet = TemplateDumpUtils:CreateTemplate_Pet(TemplateAvatar, Squad.Pet.Id)
+    local TmpPet = TemplateDumpUtils:CreateTemplate_Pet(TemplateAvatar, Squad.Pet.Id)
+    if TmpPet then
+      ExtraSquad.Pet = TmpPet.UniqueId
+    end
   else
     local PetUuid = Squad.Pet.Id
     TemplateAvatar.Pets[PetUuid] = TemplateAvatar.Pets:LoadPet(DumpAvatarData("Pets", PetUuid))
-    ExtraSquad.Pet = TemplateAvatar.Pets[PetUuid]
+    ExtraSquad.Pet = PetUuid
   end
   return TemplateAvatar:GetSquadCreateInfoByExtra(ExtraSquad), TemplateAvatar
 end

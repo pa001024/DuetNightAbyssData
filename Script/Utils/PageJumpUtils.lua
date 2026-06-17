@@ -1,7 +1,7 @@
 require("UnLua")
 local PageJumpFunctionLibrary = require("Utils.PageJumpFunctionConfig")
 local GachaModel = require("BluePrints.UI.WBP.Gacha.GachaModel")
-local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local GameFlowUtils = require("Utils.GameFlowUtils")
 local PageJumpUtils = {}
 

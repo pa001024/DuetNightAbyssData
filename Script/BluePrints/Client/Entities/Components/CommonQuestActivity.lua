@@ -2,7 +2,7 @@ local ReturnUtils = require("BluePrints.UI.WBP.Activity.Widget.Return.ReturnUtil
 local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
 local AprilFoolDayUtils = require("BluePrints.UI.WBP.Activity.Widget.Fool.AprilFoolDayUtils")
 local AutoChessRewardModel = require("BluePrints.UI.AutoChess.WBP_AutoChess_Reward_Model")
-local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local SoloTreasure = require("BluePrints.UI.WBP.SoloTreasure.Widget.WBP_SoloTreasure_Reward_Model")
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildModel = GuildController:GetModel()
@@ -29,6 +29,7 @@ end
 
 function Component:LeaveWorld()
   EventManager:RemoveEvent(EventID.OnLoginSuccess, self)
+  ActivityUtils.OnClearCache()
 end
 
 function Component:CommonQuestActivityGetPhaseReward(InCallBack, EventId, QuestPhaseId)

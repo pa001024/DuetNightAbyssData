@@ -109421,7 +109421,7 @@ local Data = {
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_fail",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_02_4",
+    MaxKey = "voice_ch_char_Songlu_vo_revive",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_fail = {
@@ -109655,6 +109655,62 @@ local Data = {
         voice_ch_char_Nifu_vo_welcome = {
           ContentKR = "너구나, 내가 아끼는 아이. 내게 들려주고 싶은 이야기라도 있니?",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentKR = "죽음의 품에 한 번 안겼다 해도, 난 똑같은 방식으로 세상을 마주할 거야. 과거의 날 부정하는 거야말로 진짜 죽음이니까.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentKR = "좀 쉬었다가 다시 출발하자. 너무 오래 머무르진 말고.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentKR = "아직도 안개의 바다가 부르는 소리가 들려.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentKR = "미안... 약속을 지키지 못했어.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentKR = "이번에도... 안 되는 건가...",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentKR = "별거 아닌 실수일 뿐이야. 낙담하긴 일러.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentKR = "더 멀리 가려면 더 많이 수련해야 해.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentKR = "난 이미 안개의 바다에서 돌아왔어. 이번엔 너희 차례다.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentKR = "너의 운명을 지배하겠다.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentKR = "어둠의 품에 안겨라.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentKR = "근심 없는 영면을 네게 주지.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentKR = "그늘이 휴식을 가져다줄 거야.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentKR = "안개의 바다에서 평안히 잠들길.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentKR = "다른 미래가 점점 가까워지고 있어.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
         },
         voice_ch_char_NvzhuLight_vo_appear = {
           ContentKR = "연옥도 밖은 책에서 본 것보다 넓고... 훨씬 더 잔인했어. 이런 세상은 잘못된 거니까, 내가 뭘 해야 할지 생각하고 있어.",
@@ -110167,7 +110223,15 @@ local Data = {
         voice_ch_char_Songlu_vo_revive = {
           ContentKR = "비상식량은 맛이 끔찍해... 됐어, 배만 부르면 됐지.",
           TextMapId = "voice_ch_char_Songlu_vo_revive"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_skill01_r01",
+    MaxKey = "voice_ch_char_Xier_vo_topic_04_3",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_skill01_r01 = {
           ContentKR = "날려버릴 거야!",
           TextMapId = "voice_ch_char_Songlu_vo_skill01_r01"
@@ -110223,15 +110287,7 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_02_4 = {
           ContentKR = "맞아! 사람들을 배고프게 만드는 녀석들은 헤이즐넛이 날려버릴 거야!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_02_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_03_1",
-    MaxKey = "voice_ch_char_Yeer_vo_battlestart_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_03_1 = {
           ContentKR = "많이 먹어. 다만 따로 음식을 준비할 필요는 없어. 알아서 찾아 먹거든. 먼 곳에 있는 잘 익은 베리의 냄새도 맡을 수 있는 데다가, 나를 업고 달려갈 수 있어서 엄청 대단하다구.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_03_1"
@@ -110975,7 +111031,15 @@ local Data = {
         voice_ch_char_Xier_vo_topic_04_3 = {
           ContentKR = "너무 걱정하지 마세요. 절 믿으세요. 절대 그런 상황이 생기지 않게 할게요.",
           TextMapId = "voice_ch_char_Xier_vo_topic_04_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_topic_05_1",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_topic_05_1 = {
           ContentKR = "네? 어... 어디요? 오늘 일정대로라면 여기에 안 계셔야 하는데...",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_1"
@@ -111031,15 +111095,7 @@ local Data = {
         voice_ch_char_Yeer_vo_battlestart_r02 = {
           ContentKR = "예일: 실험 시작이에요. 조, 조심해요.",
           TextMapId = "voice_ch_char_Yeer_vo_battlestart_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_be_hit_heavy_r01 = {
           ContentKR = "(올리버) 두고 보자.",
           TextMapId = "voice_ch_char_Yeer_vo_be_hit_heavy_r01"

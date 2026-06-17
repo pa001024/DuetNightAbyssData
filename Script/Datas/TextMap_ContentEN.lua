@@ -112014,7 +112014,7 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_skill01_r02",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Songlu_vo_skill02_r02",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_skill01_r02 = {
@@ -112236,6 +112236,62 @@ Should you ever feel lost, or simply wish to hear a story, my arms will always b
         voice_ch_char_Nifu_vo_welcome = {
           ContentEN = "Ah, it's you, my dear child. Good day. Is there something on your mind you'd like to share with me?",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentEN = "Even having faced death once, I won't change the way I walk this world. To deny who I was, that would be the only true death.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentEN = "Rest a while. Then continue on. Just... don't stay too long.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentEN = "I can still hear the call of the Misty Sea.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentEN = "Sorry... I failed...",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentEN = "Still... Not enough...",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentEN = "Just another stumble on the road ahead. It's far too soon to lose heart.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentEN = "The road ahead demands more than I am now.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentEN = "I've returned from the Misty Sea. Now, it's your turn.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentEN = "Your fate is in my hands.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentEN = "Embrace the darkness.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentEN = "Enter your eternal rest.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentEN = "Shadows will grant you peace.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentEN = "May you rest in the Misty Sea.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentEN = "One more step. That future's within reach.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
         },
         voice_ch_char_NvzhuLight_vo_appear = {
           ContentEN = "The world outside Purgatorio Island defies all accounts — more expansive, yet more brutal. This cannot be its true destiny. That's why a change must be made.",
@@ -112768,7 +112824,15 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_skill02_r02 = {
           ContentEN = "The special Commissary's here. Feast till forever!",
           TextMapId = "voice_ch_char_Songlu_vo_skill02_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_skill02_r03",
+    MaxKey = "voice_ch_char_Xier_vo_topic_05_4",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_skill02_r03 = {
           ContentEN = "Gimme the food, or else I'll smash you.",
           TextMapId = "voice_ch_char_Songlu_vo_skill02_r03"
@@ -112824,15 +112888,7 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_topic_04_2 = {
           ContentEN = "Because dresses aren't the best for all the running around I do. One time, I tripped over the hem and all the bread in my arms went flying.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_04_3",
-    MaxKey = "voice_ch_char_Yeer_vo_companio_01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_04_3 = {
           ContentEN = "But if the day comes, when no one's starving anymore, I'll have them changed back into a dress!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
@@ -113582,7 +113638,15 @@ Good. Then let's also finalise the external campaign slogans, domestic case anal
         voice_ch_char_Xier_vo_topic_05_4 = {
           ContentEN = "Regrettably, I'm not a poet; otherwise, I'd find the perfect word for her, which combines the meanings of friends and family.",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_topic_05_5",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_topic_05_5 = {
           ContentEN = "I prefer keeping such feelings to myself — clearing the path for Miss Flora is both my duty and my privilege.",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_5"
@@ -113642,15 +113706,7 @@ Yale: Shh, we need to stick to the plan.]],
 Yale: H-hello... Your singing is really b-beautiful.
 Oliver: Hmph, just another victim.]],
           TextMapId = "voice_ch_char_Yeer_vo_companio_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_companio_02",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_companio_02 = {
           ContentEN = [[
 Yale: Is Filbert... your friend? I have a good friend too. He's as r-reliable as F-Filbert.

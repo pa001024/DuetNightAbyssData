@@ -417,18 +417,21 @@ function ReddotManager._GetLeafNodeCache(NodeName)
   end
 end
 
-function ReddotManager.PrintNodeTree(NodeName)
+function ReddotManager.PrintNodeTree(NodeName, bIgnoreZero)
   DebugPrint("--------- ReddotManager.PrintNodeTree: " .. NodeName)
   
   local function PrintNode(node, indent, isLast)
     if not node then
       return
     end
+    if 0 == node.Count and bIgnoreZero then
+      return
+    end
     local prefix = string.rep("│   ", indent - 1)
     if indent > 0 then
       prefix = prefix .. (isLast and "└── " or "├── ")
     end
-    print(prefix .. node.Name .. " (Count: " .. (node.Count or 0) .. ")")
+    print(prefix .. node.Name .. " (Count: " .. (node.Count or 0) .. ")" .. "(type: " .. (node.ReddotType or "nil") .. ")")
     local children = node.Children or {}
     local childCount = 0
     for _ in pairs(children) do

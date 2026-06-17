@@ -31527,11 +31527,11 @@ local Data = {
           TextMapId = "Mon_Name_9501001"
         },
         Mon_Name_9501003 = {
-          ContentFR = "Gorille",
+          ContentFR = "Sbire",
           TextMapId = "Mon_Name_9501003"
         },
         Mon_Name_9501004 = {
-          ContentFR = "Gorille",
+          ContentFR = "Sbire",
           TextMapId = "Mon_Name_9501004"
         },
         Mon_Name_9503002 = {
@@ -38143,7 +38143,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "QuestName_10020308"
         },
         QuestName_10020308_1 = {
-          ContentFR = "Vaincre le Souillé qui bloque le passage",
+          ContentFR = "Vaincre les Souillés qui bloquent le passage",
           TextMapId = "QuestName_10020308_1"
         },
         QuestName_10020309 = {
@@ -42943,7 +42943,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_DESC_5021050"
         },
         RESOURCE_DESC_5022010 = {
-          ContentFR = "Trésor des eaux de Huaxu, il est surnommé la « chauve-souris des mers ». Tapissant son dos, de petites perles blanches confèrent à sa peau une texture recherchée pour l’ornement des armes de luxe.",
+          ContentFR = "Trésor des eaux de Huaxu, elle est surnommée la « chauve-souris des mers ». Tapissant son dos, de petites perles blanches confèrent à sa peau une texture recherchée pour l’ornement des armes de luxe.",
           TextMapId = "RESOURCE_DESC_5022010"
         },
         RESOURCE_DESC_5022020 = {
@@ -47155,11 +47155,11 @@ Allez voir ce qui se passe.]],
           TextMapId = "RESOURCE_NAME_5021051"
         },
         RESOURCE_NAME_5022010 = {
-          ContentFR = "Requin perligrane",
+          ContentFR = "Raie perligrane",
           TextMapId = "RESOURCE_NAME_5022010"
         },
         RESOURCE_NAME_5022011 = {
-          ContentFR = "Requin perligrane variant",
+          ContentFR = "Raie perligrane variante",
           TextMapId = "RESOURCE_NAME_5022011"
         },
         RESOURCE_NAME_5022020 = {
@@ -71615,7 +71615,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Armory_More"
         },
         UI_Armory_NextStage = {
-          ContentFR = "Effet de la prochaine phase",
+          ContentFR = "Effet de la prochaine phase{空格}",
           TextMapId = "UI_Armory_NextStage"
         },
         UI_Armory_Numerical = {
@@ -84971,7 +84971,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Fishing_FishType_2"
         },
         UI_Fishing_FishType_3 = {
-          ContentFR = "Rareté",
+          ContentFR = "Rare",
           TextMapId = "UI_Fishing_FishType_3"
         },
         UI_Fishing_FishType_4 = {
@@ -85023,7 +85023,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Fishing_LureEquippedSucc"
         },
         UI_Fishing_OpenFishBook = {
-          ContentFR = "Ouvrir le registre des poissons",
+          ContentFR = "Registre des poissons",
           TextMapId = "UI_Fishing_OpenFishBook"
         },
         UI_Fishing_RareFish = {
@@ -85067,7 +85067,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_Fishing_Toast_NoFishingLure"
         },
         UI_Fishing_TrackFishingSpot = {
-          ContentFR = "Suivre le point de pêche actuel",
+          ContentFR = "Localiser le point de pêche",
           TextMapId = "UI_Fishing_TrackFishingSpot"
         },
         UI_Fishing_UnlockFishBook = {
@@ -96392,7 +96392,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_PlayerInOtherGuild"
         },
         UI_Player_Level = {
-          ContentFR = "Niveau d’Aventure",
+          ContentFR = "Niveau d’Aventure{空格}",
           TextMapId = "UI_Player_Level"
         },
         UI_Player_LevelReward_Title1 = {
@@ -109431,7 +109431,7 @@ Tirer sur les cibles pour marquer des points.
   },
   {
     MinKey = "voice_ch_char_Nifu_vo_companio_03",
-    MaxKey = "voice_ch_char_Suyi_vo_lvup",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_04_1",
     Loader = function()
       return {
         voice_ch_char_Nifu_vo_companio_03 = {
@@ -109597,6 +109597,118 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Nifu_vo_welcome = {
           ContentFR = "Ah, te voilà, {性别:mon cher enfant|ma chère enfant}. Bonjour. Veux-tu me parler de quelque chose ?",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentFR = "Même après avoir été étreint une fois par la mort, je choisirai encore d’affronter ce monde de la même manière. Renier {性别:celui|celle} que j’étais serait la seule véritable mort.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentFR = "Reposons-nous un instant, puis repartons. Ne t’attarde pas trop en chemin.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentFR = "J’entends encore l’appel de la Mer du Silence.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentFR = "Pardon... je n’ai pas tenu ma promesse.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentFR = "Cette fois encore... ce n’était pas assez...",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentFR = "Ce n’est qu’un faux pas sur la route. Il est trop tôt pour fléchir.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentFR = "La route à venir exige davantage de moi.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentFR = "Je suis revenu de la Mer du Silence. À présent... c’est votre tour.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentFR = "Ton destin repose entre mes mains.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentFR = "Laisse les ténèbres t’étreindre.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentFR = "Je t’offre un éternel repos, sans tourment.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentFR = "L’ombre t’apportera le repos.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentFR = "Puissiez-vous trouver le repos dans la Mer du Silence.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentFR = "L’avenir que nous espérons se rapproche.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
+        },
+        voice_ch_char_NvzhuLight_vo_appear = {
+          ContentFR = "Le monde au-delà de l’Île du Purgatoire est plus vaste que dans les livres... et bien plus cruel. Il ne devrait pas être ainsi. Alors, je dois agir.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_appear"
+        },
+        voice_ch_char_NvzhuLight_vo_battleidle = {
+          ContentFR = "Où aller maintenant... Voyons la carte... Hm... ce n’est jamais très clair.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_battleidle"
+        },
+        voice_ch_char_NvzhuLight_vo_battlestart = {
+          ContentFR = "Cette épée a encore son rôle à jouer.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_battlestart"
+        },
+        voice_ch_char_NvzhuLight_vo_die_r01 = {
+          ContentFR = "Pas ici... pas maintenant...",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r01"
+        },
+        voice_ch_char_NvzhuLight_vo_die_r02 = {
+          ContentFR = "J’aimerais tant... retourner là où nous nous sommes fait une promesse...",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_die_r02"
+        },
+        voice_ch_char_NvzhuLight_vo_fail = {
+          ContentFR = "La prochaine fois... ils en paieront le prix.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_fail"
+        },
+        voice_ch_char_NvzhuLight_vo_lvup = {
+          ContentFR = "Chaque pas parcouru, chaque parole entendue, chaque rencontre faite m’a permis de mieux comprendre ce monde... et d’aiguiser ma lame.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_lvup"
+        },
+        voice_ch_char_NvzhuLight_vo_revive = {
+          ContentFR = "Était-ce... un cauchemar ?",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_revive"
+        },
+        voice_ch_char_NvzhuLight_vo_skill01_r01 = {
+          ContentFR = "Disparais.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuLight_vo_skill01_r02 = {
+          ContentFR = "Éclat fulgurant.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuLight_vo_skill02_r01 = {
+          ContentFR = "Cette fois... c’est moi qui protégerai les autres.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuLight_vo_skill02_r02 = {
+          ContentFR = "Vers demain.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuLight_vo_skill02_r03 = {
+          ContentFR = "Retourne dans la Mer du Silence.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuLight_vo_victory = {
+          ContentFR = "Encore un pas en avant. Tant que je continuerai d’avancer... j’y parviendrai.",
+          TextMapId = "voice_ch_char_NvzhuLight_vo_victory"
         },
         voice_ch_char_Saiqi01_vo_appear = {
           ContentFR = "Ce papillon vient de venir me chercher avec une invitation. Il m’a dit qu’un bal de mi‑été se tiendrait dans une forêt, pleine de pensées tricolores...",
@@ -110121,7 +110233,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Songlu_vo_topic_04_1 = {
           ContentFR = "Merci ! Mais ce sont des shorts, pas une robe. Avant, c’était une belle robe blanche longue, mais la couturière me l’a changé en short.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Yeer_vo_companio_01",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_04_2 = {
           ContentFR = "Parce que courir en robe, c’est pas pratique. Une fois, j’ai trébuché sur l’ourlet et tout le pain que je portais est tombé.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_2"
@@ -110233,15 +110353,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Suyi_vo_lvup = {
           ContentFR = "Exactement. Je suis la partenaire idéale pour combattre à tes côtés.",
           TextMapId = "voice_ch_char_Suyi_vo_lvup"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_revive",
-    MaxKey = "voice_ch_char_Yeer_vo_victory",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_revive = {
           ContentFR = "Ce n’est pas fini... Ne me sous-estime pas !",
           TextMapId = "voice_ch_char_Suyi_vo_revive"
@@ -110931,7 +111043,15 @@ Tirer sur les cibles pour marquer des points.
 Yale : B-bonjour... V-votre voix est vraiment... vraiment magnifique.
 Oliver : Pff. Encore une pauvre victime.]],
           TextMapId = "voice_ch_char_Yeer_vo_companio_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yeer_vo_companio_02",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yeer_vo_companio_02 = {
           ContentFR = "Yale : F-Filbert... c’est ton ami ? Moi aussi j’ai un ami... aussi f-fiable que Filbert...\nOliver : Tu traites qui de cochon, au juste ?",
           TextMapId = "voice_ch_char_Yeer_vo_companio_02"
@@ -111043,15 +111163,7 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Yeer_vo_victory = {
           ContentFR = "Oliver : Vous l’avez sentie... mon plus grand chef-d’œuvre ?",
           TextMapId = "voice_ch_char_Yeer_vo_victory"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_welcome",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_welcome = {
           ContentFR = "Yale : T-Te voilà... Il fait si beau aujourd’hui... Parfait pour quelques expériences explosives... V-Vraiment une belle journée...",
           TextMapId = "voice_ch_char_Yeer_vo_welcome"

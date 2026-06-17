@@ -116,10 +116,6 @@ class AbyssDungeonProcessor(BaseProcessor):
                 if mb_dict:
                     processed["mb"] = mb_dict
 
-        spawn_data = self._get_abyss_room_spawn(item_data.get("RoomId", []))
-        if spawn_data:
-            processed["spawn"] = spawn_data
-
         # 查找赛季信息
         abyss_season, abyss_season_list, abyss_level = (
             self._find_season_by_abyss_dungeon_id(abyss_dungeon_id)

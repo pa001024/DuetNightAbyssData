@@ -288,6 +288,11 @@ function ActivityUtils.GetCurrentAllActivity()
   return AllActivityID, AllActivityTabIdx
 end
 
+function ActivityUtils.OnClearCache()
+  ActivityUtils.InvaildEventIds = {}
+  ActivityUtils._ProcessedInvaildEventIds = {}
+end
+
 function ActivityUtils.GetCurrentAllActivityWithoutSystemCheck()
   local AllActivityTabIdx = {}
   for key, TabConfigInfo in pairs(DataMgr.EventTab) do

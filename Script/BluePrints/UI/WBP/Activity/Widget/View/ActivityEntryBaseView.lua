@@ -1,7 +1,7 @@
 require("UnLua")
 local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
-local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = {}
 
 function M:PlayInAnim()

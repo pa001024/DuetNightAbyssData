@@ -1,7 +1,7 @@
 require("UnLua")
 local BagGameModel = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameModel")
 local BagGameController = require("BluePrints.UI.WBP.Activity.Widget.BagGame.BagGameController")
-local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })

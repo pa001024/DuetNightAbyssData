@@ -64330,7 +64330,7 @@ local Data = {
           TextMapId = "UI_Accessory_Name_10052"
         },
         UI_Accessory_Name_10053 = {
-          ContentTC = "真夏墨鏡・墨玉",
+          ContentTC = "真夏墨鏡·墨玉",
           TextMapId = "UI_Accessory_Name_10053"
         },
         UI_Accessory_Name_10054 = {
@@ -109415,7 +109415,7 @@ local Data = {
   },
   {
     MinKey = "voice_ch_char_NanzhuLight_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_04_3",
+    MaxKey = "voice_ch_char_Songlu_vo_skill02_r03",
     Loader = function()
       return {
         voice_ch_char_NanzhuLight_vo_skill02_r01 = {
@@ -109629,6 +109629,62 @@ local Data = {
         voice_ch_char_Nifu_vo_welcome = {
           ContentTC = "是你呀，親愛的孩子。日安，有什麼事想要講給我聽嗎？",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentTC = "即便被死亡擁抱過一次，我依舊會選擇同樣的方式去面對萬物——否定過去的自己才是真的死亡。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentTC = "暫歇一陣，隨後再度啟程吧，不要在旅途中停駐太久。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentTC = "我仍能聽見霧海的呼喚。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentTC = "抱歉……我失約了。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentTC = "這一次，還是無法……",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentTC = "不過是一次普通的磕磕絆絆，還沒到消沉的時候。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentTC = "我需要更多磨礪，才能去向更遠的地方。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentTC = "我已從霧海歸航，現在，輪到你們了。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentTC = "我將掌握你的命運。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentTC = "被黑暗擁抱吧。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentTC = "予你無憂的永眠。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentTC = "陰翳將帶來休憩。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentTC = "願你們在霧海安息。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentTC = "那個不一樣的未來，更加近了。",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
         },
         voice_ch_char_NvzhuLight_vo_appear = {
           ContentTC = "淨界島以外的世界，比書裡還要廣闊，也比書裡更殘酷。它不應該是這副模樣，所以，我想我應該做些什麼。",
@@ -110161,7 +110217,15 @@ local Data = {
         voice_ch_char_Songlu_vo_skill02_r03 = {
           ContentTC = "交出口糧，否則壓扁！",
           TextMapId = "voice_ch_char_Songlu_vo_skill02_r03"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_01_1",
+    MaxKey = "voice_ch_char_Xier_vo_topic_05_5",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_01_1 = {
           ContentTC = "咦？你不知道嗎？糧秣專員就是負責填飽大家肚子的人哦，每天都要和各種食物打交道。",
           TextMapId = "voice_ch_char_Songlu_vo_topic_01_1"
@@ -110217,15 +110281,7 @@ local Data = {
         voice_ch_char_Songlu_vo_topic_04_3 = {
           ContentTC = "所以，哎……要是哪天，沒有人挨餓了，我就拜託婆婆再把這條褲子改回去！",
           TextMapId = "voice_ch_char_Songlu_vo_topic_04_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_topic_05_1",
-    MaxKey = "voice_ch_char_Yeer_vo_companio_02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_topic_05_1 = {
           ContentTC = "才不是發呆，是在冥想。不管怎麼說我都是傳頌會的一員，所以偶爾也會像這樣用力想事情的。",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_1"
@@ -110969,7 +111025,15 @@ local Data = {
         voice_ch_char_Xier_vo_topic_05_5 = {
           ContentTC = "我無意讓芙羅拉小姐知曉——清理主人前路的雜物是女僕的天職，我為此榮幸不已。",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_5"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_victory_r01",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_victory_r01 = {
           ContentTC = "清掃完成！呼，那麼，我去清洗衣物了。",
           TextMapId = "voice_ch_char_Xier_vo_victory_r01"
@@ -111025,15 +111089,7 @@ local Data = {
         voice_ch_char_Yeer_vo_companio_02 = {
           ContentTC = "榛子……是你的朋友嗎？我也有很好的朋友，他像榛、榛子一樣可靠。\n奧利弗：你罵誰呢？",
           TextMapId = "voice_ch_char_Yeer_vo_companio_02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yeer_vo_companio_03",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yeer_vo_companio_03 = {
           ContentTC = "耶爾：唔啊……你、你不要生氣，我的炸彈實驗都是符！符符符符合安全規定的……",
           TextMapId = "voice_ch_char_Yeer_vo_companio_03"

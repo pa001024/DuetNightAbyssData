@@ -92553,7 +92553,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
   },
   {
     MinKey = "voice_ch_char_Nifu_vo_companio_01",
-    MaxKey = "voice_ch_char_Tuosi_vo_battleidle",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_05_2",
     Loader = function()
       return {
         voice_ch_char_Nifu_vo_companio_01 = {
@@ -92727,6 +92727,62 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Nifu_vo_welcome = {
           ContentDE = "Ach, du bist es, mein liebes Kind. Guten Tag. Gibt es etwas, was du mir erzählen möchtest?",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentDE = "Aunque haya sido abrazada por la muerte una vez, seguiré eligiendo enfrentar todas las cosas tal como siempre: la verdadera muerte es negar quién fui.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentDE = "Haz una pausa, y luego continúa tu viaje, pero no te detengas demasiado tiempo en el camino.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentDE = "Aún puedo escuchar el llamado del Mar Nebuloso.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentDE = "Lo siento… no he cumplido mi promesa.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentDE = "Esta vez… tampoco pude…",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentDE = "No es más que un simple tropiezo, aún no es momento de desanimarse.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentDE = "Necesito ser más fuerte para poder llegar más lejos.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentDE = "He regresado del Mar Nebuloso. Ahora, les toca a ustedes.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentDE = "Tu destino está en mis manos.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentDE = "Déjate abrazar por la oscuridad.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentDE = "Entra en tu descanso eterno.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentDE = "La penumbra te traerá la paz.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentDE = "Que descanses en paz en el Mar Nebuloso.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentDE = "Ese futuro distinto... está cada vez más cerca.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
         },
         voice_ch_char_NvzhuLight_vo_appear = {
           ContentDE = "Die Welt außerhalb von Purgatorio-Insel widerspricht allen Darstellungen – weiter, aber grausamer. Das kann nicht ihr wahres Schicksal sein. Deshalb muss sich etwas ändern.",
@@ -93299,7 +93355,15 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Songlu_vo_topic_05_2 = {
           ContentDE = "Das habe ich mich früher auch gefragt, aber die Geistlichen nannten das Blasphemie oder so. Also habe ich aufgehört, darüber nachzudenken.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_topic_05_3",
+    MaxKey = "voice_ch_char_Yuming_vo_topic_01_2",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_topic_05_3 = {
           ContentDE = "Ich verstehe nie ganz, was sie sagen, zum Beispiel, dass Völlerei eine schreckliche Sünde sei … Aber es scheint, je höher der Status einer Person, desto mehr isst sie.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_05_3"
@@ -93355,15 +93419,7 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Tuosi_vo_battleidle = {
           ContentDE = "Wie sah ich nur aus, frage ich mich ...",
           TextMapId = "voice_ch_char_Tuosi_vo_battleidle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Tuosi_vo_battlestart",
-    MaxKey = "voice_ch_char_Zhangyu_vo_be_hit_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Tuosi_vo_battlestart = {
           ContentDE = "Nun präsentieren wir eine Geschichte voller Abenteuer und Pracht.",
           TextMapId = "voice_ch_char_Tuosi_vo_battlestart"
@@ -94109,7 +94165,15 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Yuming_vo_topic_01_2 = {
           ContentDE = "Mein Alltag ist voller Pflichten, daher ist mein Blickwinkel begrenzt. Wenn du wirklich neugierig bist, begnüge dich nicht mit den Worten anderer, sondern mach dich selbst auf den Weg dorthin. Was hältst du davon?",
           TextMapId = "voice_ch_char_Yuming_vo_topic_01_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yuming_vo_topic_02_1",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yuming_vo_topic_02_1 = {
           ContentDE = "Die Neun Kapitel von Dafeng sind die Gesetze von Huaxu, denen sich niemand widersetzen darf. Wer sich dem Himmlischen Mandat widersetzt, den beseitige ich.",
           TextMapId = "voice_ch_char_Yuming_vo_topic_02_1"
@@ -94165,15 +94229,7 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Zhangyu_vo_be_hit_r01 = {
           ContentDE = "Aua!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Zhangyu_vo_be_hit_r02",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Zhangyu_vo_be_hit_r02 = {
           ContentDE = "Ugh!",
           TextMapId = "voice_ch_char_Zhangyu_vo_be_hit_r02"

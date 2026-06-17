@@ -56706,7 +56706,7 @@ PlayAnimation{_delay{0.3},ActorId{200002},AnimationId{"Talk01_Start"},Duration{1
         },
         [10105440] = {
           Content = "（……至于属于我的魔法……是“和鸣”？）",
-          ContentFR = "<I>... Quant à mon pouvoir... pourrait-il s’agir de la \"Résonance\" ?</>",
+          ContentFR = "<I>... Quant à mon pouvoir... pourrait-il s’agir de la « Résonance » ?</>",
           DialogueId = 10105440,
           DisableMouth = 1,
           ExStoryInfo = "Player",
@@ -188682,7 +188682,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010502] = {
           Content = "（声泪俱下地哭诉你是一个遵纪守法的人，只是碰巧又忘带通行证了。）",
-          ContentFR = "<I>Fondre en larmes et expliquer, la voix tremblante, que vous êtes {性别:<I>un citoyen respectueux|une citoyenne respectueuse} des règles... qui a simplement encore oublié son permis.</>",
+          ContentFR = "<I>Fondre en larmes et expliquer, la voix tremblante, que vous êtes</> <I>{性别:un citoyen respectueux|une citoyenne respectueuse}</> <I>des règles... qui a simplement encore oublié son permis.</>",
           DialogueId = 51010502,
           GUID = "7FB30E7C",
           ImprPlusId = 1004,
@@ -204779,7 +204779,7 @@ Explorer !]],
         },
         [51113003] = {
           Content = "（此人疯疯癫癫，还是别跟他有所牵连为好。）",
-          ContentFR = "<I>– Cet individu a l’air un peu dérangé. Mieux vaut éviter de s’en mêler.</>",
+          ContentFR = "<I>Cet individu a l’air un peu dérangé. Mieux vaut éviter de s’en mêler.</>",
           DialogueId = 51113003,
           GUID = "7FF4BF0E",
           ImprPlusId = 1207,

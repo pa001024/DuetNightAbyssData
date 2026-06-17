@@ -109479,7 +109479,7 @@ Tocado de Lynn
   },
   {
     MinKey = "voice_ch_char_Nifu_vo_topic_04_11",
-    MaxKey = "voice_ch_char_Suyi_vo_topic_03_4",
+    MaxKey = "voice_ch_char_Suyi_vo_skill02_r05",
     Loader = function()
       return {
         voice_ch_char_Nifu_vo_topic_04_11 = {
@@ -109525,6 +109525,62 @@ Tocado de Lynn
         voice_ch_char_Nifu_vo_welcome = {
           ContentES = "Ah, eres tú, mi {性别:querido niño|querida niña}. Buenos días. ¿Hay algo que quieras compartir conmigo?",
           TextMapId = "voice_ch_char_Nifu_vo_welcome"
+        },
+        voice_ch_char_NvzhuDark_vo_appear = {
+          ContentES = "Aunque haya sido abrazada por la muerte una vez, seguiré eligiendo enfrentar todas las cosas tal como siempre: la verdadera muerte es negar quién fui.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_appear"
+        },
+        voice_ch_char_NvzhuDark_vo_battleidle = {
+          ContentES = "Haz una pausa, y luego continúa tu viaje, pero no te detengas demasiado tiempo en el camino.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battleidle"
+        },
+        voice_ch_char_NvzhuDark_vo_battlestart = {
+          ContentES = "Aún puedo escuchar el llamado del Mar Nebuloso.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_battlestart"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r01 = {
+          ContentES = "Lo siento… no he cumplido mi promesa.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_die_r02 = {
+          ContentES = "Esta vez… tampoco pude…",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_die_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_fail = {
+          ContentES = "No es más que un simple tropiezo, aún no es momento de desanimarse.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_fail"
+        },
+        voice_ch_char_NvzhuDark_vo_lvup = {
+          ContentES = "Necesito ser más fuerte para poder llegar más lejos.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_lvup"
+        },
+        voice_ch_char_NvzhuDark_vo_revive = {
+          ContentES = "He regresado del Mar Nebuloso. Ahora, les toca a ustedes.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_revive"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r01 = {
+          ContentES = "Tu destino está en mis manos.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill01_r02 = {
+          ContentES = "Déjate abrazar por la oscuridad.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill01_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r01 = {
+          ContentES = "Entra en tu descanso eterno.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r01"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r02 = {
+          ContentES = "La penumbra te traerá la paz.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r02"
+        },
+        voice_ch_char_NvzhuDark_vo_skill02_r03 = {
+          ContentES = "Que descanses en paz en el Mar Nebuloso.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_skill02_r03"
+        },
+        voice_ch_char_NvzhuDark_vo_victory = {
+          ContentES = "Ese futuro distinto... está cada vez más cerca.",
+          TextMapId = "voice_ch_char_NvzhuDark_vo_victory"
         },
         voice_ch_char_NvzhuLight_vo_appear = {
           ContentES = "El mundo fuera de la Isla del Purgatorio desafía todos los relatos, más expansivo, pero más brutal. Este no puede ser su verdadero destino. Por eso, debe hacerse un cambio.",
@@ -110225,7 +110281,15 @@ Tocado de Lynn
         voice_ch_char_Suyi_vo_skill02_r05 = {
           ContentES = "Vaya… ¡se siente genial volar!",
           TextMapId = "voice_ch_char_Suyi_vo_skill02_r05"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi_vo_topic_01_1",
+    MaxKey = "voice_ch_char_Yuming_vo_be_hit_r02",
+    Loader = function()
+      return {
         voice_ch_char_Suyi_vo_topic_01_1 = {
           ContentES = "Montar mecanismos, pulir engranajes, buscar nuevos materiales y desarrollar artefactos cada vez más eficientes.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_01_1"
@@ -110281,15 +110345,7 @@ Tocado de Lynn
         voice_ch_char_Suyi_vo_topic_03_4 = {
           ContentES = "No pierde el color, se mantiene suave y sedoso, tampoco es una chatarra voladora, y tiene valor emocional… es un compañero perfecto.",
           TextMapId = "voice_ch_char_Suyi_vo_topic_03_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_topic_03_5",
-    MaxKey = "voice_ch_char_Yuming_vo_skill02_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_topic_03_5 = {
           ContentES = "La Gaviota de alas celestes es un ave que ama el cielo. Si tuviera una de verdad, tendría que tenerla enjaulada. Eso sería puro egoísmo, dime, ¿en qué me diferenciaría entonces de la antigua Secta Xuanheng?",
           TextMapId = "voice_ch_char_Suyi_vo_topic_03_5"
@@ -111033,7 +111089,15 @@ Tocado de Lynn
         voice_ch_char_Yuming_vo_be_hit_r02 = {
           ContentES = "¡Ay!",
           TextMapId = "voice_ch_char_Yuming_vo_be_hit_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yuming_vo_birthday",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yuming_vo_birthday = {
           ContentES = "¿Cumpleaños? Yo casi nunca prestaba atención a esas cosas. Mi lealtad a los «Nueve Capítulos de Dafeng» me hace que la vida y la muerte sean meras notas a pie de página... Aun así, un deseo amable quizás pueda traer una sonrisa. ... Feliz cumpleaños.",
           TextMapId = "voice_ch_char_Yuming_vo_birthday"
@@ -111089,15 +111153,7 @@ Tocado de Lynn
         voice_ch_char_Yuming_vo_skill02_r01 = {
           ContentES = "¡El juicio cae!",
           TextMapId = "voice_ch_char_Yuming_vo_skill02_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yuming_vo_skill02_r02",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yuming_vo_skill02_r02 = {
           ContentES = "Xuanjiao, ¡rompe el frente!",
           TextMapId = "voice_ch_char_Yuming_vo_skill02_r02"

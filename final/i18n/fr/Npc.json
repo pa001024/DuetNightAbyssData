@@ -18133,7 +18133,7 @@
         "options": [
           {
             "id": 51010502,
-            "content": "<I>Fondre en larmes et expliquer, la voix tremblante, que vous êtes {性别:<I>un citoyen respectueux|une citoyenne respectueuse} des règles... qui a simplement encore oublié son permis.</>",
+            "content": "<I>Fondre en larmes et expliquer, la voix tremblante, que vous êtes</> <I>{性别:un citoyen respectueux|une citoyenne respectueuse}</> <I>des règles... qui a simplement encore oublié son permis.</>",
             "next": 51010503,
             "impr": [
               1011,
@@ -28893,7 +28893,7 @@
         "options": [
           {
             "id": 51113003,
-            "content": "<I>– Cet individu a l’air un peu dérangé. Mieux vaut éviter de s’en mêler.</>",
+            "content": "<I>Cet individu a l’air un peu dérangé. Mieux vaut éviter de s’en mêler.</>",
             "next": 51113005,
             "impr": [
               1041,
