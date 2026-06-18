@@ -913,6 +913,9 @@ def main():
     root_key_values = extract_root_keys_and_values(base_path)
     print(f"\n提取到最外层键值对: {len(root_key_values)} 个")
 
+    # cn 需要单独写入 EX_T，主循环只处理非 cn 语言
+    process_ex_t(base_path, "cn")
+
     # 对每个语言文件夹处理每个JSON文件
     for lang_dir in lang_dirs:
         lang_code = lang_dir.name
@@ -927,11 +930,11 @@ def main():
         # 处理扩展字段
         process_ex_fields(base_path, lang_code)
 
-        # 处理EX_T映射
-        process_ex_t(base_path, lang_code)
-
         # 处理最外层键值对
         process_root_keys(base_path, lang_code, root_key_values)
+
+        # 处理EX_T映射，放在最后，确保手工覆盖优先生效
+        process_ex_t(base_path, lang_code)
 
     print(f"\n{'='*60}")
     print("完成!")

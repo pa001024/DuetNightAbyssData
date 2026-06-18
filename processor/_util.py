@@ -1,6 +1,7 @@
 P_MAP = {
     "最大神智": "神智",
     "造成的伤害": "增伤",
+    "造成技能伤害": "技能伤害",
     "暴击率": "暴击",
     "暴击伤害": "暴伤",
     "触发概率": "触发",
@@ -55,7 +56,7 @@ def get_attr_config_key_from_attr_data(attr_data, attr_config=None, unique_name=
             key = f"{attr_name}_NoTag_{unique_name}"
             if key in attr_config:
                 return key
-        tag = attr_data.get("DamageTag")
+        tag = attr_data.get("DamageTag") or attr_data.get("Tag")
         rate_zone = attr_data.get("RateZone")
         if tag or rate_zone:
             tag = tag or "NoTag"
