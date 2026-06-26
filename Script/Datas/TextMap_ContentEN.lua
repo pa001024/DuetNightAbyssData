@@ -36794,7 +36794,7 @@ The pack may contain:
   },
   {
     MinKey = "Pet_Filter_Title4",
-    MaxKey = "PlayerLevel_FirstObtain_Pet",
+    MaxKey = "PlayerLevel_FirstObtain_Char",
     Loader = function()
       return {
         Pet_Filter_Title4 = {
@@ -37353,6 +37353,14 @@ The pack may contain:
           ContentEN = "There may be treasure here. Go on, my young friend — add it to your trove.",
           TextMapId = "PhantomTalk_1104_Chest"
         },
+        PhantomTalk_120101_Chest = {
+          ContentEN = "Well, what a pleasant surprise.",
+          TextMapId = "PhantomTalk_120101_Chest"
+        },
+        PhantomTalk_1201_Chest = {
+          ContentEN = "Well, what a pleasant surprise.",
+          TextMapId = "PhantomTalk_1201_Chest"
+        },
         PhantomTalk_1501_Chest = {
           ContentEN = "A chest? Smash it, Samael—! Wait, no, no. We're not doing this today...",
           TextMapId = "PhantomTalk_1501_Chest"
@@ -37588,7 +37596,15 @@ The pack may contain:
         PlayerLevel_FirstObtain_Char = {
           ContentEN = "Character Unlocks{空格}",
           TextMapId = "PlayerLevel_FirstObtain_Char"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "PlayerLevel_FirstObtain_Mod",
+    MaxKey = "QuestDesc_10030215",
+    Loader = function()
+      return {
         PlayerLevel_FirstObtain_Mod = {
           ContentEN = "Demon Wedge Unlocks ",
           TextMapId = "PlayerLevel_FirstObtain_Mod"
@@ -37596,15 +37612,7 @@ The pack may contain:
         PlayerLevel_FirstObtain_Pet = {
           ContentEN = "Geniemon Unlocks ",
           TextMapId = "PlayerLevel_FirstObtain_Pet"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "PlayerLevel_FirstObtain_Pet_Des",
-    MaxKey = "QuestDesc_10030217",
-    Loader = function()
-      return {
+        },
         PlayerLevel_FirstObtain_Pet_Des = {
           ContentEN = "First befriending a Geniemon grants: ",
           TextMapId = "PlayerLevel_FirstObtain_Pet_Des"
@@ -38556,7 +38564,15 @@ You can earn EXP by:
         QuestDesc_10030215 = {
           ContentEN = "The exit is a scene of carnage. Poison traces — not standard issue for Imperial forces — hint at something far darker behind the Charon Hunt. After some discussion, Outsider stays to report to the Legion. You and Snow stick to the plan and head to the hospital to visit Rhythm.",
           TextMapId = "QuestDesc_10030215"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestDesc_10030216",
+    MaxKey = "QuestName_10020805",
+    Loader = function()
+      return {
         QuestDesc_10030216 = {
           ContentEN = "Days later, Rhythm finally wakes from her coma. After you bring her up to speed on everything that happened, she thanks you — and, as a gesture of gratitude, asks you to retrieve a silver seal from her secret base. Though still bedridden, she plans to write personal letters to trusted allies, hoping to gather more news about Berenica for you.",
           TextMapId = "QuestDesc_10030216"
@@ -38564,15 +38580,7 @@ You can earn EXP by:
         QuestDesc_10030217 = {
           ContentEN = "Days later, Rhythm finally wakes from her coma. After you bring her up to speed on everything that happened, she thanks you — and, as a gesture of gratitude, asks you to retrieve a silver seal from her secret base. Though still bedridden, she plans to write personal letters to trusted allies, hoping to gather more news about Berenica for you.",
           TextMapId = "QuestDesc_10030217"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestDesc_10030218",
-    MaxKey = "QuestName_10020807",
-    Loader = function()
-      return {
+        },
         QuestDesc_10030218 = {
           ContentEN = "You've arrived at Rhythm's hidden base. Search the place — the silver seal bearing her name should be somewhere inside.",
           TextMapId = "QuestDesc_10030218"
@@ -39364,7 +39372,15 @@ You can earn EXP by:
         QuestName_10020805 = {
           ContentEN = "Head to the Lakeside of Lamenting Lake",
           TextMapId = "QuestName_10020805"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "QuestName_10020806",
+    MaxKey = "READ_DESC_2000038",
+    Loader = function()
+      return {
         QuestName_10020806 = {
           ContentEN = "Bid a final farewell at the tombstone",
           TextMapId = "QuestName_10020806"
@@ -39372,15 +39388,7 @@ You can earn EXP by:
         QuestName_10020807 = {
           ContentEN = "Take a walk in the Thawing Caverns",
           TextMapId = "QuestName_10020807"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "QuestName_10020808",
-    MaxKey = "READ_DESC_2000040",
-    Loader = function()
-      return {
+        },
         QuestName_10020808 = {
           ContentEN = "Sleep eludes you. Take a walk outside.",
           TextMapId = "QuestName_10020808"
@@ -40181,7 +40189,15 @@ The handwriting on the page listing remaining medical supplies grows increasingl
         READ_DESC_2000038 = {
           ContentEN = "A disordered heap of overdue notices scattered across the desk, all urging Henrik to settle his debts. It's evident that Hypnos' House has been under financial strain for some time.",
           TextMapId = "READ_DESC_2000038"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_DESC_2000039",
+    MaxKey = "READ_NAME_20602",
+    Loader = function()
+      return {
         READ_DESC_2000039 = {
           ContentEN = "A stack of torn-off medicine labels, each marked \"Sedative.\" On the back of one, a message has been furiously scrawled.",
           TextMapId = "READ_DESC_2000039"
@@ -40189,15 +40205,7 @@ The handwriting on the page listing remaining medical supplies grows increasingl
         READ_DESC_2000040 = {
           ContentEN = "A scrap of paper with a short poem scrawled across it.",
           TextMapId = "READ_DESC_2000040"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_DESC_2000041",
-    MaxKey = "READ_NAME_20604",
-    Loader = function()
-      return {
+        },
         READ_DESC_2000041 = {
           ContentEN = "A folder unearthed from the file cabinets. It bears Psyche's photo and details her time at the Hypnos' House.",
           TextMapId = "READ_DESC_2000041"
@@ -40999,7 +41007,15 @@ It was originally set up so the Drifters could spar and hone their craft, but ov
         READ_NAME_20602 = {
           ContentEN = "Purgatorio Island: Volume Ⅰ",
           TextMapId = "READ_NAME_20602"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "READ_NAME_20603",
+    MaxKey = "RESOURCE_DESC_10004",
+    Loader = function()
+      return {
         READ_NAME_20603 = {
           ContentEN = "Purgatorio Island: Volume Ⅱ",
           TextMapId = "READ_NAME_20603"
@@ -41007,15 +41023,7 @@ It was originally set up so the Drifters could spar and hone their craft, but ov
         READ_NAME_20604 = {
           ContentEN = "Purgatorio Island: Volume Ⅲ",
           TextMapId = "READ_NAME_20604"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "READ_NAME_20605",
-    MaxKey = "RESOURCE_DESC_10006",
-    Loader = function()
-      return {
+        },
         READ_NAME_20605 = {
           ContentEN = "Purgatorio Island: Volume Ⅳ",
           TextMapId = "READ_NAME_20605"
@@ -42156,7 +42164,15 @@ Like precious metals, they function as common currency across Atlasia, accepted 
         RESOURCE_DESC_10004 = {
           ContentEN = "Originating from Huaxu, this colossal and weighty arrow defies even the fiercest storms. One can scarcely conceive who might wield such a bolt, yet its meteor-like trail across the heavens shall be indelibly etched in the memory of any witnesses.",
           TextMapId = "RESOURCE_DESC_10004"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_10005",
+    MaxKey = "RESOURCE_DESC_12119",
+    Loader = function()
+      return {
         RESOURCE_DESC_10005 = {
           ContentEN = "Scales from a desert lizard, specially structured to endure scorching heat without harm. This trait adds credence to the fabled kinship between lizards and dragons, though the latter, a creature of beauty, dwells only in the realms of myth and fantasy.",
           TextMapId = "RESOURCE_DESC_10005"
@@ -42164,15 +42180,7 @@ Like precious metals, they function as common currency across Atlasia, accepted 
         RESOURCE_DESC_10006 = {
           ContentEN = "The eternal flame of sanctity, a beacon signifying that Khemet endures as long as this fire burns. To the desert folk, offering fire is a gesture of everlasting friendship.",
           TextMapId = "RESOURCE_DESC_10006"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_10007",
-    MaxKey = "RESOURCE_DESC_12121",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_10007 = {
           ContentEN = "Shackles of exceptional make, forged over ages and impervious to heat, crafted to bind even the wildest of captives.",
           TextMapId = "RESOURCE_DESC_10007"
@@ -42972,7 +42980,15 @@ There is no turning back once the trigger is pulled, much like the commitment th
         RESOURCE_DESC_12119 = {
           ContentEN = "Crafted with precision from the blueprint of Rendhusk. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
           TextMapId = "RESOURCE_DESC_12119"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_12120",
+    MaxKey = "RESOURCE_DESC_4001",
+    Loader = function()
+      return {
         RESOURCE_DESC_12120 = {
           ContentEN = "Crafted with precision from the blueprint of Rendhusk. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
           TextMapId = "RESOURCE_DESC_12120"
@@ -42980,15 +42996,7 @@ There is no turning back once the trigger is pulled, much like the commitment th
         RESOURCE_DESC_12121 = {
           ContentEN = "Crafted with precision from the blueprint of Rendhusk. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
           TextMapId = "RESOURCE_DESC_12121"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_12122",
-    MaxKey = "RESOURCE_DESC_4002",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_12122 = {
           ContentEN = "Crafted with precision from the blueprint of Tumeborn. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
           TextMapId = "RESOURCE_DESC_12122"
@@ -43821,7 +43829,15 @@ So tasty, it's literally transformative.]],
         RESOURCE_DESC_4001 = {
           ContentEN = "Personal Activity reflects how active a guild member has been this week. Take part in guild activities to earn various rewards.",
           TextMapId = "RESOURCE_DESC_4001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_40014",
+    MaxKey = "RESOURCE_DESC_99",
+    Loader = function()
+      return {
         RESOURCE_DESC_40014 = {
           ContentEN = "A bottle of smelling salts is an essential item in any first-aid kit. The incense masters of Huaxu have refined this remedy, enhancing its aroma without compromising its original effects.",
           TextMapId = "RESOURCE_DESC_40014"
@@ -43829,15 +43845,7 @@ So tasty, it's literally transformative.]],
         RESOURCE_DESC_4002 = {
           ContentEN = "The Greenwich Archaeological Society oversees a vast network of guilds, and Guild Activity is a key metric for assessing each guild's recent performance.",
           TextMapId = "RESOURCE_DESC_4002"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_4003",
-    MaxKey = "RESOURCE_DESC_ATTRITEM_Dark",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_4003 = {
           ContentEN = "A special licence issued by the Greenwich Archaeological Society. Possessing one allows you to form a guild.",
           TextMapId = "RESOURCE_DESC_4003"
@@ -44653,7 +44661,15 @@ A set of scoring tokens prepared by the Grand Incense Rite for use in the trials
         RESOURCE_DESC_99 = {
           ContentEN = "A crystal harvested from a Heaventree — one of the most widely used minerals across Atlasia.\nIt emits a gentle glow, reminiscent of a full moon's radiance.",
           TextMapId = "RESOURCE_DESC_99"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_DESC_ATTRITEMRARE",
+    MaxKey = "RESOURCE_NAME_100160101",
+    Loader = function()
+      return {
         RESOURCE_DESC_ATTRITEMRARE = {
           ContentEN = [[
 A crystal aglow with shifting colours. Within its facets, one may glimpse the splendour of all Atlasia, suffused with the power of every element. 
@@ -44663,15 +44679,7 @@ Obtained through Abyss Expedition. Can be used as smelting material for Calamity
         RESOURCE_DESC_ATTRITEM_Dark = {
           ContentEN = "A crystal infused with Umbro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
           TextMapId = "RESOURCE_DESC_ATTRITEM_Dark"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_DESC_ATTRITEM_Fire",
-    MaxKey = "RESOURCE_NAME_10018",
-    Loader = function()
-      return {
+        },
         RESOURCE_DESC_ATTRITEM_Fire = {
           ContentEN = "A crystal infused with Pyro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
           TextMapId = "RESOURCE_DESC_ATTRITEM_Fire"
@@ -45486,7 +45494,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_100160101 = {
           ContentEN = "Thought: Phoxhunter - Lumino",
           TextMapId = "RESOURCE_NAME_100160101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_10017",
+    MaxKey = "RESOURCE_NAME_12042",
+    Loader = function()
+      return {
         RESOURCE_NAME_10017 = {
           ContentEN = "Lense of Enlightenment",
           TextMapId = "RESOURCE_NAME_10017"
@@ -45494,15 +45510,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_10018 = {
           ContentEN = "Golden Floriated Diadem",
           TextMapId = "RESOURCE_NAME_10018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_1001801",
-    MaxKey = "RESOURCE_NAME_12044",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_1001801 = {
           ContentEN = "Thought: Fina",
           TextMapId = "RESOURCE_NAME_1001801"
@@ -46294,7 +46302,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_12042 = {
           ContentEN = "Punitive Inferno: Grip",
           TextMapId = "RESOURCE_NAME_12042"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_12043",
+    MaxKey = "RESOURCE_NAME_20027",
+    Loader = function()
+      return {
         RESOURCE_NAME_12043 = {
           ContentEN = "Punitive Inferno: Blade",
           TextMapId = "RESOURCE_NAME_12043"
@@ -46302,15 +46318,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_12044 = {
           ContentEN = "Exiled Fangs: Grip",
           TextMapId = "RESOURCE_NAME_12044"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_12045",
-    MaxKey = "RESOURCE_NAME_20029",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_12045 = {
           ContentEN = "Exiled Fangs: Left Blade",
           TextMapId = "RESOURCE_NAME_12045"
@@ -47102,7 +47110,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_20027 = {
           ContentEN = "Sharpening Potion",
           TextMapId = "RESOURCE_NAME_20027"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_20028",
+    MaxKey = "RESOURCE_NAME_31011001",
+    Loader = function()
+      return {
         RESOURCE_NAME_20028 = {
           ContentEN = "Projectile",
           TextMapId = "RESOURCE_NAME_20028"
@@ -47110,15 +47126,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_20029 = {
           ContentEN = "Weaponholder",
           TextMapId = "RESOURCE_NAME_20029"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_2003",
-    MaxKey = "RESOURCE_NAME_31011003",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_2003 = {
           ContentEN = "Progress Score",
           TextMapId = "RESOURCE_NAME_2003"
@@ -47910,7 +47918,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_31011001 = {
           ContentEN = "A Nightingale in Wonderland Ⅰ",
           TextMapId = "RESOURCE_NAME_31011001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_31011002",
+    MaxKey = "RESOURCE_NAME_5025010",
+    Loader = function()
+      return {
         RESOURCE_NAME_31011002 = {
           ContentEN = "A Nightingale in Wonderland Ⅱ",
           TextMapId = "RESOURCE_NAME_31011002"
@@ -47918,15 +47934,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_31011003 = {
           ContentEN = "When Dreams Gild the Night",
           TextMapId = "RESOURCE_NAME_31011003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_31011004",
-    MaxKey = "RESOURCE_NAME_5025020",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_31011004 = {
           ContentEN = "Into the Sandrealm",
           TextMapId = "RESOURCE_NAME_31011004"
@@ -48718,7 +48726,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_5025010 = {
           ContentEN = "Mousetail",
           TextMapId = "RESOURCE_NAME_5025010"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_NAME_5025011",
+    MaxKey = "RESOURCE_TEXT_2001",
+    Loader = function()
+      return {
         RESOURCE_NAME_5025011 = {
           ContentEN = "Mousetail Variant",
           TextMapId = "RESOURCE_NAME_5025011"
@@ -48726,15 +48742,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_NAME_5025020 = {
           ContentEN = "Bonegnaw Eel",
           TextMapId = "RESOURCE_NAME_5025020"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_NAME_5025021",
-    MaxKey = "RESOURCE_TEXT_20011",
-    Loader = function()
-      return {
+        },
         RESOURCE_NAME_5025021 = {
           ContentEN = "Bonegnaw Eel Variant",
           TextMapId = "RESOURCE_NAME_5025021"
@@ -49526,7 +49534,15 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_TEXT_2001 = {
           ContentEN = "\"Go to them, find solace amongst the banished souls.\nEndure the twilight's cleansing, navigate through the boundless gloom,\nTogether, towards the dawn of a new day.\"\n— ???",
           TextMapId = "RESOURCE_TEXT_2001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_20010",
+    MaxKey = "RESOURCE_TEXT_5110601",
+    Loader = function()
+      return {
         RESOURCE_TEXT_20010 = {
           ContentEN = "\"Also known as the Ashless Wood, dark in colour, with leaves white as bone; resembling rotten timber, yet flame shuns its touch.\nIts bark is edible, with an astringent and cold taste, non-toxic.\nCan soothe swollen throats and quell inner heat, taken twice daily in a brew.\"\n\n— Fufeng, Huaxu Apothecary, in \"Essentials of Medicinal Herbs\"",
           TextMapId = "RESOURCE_TEXT_20010"
@@ -49534,15 +49550,7 @@ Acquired through special means. Can be used as smelting material for Calamity We
         RESOURCE_TEXT_20011 = {
           ContentEN = "\"How come the villains in stories never cry? Is it because their tears are too thick, like jelly? Or is it because their hearts are so cold that their tears are frozen for eternity?\"\n\n— Fina, Citizen of Icelake",
           TextMapId = "RESOURCE_TEXT_20011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_20012",
-    MaxKey = "RESOURCE_TEXT_5210100",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_20012 = {
           ContentEN = "\"The Elysian Church seemed ready for war, with legions of knights silently invoking the divine name, marching towards the borders in shimmering silver chainmail and golden helms. As they gathered, the vast plains glittered like a lake of gold and silver. Many swore, in that day's sunlight, they glimpsed the divine shadow leading Elysium to triumph.\"\n\n— Tacitus, Elysian Historian, in \"Chronicles\"",
           TextMapId = "RESOURCE_TEXT_20012"
@@ -50342,7 +50350,15 @@ Let go of the troubles beyond your reach.
         RESOURCE_TEXT_5110601 = {
           ContentEN = "Artificer Rod? What a rip-off! You hook the little ones with bait, then use them to land the big ones — that's how it works! Can't believe I've wasted an entire afternoon on this.\n— A Huaxu angler, seething",
           TextMapId = "RESOURCE_TEXT_5110601"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RESOURCE_TEXT_5110602",
+    MaxKey = "RLBlessing_Name_107",
+    Loader = function()
+      return {
         RESOURCE_TEXT_5110602 = {
           ContentEN = "This rod really does have something to it. I'd only just taken it out, and people were already crowding in to lecture me — saying Artificer Rods are useless, that it's all superstition, and so on.\n— A Huaxu would-be angler, intrigued",
           TextMapId = "RESOURCE_TEXT_5110602"
@@ -50350,15 +50366,7 @@ Let go of the troubles beyond your reach.
         RESOURCE_TEXT_5210100 = {
           ContentEN = "A true master angler needs only one rod, one bucket, and a deft hand.\n\n— A veteran angler with an empty creel and not a crumb of bait left",
           TextMapId = "RESOURCE_TEXT_5210100"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RESOURCE_TEXT_5210200",
-    MaxKey = "RLBlessing_Name_109",
-    Loader = function()
-      return {
+        },
         RESOURCE_TEXT_5210200 = {
           ContentEN = "Plenty of anglers raise their own bait. It's economical, convenient, and efficient. Just... make sure the lid on your bait box is tight. I mean really tight.\n\n— A veteran angler buying insecticide",
           TextMapId = "RESOURCE_TEXT_5210200"
@@ -51172,7 +51180,15 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
         RLBlessing_Name_107 = {
           ContentEN = "Finesse Blade",
           TextMapId = "RLBlessing_Name_107"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_Name_108",
+    MaxKey = "RLBlessing_SimpleDesc_711",
+    Loader = function()
+      return {
         RLBlessing_Name_108 = {
           ContentEN = "Valor's Blade",
           TextMapId = "RLBlessing_Name_108"
@@ -51180,15 +51196,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt by <Highlight>$2
         RLBlessing_Name_109 = {
           ContentEN = "Surge Blade",
           TextMapId = "RLBlessing_Name_109"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_Name_110",
-    MaxKey = "RLBlessing_SimpleDesc_713",
-    Loader = function()
-      return {
+        },
         RLBlessing_Name_110 = {
           ContentEN = "Endless Wildfire",
           TextMapId = "RLBlessing_Name_110"
@@ -51982,7 +51990,15 @@ Standing still for over <Highlight>2</>s increases Damage Dealt (until moving).]
         RLBlessing_SimpleDesc_711 = {
           ContentEN = "Dealing damage grants Ultra Shields.",
           TextMapId = "RLBlessing_SimpleDesc_711"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLBlessing_SimpleDesc_712",
+    MaxKey = "RLTreasure_Desc_10103",
+    Loader = function()
+      return {
         RLBlessing_SimpleDesc_712 = {
           ContentEN = "Limits max Damage Taken per hit and restores HP after taking heavy damage.",
           TextMapId = "RLBlessing_SimpleDesc_712"
@@ -51990,15 +52006,7 @@ Standing still for over <Highlight>2</>s increases Damage Dealt (until moving).]
         RLBlessing_SimpleDesc_713 = {
           ContentEN = "Using an Ultimate consumes all DEF to boost Character ATK.",
           TextMapId = "RLBlessing_SimpleDesc_713"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLBlessing_SimpleDesc_714",
-    MaxKey = "RLTreasure_Desc_10105",
-    Loader = function()
-      return {
+        },
         RLBlessing_SimpleDesc_714 = {
           ContentEN = "Ignores the target's DEF by a certain amount when dealing Skill DMG. The effect intensifies at lower HP.",
           TextMapId = "RLBlessing_SimpleDesc_714"
@@ -52792,7 +52800,15 @@ With all <Highlight>3</> [Covenant of the God of Abundance] Artefacts collected,
         RLTreasure_Desc_10103 = {
           ContentEN = "Restores <Highlight>$1</> HP when entering a new depth.",
           TextMapId = "RLTreasure_Desc_10103"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_Desc_10104",
+    MaxKey = "RLTreasure_SimpleDesc_10106",
+    Loader = function()
+      return {
         RLTreasure_Desc_10104 = {
           ContentEN = "Restores <Highlight>$1</> Sanity when entering a new depth.",
           TextMapId = "RLTreasure_Desc_10104"
@@ -52800,15 +52816,7 @@ With all <Highlight>3</> [Covenant of the God of Abundance] Artefacts collected,
         RLTreasure_Desc_10105 = {
           ContentEN = "Trace Points +<Highlight>@1</>.",
           TextMapId = "RLTreasure_Desc_10105"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_Desc_10106",
-    MaxKey = "RLTreasure_SimpleDesc_10108",
-    Loader = function()
-      return {
+        },
         RLTreasure_Desc_10106 = {
           ContentEN = "Max Revives +<Highlight>#1</>.",
           TextMapId = "RLTreasure_Desc_10106"
@@ -53638,7 +53646,15 @@ All her life, she's chosen the path of a quitter. She skipped the Sacred Tree Ac
         RLTreasure_SimpleDesc_10106 = {
           ContentEN = "Increases Max Revival.",
           TextMapId = "RLTreasure_SimpleDesc_10106"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RLTreasure_SimpleDesc_10107",
+    MaxKey = "RaidDungeon_Shop_UnlockPoint",
+    Loader = function()
+      return {
         RLTreasure_SimpleDesc_10107 = {
           ContentEN = "When HP drops, grants Hitstun immunity and decreases Damage Taken.",
           TextMapId = "RLTreasure_SimpleDesc_10107"
@@ -53646,15 +53662,7 @@ All her life, she's chosen the path of a quitter. She skipped the Sacred Tree Ac
         RLTreasure_SimpleDesc_10108 = {
           ContentEN = "Increases Skill DMG and decreases Melee Weapon DMG.",
           TextMapId = "RLTreasure_SimpleDesc_10108"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RLTreasure_SimpleDesc_10109",
-    MaxKey = "Raid_Buff_11",
-    Loader = function()
-      return {
+        },
         RLTreasure_SimpleDesc_10109 = {
           ContentEN = "Increases Skill DMG and decreases Ranged Weapon DMG.",
           TextMapId = "RLTreasure_SimpleDesc_10109"
@@ -54448,7 +54456,15 @@ Restores Sanity after using a skill.
         RaidDungeon_Shop_UnlockPoint = {
           ContentEN = "Points Required: ",
           TextMapId = "RaidDungeon_Shop_UnlockPoint"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RaidDungeon_Time_Remain",
+    MaxKey = "RougeLike_RoomName_401",
+    Loader = function()
+      return {
         RaidDungeon_Time_Remain = {
           ContentEN = "Ends in ",
           TextMapId = "RaidDungeon_Time_Remain"
@@ -54456,15 +54472,7 @@ Restores Sanity after using a skill.
         Raid_Buff_11 = {
           ContentEN = "When an Anemo character's Skill Intensity is above 100%, gain #2 All-Element Penetration for every #1 over the threshold, up to #3.",
           TextMapId = "Raid_Buff_11"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Raid_Buff_12",
-    MaxKey = "RougeLike_RoomType_Name_1",
-    Loader = function()
-      return {
+        },
         Raid_Buff_12 = {
           ContentEN = "When an Electro Character's Skill Intensity exceeds 100%, for every additional #1, Skill DMG ignores an extra #2 of the target's DEF, up to #3.",
           TextMapId = "Raid_Buff_12"
@@ -55244,7 +55252,15 @@ Restores Sanity after using a skill.
         RougeLike_RoomName_401 = {
           ContentEN = "Abyssal Merchant",
           TextMapId = "RougeLike_RoomName_401"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "RougeLike_RoomName_501",
+    MaxKey = "SKILL_20506_DESC",
+    Loader = function()
+      return {
         RougeLike_RoomName_501 = {
           ContentEN = "Abysmal Abyssoid",
           TextMapId = "RougeLike_RoomName_501"
@@ -55252,15 +55268,7 @@ Restores Sanity after using a skill.
         RougeLike_RoomType_Name_1 = {
           ContentEN = "Battle",
           TextMapId = "RougeLike_RoomType_Name_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "RougeLike_RoomType_Name_2",
-    MaxKey = "SKILL_20509_DESC",
-    Loader = function()
-      return {
+        },
         RougeLike_RoomType_Name_2 = {
           ContentEN = "Battle",
           TextMapId = "RougeLike_RoomType_Name_2"
@@ -56128,7 +56136,15 @@ This effect is removed when switching to another weapon.]],
         SKILL_20506_DESC = {
           ContentEN = "Mag Capacity +<H>#1</>. On a CRIT with this weapon, grants 1 stack of +<H>#2</> ATK Speed for <H>#3</>s, stacking up to <H>#4</> times. The effect is removed when switching weapons.",
           TextMapId = "SKILL_20506_DESC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_20507_DESC",
+    MaxKey = "SKILL_DESC_1101WaveDamage4",
+    Loader = function()
+      return {
         SKILL_20507_DESC = {
           ContentEN = "CRIT Damage +<H>#1</>. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. For each additional Ammo count gained, the damage dealt by this weapon is increased by <H>#2</>, up to a maximum increase of <H>#3</>.",
           TextMapId = "SKILL_20507_DESC"
@@ -56136,15 +56152,7 @@ This effect is removed when switching to another weapon.]],
         SKILL_20509_DESC = {
           ContentEN = "Skill Range +<H>#1</>. When a Lumino character deals additional damage, there is a <H>#2</> chance to grant allies +<H>#3</> ATK for <H>#4</>s (up to <H>#5</> stacks).",
           TextMapId = "SKILL_20509_DESC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_20510_DESC",
-    MaxKey = "SKILL_DESC_1101WaveDamageOn",
-    Loader = function()
-      return {
+        },
         SKILL_20510_DESC = {
           ContentEN = "Skill Duration +<H>#1</>. Projectiles that hit the environment or travel a certain distance return to the user's position and increase the Ammo count by 1. When a Lumino character triggers Bonus Effect, grants 1 stack that increases ATK by <H>#2</> for <H>#3</>s, up to <H>#4</> stacks. Using an Ultimate Skill refreshes the duration of all stacks to <H>#3</>s.",
           TextMapId = "SKILL_20510_DESC"
@@ -57043,7 +57051,15 @@ Daphne can hold up to 30 [Azoth Projectiles], and each ranged weapon attack cons
         SKILL_DESC_1101WaveDamage4 = {
           ContentEN = "4-Hit Swordwave DMG",
           TextMapId = "SKILL_DESC_1101WaveDamage4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_1101WaveDamage5",
+    MaxKey = "SKILL_DESC_4202Skill02EsConvertRate",
+    Loader = function()
+      return {
         SKILL_DESC_1101WaveDamage5 = {
           ContentEN = "5-Hit Swordwave DMG",
           TextMapId = "SKILL_DESC_1101WaveDamage5"
@@ -57051,15 +57067,7 @@ Daphne can hold up to 30 [Azoth Projectiles], and each ranged weapon attack cons
         SKILL_DESC_1101WaveDamageOn = {
           ContentEN = "Skill DMG",
           TextMapId = "SKILL_DESC_1101WaveDamageOn"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_1101WaveWidth",
-    MaxKey = "SKILL_DESC_4202Skill02Sustain",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_1101WaveWidth = {
           ContentEN = "Swordwave Width",
           TextMapId = "SKILL_DESC_1101WaveWidth"
@@ -57861,7 +57869,15 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_4202Skill02EsConvertRate = {
           ContentEN = "Grants Ultra Shield",
           TextMapId = "SKILL_DESC_4202Skill02EsConvertRate"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_4202Skill02EsDamage",
+    MaxKey = "SKILL_ICON_Phantom",
+    Loader = function()
+      return {
         SKILL_DESC_4202Skill02EsDamage = {
           ContentEN = "Damage",
           TextMapId = "SKILL_DESC_4202Skill02EsDamage"
@@ -57869,15 +57885,7 @@ per stack of [Poison of Love]]=],
         SKILL_DESC_4202Skill02Sustain = {
           ContentEN = "[Bespoke Shield] Duration",
           TextMapId = "SKILL_DESC_4202Skill02Sustain"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_4301Skill01Damage",
-    MaxKey = "SKILL_ICON_RapidFire_01",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_4301Skill01Damage = {
           ContentEN = "[Divine Conqueror] DMG",
           TextMapId = "SKILL_DESC_4301Skill01Damage"
@@ -58669,7 +58677,15 @@ per stack of [Poison of Love]]=],
         SKILL_ICON_Phantom = {
           ContentEN = "Support",
           TextMapId = "SKILL_ICON_Phantom"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_ICON_RapidFire",
+    MaxKey = "SubType_2_Haiboliya",
+    Loader = function()
+      return {
         SKILL_ICON_RapidFire = {
           ContentEN = "Rapid",
           TextMapId = "SKILL_ICON_RapidFire"
@@ -58677,15 +58693,7 @@ per stack of [Poison of Love]]=],
         SKILL_ICON_RapidFire_01 = {
           ContentEN = "Firebomb",
           TextMapId = "SKILL_ICON_RapidFire_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_ICON_Search",
-    MaxKey = "SubType_2_Other",
-    Loader = function()
-      return {
+        },
         SKILL_ICON_Search = {
           ContentEN = "Scan",
           TextMapId = "SKILL_ICON_Search"
@@ -59459,7 +59467,15 @@ per stack of [Poison of Love]]=],
         SubType_2_Haiboliya = {
           ContentEN = "Hyperborea",
           TextMapId = "SubType_2_Haiboliya"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SubType_2_Huaxu",
+    MaxKey = "TERMEXP_4201_SuperFallAttack",
+    Loader = function()
+      return {
         SubType_2_Huaxu = {
           ContentEN = "Huaxu",
           TextMapId = "SubType_2_Huaxu"
@@ -59467,15 +59483,7 @@ per stack of [Poison of Love]]=],
         SubType_2_Other = {
           ContentEN = "Others",
           TextMapId = "SubType_2_Other"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SubType_3_Astronomy",
-    MaxKey = "TERMEXP_4202_Skill01Buff",
-    Loader = function()
-      return {
+        },
         SubType_3_Astronomy = {
           ContentEN = "Astronomy",
           TextMapId = "SubType_3_Astronomy"
@@ -60307,7 +60315,15 @@ Xuanjiao absorbs HP damage inflicted on [Yuming]. When the absorbed amount reach
 Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self.
  Then plunges at high speed, dealing Electro AoE Damage on impact. Counts as a Plunging Attack from a melee weapon. While in [Xuanjiao Manifest], also triggers [Wyrmcall Clouds].]],
           TextMapId = "TERMEXP_4201_SuperFallAttack"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERMEXP_4202_Skill01",
+    MaxKey = "TextMap_AnswerDetail_100201",
+    Loader = function()
+      return {
         TERMEXP_4202_Skill01 = {
           ContentEN = "[Barrier] blocks frontal projectiles and absorbs their damage, and expires once it has absorbed damage equivalent to 100% of Randy's Max HP.",
           TextMapId = "TERMEXP_4202_Skill01"
@@ -60315,15 +60331,7 @@ Consumes all [Reverse Scales] to grant a Damage Dealt Increase to self.
         TERMEXP_4202_Skill01Buff = {
           ContentEN = "Decreases ATK, and deals Electro Damage once every 2s.",
           TextMapId = "TERMEXP_4202_Skill01Buff"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERMEXP_4301_Skill01",
-    MaxKey = "TextMap_AnswerDetail_100203",
-    Loader = function()
-      return {
+        },
         TERMEXP_4301_Skill01 = {
           ContentEN = "After a 1.5-second delay, consumes [Might of Thunder] every 0.4s to strike a random enemy within range, dealing Electro Damage. Lasts up to 10s. When [Might of Thunder] is depleted, the [Legion's Punishment] field dissipates. A maximum of 3 fields can exist at once.",
           TextMapId = "TERMEXP_4301_Skill01"
@@ -61107,7 +61115,15 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
         TextMap_AnswerDetail_100201 = {
           ContentEN = "The freshly broken vane probably snapped when the assailant landed on the roof. Together with other clues, it may provide more information.",
           TextMapId = "TextMap_AnswerDetail_100201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerDetail_100202",
+    MaxKey = "TitleFrame_10001",
+    Loader = function()
+      return {
         TextMap_AnswerDetail_100202 = {
           ContentEN = "The vane's base is bent toward the southwest. Together with other clues, it may provide more information.",
           TextMapId = "TextMap_AnswerDetail_100202"
@@ -61115,15 +61131,7 @@ When a new [Phantasm] is created, the existing [Phantasm] immediately deals Anem
         TextMap_AnswerDetail_100203 = {
           ContentEN = "The break pattern of the vane and its base align perfectly, indicating it was dislodged during the assailant's rooftop escape.\nThe assembled vane points southwest — confirming the direction of flight.",
           TextMapId = "TextMap_AnswerDetail_100203"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerDetail_100301",
-    MaxKey = "TitleFrame_10003",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerDetail_100301 = {
           ContentEN = "That night, the assailant hummed an operatic tune in a rasping voice. Could they be a singer, or simply a music lover?",
           TextMapId = "TextMap_AnswerDetail_100301"
@@ -61916,7 +61924,15 @@ You can earn Trial EXP by:
         TitleFrame_10001 = {
           ContentEN = "Default",
           TextMapId = "TitleFrame_10001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TitleFrame_10002",
+    MaxKey = "Title_20038",
+    Loader = function()
+      return {
         TitleFrame_10002 = {
           ContentEN = "Duet Night Abyss Ⅰ",
           TextMapId = "TitleFrame_10002"
@@ -61924,15 +61940,7 @@ You can earn Trial EXP by:
         TitleFrame_10003 = {
           ContentEN = "Duet Night Abyss Ⅱ",
           TextMapId = "TitleFrame_10003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TitleFrame_10004",
-    MaxKey = "Title_20040",
-    Loader = function()
-      return {
+        },
         TitleFrame_10004 = {
           ContentEN = " Duet Night Abyss (Ⅲ)",
           TextMapId = "TitleFrame_10004"
@@ -62724,7 +62732,15 @@ You can earn Trial EXP by:
         Title_20038 = {
           ContentEN = " Challenger",
           TextMapId = "Title_20038"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "Title_20039",
+    MaxKey = "UIGuide_Fish_01",
+    Loader = function()
+      return {
         Title_20039 = {
           ContentEN = " Friend",
           TextMapId = "Title_20039"
@@ -62732,15 +62748,7 @@ You can earn Trial EXP by:
         Title_20040 = {
           ContentEN = " Impression",
           TextMapId = "Title_20040"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "Title_20041",
-    MaxKey = "UIGuide_Fish_03",
-    Loader = function()
-      return {
+        },
         Title_20041 = {
           ContentEN = " Kaleidoscope",
           TextMapId = "Title_20041"
@@ -63559,7 +63567,15 @@ In this unfinished fairy tale, all things are cast in grayscale.
         UIGuide_Fish_01 = {
           ContentEN = "Once you've cast your line, watch for the reel button to flash — that means a fish has taken the bait! Reel it in quickly before it gets away.",
           TextMapId = "UIGuide_Fish_01"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Fish_02",
+    MaxKey = "UIGuide_Title_Elevator",
+    Loader = function()
+      return {
         UIGuide_Fish_02 = {
           ContentEN = "During the reel-in, keep an eye on the gauge to the right. Hold the reel button to apply tension — align the indicator with the fish marker and hold steady until the catch is yours!",
           TextMapId = "UIGuide_Fish_02"
@@ -63567,15 +63583,7 @@ In this unfinished fairy tale, all things are cast in grayscale.
         UIGuide_Fish_03 = {
           ContentEN = "Landing a large catch may trigger a <H>Fish for Bigger Fish</> chance! Use your current catch as bait and cast again — you might land an even rarer prize.",
           TextMapId = "UIGuide_Fish_03"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Fish_04",
-    MaxKey = "UIGuide_Title_ExplorationMechanism_2",
-    Loader = function()
-      return {
+        },
         UIGuide_Fish_04 = {
           ContentEN = "When fishing with a Geniemon with the \"At peace\" Potential, reeling in is automatic.",
           TextMapId = "UIGuide_Fish_04"
@@ -64394,7 +64402,15 @@ Rain also marks the match entering a faster phase, so keep an eye on the remaini
         UIGuide_Title_Elevator = {
           ContentEN = "Lifts",
           TextMapId = "UIGuide_Title_Elevator"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Title_ExplorationMechanism_1",
+    MaxKey = "UI_Accessory_Desc_10089",
+    Loader = function()
+      return {
         UIGuide_Title_ExplorationMechanism_1 = {
           ContentEN = "Lunoxplorer's Challenge",
           TextMapId = "UIGuide_Title_ExplorationMechanism_1"
@@ -64402,15 +64418,7 @@ Rain also marks the match entering a faster phase, so keep an eye on the remaini
         UIGuide_Title_ExplorationMechanism_2 = {
           ContentEN = "Speed Challenge",
           TextMapId = "UIGuide_Title_ExplorationMechanism_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Title_ExplorationMechanism_3",
-    MaxKey = "UI_Accessory_Desc_10091",
-    Loader = function()
-      return {
+        },
         UIGuide_Title_ExplorationMechanism_3 = {
           ContentEN = "Shooting Challenge",
           TextMapId = "UIGuide_Title_ExplorationMechanism_3"
@@ -65213,7 +65221,15 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
         UI_Accessory_Desc_10089 = {
           ContentEN = "Even the longest night will end. May its light guide you home.",
           TextMapId = "UI_Accessory_Desc_10089"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_10090",
+    MaxKey = "UI_Accessory_Name_10028",
+    Loader = function()
+      return {
         UI_Accessory_Desc_10090 = {
           ContentEN = "Someday, your dreams will bloom.",
           TextMapId = "UI_Accessory_Desc_10090"
@@ -65221,15 +65237,7 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
         UI_Accessory_Desc_10091 = {
           ContentEN = "Let's write a story of our own.",
           TextMapId = "UI_Accessory_Desc_10091"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_10092",
-    MaxKey = "UI_Accessory_Name_10030",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_10092 = {
           ContentEN = "By Heaven's might, begone, foul spirits!",
           TextMapId = "UI_Accessory_Desc_10092"
@@ -66040,7 +66048,15 @@ Lynn's Headpiece
         UI_Accessory_Name_10028 = {
           ContentEN = "Lightbulb Moment",
           TextMapId = "UI_Accessory_Name_10028"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_10029",
+    MaxKey = "UI_Accessory_Name_20013",
+    Loader = function()
+      return {
         UI_Accessory_Name_10029 = {
           ContentEN = "Tales of Icelake",
           TextMapId = "UI_Accessory_Name_10029"
@@ -66048,15 +66064,7 @@ Lynn's Headpiece
         UI_Accessory_Name_10030 = {
           ContentEN = "Exquisite Umbrella",
           TextMapId = "UI_Accessory_Name_10030"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_10031",
-    MaxKey = "UI_Accessory_Name_20015",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_10031 = {
           ContentEN = "Solar Aureole",
           TextMapId = "UI_Accessory_Name_10031"
@@ -66848,7 +66856,15 @@ Lynn's Headpiece
         UI_Accessory_Name_20013 = {
           ContentEN = "Mistborn Butterfly: Mint",
           TextMapId = "UI_Accessory_Name_20013"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_20014",
+    MaxKey = "UI_Accessory_Name_40066",
+    Loader = function()
+      return {
         UI_Accessory_Name_20014 = {
           ContentEN = "Mistborn Butterfly: Rust Red",
           TextMapId = "UI_Accessory_Name_20014"
@@ -66856,15 +66872,7 @@ Lynn's Headpiece
         UI_Accessory_Name_20015 = {
           ContentEN = "Mistborn Butterfly: Leaden Grey",
           TextMapId = "UI_Accessory_Name_20015"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_20016",
-    MaxKey = "UI_Accessory_Name_40068",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_20016 = {
           ContentEN = "Bandage Wrap",
           TextMapId = "UI_Accessory_Name_20016"
@@ -67656,7 +67664,15 @@ Lynn's Headpiece
         UI_Accessory_Name_40066 = {
           ContentEN = "Ethereal Wings: Dark Jade",
           TextMapId = "UI_Accessory_Name_40066"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_40067",
+    MaxKey = "UI_Achievement_Des_17002009",
+    Loader = function()
+      return {
         UI_Accessory_Name_40067 = {
           ContentEN = "Ethereal Wings: Rust Red",
           TextMapId = "UI_Accessory_Name_40067"
@@ -67664,15 +67680,7 @@ Lynn's Headpiece
         UI_Accessory_Name_40068 = {
           ContentEN = "Squishy Backpack: Emerald Green",
           TextMapId = "UI_Accessory_Name_40068"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_40069",
-    MaxKey = "UI_Achievement_Des_17002011",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_40069 = {
           ContentEN = "Squishy Backpack: Opaque White",
           TextMapId = "UI_Accessory_Name_40069"
@@ -68464,7 +68472,15 @@ Lynn's Headpiece
         UI_Achievement_Des_17002009 = {
           ContentEN = "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Eve",
           TextMapId = "UI_Achievement_Des_17002009"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_17002010",
+    MaxKey = "UI_Achievement_Des_5062001",
+    Loader = function()
+      return {
         UI_Achievement_Des_17002010 = {
           ContentEN = "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Tabethe",
           TextMapId = "UI_Achievement_Des_17002010"
@@ -68472,15 +68488,7 @@ Lynn's Headpiece
         UI_Achievement_Des_17002011 = {
           ContentEN = "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Fushu",
           TextMapId = "UI_Achievement_Des_17002011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_17002012",
-    MaxKey = "UI_Achievement_Des_5062003",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_17002012 = {
           ContentEN = "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Lynn",
           TextMapId = "UI_Achievement_Des_17002012"
@@ -69272,7 +69280,15 @@ Lynn's Headpiece
         UI_Achievement_Des_5062001 = {
           ContentEN = "In Solo mode, secure victory within <highlight>300</>s in [Commission: Mediation] on the highest difficulty",
           TextMapId = "UI_Achievement_Des_5062001"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_5062002",
+    MaxKey = "UI_Achievement_Name_10100401",
+    Loader = function()
+      return {
         UI_Achievement_Des_5062002 = {
           ContentEN = "In Solo mode, secure victory within <highlight>180</>s in [Commission: Mediation] on the highest difficulty",
           TextMapId = "UI_Achievement_Des_5062002"
@@ -69280,15 +69296,7 @@ Lynn's Headpiece
         UI_Achievement_Des_5062003 = {
           ContentEN = "In Solo mode, secure victory within <highlight>90</>s in [Commission: Mediation] on the highest difficulty",
           TextMapId = "UI_Achievement_Des_5062003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_5063001",
-    MaxKey = "UI_Achievement_Name_10100502",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_5063001 = {
           ContentEN = "In Solo mode, secure victory within <highlight>420</>s in [Commission: Termination] on the highest difficulty",
           TextMapId = "UI_Achievement_Des_5063001"
@@ -70080,7 +70088,15 @@ Lynn's Headpiece
         UI_Achievement_Name_10100401 = {
           ContentEN = "In Water, in Grass, in the Misty Rain",
           TextMapId = "UI_Achievement_Name_10100401"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_10100501",
+    MaxKey = "UI_Achievement_Name_200901",
+    Loader = function()
+      return {
         UI_Achievement_Name_10100501 = {
           ContentEN = "Rune Master (Ⅰ)",
           TextMapId = "UI_Achievement_Name_10100501"
@@ -70088,15 +70104,7 @@ Lynn's Headpiece
         UI_Achievement_Name_10100502 = {
           ContentEN = "Rune Master (Ⅱ)",
           TextMapId = "UI_Achievement_Name_10100502"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_10100503",
-    MaxKey = "UI_Achievement_Name_200903",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_10100503 = {
           ContentEN = "Rune Master (Ⅲ)",
           TextMapId = "UI_Achievement_Name_10100503"
@@ -70888,7 +70896,15 @@ Lynn's Headpiece
         UI_Achievement_Name_200901 = {
           ContentEN = "Scourge of Huaxu (Ⅰ)",
           TextMapId = "UI_Achievement_Name_200901"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_200902",
+    MaxKey = "UI_Achievement_Name_502701",
+    Loader = function()
+      return {
         UI_Achievement_Name_200902 = {
           ContentEN = "Scourge of Huaxu (Ⅱ)",
           TextMapId = "UI_Achievement_Name_200902"
@@ -70896,15 +70912,7 @@ Lynn's Headpiece
         UI_Achievement_Name_200903 = {
           ContentEN = "Scourge of Huaxu (Ⅲ)",
           TextMapId = "UI_Achievement_Name_200903"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201001",
-    MaxKey = "UI_Achievement_Name_5030901",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201001 = {
           ContentEN = "Save the Environment: Huaxu (Ⅰ)",
           TextMapId = "UI_Achievement_Name_201001"
@@ -71696,7 +71704,15 @@ Lynn's Headpiece
         UI_Achievement_Name_502701 = {
           ContentEN = "Unstoppable Phoxhunter · Solo",
           TextMapId = "UI_Achievement_Name_502701"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_5030801",
+    MaxKey = "UI_Achievement_Name_920201",
+    Loader = function()
+      return {
         UI_Achievement_Name_5030801 = {
           ContentEN = "Race Against Death",
           TextMapId = "UI_Achievement_Name_5030801"
@@ -71704,15 +71720,7 @@ Lynn's Headpiece
         UI_Achievement_Name_5030901 = {
           ContentEN = "Rapid Mediation",
           TextMapId = "UI_Achievement_Name_5030901"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_503101",
-    MaxKey = "UI_Achievement_Name_920301",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_503101 = {
           ContentEN = "Warm-Hearted Investigator - Peerless Ⅰ",
           TextMapId = "UI_Achievement_Name_503101"
@@ -72504,7 +72512,15 @@ Lynn's Headpiece
         UI_Achievement_Name_920201 = {
           ContentEN = "Mirage Ⅰ",
           TextMapId = "UI_Achievement_Name_920201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_920202",
+    MaxKey = "UI_Armory_CurrentAttr",
+    Loader = function()
+      return {
         UI_Achievement_Name_920202 = {
           ContentEN = "Mirage Ⅱ",
           TextMapId = "UI_Achievement_Name_920202"
@@ -72512,15 +72528,7 @@ Lynn's Headpiece
         UI_Achievement_Name_920301 = {
           ContentEN = "Desert Beneath the Starry Vault Ⅰ",
           TextMapId = "UI_Achievement_Name_920301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_920302",
-    MaxKey = "UI_Armory_Dispatch_Locked",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_920302 = {
           ContentEN = "Desert Beneath the Starry Vault Ⅱ",
           TextMapId = "UI_Achievement_Name_920302"
@@ -73309,7 +73317,15 @@ Lynn's Headpiece
         UI_Armory_CurrentAttr = {
           ContentEN = "Current Element",
           TextMapId = "UI_Armory_CurrentAttr"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Armory_CurrentMaxForgeLevl",
+    MaxKey = "UI_AsyncComcast_Headcount",
+    Loader = function()
+      return {
         UI_Armory_CurrentMaxForgeLevl = {
           ContentEN = "Current Smelting Level Cap: ",
           TextMapId = "UI_Armory_CurrentMaxForgeLevl"
@@ -73317,15 +73333,7 @@ Lynn's Headpiece
         UI_Armory_Dispatch_Locked = {
           ContentEN = "Ascend to Phase %s to unlock",
           TextMapId = "UI_Armory_Dispatch_Locked"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Armory_Dress",
-    MaxKey = "UI_Attr_Dark_Name",
-    Loader = function()
-      return {
+        },
         UI_Armory_Dress = {
           ContentEN = "Accessories",
           TextMapId = "UI_Armory_Dress"
@@ -74117,7 +74125,15 @@ Lynn's Headpiece
         UI_AsyncComcast_Headcount = {
           ContentEN = "Number of Participants",
           TextMapId = "UI_AsyncComcast_Headcount"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AsyncComcast_HostReward",
+    MaxKey = "UI_Bag_Decompose_Unable",
+    Loader = function()
+      return {
         UI_AsyncComcast_HostReward = {
           ContentEN = "Lead Reward",
           TextMapId = "UI_AsyncComcast_HostReward"
@@ -74125,15 +74141,7 @@ Lynn's Headpiece
         UI_Attr_Dark_Name = {
           ContentEN = "Umbro",
           TextMapId = "UI_Attr_Dark_Name"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Attr_Default_Name",
-    MaxKey = "UI_Bag_Equipped",
-    Loader = function()
-      return {
+        },
         UI_Attr_Default_Name = {
           ContentEN = "Non-Elemental",
           TextMapId = "UI_Attr_Default_Name"
@@ -74922,7 +74930,15 @@ Lynn's Headpiece
         UI_Bag_Decompose_Unable = {
           ContentEN = "Cannot be disassembled",
           TextMapId = "UI_Bag_Decompose_Unable"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Bag_Decompose_Waiting",
+    MaxKey = "UI_CHAR_DATA_DES_10010201",
+    Loader = function()
+      return {
         UI_Bag_Decompose_Waiting = {
           ContentEN = "To be disassembled",
           TextMapId = "UI_Bag_Decompose_Waiting"
@@ -74930,15 +74946,7 @@ Lynn's Headpiece
         UI_Bag_Equipped = {
           ContentEN = "Equipped",
           TextMapId = "UI_Bag_Equipped"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Bag_Fish_Weight",
-    MaxKey = "UI_CHAR_DATA_DES_10010401",
-    Loader = function()
-      return {
+        },
         UI_Bag_Fish_Weight = {
           ContentEN = "Size: ",
           TextMapId = "UI_Bag_Fish_Weight"
@@ -75726,7 +75734,15 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
         UI_CHAR_DATA_DES_10010201 = {
           ContentEN = "Prerequisites of Anecdote: Ⅰ",
           TextMapId = "UI_CHAR_DATA_DES_10010201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_DES_10010301",
+    MaxKey = "UI_CHAR_DATA_TEXT_24010204",
+    Loader = function()
+      return {
         UI_CHAR_DATA_DES_10010301 = {
           ContentEN = "Prerequisites of Secret: Ⅰ",
           TextMapId = "UI_CHAR_DATA_DES_10010301"
@@ -75734,15 +75750,7 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
         UI_CHAR_DATA_DES_10010401 = {
           ContentEN = "Prerequisites of Reminiscence: Ⅰ",
           TextMapId = "UI_CHAR_DATA_DES_10010401"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_11010101",
-    MaxKey = "UI_CHAR_DATA_TEXT_24010301",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_11010101 = {
           ContentEN = "For as long as you can remember, Berenica has always been by your side. \nYou may have spent more time with her than with anyone else in the world, yet there are still parts of her that remain a mystery to you — just as there are aspects of yourself that you don't fully understand.\nWho are you? Who is she? Where did you come from, and how did you meet? Whenever you pose these questions, Berenica hesitates, her words faltering, eventually retreating into prolonged silence. Over time, you stopped asking.\nThere's much you don't know, but of one thing you're certain—\nYou can always trust her, no matter what.",
           TextMapId = "UI_CHAR_DATA_TEXT_11010101"
@@ -76755,7 +76763,15 @@ There were moments when you feared her resolve might lead her to ruin. But that 
         UI_CHAR_DATA_TEXT_24010204 = {
           ContentEN = "A plague once swept across Huaxu.\nIt endured without respite, claiming countless lives — and among them was the last Zhuyou of the Hall of Ephemerality.\nShe laboured tirelessly among the masses, her fingers grown numb from invoking the Art of Ephemerality without rest. With each life she drew back from the brink, her own edged ever closer to its destined end.\nPeople praised her selflessness; they honoured her devotion. Yet few understood the price of such mercy.\nAnd each person she healed, grateful beyond expression, would murmur the same gentle blessing: \"Good things will come to good people.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010204"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_24010205",
+    MaxKey = "UI_CHAR_DATA_TEXT_43010301",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_24010205 = {
           ContentEN = "The current head of Zesheng Pharmacy met with Fushu once more.\nTo his relief, the woman before him — Founding Master Fufeng's twin sister — no longer carried the hollow, wandering look she had worn when she first awoke. Perhaps, he thought, the weight on her heart had finally eased.\nStill harbouring the faint hope that he might one day seek her guidance in matters beyond his own skill, he asked about her plans for the future. He had not expected her answer: she meant to journey to the Hyperborean Empire.\nHis smile faded, the displeasure plain despite his understanding of why. On that distant, frozen land were those who owed Zesheng Pharmacy an explanation — and owed an even greater one to the woman standing before him.\nBut Hyperborea was a realm in turmoil, a vast and consuming storm. Anything touched by the tragedy in Flagson eighteen years ago risked being torn apart. The dangers ahead were obvious; in the worst case, the Pharmacy's old debts might only deepen.\nShould he stop her...?\n...\nNo. He could not.\nHe met Fushu's gaze — clear, pale, and unwavering with resolve. He had once seen that very same determination in his teacher's eyes. Nothing, he knew, could keep this woman from crossing into that distant land to claim a justice twenty years overdue.\n\"Then please,\" he said at last, \"make your preparations with care. Zesheng Pharmacy will give you all the support we can.\"",
           TextMapId = "UI_CHAR_DATA_TEXT_24010205"
@@ -76772,15 +76788,7 @@ Perhaps it was the unease of living a second life. Perhaps she wished to witness
 
 As if drawn by an old vow or by threads of fate, Fushu found herself upon the road that would lead her back.]],
           TextMapId = "UI_CHAR_DATA_TEXT_24010301"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_24010302",
-    MaxKey = "UI_CHAR_DATA_TEXT_43010303",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_24010302 = {
           ContentEN = "The relationship between Fushu and Fufeng had long been marked by tension, yet the true fracture came when Fufeng laid down her charge as a Zhuyou and chose a different way — one that heals people without consuming a Zhuyou's own life-force.\nIt was a path unwalked, and many whispered that it was unorthodox. In choosing it, she turned from the Hall of Ephemerality, from her kin, and from the power Lord Argent had granted their line.\n\nIn Haojing today, the medical discipline she founded has become indispensable to daily life. People understood, though few spoke it openly, that in seeking deliverance from suffering they had quietly accepted her step beyond Taihao's divine order.\nNo written honour nor ceremony could veil this truth. For though they named her the Sage of Medicine and spoke of Taihao's enlightenment upon her, something deep within the common heart had begun to shift, and trust in Lord Argent's infallible wisdom and power had grown subtly less absolute.\nFor one woman, stepping beyond divine sanction, had grasped a trace of the power over life and death itself.",
           TextMapId = "UI_CHAR_DATA_TEXT_24010302"
@@ -77774,7 +77782,15 @@ Yet, it remains uncertain whether these actions are purely calculated or driven 
         UI_CHAR_DATA_TEXT_43010301 = {
           ContentEN = "Sibylle's favoured weapon is a custom-made razor whip — a complex and high-maintenance instrument. Yet, despite its intricacies, she insists on personally attending to its care. \nTo her, one belief remains firm: people may betray you, but a well-tended weapon never will.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010301"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_43010302",
+    MaxKey = "UI_CMName_Name_JvSangDeNanHai",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_43010302 = {
           ContentEN = "Sibylle knows the Empire's laws inside and out — which ones you'd break by smuggling spirits, robbing wealthy merchants, or trafficking arms. She can also intuit where criminals might exploit legal loopholes. It isn't mere guesswork, but a nearly rehearsed understanding of how to stay one step ahead of the law, leveraging every possible advantage to benefit oneself while evading consequences.\nYet, it seems she ultimately realised that instead of remaining a despicable manipulator of loopholes, she could ascend to a position of power — where she could influence, reshape, and even create the rules.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010302"
@@ -77782,15 +77798,7 @@ Yet, it remains uncertain whether these actions are purely calculated or driven 
         UI_CHAR_DATA_TEXT_43010303 = {
           ContentEN = "Sibylle now commands the Emperor's 13th Legion, an elite force that answers solely to His Majesty's will. They are the Emperor's most loyal and trusted hounds. Her loyalty is so highly esteemed that the Emperor has granted her the unprecedented privilege of carrying weapons within the palace walls — an honour no Charons before her had ever achieved, something that once existed only in their wildest tales. But Sibylle has turned that fantasy into reality.\nNaturally, the Emperor's trust and favour have only intensified the resentment from the Senate, who scorn her for her humble origins and assertive demeanour.\nYet, deep down, Sibylle knows that the widely sworn oath of allegiance across the Empire — \"All glory to our Emperor\" — is little more than a formality. The only one truly deserving of her loyalty now is herself.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010303"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_43010304",
-    MaxKey = "UI_CMName_Name_KamiPhantom",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_43010304 = {
           ContentEN = "\"Those who treat knowledge as a mere stepping stone to power will never acquire truths.\"\nThat was the only comment Sibylle's revered mentor — the chief alchemist — left on her graduation certificate, despite her having graduated as the top student. The room was steeped in an eerie silence, filled only with the sound of Sibylle's measured, restrained breathing.",
           TextMapId = "UI_CHAR_DATA_TEXT_43010304"
@@ -78627,7 +78635,15 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMName_Name_JvSangDeNanHai = {
           ContentEN = "Frustrated Boy",
           TextMapId = "UI_CMName_Name_JvSangDeNanHai"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMName_Name_JvSangDeNvHai",
+    MaxKey = "UI_CMNpc_Name_Investigate",
+    Loader = function()
+      return {
         UI_CMName_Name_JvSangDeNvHai = {
           ContentEN = "Frustrated Girl",
           TextMapId = "UI_CMName_Name_JvSangDeNvHai"
@@ -78635,15 +78651,7 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMName_Name_KamiPhantom = {
           ContentEN = "Phantom of Camilla",
           TextMapId = "UI_CMName_Name_KamiPhantom"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMName_Name_MatureWuyou",
-    MaxKey = "UI_CMNpc_Name_JiaojiQNM",
-    Loader = function()
-      return {
+        },
         UI_CMName_Name_MatureWuyou = {
           ContentEN = "Mature Wishen",
           TextMapId = "UI_CMName_Name_MatureWuyou"
@@ -79435,7 +79443,15 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMNpc_Name_Investigate = {
           ContentEN = "Investigate",
           TextMapId = "UI_CMNpc_Name_Investigate"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_JianqiangHuangzhe",
+    MaxKey = "UI_COMMONPOP_TEXT_100008",
+    Loader = function()
+      return {
         UI_CMNpc_Name_JianqiangHuangzhe = {
           ContentEN = "Resilient Patient",
           TextMapId = "UI_CMNpc_Name_JianqiangHuangzhe"
@@ -79443,15 +79459,7 @@ Complete Quest: Requiem for the Nameless]],
         UI_CMNpc_Name_JiaojiQNM = {
           ContentEN = "Anxious Young Man",
           TextMapId = "UI_CMNpc_Name_JiaojiQNM"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Jiasi",
-    MaxKey = "UI_COMMONPOP_TEXT_100011",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Jiasi = {
           ContentEN = "Gaston",
           TextMapId = "UI_CMNpc_Name_Jiasi"
@@ -80243,7 +80251,15 @@ Complete Quest: Requiem for the Nameless]],
         UI_COMMONPOP_TEXT_100008 = {
           ContentEN = "Do you want to exit the game and return to the login page?",
           TextMapId = "UI_COMMONPOP_TEXT_100008"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TEXT_100010",
+    MaxKey = "UI_CTL_Claim",
+    Loader = function()
+      return {
         UI_COMMONPOP_TEXT_100010 = {
           ContentEN = "There are unsaved key settings. Do you want to save them before exiting?",
           TextMapId = "UI_COMMONPOP_TEXT_100010"
@@ -80251,15 +80267,7 @@ Complete Quest: Requiem for the Nameless]],
         UI_COMMONPOP_TEXT_100011 = {
           ContentEN = "Are you sure you want to reset to the default settings for this tab?",
           TextMapId = "UI_COMMONPOP_TEXT_100011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TEXT_100012",
-    MaxKey = "UI_CTL_Clear",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TEXT_100012 = {
           ContentEN = "This key is already assigned to [%s]. Do you want to swap the key settings?",
           TextMapId = "UI_COMMONPOP_TEXT_100012"
@@ -81054,7 +81062,15 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_CTL_Claim = {
           ContentEN = "Claim Reward",
           TextMapId = "UI_CTL_Claim"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CTL_ClaimALL",
+    MaxKey = "UI_Chat_Default_8",
+    Loader = function()
+      return {
         UI_CTL_ClaimALL = {
           ContentEN = "Claim All",
           TextMapId = "UI_CTL_ClaimALL"
@@ -81062,15 +81078,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_CTL_Clear = {
           ContentEN = "Clear",
           TextMapId = "UI_CTL_Clear"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CTL_CloseModList",
-    MaxKey = "UI_Chat_GotoLeague",
-    Loader = function()
-      return {
+        },
         UI_CTL_CloseModList = {
           ContentEN = "Hide Recommendations",
           TextMapId = "UI_CTL_CloseModList"
@@ -81859,7 +81867,15 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_Chat_Default_8 = {
           ContentEN = "Invite me again!",
           TextMapId = "UI_Chat_Default_8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chat_DyeSuitFormat",
+    MaxKey = "UI_ConfirmKickMember",
+    Loader = function()
+      return {
         UI_Chat_DyeSuitFormat = {
           ContentEN = "[Colouring Preset: %s]",
           TextMapId = "UI_Chat_DyeSuitFormat"
@@ -81867,15 +81883,7 @@ Do you want to start a <H>%s Check</> attempt to acquire this item?
         UI_Chat_GotoLeague = {
           ContentEN = "Go to Guild",
           TextMapId = "UI_Chat_GotoLeague"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_GotoTeamUp",
-    MaxKey = "UI_ConfirmQuitGuild",
-    Loader = function()
-      return {
+        },
         UI_Chat_GotoTeamUp = {
           ContentEN = "Go to Recruitment",
           TextMapId = "UI_Chat_GotoTeamUp"
@@ -82669,7 +82677,15 @@ Copy your account data from the live server to join this test?
         UI_ConfirmKickMember = {
           ContentEN = "Remove this player from Guild?",
           TextMapId = "UI_ConfirmKickMember"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ConfirmPrivateChatClosure",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_148",
+    Loader = function()
+      return {
         UI_ConfirmPrivateChatClosure = {
           ContentEN = "Disable Private Chat? All current messages will be permanently deleted.",
           TextMapId = "UI_ConfirmPrivateChatClosure"
@@ -82677,15 +82693,7 @@ Copy your account data from the live server to join this test?
         UI_ConfirmQuitGuild = {
           ContentEN = "Leave the current Guild?",
           TextMapId = "UI_ConfirmQuitGuild"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ConfirmRoleAdjustment",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_15",
-    Loader = function()
-      return {
+        },
         UI_ConfirmRoleAdjustment = {
           ContentEN = "Change this player's role from %s to <H>%s</>?",
           TextMapId = "UI_ConfirmRoleAdjustment"
@@ -83471,7 +83479,15 @@ Copy your account data from the live server to join this test?
         UI_DUNGEON_AUTOCHESS_148 = {
           ContentEN = "Endless Game 128",
           TextMapId = "UI_DUNGEON_AUTOCHESS_148"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_149",
+    MaxKey = "UI_DUNGEON_DES_TRAINING_43",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_149 = {
           ContentEN = "Endless Game 129",
           TextMapId = "UI_DUNGEON_AUTOCHESS_149"
@@ -83479,15 +83495,7 @@ Copy your account data from the live server to join this test?
         UI_DUNGEON_AUTOCHESS_15 = {
           ContentEN = "Master Gongshang's Board 15",
           TextMapId = "UI_DUNGEON_AUTOCHESS_15"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_150",
-    MaxKey = "UI_DUNGEON_DES_TRAINING_5",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_150 = {
           ContentEN = "Endless Game 130",
           TextMapId = "UI_DUNGEON_AUTOCHESS_150"
@@ -84279,7 +84287,15 @@ Copy your account data from the live server to join this test?
         UI_DUNGEON_DES_TRAINING_43 = {
           ContentEN = "???",
           TextMapId = "UI_DUNGEON_DES_TRAINING_43"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_DES_TRAINING_44",
+    MaxKey = "UI_DispatchTag_Empathy",
+    Loader = function()
+      return {
         UI_DUNGEON_DES_TRAINING_44 = {
           ContentEN = "Press %s to confirm",
           TextMapId = "UI_DUNGEON_DES_TRAINING_44"
@@ -84287,15 +84303,7 @@ Copy your account data from the live server to join this test?
         UI_DUNGEON_DES_TRAINING_5 = {
           ContentEN = "Spawned Enemy ×%d",
           TextMapId = "UI_DUNGEON_DES_TRAINING_5"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_DES_TRAINING_6",
-    MaxKey = "UI_DispatchTag_Lucky",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_DES_TRAINING_6 = {
           ContentEN = "Armoury unavailable with enemies present",
           TextMapId = "UI_DUNGEON_DES_TRAINING_6"
@@ -85084,7 +85092,15 @@ Copy your account data from the live server to join this test?
         UI_DispatchTag_Empathy = {
           ContentEN = "Impression: Empathy",
           TextMapId = "UI_DispatchTag_Empathy"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DispatchTag_Fish",
+    MaxKey = "UI_EXPLORE_BOX_2",
+    Loader = function()
+      return {
         UI_DispatchTag_Fish = {
           ContentEN = "Piscator",
           TextMapId = "UI_DispatchTag_Fish"
@@ -85092,15 +85108,7 @@ Copy your account data from the live server to join this test?
         UI_DispatchTag_Lucky = {
           ContentEN = "Fortune Favour",
           TextMapId = "UI_DispatchTag_Lucky"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DispatchTag_Mine",
-    MaxKey = "UI_EXPLORE_KEY",
-    Loader = function()
-      return {
+        },
         UI_DispatchTag_Mine = {
           ContentEN = "Geologist",
           TextMapId = "UI_DispatchTag_Mine"
@@ -85892,7 +85900,15 @@ Copy your account data from the live server to join this test?
         UI_EXPLORE_BOX_2 = {
           ContentEN = "Excavate",
           TextMapId = "UI_EXPLORE_BOX_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_EXPLORE_BOX_RLSUPPLY",
+    MaxKey = "UI_Extraction_TM_29",
+    Loader = function()
+      return {
         UI_EXPLORE_BOX_RLSUPPLY = {
           ContentEN = "Get Supplies",
           TextMapId = "UI_EXPLORE_BOX_RLSUPPLY"
@@ -85900,15 +85916,7 @@ Copy your account data from the live server to join this test?
         UI_EXPLORE_KEY = {
           ContentEN = "A key is required for this chest!",
           TextMapId = "UI_EXPLORE_KEY"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_EXPLORE_PETCHEST_TOAST",
-    MaxKey = "UI_Extraction_TM_30",
-    Loader = function()
-      return {
+        },
         UI_EXPLORE_PETCHEST_TOAST = {
           ContentEN = "Help the helpless Geniemon out of danger — draw your blade!",
           TextMapId = "UI_EXPLORE_PETCHEST_TOAST"
@@ -86710,7 +86718,15 @@ The list below shows how many points each item awards:]],
         UI_Extraction_TM_29 = {
           ContentEN = "Continue",
           TextMapId = "UI_Extraction_TM_29"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Extraction_TM_3",
+    MaxKey = "UI_Friend_NoAnyFriend",
+    Loader = function()
+      return {
         UI_Extraction_TM_3 = {
           ContentEN = "Fast Travel",
           TextMapId = "UI_Extraction_TM_3"
@@ -86718,15 +86734,7 @@ The list below shows how many points each item awards:]],
         UI_Extraction_TM_30 = {
           ContentEN = "Match Details",
           TextMapId = "UI_Extraction_TM_30"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Extraction_TM_31",
-    MaxKey = "UI_Friend_NoSignature",
-    Loader = function()
-      return {
+        },
         UI_Extraction_TM_31 = {
           ContentEN = "Not enough Tokens",
           TextMapId = "UI_Extraction_TM_31"
@@ -87517,7 +87525,15 @@ The list below shows how many points each item awards:]],
         UI_Friend_NoAnyFriend = {
           ContentEN = "You haven't added any friends yet.",
           TextMapId = "UI_Friend_NoAnyFriend"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Friend_NoOnlineFriend",
+    MaxKey = "UI_HardBoss_Difficulty_Des_1003",
+    Loader = function()
+      return {
         UI_Friend_NoOnlineFriend = {
           ContentEN = "No friends online",
           TextMapId = "UI_Friend_NoOnlineFriend"
@@ -87525,15 +87541,7 @@ The list below shows how many points each item awards:]],
         UI_Friend_NoSignature = {
           ContentEN = "This player has no signature yet.",
           TextMapId = "UI_Friend_NoSignature"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Friend_OffLineToday",
-    MaxKey = "UI_HardBoss_Difficulty_Des_1011",
-    Loader = function()
-      return {
+        },
         UI_Friend_OffLineToday = {
           ContentEN = "Last Online: Within 1 day",
           TextMapId = "UI_Friend_OffLineToday"
@@ -88324,7 +88332,15 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
         UI_HardBoss_Difficulty_Des_1003 = {
           ContentEN = "The chief of the Hyperborean Empire's 13th Legion. Her arrival on Purgatorio Island irrevocably altered our destiny.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1003"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HardBoss_Difficulty_Des_1004",
+    MaxKey = "UI_ImpressionShop_UnlockCon_All",
+    Loader = function()
+      return {
         UI_HardBoss_Difficulty_Des_1004 = {
           ContentEN = "The chief of the Hyperborean Empire's 13th Legion. Her arrival on Purgatorio Island irrevocably altered our destiny.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1004"
@@ -88332,15 +88348,7 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
         UI_HardBoss_Difficulty_Des_1011 = {
           ContentEN = "The Grim Reaper of Glevum. A massive Filthoid in the depths of Glevum Pit, mechanically repeating the behaviour of tunnelling and devouring any glowing objects.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1011"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HardBoss_Difficulty_Des_1012",
-    MaxKey = "UI_ImpressionShop_UnlockCondition_01",
-    Loader = function()
-      return {
+        },
         UI_HardBoss_Difficulty_Des_1012 = {
           ContentEN = "The Grim Reaper of Glevum. A massive Filthoid in the depths of Glevum Pit, mechanically repeating the behaviour of tunnelling and devouring any glowing objects.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1012"
@@ -89134,7 +89142,15 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
         UI_ImpressionShop_UnlockCon_All = {
           ContentEN = "All",
           TextMapId = "UI_ImpressionShop_UnlockCon_All"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ImpressionShop_UnlockCon_Any",
+    MaxKey = "UI_Loading_Download_Confirm",
+    Loader = function()
+      return {
         UI_ImpressionShop_UnlockCon_Any = {
           ContentEN = "Any",
           TextMapId = "UI_ImpressionShop_UnlockCon_Any"
@@ -89142,15 +89158,7 @@ Working in tandem with the train's other onboard weapons, it can destroy any ene
         UI_ImpressionShop_UnlockCondition_01 = {
           ContentEN = "%s: %d",
           TextMapId = "UI_ImpressionShop_UnlockCondition_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ImpressionShop_UnlockCondition_02",
-    MaxKey = "UI_Loading_Download_Pause",
-    Loader = function()
-      return {
+        },
         UI_ImpressionShop_UnlockCondition_02 = {
           ContentEN = "Unlocks when %s reaches %d",
           TextMapId = "UI_ImpressionShop_UnlockCondition_02"
@@ -89956,7 +89964,15 @@ Leads, Participants, and the Star Performer:
         UI_Loading_Download_Confirm = {
           ContentEN = "Pause the download of new game resources?",
           TextMapId = "UI_Loading_Download_Confirm"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Loading_Download_Continue",
+    MaxKey = "UI_MECHANISM_10613",
+    Loader = function()
+      return {
         UI_Loading_Download_Continue = {
           ContentEN = "Resume",
           TextMapId = "UI_Loading_Download_Continue"
@@ -89964,15 +89980,7 @@ Leads, Participants, and the Star Performer:
         UI_Loading_Download_Pause = {
           ContentEN = "Pause",
           TextMapId = "UI_Loading_Download_Pause"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Loading_Downloading",
-    MaxKey = "UI_MECHANISM_10615",
-    Loader = function()
-      return {
+        },
         UI_Loading_Downloading = {
           ContentEN = "Downloading resources...",
           TextMapId = "UI_Loading_Downloading"
@@ -90766,7 +90774,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_MECHANISM_10613 = {
           ContentEN = "Damaged Mechapuppet Core",
           TextMapId = "UI_MECHANISM_10613"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_10614",
+    MaxKey = "UI_ModGuideBook_RewardView",
+    Loader = function()
+      return {
         UI_MECHANISM_10614 = {
           ContentEN = "Admonition Stele of Dafeng",
           TextMapId = "UI_MECHANISM_10614"
@@ -90774,15 +90790,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_MECHANISM_10615 = {
           ContentEN = "Statue of Lord Argent",
           TextMapId = "UI_MECHANISM_10615"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_10616",
-    MaxKey = "UI_ModGuideBook_Show_New",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_10616 = {
           ContentEN = "Incense-Powered Device",
           TextMapId = "UI_MECHANISM_10616"
@@ -91574,7 +91582,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_ModGuideBook_RewardView = {
           ContentEN = "Rewards",
           TextMapId = "UI_ModGuideBook_RewardView"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ModGuideBook_Reward_Complete",
+    MaxKey = "UI_NPC_Name_fusheng_Sce",
+    Loader = function()
+      return {
         UI_ModGuideBook_Reward_Complete = {
           ContentEN = "Claimed",
           TextMapId = "UI_ModGuideBook_Reward_Complete"
@@ -91582,15 +91598,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_ModGuideBook_Show_New = {
           ContentEN = "Demon Wedges Revealed",
           TextMapId = "UI_ModGuideBook_Show_New"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ModGuideBook_Task",
-    MaxKey = "UI_NPC_Name_guanlizhe_Sce",
-    Loader = function()
-      return {
+        },
         UI_ModGuideBook_Task = {
           ContentEN = "Demon Wedge Quests",
           TextMapId = "UI_ModGuideBook_Task"
@@ -92373,7 +92381,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_NPC_Name_fusheng_Sce = {
           ContentEN = "Fushen",
           TextMapId = "UI_NPC_Name_fusheng_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_gonglianchun_Sce",
+    MaxKey = "UI_Name_Walnut_1021",
+    Loader = function()
+      return {
         UI_NPC_Name_gonglianchun_Sce = {
           ContentEN = "Gong Lianchun",
           TextMapId = "UI_NPC_Name_gonglianchun_Sce"
@@ -92381,15 +92397,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_NPC_Name_guanlizhe_Sce = {
           ContentEN = "Academy Steward",
           TextMapId = "UI_NPC_Name_guanlizhe_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_guibeifa_Sce",
-    MaxKey = "UI_Name_Walnut_1023",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_guibeifa_Sce = {
           ContentEN = "Gui Beifa",
           TextMapId = "UI_NPC_Name_guibeifa_Sce"
@@ -93181,7 +93189,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Name_Walnut_1021 = {
           ContentEN = "Secret Letter: Outsider",
           TextMapId = "UI_Name_Walnut_1021"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_1022",
+    MaxKey = "UI_Npc_DreamAware",
+    Loader = function()
+      return {
         UI_Name_Walnut_1022 = {
           ContentEN = "Secret Letter: Psyche",
           TextMapId = "UI_Name_Walnut_1022"
@@ -93189,15 +93205,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Name_Walnut_1023 = {
           ContentEN = "Secret Letter: Daphne",
           TextMapId = "UI_Name_Walnut_1023"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_1024",
-    MaxKey = "UI_Npc_DreamLaiang",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_1024 = {
           ContentEN = "Secret Letter: Su Yi",
           TextMapId = "UI_Name_Walnut_1024"
@@ -93983,7 +93991,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_DreamAware = {
           ContentEN = "\"Avar\"",
           TextMapId = "UI_Npc_DreamAware"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_DreamDafu",
+    MaxKey = "UI_Npc_Name_FindGirl",
+    Loader = function()
+      return {
         UI_Npc_DreamDafu = {
           ContentEN = "\"Daphne\"",
           TextMapId = "UI_Npc_DreamDafu"
@@ -93991,15 +94007,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_DreamLaiang = {
           ContentEN = "\"Leon\"",
           TextMapId = "UI_Npc_DreamLaiang"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_DreamMaerke",
-    MaxKey = "UI_Npc_Name_FindSaiqiNpc2",
-    Loader = function()
-      return {
+        },
         UI_Npc_DreamMaerke = {
           ContentEN = "\"Marco\"",
           TextMapId = "UI_Npc_DreamMaerke"
@@ -94791,7 +94799,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_FindGirl = {
           ContentEN = "Anxious Passenger",
           TextMapId = "UI_Npc_Name_FindGirl"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_FindSaiqiNpc1",
+    MaxKey = "UI_Npc_Name_Tuosi",
+    Loader = function()
+      return {
         UI_Npc_Name_FindSaiqiNpc1 = {
           ContentEN = "Confused Child",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc1"
@@ -94799,15 +94815,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_FindSaiqiNpc2 = {
           ContentEN = "Panicked Civilian",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_FindSaiqiNpc3",
-    MaxKey = "UI_Npc_Name_Waidishangren",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_FindSaiqiNpc3 = {
           ContentEN = "Soldier Feigning Calm",
           TextMapId = "UI_Npc_Name_FindSaiqiNpc3"
@@ -95599,7 +95607,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Tuosi = {
           ContentEN = "Phantasio",
           TextMapId = "UI_Npc_Name_Tuosi"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_UnlockChest",
+    MaxKey = "UI_OPTION_Language_Downloaded",
+    Loader = function()
+      return {
         UI_Npc_Name_UnlockChest = {
           ContentEN = "Open the sketchy chest",
           TextMapId = "UI_Npc_Name_UnlockChest"
@@ -95607,15 +95623,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_Npc_Name_Waidishangren = {
           ContentEN = "Foreign Merchant",
           TextMapId = "UI_Npc_Name_Waidishangren"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Waisongjiaojiao",
-    MaxKey = "UI_OPTION_Language_Manage",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Waisongjiaojiao = {
           ContentEN = "Lunodeliverer",
           TextMapId = "UI_Npc_Name_Waisongjiaojiao"
@@ -96407,7 +96415,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_Language_Downloaded = {
           ContentEN = "Downloaded",
           TextMapId = "UI_OPTION_Language_Downloaded"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_Language_Downloading",
+    MaxKey = "UI_PATCH_CANCEL",
+    Loader = function()
+      return {
         UI_OPTION_Language_Downloading = {
           ContentEN = "Downloading",
           TextMapId = "UI_OPTION_Language_Downloading"
@@ -96415,15 +96431,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_OPTION_Language_Manage = {
           ContentEN = "VO Assets Management",
           TextMapId = "UI_OPTION_Language_Manage"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_Language_NoDownload",
-    MaxKey = "UI_PATCH_DOWNLOADFAILED",
-    Loader = function()
-      return {
+        },
         UI_OPTION_Language_NoDownload = {
           ContentEN = "Not Downloaded",
           TextMapId = "UI_OPTION_Language_NoDownload"
@@ -97215,7 +97223,15 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_PATCH_CANCEL = {
           ContentEN = "Cancel",
           TextMapId = "UI_PATCH_CANCEL"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PATCH_DIFFVERSION",
+    MaxKey = "UI_PlayerHead_Name_10018",
+    Loader = function()
+      return {
         UI_PATCH_DIFFVERSION = {
           ContentEN = "Verifying Version",
           TextMapId = "UI_PATCH_DIFFVERSION"
@@ -97223,15 +97239,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
         UI_PATCH_DOWNLOADFAILED = {
           ContentEN = "Failed to download the update resource. Do you want to retry?",
           TextMapId = "UI_PATCH_DOWNLOADFAILED"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PATCH_DOWNLOADING",
-    MaxKey = "UI_PlayerHead_Name_10020",
-    Loader = function()
-      return {
+        },
         UI_PATCH_DOWNLOADING = {
           ContentEN = "Downloading",
           TextMapId = "UI_PATCH_DOWNLOADING"
@@ -98025,7 +98033,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PlayerHead_Name_10018 = {
           ContentEN = "Portrait: The One Behind the Curtain",
           TextMapId = "UI_PlayerHead_Name_10018"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10019",
+    MaxKey = "UI_PrivateChatDisabledByUser",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10019 = {
           ContentEN = "Portrait: Legion's Chief",
           TextMapId = "UI_PlayerHead_Name_10019"
@@ -98033,15 +98049,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PlayerHead_Name_10020 = {
           ContentEN = "Portrait: The Perfect Maid",
           TextMapId = "UI_PlayerHead_Name_10020"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10021",
-    MaxKey = "UI_PrivateChatNotAllowed",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10021 = {
           ContentEN = "Portrait: The Undivided Two",
           TextMapId = "UI_PlayerHead_Name_10021"
@@ -98833,7 +98841,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PrivateChatDisabledByUser = {
           ContentEN = "The other player has disabled Private Chat",
           TextMapId = "UI_PrivateChatDisabledByUser"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PrivateChatEnabled",
+    MaxKey = "UI_RegionOnline_Invite_Sitting",
+    Loader = function()
+      return {
         UI_PrivateChatEnabled = {
           ContentEN = "Private Chat enabled",
           TextMapId = "UI_PrivateChatEnabled"
@@ -98841,15 +98857,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_PrivateChatNotAllowed = {
           ContentEN = "Private Chat is disabled",
           TextMapId = "UI_PrivateChatNotAllowed"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PrivateChatNotEnabled",
-    MaxKey = "UI_RegionOnline_Invited",
-    Loader = function()
-      return {
+        },
         UI_PrivateChatNotEnabled = {
           ContentEN = "This player has not enabled Private Chat",
           TextMapId = "UI_PrivateChatNotEnabled"
@@ -99638,7 +99646,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_RegionOnline_Invite_Sitting = {
           ContentEN = "Invite failed: the player is currently unavailable",
           TextMapId = "UI_RegionOnline_Invite_Sitting"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RegionOnline_Invite_State",
+    MaxKey = "UI_SHOP_SUBTAB_NAME_MOD_MELEE",
+    Loader = function()
+      return {
         UI_RegionOnline_Invite_State = {
           ContentEN = "Invite failed: the player cannot be invited at the moment",
           TextMapId = "UI_RegionOnline_Invite_State"
@@ -99646,15 +99662,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_RegionOnline_Invited = {
           ContentEN = "Invited",
           TextMapId = "UI_RegionOnline_Invited"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RegionOnline_NoApplication",
-    MaxKey = "UI_SHOP_SUBTAB_NAME_PACK",
-    Loader = function()
-      return {
+        },
         UI_RegionOnline_NoApplication = {
           ContentEN = "No requests",
           TextMapId = "UI_RegionOnline_NoApplication"
@@ -100446,7 +100454,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SHOP_SUBTAB_NAME_MOD_MELEE = {
           ContentEN = "For Melee Weapons",
           TextMapId = "UI_SHOP_SUBTAB_NAME_MOD_MELEE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SHOP_SUBTAB_NAME_MOD_RANGE",
+    MaxKey = "UI_Select_Kind",
+    Loader = function()
+      return {
         UI_SHOP_SUBTAB_NAME_MOD_RANGE = {
           ContentEN = "For Ranged Weapons",
           TextMapId = "UI_SHOP_SUBTAB_NAME_MOD_RANGE"
@@ -100454,15 +100470,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
         UI_SHOP_SUBTAB_NAME_PACK = {
           ContentEN = "Gift Bundle",
           TextMapId = "UI_SHOP_SUBTAB_NAME_PACK"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SHOP_SUBTAB_NAME_Prism",
-    MaxKey = "UI_Select_Name",
-    Loader = function()
-      return {
+        },
         UI_SHOP_SUBTAB_NAME_Prism = {
           ContentEN = "Standard Exchange",
           TextMapId = "UI_SHOP_SUBTAB_NAME_Prism"
@@ -101264,7 +101272,15 @@ Too many incorrect attempts. Access has been locked.
         UI_Select_Kind = {
           ContentEN = "Type",
           TextMapId = "UI_Select_Kind"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Select_Level",
+    MaxKey = "UI_Skin_Des_310101",
+    Loader = function()
+      return {
         UI_Select_Level = {
           ContentEN = "Level",
           TextMapId = "UI_Select_Level"
@@ -101272,15 +101288,7 @@ Too many incorrect attempts. Access has been locked.
         UI_Select_Name = {
           ContentEN = "Name",
           TextMapId = "UI_Select_Name"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Select_Price",
-    MaxKey = "UI_Skin_Des_3103",
-    Loader = function()
-      return {
+        },
         UI_Select_Price = {
           ContentEN = "Price",
           TextMapId = "UI_Select_Price"
@@ -102072,7 +102080,15 @@ Too many incorrect attempts. Access has been locked.
         UI_Skin_Des_310101 = {
           ContentEN = "Though miracles have vanished from the world, there are still mortals willing to bear the weight of faith.",
           TextMapId = "UI_Skin_Des_310101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Des_3102",
+    MaxKey = "UI_SpeakName_Zhongren6",
+    Loader = function()
+      return {
         UI_Skin_Des_3102 = {
           ContentEN = "A delicate bouquet in her hands, a hidden arsenal beneath her skirt. Like the black and white of her dress, she walks the line between light and shadow, each day a quiet verse in a maid's silent devotion.",
           TextMapId = "UI_Skin_Des_3102"
@@ -102080,15 +102096,7 @@ Too many incorrect attempts. Access has been locked.
         UI_Skin_Des_3103 = {
           ContentEN = "Burning threads of red and white bind a madman's reveries — and stitch together a boy's innocent dream.",
           TextMapId = "UI_Skin_Des_3103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Des_3201",
-    MaxKey = "UI_SpeakName_Zhongren8",
-    Loader = function()
-      return {
+        },
         UI_Skin_Des_3201 = {
           ContentEN = "Chains and thorns mark retribution for sin — and bind the righteous fire that burns within.",
           TextMapId = "UI_Skin_Des_3201"
@@ -102883,7 +102891,15 @@ On Hard difficulty, completing scoring also grants <H>bonus</> Coins based on th
         UI_SpeakName_Zhongren6 = {
           ContentEN = "Iris, Wandering Bard",
           TextMapId = "UI_SpeakName_Zhongren6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SpeakName_Zhongren7",
+    MaxKey = "UI_TEMPLE_81302",
+    Loader = function()
+      return {
         UI_SpeakName_Zhongren7 = {
           ContentEN = "Miranda, Justiciar",
           TextMapId = "UI_SpeakName_Zhongren7"
@@ -102891,15 +102907,7 @@ On Hard difficulty, completing scoring also grants <H>bonus</> Coins based on th
         UI_SpeakName_Zhongren8 = {
           ContentEN = "Hannah, Laundrywoman",
           TextMapId = "UI_SpeakName_Zhongren8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SpeakName_Zhongren9",
-    MaxKey = "UI_TEMPLE_81402",
-    Loader = function()
-      return {
+        },
         UI_SpeakName_Zhongren9 = {
           ContentEN = "Dmitri, Ironworker",
           TextMapId = "UI_SpeakName_Zhongren9"
@@ -103707,7 +103715,15 @@ Step on the correct tiles
         UI_TEMPLE_81302 = {
           ContentEN = "Earn points by collecting crystals within the time limit.",
           TextMapId = "UI_TEMPLE_81302"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_81401",
+    MaxKey = "UI_Theater_Donate_End",
+    Loader = function()
+      return {
         UI_TEMPLE_81401 = {
           ContentEN = "Chase Lulu Lunoloot and bring her down to earn coins.",
           TextMapId = "UI_TEMPLE_81401"
@@ -103715,15 +103731,7 @@ Step on the correct tiles
         UI_TEMPLE_81402 = {
           ContentEN = "Chase Lulu Lunoloot and bring her down to earn coins.",
           TextMapId = "UI_TEMPLE_81402"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_81403",
-    MaxKey = "UI_Theater_Donate_NotStart",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_81403 = {
           ContentEN = "Chase Lulu Lunoloot and bring her down to earn coins.",
           TextMapId = "UI_TEMPLE_81403"
@@ -104521,7 +104529,15 @@ Don't let up until she reaches the finish!]],
         UI_Theater_Donate_End = {
           ContentEN = "Closed",
           TextMapId = "UI_Theater_Donate_End"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Theater_Donate_Finish",
+    MaxKey = "UI_WEAPON_DESC_20398",
+    Loader = function()
+      return {
         UI_Theater_Donate_Finish = {
           ContentEN = "Completed",
           TextMapId = "UI_Theater_Donate_Finish"
@@ -104529,15 +104545,7 @@ Don't let up until she reaches the finish!]],
         UI_Theater_Donate_NotStart = {
           ContentEN = "Not Yet Open",
           TextMapId = "UI_Theater_Donate_NotStart"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Theater_Donate_Step",
-    MaxKey = "UI_WEAPON_DESC_20401",
-    Loader = function()
-      return {
+        },
         UI_Theater_Donate_Step = {
           ContentEN = "Stage %s",
           TextMapId = "UI_Theater_Donate_Step"
@@ -105334,7 +105342,15 @@ About Zones
         UI_WEAPON_DESC_20398 = {
           ContentEN = "A grenade launcher refined with the latest surface-treatment techniques — favoured by fearless siegebreakers.",
           TextMapId = "UI_WEAPON_DESC_20398"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_20399",
+    MaxKey = "UI_Walnut_Select",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_20399 = {
           ContentEN = "A grenade launcher crafted using the latest smelting and gilding techniques. This model is a top recommendation from blacksmiths. Its perfect balance of quality and affordability has made it a popular choice among travellers across Atlasia.",
           TextMapId = "UI_WEAPON_DESC_20399"
@@ -105342,15 +105358,7 @@ About Zones
         UI_WEAPON_DESC_20401 = {
           ContentEN = "Only after the last cry fades... can silence return to the world.",
           TextMapId = "UI_WEAPON_DESC_20401"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_20402",
-    MaxKey = "UI_Walnut_Toast_CanNotGet",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_20402 = {
           ContentEN = "Insert flower seeds into the body, allowing destruction to bloom from within.",
           TextMapId = "UI_WEAPON_DESC_20402"
@@ -106147,7 +106155,15 @@ Completing Covert Commissions grants a <highlight>10%</> chance of a Golden-tier
         UI_Walnut_Select = {
           ContentEN = "Secret Letter confirmed",
           TextMapId = "UI_Walnut_Select"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Walnut_Selecting",
+    MaxKey = "UI_WeaponSkin_Name_3011201",
+    Loader = function()
+      return {
         UI_Walnut_Selecting = {
           ContentEN = "Selecting",
           TextMapId = "UI_Walnut_Selecting"
@@ -106155,15 +106171,7 @@ Completing Covert Commissions grants a <highlight>10%</> chance of a Golden-tier
         UI_Walnut_Toast_CanNotGet = {
           ContentEN = "Unavailable for now",
           TextMapId = "UI_Walnut_Toast_CanNotGet"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Walnut_Toast_LackWalnut",
-    MaxKey = "UI_WeaponSkin_Name_3011205",
-    Loader = function()
-      return {
+        },
         UI_Walnut_Toast_LackWalnut = {
           ContentEN = "Not enough Secret Letters",
           TextMapId = "UI_Walnut_Toast_LackWalnut"
@@ -106961,7 +106969,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         UI_WeaponSkin_Name_3011201 = {
           ContentEN = "Catloaf No. 2",
           TextMapId = "UI_WeaponSkin_Name_3011201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponSkin_Name_3011202",
+    MaxKey = "VoiceDes101",
+    Loader = function()
+      return {
         UI_WeaponSkin_Name_3011202 = {
           ContentEN = "Verdant Finale – Dual Pistols",
           TextMapId = "UI_WeaponSkin_Name_3011202"
@@ -106969,15 +106985,7 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         UI_WeaponSkin_Name_3011205 = {
           ContentEN = "The Scream – Dual Pistols",
           TextMapId = "UI_WeaponSkin_Name_3011205"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponSkin_Preview",
-    MaxKey = "VoiceDes103",
-    Loader = function()
-      return {
+        },
         UI_WeaponSkin_Preview = {
           ContentEN = "Weapon Skin Preview",
           TextMapId = "UI_WeaponSkin_Preview"
@@ -107766,7 +107774,15 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         VoiceDes101 = {
           ContentEN = "About the Charm",
           TextMapId = "VoiceDes101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes102",
+    MaxKey = "WikiText_20400102",
+    Loader = function()
+      return {
         VoiceDes102 = {
           ContentEN = "About Your Title",
           TextMapId = "VoiceDes102"
@@ -107774,15 +107790,7 @@ Gaming services will only be available to minors for 1 hour between 20:00 and 21
         VoiceDes103 = {
           ContentEN = "About Wishes",
           TextMapId = "VoiceDes103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes104",
-    MaxKey = "WikiText_20400104",
-    Loader = function()
-      return {
+        },
         VoiceDes104 = {
           ContentEN = "About Secrets",
           TextMapId = "VoiceDes104"
@@ -108640,7 +108648,15 @@ The incident left a lasting mark on Su Yi. Six months later, she left home and j
         WikiText_20400102 = {
           ContentEN = "Under {性别2:his|her} guidance, {nickname} awakened the power known as \"Resonance.\"",
           TextMapId = "WikiText_20400102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20400103",
+    MaxKey = "WuyoushengEvent_Pet603_SkillDesLv_3",
+    Loader = function()
+      return {
         WikiText_20400103 = {
           ContentEN = "The true name of the mysterious {性别2:boy|girl} is {nickname2}.\n\n{性别2:He|She} harbours a secret known to no one else — a voice that exists solely within {性别2:his|her} mind. This voice whispers of a strong desire for pain, blood, and death, relentlessly tempting {性别2:him|her} towards darkness.",
           TextMapId = "WikiText_20400103"
@@ -108648,15 +108664,7 @@ The incident left a lasting mark on Su Yi. Six months later, she left home and j
         WikiText_20400104 = {
           ContentEN = "A young soldier of the Hyperborean Empire, known for {性别2:his|her} exceptional combat prowess as a cadet at the Hyperborean Imperial Military College. The top graduate of the College's 133rd class, {性别2:he|she} earned the moniker \"Pale Reaper.\"\n\nNow serving as captain of the 13th Legion's Griffins squad, {性别2:he|she} has been deployed to the Lonza Fortress Operation.",
           TextMapId = "WikiText_20400104"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20400105",
-    MaxKey = "WuyoushengEvent_Pet604_SkillDesLv_1",
-    Loader = function()
-      return {
+        },
         WikiText_20400105 = {
           ContentEN = "Possesses only a few years' worth of memories and has no knowledge of {性别2:his|her} origins or early life.",
           TextMapId = "WikiText_20400105"
@@ -109561,7 +109569,15 @@ Just as Rhythm and the Noctoyagers reached a dead end, the creature came to them
         WuyoushengEvent_Pet603_SkillDesLv_3 = {
           ContentEN = "Support Skill Cooldown -50%",
           TextMapId = "WuyoushengEvent_Pet603_SkillDesLv_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WuyoushengEvent_Pet603_SkillDesLv_4",
+    MaxKey = "voice_ch_char_Feina_vo_idle",
+    Loader = function()
+      return {
         WuyoushengEvent_Pet603_SkillDesLv_4 = {
           ContentEN = "Melee Weapon ATK Speed +100%",
           TextMapId = "WuyoushengEvent_Pet603_SkillDesLv_4"
@@ -109569,15 +109585,7 @@ Just as Rhythm and the Noctoyagers reached a dead end, the creature came to them
         WuyoushengEvent_Pet604_SkillDesLv_1 = {
           ContentEN = "Damage increases to 1000% of the main character's ATK",
           TextMapId = "WuyoushengEvent_Pet604_SkillDesLv_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WuyoushengEvent_Pet604_SkillDesLv_2",
-    MaxKey = "voice_ch_char_Feina_vo_revive",
-    Loader = function()
-      return {
+        },
         WuyoushengEvent_Pet604_SkillDesLv_2 = {
           ContentEN = "Skill Range +100%; Skill Duration +100%",
           TextMapId = "WuyoushengEvent_Pet604_SkillDesLv_2"
@@ -110372,7 +110380,15 @@ Well... I, a candidate of the Seven Virtues, order you to show me your anger! No
         voice_ch_char_Feina_vo_idle = {
           ContentEN = "♪ What a tiny, tiny, little home... It rests in and hides in the treetops; and the magical golden river flow... Do you see that stove? The embers crackle, crackle... Papa making a toy shining so bright, and Mama humming a lullaby... Good night~",
           TextMapId = "voice_ch_char_Feina_vo_idle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Feina_vo_lvup",
+    MaxKey = "voice_ch_char_Kezhou_vo_lvup",
+    Loader = function()
+      return {
         voice_ch_char_Feina_vo_lvup = {
           ContentEN = "Wow...!",
           TextMapId = "voice_ch_char_Feina_vo_lvup"
@@ -110380,15 +110396,7 @@ Well... I, a candidate of the Seven Virtues, order you to show me your anger! No
         voice_ch_char_Feina_vo_revive = {
           ContentEN = "Huh...? What happened?",
           TextMapId = "voice_ch_char_Feina_vo_revive"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_skill01_r01",
-    MaxKey = "voice_ch_char_Kezhou_vo_skill01_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_skill01_r01 = {
           ContentEN = "♪ Starlight, shining bright~",
           TextMapId = "voice_ch_char_Feina_vo_skill01_r01"
@@ -111190,7 +111198,15 @@ Everything's on the house today. Have whatever you like, catch up with everyone,
         voice_ch_char_Kezhou_vo_lvup = {
           ContentEN = "You gotta see a thousand swords before you really understand one.",
           TextMapId = "voice_ch_char_Kezhou_vo_lvup"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kezhou_vo_revive",
+    MaxKey = "voice_ch_char_NanzhuLight_vo_lvup",
+    Loader = function()
+      return {
         voice_ch_char_Kezhou_vo_revive = {
           ContentEN = "This fight's far from over!",
           TextMapId = "voice_ch_char_Kezhou_vo_revive"
@@ -111198,15 +111214,7 @@ Everything's on the house today. Have whatever you like, catch up with everyone,
         voice_ch_char_Kezhou_vo_skill01_r01 = {
           ContentEN = "Swift as a shadow!",
           TextMapId = "voice_ch_char_Kezhou_vo_skill01_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kezhou_vo_skill01_r02",
-    MaxKey = "voice_ch_char_NanzhuLight_vo_skill01_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kezhou_vo_skill01_r02 = {
           ContentEN = "Stay put and be good!",
           TextMapId = "voice_ch_char_Kezhou_vo_skill01_r02"
@@ -112000,7 +112008,15 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
         voice_ch_char_NanzhuLight_vo_lvup = {
           ContentEN = "Every step I've taken, every word I've heard, and every soul I've met — all have honed my view of this world and the edge of my sword.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_lvup"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_NanzhuLight_vo_revive",
+    MaxKey = "voice_ch_char_Songlu_vo_skill01_r02",
+    Loader = function()
+      return {
         voice_ch_char_NanzhuLight_vo_revive = {
           ContentEN = "Was that... just a nightmare?",
           TextMapId = "voice_ch_char_NanzhuLight_vo_revive"
@@ -112008,15 +112024,7 @@ so I suppose I could lend a hand. In my own personal capacity, of course.]],
         voice_ch_char_NanzhuLight_vo_skill01_r01 = {
           ContentEN = "Vanish.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill01_r01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_NanzhuLight_vo_skill01_r02",
-    MaxKey = "voice_ch_char_Songlu_vo_skill02_r02",
-    Loader = function()
-      return {
+        },
         voice_ch_char_NanzhuLight_vo_skill01_r02 = {
           ContentEN = "Light slash.",
           TextMapId = "voice_ch_char_NanzhuLight_vo_skill01_r02"
@@ -112816,7 +112824,15 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_skill01_r02 = {
           ContentEN = "This is gonna hurt!",
           TextMapId = "voice_ch_char_Songlu_vo_skill01_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Songlu_vo_skill02_r01",
+    MaxKey = "voice_ch_char_Xier_vo_topic_05_2",
+    Loader = function()
+      return {
         voice_ch_char_Songlu_vo_skill02_r01 = {
           ContentEN = "The Commissary's coming. Bid farewell to your hunger!",
           TextMapId = "voice_ch_char_Songlu_vo_skill02_r01"
@@ -112824,15 +112840,7 @@ After all, even if I gave you a thousand chances, I would still escape from your
         voice_ch_char_Songlu_vo_skill02_r02 = {
           ContentEN = "The special Commissary's here. Feast till forever!",
           TextMapId = "voice_ch_char_Songlu_vo_skill02_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_skill02_r03",
-    MaxKey = "voice_ch_char_Xier_vo_topic_05_4",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_skill02_r03 = {
           ContentEN = "Gimme the food, or else I'll smash you.",
           TextMapId = "voice_ch_char_Songlu_vo_skill02_r03"
@@ -113630,7 +113638,15 @@ Good. Then let's also finalise the external campaign slogans, domestic case anal
         voice_ch_char_Xier_vo_topic_05_2 = {
           ContentEN = "Ugh, you tricked me.",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xier_vo_topic_05_3",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Xier_vo_topic_05_3 = {
           ContentEN = "Not at all. Miss Flora means the world to me. Perhaps it's bold of me to say, but she's much more than just my honorable lady...",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_3"
@@ -113638,15 +113654,7 @@ Good. Then let's also finalise the external campaign slogans, domestic case anal
         voice_ch_char_Xier_vo_topic_05_4 = {
           ContentEN = "Regrettably, I'm not a poet; otherwise, I'd find the perfect word for her, which combines the meanings of friends and family.",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xier_vo_topic_05_5",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xier_vo_topic_05_5 = {
           ContentEN = "I prefer keeping such feelings to myself — clearing the path for Miss Flora is both my duty and my privilege.",
           TextMapId = "voice_ch_char_Xier_vo_topic_05_5"

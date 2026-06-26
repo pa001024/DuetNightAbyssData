@@ -813,7 +813,7 @@ function View:CheckDifficultyIsSelected(RoomCfgRatResId)
 end
 
 function View:CheckRoomIsEnd(roomData)
-  if roomData.IsPass then
+  if roomData.IsPass and roomData.RewardState and 1 ~= roomData.RewardState then
     return true
   end
   local CreateTime = URuntimeCommonFunctionLibrary.GetDateTimeFromUnixTime(roomData.CreateTime or 0)
@@ -821,7 +821,7 @@ function View:CheckRoomIsEnd(roomData)
   local RemainTime = UKismetMathLibrary.Subtract_DateTimeDateTime(CurTime, CreateTime)
   local elapsedSeconds = UKismetMathLibrary.GetTotalSeconds(RemainTime)
   if elapsedSeconds >= self.MaxDurationSeconds then
-    return true
+    return 1 ~= roomData.RewardState
   end
   return false
 end
@@ -854,12 +854,36 @@ function View:OnSiftBoxConfirmed(ItemUI, SelectedItems, ItemDatas)
   self.SelectedItems = SelectedItems
   if not SelectedItems or next(SelectedItems) == nil then
     self:RefreshSiftMain(false)
-    self:RefreshShowList(RoomList)
+    self:SelectInSecondTab(RoomList)
     return
   end
   self:RefreshSiftMain(true)
   local SiftedRoomList = self:SiftShowListByListData(RoomList)
   self:RefreshShowList(SiftedRoomList)
+end
+
+function View:SelectInSecondTab(RoomList)
+  if 2 ~= self.CurFirstTabIdx then
+    self:RefreshShowList(RoomList)
+    return
+  end
+  local retRoomList = {}
+  for _, roomData in ipairs(RoomList) do
+    local flag = true
+    if 2 == self.CurFirstTabIdx then
+      if self:CheckRoomIsEnd(roomData) then
+        if 1 == self.SelectedSubTabIdx then
+          flag = false
+        end
+      elseif 2 == self.SelectedSubTabIdx then
+        flag = false
+      end
+    end
+    if flag then
+      table.insert(retRoomList, roomData)
+    end
+  end
+  self:RefreshShowList(retRoomList)
 end
 
 function View:SelectListChange(selectIndex, isForce)

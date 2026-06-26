@@ -191,7 +191,7 @@ function M:RewardListInit()
   local MVPContributionReward = self.GetNeedNumber(AsyncCombatConst.AsyncCombat_MVPContributionReward.ConstantValue / 100)
   Content.RewardText = "UI_AsyncCombat_ContributionBonus"
   Content.RewardTip = string.format(GText("UI_AsyncCombat_ContributionRequirement"), math.floor(BaseContributionRequire))
-  Content.bChoose = self.MyContribution and BaseContributionRequire < self.MyContribution and not self.RoomData.IsMaster
+  Content.bChoose = self.MyContribution and BaseContributionRequire <= self.MyContribution and not self.RoomData.IsMaster
   Content.Rate = BaseContributionReward
   Content.Count = math.floor(ResourceCount * RoomMult * (BaseContributionReward / 100))
   Content.ResourceIcon = ResourceIcon

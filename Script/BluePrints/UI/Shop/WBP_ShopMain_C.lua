@@ -391,7 +391,7 @@ function M:OnMainTabChanged(TabWidget)
     self.Common_Toggle_TabGroup_PC:SelectTab(1)
   end
   if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
-    if 110 == MainTabId then
+    if 110 == MainTabId or 160 == MainTabId then
       local MaxFPS = 10
       UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. MaxFPS)
       self.bOpenHarmonyUIMaxFPSLimited = true

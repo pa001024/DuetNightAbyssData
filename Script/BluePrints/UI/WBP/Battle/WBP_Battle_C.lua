@@ -2947,7 +2947,7 @@ function WBP_Battle_C:RepClientDungeonMessage(MessageName, tbl)
 end
 
 function WBP_Battle_C:ExpandAndCollapseRanking()
-  if self.HandlingExpandAndCollapse then
+  if UIUtils.IsGamepadInput() and UIUtils.UtilsGetCurrentGamepadName() == "PS" and self.HandlingExpandAndCollapse then
     return
   end
   self.HandlingExpandAndCollapse = true

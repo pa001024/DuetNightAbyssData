@@ -1,6 +1,5 @@
 require("UnLua")
-local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
-local ChatModel = ChatController:GetModel()
+local TimerKeyPrefix = "CoopShareCooldownTimer"
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -19,6 +18,8 @@ function M:Initialize()
   self.PlayerOfflineSlateColor.SpecifiedColor = self.PlayerOffline
   self.PlayerOnlineSlateColor.SpecifiedColor = self.PlayerOnline
   self.PlayerBusySlateColor.SpecifiedColor = self.PlayerBusy
+  self.TimerKey = nil
+  self.RemainingTimeSecs = nil
 end
 
 function M:Construct()
@@ -43,6 +44,8 @@ function M:OnListItemObjectSet(Content)
   self.TextFriendName:SetText(self.FriendData.Info.Nickname)
   self:SetOnlineState(self.FriendData.Info)
   self.bIsFocusable = true
+  self.TimerKey = TimerKeyPrefix .. tostring(self.FriendData.Uid)
+  self:CheckTimer()
   if type(self.Owner.FriendListItemObjectSetNum) == "number" and type(self.Owner.FriendList) == "table" then
     self.Owner.FriendListItemObjectSetNum = self.Owner.FriendListItemObjectSetNum + 1
     if self.Owner.FriendListItemObjectSetNum == #self.Owner.FriendList then
@@ -101,8 +104,25 @@ function M:SetOnlineState(AvatarInfo)
   end
 end
 
-function M:SetCooldownTimeText(TimeText)
-  self.TextBlock_2:SetText(TimeText)
+function M:CheckTimer()
+  if not self.TimerKey then
+    DebugPrint("lxc: WBP_Activity_Coop_ShareFriendsItem_C:CheckTimer: no self.TimerKey")
+    return
+  end
+  local GameInstance = GWorld.GameInstance
+  GameInstance.CoopShareTimers = GameInstance.CoopShareTimers or {}
+  local TimerInfo = GameInstance.CoopShareTimers[self.TimerKey]
+  local NowMs = TimeUtils.NowTimeMs()
+  if TimerInfo and TimerInfo.EndTime and NowMs <= TimerInfo.EndTime then
+    self.BtnShare:ForbidBtn(true)
+    self:ResetTimer(TimerInfo.EndTime)
+    DebugPrint(string.format("lxc: WBP_Activity_Coop_ShareFriendsItem_C:CheckTimer: 恢复计时, self: %s, Name: %s", tostring(self), self.FriendData.Info.Nickname))
+  else
+    GameInstance.CoopShareTimers[self.TimerKey] = nil
+    self:CleanTimer()
+    self:UpdateCountDownShow()
+    self.BtnShare:ForbidBtn(false)
+  end
 end
 
 function M:OnClick()
@@ -112,10 +132,59 @@ function M:OnClick()
   end
   self:ShareWithFriend()
   self.BtnShare:ForbidBtn(true)
-  self.Cd_Node:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  local TimeStr = self:GetTimeStr(self.CooldownTime)
-  self.TextTime:SetText("(" .. TimeStr .. ")")
-  self:AddTimer(1, self.UpdateCooldown, true, 0, "CoopShareCooldownTimer")
+  local NowMs = TimeUtils.NowTimeMs()
+  local EndMs = NowMs + self.CooldownTime * 1000
+  self:ResetTimer(EndMs)
+  self:ResetTimerInfo()
+end
+
+function M:ResetTimerInfo()
+  if not GWorld.GameInstance then
+    DebugPrint("lxc: WBP_Activity_Coop_ShareFriendsItem_C:ResetTimerInfo GameInstance为nil")
+    return
+  end
+  if not self.TimerKey then
+    DebugPrint("lxc: WBP_Activity_Coop_ShareFriendsItem_C:ResetTimerInfo TimerKey为nil, FriendUid: " .. tostring(self.FriendData and self.FriendData.Uid))
+    return
+  end
+  local NowMs = TimeUtils.NowTimeMs()
+  local EndMs = NowMs + self.CooldownTime * 1000
+  local GameInstance = GWorld.GameInstance
+  GameInstance.CoopShareTimers = GameInstance.CoopShareTimers or {}
+  DebugPrint(string.format("lxc: WBP_Activity_Coop_ShareFriendsItem_C:ResetTimerInfo 定时器: %s, 原到期时间: %s, 新到期时间: %s", self.TimerKey, tostring(GameInstance.CoopShareTimers[self.TimerKey] and GameInstance.CoopShareTimers[self.TimerKey].EndTime), tostring(EndMs)))
+  local TimerInfo = GameInstance.CoopShareTimers[self.TimerKey]
+  if TimerInfo then
+    GameInstance.CoopShareTimers[self.TimerKey].EndTime = EndMs
+  else
+    GameInstance.CoopShareTimers[self.TimerKey] = {EndTime = EndMs}
+  end
+end
+
+function M:ResetTimer(EndTimeMs)
+  local NowMs = TimeUtils.NowTimeMs()
+  if not EndTimeMs or EndTimeMs <= NowMs then
+    return
+  end
+  local RemainingTimeSecs = math.floor((EndTimeMs - NowMs) / 1000 + 0.5)
+  self:UpdateCountDownShow(RemainingTimeSecs)
+  if RemainingTimeSecs <= 0 then
+    self.BtnShare:ForbidBtn(false)
+    return
+  end
+  self.RemainingTimeSecs = RemainingTimeSecs
+  self:AddTimer(1, self.UpdateCooldown, true, 0, self.TimerKey)
+end
+
+function M:UpdateCountDownShow(RemainingTimeSecs)
+  if not RemainingTimeSecs or RemainingTimeSecs <= 0 then
+    self.Cd_Node:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    DebugPrint(string.format("UpdateCountDownShow: 玩家: %s 恢复ui, self: %s", self.FriendData.Info.Nickname, tostring(self)))
+  else
+    self.Cd_Node:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    local TimeStr = self:GetTimeStr(RemainingTimeSecs)
+    self.TextTime:SetText("(" .. TimeStr .. ")")
+    DebugPrint(string.format("UpdateCountDownShow: 玩家: %s, TimeStr: %s, self: %s", self.FriendData.Info.Nickname, TimeStr, tostring(self)))
+  end
 end
 
 function M:HandleClickForbiddenButton()
@@ -123,14 +192,13 @@ function M:HandleClickForbiddenButton()
 end
 
 function M:UpdateCooldown()
-  self.CooldownTime = self.CooldownTime - 1
-  local TimeStr = self:GetTimeStr(self.CooldownTime)
-  self.TextTime:SetText("(" .. TimeStr .. ")")
-  if self.CooldownTime <= 0 then
+  self.RemainingTimeSecs = self.RemainingTimeSecs - 1
+  self:UpdateCountDownShow(self.RemainingTimeSecs)
+  if self.RemainingTimeSecs <= 0 then
     self:CleanTimer()
     self.BtnShare:ForbidBtn(false)
-    self.Cd_Node:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.CooldownTime = 5
+    self.RemainingTimeSecs = nil
+    GWorld.GameInstance.CoopShareTimers[self.TimerKey] = nil
   end
 end
 
@@ -141,7 +209,7 @@ function M:ShareWithFriend()
   end
   
   local function Func(Obj, Ret, player_uid, room_uid)
-    DebugPrint("clx: WBP_Activity_Coop_ShareChannelItem_C:ShareWithFriend " .. "Ret: " .. Ret .. "player_uid: " .. player_uid .. "room_uid: " .. room_uid)
+    DebugPrint("clx: WBP_Activity_Coop_ShareFriendsItem_C:ShareWithFriend " .. "Ret: " .. Ret .. "player_uid: " .. player_uid .. "room_uid: " .. room_uid)
     if ErrorCode:Check(Ret) then
       self.Owner.bShareClick = true
       UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_AsyncCombat_Sharesuccessful")
@@ -174,6 +242,12 @@ function M:OnAddedToFocusPath()
     return
   end
   self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function M:BP_OnEntryReleased()
+  self:CleanTimer()
+  self:UpdateCountDownShow()
+  self.BtnShare:ForbidBtn(false)
 end
 
 AssembleComponents(M)

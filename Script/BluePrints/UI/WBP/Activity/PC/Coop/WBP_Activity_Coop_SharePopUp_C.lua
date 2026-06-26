@@ -68,12 +68,7 @@ function M:RefreshChannels()
     Padding = Slot.Padding
   end
   local ChannelItemBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_ShareChannelItem.WBP_Activity_Coop_ShareChannelItem'"
-  local WorldChannelItem = UIManager(self):CreateWidget(ChannelItemBPPath, false)
-  WorldChannelItem.Owner = self
-  self.ListChannel:AddChild(WorldChannelItem)
-  local ScrollBoxSlot = UE4.UWidgetLayoutLibrary.SlotAsScrollBoxSlot(WorldChannelItem)
-  ScrollBoxSlot:SetPadding(Padding)
-  ScrollBoxSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Center)
+  local ScrollBoxSlot
   local RegionChannelItem = UIManager(self):CreateWidget(ChannelItemBPPath, false)
   RegionChannelItem.Owner = self
   self.ListChannel:AddChild(RegionChannelItem)
@@ -118,19 +113,16 @@ function M:RefreshChannels()
   self.TextChannel:SetText(GText("UI_AsyncCombat_PublicChannel"))
   self.TextState:SetText(GText("UI_AsyncCombat_ShareToPublic"))
   self.ItemChannel_1.TextChannel:SetText(GText("UI_AsyncCombat_RecruitChannel"))
-  WorldChannelItem.TextChannel:SetText(GText("UI_AsyncCombat_WorldChannel"))
   RegionChannelItem.TextChannel:SetText(GText("UI_AsyncCombat_RegionChannel"))
   OtherChannelText:SetText(GText("UI_AsyncCombat_OtherChannels"))
   GuildChannelItem.TextChannel:SetText(GText("UI_AsyncCombat_GuildChannel"))
   OtherChannelState:SetText(GText("UI_AsyncCombat_ShareToGuild"))
   self.ItemChannel_1:InitShareChannel(ChatCommon.ChannelDef.TeamUp)
-  WorldChannelItem:InitShareChannel(ChatCommon.ChannelDef.Public)
   RegionChannelItem:InitShareChannel(ChatCommon.ChannelDef.Region)
   GuildChannelItem:InitShareChannel(ChatCommon.ChannelDef.InGuild)
-  table.insert(self.ChannelItems, 1, self.ItemChannel_1)
-  table.insert(self.ChannelItems, 2, WorldChannelItem)
-  table.insert(self.ChannelItems, 3, RegionChannelItem)
-  table.insert(self.ChannelItems, 4, GuildChannelItem)
+  table.insert(self.ChannelItems, self.ItemChannel_1)
+  table.insert(self.ChannelItems, RegionChannelItem)
+  table.insert(self.ChannelItems, GuildChannelItem)
   for I = 1, #self.ChannelItems do
     local PrevIndex = I - 1
     if 0 == PrevIndex then

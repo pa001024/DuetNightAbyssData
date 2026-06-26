@@ -1631,4 +1631,9 @@ CommonConst.DungeonSyncMsg = {
   AsyncCombatRoomClose = "AsyncCombatRoomClose"
 }
 CommonConst.GatherTargets = {CDTime = 1, MaxPerFrame = 5}
+CommonConst.AsyncCombatCheatCheckDungeons = {
+  [40604] = true
+}
+CommonConst.AsyncCombatCheatCheckDuration = 30
+CommonConst.AsyncCombatCheatAutoBan = 1
 return CommonConst

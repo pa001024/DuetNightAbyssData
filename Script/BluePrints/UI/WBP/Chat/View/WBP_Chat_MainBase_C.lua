@@ -247,14 +247,75 @@ function M:_IsSetUpChatMsgListContextCurrent(Context)
   return Context.Channel == self.CurrChannel and Context.SubTab == ChatModel:GetCurrentSubTab() and Context.FriendUid == ChatModel:GetCurrentFriendUid()
 end
 
+function M:_GetDisplayMsgMax()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
+    return nil
+  end
+  local ChannelType = self.CurrChannel
+  if not ChannelType then
+    return nil
+  end
+  local ChannelConf = DataMgr.Channel[ChannelType]
+  local MessageMax = ChannelConf and ChannelConf.MessageMax or 100
+  local DisplayMax = math.max(1, math.floor(MessageMax * 0.35))
+  return DisplayMax
+end
+
+function M:_RefreshCachedDisplayMsgMax()
+  self._CachedDisplayMsgMax = self:_GetDisplayMsgMax()
+  self._CachedDisplayMsgMaxChannel = self.CurrChannel
+end
+
+function M:_GetCachedDisplayMsgMax()
+  if self._CachedDisplayMsgMaxChannel ~= self.CurrChannel then
+    self:_RefreshCachedDisplayMsgMax()
+  end
+  return self._CachedDisplayMsgMax
+end
+
+function M:_PrepareMsgListForDisplay(MsgList)
+  local MaxCount = self:_GetCachedDisplayMsgMax()
+  local SourceCount = MsgList and #MsgList or 0
+  if not (MaxCount and MsgList) or MaxCount >= SourceCount then
+    return MsgList
+  end
+  local Sliced = table.slice(MsgList, #MsgList - MaxCount + 1, #MsgList)
+  return Sliced
+end
+
+function M:_RemoveOldestDisplayMsgItem()
+  local Item = self.List_Dialog:GetItemAt(0)
+  if not Item then
+    return false
+  end
+  self._DialogItemCounter = self._DialogItemCounter - 1
+  self.List_Dialog:RemoveItem(Item)
+  return true
+end
+
+function M:_MakeRoomForDisplayMsgCount(RoomCount)
+  local MaxCount = self:_GetCachedDisplayMsgMax()
+  local NumItems = self.List_Dialog:GetNumItems()
+  if not MaxCount or RoomCount <= 0 then
+    return
+  end
+  local RemoveCount = math.max(0, NumItems + RoomCount - MaxCount)
+  for _ = 1, RemoveCount do
+    if not self:_RemoveOldestDisplayMsgItem() then
+      break
+    end
+  end
+end
+
 function M:_SetUpChatMsgList()
+  self:_RefreshCachedDisplayMsgMax()
   self:_Stop_SetUpChatMsgListTimer()
   self.bDialogListRefreshed = false
   self._TotalHeight = 0
   self._DialogItemCounter = 0
   self.List_Dialog:ClearListItems()
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
-  local MsgList = ChatModel:GetCurrentMsgViewList()
+  local MsgList = self:_PrepareMsgListForDisplay(ChatModel:GetCurrentMsgViewList())
   self._SetUpChatMsgListIndex = 0
   self.SB_Dialog:ScrollToStart()
   self.SB_Dialog:DisableDrag(true)
@@ -856,17 +917,33 @@ function M:Close()
   M.Super.Close(self)
 end
 
-function M:_AddNewMsgToListView(MsgWrap)
-  if not MsgWrap then
+function M:_AddMsgWrapsToListView(MsgWraps)
+  if not MsgWraps then
     return
   end
+  local Wraps = {}
+  for _, MsgWrap in ipairs(MsgWraps) do
+    if MsgWrap then
+      Wraps[#Wraps + 1] = MsgWrap
+    end
+  end
+  if 0 == #Wraps then
+    return
+  end
+  self:_MakeRoomForDisplayMsgCount(#Wraps)
   if 0 == self.List_Dialog:GetNumItems() then
     self.WS_Dialoglist:SetActiveWidgetIndex(0)
   end
-  local Content = NewObject(UIUtils.GetCommonItemContentClass())
-  Content.Owner = self
-  Content.Data = MsgWrap
-  self.List_Dialog:AddItem(Content)
+  for _, MsgWrap in ipairs(Wraps) do
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.Owner = self
+    Content.Data = MsgWrap
+    self.List_Dialog:AddItem(Content)
+  end
+end
+
+function M:_AddNewMsgToListView(MsgWrap)
+  self:_AddMsgWrapsToListView({MsgWrap})
 end
 
 function M:OnPlayerListUISelected(Content, bSkipInputAreaState)
@@ -958,7 +1035,7 @@ end
 
 function M:_ReduceOverflowMessage()
   local RemovedMsgs = ChatModel:GetChannelRemovedMsgs()
-  for i, Msg in ipairs(RemovedMsgs) do
+  for _ in ipairs(RemovedMsgs) do
     local Item = self.List_Dialog:GetItemAt(0)
     if Item then
       self._DialogItemCounter = self._DialogItemCounter - 1

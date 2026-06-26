@@ -1877,6 +1877,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_TEMPLE_MEASURE_COUNT",
     WildcardClassification = "Story"
   },
+  UI_TEMPLE_SUCRULE_COUNTDOWN = {
+    TextMapId = "UI_TEMPLE_SUCRULE_COUNTDOWN",
+    WildcardClassification = "Story"
+  },
   UI_TEMPLE_SUCRULE_SCORE = {
     TextMapId = "UI_TEMPLE_SUCRULE_SCORE",
     WildcardClassification = "Story"

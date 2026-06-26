@@ -363,6 +363,13 @@ return ReadOnly("KeyboardMap", {
     Key = "Escape",
     SortId = 51
   },
+  SwitchMovement = {
+    ActionName = "SwitchMovement",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "K",
+    SortId = 59
+  },
   SwitchWalk = {
     ActionName = "SwitchWalk",
     ActionNameText = "UI_CTL_SwitchWalk",

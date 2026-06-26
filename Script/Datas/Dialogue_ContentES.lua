@@ -55844,6 +55844,7 @@ PlayAnimation{ActorId{200005},AnimationId{"Sigh_Start"},Duration{1}}
         [10105809] = {
           Camera = "178.701172,37.807617,161.741211,0.000015,-4.800045,-164.274582,75.000015,266.881348,false,Manual,10.075966,16:9 Digital Film",
           Content = "如果耽误了正事，或者被旁人看出来什么……你知道后果。",
+          ContentES = "Si algo sale mal o la gente empieza a hacer preguntas… ya sabes lo que eso podría traer.",
           DialogueId = 10105809,
           GUID = "194C8021",
           LookAt = {
@@ -149350,6 +149351,7 @@ CameraMoveTo{_delay{7.4},TargetPosition{"237.964844,-1342.232422,47.20752,0.0001
         },
         [20003701] = {
           Content = "一日后——",
+          ContentES = "—Al día siguiente—",
           DialogueId = 20003701,
           Duration = 3,
           GUID = "3213C132"
@@ -149485,6 +149487,7 @@ CameraMoveTo{TargetPosition{"-6878.334961,-402.443359,34.656982,-0.002747,4.0000
         },
         [20004701] = {
           Content = "呃，碎了。",
+          ContentES = "Eh… se rompió.",
           DialogueId = 20004701,
           Duration = 2,
           ExStoryInfo = "Player",

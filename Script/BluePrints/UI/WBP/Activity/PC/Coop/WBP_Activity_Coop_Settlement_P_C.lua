@@ -100,7 +100,7 @@ function M:InitUIContent()
   self.TextLevel:SetText(CurStageText .. "/" .. TotalStageText)
   self.VerticalBox_0:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.TextNow:SetText(GText("UI_AsyncCombat_CurrentContribution"))
-  local text = self:FormatPercent(self.CurDevote)
+  local text = self:FormatPercent(self.CurDevote, "floor")
   self.TextNum:SetText(text)
   self.Tag01.TextTag:SetText(GText("UI_AsyncCombat_MVP"))
   self.Tag02.TextTag:SetText(GText("UI_AsyncCombat_Host"))
@@ -190,6 +190,7 @@ function M:InitRewardsUI()
   if self.bAllPassed and not bMVPorRoomOwner and not bSatisfyBaseDevote then
     self.Progress_Node_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.TextFail:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.TextWait:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Progress_Node_1:SetVisibility(UIConst.VisibilityOp.Visible)
     self.TextFail:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -206,7 +207,7 @@ function M:InitRewardsUI()
         self.Reward02:PlayAnimation(self.Reward02.Done)
       else
         local DeltaDevote = self.BaseRewardNeedDevote - self.CurDevote
-        local DeltaPercentText = self:FormatPercent(DeltaDevote)
+        local DeltaPercentText = self:FormatPercent(DeltaDevote, "ceil")
         self.Reward01.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
         self.Reward02.TextDone:SetText(GText("UI_AsyncCombat_MetRequirement"))
         self.Reward01:PlayAnimation(self.Reward01.Lock)
@@ -230,7 +231,7 @@ function M:InitRewardsUI()
         self.Reward02:PlayAnimation(self.Reward02.Done)
       else
         local DeltaDevote = self.BaseRewardNeedDevote - self.CurDevote
-        local DeltaPercentText = self:FormatPercent(DeltaDevote)
+        local DeltaPercentText = self:FormatPercent(DeltaDevote, "ceil")
         self.Reward01.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
         self.Reward02.TextDone:SetText(GText("UI_AsyncCombat_MetRequirement"))
         self.Reward02:PlayAnimation(self.Reward02.Done)
@@ -246,7 +247,7 @@ function M:InitRewardsUI()
       self.Reward02.TextReward:SetText(GText("UI_AsyncCombat_MVPBonus2"))
       if bSatisfyBaseDevote then
         local DeltaDevote = self.MVPDevote - self.CurDevote
-        local DeltaPercentText = self:FormatPercent(DeltaDevote)
+        local DeltaPercentText = self:FormatPercent(DeltaDevote, "ceil")
         self.Reward01.TextDone:SetText(GText("UI_AsyncCombat_MetRequirement"))
         self.Reward02.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
         self.Reward02:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -255,7 +256,7 @@ function M:InitRewardsUI()
         self.Reward02:PlayAnimation(self.Reward02.Lock)
       else
         local DeltaDevote = self.BaseRewardNeedDevote - self.CurDevote
-        local DeltaPercentText = self:FormatPercent(DeltaDevote)
+        local DeltaPercentText = self:FormatPercent(DeltaDevote, "ceil")
         self.Reward01.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
         self.Reward02:SetVisibility(UIConst.VisibilityOp.Collapsed)
         self.Image_722:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -272,8 +273,23 @@ function M:InitRewardsUI()
   end
 end
 
-function M:FormatPercent(Percent)
-  local percent = (Percent or 0) / 100
+function M:FormatPercent(Percent, RoundMode)
+  RoundMode = RoundMode or "round"
+  local percent
+  if "round" == RoundMode then
+    percent = (Percent or 0) / 100
+  else
+    local scaled = (Percent or 0) / 10
+    local roundedScaled
+    if "floor" == RoundMode then
+      roundedScaled = math.floor(scaled)
+    elseif "ceil" == RoundMode then
+      roundedScaled = math.ceil(scaled)
+    else
+      roundedScaled = math.floor(scaled + 0.5)
+    end
+    percent = roundedScaled / 10
+  end
   local text = string.format("%.1f", percent)
   text = text:gsub("%.0$", "")
   if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then

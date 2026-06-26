@@ -20798,7 +20798,7 @@
   },
   {
     "id": 700342,
-    "name": "Ménestrel appliqué",
+    "name": "Ménestrel appliquée",
     "camp": "NPC",
     "type": "Normal",
     "srId": 101101,
@@ -21320,7 +21320,7 @@
       },
       {
         "id": 51010209,
-        "content": "Et ici, en Hiperbórea... à quoi ressemble le vent ?",
+        "content": "Et ici, en Hyperborea... à quoi ressemble le vent ?",
         "voice": "story/1002/510102/7FB2DE6A",
         "npc": 700342,
         "options": [
@@ -21433,7 +21433,7 @@
   },
   {
     "id": 700345,
-    "name": "Ménestrel appliqué",
+    "name": "Ménestrel appliquée",
     "camp": "NPC",
     "type": "Normal",
     "srId": 101101,
@@ -38268,7 +38268,7 @@
       },
       {
         "id": 51159604,
-        "content": "C’est vrai, à votre âge, vous avez de l’énergie à revendre. Quand vous courez, on dirait que vous pouvez bondir à plusieurs mètres de haut !",
+        "content": "C’est vrai, à votre âge, vous avez de l’énergie à revendre. Quand vous courez, on dirait que vous pouvez faire des bonds de plusieurs mètres !",
         "npc": 701145,
         "next": 51159605
       },

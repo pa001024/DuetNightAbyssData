@@ -6390,8 +6390,8 @@
     "name": "Initiation des Chasseurs de Phoxènes",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Initiation des Chasseurs de Phoxènes",
-    "desc": "Commencer une mission — la mission : [Précaution] est un bon début.",
-    "detail": "Accomplir une mission : [Précaution].",
+    "desc": "Effectuer une mission [Précaution]",
+    "detail": "Accomplissez une mission [Précaution].",
     "type": 4,
     "reward": [
       50590
@@ -6413,7 +6413,7 @@
     "name": "Tutoriel : Mandats scellés",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Tutoriel : Mandats scellés",
-    "desc": "Terminer le Mandat scellé : Truffle et Filbert",
+    "desc": "Terminez le Mandat scellé de Truffle et Filbert pour obtenir leurs Fragments de pensée.",
     "detail": "Terminer le Mandat scellé de Truffle et Filbert pour obtenir leurs Fragments de pensée.",
     "type": 4,
     "reward": [

@@ -1228,6 +1228,7 @@ return ReadOnly("SystemUI", {
   CoopDetails = {
     ConfigName = "StackAndUIMode",
     IsChat = true,
+    IsHideBattleUnit = 11,
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Coop/WBP_Activity_Coop_Details_M.WBP_Activity_Coop_Details_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Coop/WBP_Activity_Coop_Details_P.WBP_Activity_Coop_Details_P'",
     PopupInfoId = 100377,

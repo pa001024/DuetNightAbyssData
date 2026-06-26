@@ -154395,7 +154395,7 @@ CameraMoveTo{_delay{7.4},TargetPosition{"237.964844,-1342.232422,47.20752,0.0001
         },
         [20003701] = {
           Content = "一日后——",
-          ContentEN = "The Next Day",
+          ContentEN = "—一The next day—一",
           DialogueId = 20003701,
           Duration = 3,
           GUID = "3213C132"

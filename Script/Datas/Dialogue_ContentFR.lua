@@ -617,7 +617,7 @@ local Data = {
         },
         [6100610] = {
           Content = "“妈妈说……我们是‘恶魔的孩子’……”\n“哪怕是掉进深渊这样最坏最坏的事……也好过……留在海伯利亚……”",
-          ContentFR = "« Maman disait... que nous étions des \"Enfants du Démon\"... »\n« Même tomber dans l’Abysse... valait mieux... que rester en Hiperbórea... »",
+          ContentFR = "« Maman disait... que nous étions des \"Enfants du Démon\"... »\n« Même tomber dans l’Abysse... valait mieux... que rester en Hyperborea... »",
           DialogueId = 6100610,
           GUID = "0F45B154",
           NextDialogue = 6100611,
@@ -57307,6 +57307,7 @@ PlayAnimation{ActorId{200005},AnimationId{"Sigh_Start"},Duration{1}}
         [10105809] = {
           Camera = "178.701172,37.807617,161.741211,0.000015,-4.800045,-164.274582,75.000015,266.881348,false,Manual,10.075966,16:9 Digital Film",
           Content = "如果耽误了正事，或者被旁人看出来什么……你知道后果。",
+          ContentFR = "Si tu compromets nos affaires, ou si quelqu’un commence à se poser des questions... tu sais ce que ça entraînerait.",
           DialogueId = 10105809,
           GUID = "194C8021",
           LookAt = {
@@ -58097,7 +58098,7 @@ PlayFacial{_delay{4},ActorId{200020},FacialId{"Sad02"}}
         [10106108] = {
           Camera = "392.718933,-45.626953,133.417969,0.000022,-8.587979,133.589279,20.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "凶神……恶煞？我不太明白……我是菲娜，奥特赛德的妹妹——咳、咳！",
-          ContentFR = "Poche... terrifiant ? Je ne comprends pas trop... Moi, je suis Fina, la sœur de l’Étranger... <I>kof, kof !</>",
+          ContentFR = "Proche... terrifiant ? Je ne comprends pas trop... Moi, je suis Fina, la sœur de l’Étranger... <I>kof, kof !</>",
           DialogueId = 10106108,
           GUID = "194CB1DD",
           LookAt = {
@@ -59146,7 +59147,7 @@ PlayAnimation{_delay{0.5},ActorId{200021},AnimationId{"Explain01_Start"},Duratio
           Camera = "123.56665,72.790039,133.77002,0.000115,0.599902,-138.799866,30.0,88.840363,false,Manual,2.0,16:9 Digital Film",
           CameraBlendCurve = "easeOutQuad",
           Content = "“身份”。一个能让你在海伯利亚畅通无阻的身份。当然，哨塔后面高高的内城除外，它的城门只留给那些大人物。",
-          ContentFR = "Une \"identité\". Un permis de circulation qui te permet de circuler librement en Hyperborea, sauf dans la cité intérieure, derrière les grandes tours de garde, réservée aux élites.  ",
+          ContentFR = "Une « identité ». Un permis de circulation qui te permet de circuler librement en Hyperborea, sauf dans la cité intérieure, derrière les grandes tours de garde, réservée aux élites.",
           DialogueId = 10106329,
           FacialId = {
             [1] = "200021:Confident01"
@@ -66277,7 +66278,7 @@ PlayAnimation{_delay{4.2},ActorId{100001},AnimationId{"Talk03_Start"},Duration{1
         [10110247] = {
           Camera = "48.828125,-238.466797,197.088867,0.000132,-14.601796,105.386505,35.000008,394.862823,false,Manual,4.0,16:9 Digital Film",
           Content = "被害者是个卡戎，哦对，还是个出现了征兆的<W>秽蚀者</>——就咱们刚才说到的。这不算什么重罪，所以他只坐了几个月牢就放出来了。",
-          ContentFR = "La victime était un Charon. Oui, et un Charon déjà atteint par la <W>Dégradation</> ... Comme on vient d’en parler. Ce n’était pas considéré comme un crime grave, donc il n’a fait que quelques mois de prison avant d’être libéré.",
+          ContentFR = "La victime était un Charon. Oui, et un Charon déjà atteint par la <W>Dégradation</>... Comme on vient d’en parler. Ce n’était pas considéré comme un crime grave, donc il n’a fait que quelques mois de prison avant d’être libéré.",
           DialogueId = 10110247,
           GUID = "194F576A",
           NextDialogue = 10110248,
@@ -73743,7 +73744,7 @@ MoveTo{ActorId{200006},MoveSpeed{120},TargetPoint{"P101250Saiqi"}}
           Camera = "-383.175781,979.316406,15.928711,0.000024,1.699392,-58.39698,30.0,937.541016,false,Manual,1.2,16:9 Digital Film",
           CameraBlendCurve = "easeInQuad",
           Content = "来，{nickname}，再给我拍一张照吧，要把冰湖城拍进去哦。",
-          ContentFR = "Allez, {nickname}, prends encore une photo de moi. Mais veille à ce que Givrelac soit dans le cadre.",
+          ContentFR = "Allez, {nickname}, prends-moi encore en photo. Mais veille à ce que Givrelac soit dans le cadre.",
           DialogueId = 10125103,
           FacialId = {
             [1] = "200027:Smile01"
@@ -75977,7 +75978,7 @@ PlayAnimation{_delay{3.5},ActorId{200006},AnimationId{"Special_Start"},Duration{
         },
         [10130201] = {
           Content = "“牵念之花”……是花店！诶？！难道他准备去约会？",
-          ContentFR = "« Fleur du Souvenir »... c’est une boutique ! Eh ? Il a rendez-vous avec quelqu’un ?",
+          ContentFR = "« Fleurs de sollicitude »... c’est une boutique ! Eh ? Il a rendez-vous avec quelqu’un ?",
           DialogueId = 10130201,
           GUID = "195BD021",
           NextDialogue = 10130202,
@@ -153655,6 +153656,7 @@ CameraMoveTo{_delay{7.4},TargetPosition{"237.964844,-1342.232422,47.20752,0.0001
         },
         [20003701] = {
           Content = "一日后——",
+          ContentFR = "Le lendemain...",
           DialogueId = 20003701,
           Duration = 3,
           GUID = "3213C132"
@@ -153790,6 +153792,7 @@ CameraMoveTo{TargetPosition{"-6878.334961,-402.443359,34.656982,-0.002747,4.0000
         },
         [20004701] = {
           Content = "呃，碎了。",
+          ContentFR = "Eh... il est cassé.",
           DialogueId = 20004701,
           Duration = 2,
           ExStoryInfo = "Player",
@@ -179909,7 +179912,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Angry01_Start"},Duration{2}}
         [51009227] = {
           Camera = "113.979492,13.10791,128.264404,0.000198,2.998221,54.034763,25.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "每个推销的人都这么说。",
-          ContentFR = "Ce que disent tous les vendeurs...",
+          ContentFR = "C’est ce que disent tous les vendeurs...",
           DialogueId = 51009227,
           FacialId = {
             [1] = "100001:Uninterested01"
@@ -188035,7 +188038,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010209] = {
           Content = "那么海伯利亚的“风”是什么呢？",
-          ContentFR = "Et ici, en Hiperbórea... à quoi ressemble le vent ?",
+          ContentFR = "Et ici, en Hyperborea... à quoi ressemble le vent ?",
           DialogueId = 51010209,
           GUID = "7FB2DE6A",
           NextOptions = {
@@ -225752,7 +225755,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51159604] = {
           Content = "说的是，你们年轻人体力好，血气方刚的年纪，跑起来更是一蹦三尺高！",
-          ContentFR = "C’est vrai, à votre âge, vous avez de l’énergie à revendre. Quand vous courez, on dirait que vous pouvez bondir à plusieurs mètres de haut !",
+          ContentFR = "C’est vrai, à votre âge, vous avez de l’énergie à revendre. Quand vous courez, on dirait que vous pouvez faire des bonds de plusieurs mètres !",
           DialogueId = 51159604,
           GUID = "80129C88",
           NextDialogue = 51159605,

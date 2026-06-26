@@ -5551,7 +5551,7 @@
               },
               {
                 "id": 10105809,
-                "content": "如果耽误了正事，或者被旁人看出来什么……你知道后果。",
+                "content": "Si tu compromets nos affaires, ou si quelqu’un commence à se poser des questions... tu sais ce que ça entraînerait.",
                 "voice": "story/1002/101058/194C8021",
                 "npc": 200005,
                 "next": 10105810
@@ -5878,7 +5878,7 @@
               },
               {
                 "id": 10106108,
-                "content": "Poche... terrifiant ? Je ne comprends pas trop... Moi, je suis Fina, la sœur de l’Étranger... <I>kof, kof !</>",
+                "content": "Proche... terrifiant ? Je ne comprends pas trop... Moi, je suis Fina, la sœur de l’Étranger... <I>kof, kof !</>",
                 "voice": "story/1002/101061/194CB1DD",
                 "npc": 200020,
                 "next": 10106109
@@ -6293,7 +6293,7 @@
               },
               {
                 "id": 10106329,
-                "content": "Une \"identité\". Un permis de circulation qui te permet de circuler librement en Hyperborea, sauf dans la cité intérieure, derrière les grandes tours de garde, réservée aux élites.  ",
+                "content": "Une « identité ». Un permis de circulation qui te permet de circuler librement en Hyperborea, sauf dans la cité intérieure, derrière les grandes tours de garde, réservée aux élites.",
                 "voice": "story/1002/101063/194CD474",
                 "npc": 200021,
                 "next": 10106330
@@ -7729,7 +7729,7 @@
             "dialogues": [
               {
                 "id": 20004701,
-                "content": "呃，碎了。",
+                "content": "Eh... il est cassé.",
                 "voice": "story/1002/101137/19518F12",
                 "npc": 100001,
                 "next": 20004702
@@ -8001,7 +8001,7 @@
             "dialogues": [
               {
                 "id": 20003701,
-                "content": "一日后——"
+                "content": "Le lendemain..."
               }
             ]
           }
@@ -8551,7 +8551,7 @@
               },
               {
                 "id": 10125103,
-                "content": "Allez, {nickname}, prends encore une photo de moi. Mais veille à ce que Givrelac soit dans le cadre.",
+                "content": "Allez, {nickname}, prends-moi encore en photo. Mais veille à ce que Givrelac soit dans le cadre.",
                 "voice": "story/1002/101251/1958DDB6",
                 "npc": 200027,
                 "next": 10125104
@@ -9678,7 +9678,7 @@
             "dialogues": [
               {
                 "id": 10130201,
-                "content": "« Fleur du Souvenir »... c’est une boutique ! Eh ? Il a rendez-vous avec quelqu’un ?",
+                "content": "« Fleurs de sollicitude »... c’est une boutique ! Eh ? Il a rendez-vous avec quelqu’un ?",
                 "voice": "story/1002/101302/195BD021",
                 "npc": 200002,
                 "next": 10130202
@@ -102035,7 +102035,7 @@
               },
               {
                 "id": 51009227,
-                "content": "Ce que disent tous les vendeurs...",
+                "content": "C’est ce que disent tous les vendeurs...",
                 "npc": 100001,
                 "next": 51009233
               },
@@ -107409,13 +107409,13 @@
     "quests": [
       {
         "id": 20023501,
-        "name": "Commencer une mission — la mission : [Précaution] est un bon début.",
-        "desc": "Accomplir une mission : [Précaution]."
+        "name": "Effectuer une mission [Précaution]",
+        "desc": "Accomplissez une mission [Précaution]."
       },
       {
         "id": 20023502,
-        "name": "Effectuer une première mission du Manuel des Vagabonds de la Nuit.",
-        "desc": "Accomplir une mission du Manuel des Vagabonds de la Nuit."
+        "name": "Effectuer une mission du Manuel des Vagabonds de la Nuit",
+        "desc": "Accomplissez une mission du Manuel des Vagabonds de la Nuit."
       }
     ]
   },
@@ -107424,22 +107424,22 @@
     "quests": [
       {
         "id": 20023601,
-        "name": "Terminer le Mandat scellé : Truffle et Filbert",
+        "name": "Terminez le Mandat scellé de Truffle et Filbert pour obtenir leurs Fragments de pensée.",
         "desc": "Terminer le Mandat scellé de Truffle et Filbert pour obtenir leurs Fragments de pensée."
       },
       {
         "id": 20023602,
-        "name": "Compléter la Réminiscence pour obtenir Truffle et Filbert",
+        "name": "Dans l’onglet Arsenal, utilisez les Fragments de pensée de Truffle et Filbert pour compléter la Réminiscence et débloquer le personnage.",
         "desc": "Dans l’onglet Arsenal, utiliser les Fragments de pensée de Truffle et Filbert pour compléter la Réminiscence et débloquer le personnage."
       },
       {
         "id": 20023603,
-        "name": "Terminer le Mandat scellé : Truffle et Filbert",
+        "name": "Terminez le Mandat scellé de Truffle et Filbert pour obtenir leurs Fragments de pensée.",
         "desc": "Terminer le Mandat scellé de Truffle et Filbert pour obtenir leurs Fragments de pensée."
       },
       {
         "id": 20023604,
-        "name": "Compléter la Réminiscence pour obtenir Truffle et Filbert",
+        "name": "Dans l’onglet Arsenal, utilisez les Fragments de pensée de Truffle et Filbert pour compléter la Réminiscence et débloquer le personnage.",
         "desc": "Dans l’onglet Arsenal, utiliser les Fragments de pensée de Truffle et Filbert pour compléter la Réminiscence et débloquer le personnage."
       }
     ]

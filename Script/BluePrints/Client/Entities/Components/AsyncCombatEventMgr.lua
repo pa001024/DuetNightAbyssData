@@ -154,6 +154,11 @@ function Component:RefreshAsyncCombatNew()
   ReddotManager.ClearLeafNodeCount(NodeName, true)
   local ActivityID = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
   if ActivityUtils.CheckEventIsOpen(ActivityID) then
+    local AsyncCombat = self.AsyncCombats
+    local NewTimes = AsyncCombat[ActivityID].CreateRoomTimes or 0
+    if NewTimes > 0 then
+      return
+    end
     local AsyncCombatCreateBtnCickTime = EMCache:Get("AsyncCombatBtnTime", true)
     if not AsyncCombatCreateBtnCickTime then
       ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
