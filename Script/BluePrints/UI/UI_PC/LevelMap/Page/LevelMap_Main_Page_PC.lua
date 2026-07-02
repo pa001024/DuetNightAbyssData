@@ -29,21 +29,12 @@ function M:Construct()
   self.DispatchId = -1
   self.DispatchAgentList = nil
   ReddotManager.AddListener(DataMgr.ReddotNode.Dispatch.Name, self, self.OnReddotChange)
-  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
-    local MaxFPS = 10
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. MaxFPS)
-    self.bOpenHarmonyUIMaxFPSLimited = true
-  end
 end
 
 function M:Destruct()
   M.Super.Destruct(self)
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   ReddotManager.RemoveListener(DataMgr.ReddotNode.Dispatch.Name, self)
-  if self.bOpenHarmonyUIMaxFPSLimited then
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS 0")
-    self.bOpenHarmonyUIMaxFPSLimited = false
-  end
 end
 
 function M:OnLoaded(...)

@@ -9,6 +9,15 @@ local RoomState = {
   Guild = 3,
   Private = 4
 }
+
+local function FormatPermille(value)
+  local str = string.format("%.1f", value or 0)
+  if str:sub(-2) == ".0" then
+    str = str:sub(1, -3)
+  end
+  return CommonUtils.FormatNumInFrench(str)
+end
+
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -984,14 +993,14 @@ end
 
 function M:SetProgress()
   local CurProgress = self.RoomData.Progress
-  local CurProgressStr = CommonUtils.FormatNumInFrench(tostring(CurProgress))
+  local CurProgressStr = FormatPermille(CurProgress)
   self.TextProgressNum:SetText(CurProgressStr .. "%")
   self.Bar_Progress:SetPercent(CurProgress / 100)
   local RemainContribution = 100 - CurProgress
-  local RemainContributionStr = CommonUtils.FormatNumInFrench(tostring(RemainContribution))
+  local RemainContributionStr = FormatPermille(RemainContribution)
   self.TextRemainingNum:SetText(RemainContributionStr .. "%")
   self.MyContribution = math.floor(self.RoomData.Damage * 1000 / self.RoomData.TotalHp) / 10
-  local MyContributionStr = CommonUtils.FormatNumInFrench(tostring(self.MyContribution))
+  local MyContributionStr = FormatPermille(self.MyContribution)
   self.TextMyNum:SetText(MyContributionStr .. "%")
 end
 

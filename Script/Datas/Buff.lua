@@ -3377,7 +3377,7 @@ return ReadOnly("Buff", {
       [1] = {
         AllowSkillIntensity = 1,
         AttrName = "WeaponCRDModifierRate",
-        DamageTag = "Melee",
+        Type = "Melee",
         Value = 0.8
       }
     },
@@ -3429,7 +3429,7 @@ return ReadOnly("Buff", {
     AddAttrs = {
       [1] = {
         AttrName = "WeaponCRIModifierRate",
-        DamageTag = "Melee",
+        Type = "Melee",
         Value = 0.75
       }
     },

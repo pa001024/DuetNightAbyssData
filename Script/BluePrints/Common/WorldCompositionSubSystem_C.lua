@@ -119,6 +119,10 @@ function M:Initialize_Lua()
   EventManager:AddEvent(EventID.StartTalk, self, self.OnStartTalk)
   EventManager:AddEvent(EventID.EndTalk, self, self.OnEndTalk)
   self.AsyncTravelUseGameFlow = true
+  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
+    print("Initialize_Lua")
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.HZBOcclusion 0")
+  end
 end
 
 function M:Deinitialize_Lua()

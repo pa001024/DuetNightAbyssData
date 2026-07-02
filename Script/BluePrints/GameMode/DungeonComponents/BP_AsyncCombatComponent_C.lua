@@ -27,6 +27,7 @@ function M:InitAsyncCombatComponent()
   EventManager:AddEvent(EventID.OnRepClientDungeonMessage, self, self.OnRepClientDungeonMessage)
   self.BossIsDead = false
   self.CurBossEid = nil
+  self.ActiveBossStep = 0
   self.ReportedDamageTotal = 0
   self.AppliedOthersDamage = 0
   self.CurBossId = nil
@@ -117,10 +118,20 @@ end
 
 function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
   if "AsyncCombatBoss" == EventName then
+    local SpawnStep = self:GetBossStepByUnitId(UnitId)
+    if SpawnStep and SpawnStep < self.ActiveBossStep then
+      DebugPrint("lgc@ AsyncCombat OnStaticCreatorEvent kill stale boss", "Eid", Eid, "SpawnStep", SpawnStep, "ActiveBossStep", self.ActiveBossStep)
+      self:KillBossByDeath(Eid)
+      return
+    end
     EventManager:FireEvent(EventID.OnRepClientDungeonMessage, "BossCreated")
     self:StopBossDamageTracking(false)
+    if self.CurBossEid and self.CurBossEid ~= Eid then
+      self:KillBossByDeath(self.CurBossEid)
+    end
     self.CurBossEid = Eid
     self.CurBossId = CreatorId
+    self.ActiveBossStep = SpawnStep or self.ActiveBossStep
     self.BossIsDead = false
     self.ReportedDamageTotal = 0
     self.AppliedOthersDamage = 0
@@ -135,6 +146,33 @@ function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)
     DebugPrint("lgc@ AsyncCombat QueryState", "BossEid", self.CurBossEid, "BossId", self.CurBossId, "BossCurStep", self.BossCurStep)
     Avatar:SyncToServerDungeonMessage(AsyncMsg.AsyncCombatQueryState, {Type = "Battle"})
   end
+end
+
+function M:GetBossStepByUnitId(UnitId)
+  if not self.BossUnitIds then
+    return nil
+  end
+  for Step, Uid in ipairs(self.BossUnitIds) do
+    if Uid == UnitId then
+      return Step
+    end
+  end
+  return nil
+end
+
+function M:KillBossByDeath(BossEid)
+  local BossEntity = Battle(self):GetEntity(BossEid)
+  if not IsValid(BossEntity) then
+    DebugPrint("lgc@ AsyncCombat KillBossByDeath skip invalid", "BossEid", BossEid)
+    return false
+  end
+  local CurHp = BossEntity:GetAttr("Hp")
+  if CurHp > 0 then
+    BossEntity:AddHp(-CurHp)
+  end
+  Battle(self):BattleOnDead(BossEid, self:GetMainControlPlayerEid(), 0, EDeathReason.AsyncCombatServer)
+  DebugPrint("lgc@ AsyncCombat KillBossByDeath", "BossEid", BossEid)
+  return true
 end
 
 function M:OnUnitDeadEvent(MonsterC, KillMineRoleEid, KillMineSkillId, DeathReason)

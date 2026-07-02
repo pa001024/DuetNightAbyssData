@@ -136,8 +136,18 @@ function WBP_Activity_Coop_ListRoomItem_C:RefreshWsBtnState()
     self.RoomState = 1
     self.Ws_Btn:SetActiveWidgetIndex(1)
     self.TextState:SetText(GText("UI_AsyncCombat_RemainProgress"))
-    local LastProgress = 100 - RoomData.Progress
-    local LastProgressStr = CommonUtils.FormatNumInFrench(tostring(LastProgress))
+    
+    local function FormatPermille(value)
+      local str = string.format("%.1f", value)
+      if str:sub(-2) == ".0" then
+        str = str:sub(1, -3)
+      end
+      return str
+    end
+    
+    local LastProgress = (1000 - RoomData.Progress * 10) / 10
+    local displayText = FormatPermille(LastProgress)
+    local LastProgressStr = CommonUtils.FormatNumInFrench(displayText)
     if LastProgress <= 10 then
       self.TextNum:SetText("<Highlight>" .. LastProgressStr .. "%</>")
     else

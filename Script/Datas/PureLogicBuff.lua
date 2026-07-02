@@ -1031,7 +1031,7 @@ return ReadOnly("PureLogicBuff", {
     AddAttrs = {
       [1] = {
         AttrName = "WeaponCRIModifierRate",
-        DamageTag = "Melee",
+        Type = "Melee",
         Value = 0.75
       }
     },

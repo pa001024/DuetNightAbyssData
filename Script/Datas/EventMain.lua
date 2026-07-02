@@ -1390,6 +1390,7 @@ return ReadOnly("EventMain", {
     PCBluePrint = "/Game/UI/WBP/Activity/PC/ActivityJump/WBP_Activity_Jump_P.WBP_Activity_Jump_P",
     PretextTasks1 = 100401,
     ReddotNode = "Acti_Theater",
+    RewardEndTime = LocalTimeProxy(1782939600),
     SetEventEndVariable = {Haiboliya_Chezhan_Online = 0},
     SetEventStartVariable = {Haiboliya_Chezhan_Online = 1}
   },

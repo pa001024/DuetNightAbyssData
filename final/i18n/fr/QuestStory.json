@@ -64,7 +64,7 @@
       },
       {
         "id": 10010104,
-        "name": "Quittez la grotte et descendez vers le village.",
+        "name": "Quitter la grotte et descendre vers le village",
         "nodes": [
           {
             "id": "17096430398514460",
@@ -125,7 +125,7 @@
       },
       {
         "id": 10010105,
-        "name": "Continuez votre chemin vers le village.",
+        "name": "Continuer vers le village",
         "nodes": [
           {
             "id": "170478251651114925",
@@ -181,11 +181,11 @@
       },
       {
         "id": 10010106,
-        "name": "Continuez votre chemin vers le village."
+        "name": "Continuer vers le village"
       },
       {
         "id": 10010107,
-        "name": "Évitez les Souillés et rentrez chez vous pour chercher une arme.",
+        "name": "Éviter les Souillés et rentrer chez soi pour chercher une arme",
         "nodes": [
           {
             "id": "quest_168448363277629",
@@ -252,11 +252,11 @@
       },
       {
         "id": 10010108,
-        "name": "Repoussez les Souillés qui approchent."
+        "name": "Repousser les Souillés qui approchent"
       },
       {
         "id": 10010109,
-        "name": "Rejoignez le quai pour trouver un bateau.",
+        "name": "Rejoindre le quai pour trouver un bateau",
         "nodes": [
           {
             "id": "quest_1684736085861217",
@@ -294,11 +294,11 @@
       },
       {
         "id": 10010110,
-        "name": "Explorez la plage le long de la côte."
+        "name": "Explorer la plage le long de la côte"
       },
       {
         "id": 10010111,
-        "name": "Explorez la plage le long de la côte.",
+        "name": "Explorer la plage le long de la côte",
         "nodes": [
           {
             "id": "171135663694144092",
@@ -361,7 +361,7 @@
     "quests": [
       {
         "id": 10010201,
-        "name": "Rendez-vous aux ruines situées sur la montagne.",
+        "name": "Se rendre aux ruines situées sur la montagne",
         "nodes": [
           {
             "id": "quest_1684737069161529",
@@ -478,15 +478,15 @@
       },
       {
         "id": 10010203,
-        "name": "Rendez-vous aux ruines situées sur la montagne."
+        "name": "Se rendre aux ruines situées sur la montagne"
       },
       {
         "id": 10010204,
-        "name": "Examinez les environs."
+        "name": "Prendre l’ascenseur"
       },
       {
         "id": 10010205,
-        "name": "Prenez l’ascenseur.",
+        "name": "Ouvrir la porte devant soi",
         "nodes": [
           {
             "id": "quest_16914040798541069",
@@ -525,11 +525,11 @@
       },
       {
         "id": 10010206,
-        "name": "Ouvrez la porte devant vous."
+        "name": "Explorer les ruines à la recherche du dirigeable"
       },
       {
         "id": 10010207,
-        "name": "Explorez les ruines à la recherche du dirigeable.",
+        "name": "Repousser l’assaut des Souillés",
         "nodes": [
           {
             "id": "169865654809636140",
@@ -581,11 +581,11 @@
       },
       {
         "id": 10010208,
-        "name": "Explorez les ruines à la recherche du dirigeable."
+        "name": "Repousser l’assaut des Souillés"
       },
       {
         "id": 10010209,
-        "name": "Explorez les ruines à la recherche du dirigeable.",
+        "name": "Repousser l’assaut des Souillés",
         "nodes": [
           {
             "id": "quest_1685429387391115",
@@ -644,11 +644,11 @@
       },
       {
         "id": 10010210,
-        "name": "Explorez les ruines à la recherche du dirigeable."
+        "name": "Repousser l’assaut des Souillés"
       },
       {
         "id": 10010212,
-        "name": "Explorez les ruines à la recherche du dirigeable."
+        "name": "Repousser l’assaut des Souillés"
       },
       {
         "id": 10010213,
@@ -688,11 +688,11 @@
     "quests": [
       {
         "id": 10010301,
-        "name": "Continuez de chercher le dirigeable."
+        "name": "Continuer à chercher le dirigeable"
       },
       {
         "id": 10010302,
-        "name": "Battez les soldats et tentez de vous échapper.",
+        "name": "Battre les soldats et tenter de s’échapper",
         "nodes": [
           {
             "id": "170479445521353718",
@@ -744,7 +744,7 @@
       },
       {
         "id": 10010303,
-        "name": "Évadez-vous de cet endroit.",
+        "name": "S’échapper de cet endroit",
         "nodes": [
           {
             "id": "1720428418099422115",
@@ -767,15 +767,15 @@
       },
       {
         "id": 10010304,
-        "name": "Échappez à l’encerclement des soldats."
+        "name": "Échapper à l’encerclement des soldats"
       },
       {
         "id": 10010305,
-        "name": "Évadez-vous de cet endroit."
+        "name": "S’échapper de cet endroit"
       },
       {
         "id": 10010306,
-        "name": "Défendez-vous contre les attaques de Sibylle.",
+        "name": "Se défendre contre les attaques de Sibylle",
         "nodes": [
           {
             "id": "quest_16926743134633260",
@@ -947,7 +947,7 @@
       },
       {
         "id": 10010310,
-        "name": "Défendez-vous contre les attaques de Sibylle.",
+        "name": "Se défendre contre les attaques de Sibylle",
         "nodes": [
           {
             "id": "17302794084017874",
@@ -1014,7 +1014,7 @@
       },
       {
         "id": 10010311,
-        "name": "Explorez les ruines à la recherche du dirigeable.",
+        "name": "Repousser l’assaut des Souillés",
         "nodes": [
           {
             "id": "17468608271436328",
@@ -1038,7 +1038,7 @@
       },
       {
         "id": 10010312,
-        "name": "Explorez les ruines à la recherche du dirigeable."
+        "name": "Repousser l’assaut des Souillés"
       }
     ]
   },
@@ -87589,7 +87589,7 @@
       },
       {
         "id": 20010102,
-        "name": "Découvrez qui vous a interpellé.",
+        "name": "Découvrir qui vous a interpellé",
         "desc": "Vous entendez quelqu’un vous appeler. Allez voir de qui il s’agit.",
         "nodes": [
           {
@@ -87997,7 +87997,7 @@
       },
       {
         "id": 20010103,
-        "name": "Ramenez Luno, la forgeronne, au Sanctuaire.",
+        "name": "Ramener Luno, la forgeronne, au Sanctuaire",
         "desc": "Celle qui vous a interpellé se présente comme une forgeronne de la race des Luno.\nSelon Snow, il s’agirait d’une ancienne, bien que tous les Luno aient la même apparence juvénile, quel que soit leur âge.\nEn échange de ses talents, Luno, la forgeronne souhaite vous accompagner dans votre voyage.\nRamenez-la au Sanctuaire."
       },
       {
@@ -88007,7 +88007,7 @@
       },
       {
         "id": 20010105,
-        "name": "Fabriquez une fiole de Sel volatil avec Luno, la forgeronne.",
+        "name": "Fabriquer une fiole de Sel volatil avec Luno, la forgeronne",
         "desc": "Luno, la forgeronne ne cache pas sa fierté quant à ses talents.\nVoyez donc de quoi elle est capable.",
         "nodes": [
           {
@@ -91220,8 +91220,8 @@
       },
       {
         "id": 20020102,
-        "name": "Essayez de retrouver la dame mentionnée par Sally.",
-        "desc": "Sally paraît tourmentée à propos d’une certaine dame dont elle s’inquiète.\nSi vous croisez cette femme, peut-être pourrez-vous lui venir en aide."
+        "name": "Retrouver la dame mentionnée par Sally",
+        "desc": "Aider Martin à retrouver le propriétaire de l’objet"
       },
       {
         "id": 20020104,
@@ -91804,17 +91804,17 @@
       },
       {
         "id": 20020302,
-        "name": "Aidez Elsa à retrouver sa fille Annie.",
+        "name": "Aider Elsa à retrouver sa fille Annie",
         "desc": "La fille unique de Madame Elsa, Annie, a disparu.\nEn parcourant Givrelac, gardez l’œil ouvert : quelqu’un pourrait bien ressembler à Annie."
       },
       {
         "id": 20020303,
-        "name": "Cherchez des indices sur le passé d’Alice.",
+        "name": "Chercher des indices sur le passé d’Alice",
         "desc": "Essayez de fouiller à l’extérieur de la ville, le docteur n’a sans doute pas encore quitté les environs. Avec un peu de chance, vous la retrouverez."
       },
       {
         "id": 20020305,
-        "name": "Parler à la femme encerclée par les Souillés",
+        "name": "Informer la jeune fille amnésique de vos découvertes",
         "desc": "Les Souillés gisent à vos pieds. La femme que vous venez de sauver semble vouloir vous parler. Adressez-vous à elle.",
         "nodes": [
           {
@@ -92124,7 +92124,7 @@
       },
       {
         "id": 20020312,
-        "name": "Cette personne au grand cœur semble vouloir vous parler.",
+        "name": "Cette personne au grand cœur semble vouloir vous parler",
         "desc": "Depuis que vous avez quitté cette femme éplorée, vous sentez un regard peser sur vous. Il semblerait qu’elle ait encore quelque chose à dire.",
         "nodes": [
           {
@@ -92183,7 +92183,7 @@
       },
       {
         "id": 20020313,
-        "name": "Allez interroger d’autres personnes.",
+        "name": "Interroger d’autres personnes",
         "desc": "Continuez de demander autour de vous — quelqu’un possède peut-être un indice.",
         "nodes": [
           {
@@ -92213,7 +92213,7 @@
       },
       {
         "id": 20020314,
-        "name": "Demandez autour de vous où se trouve le médecin.",
+        "name": "Se renseigner sur la localisation du médecin",
         "desc": "Il semble que d’autres habitants soient au courant. Interrogez-les au sujet du médecin disparu.",
         "nodes": [
           {
@@ -92327,17 +92327,17 @@
       },
       {
         "id": 20020403,
-        "name": "Accomplissez une mission de Chasseur de Phoxène\n(vous pouvez en accepter une via la page Missions)",
+        "name": "Accomplir une mission de Chasseur de Phoxène",
         "desc": "Vous avez accepté l’invitation de Wells.\nPréparez-vous et partez avec lui pour cette mission."
       },
       {
         "id": 20020404,
-        "name": "Aidez Wells à résoudre son problème.",
+        "name": "(via l’interface des missions)",
         "desc": "Wells semble en difficulté...\nTrouvez un moyen de le protéger de la colère de son beau-père."
       },
       {
         "id": 20020405,
-        "name": "Ouvrir le tonneau",
+        "name": "Aider Wells à résoudre son problème",
         "desc": "La résignation est depuis longtemps la toile de fond silencieuse de la vie de Wells.\nAujourd’hui, il ne souhaite qu’une chose : boire un verre avec vous. Vous reconnaissez ce sourire — trop forcé pour être sincère. Mais que faire d’autre ? Ouvrez quelques tonneaux, trinquez avec lui, et laissez les tracas s’effacer, ne serait-ce qu’un moment.",
         "nodes": [
           {
@@ -94803,7 +94803,7 @@
       },
       {
         "id": 20021007,
-        "name": "Frappez à une porte dans les égouts pour accéder au marché noir",
+        "name": "Frapper à une porte dans les égouts pour accéder au marché noir",
         "desc": "Des rumeurs évoquent l’existence d’un marché noir secret dans les Égouts de Givrelac, où se dérouleraient d’obscures transactions.\nEn tant que Chasseur de Phoxène vigilant et aguerri, il est de votre devoir d’aller y voir de plus près.",
         "nodes": [
           {
@@ -96458,7 +96458,7 @@
       },
       {
         "id": 20021503,
-        "name": "Allez goûter le poisson de Marcus",
+        "name": "Goûter le poisson de Marcus",
         "desc": "Vous avez des doutes... mais après tout, vous avez pêché ces poissons vous-même. Autant goûter — à contrecœur — la cuisine de Marcus.",
         "nodes": [
           {
@@ -116044,8 +116044,8 @@
       },
       {
         "id": 20031103,
-        "name": "前往浮星埠买梨",
-        "desc": "你记得浮星埠附近有不少摊贩，去那里帮杨父买梨吧。",
+        "name": "Acheter des poires au Quai-aux-Étoiles",
+        "desc": "Vous vous souvenez qu’il y a de nombreux marchands près du Quai-aux-Étoiles. Allez-y acheter des poires pour le père de Yang.",
         "nodes": [
           {
             "id": "17682007471603872",
@@ -116512,8 +116512,8 @@
       },
       {
         "id": 20031204,
-        "name": "在附近等待",
-        "desc": "你决定帮助青青与她的哥哥相见，在附近找个不起眼的地方等待他出现吧。",
+        "name": "Attendre à proximité",
+        "desc": "Vous avez décidé d’aider Qingqing à retrouver son frère. Trouvez un endroit discret à proximité et attendez son arrivée.",
         "nodes": [
           {
             "id": "17679445583002180037",

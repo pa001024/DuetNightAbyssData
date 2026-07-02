@@ -4990,8 +4990,8 @@
     "name": "Celui qui ne revient jamais",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Celui qui ne revient jamais",
-    "desc": "Essayez de retrouver la dame mentionnée par Sally.",
-    "detail": "Sally paraît tourmentée à propos d’une certaine dame dont elle s’inquiète.\nSi vous croisez cette femme, peut-être pourrez-vous lui venir en aide.",
+    "desc": "Retrouver la dame mentionnée par Sally",
+    "detail": "Aider Martin à retrouver le propriétaire de l’objet",
     "type": 3,
     "reward": [
       50552
@@ -5037,7 +5037,7 @@
     "name": "La disparue",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "La disparue",
-    "desc": "Aidez Elsa à retrouver sa fille Annie.",
+    "desc": "Aider Elsa à retrouver sa fille Annie",
     "detail": "La fille unique de Madame Elsa, Annie, a disparu.\nEn parcourant Givrelac, gardez l’œil ouvert : quelqu’un pourrait bien ressembler à Annie.",
     "type": 3,
     "reward": [
@@ -5129,7 +5129,7 @@
     "name": "L’horloge figée",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "L’horloge figée",
-    "desc": "Accomplissez une mission de Chasseur de Phoxène\n(vous pouvez en accepter une via la page Missions)",
+    "desc": "Accomplir une mission de Chasseur de Phoxène",
     "detail": "Vous avez accepté l’invitation de Wells.\nPréparez-vous et partez avec lui pour cette mission.",
     "type": 3,
     "reward": [

@@ -58,6 +58,7 @@ function BP_UIState_C:InitUIInfo(Name, IsInUIMode, EventList, ...)
   DebugPrint("Hy@ UIState型界面打开 InitUIInfo，名称：", self:GetUIConfigName())
   self:SetBaseName(Name)
   self:BindInOutAnimationWithConfigParam()
+  self:LimitMaxFPSInDiffPlatform()
   self.IsInUIMode = IsInUIMode
   if self.IsInUIMode then
     self:SetInputUIOnly(true)
@@ -117,6 +118,29 @@ function BP_UIState_C:BindInOutAnimationWithConfigParam()
         self,
         self.OnOutAnimationFinished
       })
+    end
+  end
+end
+
+function BP_UIState_C:LimitMaxFPSInDiffPlatform()
+  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
+    local MaxFPS = 15
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. MaxFPS)
+    self.bOpenHarmonyUIMaxFPSLimited = true
+    DebugPrint("Hy@ OpenHarmony平台，设置UI最大帧率为 ", MaxFPS)
+  else
+    self.bOpenHarmonyUIMaxFPSLimited = false
+  end
+end
+
+function BP_UIState_C:RecoverMaxFPSInDiffPlatform()
+  if self.bOpenHarmonyUIMaxFPSLimited then
+    local bIsHaveExistOtherUI = UIManager(self):StateCount() > 1
+    DebugPrint("Hy@ OpenHarmony平台，恢复UI最大帧率，当前是否还有其他UI存在：", bIsHaveExistOtherUI)
+    if not bIsHaveExistOtherUI then
+      UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS 0")
+      self.bOpenHarmonyUIMaxFPSLimited = false
+      DebugPrint("Hy@ OpenHarmony平台，取消UI最大帧率限制")
     end
   end
 end
@@ -784,6 +808,7 @@ function BP_UIState_C:EMDestruct()
     self:EMDestruct_CPP()
   else
     DebugPrint(ErrorTag, "疑似小部件析构调用了UIState的EMDestruct, 蓝图类型是EMUserWidget, 脚本继承自BP_EMUserWidget_C可以更轻量化, 请检查一下是否真的需要这样写!!!，名称: ", self:GetUIConfigName())
+    self:RecoverMaxFPSInDiffPlatform()
     self:ClearScriptRegister()
     return
   end
@@ -803,6 +828,7 @@ function BP_UIState_C:EMDestruct()
   if rawget(self, "IsSetEntitysVisibilityWithAnim") then
     UIManager(self):SetEntitiesVisibility(self:GetUIConfigName(), true, true, false)
   end
+  self:RecoverMaxFPSInDiffPlatform()
   self:ClearScriptRegister()
 end
 

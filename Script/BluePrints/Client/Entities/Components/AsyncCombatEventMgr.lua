@@ -120,6 +120,9 @@ end
 
 function Component:OnAsyncCombatRoomEnd(RoomUniId, IsPass, RewardState)
   self.logger.debug("OnAsyncCombatRoomEnd", RoomUniId, IsPass, RewardState)
+  if not self.AsyncCombatLoginSuccess then
+    return
+  end
   if true == IsPass and 1 == RewardState then
     ReddotManager.IncreaseLeafNodeCount("AsyncCombatReward", 1, {CacheKey = "Red"})
   end
@@ -128,6 +131,9 @@ end
 
 function Component:OnAsyncCombatRoomDelete(RoomUniId, bSendRewardMail)
   self.logger.debug("OnAsyncCombatRoomDelete", RoomUniId, bSendRewardMail)
+  if not self.AsyncCombatLoginSuccess then
+    return
+  end
   if true == bSendRewardMail then
     ReddotManager.DecreaseLeafNodeCount("AsyncCombatReward", 1, {CacheKey = "Red"})
   end
@@ -138,10 +144,12 @@ function Component:EnterWorld()
 end
 
 function Component:LeaveWorld()
+  self.AsyncCombatLoginSuccess = false
   EventManager:RemoveEvent(EventID.OnLoginSuccess, self)
 end
 
 function Component:RefreshRedDot()
+  self.AsyncCombatLoginSuccess = true
   self:RefreshAsyncCombatNew()
   self:RefreshAsyncCombatRewardRedDot()
 end

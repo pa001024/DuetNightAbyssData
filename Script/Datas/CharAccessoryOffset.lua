@@ -1566,7 +1566,11 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [2] = {
         Player_Part_Nose = {
-          Location = T.RT_170,
+          Location = {
+            0,
+            0,
+            -2
+          },
           scale = T.RT_187
         }
       },
@@ -1627,7 +1631,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [9] = {
         Player_Part_Mouth = {
-          Location = T.RT_150,
+          Location = T.RT_170,
           scale = T.RT_44
         }
       },

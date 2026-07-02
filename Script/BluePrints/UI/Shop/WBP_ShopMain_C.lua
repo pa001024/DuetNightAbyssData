@@ -390,16 +390,6 @@ function M:OnMainTabChanged(TabWidget)
     end
     self.Common_Toggle_TabGroup_PC:SelectTab(1)
   end
-  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
-    if 110 == MainTabId or 160 == MainTabId then
-      local MaxFPS = 10
-      UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. MaxFPS)
-      self.bOpenHarmonyUIMaxFPSLimited = true
-    else
-      UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. 0)
-      self.bOpenHarmonyUIMaxFPSLimited = false
-    end
-  end
   self:_ShowSubTabReddot(self.SubTabList)
 end
 
@@ -1127,10 +1117,6 @@ function M:Destruct()
     GWorld.GameInstance:SetHighFrequencyMemoryCheckGCEnabled(false, "ShopMain")
   end
   self:DestroyPreviewActor()
-  if self.bOpenHarmonyUIMaxFPSLimited then
-    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS 0")
-    self.bOpenHarmonyUIMaxFPSLimited = false
-  end
   self.Super.Destruct(self)
 end
 

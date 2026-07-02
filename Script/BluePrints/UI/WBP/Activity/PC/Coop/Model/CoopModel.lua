@@ -230,7 +230,8 @@ function M.BuildRoomRankData(Avatar, RoomData, DamageList)
       BanState = Info.BanState,
       Squad = SquadSnapShot,
       IsMaster = Info.IsMaster or false,
-      IsMvp = Info.IsMvp or false
+      IsMvp = Info.IsMvp or false,
+      GuildId = Info.GuildId
     }
     table.insert(TopNInfo, RankInfo)
   end
