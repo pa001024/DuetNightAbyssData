@@ -4728,7 +4728,7 @@
       "The maximum number of [Momentum] stacks is increased to 200. Each [Artificer Powder] consumed grants 2 stacks of [Momentum].",
       "While [Starfall Mode] is active, [Stars Ashower] automatically triggers 4 ranged attacks every 5s and grants 8 stacks of [Momentum]. These attacks do not consume [Artificer Powder].",
       "[Sunward] Level +2, [Poised to Strike] Level +1.",
-      "When dealing Skill DMG, there is a chance to trigger Bonus Effect: Lumino based on the Trigger Probability of the equipped ranged weapon.\nWhen triggered, this effect pulls targets within a radius of 10 towards the centre of the affected area. This effect can trigger at most once per second.",
+      "When dealing Skill DMG, there is a chance to trigger Bonus Effect: Lumino based on the Trigger Probability of the equipped ranged weapon.\nWhen triggered, this effect pulls targets within a radius of 10m towards the centre of the affected area. This effect can trigger at most once per second.",
       "[Starfall Mode] Level +2, [Poised to Strike] Level +1.",
       "Each stack of [Soar] additionally increases Su Yi's PEN stats by 4.5%. When a [Fengshi Model] is launched, 2 additional [Fengshi Models] are also launched, each dealing 20% of the original damage."
     ],
@@ -9351,7 +9351,7 @@
       "DMG dealt by [Sommelier's Blades] has a 30% chance to inflict 1 additional stack of [Crimson Wound].",
       "While orbited by [Sommelier's Blades], Damage Taken is reduced by 15% and Damage Dealt is increased by 55%.",
       "[Scarlet Banquet] Level +2. [Deadly Sip] Level +1.",
-      "Damage from [Crimson Wound] +30%. [Sommelier's Blades] Launch Speed is increased to 25.",
+      "Damage from [Crimson Wound] +30%. [Sommelier's Blades] Launch Speed is increased to 25m/s.",
       "[Claret Waltz] Level +2. [Deadly Sip] Level +1.",
       "While orbited by [Sommelier's Blades], Camilla's PEN stats increases by 45%. When [Crimson Wound] is removed, 1 additional stack is removed, dealing 1 additional instance of damage."
     ],

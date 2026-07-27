@@ -2296,6 +2296,7 @@ class CharProcessor(BaseProcessor):
                 if isinstance(parameter, (int, float)):
                     param_value = parameter
                 elif isinstance(parameter, str):
+                    parameter = self.preprocess_expression(parameter)
                     # 处理 $...$ 格式的表达式
                     import re
 
@@ -2340,9 +2341,9 @@ class CharProcessor(BaseProcessor):
                                     param_value = f"{expr_value}"
                             else:
                                 if expr_value == int(expr_value):
-                                    param_value = str(int(expr_value))
+                                    param_value = f"{int(expr_value)}{suffix}"
                                 else:
-                                    param_value = str(expr_value)
+                                    param_value = f"{expr_value}{suffix}"
                         except Exception as e:
                             print(f"计算溯源表达式失败: {expr}, error: {e}")
                             param_value = parameter

@@ -4728,7 +4728,7 @@
       "Le nombre maximal de cumuls d’[Accumulation] est augmenté à 200.\nChaque [Poudre d’artifice] consommée confère 2 cumuls d’[Accumulation].",
       "Pendant l’état [Mode annihilation stellaire], [Pluie d’étoiles] effectue automatiquement 4 attaques à distance toutes les 5 secondes et confère 8 cumuls d’[Accumulation], sans consommer de [Poudre d’artifice].",
       "[Poursuite du soleil] niveau +2 ; [Puissance accumulée] niveau +1.",
-      "Lorsque vous infligez des Dégâts de compétence, une probabilité basée sur votre arme à distance peut déclencher un Effet supplémentaire Lumino.\nLorsque cet effet est déclenché, les ennemis dans un rayon de 10 sont attirés vers le centre de l’impact.\nCet effet peut se déclencher au maximum une fois par seconde.",
+      "Lorsque vous infligez des Dégâts de compétence, une probabilité basée sur votre arme à distance peut déclencher un Effet supplémentaire Lumino.\nLorsque cet effet est déclenché, les ennemis dans un rayon de 10m sont attirés vers le centre de l’impact.\nCet effet peut se déclencher au maximum une fois par seconde.",
       "[Mode annihilation stellaire] niveau +2 ; [Puissance accumulée] niveau +1.",
       "Chaque cumul d’[Errance céleste] confère 4.5% de Pénétration tous attributs supplémentaire.\nLorsque la méchapoupée Fengshi est projetée, 2 unités supplémentaires sont générées. Chacune inflige 20% des dégâts initiaux."
     ],
@@ -9351,7 +9351,7 @@
       "Les dégâts des [Lames du sommelier] ont 30% de chances d’appliquer 1 cumul supplémentaire de [Blessure écarlate].",
       "Lorsque [Lame du sommelier] est active, les dégâts subis sont réduits de 15% et les dégâts infligés augmentent de 55%.",
       "[Banquet écarlate] niveau +2 ; [Gorgée dévastatrice] niveau +1.",
-      "Les dégâts de [Blessure écarlate] augmentent de 30%, et la vitesse de projection des [Lames du sommelier] est augmentée à 25.",
+      "Les dégâts de [Blessure écarlate] augmentent de 30%, et la vitesse de projection des [Lames du sommelier] est augmentée à 25m/s.",
       "[Valse du Cabernet] niveau +2 ; [Gorgée dévastatrice] niveau +1.",
       "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de 45%.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée."
     ],
