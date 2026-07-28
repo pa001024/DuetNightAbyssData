@@ -119,6 +119,9 @@ end
 
 function M:TryIncreaseChallengeTaskRewardReddot(TaskId)
   local Model = self:RefreshModel()
+  if TimeUtils.NowTime() > Model.EventEndTime then
+    return
+  end
   self:TryIncreaseReddot(Model.ChallengeRewardReddotName, Model.ChallengeRewardReddotName .. TaskId)
 end
 
@@ -180,13 +183,40 @@ function M:ClearNormalTaskRewardReddotByTasks(MidTermTasks)
   if not CacheData then
     return
   end
-  for _, Task in pairs(MidTermTasks or {}) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
+  for TaskId, Task in pairs(MidTermTasks or {}) do
+    local UniqueID = Task and Task.UniqueID or TaskId
+    local TaskData = UniqueID and DataMgr.MidTermTask[UniqueID]
     if TaskData and TaskData.TaskType ~= Model.TaskType.Achievement then
-      local CacheKey = Model.NormalRewardReddotName .. Task.UniqueID
+      local CacheKey = Model.NormalRewardReddotName .. UniqueID
       if CacheData[CacheKey] then
         CacheData[CacheKey] = nil
         ReddotManager.DecreaseLeafNodeCount(Model.NormalRewardReddotName)
+      end
+    end
+  end
+end
+
+function M:ClearChallengeTaskRewardReddotByTasks(MidTermTasks)
+  local Model = self:RefreshModel()
+  local CacheData = ReddotManager.GetLeafNodeCacheDetail(Model.ChallengeRewardReddotName)
+  if not CacheData then
+    return
+  end
+  
+  local function ClearCacheKey(CacheKey)
+    if CacheData[CacheKey] then
+      CacheData[CacheKey] = nil
+      ReddotManager.DecreaseLeafNodeCount(Model.ChallengeRewardReddotName)
+    end
+  end
+  
+  for TaskId, Task in pairs(MidTermTasks or {}) do
+    local UniqueID = Task and Task.UniqueID or TaskId
+    local TaskData = UniqueID and DataMgr.MidTermTask[UniqueID]
+    if TaskData and TaskData.TaskType == Model.TaskType.Achievement then
+      ClearCacheKey(Model.ChallengeRewardReddotName .. UniqueID)
+      if TaskId ~= UniqueID then
+        ClearCacheKey(Model.ChallengeRewardReddotName .. TaskId)
       end
     end
   end
@@ -218,6 +248,62 @@ function M:ClearUnlockedChallengeScoreRewardReddot()
   end
 end
 
+function M:HasChallengeRewardReddot(Model)
+  Model = Model or self:RefreshModel()
+  local CacheData = ReddotManager.GetLeafNodeCacheDetail(Model.ChallengeRewardReddotName)
+  if not CacheData then
+    return false
+  end
+  if TimeUtils.NowTime() <= Model.EventEndTime then
+    return self:HasTrueValue(CacheData)
+  end
+  local ChallengeScoreItemPrefix = "ChallengeScoreItem"
+  for CacheKey, Value in pairs(CacheData) do
+    if true == Value and type(CacheKey) == "string" and string.sub(CacheKey, 1, #ChallengeScoreItemPrefix) == ChallengeScoreItemPrefix then
+      return true
+    end
+  end
+  return false
+end
+
+function M:HasUnlockedChallengeScoreReward(Model)
+  Model = Model or self:RefreshModel()
+  if Model:CheckIsChallengeRewardAllClaimed() then
+    return false
+  end
+  for Count in pairs(DataMgr.AchievementPrize) do
+    if Count <= Model.MidTermAchvScores and 1 ~= Model.MidTermAchvProgressRewarded[Count] then
+      return true
+    end
+  end
+  return false
+end
+
+function M:HasActivityTabRewardReddot(Model)
+  Model = Model or self:RefreshModel()
+  local NowTime = TimeUtils.NowTime()
+  if NowTime > Model.RewardEndTime then
+    return false
+  end
+  if Model:HasUnclaimedNormalScoreReward() then
+    return true
+  end
+  if self:HasUnlockedChallengeScoreReward(Model) then
+    return true
+  end
+  if NowTime > Model.EventEndTime then
+    return false
+  end
+  for TaskId, Task in pairs(Model.MidTermTasks or {}) do
+    local UniqueID = Task and Task.UniqueID or TaskId
+    local TaskData = UniqueID and DataMgr.MidTermTask[UniqueID]
+    if TaskData and TaskData.TaskType == Model.TaskType.Achievement and not Model:CheckIsChallengeRewardAllClaimed() and Model:CanClaimChallengeTask(Task) and TaskData.EnableDay <= Model.EventDay then
+      return true
+    end
+  end
+  return false
+end
+
 function M:RefreshEntryReddotState()
   self:EnsureReddotNodes()
   local Model = self:RefreshModel()
@@ -235,28 +321,30 @@ function M:RefreshEntryReddotState()
     end
   end
   for TaskId, Task in pairs(Model.MidTermTasks) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
+    local UniqueID = Task and Task.UniqueID or TaskId
+    local TaskData = UniqueID and DataMgr.MidTermTask[UniqueID]
     if not TaskData then
     elseif TaskData.TaskType == Model.TaskType.Achievement then
-      if not Model:CheckIsChallengeRewardAllClaimed() and Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= Model.EventDay then
-        self:TryIncreaseChallengeTaskRewardReddot(Task.UniqueID)
+      if NowTime <= Model.EventEndTime and not Model:CheckIsChallengeRewardAllClaimed() and Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= Model.EventDay then
+        self:TryIncreaseChallengeTaskRewardReddot(UniqueID)
       else
-        self:TrySubChallengeTaskRewardReddot(Task.UniqueID)
+        self:TrySubChallengeTaskRewardReddot(UniqueID)
       end
       if NowTime <= Model.EventEndTime then
-        self:TryIncreaseChallengeTaskNewReddot(Task)
+        self:TryIncreaseChallengeTaskNewReddot(UniqueID)
       end
     elseif TaskData.TaskType == Model.TaskType.Cycle then
       if NowTime <= Model.EventEndTime then
-        self:TryIncreaseNormalTaskNewReddot(Task)
+        self:TryIncreaseNormalTaskNewReddot(UniqueID)
       end
     elseif TaskData.EnableDay == Model.EventDay and not Model:HasUnclaimedNormalScoreReward() then
-      self:TryIncreaseNormalTaskNewReddot(Task)
+      self:TryIncreaseNormalTaskNewReddot(UniqueID)
     end
   end
   if NowTime > Model.EventEndTime then
     self:ClearChallengeTaskNewReddot(nil)
     self:ClearNormalTaskNewReddot(nil)
+    self:ClearChallengeTaskRewardReddotByTasks(Model.MidTermTasks)
     if NowTime > Model.RewardEndTime then
       self:ClearChallengeRewardReddot()
       self:ClearNormalRewardReddot()
@@ -264,19 +352,29 @@ function M:RefreshEntryReddotState()
       self:ClearNormalRewardReddot()
     end
   end
-  self:UpdateActivityTabNewReddot()
+  self:UpdateActivityTabReddot()
   return Model
 end
 
-function M:UpdateActivityTabNewReddot()
+function M:UpdateActivityTabReddot()
   local Model = self:RefreshModel()
+  local HasRewardReddot = self:HasActivityTabRewardReddot(Model)
   local HasNormalJJGameTaskNew = self:HasTrueValue(ReddotManager.GetLeafNodeCacheDetail(Model.NormalTaskNewReddotName))
   local HasChallengeJJGameTaskNew = self:HasTrueValue(ReddotManager.GetLeafNodeCacheDetail(Model.ChallengeTaskNewReddotName))
+  if HasRewardReddot then
+    ActivityReddotHelper.TryAddReddotCount(ActivityUtils, Model.MidTermGoalEventId, "Red")
+  else
+    ActivityReddotHelper.TrySubReddotCount(ActivityUtils, Model.MidTermGoalEventId, "Red")
+  end
   if HasNormalJJGameTaskNew or HasChallengeJJGameTaskNew then
     ActivityReddotHelper.TryAddReddotCount(ActivityUtils, Model.MidTermGoalEventId, "New")
   else
     ActivityReddotHelper.TrySubReddotCount(ActivityUtils, Model.MidTermGoalEventId, "New")
   end
+end
+
+function M:UpdateActivityTabNewReddot()
+  self:UpdateActivityTabReddot()
 end
 
 function M:UpdateTaskTabReddot(ComTab)
@@ -292,7 +390,7 @@ function M:UpdateTaskTabReddot(ComTab)
   local HasNewNormalTask = self:HasTrueValue(ReddotManager.GetLeafNodeCacheDetail(Model.NormalTaskNewReddotName))
   local HasNewChallengeTask = self:HasTrueValue(ReddotManager.GetLeafNodeCacheDetail(Model.ChallengeTaskNewReddotName))
   local HasNormalReward = self:HasTrueValue(ReddotManager.GetLeafNodeCacheDetail(Model.NormalRewardReddotName))
-  local HasChallengeReward = self:HasTrueValue(ReddotManager.GetLeafNodeCacheDetail(Model.ChallengeRewardReddotName))
+  local HasChallengeReward = self:HasChallengeRewardReddot(Model)
   if HasNormalReward then
     ComTab:ShowTabRedDot(1, false, true)
   elseif HasNewNormalTask and TimeUtils.NowTime() < Model.EventEndTime then

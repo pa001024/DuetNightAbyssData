@@ -38,19 +38,7 @@ end
 
 function EMCache:_IsDedicatedServer()
   if self._bDedicatedServer == nil then
-    local GameInstance = GWorld.GameInstance
-    if not IsValid(GameInstance) then
-      GameInstance = UE4.UGameplayStatics.GetGameInstance(UE.UEngine:GetDefaultObject())
-    end
-    if not IsValid(GameInstance) then
-      DebugPrint(ErrorTag, "GameInstace都还没初始化好，不允许使用本地缓存")
-      if self.__DebugKey then
-        DebugPrint(ErrorTag, Traceback(nil, string.format("非法调用的Key：%s", self.__DebugKey), false))
-      end
-      self.__DebugKey = nil
-      return true
-    end
-    self._bDedicatedServer = IsDedicatedServer(GameInstance)
+    self._bDedicatedServer = GWorld:IsDedicatedServer()
   end
   return self._bDedicatedServer
 end

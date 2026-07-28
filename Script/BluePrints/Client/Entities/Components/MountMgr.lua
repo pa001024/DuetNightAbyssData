@@ -7,15 +7,28 @@ function Component:EnterWorld()
   EventManager:AddEvent(EventID.OnPropSetResources, self, self.OnGetFlyLicenseResource)
 end
 
-function Component:OnGetFlyLicenseResource()
+function Component:OnGetFlyLicenseResource(ResourceId)
+  if not self:IsMountLicenseResource(ResourceId) then
+    return
+  end
+  self:DelayRefreshMountLicenseRedDot()
+end
+
+function Component:DelayRefreshMountLicenseRedDot()
+  local WorldContextObject = GWorld and GWorld.GameInstance
+  UE4.UBattleFunctionLibrary.DeferredCall(WorldContextObject, "MountMgr_RefreshMountLicenseRedDot", function()
+    self:TryAddLicenseItemNewRedDot()
+  end)
+end
+
+function Component:RefreshMountRedDot()
   self:TryAddMountItemNewRedDot()
   self:TryAddLicenseItemNewRedDot()
 end
 
 function Component:InitMountRedDotInfo()
   ReddotManager.AddNodeEx("Mounts_Root")
-  self:TryAddMountItemNewRedDot()
-  self:TryAddLicenseItemNewRedDot()
+  self:RefreshMountRedDot()
 end
 
 function Component:CheckMountEnough(CheckData)
@@ -26,12 +39,6 @@ function Component:CheckMountEnough(CheckData)
     end
   end
   return true
-end
-
-function Component:InitMountRedDotInfo()
-  ReddotManager.AddNodeEx("Mounts_Root")
-  self:TryAddMountItemNewRedDot()
-  self:TryAddLicenseItemNewRedDot()
 end
 
 function Component:TryAddMountItemNewRedDot()
@@ -73,6 +80,19 @@ function Component:HasLicenseResource(LicenseId)
   local FlyLicenseConfig = DataMgr.FlyLicense[LicenseId]
   local Resource = FlyLicenseConfig.Resource and self.Resources[FlyLicenseConfig.Resource[1]]
   return Resource and Resource.Count >= 1
+end
+
+function Component:IsMountLicenseResource(ResourceId)
+  if not ResourceId then
+    return false
+  end
+  local FlyLicenseConfig = DataMgr.FlyLicense
+  for _, Data in pairs(FlyLicenseConfig) do
+    if Data.Resource and Data.Resource[1] == ResourceId then
+      return true
+    end
+  end
+  return false
 end
 
 function Component:MountLevelUp(TargetLevel)

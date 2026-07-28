@@ -423,6 +423,9 @@ function WBP_TakeAimIndicator_C:OnEnterBulletJumpAim()
   if not IsValid(self.OwnerPlayer) or not self.OwnerPlayer.CharFSMComp then
     return
   end
+  if self.OwnerPlayer:CheckSkillInActive(ESkillName.BulletJump) then
+    return
+  end
   self.InBulletJumpMode = true
   self.OwnerPlayer.CharFSMComp.OnAfterTagChanged:Add(self, self.OnPlayerTagChanged)
   local Tag = self.OwnerPlayer:GetCharacterTag()
@@ -435,6 +438,10 @@ function WBP_TakeAimIndicator_C:OnQuitBulletJumpAim()
   if not IsValid(self.OwnerPlayer) or not self.OwnerPlayer.CharFSMComp then
     return
   end
+  if not self.InBulletJumpMode and self.OwnerPlayer:CheckSkillInActive(ESkillName.BulletJump) then
+    return
+  end
+  self.InBulletJumpMode = false
   self.OwnerPlayer.CharFSMComp.OnAfterTagChanged:Remove(self, self.OnPlayerTagChanged)
   self:HideBulletJumpAim()
 end

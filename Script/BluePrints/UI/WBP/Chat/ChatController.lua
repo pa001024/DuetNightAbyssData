@@ -5,6 +5,7 @@ local TimeUtils = require("Utils.TimeUtils")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
+local AutoChessShareModel = require("BluePrints.UI.AutoChess.AutoChessShareModel")
 local json = require("rapidjson")
 local GuildDynamicMessageUidOrder = {
   ChangedDecl = {"EditorUid"},
@@ -139,6 +140,10 @@ function M:SendChatToPlayer(Uid, ContentText)
   if GuildRecruitContent and not GiftContent and not ModContent and not DyeShareContent and not AppearanceShareContent and not AsyncCombatRoomContent then
     ContentText = GuildRecruitContent
   end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not GiftContent and not ModContent and not DyeShareContent and not AppearanceShareContent and not AsyncCombatRoomContent and not GuildRecruitContent then
+    ContentText = AutoChessShareContent
+  end
   self:GetAvatar():ChatToPlayer(Uid, ContentText)
 end
 
@@ -230,6 +235,10 @@ function M:SendChatToWorld(ChannelType, ContentText)
   if AppearanceShareContent and not ModContent and not DyeShareContent then
     ContentText = AppearanceShareContent
   end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not ModContent and not DyeShareContent and not AppearanceShareContent then
+    ContentText = AutoChessShareContent
+  end
   self:GetAvatar():ChatToWorld(ChannelType, ContentText)
 end
 
@@ -249,6 +258,10 @@ function M:SendChatToTeam(ContentText)
   local DyeShareContent = self:TryParseMyDyePlanInfo(ContentText)
   if DyeShareContent and not ModContent then
     ContentText = DyeShareContent
+  end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not ModContent and not DyeShareContent then
+    ContentText = AutoChessShareContent
   end
   if not GWorld:IsStandAlone() then
     local PC = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
@@ -280,6 +293,10 @@ function M:SendChatToSettlementOnline(ContentText)
   if DyeShareContent and not ModContent then
     ContentText = DyeShareContent
   end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not ModContent and not DyeShareContent then
+    ContentText = AutoChessShareContent
+  end
   self:GetAvatar():ChatToSettlementOnline(ContentText)
 end
 
@@ -299,6 +316,10 @@ function M:SendChatToGuild(ContentText)
   local DyeShareContent = self:TryParseMyDyePlanInfo(ContentText)
   if DyeShareContent and not ModContent then
     ContentText = DyeShareContent
+  end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not ModContent and not DyeShareContent then
+    ContentText = AutoChessShareContent
   end
   self:GetAvatar():ChatToGuild(nil, ContentText)
 end
@@ -1310,6 +1331,21 @@ function M:RecvChatNewMsgRead(Uid, SubTabType)
   ChatModel:ReadChannelMessage(ChatCommon.ChannelDef.Friend, Uid, SubTabType)
 end
 
+function M:TryParseMyAutoChessShareInfo(MsgStr)
+  if AutoChessShareModel.IsAutoChessShareInfoMsg(MsgStr) then
+    return AutoChessShareModel.GenerateAutoChessShareMsg()
+  end
+  return nil
+end
+
+function M:ParseAutoChessShareText(MsgWrap)
+  if not MsgWrap.AutoChessShareInfo then
+    return nil
+  end
+  local ShareCodeStr, SquadIdx, CostLimit = table.unpack(string.split(MsgWrap.AutoChessShareInfo, "|"))
+  return AutoChessShareModel.BuildAutoChessShareDisplayText(SquadIdx)
+end
+
 function M:TryParseMyModSuitInfo(MsgStr)
   local ModModel = ModController:GetModel()
   if ModModel:IsModSuitInfoMsg(MsgStr) then
@@ -1500,13 +1536,13 @@ function M:OnGuildLeave()
   end
 end
 
-function M:OpenPlayerBtnList(WorldContext, AvatarInfo, FuncList, GuildInfo)
+function M:OpenPlayerBtnList(WorldContext, AvatarInfo, FuncList, GuildInfo, BtnOption)
   if table.isempty(FuncList) then
     return nil
   end
   local HeadOptionWidget = UIManager(WorldContext):_CreateWidgetNew(DataMgr.WidgetUI.ChatHeadOption.UIName)
   HeadOptionWidget.Owner = WorldContext
-  HeadOptionWidget:Init(AvatarInfo, GuildInfo, FuncList)
+  HeadOptionWidget:Init(AvatarInfo, GuildInfo, FuncList, BtnOption)
   return HeadOptionWidget
 end
 
@@ -1796,7 +1832,7 @@ end
 
 function M:RecvAllChatChannelPlayerCountInfo(channel_type, channel_list)
   ChatModel:SetAllChannelList(channel_list)
-  self:NotifyEvent(ChatCommon.EventID.RecvAllChatChannel)
+  self:NotifyEvent(ChatCommon.EventID.RecvAllChatChannel, channel_type, channel_list)
 end
 
 function M:StartQueryChatChannelBusyInfo()
@@ -1806,6 +1842,21 @@ function M:StartQueryChatChannelBusyInfo()
   else
     local CurChannel = ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())
     Avatar:QueryChatChannelBusyInfo({CurChannel})
+  end
+end
+
+function M:SendQueryRegionOnlineChannelState(RegionId, ChannelIdList)
+  if not RegionId or RegionId <= 0 then
+    return
+  end
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return
+  end
+  if ChannelIdList and Avatar.QueryRegionOnlineChannelState then
+    Avatar:QueryRegionOnlineChannelState(RegionId, ChannelIdList)
+  elseif Avatar.QueryAllRegionOnlineChannelState then
+    Avatar:QueryAllRegionOnlineChannelState(RegionId)
   end
 end
 
@@ -1952,6 +2003,10 @@ function M:SendChatToWorld(ChannelType, ContentText)
   if AppearanceShareContent then
     ContentText = AppearanceShareContent
   end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not AppearanceShareContent then
+    ContentText = AutoChessShareContent
+  end
   return OldSendChatToWorld(self, ChannelType, ContentText)
 end
 
@@ -1961,6 +2016,10 @@ function M:SendChatToTeam(ContentText)
   local AppearanceShareContent = self:TryParseMyAppearancePlanInfo(ContentText)
   if AppearanceShareContent then
     ContentText = AppearanceShareContent
+  end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not AppearanceShareContent then
+    ContentText = AutoChessShareContent
   end
   return OldSendChatToTeam(self, ContentText)
 end
@@ -1972,6 +2031,10 @@ function M:SendChatToSettlementOnline(ContentText)
   if AppearanceShareContent then
     ContentText = AppearanceShareContent
   end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not AppearanceShareContent then
+    ContentText = AutoChessShareContent
+  end
   return OldSendChatToSettlementOnline(self, ContentText)
 end
 
@@ -1982,6 +2045,10 @@ function M:SendChatToGuild(ContentText)
   if AppearanceShareContent then
     ContentText = AppearanceShareContent
   end
+  local AutoChessShareContent = self:TryParseMyAutoChessShareInfo(ContentText)
+  if AutoChessShareContent and not AppearanceShareContent then
+    ContentText = AutoChessShareContent
+  end
   return OldSendChatToGuild(self, ContentText)
 end
 
@@ -1989,6 +2056,10 @@ local OldCheckTextValid = M.CheckTextValid
 
 function M:CheckTextValid(Text, Callback, ShowTipFunc, TextMap, bAllowEmpty)
   if AppearanceShareModel.IsAppearanceShareInfoMsg(Text) then
+    Callback(true, Text)
+    return
+  end
+  if AutoChessShareModel.IsAutoChessShareInfoMsg(Text) then
     Callback(true, Text)
     return
   end

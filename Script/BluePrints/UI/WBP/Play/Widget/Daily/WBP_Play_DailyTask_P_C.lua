@@ -8,7 +8,6 @@ function M:OnListItemObjectSet(Content)
   self.Parent = Content.Parent
   self:InitItemContent()
   self:AddInputMethodChangedListen()
-  self.Btn_Goto.bAutoButtonChange = false
 end
 
 function M:InitItemContent()
@@ -18,7 +17,6 @@ function M:InitItemContent()
   self:RefreshRewardInfoList(self.Data.QuestReward)
   self:RefreshView()
   self.IsMenuOpen = false
-  self.Parent.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     self:UpdateUIStyleInPlatform(true)
   end
@@ -140,29 +138,6 @@ function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
-function M:OnMouseEnter(MyGeometry, MouseEvent)
-  self.IsEnter = true
-  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad or self:IsAnimationPlaying(self.In) then
-    return
-  end
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Hover)
-  if self.IsMenuOpen then
-    return
-  end
-  self:UpdateUIStyleInPlatform(false)
-end
-
-function M:OnMouseLeave(MyGeometry, MouseEvent)
-  self.IsEnter = false
-  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad or self:IsAnimationPlaying(self.In) then
-    return
-  end
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Unhover)
-  self:UpdateUIStyleInPlatform(true)
-end
-
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
@@ -189,6 +164,17 @@ function M:OnGamePadDown(InKeyName)
     end
     self:UpdateUIStyleInPlatform(self.Item_Reward:HasAnyUserFocus())
     IsEventHandled = true
+  elseif InKeyName == Const.GamepadFaceButtonDown then
+    if not self.Item_Reward:HasAnyUserFocus() then
+      local State = self.DailyTaskServerData and self.DailyTaskServerData.State
+      if State == CommonConst.DailyTaskState.Doing and self.Data.JumpUIId then
+        self:GoToSystem()
+        IsEventHandled = true
+      elseif State == CommonConst.DailyTaskState.Complete then
+        self:ReceiveReward()
+        IsEventHandled = true
+      end
+    end
   elseif "Gamepad_FaceButton_Right" == InKeyName then
     if self.Item_Reward:HasFocusedDescendants() or self.Item_Reward:HasAnyUserFocus() then
       self:SetFocus()
@@ -205,12 +191,34 @@ function M:OnGamePadDown(InKeyName)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  self:UpdatKeyDisplay("SelfWidget")
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
-    self.Parent.Btn_Reward:SetGamePadImg("Y")
-    self.Parent.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Parent:OnSelectChange(self)
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
+function M:OnSelect()
+  self.IsEnter = true
+  self.FocusTypeName = "SelfWidget"
+  if not self:IsAnimationPlaying(self.In) and not self.IsMenuOpen then
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Hover)
+  end
+  self:UpdateUIStyleInPlatform(false)
+  self.Parent.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if "SelfWidget" ~= self.Parent.GamepadFocusMode then
+    self.Parent.Btn_Reward:SetGamePadImg("Y")
+    self:UpdatKeyDisplay("SelfWidget")
+  end
+end
+
+function M:OnUnselect()
+  self.IsEnter = false
+  if not self:IsAnimationPlaying(self.In) then
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Unhover)
+  end
+  self:UpdateUIStyleInPlatform(true)
 end
 
 function M:UpdatKeyDisplay(FocusTypeName)
@@ -222,6 +230,7 @@ function M:UpdatKeyDisplay(FocusTypeName)
     return
   end
   self.FocusTypeName = FocusTypeName
+  self.Parent.GamepadFocusMode = FocusTypeName
   if "RewardWidget" == FocusTypeName then
     local BottomKeyInfo = {
       {
@@ -310,21 +319,54 @@ function M:UpdatKeyDisplay(FocusTypeName)
   end
 end
 
+function M:IsPlayerTaskFinish()
+  return self.DailyTaskServerData ~= nil and self.DailyTaskServerData.State == CommonConst.DailyTaskState.GetReward
+end
+
+function M:SwitchToKeyAndMouseAnimation(IsWait, IsSwitch)
+  if not IsSwitch or IsWait and self:IsAnimationPlaying(self.In) then
+    return
+  end
+  self:StopAllAnimations()
+  self:PlayAnimation(self.Hover)
+  self:StopAllAnimations()
+  self:PlayAnimation(self:IsPlayerTaskFinish() and self.Recived or self.Normal)
+end
+
+function M:OnAnimationFinished(InAnimation)
+  if InAnimation == self.In then
+    local CurInputDevice = UIUtils.UtilsGetCurrentInputType()
+    self:SwitchToKeyAndMouseAnimation(false, CurInputDevice == ECommonInputType.MouseAndKeyboard)
+    if CurInputDevice == ECommonInputType.Gamepad and self.Parent.SelectItem == self then
+      self:StopAllAnimations()
+      self:PlayAnimation(self.Hover)
+      self:UpdateUIStyleInPlatform(false)
+    end
+  end
+end
+
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.Touch then
     return
   end
+  if self.Item_Reward:HasAnyUserFocus() then
+    self:UpdatKeyDisplay("RewardWidget")
+  end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
-  if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
-    if IsUseKeyAndMouse then
-      self:StopAllAnimations()
-      self:PlayAnimation(self.Normal)
+  if IsUseKeyAndMouse then
+    self.Parent.GamepadFocusMode = nil
+  end
+  local IsSelected = self.Parent.SelectItem == self
+  if IsUseKeyAndMouse or not IsSelected then
+    self:SwitchToKeyAndMouseAnimation(true, IsUseKeyAndMouse)
+    if IsSelected then
       self.Parent.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-    else
-      self.Parent.Btn_Reward:SetGamePadImg("Y")
-      self.Parent.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
     self:UpdateUIStyleInPlatform(true)
+  else
+    self.Parent.Btn_Reward:SetGamePadImg("Y")
+    self.Parent.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:OnSelect()
   end
   self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
@@ -333,10 +375,13 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
   if self.Mobile then
     return
   end
+  if not IsUseKeyAndMouse and self:HasFocusedDescendants() then
+    IsUseKeyAndMouse = true
+  end
   if IsUseKeyAndMouse then
-    self.Key_Controller_Item:SetVisibility(ESlateVisibility.Collapsed)
+    self.Key_Controller_Item:SetVisibility(ESlateVisibility.Hidden)
     self.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Btn_Goto:SetPCVisibility(true)
+    self.Btn_Goto:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Key_Controller_Item:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Key_Controller_Item:CreateCommonKey({
@@ -344,7 +389,8 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
         {Type = "Img", ImgShortPath = "LS"}
       }
     })
-    self.Btn_Goto:SetPCVisibility(false)
+    self.Btn_Goto:SetGamePadImg("A")
+    self.Btn_Goto:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Btn_Reward:SetGamePadImg("A")
     self.Btn_Reward:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end

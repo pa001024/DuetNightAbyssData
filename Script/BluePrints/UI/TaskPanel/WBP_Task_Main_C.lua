@@ -676,25 +676,21 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
     self.RootWidget.VB_UnlockCondition:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.RootWidget.Text_UnlockTask:SetText(GText("UI_QUESTPANEL_CONDITION_PAUSE"))
     for _, ChapId in pairs(MEChapId) do
-      if QuestChapters[ChapId] and QuestChapters[ChapId].State ~= CommonConst.QuestChapterState.NoneStart then
+      if QuestChapters[ChapId] and QuestChapters[ChapId].State == CommonConst.QuestChapterState.Doing then
         local QuestChains = DataMgr.QuestMutualExclusion[ChapId].QuestChainId
+        local IsUnLock = false
         if QuestChains then
-          local IsUnLock = QuestChapters[ChapId].State == CommonConst.QuestChapterState.Finish
           local ShowQuestChainId
-          if IsUnLock then
+          local ShowFinal = true
+          for k, ChainId in pairs(QuestChains) do
+            if Avatar.QuestChains[ChainId] and Avatar.QuestChains[ChainId]:IsDoing() then
+              ShowFinal = false
+              ShowQuestChainId = ChainId
+              break
+            end
+          end
+          if ShowFinal then
             ShowQuestChainId = QuestChains[#QuestChains]
-          else
-            local ShowFinal = true
-            for k, ChainId in pairs(QuestChains) do
-              if Avatar.QuestChains[ChainId] and Avatar.QuestChains[ChainId]:IsDoing() then
-                ShowFinal = false
-                ShowQuestChainId = ChainId
-                break
-              end
-            end
-            if ShowFinal then
-              ShowQuestChainId = QuestChains[#QuestChains]
-            end
           end
           local Type = "Block"
           local ConditionWidget = self:CreateWidgetNew("TaskUnlockCondition")
@@ -966,6 +962,7 @@ function WBP_Task_Main:PlayOutAnim(bClose)
     })
   end
   self:PlayAnimation(self.Out)
+  AudioManager(self):SetEventSoundParam(self, "OpenTaskMain", {ToEnd = 1})
 end
 
 function WBP_Task_Main:Close()
@@ -1089,7 +1086,7 @@ function WBP_Task_Main:ShowDeliverPopupUI(InFairyLandRegionId, InQuestChainId)
     end
     local TaskName = DataMgr.QuestChain[InQuestChainId].QuestChainName
     local Params = {
-      ShortText = string.format("%s <H>%s</>", GText("UI_Prompt_QuestTrans"), GText(TaskName)),
+      ShortText = string.format(GText("UI_Prompt_QuestTrans"), GText(TaskName)),
       LeftCallbackObj = self,
       LeftCallbackFunction = self.CancelDeliverTo,
       RightCallbackObj = self,
@@ -1137,7 +1134,6 @@ function WBP_Task_Main:Destruct()
     self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
   end
   EventManager:RemoveEvent(EventID.CheckShowMap, self)
-  AudioManager(self):SetEventSoundParam(self, "OpenTaskMain", {ToEnd = 1})
   for _, Data in pairs(self.TempQuestTabData) do
     if Data then
       local RedDotName = Data.TabName
@@ -1928,13 +1924,7 @@ function WBP_Task_Main:HandleConfirmGiveUpTask()
     self.CurTrackingQuest = nil
   end
   Avatar:GiveUpQuestChain(self.CurSelectQuest.QuestChainId)
-  local StoryPath = QuestChainInfo.StoryPath
-  if not StoryPath then
-    return
-  end
-  if GWorld.StoryMgr:IsRunningStoryline(QuestChainInfo.StoryPath) then
-    GWorld.StoryMgr:StopStoryline(StoryPath, false)
-  end
+  Avatar:StopClientQuestChainStoryline(QuestChainInfo.QuestChainId)
   local ItemToRemove
   local ListItems = self.RootWidget.List_Task:GetListItems()
   for _, ListItem in pairs(ListItems) do

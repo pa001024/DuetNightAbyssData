@@ -92,12 +92,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104503,
         SubRegionIdList = {104501},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203020101_132410057",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -197,6 +197,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -236,7 +237,9 @@ return {
               TargetTime = 12,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17737463772611735705"] = {
@@ -284,12 +287,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104503,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_12030202Giongzuo_132410089",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -399,7 +402,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1203/12060801.12060801'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "TalkStageNew_12030201",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -420,6 +423,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -488,6 +492,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -547,7 +552,9 @@ return {
               TargetTime = 12,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17738244732136518277"] = {
@@ -595,12 +602,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {104503},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203020301_132010083",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -765,6 +772,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -865,7 +873,9 @@ return {
               TargetTime = 12,
               NeedLerp = true,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17737182103911455"] = {
@@ -933,12 +943,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203020302_132010084",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1068,6 +1078,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1230,7 +1241,9 @@ return {
               TargetTime = 12,
               NeedLerp = true,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           }
         },
@@ -1263,12 +1276,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203010101_132010079",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1380,6 +1393,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1436,6 +1450,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1503,7 +1518,9 @@ return {
               TargetTime = 12,
               NeedLerp = true,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           }
         },

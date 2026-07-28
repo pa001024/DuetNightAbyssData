@@ -524,6 +524,29 @@
     ]
   },
   {
+    "id": 4006,
+    "child": [
+      {
+        "id": 15035,
+        "t": "Resource",
+        "c": 1,
+        "n": "Lumino Crystal"
+      },
+      {
+        "id": 15031,
+        "t": "Resource",
+        "c": 1,
+        "n": "Hydro Crystal"
+      },
+      {
+        "id": 15036,
+        "t": "Resource",
+        "c": 1,
+        "n": "Umbro Crystal"
+      }
+    ]
+  },
+  {
     "id": 5001,
     "child": [
       {
@@ -1260,6 +1283,89 @@
     ]
   },
   {
+    "id": 5009,
+    "child": [
+      {
+        "id": 11010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 11020151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 15020151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 15040151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 21010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 24010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 31010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 32010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 33010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 41010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 41020151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 53010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      },
+      {
+        "id": 54010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Azure Tides"
+      }
+    ]
+  },
+  {
     "id": 5101,
     "child": [
       {
@@ -1318,6 +1424,47 @@
         "t": "Resource",
         "c": 1,
         "n": "Secret Hideout"
+      }
+    ]
+  },
+  {
+    "id": 350025,
+    "child": [
+      {
+        "id": 110045,
+        "t": "Resource",
+        "c": 1,
+        "n": "Anemo Covenanter Demon Wedge Chest"
+      },
+      {
+        "id": 110046,
+        "t": "Resource",
+        "c": 1,
+        "n": "Pyro Covenanter Demon Wedge Chest"
+      },
+      {
+        "id": 110047,
+        "t": "Resource",
+        "c": 1,
+        "n": "Electro Covenanter Demon Wedge Chest"
+      },
+      {
+        "id": 110048,
+        "t": "Resource",
+        "c": 1,
+        "n": "Hydro Covenanter Demon Wedge Chest"
+      },
+      {
+        "id": 110049,
+        "t": "Resource",
+        "c": 1,
+        "n": "Lumino Covenanter Demon Wedge Chest"
+      },
+      {
+        "id": 110050,
+        "t": "Resource",
+        "c": 1,
+        "n": "Umbro Covenanter Demon Wedge Chest"
       }
     ]
   }

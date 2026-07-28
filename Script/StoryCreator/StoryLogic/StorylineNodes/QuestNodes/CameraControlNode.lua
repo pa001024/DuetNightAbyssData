@@ -84,4 +84,18 @@ function CameraControlNode:Clear()
   self.TimerHandle = nil
 end
 
+local CameraControlClearNode = require("StoryCreator.StoryLogic.StorylineNodes.QuestNodes.CameraControlClearNode")
+
+function CameraControlNode:OnQuestlineFail()
+  CameraControlClearNode:Execute()
+end
+
+function CameraControlNode:OnStop()
+  CameraControlClearNode:Execute()
+end
+
+function CameraControlNode:OnFinish()
+  CameraControlClearNode:Execute()
+end
+
 return CameraControlNode

@@ -1,7 +1,10 @@
 local GameModeCProperty = {}
 
-function GameModeCProperty:BeginPlay()
-  self.CProperty = {}
+function GameModeCProperty:Init(Env)
+  if self.CProperty == nil then
+    self.CProperty = {}
+    self.CProperty.DungeonId = Env.DungeonId
+  end
 end
 
 function GameModeCProperty:BindCObject(Obj)

@@ -1,4 +1,5 @@
 require("UnLua")
+local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local M = Class({
   "BluePrints.UI.BP_UIState_C",
   "BluePrints.UI.WBP.Activity.WBP_Activity_EntryBase_C",
@@ -45,6 +46,7 @@ function M:OnLoaded(...)
   EventManager:AddEvent(EventID.OnLeaveActivityEntry, self, self.OnLeaveActivityEntry)
   EventManager:AddEvent(EventID.OnActivityEntryShowVisible, self, self.OnActivityEntryShowVisible)
   EventManager:AddEvent(EventID.OnActivityComplete, self, self.OnActivityComplete)
+  EventManager:AddEvent(ActivityCommon.EventId.RefreshActivityEntryVideo, self, self.RefreshCurrentBGVideo)
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   if IsValid(self.GameInputModeSubsystem) then
@@ -115,10 +117,7 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.OnReturnToActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnLeaveActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnActivityComplete, self)
-  local BattleView = UIManager():GetUIObj("BattleMain")
-  if BattleView then
-    BattleView:Show("Temp1.4Fix")
-  end
+  EventManager:RemoveEvent(ActivityCommon.EventId.RefreshActivityEntryVideo, self)
   self.NeedShowVersionView = nil
   self.Super.Destruct(self)
 end
@@ -271,6 +270,14 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   end
   if not IsEventHandled and not self.EventTypeTab:IsForbidden() then
     IsEventHandled = self.EventTypeTab:Handle_KeyEventOnGamePad(InKeyName)
+  end
+  if self.IsEnterForbiddenState then
+    if "Gamepad_DPad_Left" == InKeyName then
+      return UE4.UWidgetBlueprintLibrary.UnHandled()
+    end
+    if "Gamepad_LeftShoulder" == InKeyName or "Gamepad_RightShoulder" == InKeyName then
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
   end
   if "Gamepad_DPad_Left" == InKeyName then
     self.Activity_Tab:OnRewardPreviewClick()

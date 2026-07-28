@@ -23,7 +23,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     Level = WeaponServerData.Level
     EnhanceLevel = WeaponServerData.EnhanceLevel
     GradeLevel = WeaponServerData.GradeLevel
-    local Cost = WeaponServerData:GetModSuitCost()
+    local Cost = ModModel:GetCurrentSuitCost(WeaponServerData)
     self.Text_Mod01:SetText(Cost)
     self.Text_Mod02:SetText(WeaponServerData:LevelUpData().ModVolume)
   else
@@ -88,7 +88,7 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId)
     Level = WeaponServerData.Level
     EnhanceLevel = WeaponServerData.EnhanceLevel
     GradeLevel = WeaponServerData.GradeLevel
-    local Cost = WeaponServerData:GetModSuitCost()
+    local Cost = ModModel:GetCurrentSuitCost(WeaponServerData)
     self.Text_Mod01:SetText(Cost)
     self.Text_Mod02:SetText(WeaponServerData:LevelUpData().ModVolume)
   else

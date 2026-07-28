@@ -585,6 +585,26 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 20906,
     TalkType = "Boss"
   },
+  [21001] = {
+    DialogueId = 60190001,
+    TalkTriggerId = 21001,
+    TalkType = "Boss"
+  },
+  [21002] = {
+    DialogueId = 60190002,
+    TalkTriggerId = 21002,
+    TalkType = "Boss"
+  },
+  [21003] = {
+    DialogueId = 60190003,
+    TalkTriggerId = 21003,
+    TalkType = "Boss"
+  },
+  [21004] = {
+    DialogueId = 60190004,
+    TalkTriggerId = 21004,
+    TalkType = "Boss"
+  },
   [100125] = {
     StoryLinePath = "Common/100125.story",
     TalkId = 100125,
@@ -2347,6 +2367,12 @@ return ReadOnly("TalkTrigger", {
     StoryLinePath = "Impression/Chapter03/Impression/701291_Keni_Bubble",
     TalkId = 510172,
     TalkTriggerId = 510172
+  },
+  [510173] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701327_Keni",
+    TalkId = 510173,
+    TalkTriggerId = 510173,
+    Type = "Impression"
   },
   [511010] = {
     StoryLinePath = "BubbleTalk/51101001.story",
@@ -5371,6 +5397,11 @@ return ReadOnly("TalkTrigger", {
     TalkId = 903201,
     TalkTriggerId = 903201
   },
+  [903301] = {
+    StoryLinePath = "TalkGossip/903301_Eve.story",
+    TalkId = 903301,
+    TalkTriggerId = 903301
+  },
   [910101] = {
     StoryLinePath = "TalkGossip/LongIdleBubble/HeitaoIdleBubble.story",
     TalkId = 910101,
@@ -5501,7 +5532,13 @@ return ReadOnly("TalkTrigger", {
     TalkId = 910126,
     TalkTriggerId = 910126
   },
+  [910127] = {
+    StoryLinePath = "TalkGossip/LongIdleBubble/EveBubble.story",
+    TalkId = 910127,
+    TalkTriggerId = 910127
+  },
   [920101] = {
+    TalkId = 920101,
     TalkTriggerId = 920101,
     TriggerCondition = T.RT_64
   },
@@ -5531,6 +5568,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920106
   },
   [920107] = {
+    TalkId = 920107,
     TalkTriggerId = 920107,
     TriggerCondition = T.RT_64
   },
@@ -5600,10 +5638,12 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920120
   },
   [920121] = {
+    TalkId = 920121,
     TalkTriggerId = 920121,
     TriggerCondition = T.RT_64
   },
   [920122] = {
+    TalkId = 920122,
     TalkTriggerId = 920122,
     TriggerCondition = T.RT_64
   },
@@ -5708,6 +5748,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920142
   },
   [920143] = {
+    TalkId = 920143,
     TalkTriggerId = 920143,
     TriggerCondition = T.RT_64
   },
@@ -5727,6 +5768,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920146
   },
   [920147] = {
+    TalkId = 920147,
     TalkTriggerId = 920147,
     TriggerCondition = T.RT_64
   },
@@ -5801,6 +5843,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920161
   },
   [920162] = {
+    TalkId = 920162,
     TalkTriggerId = 920162,
     TriggerCondition = T.RT_64
   },
@@ -5810,6 +5853,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920163
   },
   [920164] = {
+    TalkId = 920164,
     TalkTriggerId = 920164,
     TriggerCondition = T.RT_64
   },
@@ -5824,6 +5868,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920166
   },
   [920167] = {
+    TalkId = 920167,
     TalkTriggerId = 920167,
     TriggerCondition = T.RT_64
   },
@@ -5838,10 +5883,12 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920169
   },
   [920170] = {
+    TalkId = 920170,
     TalkTriggerId = 920170,
     TriggerCondition = T.RT_64
   },
   [920171] = {
+    TalkId = 920171,
     TalkTriggerId = 920171,
     TriggerCondition = T.RT_64
   },
@@ -5876,6 +5923,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920177
   },
   [920178] = {
+    TalkId = 920178,
     TalkTriggerId = 920178,
     TriggerCondition = T.RT_64
   },
@@ -5890,6 +5938,7 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920180
   },
   [920181] = {
+    TalkId = 920181,
     TalkTriggerId = 920181,
     TriggerCondition = T.RT_64
   },
@@ -5937,6 +5986,21 @@ return ReadOnly("TalkTrigger", {
     StoryLinePath = "TalkGossip/EasterEggBubble/FuluoXibi.story",
     TalkId = 920190,
     TalkTriggerId = 920190
+  },
+  [920191] = {
+    StoryLinePath = "TalkGossip/EasterEggBubble/EveFeina.story",
+    TalkId = 920191,
+    TalkTriggerId = 920191
+  },
+  [920192] = {
+    StoryLinePath = "TalkGossip/EasterEggBubble/EveSonglu.story",
+    TalkId = 920192,
+    TalkTriggerId = 920192
+  },
+  [920193] = {
+    TalkId = 920193,
+    TalkTriggerId = 920193,
+    TriggerCondition = T.RT_64
   },
   [5010713] = {
     StoryLinePath = "Impression\\East02\\Inn_Gossip\\501071_Bubble.story",
@@ -7462,6 +7526,121 @@ return ReadOnly("TalkTrigger", {
     TalkId = 7001751,
     TalkTriggerId = 7001751
   },
+  [7001761] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001761,
+    TalkTriggerId = 7001761
+  },
+  [7001771] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001771,
+    TalkTriggerId = 7001771
+  },
+  [7001781] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001781,
+    TalkTriggerId = 7001781
+  },
+  [7001791] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001791,
+    TalkTriggerId = 7001791
+  },
+  [7001801] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001801,
+    TalkTriggerId = 7001801
+  },
+  [7001811] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001811,
+    TalkTriggerId = 7001811
+  },
+  [7001821] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001821,
+    TalkTriggerId = 7001821
+  },
+  [7001831] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001831,
+    TalkTriggerId = 7001831
+  },
+  [7001841] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001841,
+    TalkTriggerId = 7001841
+  },
+  [7001851] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001851,
+    TalkTriggerId = 7001851
+  },
+  [7001861] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001861,
+    TalkTriggerId = 7001861
+  },
+  [7001871] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001871,
+    TalkTriggerId = 7001871
+  },
+  [7001881] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001881,
+    TalkTriggerId = 7001881
+  },
+  [7001891] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001891,
+    TalkTriggerId = 7001891
+  },
+  [7001901] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001901,
+    TalkTriggerId = 7001901
+  },
+  [7001911] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001911,
+    TalkTriggerId = 7001911
+  },
+  [7001921] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001921,
+    TalkTriggerId = 7001921
+  },
+  [7001931] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001931,
+    TalkTriggerId = 7001931
+  },
+  [7001941] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001941,
+    TalkTriggerId = 7001941
+  },
+  [7001951] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001951,
+    TalkTriggerId = 7001951
+  },
+  [7001961] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001961,
+    TalkTriggerId = 7001961
+  },
+  [7001971] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001971,
+    TalkTriggerId = 7001971
+  },
+  [7001981] = {
+    StoryLinePath = "Observe/EX02.story",
+    TalkId = 7001981,
+    TalkTriggerId = 7001981
+  },
   [8200011] = {
     StoryLinePath = "Explore/Laser.story",
     TalkId = 8200011,
@@ -7889,6 +8068,14 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 51017101,
     TriggerCondition = {
       ImprComp = {TalkTriggerId = 510171}
+    }
+  },
+  [51017301] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701327_Keni_2",
+    TalkId = 51017301,
+    TalkTriggerId = 51017301,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510173}
     }
   },
   [51105801] = {

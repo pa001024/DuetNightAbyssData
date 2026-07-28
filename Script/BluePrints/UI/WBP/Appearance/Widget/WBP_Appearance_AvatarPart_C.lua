@@ -35,8 +35,8 @@ function M:Construct()
     },
     SkipRefreshInputType = true
   })
-  self:AddDispatcher(EventID.OnCharAppearanceChanged, self, self.OnCharAppearanceChanged)
   self:AddDispatcher(EventID.OnCharAppearanSuitRenamed, self, self.OnCharAppearanSuitRenamed)
+  self:AddDispatcher(EventID.OnCharAppearanceChanged, self, self.OnCharAppearanceChanged)
   rawset(self, "FSM", FSM:New(self, {
     StateNames = FocusStates,
     OnStateChanged = self.OnFocusChanged,
@@ -48,6 +48,13 @@ end
 function M:Destruct()
   self:RemoveCharListReddotListen()
   self:RemoveArchiveReddotListen()
+end
+
+function M:ReceiveEnterState()
+  if self.NeedUpdateAppearance then
+    self.NeedUpdateAppearance = false
+    self:CheckAndUpdateCharAppearance()
+  end
 end
 
 function M:Init(Params)
@@ -378,13 +385,36 @@ function M:OnCharAppearanceChanged(Ret, CharUuid, AppearanceIndex)
   if self.ActorController and self.ActorController.ArmoryPlayer then
     local AppearanceSuit = SelectedChar.DumpAppearanceSuit and SelectedChar:DumpAppearanceSuit(GWorld:GetAvatar(), AppearanceIndex) or nil
     if AppearanceSuit then
-      self.ActorController:ChangeCharAppearance(AppearanceSuit)
-      self.ActorController.DelayFrame = 30
-      self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, CommonConst.ArmoryTag.Appearance)
+      local IsSuccess = self:UpdateCharAppearance(AppearanceSuit)
+      if not IsSuccess then
+        self.NeedUpdateAppearance = true
+      end
     end
   end
+  self:ResetAppearancePlanName()
   self:InitCharAppearanceSuits()
   self.List_Appearance:PlayInAnim()
+end
+
+function M:CheckAndUpdateCharAppearance()
+  local SelectedChar = self.MainModel and self.MainModel:GetSelectedChar() or nil
+  if not SelectedChar then
+    return
+  end
+  local AppearanceSuit = SelectedChar.DumpAppearanceSuit and SelectedChar:DumpAppearanceSuit(GWorld:GetAvatar()) or nil
+  return self:UpdateCharAppearance(AppearanceSuit)
+end
+
+function M:UpdateCharAppearance(AppearanceSuit)
+  if not AppearanceSuit then
+    return
+  end
+  if self.ActorController:IsViewTarget() then
+    self.ActorController:ChangeCharAppearance(AppearanceSuit)
+    self.ActorController.DelayFrame = 30
+    self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, CommonConst.ArmoryTag.Appearance)
+    return true
+  end
 end
 
 function M:RefreshAfterAppearanceImport()

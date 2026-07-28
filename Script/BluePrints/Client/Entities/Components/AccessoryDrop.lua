@@ -17,7 +17,6 @@ function Component:CheckReddot()
     AccessoryDrop = PlayerAvatar.AccessoryDrops[EventId]
     if AccessoryDrop then
       CurEventId = EventId
-      break
     end
   end
   if not AccessoryDrop then

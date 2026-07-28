@@ -54,22 +54,88 @@ function M:AddItem(ItemData)
   return ItemUI
 end
 
-function M:AddSelection(itemUI, index, name)
+function M:GetSelectionValueMode(ItemData)
+  if ItemData and ItemData.SelectionValueMode then
+    return ItemData.SelectionValueMode
+  end
+  if ItemData and ItemData.ShowItemIcon then
+    return "Value"
+  end
+  return "Index"
+end
+
+function M:IsSameSelectionValue(ValueA, ValueB)
+  return ValueA == ValueB or tostring(ValueA) == tostring(ValueB)
+end
+
+function M:GetItemDataByItemUI(itemUI)
   local itemIndex = self.List_Selection:GetChildIndex(itemUI) + 1
+  local itemData = self.Params and self.Params.ItemDatas and self.Params.ItemDatas[itemIndex] or nil
+  return itemData, itemIndex
+end
+
+function M:GetSelectionValue(itemUI, SelectionIndexOrValue)
+  local itemData = self:GetItemDataByItemUI(itemUI)
+  local valueMode = self:GetSelectionValueMode(itemData)
+  if "Value" == valueMode then
+    if itemUI and itemUI.ListReward then
+      return SelectionIndexOrValue
+    end
+    if itemData and itemData.SelectionDatas then
+      return itemData.SelectionDatas[SelectionIndexOrValue] or SelectionIndexOrValue
+    end
+  end
+  if itemUI and itemUI.ListReward and itemData and itemData.SelectionDatas then
+    for index, value in pairs(itemData.SelectionDatas) do
+      if self:IsSameSelectionValue(value, SelectionIndexOrValue) then
+        return index
+      end
+    end
+  end
+  return SelectionIndexOrValue
+end
+
+function M:GetSelectionIndex(ItemData, SelectionIndexOrValue)
+  if not ItemData then
+    return SelectionIndexOrValue
+  end
+  local valueMode = self:GetSelectionValueMode(ItemData)
+  if "Value" ~= valueMode then
+    return SelectionIndexOrValue
+  end
+  if ItemData.SelectionDatas then
+    for index, value in pairs(ItemData.SelectionDatas) do
+      if self:IsSameSelectionValue(value, SelectionIndexOrValue) then
+        return index
+      end
+    end
+    if ItemData.SelectionDatas[SelectionIndexOrValue] ~= nil then
+      return SelectionIndexOrValue
+    end
+  end
+  return nil
+end
+
+function M:AddSelection(itemUI, index, name)
+  local selectionValue = self:GetSelectionValue(itemUI, index)
+  local _, itemIndex = self:GetItemDataByItemUI(itemUI)
   if not self.SelectedItems[itemIndex] then
     self.SelectedItems[itemIndex] = {}
   end
-  table.insert(self.SelectedItems[itemIndex], index)
+  if not self:TableContains(self.SelectedItems[itemIndex], selectionValue) then
+    table.insert(self.SelectedItems[itemIndex], selectionValue)
+  end
   self.Owner:GetButtonBar().Btn_Quit:ForbidBtn(false)
   self.IsQuitBtnForbidden = false
 end
 
 function M:RemoveSelection(itemUI, index)
-  local itemIndex = self.List_Selection:GetChildIndex(itemUI) + 1
+  local selectionValue = self:GetSelectionValue(itemUI, index)
+  local _, itemIndex = self:GetItemDataByItemUI(itemUI)
   if self.SelectedItems and self.SelectedItems[itemIndex] then
     local indices = self.SelectedItems[itemIndex]
     for i, selectedIndex in ipairs(indices) do
-      if selectedIndex == index then
+      if self:IsSameSelectionValue(selectedIndex, selectionValue) then
         table.remove(indices, i)
         break
       end
@@ -86,7 +152,7 @@ end
 
 function M:TableContains(tbl, val)
   for _, v in ipairs(tbl) do
-    if v == val then
+    if self:IsSameSelectionValue(v, val) then
       return true
     end
   end
@@ -124,9 +190,17 @@ function M:OnBtnNo()
       local rewardItemNums = dimensionItem.ListReward:GetNumItems()
       for j = 1, rewardItemNums do
         local rewardItem = dimensionItem.ListReward:GetItemAt(j - 1)
-        if rewardItem and rewardItem.UI and rewardItem.UI.Content.bClick then
-          rewardItem.UI:OnClickSelected()
+        if rewardItem then
+          if rewardItem.UI and rewardItem.UI.Content and rewardItem.UI.Content.bClick then
+            rewardItem.UI:OnClickSelected()
+          else
+            rewardItem.bClick = false
+          end
         end
+      end
+      dimensionItem.isSelectedAll = false
+      if dimensionItem.UpdateSelectionState then
+        dimensionItem:UpdateSelectionState()
       end
     end
   end
@@ -142,10 +216,12 @@ function M:Reselection(SelectedItems)
   if SelectedItems then
     for dimensionIndex, selectedIndices in pairs(SelectedItems) do
       local dimensionItem = self.List_Selection:GetChildAt(dimensionIndex - 1)
+      local itemData = self.Params and self.Params.ItemDatas and self.Params.ItemDatas[dimensionIndex] or nil
       if dimensionItem then
-        for _, selectionIndex in ipairs(selectedIndices) do
+        for _, selectionIndexOrValue in ipairs(selectedIndices) do
+          local selectionIndex = self:GetSelectionIndex(itemData, selectionIndexOrValue)
           if dimensionItem.WBox_Selection then
-            local selectionItem = dimensionItem.WBox_Selection:GetChildAt(selectionIndex - 1)
+            local selectionItem = selectionIndex and dimensionItem.WBox_Selection:GetChildAt(selectionIndex - 1) or nil
             if selectionItem and selectionItem.CheckBox_Selection then
               selectionItem.CheckBox_Selection:SetIsChecked(true)
               selectionItem:OnItemSelectionChanged()
@@ -158,9 +234,10 @@ function M:Reselection(SelectedItems)
             end
           end
           if dimensionItem.ListReward then
-            local rewardItem = dimensionItem.ListReward:GetItemAt(selectionIndex - 1)
+            local rewardItem = selectionIndex and dimensionItem.ListReward:GetItemAt(selectionIndex - 1) or nil
             if rewardItem and rewardItem.bClick ~= nil then
               rewardItem.bClick = true
+              dimensionItem:RefreshBigReward(rewardItem.Id, true)
             end
             local totalSelections = dimensionItem.ListReward:GetNumItems()
             if #selectedIndices == totalSelections then

@@ -86,12 +86,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1083,6 +1083,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1090,6 +1091,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1779,12 +1781,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2622,6 +2624,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2629,6 +2632,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2755,6 +2759,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3701,12 +3706,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -3953,6 +3958,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3960,6 +3966,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4247,12 +4254,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -4501,6 +4508,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4631,6 +4639,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4757,8 +4766,7 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_1/0123_boss_juque.0123_boss_juque'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104801},
+              RelatedRegionId = {104801},
               bStoreToServer = false
             }
           },

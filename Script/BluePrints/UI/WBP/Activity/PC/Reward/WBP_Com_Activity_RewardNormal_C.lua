@@ -3,11 +3,22 @@ local M = Class({
   "Blueprints.UI.BP_UIState_C"
 })
 
+local function EnsureWidgetFocusable(Widget)
+  if not Widget then
+    return
+  end
+  Widget.bIsFocusable = true
+  if Widget.SetIsFocusable then
+    Widget:SetIsFocusable(true)
+  end
+end
+
 function M:Construct()
 end
 
 function M:OnLoaded(...)
   local Params = (...)
+  EnsureWidgetFocusable(self)
   local ConfigData = Params.ConfigData
   self.TabConfigDatas = Params.TabConfigDatas
   self.ConfigData = ConfigData
@@ -338,6 +349,9 @@ function M:CloseSelf()
       PreviousUI:PlayAnimationForward(PreviousUI.In)
       PreviousUI:SetUIVisibilityTag(UIConst.CommonHideTagName.UIStackChange, false, UE4.ESlateVisibility.HitTestInvisible)
     end
+    if "RacingChoosePet" == PreviousUIName then
+      PreviousUI:PlayTaskBackAnimation()
+    end
   end
   if self.ConfigData.InSoundPath then
     AudioManager(self):SetEventSoundParam(nil, "ActivityReward_InSound", {ToEnd = 1})
@@ -349,7 +363,14 @@ function M:CloseSelf()
       self.Close
     })
     self:PlayAnimation(self.Out)
+  else
+    self:Close()
   end
+end
+
+function M:OnReturnKeyDown()
+  self:CloseSelf()
+  return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
 function M:ScrollToSelectTab()
@@ -583,6 +604,9 @@ function M:RealRefreshListRewardInfo(TabType)
     UIUtils.PlayListViewFramingInAnimation(self, self.List_Item, {
       AnimName = "In",
       Callback = function()
+        if not self.ConfigData.IsPacking then
+          return
+        end
         self:NavigateToFirstDisplayedItem(self.List_Item)
       end
     })
@@ -963,6 +987,15 @@ function M:OnRefreshInNextDay()
   end
 end
 
+function M:OnMouseButtonDown(MyGeometry, MouseEvent)
+  EnsureWidgetFocusable(self)
+  if self.IsInUIMode then
+    self:SetInputUIOnly(true)
+  end
+  self:SetFocus()
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
@@ -989,7 +1022,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self.RewardContent_OneClick.Btn_OneClick:OnBtnClicked()
   elseif "Escape" == InKeyName then
     IsEventHandled = true
-    self:CloseSelf()
+    self:OnReturnKeyDown()
   end
   if self.ConfigData.IsPacking and not IsEventHandled then
     IsEventHandled = self.Com_TabSub:Handle_KeyEventOnPC(InKeyName)

@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -410,8 +410,7 @@ return {
               SoundPath = "event:/bgm/1_1/0107_story_zhuyinzhizai_full",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104103},
+              RelatedRegionId = {104103},
               bStoreToServer = false
             }
           }
@@ -445,12 +444,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {},

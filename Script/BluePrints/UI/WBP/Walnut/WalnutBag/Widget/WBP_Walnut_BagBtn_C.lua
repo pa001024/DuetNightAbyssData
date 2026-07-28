@@ -18,6 +18,10 @@ function M:Construct()
   self:PlayAnimation(self.Normal)
 end
 
+function M:Destruct()
+  self:Clean()
+end
+
 function M:Init(Name, ParentWidget, LeftTimeDict, ClickCallBack)
   self.Text_Name:SetText(Name)
   self.ParentWidget = ParentWidget

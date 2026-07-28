@@ -74,9 +74,17 @@
   {
     "id": 3010110,
     "name": "呐喊·重剑",
-    "desc": "",
+    "desc": "嘎啊——————————",
     "icon": "T_Head_Claymore_Nahan",
     "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3010111,
+    "name": "UI_WeaponSkin_Name_3010111",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "通过商店获得"
   },
   {
@@ -136,6 +144,14 @@
     "unlock": "通过商店获得"
   },
   {
+    "id": 3010208,
+    "name": "UI_WeaponSkin_Name_3010208",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
     "id": 3010301,
     "name": "唤日急板",
     "desc": "太阳在哪里呀太阳在哪里？太阳就在我们的手心里。",
@@ -189,6 +205,14 @@
     "desc": "嘎啊——————————",
     "icon": "T_Head_Bow_Nahan02",
     "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3010308,
+    "name": "UI_WeaponSkin_Name_3010308",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "通过商店获得"
   },
   {
@@ -253,6 +277,14 @@
     "desc": "聆听自群星传来的亘古邀约。",
     "icon": "T_Head_Polearm_Huanyu",
     "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3010409,
+    "name": "呐喊·长柄",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Polearm_Nahan",
+    "rarity": 4,
     "unlock": "通过商店获得"
   },
   {
@@ -332,6 +364,22 @@
     "name": "碧霄吟·双刀",
     "desc": "尘嚣无染，碧波破浪。",
     "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3010611,
+    "name": "呐喊·双刀",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Dualblade_Nahan",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3010613,
+    "name": "UI_WeaponSkin_Name_3010610",
+    "desc": "",
+    "icon": "",
     "rarity": 5,
     "unlock": "通过商店获得"
   },
@@ -472,6 +520,14 @@
     "unlock": "通过商店获得"
   },
   {
+    "id": 3010904,
+    "name": "UI_WeaponSkin_Name_3010904",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
     "id": 3011001,
     "name": "电橘他二号",
     "desc": "喵呜♪喵喵喵♪喵喵♪♪",
@@ -501,6 +557,14 @@
     "desc": "嘎啊——————————",
     "icon": "T_Head_Shotgun_Nahan",
     "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3011005,
+    "name": "UI_WeaponSkin_Name_3011005",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "通过商店获得"
   },
   {
@@ -549,6 +613,22 @@
     "desc": "嘎啊——————————",
     "icon": "T_Head_Crossbow_Nahan",
     "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3011207,
+    "name": "未融初雪",
+    "desc": "初雪融化之前，请不要忘记它原本的模样。",
+    "icon": "T_Head_Crossbow_Weirong",
+    "rarity": 5,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 3011209,
+    "name": "蕉个朋友",
+    "desc": "你好，交个朋友。",
+    "icon": "T_Head_Crossbow_Jiaoge",
+    "rarity": 5,
     "unlock": "通过商店获得"
   }
 ]

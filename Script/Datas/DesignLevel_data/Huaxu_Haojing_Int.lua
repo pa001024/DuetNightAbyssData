@@ -60,6 +60,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["242350053"] = {
+      CreatorId = 242350053,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["162350038"] = {
       CreatorId = 162350038,
       UnitType = "Mechanism",
@@ -77,11 +82,6 @@ return {
     },
     ["2350024"] = {
       CreatorId = 2350024,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
-    ["242350053"] = {
-      CreatorId = 242350053,
       UnitType = "Mechanism",
       UnitId = 1
     }
@@ -161,5 +161,6 @@ return {
       }
     }
   },
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

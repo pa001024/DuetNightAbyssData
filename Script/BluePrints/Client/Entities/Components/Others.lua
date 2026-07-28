@@ -1,25 +1,120 @@
 local SettingUtils = require("Utils.SettingUtils")
+local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
 local Component = {}
 local SignBoardBubbleTalkController = require("BluePrints.UI.WBP.SignBoardBubble.SignBoardBubbleTalkController")
 local StoryInteractiveController = require("BluePrints.UI.WBP.StoryInteractive.StoryInteractiveController")
+local TOTAL_MOBILE_HUD_PLAN_COUNT = BattleHUDCommonConst.TOTAL_MOBILE_HUD_PLAN_COUNT
+local TRIAL_LAYOUT_PLAN_INDEX = BattleHUDCommonConst.TRIAL_LAYOUT_PLAN_INDEX
+local LAYOUT_ENTRY_CONFIG = {
+  [1] = {
+    RecordPlanIndex = 1,
+    PlanList = {
+      1,
+      3,
+      5
+    }
+  },
+  [2] = {
+    RecordPlanIndex = 2,
+    PlanList = {
+      2,
+      4,
+      6
+    }
+  },
+  [3] = {
+    RecordPlanIndex = 7,
+    PlanList = {
+      7,
+      8,
+      9
+    }
+  }
+}
+
+local function GetLayoutEntryIndexByPlanIndex(PlanIndex)
+  for LayoutEntryIndex, LayoutConfig in pairs(LAYOUT_ENTRY_CONFIG) do
+    for _, LayoutPlanIndex in ipairs(LayoutConfig.PlanList) do
+      if LayoutPlanIndex == PlanIndex then
+        return LayoutEntryIndex
+      end
+    end
+  end
+  return nil
+end
+
+local function GetLayoutPlanListByEntry(LayoutEntryIndex)
+  local LayoutConfig = LAYOUT_ENTRY_CONFIG[LayoutEntryIndex]
+  return LayoutConfig and LayoutConfig.PlanList or nil
+end
+
+local function GetDefaultMobileHudPlanName(PlanIndex)
+  if PlanIndex == TRIAL_LAYOUT_PLAN_INDEX then
+    return "Layout_" .. PlanIndex
+  end
+  local LayoutEntryIndex = GetLayoutEntryIndexByPlanIndex(PlanIndex)
+  if not LayoutEntryIndex then
+    return "Layout_" .. PlanIndex
+  end
+  local LayoutPlanList = GetLayoutPlanListByEntry(LayoutEntryIndex)
+  if not LayoutPlanList then
+    return "Layout_" .. PlanIndex
+  end
+  local SlotIndex
+  for Index, LayoutPlanIndex in ipairs(LayoutPlanList) do
+    if LayoutPlanIndex == PlanIndex then
+      SlotIndex = Index
+      break
+    end
+  end
+  if not SlotIndex then
+    return "Layout_" .. PlanIndex
+  end
+  return GText("UI_CustomLayout_DefaultPlanName" .. tostring(SlotIndex))
+end
+
+function Component:GetExpectedMobileHudPlanCount()
+  return TOTAL_MOBILE_HUD_PLAN_COUNT
+end
+
+function Component:GetTrialMobileHudPlanIndex()
+  return TRIAL_LAYOUT_PLAN_INDEX
+end
+
+function Component:GetLayoutEntryIndexByPlanIndex(PlanIndex)
+  return GetLayoutEntryIndexByPlanIndex(PlanIndex)
+end
+
+function Component:GetDefaultMobileHudPlanName(PlanIndex)
+  return GetDefaultMobileHudPlanName(PlanIndex)
+end
+
+function Component:GetLayoutRecordPlanIndex(LayoutEntryIndex)
+  local LayoutConfig = LAYOUT_ENTRY_CONFIG[LayoutEntryIndex]
+  return LayoutConfig and LayoutConfig.RecordPlanIndex or nil
+end
+
+function Component:GetLayoutPlanListByEntry(LayoutEntryIndex)
+  local LayoutPlanList = GetLayoutPlanListByEntry(LayoutEntryIndex)
+  if not LayoutPlanList then
+    return nil
+  end
+  local Result = {}
+  for Index, PlanIndex in ipairs(LayoutPlanList) do
+    Result[Index] = PlanIndex
+  end
+  return Result
+end
 
 function Component:EnterWorld(...)
   SignBoardBubbleTalkController:Init()
   StoryInteractiveController:Init()
   self:InitReddotTrees()
   local PlanCount = self:GetMobileHudPlanCount()
-  if PlanCount < 7 then
-    for i = 1, 7 - PlanCount do
+  if PlanCount < TOTAL_MOBILE_HUD_PLAN_COUNT then
+    for i = 1, TOTAL_MOBILE_HUD_PLAN_COUNT - PlanCount do
       local PlanIndex = i + PlanCount
-      local DefaultPlanNameKey
-      if 1 == PlanIndex or 2 == PlanIndex then
-        DefaultPlanNameKey = "UI_CustomLayout_DefaultPlanName1"
-      elseif 3 == PlanIndex or 4 == PlanIndex then
-        DefaultPlanNameKey = "UI_CustomLayout_DefaultPlanName2"
-      elseif 5 == PlanIndex or 6 == PlanIndex then
-        DefaultPlanNameKey = "UI_CustomLayout_DefaultPlanName3"
-      end
-      local DefaultPlanName = DefaultPlanNameKey and GText(DefaultPlanNameKey) or "Layout_" .. PlanIndex
+      local DefaultPlanName = GetDefaultMobileHudPlanName(PlanIndex)
       self:AddMobileHudPlan({HudPlanName = DefaultPlanName})
     end
   end
@@ -361,7 +456,16 @@ function Component:UpdateMobileHudPlan(PlanIndex, PlanInfo, IsChangeName)
 end
 
 function Component:RecordLayoutIndexToMappedPlan(NewPlanIndex)
-  local MappedPlanIndex = (NewPlanIndex - 1) % 2 + 1
+  local LayoutEntryIndex = GetLayoutEntryIndexByPlanIndex(NewPlanIndex)
+  if not LayoutEntryIndex then
+    self.logger.debug("RecordLayoutIndexToMappedPlan Skip", NewPlanIndex)
+    return
+  end
+  local MappedPlanIndex = self:GetLayoutRecordPlanIndex(LayoutEntryIndex)
+  if not MappedPlanIndex then
+    self.logger.debug("RecordLayoutIndexToMappedPlan MissingRecordPlanIndex", LayoutEntryIndex, NewPlanIndex)
+    return
+  end
   local ExistingPlan = self:GetMobileHudPlan(MappedPlanIndex) or {}
   local UpdatedPlan = {}
   for k, v in pairs(ExistingPlan) do
@@ -378,11 +482,16 @@ function Component:RecordLayoutIndexToMappedPlan(NewPlanIndex)
 end
 
 function Component:GetMappedPlanCurrentLayout()
-  local Plan1 = self:GetMobileHudPlan(1)
-  local Plan2 = self:GetMobileHudPlan(2)
-  local Plan1CurrentLayout = Plan1 and Plan1.CurrentLayout or 1
-  local Plan2CurrentLayout = Plan2 and Plan2.CurrentLayout or 2
-  return Plan1CurrentLayout, Plan2CurrentLayout
+  local Plan1RecordPlanIndex = self:GetLayoutRecordPlanIndex(1)
+  local Plan2RecordPlanIndex = self:GetLayoutRecordPlanIndex(2)
+  local Plan3RecordPlanIndex = self:GetLayoutRecordPlanIndex(3)
+  local Plan1 = self:GetMobileHudPlan(Plan1RecordPlanIndex)
+  local Plan2 = self:GetMobileHudPlan(Plan2RecordPlanIndex)
+  local Plan3 = self:GetMobileHudPlan(Plan3RecordPlanIndex)
+  local Plan1CurrentLayout = Plan1 and Plan1.CurrentLayout or Plan1RecordPlanIndex
+  local Plan2CurrentLayout = Plan2 and Plan2.CurrentLayout or Plan2RecordPlanIndex
+  local Plan3CurrentLayout = Plan3 and Plan3.CurrentLayout or Plan3RecordPlanIndex
+  return Plan1CurrentLayout, Plan2CurrentLayout, Plan3CurrentLayout
 end
 
 function Component:AddMobileHudPlan(PlanInfo)

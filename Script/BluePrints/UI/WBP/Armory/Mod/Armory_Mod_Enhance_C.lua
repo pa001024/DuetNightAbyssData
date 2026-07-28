@@ -419,6 +419,7 @@ function M:OnLevelUpSuccess()
   else
     self.SuccessToast.Text_Success:SetText(GText("UI_ModEnhance_Max"))
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/same_card_strengthen_success", nil, nil)
 end
 
 function M:OnLevelUpAnimFinished()

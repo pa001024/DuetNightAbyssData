@@ -35,6 +35,12 @@ return {
     ip = "10.112.0.43",
     port = 8000
   },
+  [108] = {
+    area = "China",
+    hostnum = 108,
+    ip = "10.18.200.62",
+    port = 8000
+  },
   [201] = {
     area = "China",
     hostnum = 201,
@@ -68,7 +74,7 @@ return {
   [306] = {
     area = "China",
     hostnum = 306,
-    ip = "10.18.18.4",
+    ip = "10.18.7.153",
     port = 8000
   },
   [307] = {
@@ -80,13 +86,13 @@ return {
   [308] = {
     area = "China",
     hostnum = 308,
-    ip = "10.18.5.48",
+    ip = "10.18.8.111",
     port = 8000
   },
   [311] = {
     area = "China",
     hostnum = 311,
-    ip = "10.18.8.142",
+    ip = "10.18.8.155",
     port = 18000
   },
   [312] = {
@@ -155,10 +161,28 @@ return {
     ip = "10.18.200.171",
     port = 8000
   },
-  [2012] = {
+  [511] = {
     area = "China",
-    hostnum = 2012,
-    ip = "14.103.50.93",
+    hostnum = 511,
+    ip = "10.113.0.5",
+    port = 8000
+  },
+  [512] = {
+    area = "China",
+    hostnum = 512,
+    ip = "10.113.0.2",
+    port = 8000
+  },
+  [513] = {
+    area = "China",
+    hostnum = 513,
+    ip = "10.113.0.4",
+    port = 8000
+  },
+  [514] = {
+    area = "China",
+    hostnum = 514,
+    ip = "10.113.0.1",
     port = 8000
   },
   [5001] = {

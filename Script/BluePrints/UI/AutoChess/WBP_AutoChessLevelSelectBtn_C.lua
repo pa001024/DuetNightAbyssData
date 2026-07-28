@@ -9,6 +9,7 @@ function View:InitView()
   self.Text_Linear:SetText(GText("UI_AutoChess_LinearMission"))
   self.Text_Random:SetText(GText("UI_AutoChess_RandomMission"))
   self.Text_Next:SetText(GText("UI_AutoChess_NewMissionRemain"))
+  self.Text_Random_Small:SetText(GText("UI_AutoChess_BuffChallenge"))
   self:PlayAnimation(self.In)
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   if GameInputModeSubsystem then
@@ -42,8 +43,8 @@ function View:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function View:InitGamepadView()
-  self.Controller_Linear:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
-  self.Controller_Random:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+  self.Controller_Linear:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Controller_Random:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
 function View:InitKeyboardView()
@@ -63,8 +64,8 @@ end
 function View:InitEventTimeInfos(EventTimeInfo, RequestUpdateCallback)
   self.RequestUpdateCallback = RequestUpdateCallback
   if EventTimeInfo.NextUnlockMissionId and EventTimeInfo.NextUnlockTime then
-    self.Time:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
-    self.Text_Next:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Time:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Next:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.NextUnlockMissionId = EventTimeInfo.NextUnlockMissionId
     self.NextUnlockTime = EventTimeInfo.NextUnlockTime
     self.EventTimeCountdownTimer = self:AddTimer(1, self.UpdateUnlockRequiredTime, true)
@@ -81,8 +82,8 @@ end
 
 function View:UpdateUnlockRequiredTime()
   if self.NextUnlockMissionId and self.UpdateUnlockRequiredTime then
-    self.Time:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
-    self.Text_Next:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Time:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Text_Next:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     local CurrentTime = TimeUtils.NowTime()
     if CurrentTime >= self.NextUnlockTime then
       if self.RequestUpdateCallback then

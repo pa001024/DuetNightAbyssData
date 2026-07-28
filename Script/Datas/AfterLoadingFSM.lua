@@ -5,26 +5,42 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("AfterLoadingFSM", {
+  Advertisement = {
+    FSMState = "Advertisement",
+    NextState = "MonthCard"
+  },
+  BackToTrial = {
+    FSMState = "BackToTrial",
+    NextState = "MainLineQuest"
+  },
   BeginState = {
     FSMState = "BeginState",
     NextState = "JumpToRogueMain"
   },
+  CutSceneReview = {
+    FSMState = "CutSceneReview",
+    NextState = "ReturnActivity"
+  },
   DungeonUI = {
     FSMState = "DungeonUI",
-    NextState = "OpenForcePopup"
+    NextState = "BackToTrial"
   },
   DynamicQuest = {
     FSMState = "DynamicQuest",
-    NextState = "EndState"
+    NextState = "ShowLevel"
   },
   EndState = {FSMState = "EndState"},
   Entertainment = {
     FSMState = "Entertainment",
-    NextState = "TriggerGuide"
+    NextState = "CutSceneReview"
   },
   GameplayReward = {
     FSMState = "GameplayReward",
     NextState = "SystemUnlock"
+  },
+  GuildSceneUI = {
+    FSMState = "GuildSceneUI",
+    NextState = "EndState"
   },
   JumpToRogueMain = {
     FSMState = "JumpToRogueMain",
@@ -38,9 +54,17 @@ return ReadOnly("AfterLoadingFSM", {
     FSMState = "MainLineQuest",
     NextState = "LayoutPlan"
   },
-  OpenForcePopup = {
-    FSMState = "OpenForcePopup",
-    NextState = "MainLineQuest"
+  MonthCard = {
+    FSMState = "MonthCard",
+    NextState = "TriggerGuide"
+  },
+  ReturnActivity = {
+    FSMState = "ReturnActivity",
+    NextState = "Advertisement"
+  },
+  ShowLevel = {
+    FSMState = "ShowLevel",
+    NextState = "GuildSceneUI"
   },
   SystemUnlock = {
     FSMState = "SystemUnlock",

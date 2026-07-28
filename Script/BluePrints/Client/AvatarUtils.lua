@@ -691,6 +691,57 @@ function AvatarUtils:GetTargetDataStatistics(Avatar, TargetType, TargetId)
   return Avatar.DataStatistics[TargetType .. TargetId] or 0
 end
 
+function AvatarUtils:GetPlayerPersonalInfoCharAppearance(Avatar, Char, AppearancePlan)
+  local CurrentAppearanceIndex = Char.CurrentAppearanceIndex or 1
+  if AppearancePlan and -1 ~= AppearancePlan then
+    CurrentAppearanceIndex = AppearancePlan
+  end
+  local AppearanceSuit = Char.AppearanceSuits[CurrentAppearanceIndex]
+  local CommonChar = Avatar.CommonChars[Char.CharId]
+  local SkinId = AppearanceSuit and AppearanceSuit.SkinId
+  local CharSkin = CommonChar.OwnedSkins[SkinId]
+  local HairId = AppearanceSuit and AppearanceSuit.HairId
+  local CharHair
+  if not CommonChar.OwnedHairs then
+    HairId = DataMgr.Char[Char.CharId].DefaultHairId
+  else
+    CharHair = CommonChar.OwnedHairs[HairId]
+  end
+  local Appearance = {
+    SkinId = SkinId,
+    HairId = HairId,
+    SkinLevel = CharSkin.Level or 1,
+    SkinSelectedLevel = CharSkin.SelectedLevel or 1,
+    Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
+    CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1
+  }
+  for key, value in pairs(CharSkin.Colors) do
+    if not Appearance.SkinColors then
+      Appearance.SkinColors = {}
+    end
+    Appearance.SkinColors[tonumber(key)] = value
+  end
+  if CharHair then
+    for key, value in pairs(CharHair.Colors) do
+      if not Appearance.HairColors then
+        Appearance.HairColors = {}
+      end
+      Appearance.HairColors[tonumber(key)] = value
+    end
+    Appearance.CurrentHairPlanIndex = CharHair.CurrentPlanIndex or 1
+  else
+    local DefaultColor = DataMgr.GlobalConstant.HairDefaultColor.ConstantValue
+    for i = 1, DataMgr.GlobalConstant.HairColorPart.ConstantValue do
+      if not Appearance.HairColors then
+        Appearance.HairColors = {}
+      end
+      Appearance.HairColors[i] = DefaultColor
+    end
+    Appearance.CurrentHairPlanIndex = 1
+  end
+  return Appearance
+end
+
 function AvatarUtils:GetPlayerPersonalInfoChar(Avatar, FromDb)
   local PlayerPersonalInfoChar = {}
   if Avatar.PersonalInfo and Avatar.PersonalInfo.CharDisplay then
@@ -726,62 +777,7 @@ function AvatarUtils:GetPlayerPersonalInfoChar(Avatar, FromDb)
             end
           end
         end
-        local CurrentAppearanceIndex = Char.CurrentAppearanceIndex or 1
-        if value.AppearancePlan and -1 ~= value.AppearancePlan then
-          CurrentAppearanceIndex = value.AppearancePlan
-        end
-        local AppearanceSuit = Char.AppearanceSuits[CurrentAppearanceIndex]
-        local CommonChar = Avatar.CommonChars[Char.CharId]
-        if FromDb then
-          CommonChar = Avatar.CommonChars[tostring(Char.CharId)]
-        end
-        local SkinId = AppearanceSuit and AppearanceSuit.SkinId
-        local CharSkin = CommonChar.OwnedSkins[SkinId]
-        if FromDb then
-          CharSkin = CommonChar.OwnedSkins[tostring(SkinId)]
-        end
-        local HairId = AppearanceSuit and AppearanceSuit.HairId
-        local CharHair
-        if not CommonChar.OwnedHairs then
-          HairId = DataMgr.Char[Char.CharId].DefaultHairId
-        else
-          CharHair = CommonChar.OwnedHairs[HairId]
-          if FromDb then
-            CharHair = CommonChar.OwnedHairs[tostring(HairId)]
-          end
-        end
-        local Appearance = {
-          SkinId = SkinId,
-          HairId = HairId,
-          SkinLevel = CharSkin.Level or 1,
-          SkinSelectedLevel = CharSkin.SelectedLevel or 1,
-          Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
-          CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1
-        }
-        for key, value in pairs(CharSkin.Colors) do
-          if not Appearance.SkinColors then
-            Appearance.SkinColors = {}
-          end
-          Appearance.SkinColors[tonumber(key)] = value
-        end
-        if CharHair then
-          for key, value in pairs(CharHair.Colors) do
-            if not Appearance.HairColors then
-              Appearance.HairColors = {}
-            end
-            Appearance.HairColors[tonumber(key)] = value
-          end
-          Appearance.CurrentHairPlanIndex = CharHair.CurrentPlanIndex or 1
-        else
-          local DefaultColor = DataMgr.GlobalConstant.HairDefaultColor.ConstantValue
-          for i = 1, DataMgr.GlobalConstant.HairColorPart.ConstantValue do
-            if not Appearance.HairColors then
-              Appearance.HairColors = {}
-            end
-            Appearance.HairColors[i] = DefaultColor
-          end
-          Appearance.CurrentHairPlanIndex = 1
-        end
+        local Appearance = self:GetPlayerPersonalInfoCharAppearance(Avatar, Char, value.AppearancePlan)
         local ModSuitIndex = value.ModPlan or 1
         local ModSuit = Char["ModSuit_" .. ModSuitIndex]
         local ModSuitInfo = {}
@@ -1337,6 +1333,206 @@ end
 
 function AvatarUtils:IsCharacterAttributeSwitchSameGroup(CharId_1, CharId_2)
   return DataMgr.CharacterAttributeSwitch[CharId_1] and DataMgr.CharacterAttributeSwitch[CharId_2] and DataMgr.CharacterAttributeSwitch[CharId_1].CharGroupId == DataMgr.CharacterAttributeSwitch[CharId_2].CharGroupId
+end
+
+function AvatarUtils:GetPlayerRankCharAccessory(Avatar, FromDb)
+  if not Avatar then
+    return {}
+  end
+  local DisplayInfo
+  if Avatar.PersonalInfo and Avatar.PersonalInfo.CharDisplay then
+    if Avatar.PersonalInfo.CharDisplay.Get then
+      DisplayInfo = Avatar.PersonalInfo.CharDisplay:Get(1)
+    else
+      DisplayInfo = Avatar.PersonalInfo.CharDisplay[1]
+    end
+  end
+  local CharUuid
+  if DisplayInfo then
+    CharUuid = DisplayInfo.Id
+  else
+    CharUuid = Avatar.CurrentChar
+  end
+  if FromDb and CharUuid then
+    CharUuid = StrUtils.ObjId2Str(CharUuid)
+  end
+  local Char = Avatar.Chars and Avatar.Chars[CharUuid]
+  if not Char and DisplayInfo then
+    DisplayInfo = nil
+    CharUuid = Avatar.CurrentChar
+    if FromDb and CharUuid then
+      CharUuid = StrUtils.ObjId2Str(CharUuid)
+    end
+    Char = Avatar.Chars and Avatar.Chars[CharUuid]
+  end
+  if not Char then
+    return {}
+  end
+  local CurrentAppearanceIndex = Char.CurrentAppearanceIndex or 1
+  if DisplayInfo and DisplayInfo.AppearancePlan and -1 ~= DisplayInfo.AppearancePlan then
+    CurrentAppearanceIndex = DisplayInfo.AppearancePlan
+  end
+  local AppearanceSuit = Char.AppearanceSuits[CurrentAppearanceIndex]
+  local CommonChar = Avatar.CommonChars and Avatar.CommonChars[Char.CharId]
+  if FromDb and Avatar.CommonChars then
+    CommonChar = Avatar.CommonChars[tostring(Char.CharId)]
+  end
+  if not CommonChar then
+    return {}
+  end
+  local SkinId = AppearanceSuit and AppearanceSuit.SkinId
+  local CharSkin = CommonChar.OwnedSkins and CommonChar.OwnedSkins[SkinId]
+  if FromDb and CommonChar.OwnedSkins then
+    CharSkin = CommonChar.OwnedSkins[tostring(SkinId)]
+  end
+  if not CharSkin then
+    return {}
+  end
+  local HairId = AppearanceSuit and AppearanceSuit.HairId
+  local CharHair
+  if not CommonChar.OwnedHairs then
+    HairId = DataMgr.Char[Char.CharId] and DataMgr.Char[Char.CharId].DefaultHairId
+  else
+    CharHair = CommonChar.OwnedHairs[HairId]
+    if FromDb then
+      CharHair = CommonChar.OwnedHairs[tostring(HairId)]
+    end
+  end
+  local Appearance = {
+    SkinId = SkinId,
+    HairId = HairId,
+    SkinLevel = CharSkin.Level or 1,
+    SkinSelectedLevel = CharSkin.SelectedLevel or 1,
+    Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
+    CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1
+  }
+  for key, value in pairs(CharSkin.Colors or {}) do
+    if not Appearance.SkinColors then
+      Appearance.SkinColors = {}
+    end
+    Appearance.SkinColors[tonumber(key)] = value
+  end
+  if CharHair then
+    for key, value in pairs(CharHair.Colors or {}) do
+      if not Appearance.HairColors then
+        Appearance.HairColors = {}
+      end
+      Appearance.HairColors[tonumber(key)] = value
+    end
+    Appearance.CurrentHairPlanIndex = CharHair.CurrentPlanIndex or 1
+  else
+    local DefaultColor = DataMgr.GlobalConstant.HairDefaultColor.ConstantValue
+    for i = 1, DataMgr.GlobalConstant.HairColorPart.ConstantValue do
+      if not Appearance.HairColors then
+        Appearance.HairColors = {}
+      end
+      Appearance.HairColors[i] = DefaultColor
+    end
+    Appearance.CurrentHairPlanIndex = 1
+  end
+  return {
+    CharId = Char.CharId,
+    Appearance = Appearance
+  }
+end
+
+function AvatarUtils:GetPlayerRankWeaponAccessory(Avatar, FromDb)
+  if not Avatar then
+    return {}
+  end
+  local DisplayInfo
+  if Avatar.PersonalInfo and Avatar.PersonalInfo.WeaponDisplay then
+    if Avatar.PersonalInfo.WeaponDisplay.Get then
+      DisplayInfo = Avatar.PersonalInfo.WeaponDisplay:Get(1)
+    else
+      DisplayInfo = Avatar.PersonalInfo.WeaponDisplay[1]
+    end
+  end
+  local WeaponUuid
+  if DisplayInfo then
+    WeaponUuid = DisplayInfo.Id
+  else
+    WeaponUuid = Avatar.MeleeWeapon
+  end
+  if FromDb and WeaponUuid then
+    WeaponUuid = StrUtils.ObjId2Str(WeaponUuid)
+  end
+  local Weapon = Avatar.Weapons and Avatar.Weapons[WeaponUuid]
+  if not Weapon and DisplayInfo then
+    DisplayInfo = nil
+    WeaponUuid = Avatar.MeleeWeapon
+    if FromDb and WeaponUuid then
+      WeaponUuid = StrUtils.ObjId2Str(WeaponUuid)
+    end
+    Weapon = Avatar.Weapons and Avatar.Weapons[WeaponUuid]
+  end
+  if not Weapon then
+    return {}
+  end
+  local CurrentAppearanceIndex = Weapon.CurrentAppearanceIndex or 1
+  if DisplayInfo and DisplayInfo.AppearancePlan and -1 ~= DisplayInfo.AppearancePlan then
+    CurrentAppearanceIndex = DisplayInfo.AppearancePlan
+  end
+  local AppearanceSuit = Weapon.AppearanceSuits[CurrentAppearanceIndex]
+  local SkinId = AppearanceSuit and AppearanceSuit.SkinId or Weapon.WeaponId
+  local WeaponSkin = Weapon.UsedSkins and Weapon.UsedSkins[SkinId]
+  if FromDb and Weapon.UsedSkins then
+    WeaponSkin = Weapon.UsedSkins[tostring(SkinId)]
+  end
+  if not WeaponSkin then
+    return {}
+  end
+  local Appearance = {
+    SkinId = SkinId,
+    SpecialColor = WeaponSkin.SpecialColor,
+    Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
+    CurrentPlanIndex = WeaponSkin.CurrentPlanIndex or 1
+  }
+  for key, value in pairs(WeaponSkin.Colors or {}) do
+    if not Appearance.SkinColors then
+      Appearance.SkinColors = {}
+    end
+    Appearance.SkinColors[tonumber(key)] = value
+  end
+  return {
+    WeaponId = Weapon.WeaponId,
+    Appearance = Appearance
+  }
+end
+
+function AvatarUtils:GetPersonalInfoBgIds(Avatar, FromDB)
+  local BackgroundIds = Avatar.PersonalInfo.BackgroundIds or {}
+  local Ret = {}
+  for k, v in pairs(BackgroundIds) do
+    Ret[tonumber(k) or k] = v
+  end
+  return Ret
+end
+
+function AvatarUtils:GetPersonalInfoCustomDisplay(Avatar)
+  local PersonalInfo = Avatar.PersonalInfo or {}
+  local CustomDisplay = PersonalInfo.CustomDisplay or {}
+  local Ret = CommonUtils.BinaryDump(CustomDisplay) or {}
+  local CharParamGroup = CustomDisplay.CharParamGroup or {}
+  for CharIndex, CharParam in pairs(CharParamGroup) do
+    local AppearancePlan = CharParam.AppearancePlan or 1
+    local CharId = CharParam.CharId
+    local Char
+    for _, AvatarChar in pairs(Avatar.Chars or {}) do
+      if AvatarChar.CharId == CharId then
+        Char = AvatarChar
+        break
+      end
+    end
+    if Char then
+      local RetCharParam = Ret.CharParamGroup and Ret.CharParamGroup[CharIndex]
+      if RetCharParam then
+        RetCharParam.AppearancePlan = AppearancePlan
+        RetCharParam.Appearance = self:GetPlayerPersonalInfoCharAppearance(Avatar, Char, AppearancePlan)
+      end
+    end
+  end
+  return Ret
 end
 
 return AvatarUtils

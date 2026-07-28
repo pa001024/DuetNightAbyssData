@@ -74,12 +74,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -115,7 +115,7 @@ return {
               AllowSurroundDialogue = false,
               FirstDialogueId = 51005001,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 0.5,
               BlendOutTime = 1,
               InType = "BlendIn",
@@ -135,6 +135,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

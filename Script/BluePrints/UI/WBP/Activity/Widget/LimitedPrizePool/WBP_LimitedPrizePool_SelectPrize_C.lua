@@ -1,6 +1,7 @@
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
+local BigPrizeSoundKey = "LimitedPrizePoolBigPrize"
 
 function M:Construct()
   self.TitleText = self.Text_Title
@@ -51,6 +52,7 @@ function M:Construct()
 end
 
 function M:Destruct()
+  self:StopBigPrizeVideo()
   for _, PrizeItem in ipairs(self.PrizeItems) do
     if IsValid(PrizeItem) then
       PrizeItem:UnbindSelectedChanged()
@@ -91,7 +93,14 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   return UE4.UWidgetBlueprintLibrary.Handled()
 end
 
-function M:Init(Prizes, OnConfirmSelection, OnClosed)
+function M:Init(PoolId, Prizes, OnConfirmSelection, OnClosed)
+  if type(PoolId) == "table" then
+    OnClosed = OnConfirmSelection
+    OnConfirmSelection = Prizes
+    Prizes = PoolId
+    PoolId = nil
+  end
+  self.PoolId = PoolId
   for i, Prize in pairs(Prizes) do
     local PrizeItem = self.PrizeItems[i]
     if IsValid(PrizeItem) then
@@ -117,13 +126,75 @@ function M:Init(Prizes, OnConfirmSelection, OnClosed)
   self:ListenInputTypeChanged()
   self:SetInputType(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
   self:PlayAnimation(self.FadeInAnimation)
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/limit_gift_pool_sub_page_in_xiunv", nil, nil)
+  self:PlayBigPrizeVideo()
+  local BigPrizeSoundEvent = self:GetBigPrizeSoundEvent()
+  if BigPrizeSoundEvent and "" ~= BigPrizeSoundEvent then
+    AudioManager(self):PlayUISound(self, BigPrizeSoundEvent, BigPrizeSoundKey, nil)
+  end
+end
+
+function M:GetPoolData()
+  return self.PoolId and DataMgr and DataMgr.LimitedPrizePool and DataMgr.LimitedPrizePool[self.PoolId]
+end
+
+function M:GetBigPrizeSoundEvent()
+  local PoolData = self:GetPoolData()
+  return PoolData and PoolData.BigPrizeSoundEffects
+end
+
+function M:GetBigPrizeVideoPath()
+  local PoolData = self:GetPoolData()
+  return PoolData and PoolData.BigPrizeVideoPath
+end
+
+function M:PlayBigPrizeVideo()
+  local VideoPlayer = self.VideoPlayer
+  if not IsValid(VideoPlayer) then
+    return
+  end
+  self.bBigPrizeVideoStopped = false
+  local BigPrizeVideoPath = self:GetBigPrizeVideoPath()
+  if not BigPrizeVideoPath or "" == BigPrizeVideoPath then
+    self:StopBigPrizeVideo()
+    return
+  end
+  local MediaSource = LoadObject(BigPrizeVideoPath)
+  if not IsValid(MediaSource) then
+    self:StopBigPrizeVideo()
+    return
+  end
+  VideoPlayer:Stop()
+  VideoPlayer:HideSkipButton(true)
+  VideoPlayer:SetUrlByMediaSource(MediaSource)
+  VideoPlayer:SetLooping(true)
+  if not VideoPlayer:Play() then
+    self:StopBigPrizeVideo()
+    return
+  end
+  VideoPlayer:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function M:StopBigPrizeVideo()
+  if self.bBigPrizeVideoStopped then
+    return
+  end
+  self.bBigPrizeVideoStopped = true
+  local VideoPlayer = self.VideoPlayer
+  if not IsValid(VideoPlayer) then
+    return
+  end
+  VideoPlayer:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  VideoPlayer:Stop()
+  if VideoPlayer.ClearVideoSurface then
+    VideoPlayer:ClearVideoSurface()
+  end
 end
 
 function M:Close()
   if self:IsAnimationPlaying(self.FadeOutAnimation) then
     return
   end
+  self:StopBigPrizeVideo()
   self:PlayAnimation(self.FadeOutAnimation)
   if self.OnClosed and self.OnClosed[1] and self.OnClosed[2] then
     self.OnClosed[2](self.OnClosed[1])

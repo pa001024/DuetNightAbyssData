@@ -337,6 +337,20 @@ function Component:SetIronRareDrop(Callback, DungeonId, DropId)
   self:CallServer("SetIronRareDrop", cb, DungeonId, DropId)
 end
 
+function Component:BreakDownIronTickets(Callback, TicketUids)
+  DebugPrint("BreakDownIronTickets", TicketUids)
+  assert(TicketUids)
+  
+  local function cb(ret)
+    DebugPrint("BreakDownIronTickets callback", ret)
+    if Callback then
+      Callback(ret)
+    end
+  end
+  
+  self:CallServer("BreakDownIronTickets", cb, TicketUids)
+end
+
 function Component:GMDungeonEventTest(DungeonId, Count)
   local function Cb(ret1, ret2)
     DebugPrint("[GMDungeonEventTest] Detail:", CommonUtils.TableToString(ret2))

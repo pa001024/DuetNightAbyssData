@@ -24,7 +24,7 @@ end
 
 function M:InitAllWeaponInfo()
   local AllStuffCount = #self.StuffInfoList
-  if AllStuffCount < 3 then
+  if AllStuffCount < 4 then
     self.WB_ForSale:ClearChildren()
     for Index, StuffInfo in ipairs(self.StuffInfoList) do
       local ItemObject = StuffIconObject:CreateBagItemContent(StuffInfo)

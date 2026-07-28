@@ -69,52 +69,87 @@ function M:PlayTalk(TalkConfigKey, TalkAction, AudioAttachActor)
   if not TalkConfigKey or not TalkAction then
     return false
   end
+  local InteractiveActor = TalkAction.InteractiveActor
   
   local function TalkEndCallback()
-    if IsValid(TalkAction) and TalkAction.OnPlayTalkEnd then
-      TalkAction.OnPlayTalkEnd:Broadcast()
-    end
+    TalkAction.OnPlayTalkEnd:Broadcast()
+  end
+  
+  local function TalkFailCallback()
+    TalkAction.OnPlayTalkInterrupted:Broadcast()
+  end
+  
+  local function TalkPlayDialogue(DialogueId)
+    TalkAction.OnPlayDialogue:Broadcast(DialogueId)
   end
   
   DebugPrint("TS:PlayTalk", TalkConfigKey, TalkAction)
   local TalkData = self:GetRegisteredTalkData(TalkConfigKey)
   if TalkData then
     TalkData.AudioAttachActor = AudioAttachActor
-    self:RegisterTalkTask(TalkConfigKey, TalkEndCallback)
+    self:RegisterTalkTask(TalkConfigKey, TalkEndCallback, TalkFailCallback, TalkPlayDialogue)
     return true
   end
   local TalkTriggerInfo = DataMgr.TalkTrigger[TalkConfigKey]
   if not TalkTriggerInfo then
-    local TalkContext = GWorld.GameInstance:GetTalkContext()
-    TalkContext:StartTalk(nil, TalkConfigKey .. ".story", TalkConfigKey, nil, nil, {Func = TalkEndCallback, Obj = TalkAction}, nil)
+    self:PlayStorylineTalk(TalkConfigKey .. ".story", TalkConfigKey, TalkConfigKey, InteractiveActor, TalkAction.RelatedNPCIds, TalkPlayDialogue, TalkEndCallback)
     return true
   end
   if TalkTriggerInfo.StoryLinePath then
-    local TalkContext = GWorld.GameInstance:GetTalkContext()
-    if TalkContext then
-      TalkContext:StartTalk(TalkConfigKey, nil, nil, nil, nil, {Func = TalkEndCallback, Obj = TalkAction})
-      return true
-    end
-  else
-    local RawData = {
-      AudioAttachActor = AudioAttachActor,
-      TalkType = TalkTriggerInfo.TalkType,
-      FirstDialogueId = TalkTriggerInfo.DialogueId,
-      BlendInTime = 0.5,
-      BlendOutTime = 0.5,
-      TalkActors = {}
-    }
-    local Key = self:RegisterTalkData(RawData)
-    self:RegisterTalkTask(Key, TalkEndCallback)
+    self:PlayStorylineTalk(TalkTriggerInfo.StoryLinePath, TalkConfigKey, TalkTriggerInfo.TalkId, InteractiveActor, TalkAction.RelatedNPCIds, TalkPlayDialogue, TalkEndCallback)
     return true
   end
-  return false
+  local RawData = {
+    AudioAttachActor = AudioAttachActor,
+    TalkType = TalkTriggerInfo.TalkType,
+    FirstDialogueId = TalkTriggerInfo.DialogueId,
+    BlendInTime = 0.5,
+    BlendOutTime = 0.5,
+    TalkActors = {}
+  }
+  local Key = self:RegisterTalkData(RawData)
+  self:RegisterTalkTask(Key, TalkEndCallback, TalkFailCallback, TalkPlayDialogue)
+  return true
 end
 
-function M:RegisterTalkTask(Key, OnTalkEndCallback, OnFailCallback)
+function M:PlayStorylineTalk(StorylinePath, TalkTriggerId, BranchTriggerId, InteractiveActor, RelatedNPCIds, OnPlayDialogue, OnTalkEnd)
+  local TalkActors = {
+    {
+      TalkActorType = "Player",
+      TalkActorId = 0,
+      TalkActorVisible = true
+    }
+  }
+  if IsValid(InteractiveActor) and string.lower(InteractiveActor.UnitType) == "npc" then
+    table.insert(TalkActors, {
+      TalkActorType = "Npc",
+      TalkActorId = InteractiveActor.UnitId,
+      TalkActorVisible = true
+    })
+  end
+  if RelatedNPCIds then
+    for _, NPCId in pairs(RelatedNPCIds) do
+      table.insert(TalkActors, {
+        TalkActorType = "Npc",
+        TalkActorId = NPCId,
+        TalkActorVisible = true
+      })
+    end
+  end
+  return GWorld.StoryMgr:RunStory(StorylinePath, nil, nil, OnTalkEnd, OnTalkEnd, {
+    TalkTriggerId = TalkTriggerId,
+    PlayDialogueCallBack = OnPlayDialogue,
+    TalkActors = TalkActors,
+    InteractiveActor = InteractiveActor,
+    BranchTriggerId = BranchTriggerId
+  })
+end
+
+function M:RegisterTalkTask(Key, OnTalkEndCallback, OnFailCallback, OnPlayDialogueCallback)
   local TalkTask, TalkTaskData = self:CreateTalkTaskData(Key)
   TalkTask.OnTalkEndCallback = OnTalkEndCallback
   TalkTask.OnFailCallback = OnFailCallback
+  TalkTaskData.PlayDialogueCallBack = OnPlayDialogueCallback
   if self.bPauseAdvance then
     self:DelayRegisterTask(Key, TalkTask)
   else
@@ -651,9 +686,7 @@ local ImmersiveTalkTypes = {
   ETalkType.FaultBlack,
   ETalkType.FixSimple,
   ETalkType.FreeSimple,
-  ETalkType.Simple,
-  ETalkType.Impression,
-  ETalkType.QuestImpression
+  ETalkType.Simple
 }
 
 function M:CheckInImmersiveTalk()
@@ -868,7 +901,8 @@ function M:GetNpcPlayDialogueCallback(NpcId)
           return
         end
         Avatar:TriggerRecordSignBoardNpcTalk(NpcId, DialogueId)
-      end
+      end,
+      Obj = self
     }
   end
 end

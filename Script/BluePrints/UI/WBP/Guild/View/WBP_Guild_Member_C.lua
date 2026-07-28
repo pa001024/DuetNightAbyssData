@@ -615,7 +615,7 @@ end
 
 function M:RefreshGuildMemberChatStatus()
   for _, Content in pairs(self.List_Member:GetListItems()) do
-    if Content.SelfWidget then
+    if Content.SelfWidget and not Content.IsEmpty then
       Content.SelfWidget:RefreshChatStatus()
     end
   end

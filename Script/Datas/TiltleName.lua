@@ -374,7 +374,7 @@ return ReadOnly("TiltleName", {
     TextMapId = "Title_10092"
   },
   [10093] = {
-    TextMapContent = "伊薇的",
+    TextMapContent = "艾达（？？）的",
     TextMapId = "Title_10093"
   },
   [10094] = {
@@ -782,7 +782,7 @@ return ReadOnly("TiltleName", {
     TextMapId = "Title_20076"
   },
   [20077] = {
-    TextMapContent = "伊薇",
+    TextMapContent = "艾达（？？）",
     TextMapId = "Title_20077"
   },
   [20078] = {

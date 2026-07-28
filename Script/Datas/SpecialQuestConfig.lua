@@ -2483,5 +2483,47 @@ return ReadOnly("SpecialQuestConfig", {
     TalkTriggerId = 1001,
     TriggerBoxStaticCreatorId = 312480269,
     UniversalConfigId = 20040104
+  },
+  [20040607] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 200406,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20040607,
+    StoryPath = "SpecialQuest\\Side\\200406_FindSound.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480434,
+    UniversalConfigId = 20040607
+  },
+  [20040613] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 200406,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20040613,
+    StoryPath = "SpecialQuest\\Side\\200406_Battle.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480434,
+    UniversalConfigId = 20040613
+  },
+  [20040808] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 200408,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20040808,
+    StoryPath = "SpecialQuest\\Side\\20040808.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 242890203,
+    UniversalConfigId = 20040808
+  },
+  [20040814] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 200408,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20040814,
+    StoryPath = "SpecialQuest\\Side\\20040814.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 242480644,
+    UniversalConfigId = 20040814
   }
 })

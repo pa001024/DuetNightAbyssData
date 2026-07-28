@@ -74,12 +74,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101101,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Xiao_1190087",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -136,7 +136,7 @@ return {
               AllowSurroundDialogue = false,
               FirstDialogueId = 51007543,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "BlendIn",
@@ -156,6 +156,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -279,7 +280,7 @@ return {
               AllowSurroundDialogue = false,
               FirstDialogueId = 51007501,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "BlendIn",
@@ -298,6 +299,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

@@ -290,6 +290,10 @@ return ReadOnly("AttributeType", {
     Ranged = {
       ID = "WeaponCRDModifierRate",
       Type = "Ranged"
+    },
+    Ultra = {
+      ID = "WeaponCRDModifierRate",
+      Type = "Ultra"
     }
   },
   WeaponCRDModifierValue = {
@@ -304,6 +308,10 @@ return ReadOnly("AttributeType", {
     Ranged = {
       ID = "WeaponCRDModifierValue",
       Type = "Ranged"
+    },
+    Ultra = {
+      ID = "WeaponCRDModifierValue",
+      Type = "Ultra"
     }
   },
   WeaponCRIModifierRate = {
@@ -318,6 +326,10 @@ return ReadOnly("AttributeType", {
     Ranged = {
       ID = "WeaponCRIModifierRate",
       Type = "Ranged"
+    },
+    Ultra = {
+      ID = "WeaponCRIModifierRate",
+      Type = "Ultra"
     }
   },
   WeaponCRIModifierValue = {
@@ -332,6 +344,10 @@ return ReadOnly("AttributeType", {
     Ranged = {
       ID = "WeaponCRIModifierValue",
       Type = "Ranged"
+    },
+    Ultra = {
+      ID = "WeaponCRIModifierValue",
+      Type = "Ultra"
     }
   }
 })

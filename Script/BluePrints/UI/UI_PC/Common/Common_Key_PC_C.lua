@@ -88,8 +88,8 @@ function Common_Key_PC:Destruct()
   end
 end
 
-function Common_Key_PC:SetForbidKey(bOn)
-  if bOn == self.IsCurForbidkey then
+function Common_Key_PC:SetForbidKey(bOn, bForce)
+  if bOn == self.IsCurForbidkey and not bForce then
     return
   end
   if bOn and self.bAllowForbid then
@@ -180,6 +180,10 @@ function Common_Key_PC:_InitInternal(CreateInfo)
   if self:_IsCompound() then
     if CreateInfo.bIsSubKeyDesc then
       self:CreateSubKeyDesc(CreateInfo)
+    elseif self:_CanCreateWrapBoxKeyDesc() then
+      if self.NeedUpdateCreateInfo then
+        self:_CreateSubKeysInWrapBox(CreateInfo.KeyInfoList)
+      end
     elseif #CreateInfo.KeyInfoList > 1 then
       if self.NeedUpdateCreateInfo then
         self:_CreateSubKey(CreateInfo.KeyInfoList[1], "Key_1")
@@ -256,6 +260,9 @@ function Common_Key_PC:_CanHandleButtonEvent(CreateInfo)
 end
 
 function Common_Key_PC:_CreateSubKey(KeyInfo, KeyName)
+  if not self[KeyName] then
+    return
+  end
   local Widget = UE4.UWidgetBlueprintLibrary.Create(self, self:_GetBlueprintClass(KeyInfo.Type))
   Widget:CreateCommonKey({
     KeyInfoList = {KeyInfo},
@@ -270,6 +277,47 @@ function Common_Key_PC:_CreateSubKey(KeyInfo, KeyName)
   self[KeyName]:AddChild(Widget)
 end
 
+function Common_Key_PC:_CanCreateWrapBoxKeyDesc()
+  return self.Key and self.Text_Desc and self.Key.GetChildrenCount and not self.Key_1 and not self.Key_2
+end
+
+function Common_Key_PC:_CreateSubKeysInWrapBox(KeyInfoList, CreateParams)
+  if not self.Key or not KeyInfoList then
+    return
+  end
+  local bEnableEvent = false
+  local bButton = self.bButton
+  local bLongPress = self.bLongPress
+  if CreateParams then
+    if CreateParams.bEnableEvent ~= nil then
+      bEnableEvent = CreateParams.bEnableEvent
+    end
+    if CreateParams.bButton ~= nil then
+      bButton = CreateParams.bButton
+    end
+    if CreateParams.bLongPress ~= nil then
+      bLongPress = CreateParams.bLongPress
+    end
+  end
+  self.Key:ClearChildren()
+  for _, KeyInfo in ipairs(KeyInfoList) do
+    local WidgetClass = self:_GetBlueprintClass(KeyInfo.Type)
+    if WidgetClass then
+      local Widget = UE4.UWidgetBlueprintLibrary.Create(self, WidgetClass)
+      Widget:CreateCommonKey({
+        KeyInfoList = {KeyInfo},
+        bEnableEvent = bEnableEvent,
+        bButton = bButton,
+        bLongPress = bLongPress
+      })
+      if self.SubWidgetList then
+        self.SubWidgetList:Add(Widget)
+      end
+      self.Key:AddChild(Widget)
+    end
+  end
+end
+
 function Common_Key_PC:CreateSubKeyDesc(KeyInfo)
   self.bIsSubKeyDesc = true
   KeyInfo.bIsSubKeyDesc = true
@@ -281,6 +329,16 @@ function Common_Key_PC:CreateSubKeyDesc(KeyInfo)
   self.KeyInfoList = KeyInfo.KeyInfoList
   if KeyInfo.Desc then
     self:SetDescription(KeyInfo.Desc)
+  end
+  if self:_CanCreateWrapBoxKeyDesc() and #KeyInfo.KeyInfoList > 2 then
+    self:_CreateSubKeysInWrapBox(KeyInfo.KeyInfoList, {
+      bEnableEvent = false,
+      bButton = false,
+      bLongPress = true
+    })
+    self:_Reset2InitState()
+    self.SkipRefreshInputType = KeyInfo.SkipRefreshInputType
+    return
   end
   local KeyWidget = UE4.UWidgetBlueprintLibrary.Create(self, self:_GetBlueprintClass(KeyInfo.Type))
   KeyWidget:CreateCommonKey({
@@ -388,6 +446,9 @@ function Common_Key_PC:_GetBlueprintClass(Type)
 end
 
 function Common_Key_PC:SetDescription(Description)
+  if not self.Text_Desc then
+    return
+  end
   self.Text_Desc:SetText(Description)
 end
 
@@ -707,20 +768,20 @@ end
 function Common_Key_PC:_OnButtonRealShortPressed()
   DebugPrint("OnButtonRealShortPressed", self.Press)
   if self.Press then
-    self:PlayAnimation(self.Press)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
   end
   if not self.bIsHovered and self.Hover then
-    self:PlayAnimation(self.Hover)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Hover)
   end
   self:_PressLogic()
 end
 
 function Common_Key_PC:_OnButtonRealShortReleased()
   if self.Normal then
-    self:PlayAnimation(self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end
   if not self.bIsHovered and self.UnHover then
-    self:PlayAnimation(self.UnHover)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.UnHover)
   end
   self:_ReleaseLogic()
 end
@@ -742,7 +803,7 @@ function Common_Key_PC:_OnButtonRealLongPressed(bSetTimeRange, StartAtTime, EndA
     self.SoundFunc()
   end
   if self.bIsHovered and self.UnHover then
-    self:PlayAnimation(self.UnHover)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.UnHover)
   end
 end
 
@@ -752,13 +813,13 @@ function Common_Key_PC:_OnButtonRealLongReleased()
   end
   if self.LongPress then
     self:_ResetState(self.LongPress)
-    self:PlayAnimation(self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
     AudioManager(self):StopSound(self, "LongPress")
   elseif self.bSpecialLongPress and self.Press then
-    self:PlayAnimation(self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end
   if self.bIsHovered and self.Hover then
-    self:PlayAnimation(self.Hover)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Hover)
   end
 end
 
@@ -836,7 +897,7 @@ function Common_Key_PC:EnableKey()
   self.bHasButtonPressed = false
   self:StopAllAnimations()
   if self.Normal then
-    self:PlayAnimation(self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end
 end
 
@@ -876,13 +937,15 @@ function Common_Key_PC:_Update(bSetTimeRange, StartAtTime, EndAtTime)
       self.bHasTriggerLongRelease = true
       self:_ResetWhenNotNeedUpdate()
       self:_ExecuteLogic()
+      self:PlayAnimation(self.Normal)
+      self.bHasButtonPressed = false
     end
   end
 end
 
 function Common_Key_PC:_ResetState(Anim)
-  self:PlayAnimation(Anim)
   self:StopAnimation(Anim)
+  EMUIAnimationSubsystem:SetWidgetAnimationToStart(self, Anim)
 end
 
 function Common_Key_PC:OnMouseButtonDown(MyGeometry, InKeyEvent)

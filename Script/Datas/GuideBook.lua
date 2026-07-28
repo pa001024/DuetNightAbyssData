@@ -1020,6 +1020,22 @@ return ReadOnly("GuideBook", {
     GuideNoteTab = 5,
     RewardId = 7000
   },
+  [168] = {
+    CompleteUIGuideId = 155,
+    GuideId = 155,
+    GuideNoteId = 168,
+    GuideNoteTab = 3,
+    MechanismTag = "ExpMount",
+    RewardId = 7000
+  },
+  [169] = {
+    CompleteUIGuideId = 156,
+    GuideId = 156,
+    GuideNoteId = 169,
+    GuideNoteTab = 3,
+    MechanismTag = "ExpMountFly",
+    RewardId = 7000
+  },
   [1001] = {
     CompleteUIGuideId = 10011,
     GuideId = 10011,

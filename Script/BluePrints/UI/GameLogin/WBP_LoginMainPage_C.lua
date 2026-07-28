@@ -52,6 +52,9 @@ function WBP_GameStartMainPage_C:Initialize(Initializer)
   self.bCheckPatchOutPlayed = false
   self.PatchFinish = false
   self.bRetryRedownload = false
+  self.bDevQuickLoginWaitingGetAllAvatars = false
+  self.bDevQuickLoginGetAllAvatarsFinished = false
+  self.DevQuickLoginSelectedServerInfo = nil
 end
 
 function WBP_GameStartMainPage_C:ReceiveEnterState(EnteredState)
@@ -503,11 +506,13 @@ end
 
 function WBP_GameStartMainPage_C:OnGetAllAvatars()
   DebugPrint("OnGetAllAvatars")
+  local bDevQuickLoginGetAllAvatars = self.bDevQuickLoginWaitingGetAllAvatars
+  local DevQuickLoginSelectedServerInfo = self.DevQuickLoginSelectedServerInfo
   self:ResetGetAllAvatarsBlock()
   self:SetServerInfo(nil)
   self.RecommandServerInfo = nil
   local CachedServerInfo = EMCache:Get("CacheServerInfo")
-  if CachedServerInfo and CachedServerInfo.ServerInfo and CachedServerInfo.SdkUserId == HeroUSDKUtils.GetUserInfo().sdkUserId then
+  if not bDevQuickLoginGetAllAvatars and CachedServerInfo and CachedServerInfo.ServerInfo and CachedServerInfo.SdkUserId == HeroUSDKUtils.GetUserInfo().sdkUserId then
     DebugPrint("OnGetAllAvatars Use Cache ServerInfo", CachedServerInfo.ServerInfo.hostnum, CachedServerInfo.SdkUserId)
     for _, ServerInfo in pairs(self.ServerInfos) do
       if ServerInfo.hostnum == CachedServerInfo.ServerInfo.hostnum then
@@ -586,15 +591,25 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
     self.VB_ServerLocation:SetVisibility(ESlateVisibility.Visible)
     self.Text_ServerLoaction:SetText(GText(self.ServerInfo.area))
     self.Text_OverSeaSeverTitle:SetText(GText(self.ServerInfo.area))
-  elseif 0 == CommonUtils.TableLength(GWorld.GetAvatarInfos) then
-    DebugPrint("OnGetAllAvatars No Avatar, Random Select ServerInfo")
-    self:SetServerInfo(self:RandomServerInfo(self.ServerInfos))
-  elseif not self.ServerInfo then
-    for _, Avatar in pairs(GWorld.GetAvatarInfos) do
-      if self.ServerInfos[Avatar.Hostnum] then
-        self:SetServerInfo(self.ServerInfos[Avatar.Hostnum])
-        DebugPrint("OnGetAllAvatars Select ServerInfo by Avatar Hostnum", self.ServerInfo.hostnum)
-        break
+  else
+    local AvatarCount = CommonUtils.TableLength(GWorld.GetAvatarInfos)
+    if bDevQuickLoginGetAllAvatars and DevQuickLoginSelectedServerInfo and DevQuickLoginSelectedServerInfo.hostnum then
+      local SelectedHostnum = DevQuickLoginSelectedServerInfo.hostnum
+      self:SetServerInfo(self.ServerInfos[SelectedHostnum] or DevQuickLoginSelectedServerInfo)
+      DebugPrint("DevQuickLogin GetAllAvatars keep selected server", SelectedHostnum)
+    end
+    if 0 == AvatarCount then
+      if not self.ServerInfo then
+        DebugPrint("OnGetAllAvatars No Avatar, Random Select ServerInfo")
+        self:SetServerInfo(self:RandomServerInfo(self.ServerInfos))
+      end
+    elseif not self.ServerInfo then
+      for _, Avatar in pairs(GWorld.GetAvatarInfos) do
+        if self.ServerInfos[Avatar.Hostnum] then
+          self:SetServerInfo(self.ServerInfos[Avatar.Hostnum])
+          DebugPrint("OnGetAllAvatars Select ServerInfo by Avatar Hostnum", self.ServerInfo.hostnum)
+          break
+        end
       end
     end
   end
@@ -608,6 +623,14 @@ function WBP_GameStartMainPage_C:OnGetAllAvatars()
     self.Text_Login:SetText(GText("UI_LOGIN_ENTERGAME"))
   end
   self.RecommandServerInfo = self.ServerInfo
+  if bDevQuickLoginGetAllAvatars then
+    self.bDevQuickLoginWaitingGetAllAvatars = false
+    self.bDevQuickLoginGetAllAvatarsFinished = nil ~= self.ServerInfo
+    if self.bDevQuickLoginGetAllAvatarsFinished then
+      DebugPrint("DevQuickLogin GetAllAvatars finish, continue login", self.ServerInfo.hostnum)
+      self:EMLogin()
+    end
+  end
 end
 
 function WBP_GameStartMainPage_C:OnCompilePSODelegateStart(NumPrecompilesRemaining, NumPrecompilesComplete)
@@ -768,14 +791,24 @@ end
 function WBP_GameStartMainPage_C:GetAllAvatars()
   self:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self.ServerInfos = nil
-  CdnTool:GetAllAvatars(self.AccountId, function(Ret, Reason, Servers)
+  
+  local function Callback(Ret, Reason, Servers)
     DebugPrint("GetAllAvatars", Ret, Reason)
     if not Ret or not Servers then
       HeroUSDKSubsystem(self):UploadTrackLog_Lua("login_fail", {fail_info = Reason})
       return
     end
     self.ServerInfos = Servers
-  end)
+  end
+  
+  if GWorld.IsDev then
+    if not self.ServerInfo then
+      self:GetDefaultServerInfo()
+    end
+    CdnTool:DevGetAllAvatars(self.AccountId, self.ServerInfo, Callback)
+  else
+    CdnTool:GetAllAvatars(self.AccountId, Callback)
+  end
   self:AddTimer(3, function()
     if not GWorld.GetAvatarInfos then
       if GWorld.NetworkMgr then
@@ -786,8 +819,13 @@ function WBP_GameStartMainPage_C:GetAllAvatars()
       if AHotUpdateGameMode.IsGlobalPak() then
         CheckMaintenanceHostID = 20001
       end
-      if GWorld.IsDev then
+      if GWorld.IsDev and self.ServerInfo then
         CheckMaintenanceHostID = self.ServerInfo.hostnum
+      end
+      if GWorld.IsDev and self.bDevQuickLoginWaitingGetAllAvatars then
+        self.bDevQuickLoginWaitingGetAllAvatars = false
+        self.bDevQuickLoginGetAllAvatarsFinished = false
+        self.DevQuickLoginSelectedServerInfo = nil
       end
       GWorld.GameInstance:CheckMaintenanceInfo(CheckMaintenanceHostID, function(IsSuccess, bHasContent)
         HeroUSDKSubsystem(self):UploadTrackLog_Lua("login_fail", {
@@ -810,6 +848,9 @@ function WBP_GameStartMainPage_C:ConnectServer()
     return
   end
   self.bLogin = true
+  self.bDevQuickLoginWaitingGetAllAvatars = false
+  self.bDevQuickLoginGetAllAvatarsFinished = false
+  self.DevQuickLoginSelectedServerInfo = nil
   GWorld.GameInstance.bHandleNetError = false
   self:AddTimer(3, self.ReleaseLoginBtn)
   DebugPrint("Real Login")
@@ -924,6 +965,14 @@ function WBP_GameStartMainPage_C:EMLogin()
   self.IsQuickLogin = not HeroUSDKUtils.IsEnable()
   if not self.IsQuickLogin and not HeroUSDKUtils.HasLogin() then
     HeroUSDKSubsystem(self):HeroSDKLogin()
+    return
+  end
+  if GWorld.IsDev and self.IsQuickLogin and not self.bDevQuickLoginWaitingGetAllAvatars and not self.bDevQuickLoginGetAllAvatarsFinished then
+    self.bDevQuickLoginWaitingGetAllAvatars = true
+    self.DevQuickLoginSelectedServerInfo = self.ServerInfo
+    GWorld.GetAvatarInfos = nil
+    DebugPrint("DevQuickLogin GetAllAvatars begin", self.ServerInfo and self.ServerInfo.hostnum or "nil")
+    self:GetAllAvatars()
     return
   end
   if not self.ServerInfo then

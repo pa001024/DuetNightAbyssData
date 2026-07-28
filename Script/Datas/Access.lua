@@ -290,6 +290,10 @@ return ReadOnly("Access", {
     AccessKey = "Text_IronSurvival",
     AccessText = "Text_IronSurvival"
   },
+  Text_IronSurvivalCoin = {
+    AccessKey = "Text_IronSurvivalCoin",
+    AccessText = "Text_IronSurvivalCoin"
+  },
   Text_LevelReward = {
     AccessKey = "Text_LevelReward",
     AccessText = "UI_Player_Level_Reward"

@@ -98,12 +98,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_TriggerBox01_232010266",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -227,6 +227,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -292,6 +293,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -334,8 +336,7 @@ return {
               SoundPath = "event:/bgm/1_1/0125_story_zhiliu_betray",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104501, 104503},
+              RelatedRegionId = {104501, 104503},
               bStoreToServer = false
             }
           },
@@ -359,7 +360,9 @@ return {
               TargetTime = 19.5,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           }
         },
@@ -392,12 +395,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {},
@@ -453,12 +456,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {104503},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_TriggerBox02_232010267",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -753,6 +756,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -839,6 +843,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -889,6 +894,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -980,7 +986,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 3473.636506786685, y = 592.2131913494143},
-            propsData = {bEnablePP = true, PPEnum = 0}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 0,
+              PPWeight = 1
+            }
           },
           ["1773058139327430806"] = {
             key = "1773058139327430806",
@@ -1250,12 +1260,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {},
@@ -1311,12 +1321,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_TriggerBox02_232010267",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1434,6 +1444,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1511,6 +1522,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1582,7 +1594,9 @@ return {
               TargetTime = 15,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["177391023098616710805"] = {
@@ -1594,7 +1608,9 @@ return {
               TargetTime = 1,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17743360508991269389"] = {
@@ -1620,8 +1636,7 @@ return {
               SoundPath = "event:/bgm/1_1/0106_scene_cave_near_sea",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104501, 104503},
+              RelatedRegionId = {104501, 104503},
               bStoreToServer = false
             }
           },
@@ -1666,12 +1681,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_TriggerBox05_232010278",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1865,12 +1880,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2099,12 +2114,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104501,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_TriggerBox05_232010278",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {

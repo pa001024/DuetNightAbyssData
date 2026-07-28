@@ -7,6 +7,7 @@ local M = Class({
 
 function M:Construct()
   self.bOpen = true
+  self.InvalidationBox_0:SetCanCache(true)
   self:PlayAnimation(self.Normal)
   self:InitChannel()
   self:InitKeyInfo()
@@ -34,8 +35,20 @@ function M:OnReddotUpdateChatMainMenu()
 end
 
 function M:Destruct()
+  self.InvalidationBox_0:SetCanCache(true)
   ChatController:UnRegisterEvent(self)
   ReddotManager.RemoveListener(ChatCommon.ReddotName, self)
+end
+
+function M:NotInvalidationBoxCacheForAWhile(TimerProvider)
+  if TimerProvider and TimerProvider.AddTimer then
+    self.InvalidationBox_0:SetCanCache(false)
+    TimerProvider:AddTimer(0.5, function()
+      if IsValid(self) then
+        self.InvalidationBox_0:SetCanCache(true)
+      end
+    end)
+  end
 end
 
 function M:InitChannel()
@@ -87,6 +100,10 @@ function M:ShowChatText(MsgWrap)
   local GuildRecruitContent = ChatController:ParseGuildRecruitText(MsgWrap)
   if nil ~= GuildRecruitContent then
     Content = GuildRecruitContent
+  end
+  local AutoChessContent = ChatController:ParseAutoChessShareText(MsgWrap)
+  if AutoChessContent then
+    Content = AutoChessContent
   end
   local Message = ChannelName .. SenderName .. Content
   self:PlayAnimation(self.Change)

@@ -5,10 +5,13 @@ local M = Class({
 })
 
 function M:InitContent(Params)
+  self.GameInputModeSubsystem = self.GameInputModeSubsystem or UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   self.Params = Params
+  self.IsSharedSquad = Params.IsSharedSquad
+  self.IsEditing = Params.IsEditing
   if Params.IsSet then
     self.WS_Type:SetActiveWidgetIndex(0)
-  else
+  elseif not self.IsSharedSquad then
     self.WS_Type:SetActiveWidgetIndex(1)
   end
   self.Owner = Params.Owner
@@ -16,20 +19,34 @@ function M:InitContent(Params)
   self.PresetIndex = Params.PresetIndex
   self.Text_Cost_Desc:SetText(GText("UI_AutoChess_Cost"))
   self.Text_Num_Desc:SetText(GText("UI_AutoChess_MonsterCount"))
-  self.Text_Name:SetText(GText(Params.GroupText))
+  if self.IsSharedSquad then
+    self.Text_Name:SetText(GText(string.format("UI_AutoChess_Lineup%s", self.PresetIndex)))
+  else
+    self.Text_Name:SetText(GText(Params.GroupText))
+  end
   self.Text_Add:SetText(GText("UI_AutoChess_SaveLineup"))
+  self.TextEdit:SetText(GText("UI_AutoChess_Editing"))
   self:PlayAnimation(self.Normal)
   self:InitButton()
   self:InitButtonGamepadView()
   self:InitSquad()
+  self:InitBuffList()
 end
 
 function M:InitSquad()
   self:RequestCachedSquadInfo()
-  if self.CachedSquadInfo and not self:IsEmptySquadInfo(self.CachedSquadInfo[self.PresetIndex]) then
+  if not (not self.CachedSquadInfo or self:IsEmptySquadInfo(self.CachedSquadInfo[self.PresetIndex])) or self.IsSharedSquad then
     self.WS_Type:SetActiveWidgetIndex(0)
     self:RefreshList(self.CachedSquadInfo[self.PresetIndex], 1)
-    self.WS_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.IsSharedSquad then
+      if self.IsEditing then
+        self.WS_Btn:SetActiveWidgetIndex(2)
+      else
+        self.WS_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    else
+      self.WS_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 
@@ -82,11 +99,24 @@ function M:RequestCachedSquadInfo()
   if not Avatar then
     return
   end
-  if Avatar.AutoChess and Avatar.AutoChess.Squads == nil then
-    DebugPrint("@@@AutoChessPreset no AutoChess GetSquadInfo")
-    return
+  if not self.IsSharedSquad then
+    if Avatar.AutoChess and Avatar.AutoChess.Squads == nil then
+      DebugPrint("@@@AutoChessPreset no AutoChess GetSquadInfo")
+      return
+    end
+    self.CachedSquadInfo = Avatar.AutoChess.Squads
+  else
+    if Avatar.AutoChess and nil == Avatar.AutoChess.SharedSquads then
+      DebugPrint("@@@AutoChessPreset no AutoChess GetSharedSquadInfo")
+      return
+    end
+    self.CachedSquadInfo = {}
+    self.CachedBuffInfo = {}
+    for index, Info in pairs(Avatar.AutoChess.SharedSquads) do
+      self.CachedSquadInfo[index] = Info.Props.Squad
+      self.CachedBuffInfo[index] = Info.Props.Buffs
+    end
   end
-  self.CachedSquadInfo = Avatar.AutoChess.Squads
 end
 
 function M:InitButton()
@@ -96,7 +126,11 @@ function M:InitButton()
   self.Btn_Apply:UnBindEventOnClickedByObj(self)
   self.Btn_Rewrite:UnBindEventOnClickedByObj(self)
   self.Btn_Erase.Button_Area.OnClicked:Clear()
-  self.Btn_Enter.Text_Button:SetText(GText("UI_CustomLayout_Save"))
+  if self.IsSharedSquad then
+    self.Btn_Enter.Text_Button:SetText(GText("UI_AutoChess_Edit"))
+  else
+    self.Btn_Enter.Text_Button:SetText(GText("UI_CustomLayout_Save"))
+  end
   self.Btn_Rewrite.Text_Button:SetText(GText("UI_AutoChess_CoverLineup"))
   self.Btn_Apply.Text_Button:SetText(GText("UI_AutoChess_LoadLineup"))
   self.Btn_Add.OnClicked:Add(self, self.OnClickAdd)
@@ -117,9 +151,21 @@ function M:InitButton()
 end
 
 function M:OnClickAdd()
-  local Res = self:ShowCurrentSquad()
-  AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_team_preset_click", "AutoChessPreset_BtnAdd", nil)
-  return Res
+  if self.IsSharedSquad then
+    self:RefreshList({}, 0)
+    self.WS_Type:SetActiveWidgetIndex(0)
+    self.WS_Btn:SetActiveWidgetIndex(0)
+    self.Owner:RefreshSelect(self.PresetIndex)
+    self:EditSharedSquad()
+    AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_team_preset_click", "AutoChessPreset_BtnAdd", nil)
+  else
+    local Res = self:ShowCurrentSquad()
+    AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_team_preset_click", "AutoChessPreset_BtnAdd", nil)
+    if Res then
+      self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Click)
+    end
+    return Res
+  end
 end
 
 function M:InitCost(Cost, Num)
@@ -128,14 +174,22 @@ function M:InitCost(Cost, Num)
 end
 
 function M:OnClickErase()
+  if self.IsSharedSquad then
+    return
+  end
   local Params = {}
   Params.RightCallbackObj = self
   Params.RightCallbackFunction = self.ClearSquad
+  Params.OnCloseCallbackObj = self
+  Params.OnCloseCallbackFunction = self.OnClearSquadResetFocus
   Params.Owner = self.Btn_Add
   UIManager(self):ShowCommonPopupUI(100296, Params, self)
 end
 
 function M:OnClickApply()
+  if self.IsSharedSquad then
+    return
+  end
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   self:RequestCachedSquadInfo()
   if self.CachedSquadInfo then
@@ -159,16 +213,22 @@ function M:ClearSquad()
   Avatar:AutoChessRemoveSquad(function()
     self.WS_Btn:SetActiveWidgetIndex(0)
     self.WS_Type:SetActiveWidgetIndex(1)
-    self.CurrentInputType = UIUtils.UtilsGetCurrentInputType()
-    if self.CurrentInputType == ECommonInputType.Gamepad then
-      self:AddTimer(0.2, function()
-        self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Add)
-      end, false, 0, nil, true)
-    end
   end, self.PresetIndex)
 end
 
+function M:OnClearSquadResetFocus()
+  self.CurrentInputType = UIUtils.UtilsGetCurrentInputType()
+  if self.CurrentInputType == ECommonInputType.Gamepad then
+    self:AddTimer(0.1, function()
+      self.GameInputModeSubsystem:SetTargetUIFocusWidget(self.Btn_Add)
+    end)
+  end
+end
+
 function M:OnClickRewrite()
+  if self.IsSharedSquad then
+    return
+  end
   local CurrentSquadInfo = {}
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if GameMode then
@@ -203,6 +263,14 @@ function M:OnClickRewrite()
 end
 
 function M:OnClickEnter()
+  if self.IsSharedSquad then
+    self:EditSharedSquad()
+  else
+    self:SaveSquad()
+  end
+end
+
+function M:SaveSquad()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -229,18 +297,28 @@ end
 
 function M:OnClickPreset()
   self:PlayAnimation(self.Click)
-  if self.IsSelected then
-    self.CurrentInputType = UIUtils.UtilsGetCurrentInputType()
-    if self.CurrentInputType == ECommonInputType.Gamepad then
-      if 0 == self.WS_Btn:GetActiveWidgetIndex() then
+  if self.IsSharedSquad then
+    if self.IsSelected then
+      self.CurrentInputType = UIUtils.UtilsGetCurrentInputType()
+      if self.CurrentInputType == ECommonInputType.Gamepad and 0 == self.WS_Btn:GetActiveWidgetIndex() then
         self.Btn_Enter:OnBtnClicked()
-      else
-        self.Btn_Rewrite:OnBtnClicked()
       end
+      return
     end
-    return
+  else
+    if self.IsSelected then
+      self.CurrentInputType = UIUtils.UtilsGetCurrentInputType()
+      if self.CurrentInputType == ECommonInputType.Gamepad then
+        if 0 == self.WS_Btn:GetActiveWidgetIndex() then
+          self.Btn_Enter:OnBtnClicked()
+        else
+          self.Btn_Rewrite:OnBtnClicked()
+        end
+      end
+      return
+    end
+    self:RefreshButtonState()
   end
-  self:RefreshButtonState()
   self.Owner:RefreshSelect(self.PresetIndex)
 end
 
@@ -249,12 +327,21 @@ function M:RefreshSelect(PresetIndex)
     self.IsSelected = true
     self.WS_Btn:SetVisibility(UE4.ESlateVisibility.Visible)
   else
-    self:RequestCachedSquadInfo()
-    if self.CachedSquadInfo and self:IsEmptySquadInfo(self.CachedSquadInfo[self.PresetIndex]) then
-      self.WS_Type:SetActiveWidgetIndex(1)
+    if not self.IsSharedSquad then
+      self:RequestCachedSquadInfo()
+      if self.CachedSquadInfo and self:IsEmptySquadInfo(self.CachedSquadInfo[self.PresetIndex]) then
+        self.WS_Type:SetActiveWidgetIndex(1)
+      end
     end
     self.IsSelected = false
-    self.WS_Btn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:PlayAnimation(self.Normal)
+    if self.IsSharedSquad then
+      if not self.IsEditing then
+        self.WS_Btn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
+    else
+      self.WS_Btn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -422,6 +509,111 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
     return UIUtils.Handled
   else
     return UIUtils.Unhandled
+  end
+end
+
+function M:InitBuffList()
+  if not self.IsSharedSquad then
+    self.HorizontalBox_Buff:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
+  self.HorizontalBox_Buff:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self:RequestCachedSquadInfo()
+  if not self.CachedBuffInfo then
+    return
+  end
+  local RawBuffList = self.CachedBuffInfo[self.PresetIndex] or {}
+  local BuffIds = {}
+  local WeatherBuffId = 0
+  for _, BuffId in pairs(RawBuffList) do
+    if DataMgr.ChallengeBuff[BuffId] then
+      if DataMgr.ChallengeBuff[BuffId].DailyChallengeId and DataMgr.ChallengeBuff[BuffId].DailyChallengeId > 0 then
+        WeatherBuffId = BuffId
+      else
+        table.insert(BuffIds, BuffId)
+      end
+    end
+  end
+  self:SetWeatherBuff(WeatherBuffId)
+  self:SetBuffList(BuffIds)
+end
+
+function M:SetWeatherBuff(BuffId)
+  if 0 == BuffId then
+    self.TextWeatherEmpty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.TextWeatherEmpty:SetText(GText("UI_AutoChess_NeedChooseWeather"))
+    self.Image_Weather:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  else
+    self.TextWeatherEmpty:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Image_Weather:SetVisibility(UE4.ESlateVisibility.Visible)
+    local BuffInfo = DataMgr.ChallengeBuff[BuffId]
+    UE4.UResourceLibrary.LoadObjectAsync(self, BuffInfo.BuffIcon, {
+      self,
+      function(_, Texture)
+        self.Image_Weather:SetBrushFromTexture(Texture)
+      end
+    })
+  end
+end
+
+function M:SetBuffList(BuffIds)
+  local ParentHorizontalBox = self.Image_Buff:GetParent()
+  local TotalCount = ParentHorizontalBox:GetChildrenCount()
+  local MaxBuffDisplayCount = TotalCount - 2
+  for i = 0, TotalCount - 1 do
+    local Image = ParentHorizontalBox:GetChildAt(i)
+    if Image then
+      Image:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end
+  if CommonUtils.IsEmpty(BuffIds) then
+    self.TextBuffEmpty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.TextBuffEmpty:SetText(GText("UI_AutoChess_NeedChooseBuff"))
+  else
+    local BuffCount = #BuffIds
+    if MaxBuffDisplayCount < BuffCount then
+      BuffCount = MaxBuffDisplayCount
+      self.Image_More:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+    for i = 1, BuffCount do
+      local Image = ParentHorizontalBox:GetChildAt(i)
+      if Image then
+        local BuffInfo = DataMgr.ChallengeBuff[BuffIds[i]]
+        UE4.UResourceLibrary.LoadObjectAsync(self, BuffInfo.BuffIcon, {
+          self,
+          function(_, Texture)
+            Image:SetBrushFromTexture(Texture)
+          end
+        })
+        Image:SetVisibility(UE4.ESlateVisibility.Visible)
+      end
+    end
+  end
+end
+
+function M:EditSharedSquad()
+  self.Owner:RefreshEdit(self.PresetIndex)
+  self:RequestCachedSquadInfo()
+  if self.CachedSquadInfo then
+    if self.Owner and self.Owner.Owner then
+      self.Owner.Owner:SetLineup(self.CachedSquadInfo[self.PresetIndex] or {})
+    else
+      DebugPrint("@@@AutoChessPreset no BattlePage")
+    end
+  end
+end
+
+function M:RefreshEdit(EditIndex)
+  if EditIndex == self.PresetIndex then
+    self.IsEditing = true
+    self.WS_Btn:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.WS_Btn:SetActiveWidgetIndex(2)
+  else
+    self:RequestCachedSquadInfo()
+    self.IsEditing = false
+    self.WS_Btn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.WS_Btn:SetActiveWidgetIndex(0)
   end
 end
 

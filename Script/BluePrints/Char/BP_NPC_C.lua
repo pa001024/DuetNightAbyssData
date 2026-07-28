@@ -933,9 +933,8 @@ function BP_NPC_C:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
     return
   end
   self.bEnterStory = true
-  if bCacheMeshMaterials then
-    self.CharacterFashion:CacheMeshMaterials(self.Mesh)
-    self.CharacterFashion:ReplaceMeshAllDynamicMaterialAsParent(self.Mesh)
+  if bCacheMeshMaterials and self.CharacterFashion then
+    self.CharacterFashion:PreEnterStory(bCacheMeshMaterials)
   end
   self:AddTimer(0.01, function()
     self.NativeMeshTickOptions = {}
@@ -972,9 +971,9 @@ function BP_NPC_C:PreExitStory(OnFinished, bStartBT, bIsExternal)
     return
   end
   self.bEnterStory = false
-  local MaterialArray = TArray(UMaterialInterface)
-  self.CharacterFashion:UncacheMeshMaterials(self.Mesh, MaterialArray)
-  self.CharacterFashion:SetMeshMaterials(self.Mesh, MaterialArray)
+  if self.CharacterFashion then
+    self.CharacterFashion:PreExitStory()
+  end
   for SKMeshComp, TickOption in pairs(self.NativeMeshTickOptions or {}) do
     if IsValid(SKMeshComp) then
       SKMeshComp.VisibilityBasedAnimTickOption = TickOption

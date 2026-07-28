@@ -114,7 +114,8 @@ function SoloTreasureUtils:RandomTicketList()
   return list
 end
 
-function SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId)
+function SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId, EventId)
+  local tabSeasonConfig = SoloTreasureUtils:SoloTreasureGetSeasonConfig(EventId)
   local list = {}
   local tabExtractionTreasureMechanism = DataMgr.ExtractionTreasureMechanism[UnitId]
   local totalItemNum = math.random(tabExtractionTreasureMechanism.ItemNumRange[1], tabExtractionTreasureMechanism.ItemNumRange[2])
@@ -123,10 +124,19 @@ function SoloTreasureUtils:GetExtractionTreasureMechanismItemList(UnitId)
   end
   local ItemLevelList = {}
   for id, tabExtractionTreasure in pairs(DataMgr.ExtractionTreasure) do
-    local level = tabExtractionTreasure.TreasureRarity
-    if tabExtractionTreasureMechanism.ItemLevelWeight[level] and tabExtractionTreasureMechanism.ItemLevelWeight[level] > 0 then
-      ItemLevelList[level] = ItemLevelList[level] or {}
-      table.insert(ItemLevelList[level], id)
+    local IsSeasonTreasure = tabExtractionTreasure.TreasurePlayModeType == true
+    local IsValidTreasure = false
+    if tabSeasonConfig then
+      IsValidTreasure = IsSeasonTreasure
+    else
+      IsValidTreasure = not IsSeasonTreasure
+    end
+    if IsValidTreasure then
+      local level = tabExtractionTreasure.TreasureRarity
+      if tabExtractionTreasureMechanism.ItemLevelWeight[level] and tabExtractionTreasureMechanism.ItemLevelWeight[level] > 0 then
+        ItemLevelList[level] = ItemLevelList[level] or {}
+        table.insert(ItemLevelList[level], id)
+      end
     end
   end
   local levelWeightList = {}
@@ -347,6 +357,33 @@ function SoloTreasureUtils:IsUnitIdInStaticContainerList(DungeonId, StaticCreato
     end
   end
   return false
+end
+
+function SoloTreasureUtils:SoloTreasureGetSeasonConfig(EventId)
+  local NowTime = TimeUtils.NowTime()
+  for _, tabSeasonData in pairs(DataMgr.PermanentTreasureHunt) do
+    local StartTime = tabSeasonData.SeasonStartDate and TimeUtils.EastEightToLocalTimestamp(tabSeasonData.SeasonStartDate) or 0
+    local EndTime = tabSeasonData.SeasonAvailableDate and TimeUtils.EastEightToLocalTimestamp(tabSeasonData.SeasonAvailableDate) or math.maxinteger
+    if tabSeasonData.SeasonEventId == EventId and NowTime >= StartTime and NowTime < EndTime then
+      return tabSeasonData
+    end
+  end
+  return nil
+end
+
+function SoloTreasureUtils:GetSoloTreasureSeasonId()
+  if TimeUtils.ServerTimeZone == nil then
+    return -1
+  end
+  local ANSITime = TimeUtils.NowTime()
+  for _, tabSeasonData in pairs(DataMgr.PermanentTreasureHunt) do
+    local StartTime = tabSeasonData.SeasonStartDate or 0
+    local EndTime = tabSeasonData.SeasonEndDate or math.maxinteger
+    if ANSITime >= StartTime and ANSITime < EndTime then
+      return tabSeasonData.Season
+    end
+  end
+  return -1
 end
 
 return SoloTreasureUtils

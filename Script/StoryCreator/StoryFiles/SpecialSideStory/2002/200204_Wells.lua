@@ -86,12 +86,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101107,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Wells_1220057",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -278,12 +278,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101107,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "QuestPoint_20020405",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -429,6 +429,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -627,7 +628,7 @@ return {
               AllowSurroundDialogue = false,
               FirstDialogueId = 51001801,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 0.5,
               BlendOutTime = 0.5,
               InType = "BlendIn",
@@ -646,6 +647,7 @@ return {
               SkipToOption = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

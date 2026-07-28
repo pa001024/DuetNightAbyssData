@@ -1,8 +1,9 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 
 function Component:InitDungeonComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitSoloTreasure)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitSoloTreasure)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
@@ -19,9 +20,10 @@ function Component:ClearData()
     RegionDataMgr:RemoveRegionDataAddCallback("Mechanism", self)
     RegionDataMgr:RemoveRegionDataUpdateCallback("Mechanism", self)
   end
-  if self.KeyLocPanel then
+  if self.KeyLocPanel and IsValid(self.KeyLocPanel) then
     self.KeyLocPanel:RemoveFromParent()
   end
+  self.KeyLocPanel = nil
   if self.IsInDungeon and self.LevelMap_Convey_Widget_PC then
     self.LevelMap_Convey_Widget_PC:RemoveFromParent()
   end
@@ -49,7 +51,7 @@ function Component:InitSoloTreasure(CoroutineIndex)
   end
   if not self.IsMiniMap then
     self.KeyLocPanel = self:CreateWidgetNew("RegionMapSoloTreasureKeyLoc")
-    self.MainMap.Pos_SoloTreasure_KeyLocation:AddChild(self.KeyLocPanel)
+    self.ModeComp:AddChildToPosSoloTreasureKeyLocation(self.KeyLocPanel)
     self.KeyLocPanel:Show()
     self:InitSoloTreasureConveyWidget()
   end
@@ -154,13 +156,21 @@ function Component:OnSoloTreasureIconClick(Id, IgnoreCheckSelect)
     return
   end
   self:ClosePanel(true)
-  self.KeyLocPanel:Close()
+  if self.KeyLocPanel and IsValid(self.KeyLocPanel) then
+    self.KeyLocPanel:Close()
+  end
   if self.CurrentSelectPoint and self.SoloTreasurePoints[Id] then
     self.CurrentSelectPoint:PlayAnimation(self.CurrentSelectPoint.NormalAni)
     self.CurrentSelectPoint.IsSelected = false
     self.CurrentSelectPoint.Slot:SetZOrder(0)
   end
   if not IgnoreCheckSelect and not self:CheckSelect(self.SoloTreasurePoints[Id]) then
+    return
+  end
+  if not self.LevelMap_Convey_Widget_PC or not IsValid(self.LevelMap_Convey_Widget_PC) then
+    self:InitSoloTreasureConveyWidget()
+  end
+  if not self.LevelMap_Convey_Widget_PC or not IsValid(self.LevelMap_Convey_Widget_PC) then
     return
   end
   self.CurrentSelectPoint = self.SoloTreasurePoints[Id]
@@ -186,9 +196,9 @@ function Component:OnSoloTreasureIconClick(Id, IgnoreCheckSelect)
     self.LevelMap_Convey_Widget_PC.Switch_Button:SetActiveWidgetIndex(1)
   end
   self.CurrentSelectPoint:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.MainMap.WildMapKeysShow = false
-  self.MainMap.IsPanelOpen = true
-  self.MainMap:UpdateWildMapKeys()
+  self.ModeComp:SetWildMapKeysShow(false)
+  self.ModeComp:SetPanelOpen(true)
+  self.ModeComp:UpdateWildMapKeys()
 end
 
 function Component:OnSoloTreasureIconHover(Id)
@@ -299,7 +309,11 @@ end
 function Component:InitSoloTreasureConveyWidget()
   if not self.LevelMap_Convey_Widget_PC then
     self.LevelMap_Convey_Widget_PC = UIManager(self):CreateWidget("/Game/UI/WBP/Activity/Widget/SoloTreasure/Map/WBP_Activity_SoloTreasure_Map_Convey.WBP_Activity_SoloTreasure_Map_Convey")
-    self.MainMap.Convey:AddChild(self.LevelMap_Convey_Widget_PC)
+    if self.Convey then
+      self.Convey:AddChild(self.LevelMap_Convey_Widget_PC)
+    elseif self.ModeComp and self.ModeComp.AddChildToConvey then
+      self.ModeComp:AddChildToConvey(self.LevelMap_Convey_Widget_PC)
+    end
     self.LevelMap_Convey_Widget_PC.Btn_Track.Text_Button:SetText(GText("UI_RegionMap_Track"))
     self.LevelMap_Convey_Widget_PC.Btn_Track.Btn_Click.OnClicked:Add(self, self.OnConveyGoTrace_SoloTreasure)
     self.LevelMap_Convey_Widget_PC.Btn_Cancel_Track.Text_Button:SetText(GText("UI_RegionMap_Untrack"))

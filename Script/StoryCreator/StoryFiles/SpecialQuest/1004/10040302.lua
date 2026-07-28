@@ -669,7 +669,9 @@ return {
               TargetTime = 18,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17793339255071027"] = {

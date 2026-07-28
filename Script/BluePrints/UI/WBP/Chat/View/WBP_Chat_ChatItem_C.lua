@@ -4,6 +4,7 @@ local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local TimeUtils = require("Utils.TimeUtils")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local ChatModel = ChatController:GetModel()
+local AutoChessShareModel = require("BluePrints.UI.AutoChess.AutoChessShareModel")
 local ChatFocusType = ChatCommon.ChatFocusType
 local UIUtils = require("Utils.UIUtils")
 local M = Class({
@@ -75,6 +76,8 @@ end
 function M:OnListItemObjectSet_Other(Content)
   self.HeadAnchor = self.Head_AnchorLeft
   self.Head = self.HeadLeft
+  self.NameTitleGroup = self.HB_Left
+  self.HeadGroup = self.Group_HeadLeft
   self.HeadAnchor:SetPlacement(EMenuPlacement.MenuPlacement_MenuRight)
   self.TextPlayerName = self.Text_LeftPlayerName
   self.TextDialog = self.Text_LeftDialog
@@ -86,6 +89,7 @@ function M:OnListItemObjectSet_Other(Content)
   self.Switcher = self.WidgetSwitcher_Bubble_L
   self.ModPlan = self.Bubble_ModPlan_L
   self.AppearancePlanBubble = self.AppearancePlanBubble_L
+  self.AutoChessShareBubble = self.AutoChessShare_L
   self.GiftItem = self.Chat_GiftItemLeft
   self.ChatCardCoop = self.ChatCardCoop_L
   self.TitleWidget = self.TitleLeft
@@ -105,6 +109,8 @@ end
 function M:OnListItemObjectSet_Self(Content)
   self.HeadAnchor = self.Head_AnchorRight
   self.Head = self.HeadRight
+  self.NameTitleGroup = self.HB_Right
+  self.HeadGroup = self.Group_HeadRight
   self.HeadAnchor:SetPlacement(EMenuPlacement.MenuPlacement_MenuLeft)
   self.TextPlayerName = self.Text_RightPlayerName
   self.TextDialog = self.Text_RightDialog
@@ -116,6 +122,7 @@ function M:OnListItemObjectSet_Self(Content)
   self.Switcher = self.WidgetSwitcher_Bubble_R
   self.ModPlan = self.Bubble_ModPlan_R
   self.AppearancePlanBubble = self.AppearancePlanBubble_R
+  self.AutoChessShareBubble = self.AutoChessShare_R
   self.GiftItem = self.Chat_GiftItemRight
   self.ChatCardCoop = self.ChatCardCoop_R
   self.TitleWidget = self.TitleRight
@@ -183,7 +190,18 @@ function M:_SetUpChatContent(MsgWrap)
   self:_ParseModSuitInfo(MsgWrap)
   self:_ParseAsyncCombatShareInfo(MsgWrap)
   self:_ParseGuildInviteInfo(MsgWrap)
+  self:_ApplyMergedDisplayState(MsgWrap)
   self:_UpdateHeadClickableState()
+end
+
+function M:_ApplyMergedDisplayState(MsgWrap)
+  local Visibility = MsgWrap.bMergedDisplay and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible
+  if self.NameTitleGroup then
+    self.NameTitleGroup:SetVisibility(Visibility)
+  end
+  if self.HeadGroup then
+    self.HeadGroup:SetVisibility(Visibility)
+  end
 end
 
 function M:_ShowNormalContent(Content)
@@ -197,7 +215,7 @@ function M:_ParseGuildInviteInfo(MsgWrap)
   local GuildRecruitInfo = MsgWrap.GuildRecruitInfo
   if GuildRecruitInfo then
     local isFromOther = self.Switcher == self.WidgetSwitcher_Bubble_L
-    self.Switcher:SetActiveWidgetIndex(isFromOther and 3 or 5)
+    self.Switcher:SetActiveWidgetIndex(3)
     self.GuildInvite:InitGuildInviteItem(GuildRecruitInfo, isFromOther)
   end
 end
@@ -285,17 +303,22 @@ function M:_ParseModSuitInfo(MsgWrap)
     self:_SetBubbleWidget(self.GiftItem, 2)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
     self.GiftItem:InitChatGiftItem(GiftInfo, bSelfMsg)
+  elseif MsgWrap.AutoChessShareInfo then
+    local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
+    if self.AutoChessShareBubble and self.AutoChessShareBubble.InitAutoChessShare then
+      self:_SetBubbleWidget(self.AutoChessShareBubble, 0)
+      self.AutoChessShareBubble:InitAutoChessShare(MsgWrap.AutoChessShareInfo, bSelfMsg, MsgWrap.Message.Sender.Nickname)
+    else
+      self:_SetBubbleWidget(self.TextDialog:GetParent(), 0)
+      self:_ShowNormalContent(ChatController:ParseAutoChessShareText(MsgWrap) or MsgWrap.Message.Content)
+    end
   end
 end
 
 function M:_ParseAsyncCombatShareInfo(MsgWrap)
   local AsyncCombatRoomInfo = MsgWrap.AsyncCombatRoomInfo
   if AsyncCombatRoomInfo then
-    if self.Switcher == self.WidgetSwitcher_Bubble_L then
-      self:_SetBubbleWidget(self.ChatCardCoop, 4)
-    else
-      self:_SetBubbleWidget(self.ChatCardCoop, 3)
-    end
+    self:_SetBubbleWidget(self.ChatCardCoop, 4)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
     self.ChatCardCoop:InitCoopChatCard(AsyncCombatRoomInfo, bSelfMsg)
   end
@@ -326,7 +349,7 @@ function M:IsShowCheckPlan(InKeyName)
   if not MsgWrap then
     return false
   end
-  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo or MsgWrap.AsyncCombatRoomInfo
+  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo or MsgWrap.AsyncCombatRoomInfo or MsgWrap.AutoChessShareInfo
 end
 
 function M:OnCheckPlanGamePadDown()
@@ -359,8 +382,35 @@ function M:OnCheckPlanGamePadDown()
       self.ChatCardCoop:OnClicked()
     end
     IsEventHandled = true
+  elseif self.MsgWrap.AutoChessShareInfo then
+    if self.AutoChessShareBubble and self.AutoChessShareBubble.OnBtnClick then
+      self.AutoChessShareBubble:OnBtnClick()
+    end
+    IsEventHandled = true
   end
   return IsEventHandled
+end
+
+function M:_GetAvatarMenuSourceItem()
+  if not self.MsgWrap.bMergedDisplay then
+    return self
+  end
+  local ChatItemList = self.Owner and self.Owner._ChatItemList
+  local Index = self.MsgWrap and self.MsgWrap.Index
+  local SenderUid = self.MsgWrap and self.MsgWrap.Message and self.MsgWrap.Message.Sender and self.MsgWrap.Message.Sender.Uid
+  if not (ChatItemList and Index) or nil == SenderUid then
+    return
+  end
+  for i = Index - 1, 1, -1 do
+    local Item = ChatItemList[i]
+    local ItemSenderUid = Item and Item.MsgWrap and Item.MsgWrap.Message and Item.MsgWrap.Message.Sender and Item.MsgWrap.Message.Sender.Uid
+    if ItemSenderUid ~= SenderUid then
+      break
+    end
+    if not Item.MsgWrap.bMergedDisplay then
+      return Item
+    end
+  end
 end
 
 function M:OnGamePadDown(InKeyName)
@@ -373,10 +423,14 @@ function M:OnGamePadDown(InKeyName)
       self:SetFocus()
     end
   elseif InKeyName == Const.GamepadFaceButtonDown then
-    if not self.IsOpen and self.Owner.FocusStateType == ChatFocusType.SelectChat and self.HeadAnchor then
-      self:GetCardGuildInfo(self.CardGuildInfoParams.GuildId, self.CardGuildInfoParams.Uid)
-      self.Head:BtnAreaOnHovered()
-      IsEventHandled = true
+    if not self.IsOpen and self.Owner.FocusStateType == ChatFocusType.SelectChat then
+      local SourceItem = self:_GetAvatarMenuSourceItem()
+      if SourceItem then
+        SourceItem.MenuInvoker = SourceItem ~= self and self or nil
+        SourceItem:GetCardGuildInfo(SourceItem.CardGuildInfoParams.GuildId, SourceItem.CardGuildInfoParams.Uid)
+        SourceItem.Head:BtnAreaOnHovered()
+        IsEventHandled = true
+      end
     end
   elseif InKeyName == Const.GamepadFaceButtonLeft then
     IsEventHandled = self:OnCheckPlanGamePadDown()
@@ -422,6 +476,12 @@ function M:OnHeadMenuOpenChanged(bOpen)
   self.IsOpen = bOpen
   self.Owner:UpdateUIStyleInPlatform()
   if bOpen or UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return
+  end
+  local FocusTarget = self.MenuInvoker
+  self.MenuInvoker = nil
+  if FocusTarget and IsValid(FocusTarget) then
+    FocusTarget:SetFocus()
     return
   end
   self:SetFocus()

@@ -254,6 +254,12 @@ function M.IsOwnedCmpFunc(a, b)
     else
       return false
     end
+  elseif a.IsStar ~= b.IsStar then
+    if a.IsStar then
+      return true
+    else
+      return false
+    end
   end
 end
 
@@ -433,6 +439,26 @@ function M:SetItemInGear(Content, bInGear)
     end
     if Content.SelfWidget then
       Content.SelfWidget:SetInGear(bInGear)
+    end
+  end
+end
+
+function M:SetItemInStarTarget(Content, bInStarTarget)
+  if Content then
+    Content.IsStar = bInStarTarget
+    local Avatar = GWorld:GetAvatar()
+    local Weapon = Content.Uuid and Avatar.Weapons[Content.Uuid]
+    Weapon = Weapon or Avatar.Weapons[CommonUtils.Str2ObjId(Content.Uuid)]
+    local AssisterId = Weapon and Weapon.AssisterId
+    local IsAssister = false
+    if AssisterId and DataMgr.Resource[AssisterId] then
+      IsAssister = true
+    end
+    if not IsAssister and Content.Widget then
+      Content.Widget:SetInStarTarget(Content.bInGear, bInStarTarget)
+    end
+    if Content.SelfWidget then
+      Content.SelfWidget:SetCollectionStar(bInStarTarget)
     end
   end
 end
@@ -707,7 +733,7 @@ function ReddotCreateFunctions.CreateCharReddotInfos(M)
   for CharId, value in pairs(DataMgr.Char) do
     M:TryAddUnlockableCharReddot(CharId)
     M:TryAddNewReleasedCharReddot(CharId)
-    if not CommonUtils.IsCurrentVersionNewRealease(CommonConst.DataType.Char, CharId) then
+    if not CommonUtils.IsCurrentVersionNewRelease(CommonConst.DataType.Char, CharId) then
       M:_SetReddotReadCommon(CharId, DataMgr.ReddotNode.NewReleasedChar.Name, false)
     end
   end
@@ -777,12 +803,16 @@ function ReddotCreateFunctions.CreateResourceReddotInfos()
   end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.ArmoryBattleItem.Name)
   if CacheDetail then
-    for key, _ in pairs(CacheDetail) do
-      if nil == AllResources[tonumber(key)] then
+    for key, IsNew in pairs(CacheDetail) do
+      local ResourceId = tonumber(key)
+      if nil == AllResources[ResourceId] then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.Resource,
           UnitId = tonumber(key)
         }, true, true, true)
+      end
+      if DataMgr.Resource[ResourceId] and DataMgr.Resource[ResourceId].UseParam and 1 == IsNew then
+        M:SetGroupPhantomItemReddotRead(DataMgr.Resource[ResourceId].UseParam)
       end
     end
   end
@@ -839,7 +869,7 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
       if CacheDetail then
         for key, _ in pairs(CacheDetail) do
           key = tonumber(key)
-          if nil == AllAccessorys[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.CharAccessory, key) then
+          if nil == AllAccessorys[key] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.CharAccessory, key) then
             M:SetItemReddotRead({
               ItemType = CommonConst.DataType.CharAccessory,
               AccessoryId = key
@@ -857,7 +887,7 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
-      if nil == CharAllSkin[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Skin, key) then
+      if nil == CharAllSkin[key] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.Skin, key) then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.Skin,
           SkinId = key
@@ -880,7 +910,7 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
-      if nil == CharAllHairs[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
+      if nil == CharAllHairs[key] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.Hair, key) then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.Hair,
           HairId = key
@@ -909,7 +939,7 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
   for _, AccessoryId in pairs(AllAccessorys) do
     AccessoryIds[AccessoryId] = true
     local CharAccessoryData = DataMgr.CharAccessory[AccessoryId]
-    if CharAccessoryData and CharAccessoryData.AccessoryType and (not DefaultAcceesories[CharAccessoryData.AccessoryType] or AccessoryId ~= DefaultAcceesories[CharAccessoryData.AccessoryType] and CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.CharAccessory, AccessoryId)) then
+    if CharAccessoryData and CharAccessoryData.AccessoryType and (not DefaultAcceesories[CharAccessoryData.AccessoryType] or AccessoryId ~= DefaultAcceesories[CharAccessoryData.AccessoryType] and CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.CharAccessory, AccessoryId)) then
       for _, SkinId in ipairs(CharAccessoryData.Skin or {""}) do
         M:TryAddNewCharAccessoryReddot(AccessoryId, SkinId)
       end
@@ -923,7 +953,7 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
       for key, _ in pairs(CacheDetail) do
         key = tonumber(key)
         local Data = DataMgr.CharAccessory[key]
-        if nil == AccessoryIds[key] or nil == Data or Data.AccessoryType ~= AccessoryType or key == DefaultAcceesories[AccessoryType] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.CharAccessory, key) then
+        if nil == AccessoryIds[key] or nil == Data or Data.AccessoryType ~= AccessoryType or key == DefaultAcceesories[AccessoryType] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.CharAccessory, key) then
           M:SetItemReddotRead({
             ItemType = CommonConst.DataType.CharAccessory,
             AccessoryId = key,
@@ -941,8 +971,8 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
     local HairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
     local CharGroupId = DataMgr.CharacterAttributeSwitch[CharId] and DataMgr.CharacterAttributeSwitch[CharId].CharGroupId
     if not CharGroupId then
-      NewCharAppearanceChildNodes[SkinNodeName] = SkinNode and 1
-      NewCharAppearanceChildNodes[HairNodeName] = HairNode and 1
+      NewCharAppearanceChildNodes[SkinNodeName] = GetOrAddTreeNode(SkinNodeName, nil, true) and 1
+      NewCharAppearanceChildNodes[HairNodeName] = GetOrAddTreeNode(HairNodeName, nil, true) and 1
     end
   end
   for AccessoryType, _ in pairs(CommonConst.NewCharAccessoryTypes) do
@@ -959,7 +989,7 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
-      if nil == AllCommonCharHairs[key] or nil == DataMgr.Hair[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
+      if nil == AllCommonCharHairs[key] or nil == DataMgr.Hair[key] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.Hair, key) then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.Hair,
           HairId = key
@@ -989,7 +1019,7 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
   for _, AccessoryId in pairs(AllAccessorys) do
     AccessoryIds[AccessoryId] = true
     local AccessoryData = DataMgr.WeaponAccessory[AccessoryId]
-    if AccessoryData and CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.WeaponAccessory, AccessoryId) then
+    if AccessoryData and CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.WeaponAccessory, AccessoryId) then
       M:TryAddNewWeaponAccessoryReddot(AccessoryId)
       if AccessoryData.StanceFXType ~= CommonConst.WeaponAccessoryTypes.Accessory then
         M:TryAddNewWeaponStanceFXReddot(AccessoryId)
@@ -1000,7 +1030,7 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
-      if nil == AccessoryIds[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.WeaponAccessory, key) then
+      if nil == AccessoryIds[key] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.WeaponAccessory, key) then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.WeaponAccessory,
           AccessoryId = key
@@ -1011,7 +1041,7 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
   local AllWeaponSkins = Avatar.OwnedWeaponSkins
   for SkinId, _ in pairs(AllWeaponSkins) do
     local SkinData = DataMgr.WeaponSkin[SkinId]
-    if SkinData and CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.WeaponSkin, SkinId) then
+    if SkinData and CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.WeaponSkin, SkinId) then
       M:TryAddNewWeaponSkinReddot(SkinId)
     end
   end
@@ -1032,7 +1062,7 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
     if CacheDetail then
       for key, _ in pairs(CacheDetail) do
         key = tonumber(key)
-        if nil == AllWeaponSkins[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.WeaponSkin, key) then
+        if nil == AllWeaponSkins[key] or not CommonUtils.IsCurrentTimeRelease(CommonConst.DataType.WeaponSkin, key) then
           M:SetItemReddotRead({
             ItemType = CommonConst.DataType.WeaponSkin,
             SkinId = key
@@ -1092,6 +1122,19 @@ function ReddotCreateFunctions.CreatePetReddotInfos(M)
       }, true, true, true)
     end
   end
+  M:TryInitPetIsShowReddot()
+end
+
+function M:TryInitPetIsShowReddot()
+  local PetIsShow = EMCache:Get("PetIsShowNew", true)
+  if not PetIsShow then
+    M:_TryAddNewReddotCommon("PetIsShow", DataMgr.ReddotNode.PetIsShow.Name, true)
+  end
+end
+
+function M:SetPetIsShowReddotRead()
+  EMCache:Set("PetIsShowNew", true, true)
+  M:_SetReddotReadCommon("PetIsShow", DataMgr.ReddotNode.PetIsShow.Name, false)
 end
 
 function M:CreateReddotInfos(ItemType)
@@ -1222,6 +1265,29 @@ function M:SetReddotRead(Content, ReadNew, ReadUpgradeable, bDeleteCache)
   end
 end
 
+function M:SetGroupPhantomItemReddotRead(CharId)
+  if not CharId then
+    return
+  end
+  if DataMgr.CharacterAttributeSwitch[CharId] then
+    local CharGroupId = DataMgr.CharacterAttributeSwitch[CharId].CharGroupId
+    if CharGroupId then
+      local CharIds = {}
+      for key, value in pairs(DataMgr.CharacterAttributeSwitch) do
+        if value.CharGroupId == CharGroupId then
+          CharIds[value.CharId] = true
+        end
+      end
+      for key, ResourceId in pairs(DataMgr.ResourceSType2Resource.PhantomItem) do
+        local CharId = DataMgr.Resource[ResourceId] and DataMgr.Resource[ResourceId].UseParam
+        if CharId and CharIds[CharId] then
+          M:_SetReddotReadCommon(ResourceId, DataMgr.ReddotNode.ArmoryBattleItem.Name, bDeleteCache)
+        end
+      end
+    end
+  end
+end
+
 local SetReddotReadFunctions = {
   SetCharReddotRead = function(self, Content, ReadNew, ReadUpgradeable, bDeleteCache)
     if tonumber(Content.Uuid) == nil and CommonUtils.IsObjId(Content.Uuid) then
@@ -1261,6 +1327,9 @@ local SetReddotReadFunctions = {
     local bBattleItem = string.match(ResData.Type, "BattleItem")
     if not bBattleItem then
       return
+    end
+    if ResData.UseParam then
+      M:SetGroupPhantomItemReddotRead(ResData.UseParam)
     end
     M:_SetReddotReadCommon(Content.UnitId, DataMgr.ReddotNode.ArmoryBattleItem.Name, bDeleteCache)
   end,
@@ -1464,8 +1533,6 @@ function M:TryAddNewModReddot(Mod, ModId)
     ModId = Mod.ModId
   end
   self:TryAddNewModBookReddot(Mod, ModId)
-  local Avatar = GWorld:GetAvatar()
-  Avatar:RefreshModArchiveReddot()
   local NodeName = CommonConst.DataType.Mod .. Mod.ApplicationType
   return M:_TryAddNewReddotCommon(ModId, NodeName)
 end
@@ -1719,7 +1786,7 @@ function M:TryAddNewReleasedCharReddot(CharId)
     return
   end
   local Data = DataMgr.Char[CharId]
-  if not Data or Data.IsNotOpen or not CommonUtils.IsCurrentVersionNewRealease(CommonConst.DataType.Char, CharId) then
+  if not Data or Data.IsNotOpen or not CommonUtils.IsCurrentVersionNewRelease(CommonConst.DataType.Char, CharId) then
     return
   end
   return M:_TryAddNewReddotCommon(CharId, DataMgr.ReddotNode.NewReleasedChar.Name)

@@ -349,18 +349,6 @@ return ReadOnly("SubRegion", {
     SwitchPlayer = "EXPlayer",
     SyncPlayerInfo = 1
   },
-  [102201] = {
-    FlyLicense = -1,
-    NotShowInRegionMap = true,
-    RegionId = 1022,
-    SubRegionDes = "UI_SUBREGION_DES_102201",
-    SubRegionId = 102201,
-    SubRegionLevel = "EXChapter01_Jail",
-    SubRegionName = "UI_SUBREGION_NAME_102201",
-    SubRegionType = "field",
-    SwitchPlayer = "EXPlayer",
-    SyncPlayerInfo = 1
-  },
   [103201] = {
     FlyLicense = -1,
     NotShowInRegionMap = true,
@@ -884,7 +872,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1070,
     SubRegionDes = "UI_SUBREGION_DES_107001",
     SubRegionId = 107001,
-    SubRegionLevel = "Haiboliya_FTNew",
+    SubRegionLevel = "Haiboliya_Thc_Lxzs01",
     SubRegionName = "UI_SUBREGION_NAME_107001",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
@@ -895,7 +883,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1071,
     SubRegionDes = "UI_SUBREGION_DES_107101",
     SubRegionId = 107101,
-    SubRegionLevel = "Haiboliya_FTOld",
+    SubRegionLevel = "Haiboliya_Thc_Lxzs02",
     SubRegionName = "UI_SUBREGION_NAME_107101",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
@@ -906,7 +894,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1072,
     SubRegionDes = "UI_SUBREGION_DES_107201",
     SubRegionId = 107201,
-    SubRegionLevel = "Haiboliya_FTLake",
+    SubRegionLevel = "Haiboliya_Thc_Lxzx",
     SubRegionName = "UI_SUBREGION_NAME_107201",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
@@ -917,7 +905,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1073,
     SubRegionDes = "UI_SUBREGION_DES_107301",
     SubRegionId = 107301,
-    SubRegionLevel = "Haiboliya_FTOld_NPark",
+    SubRegionLevel = "Haiboliya_Thc_Emyly",
     SubRegionName = "UI_SUBREGION_NAME_107301",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
@@ -928,7 +916,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1074,
     SubRegionDes = "UI_SUBREGION_DES_107401",
     SubRegionId = 107401,
-    SubRegionLevel = "Haiboliya_FTLake_BF_Main",
+    SubRegionLevel = "Haiboliya_Thc_Zchj",
     SubRegionName = "UI_SUBREGION_NAME_107401",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
@@ -939,7 +927,7 @@ return ReadOnly("SubRegion", {
     RegionId = 1075,
     SubRegionDes = "UI_SUBREGION_DES_107501",
     SubRegionId = 107501,
-    SubRegionLevel = "Haiboliya_FTNew_Home",
+    SubRegionLevel = "Haiboliya_Thc_Zjfj",
     SubRegionName = "UI_SUBREGION_NAME_107501",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
@@ -950,8 +938,30 @@ return ReadOnly("SubRegion", {
     RegionId = 1076,
     SubRegionDes = "UI_SUBREGION_DES_107601",
     SubRegionId = 107601,
-    SubRegionLevel = "Haiboliya_FTNew_Boss",
+    SubRegionLevel = "Haiboliya_Thc_Boss",
     SubRegionName = "UI_SUBREGION_NAME_107601",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107701] = {
+    FlyLicense = -1,
+    RegionId = 1077,
+    SubRegionDes = "UI_SUBREGION_DES_107701",
+    SubRegionId = 107701,
+    SubRegionLevel = "Haiboliya_Thc_Jhs",
+    SubRegionName = "UI_SUBREGION_NAME_107701",
+    SubRegionType = "field",
+    SwitchPlayer = "EXPlayer",
+    SyncPlayerInfo = 1
+  },
+  [107801] = {
+    FlyLicense = -1,
+    RegionId = 1078,
+    SubRegionDes = "UI_SUBREGION_DES_107801",
+    SubRegionId = 107801,
+    SubRegionLevel = "Haiboliya_Thc_Ck",
+    SubRegionName = "UI_SUBREGION_NAME_107801",
     SubRegionType = "field",
     SwitchPlayer = "EXPlayer",
     SyncPlayerInfo = 1
@@ -961,11 +971,63 @@ return ReadOnly("SubRegion", {
     RegionId = 1081,
     SubRegionDes = "测试区域",
     SubRegionId = 108101,
-    SubRegionLevel = "Ailixian_LLKXDY",
+    SubRegionLevel = "Ailixian_Sailafei",
     SubRegionName = "测试区域",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
+  },
+  [108201] = {
+    FlyLicense = -1,
+    RegionId = 1082,
+    SubRegionDes = "测试区域",
+    SubRegionId = 108201,
+    SubRegionLevel = "Ailixian_Miandao",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
+  [108301] = {
+    FlyLicense = -1,
+    RegionId = 1083,
+    SubRegionDes = "测试区域",
+    SubRegionId = 108301,
+    SubRegionLevel = "Ailixian_DreamSailafei",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
+  [109001] = {
+    RegionId = 1090,
+    SubRegionId = 109001,
+    SubRegionLevel = "Ailixian_Chenmian",
+    SubRegionType = "field"
+  },
+  [109101] = {
+    RegionId = 1091,
+    SubRegionId = 109101,
+    SubRegionLevel = "Ailixian_Shendianfeixu",
+    SubRegionType = "field"
+  },
+  [109201] = {
+    RegionId = 1092,
+    SubRegionId = 109201,
+    SubRegionLevel = "Ailixian_Manyue",
+    SubRegionType = "field"
+  },
+  [109301] = {
+    RegionId = 1093,
+    SubRegionId = 109301,
+    SubRegionLevel = "Ailixian_Anzhixin",
+    SubRegionType = "field"
+  },
+  [109401] = {
+    RegionId = 1094,
+    SubRegionId = 109401,
+    SubRegionLevel = "Ailixian_LizibeierHJ",
+    SubRegionType = "field"
   },
   [200101] = {
     FlyLicense = -1,
@@ -997,6 +1059,16 @@ return ReadOnly("SubRegion", {
     SubRegionId = 300101,
     SubRegionLevel = "Guild",
     SubRegionName = "UI_SUBREGION_NAME_300101",
+    SubRegionType = "guild",
+    SyncPlayerInfo = 1
+  },
+  [300201] = {
+    FlyLicense = 1001,
+    RegionId = 3002,
+    SubRegionDes = "测试公会领地",
+    SubRegionId = 300201,
+    SubRegionLevel = "TestGuild",
+    SubRegionName = "测试公会领地",
     SubRegionType = "guild",
     SyncPlayerInfo = 1
   },

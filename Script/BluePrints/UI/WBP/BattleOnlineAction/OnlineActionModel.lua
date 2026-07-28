@@ -214,11 +214,15 @@ function M:RemoveApplyInfo(Info)
 end
 
 function M:SetAllInfoRead()
-  for _, InvitationInfo in pairs(self.InvitationInfos) do
-    InvitationInfo.bNew = false
+  if self.InvitationInfos then
+    for _, InvitationInfo in pairs(self.InvitationInfos) do
+      InvitationInfo.bNew = false
+    end
   end
-  for _, ApplyInfo in pairs(self.ApplyInfos) do
-    ApplyInfo.bNew = false
+  if self.ApplyInfos then
+    for _, ApplyInfo in pairs(self.ApplyInfos) do
+      ApplyInfo.bNew = false
+    end
   end
   ReddotManager.ClearLeafNodeCount("OnlineActionBtn")
 end
@@ -227,6 +231,7 @@ function M:ChangeAction(UniqueId)
   if UniqueId then
     self.ActionUniqueId = UniqueId
   else
+    self.ActionUniqueId = 0
     self.MaxPlayerNum = 1
   end
 end
@@ -416,14 +421,18 @@ function M:ClearAllApply()
 end
 
 function M:CheckbHasAnyNewInfo()
-  for _, InvitationInfo in pairs(self.InvitationInfos) do
-    if InvitationInfo.bNew then
-      return true
+  if self.InvitationInfos then
+    for _, InvitationInfo in pairs(self.InvitationInfos) do
+      if InvitationInfo.bNew then
+        return true
+      end
     end
   end
-  for _, ApplyInfo in pairs(self.ApplyInfos) do
-    if ApplyInfo.bNew then
-      return true
+  if self.ApplyInfos then
+    for _, ApplyInfo in pairs(self.ApplyInfos) do
+      if ApplyInfo.bNew then
+        return true
+      end
     end
   end
   return false
@@ -463,7 +472,8 @@ function M:GetPlayerName(Eid)
 end
 
 function M:IsInRegionOnline()
-  return self._Avatar and self._Avatar.IsInRegionOnline
+  local Avatar = self:GetAvatar()
+  return Avatar and Avatar.IsInRegionOnline
 end
 
 function M:GetController()
@@ -606,9 +616,38 @@ function M:CheckJoinValid(Eid, UniqueId, InteractiveId)
 end
 
 function M:GetAutoAcceptOnlineAction()
-  local AutoAcceptOnlineAction = EMCache:Get("AutoAcceptOnlineAction")
+  local Avatar = self:GetAvatar()
+  if Avatar and Avatar.AutoAgreeInvite ~= nil then
+    return Avatar.AutoAgreeInvite == true
+  end
+  local AutoAcceptOnlineAction = EMCache:Get(OnlineActionCommon.AutoAcceptCacheKey, true)
+  if nil == AutoAcceptOnlineAction then
+    return OnlineActionCommon.AutoAcceptDefaultValue
+  end
   DebugPrint("AutoAcceptOnlineAction", AutoAcceptOnlineAction)
   return AutoAcceptOnlineAction
+end
+
+function M:GetAutoAcceptOnlineActionRaw()
+  return EMCache:Get(OnlineActionCommon.AutoAcceptCacheKey, true)
+end
+
+function M:SetAutoAcceptOnlineAction(IsEnable)
+  local bEnable = true == IsEnable
+  EMCache:Set(OnlineActionCommon.AutoAcceptCacheKey, bEnable, true)
+  local Avatar = self:GetAvatar()
+  DebugPrint("SetAutoAcceptOnlineAction", bEnable, Avatar, Avatar and Avatar.Eid, Avatar and Avatar.SetAutoAgreeInvite)
+  if Avatar and Avatar.SetAutoAgreeInvite then
+    Avatar:SetAutoAgreeInvite(bEnable)
+  end
+end
+
+function M:IsAutoAcceptOnlineActionFirstShow()
+  return self:GetAutoAcceptOnlineActionRaw() == nil
+end
+
+function M:ShouldShowAutoAcceptOnlineActionTag()
+  return self:GetAutoAcceptOnlineAction() == true
 end
 
 return M

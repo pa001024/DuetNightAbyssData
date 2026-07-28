@@ -13,7 +13,8 @@ Pet.__Props__ = {
   BreakNum = prop.prop("Int", "client save", 0),
   IsLock = prop.prop("Bool", "client save", false),
   Entry = prop.prop("IntList", "client save", {}),
-  Name = prop.prop("Str", "client save", "")
+  Name = prop.prop("Str", "client save", ""),
+  IsStar = prop.prop("Bool", "client save", false)
 }
 
 function Pet:Init(PetId, UniqueId)

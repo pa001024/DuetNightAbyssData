@@ -74,9 +74,17 @@
   {
     "id": 3010110,
     "name": "절규·대검",
-    "desc": "",
+    "desc": "꾸아악——————!",
     "icon": "T_Head_Claymore_Nahan",
     "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010111,
+    "name": "UI_WeaponSkin_Name_3010111",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -136,6 +144,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010208,
+    "name": "UI_WeaponSkin_Name_3010208",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010301,
     "name": "태양의 급보",
     "desc": "태양아, 태양아 어디에 있니? 태양은 우리의 손안에 있어.",
@@ -189,6 +205,14 @@
     "desc": "꾸아악——————!",
     "icon": "T_Head_Bow_Nahan02",
     "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010308,
+    "name": "UI_WeaponSkin_Name_3010308",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -253,6 +277,14 @@
     "desc": "별들로부터 전해져 오는 태고의 부름에 귀를 기울여라.",
     "icon": "T_Head_Polearm_Huanyu",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010409,
+    "name": "절규·장병기",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Polearm_Nahan",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -332,6 +364,22 @@
     "name": "푸른 하늘의 노래·쌍도",
     "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
     "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010611,
+    "name": "절규·쌍도",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Dualblade_Nahan",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010613,
+    "name": "UI_WeaponSkin_Name_3010610",
+    "desc": "",
+    "icon": "",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
@@ -472,6 +520,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010904,
+    "name": "UI_WeaponSkin_Name_3010904",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3011001,
     "name": "일렉 치즈 No.2",
     "desc": "냐오옹♪ 냐오오옹♪ 냐오옹♪♪",
@@ -501,6 +557,14 @@
     "desc": "꾸아악——————!",
     "icon": "T_Head_Shotgun_Nahan",
     "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011005,
+    "name": "UI_WeaponSkin_Name_3011005",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -549,6 +613,22 @@
     "desc": "꾸아악——————!",
     "icon": "T_Head_Crossbow_Nahan",
     "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011207,
+    "name": "녹지 않은 첫눈",
+    "desc": "첫눈이 녹기 전에, 원래의 모습을 잊지 말아요.",
+    "icon": "T_Head_Crossbow_Weirong",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011209,
+    "name": "내 친구 바나나",
+    "desc": "안녕, 친구하자.",
+    "icon": "T_Head_Crossbow_Jiaoge",
+    "rarity": 5,
     "unlock": "상점을 통해 획득"
   }
 ]

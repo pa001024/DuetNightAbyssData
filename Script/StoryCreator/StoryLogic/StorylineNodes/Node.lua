@@ -84,6 +84,12 @@ function Node:IsRunning()
   return self.HasStarted and not self.HasFinished
 end
 
+function Node:OnStop()
+end
+
+function Node:OnFinish()
+end
+
 function Node:GetConnectedNodeMap()
   local ConnectedNodeMap = {}
   for _, ConnectedNodeList in pairs(self.ConnectedNodeList) do

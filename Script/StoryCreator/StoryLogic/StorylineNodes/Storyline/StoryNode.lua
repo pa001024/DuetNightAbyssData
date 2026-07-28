@@ -4,7 +4,11 @@ local EMCache = require("EMCache.EMCache")
 
 function StoryNode:Start(Context, NodeId)
   self.Questline = Questline(self.Data, Context, self)
-  local Cache = EMCache:Get(tonumber(self.Data.key), true)
+  local Avatar = GWorld:GetAvatar()
+  local Cache
+  if Avatar then
+    Cache = EMCache:Get(tonumber(self.Data.key), true)
+  end
   if self.bIsStartChapter and self.QuestUIId and 0 ~= self.QuestUIId and nil == Cache then
     local UIInfo = DataMgr.QuestUI[self.QuestUIId]
     EMCache:Set(tonumber(self.Data.key), 1, true)
@@ -22,7 +26,6 @@ function StoryNode:Start(Context, NodeId)
 end
 
 function StoryNode:FinishQuest(OutPortName, bSucceeded)
-  self.Questline = nil
   self:Finish(OutPortName, bSucceeded)
 end
 
@@ -30,14 +33,18 @@ function StoryNode:StopQuest(IgnoreFinishClear)
   if self.Questline then
     self.Questline:StopQuest(IgnoreFinishClear)
   end
-  self.Questline = nil
 end
 
 function StoryNode:SuccessQuest()
   if self.Questline then
     self.Questline:SuccessQuest()
   end
-  self.Questline = nil
+end
+
+function StoryNode:FailQuest()
+  if self.Questline then
+    self.Questline:FailQuest()
+  end
 end
 
 function StoryNode:PrintInfo()
@@ -65,6 +72,20 @@ function StoryNode:StopStory()
   self.Context:StopStory()
 end
 
+function StoryNode:OnStop()
+  if self.Questline then
+    self.Questline:OnStop()
+  end
+  self.Questline = nil
+end
+
+function StoryNode:OnFinish()
+  if self.Questline then
+    self.Questline:OnFinish()
+  end
+  self.Questline = nil
+end
+
 function StoryNode:GetRunningNodeTableByType(NodeType, OutRunningNodeTable)
   if self.Type == NodeType then
     table.insert(OutRunningNodeTable, self)
@@ -72,6 +93,13 @@ function StoryNode:GetRunningNodeTableByType(NodeType, OutRunningNodeTable)
   if self.Questline then
     self.Questline:GetRunningNodeTableByType(NodeType, OutRunningNodeTable)
   end
+end
+
+function StoryNode:IsGuideNodeRunning()
+  if self.Questline then
+    return self.Questline:IsGuideNodeRunning()
+  end
+  return false
 end
 
 return StoryNode

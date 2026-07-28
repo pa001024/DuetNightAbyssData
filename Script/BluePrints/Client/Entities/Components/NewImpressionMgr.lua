@@ -1,9 +1,17 @@
 local Component = {}
-local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local TimerMgr = require("BluePrints.Common.TimerMgr")
+local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
 local LocalTimeOut = 10
 
-function Component:ImpressionCheckByEnumId_New(DialogueChain, CurrentDialogueId, TalkTriggerId, ImpressionAreaId, ClientDelegate, CheckInfo, UsingGM, bTalkOptions)
+function Component:OnLoginSuccess()
+  ImpressionController:Init()
+end
+
+function Component:LeaveWorld()
+  ImpressionController:Destory()
+end
+
+function Component:ImpressionCheckByEnumId_New(DialogueChain, CurrentDialogueId, TalkTriggerId, ImpressionAreaId, DiceNum, ClientDelegate, CheckInfo, UsingGM, bTalkOptions)
   local DialogueChain = DialogueChain or {}
   DialogueChain = CommonUtils.CopyTable(DialogueChain)
   table.insert(DialogueChain, CurrentDialogueId)
@@ -13,8 +21,6 @@ function Component:ImpressionCheckByEnumId_New(DialogueChain, CurrentDialogueId,
     Type = "Check",
     CheckInfo = CheckInfo
   }
-  local ret = self:CanImpressionCheck(ImpressionAreaId)
-  local DiceNum = ret.ResourceCount
   
   local function Callback(Ret, IsCheckSuccess, rand1, rand2, Rewards)
     self.logger.info("ZJT_ 11111111111111111111 ImpressionCheckByEnumId_New ", Ret, IsCheckSuccess, rand1, rand2, Rewards, CurrentDialogueId)
@@ -117,144 +123,6 @@ function Component:GMAddImpressionPreNode(PreDialogueId)
   end
   
   self:CallServer("GMAddImpressionPreNode", Callback, PreDialogueId)
-end
-
-function Component:IsStorylineComplete(TalkTriggerId)
-  return self:IsStorylineSuccess(TalkTriggerId) or self:IsStorylineFailure(TalkTriggerId)
-end
-
-function Component:IsStorylineUnComplete(TalkTriggerId)
-  return not self:IsStorylineComplete(TalkTriggerId)
-end
-
-function Component:IsStorylineSuccess(TalkTriggerId)
-  return self.ImpressionTalkTriggers[TalkTriggerId] == CommonConst.ImpressionCheckType.Success
-end
-
-function Component:IsStorylineFailure(TalkTriggerId)
-  return self.ImpressionTalkTriggers[TalkTriggerId] == CommonConst.ImpressionCheckType.Failed
-end
-
-function Component:IsImpressionCheckSuccess(DialogueId)
-  return self.ImpressionDialogues[DialogueId] == CommonConst.ImpressionCheckType.Success
-end
-
-function Component:IsImpressionCheckFailure(DialogueId)
-  return self.ImpressionDialogues[DialogueId] == CommonConst.ImpressionCheckType.Failed
-end
-
-function Component:CanImpressionCheck(ImpressionAreaId)
-  local Ret = {
-    ResourceCount = 0,
-    Cost = 0,
-    bCanCheck = false
-  }
-  local ImpressionResourceInfo = DataMgr.ImpressionResource[ImpressionAreaId]
-  Ret.ResourceCount = self:GetResourceNum(ImpressionResourceInfo.ResourceId)
-  Ret.Cost = ImpressionResourceInfo.Count
-  Ret.bCanCheck = Ret.ResourceCount >= Ret.Cost
-  return Ret
-end
-
-function Component:GetSuccRate(PlayerValue, CheckValue)
-  local SuccRate = 100 - CheckValue + PlayerValue
-  if SuccRate > 100 then
-    SuccRate = 100
-  elseif SuccRate < 0 then
-    SuccRate = 0
-  end
-  return SuccRate
-end
-
-function Component:GetDifficultyInfo(SuccRate)
-  SuccRate = SuccRate / 100
-  local ImpressionDifficulty = DataMgr.ImpressionDifficulty
-  local Easy = ImpressionDifficulty.Easy
-  local Middle = ImpressionDifficulty.Middle
-  local Hard = ImpressionDifficulty.Hard
-  local Impossible = ImpressionDifficulty.Impossible
-  local DifficultyInfo = Easy
-  if SuccRate < Hard.DifficultyMinValue then
-    DifficultyInfo = Impossible
-  elseif SuccRate < Middle.DifficultyMinValue then
-    DifficultyInfo = Hard
-  elseif SuccRate < Easy.DifficultyMinValue then
-    DifficultyInfo = Middle
-  end
-  return DifficultyInfo
-end
-
-function Component:GetImpressionCheckInfo(CheckId)
-  local CheckInfo = {}
-  local ImpressionCheck = DataMgr.ImpressionCheck[CheckId]
-  CheckInfo.CheckRegionId = ImpressionCheck.RegionId
-  for _, Type in pairs(CommonConst.ImpressionType) do
-    if ImpressionCheck[Type + "Check"] > 0 then
-      CheckInfo.CheckType = Type
-    end
-  end
-  return CheckInfo
-end
-
-function Component:ShowCommonImpressionReward(Code, Res, CheckData, Rewards, Callback)
-  if not (ErrorCode:Check(Code) and Res and Rewards and CheckData) or not CheckData.RewardId then
-    Callback()
-    return
-  end
-  local RewardData = DataMgr.Reward[CheckData.RewardId]
-  local ItemPageUI = UIManager(GWorld.GameInstance):LoadUINew("GetItemPage", RewardData.Type[1], RewardData.Id[1], RewardData.Count[1][1], Rewards)
-  if ItemPageUI and ItemPageUI.BindActionOnClosed then
-    ItemPageUI:BindActionOnClosed(function()
-      Callback()
-    end, self)
-  else
-    Callback()
-  end
-end
-
-function Component:ShowImpressionPlusUI(ImprPlusId, Callback)
-  DebugPrint("ShowImpressionPlusUI")
-  Callback = Callback or function()
-  end
-  local PlusInfo = TalkUtils:GetImpressionPlusInfo(ImprPlusId)
-  if PlusInfo then
-    local ImpressionAreaId = PlusInfo.ImpressionAreaId
-    local PlusType = PlusInfo.PlusType
-    local PlusValue = PlusInfo.PlusValue
-    DebugPrint("ImpressionAreaId,PlusType,PlusValue:,", ImpressionAreaId, PlusType, PlusValue)
-    local ImpressionDimensionResultUI = UIManager(GWorld.GameInstance):LoadUINew("ImpressionDimensionResult")
-    ImpressionDimensionResultUI:Init(true, ImpressionAreaId, PlusType, PlusValue)
-    ImpressionDimensionResultUI:SetOnCloseDelegate({
-      self,
-      function()
-        UIManager(GWorld.GameInstance):UnLoadUINew("ImpressionDimensionResult")
-        Callback()
-      end
-    })
-    ImpressionDimensionResultUI:FadeIn()
-  else
-    Utils.ScreenPrint("显示印象加值UI时，ID " .. ImprPlusId .. "在ImpressionPlus表中不存在，请检查")
-    Callback()
-  end
-end
-
-function Component:GetImpressionAreaIdFromRegionId(TargetRegionId)
-  TargetRegionId = TargetRegionId or self:GetSubRegionId2RegionId()
-  local ImpressionRegions = DataMgr.ImpressionRegion
-  for ImpressionRegionId, RegionInfo in pairs(ImpressionRegions) do
-    local Regions = RegionInfo.RegionId
-    for _, RegionId in pairs(Regions) do
-      if TargetRegionId == RegionId then
-        return ImpressionRegionId
-      end
-    end
-  end
-  Utils.ScreenPrint("未找到印象区域ID，请检查RegionId是否在ImpressionRegion表中,SubRegionId:" .. TargetRegionId)
-  return TargetRegionId
-end
-
-function Component:GetRegionImpression(ImpressionAreaId)
-  return self.Impressions:GetImpression(ImpressionAreaId)
 end
 
 return Component

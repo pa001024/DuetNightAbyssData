@@ -164,7 +164,7 @@ return {
               AllowSurroundDialogue = true,
               FirstDialogueId = 10043601,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
@@ -353,7 +353,9 @@ return {
               TargetTime = 19,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17793478925671146"] = {

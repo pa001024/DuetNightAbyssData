@@ -34,6 +34,12 @@ function M:ItemMenuAnchorChanged()
 end
 
 function M:InitView()
+  if self.Content.IsEmpty then
+    self.Ws_State:SetActiveWidgetIndex(1)
+    return
+  else
+    self.Ws_State:SetActiveWidgetIndex(0)
+  end
   self:SetTextDate()
   self:SetTextNum()
   self:SetIsCanGet()
@@ -88,7 +94,7 @@ end
 
 function M:OnMouseEnter(MyGeometry, MouseEvent)
   DebugPrint("Yihan@ OnMouseEnter: ")
-  if not self.Content or self.Content.IsSelect or self.Content.IsShowTips then
+  if not self.Content or self.Content.IsSelect or self.Content.IsShowTips or self.Content.IsEmpty then
     return
   end
   self.IsHovering = true
@@ -98,7 +104,7 @@ end
 
 function M:OnMouseLeave(MyGeometry, MouseEvent)
   DebugPrint("Yihan@ OnMouseLeave: ")
-  if not self.Content or self.Content.IsSelect or self.Content.IsShowTips then
+  if not self.Content or self.Content.IsSelect or self.Content.IsShowTips or self.Content.IsEmpty then
     return
   end
   self.IsHovering = false
@@ -108,6 +114,9 @@ end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   DebugPrint("Yihan@ OnMouseButtonDown: ")
+  if self.Content.IsEmpty then
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/item_click_mihan", nil, nil)
   self:StopAnimation(self.Icon_Hover)
   self:PlayAnimation(self.Icon_Press)
@@ -119,6 +128,10 @@ function M:OnMouseButtonDown(MyGeometry, MouseEvent)
 end
 
 function M:OnMouseButtonUp(MyGeometry, MouseEvent)
+  DebugPrint("Yihan@ OnMouseButtonUp: ")
+  if self.Content.IsEmpty then
+    return
+  end
   self:PlayAnimation(self.Icon_Click)
   self.Icon.ItemDetails_MenuAnchor:OpenItemDetailsWidget(false, self.Content)
   self.Content.IsShowTips = true

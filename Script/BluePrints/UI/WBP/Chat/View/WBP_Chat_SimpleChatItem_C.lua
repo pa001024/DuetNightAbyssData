@@ -74,6 +74,10 @@ function M:Open(MsgWrap, bSound)
   if nil ~= GuildRecruitContent then
     Content = GuildRecruitContent
   end
+  local AutoChessContent = ChatController:ParseAutoChessShareText(MsgWrap)
+  if AutoChessContent then
+    Content = AutoChessContent
+  end
   local RawContent = ChannelName .. RawSpacker .. Content
   local RawContentTable = StringUtils.Utf8ToTable(RawContent)
   local HalfLength = #RawContentTable

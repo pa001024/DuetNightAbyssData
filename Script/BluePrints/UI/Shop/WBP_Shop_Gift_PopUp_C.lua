@@ -37,6 +37,7 @@ function M:Construct()
   self.Com_Hint:BindEventOnClicked(self, function()
     ShopUtils:OpenLockConditionPopup(self.ShopItemData)
   end)
+  self.Text_Num:SetText(GText("UI_Shop_ExchangeAmount"))
   self.Text_Tip:SetText(GText("UI_TRAIN_CLOSE"))
   if GiftController:IsInGiftShop() then
     self.Text_BuyLeftTitle:SetText(GText("UI_SendGift_GiftItemMax"))
@@ -77,6 +78,10 @@ function M:OnLoaded(...)
     self.Text_GiftTitle_Purple:SetText(GText(ItemName))
   end
   local ItemData = DataMgr[self.ShopItemData.ItemType][self.ShopItemData.TypeId]
+  self.bSDKPurchase = false
+  if DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] then
+    self.bSDKPurchase = true
+  end
   local Rewards = DataMgr.Reward[ItemData.RewardId]
   if Rewards then
     self.RewardList = {}
@@ -152,7 +157,6 @@ function M:OnLoaded(...)
   if self.IsLockState then
     self:UpdateLockCondition()
   else
-    self.WS_Btn:SetActiveWidgetIndex(0)
     local canPurchase = ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
     local shouldSoldOut = self.bInGiftShop and ShopUtils:ShouldPlaySoldOutAnimation(self.ShopItemData.ItemId)
     if canPurchase and not shouldSoldOut then
@@ -169,14 +173,7 @@ function M:OnLoaded(...)
       end
     end
   end
-  self.Btn_GiftPay.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFF"))
-  if not DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] then
-    local HasCount = Avatar.Resources[self.ShopItemData.PriceType] and Avatar.Resources[self.ShopItemData.PriceType].Count or 0
-    local NeedCount = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
-    if HasCount < NeedCount then
-      self.Btn_GiftPay.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("DA2A4A"))
-    end
-  end
+  self:UpdateBtnPriceState(ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
   local CutoffData = ShopUtils:GetShopItemCutoffData(self.ShopItemData.ItemId)
   if CutoffData and CutoffData.CutoffEndTime then
     self.Panel_Time:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -214,6 +211,32 @@ function M:OnLoaded(...)
   else
     self.Group_More:SetVisibility(ESlateVisibility.Collapsed)
   end
+  local SliderConfigData = {
+    InitValue = 1,
+    MinValue = 1,
+    MaxValue = self:GetMaxCount(),
+    ClickInterval = 1,
+    EnableMiniBtn = true,
+    EnableMaxBtn = true,
+    bEnableAddSpecificBtn = false,
+    MinusBtnCallback = self.MinusBtnCallback,
+    AddBtnCallback = self.AddBtnCallback,
+    SliderChangeCallback = self.SliderChangeCallback,
+    SoundResPath = {
+      Minus = "event:/ui/common/click_btn_minus"
+    },
+    OwnerPanel = self,
+    PlatformName = "PC",
+    MinusSpecificBtnGamePadKey = "DPadLeft",
+    AddSpecificBtnGamePadKey = "DPadRight"
+  }
+  if not self.bSDKPurchase then
+    self.Panel_Num:SetVisibility(ESlateVisibility.Visible)
+    self.Com_Slider:Init(SliderConfigData)
+  else
+    self.Panel_Num:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self:UpdatePricePanel()
   if self.bInGiftShop then
     self.BtnChooseGiftEnable = false
     self.Group_BtnChoose:SetVisibility(ESlateVisibility.Collapsed)
@@ -324,7 +347,7 @@ function M:PurChaseShopItem()
     self:CloseSelf(true)
     return
   end
-  ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
+  ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId), self.CurrentCount)
   self:Purchase(self.ShopItemData, self)
 end
 
@@ -354,8 +377,7 @@ function M:Purchase(ShopItemData, ParentWidget)
         PaymentParameters.cpOrder = OrderId
         PaymentParameters.callbackUrl = CallbackUrl
         local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-        local ItemName = ""
-        ItemName = GText(ItemUtils:GetDropName(ShopItemData.TypeId, ShopItemData.ItemType))
+        local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
         HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
         local TrackInfo = {}
         TrackInfo.product_id = DataMgr.ShopItem2PayGoods[ShopItemData.ItemId]
@@ -389,7 +411,7 @@ function M:Purchase(ShopItemData, ParentWidget)
         return
       end
       local ItemName = ItemUtils:GetDropName(ShopItemData.TypeId, ShopItemData.ItemType)
-      local PriceCount = Avatar.Resources[ShopItemData.PriceType] and Avatar.Resources[ShopItemData.PriceType].Count or 0
+      local PriceCount = (Avatar.Resources[ShopItemData.PriceType] and Avatar.Resources[ShopItemData.PriceType].Count or 0) * self.CurrentCount
       local PopoverText = GText(DataMgr.CommonPopupUIContext[PopUpId].PopoverText)
       if string.find(PopoverText, "&ResourceName&") then
         PopoverText = string.gsub(PopoverText, "&ResourceName&", GText(DataMgr.Resource[CommonConst.Coins.Coin4].ResourceName))
@@ -462,6 +484,7 @@ function M:Purchase(ShopItemData, ParentWidget)
       local Params = {}
       Params.ShopItemId = self.ShopItemData.ItemId
       Params.Uid = Avatar.Uid
+      Params.ShopItemNum = self.CurrentCount
       Params.CloseBtnCallback = {
         Func = function()
           ShopUtils:SetCloseGetItemPageCallback({CloseGetItemPageCallback = nil})
@@ -487,7 +510,7 @@ function M:Purchase(ShopItemData, ParentWidget)
     CommonShopActivity:SetFocus()
     CommonShopActivity:BlockAllUIInput(true)
   end
-  Avatar:PurchaseShopItem(ShopItemData.ItemId, 1)
+  Avatar:PurchaseShopItem(ShopItemData.ItemId, self.CurrentCount)
   self:CloseSelf(true)
 end
 
@@ -543,6 +566,20 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     return UE4.UWidgetBlueprintLibrary.Handled()
   else
     return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+end
+
+function M:OnKeyUp(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local IsEventHandled = false
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    IsEventHandled = self.Com_Slider:Handle_KeyUpEventOnGamePad(InKeyName)
+  end
+  if IsEventHandled then
+    return UWidgetBlueprintLibrary.Handled()
+  else
+    return UWidgetBlueprintLibrary.UnHandled()
   end
 end
 
@@ -677,7 +714,7 @@ function M:UpdateGamePadKeyInfo()
 end
 
 function M:OnGamePadDown(InKeyName)
-  local IsEventHandled = false
+  local IsEventHandled = self.Com_Slider:Handle_KeyDownEventOnGamePad(InKeyName)
   if InKeyName == UIConst.GamePadKey.LeftThumb then
     if self.bTipOpen then
       return false
@@ -750,6 +787,67 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     end
   end
   self:UpdateGamePadKeyInfo()
+end
+
+function M:MinusBtnCallback()
+  self.CurrentCount = self.Com_Slider.CurrentCount
+  self:UpdatePricePanel()
+end
+
+function M:AddBtnCallback()
+  self.CurrentCount = self.Com_Slider.CurrentCount
+  self:UpdatePricePanel()
+end
+
+function M:SliderChangeCallback(Value)
+  self.CurrentCount = Value
+  self:UpdatePricePanel()
+end
+
+function M:SetSliderState(enabled)
+  self.Com_Slider:SetEnabled(enabled)
+  self.Com_Slider:ForbidMinOperation(not enabled)
+  self.Com_Slider:ForbidAddOperation(not enabled)
+end
+
+function M:GetMaxCount()
+  local Remain, Total = ShopUtils:GetContextRemainAndTotal(self.ShopItemData.ItemId)
+  return Remain or 0
+end
+
+function M:UpdatePricePanel(bInit)
+  local MaxCount = self:GetMaxCount()
+  if MaxCount <= 0 then
+    self.Split:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Num_Total:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    if 1 == self.ShopItemData.PurchaseLimit or self.bSDKPurchase then
+      self.Panel_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      self.Panel_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    self.Split:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Num_Total:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Num_Total:SetText(tostring(MaxCount))
+  end
+  local Cost = ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId)
+  self:UpdateBtnPriceState(Cost * self.CurrentCount)
+  self.Num_Now:SetText(tostring(self.CurrentCount))
+end
+
+function M:UpdateBtnPriceState(NeedCount)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  self.Btn_GiftPay.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFF"))
+  if not DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId] then
+    local HasCount = Avatar.Resources[self.ShopItemData.PriceType] and Avatar.Resources[self.ShopItemData.PriceType].Count or 0
+    if NeedCount > HasCount then
+      self.Btn_GiftPay.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("DA2A4A"))
+    end
+  end
+  self.Btn_GiftPay.Text_Price:SetText(NeedCount)
 end
 
 return M

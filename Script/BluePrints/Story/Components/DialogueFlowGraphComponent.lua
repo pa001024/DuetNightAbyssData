@@ -36,14 +36,11 @@ function FDialogueFlowGraphComponent:OnTalkEnd()
   end
 end
 
-function FDialogueFlowGraphComponent:Execute()
-  local TS = TalkSubsystem()
-  self.bStartDialogue = false
-  TS:StartFlowTalkTask(self.FlowAsset)
-  if self.FlowAsset and self.FlowAsset.RestartDialogueId then
-    self.FlowAsset:SetSkipInRestartTag(true)
-    self:SkipToEnd()
-    self.FlowAsset:SetSkipInRestartTag(nil)
+function FDialogueFlowGraphComponent:NotifyFlowReady()
+  if self.TalkTask.FlowReadyCallback then
+    local cb = self.TalkTask.FlowReadyCallback
+    self.TalkTask.FlowReadyCallback = nil
+    cb()
   end
 end
 
@@ -269,7 +266,9 @@ function FDialogueFlowGraphComponent:IsUseEmptyCamera()
   if not self.FlowAsset then
     return false
   end
-  return self.FlowAsset:IsFirstDialogueNodeSequence()
+  local BaseType = self.TaskData and self.TaskData.BasicTalkType
+  local bCanUseSeq = "FixSimple" == BaseType or "Cinematic" == BaseType
+  return self.FlowAsset:IsFirstDialogueNodeSequence() and bCanUseSeq
 end
 
 function FDialogueFlowGraphComponent:GetSavedOptions()

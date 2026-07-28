@@ -1,11 +1,8 @@
 local BranchTriggerNode = Class("StoryCreator.StoryLogic.StorylineNodes.Questline.QuestNode")
 
 function BranchTriggerNode:Start(Context)
-  DebugPrint("------------ BranchTriggerNode Start------------------")
   self.Context = Context
-  local GameInstance = GWorld.GameInstance
-  self.TalkContext = GameInstance:GetTalkContext()
-  local BranchTriggerId = self.TalkContext:GetBranchTriggerId()
+  local BranchTriggerId = self:GetPayload("BranchTriggerId")
   local Index
   for i, v in ipairs(self.Branches) do
     if v == BranchTriggerId then

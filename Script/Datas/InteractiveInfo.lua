@@ -69,6 +69,10 @@ return ReadOnly("InteractiveInfo", {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_RLTShopInteract.BP_RLTShopInteract",
     Id = "RLTShop"
   },
+  RaceLottery = {
+    BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_RaceLotteryInteract.BP_RaceLotteryInteract",
+    Id = "RaceLottery"
+  },
   Shop = {
     BPPath = "/Game/BluePrints/Story/Interactive/InteractiveComponent/InteractChild/BP_ShopInteract.BP_ShopInteract",
     Id = "Shop"

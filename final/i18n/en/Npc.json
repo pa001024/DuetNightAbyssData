@@ -276,7 +276,7 @@
           },
           {
             "id": 90280500,
-            "content": "Talk to me about Hilda",
+            "content": "Talk to me about Hilda.",
             "next": 90280501
           }
         ]
@@ -2109,7 +2109,7 @@
       },
       {
         "id": 90040201,
-        "content": "Ah, you're initiating a conversation about love with me — how unexpected.",
+        "content": "Ah, you're initiating a conversation about love with me — how unexpected.\n",
         "voice": "char/Shuimu/vo_topic_02_1",
         "npc": 82101,
         "next": 90040203
@@ -2268,6 +2268,159 @@
           },
           {
             "id": 90040003,
+            "content": "Goodbye"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 82102,
+    "name": "\"Ada\"",
+    "camp": "NPC",
+    "charId": 2102,
+    "type": "Show",
+    "talks": [
+      {
+        "id": 90290001,
+        "content": "Yeewee~ What are we doing today? You're not taking on a whole pile of commissions again, are you?",
+        "voice": "char/Eve/vo_welcome",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290100,
+            "content": "What are you doing over there?",
+            "next": 90290101
+          },
+          {
+            "id": 90290200,
+            "content": "Hm? What have you got there?",
+            "next": 90290201
+          }
+        ]
+      },
+      {
+        "id": 90290101,
+        "content": "Shh...! There's an amazing little bug in your house. I've never seen one like it before. Look, it went into that crack!",
+        "voice": "char/Eve/vo_topic_01_1",
+        "npc": 82102,
+        "next": 90290102
+      },
+      {
+        "id": 90290201,
+        "content": "Lots and lots of \"silver coins\"! I helped a really pretty lady today, and she gave me one as a thank-you.",
+        "voice": "char/Eve/vo_topic_02_1",
+        "npc": 82102,
+        "next": 90290202
+      },
+      {
+        "id": 90290102,
+        "content": "It's brown, about as big as my thumb, with shiny wings, two long feelers, and six fuzzy legs...",
+        "voice": "char/Eve/vo_topic_01_2",
+        "npc": 82102,
+        "next": 90290103
+      },
+      {
+        "id": 90290202,
+        "content": "She said it was very useful, so I made a whole bunch more. Half for you, half for me. Pretty nice of me, right~?",
+        "voice": "char/Eve/vo_topic_02_2",
+        "npc": 82102,
+        "next": 90290203
+      },
+      {
+        "id": 90290103,
+        "content": "...!?",
+        "npc": 100001,
+        "next": 90290104
+      },
+      {
+        "id": 90290203,
+        "content": "(You resist the temptation with every fibre of your being.)",
+        "npc": 100001,
+        "next": 90290204
+      },
+      {
+        "id": 90290104,
+        "content": "You can't see it? That's okay. I'll catch it and bring it over! Then you can have a closer look.",
+        "voice": "char/Eve/vo_topic_01_3",
+        "npc": 82102,
+        "next": 90290105
+      },
+      {
+        "id": 90290204,
+        "content": "Yeewee? What's wrong? Why do you look so upset? Is half not enough? I can give you more! Cheer up!",
+        "voice": "char/Eve/vo_topic_02_3",
+        "npc": 82102,
+        "next": 90290205
+      },
+      {
+        "id": 90290105,
+        "content": "Don't! That's a bad bug!",
+        "npc": 100001,
+        "next": 90290106
+      },
+      {
+        "id": 90290205,
+        "content": "Something's not right... These coins feel too light.",
+        "npc": 100001,
+        "next": 90290206
+      },
+      {
+        "id": 90290106,
+        "content": "Yeewee? It is? I thought it was just a funny little bug... Oh, and earlier I saw a little grey kitty in your house, and it was chewing on—",
+        "voice": "char/Eve/vo_topic_01_4",
+        "npc": 82102,
+        "next": 90290107
+      },
+      {
+        "id": 90290206,
+        "content": "What's wrong?",
+        "voice": "char/Eve/vo_topic_02_4",
+        "npc": 82102,
+        "next": 90290207
+      },
+      {
+        "id": 90290107,
+        "content": "Aaaah!! Please stop...",
+        "npc": 100001,
+        "next": 90290108
+      },
+      {
+        "id": 90290207,
+        "content": "They're obvious fakes. Get rid of them, quick, or we'll be in trouble.",
+        "npc": 100001,
+        "next": 90290208
+      },
+      {
+        "id": 90290108,
+        "content": "Yeewee... All right. If you don't like it, I won't catch it, then.",
+        "voice": "char/Eve/vo_topic_01_5",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Let's talk about something else",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
+            "content": "Goodbye"
+          }
+        ]
+      },
+      {
+        "id": 90290208,
+        "content": "Yeewee... So I still haven't got the hang of it. The things I make always come out a little wrong. I'll keep trying.",
+        "voice": "char/Eve/vo_topic_02_5",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Let's talk about something else",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
             "content": "Goodbye"
           }
         ]
@@ -6366,6 +6519,13 @@
     "type": "Normal"
   },
   {
+    "id": 92102,
+    "name": "\"Ada\"",
+    "camp": "NPC",
+    "charId": 2102,
+    "type": "Normal"
+  },
+  {
     "id": 92301,
     "name": "Tabethe",
     "camp": "NPC",
@@ -6929,7 +7089,7 @@
     "talks": [
       {
         "id": 10037995,
-        "content": "Whatever they demand of us... remember this: we are not monsters.",
+        "content": "No matter what they force us to do... remember this: we are not monsters.",
         "voice": "story/1003/100379/19210B11",
         "npc": 100328
       }
@@ -9431,6 +9591,18 @@
     "type": "Normal"
   },
   {
+    "id": 111003,
+    "name": "Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111004,
+    "name": "\"The High Priestess\" Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 111110,
     "name": "Falsi",
     "camp": "NPC",
@@ -9456,7 +9628,7 @@
   },
   {
     "id": 111123,
-    "name": "\"The World\" Mother Bunny",
+    "name": "\"Judgement\" Mother Bunny",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -9468,13 +9640,25 @@
   },
   {
     "id": 111125,
-    "name": "UI_CMNpc_Name_Cunzhang",
+    "name": "\"The Emperor\" Cesare",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111126,
-    "name": "\"The Chariot\" Victor",
+    "name": "\"'The Chariot' Victor\"",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111127,
+    "name": "\"'The Chariot' Victor\"",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111128,
+    "name": "\"The Fool\" Joy",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -9583,6 +9767,167 @@
   {
     "id": 111167,
     "name": "\"The Hierophant\" Sanctus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111168,
+    "name": "\"Wheel of Fortune\" Karma",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111169,
+    "name": "\"Justice\" Justus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111170,
+    "name": "\"The Emperor\" Cesare",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111171,
+    "name": "\"The Hanged Man\" Isaac",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111172,
+    "name": "Narwhals Soldier",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111173,
+    "name": "UI_CMNpc_Name_Anbixiu",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111174,
+    "name": "\"The Hermit\" Tacita",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111175,
+    "name": "Fulvis",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111176,
+    "name": "Eve",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111177,
+    "name": "\"'The Chariot' Victor\"",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111178,
+    "name": "\"The Emperor\" Cesare",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111179,
+    "name": "\"Strength\" Bernard",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111180,
+    "name": "\"The Empress\" Teresa",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111181,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111182,
+    "name": "\"Wheel of Fortune\" Karma",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111183,
+    "name": "\"The Sun\" Elio",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111184,
+    "name": "\"The Hanged Man\" Isaac",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111185,
+    "name": "\"The Hierophant\" Sanctus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111186,
+    "name": "\"The Moon\" Selina",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111187,
+    "name": "\"The Magician\" Morgana",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111188,
+    "name": "\"The Empress\" Teresa",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111189,
+    "name": "\"The Star\" Stella",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111190,
+    "name": "\"Strength\" Bernard",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111191,
+    "name": "\"The High Priestess\" Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111192,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111193,
+    "name": "Eve",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111194,
+    "name": "\"The Empress\" Teresa",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -10234,7 +10579,7 @@
   },
   {
     "id": 200033,
-    "name": "Savage Filthoid - Corrosion",
+    "name": "Savage Filthoid – Corrosion",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -13872,7 +14217,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Once I've recovered, I will start my next adventure.",
+        "content": "As soon as I'm back in form, I'm off on another adventure.",
         "npc": 700032
       }
     ]
@@ -14388,7 +14733,7 @@
       },
       {
         "id": 51007758,
-        "content": "{nickname}, lovely to see you again! I'm working hard to learn more every day — let's both keep it up, okay?",
+        "content": "{nickname}, lovely to see you again! I'm trying my best to learn new things every day, let's keep at it!",
         "npc": 700204
       }
     ]
@@ -14792,12 +15137,12 @@
         "options": [
           {
             "id": 510013091,
-            "content": "Alright, I'll take a can.",
+            "content": "Fine, I'll take a can.",
             "next": 51001310
           },
           {
             "id": 510013092,
-            "content": "You get what you pay for. I'll pass.",
+            "content": "You get what you pay for. ",
             "next": 51001313
           }
         ]
@@ -18128,7 +18473,7 @@
       },
       {
         "id": 51010501,
-        "content": "Travel permit check — oi, you there! Got your travel permit?",
+        "content": "Travel permit check — oi, I'm talking to you! Got your travel permit on you?",
         "npc": 700111,
         "options": [
           {
@@ -19002,13 +19347,13 @@
   },
   {
     "id": 700208,
-    "name": "Savage Filthoid - Corrosion",
+    "name": "Savage Filthoid – Corrosion",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700209,
-    "name": "Savage Filthoid - Corrosion",
+    "name": "Savage Filthoid – Corrosion",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -19211,7 +19556,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Once I've recovered, I will start my next adventure.",
+        "content": "As soon as I'm back in form, I'm off on another adventure.",
         "npc": 700032
       },
       {
@@ -22352,6 +22697,144 @@
     "type": "Normal"
   },
   {
+    "id": 700428,
+    "name": "Lorent",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700429,
+    "name": "Kroger",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700430,
+    "name": "Rowan",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700431,
+    "name": "Weary Worker",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700432,
+    "name": "Friendly Worker",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700433,
+    "name": "Game Host",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700434,
+    "name": "First-Time Player",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700435,
+    "name": "Dealer",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700436,
+    "name": "Onlooker A",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700437,
+    "name": "Table Attendant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700438,
+    "name": "Man at the Table",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700439,
+    "name": "Woman at the Table",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700440,
+    "name": "Onlooker B",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700441,
+    "name": "Floor Attendant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700442,
+    "name": "Maggie",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700443,
+    "name": "Olaf",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700444,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700445,
+    "name": "Passing Worker",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700446,
+    "name": "Teasing Worker",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700447,
+    "name": "Ironworks Worker",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700448,
+    "name": "Friendly Man",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700449,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700450,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 700451,
     "name": "Outsider",
     "camp": "NPC",
@@ -22366,6 +22849,182 @@
   {
     "id": 700453,
     "name": "Snow"
+  },
+  {
+    "id": 700454,
+    "name": "Event Staff",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700455,
+    "name": "Noblewoman",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700456,
+    "name": "Nobleman",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700457,
+    "name": "Outsider",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700458,
+    "name": "Arcia",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700459,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700460,
+    "name": "Seaton",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700461,
+    "name": "Kieran",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700462,
+    "name": "Levi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700463,
+    "name": "Toran"
+  },
+  {
+    "id": 700464,
+    "name": "Disillusioned Young Man",
+    "type": "Normal"
+  },
+  {
+    "id": 700465,
+    "name": "Sneering Woman",
+    "type": "Normal"
+  },
+  {
+    "id": 700466,
+    "name": "Pensive Merchant",
+    "type": "Normal"
+  },
+  {
+    "id": 700467,
+    "name": "Fervent Protester",
+    "type": "Normal"
+  },
+  {
+    "id": 700468,
+    "name": "Maggie"
+  },
+  {
+    "id": 700469,
+    "name": "Lorent"
+  },
+  {
+    "id": 700470,
+    "name": "Resting Worker"
+  },
+  {
+    "id": 700471,
+    "name": "Chatting Worker"
+  },
+  {
+    "id": 700472,
+    "name": "Listless Worker"
+  },
+  {
+    "id": 700473,
+    "name": "Perked-Up Worker"
+  },
+  {
+    "id": 700474,
+    "name": "Station Guard"
+  },
+  {
+    "id": 700475,
+    "name": "Maggie's Voice"
+  },
+  {
+    "id": 700476,
+    "name": "Lorent's Voice"
+  },
+  {
+    "id": 700477,
+    "name": "Station Guard's Voice"
+  },
+  {
+    "id": 700478,
+    "name": "Coney"
+  },
+  {
+    "id": 700479,
+    "name": "Rowan"
+  },
+  {
+    "id": 700480,
+    "name": "Kroger"
+  },
+  {
+    "id": 700481,
+    "name": "Busy Doctor"
+  },
+  {
+    "id": 700482,
+    "name": "Eisenbahn"
+  },
+  {
+    "id": 700483,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700484,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700485,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700486,
+    "name": "Friendly Man",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700487,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700488,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700489,
+    "camp": "NPC",
+    "type": "Normal"
   },
   {
     "id": 700501,
@@ -26966,6 +27625,270 @@
   {
     "id": 700541,
     "name": "Riel",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700580,
+    "name": "Seaton",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700581,
+    "name": "Maggie",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700582,
+    "name": "Lorent",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700583,
+    "name": "Outsider",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700584,
+    "name": "Resting Worker"
+  },
+  {
+    "id": 700585,
+    "name": "Chatting Worker"
+  },
+  {
+    "id": 700586,
+    "name": "Listless Worker"
+  },
+  {
+    "id": 700588,
+    "name": "Station Guard"
+  },
+  {
+    "id": 700591,
+    "name": "Kroger",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700593,
+    "name": "Eisenbahn",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700594,
+    "name": "Levi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700595,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700596,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700597,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700598,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700599,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700600,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700601,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700602,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700603,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700604,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700605,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700606,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700607,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700608,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700609,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700610,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700611,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700612,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700613,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700614,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700615,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700616,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700617,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700618,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700619,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700620,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700621,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700622,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700623,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700624,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700625,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700626,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700627,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700628,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700629,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700630,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700631,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700632,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700633,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700634,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700635,
     "camp": "NPC",
     "type": "Normal"
   },
@@ -54213,12 +55136,7 @@
     "id": 701286,
     "name": "Rowan",
     "camp": "NPC",
-    "type": "Normal",
-    "srId": 106001,
-    "pos": [
-      -2798,
-      -1695
-    ]
+    "type": "Normal"
   },
   {
     "id": 701287,
@@ -56422,6 +57340,11 @@
     "name": "Arrogant Foreman",
     "camp": "NPC",
     "type": "Normal",
+    "srId": 106001,
+    "pos": [
+      -38541,
+      18279
+    ],
     "talks": [
       {
         "id": 51205001,
@@ -58481,6 +59404,235 @@
     ]
   },
   {
+    "id": 701327,
+    "name": "Coney",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51014400,
+        "content": "(Coney is so absorbed in whatever he's holding that he doesn't notice you walk over.)",
+        "options": [
+          {
+            "id": 51014401,
+            "content": "Coney, what are you doing?",
+            "next": 51014404,
+            "impr": [
+              1011,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51014402,
+            "content": "There's my boy!",
+            "next": 51014404,
+            "impr": [
+              1011,
+              "Chaos",
+              3
+            ]
+          },
+          {
+            "id": 51014403,
+            "content": "I'm telling Camilla you're slacking off.",
+            "next": 51014404,
+            "impr": [
+              1011,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51014404,
+        "content": "It's you! You came back!",
+        "npc": 701327,
+        "next": 51014405
+      },
+      {
+        "id": 51014405,
+        "content": "Is that so surprising?",
+        "npc": 100001,
+        "next": 51014406
+      },
+      {
+        "id": 51014406,
+        "content": "Ms Camilla said you wouldn't be back for ages. She even said there was a chance you wouldn't come back at all!",
+        "npc": 701327,
+        "next": 51014407
+      },
+      {
+        "id": 51014407,
+        "content": "So Camilla let you stay?",
+        "npc": 100001,
+        "next": 51014408
+      },
+      {
+        "id": 51014408,
+        "content": "Not exactly... After we split up, I packed up everything I had and started asking around about The Asphodel.",
+        "npc": 701327,
+        "next": 51014409
+      },
+      {
+        "id": 51014409,
+        "content": "People said the place was full of people drinking crazy expensive booze, crawling with Phoxhunters, and run by the last person you'd ever want to mess with.",
+        "npc": 701327,
+        "next": 51014410
+      },
+      {
+        "id": 51014410,
+        "content": "I was pretty nervous, honestly. Kept thinking I'd come all this way just to get kicked out anyway. But then I remembered what you said — that giving up without even trying would be pathetic.",
+        "npc": 701327,
+        "next": 51014411
+      },
+      {
+        "id": 51014411,
+        "content": "So I came anyway! The moment I explained why I was there, Ms Camilla gave me this look like I'd just ruined her whole day and started muttering, \"One Snow was enough of a headache. I only just got her out of my hair, and now you bring me another one.\"",
+        "npc": 701327,
+        "next": 51014412
+      },
+      {
+        "id": 51014412,
+        "content": "...",
+        "npc": 100001,
+        "next": 51014413
+      },
+      {
+        "id": 51014413,
+        "content": "So I remembered what you told me, plonked myself down on the floor, and started crying my eyes out. The Phoxhunters watching started asking Camilla if I was her secret love child or something.",
+        "npc": 701327,
+        "next": 51014414
+      },
+      {
+        "id": 51014414,
+        "content": "Then what happened? Did you call her Mum?",
+        "npc": 100001,
+        "next": 51014415
+      },
+      {
+        "id": 51014415,
+        "content": "I wanted to! But she looked terrifying. Trust me, I've spent enough time around train stations to know when not to try it. If I'd actually called her Mum, she'd have pinned me and my bags to the wall with that corkscrew of hers.",
+        "npc": 701327,
+        "next": 51014416
+      },
+      {
+        "id": 51014416,
+        "content": "... So how'd you end up staying?",
+        "npc": 100001,
+        "next": 51014417
+      },
+      {
+        "id": 51014417,
+        "content": "Then this blue-haired lady came over. She seemed to know Ms Camilla. Asked what was going on, so I told her everything.",
+        "npc": 701327,
+        "next": 51014418
+      },
+      {
+        "id": 51014418,
+        "content": "Rhythm...",
+        "npc": 100001,
+        "next": 51014419
+      },
+      {
+        "id": 51014419,
+        "content": "Yes, yes! Miss Rhythm! She's so nice. I wanted to call her Mum, but she said Miss Rhythm was fine.",
+        "npc": 701327,
+        "next": 51014420
+      },
+      {
+        "id": 51014420,
+        "content": "Anyway, she paid for me to stay here for a month, just to see how it goes.",
+        "npc": 701327,
+        "next": 51014421
+      },
+      {
+        "id": 51014421,
+        "content": "So if it doesn't work out, you still have to leave once the month's up?",
+        "npc": 100001,
+        "next": 51014422
+      },
+      {
+        "id": 51014422,
+        "content": "Yeah. But don't worry! I've been jumping on every chore I can find. Refilling drinks, waiting tables, mopping floors, cleaning windows... Ms Camilla even said the other day that I'm way more useful than Snow!",
+        "npc": 701327,
+        "next": 51014423
+      },
+      {
+        "id": 51014423,
+        "content": "I'm definitely making it past this month. I've even been learning how to mix drinks on the sly.",
+        "npc": 701327,
+        "next": 51014424
+      },
+      {
+        "id": 51014424,
+        "content": "Here, check this out! Miss Rhythm got it for me. She said it's mostly pictures, so even I can follow it. And when she's got time, she's going to teach me to read for real.",
+        "npc": 701327,
+        "next": 51014425
+      },
+      {
+        "id": 51014425,
+        "content": "I figure if I can mix drinks too, Ms Camilla won't have any reason to kick me out. I'll be the best server The Asphodel's ever had. What do you think?",
+        "npc": 701327,
+        "options": [
+          {
+            "id": 51014426,
+            "content": "That's the spirit!",
+            "next": 51014429,
+            "impr": [
+              1011,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51014427,
+            "content": "Maybe take it one step at a time.",
+            "next": 51014429,
+            "impr": [
+              1011,
+              "Benefit",
+              3
+            ]
+          },
+          {
+            "id": 51014428,
+            "content": "Sounds like you'll have a lot more to learn than mixing drinks.",
+            "next": 51014429,
+            "impr": [
+              1011,
+              "Wisdom",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51014429,
+        "content": "Yeah! I know I've still got loads to learn. But I'm really grateful you gave me this chance. I won't let it go to waste. It feels like I've got a whole new life now. These days I wake up full of energy, and it doesn't run out till bedtime!",
+        "npc": 701327,
+        "next": 51014430
+      },
+      {
+        "id": 51014430,
+        "content": "It's sort of like finding your parents, isn't it? I mean, that's what real parents do. They don't just give you a life. They teach you how to live it.",
+        "npc": 701327,
+        "next": 51014431
+      },
+      {
+        "id": 51014431,
+        "content": "And now... I think I'm finally learning how.",
+        "npc": 701327
+      },
+      {
+        "id": 51014432,
+        "content": "You're back? I've been taking good care of myself lately, you know~",
+        "npc": 701327
+      }
+    ]
+  },
+  {
     "id": 790001,
     "name": "Mia",
     "camp": "NPC",
@@ -58910,19 +60062,19 @@
   },
   {
     "id": 790061,
-    "name": "Savage Filthoid - Corrosion",
+    "name": "Savage Filthoid – Corrosion",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790062,
-    "name": "Savage Filthoid - Thunderbolt",
+    "name": "Savage Filthoid – Thunderbolt",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 790063,
-    "name": "Savage Filthoid - Decay",
+    "name": "Savage Filthoid – Decay",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -60392,6 +61544,13 @@
     "icon": "Theater01"
   },
   {
+    "id": 900054,
+    "name": "Lunotoot",
+    "camp": "NPC",
+    "type": "Normal",
+    "icon": "Theater01"
+  },
+  {
     "id": 910001,
     "name": "Berenica",
     "camp": "NPC",
@@ -60435,6 +61594,12 @@
   },
   {
     "id": 910103,
+    "name": "Abyssal Merchant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 910104,
     "name": "Abyssal Merchant",
     "camp": "NPC",
     "type": "Normal"
@@ -60887,6 +62052,13 @@
     "name": "Rebecca",
     "camp": "NPC",
     "charId": 2101,
+    "type": "Normal"
+  },
+  {
+    "id": 992102,
+    "name": "\"Ada\"",
+    "camp": "NPC",
+    "charId": 2102,
     "type": "Normal"
   },
   {
@@ -61391,6 +62563,24 @@
     "name": "{nickname}",
     "camp": "NPC",
     "charId": 160101,
+    "type": "Normal"
+  },
+  {
+    "id": 11112601,
+    "name": "\"'The Chariot' Victor\"",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 11112701,
+    "name": "\"'The Chariot' Victor\"",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 11117701,
+    "name": "\"'The Chariot' Victor\"",
+    "camp": "NPC",
     "type": "Normal"
   },
   {

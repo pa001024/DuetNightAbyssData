@@ -13,6 +13,10 @@ return ReadOnly("WeaponBlueprintId", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow02",
     WeaponBlueprintId = 206
   },
+  ["/Game/AssetDesign/Weapon/Bow/BP_Bow02_Maojiang"] = {
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow02_Maojiang",
+    WeaponBlueprintId = 20605
+  },
   ["/Game/AssetDesign/Weapon/Bow/BP_Bow02_Yinbu"] = {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow02_Yinbu",
     WeaponBlueprintId = 20603

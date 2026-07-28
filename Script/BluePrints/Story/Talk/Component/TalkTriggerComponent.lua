@@ -1,4 +1,5 @@
 local FTalkTriggerComponent = {}
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 
 function FTalkTriggerComponent:New()
   local TalkTriggerComponent = setmetatable({}, {__index = FTalkTriggerComponent})
@@ -22,11 +23,8 @@ function FTalkTriggerComponent:CanTrigger(TalkTriggerData)
     return false
   end
   local TalkTriggerId = TalkTriggerData.TalkTriggerId
-  if self:IsImpression(TalkTriggerData) then
-    local Avatar = GWorld:GetAvatar()
-    if nil == Avatar or Avatar:IsStorylineComplete(TalkTriggerId) then
-      return false
-    end
+  if self:IsImpression(TalkTriggerData) and (not ImpressionModel:IsValid() or ImpressionModel:IsStorylineComplete(TalkTriggerId)) then
+    return false
   end
   return self:CheckCondition(TalkTriggerData.TalkTriggerId)
 end

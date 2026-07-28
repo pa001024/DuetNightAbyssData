@@ -19,5 +19,6 @@ return ReadOnly("DamageRateZone", {
   Rouge = {RateZone = "Rouge"},
   Skill1 = {RateZone = "Skill1"},
   Skill2 = {RateZone = "Skill2"},
+  SkillSpeed = {RateZone = "SkillSpeed"},
   Strong = {RateZone = "Strong"}
 })

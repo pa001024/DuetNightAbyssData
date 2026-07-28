@@ -761,7 +761,7 @@ function M:OnGamePadButtonDown(InKeyName)
         end
       end
     elseif InKeyName == UIConst.GamePadKey.SpecialRight then
-      if self.CurFocusWidget ~= "GetItemBox" and self.CurFocusWidget ~= "NumInputEdit" then
+      if self.CurFocusWidget ~= "GetItemBox" then
         if self.bIsOpenList then
           self.CurFocusWidget = "DefaultWidget"
         else

@@ -159,24 +159,24 @@ return ReadOnly("GMIntegration", {
   },
   ChangeAbyss131 = {
     GMCommands = {
-      [1] = "sgm settime 2026 06 10 10 00 00",
+      [1] = "sgm settime 2026 07 29 10 00 00",
       [2] = "gm SystemCommonUnlock",
       [3] = "sgm CompleteCondition 4220",
       [4] = "sgm CompleteCondition 8002",
-      [5] = "sgm SetAbyssLevelProgress 1402 50 5"
+      [5] = "sgm SetAbyssLevelProgress 1502 50 5"
     },
-    GMDisplayName = "私服切换大秘境1.4上半",
+    GMDisplayName = "私服切换大秘境1.5上半",
     GMIntegrationName = "ChangeAbyss131"
   },
   ChangeAbyss132 = {
     GMCommands = {
-      [1] = "sgm settime 2026 07 10 10 00 00",
+      [1] = "sgm settime 2026 08 19 10 00 00",
       [2] = "gm SystemCommonUnlock",
       [3] = "sgm CompleteCondition 4220",
       [4] = "sgm CompleteCondition 8002",
-      [5] = "sgm SetAbyssLevelProgress 1404 50 5"
+      [5] = "sgm SetAbyssLevelProgress 1504 50 5"
     },
-    GMDisplayName = "私服切换大秘境1.4下半",
+    GMDisplayName = "私服切换大秘境1.5下半",
     GMIntegrationName = "ChangeAbyss132"
   },
   ChapterUIEast01End = {
@@ -1382,9 +1382,9 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm CompleteCondition 4220",
       [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1402 50 5"
+      [4] = "sgm SetAbyssLevelProgress 1502 50 5"
     },
-    GMDisplayName = "新号解锁大秘境1.4上半",
+    GMDisplayName = "新号解锁大秘境1.5上半",
     GMIntegrationName = "UnlockAbyss131"
   },
   UnlockAbyss132 = {
@@ -1392,9 +1392,9 @@ return ReadOnly("GMIntegration", {
       [1] = "gm SystemCommonUnlock",
       [2] = "sgm CompleteCondition 4220",
       [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1404 50 5"
+      [4] = "sgm SetAbyssLevelProgress 1504 50 5"
     },
-    GMDisplayName = "新号解锁大秘境1.4下半",
+    GMDisplayName = "新号解锁大秘境1.5下半",
     GMIntegrationName = "UnlockAbyss132"
   },
   UnlockAllSoloTreasureRepeatDungeon = {
@@ -2485,7 +2485,7 @@ return ReadOnly("GMIntegration", {
       [3] = "sgm sl 47",
       [4] = "sgm qcf 100403",
       [5] = "sgm stq 10040402",
-      [7] = "gm UnlockRegionTeleport 1"
+      [6] = "gm UnlockRegionTeleport 1"
     },
     GMDisplayName = "【第三章】跳车跑酷",
     GMIntegrationName = "tiaochepaoku",

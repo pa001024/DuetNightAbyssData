@@ -279,6 +279,21 @@ function Menu_Function_Button_PC_C:SetBtnHovered(IsHovered)
   end
 end
 
+function Menu_Function_Button_PC_C:OnAddedToFocusPath(InFocusEvent)
+  if UIUtils.IsGamepadInput() then
+    if self.Owner and self.Owner.ScrollBox_Function then
+      self.Owner.ScrollBox_Function:ScrollWidgetIntoView(self, true, UE4.EDescendantScrollDestination.IntoView)
+    end
+    self:SetBtnHovered(true)
+  end
+end
+
+function Menu_Function_Button_PC_C:OnRemovedFromFocusPath(InFocusEvent)
+  if UIUtils.IsGamepadInput() then
+    self:SetBtnHovered(false)
+  end
+end
+
 function Menu_Function_Button_PC_C:PlayButtonReleaseButHoverAnim()
   self:StopAllAnimations()
   self:PlayButtonHoverAnim()

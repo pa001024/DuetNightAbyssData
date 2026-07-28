@@ -524,6 +524,29 @@
     ]
   },
   {
+    "id": 4006,
+    "child": [
+      {
+        "id": 15035,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Lumino"
+      },
+      {
+        "id": 15031,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Hydro"
+      },
+      {
+        "id": 15036,
+        "t": "Resource",
+        "c": 1,
+        "n": "Cristal Umbro"
+      }
+    ]
+  },
+  {
     "id": 5001,
     "child": [
       {
@@ -1260,6 +1283,89 @@
     ]
   },
   {
+    "id": 5009,
+    "child": [
+      {
+        "id": 11010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 11020151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 15020151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 15040151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 21010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 24010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 31010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 32010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 33010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 41010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 41020151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 53010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      },
+      {
+        "id": 54010151,
+        "t": "Skin",
+        "c": 1,
+        "n": "Flots d’azur"
+      }
+    ]
+  },
+  {
     "id": 5101,
     "child": [
       {
@@ -1318,6 +1424,47 @@
         "t": "Resource",
         "c": 1,
         "n": "Refuge secret"
+      }
+    ]
+  },
+  {
+    "id": 350025,
+    "child": [
+      {
+        "id": 110045,
+        "t": "Resource",
+        "c": 1,
+        "n": "Coffre de Sceau démoniaque — Pactisant Anémo"
+      },
+      {
+        "id": 110046,
+        "t": "Resource",
+        "c": 1,
+        "n": "Coffre de Sceau démoniaque — Pactisant Pyro"
+      },
+      {
+        "id": 110047,
+        "t": "Resource",
+        "c": 1,
+        "n": "Coffre de Sceau démoniaque — Pactisant Électro"
+      },
+      {
+        "id": 110048,
+        "t": "Resource",
+        "c": 1,
+        "n": "Coffre de Sceau démoniaque — Pactisant Hydro"
+      },
+      {
+        "id": 110049,
+        "t": "Resource",
+        "c": 1,
+        "n": "Coffre de Sceau démoniaque — Pactisant Lumino"
+      },
+      {
+        "id": 110050,
+        "t": "Resource",
+        "c": 1,
+        "n": "Coffre de Sceau démoniaque — Pactisant Umbro"
       }
     ]
   }

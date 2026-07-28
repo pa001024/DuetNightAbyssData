@@ -236,10 +236,14 @@ return ReadOnly("SkillTree", {
   [2102] = {
     CharID = 2102,
     Skill1 = {
-      [1] = {Skill = 210201}
+      [1] = {Skill = 210201},
+      [2] = {Attr = 210201},
+      [3] = {Attr = 210202}
     },
     Skill2 = {
-      [1] = {Skill = 210202}
+      [1] = {Skill = 210202},
+      [2] = {Attr = 210203},
+      [3] = {Attr = 210204}
     },
     Skill3 = {
       [1] = {Skill = 210203},

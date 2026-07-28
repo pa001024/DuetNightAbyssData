@@ -2,15 +2,9 @@ local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local ChapMutexUtils = {}
 
 function ChapMutexUtils.ShowChooseChapterPopup(ChapterIdList, OnChoose, OnCancel, ParentWidget)
-  if not ChapterIdList or #ChapterIdList <= 0 then
+  if not ChapterIdList then
     if OnCancel then
       OnCancel()
-    end
-    return
-  end
-  if 1 == #ChapterIdList then
-    if OnChoose then
-      OnChoose(ChapterIdList[1])
     end
     return
   end
@@ -30,21 +24,36 @@ function ChapMutexUtils.ShowChooseChapterPopup(ChapterIdList, OnChoose, OnCancel
   end
   local QuestList = {}
   local QuestME = DataMgr.QuestMutualExclusion
-  for _, ChapId in pairs(ChapterIdList) do
-    local QuestChainId = QuestME[ChapId].QuestChainId
+  for _, ChapId in ipairs(ChapterIdList) do
+    local QuestChainId = QuestME[ChapId] and QuestME[ChapId].QuestChainId
     local ShowChainId
     if QuestChainId then
       for i, Id in ipairs(QuestChainId) do
         if Avatar.QuestChains[Id] and Avatar.QuestChains[Id]:IsStop() then
           ShowChainId = Id
-          goto lbl_73
+          goto lbl_64
         end
       end
-      ::lbl_73::
+      ::lbl_64::
       if ShowChainId then
         QuestList[ChapId] = ShowChainId
       end
     end
+  end
+  if CommonUtils.Size(QuestList) <= 0 then
+    if OnCancel then
+      OnCancel()
+    end
+    return
+  end
+  if 1 == CommonUtils.Size(QuestList) then
+    if OnChoose then
+      for ChapId, v in pairs(QuestList) do
+        OnChoose(ChapId)
+        break
+      end
+    end
+    return
   end
   local Params = {
     QuestList = QuestList,
@@ -119,6 +128,35 @@ function ChapMutexUtils.CollectUnlockCandidates(Avatar)
   return Candidates
 end
 
+function ChapMutexUtils.FilterGroupByExternalDoing(Avatar, ChapterIdList)
+  if not (Avatar and Avatar.QuestChapters and ChapterIdList) or #ChapterIdList <= 0 then
+    return {}
+  end
+  local ChapterIdSet = {}
+  for _, ChapId in ipairs(ChapterIdList) do
+    ChapterIdSet[ChapId] = true
+  end
+  local Filtered = {}
+  for _, ChapId in ipairs(ChapterIdList) do
+    local IsBlockedByExternalDoing = false
+    local Chapter = Avatar.QuestChapters[ChapId]
+    for _, MEChapId in ipairs(Chapter and Chapter.MEChapId or {}) do
+      if not ChapterIdSet[MEChapId] then
+        local MEChapter = Avatar.QuestChapters[MEChapId]
+        if MEChapter and MEChapter.State == CommonConst.QuestChapterState.Doing then
+          IsBlockedByExternalDoing = true
+          break
+        end
+      end
+    end
+    if not IsBlockedByExternalDoing then
+      table.insert(Filtered, ChapId)
+    end
+  end
+  table.sort(Filtered)
+  return Filtered
+end
+
 function ChapMutexUtils.BuildUnlockGroup(Avatar)
   if not Avatar or not Avatar.QuestChapters then
     return nil
@@ -144,14 +182,14 @@ function ChapMutexUtils.BuildUnlockGroup(Avatar)
         table.insert(Group, MEChapId)
       end
     end
-    table.sort(Group)
-    if #Group > 1 then
-      return Group
+    local FilteredGroup = ChapMutexUtils.FilterGroupByExternalDoing(Avatar, Group)
+    if #FilteredGroup >= 1 then
+      return FilteredGroup
     end
   end
-  return {
+  return ChapMutexUtils.FilterGroupByExternalDoing(Avatar, {
     Candidates[1]
-  }
+  })
 end
 
 return ChapMutexUtils

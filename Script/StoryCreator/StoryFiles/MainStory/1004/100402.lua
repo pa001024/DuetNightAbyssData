@@ -134,12 +134,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_DixiaQianruEleEnd_272480208",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 100402
       },
       questNodeData = {
@@ -414,9 +414,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0162_story_jazz_sneak_into.0162_story_jazz_sneak_into'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           }
         },
@@ -449,12 +448,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_Guanlishi_2530014",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -642,12 +641,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_KaojinZhuanlie_2530011",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 100403
       },
       questNodeData = {
@@ -852,12 +851,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_REGotoYWS",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -978,7 +977,8 @@ return {
               LongPressTime = 0,
               MontageName = "",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["177847441280611664969"] = {
@@ -1033,12 +1033,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106301,
         SubRegionIdList = {106001},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_REZZZ",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1201,7 +1201,8 @@ return {
               LongPressTime = 0,
               MontageName = "",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["17776356899434199836"] = {
@@ -1297,9 +1298,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0165_story_xier_theme.0165_story_xier_theme'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106301},
-              bStoreToServer = false
+              RelatedRegionId = {106301},
+              bStoreToServer = true
             }
           }
         },
@@ -1332,12 +1332,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_Guanlishi_2530014",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1432,6 +1432,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1463,9 +1464,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0164_cs_xier_show.0164_cs_xier_show'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           },
           ["17800554634351458143"] = {
@@ -1480,9 +1480,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0165_story_xier_theme.0165_story_xier_theme'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           }
         },
@@ -1515,12 +1514,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZZZEnd",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1650,6 +1649,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1679,7 +1679,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10042701.10042701'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -1700,6 +1700,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1750,6 +1751,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1830,6 +1832,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1873,7 +1876,9 @@ return {
               TargetTime = 18,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["177891710926772438475"] = {
@@ -1885,7 +1890,9 @@ return {
               TargetTime = 18,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["177969503433828552394"] = {
@@ -1900,9 +1907,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           },
           ["177969524549030002874"] = {
@@ -1946,12 +1952,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_JumpInter",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2012,7 +2018,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10041401.10041401'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -2033,6 +2039,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2108,12 +2115,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_KaojinZhuanlie_2530011",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2225,6 +2232,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2263,6 +2271,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2270,6 +2279,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2314,6 +2324,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2360,9 +2371,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0164_cs_xier_show.0164_cs_xier_show'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           },
           ["177969915780753717908"] = {
@@ -2377,9 +2387,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           },
           ["17797127232322907865"] = {
@@ -2394,9 +2403,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0165_story_xier_theme.0165_story_xier_theme'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           },
           ["17797128954755811826"] = {
@@ -2440,12 +2448,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_REGotoYWS",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2603,7 +2611,8 @@ return {
               LongPressTime = 0,
               MontageName = "",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["177866622912622925549"] = {
@@ -2650,12 +2659,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_KaojinZhuanlie_2530011",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2949,12 +2958,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_YWSEnd",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -3042,6 +3051,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3107,6 +3117,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

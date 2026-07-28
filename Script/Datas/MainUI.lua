@@ -398,5 +398,16 @@ return ReadOnly("MainUI", {
     Sequence = 90,
     SystemUIName = "MonthSignInPopMain",
     UIUnlockRuleName = "MonthSignIn"
+  },
+  [36] = {
+    EnterId = 36,
+    EscShowCondition = T.RT_3,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Memory.T_Entrance_Memory'",
+    IsReddotToEsc = true,
+    Name = "MAIN_UI_MEMORY",
+    ReddotNode = "CutSceneReview",
+    Sequence = 191,
+    SystemUIName = "MemoryMain",
+    UIUnlockRuleName = "Memory"
   }
 })

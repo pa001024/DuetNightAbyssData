@@ -436,6 +436,13 @@ return ReadOnly("Message", {
     MessageId = 200039,
     MessageType = "Guide"
   },
+  [200040] = {
+    MessageContentGamePad = "Message_110231",
+    MessageContentPC = "Message_110231",
+    MessageContentPhone = "Message_110231",
+    MessageId = 200040,
+    MessageType = "Guide"
+  },
   [203001] = {
     MessageContentGamePad = "Message_Guide_Pet_01",
     MessageContentPC = "Message_Guide_Pet_01",
@@ -2593,6 +2600,13 @@ return ReadOnly("Message", {
     MessageId = 303816,
     MessageType = "Guide"
   },
+  [303817] = {
+    MessageContentGamePad = "Message_Guide_AutoChess_17",
+    MessageContentPC = "Message_Guide_AutoChess_17",
+    MessageContentPhone = "Message_Guide_AutoChess_17",
+    MessageId = 303817,
+    MessageType = "Guide"
+  },
   [303901] = {
     MessageContentGamePad = "Message_Guide_AddBtn_1",
     MessageContentPC = "Message_Guide_AddBtn_1",
@@ -2647,6 +2661,20 @@ return ReadOnly("Message", {
     MessageContentPC = "Message_Guide_Appearance_6",
     MessageContentPhone = "Message_Guide_Appearance_6",
     MessageId = 304006,
+    MessageType = "Guide"
+  },
+  [304007] = {
+    MessageContentGamePad = "Message_Guide_Appearance_6",
+    MessageContentPC = "Message_Guide_Appearance_7",
+    MessageContentPhone = "Message_Guide_Appearance_7",
+    MessageId = 304007,
+    MessageType = "Guide"
+  },
+  [304008] = {
+    MessageContentGamePad = "Message_Guide_Appearance_8_PS",
+    MessageContentPC = "Message_Guide_Appearance_8",
+    MessageContentPhone = "Message_Guide_Appearance_8_Pad",
+    MessageId = 304008,
     MessageType = "Guide"
   },
   [304101] = {
@@ -2787,6 +2815,90 @@ return ReadOnly("Message", {
     MessageContentPC = "Message_Guide_GuildQuest_3",
     MessageContentPhone = "Message_Guide_GuildQuest_3",
     MessageId = 304403,
+    MessageType = "Guide"
+  },
+  [304501] = {
+    MessageContentGamePad = "Message_Guide_AutoChessShare_1",
+    MessageContentPC = "Message_Guide_AutoChessShare_1",
+    MessageContentPhone = "Message_Guide_AutoChessShare_1",
+    MessageId = 304501,
+    MessageType = "Guide"
+  },
+  [304502] = {
+    MessageContentGamePad = "Message_Guide_AutoChessShare_2",
+    MessageContentPC = "Message_Guide_AutoChessShare_2",
+    MessageContentPhone = "Message_Guide_AutoChessShare_2",
+    MessageId = 304502,
+    MessageType = "Guide"
+  },
+  [304503] = {
+    MessageContentGamePad = "Message_Guide_AutoChessShare_3",
+    MessageContentPC = "Message_Guide_AutoChessShare_3",
+    MessageContentPhone = "Message_Guide_AutoChessShare_3",
+    MessageId = 304503,
+    MessageType = "Guide"
+  },
+  [304504] = {
+    MessageContentGamePad = "Message_Guide_AutoChessShare_4",
+    MessageContentPC = "Message_Guide_AutoChessShare_4",
+    MessageContentPhone = "Message_Guide_AutoChessShare_4",
+    MessageId = 304504,
+    MessageType = "Guide"
+  },
+  [304505] = {
+    MessageContentGamePad = "Message_Guide_AutoChessShare_5",
+    MessageContentPC = "Message_Guide_AutoChessShare_5",
+    MessageContentPhone = "Message_Guide_AutoChessShare_5",
+    MessageId = 304505,
+    MessageType = "Guide"
+  },
+  [304801] = {
+    MessageContentGamePad = "Guide_AutoChessMain_Infinity_1",
+    MessageContentPC = "Guide_AutoChessMain_Infinity_1",
+    MessageContentPhone = "Guide_AutoChessMain_Infinity_1",
+    MessageId = 304801,
+    MessageType = "Guide"
+  },
+  [304802] = {
+    MessageContentGamePad = "Guide_AutoChessMain_Infinity_2",
+    MessageContentPC = "Guide_AutoChessMain_Infinity_2",
+    MessageContentPhone = "Guide_AutoChessMain_Infinity_2",
+    MessageId = 304802,
+    MessageType = "Guide"
+  },
+  [304803] = {
+    MessageContentGamePad = "Guide_AutoChessMain_Infinity_3",
+    MessageContentPC = "Guide_AutoChessMain_Infinity_3",
+    MessageContentPhone = "Guide_AutoChessMain_Infinity_3",
+    MessageId = 304803,
+    MessageType = "Guide"
+  },
+  [304804] = {
+    MessageContentGamePad = "Guide_AutoChessMain_Infinity_4",
+    MessageContentPC = "Guide_AutoChessMain_Infinity_4",
+    MessageContentPhone = "Guide_AutoChessMain_Infinity_4",
+    MessageId = 304804,
+    MessageType = "Guide"
+  },
+  [304805] = {
+    MessageContentGamePad = "Guide_AutoChessMain_Infinity_5",
+    MessageContentPC = "Guide_AutoChessMain_Infinity_5",
+    MessageContentPhone = "Guide_AutoChessMain_Infinity_5",
+    MessageId = 304805,
+    MessageType = "Guide"
+  },
+  [304901] = {
+    MessageContentGamePad = "Guide_SoloTreasurePermanentMain_1",
+    MessageContentPC = "Guide_SoloTreasurePermanentMain_1",
+    MessageContentPhone = "Guide_SoloTreasurePermanentMain_1",
+    MessageId = 304901,
+    MessageType = "Guide"
+  },
+  [304902] = {
+    MessageContentGamePad = "Guide_SoloTreasurePermanentMain_2",
+    MessageContentPC = "Guide_SoloTreasurePermanentMain_2",
+    MessageContentPhone = "Guide_SoloTreasurePermanentMain_2",
+    MessageId = 304902,
     MessageType = "Guide"
   },
   [310001] = {
@@ -3815,6 +3927,18 @@ return ReadOnly("Message", {
     MessageContentPhone = "MESSAGE_LOADING_434",
     MessageId = 900434,
     MessageTitlePC = "MESSAGE_TITLE_LOADING_434"
+  },
+  [900435] = {
+    MessageContentPC = "MESSAGE_LOADING_435",
+    MessageContentPhone = "MESSAGE_LOADING_435",
+    MessageId = 900435,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_435"
+  },
+  [900436] = {
+    MessageContentPC = "Event_Des_103025",
+    MessageContentPhone = "Event_Des_103025",
+    MessageId = 900436,
+    MessageTitlePC = "Event_Title_103025"
   },
   [910001] = {
     MessageContentPC = "MESSAGE_TRACKQUEST_910001_PC",

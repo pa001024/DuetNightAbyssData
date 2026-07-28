@@ -206,5 +206,6 @@ return {
   Explore = {
     ["7067177"] = {}
   },
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

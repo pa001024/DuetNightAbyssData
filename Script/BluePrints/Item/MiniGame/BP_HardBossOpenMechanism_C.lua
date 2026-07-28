@@ -24,7 +24,7 @@ function M:CloseMechanism(PlayerId, IsSuccess)
 end
 
 function M:ResetPauseState(UIName)
-  if "HardBossLevelChoose" ~= UIName then
+  if UIName ~= self.UIName then
     return
   end
   EventManager:RemoveEvent(EventID.UnLoadUI, self)

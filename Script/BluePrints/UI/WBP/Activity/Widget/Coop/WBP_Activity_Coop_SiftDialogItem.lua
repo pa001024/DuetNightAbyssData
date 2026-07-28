@@ -40,26 +40,28 @@ function M:InitSelectionItems(SelectionDatas, SelectionText, IconPaths)
   for Idx, index in ipairs(indices) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     local RewardID = SelectionDatas[index]
-    local RewardData = DataMgr.Resource[RewardID]
-    Content.Id = RewardData.ResourceId
-    Content.Icon = RewardData.Icon
-    Content.ItemType = "Resource"
-    Content.UIName = RewardData.ResourceName
-    Content.Rarity = RewardData.Rarity
-    Content.IsShowDetails = true
-    Content.Rec = "Reward"
-    Content.ParentWidget = self
-    Content.IsMultiSelectable = true
-    Content.bClick = false
-    Content.NoInteractive = true
-    Content.HandleMouseDown = true
-    Content.OnFocusReceivedEvent = {
-      Obj = self,
-      Callback = function()
-        Content.UI:SetFocus()
-      end
-    }
-    self.ListReward:AddItem(Content)
+    local RewardData = DataMgr.Resource[tonumber(RewardID)] or DataMgr.Resource[RewardID]
+    if RewardData then
+      Content.Id = RewardData.ResourceId
+      Content.Icon = RewardData.Icon
+      Content.ItemType = "Resource"
+      Content.UIName = RewardData.ResourceName
+      Content.Rarity = RewardData.Rarity
+      Content.IsShowDetails = true
+      Content.Rec = "Reward"
+      Content.ParentWidget = self
+      Content.IsMultiSelectable = true
+      Content.bClick = false
+      Content.NoInteractive = true
+      Content.HandleMouseDown = true
+      Content.OnFocusReceivedEvent = {
+        Obj = self,
+        Callback = function()
+          Content.UI:SetFocus()
+        end
+      }
+      self.ListReward:AddItem(Content)
+    end
   end
 end
 

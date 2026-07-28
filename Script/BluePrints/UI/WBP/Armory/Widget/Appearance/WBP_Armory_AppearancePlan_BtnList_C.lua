@@ -22,7 +22,6 @@ function M:Construct()
   self.CommunityShareCode = ""
   self:ResetCommunityCodeState()
   self:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Text_DyeCode:SetText(GText("UI_Dye_Output_Build"))
 end
 
 function M:OnBtnAddedToFocusPath(Widget)

@@ -196,16 +196,23 @@ function WBP_Play_Entry_C:OnReddotChange(SystemUIName)
   local Index = self.WidgetNameToIndex[SystemUIName]
   if Index then
     local TreeNode = ReddotManager.GetTreeNode(SystemUIName)
-    local Reddot = false
-    if TreeNode and TreeNode.Count > 0 then
-      Reddot = true
-    end
+    local Count = TreeNode and TreeNode.Count or 0
+    local RdType = TreeNode and TreeNode.ReddotType
+    local bShowNew = Count > 0 and RdType == EReddotType.New
+    local bShowReddot = Count > 0 and not bShowNew
     local Item = self.ComTab.EMScrollBox_TabItem:GetChildAt(math.max(Index - 1, 0))
     if Item and Item.Info.WidgetUIName == SystemUIName then
-      if Reddot then
+      if bShowReddot then
         Item.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       else
         Item.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
+      if Item.New then
+        if bShowNew then
+          Item.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        else
+          Item.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+        end
       end
     end
   end
@@ -241,11 +248,8 @@ function WBP_Play_Entry_C:Destruct()
   end
   AudioManager(self):StopSound(self, "SystemOpenSound")
   self:RecoverCamera()
+  UE.UUIFunctionLibrary.StopHorizontalFOV()
   self.Super.Destruct(self)
-  local BattleView = UIManager():GetUIObj("BattleMain")
-  if BattleView then
-    BattleView:Show("Temp1.4Fix")
-  end
 end
 
 function WBP_Play_Entry_C:PlayNPCAnim(NpcAnimId)

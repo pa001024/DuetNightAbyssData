@@ -80,21 +80,15 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "177780107980148558073",
-            startPort = "Out",
-            endQuest = "177780107980148558074",
-            endPort = "In"
-          },
           {
             startQuest = "177780107980148558073",
             startPort = "Out",
@@ -184,6 +178,18 @@ return {
             startPort = "Out",
             endQuest = "177780107980148558082",
             endPort = "In"
+          },
+          {
+            startQuest = "177780107980148558073",
+            startPort = "Out",
+            endQuest = "17806465002361015845",
+            endPort = "In"
+          },
+          {
+            startQuest = "17806465002361015845",
+            startPort = "Out",
+            endQuest = "177780107980148558074",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -239,6 +245,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -262,7 +269,7 @@ return {
             key = "177780107980148558074",
             type = "PickUpNode",
             name = "拾取物品",
-            pos = {x = 1385.7413823019087, y = 280.21530792740396},
+            pos = {x = 1363.8183053788318, y = 274.4460771581732},
             propsData = {
               bActiveEnable = true,
               StaticCreatorIdList = {},
@@ -279,7 +286,7 @@ return {
             key = "177780107980148558075",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1399.686455958902, y = 115.60916076957098},
+            pos = {x = 1393.9172251896712, y = 32.5322376926479},
             propsData = {
               NewDescription = "Content_10040204_01_01",
               NewDetail = "",
@@ -290,14 +297,14 @@ return {
             key = "177780107980148558077",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = -328.1315980900149, y = 294.5483736345899},
+            pos = {x = -335.27445523287207, y = 324.5483736345899},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = true,
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {272480046, 272480052}
+              StaticCreatorIdList = {272480052}
             }
           },
           ["177780107980148558078"] = {
@@ -425,6 +432,20 @@ return {
               ForbidTag = "ForbidDefault",
               bHidewhenForbid = true
             }
+          },
+          ["17806465002361015845"] = {
+            key = "17806465002361015845",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 989.0855061715152, y = 287.4608840434926},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {272480046}
+            }
           }
         },
         commentData = {}
@@ -456,12 +477,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -563,7 +584,7 @@ return {
             key = "177780107980448558133",
             type = "PickUpInteractiveNode",
             name = "任务交互",
-            pos = {x = 1448.6327436962101, y = 170.4676650041436},
+            pos = {x = 1507.5982609375894, y = 147.70904431448844},
             propsData = {
               StaticCreatorId = 272480047,
               UnitId = 10078,
@@ -572,7 +593,8 @@ return {
               LongPressTime = 4,
               MontageName = "Interactive_01_Montage",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = "event:/sfx/common/story/03/task_surgery"
             }
           },
           ["177780107980448558134"] = {
@@ -669,12 +691,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1050,7 +1072,8 @@ return {
               LongPressTime = 4,
               MontageName = "Interactive_OperateNormal_Montage",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = "event:/sfx/common/story/03/task_medicine"
             }
           },
           ["17781679951417615067"] = {
@@ -1066,7 +1089,8 @@ return {
               LongPressTime = 4,
               MontageName = "Interactive_OperateNormal_Montage",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = "event:/sfx/common/story/03/task_medicine"
             }
           },
           ["17781679956937615087"] = {
@@ -1082,7 +1106,8 @@ return {
               LongPressTime = 4,
               MontageName = "Interactive_OperateNormal_Montage",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = "event:/sfx/common/story/03/task_medicine"
             }
           },
           ["177816829143610467336"] = {
@@ -1204,12 +1229,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1297,6 +1322,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1362,6 +1388,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

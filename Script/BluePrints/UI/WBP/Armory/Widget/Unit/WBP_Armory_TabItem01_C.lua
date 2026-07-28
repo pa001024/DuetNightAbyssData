@@ -23,6 +23,7 @@ function M:OnListItemObjectSet(Content)
   end
   self:SetLevel(Content.Level)
   self:SetInGear(Content.bInGear)
+  self:SetInStarTarget(Content.bInGear, Content.IsStar)
   self:SetWeaponPhantomIcon(Content.Uuid)
   self:SetRarity(Content.Rarity)
   self:HideRarity(Content.bHideRarity)
@@ -122,6 +123,16 @@ function M:SetInGear(IsEquipped)
   end
 end
 
+function M:SetInStarTarget(IsEquipped, isStarTarget)
+  if IsEquipped then
+    self.StarTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  elseif isStarTarget then
+    self.StarTarget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.StarTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
 function M:SetLevel(Level)
   if not Level then
     self.Text_Lv:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -163,6 +174,7 @@ function M:SetWeaponPhantomIcon(_Uuid)
       local IconImage = LoadObject(MiniIconPath .. PhantomGuideIconImg .. "." .. PhantomGuideIconImg .. "'")
       self.Image_Phantom:SetBrushResourceObject(IconImage)
       self.Image_Phantom:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.StarTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
     else
       self.Image_Phantom:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end

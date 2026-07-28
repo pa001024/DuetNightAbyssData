@@ -60,7 +60,12 @@ function M:UpdateReplayTips()
     self.Text_Color:SetText(GText("UI_SkinPreview_Dye"))
     self.Btn_Selective.OnClicked:Add(self, self.OnClickDyeingPreview)
     self.Btn_Riding:SetVisibility(ESlateVisibility.Collapsed)
-    self.Btn_Dye:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    local HairData = self.ShopItemData.TypeId and DataMgr.Hair[self.ShopItemData.TypeId]
+    if self.ShopItemData.ItemType == "Hair" and HairData and HairData.IsCommon == true then
+      self.Btn_Dye:SetVisibility(ESlateVisibility.Collapsed)
+    else
+      self.Btn_Dye:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
     self.Btn_HideUI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
 end

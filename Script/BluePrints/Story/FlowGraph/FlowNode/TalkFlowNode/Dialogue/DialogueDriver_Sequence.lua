@@ -64,8 +64,8 @@ function SequenceDriver:BindSequenceActors()
     end
   end
   local UPostProcessFunctionLibrary = LoadClass(LibraryPath)
-  if UPostProcessFunctionLibrary and UPostProcessFunctionLibrary.MobileCloseLights then
-    UPostProcessFunctionLibrary.MobileCloseLights(LevelSequenceActor)
+  if UPostProcessFunctionLibrary and UPostProcessFunctionLibrary.MobileCloseLightTrack then
+    UPostProcessFunctionLibrary.MobileCloseLightTrack(LevelSequenceActor)
   end
 end
 

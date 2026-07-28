@@ -41,6 +41,9 @@ function M:Construct()
   self.WBP_PersonalInfo_Edit_Tips:SetOnFocusNotSelectedItemCallback(function()
     self:OnFocusTipsNotSelectedItem()
   end)
+  if self.WBP_PersonalInfo_Edit_Tips.SetOnCloseByGamepadCallback then
+    self.WBP_PersonalInfo_Edit_Tips:SetOnCloseByGamepadCallback(self.TryToCloseTips, self)
+  end
   self.TileView_Select_Role.BP_OnItemSelectionChanged:Clear()
   self.TileView_Select_Role.BP_OnItemSelectionChanged:Add(self, self.OnListItemSelectionChanged)
   self.TileView_Select_Role.BP_OnItemIsHoveredChanged:Clear()
@@ -216,10 +219,16 @@ function M:OnGamePadDown(InKeyName)
         if self.TileView_Select_Role:HasFocusedDescendants() then
           self["Edit_AvatarItem_" .. self.SelectBoxIdx]:SetFocus()
           return
-        else
-          UIUtils.PlayCommonBtnSe(self)
-          self:OnReturnKeyDown()
         end
+        if self.Common_Sort_List and self.Common_Sort_List.HasAnyFocus and self.Common_Sort_List:HasAnyFocus() then
+          local BackFocusWidget = self:OnSortListWidgetBack()
+          if BackFocusWidget and BackFocusWidget.SetFocus then
+            BackFocusWidget:SetFocus()
+            return
+          end
+        end
+        UIUtils.PlayCommonBtnSe(self)
+        self:OnReturnKeyDown()
       end,
       [UIConst.GamePadKey.LeftThumb] = function()
         if not self.WS_List:HasFocusedDescendants() then

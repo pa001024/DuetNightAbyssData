@@ -34,4 +34,14 @@ function SplineMoveStartNode:Start(Context)
   self:Finish()
 end
 
+function SplineMoveStartNode:OnQuestlineFail()
+  local GameInstance = GWorld.GameInstance
+  local CinemaMoveSpline = URuntimeCommonFunctionLibrary.FindCinemaMoveSplineByIndex(self.SplineActorIndex, GameInstance)
+  if not IsValid(CinemaMoveSpline) then
+    GWorld.logger.error("SplineMoveStartNode:OnQuestlineFail, CinemaMoveSpline not found!, SplineActorIndex: " .. tostring(self.SplineActorIndex))
+    return
+  end
+  CinemaMoveSpline:SplineEnd(0)
+end
+
 return SplineMoveStartNode

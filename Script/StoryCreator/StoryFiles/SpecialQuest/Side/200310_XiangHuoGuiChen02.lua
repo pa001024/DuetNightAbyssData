@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "Point_20031002",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {

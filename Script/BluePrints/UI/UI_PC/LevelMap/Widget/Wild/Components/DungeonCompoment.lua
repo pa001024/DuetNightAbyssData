@@ -1,4 +1,7 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
+local MiniMapModeComp = require("BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.MiniMapModeComponent")
+local DungeonPageModeComp = require("BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.DungeonPageModeComponent")
 local Component = {}
 local ControlPriority = {
   Normal = 0,
@@ -12,6 +15,9 @@ function Component:InitInDungeon(Id, MainMap, IsMiniMap)
   self.RegionID = Id
   self.IsMiniMap = IsMiniMap
   self.MainMap = MainMap
+  local ModeCompProto = IsMiniMap and MiniMapModeComp or DungeonPageModeComp
+  self.ModeComp = setmetatable({}, {__index = ModeCompProto})
+  self.ModeComp:SetHost(MainMap)
   self.Panel_Empty:SetVisibility(ESlateVisibility.Collapsed)
   self.IsEmpty = false
   self.IsInDungeon = true
@@ -22,7 +28,7 @@ function Component:InitInDungeon(Id, MainMap, IsMiniMap)
     self:PlayAnimation(self.WhiteBg)
   end
   self.InitCoroutines = {}
-  self.CoroutineInitObj = CreateCoroutine(self.DungeonInitCoroutine)
+  self.CoroutineInitObj = CoroutineUtils.CreateCoroutine(self.DungeonInitCoroutine)
   coroutine.resume(self.CoroutineInitObj, self)
 end
 
@@ -87,7 +93,7 @@ function Component:DungeonInitCoroutine()
       self:AddTimer(1, function()
         local UIManager = GWorld.GameInstance:GetGameUIManager()
         local Battle = UIManager:GetUIObj("BattleMain")
-        if self.MainMap.Battle and self.MainMap.Battle:IsVisible() and self.MainMap:IsVisible() and Battle and not Battle:IsHide() then
+        if self.ModeComp:IsBattleVisibleAndSelfVisible() and Battle and not Battle:IsHide() then
           DebugPrint("TickRegionMapImageOpen")
           self:GetMapImageLocalPos()
           self.TickRegionMapImageOpen = true
@@ -202,7 +208,7 @@ function Component:InitInDungeonMap()
   end
   self.Panel_Gamer:SetRenderTranslation(self.CurrentDragOffset)
   self.Panel_Point:SetRenderTranslation(self.CurrentDragOffset)
-  self.BgHeight = FVector2D(0, self.MainMap.Tab_Top.Slot:GetSize().Y)
+  self.BgHeight = FVector2D(0, self.ModeComp:GetTabTopHeight())
   if not self.Indicator then
     self.Indicator = self:CreateWidgetAsync("RegionMapIndicator", self.CoroutineInitObj)
     self.Panel_Floor:AddChild(self.Indicator)
@@ -211,7 +217,7 @@ function Component:InitInDungeonMap()
   self.Indicator:Init(self, self.ScreenSize - self.BgHeight, self.Gamer, true)
   self.Indicator.Slot:SetZOrder(0)
   self:UpdateLimitOffset()
-  self.MainMap.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.ModeComp:SetSliderZoomVisible(true)
   self:InitTouchLayer(self.Player, 0, 0, true)
   self:AddStaticSubTouchItem("RegionMapLayer", self.Panel_Touch, {
     MultiMove = self.TouchWildMapMultiMove,

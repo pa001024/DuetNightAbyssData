@@ -47,7 +47,7 @@
     "cost": 4,
     "buffId": 4020105,
     "extraBuffDesc": "기본 룬스톤",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "def": 0.45,
     "hp": 0.3
   },
@@ -59,7 +59,7 @@
     "cost": 4,
     "buffId": 4020106,
     "extraBuffDesc": "기본 룬스톤",
-    "unlockQuestId": 10300103,
+    "unlockQuestId": 10300127,
     "atk": 0.3,
     "def": 0.45
   },
@@ -71,7 +71,7 @@
     "cost": 4,
     "buffId": 4020107,
     "extraBuffDesc": "기본 룬스톤",
-    "unlockQuestId": 10300102,
+    "unlockQuestId": 10300126,
     "atk": 0.3,
     "hp": 0.3
   },
@@ -83,7 +83,7 @@
     "cost": 4,
     "buffId": 4020108,
     "extraBuffDesc": "기본 룬스톤",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "hp": 0.65,
     "shield": 0.6
   },
@@ -95,7 +95,7 @@
     "cost": 4,
     "buffId": 4020109,
     "extraBuffDesc": "기본 룬스톤",
-    "unlockQuestId": 10300101,
+    "unlockQuestId": 10300125,
     "atk": 0.3,
     "shield": 0.4
   },
@@ -108,7 +108,7 @@
     "buffId": 4020501,
     "extraBuffDesc": "옵션 효과: 대미지를 입힐 시, 대상의 방어력이 45.0% 감소한다. 지속 시간 10초.",
     "extraBuffId": 4020201,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.3
   },
   {
@@ -120,7 +120,7 @@
     "buffId": 4020502,
     "extraBuffDesc": "옵션 효과: 대미지를 입힐 시, 대상의 방어력이 20.0% 감소한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020202,
-    "unlockQuestId": 10300105,
+    "unlockQuestId": 10300129,
     "atk": 0.45
   },
   {
@@ -132,7 +132,7 @@
     "buffId": 4020503,
     "extraBuffDesc": "옵션 효과: 대미지를 받을 시 자신의 방어력이 25.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020203,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "hp": 0.9
   },
   {
@@ -144,7 +144,7 @@
     "buffId": 4020504,
     "extraBuffDesc": "옵션 효과: 대미지를 받을 시 자신의 공격력이 25.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020204,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "shield": 0.9
   },
   {
@@ -156,7 +156,7 @@
     "buffId": 4020505,
     "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 대상의 방어력이 45.0% 상승한다. 지속 시간 10초.",
     "extraBuffId": 4020205,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -168,7 +168,7 @@
     "buffId": 4020506,
     "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 대상의 공격력이 35.0% 상승한다. 지속 시간 10초.",
     "extraBuffId": 4020206,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -180,7 +180,7 @@
     "buffId": 4020507,
     "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 자신의 공격력이 45.0% 상승한다. 지속 시간 10초.",
     "extraBuffId": 4020207,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -192,7 +192,7 @@
     "buffId": 4020508,
     "extraBuffDesc": "옵션 효과: 대미지를 받을 시 자신의 공격력이 20.0%, 방어력이 20.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020208,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "def": 0.3
   },
   {
@@ -204,7 +204,7 @@
     "buffId": 4020509,
     "extraBuffDesc": "옵션 효과: 대미지를 입힐 시 자신의 공격력이 20.0%, 방어력이 20.0% 상승한다. 최대 3.0단계 중첩, 지속 시간 10초.",
     "extraBuffId": 4020209,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.2
   },
   {
@@ -216,7 +216,7 @@
     "buffId": 4020510,
     "extraBuffDesc": "옵션 효과: HP가 25.0%까지 감소할 시, 초당 최대 HP를 7.5% 회복한다. 지속 시간 10초.",
     "extraBuffId": 4020210,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -228,7 +228,7 @@
     "buffId": 4020511,
     "extraBuffDesc": "옵션 효과: HP가 20% 감소할 때마다 자신의 공격력이 15.0% 상승한다.",
     "extraBuffId": 4020211,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -240,7 +240,7 @@
     "buffId": 4020512,
     "extraBuffDesc": "옵션 효과: HP가 20% 감소할 때마다 자신의 방어력이 4.0 상승한다.",
     "extraBuffId": 4020212,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -252,7 +252,7 @@
     "buffId": 4020513,
     "extraBuffDesc": "옵션 효과: 대미지를 입힐 때, 대상에게 실드가 있다면 대미지가 100.0% 상승한다.",
     "extraBuffId": 4020213,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.55
   },
   {
@@ -264,7 +264,7 @@
     "buffId": 4020514,
     "extraBuffDesc": "옵션 효과: 대미지를 입힐 때, 대상에게 실드가 없다면 대미지가 100.0% 상승한다.",
     "extraBuffId": 4020214,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.5
   },
   {
@@ -274,9 +274,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020602,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-폭파 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·폭파를 획득한다. 일정 시간마다 자신을 중심으로 폭발을 일으켜 주변의 적을 날려버린다.",
     "extraBuffId": 4020302,
-    "unlockQuestId": 10300111,
+    "unlockQuestId": 10300135,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -289,9 +289,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020603,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-침식 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·침식을 획득한다. 일정 시간마다 발 아래에 [독액]을 생성한다.\n[독액]: [독액] 범위 안에 있는 적의 방어력을 감소시키고, 대상에게 지속 대미지를 입힌다.",
     "extraBuffId": 4020303,
-    "unlockQuestId": 10300113,
+    "unlockQuestId": 10300137,
     "atk": 0.5,
     "def": 0.5,
     "hp": 0.5,
@@ -304,9 +304,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020604,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-벼락 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·벼락을 획득한다. 일정 시간마다 자신을 중심으로 주변에 [전기 구슬]을 발사한다.\n[전기 구슬]: 일정 시간마다 좁은 범위의 적에게 전류를 방출하여 대미지를 입히며, 공격을 받은 후 사라진다.",
     "extraBuffId": 4020304,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -319,9 +319,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020605,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-진홍 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·진홍을 획득한다. 일정 시간마다 자신을 중심으로 주변에 [부패의 늪]을 생성한다.\n[부패의 늪]: 범위 안에 있는 적은 지속 대미지를 받고, 범위 안에 있는 아군은 HP를 지속적으로 회복한다.",
     "extraBuffId": 4020305,
-    "unlockQuestId": 10300109,
+    "unlockQuestId": 10300133,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -334,9 +334,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020606,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-메마름 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·메마름을 획득한다. 일정 시간마다 자신의 주변에 [메마름의 광선]을 발사한다.\n[메마름의 광선]: 일정 시간 지속되며, 계속 회전하면서 적중한 적에게 대미지를 입히고 대상의 정신력을 감소시킨다.",
     "extraBuffId": 4020306,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -349,9 +349,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020608,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-복수 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·복수를 획득한다. 처치될 경우 인근의 아군 대상에게 [강력]을 부여한다.\n[강력]: 공격력, 방어력, 이동 속도, 공격 속도가 일정 시간 동안 상승한다.",
     "extraBuffId": 4020308,
-    "unlockQuestId": 10300112,
+    "unlockQuestId": 10300136,
     "atk": 1.5
   },
   {
@@ -361,9 +361,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020610,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-잔불 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·잔불을 획득한다. 일정 시간 간격으로 자신에게 [잔불 상태]를 부여한다.\n[잔불 상태]: 지속 시간 내 대미지를 받으면, 해당 상태가 종료되면서 폭발을 일으켜, 범위 내의 적에게 대미지를 입힌다.",
     "extraBuffId": 4020310,
-    "unlockQuestId": 10300114,
+    "unlockQuestId": 10300138,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -376,9 +376,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020611,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-희생 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·희생을 획득한다. 처치당할 때 폭발을 일으켜, 범위 내의 적에게 대미지를 입힌다.",
     "extraBuffId": 4020311,
-    "unlockQuestId": 10300110,
+    "unlockQuestId": 10300134,
     "atk": 1.5
   },
   {
@@ -388,12 +388,48 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020613,
-    "extraBuffDesc": "옵션 효과: 지휘자 능력-사혈 획득",
+    "extraBuffDesc": "옵션 효과: 지휘자 능력·사혈을 획득한다. 대미지를 입힐 때, 자신의 HP를 회복한다.",
     "extraBuffId": 4020313,
-    "unlockQuestId": 10300107,
+    "unlockQuestId": 10300131,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
     "shield": 1.0
+  },
+  {
+    "id": 37,
+    "name": "집중 룬스톤",
+    "icon": "Item03",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020515,
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 시, 자신의 공격 속도가 20.0% 증가한다. 최대 5.0단계 중첩, 목표 변경 후 리셋.",
+    "extraBuffId": 4020215,
+    "unlockQuestId": 10300145,
+    "atk": 0.5
+  },
+  {
+    "id": 38,
+    "name": "도전 룬스톤",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020516,
+    "extraBuffDesc": "옵션 효과: 대미지를 입힐 때, 대상과의 HP 차이 250.0마다 해당 대미지가 25.0% 상승한다. 최대 4.0단계 중첩.",
+    "extraBuffId": 4020216,
+    "unlockQuestId": 10300132,
+    "atk": 0.5
+  },
+  {
+    "id": 39,
+    "name": "구제 룬스톤",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020517,
+    "extraBuffDesc": "옵션 효과: 치료 효과 부여 시 대상이 지속 치료 효과를 획득한다. 초당 최대 HP 3.5% 회복, 지속 시간 5.0초.",
+    "extraBuffId": 4020217,
+    "unlockQuestId": 10300131,
+    "atk": 0.5
   }
 ]

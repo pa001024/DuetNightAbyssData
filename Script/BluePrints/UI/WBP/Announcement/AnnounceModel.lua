@@ -414,7 +414,7 @@ function M:TrySubReddotCacheDetail(Conf)
   end
   local BeReads = EMCache:Get("AnnouncementHasRead", false)
   if not BeReads then
-    EMCache:Set("AnnouncementHasRead", {}, true)
+    EMCache:Set("AnnouncementHasRead", {}, false)
     BeReads = EMCache:Get("AnnouncementHasRead", false)
   end
   BeReads[Conf.NoticeID] = 1

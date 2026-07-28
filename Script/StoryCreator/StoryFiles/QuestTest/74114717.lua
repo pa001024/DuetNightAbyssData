@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -102,7 +102,7 @@ return {
             key = "1732692284093444267",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2800, y = 300},
+            pos = {x = 2244.4, y = 300},
             propsData = {ModeType = 0}
           },
           ["1732692284093444268"] = {
@@ -116,13 +116,15 @@ return {
             key = "1732692284093444269",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1182.534923538793, y = 289.2121212121212},
+            pos = {x = 1513.809923538793, y = 296.4121212121212},
             propsData = {
               IsNpcNode = false,
+              IsPlayerTurnToNPC = false,
+              IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 741147330,
               FlowAssetPath = "",
-              TalkType = "FixSimple",
-              TalkStageName = "Kawaii17",
+              TalkType = "FreeSimple",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "BlendIn",
@@ -141,6 +143,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -157,17 +160,15 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
-              bNpcActionKeepIn = true,
-              bNpcActionKeepOut = false,
-              bForceWaitNavLoaded = false,
+              SwitchToMaster = "Player",
+              PlayerSwitchEmoIdle = true,
               NormalOptions = {},
               OverrideFailBlend = false
             }

@@ -14,6 +14,7 @@ function M:ComponentInitDispatcher()
   self:AddDispatcher(EventID.OnWeaponDeleted, self, self.OnWeaponDeleted)
   self:AddDispatcher(EventID.OnWeaponRewardStateChanged, self, self.OnWeaponRewardStateChanged)
   self:AddDispatcher(EventID.OnHyperWeaponForgeQuestRewardGot, self, self.OnHyperWeaponForgeRewradChanged)
+  self:AddDispatcher(EventID.OnStarTargetChanged, self, self.OnStarTargetChanged)
 end
 
 function M:Construct()
@@ -32,6 +33,8 @@ function M:Construct()
     "Main_PreSubTabChange",
     "Main_PreMainTabChange",
     "Main_OnLockBtnClicked",
+    "Main_OnStarTargetBtnClicked",
+    "Main_PlayRetrySound",
     "Main_OnBagItemLockedOrUnlocked",
     "Main_OnBtnIntensifyClicked",
     "Main_OnTableKeyDown",
@@ -124,6 +127,7 @@ end
 function M:WeaponMain_Init()
   self.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Edit:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.WS_State:SetActiveWidgetIndex(0)
   self:UpdateWeaponTag()
   self:SwitchContentsArray()
   if not self.WeaponItemContentsArray then
@@ -142,9 +146,11 @@ function M:WeaponMain_Init()
       Content = self.WeaponItemContentsArray[1]
     end
     self:SelectRoleListItem(Content)
+    self:WeaponMain_SortAndInitRoleList()
   end
   self:PlayAnimation(self.RoleList_In)
   self:UpdateBoxReddot()
+  self.Btn_StarTarget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
 end
 
 function M:WeaponMain_JumpToSubPage(SubPageName)
@@ -330,6 +336,8 @@ function M:WeaponMain_UpdatAttributeButton()
     if self[self.ComparedWeaponName].Level >= TargetTable[self[self.ComparedWeaponName].WeaponId].WeaponMaxLevel then
       self.AttributeButtonStyleParams[1].Text = GText("Max_Level_Achieved")
       self.AttributeButtonStyleParams[1].ForbidBtn = true
+    elseif ArmoryUtils:GetWeaponByUuid(self[self.ComparedWeaponName].Uuid) == nil then
+      self.AttributeButtonStyleParams[1].ForbidBtn = true
     else
       local MaxLevel = UpgradeUtils.GetMaxLevel(self[self.ComparedWeaponName], CommonConst.ArmoryType.Weapon)
       if MaxLevel <= self[self.ComparedWeaponName].Level then
@@ -507,6 +515,12 @@ function M:WeaponMain_SelectRoleListItem(Content)
   end
   ArmoryUtils:SetItemIsSelected(self[self.CmpContentName], false)
   ArmoryUtils:SetItemIsSelected(Content, true)
+  ArmoryUtils:SetItemInStarTarget(Content, Content.IsStar)
+  if Content.IsStar then
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect_Normal)
+  else
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect_Normal)
+  end
   self[self.CmpContentName] = Content
   self:UpdateWeaponInfos()
   if Content.Avatar then
@@ -520,6 +534,11 @@ function M:WeaponMain_SelectRoleListItem(Content)
   if Content.IsOwned then
     ArmoryUtils:SetItemReddotRead(Content, true)
     self:AddSubTabReddotListen()
+    if not self.IsPreviewMode then
+      self.WS_State:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  else
+    self.WS_State:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   if HyperWeaponUtils.IsHyperWeapon(self[self.ComparedWeaponName].WeaponId) then
     self.ActorController:ChangeWeaponFashion(self[self.ComparedWeaponName])
@@ -584,6 +603,8 @@ local function AddContent(self, Weapon, Content)
   Obj.LevelCardNum = Weapon.GradeLevel
   Obj.bHideItemLevel = self.bFromArchive
   Obj.IsOwned = true
+  Obj.IsStar = Weapon.IsStar
+  Obj.bCollection = Weapon.IsStar
   return AddContentCommon(self, Obj, MainTabName)
 end
 
@@ -600,6 +621,8 @@ local function AddUnownedContent(self, Weapon, Content)
   Obj.IsOwned = false
   Obj.LockType = 2
   Obj.Level = nil
+  Obj.IsStar = Weapon.IsStar
+  Obj.bCollection = Weapon.IsStar
   self[MainTabName .. "UnownedWeaponContentMap"][Obj.UnitId] = Obj
   return AddContentCommon(self, Obj, MainTabName)
 end
@@ -757,7 +780,7 @@ function M:WeaponMain_CreateItemContents()
           
           ArmoryUtils:DontResetUuid(true)
           for WeaponId, value in pairs(DataMgr.Weapon) do
-            if not value.IsNotOpen and not OwnedWeapons[WeaponId] and ShouldDisplayWeapon(WeaponId) and CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Weapon, WeaponId) and (not HyperWeaponUtils.IsHyperWeapon(WeaponId) or ArmoryUtils:IsShowHyperWeapon(self.WeaponTag)) then
+            if not value.IsNotOpen and not OwnedWeapons[WeaponId] and ShouldDisplayWeapon(WeaponId) and CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.Weapon, WeaponId) and (not HyperWeaponUtils.IsHyperWeapon(WeaponId) or ArmoryUtils:IsShowHyperWeapon(self.WeaponTag)) then
               local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
                 WeaponIds = {WeaponId}
               })
@@ -843,6 +866,22 @@ function M:WeaponMain_InitContentState()
   CmpWeapon = self[self.ComparedWeaponName]
   self[self.CmpContentName] = self.WeaponItemContentsMap[CmpWeapon.Uuid]
   self[self.CmpContentName].IsSelect = true
+  if self[self.ComparedWeaponName].IsStar then
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect_Normal)
+  else
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect_Normal)
+  end
+end
+
+function M:WeaponMain_OnFaceButtonBottomKeyDown()
+  if self.LockStar then
+    if UIUtils.HasAnyFocus(self.Btn_Locked) then
+      self:WeaponMain_OnLockBtnClicked()
+    elseif UIUtils.HasAnyFocus(self.Btn_StarTarget) then
+      self:WeaponMain_OnStarTargetBtnClicked()
+    end
+    return
+  end
 end
 
 function M:WeaponMain_UpdateResourceInfos()
@@ -927,11 +966,59 @@ function M:OnChangeWeapon(Ret)
   AudioManager(self):PlayUISound(self, "event:/ui/common/weapon_replace", nil, nil)
   ArmoryUtils:SetItemInGear(self[self.CurContentName], false)
   ArmoryUtils:SetItemInGear(self[self.CmpContentName], true)
+  if self[self.CurrentWeaponName] then
+    ArmoryUtils:SetItemInStarTarget(self[self.CurContentName], self[self.CurrentWeaponName].IsStar)
+  end
+  ArmoryUtils:SetItemInStarTarget(self[self.CmpContentName], self[self.ComparedWeaponName].IsStar)
   ArmoryUtils:SetContentPhantomIcon(self[self.CurContentName])
   ArmoryUtils:SetContentPhantomIcon(self[self.CmpContentName])
   self[self.CurrentWeaponName] = self[self.ComparedWeaponName]
   self[self.CurContentName] = self[self.CmpContentName]
   self:WeaponMain_UpdatAttributeButton()
+end
+
+function M:WeaponMain_OnStarTargetBtnClicked()
+  local Avatar = GWorld:GetAvatar()
+  local TargetType = CommonConst.DataType.Weapon
+  local TargetId = self[self.ComparedWeaponName].Uuid
+  local IsStar = true
+  if self[self.CmpContentName].IsStar then
+    IsStar = false
+  else
+  end
+  Avatar:SwitchArmoryTargetStar(nil, TargetType, TargetId, IsStar)
+end
+
+function M:WeaponMain_PlayRetrySound()
+  if self[self.CmpContentName].IsStar then
+    AudioManager(self):PlayUISound(nil, "event:/ui/common/click_checkbox_uncheck", nil, nil)
+  else
+    AudioManager(self):PlayUISound(nil, "event:/ui/common/click_checkbox_check", nil, nil)
+  end
+end
+
+function M:WeaponMain_OnStarTargetGamePadKeyDown()
+  self.LockStar = true
+  self:InitKeySetting()
+  if self.Btn_Locked then
+    self.Btn_Locked:SetFocus()
+  end
+end
+
+function M:OnStarTargetChanged(TargetInfo)
+  if TargetInfo.TargetType ~= CommonConst.DataType.Weapon then
+    return
+  end
+  if TargetInfo.IsStar then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Toast_Armory_HasStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect)
+  else
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Toast_Armory_CancelStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect)
+  end
+  self.StarCD = false
+  self[self.CmpContentName].bCollection = TargetInfo.IsStar
+  ArmoryUtils:SetItemInStarTarget(self[self.CmpContentName], TargetInfo.IsStar)
 end
 
 function M:WeaponMain_OnForbiddenBtnConfirm1Clicked()
@@ -944,6 +1031,7 @@ end
 function M:WeaponMain_PreMainTabChange()
   self:ShowElementTips(false)
   self:RemoveSubTabReddotListen()
+  self.WS_State:SetActiveWidgetIndex(0)
 end
 
 function M:WeaponMain_PreSubTabChange()
@@ -964,6 +1052,9 @@ function M:UpdateSubTabReddot_Grade()
 end
 
 function M:ResetWeaponData()
+  if not self.ComparedWeaponName then
+    return
+  end
   local Avatar = ArmoryUtils:GetAvatar()
   if self.WeaponTag == CommonConst.ArmoryTag.UWeapon then
     local UWeaponUuid = self.ComparedChar.UWeaponEids[self.CurMainTab.TabData.UWeaponIdx]
@@ -1116,6 +1207,10 @@ function M:WeaponMain_OnBagItemLockedOrUnlocked(OpAction, ErrCode, Id)
 end
 
 function M:WeaponMain_OnFocusReceived(ReplyInfo)
+  if self.LockStar then
+    ReplyInfo.IsHandled = true
+    ReplyInfo.Reply = UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Btn_Locked)
+  end
 end
 
 function M:StartFilterHyperWeapon()
@@ -1138,9 +1233,11 @@ function M:WeaponMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
   if not self.bHideSquadBuildBtn or not self.IsPreviewMode then
     self:AddKeyEvents(KeyDownEvents, self.MenuKeyDownEvents)
   end
-  self:AddKeyEvents(KeyDownEvents, self.LeftThumbstickKeyDownEvents, self.MainTabKeyDownEvents, self.CommonKeyDownEvents)
+  self:AddKeyEvents(KeyDownEvents, self.LeftThumbstickKeyDownEvents, self.MainTabKeyDownEvents, self.CommonKeyDownEvents, self.StarTargetNameKeyDownEvents, self.InGearKeyDownEvents)
   self.LeftThumbstickBottomKeyInfoList.Desc = GText("UI_Weapon_Type")
-  table.insert(BottomKeyInfo, self.LeftThumbstickBottomKeyInfoList)
+  if not self.LockStar then
+    table.insert(BottomKeyInfo, self.LeftThumbstickBottomKeyInfoList)
+  end
   self:AddKeyEvents(KeyUpEvents, self.LeftThumbstickKeyUpEvents)
   if self.Tab_L:IsVisible() then
     table.insert(BottomKeyInfo, self.RoleUpDownBottomKeyInfoList)
@@ -1159,7 +1256,35 @@ function M:WeaponMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
   if ArmoryUtils:IsShowHyperWeapon(self.WeaponTag) and self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute then
     self:AddLongPressEvent(UIConst.GamePadKey.SpecialLeft, 0.5, self.StartFilterHyperWeapon, self.CancelFilterHyperWeapon)
   end
+  self:AddKeyClickEvent(UIConst.GamePadKey.FaceButtonTop, self.OnSetInGear)
+  self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonTop, 0.5, self.OnGamepad_LongPressStart_Weapon, self.OnGamepad_LongPressEnd_Weapon)
   table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
+end
+
+function M:OnSetInGear()
+  if self.IsListExpanded then
+    return
+  end
+  if self.CurMainTab.Name ~= ArmoryUtils.ArmoryMainTabNames.Melee and self.CurMainTab.Name ~= ArmoryUtils.ArmoryMainTabNames.Ranged and self.CurMainTab.Name ~= ArmoryUtils.ArmoryMainTabNames.UWeapon then
+    return
+  end
+  if not rawget(self.CurrentSubUI, "OnFaceButtonTopKeyDown") then
+    return
+  end
+  self.CurrentSubUI:OnFaceButtonTopKeyDown()
+end
+
+function M:OnGamepad_LongPressEnd_Weapon()
+  self.Key_GamePad_Btn:RemoveExecuteLogic()
+  self.Key_GamePad_Btn:OnButtonReleased()
+end
+
+function M:OnGamepad_LongPressStart_Weapon()
+  self.Key_GamePad_Btn:AddExecuteLogic(self, function()
+    self:WeaponMain_OnStarTargetGamePadKeyDown()
+    self:OnGamepad_LongPressEnd_Weapon()
+  end)
+  self.Key_GamePad_Btn:OnButtonPressed(nil, true, 0, 0.5)
 end
 
 function M:WeaponMain_InitNavigationRules()
@@ -1200,7 +1325,6 @@ function M:WeaponMain_UpdateGamepadStyle()
         {Type = "Img", ImgShortPath = "Right"}
       }
     })
-    self.Key_GamePad_Lock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     self.Key_GamePad_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -1248,6 +1372,7 @@ function M:OnWeaponGradeLevelUp(Ret, WeaponUuid, CurrentGradeLevel, ConsumeWeapo
     self:UpdateSubTabReddot_Grade()
     self:InitSubUI()
   end
+  self.ActorController:ChangeWeaponFashion(self[self.ComparedWeaponName])
 end
 
 function M:WeaponMain_FindContent(WeaponUuid)

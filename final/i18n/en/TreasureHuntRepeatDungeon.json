@@ -148,5 +148,151 @@
       20502002
     ],
     "unlockCondition": 10301404
+  },
+  {
+    "id": 10302701,
+    "name": "Mistwharf",
+    "desc": "Mistwharf was Haojing's largest shipping port and the main hub through which Starweavers enter and depart Huaxu. Over time, it grew into a city in its own right. Heeding the summons of the Grand Incense Rite, they have donated vast sums and precious goods in support of the Proving. In recognition of this, the organisers have designated Mistwharf as the first arena.",
+    "image": "T_SoloTreasure_Gangkou",
+    "easyDungeonId": 42801,
+    "easyModeFee": 0,
+    "hardDungeonId": 42802,
+    "hardModeFee": 1000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302702,
+    "name": "Gritblight Expanse",
+    "desc": "Once laid waste by the Scourge of Zhuyin, the Gritblight Expanse became a name spoken with dread. Though Zhuyin has since returned, the Gritblight that scars this land cannot be fully undone. To dispel lingering fear among the populace, and to purge the Filthoids still roaming the area, the organisers have established the second arena upon this desolate ground.",
+    "image": "T_SoloTreasure_Wuhui",
+    "easyDungeonId": 42803,
+    "easyModeFee": 500,
+    "hardDungeonId": 42804,
+    "hardModeFee": 2000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302703,
+    "name": "Western Outskirts of Haojing",
+    "desc": "The western outskirts of Haojing are largely forested and sparsely populated. After parts of the city were damaged in the wake of the two Loongs' clash, the area was chosen as the final arena of the Incense Proving.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "hardDungeonId": 42805,
+    "hardModeFee": 4000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302704,
+    "name": "Invitational",
+    "desc": "Since its launch, the Incense Proving has drawn widespread attention across Huaxu, with its star contestants earning particular acclaim. To inspire more young talents amid the changes sweeping Huaxu, the organisers have invited these standout competitors to take part in an even more demanding Invitational, and issued invitations to them accordingly.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "easyDungeonId": 42806,
+    "easyModeFee": 1,
+    "hardDungeonId": 42807,
+    "hardModeFee": 3,
+    "easyMaxConvertResource": 1000000,
+    "easyScoreToResource": {
+      "101": 2
+    },
+    "hardMaxConvertResource": 3000000,
+    "hardScoreToResource": {
+      "101": 0.5
+    },
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
   }
 ]

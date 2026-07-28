@@ -292,7 +292,7 @@ function Component:RecvQueryGuildMemberInfo(SrcParams, Ret, MemberInfos)
     end
     return CurrGuild.Members
   end)
-  self:RecvCommon(nil, GuildCommon.EventID.OnQueryGuildMemberInfo, CurrGuild and CurrGuild.Members or nil)
+  self:RecvCommon(Ret, GuildCommon.EventID.OnQueryGuildMemberInfo, CurrGuild and CurrGuild.Members or nil)
 end
 
 function Component:RecvNotifyGuildJoinInviteReply(ErrCode, InviteeUid, GuildId, IsAccept, InvitedName)

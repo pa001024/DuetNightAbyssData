@@ -43,29 +43,32 @@ function GameModeEventComponent:GetGameModeEventComponent()
 end
 
 function GameModeEventComponent:TriggerUploadDungeonAchievement(PlayerEids)
-  if self:GetDungeonAchieveComponent() then
+  local DungeonAchieveComponentTmp = self:GetDungeonAchieveComponent()
+  if DungeonAchieveComponentTmp then
     local ResPlayerEids = PlayerEids or {}
     if nil == PlayerEids then
       for _, PlayerCharacter in pairs(self:GetAllPlayer()) do
         table.insert(ResPlayerEids, PlayerCharacter.Eid)
       end
     end
-    self:GetDungeonAchieveComponent():UploadDungeonAchievement(ResPlayerEids)
+    DungeonAchieveComponentTmp:UploadDungeonAchievement(ResPlayerEids)
   end
 end
 
 function GameModeEventComponent:TriggerGameModeEvent(EventName, ...)
-  if not self:GetDungeonComponent() then
+  local DungeonComponentTmp = self:GetDungeonComponent()
+  if not DungeonComponentTmp then
     return
   end
-  if self:GetDungeonComponent()[EventName] and self:GetDungeonComponent()[EventName]:IsBound() then
-    self:GetDungeonComponent()[EventName]:Broadcast(...)
+  if DungeonComponentTmp[EventName] and DungeonComponentTmp[EventName]:IsBound() then
+    DungeonComponentTmp[EventName]:Broadcast(...)
   end
 end
 
 function GameModeEventComponent:TriggerDungeonComponentFun(FunName, ...)
-  if self:GetDungeonComponent() and self:GetDungeonComponent()[FunName] then
-    return self:GetDungeonComponent()[FunName](self:GetDungeonComponent(), ...)
+  local DungeonComponentTmp = self:GetDungeonComponent()
+  if DungeonComponentTmp and DungeonComponentTmp[FunName] then
+    return DungeonComponentTmp[FunName](DungeonComponentTmp, ...)
   end
   return nil
 end
@@ -95,13 +98,14 @@ end
 
 function GameModeEventComponent:TriggerDungeonAchieve(EventName, PlayerEid, ...)
   DebugPrint("GameModeAchieve: EventName:", EventName)
-  if not self:GetDungeonAchieveComponent() then
+  local DungeonAchieveComponentTmp = self:GetDungeonAchieveComponent()
+  if not DungeonAchieveComponentTmp then
     return
   end
-  if not self:GetDungeonAchieveComponent()[EventName] then
+  if not DungeonAchieveComponentTmp[EventName] then
     return
   end
-  self:GetDungeonAchieveComponent()[EventName](self:GetDungeonAchieveComponent(), PlayerEid, ...)
+  DungeonAchieveComponentTmp[EventName](DungeonAchieveComponentTmp, PlayerEid, ...)
 end
 
 function GameModeEventComponent:TriggerDungeonAchieve_Bp(EventName, PlayerEid)
@@ -110,30 +114,34 @@ end
 
 function GameModeEventComponent:TriggerBPGameModeEvent_OnCustomEvent(ParaName)
   local EventName = "OnCustomEvent_" .. ParaName
-  if self:GetGameModeEventComponent()[EventName] and self:GetGameModeEventComponent()[EventName]:IsBound() then
-    self:GetGameModeEventComponent()[EventName]:Broadcast()
+  local GameModeEventCompTmp = self:GetGameModeEventComponent()
+  if GameModeEventCompTmp and GameModeEventCompTmp[EventName] and GameModeEventCompTmp[EventName]:IsBound() then
+    GameModeEventCompTmp[EventName]:Broadcast()
   end
 end
 
 function GameModeEventComponent:TriggerBPGameModeEvent_OnTriggerAOIBase(...)
   local TriggerEventId, TriggerBase, ActorEid, TriggerType = ...
   local EventName = "OnTriggerAOIBase_" .. TriggerEventId
-  if self:GetGameModeEventComponent()[EventName] and self:GetGameModeEventComponent()[EventName]:IsBound() then
-    self:GetGameModeEventComponent()[EventName]:Broadcast(TriggerBase)
+  local GameModeEventCompTmp = self:GetGameModeEventComponent()
+  if GameModeEventCompTmp and GameModeEventCompTmp[EventName] and GameModeEventCompTmp[EventName]:IsBound() then
+    GameModeEventCompTmp[EventName]:Broadcast(TriggerBase)
   end
 end
 
 function GameModeEventComponent:TriggerBPGameModeEvent_BpOnTimerEnd(ParaName)
   local EventName = "BpOnTimerEnd_" .. ParaName
-  if self:GetGameModeEventComponent()[EventName] and self:GetGameModeEventComponent()[EventName]:IsBound() then
-    self:GetGameModeEventComponent()[EventName]:Broadcast()
+  local GameModeEventCompTmp = self:GetGameModeEventComponent()
+  if GameModeEventCompTmp and GameModeEventCompTmp[EventName] and GameModeEventCompTmp[EventName]:IsBound() then
+    GameModeEventCompTmp[EventName]:Broadcast()
   end
 end
 
 function GameModeEventComponent:TriggerBPGameModeEvent_OnBossDead(ParaName)
   local EventName = "OnBossDead_" .. ParaName.UnitId
-  if self:GetGameModeEventComponent()[EventName] and self:GetGameModeEventComponent()[EventName]:IsBound() then
-    self:GetGameModeEventComponent()[EventName]:Broadcast()
+  local GameModeEventCompTmp = self:GetGameModeEventComponent()
+  if GameModeEventCompTmp and GameModeEventCompTmp[EventName] and GameModeEventCompTmp[EventName]:IsBound() then
+    GameModeEventCompTmp[EventName]:Broadcast()
   end
 end
 

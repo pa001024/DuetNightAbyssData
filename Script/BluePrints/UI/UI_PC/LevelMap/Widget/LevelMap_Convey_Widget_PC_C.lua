@@ -85,13 +85,13 @@ function M:InitialTempleAndPartyInfo(Temples, TelepointIcon, RegionIcon)
     end
   end
   if #Temples > 0 then
-    table.insert(self.WildMap.MainMap.BackGamePadKey, 1, {
+    self.WildMap.ModeComp:InsertBackGamePadKeyAtFirst({
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "RS"}
       },
       Desc = GText("UI_RegionMap_SeeTemple")
     })
-    self.WildMap.MainMap:UpdateWildMapKeys()
+    self.WildMap.ModeComp:UpdateWildMapKeys()
   end
 end
 
@@ -149,10 +149,8 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:RemoveKey()
-  if self.WildMap.MainMap.BackGamePadKey and self.WildMap.MainMap.BackGamePadKey[1].KeyInfoList[1].ImgShortPath == "RS" then
-    table.remove(self.WildMap.MainMap.BackGamePadKey, 1)
-    self.WildMap.MainMap:UpdateWildMapKeys()
-  end
+  self.WildMap.ModeComp:RemoveFirstBackGamePadKeyIfRS()
+  self.WildMap.ModeComp:UpdateWildMapKeys()
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)

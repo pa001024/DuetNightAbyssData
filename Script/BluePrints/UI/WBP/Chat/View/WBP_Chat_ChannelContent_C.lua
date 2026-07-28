@@ -63,7 +63,15 @@ function M:HandleSwitchChannelIndex(ErrCode, ChannelType, ChannelIndex, online_t
   self.Owner:ForbidRightBtn(true)
   local Text
   if ChatModel:IsInRegionOnlineChannelType() then
-    Text = string.format(GText("SwitchedToChannel"), GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(" .. ChannelIndex .. ")")
+    if not UIUtils.AmIInGuildScene() then
+      Text = string.format(GText("SwitchedToChannel"), GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(" .. ChannelIndex .. ")")
+    else
+      local CurrGuild = GuildController:GetModel():GetCurrGuild()
+      if CurrGuild and CurrGuild.Name then
+        local Msg = CurrGuild.Name .. "的公会驻地区域频道"
+        Text = string.format(GText("SwitchedToChannel"), Msg)
+      end
+    end
   else
     Text = string.format(GText("SwitchedToChannel"), string.format(GText("WorldChannelWithParam"), ChannelIndex))
   end

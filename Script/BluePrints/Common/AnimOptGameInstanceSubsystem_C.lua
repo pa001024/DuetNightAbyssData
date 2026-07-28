@@ -9,10 +9,6 @@ function M:Initialize_Lua()
   self.DebugCacheTransType = 4
   self.BodyFilterBoneName = "Spine_02"
   self.InitialMeshTickInterval = 0.05
-  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if string.lower(PlatformName) == CommonConst.CHANNEL_OS.ANDROID or string.lower(PlatformName) == CommonConst.CHANNEL_OS.IOS then
-    UE4.URuntimeCommonFunctionLibrary.EnableGlobalAnimCache(self, true)
-  end
 end
 
 function M:AnimCachePhysErrorReset_Lua(MeshComp)

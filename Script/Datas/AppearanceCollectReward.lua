@@ -19,6 +19,7 @@ return ReadOnly("AppearanceCollectReward", {
       [8] = true,
       [9] = true
     },
+    ListBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupItemList.WBP_Activity_SkinCollect_Task_PopupItemList'",
     PointsReward = {
       [1] = 360001,
       [2] = 360002,
@@ -41,6 +42,7 @@ return ReadOnly("AppearanceCollectReward", {
       [8] = 3000,
       [9] = 4000
     },
+    TitleBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupTitle.WBP_Activity_SkinCollect_Task_PopupTitle'",
     TokenIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_SkinCollect.T_Coin_SkinCollect'",
     UnlockItemCount = 900,
     UnlockItemType = 100

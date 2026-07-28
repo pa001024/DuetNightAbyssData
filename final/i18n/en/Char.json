@@ -911,7 +911,7 @@
               5.05,
               5.4
             ],
-            "削韧": 15
+            "削韧": 5
           },
           {
             "名称": "[Waltz]Path DMG Radius",
@@ -6102,6 +6102,470 @@
     ]
   },
   {
+    "id": 2102,
+    "icon": "Eve",
+    "名称": "\"Ada\"",
+    "版本": "1.5",
+    "别名": "The Lone Bunny of Paradise",
+    "出生地": "Hyperborean Empire",
+    "势力": "Unaffiliated",
+    "生日": "09-06",
+    "中文CV": "张小豆",
+    "日文CV": "雨宮天",
+    "英文CV": "Rhiannon Moushall",
+    "韩文CV": "김이안",
+    "阵营": "No Affiliation",
+    "属性": "水",
+    "精通": [
+      "Polearm",
+      "Dual Pistols"
+    ],
+    "标签": [
+      "DPS",
+      "Summon",
+      "Skill DMG"
+    ],
+    "基础攻击": 26,
+    "基础生命": 95,
+    "基础防御": 255,
+    "基础护盾": 95,
+    "基础神智": 180,
+    "加成": {
+      "Skill Intensity": 0.2,
+      "Skill Efficiency": 0.125
+    },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Stone Powder": 10,
+        "Azure Pearl": 5
+      },
+      {
+        "Coin": 10400,
+        "Insulation Coating": 5,
+        "Humectant": 7
+      },
+      {
+        "Coin": 16300,
+        "Insulation Coating": 10,
+        "Humectant": 15
+      },
+      {
+        "Coin": 34700,
+        "Insulation Coating": 20,
+        "Water Purifier": 6
+      },
+      {
+        "Coin": 81600,
+        "Insulation Coating": 40,
+        "Water Purifier": 12
+      },
+      {
+        "Coin": 243000,
+        "Insulation Coating": 80,
+        "Water Purifier": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 210201,
+        "名称": "Paradise Blueprint",
+        "类型": "Summon",
+        "描述": "Summons 1 [Summon: The Chariot].\nHold to enter [White Bunnies' Paradise]. In this mode, highlighted objects in the environment can be copied, moved, and placed. Hold again to exit [White Bunnies' Paradise].",
+        "icon": "Eve01",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Summon: The Chariot] Skill DMG",
+            "影响": "技能威力",
+            "值": [
+              1.36,
+              1.65,
+              1.94,
+              2.23,
+              2.52,
+              2.81,
+              3.1,
+              3.39,
+              3.68,
+              3.97,
+              4.26,
+              4.55
+            ],
+            "削韧": 5
+          },
+          {
+            "名称": "[Summon: The Chariot] Damage Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Summon: The Chariot] Duration",
+            "影响": "技能耐久",
+            "值": 20,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Summon: The Emperor] Skill DMG",
+            "影响": "技能威力",
+            "值": [
+              5.25,
+              6.43,
+              7.61,
+              8.79,
+              9.97,
+              11.15,
+              12.33,
+              13.51,
+              14.69,
+              15.87,
+              17.05,
+              18.23
+            ],
+            "削韧": 15
+          },
+          {
+            "名称": "[Summon: The Emperor] Damage Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Summon: The Emperor] Duration",
+            "影响": "技能耐久",
+            "值": 25,
+            "格式": "{}s"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Summon: The Chariot": "Inherits 100% of the summoner's stats. Every 3s, deals Hydro Damage to nearby enemies. Up to 8 can exist at once.\nWhen 4 [Summon: The Chariot] are present and [Summon: The Emperor] has not reached its limit, 4 of them are destroyed, triggering [White Bunnies' Sparkling Magic].",
+          "White Bunnies' Sparkling Magic": "When triggered by [Summon: The Chariot], summons 1 [Summon: The Emperor].\nWhen triggered by [Summon: The Emperor], summons 1 [Summon: Judgement].",
+          "Summon: The Emperor": "Inherits 100% of the summoner's stats. Every 3s, fires a water projectile at a random nearby enemy, dealing Hydro AoE DMG on hit. Up to 2 can exist at once."
+        },
+        "子技能": [
+          {
+            "id": 210291,
+            "类型": "",
+            "icon": "",
+            "名称": "Summon: The Chariot"
+          },
+          {
+            "id": 210217,
+            "类型": "Summon",
+            "icon": "Eve01",
+            "名称": "White Bunnies' Sparkling Magic"
+          }
+        ]
+      },
+      {
+        "id": 210202,
+        "名称": "Let the Celebration Begin!",
+        "类型": "Summon",
+        "描述": "Commands [Summon: The World] to begin [White Bunnies' Celebration]. [White Bunnies' Celebration] continuously consumes Sanity while active, and ends when Sanity reaches 0 or when this skill is used again.",
+        "icon": "Eve02_On",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 20,
+            "格式": "{}"
+          },
+          {
+            "名称": "Sanity Cost per second",
+            "影响": "技能效益,技能耐久",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Summon: Judgement] Skill DMG",
+            "影响": "技能威力",
+            "值": [
+              52.92,
+              64.67,
+              76.42,
+              88.17,
+              99.92,
+              111.67,
+              123.42,
+              135.17,
+              146.92,
+              158.67,
+              170.42,
+              182.17
+            ],
+            "削韧": 120
+          },
+          {
+            "名称": "[White Bunnies' Celebration] Radius",
+            "影响": "技能范围",
+            "值": 15,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "White Bunnies' Celebration": "Whenever the summoner or [Summon: The World] summons 1 [Summon: The Chariot], [Rally] triggers within [White Bunnies' Celebration]'s range.\nWhen 2 [Summon: The Emperor] are present and [Summon: Judgement] has not reached its limit, both [Summon: The Emperor] are destroyed, triggering [White Bunnies' Sparkling Magic] with [Summon: The World].",
+          "Rally": "Summons 1 [Summon: The Chariot] within [White Bunnies' Celebration]'s range. This effect cannot be triggered by summons created by [Rally].",
+          "Summon: Judgement": "Inherits 100% of the summoner's stats. Every 3s, casts [Parade], dealing Hydro Damage to enemies within [White Bunnies' Celebration]'s range.\nWhen [White Bunnies' Celebration] ends, [Summon: Judgement] breaks apart and reverts to [Summon: The World]."
+        },
+        "子技能": [
+          {
+            "id": 210221,
+            "类型": "Summon",
+            "icon": "Eve02_Off",
+            "名称": "White Bunnies' Celebration"
+          }
+        ]
+      },
+      {
+        "id": 210203,
+        "名称": "Hello, World!",
+        "类型": "Passive",
+        "描述": "Summons [Summon: The World] to fight for the rest of the battle.",
+        "icon": "Eve03",
+        "字段": [
+          {
+            "名称": "[Yesterday Once More] Trigger Probability",
+            "值": [
+              0.25,
+              0.32,
+              0.39,
+              0.46,
+              0.53,
+              0.6,
+              0.67,
+              0.74,
+              0.81,
+              0.88,
+              0.95,
+              1
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Stone Powder": 3,
+            "Insulation Coating": 1
+          },
+          {
+            "Coin": 2600,
+            "Stone Powder": 6,
+            "Insulation Coating": 2
+          },
+          {
+            "Coin": 3200,
+            "Stone Powder": 9,
+            "Insulation Coating": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Stone Powder": 15,
+            "Insulation Coating": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Stone Powder": 30,
+            "Insulation Coating": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Escaped Entropy": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Escaped Entropy": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Summon: The World": "Inherits 100% of the summoner's stats and uses the summoner's Ranged Weapon: Dual Pistols.\nWhen an ally summons a unit, [Summon: The World] has a chance to perform [Yesterday Once More]. This effect can trigger up to 4 times per second.",
+          "Yesterday Once More": "Summons 1 [Summon: The Chariot] and restores 50 Ammo to [Summon: The World]. This effect cannot be triggered by summons created by [Yesterday Once More], [Rally], or [White Bunnies' Sparkling Magic]."
+        }
+      },
+      {
+        "id": 210204,
+        "名称": "Until Next Time~",
+        "类型": "Passive",
+        "描述": "When this character or an ally summons a unit, there is a chance to restore Sanity based on Skill Efficiency.\nWhen [Summon: The Chariot] is destroyed, it deals 1 instance of Hydro AoE DMG to a random enemy within range.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "Sanity Recovery",
+            "值": 2,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": 9.52,
+            "削韧": 100
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ]
+      },
+      {
+        "id": 210003,
+        "名称": "Seven-Day Spread",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Hydro allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "ATK Boost",
+            "值": 0.5
+          }
+        ]
+      }
+    ],
+    "溯源": [
+      "When [Summon: Judgement] casts [Parade], there is a chance to create 1 [Summon: The Chariot]. Chance: Skill Efficiency × 60%.",
+      "While [Summon: The Emperor] is active, it can consume 1 [Summon: The Chariot] to reset its duration. Water projectiles fired by [Summon: The Emperor] are affected by the summoner's Ranged Weapon Multishot.",
+      "[Paradise Blueprint] Level +2, [Hello, World!] Level +1.",
+      "When this character's summons have more than 100% ATK Speed, the excess is converted into Skill DMG Multiplier at a 100% ratio.\nWhile [Summon: Judgment] is active, this character's summons gain 30% ATK Speed and 25 Auto-Pickup Range.",
+      "[Let the Celebration Begin!] Level +2, [Hello, World!] Level +1.",
+      "While [Summon: Judgement] is active, \"Ada\" and her summons gain +40% PEN Stats.\nWhen [Summon: The Chariot] is destroyed, [Summon: Judgement] has a 50% chance to immediately cast [Parade] once. This effect can trigger once every 2.5s."
+    ],
+    "碎片": 1002102,
+    "专武": 20207
+  },
+  {
     "id": 2301,
     "icon": "Zhangyu",
     "名称": "Tabethe",
@@ -7877,7 +8341,7 @@
         "id": 310204,
         "名称": "Multitasking",
         "类型": "Passive",
-        "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile, the probability equals to [30%+20%×Hilda's Ranged Weapon Multishot].\nIncreases the damage of [Hyperthermal Purgejet] by [30%+20%×Hilda's Ranged Weapon Multishot], up to 100%.",
+        "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile. Chance: 20% + 15% × Hilda's Ranged Weapon Multishot.\n[Hyperthermal Purgejet] DMG increases by 20% + 15% × Hilda's Ranged Weapon Multishot, up to 100%.",
         "icon": "ExtraPassive"
       },
       {
@@ -11750,7 +12214,7 @@
             "格式": "{}"
           },
           {
-            "名称": "[Impact]]Damage",
+            "名称": "[Impact]Damage",
             "影响": "技能威力",
             "值": [
               1.19,
@@ -11785,7 +12249,7 @@
             "取消": 2.6667
           },
           {
-            "名称": "[Impact]]Grants Ultra Shield",
+            "名称": "[Impact]Grants Ultra Shield",
             "影响": "技能威力",
             "值": [
               0.0037,
@@ -12435,7 +12899,7 @@
           }
         ],
         "术语解释": {
-          "Summoned: Chaotic Thunderorb": "Inherits a percentage of Sibylle's Max HP, has 0 DEF, and is treated as an enemy unit.\n[Summon: Chaotic Thunderorb] calls forth a [Devastating Storm] once every 3s.\nUpon summoning, [Summon: Chaotic Thunderorb] links to the 5 furthest enemies in range, linking 1 additional enemy per second, up to 10 in total. [Summon: Chaotic Thunderorb] deals Electro Damage to all linked targets once per second.\nWhen [Summon: Chaotic Thunderorb] takes damage, a percentage is transferred to the linked enemies.",
+          "Summon: Chaotic Thunderorb": "Inherits a percentage of Sibylle's Max HP, has 0 DEF, and is treated as an enemy unit.\n[Summon: Chaotic Thunderorb] calls forth a [Devastating Storm] once every 3s.\nUpon summoning, [Summon: Chaotic Thunderorb] links to the 5 furthest enemies in range, linking 1 additional enemy per second, up to 10 in total. [Summon: Chaotic Thunderorb] deals Electro Damage to all linked targets once per second.\nWhen [Summon: Chaotic Thunderorb] takes damage, a percentage is transferred to the linked enemies.",
           "Devastating Storm": "Deals Electro Damage to nearby enemies."
         }
       },

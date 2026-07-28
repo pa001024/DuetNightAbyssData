@@ -42,12 +42,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Kanuo_152480368",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -195,7 +195,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 10010101,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10044601.10044601'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -216,6 +216,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -266,6 +267,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -350,7 +352,9 @@ return {
               TargetTime = 19,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17792819589533865663"] = {
@@ -383,9 +387,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0168_boss_haluoji.0168_boss_haluoji'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106001},
+              bStoreToServer = true
             }
           },
           ["17795206367611936867"] = {

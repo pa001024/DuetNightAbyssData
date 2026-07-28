@@ -4,7 +4,6 @@ local CharacterDataStruct = require("BluePrints.Combat.Components.CharacterDataS
 local EMCache = require("EMCache.EMCache")
 local BP_Battle_C = Class("BluePrints.Common.TimerMgr")
 BP_Battle_C._components = {
-  "BluePrints.Common.DelayFrameComponent",
   "BluePrints.Combat.BattleLogic.AttrLogic",
   "BluePrints.Combat.BattleLogic.BattleEventLogic",
   "BluePrints.Combat.BattleLogic.BattleGMLogic",
@@ -86,17 +85,6 @@ function BP_Battle_C:OnCreated()
   end
   print(_G.LogTag, "FireEvent OnBattleReady")
   EventManager:FireEvent(EventID.OnBattleReady, self)
-end
-
-function BP_Battle_C:GetUnreliableFunction_Lua()
-  local Result = {}
-  for _, v in ipairs(self:GetClientOnlyFunction_Lua()) do
-    Result[#Result + 1] = v
-  end
-  for _, v in ipairs(self:GetClientPredictFunction_Lua()) do
-    Result[#Result + 1] = v
-  end
-  return Result
 end
 
 function BP_Battle_C:GetClientOnlyFunction_Lua()
@@ -592,6 +580,7 @@ end
 function BP_Battle_C:FillDungeonLog(Ct, GameState)
   local DungeonId = GameState.DungeonId
   if not DungeonId or DungeonId <= 0 then
+    table.insert(Ct, "TestScene\n")
     return
   end
   table.insert(Ct, "副本ID:")

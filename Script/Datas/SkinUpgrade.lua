@@ -52,5 +52,21 @@ return ReadOnly("SkinUpgrade", {
       UnlockAmount = 72,
       UnlockCurrency = 1010
     }
+  },
+  [210201] = {
+    [2] = {
+      ScoreAddValue = 200,
+      SkinID = 210201,
+      Step = 2,
+      UnlockAmount = 54,
+      UnlockCurrency = 1010
+    },
+    [3] = {
+      ScoreAddValue = 300,
+      SkinID = 210201,
+      Step = 3,
+      UnlockAmount = 72,
+      UnlockCurrency = 1010
+    }
   }
 })

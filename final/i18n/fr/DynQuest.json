@@ -9788,7 +9788,7 @@
           },
           {
             "id": 71000721,
-            "content": "Mais ma corde de sécurité a lâché à la conduite précédente… Peux-tu grimper vérifier les dernières à ma place ?",
+            "content": "Mais ma corde de sécurité a lâché à la conduite précédente... Peux-tu grimper vérifier les dernières à ma place ?",
             "npc": 800007,
             "options": [
               {
@@ -9958,7 +9958,7 @@
           },
           {
             "id": 71000721,
-            "content": "Mais ma corde de sécurité a lâché à la conduite précédente… Peux-tu grimper vérifier les dernières à ma place ?",
+            "content": "Mais ma corde de sécurité a lâché à la conduite précédente... Peux-tu grimper vérifier les dernières à ma place ?",
             "npc": 800007,
             "options": [
               {
@@ -19709,7 +19709,7 @@
         "dialogues": [
           {
             "id": 71006904,
-            "content": "Comment ai-je pu attraper un poisson pareil… Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
+            "content": "Comment ai-je pu attraper un poisson pareil... Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
             "npc": 818065,
             "next": 71006905
           },
@@ -19727,7 +19727,7 @@
         "dialogues": [
           {
             "id": 71006904,
-            "content": "Comment ai-je pu attraper un poisson pareil… Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
+            "content": "Comment ai-je pu attraper un poisson pareil... Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
             "npc": 818065,
             "next": 71006905
           },
@@ -19745,7 +19745,7 @@
         "dialogues": [
           {
             "id": 71006904,
-            "content": "Comment ai-je pu attraper un poisson pareil… Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
+            "content": "Comment ai-je pu attraper un poisson pareil... Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
             "npc": 818065,
             "next": 71006905
           },
@@ -19827,7 +19827,7 @@
         "dialogues": [
           {
             "id": 71006904,
-            "content": "Comment ai-je pu attraper un poisson pareil… Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
+            "content": "Comment ai-je pu attraper un poisson pareil... Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
             "npc": 818065,
             "next": 71006905
           },
@@ -19845,7 +19845,7 @@
         "dialogues": [
           {
             "id": 71006904,
-            "content": "Comment ai-je pu attraper un poisson pareil… Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
+            "content": "Comment ai-je pu attraper un poisson pareil... Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
             "npc": 818065,
             "next": 71006905
           },
@@ -19863,7 +19863,7 @@
         "dialogues": [
           {
             "id": 71006904,
-            "content": "Comment ai-je pu attraper un poisson pareil… Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
+            "content": "Comment ai-je pu attraper un poisson pareil... Vous croyez que mon outre d’alcool l’a attiré ? Bah... j’y réfléchirai plus tard.",
             "npc": 818065,
             "next": 71006905
           },
@@ -20305,7 +20305,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180397497559",
+        "id": "1780294792168536704",
         "type": "TalkNode",
         "name": "对话节点",
         "dialogues": [
@@ -20318,12 +20318,12 @@
         ]
       },
       {
-        "id": "1776844180397497560",
+        "id": "1780294792168536705",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497566",
-          "1776844180397497567"
+          "1780294792168536711",
+          "1780294792168536712"
         ],
         "dialogues": [
           {
@@ -20351,12 +20351,12 @@
         ]
       },
       {
-        "id": "1776844180397497563",
+        "id": "1780294792168536708",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -20367,12 +20367,12 @@
         ]
       },
       {
-        "id": "1776844180397497566",
+        "id": "1780294792168536711",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -20383,11 +20383,11 @@
         ]
       },
       {
-        "id": "1776844180397497567",
+        "id": "1780294792168536712",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571"
+          "1780294792168536716"
         ],
         "dialogues": [
           {
@@ -20399,7 +20399,7 @@
         ]
       },
       {
-        "id": "1776844180397497573",
+        "id": "1780294792168536718",
         "type": "TalkNode",
         "name": "锦鲤皎皎开车",
         "dialogues": [
@@ -20412,7 +20412,7 @@
         ]
       },
       {
-        "id": "1776844180397497571",
+        "id": "1780294792168536716",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
@@ -20525,7 +20525,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180397497559",
+        "id": "1780294792168536704",
         "type": "TalkNode",
         "name": "对话节点",
         "dialogues": [
@@ -20538,12 +20538,12 @@
         ]
       },
       {
-        "id": "1776844180397497560",
+        "id": "1780294792168536705",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497566",
-          "1776844180397497567"
+          "1780294792168536711",
+          "1780294792168536712"
         ],
         "dialogues": [
           {
@@ -20571,12 +20571,12 @@
         ]
       },
       {
-        "id": "1776844180397497563",
+        "id": "1780294792168536708",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -20587,12 +20587,12 @@
         ]
       },
       {
-        "id": "1776844180397497566",
+        "id": "1780294792168536711",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -20603,11 +20603,11 @@
         ]
       },
       {
-        "id": "1776844180397497567",
+        "id": "1780294792168536712",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571"
+          "1780294792168536716"
         ],
         "dialogues": [
           {
@@ -20619,7 +20619,7 @@
         ]
       },
       {
-        "id": "1776844180397497573",
+        "id": "1780294792168536718",
         "type": "TalkNode",
         "name": "锦鲤皎皎开车",
         "dialogues": [
@@ -20632,7 +20632,7 @@
         ]
       },
       {
-        "id": "1776844180397497571",
+        "id": "1780294792168536716",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
@@ -20745,7 +20745,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180397497559",
+        "id": "1780294792168536704",
         "type": "TalkNode",
         "name": "对话节点",
         "dialogues": [
@@ -20758,12 +20758,12 @@
         ]
       },
       {
-        "id": "1776844180397497560",
+        "id": "1780294792168536705",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497566",
-          "1776844180397497567"
+          "1780294792168536711",
+          "1780294792168536712"
         ],
         "dialogues": [
           {
@@ -20791,12 +20791,12 @@
         ]
       },
       {
-        "id": "1776844180397497563",
+        "id": "1780294792168536708",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -20807,12 +20807,12 @@
         ]
       },
       {
-        "id": "1776844180397497566",
+        "id": "1780294792168536711",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -20823,11 +20823,11 @@
         ]
       },
       {
-        "id": "1776844180397497567",
+        "id": "1780294792168536712",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571"
+          "1780294792168536716"
         ],
         "dialogues": [
           {
@@ -20839,7 +20839,7 @@
         ]
       },
       {
-        "id": "1776844180397497573",
+        "id": "1780294792168536718",
         "type": "TalkNode",
         "name": "锦鲤皎皎开车",
         "dialogues": [
@@ -20852,7 +20852,7 @@
         ]
       },
       {
-        "id": "1776844180397497571",
+        "id": "1780294792168536716",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
@@ -20965,7 +20965,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180397497559",
+        "id": "1780294792168536704",
         "type": "TalkNode",
         "name": "对话节点",
         "dialogues": [
@@ -20978,12 +20978,12 @@
         ]
       },
       {
-        "id": "1776844180397497560",
+        "id": "1780294792168536705",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497566",
-          "1776844180397497567"
+          "1780294792168536711",
+          "1780294792168536712"
         ],
         "dialogues": [
           {
@@ -21011,12 +21011,12 @@
         ]
       },
       {
-        "id": "1776844180397497563",
+        "id": "1780294792168536708",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -21027,12 +21027,12 @@
         ]
       },
       {
-        "id": "1776844180397497566",
+        "id": "1780294792168536711",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -21043,11 +21043,11 @@
         ]
       },
       {
-        "id": "1776844180397497567",
+        "id": "1780294792168536712",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571"
+          "1780294792168536716"
         ],
         "dialogues": [
           {
@@ -21059,7 +21059,7 @@
         ]
       },
       {
-        "id": "1776844180397497573",
+        "id": "1780294792168536718",
         "type": "TalkNode",
         "name": "锦鲤皎皎开车",
         "dialogues": [
@@ -21072,7 +21072,7 @@
         ]
       },
       {
-        "id": "1776844180397497571",
+        "id": "1780294792168536716",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
@@ -21185,7 +21185,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180397497559",
+        "id": "1780294792168536704",
         "type": "TalkNode",
         "name": "对话节点",
         "dialogues": [
@@ -21198,12 +21198,12 @@
         ]
       },
       {
-        "id": "1776844180397497560",
+        "id": "1780294792168536705",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497566",
-          "1776844180397497567"
+          "1780294792168536711",
+          "1780294792168536712"
         ],
         "dialogues": [
           {
@@ -21231,12 +21231,12 @@
         ]
       },
       {
-        "id": "1776844180397497563",
+        "id": "1780294792168536708",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -21247,12 +21247,12 @@
         ]
       },
       {
-        "id": "1776844180397497566",
+        "id": "1780294792168536711",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -21263,11 +21263,11 @@
         ]
       },
       {
-        "id": "1776844180397497567",
+        "id": "1780294792168536712",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571"
+          "1780294792168536716"
         ],
         "dialogues": [
           {
@@ -21279,7 +21279,7 @@
         ]
       },
       {
-        "id": "1776844180397497573",
+        "id": "1780294792168536718",
         "type": "TalkNode",
         "name": "锦鲤皎皎开车",
         "dialogues": [
@@ -21292,7 +21292,7 @@
         ]
       },
       {
-        "id": "1776844180397497571",
+        "id": "1780294792168536716",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
@@ -21405,7 +21405,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180397497559",
+        "id": "1780294792168536704",
         "type": "TalkNode",
         "name": "对话节点",
         "dialogues": [
@@ -21418,12 +21418,12 @@
         ]
       },
       {
-        "id": "1776844180397497560",
+        "id": "1780294792168536705",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497566",
-          "1776844180397497567"
+          "1780294792168536711",
+          "1780294792168536712"
         ],
         "dialogues": [
           {
@@ -21451,12 +21451,12 @@
         ]
       },
       {
-        "id": "1776844180397497563",
+        "id": "1780294792168536708",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -21467,12 +21467,12 @@
         ]
       },
       {
-        "id": "1776844180397497566",
+        "id": "1780294792168536711",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571",
-          "1776844180397497573"
+          "1780294792168536716",
+          "1780294792168536718"
         ],
         "dialogues": [
           {
@@ -21483,11 +21483,11 @@
         ]
       },
       {
-        "id": "1776844180397497567",
+        "id": "1780294792168536712",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
-          "1776844180397497571"
+          "1780294792168536716"
         ],
         "dialogues": [
           {
@@ -21499,7 +21499,7 @@
         ]
       },
       {
-        "id": "1776844180397497573",
+        "id": "1780294792168536718",
         "type": "TalkNode",
         "name": "锦鲤皎皎开车",
         "dialogues": [
@@ -21512,7 +21512,7 @@
         ]
       },
       {
-        "id": "1776844180397497571",
+        "id": "1780294792168536716",
         "type": "TalkNode",
         "name": "对话节点",
         "next": [
@@ -24292,7 +24292,7 @@
         "dialogues": [
           {
             "id": 71008913,
-            "content": "Allons informer le voyageur.",
+            "content": "Retournons prévenir la voyageuse.",
             "npc": 800006
           }
         ]
@@ -24307,7 +24307,7 @@
         "dialogues": [
           {
             "id": 71008913,
-            "content": "Allons informer le voyageur.",
+            "content": "Retournons prévenir la voyageuse.",
             "npc": 800006,
             "next": 71008907
           }
@@ -24518,7 +24518,7 @@
         "dialogues": [
           {
             "id": 71008913,
-            "content": "Allons informer le voyageur.",
+            "content": "Retournons prévenir la voyageuse.",
             "npc": 800006
           }
         ]
@@ -24533,7 +24533,7 @@
         "dialogues": [
           {
             "id": 71008913,
-            "content": "Allons informer le voyageur.",
+            "content": "Retournons prévenir la voyageuse.",
             "npc": 800006,
             "next": 71008907
           }
@@ -27102,7 +27102,7 @@
         "dialogues": [
           {
             "id": 71004402,
-            "content": "Le fracas du combat a attiré un fléau indomptable. L’incarnation de la destruction est enfin là. Abats-la, comme tu l’as déjà fait tant de fois.",
+            "content": "Le fracas du combat a attiré un fléau indomptable. L’incarnation de la destruction est enfin là. Abats-la, comme tu l’as déjà fait tant de fois.\n",
             "npc": 800006,
             "next": 71004403
           }
@@ -27507,7 +27507,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180455507560",
+        "id": "1780294792212546786",
         "type": "TalkNode",
         "name": "拍照开车",
         "dialogues": [
@@ -27520,7 +27520,7 @@
         ]
       },
       {
-        "id": "1776844180455507561",
+        "id": "1780294792212546787",
         "type": "TalkNode",
         "name": "交互开车",
         "dialogues": [
@@ -27550,7 +27550,7 @@
         ]
       },
       {
-        "id": "1776844180455507564",
+        "id": "1780294792212546790",
         "type": "TalkNode",
         "name": "完成对话",
         "dialogues": [
@@ -27580,7 +27580,7 @@
     ],
     "nodes": [
       {
-        "id": "1776844180455507560",
+        "id": "1780294792212546786",
         "type": "TalkNode",
         "name": "拍照开车",
         "dialogues": [
@@ -27593,7 +27593,7 @@
         ]
       },
       {
-        "id": "1776844180455507561",
+        "id": "1780294792212546787",
         "type": "TalkNode",
         "name": "交互开车",
         "dialogues": [
@@ -27623,7 +27623,7 @@
         ]
       },
       {
-        "id": "1776844180455507564",
+        "id": "1780294792212546790",
         "type": "TalkNode",
         "name": "完成对话",
         "dialogues": [
@@ -28477,7 +28477,7 @@
         "dialogues": [
           {
             "id": 71004402,
-            "content": "Le fracas du combat a attiré un fléau indomptable. L’incarnation de la destruction est enfin là. Abats-la, comme tu l’as déjà fait tant de fois.",
+            "content": "Le fracas du combat a attiré un fléau indomptable. L’incarnation de la destruction est enfin là. Abats-la, comme tu l’as déjà fait tant de fois.\n",
             "npc": 800006,
             "next": 71004403
           }

@@ -10,7 +10,7 @@ function M:BuildNode(InitialDialogueId, Comps)
   rawset(self, "DialogueRecordComponent", Comps.RecordComp)
   self:CreateNextNodeMap()
   if self.OnNodeCreated then
-    self.OnNodeCreated(self.EventReceiver, self)
+    self.OnNodeCreated(self)
   end
   self:GenerateNextNodes()
 end

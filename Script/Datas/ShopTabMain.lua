@@ -163,6 +163,28 @@ return ReadOnly("ShopTabMain", {
     MainName = "UI_AppearenceShop",
     MainTabId = 10010
   },
+  [10011] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "RaceLotteryShop",
+    MainTabId = 10011
+  },
+  [10012] = {
+    ConditionId = "SoloTreasurePerm",
+    Icon = "Texture2D'/Game/UI/Texture/Static/Atlas/SoloTreasure/Permanent/T_SoloTreasure_Permanent_IconShop.T_SoloTreasure_Permanent_IconShop'",
+    MainName = "UI_Play_TreasureHunt_Shop",
+    MainTabId = 10012
+  },
+  [10013] = {
+    ConditionId = "IronMode",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "UI_Play_IronModeShop",
+    MainTabId = 10013
+  },
+  [10015] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "Event_FreeAppearance_tittle01",
+    MainTabId = 10015
+  },
   [90001] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
     MainName = "UI_SHOP_SUBTAB_SKIN",
@@ -170,17 +192,27 @@ return ReadOnly("ShopTabMain", {
   },
   [90002] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
-    MainName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
+    MainName = "UI_Mount",
     MainTabId = 90002
   },
   [90003] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
-    MainName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
     MainTabId = 90003
   },
   [90004] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
-    MainName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
     MainTabId = 90004
+  },
+  [90005] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    MainTabId = 90005
+  },
+  [90006] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_EFFECT",
+    MainTabId = 90006
   }
 })

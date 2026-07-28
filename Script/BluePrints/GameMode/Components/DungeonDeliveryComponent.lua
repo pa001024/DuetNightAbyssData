@@ -1,18 +1,52 @@
 require("UnLua")
 local DungeonDeliveryComponent = {}
+local ID_SHIFT = 1000
 
-function DungeonDeliveryComponent:ActiveDungeonDeliveryPoint(DeliveryPointId)
-  if not IsDedicatedServer(self) then
+function DungeonDeliveryComponent:GetRealDeliveryPointId(PrivateEnable, DeliveryPointId, DeliveryPointLevelName)
+  if PrivateEnable then
+    local Suffix = self:GetSuffixByLevelName(DeliveryPointLevelName)
+    return DeliveryPointId * ID_SHIFT + Suffix
+  else
+    return DeliveryPointId * ID_SHIFT
+  end
+end
+
+function DungeonDeliveryComponent:GetSuffixByLevelName(DeliveryPointLevelName)
+  if nil == DeliveryPointLevelName or "" == DeliveryPointLevelName then
+    return 0
+  end
+  if nil == self.DeliveryPointLevelToSuffix then
+    self.DeliveryPointLevelToSuffix = {}
+  end
+  if nil == self.DeliveryPointLevelToSuffix[DeliveryPointLevelName] then
+    if nil == self.NextSuffix then
+      self.NextSuffix = 1
+    end
+    self.DeliveryPointLevelToSuffix[DeliveryPointLevelName] = self.NextSuffix
+    self.NextSuffix = self.NextSuffix + 1
+  end
+  return self.DeliveryPointLevelToSuffix[DeliveryPointLevelName]
+end
+
+function DungeonDeliveryComponent:ActiveDungeonDeliveryPoint(DeliveryPointId, PrivateEnable, DeliveryPointLevelName, NewDeliverDis)
+  if not IsDedicatedServer(self) and self.EMGameState.GameModeType == "Synthesis" then
     return
   end
-  self.ActivatedDeliveryPointId = DeliveryPointId
+  local RealDeliveryPointId = self:GetRealDeliveryPointId(PrivateEnable, DeliveryPointId, DeliveryPointLevelName)
+  self.ActivatedDeliveryPointId = RealDeliveryPointId
+  if -1 == NewDeliverDis then
+    self.DeliverDis = DataMgr.GlobalConstant.TeleportMinDistance.ConstantValue
+  else
+    self.DeliverDis = NewDeliverDis
+  end
   self:UpdateDeliveryInfo()
   self:AddTimer(Const.DunegonDeliveryPointUpdateInterval, self.UpdateDeliveryInfo, true, 0, Const.DunegonDeliveryPointUpdateTimerHandle)
-  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Active DeliveryPoint " .. DeliveryPointId, "GameMode")
+  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Active DeliveryPoint " .. DeliveryPointId .. ", RealDeliveryPointId " .. RealDeliveryPointId, "GameMode")
 end
 
 function DungeonDeliveryComponent:DeactiveDungeonDeliveryPoint()
   self.ActivatedDeliveryPointId = -1
+  self.DeliverDis = 0
   local AllPlayers = self:GetAllPlayer()
   for _, Player in pairs(AllPlayers) do
     local PlayerState = Player.PlayerState
@@ -30,6 +64,8 @@ function DungeonDeliveryComponent:OnReceivePlayerDeliveryStart(PlayerEid)
   local DeliverPoint = self.EMGameState.DungeonDeliveryPointMap:FindRef(self.ActivatedDeliveryPointId)
   DebugPrint("DungeonDeliveryComponent: OnReceivePlayerDeliveryStart", PlayerEid, "ActivatedDeliveryPointId", self.ActivatedDeliveryPointId)
   if not IsValid(DeliverPoint) then
+    GWorld:DSBLog("Info", "DungeonDeliveryComponent: 找不到传送点！！！！ Id" .. self.ActivatedDeliveryPointId, "GameMode")
+    DebugPrint("DungeonDeliveryComponent: 找不到传送点！！！！ ActivatedDeliveryPointId", self.ActivatedDeliveryPointId)
     return
   end
   local Player = Battle(self):GetEntity(PlayerEid)
@@ -52,8 +88,11 @@ function DungeonDeliveryComponent:OnReceivePlayerDeliveryStart(PlayerEid)
     return
   end
   self:SetPlayerInvincible(Player, true)
-  LevelLoader:TeleportInDedicatedServer(Player, TargetLocation, TargetRotation, "DungeonDelivery")
-  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Teleport player " .. Player.Eid, "GameMode")
+  local IsSucc = LevelLoader:TeleportInDedicatedServer(Player, TargetLocation, TargetRotation, "DungeonDelivery")
+  GWorld:DSBLog("Info", "DungeonDeliveryComponent: Teleport player " .. Player.Eid .. ", IsSucc: " .. tostring(IsSucc), "GameMode")
+  if not IsSucc then
+    self:OnDungeonPlayerDeliveryEnd(Player, "DungeonDelivery")
+  end
 end
 
 function DungeonDeliveryComponent:OnDungeonPlayerDeliveryEnd(Player, TeleportTag)

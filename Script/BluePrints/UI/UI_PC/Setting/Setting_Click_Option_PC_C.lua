@@ -423,6 +423,36 @@ function S:OnUserPolicyClicked()
   UE4.UKismetSystemLibrary.LaunchURL(self.Link)
 end
 
+function S:IsChangeBGMAvailable()
+  local Avatar = GWorld:GetAvatar()
+  return Avatar and not Avatar:IsInDungeon()
+end
+
+function S:SetChangeBGMKeyText()
+  local KeyText = self.DefaultValue
+  self.Key_State:SetActiveWidgetIndex(1)
+  if not self:IsChangeBGMAvailable() then
+    self.Text_Fixed:SetRenderOpacity(0.4)
+  else
+    self.Text_Fixed:SetRenderOpacity(1.0)
+  end
+  self.Text_Fixed:SetText(GText(KeyText))
+end
+
+function S:OnChangeBGMClicked()
+  if not self:IsChangeBGMAvailable() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_ChangeBGM_FalseScene"), 5)
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not DataMgr.Music[Avatar.HomeBaseBGM] then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("Piano_NoMusic"), 3)
+    return
+  end
+  UIManager(self):LoadUINew("PianoSystem", {bShowHomeSceneBg = true})
+  self.Parent:CloseSelfAndEsc()
+end
+
 function S:SetPatchManageKeyText()
   self.Key_State:SetActiveWidgetIndex(1)
   self.Text_Fixed:SetText(GText(self.CacheInfo.DefaultValue))

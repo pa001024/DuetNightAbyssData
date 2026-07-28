@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101103,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_Eastac3_1240723",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 0
       },
       questNodeData = {

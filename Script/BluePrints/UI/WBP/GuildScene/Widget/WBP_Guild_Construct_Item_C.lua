@@ -4,13 +4,13 @@ local M = Class({
 })
 
 function M:Construct()
-  self.ActorClassPath = nil
+  self.UnitId = nil
 end
 
 function M:OnListItemObjectSet(Content)
-  local HeadSculpture = LoadObject(Content.IconPath)
-  self.Image_Icon:SetBrushFromTexture(HeadSculpture)
-  self.ActorClassPath = Content.ActorClassPath
+  self.UnitId = Content.UnitId
+  local Text = DataMgr.GuildItem[self.UnitId].Name
+  self.Text:SetText(Text)
 end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
@@ -22,7 +22,7 @@ end
 
 function M:CreatePayload()
   local Payload = NewObject(UIUtils.GetCommonItemContentClass())
-  Payload.ActorClassPath = self.ActorClassPath
+  Payload.UnitId = self.UnitId
   return Payload
 end
 

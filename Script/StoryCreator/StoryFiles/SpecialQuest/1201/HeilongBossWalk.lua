@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -386,7 +386,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1910.8482270377294, y = -410.69832245907696},
-            propsData = {bEnablePP = true, PPEnum = 11}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 11,
+              PPWeight = 1
+            }
           },
           ["17614870365851136"] = {
             key = "17614870365851136",
@@ -691,21 +695,33 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 2521.3478852472967, y = -255.02345227460734},
-            propsData = {bEnablePP = false, PPEnum = 6}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 6,
+              PPWeight = 1
+            }
           },
           ["17616192511264654026"] = {
             key = "17616192511264654026",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1860.4041380671074, y = 1211.17038396815},
-            propsData = {bEnablePP = false, PPEnum = 11}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 11,
+              PPWeight = 1
+            }
           },
           ["17616192713925317728"] = {
             key = "17616192713925317728",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 2562.4777037002573, y = 761.2979194651075},
-            propsData = {bEnablePP = false, PPEnum = 11}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 11,
+              PPWeight = 1
+            }
           },
           ["17616208201485981837"] = {
             key = "17616208201485981837",

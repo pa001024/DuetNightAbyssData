@@ -130,7 +130,7 @@ return {
               AllowSurroundDialogue = false,
               FirstDialogueId = 51019001,
               FlowAssetPath = "",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 0.5,
               BlendOutTime = 0,
               InType = "BlendIn",

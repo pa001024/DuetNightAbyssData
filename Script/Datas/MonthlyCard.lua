@@ -208,5 +208,53 @@ return ReadOnly("MonthlyCard", {
     GoodsId = "com.hero.dna.Pay_107",
     Name = "RESOURCE_NAME_121",
     UniqueReward = 82036
+  },
+  [10018] = {
+    BeginTime = LocalTimeProxy(1787518800),
+    BuyReward = 70001,
+    BuyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard02.T_Resource_MonthCard02'",
+    CardID = 10018,
+    DailyReward = 70002,
+    DailyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard01.T_Resource_MonthCard01'",
+    EndTime = LocalTimeProxy(1790110800),
+    GoodsId = "com.hero.dna.Pay_107",
+    Name = "RESOURCE_NAME_121",
+    UniqueReward = 82043
+  },
+  [10019] = {
+    BeginTime = LocalTimeProxy(1790110800),
+    BuyReward = 70001,
+    BuyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard02.T_Resource_MonthCard02'",
+    CardID = 10019,
+    DailyReward = 70002,
+    DailyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard01.T_Resource_MonthCard01'",
+    EndTime = LocalTimeProxy(1792702800),
+    GoodsId = "com.hero.dna.Pay_107",
+    Name = "RESOURCE_NAME_121",
+    UniqueReward = 82036
+  },
+  [10020] = {
+    BeginTime = LocalTimeProxy(1792702800),
+    BuyReward = 70001,
+    BuyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard02.T_Resource_MonthCard02'",
+    CardID = 10020,
+    DailyReward = 70002,
+    DailyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard01.T_Resource_MonthCard01'",
+    EndTime = LocalTimeProxy(1795294800),
+    GoodsId = "com.hero.dna.Pay_107",
+    Name = "RESOURCE_NAME_121",
+    UniqueReward = 82036
+  },
+  [10021] = {
+    BeginTime = LocalTimeProxy(1795294800),
+    BuyReward = 70001,
+    BuyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard02.T_Resource_MonthCard02'",
+    CardID = 10021,
+    DailyReward = 70002,
+    DailyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard01.T_Resource_MonthCard01'",
+    EndTime = LocalTimeProxy(1797886800),
+    GoodsId = "com.hero.dna.Pay_107",
+    Name = "RESOURCE_NAME_121",
+    UniqueReward = 82036
   }
 })

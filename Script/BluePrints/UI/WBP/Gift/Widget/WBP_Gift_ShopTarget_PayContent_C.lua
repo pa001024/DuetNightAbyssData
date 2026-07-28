@@ -34,6 +34,7 @@ function M:OnLoaded(...)
   local Params = (...)
   self.ShopItemId = Params.ShopItemId
   self.VoucherId = Params.VoucherId
+  self.ShopItemNum = Params.ShopItemNum or 1
   self.Uid = Params.Uid
   self.CallbackInfo = Params.CallbackInfo
   self.BeforeClickNoCallback = Params.BeforeClickNoCallback
@@ -52,11 +53,11 @@ function M:OnLoaded(...)
   }
   self.Com_Tab_ResourceBar:InitResourceBar(TopResource, false)
   self.Com_Tab_ResourceBar:SetGamePadKeyImgByPath(UIUtils.UtilsGetKeyIconPathInGamepad(DataMgr.KeyboardText[UIConst.GamePadKey.RightThumb].KeyText))
-  local Need = ShopUtils:GetNeedRechargeCount(self.ShopItemId, self.PriceType, self.CostNum, self.VoucherId)
+  local Need = ShopUtils:GetNeedRechargeCount(self.ShopItemId, self.PriceType, self.CostNum, self.VoucherId, self.ShopItemNum)
   self.Text_DetaiNum:SetText(Need)
   local CurrencyId = self.PriceType
   local CurrencyConfig = DataMgr.Resource[CurrencyId]
-  self.NeedShopItemData = ShopUtils:GetRechargeItem(self.ShopItemId, self.PriceType, self.CostNum, self.VoucherId)
+  self.NeedShopItemData = ShopUtils:GetRechargeItem(self.ShopItemId, self.PriceType, self.CostNum, self.VoucherId, self.ShopItemNum)
   if not self.NeedShopItemData then
     return
   end
@@ -131,7 +132,8 @@ function M:OnClickYes()
       PaymentParameters.cpOrder = OrderId
       PaymentParameters.callbackUrl = CallbackUrl
       local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+      local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
+      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
     end)
   end
 end

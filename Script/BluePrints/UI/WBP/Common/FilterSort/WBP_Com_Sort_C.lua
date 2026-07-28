@@ -2,6 +2,7 @@ require("UnLua")
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Init(Parent, SortBy_List, SortType, Params)
+  self.Filter_List:SetVisibility(UIConst.VisibilityOp.Collapsed)
   Params = Params or {}
   rawset(self, "Parent", Parent)
   rawset(self, "CurSortBy", Params.SortBy or 1)
@@ -14,16 +15,67 @@ function M:Init(Parent, SortBy_List, SortType, Params)
   rawset(self, "SortBy_List", SortBy_List or {})
   rawset(self, "IsListViewOpened", false)
   self.Text_Filterlist:SetText("")
+  self.List:ClearListItems()
   if SortBy_List and #SortBy_List > 0 then
+    self.Text_Filterlist:SetText(GText(SortBy_List[1]))
+    local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+    Obj.Text = GText(SortBy_List[1])
+    Obj.IsSelected = true
+    Obj.Index = 1
+    Obj.Owner = self
+    Obj.OnListItemClicked = self.OnListItemClicked
+    Obj.OnClickedObj = self
+    self.SelectedItem = Obj
+    self.List:AddItem(Obj)
+    for i = 2, #SortBy_List do
+      Obj = NewObject(UIUtils.GetCommonItemContentClass())
+      Obj.Text = GText(SortBy_List[i])
+      Obj.Index = i
+      Obj.Owner = self
+      Obj.OnListItemClicked = self.OnListItemClicked
+      self.List:AddItem(Obj)
+    end
     self.Btn_Filter_List:SetVisibility(UIConst.VisibilityOp.Visible)
-  else
-    self.Btn_Filter_List:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:SetSortInfos(self.CurSortBy or 1, SortType or CommonConst.DESC)
-  if IsValid(self.ListWidget) then
-    self.ListWidget:Init(self, self.SortBy_List, self.CurSortType)
-  end
   self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType())
+end
+
+function M:SelectItem(Idx)
+  local ItemCount = self.List:GetNumItems()
+  if Idx > ItemCount then
+    return
+  end
+  self:SelectContent(self.List:GetItemAt(Idx - 1))
+end
+
+function M:SelectContent(Content)
+  Content.IsSelected = true
+  if Content.Entry then
+    Content.Entry:OnEntrySelectionChanged()
+  end
+  if self.SelectedItem ~= Content then
+    self.SelectedItem.IsSelected = false
+    if self.SelectedItem.Entry then
+      self.SelectedItem.Entry:OnEntrySelectionChanged()
+    end
+    self.SelectedItem = Content
+  end
+  local SortByIdx = self.SelectedItem.Index or 1
+  self:SetSortInfos(SortByIdx, self.CurSortType or CommonConst.DESC)
+  self.Text_Filterlist:SetText(self.SelectedItem.Text)
+  if self.Event_OnSelectionsChanged then
+    self.Event_OnSelectionsChanged(self.Obj_OnSelectionsChanged, SortByIdx)
+  end
+end
+
+function M:OnListItemClicked(Content)
+  if self.IsListOutAnimPlaying or self:IsAnimationPlaying(self.List_Out) then
+    self:SetFocus()
+    return
+  end
+  self:SelectContent(Content)
+  self:OnListClosed()
 end
 
 function M:BindEventOnSelectionsChanged(Obj, Event)
@@ -112,32 +164,55 @@ function M:OnBtn_Filter_List_Unhovered()
   self:PlayAnimation(self.SortList_UnHover)
 end
 
-function M:ListOpenBtnClicked()
+function M:ListOpenBtnClicked(bForce)
+  local IsCloudGame = UE4.UUCloudGameInstanceSubsystem.IsCloudGame()
+  local IsPCCloudGame = UE4.UUCloudGameInstanceSubsystem.IsPCCloudGame()
+  if (not IsCloudGame or IsPCCloudGame) and not self.Btn_Filter_List:IsHovered() and not bForce then
+    return
+  end
+  self:StopAnimation(self.Hover)
+  self:StopAnimation(self.Press)
+  self:PlayAnimation(self.Click)
+  self.Filter_List:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
-  if #self.SortBy_List > 0 then
-    if IsValid(self.ListWidget) then
-      UIManager(self):UnLoadUI("ComSortFullScreen")
+  if self.SortBy_List then
+    if self.IsListViewOpened then
+      self:OnListClosed()
+    else
+      self:StopAnimation(self.List_Out)
+      self:PlayAnimation(self.List_In)
+      self.Filter_List:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.IsListViewOpened = true
+      self:AddDelayFrameFunc(function()
+        self:UpdateGamePadFocus()
+      end, 3)
+      if self._OnListOpened then
+        self._OnListOpened(self.Parent, self)
+      end
     end
-    rawset(self, "ListWidgetOpening", true)
-    local BpClassPath = self.FullScreenBpPath
-    self.ListWidget = UIManager(self):LoadUI(BpClassPath, "ComSortFullScreen", self.Parent:GetZOrder(), self, self.SortBy_List, self.CurSortType)
-    self.Parent.SortListWidget = self.ListWidget
-    rawset(self, "ListWidgetOpening", false)
+  else
+    self.Filter_List:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:UpdateGamePadFocus()
   end
 end
 
 function M:OnListClosed()
-  rawset(self, "IsListViewOpened", false)
-  self:SetFocus()
+  if not self.IsListViewOpened then
+    return
+  end
+  if self.SortBy_List then
+    if self.IsListViewOpened then
+      self:StopAnimation(self.List_In)
+      self:PlayAnimation(self.List_Out)
+      self.Filter_List:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      self.IsListViewOpened = false
+    end
+  else
+    self.Filter_List:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self:UpdateGamePadFocus()
   if self._OnListClosed then
     self._OnListClosed(self.Parent, self)
-  end
-end
-
-function M:OnListOpened()
-  rawset(self, "IsListViewOpened", true)
-  if self._OnListOpened then
-    self._OnListOpened(self.Parent, self)
   end
 end
 
@@ -200,9 +275,6 @@ function M:OnSortTypeChanged()
     self.CurSortType = CommonConst.ASC
     self:PlayAnimationReverse(self.Btn_Switch)
   end
-  if IsValid(self.ListWidget) then
-    self.ListWidget:SetSortType(self.CurSortType)
-  end
   if self.Event_OnSortTypeChanged then
     self.Event_OnSortTypeChanged(self.Obj_OnSortTypeChanged, self.CurSortType, self.CurSortBy)
   end
@@ -216,7 +288,7 @@ end
 
 function M:UpdateGamepadKeyState()
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
-    if self.IsInFocusPath or IsValid(self.ListWidget) and self.ListWidget.IsInFocusPath or self.ListWidgetOpening or self.IsControllerKeyHidden then
+    if self.IsInFocusPath or self.IsControllerKeyHidden then
       self.Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
     else
       self.Controller:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -243,12 +315,19 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   rawset(self, "CurInputDeviceType", CurInputDevice)
   rawset(self, "IsTouch", CurInputDevice == ECommonInputType.Touch)
   self:UpdateGamepadKeyState()
+  if CurInputDevice == ECommonInputType.Gamepad and self.IsInFocusPath then
+    self:UpdateGamePadFocus()
+  end
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if Const.GamepadFaceButtonRight == InKeyName then
+    if self.IsListViewOpened then
+      self:OnListClosed()
+      return UIUtils.Handled
+    end
     if self.OnGetBackReply then
       local Reply = self.OnGetBackReply(self.Parent, MyGeometry, InKeyEvent)
       if Reply then
@@ -273,6 +352,9 @@ end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
   M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
+  if self.IsListViewOpened then
+    self:OnListClosed()
+  end
   return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Btn_Filter_List)
 end
 
@@ -303,13 +385,31 @@ end
 function M:OnRemovedFromFocusPath(InFocusEvent)
   rawset(self, "IsInFocusPath", false)
   self:UpdateGamepadKeyState()
+  self:OnListClosed()
   if self._OnRemovedFromFocusPath then
     self._OnRemovedFromFocusPath(self.Parent, self)
   end
 end
 
+function M:UpdateGamePadFocus()
+  if UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return
+  end
+  if not self.IsInFocusPath then
+    return
+  end
+  if self.IsListViewOpened and self.SelectedItem and self.SelectedItem.Entry then
+    self.List:BP_SetSelectedItem(self.SelectedItem)
+    self.List:BP_NavigateToItem(self.SelectedItem)
+    self.List:SetFocus()
+    return
+  end
+  self.List:BP_CancelScrollIntoView()
+  self.Btn_Filter_List:SetFocus()
+end
+
 function M:Activate()
-  self:ListOpenBtnClicked()
+  self:ListOpenBtnClicked(true)
 end
 
 return M

@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "1776844180552524713",
+      startStory = "1780294792283563854",
       startPort = "StoryStart",
-      endStory = "1776844180552524715",
+      endStory = "1780294792283563856",
       endPort = "In"
     },
     {
-      startStory = "1776844180552524715",
+      startStory = "1780294792283563856",
       startPort = "Success",
-      endStory = "1776844180552524714",
+      endStory = "1780294792283563855",
       endPort = "StoryEnd"
     }
   },
   storyNodeData = {
-    ["1776844180552524713"] = {
+    ["1780294792283563854"] = {
       isStoryNode = true,
-      key = "1776844180552524713",
+      key = "1780294792283563854",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 800, y = 300},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["1776844180552524714"] = {
+    ["1780294792283563855"] = {
       isStoryNode = true,
-      key = "1776844180552524714",
+      key = "1780294792283563855",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 2800, y = 300},
@@ -42,9 +42,9 @@ return {
         commentData = {}
       }
     },
-    ["1776844180552524715"] = {
+    ["1780294792283563856"] = {
       isStoryNode = true,
-      key = "1776844180552524715",
+      key = "1780294792283563856",
       type = "StoryNode",
       name = "冰湖区域潘神对话",
       pos = {x = 1524, y = 314},
@@ -68,17 +68,17 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_1",
             endQuest = "17413419832852417509",
             endPort = "In"
@@ -86,17 +86,17 @@ return {
           {
             startQuest = "17413419832852417509",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
-            startQuest = "1776844180553524720",
+            startQuest = "1780294792283563861",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_11",
             endQuest = "17413419832852417528",
             endPort = "In"
@@ -104,85 +104,85 @@ return {
           {
             startQuest = "17413419832852417520",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417521",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417522",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417523",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417524",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417525",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417526",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417528",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417531",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417532",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417534",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417535",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417536",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
             startQuest = "17413419832852417537",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
@@ -200,7 +200,7 @@ return {
           {
             startQuest = "17527324888923526",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
@@ -218,17 +218,17 @@ return {
           {
             startQuest = "17527325525415179",
             startPort = "Out",
-            endQuest = "1776844180552524717",
+            endQuest = "1780294792283563858",
             endPort = "Success"
           },
           {
-            startQuest = "1776844180552524716",
+            startQuest = "1780294792283563857",
             startPort = "QuestStart",
-            endQuest = "1776844180552524719",
+            endQuest = "1780294792283563860",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_2",
             endQuest = "1755608871273615649",
             endPort = "In"
@@ -236,11 +236,11 @@ return {
           {
             startQuest = "1755608871273615649",
             startPort = "Out",
-            endQuest = "1776844180553524720",
+            endQuest = "1780294792283563861",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_4",
             endQuest = "17556799812001543816",
             endPort = "In"
@@ -258,19 +258,19 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_5",
             endQuest = "17556800034631544249",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_3",
             endQuest = "17413419832852417520",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_6",
             endQuest = "17556803377971549331",
             endPort = "In"
@@ -282,7 +282,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_7",
             endQuest = "17556803359241549277",
             endPort = "In"
@@ -294,7 +294,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_8",
             endQuest = "17556803433531549440",
             endPort = "In"
@@ -324,55 +324,55 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_10",
             endQuest = "17527323787631803",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_9",
             endQuest = "17413419832852417526",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_12",
             endQuest = "17556803909641550505",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_13",
             endQuest = "17413419832852417532",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_15",
             endQuest = "17413419832852417534",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_16",
             endQuest = "17413419832852417535",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_17",
             endQuest = "17556804026901550819",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_18",
             endQuest = "17556903652252437",
             endPort = "In"
           },
           {
-            startQuest = "1776844180552524719",
+            startQuest = "1780294792283563860",
             startPort = "Branch_14",
             endQuest = "17576723906231240264",
             endPort = "In"
@@ -414,6 +414,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -474,6 +475,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -534,6 +536,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -594,6 +597,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -654,6 +658,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -714,6 +719,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -774,6 +780,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -834,6 +841,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -894,6 +902,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -954,6 +963,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1014,6 +1024,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1074,6 +1085,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1134,6 +1146,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1194,6 +1207,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1254,6 +1268,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1314,6 +1329,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1374,6 +1390,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1476,6 +1493,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1525,6 +1543,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1574,6 +1593,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1623,6 +1643,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1672,6 +1693,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1721,6 +1743,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1770,6 +1793,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1819,6 +1843,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1868,6 +1893,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1917,6 +1943,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1935,29 +1962,29 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["1776844180552524716"] = {
-            key = "1776844180552524716",
+          ["1780294792283563857"] = {
+            key = "1780294792283563857",
             type = "QuestStartNode",
             name = "QuestStart",
             pos = {x = 137.62626262626247, y = 546.808080808081},
             propsData = {ModeType = 0}
           },
-          ["1776844180552524717"] = {
-            key = "1776844180552524717",
+          ["1780294792283563858"] = {
+            key = "1780294792283563858",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
             pos = {x = 3464.4721190327596, y = 640.5422597996967},
             propsData = {ModeType = 0}
           },
-          ["1776844180552524718"] = {
-            key = "1776844180552524718",
+          ["1780294792283563859"] = {
+            key = "1780294792283563859",
             type = "QuestFailNode",
             name = "QuestFail",
             pos = {x = 3138.909090909091, y = 145.63636363636363},
             propsData = {}
           },
-          ["1776844180552524719"] = {
-            key = "1776844180552524719",
+          ["1780294792283563860"] = {
+            key = "1780294792283563860",
             type = "BranchTriggerNode",
             name = "触发分支节点",
             pos = {x = 817.6666666666666, y = 314.6666666666667},
@@ -1985,8 +2012,8 @@ return {
               }
             }
           },
-          ["1776844180553524720"] = {
-            key = "1776844180553524720",
+          ["1780294792283563861"] = {
+            key = "1780294792283563861",
             type = "TalkNode",
             name = "对话节点",
             pos = {x = 1732.7334606762263, y = -1131.29751202866},
@@ -2014,6 +2041,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

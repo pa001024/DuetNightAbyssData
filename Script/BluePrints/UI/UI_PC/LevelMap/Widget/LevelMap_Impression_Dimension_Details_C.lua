@@ -1,5 +1,6 @@
 require("UnLua")
 local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionTypes
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Close()
@@ -32,7 +33,7 @@ function M:Init(RegionId, Panel, bInShop)
   self.RegionId = RegionId
   AudioManager(self):PlayUISound(self, "event:/ui/common/map_five_dimension_btn_hover", "", nil)
   local Avatar = GWorld:GetAvatar()
-  local ImpressionAreaId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
+  local ImpressionAreaId = ImpressionModel:GetImpressionAreaIdFromRegionId(RegionId)
   self:InitDimensionGraph(ImpressionAreaId)
   self.DimensionGraph:SwitchActive(true)
   self.Text_Area:SetText(GText(DataMgr.ImpressionRegion[ImpressionAreaId].RegionName))

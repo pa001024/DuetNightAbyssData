@@ -61,6 +61,9 @@ function M:BindEventOnClicked(Obj, Event, ...)
   if not Obj or not Event then
     return
   end
+  if not self.ClickLogics then
+    self.ClickLogics = {}
+  end
   if not self.ClickLogics[Obj] then
     self.ClickLogics[Obj] = {}
   end
@@ -76,6 +79,9 @@ function M:BindSingleEventOnClicked(Obj, Event, ...)
   if not Obj or not Event then
     return
   end
+  if not self.ClickLogics then
+    self.ClickLogics = {}
+  end
   self.ClickLogics[Obj] = {
     {
       Event = Event,
@@ -89,6 +95,9 @@ end
 function M:BindForbidStateExecuteEvent(Obj, Event, ...)
   if not Obj or not Event then
     return
+  end
+  if not self.ForbidLogics then
+    self.ForbidLogics = {}
   end
   if not self.ForbidLogics[Obj] then
     self.ForbidLogics[Obj] = {}
@@ -105,6 +114,9 @@ function M:BindEventOnPressed(Obj, Event, ...)
   if not Obj or not Event then
     return
   end
+  if not self.PressLogics then
+    self.PressLogics = {}
+  end
   if not self.PressLogics[Obj] then
     self.PressLogics[Obj] = {}
   end
@@ -119,6 +131,9 @@ end
 function M:BindEventOnReleased(Obj, Event, ...)
   if not Obj or not Event then
     return
+  end
+  if not self.ReleaseLogics then
+    self.ReleaseLogics = {}
   end
   if not self.ReleaseLogics[Obj] then
     self.ReleaseLogics[Obj] = {}
@@ -135,7 +150,7 @@ function M:UnBindEventOnClicked(Obj, Event)
   if not Obj or not Event then
     return
   end
-  if self.ClickLogics[Obj] then
+  if self.ClickLogics and self.ClickLogics[Obj] then
     local temp_table = {}
     for i, v in pairs(self.ClickLogics[Obj]) do
       if v.Event ~= Event then
@@ -144,7 +159,7 @@ function M:UnBindEventOnClicked(Obj, Event)
     end
     self.ClickLogics[Obj] = temp_table
   end
-  if self.ForbidLogics[Obj] then
+  if self.ForbidLogics and self.ForbidLogics[Obj] then
     local temp_table = {}
     for i, v in pairs(self.ForbidLogics[Obj]) do
       if v.Event ~= Event then
@@ -159,7 +174,7 @@ function M:UnBindEventOnPressed(Obj, Event)
   if not Obj or not Event then
     return
   end
-  if self.PressLogics[Obj] then
+  if self.PressLogics and self.PressLogics[Obj] then
     local temp_table = {}
     for i, v in pairs(self.PressLogics[Obj]) do
       if v.Event ~= Event then
@@ -174,7 +189,7 @@ function M:UnBindEventOnReleased(Obj, Event)
   if not Obj or not Event then
     return
   end
-  if self.ReleaseLogics[Obj] then
+  if self.ReleaseLogics and self.ReleaseLogics[Obj] then
     local temp_table = {}
     for i, v in pairs(self.ReleaseLogics[Obj]) do
       if v.Event ~= Event then
@@ -189,10 +204,10 @@ function M:UnBindEventOnClickedByObj(Obj)
   if not Obj then
     return
   end
-  if self.ClickLogics[Obj] then
+  if self.ClickLogics and self.ClickLogics[Obj] then
     self.ClickLogics[Obj] = nil
   end
-  if self.ForbidLogics[Obj] then
+  if self.ForbidLogics and self.ForbidLogics[Obj] then
     self.ForbidLogics[Obj] = nil
   end
 end
@@ -240,6 +255,9 @@ function M:OnBtnClicked()
   else
     ExecuteLogics = self.ClickLogics
     self:PlayButtonClickAnimation()
+  end
+  if not ExecuteLogics then
+    return
   end
   if not self:CouldExecuteClickLogic() then
     if self.LongPressClickFunc then
@@ -302,9 +320,11 @@ function M:OnBtnPressed()
   self.CurrentClickIsForbid = false
   self.IsPressing = true
   self:PlayButtonPressAnim()
-  for obj, funcs in pairs(self.PressLogics) do
-    for i, v in pairs(funcs) do
-      v.Event(obj, table.unpack(v.Params))
+  if self.PressLogics then
+    for obj, funcs in pairs(self.PressLogics) do
+      for i, v in pairs(funcs) do
+        v.Event(obj, table.unpack(v.Params))
+      end
     end
   end
 end
@@ -345,9 +365,6 @@ end
 
 function M:OnBtnReleased()
   self.IsPressing = false
-  if self:IsDragRelease() then
-    return
-  end
   self.PressedScreenPos = nil
   if self.IsForbidden ~= true and not self.IsHovering then
     self:PlayButtonReleaseAndUnHoverAnim()
@@ -357,9 +374,11 @@ function M:OnBtnReleased()
   if self.AudioPlayCase == EUIAudioPlayCase.OnMouseUp then
     AudioManager(self):PlayUISound(self, self.AudioEventPath, nil, nil)
   end
-  for obj, funcs in pairs(self.ReleaseLogics) do
-    for i, v in pairs(funcs) do
-      v.Event(obj, table.unpack(v.Params), self.IsForbidden)
+  if self.ReleaseLogics then
+    for obj, funcs in pairs(self.ReleaseLogics) do
+      for i, v in pairs(funcs) do
+        v.Event(obj, table.unpack(v.Params), self.IsForbidden)
+      end
     end
   end
 end

@@ -14,7 +14,7 @@ function M:Init(SelectPoint, MainMap)
   self.Button_Area.OnClicked:Clear()
   self.Button_Area.OnClicked:Add(self, function()
     MainMap:OnAreaClicked()
-    MainMap.RealWildMap.CheckBreak = true
+    MainMap.RealWildMap:SetCheckBreak(true)
     SelectPoint:OnClicked()
     self:PlayAnimation(self.Click)
   end)

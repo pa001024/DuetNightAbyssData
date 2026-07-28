@@ -3,6 +3,8 @@ local BP_AutoChess_Formation_C = Class("BluePrints.Common.TimerMgr")
 function BP_AutoChess_Formation_C:ReceiveBeginPlay()
   EventManager:AddEvent(EventID.OnAutoChessCreateMonster, self, self.CreateChessMonster)
   EventManager:AddEvent(EventID.OnAutoChessRemoveMonster, self, self.RemoveChessMonster)
+  EventManager:AddEvent(EventID.OnAutoChessCreateItem, self, self.CreateChessItem)
+  EventManager:AddEvent(EventID.OnAutoChessRemoveItem, self, self.RemoveChessItem)
   self.Index2Cube = {}
   self.Index2CubeInfo = {}
   self.Index2EnemyCube = {}
@@ -20,7 +22,7 @@ function BP_AutoChess_Formation_C:ReceiveBeginPlay()
       CubeActor = GWorld.GameInstance:GetWorld():SpawnActor(ActorClass, SpawnTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn, nil, self, nil)
     else
       DebugPrint("ayff test missing Cube actor:", i)
-      goto lbl_124
+      goto lbl_138
     end
     if self["Cube" .. i]:GetAttachParent() == self.Scene1 then
       CubeActor.Index = i - 24
@@ -37,13 +39,53 @@ function BP_AutoChess_Formation_C:ReceiveBeginPlay()
         self.Index2Cube[CubeActor.Index] = CubeActor
       end
     end
-    ::lbl_124::
+    ::lbl_138::
   end
 end
 
 function BP_AutoChess_Formation_C:ReceiveEndPlay()
   EventManager:RemoveEvent(EventID.OnAutoChessCreateMonster, self)
   EventManager:RemoveEvent(EventID.OnAutoChessRemoveMonster, self)
+  EventManager:RemoveEvent(EventID.OnAutoChessCreateItem, self)
+  EventManager:RemoveEvent(EventID.OnAutoChessRemoveItem, self)
+end
+
+function BP_AutoChess_Formation_C:CreateChessItem(ItemId, CubeIndex, IsEnemy)
+  if not DataMgr.AutoChessItemBuff[ItemId] then
+    DebugPrint("CreateChessItem: " .. ItemId .. " is not exist")
+  end
+  local CubeIndex = tonumber(CubeIndex)
+  local CubeActorList = IsEnemy and self.Index2EnemyCube or self.Index2Cube
+  local CubeInfoList = IsEnemy and self.Index2EnemyCubeInfo or self.Index2CubeInfo
+  local Actor = CubeActorList[CubeIndex]
+  if not Actor then
+    DebugPrint("ayff test invalid CubeIndex:", CubeIndex)
+    return
+  end
+  local ItemActorBp = DataMgr.AutoChessItemBuff[ItemId].ItemActorBp
+  if not ItemActorBp then
+    DebugPrint("CreateChessItem: " .. ItemId .. " ItemActorBp is not exist")
+    return
+  end
+  local TargetLocation = Actor:K2_GetActorLocation()
+  local ItemActorClass = LoadClass(ItemActorBp)
+  local ItemActor = GWorld.GameInstance:GetWorld():SpawnActor(ItemActorClass, TargetLocation)
+  CubeInfoList[CubeIndex].ItemBuff = DataMgr.AutoChessItemBuff[ItemId].BuffId
+  CubeInfoList[CubeIndex].ItemActor = ItemActor
+end
+
+function BP_AutoChess_Formation_C:RemoveChessItem(CubeIndex, IsEnemy)
+  local CubeIndex = tonumber(CubeIndex)
+  local CubeInfoList = IsEnemy and self.Index2EnemyCubeInfo or self.Index2CubeInfo
+  if not CubeInfoList or not CubeInfoList[CubeIndex] then
+    return
+  end
+  local ItemActor = CubeInfoList[CubeIndex].ItemActor
+  if IsValid(ItemActor) then
+    ItemActor:K2_DestroyActor()
+  end
+  CubeInfoList[CubeIndex].ItemActor = nil
+  CubeInfoList[CubeIndex].ItemBuff = nil
 end
 
 function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, IsEnemy, EquipList)
@@ -63,6 +105,9 @@ function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, I
   local TargetLocation = Actor:K2_GetActorLocation()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   local UnitId = IsEnemy and DataMgr.CombatChessInfo[tonumber(CombatChessId)].EnemyMonsterUnitId or DataMgr.CombatChessInfo[tonumber(CombatChessId)].FriendMonsterUnitId
+  if GameMode.bEnableMonsterCollisionPush == true then
+    GameMode.bEnableMonsterCollisionPush = false
+  end
   
   local function LoadFinishCallback(_, Unit)
     if nil == CubeInfoList[CubeIndex] then
@@ -94,9 +139,9 @@ function BP_AutoChess_Formation_C:CreateChessMonster(CombatChessId, CubeIndex, I
   Context.MonsterSpawn = GameMode.LevelGameMode.FixedMonsterSpawn
   Context.IntParams:Add("Level", GameMode:GetFixedGamemodeLevel())
   Context.OnUnitInitCreateReadyDynamic:Add(self, LoadFinishCallback)
-  GameMode.EMGameState.EventMgr:CreateUnitNew(Context, false)
-  self.MonsterCreatingCount = self.MonsterCreatingCount + 1
   CubeInfoList[CubeIndex] = {}
+  self.MonsterCreatingCount = self.MonsterCreatingCount + 1
+  GameMode.EMGameState.EventMgr:CreateUnitNew(Context, false)
 end
 
 function BP_AutoChess_Formation_C:RemoveChessMonster(CubeIndex, IsEnemy)
@@ -183,12 +228,17 @@ function BP_AutoChess_Formation_C:SwitchMonsterPosition(Index1, Index2)
   local CubeActor1 = self.Index2Cube[Index1]
   local CubeActor2 = self.Index2Cube[Index2]
   if CubeActor1 then
-    if Info2 then
+    if Info2 and Info2.Eid then
       CubeActor1.MonsterEid = Info2.Eid
       CubeActor1.MonsterUnitId = Info2.UnitId
       CubeActor1.CombatChessId = Info2.CombatChessId
       CubeActor1.EquipList = Info2.EquipList
-      CubeActor1.LocZ = Battle(self):GetEntity(Info2.Eid):K2_GetActorLocation().Z
+      local Monster2 = Battle(self):GetEntity(Info2.Eid)
+      if IsValid(Monster2) then
+        CubeActor1.LocZ = Monster2:K2_GetActorLocation().Z
+      else
+        CubeActor1.LocZ = nil
+      end
     else
       CubeActor1.MonsterEid = nil
       CubeActor1.MonsterUnitId = nil
@@ -198,12 +248,17 @@ function BP_AutoChess_Formation_C:SwitchMonsterPosition(Index1, Index2)
     end
   end
   if CubeActor2 then
-    if Info1 then
+    if Info1 and Info1.Eid then
       CubeActor2.MonsterEid = Info1.Eid
       CubeActor2.MonsterUnitId = Info1.UnitId
       CubeActor2.CombatChessId = Info1.CombatChessId
       CubeActor2.EquipList = Info1.EquipList
-      CubeActor2.LocZ = Battle(self):GetEntity(Info1.Eid):K2_GetActorLocation().Z - 50
+      local Monster1 = Battle(self):GetEntity(Info1.Eid)
+      if IsValid(Monster1) then
+        CubeActor2.LocZ = Monster1:K2_GetActorLocation().Z - 50
+      else
+        CubeActor2.LocZ = nil
+      end
     else
       CubeActor2.MonsterEid = nil
       CubeActor2.MonsterUnitId = nil

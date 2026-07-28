@@ -107,7 +107,8 @@ function M:TryPurchaseMonthCard()
     PaymentParameters.callbackUrl = CallbackUrl
     local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
     DebugPrint("MonthCard HeroUSDKSubsystem():HeroSDKPay", MonthCard.CardID, PayGoods, GameRoleInfo, OrderId, "PurchaseOrder: ", PurchaseOrder)
-    HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+    local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
+    HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
     local TrackInfo = {}
     TrackInfo.product_id = GoodsId
     TrackInfo.product_type = "MonthlyCard"
@@ -225,7 +226,6 @@ function M:DisplayMonthCardPop(DailyReward, ...)
   if GameInstance then
     local LoadingUI = GameInstance:GetLoadingUI()
     local LoginMainPage = UIManager(GameInstance):GetUIObj("LoginMainPage")
-    DebugPrint("Yihan@ DisplayMonthCardPop")
     DebugPrint("DisplayMonthCardPop", LoadingUI)
     if LoadingUI or LoginMainPage then
       MonthCardModel:SetDailyRewardCache(DailyReward)

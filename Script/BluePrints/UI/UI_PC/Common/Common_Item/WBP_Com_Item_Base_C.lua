@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local StrLib = require("BluePrints.Common.DataStructure")
 local Deque = StrLib.Deque
@@ -403,6 +404,17 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
       end
     end
   end
+  if UIUtils:IsMobileInput() and not self.Content.IsSelect then
+    local Delegate = {
+      self,
+      function()
+        self.Item:UnbindAllFromAnimationFinished(self.Item.Click)
+        self.Item:PlayAnimation(self.Item.Normal)
+      end
+    }
+    self.Item:UnbindAllFromAnimationFinished(self.Item.Click)
+    self.Item:BindToAnimationFinished(self.Item.Click, Delegate)
+  end
   return UWidgetBlueprintLibrary.Unhandled()
 end
 
@@ -474,7 +486,7 @@ end
 function M:Destruct()
   self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor.OnMenuOpenChanged:Remove(self, self.OnMenuOpenChanged)
   for TaskName, _ in pairs(self.ComItemAsyncTasks or {}) do
-    ForceStopAsyncTask(self, TaskName)
+    CoroutineUtils.ForceStopAsyncTask(self, TaskName)
   end
   self.ComItemAsyncTasks = nil
   self.bMaxHeight = nil
@@ -649,18 +661,23 @@ function M:OnAnimationFinished(InAnimation)
   end
 end
 
-function M:SetSelected(IsSelected)
+function M:SetSelected(IsSelected, bAnim)
+  if nil == bAnim then
+    bAnim = true
+  end
   if self.NotInteractive then
     return
   end
   if self.Content then
     self.Content.IsSelect = IsSelected
   end
-  self.Item:StopAllAnimations()
-  if IsSelected then
-    self.Item:PlayAnimation(self.Item.Click)
-  else
-    self.Item:PlayAnimation(self.Item.Normal)
+  if bAnim then
+    self.Item:StopAllAnimations()
+    if IsSelected then
+      self.Item:PlayAnimation(self.Item.Click)
+    else
+      self.Item:PlayAnimation(self.Item.Normal)
+    end
   end
 end
 
@@ -721,7 +738,7 @@ function M:SetLock(LockType)
     if 1 == LockType then
       self.LockedRightWidget = self:GetOrCreateGroupWidget("ComItemLock", CoroutineObj)
     elseif 2 == LockType then
-      if not self.LockedCenterWidget then
+      if not self.LockedCenterWidget or not IsValid(self.LockedCenterWidget) then
         self.LockedCenterWidget = self:CreateWidgetAsync("ComItemLockCenter", CoroutineObj)
       end
       self:AddWidgetToNode(self.LockedCenterWidget)
@@ -839,6 +856,7 @@ function M:SetLevel(Level)
       self.LevelWidget = self:CreateWidgetAsync("ComItemLevel", CoroutineObj)
     end
     if Level then
+      self.LevelWidget.Text_Lv_1:SetText(GText("UI_LEVEL_NAME"))
       self.LevelWidget.Text_Lv:SetText(Level)
       self.LevelWidget:SetVisibility(UIConst.VisibilityOp.Visible)
       self:AdjustBackGroundHeight(self.LevelWidget, "SetLevel  " .. Level)
@@ -913,7 +931,7 @@ function M:SetAdd(bAdd)
       self:SetRarity(0)
       DynamicMaterial:SetScalarParameterValue("IconOpacity", 0)
       self.Item.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-      if not self.AddWidget then
+      if not self.AddWidget or not IsValid(self.AddWidget) then
         self.AddWidget = self:CreateWidgetAsync("ComItemAdd", CoroutineObj)
       end
       self:AddWidgetToNode(self.AddWidget)
@@ -1150,8 +1168,17 @@ function M:SetItemLevelCard(LevelCardNum)
     if LevelCardNum then
       self.LevelCardWidget = self:GetOrCreateGroupWidget("ComItemCardLevel", CoroutineObj)
       self.LevelCardWidget.Text_Level:SetText(LevelCardNum)
+      local CardLevelMax = 0
       local CardLevelData = DataMgr.WeaponCardLevel[self.Id]
-      if CardLevelData and LevelCardNum >= CardLevelData.CardLevelMax then
+      if CardLevelData then
+        CardLevelMax = CardLevelData.CardLevelMax
+      else
+        local HyperWeaponCardLevelData = DataMgr.HyperWeaponCardLevel[self.Id]
+        if HyperWeaponCardLevelData then
+          CardLevelMax = #HyperWeaponCardLevelData
+        end
+      end
+      if CardLevelMax <= LevelCardNum then
         self.LevelCardWidget:SetMaxGradeLevelColor()
       else
         self.LevelCardWidget:SetNormalGradeLevelColor()
@@ -1282,6 +1309,9 @@ end
 function M:SetInGear(bInGear)
   self:AsyncLoadWidgetCommon("InGearWidget", "SetInGearTask", function(CoroutineObj)
     if bInGear then
+      if self.ColStarUI then
+        self:SetCollectionStar(false)
+      end
       if not self.WidgetMap[self.InGearWidget] and not IsValid(self.InGearWidget) then
         self.InGearWidget = self:CreateWidgetAsync("ComItemInGear", CoroutineObj)
       end
@@ -1352,14 +1382,14 @@ function M:AsyncLoadWidgetCommon(WidgetName, TaskName, Callback)
   end
   if USE_ASYNC and (not (WidgetName and self.WidgetMap[self[WidgetName]]) or not IsValid(self[WidgetName])) then
     self.ComItemAsyncTasks[TaskName] = 1
-    ForceStopAsyncTask(self, TaskName)
+    CoroutineUtils.ForceStopAsyncTask(self, TaskName)
     
     local function CallbackWrapper(CoroutineObj)
       Callback(CoroutineObj)
       self.ComItemAsyncTasks[TaskName] = nil
     end
     
-    RunAsyncTask(self, TaskName, CallbackWrapper)
+    CoroutineUtils.RunAsyncTask(self, TaskName, CallbackWrapper)
   else
     Callback()
   end
@@ -1677,6 +1707,30 @@ function M:CheckWidgetIsTop(Widget)
   local Slot = self.Node_Widget:AddChild(Widget)
   Slot:SetVerticalAlignment(EVerticalAlignment.HAlign_Fill)
   Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+end
+
+function M:SetItemComItemOccupied(bOccupied)
+  self:_SetItemOccupiedImpl(bOccupied, GText("UI_RegionOnline_Occupied"))
+end
+
+function M:_SetItemOccupiedImpl(bOccupied, Text)
+  local function Callback(CoroutineObj)
+    if bOccupied then
+      if not self.WidgetMap[self.OccupiedWidget] and not IsValid(self.OccupiedWidget) then
+        self.OccupiedWidget = self:CreateWidgetAsync("ComItemOccupancy", CoroutineObj)
+      end
+      self.OccupiedWidget.TextTips:SetText(Text)
+      self:AddWidgetToNode(self.OccupiedWidget)
+    elseif self.WidgetMap[self.OccupiedWidget] then
+      self:RemoveWidgetFromNode(self.OccupiedWidget)
+    end
+  end
+  
+  if self.bAllUseAsyncLoadWidget then
+    self:AsyncLoadWidgetCommon("ComItemOccupancy", "SetItemOccupiedTask", Callback)
+  else
+    Callback()
+  end
 end
 
 return M

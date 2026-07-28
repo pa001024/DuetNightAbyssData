@@ -351,6 +351,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.CurInputDeviceType = CurInputDevice
   self.CurGamepadName = CurGamepadName
   self:UpdateUIByInputDevice(self.CurInputDeviceType)
+  DebugPrint("JLy self.FocusMode", self.FocusMode)
+  local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
+  if ActivityMain then
+    ActivityMain.List_Tab:SetFocus()
+  end
 end
 
 function M:UpdateUIByInputDevice(CurInputDeviceType)

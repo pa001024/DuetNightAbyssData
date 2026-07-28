@@ -81,10 +81,12 @@ end
 function M:CheckGachaEffective(GachaId)
   local GachaData = DataMgr.SkinGacha[GachaId]
   assert(GachaData, "抽卡信息不存在:" .. GachaId)
-  if GachaData.GachaStartTime < TimeUtils.NowTime() and GachaData.GachaEndTime > TimeUtils.NowTime() then
-    return true
-  end
-  return false
+  local NowTime = TimeUtils.NowTime()
+  local StartEmpty = not GachaData.GachaStartTime or GachaData.GachaStartTime == ""
+  local EndEmpty = not GachaData.GachaEndTime or "" == GachaData.GachaEndTime
+  local StartOk = StartEmpty or NowTime >= GachaData.GachaStartTime
+  local EndOk = EndEmpty or NowTime < GachaData.GachaEndTime
+  return StartOk and EndOk
 end
 
 function M:GetSkinGachaItemLst(SkinGachaItemId)

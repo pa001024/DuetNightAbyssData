@@ -8,7 +8,7 @@ Wuyousheng.__Props__ = {
   WuyoushengEventId = prop.prop("Int", "client save"),
   FinishStars = prop.prop("Int2IntDict", "client save"),
   ProgressRewardsGot = prop.prop("Int2IntDict", "client save"),
-  SquadInfoMap = prop.prop("Int2StrDict", "client save", {})
+  SquadInfoMap = prop.prop("Int2BytesDict", "client save", {})
 }
 
 function Wuyousheng:Init(WuyoushengEventId)

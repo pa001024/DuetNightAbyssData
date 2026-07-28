@@ -1041,6 +1041,18 @@ return ReadOnly("ImpressionShop", {
     TypeNum = 50,
     UnlockCondition = 1184
   },
+  [1011140] = {
+    ImprCheckId = 1161,
+    ImpressionShopId = 1011140,
+    ItemId = 1001201,
+    ItemSeq = 1,
+    ItemType = "Resource",
+    PurchaseLimit = 18,
+    RegionId = 1011,
+    SubTabId = 1005,
+    TypeNum = 10,
+    UnlockCondition = 1163
+  },
   [1041001] = {
     ImprCheckId = 1090,
     ImpressionShopId = 1041001,

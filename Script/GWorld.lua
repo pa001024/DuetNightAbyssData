@@ -114,6 +114,14 @@ function GWorld:GetClientModeDungeonObject()
   return self.ClientDungeonObject_C
 end
 
+function GWorld:SetDungeonObjectCProperty(InDungeonObjectCProperty)
+  self.DungeonObjectCProperty = InDungeonObjectCProperty
+end
+
+function GWorld:GetDungeonObjectCProperty()
+  return self.DungeonObjectCProperty
+end
+
 function GWorld:DSBLog(...)
   local DSEntity = self:GetDSEntity()
   if not DSEntity then

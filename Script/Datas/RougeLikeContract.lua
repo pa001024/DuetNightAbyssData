@@ -11,7 +11,7 @@ return ReadOnly("RougeLikeContract", {
       [1] = "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
     },
     GlobalPassiveId = 30101001,
-    HeatValue = 1,
+    HeatValue = 2,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_HealDown.T_Rou_Contract_Char_HealDown",
     Id = 101,
     MaxLevel = 5,
@@ -38,7 +38,7 @@ return ReadOnly("RougeLikeContract", {
     HeatValue = 2,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
     Id = 103,
-    MaxLevel = 5,
+    MaxLevel = 10,
     Name = "RLContract_Name_103"
   },
   [104] = {
@@ -50,7 +50,7 @@ return ReadOnly("RougeLikeContract", {
     HeatValue = 2,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon__AtkUp.T_Rou_Contract_Mon__AtkUp",
     Id = 104,
-    MaxLevel = 5,
+    MaxLevel = 10,
     Name = "RLContract_Name_104"
   },
   [105] = {
@@ -59,7 +59,7 @@ return ReadOnly("RougeLikeContract", {
       [1] = "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
     },
     GlobalPassiveId = 30102003,
-    HeatValue = 2,
+    HeatValue = 3,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
     Id = 105,
     MaxLevel = 5,
@@ -71,7 +71,7 @@ return ReadOnly("RougeLikeContract", {
       "Term_Rou_Contract_106_Blast"
     },
     GlobalPassiveId = 30102004,
-    HeatValue = 3,
+    HeatValue = 5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_Explode.T_Rou_Contract_Mon_Explode",
     Id = 106,
     MaxLevel = 1,
@@ -130,7 +130,7 @@ return ReadOnly("RougeLikeContract", {
       [1] = "$#GlobalPassiveData[30103002].Vars.Count$"
     },
     GlobalPassiveId = 30103002,
-    HeatValue = 3,
+    HeatValue = 5,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraElite.T_Rou_Contract_Room_ExtraElite",
     Id = 108,
     MaxLevel = 2,
@@ -150,7 +150,7 @@ return ReadOnly("RougeLikeContract", {
       [1] = "$#GlobalPassiveData[30103003].Vars.Count$"
     },
     GlobalPassiveId = 30103003,
-    HeatValue = 1,
+    HeatValue = 3,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraMech.T_Rou_Contract_Room_ExtraMech",
     Id = 109,
     MaxLevel = 1,
@@ -166,7 +166,7 @@ return ReadOnly("RougeLikeContract", {
   },
   [110] = {
     Desc = "RLContract_Desc_110",
-    HeatValue = 10,
+    HeatValue = 12,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_CostUp.T_Rou_Contract_Mechanics_CostUp",
     Id = 110,
     MaxLevel = 1,
@@ -177,7 +177,7 @@ return ReadOnly("RougeLikeContract", {
   },
   [111] = {
     Desc = "RLContract_Desc_111",
-    HeatValue = 5,
+    HeatValue = 9,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_LessChoice.T_Rou_Contract_Mechanics_LessChoice",
     Id = 111,
     MaxLevel = 1,
@@ -188,7 +188,7 @@ return ReadOnly("RougeLikeContract", {
   },
   [112] = {
     Desc = "RLContract_Desc_112",
-    HeatValue = 15,
+    HeatValue = 21,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_RandomChoice.T_Rou_Contract_Mechanics_RandomChoice",
     Id = 112,
     MaxLevel = 1,

@@ -86,12 +86,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "QuestPoint_Elevator_Escape",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 0
       },
       questNodeData = {
@@ -237,7 +237,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -295,12 +294,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "questpoint1111011006",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -442,6 +441,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -449,6 +449,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -492,6 +493,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -558,6 +560,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -624,6 +627,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -679,6 +683,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -686,6 +691,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -729,6 +735,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -818,7 +825,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -835,7 +841,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -852,7 +857,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -936,6 +940,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1002,6 +1007,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1068,12 +1074,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "questpoint1111011006",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1234,7 +1240,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1330,12 +1335,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "pAwamove18",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },

@@ -16,11 +16,11 @@ end
 function ClientEventUtils:StartSpecialQuestEvent(...)
   local SpecialQuestId = (...)
   if self.CurrentEvent then
-    DebugPrint("特殊任务中开始另一特殊任务" .. SpecialQuestId)
+    DebugPrint("gyy特殊任务中开始另一特殊任务" .. SpecialQuestId)
     return
   end
   if self.SpecialQuestEvents[SpecialQuestId] then
-    DebugPrint("重复开始相同的特殊任务" .. SpecialQuestId)
+    DebugPrint("gyy重复开始相同的特殊任务" .. SpecialQuestId)
     return
   end
   local SpecialEvent = SpecialQuestEvent(...)
@@ -33,6 +33,7 @@ function ClientEventUtils:SetCurrentEvent(SpecialEvent)
 end
 
 function ClientEventUtils:ClearSpecailQuestEvent(SpecialQuestId)
+  DebugPrint("gyy ClearSpecailQuestEvent" .. SpecialQuestId)
   local SpecialEvent = self.SpecialQuestEvents[SpecialQuestId]
   if SpecialEvent then
     if self.CurrentEvent and self.CurrentEvent.SpecialQuestId == SpecialQuestId then

@@ -29,6 +29,13 @@ T.RT_10 = {
   7180309,
   7180310
 }
+T.RT_11 = {88104, 88204}
+T.RT_12 = {
+  7180312,
+  7180319,
+  7180320
+}
+T.RT_13 = {88114, 88214}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -140,13 +147,9 @@ return ReadOnly("SoloTreasure", {
     DifficultyDesc = "UI_SoloTreasure_NormalMode",
     DungeonId = 41811,
     EvacuationTime = 10,
-    GamePlayId = {88104, 88204},
+    GamePlayId = T.RT_11,
     GameTotalTime = 600,
-    RainyRandomId = {
-      7180312,
-      7180319,
-      7180320
-    },
+    RainyRandomId = T.RT_12,
     TurnRainyTime = 420,
     WarningTime = 60
   },
@@ -154,7 +157,77 @@ return ReadOnly("SoloTreasure", {
     DifficultyDesc = "UI_SoloTreasure_HardMode",
     DungeonId = 41812,
     EvacuationTime = 10,
-    GamePlayId = {88114, 88214},
+    GamePlayId = T.RT_13,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_10,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42801] = {
+    DifficultyDesc = "UI_SoloTreasure_NormalMode",
+    DungeonId = 42801,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_1,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_2,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42802] = {
+    DifficultyDesc = "UI_SoloTreasure_HardMode",
+    DungeonId = 42802,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_3,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_4,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42803] = {
+    DifficultyDesc = "UI_SoloTreasure_NormalMode",
+    DungeonId = 42803,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_5,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_6,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42804] = {
+    DifficultyDesc = "UI_SoloTreasure_HardMode",
+    DungeonId = 42804,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_7,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_8,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42805] = {
+    DifficultyDesc = "UI_SoloTreasure_HardMode",
+    DungeonId = 42805,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_9,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_10,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42806] = {
+    DifficultyDesc = "UI_SoloTreasure_NormalMode",
+    DungeonId = 42806,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_11,
+    GameTotalTime = 600,
+    RainyRandomId = T.RT_12,
+    TurnRainyTime = 420,
+    WarningTime = 60
+  },
+  [42807] = {
+    DifficultyDesc = "UI_SoloTreasure_HardMode",
+    DungeonId = 42807,
+    EvacuationTime = 10,
+    GamePlayId = T.RT_13,
     GameTotalTime = 600,
     RainyRandomId = T.RT_10,
     TurnRainyTime = 420,

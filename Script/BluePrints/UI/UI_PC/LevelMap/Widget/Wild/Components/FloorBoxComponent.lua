@@ -1,14 +1,15 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 
 function Component:InitComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitFloorBox)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitFloorBox)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
 
 function Component:InitDungeonComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitFloorBox)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitFloorBox)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end

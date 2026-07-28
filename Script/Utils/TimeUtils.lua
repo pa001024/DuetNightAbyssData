@@ -12,6 +12,12 @@ TimeUtils.BeijingTimeZone = 8
 local now = os.time()
 TimeUtils.CurrentTimeZone = os.difftime(now, os.time(os.date("!*t", now))) / 3600
 
+function TimeUtils.IsWeekend(now)
+  now = now or TimeUtils.NowTime()
+  local obj = TimeUtils.TimestampToDataObj(now)
+  return 1 == obj.wday or 7 == obj.wday
+end
+
 function TimeUtils.NowTime()
   if GWorld:GetAvatar() and TimeUtils.StandardTimestamp > 0 then
     return TimeUtils.StandardTimestamp + TimeUtils.GetStandardOffset()
@@ -73,7 +79,6 @@ function TimeUtils.SetTimeOffset(offset)
 end
 
 function TimeUtils.SetServerTimeZone(TimeZone)
-  DebugPrint("CZC,SetServerTimeZone", TimeZone)
   TimeUtils.ServerTimeZone = TimeZone
 end
 

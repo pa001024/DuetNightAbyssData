@@ -1,6 +1,7 @@
 local EMCache = require("EMCache.EMCache")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local OnlineActionModel = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionModel")
 local PlayerCommonInterface = {}
 
 function PlayerCommonInterface:PlayerCharacterInitialize()
@@ -178,7 +179,18 @@ function PlayerCommonInterface:SetArmoryIdleTag(bHideUntilLoop)
     return
   end
   self:ShouldEnableHandIk()
-  self.PlayerAnimInstance:SetArmoryIdleTag(bHideUntilLoop)
+  local TargetIdleTag
+  if self.IsEnterArmory then
+    if Const.ArmoryIdleTags[self.IsEnterArmory] then
+      TargetIdleTag = Const.ArmoryIdleTags[self.IsEnterArmory]
+    elseif Const.ArmoryWeaponIdleTags[self.IsEnterArmory] then
+      local WeaponTag = Const.ArmoryWeaponIdleTag2WeaponType[self.IsEnterArmory]
+      TargetIdleTag = self.IsEnterArmory .. "_" .. self:GetUsingWeaponType(WeaponTag)
+    else
+      TargetIdleTag = self:GetUsingWeaponType(self.IsEnterArmory)
+    end
+  end
+  self.PlayerAnimInstance:SetArmoryIdleTag(bHideUntilLoop, TargetIdleTag)
 end
 
 function PlayerCommonInterface:CancelSkill(JumpStage, bStillHoldFire)
@@ -451,6 +463,159 @@ function PlayerCommonInterface:RefreshRegionNameInfo(UId, ObjId)
     Style = nil
   end
   self:EnableHeadWidget("Name", true, Name, Style, Pos)
+  self:RefreshAutoOnlineActionTagByRegionState(ObjId)
+end
+
+function PlayerCommonInterface:GetRegionOnlineCharObjId()
+  if self.RegionInterComp and self.RegionInterComp.CharObjId then
+    return self.RegionInterComp.CharObjId
+  end
+  if self.RegionInterAddFriendComp and self.RegionInterAddFriendComp.CharObjId then
+    return self.RegionInterAddFriendComp.CharObjId
+  end
+  if self.RegionInterInviteTeamComp and self.RegionInterInviteTeamComp.CharObjId then
+    return self.RegionInterInviteTeamComp.CharObjId
+  end
+  if self.RegionInterPersonInfoComp and self.RegionInterPersonInfoComp.CharObjId then
+    return self.RegionInterPersonInfoComp.CharObjId
+  end
+  return nil
+end
+
+function PlayerCommonInterface:GetRegionNameWidget()
+  local HeadWidgetComponent = self:GetHeadWidgetComponent()
+  local TargetObjId = self:GetRegionOnlineCharObjId()
+  if not HeadWidgetComponent and TargetObjId then
+    local RegionSyncSubsys = UE4.URegionSyncSubsystem.GetInstance(GWorld.GameInstance)
+    if RegionSyncSubsys then
+      HeadWidgetComponent = RegionSyncSubsys:GetPlayerHeadWidgetComp(CommonUtils.ObjId2Str(TargetObjId))
+      DebugPrint("GetRegionNameWidget fallback RegionSyncSubsys", self, self and self.Eid, TargetObjId, HeadWidgetComponent)
+    end
+  end
+  if not HeadWidgetComponent then
+    DebugPrint("GetRegionNameWidget no head widget comp", self, self and self.Eid, TargetObjId)
+    return nil
+  end
+  local UniformWidget = HeadWidgetComponent:GetWidget()
+  if not UniformWidget then
+    DebugPrint("GetRegionNameWidget no uniform widget", self, self and self.Eid, TargetObjId, HeadWidgetComponent)
+    return nil
+  end
+  return UniformWidget.Npc_Name_PC
+end
+
+function PlayerCommonInterface:CanRefreshRegionAutoOnlineActionTag()
+  return self:IsMainPlayer() or self.FromOtherWorld == true
+end
+
+function PlayerCommonInterface:ShouldHideAutoOnlineActionTagByResourceId(ResourceId)
+  if not ResourceId or 0 == ResourceId then
+    return false
+  end
+  local ResourceInfo = DataMgr.Resource and DataMgr.Resource[ResourceId]
+  if not ResourceInfo then
+    DebugPrint("AutoTag resource missing", self, ResourceId)
+    return false
+  end
+  local bHide = 1 == ResourceInfo.InteractPlayerNum
+  DebugPrint("AutoTag resource interact count", self, ResourceId, ResourceInfo.InteractPlayerNum, bHide)
+  return bHide
+end
+
+function PlayerCommonInterface:GetAutoOnlineActionTagResourceId(RoleInfo, RegionOnlineItem)
+  if not RegionOnlineItem then
+    local UseTargetParam = RoleInfo and RoleInfo.UseTargetParam or nil
+    local ResourceId = UseTargetParam and UseTargetParam.ResourceId or nil
+    if ResourceId and 0 ~= ResourceId then
+      return ResourceId
+    end
+    return nil
+  end
+  for UniqueId, ItemData in pairs(RegionOnlineItem) do
+    local ResourceId = ItemData and ItemData.ResourceId or nil
+    if ResourceId and 0 ~= ResourceId then
+      return ResourceId
+    end
+    if UniqueId and 0 ~= UniqueId then
+      ResourceId = OnlineActionModel:GetResourceIdByUniqueId(UniqueId)
+      if ResourceId and 0 ~= ResourceId then
+        return ResourceId
+      end
+    end
+  end
+  local UseTargetParam = RoleInfo and RoleInfo.UseTargetParam or nil
+  local ResourceId = UseTargetParam and UseTargetParam.ResourceId or nil
+  if ResourceId and 0 ~= ResourceId then
+    return ResourceId
+  end
+  return nil
+end
+
+function PlayerCommonInterface:ShouldShowAutoOnlineActionTagByRegionState(ObjId)
+  if not self:CanRefreshRegionAutoOnlineActionTag() then
+    DebugPrint("ShouldShow false neither main nor other world", self, self and self.Eid, self and self.FromOtherWorld)
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.IsInRegionOnline then
+    DebugPrint("ShouldShow false not in region online", self, Avatar, Avatar and Avatar.IsInRegionOnline)
+    return false
+  end
+  local TargetObjId = ObjId or self:GetRegionOnlineCharObjId()
+  if not TargetObjId then
+    DebugPrint("ShouldShow false no target objid", self, ObjId)
+    return false
+  end
+  if TargetObjId == Avatar.Eid then
+    if Avatar.AutoAgreeInvite ~= true then
+      DebugPrint("ShouldShow self false auto agree off", self, TargetObjId, Avatar.AutoAgreeInvite)
+      return false
+    end
+    local ActionUniqueId = OnlineActionModel:GetActionUniqueId()
+    local HasOwnerMechanism = nil ~= ActionUniqueId and 0 ~= ActionUniqueId
+    local ResourceId = HasOwnerMechanism and OnlineActionModel:GetResourceIdByUniqueId(ActionUniqueId) or nil
+    if HasOwnerMechanism and self:ShouldHideAutoOnlineActionTagByResourceId(ResourceId) then
+      DebugPrint("ShouldShow self false single interact resource", self, TargetObjId, ActionUniqueId, ResourceId)
+      return false
+    end
+    DebugPrint("ShouldShow self final", self, TargetObjId, ActionUniqueId, ResourceId, HasOwnerMechanism)
+    return HasOwnerMechanism
+  end
+  local RegionAvatars = Avatar.RegionAvatars or {}
+  local AvatarData = RegionAvatars[TargetObjId]
+  if not AvatarData or AvatarData.AutoAgreeInvite ~= true then
+    DebugPrint("ShouldShow false auto agree off or no avatar data", self, TargetObjId, AvatarData and AvatarData.AutoAgreeInvite)
+    return false
+  end
+  local RoleInfo = Avatar.GetRoleInfo and Avatar:GetRoleInfo(TargetObjId) or nil
+  local CurrentState = RoleInfo and RoleInfo.CurrentState or nil
+  local RegionOnlineItem = AvatarData.RegionOnlineItem
+  local ResourceId = self:GetAutoOnlineActionTagResourceId(RoleInfo, RegionOnlineItem)
+  local HasOwnerMechanism = RegionOnlineItem and nil ~= next(RegionOnlineItem)
+  local IsUsingWheel = CurrentState == CommonConst.OnlineState.UseWheel
+  local HasGestureResource = nil ~= ResourceId and 0 ~= ResourceId
+  if HasOwnerMechanism and self:ShouldHideAutoOnlineActionTagByResourceId(ResourceId) then
+    DebugPrint("ShouldShow false single interact resource", self, TargetObjId, CurrentState, ResourceId)
+    return false
+  end
+  local bShow = HasOwnerMechanism and (IsUsingWheel or HasGestureResource)
+  DebugPrint("ShouldShow final", self, TargetObjId, HasOwnerMechanism, CurrentState, ResourceId, bShow)
+  return bShow
+end
+
+function PlayerCommonInterface:RefreshAutoOnlineActionTagByRegionState(ObjId)
+  if not self:CanRefreshRegionAutoOnlineActionTag() then
+    DebugPrint("Refresh skip neither main nor other world", self, self and self.Eid, self and self.FromOtherWorld)
+    return
+  end
+  local NameWidget = self:GetRegionNameWidget()
+  if not NameWidget then
+    DebugPrint("Refresh skip no name widget", self, self and self.Eid, ObjId)
+    return
+  end
+  local bShow = self:ShouldShowAutoOnlineActionTagByRegionState(ObjId)
+  DebugPrint("Refresh result", self, self and self.Eid, ObjId, bShow)
+  NameWidget:RefreshAutoOnlineActionTagVisible(bShow)
 end
 
 function PlayerCommonInterface:RefreshTitleInfo(ObjId)

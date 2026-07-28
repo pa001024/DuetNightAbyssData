@@ -45,8 +45,12 @@ function M:PlayAllInAnimation()
   self.Reward_2nd:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Reward_3rd:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Reward_1st.Main:SetRenderOpacity(1)
-  self:InitSelectedReward(self.Reward_2nd)
-  self:InitSelectedReward(self.Reward_3rd)
+  if 2 ~= self.CurrentSelectIndex then
+    self:InitSelectedReward(self.Reward_2nd)
+  end
+  if 3 ~= self.CurrentSelectIndex then
+    self:InitSelectedReward(self.Reward_3rd)
+  end
   self.WidgetSwitcher_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   if 1 == self.MaxRarity then
     self:PlayAnimation(self.Ready_Gold)
@@ -279,29 +283,60 @@ function M:InitCommonItem(Index)
   if IsValid(Img) then
     Parent.Bg:SetBrushResourceObject(Img)
   end
-  local HoldNum = 0
-  local PlayerAvatar = GWorld:GetAvatar()
-  if nil ~= PlayerAvatar then
-    local StuffServerData
-    if CurRewardInfo.RewardType == "Weapon" then
-      StuffServerData = PlayerAvatar.Weapons[CurRewardInfo.RewardID]
-    elseif CurRewardInfo.RewardType == "Mod" then
-      StuffServerData = PlayerAvatar.Mods[CurRewardInfo.RewardID]
-    elseif CurRewardInfo.RewardType == "CharAccessory" then
-      StuffServerData = PlayerAvatar.CharAccessorys[CurRewardInfo.RewardID]
-    elseif CurRewardInfo.RewardType == "Pet" then
-      StuffServerData = PlayerAvatar.Pets[CurRewardInfo.RewardID]
-    elseif CurRewardInfo.RewardType == "Draft" then
-      StuffServerData = PlayerAvatar.Drafts[CurRewardInfo.RewardID]
-    elseif CurRewardInfo.RewardType == "Resource" then
-      StuffServerData = PlayerAvatar.Resources[CurRewardInfo.RewardID]
-    end
-    if StuffServerData then
-      HoldNum = StuffServerData.Count
-    end
-  end
+  local HoldNum = self:GetRewardHoldCount(CurRewardInfo)
   DebugPrint("InitCommonItem HOLD NUMBER", HoldNum)
   Parent.Num_Hold:SetText(HoldNum)
+end
+
+function M:GetRewardHoldCount(RewardInfo)
+  local HoldNum = 0
+  local PlayerAvatar = GWorld:GetAvatar()
+  if not PlayerAvatar or not RewardInfo then
+    return HoldNum
+  end
+  local StuffServerData
+  if RewardInfo.RewardType == "Weapon" then
+    StuffServerData = PlayerAvatar.Weapons[RewardInfo.RewardID]
+  elseif RewardInfo.RewardType == "Mod" then
+    StuffServerData = PlayerAvatar.Mods[RewardInfo.RewardID]
+  elseif RewardInfo.RewardType == "CharAccessory" then
+    StuffServerData = PlayerAvatar.CharAccessorys[RewardInfo.RewardID]
+  elseif RewardInfo.RewardType == "Pet" then
+    StuffServerData = PlayerAvatar.Pets[RewardInfo.RewardID]
+  elseif RewardInfo.RewardType == "Draft" then
+    StuffServerData = PlayerAvatar.Drafts[RewardInfo.RewardID]
+  elseif RewardInfo.RewardType == "Resource" then
+    StuffServerData = PlayerAvatar.Resources[RewardInfo.RewardID]
+  end
+  if StuffServerData then
+    HoldNum = StuffServerData.Count
+  end
+  return HoldNum
+end
+
+function M:GetMinHoldRewardIndex()
+  if not self.RewardList or 0 == #self.RewardList then
+    return 1
+  end
+  local MinIndex = 1
+  local MinHold = self:GetRewardHoldCount(self.RewardList[1])
+  for Index = 2, #self.RewardList do
+    local HoldNum = self:GetRewardHoldCount(self.RewardList[Index])
+    if MinHold > HoldNum then
+      MinHold = HoldNum
+      MinIndex = Index
+    end
+  end
+  return MinIndex
+end
+
+function M:GetWeaponWalnutAutoRewardIndex()
+  for Index, RewardInfo in ipairs(self.RewardList) do
+    if 1 == RewardInfo.WalnutRewardRarity then
+      return Index
+    end
+  end
+  return self:GetMinHoldRewardIndex()
 end
 
 function M:InitTeamHeads()
@@ -467,6 +502,16 @@ function M:InitSelectedReward(RewardSelectWidget)
   RewardSelectWidget:PlayAnimation(RewardSelectWidget.UnHover)
   RewardSelectWidget:PlayAnimation(RewardSelectWidget.Normal)
   RewardSelectWidget.IsSelected = false
+end
+
+function M:InitAutoSelectedReward(Index)
+  if Index == self.CurrentSelectIndex then
+    return
+  end
+  local RewardSelectWidget = self.RewardSelectWidgetList[Index]
+  RewardSelectWidget:PlayAnimation(RewardSelectWidget.Normal)
+  RewardSelectWidget:PlayAnimation(RewardSelectWidget.Click)
+  self:UpdateSelectedReward(Index)
 end
 
 function M:StartCountDown()
@@ -758,6 +803,9 @@ function M:CheckIsAutoMode()
   local IsAutoMode = Avatar.Dungeons[DungeonId].AutoProgress
   local Progress = GameState.DungeonProgress or 0
   if IsAutoMode and Progress <= IsAutoMode + 1 and 0 ~= IsAutoMode then
+    if self.RewardList and #self.RewardList > 0 and self:IsWeaponWalnut(self.WalnutId) then
+      self:InitAutoSelectedReward(self:GetWeaponWalnutAutoRewardIndex())
+    end
     local AutoCheckTime
     if DataMgr.GlobalConstant.AutoRoundsCheckTime then
       AutoCheckTime = DataMgr.GlobalConstant.AutoRoundsCheckTime.ConstantValue
@@ -817,6 +865,14 @@ function M:ItemMenuAnchorChanged(bIsOpen, Content)
       end
     end)
   end
+end
+
+function M:IsWeaponWalnut(WalnutId)
+  if not WalnutId or WalnutId <= 0 then
+    return false
+  end
+  local WalnutData = DataMgr.Walnut[WalnutId]
+  return WalnutData and 2 == WalnutData.WalnutType
 end
 
 return M

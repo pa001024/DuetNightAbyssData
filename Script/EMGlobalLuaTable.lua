@@ -1,5 +1,6 @@
 local MiscUtils = require("Utils.MiscUtils")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local EMGlobalLuaTable = {}
 
 function EMGlobalLuaTable.TriggerBattleEvent(Battle, EventName, ...)
@@ -92,19 +93,19 @@ function EMGlobalLuaTable.CustomNpcFlexibShow(FlexibleShowHideTags)
         CheckFail = 3
       }
       if TalkState == TalkStateType.Compelete then
-        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
           return TempFlexibleMap[i].IsHide
         end
       elseif TalkState == TalkStateType.UnCompelete then
-        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
           return TempFlexibleMap[i].IsHide
         end
       elseif TalkState == TalkStateType.CheckSuccess then
-        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
           return TempFlexibleMap[i].IsHide
         end
       else
-        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
           return TempFlexibleMap[i].IsHide
         else
         end

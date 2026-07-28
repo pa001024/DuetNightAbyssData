@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -105,18 +105,6 @@ return {
             startQuest = "1746772836384569997",
             startPort = "Out",
             endQuest = "17467730428431132067",
-            endPort = "In"
-          },
-          {
-            startQuest = "17467730428431132067",
-            startPort = "Out",
-            endQuest = "17467731367491133477",
-            endPort = "In"
-          },
-          {
-            startQuest = "17467731367491133477",
-            startPort = "Out",
-            endQuest = "17467734036501135170",
             endPort = "In"
           },
           {
@@ -192,12 +180,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1746709236739171",
-            startPort = "QuestStart",
-            endQuest = "175664327337529839333",
-            endPort = "Input"
-          },
-          {
             startQuest = "17467740230121139889",
             startPort = "Out",
             endQuest = "17467741923871141652",
@@ -220,6 +202,18 @@ return {
             startPort = "Out",
             endQuest = "17467737808881138268",
             endPort = "In"
+          },
+          {
+            startQuest = "17467730428431132067",
+            startPort = "Out",
+            endQuest = "17467734036501135170",
+            endPort = "In"
+          },
+          {
+            startQuest = "1746709236739171",
+            startPort = "QuestStart",
+            endQuest = "175664327337529839333",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -460,7 +454,7 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "ArmoryMain.Tab_Arm.EMScrollBox_TabItem:2",
+              HighLightUIPath = "AppearanceMain.Com_Tab.EMScrollBox_TabItem:2",
               UICompName = "Btn",
               GamePadWidgetName = "",
               IsAutoClick = false,
@@ -481,7 +475,7 @@ return {
             key = "17467731367491133477",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 2176.808441558441, y = 522.2721445221449},
+            pos = {x = 2182.808441558441, y = 452.2721445221449},
             propsData = {
               ShowEnable = true,
               MessageId = 302709,
@@ -491,8 +485,8 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "ArmoryMain.EMListView_SubTab:3",
-              UICompName = "TextBlock_Name",
+              HighLightUIPath = "AppearanceMain.Panel_Part:2.List_Appearance.Weapon_Skin",
+              UICompName = "Button_Area",
               GamePadWidgetName = "",
               IsAutoClick = false,
               IsAutoClickByGamepad = false,
@@ -522,7 +516,7 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "ArmoryMain.Panel_SubUI:3.Weapon_Skin",
+              HighLightUIPath = "AppearanceMain.Panel_Part:2.List_Appearance.Weapon_Skin",
               UICompName = "Button_Area",
               GamePadWidgetName = "",
               IsAutoClick = false,
@@ -535,7 +529,7 @@ return {
               UICompSizeOffset = {X = 0, Y = 0},
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
+              MessageLoc = "Right",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -574,7 +568,7 @@ return {
             key = "17467737808881138268",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 1496.308441558441, y = 753.5221445221447},
+            pos = {x = 1496.308441558441, y = 757.5221445221447},
             propsData = {
               ShowEnable = true,
               MessageId = 302712,

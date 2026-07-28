@@ -42,12 +42,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -118,51 +118,33 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1753864491234650",
-            startPort = "Out",
-            endQuest = "175731931381710012059",
-            endPort = "In"
-          },
-          {
             startQuest = "175731931381710012059",
             startPort = "Out",
             endQuest = "175731966715913139982",
             endPort = "In"
           },
           {
+            startQuest = "17687368985552054",
+            startPort = "Out",
+            endQuest = "175731931381710012059",
+            endPort = "In"
+          },
+          {
             startQuest = "1753864491234649",
             startPort = "Out",
-            endQuest = "17687368658181752",
+            endQuest = "17687368985552054",
             endPort = "In"
           },
           {
             startQuest = "175664388818432380327",
             startPort = "Out",
-            endQuest = "17687368658181752",
+            endQuest = "17687368985552054",
             endPort = "In"
           },
           {
             startQuest = "1753864491234647",
             startPort = "Out",
-            endQuest = "17687368658181752",
-            endPort = "In"
-          },
-          {
-            startQuest = "17687368658181752",
-            startPort = "Fail",
-            endQuest = "1753864491234650",
-            endPort = "In"
-          },
-          {
-            startQuest = "17687368658181752",
-            startPort = "Success",
             endQuest = "17687368985552054",
-            endPort = "In"
-          },
-          {
-            startQuest = "17687368985552054",
-            startPort = "Out",
-            endQuest = "175731931381710012059",
             endPort = "In"
           }
         },
@@ -270,37 +252,6 @@ return {
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
               MessageLoc = "DownRight",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
-          ["1753864491234650"] = {
-            key = "1753864491234650",
-            type = "ShowGuideButtonNode",
-            name = "Button显示/隐藏信息",
-            pos = {x = 2324.73663573436, y = 328.11814238248144},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 302906,
-              MessageNote = "点击委托密函",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = true,
-              IsShowCursor = true,
-              HighLightUIPath = "MenuWorld.Panel_Function:14",
-              UICompName = "Button_Area",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              IsFindByMainUI = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = true,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Up",
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
@@ -591,13 +542,6 @@ return {
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
-          ["17687368658181752"] = {
-            key = "17687368658181752",
-            type = "ConditionNode",
-            name = "条件节点",
-            pos = {x = 2229.9226519218923, y = 60.24243465782036},
-            propsData = {ConditionId = 4410}
-          },
           ["17687368985552054"] = {
             key = "17687368985552054",
             type = "ShowGuideButtonNode",
@@ -612,12 +556,12 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "MenuWorld.Panel_Function:15",
+              HighLightUIPath = "MenuWorld.Panel_Function:23",
               UICompName = "Button_Area",
               GamePadWidgetName = "",
               IsAutoClick = false,
               IsAutoClickByGamepad = false,
-              IsFindByMainUI = false,
+              IsFindByMainUI = true,
               UIShape = "Square",
               IsResetPlayer = false,
               IsForbidInAnim = true,

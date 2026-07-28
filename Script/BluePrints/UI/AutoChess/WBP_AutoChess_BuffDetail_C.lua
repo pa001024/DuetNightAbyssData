@@ -6,39 +6,27 @@ local View = Class({
 })
 local Model = require("BluePrints.UI.AutoChess.AutoChessDataModel")
 
-function View:OnLoaded(MissionId)
+function View:OnLoaded(MissionId, ActiveBuffIds)
   self:BindBtnEvent()
-  self:Init(MissionId)
+  self:Init(MissionId, ActiveBuffIds)
 end
 
 function View:SequenceEvent_PlayListAnim()
-  if self.MissionData and #self.MissionData > 0 then
-    for index = 1, #self.MissionData do
-      local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-      local Row = DataMgr.AutoChessBuff[self.MissionData[index]]
-      if Row then
-        Obj.BuffName = GText(Row.BuffName)
-        Obj.BuffDes = GText(Row.BuffDes)
-        Obj.BuffIcon = Row.BuffIcon
-        self.List_Buff:AddItem(Obj)
-      else
-        DebugPrint(ErrorTag, "传入的AutoChessBuff主键非法")
-      end
-    end
-  else
-    DebugPrint(ErrorTag, "MissionData 无效或长度小于等于 0，无法执行循环。")
+  local DisplayBuffs = Model:GetDisplayBuffs(self.MissionId, self.ActiveBuffIds)
+  for _, BuffInfo in ipairs(DisplayBuffs) do
+    local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+    Obj.BuffName = BuffInfo.BuffName
+    Obj.BuffDes = BuffInfo.BuffDesc
+    Obj.BuffIcon = BuffInfo.BuffIcon
+    self.List_Buff:AddItem(Obj)
   end
 end
 
-function View:Init(MissionId)
+function View:Init(MissionId, ActiveBuffIds)
   self.List_Buff:ClearListItems()
+  self.MissionId = MissionId
+  self.ActiveBuffIds = ActiveBuffIds
   self:OnUpdateUIStyleByInputTypeChange()
-  local MissionData = Model:GetBuffsByMissionId(MissionId)
-  if MissionData then
-    self.MissionData = MissionData
-  else
-    DebugPrint("-----------------------MissionData nil--------------------------")
-  end
   self.Text_Title:SetText(GText("UI_AutoChess_CurrentBuff"))
   self.Text_Tip:SetText(GText("UI_TRAIN_CLOSE"))
   if self.Key_Back then

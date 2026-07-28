@@ -55,6 +55,20 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   return M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
 end
 
+function M:BP_GetDesiredFocusTarget()
+  if self.BagSellState then
+    local SellPage = UIManager(self):GetUIObj(WalnutBagCommon.WalnutSelectUIName)
+    if nil ~= SellPage and SellPage.bIsOpenList and SellPage.List_Item then
+      DebugPrint("ayff test BP_GetDesiredFocusTarget -> SellPage.List_Item")
+      return SellPage.List_Item
+    end
+  end
+  if self.List_Item and self.List_Item:GetNumItems() > 0 or self.BagSellState then
+    return self.List_Item
+  end
+  return self
+end
+
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
   if 1 == StackAction and self.GameInputModeSubsystem then
@@ -321,6 +335,7 @@ function M:RefreshBottomKeyInfo(FocusTypeName)
     self.Tab_WalnutBag:UpdateBottomKeyInfo(self.BottomKeyInfoList)
   end
   self.CurFocusWidget = FocusTypeName
+  self:UpdateUIStyleInPlatform(UIUtils.IsGamepadInput())
 end
 
 function M:WalnutTabItemClick(TabWidget)
@@ -400,6 +415,23 @@ function M:UpdateFocusInGamepad()
   if self.BagSellState then
     local SellPageMainUI = UIManager(self):GetUI("WalnutSelectToList")
     if nil ~= SellPageMainUI then
+      local CommonNumInputUI = UIManager(self):GetUIObj("CommonNumInput")
+      if CommonNumInputUI then
+        if type(CommonNumInputUI.SetFocus_Lua) == "function" then
+          CommonNumInputUI:SetFocus_Lua()
+        else
+          CommonNumInputUI:SetFocus()
+        end
+        return
+      end
+      if SellPageMainUI.Com_NumInput and (SellPageMainUI.CurFocusWidget == "NumInputEdit" or SellPageMainUI.Com_NumInput.IsInNumInputState) then
+        if SellPageMainUI.Com_NumInput.Text_Input then
+          SellPageMainUI.Com_NumInput.Text_Input:SetFocus()
+        else
+          SellPageMainUI.Com_NumInput:SetFocus()
+        end
+        return
+      end
       if SellPageMainUI.bIsOpenList then
         SellPageMainUI.List_Item:SetFocus()
       else

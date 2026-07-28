@@ -15,6 +15,7 @@ function IronSurvivalGame:BeginPlay()
   self.ISStrongLoopSpawnIds = CommonUtils.DeepCopy(IronSurvivalInfo.StrongLoopSpawnId)
   self.ISStrongKillCounts = IronSurvivalInfo.StrongKillCount
   self.ISLevelThresholds = IronSurvivalInfo.LevelThreshold
+  self.MiniGameCreatorId = IronSurvivalInfo.MiniGameCreatorId
   self.CurKillCount = 0
   self.CurKillTargetNum = self.ISStrongKillCounts[1] or 1
   self.CurStrongSpawnIndex = 1
@@ -23,6 +24,12 @@ end
 function IronSurvivalGame:OnNotifyServerDungeonEvent_OnInit()
   self:Log("IronSurvival OnInit")
   self:InnerSetGameModeLevel(self.GameModeLevel)
+  if self.IronTicketId then
+    self:NotifyGameModeDungeonEvent("SetIronTicketId", self.IronTicketId)
+  end
+  self:ActiveStaticCreator({
+    self.MiniGameCreatorId
+  })
 end
 
 function IronSurvivalGame:InitExtra(Info)
@@ -38,6 +45,9 @@ function IronSurvivalGame:InitExtra(Info)
   self.TicketLeaderEid = Info.PlayerInfo.TicketLeaderEid
   print("TicketLeaderEid", self.TicketLeaderEid)
   self:NotifyGameModeDungeonEvent("SetTicketLeaderEid", self.TicketLeaderEid)
+  self.IronTicketId = Info.PlayerInfo.TicketConfId
+  print("InitExtra IronTicketId", self.IronTicketId)
+  self:NotifyGameModeDungeonEvent("SetIronTicketId", self.IronTicketId)
 end
 
 function IronSurvivalGame:OnNotifyServerDungeonEvent_SetGameModeLevel(GameModeLevel)
@@ -46,6 +56,14 @@ function IronSurvivalGame:OnNotifyServerDungeonEvent_SetGameModeLevel(GameModeLe
   end
   self.GameModeLevel = GameModeLevel
   self:Log("ljl@ IronSurvival SetGameModeLevel", GameModeLevel)
+end
+
+function IronSurvivalGame:OnNotifyServerDungeonEvent_SetIronTicketId(IronTicketId)
+  if nil == IronTicketId then
+    return
+  end
+  self.IronTicketId = IronTicketId
+  self:Log("ljl@ IronSurvival SetIronTicketId", IronTicketId)
 end
 
 function IronSurvivalGame:CustomFinishInfo()
@@ -179,6 +197,11 @@ function IronSurvivalGame:DungeonMonsterDead(MonsterInfo)
       self.CurStrongSpawnIndex = self.CurStrongSpawnIndex + 1
     end
   end
+end
+
+function IronSurvivalGame:FillCustomGameInfo(tbl)
+  table.insert(tbl, "GameModeLevel: " .. tostring(self.GameModeLevel) .. "\n")
+  table.insert(tbl, "RoundIndex: " .. tostring(self.RoundIndex) .. "\n")
 end
 
 DungeonClass.AssembleComponents(IronSurvivalGame)

@@ -16,6 +16,13 @@ function M:OnListItemObjectSet(Content)
     self.Text_Type:SetText(GText(self.Content.Text))
     self.Num_Now_1:SetText(self.Content.ScoreCur)
     self.Num_Max_1:SetText(self.Content.ScoreMax)
+    if self.Content.NumCur and self.Content.NumMax then
+      self.HB_Number:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      self.Number_Now:SetText(self.Content.NumCur)
+      self.Number_Max:SetText(self.Content.NumMax)
+    else
+      self.HB_Number:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 

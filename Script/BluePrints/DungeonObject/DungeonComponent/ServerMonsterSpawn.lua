@@ -3,8 +3,8 @@ ServerMonsterSpawn.__Name__ = "ServerMonsterSpawn"
 ServerMonsterSpawn.__Component__ = {}
 
 function ServerMonsterSpawn:InitMonsterSpawn(UnitSpawnId, OnlyRelation, Manager)
-  self:DebugPrint("ServerMonsterSpawn:InitMonsterSpawn UnitSpawnId " .. tostring(UnitSpawnId) .. " OnlyRelation " .. tostring(OnlyRelation))
   self.Manager = Manager
+  self:DebugPrint("ServerMonsterSpawn:InitMonsterSpawn UnitSpawnId " .. tostring(UnitSpawnId) .. " OnlyRelation " .. tostring(OnlyRelation))
   self.UnitSpawnId = UnitSpawnId
   self.OnlyRelation = OnlyRelation
   self.Data = DataMgr.MonsterSpawn[UnitSpawnId]
@@ -37,7 +37,7 @@ function ServerMonsterSpawn:OnReceiveMultiInfoRes(MultiInfoRes)
   if self.OnlyRelation then
     self.bMainDestory = true
   else
-    self.UnitSpawnTotalNum = self.Data.UnitSpawnTotalNum
+    self.UnitSpawnTotalNum = self.Data.UnitSpawnTotalNum or 0
     self.UnitSpawnAliveNum = self.UnitSpawnTotalNum
     self.UnitSpawningNum = 0
     self.MonsterSpawnInitInfo = {}
@@ -79,21 +79,45 @@ function ServerMonsterSpawn:InitMonsterSpawnInfo()
   self:TriggerCreateMonsters()
 end
 
+function ServerMonsterSpawn:UpdateMonsterSpawnTotalNum(Count)
+  if self.UnitSpawnTotalNum < 0 then
+    return
+  end
+  if self.UnitSpawnTotalNum <= 0 and Count <= 0 then
+    return
+  end
+  self.UnitSpawnTotalNum = self.UnitSpawnTotalNum + Count
+end
+
 function ServerMonsterSpawn:TriggerCreateMonsters()
+  if not self:DetectMonsterSpawnTotalNum() then
+    DebugPrint("ServerMonsterSpawn 刷怪数量已达上限，但当前规则还存留怪物在场，MonsterSpawnId:", self.UnitSpawnId)
+    return
+  end
   local DistributedInfo = self:GetCreateMonstersBaseInfo()
   local MonsterInfos = {}
   MonsterInfos.UnitSpawnId = self.UnitSpawnId
   MonsterInfos.IsRelation = false
   MonsterInfos.UnitInfos = {}
+  local ReachTotalNum = false
   for UnitId, UnitNum in pairs(DistributedInfo) do
     local UniqueIdsTable = {}
     for i = 1, UnitNum do
+      if not self:DetectMonsterSpawnTotalNum() then
+        DebugPrint("ServerMonsterSpawn 刷怪数量已达上限，无需继续分配怪物UniqueId，MonsterSpawnId:", self.UnitSpawnId)
+        ReachTotalNum = true
+        break
+      end
       local MonsterInfo = self.Manager:CreateMonster(UnitId, "MonsterSpawn", self.UnitSpawnId)
+      self:UpdateMonsterSpawnTotalNum(-1)
       table.insert(UniqueIdsTable, MonsterInfo.UniqueId)
       table.insert(self.MonsterSpawnInfo[UnitId], MonsterInfo.UniqueId)
       self:DebugPrint("HTYServerTest ServerMonsterSpawn:TriggerCreateMonsters " .. tostring(MonsterInfo.UniqueId) .. " " .. tostring(i))
     end
     MonsterInfos.UnitInfos[UnitId] = UniqueIdsTable
+    if ReachTotalNum then
+      break
+    end
   end
   self.Manager:NotifyGameModeDungeonEvent("ServerMSCreateMonsters", MonsterInfos)
 end
@@ -265,6 +289,13 @@ function ServerMonsterSpawn:DetectMonsterSpawnInfo()
   self:UpdateDetectFix(Res)
 end
 
+function ServerMonsterSpawn:DetectMonsterSpawnTotalNum()
+  if 0 ~= self.UnitSpawnTotalNum then
+    return true
+  end
+  return false
+end
+
 function ServerMonsterSpawn:DetectMonsterThreshold()
   local UnitNum = self:GetMonsterSpawnInfoTotalNum()
   local TmpThreshold = self:GetMonsterThreshold()
@@ -385,7 +416,7 @@ function ServerMonsterSpawn:ReduceMonsterSpawnInfo(MonsterInfo)
 end
 
 function ServerMonsterSpawn:UpdateMonsterSpawnAliveNum(Count)
-  if self.UnitSpawnAliveNum == nil or self.UnitSpawnAliveNum <= 0 then
+  if self.UnitSpawnAliveNum <= 0 then
     return
   end
   self.UnitSpawnAliveNum = self.UnitSpawnAliveNum + Count

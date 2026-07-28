@@ -214,6 +214,16 @@ return {
                   TalkActorType = "Npc",
                   TalkActorId = 100402,
                   TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100449,
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
@@ -270,7 +280,9 @@ return {
               TargetTime = 15,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["177797952445911226521"] = {

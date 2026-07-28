@@ -86,16 +86,77 @@ function DungeonObjectComponent:IsServerControlGameLevel()
   return self.IsServerControlGameModeLevel
 end
 
+function DungeonObjectComponent:TriggerDungeonObjectFunc_Cpp(FunName, EventObj)
+  self:TriggerDungeonObjectFunc(FunName, EventObj)
+end
+
+function DungeonObjectComponent:TriggerDungeonObjectFunc(FunName, ...)
+  if not self:CheckServerDungeonEnable() then
+    return
+  end
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
+  if not DungeonObject or not DungeonObject[FunName] then
+    DebugPrint("DungeonObjectComponent:TriggerDungeonObjectFunc DungeonObject不存在 或FunName不存在 FunName", FunName)
+    return
+  end
+  return DungeonObject[FunName](DungeonObject, ...)
+end
+
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerActiveStaticCreator(Infos)
   DebugPrint("DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerActiveStaticCreator")
   PrintTable(Infos, 10)
-  for i, Info in pairs(Infos) do
-    local RegionBaseData = {}
-    RegionBaseData.CreatorId = Info.StaticCreatorId
-    RegionBaseData.ServerUniqueId = Info.UniqueId
-    RegionBaseData.UnitId = Info.UnitId
-    RegionBaseData.ExtraRegionInfo = {}
-    self:GetRegionDataMgrSubSystem():InitSSDataFromDungeonServer(RegionBaseData)
+  if URuntimeCommonFunctionLibrary.IsWorldCompositionEnabled(self) then
+    local RegionDataMgr = self:GetRegionDataMgrSubSystem()
+    if not RegionDataMgr then
+      DebugPrint("Error OnNotifyGameModeDungeonEvent_ServerActiveStaticCreator RegionDataMgr 不存在")
+      return
+    end
+    for _, Info in pairs(Infos) do
+      local RegionBaseData = {}
+      RegionBaseData.CreatorId = Info.StaticCreatorId
+      RegionBaseData.ServerUniqueId = Info.UniqueId
+      RegionBaseData.UnitId = Info.UnitId
+      RegionBaseData.ExtraRegionInfo = {}
+      RegionDataMgr:InitSSDataFromDungeonServer(RegionBaseData)
+    end
+    return
+  end
+  local CreatorMap = TMap(0, UObject)
+  local PrivateEnable, LevelName
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
+  if DungeonObject and DungeonObject.GetPrivateEnableAndLevelName then
+    PrivateEnable, LevelName = DungeonObject:GetPrivateEnableAndLevelName()
+  end
+  DebugPrint("GetStaticCreatorMapInfo", PrivateEnable, LevelName)
+  for _, Info in pairs(Infos) do
+    local Creator = self.EMGameState:GetStaticCreatorInfo(Info.StaticCreatorId, PrivateEnable, LevelName)
+    if not Creator or not URuntimeCommonFunctionLibrary.IsStaticCreatorValid(Creator) then
+      GWorld.logger.error(string.format("ServerActiveStaticCreator 静态点不存在或已失效，已跳过 StaticCreatorId=%s UnitId=%s UniqueId=%s", tostring(Info.StaticCreatorId), tostring(Info.UnitId), tostring(Info.UniqueId)))
+    else
+      Creator.UnitId = Info.UnitId or Creator.UnitId
+      Creator:RealActiveStaticCreator({
+        ServerUniqueId = Info.UniqueId
+      })
+    end
+  end
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerInActivateStaticCreator(Infos)
+  DebugPrint("DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerInActivateStaticCreator")
+  PrintTable(Infos, 10)
+  local CreatorMap = TMap(0, UObject)
+  local PrivateEnable, LevelName
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
+  if DungeonObject and DungeonObject.GetPrivateEnableAndLevelName then
+    PrivateEnable, LevelName = DungeonObject:GetPrivateEnableAndLevelName()
+  end
+  for _, StaticCreatorId in pairs(Infos) do
+    local Creator = self.EMGameState:GetStaticCreatorInfo(StaticCreatorId, PrivateEnable, LevelName)
+    if not Creator or not URuntimeCommonFunctionLibrary.IsStaticCreatorValid(Creator) then
+      GWorld.logger.error(string.format("ServerInActivateStaticCreator 静态点不存在或已失效，已跳过 StaticCreatorId=%s", tostring(StaticCreatorId)))
+    else
+      Creator:DestoryOneStaticActor_Lua(EDeathReason.Disable, EDestroyReason.Flexible)
+    end
   end
 end
 
@@ -127,7 +188,7 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerActiveRandomC
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerMSCreateMonsters(MonsterInfos)
-  DebugPrint("OnNotifyGameModeDungeonEvent_ServerMSCreateMonsters UnitSpawnId:", MonsterInfos.UnitSpawnId, "IsRelation:", MonsterInfos.IsRelation, "OnlyRelation", MonsterInfos.OnlyRelation)
+  DebugPrint("OnNotifyGameModeDungeonEvent_ServerMSCreateMonsters UnitSpawnId:", MonsterInfos.UnitSpawnId, "IsRelation:", MonsterInfos.IsRelation, "IsGroupSpawn:", MonsterInfos.IsGroupSpawn, "IsFirstSpawn:", MonsterInfos.IsFirstSpawn, "CurrentGroupId:", MonsterInfos.CurrentGroupId)
   local MonsterSpawn = self.MonsterSpawnMap:FindRef(MonsterInfos.UnitSpawnId)
   if not MonsterSpawn then
     local UnitIdArray = TArray(0)
@@ -139,12 +200,41 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerMSCreateMonst
     DebugPrint("Error OnNotifyGameModeDungeonEvent_ServerMSCreateMonsters MonsterSpawn创建失败 UnitSpawnId： ", MonsterInfos.UnitSpawnId)
     return
   end
-  local InfoMap = self:ConvertMSInfosToMap(MonsterInfos)
-  if MonsterInfos.IsRelation then
+  if MonsterInfos.IsGroupSpawn then
+    if MonsterInfos.IsFirstSpawn then
+      local BatchArray = self:ConvertGroupBatchInfosToArray(MonsterInfos.GroupBatchInfos)
+      MonsterSpawn:TriggerFirstGroupCreateMonstersByServer(BatchArray)
+    else
+      local InfoMap = self:ConvertMSInfosToMap(MonsterInfos)
+      MonsterSpawn:TriggerGroupCreateMonstersByServer(InfoMap, MonsterInfos.CurrentGroupId or -1)
+    end
+  elseif MonsterInfos.IsRelation then
+    local InfoMap = self:ConvertMSInfosToMap(MonsterInfos)
     MonsterSpawn:RelationCreateMonstersByServer(InfoMap)
   else
+    local InfoMap = self:ConvertMSInfosToMap(MonsterInfos)
     MonsterSpawn:TriggerCreateMonstersByServer(InfoMap)
   end
+end
+
+function DungeonObjectComponent:ConvertGroupBatchInfosToArray(GroupBatchInfos)
+  local BatchArray = TArray(FServerGroupMonsterBatchNotify)
+  if not GroupBatchInfos then
+    return BatchArray
+  end
+  for _, Batch in ipairs(GroupBatchInfos) do
+    local NotifyBatch = FServerGroupMonsterBatchNotify()
+    NotifyBatch.GroupId = Batch.GroupId
+    for UnitId, UniqueIds in pairs(Batch.UnitInfos or {}) do
+      local ServerMonsterInfo = FServerMonsterInfo()
+      for _, Id in pairs(UniqueIds) do
+        ServerMonsterInfo.UniqueIds:Add(Id)
+      end
+      NotifyBatch.MonsterInfos:Add(UnitId, ServerMonsterInfo)
+    end
+    BatchArray:Add(NotifyBatch)
+  end
+  return BatchArray
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerTriggerCreateMonsterSpawn(UnitSpawnIdTable, OnlyRelation)
@@ -278,21 +368,15 @@ function DungeonObjectComponent:NotifyServerOnInit()
   self:NotifyServerDungeonEvent("OnInit", {})
 end
 
-function DungeonObjectComponent:ServerTriggerActiveStaticCreator(StaticCreatorIds)
-  if not UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
-    return
-  end
-  if not self:CheckServerDungeonEnable() then
-    return
-  end
-  local Ids = StaticCreatorIds:ToTable()
-  self:NotifyServerDungeonEvent("ServerTriggerActiveStaticCreator", Ids)
-end
-
 function DungeonObjectComponent:NotifyServerMechanismStateChange(EventInfo)
   print(_G.LogTag, "LXZ DungeonLogic NotifyServerMechanismStateChange")
   PrintTable(EventInfo, 10)
   self:NotifyServerDungeonEvent("MechanismStateChange", EventInfo)
+end
+
+function DungeonObjectComponent:AddOccupationValue(UniqueId, AddValue)
+  print(_G.LogTag, "DungeonObjectComponent:AddOccupationValue", UniqueId, AddValue)
+  self:NotifyServerDungeonEvent("AddOccupationValue", UniqueId, AddValue)
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_MechanismStateChange(EventInfo)
@@ -303,6 +387,21 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_MechanismStateChang
   if MechanismObj then
     MechanismObj:DungeonServerChangeState(EventInfo)
   end
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerDestroyDropMechanism(DropMechanismInfo)
+  print("DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerDestroyDropMechanism")
+  PrintTable(DropMechanismInfo, 10)
+  if not DropMechanismInfo or not DropMechanismInfo.UniqueId then
+    print("DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerDestroyDropMechanism Invalid DropMechanismInfo")
+    return
+  end
+  local SceneItem = self.EMGameState.CombatItemUniqueMap:Find(DropMechanismInfo.UniqueId)
+  if not SceneItem then
+    print("DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerDestroyDropMechanism 找不到对应机关")
+    return
+  end
+  SceneItem:EMActorDestroy(EDestroyReason.ServerDestroy)
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerCreateDropMechanism(DropMechanismInfo)
@@ -337,6 +436,35 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerCreateDropMec
   print(string.format("DungeonObjectComponent: 创建机关Actor - UnitId(%d), UniqueId(%s), Location(%s, %s, %s)", DropMechanismInfo.UnitId, tostring(DropMechanismInfo.UniqueId), tostring(SpawnLoc.X), tostring(SpawnLoc.Y), tostring(SpawnLoc.Z)))
   GameState.EventMgr:CreateUnitNew(Context, false)
   print(string.format("DungeonObjectComponent: 机关创建完成 - UniqueId(%s)", tostring(DropMechanismInfo.UniqueId)))
+end
+
+function DungeonObjectComponent:NotifyServerMechanismDead(EventInfo)
+  DebugPrint("zwk OnNotifyGameModeDungeonEvent_MechanismDead")
+  PrintTable(EventInfo, 10)
+  self:NotifyServerDungeonEvent("MechanismDead", EventInfo)
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_MechanismDead(EventInfo)
+  DebugPrint("zwk OnNotifyGameModeDungeonEvent_MechanismDead")
+  PrintTable(EventInfo, 10)
+end
+
+function DungeonObjectComponent:NotifyServerPlayerDead(AvatarEid)
+  DebugPrint("cjh OnNotifyGameModeDungeonEvent_PlayerDead AvatarEid:", AvatarEid)
+  self:NotifyServerDungeonEvent("PlayerDead", AvatarEid)
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_PlayerDead(AvatarEid)
+  DebugPrint("cjh OnNotifyGameModeDungeonEvent_PlayerDead AvatarEid:", AvatarEid)
+end
+
+function DungeonObjectComponent:NotifyServerPlayerReborn(AvatarEid)
+  DebugPrint("cjh OnNotifyGameModeDungeonEvent_PlayerReborn AvatarEid:", AvatarEid)
+  self:NotifyServerDungeonEvent("PlayerReborn", AvatarEid)
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_PlayerReborn(AvatarEid)
+  DebugPrint("cjh OnNotifyGameModeDungeonEvent_PlayerReborn AvatarEid:", AvatarEid)
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_DungeonComponentFun(EventName, ...)
@@ -422,11 +550,6 @@ function DungeonObjectComponent:TriggerTableDrivenServerEvent(EventID)
   end
   DebugPrint("BP_EMGameMode_C:TriggerTableDrivenServerEvent   EventID:", EventID)
   self:NotifyServerDungeonEvent("TableDrivenServerEvent", EventID)
-end
-
-function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_SetTicketLeaderEid(AvatarEidStr)
-  self.TicketLeaderAvatarEid = AvatarEidStr
-  DebugPrint("BP_EMGameMode_C:OnNotifyGameModeDungeonEvent_SetTicketLeaderEid   AvatarEidStr", AvatarEidStr)
 end
 
 return DungeonObjectComponent

@@ -90,7 +90,8 @@ return ReadOnly("Condition2System", {
     [1] = "Polarity"
   },
   [4220] = {
-    [1] = "GameEvent"
+    [1] = "AdvertisingPopUp",
+    [2] = "GameEvent"
   },
   [4230] = {
     [1] = "Party",
@@ -162,6 +163,12 @@ return ReadOnly("Condition2System", {
   },
   [4460] = {
     [1] = "MonthSignIn"
+  },
+  [4470] = {
+    [1] = "Memory"
+  },
+  [4480] = {
+    [1] = "SoloTreasurePerm"
   },
   [8002] = {
     [1] = "Abyss"

@@ -28,7 +28,7 @@ end
 
 function FDialogueIterationComponent:Start()
   if self.bUseFlow then
-    self.FlowCompoent:Execute()
+    self.FlowCompoent:NotifyFlowReady()
     return
   end
   if self:IsStart() and self.StoryIterGraph:GetRestartTag() then

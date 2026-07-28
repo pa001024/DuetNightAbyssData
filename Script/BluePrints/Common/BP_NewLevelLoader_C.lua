@@ -392,12 +392,17 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
     for _, Level in pairs(self.ConnectedLevel[TargetLevelId]) do
       self:QueueLoadArtLevel(Level)
     end
-    URuntimeCommonFunctionLibrary.ResetCharacterBaseLocation(PlayerCharacter, TargetPosition, true)
+    local Ret = URuntimeCommonFunctionLibrary.ResetCharacterBaseLocation(PlayerCharacter, TargetPosition, true)
+    if UKismetMathLibrary.Vector_Distance2DSquared(TargetPosition, PlayerCharacter:K2_GetActorLocation()) > 100 then
+      DebugPrint("NewLevelLoader", "TeleportInDedicatedServer Failure")
+      return false
+    end
     PlayerCharacter:MulticastSetPlayerRotation(TargetRotation)
     if PlayerCharacter:GetMovementComponent() then
       PlayerCharacter:GetMovementComponent():ForceClientUpdate()
     end
     PlayerCharacter.RPCComponent:TeleportInDedicatedServer(TargetPosition, TargetRotation, TeleportTag)
+    PlayerCharacter:TeleportFollowSummons(TargetPosition, TargetRotation)
     PlayerCharacter:UpdateCurrentLevelId()
     PlayerCharacter:GetEMPlayerState():SetIsDedicatedServerTeleporting(true)
     DebugPrint("NewLevelLoader", "SetIsDedicatedServerTeleporting true")
@@ -458,6 +463,7 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
         if IsStandAlone(self) then
           URuntimeCommonFunctionLibrary.ResetCharacterBaseLocation(PlayerCharacter, SaveLocation, true)
           PlayerCharacter:MulticastSetPlayerRotation(SaveRotation)
+          PlayerCharacter:TeleportFollowSummons(SaveLocation, SaveRotation)
           PlayerCharacter:UpdateCurrentLevelId()
           local MovementComponent = PlayerCharacter:GetMovementComponent()
           MovementComponent:SetMovementMode(MovementComponent.DefaultLandMovementMode)
@@ -472,6 +478,7 @@ function M:TeleportInDedicatedServer(PlayerCharacter, TargetPosition, TargetRota
       self:RemoveTimer("TeleportInDedicatedServerHandle")
     end, true, 0, "TeleportInDedicatedServerHandle")
   end
+  return true
 end
 
 function M:SwitchLoadingGroupId(Id)

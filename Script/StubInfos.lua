@@ -8,9 +8,6 @@ StubInfos.StubFunctionList = {
   },
   {
     Name = "AMechanismBase::GetChestRewardTime"
-  },
-  {
-    Name = "AMonsterCharacter::MonsterSkeletonLodLua_Stamp"
   }
 }
 StubInfos.DyncBindings = {}

@@ -12,6 +12,8 @@ PopupPack.__Props__ = {
 
 function PopupPack:Init(Id)
   self.PopupPackId = Id
+  self.LastPopTimeStamp = -1
+  self.TriggerNum = 0
 end
 
 function PopupPack:PopOnce(ANSITime)

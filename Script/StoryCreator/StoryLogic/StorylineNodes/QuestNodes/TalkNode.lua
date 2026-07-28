@@ -64,6 +64,7 @@ function TalkNode:CreateTalkNodeData()
     ShowAutoPlayButton = self.ShowAutoPlayButton,
     ShowReviewButton = self.ShowReviewButton,
     ShowWikiButton = self.ShowWikiButton,
+    bOpenDefaultSkinKawaii = self.bOpenDefaultSkinKawaii,
     PauseGameGlobal = self.PauseGameGlobal,
     DisableMonsterAI = self.DisableMonsterAI,
     DisableNPCAI = self.DisableNPCAI,
@@ -98,6 +99,7 @@ function TalkNode:CreateTalkNodeData()
     bHideMechanismsFX = self.HideMechanismsFX,
     DisableNpcOptimization = self.DisableNpcOptimization,
     DoNotReceiveCharacterShadow = self.DoNotReceiveCharacterShadow,
+    bCloseMotionBlur = self.CloseMotionBlur,
     bPauseTimeElapse = self.PauseTimeElapse,
     bLockHighestLOD = self.bLockHighestLOD,
     FreezeWorldComposition = self.FreezeWorldComposition,
@@ -109,7 +111,7 @@ function TalkNode:CreateTalkNodeData()
     Key = self.Key,
     UsingGM = self.UsingGM,
     TalkTriggerId = self:GetPayload("TalkTriggerId"),
-    InteractiveActorId = self:GetPayload("InteractiveActorId"),
+    InteractiveActor = self:GetPayload("InteractiveActor"),
     PlayDialogueCallBack = self:GetPayload("PlayDialogueCallBack"),
     FlowAssetPath = self.FlowAssetPath,
     PauseNpcBT = self.PauseNpcBT,
@@ -171,6 +173,7 @@ function TalkNode:SwitchStart()
       GuideUIEnable = self.GuideUIEnable,
       Func = function(NPC, OnTalkEndCallback)
         GWorld.StoryMgr:UnbindNPCInteractiveTalk(NpcIdWithGender, BindId)
+        self.TalkNodeData.InteractiveActor = NPC
         self:TalkNodeStartInternal(function(TalkNodeFinishType, OptionIndex)
           if OnTalkEndCallback then
             OnTalkEndCallback.Func(OnTalkEndCallback.Obj)
@@ -192,7 +195,7 @@ end
 
 function TalkNode:TalkNodeStartInternal(TalkTaskEndLambdaCallback)
   local BasicTalkType = DataMgr.TalkType[self.TalkType].BasicType
-  self.bIsImmersiveStory = BasicTalkType == ETalkType.Cinematic or BasicTalkType == ETalkType.FreeSimple or BasicTalkType == ETalkType.FixSimple or BasicTalkType == ETalkType.Impression or BasicTalkType == ETalkType.Black
+  self.bIsImmersiveStory = BasicTalkType == ETalkType.Cinematic or BasicTalkType == ETalkType.FreeSimple or BasicTalkType == ETalkType.FixSimple or BasicTalkType == ETalkType.Black
   if self.bIsImmersiveStory then
     self.Flow = GameFlowUtils:AddFlow("ImmersiveStory", {
       GWorld.GameInstance,

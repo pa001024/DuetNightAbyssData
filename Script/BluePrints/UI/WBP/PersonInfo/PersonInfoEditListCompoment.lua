@@ -12,7 +12,7 @@ function Component:Initialize()
     "UI_COMMONPOP_TITLE_100055",
     "UI_PersonalPage_Title_Change",
     "UI_COMMONPOP_TITLE_100056",
-    "UI_Menu_Option_CopyUID"
+    "UI_Background_ChangeCard"
   }
   self.ClickFunction = {
     "OnClickPersonalInfo",
@@ -21,7 +21,7 @@ function Component:Initialize()
     "OnClickChangeSignature",
     "OnClickChangeTitle",
     "OnClickChangeBirthday",
-    "OnCopyUID"
+    "OnClickChangeNameCard"
   }
   self.CommunityBtnName = {
     "UI_OPTION_CustomerService",
@@ -74,11 +74,17 @@ function Component:InitBtnList()
   for i = 1, #self.BtnName do
     local MenuContent = NewObject(ClassPath)
     MenuContent.Id = i
+    if self.BtnName[i] == "UI_PersonInfo_Name" then
+      MenuContent.ReddotName = "PersonalInfoCustomizeEntry"
+    end
     if self.BtnName[i] == "UI_Menu_Option_ChangeHead" then
       MenuContent.ReddotName = "EscPortrait"
     end
     if self.BtnName[i] == "UI_PersonalPage_Title_Change" then
       MenuContent.ReddotName = "TitleBtn"
+    end
+    if self.BtnName[i] == "UI_Background_ChangeCard" then
+      MenuContent.ReddotName = "EscNameCard"
     end
     if self.IsPersonInfoPage then
       MenuContent.BtnName = GText(self.BtnName[i])
@@ -115,6 +121,10 @@ function Component:InitBtnList()
       self.Btn_Title.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Btn_Title.Button_Area.OnClicked:Add(self.Btn_Title, self.Btn_Title.OnClicked)
       self.Btn_Title:OnListItemObjectSet(MenuContent)
+    elseif self.BtnName[i] == "UI_Background_ChangeCard" and self.Btn_NameCard then
+      self.Btn_NameCard.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.Btn_NameCard.Button_Area.OnClicked:Add(self.Btn_NameCard, self.Btn_NameCard.OnClicked)
+      self.Btn_NameCard:OnListItemObjectSet(MenuContent)
     end
   end
 end
@@ -161,6 +171,7 @@ function Component:OnListBtnClicked(Content)
   if self.IsEditOpen then
     self.IsEditOpen = false
     self:PlayAnimation(self.Edit_List_Out)
+    self.Button_Edit.New:SetRenderOpacity(1)
   end
   if self.IsPersonInfoPage then
   end
@@ -285,8 +296,24 @@ function Component:StopPress()
   end
 end
 
+function Component:PlayTitleSettingPanelExpandSound()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/title_setting_panel_expand", "title_setting_panel_expand_sfx", nil)
+end
+
+function Component:BuildTitleSettingPanelCloseCallbackParams(Params)
+  Params = Params or {}
+  Params.CloseBtnCallbackObj = self
+  
+  function Params:CloseBtnCallbackFunction()
+    AudioManager(self):SetEventSoundParam(self, "title_setting_panel_expand_sfx", {ToEnd = 1})
+  end
+  
+  return Params
+end
+
 function Component:OnClickChangePortrait()
   self:StopPress()
+  self:PlayTitleSettingPanelExpandSound()
   local Params = {}
   Params.TabConfigData = {
     TitleName = GText("UI_Armory_Information"),
@@ -313,7 +340,7 @@ function Component:OnClickChangePortrait()
     FreshCallbackObj = self,
     OwnerPanel = self
   }
-  UIManager(self):ShowCommonPopupUI(100140, Params, self)
+  UIManager(self):ShowCommonPopupUI(100140, self:BuildTitleSettingPanelCloseCallbackParams(Params), self)
   if self.IsEditOpen then
     self:OnClickEdit()
   end
@@ -322,6 +349,7 @@ end
 
 function Component:OnClickChangeName()
   if self.CheckChangeNameCd() then
+    self:PlayTitleSettingPanelExpandSound()
     local Params = {}
     Params.ChangeName = true
     Params.FirstInit = true
@@ -334,7 +362,7 @@ function Component:OnClickChangeName()
         end
       end
     end
-    UIManager(self):ShowCommonPopupUI(100133, Params, self)
+    UIManager(self):ShowCommonPopupUI(100133, self:BuildTitleSettingPanelCloseCallbackParams(Params), self)
   elseif self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     self:SetFocus_Lua()
   end
@@ -354,6 +382,7 @@ end
 
 function Component:OnClickChangeSignature()
   AudioManager(self):PlayUISound(nil, "event:/ui/common/click_input_bar", nil, nil)
+  self:PlayTitleSettingPanelExpandSound()
   local Params = {}
   Params.ChangeName = false
   Params.FirstInit = true
@@ -375,7 +404,7 @@ function Component:OnClickChangeSignature()
     Params.Signature = self.Text_Input:GetText()
   end
   Params.Title = GText("UI_COMMONPOP_TITLE_100055")
-  UIManager(self):ShowCommonPopupUI(100133, Params, self)
+  UIManager(self):ShowCommonPopupUI(100133, self:BuildTitleSettingPanelCloseCallbackParams(Params), self)
 end
 
 function Component:OnClickChangeBirthday()
@@ -450,6 +479,13 @@ function Component:OnClickPersonalInfo()
   PersonInfoController:OpenView()
 end
 
+function Component:OnClickChangeNameCard()
+  if self.ActorController then
+    self.ActorController:HideAllCharacterActors("OpenChangeNameCard", true)
+  end
+  UIManager(self):LoadUINew("NameCard", self.IsPersonInfoPage, self)
+end
+
 function Component:GetFisrtEditItem()
   if self.Edit_List then
     local items = self.Edit_List:GetListItems()
@@ -489,7 +525,9 @@ end
 
 function Component:OnClickChangeTitle()
   ReddotManager.ClearLeafNodeCount("TitleBtn", true)
-  UIManager(self):ShowCommonPopupUI(100239, {}, self)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
+  self:PlayTitleSettingPanelExpandSound()
+  UIManager(self):ShowCommonPopupUI(100239, self:BuildTitleSettingPanelCloseCallbackParams(), self)
 end
 
 return Component

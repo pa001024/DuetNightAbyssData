@@ -47,6 +47,7 @@ function M:TryStartInteractive(NpcId, NpcCharacter, PlayerActor, EndCallback)
   if UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(NpcCharacter) and self:GetAvatar() == nil and self.bInited ~= true then
     self:Init()
   end
+  self.InteractiveActor = NpcCharacter
   if Model:HasMultiInteractive(NpcId) then
     DebugPrint("WXT M:TryStartInteractive OpenView", NpcId)
     self:OpenView(NpcCharacter, "StoryInteractiveUI", NpcId, EndCallback)
@@ -58,6 +59,7 @@ function M:TryStartInteractive(NpcId, NpcCharacter, PlayerActor, EndCallback)
 end
 
 function M:DirectStartInteractive(TalkInfo, NpcCharacter, PlayerActor, EndCallback)
+  self.InteractiveActor = nil
   if not TalkInfo then
     if EndCallback and EndCallback.Func then
       EndCallback.Func(EndCallback.Obj)
@@ -81,9 +83,19 @@ end
 
 function M:DirectStartTalkTrigger(TalkTriggerId, NpcId, NpcCharacter, PlayerActor, EndCallback)
   local TS = TalkSubsystem()
-  local GameInstance = GWorld.GameInstance
-  local TalkContext = GameInstance:GetTalkContext()
-  TalkContext:StartTalk(TalkTriggerId, nil, nil, PlayerActor, NpcCharacter, EndCallback, TS and TS:GetNpcPlayDialogueCallback(NpcId) or nil)
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(GWorld.GameInstance, TalkTriggerId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction.InteractiveActor = NpcCharacter
+    if EndCallback then
+      TalkAsyncAction.OnPlayTalkEnd:Add(EndCallback.Obj, EndCallback.Func)
+      TalkAsyncAction.OnPlayTalkInterrupted:Add(EndCallback.Obj, EndCallback.Func)
+    end
+    local PlayDialogueCallback = TS and TS:GetNpcPlayDialogueCallback(NpcId)
+    if PlayDialogueCallback then
+      TalkAsyncAction.OnPlayDialogue:Add(PlayDialogueCallback.Obj, PlayDialogueCallback.Func)
+    end
+    TalkAsyncAction:Activate()
+  end
 end
 
 function M:DirectStartTalkNode(Index, NpcId, NpcCharacter, EndCallback)
@@ -205,7 +217,7 @@ end
 function M:BlendInCamera(BlendTime, Callback)
   local GameInstance = GWorld.GameInstance
   local TalkContext = GameInstance:GetTalkContext()
-  local Camera = self:CreateTalkPawn(true, true, 1, TalkContext.InteractiveActor)
+  local Camera = self:CreateTalkPawn(true, true, 1, self.InteractiveActor)
   
   local function OverrideCallback()
     self:SwitchToTalkPawn()

@@ -86,12 +86,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104503,
         SubRegionIdList = {105201},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203020101_132410057",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -203,6 +203,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -242,7 +243,9 @@ return {
               TargetTime = 12,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17727891897573694885"] = {
@@ -331,12 +334,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104503,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_12030202Giongzuo_132410089",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -467,6 +470,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -535,6 +539,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -594,7 +599,9 @@ return {
               TargetTime = 12,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17737510830688243301"] = {
@@ -637,12 +644,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104503,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203060301_132410060",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -784,6 +791,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = true,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -862,6 +870,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = true,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -912,6 +921,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = true,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -947,6 +957,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -954,6 +965,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = true,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -989,6 +1001,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -996,6 +1009,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = true,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1031,7 +1045,9 @@ return {
               TargetTime = 12,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17738218702852608026"] = {
@@ -1057,7 +1073,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {104503},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1074,7 +1089,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {104503},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1119,12 +1133,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104504,
         SubRegionIdList = {104503},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_1203060401_132010086",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1212,6 +1226,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

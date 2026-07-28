@@ -1,7 +1,11 @@
 local Component = {}
+local GuildBossPointRewardUtils = require("BluePrints.UI.WBP.Guild.Common.GuildBossPointRewardUtils")
+local GUILD_BOSS_PERSON_POINT_REWARD_NODE = "GuildBossPersonPointReward"
+local GUILD_BOSS_REWARD_NODE = "GuildBossProgressReward"
 
 function Component:OnInit()
   ReddotManager.AddNode("GuildHub")
+  self:RefreshGuildBossPersonPointRewardReddot()
 end
 
 function Component:OnDestory()
@@ -29,12 +33,27 @@ function Component:ClearAllReddot()
   ReddotManager.ClearNodeCount("GuildHub", true)
 end
 
+function Component:RefreshGuildBossPersonPointRewardReddot()
+  if not ReddotManager.GetTreeNode(GUILD_BOSS_PERSON_POINT_REWARD_NODE) then
+    ReddotManager.AddNode("GuildHub")
+  end
+  ReddotManager.ClearLeafNodeCount(GUILD_BOSS_PERSON_POINT_REWARD_NODE)
+  if not self:IsInGuild() then
+    return
+  end
+  local Count = GuildBossPointRewardUtils.GetCanClaimRewardCount(self:GetAvatarGuildBossData())
+  if Count > 0 then
+    ReddotManager.IncreaseLeafNodeCount(GUILD_BOSS_PERSON_POINT_REWARD_NODE, Count)
+  end
+end
+
 function Component:InvokeGuildTaskReddotUpdate()
   local bAllDailyNotComplete = true
   local bAllWeeklyNotComplete = true
   for QuestId, Quest in pairs(self:GetAvatar().CommonQuestActivity[GuildCommon.GuildDummyEventId]) do
     local QuestConf = DataMgr.CommonQuestDetail[QuestId]
-    if QuestConf.QuestType == CommonConst.CommonQuestType.Daily then
+    if not QuestConf then
+    elseif QuestConf.QuestType == CommonConst.CommonQuestType.Daily then
       self:TryAddReddotCount("GuildDailyTask", {QuestId = QuestId})
       self:TrySubReddotCount("GuildDailyTask", {QuestId = QuestId})
       if Quest:IsComplete() then
@@ -53,6 +72,24 @@ function Component:InvokeGuildTaskReddotUpdate()
   end
   if bAllWeeklyNotComplete then
     self:TryClearReddotCount("GuildWeekTask")
+  end
+end
+
+function Component:InvokeGuildBossRewardReddotUpdate()
+  local StageRewardUtils = require("BluePrints.UI.WBP.Guild.Common.GuildBossStageRewardUtils")
+  if not self:IsInGuild() then
+    ReddotManager.ClearNodeCount(GUILD_BOSS_REWARD_NODE, true)
+    return
+  end
+  ReddotManager.ClearNodeCount(GUILD_BOSS_REWARD_NODE, true)
+  local BossId = StageRewardUtils.GetCurrentBossId()
+  if 0 == BossId then
+    return
+  end
+  for _, Stage in ipairs(StageRewardUtils.GetStages()) do
+    if StageRewardUtils.CanClaimStage(Stage, BossId) then
+      ReddotManager.IncreaseLeafNodeCount(GUILD_BOSS_REWARD_NODE, 1, {Stage = Stage})
+    end
   end
 end
 

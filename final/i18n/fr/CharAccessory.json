@@ -146,7 +146,7 @@
   {
     "id": 10020,
     "name": "Casse-tête",
-    "desc": "Avec ça, vous deviendrez prodigieusement doué pour \"creuser\" les problèmes.",
+    "desc": "Avec ça, vous deviendrez prodigieusement doué pour « creuser » les problèmes.",
     "icon": "T_Fashion_Head16",
     "rarity": 4,
     "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
@@ -688,6 +688,14 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 10093,
+    "name": "Lanterne nocturne – Menthe",
+    "desc": "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison.",
+    "icon": "T_Fashion_Head53",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 10094,
     "name": "Plume d’écriture – Blanc ivoire",
     "desc": "Écrivons l’histoire qui n’appartient qu’à nous.",
@@ -979,15 +987,55 @@
     "id": 10132,
     "name": "Dispositif Luno (I)",
     "desc": "Un dispositif de mesure installé par Luno, l’exploratrice. Une fois activé, il devrait recueillir les données dont elle a besoin.",
+    "icon": "T_Fashion_Head67_03",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10133,
+    "name": "Dispositif Luno (II)",
+    "desc": "Un dispositif de mesure installé par Luno, l’exploratrice. Une fois activé, il devrait recueillir les données dont elle a besoin.",
+    "icon": "T_Fashion_Head67_02",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10134,
+    "name": "Dispositif Luno (III)",
+    "desc": "Un dispositif de mesure installé par Luno, l’exploratrice. Une fois activé, il devrait recueillir les données dont elle a besoin.",
     "icon": "T_Fashion_Head67_01",
     "rarity": 3,
     "unlock": "Disponible via les événements"
   },
   {
-    "id": 10139,
-    "name": "Ballon festif – Bleu indigo",
+    "id": 10135,
+    "name": "Ballon multicolore – Blanc ivoire",
     "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
-    "icon": "T_Fashion_Head60_04",
+    "icon": "T_Fashion_Head69_04",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10136,
+    "name": "Ballon multicolore – Menthe",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head69_03",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10137,
+    "name": "Ballon multicolore – Caramel",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head69_02",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10138,
+    "name": "Ballon multicolore – Bleu indigo",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head69_01",
     "rarity": 3,
     "unlock": "Disponible via les événements"
   },
@@ -1000,12 +1048,100 @@
     "unlock": "Disponible via les événements"
   },
   {
-    "id": 10149,
-    "name": "Ballon festif – Menthe",
-    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
-    "icon": "T_Fashion_Head60_02",
+    "id": 10142,
+    "name": "Engrenage des Pics Extérieurs",
+    "desc": "Le fonctionnement de l’immense structure des Pics Extérieurs repose sur la contribution de chaque engrenage.",
+    "icon": "T_Fashion_Head73",
     "rarity": 3,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10143,
+    "name": "Dragon de pierre",
+    "desc": "Éloigne le mal et repousse les calamités.",
+    "icon": "T_Fashion_Head70",
+    "rarity": 4,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10144,
+    "name": "Couronne astrale – Blanc ivoire",
+    "desc": "Un flocon posé sur une mèche de cheveux, figé dans son plus bel instant.",
+    "icon": "T_Fashion_Head71_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10145,
+    "name": "Couronne astrale – Doré",
+    "desc": "Un flocon posé sur une mèche de cheveux, figé dans son plus bel instant.",
+    "icon": "T_Fashion_Head71_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10146,
+    "name": "Couronne astrale – Rouille",
+    "desc": "Un flocon posé sur une mèche de cheveux, figé dans son plus bel instant.",
+    "icon": "T_Fashion_Head71_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10147,
+    "name": "Couronne astrale – Pourpre profond",
+    "desc": "Un flocon posé sur une mèche de cheveux, figé dans son plus bel instant.",
+    "icon": "T_Fashion_Head71_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10148,
+    "name": "Ballon festif – Caramel",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head60_01",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10150,
+    "name": "Ballon festif – Rouille",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head60_03",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10151,
+    "name": "Ornement de chat aux oreilles tombantes – Jade noir",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head72_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10152,
+    "name": "Ornement de chat aux oreilles tombantes – Caramel",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head72_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10153,
+    "name": "Ornement de chat aux oreilles tombantes – Gris plomb",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head72_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10154,
+    "name": "Ornement de chat aux oreilles tombantes – Blanc sakura",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
+    "icon": "T_Fashion_Head72_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 11001,
@@ -1052,6 +1188,14 @@
     "name": "Mer de lycoris éternels",
     "desc": "Les fleurs éclosent là où les anges sont tombés.",
     "icon": "T_Fashion_Fx27",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 11008,
+    "name": "Entraves glacées",
+    "desc": "Le froid extrême est un tabou pour toute forme de vie.",
+    "icon": "T_Fashion_Fx37",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -1180,6 +1324,86 @@
     "name": "Voile nocturne",
     "desc": "Un voile de gaze noire dissimule son visage écarlate.",
     "icon": "T_Fashion_Hat16",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12017,
+    "name": "Pieuvre Pouyo – Blanc sakura",
+    "desc": "Pouyo, pouyo, pouyo~",
+    "icon": "T_Fashion_Hat19_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12018,
+    "name": "Pieuvre Pouyo – Bleu indigo",
+    "desc": "Pouyo, pouyo, pouyo~",
+    "icon": "T_Fashion_Hat19_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12019,
+    "name": "Pieuvre Pouyo – Menthe",
+    "desc": "Pouyo, pouyo, pouyo~",
+    "icon": "T_Fashion_Hat19_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12020,
+    "name": "Pieuvre Pouyo – Blanc ivoire",
+    "desc": "Pouyo, pouyo, pouyo~",
+    "icon": "T_Fashion_Hat19_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12021,
+    "name": "Poisson-globe Hum-Hum – Blanc sakura",
+    "desc": "Hm hm hm hm hm !",
+    "icon": "T_Fashion_Hat18_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12022,
+    "name": "Poisson-globe Hum-Hum – Rouille",
+    "desc": "Hm hm hm hm hm !",
+    "icon": "T_Fashion_Hat18_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12023,
+    "name": "Poisson-globe Hum-Hum – Bleu céleste",
+    "desc": "Hm hm hm hm hm !",
+    "icon": "T_Fashion_Hat18_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12024,
+    "name": "Poisson-globe Hum-Hum – Blanc ivoire",
+    "desc": "Hm hm hm hm hm !",
+    "icon": "T_Fashion_Hat18_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12025,
+    "name": "Couronne du dragon",
+    "desc": "La tête du dragon se dresse fièrement, et les ténèbres s’écartent sur son passage.",
+    "icon": "T_Fashion_Hat21",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12026,
+    "name": "Nœud aux mille fils",
+    "desc": "Les fils du destin s’entrelacent comme une toile d’araignée, impossibles à prévoir.",
+    "icon": "T_Fashion_Hat20",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
@@ -1550,6 +1774,70 @@
     "icon": "T_Fashion_Waist33_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 13041,
+    "name": "Queue des vagues azurées – Blanc ivoire",
+    "desc": "Vive, adorable, espiègle, ravissante... Tous les adjectifs du monde pâlissent face à une queue de poisson. Voilà le charme irrésistible des queues de poisson... Tiens, cette réplique me dit quelque chose. Enfin, ce doit être mon imagination.",
+    "icon": "T_Fashion_Back49_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13042,
+    "name": "Queue des vagues azurées – Jade noir",
+    "desc": "Vive, adorable, espiègle, ravissante... Tous les adjectifs du monde pâlissent face à une queue de poisson. Voilà le charme irrésistible des queues de poisson... Tiens, cette réplique me dit quelque chose. Enfin, ce doit être mon imagination.",
+    "icon": "T_Fashion_Back49_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13043,
+    "name": "Queue des vagues azurées – Bleu céleste",
+    "desc": "Vive, adorable, espiègle, ravissante... Tous les adjectifs du monde pâlissent face à une queue de poisson. Voilà le charme irrésistible des queues de poisson... Tiens, cette réplique me dit quelque chose. Enfin, ce doit être mon imagination.",
+    "icon": "T_Fashion_Back49_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13044,
+    "name": "Queue des vagues azurées – Blanc sakura",
+    "desc": "Vive, adorable, espiègle, ravissante... Tous les adjectifs du monde pâlissent face à une queue de poisson. Voilà le charme irrésistible des queues de poisson... Tiens, cette réplique me dit quelque chose. Enfin, ce doit être mon imagination.",
+    "icon": "T_Fashion_Back49_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13049,
+    "name": "Queue de chat aux oreilles tombantes – Jade noir",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
+    "icon": "T_Fashion_Back51_02",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 13050,
+    "name": "Queue de chat aux oreilles tombantes – Gris plomb",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
+    "icon": "T_Fashion_Back51_03",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 13051,
+    "name": "Queue de chat aux oreilles tombantes – Caramel",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
+    "icon": "T_Fashion_Back51_04",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 13052,
+    "name": "Queue de chat aux oreilles tombantes – Blanc sakura",
+    "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
+    "icon": "T_Fashion_Back51_01",
+    "rarity": 4,
+    "unlock": ""
   },
   {
     "id": 20001,
@@ -2208,6 +2496,54 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 20090,
+    "name": "Bulle sucrée – Bleu céleste",
+    "desc": "N’oubliez pas de le jeter après l’avoir mâché.",
+    "icon": "T_Fashion_Face27_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20091,
+    "name": "Bulle sucrée – Doré",
+    "desc": "N’oubliez pas de le jeter après l’avoir mâché.",
+    "icon": "T_Fashion_Face27_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20092,
+    "name": "Bulle sucrée – Blanc ivoire",
+    "desc": "N’oubliez pas de le jeter après l’avoir mâché.",
+    "icon": "T_Fashion_Face27_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20093,
+    "name": "Bulle sucrée – Blanc sakura",
+    "desc": "N’oubliez pas de le jeter après l’avoir mâché.",
+    "icon": "T_Fashion_Face27_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20094,
+    "name": "Voile de la nuit envoûtante – Jade noir",
+    "desc": "Même la nuit succombe au léger sourire dissimulé derrière ce voile.",
+    "icon": "T_Fashion_Face29_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20095,
+    "name": "Voile de la nuit envoûtante – Pourpre profond",
+    "desc": "Même la nuit succombe au léger sourire dissimulé derrière ce voile.",
+    "icon": "T_Fashion_Face29_04",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2286,6 +2622,14 @@
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21014,
+    "name": "Éclat figé dans la glace",
+    "desc": "Les aurores polaires sont un miracle de la nature.",
+    "icon": "T_Fashion_Fx36",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
   },
   {
     "id": 30001,
@@ -2632,6 +2976,38 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 30050,
+    "name": "Glace miaou – Blanc sakura",
+    "desc": "Patron, vous êtes sûr qu’on arrivera à vendre ces glaces comme ça ?",
+    "icon": "T_Fashion_Back52_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30051,
+    "name": "Glace miaou – Bleu céleste",
+    "desc": "Patron, vous êtes sûr qu’on arrivera à vendre ces glaces comme ça ?",
+    "icon": "T_Fashion_Back52_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30052,
+    "name": "Glace miaou – Caramel",
+    "desc": "Patron, vous êtes sûr qu’on arrivera à vendre ces glaces comme ça ?",
+    "icon": "T_Fashion_Back52_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30053,
+    "name": "Glace miaou – Lavande",
+    "desc": "Patron, vous êtes sûr qu’on arrivera à vendre ces glaces comme ça ?",
+    "icon": "T_Fashion_Back52_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 30054,
     "name": "Bonheur en bouteille – Rouille",
     "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
@@ -2728,6 +3104,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 30070,
+    "name": "Lueur éternelle",
+    "desc": "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison.",
+    "icon": "T_Fashion_Back53",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 31001,
     "name": "Animation de victoire : Rives paisibles",
     "desc": "Permet de modifier l’animation de victoire.",
@@ -2764,6 +3148,14 @@
     "name": "Animation de victoire : Terre du péché",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 31006,
+    "name": "Animation de victoire : Sérénade des premières neiges",
+    "desc": "Permet de modifier l’animation de victoire.",
+    "icon": "T_Fashion_SettlementAction_06",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -3296,6 +3688,62 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 40076,
+    "name": "Muguet des neiges – Blanc ivoire",
+    "desc": "Elle se balance doucement et fait résonner une comptine d’hiver.",
+    "icon": "T_Fashion_Back48_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40077,
+    "name": "Muguet des neiges – Blanc sakura",
+    "desc": "Elle se balance doucement et fait résonner une comptine d’hiver.",
+    "icon": "T_Fashion_Back48_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40078,
+    "name": "Muguet des neiges – Pourpre profond",
+    "desc": "Elle se balance doucement et fait résonner une comptine d’hiver.",
+    "icon": "T_Fashion_Back48_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40079,
+    "name": "Muguet des neiges – Rouille",
+    "desc": "Elle se balance doucement et fait résonner une comptine d’hiver.",
+    "icon": "T_Fashion_Back48_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40080,
+    "name": "Ailes de la nuit envoûtante – Rouille",
+    "desc": "Une trace de baiser déposée sur l’épaule par la nuit.",
+    "icon": "T_Fashion_Back47_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40083,
+    "name": "Ailes de la nuit envoûtante – Émeraude",
+    "desc": "Une trace de baiser déposée sur l’épaule par la nuit.",
+    "icon": "T_Fashion_Back47_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40084,
+    "name": "Reflet de lune",
+    "desc": "Confier sa nostalgie à la lune.",
+    "icon": "T_Fashion_Back50",
+    "rarity": 4,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -3325,7 +3773,7 @@
     "desc": " ",
     "icon": "T_Fashion_Fx25",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Disponible via la Myriade"
   },
   {
     "id": 60001,
@@ -3380,6 +3828,22 @@
     "name": "Bouquet de lycoris éternels – Pourpre profond",
     "desc": "Les fleurs épanouies de la terre du péché peuvent elles aussi devenir éternelles.",
     "icon": "T_Fashion_Fx31_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70006,
+    "name": "Traces de la nuit envoûtante – Blanc sakura",
+    "desc": "Les pas qui résonnent dans la nuit sont-ils un guide porteur d’espoir ou un piège séduisant ?",
+    "icon": "T_Fashion_Fx32_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 70007,
+    "name": "Floraison figée dans la glace – Lavande",
+    "desc": "Geler le monde.",
+    "icon": "T_Fashion_Fx35_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -3508,6 +3972,46 @@
     "name": "Bouquet de lycoris éternels – Doré",
     "desc": "Les fleurs épanouies de la terre du péché peuvent elles aussi devenir éternelles.",
     "icon": "T_Fashion_Fx31_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70061,
+    "name": "Traces de la nuit envoûtante – Doré",
+    "desc": "Les pas qui résonnent dans la nuit sont-ils un guide porteur d’espoir ou un piège séduisant ?",
+    "icon": "T_Fashion_Fx32_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 70062,
+    "name": "Traces de la nuit envoûtante – Bleu céleste",
+    "desc": "Les pas qui résonnent dans la nuit sont-ils un guide porteur d’espoir ou un piège séduisant ?",
+    "icon": "T_Fashion_Fx32_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 70071,
+    "name": "Floraison figée dans la glace – Pourpre profond",
+    "desc": "Geler le monde.",
+    "icon": "T_Fashion_Fx35_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70072,
+    "name": "Floraison figée dans la glace – Rouille",
+    "desc": "Geler le monde.",
+    "icon": "T_Fashion_Fx35_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70073,
+    "name": "Floraison figée dans la glace – Doré",
+    "desc": "Geler le monde.",
+    "icon": "T_Fashion_Fx35_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -3668,6 +4172,38 @@
     "name": "Esprit céleste – Blanc sakura",
     "desc": "Faites résonner le cor et accueillez la descente des anges.",
     "icon": "T_Fashion_Fx28_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80055,
+    "name": "Étoile de givre éternelle – Pourpre profond",
+    "desc": "Dans ces cristaux de glace éternels se reflètent d’innombrables contes merveilleux.",
+    "icon": "T_Fashion_Fx34_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80056,
+    "name": "Étoile de givre éternelle – Doré",
+    "desc": "Dans ces cristaux de glace éternels se reflètent d’innombrables contes merveilleux.",
+    "icon": "T_Fashion_Fx34_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80057,
+    "name": "Étoile de givre éternelle – Rouille",
+    "desc": "Dans ces cristaux de glace éternels se reflètent d’innombrables contes merveilleux.",
+    "icon": "T_Fashion_Fx34_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80058,
+    "name": "Étoile de givre éternelle – Bleu indigo",
+    "desc": "Dans ces cristaux de glace éternels se reflètent d’innombrables contes merveilleux.",
+    "icon": "T_Fashion_Fx34_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   }

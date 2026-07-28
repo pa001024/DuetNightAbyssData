@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 M._components = {
   "BluePrints.UI.UI_Phone.Battle.Component.DraggableWidgetComponent"
@@ -28,7 +29,7 @@ function M:OnPressedButton()
   local PlayerCharacter = self.OwnerPanel.OwnerPlayer
   if PlayerCharacter then
     PlayerCharacter:OpenBattleWheel()
-    RunAsyncTask(self, "OnPressedButtonTask", function(CoroutineObj)
+    CoroutineUtils.RunAsyncTask(self, "OnPressedButtonTask", function(CoroutineObj)
       local InBattleWheelMenu = UIManager(self):GetUIObjAsync("InBattleWheelMenu", CoroutineObj)
       InBattleWheelMenu:SetWheelCenter(self.Bg)
       InBattleWheelMenu:BindMenuButton(self)
@@ -41,7 +42,7 @@ end
 
 function M:OnReleasedButton()
   DebugPrint("gmy@OnReleasedButton")
-  RunAsyncTask(self, "OnReleasedButtonTask", function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "OnReleasedButtonTask", function(CoroutineObj)
     local InBattleWheelMenu = UIManager(self):GetUIObjAsync("InBattleWheelMenu", CoroutineObj)
     if InBattleWheelMenu then
       InBattleWheelMenu:SelectAndCloseMenu()
@@ -97,7 +98,7 @@ function M.BattleMenuDown(BattlePhone, Index, StartPos)
   BattleMenu.TotalDeltaDis = FVector2D(0, 0)
   if PlayerCharacter and PlayerCharacter:GetController().bEnableBattleWheel then
     PlayerCharacter:OpenBattleWheel()
-    RunAsyncTask(M, "OnPressedButtonTask", function(CoroutineObj)
+    CoroutineUtils.RunAsyncTask(M, "OnPressedButtonTask", function(CoroutineObj)
       local InBattleWheelMenu = UIManager(BattleMenu):GetUIObjAsync("InBattleWheelMenu", CoroutineObj)
       if InBattleWheelMenu then
         InBattleWheelMenu:SetWheelCenter(BattleMenu.Bg)

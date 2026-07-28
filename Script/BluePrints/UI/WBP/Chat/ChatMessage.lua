@@ -1,5 +1,6 @@
 local json = require("rapidjson")
 local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
+local AutoChessShareModel = require("BluePrints.UI.AutoChess.AutoChessShareModel")
 local IsSharerInfoEmpty, BuildSharerInfoFromSender
 local MessageWrap = {
   __index = {
@@ -8,6 +9,7 @@ local MessageWrap = {
     EmojiInfos = nil,
     ModSuitInfo = nil,
     Index = 0,
+    bMergedDisplay = false,
     _SetUpMessage = function(self, Message)
       if Message then
         self.Message = Message
@@ -60,6 +62,8 @@ local MessageWrap = {
       elseif string.startswith(Content, ChatCommon.GuildRecruitHeader) then
         local JsonStr = string.sub(Content, #ChatCommon.GuildRecruitHeader + 1)
         self.GuildRecruitInfo = json.decode(JsonStr)
+      elseif string.startswith(Content, ChatCommon.AutoChessShareHeader) then
+        self.AutoChessShareInfo = AutoChessShareModel.ParseAutoChessShareMsg(Content)
       end
     end,
     IsSticker = function(self)
@@ -94,6 +98,7 @@ local MessageWrap = {
     return NewObj
   end
 }
+local IsNormalChatMsgWrap, GetLastNormalChatMsgWrap, IsSameSender
 local MessageList = {
   __index = {
     ViewList = nil,
@@ -107,7 +112,7 @@ local MessageList = {
     RemovedMsgs = nil,
     AddMessage = function(self, Message, bCalcUnread)
       local MsgWrap = MessageWrap:New(Message)
-      local LastMsgWrap = self.ViewList[#self.ViewList] or {
+      local LastMsgWrap = GetLastNormalChatMsgWrap(self.ViewList) or {
         Message = {Time = 0}
       }
       local TimeMsgWrap
@@ -134,7 +139,10 @@ local MessageList = {
           local lastUnreadCount = self.UnreadCount
           self.UnreadCount = self.UnreadCount + 1
         end
-        if NewMsg.Time - LastMsg.Time > DataMgr.GlobalConstant.ChatTimeTipInterval.ConstantValue then
+        local TimeTipInterval = DataMgr.GlobalConstant.ChatTimeTipInterval.ConstantValue
+        local TimeDelta = NewMsg.Time - LastMsg.Time
+        MsgWrap.bMergedDisplay = IsNormalChatMsgWrap(LastMsgWrap) and IsSameSender(NewMsg, LastMsg) and TimeDelta >= 0 and TimeTipInterval >= TimeDelta
+        if TimeTipInterval < TimeDelta then
           TimeMsgWrap = MessageWrap:New({
             Time = NewMsg.Time,
             LastTime = LastMsg.Time
@@ -190,6 +198,29 @@ local MessageList = {
     return NewObj
   end
 }
+
+function IsNormalChatMsgWrap(MsgWrap)
+  return MsgWrap and (MsgWrap.MsgType == ChatCommon.MsgType.Other or MsgWrap.MsgType == ChatCommon.MsgType.Self)
+end
+
+function GetLastNormalChatMsgWrap(ViewList)
+  if type(ViewList) ~= "table" then
+    return nil
+  end
+  for i = #ViewList, 1, -1 do
+    local MsgWrap = ViewList[i]
+    if IsNormalChatMsgWrap(MsgWrap) then
+      return MsgWrap
+    end
+  end
+  return nil
+end
+
+function IsSameSender(NewMsg, LastMsg)
+  local NewSenderUid = NewMsg and NewMsg.Sender and NewMsg.Sender.Uid
+  local LastSenderUid = LastMsg and LastMsg.Sender and LastMsg.Sender.Uid
+  return nil ~= NewSenderUid and NewSenderUid == LastSenderUid
+end
 
 function IsSharerInfoEmpty(SharerInfo)
   if type(SharerInfo) ~= "table" then

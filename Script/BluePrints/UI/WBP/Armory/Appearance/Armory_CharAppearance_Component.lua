@@ -238,7 +238,7 @@ function M:InitCharSkinList(Char)
   table.sort(self.SkinArray, function(a, b)
     return a.SkinId < b.SkinId
   end)
-  local AppearanceSuit = Char:GetAppearance()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   local SkinId = AppearanceSuit and AppearanceSuit.SkinId
   if not SkinId or SkinId <= 0 then
     SkinId = DefaultSkinId
@@ -382,7 +382,7 @@ function M:OnCharSkinChanged(Ret, CharUuid, AppearanceIndex, SkinId)
   end
   local SkinData = DataMgr.Skin[SkinId]
   if SkinData and SkinData.AutoHair and self.SelectedHairId == SkinData.AutoHair then
-    local AppearanceSuit = self.Target:GetAppearance()
+    local AppearanceSuit = self.Target:GetAppearance(self.AppearanceSuitIndex)
     local HairId = AppearanceSuit and AppearanceSuit.HairId
     if HairId ~= self.SelectedHairId then
       self:OnCharHairConfirmBtnClicked()
@@ -500,7 +500,7 @@ function M:CreateHairContents(Target)
       return b.LockType
     end
   end)
-  local AppearanceSuit = Char:GetAppearance()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   local HairId = AppearanceSuit and AppearanceSuit.HairId
   if not HairId or HairId <= 0 then
     HairId = DefaultHairId
@@ -588,7 +588,7 @@ end
 
 function M:OnHairItemClicked(Content)
   local SelectedContent = self.HairMap[self.SelectedHairId]
-  if Content == SelectedContent then
+  if Content == SelectedContent or not Content.HairId then
     return
   end
   self:SelectHairByContent(Content)
@@ -776,7 +776,7 @@ function M:CreateCharAccessoryContents(Char, SkinId, Params)
     end
   end
   rawset(self, "PartMeshAccessory", nil)
-  local AppearanceSuit = Char:GetAppearance()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   local PartMeshId, PartMeshType = Char:GetPartMeshAccessoryInfo(SkinId)
   for Id, Data in pairs(DataMgr.CharPartMesh) do
     if UIUtils.ShouldDisplayItem("CharPartMesh", Id) then
@@ -817,7 +817,7 @@ function M:CreateCharAccessoryContents(Char, SkinId, Params)
 end
 
 function M:CreateCurrentCharAccessoryContent(Char)
-  local AppearanceSuit = Char:GetAppearance()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   local CharAccessory = AppearanceSuit.Accessory
   for _, AccessoryType in ipairs(self.AccessoryTypes) do
     local AccessoryTypeIndex = CommonConst.NewCharAccessoryTypes[AccessoryType]
@@ -1104,11 +1104,14 @@ function M:OnCharAccessoryChanged(Ret, CharUuid, AppearanceIndex, AccessoryId, C
   end
 end
 
-function M:OnCharAppearanceChanged(Ret, CharUuid, CharAccessoryIndex)
+function M:OnCharAppearanceChanged(Ret, CharUuid)
   self:BlockAllUIInput(false)
   if Ret == ErrorCode.RET_SUCCESS then
-    local Avatar = GWorld:GetAvatar()
-    self.Target = Avatar.Chars[CharUuid]
+    if self.Target.Uuid == CharUuid then
+      local Avatar = GWorld:GetAvatar()
+      local Char = Avatar.Chars[CharUuid]
+      self.Target = Char
+    end
   else
     UIManager(self):ShowError(Ret, 1.5)
   end
@@ -1155,7 +1158,7 @@ function M:InitCharMVP()
 end
 
 function M:CreateCurrentMVPContent(Char)
-  local AppearanceSuit = Char:GetAppearance()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   local CharAccessory = AppearanceSuit.Accessory
   local AccessoryTypeIndex = CommonConst.NewCharAccessoryTypes.MVP
   if AccessoryTypeIndex then
@@ -1414,7 +1417,10 @@ function M:UpdateSkinLevelInfo(SkinId)
         IsLocked = IsLocked(Index),
         IsShowReddot = ArmoryUtils:CanSkinUpgrade(SkinId, Index),
         Obj = self,
-        ClickedCallback = self.OnLevelUpWidgetClicked
+        ClickedCallback = function(_self, Level)
+          self:OnLevelUpWidgetClicked(Level)
+          self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
+        end
       }
       LevelUpWidget:InitContent(Params)
     end
@@ -1463,7 +1469,7 @@ function M:IsEquipedSelectedSkin()
     return false
   end
   local Skin = self:GetOwnedSkinData(self.SelectedSkinId)
-  local AppearanceSuit = Char:GetAppearance()
+  local AppearanceSuit = Char:GetAppearance(self.AppearanceSuitIndex)
   if not Skin and not AppearanceSuit then
     return false
   end
@@ -1486,7 +1492,6 @@ function M:OnLevelUpWidgetClicked(Level, Skip)
   self.SelectedSkinLevel = Level
   self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
   if self.IsPreviewMode then
     if 1 == Level then
       self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)

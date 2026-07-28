@@ -361,6 +361,11 @@ return ReadOnly("BattlePet", {
     PetType = "Pet",
     SupportSkillId = 426
   },
+  [481] = {
+    EffectCreatureId = 4811,
+    PetId = 481,
+    PetType = "Pet"
+  },
   [491] = {
     EffectCreatureId = 4911,
     PetId = 491,

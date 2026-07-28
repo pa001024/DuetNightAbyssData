@@ -10,9 +10,12 @@ function BP_SlideSpline_C:CommonInitInfo(Info)
   self.ChangeCD = DataMgr.MovementParams.SideJumpAttachTime.ParamValue or 1.0
   self.bIsTurning = false
   self.MoveDirection = 1
-  self.TurnDuration = 0.0
   self.TurnElapsed = 0.0
+  self.TurnTime = DataMgr.MovementParams.TurnTime.ParamValue or 0.5
   self.AccTime = DataMgr.MovementParams.AccTime.ParamValue or 0.1
+  local LockCameraOnTurnCfg = DataMgr.MovementParams.IsLockCamera
+  self.IsLockCameraOnTurn = LockCameraOnTurnCfg and LockCameraOnTurnCfg.ParamValue or 0
+  self.bTurnCameraLockActive = false
   self.bProximityPromptShowing = false
   self.CachedEntryDistance = nil
   self.CachedEntryProgress = nil
@@ -137,6 +140,16 @@ function BP_SlideSpline_C:UpdateLockedCamera(Rotation)
   if Controller then
     Controller:SetControlRotation(Rotation)
   end
+end
+
+function BP_SlideSpline_C:IsTurnCameraLockOn()
+  if self.LockCamera then
+    return true
+  end
+  if 1 == self.IsLockCameraOnTurn then
+    return true
+  end
+  return false
 end
 
 function BP_SlideSpline_C:GetAdjustLocation(Location, Player, Distance)
@@ -337,38 +350,40 @@ function BP_SlideSpline_C:RequestTurn()
   if self.PlayerInSwitch then
     return
   end
+  self.CurPlayer.CharacterMovement:SetMovementMode(UE4.EMovementMode.MOVE_Walking)
   self:AddTimer(0.01, self.StartTurn, false, 0)
 end
 
 function BP_SlideSpline_C:StartTurn()
   self.bIsTurning = true
   self.TurnElapsed = 0.0
-  self.TurnDuration = self:GetTurnAnimDuration("Locomotion")
-  DebugPrint("zwk StartTurn TurnDuration ", self.TurnDuration)
-  if self.TurnDuration <= 0 then
-    self.TurnDuration = 0.5
-  end
-  self.TurnStartRotation = self.CurPlayer:K2_GetActorRotation()
-  self.TurnTargetRotation = UE4.FRotator(self.TurnStartRotation.Pitch, self.TurnStartRotation.Yaw + 180.0, self.TurnStartRotation.Roll)
+  self.bTurnCameraLockActive = self:IsTurnCameraLockOn()
 end
 
 function BP_SlideSpline_C:TickTurn(DeltaSeconds)
   self.TurnElapsed = self.TurnElapsed + DeltaSeconds
-  local Alpha = math.min(self.TurnElapsed / self.TurnDuration, 1.0)
-  local NewRotation = UKismetMathLibrary.RLerp(self.TurnStartRotation, self.TurnTargetRotation, Alpha, true)
-  self.CurPlayer:K2_SetActorRotation(NewRotation, false)
-  self:UpdateLockedCamera(NewRotation)
-  if Alpha >= 0.95 then
+  if self.bTurnCameraLockActive and IsValid(self.CurPlayer) then
+    local Controller = self.CurPlayer:GetController()
+    if Controller and self.CurPlayer.Mesh then
+      local PlayerRot = self.CurPlayer.Mesh:GetSocketRotation("Root")
+      Controller:SetControlRotation(PlayerRot)
+    end
+  end
+  if self.TurnElapsed >= self.TurnTime then
     self:EndTurn()
   end
 end
 
 function BP_SlideSpline_C:EndTurn()
   self.bIsTurning = false
+  self.bTurnCameraLockActive = false
   self.MoveDirection = -self.MoveDirection
   if self.CurPlayer.PlayerAnimInstance then
     self.CurPlayer.InSlideMechTurning = false
     self.CurPlayer.PlayerAnimInstance.InSlideMechTurn = false
+  end
+  if self.CurPlayer.CharacterMovement then
+    self.CurPlayer.CharacterMovement:SetMovementMode(UE4.EMovementMode.MOVE_Flying)
   end
   self.CurPlayer.SlideMovingRate = 0.0
   self.bPostTurnAccel = true

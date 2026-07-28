@@ -274,6 +274,7 @@ function PageJumpUtils:CloseFrontDialog()
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
   local CommonDialog = UIManager:GetUI("CommonDialog")
+  CommonDialog = CommonDialog or UIManager:GetUIObj("CommonDialog")
   if CommonDialog then
     if CommonDialog.CloseBtnCallbackFunction then
       local Data = CommonDialog:PackageResult()
@@ -320,6 +321,10 @@ function PageJumpUtils:CloseFrontDialog()
   local CoopCreate = UIManager:GetUIObj("CoopCreate")
   if CoopCreate then
     CoopCreate:Close()
+  end
+  local GuildBossPointReward = UIManager:GetUI("GuildBossReward")
+  if GuildBossPointReward then
+    GuildBossPointReward:Close()
   end
 end
 
@@ -881,7 +886,7 @@ function PageJumpUtils:CreateJumpToDungeonAccess(CommonParam, ItemType, ItemId, 
       DungeonId = Value.DungeonId
       MonsterId = Value.MonsterId
       assert(DungeonInfo[DungeonId], "找不到DungeonInfo[" .. DungeonId .. "]")
-      DungeonAccessText = GText(DataMgr.Monster[DataMgr.ModDungeonMonReward[MonsterId].MonsterUnitId].UnitName) .. " Lv." .. DataMgr.Dungeon[DungeonId].DungeonLevel
+      DungeonAccessText = GText(DataMgr.Monster[DataMgr.ModDungeonMonReward[MonsterId].MonsterUnitId].UnitName) .. GText("UI_LEVEL_NAME") .. DataMgr.Dungeon[DungeonId].DungeonLevel
     end
     
     local function JumpToPage()
@@ -919,7 +924,7 @@ end
 function PageJumpUtils:CreateJumpToDungeonModAccess(CommonParam, ItemType, ItemId)
   assert(DataMgr.ModSelectDungeon[CommonParam.AccessParam], "Mod委托本配置参数错误, ", CommonParam.AccessKey)
   local AccessItem = self:CreateAccessItem(CommonParam.ItemWidget, CommonParam.AccessKey)
-  local DungeonAccessText = GText(CommonParam.AccessText) .. " Lv." .. GText(CommonParam.AccessParam)
+  local DungeonAccessText = GText(CommonParam.AccessText) .. GText("UI_LEVEL_NAME") .. GText(CommonParam.AccessParam)
   local JumpToPage
   
   function JumpToPage()
@@ -1292,6 +1297,9 @@ function PageJumpUtils:CreateJumpToHardBoss(ItemId, CommonParam)
   local bSystemUnlocked = false
   local bDifficultyUnlocked = false
   local bShowItem = false
+  local bHardBossUnlocked = true
+  local bHardBossUnlockeds = {}
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     if CommonParam and CommonParam.UIUnlockRuleId then
@@ -1301,6 +1309,7 @@ function PageJumpUtils:CreateJumpToHardBoss(ItemId, CommonParam)
     for _, HardBossData in pairs(DataMgr.HardbossMain) do
       for _, DifficultyId in pairs(HardBossData.DifficultyId) do
         table.insert(HardBossDifficultyIds, DifficultyId)
+        bHardBossUnlockeds[DifficultyId] = HardBossData.UnlockCondition
       end
     end
     local HardBossDifficulty = DataMgr.HardBossDifficulty
@@ -1324,11 +1333,14 @@ function PageJumpUtils:CreateJumpToHardBoss(ItemId, CommonParam)
           for i = 1, #Ids do
             local Id = Ids[i]
             if ItemId == Id then
-              TargetDifficultyID = HardBossDifficultyData.DifficultyID
-              if Avatar:CheckHardBossCondition(HardBossDifficultyData.DifficultyID) then
-                bDifficultyUnlocked = true
-                break
+              if Avatar:CheckCondition(bHardBossUnlockeds[HardBossDifficultyData.DifficultyID]) then
+                bHardBossUnlocked = false
               end
+              bDifficultyUnlocked = true
+              if not TargetDifficultyID then
+                TargetDifficultyID = HardBossDifficultyData.DifficultyID
+              end
+              break
             end
           end
         end
@@ -1345,10 +1357,11 @@ function PageJumpUtils:CreateJumpToHardBoss(ItemId, CommonParam)
   end
   
   local function JumpToPage()
-    local bIsUnLock = bSystemUnlocked and bDifficultyUnlocked
-    if not bIsUnLock then
+    if bHardBossUnlocked then
       local UIManager = GWorld.GameInstance:GetGameUIManager()
-      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("Toast_Access_HardBossUnlock"))
+      if bHardBossUnlocked then
+        UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_WalnutAccessTips_BossLocked"))
+      end
       return
     end
     local TargetHardBossId
@@ -2194,6 +2207,22 @@ function PageJumpUtils:SoloTreasureRepeatLevel(...)
   return true
 end
 
+function PageJumpUtils:SoloTreasurePermanentRepeatLevel(Mode, bIsDifficult, EventDungeonId)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GameInstance,
+    function(_, Flow)
+      self:JumpToStyleOfPlaySubUI("PlayCommon", true, "SoloTreasurePlaySubtabMain", Mode, bIsDifficult, EventDungeonId)
+      local StyleOfPlay = UIManager:GetUIObj("StyleOfPlay")
+      if StyleOfPlay then
+        UIManager:AddFlow("StyleOfPlay", Flow)
+      end
+    end
+  })
+  return true
+end
+
 function PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
@@ -2224,6 +2253,30 @@ function PageJumpUtils:JumpToSkinPreview(ItemData, ParentWidget)
     UIManager:PlaceJumpUIToTop(TargetUIPage, "SkinPreview")
     TargetUIPage:OnLoaded(ItemData, ParentWidget)
   end
+end
+
+function PageJumpUtils:AccessoryDropPhaseTwo(Params)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  UIManager:LoadUINew("AccessoryDropPhaseTwo")
+end
+
+function PageJumpUtils:JumpToWeaponVerify(CurTabIndex, CurrentSelectIndex)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityId = 103026
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      local PageConfigData = DataMgr.EventPortal[ActivityId]
+      if PageConfigData.JumpUIId then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId, ActivityId, CurrentSelectIndex)
+      end
+      UIManager:AddFlow("ActivityMain", Flow)
+    end
+  })
 end
 
 return PageJumpUtils

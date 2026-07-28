@@ -15,10 +15,6 @@ end
 function WBP_Abyss_Main_C:Destruct()
   self:DestructMgr()
   self:DestructAbyssMain()
-  local BattleView = UIManager():GetUIObj("BattleMain")
-  if BattleView then
-    BattleView:Show("Temp1.4Fix")
-  end
   self.Super.Destruct(self)
 end
 
@@ -147,7 +143,7 @@ function WBP_Abyss_Main_C:SetRewardParams()
             ReceiveParm = {
               SelectAbyssId = self.SelectAbyssId
             },
-            IsWalnutReward = RewardItem.WalnutReward
+            IsWalnutOrResourceReward = RewardItem.WalnutOrResourceReward
           }
           Rewards = {}
           local RewardItemId = RewardItem.Reward
@@ -229,19 +225,31 @@ function WBP_Abyss_Main_C:RefreshTipFragment(RewardItems)
     return
   end
   for _, Item in pairs(RewardItems) do
-    if Item.IsWalnutReward and Item.CanReceive then
+    if Item.IsWalnutOrResourceReward and Item.CanReceive then
       local AbyssSeasonId = Avatar.CurrentAbyssSeasonId
       if AbyssSeasonId and DataMgr.AbyssSeasonList[AbyssSeasonId] then
         local WalnutId = DataMgr.AbyssSeason[self.SelectAbyssId].WalnutId
-        local IconPath
+        local ResourceId = DataMgr.AbyssSeason[self.SelectAbyssId].ResourceId
         if WalnutId then
-          IconPath = DataMgr.Walnut[WalnutId].Icon
-        end
-        local CharId = DataMgr.AbyssSeasonList[AbyssSeasonId].CharId
-        if CharId then
-          local CharName = DataMgr.Char[CharId].CharName
+          local IconPath
+          if WalnutId then
+            IconPath = DataMgr.Walnut[WalnutId].Icon
+          end
+          local CharId = DataMgr.AbyssSeasonList[AbyssSeasonId].CharId
+          if CharId then
+            local CharName = DataMgr.Char[CharId].CharName
+            local Params = {
+              Text = string.format(GText("Abyss_CharReward_Walnut"), GText(CharName)),
+              IconPath = IconPath
+            }
+            self.Tip_Fragment:Init(Params)
+            self.Tip_Fragment:PlayInAnim()
+          end
+        elseif ResourceId then
+          local IconPath = DataMgr.Resource[ResourceId].Icon
+          local ResourceName = DataMgr.Resource[ResourceId].ResourceName
           local Params = {
-            Text = string.format(GText("Abyss_CharReward_Walnut"), GText(CharName)),
+            Text = string.format(GText("Abyss_harvest"), GText(ResourceName)),
             IconPath = IconPath
           }
           self.Tip_Fragment:Init(Params)

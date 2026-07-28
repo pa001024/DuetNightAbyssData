@@ -31,7 +31,11 @@ function M:UpdateImageWidget(ImagePath, Section, Input)
         self.ImageWidget:SetImageMaterial(MaterialInstance)
       end
     end
-    self.ImageWidget:PlayAnimation(self.ImageWidget.Recall)
+    if not Section.bPlayFlash then
+      self.ImageWidget:PlayAnimation(self.ImageWidget.Recall)
+    else
+      self.ImageWidget:PlayAnimation(self.ImageWidget.Recall_In)
+    end
   else
     self.ImageWidget:SetImage(DialogueImage)
   end

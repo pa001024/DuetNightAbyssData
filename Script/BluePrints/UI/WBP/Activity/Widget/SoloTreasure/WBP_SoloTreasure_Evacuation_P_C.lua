@@ -207,9 +207,22 @@ function M:ExitSoloTreasure()
   Avatar:ExitDungeonSettlement()
   EventManager:AddEvent(EventID.OnExitDungeon, self, self.DefaultExit)
   if self.IsStory == false then
+    local PlayEventId = self.SolotreasurePreInitInfo.Event
+    local IsPermanent = false
+    if PlayEventId and DataMgr.PermanentTreasureHunt then
+      for _, SeasonRow in pairs(DataMgr.PermanentTreasureHunt) do
+        if SeasonRow.SeasonEventId == PlayEventId then
+          IsPermanent = true
+          break
+        end
+      end
+    end
+    if IsPermanent then
+    end
     self.ExitDungeonData = {
       Type = "SoloTreasure",
-      EventId = nil,
+      IsPermanent = IsPermanent,
+      EventId = PlayEventId,
       Mode = 1,
       bIsDifficulty = not self.IsEasy,
       EventDungeonId = self.EventId

@@ -3,6 +3,7 @@ T.RT_1 = {7201}
 T.RT_2 = {7203}
 T.RT_3 = {7209}
 T.RT_4 = {7207}
+T.RT_5 = {7202}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -48,7 +49,7 @@ return ReadOnly("DailyGoalTask", {
     DailyTasktDes = "DailyTaskDes_10000105",
     JumpUIId = 19,
     QuestReward = T.RT_2,
-    RandomWeight = 60,
+    RandomWeight = 0,
     Target = 1,
     TargetId = {50930}
   },
@@ -166,8 +167,8 @@ return ReadOnly("DailyGoalTask", {
     DailyGoalTaskId = 10000117,
     DailyTasktDes = "DailyTaskDes_10000117",
     EntryCondition = 125,
-    QuestReward = {7202},
-    RandomWeight = 20,
+    QuestReward = T.RT_5,
+    RandomWeight = 0,
     Target = 1,
     TargetId = {50931}
   },
@@ -203,5 +204,34 @@ return ReadOnly("DailyGoalTask", {
     QuestReward = T.RT_1,
     Target = 10,
     TargetId = {1080201}
+  },
+  [10000122] = {
+    DailyGoalTaskId = 10000122,
+    DailyTasktDes = "DailyTaskDes_10000122",
+    EntryCondition = 125,
+    JumpUIId = 65,
+    QuestReward = T.RT_4,
+    RandomWeight = 20,
+    Target = 1,
+    TargetId = {50947}
+  },
+  [10000123] = {
+    DailyGoalTaskId = 10000123,
+    DailyTasktDes = "DailyTaskDes_10000105",
+    JumpUIId = 19,
+    QuestReward = T.RT_2,
+    RandomWeight = 60,
+    Target = 1,
+    TargetId = {50948}
+  },
+  [10000124] = {
+    DailyGoalTaskId = 10000124,
+    DailyTasktDes = "DailyTaskDes_10000117",
+    EntryCondition = 125,
+    JumpUIId = 19,
+    QuestReward = T.RT_5,
+    RandomWeight = 20,
+    Target = 1,
+    TargetId = {50949}
   }
 })

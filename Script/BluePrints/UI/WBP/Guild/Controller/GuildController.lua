@@ -229,6 +229,27 @@ function M.GetGuildMember(Members, CurUid)
   end
 end
 
+function M:NotifyGuildPropChanged(SrcParams, PropName, NewValue, OldValue, GuildInfo, ChangeKeys)
+  local CurrGuild = self:GetModel():GetCurrGuild()
+  if "Members" == PropName then
+    if not CurrGuild then
+      return
+    end
+    self:UpdateCurrGuildProp(ErrorCode.RET_SUCCESS, "Members", function()
+      CurrGuild.Members = {}
+      for i, MemberInfo in pairs(CommonUtils.BinaryDump(NewValue)) do
+        CurrGuild:AddMember(MemberInfo)
+      end
+      return CurrGuild.Members
+    end)
+  elseif "MemberCount" == PropName then
+    if not CurrGuild then
+      return
+    end
+    CurrGuild.MemberCount = NewValue
+  end
+end
+
 AssembleComponents(M)
 _G.GuildController = M
 return M

@@ -292,5 +292,31 @@ return ReadOnly("BattlePassMain", {
     SkyBoxColor = T.RT_4,
     WeaponSkinId = 3010408,
     WeeklyMaxExp = 8000
+  },
+  [100011] = {
+    BPRewardTemplateID = 100011,
+    BPRewardTyppe = "Skin",
+    BattlePassEndTime = LocalTimeProxy(1788771600),
+    BattlePassId = 100011,
+    BattlePassStartTime = LocalTimeProxy(1785142800),
+    BattlePassTitle = "UI_BPTitle_100011",
+    LevelExp = 500,
+    LevelLimit = 1000,
+    LoopFreeRewardId = T.RT_5,
+    LoopPaidRewardId = T.RT_6,
+    LoopRewardPeriod = 5,
+    MilestoneInterval = 5,
+    PetClaimLevel = 30,
+    PetId = T.RT_1,
+    PreviewSkinSeries = "BP_06_1",
+    Rank2GoodsId = "com.hero.dna.Pay_BattlePassRank2",
+    Rank2RewardView = 10001168,
+    Rank2to3GoodsId = "com.hero.dna.Pay_BattlePassRank2to3",
+    Rank3GoodsId = "com.hero.dna.Pay_BattlePassRank3",
+    Rank3Reward = 100011,
+    Rank3RewardView = 100011,
+    RewardMailId = 100401,
+    SkyBoxColor = T.RT_4,
+    WeeklyMaxExp = 8000
   }
 })

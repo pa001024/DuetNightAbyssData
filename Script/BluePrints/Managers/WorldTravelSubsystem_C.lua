@@ -1,4 +1,5 @@
 require("UnLua")
+local LuaMemoryManager = require("LuaMemoryManager")
 local WorldTravelSubsystem_C = Class()
 
 function WorldTravelSubsystem_C:ReceiveInitialize()

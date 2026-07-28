@@ -83,17 +83,16 @@ function M:Construct()
   self.CurMode = self.GameInputModeSubsystem:GetCurrentInputType()
   self:RefreshInfoByInputTypeChange(self.CurMode)
   self:InitAutoVote()
-  self:InitIronSurvivalInfo()
+  self:InitIronDungeonInfo()
 end
 
 function M:InitCustomDisplayType()
-  if GameState(self).GameModeType == "IronSurvival" then
-    self.IsType_IronSurvival = true
-  end
+  local DungeonInfo = DataMgr.IronSurvivalDungeon[GameState(self).DungeonId]
+  self.IsType_IronDungeon = nil ~= DungeonInfo
 end
 
-function M:InitIronSurvivalInfo()
-  if not self.IsType_IronSurvival then
+function M:InitIronDungeonInfo()
+  if not self.IsType_IronDungeon then
     return
   end
   local Avatar = GWorld:GetAvatar()
@@ -103,7 +102,7 @@ function M:InitIronSurvivalInfo()
   end
   local MonsterLevelDropId = Avatar.Dungeons[DungeonId].IronSurvivalDropId or -1
   local DisplayResourceId = DataMgr.MonsterLevelDrop[MonsterLevelDropId] and DataMgr.MonsterLevelDrop[MonsterLevelDropId].MonsterLevelDropView or -1
-  print(_G.LogTag, "LXZ InitIronSurvivalInfo MonsterLevelDropId", MonsterLevelDropId, "  DisplayResourceId", DisplayResourceId)
+  print(_G.LogTag, "LXZ InitIronDungeonInfo MonsterLevelDropId", MonsterLevelDropId, "  DisplayResourceId", DisplayResourceId)
   self.IronSurvivalTips = self:CreateWidgetNew("VoteIronExpTips")
   self.IronSurvivalTips:Init(DisplayResourceId)
   self.IronExpAnchor:AddChildToOverlay(self.IronSurvivalTips)

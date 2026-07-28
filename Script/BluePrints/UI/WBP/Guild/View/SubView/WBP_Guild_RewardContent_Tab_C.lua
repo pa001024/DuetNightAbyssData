@@ -21,6 +21,8 @@ function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Content.Entry = self
   self.IsSelect = false
+  self.IsForbidden = Content.IsForbidden
+  self.ForbiddenReasonText = Content.ForbiddenReasonText
   if self.Content.Root.SelectedContent and self.Content.Root.SelectedContent.Index == self.Content.Index then
     self.IsSelect = true
   end
@@ -32,6 +34,9 @@ function M:OnListItemObjectSet(Content)
   end
   if self.Content.Root and self.Content.Root.RefreshTabReddot then
     self.Content.Root:RefreshTabReddot()
+  end
+  if self.IsForbidden and self.Forbidden then
+    self:PlayAnimation(self.Forbidden)
   end
 end
 
@@ -56,11 +61,16 @@ function M:OnCellClicked(NotPlaySound)
     end
     return
   end
+  if self.IsForbidden then
+    local ToastText = self.ForbiddenReasonText or GText("GuildBossRewardNotOpen")
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, ToastText)
+    return
+  end
   self.Content.Root:RefreshListRewardInfo(self, NotPlaySound)
 end
 
 function M:OnCellHovered()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
@@ -73,7 +83,7 @@ function M:OnCellHovered()
 end
 
 function M:OnCellUnhovered()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   if not self:IsAnimationPlaying(self.Click) then
@@ -84,14 +94,14 @@ function M:OnCellUnhovered()
 end
 
 function M:OnCellPressed()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   self:PlayAnimation(self.Press)
 end
 
 function M:OnCellReleased()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   self:StopAnimation(self.Press)

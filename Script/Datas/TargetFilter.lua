@@ -115,464 +115,490 @@ T.RT_25 = {
   Type = "Cylinder"
 }
 T.RT_26 = {
-  CylinderHeight = 200,
+  0,
+  0,
+  50
+}
+T.RT_27 = {
+  CylinderHeight = 400,
   Radius = 350,
   Type = "Cylinder"
 }
-T.RT_27 = {
+T.RT_28 = {
+  HalfHeight = 200,
+  HalfWidth = 150,
+  Length = 800,
+  Type = "Rectangle"
+}
+T.RT_29 = {
   -500,
   0,
   0
 }
-T.RT_28 = {
+T.RT_30 = {
   CylinderHeight = 300,
   Radius = 300,
   Type = "Cylinder"
 }
-T.RT_29 = {
+T.RT_31 = {
   -1000,
   0,
   0
 }
-T.RT_30 = {
+T.RT_32 = {
   HalfHeight = 200,
   HalfWidth = 1000,
   Length = 2000,
   Type = "Rectangle"
 }
-T.RT_31 = {
+T.RT_33 = {
   HalfHeight = 200,
   HalfWidth = 235,
   Length = 1300,
   Type = "Rectangle"
 }
-T.RT_32 = {
+T.RT_34 = {
   0,
   40,
   0
 }
-T.RT_33 = {
+T.RT_35 = {
   0,
   -40,
   0
 }
-T.RT_34 = {
+T.RT_36 = {
   0,
   0,
   -180
 }
-T.RT_35 = {
+T.RT_37 = {
   CylinderHeight = 400,
   Radius = 300,
   Type = "Cylinder"
 }
-T.RT_36 = {
+T.RT_38 = {
   CylinderHeight = 200,
   Radius = 450,
   Type = "Cylinder"
 }
-T.RT_37 = {
+T.RT_39 = {
+  CylinderHeight = 200,
+  Radius = 350,
+  Type = "Cylinder"
+}
+T.RT_40 = {
   CrossHeight = 100,
   CrossLength = 750,
   CrossWidth = 110,
   Type = "Cross"
 }
-T.RT_38 = {
+T.RT_41 = {
   0,
   150,
   0
 }
-T.RT_39 = {
+T.RT_42 = {
   CylinderHeight = 350,
   Radius = 700,
   Type = "Cylinder"
 }
-T.RT_40 = {
+T.RT_43 = {
   0,
   315,
   0
 }
-T.RT_41 = {
+T.RT_44 = {
   0,
   0,
   10
 }
-T.RT_42 = {
+T.RT_45 = {
   0,
   0,
   -300
 }
-T.RT_43 = {
+T.RT_46 = {
   ActorName = "Lianhuo_Skill07"
 }
-T.RT_44 = {
+T.RT_47 = {
   CylinderHeight = 500,
   Radius = 800,
   Type = "Cylinder"
 }
-T.RT_45 = {Radius = 1500, Type = "Sphere"}
-T.RT_46 = {Radius = 4000, Type = "Sphere"}
-T.RT_47 = {
+T.RT_48 = {Radius = 1500, Type = "Sphere"}
+T.RT_49 = {Radius = 4000, Type = "Sphere"}
+T.RT_50 = {
   -666.666,
   0,
   0
 }
-T.RT_48 = {
+T.RT_51 = {
   HalfHeight = 100,
   HalfWidth = 1000,
   Length = 1333.333,
   Type = "Rectangle"
 }
-T.RT_49 = {Radius = 5000, Type = "Sphere"}
-T.RT_50 = {
+T.RT_52 = {Radius = 5000, Type = "Sphere"}
+T.RT_53 = {
   CylinderHeight = 500,
   Radius = 1200,
   Type = "Cylinder"
 }
-T.RT_51 = {
+T.RT_54 = {
   CylinderHeight = 500,
   Radius = 200,
   Type = "Cylinder"
 }
-T.RT_52 = {RingInnerRadius = 500.0}
-T.RT_53 = {
+T.RT_55 = {RingInnerRadius = 500.0}
+T.RT_56 = {
   CylinderHeight = 500,
   Radius = 1000,
   Type = "Cylinder"
 }
-T.RT_54 = {RingInnerRadius = 1000.0}
-T.RT_55 = {
+T.RT_57 = {RingInnerRadius = 1000.0}
+T.RT_58 = {
   CylinderHeight = 500,
   Radius = 1500,
   Type = "Cylinder"
 }
-T.RT_56 = {
+T.RT_59 = {
   CylinderHeight = 200,
   Radius = 500,
   Type = "Cylinder"
 }
-T.RT_57 = {
+T.RT_60 = {
   0,
   0,
   -350
 }
-T.RT_58 = {
+T.RT_61 = {
   HalfHeight = 100,
   HalfWidth = 150,
   Length = 1600,
   Type = "Rectangle"
 }
-T.RT_59 = {
+T.RT_62 = {
   CylinderHeight = 200,
   Radius = 1700,
   Type = "Cylinder"
 }
-T.RT_60 = {
+T.RT_63 = {
   HalfHeight = 100,
   HalfWidth = 200,
   Length = 2200,
   Type = "Rectangle"
 }
-T.RT_61 = {
+T.RT_64 = {
   CylinderHeight = 400,
   Radius = 650,
   Type = "Cylinder"
 }
-T.RT_62 = {Radius = 150, Type = "Sphere"}
-T.RT_63 = {Radius = 500, Type = "Sphere"}
-T.RT_64 = {
+T.RT_65 = {Radius = 150, Type = "Sphere"}
+T.RT_66 = {Radius = 500, Type = "Sphere"}
+T.RT_67 = {
   250,
   0,
   0
 }
-T.RT_65 = {
+T.RT_68 = {
   CylinderHeight = 350,
   Radius = 550,
   Type = "Cylinder"
 }
-T.RT_66 = {
+T.RT_69 = {
   CylinderHeight = 400,
   Radius = 250,
   Type = "Cylinder"
 }
-T.RT_67 = {
+T.RT_70 = {
   CylinderHeight = 500,
   Radius = 2500,
   Type = "Cylinder"
 }
-T.RT_68 = {
+T.RT_71 = {
   CylinderHeight = 500,
   Radius = 400,
   Type = "Cylinder"
 }
-T.RT_69 = {RingInnerRadius = 800}
-T.RT_70 = {
+T.RT_72 = {RingInnerRadius = 800}
+T.RT_73 = {
   CylinderHeight = 500,
   Radius = 3000,
   Type = "Cylinder"
 }
-T.RT_71 = {
+T.RT_74 = {
   CylinderHeight = 400,
   Radius = 600,
   Type = "Cylinder"
 }
-T.RT_72 = {
+T.RT_75 = {
   CylinderHeight = 400,
   Radius = 800,
   Type = "Cylinder"
 }
-T.RT_73 = {
+T.RT_76 = {
   50,
   0,
   0
 }
-T.RT_74 = {
+T.RT_77 = {
   100,
   0,
   0
 }
-T.RT_75 = {
+T.RT_78 = {
   CylinderHeight = 1000,
   Radius = 1500,
   Type = "Cylinder"
 }
-T.RT_76 = {
+T.RT_79 = {
   CylinderHeight = 1000,
   Radius = 1000,
   Type = "Cylinder"
 }
-T.RT_77 = {
+T.RT_80 = {
   CylinderHeight = 300,
   Radius = 1000,
   Type = "Cylinder"
 }
-T.RT_78 = {
+T.RT_81 = {
   550,
   -500,
   -550
 }
-T.RT_79 = {
+T.RT_82 = {
   CylinderHeight = 350,
   Radius = 320,
   Type = "Cylinder"
 }
-T.RT_80 = {
+T.RT_83 = {
   0,
   0,
   -550
 }
-T.RT_81 = {
+T.RT_84 = {
   CylinderHeight = 450,
   Radius = 600,
   Type = "Cylinder"
 }
-T.RT_82 = {
+T.RT_85 = {
   600,
   0,
   -550
 }
-T.RT_83 = {
+T.RT_86 = {
   CylinderHeight = 1100,
   Radius = 1400,
   Type = "Cylinder"
 }
-T.RT_84 = {RingInnerRadius = 1400.0}
-T.RT_85 = {
+T.RT_87 = {RingInnerRadius = 1400.0}
+T.RT_88 = {
   CylinderHeight = 1100,
   Radius = 1800,
   Type = "Cylinder"
 }
-T.RT_86 = {
+T.RT_89 = {
   CylinderHeight = 1100,
   Radius = 2200,
   Type = "Cylinder"
 }
-T.RT_87 = {
+T.RT_90 = {
   CylinderHeight = 800,
   Radius = 1300,
   Type = "Cylinder"
 }
-T.RT_88 = {Radius = 3000, Type = "Sphere"}
-T.RT_89 = {
+T.RT_91 = {Radius = 3000, Type = "Sphere"}
+T.RT_92 = {
   CylinderHeight = 200,
   Radius = 400,
   Type = "Cylinder"
 }
-T.RT_90 = {
+T.RT_93 = {
   0,
   0,
   90
 }
-T.RT_91 = {
+T.RT_94 = {
   0,
   0,
   -60
 }
-T.RT_92 = {
+T.RT_95 = {
   HalfHeight = 60,
   HalfWidth = 315,
   Length = 833,
   Type = "Rectangle"
 }
-T.RT_93 = {
+T.RT_96 = {
   HalfHeight = 100,
   HalfWidth = 165,
   Length = 1500,
   Type = "Rectangle"
 }
-T.RT_94 = {
+T.RT_97 = {
   0,
   0,
   -50
 }
-T.RT_95 = {
+T.RT_98 = {
   CylinderHeight = 75,
   Radius = 450,
   Type = "Cylinder"
 }
-T.RT_96 = {
+T.RT_99 = {
   CylinderHeight = 600,
   Radius = 300,
   Type = "Cylinder"
 }
-T.RT_97 = {RingInnerRadius = 700.0}
-T.RT_98 = {
+T.RT_100 = {RingInnerRadius = 700.0}
+T.RT_101 = {
   CylinderHeight = 100,
   Radius = 2100,
   Type = "Cylinder"
 }
-T.RT_99 = {
+T.RT_102 = {
   CylinderHeight = 1500,
   Radius = 2500,
   Type = "Cylinder"
 }
-T.RT_100 = {
+T.RT_103 = {
   CylinderHeight = 400,
   Radius = 1200,
   Type = "Cylinder"
 }
-T.RT_101 = {
+T.RT_104 = {
   CrossHeight = 1000,
   CrossLength = 2500,
   CrossWidth = 600,
   Type = "Cross"
 }
-T.RT_102 = {
+T.RT_105 = {
   CylinderHeight = 500,
   Radius = 4000,
   Type = "Cylinder"
 }
-T.RT_103 = {
+T.RT_106 = {
   CylinderHeight = 400,
   Radius = 500,
   Type = "Cylinder"
 }
-T.RT_104 = {
+T.RT_107 = {
   CylinderHeight = 800,
   Radius = 1000,
   Type = "Cylinder"
 }
-T.RT_105 = {
+T.RT_108 = {
   Center = "Camera",
   ConeAngle = 20,
   ConeHeight = 3600,
   Direction = "Camera",
   Type = "Cone"
 }
-T.RT_106 = {
+T.RT_109 = {
   CylinderHeight = 400,
   Radius = 1000,
   Type = "Cylinder"
 }
-T.RT_107 = {
+T.RT_110 = {
   Center = "Target",
   CylinderHeight = 400,
   Radius = 600,
   Type = "Cylinder"
 }
-T.RT_108 = {
+T.RT_111 = {
   CylinderHeight = 400,
   Radius = 2000,
   Type = "Cylinder"
 }
-T.RT_109 = {
+T.RT_112 = {
   Center = "Target",
   Radius = 600,
   Type = "Sphere"
 }
-T.RT_110 = {
+T.RT_113 = {
   HalfHeight = 400,
   HalfWidth = 300,
   Length = 1000,
   Type = "Rectangle"
 }
-T.RT_111 = {Radius = 200, Type = "Sphere"}
-T.RT_112 = {Radius = 300, Type = "Sphere"}
-T.RT_113 = {Radius = 600, Type = "Sphere"}
-T.RT_114 = {
+T.RT_114 = {Radius = 200, Type = "Sphere"}
+T.RT_115 = {Radius = 300, Type = "Sphere"}
+T.RT_116 = {Radius = 600, Type = "Sphere"}
+T.RT_117 = {
   Center = "Target",
   Radius = 300,
   Type = "Sphere"
 }
-T.RT_115 = {Radius = 2000, Type = "Sphere"}
-T.RT_116 = {Radius = 1000, Type = "Sphere"}
-T.RT_117 = {
+T.RT_118 = {Radius = 2000, Type = "Sphere"}
+T.RT_119 = {Radius = 1000, Type = "Sphere"}
+T.RT_120 = {
+  CylinderHeight = 3000,
+  Radius = 5000,
+  Type = "Cylinder"
+}
+T.RT_121 = {
   0,
   0,
   55
 }
-T.RT_118 = {
+T.RT_122 = {
   0,
   0,
   -10
 }
-T.RT_119 = {ConditionId = 82}
-T.RT_120 = {ConditionId = 10002}
-T.RT_121 = {ConditionId = 10001}
-T.RT_122 = {
+T.RT_123 = {ConditionId = 82}
+T.RT_124 = {ConditionId = 10002}
+T.RT_125 = {ConditionId = 10001}
+T.RT_126 = {
   CylinderHeight = 40,
   Radius = 500,
   Type = "Cylinder"
 }
-T.RT_123 = {Radius = 800, Type = "Sphere"}
-T.RT_124 = {
+T.RT_127 = {Radius = 800, Type = "Sphere"}
+T.RT_128 = {
+  CylinderHeight = 200,
+  Radius = 150,
+  Type = "Cylinder"
+}
+T.RT_129 = {
   CylinderHeight = 500,
   Radius = 2000,
   Type = "Cylinder"
 }
-T.RT_125 = {
+T.RT_130 = {
   CylinderHeight = 200,
   Radius = 200,
   Type = "Cylinder"
 }
-T.RT_126 = {
+T.RT_131 = {
   CylinderHeight = 300,
   Radius = 230,
   Type = "Cylinder"
 }
-T.RT_127 = {
+T.RT_132 = {
   -150,
   0,
   0
 }
-T.RT_128 = {
+T.RT_133 = {
   40,
   -30,
   0
 }
-T.RT_129 = {
+T.RT_134 = {
   CylinderHeight = 40,
   Radius = 300,
   Type = "Cylinder"
 }
-T.RT_130 = {Radius = 20, Type = "Sphere"}
-T.RT_131 = {Radius = 50, Type = "Sphere"}
-T.RT_132 = {
+T.RT_135 = {Radius = 20, Type = "Sphere"}
+T.RT_136 = {Radius = 50, Type = "Sphere"}
+T.RT_137 = {
   CylinderHeight = 2000,
   Radius = 1000,
   Type = "Cylinder"
 }
-T.RT_133 = {
+T.RT_138 = {
   CrossHeight = 400,
   CrossLength = 750,
   CrossWidth = 200,
@@ -1131,33 +1157,86 @@ return ReadOnly("TargetFilter", {
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_25
   },
-  BossJishi_Attack01 = {
+  BossJishi_Skill01_01 = {
     CampFilter = "Enemy",
-    ID = "BossJishi_Attack01",
+    CenterOffset = T.RT_26,
+    ID = "BossJishi_Skill01_01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_26,
+    LuaFilterParaments = T.RT_27,
     RangeAngle = 180
   },
-  BossJishi_Attack02 = {
+  BossJishi_Skill01_02 = {
     CampFilter = "Enemy",
-    ID = "BossJishi_Attack02",
-    LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_26
-  },
-  BossJishi_Skill02 = {
-    CampFilter = "Enemy",
-    ID = "BossJishi_Skill02",
+    CenterOffset = {
+      0,
+      0,
+      100
+    },
+    ID = "BossJishi_Skill01_02",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
-      HalfHeight = 100,
-      HalfWidth = 100,
-      Length = 800,
-      Type = "Rectangle"
-    }
+      CylinderHeight = 700,
+      Radius = 350,
+      Type = "Cylinder"
+    },
+    RangeAngle = 270
+  },
+  BossJishi_Skill01_03 = {
+    CampFilter = "Enemy",
+    CenterOffset = T.RT_26,
+    ID = "BossJishi_Skill01_03",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_27
+  },
+  BossJishi_Skill02_01 = {
+    CampFilter = "Enemy",
+    CenterOffset = {
+      40,
+      -50,
+      30
+    },
+    ID = "BossJishi_Skill02_01",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_28
+  },
+  BossJishi_Skill02_02 = {
+    CampFilter = "Enemy",
+    CenterOffset = {
+      15,
+      -50,
+      30
+    },
+    ID = "BossJishi_Skill02_02",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_28
+  },
+  BossJishi_Skill04 = {
+    CampFilter = "Enemy",
+    ID = "BossJishi_Skill04",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_27
+  },
+  BossJishi_Skill06_01 = {
+    CampFilter = "Enemy",
+    CenterOffset = {
+      100,
+      0,
+      50
+    },
+    ID = "BossJishi_Skill06_01",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_27
+  },
+  BossJishi_Skill06_02 = {
+    CampFilter = "Enemy",
+    CenterOffset = T.RT_26,
+    ID = "BossJishi_Skill06_02",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_25
   },
   BossJuque_Creature_Rectangle = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_27,
+    CenterOffset = T.RT_29,
     ID = "BossJuque_Creature_Rectangle",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -1176,22 +1255,22 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossJuque_Skill01_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_28,
+    LuaFilterParaments = T.RT_30,
     RangeAngle = 180
   },
   BossJuque_Skill09_Rectangle = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_29,
+    CenterOffset = T.RT_31,
     ID = "BossJuque_Skill09_Rectangle",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_30
+    LuaFilterParaments = T.RT_32
   },
   BossJuque_Skill10_Rectangle = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_29,
+    CenterOffset = T.RT_31,
     ID = "BossJuque_Skill10_Rectangle",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_30
+    LuaFilterParaments = T.RT_32
   },
   BossJuque_Skill11_Rectangle = {
     CampFilter = "Enemy",
@@ -1202,8 +1281,8 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossJuque_Skill11_Rectangle",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_31,
-    Rotation = T.RT_32
+    LuaFilterParaments = T.RT_33,
+    Rotation = T.RT_34
   },
   BossJuque_Skill12_Rectangle = {
     CampFilter = "Enemy",
@@ -1214,12 +1293,12 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossJuque_Skill12_Rectangle",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_31,
-    Rotation = T.RT_33
+    LuaFilterParaments = T.RT_33,
+    Rotation = T.RT_35
   },
   BossJushi_Passive_Dot = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_34,
+    CenterOffset = T.RT_36,
     ID = "BossJushi_Passive_Dot",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -1258,13 +1337,13 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossJushi_Skill07_Burst",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_35
+    LuaFilterParaments = T.RT_37
   },
   BossKuxiu_Attack = {
     CampFilter = "Enemy",
     ID = "BossKuxiu_Attack",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_36,
+    LuaFilterParaments = T.RT_38,
     RangeAngle = 180
   },
   BossKuxiu_ShockWave = {
@@ -1286,7 +1365,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossKuxiu_Skill01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_26
+    LuaFilterParaments = T.RT_39
   },
   BossLianhuo_Skill01_Cross = {
     CampFilter = "Enemy",
@@ -1297,17 +1376,17 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossLianhuo_Skill01_Cross",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_37,
+    LuaFilterParaments = T.RT_40,
     Rotation = T.RT_23
   },
   BossLianhuo_Skill01_Cylinder_01 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_38,
+    CenterOffset = T.RT_41,
     ID = "BossLianhuo_Skill01_Cylinder_01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_39,
+    LuaFilterParaments = T.RT_42,
     RangeAngle = 250,
-    Rotation = T.RT_40
+    Rotation = T.RT_43
   },
   BossLianhuo_Skill01_Cylinder_02 = {
     CampFilter = "Enemy",
@@ -1318,7 +1397,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossLianhuo_Skill01_Cylinder_02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_39,
+    LuaFilterParaments = T.RT_42,
     RangeAngle = 250,
     Rotation = {
       0,
@@ -1338,30 +1417,30 @@ return ReadOnly("TargetFilter", {
   },
   BossLianhuo_Skill02_Cylinder_01 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_38,
+    CenterOffset = T.RT_41,
     ID = "BossLianhuo_Skill02_Cylinder_01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_39,
+    LuaFilterParaments = T.RT_42,
     RangeAngle = 250,
-    Rotation = T.RT_41
+    Rotation = T.RT_44
   },
   BossLianhuo_Skill02_Cylinder_02 = {
     CampFilter = "Enemy",
     CenterOffset = T.RT_10,
     ID = "BossLianhuo_Skill02_Cylinder_02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_39,
+    LuaFilterParaments = T.RT_42,
     RangeAngle = 250,
-    Rotation = T.RT_40
+    Rotation = T.RT_43
   },
   BossLianhuo_Skill02_Cylinder_03 = {
     CampFilter = "Enemy",
     CenterOffset = T.RT_10,
     ID = "BossLianhuo_Skill02_Cylinder_03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_39,
+    LuaFilterParaments = T.RT_42,
     RangeAngle = 250,
-    Rotation = T.RT_41
+    Rotation = T.RT_44
   },
   BossLianhuo_Skill03_Cylinder = {
     CampFilter = "Enemy",
@@ -1377,7 +1456,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLianhuo_Skill04_Cross",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_37
+    LuaFilterParaments = T.RT_40
   },
   BossLianhuo_Skill05_Cross = {
     CampFilter = "Enemy",
@@ -1392,7 +1471,7 @@ return ReadOnly("TargetFilter", {
   },
   BossLianhuo_Skill06_Cylinder = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_42,
+    CenterOffset = T.RT_45,
     ID = "BossLianhuo_Skill06_Cylinder",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_24
@@ -1410,11 +1489,11 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLianhuo_Skill07_GetActor",
     LuaFilter = "GetActor",
-    LuaFilterParaments = T.RT_43
+    LuaFilterParaments = T.RT_46
   },
   BossLianhuo_Skill07_Select = {
     BPFilter = "Grab_SelectRandomOne",
-    BPFilterVars = T.RT_43,
+    BPFilterVars = T.RT_46,
     CampFilter = "Enemy",
     ID = "BossLianhuo_Skill07_Select",
     LuaFilter = "CheckRangeHit",
@@ -1426,10 +1505,10 @@ return ReadOnly("TargetFilter", {
   },
   BossLianhuo_Skill08_Cylinder = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_42,
+    CenterOffset = T.RT_45,
     ID = "BossLianhuo_Skill08_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_44
+    LuaFilterParaments = T.RT_47
   },
   BossLianhuo_Skill08_Field = {
     BPFilter = "Mon_DisFilter",
@@ -1462,27 +1541,27 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLiecheBomb_Burst",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_45
+    LuaFilterParaments = T.RT_48
   },
   BossLiecheBomb_FindNLink = {
     CampFilter = "OtherFriend",
     ID = "BossLiecheBomb_FindNLink",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_46
+    LuaFilterParaments = T.RT_49
   },
   BossLiecheBomb_Skill01Burst = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_47,
+    CenterOffset = T.RT_50,
     ID = "BossLiecheBomb_Skill01Burst",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_48
+    LuaFilterParaments = T.RT_51
   },
   BossLiecheCannon_Skill0101 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_47,
+    CenterOffset = T.RT_50,
     ID = "BossLiecheCannon_Skill0101",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_48
+    LuaFilterParaments = T.RT_51
   },
   BossLiecheCannon_Skill0501 = {
     CampFilter = "Enemy",
@@ -1503,7 +1582,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLiecheCannon_Skill06AccTarget",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_49
+    LuaFilterParaments = T.RT_52
   },
   BossLiecheCannon_Skill09AllLieche = {
     CampFilter = "Enemy",
@@ -1531,11 +1610,7 @@ return ReadOnly("TargetFilter", {
   },
   BossLiecheCannon_Skill09Step01 = {
     CampFilter = "Enemy",
-    CenterOffset = {
-      0,
-      0,
-      50
-    },
+    CenterOffset = T.RT_26,
     ID = "BossLiecheCannon_Skill09Step01",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -1560,27 +1635,27 @@ return ReadOnly("TargetFilter", {
     CenterOffset = T.RT_7,
     ID = "BossLiecheCannon_Skill09Step03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_50
+    LuaFilterParaments = T.RT_53
   },
   BossLiecheCore_FindSCoreReal = {
     BPFilter = "Mon_BossLieche_FindSCoreReal",
     CampFilter = "OtherFriend",
     ID = "BossLiecheCore_FindSCoreReal",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_49
+    LuaFilterParaments = T.RT_52
   },
   BossLiecheCore_KillAllSCore = {
     BPFilter = "Mon_BossLieche_KillAllSCore",
     CampFilter = "OtherFriend",
     ID = "BossLiecheCore_KillAllSCore",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_49
+    LuaFilterParaments = T.RT_52
   },
   BossLiecheCore_Skill02Burst = {
     CampFilter = "Enemy",
     ID = "BossLiecheCore_Skill02Burst",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_51
+    LuaFilterParaments = T.RT_54
   },
   BossLiecheCore_Skill05Burst1 = {
     CampFilter = "Enemy",
@@ -1590,26 +1665,26 @@ return ReadOnly("TargetFilter", {
   },
   BossLiecheCore_Skill05Burst2 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_52,
+    BPFilterVars = T.RT_55,
     CampFilter = "Enemy",
     ID = "BossLiecheCore_Skill05Burst2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_53
+    LuaFilterParaments = T.RT_56
   },
   BossLiecheCore_Skill05Burst3 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_54,
+    BPFilterVars = T.RT_57,
     CampFilter = "Enemy",
     ID = "BossLiecheCore_Skill05Burst3",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_55
+    LuaFilterParaments = T.RT_58
   },
   BossLiecheHand_FindLiecheHand = {
     BPFilter = "Mon_BossLieche_ChooseFixer",
     CampFilter = "OtherFriend",
     ID = "BossLiecheHand_FindLiecheHand",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_46
+    LuaFilterParaments = T.RT_49
   },
   BossLiecheHand_Skill01 = {
     CampFilter = "Enemy",
@@ -1620,47 +1695,47 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossLiecheHand_Skill01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_56
+    LuaFilterParaments = T.RT_59
   },
   BossLiecheHand_Skill0201 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_57,
+    CenterOffset = T.RT_60,
     ID = "BossLiecheHand_Skill0201",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_58
+    LuaFilterParaments = T.RT_61
   },
   BossLiecheHand_Skill0202 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_57,
+    CenterOffset = T.RT_60,
     ID = "BossLiecheHand_Skill0202",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_59,
+    LuaFilterParaments = T.RT_62,
     RangeAngle = 90,
     Rotation = T.RT_22
   },
   BossLiecheHand_Skill0301 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_57,
+    CenterOffset = T.RT_60,
     ID = "BossLiecheHand_Skill0301",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_59,
+    LuaFilterParaments = T.RT_62,
     RangeAngle = 90,
     Rotation = T.RT_23
   },
   BossLiecheHand_Skill0401 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_57,
+    CenterOffset = T.RT_60,
     ID = "BossLiecheHand_Skill0401",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_58,
+    LuaFilterParaments = T.RT_61,
     Rotation = T.RT_21
   },
   BossLiecheHand_Skill0402 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_57,
+    CenterOffset = T.RT_60,
     ID = "BossLiecheHand_Skill0402",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_59,
+    LuaFilterParaments = T.RT_62,
     RangeAngle = 180
   },
   BossLiecheHand_Skill0601 = {
@@ -1672,8 +1747,8 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossLiecheHand_Skill0601",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_60,
-    Rotation = T.RT_33
+    LuaFilterParaments = T.RT_63,
+    Rotation = T.RT_35
   },
   BossLiecheHand_Skill0602 = {
     CampFilter = "Enemy",
@@ -1700,14 +1775,14 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossLiecheHand_Skill0603",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_60,
-    Rotation = T.RT_32
+    LuaFilterParaments = T.RT_63,
+    Rotation = T.RT_34
   },
   BossLinen_Skill01 = {
     CampFilter = "Enemy",
     ID = "BossLinen_Skill01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_61,
+    LuaFilterParaments = T.RT_64,
     RangeAngle = 240
   },
   BossLinen_Skill02_Scene = {
@@ -1724,7 +1799,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLinen_Skill03_Scene1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_62
+    LuaFilterParaments = T.RT_65
   },
   BossLinen_Skill03_Scene2 = {
     CampFilter = "Enemy",
@@ -1736,7 +1811,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLinen_Skill06_Scene1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   BossLinen_Skill06_Scene2 = {
     CampFilter = "Enemy",
@@ -1754,7 +1829,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLinen_Skill07_Scene",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   BossLizhan_Skill01_HalfCylinder = {
     CampFilter = "Enemy",
@@ -1769,7 +1844,7 @@ return ReadOnly("TargetFilter", {
   },
   BossLizhan_Skill02_Cylinder = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_64,
+    CenterOffset = T.RT_67,
     ID = "BossLizhan_Skill02_Cylinder",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -1782,7 +1857,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLizhan_Skill04_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_65
+    LuaFilterParaments = T.RT_68
   },
   BossLizhan_Skill04_HalfCylinder = {
     CampFilter = "Enemy",
@@ -1799,7 +1874,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLizhan_Skill05_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_66
+    LuaFilterParaments = T.RT_69
   },
   BossLizhan_Skill07_Cylinder_120 = {
     CampFilter = "Enemy",
@@ -1826,7 +1901,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossLizhan_Skill11_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_65
+    LuaFilterParaments = T.RT_68
   },
   BossOnline_FilterT = {
     BPFilter = "Mon_FilterBuffType",
@@ -1859,14 +1934,14 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill01Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 180
   },
   BossOnline_Skill01Cylinder2 = {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill01Cylinder2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 180
   },
   BossOnline_Skill02Cylinder1 = {
@@ -1883,7 +1958,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill04Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_68
+    LuaFilterParaments = T.RT_71
   },
   BossOnline_Skill05Damage = {
     BPFilter = "Mon_DisFilter",
@@ -1891,7 +1966,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill05Damage",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67
+    LuaFilterParaments = T.RT_70
   },
   BossOnline_Skill06Damage = {
     CampFilter = "Enemy",
@@ -1905,11 +1980,11 @@ return ReadOnly("TargetFilter", {
   },
   BossOnline_Skill07Damage = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_69,
+    BPFilterVars = T.RT_72,
     CampFilter = "Enemy",
     ID = "BossOnline_Skill07Damage",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67
+    LuaFilterParaments = T.RT_70
   },
   BossOnline_Skill10Damage = {
     CampFilter = "Enemy",
@@ -1927,7 +2002,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill12Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 60,
     Rotation = T.RT_10
   },
@@ -1935,7 +2010,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill12Cylinder2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 60,
     Rotation = {
       0,
@@ -1947,7 +2022,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill12Cylinder3",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 60,
     Rotation = {
       0,
@@ -1959,7 +2034,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill12Cylinder4",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 60,
     Rotation = T.RT_16
   },
@@ -1967,7 +2042,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill12Cylinder5",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 60,
     Rotation = {
       0,
@@ -1979,7 +2054,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill12Cylinder6",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_67,
+    LuaFilterParaments = T.RT_70,
     RangeAngle = 60,
     Rotation = {
       0,
@@ -2015,7 +2090,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill14Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_44
+    LuaFilterParaments = T.RT_47
   },
   BossOnline_Skill14SPTarget01 = {
     BPFilter = "Mon_SpecificTarget",
@@ -2039,21 +2114,21 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill15Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_50,
+    LuaFilterParaments = T.RT_53,
     RangeAngle = 100
   },
   BossOnline_Skill16Cylinder1 = {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill16Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_68,
+    LuaFilterParaments = T.RT_71,
     RangeAngle = 180
   },
   BossOnline_Skill18Cylinder1 = {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill18Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_70,
+    LuaFilterParaments = T.RT_73,
     RangeAngle = 180,
     Rotation = T.RT_12
   },
@@ -2061,7 +2136,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossOnline_Skill19Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_70,
+    LuaFilterParaments = T.RT_73,
     RangeAngle = 180,
     Rotation = T.RT_21
   },
@@ -2079,13 +2154,13 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossRobot_Skill02_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71
+    LuaFilterParaments = T.RT_74
   },
   BossRobot_Skill06_Cylinder = {
     CampFilter = "Enemy",
     ID = "BossRobot_Skill06_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_72
+    LuaFilterParaments = T.RT_75
   },
   BossRobot_Skill07_Cylinder = {
     CampFilter = "Enemy",
@@ -2116,15 +2191,15 @@ return ReadOnly("TargetFilter", {
   },
   BossSaiqi_Skill01_Cylinder_450_200_270 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_73,
+    CenterOffset = T.RT_76,
     ID = "BossSaiqi_Skill01_Cylinder_450_200_270",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_36,
+    LuaFilterParaments = T.RT_38,
     RangeAngle = 270
   },
   BossSaiqi_Skill04_Cylinder_300_200_360 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_74,
+    CenterOffset = T.RT_77,
     ID = "BossSaiqi_Skill04_Cylinder_300_200_360",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_18
@@ -2149,11 +2224,11 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossSaiqi_Skill10_Cylinder_1500_1000_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_75
+    LuaFilterParaments = T.RT_78
   },
   BossSaiqi_Skill13_Cylinder_300_200_360 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_64,
+    CenterOffset = T.RT_67,
     ID = "BossSaiqi_Skill13_Cylinder_300_200_360",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_18
@@ -2162,7 +2237,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossSaiqi_Skill23_Cylinder_1000_1000_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_76
+    LuaFilterParaments = T.RT_79
   },
   BossSaiqi_Skill23_Cylinder_3500_1000_360 = {
     CampFilter = "Enemy",
@@ -2178,7 +2253,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossShenpan_GroundHit",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_51
+    LuaFilterParaments = T.RT_54
   },
   BossShenpan_Skill07 = {
     CampFilter = "Enemy",
@@ -2189,7 +2264,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossShenpan_Skill07",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_36,
+    LuaFilterParaments = T.RT_38,
     RangeAngle = 180
   },
   BossShenpan_Skill08 = {
@@ -2208,7 +2283,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossShijingzhe_Cylinder_1000_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_77
+    LuaFilterParaments = T.RT_80
   },
   BossShijingzhe_Cylinder_100_100_360 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
@@ -2224,25 +2299,25 @@ return ReadOnly("TargetFilter", {
   BossShijingzhe_Cylinder_320_250_360 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_78,
+    CenterOffset = T.RT_81,
     ID = "BossShijingzhe_Cylinder_320_250_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_79
+    LuaFilterParaments = T.RT_82
   },
   BossShijingzhe_Cylinder_600_200_360 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
     ID = "BossShijingzhe_Cylinder_600_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71
+    LuaFilterParaments = T.RT_74
   },
   BossShijingzhe_Cylinder_600_350_360 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Cylinder_600_350_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_81
+    LuaFilterParaments = T.RT_84
   },
   BossShijingzhe_Cylinder_skill12_L = {
     BPFilter = "Mon_ExceptShijingzhePillar",
@@ -2254,7 +2329,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossShijingzhe_Cylinder_skill12_L",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_81
+    LuaFilterParaments = T.RT_84
   },
   BossShijingzhe_Cylinder_skill12_R = {
     BPFilter = "Mon_ExceptShijingzhePillar",
@@ -2266,7 +2341,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossShijingzhe_Cylinder_skill12_R",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_81
+    LuaFilterParaments = T.RT_84
   },
   BossShijingzhe_Skill01_L = {
     BPFilter = "Mon_ExceptShijingzhePillar",
@@ -2297,10 +2372,10 @@ return ReadOnly("TargetFilter", {
   BossShijingzhe_Skill02_Cylinder01 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_78,
+    CenterOffset = T.RT_81,
     ID = "BossShijingzhe_Skill02_Cylinder01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_79
+    LuaFilterParaments = T.RT_82
   },
   BossShijingzhe_Skill02_Cylinder02 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
@@ -2328,7 +2403,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossShijingzhe_Skill03_Cylinder_1000_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_77
+    LuaFilterParaments = T.RT_80
   },
   BossShijingzhe_Skill05_RushPillar = {
     BPFilter = "Mon_ShijingzhePillar",
@@ -2340,12 +2415,12 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossShijingzhe_Skill05_RushPillar",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_61
+    LuaFilterParaments = T.RT_64
   },
   BossShijingzhe_Skill07_Cylinder01 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_82,
+    CenterOffset = T.RT_85,
     ID = "BossShijingzhe_Skill07_Cylinder01",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -2357,15 +2432,15 @@ return ReadOnly("TargetFilter", {
   BossShijingzhe_Skill07_Cylinder02 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_82,
+    CenterOffset = T.RT_85,
     ID = "BossShijingzhe_Skill07_Cylinder02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_39
+    LuaFilterParaments = T.RT_42
   },
   BossShijingzhe_Skill07_Cylinder03 = {
     BPFilter = "Mon_ExceptShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_82,
+    CenterOffset = T.RT_85,
     ID = "BossShijingzhe_Skill07_Cylinder03",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -2376,59 +2451,59 @@ return ReadOnly("TargetFilter", {
   },
   BossShijingzhe_Skill11_Donut01 = {
     BPFilter = "Mon_ShijingzheSkill11",
-    BPFilterVars = T.RT_54,
+    BPFilterVars = T.RT_57,
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill11_Donut01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_83,
+    LuaFilterParaments = T.RT_86,
     RangeAngle = 120
   },
   BossShijingzhe_Skill11_Donut01_Pillar = {
     BPFilter = "Mon_ShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill11_Donut01_Pillar",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_83,
+    LuaFilterParaments = T.RT_86,
     RangeAngle = 120
   },
   BossShijingzhe_Skill11_Donut02 = {
     BPFilter = "Mon_ShijingzheSkill11",
-    BPFilterVars = T.RT_84,
+    BPFilterVars = T.RT_87,
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill11_Donut02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_85,
+    LuaFilterParaments = T.RT_88,
     RangeAngle = 120
   },
   BossShijingzhe_Skill11_Donut02_Pillar = {
     BPFilter = "Mon_ShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill11_Donut02_Pillar",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_85,
+    LuaFilterParaments = T.RT_88,
     RangeAngle = 120
   },
   BossShijingzhe_Skill11_Donut03 = {
     BPFilter = "Mon_ShijingzheSkill11",
     BPFilterVars = {RingInnerRadius = 1800.0},
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill11_Donut03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_86,
+    LuaFilterParaments = T.RT_89,
     RangeAngle = 120
   },
   BossShijingzhe_Skill11_Donut03_Pillar = {
     BPFilter = "Mon_ShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill11_Donut03_Pillar",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_86,
+    LuaFilterParaments = T.RT_89,
     RangeAngle = 120
   },
   BossShijingzhe_Skill13_GetActor = {
@@ -2443,19 +2518,19 @@ return ReadOnly("TargetFilter", {
     BPFilter = "Mon_ShijingzheSkill11",
     BPFilterVars = {RingInnerRadius = 300.0},
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill13_Howl",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_87,
+    LuaFilterParaments = T.RT_90,
     RangeAngle = 120
   },
   BossShijingzhe_Skill13_Howl_Pillar = {
     BPFilter = "Mon_ShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill13_Howl_Pillar",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_87,
+    LuaFilterParaments = T.RT_90,
     RangeAngle = 120
   },
   BossShijingzhe_Skill13_Select = {
@@ -2465,10 +2540,10 @@ return ReadOnly("TargetFilter", {
       RingInnerRadius = 300.0
     },
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill13_Select",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_87,
+    LuaFilterParaments = T.RT_90,
     RangeAngle = 120
   },
   BossShijingzhe_Skill15Target = {
@@ -2480,7 +2555,7 @@ return ReadOnly("TargetFilter", {
   BossShijingzhe_Skill15_ClearPillar = {
     BPFilter = "Mon_ShijingzhePillar",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_80,
+    CenterOffset = T.RT_83,
     ID = "BossShijingzhe_Skill15_ClearPillar",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -2494,7 +2569,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossShijingzhe_Sphere_3000_360_NoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_88
+    LuaFilterParaments = T.RT_91
   },
   BossShijingzhe_Target = {
     BPFilter = "Mon_ExceptShijingzhePillar",
@@ -2507,7 +2582,7 @@ return ReadOnly("TargetFilter", {
     CenterOffset = T.RT_10,
     ID = "BossTuisheng_Skill01_Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_89,
+    LuaFilterParaments = T.RT_92,
     RangeAngle = 180
   },
   BossTuisheng_Skill01_Cylinder2 = {
@@ -2517,16 +2592,16 @@ return ReadOnly("TargetFilter", {
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_25,
     RangeAngle = 180,
-    Rotation = T.RT_90
+    Rotation = T.RT_93
   },
   BossTuisheng_Skill02_Cylinder1 = {
     CampFilter = "Enemy",
     CenterOffset = T.RT_10,
     ID = "BossTuisheng_Skill02_Cylinder1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_66,
+    LuaFilterParaments = T.RT_69,
     RangeAngle = 180,
-    Rotation = T.RT_90
+    Rotation = T.RT_93
   },
   BossTuisheng_Skill06_Cylinder1 = {
     CampFilter = "Enemy",
@@ -2558,18 +2633,18 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossTuosi_Skill02_Cylinder01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_26,
+    LuaFilterParaments = T.RT_39,
     RangeAngle = 180
   },
   BossTuosi_Skill02_Cylinder02 = {
     CampFilter = "Enemy",
     ID = "BossTuosi_Skill02_Cylinder02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_26
+    LuaFilterParaments = T.RT_39
   },
   BossTuosi_Skill04_Box = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_91,
+    CenterOffset = T.RT_94,
     ID = "BossTuosi_Skill04_Box",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -2581,10 +2656,10 @@ return ReadOnly("TargetFilter", {
   },
   BossTuosi_Skill05_Box01 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_91,
+    CenterOffset = T.RT_94,
     ID = "BossTuosi_Skill05_Box01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_92
+    LuaFilterParaments = T.RT_95
   },
   BossTuosi_Skill05_Box02 = {
     CampFilter = "Enemy",
@@ -2595,7 +2670,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossTuosi_Skill05_Box02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_92
+    LuaFilterParaments = T.RT_95
   },
   BossTuosi_Skill05_Box03 = {
     CampFilter = "Enemy",
@@ -2606,7 +2681,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossTuosi_Skill05_Box03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_92
+    LuaFilterParaments = T.RT_95
   },
   ["BossTuosi_Skill06_BoxRotate+45"] = {
     CampFilter = "Enemy",
@@ -2617,7 +2692,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossTuosi_Skill06_BoxRotate+45",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_93,
+    LuaFilterParaments = T.RT_96,
     Rotation = T.RT_23
   },
   ["BossTuosi_Skill06_BoxRotate-45"] = {
@@ -2629,7 +2704,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossTuosi_Skill06_BoxRotate-45",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_93,
+    LuaFilterParaments = T.RT_96,
     Rotation = T.RT_22
   },
   BossTuosi_Skill06_BoxRotate0 = {
@@ -2641,26 +2716,26 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossTuosi_Skill06_BoxRotate0",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_93,
+    LuaFilterParaments = T.RT_96,
     Rotation = T.RT_10
   },
   BossTuosi_Skill06_Cylinder01 = {
     CampFilter = "Enemy",
     ID = "BossTuosi_Skill06_Cylinder01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_26,
+    LuaFilterParaments = T.RT_39,
     RangeAngle = 180
   },
   BossTuosi_Skill06_Cylinder02 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_73,
+    CenterOffset = T.RT_76,
     ID = "BossTuosi_Skill06_Cylinder02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_56
+    LuaFilterParaments = T.RT_59
   },
   BossTuosi_Skill07_Hit = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_57,
+    CenterOffset = T.RT_60,
     ID = "BossTuosi_Skill07_Hit",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_18
@@ -2669,7 +2744,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossTuosi_Skill08_AroundBurstCylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_51
+    LuaFilterParaments = T.RT_54
   },
   BossTuosi_Skill08_BigBurst = {
     CampFilter = "Enemy",
@@ -2696,30 +2771,30 @@ return ReadOnly("TargetFilter", {
   },
   BossXibi_Dash_Whip01 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_94,
+    CenterOffset = T.RT_97,
     ID = "BossXibi_Dash_Whip01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_95
+    LuaFilterParaments = T.RT_98
   },
   BossXibi_Dash_Whip02 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_94,
+    CenterOffset = T.RT_97,
     ID = "BossXibi_Dash_Whip02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_95
+    LuaFilterParaments = T.RT_98
   },
   BossXibi_Skill01_Whip01 = {
     CampFilter = "Enemy",
     ID = "BossXibi_Skill01_Whip01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_28,
+    LuaFilterParaments = T.RT_30,
     RangeAngle = 180
   },
   BossXibi_Skill01_Whip02 = {
     CampFilter = "Enemy",
     ID = "BossXibi_Skill01_Whip02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_28,
+    LuaFilterParaments = T.RT_30,
     RangeAngle = 180
   },
   BossXibi_Skill02_Sword01 = {
@@ -2771,23 +2846,23 @@ return ReadOnly("TargetFilter", {
   },
   BossXibi_Skill06_Donut02 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_52,
+    BPFilterVars = T.RT_55,
     CampFilter = "Enemy",
     ID = "BossXibi_Skill06_Donut02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_76
+    LuaFilterParaments = T.RT_79
   },
   BossXibi_Skill06_Donut03 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_54,
+    BPFilterVars = T.RT_57,
     CampFilter = "Enemy",
     ID = "BossXibi_Skill06_Donut03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_75
+    LuaFilterParaments = T.RT_78
   },
   BossXibi_Skill06_Field01 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_52,
+    BPFilterVars = T.RT_55,
     CampFilter = "Enemy",
     ID = "BossXibi_Skill06_Field01",
     LuaFilter = "CheckRangeHit",
@@ -2799,7 +2874,7 @@ return ReadOnly("TargetFilter", {
   },
   BossXibi_Skill06_Field02 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_54,
+    BPFilterVars = T.RT_57,
     CampFilter = "Enemy",
     ID = "BossXibi_Skill06_Field02",
     LuaFilter = "CheckRangeHit",
@@ -2829,7 +2904,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "BossXibi_Skill08_Jump",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_96
+    LuaFilterParaments = T.RT_99
   },
   BossXibi_StageSkill_Donut01 = {
     CampFilter = "Enemy",
@@ -2843,7 +2918,7 @@ return ReadOnly("TargetFilter", {
   },
   BossXibi_StageSkill_Donut02 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_97,
+    BPFilterVars = T.RT_100,
     CampFilter = "Enemy",
     ID = "BossXibi_StageSkill_Donut02",
     LuaFilter = "CheckRangeHit",
@@ -2855,7 +2930,7 @@ return ReadOnly("TargetFilter", {
   },
   BossXibi_StageSkill_Donut03 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_84,
+    BPFilterVars = T.RT_87,
     CampFilter = "Enemy",
     ID = "BossXibi_StageSkill_Donut03",
     LuaFilter = "CheckRangeHit",
@@ -2869,35 +2944,35 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossXibi_StageSkill_Field01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_98
+    LuaFilterParaments = T.RT_101
   },
   BossXibi_StageSkill_Field02 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_84,
+    BPFilterVars = T.RT_87,
     CampFilter = "Enemy",
     ID = "BossXibi_StageSkill_Field02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_98
+    LuaFilterParaments = T.RT_101
   },
   BossXibi_StageSkill_Field03 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_97,
+    BPFilterVars = T.RT_100,
     CampFilter = "Enemy",
     ID = "BossXibi_StageSkill_Field03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_98
+    LuaFilterParaments = T.RT_101
   },
   BossYidai_Skill01_Scene = {
     CampFilter = "Enemy",
     ID = "BossYidai_Skill01_Scene",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_62
+    LuaFilterParaments = T.RT_65
   },
   BossYidai_Skill02_Cylinder = {
     CampFilter = "Enemy",
     ID = "BossYidai_Skill02_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_77
+    LuaFilterParaments = T.RT_80
   },
   BossYidai_Skill03_Rectangle = {
     CampFilter = "Enemy",
@@ -2914,37 +2989,37 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossYidai_Skill05_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_99
+    LuaFilterParaments = T.RT_102
   },
   BossYidai_Skill05_OtherFriendCylinder = {
     CampFilter = "OtherFriend",
     ID = "BossYidai_Skill05_OtherFriendCylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_99
+    LuaFilterParaments = T.RT_102
   },
   BossYidai_Skill06_Cylinder = {
     CampFilter = "Enemy",
     ID = "BossYidai_Skill06_Cylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_100
+    LuaFilterParaments = T.RT_103
   },
   BossYidai_Skill06_OtherFriendCylinder = {
     CampFilter = "OtherFriend",
     ID = "BossYidai_Skill06_OtherFriendCylinder",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_100
+    LuaFilterParaments = T.RT_103
   },
   BossYidai_Skill08_Enemy = {
     CampFilter = "Enemy",
     ID = "BossYidai_Skill08_Enemy",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_101
+    LuaFilterParaments = T.RT_104
   },
   BossYidai_Skill08_OtherFriend = {
     CampFilter = "OtherFriend",
     ID = "BossYidai_Skill08_OtherFriend",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_101
+    LuaFilterParaments = T.RT_104
   },
   BossYidai_Skill10_Cylinder1 = {
     CampFilter = "Enemy",
@@ -2960,7 +3035,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossYidai_Skill10_Cylinder2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_99
+    LuaFilterParaments = T.RT_102
   },
   BossYidai_Skill10_Cylinder3 = {
     CampFilter = "Enemy",
@@ -2976,18 +3051,18 @@ return ReadOnly("TargetFilter", {
     CampFilter = "OtherFriend",
     ID = "BossYidai_Skill10_Shock1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_102
+    LuaFilterParaments = T.RT_105
   },
   BossYidai_Skill10_Shock2 = {
     ID = "BossYidai_Skill10_Shock2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_102
+    LuaFilterParaments = T.RT_105
   },
   BossYidai_Sum1Level1 = {
     CampFilter = "Enemy",
     ID = "BossYidai_Sum1Level1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_103
+    LuaFilterParaments = T.RT_106
   },
   BossYidai_Sum1Level2 = {
     CampFilter = "Enemy",
@@ -3004,7 +3079,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "BossYidai_Sum1Level3",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_104
+    LuaFilterParaments = T.RT_107
   },
   Boss_Grab_GetActorByEid = {
     BPFilter = "Grab_Get_Target",
@@ -3024,7 +3099,7 @@ return ReadOnly("TargetFilter", {
     ID = "Char_Bow_20603",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_105,
+    LuaFilterParaments = T.RT_108,
     RangeAngle = 90
   },
   Char_Crossbow_20203 = {
@@ -3032,26 +3107,26 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Crossbow_20203",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_45
+    LuaFilterParaments = T.RT_48
   },
   Char_Cylinder_Large = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Large",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106
+    LuaFilterParaments = T.RT_109
   },
   Char_Cylinder_Large120 = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Large120",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106,
+    LuaFilterParaments = T.RT_109,
     RangeAngle = 120
   },
   Char_Cylinder_Large180 = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Large180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106,
+    LuaFilterParaments = T.RT_109,
     RangeAngle = 180
   },
   Char_Cylinder_Large180_Frd = {
@@ -3059,7 +3134,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Friend",
     ID = "Char_Cylinder_Large180_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106,
+    LuaFilterParaments = T.RT_109,
     RangeAngle = 180
   },
   Char_Cylinder_Large240_InAir = {
@@ -3071,7 +3146,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "Char_Cylinder_Large240_InAir",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106,
+    LuaFilterParaments = T.RT_109,
     RangeAngle = 240
   },
   Char_Cylinder_Large_Frd = {
@@ -3079,7 +3154,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Friend",
     ID = "Char_Cylinder_Large_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_104
+    LuaFilterParaments = T.RT_107
   },
   Char_Cylinder_Large_Front = {
     CampFilter = "Enemy",
@@ -3090,14 +3165,14 @@ return ReadOnly("TargetFilter", {
     },
     ID = "Char_Cylinder_Large_Front",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106
+    LuaFilterParaments = T.RT_109
   },
   Char_Cylinder_Large_OtFr = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "OtherFriend",
     ID = "Char_Cylinder_Large_OtFr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_104
+    LuaFilterParaments = T.RT_107
   },
   Char_Cylinder_Large_Trgt = {
     CampFilter = "Enemy",
@@ -3126,46 +3201,46 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Middle",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71
+    LuaFilterParaments = T.RT_74
   },
   Char_Cylinder_Middle120 = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Middle120",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71,
+    LuaFilterParaments = T.RT_74,
     RangeAngle = 120
   },
   Char_Cylinder_Middle180 = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Middle180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71,
+    LuaFilterParaments = T.RT_74,
     RangeAngle = 180
   },
   Char_Cylinder_Middle240 = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Middle240",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71,
+    LuaFilterParaments = T.RT_74,
     RangeAngle = 240
   },
   Char_Cylinder_Middle_Frd = {
     CampFilter = "Friend",
     ID = "Char_Cylinder_Middle_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71
+    LuaFilterParaments = T.RT_74
   },
   Char_Cylinder_Middle_Trgt = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_Middle_Trgt",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_107
+    LuaFilterParaments = T.RT_110
   },
   Char_Cylinder_Middle_Trgt_Frd = {
     CampFilter = "Friend",
     ID = "Char_Cylinder_Middle_Trgt_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_107
+    LuaFilterParaments = T.RT_110
   },
   Char_Cylinder_Small = {
     CampFilter = "Enemy",
@@ -3202,14 +3277,14 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_XLarge",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_108
+    LuaFilterParaments = T.RT_111
   },
   Char_Cylinder_XLarge120 = {
     CampFilter = "Enemy",
     ID = "Char_Cylinder_XLarge120",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_108,
+    LuaFilterParaments = T.RT_111,
     RangeAngle = 120
   },
   Char_Cylinder_XLarge_Frd = {
@@ -3230,7 +3305,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Machinegun_20502",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_109,
+    LuaFilterParaments = T.RT_112,
     RemoveTatget = true
   },
   Char_Machinegun_20503 = {
@@ -3251,19 +3326,19 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Machinegun_20508",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_45
+    LuaFilterParaments = T.RT_48
   },
   Char_Machinegun_20511 = {
     CampFilter = "Enemy",
     ID = "Char_Machinegun_20511",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_46
+    LuaFilterParaments = T.RT_49
   },
   Char_Pistol_20104 = {
     CampFilter = "Enemy",
     ID = "Char_Pistol_20104",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_96
+    LuaFilterParaments = T.RT_99
   },
   Char_Polearm_HeavyAttack02 = {
     CampFilter = "Enemy",
@@ -3280,14 +3355,14 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Rectangle_Large",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_110
+    LuaFilterParaments = T.RT_113
   },
   Char_Rectangle_Large_Symmetry = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_27,
+    CenterOffset = T.RT_29,
     ID = "Char_Rectangle_Large_Symmetry",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_110
+    LuaFilterParaments = T.RT_113
   },
   Char_Rectangle_Middle = {
     CampFilter = "Enemy",
@@ -3341,13 +3416,13 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Shotgun_20402_1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_111
+    LuaFilterParaments = T.RT_114
   },
   Char_Shotgun_20402_2 = {
     CampFilter = "Enemy",
     ID = "Char_Shotgun_20402_2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_112
+    LuaFilterParaments = T.RT_115
   },
   Char_Shotgun_20402_3 = {
     CampFilter = "Enemy",
@@ -3359,61 +3434,71 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Char_Shotgun_20402_4",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Char_Sphere_Middle = {
     CampFilter = "Enemy",
     ID = "Char_Sphere_Middle",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Char_Sphere_Middle_Frd = {
     CampFilter = "Friend",
     ID = "Char_Sphere_Middle_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Char_Sphere_Middle_Trgt = {
     CampFilter = "Enemy",
     ID = "Char_Sphere_Middle_Trgt",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_109
+    LuaFilterParaments = T.RT_112
   },
   Char_Sphere_Small = {
     CampFilter = "Enemy",
     ID = "Char_Sphere_Small",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_112
+    LuaFilterParaments = T.RT_115
   },
   Char_Sphere_Small_Frd = {
     CampFilter = "Friend",
     ID = "Char_Sphere_Small_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_112
+    LuaFilterParaments = T.RT_115
   },
   Char_Sphere_Small_Trgt = {
     CampFilter = "Enemy",
     ID = "Char_Sphere_Small_Trgt",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_114
+    LuaFilterParaments = T.RT_117
   },
   Char_Sphere_Xlarge = {
     CampFilter = "Enemy",
     ID = "Char_Sphere_Xlarge",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_115
+    LuaFilterParaments = T.RT_118
   },
   Char_Sphere_Xlarge_Frd = {
     CampFilter = "Friend",
     ID = "Char_Sphere_Xlarge_Frd",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_115
+    LuaFilterParaments = T.RT_118
+  },
+  Char_Sphere_Xlarge_Trgt = {
+    CampFilter = "Enemy",
+    ID = "Char_Sphere_Xlarge_Trgt",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = {
+      Center = "Target",
+      Radius = 2000,
+      Type = "Sphere"
+    }
   },
   Char_Sphere_large = {
     CampFilter = "Enemy",
     ID = "Char_Sphere_large",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_116
+    LuaFilterParaments = T.RT_119
   },
   Char_Sphere_large_Trgt = {
     CampFilter = "Enemy",
@@ -3443,12 +3528,19 @@ return ReadOnly("TargetFilter", {
     ID = "CustomizedTargets",
     LuaFilter = "CustomizedTargets"
   },
+  Eve_Sum03 = {
+    CampFilter = "Enemy",
+    DontCullPartTarget = true,
+    ID = "Eve_Sum03",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_48
+  },
   Event_Wys_GP40104_RealSummon = {
     BPFilter = "Common_IsRealSummon",
     CampFilter = "OtherFriend",
     ID = "Event_Wys_GP40104_RealSummon",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_53
+    LuaFilterParaments = T.RT_56
   },
   Fuluo_Skill01_Long = {
     CampFilter = "Enemy",
@@ -3459,7 +3551,7 @@ return ReadOnly("TargetFilter", {
     },
     ID = "Fuluo_Skill01_Long",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_35
+    LuaFilterParaments = T.RT_37
   },
   HatredPlayers = {
     ID = "HatredPlayers",
@@ -3471,45 +3563,41 @@ return ReadOnly("TargetFilter", {
     ID = "Heitao_Skill02_Search",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = {
-      CylinderHeight = 3000,
-      Radius = 5000,
-      Type = "Cylinder"
-    },
+    LuaFilterParaments = T.RT_120,
     RangeAngle = 180
   },
   Jt_BlastRobot_NoTrolly = {
     BPFilter = "Mon_JTBlastRobot_ExceptTrolly",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_117,
+    CenterOffset = T.RT_121,
     ID = "Jt_BlastRobot_NoTrolly",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Jt_BlastRobot_OnlyTrolly = {
     BPFilter = "Mon_JTBlastRobot_OnlyTrolly",
     CampFilter = "Enemy",
-    CenterOffset = T.RT_117,
+    CenterOffset = T.RT_121,
     ID = "Jt_BlastRobot_OnlyTrolly",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Jt_Commander_Cylinder_1500_500_360 = {
     CampFilter = "OtherFriend",
     ID = "Jt_Commander_Cylinder_1500_500_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_55
+    LuaFilterParaments = T.RT_58
   },
   Jt_Ranger_LandMine = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_118,
+    CenterOffset = T.RT_122,
     ID = "Jt_Ranger_LandMine",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_17
   },
   Jt_Ranger_LandMine_Fr = {
     CampFilter = "Friend",
-    CenterOffset = T.RT_118,
+    CenterOffset = T.RT_122,
     ID = "Jt_Ranger_LandMine_Fr",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_17
@@ -3520,14 +3608,14 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Kami_Search",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_88
+    LuaFilterParaments = T.RT_91
   },
   Landi_Skill01 = {
     CampFilter = "Friend",
-    CenterOffset = T.RT_73,
+    CenterOffset = T.RT_76,
     ID = "Landi_Skill01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71,
+    LuaFilterParaments = T.RT_74,
     RangeAngle = -180
   },
   LaserTarget = {
@@ -3542,7 +3630,7 @@ return ReadOnly("TargetFilter", {
     ID = "Linen_Skill02",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_49
+    LuaFilterParaments = T.RT_52
   },
   Lise_Skill02_CharToEnemy = {
     BPFilter = "Common_NotBreakableItem",
@@ -3550,7 +3638,7 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Lise_Skill02_CharToEnemy",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_49
+    LuaFilterParaments = T.RT_52
   },
   Lise_Skill02_EnemyToEnemy = {
     BPFilter = "Common_NotBreakableItem",
@@ -3558,11 +3646,11 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Lise_Skill02_EnemyToEnemy",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_115
+    LuaFilterParaments = T.RT_118
   },
   Mech_BallBomb_Monster = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_119,
+    BPFilterVars = T.RT_123,
     CampFilter = "Enemy",
     ID = "Mech_BallBomb_Monster",
     LuaFilter = "CheckRangeHit",
@@ -3580,7 +3668,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mech_Bomb",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mech_Bomb_MonAndSelf = {
     CampFilter = "OtherFriend",
@@ -3589,23 +3677,23 @@ return ReadOnly("TargetFilter", {
   },
   Mech_Bomb_Monster = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_120,
+    BPFilterVars = T.RT_124,
     CampFilter = "Enemy",
     ID = "Mech_Bomb_Monster",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mech_Bomb_Player = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_121,
+    BPFilterVars = T.RT_125,
     CampFilter = "Enemy",
     ID = "Mech_Bomb_Player",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mech_Bomb_PlayerSingle = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_121,
+    BPFilterVars = T.RT_125,
     CampFilter = "Enemy",
     ID = "Mech_Bomb_PlayerSingle",
     LuaFilter = "Target"
@@ -3613,16 +3701,16 @@ return ReadOnly("TargetFilter", {
   Mech_Cylinder_300_400_360 = {
     ID = "Mech_Cylinder_300_400_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_35
+    LuaFilterParaments = T.RT_37
   },
   Mech_Cylinder_500_40_360 = {
     ID = "Mech_Cylinder_500_40_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_122
+    LuaFilterParaments = T.RT_126
   },
   Mech_IceBombField_Monster = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_120,
+    BPFilterVars = T.RT_124,
     CampFilter = "Enemy",
     ID = "Mech_IceBombField_Monster",
     LuaFilter = "CheckRangeHit",
@@ -3634,7 +3722,7 @@ return ReadOnly("TargetFilter", {
   },
   Mech_IceBomb_Monster = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_120,
+    BPFilterVars = T.RT_124,
     CampFilter = "Enemy",
     ID = "Mech_IceBomb_Monster",
     LuaFilter = "CheckRangeHit",
@@ -3642,7 +3730,7 @@ return ReadOnly("TargetFilter", {
   },
   Mech_IceBomb_Player = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_121,
+    BPFilterVars = T.RT_125,
     CampFilter = "Enemy",
     ID = "Mech_IceBomb_Player",
     LuaFilter = "CheckRangeHit",
@@ -3650,7 +3738,7 @@ return ReadOnly("TargetFilter", {
   },
   Mech_MonAndSelf = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_119,
+    BPFilterVars = T.RT_123,
     CampFilter = "Enemy",
     ID = "Mech_MonAndSelf",
     LuaFilter = "Target"
@@ -3664,11 +3752,11 @@ return ReadOnly("TargetFilter", {
   },
   Mech_RockBomb_Monster = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_119,
+    BPFilterVars = T.RT_123,
     CampFilter = "Enemy",
     ID = "Mech_RockBomb_Monster",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Mech_RockBomb_Player = {
     BPFilter = "Common_ConditionFilter",
@@ -3676,7 +3764,15 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mech_RockBomb_Player",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
+  },
+  Mech_SlideSpline = {
+    BPFilter = "Common_Random",
+    CampFilter = "Enemy",
+    ID = "Mech_SlideSpline",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_120,
+    RangeAngle = 180
   },
   Mech_Target_OtFr = {
     CampFilter = "OtherFriend",
@@ -3685,11 +3781,11 @@ return ReadOnly("TargetFilter", {
   },
   Mech_TouchBomb_Monster = {
     BPFilter = "Common_ConditionFilter",
-    BPFilterVars = T.RT_119,
+    BPFilterVars = T.RT_123,
     CampFilter = "Enemy",
     ID = "Mech_TouchBomb_Monster",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   Mech_TouchBomb_Player = {
     BPFilter = "Common_ConditionFilter",
@@ -3697,7 +3793,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mech_TouchBomb_Player",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   Mon_Achess_Cylinder01 = {
     BPFilter = "Common_ConditionFilter",
@@ -3715,12 +3811,16 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_150_200_180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = {
-      CylinderHeight = 200,
-      Radius = 150,
-      Type = "Cylinder"
-    },
+    LuaFilterParaments = T.RT_128,
     RangeAngle = 180
+  },
+  Mon_Cylinder_150_200_360_Hutao = {
+    CampFilter = "Enemy",
+    CenterOffset = T.RT_76,
+    ID = "Mon_Cylinder_150_200_360_Hutao",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = T.RT_128,
+    RangeAngle = 360
   },
   Mon_Cylinder_150_400_360 = {
     CampFilter = "Enemy",
@@ -3747,33 +3847,33 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Friend",
     ID = "Mon_Cylinder_2000_500_360_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_124
+    LuaFilterParaments = T.RT_129
   },
   Mon_Cylinder_2000_500_360_OtFr = {
     CampFilter = "OtherFriend",
     ID = "Mon_Cylinder_2000_500_360_OtFr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_124
+    LuaFilterParaments = T.RT_129
   },
   Mon_Cylinder_200_200_120 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_200_200_120",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_125,
+    LuaFilterParaments = T.RT_130,
     RangeAngle = 120
   },
   Mon_Cylinder_200_200_180 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_200_200_180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_125,
+    LuaFilterParaments = T.RT_130,
     RangeAngle = 180
   },
   Mon_Cylinder_200_200_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_200_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_125,
+    LuaFilterParaments = T.RT_130,
     RangeAngle = 360
   },
   Mon_Cylinder_200_400_180 = {
@@ -3816,15 +3916,15 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_230_300_90",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_126,
+    LuaFilterParaments = T.RT_131,
     RangeAngle = 90
   },
   Mon_Cylinder_230_300_90_Back = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_127,
+    CenterOffset = T.RT_132,
     ID = "Mon_Cylinder_230_300_90_Back",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_126,
+    LuaFilterParaments = T.RT_131,
     RangeAngle = 90
   },
   Mon_Cylinder_250_200_120 = {
@@ -3842,7 +3942,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_250_400_180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_66,
+    LuaFilterParaments = T.RT_69,
     RangeAngle = 180
   },
   Mon_Cylinder_250_600_360 = {
@@ -3869,7 +3969,7 @@ return ReadOnly("TargetFilter", {
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_18,
     RangeAngle = 180,
-    Rotation = T.RT_34
+    Rotation = T.RT_36
   },
   Mon_Cylinder_300_200_360 = {
     CampFilter = "Enemy",
@@ -3891,7 +3991,7 @@ return ReadOnly("TargetFilter", {
   },
   Mon_Cylinder_300_200_360_Tianwei = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_128,
+    CenterOffset = T.RT_133,
     ID = "Mon_Cylinder_300_200_360_Tianwei",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = T.RT_18
@@ -3900,33 +4000,33 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_300_400_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_35
+    LuaFilterParaments = T.RT_37
   },
   Mon_Cylinder_300_40_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_300_40_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_129
+    LuaFilterParaments = T.RT_134
   },
   Mon_Cylinder_300_40_360_Fr = {
     CampFilter = "Friend",
     ID = "Mon_Cylinder_300_40_360_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_129
+    LuaFilterParaments = T.RT_134
   },
   Mon_Cylinder_300_40_360_FrNoMch = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "Friend",
     ID = "Mon_Cylinder_300_40_360_FrNoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_129
+    LuaFilterParaments = T.RT_134
   },
   Mon_Cylinder_300_40_360_NoMch = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_300_40_360_NoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_129
+    LuaFilterParaments = T.RT_134
   },
   Mon_Cylinder_4000_1000_360_OtFr = {
     CampFilter = "OtherFriend",
@@ -3942,60 +4042,60 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_400_200_180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_89,
+    LuaFilterParaments = T.RT_92,
     RangeAngle = 180
   },
   Mon_Cylinder_400_200_240 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_400_200_240",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_89,
+    LuaFilterParaments = T.RT_92,
     RangeAngle = 240
   },
   Mon_Cylinder_400_200_360 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_94,
+    CenterOffset = T.RT_97,
     ID = "Mon_Cylinder_400_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_89
+    LuaFilterParaments = T.RT_92
   },
   Mon_Cylinder_400_200_360_1 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_400_200_360_1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_89
+    LuaFilterParaments = T.RT_92
   },
   Mon_Cylinder_500_200_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_500_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_56
+    LuaFilterParaments = T.RT_59
   },
   Mon_Cylinder_500_400_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_500_400_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_103
+    LuaFilterParaments = T.RT_106
   },
   Mon_Cylinder_500_400_90 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_500_400_90",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_103,
+    LuaFilterParaments = T.RT_106,
     RangeAngle = 90
   },
   Mon_Cylinder_500_40_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_500_40_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_122
+    LuaFilterParaments = T.RT_126
   },
   Mon_Cylinder_500_40_360_NoMch = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_500_40_360_NoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_122
+    LuaFilterParaments = T.RT_126
   },
   Mon_Cylinder_500_500_360 = {
     CampFilter = "Enemy",
@@ -4017,7 +4117,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_600_400_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_71
+    LuaFilterParaments = T.RT_74
   },
   Mon_Cylinder_600_40_360 = {
     CampFilter = "Enemy",
@@ -4065,11 +4165,11 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Cylinder_800_400_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_72
+    LuaFilterParaments = T.RT_75
   },
   Mon_Rectangle_80_200_100 = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_127,
+    CenterOffset = T.RT_132,
     ID = "Mon_Rectangle_80_200_100",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {
@@ -4125,32 +4225,32 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_150_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_62
+    LuaFilterParaments = T.RT_65
   },
   Mon_Sphere_200_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_200_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_111
+    LuaFilterParaments = T.RT_114
   },
   Mon_Sphere_200_360_NoMch = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "Enemy",
     ID = "Mon_Sphere_200_360_NoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_111
+    LuaFilterParaments = T.RT_114
   },
   Mon_Sphere_20_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_20_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_130
+    LuaFilterParaments = T.RT_135
   },
   Mon_Sphere_20_360_Fr = {
     CampFilter = "Friend",
     ID = "Mon_Sphere_20_360_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_130
+    LuaFilterParaments = T.RT_135
   },
   Mon_Sphere_2500_360 = {
     CampFilter = "Enemy",
@@ -4162,7 +4262,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_300_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_112
+    LuaFilterParaments = T.RT_115
   },
   Mon_Sphere_400_360 = {
     CampFilter = "Enemy",
@@ -4200,77 +4300,77 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_500_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mon_Sphere_500_360_Fr = {
     CampFilter = "OtherFriend",
     ID = "Mon_Sphere_500_360_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mon_Sphere_500_360_NoMch = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "Enemy",
     ID = "Mon_Sphere_500_360_NoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mon_Sphere_500_360_Tianwei = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_128,
+    CenterOffset = T.RT_133,
     ID = "Mon_Sphere_500_360_Tianwei",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_63
+    LuaFilterParaments = T.RT_66
   },
   Mon_Sphere_50_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_50_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_131
+    LuaFilterParaments = T.RT_136
   },
   Mon_Sphere_50_360_NoMch = {
     BPFilter = "Mon_ExceptMechanism",
     CampFilter = "Enemy",
     ID = "Mon_Sphere_50_360_NoMch",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_131
+    LuaFilterParaments = T.RT_136
   },
   Mon_Sphere_600_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_600_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Mon_Sphere_600_360_180 = {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_600_360_180",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113,
+    LuaFilterParaments = T.RT_116,
     RangeAngle = 180
   },
   Mon_Sphere_600_360_Fr = {
     CampFilter = "Friend",
     ID = "Mon_Sphere_600_360_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Mon_Sphere_600_360_OtFr = {
     CampFilter = "OtherFriend",
     ID = "Mon_Sphere_600_360_OtFr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_113
+    LuaFilterParaments = T.RT_116
   },
   Mon_Sphere_800_360 = {
     CampFilter = "Enemy",
     ID = "Mon_Sphere_800_360",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   Mon_Sphere_800_360_OtFr = {
     CampFilter = "OtherFriend",
     ID = "Mon_Sphere_800_360_OtFr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   Mon_Sphere_800_360_OtFr_01 = {
     CampFilter = "OtherFriend",
@@ -4281,21 +4381,21 @@ return ReadOnly("TargetFilter", {
     },
     ID = "Mon_Sphere_800_360_OtFr_01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   Mon_Synthesis2_CylinderMon = {
     BPFilter = "Mon_IsMonster",
     CampFilter = "Enemy",
     ID = "Mon_Synthesis2_CylinderMon",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_132
+    LuaFilterParaments = T.RT_137
   },
   Mon_Synthesis2_CylinderPlayer = {
     BPFilter = "Mon_IsPlayer",
     CampFilter = "OtherFriend",
     ID = "Mon_Synthesis2_CylinderPlayer",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_132
+    LuaFilterParaments = T.RT_137
   },
   MyCreature = {
     BPFilter = "Common_CreatureIdFilter",
@@ -4311,7 +4411,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "NEWuyou_Skill02Burst1",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_68
+    LuaFilterParaments = T.RT_71
   },
   NEWuyou_Skill02Burst2 = {
     BPFilter = "Mon_DisFilter",
@@ -4319,17 +4419,28 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "NEWuyou_Skill02Burst2",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_44
+    LuaFilterParaments = T.RT_47
   },
   NEWuyou_Skill02Burst3 = {
     BPFilter = "Mon_DisFilter",
-    BPFilterVars = T.RT_69,
+    BPFilterVars = T.RT_72,
     CampFilter = "Enemy",
     ID = "NEWuyou_Skill02Burst3",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_50
+    LuaFilterParaments = T.RT_53
   },
   RootSource = {ID = "RootSource", LuaFilter = "RootSource"},
+  RouPro_21181011_Search_Player = {
+    BPFilter = "Mon_IsPlayer",
+    CampFilter = "OtherFriend",
+    ID = "RouPro_21181011_Search_Player",
+    LuaFilter = "CheckRangeHit",
+    LuaFilterParaments = {
+      CylinderHeight = 2000,
+      Radius = 2000,
+      Type = "Cylinder"
+    }
+  },
   Rou_10101201_Debuff = {
     CampFilter = "Enemy",
     DontCullPartTarget = true,
@@ -4343,7 +4454,7 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Rou_10101203_Search",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   Rou_10102106_Search = {
     BPFilter = "Mon_ExceptMechanism",
@@ -4351,7 +4462,7 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Rou_10102106_Search",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_115
+    LuaFilterParaments = T.RT_118
   },
   Rou_10104203_Search_RealSummon = {
     BPFilter = "Common_IsRealSummon",
@@ -4364,25 +4475,25 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Rou_10104_Cylinder_1000",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106
+    LuaFilterParaments = T.RT_109
   },
   Rou_10104_Cylinder_1000_Fr = {
     CampFilter = "OtherFriend",
     ID = "Rou_10104_Cylinder_1000_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106
+    LuaFilterParaments = T.RT_109
   },
   Rou_10104_Sphere_Level01 = {
     CampFilter = "Enemy",
     ID = "Rou_10104_Sphere_Level01",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_114
+    LuaFilterParaments = T.RT_117
   },
   Rou_10104_Sphere_Level02 = {
     CampFilter = "Enemy",
     ID = "Rou_10104_Sphere_Level02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_109
+    LuaFilterParaments = T.RT_112
   },
   Rou_10105_Cylinder_400 = {
     CampFilter = "Enemy",
@@ -4400,13 +4511,13 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Rou_10105_Cylinder_800",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_72
+    LuaFilterParaments = T.RT_75
   },
   Rou_10105_Cylinder_800_Fr = {
     CampFilter = "OtherFriend",
     ID = "Rou_10105_Cylinder_800_Fr",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_72
+    LuaFilterParaments = T.RT_75
   },
   Rou_10106101_Search = {
     BPFilter = "Mon_ExceptMechanism",
@@ -4430,7 +4541,7 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Rou_10106_Group1Damage",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_125
+    LuaFilterParaments = T.RT_130
   },
   Rou_10106_Group2Damage = {
     CampFilter = "Enemy",
@@ -4455,7 +4566,7 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Rou_10107_Group3Damage",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_50
+    LuaFilterParaments = T.RT_53
   },
   Rou_20134_Cylinder_XLarge120 = {
     CampFilter = "Enemy",
@@ -4469,39 +4580,39 @@ return ReadOnly("TargetFilter", {
     CenterOffset = T.RT_2,
     ID = "SQ_Baozha_Die_Sphere",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_111
+    LuaFilterParaments = T.RT_114
   },
   SQ_Baozha_Skill03_Sphere = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_74,
+    CenterOffset = T.RT_77,
     ID = "SQ_Baozha_Skill03_Sphere",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_111
+    LuaFilterParaments = T.RT_114
   },
   SQ_Wanju_Skill02_Sphere = {
     BPFilter = "Mon_SQWanjuSummon",
     CampFilter = "OtherFriend",
     ID = "SQ_Wanju_Skill02_Sphere",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_45
+    LuaFilterParaments = T.RT_48
   },
   Saiqi_Skill01_Search_L = {
     CampFilter = "Enemy",
     ID = "Saiqi_Skill01_Search_L",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_49
+    LuaFilterParaments = T.RT_52
   },
   Saiqi_Skill01_Search_M = {
     CampFilter = "Enemy",
     ID = "Saiqi_Skill01_Search_M",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_88
+    LuaFilterParaments = T.RT_91
   },
   Saiqi_Skill01_Search_S = {
     CampFilter = "Enemy",
     ID = "Saiqi_Skill01_Search_S",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_115
+    LuaFilterParaments = T.RT_118
   },
   Saiqi_Skill02_Aim = {
     BPFilter = "Common_Random",
@@ -4522,7 +4633,7 @@ return ReadOnly("TargetFilter", {
     ID = "Saiqi_Skill02_Shoot",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_112
+    LuaFilterParaments = T.RT_115
   },
   Self = {ID = "Self", LuaFilter = "Self"},
   ShootingTargets = {
@@ -4538,7 +4649,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Shuimu_Skill02_MiddleRing",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_106
+    LuaFilterParaments = T.RT_109
   },
   Shuimu_Skill02_OuterRing = {
     BPFilter = "Common_InnerRing",
@@ -4549,7 +4660,7 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Shuimu_Skill02_OuterRing",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_108
+    LuaFilterParaments = T.RT_111
   },
   Shuimu_SummonNum = {
     BPFilter = "Common_RoleIdFilter",
@@ -4601,13 +4712,13 @@ return ReadOnly("TargetFilter", {
     ID = "Suyi_Grade2Shoot",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_88
+    LuaFilterParaments = T.RT_91
   },
   Suyi_Grade4 = {
     CampFilter = "Enemy",
     ID = "Suyi_Grade4",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_116
+    LuaFilterParaments = T.RT_119
   },
   Suyi_Weapon02_01 = {
     BPFilter = "Common_NotBreakableItem",
@@ -4616,7 +4727,7 @@ return ReadOnly("TargetFilter", {
     ID = "Suyi_Weapon02_01",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_105,
+    LuaFilterParaments = T.RT_108,
     RangeAngle = 90
   },
   Suyi_Weapon02_02 = {
@@ -4625,7 +4736,7 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Suyi_Weapon02_02",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_88,
+    LuaFilterParaments = T.RT_91,
     RangeAngle = 90
   },
   Suyi_Weapon02_03 = {
@@ -4634,13 +4745,13 @@ return ReadOnly("TargetFilter", {
     DontCullPartTarget = true,
     ID = "Suyi_Weapon02_03",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_88
+    LuaFilterParaments = T.RT_91
   },
   Target = {ID = "Target", LuaFilter = "Target"},
   TrollyAbsorbES = {
     ID = "TrollyAbsorbES",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_123
+    LuaFilterParaments = T.RT_127
   },
   WeitaWater_SummonNum = {
     BPFilter = "Common_RoleIdFilter",
@@ -4654,19 +4765,19 @@ return ReadOnly("TargetFilter", {
     ID = "Xierda_Passive_Search",
     LineTraceFilter = true,
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_45
+    LuaFilterParaments = T.RT_48
   },
   Yeer_Skill01_Enemy = {
     CampFilter = "Enemy",
     ID = "Yeer_Skill01_Enemy",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_133
+    LuaFilterParaments = T.RT_138
   },
   Yeer_Skill01_Friend = {
     CampFilter = "Friend",
     ID = "Yeer_Skill01_Friend",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_133
+    LuaFilterParaments = T.RT_138
   },
   Yuming_SummonNum = {
     BPFilter = "Common_RoleIdFilter",
@@ -4689,11 +4800,11 @@ return ReadOnly("TargetFilter", {
     CampFilter = "Enemy",
     ID = "Zhangyu_TentacleBirth",
     LuaFilter = "CheckRangeHit",
-    LuaFilterParaments = T.RT_35
+    LuaFilterParaments = T.RT_37
   },
   Zhiliu_TT = {
     CampFilter = "Enemy",
-    CenterOffset = T.RT_27,
+    CenterOffset = T.RT_29,
     ID = "Zhiliu_TT",
     LuaFilter = "CheckRangeHit",
     LuaFilterParaments = {

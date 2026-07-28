@@ -3,6 +3,7 @@ local FriendModel = FriendController:GetModel()
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
+local PageJumpUtils = require("Utils.PageJumpUtils")
 local M = {}
 M.ActionId = {
   ShowRecord = "SHOW_RECORD",
@@ -47,6 +48,10 @@ local function CloseMenu(Context)
   end
 end
 
+local function CloseFrontUIBeforeNavigate()
+  PageJumpUtils:CloseFrontDialog()
+end
+
 local function IsPersonInfoPageOpen()
   local UIManagerComp = GWorld.GameInstance and GWorld.GameInstance:GetGameUIManager()
   if not UIManagerComp then
@@ -68,13 +73,14 @@ local function BuildShowRecord(Context)
     Content.Text = GText("UI_Chat_ShowRecord")
     
     function Content.Callback()
+      CloseMenu(Context)
+      CloseFrontUIBeforeNavigate()
       local Uid = AvatarInfo.Uid or AvatarInfo.Uuid
       if Uid == GWorld:GetAvatar().Uid then
         PersonInfoController:OpenView()
       else
         GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(Uid, nil, AvatarInfo, GuildFullInfo)
       end
-      CloseMenu(Context)
     end
   end
 end
@@ -105,6 +111,7 @@ local function BuildAddFriendOrChat(Context)
       Content.Text = GText("UI_Chat_SendMsg")
       
       function Content.Callback()
+        CloseFrontUIBeforeNavigate()
         ChatController:OpenView(self)
         ChatController:SelectPlayerToChat(TargetUid)
         CloseMenu(Context)
@@ -137,8 +144,10 @@ local function GuildSendPrivateChat(Context)
         return
       end
       if GuildFullInfo.CardGuildChatOpen then
+        CloseFrontUIBeforeNavigate()
         ChatController:OpenView(nil)
         ChatController:SelectGuildMemberToChat(AvatarInfo.Uid or AvatarInfo.Uuid, nil)
+        CloseMenu(Context)
       else
         UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_PrivateChatNotEnabled"))
       end

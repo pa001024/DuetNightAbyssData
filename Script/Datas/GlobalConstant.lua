@@ -197,6 +197,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "CameraMinMemory",
     ConstantValue = 200
   },
+  CameraPositioningDistance = {
+    ConstantName = "CameraPositioningDistance",
+    ConstantValue = 8
+  },
   CaptureCountdownPoint = {
     ConstantName = "CaptureCountdownPoint",
     ConstantValue = 10
@@ -277,6 +281,14 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ConfirmCodeMailId",
     ConstantValue = 10010
   },
+  ConstructReplicationOffsetX = {
+    ConstantName = "ConstructReplicationOffsetX",
+    ConstantValue = 0.1
+  },
+  ConstructReplicationOffsetY = {
+    ConstantName = "ConstructReplicationOffsetY",
+    ConstantValue = 0.1
+  },
   CoopSettlementExitTime = {
     ConstantName = "CoopSettlementExitTime",
     ConstantValue = 120
@@ -295,7 +307,7 @@ return ReadOnly("GlobalConstant", {
   },
   CurrentVersion = {
     ConstantName = "CurrentVersion",
-    ConstantValue = 140
+    ConstantValue = 150
   },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
@@ -533,6 +545,14 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "GameModeAlertCD",
     ConstantValue = 30
   },
+  GestureItemPanelPageNum = {
+    ConstantName = "GestureItemPanelPageNum",
+    ConstantValue = 4
+  },
+  GestureItemPanelPageSlot = {
+    ConstantName = "GestureItemPanelPageSlot",
+    ConstantValue = 8
+  },
   GuideGachaId = {
     ConstantName = "GuideGachaId",
     ConstantValue = 9998
@@ -548,6 +568,46 @@ return ReadOnly("GlobalConstant", {
   GuildApplyMaxCount = {
     ConstantName = "GuildApplyMaxCount",
     ConstantValue = 150
+  },
+  GuildBossBasePoint = {
+    ConstantName = "GuildBossBasePoint",
+    ConstantValue = 375000
+  },
+  GuildBossBattleTimeLimit = {
+    ConstantName = "GuildBossBattleTimeLimit",
+    ConstantValue = 180
+  },
+  GuildBossEnterNum = {
+    ConstantName = "GuildBossEnterNum",
+    ConstantValue = 10
+  },
+  GuildBossHelpEnterNum = {
+    ConstantName = "GuildBossHelpEnterNum",
+    ConstantValue = 10
+  },
+  GuildBossMaxBreakPer = {
+    ConstantName = "GuildBossMaxBreakPer",
+    ConstantValue = 100
+  },
+  GuildBossMaxDamagePer = {
+    ConstantName = "GuildBossMaxDamagePer",
+    ConstantValue = 10
+  },
+  GuildBossOpenConditionData = {
+    ConstantName = "GuildBossOpenConditionData",
+    ConstantValue = 4500
+  },
+  GuildBossSettleAutoAgainTime = {
+    ConstantName = "GuildBossSettleAutoAgainTime",
+    ConstantValue = 20
+  },
+  GuildBossSettleExitTime = {
+    ConstantName = "GuildBossSettleExitTime",
+    ConstantValue = 120
+  },
+  GuildBossWarningTime = {
+    ConstantName = "GuildBossWarningTime",
+    ConstantValue = 15
   },
   GuildCreateItemId = {
     ConstantName = "GuildCreateItemId",
@@ -572,6 +632,62 @@ return ReadOnly("GlobalConstant", {
   GuildExpFactor = {
     ConstantName = "GuildExpFactor",
     ConstantValue = 1
+  },
+  GuildHomeBuildLockTimeoutSec = {
+    ConstantName = "GuildHomeBuildLockTimeoutSec",
+    ConstantValue = 120
+  },
+  GuildHomeChatHeat = {
+    ConstantName = "GuildHomeChatHeat",
+    ConstantValue = 5
+  },
+  GuildHomeDynamicNum = {
+    ConstantName = "GuildHomeDynamicNum",
+    ConstantValue = 100
+  },
+  GuildHomeDynamicPageSize = {
+    ConstantName = "GuildHomeDynamicPageSize",
+    ConstantValue = 20
+  },
+  GuildHomeFundExchangeItemId = {
+    ConstantName = "GuildHomeFundExchangeItemId",
+    ConstantValue = 99
+  },
+  GuildHomeFundExchangeRate = {
+    ConstantName = "GuildHomeFundExchangeRate",
+    ConstantValue = 10
+  },
+  GuildHomeFundExchangeSingleMax = {
+    ConstantName = "GuildHomeFundExchangeSingleMax",
+    ConstantValue = 999999
+  },
+  GuildHomeFundMax = {
+    ConstantName = "GuildHomeFundMax",
+    ConstantValue = 999999999
+  },
+  GuildHomeHeatBucketSec = {
+    ConstantName = "GuildHomeHeatBucketSec",
+    ConstantValue = 3600
+  },
+  GuildHomeHeatRankThreshold = {
+    ConstantName = "GuildHomeHeatRankThreshold",
+    ConstantValue = 100
+  },
+  GuildHomeHeatWindowSec = {
+    ConstantName = "GuildHomeHeatWindowSec",
+    ConstantValue = 43200
+  },
+  GuildHomeMaxPlayer = {
+    ConstantName = "GuildHomeMaxPlayer",
+    ConstantValue = 150
+  },
+  GuildHomeOnlineHeatPerMinute = {
+    ConstantName = "GuildHomeOnlineHeatPerMinute",
+    ConstantValue = 5
+  },
+  GuildHomeVisitListCount = {
+    ConstantName = "GuildHomeVisitListCount",
+    ConstantValue = 15
   },
   GuildInviteCoolDownS = {
     ConstantName = "GuildInviteCoolDownS",
@@ -601,10 +717,6 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "GuildListMinRefreshSec",
     ConstantValue = 2
   },
-  GuildLogoEditCoolDownDay = {
-    ConstantName = "GuildLogoEditCoolDownDay",
-    ConstantValue = 3
-  },
   GuildMessageCacheDuration = {
     ConstantName = "GuildMessageCacheDuration",
     ConstantValue = 72
@@ -620,6 +732,14 @@ return ReadOnly("GlobalConstant", {
   GuildNameMaxLen = {
     ConstantName = "GuildNameMaxLen",
     ConstantValue = 14
+  },
+  GuildOnlineAreaID = {
+    ConstantName = "GuildOnlineAreaID",
+    ConstantValue = 300101
+  },
+  GuildPerformanceMax = {
+    ConstantName = "GuildPerformanceMax",
+    ConstantValue = 5000
   },
   GuildQuitLowLevelCoolDownM = {
     ConstantName = "GuildQuitLowLevelCoolDownM",
@@ -1126,7 +1246,7 @@ return ReadOnly("GlobalConstant", {
   },
   SoloTreasureTicketShopId = {
     ConstantName = "SoloTreasureTicketShopId",
-    ConstantValue = 10007126
+    ConstantValue = 10007133
   },
   SpecialQuestBlackTimeMax = {
     ConstantName = "SpecialQuestBlackTimeMax",

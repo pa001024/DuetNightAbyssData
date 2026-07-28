@@ -1,10 +1,12 @@
 local RougeProEffect = DungeonClass.Class()
 
 function RougeProEffect:BeginPlay()
-  self.BuffList = {}
 end
 
 function RougeProEffect:ActivateRougeProEffects(Source, Effect)
+  if nil == Effect then
+    return
+  end
   for i = 1, #Effect do
     self:ActivateRougeProSingleEffect(Source, Effect[i])
   end
@@ -38,6 +40,38 @@ end
 
 function RougeProEffect:GetRougeProEffect_RandomChoice(Player)
   return next(self.bRandomChoice) or next(Player.bRandomChoice)
+end
+
+function RougeProEffect:GetRougeProEffect_ChoiceNumber(Player)
+  return Player.ChoiceNumber
+end
+
+function RougeProEffect:GetRougeProEffect_ShopDiscount(Player)
+  return Player.ShopDiscount
+end
+
+function RougeProEffect:GetRougeProEffect_OreExtraRate(Player)
+  return Player.OreExtraRate
+end
+
+function RougeProEffect:GetRougeProEffect_TimberExtraRate(Player)
+  return Player.TimberExtraRate
+end
+
+function RougeProEffect:GetRougeProEffect_LanternRange(Player)
+  return Player.LanternRange
+end
+
+function RougeProEffect:GetRougeProEffect_TokenExtraRate(Player)
+  return Player.TokenExtraRate
+end
+
+function RougeProEffect:GetRougeProEffect_EndPointsExtraRate(Player)
+  return self.EndPointsExtraRate
+end
+
+function RougeProEffect:GetRougeProEffect_RebornFree(Player)
+  return Player.RebornFree
 end
 
 return RougeProEffect

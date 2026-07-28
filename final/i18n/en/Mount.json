@@ -149,5 +149,33 @@
     "access": [
       "Source: Limited-Time Exchange in the Prism Shop"
     ]
+  },
+  {
+    "id": 1011,
+    "name": "Mecha-Sable Bi'an: Celeste",
+    "des": "A mechanical mount developed by Master Gongshang, lifelike enough to pass for a real Sable Bi'an. Ride it through Mistwharf, and you are sure to turn a few heads.",
+    "icon": "Mounts_0012",
+    "resourceIcon": "Icon_Mounts_0012",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49988,
+    "fly": 1,
+    "access": [
+      "Shop"
+    ]
+  },
+  {
+    "id": 1012,
+    "name": "Blade-run Knight: Celeste",
+    "des": "All those moments will be lost in time, like tears in rain.",
+    "icon": "Mounts_0013",
+    "resourceIcon": "Icon_Mounts_0013",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49987,
+    "fly": 1,
+    "access": [
+      "Shop"
+    ]
   }
 ]

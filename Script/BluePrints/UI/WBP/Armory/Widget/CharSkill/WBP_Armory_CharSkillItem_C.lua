@@ -9,6 +9,9 @@ function M:Construct()
   self.Button_Area.OnUnhovered:Add(self, self.OnBtnUnhovered)
   self.Button_Area.OnPressed:Add(self, self.OnBtnPressed)
   self.Button_Area.OnReleased:Add(self, self.OnBtnReleased)
+  if self.Text_Level then
+    self.Text_Level:SetText(GText("UI_LEVEL_NAME"))
+  end
   self:FlushAnimations()
 end
 

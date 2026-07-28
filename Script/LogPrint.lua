@@ -17,6 +17,7 @@ _G.DebugPrint = bDistribution and not bEnableShippingLog and EmptyFunction or fu
   end
   print(_G.LogTag, " [Debug Log]: ", ...)
 end
+require("AIDebugLog")
 _G.DebugNetPrint = bDistribution and not bEnableShippingLog and EmptyFunction or function(...)
   netprint(_G.LogTag, " [Debug Log]: ", ...)
 end

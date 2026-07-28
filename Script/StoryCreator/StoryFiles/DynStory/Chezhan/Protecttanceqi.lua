@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -222,27 +222,21 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1775703369393899667",
-            startPort = "Out",
-            endQuest = "1775703369390899648",
-            endPort = "In"
-          },
-          {
             startQuest = "1775703369390899645",
             startPort = "Option_2",
             endQuest = "1775703369393899668",
             endPort = "In"
           },
           {
-            startQuest = "1775703369391899654",
-            startPort = "Out",
-            endQuest = "1775703369393899667",
-            endPort = "In"
-          },
-          {
             startQuest = "1775703369390899645",
             startPort = "Option_1",
             endQuest = "1775703369391899654",
+            endPort = "In"
+          },
+          {
+            startQuest = "1775703369393899666",
+            startPort = "Out",
+            endQuest = "1775703369390899648",
             endPort = "In"
           }
         },
@@ -336,6 +330,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -418,7 +413,7 @@ return {
             key = "1775703369390899648",
             type = "SwitchMechanismStateNode",
             name = "开启修理状态",
-            pos = {x = 1821.1865998634848, y = 281.3964254714749},
+            pos = {x = 1855.6865998634848, y = 282.8964254714749},
             propsData = {
               StaticCreatorIdList = {292480104},
               ManualItemIdList = {},
@@ -495,7 +490,7 @@ return {
             key = "1775703369391899654",
             type = "ChangeStaticCreatorNode",
             name = "npc消失",
-            pos = {x = 1568.3013781886077, y = 224.2805819280454},
+            pos = {x = 1578.0513781886077, y = -16.469418071954465},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = true,
@@ -556,6 +551,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -611,6 +607,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -740,6 +737,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -769,7 +767,7 @@ return {
             key = "1775703369393899666",
             type = "ChangeStaticCreatorNode",
             name = "生成小游戏机关",
-            pos = {x = 1601.4271732701238, y = -19.185850239242853},
+            pos = {x = 1580.4271732701238, y = 186.31414976075706},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -778,13 +776,6 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {292480104}
             }
-          },
-          ["1775703369393899667"] = {
-            key = "1775703369393899667",
-            type = "WaitOfTimeNode",
-            name = "延迟等待",
-            pos = {x = 1735.2591397849465, y = 466.45161290322585},
-            propsData = {WaitTime = 1}
           },
           ["1775703369393899668"] = {
             key = "1775703369393899668",

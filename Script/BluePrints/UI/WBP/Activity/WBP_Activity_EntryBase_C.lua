@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local M = Class()
@@ -196,7 +197,7 @@ function M:ActivityItemClick(TabWidget)
   if self.CurTabId ~= nil then
     local LastActivityPageName = DataMgr.EventTab[self.CurTabId].EventTabName
     if LastActivityPageName then
-      ForceStopAsyncTask(self, LastActivityPageName)
+      CoroutineUtils.ForceStopAsyncTask(self, LastActivityPageName)
     end
   end
   local TabIndex = TabWidget:GetTabIndex()
@@ -258,7 +259,7 @@ function M:GenerateActivityPage(ActivityId, ActivityInfo, ActivityConfigData, Ta
   if ActivityCommon.IsLoadAsync and self.IsNotFirstOpenSystem then
     if nil == ActivityPage then
       local ActivityPageName = DataMgr.EventTab[TabId].EventTabName
-      RunAsyncTask(self, ActivityPageName, function(CoroutineObj)
+      CoroutineUtils.RunAsyncTask(self, ActivityPageName, function(CoroutineObj)
         local ActivityPage
         if CommonUtils.GetDeviceTypeByPlatformName(self) == CommonConst.CLIENT_DEVICE_TYPE.PC then
           ActivityPage = UIManager(self):CreateWidgetAsync(ActivityPageName, CoroutineObj, ActivityConfigData.PCBluePrint)
@@ -411,7 +412,7 @@ function M:OnReturnKeyDown()
   if self.CurTabId ~= nil then
     local CurActivityPageName = DataMgr.EventTab[self.CurTabId].EventTabName
     if CurActivityPageName then
-      ForceStopAsyncTask(self, CurActivityPageName)
+      CoroutineUtils.ForceStopAsyncTask(self, CurActivityPageName)
     end
   end
   self:PlayOutAnim()

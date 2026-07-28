@@ -13,7 +13,19 @@ local WaitItemUniqueTag = {
 }
 local M = Class("BluePrints.Story.Talk.Controller.CommonTalkTask")
 
+function M:Start(...)
+  local bMobile = CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile"
+  if bMobile then
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.Mobile.CustomDepth 1")
+  end
+  M.Super.Start(self, ...)
+end
+
 function M:End()
+  local bMobile = CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile"
+  if bMobile then
+    UE4.UKismetSystemLibrary.ExecuteConsoleCommand(GWorld.GameInstance, "r.Mobile.CustomDepth 0")
+  end
   local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   AudioManager(self):StopSound(PlayerController, Const.TalkSoundKey)
   if self.TalkTaskData.SequenceActor then
@@ -88,8 +100,8 @@ function M:OnCinematicBegin()
   end
   DebugPrint("CinematicTalkTask:OnCinematicBegin", self.SequenceProxy, TalkSequenceMgrSubSystem)
   local UPostProcessFunctionLibrary = LoadClass(LibraryPath)
-  if UPostProcessFunctionLibrary and UPostProcessFunctionLibrary.MobileCloseLights then
-    UPostProcessFunctionLibrary.MobileCloseLights(self.TalkTaskData.SequenceActor)
+  if UPostProcessFunctionLibrary and UPostProcessFunctionLibrary.MobileCloseLightTrack then
+    UPostProcessFunctionLibrary.MobileCloseLightTrack(self.TalkTaskData.SequenceActor)
   end
 end
 

@@ -3,7 +3,6 @@ local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
 local PickUpInteractiveNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode")
 local QuestNodeUtils = require("StoryCreator.StoryLogic.QuestNodeUtils")
-local TalkCameraManager_C = require("BluePrints.Story.Talk.Controller.TalkCameraManager")
 
 function PickUpInteractiveNode:Init()
   self.StaticCreatorId = 0
@@ -19,6 +18,7 @@ function PickUpInteractiveNode:Init()
   self.bFocusEnable = false
   self.SequencePath = ""
   self.Pickup = nil
+  self.SoundEventPath = ""
 end
 
 function PickUpInteractiveNode:Execute(Callback)
@@ -98,6 +98,9 @@ function PickUpInteractiveNode:Clear()
     MissionIndicatorManager:ReactiveMissionIndicatorByNode(self)
   end
   EventManager:RemoveEvent(EventID.OnManualPickUpReady, self)
+  if self.SoundEventPath ~= "" then
+    AudioManager(GWorld.GameInstance):StopSound(nil, "PickUpInteractive_" .. tostring(self.Key or "Unknown"))
+  end
 end
 
 function PickUpInteractiveNode:OnManualPickUpReady(Pickup)
@@ -118,7 +121,11 @@ end
 
 function PickUpInteractiveNode:OnPickupPressed()
   DebugPrint("PickUpInteractiveNode Start")
-  if self.SequencePath == "" and self.bFocusEnable then
+  if self.SoundEventPath ~= "" then
+    local eventKey = "PickUpInteractive_" .. tostring(self.Key or "Unknown")
+    AudioManager(GWorld.GameInstance):PlayUISound(nil, self.SoundEventPath, eventKey, nil)
+  end
+  if "" == self.SequencePath and self.bFocusEnable then
     local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     local PlayerCameraManager = UE4.UGameplayStatics.GetPlayerCameraManager(GWorld.GameInstance, 0)
     local CurrentCameraLoc = PlayerCameraManager:GetCameraLocation()
@@ -143,7 +150,7 @@ function PickUpInteractiveNode:OnPickupPressed()
     FVector.Add(TargetLoc, PlayerLoc / 2)
     self.TalkPawn:SetCameraLoc(TargetLoc)
     USequenceFunctionLibrary.SetViewTargetWithBlend(PlayerController, self.TalkPawn, self.LongPressTime, UE4.EViewTargetBlendFunction.VTBlend_EaseInOut, 2)
-  elseif self.SequencePath ~= "" then
+  elseif "" ~= self.SequencePath then
     if not IsValid(self.CameraSequenceActor) then
       self.CameraSequenceActor = GWorld.GameInstance:GetWorld():SpawnActor(ALevelSequenceActor)
       local Sequence = UE4.LoadObject(self.SequencePath)
@@ -165,7 +172,10 @@ end
 
 function PickUpInteractiveNode:OnPickupReleased()
   DebugPrint("PickUpInteractiveNode End")
-  if self.SequencePath == "" then
+  if self.SoundEventPath ~= "" then
+    AudioManager(GWorld.GameInstance):StopSound(nil, "PickUpInteractive_" .. tostring(self.Key or "Unknown"))
+  end
+  if "" == self.SequencePath then
     local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     USequenceFunctionLibrary.SetViewTarget(PlayerController, self.Player)
   elseif self.CameraSequenceActor then

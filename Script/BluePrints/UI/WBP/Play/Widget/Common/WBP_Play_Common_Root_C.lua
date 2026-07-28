@@ -1,8 +1,10 @@
 require("UnLua")
+local SoloTreasurePermanentDataModel = require("BluePrints.UI.UI_PC.SoloTreasure.SoloTreasurePermanentDataModel")
 local WBP_Play_Common_Root_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Play_Common_Root_C:Construct()
   self.IsInSelectState = false
+  SoloTreasurePermanentDataModel:RefreshPlaySubtabNewReddot()
   self:InitSubTab()
   self.Btn_Enter:SetText(GText("UI_GameEvent_Goto"))
   self.Text_BossRewards:SetText(GText("UI_HardBoss_Preview"))
@@ -20,6 +22,8 @@ end
 
 function WBP_Play_Common_Root_C:Destruct()
   self:RemoveTimer("AddPermanentItem")
+  self:RemoveTimer("AutoEnterSoloTreasurePermanent")
+  self.PendingSoloTreasureJump = nil
   self:ClearListenEvent()
 end
 
@@ -123,6 +127,7 @@ function WBP_Play_Common_Root_C:RefreshListPermanentInfo(Index)
     SubCell:StopBtnAnimations()
     SubCell:PlayAnimation(SubCell.Normal)
     self:PlayAnimation(self.Change)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/normal_boss_select_in", nil, nil)
   end
   if self.CurSubTabName then
     ReddotManager.RemoveListener(self.CurSubTabName, self)
@@ -132,6 +137,11 @@ function WBP_Play_Common_Root_C:RefreshListPermanentInfo(Index)
   local BtnInfo = DataMgr.PlaySubTab
   local SubTabInfo = BtnInfo[CurSelectPermanent.SubWidgetUIName]
   self.CurSubTabName = CurSelectPermanent.SubWidgetUIName
+  if self.CurSubTabName == "SoloTreasurePlaySubtabMain" then
+    SoloTreasurePermanentDataModel:MarkPlaySubtabNewRead()
+  end
+  self.Btn_Enter.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Btn_Enter.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if DataMgr.ReddotNode[self.CurSubTabName] then
     if not ReddotManager.GetTreeNode(self.CurSubTabName) then
       ReddotManager.AddNode(self.CurSubTabName)
@@ -172,12 +182,22 @@ function WBP_Play_Common_Root_C:RefreshListPermanentInfo(Index)
   end
   self.ListView_Rewards:ClearListItems()
   local RewardViewId = SubTabInfo.RewardViewId
-  if not RewardViewId and "AbyssMain" == SubTabInfo.SubWidgetUI then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar and Avatar.CurrentAbyssSeasonId then
-      local AbyssSeasonListInfo = DataMgr.AbyssSeasonList[Avatar.CurrentAbyssSeasonId]
-      if AbyssSeasonListInfo and AbyssSeasonListInfo.EventId then
-        local EventPortalInfo = DataMgr.EventPortal[AbyssSeasonListInfo.EventId]
+  if not RewardViewId then
+    if "AbyssMain" == SubTabInfo.SubWidgetUI then
+      local Avatar = GWorld:GetAvatar()
+      if Avatar and Avatar.CurrentAbyssSeasonId then
+        local AbyssSeasonListInfo = DataMgr.AbyssSeasonList[Avatar.CurrentAbyssSeasonId]
+        if AbyssSeasonListInfo and AbyssSeasonListInfo.EventId then
+          local EventPortalInfo = DataMgr.EventPortal[AbyssSeasonListInfo.EventId]
+          if EventPortalInfo and EventPortalInfo.RewardPreview then
+            RewardViewId = EventPortalInfo.RewardPreview
+          end
+        end
+      end
+    elseif "SoloTreasurePlaySubtabMain" == SubTabInfo.SubWidgetUI then
+      local SeasonConfigData = SoloTreasurePermanentDataModel:GetSeasonConfigData()
+      if SeasonConfigData and SeasonConfigData.SeasonEventId then
+        local EventPortalInfo = DataMgr.EventPortal[SeasonConfigData.SeasonEventId]
         if EventPortalInfo and EventPortalInfo.RewardPreview then
           RewardViewId = EventPortalInfo.RewardPreview
         end
@@ -270,6 +290,27 @@ function WBP_Play_Common_Root_C:OnAbyssMainReddotChange()
     self.Btn_Enter.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Btn_Enter.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function WBP_Play_Common_Root_C:OnSoloTreasurePlaySubtabMainReddotChange()
+  local PermNode = ReddotManager.GetTreeNode("Permanent_SoloTreasureMain")
+  local NewNode = ReddotManager.GetTreeNode("SoloTreasurePlaySubtabNew")
+  local PermCount = PermNode and PermNode.Count or 0
+  local PermType = PermNode and PermNode.ReddotType
+  local NewCount = NewNode and NewNode.Count or 0
+  local bShowReddot = PermCount > 0 and (PermType == EReddotType.Normal or PermType == EReddotType.Num)
+  local bShowNew = not bShowReddot and (NewCount > 0 or PermCount > 0 and PermType == EReddotType.New)
+  if bShowReddot then
+    self.Btn_Enter.Reddot:SetReddotStyle(0)
+    self.Btn_Enter.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Btn_Enter.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if bShowNew then
+    self.Btn_Enter.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Btn_Enter.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -434,6 +475,7 @@ function WBP_Play_Common_Root_C:HandleKeyDown(MyGeometry, InKeyEvent)
 end
 
 function WBP_Play_Common_Root_C:SwitchIn()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/normal_boss_select_in", nil, nil)
   self:InitNormalTab()
 end
 
@@ -592,6 +634,51 @@ function WBP_Play_Common_Root_C:InitMenuOpenTab()
     self.Root.ComTab.WBP_Com_Tab_ResourceBar.Tip_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Root:UpdateOtherPageTab(BottomKeyInfo)
+end
+
+function WBP_Play_Common_Root_C:FindSubTabIndex(SubWidgetUIName)
+  local Count = self.List_Permanent:GetNumItems()
+  for i = 0, Count - 1 do
+    local Item = self.List_Permanent:GetItemAt(i)
+    if Item and not Item.Empty and Item.SubWidgetUIName == SubWidgetUIName then
+      return Item.Index
+    end
+  end
+  return nil
+end
+
+function WBP_Play_Common_Root_C:SubUIJumpFunc(SubTabName, Mode, bIsDifficult, EventDungeonId)
+  self.PendingSoloTreasureJump = {
+    SubTabName = SubTabName,
+    Mode = Mode,
+    bIsDifficult = bIsDifficult,
+    EventDungeonId = EventDungeonId
+  }
+  self:TryExecutePendingSoloTreasureJump()
+end
+
+function WBP_Play_Common_Root_C:TryExecutePendingSoloTreasureJump()
+  local Pending = self.PendingSoloTreasureJump
+  if not Pending then
+    return
+  end
+  local Index = self:FindSubTabIndex(Pending.SubTabName)
+  if not Index then
+    return
+  end
+  self.PendingSoloTreasureJump = nil
+  local Item = self.List_Permanent:GetItemAt(Index - 1)
+  if Item and Item.Entry then
+    Item.Entry:OnCellClickedWithoutSound()
+  else
+    self:RefreshListPermanentInfo(Index)
+  end
+  self:AddTimer(0.05, function()
+    local SubTabInfo = DataMgr.PlaySubTab[Pending.SubTabName]
+    if SubTabInfo and SubTabInfo.JumpUIId then
+      PageJumpUtils:JumpToTargetPageByJumpId(SubTabInfo.JumpUIId, Pending.Mode, Pending.bIsDifficult, Pending.EventDungeonId)
+    end
+  end, false, 0, "AutoEnterSoloTreasurePermanent", true)
 end
 
 return WBP_Play_Common_Root_C

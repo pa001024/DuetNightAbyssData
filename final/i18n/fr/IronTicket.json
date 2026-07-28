@@ -2,8 +2,8 @@
   {
     "id": 1001,
     "name": "Compas abyssal : Expédition",
-    "desc": "Utilisé pour lancer une Expédition abyssale",
-    "func": "Compas abyssal",
+    "desc": "Suivez les traces de la calamité, cherchez le pouvoir capable de renverser le monde, et laissez le compas vous guider vers l’avant.\nPermet d’accéder aux Missions abyssales.",
+    "func": "Permet d’accéder aux Missions abyssales.",
     "icon": "T_Resource_Coin_Zaie",
     "level": 100,
     "rarity": 5,
@@ -13,11 +13,14 @@
   },
   {
     "id": 1002,
-    "name": "Compas abyssal : Expédition",
-    "desc": "Utilisé pour lancer une Expédition abyssale",
-    "func": "Compas abyssal",
-    "icon": "T_Resource_Coin_Zaie",
-    "level": 90,
-    "rarity": 3
+    "name": "Compas abyssal : Défense",
+    "desc": "Suivez les traces de la calamité, cherchez le pouvoir capable de renverser le monde, et laissez le compas vous guider vers l’avant.\nPermet d’accéder aux Missions abyssales.",
+    "func": "Permet d’accéder aux Missions abyssales.",
+    "icon": "T_Resource_Coin_Zaie01",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
   }
 ]

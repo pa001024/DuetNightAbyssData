@@ -18939,7 +18939,7 @@ LookAt{_delay{2.1},LookAtDescription{"100360:n(100001)"}},
         },
         [10034106] = {
           Content = "压在一堆杂物下的老旧报纸，记录着很久以前的悲惨事故。\n\n<H>秽蚀者异常凶险，不要被表象欺骗！</>\n9月24日，本市发生一起极为恶劣的“秽蚀”事件，经第六军团卫戍部队调查后，得出以下结论：\n冰湖城市民费西尔夫妇于9月13日在泪湖畔公路边上偶遇一名叫做罗比·布朗的青年。因其身受重伤，费西尔夫妇将其带回家中照料。\n然而，罗比·布朗是一名秽蚀者，他躲过了帝国对潜在秽蚀者的例行盘查并潜逃至城外，且在接受费西尔夫妇帮助时，刻意掩盖了自己的秽蚀痕迹。十日后，悲剧发生：布朗蜕变成为秽兽，杀死了包括费西尔夫妇在内数十名居住在冰湖城南区的市民。第六军团下属冰湖城卫戍部队紧急出动才平息此次骚乱。\n骚乱共造成18人死亡，其中包含3名索拉之民；另有34人受伤。在此提醒各位市民谨记，不要轻易收留身份不明的卡戎之民，一旦发现秽蚀者，立即上报治安署。它们永远只是人类的敌人，无一例外。如有刻意包庇秽蚀者、隐瞒不报者，一律按照《海伯利亚刑事法典》第54条规定，处以死刑。",
-          ContentKR = "<H>침식자는 매우 위험하니 겉모습에 속지 마세요!</>\n9월 24일, 본 시에서 매우 끔찍한 '침식' 사건이 발생했습니다. 제6군단 방위대의 조사를 거쳐 얻어낸 결론은 다음과 같습니다.\n아이스레이크 시티 주민 페실 부부는 9월 13일 눈물의 호수 옆 도로변에서 로비 브라운이라는 청년을 우연히 만났습니다. 페실 부부는 중상을 입은 그를 집으로 데려가 돌보았습니다.\n그러나 로비 브라운은 제국의 잠재적 침식자에 대한 조사를 피해 도시 밖으로 도피한 침식자였고, 페실 부부의 도움을 받을 때 자신의 침식 흔적을 의도적으로 숨겼습니다. 10일 후, 비극이 발생했습니다. 브라운은 필토이드로 변하여 페실 부부를 포함한 아이스레이크 남쪽 구역 시민 수십 명을 살해했습니다. 제6군단 소속 아이스레이크 시티 방위대가 긴급 출동하여 이번 소란을 진압했습니다.\n이번 사태로 총 18명이 사망했고, 그중 3명은 솔라인 것으로 밝혀졌습니다. 그 외 34명이 다쳤습니다. 시민 여러분들, 명심해 주십시오. 신원불명의 카론을 함부로 수용해서는 안 됩니다. 침식자를 발견하게 되면 즉시 치안서에 신고해 주십시오. 그들은 하나도 빠짐없이, 영원히 인간의 적입니다. 의도적으로 침식자에게 협력하거나 침식자를 은폐하는 자는 <휘페르보레아 형사 법전>제 54조에 따라 사형에 처합니다.",
+          ContentKR = "<H>침식자는 매우 위험하니 겉모습에 속지 마세요!</>\n9월 24일, 본 시에서 매우 끔찍한 '침식' 사건이 발생했습니다. 제6군단 방위대의 조사를 거쳐 얻어낸 결론은 다음과 같습니다.\n아이스레이크 시티 주민 페실 부부는 9월 13일 눈물의 호수 옆 도로변에서 로비 브라운이라는 청년을 우연히 만났습니다. 페실 부부는 중상을 입은 그를 집으로 데려가 돌보았습니다.\n그러나 로비 브라운은 제국의 잠재적 침식자에 대한 조사를 피해 도시 밖으로 도피한 침식자였고, 페실 부부의 도움을 받을 때 자신의 침식 흔적을 의도적으로 숨겼습니다. 10일 후, 비극이 발생했습니다. 브라운은 필토이드로 변하여 페실 부부를 포함한 아이스레이크 남쪽 구역 시민 수십 명을 살해했습니다. 제6군단 소속 아이스레이크 시티 방위대가 긴급 출동하여 이번 소란을 진압했습니다.\n이번 사태로 총 18명이 사망했고, 그중 3명은 솔라인 것으로 밝혀졌습니다. 그 외 34명이 다쳤습니다. 시민 여러분들, 명심해 주십시오. 신원불명의 카론을 함부로 수용해서는 안 됩니다. 침식자를 발견하게 되면 즉시 치안서에 신고해 주십시오. 그들은 하나도 빠짐없이, 영원히 인간의 적입니다. 의도적으로 침식자에게 협력하거나 침식자를 은폐하는 자는 <휘페르보레아 형사 법전>제 54조에 따라 사형에 처합니다.\n",
           DialogueId = 10034106,
           DialoguePanelType = "{type:showtext;topic:READ_NAME_2000048;content:READ_TEXT_2000048}",
           GUID = "191E8C84",
@@ -32147,7 +32147,7 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
         },
         [10037996] = {
           Content = "克莱夫在城门外停车场附近，去那里找他吧。",
-          ContentKR = "클레이프는 바람 나루터 근처에 있어요. 그쪽으로 가서 찾아보세요.",
+          ContentKR = "클레이프는 성문 밖 주차장 근처에 있다. 그쪽으로 가서 찾아봐.",
           DialogueId = 10037996,
           GUID = "19210B10",
           SpeakNpcId = 200022,
@@ -32541,6 +32541,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "한 달 후, 제13군단에서 중요한 죄수 한 명을 호송할 예정입니다. 열차를 타고 아이스레이크 시티에서 출발해 황성 디즈마니아로 향한다고 하더군요. 제6군단도 협조 명령을 받은 상태입니다.",
           DialogueId = 10040116,
           GUID = "19226688",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100304,
           VoiceName = "voice/$Locale$/story/1003/100375/1920BCA0"
         },
@@ -32549,6 +32550,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그 죄수의 신분은 1급 기밀로 분류되어 있습니다. 제가 아는 건 그녀가 내성에서 치료를 받고 있다는 것과, 그녀 주위에 철저한 경호가 이루어지고 있다는 것뿐이에요. 하지만 누군가 그녀의 뒷모습을 봤다고 하더군요. 검은 옷을 입은, <H>20대 초반의 젊은 아가씨</>였다고 해요.",
           DialogueId = 10040117,
           GUID = "192266B2",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100304,
           VoiceName = "voice/$Locale$/story/1003/100375/1920BCCA"
         },
@@ -35355,7 +35357,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           DialogueId = 10041817,
           DisableMouth = 1,
           GUID = "19237D9A",
-          SnapShot = "BROADCAST ",
+          SnapShot = "BROADCAST",
           SpeakNpcName = "UI_SpeakName_Guangbo",
           VoiceName = "voice/$Locale$/story/1004/100418/19237D9A"
         },
@@ -35456,6 +35458,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "별건 아니고요, 제 아들 스테판이 대합실에서 철골 청소부로 일하고 있거든요. 매일 갈고리를 타고 대합실 천장의 철골들 위를 날아다니고 있죠.",
           DialogueId = 10041911,
           GUID = "19238D06",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100418,
           VoiceName = "voice/$Locale$/story/1004/100411/192308F4"
         },
@@ -35464,6 +35467,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "기차를 워낙 좋아하는 애라서, 매일 일이 끝나고도 육교 위에서 기차가 다니는 걸 구경하곤 해요.",
           DialogueId = 10041912,
           GUID = "19238D30",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100418,
           VoiceName = "voice/$Locale$/story/1004/100411/1923091E"
         },
@@ -35627,7 +35631,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
         },
         [10041933] = {
           Content = "还真不知道……要不你去档案室翻翻档案？那边平时没什么人，也就是需要广播的时候会有人过去。我小的时候就喜欢偷偷溜进去查火车数据。",
-          ContentKR = "그건 진짜 모르겠어요... 아니면 기록 보관실에 가서 자료 한 번 뒤져 볼래요? 거긴 방송할 일 있을 때 아니면 사람이 없거든요. 저도 진짜 어릴 땐 몰래 들어가서 차량 제원 같은 거 찾아보고 그랬어요.",
+          ContentKR = "그건 저도 모르겠어요... 아니면 기록 보관실에 가서 자료 한 번 뒤져 볼래요? 거긴 방송할 일 있을 때 아니면 사람이 없거든요. 저도 진짜 어릴 땐 몰래 들어가서 차량 제원 같은 거 찾아보고 그랬어요.",
           DialogueId = 10041933,
           GUID = "192390A2",
           SpeakNpcId = 100415,
@@ -36765,6 +36769,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "정확한 추측이네요. 하지만 제가 모시는 분에 대해선 말씀드릴 수 없습니다. 숙녀에게 비밀 몇 가지쯤은 있어야 하니까요.",
           DialogueId = 10042807,
           GUID = "19242006",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100403,
           VoiceName = "voice/$Locale$/story/1004/100428/19242006"
         },
@@ -37499,7 +37504,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           VoiceName = "voice/$Locale$/story/1004/100436/1924A370"
         },
         [10043609] = {
-          Content = "好好，我都说，为什么都说。",
+          Content = "好好，我都说，我什么都说。",
           ContentKR = "그래, 알겠어, 아는 건 전부 다 얘기해 줄게.",
           DialogueId = 10043609,
           GUID = "1924A39A",
@@ -41678,6 +41683,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "역장님! 보고드립니다! 익명 투서의 필적이 카르노의 필적과 정확히 일치합니다. 또한, 하로기라는 남자에게서 포세이큰 동맹의 증표가 발견됐습니다. 계급은 레이븐입니다!",
           DialogueId = 10046508,
           GUID = "19267F38",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100420,
           VoiceName = "voice/$Locale$/story/1004/100447/192556EC"
         },
@@ -41686,6 +41692,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "알겠다. 두 놈 다 내일 디즈마니아로 압송해서 추가 신문을 진행해.",
           DialogueId = 10046509,
           GUID = "19267F62",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100416,
           VoiceName = "voice/$Locale$/story/1004/100447/19255716"
         },
@@ -42420,7 +42427,9 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           Content = "（并且虽然没有人在正眼看我们，但好像每一个人都在用余光扫视我们……果然是没法轻易通过的车厢。）",
           ContentKR = "(게다가 우릴 대놓고 쳐다보는 사람은 없지만, 왠지 모두가 힐끔거리면서 보는 느낌이야... 역시 쉽게 통과하긴 어려울 것 같아.)",
           DialogueId = 10047103,
+          DisableMouth = 1,
           GUID = "1926E0D6",
+          SnapShot = "HEART",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100471/1926E0D6"
         },
@@ -44950,7 +44959,6 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "정말 아름답지? 월석이 타오르는 색깔이 꼭 긴 밤이 오기 전의 석양 같지... 아니, 이건 석양이 아니라, 점점 더 뜨겁게 불타오르는 아침 해야.",
           DialogueId = 10048605,
           GUID = "1927D742",
-          SnapShot = "BROADCAST",
           SpeakNpcId = 100413,
           VoiceName = "voice/$Locale$/story/1004/100486/1927D742"
         },
@@ -44959,7 +44967,6 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "언젠가 대륙 전체를 불바다로 만들 아침 해.",
           DialogueId = 10048606,
           GUID = "1927D76C",
-          SnapShot = "BROADCAST",
           SpeakNpcId = 100413,
           VoiceName = "voice/$Locale$/story/1004/100486/1927D76C"
         },
@@ -44968,7 +44975,6 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "거기 훼방꾼 공주하고 월석 사냥꾼, 열차포에 갈기갈기 찢겨 죽고 싶지 않다면, 얌전히 이리 와서 내 포로가 되는 게 어때?",
           DialogueId = 10048607,
           GUID = "1927D796",
-          SnapShot = "BROADCAST",
           SpeakNpcId = 100413,
           VoiceName = "voice/$Locale$/story/1004/100486/1927D796"
         },
@@ -44977,7 +44983,6 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "이렇게 대단한 포로는 진짜로 계획에 없었지만... 그쪽에서 제 발로 찾아온다면야, 굳이 전리품을 거절할 이유가 없잖아?",
           DialogueId = 10048608,
           GUID = "1927D7C0",
-          SnapShot = "BROADCAST",
           SpeakNpcId = 100413,
           VoiceName = "voice/$Locale$/story/1004/100486/1927D7C0"
         },
@@ -44986,7 +44991,6 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "반은 카론, 반은 솔라인 플로렌티아 공주, 그리고 <H>그 사람</>과 닮은 {nickname}(이)라면, <H>미스트 새도우</>의 동료들이 흥미가 꽤 많을 것 같거든.",
           DialogueId = 10048609,
           GUID = "1927D7EA",
-          SnapShot = "BROADCAST",
           SpeakNpcId = 100413,
           VoiceName = "voice/$Locale$/story/1004/100486/1927D7EA"
         },
@@ -45086,7 +45090,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
   },
   {
     MinKey = 10048704,
-    MaxKey = 10049909,
+    MaxKey = 10049908,
     Loader = function()
       return {
         [10048704] = {
@@ -45595,6 +45599,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 201033
           },
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282A70"
         },
@@ -45611,6 +45616,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "저예요, 플로렌티아 프로세르피나 갈레아.",
           DialogueId = 10049114,
           GUID = "19282AC4",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282AC4"
         },
@@ -45635,6 +45641,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "저도 몰라요, 그건 당신이 직접 확인해야 해요.",
           DialogueId = 10049117,
           GUID = "19282B42",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282B42"
         },
@@ -45651,6 +45658,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "말 그대로예요. 여긴 당신이 와야 할 곳이 아니에요. 전 계약을 이행하기 위해, 당신을 데리러 온 거예요.",
           DialogueId = 10049119,
           GUID = "19282B96",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282B96"
         },
@@ -45675,6 +45683,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그건 아니에요. 조금 복잡하게 들릴 순 있지만, 그래도 최대한 간단하게 설명해 줄게요.",
           DialogueId = 10049122,
           GUID = "19282C14",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282C14"
         },
@@ -45683,6 +45692,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "제 영혼을 둘로 나눴어요. 절반은 당연히 제 육체에 남겨뒀고, 나머지 절반은 바로 여기, 당신 눈앞에 있어요.",
           DialogueId = 10049123,
           GUID = "19282C3E",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282C3E"
         },
@@ -45694,6 +45704,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 304009
           },
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282C68"
         },
@@ -45702,6 +45713,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "유감이네요... 당신 운이 좋아서 이 힘을 아껴둘 수 있길 바랐거든요. 아니면 좀 더 나중에 쓸 수 있다면 좋았겠죠.",
           DialogueId = 10049125,
           GUID = "19282C92",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282C92"
         },
@@ -45718,6 +45730,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "사과하지 마세요. 어차피 애초에 당신이 제 의뢰를 받아줬기 때문에 이런 일들이 생긴 거니까요.",
           DialogueId = 10049127,
           GUID = "19282CE6",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282CE6"
         },
@@ -45726,6 +45739,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "전 줄곧 당신에게 고맙다고 말할 기회를 기다렸어요. 지금이라도 늦지 않아서 다행이에요.",
           DialogueId = 10049128,
           GUID = "19282D10",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282D10"
         },
@@ -45734,6 +45748,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "자, 하고 싶은 말은 거의 다 했으니까, 이제 손을 내밀어 봐요.",
           DialogueId = 10049129,
           GUID = "19282D3A",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282D3A"
         },
@@ -45750,6 +45765,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "당연히 저 플로라의 힘의 절반을 당신에게 주려는 거죠. 그래야 여기서 나가서, 당신이 걱정하는 사람들이 어떻게 됐는지 직접 확인할 수 있잖아요.",
           DialogueId = 10049131,
           GUID = "19282D8E",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282D8E"
         },
@@ -45774,6 +45790,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "밖에 있는 플로라는, 아마 숨도 못 쉴 만큼 많은 짐을 짊어지고 있어서 그럴 거예요. 여기 있는 플로라는 그냥 평범한 사람이거든요.",
           DialogueId = 10049134,
           GUID = "19282E0C",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282E0C"
         },
@@ -45782,6 +45799,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "당신도 마찬가지잖아요? 아까 애들처럼 소리 지르는 거 다 들었어요.",
           DialogueId = 10049135,
           GUID = "19282E36",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282E36"
         },
@@ -45790,6 +45808,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "근데 생각해 보니 좀 안쓰럽기도 하네요. 여기서 깨어나면 입안에 물부터 한가득 들이키고, 그 아름답지만 차가운 세계를 다시 마주해야 하잖아요.",
           DialogueId = 10049136,
           GUID = "19282E60",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282E60"
         },
@@ -45830,6 +45849,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그렇게 생각한다니 안심이 되네요.",
           DialogueId = 10049141,
           GUID = "19282F32",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282F32"
         },
@@ -45846,6 +45866,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "전 평민 옷으로 갈아입고, 군단 쪽 사람들이 도착하기 전에 인파에 섞여 빠져나갈 거예요. 그 후에는 디즈마니아로 가서 힐다와 만날 예정이고요.",
           DialogueId = 10049143,
           GUID = "19282F86",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282F86"
         },
@@ -45854,6 +45875,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그다음에는 남쪽의 <H>이스엘 자유국</>으로 가서, 아버지께서 생전에 남기신 수수께끼를 풀 생각이에요. 어쩌면 그 수수께끼가 제게 가늠할 수 없는 힘을 줄지도 모르니까요.",
           DialogueId = 10049144,
           GUID = "19282FB0",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282FB0"
         },
@@ -45862,6 +45884,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그리고 그 힘으로 <H>복수</>를 할 거예요.",
           DialogueId = 10049145,
           GUID = "19282FDA",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19282FDA"
         },
@@ -45878,6 +45901,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "포세이큰 동맹의 말이 적어도 하나는 맞았어요. 휘페르보레아는 이미 미쳐버렸고, 피에 굶주린 괴수가 돼버렸죠. 이 모든 걸 초래한 자들, 그들은 반드시 대가를 치러야 해요.",
           DialogueId = 10049147,
           GUID = "1928302E",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/1928302E"
         },
@@ -45886,6 +45910,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "걱정하진 마세요, {nickname}. 제가 말하는 복수는 포세이큰 동맹처럼 모든 걸 파괴하는 건 아니에요.",
           DialogueId = 10049148,
           GUID = "19283058",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19283058"
         },
@@ -45894,6 +45919,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "제가 원하는 건, 이 나라를 바꾸는 거예요. 가난한 이들에겐 생존을, 천한 이들에겐 존엄을, 전쟁의 고통에 시달리는 이들에겐 평화를, 그리고 이 나라엔 잃어버린 정의를 되찾아주고 싶어요.",
           DialogueId = 10049149,
           GUID = "19283082",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19283082"
         },
@@ -45902,6 +45928,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그런 미래를, 전 당신과 힐다, 녹토 보이저 팀, 그리고 이 열차에 탄 모든 사람들과 함께 보고 싶어요.",
           DialogueId = 10049150,
           GUID = "192830AC",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/192830AC"
         },
@@ -45913,6 +45940,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           RelatedWikiId = {
             [1] = 105001
           },
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/192830D6"
         },
@@ -45921,6 +45949,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "물론, 그 전에 당신은 그 중요한 사람을 찾아야 해요. 힐다는 군단 출신의 최우수 요원이고, 약속대로 당신의 모든 일을 도와줄 거예요.",
           DialogueId = 10049152,
           GUID = "19283100",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19283100"
         },
@@ -45929,6 +45958,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "그럼, 이제 떠날 시간이에요, {nickname}.",
           DialogueId = 10049153,
           GUID = "1928312A",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/1928312A"
         },
@@ -45937,6 +45967,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "깨어나면 바로 수면 위로 올라가는 거 잊지 마세요. 당신 몸은 아직 물속에 있으니까요. 두 번째 생명을 얻자마자 물에 빠져 죽는다면, 당신은 역사상 가장 멍청한 월석 사냥꾼이 될 거예요.",
           DialogueId = 10049154,
           GUID = "19283154",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100404,
           VoiceName = "voice/$Locale$/story/1004/100491/19283154"
         },
@@ -46664,11 +46695,22 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100496/19287CF6"
         },
+        [10049700] = {
+          Content = "这就恢复了？干得不错啊，今天的调试那就先到这里了，大家都回各自的工段吧。",
+          ContentKR = "다 복구했어? 솜씨는 제법이군. 오늘 테스트는 일단 여기까지다. 다들 다시 하던 일 하러 돌아가!",
+          DialogueId = 10049700,
+          GUID = "1928AEAD",
+          NextDialogue = 10049701,
+          SpeakNpcId = 100407,
+          SpeakNpcName = "UI_SpeakName_WeiyanGongren",
+          VoiceName = "voice/$Locale$/story/1004/100499/1928AEAD"
+        },
         [10049701] = {
           Content = "好，谢谢工段长。",
           ContentKR = "네. 수고하셨습니다, 반장님.",
           DialogueId = 10049701,
           GUID = "19288B12",
+          NextDialogue = 10049702,
           SpeakNpcId = 100418,
           VoiceName = "voice/$Locale$/story/1004/100497/19288B12"
         },
@@ -46677,6 +46719,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "너희 말이야, 일머리가 꽤 좋던데, 폐에 시커먼 먼지 들어차기 전에, 굴뚝 청소부는 때려치우고, 여기 와서 일하는 건 어때?",
           DialogueId = 10049702,
           GUID = "19288B3C",
+          NextDialogue = 10049703,
           SpeakNpcId = 100407,
           SpeakNpcName = "UI_SpeakName_WeiyanGongren",
           VoiceName = "voice/$Locale$/story/1004/100497/19288B3C"
@@ -46686,6 +46729,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "괜찮아요. 제안은 감사한데, 저희가 좀 바빠서요.",
           DialogueId = 10049703,
           GUID = "19288B66",
+          NextDialogue = 10049704,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1004/100497/19288B66"
         },
@@ -46703,6 +46747,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "...드디어 깨어났구나.",
           DialogueId = 10049801,
           GUID = "19289B7A",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100414,
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100498/19289B7A"
@@ -46712,6 +46757,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "나, 너 기억나! 우리 아이스레이크 시티에서 만났었잖아! 네가 아마 오랫동안 표류했었는지, 심하게 탈진했더라... 근데 이젠 괜찮아! 여긴 안전해.",
           DialogueId = 10049802,
           GUID = "19289BA4",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100414,
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100498/19289BA4"
@@ -46721,6 +46767,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "'브리즈호'에 온 걸 환영할게, 설원의 유니콘처럼 고귀한 {性别:신사|숙녀}분.",
           DialogueId = 10049803,
           GUID = "19289BCE",
+          SnapShot = "MEMORY",
           SpeakNpcId = 100414,
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/1004/100498/19289BCE"
@@ -46794,7 +46841,15 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "1928AD08",
           SpeakNpcName = "UI_SpeakName_Jingwei",
           VoiceName = "voice/$Locale$/story/1004/100499/1928AD08"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10049909,
+    MaxKey = 10100913,
+    Loader = function()
+      return {
         [10049909] = {
           Content = "呼，吓死我了。",
           ContentKR = "휴, 간 떨어지는 줄 알았네.",
@@ -46802,15 +46857,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           GUID = "1928AD32",
           SpeakNpcId = 100402,
           VoiceName = "voice/$Locale$/story/1004/100499/1928AD32"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10049910,
-    MaxKey = 10100914,
-    Loader = function()
-      return {
+        },
         [10049910] = {
           Content = "那边的冷凝管在刚刚的撞击中有损坏，现在附近有些火花，先去处理这个吧，这个最危险。",
           ContentKR = "아까 전에 열차가 부딪치면서, 저쪽에 있는 냉각 파이프가 손상돼 불꽃이 튀고 있어요. 저게 제일 위험하니까, 우선 저것부터 처리하도록 해요.",
@@ -46903,6 +46950,7 @@ _click{false},_delay{0},ActorId{100333},TargetPoint{"movetPoint01"},MoveSpeed{10
           ContentKR = "위험 감지, 위험 감지. 즉시 제거 요망, 즉시 제거 요망.",
           DialogueId = 10049921,
           GUID = "1928AF2A",
+          SnapShot = "ELECTRIC",
           SpeakNpcName = "UI_SpeakName_JiejingJiqiren",
           VoiceName = "voice/$Locale$/story/1004/100499/1928AF2A"
         },
@@ -49732,7 +49780,15 @@ PlayAnimation{ActorId{200002},AnimationId{"Explain01_Start"},Duration{1}}
           NextDialogue = 10100914,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1002/101009/19495D0A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10100914,
+    MaxKey = 10103407,
+    Loader = function()
+      return {
         [10100914] = {
           Content = "所以所以，我决定了——要以我的智慧，指引你走上正确的道路！",
           ContentKR = "그래서 결심했어... 나의 지혜로 널 올바른 길로 인도하겠어!",
@@ -49743,15 +49799,7 @@ PlayAnimation{ActorId{200002},AnimationId{"Explain01_Start"},Duration{1}}
           NextDialogue = 10100915,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1002/101009/19495D34"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10100915,
-    MaxKey = 10103408,
-    Loader = function()
-      return {
+        },
         [10100915] = {
           Content = "…………",
           ContentKR = "......",
@@ -53428,7 +53476,15 @@ PlayAnimation{_delay{1},ActorId{100001},AnimationId{"Talk03_End"},Duration{1}},
             [1] = "200003:n(100001)"
           },
           VoiceName = "voice/$Locale$/story/1002/101034/194AF565"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10103408,
+    MaxKey = 10105609,
+    Loader = function()
+      return {
         [10103408] = {
           Camera = "-14.123047,-197.56543,134.434448,0.000166,1.999995,49.988125,40.000011,417.684204,false,DoNotOverride,5.0,16:9 Digital Film",
           Content = "……总之，玛尔洁事儿办成了，{nickname}也证明了自己。",
@@ -53452,15 +53508,7 @@ LookAt{LookAtDescription{"200003:n(100001)"}}
 }]],
           SpeakNpcId = 200003,
           VoiceName = "voice/$Locale$/story/1002/101034/194AF566"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10103409,
-    MaxKey = 10105610,
-    Loader = function()
-      return {
+        },
         [10103409] = {
           Camera = "137.916016,-192.882812,140.053055,0.000187,1.800206,88.388634,35.000008,417.684204,false,DoNotOverride,5.0,16:9 Digital Film",
           Content = "如果你依旧决意成为狩月人，就回“水仙平原”找我吧。",
@@ -57053,7 +57101,15 @@ PlayAnimation{_delay{1.5},ActorId{200021},AnimationId{"Think_Start"},Duration{3}
           NextDialogue = 10105610,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1002/101056/194C5F7A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10105610,
+    MaxKey = 10107307,
+    Loader = function()
+      return {
         [10105610] = {
           Content = "不是的！这一次的“冒险”，我很满足。",
           ContentKR = "아니야! 이번 '모험'은 아주 만족스러워.",
@@ -57065,15 +57121,7 @@ PlayAnimation{_delay{1.5},ActorId{200021},AnimationId{"Think_Start"},Duration{3}
           NextDialogue = 10105611,
           SpeakNpcId = 200006,
           VoiceName = "voice/$Locale$/story/1002/101056/194C5FA4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10105611,
-    MaxKey = 10107308,
-    Loader = function()
-      return {
+        },
         [10105611] = {
           Content = "我从未想过能和伙伴们一起逃离熟悉的城市，去未曾去过的地方，一起闯祸，一起战胜险恶的敌人。",
           ContentKR = "익숙한 도시를 벗어나, 동료들과 함께 가보지 못한 곳에 가고, 사고도 치고, 험악한 적도 상대했잖아. 이런 건 생각도 못 했어.",
@@ -58849,7 +58897,7 @@ CameraMoveTo{TargetPosition{"-15.511475,-6.851562,168.493164,0.000161,1.399533,5
         },
         [10106310] = {
           Camera = "-801.484619,-220.195312,860.855957,0.000049,-21.199219,35.871891,30.000008,2029.508545,false,Manual,1.2,16:9 Digital Film",
-          Content = "十八年前，在弗莱格桑省，出过一起群星绮晶用于医药导致的严重事故，大半个城市陷入了混乱。绮晶贸易禁令也是在那个时候颁布的。",
+          Content = "弗莱格桑省以前就出过群星绮晶用于医药导致的严重事故，大半个城市陷入了混乱。绮晶贸易禁令也是在那个时候颁布的。",
           ContentKR = "이전에 플래그슨에서 반짝이는 수정이 약으로 사용되면서 아주 심각한 사고가 발생했고 도시 대부분이 혼란에 빠졌어. 수정 무역 금지령도 그때 내려진 거야.",
           DialogueId = 10106310,
           FinalCamera = "-801.484619,-220.195312,902.421387,0.000049,-21.199219,35.871891,30.000008,2029.508545,false,Manual,1.2,16:9 Digital Film",
@@ -60901,7 +60949,15 @@ CameraMoveTo{_delay{2.7},TargetPosition{"-98.554688,-222.534592,150.214844,0.000
           },
           ToFinalCameraBlendTime = 7.5,
           VoiceName = "voice/$Locale$/story/1002/101073/194D760E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10107308,
+    MaxKey = 10109405,
+    Loader = function()
+      return {
         [10107308] = {
           Camera = "-49.619141,-81.934937,172.09375,0.000008,-11.400118,73.387161,50.0,170.835754,false,Manual,8.0,16:9 Digital Film",
           Content = "（……奥特赛德说的没错，<H>失踪的狩月人亨特确实在这里生活过。</>但这里的住客对他的去向讳莫如深。）",
@@ -60923,15 +60979,7 @@ CameraMoveTo{_delay{2.7},TargetPosition{"-98.554688,-222.534592,150.214844,0.000
           },
           ToFinalCameraBlendTime = 9,
           VoiceName = "voice/$Locale$/story/1002/101073/194D7638"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10107401,
-    MaxKey = 10109406,
-    Loader = function()
-      return {
+        },
         [10107401] = {
           Content = "离我远一点……我什么都不知道！！",
           ContentKR = "저리 가… 난 아무것도 모른다니까!",
@@ -64518,7 +64566,15 @@ PlayAnimation{ActorId{200006},AnimationId{"Explain01_Start"},Duration{2}}
           DialogueId = 10109405,
           GUID = "10109405",
           NextDialogue = 10109406
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10109406,
+    MaxKey = 10110908,
+    Loader = function()
+      return {
         [10109406] = {
           Camera = "28.210938,-52.099609,95.129883,0.000245,0.989387,124.358093,20.0,100000.0,false,DoNotOverride,22.0,16:9 Digital Film",
           CameraBlendCurve = "easeInOutQuad",
@@ -64538,15 +64594,7 @@ PlayAnimation{ActorId{200006},AnimationId{"Explain01_Start"},Duration{2}}
           },
           ToFinalCameraBlendTime = 9,
           VoiceName = "voice/$Locale$/story/1002/101094/194ECE18"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10109407,
-    MaxKey = 10111001,
-    Loader = function()
-      return {
+        },
         [10109407] = {
           Camera = "-281.054688,-237.414062,82.333008,0.0,-2.99999,39.999969,20.0,100000.0,false,DoNotOverride,22.0,16:9 Digital Film",
           Content = "你的眼睛……是什么时候看不清的？",
@@ -67883,7 +67931,15 @@ CameraMoveTo{_delay{2.2},TargetPosition{"-27.648438,1.795654,150.466797,0.000102
           },
           ToFinalCameraBlendTime = 3,
           VoiceName = "voice/$Locale$/story/1002/101109/194FC4D8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10111001,
+    MaxKey = 10115403,
+    Loader = function()
+      return {
         [10111001] = {
           Content = "呼……呼……呼……",
           ContentKR = "후... 후... 후...",
@@ -67892,15 +67948,7 @@ CameraMoveTo{_delay{2.2},TargetPosition{"-27.648438,1.795654,150.466797,0.000102
           GUID = "194FD41A",
           SpeakNpcId = 200006,
           VoiceName = "voice/$Locale$/story/1002/101110/194FD41A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10111002,
-    MaxKey = 10115501,
-    Loader = function()
-      return {
+        },
         [10111002] = {
           Content = "啊……",
           ContentKR = "아아...",
@@ -70880,7 +70928,15 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           HeadIconType = "Npc",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1002/101154/1952A64E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10115501,
+    MaxKey = 10124101,
+    Loader = function()
+      return {
         [10115501] = {
           Content = "与此同时，皇都·迪斯玛尼亚——",
           ContentKR = "한편, 황성 디즈마니아에서는...",
@@ -70889,15 +70945,7 @@ MoveTo{_delay{3.5},ActorId{200019},TargetPoint{"P_101107Boy"},MoveSpeed{75},Visi
           GUID = "1952B662",
           Scripts = "PlayOrStopBGM{PlayType{\"Play\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/mute\"}}",
           VoiceName = "voice/$Locale$/story/1002/101155/1952B662"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10115601,
-    MaxKey = 10124102,
-    Loader = function()
-      return {
+        },
         [10115601] = {
           Content = "突然，恩里克出现了",
           DialogueId = 10115601,
@@ -73350,7 +73398,15 @@ CameraMoveTo{_delay{5.6},TargetPosition{"884.15332,-2479.414307,127.318726,0.000
           NextDialogue = 10124102,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1002/101241/19583952"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10124102,
+    MaxKey = 10128907,
+    Loader = function()
+      return {
         [10124102] = {
           Content = "嗯。您也有着红宝石一样的漂亮眼睛，与这朵紫露花很相称……愿您度过快乐的一天。",
           ContentKR = "네, 당신도 루비처럼 아름다운 눈을 가지고 계시네요. 이 보라색 이슬 꽃과 정말 잘 어울리세요... 행복한 하루 되시길 바랍니다.",
@@ -73359,15 +73415,7 @@ CameraMoveTo{_delay{5.6},TargetPosition{"884.15332,-2479.414307,127.318726,0.000
           NextDialogue = 10124103,
           SpeakNpcName = "UI_Npc_Name_FlowerShoper",
           VoiceName = "voice/$Locale$/story/1002/101241/1958397C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10124103,
-    MaxKey = 10128908,
-    Loader = function()
-      return {
+        },
         [10124103] = {
           Content = "谢谢，那我就收下了。",
           ContentKR = "감사합니다. 그럼, 받을게요.",
@@ -75655,7 +75703,15 @@ SetLocation{ActorId{200076},TargetPoint{"P_101259Nifu2"},Visibility{"Hide"}}
           NextDialogue = 10128908,
           SpeakNpcId = 200096,
           VoiceName = "voice/$Locale$/story/1002/101289/195B4DCE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 10128908,
+    MaxKey = 11010712,
+    Loader = function()
+      return {
         [10128908] = {
           Content = "实际上又怎么会呢？真要按照他一开始的工作劲头，这里所有人都会被吊死十次不止，不过在那之前，恐怕他也会被其他人打死。",
           ContentKR = "그럴 리가 없잖아? 처음 같은 근무태도였다면 여기 있는 사람들은 다 열 번도 더 교수형에 처했을 거야. 하지만 그러기 전에 아마 그도 맞아 죽었을 거야.",
@@ -75664,15 +75720,7 @@ SetLocation{ActorId{200076},TargetPoint{"P_101259Nifu2"},Visibility{"Hide"}}
           NextDialogue = 10128909,
           SpeakNpcId = 200096,
           VoiceName = "voice/$Locale$/story/1002/101289/195B4DF8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 10128909,
-    MaxKey = 11010713,
-    Loader = function()
-      return {
+        },
         [10128909] = {
           Content = "唉，所以说现在这样，借着醉酒逃避工作对他来说也是最好的做法了。现在这边的酒客大部分也不恨他了，军团里有良心的人不多，他算是一个。",
           ContentKR = "그래서 지금 이렇게 술에 절어 일을 안 하는 게 그로서는 최선의 방법이지. 이제 이곳의 술손님들도 대부분 그를 미워하지 않아. 군단에 양심 있는 사람이 별로 없는데, 그는 그나마 나은 편이야.",
@@ -78044,7 +78092,15 @@ PlayAnimation{ActorId{110005},AnimationId{"Explain02_End"},Duration{1}}
             [1] = "110005:Explain02_Start"
           },
           VoiceName = "voice/$Locale$/story/1002/110107/1B906CF0"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11010713,
+    MaxKey = 11011549,
+    Loader = function()
+      return {
         [11010713] = {
           Content = "当、当然……地下也可能有危险。如果您觉得这个提议可行，请允许我先去探探路。",
           ContentKR = "물, 물론... 지하도 위험할 수 있지만요. 괜찮으시다면 제가 먼저 가서 확인해 볼게요.",
@@ -78054,15 +78110,7 @@ PlayAnimation{ActorId{110005},AnimationId{"Explain02_End"},Duration{1}}
           NextDialogue = 11010714,
           SpeakNpcId = 110005,
           VoiceName = "voice/$Locale$/story/1002/110107/1B906D1A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11010714,
-    MaxKey = 11011550,
-    Loader = function()
-      return {
+        },
         [11010714] = {
           Camera = "-132.943359,121.832031,131.186157,0.000256,0.3982,-111.990349,35.0,190.165726,false,Manual,22.0,16:9 Digital Film",
           Content = "值得一试。但你一个医务员去侦查，太冒险了。",
@@ -80770,7 +80818,15 @@ CameraMoveTo{TargetPosition{"-43.35791,-89.382812,127.603882,-1.999999,-4.399707
           GUID = "1B90F642",
           ImprPlusId = 1007,
           NextDialogue = 11011550
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11011550,
+    MaxKey = 11012453,
+    Loader = function()
+      return {
         [11011550] = {
           Camera = "276.480469,1274.542969,240.643982,0.000117,-3.999116,-107.394035,28.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "富尔维斯傲慢又好大喜功，他高高在上地指挥你，靠的不过是富尔维斯家族在元老院中的世袭席位。",
@@ -80789,15 +80845,7 @@ CameraMoveTo{TargetPosition{"-43.35791,-89.382812,127.603882,-1.999999,-4.399707
           },
           ToFinalCameraBlendTime = 25,
           VoiceName = "voice/$Locale$/story/1002/110115/1B90F66C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11011551,
-    MaxKey = 11012454,
-    Loader = function()
-      return {
+        },
         [11011551] = {
           Content = "士兵们在他眼里是汇报书里的一串数字，勋章上的一块铁，唯独不是活生生的人。",
           ContentKR = "풀비스 눈에 병사들은 그저 보고서의 숫자에 불과하고, 훈장의 한 조각일 뿐이야. 살아 있는 사람으로 보지 않는다고.",
@@ -83839,7 +83887,15 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/story/1002/110124/1B918A92"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11012454,
+    MaxKey = 11013701,
+    Loader = function()
+      return {
         [11012454] = {
           Content = "是！",
           ContentKR = "예, 알겠습니다!",
@@ -83855,15 +83911,7 @@ PostProcess{MaterailInstance{"MaterialInstanceConstant'/Game/Asset/Scene/common/
             [1] = "110015:n(110009)"
           },
           VoiceName = "voice/$Locale$/story/1002/110124/1B918ABC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11012455,
-    MaxKey = 11013702,
-    Loader = function()
-      return {
+        },
         [11012455] = {
           Camera = "11.781921,-87.581543,154.120667,0.000135,-24.800552,-42.592556,45.0,100000.0,false,DoNotOverride,22.0,16:9 Digital Film",
           Content = "等一下！",
@@ -87029,7 +87077,15 @@ CameraMoveTo{_delay{5},TargetPosition{"-608.948547,3198.607422,754.886475,0.0000
           GUID = "1B925752",
           SpeakNpcId = 110011,
           VoiceName = "voice/$Locale$/story/1002/110137/1B925752"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11013702,
+    MaxKey = 11016204,
+    Loader = function()
+      return {
         [11013702] = {
           Content = "法露茜，你留下，处理干净。",
           ContentKR = "펄시, 넌 남아서 여길 처리해.",
@@ -87040,15 +87096,7 @@ CameraMoveTo{_delay{5},TargetPosition{"-608.948547,3198.607422,754.886475,0.0000
           NextDialogue = 11013703,
           SpeakNpcId = 110011,
           VoiceName = "voice/$Locale$/story/1002/110137/1B92577C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11013703,
-    MaxKey = 11016301,
-    Loader = function()
-      return {
+        },
         [11013703] = {
           Content = "是。",
           ContentKR = "예, 알겠습니다.",
@@ -89876,7 +89924,15 @@ CameraMoveTo{TargetPosition{"43.798828,223.045898,87.246094,0.000088,0.199202,-3
           SnapShot = "HEART",
           SpeakNpcId = 110022,
           VoiceName = "voice/$Locale$/story/1002/110162/1B93F1F8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11016301,
+    MaxKey = 11017715,
+    Loader = function()
+      return {
         [11016301] = {
           Content = "最后一个问题，阿瓦尔·赫德兰的死亡，是否是你所为？",
           ContentKR = "마지막 질문이다. 아바르 헤데란을 네 손으로 죽였나?",
@@ -89889,15 +89945,7 @@ CameraMoveTo{TargetPosition{"43.798828,223.045898,87.246094,0.000088,0.199202,-3
           SpeakNpcId = 110032,
           SpeakNpcName = "UI_Npc_Wardenry",
           VoiceName = "voice/$Locale$/story/1002/110163/1B9401E2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11016302,
-    MaxKey = 11017801,
-    Loader = function()
-      return {
+        },
         [11016302] = {
           Content = "即使他背叛了帝国，他也一直信任你。他葬身火海中的时候，你在做什么？",
           ContentKR = "아바르가 제국을 배반했다 하더라도 그는 항상 널 믿었다. 아바르가 불바다에서 목숨을 잃어갈 때 넌 뭘 하고 있었지?",
@@ -92453,7 +92501,15 @@ CameraMoveTo{TargetPosition{"130.400391,15.670898,236.511719,0.000107,-21.599482
           SnapShot = "HEART",
           SpeakNpcId = 110022,
           VoiceName = "voice/$Locale$/story/1002/110177/1B94E9DE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11017801,
+    MaxKey = 11019310,
+    Loader = function()
+      return {
         [11017801] = {
           Content = "停下吧。",
           ContentKR = "멈춰.",
@@ -92461,15 +92517,7 @@ CameraMoveTo{TargetPosition{"130.400391,15.670898,236.511719,0.000107,-21.599482
           GUID = "1B94F7FA",
           SpeakNpcId = 110010,
           VoiceName = "voice/$Locale$/story/1002/110178/1B94F7FA"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11017802,
-    MaxKey = 11019311,
-    Loader = function()
-      return {
+        },
         [11017802] = {
           Content = "视野不错，就在这儿轰击中央控制室吧。",
           ContentKR = "여기 시야가 괜찮은 것 같군. 여기에서 중앙 관제실을 포격한다.",
@@ -94651,7 +94699,15 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
             [1] = "110039:n(110022)"
           },
           VoiceName = "voice/$Locale$/story/1002/110193/1B95EF8C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 11019311,
+    MaxKey = 12001506,
+    Loader = function()
+      return {
         [11019311] = {
           Camera = "435.564819,270.374847,32.574219,0.000075,-1.999838,-147.992447,35.000008,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "会模仿字迹的人要多少有多少。而指纹，只要是军团内部和阿瓦尔有较多接触的人，拿到他的指纹并加以伪造并不难。",
@@ -94669,15 +94725,7 @@ PlayNormalSound{_delay{4},EventPath{"event:/sfx/common/story/ex01/signal_off"},P
           },
           ToFinalCameraBlendTime = 5,
           VoiceName = "voice/$Locale$/story/1002/110193/1B95EFB6"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 11019312,
-    MaxKey = 12001507,
-    Loader = function()
-      return {
+        },
         [11019312] = {
           Camera = "149.849487,49.180954,-22.058594,0.000007,19.398439,-34.200615,35.000015,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "…………",
@@ -98047,7 +98095,15 @@ SetLocation{ActorId{220018},TargetPoint{"TargetPointheishang"},Visibility{"Show"
           },
           ToFinalCameraBlendTime = 8,
           VoiceName = "voice/$Locale$/story/1200/120015/1E0B6514"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12001507,
+    MaxKey = 12010005,
+    Loader = function()
+      return {
         [12001507] = {
           Camera = "-37.900391,41.320801,125.242188,0.00003,17.980465,116.970291,22.896927,616.28064,false,Manual,10.0,16:9 Digital Film",
           Content = "香炉的烟杳杳升起，烟迹笔直地伸向空中，然后消失于无形。",
@@ -98060,15 +98116,7 @@ SetLocation{ActorId{220018},TargetPoint{"TargetPointheishang"},Visibility{"Show"
           NextDialogue = 12001508,
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/story/1200/120015/1E0B653E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12001508,
-    MaxKey = 12010006,
-    Loader = function()
-      return {
+        },
         [12001508] = {
           Camera = "-1.962891,363.010254,80.773438,0.000094,-10.804443,-134.590561,35.000011,200.0,false,DoNotOverride,10.0,16:9 Digital Film",
           Content = "这香是我们华胥特有的珍贵物产。它对存在于月髓原液中的某种特殊物质有极高的亲和力，只需碰到一星半点，烟迹就会发生变化。",
@@ -100943,7 +100991,15 @@ TurnTo{_delay{13.5},TurnToDescription{"220022:p(190)"}}
           NextDialogue = 12010006,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1201/120100/1E10D772"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12010006,
+    MaxKey = 12010615,
+    Loader = function()
+      return {
         [12010006] = {
           Content = "有点相似，但又有很多不一样的地方。",
           ContentKR = "조금은. 그렇지만 다른 점도 많아.",
@@ -100952,15 +101008,7 @@ TurnTo{_delay{13.5},TurnToDescription{"220022:p(190)"}}
           NextDialogue = 12010007,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1201/120100/1E10D79C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12010007,
-    MaxKey = 12010616,
-    Loader = function()
-      return {
+        },
         [12010007] = {
           Content = "净界岛是个袖珍的小岛，就算是最高点，对于小孩子来说铆足了劲就能一口气冲上去，然后就能看见碧蓝的大海……",
           ContentKR = "연옥도는 아주 작아서, 섬에서 제일 높은 곳까지 꼬마도 한달음에 뛰어 올라갈 수 있는데, 거기 도착하면 눈앞에 새파란 바다가 펼쳐져...",
@@ -103186,7 +103234,15 @@ PlayAnimation{ActorId{210004},AnimationId{"Explain01_Start"},Duration{1}}
           GUID = "1E113B86",
           SpeakNpcId = 210003,
           VoiceName = "voice/$Locale$/story/1201/120106/1E113B86"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12010616,
+    MaxKey = 12012317,
+    Loader = function()
+      return {
         [12010616] = {
           Content = "愿你善根常驻。",
           ContentKR = "늘 선한 마음을 가지시길.",
@@ -103200,15 +103256,7 @@ PlayAnimation{ActorId{210034},AnimationId{"Pray_End"},Duration{1.87}}
 }]],
           SpeakNpcId = 210034,
           VoiceName = "voice/$Locale$/story/1201/120106/1E113BB0"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12010617,
-    MaxKey = 12012318,
-    Loader = function()
-      return {
+        },
         [12010617] = {
           Content = "来，最后一段路啦！",
           ContentKR = "자, 여기만 지나면 도착이야!",
@@ -106270,7 +106318,15 @@ SetLocation{ActorId{210059},TargetPoint{"Xiaodi2_Move"},Visibility{"Hide"}}
           NextDialogue = 12012318,
           SpeakNpcId = 210011,
           VoiceName = "voice/$Locale$/story/1201/120123/1E1252C2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12012318,
+    MaxKey = 12013515,
+    Loader = function()
+      return {
         [12012318] = {
           Content = "（议论纷纷的嘈杂音。）",
           ContentKR = "(사람들이 웅성거리는 소리)",
@@ -106278,15 +106334,7 @@ SetLocation{ActorId{210059},TargetPoint{"Xiaodi2_Move"},Visibility{"Hide"}}
           GUID = "1E1252EC",
           NextDialogue = 12012319,
           VoiceName = "voice/$Locale$/story/1201/120123/1E1252EC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12012319,
-    MaxKey = 12013516,
-    Loader = function()
-      return {
+        },
         [12012319] = {
           Content = "好了好了。大伙儿都围在这里，照这样下去，这生意没法做啦。",
           ContentKR = "자, 그만들 하십시오. 다들 이렇게 몰려 계시면, 장사를 할 수가 없지 않습니까.",
@@ -108478,7 +108526,15 @@ PlayAnimation{ActorId{100001},AnimationId{"ConfidentLR_Start"}}
             [1] = "100001:Talk01_End"
           },
           VoiceName = "voice/$Locale$/story/1201/120135/1E13174E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12013516,
+    MaxKey = 12016001,
+    Loader = function()
+      return {
         [12013516] = {
           Content = "还有一项报酬，想必是合您心意的……",
           ContentKR = "그리고 또 다른 보상이 하나 있는데, 틀림없이 마음에 드실 겁니다...",
@@ -108487,15 +108543,7 @@ PlayAnimation{ActorId{100001},AnimationId{"ConfidentLR_Start"}}
           NextDialogue = 12013517,
           SpeakNpcId = 210010,
           VoiceName = "voice/$Locale$/story/1201/120135/1E131778"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12013517,
-    MaxKey = 12016002,
-    Loader = function()
-      return {
+        },
         [12013517] = {
           Camera = "-70.775307,-50.397655,304.739258,0.000104,-11.399626,52.60202,35.0,383.266479,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "说来听听。",
@@ -111414,7 +111462,15 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           SnapShot = "HEART",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1201/120160/1E14AF2A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12016002,
+    MaxKey = 12018904,
+    Loader = function()
+      return {
         [12016002] = {
           Content = "（谁也不在，什么声音都没有，安静到只能听见自己的心跳声……）",
           ContentKR = "(아무도 없고, 아무 소리도 들리지 않아. 온통 조용해서 내 심장 소리밖에 안 들려...)",
@@ -111425,15 +111481,7 @@ PlayAnimation{_delay{2.5},ActorId{100001},AnimationId{"AgreeHead"},Duration{1}}
           SnapShot = "HEART",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1201/120160/1E14AF54"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12016003,
-    MaxKey = 12018905,
-    Loader = function()
-      return {
+        },
         [12016003] = {
           Content = "（就像是……回到了白沙倾泻而下的原点，如同一切从未发生。）",
           ContentKR = "(마치... 하얀 모래가 쏟아져 내리던 그 시작점으로 돌아온 것처럼, 처음부터 아무 일도 일어나지 않은 것처럼 느껴져.)",
@@ -113716,7 +113764,15 @@ CameraMoveTo{_delay{5.1},TargetPosition{"291.415833,60.84111,32.181641,0.000094,
           },
           ToFinalCameraBlendTime = 0.8,
           VoiceName = "voice/$Locale$/story/1201/120189/1E168B70"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12018905,
+    MaxKey = 12022015,
+    Loader = function()
+      return {
         [12018905] = {
           Camera = "99.821701,41.477108,120.901367,0.00014,11.999624,-174.197815,35.000008,210.213547,false,Manual,6.0,16:9 Digital Film",
           Content = "哼，不解风情。徒费古物之美。",
@@ -113735,15 +113791,7 @@ CameraMoveTo{_delay{5.1},TargetPosition{"291.415833,60.84111,32.181641,0.000094,
             [2] = "200002:Angry02_End"
           },
           VoiceName = "voice/$Locale$/story/1201/120189/1E168B9A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12018906,
-    MaxKey = 12022016,
-    Loader = function()
-      return {
+        },
         [12018906] = {
           Camera = "99.821701,41.477108,120.901367,0.00014,11.999624,-174.197815,35.000008,210.213547,false,Manual,6.0,16:9 Digital Film",
           Content = "凡是机关，必留有后手……比如说，眼前这座醒世碑，不觉得它看起来就像是等待人敲的样子吗？",
@@ -115629,7 +115677,15 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           NextDialogue = 12022016,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1201/120220/1E1889D6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12022016,
+    MaxKey = 12023812,
+    Loader = function()
+      return {
         [12022016] = {
           Content = "万事已矣，不可复挽矣。天下将趋不可避之大祸……",
           ContentKR = "모든 것은 이미 되돌릴 수 없게 되었구나. 천하가 피할 수 없는 큰 재앙으로 치닫게 될 것이야...",
@@ -115638,15 +115694,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           SnapShot = "ECHO",
           SpeakNpcName = "UI_CMName_Name_ZhuYing",
           VoiceName = "voice/$Locale$/story/1201/120220/1E188A00"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12022101,
-    MaxKey = 12023850,
-    Loader = function()
-      return {
+        },
         [12022101] = {
           Camera = "-78.574219,498.462891,113.020996,0.000014,-0.99994,-74.596542,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "小仆从，你没事吧？",
@@ -117360,21 +117408,21 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           DialogueId = 12023812,
           Duration = 4,
           GUID = "1E19B0A8"
-        },
-        [12023850] = {
-          Content = "烟津掠影蔽香尘",
-          ContentKR = "안개 낀 나루터의 향기",
-          DialogueId = 12023850,
-          GUID = "1E19B0A1"
         }
       }
     end
   },
   {
-    MinKey = 12023851,
-    MaxKey = 12026640,
+    MinKey = 12023850,
+    MaxKey = 12026639,
     Loader = function()
       return {
+        [12023850] = {
+          Content = "烟津掠影蔽香尘",
+          ContentKR = "안개 낀 나루터의 향기",
+          DialogueId = 12023850,
+          GUID = "1E19B0A1"
+        },
         [12023851] = {
           Content = "终",
           ContentKR = "끝",
@@ -118942,7 +118990,15 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
           DialogueId = 12026639,
           GUID = "1E1B8076",
           SpeakNpcId = 210127
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12026640,
+    MaxKey = 12031502,
+    Loader = function()
+      return {
         [12026640] = {
           DialogueId = 12026640,
           DialoguePanelType = "None",
@@ -118956,15 +119012,7 @@ CameraMoveTo{_delay{4.6},TargetPosition{"-6437.628906,-5467.57373,1041.154297,0.
             [4] = 12026632,
             [5] = 12026638
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12026701,
-    MaxKey = 12031503,
-    Loader = function()
-      return {
+        },
         [12026701] = {
           Content = "咿呀，咿咿呀，咿！",
           ContentKR = "야하, 야하, 야하하!",
@@ -121499,7 +121547,15 @@ PlayAnimation{_delay{0},ActorId{211001},AnimationId{"Explain02_Start"}}
 }]],
           SpeakNpcId = 211001,
           VoiceName = "voice/$Locale$/story/1201/120112/1E1E9E4C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12031503,
+    MaxKey = 12033310,
+    Loader = function()
+      return {
         [12031503] = {
           Camera = "71.372574,-11.404465,125.61084,0.000183,-5.398342,153.82045,35.000011,112.418152,false,DoNotOverride,12.0,16:9 Digital Film",
           Content = "别灰心呀，小助手！忍受真相的黎明到来之前的漫漫长夜，也是成为一名优秀侦探的必经之路！",
@@ -121521,15 +121577,7 @@ PlayAnimation{_delay{2},ActorId{211003},AnimationId{"SpecialHoldHelmet_End"}}
           SpeakNpcId = 211003,
           ToFinalCameraBlendTime = 8,
           VoiceName = "voice/$Locale$/story/1201/120112/1E1E9E76"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12031504,
-    MaxKey = 12033311,
-    Loader = function()
-      return {
+        },
         [12031504] = {
           Camera = "-303.668518,36.957611,131.155273,0.000187,-3.798767,9.824474,35.000015,112.418152,false,DoNotOverride,12.0,16:9 Digital Film",
           Content = "唔……就像，魔女小姐必须炸掉一百个亮晶晶的玻璃瓶，才能找出神奇魔药的配方吗？",
@@ -124337,7 +124385,15 @@ PlayAnimation{_delay{0},ActorId{211011},AnimationId{"Talk03_End"}}
             [1] = "211011:n(211012)"
           },
           VoiceName = "voice/$Locale$/story/1201/120114/1E1FC6EC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12033311,
+    MaxKey = 12034804,
+    Loader = function()
+      return {
         [12033311] = {
           Content = "就在靠近酒馆的那条小路上。",
           ContentKR = "주점 근처에 있는 골목 근처에서.",
@@ -124351,15 +124407,7 @@ TurnTo{_delay{1},TurnToDescription{"211012:n(211011)"}}
 }]],
           SpeakNpcId = 211012,
           VoiceName = "voice/$Locale$/story/1201/120114/1E1FC716"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12033312,
-    MaxKey = 12034805,
-    Loader = function()
-      return {
+        },
         [12033312] = {
           Camera = "-438.694794,219.296844,103.061523,0.000218,1.397532,20.50848,25.0,560.6521,false,Manual,4.0,16:9 Digital Film",
           Content = "我和戴维刚才就在小路的这一头堆石子，我没看见你说的男孩子。",
@@ -127189,7 +127237,15 @@ PlayAnimation{_delay{3},ActorId{211001},AnimationId{"TilteHead_Start"},Duration{
           NextDialogue = 12034805,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1201/120114/1E20BC08"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12034805,
+    MaxKey = 12040619,
+    Loader = function()
+      return {
         [12034805] = {
           Content = "啾啾，白鸟先生！",
           ContentKR = "짹짹, 하얀 새 씨!",
@@ -127198,15 +127254,7 @@ PlayAnimation{_delay{3},ActorId{211001},AnimationId{"TilteHead_Start"},Duration{
           NextDialogue = 12034806,
           SpeakNpcId = 211001,
           VoiceName = "voice/$Locale$/story/1201/120114/1E20BC32"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12034806,
-    MaxKey = 12040620,
-    Loader = function()
-      return {
+        },
         [12034806] = {
           Content = "嚯，好肥美……",
           ContentKR = "호오, 살이 꽤 실한데...",
@@ -128846,7 +128894,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12040620,
           SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120406/1E24760E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12040620,
+    MaxKey = 12042937,
+    Loader = function()
+      return {
         [12040620] = {
           Content = "我<H>现在</>还无法给出这个问题的答案。有些事，待时机到时，方见分晓。",
           ContentKR = "<H>지금</>은 그 질문에 대답해 줄 수 없어. 어떤 일들은, 때가 되면 저절로 알게 될 거야",
@@ -128855,15 +128911,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12040621,
           SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120406/1E247638"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12040621,
-    MaxKey = 12042938,
-    Loader = function()
-      return {
+        },
         [12040621] = {
           Content = "诶，你们怎么了，怎么气氛突然那么沉重……没关系，以后还会见面啦！",
           ContentKR = "어, 둘이 왜 그래? 분위기가 갑자기 심각해졌네... 괜찮아~ 나중에 또 만나면 되잖아!",
@@ -130780,7 +130828,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12042938,
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120429/1E25F25A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12042938,
+    MaxKey = 12043910,
+    Loader = function()
+      return {
         [12042938] = {
           Content = "说起来，{nickname}，你刚刚做了什么？那可是神啊，我拼尽全力也动不得他分毫。你是怎么把它击伤的？",
           ContentKR = "그나저나 {nickname}, 아까 대체 뭘 한 거냐? 상대는 신이다. 내가 전력을 다해도 털끝 하나 못 건드렸는데, 어떻게 상처를 입힌 거야?",
@@ -130789,21 +130845,14 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12042939,
           SpeakNpcId = 240013,
           VoiceName = "voice/$Locale$/story/1204/120429/1E25F284"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12042939,
-    MaxKey = 12043911,
-    Loader = function()
-      return {
+        },
         [12042939] = {
           Content = "说实话，我也不知道。而且我觉得不太对劲。",
           ContentKR = "솔직히, 나도 잘 모르겠어. 그리고 뭔가 좀 이상해.",
           DialogueId = 12042939,
           GUID = "1E25F2AE",
           NextDialogue = 12042940,
+          SnapShot = "MEMORY",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1204/120429/1E25F2AE"
         },
@@ -130813,7 +130862,6 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12042940,
           GUID = "1E25F2D8",
           NextDialogue = 12042942,
-          SnapShot = "MEMORY",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1204/120429/1E25F2D8"
         },
@@ -132657,7 +132705,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12043911,
           SpeakNpcId = 240030,
           VoiceName = "voice/$Locale$/story/1204/120439/1E2691FC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12043911,
+    MaxKey = 12045211,
+    Loader = function()
+      return {
         [12043911] = {
           Content = "自己去武场领三十组射靶训练吧。你们这功夫对上应天尉，连一招都撑不过。",
           ContentKR = "훈련장에서 과녁 훈련 30번 추가야. 지금 이 실력이면, 너희 둘 다 응천위를 만나자마자 당할 거야.",
@@ -132666,15 +132722,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12043912,
           SpeakNpcId = 240026,
           VoiceName = "voice/$Locale$/story/1204/120439/1E269226"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12043912,
-    MaxKey = 12045212,
-    Loader = function()
-      return {
+        },
         [12043912] = {
           Content = "我、我明白了！",
           ContentKR = "아, 알겠어!",
@@ -134536,7 +134584,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12045212,
           SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120452/1E27676E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12045212,
+    MaxKey = 12046005,
+    Loader = function()
+      return {
         [12045212] = {
           Content = "<H>和鸣之力</>，这曾为大风九章奠基者所掌握的能力，却在千年之后，经由一位异国旅者重新回到这片大地上。",
           ContentKR = "대풍구장의 창시자가 지녔던 <H>레조넌스</>라는 힘이, 천 년이라는 세월을 넘어 어느 이국의 여행자를 통해 다시 돌아왔어요.",
@@ -134545,15 +134601,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12045213,
           SpeakNpcId = 240001,
           VoiceName = "voice/$Locale$/story/1204/120452/1E276798"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12045213,
-    MaxKey = 12046006,
-    Loader = function()
-      return {
+        },
         [12045213] = {
           Content = "这在冥冥之中意味着什么，烛阴，你有想过吗？",
           ContentKR = "이게 무엇을 의미하는지, 촉룡, 당신은 생각해 본 적 있나요?",
@@ -136486,7 +136534,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12046006,
           SpeakNpcId = 240013,
           VoiceName = "voice/$Locale$/story/1204/120460/1E27E9B2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12046006,
+    MaxKey = 12047317,
+    Loader = function()
+      return {
         [12046006] = {
           Content = "虎子，不许在外面玩了，赶紧回家做功课去！小心沾染上什么不三不四的人。",
           ContentKR = "호야, 그만 놀고 어서 집에 들어가 숙제해! 괜히 이상한 사람들이랑 어울리지 말고!",
@@ -136495,15 +136551,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12046007,
           SpeakNpcId = 240038,
           VoiceName = "voice/$Locale$/story/1204/120460/1E27E9DC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12046007,
-    MaxKey = 12047318,
-    Loader = function()
-      return {
+        },
         [12046007] = {
           Content = "恕我无话与各位可说。<H>罪人之后</>还是赶紧请回吧，可别把晦气带来村子了。",
           ContentKR = "더는 할 말 없으니까, <H>죄인의 자손</>은 썩 돌아가. 괜히 우리 마을 부정 탈라.",
@@ -138398,7 +138446,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12047318,
           SpeakNpcId = 240034,
           VoiceName = "voice/$Locale$/story/1204/120473/1E28C0F2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12047318,
+    MaxKey = 12049021,
+    Loader = function()
+      return {
         [12047318] = {
           Content = "这可是我师傅精心打造的连环弩，扣下扳机就能连珠发射弩箭，包您上手就能使用，没有任何门槛！",
           ContentKR = "이건 저희 스승님이 심혈을 기울여 만드신 연발 쇠뇌예요. 방아쇠만 당기면 화살이 연달아 나가니까, 처음 쓰는 사람도 다루기 쉬워요!",
@@ -138407,15 +138463,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 12047319,
           SpeakNpcId = 240034,
           VoiceName = "voice/$Locale$/story/1204/120473/1E28C11C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12047319,
-    MaxKey = 12049022,
-    Loader = function()
-      return {
+        },
         [12047319] = {
           Content = "那，请给我也来一把……",
           ContentKR = "그러면, 나한테도 하나 줘...",
@@ -140138,7 +140186,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           GUID = "1E29D882",
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120490/1E29D882"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12049022,
+    MaxKey = 12049271,
+    Loader = function()
+      return {
         [12049022] = {
           Content = "哇，告示板前已经聚集了好多人，我们也过去看看！",
           ContentKR = "와, 게시판 앞에 사람이 잔뜩 모여 있어. 우리도 얼른 가 보자!",
@@ -140146,15 +140202,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           GUID = "1E29D8AC",
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/1204/120490/1E29D8AC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12049023,
-    MaxKey = 12049272,
-    Loader = function()
-      return {
+        },
         [12049023] = {
           Content = "来来回回都是这些蠢狼，我都杀腻了！",
           ContentKR = "이 멍청한 늑대 놈들만 죄다 몰려드는군. 이젠 베는 것조차 질린다고!",
@@ -141790,7 +141838,15 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           GUID = "1E2A0186",
           NextDialogue = 12049272,
           VoiceName = "voice/$Locale$/story/1204/120492/1E2A0186"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12049272,
+    MaxKey = 12060738,
+    Loader = function()
+      return {
         [12049272] = {
           Content = "赶走，赶紧把那一家人逐出村外！",
           ContentKR = "내쫓아야 해! 당장 저 집 식구들까지 싹 다 마을에서 쫓아내야 한다고!",
@@ -141798,15 +141854,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           GUID = "1E2A01B0",
           NextDialogue = 12049273,
           VoiceName = "voice/$Locale$/story/1204/120492/1E2A01B0"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12049273,
-    MaxKey = 12060739,
-    Loader = function()
-      return {
+        },
         [12049273] = {
           Content = "不是的！他不是罪人，他明明是见义勇为的英雄！",
           ContentKR = "아니에요! 그 아저씨는 죄인이 아니에요! 의로운 일을 한 영웅이란 말이에요!",
@@ -143802,7 +143850,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12060739,
           SpeakNpcId = 250011,
           VoiceName = "voice/$Locale$/story/1206/120607/1E315AD4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12060739,
+    MaxKey = 12061436,
+    Loader = function()
+      return {
         [12060739] = {
           Content = "赛事即将开始，待几位准备好，就和我说吧。祝您和您的小队旗开得胜。",
           ContentKR = "곧 시작이니까 준비가 끝나면 말씀해 주세요. 여러분의 건승을 빌게요!",
@@ -143810,15 +143866,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           GUID = "1E315AFE",
           SpeakNpcId = 250011,
           VoiceName = "voice/$Locale$/story/1206/120607/1E315AFE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12060740,
-    MaxKey = 12061437,
-    Loader = function()
-      return {
+        },
         [12060740] = {
           Content = "准备好进入赛场了吗？",
           ContentKR = "경기장으로 입장하시겠습니까?",
@@ -145664,7 +145712,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12061437,
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120614/1E31CD58"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12061437,
+    MaxKey = 12062312,
+    Loader = function()
+      return {
         [12061437] = {
           Content = "{nickname}，你说，姑姑如果看到我变得这么任性了，会很失望吗？",
           ContentKR = "{nickname}, 있잖아, 고모가 이렇게 제멋대로 구는 날 보면, 실망하실까?",
@@ -145676,15 +145732,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           },
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120614/1E31CD82"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12061438,
-    MaxKey = 12062313,
-    Loader = function()
-      return {
+        },
         [12061438] = {
           Content = "你不需要一个人扛起所有。",
           ContentKR = "혼자 모든 짐을 짊어질 필요는 없어.",
@@ -147560,7 +147608,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12062313,
           SpeakNpcId = 250002,
           VoiceName = "voice/$Locale$/story/1206/120623/1E325D10"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12062313,
+    MaxKey = 12062805,
+    Loader = function()
+      return {
         [12062313] = {
           Content = "煜明，分开时不是约好了明早在赛场见吗。你怎么赶来山外山了？发生了什么事吗？",
           ContentKR = "욱명, 아까 헤어질 때 내일 아침에 경기장에서 보기로 했었잖아. 산외산엔 무슨 일이야? 무슨 문제라도 생겼어?",
@@ -147569,15 +147625,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12062314,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120623/1E325D3A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12062314,
-    MaxKey = 12062806,
-    Loader = function()
-      return {
+        },
         [12062314] = {
           Content = "被你不幸言中了。",
           ContentKR = "네 말대로, 문제가 생겼어.",
@@ -149426,7 +149474,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12062806,
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120628/1E32ADF2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12062806,
+    MaxKey = 20000511,
+    Loader = function()
+      return {
         [12062806] = {
           Content = "你说，我在听。",
           ContentKR = "뭔데? 말해 봐.",
@@ -149435,15 +149491,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12062807,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120628/1E32AE1C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12062807,
-    MaxKey = 20000512,
-    Loader = function()
-      return {
+        },
         [12062807] = {
           Content = "我已经想清楚自己该做什么了。我必须现在立刻马上去，一分一秒都不能耽搁！",
           ContentKR = "내가 뭘 해야 할지 확실히 알았어. 지금 당장 가야 해! 1분 1초가 급하니까!",
@@ -150459,7 +150507,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12063404] = {
           Content = "等到那个时候，恐怕我们也已经不在华胥了吧。",
-          ContentKR = "그때쯤이면 우린 화서에 없을 거고.",
+          ContentKR = "그때쯤이면 우린 아마 화서에 없을 거야.",
           DialogueId = 12063404,
           GUID = "1E331038",
           NextDialogue = 12063405,
@@ -151336,7 +151384,15 @@ CameraMoveTo{_delay{3.1},TargetPosition{"-91.685059,197.57959,64.746826,0.000323
           NextDialogue = 20000512,
           SpeakNpcId = 200024,
           VoiceName = "voice/$Locale$/story/2001/200005/3211B5D6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20000512,
+    MaxKey = 20005003,
+    Loader = function()
+      return {
         [20000512] = {
           Camera = "-448.745361,204.227051,210.797119,0.000268,-16.801117,-22.812357,80.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "没错，就是<H>稀世神兵</>的味道！年轻人，你是不是藏着什么了不得的武器?",
@@ -151350,15 +151406,7 @@ CameraMoveTo{_delay{3.1},TargetPosition{"-91.685059,197.57959,64.746826,0.000323
           NextDialogue = 20000513,
           SpeakNpcId = 200024,
           VoiceName = "voice/$Locale$/story/2001/200005/3211B600"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20000513,
-    MaxKey = 20005004,
-    Loader = function()
-      return {
+        },
         [20000513] = {
           Camera = "228.46167,-372.115723,10.04248,0.000321,7.79886,123.18483,80.0,614.449585,false,Manual,4.066936,16:9 Digital Film",
           Content = "武器？我只有这把剑……",
@@ -153824,7 +153872,7 @@ LookAt{_delay{5.5},LookAtDescription{"100001:n(100001)"}}
           GUID = "32135EC2",
           Scripts = [[
 PARA{
-PlayOrStopBGM{PlayType{"Play"},SoundType{"SOUND_BGM"},EventPath{"event:/bgm/cbt02/0042_story_find_saiqi"},RelatedRegionId{101103},ClientRelatedRegionId{{101101}},bStoreToServer{true}},
+PlayOrStopBGM{PlayType{"Play"},SoundType{"SOUND_BGM"},EventPath{"event:/bgm/cbt02/0042_story_find_saiqi"},RelatedRegionId{{101103,101101}},bStoreToServer{true}},
 PlayNormalSound{EventPath{"event:/sfx/common/story/01/talk_leave_city_running"},PlayAs2D{true}},
 PlayNormalSound{_delay{17},EventPath{"event:/sfx/common/story/01/talk_leave_city_crowd"},PlayAs2D{true}},
 MoveTo{ActorId{100001},TargetPoint{"P200031Nvzhu"},MoveSpeed{300},Visibility{"Show"}},
@@ -154294,7 +154342,15 @@ PlayAnimation{_delay{3},ActorId{200002},AnimationId{"Confident_Start"},Duration{
             [1] = "200002:p(-180)"
           },
           VoiceName = "voice/$Locale$/story/2001/200050/321496CE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20005004,
+    MaxKey = 20006719,
+    Loader = function()
+      return {
         [20005004] = {
           Camera = "130.023438,-232.958984,116.34668,0.0,0.0,-115.997902,25.0,143.409622,false,Manual,1.2,16:9 Digital Film",
           Content = "我打算回去了……",
@@ -154315,15 +154371,7 @@ PlayAnimation{_delay{1},ActorId{200002},AnimationId{"Confident_End"},Duration{1}
             [1] = "100001:Think_End"
           },
           VoiceName = "voice/$Locale$/story/2001/200050/321496F8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20005005,
-    MaxKey = 20006720,
-    Loader = function()
-      return {
+        },
         [20005005] = {
           Camera = "64.757812,-576.111328,76.646484,0.000102,-2.499965,77.999962,35.0,143.409622,false,DoNotOverride,1.2,16:9 Digital Film",
           CameraBlendCurve = "easeInOutQuad",
@@ -156216,11 +156264,11 @@ PlayAnimation{_delay{4.1},ActorId{200074},AnimationId{"Confident_Start"}}
           VoiceName = "voice/$Locale$/story/2001/200060/32153D2A"
         },
         [20006018] = {
-          Camera = "-538.68689,-695.786133,229.021973,0.000027,5.603125,151.387604,35.000008,345.779022,false,Manual,12.0,16:9 Digital Film",
+          Camera = "-520.474121,-687.584961,234.62793,0.000046,1.602328,153.798111,32.0,278.757599,false,Manual,2.8,16:9 Digital Film",
           Content = "我想想……榛子有没有像这样，做的事我一开始完全无法理解的时候……",
           ContentKR = "생각해보자... 헤이즐넛이 이런 식으로 내가 전혀 이해할 수 없는 행동을 한 적이 있었나...?",
           DialogueId = 20006018,
-          FinalCamera = "-556.785034,-685.914062,231.044922,0.000028,5.603125,151.387619,35.000008,278.757599,false,Manual,12.0,16:9 Digital Film",
+          FinalCamera = "-520.474121,-687.584961,242.943359,0.000046,1.602328,153.798035,32.0,278.757599,false,Manual,2.8,16:9 Digital Film",
           GUID = "32153D54",
           NextDialogue = 20006019,
           SpeakNpcId = 200074,
@@ -157332,7 +157380,15 @@ PlayAnimation{_delay{2.1},ActorId{100001},AnimationId{"Talk02_Start"}}
             [1] = "100001:Explain02_End"
           },
           VoiceName = "voice/$Locale$/story/2001/200067/3215B056"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20006720,
+    MaxKey = 50107021,
+    Loader = function()
+      return {
         [20006720] = {
           Camera = "390.472656,-23.833008,76.522202,0.000054,0.592102,149.805954,35.000011,450.0,false,Manual,6.0,16:9 Digital Film",
           Content = "好的，榛子坐下，我们把魔灵放到你的背上，一口气都带出去。",
@@ -157350,15 +157406,7 @@ PlayAnimation{_delay{2.1},ActorId{100001},AnimationId{"Talk02_Start"}}
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/story/2001/200067/3215B080"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20006721,
-    MaxKey = 50107022,
-    Loader = function()
-      return {
+        },
         [20006721] = {
           Content = "嗯？又要找卡米拉吗？她呀，肯定又要嘴上说着不愿意，然后和你一起想办法了。",
           ContentKR = "응? 또 카밀라를 찾아가? 카밀라라면... 분명 또 싫다고 해놓고선 너랑 같이 방법을 찾겠지.",
@@ -159255,22 +159303,22 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           DialogueId = 50107021,
           GUID = "7D700B22",
           VoiceName = "voice/$Locale$/env/Ver0102/7D702BF2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 50107022,
+    MaxKey = 50107263,
+    Loader = function()
+      return {
         [50107022] = {
           Content = "呜呜……龙君不公啊！这茶舍还未开张，怎料运来的雀儿都不见踪影，我该如何是好……",
           ContentKR = "흑흑... 용신님도 너무하셔! 찻집 개업이 코앞인데 새들이 다 어디 갔담. 난 이제 어떡해...",
           DialogueId = 50107022,
           GUID = "7D700B4C",
           VoiceName = "voice/$Locale$/env/Ver0102/7D702C1C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 50107023,
-    MaxKey = 50107264,
-    Loader = function()
-      return {
+        },
         [50107023] = {
           Content = "游船游船，十文一趟，排队购票，客满即发。",
           ContentKR = "유람선~ 뱃놀이~ 단돈 열 냥! 줄 서서 표부터 사세요, 자리 차면 출발합니다!",
@@ -160731,7 +160779,15 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           GUID = "7D7032D6",
           SpeakNpcId = 701176,
           VoiceName = "voice/$Locale$/env/Ver0102/7D7032D6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 50107264,
+    MaxKey = 51000706,
+    Loader = function()
+      return {
         [50107264] = {
           Content = "一点新意也没有。",
           ContentKR = "뻔하고 식상해.",
@@ -160739,15 +160795,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           GUID = "7D703300",
           SpeakNpcId = 701177,
           VoiceName = "voice/$Locale$/env/Ver0102/7D703300"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 50107265,
-    MaxKey = 51000707,
-    Loader = function()
-      return {
+        },
         [50107265] = {
           Content = "现在呢就已经到了咱们皓京……",
           ContentKR = "드디어 호경에 도착하셨어요~",
@@ -161713,7 +161761,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
         },
         [51000301] = {
           Content = "到底去了哪里啊……",
-          ContentKR = "대체 어디로 간 걸까...",
+          ContentKR = "도대체 어디로 간 거야...",
           DialogueId = 51000301,
           GUID = "7FAC84E2",
           NextDialogue = 51000302,
@@ -162423,22 +162471,22 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
           TalkActionId = {
             [1] = "700032:Explain01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51000707,
+    MaxKey = 51001705,
+    Loader = function()
+      return {
         [51000707] = {
           Content = "有结果吗？",
           ContentKR = "결과가 나왔나요?",
           DialogueId = 51000707,
           GUID = "7FACC77E",
           SpeakNpcId = 700032
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51000790,
-    MaxKey = 51001706,
-    Loader = function()
-      return {
+        },
         [51000790] = {
           Content = "对了，这里有一封信，医生说这是从我身上找到的。虽然我对这封信一点印象都没有……但这个线索可能会有用？",
           ContentKR = "참, 제 외투에 이런 편지가 하나 있었어요. 왜 들어있던 건지는 전혀 기억이 안 나지만... 그래도 단서가 돼 주지 않을까요?",
@@ -162590,7 +162638,7 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
         },
         [51000812] = {
           Content = "等身体养好了，我就打算开始下一段冒险了。",
-          ContentKR = "몸이 회복되면 다음 모험을 시작하려고요.",
+          ContentKR = "몸만 회복되면 다음 모험을 떠나려고요.",
           DialogueId = 51000812,
           GUID = "7FACD8B8",
           SpeakNpcId = 700032,
@@ -164459,7 +164507,15 @@ MoveTo{ActorId{700085},MoveSpeed{150},TargetPoint{"Point_Sangni_nearby_YNM01"},V
           GUID = "7FAD6B3A",
           NextDialogue = 51001706,
           SpeakNpcId = 700069
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51001706,
+    MaxKey = 51002806,
+    Loader = function()
+      return {
         [51001706] = {
           Content = "我在中心医院给数不清的卡戎人看病，甚至有贵族慕名请我问诊。",
           ContentKR = "예전의 나는 중앙 병원에서 수많은 카론을 치료했어. 당시엔 귀족들도 나에게 진찰받으려고 줄을 섰지.",
@@ -164470,15 +164526,7 @@ MoveTo{ActorId{700085},MoveSpeed{150},TargetPoint{"Point_Sangni_nearby_YNM01"},V
           TalkActionId = {
             [1] = "700069:Explain02_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51001707,
-    MaxKey = 51002807,
-    Loader = function()
-      return {
+        },
         [51001707] = {
           Content = "不信的话你可以问问年轻一辈的卡戎小孩，他们父母以前最常说的话就是让这帮孩子向我好好学习。",
           ContentKR = "못 믿겠으면 카론 아이들에게 물어봐. 그 아이들의 부모가 가장 많이 하는 말이 열심히 공부해서 나처럼 되라는 거였으니까.",
@@ -166460,7 +166508,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
             [1] = "700114:Sigh_End",
             [2] = "700112:Talk01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51002807,
+    MaxKey = 51004105,
+    Loader = function()
+      return {
         [51002807] = {
           Camera = "435.016602,-46.152344,110.63623,0.000004,0.0,-169.994827,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "不能怪我，不能怪我……！啊啊，都怪这袋月石！要不是刚好翻开了这个破袋子，我们现在一定都还好好的，都好好的！",
@@ -166473,15 +166529,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
             [1] = "700114:Disagree",
             [2] = "700112:Talk01_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51002808,
-    MaxKey = 51004106,
-    Loader = function()
-      return {
+        },
         [51002808] = {
           Camera = "121.290039,-83.856445,144.21875,0.000003,-0.999905,-165.995453,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "唉……",
@@ -167885,7 +167933,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
         },
         [51003801] = {
           Content = "你……卡戎……我的同类……",
-          ContentKR = "넌... 카론... 나의 동족...",
+          ContentKR = "너는... 카론... 나와 같은...",
           DialogueId = 51003801,
           GUID = "7FAEC31A",
           NextDialogue = 51003802,
@@ -168563,21 +168611,21 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TalkActionId = {
             [1] = "700088:Angry01_Start"
           }
-        },
-        [51004106] = {
-          Content = "学生们一溜烟逃走了。",
-          ContentKR = "(학생들이 줄행랑친다.)",
-          DialogueId = 51004106,
-          GUID = "7FAEF524"
         }
       }
     end
   },
   {
-    MinKey = 51004107,
-    MaxKey = 51005034,
+    MinKey = 51004106,
+    MaxKey = 51005033,
     Loader = function()
       return {
+        [51004106] = {
+          Content = "学生们一溜烟逃走了。",
+          ContentKR = "(학생들이 줄행랑친다.)",
+          DialogueId = 51004106,
+          GUID = "7FAEF524"
+        },
         [51004107] = {
           Content = "你看，他们的胆量不过如此。",
           ContentKR = "봤지? 저 정도밖에 안 되는 애들이야.",
@@ -169506,7 +169554,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
         },
         [51004908] = {
           Content = "啊……哇哇我……",
-          ContentKR = " 아아... 난...",
+          ContentKR = "아... 어, 으어어...",
           DialogueId = 51004908,
           GUID = "7FAF78B8",
           NextDialogue = 51004909,
@@ -170426,7 +170474,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TalkActionId = {
             [1] = "700013:Explain02_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51005034,
+    MaxKey = 51006010,
+    Loader = function()
+      return {
         [51005034] = {
           Camera = "299.257812,85.246521,174.804688,-0.0,-9.999997,-170.990723,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "（箱子打开，女仆取出了恩里克的遗嘱，在你的见证之下，她庄重地诵读着。）",
@@ -170434,15 +170490,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           DialogueId = 51005034,
           GUID = "7FAF8D64",
           NextDialogue = 51005035
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51005035,
-    MaxKey = 51006011,
-    Loader = function()
-      return {
+        },
         [51005035] = {
           Camera = "299.257812,85.246521,174.804688,-0.0,-9.999997,-170.990723,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "（恩里克也许早就预料到了今天的悲剧，他的遗嘱仍然冷静，只有对女儿的死亡仍旧遗憾，以及——）",
@@ -172623,7 +172671,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
             [1] = "100001:n(700145)",
             [2] = "700144:n(700145)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51006011,
+    MaxKey = 51007140,
+    Loader = function()
+      return {
         [51006011] = {
           Camera = "-81.742432,-73.919922,111.949219,0.000021,-10.600009,-24.396646,33.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "啊！狗耳朵是从哪里冒出来的！",
@@ -172639,15 +172695,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TurnTo = {
             [1] = "700145:n(100001)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51006012,
-    MaxKey = 51007141,
-    Loader = function()
-      return {
+        },
         [51006012] = {
           Camera = "122.913086,-109.845703,133.205078,0.000018,0.999987,179.004623,33.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "这不是路过刚好看到我们的新朋友，过来看看，搭把手什么的？",
@@ -175012,7 +175060,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TalkActionId = {
             [1] = "700147:Explain01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007141,
+    MaxKey = 51007605,
+    Loader = function()
+      return {
         [51007141] = {
           Content = "他说“星星是愿望的种子，当它坠落，就如果实收获，你所期盼的，都会实现。”他说“无数由珍爱之物做成的星，将在地上发芽。”",
           ContentKR = "별은 소원의 씨앗이라 별이 떨어져 과실이 맺히면 바라던 게 모두 이뤄질 거라고 했어요. 소중한 것들로 이뤄진 무수한 별이 땅에서 싹틀 거라고요.",
@@ -175023,15 +175079,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TalkActionId = {
             [1] = "700147:Explain02_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007142,
-    MaxKey = 51007607,
-    Loader = function()
-      return {
+        },
         [51007142] = {
           Content = "我很想和他一起走，继续听他讲不完的故事。但是我买不起车票，最后只能独自目送他登上了远去的火车。",
           ContentKR = "나도 같이 떠나서 마르지 않는 그 애의 이야기를 계속 듣고 싶었어요. 그런데 차표를 사지 못해서 그 애를 태우고 멀어지는 열차를 바라볼 수밖에 없었죠.",
@@ -176007,7 +176055,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51007501] = {
           Content = "嗯……实验对象1号，就决定是你了！",
-          ContentKR = "음... 실험대상 1호는, 당신으로 정했어요!",
+          ContentKR = "음... 첫 번째 실험 대상은 너로 정했어!",
           DialogueId = 51007501,
           GUID = "7FB12222",
           NextDialogue = 51007502,
@@ -176785,7 +176833,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TalkActionId = {
             [1] = "700204:Shock_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007607,
+    MaxKey = 51007905,
+    Loader = function()
+      return {
         [51007607] = {
           Content = "{$XiAoTag(Value_1,Value_2)$|蛋蛋:西比尔}{性别：哥哥|姐姐}，好巧啊，又见面了！",
           ContentKR = "{$XiAoTag(Value_1,Value_2)$|탄이:시빌라} {性别: 형|누나}, 우연이네요! 또 만났어요!",
@@ -176793,15 +176849,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB13386",
           NextDialogue = 51007608,
           SpeakNpcId = 700204
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007608,
-    MaxKey = 51007906,
-    Loader = function()
-      return {
+        },
         [51007608] = {
           Content = "你为什么这么闲呀，你不用工作吗？妈妈说，卡戎们平时都在工厂里，没日没夜地工作。",
           ContentKR = "왜 이렇게 한가한 거예요? 일 안 하세요? 엄마가요, 카론들은 평소엔 공장에서 밤낮없이 계속 일한다고 그러셨거든요.",
@@ -178154,7 +178202,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51007758] = {
           Content = "{nickname}，又见面啦！我每天都在努力学习新知识哦，一起加油吧！",
-          ContentKR = "또 만났네요, {nickname}! 전 매일 열심히 새로운 지식을 배우고 있어요. 우리 같이 힘내요!",
+          ContentKR = "{NickName}, 또 만났네! 난 매일 새로운 것들을 열심히 공부하고 있어. 같이 힘내자!",
           DialogueId = 51007758,
           GUID = "7FB14C4C",
           SpeakNpcId = 700204
@@ -178511,7 +178559,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB1646A",
           ImprPlusId = 1001,
           NextDialogue = 51007907
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007906,
+    MaxKey = 51009330,
+    Loader = function()
+      return {
         [51007906] = {
           Content = "白捡的便宜不占白不占。",
           ContentKR = "굴러 들어온 기회를 마다할 이유는 없죠.",
@@ -178519,15 +178575,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB16494",
           ImprPlusId = 1005,
           NextDialogue = 51007907
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007907,
-    MaxKey = 51009331,
-    Loader = function()
-      return {
+        },
         [51007907] = {
           Content = "年轻人就是有眼光啊！来来来，我们这边走，路上可能会碰到一两只秽兽，但我相信这点小麻烦对你肯定不算什么的！",
           ContentKR = "탁월한 선택이에요! 자, 이쪽으로 오세요. 가는 길에 필토이드가 한두 마리 나올 수도 있지만, 당신 실력이면 별문제가 안 될 거예요!",
@@ -180660,22 +180708,22 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
             [3] = 51009335
           },
           SpeakNpcId = 700247
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009331,
+    MaxKey = 51009640,
+    Loader = function()
+      return {
         [51009331] = {
           Content = "为什么一定要等起风？",
           ContentKR = "왜 바람이 불어야 하죠?",
           DialogueId = 51009331,
           GUID = "7FB24E5E",
           NextDialogue = 51009332
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009332,
-    MaxKey = 51009641,
-    Loader = function()
-      return {
+        },
         [51009332] = {
           Content = "因为起风的时候，花才会往空中飘呀。",
           ContentKR = "바람이 불어야 꽃이 공중에 흩날리니까요.",
@@ -182887,7 +182935,15 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
           TalkActionId = {
             [1] = "700301:Explain02_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009641,
+    MaxKey = 51009851,
+    Loader = function()
+      return {
         [51009641] = {
           Content = "嗯，我答应了拉斯把你平安带回去。",
           ContentKR = "네. 라스한테 도나트 씨를 무사히 모시고 돌아가겠다고 약속했거든요.",
@@ -182895,15 +182951,7 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
           GUID = "7FB2813A",
           NextDialogue = 51009642,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009642,
-    MaxKey = 51009852,
-    Loader = function()
-      return {
+        },
         [51009642] = {
           Content = "谢谢，谢谢你，善良的年轻人。",
           ContentKR = "고마워. 정말 고마워, 마음씨 고운 젊은 친구.",
@@ -185035,7 +185083,15 @@ TurnTo{TurnToDescription{"100001:n(700313)"}}
           NextDialogue = 51009852,
           SpeakNpcId = 100001,
           ToFinalCameraBlendTime = 5
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009852,
+    MaxKey = 51010051,
+    Loader = function()
+      return {
         [51009852] = {
           Camera = "1489.815308,3777.302246,3313.351074,0.000015,-35.199669,-107.997414,20.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "（先简单梳理一下吧……）",
@@ -185045,15 +185101,7 @@ TurnTo{TurnToDescription{"100001:n(700313)"}}
           GUID = "7FB2A3D8",
           SpeakNpcId = 100001,
           ToFinalCameraBlendTime = 5
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009853,
-    MaxKey = 51010052,
-    Loader = function()
-      return {
+        },
         [51009853] = {
           Camera = "1806.783691,4752.98291,4037.017334,0.000015,-35.199627,-107.997398,20.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "（十六年前的绑架案另有隐情，而薇奥莱塔女士很可能知道真相……吉赛尔绑架了她的学生，为的是与薇奥莱塔单独见面……）",
@@ -187163,7 +187211,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Talk01_Start"},Duration{1}}
           GUID = "7FB2C47E",
           NextDialogue = 51010052,
           SpeakNpcId = 700302
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010052,
+    MaxKey = 51010701,
+    Loader = function()
+      return {
         [51010052] = {
           Content = "……啊！",
           ContentKR = "...아야!",
@@ -187186,15 +187242,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
 }}]],
           SpeakNpcId = 700305,
           SpeakNpcName = "UI_CMNpc_Name_Rosalind02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010053,
-    MaxKey = 51010702,
-    Loader = function()
-      return {
+        },
         [51010053] = {
           Camera = "-442.745117,136.447266,137.21167,0.000002,-3.200169,-35.40036,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "抱……抱歉，我刚才没看路！没受伤吧？有没有哪里不舒服？",
@@ -189173,7 +189221,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB32F22",
           NextDialogue = 51010702,
           SpeakNpcId = 700337
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010702,
+    MaxKey = 51012305,
+    Loader = function()
+      return {
         [51010702] = {
           Content = "（眼前的皎皎摇头晃脑地趴在桌子上，昏昏欲睡。）",
           ContentKR = "(눈앞의 루나는 책상에 엎드려 졸면서 고개를 절레절레 흔들고 있다.)",
@@ -189183,15 +189239,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
             [1] = 51010703,
             [2] = 51010704
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010703,
-    MaxKey = 51012306,
-    Loader = function()
-      return {
+        },
         [51010703] = {
           Content = "把她叫醒。",
           ContentKR = "깨운다.",
@@ -190774,7 +190822,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB4364A",
           NextDialogue = 51012306,
           SpeakNpcId = 700383
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51012306,
+    MaxKey = 51014431,
+    Loader = function()
+      return {
         [51012306] = {
           Content = "我今天刚到冰湖城，正在寻找此地值得记录的风景。",
           ContentKR = "오늘 아이스레이크 시티에 막 도착했거든. 난 여기서 기록할 만한 풍경을 찾고 있어.",
@@ -190782,15 +190838,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB43674",
           NextDialogue = 51012307,
           SpeakNpcId = 700383
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51012307,
-    MaxKey = 51015032,
-    Loader = function()
-      return {
+        },
         [51012307] = {
           Content = "这座房子实在是漂亮极了，我看得入迷，情不自禁地举起了相机……所以才没注意到你路过，抱歉啦。",
           ContentKR = "그러다 이 집이 정말 너무 예뻐서 계속 보다가, 무의식적으로 카메라를 들었거든... 그래서 네가 지나가는 걸 못 봤어, 미안해.",
@@ -192199,6 +192247,363 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           DialogueId = 51014341,
           GUID = "7FB58452"
         },
+        [51014400] = {
+          Content = "（你靠近的时候，柯尼手里拿着什么东西正专心致志地看着，并没有注意到你的到来。）",
+          ContentKR = "(코니는 내가 다가온 것을 눈치채지 못한 채, 손에 뭔가를 들고 열심히 보고 있다..)",
+          DialogueId = 51014400,
+          GUID = "7FB58E00",
+          LookAt = {
+            [1] = "0:n(701327)"
+          },
+          NextOptions = {
+            [1] = 51014401,
+            [2] = 51014402,
+            [3] = 51014403
+          },
+          TalkActionId = {
+            [1] = "701327:Think_Start"
+          },
+          TurnTo = {
+            [1] = "0:n(701327)"
+          }
+        },
+        [51014401] = {
+          Content = "柯尼，在做什么呢？",
+          ContentKR = "코니, 뭐 하고 있어?",
+          DialogueId = 51014401,
+          GUID = "7FB58E2A",
+          ImprPlusId = 1002,
+          NextDialogue = 51014404
+        },
+        [51014402] = {
+          Content = "嘿！我的好大儿！",
+          ContentKR = "헤이! 우리 귀여운 막내!",
+          DialogueId = 51014402,
+          GUID = "7FB58E54",
+          ImprPlusId = 1005,
+          NextDialogue = 51014404
+        },
+        [51014403] = {
+          Content = "卡米拉知道你在偷懒吗？",
+          ContentKR = "너 땡땡이치는 거 카밀라 씨는 알아?",
+          DialogueId = 51014403,
+          GUID = "7FB58E7E",
+          ImprPlusId = 1001,
+          NextDialogue = 51014404
+        },
+        [51014404] = {
+          Content = "是你！你居然回水仙平原了？！",
+          ContentKR = "앗! 아스포델로 돌아오신 거예요?!",
+          DialogueId = 51014404,
+          GUID = "7FB58EA8",
+          LookAt = {
+            [1] = "701327:n(0)"
+          },
+          NextDialogue = 51014405,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Think_End"
+          },
+          TurnTo = {
+            [1] = "701327:n(0)"
+          }
+        },
+        [51014405] = {
+          Content = "看到我回来很惊讶吗？",
+          ContentKR = "내가 돌아온 게 그렇게 놀랄 일이야?",
+          DialogueId = 51014405,
+          GUID = "7FB58ED2",
+          NextDialogue = 51014406,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk03_Start"
+          }
+        },
+        [51014406] = {
+          Content = "卡米拉阿姨跟我说你要很久才会回来，甚至可能不会回来了呢！",
+          ContentKR = "카밀라 씨 말로는 한참 뒤에나 돌아올 거고, 어쩌면 아예 안 돌아올 수도 있다고 하셨거든요!",
+          DialogueId = 51014406,
+          GUID = "7FB58EFC",
+          NextDialogue = 51014407,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Talk01_Start",
+            [2] = "0:Talk03_End"
+          }
+        },
+        [51014407] = {
+          Content = "看你出现在这里，是卡米拉收留你了？",
+          ContentKR = "여기 있는 걸 보니 카밀라 씨가 널 받아준 거야?",
+          DialogueId = 51014407,
+          GUID = "7FB58F26",
+          NextDialogue = 51014408,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "701327:Talk01_End"
+          }
+        },
+        [51014408] = {
+          Content = "目前还没有……是这样的，那天我和你们分开后，回去我就收拾了自己的东西，然后去打听了一下水仙平原的消息。",
+          ContentKR = "아직은 아니에요... 사실은 그날 여러분과 헤어진 후에 전 돌아가서 제 짐을 챙기고, 아스포델이 어떤 곳인지 알아봤어요.",
+          DialogueId = 51014408,
+          GUID = "7FB58F50",
+          NextDialogue = 51014409,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Talk02_Start"
+          }
+        },
+        [51014409] = {
+          Content = "他们都跟我说，那是个很厉害的地方，大家会在那边喝很贵的酒，还有一些叫做狩月人的雇佣兵成群结队出现在那里，而酒馆的老板娘才是最不好惹的人。",
+          ContentKR = "다들 엄청난 곳이라고 하더라고요. 사람들은 비싼 술을 마시고, 월석 사냥꾼이라는 용병들이 떼로 나타나는데, 그래도 제일 무서운 사람은 술집 여사장님이라고요.",
+          DialogueId = 51014409,
+          GUID = "7FB58F7A",
+          NextDialogue = 51014410,
+          SpeakNpcId = 701327
+        },
+        [51014410] = {
+          Content = "那时候我挺不安的，我怕我即使过来了也不会被收留，但是如果不尝试一下就放弃也太丢人了，何况你们也那么跟我说……",
+          ContentKR = "그땐 정말 불안했어요. 가봤자 받아주지 않을까 걱정도 됐지만, 시도도 안 해보고 포기하는 건 너무 창피하잖아요. 게다가 여러분도 그렇게 말해줬고요...",
+          DialogueId = 51014410,
+          GUID = "7FB58FA4",
+          NextDialogue = 51014411,
+          SpeakNpcId = 701327
+        },
+        [51014411] = {
+          Content = "所以我还是来了！我把来意一说，卡米拉阿姨果然没给我好脸色，她说着什么……一个白已经够烦人了，好不容易被带走了还送回来一个……",
+          ContentKR = "그래서 결국 온 거예요! 제 사정을 말했더니 카밀라 씨가 역시나 표정이 좋진 않으셨어요. 그리곤... 스노우 하나로도 충분히 귀찮은데, 겨우 내보냈더니 또 한 명을 보냈다고... 그러시더라고요...",
+          DialogueId = 51014411,
+          GUID = "7FB58FCE",
+          NextDialogue = 51014412,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Talk02_End"
+          }
+        },
+        [51014412] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51014412,
+          GUID = "7FB58FF8",
+          NextDialogue = 51014413,
+          SpeakNpcId = 100001
+        },
+        [51014413] = {
+          Content = "我就想着你们说的话，直接坐在地上就开始哭，旁边的狩月人都在问卡米拉，我是不是她的私生子之类的。",
+          ContentKR = "그래서 여러분이 한 말을 떠올리면서, 바로 그 자리에 주저앉아서 울어버렸어요. 그러니까 옆에 있던 월석 사냥꾼들이 카밀라 씨한테 혹시 제가 카밀라 씨 사생아냐고 물어보더라고요.",
+          DialogueId = 51014413,
+          GUID = "7FB59022",
+          NextDialogue = 51014414,
+          SpeakNpcId = 701327
+        },
+        [51014414] = {
+          Content = "然后呢？你没有当场叫她妈妈吗？",
+          ContentKR = "그다음엔? 그 자리에서 엄마라고 안 불렀어?",
+          DialogueId = 51014414,
+          GUID = "7FB5904C",
+          NextDialogue = 51014415,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk01_Start"
+          }
+        },
+        [51014415] = {
+          Content = "我想叫，但是她的脸色看起来相当不好，按我在火车站遍历众人察言观色的经验来看，如果我那时候真的叫出口了，恐怕会被连人带行李，被她的开酒刀钉死在墙上！",
+          ContentKR = "부르고 싶었지만, 표정이 너무 안 좋아 보이셔서요. 기차역에서 사람들 눈치 보면서 익힌 제 경험으로 봤을 때, 그때 정말로 엄마라고 불렀다간 제 짐이랑 같이 벽에 곤두박질쳐져서, 와인 오프너에 맞아서 꽂혀 죽었을 거예요!",
+          DialogueId = 51014415,
+          GUID = "7FB59076",
+          LookAt = {
+            [1] = "701327:n(701327)"
+          },
+          NextDialogue = 51014416,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Sigh_Start",
+            [2] = "0:Talk01_End"
+          }
+        },
+        [51014416] = {
+          Content = "……那么你是怎么留下来的？",
+          ContentKR = "...그럼 어떻게 여기 있게 된 건데?",
+          DialogueId = 51014416,
+          GUID = "7FB590A0",
+          LookAt = {
+            [1] = "701327:n(0)"
+          },
+          NextDialogue = 51014417,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "701327:Sigh_End"
+          }
+        },
+        [51014417] = {
+          Content = "是一位蓝头发的姐姐过来了，她好像看起来和卡米拉认识，她问我是发生什么事情，然后我就把我的经历告诉她了。",
+          ContentKR = "그때 마침 파란 머리 누나가 왔거든요. 카밀라 씨랑 아는 사이인 것 같았는데, 무슨 일이냐고 물어봐서 제 사연을 다 얘기했어요.",
+          DialogueId = 51014417,
+          GUID = "7FB590CA",
+          NextDialogue = 51014418,
+          SpeakNpcId = 701327
+        },
+        [51014418] = {
+          Content = "黎瑟啊……",
+          ContentKR = "리듬이 왔었구나...",
+          DialogueId = 51014418,
+          GUID = "7FB590F4",
+          LookAt = {
+            [1] = "0:n(0)"
+          },
+          NextDialogue = 51014419,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Think_Start"
+          }
+        },
+        [51014419] = {
+          Content = "对的对的！是黎瑟姐姐！她人真好，我想叫她妈妈，但是她只让我叫她姐姐。",
+          ContentKR = "맞아요 맞아요! 리듬 누나요! 정말 좋은 누나였어요. 엄마라고 부르고 싶었는데, 누나라고만 부르라고 했어요.",
+          DialogueId = 51014419,
+          GUID = "7FB5911E",
+          LookAt = {
+            [1] = "0:n(701327)"
+          },
+          NextDialogue = 51014420,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "0:Think_End"
+          }
+        },
+        [51014420] = {
+          Content = "总之就是，黎瑟姐姐帮我买下了水仙平原一个月的试工期。",
+          ContentKR = "어쨌든, 리듬 누나가 아스포델에서 한 달 동안 수습 기간으로 일할 수 있게 해 주셨어요.",
+          DialogueId = 51014420,
+          GUID = "7FB59148",
+          NextDialogue = 51014421,
+          SpeakNpcId = 701327
+        },
+        [51014421] = {
+          Content = "一个月的试工期？意思是你做的不好，还有可能会被赶走？",
+          ContentKR = "수습 기간 한 달? 그럼 못하면 쫓겨날 수도 있다는 거야?",
+          DialogueId = 51014421,
+          GUID = "7FB59172",
+          NextDialogue = 51014422,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk02_Start"
+          }
+        },
+        [51014422] = {
+          Content = "没错！不过你放心，我这段时间在这里抢着干活，无论是补酒还是端茶倒水洗地擦玻璃，我都能干，卡米拉那天看着我，说我比白能干的多得多呢！",
+          ContentKR = "맞아요! 하지만 걱정 마세요. 요즘 여기서 열심히 일하고 있거든요. 술 채우고, 서빙하고, 물 따르고, 바닥 닦고, 유리 닦고, 다 할 수 있어요. 카밀라 씨가 그날 절 보면서 스노우보다 훨씬 일 잘한다고 하셨다니까요!",
+          DialogueId = 51014422,
+          GUID = "7FB5919C",
+          NextDialogue = 51014423,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "0:Talk02_End"
+          }
+        },
+        [51014423] = {
+          Content = "我相信，这一个月的试工期我一定能干下来的，最近我还在偷偷看一些调酒的书籍。",
+          ContentKR = "이 수습 기간은 꼭 채울 수 있을 거예요. 요즘은 몰래 칵테일 만드는 책도 보고 있어요.",
+          DialogueId = 51014423,
+          GUID = "7FB591C6",
+          NextDialogue = 51014424,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Confident_Start"
+          }
+        },
+        [51014424] = {
+          Content = "你看，就是这本，是黎瑟姐姐带给我的，她说这上面没有多少字，全是图案，我应该能看懂，等以后她如果闲下来了，就教我认字。",
+          ContentKR = "보세요, 이 책인데, 리듬 누나가 준 거예요. 글자는 별로 없고 대부분 그림이니까 제가 이해할 수 있을 거래요. 그리고 나중에 누나가 시간 나면 글자도 가르쳐 준댔어요.",
+          DialogueId = 51014424,
+          GUID = "7FB591F0",
+          NextDialogue = 51014425,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Confident_End"
+          }
+        },
+        [51014425] = {
+          Content = "我想，要是我连调酒也学会了，卡米拉阿姨就没有借口赶我走了吧，我会成为水仙平原最厉害的服务员，你说是不是？",
+          ContentKR = "만약 제가 칵테일 만드는 것까지 배운다면, 카밀라 씨도 더는 절 쫓아낼 구실이 없을 거예요. 그럼 전 아스포델 최고의 직원이 될 거예요. 그렇죠?",
+          DialogueId = 51014425,
+          GUID = "7FB5921A",
+          NextOptions = {
+            [1] = 51014426,
+            [2] = 51014427,
+            [3] = 51014428
+          },
+          SpeakNpcId = 701327
+        },
+        [51014426] = {
+          Content = "很好，很有志气！",
+          ContentKR = "좋아! 패기가 넘치네!",
+          DialogueId = 51014426,
+          GUID = "7FB59244",
+          ImprPlusId = 1004,
+          NextDialogue = 51014429
+        },
+        [51014427] = {
+          Content = "还是先留下来再说吧。",
+          ContentKR = "일단은 안 잘리는 게 먼저지.",
+          DialogueId = 51014427,
+          GUID = "7FB5926E",
+          ImprPlusId = 1001,
+          NextDialogue = 51014429
+        },
+        [51014428] = {
+          Content = "听起来任重而道远啊……",
+          ContentKR = "갈 길이 멀어 보이는데...",
+          DialogueId = 51014428,
+          GUID = "7FB59298",
+          ImprPlusId = 1003,
+          NextDialogue = 51014429
+        },
+        [51014429] = {
+          Content = "不管怎么说，我都很感谢你们给了我这个机会，我会好好珍惜的。我现在啊，感觉就像是突然有了第二条生命一样，从早到晚身上全是使不完的牛劲儿！",
+          ContentKR = "어쨌든 이런 기회를 주셔서 정말 고마워요. 꼭 소중히 여길게요! 지금 전 마치 갑자기 두 번째 인생을 얻은 것만 같아요. 아침부터 저녁까지 온몸에 힘이 흘러넘친다니까요!",
+          DialogueId = 51014429,
+          GUID = "7FB592C2",
+          NextDialogue = 51014430,
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Explain01_Start"
+          }
+        },
+        [51014430] = {
+          Content = "这和找到爸爸妈妈很像，不是吗？真正的爸爸妈妈就是这样的吧，除了把我们生下来之外，还教给我们如何生活。",
+          ContentKR = "사실 엄마 아빠를 찾은 거랑도 비슷한 거 아닌가요? 진짜 엄마 아빠는 이런 거겠죠? 우릴 낳아주는 것뿐만 아니라, 어떻게 살아가야 하는지도 가르쳐주잖아요.",
+          DialogueId = 51014430,
+          GUID = "7FB592EC",
+          NextDialogue = 51014431,
+          SpeakNpcId = 701327
+        },
+        [51014431] = {
+          Content = "现在，我已经知道应该如何生活了！",
+          ContentKR = "이제 전 어떻게 살아가야 할지 알게 됐어요!",
+          DialogueId = 51014431,
+          GUID = "7FB59316",
+          SpeakNpcId = 701327,
+          TalkActionId = {
+            [1] = "701327:Explain01_End"
+          }
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51014432,
+    MaxKey = 51100021,
+    Loader = function()
+      return {
+        [51014432] = {
+          Content = "你回来啦？最近我也有在好好生活哦~",
+          ContentKR = "다녀왔어? 요즘은 나도 열심히 살아가고 있어~",
+          DialogueId = 51014432,
+          GUID = "7FBA7540",
+          SpeakNpcId = 701327
+        },
         [51015000] = {
           Content = "昨天太倒霉了！",
           ContentKR = "어젠 얼마나 재수가 없던지!",
@@ -192410,7 +192815,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51015022] = {
           Content = "如果你想去的话，我可以帮你引荐给杰克先生，诚如我所说，他是个好人，一定很欢迎你的到来。",
-          ContentKR = "만약 가고 싶다면, 내가 잭 씨한테 널 소개해 줄게. 좋은 분이니까 분명히 널 환영할 거야.",
+          ContentKR = "만약 가고 싶다면, 내가 미스터 잭한테 널 소개해 줄게. 좋은 분이니까 분명히 널 환영할 거야.",
           DialogueId = 51015022,
           GUID = "7FB5F40C",
           NextOptions = {
@@ -192509,15 +192914,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           TalkActionId = {
             [1] = "701285:Angry01_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51015033,
-    MaxKey = 51100055,
-    Loader = function()
-      return {
+        },
         [51015033] = {
           Content = "你当然可以不承认，我也无法证实你的借口，但……",
           ContentKR = "물론 그렇게 잡아떼셔도 돼요. 저한테 그쪽 변명을 증명할 방법은 없으니까요...",
@@ -194018,7 +194415,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FEC6D32",
           ImprPlusId = 1207,
           NextDialogue = 51100022
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51100022,
+    MaxKey = 51101076,
+    Loader = function()
+      return {
         [51100022] = {
           Content = "我也想哇，可如果在这里掉头，我就疑似对太皓不忠了！",
           ContentKR = "나라고 왜 돌아가고 싶지 않겠소. 허나 여기서 발길을 돌린다면, 나는 태호님을 저버린 불경한 자가 되는 것이오!",
@@ -194356,15 +194761,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           NextDialogue = 51100056,
           SpeakNpcId = 700319,
           bAllowClickSkipScript = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51100056,
-    MaxKey = 51102019,
-    Loader = function()
-      return {
+        },
         [51100056] = {
           Content = "你别不信！那一定是太皓显灵，祂还给了我一件信物，让我下回在尘漠石海遇见麻烦，可以吹响这件宝物，祂一定会显灵。",
           ContentKR = "내 말이 거짓 같소? 태호님이 틀림없으셨소! 내게 이 증표까지 하사하셨단 말이오. 다음에 낙진의 바다에서 곤경에 처했을 때, 이 보물을 입으로 힘껏 불면 꼭 나타나시겠다 하셨소.",
@@ -195839,7 +196236,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FED1A48",
           NextDialogue = 51101077,
           SpeakNpcId = 700321
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51101077,
+    MaxKey = 51104046,
+    Loader = function()
+      return {
         [51101077] = {
           Content = "我知道我知道，是星星！",
           ContentKR = "나 알아! 저거 별이잖아!",
@@ -196185,15 +196590,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           TalkActionId = {
             [1] = "700322:Disagree"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51102020,
-    MaxKey = 51104080,
-    Loader = function()
-      return {
+        },
         [51102020] = {
           Camera = "375.533203,122.591797,81.722656,0.00012,-2.399288,-162.004395,35.0,468.597351,false,Manual,2.8,16:9 Digital Film",
           Content = "若二位不信，在下这卦分文不取，等二位去一探究竟再回来不迟。",
@@ -198121,7 +198518,15 @@ MoveTo{ActorId{700324},TargetPoint{"P51104031White"},MoveSpeed{80},Visibility{"S
           TalkActionId = {
             [1] = "700328:Sigh_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51104047,
+    MaxKey = 51105117,
+    Loader = function()
+      return {
         [51104047] = {
           Camera = "393.902344,31.90625,149.760742,0.000111,-7.799338,-168.793396,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "你不同意这么做吗？",
@@ -198521,15 +198926,7 @@ MoveTo{ActorId{700324},TargetPoint{"P51104031White"},MoveSpeed{80},Visibility{"S
           TurnTo = {
             [1] = "700325:n(700333)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51104081,
-    MaxKey = 51105304,
-    Loader = function()
-      return {
+        },
         [51104081] = {
           Camera = "343.269531,125.167969,194.758789,0.000055,-10.200463,-97.399925,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "职责所在，不必言谢。",
@@ -198545,7 +198942,7 @@ MoveTo{ActorId{700324},TargetPoint{"P51104031White"},MoveSpeed{80},Visibility{"S
         [51104082] = {
           Camera = "139.769531,398.101562,168.59668,0.000137,-6.594056,-58.797264,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "……恕我妄言，权当是我这匹夫老眼昏花。这位应天尉大人，我可曾在摊前见过你……与你的弟弟？",
-          ContentKR = "...혹시 이 늙은이가 잘못 본 거라면, 부디 용서하게. 응천위 자네... 예전에 우리 가게에 온 적이 있지 않나? 아우도 같이 말이야.",
+          ContentKR = "...혹시 이 늙은이가 잘못 본 거라면, 부디 용서하게. 응천위 자네... 예전에 우리 가게에 온 적이 있지 않나? 아우도 같이 말이야. ",
           DialogueId = 51104082,
           GUID = "7FEF0774",
           NextDialogue = 51104083,
@@ -199034,7 +199431,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
         },
         [51104122] = {
           Content = "故人尚在，归处仍存吗……终究只是个愿景罢了。",
-          ContentKR = "옛 인연도, 돌아갈 곳도 아직 남아 있다라... 결국은 부질없는 희망일 뿐이야.",
+          ContentKR = " 옛 인연도, 돌아갈 곳도 아직 남아 있다라... 결국은 부질없는 희망일 뿐이야.",
           DialogueId = 51104122,
           GUID = "7FEF0E04",
           SpeakNpcId = 700325
@@ -200292,7 +200689,15 @@ PlayAnimation{ActorId{700329},AnimationId{"Give"},Duration{2}},
           GUID = "7FEF6EA6",
           NextDialogue = 51105118,
           SpeakNpcId = 700331
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105118,
+    MaxKey = 51105900,
+    Loader = function()
+      return {
         [51105118] = {
           Camera = "-460.025391,-656.214355,288.115234,0.000004,-13.200009,55.399296,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "谢谢你……谢谢你们……",
@@ -200685,15 +201090,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           GUID = "7FEFCFF0",
           NextDialogue = 51105305,
           SpeakNpcId = 700355
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105305,
-    MaxKey = 51105934,
-    Loader = function()
-      return {
+        },
         [51105305] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "对吧，我也觉得，所以呀，让我们一起来想想办法，让大家都振作起来吧。",
@@ -202461,7 +202858,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
             [3] = 51105909
           },
           SpeakNpcId = 701005
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105901,
+    MaxKey = 51109022,
+    Loader = function()
+      return {
         [51105901] = {
           Content = "什么奇遇？我也能分点好处吗？",
           ContentKR = "기연이요? 그거 좋은 건가요? 나눠 주실래요?",
@@ -202773,15 +203178,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           GUID = "7FF0374C",
           NextDialogue = 51105935,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105935,
-    MaxKey = 51110024,
-    Loader = function()
-      return {
+        },
         [51105935] = {
           Content = "啊？这……前辈，斩断瀑布这是否有些太难了……",
           ContentKR = "네? 저기... 소협, 폭포를 베라니... 그건 너무 어려운...",
@@ -204247,7 +204644,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "701009:Sigh_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51109023,
+    MaxKey = 51115050,
+    Loader = function()
+      return {
         [51109023] = {
           Content = "（面前的老人说到这里，再也忍不住眼泪，掩面痛哭了起来。）",
           ContentKR = "(눈앞의 노인은 차마 눈물을 참지 못하고, 얼굴을 가린 채 오열하기 시작한다.)",
@@ -204553,15 +204958,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "701011:Confident_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51110025,
-    MaxKey = 51116032,
-    Loader = function()
-      return {
+        },
         [51110025] = {
           Content = "（小孩突然嚎叫了起来，想来这就是他之前趴在地上怪叫的原因。）",
           ContentKR = "(아이가 갑자기 괴성을 지르기 시작한다. 아이가 조금 전에 바닥에 엎드려 내던 소리가 이거였나 보다.)",
@@ -206258,7 +206655,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           ContentKR = "(소녀는 붓을 들어 공책에 무언가를 끄적이며, 남이야 뭐라든, 또다시 자신의 복수 선언을 중얼거린다.)",
           DialogueId = 51115050,
           GUID = "7FF60EE4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51115051,
+    MaxKey = 51120020,
+    Loader = function()
+      return {
         [51115051] = {
           Content = "有了！可以往他们的枕头里塞辣椒粉……嘻嘻……",
           ContentKR = "그래! 녀석들 베개에다 고춧가루를 집어넣는 거야... 후후...",
@@ -206562,15 +206967,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "701020:Sigh_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51116033,
-    MaxKey = 51121021,
-    Loader = function()
-      return {
+        },
         [51116033] = {
           Content = "原来如此，是我取材有误……我这就回去重新谱曲！让我想想……乌鸦高鸣之声、野鼠啃噬之声、金石摩擦之声……嗯，应当不错！",
           ContentKR = "소재를 잘못 골랐던 거예요... 당장 돌아가서 곡을 다시 써야겠어요! 이번엔... 까마귀 울음소리, 들쥐가 뭔가 갉아 먹는 소리, 금속 긁히는 소리를 소재로... 음, 괜찮겠네요!",
@@ -208248,7 +208645,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "701027:Explain01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51120021,
+    MaxKey = 51125063,
+    Loader = function()
+      return {
         [51120021] = {
           Content = "所以我建议她好好吃饭的同时，给她开了些补剂，里面掺的是一人日常所需的营养，免得她运动后气血亏空，瘫倒在地啊。",
           ContentKR = "그래서 식사를 잘 챙겨 먹으란 조언을 한 겁니다. 영양제도 처방해 줬고요. 운동을 하다가 기력이 쇠하여 쓰러지지 않게, 하루치 영양소를 담아 둔 것입니다.",
@@ -208597,15 +209002,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "701030:Explain01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51121022,
-    MaxKey = 51125097,
-    Loader = function()
-      return {
+        },
         [51121022] = {
           Content = "你为何要接这种阴间时辰的单子？",
           ContentKR = "애초에 그런 야밤에 하는 작업을 뭐하러 받냐고!",
@@ -210168,7 +210565,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFC79A6",
           NextDialogue = 51125064,
           SpeakNpcId = 700365
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51125064,
+    MaxKey = 51126023,
+    Loader = function()
+      return {
         [51125064] = {
           Camera = "127.339844,-18.349609,122.799805,0.017557,2.000023,179.711273,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "怎么就不行？你也说过，优秀的演员应该有“整容式演技”。真让我穿上应天尉的行头，我保证演得不比妙趣差！说到底，你还是不信任我的演技。",
@@ -210443,15 +210848,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFC7F3A",
           NextDialogue = 51125098,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51125098,
-    MaxKey = 51126126,
-    Loader = function()
-      return {
+        },
         [51125098] = {
           Camera = "55.546875,-172.925781,148.643555,0.017533,-2.399322,141.50882,45.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "什么词来着？",
@@ -211806,7 +212203,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
             [2] = 51126027
           },
           SpeakNpcId = 701045
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51126024,
+    MaxKey = 51126917,
+    Loader = function()
+      return {
         [51126024] = {
           Content = "为了哄他撒谎吧。",
           ContentKR = "아이를 달래 주기 위해 거짓말을 한다.",
@@ -212072,15 +212477,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51126126,
           GUID = "7FFD280C",
           NextDialogue = 51126127
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51126127,
-    MaxKey = 51127025,
-    Loader = function()
-      return {
+        },
         [51126127] = {
           Content = "好啊，下次要来申请的时候再聊吧。",
           ContentKR = "좋죠. 다음에 신청하러 올 때 또 이야기 나눠요.",
@@ -213409,7 +213806,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51126917,
           GUID = "7FFDA9D2",
           SpeakNpcId = 701059
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51126918,
+    MaxKey = 51127716,
+    Loader = function()
+      return {
         [51126918] = {
           Content = "好像……闻到了？",
           ContentKR = "무슨 냄새가... 나는 것도 같은데요?",
@@ -213679,15 +214084,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51127025,
           GUID = "7FFDBB8A",
           SpeakNpcId = 701060
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51127026,
-    MaxKey = 51127823,
-    Loader = function()
-      return {
+        },
         [51127026] = {
           Content = "默默离开。",
           ContentKR = "조용히 떠난다.",
@@ -215018,7 +215415,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51127716,
           GUID = "7FFE2CE8",
           NextDialogue = 51127717
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51127717,
+    MaxKey = 51140074,
+    Loader = function()
+      return {
         [51127717] = {
           Content = "来来来，我给你打个比方，一笔大单，谈成了能赚个十分，但我们内部之间明争暗斗，给人下套，这开销便去了十五分，那即使单子谈成，也是要亏钱。",
           ContentKR = "자, 비유를 들어 줄게. 성사만 되면 돈을 짭짤히 벌 수 있는 큰 건이 있어. 그런데 우리끼리 몰래 뒤통수나 치다가 벌 돈보다 더 많이 깨졌어. 그러면 거래가 성사돼도 손해야.",
@@ -215294,15 +215699,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFE3E76",
           NextDialogue = 51127824,
           SpeakNpcId = 701070
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51127824,
-    MaxKey = 51150018,
-    Loader = function()
-      return {
+        },
         [51127824] = {
           Content = "还有……",
           ContentKR = "그리고 또...",
@@ -216929,7 +217326,15 @@ SEQ{ MoveTo{ActorId{701075},MoveSpeed{150},TargetPoint{"Targetpoint_20030907"}},
           TalkActionId = {
             [1] = "100001:Confident_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51140075,
+    MaxKey = 51151409,
+    Loader = function()
+      return {
         [51140075] = {
           Camera = "-81.537109,-85.851562,132.566406,0.000039,0.0,11.891485,18.482418,157.042984,false,Manual,1.41721,16:9 Digital Film",
           Content = "不错。他的姓名应该只记在姐姐日记里，你怎知……？",
@@ -217320,15 +217725,7 @@ SEQ{ TurnTo{TurnToDescription{"701075:p(-20)"}}, LookAt{LookAtDescription{"70107
           DialogueId = 51150018,
           GUID = "800C77D4",
           SpeakNpcId = 701074
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51150019,
-    MaxKey = 51152035,
-    Loader = function()
-      return {
+        },
         [51150019] = {
           Camera = "333.445312,-77.007812,119.176392,0.000049,3.105147,176.364456,35.0,100000.0,false,DoNotOverride,7.0,16:9 Digital Film",
           Content = "谢谢你们，二位，真的……谢谢……",
@@ -219419,7 +219816,15 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
           GUID = "800D5C0A",
           NextDialogue = 51151410,
           SpeakNpcId = 900011
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51151410,
+    MaxKey = 51155227,
+    Loader = function()
+      return {
         [51151410] = {
           Content = "…………（这样当一只蛋皎在玩骰子时赢了你，你想赢回来的时候，就找不到当时赢你的到底是哪只蛋皎了。）",
           ContentKR = "......(이래야 네가 주사위 게임에서 달걀 루나한테 져도, 나중에 본전 찾으러 왔을 때 어느 달걀 루나한테 졌는지 모를 거 아냐.)",
@@ -219767,15 +220172,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Wave02_End"}}
           TalkActionId = {
             [1] = "100001:Talk02_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51152036,
-    MaxKey = 51155613,
-    Loader = function()
-      return {
+        },
         [51152036] = {
           Camera = "-22.400391,-85.114258,115.713867,0.000092,8.260102,28.910444,38.0,357.30426,false,Manual,2.0,16:9 Digital Film",
           Content = "是、是……",
@@ -221512,7 +221909,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "800FCE6E",
           NextDialogue = 51155228,
           SpeakNpcId = 701093
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51155228,
+    MaxKey = 51156928,
+    Loader = function()
+      return {
         [51155228] = {
           Content = "耳濡目染之下，我就学着他们做起了生意，为虬先生的宏图大业出一份力。",
           ContentKR = "서당 개 삼 년이면 풍월을 읊는다잖아. 나도 규선생의 큰 뜻에 보탬이 되고 싶어서, 어깨너머 배운 걸로 장사를 시작한 거야.",
@@ -221779,15 +222184,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80100DC2",
           ImprPlusId = 1210,
           NextDialogue = 51155614
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51155614,
-    MaxKey = 51157615,
-    Loader = function()
-      return {
+        },
         [51155614] = {
           Content = "不要啊呜呜呜呜呜……",
           ContentKR = "그러지 마.... 으애앵....",
@@ -223145,7 +223542,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8010E111",
           NextDialogue = 51156901,
           SpeakNpcId = 701123
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51157001,
+    MaxKey = 51158803,
+    Loader = function()
+      return {
         [51157001] = {
           Content = "瞧瞧这油汪汪的辣子，别管谁吃上一口，那都堪比那大冬天钻暖炉，大夏天进冰窖，吃的就是一口心飞扬！",
           ContentKR = "이 윤기 좔좔 흐르는 고추 양념 좀 보세요. 한 입 딱 베어 물면, 누구든 한겨울에 난로 앞에 선 듯, 한여름에 얼음 창고에 들어간 듯 온몸이 짜릿해진다니까요!",
@@ -223410,15 +223815,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51157615,
           GUID = "80115636",
           NextDialogue = 51157616
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51157616,
-    MaxKey = 51159007,
-    Loader = function()
-      return {
+        },
         [51157616] = {
           Content = "哈哈哈！娃儿说话有趣，老太婆我不是那个意思，只是见到你便想起了我那命短的丈夫……诶，还是不提那些伤心事好啦……",
           ContentKR = "하하하! 참 귀엽게도 말하는구나. 너한테 뭐라고 하려던 게 아니라, 그냥 먼저 간 우리 남편 생각이 났던 거야... 하아, 슬픈 얘기는 그만하자...",
@@ -224765,7 +225162,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51158803,
           GUID = "8012191E",
           NextDialogue = 51158804
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51158804,
+    MaxKey = 51159910,
+    Loader = function()
+      return {
         [51158804] = {
           Content = "怪我，我自讨苦吃，好好画我的画也就罢了，怎么就想起来要在这东市开个店。",
           ContentKR = "전부 내 잘못이야. 얌전히 그림이나 그릴 걸, 무슨 부귀영화를 누리겠다고 시장에 가게 낼 생각을 했을까.",
@@ -225038,15 +225443,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51159007,
           GUID = "80123A96",
           NextDialogue = 51159008
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51159008,
-    MaxKey = 51160115,
-    Loader = function()
-      return {
+        },
         [51159008] = {
           Content = "说的很有道理，你知晓我刚才盯着这湖面时在想什么吗？这简直像是在建城之时，有什么怪东西从地底探了探头，却一巴掌被人削了下去。",
           ContentKR = "일리 있군. 내가 아까 이 호수를 보면서 무슨 생각을 했는지 알아? 도시가 세워질 무렵에, 땅속에서 정체 모를 괴물이 슬그머니 머리를 내밀려다가, 머리통을 한 대 얻어 맞으면 딱 이런 모양이겠다 싶더라고.",
@@ -226384,7 +226781,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51159910,
           GUID = "8012CEBC",
           NextDialogue = 51159911
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51159911,
+    MaxKey = 51161204,
+    Loader = function()
+      return {
         [51159911] = {
           Content = "唔……你这一身白衣看着像是素服，是我看错了，不好意思，{性别:大哥哥|大姐姐}。",
           ContentKR = "아... 흰옷을 입고 계시길래 상복으로 착각했네요. 죄송해요, {性别:오빠|언니}.",
@@ -226650,15 +227055,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51160115,
           GUID = "8012F05E",
           SpeakNpcName = "UI_NPC_Name_shubai_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51160116,
-    MaxKey = 51161412,
-    Loader = function()
-      return {
+        },
         [51160116] = {
           Content = "现在都什么年代了，哪有在丧礼上请乐队的人家！",
           ContentKR = "언제 적 말씀을 하세요. 요즘 누가 장례 치르면서 악단을 불러요!",
@@ -227989,7 +228386,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "무유생이 왜 아직까지 나 잡으러 안 오지?",
           DialogueId = 51161204,
           GUID = "8013A308"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51161301,
+    MaxKey = 51162613,
+    Loader = function()
+      return {
         [51161301] = {
           Content = "不过比起那些繁杂的数据统计，眼下最急迫的事是——啊！港口消防！我完全忘记了这回事！",
           ContentKR = "근데 저 복잡한 숫자 더미보다 훨씬 급한 건... 아! 항구 소방 업무! 그걸 까맣게 잊고 있었네!",
@@ -228260,15 +228665,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51161412,
           GUID = "8013C528",
           SpeakNpcId = 701163
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51161413,
-    MaxKey = 51162715,
-    Loader = function()
-      return {
+        },
         [51161413] = {
           Content = "再见。",
           ContentKR = "전 이만 가 볼게요.",
@@ -229585,7 +229982,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51162613,
           GUID = "80148A32",
           NextDialogue = 51162614
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51162614,
+    MaxKey = 51165508,
+    Loader = function()
+      return {
         [51162614] = {
           Content = "唔……你倒是问了个好问题，让我想想该从哪里给你说起呢？那里可是个和皓京大相径庭之地。",
           ContentKR = "음... 좋은 질문이야. 근데, 어디서부터 이야기해야 하려나... 일단 거긴 분위기부터가 호경이랑 많이 달라.",
@@ -229863,15 +230268,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [3] = 51162721
           },
           SpeakNpcId = 701176
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51162716,
-    MaxKey = 51165542,
-    Loader = function()
-      return {
+        },
         [51162716] = {
           Content = "为什么不在皓京种这种果树？",
           ContentKR = "호경에서 단과나무를 키우면 되는 거 아니에요?",
@@ -231069,7 +231466,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51165508,
           GUID = "80166528",
           SpeakNpcId = 700386
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51165509,
+    MaxKey = 51167204,
+    Loader = function()
+      return {
         [51165509] = {
           Content = "我们发现了一具白骨。",
           ContentKR = "우리가 백골을 하나 발견했어.",
@@ -231290,15 +231695,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "말도 안 되는 소리! 콜록콜록! 노부가 언제 그 아이를 학대했단 말이오!",
           DialogueId = 51165542,
           GUID = "80166ABC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51165543,
-    MaxKey = 51167409,
-    Loader = function()
-      return {
+        },
         [51165543] = {
           Content = "小仆从！上证据！",
           ContentKR = "시종! 증거를 제시해!",
@@ -232480,7 +232877,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51167204,
           GUID = "80177B68",
           NextDialogue = 51167205
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51167205,
+    MaxKey = 51168204,
+    Loader = function()
+      return {
         [51167205] = {
           Content = "你说水龙车？就是房子着火时候，大家推出来救火的工具啊。",
           ContentKR = "수총기요? 집에 불이 나면 끌고 나가서 불을 끄는 물건이죠.",
@@ -232754,15 +233159,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51167409,
           GUID = "80179D0A",
           NextDialogue = 51167410
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51167410,
-    MaxKey = 51168415,
-    Loader = function()
-      return {
+        },
         [51167410] = {
           Content = "哈哈哈，你这家伙，说话有趣的很，好吧，董兄，你说说看吧，其实我对那事也不是很了解，只是偶尔听人茶余饭后聊起。",
           ContentKR = "하하, 재밌는 녀석이네! 그래, 이왕 이렇게 된 거 나한테도 좀 얘기해 줘. 나도 사람들 얘기를 얼핏 들은 게 다라서, 자세한 내막은 잘 모르거든.",
@@ -234108,7 +234505,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80181F78",
           NextDialogue = 51168205,
           SpeakNpcName = "UI_NPC_Name_honglei_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51168205,
+    MaxKey = 51169901,
+    Loader = function()
+      return {
         [51168205] = {
           Content = "不是我说，大舅母你还是狠心，怎么就把那么小的娃娃送去国外求学呢？一个人在外面，吃不饱穿不暖的，如何放心得下。",
           ContentKR = "이런 말 하긴 뭐하지만, 호경댁도 정말 대단해. 그 어린애를 외국까지 유학 보낸다는 게 어디 쉬운 결정이야? 타지에 혼자 나가서 밥은 제대로 먹는지, 고생하진 않는지, 걱정이 이만저만이 아니잖아.",
@@ -234380,15 +234785,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "ㄲ",
           DialogueId = 51168415,
           GUID = "80184148"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51168416,
-    MaxKey = 51170006,
-    Loader = function()
-      return {
+        },
         [51168416] = {
           Content = "这种灯谜就差把谜底写在字面上了，看不起谁呢？",
           ContentKR = "사람을 바보로 보네. 이 정도면 그냥 답을 적어놓은 거나 마찬가지잖아.",
@@ -235673,7 +236070,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8019360B",
           NextDialogue = 51169902,
           SpeakNpcId = 701201
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51169902,
+    MaxKey = 51171012,
+    Loader = function()
+      return {
         [51169902] = {
           Content = "不晓得哪听来的闲言碎语，非说什么皓京不好玩，大伙都知道现在的言论二极分化，不是神了就是鬼了。",
           ContentKR = "어디서 쓸데없는 소리를 듣고, 자꾸 호경이 재미없다나 어쨌다나 하시는데... 요샌 원래 뭐든 다 극단적으로 말하는 거예요. 완전 최고라거나, 아니면 완전 최악이라거나요.",
@@ -235950,15 +236355,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8019471C",
           NextDialogue = 51170007,
           SpeakNpcName = "UI_NPC_Name_tiaojieyuan_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51170007,
-    MaxKey = 51171205,
-    Loader = function()
-      return {
+        },
         [51170007] = {
           Content = "腿上磕到了，乌青一大截，老年人本就骨头脆，现在已经在床上躺着了。",
           ContentKR = "다리가 시퍼렇게 멍들었어요. 원래도 뼈가 약하신데, 이젠 아예 침대에서 움직이지도 못하시게 됐어요.",
@@ -237285,7 +237682,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51171012,
           GUID = "8019EC28",
           NextDialogue = 51171013
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51171013,
+    MaxKey = 51172114,
+    Loader = function()
+      return {
         [51171013] = {
           Content = "嚯！哪里来的孩子，吓我一跳呢。",
           ContentKR = "으악! 웬 젊은 친구가, 간 떨어지는 줄 알았네.",
@@ -237561,15 +237966,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51171205,
           GUID = "801A0BD2",
           NextDialogue = 51171206
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51171206,
-    MaxKey = 51172303,
-    Loader = function()
-      return {
+        },
         [51171206] = {
           Content = "啊……抱歉抱歉，我看你刚才似乎也听到了他们二位的对话，还以为你也感兴趣，既然你有事，那咱们有缘再会！",
           ContentKR = "아... 미안, 아까 저 두 사람이 얘기하는 거 듣고 있길래 관심 있는 줄 알았거든. 볼일 있는 거 같은데, 나중에 기회 되면 또 보자!",
@@ -238895,7 +239292,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801AA0F4",
           NextDialogue = 51172115,
           SpeakNpcId = 701224
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51172115,
+    MaxKey = 51173416,
+    Loader = function()
+      return {
         [51172115] = {
           Content = "只有在芬氲度到达一定数值的情况下，大风九章的运作才能不受外界因素影响，更好地庇佑华胥的子民。",
           ContentKR = "향 농도가 일정 수치를 유지해야만, 대풍구장이 외부 환경의 간섭 없이, 화서의 백성들을 지켜 줄 수 있어요.",
@@ -239170,15 +239575,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801ABFF6",
           NextDialogue = 51172304,
           SpeakNpcName = "UI_NPC_Name_baosheng_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51172304,
-    MaxKey = 51173609,
-    Loader = function()
-      return {
+        },
         [51172304] = {
           Content = "那是因为你对于分香术的使用尚未熟练，祀烟阁不会给新人展示其他香方。",
           ContentKR = "그건 아직 후배께서 분향술에 미숙하셔서 그런 겁니다. 사연각에선 신입에겐 특정 제작법만 공개하고 있거든요.",
@@ -240491,7 +240888,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801B7690",
           NextDialogue = 51173417,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51173417,
+    MaxKey = 51174921,
+    Loader = function()
+      return {
         [51173417] = {
           Content = "竟是如此，那便算啦。",
           ContentKR = "그렇구나, 하는 수 없지.",
@@ -240758,15 +241163,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51173609,
           GUID = "801B963A",
           SpeakNpcId = 701245
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51173701,
-    MaxKey = 51175104,
-    Loader = function()
-      return {
+        },
         [51173701] = {
           Content = "抓紧犁完这片田，就能早些回去歇息了……",
           ContentKR = "얼른 이 밭만 갈고 끝내자. 가서 푹 쉬어야겠어...",
@@ -242087,7 +242484,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801C6D7A",
           NextDialogue = 51174922,
           SpeakNpcId = 701232
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51174922,
+    MaxKey = 51175526,
+    Loader = function()
+      return {
         [51174922] = {
           Content = "等他们来取货时，你就好好把你那偶人丢到一边，让我拿着去交差就好！",
           ContentKR = "그쪽에서 물건 찾으러 오면, 선배 건 저쪽으로 치워 두고, 내 꼭두각시 주면 되겠네!",
@@ -242356,15 +242761,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801C8B80",
           NextDialogue = 51175105,
           SpeakNpcName = "UI_NPC_Name_zhengtian_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51175105,
-    MaxKey = 51175630,
-    Loader = function()
-      return {
+        },
         [51175105] = {
           Content = "唔……好像是……是有诶！",
           ContentKR = "음... 있으려나... 있다!",
@@ -243705,7 +244102,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801CD0BC",
           NextDialogue = 51175527,
           SpeakNpcId = 700390
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51175527,
+    MaxKey = 51175926,
+    Loader = function()
+      return {
         [51175527] = {
           Content = "我想与泽生阁的众人同行，尽一丝绵薄之力——不是以祝由，而是以医者的身份。",
           ContentKR = "그래서 저도 택생각 사람들과 함께하면서... 힘을 보태고 싶어요. 축유가 아니라... 의사로서요.",
@@ -244023,15 +244428,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801CE1CC",
           NextDialogue = 51175631,
           SpeakNpcId = 701267
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51175631,
-    MaxKey = 51176017,
-    Loader = function()
-      return {
+        },
         [51175631] = {
           Content = "客气客气~",
           ContentKR = "별말씀을요.",
@@ -245463,7 +245860,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           TalkActionId = {
             [1] = "701270:Talk03_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51175927,
+    MaxKey = 51178148,
+    Loader = function()
+      return {
         [51175927] = {
           Content = "可惜我只是因为一些事情在华胥耽误一段时间，或许没多久就会离开了。",
           ContentKR = "아쉽게도 저는 일 때문에 잠깐 화서에 머물게 된 거라, 오래 있지는 못할 것 같아요.",
@@ -245754,15 +246159,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801D214A",
           NextDialogue = 51176018,
           SpeakNpcId = 701272
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51176018,
-    MaxKey = 51178219,
-    Loader = function()
-      return {
+        },
         [51176018] = {
           Content = "先说回八仙是否真实存在的说法，其实呢，在这个故事里，八仙的确是真实存在的。",
           ContentKR = "우선 여덟 신선이 정말 존재하는지로 돌아가면, 사실 이 이야기에서는 여덟 신선이 실제로 존재한답니다.",
@@ -247228,7 +247625,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           TalkActionId = {
             [1] = "701275:Talk01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51178149,
+    MaxKey = 51178641,
+    Loader = function()
+      return {
         [51178149] = {
           Content = "但是吧……无论结果如何，其实都谈不上是个好结果。",
           ContentKR = "근데... 어떻게 끝났든, 사실 좋은 결말이라곤 할 수 없는 것 같아요.",
@@ -247515,15 +247920,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801E8A8E",
           NextDialogue = 51178220,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51178220,
-    MaxKey = 51179303,
-    Loader = function()
-      return {
+        },
         [51178220] = {
           Content = "我只是假设，我是说假设！你敢保证没有这样的情况发生吗？",
           ContentKR = "난 그냥 가정을 이야기한 거야! 너야말로 이런 일이 없을 거라는 보장 있어?",
@@ -248930,7 +249327,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801ECFCA",
           NextDialogue = 51178642,
           SpeakNpcId = 701281
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51178642,
+    MaxKey = 51200094,
+    Loader = function()
+      return {
         [51178642] = {
           Content = "他是我见过最无聊的人了，之前的山外山，家家户户都用灶火烧饭，有时柴火受潮，火头就不旺。火头不旺，烧出的饭便不香。",
           ContentKR = "그 양반만큼 별난 사람도 드물지. 옛날에 산외산에선 집집마다 아궁이에 불을 때서 밥을 했는데, 장작에 습기가 차면 불이 도통 올라오질 않았거든. 불이 약하면 밥이 맛이 없지.",
@@ -249162,15 +249567,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "이름도 참 특이해... <W>안녕 상자</>였나? 운 좋게 그런 마령 하나만 손에 넣으면, 평생 먹고살 걱정은 없겠지?",
           DialogueId = 51179303,
           GUID = "801F3C66"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51179304,
-    MaxKey = 51200128,
-    Loader = function()
-      return {
+        },
         [51179304] = {
           Content = "哦？你不是一般人吧，居然拥有如此稀有的魔灵，想必定是人中龙凤！",
           ContentKR = "음? 보통내기가 아니구나? 그런 희귀한 마령을 가지고 있는 걸 보면, 어마어마한 실력자가 분명하겠지!",
@@ -250365,7 +250762,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           NextDialogue = 51200095,
           SpeakNpcId = 700405,
           SpeakNpcName = "UI_CMNpc_Name_LengMoGongRen"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51200095,
+    MaxKey = 51200455,
+    Loader = function()
+      return {
         [51200095] = {
           Content = "小子，你今天又骚扰了一个贵族老爷吧？你也适可而止吧，别真闹大了，让那些人以为我们螺丝刀都是什么泼皮无赖。",
           ContentKR = "꼬맹이, 너 오늘 또 웬 귀족을 성가시게 만들었다면서? 사고 치지 말고 적당히 해라. 사람들이 우리 협회를 건달 소굴로 오해하게 만들지 말고.",
@@ -250645,15 +251050,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802C9500",
           NextDialogue = 51200129,
           SpeakNpcId = 700402
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51200129,
-    MaxKey = 51200489,
-    Loader = function()
-      return {
+        },
         [51200129] = {
           Content = "所以刚才的问题……",
           ContentKR = "그래서 아까 내가 물어본 거 말인데...",
@@ -252049,7 +252446,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802CCAA6",
           NextDialogue = 51200456,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51200456,
+    MaxKey = 51200655,
+    Loader = function()
+      return {
         [51200456] = {
           Content = "买这么个破盒子有什么用……奥特赛德你也是，你怎么也不拦一下啊！",
           ContentKR = "이런 낡은 상자를 사서 어디다 쓰려고 그래... 아웃사이더, 너 왜 말리지도 않아!",
@@ -252358,15 +252763,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802CD03A",
           NextDialogue = 51200490,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51200490,
-    MaxKey = 51200689,
-    Loader = function()
-      return {
+        },
         [51200490] = {
           Content = "50银币吧。行吗？",
           ContentKR = "50실버요. 어떠세요?",
@@ -253762,8 +254159,8 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 100001
         },
         [51200642] = {
-          Content = "这是会长的一线情报，今天站长会在附近出没。汽笛沙龙外面的人，想知道都没有情报呢，你就知足吧。重要的是景，不是人。站长才是我们的目的。",
-          ContentKR = "이건 회장님의 특급 정보인데, 오늘 역장님이 이 근처에 오신대요. 살롱 사람이 아니면 알 수 없는 정보니까, 감사하게 생각하세요. 중요한 건 전체적인 그림이에요. 역장님이야말로 우리 목표고요.",
+          Content = "这是会长的一线情报，今天站长会在附近出没。汽笛沙龙外面的人，想知道都没有情报呢，你就知足吧。重要的是人，不是景。站长才是我们的目的。",
+          ContentKR = "이건 회장님의 특급 정보인데, 오늘 역장님이 이 근처에 오신대요. 살롱 사람이 아니면 알 수 없는 정보니까, 감사하게 생각하세요. 중요한 건 배경보단 인물이에요. 역장님이야말로 우리 목표고요.",
           DialogueId = 51200642,
           GUID = "802CE954",
           NextDialogue = 51200643,
@@ -253773,7 +254170,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           }
         },
         [51200643] = {
-          Content = "只有在这里才能拍摄到站长在一线奋斗的身姿，我觉得他说的很多。只要能看到站长大人意气风发的形貌，别说是站在角落了，让我趴在泥巴里拍都行。",
+          Content = "只有在这里才能拍摄到站长在一线奋斗的身姿，我觉得他说的很对。只要能看到站长大人意气风发的形貌，别说是站在角落了，让我趴在泥巴里拍都行。",
           ContentKR = "여긴 역장님이 현장에서 직접 뛰시는 모습을 담을 수 있는 유일한 장소예요. 그 당당한 모습을 볼 수 있다면, 이런 구석이 아니라, 진흙탕에 엎드려서라도 찍어야죠.",
           DialogueId = 51200643,
           GUID = "802CE97E",
@@ -253816,7 +254213,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 700395
         },
         [51200648] = {
-          Content = "照片到时候会用十周年的宣传海报上，会给摄影师署名的，也会给版权费和其他奖励，放心吧，我们汽笛沙龙不会辜负每一个人的努力。",
+          Content = "照片到时候会用在十周年的宣传海报上，会给摄影师署名的，也会给版权费和其他奖励，放心吧，我们汽笛沙龙不会辜负每一个人的努力。",
           ContentKR = "사진은 나중에 10주년 홍보 포스터로 사용될 거예요. 촬영자 이름도 나올 거고, 저작권료랑 다른 보상도 챙겨 드릴 거니까 걱정하지 마세요. 우리 살롱은 노력을 배신하지 않는 곳이거든요.",
           DialogueId = 51200648,
           GUID = "802CEA50",
@@ -253866,7 +254263,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 700398
         },
         [51200654] = {
-          Content = "这样画面中心就能让人一眼看，也能表明你的拍摄目的，比如说我拍的这个就是……",
+          Content = "这样画面中心就能让人一眼看见，也能表明你的拍摄目的，比如说我拍的这个就是……",
           ContentKR = "구도를 이렇게 짜야 중심이 한눈에 들어오면서, 찍으려는 대상을 제대로 보여 줄 수 있어요. 예를 들면 지금 제가 찍으려는 건 바로...",
           DialogueId = 51200654,
           GUID = "802CEB4C",
@@ -253880,7 +254277,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802CEB76",
           NextDialogue = 51200656,
           SpeakNpcId = 700398
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51200656,
+    MaxKey = 51200933,
+    Loader = function()
+      return {
         [51200656] = {
           Content = "艾森巴恩站长！？",
           ContentKR = "아이젠반 역장님!?",
@@ -254171,15 +254576,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51200689,
           GUID = "802CF10A",
           NextDialogue = 51200690
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51200690,
-    MaxKey = 51200967,
-    Loader = function()
-      return {
+        },
         [51200690] = {
           Content = "（果然是那张照片……再仔细看看吧。）",
           ContentKR = "(아까 그 사진이네... 조금 더 자세히 살펴보자.)",
@@ -255111,7 +255508,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 100001
         },
         [51200886] = {
-          Content = "原来如此。按理来说我作为军医，是不应该这样接私活的，但看来你们刚刚帮我的份上，我就破个例。",
+          Content = "原来如此。按理来说我作为军医，是不应该这样接私活的，但看在你们刚刚帮我的份上，我就破个例。",
           ContentKR = "그렇군. 원래라면 군의관 신분으로 이런 사적인 부탁은 받을 수 없지만, 아까 도움을 받은 것도 있으니까, 이번만 예외로 해 두지.",
           DialogueId = 51200886,
           GUID = "802D115C",
@@ -255227,7 +255624,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 700411
         },
         [51200901] = {
-          Content = "另外，他身上有被虐待拷打的痕迹，手腕上写着608几个数字，是用刀刻上去的，很新。从出血量和角度来看，应该在他死前不久自己刻的。",
+          Content = "另外，他身上有被虐待拷打的痕迹，手腕上写着608几个数字，是用刀刻上去的，很新。从出血量和角度来看，应该是他死前不久自己刻的。",
           ContentKR = "그리고 몸 곳곳에 학대와 고문을 당한 흔적이 남아 있어. 손목엔 칼로 608이라는 숫자가 새겨져 있었는데, 얼마 전에 생긴 거야. 출혈량이나 각도를 보면, 죽기 직전에 본인이 새긴 것 같아.",
           DialogueId = 51200901,
           GUID = "802D13D2",
@@ -255384,7 +255781,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 100001
         },
         [51200921] = {
-          Content = "你这问题问得倒是新鲜，这不是每天都有的事吗？有赚够了钱想去南方过好日子 的，有太累了干不下去的，还有活干得太糙被辞退的，太多了。",
+          Content = "你这问题问得倒是新鲜，这不是每天都有的事吗？有赚够了钱想去南方过好日子的，有太累了干不下去的，还有活干得太糙被辞退的，太多了。",
           ContentKR = "별걸 다 물어보네. 그런 건 맨날 있는 일이야. 돈 좀 모아서 남쪽으로 떠난 놈도 있고, 너무 힘들어서 못 버틴 놈도 있고, 일 못해서 잘린 놈도 있어. 어마어마하게 많다고.",
           DialogueId = 51200921,
           GUID = "802D171A",
@@ -255485,7 +255882,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802D1912",
           NextDialogue = 51200934,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51200934,
+    MaxKey = 51201438,
+    Loader = function()
+      return {
         [51200934] = {
           Content = "本来我以为他和我一样一无所知，没想到知道外面的那么多事，我从没见过像他那样见多识广，有学问的工人。",
           ContentKR = "처음엔 그 녀석도 나처럼 무식한 줄 알았는데, 세상 돌아가는 일을 정말 많이 알더라고. 그렇게 유식한 일꾼은 처음 봤다니까.",
@@ -255754,15 +256159,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802D1EA6",
           NextDialogue = 51200968,
           SpeakNpcId = 700409
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51200968,
-    MaxKey = 51201533,
-    Loader = function()
-      return {
+        },
         [51200968] = {
           Content = "嗯，没错，你想想，把608反向过来看是什么？",
           ContentKR = "응, 맞아, 생각해 봐. 608을 거꾸로 하면 뭐가 돼?",
@@ -257076,7 +257473,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802D6BEC",
           NextDialogue = 51201439,
           SpeakNpcId = 700508
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51201439,
+    MaxKey = 51202229,
+    Loader = function()
+      return {
         [51201439] = {
           Content = "再见。",
           ContentKR = "전 가 볼게요.",
@@ -257345,15 +257750,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802D7B82",
           NextDialogue = 51201534,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51201534,
-    MaxKey = 51202303,
-    Loader = function()
-      return {
+        },
         [51201534] = {
           Content = "睡桥洞？不可能！我会在皇都要到我的钱，然后再去寻找新的投资机会，然后发大财！",
           ContentKR = "다리 밑? 헛소리 집어치워! 난 황성에서 내 돈을 싹 다 받아내고, 새로운 아이템에 투자해서 떼돈을 벌 거니까!",
@@ -258404,8 +258801,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Content = "（两人用奇异的眼神打量着你，风尘仆仆地离开了。）",
           ContentKR = "(두 사람은 이상한 사람을 보듯 당신을 위아래로 훑어보더니, 황급히 자리를 뜬다.)",
           DialogueId = 51202128,
-          GUID = "802DDD20",
-          IsBlack = 1
+          GUID = "802DDD20"
         },
         [51202129] = {
           Content = "（拿出工人证。）",
@@ -258666,7 +259062,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802DEDB2",
           NextDialogue = 51202230,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51202230,
+    MaxKey = 51202910,
+    Loader = function()
+      return {
         [51202230] = {
           Content = "啧……暴发户做派！真是钱多了没处花，去给死人买座位。",
           ContentKR = "쳇... 졸부가 유세는! 돈이 얼마나 많으시길래, 죽은 사람 자리까지 사 주는지 모르겠군.",
@@ -258933,15 +259337,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802DF9D6",
           NextDialogue = 51202304,
           SpeakNpcId = 700522
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51202304,
-    MaxKey = 51203101,
-    Loader = function()
-      return {
+        },
         [51202304] = {
           Content = "啊！那灿烂的朝阳，是我毕生追求的远方，那诗歌里的故乡，是我魂牵梦萦的地方！",
           ContentKR = "아! 저 찬란한 아침 해는, 내가 평생을 좇아야 할 머나먼 미지요, 시인들의 노랫소리 속 고향은, 내 영혼이 꿈에 그리는 장소일지니!",
@@ -260222,7 +260618,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51202911
           },
           SpeakNpcId = 700529
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51202911,
+    MaxKey = 51204005,
+    Loader = function()
+      return {
         [51202911] = {
           Content = "如果是这样，你刚才为什么一直叫着腿酸？",
           ContentKR = "그럼 아까는 왜 다리가 쑤신다고 하신 거예요?",
@@ -260490,15 +260894,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51203101,
           GUID = "802E7CC2",
           SpeakNpcId = 700531
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51203102,
-    MaxKey = 51204208,
-    Loader = function()
-      return {
+        },
         [51203102] = {
           Content = "你站在对面，我把绳子丢过去你接住，然后栓在柱子上，记得栓牢固些！",
           ContentKR = "거기 맞은편에 서 있어. 내가 밧줄 던질 테니까 받아서 기둥에 묶어. 단단히 묶어야 해!",
@@ -261815,7 +262211,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "802F1112",
           NextDialogue = 51204006,
           SpeakNpcId = 701296
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51204006,
+    MaxKey = 51205506,
+    Loader = function()
+      return {
         [51204006] = {
           Content = "还以为这次终于能瞒过去了，没想到有人连这幅样子我都能认得出来。",
           ContentKR = "이번엔 확실히 속일 수 있을 줄 알았는데, 이 꼴을 한 저를 알아보는 분이 계실 줄은 정말 몰랐네요.",
@@ -262086,15 +262490,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51204208,
           GUID = "802F3260",
           SpeakNpcId = 701297
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51204209,
-    MaxKey = 51205713,
-    Loader = function()
-      return {
+        },
         [51204209] = {
           Content = "可以骑在别人头上排队吗？",
           ContentKR = "목말 타고 줄 서도 되나요?",
@@ -263410,7 +263806,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80300754",
           ImprPlusId = 1010,
           NextDialogue = 51205507
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51205507,
+    MaxKey = 51206721,
+    Loader = function()
+      return {
         [51205507] = {
           Content = "（鹿似乎察觉了你的敌意，不安地刨了刨蹄子，随后迅速跑掉了，变成了高速公鹿。）",
           ContentKR = "(사슴이 당신의 적의를 눈치챈 듯 불안하게 발굽으로 땅을 긁더니, 순식간에 달아난다.)",
@@ -263672,15 +264076,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "(자칭 살롱 회원은 순식간에 사라져 버렸다...)",
           DialogueId = 51205713,
           GUID = "8030294A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51205801,
-    MaxKey = 60030702,
-    Loader = function()
-      return {
+        },
         [51205801] = {
           Content = "呸呸，怎么这么多灰……诺米妹妹怎么会想到这种地方来！？",
           ContentKR = "퉤, 퉤, 뭔 먼지가 이렇게 많아... 노미 걔는 대체 무슨 생각으로 이런 데 오려고 한 거야?!",
@@ -265002,7 +265398,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [2] = 51206724
           },
           SpeakNpcId = 701325
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51206722,
+    MaxKey = 51207801,
+    Loader = function()
+      return {
         [51206722] = {
           Content = "我只是想和你打探些消息。",
           ContentKR = "저는 그냥 그쪽한테서 정보를 좀 얻고 싶었을 뿐인데요.",
@@ -265031,6 +265435,13648 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51206725,
           GUID = "8030CF52",
           SpeakNpcId = 701325
+        },
+        [51206801] = {
+          Content = "很高兴能有机会和你们单独谈话，我的意思是，在车站里很少会遇到你们这种……好心又聪明的家伙。",
+          ContentKR = "너희랑 따로 이야기할 기회가 생겨서 정말 기뻐. 역에서는 너희처럼... 친절하고 똑똑한 녀석들을 만나기가 쉽지 않거든.",
+          DialogueId = 51206801,
+          GUID = "8030DBCA",
+          NextDialogue = 51206802,
+          SpeakNpcId = 700486
+        },
+        [51206802] = {
+          Content = "在将你们引荐给会长之前，我先正式自我介绍一下，我叫罗连特——你们已经知道了，身份是螺丝刀行会的……算是二把手吧？",
+          ContentKR = "너희를 회장님께 소개하기 전에, 먼저 정식으로 자기소개를 할게. 내 이름은 로렌트야. 이미 알고 있겠지만, 드라이버 협회의... 2인자라고 할까?",
+          DialogueId = 51206802,
+          GUID = "8030DBF4",
+          NextDialogue = 51206803,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206803] = {
+          Content = "二把手？听起来很厉害嘛，就像白在水仙平原一样！",
+          ContentKR = "2인자? 엄청 대단하게 들리는데? 아스포델의 스노우처럼 말이야!",
+          DialogueId = 51206803,
+          GUID = "8030DC1E",
+          NextDialogue = 51206804,
+          SpeakNpcId = 700449
+        },
+        [51206804] = {
+          Content = "我们没空和你闲聊，有什么话就直接说吧。",
+          ContentKR = "그쪽이랑 잡담할 시간 없어요. 할 말 있으면 바로 말해 주세요.",
+          DialogueId = 51206804,
+          GUID = "8030DC48",
+          NextDialogue = 51206805,
+          SpeakNpcId = 100001
+        },
+        [51206805] = {
+          Content = "好吧，看来你喜欢更直接一些的方式，那就只能长话短说，我们行会遇到了一些麻烦事，正需要你这样有能力又有善心的人出手帮忙。",
+          ContentKR = "좋아, 본론만 듣고 싶은 모양인데, 간단히 말할게. 우리 협회가 좀 골치 아픈 일을 겪고 있어서, 너처럼 능력 있고 선한 마음을 가진 사람의 도움이 필요해.",
+          DialogueId = 51206805,
+          GUID = "8030DC72",
+          NextOptions = {
+            [1] = 51206806,
+            [2] = 51206807,
+            [3] = 51206808
+          },
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206806] = {
+          Content = "我为什么要帮你？",
+          ContentKR = "제가 왜 당신을 도와줘야 하는데요?",
+          DialogueId = 51206806,
+          GUID = "8030DC9C",
+          ImprPlusId = 1003,
+          NextDialogue = 51206809
+        },
+        [51206807] = {
+          Content = "我凭什么要帮你？",
+          ContentKR = "제가 뭐하자고 당신을 도와줘요?",
+          DialogueId = 51206807,
+          GUID = "8030DCC6",
+          ImprPlusId = 1001,
+          NextDialogue = 51206809
+        },
+        [51206808] = {
+          Content = "帮了柯尼不代表我要帮你。",
+          ContentKR = "코니를 도와줬다고 해서 당신까지 도와줄 이유는 없어요.",
+          DialogueId = 51206808,
+          GUID = "8030DCF0",
+          ImprPlusId = 1002,
+          NextDialogue = 51206809
+        },
+        [51206809] = {
+          Content = "呵呵~我喜欢和你这种直接的人对话，脑子转的很快，所以我才说我们应该从最开始的正式自我介绍开始。",
+          ContentKR = "하하~ 난 너처럼 직설적인 사람이 좋더라. 머리 회전도 빠르고 말이야. 그러니까 우리가 처음부터 제대로 인사부터 했어야 된다고 한 거라고.",
+          DialogueId = 51206809,
+          GUID = "8030DD1A",
+          NextDialogue = 51206810,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206810] = {
+          Content = "你不了解我们，不是吗？你所听说的有关螺丝刀行会的内容，只由柯尼那个孩子所述，不够全面，所以你不清楚我们是怎么样的一个组织。",
+          ContentKR = "넌 우리에 대해 잘 모르지? 드라이버 협회에 대해 들은 건 코니 그 아이가 말한 게 다잖아. 그래서 우리가 어떤 조직인지 제대로 알지 못하는 거야.",
+          DialogueId = 51206810,
+          GUID = "8030DD44",
+          NextDialogue = 51206811,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206811] = {
+          Content = "一连串的话说下来，白都听不明白了，你是想说你们组织很厉害吗？",
+          ContentKR = "말이 너무 길어서 스노우는 하나도 못 알아듣겠어. 너희 조직이 대단하다고 말하고 싶은 거야?",
+          DialogueId = 51206811,
+          GUID = "8030DD6E",
+          NextDialogue = 51206812,
+          SpeakNpcId = 700449
+        },
+        [51206812] = {
+          Content = "恰恰相反，我们是由无数个柯尼组成的联盟，里面全是在这个车站光鲜亮丽的皮囊下蠕动的可怜虫。",
+          ContentKR = "정반대야. 우린 수많은 코니들로 이루어진 연합이지. 전부 이 역의 화려한 겉모습 아래에서 꿈틀거리는 불쌍한 벌레들이라고.",
+          DialogueId = 51206812,
+          GUID = "8030DD98",
+          NextDialogue = 51206813,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206813] = {
+          Content = "我们聚在一起，抱团取暖，谁在工作上出了岔子，我们就施以援手，就像对柯尼那孩子一样，我们每天都在帮助这些辛勤劳作的工人们。",
+          ContentKR = "우린 함께 모여 서로 의지하며 지내. 누군가 일에서 실수를 하면 우리가 손을 내밀어주지. 코니 그 아이한테 했던 것처럼, 우린 매일 이렇게 열심히 일하는 일꾼들을 돕고 있어.",
+          DialogueId = 51206813,
+          GUID = "8030DDC2",
+          NextDialogue = 51206814,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206814] = {
+          Content = "虽然柯尼没和我们说那么多，但是他也说了自己摔伤后看病的钱是从行会里借的……",
+          ContentKR = "코니가 우리한테 자세히 말하진 않았지만, 떨어져서 다쳤을 때 치료비를 협회에서 빌렸다곤 했어...",
+          DialogueId = 51206814,
+          GUID = "8030DDEC",
+          NextDialogue = 51206815,
+          SpeakNpcId = 700449
+        },
+        [51206815] = {
+          Content = "没错，总之就是，百花车站的工人们的互助组织。手持螺丝刀的，都是我们的兄弟姐妹。当然了，这也只是理想情况。",
+          ContentKR = "맞아. 그러니까, 우린 블룸필드역 일꾼들의 상호부조 조직이야. 드라이버를 든 사람들은 모두 우리의 형제자매지. 물론 이건 이상적인 경우에 한해서지만.",
+          DialogueId = 51206815,
+          GUID = "8030DE16",
+          NextDialogue = 51206816,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206816] = {
+          Content = "柯尼欠我们的钱，是同样生活在水深火热里的其他工人缴纳的一笔笔费用攒出来的，你救了柯尼，可他们怎么办呢？",
+          ContentKR = "코니가 우리한테 빚진 돈은 똑같이 힘들게 살아가는 다른 일꾼들이 회비로 낸 돈이야. 넌 코니는 구했지만, 저들은 어떡할 셈이지?",
+          DialogueId = 51206816,
+          GUID = "8030DE40",
+          NextDialogue = 51206817,
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206817] = {
+          Content = "好吧……你到底要我做什么……",
+          ContentKR = "그래서... 대체 저보고 뭘 어쩌라는 거예요...?",
+          DialogueId = 51206817,
+          GUID = "8030DE6A",
+          NextDialogue = 51206818,
+          SpeakNpcId = 100001
+        },
+        [51206818] = {
+          Content = "先去目前的行会总部吧，具体的事情过去再说。",
+          ContentKR = "일단 협회 본부로 가자. 자세한 건 가서 얘기하면 돼.",
+          DialogueId = 51206818,
+          GUID = "8030DE94",
+          SpeakNpcId = 700486,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliante"
+        },
+        [51206901] = {
+          Content = "小仆从，你说这个螺丝刀行会究竟是要我们做什么呢？",
+          ContentKR = "시종, 드라이버 협회가 대체 우리한테 뭘 원하는 걸까?",
+          DialogueId = 51206901,
+          GUID = "8030EC32",
+          NextDialogue = 51206902,
+          SpeakNpcId = 700449
+        },
+        [51206902] = {
+          Content = "不知道，希望不会影响我们太久。",
+          ContentKR = "모르겠어. 너무 오래 걸리지만 않았으면 좋겠는데.",
+          DialogueId = 51206902,
+          GUID = "8030EC5C",
+          SpeakNpcId = 100001
+        },
+        [51207001] = {
+          Content = "到了，就是这里——",
+          ContentKR = "도착했어. 바로 여기야.",
+          DialogueId = 51207001,
+          GUID = "8030FC9A",
+          NextDialogue = 51207002,
+          SpeakNpcId = 700428
+        },
+        [51207002] = {
+          Content = "去***，狗都不借！上次就是，钱借给你了之后输了个精光！然后又来借，又**输了，现在还有脸来？",
+          ContentKR = "꺼져, 이 새*야, 개한테도 안 빌려줘! 지난번에도 돈 빌려줬더니 깡그리 날렸지! 그러고 또 빌리러 와서, 또 날렸고. 제기랄, 니가 무슨 낯짝으로 여길 와?",
+          DialogueId = 51207002,
+          GUID = "8030FCC4",
+          NextDialogue = 51207003,
+          SpeakNpcName = "UI_Npc_Name_1.5_baozaosound"
+        },
+        [51207003] = {
+          Content = "求你了克罗格，你得相信我，我之前是在试错！我已经找到了必胜的方法了！你把钱借给我，我一定会还回来的！",
+          ContentKR = "크로거, 제발 나 좀 믿어줘! 전에는 시행착오였다고! 이제 무조건 이기는 방법을 찾았어! 돈만 빌려주면 꼭 갚을게!",
+          DialogueId = 51207003,
+          GUID = "8030FCEE",
+          NextDialogue = 51207004,
+          SpeakNpcName = "UI_Npc_Name_1.5_beiweisound"
+        },
+        [51207004] = {
+          Content = "哼！你说这话自己信吗？你要不要去跟你那带着孩子跑了的老婆说这话啊？看她们信不信？",
+          ContentKR = "흥! 너 같으면 니 말을 믿겠냐? 애 데리고 도망간 니 마누라한테 가서 그 소리 해 봐라. 믿어주나 안 믿어주나.",
+          DialogueId = 51207004,
+          GUID = "8030FD18",
+          NextDialogue = 51207005,
+          SpeakNpcId = 700429
+        },
+        [51207005] = {
+          Content = "不！这次不一样，这次真的不一样，这次真的能赢！克罗格，我可是行会里唯一的会计啊！我已经完全摸清了那个“游戏”的规律，这次，一定能赢！",
+          ContentKR = "아니야! 이번엔 달라... 이번엔 정말 다르다고! 이번엔 진짜 이길 수 있어! 크로거, 난 협회의 유일한 회계사라고! 그 '게임'의 규칙을 완전히 파악했어. 이번엔 꼭 이긴다니까!",
+          DialogueId = 51207005,
+          GUID = "8030FD42",
+          NextDialogue = 51207006,
+          SpeakNpcName = "UI_Npc_Name_1.5_beiweisound"
+        },
+        [51207006] = {
+          Content = "滚，罗文，你今天就是把头磕烂了，我都不会给你一分钱。",
+          ContentKR = "꺼져, 로만. 오늘 네 머리통이 깨져도 한 푼도 안 빌려줄 거니까 그런 줄 알라고.",
+          DialogueId = 51207006,
+          GUID = "8030FD6C",
+          NextDialogue = 51207007,
+          SpeakNpcId = 700429
+        },
+        [51207007] = {
+          Content = "你！不借……好啊！不借就不借！此处不借爷，自有借爷处，我**还不稀罕呢！",
+          ContentKR = "뭐?! 안 빌려준다고...? 좋아, 맘대로 해! 여기서 안 빌려주면 다른 데서 빌리면 되지. 내가 씨* 그런다고 아쉬워할 줄 알았냐?!",
+          DialogueId = 51207007,
+          GUID = "8030FD96",
+          NextDialogue = 51207008,
+          SpeakNpcId = 700430
+        },
+        [51207008] = {
+          Content = "哈哈，那可太好了，赶紧滚吧，我等着你玩到命都赔了，然后在冰湖城的垃圾桶里看到你被冻僵的尸体。",
+          ContentKR = "하하, 그거 잘됐네. 얼른 꺼지기나 해. 네가 목숨까지 날리고 아이스레이크 시티 쓰레기통에서 얼어 뒈진 시체로 발견되면 그때 가서 보자고.",
+          DialogueId = 51207008,
+          GUID = "8030FDC0",
+          NextDialogue = 51207009,
+          SpeakNpcId = 700429
+        },
+        [51207009] = {
+          Content = "（门内又传来细细簌簌的动静，片刻后，一位男人低着头闯了出来，撞开门口等候的你们，快速离开了。）",
+          ContentKR = "(문 안쪽에서 다시 바스락거리는 소리가 들리더니, 잠시 후 한 남자가 고개를 숙인 채 뛰쳐나와 입구에서 기다리던 일행을 밀치고 빠르게 떠난다.)",
+          DialogueId = 51207009,
+          GUID = "8030FDEA",
+          NextDialogue = 51207010
+        },
+        [51207010] = {
+          Content = "久等了，我们进去吧。",
+          ContentKR = "오래 기다렸지? 들어가자.",
+          DialogueId = 51207010,
+          GUID = "8030FE14",
+          SpeakNpcId = 700428
+        },
+        [51207101] = {
+          Content = "回来了？我**真是要被罗文气疯了……这是谁？",
+          ContentKR = "왔냐? 내가 씨* 진짜 로만 때문에 돌아버리겠다니까... 저건 또 누구야?",
+          DialogueId = 51207101,
+          GUID = "80310D02",
+          LookAt = {
+            [1] = "700429:n(700428)"
+          },
+          NextDialogue = 51207102,
+          SpeakNpcId = 700429
+        },
+        [51207102] = {
+          Content = "改改你的脾气吧，克罗格，暴躁易怒，酗酒如命，在看到罗文死之前先看到你气死或者喝死我都不稀奇。",
+          ContentKR = "성질 좀 죽여, 크로거. 툭하면 열 내고 술에 절어 살면서. 로만보다 네가 먼저 화병이나 술로 죽어도 안 놀라겠다니까?",
+          DialogueId = 51207102,
+          GUID = "80310D2C",
+          NextDialogue = 51207103,
+          SpeakNpcId = 700428,
+          TalkActionId = {
+            [1] = "700428:Talk02_Start"
+          }
+        },
+        [51207103] = {
+          Content = "去**的，你帮他说话？你也觉得我要借给他？罗连特，你根本不明白，他已经疯了，他和以前的罗文完全不一样，就像个疯子，你懂吗？疯子！",
+          ContentKR = "집어치워. 지금 그 자식 편 드냐? 너도 내가 빌려줘야 된다고 생각해? 로렌트, 니가 몰라서 그러는데, 걘 이미 미쳤어. 예전의 로만이 아니야. 완전 미친놈이라니까? 알아? 미쳤다고!",
+          DialogueId = 51207103,
+          GUID = "80310D56",
+          NextDialogue = 51207104,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Angry01_Start"
+          }
+        },
+        [51207104] = {
+          Content = "可他也说了，我们不借，他自然有别的方法借到钱。",
+          ContentKR = "근데 로만은 우리가 안 빌려주면 다른 데 가서 돈을 빌릴 거라잖아.",
+          DialogueId = 51207104,
+          GUID = "80310D80",
+          NextDialogue = 51207105,
+          SpeakNpcId = 700428
+        },
+        [51207105] = {
+          Content = "哈哈！谁？除了我们，这里谁还有钱借给他？",
+          ContentKR = "하하! 누구한테? 우리 말고 여기서 누가 그놈한테 돈을 빌려준다고?",
+          DialogueId = 51207105,
+          GUID = "80310DAA",
+          NextDialogue = 51207106,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Angry01_End"
+          }
+        },
+        [51207106] = {
+          Content = "先别急，来介绍一下我们的小小救兵。",
+          ContentKR = "일단 진정하고, 우리의 지원군을 소개할게.",
+          DialogueId = 51207106,
+          GUID = "80310DD4",
+          NextDialogue = 51207107,
+          SpeakNpcId = 700428,
+          TalkActionId = {
+            [1] = "700428:Talk02_End"
+          }
+        },
+        [51207107] = {
+          Content = "救兵？他在说谁呀，是我们吗？",
+          ContentKR = "지원군? 누구 말하는 거야? 우리?",
+          DialogueId = 51207107,
+          GUID = "80310DFE",
+          LookAt = {
+            [1] = "700449:n(0)"
+          },
+          NextDialogue = 51207108,
+          SpeakNpcId = 700449
+        },
+        [51207108] = {
+          Content = "准确来说应该是这名皎皎你的“小仆从”，毕竟，这个忙可不是小孩子能参与的。",
+          ContentKR = "정확히 말하면 이 루나의 '시종'이지. 이건 어린애가 낄 수 있는 일이 아니니까.",
+          DialogueId = 51207108,
+          GUID = "80310E28",
+          LookAt = {
+            [1] = "700449:n(700428)"
+          },
+          NextDialogue = 51207109,
+          SpeakNpcId = 700428
+        },
+        [51207109] = {
+          Content = "可恶！你这家伙居然看不起本魔王！你知不知道本魔王可是……",
+          ContentKR = "너! 감히 이 몸을 무시해?! 이 마왕님이 얼마나 대단한지 네가...",
+          DialogueId = 51207109,
+          GUID = "80310E52",
+          NextDialogue = 51207110,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Angry01_Start"
+          }
+        },
+        [51207110] = {
+          Content = "白……好啦好啦……",
+          ContentKR = "스노우... 됐어, 그만해...",
+          DialogueId = 51207110,
+          GUID = "80310E7C",
+          NextDialogue = 51207111,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700449:Angry01_End"
+          }
+        },
+        [51207111] = {
+          Content = "这名……来兼职的狩月人？可以这么称呼你吧？",
+          ContentKR = "그럼 이쪽은... 알바하러 온... 월석 사냥꾼이라고 부르면 되나?",
+          DialogueId = 51207111,
+          GUID = "80310EA6",
+          LookAt = {
+            [1] = "700428:n(0)"
+          },
+          NextDialogue = 51207112,
+          SpeakNpcId = 700428,
+          TurnTo = {
+            [1] = "0:n(700428)"
+          }
+        },
+        [51207112] = {
+          Content = "你可以直接叫我{nickname}，我来这里不是听你们吵架聊天的，快点说清楚究竟让我做什么吧。",
+          ContentKR = "전 {nickname}이에요. 그쪽 싸우고 잡담하는 거 들으러 여기 온 거 아니니까, 빨리 용건을 말해 주세요.",
+          DialogueId = 51207112,
+          GUID = "80310ED0",
+          NextDialogue = 51207113,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk03_Start"
+          }
+        },
+        [51207113] = {
+          Content = "好的，{nickname}，可不可以请你假想一下，假想你是一名再普通不过，进入火车站工作了……一年半载的平凡工人。",
+          ContentKR = "알았어, {nickname}. 그럼 한번 상상해 볼래? 네가 기차역에서 일한 지... 1년 반 정도 된, 평범하기 그지없는 일꾼이라고 말이야.",
+          DialogueId = 51207113,
+          GUID = "80310EFA",
+          NextDialogue = 51207114,
+          SpeakNpcId = 700428
+        },
+        [51207114] = {
+          Content = "虽然火车站的日子清贫，但也还算够你温饱，你做梦都想离开这个地方，因为在这里工作太久了，就会有各种各样顽疾缠身，老了就相当于废了。",
+          ContentKR = "기차역의 삶은 궁핍하지만, 그래도 먹고살 만은 해. 넌 떠나고 싶어서 안달이 나 있지. 여기서 오래 일하면 온갖 지병이 생기고, 늙으면 아예 쓸모 없어지거든.",
+          DialogueId = 51207114,
+          GUID = "80310F24",
+          NextDialogue = 51207115,
+          SpeakNpcId = 700428
+        },
+        [51207115] = {
+          Content = "你到底在搞什么鬼？",
+          ContentKR = "대체 뭐 하는 거야, 지금?",
+          DialogueId = 51207115,
+          GUID = "80310F4E",
+          NextDialogue = 51207116,
+          SpeakNpcId = 700429
+        },
+        [51207116] = {
+          Content = "别急嘛~",
+          ContentKR = "가만있어 보라니까.",
+          DialogueId = 51207116,
+          GUID = "80310F78",
+          NextDialogue = 51207117,
+          SpeakNpcId = 700428
+        },
+        [51207117] = {
+          Content = "{nickname}，在这样暗无天日的日子里，突然——有一名叫做杰克先生的人，带来了全新的“游戏”，杰克的游戏简单易懂，还能为你带来收益。",
+          ContentKR = "그렇게 암울한 나날 속에서 갑자기 '미스터 잭'이라는 사람이 나타나 새로운 '게임'을 제안하는 거야. 잭의 게임은 쉽고 간단하고, 돈까지 벌 수 있지.",
+          DialogueId = 51207117,
+          GUID = "80310FA2",
+          NextDialogue = 51207118,
+          SpeakNpcId = 700428
+        },
+        [51207118] = {
+          Content = "赢一把的钱，可能比你辛辛苦苦擦玻璃和通烟囱一个月赚的还要多！{nickname}，你会参与这场游戏吗？",
+          ContentKR = "한 판만 이기면 한 달 동안 고생해서 유리 닦고 굴뚝 청소해서 번 돈보다 많이 벌 수도 있어! 어때, {nickname}, 너라면 이 게임에 참여할까?",
+          DialogueId = 51207118,
+          GUID = "80310FCC",
+          NextOptions = {
+            [1] = 51207119,
+            [2] = 51207121,
+            [3] = 51207123,
+            [4] = 51207125
+          },
+          SpeakNpcId = 700428
+        },
+        [51207119] = {
+          Content = "那么输了的代价呢？",
+          ContentKR = "지면 어떻게 되는데요?",
+          DialogueId = 51207119,
+          GUID = "80310FF6",
+          ImprPlusId = 1003,
+          NextDialogue = 51207120
+        },
+        [51207120] = {
+          Content = "啧啧，所以说，你是聪明人，知道世界上没有免费的午餐。",
+          ContentKR = "쳇, 역시 똑똑하다니까. 세상에 공짜 점심은 없다는 걸 알고 있잖아.",
+          DialogueId = 51207120,
+          GUID = "80311020",
+          NextDialogue = 51207127,
+          SpeakNpcId = 700428
+        },
+        [51207121] = {
+          Content = "当然了！如果输了也没损失的话。",
+          ContentKR = "당연하죠! 져도 손해만 없다면 말이에요.",
+          DialogueId = 51207121,
+          GUID = "8031104A",
+          ImprPlusId = 1001,
+          NextDialogue = 51207122
+        },
+        [51207122] = {
+          Content = "当然……有损失，如果输了没损失的话，那我也不会站在这边，而是也去了。",
+          ContentKR = "당연히... 손해가 있지. 져도 손해 보지 않는다면 나도 지금 당연히 거기 가 있지 않겠어?",
+          DialogueId = 51207122,
+          GUID = "80311074",
+          NextDialogue = 51207127,
+          SpeakNpcId = 700428
+        },
+        [51207123] = {
+          Content = "我不会参与，听起来就来路不正。",
+          ContentKR = "안 할래요. 들어보니까 뭔가 수상해요.",
+          DialogueId = 51207123,
+          GUID = "8031109E",
+          ImprPlusId = 1002,
+          NextDialogue = 51207124
+        },
+        [51207124] = {
+          Content = "哦？你倒是很独特，是因为天然的正义感，还是身为狩月人的直觉？",
+          ContentKR = "오? 꽤 특이하네. 타고난 정의감 때문인가? 아니면 월석 사냥꾼으로서의 직감인가?",
+          DialogueId = 51207124,
+          GUID = "803110C8",
+          NextDialogue = 51207127,
+          SpeakNpcId = 700428
+        },
+        [51207125] = {
+          Content = "然后呢？输了来这磕头？",
+          ContentKR = "혹시 지면요? 지면 여기 와서 절이라도 해야 돼요?",
+          DialogueId = 51207125,
+          GUID = "803110F2",
+          ImprPlusId = 1005,
+          NextDialogue = 51207126
+        },
+        [51207126] = {
+          Content = "噗……你还真是会开玩笑。",
+          ContentKR = "풋... 농담도 잘하네.",
+          DialogueId = 51207126,
+          GUID = "8031111C",
+          NextDialogue = 51207127,
+          SpeakNpcId = 700428
+        },
+        [51207127] = {
+          Content = "无论你的选择是什么，总之你被连拖带拽着参与了这场杰克先生的游戏，一开始……幸运眷顾你，你有输有赢，总体还是赢的多些。",
+          ContentKR = "네 선택이 뭐든 간에, 넌 끌려가다시피 해서 미스터 잭의 게임에 참여하게 될 거야. 처음엔... 행운이 따랐겠지. 질 때도 있고 이길 때도 있었지만, 전체적으로는 이긴 게 더 많았어.",
+          DialogueId = 51207127,
+          GUID = "80311146",
+          NextDialogue = 51207128,
+          SpeakNpcId = 700428
+        },
+        [51207128] = {
+          Content = "所以你膨胀了，你觉得你会一直这么幸运下去，你参与游戏的次数越来越频繁，你投入的金额也越来越多。直到……",
+          ContentKR = "넌 우쭐해졌고, 계속 이렇게 운이 좋을 거라고 믿었어. 게임을 더 자주 하러 가게 됐고, 판돈도 점점 커졌지. 그러다가...",
+          DialogueId = 51207128,
+          GUID = "80311170",
+          NextDialogue = 51207129,
+          SpeakNpcId = 700428
+        },
+        [51207129] = {
+          Content = "直到你**输的只剩个屁股蛋！",
+          ContentKR = "어느날 존* 개털이 되도록 털린 거지!",
+          DialogueId = 51207129,
+          GUID = "8031119A",
+          NextDialogue = 51207130,
+          SpeakNpcId = 700429
+        },
+        [51207130] = {
+          Content = "克罗格，说话别这么恶俗。不过意思倒也没错，你输光了……",
+          ContentKR = "크로거, 그렇게 상스럽게 말하지 마. 뭐, 틀린 말은 아니긴 하지만. 아무튼 그렇게 넌 다 잃게 되는 거야...",
+          DialogueId = 51207130,
+          GUID = "803111C4",
+          NextDialogue = 51207131,
+          SpeakNpcId = 700428
+        },
+        [51207131] = {
+          Content = "输光了就输光了呗，那白就不玩啦，继续回水仙平原找卡米拉要钱花~",
+          ContentKR = "다 잃으면 잃는 거지 뭐. 그럼 스노우는 그만할래. 다시 아스포델로 돌아가서 카밀라한테 돈 달라고 하면 되잖아~",
+          DialogueId = 51207131,
+          GUID = "803111EE",
+          NextDialogue = 51207132,
+          SpeakNpcId = 700449
+        },
+        [51207132] = {
+          Content = "是吗？{nickname}，你呢，你觉得你会抽身吗？",
+          ContentKR = "그래? 그럼 {nickname} 넌 어때, 손을 뗄 수 있을 것 같아?",
+          DialogueId = 51207132,
+          GUID = "80311218",
+          NextDialogue = 51207133,
+          SpeakNpcId = 700428
+        },
+        [51207133] = {
+          Content = "以你假设想的那个处境来说——如果我已经输得太多，对数字已经麻木，而损失的钱又太多，想要弥补这种损失，靠工作的话，可能要攒个几个月甚至一年……",
+          ContentKR = "당신이 가정한 상황대로라면... 전 이미 돈을 너무 많이 잃어서 숫자에 무감각해졌고, 잃은 돈을 다시 벌려면 몇 달, 어쩌면 1년은 일해야 할 정도가 됐겠네요.",
+          DialogueId = 51207133,
+          GUID = "80311242",
+          NextDialogue = 51207134,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk03_End"
+          }
+        },
+        [51207134] = {
+          Content = "但只要被命运眷顾过一次，享受过一次不劳而获的感觉，就想把之前输掉的一切连本带利拿回来。这个诱惑太过巨大。",
+          ContentKR = "하지만 한 번이라도 행운이 따랐었고, 또 일확천금의 기분을 맛봤다면... 그동안 잃은 돈을 원금에 이자까지 붙여서 되찾고 싶어질 거예요. 분명히 엄청나게 큰 유혹이겠죠.",
+          DialogueId = 51207134,
+          GUID = "8031126C",
+          NextDialogue = 51207135,
+          SpeakNpcId = 100001
+        },
+        [51207135] = {
+          Content = "我觉得自己并不能抵抗这种诱惑，所以我从一开始就不会参加那个什么杰克先生的游戏。",
+          ContentKR = "전 유혹을 이겨낼 수 없을 것 같아요. 그러니까 그 미스터 잭의 게임인지 뭔지에는 처음부터 참가하지 않을 거예요.",
+          DialogueId = 51207135,
+          GUID = "80311296",
+          NextDialogue = 51207136,
+          SpeakNpcId = 100001
+        },
+        [51207136] = {
+          Content = "但对那些卷入这场游戏的人来说，恐怕会一直玩到翻盘为止吧。",
+          ContentKR = "하지만 그 게임에 빠진 사람들은 아마 역전할 때까지 계속하겠죠.",
+          DialogueId = 51207136,
+          GUID = "803112C0",
+          NextDialogue = 51207137,
+          SpeakNpcId = 100001
+        },
+        [51207137] = {
+          Content = "对！所以翻盘的钱在哪？从哪里来？杰克先生为你支了一个妙招：",
+          ContentKR = "맞아! 하지만 역전을 하려고 해도 판돈이 있어야 하잖아? 그건 어디서 날까? 그때 미스터 잭이 너한테 묘수를 알려주는 거야.",
+          DialogueId = 51207137,
+          GUID = "803112EA",
+          NextDialogue = 51207138,
+          SpeakNpcId = 700428,
+          TalkActionId = {
+            [1] = "700428:Talk02_Start"
+          }
+        },
+        [51207138] = {
+          Content = "找我借钱吧！伟大的杰克先生可以给你翻盘的资金，如果你赢了，杰克不收取你的任何利息，你还能带着多余的钱离开，怎么样？心动吗？",
+          ContentKR = "자기한테 돈을 빌리라고 말이지! 위대한 미스터 잭이 역전할 자금을 줄 거야. 만약 네가 이기면 잭은 이자도 안 받고, 넌 남은 돈까지 가지고 떠날 수 있어. 어때? 혹하지?",
+          DialogueId = 51207138,
+          GUID = "80311314",
+          NextDialogue = 51207139,
+          SpeakNpcId = 700428
+        },
+        [51207139] = {
+          Content = "你这家伙，每次说这种事情都只说好的不说坏的……那输了呢？输了怎么办？",
+          ContentKR = "이 녀석, 자꾸 좋은 것만 말하고 나쁜 건 말을 안 하네... 그럼 지면? 지면 어떻게 되는데?",
+          DialogueId = 51207139,
+          GUID = "8031133E",
+          NextDialogue = 51207140,
+          SpeakNpcId = 700449
+        },
+        [51207140] = {
+          Content = "不是他不说坏的……而是在那种时候，“我”的眼睛里已经看不到坏的后果了。",
+          ContentKR = "나쁜 걸 말 안 하는 게 아니야... 오히려 그런 상황에선 아마 나쁜 결과 같은 건 눈에 들어오지도 않을 거야.",
+          DialogueId = 51207140,
+          GUID = "80311368",
+          NextDialogue = 51207141,
+          SpeakNpcId = 100001
+        },
+        [51207141] = {
+          Content = "好了！我最讨厌你这样！简单到不行的话掰成不知道多少份说！你不就是想说杰克那傻*开了借贷业务吗？所以罗文那傻子是要找他借？",
+          ContentKR = "어휴, 지겨워! 간단한 말을 뭐 얼마나 빙빙 돌리는 거야?! 그냥 잭 그 빌*먹을 놈이 대출도 해주기 시작했다는 얘기잖아? 그래서 로만 그 *신이 그놈한테 돈 빌리러 간다는 거야?",
+          DialogueId = 51207141,
+          GUID = "80311392",
+          LookAt = {
+            [1] = "700428:n(700429)"
+          },
+          NextDialogue = 51207142,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Angry01_Start"
+          }
+        },
+        [51207142] = {
+          Content = "不止是罗文，所有我们不愿意继续借钱的玩家，几乎都在准备找杰克借钱。",
+          ContentKR = "로만뿐이겠어. 우리가 돈을 안 빌려주면, 노름꾼들은 거의 다 잭한테 돈 빌릴 생각을 한다는 거야.",
+          DialogueId = 51207142,
+          GUID = "803113BC",
+          NextDialogue = 51207143,
+          SpeakNpcId = 700428
+        },
+        [51207143] = {
+          Content = "不仅如此，他们还认为螺丝刀行会是个废物行会，既保障不了他们的生活，又不借钱给他们奔向更好的生活。",
+          ContentKR = "심지어 드라이버 협회가 쓸모없다고까지 생각한다고. 먹고 사는 것도 보장 못 해주면서, 더 나은 삶을 위해 필요한 돈도 안 빌려준다면서 말야.",
+          DialogueId = 51207143,
+          GUID = "803113E6",
+          NextDialogue = 51207144,
+          SpeakNpcId = 700428,
+          TalkActionId = {
+            [1] = "700428:Talk02_End"
+          }
+        },
+        [51207144] = {
+          Content = "更好的生活？哈！去**的！",
+          ContentKR = "더 나은 삶? 하! 개소리하고 있네!",
+          DialogueId = 51207144,
+          GUID = "80311410",
+          NextDialogue = 51207145,
+          SpeakNpcId = 700429
+        },
+        [51207145] = {
+          Content = "（男人抬手，用力锤了一拳身旁的箱子，鲜血瞬间顺着他的指缝滴落，他却浑然不觉。）",
+          ContentKR = "(남자가 손을 들어 옆에 있는 상자를 주먹으로 세게 내리쳤다. 순식간에 피가 손가락 사이로 뚝뚝 떨어지는데도, 전혀 신경 쓰지 않는다.)",
+          DialogueId = 51207145,
+          GUID = "8031143A",
+          IsBlack = 1,
+          NextDialogue = 51207146,
+          TalkActionId = {
+            [1] = "700429:Angry01_End"
+          }
+        },
+        [51207146] = {
+          Content = "好啊！好！我们想留着这帮傻*的狗命，他们却反过来怪起我们了？",
+          ContentKR = "그래! 좋아! 우린 그 등신들을 위해서 하는 일인데, 그놈들은 오히려 우릴 원망한다 이거지?",
+          DialogueId = 51207146,
+          GUID = "80311464",
+          NextDialogue = 51207147,
+          SpeakNpcId = 700429
+        },
+        [51207147] = {
+          Content = "你觉得是我们在做好事，别人可不这么觉得，不借给他钱，他难道就不玩了吗？他只是会换个地方继续借，继续玩。",
+          ContentKR = "넌 우리가 좋은 일 한다고 생각할지 몰라도, 남들은 그렇게 생각 안 해. 돈 안 빌려준다고 저 사람들이 안 하겠어? 그냥 다른 데 가서 계속 빌리고, 계속 그렇게 살겠지.",
+          DialogueId = 51207147,
+          GUID = "8031148E",
+          NextDialogue = 51207148,
+          SpeakNpcId = 700428
+        },
+        [51207148] = {
+          Content = "那**到底该怎么办？任他们诋毁？！",
+          ContentKR = "그럼 씨* 대체 어쩌라는 건데? 그냥 저대로 우릴 욕하게 내버려둬?!",
+          DialogueId = 51207148,
+          GUID = "803114B8",
+          NextDialogue = 51207149,
+          SpeakNpcId = 700429
+        },
+        [51207149] = {
+          Content = "你看，你又急，我不是说了吗？我带回来的可是我们的救兵啊。是吗，救兵？",
+          ContentKR = "진정하라니까. 그래서 내가 아까 지원군을 데려왔다고 했잖아. 맞지, 지원군?",
+          DialogueId = 51207149,
+          GUID = "803114E2",
+          LookAt = {
+            [1] = "700428:n(0)"
+          },
+          NextDialogue = 51207150,
+          NextOptions = {
+            [1] = 51207150,
+            [2] = 51207152,
+            [3] = 51207157
+          },
+          SpeakNpcId = 700428
+        },
+        [51207150] = {
+          Content = "我明白你的意思了，需要我做什么？",
+          ContentKR = "무슨 말인지 알겠어요. 제가 뭘 하면 돼요?",
+          DialogueId = 51207150,
+          GUID = "8031150C",
+          ImprPlusId = 1004,
+          NextDialogue = 51207151
+        },
+        [51207151] = {
+          Content = "果然，看到你救下柯尼的时候，我就知道你会做出这样的选择，去吧，我们的救兵，能不能扳倒杰克先生，就在此一举。",
+          ContentKR = "역시, 코니를 도와줄 때부터 알아봤다니까. 가자, 우리의 지원군! 미스터 잭을 쓰러뜨릴 수 있을지는 이번 기회에 달렸어.",
+          DialogueId = 51207151,
+          GUID = "80311536",
+          NextDialogue = 51207162,
+          SpeakNpcId = 700428
+        },
+        [51207152] = {
+          Content = "我明白你的意思了，我能获得什么？",
+          ContentKR = "무슨 말인지 알겠어요. 근데 전 뭘 얻을 수 있죠?",
+          DialogueId = 51207152,
+          GUID = "80311560",
+          ImprPlusId = 1001,
+          NextDialogue = 51207153
+        },
+        [51207153] = {
+          Content = "我看的没错，你是个好人，从你帮柯尼的时候，我就一直盯着你。",
+          ContentKR = "내 눈은 틀리지 않았어. 넌 좋은 사람이야. 네가 코니를 도와줬을 때부터 난 계속 널 주목하고 있었거든.",
+          DialogueId = 51207153,
+          GUID = "8031158A",
+          NextDialogue = 51207154,
+          SpeakNpcId = 700428
+        },
+        [51207154] = {
+          Content = "如果这件事办成，我可以将你引进螺丝刀行会，你将成为行会的座上宾，是拥有所有工人作为后盾的力量。",
+          ContentKR = "이 일이 성사되면, 널 드라이버 협회에 들여보내 줄게. 넌 협회의 귀빈이 돼서, 모든 일꾼들을 뒷배로 갖게 될 거야.",
+          DialogueId = 51207154,
+          GUID = "803115B4",
+          NextDialogue = 51207155,
+          SpeakNpcId = 700428
+        },
+        [51207155] = {
+          Content = "没兴趣，我在这也待不了多久，办成了就把柯尼欠你们的钱一笔勾销吧。",
+          ContentKR = "관심 없어요. 전 여기 오래 있을 것도 아닌걸요. 성공하면 코니가 그쪽한테 빚진 돈이나 탕감해 주세요.",
+          DialogueId = 51207155,
+          GUID = "803115DE",
+          NextDialogue = 51207156,
+          SpeakNpcId = 100001
+        },
+        [51207156] = {
+          Content = "唔……也可以，去吧，我们的救兵，能不能扳倒杰克先生，就在此一举。",
+          ContentKR = "음... 그것도 괜찮네. 가자, 우리의 지원군! 미스터 잭을 쓰러뜨릴 수 있을지는 이번 기회에 달렸어.",
+          DialogueId = 51207156,
+          GUID = "80311608",
+          NextDialogue = 51207162,
+          SpeakNpcId = 700428
+        },
+        [51207157] = {
+          Content = "我明白你的意思了，可为什么是我？",
+          ContentKR = "무슨 말인지 알겠어요. 근데 왜 하필 절 선택한 거예요?",
+          DialogueId = 51207157,
+          GUID = "80311632",
+          ImprPlusId = 1003,
+          NextDialogue = 51207158
+        },
+        [51207158] = {
+          Content = "百花车站的工人待遇臭闻早已传遍了冰湖城，新入职的新鲜血液少之又少，你无疑是近期来的人里最新的面孔。",
+          ContentKR = "블룸필드역의 인부 대우가 형편없다는 소문이 이미 아이스레이크 시티 전체에 퍼져서, 새로 들어오는 신입은 거의 없거든. 넌 최근에 들어온 사람 중에서 가장 낯선 얼굴이야.",
+          DialogueId = 51207158,
+          GUID = "8031165C",
+          NextDialogue = 51207159,
+          SpeakNpcId = 700428
+        },
+        [51207159] = {
+          Content = "杰克先生没见过你，包括他的那些手下们也是，他们对你完全不熟悉，你可以随意游走在很多地方而不被人怀疑。",
+          ContentKR = "미스터 잭은 널 본 적이 없어. 그 사람 부하들도 마찬가지고. 저들은 널 전혀 모르니까, 넌 의심 받지 않고 여러 곳을 자유롭게 돌아다닐 수 있어.",
+          DialogueId = 51207159,
+          GUID = "80311686",
+          NextDialogue = 51207160,
+          SpeakNpcId = 700428
+        },
+        [51207160] = {
+          Content = "最重要的是，你是个好人，你帮了柯尼，所以我猜，你不忍心让这些可怜的工人们继续被蒙蔽，失去金钱，失去人生，甚至……更多。",
+          ContentKR = "가장 중요한 건, 넌 좋은 사람이라는 거야. 넌 코니를 도와줬잖아. 너라면 저 불쌍한 인부들이 계속 속아서 돈과 인생을 잃고, 심지어는... 더 많은 걸 잃는 걸 차마 보고만 있진 않을 거라 생각해.",
+          DialogueId = 51207160,
+          GUID = "803116B0",
+          NextDialogue = 51207161,
+          SpeakNpcId = 700428
+        },
+        [51207161] = {
+          Content = "所以……去吧，我们的救兵，能不能扳倒杰克先生，就在此一举。",
+          ContentKR = "그러니까... 가자, 우리의 지원군! 미스터 잭을 쓰러뜨릴 수 있을지는 이번 기회에 달렸어.",
+          DialogueId = 51207161,
+          GUID = "803116DA",
+          NextDialogue = 51207162,
+          SpeakNpcId = 700428
+        },
+        [51207162] = {
+          Content = "呼……好吧，你的计划是什么？",
+          ContentKR = "휴... 좋아요, 계획이 뭔데요?",
+          DialogueId = 51207162,
+          GUID = "80311704",
+          NextDialogue = 51207163,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk01_Start"
+          }
+        },
+        [51207163] = {
+          Content = "（罗连特眼神示意克罗格将白带走，房间内只留下你与他，他长舒一口气，这才细细向你道起，直至对话结束才放你离开。）",
+          ContentKR = "(로렌트가 크로거에게 스노우를 데리고 나가라고 눈짓했고, 방 안에는 두 사람만 남았다. 그는 길게 한숨을 내쉬고 나서야 자세한 이야기를 꺼냈고, 대화가 끝나고 나서야 내보내 주었다.)",
+          DialogueId = 51207163,
+          GUID = "8031172E",
+          IsBlack = 1
+        },
+        [51207201] = {
+          Content = "1901、1902、1903、1904……",
+          ContentKR = "1901, 1902, 1903, 1904...",
+          DialogueId = 51207201,
+          GUID = "80311D6A",
+          NextDialogue = 51207202,
+          SpeakNpcId = 700449
+        },
+        [51207202] = {
+          Content = "白，你在做什么呢？",
+          ContentKR = "스노우, 뭐 하고 있어?",
+          DialogueId = 51207202,
+          GUID = "80311D94",
+          NextDialogue = 51207203,
+          SpeakNpcId = 100001
+        },
+        [51207203] = {
+          Content = "呜啊！小仆从！你可算出来了！我还以为那个笑起来眯眯眼的男人要把你卖了呢，本来准备数到2000就进去救你的！",
+          ContentKR = "으앗! 시종! 드디어 나왔구나! 실실 눈웃음치는 그 남자가 시종을 팔아버리는 줄 알았단 말이야! 2000까지 세면 이 스노우가 들어가서 구해줄 생각이었다구!",
+          DialogueId = 51207203,
+          GUID = "80311DBE",
+          NextDialogue = 51207204,
+          Scripts = "TurnTo{TurnToDescription{\"700449:n(0)\"}}",
+          SpeakNpcId = 700449
+        },
+        [51207204] = {
+          Content = "呃……只是多说了一会话。",
+          ContentKR = "어... 그냥 얘기 좀 한 것뿐이야.",
+          DialogueId = 51207204,
+          GUID = "80311DE8",
+          NextDialogue = 51207205,
+          SpeakNpcId = 100001
+        },
+        [51207205] = {
+          Content = "那你们聊了什么？他又要我们跑什么腿？",
+          ContentKR = "그래서 무슨 얘기 했어? 또 우리한테 무슨 심부름시키려는 거야?",
+          DialogueId = 51207205,
+          GUID = "80311E12",
+          NextDialogue = 51207206,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Shock03_Start"
+          }
+        },
+        [51207206] = {
+          Content = "他说……",
+          ContentKR = "그게...",
+          DialogueId = 51207206,
+          GUID = "80311E3C",
+          NextDialogue = 51207207,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700449:Shock03_End"
+          }
+        },
+        [51207207] = {
+          Content = "既然你的时间很紧凑，那么我们话不多说，杰克先生——也就是那名在车站内开设工人游乐场的家伙，他在工厂内部安插了许多眼线，也可以叫做钩子。",
+          ContentKR = "시간이 촉박하니까 간단하게 말할게. 미스터 잭, 그러니까 역 안에서 일꾼들을 위한 게임장을 운영하는 그 녀석은 지금 공장 내부에 끄나풀을 많이 심어뒀어. 쉽게 말하면 미끼지.",
+          DialogueId = 51207207,
+          GUID = "80311E66",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51207208,
+          SpeakNpcId = 700428
+        },
+        [51207208] = {
+          Content = "他用那些钩子钓鱼，钓那些缺钱又不甘于枯燥生活的年轻工人，也就是你接下来的需要扮演的那种人。",
+          ContentKR = "녀석은 그 미끼로 낚시를 해. 돈은 필요한데 지루한 생활에도 만족하지 못하는 젊은 일꾼들을 낚는 거지. 넌 바로 그런 일꾼을 연기하면 돼.",
+          DialogueId = 51207208,
+          GUID = "80311E90",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51207209,
+          SpeakNpcId = 700428
+        },
+        [51207209] = {
+          Content = "我需要你去当咬钩的鱼，随便做点什么，让他们发现你，这并不难，因为你是个新面孔，很快就会被他们盯上。",
+          ContentKR = "네가 물고기가 돼서 미끼를 물어줘. 대충 뭐라도 해서 저들이 널 발견하게 만들면 돼. 어렵지 않아, 넌 새 얼굴이니까 금방 저들 눈에 띌 거야.",
+          DialogueId = 51207209,
+          GUID = "80311EBA",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51207210,
+          SpeakNpcId = 700428
+        },
+        [51207210] = {
+          Content = "唔……这么一说，你反而是我们的钩子，用来钓上杰克先生的那些鱼。",
+          ContentKR = "음... 어떻게 보면 반대로 네가 미끼가 되는 거네. 잭이라는 물고기를 낚아 올리기 위한 미끼 말이야.",
+          DialogueId = 51207210,
+          GUID = "80311EE4",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51207211,
+          SpeakNpcId = 700428
+        },
+        [51207211] = {
+          Content = "白，我们先去工人们比较密集的地方吧。",
+          ContentKR = "스노우, 우리 일단 일꾼들이 많이 모인 곳으로 가 보자.",
+          DialogueId = 51207211,
+          GUID = "80311F0E",
+          NextDialogue = 51207212,
+          SpeakNpcId = 100001
+        },
+        [51207212] = {
+          Content = "好！魔王大人和小仆从出征，所向无敌！",
+          ContentKR = "좋아! 마왕님과 시종이 출정하면 언제나 무적이지!",
+          DialogueId = 51207212,
+          GUID = "80311F38",
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Excited03_Start"
+          }
+        },
+        [51207301] = {
+          Content = "这里走来走去的人各个都板着脸，看起来应该是找对地方了吧。小仆从，我们下一步要做什么？",
+          ContentKR = "여긴 지나가는 사람들 전부 얼굴이 굳어 있네. 제대로 찾아온 것 같은데? 시종, 이제 우리 뭐 하면 돼?",
+          DialogueId = 51207301,
+          GUID = "80312DD2",
+          NextDialogue = 51207302,
+          SpeakNpcId = 700449
+        },
+        [51207302] = {
+          Content = "这边。",
+          ContentKR = "이쪽이야.",
+          DialogueId = 51207302,
+          GUID = "80312DFC",
+          SpeakNpcId = 100001
+        },
+        [51207401] = {
+          Content = "你们好，这是在休息吗？",
+          ContentKR = "안녕하세요. 혹시 지금 쉬는 시간인가요?",
+          DialogueId = 51207401,
+          GUID = "80313E3A",
+          NextDialogue = 51207402,
+          SpeakNpcId = 100001
+        },
+        [51207402] = {
+          Content = "（一名工人掀起疲惫的眼睑，似有若无地将你们打量了一番，没有说话。）",
+          ContentKR = "(한 일꾼이 지친 눈꺼풀을 들어 올리고 일행을 대충 훑어보더니 아무 말도 하지 않는다.)",
+          DialogueId = 51207402,
+          GUID = "80313E64",
+          NextDialogue = 51207403
+        },
+        [51207403] = {
+          Content = "又是被骗进来的白痴……",
+          ContentKR = "또 속아서 들어온 바보들인가...",
+          DialogueId = 51207403,
+          GUID = "80313E8E",
+          NextDialogue = 51207404,
+          SpeakNpcId = 700431
+        },
+        [51207404] = {
+          Content = "别这么说嘛，好歹是后辈。你好，欢迎来到百花车站，虽然你很快就会发现这不是什么好选择了。",
+          ContentKR = "그렇게 말할 거 없잖아, 어쨌든 후배인데. 반가워, 블룸필드역에 온 걸 환영해. 뭐, 여기가 별로 좋은 선택이 아니란 걸 곧 알게 되겠지만 말이야.",
+          DialogueId = 51207404,
+          GUID = "80313EB8",
+          NextDialogue = 51207405,
+          SpeakNpcId = 700432
+        },
+        [51207405] = {
+          Content = "怎么看出来我是刚来的？",
+          ContentKR = "제가 신입인 걸 어떻게 아셨어요?",
+          DialogueId = 51207405,
+          GUID = "80313EE2",
+          NextDialogue = 51207406,
+          SpeakNpcId = 100001
+        },
+        [51207406] = {
+          Content = "只有新来的白痴才会这么热情主动找别人打招呼，很快你就会和我们一样被工作压得喘不过气，哪怕是在这里站着等活都会被误认为在偷懒休息。",
+          ContentKR = "새로 들어온 바보들이나 너처럼 먼저 살갑게 말을 걸거든. 곧 너도 우리처럼 일에 치여서 숨도 못 쉬게 될 거야. 여긴 서서 일을 기다리고 있을 때도 땡땡이친다고 오해받을 정도니까.",
+          DialogueId = 51207406,
+          GUID = "80313F0C",
+          NextDialogue = 51207407,
+          SpeakNpcId = 700431
+        },
+        [51207407] = {
+          Content = "她就这样，别在意，你有什么事吗？是没人带你？还是……",
+          ContentKR = "쟨 원래 저런 녀석이니까 신경 쓰지 마. 무슨 일이야? 안내해 줄 사람이 없어? 아니면...",
+          DialogueId = 51207407,
+          GUID = "80313F36",
+          NextDialogue = 51207408,
+          SpeakNpcId = 700432
+        },
+        [51207408] = {
+          Content = "你还带着一名皎皎？是要去童工区那边擦玻璃？",
+          ContentKR = "루나도 데리고 있네? 꼬마애들 구역에 유리 닦으러 가는 거야?",
+          DialogueId = 51207408,
+          GUID = "80313F60",
+          NextDialogue = 51207409,
+          SpeakNpcId = 700432
+        },
+        [51207409] = {
+          Content = "额……没错！白就是和{性别：他|她}一起入职的。",
+          ContentKR = "어... 맞아! 난 얘랑 같이 들어온 스노우야.",
+          DialogueId = 51207409,
+          GUID = "80313F8A",
+          NextDialogue = 51207410,
+          SpeakNpcId = 700449
+        },
+        [51207410] = {
+          Content = "一大一小两个白痴。",
+          ContentKR = "바보 어른 하나랑 바보 어린이 하나가 세트로 왔네.",
+          DialogueId = 51207410,
+          GUID = "80313FB4",
+          NextOptions = {
+            [1] = 51207411,
+            [2] = 51207413,
+            [3] = 51207415
+          },
+          SpeakNpcId = 700431
+        },
+        [51207411] = {
+          Content = "（顺着他的话往下说）",
+          ContentKR = "(그의 말에 맞장구친다)",
+          DialogueId = 51207411,
+          GUID = "80313FDE",
+          ImprPlusId = 1003,
+          NextDialogue = 51207412
+        },
+        [51207412] = {
+          Content = "是啊，如果不是足够白痴，怎么会明知这里的待遇不好，还要挤进来呢。",
+          ContentKR = "맞아요. 엄청난 바보가 아니고서야, 대우가 안 좋다는 걸 뻔히 알면서 여기 들어오겠어요?",
+          DialogueId = 51207412,
+          GUID = "80314008",
+          NextDialogue = 51207419,
+          SpeakNpcId = 100001
+        },
+        [51207413] = {
+          Content = "（转移话题）",
+          ContentKR = "(화제를 돌린다)",
+          DialogueId = 51207413,
+          GUID = "80314032",
+          ImprPlusId = 1004,
+          NextDialogue = 51207414
+        },
+        [51207414] = {
+          Content = "可我们又有什么办法呢？",
+          ContentKR = "다른 방법이 없었어요.",
+          DialogueId = 51207414,
+          GUID = "8031405C",
+          NextDialogue = 51207419,
+          SpeakNpcId = 100001
+        },
+        [51207415] = {
+          Content = "我看你也挺白痴的。",
+          ContentKR = "그쪽도 꽤 바보 같은데요.",
+          DialogueId = 51207415,
+          GUID = "80314086",
+          ImprPlusId = 1005,
+          NextDialogue = 51207416
+        },
+        [51207416] = {
+          Content = "不然怎么比我们来这里的时间还要早呢？",
+          ContentKR = "여기에 우리보다 먼저 온 걸 보면 말이죠.",
+          DialogueId = 51207416,
+          GUID = "803140B0",
+          NextDialogue = 51207417,
+          SpeakNpcId = 100001
+        },
+        [51207417] = {
+          Content = "我那是没得选！我需要钱用来生活，你懂吗？",
+          ContentKR = "난 선택의 여지가 없었어! 먹고 살려면 돈이 필요하다고, 알아?",
+          DialogueId = 51207417,
+          GUID = "803140DA",
+          NextDialogue = 51207418,
+          SpeakNpcId = 700431
+        },
+        [51207418] = {
+          Content = "我也需要钱，用来做比生活更重要的事情。",
+          ContentKR = "저도 돈이 필요해요. 먹고 사는 것보다 더 중요한 일에 쓸 돈이요.",
+          DialogueId = 51207418,
+          GUID = "80314104",
+          NextDialogue = 51207419,
+          SpeakNpcId = 100001
+        },
+        [51207419] = {
+          Content = "什……什么？",
+          ContentKR = "뭐... 뭐라고?",
+          DialogueId = 51207419,
+          GUID = "8031412E",
+          NextDialogue = 51207420,
+          SpeakNpcId = 700432
+        },
+        [51207420] = {
+          Content = "我们只是走投无路罢了。",
+          ContentKR = "우린 그저 막다른 길에 몰렸을 뿐이에요.",
+          DialogueId = 51207420,
+          GUID = "80314158",
+          NextDialogue = 51207421,
+          SpeakNpcId = 100001
+        },
+        [51207421] = {
+          Content = "走投无路？小仆从……哦不……{nickname}，你在说什么呀？",
+          ContentKR = "막다른 길? 시종... 아니... {nickname}, 무슨 소리야?",
+          DialogueId = 51207421,
+          GUID = "80314182",
+          NextDialogue = 51207422,
+          SpeakNpcId = 700449
+        },
+        [51207422] = {
+          Content = "我们俩从小和姐姐相依为命，谁想到有一天一个坏蛋来到我老家，绑架走了我的姐姐！",
+          ContentKR = "우리 둘은 어릴 때부터 {性别:누나|언니}랑 서로 의지하며 살았어요. 근데 어느 날 나쁜 놈이 고향에 나타나서 {性别:누나|언니}를 납치해 갔다고요!",
+          DialogueId = 51207422,
+          GUID = "803141AC",
+          NextDialogue = 51207423,
+          SpeakNpcId = 100001
+        },
+        [51207423] = {
+          Content = "为了找到并赎回我的姐姐，我们只能一路漂泊至冰湖城，现在所有的钱都花光了，除了找工作谋生，我们没别的办法。",
+          ContentKR = "{性别:누나|언니}를 찾아 몸값을 내려고 떠돌다 아이스레이크 시티까지 왔는데, 이젠 돈이 다 떨어졌어요. 일자리를 구하는 것 말고는 방법이 없었죠.",
+          DialogueId = 51207423,
+          GUID = "803141D6",
+          NextDialogue = 51207424,
+          SpeakNpcId = 100001
+        },
+        [51207424] = {
+          Content = "小仆从你……哦！",
+          ContentKR = "야, 시종 넌... 어라!?",
+          DialogueId = 51207424,
+          GUID = "80314200",
+          NextDialogue = 51207425,
+          SpeakNpcId = 700449
+        },
+        [51207425] = {
+          Content = "嗯嗯！{性别：他|她}说的没错！我们已经很久没有好好吃饭了，要不是水仙平原的老板娘施舍给我们一口饭吃，我们早就饿死了！",
+          ContentKR = "아아, 그래! 그 말이 맞아! 우린 요새 밥도 제대로 잘 못 먹었어. 아스포델 사장님이 아니었으면 진작에 굶어 죽었을 거라고!",
+          DialogueId = 51207425,
+          GUID = "8031422A",
+          NextDialogue = 51207426,
+          SpeakNpcId = 700449
+        },
+        [51207426] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51207426,
+          GUID = "80314254",
+          NextDialogue = 51207427,
+          SpeakNpcId = 700431
+        },
+        [51207427] = {
+          Content = "……那……的确有些可怜。",
+          ContentKR = "...그건 ...확실히 좀 불쌍하네.",
+          DialogueId = 51207427,
+          GUID = "8031427E",
+          NextDialogue = 51207428,
+          SpeakNpcId = 700432
+        },
+        [51207428] = {
+          Content = "我们太需要钱了，不止是能吃饱饭的钱，还有赎回我姐姐的赎金……",
+          ContentKR = "우린 돈이 필요해요. 밥 먹을 돈뿐만 아니라 {性别:누나|언니}를 되찾아올 몸값도요...",
+          DialogueId = 51207428,
+          GUID = "803142A8",
+          NextDialogue = 51207429,
+          SpeakNpcId = 100001
+        },
+        [51207429] = {
+          Content = "诶……要是有地方可以一下子赚到好多钱就好了。",
+          ContentKR = "음... 순식간에 큰돈을 벌 수 있는 곳이 있으면 좋을 텐데.",
+          DialogueId = 51207429,
+          GUID = "803142D2",
+          NextDialogue = 51207430,
+          SpeakNpcId = 700449
+        },
+        [51207430] = {
+          Content = "你说的地方……不是没有，但你们这样的情况，比起乖乖攒钱当赎金，还不如花钱雇点人帮你们把姐姐抢回来啊。",
+          ContentKR = "너희가 말하는 그런 곳이... 없는 건 아닌데, 너희 같은 상황이면 얌전히 돈 모아서 몸값을 내느니, 차라리 돈 주고 사람을 써서 {性别:누나|언니}를 되찾아오는 게 낫지 않아?",
+          DialogueId = 51207430,
+          GUID = "803142FC",
+          NextDialogue = 51207431,
+          SpeakNpcId = 700432
+        },
+        [51207431] = {
+          Content = "不是和水仙平原的老板娘有交情吗？她那边不是有个组织叫……狩月人？好像挺能打的。",
+          ContentKR = "아스포델 사장이랑 아는 사이라고 하지 않았어? 거기 뭐더라... 월석 사냥꾼인가가 싸움을 꽤 잘한다던데.",
+          DialogueId = 51207431,
+          GUID = "80314326",
+          NextDialogue = 51207432,
+          SpeakNpcId = 700431
+        },
+        [51207432] = {
+          Content = "如果是简单的绑匪还好，可绑架我姐姐的，是一位力大无穷又穷凶极恶的匪徒。",
+          ContentKR = "평범한 납치범이라면 그것도 방법이겠죠. 하지만 {性别:누나|언니}를 납치한 건 힘이 엄청 세고 흉악한 놈이에요.",
+          DialogueId = 51207432,
+          GUID = "80314350",
+          NextDialogue = 51207433,
+          SpeakNpcId = 100001
+        },
+        [51207433] = {
+          Content = "看不出来你俩还挺可怜的，我收回前面骂你们的话吧，对不起。",
+          ContentKR = "너희도 생각보다 불쌍하네. 아까 욕한 거 취소할게, 미안.",
+          DialogueId = 51207433,
+          GUID = "8031437A",
+          NextDialogue = 51207434,
+          SpeakNpcId = 700431
+        },
+        [51207434] = {
+          Content = "不过不管怎么说，在这工作最多只能让你们饿不死，要赚赎金什么的还是别做梦了。",
+          ContentKR = "근데, 어쨌든 여기서 버는 돈으론 굶는 거나 면하는 정도니까, 몸값 버는 건 꿈도 꾸지 마.",
+          DialogueId = 51207434,
+          GUID = "803143A4",
+          NextDialogue = 51207438,
+          SpeakNpcId = 700431
+        },
+        [51207435] = {
+          Content = "几位在聊什么呢？你们俩，工头刚才好像在那边叫你们过去搬货。",
+          ContentKR = "무슨 얘기 중이야? 너희 둘, 반장이 아까 저쪽에서 운반하라고 부르는 것 같던데.",
+          DialogueId = 51207435,
+          GUID = "803143CE",
+          NextDialogue = 51207436,
+          SpeakNpcId = 700448
+        },
+        [51207436] = {
+          Content = "可算叫我们过去了，那么，我们就先走一步了，既然是要来车站工作，那么以后咱们应该还会再见的。",
+          ContentKR = "드디어 부르네. 그럼 우리 먼저 갈게. 역에 일하러 오는 거면 나중에 또 보자고.",
+          DialogueId = 51207436,
+          GUID = "803143F8",
+          NextDialogue = 51207437,
+          SpeakNpcId = 700432
+        },
+        [51207437] = {
+          Content = "走了！",
+          ContentKR = "가자!",
+          DialogueId = 51207437,
+          GUID = "80314422",
+          NextDialogue = 51207439,
+          SpeakNpcId = 700431
+        },
+        [51207438] = {
+          DialogueId = 51207438,
+          IsBlack = 1,
+          NextDialogue = 51207435
+        },
+        [51207439] = {
+          DialogueId = 51207439,
+          IsBlack = 1,
+          NextDialogue = 51207501
+        },
+        [51207501] = {
+          Content = "诶呀，你是新来的工人？我刚才似乎听到你们说想找个地方赚钱？",
+          ContentKR = "새로 온 일꾼이야? 아까 돈 벌 곳 찾는다고 한 것 같은데?",
+          DialogueId = 51207501,
+          GUID = "80314EA2",
+          NextDialogue = 51207502,
+          SpeakNpcId = 700448
+        },
+        [51207502] = {
+          Content = "对！我们需要钱，需要好多好多钱！",
+          ContentKR = "맞아! 우린 돈이 필요해. 엄청 많이!",
+          DialogueId = 51207502,
+          GUID = "80314ECC",
+          NextDialogue = 51207503,
+          SpeakNpcId = 700449
+        },
+        [51207503] = {
+          Content = "是么……其实我倒是的确知道有这么一个地方，只需要付出小小的入场资金就有机会赚到很多钱呢。",
+          ContentKR = "그래... 사실 내가 딱 그런 곳을 하나 알고 있거든. 작은 참가비만 내면 큰돈을 벌 기회가 있는 곳이야.",
+          DialogueId = 51207503,
+          GUID = "80314EF6",
+          NextDialogue = 51207504,
+          SpeakNpcId = 700448
+        },
+        [51207504] = {
+          Content = "这么好？在哪呢？我们能去吗？",
+          ContentKR = "그렇게 좋은 데가 있어요? 어딘데요? 저희도 가도 돼요?",
+          DialogueId = 51207504,
+          GUID = "80314F20",
+          NextDialogue = 51207505,
+          SpeakNpcId = 100001
+        },
+        [51207505] = {
+          Content = "你的话……没问题，我随时都可以带你去看看，只是她……",
+          ContentKR = "너라면... 괜찮아. 언제든 데려다줄 수 있어. 근데 얘는...",
+          DialogueId = 51207505,
+          GUID = "80314F4A",
+          NextDialogue = 51207506,
+          SpeakNpcId = 700448
+        },
+        [51207506] = {
+          Content = "我？我怎么啦？",
+          ContentKR = "나? 내가 왜?",
+          DialogueId = 51207506,
+          GUID = "80314F74",
+          NextDialogue = 51207507,
+          SpeakNpcId = 700449
+        },
+        [51207507] = {
+          Content = "……小孩就小孩吧，正好我现在有事要过去一趟，你们要和我一起吗？",
+          ContentKR = "...뭐, 어린애라도 상관없겠지. 마침 지금 거기 갈 일이 있는데, 같이 갈래?",
+          DialogueId = 51207507,
+          GUID = "80314F9E",
+          NextDialogue = 51207508,
+          SpeakNpcId = 700448
+        },
+        [51207508] = {
+          Content = "我可能对那边不太熟。这可以吗？",
+          ContentKR = "저 그런 쪽은 잘 모르는데, 괜찮아요?",
+          DialogueId = 51207508,
+          GUID = "80314FC8",
+          NextDialogue = 51207509,
+          SpeakNpcId = 100001
+        },
+        [51207509] = {
+          Content = "没关系没关系！咱们一起就行。",
+          ContentKR = "괜찮아 괜찮아! 내가 같이 가면 되니까.",
+          DialogueId = 51207509,
+          GUID = "80314FF2",
+          SpeakNpcId = 700448
+        },
+        [51207601] = {
+          Content = "怎么今天所有人都在说我是小孩？小孩就不能玩游戏了吗？",
+          ContentKR = "왜 오늘따라 다들 나보고 어린애라는 거야? 어린애는 게임 하면 안 돼?",
+          DialogueId = 51207601,
+          GUID = "80315F0A",
+          NextDialogue = 51207602,
+          SpeakNpcId = 700449
+        },
+        [51207602] = {
+          Content = "也许……并不是普通的游戏？",
+          ContentKR = "아마... 평범한 게임이 아닐 것 같은데?",
+          DialogueId = 51207602,
+          GUID = "80315F34",
+          SpeakNpcId = 100001
+        },
+        [51207701] = {
+          Content = "（狭小逼仄的房间内，摆放着几张临时搭建的桌子，一群人狂热地围在桌子旁，嘈杂的环境瞬间将人淹没，只有扯着嗓子才能听到周围人的话。）",
+          ContentKR = "(좁고 답답한 방 안에 임시로 설치한 테이블 몇 개가 놓여 있고, 사람들이 신이 나서 테이블 주위를 둘러싸고 있다. 소란스러운 분위기에 목청을 높여 말하지 않으면 옆 사람 말도 잘 들리지 않을 정도다.)",
+          DialogueId = 51207701,
+          GUID = "80316F72",
+          NextDialogue = 51207702
+        },
+        [51207702] = {
+          Content = "杰克游戏！规则你知道吗？",
+          ContentKR = "잭 게임! 규칙은 알고 있어?",
+          DialogueId = 51207702,
+          GUID = "80316F9C",
+          NextDialogue = 51207703,
+          SpeakNpcId = 700433
+        },
+        [51207703] = {
+          Content = "随时入座，庄家会给入座的人发牌，每张牌的数字都不同，2-10的数字牌是牌面数字，花牌，也是就是JQK，都按10算，A可以算做1，也可以算作11。",
+          ContentKR = "자리에 앉으면, 딜러가 착석한 사람들에게 카드를 돌릴 거야. 카드의 숫자는 모두 다른데, 2부터 10까지는 숫자 그대로 계산하면 되고, J, Q, K는 전부 10으로 계산하면 돼. 대신 A는 1도 되고 11도 될 수 있어.",
+          DialogueId = 51207703,
+          GUID = "80316FC6",
+          NextDialogue = 51207704,
+          SpeakNpcId = 700433
+        },
+        [51207704] = {
+          Content = "最好的点数就是21，你拿的牌点数正好到21就是最好的点数，没到21的话就比较谁的点数高谁赢。超过21……那就是爆了，全输。",
+          ContentKR = "최고점은 21이야. 손에 쥔 카드의 점수를 계산했을 때 21이 나오면 제일 높은 점수를 받은 거야. 21 미만이라면 상대와 비교해서 점수가 높은 쪽이 이기게 되고, 21을 넘으면... 그건 버스트야, 전부 잃는 거지.",
+          DialogueId = 51207704,
+          GUID = "80316FF0",
+          NextDialogue = 51207705,
+          SpeakNpcId = 700433
+        },
+        [51207705] = {
+          Content = "大概都明白了……所以可以玩一把吧？",
+          ContentKR = "대충 무슨 말인지 알겠어... 바로 한 판 해봐도 돼?",
+          DialogueId = 51207705,
+          GUID = "8031701A",
+          NextDialogue = 51207706,
+          SpeakNpcId = 700434
+        },
+        [51207706] = {
+          Content = "小仆从？你在看什么呢？这么出神？",
+          ContentKR = "시종? 뭘 그렇게 푹 빠져서 보고 있어?",
+          DialogueId = 51207706,
+          GUID = "80317044",
+          NextDialogue = 51207707,
+          SpeakNpcId = 700449
+        },
+        [51207707] = {
+          Content = "没什么……只是正好听到那个人在介绍杰克游戏的规则。",
+          ContentKR = "그냥... 저 사람이 잭 게임 규칙 설명하는 게 들려서.",
+          DialogueId = 51207707,
+          GUID = "8031706E",
+          NextDialogue = 51207708,
+          SpeakNpcId = 100001
+        },
+        [51207708] = {
+          Content = "哦？你对杰克游戏感兴趣？要带你玩一把吗？",
+          ContentKR = "오? 잭 게임에 관심 있어? 한 판 같이 해볼래?",
+          DialogueId = 51207708,
+          GUID = "80317098",
+          NextDialogue = 51207709,
+          SpeakNpcId = 700448
+        },
+        [51207709] = {
+          Content = "没兴趣。",
+          ContentKR = "관심 없어요.",
+          DialogueId = 51207709,
+          GUID = "803170C2",
+          NextDialogue = 51207710,
+          SpeakNpcId = 100001
+        },
+        [51207710] = {
+          Content = "哎呀，该不会是嫌规则太复杂了吧，没事，我们还有更简单的——",
+          ContentKR = "이런, 혹시 규칙이 너무 복잡해서 그래? 괜찮아, 더 간단한 것도 있거든.",
+          DialogueId = 51207710,
+          GUID = "803170EC",
+          NextDialogue = 51207711,
+          SpeakNpcId = 700448
+        },
+        [51207711] = {
+          Content = "……也玩不了。",
+          ContentKR = "...그래도 못 해요.",
+          DialogueId = 51207711,
+          GUID = "80317116",
+          NextDialogue = 51207712,
+          SpeakNpcId = 100001
+        },
+        [51207712] = {
+          Content = "你这是什么意思？这也没兴趣那也玩不了，那你来我们这是做什么来了？",
+          ContentKR = "그게 무슨 소리야? 게임에 관심도 없고 하지도 못한다고? 그럼 여긴 뭐 하러 왔어?",
+          DialogueId = 51207712,
+          GUID = "80317140",
+          NextDialogue = 51207713,
+          SpeakNpcId = 700448
+        },
+        [51207713] = {
+          Content = "诶呀这位大哥哥你别介意，我们不是不想玩，只是……呃……我们没钱玩。",
+          ContentKR = "아이참, 오해하지 마. 우린 안 하려는 게 아니라, 그냥... 어... 돈이 없어서 못 하는 거야.",
+          DialogueId = 51207713,
+          GUID = "8031716A",
+          NextDialogue = 51207714,
+          SpeakNpcId = 700449
+        },
+        [51207714] = {
+          Content = "没钱？",
+          ContentKR = "돈이 없다고?",
+          DialogueId = 51207714,
+          GUID = "80317194",
+          NextDialogue = 51207715,
+          SpeakNpcId = 700448
+        },
+        [51207715] = {
+          Content = "对呀对呀，我们毕竟是刚来车站打工嘛，工资还没有发的情况下身上一分钱也没有啦。",
+          ContentKR = "그렇다니까. 우린 역에 막 일하러 들어온 신입이거든. 아직 월급을 못 받아서 한 푼도 없어.",
+          DialogueId = 51207715,
+          GUID = "803171BE",
+          NextDialogue = 51207716,
+          SpeakNpcId = 700449
+        },
+        [51207716] = {
+          Content = "没错，所以有没有不花钱也能玩的？",
+          ContentKR = "맞아요. 혹시 돈 안 내고도 할 수 있는 게임은 없나요?",
+          DialogueId = 51207716,
+          GUID = "803171E8",
+          NextDialogue = 51207717,
+          SpeakNpcId = 100001
+        },
+        [51207717] = {
+          Content = "不花钱也能玩？哪有这种好事！",
+          ContentKR = "돈 안 내고 하는 거? 그런 게 있겠냐?!",
+          DialogueId = 51207717,
+          GUID = "80317212",
+          NextDialogue = 51207718,
+          SpeakNpcId = 700448
+        },
+        [51207718] = {
+          Content = "我是看你们诚心才带你们过来的，结果到了地方却跟我说这个，你这不是耍我的吗？",
+          ContentKR = "진심인 줄 알고 데려왔더니, 기껏 와서는 한다는 소리가... 너네 지금 나 갖고 노는 거야?",
+          DialogueId = 51207718,
+          GUID = "8031723C",
+          NextDialogue = 51207719,
+          SpeakNpcId = 700448
+        },
+        [51207719] = {
+          Content = "我们当然也是诚心想赚钱才跟过来的啊，但没钱也不是我们期待的情况吧。",
+          ContentKR = "저희도 진짜로 돈 벌고 싶어서 따라온 거예요. 하지만 저희가 돈이 없고 싶어서 없는 건 아니잖아요.",
+          DialogueId = 51207719,
+          GUID = "80317266",
+          NextDialogue = 51207720,
+          SpeakNpcId = 100001
+        },
+        [51207720] = {
+          Content = "不然这样，你借我点，我去玩了之后赢回来再还给你。",
+          ContentKR = "아니면 돈을 좀 빌려주시면 안 돼요? 제가 따서 갚을게요.",
+          DialogueId = 51207720,
+          GUID = "80317290",
+          NextDialogue = 51207721,
+          SpeakNpcId = 100001
+        },
+        [51207721] = {
+          Content = "借——借钱？！{nickname}，你不是说……",
+          ContentKR = "도, 돈을 빌린다고?! {nickname}, 너 분명히...",
+          DialogueId = 51207721,
+          GUID = "803172BA",
+          NextDialogue = 51207722,
+          SpeakNpcId = 700449
+        },
+        [51207722] = {
+          Content = "借钱？借钱……也不是不行……不过不是我借给你，你可以从杰克先生这里借。",
+          ContentKR = "돈을 빌린다고? 그거야... 안 되는 건 아닌데... 근데 나 말고, 미스터 잭한테 가서 빌려야 돼.",
+          DialogueId = 51207722,
+          GUID = "803172E4",
+          NextDialogue = 51207723,
+          SpeakNpcId = 700448
+        },
+        [51207723] = {
+          Content = "好，那你带我去找杰克先生借点铜币。",
+          ContentKR = "좋아요. 그럼 미스터 잭한테 데려다주세요. 쿠퍼를 좀 빌려야겠어요.",
+          DialogueId = 51207723,
+          GUID = "8031730E",
+          NextDialogue = 51207724,
+          SpeakNpcId = 100001
+        },
+        [51207724] = {
+          Content = "（你的果断让这名领路人两眼冒光，按耐不住自己乱飘的眼神，和牌桌上的庄家对视了一眼，就准备拉着你离开。但这时，一道不合时宜的声音插了进来。）",
+          ContentKR = "(과감한 결정에 안내인의 눈이 반짝였다. 안내인은 흔들리는 눈빛을 주체하지 못한 채, 테이블의 딜러와 눈을 마주친 후, 당신을 미스터 잭에게 안내하려 했다. 하지만 그때, 뜻밖의 목소리가 끼어든다.)",
+          DialogueId = 51207724,
+          GUID = "80317338",
+          NextDialogue = 51207725
+        },
+        [51207725] = {
+          Content = "等一下！{nickname}？你不是我舅舅的远方表姐的侄子的邻居吗？怎么突然到这里来了？",
+          ContentKR = "잠깐만! {nickname}? 너 우리 삼촌의 사촌 누나의 조카네 옆집 걔 아니야? 여긴 어쩐 일이야?",
+          DialogueId = 51207725,
+          GUID = "80317362",
+          NextDialogue = 51207726,
+          SpeakNpcName = "UI_Npc_Name_1.5_buheshiyisound"
+        },
+        [51207726] = {
+          Content = "（好熟悉的声音……）",
+          ContentKR = "(익숙한 목소리인데...)",
+          DialogueId = 51207726,
+          GUID = "8031738C",
+          NextDialogue = 51207727,
+          SpeakNpcId = 100001
+        },
+        [51207727] = {
+          Content = "{nickname}，好久不见啊，小时候我俩还一起爬树抓虫子呢？你还记得我吗？",
+          ContentKR = "야, {nickname}, 진짜 오랜만이네. 어렸을 때 우리 같이 나무 타고 벌레 잡았잖아. 나 기억나?",
+          DialogueId = 51207727,
+          GUID = "803173B6",
+          NextDialogue = 51207728,
+          SpeakNpcId = 700430
+        },
+        [51207728] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51207728,
+          GUID = "803173E0",
+          NextDialogue = 51207729,
+          SpeakNpcId = 100001
+        },
+        [51207729] = {
+          Content = "罗文？你今天怎么又回来了，快别闹了，我要带这家伙去买“逆转人生基金”呢。",
+          ContentKR = "로만? 오늘은 왜 또 왔어? 그만 좀 해, 나 이 친구 데리고 '인생역전' 펀드 사러 가야 한다고.",
+          DialogueId = 51207729,
+          GUID = "8031740A",
+          NextDialogue = 51207730,
+          SpeakNpcId = 700448
+        },
+        [51207730] = {
+          Content = "大哥，这位朋友是我小时候的玩伴，我们好久没见了，借钱的事情下次再说，我和{性别：他|她}想先去叙叙旧。",
+          ContentKR = "형님, 얜 저 어릴 때 친구인데, 진짜 오랜만에 만난 거거든요. 돈 빌리는 건 다음에 하고, 저 얘랑 얘기 좀 할게요.",
+          DialogueId = 51207730,
+          GUID = "80317434",
+          NextDialogue = 51207731,
+          SpeakNpcId = 700430
+        },
+        [51207731] = {
+          Content = "叙旧的事情下次再说吧……",
+          ContentKR = "옛날얘기는 다음에 하면 되잖아...",
+          DialogueId = 51207731,
+          GUID = "8031745E",
+          NextDialogue = 51207732,
+          SpeakNpcId = 700448
+        },
+        [51207732] = {
+          Content = "大哥再见，我们迫不及待要开聊了，一会回来！再见！",
+          ContentKR = "그럼 먼저 가 볼게요. 얘랑 할 말이 너무 많아서요. 나중에 봬요!",
+          DialogueId = 51207732,
+          GUID = "80317488",
+          NextDialogue = 51207733,
+          SpeakNpcId = 700430
+        },
+        [51207733] = {
+          Content = "（罗文拖着你，你拉着白，三人一同仓促离开了这间房子。）",
+          ContentKR = "(로만이 나를 잡아끌자, 나는 스노우를 끌고 급하게 자리를 떠났다.)",
+          DialogueId = 51207733,
+          GUID = "803174B2",
+          NextDialogue = 51207734
+        },
+        [51207734] = {
+          Content = "顺利咬钩之后，你一定会被他们带去游乐场，不出意外的话，你一定会在那里遇见罗文。",
+          ContentKR = "녀석들이 미끼를 물면, 분명히 널 게임장으로 데려갈 거야. 예상대로라면, 거기서 로만을 만나게 될 거고.",
+          DialogueId = 51207734,
+          GUID = "803174DC",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51207735,
+          SpeakNpcId = 700428
+        },
+        [51207735] = {
+          Content = "罗文？",
+          ContentKR = "로만이요?",
+          DialogueId = 51207735,
+          GUID = "80317506",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207735.T_Story_Recall_51207735'",
+          NextDialogue = 51207736,
+          SpeakNpcId = 100001
+        },
+        [51207736] = {
+          Content = "你已经见过他了，就是刚才找我们借钱的那位，你要想办法和他认识，打招呼或者干脆请他玩一把之类的，总之你们要互相熟悉。",
+          ContentKR = "너도 만난 적 있는 사람이야. 방금 우리한테 돈 빌리러 왔던 그 친구가 바로 로만이거든. 어떻게든 로만과 친해져야 해. 인사를 건네든지, 아니면 아예 같이 한 판 하자고 하든지, 어쨌든 서로 꼭 친해져야 해.",
+          DialogueId = 51207736,
+          GUID = "80317530",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51207737,
+          SpeakNpcId = 700428
+        },
+        [51207737] = {
+          Content = "为什么是他？",
+          ContentKR = "왜 하필 로만인데요?",
+          DialogueId = 51207737,
+          GUID = "8031755A",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207735.T_Story_Recall_51207735'",
+          NextDialogue = 51207738,
+          SpeakNpcId = 100001
+        },
+        [51207738] = {
+          Content = "必须是他。",
+          ContentKR = "꼭 로만이어야 해.",
+          DialogueId = 51207738,
+          GUID = "80317584",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          SpeakNpcId = 700428
+        },
+        [51207801] = {
+          Content = "呼哈……呼哈……你这皎皎，看起来个子小小，没想到跑起来倒是挺快嘛！",
+          ContentKR = "후... 하아... 이 루나, 몸집은 작은데 뛰는 건 꽤 빠르네!",
+          DialogueId = 51207801,
+          GUID = "80317FDA",
+          NextDialogue = 51207802,
+          SpeakNpcId = 700430
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51207802,
+    MaxKey = 51209516,
+    Loader = function()
+      return {
+        [51207802] = {
+          Content = "哪里是我跑得快，刚才{nickname}一路扯着我，我的双脚都要离地飞起来了。",
+          ContentKR = "내가 빨리 뛴 게 아니라, 아까 {nickname} 얘가 계속 날 끌고 다녀서 그렇잖아. 난 두 발이 땅에 닿지도 않을 지경이야.",
+          DialogueId = 51207802,
+          GUID = "80318004",
+          NextDialogue = 51207803,
+          SpeakNpcId = 700449
+        },
+        [51207803] = {
+          Content = "{nickname}，是你的名字？挺独特啊。",
+          ContentKR = "{nickname}? 그게 네 이름이야? 독특한 이름이네.",
+          DialogueId = 51207803,
+          GUID = "8031802E",
+          NextOptions = {
+            [1] = 51207804,
+            [2] = 51207806
+          },
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:TilteHead_Start"
+          }
+        },
+        [51207804] = {
+          Content = "你好，初次见面。",
+          ContentKR = "안녕하세요, 반가워요.",
+          DialogueId = 51207804,
+          GUID = "80318058",
+          ImprPlusId = 1002,
+          NextDialogue = 51207805
+        },
+        [51207805] = {
+          Content = "你好你好，我叫罗文，刚才随便扯了个理由就把你拽出来了，但我没有恶意，只是怕你掉进他们的陷阱。",
+          ContentKR = "안녕, 난 로만이야. 아깐 대충 아무 말이나 둘러대고 널 끌고 나왔지만, 나쁜 뜻은 없어. 그냥 네가 저 녀석들 함정에 빠질까 봐 걱정돼서 그랬어.",
+          DialogueId = 51207805,
+          GUID = "80318082",
+          NextDialogue = 51207808,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:TilteHead_End"
+          }
+        },
+        [51207806] = {
+          Content = "你真是我邻居的舅舅的远方表弟的侄子？",
+          ContentKR = "그쪽이 진짜 우리 옆집의 삼촌의 사촌의 조카예요?",
+          DialogueId = 51207806,
+          GUID = "803180AC",
+          ImprPlusId = 1005,
+          NextDialogue = 51207807
+        },
+        [51207807] = {
+          Content = "哎呀，那都是瞎扯的。我叫罗文，我可没有恶意啊，我只是怕你掉进他们的陷阱。",
+          ContentKR = "에이, 그건 다 지어낸 거야. 난 로만이라고 해. 아깐 나쁜 뜻이 아니라, 네가 저 녀석들 함정에 빠질까 봐 걱정돼서 그랬어.",
+          DialogueId = 51207807,
+          GUID = "803180D6",
+          NextDialogue = 51207808,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:TilteHead_End"
+          }
+        },
+        [51207808] = {
+          Content = "陷阱？",
+          ContentKR = "함정이요?",
+          DialogueId = 51207808,
+          GUID = "80318100",
+          NextDialogue = 51207809,
+          SpeakNpcId = 100001
+        },
+        [51207809] = {
+          Content = "你要借钱对吧？找那帮人借，千万别去，比你早些时候我就已经去问过了，什么“逆转人生基金”，实际上就是高利贷！",
+          ContentKR = "너 돈 빌리려는 거지? 그 사람들한테 빌릴 생각이라면, 절대 그만둬. 내가 너보다 먼저 이미 알아봤거든. 무슨 '인생역전 펀드'라는데, 실제로는 고리대금이야!",
+          DialogueId = 51207809,
+          GUID = "8031812A",
+          NextDialogue = 51207810,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk02_Start"
+          }
+        },
+        [51207810] = {
+          Content = "高利贷？就是借起来很少，还起来很多的那种东西吗？我以前听卡米拉说过呢。",
+          ContentKR = "고리대금? 진짜 조금 빌렸는데 갚을 땐 엄청 많이 갚아야 하는 그거? 전에 카밀라한테 들은 적 있어.",
+          DialogueId = 51207810,
+          GUID = "80318154",
+          NextDialogue = 51207811,
+          SpeakNpcId = 700449
+        },
+        [51207811] = {
+          Content = "是啊，嘴上说的很好听，说是还款方式自由，日还周还月还都可以，利息很低，骗骗那些毫无头脑的傻子还行，想骗我？哼！",
+          ContentKR = "그래, 말은 근사하게, 상환 방식이 자유로워서 매일, 매주, 매달 원하는 대로 상환해도 되고, 이자도 낮다고 할 거야. 머리 텅 빈 바보들이라면 속아 넘어가겠지. 하지만 내가 속을 줄 알고? 흥!",
+          DialogueId = 51207811,
+          GUID = "8031817E",
+          NextDialogue = 51207812,
+          SpeakNpcId = 700430
+        },
+        [51207812] = {
+          Content = "按他们说的0.3%日息还款方式来算，年化的利率就高达109.5%，也就是说，你找他们借10000铜币，看似每天只要还30，实则借一年下来一共要还20950。",
+          ContentKR = "저 녀석들이 말하는 0.3%를 일이율로 계산하면, 연이율은 무려 109.5%나 돼. 다시 말해서, 저 녀석들한테 10000쿠퍼를 빌리면, 하루에 30쿠퍼만 갚으면 되는 것처럼 보이지만, 실제로는 1년이 지나면 총 20950쿠퍼를 갚게 되는 거야.",
+          DialogueId = 51207812,
+          GUID = "803181A8",
+          NextDialogue = 51207813,
+          SpeakNpcId = 700430
+        },
+        [51207813] = {
+          Content = "这还是不滚利的情况下，那条文我没仔细看，不过我觉得里面应该还有不少坑。",
+          ContentKR = "게다가 이건 복리가 아닌 경우야. 그쪽 약관은 자세히 안 봤는데, 아마 거기에도 함정이 많을 거야.",
+          DialogueId = 51207813,
+          GUID = "803181D2",
+          NextDialogue = 51207814,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk02_End"
+          }
+        },
+        [51207814] = {
+          Content = "哇，你好像很会算术啊，这一长串数字说下来，我都迷糊了。",
+          ContentKR = "우와, 너 계산 진짜 잘하는구나? 그렇게 긴 숫자를 줄줄 말하니까 난 듣기만 해도 헷갈려.",
+          DialogueId = 51207814,
+          GUID = "803181FC",
+          NextDialogue = 51207815,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Shock03_Start"
+          }
+        },
+        [51207815] = {
+          Content = "那当然，我可是百花车站工厂的会计！额……现在不是，以前是。",
+          ContentKR = "당연하지, 난 블룸필드역 공장에서 회계 업무를 담당했거든! 어... 지금은 아니고, 예전에.",
+          DialogueId = 51207815,
+          GUID = "80318226",
+          NextDialogue = 51207816,
+          SpeakNpcId = 700430
+        },
+        [51207816] = {
+          Content = "以前是……是什么意思？",
+          ContentKR = "예전이라는 건... 무슨 뜻이에요?",
+          DialogueId = 51207816,
+          GUID = "80318250",
+          NextDialogue = 51207817,
+          SpeakNpcId = 100001
+        },
+        [51207817] = {
+          Content = "我辞职了！上什么班，忙的要死还分币不挣，还是杰克游戏快活，小牌一抓就能赚大钱！",
+          ContentKR = "퇴사했어! 공장을 뭐 하러 다녀? 죽도록 바쁘기만 하고 돈은 못 벌고. 역시 잭 게임이 최고라니까. 카드 몇 장만 쥐면 큰돈을 벌 수 있거든!",
+          DialogueId = 51207817,
+          GUID = "8031827A",
+          NextDialogue = 51207818,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Explain02_Start"
+          }
+        },
+        [51207818] = {
+          Content = "你不是很擅长算术吗？那对于这种游戏的套路也会很清楚吧，那为什么也会和其他人一样，深陷其中不能自拔？",
+          ContentKR = "그렇게 계산을 잘하면 이런 게임의 수법도 잘 알지 않아요? 왜 당신까지 다른 사람들처럼 이런 함정에 빠져들어서 헤어 나오질 못하는 거예요?",
+          DialogueId = 51207818,
+          GUID = "803182A4",
+          NextDialogue = 51207819,
+          SpeakNpcId = 100001
+        },
+        [51207819] = {
+          Content = "你不懂！正是因为擅长算术，所以我才有信心打败他们——之前是我没想清楚。这次我想明白了！",
+          ContentKR = "넌 몰라! 난 계산을 잘하니까 오히려 저 녀석들을 이길 자신이 있는 거야. 전에는 내가 제대로 생각을 못 했던 거지. 이번엔 확실히 깨달았어!",
+          DialogueId = 51207819,
+          GUID = "803182CE",
+          NextDialogue = 51207820,
+          SpeakNpcId = 700430
+        },
+        [51207820] = {
+          Content = "不过，你的发言听起来相当清醒啊，一般这么清醒的家伙不会来玩这个的。",
+          ContentKR = "그나저나 넌 말하는 게 정신머리가 제대로 된 녀석 같은데? 그런 놈들은 보통 이런 게임 안 하는데 말이야.",
+          DialogueId = 51207820,
+          GUID = "803182F8",
+          NextDialogue = 51207821,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700449:Shock03_End"
+          }
+        },
+        [51207821] = {
+          Content = "我们是为了——",
+          ContentKR = "그건...",
+          DialogueId = 51207821,
+          GUID = "80318322",
+          NextDialogue = 51207822,
+          SpeakNpcId = 700449
+        },
+        [51207822] = {
+          Content = "我们急着用钱！我姐姐被绑架了，需要一大笔赎金。",
+          ContentKR = "사실은 급하게 돈이 필요해요. {性别:누나|언니}가 납치당했는데, 거액의 몸값을 내야 하거든요.",
+          DialogueId = 51207822,
+          GUID = "8031834C",
+          NextDialogue = 51207823,
+          SpeakNpcId = 100001
+        },
+        [51207823] = {
+          Content = "竟然是这样，那你就更应该感谢我了，我救了你的赎金。",
+          ContentKR = "그런 사정이 있었어? 그럼 나한테 더 감사해야겠는걸. 내가 네 돈을 지켜준 거니까.",
+          DialogueId = 51207823,
+          GUID = "80318376",
+          NextDialogue = 51207824,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Explain02_End"
+          }
+        },
+        [51207824] = {
+          Content = "可是这还不够，我手上的钱还不够赎回姐姐。",
+          ContentKR = "하지만 그걸론 부족해요. 제가 가진 돈으론 아직 {性别:누나|언니}를 데려올 수 없거든요.",
+          DialogueId = 51207824,
+          GUID = "803183A0",
+          NextDialogue = 51207825,
+          SpeakNpcId = 100001
+        },
+        [51207825] = {
+          Content = "唉，你也是个可怜人啊。",
+          ContentKR = "에휴, 너도 참 불쌍한 녀석이구나.",
+          DialogueId = 51207825,
+          GUID = "803183CA",
+          NextDialogue = 51207826,
+          SpeakNpcId = 700430
+        },
+        [51207826] = {
+          Content = "呜呜呜……{nickname}真是太苦命了，呜呜呜……",
+          ContentKR = "흑흑흑... {nickname} 정말 너무 불쌍해, 흑흑흑...",
+          DialogueId = 51207826,
+          GUID = "803183F4",
+          NextDialogue = 51207827,
+          SpeakNpcId = 700449
+        },
+        [51207827] = {
+          Content = "别哭别哭，算我今天发善心吧，你们要不要跟着我混，我想办法带你们搞钱！",
+          ContentKR = "울지 마, 뚝. 그럼 오늘은 내가 선행을 좀 해야겠네. 너희 나랑 손잡을래? 내가 큰돈 벌게 해줄게!",
+          DialogueId = 51207827,
+          GUID = "8031841E",
+          NextDialogue = 51207828,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Sigh_Start"
+          }
+        },
+        [51207828] = {
+          Content = "什么办法？",
+          ContentKR = "어떻게요?",
+          DialogueId = 51207828,
+          GUID = "80318448",
+          NextDialogue = 51207829,
+          SpeakNpcId = 100001
+        },
+        [51207829] = {
+          Content = "附耳过来，我和你细说。",
+          ContentKR = "귀 좀 가까이 대봐. 자세히 설명해 줄게.",
+          DialogueId = 51207829,
+          GUID = "80318472",
+          NextDialogue = 51207830,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Sigh_End"
+          }
+        },
+        [51207830] = {
+          Content = "他是我们这里的会计，算是在这工作的人里为数不多读过书，有些小聪明的家伙。",
+          ContentKR = "로만은 여기 회계 담당이었어. 여기서 일하는 사람 중에 몇 안 되는 교육받은 사람이고, 꽤 머리가 잘 돌아가는 녀석이지.",
+          DialogueId = 51207830,
+          GUID = "8031849C",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51207831,
+          SpeakNpcId = 700428
+        },
+        [51207831] = {
+          Content = "以前是个小贵族家庭出身，后来家道中落，就只能来我们这里干些算账的活，不过一个月前，他自己辞职了。",
+          ContentKR = "예전엔 소귀족 집안 출신이었는데, 집안이 몰락하는 바람에 하는 수 없이 여기서 장부 정리하는 일을 하게 된 거야. 그런데 한 달 전에 스스로 그만뒀지.",
+          DialogueId = 51207831,
+          GUID = "803184C6",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51207832,
+          SpeakNpcId = 700428
+        },
+        [51207832] = {
+          Content = "就是因为这个游戏，叫什么？杰克游戏？我没有玩过，但是从工人们口中隐约听过规则，似乎是简单的算术游戏，这家伙辞职就是为了研究这个。",
+          ContentKR = "바로 그 게임 때문에. 이름이... 잭 게임이라던가? 난 해본 적 없지만, 일꾼들한테 대충 규칙은 들었어. 간단한 산수 게임인 것 같던데, 녀석은 그걸 연구하려고 일을 그만뒀어.",
+          DialogueId = 51207832,
+          GUID = "803184F0",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51207833,
+          SpeakNpcId = 700428
+        },
+        [51207833] = {
+          Content = "他自称研究出了一套可以将胜率控制在70%-80%的方法，但需要两人合作，一个负责在牌桌间穿梭，看发牌员发的牌，一个则在点数优势的时候随时上桌。",
+          ContentKR = "승률을 70%~80%로 제어할 방법을 알아냈다고 하더라고. 근데, 두 명이 협력해야 한대. 한 명은 카드 테이블 사이를 돌아다니면서 딜러가 나눠주는 카드를 보고, 다른 한 명은 점수가 유리할 때 바로 테이블에 앉는 거야.",
+          DialogueId = 51207833,
+          GUID = "8031851A",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51207834,
+          SpeakNpcId = 700428
+        },
+        [51207834] = {
+          Content = "带着这套方法，他找了许多人，但大家都不相信他，他只能自己去玩，但很明显，效果不是那么好。",
+          ContentKR = "로만은 이 방법을 써보자면서 여러 사람을 찾아다녔지만, 아무도 믿어주질 않았어. 그래서 혼자 해볼 수밖에 없었는데, 뭐, 당연히 효과가 썩 좋진 않았지.",
+          DialogueId = 51207834,
+          GUID = "80318544",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51207835,
+          SpeakNpcId = 700428
+        },
+        [51207835] = {
+          Content = "我让你找他的原因是，他一定会邀请你一起合作，用他所谓的那套赚钱方法，无论他怎么说，你照做就好。",
+          ContentKR = "그래서 내가 로만을 찾으라고 한 거야. 녀석은 분명히 너한테 같이 협력하자고 제안할 거거든. 자기가 말하는 그 돈 버는 방법으로 말이지. 그러니까 넌 녀석이 뭐라고 하든 그냥 시키는 대로 하면 돼.",
+          DialogueId = 51207835,
+          GUID = "8031856E",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          SpeakNpcId = 700428
+        },
+        [51207901] = {
+          Content = "刚才说的你都听明白了吧？需要你做的很简单，毕竟这个游乐场实在不太正规，不仅用单幅牌，甚至自动洗牌机都没有。",
+          ContentKR = "아까 말한 거 다 알아들었지? 네가 할 일은 간단해. 어차피 이 게임장은 제대로 된 곳이 아니라서, 덱도 싱글이고 자동 셔플기도 없거든.",
+          DialogueId = 51207901,
+          GUID = "80319042",
+          NextOptions = {
+            [1] = 51207902,
+            [2] = 51207904
+          },
+          SpeakNpcId = 700430,
+          bForbidSkipOptions = true
+        },
+        [51207902] = {
+          Content = "听明白了。（进入简单模式，无需亲自判断，直接推进剧情）",
+          ContentKR = "이해했어요. (이지 모드 진입, 직접 판단할 필요 없이 스토리 진행)",
+          DialogueId = 51207902,
+          GUID = "8031906C",
+          NextDialogue = 51207903,
+          Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
+        },
+        [51207903] = {
+          Content = "那就好，我还怕你记不住呢。",
+          ContentKR = "그럼 됐어. 혹시 기억 못 할까 봐 걱정했는데.",
+          DialogueId = 51207903,
+          GUID = "80319096",
+          NextDialogue = 51207913,
+          SpeakNpcId = 700430
+        },
+        [51207904] = {
+          Content = "能再说一遍吗？",
+          ContentKR = "한 번만 더 말해줄 수 있어요?",
+          DialogueId = 51207904,
+          GUID = "803190C0",
+          NextDialogue = 51207905,
+          Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
+        },
+        [51207905] = {
+          Content = "好吧好吧，我再说一遍，这次你可记好了。",
+          ContentKR = "뭐, 그래. 한 번 더 말해줄게. 이번엔 제대로 기억해 둬.",
+          DialogueId = 51207905,
+          GUID = "803190EA",
+          NextDialogue = 51207906,
+          SpeakNpcId = 700430
+        },
+        [51207906] = {
+          Content = "你不需要亲自玩这个游戏，只用帮我悄悄看看牌桌即可。",
+          ContentKR = "네가 직접 게임을 할 필요는 없고, 그냥 나 대신 카드 테이블만 슬쩍 봐주면 돼.",
+          DialogueId = 51207906,
+          GUID = "80319114",
+          NextDialogue = 51207907,
+          SpeakNpcId = 700430
+        },
+        [51207907] = {
+          Content = "所谓杰克游戏就是靠剩余牌堆里“大牌”的比例决定胜负，大牌就是10和以上点数的那些，大牌多对我们有利，因为庄家在17点前必须一直要牌。",
+          ContentKR = "잭 게임이라는 건 남은 카드 더미에 있는 '큰 패'의 비율로 승부가 결정되는 거야. 큰 패는 10 이상의 숫자 카드들을 말하는데, 큰 패가 많으면 우리한테 유리해. 딜러는 17점 전까지 계속 카드를 받아야 하거든.",
+          DialogueId = 51207907,
+          GUID = "8031913E",
+          NextDialogue = 51207908,
+          SpeakNpcId = 700430
+        },
+        [51207908] = {
+          Content = "而牌堆里剩余的大牌越多，庄家叫牌就越容易因为超过21点而输掉，俗称——爆牌。",
+          ContentKR = "그리고 카드 더미에 남은 큰 패가 많을수록, 딜러가 카드를 받다가 21점을 넘어서 지기 쉬워져. 흔히 말하는 버스트지.",
+          DialogueId = 51207908,
+          GUID = "80319168",
+          NextDialogue = 51207909,
+          SpeakNpcId = 700430
+        },
+        [51207909] = {
+          Content = "拿到A，也就是11点，以及任意10点数的大牌就是“超级杰克”，那就有3:2赔率！所以总结来说，大牌多的情况下，我们赢的层面很大。",
+          ContentKR = "11점인 A와 10점짜리 큰 패 하나를 받으면 '슈퍼 잭'이 되는데, 그럼 3:2 배당이야! 그러니까 정리하자면, 큰 패가 많은 상황에서는 우리가 이길 확률이 엄청 높아.",
+          DialogueId = 51207909,
+          GUID = "80319192",
+          NextDialogue = 51207910,
+          SpeakNpcId = 700430
+        },
+        [51207910] = {
+          Content = "每副牌的数量都是固定的，打了小牌，大牌就剩很多，我们需要做的，就是观察每张桌子打过什么牌，找出小牌出得多，大牌剩得多的桌子。",
+          ContentKR = "각 덱의 카드 수는 정해져 있어. 작은 카드가 나가면 큰 카드가 많이 남지. 우리가 할 일은 각 테이블에서 어떤 카드가 나갔는지 관찰해서, 작은 카드가 많이 나가고 큰 카드가 많이 남은 테이블을 찾는 거야.",
+          DialogueId = 51207910,
+          GUID = "803191BC",
+          NextDialogue = 51207911,
+          SpeakNpcId = 700430
+        },
+        [51207911] = {
+          Content = "找到后，按照我们的暗号，你假装伸懒腰抬手，我看到了就过来，上桌——赢钱——退场，一气呵成！",
+          ContentKR = "찾으면 우리 암호대로, 넌 기지개 켜는 척 손을 들어. 내가 그걸 보면 다가가서 테이블에 앉고, 돈 따고, 빠지는 거야. 단숨에 한탕 하는 거지!",
+          DialogueId = 51207911,
+          GUID = "803191E6",
+          NextDialogue = 51207912,
+          SpeakNpcId = 700430
+        },
+        [51207912] = {
+          Content = "很简单吧？记得面色自然些，别被看出来了。",
+          ContentKR = "간단하지? 표정은 자연스럽게, 들키지 않게 조심해.",
+          DialogueId = 51207912,
+          GUID = "80319210",
+          NextDialogue = 51207913,
+          SpeakNpcId = 700430
+        },
+        [51207913] = {
+          Content = "白也可以看牌！我的记忆力可好啦，绝不会记错。",
+          ContentKR = "스노우도 카드 볼 수 있어! 나 기억력 엄청 좋거든, 절대 안 틀려.",
+          DialogueId = 51207913,
+          GUID = "8031923A",
+          NextDialogue = 51207914,
+          SpeakNpcId = 700449
+        },
+        [51207914] = {
+          Content = "那最好，不过你的身高……是不是直接从下面偷看庄家的暗牌比较合适？",
+          ContentKR = "그거야 좋은데, 네 키로는... 아래에서 딜러의 히든카드를 훔쳐보는 게 더 낫지 않을까?",
+          DialogueId = 51207914,
+          GUID = "80319264",
+          NextDialogue = 51207915,
+          SpeakNpcId = 700430
+        },
+        [51207915] = {
+          Content = "什么意思嘛！",
+          ContentKR = "무슨 소리야?!",
+          DialogueId = 51207915,
+          GUID = "8031928E",
+          NextDialogue = 51207916,
+          SpeakNpcId = 700449
+        },
+        [51207916] = {
+          Content = "白，我们出发吧。",
+          ContentKR = "스노우, 우리 출발하자.",
+          DialogueId = 51207916,
+          GUID = "803192B8",
+          SpeakNpcId = 100001
+        },
+        [51208001] = {
+          Content = "（你盯着这张桌子上的牌局看了一会儿，注意到他们发的牌里大小牌基本持平，并不太合适。）",
+          ContentKR = "(이 테이블의 패를 잠시 지켜보니, 나온 카드들 중 큰 카드와 작은 카드가 거의 비슷한 비율이다. 이 테이블은 별로 적합하지 않아 보인다.)",
+          DialogueId = 51208001,
+          GUID = "8031A0AA"
+        },
+        [51208101] = {
+          Content = "（你盯着这张桌子上的牌局看了一会儿，注意到他们发的牌里大牌较多，并不太合适。）",
+          ContentKR = "(이 테이블의 패를 잠시 지켜보니, 나온 카드들 중 큰 카드가 많다. 이 테이블은 별로 적합하지 않아 보인다.)",
+          DialogueId = 51208101,
+          GUID = "8031B112"
+        },
+        [51208201] = {
+          Content = "（你盯着这张桌子上的牌局看了一会儿，注意到他们发的牌里小牌较多，非常适合示意你的队友上桌。）",
+          ContentKR = "(이 테이블의 패를 잠시 지켜보니, 나온 카드들 중 작은 카드가 많다. 동료에게 신호를 보내도 될 것 같다.)",
+          DialogueId = 51208201,
+          GUID = "8031C17A"
+        },
+        [51208203] = {
+          Content = "（罗文收到你的暗示，从人堆中挤了进来，上桌后，开启了他的表演。）",
+          ContentKR = "(로만이 신호를 받고 사람들 사이를 비집고 들어와 자리에 앉더니, 쇼를 시작한다.)",
+          DialogueId = 51208203,
+          GUID = "8031C1CE",
+          NextDialogue = 51208204
+        },
+        [51208204] = {
+          Content = "要牌，明牌9，暗牌5，要牌Q，爆牌，闲家胜！",
+          ContentKR = "딜러 히트, 업카드 9, 홀카드 5, Q 히트로 버스트, 플레이어 승!",
+          DialogueId = 51208204,
+          GUID = "8031C1F8",
+          NextDialogue = 51208205,
+          SpeakNpcId = 700435
+        },
+        [51208205] = {
+          Content = "罗文，你小子今天运气不错啊！",
+          ContentKR = "로만, 너 오늘 운이 좋은데?",
+          DialogueId = 51208205,
+          GUID = "8031C222",
+          NextDialogue = 51208206,
+          SpeakNpcId = 700436
+        },
+        [51208206] = {
+          Content = "那当然，看着吧，我可要赢到盆满钵满才会退场！",
+          ContentKR = "당연하지, 잘 보라고. 대박 날 때까지 안 나갈 거니까!",
+          DialogueId = 51208206,
+          GUID = "8031C24C",
+          SpeakNpcId = 700430
+        },
+        [51208301] = {
+          Content = "（你盯着这张桌子上的牌局看了一会儿，注意到他们发的牌里小牌较多，非常适合示意你的队友上桌。）",
+          ContentKR = "(이 테이블의 패를 잠시 지켜보니, 나온 카드들 중 작은 카드가 많다. 동료에게 신호를 보내도 될 것 같다.)",
+          DialogueId = 51208301,
+          GUID = "8031D1E2"
+        },
+        [51208303] = {
+          Content = "庄家明牌A，暗牌8，闲家手上的牌数为A+K=21，超级杰克，闲家胜！",
+          ContentKR = "딜러 업카드 A, 홀카드 8, 플레이어의 패는 A, K로 21점, 슈퍼 잭, 플레이어 승!",
+          DialogueId = 51208303,
+          GUID = "8031D236",
+          NextDialogue = 51208304,
+          SpeakNpcId = 700435
+        },
+        [51208304] = {
+          Content = "喂罗文，开玩笑的吧，你的手气可真是爆了。",
+          ContentKR = "야, 로만, 뭐냐? 오늘 끗발 잘 받는데?",
+          DialogueId = 51208304,
+          GUID = "8031D260",
+          NextDialogue = 51208305,
+          SpeakNpcId = 700436
+        },
+        [51208305] = {
+          Content = "碰巧而已，你来你也行。",
+          ContentKR = "오늘 운이 좋네. 너도 해봐.",
+          DialogueId = 51208305,
+          GUID = "8031D28A",
+          SpeakNpcId = 700430
+        },
+        [51208401] = {
+          Content = "（你盯着这张桌子上的牌局看了一会儿，注意到他们发的牌里小牌较多，非常适合示意你的队友上桌。）",
+          ContentKR = "(이 테이블의 패를 잠시 지켜보니, 나온 카드들 중 작은 카드가 많다. 동료에게 신호를 보내도 될 것 같다.)",
+          DialogueId = 51208401,
+          GUID = "8031E24A"
+        },
+        [51208403] = {
+          Content = "庄家明牌4，暗牌J，要牌9，爆牌，闲家胜。",
+          ContentKR = "딜러 업카드 4, 홀카드 J, 9 히트로 버스트, 플레이어 승.",
+          DialogueId = 51208403,
+          GUID = "8031E29E",
+          NextDialogue = 51208404,
+          SpeakNpcId = 700435
+        },
+        [51208404] = {
+          Content = "什么情况？！罗文！你**今天必须请我们都喝一杯！",
+          ContentKR = "뭐야 이거?! 로만! 너 ** 오늘 꼭 한 잔씩 돌려!",
+          DialogueId = 51208404,
+          GUID = "8031E2C8",
+          NextDialogue = 51208405,
+          SpeakNpcId = 700436
+        },
+        [51208405] = {
+          Content = "晚点吧！晚点一定！",
+          ContentKR = "나중에! 그때 가서 보자고!",
+          DialogueId = 51208405,
+          GUID = "8031E2F2",
+          SpeakNpcId = 700430
+        },
+        [51208501] = {
+          Content = "（你继续游荡在桌子间，但却并没发现特别适合叫罗文来的出牌方式，你们交换了一个眼神，默契地一齐离开了。）",
+          ContentKR = "(테이블 사이를 계속 돌아다녔지만, 로만을 부를 만한 테이블이 나타나지 않는다. 우리는 눈빛을 교환하고, 약속이라도 한 듯 함께 자리를 떠났다.)",
+          DialogueId = 51208501,
+          GUID = "8031F2B2"
+        },
+        [51208601] = {
+          Content = "（你靠近这张桌子，默不作声地开始观察发牌记录……）",
+          ContentKR = "(이 테이블에 다가가 말없이 카드 기록을 관찰하기 시작한다...)",
+          DialogueId = 51208601,
+          GUID = "8032031A",
+          NextDialogue = 51208602
+        },
+        [51208602] = {
+          Content = "庄家明牌7，暗牌Q，闲家三张停牌2+J+6，18点，闲家胜！",
+          ContentKR = "딜러 업카드 7, 홀카드 Q, 플레이어는 2, J, 6 세 장으로 스탠드, 18점, 플레이어 승!",
+          DialogueId = 51208602,
+          GUID = "80320344",
+          NextDialogue = 51208603,
+          SpeakNpcId = 700437
+        },
+        [51208603] = {
+          Content = "嘿嘿~再来再来！",
+          ContentKR = "헤헤~ 한 판 더 한 판 더!",
+          DialogueId = 51208603,
+          GUID = "8032036E",
+          NextDialogue = 51208604,
+          SpeakNpcId = 700438
+        },
+        [51208604] = {
+          Content = "庄家明牌5，暗牌6，要牌9，20点，闲家三张停牌3+K+4，17点，闲家输！",
+          ContentKR = "딜러 업카드 5, 홀카드 6, 9 히트로 20점, 플레이어는 3, K, 4 세 장으로 스탠드해 17점, 플레이어 패!",
+          DialogueId = 51208604,
+          GUID = "80320398",
+          NextDialogue = 51208605,
+          SpeakNpcId = 700437
+        },
+        [51208605] = {
+          Content = "*！再来！",
+          ContentKR = "빌*먹을! 다시!",
+          DialogueId = 51208605,
+          GUID = "803203C2",
+          NextDialogue = 51208606,
+          SpeakNpcId = 700438
+        },
+        [51208606] = {
+          Content = "庄家明牌9，暗牌10，19点。闲家两张停牌，8+A，以11点算，19点，平局！",
+          ContentKR = "딜러 업카드 9, 홀카드 10으로 19점, 플레이어는 8, A 두 장으로 스탠드, A를 11점으로 계산해 19점, 무승부!",
+          DialogueId = 51208606,
+          GUID = "803203EC",
+          NextDialogue = 51208607,
+          SpeakNpcId = 700437
+        },
+        [51208607] = {
+          Content = "啧……就差一点！",
+          ContentKR = "쳇... 이기는 거였는데!",
+          DialogueId = 51208607,
+          GUID = "80320416",
+          NextDialogue = 51208608,
+          SpeakNpcId = 700438
+        },
+        [51208608] = {
+          Content = "小仆从，这张桌子上的情况适合叫罗文过来吗？",
+          ContentKR = "시종, 이 테이블은 로만을 부를 만한 상황이야?",
+          DialogueId = 51208608,
+          GUID = "80320440",
+          NextDialogue = 51208609,
+          SpeakNpcId = 700449
+        },
+        [51208609] = {
+          Content = "叫罗文过来。",
+          ContentKR = "로만을 부른다.",
+          DialogueId = 51208609,
+          GUID = "8032046A",
+          NextDialogue = 51208610
+        },
+        [51208610] = {
+          Content = "唔……可是我觉得好像不太合适呢，剩下牌数似乎还是小牌偏多，咱们要不要再看看。",
+          ContentKR = "음... 난 별로인 거 같은데? 남은 카드에 아직 작은 숫자가 많은 것 같아. 좀 더 지켜볼까?",
+          DialogueId = 51208610,
+          GUID = "80320494",
+          NextDialogue = 51208611,
+          SpeakNpcId = 700449
+        },
+        [51208611] = {
+          Content = "好的。",
+          ContentKR = "그래.",
+          DialogueId = 51208611,
+          GUID = "803204BE",
+          NextDialogue = 51208612,
+          SpeakNpcId = 100001
+        },
+        [51208612] = {
+          Content = "不叫。",
+          ContentKR = "부르지 않는다.",
+          DialogueId = 51208612,
+          GUID = "803204E8",
+          NextDialogue = 51208613
+        },
+        [51208613] = {
+          Content = "不太合适，再看看吧。",
+          ContentKR = "별로야, 좀 더 지켜보자.",
+          DialogueId = 51208613,
+          GUID = "80320512",
+          NextDialogue = 51208614,
+          SpeakNpcId = 100001
+        },
+        [51208614] = {
+          Content = "回忆刚才这桌牌的点数。",
+          ContentKR = "방금 테이블의 카드 숫자를 떠올린다.",
+          DialogueId = 51208614,
+          GUID = "8032053C",
+          NextDialogue = 51208615
+        },
+        [51208615] = {
+          Content = "（这张桌子上已经出现了许多大牌，10JQKA都出现过了，似乎并不合适……）",
+          ContentKR = "(이 테이블에서는 이미 큰 패가 많이 나왔어. 10, J, Q, K, A가 전부 나왔으니까 별로 적합하지 않은 것 같은데...)",
+          DialogueId = 51208615,
+          GUID = "80320566",
+          NextDialogue = 51208616,
+          SpeakNpcId = 100001
+        },
+        [51208616] = {
+          Content = "回忆罗文的话。",
+          ContentKR = "로만의 말을 떠올린다.",
+          DialogueId = 51208616,
+          GUID = "80320590",
+          NextDialogue = 51208617
+        },
+        [51208617] = {
+          Content = "每副牌的数量都是固定的，打了小牌，大牌就剩很多，我们需要做的，就是观察每张桌子打过什么牌，找出小牌出得多，大牌剩得多的桌子。",
+          ContentKR = "각 덱의 카드 수는 정해져 있어. 작은 카드가 나가면 큰 카드가 많이 남지. 우리가 할 일은 각 테이블에서 어떤 카드가 나갔는지 관찰해서, 작은 카드가 많이 나가고 큰 카드가 많이 남은 테이블을 찾는 거야.",
+          DialogueId = 51208617,
+          GUID = "803205BA",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207910.T_Story_Recall_51207910'",
+          NextDialogue = 51208618,
+          SpeakNpcId = 700430
+        },
+        [51208618] = {
+          Content = "好~",
+          ContentKR = "좋아~",
+          DialogueId = 51208618,
+          GUID = "803205E4",
+          SpeakNpcId = 700449
+        },
+        [51208701] = {
+          Content = "（你靠近这张桌子，默不作声地开始观察发牌记录……）",
+          ContentKR = "(이 테이블에 다가가 말없이 카드 기록을 관찰하기 시작한다...)",
+          DialogueId = 51208701,
+          GUID = "80321382",
+          NextDialogue = 51208702
+        },
+        [51208702] = {
+          Content = "庄家明牌8，暗牌7，要牌2，17点，闲家三张停牌9+7+2，18点，闲家胜！",
+          ContentKR = "딜러 업카드 8, 홀카드 7, 2 히트로 17점, 플레이어는 9, 7, 2 세 장으로 스탠드해 18점, 플레이어 승!",
+          DialogueId = 51208702,
+          GUID = "803213AC",
+          NextDialogue = 51208703,
+          SpeakNpcId = 700437
+        },
+        [51208703] = {
+          Content = "今天赢了钱可要好好犒劳自己一顿！",
+          ContentKR = "오늘 돈 땄으니까 맛있는 거 많이 먹어야지!",
+          DialogueId = 51208703,
+          GUID = "803213D6",
+          NextDialogue = 51208704,
+          SpeakNpcId = 700439
+        },
+        [51208704] = {
+          Content = "庄家明牌2，暗牌6，要牌9，17点，闲家三张停牌6+5+4，15点，闲家输！",
+          ContentKR = "딜러 업카드 2, 홀카드 6, 9 히트로 17점, 플레이어는 6, 5, 4 세 장으로 스탠드해 15점, 플레이어 패!",
+          DialogueId = 51208704,
+          GUID = "80321400",
+          NextDialogue = 51208705,
+          SpeakNpcId = 700437
+        },
+        [51208705] = {
+          Content = "早知道多要一张了！",
+          ContentKR = "아, 한 장 더 받을 걸!",
+          DialogueId = 51208705,
+          GUID = "8032142A",
+          NextDialogue = 51208706,
+          SpeakNpcId = 700439
+        },
+        [51208706] = {
+          Content = "庄家明牌4，暗牌2，要牌9，再要牌7，22点，爆牌，闲家三张停牌3+5+9，17点，闲家胜！",
+          ContentKR = "딜러 업카드 4, 홀카드 2, 9 히트, 다시 7 히트로 22점 버스트, 플레이어는 3, 5, 9 세 장으로 스탠드해 17점, 플레이어 승!",
+          DialogueId = 51208706,
+          GUID = "80321454",
+          NextDialogue = 51208707,
+          SpeakNpcId = 700437
+        },
+        [51208707] = {
+          Content = "好耶！我不玩了！我收手！全赚回来了！",
+          ContentKR = "좋아! 이제 그만! 난 본전 찾았으니까 손 털래!",
+          DialogueId = 51208707,
+          GUID = "8032147E",
+          NextDialogue = 51208708,
+          SpeakNpcId = 700439
+        },
+        [51208708] = {
+          Content = "小仆从，这张桌子上的情况适合叫罗文过来吗？",
+          ContentKR = "시종, 이 테이블은 로만을 부를 만한 상황이야?",
+          DialogueId = 51208708,
+          GUID = "803214A8",
+          NextDialogue = 51208709,
+          SpeakNpcId = 700449
+        },
+        [51208709] = {
+          Content = "叫罗文过来。",
+          ContentKR = "로만을 부른다.",
+          DialogueId = 51208709,
+          GUID = "803214D2",
+          NextDialogue = 51208710
+        },
+        [51208710] = {
+          Content = "这几局基本没有动到大牌，剩下的局面非常好，快叫罗文过来吧。",
+          ContentKR = "이 몇 판은 큰 패가 거의 안 나왔어. 남은 판세가 아주 좋으니까 빨리 로만을 불러.",
+          DialogueId = 51208710,
+          GUID = "803214FC",
+          NextDialogue = 51208711,
+          SpeakNpcId = 100001
+        },
+        [51208711] = {
+          Content = "不叫。",
+          ContentKR = "부르지 않는다.",
+          DialogueId = 51208711,
+          GUID = "80321526",
+          NextDialogue = 51208712
+        },
+        [51208712] = {
+          Content = "唔？不叫吗？可是这几局一张大牌都没有用到诶，那不是说明后面的牌堆里有很多张大牌吗？",
+          ContentKR = "응? 안 불러? 근데 이 몇 판 동안 큰 패가 하나도 안 나왔잖아. 그럼 뒤에 남은 패 더미에 큰 패가 많다는 거 아냐?",
+          DialogueId = 51208712,
+          GUID = "80321550",
+          NextDialogue = 51208713,
+          SpeakNpcId = 700449
+        },
+        [51208713] = {
+          Content = "好像是这个道理，那我叫他来。",
+          ContentKR = "듣고 보니 그렇네. 그럼 불러올게.",
+          DialogueId = 51208713,
+          GUID = "8032157A",
+          NextDialogue = 51208714,
+          SpeakNpcId = 100001
+        },
+        [51208714] = {
+          Content = "回忆刚才这桌牌的点数。",
+          ContentKR = "방금 테이블의 카드 숫자를 떠올린다.",
+          DialogueId = 51208714,
+          GUID = "803215A4",
+          NextDialogue = 51208715
+        },
+        [51208715] = {
+          Content = "（这张桌子上并未出现过大牌……似乎非常合适。）",
+          ContentKR = "(이 테이블에서는 큰 패가 안 나왔어... 아주 좋은 것 같은데.)",
+          DialogueId = 51208715,
+          GUID = "803215CE",
+          NextDialogue = 51208716,
+          SpeakNpcId = 100001
+        },
+        [51208716] = {
+          Content = "回忆罗文的话。",
+          ContentKR = "로만의 말을 떠올린다.",
+          DialogueId = 51208716,
+          GUID = "803215F8",
+          NextDialogue = 51208717
+        },
+        [51208717] = {
+          Content = "每副牌的数量都是固定的，打了小牌，大牌就剩很多，我们需要做的，就是观察每张桌子打过什么牌，找出小牌出得多，大牌剩得多的桌子。",
+          ContentKR = "각 덱의 카드 수는 정해져 있어. 작은 카드가 나가면 큰 카드가 많이 남지. 우리가 할 일은 각 테이블에서 어떤 카드가 나갔는지 관찰해서, 작은 카드가 많이 나가고 큰 카드가 많이 남은 테이블을 찾는 거야.",
+          DialogueId = 51208717,
+          GUID = "80321622",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207910.T_Story_Recall_51207910'",
+          SpeakNpcId = 700430
+        },
+        [51208801] = {
+          Content = "（你们游荡在牌桌间，很快赚了个盆满钵满，直到各桌洗牌，再没寻找到合适的时机，你们交换了一个眼神，默契地一齐离开了。）",
+          ContentKR = "(일행은 카드 테이블 사이를 돌아다니며 순식간에 돈을 쓸어 담았다. 각 테이블에서 카드를 섞게 되어 더는 적절한 타이밍을 찾지 못하게 되자, 일행은 눈빛을 교환하고 약속이라도 한 듯 함께 자리를 떠났다.)",
+          DialogueId = 51208801,
+          GUID = "803223EA"
+        },
+        [51208901] = {
+          Content = "好家伙！没想到这么轻松，除了有几把霉得没边，其他时候都稳的很！纯赚！",
+          ContentKR = "대박! 이렇게 쉬울 줄은 몰랐네. 몇 판은 운이 최악이었지만, 나머지는 전부 물 흐르듯 순조로웠어! 제대로 벌었다고!",
+          DialogueId = 51208901,
+          GUID = "80323452",
+          NextDialogue = 51208902,
+          SpeakNpcId = 700430
+        },
+        [51208902] = {
+          Content = "就是这后面没有适合入场的时机了，不然……算啦！反正大门随时为我们敞开，先出去喝两杯，再回来看看机会吧！",
+          ContentKR = "다만 그 뒤로는 적절한 입장 타이밍이 없더라고. 아니면... 뭐 됐어! 어차피 문은 언제든 우리한테 열려 있으니까, 일단 나가서 한잔하고 다시 들어와서 기회를 보자고!",
+          DialogueId = 51208902,
+          GUID = "8032347C",
+          SpeakNpcId = 700430
+        },
+        [51209001] = {
+          Content = "（罗文让你和白在此处稍等，没过一会，他端着三杯冒着热气的杯子兴致勃勃地走了回来。）",
+          ContentKR = "(로만은 당신과 스노우에게 잠시 기다리라고 하더니, 얼마 지나지 않아 김이 모락모락 나는 컵 세 개를 들고 신이 나서 돌아왔다.)",
+          DialogueId = 51209001,
+          GUID = "803244BA",
+          NextDialogue = 51209002
+        },
+        [51209002] = {
+          Content = "给！这是我前段时间从那里赢的钱买的好东西，内城老爷们喝的呢，咱外面可基本喝不到。",
+          ContentKR = "자! 이건 내가 전에 딴 돈으로 산 거야. 내성의 나리들이 마시는 건데, 밖에서는 거의 구할 수가 없거든.",
+          DialogueId = 51209002,
+          GUID = "803244E4",
+          NextDialogue = 51209003,
+          SpeakNpcId = 700430
+        },
+        [51209003] = {
+          Content = "我一直没舍得喝，也没舍得卖，毕竟机会难得，不过今天看在咱们赢了钱，怎么也得和你这个大功臣喝上一杯，是不是？",
+          ContentKR = "귀한 거라서 지금까지 계속 안 마시고 놔뒀는데, 팔자니 또 아깝더라고. 근데 오늘은 우리가 돈을 땄으니까, 일등공신이랑 한잔해야지. 안 그래?",
+          DialogueId = 51209003,
+          GUID = "8032450E",
+          NextDialogue = 51209004,
+          SpeakNpcId = 700430
+        },
+        [51209004] = {
+          Content = "哦对了，我也没忘了你，你这小皎皎，来，热巧克力，天花板区那边的小孩想喝也喝不到呢！",
+          ContentKR = "아 맞다, 물론 너도 잊지 않았어, 꼬마 루나. 자, 핫초코야. 천장 구역 애들은 마시고 싶어도 못 마시는 거라고!",
+          DialogueId = 51209004,
+          GUID = "80324538",
+          NextDialogue = 51209005,
+          SpeakNpcId = 700430
+        },
+        [51209005] = {
+          Content = "说了好多遍，白不是小孩子！",
+          ContentKR = "몇 번이나 말했잖아. 스노우는 어린애가 아니라구!",
+          DialogueId = 51209005,
+          GUID = "80324562",
+          NextDialogue = 51209006,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Angry01_Start"
+          }
+        },
+        [51209006] = {
+          Content = "不过……好吧看在热巧克力的面子上我先原谅你一下。",
+          ContentKR = "그치만... 뭐, 핫초코 봐서 일단 용서해 줄게.",
+          DialogueId = 51209006,
+          GUID = "8032458C",
+          NextOptions = {
+            [1] = 51209007,
+            [2] = 51209009
+          },
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Angry01_End"
+          }
+        },
+        [51209007] = {
+          Content = "（接过杯子喝一口。）",
+          ContentKR = "(컵을 받아 한 모금 마신다.)",
+          DialogueId = 51209007,
+          GUID = "803245B6",
+          NextDialogue = 51209008
+        },
+        [51209008] = {
+          Content = "（你接过杯子，自然地抿了一口，原来是热红酒，你品不出好坏，只觉得喝下去后暖洋洋的。）",
+          ContentKR = "(컵을 받아 자연스럽게 한 모금 마셔 보니, 뱅쇼였다. 품질은 구분할 줄 모르지만, 마시고 나니 몸이 따뜻해진다.)",
+          DialogueId = 51209008,
+          GUID = "803245E0",
+          NextDialogue = 51209011
+        },
+        [51209009] = {
+          Content = "（接过杯子放在一边。）",
+          ContentKR = "(컵을 받아 옆에 둔다.)",
+          DialogueId = 51209009,
+          GUID = "8032460A",
+          NextDialogue = 51209010
+        },
+        [51209010] = {
+          Content = "（你没有喝，罗文并不在意，他自顾自惬意地品了起来，不时发出咂吧咂吧的声音，似乎沉醉其中。）",
+          ContentKR = "(마시지 않는다. 하지만 로만은 신경 쓰지 않고 혼자 여유롭게 음미하며, 음료의 깊은 풍미에 빠진 듯 가끔 들이키는 소리를 낸다.)",
+          DialogueId = 51209010,
+          GUID = "80324634",
+          NextDialogue = 51209011
+        },
+        [51209011] = {
+          Content = "你说啊，人是为了什么而活的呢？",
+          ContentKR = "저기 말이야, 사람은 뭘 위해 사는 걸까?",
+          DialogueId = 51209011,
+          GUID = "8032465E",
+          NextOptions = {
+            [1] = 51209012,
+            [2] = 51209014,
+            [3] = 51209016,
+            [4] = 51209018
+          },
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk01_Start"
+          }
+        },
+        [51209012] = {
+          Content = "发财。",
+          ContentKR = "돈 벌려고요.",
+          DialogueId = 51209012,
+          GUID = "80324688",
+          ImprPlusId = 1001,
+          NextDialogue = 51209013
+        },
+        [51209013] = {
+          Content = "发财……是啊……发财……去游乐场赚大钱……",
+          ContentKR = "돈... 그래... 돈... 게임장 가서 대박 내고...",
+          DialogueId = 51209013,
+          GUID = "803246B2",
+          NextDialogue = 51209020,
+          SpeakNpcId = 700430
+        },
+        [51209014] = {
+          Content = "拯救世界。",
+          ContentKR = "세상을 구하려고요.",
+          DialogueId = 51209014,
+          GUID = "803246DC",
+          ImprPlusId = 1002,
+          NextDialogue = 51209015
+        },
+        [51209015] = {
+          Content = "哈哈哈哈！这回答也太冠冕堂皇了！正经得有些好笑。",
+          ContentKR = "하하하하! 아주 거창한 대답인데! 진지해서 오히려 웃기네.",
+          DialogueId = 51209015,
+          GUID = "80324706",
+          NextDialogue = 51209020,
+          SpeakNpcId = 700430
+        },
+        [51209016] = {
+          Content = "需要保护的人。",
+          ContentKR = "지켜야 할 사람을 위해서요.",
+          DialogueId = 51209016,
+          GUID = "80324730",
+          ImprPlusId = 1004,
+          NextDialogue = 51209017
+        },
+        [51209017] = {
+          Content = "嗯……是啊，你的姐姐，你身边的这个皎皎，我的老婆和孩子们……",
+          ContentKR = "음... 맞아, 넌 너희 {性别:누나|언니}랑 네 곁에 있는 이 루나를, 난 아내와 아이들을...",
+          DialogueId = 51209017,
+          GUID = "8032475A",
+          NextDialogue = 51209020,
+          SpeakNpcId = 700430
+        },
+        [51209018] = {
+          Content = "活一天算一天。",
+          ContentKR = "그냥 하루하루 사는 거죠.",
+          DialogueId = 51209018,
+          GUID = "80324784",
+          ImprPlusId = 1005,
+          NextDialogue = 51209019
+        },
+        [51209019] = {
+          Content = "对！没错！活一天算一天，敬今天又活过一天！",
+          ContentKR = "맞아! 그래! 하루하루 살아야지. 오늘도 또 살아남은 것에 건배!",
+          DialogueId = 51209019,
+          GUID = "803247AE",
+          NextDialogue = 51209020,
+          SpeakNpcId = 700430
+        },
+        [51209020] = {
+          Content = "其实……我以前不是这里的人。",
+          ContentKR = "사실... 난 원래 여기 사람이 아니야.",
+          DialogueId = 51209020,
+          GUID = "803247D8",
+          NextDialogue = 51209021,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk01_End"
+          }
+        },
+        [51209021] = {
+          Content = "我以前啊，可是内城的老爷，这种酒我想喝多少就有多少，火车也是想坐就坐，皇都想去就能去。",
+          ContentKR = "예전의 난 말이지, 내성의 도련님이었어. 이런 술은 마시고 싶은 만큼 마실 수 있었고, 기차도 타고 싶으면 타고, 황성도 가고 싶으면 갈 수 있었지.",
+          DialogueId = 51209021,
+          GUID = "80324802",
+          NextDialogue = 51209022,
+          SpeakNpcId = 700430
+        },
+        [51209022] = {
+          Content = "那时候每天什么都不想，两眼一睁就等着仆人来给我穿衣服，递漱口水，整理仪容，出门踩着仆人的肩膀上车，下车还有人给我面前铺软垫。",
+          ContentKR = "그땐 매일 아무 생각도 안 했어. 눈만 뜨면 시종이 와서 옷 입혀주고, 양칫물 건네주고, 용모 정리해 주고, 외출할 땐 시종 어깨를 밟고 차에 올라타고, 내릴 땐 또 누가 내 앞에 쿠션을 깔아줬거든.",
+          DialogueId = 51209022,
+          GUID = "8032482C",
+          NextDialogue = 51209023,
+          SpeakNpcId = 700430
+        },
+        [51209023] = {
+          Content = "你是不是觉得我在吹牛？一个火车站的会计，还说自己以前是老爷，哈哈！",
+          ContentKR = "허풍 떠는 것 같지? 기차역 회계 담당 주제에, 자기가 예전엔 도련님이었다고 하니 말이야, 하하!",
+          DialogueId = 51209023,
+          GUID = "80324856",
+          NextDialogue = 51209024,
+          SpeakNpcId = 700430
+        },
+        [51209024] = {
+          Content = "白觉得你好像不是在吹牛……",
+          ContentKR = "스노우가 보기엔 허풍은 아닌 것 같은데...",
+          DialogueId = 51209024,
+          GUID = "80324880",
+          NextDialogue = 51209025,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Explain02_Start"
+          }
+        },
+        [51209025] = {
+          Content = "哦？你这小皎皎有点意思哦。",
+          ContentKR = "오? 꼬마 루나는 제법인데?",
+          DialogueId = 51209025,
+          GUID = "803248AA",
+          NextDialogue = 51209026,
+          SpeakNpcId = 700430
+        },
+        [51209026] = {
+          Content = "吹牛的人，不会在说起那些话的时候，露出伤感的表情。",
+          ContentKR = "허풍 치는 사람은 그런 말을 할 때 슬픈 표정을 짓지 않거든.",
+          DialogueId = 51209026,
+          GUID = "803248D4",
+          NextDialogue = 51209027,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Explain02_End"
+          }
+        },
+        [51209027] = {
+          Content = "呵呵……要是真在吹牛就好啦……",
+          ContentKR = "하하... 정말 허풍이었으면 차라리 좋겠네...",
+          DialogueId = 51209027,
+          GUID = "803248FE",
+          NextDialogue = 51209028,
+          SpeakNpcId = 700430
+        },
+        [51209028] = {
+          Content = "你为什么会沦落到这里？",
+          ContentKR = "어쩌다 여기까지 오게 된 거예요?",
+          DialogueId = 51209028,
+          GUID = "80324928",
+          NextDialogue = 51209029,
+          SpeakNpcId = 100001
+        },
+        [51209029] = {
+          Content = "原因很多。不过最重要的是我家里唯一一个能赚钱的老爹做生意失败，赔了钱不说，自此一蹶不振，给自己气出重病，两眼一闭，死了！",
+          ContentKR = "이유야 많지. 하지만 제일 큰 이유는 우리 집에서 유일하게 돈을 벌던 아버지가 사업에 실패해 돈을 날리고, 그 뒤로 완전히 무너져서 병으로 '끽'하고 죽었다는 거야!",
+          DialogueId = 51209029,
+          GUID = "80324952",
+          NextDialogue = 51209030,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk02_Start"
+          }
+        },
+        [51209030] = {
+          Content = "后面的事就像小说里面写的那样，宅子没了，珠宝没了，什么都没了，剩下的只有要债的债主和要命的亲戚。",
+          ContentKR = "그 뒤의 일은 소설 같은 데 나오는 거랑 똑같아. 저택도 없어지고, 보석도 없어지고, 모든 게 다 없어졌어. 남은 건 빚쟁이들과 죽일 듯이 달려드는 친척들뿐이었지.",
+          DialogueId = 51209030,
+          GUID = "8032497C",
+          NextDialogue = 51209031,
+          SpeakNpcId = 700430
+        },
+        [51209031] = {
+          Content = "我带着妻子和孩子来了外城，可他们怎么能适应这里的生活呢？我得想办法养他们，那要钱……要很多钱……",
+          ContentKR = "난 아내와 아이를 데리고 외성으로 왔지만, 그런다고 이곳 생활에 적응이 되겠어? 난 가족들을 먹여 살려야 했고, 그러려면 돈이 필요했어... 아주 많이...",
+          DialogueId = 51209031,
+          GUID = "803249A6",
+          NextDialogue = 51209032,
+          SpeakNpcId = 700430
+        },
+        [51209032] = {
+          Content = "我这点工钱，养活自己都成问题，更别说给他们优渥的生活。",
+          ContentKR = "내 쥐꼬리만 한 월급으로는 나 하나 먹고 살기도 빠듯한데, 가족들한테 풍족한 생활을 주는 건 턱도 없지.",
+          DialogueId = 51209032,
+          GUID = "803249D0",
+          NextDialogue = 51209033,
+          SpeakNpcId = 700430
+        },
+        [51209033] = {
+          Content = "所以你玩这种“游戏”是为了养家？",
+          ContentKR = "그래서 이런 '게임'을 하는 게 가족을 위해서라는 거예요?",
+          DialogueId = 51209033,
+          GUID = "803249FA",
+          NextDialogue = 51209034,
+          SpeakNpcId = 700449
+        },
+        [51209034] = {
+          Content = "不是啊，她们早跑了，也不知道去了哪，可能回老家了吧。她是迪斯玛尼亚人，不怪她们，是我没用。",
+          ContentKR = "아니, 가족들은 진작에 떠났어. 어디로 갔는지도 몰라. 아마 고향으로 돌아갔겠지. 아내는 디즈마니아 사람이었거든. 가족들을 탓하진 않아, 내가 무능한 거니까.",
+          DialogueId = 51209034,
+          GUID = "80324A24",
+          NextDialogue = 51209035,
+          SpeakNpcId = 700430
+        },
+        [51209035] = {
+          Content = "家人都走了，你还玩这个做什么？",
+          ContentKR = "그럼 가족도 다 떠났는데, 아직도 이걸 하는 이유가 뭐예요?",
+          DialogueId = 51209035,
+          GUID = "80324A4E",
+          NextDialogue = 51209036,
+          SpeakNpcId = 100001
+        },
+        [51209036] = {
+          Content = "嗯……是啊，做什么呢……不知道啊……反正总想着赚钱，赚很多很多钱，最好比我暴毙的老爹赚的还多，扬眉吐气，回内城继续当老爷！",
+          ContentKR = "음... 그러게, 뭐 하는 걸까...? 모르겠어... 어쨌든 돈을 벌고 싶어. 엄청나게 많이, 죽은 우리 아버지보다 더 많이 벌어서, 기세 좋게 내성으로 돌아가 다시 도련님 노릇 하는 거지!",
+          DialogueId = 51209036,
+          GUID = "80324A78",
+          NextDialogue = 51209037,
+          SpeakNpcId = 700430
+        },
+        [51209037] = {
+          Content = "可是……这种游戏并不好。",
+          ContentKR = "하지만... 이런 게임은 좋지 않아요.",
+          DialogueId = 51209037,
+          GUID = "80324AA2",
+          NextDialogue = 51209038,
+          SpeakNpcId = 100001
+        },
+        [51209038] = {
+          Content = "呵呵呵哈哈~你……你也知道啊？那你还跟着我玩？",
+          ContentKR = "하하하하! 너도 알고 있었네? 그럼 넌 왜 나랑 이 짓을 하는 건데?",
+          DialogueId = 51209038,
+          GUID = "80324ACC",
+          NextDialogue = 51209039,
+          SpeakNpcId = 700430
+        },
+        [51209039] = {
+          Content = "我们没办法呀，我们要，要攒赎金！",
+          ContentKR = "우린 어쩔 수 없어! 우, 우린 몸값을 모아야 한다니까!",
+          DialogueId = 51209039,
+          GUID = "80324AF6",
+          NextDialogue = 51209040,
+          SpeakNpcId = 700449
+        },
+        [51209040] = {
+          Content = "你们没办法，我也没办法呀~",
+          ContentKR = "너희가 어쩔 수 없듯이, 나도 어쩔 수가 없어.",
+          DialogueId = 51209040,
+          GUID = "80324B20",
+          NextDialogue = 51209041,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk02_End"
+          }
+        },
+        [51209041] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51209041,
+          GUID = "80324B4A",
+          NextDialogue = 51209042,
+          SpeakNpcId = 100001
+        },
+        [51209042] = {
+          Content = "其实输掉压根不可怕吧？可怕的是输了之后，自甘堕落，连绝地翻盘的勇气和决心都没有了，你说是不是？",
+          ContentKR = "사실 지는 건 하나도 무섭지 않아. 무서운 건 진 다음에 자포자기해서 판을 뒤집을 용기와 결심마저 잃어버리는 거지, 안 그래?",
+          DialogueId = 51209042,
+          GUID = "80324B74",
+          NextDialogue = 51209043,
+          SpeakNpcId = 700430
+        },
+        [51209043] = {
+          Content = "照做？可是如果他带着我输了怎么办？",
+          ContentKR = "시키는 대로요? 근데 만약 그 사람이 날 지게 만들면 어떡해요?",
+          DialogueId = 51209043,
+          GUID = "80324B9E",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207735.T_Story_Recall_51207735'",
+          NextDialogue = 51209044,
+          SpeakNpcId = 100001
+        },
+        [51209044] = {
+          Content = "输就对了！我就是要他输，最好输到一败涂地，输到一蹶不振，输到再也玩不起。",
+          ContentKR = "그럼 져 버려! 내가 원하는 게 바로 그 녀석이 지는 거야. 완전히 박살 나서, 재기불능이 될 정도로, 다시는 못 할 정도로 져 버리는 게 최고야.",
+          DialogueId = 51209044,
+          GUID = "80324BC8",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51209045,
+          SpeakNpcId = 700428
+        },
+        [51209045] = {
+          Content = "你的意思是，让我故意害他输掉？",
+          ContentKR = "그러니까, 일부러 지게 만들라는 거예요?",
+          DialogueId = 51209045,
+          GUID = "80324BF2",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207735.T_Story_Recall_51207735'",
+          NextDialogue = 51209046,
+          SpeakNpcId = 100001
+        },
+        [51209046] = {
+          Content = "不完全对。在那场游戏中，除了杰克本人，不会有真正的赢家。你要做的，不过是在他注定失败的道路上再轻轻推一把而已。",
+          ContentKR = "그건 아니야. 어차피 그 게임에선, 잭 본인을 제외하면 진정한 승자는 없어. 로만은 어차피 벼랑 끝으로 향하게 될 거고, 네가 할 일은 그냥 로만을 등 뒤에서 살짝 밀어주는 것뿐이야.",
+          DialogueId = 51209046,
+          GUID = "80324C1C",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51209047,
+          SpeakNpcId = 700428
+        },
+        [51209047] = {
+          Content = "如果他输了，会怎么样？",
+          ContentKR = "로만이 지면 어떻게 되는데요?",
+          DialogueId = 51209047,
+          GUID = "80324C46",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207735.T_Story_Recall_51207735'",
+          NextDialogue = 51209048,
+          SpeakNpcId = 100001
+        },
+        [51209048] = {
+          Content = "不知道。他没找我们借钱，但是从杰克先生那边借了，所以他多半会被杰克先生带走，拼命卖苦力还债吧。",
+          ContentKR = "모르지. 우리한텐 돈을 안 빌렸지만, 미스터 잭한테는 빌렸으니까. 아마 그 사람한테 끌려가서 죽어라 고생하면서 빚을 갚게 되지 않을까?",
+          DialogueId = 51209048,
+          GUID = "80324C70",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51209049,
+          SpeakNpcId = 700428
+        },
+        [51209049] = {
+          Content = "螺丝刀行会不是因为工人们互帮互助才建立的吗？难道没有更好的解决方式？",
+          ContentKR = "드라이버 협회는 일꾼들이 서로 돕기 위해 만들어진 거 아니었어요? 더 좋은 해결 방법은 없나요?",
+          DialogueId = 51209049,
+          GUID = "80324C9A",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207735.T_Story_Recall_51207735'",
+          NextDialogue = 51209050,
+          SpeakNpcId = 100001
+        },
+        [51209050] = {
+          Content = "你不理解。他们中很多家伙嗜酒如命，贪玩成性。说再多也没法拯救他们的，这是本性，本性是没法改变的。",
+          ContentKR = "넌 이해 못 해. 일꾼들 중엔 술에 미쳐 있거나 노는 데만 정신이 팔린 녀석들이 많아. 그런 녀석들은 어떻게 해도 구제 불능이야. 그건 본성이고, 본성은 바꿀 수 없는 거야.",
+          DialogueId = 51209050,
+          GUID = "80324CC4",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51209051,
+          SpeakNpcId = 700428
+        },
+        [51209051] = {
+          Content = "有价值的人才值得我们帮助，没有价值的人活着也是在浪费行会的资源。我们是在夹缝里生存的人，有时候不得不牺牲什么才能换回大多数人觉醒。",
+          ContentKR = "우린 도울 만한 가치가 있는 사람만 도와. 가치 없는 사람이 살아 있는 건 협회의 자원을 낭비하는 거야. 우린 틈새에서 살아남는 사람들이야. 때로는 뭔가를 희생해야만 대다수를 잠에서 깨어나게 할 수 있어.",
+          DialogueId = 51209051,
+          GUID = "80324CEE",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207207.T_Story_Recall_51207207'",
+          NextDialogue = 51209052,
+          SpeakNpcId = 700428
+        },
+        [51209052] = {
+          Content = "找一个倒霉鬼，让他以为自己赢定了，在最高点的时候反手把他推下去，让他再也爬不上来，让他摔得惨烈无比，让所有人看清他的下场。",
+          ContentKR = "불운한 놈 하나를 찾아서, 자기가 이긴 줄 알게 만들고, 최고점에 올랐을 때 뒤통수쳐서 밀어버리는 거야. 다시는 기어오르지 못하게, 처참하게 추락하게 만들어서 모두가 그의 말로를 똑똑히 보게 하는 거지.",
+          DialogueId = 51209052,
+          GUID = "80324D18",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51209053,
+          SpeakNpcId = 700428
+        },
+        [51209053] = {
+          Content = "瞧啊，哪怕是对数字最熟悉的罗文都栽了，他们呢？他们不过是一群庸庸碌碌的普通人，又有什么信心认为自己可以靠这个翻身？",
+          ContentKR = "그리고 말하는 거지. 보라고, 숫자엔 도사인 로만도 저렇게 됐는데, 다른 사람은? 평범하기 짝이 없는 보통 사람들이, 무슨 자신감으로 저 게임에서 인생역전을 할 수 있다고 생각하겠어?",
+          DialogueId = 51209053,
+          GUID = "80324D42",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51209054,
+          SpeakNpcId = 700428
+        },
+        [51209054] = {
+          Content = "牺牲一个罗文，却能拯救更多即将踏入深渊的家伙。很划算的买卖，不是吗？",
+          ContentKR = "로만 하나를 희생해서, 심연에 빠지려는 더 많은 놈들을 구원하는 거야. 이 정도면 아주 수지맞는 거래 아니야?",
+          DialogueId = 51209054,
+          GUID = "80324D6C",
+          GraphPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Story/Recall/T_Story_Recall_51207208.T_Story_Recall_51207208'",
+          NextDialogue = 51209055,
+          SpeakNpcId = 700428
+        },
+        [51209055] = {
+          Content = "喂？你还好吧？你在想什么呢，这么出神，难道是我的发言震撼到你了？",
+          ContentKR = "야? 괜찮아? 뭘 그렇게 멍하니 있어? 설마 내 말이 충격적이었어?",
+          DialogueId = 51209055,
+          GUID = "80324D96",
+          NextDialogue = 51209056,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Sigh_Start"
+          }
+        },
+        [51209056] = {
+          Content = "不……我只是……",
+          ContentKR = "아뇨... 전 그냥...",
+          DialogueId = 51209056,
+          GUID = "80324DC0",
+          NextDialogue = 51209057,
+          SpeakNpcId = 100001
+        },
+        [51209057] = {
+          Content = "开玩笑的！哈哈！",
+          ContentKR = "농담이야! 하하!",
+          DialogueId = 51209057,
+          GUID = "80324DEA",
+          NextDialogue = 51209058,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Sigh_End"
+          }
+        },
+        [51209058] = {
+          Content = "接下来得尽快玩把大的，拿钱就跑，不然我们赚钱的动静这么大，会被杰克先生他们发现的。",
+          ContentKR = "이제 빨리 크게 한 판 하고 돈 챙겨서 튀어야 해. 안 그러면 우리가 돈 버는 게 너무 눈에 띄어서 미스터 잭한테 들킬 거야.",
+          DialogueId = 51209058,
+          GUID = "80324E14",
+          NextDialogue = 51209059,
+          SpeakNpcId = 700430
+        },
+        [51209059] = {
+          Content = "等拿到钱，我们73分，怎么样？你拿着钱去救你姐姐，我再去过我自己的人生。",
+          ContentKR = "돈 벌면 7대 3으로 나누자, 어때? 넌 그 돈으로 {性别:누나|언니} 구하고, 나는 내 인생 살러 가는 거야.",
+          DialogueId = 51209059,
+          GUID = "80324E3E",
+          NextDialogue = 51209060,
+          SpeakNpcId = 700430
+        },
+        [51209060] = {
+          Content = "怎么又不说话？嫌少？我最多再给你0.5，不能更多了！这办法可是我想的。",
+          ContentKR = "왜 또 말이 없어? 너무 적어? 그럼 0.5 더 줄게. 더는 안 돼! 이 방법은 내가 생각한 거라고.",
+          DialogueId = 51209060,
+          GUID = "80324E68",
+          NextDialogue = 51209061,
+          SpeakNpcId = 700430
+        },
+        [51209061] = {
+          Content = "不是钱的事。",
+          ContentKR = "돈 문제가 아니에요.",
+          DialogueId = 51209061,
+          GUID = "80324E92",
+          NextDialogue = 51209062,
+          SpeakNpcId = 100001
+        },
+        [51209062] = {
+          Content = "不是钱？那可没空让你伤春悲秋了，咱们一定要在他们发现之前抓紧时间，快走吧！",
+          ContentKR = "돈이 아니라고? 그럼 감상에 젖어 있을 시간 없어. 사람들이 눈치채기 전에 서둘러야 한다고! 빨리 가자!",
+          DialogueId = 51209062,
+          GUID = "80324EBC",
+          NextDialogue = 51209063,
+          SpeakNpcId = 700430
+        },
+        [51209063] = {
+          Content = "这次，我们全押！",
+          ContentKR = "이번엔 올인이야!",
+          DialogueId = 51209063,
+          GUID = "80324EE6",
+          SpeakNpcId = 700430
+        },
+        [51209101] = {
+          Content = "小仆从，你还好吧？怎么感觉你从刚才开始脸色就很不好看？",
+          ContentKR = "시종, 괜찮아? 아까부터 안색이 안 좋아 보이는데?",
+          DialogueId = 51209101,
+          GUID = "80325522",
+          NextDialogue = 51209102,
+          SpeakNpcId = 700449
+        },
+        [51209102] = {
+          Content = "……没什么吧。",
+          ContentKR = "...별거 아니야.",
+          DialogueId = 51209102,
+          GUID = "8032554C",
+          NextDialogue = 51209103,
+          SpeakNpcId = 100001
+        },
+        [51209103] = {
+          Content = "嘻嘻，那就好，你觉不觉得罗文这家伙人还挺好的，刚才走之前他又给我偷偷塞了一包糖呢。",
+          ContentKR = "헤헷, 그럼 다행이고. 로만 쟤 괜찮은 녀석 같지 않아? 아까 가기 전에 나한테 몰래 사탕 한 봉지도 쥐여줬다니까.",
+          DialogueId = 51209103,
+          GUID = "80325576",
+          NextDialogue = 51209104,
+          SpeakNpcId = 700449
+        },
+        [51209104] = {
+          Content = "他说他女儿最喜欢吃这个牌子的糖果，我尝了一下，味道还不错，你也要来一颗吗？",
+          ContentKR = "자기 딸이 이 브랜드 사탕을 제일 좋아한대. 하나 먹어봤는데 맛이 괜찮더라구. 너도 먹어볼래?",
+          DialogueId = 51209104,
+          GUID = "803255A0",
+          NextDialogue = 51209105,
+          SpeakNpcId = 700449
+        },
+        [51209105] = {
+          Content = "不了吧。",
+          ContentKR = "됐어.",
+          DialogueId = 51209105,
+          GUID = "803255CA",
+          SpeakNpcId = 100001
+        },
+        [51209201] = {
+          Content = "（你盯着桌子上的点数，在脑中仔细演算——你确定这张桌子上的情况并不适合上桌。）",
+          ContentKR = "(테이블 위의 숫자들을 머릿속으로 신중하게 계산해 보니, 이 테이블은 분명히 우리에게 유리하지 않다.)",
+          DialogueId = 51209201,
+          GUID = "8032658A",
+          NextDialogue = 51209202
+        },
+        [51209202] = {
+          Content = "怎么了，这张不合适吗？",
+          ContentKR = "왜? 이 테이블은 별로야?",
+          DialogueId = 51209202,
+          GUID = "803265B4",
+          SpeakNpcId = 700449
+        },
+        [51209301] = {
+          Content = "{nickname}！{nickname}！这张呢？来看看这个！",
+          ContentKR = "{nickname}! {nickname}! 여긴 어때? 여기 좀 봐!",
+          DialogueId = 51209301,
+          GUID = "803275F2",
+          NextDialogue = 51209302,
+          SpeakNpcId = 700449
+        },
+        [51209302] = {
+          Content = "（你盯着桌子上的点数，在脑中仔细演算，这里的牌面非常好，很大概率会赢。）",
+          ContentKR = "(테이블 위의 숫자들을 머릿속으로 신중하게 계산해 보니, 이 테이블은 패가 아주 좋아서, 이길 확률이 높다.)",
+          DialogueId = 51209302,
+          GUID = "8032761C",
+          NextDialogue = 51209303
+        },
+        [51209303] = {
+          Content = "是这个吧！小仆从，我们马上要发大财了，是吧是吧！",
+          ContentKR = "이거지? 시종, 우리 곧 대박 날 거야! 그치? 그치?",
+          DialogueId = 51209303,
+          GUID = "80327646",
+          SpeakNpcId = 700449
+        },
+        [51209401] = {
+          Content = "小仆从，看好了没有呀？",
+          ContentKR = "시종, 잘 봤어?",
+          DialogueId = 51209401,
+          GUID = "8032865A",
+          NextDialogue = 51209402,
+          SpeakNpcId = 700449
+        },
+        [51209402] = {
+          Content = "（做出选择吧。）",
+          ContentKR = "(이제 선택해야만 해.)",
+          DialogueId = 51209402,
+          GUID = "80328684",
+          NextOptions = {
+            [1] = 51209403,
+            [2] = 51209404
+          },
+          SpeakNpcId = 100001,
+          bForbidSkipOptions = true
+        },
+        [51209403] = {
+          Content = "（帮助罗文赢下游戏。）",
+          ContentKR = "(로만이 게임에서 이기도록 돕는다)",
+          DialogueId = 51209403,
+          GUID = "803286AE",
+          ImprPlusId = 1004,
+          NextDialogue = 51209405,
+          Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
+        },
+        [51209404] = {
+          Content = "（让罗文输掉游戏。）",
+          ContentKR = "(로만이 게임에서 지게 만든다)",
+          DialogueId = 51209404,
+          GUID = "803286D8",
+          ImprPlusId = 1001,
+          NextDialogue = 51209405,
+          Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
+        },
+        [51209405] = {
+          Content = "（罗文接收到你的暗示，靠近过来。）",
+          ContentKR = "(내가 보낸 신호를 보고 로만이 가까이 다가왔다.)",
+          DialogueId = 51209405,
+          GUID = "80328702",
+          NextDialogue = 51209406
+        },
+        [51209406] = {
+          Content = "来吧，我的人生，要翻盘了。",
+          ContentKR = "자, 이제 인생역전의 시간이야.",
+          DialogueId = 51209406,
+          GUID = "8032872C",
+          NextDialogue = 51209407,
+          SpeakNpcId = 700430
+        },
+        [51209407] = {
+          Content = "（你缓缓闭上了眼，迎接这场游戏的结局。）",
+          ContentKR = "(이제 천천히 눈을 감고 이 게임의 결말을 맞이할 차례다.)",
+          DialogueId = 51209407,
+          GUID = "80328756"
+        },
+        [51209501] = {
+          Content = "嘿！今天哥们运气好，我全押了！",
+          ContentKR = "헤! 오늘 형님 끗발 좋다! 올인!",
+          DialogueId = 51209501,
+          GUID = "803296C2",
+          NextDialogue = 51209502,
+          SpeakNpcId = 700430
+        },
+        [51209502] = {
+          Content = "罗文，你疯啦？日子不过了？输了怎么办？",
+          ContentKR = "로만, 미쳤어? 뒷생각은 안 해? 지면 어쩌려고?",
+          DialogueId = 51209502,
+          GUID = "803296EC",
+          NextDialogue = 51209503,
+          SpeakNpcId = 700440
+        },
+        [51209503] = {
+          Content = "要玩，就玩把大的，我只是不想再过这种畏畏缩缩的日子了！",
+          ContentKR = "할 거면 크게 해야지. 이제 이런 겁쟁이 같은 삶은 지겹다고!",
+          DialogueId = 51209503,
+          GUID = "80329716",
+          NextDialogue = 51209504,
+          SpeakNpcId = 700430
+        },
+        [51209504] = {
+          Content = "（发牌员面无表情地看了他一眼，冷漠地开始发牌。）",
+          ContentKR = "(딜러가 무표정하게 그를 한 번 쳐다보더니, 냉담하게 카드를 돌리기 시작한다.)",
+          DialogueId = 51209504,
+          GUID = "80329740",
+          NextDialogue = 51209505
+        },
+        [51209505] = {
+          Content = "喏，看到没？好牌！",
+          ContentKR = "봐, 보이지? 패가 좋다니까!",
+          DialogueId = 51209505,
+          GUID = "8032976A",
+          NextDialogue = 51209506,
+          SpeakNpcId = 700430
+        },
+        [51209506] = {
+          Content = "可以啊，罗文，不会真让你赢了吧？一张8一张9，17点！庄家明牌是5，看他要不要。",
+          ContentKR = "괜찮은데, 로만? 진짜 이기는 거 아냐? 8 한 장에 9 한 장, 17점! 딜러 업카드는 5인데, 받을지 보자고.",
+          DialogueId = 51209506,
+          GUID = "80329794",
+          NextDialogue = 51209507,
+          SpeakNpcId = 700440
+        },
+        [51209507] = {
+          Content = "要。",
+          ContentKR = "히트.",
+          DialogueId = 51209507,
+          GUID = "803297BE",
+          NextDialogue = 51209508,
+          SpeakNpcId = 700435
+        },
+        [51209508] = {
+          Content = "好家伙，他要了一张3，不知道暗牌是多少啊。",
+          ContentKR = "이야, 3을 받았네, 홀카드는 뭘까?",
+          DialogueId = 51209508,
+          GUID = "803297E8",
+          NextDialogue = 51209509,
+          SpeakNpcId = 700440
+        },
+        [51209509] = {
+          Content = "小牌怎么会这么多……这不对……",
+          ContentKR = "낮은 카드가 왜 이렇게 많아...? 이건 아닌데...",
+          DialogueId = 51209509,
+          GUID = "80329812",
+          NextDialogue = 51209510,
+          SpeakNpcId = 700430
+        },
+        [51209510] = {
+          Content = "什么？罗文？你还要牌吗？我看庄家又抓了一张2！",
+          ContentKR = "뭐? 로만? 너 카드 더 받을 거야? 딜러가 또 2를 뽑았는데?!",
+          DialogueId = 51209510,
+          GUID = "8032983C",
+          NextDialogue = 51209511,
+          SpeakNpcId = 700440
+        },
+        [51209511] = {
+          Content = "不对……这不对……不该是这样的！",
+          ContentKR = "아니야... 이건 아니야... 이럴 리가 없어!",
+          DialogueId = 51209511,
+          GUID = "80329866",
+          NextDialogue = 51209512,
+          SpeakNpcId = 700430
+        },
+        [51209512] = {
+          Content = "罗文，你在说什么啊？你要再来一张吗？看起来小牌很多啊。",
+          ContentKR = "로만, 무슨 소리야? 카드 더 받을 거야? 작은 카드가 많은데?",
+          DialogueId = 51209512,
+          GUID = "80329890",
+          NextDialogue = 51209513,
+          SpeakNpcId = 700440
+        },
+        [51209513] = {
+          Content = "可小牌不该多的……不对……这完全不对……",
+          ContentKR = "작은 카드가 많을 리가 없는데... 아니야... 이건 완전히 틀렸어...",
+          DialogueId = 51209513,
+          GUID = "803298BA",
+          NextDialogue = 51209514,
+          SpeakNpcId = 700430
+        },
+        [51209514] = {
+          Content = "庄家停牌了！罗文，你还要不要了？",
+          ContentKR = "딜러가 스탠드했어! 로만, 받을 거야 말 거야?",
+          DialogueId = 51209514,
+          GUID = "803298E4",
+          NextDialogue = 51209515,
+          SpeakNpcId = 700440
+        },
+        [51209515] = {
+          Content = "停牌了……那说明他已经大于17点了……我该怎么办，我该……",
+          ContentKR = "스탠드... 그럼 이미 17점 이상이란 거잖아... 어떡하지, 난...",
+          DialogueId = 51209515,
+          GUID = "8032990E",
+          NextDialogue = 51209516,
+          SpeakNpcId = 700430
+        },
+        [51209516] = {
+          Content = "罗文！要牌吧！不要就输定了！",
+          ContentKR = "로만! 카드 받아! 안 받으면 무조건 지는 거야!",
+          DialogueId = 51209516,
+          GUID = "80329938",
+          NextDialogue = 51209517,
+          SpeakNpcId = 700440
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51209517,
+    MaxKey = 51210518,
+    Loader = function()
+      return {
+        [51209517] = {
+          Content = "我……我……我要牌！",
+          ContentKR = "나... 나... 받을게!",
+          DialogueId = 51209517,
+          GUID = "80329962",
+          NextDialogue = 51209518,
+          SpeakNpcId = 700430
+        },
+        [51209518] = {
+          Content = "（这句话几乎是他吼出来的，周围人显然被这一句话吓到有片刻沉默，发牌员沉默着将手中的牌递到他手上。）",
+          ContentKR = "(로만은 거의 소리를 지르듯 말했고, 주변 사람들은 놀라서 잠시 말을 멈췄다. 딜러는 말없이 손에 든 카드를 그에게 건넸다.)",
+          DialogueId = 51209518,
+          GUID = "8032998C",
+          NextDialogue = 51209519
+        },
+        [51209519] = {
+          Content = "是7啊……",
+          ContentKR = "7이네...",
+          DialogueId = 51209519,
+          GUID = "803299B6",
+          NextDialogue = 51209520,
+          SpeakNpcId = 700440
+        },
+        [51209520] = {
+          Content = "爆了。",
+          ContentKR = "버스트야.",
+          DialogueId = 51209520,
+          GUID = "803299E0",
+          NextDialogue = 51209521,
+          SpeakNpcId = 700430
+        },
+        [51209521] = {
+          Content = "啧啧……庄家暗牌是7，只有17点呢。",
+          ContentKR = "쯧쯧... 딜러의 히든카드는 7, 겨우 17점이네.",
+          DialogueId = 51209521,
+          GUID = "80329A0A",
+          NextDialogue = 51209522,
+          SpeakNpcId = 700440
+        },
+        [51209522] = {
+          Content = "小仆从……这……这是怎么回事？罗文输了？这张桌子上怎么全是小牌？",
+          ContentKR = "시종... 이...이게 어떻게 된 거야? 로만이 졌어? 이 테이블에 왜 전부 낮은 카드만 있는 거야?",
+          DialogueId = 51209522,
+          GUID = "80329A34",
+          NextDialogue = 51209523,
+          SpeakNpcId = 700449
+        },
+        [51209523] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51209523,
+          GUID = "80329A5E",
+          NextDialogue = 51209524,
+          SpeakNpcId = 100001
+        },
+        [51209524] = {
+          Content = "不会的……你为什么……你为什么要……",
+          ContentKR = "말도 안 돼... 그럴 리가... 너 도대체... 왜 그런 거야...?",
+          DialogueId = 51209524,
+          GUID = "80329A88",
+          NextDialogue = 51209525,
+          SpeakNpcId = 700430
+        },
+        [51209525] = {
+          Content = "罗文先生，看起来你的全押并没有换来好结果，不过，我们有必要好好算算你欠杰克先生的账，你说呢？",
+          ContentKR = "로만 씨, 올인의 결과가 좋지 못했던 것 같군요. 그런데 말이죠, 미스터 잭한테 진 빚을 제대로 계산해 봐야 하지 않겠습니까?",
+          DialogueId = 51209525,
+          GUID = "80329AB2",
+          NextDialogue = 51209526,
+          SpeakNpcId = 700441
+        },
+        [51209526] = {
+          Content = "欠账……不，我赢了，我赢了就会还的！",
+          ContentKR = "빚...? 아, 아니야, 계속 이겼잖아! 따서 갚으면 되잖아!",
+          DialogueId = 51209526,
+          GUID = "80329ADC",
+          NextDialogue = 51209527,
+          SpeakNpcId = 700430
+        },
+        [51209527] = {
+          Content = "噗嗤~罗文，你已经全押了， 你哪里还有钱去玩啊？你~完~蛋~啦~",
+          ContentKR = "푸하하! 로만, 넌 이미 올인했잖아. 어디서 돈을 구해서 계속하려고? 넌 끝났어!",
+          DialogueId = 51209527,
+          GUID = "80329B06",
+          NextDialogue = 51209528,
+          SpeakNpcId = 700440
+        },
+        [51209528] = {
+          Content = "罗文先生，请和我们走一趟吧。",
+          ContentKR = "로만 씨, 함께 가시죠.",
+          DialogueId = 51209528,
+          GUID = "80329B30",
+          NextDialogue = 51209529,
+          SpeakNpcId = 700441
+        },
+        [51209529] = {
+          Content = "这就是游戏的下场，都看到了吗？罗文这样的蠢货就是活生生的例子，找那个杰克先生借钱，然后输完了就要被拖走！去做什么？你们心里有数吧！",
+          ContentKR = "다들 봤지? 이게 바로 도박의 말로야. 로만 같은 멍청이가 바로 그 예시지. 그 미스터 잭이란 자한테 돈 빌려서, 다 잃고 나면 끌려가는 거야! 끌려가서 뭘 하냐고? 너희도 다 알잖아!",
+          DialogueId = 51209529,
+          GUID = "80329B5A",
+          NextDialogue = 51209530,
+          SpeakNpcId = 700440
+        },
+        [51209530] = {
+          Content = "他们就是这样对待我们的，都去吧，都去找杰克借钱吧！然后和这个蠢货一样，哈哈！",
+          ContentKR = "저게 저 녀석들이 우릴 대하는 방식이야. 마음에 들어? 이제 다들 잭한테 돈 빌리러 가봐! 그리고 저 멍청이랑 똑같이 돼 보라고, 하하!",
+          DialogueId = 51209530,
+          GUID = "80329B84",
+          NextDialogue = 51209531,
+          SpeakNpcId = 700440
+        },
+        [51209531] = {
+          Content = "（你盯着那位大义凛然的“玩家”，似乎总觉得在哪见过，是在罗连特身边吗？）",
+          ContentKR = "(대의명분을 외치는 그 노름꾼을 바라보니, 어디선가 본 것 같은 느낌이 든다. 로렌트 곁에서였나?)",
+          DialogueId = 51209531,
+          GUID = "80329BAE",
+          NextDialogue = 51209532
+        },
+        [51209532] = {
+          Content = "（这场被提前安排好的戏码实在太无趣，你牵着白，转身离开了。接下来，回螺丝刀行会复命吧。）",
+          ContentKR = "(사전에 계획된 연극은 하품이 나올 정도로 지루했다. 나는 스노우를 데리고 자리를 떠났다. 이제 드라이버 협회로 돌아가 보고할 시간이다.)",
+          DialogueId = 51209532,
+          GUID = "80329BD8"
+        },
+        [51209601] = {
+          Content = "嘿！今天哥们运气好，我全押了！",
+          ContentKR = "헤! 오늘 형님 끗발 좋다! 올인!",
+          DialogueId = 51209601,
+          GUID = "8032A72A",
+          NextDialogue = 51209602,
+          SpeakNpcId = 700430
+        },
+        [51209602] = {
+          Content = "罗文，你疯啦？日子不过了？输了怎么办？",
+          ContentKR = "로만, 미쳤어? 뒷생각은 안 해? 지면 어쩌려고?",
+          DialogueId = 51209602,
+          GUID = "8032A754",
+          NextDialogue = 51209603,
+          SpeakNpcId = 700440
+        },
+        [51209603] = {
+          Content = "要玩，就玩把大的，我只是不想再过这种畏畏缩缩的日子了！",
+          ContentKR = "할 거면 크게 해야지. 이제 이런 겁쟁이 같은 삶은 지겹다고!",
+          DialogueId = 51209603,
+          GUID = "8032A77E",
+          NextDialogue = 51209604,
+          SpeakNpcId = 700430
+        },
+        [51209604] = {
+          Content = "（发牌员面无表情地看了他一眼，冷漠地开始发牌。）",
+          ContentKR = "(딜러가 무표정하게 그를 한 번 쳐다보더니, 냉담하게 카드를 돌리기 시작했다.)",
+          DialogueId = 51209604,
+          GUID = "8032A7A8",
+          NextDialogue = 51209605
+        },
+        [51209605] = {
+          Content = "停牌。",
+          ContentKR = "스탠드.",
+          DialogueId = 51209605,
+          GUID = "8032A7D2",
+          NextDialogue = 51209606,
+          SpeakNpcId = 700430
+        },
+        [51209606] = {
+          Content = "罗文，拿到什么牌了？两张就停？给我们看看啊！",
+          ContentKR = "로만, 무슨 패 받았어? 두 장에 스탠드? 우리한테 좀 보여줘!",
+          DialogueId = 51209606,
+          GUID = "8032A7FC",
+          NextDialogue = 51209607,
+          SpeakNpcId = 700440
+        },
+        [51209607] = {
+          Content = "好牌要先藏~这样，先给你看一张。",
+          ContentKR = "좋은 패는 먼저 숨겨야지, 이렇게! 일단 한 장만 보여줄게.",
+          DialogueId = 51209607,
+          GUID = "8032A826",
+          NextDialogue = 51209608,
+          SpeakNpcId = 700430
+        },
+        [51209608] = {
+          Content = "K？好大的牌啊，另一张呢？",
+          ContentKR = "K? 엄청 큰 패네. 다른 한 장은?",
+          DialogueId = 51209608,
+          GUID = "8032A850",
+          NextDialogue = 51209609,
+          SpeakNpcId = 700440
+        },
+        [51209609] = {
+          Content = "嘘嘘嘘，先看看庄家嘛。",
+          ContentKR = "쉿, 딜러부터 보자고.",
+          DialogueId = 51209609,
+          GUID = "8032A87A",
+          NextDialogue = 51209610,
+          SpeakNpcId = 700430
+        },
+        [51209610] = {
+          Content = "要牌。",
+          ContentKR = "히트.",
+          DialogueId = 51209610,
+          GUID = "8032A8A4",
+          NextDialogue = 51209611,
+          SpeakNpcId = 700435
+        },
+        [51209611] = {
+          Content = "（发牌员将一张9递给庄家，却见他面色铁青，随机，庄家甩出了手上的暗牌，是一张J。）",
+          ContentKR = "(9가 나오자 딜러의 얼굴이 새파랗게 질렸고, 이내 손에 쥐고 있던 홀카드를 내던졌다. J였다.)",
+          DialogueId = 51209611,
+          GUID = "8032A8CE",
+          NextDialogue = 51209612
+        },
+        [51209612] = {
+          Content = "明牌是4，暗牌是J，又拿了一张9，你爆了吧？",
+          ContentKR = "업카드는 4, 홀카드는 J, 거기다 9를 받았으면 버스트네?",
+          DialogueId = 51209612,
+          GUID = "8032A8F8",
+          NextDialogue = 51209613,
+          SpeakNpcId = 700430
+        },
+        [51209613] = {
+          Content = "别废话了，你是什么牌，直接端出来吧。",
+          ContentKR = "쓸데없는 소리 그만하시고, 패를 보여주시죠.",
+          DialogueId = 51209613,
+          GUID = "8032A922",
+          NextDialogue = 51209614,
+          SpeakNpcId = 700435
+        },
+        [51209614] = {
+          Content = "（罗文慢悠悠地将两张牌依次按在桌上。）",
+          ContentKR = "(로만이 느긋하게 두 장의 카드를 차례로 테이블에 내려놓는다.)",
+          DialogueId = 51209614,
+          GUID = "8032A94C",
+          NextDialogue = 51209615
+        },
+        [51209615] = {
+          Content = "K+A，超级杰克。",
+          ContentKR = "K와 A. 슈퍼 잭이야.",
+          DialogueId = 51209615,
+          GUID = "8032A976",
+          NextDialogue = 51209616,
+          SpeakNpcId = 700430
+        },
+        [51209616] = {
+          Content = "不可能！你怎么会……你怎么会赢？！",
+          ContentKR = "말도 안 돼! 로만이... 이겼잖아?!",
+          DialogueId = 51209616,
+          GUID = "8032A9A0",
+          NextDialogue = 51209617,
+          SpeakNpcId = 700440
+        },
+        [51209617] = {
+          Content = "小仆从快看！罗文赢了！是超级杰克！",
+          ContentKR = "시종! 빨리 봐! 로만이 이겼어! 슈퍼 잭이야!",
+          DialogueId = 51209617,
+          GUID = "8032A9CA",
+          NextDialogue = 51209618,
+          SpeakNpcId = 700449
+        },
+        [51209618] = {
+          Content = "……嗯。",
+          ContentKR = "...응.",
+          DialogueId = 51209618,
+          GUID = "8032A9F4",
+          NextDialogue = 51209619,
+          SpeakNpcId = 100001
+        },
+        [51209619] = {
+          Content = "怎么说，3：2赔率，该给钱了吧？",
+          ContentKR = "어때, 3:2 배당이니까 돈 내놔야지?",
+          DialogueId = 51209619,
+          GUID = "8032AA1E",
+          NextDialogue = 51209620,
+          SpeakNpcId = 700430
+        },
+        [51209620] = {
+          Content = "罗文先生，你的运气还真不错，但……",
+          ContentKR = "로만 씨, 운이 정말 좋으시네요. 하지만...",
+          DialogueId = 51209620,
+          GUID = "8032AA48",
+          NextDialogue = 51209621,
+          SpeakNpcId = 700441
+        },
+        [51209621] = {
+          Content = "我们合理怀疑你动用了一些不合理的作弊方式取得了这次胜利，请你跟我们走一趟。",
+          ContentKR = "저희는 당신이 부정한 방법으로 이 게임에서 이겼다고 의심할 합리적인 이유가 있습니다. 저희와 함께 가시죠.",
+          DialogueId = 51209621,
+          GUID = "8032AA72",
+          NextDialogue = 51209622,
+          SpeakNpcId = 700441
+        },
+        [51209622] = {
+          Content = "喂？什么意思？我赢了！你们难道输不起？",
+          ContentKR = "뭐? 무슨 소리야? 내가 이겼다고! 설마 인정 못 하겠다는 거야?",
+          DialogueId = 51209622,
+          GUID = "8032AA9C",
+          NextDialogue = 51209623,
+          SpeakNpcId = 700430
+        },
+        [51209623] = {
+          Content = "罗文先生，先和我们走一趟再说吧。",
+          ContentKR = "로만 씨, 일단 같이 가시죠.",
+          DialogueId = 51209623,
+          GUID = "8032AAC6",
+          NextDialogue = 51209624,
+          SpeakNpcId = 700441
+        },
+        [51209624] = {
+          Content = "**的，我就不走，你拿我怎么办？",
+          ContentKR = "젠장! 안 가! 어쩔 건데?",
+          DialogueId = 51209624,
+          GUID = "8032AAF0",
+          NextDialogue = 51209625,
+          SpeakNpcId = 700430
+        },
+        [51209625] = {
+          Content = "不好意思，今天你必须和我们走。",
+          ContentKR = "죄송하지만, 오늘은 반드시 저희와 함께 가셔야 합니다.",
+          DialogueId = 51209625,
+          GUID = "8032AB1A",
+          NextDialogue = 51209626,
+          SpeakNpcId = 700441
+        },
+        [51209626] = {
+          Content = "不对！他们要强行带走罗文，小仆从，我们快去帮忙！",
+          ContentKR = "안 돼! 로만을 강제로 끌고 가려고 하잖아! 시종, 우리 빨리 가서 도와주자!",
+          DialogueId = 51209626,
+          GUID = "8032AB44",
+          SpeakNpcId = 700449
+        },
+        [51209701] = {
+          Content = "你还好吧？",
+          ContentKR = "괜찮으세요?",
+          DialogueId = 51209701,
+          GUID = "8032B792",
+          NextDialogue = 51209702,
+          SpeakNpcId = 100001
+        },
+        [51209702] = {
+          Content = "没事……没事……这该死的杰克，他压根就没打算给我们钱！",
+          ContentKR = "괜찮아... 괜찮아... 잭 이 빌어먹을 자식, 애초에 우리한테 돈 줄 생각이 없었던 거야!",
+          DialogueId = 51209702,
+          GUID = "8032B7BC",
+          NextDialogue = 51209703,
+          SpeakNpcId = 700430
+        },
+        [51209703] = {
+          Content = "是啊？都看到了吧，这位所谓的杰克先生根本就不会让你们赢钱，你们只有在这里玩，被他抽成，向他借钱，最后输光这一条路可以选。",
+          ContentKR = "맞아요! 다들 보셨죠? 미스터 잭은 사람은 애초에 여러분이 돈을 따게 해 줄 생각이 없어요. 여러분의 선택지는 결국 여기서 게임하면서 수수료 뜯기고, 돈 빌리고, 결국엔 다 잃고 빈털터리가 되는 것 말고는 없다고요.",
+          DialogueId = 51209703,
+          GUID = "8032B7E6",
+          NextDialogue = 51209704,
+          SpeakNpcId = 100001
+        },
+        [51209704] = {
+          Content = "你们超出了他的计划，像这位罗文先生一样赢了钱，他就会带着他的打手们“请你们过去坐坐”。",
+          ContentKR = "혹시라도 이 로만 씨처럼 돈을 따서 잭의 계획에서 벗어나면, 잭은 부하들을 데리고 와서 \"잠깐 앉아서 이야기 좀 합시다.\"라고 하겠죠.",
+          DialogueId = 51209704,
+          GUID = "8032B810",
+          NextDialogue = 51209705,
+          SpeakNpcId = 100001
+        },
+        [51209705] = {
+          Content = "所以你们想要通过杰克游戏赚的钱，无论如何也不会获得，在这多玩一天，就意味着失去的东西越多，你们想要自己一辈子的积蓄就这样砸在这里吗？",
+          ContentKR = "그러니까 잭의 게임으로 돈을 벌고 싶어도 절대 벌 수 없어요. 여기 오래 있을수록 잃는 돈만 늘어날 뿐이죠. 설마 평생 모은 저축을 이런 데다 전부 날릴 생각인가요?",
+          DialogueId = 51209705,
+          GUID = "8032B83A",
+          NextDialogue = 51209706,
+          SpeakNpcId = 100001
+        },
+        [51209706] = {
+          Content = "（人群议论纷纷，一些怕事的工人讪讪离开了这里，你注意到那位刚才站在罗文身边怂恿他的“玩家”，此时正面色复杂地盯着你。）",
+          ContentKR = "(사람들이 웅성거리기 시작했고, 일을 키우기 싫은 몇몇 일꾼들은 멋쩍게 자리를 떠났다. 그때, 아까 로만 옆에서 그를 부추기던 노름꾼이 복잡한 표정으로 나를 쳐다보고 있는 것이 눈에 띈다.)",
+          DialogueId = 51209706,
+          GUID = "8032B864",
+          NextDialogue = 51209707
+        },
+        [51209707] = {
+          Content = "（你朝他笑了笑。）",
+          ContentKR = "(나는 그를 향해 빙긋이 웃어 보였다.)",
+          DialogueId = 51209707,
+          GUID = "8032B88E",
+          NextDialogue = 51209708
+        },
+        [51209708] = {
+          Content = "你在朝谁傻乐？走吧，这里的人都被你打跑了，咱们也走吧。",
+          ContentKR = "누구 보고 헤벌쭉거리는 거야? 가자, 네가 사람들 다 쫓아냈으니까 우리도 가자고.",
+          DialogueId = 51209708,
+          GUID = "8032B8B8",
+          SpeakNpcId = 700430
+        },
+        [51209801] = {
+          Content = "白忙活，白忙活啊！",
+          ContentKR = "헛수고했네, 완전 헛수고했어!",
+          DialogueId = 51209801,
+          GUID = "8032C7FA",
+          NextDialogue = 51209802,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Sigh_Start"
+          }
+        },
+        [51209802] = {
+          Content = "白没有忙活呀？游戏是你们玩的，人是{nickname}打跑的，白全都看在眼里哦！",
+          ContentKR = "헛수고라니? 너희는 게임도 했고, {nickname} 얘는 심지어 사람들도 쫓아냈잖아. 스노우가 다 똑똑히 봤어!",
+          DialogueId = 51209802,
+          GUID = "8032C824",
+          NextDialogue = 51209803,
+          SpeakNpcId = 700449
+        },
+        [51209803] = {
+          Content = "你……诶！算了！不管怎么说，你这么一闹，杰克先生的游乐场多半是开不下去了，不过我们也没法从他那拿到钱，所以倒是也不算亏……",
+          ContentKR = "너... 에휴! 됐어! 어쨌든 네가 이렇게 난리를 피웠으니, 미스터 잭의 게임장은 이제 문을 닫게 될 거야. 하지만 우리도 돈을 받아낼 수 없으니까, 손해도 아닌 셈이지만...",
+          DialogueId = 51209803,
+          GUID = "8032C84E",
+          NextDialogue = 51209804,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Sigh_End"
+          }
+        },
+        [51209804] = {
+          Content = "你早说你这么能打啊？那我还带你玩这个干什么？我带你去打黑拳不就完了？",
+          ContentKR = "싸움을 잘하면 잘한다고 말하지 그랬어? 그럼 내가 이런 고생할 거 없이, 바로 지하 격투장에 데려갔으면 됐잖아?",
+          DialogueId = 51209804,
+          GUID = "8032C878",
+          NextDialogue = 51209805,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk03_Start"
+          }
+        },
+        [51209805] = {
+          Content = "算了算了……现在再说什么也没用了，我不能让这一切真的白忙活，在杰克先生找我要回这些借款之前，我得赶紧离开这里。",
+          ContentKR = "됐어 됐어... 지금 와서 뭐라 해봤자 소용없지. 어쨌든 이 모든 걸 헛수고로 만들 순 없어. 미스터 잭이 빌려준 돈 갚으라고 찾아오기 전에 난 빨리 여길 떠야겠어.",
+          DialogueId = 51209805,
+          GUID = "8032C8A2",
+          NextDialogue = 51209806,
+          SpeakNpcId = 700430
+        },
+        [51209806] = {
+          Content = "不过……我也没忘了你，我们好歹还是赢了一些钱的，来，这是你们的份，73，我7你们3。",
+          ContentKR = "그래도... 너희한테 줄 돈은 안 잊었어. 어쨌든 우리 돈 좀 땄잖아. 자, 너희 몫이야. 7대 3, 내가 7 너희가 3.",
+          DialogueId = 51209806,
+          GUID = "8032C8CC",
+          NextDialogue = 51209807,
+          SpeakNpcId = 700430
+        },
+        [51209807] = {
+          Content = "哇！真的有我们的份！",
+          ContentKR = "우와! 진짜 우리 몫도 있네!",
+          DialogueId = 51209807,
+          GUID = "8032C8F6",
+          NextDialogue = 51209808,
+          SpeakNpcId = 700449
+        },
+        [51209808] = {
+          Content = "闲话就不多说了，他们很快就会找上来，咱们最好各自逃命。",
+          ContentKR = "잡담은 그만하자. 녀석들이 곧 쫓아올 테니까, 각자 도망치는 게 최선이야.",
+          DialogueId = 51209808,
+          GUID = "8032C920",
+          NextDialogue = 51209809,
+          SpeakNpcId = 700430,
+          TalkActionId = {
+            [1] = "700430:Talk03_End"
+          }
+        },
+        [51209809] = {
+          Content = "好。",
+          ContentKR = "알겠어요.",
+          DialogueId = 51209809,
+          GUID = "8032C94A",
+          NextDialogue = 51209810,
+          SpeakNpcId = 100001
+        },
+        [51209810] = {
+          Content = "我真要走了，再见！哦对了，你……祝你早点和姐姐团聚！",
+          ContentKR = "난 이제 간다, 그럼 안녕! 아 맞다, 너... {性别:누나|언니}랑 빨리 만나길 바랄게!",
+          DialogueId = 51209810,
+          GUID = "8032C974",
+          NextDialogue = 51209811,
+          SpeakNpcId = 700430
+        },
+        [51209811] = {
+          Content = "（罗文三步并作两步，飞速离开了这里，只留你和白在原地。）",
+          ContentKR = "(로만은 빠른 걸음으로 바람처럼 사라졌고, 나와 스노우만 자리에 남았다.)",
+          DialogueId = 51209811,
+          GUID = "8032C99E",
+          IsBlack = 1,
+          NextDialogue = 51209812,
+          Scripts = "SetVisibility{ActorId{700430},Visibility{\"Hide\"}}"
+        },
+        [51209812] = {
+          Content = "小仆从，你说他以后还会继续玩这些游戏吗？如果会的话，我们现在帮他是不是反而害了他？",
+          ContentKR = "시종, 쟤 나중에도 계속 이런 거 할까? 만약 그런다면, 우리가 이번에 도와준 게 오히려 해가 되는 거 아냐?",
+          DialogueId = 51209812,
+          GUID = "8032C9C8",
+          NextDialogue = 51209813,
+          SpeakNpcId = 700449,
+          TurnTo = {
+            [1] = "700449:n(0)"
+          }
+        },
+        [51209813] = {
+          Content = "不知道……但最开始他帮过我，我有点不忍心看他失去一切的凄惨样子。",
+          ContentKR = "모르겠어... 근데 처음에 날 도와줬잖아. 저 사람이 전부 잃고 비참해지는 모습을 보는 건 좀 그럴 것 같아.",
+          DialogueId = 51209813,
+          GUID = "8032C9F2",
+          NextDialogue = 51209814,
+          SpeakNpcId = 100001,
+          TurnTo = {
+            [1] = "0:n(700449)"
+          }
+        },
+        [51209814] = {
+          Content = "帮过你？你是说我们借钱那会儿，他把我们拉走了吗？",
+          ContentKR = "도와줘? 우리가 돈 빌리려고 할 때 데리고 나가 준 거 말하는 거야?",
+          DialogueId = 51209814,
+          GUID = "8032CA1C",
+          NextDialogue = 51209815,
+          SpeakNpcId = 700449
+        },
+        [51209815] = {
+          Content = "算是吧……还有那杯酒和给你的热巧克力。",
+          ContentKR = "그것도 그렇고... 그 술이랑 너한테 준 핫초코도 있고.",
+          DialogueId = 51209815,
+          GUID = "8032CA46",
+          NextDialogue = 51209816,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Explain02_Start"
+          }
+        },
+        [51209816] = {
+          Content = "说的也是！人真是复杂的家伙啊……",
+          ContentKR = "하긴 그렇네! 인간은 정말 복잡한 존재라니까...",
+          DialogueId = 51209816,
+          GUID = "8032CA70",
+          NextDialogue = 51209817,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:ScratchHead_Start"
+          }
+        },
+        [51209817] = {
+          Content = "以白的脑袋瓜思考这些还是太复杂了。不想了，委托既然已经完成，现在该要回螺丝刀行会复命。",
+          ContentKR = "스노우 네 머리로 이런 걸 생각하기엔 너무 복잡해. 생각하지 말자. 의뢰는 이미 완료했으니까, 이제 드라이버 협회로 돌아가서 보고해야지.",
+          DialogueId = 51209817,
+          GUID = "8032CA9A",
+          SpeakNpcId = 100001
+        },
+        [51209901] = {
+          Content = "（你与白再次回到螺丝刀行会，靠近门口时，看到了一个熟悉又陌生的家伙站在外面，嘴上还叼着一根烟，见你们过来，他把烟掐了，望了过来。）",
+          ContentKR = "(나와 스노우는 드라이버 협회로 돌아왔다. 입구에 가까워지자, 낯익으면서도 낯선 남자가 밖에 서 있는 것이 보인다. 입에는 담배를 물고 있는데, 우리가 다가가자 담배를 끄고 이쪽을 바라본다.)",
+          DialogueId = 51209901,
+          GUID = "8032D862",
+          LookAt = {
+            [1] = "700429:n(0)",
+            [2] = "0:n(700429)",
+            [3] = "700449:n(700429)"
+          },
+          NextDialogue = 51209902
+        },
+        [51209902] = {
+          Content = "回来了，人不可貌相啊，听说你把杰克那崽子的游戏厅掀了个底朝天，现在工人们都老实回来干活了。",
+          ContentKR = "돌아왔군. 역시 사람은 겉모습만 봐서는 모른다더니, 네가 잭 그놈 게임장을 뒤집어놨다며? 덕분에 일꾼들이 다 얌전하게 돌아와서 일하고 있다던데.",
+          DialogueId = 51209902,
+          GUID = "8032D88C",
+          NextDialogue = 51209903,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk01_Start"
+          }
+        },
+        [51209903] = {
+          Content = "没什么，都是小事，怎么不进去？",
+          ContentKR = "별거 아니에요. 근데 왜 안 들어가세요?",
+          DialogueId = 51209903,
+          GUID = "8032D8B6",
+          NextDialogue = 51209904,
+          SpeakNpcId = 100001
+        },
+        [51209904] = {
+          Content = "会长回来了，罗连特在和她说话。",
+          ContentKR = "회장님이 돌아오셨거든. 지금 로렌트랑 얘기하는 중이야.",
+          DialogueId = 51209904,
+          GUID = "8032D8E0",
+          NextDialogue = 51209905,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk01_End"
+          }
+        },
+        [51209905] = {
+          Content = "什么？会长？螺丝刀行会的会长不是你和罗连特吗？怎么现在还冒出来一个会长？",
+          ContentKR = "뭐? 회장님? 드라이버 협회의 회장은 너랑 로렌트 아니었어? 왜 갑자기 회장이 또 나타나는 건데?",
+          DialogueId = 51209905,
+          GUID = "8032D90A",
+          LookAt = {
+            [1] = "700429:n(700449)"
+          },
+          NextDialogue = 51209906,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Shock_Start"
+          }
+        },
+        [51209906] = {
+          Content = "谁和你说的？别听人造谣，不过你们听到的消息多半也是玛吉自己放出去的，毕竟没人想当这个会长。",
+          ContentKR = "누가 그런 소리를 했어? 헛소문 믿지 마. 하긴, 그것도 어차피 마지가 직접 퍼뜨린 소문이겠지. 아무도 이 회장 자리를 맡고 싶어 하지 않으니까.",
+          DialogueId = 51209906,
+          GUID = "8032D934",
+          NextDialogue = 51209907,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700449:Shock_End",
+            [2] = "700429:Talk02_Start"
+          }
+        },
+        [51209907] = {
+          Content = "玛吉？",
+          ContentKR = "마지요?",
+          DialogueId = 51209907,
+          GUID = "8032D95E",
+          NextDialogue = 51209908,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700429:Talk02_End"
+          }
+        },
+        [51209908] = {
+          Content = "进去聊吧，正好大家都在。",
+          ContentKR = "마침 다들 있으니까 들어가서 얘기하자고.",
+          DialogueId = 51209908,
+          GUID = "8032D988",
+          LookAt = {
+            [1] = "700429:n(0)"
+          },
+          SpeakNpcId = 700429
+        },
+        [51210001] = {
+          Content = "这些事情都已经在按部就班地解决，也请你不要在这种时候再捅点篓子出来，账本的事情搞定了吗？",
+          ContentKR = "이 일들은 전부 차근차근 해결하고 있으니까, 이럴 때 또 사고 치지 마. 장부 건은 해결했어?",
+          DialogueId = 51210001,
+          GUID = "8032E8CA",
+          NextDialogue = 51210002,
+          SpeakNpcId = 700428
+        },
+        [51210002] = {
+          Content = "账本？什么账本？我不知道。",
+          ContentKR = "장부? 무슨 장부? 난 몰라.",
+          DialogueId = 51210002,
+          GUID = "8032E8F4",
+          NextDialogue = 51210003,
+          SpeakNpcId = 700442
+        },
+        [51210003] = {
+          Content = "别装傻，玛吉，你知道的，那对我们很重要！",
+          ContentKR = "모르는 척하지 마, 마지. 알잖아, 그게 우리한테 얼마나 중요한지!",
+          DialogueId = 51210003,
+          GUID = "8032E91E",
+          NextDialogue = 51210004,
+          SpeakNpcId = 700428
+        },
+        [51210004] = {
+          Content = "啧……知道知道，我已经让那群童工帮着收集情报了，只是需要时间，你也知道，艾森巴恩看我们看得很死。",
+          ContentKR = "쳇... 알았어. 이미 그쪽 꼬마애들한테 정보 수집 시켜놨어. 시간이 좀 필요할 뿐이야. 알잖아, 아이젠반이 우릴 얼마나 감시하는지.",
+          DialogueId = 51210004,
+          GUID = "8032E948",
+          NextDialogue = 51210005,
+          SpeakNpcId = 700442
+        },
+        [51210005] = {
+          Content = "好吧，玛吉，那件事……等等……",
+          ContentKR = "알았어. 마지, 그럼 그 건은... 아, 잠깐만...",
+          DialogueId = 51210005,
+          GUID = "8032E972",
+          NextDialogue = 51210006,
+          SpeakNpcId = 700428
+        },
+        [51210006] = {
+          Content = "看看是谁回来了！我们的小救兵~",
+          ContentKR = "이야, 이게 누구야! 우리의 지원군이 오셨네!",
+          DialogueId = 51210006,
+          GUID = "8032E99C",
+          NextOptions = {
+            [1] = 51210007,
+            [2] = 51210008
+          },
+          SpeakNpcId = 700428
+        },
+        [51210007] = {
+          Content = "你们好。",
+          ContentKR = "안녕하세요.",
+          DialogueId = 51210007,
+          GUID = "8032E9C6",
+          ImprPlusId = 1002,
+          NextDialogue = 51210009
+        },
+        [51210008] = {
+          Content = "欢呼吧！你们的大救兵回来了！",
+          ContentKR = "환호하라! 그대들의 위대한 지원군이 돌아왔도다!",
+          DialogueId = 51210008,
+          GUID = "8032E9F0",
+          ImprPlusId = 1005,
+          NextDialogue = 51210009
+        },
+        [51210009] = {
+          Content = "救兵？这人干了什么？",
+          ContentKR = "지원군? 이 사람이 뭘 했는데?",
+          DialogueId = 51210009,
+          GUID = "8032EA1A",
+          NextDialogue = 51210010,
+          SpeakNpcId = 700442
+        },
+        [51210010] = {
+          Content = "{性别：他|她}把杰克先生的赌场闹翻了天！罗连特没和你说吗？我一想到那家伙埋在工厂里的蛆虫一个个被碾死，心里就别提有多爽快！",
+          ContentKR = "얘가 미스터 잭의 도박장을 완전히 뒤집어 놨다니까! 로렌트가 말 안 했어? 그놈이 공장에 심어놓은 구더기들이 하나하나 짓밟힌 걸 생각하면 속이 다 시원하다고!",
+          DialogueId = 51210010,
+          GUID = "8032EA44",
+          NextDialogue = 51210011,
+          SpeakNpcId = 700429
+        },
+        [51210011] = {
+          Content = "也不是好事，至少一段时间里我们又要招新来弥补这些岗位的空缺了。",
+          ContentKR = "좋은 일만은 아니야. 한동안은 이 자리들을 채우려고 신입을 뽑아야 할 테니까.",
+          DialogueId = 51210011,
+          GUID = "8032EA6E",
+          NextDialogue = 51210012,
+          SpeakNpcId = 700428
+        },
+        [51210012] = {
+          Content = "去**的，留着他们也不干活，整天撺掇人去赌钱！",
+          ContentKR = "엿이나 먹으라지. 그놈들 여기 있으면서 일도 안 하고 맨날 사람들 꼬드겨서 도박이나 하게 만들었잖아!",
+          DialogueId = 51210012,
+          GUID = "8032EA98",
+          NextDialogue = 51210013,
+          SpeakNpcId = 700429
+        },
+        [51210013] = {
+          Content = "哦哦！原来是你做了这些事啊，你好啊，我是螺丝刀行会的会长玛吉，很高兴见到你。",
+          ContentKR = "오오! 그 일을 한 게 너였구나. 안녕, 난 드라이버 협회의 회장 마지야, 만나서 반가워.",
+          DialogueId = 51210013,
+          GUID = "8032EAC2",
+          NextDialogue = 51210014,
+          SpeakNpcId = 700442
+        },
+        [51210014] = {
+          Content = "还有我还有我呢！我也是帮忙摧毁赌场的救兵！",
+          ContentKR = "나도, 나도 있어! 나도 도박장 부수는 걸 도운 지원군이라구!",
+          DialogueId = 51210014,
+          GUID = "8032EAEC",
+          NextDialogue = 51210015,
+          SpeakNpcId = 700449
+        },
+        [51210015] = {
+          Content = "你还带了个皎皎？做什么用的？跟咱们车站里那个一样，见到人就开始科普火车一样来科普你？",
+          ContentKR = "루나까지 데리고 왔네? 이 루나는 무슨 용도야? 우리 기차역에서 아무나 보면 기차 얘기늘어놓는 그 루나처럼, 자기 얘기 떠벌리는 루나인가?",
+          DialogueId = 51210015,
+          GUID = "8032EB16",
+          NextDialogue = 51210016,
+          SpeakNpcId = 700442
+        },
+        [51210016] = {
+          Content = "你在说什么呢！我可是纯白的救赎☆光之魔王大人，小仆从最忠实的伙伴，水仙平原的超一流狩月人——白！",
+          ContentKR = "무슨 소리야?! 난 순백의 구원자☆빛의 마왕님, 시종의 가장 충실한 동료, 아스포델 최고의 월석 사냥꾼, 스노우라구!",
+          DialogueId = 51210016,
+          GUID = "8032EB40",
+          NextDialogue = 51210017,
+          SpeakNpcId = 700449
+        },
+        [51210017] = {
+          Content = "我懂~明明是这家伙在干活，你却满嘴大人大人，还叫{性别：他|她}小仆从，你和我一样对吧，是个吉祥物。",
+          ContentKR = "알겠어~ 그러니까 일은 얘가 다 하는데, 넌 입만 열면 마왕님이 어쩌네 하면서, 얘를 시종이라 부르는 거지? 너도 나랑 똑같은 '마스코트'구나.",
+          DialogueId = 51210017,
+          GUID = "8032EB6A",
+          NextDialogue = 51210018,
+          SpeakNpcId = 700442
+        },
+        [51210018] = {
+          Content = "吉祥物？什么意思？我是——",
+          ContentKR = "마스코트? 그게 무슨 뜻이야? 난...",
+          DialogueId = 51210018,
+          GUID = "8032EB94",
+          NextDialogue = 51210019,
+          SpeakNpcId = 700449
+        },
+        [51210019] = {
+          Content = "白，报名号的事情还是先停一停吧……",
+          ContentKR = "스노우, 자기소개는 일단 그만하자...",
+          DialogueId = 51210019,
+          GUID = "8032EBBE",
+          NextDialogue = 51210020,
+          SpeakNpcId = 100001
+        },
+        [51210020] = {
+          Content = "见笑了。诚如你们所见，螺丝刀行会的会长的确是一位孩子。",
+          ContentKR = "뭐, 그렇게 됐어. 보다시피, 드라이버 협회의 회장은 어린애가 맞아.",
+          DialogueId = 51210020,
+          GUID = "8032EBE8",
+          NextDialogue = 51210021,
+          SpeakNpcId = 700428
+        },
+        [51210021] = {
+          Content = "我们的初衷并非是为了选一位吉祥物做会长，而是除了孩子之外，没有大人愿意担任会长一职，公然和艾森巴恩叫板。",
+          ContentKR = "우리 원래 의도는 마스코트를 회장으로 뽑으려던 건 아니었어. 하지만 어른 중에는 누구도 회장 자리를 맡으려는 사람이 없었거든. 아이젠반에 대놓고 반기를 들기 싫으니까.",
+          DialogueId = 51210021,
+          GUID = "8032EC12",
+          NextDialogue = 51210022,
+          SpeakNpcId = 700428
+        },
+        [51210022] = {
+          Content = "就是这样，他们跟你说：和你在天花板区那边当童工老大差不多，从管着一群小孩变成管着全火车站的工人，很厉害的！",
+          ContentKR = "그래, 처음엔 천장 구역에서 아동 일꾼들 우두머리 하던 거랑 비슷하다고 했지. 대신 애들 몇 명 관리하는 게 아니라, 역 전체 일꾼들을 관리하게 되는 대단한 일이라고 말이야!",
+          DialogueId = 51210022,
+          GUID = "8032EC3C",
+          NextDialogue = 51210023,
+          SpeakNpcId = 700442
+        },
+        [51210023] = {
+          Content = "然后你真的过来了，背上这个黑锅才发现，锅里面全是老鼠屎！",
+          ContentKR = "근데 여기 와서 실제로 회장이 되고 나서야 알게 됐어. 얼마나 *똥 같은 일을 맡게 된 건지 말이야!",
+          DialogueId = 51210023,
+          GUID = "8032EC66",
+          NextDialogue = 51210024,
+          SpeakNpcId = 700442
+        },
+        [51210024] = {
+          Content = "克罗格，早跟你说了不要在她面前说这些粗俗的话，看看她现在都成什么样子了！",
+          ContentKR = "크로거, 내가 애 앞에서 험한 말 쓰지 말라고 했지. 봐, 지금 애가 어떻게 됐는지!",
+          DialogueId = 51210024,
+          GUID = "8032EC90",
+          NextDialogue = 51210025,
+          SpeakNpcId = 700428
+        },
+        [51210025] = {
+          Content = "我*？关我什么事？她在外面也学了！",
+          ContentKR = "씨*, 뭐라는 거야? 그게 나랑 뭔 상관이야? 이 동네에 입 험한 게 나 하나야?",
+          DialogueId = 51210025,
+          GUID = "8032ECBA",
+          NextDialogue = 51210073,
+          SpeakNpcId = 700429
+        },
+        [51210026] = {
+          Content = "什么叫公然和艾森巴恩叫板？",
+          ContentKR = "아이젠반에 대놓고 반기를 든다뇨?",
+          DialogueId = 51210026,
+          GUID = "8032ECE4",
+          NextDialogue = 51210027
+        },
+        [51210027] = {
+          Content = "你对螺丝刀行会也多少有些了解了吧？那你应该了解我们是由在火车站里互帮互助的工人组成，但毕竟都是工人，也都得在高层的手下讨日子。",
+          ContentKR = "드라이버 협회에 대해서는 이제 어느 정도 알지? 그럼 우리가 기차역에서 서로 돕는 일꾼들로 구성된 조직이란 것도 알 거야. 결국 다들 노동자고, 높으신 분들 밑에서 일하면서 먹고살아야 하는 처지잖아.",
+          DialogueId = 51210027,
+          GUID = "8032ED0E",
+          NextDialogue = 51210028,
+          SpeakNpcId = 700428
+        },
+        [51210028] = {
+          Content = "我们的处境好坏，和高层之间的决策息息相关，高层一个高兴，我们的晚餐就多加一份面包，高层一个不高兴，我们可能就要饿上两天肚子。",
+          ContentKR = "우린 높으신 분들 결정에 따라 처지가 달라져. 그분들이 기분 좋으면 저녁밥에 빵 한 조각이 더 나오고, 그분들 심기를 건드리면 우린 이틀 동안 굶어야 할 수도 있지.",
+          DialogueId = 51210028,
+          GUID = "8032ED38",
+          NextDialogue = 51210029,
+          SpeakNpcId = 700428
+        },
+        [51210029] = {
+          Content = "而百花车站的高层是谁呢？",
+          ContentKR = "그럼 블룸필드역의 높으신 분은 누굴까?",
+          DialogueId = 51210029,
+          GUID = "8032ED62",
+          NextDialogue = 51210030,
+          SpeakNpcId = 700428
+        },
+        [51210030] = {
+          Content = "艾森巴恩是天！百花车站的天！艾森巴恩是海！百花车站的海！",
+          ContentKR = "아이젠반은 하늘! 블룸필드역의 하늘! 아이젠반은 바다! 블룸필드역의 바다!",
+          DialogueId = 51210030,
+          GUID = "8032ED8C",
+          NextDialogue = 51210031,
+          SpeakNpcId = 700442
+        },
+        [51210031] = {
+          Content = "喂喂喂！这歌绝对不是我教的！我唱不出来！",
+          ContentKR = "야야, 저 노래는 내가 가르친 게 진짜 아냐! 난 부를 줄도 모른다구!",
+          DialogueId = 51210031,
+          GUID = "8032EDB6",
+          NextDialogue = 51210032,
+          SpeakNpcId = 700429
+        },
+        [51210032] = {
+          Content = "我听汽笛沙龙里那些**贵族们唱的。",
+          ContentKR = "기적 소리 살롱에 있는 그 거지 깡깡이 같은 귀족들이 부르는 거 들은 거야.",
+          DialogueId = 51210032,
+          GUID = "8032EDE0",
+          NextDialogue = 51210073,
+          SpeakNpcId = 700442
+        },
+        [51210033] = {
+          Content = "为什么找……她？",
+          ContentKR = "왜 하필... 이 아이한테 맡긴 거예요?",
+          DialogueId = 51210033,
+          GUID = "8032EE0A",
+          NextDialogue = 51210034
+        },
+        [51210034] = {
+          Content = "可别小瞧她，她有个响当当的别称，叫疯玛吉！",
+          ContentKR = "얕보지 마. 얘는 별명이 미친 마지거든! 이 동네에 모르는 사람이 없어!",
+          DialogueId = 51210034,
+          GUID = "8032EE34",
+          NextDialogue = 51210035,
+          SpeakNpcId = 700429
+        },
+        [51210035] = {
+          Content = "什么疯玛吉！明明是最强玛吉！想当年，我手拿两把扳手，从天花板区打到地下工厂，见人就是哐哐两下，来回砸了三天三夜，是血流成河。",
+          ContentKR = "미친 마지라니?! 최강 마지라구! 내가 그때 렌치 두 개를 양손에 들고 천장 구역에서 지하 공장까지 쳐들어가서, 보이는 사람마다 쾅!쾅! 3일 밤낮을 닥치는 대로 깨부쉈다고. 피바다가 따로 없었지.",
+          DialogueId = 51210035,
+          GUID = "8032EE5E",
+          NextDialogue = 51210036,
+          SpeakNpcId = 700442
+        },
+        [51210036] = {
+          Content = "我手起扳手落手起扳手落手起扳手落，一眼都没眨过！",
+          ContentKR = "난 그냥 렌치를 휘두르고, 또 휘두르고, 또 휘둘렀어. 눈도 깜짝하지 않았다고!",
+          DialogueId = 51210036,
+          GUID = "8032EE88",
+          NextDialogue = 51210037,
+          SpeakNpcId = 700442
+        },
+        [51210037] = {
+          Content = "这是和那帮喝大了的学的，和我也没关系。",
+          ContentKR = "저건 그 술주정뱅이 패거리한테 배운 거야. 나랑 상관없어.",
+          DialogueId = 51210037,
+          GUID = "8032EEB2",
+          NextDialogue = 51210038,
+          SpeakNpcId = 700429
+        },
+        [51210038] = {
+          Content = "很明显，你也是喝大的那一类，你喝大了还更危险……",
+          ContentKR = "너도 그 술주정뱅이잖아. 넌 술 먹으면 그보다 더 위험하고...",
+          DialogueId = 51210038,
+          GUID = "8032EEDC",
+          NextDialogue = 51210039,
+          SpeakNpcId = 700428
+        },
+        [51210039] = {
+          Content = "不提这个。总之，你可以理解为，玛吉是一位在天花板区的童工里颇有声望的大姐大，我们招募她，也是希望能够团结成年工和童工。",
+          ContentKR = "뭐, 됐어. 어쨌든, 마지는 천장 구역 꼬마애들 사이에서 꽤 명망 있는, 큰누님 같은 존재라고 이해하면 돼. 우리가 마지를 영입한 것도 성인 일꾼과 아동 일꾼들을 단결시키기 위해서고.",
+          DialogueId = 51210039,
+          GUID = "8032EF06",
+          NextDialogue = 51210073,
+          SpeakNpcId = 700428
+        },
+        [51210040] = {
+          Content = "你们的处境我大概都明白了，可我实在很好奇……",
+          ContentKR = "상황은 대충 알겠어요. 근데 정말 궁금한 게 있어서 그러는데요...",
+          DialogueId = 51210040,
+          GUID = "8032EF30",
+          NextDialogue = 51210041,
+          SpeakNpcId = 100001
+        },
+        [51210041] = {
+          Content = "你们已经这样了，究竟是凭借什么在反抗你们的高层——艾森巴恩？或者换种方式来说，你们有什么底气和他叫板呢？",
+          ContentKR = "이런 상황에서, 대체 뭘 믿고 그 높으신 분 아이젠반한테 맞서는 거예요? 무슨 믿는 구석이라도 있어요?",
+          DialogueId = 51210041,
+          GUID = "8032EF5A",
+          NextDialogue = 51210042,
+          SpeakNpcId = 100001
+        },
+        [51210042] = {
+          Content = "问得好！一针见血！罗连特，快把最装*的那段话告诉{性别：他|她}！",
+          ContentKR = "좋은 질문이야! 핵심을 찔렀네! 로렌트, 그 존* 쩌는 그 이야기 얼른 얘한테 해줘!",
+          DialogueId = 51210042,
+          GUID = "8032EF84",
+          NextDialogue = 51210043,
+          SpeakNpcId = 700442
+        },
+        [51210043] = {
+          Content = "……你知道螺丝刀行会为什么叫螺丝刀行会吗？",
+          ContentKR = "...너 드라이버 협회가 왜 드라이버 협회인지 알아?",
+          DialogueId = 51210043,
+          GUID = "8032EFAE",
+          NextDialogue = 51210044,
+          SpeakNpcId = 700428
+        },
+        [51210044] = {
+          Content = "这个我知道！柯尼和我们说过！是一名在炼金院进修过的大工程师起的对吧？他还改良过月髓引擎呢！",
+          ContentKR = "그거 나 알아! 코니가 우리한테 말해줬어! 연금원에서 공부한 대단한 엔지니어가 지은 이름 맞지? 그 사람 폭시코르 엔진도 개량했다며!",
+          DialogueId = 51210044,
+          GUID = "8032EFD8",
+          NextDialogue = 51210045,
+          SpeakNpcId = 700449
+        },
+        [51210045] = {
+          Content = "柯尼科普得很详细，那么你们应该也知道，那名大工程师在创立行会后没多久就去世了，但他的技术却被当时的行会工人们继承了下来，留存到今天。",
+          ContentKR = "코니가 꽤 자세히 설명해 줬네. 그럼 너희도 알겠지만, 그 대단한 엔지니어는 협회를 세우고 얼마 안 가서 세상을 떠났어. 하지만 그의 기술은 당시 협회 일꾼들을 통해 오늘날까지 전해지고 있지.",
+          DialogueId = 51210045,
+          GUID = "8032F002",
+          NextDialogue = 51210046,
+          SpeakNpcId = 700428
+        },
+        [51210046] = {
+          Content = "哦~我懂了~也就是说，你们手上有艾森巴恩不知道的月髓引擎技术！",
+          ContentKR = "아~ 알았다! 그러니까 너희한테 아이젠반이 모르는 폭시코르 엔진 기술이 있다는 거네!",
+          DialogueId = 51210046,
+          GUID = "8032F02C",
+          NextDialogue = 51210047,
+          SpeakNpcId = 700449
+        },
+        [51210047] = {
+          Content = "没错，我们离不开艾森巴恩给我们发工资，但艾森巴恩也离不开我们的月髓引擎技术。",
+          ContentKR = "맞아. 우린 아이젠반이 주는 월급 없이는 살 수 없지만, 아이젠반도 우리의 폭시코르 엔진 기술이 없으면 안 돼.",
+          DialogueId = 51210047,
+          GUID = "8032F056",
+          NextDialogue = 51210048,
+          SpeakNpcId = 700428
+        },
+        [51210048] = {
+          Content = "所以我们的关系只能僵持在这里，他无论如何压榨，也不能真正把我们逼急了赶走，我们无论如何反抗，也翻不了他的控制。",
+          ContentKR = "그래서 우리 관계가 이런 교착 상태를 유지하는 거야. 우릴 그렇게 쥐어짜면서도 아이젠반은 우릴 아예 몰아낼 순 없고, 우린 아무리 반항해도 그의 손아귀를 벗어날 수 없지.",
+          DialogueId = 51210048,
+          GUID = "8032F080",
+          NextDialogue = 51210049,
+          SpeakNpcId = 700428
+        },
+        [51210049] = {
+          Content = "嘁……窝囊！要我看，就得拿起扳手把艾森巴恩的那帮亲兵全砸死！",
+          ContentKR = "쳇... 한심하긴! 그냥 렌치 꺼내 들고 아이젠반의 친위병들을 전부 때려죽여야 된다니까!",
+          DialogueId = 51210049,
+          GUID = "8032F0AA",
+          NextDialogue = 51210050,
+          SpeakNpcId = 700442
+        },
+        [51210050] = {
+          Content = "这个我支持。",
+          ContentKR = "그건 나도 찬성이야.",
+          DialogueId = 51210050,
+          GUID = "8032F0D4",
+          NextDialogue = 51210051,
+          SpeakNpcId = 700429
+        },
+        [51210051] = {
+          Content = "说起这点，我有一件事要拜托给你……",
+          ContentKR = "그 얘기가 나와서 말인데, 너한테 부탁할 게 하나 있어...",
+          DialogueId = 51210051,
+          GUID = "8032F0FE",
+          NextDialogue = 51210052,
+          SpeakNpcId = 700428
+        },
+        [51210052] = {
+          Content = "我吗？又是我？",
+          ContentKR = "저요? 또 저한테요?",
+          DialogueId = 51210052,
+          GUID = "8032F128",
+          NextDialogue = 51210053,
+          SpeakNpcId = 100001
+        },
+        [51210053] = {
+          Content = "对，实在对不住，但的确又是你。我们协会丢了个人，正是现任继承螺丝刀行会技术的工程师，我们叫他一夜禅师。",
+          ContentKR = "그래, 미안하지만 또 너한테 부탁해야 할 것 같아. 우리 협회에서 사람이 한 명 사라졌거든. 드라이버 협회의 기술을 전수받은 엔지니어인데, 우린 녀석을 '밤의 도인'이라고 불러.",
+          DialogueId = 51210053,
+          GUID = "8032F152",
+          NextDialogue = 51210054,
+          SpeakNpcId = 700428
+        },
+        [51210054] = {
+          Content = "一夜禅师……为什么叫这么奇怪的名字？",
+          ContentKR = "밤의 도인...? 무슨 이름이 그래?",
+          DialogueId = 51210054,
+          GUID = "8032F17C",
+          NextDialogue = 51210055,
+          SpeakNpcId = 700449
+        },
+        [51210055] = {
+          Content = "因为他是个傻子，问他什么问题每次都不当面回答，要回家等上一夜才告诉你解决方法，非说自己要经历一夜开悟才能见道。",
+          ContentKR = "머저리 같은 놈이거든. 뭘 물어봐도 바로 그 자리에서 대답을 안 하고, 집에 가서 하룻밤 기다려야 해결 방법이 나온다니까. 그래야만 깨달음을 얻는다나 어쨌다나.",
+          DialogueId = 51210055,
+          GUID = "8032F1A6",
+          NextDialogue = 51210056,
+          SpeakNpcId = 700429
+        },
+        [51210056] = {
+          Content = "他说这叫禅与火车头修理艺术，我认为他只是想给自己找借口去喝酒！",
+          ContentKR = "'참선으로 깨닫는 수리의 예술'인지 뭔지 하면서 둘러대는데, 난 그냥 술 마시러 가고 싶어서 핑계 대는 거라고 봐!",
+          DialogueId = 51210056,
+          GUID = "8032F1D0",
+          NextDialogue = 51210057,
+          SpeakNpcId = 700442
+        },
+        [51210057] = {
+          Content = "顺道一提，禅这玩意好像是他哪天去城里喝酒的时候听华胥来的织星客们提过，之后就盗用了这个名头，挺胡扯的！",
+          ContentKR = "참고로 참선 어쩌고 하는 건, 어느 날 시내에서 술 마시다가 화서에서 온 별을 잇는 자들한테 들었다나 봐. 그러곤 그걸 자기 것처럼 도용한 거지. 완전 헛소리야!",
+          DialogueId = 51210057,
+          GUID = "8032F1FA",
+          NextDialogue = 51210058,
+          SpeakNpcId = 700429
+        },
+        [51210058] = {
+          Content = "好了，不管怎么说，他现在失踪了，我们需要一个人去找他，最后的线索指向火车站里的一名工头，所以……",
+          ContentKR = "아무튼 그 녀석이 지금 실종됐어. 누가 찾으러 가야 하는데, 마지막 단서가 기차역의 한 작업반장을 가리키고 있거든...",
+          DialogueId = 51210058,
+          GUID = "8032F224",
+          NextOptions = {
+            [1] = 51210059,
+            [2] = 51210063
+          },
+          SpeakNpcId = 700428
+        },
+        [51210059] = {
+          Content = "懂了，又要跑腿是吧。",
+          ContentKR = "알겠어요. 또 심부름이네요.",
+          DialogueId = 51210059,
+          GUID = "8032F24E",
+          ImprPlusId = 1004,
+          NextDialogue = 51210060
+        },
+        [51210060] = {
+          Content = "是这样的……咳，我说了吧，最后查出来的，和一夜禅师失踪有关的线索，指向了火车站里的一名工头。",
+          ContentKR = "그래... 크흠, 방금 말했듯이, 밤의 도인의 실종과 관련된 마지막 단서는 기차역의 한 작업반장을 가리키고 있어.",
+          DialogueId = 51210060,
+          GUID = "8032F278",
+          NextDialogue = 51210061,
+          SpeakNpcId = 700428
+        },
+        [51210061] = {
+          Content = "说是工头，其实就是艾森巴恩的狗，咬到他们基本就相当于和艾森巴恩直接叫板，尤其是他们清楚知道工会有哪些人的前提下。",
+          ContentKR = "작업반장이라곤 해도 사실상 아이젠반의 개나 다름없지. 녀석들을 건드리는 건 결국 아이젠반에게 대놓고 도전하는 거나 마찬가지야. 특히 저들이 협회에 누가 있는지 다 알고 있는 상황에선 말이야.",
+          DialogueId = 51210061,
+          GUID = "8032F2A2",
+          NextDialogue = 51210062,
+          SpeakNpcId = 700428
+        },
+        [51210062] = {
+          Content = "在这种情况下，找个新面孔，特别是很快就会离开车站的外人去调查是最合适的选择。",
+          ContentKR = "이런 상황에선 새로운 얼굴, 특히 곧 역을 떠날 외부인을 찾아서 조사를 맡기는 게 가장 합리적인 선택이지.",
+          DialogueId = 51210062,
+          GUID = "8032F2CC",
+          NextDialogue = 51210067,
+          SpeakNpcId = 700428
+        },
+        [51210063] = {
+          Content = "又让我帮你们打白工？",
+          ContentKR = "또 공짜로 일하라는 건가요?",
+          DialogueId = 51210063,
+          GUID = "8032F2F6",
+          ImprPlusId = 1001,
+          NextDialogue = 51210064
+        },
+        [51210064] = {
+          Content = "没错！我也觉得让你一直打白工不好，尤其是你还不是我们行会的工人，所以我现在决定，将螺丝刀行会会长一职交给你！",
+          ContentKR = "그래! 그치만 나도 널 계속 공짜로 부려 먹는 건 좀 그렇고, 넌 우리 협회 소속도 아니잖아? 그래서 결정했어. 드라이버 협회의 회장 자리를 너한테 넘길게!",
+          DialogueId = 51210064,
+          GUID = "8032F320",
+          NextDialogue = 51210065,
+          SpeakNpcId = 700442
+        },
+        [51210065] = {
+          Content = "（她装模做样地从自己头顶取下了一顶不存在的头冠，作势就要戴在你头上，却被人拦了下来。）",
+          ContentKR = "(마지는 자신의 머리 위에서 존재하지도 않는 왕관을 벗어내는 시늉을 하며 내 머리에 씌우려 했지만, 곧바로 제지당했다.)",
+          DialogueId = 51210065,
+          GUID = "8032F34A",
+          NextDialogue = 51210066
+        },
+        [51210066] = {
+          Content = "小疯子，你又要干什么？！",
+          ContentKR = "이 미친 꼬맹이가 또 뭐 하려는 거야?!",
+          DialogueId = 51210066,
+          GUID = "8032F374",
+          NextDialogue = 51210067,
+          SpeakNpcId = 700429
+        },
+        [51210067] = {
+          Content = "好吧，都这么说了，我去还不行吗？",
+          ContentKR = "알았어요. 그렇게까지 말하는데, 가면 되잖아요?",
+          DialogueId = 51210067,
+          GUID = "8032F39E",
+          NextDialogue = 51210068,
+          SpeakNpcId = 100001
+        },
+        [51210068] = {
+          Content = "你知道吗？我一直都很看重你，因为你身上有着我们这里的人没有的东西——善良。",
+          ContentKR = "그거 알아? 난 항상 널 높이 평가했어. 왜냐하면 넌 우리 여기 사람들한테 없는 걸 가지고 있거든. 바로 선량함이지.",
+          DialogueId = 51210068,
+          GUID = "8032F3C8",
+          NextDialogue = 51210069,
+          SpeakNpcId = 700428
+        },
+        [51210069] = {
+          Content = "得了吧！这么说话的家伙心里都蔫坏蔫坏的，动不动就是“你人好你善良”，实际上就是千方百计哄着人干活嘛。",
+          ContentKR = "됐어! 속이 시커먼 놈들이나 그런 소릴 하는 거잖아? 입으론 \"넌 참 착해.\"라고 하면서 온갖 수단을 써서 사람 부려먹으려는 거 내가 모를 줄 알아!",
+          DialogueId = 51210069,
+          GUID = "8032F3F2",
+          NextDialogue = 51210070,
+          SpeakNpcId = 700449
+        },
+        [51210070] = {
+          Content = "对嘛！罗连特，皎皎说的一点没错，你就是个混蛋！",
+          ContentKR = "맞아! 로렌트, 루나 말 틀린 거 하나도 없어. 넌 정말 쓰레기야!",
+          DialogueId = 51210070,
+          GUID = "8032F41C",
+          NextDialogue = 51210071,
+          SpeakNpcId = 700442
+        },
+        [51210071] = {
+          Content = "是，是，拜托你们做事，我们行会一点力不出的确不好，所以这次……",
+          ContentKR = "그래, 맞아. 부탁만 하고 협회에선 손 놓고 있는 건 확실히 좀 그렇지. 그래서 이번엔...",
+          DialogueId = 51210071,
+          GUID = "8032F446",
+          NextDialogue = 51210072,
+          SpeakNpcId = 700428
+        },
+        [51210072] = {
+          Content = "克罗格和你们同行。",
+          ContentKR = "크로거가 너희랑 동행할 거야.",
+          DialogueId = 51210072,
+          GUID = "8032F470",
+          SpeakNpcId = 700428
+        },
+        [51210073] = {
+          DialogueId = 51210073,
+          FinalDialogueId = 51210040,
+          GUID = "8032F49A",
+          NextOptions = {
+            [1] = 51210026,
+            [2] = 51210033
+          }
+        },
+        [51210101] = {
+          Content = "又又又回来了，怎么感觉短短的一段时间里我们已经在这里来回跑了好几趟啊……",
+          ContentKR = "또, 또, 또 돌아왔네. 잠깐 사이에 벌써 여기를 몇 번이나 왔다 갔다 한 것 같은데...",
+          DialogueId = 51210101,
+          GUID = "8032F932",
+          NextDialogue = 51210102,
+          SpeakNpcId = 700449
+        },
+        [51210102] = {
+          Content = "那算什么，我这辈子都在这里来来回回跑了多少年了！不是很有意思吗？每天都有新面孔。",
+          ContentKR = "그게 뭐 대수라고. 난 벌써 여기를 몇 년이나 왔다 갔다 했는데! 재미있지 않아? 매일 새로운 얼굴들이 보이잖아.",
+          DialogueId = 51210102,
+          GUID = "8032F95C",
+          NextDialogue = 51210103,
+          SpeakNpcId = 700429
+        },
+        [51210103] = {
+          Content = "我倒是只觉得每个人脸上的疲惫神色都差不多呢。",
+          ContentKR = "난 오히려 사람들 얼굴에 지친 표정이 다 똑같아 보이는걸.",
+          DialogueId = 51210103,
+          GUID = "8032F986",
+          NextDialogue = 51210104,
+          SpeakNpcId = 700449
+        },
+        [51210104] = {
+          Content = "闲话少说吧，罗连特让我们找的那个工头是谁？",
+          ContentKR = "잡담은 그만하죠. 로렌트가 찾으라던 그 작업반장이 누구예요?",
+          DialogueId = 51210104,
+          GUID = "8032F9B0",
+          NextDialogue = 51210105,
+          SpeakNpcId = 100001
+        },
+        [51210105] = {
+          Content = "你一眼望过去，谁的脸上带着那种嚣张欠揍的笑容，昂首挺胸地走路，谁就是这一片的工头。",
+          ContentKR = "딱 봤을 때 한 대 패고 싶게 건방진 얼굴로 웃으면서 걷는 놈이 있으면, 그게 이 구역 작업반장이야.",
+          DialogueId = 51210105,
+          GUID = "8032F9DA",
+          NextDialogue = 51210106,
+          SpeakNpcId = 700429
+        },
+        [51210106] = {
+          Content = "还真是……非常好辨认。",
+          ContentKR = "와... 알아보기 참 쉽겠네요.",
+          DialogueId = 51210106,
+          GUID = "8032FA04",
+          NextDialogue = 51210107,
+          SpeakNpcId = 100001
+        },
+        [51210107] = {
+          Content = "你来干两天活，你也会笑不出来。",
+          ContentKR = "여기서 이틀만 일해 봐. 너도 웃음이 안 나올 테니까.",
+          DialogueId = 51210107,
+          GUID = "8032FA2E",
+          NextDialogue = 51210108,
+          SpeakNpcId = 700429
+        },
+        [51210108] = {
+          Content = "我们要怎么问他一夜禅师的消息？要像之前一样卖惨来套话吗？白准备好了！",
+          ContentKR = "그럼 밤의 도인에 대한 정보를 어떻게 물어볼까? 저번처럼 동정심을 유발해서 말을 꺼내게 유도해 볼까? 스노우, 준비됐어!",
+          DialogueId = 51210108,
+          GUID = "8032FA58",
+          NextDialogue = 51210109,
+          SpeakNpcId = 700449
+        },
+        [51210109] = {
+          Content = "卖惨？卖给工头？真好笑，工头们最不吃的就是这种卖惨，毕竟工人们真的很惨，他们见怪不怪了，你们那些小花招没用的。",
+          ContentKR = "동정심? 작업반장한테? 웃기지 마, 작업반장들한테 제일 안 먹히는 게 그런 불쌍한 척이야. 일꾼들은 지금도 충분히 불쌍하고, 그런 건 하도 봐서 놀라지도 않아. 그런 꼼수는 안 통해.",
+          DialogueId = 51210109,
+          GUID = "8032FA82",
+          NextDialogue = 51210110,
+          SpeakNpcId = 700429
+        },
+        [51210110] = {
+          Content = "我倒是也可以给你们支一招，就是可能风险有点大……",
+          ContentKR = "대신 내가 방법을 하나 알려줄 수는 있는데, 좀 위험할 수도 있긴 해...",
+          DialogueId = 51210110,
+          GUID = "8032FAAC",
+          NextDialogue = 51210111,
+          SpeakNpcId = 700429
+        },
+        [51210111] = {
+          Content = "（要怎么寻找一夜禅师？）",
+          ContentKR = "(밤의 도인을 어떻게 찾지?)",
+          DialogueId = 51210111,
+          GUID = "8032FAD6",
+          NextOptions = {
+            [1] = 51210112,
+            [2] = 51210118
+          },
+          SpeakNpcId = 100001
+        },
+        [51210112] = {
+          Content = "（自己想办法。）",
+          ContentKR = "(방법을 직접 생각해 본다.)",
+          DialogueId = 51210112,
+          GUID = "8032FB00",
+          NextDialogue = 51210113,
+          Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
+        },
+        [51210113] = {
+          Content = "既然这些工头都是艾森巴恩的人，我们就扮演最喜爱艾森巴恩的人来解决这个问题吧。",
+          ContentKR = "여기 작업반장들은 전부 아이젠반의 부하니까, 아이젠반의 열성팬인 것처럼 연기해서 문제를 해결해 볼게요.",
+          DialogueId = 51210113,
+          GUID = "8032FB2A",
+          NextDialogue = 51210114,
+          SpeakNpcId = 100001
+        },
+        [51210114] = {
+          Content = "喜爱？艾森巴恩？你怎么做到把这两个完全不能凑在一起的词语以这么自然的方式说出来的？呃……完了，他们连在一起好恶心，我起鸡皮疙瘩了……",
+          ContentKR = "아이젠반...? 열성팬...? 전혀 어울리지 않는 두 단어를 어떻게 그렇게 자연스럽게 말할 수 있는 거지? 으... 안 돼, 붙어 있으니까 너무 역겨워. 소름 돋는다고...",
+          DialogueId = 51210114,
+          GUID = "8032FB54",
+          NextDialogue = 51210115,
+          SpeakNpcId = 700429
+        },
+        [51210115] = {
+          Content = "你知道这名工头的名字吗？",
+          ContentKR = "그 작업반장의 이름을 알아요?",
+          DialogueId = 51210115,
+          GUID = "8032FB7E",
+          NextDialogue = 51210116,
+          SpeakNpcId = 100001
+        },
+        [51210116] = {
+          Content = "他？奥拉夫。",
+          ContentKR = "이름? 올라프야.",
+          DialogueId = 51210116,
+          GUID = "8032FBA8",
+          NextDialogue = 51210117,
+          SpeakNpcId = 700429
+        },
+        [51210117] = {
+          Content = "奥拉夫……好，白，我们出发！",
+          ContentKR = "올라프... 알았어요. 스노우, 가자!",
+          DialogueId = 51210117,
+          GUID = "8032FBD2",
+          SpeakNpcId = 100001
+        },
+        [51210118] = {
+          Content = "（听听克罗格的主意。）",
+          ContentKR = "(크로거의 아이디어를 들어본다.)",
+          DialogueId = 51210118,
+          GUID = "8032FBFC",
+          NextDialogue = 51210119,
+          Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
+        },
+        [51210119] = {
+          Content = "你说说看，我们最不怕的就是风险大。",
+          ContentKR = "말해 주세요. 위험 같은 건 하나도 두렵지 않아요.",
+          DialogueId = 51210119,
+          GUID = "8032FC26",
+          NextDialogue = 51210120,
+          SpeakNpcId = 100001
+        },
+        [51210120] = {
+          Content = "有点胆色，既然你都这么说了，我也不能怂，我们直接打他一顿，逼供他说出位置。来，看到那个位置了吗？",
+          ContentKR = "배짱은 있네. 네가 그렇게까지 말한다면 나도 쫄 순 없지. 방법은 그냥 한 대 쳐서 위치를 불게 만들자는 거야. 자, 저기 보이지?",
+          DialogueId = 51210120,
+          GUID = "8032FC50",
+          NextDialogue = 51210121,
+          SpeakNpcId = 700429
+        },
+        [51210121] = {
+          Content = "哪里哪里？",
+          ContentKR = "어디 어디?",
+          DialogueId = 51210121,
+          GUID = "8032FC7A",
+          NextDialogue = 51210122,
+          SpeakNpcId = 700449
+        },
+        [51210122] = {
+          Content = "就是那里，等会我大吼一声作为信号，然后我就假装喝醉了发酒疯，开始揍你，你一边叫救命，一边跑到那个地方去，吸引工头的注意力，让他过去。",
+          ContentKR = "저기. 이따가 내가 크게 소리를 질러서 신호를 줄게. 난 술 취한 척 난동을 부리면서 널 때릴 건데, 그럼 살려달라고 외치면서 저쪽으로 도망가. 그리고 작업반장의 주의를 끌어서 네 쪽으로 오게 만들어.",
+          DialogueId = 51210122,
+          GUID = "8032FCA4",
+          NextDialogue = 51210123,
+          SpeakNpcId = 700429
+        },
+        [51210123] = {
+          Content = "揍……我？",
+          ContentKR = "때려요...? 저를요?",
+          DialogueId = 51210123,
+          GUID = "8032FCCE",
+          NextDialogue = 51210124,
+          SpeakNpcId = 100001
+        },
+        [51210124] = {
+          Content = "对，放心，我不会真动手的，都是小打小闹，主要是你一定要闹得动静够大，让工头被吸引过来，等他被引到那边以后，我俩就一起在那边揍他。",
+          ContentKR = "그래. 걱정 마, 시늉만 하고 진짜로 때리진 않을 거니까. 대신, 넌 확실히 소란을 크게 피워서 작업반장을 유인해야 해. 그다음에 우리 둘이 같이 녀석을 흠씬 때려 주는 거야.",
+          DialogueId = 51210124,
+          GUID = "8032FCF8",
+          NextDialogue = 51210125,
+          SpeakNpcId = 700429
+        },
+        [51210125] = {
+          Content = "揍……他？",
+          ContentKR = "때려...? 작업반장을?",
+          DialogueId = 51210125,
+          GUID = "8032FD22",
+          NextDialogue = 51210126,
+          SpeakNpcId = 700449
+        },
+        [51210126] = {
+          Content = "对，你俩说话怎么这么整齐？计划就是这样，准备好了的话叫我一声。",
+          ContentKR = "그래. 너흰 왜 똑같은 말을 반복하냐? 라임이야? 아무튼 내 계획은 이거니까, 준비됐으면 나한테 말해.",
+          DialogueId = 51210126,
+          GUID = "8032FD4C",
+          SpeakNpcId = 700429
+        },
+        [51210201] = {
+          Content = "小仆从，你怎么会接受这么离谱的条件！",
+          ContentKR = "시종, 그런 말도 안 되는 계획을 받아들이면 어떡해?!",
+          DialogueId = 51210201,
+          GUID = "8033099A",
+          NextDialogue = 51210202,
+          SpeakNpcId = 700449
+        },
+        [51210202] = {
+          Content = "啊啊啊啊啊啊！什么破工作！我不干了！不如喝酒！**！你是谁？压榨我的工头？我*！",
+          ContentKR = "으아아아아아! 이딴 거지 같은 일 때려치워! 차라리 술이나 마셔! 우라질! 넌 뭐야? 날 못살게 구는 작업반장이냐? 이런 씨*!",
+          DialogueId = 51210202,
+          GUID = "803309C4",
+          NextDialogue = 51210203,
+          SpeakNpcId = 700429
+        },
+        [51210203] = {
+          Content = "救命！他真的打过来了！",
+          ContentKR = "으악! 진짜로 때리러 오잖아!",
+          DialogueId = 51210203,
+          GUID = "803309EE",
+          NextDialogue = 51210301,
+          SpeakNpcId = 700449
+        },
+        [51210301] = {
+          Content = "我*，我是说我揍你，你怎么还还手的？",
+          ContentKR = "아니 *발, 내가 널 때린다고 했더니, 반격하면 어쩌자는 거야?",
+          DialogueId = 51210301,
+          GUID = "80331A02",
+          NextDialogue = 51210302,
+          SpeakNpcId = 700429
+        },
+        [51210302] = {
+          Content = "效果是一样的，我不想吃亏。",
+          ContentKR = "효과는 똑같잖아요. 전 손해 보기 싫어요.",
+          DialogueId = 51210302,
+          GUID = "80331A2C",
+          NextDialogue = 51210303,
+          SpeakNpcId = 100001
+        },
+        [51210303] = {
+          Content = "******！别打了，他过来了，快到那边去！",
+          ContentKR = "******! 그만 때려! 그 녀석이 온다, 빨리 저쪽으로 가!",
+          DialogueId = 51210303,
+          GUID = "80331A56",
+          SpeakNpcId = 700429
+        },
+        [51210401] = {
+          Content = "什么情况？发酒疯了？",
+          ContentKR = "뭐 하는 거야? 술 취해서 난동이라도 부리는 거냐?",
+          DialogueId = 51210401,
+          GUID = "80332A6A",
+          NextDialogue = 51210402,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210402] = {
+          Content = "就是现在！揍他！",
+          ContentKR = "바로 지금이야! 때려!",
+          DialogueId = 51210402,
+          GUID = "80332A94",
+          SpeakNpcId = 700449
+        },
+        [51210501] = {
+          Content = "小仆从，好身手！",
+          ContentKR = "시종, 솜씨 좋은데!",
+          DialogueId = 51210501,
+          GUID = "80333AD2",
+          NextDialogue = 51210502,
+          SpeakNpcId = 700449
+        },
+        [51210502] = {
+          Content = "你这家伙，完全没按计划来。",
+          ContentKR = "너 이 녀석, 전혀 계획대로 안 했잖아.",
+          DialogueId = 51210502,
+          GUID = "80333AFC",
+          NextDialogue = 51210503,
+          SpeakNpcId = 700429
+        },
+        [51210503] = {
+          Content = "我也收手了，不然你就会像他一样……",
+          ContentKR = "저도 봐준 거예요. 안 그랬으면 그쪽도 저 꼴이 됐을 거라고요...",
+          DialogueId = 51210503,
+          GUID = "80333B26",
+          NextDialogue = 51210504,
+          SpeakNpcId = 100001
+        },
+        [51210504] = {
+          Content = "诶呦……我的头……我的屁股……你们，你们发什么疯？",
+          ContentKR = "아야... 내 머리... 내 엉덩이... 너, 너네 미쳤어?!",
+          DialogueId = 51210504,
+          GUID = "80333B50",
+          NextDialogue = 51210505,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210505] = {
+          Content = "嗯？你不是……工头？你怎么有两个跟你长得一模一样的兄弟？他们怎么在天上飞？",
+          ContentKR = "응? 설마... 작업반장? 똑같이 생긴 동생이 둘이나 있었어? 근데 쟤들은 왜 하늘을 날아다녀?",
+          DialogueId = 51210505,
+          GUID = "80333B7A",
+          NextDialogue = 51210506,
+          SpeakNpcId = 700429
+        },
+        [51210506] = {
+          Content = "克罗格，工作时间喝酒，你是真的想被扣钱了，我告诉你，这次罗连特来求情也保不住你，你等着吧！",
+          ContentKR = "크로거, 근무 시간에 술을 마셔? 진짜로 월급 깎이고 싶어서 작정했지? 이번엔 로렌트가 와서 빌어도 소용없을 줄 알아!",
+          DialogueId = 51210506,
+          GUID = "80333BA4",
+          NextDialogue = 51210507,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210507] = {
+          Content = "不是我喜欢的话，重新说！",
+          ContentKR = "대사가 마음에 안 들어, 다시!",
+          DialogueId = 51210507,
+          GUID = "80333BCE",
+          NextDialogue = 51210508,
+          SpeakNpcId = 700429
+        },
+        [51210508] = {
+          Content = "（克罗格扮演醉酒的疯子，冲上去又对着工头一顿拳打脚踢。）",
+          ContentKR = "(크로거가 술 취한 미치광이 연기를 하며, 작업반장에게 달려들어 주먹과 발길질을 퍼붓는다.)",
+          DialogueId = 51210508,
+          GUID = "80333BF8",
+          NextDialogue = 51210509
+        },
+        [51210509] = {
+          Content = "别打了！别打了！怎么每次喝完酒就要揍人！",
+          ContentKR = "그만! 그만 때려! 왜 술만 마시면 사람을 패는 거냐고!",
+          DialogueId = 51210509,
+          GUID = "80333C22",
+          NextDialogue = 51210510,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210510] = {
+          Content = "唔……工头，你的孪生兄弟在帮你说话呢？咦？怎么又来了三个工头？我……",
+          ContentKR = "으음... 작업반장, 네 쌍둥이 형제가 네 편을 들고 있네? 어라? 작업반장이 또 세 명이나 왔어? 그럼...",
+          DialogueId = 51210510,
+          GUID = "80333C4C",
+          NextDialogue = 51210511,
+          SpeakNpcId = 700429
+        },
+        [51210511] = {
+          Content = "（克罗格朝你使了个眼色，“醉倒”在你们面前。）",
+          ContentKR = "(크로거는 눈짓을 하더니 내 앞에서 쓰러지는 연기를 했다.)",
+          DialogueId = 51210511,
+          GUID = "80333C76",
+          NextDialogue = 51210512
+        },
+        [51210512] = {
+          Content = "臭虫！酒蒙子！无药可救的混蛋！你，你又是谁？你刚刚也打我了，别以为我不知道，你是这里的工人？我记住你了！",
+          ContentKR = "벌레 같은 놈! 술주정뱅이! 약도 없는 쓰레기 같은 놈! 너, 넌 또 누구야? 너도 아까 나 때렸지? 내가 모르는 줄 알아? 너 여기 일꾼이야? 얼굴 기억했어!",
+          DialogueId = 51210512,
+          GUID = "80333CA0",
+          NextDialogue = 51210513,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210513] = {
+          Content = "随便你。",
+          ContentKR = "마음대로 해.",
+          DialogueId = 51210513,
+          GUID = "80333CCA",
+          NextDialogue = 51210514,
+          SpeakNpcId = 100001
+        },
+        [51210514] = {
+          Content = "你这是什么态度？我一定会找你们麻烦的！",
+          ContentKR = "그게 무슨 태도야?! 너 내가 절대 가만 안 둬!",
+          DialogueId = 51210514,
+          GUID = "80333CF4",
+          NextDialogue = 51210515,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210515] = {
+          Content = "一夜禅师在哪？",
+          ContentKR = "밤의 도인은 어디 있어?",
+          DialogueId = 51210515,
+          GUID = "80333D1E",
+          NextDialogue = 51210516,
+          SpeakNpcId = 100001
+        },
+        [51210516] = {
+          Content = "一夜禅师？你在说什么？什么一夜禅师？",
+          ContentKR = "밤의 도인? 무슨 소리야? 무슨 밤의 도인?",
+          DialogueId = 51210516,
+          GUID = "80333D48",
+          NextDialogue = 51210517,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210517] = {
+          Content = "完蛋了小仆从，他们没说一夜禅师叫什么名字啊……",
+          ContentKR = "망했어, 시종! 저 사람들, 정작 밤의 도인의 이름을 안 알려줬잖아...",
+          DialogueId = 51210517,
+          GUID = "80333D72",
+          NextDialogue = 51210518,
+          SpeakNpcId = 700449
+        },
+        [51210518] = {
+          Content = "休！再来一杯！最后一杯！休！你要去哪！",
+          ContentKR = "어이! 휴! 한 잔만 더 해! 마지막으로 딱 한 잔만! 휴! 어디 가는 거야!",
+          DialogueId = 51210518,
+          GUID = "80333D9C",
+          NextDialogue = 51210519,
+          SpeakNpcId = 700429
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51210519,
+    MaxKey = 51211811,
+    Loader = function()
+      return {
+        [51210519] = {
+          Content = "……休，在哪？",
+          ContentKR = "...휴는 어디 있어?",
+          DialogueId = 51210519,
+          GUID = "80333DC6",
+          NextDialogue = 51210520,
+          SpeakNpcId = 100001
+        },
+        [51210520] = {
+          Content = "你们是……是一伙的？你和那个休——那个偷东西的贼是一伙的？",
+          ContentKR = "너희... 한패였냐? 너, 그 도둑놈 휴랑 한패였어?",
+          DialogueId = 51210520,
+          GUID = "80333DF0",
+          NextDialogue = 51210521,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210521] = {
+          Content = "偷东西的贼？你是说休是偷东西的贼？",
+          ContentKR = "도둑놈? 지금 휴가 도둑놈이라는 거야?",
+          DialogueId = 51210521,
+          GUID = "80333E1A",
+          NextDialogue = 51210522,
+          SpeakNpcId = 700449
+        },
+        [51210522] = {
+          Content = "不是……你们怎么莫名其妙揍我一顿，然后现在摆出一副什么都不知道的样子？我白挨打了吗？",
+          ContentKR = "아니... 밑도 끝도 없이 날 두들겨 패 놓곤, 이제 와서 아무것도 모르는 척하는 거야? 그럴 거면 왜 때렸어?",
+          DialogueId = 51210522,
+          GUID = "80333E44",
+          NextDialogue = 51210523,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210523] = {
+          Content = "废话少说，休在哪，不说我就再揍你一顿。",
+          ContentKR = "쓸데없는 소리 집어치우고, 휴는 어디 있어? 말 안 하면 더 맞을 줄 알아.",
+          DialogueId = 51210523,
+          GUID = "80333E6E",
+          NextDialogue = 51210524,
+          SpeakNpcId = 100001
+        },
+        [51210524] = {
+          Content = "我说我说！别打我！那个叫休的工人，前段时间不知道为什么大半夜跑到医务室偷东西，被我们抓了个现行。",
+          ContentKR = "말할게, 말할게! 때리지 마! 휴라는 그 녀석, 얼마 전 한밤중에 의무실에 뭔가 훔치러 왔다가 현장에서 딱 걸렸어.",
+          DialogueId = 51210524,
+          GUID = "80333E98",
+          NextDialogue = 51210525,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210525] = {
+          Content = "虽然我们检查后什么也没丢，但是站长说没人来找他的话就别把他放走，所以一直栓在医务室里关着，你们要去找他就去吧。",
+          ContentKR = "확인해 보니까 딱히 사라진 물건은 없었는데, 역장님이 그 녀석을 찾으러 오는 사람이 없으면 풀어주지 말라고 하셔서 계속 의무실에 가둬뒀어... 찾으러 갈 거면 가봐.",
+          DialogueId = 51210525,
+          GUID = "80333EC2",
+          NextDialogue = 51210526,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210526] = {
+          Content = "咦？怎么听起来他被不被救走都无所谓一样？",
+          ContentKR = "어? 그 녀석이 구출되든 말든 상관없다는 말처럼 들리는데?",
+          DialogueId = 51210526,
+          GUID = "80333EEC",
+          NextDialogue = 51210527,
+          SpeakNpcId = 700449
+        },
+        [51210527] = {
+          Content = "那是站长大人的想法，我怎么知道呢？我已经说了，可以放过我了吧。",
+          ContentKR = "그건 역장님 생각이니까 내가 어떻게 알겠어? 다 말했으니까 이제 좀 놓아줘.",
+          DialogueId = 51210527,
+          GUID = "80333F16",
+          NextDialogue = 51210528,
+          SpeakNpcName = "UI_Npc_Name_1.5_gongtou"
+        },
+        [51210528] = {
+          Content = "滚。",
+          ContentKR = "꺼져.",
+          DialogueId = 51210528,
+          GUID = "80333F40",
+          NextDialogue = 51210529,
+          SpeakNpcId = 100001
+        },
+        [51210529] = {
+          Content = "（工头连滚带爬地离开了，克罗格这才精神抖擞地从地上爬起来。）",
+          ContentKR = "(작업반장은 데굴데굴 구르며 도망쳤고, 그제야 크로거가 기운차게 바닥에서 일어났다.)",
+          DialogueId = 51210529,
+          GUID = "80333F6A",
+          NextDialogue = 51210530
+        },
+        [51210530] = {
+          Content = "嘿嘿……",
+          ContentKR = "헤헤...",
+          DialogueId = 51210530,
+          GUID = "80333F94",
+          NextDialogue = 51210531,
+          SpeakNpcId = 700429
+        },
+        [51210531] = {
+          Content = "你演得还挺开心。",
+          ContentKR = "연기하는 거 보니까 꽤 즐기는 것 같던데요.",
+          DialogueId = 51210531,
+          GUID = "80333FBE",
+          NextDialogue = 51210532,
+          SpeakNpcId = 100001
+        },
+        [51210532] = {
+          Content = "嘿嘿……还行……我们走吧。",
+          ContentKR = "하하... 뭐 조금? 아무튼 그럼 가자고.",
+          DialogueId = 51210532,
+          GUID = "80333FE8",
+          SpeakNpcId = 700429
+        },
+        [51210601] = {
+          Content = "打扰一下！",
+          ContentKR = "실례합니다!",
+          DialogueId = 51210601,
+          GUID = "80334B3A",
+          LookAt = {
+            [1] = "0:n(700443)",
+            [2] = "700449:n(700443)",
+            [3] = "700443:n(0)"
+          },
+          NextDialogue = 51210602,
+          SpeakNpcId = 100001
+        },
+        [51210602] = {
+          Content = "嗯？你是谁？我不认识你，生面孔，不像工厂里的。",
+          ContentKR = "음? 누구시죠? 전 그쪽이랑 초면인 것 같은데요, 공장 사람 같지도 않고.",
+          DialogueId = 51210602,
+          GUID = "80334B64",
+          NextDialogue = 51210603,
+          SpeakNpcId = 700443
+        },
+        [51210603] = {
+          Content = "可我认识你啊！你是艾森巴恩大人手下最得力的那位工头，奥拉夫！",
+          ContentKR = "하지만 전 그쪽을 알아요! 아이젠반 님의 부하 중 가장 유능한 작업반장, 올라프 씨잖아요!",
+          DialogueId = 51210603,
+          GUID = "80334B8E",
+          NextDialogue = 51210604,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk01_Start"
+          }
+        },
+        [51210604] = {
+          Content = "你知道我的名字？见鬼，难道我真上了<H>汽笛沙龙</>的名单？是哪个名单？车站年度勤劳员工？还是艾森巴恩手下得力工头？",
+          ContentKR = "제 이름을 안다고요? 이상하네, 설마 제가 정말 <H>기적 소리 살롱</>의 리스트에라도 오른 건가요? 무슨 리스트지? 올해의 성실직원? 아니면 아이젠반 님의 유능한 작업반장 리스트인가요?",
+          DialogueId = 51210604,
+          GUID = "80334BB8",
+          NextDialogue = 51210605,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "0:Talk01_End",
+            [2] = "700443:Think_Start"
+          }
+        },
+        [51210605] = {
+          Content = "咳咳……其实都上榜也是有可能的，毕竟我的工作的确做的很好，我说最近大人怎么把许多重要的事情都分给我呢……",
+          ContentKR = "크흠... 하긴, 둘 다일 수도 있겠죠. 제가 워낙 일을 잘했으니까. 어쩐지 최근 아이젠반 님께서 중요한 일을 저한테 많이 맡기신다 했어요...",
+          DialogueId = 51210605,
+          GUID = "80334BE2",
+          NextDialogue = 51210606,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Think_End"
+          }
+        },
+        [51210606] = {
+          Content = "没错没错，你现在可是那个“汽笛沙龙”里的大红人，大家都说你可能顶替艾森巴恩大人的副官，成为下一个他的左膀右臂呢。",
+          ContentKR = "맞아요. 지금 올라프 씨는 '기적 소리 살롱'에서 엄청 핫한 인기인이에요. 다들 당신이 아이젠반 님의 부관을 대신할, 차세대 오른팔이 될 거라고 말하고 있거든요.",
+          DialogueId = 51210606,
+          GUID = "80334C0C",
+          NextDialogue = 51210607,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk03_Start"
+          }
+        },
+        [51210607] = {
+          Content = "没错没错！我们也正是因为这个原因来采访你的！毕竟我们汽笛沙龙不能放过任何一个艾森巴恩大人的相关消息！",
+          ContentKR = "맞아, 그렇다니까! 우린 그래서 당신을 취재하러 온 거야! 우리 기적 소리 살롱은 아이젠반 님과 관련된 어떤 소식도 놓칠 수 없거든!",
+          DialogueId = 51210607,
+          GUID = "80334C36",
+          LookAt = {
+            [1] = "700443:n(700449)"
+          },
+          NextDialogue = 51210608,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Talk01_Start"
+          }
+        },
+        [51210608] = {
+          Content = "哎呀，客气客气，副官一职倒是不敢奢想，不过年度员工还是可以试试的。听起来您是汽笛沙龙的成员，那应该也是……",
+          ContentKR = "크흠, 과찬이세요. 부관 자리는 감히 바랄 수도 없지만, 올해의 직원 정도는 도전해볼 만하겠죠. 말씀을 들어보니, 역시 기적 소리 살롱 회원분들이신가 보군요...",
+          DialogueId = 51210608,
+          GUID = "80334C60",
+          LookAt = {
+            [1] = "700443:n(0)"
+          },
+          NextDialogue = 51210609,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700449:Talk01_End",
+            [2] = "700443:Talk01_Start"
+          }
+        },
+        [51210609] = {
+          Content = "啊，对对。如果你配合我的这次采访，我们会多多在沙龙高层那边帮你美言几句。",
+          ContentKR = "네, 맞아요. 이번 취재에 협조해 주시면, 저희가 살롱의 높으신 분들께 좋게 말해 드릴게요.",
+          DialogueId = 51210609,
+          GUID = "80334C8A",
+          NextDialogue = 51210610,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700443:Talk01_End"
+          }
+        },
+        [51210610] = {
+          Content = "是是是，你们有什么问题吗？尽管问我吧。",
+          ContentKR = "예예, 그럼 무슨 질문이든 물어보세요. 뭐든 답해드리죠.",
+          DialogueId = 51210610,
+          GUID = "80334CB4",
+          NextOptions = {
+            [1] = 51210611
+          },
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "0:Talk03_End"
+          }
+        },
+        [51210611] = {
+          Content = "你刚才说艾森巴恩大人给你分了一些重要任务？",
+          ContentKR = "아까 아이젠반 님이 중요한 임무를 맡기셨다고 했죠?",
+          DialogueId = 51210611,
+          GUID = "80334CDE",
+          NextDialogue = 51210612
+        },
+        [51210612] = {
+          Content = "其实也不算什么特别重要的任务吧！只是最近有些工厂里的工人总在做小偷小摸的事情，碰巧这两天抓到了一位进医务室偷东西的小贼。",
+          ContentKR = "사실 그렇게 특별히 중요한 임무는 아니에요! 그냥 최근에 공장 인부들이 자꾸 좀도둑질을 해서 말이죠. 마침 며칠 전에 의무실에 침입해서 물건을 훔치려던 도둑 한 명을 잡았거든요.",
+          DialogueId = 51210612,
+          GUID = "80334D08",
+          NextDialogue = 51210613,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Talk01_Start"
+          }
+        },
+        [51210613] = {
+          Content = "站长大人就让我把他关在里面，不能放出去，还要守着消息，不让螺丝刀行会的人知道。",
+          ContentKR = "역장님께선 그 녀석을 안에 가둬두고 절대 내보내지 말라고 하셨어요. 그리고 드라이버 협회 쪽에 이 소식이 새어나가지 않게 지키라고 하셨죠.",
+          DialogueId = 51210613,
+          GUID = "80334D32",
+          NextOptions = {
+            [1] = 51210614
+          },
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Talk01_End"
+          }
+        },
+        [51210614] = {
+          Content = "去医务室？偷东西？",
+          ContentKR = "의무실에요? 물건을 훔치러요?",
+          DialogueId = 51210614,
+          GUID = "80334D5C",
+          NextDialogue = 51210615
+        },
+        [51210615] = {
+          Content = "是啊，那个工人叫休，平常也不是什么爱挑事的性格，那天可能是喝晕了？摸进医务室翻了半天，碰巧被巡逻的警卫逮个正着。",
+          ContentKR = "맞아요. 일꾼 이름은 휴인데, 평소엔 딱히 말썽부리는 성격은 아니었어요. 그런데 그날은 술에 취해서 그랬는지, 의무실에 몰래 들어가서 한참 뒤지다가 마침 순찰 중이던 경비원한테 딱 걸렸지 뭡니까.",
+          DialogueId = 51210615,
+          GUID = "80334D86",
+          NextDialogue = 51210616,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Sigh_Start"
+          }
+        },
+        [51210616] = {
+          Content = "不过我们找了医务室的值班医生确认，没有丢东西，不然就不止是关起来这么简单了。",
+          ContentKR = "그래도 의무실 당직 의사한테 확인해 봤는데 사라진 물건은 없더군요. 아니었으면 가둬두는 것만으로 끝나지 않았을 거예요.",
+          DialogueId = 51210616,
+          GUID = "80334DB0",
+          NextOptions = {
+            [1] = 51210617
+          },
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Sigh_End"
+          }
+        },
+        [51210617] = {
+          Content = "为什么不能让螺丝刀行会的人知道？",
+          ContentKR = "드라이버 협회 사람들한테 알리면 안 되는 이유가 뭐예요?",
+          DialogueId = 51210617,
+          GUID = "80334DDA",
+          NextDialogue = 51210618
+        },
+        [51210618] = {
+          Content = "这事你们汽笛沙龙还不清楚吗？螺丝刀的人总爱给站长大人找麻烦，这次好不容易逮到他们一个疏漏，站长肯定要想点办法回敬一下。",
+          ContentKR = "기적 소리 살롱에선 모르시는 겁니까? 드라이버 협회 놈들은 툭하면 역장님을 귀찮게 만들잖아요. 이번에 드디어 빌미를 하나 잡았으니, 역장님께선 당연히 뭔가 수를 써서 한 방 먹이려고 하시는 거겠죠.",
+          DialogueId = 51210618,
+          GUID = "80334E04",
+          NextDialogue = 51210619,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Talk02_Start"
+          }
+        },
+        [51210619] = {
+          Content = "不过最近……你知道的，车站来了大人物嘛，站长大人脱不开身，等过段时间想必就要拿这家伙去找他们的麻烦了。",
+          ContentKR = "근데... 아시다시피 최근에 역에 거물이 오시는 바람에, 역장님께서 손을 못 쓰고 계시지만, 시간이 지나면 그 녀석을 데리고 가서 협회 놈들을 손봐주실 겁니다.",
+          DialogueId = 51210619,
+          GUID = "80334E2E",
+          NextOptions = {
+            [1] = 51210620
+          },
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "700443:Talk02_End"
+          }
+        },
+        [51210620] = {
+          Content = "（没什么要问的了。）",
+          ContentKR = "(더 물어볼 건 없겠어.)",
+          DialogueId = 51210620,
+          GUID = "80334E58",
+          NextDialogue = 51210621
+        },
+        [51210621] = {
+          Content = "看起来艾森巴恩大人的确很重视你！这么重要的事情都交给你办，我想我手上的干将名单排行榜也要稍微把你再往前提几个排名了。",
+          ContentKR = "역시 아이젠반 님께선 올라프 님을 중요하게 생각하시나 보네요! 이렇게 큰 일을 맡길 정도라면, 제 수첩에 있는 유능한 인재 순위에서 올라프 님을 좀 더 위로 올려도 되겠어요.",
+          DialogueId = 51210621,
+          GUID = "80334E82",
+          NextDialogue = 51210622,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Think_Start"
+          }
+        },
+        [51210622] = {
+          Content = "是……是吗？真是谢谢您了，我……我还会做得更好的！麻烦您多多提点了！",
+          ContentKR = "그...그렇습니까? 정말 감사합니다! 아...앞으로 더 잘하겠습니다! 앞으로도 많이 가르쳐 주십시오!",
+          DialogueId = 51210622,
+          GUID = "80334EAC",
+          NextDialogue = 51210623,
+          SpeakNpcId = 700443,
+          TalkActionId = {
+            [1] = "0:Think_End"
+          }
+        },
+        [51210623] = {
+          Content = "辛苦了，我的采访结束了，下次见！",
+          ContentKR = "수고 많으셨어요. 인터뷰는 이 정도면 될 것 같네요. 그럼 다음에 또 뵐게요!",
+          DialogueId = 51210623,
+          GUID = "80334ED6",
+          NextDialogue = 51210624,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Agree"
+          }
+        },
+        [51210624] = {
+          Content = "好的！辛苦您！下次见！",
+          ContentKR = "예! 수고하셨습니다! 다음에 또 뵙겠습니다!",
+          DialogueId = 51210624,
+          GUID = "80334F00",
+          NextDialogue = 51210625,
+          SpeakNpcId = 700443
+        },
+        [51210625] = {
+          Content = "（他朝你敬了个极其标准的帝国军礼，那样子简直像是某个军团的士兵面面对军团长的视察。）",
+          ContentKR = "(그는 당신에게 칼 각을 맞춰 제국 경례를 했다. 마치 군단의 한 병사가 군단장의 시찰을 받기라도 하는 듯한 모습이었다.)",
+          DialogueId = 51210625,
+          GUID = "80334F2A",
+          IsBlack = 1
+        },
+        [51210701] = {
+          Content = "之前罗连特那家伙说你有点东西，我还不信，现在我倒是真信了。",
+          ContentKR = "전에 로렌트 그 녀석이 너한테 뭔가 있다고 할 땐 안 믿었는데, 이젠 무슨 뜻인지 알겠어.",
+          DialogueId = 51210701,
+          GUID = "80335BA2",
+          NextDialogue = 51210702,
+          SpeakNpcId = 700429
+        },
+        [51210702] = {
+          Content = "有点什么东西？善良？",
+          ContentKR = "뭐가 있는데요? 선량함?",
+          DialogueId = 51210702,
+          GUID = "80335BCC",
+          NextDialogue = 51210703,
+          SpeakNpcId = 100001
+        },
+        [51210703] = {
+          Content = "去**的善良，不知道，我文盲，说不出来具体，反正就是有点东西，除了善良。",
+          ContentKR = "선량함은 개뿔. 뭐, 난 글도 모르는 무식쟁이라 구체적으로 말은 못 하겠는데, 아무튼 뭔가 있어. 선량함 말고.",
+          DialogueId = 51210703,
+          GUID = "80335BF6",
+          NextDialogue = 51210704,
+          SpeakNpcId = 700429
+        },
+        [51210704] = {
+          Content = "我知道我知道，{nickname}有矫健的身手，白有聪慧的大脑，我们二人合体，天下无敌！",
+          ContentKR = "나 알아! {nickname}한텐 민첩한 솜씨가 있고, 스노우한텐 영리한 두뇌가 있으니까, 우리 둘이 합치면 천하무적인 거잖아!",
+          DialogueId = 51210704,
+          GUID = "80335C20",
+          NextDialogue = 51210705,
+          SpeakNpcId = 700449
+        },
+        [51210705] = {
+          Content = "呵呵，虽然我说不好，但是{性别：他|她}有的东西肯定和你这个皎皎没关系。",
+          ContentKR = "하하, 내가 말솜씨는 없지만, 적어도 얘가 가진 건 너 같은 루나하곤 전혀 상관없다는 건 알겠다.",
+          DialogueId = 51210705,
+          GUID = "80335C4A",
+          SpeakNpcId = 700429
+        },
+        [51210801] = {
+          Content = "（在克罗格不费吹灰之力就撬开医务室的大门后，你们终于见到了一夜禅师本人——但双手双脚被绑嘴贴胶带版本。）",
+          ContentKR = "(크로거가 손쉽게 의무실 문을 땄고, 드디어 밤의 도인 본인이 일행의 눈앞에 나타났다. 하지만 손발이 묶이고 입에 테이프가 붙은 상태였다.)",
+          DialogueId = 51210801,
+          GUID = "80336C0A",
+          NextDialogue = 51210802
+        },
+        [51210802] = {
+          Content = "哈哈哈哈！你也有今天！",
+          ContentKR = "하하하하! 너도 이런 날이 있구나!",
+          DialogueId = 51210802,
+          GUID = "80336C34",
+          NextDialogue = 51210803,
+          SpeakNpcId = 700429
+        },
+        [51210803] = {
+          Content = "唔！唔唔唔唔！",
+          ContentKR = "우웁! 우으으우우!",
+          DialogueId = 51210803,
+          GUID = "80336C5E",
+          NextDialogue = 51210804,
+          SpeakNpcId = 700444
+        },
+        [51210804] = {
+          Content = "什么什么？你在说什么啊？我怎么听不懂啊？哈哈哈哈！",
+          ContentKR = "뭐라고? 뭐라는 거야? 못 알아듣겠는데? 하하하하!",
+          DialogueId = 51210804,
+          GUID = "80336C88",
+          NextDialogue = 51210805,
+          SpeakNpcId = 700429
+        },
+        [51210805] = {
+          Content = "他看起来还挺可怜的，小仆从，我们先给他松绑吧。",
+          ContentKR = "엄청 불쌍해 보여. 시종, 일단 먼저 풀어주자.",
+          DialogueId = 51210805,
+          GUID = "80336CB2",
+          SpeakNpcId = 700449
+        },
+        [51210901] = {
+          Content = "呼哈！终于……我终于能说话了！",
+          ContentKR = "푸하! 드...드디어 말을 할 수 있게 됐네!",
+          DialogueId = 51210901,
+          GUID = "80337C72",
+          NextDialogue = 51210902,
+          SpeakNpcId = 700444
+        },
+        [51210902] = {
+          Content = "一夜禅师？我看不如叫你宿醉禅师算了？哈哈哈哈！这回栽了吧？",
+          ContentKR = "밤의 도인? 숙취 도인이겠지! 하하하하! 이번엔 제대로 당했지?",
+          DialogueId = 51210902,
+          GUID = "80337C9C",
+          NextDialogue = 51210903,
+          SpeakNpcId = 700429
+        },
+        [51210903] = {
+          Content = "来来来，跟我说说，这次是喝了多少杯？怎么给自己喝到医务室里来了？",
+          ContentKR = "자자, 말해 봐. 이번엔 얼마나 마신 거냐? 얼마나 취했으면 의무실까지 실려온 거야?",
+          DialogueId = 51210903,
+          GUID = "80337CC6",
+          NextDialogue = 51210904,
+          SpeakNpcId = 700429
+        },
+        [51210904] = {
+          Content = "没喝多……怎么会喝多呢……",
+          ContentKR = "별로 안 마셨어... 내가 취할 만큼 마실 리가 있냐고...",
+          DialogueId = 51210904,
+          GUID = "80337CF0",
+          NextDialogue = 51210905,
+          SpeakNpcId = 700444
+        },
+        [51210905] = {
+          Content = "胡说八道，没喝多能把自己整到这？你不想说也行，跟我回协会吧，回去咱们再好好说道说道。",
+          ContentKR = "헛소리하네. 많이 안 마셨으면 이 꼴이 되겠냐? 말하기 싫으면 됐어. 협회로 가자. 가서 제대로 얘기 좀 들어 보자고.",
+          DialogueId = 51210905,
+          GUID = "80337D1A",
+          NextDialogue = 51210906,
+          SpeakNpcId = 700429
+        },
+        [51210906] = {
+          Content = "不！不行！我不能回协会！",
+          ContentKR = "아, 안 돼! 협회로 돌아갈 순 없어!",
+          DialogueId = 51210906,
+          GUID = "80337D44",
+          NextDialogue = 51210907,
+          SpeakNpcId = 700444
+        },
+        [51210907] = {
+          Content = "嗯？",
+          ContentKR = "으음?",
+          DialogueId = 51210907,
+          GUID = "80337D6E",
+          NextDialogue = 51210908,
+          SpeakNpcId = 700429
+        },
+        [51210908] = {
+          Content = "回哪里都行，总之现在不能回协会！",
+          ContentKR = "어디든 좋으니까, 어쨌든 지금은 협회로는 못 가!",
+          DialogueId = 51210908,
+          GUID = "80337D98",
+          NextDialogue = 51210909,
+          SpeakNpcId = 700444
+        },
+        [51210909] = {
+          Content = "你**是不是脑子被关坏了？你可是一夜禅师，大家都指望你修理那些暴脾气的铁皮脑袋呢，你不回去帮忙是要去哪？",
+          ContentKR = "너 혹시 갇혀 있다가 머리가 고장 난 거 아냐? 넌 밤의 도인이잖아. 다들 네가 성질 나쁜 고철 덩어리들을 고쳐주기만 기다리고 있다고. 협회로 안 돌아오면 어딜 가겠다는 거야?",
+          DialogueId = 51210909,
+          GUID = "80337DC2",
+          NextDialogue = 51210910,
+          SpeakNpcId = 700429
+        },
+        [51210910] = {
+          Content = "不行……我……我……",
+          ContentKR = "안 돼... 나...나는...",
+          DialogueId = 51210910,
+          GUID = "80337DEC",
+          NextDialogue = 51210911,
+          SpeakNpcId = 700444
+        },
+        [51210911] = {
+          Content = "有屁快放！",
+          ContentKR = "주둥이는 먹고 싸는 데만 쓰냐? 빨리 좀 말해!",
+          DialogueId = 51210911,
+          GUID = "80337E16",
+          NextDialogue = 51210912,
+          SpeakNpcId = 700429
+        },
+        [51210912] = {
+          Content = "白，这句粗俗的话不要听。",
+          ContentKR = "스노우, 저런 저속한 말은 듣지 마.",
+          DialogueId = 51210912,
+          GUID = "80337E40",
+          NextDialogue = 51210913,
+          SpeakNpcId = 100001
+        },
+        [51210913] = {
+          Content = "晚了，已经听到啦……",
+          ContentKR = "늦었어. 이미 들었는걸...",
+          DialogueId = 51210913,
+          GUID = "80337E6A",
+          NextDialogue = 51210914,
+          SpeakNpcId = 700449
+        },
+        [51210914] = {
+          Content = "我……我……我根本不是什么一夜禅师，那都是假的，都是放屁的，我什么也不会，我能当什么一夜禅师，是因为那本书……那本《维修手册》！",
+          ContentKR = "나... 나는... 난 밤의 도인 같은 게 아니야. 전부 거짓말이야, 전부 헛소리라고. 난 아무것도 못 해. 내가 밤의 도인 행세를 할 수 있었던 건 전부 그 책... 그 〈정비 매뉴얼〉 덕분이라고!",
+          DialogueId = 51210914,
+          GUID = "80337E94",
+          NextDialogue = 51210915,
+          SpeakNpcId = 700444
+        },
+        [51210915] = {
+          Content = "什么？！",
+          ContentKR = "뭐라고?!",
+          DialogueId = 51210915,
+          GUID = "80337EBE",
+          NextDialogue = 51210916,
+          SpeakNpcName = "UI_Npc_Name_1.5_keluogeplayerbai"
+        },
+        [51210916] = {
+          Content = "你不是螺丝刀行会创始人技术传人吗？",
+          ContentKR = "드라이버 협회 창시자의 기술을 전수받은 거 아니었어요?",
+          DialogueId = 51210916,
+          GUID = "80337EE8",
+          NextDialogue = 51210917,
+          SpeakNpcId = 100001
+        },
+        [51210917] = {
+          Content = "什么技术传人……根本不是的，以前的确是有老师傅教过我，但我……但我压根没仔细学过，因为我捡到了一本书，那本书上有所有常见机器修理问题的解法。",
+          ContentKR = "기술 전수는 무슨... 전혀 아니야. 전에 확실히 사부님이 가르쳐 주시긴 했지만, ...나, 난 제대로 공부도 안 했다고. 왜냐하면 우연히 책 한 권을 주웠는데, 그 책에 웬만한 기계 정비 문제는 전부 해법이 나와 있었단 말이야.",
+          DialogueId = 51210917,
+          GUID = "80337F12",
+          NextDialogue = 51210918,
+          SpeakNpcId = 700444
+        },
+        [51210918] = {
+          Content = "我当时就觉得，有这书了我还费什么心思背那些繁琐的公式，算那些复杂的算法呢？我就对着书上说的，有什么问题就翻翻书，问题就能解决了。",
+          ContentKR = "그래서 생각했지. 이 책이 있는데 뭐 하러 번거로운 공식을 외우고 복잡한 알고리즘을 계산하겠냐고. 그래서 그냥 책에 나온 대로 하면서, 문제가 생기면 책을 찾아보고 해결했어.",
+          DialogueId = 51210918,
+          GUID = "80337F3C",
+          NextDialogue = 51210919,
+          SpeakNpcId = 700444
+        },
+        [51210919] = {
+          Content = "所以他们说的你一夜开悟，根本不是真的在开悟，而是回家翻书去啦？",
+          ContentKR = "그러니까, 밤새 깨달음을 얻은 게 아니라 집에 가서 책을 뒤져본 거였구나?",
+          DialogueId = 51210919,
+          GUID = "80337F66",
+          NextDialogue = 51210920,
+          SpeakNpcId = 700449
+        },
+        [51210920] = {
+          Content = "对！本来我这一届学生有好几个，老师傅对我也没报什么期望，谁知道……谁知道他们都走了，最后居然只有我这个最烂的留下来了。",
+          ContentKR = "맞아! 원래 우리 기수엔 학생이 꽤 많아서, 선생님도 나한텐 별 기대를 안 하셨다고. 근데 결국 다들 떠나버리고, 나 같은 최악만 남게 될 줄 누가 알았겠어...",
+          DialogueId = 51210920,
+          GUID = "80337F90",
+          NextDialogue = 51210921,
+          SpeakNpcId = 700444
+        },
+        [51210921] = {
+          Content = "我也没法明说，只能编了个蹩脚的借口，说自己是一夜禅师，所有问题需要第二天才能解决，实则是记住大概状况，回家翻书找解决方法。",
+          ContentKR = "어차피 솔직히 털어놓을 수도 없으니까, 대충 핑계를 둘러댄 거야. 난 밤의 도인이라, 하룻밤이 지나야 해결할 수 있다고 말이야. 실제로는 대충 상황을 기억해 뒀다가 집에 가서 책 뒤적여서 해결 방법을 찾은 거고.",
+          DialogueId = 51210921,
+          GUID = "80337FBA",
+          NextDialogue = 51210922,
+          SpeakNpcId = 700444
+        },
+        [51210922] = {
+          Content = "原来是这样啊……",
+          ContentKR = "그랬구나...",
+          DialogueId = 51210922,
+          GUID = "80337FE4",
+          NextDialogue = 51210923,
+          SpeakNpcId = 700449
+        },
+        [51210923] = {
+          Content = "我管你是靠书还是靠脑子来修东西，这些对我来说都无所谓，之前怎么样现在继续怎么样就得了呗？走！跟我回去！",
+          ContentKR = "책을 보고 고치든 머리를 써서 고치든, 알 게 뭐야? 난 그런 거 하나도 신경 안 써. 그냥 전에 했던 대로 계속하면 되잖아! 가자! 나랑 같이 돌아가!",
+          DialogueId = 51210923,
+          GUID = "8033800E",
+          NextDialogue = 51210924,
+          SpeakNpcId = 700429
+        },
+        [51210924] = {
+          Content = "不行！不可以回去！我不能回去！",
+          ContentKR = "안 돼! 못 가! 난 못 간다고!",
+          DialogueId = 51210924,
+          GUID = "80338038",
+          NextDialogue = 51210925,
+          SpeakNpcId = 700444
+        },
+        [51210925] = {
+          Content = "不是，到底为什么啊？！",
+          ContentKR = "아니, 도대체 왜 그러는데?!",
+          DialogueId = 51210925,
+          GUID = "80338062",
+          NextDialogue = 51210926,
+          SpeakNpcId = 700429
+        },
+        [51210926] = {
+          Content = "等一等，克罗格，你先别急。",
+          ContentKR = "잠깐만, 크로거 씨, 잠깐만요.",
+          DialogueId = 51210926,
+          GUID = "8033808C",
+          NextDialogue = 51210927,
+          SpeakNpcId = 100001
+        },
+        [51210927] = {
+          Content = "干嘛？",
+          ContentKR = "왜?",
+          DialogueId = 51210927,
+          GUID = "803380B6",
+          NextDialogue = 51210928,
+          SpeakNpcId = 700429
+        },
+        [51210928] = {
+          Content = "这位一夜禅师，哦不，休先生，你这次来医务室偷的东西，不会就是这本《修理手册》吧？",
+          ContentKR = "밤의 도인, 아니, 휴 씨가 이번에 의무실에서 훔치려던 게 혹시 그 〈정비 매뉴얼〉 아닌가요?",
+          DialogueId = 51210928,
+          GUID = "803380E0",
+          NextDialogue = 51210929,
+          SpeakNpcId = 100001
+        },
+        [51210929] = {
+          Content = "哈……哈哈……被你猜对啦~",
+          ContentKR = "하... 하하... 들켜 버렸네~",
+          DialogueId = 51210929,
+          GUID = "8033810A",
+          NextDialogue = 51210931,
+          SpeakNpcId = 700444
+        },
+        [51210931] = {
+          Content = "到处都翻遍了，根本就没有找到你说的那本《维修手册》嘛！",
+          ContentKR = "우리가 다 뒤져봤는데, 네가 말한 그 〈정비 매뉴얼〉 은 아무 데도 없었어!",
+          DialogueId = 51210931,
+          GUID = "8033815E",
+          NextDialogue = 51210932,
+          SpeakNpcId = 700449
+        },
+        [51210932] = {
+          Content = "之前来的时候我就已经翻遍了整间医务室，一定是被那个人面兽心的医生藏起来了！",
+          ContentKR = "나도 전에 왔을 때 이미 의무실 전체를 다 뒤져 봤어. 분명히 그 망할 의사 놈이 숨겨놨겠지!",
+          DialogueId = 51210932,
+          GUID = "80338188",
+          NextDialogue = 51210933,
+          SpeakNpcId = 700444
+        },
+        [51210933] = {
+          Content = "你怎么就能确定是被他藏起来的？",
+          ContentKR = "왜 그 사람이 숨겼다고 확신하는데?",
+          DialogueId = 51210933,
+          GUID = "803381B2",
+          NextDialogue = 51210934,
+          SpeakNpcId = 700429
+        },
+        [51210934] = {
+          Content = "我那天醒来人就在医务室，那家伙笑眯眯地问我有没有哪里不舒服，我没敢说啥直接就跑了，结果回去就发现书不见了。",
+          ContentKR = "그날 깨어나 보니까 의무실이었는데, 그 녀석이 싱글벙글 웃으면서 어디 불편한 데 없냐고 물어보더라고. 겁이 나서 아무 말도 안 하고 바로 튀었는데, 돌아가 보니까 책이 없어진 거야.",
+          DialogueId = 51210934,
+          GUID = "803381DC",
+          NextDialogue = 51210935,
+          SpeakNpcId = 700444
+        },
+        [51210935] = {
+          Content = "放书的地方只有我和老鼠知道，老鼠也不看书，那肯定是我喝大了就带着书出去了。",
+          ContentKR = "책을 둔 곳은 나랑 쥐들만 알아. 쥐가 책을 볼 리 없으니까, 그럼 내가 취해서 책을 들고 나간 거겠지.",
+          DialogueId = 51210935,
+          GUID = "80338206",
+          NextDialogue = 51210936,
+          SpeakNpcId = 700444
+        },
+        [51210936] = {
+          Content = "会不会在没到医务室之前，就已经被人拿走了呢？",
+          ContentKR = "의무실에 도착하기도 전에 이미 누군가가 가져간 건 아닐까요?",
+          DialogueId = 51210936,
+          GUID = "80338230",
+          NextDialogue = 51210937,
+          SpeakNpcId = 100001
+        },
+        [51210937] = {
+          Content = "是呀是呀，如果你身上有这么重要的东西被医生发现了，那他应该会交给艾森巴恩吧。",
+          ContentKR = "맞아, 너한테 그렇게 중요한 물건이 있는 걸 발견했다면, 의사가 분명히 아이젠반한테 넘겼을 거야.",
+          DialogueId = 51210937,
+          GUID = "8033825A",
+          NextDialogue = 51210938,
+          SpeakNpcId = 700449
+        },
+        [51210938] = {
+          Content = "如果艾森巴恩知道，又怎么会只把你关在这里呢？肯定要问你书是从哪来的这种话吧？",
+          ContentKR = "게다가 아이젠반이 알았다면 널 그냥 여기다 가둬두기만 했겠어? 분명히 책을 어디서 구했냐고 캐물었겠지!",
+          DialogueId = 51210938,
+          GUID = "80338284",
+          NextDialogue = 51210939,
+          SpeakNpcId = 700449
+        },
+        [51210939] = {
+          Content = "对哦……白，你可算聪明一回。",
+          ContentKR = "그러네... 스노우가 드디어 똑똑한 소리도 하는구나.",
+          DialogueId = 51210939,
+          GUID = "803382AE",
+          NextDialogue = 51210940,
+          SpeakNpcId = 100001
+        },
+        [51210940] = {
+          Content = "什么叫可算聪明一回！白一直都很聪明的好吗？",
+          ContentKR = "드디어라니?! 스노우는 원래부터 쭉 똑똑했다구!",
+          DialogueId = 51210940,
+          GUID = "803382D8",
+          NextDialogue = 51210941,
+          SpeakNpcId = 700449
+        },
+        [51210941] = {
+          Content = "他们说的没错，你这**喝大了就发疯的毛病到底什么时候能改改？",
+          ContentKR = "쟤들 말이 맞네. 너 도대체 그 술만 처먹으면 개 되는 버릇은 대체 언제 고칠 거냐?",
+          DialogueId = 51210941,
+          GUID = "80338302",
+          NextDialogue = 51210942,
+          SpeakNpcId = 700429
+        },
+        [51210942] = {
+          Content = "你还好意思说我？我还没说你呢！你喝多了不是也喜欢发疯打人吗？况且那天我……我就是出去找你的……",
+          ContentKR = "네가 나한테 그럴 말 할 자격 있어? 너는 어떻고! 너도 술만 먹으면 사람 패고 다니잖아? 게다가 그날 나... 난 널 찾으러 나간 거였단 말이야...",
+          DialogueId = 51210942,
+          GUID = "8033832C",
+          NextDialogue = 51210943,
+          SpeakNpcId = 700444
+        },
+        [51210943] = {
+          Content = "找我？你找我做什么？",
+          ContentKR = "날 찾아? 날 찾아서 뭐 하게?",
+          DialogueId = 51210943,
+          GUID = "80338356",
+          NextDialogue = 51210944,
+          SpeakNpcId = 700429
+        },
+        [51210944] = {
+          Content = "你上次把我打的鼻青脸肿，我……我就想……借着这次喝多去……",
+          ContentKR = "네가 지난번에 내 얼굴이 떡이 되도록 때렸잖아. 나...난 그래서...술 취한 김에...",
+          DialogueId = 51210944,
+          GUID = "80338380",
+          NextDialogue = 51210945,
+          SpeakNpcId = 700444
+        },
+        [51210945] = {
+          Content = "怎么？你想发酒疯报复回来？",
+          ContentKR = "뭐? 술김에 복수하려고?",
+          DialogueId = 51210945,
+          GUID = "803383AA",
+          NextDialogue = 51210946,
+          SpeakNpcId = 700429
+        },
+        [51210946] = {
+          Content = "我不管，反正你也有问题，要是你那天来陪我喝酒，我就不会闹出这档子事！",
+          ContentKR = "상관없어. 어쨌든 네 잘못도 있다고. 그날 네가 나랑 같이 술 마셨으면 이런 일은 없었잖아!",
+          DialogueId = 51210946,
+          GUID = "803383D4",
+          NextDialogue = 51210947,
+          SpeakNpcId = 700444
+        },
+        [51210947] = {
+          Content = "我*，我看你就是皮痒欠打你知道吗？我恨不得……",
+          ContentKR = "이런 씨*, 더 맞으려고 환장했지? 내가 진짜...",
+          DialogueId = 51210947,
+          GUID = "803383FE",
+          NextDialogue = 51210948,
+          SpeakNpcId = 700429
+        },
+        [51210948] = {
+          Content = "别吵了……",
+          ContentKR = "그만 싸워요...",
+          DialogueId = 51210948,
+          GUID = "80338428",
+          NextDialogue = 51210949,
+          SpeakNpcId = 100001
+        },
+        [51210949] = {
+          Content = "哼哼~一般来说到了这种火药味一触即发的时候，卡米拉就会把她的小刀狠狠钉在两位客人的座位上，警告他们不要打架。",
+          ContentKR = "후후~ 보통 이렇게 싸움이 터질 것 같은 분위기가 되면, 카밀라가 두 손님의 자리에 칼을 꽂아서 싸우지 말라고 경고하곤 하지.",
+          DialogueId = 51210949,
+          GUID = "80338452",
+          NextDialogue = 51210950,
+          SpeakNpcId = 700449
+        },
+        [51210950] = {
+          Content = "暴力解决不了问题，还是回归正题吧，既然没有被医务室的医生藏起来，那会不会是落在外面的哪里了？",
+          ContentKR = "폭력으로는 문제를 해결할 수 없어요. 본론으로 돌아가서, 의무실 의사가 숨긴 게 아니라면, 바깥 어딘가에 떨어뜨린 건 아닐까요?",
+          DialogueId = 51210950,
+          GUID = "8033847C",
+          NextDialogue = 51210951,
+          SpeakNpcId = 100001
+        },
+        [51210951] = {
+          Content = "不知道……我都不知道那天我去过哪里，现在什么也想不起来……",
+          ContentKR = "모르겠어... 그날 내가 어딜 돌아다녔는지도 모르는걸. 지금은 아무것도 기억이 안 나...",
+          DialogueId = 51210951,
+          GUID = "803384A6",
+          NextDialogue = 51210952,
+          SpeakNpcId = 700444
+        },
+        [51210952] = {
+          Content = "我有个主意！",
+          ContentKR = "나한테 좋은 생각이 있어!",
+          DialogueId = 51210952,
+          GUID = "803384D0",
+          NextDialogue = 51210953,
+          SpeakNpcId = 700449
+        },
+        [51210953] = {
+          Content = "你最好是真有主意，不然我带着你一起揍。",
+          ContentKR = "진짜 좋은 생각이어야 할 거다. 아니면 너도 같이 두들겨 패버릴 거니까.",
+          DialogueId = 51210953,
+          GUID = "803384FA",
+          NextDialogue = 51210954,
+          SpeakNpcId = 700429
+        },
+        [51210954] = {
+          Content = "你又打不过小仆从~魔王大人不记小人过，这次不和你算账，既然这位休先生是喝醉酒后丢的书，那不如我们回顾一遍他喝醉后的情况怎么样？",
+          ContentKR = "넌 시종한테 못 이기잖아~ 이 마왕님은 그렇게 쩨쩨하지 않으니까, 이번엔 넘어가 줄게. 이 휴 씨가 술 취해서 책을 잃어버렸다면, 술 취한 후의 상황으로 돌아가 보는 건 어때?",
+          DialogueId = 51210954,
+          GUID = "80338524",
+          NextDialogue = 51210955,
+          SpeakNpcId = 700449
+        },
+        [51210955] = {
+          Content = "似乎可以一试啊……",
+          ContentKR = "한번 해볼 만한 것 같은데요...",
+          DialogueId = 51210955,
+          GUID = "8033854E",
+          NextDialogue = 51210956,
+          SpeakNpcId = 100001
+        },
+        [51210956] = {
+          Content = "但我也不能保证自己能不能记起来啊，你也知道，我记性很差的。",
+          ContentKR = "하지만 내가 기억해 낼 수 있을지는 장담 못 해. 크로거 너도 알잖아, 나 기억력 나쁜 거.",
+          DialogueId = 51210956,
+          GUID = "80338578",
+          NextDialogue = 51210957,
+          SpeakNpcId = 700444
+        },
+        [51210957] = {
+          Content = "能记起来多少是多少吧，现在也没别的办法了！",
+          ContentKR = "기억 나는 만큼만 기억해 내. 지금은 다른 방법도 없잖아!",
+          DialogueId = 51210957,
+          GUID = "803385A2",
+          SpeakNpcId = 700429
+        },
+        [51211001] = {
+          Content = "白，这真是太难得了。",
+          ContentKR = "스노우, 진짜 별일이네.",
+          DialogueId = 51211001,
+          GUID = "80338CDA",
+          NextDialogue = 51211002,
+          SpeakNpcId = 100001
+        },
+        [51211002] = {
+          Content = "什么什么？什么太难得了？",
+          ContentKR = "뭐? 뭐가 별일인데?",
+          DialogueId = 51211002,
+          GUID = "80338D04",
+          NextDialogue = 51211003,
+          SpeakNpcId = 700449
+        },
+        [51211003] = {
+          Content = "你一天之内居然聪明了两次，这真是太难得了！",
+          ContentKR = "네가 하루에 두 번에나 똑똑한 말을 하다니, 진짜 별일이잖아!",
+          DialogueId = 51211003,
+          GUID = "80338D2E",
+          SpeakNpcId = 100001
+        },
+        [51211101] = {
+          Content = "（克罗格不知道从哪里拿来了一些闻起来就很刺鼻的劣质酒，此刻他们正整整齐齐地摆在桌上。）",
+          ContentKR = "(크로거가 어디선가 냄새가 코를 찌르는 싸구려 술을 가져와, 테이블 위에 가지런히 올려놓았다.)",
+          DialogueId = 51211101,
+          GUID = "80339D42",
+          NextDialogue = 51211102
+        },
+        [51211102] = {
+          Content = "三瓶铁锈斑，一瓶蒸馏酒，都是你平常喝的，你看看够不够，不够我再去要。",
+          ContentKR = "러스트 스팟 세 병, 증류주 한 병, 전부 네가 평소에 마시던 거야. 충분한지 봐. 모자라면 더 가져올 테니까.",
+          DialogueId = 51211102,
+          GUID = "80339D6C",
+          LookAt = {
+            [1] = "700444:n(700429)",
+            [2] = "700429:n(700444)"
+          },
+          NextDialogue = 51211103,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk01_Start"
+          }
+        },
+        [51211103] = {
+          Content = "差不多吧……不过你不喝吧？你喝的话那肯定不够。",
+          ContentKR = "적당한 것 같은데... 넌 안 마실 거지? 너까지 마시기엔 이걸론 턱도 없어.",
+          DialogueId = 51211103,
+          GUID = "80339D96",
+          NextDialogue = 51211104,
+          SpeakNpcId = 700444
+        },
+        [51211104] = {
+          Content = "我喝了谁干正事？少废话了，够的话就快喝！反正你除了喝酒也干不了什么正事了。",
+          ContentKR = "내가 마시면 일은 누가 하냐? 헛소리 말고 빨리 마셔! 어차피 술 마시는 거 말곤 할 줄 아는 것도 없잖아.",
+          DialogueId = 51211104,
+          GUID = "80339DC0",
+          NextDialogue = 51211105,
+          SpeakNpcId = 700429
+        },
+        [51211105] = {
+          Content = "我吗？我可是行会里的一夜禅师！你才是除了喝酒打架之外一无是处的家伙，说到底这件事的起因都是你上次喝多了揍我……",
+          ContentKR = "나? 난 협회의 밤의 도인이야! 너야말로 술 먹고 싸움질하는 것 말곤 아무짝에도 쓸모없는 놈이지! 따지고 보면 다 네가 지난번에 술 마시고 날 때려서 이렇게 된 거잖아...",
+          DialogueId = 51211105,
+          GUID = "80339DEA",
+          NextDialogue = 51211106,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700429:Talk01_End",
+            [2] = "700444:Talk02_Start"
+          }
+        },
+        [51211106] = {
+          Content = "我喝多了会打人这件事全行会都知道！ 是你自己不信邪非要挑衅我，还打不过！别**废话了行不行，快喝，不然现在就揍你！",
+          ContentKR = "내가 술 먹으면 사람 패는 건 협회 전체가 다 알아! 못 믿겠다면서 일부러 도발했다가 먼지 나게 처맞은 건 너고! 잡소리 집어치우고 빨리 마셔. 안 그러면 지금 당장 팰 거니까!",
+          DialogueId = 51211106,
+          GUID = "80339E14",
+          NextDialogue = 51211107,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700444:Talk02_End",
+            [2] = "700429:Sigh_Start"
+          }
+        },
+        [51211107] = {
+          Content = "莽夫、野狗、狂躁症！我懒得和你这种疯子计较！",
+          ContentKR = "무식한 놈, 미친개, 분노조절장애! 너 같은 미친놈을 내가 뭐 하러 상대하냐?!",
+          DialogueId = 51211107,
+          GUID = "80339E3E",
+          NextDialogue = 51211108,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700429:Sigh_End",
+            [2] = "700444:Angry02_Start"
+          }
+        },
+        [51211108] = {
+          Content = "这两个人怎么没两句话就要吵架呀……",
+          ContentKR = "이 두 사람은 왜 입만 열었다 하면 싸우는 거야...?",
+          DialogueId = 51211108,
+          GUID = "80339E68",
+          NextDialogue = 51211109,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700444:Angry02_End",
+            [2] = "700449:Talk01_Start"
+          }
+        },
+        [51211109] = {
+          Content = "要不……先做正事？",
+          ContentKR = "그럼... 이제 하려던 일 마저 할까요?",
+          DialogueId = 51211109,
+          GUID = "80339E92",
+          NextDialogue = 51211110,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700449:Talk01_End",
+            [2] = "0:DisagreeHead"
+          }
+        },
+        [51211110] = {
+          Content = "（休翻了克罗格一个白眼，二话不说拿起酒瓶就开始灌酒。）",
+          ContentKR = "(휴는 크로거에게 눈을 흘기더니, 말없이 술병을 집어 들고 술을 들이켰다.)",
+          DialogueId = 51211110,
+          GUID = "80339EBC",
+          NextDialogue = 51211111
+        },
+        [51211111] = {
+          Content = "城里的老爷们不是说，喝酒的时候需要一些佐酒餐吗？咱们这什么也没有，聊点有意思的话题来佐酒不是挺好？",
+          ContentKR = "성안 귀족들은 술 마실 때 안주라는 걸 먹는다면서? 우린 아무것도 없으니까, 술안주로 뭐 좀 재밌는 얘기라도 해보는 게 어때?",
+          DialogueId = 51211111,
+          GUID = "80339EE6",
+          NextDialogue = 51211112,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Explain01_Start"
+          }
+        },
+        [51211112] = {
+          Content = "你的意思是我们来聊天吗？好呀好呀，要聊点什么呢？小仆从，你来找话题怎么样？",
+          ContentKR = "수다 떨자는 거야? 좋아 좋아, 무슨 얘기 할까? 시종, 네가 좀 정해봐.",
+          DialogueId = 51211112,
+          GUID = "80339F10",
+          NextDialogue = 51211146,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700429:Explain01_End"
+          }
+        },
+        [51211113] = {
+          Content = "聊聊工作。",
+          ContentKR = "일 얘기",
+          DialogueId = 51211113,
+          GUID = "80339F3A",
+          NextDialogue = 51211114
+        },
+        [51211114] = {
+          Content = "哈！地下工厂里的日子非常有趣，每天上工都带着笑脸，日子阳光又积极，生活很有盼头。",
+          ContentKR = "하! 지하 공장 생활 정말 재미있지! 매일 출근할 때마다 웃음이 나잖아. 밝고 희망이 넘치는 긍정적인 삶이라니까!",
+          DialogueId = 51211114,
+          GUID = "80339F64",
+          LookAt = {
+            [1] = "700429:n(0)",
+            [2] = "700444:n(0)"
+          },
+          NextDialogue = 51211115,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Explain01_Start"
+          }
+        },
+        [51211115] = {
+          Content = "尤其是晚上下了工后，和三五好友聚在一起，喝喝酒，畅谈一下人生什么的，你说是吧，休？",
+          ContentKR = "밤에 퇴근하고 나면 더 그렇지. 친구들 몇이 모여서 술 마시면서, 인생에 대해 얘기하고 얼마나 좋아. 안 그래, 휴?",
+          DialogueId = 51211115,
+          GUID = "80339F8E",
+          LookAt = {
+            [1] = "700429:n(700444)",
+            [2] = "700444:n(700429)"
+          },
+          NextDialogue = 51211116,
+          SpeakNpcId = 700429
+        },
+        [51211116] = {
+          Content = "呵呵……我看你是疯了才会这么说。",
+          ContentKR = "후후... 말하는 걸 보니 드디어 정신이 나갔나 보네.",
+          DialogueId = 51211116,
+          GUID = "80339FB8",
+          NextDialogue = 51211117,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700429:Explain01_End"
+          }
+        },
+        [51211117] = {
+          Content = "可你每天的生活不就是这样吗？乐呵呵地来工厂，帮大家解决了一些不痛不痒的毛病之后就去喝酒了，然后喝到烂醉，第二天还是有人恭恭敬敬地来找你。",
+          ContentKR = "왜? 네가 매일 하는 게 그런 거잖아. 매일 싱글벙글하며 공장에 와서, 별것도 아닌 문제 몇 가지 해결해 주고는, 또 진탕 술이나 마시러 가고. 그럼 다음 날 또 누가 공손하게 뭘 좀 도와달라며 찾아오겠지.",
+          DialogueId = 51211117,
+          GUID = "80339FE2",
+          NextDialogue = 51211118,
+          SpeakNpcId = 700429
+        },
+        [51211118] = {
+          Content = "能不能不要说得我过得很轻松的样子？你知道我顶着这个名头有多大的压力吗？我每天都在担惊受怕，怕你们问出了一个没写在手册里的问题。",
+          ContentKR = "내가 편하게 사는 것처럼 말하지 마. 그 이름 때문에 내가 얼마나 스트레스가 심했는지 알기나 해? 난 매일 전전긍긍하며 살았어. 너희가 매뉴얼에 없는 질문을 할까 봐.",
+          DialogueId = 51211118,
+          GUID = "8033A00C",
+          NextDialogue = 51211119,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700444:Sigh_Start"
+          }
+        },
+        [51211119] = {
+          Content = "那是你自己的问题，谁让你当初没有学出点真本事。",
+          ContentKR = "그건 네 문제지. 애초에 제대로 된 실력을 길러두지 그랬어?",
+          DialogueId = 51211119,
+          GUID = "8033A036",
+          NextDialogue = 51211120,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700444:Sigh_End"
+          }
+        },
+        [51211120] = {
+          Content = "你！算了……",
+          ContentKR = "이 자식이! ...후, 그만두자!",
+          DialogueId = 51211120,
+          GUID = "8033A060",
+          NextDialogue = 51211121,
+          SpeakNpcId = 700444
+        },
+        [51211121] = {
+          Content = "（找不出反驳的理由，休郁郁不语，抬头灌了一大口。）",
+          ContentKR = "(반박할 말을 찾지 못한 휴는 우울하게 침묵하며 술만 벌컥벌컥 들이켠다.)",
+          DialogueId = 51211121,
+          GUID = "8033A08A",
+          IsBlack = 1,
+          NextDialogue = 51211146
+        },
+        [51211122] = {
+          Content = "聊聊个人生活。",
+          ContentKR = "개인적인 얘기",
+          DialogueId = 51211122,
+          GUID = "8033A0B4",
+          NextDialogue = 51211123
+        },
+        [51211123] = {
+          Content = "我？还是他？我没什么值得说的，倒是休，你是不是前段时间还在追面包店的那个店员？怎么，这次是写情书还是偷偷买花？",
+          ContentKR = "나? 아니면 얘? 난 딱히 할 말 없는데. 그나저나 휴 너는 얼마 전에도 빵집 점원 쫓아다니지 않았냐? 어떻게 됐어? 이번엔 러브레터야? 아니면 몰래 꽃이라도 사 줬냐?",
+          DialogueId = 51211123,
+          GUID = "8033A0DE",
+          LookAt = {
+            [1] = "700429:n(0)",
+            [2] = "700444:n(700429)"
+          },
+          NextDialogue = 51211124,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk02_Start"
+          }
+        },
+        [51211124] = {
+          Content = "我记得你来工厂这短短几年里，应该追过不少女孩了吧？有谈过一场正正经经的恋爱吗？",
+          ContentKR = "내 기억엔 너 공장에 온 뒤로 몇 년 동안 여자애들 꽤 많이 쫓아다녔던 것 같은데? 제대로 된 연애는 한번 해 봤냐?",
+          DialogueId = 51211124,
+          GUID = "8033A108",
+          LookAt = {
+            [1] = "700429:n(700444)"
+          },
+          NextDialogue = 51211125,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk02_End"
+          }
+        },
+        [51211125] = {
+          Content = "你懂什么！在这里谋生就已经很艰难了，恋爱什么的……那是立足后才需要考虑的事情！",
+          ContentKR = "네가 뭘 알아! 여기서 먹고살기도 힘든데, 연애 같은 건... 그건 자리 잡고 나서 생각할 일이야!",
+          DialogueId = 51211125,
+          GUID = "8033A132",
+          NextDialogue = 51211126,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700444:Angry02_Start"
+          }
+        },
+        [51211126] = {
+          Content = "啊……不对，我想起来了，你是有过一位恋人的，是因为什么分手的，我想起来了，是因为你晚上总要把人赶出家门？",
+          ContentKR = "어라... 아니지! 그래, 너 애인 있었잖아. 근데 왜 헤어졌더라? 맞다, 네가 밤마다 집 밖으로 쫓아냈다고 했지?",
+          DialogueId = 51211126,
+          GUID = "8033A15C",
+          NextDialogue = 51211127,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700444:Angry02_End"
+          }
+        },
+        [51211127] = {
+          Content = "冰湖城的晚上多冷啊，你把女孩赶出去，和要她的命有什么区别？",
+          ContentKR = "아이스레이크 시티의 밤이 얼마나 추운데, 여자애를 밖으로 쫓아내는 건 그냥 뒈지라는 거 아니냐?",
+          DialogueId = 51211127,
+          GUID = "8033A186",
+          NextDialogue = 51211128,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk01_Start"
+          }
+        },
+        [51211128] = {
+          Content = "那是因为！",
+          ContentKR = "그, 그건 그러니까...!",
+          DialogueId = 51211128,
+          GUID = "8033A1B0",
+          NextDialogue = 51211129,
+          SpeakNpcId = 700444
+        },
+        [51211129] = {
+          Content = "以前我还想不明白为什么，现在倒是明白了，是你要偷偷翻书，但又害怕暴露自己一夜禅师的真相，所以只能把她赶出去，是吧？",
+          ContentKR = "예전엔 이해가 안 됐는데, 이제 보니 알겠네. 몰래 책을 찾아봐야 하는데, 그러다 혹시라도 '밤의 도인'의 비밀을 들킬까 봐, 걔를 쫓아낼 수밖에 없었던 거잖아. 맞지?",
+          DialogueId = 51211129,
+          GUID = "8033A1DA",
+          NextDialogue = 51211130,
+          SpeakNpcId = 700429
+        },
+        [51211130] = {
+          Content = "…………",
+          ContentKR = "......",
+          DialogueId = 51211130,
+          GUID = "8033A204",
+          NextDialogue = 51211131,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700429:Talk01_End"
+          }
+        },
+        [51211131] = {
+          Content = "（找不出反驳的理由，休郁郁不语，抬头灌了一大口。）",
+          ContentKR = "(반박할 말을 찾지 못한 휴는 우울하게 침묵하며 술만 벌컥벌컥 들이켠다.)",
+          DialogueId = 51211131,
+          GUID = "8033A22E",
+          IsBlack = 1,
+          NextDialogue = 51211146
+        },
+        [51211132] = {
+          Content = "聊聊那本书。",
+          ContentKR = "그 책에 대한 얘기",
+          DialogueId = 51211132,
+          GUID = "8033A258",
+          NextDialogue = 51211133
+        },
+        [51211133] = {
+          Content = "我说休，那本书真有这么厉害？所有问题都能在上面找到答案？",
+          ContentKR = "그래서 그 책이 그렇게 대단하냐, 휴? 모든 문제의 답이 정말 그 책에 다 나온다는 거야?",
+          DialogueId = 51211133,
+          GUID = "8033A282",
+          LookAt = {
+            [1] = "700429:n(700444)",
+            [2] = "700444:n(700429)"
+          },
+          NextDialogue = 51211134,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk01_Start"
+          }
+        },
+        [51211134] = {
+          Content = "差不多吧，至少咱们日常里经常会遇到的机器卡壳，润滑油添减等基础问题基本都收录在里面，你也知道，这里出不了什么大事。",
+          ContentKR = "뭐 그런 셈이야. 적어도 우리가 평소에 자주 겪는 기계 멈춤, 윤활유 조절 같은 기본적인 문제들은 다 나와 있거든. 너도 알다시피, 여기선 진짜 큰일이 날 일이 없잖아.",
+          DialogueId = 51211134,
+          GUID = "8033A2AC",
+          NextDialogue = 51211135,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700429:Talk01_End",
+            [2] = "700444:Explain01_Start"
+          }
+        },
+        [51211135] = {
+          Content = "出大事的话，那就不是叫我，而是叫艾森巴恩那个老混蛋来了。",
+          ContentKR = "진짜 큰일이 나면, 그땐 날 부르는 게 아니라 아이젠반 그 개자식을 부르겠지.",
+          DialogueId = 51211135,
+          GUID = "8033A2D6",
+          NextDialogue = 51211136,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700444:Explain01_End"
+          }
+        },
+        [51211136] = {
+          Content = "所以——你用那本书解决了这么多问题，还是没能把书全背下来？休，你真是个十足的蠢货。",
+          ContentKR = "그래서? 그 책으로 그렇게 많은 문제를 해결해 놓고도, 책을 아직도 다 못 외웠다는 거냐? 휴, 너 진짜 빡*가리구나.",
+          DialogueId = 51211136,
+          GUID = "8033A300",
+          NextDialogue = 51211137,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700429:Talk02_Start"
+          }
+        },
+        [51211137] = {
+          Content = "不要用那么平静的语气说这种伤人的话好吗，我又怎么会想到有一天书会丢？再说，也不是完全没有记住吧，稍微有一些……一点……一丁点……",
+          ContentKR = "그렇게 아무렇지도 않은 말투로 사람 상처 주지 말라니까. 내가 책을 잃어버릴 줄 알았냐? 게다가 내가 하나도 기억을 못 한다는 건 아니야. 약간... 아주 약간... 야아악간은...",
+          DialogueId = 51211137,
+          GUID = "8033A32A",
+          NextDialogue = 51211138,
+          SpeakNpcId = 700444,
+          TalkActionId = {
+            [1] = "700429:Talk02_End",
+            [2] = "700444:Sigh_Start"
+          }
+        },
+        [51211138] = {
+          Content = "是的，比如扳手往左拧还是往右拧。",
+          ContentKR = "그래, 렌치를 왼쪽으로 돌리는지 오른쪽으로 돌리는지 정도는 알겠지.",
+          DialogueId = 51211138,
+          GUID = "8033A354",
+          NextDialogue = 51211139,
+          SpeakNpcId = 700429,
+          TalkActionId = {
+            [1] = "700444:Sigh_End"
+          }
+        },
+        [51211139] = {
+          Content = "…………",
+          ContentKR = "......",
+          DialogueId = 51211139,
+          GUID = "8033A37E",
+          NextDialogue = 51211140,
+          SpeakNpcId = 700444
+        },
+        [51211140] = {
+          Content = "（找不出反驳的理由，休郁郁不语，抬头灌了一大口。）",
+          ContentKR = "(반박할 말을 찾지 못한 휴는 우울하게 침묵하며 술만 벌컥벌컥 들이켠다.)",
+          DialogueId = 51211140,
+          GUID = "8033A3A8",
+          IsBlack = 1,
+          NextDialogue = 51211146
+        },
+        [51211141] = {
+          Content = "（随着酒瓶一杯杯倒空，休的脸色红得充血，眼神也变得涣散起来，你们知道，时候到了，克罗格适时退场。）",
+          ContentKR = "(술병이 하나둘 비워지면서 휴의 얼굴이 충혈되어 붉게 물들었고, 눈빛도 흐릿해지기 시작했다. 우리는 때가 되었음을 알아채고, 크로거를 적당히 내보냈다.)",
+          DialogueId = 51211141,
+          GUID = "8033A3D2",
+          IsBlack = 1
+        },
+        [51211142] = {
+          Content = "休，你还记得上次你和克罗格喝多了以后，他把你揍了一顿的事情吗？",
+          ContentKR = "휴, 지난번에 너랑 크로거가 술 마시고 취했을 때, 크로거가 너 두들겨 팬 거 기억 나?",
+          DialogueId = 51211142,
+          GUID = "8033A3FC",
+          LookAt = {
+            [1] = "700449:n(700444)",
+            [2] = "700444:n(700449)"
+          },
+          NextDialogue = 51211143,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Talk01_Start"
+          }
+        },
+        [51211143] = {
+          Content = "嗝？喝……喝多？我妹喝多！克克克……克罗格……嗝！那个疯狗！他刚刚不是在这里吗？人呢？我刚——嗝！刚才就该揍他！",
+          ContentKR = "딸꾹? 취... 취했다고? 나 안 취했어! 크, 크, 크로거... 딸꾹! 그 미친개 자식! 방금 여기 있지 않았어? 어디 갔어? 내가 방금... 딸꾹! 아까 패줬어야 하는데!",
+          DialogueId = 51211143,
+          GUID = "8033A426",
+          NextDialogue = 51211144,
+          SpeakNpcId = 700444
+        },
+        [51211144] = {
+          Content = "不知道呢，你要不要去工厂里找找他？",
+          ContentKR = "글쎄, 잘 모르겠네. 공장에 가서 찾아볼까?",
+          DialogueId = 51211144,
+          GUID = "8033A450",
+          NextDialogue = 51211145,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Talk01_End"
+          }
+        },
+        [51211145] = {
+          Content = "对……嗝！去找他！把我打成那样……我要……报仇……报——嗝！",
+          ContentKR = "그래... 딸꾹! 가자! 날 그렇게 두들겨 패놓고... 딸꾹... 복수할 거야... 복... 딸꾹!",
+          DialogueId = 51211145,
+          GUID = "8033A47A",
+          SpeakNpcId = 700444
+        },
+        [51211146] = {
+          DialogueId = 51211146,
+          FinalDialogueId = 51211141,
+          GUID = "8033A4A4",
+          LookAt = {
+            [1] = "700444:n(0)"
+          },
+          NextOptions = {
+            [1] = 51211113,
+            [2] = 51211122,
+            [3] = 51211132
+          }
+        },
+        [51211201] = {
+          Content = "呜啊，看他左摇右晃的样子，真的没问题吗？",
+          ContentKR = "으앗, 엄청 비틀거리는데, 정말 괜찮을까?",
+          DialogueId = 51211201,
+          GUID = "8033ADAA",
+          NextDialogue = 51211202,
+          SpeakNpcId = 700449
+        },
+        [51211202] = {
+          Content = "他回回都是这样，没问题的，况且，这主意不是你想的吗？",
+          ContentKR = "쟨 매번 저러니까 괜찮아. 게다가 이 방법은 네가 생각한 거잖아?",
+          DialogueId = 51211202,
+          GUID = "8033ADD4",
+          SpeakNpcId = 700429
+        },
+        [51211301] = {
+          Content = "（一夜禅师在这里停下了，会是丢书的地方吗？）",
+          ContentKR = "(밤의 도인이 여기서 멈췄다. 혹시 책을 떨어뜨린 곳이 여길까?)",
+          DialogueId = 51211301,
+          GUID = "8033BE12",
+          NextDialogue = 51211302
+        },
+        [51211302] = {
+          Content = "什么都没有……",
+          ContentKR = "아무것도 없네...",
+          DialogueId = 51211302,
+          GUID = "8033BE3C",
+          SpeakNpcId = 700449
+        },
+        [51211401] = {
+          Content = "哟！那不是一夜禅师吗？怎么这个点喝成这样？",
+          ContentKR = "오! 저 사람 밤의 도인 아냐? 몇 시나 됐다고 벌써 저렇게 취했어?",
+          DialogueId = 51211401,
+          GUID = "8033CE7A",
+          NextDialogue = 51211402,
+          SpeakNpcId = 700445
+        },
+        [51211402] = {
+          Content = "一夜醉鬼是这样的啦~别管他了，快干活去吧。",
+          ContentKR = "꽐라 도인은 원래 저래. 신경 쓰지 말고 빨리 일하러 가자.",
+          DialogueId = 51211402,
+          GUID = "8033CEA4",
+          NextDialogue = 51211403,
+          SpeakNpcId = 700446
+        },
+        [51211403] = {
+          Content = "看来一夜禅师的知名度还挺高？",
+          ContentKR = "밤의 도인이 꽤 유명한가 보네요?",
+          DialogueId = 51211403,
+          GUID = "8033CECE",
+          NextDialogue = 51211404,
+          SpeakNpcId = 100001
+        },
+        [51211404] = {
+          Content = "厂里大大小小的东西都要他来看来修来担责，多少还是有点人气的，只要改改他那动不动喝酒的烂毛病……",
+          ContentKR = "공장의 이런저런 기계들을 책임지고 고쳐 주니까, 어느 정도 인기는 있지. 그놈의 술버릇만 고친다면...",
+          DialogueId = 51211404,
+          GUID = "8033CEF8",
+          SpeakNpcId = 700429
+        },
+        [51211501] = {
+          Content = "（一夜禅师在这里停下了，会是丢书的地方吗？）",
+          ContentKR = "(밤의 도인이 여기서 멈췄다. 혹시 책을 떨어뜨린 곳이 여길까?)",
+          DialogueId = 51211501,
+          GUID = "8033DEE2",
+          NextDialogue = 51211502
+        },
+        [51211502] = {
+          Content = "全是垃圾！",
+          ContentKR = "여긴 쓰레기뿐이잖아!",
+          DialogueId = 51211502,
+          GUID = "8033DF0C",
+          SpeakNpcId = 700429
+        },
+        [51211601] = {
+          Content = "（一夜禅师完全醉倒在路边，不省人事了。）",
+          ContentKR = "(밤의 도인은 완전히 취해 길가에 쓰러져, 인사불성이 되었다.)",
+          DialogueId = 51211601,
+          GUID = "8033EF4A",
+          NextDialogue = 51211602
+        },
+        [51211602] = {
+          Content = "喂！白痴！起来啊！",
+          ContentKR = "야! 이 멍청한 놈아! 일어나!",
+          DialogueId = 51211602,
+          GUID = "8033EF74",
+          NextDialogue = 51211603,
+          SpeakNpcId = 700429
+        },
+        [51211603] = {
+          Content = "那个……还是不要用脚踹他来叫他起床了吧？",
+          ContentKR = "저기... 그래도 발로 차서 깨우는 건 그만두지 그래?",
+          DialogueId = 51211603,
+          GUID = "8033EF9E",
+          NextDialogue = 51211604,
+          SpeakNpcId = 700449
+        },
+        [51211604] = {
+          Content = "*！跟了他半天，什么都没找到，白费功夫！",
+          ContentKR = "젠장! 반나절이나 따라다녔는데 아무것도 못 찾았잖아. 이게 무슨 시간 낭비냐고!",
+          DialogueId = 51211604,
+          GUID = "8033EFC8",
+          NextDialogue = 51211605,
+          SpeakNpcId = 700429
+        },
+        [51211605] = {
+          Content = "请问……",
+          ContentKR = "저기...",
+          DialogueId = 51211605,
+          GUID = "8033EFF2",
+          NextDialogue = 51211606,
+          SpeakNpcId = 700447
+        },
+        [51211606] = {
+          Content = "嗯？你**谁啊？",
+          ContentKR = "음? 넌 또 뭐야?",
+          DialogueId = 51211606,
+          GUID = "8033F01C",
+          NextDialogue = 51211607,
+          SpeakNpcId = 700429
+        },
+        [51211607] = {
+          Content = "克罗格老大……我，我不是来找你的，我是来找一夜禅师的，他……",
+          ContentKR = "크, 크로거 형님... 다른 게 아니고 밤의 도인한테 볼일이 있어서요...",
+          DialogueId = 51211607,
+          GUID = "8033F046",
+          NextDialogue = 51211608,
+          SpeakNpcId = 700447
+        },
+        [51211608] = {
+          Content = "现在没有一夜禅师，只有醉成傻*的酒鬼！",
+          ContentKR = "밤의 도인 같은 건 없어. 여긴 술 취해서 정신 나간 주정뱅이 놈뿐이라고!",
+          DialogueId = 51211608,
+          GUID = "8033F070",
+          NextDialogue = 51211609,
+          SpeakNpcId = 700429
+        },
+        [51211609] = {
+          Content = "咦？怎么醉成这样了，前两天虽然醉的很厉害，但是好歹还算是能帮着看看机子呢。",
+          ContentKR = "어? 어쩌다가 이 정도로 인사불성이 됐죠? 그저께만 해도 많이 취하긴 했어도, 그래도 기계는 봐줄 수 있었는데...",
+          DialogueId = 51211609,
+          GUID = "8033F09A",
+          NextDialogue = 51211610,
+          SpeakNpcId = 700447
+        },
+        [51211610] = {
+          Content = "前两天是指？",
+          ContentKR = "그저께요?",
+          DialogueId = 51211610,
+          GUID = "8033F0C4",
+          NextDialogue = 51211611,
+          SpeakNpcId = 100001
+        },
+        [51211611] = {
+          Content = "就是前两天啊？最近几天不是都没在工厂里看到他嘛，我们的机子有点毛病都不知道该找谁。",
+          ContentKR = "네, 그저께요. 요 며칠 공장에서 계속 안 보였잖아요. 그래서 기계에 문제가 생겼는데도, 물어볼 데가 없더라고요.",
+          DialogueId = 51211611,
+          GUID = "8033F0EE",
+          NextDialogue = 51211612,
+          SpeakNpcId = 700447
+        },
+        [51211612] = {
+          Content = "什么毛病？耽误干活吗？",
+          ContentKR = "무슨 문제? 일하는 데 지장 있어?",
+          DialogueId = 51211612,
+          GUID = "8033F118",
+          NextDialogue = 51211613,
+          SpeakNpcId = 700429
+        },
+        [51211613] = {
+          Content = "倒也不是大毛病，不过还是要人看一下，他现在反正也醉得不行了，要不你们来帮帮忙？",
+          ContentKR = "큰 문제는 아닌데, 그래도 누가 좀 봐줘야 할 것 같아서요. 지금 밤의 도인은 취해서 인사불성이니까, 여러분이 좀 도와주실래요?",
+          DialogueId = 51211613,
+          GUID = "8033F142",
+          NextDialogue = 51211614,
+          SpeakNpcId = 700447
+        },
+        [51211614] = {
+          Content = "我们？我们可不懂机械维修！",
+          ContentKR = "우리? 우린 기계 수리 같은 거 몰라!",
+          DialogueId = 51211614,
+          GUID = "8033F16C",
+          NextDialogue = 51211615,
+          SpeakNpcId = 700449
+        },
+        [51211615] = {
+          Content = "随便吧，你们就跟过去看看，不行就回来，我得去找盆冰水先把他泼醒。",
+          ContentKR = "뭐 어때? 따라가서 한번 봐 봐. 안 되면 돌아오고. 난 얼음물이나 한 대야 받아와서 저놈부터 깨워야겠어.",
+          DialogueId = 51211615,
+          GUID = "8033F196",
+          SpeakNpcId = 700429
+        },
+        [51211701] = {
+          Content = "让伟大的魔王来看看，是什么问题困扰了你们这么久！",
+          ContentKR = "그럼 이 위대하신 마왕님이 직접 봐줄 테니까, 뭐 때문에 그렇게 곤란했는지 말해봐!",
+          DialogueId = 51211701,
+          GUID = "8033FFB2",
+          LookAt = {
+            [1] = "700449:n(700447)",
+            [2] = "700447:n(700449)",
+            [3] = "0:n(700447)"
+          },
+          NextDialogue = 51211702,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Talk01_Start"
+          }
+        },
+        [51211702] = {
+          Content = "就是这个——温感测控仪，上次一夜禅师来的时候调试过一次，但不知道为什么这两天又出毛病了。",
+          ContentKR = "바로 이 온도 감지기예요. 지난번에 밤의 도인이 왔을 때 한 번 고쳐줬는데, 왜인지 며칠 전부터 또 말썽이라서요.",
+          DialogueId = 51211702,
+          DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_ChapterItem_0045.T_Guide_ChapterItem_0045'}",
+          GUID = "8033FFDC",
+          LookAt = {
+            [1] = "700447:n(0)"
+          },
+          NextDialogue = 51211703,
+          SpeakNpcId = 700447,
+          TalkActionId = {
+            [1] = "700449:Talk01_End",
+            [2] = "700447:Give"
+          }
+        },
+        [51211703] = {
+          Content = "这东西不怎么重要，主要是运送来的月髓原液存放之前需要先测试一下仓库温度，太低了容易让原液凝住。",
+          ContentKR = "뭐 그렇게 중요한 건 아니지만, 운송된 폭시코르 원액을 보관하기 전에 창고 온도를 먼저 측정해야 해서 말이죠. 온도가 너무 낮으면 원액이 응고되기 쉽거든요.",
+          DialogueId = 51211703,
+          GUID = "80340006",
+          NextDialogue = 51211704,
+          SpeakNpcId = 700447,
+          TalkActionId = {
+            [1] = "700447:Talk01_Start"
+          }
+        },
+        [51211704] = {
+          Content = "放到这边吧，我来看看。",
+          ContentKR = "이쪽에 놔 보세요. 제가 한번 볼게요.",
+          DialogueId = 51211704,
+          GUID = "80340030",
+          NextDialogue = 51211711,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700447:Talk01_End",
+            [2] = "0:Agree"
+          }
+        },
+        [51211706] = {
+          Content = "（检查仪器前面）",
+          ContentKR = "(기기 앞면을 확인한다)",
+          DialogueId = 51211706,
+          GUID = "80340084",
+          NextDialogue = 51211707
+        },
+        [51211707] = {
+          Content = "（再普通不过的温测仪，冰冷的金属外壳，走线流畅的外在线条，玻璃罩子下面的指针指向一个绝对不可能的温度。）",
+          ContentKR = "(지극히 평범한 온도 감지기다. 차가운 금속 케이스 외부에 매끄러운 전선이 이어져 있고, 유리 덮개 아래의 바늘이 절대로 불가능한 온도를 가리키고 있다.)",
+          DialogueId = 51211707,
+          GUID = "803400AE",
+          NextDialogue = 51211711,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:DisagreeHead"
+          }
+        },
+        [51211708] = {
+          Content = "（检查仪器后面）",
+          ContentKR = "(기기 뒷면을 확인한다)",
+          DialogueId = 51211708,
+          GUID = "803400D8",
+          NextDialogue = 51211709
+        },
+        [51211709] = {
+          Content = "（一个简单的弹性按压锁扣结构，按压拨钮应该就可以将后面的外壳拆下来。）",
+          ContentKR = "(간단한 탄성 압착 잠금 구조다. 다이얼을 누르면 뒷면 케이스를 분리할 수 있을 것 같다.)",
+          DialogueId = 51211709,
+          GUID = "80340102",
+          NextDialogue = 51211711,
+          SpeakNpcId = 100001
+        },
+        [51211710] = {
+          Content = "前面好像没有可以打开的地方，要从后面打开它吗？",
+          ContentKR = "앞쪽엔 열 수 있는 곳이 없는 것 같은데, 뒤쪽에서 열어볼까?",
+          DialogueId = 51211710,
+          GUID = "8034012C",
+          LookAt = {
+            [1] = "700449:n(0)",
+            [2] = "700447:n(0)",
+            [3] = "0:n(700449)"
+          },
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:DisagreeHead"
+          }
+        },
+        [51211711] = {
+          DialogueId = 51211711,
+          FinalDialogueId = 51211710,
+          GUID = "80340156",
+          NextOptions = {
+            [1] = 51211706,
+            [2] = 51211708
+          }
+        },
+        [51211801] = {
+          Content = "好啦，诶？怎么摇摇晃晃的？",
+          ContentKR = "됐어. 어라? 근데 왜 흔들리는 거지?",
+          DialogueId = 51211801,
+          GUID = "8034101A",
+          NextDialogue = 51211802,
+          SpeakNpcId = 700449
+        },
+        [51211802] = {
+          Content = "诶哟，不好意思，这下面有点问题，前两天我就报告了，上面现在还是没反应，上次一夜禅师来的时候也说摇摇晃晃的，我当时还以为是他喝多了头晕呢。",
+          ContentKR = "아, 죄송해요. 여기 아래쪽에 좀 문제가 있거든요. 며칠 전에 보고했는데 상부에선 아직 말이 없네요. 사실 지난번에 밤의 도인이 왔을 때도 흔들린다고 했는데, 그땐 그 사람이 술 마시고 어지러워서 그런 건 줄 알았거든요.",
+          DialogueId = 51211802,
+          GUID = "80341044",
+          LookAt = {
+            [1] = "0:n(700447)",
+            [2] = "700449:n(700447)"
+          },
+          NextDialogue = 51211803,
+          SpeakNpcId = 700447,
+          TalkActionId = {
+            [1] = "700447:Explain01_Start"
+          }
+        },
+        [51211803] = {
+          Content = "不过那天他拿身上的东西顺手垫了一下就不晃了，你们有带什么东西吗？不然我去拿块板砖？",
+          ContentKR = "그날은 밤의 도인이 아무 물건으로 대충 받쳐놓으니까 안 흔들리더라고요. 혹시 받칠 만한 거 없나요? 아니면 제가 벽돌 하나 가져올까요?",
+          DialogueId = 51211803,
+          GUID = "8034106E",
+          NextDialogue = 51211804,
+          SpeakNpcId = 700447,
+          TalkActionId = {
+            [1] = "700447:Explain01_End"
+          }
+        },
+        [51211804] = {
+          Content = "我手上没东西，麻烦你了。",
+          ContentKR = "마땅한 게 없네요. 그럼 부탁할게요.",
+          DialogueId = 51211804,
+          GUID = "80341098",
+          NextDialogue = 51211805,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Agree"
+          }
+        },
+        [51211805] = {
+          Content = "（工人匆匆忙忙离开，又匆匆忙忙带着板砖回来了，顺手将板砖塞在下面。）",
+          ContentKR = "(작업자가 허둥지둥 나가더니, 벽돌을 들고 돌아와 아래쪽에 밀어 넣는다.)",
+          DialogueId = 51211805,
+          GUID = "803410C2",
+          IsBlack = 1,
+          NextDialogue = 51211806
+        },
+        [51211806] = {
+          Content = "现在应该没问题啦！快看看里面到底怎么回事吧？",
+          ContentKR = "이젠 괜찮을 거야! 얼른 뭐가 문제인지 확인해 보자!",
+          DialogueId = 51211806,
+          GUID = "803410EC",
+          LookAt = {
+            [1] = "0:n(700449)",
+            [2] = "700449:n(0)"
+          },
+          NextDialogue = 51211807,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Talk01_Start"
+          }
+        },
+        [51211807] = {
+          Content = "似乎是有什么卡在里面了……",
+          ContentKR = "안에 뭔가 끼어 있는 것 같은데...",
+          DialogueId = 51211807,
+          GUID = "80341116",
+          NextDialogue = 51211808,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700449:Talk01_End"
+          }
+        },
+        [51211808] = {
+          Content = "让我也看看！嗯嗯！是一颗小石子！不知道从哪里进去的！我的手小，我来给它取出来吧！",
+          ContentKR = "나도 볼래! 음음! 작은 돌멩이네! 이런 게 어쩌다 들어간 거지? 난 손이 작으니까 내가 꺼내 줄게!",
+          DialogueId = 51211808,
+          GUID = "80341140",
+          NextDialogue = 51211809,
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700449:Confident_Start"
+          }
+        },
+        [51211809] = {
+          Content = "（白取出了那颗卡在里面的小石子，指针愉悦地抖动了一下，缓慢移动到了正确的温度上。）",
+          ContentKR = "(스노우가 안에 끼어 있던 작은 돌멩이를 꺼내자, 바늘이 기분 좋게 한 번 흔들리더니, 천천히 정확한 온도로 이동한다.)",
+          DialogueId = 51211809,
+          GUID = "8034116A",
+          IsBlack = 1,
+          NextDialogue = 51211810,
+          TalkActionId = {
+            [1] = "700449:Confident_End"
+          }
+        },
+        [51211810] = {
+          Content = "看起来没问题了。",
+          ContentKR = "이제 괜찮아 보이네요.",
+          DialogueId = 51211810,
+          GUID = "80341194",
+          NextDialogue = 51211811,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:AgreeHead"
+          }
+        },
+        [51211811] = {
+          Content = "神医！机械神医啊！没你们的话我还真不知道要怎么办才好。",
+          ContentKR = "우와, 신통하네요! 기계 명의셨군요! 당신들 아니었으면 정말 어떻게 해야 할지 몰랐을 거예요...",
+          DialogueId = 51211811,
+          GUID = "803411BE",
+          LookAt = {
+            [1] = "700449:n(700447)",
+            [2] = "0:n(700447)"
+          },
+          NextDialogue = 51211812,
+          SpeakNpcId = 700447
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51211812,
+    MaxKey = 51213124,
+    Loader = function()
+      return {
+        [51211812] = {
+          Content = "嘿嘿，小菜一碟！",
+          ContentKR = "헤헤, 식은 죽 먹기지!",
+          DialogueId = 51211812,
+          GUID = "803411E8",
+          NextDialogue = 51211813,
+          SpeakNpcId = 700449
+        },
+        [51211813] = {
+          Content = "诶呀，不说了，谢谢你们，我要去跟工头汇报一下仪器好了，这样下批月石原液就能按时送到站了。",
+          ContentKR = "아무튼 고맙습니다. 그럼 얼른 반장한테 가서 센서를 고쳤다고 보고해야겠네요. 그래야 다음 월석 원액을 제때 기차역으로 보낼 수 있으니까요.",
+          DialogueId = 51211813,
+          GUID = "80341212",
+          NextDialogue = 51211814,
+          SpeakNpcId = 700447,
+          TalkActionId = {
+            [1] = "700447:Explain01_Start"
+          }
+        },
+        [51211814] = {
+          Content = "不客气啦~这点小忙本魔王简直是信手拈来~小仆从，我们也快点回去找克罗格和休吧~",
+          ContentKR = "천만에! 이 정도 일은 이 마왕님한텐 누워서 떡 먹기라구. 시종, 우리도 빨리 크로거랑 휴한테 가보자.",
+          DialogueId = 51211814,
+          GUID = "8034123C",
+          SpeakNpcId = 700449,
+          TalkActionId = {
+            [1] = "700447:Explain01_End"
+          }
+        },
+        [51211901] = {
+          Content = "（你们回去的时候，休浑身湿漉漉的，呆呆坐在地上发愣，克罗格在他旁边站着抽烟。）",
+          ContentKR = "(돌아와 보니, 휴는 온몸이 흠뻑 젖은 채 멍하니 바닥에 앉아 있고, 크로거는 그 옆에 서서 담배를 피우고 있다.)",
+          DialogueId = 51211901,
+          GUID = "80342082",
+          NextDialogue = 51211902
+        },
+        [51211902] = {
+          Content = "回来了？这家伙还没反应过来，忙帮上了吗？",
+          ContentKR = "왔냐? 이 녀석은 아직도 정신 못 차렸어. 어때, 일은 잘 도와줬어?",
+          DialogueId = 51211902,
+          GUID = "803420AC",
+          NextDialogue = 51211903,
+          SpeakNpcId = 700429
+        },
+        [51211903] = {
+          Content = "超级简单的小忙！迅速被白和小仆从解决了哦！",
+          ContentKR = "응! 엄청 간단한 일이었어! 스노우랑 시종이 순식간에 해결했다고!",
+          DialogueId = 51211903,
+          GUID = "803420D6",
+          NextDialogue = 51211904,
+          SpeakNpcId = 700449
+        },
+        [51211904] = {
+          Content = "简单到我认为并不需要一个专业的人出手，他们自己稍微看一眼也就会了。",
+          ContentKR = "전문가가 나설 필요도 없을 정도로 간단한 일이었어요. 자기들이 잠깐만 봐도 할 수 있을 것 같던데요.",
+          DialogueId = 51211904,
+          GUID = "80342100",
+          NextDialogue = 51211905,
+          SpeakNpcId = 100001
+        },
+        [51211905] = {
+          Content = "呵，就知道是这样。",
+          ContentKR = "하, 역시 그럴 줄 알았다니까.",
+          DialogueId = 51211905,
+          GUID = "8034212A",
+          NextDialogue = 51211906,
+          SpeakNpcId = 700429
+        },
+        [51211906] = {
+          Content = "这不是很奇怪吗？",
+          ContentKR = "근데 좀 이상하지 않아요?",
+          DialogueId = 51211906,
+          GUID = "80342154",
+          NextDialogue = 51211907,
+          SpeakNpcId = 100001
+        },
+        [51211907] = {
+          Content = "小仆从，你在说什么呀？什么很奇怪？",
+          ContentKR = "시종, 무슨 소리야? 뭐가 이상하다는 거야?",
+          DialogueId = 51211907,
+          GUID = "8034217E",
+          NextDialogue = 51211908,
+          SpeakNpcId = 700449
+        },
+        [51211908] = {
+          Content = "作为工厂唯一的工程师，每天需要处理的都是这种难度的问题，凭借一本手册就成为了所谓的大师，为什么不能干脆公开这本手册，让所有人都成为大师呢？",
+          ContentKR = "공장의 유일한 엔지니어로서 매일 처리해야 하는 게 고작 이 정도 난이도의 문제고, 매뉴얼 하나만 가지고도 전문가가 될 수 있다면, 그냥 그 매뉴얼을 공개해서 모두가 전문가가 되면 안 되나요?",
+          DialogueId = 51211908,
+          GUID = "803421A8",
+          NextDialogue = 51211909,
+          SpeakNpcId = 100001
+        },
+        [51211909] = {
+          Content = "这件事，怎么想都很奇怪吧？",
+          ContentKR = "아무래도 너무 이상하지 않아요?",
+          DialogueId = 51211909,
+          GUID = "803421D2",
+          NextDialogue = 51211910,
+          SpeakNpcId = 100001
+        },
+        [51211910] = {
+          Content = "你以为为什么只有这个白痴留下来了？",
+          ContentKR = "네 생각엔, 왜 여기 남은 게 이 멍청이 하나뿐이겠냐?",
+          DialogueId = 51211910,
+          GUID = "803421FC",
+          NextDialogue = 51211911,
+          SpeakNpcId = 700429
+        },
+        [51211911] = {
+          Content = "你们互相问来问去，我完全听不懂了啦……",
+          ContentKR = "왜 너희들끼리만 얘기하는 거야! 난 하나도 못 알아듣겠어...",
+          DialogueId = 51211911,
+          GUID = "80342226",
+          NextDialogue = 51211912,
+          SpeakNpcId = 700449
+        },
+        [51211912] = {
+          Content = "休的师傅是厂里资历最深的机械工程师，别说这种小机器，就是火车图纸他都能改上两笔，为了让更多人学习到他的那种技术，我们就让他开班授课。",
+          ContentKR = "휴의 스승은 공장에서 경력이 가장 긴 엔지니어였어. 이런 소형 기계는 말할 것도 없고, 기차 도면도 수정할 수 있을 정도였지. 우린 더 많은 사람이 그런 기술을 배울 수 있도록, 강의를 열었어.",
+          DialogueId = 51211912,
+          GUID = "80342250",
+          NextDialogue = 51211913,
+          SpeakNpcId = 700429
+        },
+        [51211913] = {
+          Content = "最开始都挺好，大家学的很快，有天赋的工人很快就能掌握许多机械维修的技巧，干活也更加熟练。",
+          ContentKR = "처음엔 다들 잘했지. 배우는 속도도 빨랐고. 재능 있는 녀석들은 금방 기계 수리 기술을 익혀서, 일도 훨씬 더 잘하게 됐어.",
+          DialogueId = 51211913,
+          GUID = "8034227A",
+          NextDialogue = 51211914,
+          SpeakNpcId = 700429
+        },
+        [51211914] = {
+          Content = "人嘛，进步了的时候，就觉得自己不应该只拿和没进步之前一样的工资，所以大家就集体去要求上面涨薪，不然就以跑路作为威胁。",
+          ContentKR = "근데 사람이란 게, 실력이 늘면 월급도 달라져야 한다고 생각하는 법이잖아. 그래서 다들 모여서 임금 인상을 요구했어. 안 그러면 때려치우겠다고 위협하면서 말이야.",
+          DialogueId = 51211914,
+          GUID = "803422A4",
+          NextDialogue = 51211915,
+          SpeakNpcId = 700429
+        },
+        [51211915] = {
+          Content = "结果呢？百花车站才不在乎他们的生死和去留，他们需要的只是听话干活的家伙，上面直说开不起他们的工资，让他们滚，最后，只有休留下来了。",
+          ContentKR = "결과는 어떻게 됐게? 블룸필드역은 그 사람들 생사나 거취 따위엔 관심도 없었어. 말 잘 듣는 일꾼만 있으면 된다고 생각했거든. 결국 윗선에선 돈 못 올려주니까 꺼지라고 했고, 결국 휴만 남게 된 거야.",
+          DialogueId = 51211915,
+          GUID = "803422CE",
+          NextDialogue = 51211916,
+          SpeakNpcId = 700429
+        },
+        [51211916] = {
+          Content = "所以休不是最能干的那个，而是……",
+          ContentKR = "그러니까, 휴는 제일 능력 있는 사람이 아니라...",
+          DialogueId = 51211916,
+          GUID = "803422F8",
+          NextDialogue = 51211917,
+          SpeakNpcId = 100001
+        },
+        [51211917] = {
+          Content = "最便宜的那个。",
+          ContentKR = "제일 싼 놈이지.",
+          DialogueId = 51211917,
+          GUID = "80342322",
+          NextDialogue = 51211918,
+          SpeakNpcId = 700429
+        },
+        [51211918] = {
+          Content = "为什么要让我一醒过来就听到如此残酷的事实，不行了，酒呢，我要酒！",
+          ContentKR = "왜 술에서 깨자마자 그런 잔인한 얘기를 듣게 하는 거야! 안 되겠어. 술 줘! 술 어디 있어?!",
+          DialogueId = 51211918,
+          GUID = "8034234C",
+          NextDialogue = 51211919,
+          SpeakNpcId = 700444
+        },
+        [51211919] = {
+          Content = "酒个*！你**的给我清醒些，我们跟了你半天，还是没找到你那本破书！",
+          ContentKR = "무슨 술이야! 정신 좀 차려. 널 하루 종일 따라다녔는데, 그 망할 놈의 책은 보지도 못했다고!",
+          DialogueId = 51211919,
+          GUID = "80342376",
+          NextDialogue = 51211920,
+          SpeakNpcId = 700429
+        },
+        [51211920] = {
+          Content = "那不是破书……你怎么能这么说呢？那本书是神来的，我一辈子都达不到书中作者的高度！",
+          ContentKR = "망할 놈의 책이라니... 말이 너무 심하잖아! 그 책을 쓴 사람은 신이나 다름없어! 난 평생을 공부해도 그런 경지엔 오르지 못할 거라고!",
+          DialogueId = 51211920,
+          GUID = "803423A0",
+          NextDialogue = 51211921,
+          SpeakNpcId = 700444
+        },
+        [51211921] = {
+          Content = "听你说话我就烦，现在怎么办？问题怎么解决？你用了这么多年，能不能把书背下来？",
+          ContentKR = "듣고 있으니까 더 열불나네. 이제 어떡할 거야? 어떻게 해결할 거냐고! 그 책을 몇 년을 끼고 있었으면, 이젠 줄줄 외울 정도가 되어야 하는 거 아니야?",
+          DialogueId = 51211921,
+          GUID = "803423CA",
+          NextDialogue = 51211922,
+          SpeakNpcId = 700429
+        },
+        [51211922] = {
+          Content = "背下来？背……背不下来啊……我就没想过……我……",
+          ContentKR = "외워? 그... 그걸... 어떻게 외워... 그런 건 생각도 안 해봤어... 난...",
+          DialogueId = 51211922,
+          GUID = "803423F4",
+          NextDialogue = 51211923,
+          SpeakNpcId = 700444
+        },
+        [51211923] = {
+          Content = "……我真**……",
+          ContentKR = "...아 진짜 **!",
+          DialogueId = 51211923,
+          GUID = "8034241E",
+          NextDialogue = 51211924,
+          SpeakNpcId = 700429
+        },
+        [51211924] = {
+          Content = "不——要——打架！不——要——打架！",
+          ContentKR = "싸——우——지 마! 싸우지 마!",
+          DialogueId = 51211924,
+          GUID = "80342448",
+          NextDialogue = 51211925,
+          SpeakNpcId = 700449
+        },
+        [51211925] = {
+          Content = "大师！你醒酒啦！",
+          ContentKR = "밤의 도인! 술 깼어요?",
+          DialogueId = 51211925,
+          GUID = "80342472",
+          NextDialogue = 51211926,
+          SpeakNpcId = 700447
+        },
+        [51211926] = {
+          Content = "你是……刚才来求助的？怎么了？仪器又坏了吗？",
+          ContentKR = "...아까 도와달라고 왔던 사람 아냐? 왜? 기계가 또 고장 났어?",
+          DialogueId = 51211926,
+          GUID = "8034249C",
+          NextDialogue = 51211927,
+          SpeakNpcId = 700449
+        },
+        [51211927] = {
+          Content = "不是不是，我是来把东西还给一夜禅师的！",
+          ContentKR = "아니, 밤의 도인한테 물건 돌려주러 왔어요!",
+          DialogueId = 51211927,
+          GUID = "803424C6",
+          NextDialogue = 51211928,
+          SpeakNpcId = 700447
+        },
+        [51211928] = {
+          Content = "东西？什么东西？",
+          ContentKR = "물건? 무슨 물건?",
+          DialogueId = 51211928,
+          GUID = "803424F0",
+          NextDialogue = 51211929,
+          SpeakNpcId = 700429
+        },
+        [51211929] = {
+          Content = "就是这本书啊。",
+          ContentKR = "이 책이요.",
+          DialogueId = 51211929,
+          GUID = "8034251A",
+          NextDialogue = 51211930,
+          SpeakNpcId = 700447
+        },
+        [51211930] = {
+          Content = "（工人和和气气地从怀中摸出一本书，塞进了一夜禅师手里。）",
+          ContentKR = "(일꾼이 싱글벙글하며 품속에서 책 한 권을 꺼내 밤의 도인의 손에 쥐여준다.)",
+          DialogueId = 51211930,
+          GUID = "80342544",
+          NextDialogue = 51211931
+        },
+        [51211931] = {
+          Content = "诶呀，那天你喝的醉醺醺的，顺手就把这本书拿来垫在下面了，修好东西后头也不回地走了。",
+          ContentKR = "아니, 그날 술에 취해서 이 책으로 밑을 받친다고 괴어 놓고는, 물건 고치고 나니까 그대로 쌩하고 가버렸잖아요.",
+          DialogueId = 51211931,
+          GUID = "8034256E",
+          NextDialogue = 51211932,
+          SpeakNpcId = 700447
+        },
+        [51211932] = {
+          Content = "我们这些人不识字，不知道是什么书，本来觉得既然是随手拿来垫东西的也不会很重要，不过刚才工友提醒我了，说是大师的东西，还是要还回去的。",
+          ContentKR = "우린 글을 몰라서 이게 뭔 책인지도 모르고, 그냥 받침으로 쓴 거니까 중요한 건 아니겠거니 했는데, 아까 동료가 와서 이건 밤의 도인 물건이니까 돌려주는 게 맞다고 하더라고요.",
+          DialogueId = 51211932,
+          GUID = "80342598",
+          NextDialogue = 51211933,
+          SpeakNpcId = 700447
+        },
+        [51211933] = {
+          Content = "所以我就来还啦，大师你每天帮我们忙这忙那的，压力应该也很大吧，不然也不会每天都喝那么多酒。",
+          ContentKR = "그래서 돌려주러 온 거예요. 밤의 도인이 매일 우리 일을 도와주느라 스트레스를 많이 받는 거죠? 그렇지 않고서야 매일 그렇게 술을 많이 마실 리가 없잖아요?",
+          DialogueId = 51211933,
+          GUID = "803425C2",
+          NextDialogue = 51211934,
+          SpeakNpcId = 700447
+        },
+        [51211934] = {
+          Content = "他？压力大？",
+          ContentKR = "얘가? 스트레스를 받는다고?",
+          DialogueId = 51211934,
+          GUID = "803425EC",
+          NextDialogue = 51211935,
+          SpeakNpcId = 700429
+        },
+        [51211935] = {
+          Content = "呜呜呜……不大，不大，谢谢你，这东西对我来说太重要了，这简直……简直就是我的命啊！",
+          ContentKR = "흑흑흑... 아니야, 스트레스는 무슨! 고마워, 정말 소중한 책이거든. 이건 정말... 정말 내 목숨이나 다름없는 책이야!",
+          DialogueId = 51211935,
+          GUID = "80342616",
+          NextDialogue = 51211936,
+          SpeakNpcId = 700444
+        },
+        [51211936] = {
+          Content = "大师你怎么哭了？别啊，早知道这东西很重要我就早点送回来了，你看这事闹得。",
+          ContentKR = "왜 울어요, 밤의 도인? 얼른 진정해요. 아이고, 이렇게 중요한 거였으면 진작 돌려줄 걸 그랬네요. 이게 다 무슨 일이예요.",
+          DialogueId = 51211936,
+          GUID = "80342640",
+          NextDialogue = 51211937,
+          SpeakNpcId = 700447
+        },
+        [51211937] = {
+          Content = "不……送回来就好……送回来就好啊！克罗格，书找到了，我能回行会了！",
+          ContentKR = "아니야... 찾았으니 됐어... 이제 됐다고! 크로거, 책을 찾았어! 이제 협회로 돌아갈 수 있어!",
+          DialogueId = 51211937,
+          GUID = "8034266A",
+          NextDialogue = 51211938,
+          SpeakNpcId = 700444
+        },
+        [51211938] = {
+          Content = "*……折腾半天，原来是这样……",
+          ContentKR = "씨*... 하루 종일 뺑이쳤더니, 겨우 이런 거였어...?",
+          DialogueId = 51211938,
+          GUID = "80342694",
+          NextDialogue = 51211939,
+          SpeakNpcId = 700429
+        },
+        [51211939] = {
+          Content = "不管怎么说，能找到就是好事！",
+          ContentKR = "아무튼 찾았으면 됐지!",
+          DialogueId = 51211939,
+          GUID = "803426BE",
+          NextDialogue = 51211940,
+          SpeakNpcId = 700449
+        },
+        [51211940] = {
+          Content = "我得带着这傻*回行会找会长报道了，你先去忙你自己的事吧。",
+          ContentKR = "난 이 멍청이 새* 데리고 협회 회장한테 보고하러 갈 테니까, 넌 그만 가봐.",
+          DialogueId = 51211940,
+          GUID = "803426E8",
+          NextDialogue = 51211941,
+          SpeakNpcId = 700429
+        },
+        [51211941] = {
+          Content = "好，那我就先回去了，克罗格，代我向罗连特先生问好。",
+          ContentKR = "네, 그럼 먼저 돌아가겠습니다. 크로거 형님, 로렌트 씨한테 인사 전해 주세요.",
+          DialogueId = 51211941,
+          GUID = "80342712",
+          NextDialogue = 51211942,
+          SpeakNpcId = 700447
+        },
+        [51211942] = {
+          Content = "行，记下了。至于你们……",
+          ContentKR = "그래, 알았어. 그리고 너희들은...",
+          DialogueId = 51211942,
+          GUID = "8034273C",
+          NextDialogue = 51211943,
+          SpeakNpcId = 700429
+        },
+        [51211943] = {
+          Content = "我们……",
+          ContentKR = "우린...",
+          DialogueId = 51211943,
+          GUID = "80342766",
+          NextDialogue = 51211944,
+          SpeakNpcName = "UI_Npc_Name_ZhuJueBai"
+        },
+        [51211944] = {
+          Content = "也一起来吧。",
+          ContentKR = "너희도 같이 가자.",
+          DialogueId = 51211944,
+          GUID = "80342790",
+          SpeakNpcId = 700429
+        },
+        [51212001] = {
+          Content = "罗连特，实话说吧！你就是个怂货！",
+          ContentKR = "로렌트, 솔직히 말해! 너 쫄았지?!",
+          DialogueId = 51212001,
+          GUID = "803430EA",
+          NextDialogue = 51212002,
+          SpeakNpcName = "UI_Npc_Name_1.5_majisound"
+        },
+        [51212002] = {
+          Content = "玛吉，凡事不是只靠拳头就能解决的，再说了，我们能碰的过他吗？",
+          ContentKR = "마지, 모든 일이 주먹으로만 해결되는 건 아니야. 게다가 우리가 그 사람을 어떻게 이겨?",
+          DialogueId = 51212002,
+          GUID = "80343114",
+          NextDialogue = 51212003,
+          SpeakNpcName = "UI_Npc_Name_1.5_luoliantesound"
+        },
+        [51212003] = {
+          Content = "废物才会这么说！",
+          ContentKR = "한낱 쓸모없는 놈들이나 그런 소리 하지!",
+          DialogueId = 51212003,
+          GUID = "8034313E",
+          NextDialogue = 51212004,
+          SpeakNpcName = "UI_Npc_Name_1.5_majisound"
+        },
+        [51212004] = {
+          Content = "这个行会没有人干正事吗？为什么一天到晚都在吵架……",
+          ContentKR = "이 협회에 제대로 일하는 사람은 없어? 왜 하루 종일 싸우기만 하는 거야...",
+          DialogueId = 51212004,
+          GUID = "80343168",
+          NextDialogue = 51212005,
+          SpeakNpcId = 700449
+        },
+        [51212005] = {
+          Content = "……要不我和白不进去了，反正委托已经完成……",
+          ContentKR = "...저랑 스노우는 그냥 안 들어갈게요. 어차피 의뢰는 끝났잖아요...",
+          DialogueId = 51212005,
+          GUID = "80343192",
+          NextDialogue = 51212006,
+          SpeakNpcId = 100001
+        },
+        [51212006] = {
+          Content = "都这么熟了还客套什么？螺丝刀这样也不是一天两天了，一起进去吧！",
+          ContentKR = "이미 알 거 다 아는 사이끼리 뭐 어때? 협회가 이러는 거 하루이틀 일도 아니고, 그냥 같이 들어가!",
+          DialogueId = 51212006,
+          GUID = "803431BC",
+          SpeakNpcId = 700429
+        },
+        [51212007] = {
+          Content = "（没等你们反应过来，克罗格就将你们推了进去。）",
+          ContentKR = "(두 사람이 반응하기도 전에, 크로거가 우격다짐으로 밀어 넣는다.)",
+          DialogueId = 51212007,
+          GUID = "803431E6"
+        },
+        [51212008] = {
+          Content = "在你冷静下来之前，我一句话都不会说。",
+          ContentKR = "네가 진정할 때까지, 한마디도 안 할 거야.",
+          DialogueId = 51212008,
+          GUID = "80343210",
+          NextDialogue = 51212009,
+          SpeakNpcId = 700428
+        },
+        [51212009] = {
+          Content = "你——！",
+          ContentKR = "너——!",
+          DialogueId = 51212009,
+          GUID = "8034323A",
+          NextDialogue = 51212010,
+          SpeakNpcId = 700442
+        },
+        [51212010] = {
+          Content = "我们来的不是时候？",
+          ContentKR = "우리가 타이밍을 잘못 맞춰 왔나?",
+          DialogueId = 51212010,
+          GUID = "80343264",
+          NextDialogue = 51212011,
+          SpeakNpcId = 700429
+        },
+        [51212011] = {
+          Content = "不，你来的正是时候！",
+          ContentKR = "아니, 완벽한 타이밍이야.",
+          DialogueId = 51212011,
+          GUID = "8034328E",
+          NextDialogue = 51212012,
+          SpeakNpcId = 700428
+        },
+        [51212012] = {
+          Content = "哈哈……你好啊，罗连特……",
+          ContentKR = "하하... 안녕, 로렌트...",
+          DialogueId = 51212012,
+          GUID = "803432B8",
+          NextDialogue = 51212013,
+          SpeakNpcId = 700444
+        },
+        [51212013] = {
+          Content = "休，回来了啊，怎么浑身湿漉漉的，还冒着酒气，你们在哪找到他的？酒窖里？泡进酒桶里了？",
+          ContentKR = "휴, 돌아왔구나. 근데 왜 온몸이 젖은 데다 술 냄새까지 나는 거야? 휴를 어디서 찾아낸 거야? 술 창고? 술통에 빠져 있었나?",
+          DialogueId = 51212013,
+          GUID = "803432E2",
+          NextDialogue = 51212014,
+          SpeakNpcId = 700428
+        },
+        [51212014] = {
+          Content = "比那还糟，在医务室，被艾森巴恩的人绑起来了，说他去偷东西。",
+          ContentKR = "그럼 차라리 다행이게. 의무실에서 아이젠반 놈들한테 묶여 있더라니까. 뭘 훔치러 갔었대.",
+          DialogueId = 51212014,
+          GUID = "8034330C",
+          NextDialogue = 51212015,
+          SpeakNpcId = 700429
+        },
+        [51212015] = {
+          Content = "你看！我说什么来着！这根本就是艾森巴恩故意挑事，他一直在试探我们的边界，先是找人偷走我们的账本，然后绑架休，然后呢？",
+          ContentKR = "봐! 내가 뭐랬어! 아이젠반이 지금 시비 거는 거라니까. 계속 우리 인내심을 시험하고 있는 거야! 처음엔 사람을 시켜서 우리 장부를 훔쳐 가더니, 이번엔 휴를 납치하고, 그다음엔?",
+          DialogueId = 51212015,
+          GUID = "80343336",
+          NextDialogue = 51212016,
+          SpeakNpcId = 700442
+        },
+        [51212016] = {
+          Content = "罗连特，你只知道退让，一步步让他的爪牙浸透我们的空间，等到我们唯一的话语权都被他侵占，到时候就迟了！",
+          ContentKR = "로렌트, 넌 계속 물러나면서, 그놈 앞잡이들이 한 발 한 발 우리 영역을 침범하게 내버려두고 있어. 우리의 유일한 발언권마저 뺏기고 나면 그땐 늦는다고!",
+          DialogueId = 51212016,
+          GUID = "80343360",
+          NextDialogue = 51212017,
+          SpeakNpcId = 700442
+        },
+        [51212017] = {
+          Content = "不是这样的！我是主动过去才被抓到的！",
+          ContentKR = "그게 아니야! 그냥 내가 먼저 찾아갔다가 잡힌 거야!",
+          DialogueId = 51212017,
+          GUID = "8034338A",
+          NextDialogue = 51212018,
+          SpeakNpcId = 700444
+        },
+        [51212018] = {
+          Content = "主动？你疯了？终于把自己喝傻了？",
+          ContentKR = "먼저? 너 미쳤어? 드디어 술 마시다 머리가 돈 거야?",
+          DialogueId = 51212018,
+          GUID = "803433B4",
+          NextDialogue = 51212019,
+          SpeakNpcId = 700442
+        },
+        [51212019] = {
+          Content = "不是……这件事……很难和你解释，说来话长……",
+          ContentKR = "아니... 그건... 설명하기 어려워. 말하자면 길고...",
+          DialogueId = 51212019,
+          GUID = "803433DE",
+          NextDialogue = 51212020,
+          SpeakNpcId = 700444
+        },
+        [51212020] = {
+          Content = "还是先不说这些吧，我把救兵也一起带回来了，这次能找到休多亏救兵们，要不先想想怎么庆祝？",
+          ContentKR = "얘기는 나중에 하고, 이번엔 지원군도 데려왔어. 이번에 휴를 찾을 수 있었던 건 이 지원군들 덕분이라고. 일단 어떻게 축하할지 생각해 볼까?",
+          DialogueId = 51212020,
+          GUID = "80343408",
+          NextDialogue = 51212021,
+          SpeakNpcId = 700429
+        },
+        [51212021] = {
+          Content = "没错没错！我们帮了你们这么多忙，总该让我们享享福了吧？",
+          ContentKR = "맞아 맞아! 우리가 이렇게 많이 도와줬는데, 이젠 제대로 대접받아야지!",
+          DialogueId = 51212021,
+          GUID = "80343432",
+          NextDialogue = 51212022,
+          SpeakNpcId = 700449
+        },
+        [51212022] = {
+          Content = "谢谢你们，如果不是你们，螺丝刀这混乱的局面一定会更加让人一筹莫展，想必你们这几桩活忙下来，对我们的情况也有目共睹了吧。",
+          ContentKR = "고마워. 도와주면서 우리 사정 다 봤겠지만, 너희가 아니었으면 우리 드라이버 협회는 정말 막막했을 거야.",
+          DialogueId = 51212022,
+          GUID = "8034345C",
+          NextDialogue = 51212023,
+          SpeakNpcId = 700428
+        },
+        [51212023] = {
+          Content = "庆功的事……可以，晚点要不要留下来吃顿饭？喝酒就算了，我怕克罗格又发疯。",
+          ContentKR = "축하라... 좋아, 나중에 같이 식사라도 할래? 크로거가 또 미쳐 날뛸 수도 있으니까 술은 빼고.",
+          DialogueId = 51212023,
+          GUID = "80343486",
+          NextDialogue = 51212024,
+          SpeakNpcId = 700428
+        },
+        [51212024] = {
+          Content = "我们还有非常重要的事要做，没法留下来吃饭。",
+          ContentKR = "우린 중요한 일이 있어서, 여기 머무르며 식사할 시간이 없어요.",
+          DialogueId = 51212024,
+          GUID = "803434B0",
+          NextDialogue = 51212025,
+          SpeakNpcId = 100001
+        },
+        [51212025] = {
+          Content = "对……对……我想起来了，你们一直说有别的事情要做，没法在车站久留是吧？",
+          ContentKR = "그래... 맞아... 생각났어, 다른 일이 있어서 기차역에 오래 머물 수 없다고 계속 말했었지?",
+          DialogueId = 51212025,
+          GUID = "803434DA",
+          NextDialogue = 51212026,
+          SpeakNpcId = 700428
+        },
+        [51212026] = {
+          Content = "也真是奇迹，能在这么短的时间里完成这么多的活，要是所有车站的工人们都有这种效率，想必我们早就赶超皇都，成为海伯利亚第一车站了。",
+          ContentKR = "정말 기적이야. 이렇게 짧은 시간에 이렇게 많은 일을 해내다니. 기차역의 모든 일꾼이 이런 효율을 보여준다면, 우린 진작에 황성을 추월해서 휘페르보레아에서 제일 가는 역이 됐을 거야.",
+          DialogueId = 51212026,
+          GUID = "80343504",
+          NextDialogue = 51212027,
+          SpeakNpcId = 700428
+        },
+        [51212027] = {
+          Content = "不过既然你们不想久留，我也不多说什么挽留你们了，这是给你的报酬，以及……",
+          ContentKR = "하지만 오래 머물고 싶지 않다면, 더는 붙잡지 않을게. 자, 이건 네게 주는 수고비야. 그리고...",
+          DialogueId = 51212027,
+          GUID = "8034352E",
+          NextDialogue = 51212028,
+          SpeakNpcId = 700428
+        },
+        [51212028] = {
+          Content = "这个，拿好。",
+          ContentKR = "이거 받아.",
+          DialogueId = 51212028,
+          GUID = "80343558",
+          NextDialogue = 51212029,
+          SpeakNpcId = 700442
+        },
+        [51212029] = {
+          Content = "（玛吉冲过来，从口袋里掏出了一把螺丝刀，郑重地放到你手上。）",
+          ContentKR = "(마지가 앞으로 나서더니, 주머니에서 드라이버를 꺼내 정중하게 내 손에 올려놓는다.)",
+          DialogueId = 51212029,
+          GUID = "80343582",
+          NextDialogue = 51212030
+        },
+        [51212030] = {
+          Content = "这是我们螺丝刀行会最能代表身份地位的信物，拿着这个，在车站里无论碰到螺丝刀里的谁，都会对你的要求言听计从。",
+          ContentKR = "이건 우리 드라이버 협회 내 신분과 지위를 보여주는 증표야. 이걸 가지고 있으면, 역에서 협회의 누구를 만나든 네 요청을 들어줄 거야.",
+          DialogueId = 51212030,
+          GUID = "803435AC",
+          NextDialogue = 51212031,
+          SpeakNpcId = 700442
+        },
+        [51212031] = {
+          Content = "啧，我都没有！",
+          ContentKR = "쳇, 그건 나도 없는데!",
+          DialogueId = 51212031,
+          GUID = "803435D6",
+          NextDialogue = 51212032,
+          SpeakNpcId = 700429
+        },
+        [51212032] = {
+          Content = "在咱们这混，讲的就是义气！你帮了我们这么多大忙，我们也没什么能给你的，那就把我们的义气都给你！",
+          ContentKR = "우리 드라이버 협회는 의리에 살고 의리에 죽는 놈들이야! 우릴 이렇게 많이 도와줬는데, 우린 줄 게 별로 없잖아. 그러니까 대신 우리 의리로 갚을게!",
+          DialogueId = 51212032,
+          GUID = "80343600",
+          NextDialogue = 51212033,
+          SpeakNpcId = 700442
+        },
+        [51212033] = {
+          Content = "以后你遇到什么困难了，直接带着它来车站，螺丝刀的兄弟姐妹都等在这，你一声令下，我们流血流汗，在所不辞！怎么样，够不够义气！",
+          ContentKR = "나중에 무슨 곤란한 일 생기면 이걸 들고 기차역으로 와. 협회의 형제자매들이 다 여기서 기다리고 있을 테니까. 네가 한마디만 하면 우린 피와 땀으로 보답할게! 어때, 의리 끝내주지!",
+          DialogueId = 51212033,
+          GUID = "8034362A",
+          NextDialogue = 51212034,
+          SpeakNpcId = 700442
+        },
+        [51212034] = {
+          Content = "谢谢，我会珍惜的。",
+          ContentKR = "고마워, 소중히 간직할게.",
+          DialogueId = 51212034,
+          GUID = "80343654",
+          NextDialogue = 51212035,
+          SpeakNpcId = 100001
+        },
+        [51212035] = {
+          Content = "那么，恕我们不远送了……",
+          ContentKR = "그럼, 배웅은 안 할게...",
+          DialogueId = 51212035,
+          GUID = "8034367E",
+          NextDialogue = 51212036,
+          SpeakNpcId = 700428
+        },
+        [51212036] = {
+          Content = "再见，下次回来，可以找我喝酒~",
+          ContentKR = "잘 가. 다음에 돌아오면 나랑 술 한잔해!",
+          DialogueId = 51212036,
+          GUID = "803436A8",
+          NextDialogue = 51212037,
+          SpeakNpcId = 700444
+        },
+        [51212037] = {
+          Content = "然后看你醉得东倒西歪，继续跑到医务室当囚犯吗？哈哈哈！",
+          ContentKR = "그러다 또 취해서 의무실에 쳐들어갔다가 나오지도 못하려고? 하하하!",
+          DialogueId = 51212037,
+          GUID = "803436D2",
+          NextDialogue = 51212038,
+          SpeakNpcId = 700429
+        },
+        [51212038] = {
+          Content = "你……克罗格，我觉得不用喝酒也可以壮胆了，我现在就要揍你！",
+          ContentKR = "크로거 이 자식... 왠지 이젠 술 안 마셔도 한판 붙을 수 있을 것 같아! 이번엔 내가 너 제대로 패준다! 붙어!",
+          DialogueId = 51212038,
+          GUID = "803436FC",
+          NextDialogue = 51212039,
+          SpeakNpcId = 700444
+        },
+        [51212039] = {
+          Content = "来啊，看你那小胳膊小腿的……",
+          ContentKR = "어디 해 봐! 그 말라빠진 팔다리로...",
+          DialogueId = 51212039,
+          GUID = "80343726",
+          NextDialogue = 51212040,
+          SpeakNpcId = 700429
+        },
+        [51212040] = {
+          Content = "（身后传来四个人打闹争吵的声音，如同螺丝刀和扳手敲击酒瓶发出的喧嚣交响乐，在这样的节奏下，你和白踏着步，离开了这里。）",
+          ContentKR = "(마치 드라이버와 렌치가 술병을 두드려 내는 시끄러운 교향곡처럼, 뒤에서 네 사람이 장난치며 다투는 소리가 들려온다. 교향곡의 리듬에 맞춰, 당신과 스노우는 발걸음을 옮겨 그곳을 떠났다.)",
+          DialogueId = 51212040,
+          GUID = "80343750"
+        },
+        [51213001] = {
+          Content = "{nickname}！你在这里呀。",
+          ContentKR = "{nickname}! 여기 있었구나.",
+          DialogueId = 51213001,
+          GUID = "8034D4FA",
+          NextDialogue = 51213002,
+          SpeakNpcId = 700450
+        },
+        [51213002] = {
+          Content = "那个汽笛沙龙的会长好像回来了，正找你过去呢……",
+          ContentKR = "기적 소리 살롱 회장이 돌아왔나 봐. 지금 막 널 찾고 있어...",
+          DialogueId = 51213002,
+          GUID = "8034D524",
+          NextOptions = {
+            [1] = 51213003
+          },
+          SpeakNpcId = 700450
+        },
+        [51213003] = {
+          Content = "白怎么不高兴？",
+          ContentKR = "스노우, 왜 이렇게 풀이 죽었어?",
+          DialogueId = 51213003,
+          GUID = "8034D54E",
+          NextDialogue = 51213004
+        },
+        [51213004] = {
+          Content = "哈哈，这事说来，还跟你有关呢。你之前的那张照片，不是拿了摄影比赛的优胜嘛。当时会长没在，他现在回来了，正派人找你呢。",
+          ContentKR = "하하, 그게, 전에 네가 찍은 사진이 대회에서 1등을 했었잖아? 그때 자리를 비웠던 살롱 회장이 지금 돌아왔는데, 사람까지 보내서 널 찾고 있더라고.",
+          DialogueId = 51213004,
+          GUID = "8034D578",
+          NextDialogue = 51213005,
+          SpeakNpcId = 700457
+        },
+        [51213005] = {
+          Content = "刚刚一听是沙龙的会长找你，白特别激动，说要替你去领沙龙摄影比赛的冠军奖励，兴致勃勃地就冲去贵族休息室了。",
+          ContentKR = "스노우가 아까 그 얘기를 듣고, 너 대신 대회 우승 상품 받으러 갈 생각에 잔뜩 신나서, 귀족들 휴게실로 룰루랄라 달려갔거든?",
+          DialogueId = 51213005,
+          GUID = "8034D5A2",
+          NextDialogue = 51213006,
+          SpeakNpcId = 700457
+        },
+        [51213006] = {
+          Content = "结果进去就吃了瘪，灰溜溜地被扫地出门了！哼，他还真把我当成那种挥之即来、招之即去的仆从皎皎了，说话特别不客气！",
+          ContentKR = "그런데 들어가자마자 망신만 당하고 쫓겨나 버렸어! 흥, 그 회장은 내가 무슨 오라면 오고, 가라면 가는 시종인 줄 아나? 말투도 엄청 무례했다구!",
+          DialogueId = 51213006,
+          GUID = "8034D5CC",
+          NextDialogue = 51213007,
+          SpeakNpcId = 700450
+        },
+        [51213007] = {
+          Content = "你还笑！笑什么笑，我俩明明是一起被扫地出门的，你就很骄傲了吗？",
+          ContentKR = "뭐야! 왜 웃어! 너도 나랑 같이 쫓겨난 신세면서, 무슨 자랑이라고!",
+          DialogueId = 51213007,
+          GUID = "8034D5F6",
+          NextDialogue = 51213008,
+          SpeakNpcId = 700450
+        },
+        [51213008] = {
+          Content = "刚刚那位会长都没睁开眼看看白，就把我俩打发走了。",
+          ContentKR = "아까 그 회장, 스노우한테는 눈길 한번 제대로 안 주고, 우리 둘 다 내쫓아 버렸어.",
+          DialogueId = 51213008,
+          GUID = "8034D620",
+          NextDialogue = 51213009,
+          SpeakNpcId = 700457
+        },
+        [51213009] = {
+          Content = "尊贵的魔王皎皎受了委屈，你们作为我的小仆从，不应该为我打抱不平吗？那个难缠的家伙追着白问了半天，白可害怕了……生怕说了错话，给你们添麻烦。",
+          ContentKR = "고귀하신 마왕 루나가 수모를 당했는데, 너희 시종들이 항의를 해야 하는 거 아냐? 그 징글징글한 회장이 날 붙잡고 얼마나 꼬치꼬치 캐묻는지... 말실수라도 했다가 너희한테 민폐 끼칠까 봐 얼마나 조마조마했다구.",
+          DialogueId = 51213009,
+          GUID = "8034D64A",
+          NextDialogue = 51213010,
+          SpeakNpcId = 700450
+        },
+        [51213010] = {
+          Content = "呜呜……原来小仆从平常跟这些人打交道有这么辛苦，白终于懂了！",
+          ContentKR = "훌쩍... 시종 너 평소에 그런 사람들 상대하느라고 엄청 힘들었지? 스노우도 이젠 알겠어!",
+          DialogueId = 51213010,
+          GUID = "8034D674",
+          NextOptions = {
+            [1] = 51213011,
+            [2] = 51213017
+          },
+          SpeakNpcId = 700450
+        },
+        [51213011] = {
+          Content = "吃得苦中苦，方为皎中皎！",
+          ContentKR = "고생 끝에 대루나가 오는 거야.",
+          DialogueId = 51213011,
+          GUID = "8034D69E",
+          ImprPlusId = 1005,
+          NextDialogue = 51213012
+        },
+        [51213012] = {
+          Content = "呃……皎中皎是什么意思？",
+          ContentKR = "음... 대루나가 온다니?",
+          DialogueId = 51213012,
+          GUID = "8034D6C8",
+          NextDialogue = 51213013,
+          SpeakNpcId = 700450
+        },
+        [51213013] = {
+          Content = "就是你会成为更好、更大、更强的魔王的意思。",
+          ContentKR = "네가 더 크고, 더 세고, 더 강한 마왕이 될 거란 얘기야.",
+          DialogueId = 51213013,
+          GUID = "8034D6F2",
+          NextDialogue = 51213014,
+          SpeakNpcId = 100001
+        },
+        [51213014] = {
+          Content = "意思是吃亏就能长高？又骗我！皎皎一族是长不高的！",
+          ContentKR = "뭐야, 고생하면 키 큰다는 얘기잖아? 거짓말! 루나는 이게 다 큰 거거든!",
+          DialogueId = 51213014,
+          GUID = "8034D71C",
+          NextDialogue = 51213015,
+          SpeakNpcId = 700450
+        },
+        [51213015] = {
+          Content = "强大可能体现在方方面面，坚强也是强大的表现啊。到那时候，会有更多的皎皎和卡戎、索拉发自内心的追随你，所有人都围着你叫“魔王陛下”……",
+          ContentKR = "꼭 키가 크고 덩치가 커야만 강한 건 아니야. 진짜 강한 건, 마음이 단단한 거거든. 그런 사람이 되면, 루나랑 카론, 그리고 솔라까지도 진심으로 널 따르고, 주변 사람들도 널 '마왕폐하'라고 부르게 될 거야...",
+          DialogueId = 51213015,
+          GUID = "8034D746",
+          NextDialogue = 51213016,
+          SpeakNpcId = 100001
+        },
+        [51213016] = {
+          Content = "……小仆从，你说的是真的？那、哼、嘿嘿，感觉还不错？那我再多给你当一阵子仆从吧！我要变得更强大！",
+          ContentKR = "...진짜야, 시종? 뭐, 크흠, 헤헤, 딱히 나쁘진 않네? 스노우는 더 강해지고 싶으니까, 조금만 더 네 시종 역할 해 줄게!",
+          DialogueId = 51213016,
+          GUID = "8034D770",
+          NextDialogue = 51213020,
+          SpeakNpcId = 700450
+        },
+        [51213017] = {
+          Content = "辛苦了，白。",
+          ContentKR = "고생 많았어, 스노우.",
+          DialogueId = 51213017,
+          GUID = "8034D79A",
+          ImprPlusId = 1004,
+          NextDialogue = 51213018
+        },
+        [51213018] = {
+          Content = "这段时间辛苦了，白。魔王大人做得很好，简直是我等仆从的楷模啊！",
+          ContentKR = "그동안 수고 많았어, 스노우. 마왕님께서 아주 훌륭하게 해냈네. 역시 우리 시종들의 모범이야!",
+          DialogueId = 51213018,
+          GUID = "8034D7C4",
+          NextDialogue = 51213019,
+          SpeakNpcId = 100001
+        },
+        [51213019] = {
+          Content = "那当然了，就算是当仆从，白也是仆从中的头领，仆从中的大魔王！",
+          ContentKR = "당연하지! 시종 노릇을 하더라도 스노우는 시종들의 대장님! 시종들의 대마왕이니까!",
+          DialogueId = 51213019,
+          GUID = "8034D7EE",
+          NextDialogue = 51213020,
+          SpeakNpcId = 700450
+        },
+        [51213020] = {
+          Content = "好了好了，白，别闹了。{nickname}，你先去汽笛沙龙那边吧，别让那位西顿先生久等。我和白在周围调查一下情况，待会儿再会合。",
+          ContentKR = "자, 스노우, 알았으니까 이제 그만해. 기적 소리 살롱 쪽엔 {nickname} 네가 먼저 가 줘. 시돈 씨를 너무 오래 기다리게 할 수는 없잖아. 나랑 스노우는 주변을 좀 살펴보고 나중에 합류할게.",
+          DialogueId = 51213020,
+          GUID = "8034D818",
+          NextDialogue = 51213021,
+          SpeakNpcId = 700457
+        },
+        [51213021] = {
+          Content = "好。",
+          ContentKR = "알았어.",
+          DialogueId = 51213021,
+          GUID = "8034D842",
+          SpeakNpcId = 100001
+        },
+        [51213023] = {
+          Content = "久等了。抱歉，与印刷厂那边拉扯得久了点，回来晚了一些。",
+          ContentKR = "오래 기다리셨습니다. 인쇄소 쪽 조율에 시간이 조금 걸려 늦었네요. 죄송합니다.",
+          DialogueId = 51213023,
+          GUID = "8034D896",
+          NextDialogue = 51213024,
+          SpeakNpcId = 700460
+        },
+        [51213024] = {
+          Content = "本来今天应该是我来接待你，为你带来这个好消息的……想必你已经听说了这件事吧？你的照片获得了摄影比赛的第一名。",
+          ContentKR = "오늘은 제가 직접 맞이해서 이 좋은 소식을 전해드리려 했는데... 아마 알고 계시겠죠? 사진 대회에서 우승을 차지하셨답니다.",
+          DialogueId = 51213024,
+          GUID = "8034D8C0",
+          NextDialogue = 51213025,
+          SpeakNpcId = 700460
+        },
+        [51213025] = {
+          Content = "原本想着，只要让我们看到你作为艾森巴恩站长大人追随者的诚意与热情，不管你的照片拍成什么样子，都会让你通过这次考核的。",
+          ContentKR = "사실 처음에는 아이젠반 역장님을 따르고자 하는 성의와 열정만 보여 주신다면, 사진이 어떻든 심사에 통과시켜 드릴 생각이었습니다.",
+          DialogueId = 51213025,
+          GUID = "8034D8EA",
+          NextDialogue = 51213026,
+          SpeakNpcId = 700460
+        },
+        [51213026] = {
+          Content = "没想到……你不仅是个优雅、高洁的{性别:绅士|淑女}，拥有炽烈的热忱与决心，还这般才华横溢，一张照片，能够同时拍摄出故事感和动态感……太棒了。",
+          ContentKR = "그런데... 당신은 우아하고 고결한 {性别:신사|숙녀}일 뿐 아니라, 불타는 열정과 결의까지 갖추셨더군요. 게다가 사진 한 장에 스토리와 생동감을 동시에 담아낼 만큼 재능도 뛰어나시고요... 정말 훌륭합니다.",
+          DialogueId = 51213026,
+          GUID = "8034D914",
+          NextDialogue = 51213027,
+          SpeakNpcId = 700460
+        },
+        [51213027] = {
+          Content = "我，汽笛沙龙协会会长，西顿·布鲁图斯，正式邀请你加入汽笛沙龙，成为艾森巴恩站长大人的追随者、百花车站守望互助的一份子。",
+          ContentKR = "저, 기적 소리 살롱 회장 시돈 브루투스는 당신을 정식으로 기적 소리 살롱에 초대합니다. 아이젠반 역장님을 따르고, 블룸필드역을 함께 지키며 서로 돕는 일원이 되어 주십시오.",
+          DialogueId = 51213027,
+          GUID = "8034D93E",
+          NextDialogue = 51213028,
+          SpeakNpcId = 700460
+        },
+        [51213028] = {
+          Content = "不知阁下……意下如何？",
+          ContentKR = "제 초대에... 응해 주시겠습니까?",
+          DialogueId = 51213028,
+          GUID = "8034D968",
+          NextDialogue = 51213029,
+          SpeakNpcId = 700460
+        },
+        [51213029] = {
+          Content = "（这也太夸张了，我拍的时候根本没想那么多。难道这就是传说中的‘自有绅士替我论证’？）",
+          ContentKR = "(아무 생각 없이 찍은 건데, 해석이 너무 거창하네. 이게 사람들이 말하는 '꿈보다 해몽'인가?)",
+          DialogueId = 51213029,
+          GUID = "8034D992",
+          NextDialogue = 51213030,
+          SpeakNpcId = 100001
+        },
+        [51213030] = {
+          Content = "咳……这是我的荣幸。",
+          ContentKR = "크흠... 저도 영광이에요.",
+          DialogueId = 51213030,
+          GUID = "8034D9BC",
+          NextDialogue = 51213031,
+          SpeakNpcId = 100001
+        },
+        [51213031] = {
+          Content = "那么，欢迎你成为汽笛沙龙的一份子。让我们为了共同的理想而努力吧。",
+          ContentKR = "그럼 기적 소리 살롱의 일원이 되신 것을 환영합니다. 앞으로 공동의 이상을 위해 함께 힘써 보죠.",
+          DialogueId = 51213031,
+          GUID = "8034D9E6",
+          NextDialogue = 51213032,
+          SpeakNpcId = 700460
+        },
+        [51213032] = {
+          Content = "说起来，你身后的那两位仆从，今天没跟你一起来呢。我们准备了三份薄礼，既然他们不在，烦请阁下代替仆从收下了。",
+          ContentKR = "그러고 보니, 저번에 동행했던 두 시종이 오늘은 보이지 않는군요. 변변치 않아도 선물은 세 사람 몫을 준비했으니, 대신 전해 주시면 감사하겠습니다.",
+          DialogueId = 51213032,
+          GUID = "8034DA10",
+          SpeakNpcId = 700460
+        },
+        [51213034] = {
+          Content = "多谢。",
+          ContentKR = "감사해요.",
+          DialogueId = 51213034,
+          GUID = "8034DA64",
+          LookAt = {
+            [1] = "700460:n(0)",
+            [2] = "0:n(700460)"
+          },
+          NextDialogue = 51213035,
+          SpeakNpcId = 100001
+        },
+        [51213035] = {
+          Content = "不必客气，这是你应有的报酬。",
+          ContentKR = "천만에요. 마땅히 받으셔야 할 보상인걸요.",
+          DialogueId = 51213035,
+          GUID = "8034DA8E",
+          NextDialogue = 51213036,
+          SpeakNpcId = 700460,
+          TalkActionId = {
+            [1] = "700460:Talk01_Start"
+          }
+        },
+        [51213036] = {
+          Content = "接下来，我还有事情想要拜托你……不知你是否愿意抽空跑一趟，看看庆典的准备情况呢？",
+          ContentKR = "그리고 부탁드릴 일이 하나 더 있습니다만... 괜찮으시다면 축제 준비 상황을 확인해 주시겠습니까?",
+          DialogueId = 51213036,
+          GUID = "8034DAB8",
+          NextDialogue = 51213037,
+          SpeakNpcId = 700460
+        },
+        [51213037] = {
+          Content = "哦，对了，你是新成员，还不太清楚庆典的事。我来简单介绍一下吧，不是什么复杂的事情，只是给艾森巴恩站长大人举办的庆祝活动。",
+          ContentKR = "아, 그러고 보니 신입 회원이시라 축제 이야기는 아직 잘 모르시겠군요. 간단히 설명드리면, 거창한 건 아니고, 아이젠반 역장님을 위해 여는 축하 행사입니다.",
+          DialogueId = 51213037,
+          GUID = "8034DAE2",
+          NextDialogue = 51213038,
+          SpeakNpcId = 700460
+        },
+        [51213038] = {
+          Content = "最近百花车站很热闹吧？你应该已经在其他人那里听说过，马上就是艾森巴恩站长大人赴任的十周年纪念日了。",
+          ContentKR = "요즘 블룸필드역이 꽤 떠들썩하죠? 이미 다른 분들께 들으셨겠지만, 곧 아이젠반 역장님의 부임 10주년 기념일이거든요.",
+          DialogueId = 51213038,
+          GUID = "8034DB0C",
+          NextDialogue = 51213039,
+          SpeakNpcId = 700460
+        },
+        [51213039] = {
+          Content = "这不仅是百花车站新生的生日，更是艾森巴恩站长大人的生日，我们汽笛沙龙组织了一场庆典，号召火车站的人们都参与进来。",
+          ContentKR = "블룸필드역이 새롭게 거듭난 날이자, 아이젠반 역장님의 탄신일이기도 해서, 저희 기적 소리 살롱은 축제를 개최해, 역의 모든 분께 기쁜 마음으로 동참을 권하고 있습니다.",
+          DialogueId = 51213039,
+          GUID = "8034DB36",
+          NextDialogue = 51213040,
+          SpeakNpcId = 700460,
+          TalkActionId = {
+            [1] = "700460:Talk01_End"
+          }
+        },
+        [51213040] = {
+          Content = "这也跟我要拜托你的事情有关。",
+          ContentKR = "제가 드리고 싶은 부탁도, 마침 그 행사와 관련돼 있어요.",
+          DialogueId = 51213040,
+          GUID = "8034DB60",
+          NextOptions = {
+            [1] = 51213041,
+            [2] = 51213045
+          },
+          SpeakNpcId = 700460
+        },
+        [51213041] = {
+          Content = "为什么是我？",
+          ContentKR = "왜 저한테 부탁하시는 거죠?",
+          DialogueId = 51213041,
+          GUID = "8034DB8A",
+          NextDialogue = 51213042
+        },
+        [51213042] = {
+          Content = "其他人暂时抽不开身，已经在庆典的预热活动当中了，我接下来还要和印刷厂的负责人接洽……也有点忙。",
+          ContentKR = "다른 분들은 축제 사전 행사 준비로 여념이 없어, 당장은 자리를 비우기 어렵습니다. 저도 곧 인쇄소 책임자와 일정을 조율해야 해서... 조금 바쁘고요.",
+          DialogueId = 51213042,
+          GUID = "8034DBB4",
+          NextDialogue = 51213043,
+          SpeakNpcId = 700460
+        },
+        [51213043] = {
+          Content = "你应该也还有印象吧？就是你拿了头奖的那张照片，会作为重要插图，印在庆典的宣传海报上，整个百花车站都会看到你的摄影作品。",
+          ContentKR = "이번에 당신에게 우승을 안겨 준 그 사진, 아직 기억하시죠? 그 사진이 이번 축제 홍보 포스터의 메인 이미지로 들어갈 예정이라, 조만간 블룸필드역을 오가는 모든 이들이 그 작품을 감상하게 될 겁니다.",
+          DialogueId = 51213043,
+          GUID = "8034DBDE",
+          NextOptions = {
+            [1] = 51213048
+          },
+          SpeakNpcId = 700460
+        },
+        [51213044] = {
+          Content = "这次就是想拜托你，代我去看看预热活动的准备情况。",
+          ContentKR = "그런 상황이라, 저 대신 사전 행사 쪽 준비 상황을 살펴봐 주셨으면 합니다.",
+          DialogueId = 51213044,
+          GUID = "8034DC08",
+          SpeakNpcId = 700460
+        },
+        [51213045] = {
+          Content = "好，我去看看。",
+          ContentKR = "좋아요, 가서 확인해 보죠.",
+          DialogueId = 51213045,
+          GUID = "8034DC32",
+          NextDialogue = 51213046
+        },
+        [51213046] = {
+          Content = "那就麻烦你了。真抱歉，你刚刚入会，就要麻烦你去前后奔波了。",
+          ContentKR = "그럼 부탁드리겠습니다. 갓 신입 회원이 되신 분께 이런 수고를 끼치게 돼서 정말 송구합니다.",
+          DialogueId = 51213046,
+          GUID = "8034DC5C",
+          NextOptions = {
+            [1] = 51213048
+          },
+          SpeakNpcId = 700460
+        },
+        [51213047] = {
+          Content = "我想让你替我去看看庆典的预热活动准备得怎么样了。",
+          ContentKR = "저 대신 축제 사전 행사 준비가 어떻게 되어가고 있는지만 확인해 주시면 됩니다.",
+          DialogueId = 51213047,
+          GUID = "8034DC86",
+          SpeakNpcId = 700460
+        },
+        [51213048] = {
+          Content = "都有些什么活动？",
+          ContentKR = "어떤 행사를 진행하실 예정인가요?",
+          DialogueId = 51213048,
+          GUID = "8034DCB0",
+          NextDialogue = 51213049
+        },
+        [51213049] = {
+          Content = "主要就是知识问答、主题抽奖和主题戏剧。前两者举办有一段时间了，后者应该还在彩排准备。",
+          ContentKR = "주요 행사는 퀴즈와 경품 추첨, 그리고 테마 연극입니다. 퀴즈와 경품 추첨은 한창 진행 중이고, 연극은 아직 리허설 단계일 겁니다.",
+          DialogueId = 51213049,
+          GUID = "8034DCDA",
+          NextDialogue = 51213050,
+          SpeakNpcId = 700460,
+          TalkActionId = {
+            [1] = "700460:Explain01_Start"
+          }
+        },
+        [51213050] = {
+          Content = "我们沙龙的那些成员有不少看过百十部歌剧，都有戏瘾，想演。但真开始准备了，就连话都说不利索。我还特意从剧团找了演员指导他们。",
+          ContentKR = "살롱에 오페라를 수도 없이 관람하신 회원들이 많은데, 다들 무대를 향한 열망이 대단하시더군요. 문제는 막상 시작해 보니, 대사 한 줄조차 매끄럽게 소화를 못 하셔서, 제가 극단에서 전문 배우를 초빙해 지도를 맡겼습니다.",
+          DialogueId = 51213050,
+          GUID = "8034DD04",
+          NextDialogue = 51213051,
+          SpeakNpcId = 700460
+        },
+        [51213051] = {
+          Content = "知识问答和主题抽奖的负责人是同一个，都在站前大厅，戏剧的彩排应该是在天桥附近。",
+          ContentKR = "퀴즈와 경품 추첨은 동일한 담당자가 맡아 진행 중이고, 대합실로 가 보시면 됩니다. 연극 리허설은 육교 근처를 확인해 보시면 되고요.",
+          DialogueId = 51213051,
+          GUID = "8034DD2E",
+          NextDialogue = 51213052,
+          SpeakNpcId = 700460
+        },
+        [51213052] = {
+          Content = "剩下的时间……我们来熟悉一下吧？作为汽笛沙龙的会长，我要了解自己的成员才行呢。",
+          ContentKR = "시간에 조금 여유가 있으니... 우리도 잠시 대화를 나눠 보죠. 회장을 맡고 있는 만큼, 우리 기적 소리 살롱의 신입 회원이 어떤 분인지 알아 둬야 하니까요.",
+          DialogueId = 51213052,
+          GUID = "8034DD58",
+          NextDialogue = 51213053,
+          SpeakNpcId = 700460
+        },
+        [51213053] = {
+          Content = "别紧张，就是随便聊聊。",
+          ContentKR = "가볍게 담소를 나누자는 뜻이니, 긴장하지 않으셔도 됩니다.",
+          DialogueId = 51213053,
+          GUID = "8034DD82",
+          NextDialogue = 51213054,
+          SpeakNpcId = 700460,
+          TalkActionId = {
+            [1] = "700460:Explain01_End"
+          }
+        },
+        [51213054] = {
+          Content = "（西顿拉着你，说了各种各样的话题和理念……从冰湖城的治理，到艾森巴恩的发家史，几乎什么都能说上几句。）",
+          ContentKR = "(시돈은 나를 붙잡고, 아이스레이크 시티의 정치부터 시작해서, 아이젠반의 출세 비화까지... 흡사 걸어 다니는 백과사전과 대화를 나누듯 온갖 이야기를 읊어댄다.)",
+          DialogueId = 51213054,
+          GUID = "8034DDAC",
+          NextDialogue = 51213055
+        },
+        [51213055] = {
+          Content = "（但当你主动地想要打听一些关于艾森巴恩更细节、更具体的事情时，却总是被他搪塞过去，表情有些微妙的不耐烦。）",
+          ContentKR = "(그러나 아이젠반과 관련된 더 자세한 이야기를 파고들려 할 때면, 시돈은 묘하게 짜증이 섞인 표정으로 말을 돌린다.)",
+          DialogueId = 51213055,
+          GUID = "8034DDD6",
+          NextDialogue = 51213056
+        },
+        [51213056] = {
+          Content = "（他会频繁地整理衣领，摸鼻子，或者是转动手中的笔，小动作多而复杂，看起来注意力并不集中，神情也有些散漫倦懒。）",
+          ContentKR = "(마치 대화에 집중하지 못하는 사람처럼, 옷깃을 정리하거나 코를 만지고, 손에 든 펜을 빙빙 돌린다. 표정 역시 어딘가 의욕 없이 나른해 보인다.)",
+          DialogueId = 51213056,
+          GUID = "8034DE00",
+          NextDialogue = 51213057
+        },
+        [51213057] = {
+          Content = "（不知时间过了多久，西顿终于离开了。你察觉到，这个人似乎并没有那么尊敬艾森巴恩，至少他的崇拜和热切，远远比不上你之前的引路人、摄影师托兰。）",
+          ContentKR = "(시간이 한참 흐른 후, 시돈이 마침내 자리를 뜬다. 어쩐지 이 살롱 회장은 아이젠반을 그다지 존경하지 않는다는 느낌이 든다. 적어도 이 살롱을 소개해 준 포토그래퍼 톨란드에 비하면, 아이젠반을 향한 열의도 충심도 보이지 않는다.)",
+          DialogueId = 51213057,
+          GUID = "8034DE2A",
+          NextDialogue = 51213058
+        },
+        [51213058] = {
+          Content = "（和我说了这么久的话……有这时间，他自己都去验收回来了吧？）",
+          ContentKR = "(나랑 이렇게 한참을 떠들 시간이면... 직접 가서 확인하고 돌아와도 되지 않나?)",
+          DialogueId = 51213058,
+          GUID = "8034DE54",
+          NextDialogue = 51213059,
+          SpeakNpcId = 100001
+        },
+        [51213059] = {
+          Content = "也差不多到我和负责人约定的时间了……那么，接下来就拜托你了。",
+          ContentKR = "이제 슬슬 인쇄소 책임자와 만날 시간이 됐군요... 그러면, 나머지 일은 잘 부탁드립니다.",
+          DialogueId = 51213059,
+          GUID = "8034DE7E",
+          NextDialogue = 51213060,
+          SpeakNpcId = 700460
+        },
+        [51213060] = {
+          Content = "对了，这个给你。你是个生面孔，难免会有人不认识你。有了这个，就不会有人拦着你了。",
+          ContentKR = "참, 이걸 가져가세요. 신입 회원이시라 못 알아보는 사람들도 있을 텐데, 이게 있으면, 통행을 제지당하는 일은 없을 겁니다.",
+          DialogueId = 51213060,
+          DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_ChapterItem_0044.T_Guide_ChapterItem_0044'}",
+          GUID = "8034DEA8",
+          NextDialogue = 51213061,
+          SpeakNpcId = 700460
+        },
+        [51213061] = {
+          Content = "加油哦，新人，期待你的好消息。",
+          ContentKR = "힘내세요, 신입 회원님. 좋은 소식 기다리겠습니다.",
+          DialogueId = 51213061,
+          GUID = "8034DED2",
+          SpeakNpcId = 700460
+        },
+        [51213063] = {
+          Content = "（也不知道奥特赛德和白那边怎么样了，先去找他们交流一下情报吧。）",
+          ContentKR = "(아웃사이더와 스노우 쪽은 어떻게 됐을까? 일단 두 사람을 찾아가서 서로 알아낸 정보를 맞춰 보자.)",
+          DialogueId = 51213063,
+          GUID = "8034DF26",
+          SpeakNpcId = 100001
+        },
+        [51213065] = {
+          Content = "你终于出来了，呼。方才我和白在附近走访调查，也有了一些收获，火车站最近很热闹，在举办一些……有点奇怪的活动。",
+          ContentKR = "후, 드디어 나왔네. 아까 스노우랑 근처에서 이것저것 알아봤는데, 수확이 좀 있었어. 요즘 역이 꽤 떠들썩하더라. 뭔가 묘한 행사들이 한창이던데.",
+          DialogueId = 51213065,
+          GUID = "8034DF7A",
+          LookAt = {
+            [1] = "700450:n(0)",
+            [2] = "700457:n(0)",
+            [3] = "0:n(700457)"
+          },
+          NextDialogue = 51213066,
+          SpeakNpcId = 700457,
+          TurnTo = {
+            [1] = "700450:n(0)",
+            [2] = "700457:n(0)",
+            [3] = "0:n(700457)"
+          }
+        },
+        [51213066] = {
+          Content = "对，对，他们连白都没放过，还想给白也塞一份传单呢！",
+          ContentKR = "그래, 맞아! 스노우한테까지 전단지를 쥐여 주려고 했다니까!",
+          DialogueId = 51213066,
+          GUID = "8034DFA4",
+          NextDialogue = 51213067,
+          SpeakNpcId = 700450,
+          TalkActionId = {
+            [1] = "700450:Talk01_Start"
+          }
+        },
+        [51213067] = {
+          Content = "（把西顿的请求转告给了奥特赛德和白。）",
+          ContentKR = "(아웃사이더와 스노우에게 시돈이 한 부탁을 전한다.)",
+          DialogueId = 51213067,
+          GUID = "8034DFCE",
+          NextDialogue = 51213068,
+          TalkActionId = {
+            [1] = "700450:Talk01_End"
+          }
+        },
+        [51213068] = {
+          Content = "知识问答和主题抽奖？这个确实有，刚刚我们也看见很多人往那边去。",
+          ContentKR = "퀴즈랑 경품 추첨? 하긴 하더라. 아까 우리도 사람들이 그쪽으로 많이 가는 걸 봤거든.",
+          DialogueId = 51213068,
+          GUID = "8034DFF8",
+          NextDialogue = 51213069,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Talk03_Start"
+          }
+        },
+        [51213069] = {
+          Content = "里面还有很多市民拖家带口抢着去，说是参加活动可以领免费的罐头。",
+          ContentKR = "사람들이 가족들까지 데리고 엄청 가더라고. 행사에 참여하기만 해도 무료 통조림을 나눠준다나 봐.",
+          DialogueId = 51213069,
+          GUID = "8034E022",
+          NextDialogue = 51213070,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Talk03_End"
+          }
+        },
+        [51213070] = {
+          Content = "免费的？那我们也去领！",
+          ContentKR = "공짜라구? 그럼 우리도 받으러 가자!",
+          DialogueId = 51213070,
+          GUID = "8034E04C",
+          NextDialogue = 51213071,
+          SpeakNpcId = 700450
+        },
+        [51213071] = {
+          Content = "喂，我们是要去打听庆典预热活动的准备情况的，你别搞错了重点！",
+          ContentKR = "이보세요. 우리는 사전 행사 준비 상황을 확인하러 가는 거야. 엉뚱한 데 정신 팔지 마!",
+          DialogueId = 51213071,
+          GUID = "8034E076",
+          SpeakNpcId = 700457
+        },
+        [51213073] = {
+          Content = "来参加艾森巴恩站长大人知识问答的，还是来参加抽奖活动的？",
+          ContentKR = "아이젠반 역장님 상식 퀴즈에 참여하러 오셨습니까? 아니면 경품 추첨 행사에 참여하실 건가요?",
+          DialogueId = 51213073,
+          GUID = "8034E0CA",
+          NextOptions = {
+            [1] = 51213074,
+            [2] = 51213076
+          },
+          SpeakNpcId = 700454
+        },
+        [51213074] = {
+          Content = "都不是。",
+          ContentKR = "둘 다 아니에요.",
+          DialogueId = 51213074,
+          GUID = "8034E0F4",
+          NextDialogue = 51213075
+        },
+        [51213075] = {
+          Content = "那是你来做什么的？不会是艾森巴恩大人的仇家，来砸场子的吧？我警告你啊，你们最近安分点，我们最近没空和你们斗，都忙着庆典呢。",
+          ContentKR = "그렇다면 무슨 용무시죠? 설마 역장님께 앙심을 품고 행사장에서 소란을 피우러 오신 겁니까? 경고하는데, 당분간은 참아 주세요. 저희도 축제 준비로 바빠서 상대해 드릴 시간이 없거든요.",
+          DialogueId = 51213075,
+          GUID = "8034E11E",
+          NextDialogue = 51213078,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk02_Start"
+          }
+        },
+        [51213076] = {
+          Content = "都要参加！",
+          ContentKR = "둘 다 참여할래요!",
+          DialogueId = 51213076,
+          GUID = "8034E148",
+          NextDialogue = 51213077
+        },
+        [51213077] = {
+          Content = "那就请后面排队，大概再排两三个小时就轮到你了。",
+          ContentKR = "그렇다면 맨 뒤로 가서 줄부터 서 주세요. 두세 시간 정도 기다리시면, 차례가 올 겁니다.",
+          DialogueId = 51213077,
+          GUID = "8034E172",
+          NextDialogue = 51213078,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk02_Start"
+          }
+        },
+        [51213078] = {
+          Content = "好吧，其实是你们会长拜托我看看庆典准备得如何了，这是他的信物。",
+          ContentKR = "네. 그런데 사실 전 회장님의 부탁을 받고 축제 준비 상황을 확인하러 온 거예요. 이건 회장님이 주신 증표고요.",
+          DialogueId = 51213078,
+          DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_ChapterItem_0044.T_Guide_ChapterItem_0044'}",
+          GUID = "8034E19C",
+          NextDialogue = 51213079,
+          SpeakNpcId = 100001
+        },
+        [51213079] = {
+          Content = "哦！是会长让你来的啊，之前没见过你，新人？",
+          ContentKR = "오! 회장님이 보내신 분이었군요. 처음 뵙는 것 같은데, 신입 회원이신가요?",
+          DialogueId = 51213079,
+          GUID = "8034E1C6",
+          NextDialogue = 51213080,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk01_Start"
+          }
+        },
+        [51213080] = {
+          Content = "嗯，我今天刚刚正式加入的。",
+          ContentKR = "네, 오늘 정식으로 가입했어요.",
+          DialogueId = 51213080,
+          GUID = "8034E1F0",
+          NextDialogue = 51213081,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700454:Talk01_End"
+          }
+        },
+        [51213081] = {
+          Content = "这样啊……那会长很看重你啊，一般的新人可不会接触到这么核心的活计。",
+          ContentKR = "그렇군요... 회장님께서 회원님을 상당히 눈여겨보시는 모양이네요. 보통 신입 회원은 이런 중요한 일을 맡는 법이 없거든요.",
+          DialogueId = 51213081,
+          GUID = "8034E21A",
+          NextDialogue = 51213082,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Think_Start"
+          }
+        },
+        [51213082] = {
+          Content = "（……核心？不就是庆典的预热活动吗？）",
+          ContentKR = "(...중요한 일? 그냥 축제 사전 행사 아닌가?)",
+          DialogueId = 51213082,
+          GUID = "8034E244",
+          NextDialogue = 51213083,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700454:Think_End"
+          }
+        },
+        [51213083] = {
+          Content = "会长相信你，我就也相信你。至于你刚刚问的活动，举办得很顺利，那些问答要传播的信息也都散出去了。",
+          ContentKR = "회장님이 믿는 분이라면, 저도 믿겠습니다. 조금 전에 물어보신 행사들은 모두 차질 없이 진행되고 있습니다. 퀴즈를 통해 사람들에게 알리려던 정보도 제법 퍼진 상태고요.",
+          DialogueId = 51213083,
+          GUID = "8034E26E",
+          NextDialogue = 51213084,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk03_Start"
+          }
+        },
+        [51213084] = {
+          Content = "不出所料，吸引来了很多爱看热闹的人，这些人是最能传播消息的，一切都在会长的预料当中。",
+          ContentKR = "회장님 예상대로, 구경이라면 사족을 못 쓰는 사람들이 잔뜩 모이니까, 소문이 순식간에 번져 나가더군요.",
+          DialogueId = 51213084,
+          GUID = "8034E298",
+          NextDialogue = 51213085,
+          SpeakNpcId = 700454
+        },
+        [51213085] = {
+          Content = "相信很快百花车站就会流传起“艾森巴恩站长大人不辞辛劳，深夜接待外国商人”的消息吧……还要多谢你的那张照片，在很多方面都派上用场了。",
+          ContentKR = "조만간 블룸필드역에는 \"아이젠반 역장님께서 밤늦게 열심히 외국 상인을 맞이하셨다\"는 소문이 자자해지겠죠... 우리 회원님께서 촬영해 주신 사진이 정말 큰 도움이 됐습니다.",
+          DialogueId = 51213085,
+          GUID = "8034E2C2",
+          NextDialogue = 51213086,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk03_End"
+          }
+        },
+        [51213086] = {
+          Content = "你连这个都知道了，消息挺灵通嘛。",
+          ContentKR = "그 사진 얘기까지 알고 계셨어요? 생각보다 아시는 게 많네요.",
+          DialogueId = 51213086,
+          GUID = "8034E2EC",
+          NextDialogue = 51213087,
+          SpeakNpcId = 100001
+        },
+        [51213087] = {
+          Content = "当然了。虽然我不认识你的脸，但你说你是最近得到会长重视的新人，那我就明白了。",
+          ContentKR = "그럼요. 직접 뵙는 건 오늘이 처음이지만, 방금 해 주신 이야기를 듣고, 요즘 회장님이 눈여겨보시는 분이라는 바로 알아차렸습니다.",
+          DialogueId = 51213087,
+          GUID = "8034E316",
+          NextDialogue = 51213088,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk02_Start"
+          }
+        },
+        [51213088] = {
+          Content = "你那张照片拍得太好了！再接再厉，有空多拍点啊。",
+          ContentKR = "정말 훌륭한 사진이었습니다! 앞으로 시간 나실 때, 회원님의 멋진 솜씨를 더 많이 볼 수 있으면 좋겠군요.",
+          DialogueId = 51213088,
+          GUID = "8034E340",
+          NextDialogue = 51213089,
+          SpeakNpcId = 700454,
+          TalkActionId = {
+            [1] = "700454:Talk02_End"
+          }
+        },
+        [51213089] = {
+          Content = "那个，罐、罐头……",
+          ContentKR = "저기, 토, 통조림은 안 줘...?",
+          DialogueId = 51213089,
+          GUID = "8034E36A",
+          NextDialogue = 51213090,
+          SpeakNpcId = 100402
+        },
+        [51213090] = {
+          Content = "你们也想要这个啊。好好，那这一箱你拿去，记得替我和会长美言几句，就说我工作态度认真，事成之后，要多取一分！",
+          ContentKR = "여러분도 통조림이 필요하십니까? 자, 그러면 이 한 상자를 전부 드리죠. 대신 회장님께 제 얘기를 잘 좀 부탁드립니다. 성실히 일하고 있으니, 일이 마무리되면 잘 좀 챙겨 주시면 좋겠다고요!",
+          DialogueId = 51213090,
+          DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_PetFood03.T_Resource_PetFood03'}",
+          GUID = "8034E394",
+          SpeakNpcId = 700454
+        },
+        [51213092] = {
+          Content = "这人怎么给你塞了这么多，整整一箱诶！",
+          ContentKR = "저 사람 왜 저렇게 많이 준 거야? 상자째로 줬잖아!",
+          DialogueId = 51213092,
+          GUID = "8034E3E8",
+          LookAt = {
+            [1] = "700450:n(0)",
+            [2] = "700457:n(0)",
+            [3] = "0:n(700457)"
+          },
+          NextDialogue = 51213093,
+          SpeakNpcId = 700457,
+          TurnTo = {
+            [1] = "700450:n(0)",
+            [2] = "700457:n(0)",
+            [3] = "0:n(700457)"
+          }
+        },
+        [51213093] = {
+          Content = "这就是背靠大树好乘凉？这就是所谓的关系户？人脉的力量！什么都没做，就小仆从和他说了几句话，他就乖乖交出罐头了。哇——小仆从，你可真威风！",
+          ContentKR = "든든한 뒷배란 게 이런 거였어? 이게 말로만 듣던 연줄이랑 인맥의 힘인가?! 그냥 시종이 툭툭 몇 마디 던지니까, 아저씨가 군소리 없이 통조림을 잔뜩 주잖아! 와, 시종! 너 진짜 엄청나다!",
+          DialogueId = 51213093,
+          GUID = "8034E412",
+          LookAt = {
+            [1] = "700450:n(700450)",
+            [2] = "700457:n(700450)",
+            [3] = "0:n(700450)"
+          },
+          NextDialogue = 51213094,
+          SpeakNpcId = 700450,
+          TalkActionId = {
+            [1] = "700450:Think_Start"
+          }
+        },
+        [51213094] = {
+          Content = "回去我要让卡米拉把所有做法都试一遍！我要美美享用！",
+          ContentKR = "돌아가면 카밀라한테 이것저것 다 만들어 달라고 할 거야! 신나게 먹어야지!",
+          DialogueId = 51213094,
+          GUID = "8034E43C",
+          NextDialogue = 51213095,
+          SpeakNpcId = 700450,
+          TalkActionId = {
+            [1] = "700450:Think_End"
+          }
+        },
+        [51213095] = {
+          Content = "你肯定吃两口又腻了，嚷嚷着说要吃别的。",
+          ContentKR = "어차피 두 입 먹으면 질렸다고 딴 거 달라고 할 거면서.",
+          DialogueId = 51213095,
+          GUID = "8034E466",
+          LookAt = {
+            [1] = "700450:n(700457)",
+            [2] = "0:n(700457)"
+          },
+          NextDialogue = 51213096,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Talk01_Start"
+          }
+        },
+        [51213096] = {
+          Content = "白在这里插科打诨，我差点都忘了，是不是还有另一个活动来着？什么戏剧彩排……",
+          ContentKR = "스노우가 딴소리하는 바람에 깜빡할 뻔했는데, 다른 행사 하나 더 있었지? 연극 리허설이었나...?",
+          DialogueId = 51213096,
+          GUID = "8034E490",
+          NextDialogue = 51213097,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Talk01_End"
+          }
+        },
+        [51213097] = {
+          Content = "说是在天桥附近。",
+          ContentKR = "육교 근처라고 했어.",
+          DialogueId = 51213097,
+          GUID = "8034E4BA",
+          LookAt = {
+            [1] = "700450:n(0)",
+            [2] = "700457:n(0)",
+            [3] = "0:n(700457)"
+          },
+          NextDialogue = 51213098,
+          SpeakNpcId = 100001
+        },
+        [51213098] = {
+          Content = "那我们快去找找吧，去晚了的话，他们彩排结束了，就来不及了。",
+          ContentKR = "그럼 더 늦기 전에 얼른 찾아보자! 타이밍 놓쳐서 리허설이 끝나 버리면, 허탕 칠 수도 있어.",
+          DialogueId = 51213098,
+          GUID = "8034E4E4",
+          NextDialogue = 51213099,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Talk02_Start"
+          }
+        },
+        [51213099] = {
+          Content = "刚刚你跟那个办事人说话，我也听见了，我觉得最好趁早去，打他们一个措手不及，以免他们把破绽遮掩掉。",
+          ContentKR = "아까 네가 행사 담당자랑 얘기하는 거 들었는데, 우리가 한발 먼저 가서 현장을 확인하는 게 좋겠어. 저쪽이 빈틈을 미리 숨기려 들기 전에.",
+          DialogueId = 51213099,
+          GUID = "8034E50E",
+          NextDialogue = 51213100,
+          SpeakNpcId = 700457
+        },
+        [51213100] = {
+          Content = "听听看附近的声音吧？如果是在排练的话，声音一定不会小的。有音乐声的封闭空间……大概就是那里了。",
+          ContentKR = "일단 주변에 어디 소리 나는 데 없나 살펴볼까? 리허설이 한창이라면 분명히 소리가 날 거야. 소리가 흘러나오는 밀폐된 공간이라면... 아마 저기겠네.",
+          DialogueId = 51213100,
+          GUID = "8034E538",
+          NextDialogue = 51213101,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Talk02_End"
+          }
+        },
+        [51213101] = {
+          Content = "不过这些房间隔音还挺好的，站在外面听不太清楚具体的声音，千万别找错了啊。",
+          ContentKR = "그런데 여기 있는 방들은 방음이 잘돼서, 문밖에선 정확히 무슨 소리인지 구별이 잘 안 가니까, 헛다리 안 짚게 진짜 조심해야 해.",
+          DialogueId = 51213101,
+          GUID = "8034E562",
+          SpeakNpcId = 700457
+        },
+        [51213103] = {
+          Content = "哇，前面有声音呢！我们快进去看看吧——",
+          ContentKR = "와, 저 앞에서 소리 들려! 빨리 저 안에 들어가 보자!",
+          DialogueId = 51213103,
+          GUID = "8034E5B6",
+          NextDialogue = 51213104,
+          SpeakNpcId = 700450
+        },
+        [51213104] = {
+          Content = "等等，白，这明显不是——",
+          ContentKR = "잠깐만, 스노우, 여긴 아무리 봐도...",
+          DialogueId = 51213104,
+          GUID = "8034E5E0",
+          SpeakNpcId = 700457
+        },
+        [51213106] = {
+          Content = "我就是喜欢平民的食物怎么了，你觉得我吃得不干净，你就不要亲我啊！",
+          ContentKR = "서민 음식 좋아하는 게 무슨 죄예요? 이런 걸 먹는다고 불결하다고 할 거면, 그냥 저랑 키스를 안 하면 되잖아요!",
+          DialogueId = 51213106,
+          GUID = "8034E634",
+          NextDialogue = 51213107,
+          SpeakNpcId = 700455
+        },
+        [51213107] = {
+          Content = "我又不是不让你吃，但是你吃之后能不能刷个牙？我真的很——",
+          ContentKR = "먹지 말라는 게 아니라, 먹고 나면 양치라도 해 달라는 거예요. 전 진심으로...",
+          DialogueId = 51213107,
+          GUID = "8034E65E",
+          NextDialogue = 51213108,
+          SpeakNpcId = 700456
+        },
+        [51213108] = {
+          Content = "……你们是谁？",
+          ContentKR = "...누구시죠?",
+          DialogueId = 51213108,
+          GUID = "8034E688",
+          NextDialogue = 51213109,
+          SpeakNpcId = 700455
+        },
+        [51213109] = {
+          Content = "不好意思，打扰了。",
+          ContentKR = "실례했습니다.",
+          DialogueId = 51213109,
+          GUID = "8034E6B2",
+          NextDialogue = 51213110,
+          SpeakNpcId = 700457
+        },
+        [51213110] = {
+          Content = "（奥特赛德捂住白的嘴巴，拖着她远离了吵架的男女。）",
+          ContentKR = "(아웃사이더가 스노우의 입을 막고 싸우는 남녀에게서 멀리 떨어진 곳으로 끌고 간다.)",
+          DialogueId = 51213110,
+          GUID = "8034E6DC",
+          NextDialogue = 51213111
+        },
+        [51213111] = {
+          Content = "这么小的事情居然还要吵架……不过吃完东西是该刷牙哦？要是奥特赛德以后想追求女孩子的话……",
+          ContentKR = "저런 걸로도 싸우는구나... 그래도 먹고 나면 양치질은 해야 하는 거 아닌가? 나중에 아웃사이더도 좋아하는 사람 앞에선 꼭...",
+          DialogueId = 51213111,
+          GUID = "8034E706",
+          NextDialogue = 51213112,
+          SpeakNpcId = 700450
+        },
+        [51213112] = {
+          Content = "停停停！不要提八字没一撇的事。",
+          ContentKR = "아, 그만해! 아직 일어나지도 않은 일 가지고.",
+          DialogueId = 51213112,
+          GUID = "8034E730",
+          NextDialogue = 51213113,
+          SpeakNpcId = 700457
+        },
+        [51213113] = {
+          Content = "我们继续找吧，至少排除了一个错误答案。肯定不是这里了。",
+          ContentKR = "계속 찾아보자. 그래도 이 방이 아니란 건 확실히 알았으니까, 나름 이득이야.",
+          DialogueId = 51213113,
+          GUID = "8034E75A",
+          SpeakNpcId = 700457
+        },
+        [51213115] = {
+          Content = "有人在吗？我们想请问一下，这附近有没有在彩排的剧团……",
+          ContentKR = "계세요? 실례지만, 혹시 이 근처에 리허설 중인 극단이...",
+          DialogueId = 51213115,
+          GUID = "8034E7AE",
+          NextDialogue = 51213117,
+          SpeakNpcId = 700457
+        },
+        [51213117] = {
+          Content = "奇怪，这附近明明有音乐声，难道是我喊话的声音太小了，所以没听见？",
+          ContentKR = "이상하네. 이 근처에서 분명히 음악 소리가 들리는데? 설마 내 목소리가 너무 작아서 안 들리는 건가?",
+          DialogueId = 51213117,
+          GUID = "8034E802",
+          NextDialogue = 51213118,
+          SpeakNpcId = 700457
+        },
+        [51213118] = {
+          Content = "那我们过去看看！",
+          ContentKR = "직접 가서 확인해 보면 되지!",
+          DialogueId = 51213118,
+          GUID = "8034E82C",
+          SpeakNpcId = 700450
+        },
+        [51213119] = {
+          Content = "你好~白来喽，奥特赛德和{nickname}也来喽~",
+          ContentKR = "안녕~ 난 스노우야~ 아웃사이더랑 {nickname}도 같이 왔어~",
+          DialogueId = 51213119,
+          GUID = "8034E856",
+          NextDialogue = 51213121,
+          SpeakNpcId = 700450
+        },
+        [51213121] = {
+          Content = "音乐声居然是从这来的，看来不是这里了。走吧——还有，白，不要乱碰东西。",
+          ContentKR = "노래가 여기서 흘러나오는 거였구나. 리허설 장소는 아니었나 보네. 가자. 그런데 스노우... 아무거나 함부로 만지지 마.",
+          DialogueId = 51213121,
+          GUID = "8034E8AA",
+          NextDialogue = 51213122,
+          SpeakNpcId = 700457
+        },
+        [51213122] = {
+          Content = "可是它都放在地上了，应该就是没人要了吧？卡米拉之前还说，想换个新的收音机，把这个带回去，卡米拉一定会很开心……会夸奖我！",
+          ContentKR = "하지만 그냥 바닥에 놓여 있는 걸 보면, 그냥 주인 없는 거 아니야? 전에 카밀라가 라디오를 새로 바꾸고 싶다고 했으니까, 이걸 가져가면 진짜 좋아할 거야... 엄청 칭찬해 줄걸!",
+          DialogueId = 51213122,
+          GUID = "8034E8D4",
+          NextDialogue = 51213123,
+          SpeakNpcId = 700450
+        },
+        [51213123] = {
+          Content = "水仙平原不至于连收音机都换不起，她只是节约惯了吧。送礼物不能送别人不要的东西哦，白。",
+          ContentKR = "카밀라는 그냥 절약이 몸에 밴 거지, 아스포델이 라디오 하나 못 바꿀 정도는 아니야. 그리고 선물로는 남 쓰던 거 주는 거 아니고.",
+          DialogueId = 51213123,
+          GUID = "8034E8FE",
+          NextDialogue = 51213124,
+          SpeakNpcId = 700457
+        },
+        [51213124] = {
+          Content = "而且很难说，这是不是陷阱……告示牌后面有个收音机，本来就够突兀的了。",
+          ContentKR = "바닥에 라디오가 놓여 있는 것부터가 이상하잖아. 함정일 수도 있어.",
+          DialogueId = 51213124,
+          GUID = "8034E928",
+          NextDialogue = 51213125,
+          SpeakNpcId = 700457
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51213125,
+    MaxKey = 51214094,
+    Loader = function()
+      return {
+        [51213125] = {
+          Content = "好吧……这个东西好精致好漂亮，白之后能不能也买一个？",
+          ContentKR = "알았어... 그래도 이거 엄청 고급스럽고 예쁜데, 나중에 스노우도 하나 사 주면 안 돼?",
+          DialogueId = 51213125,
+          GUID = "8034E952",
+          NextDialogue = 51213126,
+          SpeakNpcId = 700450
+        },
+        [51213126] = {
+          Content = "那你要问{nickname}喽，这我做不了主。{nickname}，你要给白买吗？",
+          ContentKR = "그건 내가 결정할 일이 아니니까, {nickname}한테 물어봐. {nickname}, 사 줄 거야?",
+          DialogueId = 51213126,
+          GUID = "8034E97C",
+          NextOptions = {
+            [1] = 51213127,
+            [2] = 51213129
+          },
+          SpeakNpcId = 700457
+        },
+        [51213127] = {
+          Content = "既然白喜欢，之后就买一台。",
+          ContentKR = "스노우가 좋아한다니까, 그럼 나중에 한 대 사 주지 뭐.",
+          DialogueId = 51213127,
+          GUID = "8034E9A6",
+          NextDialogue = 51213128
+        },
+        [51213128] = {
+          Content = "小仆从……我就知道你对我最好了。",
+          ContentKR = "시종... 역시 나한텐 시종 네가 최고야!",
+          DialogueId = 51213128,
+          GUID = "8034E9D0",
+          NextDialogue = 51213133,
+          SpeakNpcId = 700450
+        },
+        [51213129] = {
+          Content = "为什么不是白给我买？",
+          ContentKR = "스노우가 나한테 사 주는 건 안 돼?",
+          DialogueId = 51213129,
+          GUID = "8034E9FA",
+          NextDialogue = 51213130
+        },
+        [51213130] = {
+          Content = "可是、可是……白没有钱呀？白知道，小仆从身上还带着那些支票呢！那么多钱，肯定没有花完。",
+          ContentKR = "그, 그렇지만... 스노우는 돈 없는데? 나, 시종이 아직 그 수표 가지고 다니는 거 알아! 그 많은 돈을 벌써 다 썼을 리 없잖아.",
+          DialogueId = 51213130,
+          GUID = "8034EA24",
+          NextDialogue = 51213131,
+          SpeakNpcId = 700450
+        },
+        [51213131] = {
+          Content = "可是你是我的上司，我是你的下属。我是你的小仆从，哪有魔王管仆从要东西的，不应该是你赏赐我吗？",
+          ContentKR = "하지만 네가 대장이고 난 부하잖아. 시종한테 뭐 사달라고 하는 마왕이 어디 있어. 오히려 마왕님이 나한테 사 줘야 하는 거 아니야?",
+          DialogueId = 51213131,
+          GUID = "8034EA4E",
+          NextDialogue = 51213132,
+          SpeakNpcId = 100001
+        },
+        [51213132] = {
+          Content = "呜……好像有道理哦。那白会努力赚钱、攒钱，养活小仆从的！",
+          ContentKR = "우으... 맞는 말 같기도 하네. 그럼 스노우가 열심히 돈 벌고 잔뜩 모아서, 시종 널 먹여 살릴게!",
+          DialogueId = 51213132,
+          GUID = "8034EA78",
+          NextDialogue = 51213133,
+          SpeakNpcId = 700450
+        },
+        [51213133] = {
+          Content = "也不是这一间……接着找找看吧。",
+          ContentKR = "여기도 아니네... 계속 찾아보자.",
+          DialogueId = 51213133,
+          GUID = "8034EAA2",
+          SpeakNpcId = 100001
+        },
+        [51213135] = {
+          Content = "听声音应该没错了，{nickname}，你打头阵，先过去看看吧。我和白作为你的小仆从，会是你忠实的后盾的。",
+          ContentKR = "소리 들어보니까 이번엔 제대로 찾았나 봐. {nickname}, 네가 먼저 가서 봐봐. 나랑 스노우는 네 시종답게 든든히 뒤에서 지켜 줄게.",
+          DialogueId = 51213135,
+          GUID = "8034EAF6",
+          NextDialogue = 51213136,
+          SpeakNpcId = 700457
+        },
+        [51213136] = {
+          Content = "没错！小仆从，你第一次有小仆从是不是很紧张？需不需要白传授你一些经验？",
+          ContentKR = "맞아, 시종! 시종이 시종을 거느리는 건 처음이라 엄청 긴장되지? 스노우가 노하우 좀 전수해 줄까?",
+          DialogueId = 51213136,
+          GUID = "8034EB20",
+          NextDialogue = 51213137,
+          SpeakNpcId = 700450
+        },
+        [51213137] = {
+          Content = "首先要抬起头，昂首挺胸，自信地用下巴看人——",
+          ContentKR = "일단 고개를 꼿꼿이 들고 가슴을 쫙 펴. 그다음엔 자신감 있게 턱을 딱 들고 시선을 쓱...",
+          DialogueId = 51213137,
+          GUID = "8034EB4A",
+          NextDialogue = 51213138,
+          SpeakNpcId = 700450
+        },
+        [51213138] = {
+          Content = "原来你平常都是这么想的？抱歉抱歉，我们实在是太高了，根本看不到你的下巴，平常只能看见你的犄角。",
+          ContentKR = "너 평소에 계속 그러고 있었던 거야? 이야, 미안, 미안. 우리 각도에선 네 뿔이면 모를까, 턱은 아예 보이지도 않았거든.",
+          DialogueId = 51213138,
+          GUID = "8034EB74",
+          NextDialogue = 51213139,
+          SpeakNpcId = 700457
+        },
+        [51213139] = {
+          Content = "……真无礼！{nickname}有正事要做，奥特赛德，今天白不和你计较！",
+          ContentKR = "...너무 무례하잖아, 아웃사이더! 지금 {nickname}한테 엄청 중요한 일이 있으니까, 딱 오늘만 봐줄 줄 알아!",
+          DialogueId = 51213139,
+          GUID = "8034EB9E",
+          NextDialogue = 51213140,
+          SpeakNpcId = 700450
+        },
+        [51213140] = {
+          Content = "难得白都正经起来了……快去吧，{nickname}，做戏做全套，待会儿可别说漏嘴了。",
+          ContentKR = "스노우가 웬일로 진지하네... 얼른 가 봐, {nickname}. 이따 말실수하지 말고, 연기할 거면 제대로 해.",
+          DialogueId = 51213140,
+          GUID = "8034EBC8",
+          NextDialogue = 51213142,
+          SpeakNpcId = 700457
+        },
+        [51213142] = {
+          Content = "看那，一位敌人，闯入了狂热的风暴之中。凯歌，从那更遥远的地方吹响了，嘹亮的汽笛声，正在呼唤着——",
+          ContentKR = "보아라! 적 하나가 뜨거운 폭풍 속으로 뛰어들었으니! 아득한 저 너머에서 승리의 찬가가 울려 퍼지고! 드높은 기적 소리가...",
+          DialogueId = 51213142,
+          GUID = "8034EC1C",
+          NextDialogue = 51213143,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213143] = {
+          Content = "雷鸣般的演奏！",
+          ContentKR = "마치 천둥처럼 울려 퍼지며 우리를 부르노라!",
+          DialogueId = 51213143,
+          GUID = "8034EC46",
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213145] = {
+          Content = "咦，你的身手不错嘛，但就算是这样，我也不能让你过去哦。",
+          ContentKR = "어머, 움직임이 제법 날렵하군요? 그래도 들여보내 드릴 순 없어요.",
+          DialogueId = 51213145,
+          GUID = "8034EC9A",
+          NextDialogue = 51213146,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213146] = {
+          Content = "真不知道你们这些粉丝是哪来的消息……喏，给你的特别签名，拿了快走吧，剧团今天真的不能开放参观，有很重要的事情。",
+          ContentKR = "팬분들은 정말 이런 정보를 대체 어디서 듣고 오시는 건지... 자, 특별히 사인해 드릴 테니, 이것만 받고 얼른 돌아가세요. 오늘은 극단에 중요한 일이 있어서 구경은 정말 안 돼요.",
+          DialogueId = 51213146,
+          GUID = "8034ECC4",
+          NextDialogue = 51213147,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213147] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51213147,
+          GUID = "8034ECEE",
+          NextOptions = {
+            [1] = 51213148,
+            [2] = 51213153,
+            [3] = 51213159
+          },
+          SpeakNpcId = 100001
+        },
+        [51213148] = {
+          Content = "写自己的签名递过去。",
+          ContentKR = "내 사인을 해서 건넨다.",
+          DialogueId = 51213148,
+          GUID = "8034ED18",
+          ImprPlusId = 1005,
+          NextDialogue = 51213149
+        },
+        [51213149] = {
+          Content = "……给我这个干嘛？你又不是什么名人……等等，{nickname}，你、你不是那个很有名的狩月人吗？",
+          ContentKR = "...왜 저한테 이런 걸 주시는 거예요? 무슨 유명인이라도 되... 잠깐, {nickname}? 서, 설마 그 유명한 월석 사냥꾼이신가요?",
+          DialogueId = 51213149,
+          GUID = "8034ED42",
+          NextDialogue = 51213150,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213150] = {
+          Content = "“不想有一日，那在我心上的明星竟坠落在我的窗边！”——天哪，天哪，我还没有准备好，我的衣裙是不是已经凌乱了？真是叫您见笑。",
+          ContentKR = "\"내 마음속 창가에도 별이 내려앉을 줄이야!\"... 세상에, 이럴 수가, 아직 마음의 준비를 못 했는데? 저 지금 치마 엉망이죠? 맙소사, 이런 모습 보여 드려서 죄송해요.",
+          DialogueId = 51213150,
+          GUID = "8034ED6C",
+          NextDialogue = 51213151,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213151] = {
+          Content = "我一直也很想成为狩月人！只是可惜我没有战斗天赋，连只罗特鸟都打不过……您的签名我一定会好好收藏的。",
+          ContentKR = "저도 늘 월석 사냥꾼이 되고 싶었어요! 그렇지만 싸우는 데 영 재능이 없어서. 로트버드 한 마리한테도 쩔쩔매지만... 이 사인은 소중히 간직할게요.",
+          DialogueId = 51213151,
+          GUID = "8034ED96",
+          NextDialogue = 51213152,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213152] = {
+          Content = "真是巧！没想到您也会来参观彩排。",
+          ContentKR = "이런 우연이 다 있네요! 월석 사냥꾼님이 리허설을 보러 와 주실 줄은 몰랐어요.",
+          DialogueId = 51213152,
+          GUID = "8034EDC0",
+          NextDialogue = 51213161,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213153] = {
+          Content = "递纸笔，不要白不要。",
+          ContentKR = "어차피 공짜니까 종이와 펜을 내민다.",
+          DialogueId = 51213153,
+          GUID = "8034EDEA",
+          ImprPlusId = 1001,
+          NextDialogue = 51213154
+        },
+        [51213154] = {
+          Content = "写好了，给你。别再找过来了！",
+          ContentKR = "자, 사인해 드렸으니까 다시는 찾아오지 마세요!",
+          DialogueId = 51213154,
+          GUID = "8034EE14",
+          NextDialogue = 51213155,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213155] = {
+          Content = "谢谢……不过，你这写的是什么字？",
+          ContentKR = "고마워... 그런데 이거 뭐라고 쓰신 거예요?",
+          DialogueId = 51213155,
+          GUID = "8034EE3E",
+          NextDialogue = 51213156,
+          SpeakNpcId = 100001
+        },
+        [51213156] = {
+          Content = "阿尔西娅！阿尔西娅·霍尔，你都不认识我，为什么还要来这里围堵我？……等等，难道你不是来找我的？",
+          ContentKR = "알시아! 알시아 홀이잖아요. 제가 누군지도 모르면서... 이쪽엔 왜 오신 거예요? ...잠깐, 설마 절 보러 온 게 아니에요?",
+          DialogueId = 51213156,
+          GUID = "8034EE68",
+          NextDialogue = 51213157,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213157] = {
+          Content = "我是来完成工作的。",
+          ContentKR = "전 일 때문에 온 거예요.",
+          DialogueId = 51213157,
+          GUID = "8034EE92",
+          NextDialogue = 51213158,
+          SpeakNpcId = 100001
+        },
+        [51213158] = {
+          Content = "天哪……真抱歉，方才对您出言不逊了。最近总有人来这里找我，都打扰到大家排练了，我还以为您也是为此而来的呢。",
+          ContentKR = "이런... 방금은 실례가 많았네요. 정말 죄송합니다. 요즘 사람들이 자꾸 여기까지 절 찾아와 리허설을 방해해서, 그쪽도 비슷한 부류인 줄 알았어요.",
+          DialogueId = 51213158,
+          GUID = "8034EEBC",
+          NextDialogue = 51213161,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213159] = {
+          Content = "婉拒签名，说明来意。",
+          ContentKR = "사인은 정중히 거절하고, 온 목적을 밝힌다.",
+          DialogueId = 51213159,
+          GUID = "8034EEE6",
+          ImprPlusId = 1002,
+          NextDialogue = 51213160
+        },
+        [51213160] = {
+          Content = "哈……原来不是我的追随者啊。抱歉，最近总有人来这里找我，都打扰到大家排练了，我还以为您也是为此而来的呢。",
+          ContentKR = "아... 제 팬이 아니었군요. 죄송해요. 요즘 제 팬들이 리허설 현장까지 찾아와 방해하는 일이 많거든요. 당신도 그런 줄 알았어요.",
+          DialogueId = 51213160,
+          GUID = "8034EF10",
+          NextDialogue = 51213161,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213161] = {
+          Content = "您好，我是阿尔西娅·霍尔，“魔笛”剧团的演员，目前被汽笛沙龙的人请来做戏剧顾问。",
+          ContentKR = "안녕하세요. 저는 '마법 피리' 극단의 배우 알시아 홀이에요. 지금은 기적 소리 살롱의 요청을 받아 연극의 자문 역할을 맡고 있어요.",
+          DialogueId = 51213161,
+          GUID = "8034EF3A",
+          NextDialogue = 51213162,
+          SpeakNpcId = 700458,
+          SpeakNpcName = "UI_Npc_Name_250037"
+        },
+        [51213162] = {
+          Content = "请问您有什么事？嗯……如果您是来找人的，可以在附近稍等一下，今天的排练快结束了。",
+          ContentKR = "무슨 일로 오셨나요? 음... 누군가를 찾으러 오신 거라면, 오늘 리허설은 거의 끝나 가니까, 근처에서 잠깐 기다려 주세요.",
+          DialogueId = 51213162,
+          GUID = "8034EF64",
+          NextDialogue = 51213163,
+          SpeakNpcId = 700458
+        },
+        [51213163] = {
+          Content = "我能过去看看吗？",
+          ContentKR = "저쪽으로 가서 좀 봐도 될까요?",
+          DialogueId = 51213163,
+          GUID = "8034EF8E",
+          NextDialogue = 51213164,
+          SpeakNpcId = 100001
+        },
+        [51213164] = {
+          Content = "不行，那个汽笛沙龙的会长吩咐过，在正式演出之前，要做好保密工作。我得遵守，否则万一拿不到工钱，不划算。",
+          ContentKR = "안 돼요. 기적 소리 살롱 회장님이 정식 공연 전까진 내용이 유출되면 안 된다고 하셨거든요. 괜히 어겼다가 돈을 못 받으면 손해니까, 저도 지시는 따라야죠.",
+          DialogueId = 51213164,
+          GUID = "8034EFB8",
+          NextDialogue = 51213165,
+          SpeakNpcId = 700458
+        },
+        [51213165] = {
+          Content = "我也是汽笛沙龙的人，会长抽不开身，我替他看一下排练进度。",
+          ContentKR = "저도 기적 소리 살롱 소속이에요. 회장님이 직접 오시기 어려워서, 제가 대신 리허설이 어디까지 진행됐는지 보러 왔어요.",
+          DialogueId = 51213165,
+          GUID = "8034EFE2",
+          NextDialogue = 51213166,
+          SpeakNpcId = 100001
+        },
+        [51213166] = {
+          Content = "就算你这么说……抱歉，我还是不能让你进去。之前来验收的不是你，我没法确认你的身份。",
+          ContentKR = "그렇게 말씀하셔도... 죄송하지만 들여보내 드리기 어려울 것 같네요. 전에 확인하러 오셨던 분과는 다른 분이라, 제가 신분을 확인할 방법이 없거든요.",
+          DialogueId = 51213166,
+          GUID = "8034F00C",
+          NextOptions = {
+            [1] = 51213167
+          },
+          SpeakNpcId = 700458
+        },
+        [51213167] = {
+          Content = "出示西顿的信物",
+          ContentKR = "시돈이 준 증표를 보여준다.",
+          DialogueId = 51213167,
+          GUID = "8034F036",
+          NextDialogue = 51213168
+        },
+        [51213168] = {
+          Content = "原来就是您！没想到负责人这么年轻啊。那么，请随我过去吧。",
+          ContentKR = "아, 바로 그분이셨군요! 담당자가 이렇게 젊은 분일 줄은 몰랐네요. 그럼 이쪽으로 따라오세요.",
+          DialogueId = 51213168,
+          GUID = "8034F060",
+          SpeakNpcId = 700458
+        },
+        [51213170] = {
+          Content = "阿尔西娅小姐自己都说没问题，我真不懂你在阻拦什么，你能不能别在这时候犯浑？平常怎么不见你做护花使者！",
+          ContentKR = "알시아 씨 본인이 괜찮다는데, 네가 왜 막아서는 거야? 평소엔 신경도 안 쓰더니, 왜 하필 지금 와서 이러는 건데!",
+          DialogueId = 51213170,
+          GUID = "8034F0B4",
+          NextDialogue = 51213171,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213171] = {
+          Content = "我的确担心阿尔西娅小姐，但我更担心的是安全问题，剧里的道具，就一定要用真枪吗？",
+          ContentKR = "알시아 씨도 걱정되지만, 그보단 안전 문제가 더 걱정돼서 그래. 연극 소품에 꼭 진짜 총을 써야겠어?",
+          DialogueId = 51213171,
+          GUID = "8034F0DE",
+          NextDialogue = 51213172,
+          SpeakNpcId = 700461,
+          SpeakNpcName = "UI_Npc_Name_250040"
+        },
+        [51213172] = {
+          Content = "我给木匠多加点钱，让他们涂装得精致点……你别纠结道具的问题了，行吗？",
+          ContentKR = "내가 목수들에게 돈을 더 주고, 도색을 더 진짜같이 해 달라고 할게... 그러니까 제발 소품에 너무 매달리지 말자, 응?",
+          DialogueId = 51213172,
+          GUID = "8034F108",
+          NextDialogue = 51213173,
+          SpeakNpcId = 700461,
+          SpeakNpcName = "UI_Npc_Name_250040"
+        },
+        [51213173] = {
+          Content = "会长大人不是说了吗，越真实越好！枪械不是问题，只要钱到位了，肯定能搞来。你这时候发什么昏，去担心一个戏剧指导的问题！",
+          ContentKR = "회장님이 진짜 같을수록 좋다고 말씀하셨잖아! 총 구하는 게 뭐가 문제야? 돈만 제대로 주면 분명히 구할 수 있어. 지금 이 시점에 왜 연극 자문 선생 걱정을 대신 하고 있어?",
+          DialogueId = 51213173,
+          GUID = "8034F132",
+          NextDialogue = 51213174,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213174] = {
+          Content = "到时候台下的可不是空椅子，是真正的艾森巴恩站长！该不会你真的要听会长的命令去……要不还是算了吧，说不定我们都得交代在那儿！",
+          ContentKR = "공연 당일 이 무대 앞엔 빈 의자가 아니라 진짜 아이젠반 역장이 있을 거야! 너 정말 회장님 명령대로... 그냥 우리 그만두자. 잘못하면 우린 전부 죽은 목숨이라니까!",
+          DialogueId = 51213174,
+          GUID = "8034F15C",
+          NextDialogue = 51213175,
+          SpeakNpcId = 700461,
+          SpeakNpcName = "UI_Npc_Name_250040"
+        },
+        [51213175] = {
+          Content = "都到了这份上了，想退出？你以为能逃掉？别天真了，西顿会长虽然手段不如艾森巴恩，但是他肯定也盯着咱们呢。",
+          ContentKR = "여기까지 와서 빠지겠다고? 도망칠 수 있을 것 같아? 순진한 소리 하지 마. 아이젠반 역장만 한 수완은 아니라도, 시돈 회장님이 눈에 불을 켜고 우릴 지켜보고 계실 거라고.",
+          DialogueId = 51213175,
+          GUID = "8034F186",
+          NextDialogue = 51213176,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213176] = {
+          Content = "吵什么？今天你们俩怎么回事，都吵了一天了。还在吵那个道具要不要用真枪？别吵了，你们的西顿会长派人来检查你们的排练成果了。",
+          ContentKR = "또 뭘 그렇게 다투고 있어요? 오늘 둘 다 정말 이상하네요. 하루 종일 싸우더니, 아직도 소품에 진짜 총을 쓰느냐 마느냐로 그러는 거예요? 이제 그만해요. 시돈 회장님이 보낸 분이 리허설을 확인하러 오셨어요.",
+          DialogueId = 51213176,
+          GUID = "8034F1B0",
+          NextDialogue = 51213177,
+          SpeakNpcId = 700458
+        },
+        [51213177] = {
+          Content = "没有吵， 没有吵。我们只是在酝酿情绪，随时接受检查！",
+          ContentKR = "에이, 싸우긴요. 그냥 연기 중이었어요. 리허설 상황은 언제든지 확인하셔도 돼요!",
+          DialogueId = 51213177,
+          GUID = "8034F1DA",
+          NextDialogue = 51213178,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213178] = {
+          Content = "啊——艾森巴恩，那是我们的英雄！他与慷慨并肩而行，他与正义交相辉映！我知道你从未认可我的理念，可是——我早已读懂你了。",
+          ContentKR = "아! 아이젠반, 우리의 영웅이여! 관대함을 벗 삼고, 정의의 이름 아래 찬란히 빛나는 그 모습! 그대는 단 한 번도 나의 신념을 인정하지 않았지만... 나는 그대의 마음을 읽었다.",
+          DialogueId = 51213178,
+          GUID = "8034F204",
+          NextDialogue = 51213179,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213179] = {
+          Content = "风暴终究会过去，长夜也终将结束。列车也必定如同太阳放射出的金色丝线一般，连接起冰湖城与迪斯玛尼亚。",
+          ContentKR = "폭풍은 지나가고, 긴 밤도 끝날 것이다. 그리고 열차는 태양이 내뿜는 황금 빛줄기처럼, 찬란한 길이 되어 아이스레이크 시티와 디즈마니아를 이어 줄 것이다!",
+          DialogueId = 51213179,
+          GUID = "8034F22E",
+          NextDialogue = 51213180,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213180] = {
+          Content = "所以，我诅咒它，诅咒这迟滞一切的风暴，我将以我的全部恨意灌注至这三颗弹丸内，向着这怒吼的无形畜类开火。",
+          ContentKR = "그러니 나는 이 폭풍을, 모든 것을 늦추는 이 폭풍을 저주하노라. 나의 모든 증오는 이 세 발의 탄환에 담겨, 울부짖는 저 보이지 않는 짐승을 향하리라!",
+          DialogueId = 51213180,
+          GUID = "8034F258",
+          NextDialogue = 51213181,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213181] = {
+          Content = "并最终，成为驱散它的太阳——",
+          ContentKR = "그리고 마침내, 그 짐승을 몰아내는 태양이 되리라...",
+          DialogueId = 51213181,
+          GUID = "8034F282",
+          NextDialogue = 51213182,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039"
+        },
+        [51213182] = {
+          Content = "（……什么跟什么，他也入戏了？这地方的戏疯子也太多了吧……）",
+          ContentKR = "(...지금 무슨 소리야? 저 사람도 연기에 몰입한 건가? 여긴 연극에 미친 사람이 너무 많잖아...)",
+          DialogueId = 51213182,
+          GUID = "8034F2AC",
+          SpeakNpcId = 100001
+        },
+        [51213184] = {
+          Content = "哼，身手不错。我感觉你要比凯兰更适合当我的搭档，一起演这场戏。",
+          ContentKR = "흠, 솜씨 좋은데? 이 연극에서 내 상대역으로 호흡을 맞추는 건 케일란보다 그쪽이 더 낫겠어.",
+          DialogueId = 51213184,
+          GUID = "8034F300",
+          LookAt = {
+            [1] = "0:n(700462)",
+            [2] = "700458:n(0)",
+            [3] = "700461:n(0)",
+            [4] = "700462:n(0)"
+          },
+          NextDialogue = 51213185,
+          SpeakNpcId = 700462,
+          SpeakNpcName = "UI_Npc_Name_250039",
+          TurnTo = {
+            [1] = "0:n(700462)",
+            [2] = "700458:n(0)",
+            [3] = "700461:n(0)",
+            [4] = "700462:n(0)"
+          }
+        },
+        [51213185] = {
+          Content = "你又……不好意思，我们这些剧迷就是这样，上头了就随时随地和别人搭戏。他这次扮演的角色是百花车站的前站长，这是把你当成站长来演了。",
+          ContentKR = "너 또... 죄송합니다. 저희 같은 연극광들은 원래 한번 몰입하면 시도 때도 없이 아무나 붙잡고 대사를 맞춰 보려고 하거든요. 이번에 저 친구가 맡은 역할이 블룸필드역의 전임 역장이라, 당신을 역장님으로 보고 연기한 거예요.",
+          DialogueId = 51213185,
+          GUID = "8034F32A",
+          NextDialogue = 51213186,
+          SpeakNpcId = 700461,
+          SpeakNpcName = "UI_Npc_Name_250040",
+          TalkActionId = {
+            [1] = "700461:Talk01_Start"
+          }
+        },
+        [51213186] = {
+          Content = "阿尔西娅，介绍一下？你刚刚说这位是西顿会长派来检查我们进度的客人？",
+          ContentKR = "알시아, 소개 좀 해 줄래? 방금 이분, 시돈 회장님이 리허설 진행 상황을 확인하러 보내신 손님이라고 했지?",
+          DialogueId = 51213186,
+          GUID = "8034F354",
+          NextDialogue = 51213187,
+          SpeakNpcId = 700461,
+          SpeakNpcName = "UI_Npc_Name_250040"
+        },
+        [51213187] = {
+          Content = "来得真快。不好意思，让您见笑了。我是凯兰，这个脾气很大的是列维，您是沙龙的人，应该不用我们多做介绍了吧。",
+          ContentKR = "생각보다 빨리 오셨네요. 부끄러운 모습을 보여드려 죄송합니다. 저는 케일란이고, 이 성질머리 좀 있는 친구는 레비입니다. 살롱 분이시니까 저희 소개는 따로 안 해도 되죠?",
+          DialogueId = 51213187,
+          GUID = "8034F37E",
+          NextDialogue = 51213188,
+          SpeakNpcId = 700461,
+          TalkActionId = {
+            [1] = "700461:Talk01_End"
+          }
+        },
+        [51213188] = {
+          DialogueId = 51213188,
+          GUID = "8034F3A8",
+          NextDialogue = 51213189
+        },
+        [51213189] = {
+          Content = "沙龙的人？之前没见过你啊。",
+          ContentKR = "살롱 사람이었어요? 전 처음 보는 것 같은데요.",
+          DialogueId = 51213189,
+          GUID = "8034F3D2",
+          NextDialogue = 51213190,
+          SpeakNpcId = 700462,
+          TalkActionId = {
+            [1] = "700462:Talk02_Start"
+          }
+        },
+        [51213190] = {
+          Content = "我是最近才加入沙龙的，会长比较看重我，我才得了这样的差事。",
+          ContentKR = "최근에 살롱에 가입한 신입인데, 회장님이 저를 좋게 봐 주셔서 이 일을 맡게 됐어요.",
+          DialogueId = 51213190,
+          GUID = "8034F3FC",
+          NextDialogue = 51213191,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk03_Start"
+          }
+        },
+        [51213191] = {
+          Content = "怪不得……那你了解西顿会长的宏大计划吗？",
+          ContentKR = "어쩐지... 그럼 시돈 회장님의 원대한 계획도 알고 있나요?",
+          DialogueId = 51213191,
+          GUID = "8034F426",
+          NextDialogue = 51213192,
+          SpeakNpcId = 700462
+        },
+        [51213192] = {
+          Content = "说实话，头一次听说。但是西顿会长这么赏识我，想必很快就会告诉我什么宏大计划。",
+          ContentKR = "솔직히 말하면, 처음 듣는 얘기예요. 그래도 저를 인정해 주고 계시니까, 곧 그 계획도 알려 주시겠죠.",
+          DialogueId = 51213192,
+          GUID = "8034F450",
+          NextDialogue = 51213193,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Talk03_End"
+          }
+        },
+        [51213193] = {
+          Content = "想必也是……那么这件事请您来评判一下，该怎么做。",
+          ContentKR = "그렇겠네요... 그럼 이 일을 어떻게 하면 좋을지 그쪽이 판단해 주세요.",
+          DialogueId = 51213193,
+          GUID = "8034F47A",
+          NextOptions = {
+            [1] = 51213194
+          },
+          SpeakNpcId = 700462,
+          TalkActionId = {
+            [1] = "700462:Talk02_End"
+          }
+        },
+        [51213194] = {
+          Content = "是要评判刚刚你们的吵架内容吗？",
+          ContentKR = "방금 두 사람이 싸우던 문제 말인가요?",
+          DialogueId = 51213194,
+          GUID = "8034F4A4",
+          NextDialogue = 51213195
+        },
+        [51213195] = {
+          Content = "您……听到了啊，那我也就直说了：这场戏里有很多战斗的剧情，会长吩咐了，要真刀真枪，越逼真越好。",
+          ContentKR = "...다 들었군요. 그럼 숨길 것도 없겠죠. 이번 연극에는 전투 장면이 많아요. 회장님은 진짜 무기를 써서 최대한 실감 나게 하라고 지시하셨고요.",
+          DialogueId = 51213195,
+          GUID = "8034F4CE",
+          NextDialogue = 51213196,
+          SpeakNpcId = 700462,
+          TalkActionId = {
+            [1] = "700462:Explain01_Start"
+          }
+        },
+        [51213196] = {
+          Content = "确实真的枪械更出效果，木头做的跟真的肯定没法比，但是条件实在不允许。西顿会长让我们去找卫兵借枪，可是压根没人愿意。我看，要不算了吧。",
+          ContentKR = "진짜 총을 쓰면 더 실감 나는 건 맞아요. 나무 소품으로는 그런 느낌을 낼 수 없으니까요. 문제는 구할 방법이 없다는 겁니다. 시돈 회장님은 경비병들에게 총을 빌려 보라고 하셨지만, 빌려주겠다는 사람이 없었어요. 제 생각엔 그냥 포기하는 게 낫습니다.",
+          DialogueId = 51213196,
+          GUID = "8034F4F8",
+          NextDialogue = 51213197,
+          SpeakNpcId = 700461
+        },
+        [51213197] = {
+          Content = "……不行，我再去和西顿会长聊一聊，让他想想办法。反正我是不接受用假货充数的！会长也肯定不会！",
+          ContentKR = "...안 돼. 내가 다시 시돈 회장님께 말해서 방법을 알아볼 거야. 어쨌든 가짜로 때우는 건 절대 안 돼! 회장님도 분명히 안 된다고 하실 거야!",
+          DialogueId = 51213197,
+          GUID = "8034F522",
+          NextDialogue = 51213198,
+          SpeakNpcId = 700462,
+          TalkActionId = {
+            [1] = "700462:Explain01_End"
+          }
+        },
+        [51213198] = {
+          Content = "枪械的话……我觉得你们可以去一个地方，应该能够合情合理合法地拿到。",
+          ContentKR = "총기라면... 생각나는 곳이 하나 있긴 해요. 명분도 있고, 절차만 잘 밟으면 어렵지 않게 빌릴 수 있을 거예요.",
+          DialogueId = 51213198,
+          GUID = "8034F54C",
+          NextDialogue = 51213199,
+          SpeakNpcId = 100001
+        },
+        [51213199] = {
+          Content = "（向眼前热情与不热情的演员们讲述了车站储藏室中有许多违禁品的事。）",
+          ContentKR = "(눈앞의 의욕 넘치는 배우와 그다지 내켜 하지 않는 배우에게, 역 창고에 금지 물품이 많이 보관되어 있다고 알려준다.)",
+          DialogueId = 51213199,
+          GUID = "8034F576",
+          NextDialogue = 51213200
+        },
+        [51213200] = {
+          Content = "既然是为艾森巴恩站长大人献上的戏剧，应该可以让管理员通融一下，暂时借用里面的东西。",
+          ContentKR = "아이젠반 역장님께 바치는 연극이라면, 거기 관리자한테 잘 말하면, 안에 있는 물건을 잠깐 빌릴 수 있지 않을까요?",
+          DialogueId = 51213200,
+          GUID = "8034F5A0",
+          NextDialogue = 51213201,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Explain02_Start"
+          }
+        },
+        [51213201] = {
+          Content = "这……没准真的可行，那个仓库管理员施蒂尔我认识，给他几瓶酒，肯定愿意通融。",
+          ContentKR = "어... 진짜로 가능할 수도 있겠네요. 그 창고 관리자 스틸러란 사람은 제가 잘 아는데, 술 몇 병만 챙겨 가면 편의를 봐 줄 거예요.",
+          DialogueId = 51213201,
+          GUID = "8034F5CA",
+          NextDialogue = 51213202,
+          SpeakNpcId = 700461,
+          TalkActionId = {
+            [1] = "700461:Talk01_Start"
+          }
+        },
+        [51213202] = {
+          Content = "纠结这么多天的问题，您这么轻易就为我们解决了，真不知道怎么报答您才好。",
+          ContentKR = "며칠 내내 골머리 앓던 문제를 이렇게 쉽게 해결해 주시다니, 어떻게 보답해야 할지 모르겠네요.",
+          DialogueId = 51213202,
+          GUID = "8034F5F4",
+          NextDialogue = 51213203,
+          SpeakNpcId = 700461
+        },
+        [51213203] = {
+          Content = "您是要验收戏剧成果对吧？那么，请您站在这里，观看一下我们的节目吧。",
+          ContentKR = "저희 연극이 어느 정도 준비됐는지 확인하러 오신 거죠? 그럼 이쪽에서 저희가 준비한 걸 봐 주세요.",
+          DialogueId = 51213203,
+          GUID = "8034F61E",
+          NextDialogue = 51213204,
+          SpeakNpcId = 700461,
+          TalkActionId = {
+            [1] = "700461:Talk01_End"
+          }
+        },
+        [51213204] = {
+          Content = "好，那就拜托了。",
+          ContentKR = "좋아요. 그럼 부탁드릴게요.",
+          DialogueId = 51213204,
+          GUID = "8034F648",
+          NextDialogue = 51213205,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "0:Explain02_End"
+          }
+        },
+        [51213205] = {
+          Content = "观看了临时剧团的演出……一切顺利，看起来是“艾森巴恩在车站获得认可，成为站长”的故事。",
+          ContentKR = "임시 극단의 공연을 보니... 전반적으로 잘 진행되고 있는 듯하다. 내용은 아이젠반이 블룸필드역에서 인정받아 역장 자리에 오르는 이야기인 것 같다.",
+          DialogueId = 51213205,
+          GUID = "8034F672",
+          NextDialogue = 51213206
+        },
+        [51213206] = {
+          Content = "你们到底是被什么东西夺走了魂灵。不，哪怕是魂灵也不应该会有如此多的疑心——担心大雪吞没轨道，狂风掀翻车辆。",
+          ContentKR = "그대들은 대체 무엇에 영혼을 빼앗긴 것인가. 아니, 영혼이라 해도 이토록 의심이 많지는 않을 터, 어찌 큰 눈이 선로를 집어삼키고, 거센 바람이 차량을 뒤집을까 두려워하는가?",
+          DialogueId = 51213206,
+          GUID = "8034F69C",
+          NextDialogue = 51213207,
+          SpeakNpcId = 700462,
+          TalkActionId = {
+            [1] = "700462:Talk02_Start"
+          }
+        },
+        [51213207] = {
+          Content = "倘若这种事情都占据了你们的心头，让你们不敢当这个站长。那你们为何又能安心饮食，不担心自己被浓汤溺毙，被气味噎死。",
+          ContentKR = "고작 그런 걱정에 사로잡혀 역장의 자리를 두려워한다면, 먹고 마시는 일에는 어찌 의심도 걱정도 없는가? 걸쭉한 수프에 익사하거나, 냄새에 질식해 죽는 일은 왜 걱정하지 않는가?",
+          DialogueId = 51213207,
+          GUID = "8034F6C6",
+          NextDialogue = 51213208,
+          SpeakNpcId = 700462,
+          TalkActionId = {
+            [1] = "700462:Talk02_End"
+          }
+        },
+        [51213208] = {
+          Content = "话剧的氛围到达顶端，列维拔出了枪，将武器递向前方。将武器道具对准了台前——",
+          ContentKR = "연극의 분위기가 절정에 이르자, 레비가 총을 뽑아 앞으로 내민다. 소품용 무기의 총구가 무대 앞쪽을 향한다...",
+          DialogueId = 51213208,
+          GUID = "8034F6F0",
+          IsBlack = 1,
+          NextDialogue = 51213209
+        },
+        [51213209] = {
+          Content = "刀与枪距离你的鼻尖只有几厘米的距离，尽管是木头做的……你还是被惊出了一身冷汗。",
+          ContentKR = "칼과 총이 내 코앞까지 다가왔다. 나무로 만든 소품이라는 걸 아는데도, 절로 식은땀이 난다.",
+          DialogueId = 51213209,
+          GUID = "8034F71A",
+          IsBlack = 1,
+          NextDialogue = 51213210
+        },
+        [51213210] = {
+          Content = "（如果是道具是真刀真枪……只要有任何一个人轻轻扣动扳机，坐在这里的人就要没命了。）",
+          ContentKR = "(저 소품이 만약 진짜 무기라면... 누군가 방아쇠만 살짝 당겨도, 여기 앉은 사람들은 그대로 즉사하겠어.)",
+          DialogueId = 51213210,
+          GUID = "8034F744",
+          NextDialogue = 51213211,
+          SpeakNpcId = 100001
+        },
+        [51213211] = {
+          Content = "您身后的两位仆从，都情不自禁地鼓掌了呢！那您呢，您觉得怎么样，我们表演得好吗？",
+          ContentKR = "뒤에 계신 두 시종분은 절로 박수를 치시네요! 월석 사냥꾼님께선 저희 공연이 어떠셨나요?",
+          DialogueId = 51213211,
+          GUID = "8034F76E",
+          NextOptions = {
+            [1] = 51213212,
+            [2] = 51213214
+          },
+          SpeakNpcId = 700458,
+          TalkActionId = {
+            [1] = "700458:Talk03_Start"
+          }
+        },
+        [51213212] = {
+          Content = "很好！",
+          ContentKR = "훌륭했어요!",
+          DialogueId = 51213212,
+          GUID = "8034F798",
+          NextDialogue = 51213213
+        },
+        [51213213] = {
+          Content = "太好了！能得到您的认可，这些日子的准备和反复排练就都值得了。他们一定会保持应有的水准发挥的，为艾森巴恩站长献上最好的表演！",
+          ContentKR = "아, 다행이에요! 그렇게 봐 주셨다면 그동안 쉬지 않고 준비한 보람이 있죠. 본 공연에서도 모두 제 실력을 발휘해서, 아이젠반 역장님께 최고의 무대를 보여드릴 거예요!",
+          DialogueId = 51213213,
+          GUID = "8034F7C2",
+          NextDialogue = 51213216,
+          SpeakNpcId = 700458,
+          TalkActionId = {
+            [1] = "700458:Talk03_End"
+          }
+        },
+        [51213214] = {
+          Content = "感觉不如之前在盖雷亚剧院看的。",
+          ContentKR = "갈레아 극장에서 본 공연보다 못한 것 같은데요.",
+          DialogueId = 51213214,
+          GUID = "8034F7EC",
+          NextDialogue = 51213215
+        },
+        [51213215] = {
+          Content = "毕竟他们都是剧迷，不是专业演员，但是短时间能排练成这样已经很了不起了。请您不要失望！下一次，他们一定会带来更好的表演的。",
+          ContentKR = "전문 배우들이 아니라 연극을 좋아해서 모인 사람들이잖아요. 그래도 이렇게 짧은 시간에 이 정도 수준까지 도달한 건 대단한 거예요. 너무 실망하지 마세요. 다음번엔 꼭 더 좋은 무대를 보여드릴 테니까요.",
+          DialogueId = 51213215,
+          GUID = "8034F816",
+          NextDialogue = 51213216,
+          SpeakNpcId = 700458,
+          TalkActionId = {
+            [1] = "700458:Talk03_End"
+          }
+        },
+        [51213216] = {
+          Content = "我会尽力指导他们，一定让西顿会长满意。看了刚刚他们的表演，我也理解为什么列维要坚持使用真实的道具了——",
+          ContentKR = "제가 더 잘 지도해서 시돈 회장님 마음에 들 만한 무대를 만들어 볼게요. 방금 리허설을 보고 나니까, 레비가 왜 그렇게 실감 나는 소품을 고집했는지 알 것 같아요.",
+          DialogueId = 51213216,
+          GUID = "8034F840",
+          NextDialogue = 51213217,
+          SpeakNpcId = 700458,
+          TalkActionId = {
+            [1] = "700458:Explain01_Start"
+          }
+        },
+        [51213217] = {
+          Content = "“对于士兵来说，武器就是生命，这代表我对站长的忠诚。”",
+          ContentKR = "\"병사에게 무기는 목숨과도 같으니, 이 무기는 역장님을 향한 제 충심이나 다름없습니다.\"",
+          DialogueId = 51213217,
+          GUID = "8034F86A",
+          NextDialogue = 51213218,
+          SpeakNpcId = 700458
+        },
+        [51213218] = {
+          Content = "这是你们自己写的剧本吗？",
+          ContentKR = "극본은 직접 쓰신 건가요?",
+          DialogueId = 51213218,
+          GUID = "8034F894",
+          NextDialogue = 51213219,
+          SpeakNpcId = 100001
+        },
+        [51213219] = {
+          Content = "不是哦，我们只是负责细化了一下台词，大纲是你们会长给的。",
+          ContentKR = "아니요. 줄거리는 살롱 회장님이 주셨고, 저희는 대사만 조금 손봤어요.",
+          DialogueId = 51213219,
+          GUID = "8034F8BE",
+          NextDialogue = 51213220,
+          SpeakNpcId = 700458,
+          TalkActionId = {
+            [1] = "700458:Explain01_End"
+          }
+        },
+        [51213220] = {
+          Content = "是的……这部剧是西顿会长精心筹划的，说是一定要给艾森巴恩站长一个……",
+          ContentKR = "맞아요... 이 연극은 시돈 회장님이 정말 공들여 기획하신 작품이에요. 회장님께선 이 작품이 아이젠반 역장님께 드릴...",
+          DialogueId = 51213220,
+          GUID = "8034F8E8",
+          NextDialogue = 51213221,
+          SpeakNpcId = 700461
+        },
+        [51213221] = {
+          Content = "惊喜。一定会让艾森巴恩站长终身难忘的惊喜。",
+          ContentKR = "깜짝선물. 평생 잊을 수 없는 깜짝선물이 되길 바란다고 하셨죠.",
+          DialogueId = 51213221,
+          GUID = "8034F912",
+          NextDialogue = 51213222,
+          SpeakNpcId = 700462
+        },
+        [51213222] = {
+          Content = "好，期待你们的演出。那么，我差不多也要回去向西顿会长复命了。",
+          ContentKR = "알겠어요, 정말 기대가 되네요. 그럼, 전 슬슬 시돈 회장님께 가서 상황을 보고드려야 할 것 같아요.",
+          DialogueId = 51213222,
+          GUID = "8034F93C",
+          SpeakNpcId = 100001
+        },
+        [51213224] = {
+          Content = "这么快就回来了，新人？我还以为还要再等你一会儿呢。",
+          ContentKR = "조금 더 걸릴 줄 알았는데, 생각보다 빨리 돌아오셨군요?",
+          DialogueId = 51213224,
+          GUID = "8034F990",
+          LookAt = {
+            [1] = "0:n(700460)",
+            [2] = "700450:n(700460)",
+            [3] = "700457:n(700460)",
+            [4] = "700460:n(0)"
+          },
+          NextDialogue = 51213225,
+          SpeakNpcId = 700460,
+          TurnTo = {
+            [1] = "0:n(700460)",
+            [2] = "700450:n(700460)",
+            [3] = "700457:n(700460)",
+            [4] = "700460:n(0)"
+          }
+        },
+        [51213225] = {
+          Content = "（向西顿讲述了调查的结果。）",
+          ContentKR = "(시돈에게 조사 결과를 전달한다.)",
+          DialogueId = 51213225,
+          GUID = "8034F9BA",
+          NextDialogue = 51213226
+        },
+        [51213226] = {
+          Content = "嗯，大家都准备好了……不错，我也准备好了。",
+          ContentKR = "음, 다들 준비가 됐나 보군요... 훌륭해요. 저도 준비가 끝났습니다.",
+          DialogueId = 51213226,
+          GUID = "8034F9E4",
+          NextDialogue = 51213227,
+          SpeakNpcId = 700460,
+          TalkActionId = {
+            [1] = "700460:Talk01_Start"
+          }
+        },
+        [51213227] = {
+          Content = "汽笛沙龙很看重这次的礼物？感觉每个人都用尽全力去准备了啊。",
+          ContentKR = "기적 소리 살롱에서 이번 선물에 꽤 공을 들이는 것 같네요? 모두 정말 열심히 준비하고 있던데요.",
+          DialogueId = 51213227,
+          GUID = "8034FA0E",
+          NextDialogue = 51213228,
+          SpeakNpcId = 100001
+        },
+        [51213228] = {
+          Content = "因为，这样的庆典就是众望所归啊。能够表达对会长崇高敬意的机会太少了，一定要好好把握才行。",
+          ContentKR = "모두가 이런 축제를 손꼽아 기다려 왔으니까요. 역장님께 존경의 마음을 전할 기회가 많지 않은데, 이번 기회만큼은 꼭 살려야죠.",
+          DialogueId = 51213228,
+          GUID = "8034FA38",
+          NextDialogue = 51213229,
+          SpeakNpcId = 700460
+        },
+        [51213229] = {
+          Content = "谢谢你，新人。汽笛沙龙的每一位成员都感谢你的付出。",
+          ContentKR = "수고 많았습니다, 신입 회원님. 기적 소리 살롱의 모두를 대신해 감사드립니다.",
+          DialogueId = 51213229,
+          GUID = "8034FA62",
+          NextDialogue = 51213230,
+          SpeakNpcId = 700460,
+          TalkActionId = {
+            [1] = "700460:Talk01_End"
+          }
+        },
+        [51213230] = {
+          Content = "（西顿转身离开了休息室。在他推门出去前，似乎嘴里念叨着什么……但是你离得有些远，没听清楚。）",
+          ContentKR = "(시돈이 등을 돌려 휴게실 밖으로 향한다. 나가기 직전에 뭔가 낮게 중얼거렸지만... 멀어서 무슨 말인지 들리지 않는다.)",
+          DialogueId = 51213230,
+          GUID = "8034FA8C",
+          IsBlack = 1,
+          NextDialogue = 51213231,
+          Scripts = "SetVisibility{ActorId{700460},Visibility{\"Hide\"}}"
+        },
+        [51213231] = {
+          Content = "他刚刚说了什么？",
+          ContentKR = "방금 뭐라고 한 거지?",
+          DialogueId = 51213231,
+          GUID = "8034FAB6",
+          LookAt = {
+            [1] = "0:n(700457)",
+            [2] = "700450:n(0)",
+            [3] = "700457:n(0)"
+          },
+          NextDialogue = 51213232,
+          SpeakNpcId = 100001,
+          TurnTo = {
+            [1] = "0:n(700457)",
+            [2] = "700450:n(0)",
+            [3] = "700457:n(0)"
+          }
+        },
+        [51213232] = {
+          Content = "他说……唔……",
+          ContentKR = "그게... 그러니까...",
+          DialogueId = 51213232,
+          GUID = "8034FAE0",
+          NextDialogue = 51213233,
+          SpeakNpcId = 700450
+        },
+        [51213233] = {
+          Content = "怎么了，支支吾吾的，不像平时的你。",
+          ContentKR = "왜 그래? 평소답지 않게, 우쭐쭈물 말을 못 하네.",
+          DialogueId = 51213233,
+          GUID = "8034FB0A",
+          NextDialogue = 51213234,
+          SpeakNpcId = 100001
+        },
+        [51213234] = {
+          Content = "我也听到了，我来说吧，小矮子怕是吓了一跳。西顿那家伙说的是……",
+          ContentKR = "꼬맹이가 듣고 깜짝 놀랐나 보네. 나도 같이 들었으니까, 대신 말해 줄게. 시돈 그 녀석이 뭐라고 했냐면...",
+          DialogueId = 51213234,
+          GUID = "8034FB34",
+          NextDialogue = 51213235,
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Explain02_Start"
+          }
+        },
+        [51213235] = {
+          Content = "“对于士兵来说，武器就是生命，这代表我对站长的忠诚。”",
+          ContentKR = "\"병사에게 무기는 목숨과도 같으니, 이 무기는 역장님을 향한 제 충심이나 다름없습니다.\"",
+          DialogueId = 51213235,
+          GUID = "8034FB5E",
+          NextDialogue = 51213236,
+          SpeakNpcId = 700457
+        },
+        [51213236] = {
+          Content = "“作为报答，我所要的嘉奖，是站长大人的心脏。”",
+          ContentKR = "\"제 충심에 대한 보답으로, 역장님의 심장을 받고 싶습니다.\"",
+          DialogueId = 51213236,
+          GUID = "8034FB88",
+          SpeakNpcId = 700457,
+          TalkActionId = {
+            [1] = "700457:Explain02_End"
+          }
+        },
+        [51214001] = {
+          Content = "你在这里啊！快，跟我去一趟沙龙。",
+          ContentKR = "여기 계셨군요! 지금 바로 저와 살롱으로 가시죠.",
+          DialogueId = 51214001,
+          GUID = "8035790A",
+          NextDialogue = 51214002,
+          SpeakNpcId = 700398
+        },
+        [51214002] = {
+          Content = "朋友，不管发生了什么事，都要讲气度吧？上来就抓着我家大人的手腕，你这可不是绅士行为。快松手，否则别怪我不客气了。",
+          ContentKR = "이보세요, 아무리 급해도 예의는 지키셔야죠. 다짜고짜 사람 손목부터 잡아채는 건 신사답지 않잖아요. 일단 그 손 놓으세요. 안 그러면 저도 가만있지 않겠습니다.",
+          DialogueId = 51214002,
+          GUID = "80357934",
+          NextDialogue = 51214003,
+          SpeakNpcId = 100401
+        },
+        [51214003] = {
+          Content = "啊！抱歉……我太着急了，忘记和你们解释了。摄影活动……或者说你的那张照片，出了一点问题，现在闹得挺大。",
+          ContentKR = "아, 죄송해요... 너무 급해서 설명도 안 드렸네요. 사진 공모전... 아니, 정확히는 선생님께서 찍은 그 사진에 문제가 생겨서, 일이 꽤 커졌습니다.",
+          DialogueId = 51214003,
+          GUID = "8035795E",
+          NextDialogue = 51214004,
+          SpeakNpcId = 700398
+        },
+        [51214004] = {
+          Content = "会长说，希望你能亲自到场，他准备开诚布公地和你聊聊。",
+          ContentKR = "회장님께서 직접 와 주셨으면 한다고 하셨어요. 선생님과 솔직하게 털어놓고 이야기하고 싶다고요.",
+          DialogueId = 51214004,
+          GUID = "80357988",
+          NextDialogue = 51214005,
+          SpeakNpcId = 700398
+        },
+        [51214005] = {
+          Content = "我等一下就过去。",
+          ContentKR = "조금 있다가 갈게요.",
+          DialogueId = 51214005,
+          GUID = "803579B2",
+          NextDialogue = 51214006,
+          SpeakNpcId = 100001
+        },
+        [51214006] = {
+          Content = "好……那我先去和会长报告一下。",
+          ContentKR = "알겠습니다... 그럼 전 먼저 가서 회장님께 보고드릴게요.",
+          DialogueId = 51214006,
+          GUID = "803579DC",
+          SpeakNpcId = 700398
+        },
+        [51214007] = {DialogueId = 51214007, GUID = "80357A06"},
+        [51214008] = {
+          Content = "那张照片是他们自己选的，能有什么问题？",
+          ContentKR = "그 사진은 자기들이 직접 고른 거잖아. 이제 와서 무슨 문제가 있다는 거야?",
+          DialogueId = 51214008,
+          GUID = "80357A30",
+          NextDialogue = 51214009,
+          SpeakNpcId = 100401,
+          TalkActionId = {
+            [1] = "100401:Think_Start"
+          }
+        },
+        [51214009] = {
+          Content = "果然有古怪……该不会是他们自导自演的舆论风波吧？待会儿我们去打听打听。",
+          ContentKR = "역시 수상해... 설마 자기들끼리 짜고 엉뚱하게 몰고 가려는 건 아니겠지? 우리 이따 가서 상황 파악을 좀 해보자.",
+          DialogueId = 51214009,
+          GUID = "80357A5A",
+          SpeakNpcId = 100401,
+          TalkActionId = {
+            [1] = "100401:Think_End"
+          }
+        },
+        [51214010] = {DialogueId = 51214010, GUID = "80357A84"},
+        [51214011] = {
+          Content = "那个会长该不会是要把你的冠军收回来吧！！",
+          ContentKR = "설마 그 회장이 네 1등 상을 도로 뺏어가려는 거 아니야?!",
+          DialogueId = 51214011,
+          GUID = "80357AAE",
+          NextDialogue = 51214012,
+          SpeakNpcId = 100402,
+          TalkActionId = {
+            [1] = "100402:Confident_Start"
+          }
+        },
+        [51214012] = {
+          Content = "可恶，奖励我们都收下了，没有还回去的道理。小仆从，你硬气点，该是你的东西谁也抢不走！白会守护你的！",
+          ContentKR = "나쁜 녀석들, 그래도 보상은 다 받았으니까, 이제 와서 돌려줄 이유는 없어. 시종, 기죽지 마. 네 건 아무도 못 가져가! 스노우가 지켜 줄게!",
+          DialogueId = 51214012,
+          GUID = "80357AD8",
+          SpeakNpcId = 100402,
+          TalkActionId = {
+            [1] = "100402:Confident_End"
+          }
+        },
+        [51214013] = {DialogueId = 51214013, GUID = "80357B02"},
+        [51214014] = {
+          Content = "你来了。这次又有些事情要麻烦你了，你先看一下这张海报吧。",
+          ContentKR = "오셨군요. 이번에도 부탁드릴 일이 좀 생겼습니다. 우선 이 포스터부터 봐 주시죠.",
+          DialogueId = 51214014,
+          GUID = "80357B2C",
+          NextDialogue = 51214016,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Give"
+          }
+        },
+        [51214015] = {DialogueId = 51214015, GUID = "80357B56"},
+        [51214016] = {
+          Content = "这是什么？宣传海报？我看看写了什么……",
+          ContentKR = "이건... 홍보 포스터인가요? 뭐라고 쓰여 있길래...",
+          DialogueId = 51214016,
+          GUID = "80357B80",
+          NextDialogue = 51214017,
+          SpeakNpcId = 100001
+        },
+        [51214017] = {
+          Content = "“艾森巴恩的秘密勾当！疑似走私中饱私囊！不配做站长，枉为人！”",
+          ContentKR = "아이젠반의 은밀한 뒷거래! 밀수 의혹! 아이젠반에겐 역장 자격이 없다!",
+          DialogueId = 51214017,
+          GUID = "80357BAA",
+          NextDialogue = 51214018,
+          SpeakNpcId = 100001
+        },
+        [51214018] = {
+          Content = "等等，这海报上怎么是我拍的那张照片？",
+          ContentKR = "잠깐만요. 이 포스터에 있는 사진, 제가 찍은 거잖아요?",
+          DialogueId = 51214018,
+          GUID = "80357BD4",
+          NextDialogue = 51214019,
+          SpeakNpcId = 100001
+        },
+        [51214019] = {
+          Content = "没错，现在看来这张照片确实有点问题，月髓液是军用物资，一般运输时都会有士兵在场。被人解读成走私也是没有办法的事情……",
+          ContentKR = "맞습니다. 지금 보니 사진에 문제가 좀 있더군요. 액체 폭시코르는 군용 물자라 운송할 때 보통 병사가 동행하거든요. 이 사진만 보면 사람들이 밀수라고 생각해도 무리는 아니죠...",
+          DialogueId = 51214019,
+          GUID = "80357BFE",
+          NextDialogue = 51214020,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Agree"
+          }
+        },
+        [51214020] = {
+          Content = "这张照片搞得车站内议论纷纷，我希望你能代表我、代表整个汽笛沙龙去解决一下这些胡说八道的家伙。",
+          ContentKR = "그 사진 때문에 역 안이 온통 술렁이고 있습니다. 그래서 당신이 저와 기적 소리 살롱 전체를 대표해, 그런 터무니없는 소리를 퍼뜨리는 사람들을 막아 주셨으면 합니다.",
+          DialogueId = 51214020,
+          GUID = "80357C28",
+          NextDialogue = 51214021,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk03_Start"
+          }
+        },
+        [51214021] = {
+          Content = "十周年活动在即，本来该是个普天同庆的好日子，我们汽笛沙龙本来是想把活动办热闹些，给艾森巴恩站长大人脸上增光添彩，可没想过让他蒙羞。",
+          ContentKR = "10주년 행사가 코앞입니다. 원래대로라면 모두가 함께 축하할 좋은 날이죠. 저희 기적 소리 살롱은 더 성대한 행사로 아이젠반 역장님을 빛내 드리고 싶었을 뿐, 그분께 누를 끼칠 생각은 없었습니다.",
+          DialogueId = 51214021,
+          GUID = "80357C52",
+          NextDialogue = 51214022,
+          SpeakNpcId = 700400
+        },
+        [51214022] = {
+          Content = "你的意思是，你们选了我这张照片拿来做宣传，结果没想到这张照片是艾森巴恩走私的证据。捅出篓子来，还让我来处理？",
+          ContentKR = "그러니까, 당신들이 제 사진을 홍보용으로 가져다 썼는데, 이제 와서 보니 아이젠반이 밀수한 증거가 돼버렸다는 거네요. 사고는 당신들이 쳐 놓고, 수습은 저더러 하라는 거예요?",
+          DialogueId = 51214022,
+          GUID = "80357C7C",
+          NextDialogue = 51214023,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700400:Talk03_End"
+          }
+        },
+        [51214023] = {
+          Content = "不，怎么会？我们汽笛沙龙上下都承认这张照片的精彩，它斩获冠军是理所当然的，也是我们共同的决定。",
+          ContentKR = "아뇨, 그럴 리가 있겠습니까? 기적 소리 살롱 회원 모두가 이 사진의 훌륭함을 인정했습니다. 우승을 차지한 것은 당연한 결과였고, 저희 모두가 함께 내린 결정이었죠.",
+          DialogueId = 51214023,
+          GUID = "80357CA6",
+          NextDialogue = 51214024,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Disagree"
+          }
+        },
+        [51214024] = {
+          Content = "可能正是因为这张照片的构图张力，让我们忽略了图上的细节，是我们的问题，我们怎么会怪罪你。",
+          ContentKR = "구도가 워낙 강렬해서 정작 그 안의 디테일을 놓쳐버렸지만, 그건 저희 불찰이지, 당신에게 책임을 물을 생각은 없습니다.",
+          DialogueId = 51214024,
+          GUID = "80357CD0",
+          NextDialogue = 51214025,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk02_Start"
+          }
+        },
+        [51214025] = {
+          Content = "你上次把事情解决得很好，我们大家都很信任你。",
+          ContentKR = "지난번에도 일을 훌륭히 도와주셔서, 모두 당신을 신뢰하고 있습니다.",
+          DialogueId = 51214025,
+          GUID = "80357CFA",
+          NextDialogue = 51214026,
+          SpeakNpcId = 700400
+        },
+        [51214026] = {
+          Content = "……你需要我去做什么？",
+          ContentKR = "...제가 뭘 하면 되는데요?",
+          DialogueId = 51214026,
+          GUID = "80357D24",
+          NextDialogue = 51214027,
+          SpeakNpcId = 100001
+        },
+        [51214027] = {
+          Content = "我需要你去解决散播谣言的人。在这要紧的关头，可不能出岔子，要是被艾森巴恩站长大人注意到……那就不好了。",
+          ContentKR = "소문을 퍼뜨리는 사람들을 막아 주셨으면 합니다. 지금은 사소한 문제도 생기면 안 되는 시기입니다. 이 일이 아이젠반 역장님 귀에 들어가기라도 하면... 여러모로 곤란해집니다.",
+          DialogueId = 51214027,
+          GUID = "80357D4E",
+          NextDialogue = 51214028,
+          SpeakNpcId = 700400
+        },
+        [51214028] = {
+          Content = "倘若让艾森巴恩站长大人感到不快，那将会是我们的罪过。",
+          ContentKR = "그분께서 조금이라도 언짢아하신다면, 그건 전적으로 저희 잘못이 되겠죠.",
+          DialogueId = 51214028,
+          GUID = "80357D78",
+          NextDialogue = 51214029,
+          SpeakNpcId = 700400
+        },
+        [51214029] = {
+          Content = "希望你能顺路调查一下，现在车站内的市民对这件事的看法，然后集中整合，汇报给我。",
+          ContentKR = "가시는 김에 역 안의 시민들이 이번 일을 어떻게 생각하고 있는지도 알아봐 주시겠습니까? 들은 내용을 정리해서 제게 알려 주시면 됩니다.",
+          DialogueId = 51214029,
+          GUID = "80357DA2",
+          NextOptions = {
+            [1] = 51214030
+          },
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk02_End"
+          }
+        },
+        [51214030] = {
+          Content = "可以，有什么报酬？",
+          ContentKR = "안 될 거 없죠. 그 대가론 뭘 주실 건가요?",
+          DialogueId = 51214030,
+          GUID = "80357DCC",
+          NextDialogue = 51214031
+        },
+        [51214031] = {
+          Content = "会有你想知道的事情，不会让你白跑一趟。",
+          ContentKR = "당신이 알고 싶어 하시는 걸 알려드리죠. 헛수고가 되지는 않을 겁니다.",
+          DialogueId = 51214031,
+          GUID = "80357DF6",
+          NextDialogue = 51214032,
+          SpeakNpcId = 700400
+        },
+        [51214032] = {
+          Content = "你知道我想知道什么？",
+          ContentKR = "제가 뭘 알고 싶어 하는지 안다는 건가요?",
+          DialogueId = 51214032,
+          GUID = "80357E20",
+          NextDialogue = 51214033,
+          SpeakNpcId = 100001
+        },
+        [51214033] = {
+          Content = "当然了……我们汽笛沙龙的核心成员，都是为此而聚集的。",
+          ContentKR = "물론입니다... 저희 살롱의 핵심 회원들은 모두 이를 위해 모인 거니까요.",
+          DialogueId = 51214033,
+          GUID = "80357E4A",
+          NextDialogue = 51214034,
+          SpeakNpcId = 700400
+        },
+        [51214034] = {
+          Content = "去吧，新人，我相信你的能力。",
+          ContentKR = "그럼 다녀오시죠, 신입 회원님. 당신의 능력을 믿고 있겠습니다.",
+          DialogueId = 51214034,
+          GUID = "80357E74",
+          SpeakNpcId = 700400
+        },
+        [51214035] = {DialogueId = 51214035, GUID = "80357E9E"},
+        [51214036] = {
+          Content = "回来了？那家伙怎么说？",
+          ContentKR = "갔다 왔어? 그 녀석이 뭐래?",
+          DialogueId = 51214036,
+          GUID = "80357EC8",
+          NextDialogue = 51214037,
+          SpeakNpcId = 100401
+        },
+        [51214037] = {
+          Content = "一天到晚就知道麻烦你！汽笛沙龙几十号人，他难道是光杆司令，手下的人中看不中用吗？",
+          ContentKR = "하루 종일 시종한테 귀찮은 일만 시키잖아! 기적 소리 살롱에 그 사람 혼자만 있는 것도 아니고, 회원이 수십 명이나 된다면서! 다른 사람들은 다 장식품이야?",
+          DialogueId = 51214037,
+          GUID = "80357EF2",
+          NextDialogue = 51214038,
+          SpeakNpcId = 100402
+        },
+        [51214038] = {
+          Content = "小仆从，你可别惯着他！卡米拉教过我，遇到不开心的事情要敢于说“不”！",
+          ContentKR = "시종, 자꾸 다 받아 주지 마! 카밀라가 그랬어. 기분 나쁜 일에는 용기 있게 \"싫어요.\"라고 해야 한다고!",
+          DialogueId = 51214038,
+          GUID = "80357F1C",
+          NextDialogue = 51214039,
+          SpeakNpcId = 100402
+        },
+        [51214039] = {
+          Content = "（向白和奥特赛德讲述了西顿的委托。）",
+          ContentKR = "(시돈에게 받은 의뢰를 스노우와 아웃사이더에게 설명한다.)",
+          DialogueId = 51214039,
+          GUID = "80357F46",
+          NextDialogue = 51214040
+        },
+        [51214040] = {
+          Content = "……他这最后几句话什么意思？之前我们去找活动宣传人的时候，他们也有类似的反应。",
+          ContentKR = "...시돈이 마지막에 한 말은 대체 무슨 의미였을까? 전에 행사 홍보 쪽 사람들을 찾아갔을 때도 다들 비슷한 반응이었잖아.",
+          DialogueId = 51214040,
+          GUID = "80357F70",
+          NextDialogue = 51214041,
+          SpeakNpcId = 100401
+        },
+        [51214041] = {
+          Content = "就好像他们默认你应该知道……",
+          ContentKR = "네가 당연히 다 알 거란 태도였지...",
+          DialogueId = 51214041,
+          GUID = "80357F9A",
+          NextDialogue = 51214042,
+          SpeakNpcId = 100401
+        },
+        [51214042] = {
+          Content = "什么什么意思？这不就是在挑衅吗！可恶，这就是空头支票！小仆从，你不要太伤心了，你会被OTSD的！",
+          ContentKR = "의미는 무슨 의미야! 대놓고 시비 거는 거지! 으으, 분해. 지키지도 않을 약속이나 늘어놓고! 시종, 그래도 너무 속상해하지 마. 그러다 OTSD 온다니까.",
+          DialogueId = 51214042,
+          GUID = "80357FC4",
+          NextDialogue = 51214043,
+          SpeakNpcId = 100402
+        },
+        [51214043] = {
+          Content = "……OTSD是？",
+          ContentKR = "...OTSD가 뭔데?",
+          DialogueId = 51214043,
+          GUID = "80357FEE",
+          NextDialogue = 51214044,
+          SpeakNpcId = 100001
+        },
+        [51214044] = {
+          Content = "奥特赛德！你会被‘奥特赛德’掉，就是用花言巧语漂亮话，骗走你的冰淇淋，还哄得你服服帖帖的，很久之后被卡米拉提醒才发现自己被忽悠了！",
+          ContentKR = "O-T-S-D, 아웃사이더성 스트레스 장애! 그럴싸한 말로 살살 꼬드겨서 아이스크림을 빼앗아 가고, 그래 놓고 또 살살 달래서 고분고분하게 만드는 거지. 그러다가 뒤늦게야 카밀라가 말해줘서 속았다는 걸 알게 되는 거야!",
+          DialogueId = 51214044,
+          GUID = "80358018",
+          NextDialogue = 51214045,
+          SpeakNpcId = 100402
+        },
+        [51214045] = {
+          Content = "喂，我之后不是还你了吗？拿了你一根冰淇淋，还了你三根雪糕呢。",
+          ContentKR = "어이, 그거 나중에 다 갚았거든? 아이스크림 하나 가져간 대신, 하드 3개로 갚았잖아.",
+          DialogueId = 51214045,
+          GUID = "80358042",
+          NextDialogue = 51214046,
+          SpeakNpcId = 100401
+        },
+        [51214046] = {
+          Content = "哼，这一根冰淇淋和三根雪糕本来就该都是魔王大人的，是我损失了一根冰淇淋！",
+          ContentKR = "흥! 그거 원래 전부 다 이 마왕님 거였어. 그러니까 스노우가 아이스크림 하나 손해 본 거라고!",
+          DialogueId = 51214046,
+          GUID = "8035806C",
+          NextDialogue = 51214047,
+          SpeakNpcId = 100402
+        },
+        [51214047] = {
+          Content = "先去客运区打听一下消息吧，那边人流比较多元，他们的意见比较有代表性。",
+          ContentKR = "일단 여객 구역부터 가 보자. 거긴 오가는 사람이 다양하니까, 반응을 보면 대략 분위기를 알 수 있을 거야.",
+          DialogueId = 51214047,
+          GUID = "80358096",
+          SpeakNpcId = 100401
+        },
+        [51214048] = {DialogueId = 51214048, GUID = "803580C0"},
+        [51214049] = {
+          Content = "艾森巴恩站长大人……不，艾森巴恩，你太让我失望了……",
+          ContentKR = "아이젠반 역장님... 아니, 아이젠반. 당신한테 정말 실망했습니다...",
+          DialogueId = 51214049,
+          Duration = 3,
+          GUID = "803580EA",
+          SpeakNpcId = 700464
+        },
+        [51214050] = {DialogueId = 51214050, GUID = "80358114"},
+        [51214051] = {
+          Content = "发生什么了？",
+          ContentKR = "무슨 일 있어요?",
+          DialogueId = 51214051,
+          GUID = "8035813E",
+          NextDialogue = 51214052,
+          SpeakNpcId = 100001
+        },
+        [51214052] = {
+          Content = "你还不知道吗？艾森巴恩走私月髓液，那照片清清楚楚地拍出来了……难道他还能是偶然路过？别逗我笑了。",
+          ContentKR = "아직 못 들으셨나요? 아이젠반이 액체 폭시코르를 밀수했다는 거, 그 사진에 다 나왔잖아요... 설마 우연히 지나가다 찍힌 거라고 하실 건 아니죠? 무슨, 말이 돼야지.",
+          DialogueId = 51214052,
+          GUID = "80358168",
+          NextDialogue = 51214053,
+          SpeakNpcId = 700464,
+          TalkActionId = {
+            [1] = "700464:Talk01_Start"
+          }
+        },
+        [51214053] = {
+          Content = "我曾经也是个向往加入汽笛沙龙的火车迷，认为艾森巴恩做的一切都是为了车站，哪怕他行事残酷了一些，也都是为了车站好的。",
+          ContentKR = "저도 한때는 기적 소리 살롱에 들어가고 싶어 하던 기차 마니아였어요. 아이젠반 역장의 방식이 조금 잔혹하더라도, 그게 다 역을 위한 일이라고 믿었죠.",
+          DialogueId = 51214053,
+          GUID = "80358192",
+          NextDialogue = 51214054,
+          SpeakNpcId = 700464
+        },
+        [51214054] = {
+          Content = "我早该在他拖欠工人工资的时候就看出来他不是什么好货色的！",
+          ContentKR = "일꾼들 월급을 체불할 때부터 알아차렸어야 했어요. 제대로 된 사람일 리 없다는 걸요!",
+          DialogueId = 51214054,
+          GUID = "803581BC",
+          NextDialogue = 51214055,
+          SpeakNpcId = 700464
+        },
+        [51214055] = {
+          Content = "可是……我也是亲眼见证百花车站从一个无人问津的小地方，变成如今的‘帝国生命线’的。艾森巴恩，他……",
+          ContentKR = "하지만... 전 블룸필드역의 발전을 두 눈으로 지켜봤어요. 아무도 찾지 않던 작은 곳에서 지금은 '제국의 생명선'이 됐죠. 아이젠반은...",
+          DialogueId = 51214055,
+          GUID = "803581E6",
+          NextDialogue = 51214056,
+          SpeakNpcId = 700464,
+          TalkActionId = {
+            [1] = "700464:Talk02_Start"
+          }
+        },
+        [51214056] = {
+          Content = "唉，也不知道汽笛沙龙为什么会拿这样一张照片出来宣传。",
+          ContentKR = "하아, 기적 소리 살롱은 대체 왜 이런 사진을 홍보용으로 내놓은 건지...",
+          DialogueId = 51214056,
+          GUID = "80358210",
+          NextOptions = {
+            [1] = 51214057
+          },
+          SpeakNpcId = 700464,
+          TalkActionId = {
+            [1] = "700464:Disagree"
+          }
+        },
+        [51214057] = {
+          Content = "（警告对方不要再说。）",
+          ContentKR = "(상대에게 더는 말하지 말라고 경고한다.)",
+          DialogueId = 51214057,
+          GUID = "8035823A",
+          NextDialogue = 51214058
+        },
+        [51214058] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51214058,
+          GUID = "80358264",
+          SpeakNpcId = 700464
+        },
+        [51214059] = {DialogueId = 51214059, GUID = "8035828E"},
+        [51214060] = {
+          Content = "早说了艾森巴恩就是个该死的魔鬼，真是刀子不扎在自己身上不知道疼……",
+          ContentKR = "내가 진작부터 아이젠반은 끔찍한 악마라고 했잖아. 꼭 이렇게 당해 봐야 한다니까...",
+          DialogueId = 51214060,
+          Duration = 5,
+          GUID = "803582B8",
+          SpeakNpcId = 700465
+        },
+        [51214061] = {DialogueId = 51214061, GUID = "803582E2"},
+        [51214062] = {
+          Content = "发生什么了？",
+          ContentKR = "무슨 일 있어요?",
+          DialogueId = 51214062,
+          GUID = "8035830C",
+          NextDialogue = 51214063,
+          SpeakNpcId = 100001
+        },
+        [51214063] = {
+          Content = "你没收到那张传单吗，白纸黑字写着‘十周年纪念庆典活动’的那张传单。",
+          ContentKR = "넌 그 전단지 못 받았니? '10주년 기념 축제 행사'라고 적혀 있는 거 말이야.",
+          DialogueId = 51214063,
+          GUID = "80358336",
+          NextDialogue = 51214064,
+          SpeakNpcId = 700465
+        },
+        [51214064] = {
+          Content = "哈，真是讽刺啊，艾森巴恩沽名钓誉了那么久，结果居然倒在了自己的追随者手上，活该。",
+          ContentKR = "하, 참 우습지. 그렇게 오랫동안 명예만 좇던 아이젠반이 결국 자기 추종자들 손에 무너지다니. 꼴 좋다.",
+          DialogueId = 51214064,
+          GUID = "80358360",
+          NextOptions = {
+            [1] = 51214065
+          },
+          SpeakNpcId = 700465
+        },
+        [51214065] = {
+          Content = "你为什么这么讨厌艾森巴恩？",
+          ContentKR = "왜 그렇게 아이젠반을 싫어하세요?",
+          DialogueId = 51214065,
+          GUID = "8035838A",
+          NextDialogue = 51214066
+        },
+        [51214066] = {
+          Content = "没有工人不恨他！魔鬼！血液里流着病毒的混账！",
+          ContentKR = "일꾼들 중에 아이젠반을 증오하지 않는 사람이 어디 있어! 괴물 같은 놈, 피도 눈물도 없는 악마라고!",
+          DialogueId = 51214066,
+          GUID = "803583B4",
+          NextDialogue = 51214067,
+          SpeakNpcId = 700465,
+          TalkActionId = {
+            [1] = "700465:Angry01_Start"
+          }
+        },
+        [51214067] = {
+          Content = "艾森巴恩拒绝给工人治病，挥霍着我们的血汗，却在我们需要的时候，让我们等死！",
+          ContentKR = "일꾼들이 병들어도 치료해 주지 않았어. 우리가 피땀 흘려 일한 덕에 그렇게 으스대고 다녀 놓고, 정작 우리가 도움을 청할 때는 죽게 내버려뒀다고!",
+          DialogueId = 51214067,
+          GUID = "803583DE",
+          NextDialogue = 51214068,
+          SpeakNpcId = 700465
+        },
+        [51214068] = {
+          Content = "我女儿……我女儿，就是在这儿被钢筋刺穿了手臂，伤口感染了，活活痛死的。",
+          ContentKR = "내 딸이... 내 딸이 바로 여기서 일하다가 팔에 철근이 박혔어. 상처가 곪아 터지는데도, 그대로 고통에 시달리다 죽어 갔다고.",
+          DialogueId = 51214068,
+          GUID = "80358408",
+          NextDialogue = 51214069,
+          SpeakNpcId = 700465
+        },
+        [51214069] = {
+          Content = "“反正治好了也浪费粮食”，他们是那么说的，百花车站的工人就和那些螺丝钉没什么区别，生锈了扔掉就好了。",
+          ContentKR = "그 사람들이 뭐라고 한 줄 알아? \"치료해 줘 봤자 밥만 축내지.\"라더라. 블룸필드역 일꾼들을 그냥 녹슬면 내다 버리면 되는 나사못 취급한 거야.",
+          DialogueId = 51214069,
+          GUID = "80358432",
+          NextDialogue = 51214070,
+          SpeakNpcId = 700465
+        },
+        [51214070] = {
+          Content = "可是我女儿是人啊！是活生生的人，是拿了那么多次桂冠童工的薇薇安……她还那么小……",
+          ContentKR = "하지만 내 딸은 살아 숨 쉬는 인간이잖아! 여러 번이나 계관 아동 일꾼으로 뽑힌 우리 비비안이... 그렇게 어린 나이에...",
+          DialogueId = 51214070,
+          GUID = "8035845C",
+          NextDialogue = 51214071,
+          SpeakNpcId = 700465,
+          TalkActionId = {
+            [1] = "700465:Angry01_End"
+          }
+        },
+        [51214071] = {
+          Content = "（女工人捂着脸缓缓蹲下，逐渐泣不成声。）",
+          ContentKR = "(중년의 여성 일꾼이 두 손으로 얼굴을 가린 채 천천히 주저앉더니, 곧 울음에 잠겨 말을 잇지 못한다.)",
+          DialogueId = 51214071,
+          GUID = "80358486",
+          IsBlack = 1
+        },
+        [51214072] = {DialogueId = 51214072, GUID = "803584B0"},
+        [51214073] = {
+          Content = "唉……百花车站的繁荣是建立在一部分倒霉蛋的尸骨上的，把血肉浇进发动机里当燃料，车轮才能开得远。",
+          ContentKR = "하... 블룸필드역은 운 나쁜 사람들을 갈아 넣어서 굴러가는 곳이었구나. 열차는 결국 인부들의 목숨을 연료 삼아 더 먼 곳까지 달릴 수 있었던 거야.",
+          DialogueId = 51214073,
+          GUID = "803584DA",
+          NextDialogue = 51214074,
+          SpeakNpcId = 100401
+        },
+        [51214074] = {
+          Content = "那个阿姨哭得好可怜……呜呜，天花板那么高，白上去都打颤，何况是她女儿。",
+          ContentKR = "저 아주머니 우는 거 너무 안쓰러워... 훌쩍, 저 높은 천장이라면 스노우는 올라가기만 해도 무릎이 덜덜 떨릴 텐데, 아주머니 딸은 어땠겠어.",
+          DialogueId = 51214074,
+          GUID = "80358504",
+          NextDialogue = 51214075,
+          SpeakNpcId = 100402
+        },
+        [51214075] = {
+          Content = "再去货运区那边看看吧，商人那边也许会有其他的消息。",
+          ContentKR = "이제 화물 구역 쪽도 확인해 보자. 상인들 사이에선 또 다른 소식이 돌고 있을지도 몰라.",
+          DialogueId = 51214075,
+          GUID = "8035852E",
+          SpeakNpcId = 100401
+        },
+        [51214076] = {DialogueId = 51214076, GUID = "80358558"},
+        [51214077] = {
+          Content = "这点声音很好摆平，让那些工人闭上嘴就行了……我得和艾森巴恩谈谈。",
+          ContentKR = "이 정도 소란이야 금방 정리될걸. 저 일꾼들 입만 다물게 하면 되니까... 아이젠반과 이야기를 좀 해야겠군.",
+          DialogueId = 51214077,
+          Duration = 5,
+          GUID = "80358582",
+          SpeakNpcId = 700466
+        },
+        [51214078] = {DialogueId = 51214078, GUID = "803585AC"},
+        [51214079] = {
+          Content = "你要和他谈什么？",
+          ContentKR = "아이젠반과 무슨 이야기를 하려는 거죠?",
+          DialogueId = 51214079,
+          GUID = "803585D6",
+          NextDialogue = 51214080,
+          SpeakNpcId = 100001
+        },
+        [51214080] = {
+          Content = "当然是谈论一些关于报纸、新闻和价格的事情。",
+          ContentKR = "물론 신문 기사와 그 가격에 대한 이야기가 되겠죠.",
+          DialogueId = 51214080,
+          GUID = "80358600",
+          NextDialogue = 51214081,
+          SpeakNpcId = 700466
+        },
+        [51214081] = {
+          Content = "看您的打扮……哦，真是失礼了。请容许自我介绍一下，我是《北方速递》报社的负责人，同时，旗下经营着数家报社与驿站。",
+          ContentKR = "선생님께선 차림새를 보니... 아, 실례했습니다. 소개가 늦었군요. 저는 〈북방 익스프레스〉의 책임자입니다. 산하의 신문사와 운송소 몇 곳을 함께 운영하고 있지요.",
+          DialogueId = 51214081,
+          GUID = "8035862A",
+          NextDialogue = 51214082,
+          SpeakNpcId = 700466,
+          TalkActionId = {
+            [1] = "700466:Explain02_Start"
+          }
+        },
+        [51214082] = {
+          Content = "《北方速递》在冰湖城本土或许没什么话语权，但是它在迪斯玛尼亚，可是知名刊物之一。连皇帝陛下早晨，都要读一份《北方速递》的报纸。",
+          ContentKR = "〈북방 익스프레스〉가 아이스레이크 시티에서는 큰 영향력이 없을지 몰라도, 디즈마니아에서는 손꼽히는 간행물 중 하나입니다. 황제 폐하께서도 아침마다 저희 신문을 읽으실 정도니까요.",
+          DialogueId = 51214082,
+          GUID = "80358654",
+          NextDialogue = 51214083,
+          SpeakNpcId = 700466
+        },
+        [51214083] = {
+          Content = "我呢，不过是想和站长磋商一点事情。站长是个体面人，想来不会愿意这些消息传到迪斯玛尼亚去，希望他会为此出一个令人满意的价钱。",
+          ContentKR = "전 그저 역장님과 얘기를 좀 나누고 싶을 뿐입니다. 역장님도 점잖으신 분이니, 이런 소식이 디즈마니아까지 퍼지는 건 원하지 않으시겠죠? 물론 그만한 대가도 제시해 주시길 바라고 있고요.",
+          DialogueId = 51214083,
+          GUID = "8035867E",
+          NextDialogue = 51214084,
+          SpeakNpcId = 700466
+        },
+        [51214084] = {
+          Content = "说得好听，这算是敲诈勒索吧？艾森巴恩的卫兵可不是吃素的，你就不怕撕破脸了之后，他让你回不去帝都？",
+          ContentKR = "말은 좋은데, 결국 협박해서 돈을 뜯어내겠다는 거잖아요? 아이젠반의 경비병들도 만만치 않을 텐데, 괜히 척을 졌다가 황성으로 못 돌아가게 될 수도 있다는 생각은 안 해요?",
+          DialogueId = 51214084,
+          GUID = "803586A8",
+          NextDialogue = 51214085,
+          SpeakNpcId = 100401
+        },
+        [51214085] = {
+          Content = "那可真是下下策了，这些事情可不是杀了我就能解决的。",
+          ContentKR = "그건 최악의 선택일 텐데요. 저를 죽인다고 이 일이 해결되지는 않으니까요.",
+          DialogueId = 51214085,
+          GUID = "803586D2",
+          NextDialogue = 51214086,
+          SpeakNpcId = 700466,
+          TalkActionId = {
+            [1] = "700466:Explain02_End"
+          }
+        },
+        [51214086] = {
+          Content = "而且，作为一个聪明的商人、或是敏锐的记者，您要相信我的判断力……呵呵，我会出示一个他无法拒绝、恰到好处的价格。",
+          ContentKR = "저도 신문 바닥에서 잔뼈가 굵은 상인입니다. 제 판단을 믿으시죠... 후후, 그쪽에서 거절하기 어려운, 딱 맞는 금액을 부를 테니까요.",
+          DialogueId = 51214086,
+          GUID = "803586FC",
+          NextOptions = {
+            [1] = 51214087
+          },
+          SpeakNpcId = 700466
+        },
+        [51214087] = {
+          Content = "（警告对方别往外传。）",
+          ContentKR = "(밖에 소문을 내지 말라고 경고한다.)",
+          DialogueId = 51214087,
+          GUID = "80358726",
+          NextDialogue = 51214088
+        },
+        [51214088] = {
+          Content = "呵呵……当然，您既然是这样来势汹汹，那我肯定也会顺您的心意。只是，恐怕您不能让每一个和我想法类似的人闭上嘴。",
+          ContentKR = "후후... 알겠습니다. 이렇게 험악하게 나오시는데, 말씀에 따르는 수밖에요. 그래도 저와 비슷한 생각을 가진 사람들의 입까지 전부 막을 수는 없을 겁니다.",
+          DialogueId = 51214088,
+          GUID = "80358750",
+          SpeakNpcId = 700466
+        },
+        [51214089] = {DialogueId = 51214089, GUID = "8035877A"},
+        [51214090] = {
+          Content = "消息传得比想象中还要快……是不是有人在推波助澜？",
+          ContentKR = "소문이 생각보다 더 빨리 퍼지고 있어... 누가 뒤에서 부추기는 건가?",
+          DialogueId = 51214090,
+          GUID = "803587A4",
+          NextDialogue = 51214091,
+          SpeakNpcId = 100401
+        },
+        [51214091] = {
+          Content = "还是……这样的发展本身就是汽笛沙龙想要的，是他们在引导这样的流言产生？",
+          ContentKR = "아니면... 애초에 기적 소리 살롱은 일이 이렇게 되길 바라고, 일부러 이런 소문이 생기도록 유도한 건가?",
+          DialogueId = 51214091,
+          GUID = "803587CE",
+          NextDialogue = 51214092,
+          SpeakNpcId = 100401
+        },
+        [51214092] = {
+          Content = "继续调查一下吧，去站前大厅那边看看。",
+          ContentKR = "역 앞 대합실 쪽으로 가서 조금 더 알아보자.",
+          DialogueId = 51214092,
+          GUID = "803587F8",
+          SpeakNpcId = 100401
+        },
+        [51214093] = {DialogueId = 51214093, GUID = "80358822"},
+        [51214094] = {
+          Content = "艾森巴恩怎么这么坏啊！",
+          ContentKR = "아이젠반은 정말 나쁜 인간입니다!",
+          DialogueId = 51214094,
+          Duration = 3,
+          GUID = "8035884C",
+          SpeakNpcId = 700467
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51214095,
+    MaxKey = 51215097,
+    Loader = function()
+      return {
+        [51214095] = {DialogueId = 51214095, GUID = "80358876"},
+        [51214096] = {
+          Content = "想必你们也都看到了，艾森巴恩表面看起来是大站长，背地里却是个小人。",
+          ContentKR = "여러분도 다 보셨겠죠! 아이젠반은 겉으로는 훌륭한 역장 행세를 하지만, 뒤로는 비열한 짓을 벌이는 인간입니다.",
+          DialogueId = 51214096,
+          GUID = "803588A0",
+          NextDialogue = 51214097,
+          SpeakNpcId = 700467,
+          TalkActionId = {
+            [1] = "700467:Talk01_Start"
+          }
+        },
+        [51214097] = {
+          Content = "他利用身份和人做生意，肯定是中饱私囊，赚了个盆满钵满。可是我们的锻铁工兄弟们呢？每天吃也吃不好，穿也穿不好。",
+          ContentKR = "자기 지위를 이용해 사람들과 뒷거래를 하면서 돈을 챙겼을 겁니다. 혼자 배를 불렸겠죠. 그런데 우리 일꾼들은요? 매일 제대로 먹지도, 제대로 입지도 못하고 있습니다.",
+          DialogueId = 51214097,
+          GUID = "803588CA",
+          NextDialogue = 51214098,
+          SpeakNpcId = 700467
+        },
+        [51214098] = {
+          Content = "以为艾森巴恩站长他有自己的难处，一切都会好转的啊，现在看来，绝无可能！",
+          ContentKR = "다들 아이젠반 역장도 뭔가 사정이 있겠지, 언젠가는 나아지겠지 하고 믿어 왔겠죠. 하지만 지금 보십시오. 전부 헛된 기대였죠!",
+          DialogueId = 51214098,
+          GUID = "803588F4",
+          NextDialogue = 51214099,
+          SpeakNpcId = 700467,
+          TalkActionId = {
+            [1] = "700467:Talk01_End"
+          }
+        },
+        [51214099] = {
+          Content = "所以说，我们得要趁今天这个机会，聚集力量，发出我们自己的声音，让他这个站长就做到今天！",
+          ContentKR = "그러니 오늘 이 기회를 놓치지 말고 다 함께 목소리를 내야 합니다. 아이젠반을 역장 자리에서 끌어내려야 합니다!",
+          DialogueId = 51214099,
+          GUID = "8035891E",
+          NextDialogue = 51214100,
+          SpeakNpcId = 700467,
+          TalkActionId = {
+            [1] = "700467:Confident_Start"
+          }
+        },
+        [51214100] = {
+          Content = "不过嘛，聚集力量总是需要一定家底的，我个人已经打算把所有财产都用来打倒他了，你们要是和我有相同想法，不如给我来一点资金支持。",
+          ContentKR = "다만 이런 일을 하려면 어느 정도 돈이 필요합니다. 저는 제 전 재산을 아이젠반을 몰아내는 일에 걸 생각입니다. 뜻을 함께하신다면 조금씩만 힘을 보태 주십시오.",
+          DialogueId = 51214100,
+          GUID = "80358948",
+          NextDialogue = 51214101,
+          SpeakNpcId = 700467
+        },
+        [51214101] = {
+          Content = "事成之后啊，我保荐你们去做列车长、警卫长！",
+          ContentKR = "일이 성공하면 제가 여러분을 차장이나 경비대장으로 추천해 드리겠습니다!",
+          DialogueId = 51214101,
+          GUID = "80358972",
+          NextDialogue = 51214102,
+          SpeakNpcId = 700467,
+          TalkActionId = {
+            [1] = "700467:Confident_End"
+          }
+        },
+        [51214102] = {
+          Content = "（这个家伙，在趁着这个乱局骗人钱财……先让他安静下来吧。）",
+          ContentKR = "(어수선한 틈을 타서 돈을 뜯어내려는 사람이네... 우선 입부터 다물게 해야겠어.)",
+          DialogueId = 51214102,
+          GUID = "8035899C",
+          NextOptions = {
+            [1] = 51214103,
+            [2] = 51214106,
+            [3] = 51214110
+          },
+          SpeakNpcId = 100001
+        },
+        [51214103] = {
+          Content = "（警告他不许闹事。）",
+          ContentKR = "(소란을 피우지 말라고 경고한다.)",
+          DialogueId = 51214103,
+          GUID = "803589C6",
+          ImprPlusId = 1007,
+          NextDialogue = 51214104
+        },
+        [51214104] = {
+          Content = "不管艾森巴恩怎么样，你在这边夸下海口筹钱，是不是想趁乱发财？",
+          ContentKR = "아이젠반이 어떻든, 당신도 여기서 큰소리치며 돈을 걷고 있잖아요. 이참에 한몫 챙기려는 수작 아니에요?",
+          DialogueId = 51214104,
+          GUID = "803589F0",
+          NextDialogue = 51214105,
+          SpeakNpcId = 100001
+        },
+        [51214105] = {
+          Content = "你们几个家伙，这时候装什么正义使者！",
+          ContentKR = "이 녀석들이, 이런 상황에 어디서 정의로운 척이야?",
+          DialogueId = 51214105,
+          GUID = "80358A1A",
+          SpeakNpcId = 700467
+        },
+        [51214106] = {
+          Content = "（温和劝说，了解对方的诉求。）",
+          ContentKR = "(부드럽게 타이르며 상대가 원하는 것을 알아본다.)",
+          DialogueId = 51214106,
+          GUID = "80358A44",
+          ImprPlusId = 1009,
+          NextDialogue = 51214107
+        },
+        [51214107] = {
+          Content = "你遇到了什么样的不公，又有什么诉求？有矛盾并不一定需要用这种极端方式去解决。",
+          ContentKR = "혹시 무슨 억울한 일이라도 당하신 건가요? 원하는 게 있으면 대화로 풀어요. 꼭 이렇게까지 과격하게 나올 필요는 없잖아요.",
+          DialogueId = 51214107,
+          GUID = "80358A6E",
+          NextDialogue = 51214108,
+          SpeakNpcId = 100001
+        },
+        [51214108] = {
+          Content = "我……我……我就是热心肠，看不惯艾森巴恩。再说了，艾森巴恩恶贯满盈，是人人都知道的事情。",
+          ContentKR = "내, 내가... 그냥 오지랖이 넓어서 아이젠반 하는 꼴을 두고 볼 수 없었을 뿐이야! 게다가 아이젠반이 얼마나 나쁜 놈인지는 모르는 사람이 없잖아!",
+          DialogueId = 51214108,
+          GUID = "80358A98",
+          NextDialogue = 51214109,
+          SpeakNpcId = 700467
+        },
+        [51214109] = {
+          Content = "你说我极端，我看你是袒护他！今天你就和艾森巴恩一起吃拳头吧！",
+          ContentKR = "내가 과격하다고? 보니까 네가 그 자식 편을 드는 거네! 그럼 오늘 너도 아이젠반이랑 같이 주먹맛 좀 보든가!",
+          DialogueId = 51214109,
+          GUID = "80358AC2",
+          SpeakNpcId = 700467
+        },
+        [51214110] = {
+          Content = "（给他一拳，让他安静下来。）",
+          ContentKR = "(한 대 쳐서 조용히 시킨다.)",
+          DialogueId = 51214110,
+          GUID = "80358AEC",
+          ImprPlusId = 1010,
+          NextDialogue = 51214111
+        },
+        [51214111] = {
+          Content = "你、你干什么？你别动手啊……我我、我，我告诉你！越是要镇压，我们越是要反抗！我们是不会低头的！",
+          ContentKR = "너, 너 뭐 하는 거야? 때리지 마... 말해 두는데, 찍어 누르려 할수록 우리는 더 저항할 거야! 우리는 절대 물러서지 않아!",
+          DialogueId = 51214111,
+          GUID = "80358B16",
+          SpeakNpcId = 700467
+        },
+        [51214112] = {DialogueId = 51214112, GUID = "80358B40"},
+        [51214113] = {
+          Content = "嗷，别打了老大，错了，错了……我再也不招摇撞骗了……",
+          ContentKR = "아악, 때리지 마세요, 형님. 잘못했습니다, 잘못했어요... 다시는 사기 치고 다니지 않겠습니다...",
+          DialogueId = 51214113,
+          GUID = "80358B6A",
+          NextDialogue = 51214114,
+          SpeakNpcId = 700467
+        },
+        [51214114] = {
+          Content = "你为什么要在这里假装伸冤，借用艾森巴恩站长的流言行骗？",
+          ContentKR = "왜 억울한 일을 당한 척하면서, 아이젠반 역장에 대한 소문을 이용해 사기를 친 거죠?",
+          DialogueId = 51214114,
+          GUID = "80358B94",
+          NextDialogue = 51214115,
+          SpeakNpcId = 100001
+        },
+        [51214115] = {
+          Content = "嘁，墙倒众人推，多简单。三天前，我还是他的狂热支持者，靠着演讲从汽笛沙龙的人兜里掏银币呢。",
+          ContentKR = "쳇, 분위기를 보고 잘 먹힐 쪽으로 몰아간 것뿐이에요. 사흘 전까지만 해도 저는 아이젠반의 열렬한 지지자인 척 연설해서, 기적 소리 살롱 사람들한테서 실버를 뜯어냈다고요.",
+          DialogueId = 51214115,
+          GUID = "80358BBE",
+          NextDialogue = 51214116,
+          SpeakNpcId = 700467
+        },
+        [51214116] = {
+          Content = "大家想听什么，我就说什么，我就是个普通的演说者罢了，靠着大家的支持和打赏赚点辛苦钱，其实也不是什么骗……",
+          ContentKR = "그냥 사람들이 듣고 싶어 하는 말을 해 준 거예요. 전 그냥 지지와 후원으로 수고비로 먹고 사는 평범한 연설가일 뿐인데, 그걸 가지고 사기라고 하시면 좀...",
+          DialogueId = 51214116,
+          GUID = "80358BE8",
+          NextDialogue = 51214117,
+          SpeakNpcId = 700467
+        },
+        [51214117] = {
+          Content = "嗯？你说什么？",
+          ContentKR = "뭐? 지금 너 지금 그게 무슨 소리야?",
+          DialogueId = 51214117,
+          GUID = "80358C12",
+          NextDialogue = 51214118,
+          SpeakNpcId = 100401
+        },
+        [51214118] = {
+          Content = "（抗议者看了看奥特赛德拳头，老老实实地低下头当鹌鹑。）",
+          ContentKR = "(항의하던 사람은 아웃사이더의 주먹을 힐끗 보더니, 겁을 먹고 얌전히 고개를 숙인다.)",
+          DialogueId = 51214118,
+          GUID = "80358C3C",
+          NextDialogue = 51214119
+        },
+        [51214119] = {
+          Content = "对不起，老大们，我是个该死的骗子。",
+          ContentKR = "죄송합니다. 저는 죽어도 싼 사기꾼입니다.",
+          DialogueId = 51214119,
+          GUID = "80358C66",
+          NextDialogue = 51214120,
+          SpeakNpcId = 700467
+        },
+        [51214120] = {
+          Content = "你都知道些什么，为什么说艾森巴恩走私？",
+          ContentKR = "당신은 대체 뭘 알고 있길래 아이젠반이 밀수했다고 말한 거예요?",
+          DialogueId = 51214120,
+          GUID = "80358C90",
+          NextDialogue = 51214121,
+          SpeakNpcId = 100001
+        },
+        [51214121] = {
+          Content = "当然是因为大家都这么说，具体我也不知道，有人说他走私月髓液，有人说他倒卖的是魔灵，说什么都有。",
+          ContentKR = "다들 그렇게 말하니까요. 자세한 건 저도 몰라요. 액체 폭시코르를 밀수했다는 얘기도 있고, 마령을 되팔았다는 얘기도 있고, 온갖 말이 다 도는걸요.",
+          DialogueId = 51214121,
+          GUID = "80358CBA",
+          NextDialogue = 51214122,
+          SpeakNpcId = 700467
+        },
+        [51214122] = {
+          Content = "你是听谁说的？",
+          ContentKR = "그 말은 누구한테 들었어요?",
+          DialogueId = 51214122,
+          GUID = "80358CE4",
+          NextDialogue = 51214123,
+          SpeakNpcId = 100001
+        },
+        [51214123] = {
+          Content = "呃……一个看起来很失望的男的，还有个商人？哦对了，还有个疯女人，一直在说让艾森巴恩偿命。",
+          ContentKR = "어... 잔뜩 실망한 것 같은 남자랑, 상인 한 명이요? 아, 맞다. 아이젠반한테 계속 목숨으로 갚으라고 하는 미친 여자도 한 명 있었어요.",
+          DialogueId = 51214123,
+          GUID = "80358D0E",
+          NextDialogue = 51214124,
+          SpeakNpcId = 700467
+        },
+        [51214124] = {
+          Content = "我记得我警告过他们不要再说了，如果好言相劝你们不听，那我们会长也不介意采取一些特殊的权力，来维护艾森巴恩站长大人的声誉。",
+          ContentKR = "분명히 더는 말하지 말라고 경고했을 텐데요. 좋은 말로 할 때 안 들으시면, 우리 회장님께서 아이젠반 역장님의 명예를 지키기 위해 다른 방법을 쓰실지도 몰라요.",
+          DialogueId = 51214124,
+          GUID = "80358D38",
+          NextDialogue = 51214125,
+          SpeakNpcId = 100001
+        },
+        [51214125] = {
+          Content = "哎呀，没用的啦，要是警告有用的话，世界早就和平了。你得像我这样，鼓动起大家的情绪来……不过现在也已经来不及了。",
+          ContentKR = "에이, 소용없습니다. 경고로 될 일이었으면 세상은 진작 평화로웠겠죠. 사람들을 움직이려면 저처럼 감정을 건드려야 하는 법입니다. ...뭐, 이제는 이미 늦었지만요.",
+          DialogueId = 51214125,
+          GUID = "80358D62",
+          NextDialogue = 51214126,
+          SpeakNpcId = 700467
+        },
+        [51214126] = {
+          Content = "其实本来我都不觉得这件事是真的。但你们一来，我反而相信这是真的了。",
+          ContentKR = "솔직히 처음엔 저도 그냥 헛소문인 줄 알았어요. 그런데 당신들이 이렇게 찾아오시니, 오히려 사실이란 걸 확신하게 되네요.",
+          DialogueId = 51214126,
+          GUID = "80358D8C",
+          NextDialogue = 51214127,
+          SpeakNpcId = 700467
+        },
+        [51214127] = {
+          Content = "你们过来，说明你们着急了，害怕了，对不对？否则放着不管就是了。",
+          ContentKR = "당신들이 직접 나섰다는 건, 그만큼 다급하고 겁이 났다는 뜻이잖습니까? 사실이 아니었으면 그냥 내버려뒀겠죠.",
+          DialogueId = 51214127,
+          GUID = "80358DB6",
+          NextDialogue = 51214128,
+          SpeakNpcId = 700467
+        },
+        [51214128] = {
+          Content = "我想肯定不止我一个人这么想……不过你也别操心了，百花车站地方不大，人员流动快，有点事情传得比火箭还快，现在肯定整个车站里的人都知道了。",
+          ContentKR = "아마 저 혼자만 그렇게 생각하진 않을 걸요... 근데 너무 마음 졸이실 필요는 없어요. 블룸필드역은 작고 오가는 사람이 많아서, 이런 얘기는 순식간에 퍼지거든요. 지금쯤 역 안 사람들은 다 알고 있을걸요.",
+          DialogueId = 51214128,
+          GUID = "80358DE0",
+          NextDialogue = 51214129,
+          SpeakNpcId = 700467
+        },
+        [51214129] = {
+          Content = "（我是外来者，不清楚车站消息走得这么快……但是，身为汽笛沙龙的会长，西顿会提前想不到这样的事吗？）",
+          ContentKR = "(역 안 소문이 이렇게 빨리 퍼질 줄은 몰랐어... 하지만 난 외부인이라서 몰랐다고 쳐도, 기적 소리 살롱 회장이 이걸 예상하지 못했을까?)",
+          DialogueId = 51214129,
+          GUID = "80358E0A",
+          NextDialogue = 51214130,
+          SpeakNpcId = 100001
+        },
+        [51214130] = {
+          Content = "我也听到了，我来说吧，小矮子怕是吓了一跳。西顿那家伙说的是……",
+          ContentKR = "꼬맹이가 듣고 깜짝 놀랐나 보네. 나도 같이 들었으니까, 대신 말해 줄게. 시돈 그 녀석이 뭐라고 했냐면...",
+          DialogueId = 51214130,
+          GUID = "80358E34",
+          NextDialogue = 51214131,
+          SpeakNpcId = 100401
+        },
+        [51214131] = {
+          Content = "“对于士兵来说，武器就是生命，这代表我对站长的忠诚。”",
+          ContentKR = "\"병사에게 무기는 목숨과도 같으니, 이 무기는 역장님을 향한 제 충심이나 다름없습니다.\"",
+          DialogueId = 51214131,
+          GUID = "80358E5E",
+          NextDialogue = 51214132,
+          SpeakNpcId = 100401
+        },
+        [51214132] = {
+          Content = "“作为报答，我所要的嘉奖，是站长大人的心脏。”",
+          ContentKR = "\"제 충심에 대한 보답으로, 역장님의 심장을 받고 싶습니다.\"",
+          DialogueId = 51214132,
+          GUID = "80358E88",
+          NextDialogue = 51214133,
+          SpeakNpcId = 100401
+        },
+        [51214133] = {
+          Content = "（……如果反过来呢？如果西顿的真实目的并不是制止这条消息传播，而是……）",
+          ContentKR = "(...만약 정반대라면? 애초에 시돈의 진짜 목적이 소문을 막는 게 아니었다면...)",
+          DialogueId = 51214133,
+          GUID = "80358EB2",
+          NextDialogue = 51214134,
+          SpeakNpcId = 100001
+        },
+        [51214134] = {
+          Content = "……想让一件事人尽皆知，最有效的手段反而是尝试掩盖它。",
+          ContentKR = "...모두에게 알리고 싶은 일이 있을 때, 제일 좋은 방법은 자꾸 숨기려 드는 거지.",
+          DialogueId = 51214134,
+          GUID = "80358EDC",
+          NextDialogue = 51214135,
+          SpeakNpcId = 100001
+        },
+        [51214135] = {
+          Content = "对对对，哎哟，反正就是这么回事。但你也不用太愧疚……虽然我维权是假的，但万一“艾森巴恩不是个东西”是真的呢？",
+          ContentKR = "맞습니다, 바로 그겁니다. 너무 자책하진 마세요... 제가 부당함에 항의하는 척 사기를 친 건 맞지만, '아이젠반이 정말 나쁜 놈'이라는 건 사실일 수도 있잖습니까?",
+          DialogueId = 51214135,
+          GUID = "80358F06",
+          NextDialogue = 51214136,
+          SpeakNpcId = 700467
+        },
+        [51214136] = {
+          Content = "你口才这么好，真是个演说家苗子，不如跟着我学两招，现在拜我为师，可以不收你的拜师费和好处费……",
+          ContentKR = "근데 말재주가 좋으신 게, 사람들 앞에서도 제법 먹히겠는데요. 이참에 저한테 한 수 배워 보시죠? 지금 제자로 들어오시면, 강의료나 사례비는 특별히 안 받겠습니다...",
+          DialogueId = 51214136,
+          GUID = "80358F30",
+          NextDialogue = 51214137,
+          SpeakNpcId = 700467
+        },
+        [51214137] = {
+          Content = "你那不是演说，你那是招摇撞骗，死了这条贼心吧，{nickname}没有那么傻。你刚刚说来不及了，是什么意思？",
+          ContentKR = "그건 연설이 아니라 사기잖아. {nickname}은(는) 그렇게 어수룩하지 않으니까, 속일 생각이라면 그만둬. 근데 방금 이미 늦었다는 말은 무슨 뜻이야?",
+          DialogueId = 51214137,
+          GUID = "80358F5A",
+          NextDialogue = 51214138,
+          SpeakNpcId = 100401
+        },
+        [51214138] = {
+          Content = "你真是我同行吧，这么拆我台！……因为有人根据这张照片做了海报呀……现在已经贴遍车站了啊，你们没看见吗？",
+          ContentKR = "제가 장사하는 꼴을 못 보시는군요. 설마 같은 업계분이세요? ...이미 누가 이 사진으로 포스터를 만들어서 역 안 구석구석에 붙여 놨다고요. 아직 못 보셨어요?",
+          DialogueId = 51214138,
+          GUID = "80358F84",
+          NextDialogue = 51214139,
+          SpeakNpcId = 700467
+        },
+        [51214139] = {
+          Content = "现在除非是艾森巴恩本人出来说话，否则大家是不会听的。就算他本人来说，大家也更相信自己的眼睛。我不知道你们是谁，总之放弃吧。",
+          ContentKR = "이제 아이젠반이 직접 나와서 해명해도 늦었어요. 사람들은 남의 말보다 자기 눈으로 직접 본 걸 믿는 법이니까요. 당신들이 누군진 몰라도, 이쯤에서 손 떼는 게 나을 거예요.",
+          DialogueId = 51214139,
+          GUID = "80358FAE",
+          SpeakNpcId = 700467
+        },
+        [51214140] = {DialogueId = 51214140, GUID = "80358FD8"},
+        [51214141] = {
+          Content = "小仆从，你为什么放那家伙走了？我们不用把他带回去，给西顿会长当罪证吗？",
+          ContentKR = "시종, 쟤 왜 그냥 놔줬어? 시돈 회장한테 증인으로 끌고 가야 했던 거 아니야?",
+          DialogueId = 51214141,
+          GUID = "80359002",
+          NextDialogue = 51214142,
+          SpeakNpcId = 100402
+        },
+        [51214142] = {
+          Content = "如果大家的想法，真的和刚刚那个抗议的人一样的话，那么岂不是说，车站里已经有好多好多人觉得艾森巴恩犯了很大的罪。",
+          ContentKR = "아까 그 사람 말대로라면, 역 안에 이미 아이젠반을 범인 취급하는 사람이 엄청 많다는 얘기잖아.",
+          DialogueId = 51214142,
+          GUID = "8035902C",
+          NextDialogue = 51214143,
+          SpeakNpcId = 100402
+        },
+        [51214143] = {
+          Content = "这不是和那个西顿想要看到的，大家都拥护艾森巴恩的局面完全相反嘛！",
+          ContentKR = "시돈은 다들 아이젠반을 떠받들길 바랐다면서. 그런데 지금은 완전히 반대로 가고 있잖아!",
+          DialogueId = 51214143,
+          GUID = "80359056",
+          NextDialogue = 51214144,
+          SpeakNpcId = 100402
+        },
+        [51214144] = {
+          Content = "嗯……他拜托我们消除那种照片带来的影响，可是结果反而是火上浇油。",
+          ContentKR = "음... 사진 때문에 퍼진 소문을 잠재워 달라는 부탁이었는데, 우리가 움직일수록 오히려 소문이 더 커져 버렸네.",
+          DialogueId = 51214144,
+          GUID = "80359080",
+          NextDialogue = 51214145,
+          SpeakNpcId = 100401
+        },
+        [51214145] = {
+          Content = "但是……说不定这正是他想看到的。",
+          ContentKR = "하지만... 시돈이 애초에 그걸 노렸다면 얘기가 달라져.",
+          DialogueId = 51214145,
+          GUID = "803590AA",
+          NextDialogue = 51214146,
+          SpeakNpcId = 100001
+        },
+        [51214146] = {
+          Content = "毕竟你想想，这件事的根源虽然是我们拍到了艾森巴恩的照片，但是无论是拍照片这个任务，还是把这张照片选做优胜奖，都是汽笛沙龙的选择。",
+          ContentKR = "하긴, 생각해 봐. 이 일은 분명히 우리가 찍은 아이젠반의 사진 때문에 벌어진 거지만, 그 사진을 찍게 한 것도, 사진을 우승작으로 고른 것도 전부 기적 소리 살롱이었어.",
+          DialogueId = 51214146,
+          GUID = "803590D4",
+          NextDialogue = 51214147,
+          SpeakNpcId = 100401
+        },
+        [51214147] = {
+          Content = "而在这张照片小范围造成影响后，又立刻派我们来消除影响，怎么看都很可疑。",
+          ContentKR = "그래 놓곤 그 사진이 조금 퍼지자마자 바로 우리를 보내서 수습하게 했잖아. 아무리 봐도 수상해.",
+          DialogueId = 51214147,
+          GUID = "803590FE",
+          NextDialogue = 51214148,
+          SpeakNpcId = 100401
+        },
+        [51214148] = {
+          Content = "可是……刚刚那个人也说，这只会让更多人知道这件事……",
+          ContentKR = "근데... 방금 그 사람이 그랬지. 우리가 나설수록 오히려 더 많은 사람이 이 일을 알게 된다고...",
+          DialogueId = 51214148,
+          GUID = "80359128",
+          NextDialogue = 51214149,
+          SpeakNpcId = 100401
+        },
+        [51214149] = {
+          Content = "所以你的意思是，这些其实都是西顿故意的。汽笛沙龙故意想要给艾森巴恩制造麻烦？",
+          ContentKR = "그러니까 네 말은, 사실은 이게 다 시돈이 짜 놓은 판이라는 거네. 기적 소리 살롱이 일부러 아이젠반을 골탕 먹이려고 한다는 거야?",
+          DialogueId = 51214149,
+          GUID = "80359152",
+          NextDialogue = 51214150,
+          SpeakNpcId = 100001
+        },
+        [51214150] = {
+          Content = "嗯……从之前剧团排练那件事，他最后那句话看，他恐怕确实不怎么喜欢艾森巴恩，甚至可能还有不小的敌意。",
+          ContentKR = "음... 전에 극단 리허설 때 시돈이 마지막으로 한 말을 떠올리면 앞뒤가 맞아. 단순히 아이젠반을 싫어하는 정도가 아니라, 생각보다 훨씬 더 증오하고 있을지도 몰라.",
+          DialogueId = 51214150,
+          GUID = "8035917C",
+          NextDialogue = 51214151,
+          SpeakNpcId = 100001
+        },
+        [51214151] = {
+          Content = "是的，恐怕我们都是他计划中的一环。",
+          ContentKR = "맞아. 아마 우리도 시돈의 계획에 이용된 것일 수도 있어.",
+          DialogueId = 51214151,
+          GUID = "803591A6",
+          SpeakNpcId = 100401
+        },
+        [51214152] = {DialogueId = 51214152, GUID = "803591D0"},
+        [51214153] = {
+          Content = "欢迎回来，新人。先坐下来喝口茶吧，我们慢慢说……情况如何？",
+          ContentKR = "어서 오시죠, 신입 회원님. 우선 앉아 차부터 한잔하시고, 천천히 이야기해 보죠... 그래서 상황은 어떻습니까?",
+          DialogueId = 51214153,
+          GUID = "803591FA",
+          NextDialogue = 51214154,
+          SpeakNpcId = 700400
+        },
+        [51214154] = {
+          Content = "（向西顿讲述了流言愈传愈广的消息，以及自己的制止起了反效果这回事。）",
+          ContentKR = "(시돈에게 소문이 걷잡을 수 없이 퍼졌고, 우리가 수습하러 나설수록 오히려 더 많은 사람이 그 소문을 믿게 됐다고 설명했다.)",
+          DialogueId = 51214154,
+          GUID = "80359224",
+          IsBlack = 1,
+          NextDialogue = 51214155
+        },
+        [51214155] = {
+          Content = "还真是手段温和的劝阻……你就没想过，用一些更激进的手段，让他们再也说不了话吗？",
+          ContentKR = "상당히 유한 수단을 쓰셨군요... 조금 더 세게 나가서, 그 사람들이 입도 벙긋 못 하게 만들 생각은 안 해 보셨습니까?",
+          DialogueId = 51214155,
+          GUID = "8035924E",
+          NextOptions = {
+            [1] = 51214156,
+            [2] = 51214158
+          },
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Think_Start"
+          }
+        },
+        [51214156] = {
+          Content = "……我不认为需要做到这个地步。",
+          ContentKR = "...그럴 필요까진 없을 것 같아요.",
+          DialogueId = 51214156,
+          GUID = "80359278",
+          NextDialogue = 51214157
+        },
+        [51214157] = {
+          Content = "呵呵……放松些，我只是开个玩笑。",
+          ContentKR = "후후... 긴장 푸세요. 농담이었습니다.",
+          DialogueId = 51214157,
+          GUID = "803592A2",
+          NextDialogue = 51214160,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Think_End"
+          }
+        },
+        [51214158] = {
+          Content = "你看起来并不意外这个结果。",
+          ContentKR = "이런 결과를 이미 예상하셨군요.",
+          DialogueId = 51214158,
+          GUID = "803592CC",
+          NextDialogue = 51214159
+        },
+        [51214159] = {
+          Content = "因为我已经做好了万全的准备，不管你带回来什么样的消息，我都不会惊讶的。",
+          ContentKR = "어떤 소식을 들고 오시든 당황하지 않도록, 미리 대비해 두었을 뿐입니다.",
+          DialogueId = 51214159,
+          GUID = "803592F6",
+          NextDialogue = 51214160,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Think_End"
+          }
+        },
+        [51214160] = {
+          Content = "真的是这样吗？",
+          ContentKR = "정말 그게 다예요?",
+          DialogueId = 51214160,
+          GUID = "80359320",
+          NextDialogue = 51214161,
+          SpeakNpcId = 100001
+        },
+        [51214161] = {
+          Content = "当然，我本来也不会苛责一名新人，何况你已经做得很好了。",
+          ContentKR = "물론이죠. 애초에 회원님을 탓할 일도 아니었고, 이렇게 수습까지 잘해 주셨는데요.",
+          DialogueId = 51214161,
+          GUID = "8035934A",
+          NextDialogue = 51214162,
+          SpeakNpcId = 700400
+        },
+        [51214162] = {
+          Content = "我觉得你是故意的。",
+          ContentKR = "처음부터 일부러 그러신 거잖아요.",
+          DialogueId = 51214162,
+          GUID = "80359374",
+          NextDialogue = 51214163,
+          SpeakNpcId = 100001
+        },
+        [51214163] = {
+          Content = "怎么会呢？我们汽笛沙龙上下代表艾森巴恩的荣誉，我们只是为了更好的百花车站，更好的艾森巴恩——",
+          ContentKR = "그럴 리가 있겠습니까? 기적 소리 살롱은 아이젠반의 명예를 위해 움직이는 조직입니다. 저희는 그저 더 나은 블룸필드역과 더 나은 아이젠반을 위해...",
+          DialogueId = 51214163,
+          GUID = "8035939E",
+          NextDialogue = 51214164,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk02_Start"
+          }
+        },
+        [51214164] = {
+          Content = "前提是他本来就是好的，不是吗？",
+          ContentKR = "물론, 그 말도 아이젠반이 애초에 좋은 사람이어야 통하겠지만요. 안 그렇습니까?",
+          DialogueId = 51214164,
+          GUID = "803593C8",
+          NextDialogue = 51214165,
+          SpeakNpcId = 700400
+        },
+        [51214165] = {
+          Content = "但也是建立在，他真的是一个值得我们追随的人这一前提之上。很可惜，我从未像今天一样后悔自己居然没有一双可以看透人心的双眼。",
+          ContentKR = "추앙할 만한 사람이라는 믿음이 있어야 '더 나은 아이젠반' 같은 말도 할 수 있겠죠. 참 안타깝습니다. 제가 사람을 그렇게까지 잘못 봤다니, 오늘만큼 뼈저리게 후회한 적이 없군요.",
+          DialogueId = 51214165,
+          GUID = "803593F2",
+          NextDialogue = 51214166,
+          SpeakNpcId = 700400
+        },
+        [51214166] = {
+          Content = "你也很失望吧，新人。明明是抱着期待和崇拜，去拍摄了那样一张精彩的照片……",
+          ContentKR = "신입 회원님께서도 실망이 크지 않습니까? 아이젠반을 열렬히 믿고 숭배하셨으니, 그런 멋진 사진도 찍어 오신 거겠죠.",
+          DialogueId = 51214166,
+          GUID = "8035941C",
+          NextDialogue = 51214167,
+          SpeakNpcId = 700400
+        },
+        [51214167] = {
+          Content = "你身为汽笛沙龙的会长，其他人都看得出来这张照片有问题，你不可能看不出来。",
+          ContentKR = "모두가 다 알아챈 문제를, 기적 소리 살롱의 회장인 당신이 몰랐을 리가 없어요.",
+          DialogueId = 51214167,
+          GUID = "80359446",
+          NextDialogue = 51214168,
+          SpeakNpcId = 100001
+        },
+        [51214168] = {
+          Content = "何况汽笛沙龙上下几十号人，不可能没有一个人发现它的问题，不可能没有一个人知道，这张照片不利于艾森巴恩的名誉。除非……",
+          ContentKR = "게다가 살롱 회원이 수십 명이나 되는데, 그중에 이 사진의 문제를 알아챈 사람이 한 명도 없다고요? 이 사진이 아이젠반의 명예에 누를 끼칠 수 있다는 사실을 정말 아무도 몰랐나요? 설마요, 아마 그게 아니라...",
+          DialogueId = 51214168,
+          GUID = "80359470",
+          NextDialogue = 51214169,
+          SpeakNpcId = 100001
+        },
+        [51214169] = {
+          Content = "除非你们是故意的。你们并不是看中我的摄影手法，而是因为我拍到了关键证据。",
+          ContentKR = "알면서 그런 거겠죠. 당신들은 제 실력을 보고 1등 상을 준 게 아니라, 사진에 찍힌 핵심 증거를 본 거예요.",
+          DialogueId = 51214169,
+          GUID = "8035949A",
+          NextDialogue = 51214170,
+          SpeakNpcId = 100001
+        },
+        [51214170] = {
+          Content = "……你快速用照片印了海报，用知识问答和宣传活动来传播这张照片，然后推动流言的产生。因为有照片佐证，所以流言没费什么功夫就传开了。",
+          ContentKR = "...당신은 곧바로 그 사진을 포스터로 인쇄하고, 퀴즈와 홍보 행사까지 벌여서 사람들 눈에 띄게 했어요. 그리곤 살살 소문을 냈겠죠. 증거 사진이 있으니까, 소문은 금세 퍼져나갔을 거고요.",
+          DialogueId = 51214170,
+          GUID = "803594C4",
+          NextDialogue = 51214171,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "700400:Talk02_End"
+          }
+        },
+        [51214171] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51214171,
+          GUID = "803594EE",
+          NextDialogue = 51214172,
+          SpeakNpcId = 700400
+        },
+        [51214172] = {
+          Content = "聪明。",
+          ContentKR = "눈치가 아주 빠르시군요.",
+          DialogueId = 51214172,
+          GUID = "80359518",
+          NextDialogue = 51214173,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Agree"
+          }
+        },
+        [51214173] = {
+          Content = "你让我去解决那些人，是推我出去把消息坐实。因为我是沙龙的生面孔，更容易让人觉得是艾森巴恩自己下手拦截消息了。",
+          ContentKR = "저한테 수습을 부탁한 것도, 그 소문을 진짜로 만들기 위해서였겠죠. 살롱에서 얼굴이 알려지지 않은 제가 나서면, 사람들은 아이젠반이 자기 부하를 보내서 상황을 무마하려는 거로 생각할 테니까요.",
+          DialogueId = 51214173,
+          GUID = "80359542",
+          NextDialogue = 51214174,
+          SpeakNpcId = 100001
+        },
+        [51214174] = {
+          Content = "你觉得，我们想要的是什么？",
+          ContentKR = "그렇다면 묻죠. 저희의 진짜 목적이 무엇이라고 생각하십니까?",
+          DialogueId = 51214174,
+          GUID = "8035956C",
+          NextDialogue = 51214175,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk01_Start"
+          }
+        },
+        [51214175] = {
+          Content = "你们想要的是……",
+          ContentKR = "당신들이 원하는 건 결국...",
+          DialogueId = 51214175,
+          GUID = "80359596",
+          NextOptions = {
+            [1] = 51214176,
+            [2] = 51214179
+          },
+          SpeakNpcId = 100001
+        },
+        [51214176] = {
+          Content = "艾森巴恩身败名裂。",
+          ContentKR = "아이젠반이 철저하게 무너지는 거예요.",
+          DialogueId = 51214176,
+          GUID = "803595C0",
+          ImprPlusId = 1008,
+          NextDialogue = 51214177
+        },
+        [51214177] = {
+          Content = "汽笛沙龙……作为艾森巴恩的追随者，反而想把他毁掉？你们想让他身败名裂。",
+          ContentKR = "기적 소리 살롱은... 아이젠반의 추종자들의 모임인데, 오히려 아이젠반을 끌어내리려 하고 있잖아요? 당신들이 바라는 건 아이젠반의 완전한 몰락이겠죠.",
+          DialogueId = 51214177,
+          GUID = "803595EA",
+          NextDialogue = 51214178,
+          SpeakNpcId = 100001
+        },
+        [51214178] = {
+          Content = "没错，你很敏锐。",
+          ContentKR = "정확합니다. 아주 날카로우시군요.",
+          DialogueId = 51214178,
+          GUID = "80359614",
+          NextDialogue = 51214184,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk01_End"
+          }
+        },
+        [51214179] = {
+          Content = "让艾森巴恩注意到自己的爱！",
+          ContentKR = "아이젠반이 당신의 마음을 알아주는 거예요.",
+          DialogueId = 51214179,
+          GUID = "8035963E",
+          ImprPlusId = 1010,
+          NextDialogue = 51214180
+        },
+        [51214180] = {
+          Content = "这是爱而不得的扭曲！是因为他像朝阳般明亮，却没有只温暖你一人而生出的委屈！你们毁掉他，就是为了让艾森巴恩注意到你们的感情和真心……",
+          ContentKR = "사랑하는데 돌아봐 주질 않으니까 삐뚤어진 거죠? 아침 햇살처럼 눈 부신 아이젠반이, 오직 당신 한 사람만 바라봐주지 않으니까 서운했던 거예요! 그래서 아이젠반을 무너뜨리고, 당신의 진실된 마음을 봐달라고 애원하고 싶었던 거죠...",
+          DialogueId = 51214180,
+          GUID = "80359668",
+          NextDialogue = 51214181,
+          SpeakNpcId = 100001
+        },
+        [51214181] = {
+          Content = "……？什、什么？",
+          ContentKR = "......? 네? ...그게 무슨...?",
+          DialogueId = 51214181,
+          GUID = "80359692",
+          NextDialogue = 51214182,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk01_End"
+          }
+        },
+        [51214182] = {
+          Content = "我家大人比较幽默，{性别:他|她}的意思是你们想让艾森巴恩身败名裂。",
+          ContentKR = "저희 {性别:도련님|아가씨}께서 농담하신 거예요. 그러니까 여러분께선 아이젠반을 완전히 무너뜨리고 싶으시다는 거네요.",
+          DialogueId = 51214182,
+          GUID = "803596BC",
+          NextDialogue = 51214183,
+          SpeakNpcId = 100401
+        },
+        [51214183] = {
+          Content = "……的确如此。",
+          ContentKR = "...부인하진 않겠습니다.",
+          DialogueId = 51214183,
+          GUID = "803596E6",
+          NextDialogue = 51214184,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Agree"
+          }
+        },
+        [51214184] = {
+          Content = "你只是用追随者的名头，接近艾森巴恩……你为此布局多久了？",
+          ContentKR = "추종자라는 건 아이젠반에게 다가가기 위한 구실이었군요... 대체 언제부터 계획한 거죠?",
+          DialogueId = 51214184,
+          GUID = "80359710",
+          NextDialogue = 51214185,
+          SpeakNpcId = 100001
+        },
+        [51214185] = {
+          Content = "多久了呢……有两三年了吧，我也记不太清了。人只需要记住自己在乎的事情，不是么？这汽笛沙龙本来就是个幌子，我怎么会记得它成立的时间呢。",
+          ContentKR = "언제부터라... 이삼 년쯤 됐을 겁니다. 저도 정확히는 모르겠군요. 사실 자신에게 중요한 일만 기억하면 되지 않습니까? 기적 소리 살롱은 애초에 눈속임일 뿐인데, 설립 시기 같은 걸 제가 어떻게 기억하겠어요.",
+          DialogueId = 51214185,
+          GUID = "8035973A",
+          NextDialogue = 51214186,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk03_Start"
+          }
+        },
+        [51214186] = {
+          Content = "艾森巴恩本来就不配得到这一切，当初被派来百花车站的应该是我。",
+          ContentKR = "처음부터 그자는 이곳에 어울리지 않았습니다. 블룸필드역으로 왔어야 할 사람은 아이젠반이 아니라 저였단 말입니다.",
+          DialogueId = 51214186,
+          GUID = "80359764",
+          NextDialogue = 51214187,
+          SpeakNpcId = 700400
+        },
+        [51214187] = {
+          Content = "他夺走了我的车站，对这里的工人进行残酷的压榨和剥削……多可怜，如果是我，一定不会这样对待他们的。",
+          ContentKR = "제 역을 가로챈 것도 모자라, 일꾼들을 가혹하게 쥐어짜고 착취했어요. 가엾게도... 제가 책임자였다면 절대 그렇게 대하지 않았을 겁니다.",
+          DialogueId = 51214187,
+          GUID = "8035978E",
+          NextDialogue = 51214189,
+          SpeakNpcId = 700400
+        },
+        [51214188] = {
+          Content = "看看这张照片吧，新人。你亲手拍下的证据，压垮他虚伪的最后一击。看，月髓液，商人，还有他自己！",
+          ContentKR = "이 사진을 보세요, 회원님. 당신이 직접 찍은 증거이자, 아이젠반의 가면을 깨부술 결정타입니다. 액체 폭시코르와 상인, 아이젠반까지 전부 똑똑히 찍혀 있어요!",
+          DialogueId = 51214188,
+          GUID = "803597B8",
+          SpeakNpcId = 700400
+        },
+        [51214189] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51214189,
+          GUID = "803597E2",
+          NextDialogue = 51214190,
+          SpeakNpcId = 100001
+        },
+        [51214190] = {
+          Content = "他本就是个残酷的、残忍的、魔鬼一样的家伙。",
+          ContentKR = "그는 피도 눈물도 없는, 악마 같은 자입니다.",
+          DialogueId = 51214190,
+          GUID = "8035980C",
+          NextDialogue = 51214191,
+          SpeakNpcId = 700400
+        },
+        [51214191] = {
+          Content = "拖延工人的工资、让患病的工人等死、向当地商人索取保护费……一桩桩一件件，都是他犯下的罪恶。这座车站的繁荣，是以血为代价的。",
+          ContentKR = "임금을 체불하고, 병든 일꾼을 죽게 내버려두고, 상인들에게 보호비까지 뜯어냈죠... 전부 그자가 저지른 죄입니다. 이 번영하는 기차역은 타인의 고통 위에 세워진 거예요.",
+          DialogueId = 51214191,
+          GUID = "80359836",
+          NextDialogue = 51214192,
+          SpeakNpcId = 700400
+        },
+        [51214192] = {
+          Content = "看看这张照片吧，新人。你亲手拍下的证据，压垮他虚伪的最后一击。看，月髓液，商人，还有他自己！",
+          ContentKR = "이 사진을 보세요, 회원님. 당신이 직접 찍은 증거이자, 아이젠반의 가면을 깨부술 결정타입니다. 액체 폭시코르와 상인, 아이젠반까지 전부 똑똑히 찍혀 있어요!",
+          DialogueId = 51214192,
+          GUID = "80359860",
+          NextDialogue = 51214193,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Talk03_End"
+          }
+        },
+        [51214193] = {
+          Content = "真难得，我们汽笛沙龙除了托兰那样的局外人，居然还有你这样的家伙——敏锐，果决，比沙龙的所有成员都更有行动力。",
+          ContentKR = "놀랍게도, 기적 소리 살롱에는 톨란드 같은 불청객 말고 당신 같은 인재도 있었군요. 예리하고, 과감하며, 살롱의 그 누구보다 실행력이 출중합니다.",
+          DialogueId = 51214193,
+          GUID = "8035988A",
+          NextDialogue = 51214194,
+          SpeakNpcId = 700400
+        },
+        [51214194] = {
+          Content = "很高兴与你相识，新人……不，我的朋友。",
+          ContentKR = "당신을 알게 되어 정말 기쁩니다, 회원님... 아니, 나의 친구여.",
+          DialogueId = 51214194,
+          GUID = "803598B4",
+          NextDialogue = 51214195,
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Explain02_Start"
+          }
+        },
+        [51214195] = {
+          Content = "我已经安排好了一切。接下来，你将见证百花车站在你我手中迎来新生。艾森巴恩用那些见不得光的手段聚敛的财富，将用来造福这里的每个普通人。",
+          ContentKR = "모든 준비는 끝났습니다. 이제 이 블룸필드역이 우리 손에서 어떻게 다시 태어나는지 똑똑히 지켜봐 주세요. 아이젠반이 떳떳하지 못한 수단으로 모은 재산은, 이곳의 평범한 사람들을 위해 쓰일 겁니다.",
+          DialogueId = 51214195,
+          GUID = "803598DE",
+          NextDialogue = 51214196,
+          SpeakNpcId = 700400
+        },
+        [51214196] = {
+          Content = "造福普通人么……那希望你说到做到，祝愿你一切顺利。",
+          ContentKR = "평범한 사람들을 위해서라... 그 말, 꼭 지키시길 바랍니다. 그럼, 행운을 빌죠.",
+          DialogueId = 51214196,
+          GUID = "80359908",
+          NextDialogue = 51214197,
+          SpeakNpcId = 100001
+        },
+        [51214197] = {
+          Content = "谢谢你的祝福，朋友，让我们为美好的未来喝彩吧。",
+          ContentKR = "응원 감사합니다. 자, 이제 아름다운 미래를 위해 함께 환호합시다.",
+          DialogueId = 51214197,
+          GUID = "80359932",
+          SpeakNpcId = 700400,
+          TalkActionId = {
+            [1] = "700400:Explain02_End"
+          }
+        },
+        [51215001] = {
+          Content = "太阳带来永恒的丰穰，以致于人们在赞美诗中沉醉，忘记了它亦可创造死亡。",
+          ContentKR = "태양은 영원한 풍요를 가져왔고, 사람들은 황홀한 찬가에 취해 태양이 죽음마저 빚어낼 수 있다는 사실을 잊었다.",
+          DialogueId = 51215001,
+          GUID = "80361D1A"
+        },
+        [51215002] = {
+          Content = "……你回来了，我的朋友。看来，你已经做好准备，与汽笛沙龙一起见证艾森巴恩的谢幕。",
+          ContentKR = "...돌아오셨군요, 나의 친구. 기적 소리 살롱과 함께 아이젠반의 마지막을 지켜볼 준비는 다 되었나 보군요.",
+          DialogueId = 51215002,
+          GUID = "80361D44",
+          SpeakNpcId = 700580
+        },
+        [51215003] = {
+          Content = "正巧，我布置已久的对于艾森巴恩的围剿，还需要一点帮助就能完美收场……",
+          ContentKR = "안 그래도, 오래전부터 준비한 계획의 완벽한 마무리를 위해, 약간의 도움이 필요했습니다...",
+          DialogueId = 51215003,
+          GUID = "80361D6E",
+          SpeakNpcId = 700580
+        },
+        [51215004] = {
+          Content = "不会是想让我帮你刺杀艾森巴恩吧？",
+          ContentKR = "설마 저보고 아이젠반 암살을 도우라는 건 아니죠?",
+          DialogueId = 51215004,
+          GUID = "80361D98",
+          SpeakNpcId = 100001
+        },
+        [51215005] = {
+          Content = "哈哈，那你属实想的有点多了。虽然你的表现非常亮眼，但是汽笛沙龙中，对艾森巴恩持有长久恨意的人不在少数。",
+          ContentKR = "하하, 상상력이 조금 지나치시군요. 당신의 활약이 아주 눈부시긴 했지만, 기적 소리 살롱에도 아이젠반에게 오랜 원한을 품은 이들이 꽤 많습니다.",
+          DialogueId = 51215005,
+          GUID = "80361DC2",
+          SpeakNpcId = 700580
+        },
+        [51215006] = {
+          Content = "所以当我和信得过的沙龙成员透露了我的计划时，平时路过剧院门口可能都不会用眼睛余光扫一眼的家伙们都纷纷报名。",
+          ContentKR = "그래서 믿을 만한 살롱 회원들에게 제 계획을 털어놓았더니, 평소라면 극장 앞을 지나쳐도 곁눈질 한 번 하지 않았을 자들이 앞다투어 지원하더군요.",
+          DialogueId = 51215006,
+          GUID = "80361DEC",
+          SpeakNpcId = 700580
+        },
+        [51215007] = {
+          Content = "丝毫不考虑年龄啊嗓音什么的，一心只想着在戏剧的最后一刻向着艾森巴恩发射出子弹。",
+          ContentKR = "자기 나이나 목소리 같은 건 생각도 하지 않고, 모두 연극 마지막 순간에 아이젠반에게 총을 쏠 생각에 흥분한 것 같았습니다.",
+          DialogueId = 51215007,
+          GUID = "80361E16",
+          SpeakNpcId = 700580
+        },
+        [51215008] = {
+          Content = "实话说，如果不是我很可能会压抑不住自己的兴奋，无法完成表演，我是一定要亲自上场的。但为了计划能成功，最后还是选了列维这个年轻人。",
+          ContentKR = "솔직히 제가 직접 무대에 오르고 싶었지만, 마음이 흥분돼서 공연을 끝까지 해내지 못할 것 같더군요. 계획을 성공시키기 위해, 결국 레비라는 젊은이를 골랐습니다.",
+          DialogueId = 51215008,
+          GUID = "80361E40",
+          SpeakNpcId = 700580
+        },
+        [51215009] = {
+          Content = "说了这么多，想让我干什么？",
+          ContentKR = "저한테 뭘 시키려는 건지 요점부터 말해 주세요.",
+          DialogueId = 51215009,
+          GUID = "80361E6A",
+          SpeakNpcId = 100001
+        },
+        [51215010] = {
+          Content = "别急，年轻人。不过，也许正是你的这份急切造就了你的与众不同。",
+          ContentKR = "서두르지 말아요, 젊은이. 하긴, 어쩌면 그 조급함이 당신을 특별하게 만들어 주는지도 모르죠.",
+          DialogueId = 51215010,
+          GUID = "80361E94",
+          SpeakNpcId = 700580
+        },
+        [51215011] = {
+          Content = "事实上，这么多年来，你可能是唯一一个同时获得汽笛沙龙和螺丝刀协会青睐的人。",
+          ContentKR = "사실 이렇게 오랜 세월 동안, 기적 소리 살롱과 드라이버 협회 양쪽의 호감을 동시에 산 사람은 당신뿐일 겁니다.",
+          DialogueId = 51215011,
+          GUID = "80361EBE",
+          SpeakNpcId = 700580
+        },
+        [51215012] = {
+          Content = "你怎么知道？",
+          ContentKR = "그걸 어떻게 아세요?",
+          DialogueId = 51215012,
+          GUID = "80361EE8",
+          SpeakNpcId = 100001
+        },
+        [51215013] = {
+          Content = "既然我能够在艾森巴恩不知道的地方，组织起这么一场对他的行刺，那自然还是有一些情报网的。",
+          ContentKR = "아이젠반의 눈을 피해 이런 암살극을 꾸밀 생각이라면, 그 정도 정보망은 당연히 갖추고 있지 않겠습니까?",
+          DialogueId = 51215013,
+          GUID = "80361F12",
+          SpeakNpcId = 700580
+        },
+        [51215014] = {
+          Content = "总之呢，鉴于你和螺丝刀协会也有一些友好往来，所以呢，我希望你能邀请他们，在车站中制造混乱，并一同见证艾森巴恩的最终结局。",
+          ContentKR = "아무튼 드라이버 협회와 어느 정도 친분이 있으시니, 그들이 기차역에서 소동을 일으키게 한 다음, 아이젠반의 최후를 함께 지켜보게 해 주시면 좋겠습니다.",
+          DialogueId = 51215014,
+          GUID = "80361F3C",
+          SpeakNpcId = 700580
+        },
+        [51215015] = {
+          Content = "否则那些如同地里的鼹鼠一般的家伙，恐怕直到明天太阳升起都不会知道这座百花车站发生了什么样的变化。",
+          ContentKR = "아니면 그 땅속 두더지 같은 녀석들은, 내일 아침 해가 뜰 때까지도 블룸필드역에 무슨 변화가 생겼는지 모를 테니까요.",
+          DialogueId = 51215015,
+          GUID = "80361F66",
+          SpeakNpcId = 700580
+        },
+        [51215016] = {
+          Content = "我需要让他们在第一时间知道，这座车站接下来的主人是我，西顿·布鲁图斯。",
+          ContentKR = "이 역의 다음 주인이 바로 저, 시돈 브루투스라는 사실을 그들에게 최대한 빨리 알려야 합니다.",
+          DialogueId = 51215016,
+          GUID = "80361F90",
+          SpeakNpcId = 700580
+        },
+        [51215017] = {
+          Content = "这样一来，他们就会被你震慑，也能让你接下来的治理更加顺利？",
+          ContentKR = "그렇게 해서 드라이버 협회 사람들 기를 꺾어 놓으면, 역을 장악하기도 더 쉬워진다는 거군요?",
+          DialogueId = 51215017,
+          GUID = "80361FBA",
+          SpeakNpcId = 100001
+        },
+        [51215018] = {
+          Content = "不错，螺丝刀协会虽然是一个地下组织，但是他们在工人中的影响不容小觑。所以呢，他们自然是这场戏剧的最佳看客。",
+          ContentKR = "맞습니다. 드라이버 협회는 지하 조직이긴 해도 일꾼들 사이의 영향력을 얕볼 수 없습니다. 그러니 그들이야말로 이 연극에 가장 어울리는 관객이죠.",
+          DialogueId = 51215018,
+          GUID = "80361FE4",
+          SpeakNpcId = 700580
+        },
+        [51215019] = {
+          Content = "怎么样？愿意吗？如果他们能来，在事成之后，我可以把艾森巴恩积蓄的二十分之一……不，十分之一分给你。",
+          ContentKR = "어떠십니까? 제게 협력해 주시겠습니까? 드라이버 협회까지 움직여 준다면, 일이 끝난 뒤 아이젠반이 모아 둔 재산의 1/20... 아니, 1/10을 당신께 넘기죠.",
+          DialogueId = 51215019,
+          GUID = "8036200E",
+          SpeakNpcId = 700580
+        },
+        [51215020] = {
+          Content = "我答应，我也厌恶那个艾森巴恩很久了。",
+          ContentKR = "좋아요. 저도 그 아이젠반이라는 인간이 계속 마음에 안 들었어요.",
+          DialogueId = 51215020,
+          GUID = "80362038"
+        },
+        [51215021] = {
+          Content = "英雄的见解总是相似的，我的朋友。",
+          ContentKR = "큰 인물끼리는 생각이 통하는 법이죠, 나의 친구.",
+          DialogueId = 51215021,
+          GUID = "80362062",
+          SpeakNpcId = 700580
+        },
+        [51215022] = {
+          Content = "我会帮你联系螺丝刀协会，但我无法确保他们的反应会如你预想的一般。",
+          ContentKR = "드라이버 협회에 연락해 볼게요. 하지만 그 사람들이 생각하신 대로 반응할지는 장담 못 해요.",
+          DialogueId = 51215022,
+          GUID = "8036208C",
+          SpeakNpcId = 100001
+        },
+        [51215023] = {
+          Content = "我对你的许诺没兴趣，但我现在恐怕没有拒绝这个选项吧。",
+          ContentKR = "그런 보상엔 관심 없어요. 다만 지금은 거절이라는 선택지도 없는 것 같군요.",
+          DialogueId = 51215023,
+          GUID = "803620B6"
+        },
+        [51215024] = {
+          Content = "聪明，百花车站迟早会由我执掌，所以这时候满足我的要求，对你而言是正确选择，也是唯一的选择。",
+          ContentKR = "현명하시군요. 블룸필드역은 조만간 제 손에 넘어올 겁니다. 지금은 제 요구를 들어주시는 것 외에 다른 선택지는 없습니다.",
+          DialogueId = 51215024,
+          GUID = "803620E0",
+          SpeakNpcId = 700580
+        },
+        [51215025] = {
+          Content = "我会帮你联系螺丝刀协会，但我无法确保他们的反应会如你预想的一般。",
+          ContentKR = "드라이버 협회에 연락은 해 볼게요. 하지만 그 사람들이 생각하신 대로 반응할지는 장담 못 해요.",
+          DialogueId = 51215025,
+          GUID = "8036210A",
+          SpeakNpcId = 100001
+        },
+        [51215026] = {
+          Content = "（拒绝。）",
+          ContentKR = "(거절한다.)",
+          DialogueId = 51215026,
+          GUID = "80362134"
+        },
+        [51215027] = {
+          Content = "（在房间的角落，忠于西顿的红衫铁卫抬起了拳头。贸然拒绝的话，想必不会有什么好下场。）",
+          ContentKR = "(한쪽에서 시돈에게 충성하는 붉은 옷의 가디언이 주먹을 들어 올린다. 무턱대고 거절했다간 좋은 꼴을 보지 못할 것 같다.)",
+          DialogueId = 51215027,
+          GUID = "8036215E",
+          SpeakNpcId = 100001
+        },
+        [51215028] = {
+          Content = "行吧，我会帮你联系螺丝刀协会，但我无法确保他们的反应会如你预想的一般。",
+          ContentKR = "알겠어요. 드라이버 협회에 연락은 해 볼게요. 하지만 그 사람들이 생각하신 대로 반응할지는 장담 못 해요.",
+          DialogueId = 51215028,
+          GUID = "80362188",
+          SpeakNpcId = 100001
+        },
+        [51215029] = {
+          Content = "哈哈，没事，我相信他们既然能在艾森巴恩手下活上这么久，最起码的嗅觉还是有的。",
+          ContentKR = "하하, 괜찮습니다. 아이젠반 밑에서 그렇게 오래 살아남았다면, 최소한 눈치 정도는 있을 테니까요.",
+          DialogueId = 51215029,
+          GUID = "803621B2",
+          SpeakNpcId = 700580
+        },
+        [51215030] = {
+          Content = "那么，去吧。晚些时候，让我们一起好好地看看我们的艾森巴恩大人。",
+          ContentKR = "그럼 다녀오시죠. 조금 뒤엔, 우리 아이젠반 님의 마지막을 눈 똑똑히 뜨고 지켜봐야 하니까요.",
+          DialogueId = 51215030,
+          GUID = "803621DC",
+          SpeakNpcId = 700580
+        },
+        [51215031] = {
+          Content = "你猜，他是会求饶呢？还是会怒骂畜生呢？或者，如果列维的枪法足够好的话，他可能在意识到发生了什么的同时就已经迎来死亡……",
+          ContentKR = "어떨 것 같습니까? 아이젠반은 살려달라고 빌까요? 아니면 화가 나서 욕을 퍼부을까요? 아니면 레비의 훌륭한 총솜씨 덕분에, 상황을 깨닫는 순간 바로 죽음을 맞이하게 될까요...?",
+          DialogueId = 51215031,
+          GUID = "80362206",
+          SpeakNpcId = 700580
+        },
+        [51215032] = {
+          Content = "最好不要这样，嗯……我需要考虑要不和列维单独聊一聊。",
+          ContentKR = "그렇게 끝나면 곤란한데요. 흠... 레비와 미리 이야기를 나눠봐야 할까요...",
+          DialogueId = 51215032,
+          GUID = "80362230",
+          SpeakNpcId = 700580
+        },
+        [51215033] = {
+          Content = "（西顿开始了自言自语，在脑内继续完善他的计划，是时候离开了，前往螺丝刀协会。）",
+          ContentKR = "(시돈은 혼잣말을 중얼거리며 머릿속으로 계획을 계속 다듬는다. 이제 자리를 떠나 드라이버 협회로 가자.)",
+          DialogueId = 51215033,
+          GUID = "8036225A"
+        },
+        [51215034] = {DialogueId = 51215034, GUID = "80362284"},
+        [51215035] = {
+          Content = "玛吉，我们回来找你啦！",
+          ContentKR = "마지, 우리 왔어!",
+          DialogueId = 51215035,
+          GUID = "803622AE",
+          SpeakNpcId = 100402
+        },
+        [51215036] = {
+          Content = "啊，这不是刚刚从我这里拿到荣耀螺丝刀的好{性别：兄弟|姐妹}吗？刚走没多久，这么快就又回来了？还多带了一位……大高个？",
+          ContentKR = "어라, 나한테서 영광의 드라이버를 받아 간 친구 아니야? 떠난 지 얼마나 됐다고 벌써 돌아왔어? 게다가... 이번엔 꺽다리도 하나 더 데려왔네?",
+          DialogueId = 51215036,
+          GUID = "803622D8",
+          SpeakNpcId = 700581
+        },
+        [51215037] = {
+          Content = "怎么？是错过了末班车，想要在这边来一口酒，来跳过夜晚迎接天亮，还是说只是想来试试看我们螺丝刀行会的信物是怎么生效的？",
+          ContentKR = "왜, 막차라도 놓쳐서 여기서 술 한잔하며 아침까지 기다리려는 거야? 아니면 우리 드라이버 협회의 증표가 먹히는지 시험해 보러 온 건가?",
+          DialogueId = 51215037,
+          GUID = "80362302",
+          SpeakNpcId = 700581
+        },
+        [51215038] = {
+          Content = "都不是，我们是来聊正事的，我带来了一个消息，与汽笛沙龙有关。",
+          ContentKR = "둘 다 아니야. 중요한 이야기가 있어서 왔어. 기적 소리 살롱에 관한 소식이야.",
+          DialogueId = 51215038,
+          GUID = "8036232C",
+          SpeakNpcId = 100001
+        },
+        [51215039] = {
+          Content = "汽笛沙龙？家养犬居然叫得动你来传话，我还以为他们除了每天幻想蹭艾森巴恩的小腿再扒拉他的大腿就没有其他事做了呢。",
+          ContentKR = "기적 소리 살롱? 그 애완견 같은 녀석들이 너한테 말을 전하라고 했어? 난 걔들이 매일 아이젠반 다리나 붙잡고 알랑거릴 궁리밖에 안 하는 줄 알았는데.",
+          DialogueId = 51215039,
+          GUID = "80362356",
+          SpeakNpcId = 700581
+        },
+        [51215040] = {
+          Content = "所以是什么事？算了，好{性别：兄弟|姐妹}，我相信你的判断。",
+          ContentKR = "그래서 무슨 일인데? 아니다, 우리 똑똑한 친구가 알아서 판단해 줘.",
+          DialogueId = 51215040,
+          GUID = "80362380",
+          SpeakNpcId = 700581
+        },
+        [51215041] = {
+          Content = "你要是觉得是有价值的消息就说给我听，你要觉得这消息是一坨垃圾，就带我的话回去，就说你们汽笛沙龙都是一群臭**。",
+          ContentKR = "쓸 만한 소식이다 싶으면 말하고, 쓰레기 같은 소식이면 가서 도로 내 말만 전해. 기적 소리 살롱은 하나같이 *신 같은 새*들이라고.",
+          DialogueId = 51215041,
+          GUID = "803623AA",
+          SpeakNpcId = 700581
+        },
+        [51215042] = {
+          Content = "怎么又在骂人？唉……看你这个样子，我本来是想在这里养一只鹦鹉解闷的，现在压根就不敢养，你这个小崽子铁定能让鹦鹉学会一个人到底能有多少种亲戚。",
+          ContentKR = "왜 또 욕이야? 어휴... 적적함을 달랠 겸 여기서 앵무새나 키워볼까 했는데, 널 보니까 도무지 엄두가 안 난다. 분명히 앵무새한테 조상님 걱정하는 법이나 잔뜩 가르쳐 놓겠지.",
+          DialogueId = 51215042,
+          GUID = "803623D4",
+          SpeakNpcId = 700582
+        },
+        [51215043] = {
+          Content = "刚刚你说汽笛沙龙有正事？确实很罕见，虽然同在车站里，但是我们和他们一直八竿子都打不到一起去。",
+          ContentKR = "방금 기적 소리 살롱과 관련된 일이라고 했지? 확실히 드문 일이네. 같은 기차역 안에 있어도 우린 그쪽과는 늘 접점이 없었으니까.",
+          DialogueId = 51215043,
+          GUID = "803623FE",
+          SpeakNpcId = 700582
+        },
+        [51215044] = {
+          Content = "汽笛沙龙的头领……西顿？他是要给我们下战书？哈哈，还是那样子……是下定决心要替艾森巴恩除掉我们之类吗？",
+          ContentKR = "기적 소리 살롱의 수장이라면... 시돈인가? 우리한테 선전포고라도 하려는 거야? 하하, 여전하군. 아이젠반을 대신해 우리를 제거할 마음이라도 먹었나 보지?",
+          DialogueId = 51215044,
+          GUID = "80362428",
+          SpeakNpcId = 700582
+        },
+        [51215045] = {
+          Content = "并不是，相反，是要你们的帮忙。",
+          ContentKR = "아니에요. 오히려 여러분의 도움이 필요하다고 했어요.",
+          DialogueId = 51215045,
+          GUID = "80362452",
+          SpeakNpcId = 100001
+        },
+        [51215046] = {
+          Content = "（向罗连特和玛吉讲述了汽笛沙龙的会长，西顿的计划——趁着艾森巴恩在百花车站工作十周年的机会，安排一场戏剧，并伺机刺杀他。）",
+          ContentKR = "(로렌트와 마지에게 기적 소리 살롱 회장 시돈의 계획을 설명했다. 아이젠반의 블룸필드역 부임 10주년을 기념해 연극을 준비하고, 기회를 노려 그를 암살한다는 계획이다.)",
+          DialogueId = 51215046,
+          GUID = "8036247C"
+        },
+        [51215047] = {
+          Content = "（而螺丝刀行会要做的是，在艾森巴恩遇刺的同时制造混乱。）",
+          ContentKR = "(드라이버 협회의 역할은 아이젠반이 암살당하는 타이밍에 맞춰 혼란을 일으키는 것이었다.)",
+          DialogueId = 51215047,
+          GUID = "803624A6"
+        },
+        [51215048] = {
+          Content = "你是说，那个汽笛沙龙行会的会长……叫什么西瓜来着？",
+          ContentKR = "그 기적 소리 살롱 회장이라는 녀석... 이름이 뭐였지? 사돈이랬나?",
+          DialogueId = 51215048,
+          GUID = "803624D0",
+          SpeakNpcId = 700581
+        },
+        [51215049] = {
+          Content = "西顿。",
+          ContentKR = "시돈이겠지.",
+          DialogueId = 51215049,
+          GUID = "803624FA",
+          SpeakNpcId = 700582
+        },
+        [51215050] = {
+          Content = "噢对，西顿！他邀请我们一起干掉艾森巴恩？啧，怎么回事，这种好事居然被他们抢先了？",
+          ContentKR = "아, 그래, 시돈! 그 녀석이 우리한테 아이젠반 해치우는 일에 끼라고 한 거지? 뭐야, 이렇게 좋은 일을 녀석들한테 빼앗기다니?",
+          DialogueId = 51215050,
+          GUID = "80362524",
+          SpeakNpcId = 700581
+        },
+        [51215051] = {
+          Content = "怎么办，罗连特，快说几句好听的话，否则我要陷入质疑了，难道我的行动力甚至比不过那群家养犬？",
+          ContentKR = "어떡하지, 로렌트? 나 지금 우울해지려고 하니까, 빨리 나 좀 달래 줘. 내 행동력이 지금 그 애완견 녀석들만도 못했다는 거잖아?",
+          DialogueId = 51215051,
+          GUID = "8036254E",
+          SpeakNpcId = 700581
+        },
+        [51215052] = {
+          Content = "怎么会，你现在小小年纪，就已经是会长了。等你到西顿那个年纪，可能早就是更大的官了！",
+          ContentKR = "말도 안 돼! 넌 그 나이에 벌써 회장이잖아. 네가 시돈 나이쯤 되면 아마 훨씬 더 높은 자리에 올라 있을걸!",
+          DialogueId = 51215052,
+          GUID = "80362578",
+          SpeakNpcId = 100402
+        },
+        [51215053] = {
+          Content = "谢谢你的安慰，白。不过我得说，我坐上这个位子全凭胆子大！",
+          ContentKR = "위로해 줘서 고마워, 스노우. 하지만 솔직히 말해서, 내가 이 자리에 앉은 건 순전히 배짱이 두둑해서야!",
+          DialogueId = 51215053,
+          GUID = "803625A2",
+          SpeakNpcId = 700581
+        },
+        [51215054] = {
+          Content = "之前几任协会的会长总是莫名其妙地背后中枪自杀之类的，导致根本没人愿意做，只有我！勇敢的玛吉！我愿意做！",
+          ContentKR = "전임 회장들이 계속 등 뒤에서 총을 맞고 자살을 한다든가 하고 희한하게 죽어 나가는 바람에, 회장을 하려는 사람이 아무도 없었어. 오직 이 용감한 마지님만이 기꺼이 하겠다고 나선 거지!",
+          DialogueId = 51215054,
+          GUID = "803625CC",
+          SpeakNpcId = 700581
+        },
+        [51215055] = {
+          Content = "咳咳……我们只是考虑到艾森巴恩不至于丧心病狂到对一个小孩子下狠手，所以才选你来当我们的吉祥物，好吗？",
+          ContentKR = "크흠... 우린 그냥, 아무리 독한 아이젠반이라도 설마 어린애까지 건드리겠냐 싶어서, 널 마스코트로 세운 것뿐이거든?",
+          DialogueId = 51215055,
+          GUID = "803625F6",
+          SpeakNpcId = 700582
+        },
+        [51215056] = {
+          Content = "不重要，总之，玛吉玛吉，最强玛吉！",
+          ContentKR = "그런 건 중요하지 않아. 아무튼 마지는 최강 마지니까!",
+          DialogueId = 51215056,
+          GUID = "80362620",
+          SpeakNpcId = 700581
+        },
+        [51215057] = {
+          Content = "好了，说回刚刚的事情，罗连特，既然你能直接脱口而出那个巴顿的名字，看来你了解他，这家伙靠不靠谱，我们要不要一起干一场？",
+          ContentKR = "자, 하던 얘기나 계속하자. 로렌트 네 입에서 시몬인가 뭔가 하는 이름이 바로 튀어나온 걸 보면, 녀석을 잘 아는 모양인데, 어때? 믿을 만한 녀석이야? 이참에 한바탕 해볼까?",
+          DialogueId = 51215057,
+          GUID = "8036264A",
+          SpeakNpcId = 700581
+        },
+        [51215058] = {
+          Content = "说实话，我等这个机会太久了，如果你说不要，我真的会忍不住拿扳手敲你的头。",
+          ContentKR = "솔직히 나 이 기회만 목 빠지게 기다렸거든. 네가 안 하겠다고 하면, 나 진짜 렌치로 네 머리통을 갈겨 버릴지도 몰라.",
+          DialogueId = 51215058,
+          GUID = "80362674",
+          SpeakNpcId = 700581
+        },
+        [51215059] = {
+          Content = "了解吗……算不上，不过既然已经找到头上来，说明无论我们合作还是不合作，他们都有一定的把握要去做这种事了吧……",
+          ContentKR = "잘 아는 것까진 아니야... 하지만 이렇게 우리를 직접 찾아온 걸 보면, 우리가 손을 잡든 말든, 그쪽은 이미 어느 정도 일을 벌일 각오가 되어 있다는 거겠군...",
+          DialogueId = 51215059,
+          GUID = "8036269E",
+          SpeakNpcId = 700582
+        },
+        [51215060] = {
+          Content = "或许这是个机会，不管这个西顿为人怎么样，他对车站的控制力肯定不如艾森巴恩。他上台了，我们有的聊。",
+          ContentKR = "어쩌면 이게 기회일지도 몰라. 시돈이란 녀석의 됨됨이는 잘 몰라도, 기차역을 휘어잡는 힘은 분명히 아이젠반보다 못할 테니까. 녀석이 역장이 된다면, 우리도 협상이 가능하지.",
+          DialogueId = 51215060,
+          GUID = "803626C8",
+          SpeakNpcId = 700582
+        },
+        [51215061] = {
+          Content = "太好了罗连特！这是我见过你最不怂的时候！要怎么做？",
+          ContentKR = "좋았어, 로렌트! 겁쟁이 로렌트가 이렇게 나서는 건 처음이네! 그래서, 어떻게 하면 돼?",
+          DialogueId = 51215061,
+          GUID = "803626F2",
+          SpeakNpcId = 700581
+        },
+        [51215062] = {
+          Content = "现在就安排下去吧，时间紧急，我们几个都动起来，通知所有锻铁工。",
+          ContentKR = "지금 바로 움직이자. 시간이 없으니까, 우리도 각자 움직여서 제철소 일꾼들에게 전부 알려야 해.",
+          DialogueId = 51215062,
+          GUID = "8036271C",
+          SpeakNpcId = 700582
+        },
+        [51215063] = {
+          Content = "等等……你们难道不考虑刺杀失败的可能吗？如果失败了，艾森巴恩活了下来，平日里不显露身形的你们一定会被报复的。",
+          ContentKR = "잠깐... 암살이 실패할 가능성은 생각 안 해? 혹시라도 실패해서 아이젠반이 살아남으면, 평소 정체를 숨기고 지내던 너희도 반드시 보복당할 텐데.",
+          DialogueId = 51215063,
+          GUID = "80362746",
+          SpeakNpcId = 100401
+        },
+        [51215064] = {
+          Content = "机会，可不会在每时每刻等待我们。",
+          ContentKR = "기회가 언제까지 우리를 기다려 주진 않으니까.",
+          DialogueId = 51215064,
+          GUID = "80362770",
+          SpeakNpcId = 700582
+        },
+        [51215065] = {
+          Content = "螺丝刀协会成立的本意就是为了帮助工人们，能推翻艾森巴恩就是对他们最大的帮助。",
+          ContentKR = "드라이버 협회는 애초에 일꾼들을 돕기 위해 세워졌어. 아이젠반을 끌어내리는 것만큼 그들한테 도움이 되는 건 없지.",
+          DialogueId = 51215065,
+          GUID = "8036279A",
+          SpeakNpcId = 700582
+        },
+        [51215066] = {
+          Content = "再说，这件事如果我们完全不知情还好，知道的那一刻起就已经被迫绑上了这条船，无论是装作无事发生还是强行下船，结果都只会更糟。",
+          ContentKR = "게다가 우리가 이 일을 아예 몰랐다면 모를까, 알게 된 순간부터 이미 한배를 탄 거나 마찬가지야. 모르는 척하거나 억지로 발을 뺐다간, 결과만 더 나빠질 뿐이야.",
+          DialogueId = 51215066,
+          GUID = "803627C4",
+          SpeakNpcId = 700582
+        },
+        [51215067] = {
+          Content = "所以这个问题不需要太多犹豫，我们螺丝刀行会前几任会长的仇，就要在今天报了。",
+          ContentKR = "그러니까 더 망설일 필요는 없어. 오늘, 우리 드라이버 협회 전임 회장들의 원수를 갚는 거야.",
+          DialogueId = 51215067,
+          GUID = "803627EE",
+          SpeakNpcId = 700582
+        },
+        [51215068] = {
+          Content = "爆了！爆了！跟他爆了！看不出来啊罗连特，平时你看起来一副斯文败类的样子，碰到这种事比我还疯？那账本的下落我们还要追查吗？",
+          ContentKR = "좋아! 제대로 한판 붙어 보자고! 근데 로렌트 이 자식 희한하네. 평소엔 점잖은 척 굴더니, 이번엔 나보다 더 적극적이잖아? 그럼 그 장부의 행방도 계속 쫓는 거야?",
+          DialogueId = 51215068,
+          GUID = "80362818",
+          SpeakNpcId = 700581
+        },
+        [51215069] = {
+          Content = "账本的事等回头再说，现在把艾森巴恩从他的站长位置上拽下来是第一要务。",
+          ContentKR = "장부 일은 나중에 다시 이야기하자. 지금은 아이젠반을 역장 자리에서 끌어내리는 게 최우선이야.",
+          DialogueId = 51215069,
+          GUID = "80362842",
+          SpeakNpcId = 700582
+        },
+        [51215070] = {
+          Content = "麻烦你们也帮帮忙了，虽然已经让你们跑了好几次腿，但相信我，这是今天最后一次了。",
+          ContentKR = "너희도 조금만 더 도와줘. 벌써 몇 번이나 일 시켜서 미안하지만, 믿어 줘. 오늘은 이게 정말 마지막일 거야.",
+          DialogueId = 51215070,
+          GUID = "8036286C",
+          SpeakNpcId = 700582
+        },
+        [51215071] = {
+          Content = "大人的嘴啊，骗人的鬼~♪干不完的活啊，跑不完的腿~♪不如回家买醉，再大睡~♪",
+          ContentKR = "어른들은 입만 열면 거짓말~♪ 끝도 없는 일, 끝도 없는 심부름~♪ 차라리 집에 가서 술이나 마시고 잠이나 자야지~♪",
+          DialogueId = 51215071,
+          GUID = "80362896",
+          SpeakNpcId = 700581
+        },
+        [51215072] = {
+          Content = "再唱我就直接把你捆了送去艾森巴恩的办公室。",
+          ContentKR = "그 노래 또 부르면 꽁꽁 묶어서 아이젠반 사무실로 보내 버릴 줄 알아.",
+          DialogueId = 51215072,
+          GUID = "803628C0",
+          SpeakNpcId = 700582
+        },
+        [51215073] = {
+          Content = "凶什么凶！我要到他办公室你也跑不了。好了，跑腿跑腿，我去站顶的钢架去找我的小伙伴们。",
+          ContentKR = "어디서 성질이야! 내가 그 녀석 사무실에 끌려가면, 너라고 무사할 줄 알아? 뭐, 가라면 가야지. 난 기차역 지붕 철골 쪽으로 가서 내 친구들을 찾아볼게.",
+          DialogueId = 51215073,
+          GUID = "803628EA",
+          SpeakNpcId = 700581
+        },
+        [51215074] = {
+          Content = "虽然他们可能觉得我在说梦话，但是我会用扳手敲敲他们的脑袋，让他们面对现实的。",
+          ContentKR = "친구들이 내가 자다 깨서 헛소리하나 할지도 모르지만, 렌치로 머리통을 톡톡 두드려주면 현실인 걸 깨닫게 되겠지.",
+          DialogueId = 51215074,
+          GUID = "80362914",
+          SpeakNpcId = 700581
+        },
+        [51215075] = {
+          Content = "嗯，我也去通知工程师们了。至于锻铁厂的工人们，就拜托你们了。",
+          ContentKR = "그래, 나도 기술자들한테 알리러 가야겠어. 제철소 일꾼들 쪽은 너희에게 부탁할게.",
+          DialogueId = 51215075,
+          GUID = "8036293E",
+          SpeakNpcId = 700582
+        },
+        [51215076] = {
+          Content = "没问题。",
+          ContentKR = "알겠어요.",
+          DialogueId = 51215076,
+          GUID = "80362968",
+          SpeakNpcId = 100001
+        },
+        [51215077] = {DialogueId = 51215077, GUID = "80362992"},
+        [51215078] = {
+          Content = "今天的工就上到这里了，别烦我。",
+          ContentKR = "오늘 일은 끝났어. 귀찮게 굴지 마.",
+          DialogueId = 51215078,
+          GUID = "803629BC",
+          SpeakNpcId = 700584
+        },
+        [51215079] = {
+          Content = "别休息了，干完这一轮可以休息很久。",
+          ContentKR = "지금 쉴 때가 아니에요. 이번 건만 해치우면 얼마든지 쉴 수 있어요.",
+          DialogueId = 51215079,
+          GUID = "803629E6",
+          SpeakNpcId = 100001
+        },
+        [51215080] = {
+          Content = "（对工人讲述接下来会发生什么事情。）",
+          ContentKR = "(일꾼에게 앞으로 벌어질 일을 설명한다.)",
+          DialogueId = 51215080,
+          GUID = "80362A10",
+          SpeakNpcId = 100001
+        },
+        [51215081] = {
+          Content = "弄死艾森巴恩？真的假的？玛吉和你说的吗？别开玩笑啊。什么？罗连特先生都说是真的？",
+          ContentKR = "아이젠반을 죽인다고? 진짜야? 마지가 그랬다고? 장난치지 마. 뭐? 로렌트 씨까지 진짜라고 했다고?",
+          DialogueId = 51215081,
+          GUID = "80362A3A",
+          SpeakNpcId = 700584
+        },
+        [51215082] = {
+          Content = "那我可得好好准备准备了，你等着！",
+          ContentKR = "그럼 나도 단단히 준비해야겠군. 잠깐만 기다려!",
+          DialogueId = 51215082,
+          GUID = "80362A64",
+          SpeakNpcId = 700584
+        },
+        [51215083] = {DialogueId = 51215083, GUID = "80362A8E"},
+        [51215084] = {
+          Content = "听说上面很多人在疯传，说艾森巴恩站长走私，不配当站长什么的。",
+          ContentKR = "저 위에 아이젠반 역장이 밀수를 해서 역장 자격이 없느니 어쩌느니 하면서 소문이 파다하대.",
+          DialogueId = 51215084,
+          GUID = "80362AB8",
+          SpeakNpcId = 700585
+        },
+        [51215085] = {
+          Content = "真的又能怎么样，艾森巴恩做了这么长时间的站长，你说他没点自己的小金库我才奇怪。大惊小怪……又不能把他怎么样。",
+          ContentKR = "진짜면 또 어쩔 건데. 아이젠반이 그렇게 오래 역장을 해 먹었는데, 뒷돈을 안 챙긴 게 오히려 더 이상하지. 호들갑 떨기는... 어차피 우리가 어떻게 할 수 있는 것도 아니잖아.",
+          DialogueId = 51215085,
+          GUID = "80362AE2",
+          SpeakNpcId = 700586
+        },
+        [51215086] = {
+          Content = "（对工人讲述接下来会发生的事情。）",
+          ContentKR = "(일꾼에게 앞으로 벌어질 일을 설명한다.)",
+          DialogueId = 51215086,
+          GUID = "80362B0C",
+          SpeakNpcId = 100001
+        },
+        [51215087] = {
+          Content = "竟然有这么大的事！想不到不止我们这些锻铁工，连贵族老爷也看艾森巴恩不顺眼。艾森巴恩真是罪大恶极啊。",
+          ContentKR = "그렇게 큰일이 벌어지고 있었다니! 우리 제철소 일꾼들뿐만 아니라 귀족 나리들까지 아이젠반을 못마땅하게 여기고 있었을 줄은 몰랐네. 아이젠반은 정말 질 나쁜 놈이었구먼.",
+          DialogueId = 51215087,
+          GUID = "80362B36",
+          SpeakNpcId = 700585
+        },
+        [51215088] = {
+          Content = "走走走，这下有好戏看了。",
+          ContentKR = "자, 가자. 볼만한 구경거리가 생겼어.",
+          DialogueId = 51215088,
+          GUID = "80362B60",
+          SpeakNpcId = 700586
+        },
+        [51215089] = {DialogueId = 51215089, GUID = "80362B8A"},
+        [51215090] = {
+          Content = "看起来工人们还是愿意响应的……但多少觉得有点，太过顺利了？艾森巴恩好歹根植在车站干了这么久，真的会这样如同计划一样被推翻吗？",
+          ContentKR = "다들 호응할 생각은 있어 보이는데... 이상하게 너무 순조로워. 아이젠반이 이 역을 틀어쥐고 지낸 세월이 얼만데, 정말 계획대로 그렇게 쉽게 끌어내릴 수 있을까?",
+          DialogueId = 51215090,
+          GUID = "80362BB4",
+          SpeakNpcId = 100401
+        },
+        [51215091] = {
+          Content = "我很怀疑……但是事已至此，袖手旁观的话反而会陷入被动，跟着走一步算一步吧。",
+          ContentKR = "나도 의심스럽긴 해... 그래도 이미 여기까지 왔잖아. 가만히 있으면 오히려 불리해질 테니까, 일단 상황을 지켜보자.",
+          DialogueId = 51215091,
+          GUID = "80362BDE",
+          SpeakNpcId = 100001
+        },
+        [51215092] = {
+          Content = "嗯，赶紧回去找玛吉和罗连特吧。",
+          ContentKR = "그래, 빨리 마지랑 로렌트한테 돌아가자.",
+          DialogueId = 51215092,
+          GUID = "80362C08",
+          SpeakNpcId = 100401
+        },
+        [51215093] = {DialogueId = 51215093, GUID = "80362C32"},
+        [51215094] = {
+          Content = "玛吉，罗连特，我们通知完工人们回来啦。",
+          ContentKR = "마지, 로렌트! 일꾼들한테 다 알리고 왔어.",
+          DialogueId = 51215094,
+          GUID = "80362C5C",
+          SpeakNpcId = 100402
+        },
+        [51215095] = {
+          Content = "咦，人呢？",
+          ContentKR = "어라, 다들 어디 갔지?",
+          DialogueId = 51215095,
+          GUID = "80362C86",
+          SpeakNpcId = 100402
+        },
+        [51215096] = {
+          Content = "难道他们各自去通知属下还没回来，不过不应该啊？玛吉去车站顶部的钢架可能确实需要一些时间。",
+          ContentKR = "일꾼들한테 알리러 갔다가 아직 안 돌아온 건가? 그래도 이상해. 마지는 기차역 지붕 철골 쪽까지 가느라 시간이 좀 걸리긴 하겠지만.",
+          DialogueId = 51215096,
+          GUID = "80362CB0",
+          SpeakNpcId = 100401
+        },
+        [51215097] = {
+          Content = "但是罗连特去通知工程师们的话，只要去货运站台就可以，不应该比我们更晚啊？",
+          ContentKR = "로렌트는 기술자들한테 알리러 간 거잖아? 화물 승강장만 다녀오면 되니까, 우리보다 늦을 이유가 없는데?",
+          DialogueId = 51215097,
+          GUID = "80362CDA",
+          SpeakNpcId = 100401
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51215098,
+    MaxKey = 51215297,
+    Loader = function()
+      return {
+        [51215098] = {
+          Content = "糟了，难道说他被艾森巴恩的手下发现，抓住了？",
+          ContentKR = "이런, 설마 로렌트가 아이젠반 부하들한테 들켜서 잡혀간 거 아니야?",
+          DialogueId = 51215098,
+          GUID = "80362D04",
+          SpeakNpcId = 100402
+        },
+        [51215099] = {
+          Content = "不对……我好像听到什么声音，像是有人在说话，我们去看看。",
+          ContentKR = "아냐... 무슨 소리가 들리는 것 같아. 말소리 같은데, 가서 확인해 보자.",
+          DialogueId = 51215099,
+          GUID = "80362D2E",
+          SpeakNpcId = 100402
+        },
+        [51215100] = {DialogueId = 51215100, GUID = "80362D58"},
+        [51215101] = {
+          Content = "这里，这个声音好熟悉。",
+          ContentKR = "여기야. 근데 많이 들어본 목소리 같아.",
+          DialogueId = 51215101,
+          GUID = "80362D82",
+          NextDialogue = 51215102,
+          SpeakNpcId = 100402
+        },
+        [51215102] = {
+          Content = "再向前去，嗯……一个是罗连特，呼，松了一口气。",
+          ContentKR = "더 가까이 가 보자. 음... 한 명은 로렌트야. 휴, 이제야 마음이 좀 놓이네.",
+          DialogueId = 51215102,
+          GUID = "80362DAC",
+          SpeakNpcId = 100402
+        },
+        [51215103] = {
+          Content = "就在前面了，不好，他真的在和穿着红衣服的人说话，是车站警卫！",
+          ContentKR = "저기 있네. 어떡해, 로렌트가 정말로 빨간 옷 입은 사람이랑 얘기하고 있잖아. 역 경비병이야!",
+          DialogueId = 51215103,
+          GUID = "80362DD6",
+          NextDialogue = 51215104,
+          SpeakNpcId = 100402
+        },
+        [51215104] = {
+          Content = "快，我们得帮帮他。",
+          ContentKR = "빨리, 로렌트를 도와줘야 해.",
+          DialogueId = 51215104,
+          GUID = "80362E00",
+          SpeakNpcId = 100402
+        },
+        [51215105] = {DialogueId = 51215105, GUID = "80362E2A"},
+        [51215106] = {
+          Content = "不对，停一下，白。罗连特和对面的人说话看起来很轻松，不像是盘问，我们先躲起来，听听他们在说些什么。",
+          ContentKR = "아니야, 스노우, 잠깐만. 로렌트가 저 사람이랑 꽤 편하게 이야기하는 것 같아. 심문받는 분위기는 아니야. 일단 숨어서 무슨 얘기를 하는지 들어보자.",
+          DialogueId = 51215106,
+          GUID = "80362E54",
+          SpeakNpcId = 100401
+        },
+        [51215107] = {
+          Content = "……总之呢，就是这么个情况，你必须立刻告诉艾森巴恩大人，不要出席待会儿的演出。否则会有生命危险。",
+          ContentKR = "...아무튼 상황이 이러니까, 지금 바로 아이젠반 님께 공연에 참석하지 마시라고 전해 주세요. 안 그러면 목숨이 위험해질 거예요.",
+          DialogueId = 51215107,
+          GUID = "80362E7E",
+          SpeakNpcId = 700582
+        },
+        [51215108] = {
+          Content = "别紧张，罗连特。艾森巴恩大人收到过的威胁信比你见过的钱还多。气喘吁吁的，不成样子。",
+          ContentKR = "진정해, 로렌트. 아이젠반 님이 그동안 받아보신 협박장이 네가 평생 본 돈보다 많을 거라고. 뭘 그렇게 놀라서 숨까지 헐떡이고 그래.",
+          DialogueId = 51215108,
+          GUID = "80362EA8",
+          SpeakNpcId = 700588
+        },
+        [51215109] = {
+          Content = "也不用紧张，当心被有心人注意到然后跟踪。",
+          ContentKR = "불안해할 필요 없으니까, 괜히 누군가 눈치채고 따라붙지 않게 조심이나 해.",
+          DialogueId = 51215109,
+          GUID = "80362ED2",
+          SpeakNpcId = 700588
+        },
+        [51215110] = {
+          Content = "不要掉以轻心，这次的情况不一样，你也知道，艾森巴恩大人参与走私的消息已经因为汽笛沙龙办的什么摄影比赛而人尽皆知了。",
+          ContentKR = "가볍게 넘길 일이 아니에요. 이번엔 상황이 다르다고요. 아시잖아요, 기적 소리 살롱에서 연 그 사진 공모전 때문에 아이젠반 님이 밀수에 가담했다는 소식이 온통 퍼진 거.",
+          DialogueId = 51215110,
+          GUID = "80362EFC",
+          SpeakNpcId = 700582
+        },
+        [51215111] = {
+          Content = "甚至有的卫兵也开始怀疑，艾森巴恩大人是不是真的如他自我标榜的那样一心为了帝国。",
+          ContentKR = "심지어 경비병들 중에도 의심하는 사람이 생겼어요. 아이젠반 님이 본인 말처럼 정말 제국만 위하는 사람이 맞는지 말이에요.",
+          DialogueId = 51215111,
+          GUID = "80362F26",
+          SpeakNpcId = 700582
+        },
+        [51215112] = {
+          Content = "所以这次骚动，即便是刺杀失败，后面很可能也会出现其他人对艾森巴恩大人的忠诚出现动摇，到那时候，警卫会和这些工人一样难管。",
+          ContentKR = "그래서 이번 소동이 위험한 거예요. 암살이 실패하더라도, 그 뒤엔 아이젠반 님을 향한 충성심이 흔들리는 사람들이 더 많아질 거예요. 그렇게 되면, 경비병들도 저 일꾼들처럼 통제하기 어려워져요.",
+          DialogueId = 51215112,
+          GUID = "80362F50",
+          SpeakNpcId = 700582
+        },
+        [51215113] = {
+          Content = "简单，再往警卫里安插一两个绝对忠于艾森巴恩大人的人就是了。",
+          ContentKR = "어렵긴, 경비병들 사이에 아이젠반 님께 절대 충성하는 사람을 한둘 더 심어 두면 그만인데.",
+          DialogueId = 51215113,
+          GUID = "80362F7A",
+          SpeakNpcId = 700588
+        },
+        [51215114] = {
+          Content = "哪有说得这么简单……",
+          ContentKR = "그게 말처럼 쉽나요...",
+          DialogueId = 51215114,
+          GUID = "80362FA4",
+          SpeakNpcId = 700582
+        },
+        [51215115] = {
+          Content = "喔？是吗？我觉得不难啊，金钱，女人，或者男人，再不行就是前途。每个人都有他对应的价格。",
+          ContentKR = "흠? 쉽다니까? 인간이면 돈, 여자, 남자 셋 중에 하나쯤은 통하게 돼 있어. 그래도 안 되면 출셋길을 약속하면 되고. 누구든 대가만 지불하면 되는 거야.",
+          DialogueId = 51215115,
+          GUID = "80362FCE",
+          SpeakNpcId = 700588
+        },
+        [51215116] = {
+          Content = "罗连特，你不正是拿着钱为我们做事，向我们提供螺丝刀行会的消息的吗？怎么会怀疑我们的手段？难道你突然重拾人性了？",
+          ContentKR = "로렌트, 너도 결국은 우리한테 돈 받고 드라이버 협회 정보를 넘겨주는 거잖아. 그런데 왜 우리 방식을 의심하지? 설마 갑자기 인간성이라도 되찾은 거냐?",
+          DialogueId = 51215116,
+          GUID = "80362FF8",
+          SpeakNpcId = 700588
+        },
+        [51215117] = {
+          Content = "……他们在说什么，白怎么突然听不懂了，罗连特不是螺丝刀行会的人吗？怎么突然一口一个艾森巴恩大人的。",
+          ContentKR = "...저 사람들 무슨 얘기 하는 거야? 스노우는 뭐가 뭔지 하나도 모르겠어. 로렌트는 드라이버 협회 사람 아니었어? 그런데 왜 갑자기 아이젠반 님, 아이젠반 님 하는 거야?",
+          DialogueId = 51215117,
+          GUID = "80363022",
+          SpeakNpcId = 100402
+        },
+        [51215118] = {
+          Content = "……被收买了，真没想到。原本我觉得艾森巴恩肯定有安插在螺丝刀协会的眼线，还担心会不会打草惊蛇，没想到这个人居然是罗连特。",
+          ContentKR = "...매수당한 거였어. 정말 뜻밖이네. 원래는 아이젠반이 드라이버 협회 안에 끄나풀을 심어뒀을 테니까, 혹시 잘못 건드려서 아이젠반이 눈치채면 어떡하나 생각했는데, 그게 로렌트였던 거군.",
+          DialogueId = 51215118,
+          GUID = "8036304C",
+          SpeakNpcId = 100401
+        },
+        [51215119] = {
+          Content = "也是，这样就能说得通了，为什么他熟悉西顿这个名字，以及为什么明明好几任螺丝刀行会的会长都被艾森巴恩抓走了，但他却能安然无恙。",
+          ContentKR = "하긴, 이러면 앞뒤가 맞네. 왜 시돈을 그렇게 잘 알고 있었는지, 드라이버 협회 회장들이 몇 번이나 아이젠반에게 잡혀갔는데도 왜 로렌트만 무사했는지 말이야.",
+          DialogueId = 51215119,
+          GUID = "80363076",
+          SpeakNpcId = 100401
+        },
+        [51215120] = {
+          Content = "我说，{nickname}，要不咱们还是先撤吧。百花车站这个地方情况实在水太深了。自称艾森巴恩拥趸的人想刺杀他，自称艾森巴恩敌人的人反而听命于他。",
+          ContentKR = "{nickname}, 우리 여기서 그만두는 게 낫지 않을까? 블룸필드역은 상황이 너무 복잡해. 아이젠반을 숭배한다는 자들은 아이젠반을 암살하려 들고, 아이젠반의 적이라는 사람이 오히려 그 명령을 따르고 있잖아.",
+          DialogueId = 51215120,
+          GUID = "803630A0",
+          SpeakNpcId = 100401
+        },
+        [51215121] = {
+          Content = "咱们今天有更重要的事，没必要趟这趟浑水。",
+          ContentKR = "우리한텐 오늘 더 중요한 일이 있잖아. 굳이 이런 복잡한 일에 휘말릴 필요는 없어.",
+          DialogueId = 51215121,
+          GUID = "803630CA",
+          SpeakNpcId = 100401
+        },
+        [51215122] = {
+          Content = "我支持你的想法，只是……还有人被蒙在鼓中。",
+          ContentKR = "나도 네 생각에 동의해. 근데... 아직 아무것도 모르는 사람이 한 명 있잖아.",
+          DialogueId = 51215122,
+          GUID = "803630F4",
+          SpeakNpcId = 100001
+        },
+        [51215123] = {
+          Content = "啊对，玛吉！得要让她知道，否则她会有危险。她都给了我们螺丝刀了，我们也要讲义气，告诉她。",
+          ContentKR = "아, 맞다, 마지! 꼭 알려 줘야 해. 안 그러면 마지가 위험해질 거야. 우리한테 드라이버도 줬는데, 우리도 의리 있게 말해 줘야지.",
+          DialogueId = 51215123,
+          GUID = "8036311E",
+          SpeakNpcId = 100402
+        },
+        [51215124] = {
+          Content = "见了鬼了，罗连特，你在和谁说话？车站警卫？",
+          ContentKR = "누군가 했네. 로렌트 너 지금 누구랑 얘기하는 거야? 역 경비병?",
+          DialogueId = 51215124,
+          GUID = "80363148",
+          SpeakNpcId = 700475
+        },
+        [51215125] = {
+          Content = "你们什么时候感情这么好了？还是说这是你的部下假扮的？这行头看着不错啊，有小款吗？我也想穿。",
+          ContentKR = "둘이 언제부터 그렇게 친했어? 아니면 네 부하가 변장이라도 한 거야? 아주 멀쑥해 보이던데, 그 옷 작은 사이즈도 있어? 나도 입어 보고 싶네.",
+          DialogueId = 51215125,
+          GUID = "80363172",
+          SpeakNpcId = 700475
+        },
+        [51215126] = {
+          Content = "玛吉？你……你回来了？你刚刚听到了吗？",
+          ContentKR = "마지? 너... 돌아왔어? 방금 얘기한 거 들었어?",
+          DialogueId = 51215126,
+          GUID = "8036319C",
+          SpeakNpcId = 700476
+        },
+        [51215127] = {
+          Content = "听到什么？我从钢架上下来时，正好有一辆火车开过去，那动静，轰隆哗啦！到现在耳朵里还嗡嗡响呢！",
+          ContentKR = "듣긴 뭘 들어? 지붕 철골에서 내려오는데 마침 기차가 한 대 지나가서 말이야. 덜컹덜컹 기차역이 아주 떠나갈 것 같던데! 귀가 아직도 먹먹할 정도야.",
+          DialogueId = 51215127,
+          GUID = "803631C6",
+          SpeakNpcId = 700475
+        },
+        [51215128] = {
+          Content = "那就好。",
+          ContentKR = "그럼 다행이고.",
+          DialogueId = 51215128,
+          GUID = "803631F0",
+          SpeakNpcId = 700476
+        },
+        [51215129] = {
+          Content = "什么火车轰隆哗啦的，你之前不是说这妮子古怪的很吗？谁能保证她不是装傻？不能留她性命。",
+          ContentKR = "덜컹덜컹 같은 소리 하네. 저 꼬맹이, 네가 전부터 성격이 희한하다고 했잖아? 못 들은 척하는 건지 어떻게 알아? 살려 두면 안 돼.",
+          DialogueId = 51215129,
+          GUID = "8036321A",
+          SpeakNpcId = 700477
+        },
+        [51215130] = {
+          Content = "古怪，罗连特你——呀——！！！",
+          ContentKR = "누가 희한하다는 거야? 로렌트, 너—— 꺄악——!!!",
+          DialogueId = 51215130,
+          GUID = "80363244",
+          SpeakNpcId = 700475
+        },
+        [51215131] = {
+          Content = "糟了……怕什么来什么，快，我们冲出去救下那孩子。",
+          ContentKR = "제길... 이렇게 될 줄 알았어. 빨리 가서 저 애를 구해야 해.",
+          DialogueId = 51215131,
+          GUID = "8036326E",
+          SpeakNpcId = 100401
+        },
+        [51215132] = {DialogueId = 51215132, GUID = "80363298"},
+        [51215133] = {
+          Content = "玛吉，你没事吧玛吉！",
+          ContentKR = "마지! 괜찮아? 마지!",
+          DialogueId = 51215133,
+          GUID = "803632C2",
+          SpeakNpcId = 100402
+        },
+        [51215134] = {
+          Content = "她没事，只是像你们对警卫做的事一样，她也晕过去了，就是不知道惊吓还是受击的成分多。",
+          ContentKR = "마지는 멀쩡해. 너희가 경비병한테 한 것처럼 기절했을 뿐이야. 놀라서 기절한 건지, 맞아서 기절한 건지는 나도 모르지만.",
+          DialogueId = 51215134,
+          GUID = "803632EC",
+          SpeakNpcId = 700582
+        },
+        [51215135] = {
+          Content = "倒是你们……是从什么时候开始听的？",
+          ContentKR = "그보다 너희는... 언제부터 듣고 있었던 거지?",
+          DialogueId = 51215135,
+          GUID = "80363316",
+          SpeakNpcId = 700582
+        },
+        [51215136] = {
+          Content = "从通知完下面的工人们后再回来就开始听了。",
+          ContentKR = "아래쪽 일꾼들에게 다 알리고 돌아와 보니까 이야기하는 게 들리던데.",
+          DialogueId = 51215136,
+          GUID = "80363340",
+          SpeakNpcId = 100401
+        },
+        [51215137] = {
+          Content = "只是，他们应该都不知道，拜托我们前来的螺丝刀行会的头领之一，居然是艾森巴恩的爪牙。",
+          ContentKR = "근데 그 일꾼들은 모르고 있겠지. 우리를 여기까지 부른 드라이버 협회의 책임자 중 하나가, 알고 보니 아이젠반의 앞잡이라는 사실을 말이야.",
+          DialogueId = 51215137,
+          GUID = "8036336A",
+          SpeakNpcId = 100401
+        },
+        [51215138] = {
+          Content = "……哈哈，确实，我没有办法否认这个称呼，或者说，我以为你们会用更不礼貌的称呼来叫我，比如走狗之类的。",
+          ContentKR = "...하하, 그 호칭이 틀린 건 아냐. 솔직히 말하면, 난 너희가 더 심한 표현을 쓸 줄 알았거든. '아이젠반의 개'라든지 말이야.",
+          DialogueId = 51215138,
+          GUID = "80363394",
+          SpeakNpcId = 700582
+        },
+        [51215139] = {
+          Content = "但我得说，自始至终我都觉得我的这个选择没有错误。",
+          ContentKR = "하지만 이거 하난 말해 둘게. 난 내 선택이 틀렸다고 생각하지 않아.",
+          DialogueId = 51215139,
+          GUID = "803633BE",
+          SpeakNpcId = 700582
+        },
+        [51215140] = {
+          Content = "我只不过是在维持百花车站内的秩序——以代价最小的方式。",
+          ContentKR = "난 최소한의 대가를 치르는 방식으로, 블룸필드역의 질서를 지키려 했을 뿐이야.",
+          DialogueId = 51215140,
+          GUID = "803633E8",
+          SpeakNpcId = 700582
+        },
+        [51215141] = {
+          Content = "居然还有苦衷？也行吧，就当是你的遗言了。",
+          ContentKR = "그게 네 변명이야? 뭐, 좋아. 방금 그 말은 네 유언으로 삼아 줄게.",
+          DialogueId = 51215141,
+          GUID = "80363412",
+          SpeakNpcId = 100401
+        },
+        [51215142] = {
+          Content = "不愧是冰湖城里有名的狩月人，行事果断，该狠辣时狠辣。",
+          ContentKR = "역시 아이스레이크 시티에서 이름난 월석 사냥꾼답군. 과감하고, 냉혹해야 할 때는 아주 냉혹하지.",
+          DialogueId = 51215142,
+          GUID = "8036343C",
+          SpeakNpcId = 700582
+        },
+        [51215143] = {
+          Content = "你们要知道，螺丝刀的大多数成员都是最普通的人。他们不像你们，就像冒险故事里的主角一样，有着聪明的头脑和果决的行动力。",
+          ContentKR = "하지만 드라이버 협회 사람들은 대부분 평범하기 그지없는 사람들이야. 모험 소설의 주인공처럼 머리도 좋고 결단력도 있는 너희랑은 달라.",
+          DialogueId = 51215143,
+          GUID = "80363466",
+          SpeakNpcId = 700582
+        },
+        [51215144] = {
+          Content = "机器和工作早就磨平了他们的头脑，他们的人生平凡而庸碌，今天喝得酩酊大醉大打出手，明天为了赌钱赔上自己的裤子。",
+          ContentKR = "기계와 일에 치여 생각하는 법마저 잊어버린 지 오래고, 평생을 평범하고 별 볼 일 없는 삶을 살지. 술 먹고 싸움질이나 하고, 바지 주머니에 집히는 거라도 있으면 노름으로 십원 한 장까지 털어먹는 게 이곳 사람들 일상이야.",
+          DialogueId = 51215144,
+          GUID = "80363490",
+          SpeakNpcId = 700582
+        },
+        [51215145] = {
+          Content = "在冒险小说里，他们通常就是连名字都不会有的路人，他们的命太廉价了，随便一场发生在主角身边的械斗就能要了他们的命。",
+          ContentKR = "모험 소설에서 제대로 된 이름도 받지 못하고 행인 취급받으면서, 주인공 근처에 패싸움 한 번만 벌어져도 그대로 죽어 나가는 싸구려 목숨이라고.",
+          DialogueId = 51215145,
+          GUID = "803634BA",
+          SpeakNpcId = 700582
+        },
+        [51215146] = {
+          Content = "可是，在他们的家里，也一样有人在等着他们回来。",
+          ContentKR = "하지만 그런 사람들도 집에는 자기를 기다려 주는 가족들이 있어.",
+          DialogueId = 51215146,
+          GUID = "803634E4",
+          SpeakNpcId = 700582
+        },
+        [51215147] = {
+          Content = "终结艾森巴恩——汽笛沙龙的许诺多么诱人！但他们似乎完全没有考虑过，万一刺杀失败，等待螺丝刀这些普通锻铁工的命运将有多么残酷。",
+          ContentKR = "아이젠반을 끝장내겠다고? 참 달콤한 약속이네! 하지만 암살이 실패로 돌아갔을 때 드라이버 협회의 평범한 제철소 일꾼들이 얼마나 끔찍한 일을 당할지, 기적 소리 살롱에선 전혀 생각해 보지 않은 것 같더군.",
+          DialogueId = 51215147,
+          GUID = "8036350E",
+          SpeakNpcId = 700582
+        },
+        [51215148] = {
+          Content = "那些贵族尚有机会抽身，但螺丝刀的普通人呢？真正在这里生活和生存，仰人鼻息度日的人，是我们啊，是我们这些在工厂里扎根的普通工人。",
+          ContentKR = "귀족들은 빠져나갈 기회라도 있겠지. 하지만 드라이버 협회의 평범한 사람들은? 이곳에서 실제로 살아가고, 남의 눈치를 보며 하루하루 버티는 건 우리야. 공장에서 일하는 우리 같은 평범한 일꾼들이라고.",
+          DialogueId = 51215148,
+          GUID = "80363538",
+          SpeakNpcId = 700582
+        },
+        [51215149] = {
+          Content = "如果计划失败，迎接我们的是一声声枪响，我们的家人怎么办？孩子们怎么办？玛吉，玛吉怎么办？",
+          ContentKR = "계획이 실패하면 우리를 기다리는 건 총소리뿐이야. 우리 가족은? 아이들은? 마지는, 마지는 어떻게 되지?",
+          DialogueId = 51215149,
+          GUID = "80363562",
+          SpeakNpcId = 700582
+        },
+        [51215150] = {
+          Content = "想想之前的那些会长吧，他们就像现在的玛吉一样，凭借着一腔热血就嚷嚷着要去打倒艾森巴恩，可实际上呢，他们连枪也没摸过。",
+          ContentKR = "전임 회장들을 떠올려 보면, 다들 지금의 마지처럼 혈기 하나만 믿고 아이젠반을 쓰러뜨리겠다고 떠들었지만, 실은 총 한 번 잡아 본 적도 없는 녀석들이었어.",
+          DialogueId = 51215150,
+          GUID = "8036358C",
+          SpeakNpcId = 700582
+        },
+        [51215151] = {
+          Content = "艾森巴恩大人干掉他们，就和拍死一只蚂蚁一样简单——自己都保全不了，就不要去害那些只是想谋生的工人了。",
+          ContentKR = "아이젠반 님이 그 사람들을 없애는 건 개미 한 마리 찍어 누르는 것만큼 쉬웠지. 자기 몸 하나 지키지 못할 거면, 먹고살려고 일하는 사람들까지 위험에 끌어들이면 안 돼.",
+          DialogueId = 51215151,
+          GUID = "803635B6",
+          SpeakNpcId = 700582
+        },
+        [51215152] = {
+          Content = "……这一点确实没法否认。协助暗杀站长，光这一条罪名，几十年监禁都是轻的。",
+          ContentKR = "...그건 확실히 맞는 얘기네. 역장 암살을 도왔다는 죄라면, 수십 년을 감옥에서 썩어도 할 말이 없을 테니까.",
+          DialogueId = 51215152,
+          GUID = "803635E0",
+          SpeakNpcId = 100401
+        },
+        [51215153] = {
+          Content = "没错，所以我扮演一位调和者。一方面让工人们不要触怒艾森巴恩，维持基本的秩序。另一方面和艾森巴恩讨价还价，争取一些微末的利益让给大家。",
+          ContentKR = "맞아. 그래서 나는 조정자 역할을 한 거야. 일꾼들이 아이젠반을 자극하지 않도록 다독거리면서, 아이젠반과 흥정해서 모두에게 조금이라도 이익을 얻어내려 했지.",
+          DialogueId = 51215153,
+          GUID = "8036360A",
+          SpeakNpcId = 700582
+        },
+        [51215154] = {
+          Content = "只是我没想到，这种急着送死，却只会破坏的想法不止吃了上顿没下顿的穷人会有，连汽笛沙龙的老爷们也有。",
+          ContentKR = "그런데 매일 끼니 걱정이나 하는 가난뱅이가 아니라, 기적 소리 살롱의 귀족 나리까지 이렇게 제 목숨을 하찮게 여길 줄은 몰랐군.",
+          DialogueId = 51215154,
+          GUID = "80363634",
+          SpeakNpcId = 700582
+        },
+        [51215155] = {
+          Content = "谁说人与人有贵贱之分，我看脑子装的东西不都差不多吗？",
+          ContentKR = "그렇게 대단하다는 귀족들도 결국 머리에 든 건 평민들하고 별 차이 없던 건가?",
+          DialogueId = 51215155,
+          GUID = "8036365E",
+          SpeakNpcId = 700582
+        },
+        [51215156] = {
+          Content = "你指的是西顿？",
+          ContentKR = "시돈 말이에요?",
+          DialogueId = 51215156,
+          GUID = "80363688",
+          SpeakNpcId = 100001
+        },
+        [51215157] = {
+          Content = "除了他还有谁呢。本来他就注定要失败，不如到艾森巴恩那拿这个情报卖个好价钱。从你们开口的那一刻开始，我就这么打算了。",
+          ContentKR = "그 녀석 말고 또 누구겠어. 어차피 시돈은 실패할 게 뻔해. 그러니 아이젠반한테 가서 정보나 좋은 값에 팔아넘기는 게 낫지. 너희가 그 이야기를 꺼낸 생각부터 난 그럴 작정이었어.",
+          DialogueId = 51215157,
+          GUID = "803636B2",
+          SpeakNpcId = 700582
+        },
+        [51215158] = {
+          Content = "而且，你们真的了解西顿吗？你们怎么就肯定，如果西顿接管了百花车站，我们的生活不会变得更糟糕？",
+          ContentKR = "게다가, 너희가 시돈이란 녀석을 얼마나 알아? 시돈이 블룸필드역을 차지한 후에, 우리 삶이 더 나빠지지 않을지 어떻게 알아?",
+          DialogueId = 51215158,
+          GUID = "803636DC",
+          SpeakNpcId = 700582
+        },
+        [51215159] = {
+          Content = "…………",
+          ContentKR = "......",
+          DialogueId = 51215159,
+          GUID = "80363706",
+          SpeakNpcId = 100001
+        },
+        [51215160] = {
+          Content = "行了，我想我已经讲得很清楚了。刺杀成功，螺丝刀不一定能享受好处，但是刺杀失败，螺丝刀必然会付出血的代价。",
+          ContentKR = "됐어, 이 정도면 설명이 됐겠지. 암살이 성공해도 우리 협회에 득이 된다는 보장은 없고, 만약 실패한다면 반드시 피의 대가를 치르게 될 거야.",
+          DialogueId = 51215160,
+          GUID = "80363730",
+          SpeakNpcId = 700582
+        },
+        [51215161] = {
+          Content = "放了我，我还能赶到艾森巴恩那里，阻止这场刺杀，这是唯一能从西顿的贼船上救下螺丝刀的方式了。",
+          ContentKR = "날 풀어줘. 아직 아이젠반한테 가서 암살을 막을 시간이 있어. 그게 시돈이 벌인 위험한 도박에서 드라이버 협회를 구할 유일한 방법이야.",
+          DialogueId = 51215161,
+          GUID = "8036375A",
+          SpeakNpcId = 700582
+        },
+        [51215162] = {
+          Content = "我得承认，我有点被他说服了。",
+          ContentKR = "인정해야겠네. 나도 조금 설득당했어.",
+          DialogueId = 51215162,
+          GUID = "80363784",
+          SpeakNpcId = 100401
+        },
+        [51215163] = {
+          Content = "可是他这么说的前提是，艾森巴恩一定不会被推翻，我看可能不是哦，万一这一次成功了呢……",
+          ContentKR = "하지만 그건 아이젠반을 절대로 끌어내릴 수 없다고 가정했을 때 얘기잖아. 내 생각엔 아닐 수도 있어. 만에 하나 이번에 성공한다면...",
+          DialogueId = 51215163,
+          GUID = "803637AE",
+          SpeakNpcId = 100402
+        },
+        [51215164] = {
+          Content = "不过最终决定帮哪边，还是靠你自己决定啦，毕竟做这种重大决定的时候，还是要听队长的。",
+          ContentKR = "하지만 어느 쪽을 도울지는 시종이 선택하는 게 좋겠어. 이런 중요한 결정은 역시 대장 말을 들어야 하니까.",
+          DialogueId = 51215164,
+          GUID = "803637D8",
+          SpeakNpcId = 100402
+        },
+        [51215165] = {
+          Content = "（想想那些生活在车站里的人们……）",
+          ContentKR = "(이 역에서 살아가는 사람들을 떠올려 보자...)",
+          DialogueId = 51215165,
+          GUID = "80363802",
+          SpeakNpcId = 100001
+        },
+        [51215166] = {
+          Content = "十个铜币，可以用八个来买一块黑面包，再用两个买一小块临期黄油，虽然有点发酸，但是好歹能让黑面包好入口些，不至于咽的时候嗓子太疼。",
+          ContentKR = "10쿠퍼면 검은 빵을 하나 사고, 남은 돈으로 상하기 직전의 버터 한 조각을 살 수 있어요. 시큼한 냄새가 좀 나긴 해도, 그걸 빵에 바르면 목 안 막히게, 조금 부드럽게 먹을 수 있죠.",
+          DialogueId = 51215166,
+          GUID = "8036382C",
+          SpeakNpcId = 700478
+        },
+        [51215167] = {
+          Content = "听说贵族老爷们吃的牛排要是煎得太熟也会难以下咽，是不是也说明我吃的和贵族老爷们吃的差不多？！",
+          ContentKR = "귀족들이 먹는 스테이크도 너무 익히면 목에 잘 안 넘어간다던데, 그러면 제가 먹는 거랑 거의 똑같은 거 아닌가요?",
+          DialogueId = 51215167,
+          GUID = "80363856",
+          SpeakNpcId = 700478
+        },
+        [51215168] = {
+          Content = "接下来得尽快玩把大的，拿钱就跑，不然我们赚钱的动静这么大，会被杰克先生他们发现的。",
+          ContentKR = "이제 빨리 크게 한 판 하고 돈 챙겨서 튀어야 해. 안 그러면 우리가 돈 버는 게 너무 눈에 띄어서 미스터 잭한테 들킬 거야.",
+          DialogueId = 51215168,
+          GUID = "80363880",
+          SpeakNpcId = 700479
+        },
+        [51215169] = {
+          Content = "等拿到钱，我们73分，怎么样？你拿着钱去救你姐姐，我再去过我自己的人生。",
+          ContentKR = "돈 벌면 7대 3으로 나누자, 어때? 넌 그 돈으로 {性别:누나|언니} 구하고, 나는 내 인생 살러 가는 거야.",
+          DialogueId = 51215169,
+          GUID = "803638AA",
+          SpeakNpcId = 700479
+        },
+        [51215170] = {
+          Content = "人嘛，进步了的时候，就觉得自己不应该只拿和没进步之前一样的工资，所以大家就集体去要求上面涨薪，不然就以跑路作为威胁。",
+          ContentKR = "근데 사람이란 게, 실력이 늘면 월급도 달라져야 한다고 생각하는 법이잖아. 그래서 다들 모여서 임금 인상을 요구했어. 안 그러면 때려치우겠다고 위협하면서 말이야.",
+          DialogueId = 51215170,
+          GUID = "803638D4",
+          SpeakNpcId = 700591
+        },
+        [51215171] = {
+          Content = "结果呢？百花车站才不在乎他们的生死和去留，他们需要的只是听话干活的家伙，上面直说开不起他们的工资，让他们滚，最后，只有休留下来了。",
+          ContentKR = "결과는 어떻게 됐게? 블룸필드역은 그 사람들 생사나 거취 따위엔 관심도 없었어. 말 잘 듣는 일꾼만 있으면 된다고 생각했거든. 결국 윗선에선 돈 못 올려주니까 꺼지라고 했고, 결국 휴만 남게 된 거야.",
+          DialogueId = 51215171,
+          GUID = "803638FE",
+          SpeakNpcId = 700591
+        },
+        [51215172] = {
+          Content = "另外，他身上有被虐待拷打的痕迹，手腕上写着608几个数字，是用刀刻上去的，很新。从出血量和角度来看，应该是他死前不久自己刻的。",
+          ContentKR = "그리고 몸 곳곳에 학대와 고문을 당한 흔적이 남아 있어. 손목엔 칼로 608이라는 숫자가 새겨져 있었는데, 얼마 전에 생긴 거야. 출혈량이나 각도를 보면, 죽기 직전에 본인이 새긴 것 같아.",
+          DialogueId = 51215172,
+          GUID = "80363928",
+          SpeakNpcId = 700481
+        },
+        [51215173] = {
+          Content = "{nickname}，发什么呆呢？你怎么想的？",
+          ContentKR = "{nickname}, 왜 멍하니 있어? 네 생각은 어때?",
+          DialogueId = 51215173,
+          GUID = "80363952",
+          SpeakNpcId = 100401
+        },
+        [51215174] = {
+          Content = "（帮助螺丝刀行会，放了罗连特。）",
+          ContentKR = "(드라이버 협회를 위해 로렌트를 풀어준다.)",
+          DialogueId = 51215174,
+          GUID = "8036397C"
+        },
+        [51215175] = {
+          Content = "就当是为了玛吉和工人们。你滚吧，去让艾森巴恩做好防备。",
+          ContentKR = "마지와 일꾼들을 위해서 풀어주는 거예요. 그만 꺼져요. 가서 아이젠반에게 가서 대비하라고 하세요.",
+          DialogueId = 51215175,
+          GUID = "803639A6",
+          SpeakNpcId = 100001
+        },
+        [51215176] = {
+          Content = "谢谢你，做出了理智的决定。",
+          ContentKR = "이성적인 판단을 내려 줘서 고마워.",
+          DialogueId = 51215176,
+          GUID = "803639D0",
+          SpeakNpcId = 700582
+        },
+        [51215177] = {
+          Content = "（帮助汽笛沙龙，不放过罗连特。）",
+          ContentKR = "(기적 소리 살롱을 도와 로렌트를 풀어주지 않는다.)",
+          DialogueId = 51215177,
+          GUID = "803639FA"
+        },
+        [51215178] = {
+          Content = "……想要改变什么，就要做出付出代价的觉悟。",
+          ContentKR = "...변화를 원한다면 대가를 치를 각오가 필요해요.",
+          DialogueId = 51215178,
+          GUID = "80363A24",
+          SpeakNpcId = 100001
+        },
+        [51215179] = {
+          Content = "在这座车站，我见过了太多在死亡边缘上挣扎的人们，我想对他们来说，不会有什么比现状更糟糕了。",
+          ContentKR = "죽음의 문턱에서 버티는 사람들을 기차역에서 너무 많이 봤어요. 그 사람들한테는 더 나빠질 것도 없을 거예요.",
+          DialogueId = 51215179,
+          GUID = "80363A4E",
+          SpeakNpcId = 100001
+        },
+        [51215180] = {
+          Content = "当我对工人们说汽笛沙龙的计划时，他们每个人几乎没有犹豫，马上就答应了。我想，这就是他们的选择。他们并没有你想得那么懦弱，那么短视。",
+          ContentKR = "일꾼들에게 기적 소리 살롱의 계획을 말했을 때, 대부분 거의 망설임 없이 받아들였어요. 그게 그 사람들의 선택이라고 생각해요. 당신 생각처럼 나약하거나 눈앞밖에 못 보는 사람들은 아니에요.",
+          DialogueId = 51215180,
+          GUID = "80363A78",
+          SpeakNpcId = 100001
+        },
+        [51215181] = {
+          Content = "因为他们知道，如果一直这样忍耐下去，那几年，几十年，他们的处境便不会有任何改变。所以，即使可能付出代价，他们也选择一次抗争……",
+          ContentKR = "그 사람들도 이렇게 계속 참다간 몇 년이 지나도, 몇십 년이 지나도 처지가 조금도 달라지지 않을 거라는 걸 아니까요. 그래서 대가를 치를지라도 한 번은 맞서 싸우기로 한 거죠...",
+          DialogueId = 51215181,
+          GUID = "80363AA2",
+          SpeakNpcId = 100001
+        },
+        [51215182] = {
+          Content = "或许是一生仅有一次的抗争。",
+          ContentKR = "어쩌면 평생 단 한 번뿐일 싸움일지라도요.",
+          DialogueId = 51215182,
+          GUID = "80363ACC",
+          SpeakNpcId = 100001
+        },
+        [51215183] = {
+          Content = "也好，就让你们自己见证自己的选择错得有多离谱……",
+          ContentKR = "좋아. 그럼 너희가 얼마나 터무니없는 선택을 한 건지 직접 보면 되겠군...",
+          DialogueId = 51215183,
+          GUID = "80363AF6",
+          SpeakNpcId = 700582
+        },
+        [51215184] = {
+          Content = "（你对罗连特的脑后来了一记手刀，让他陷入了并不甜蜜的梦乡。）",
+          ContentKR = "(나는 손으로 로렌트의 뒤통수를 쳐서 기절시켰고, 로렌트는 그대로 뻗어 버렸다.)",
+          DialogueId = 51215184,
+          GUID = "80363B20"
+        },
+        [51215185] = {
+          Content = "接下来该怎么办？",
+          ContentKR = "이제 어떻게 하지?",
+          DialogueId = 51215185,
+          GUID = "80363B4A",
+          SpeakNpcId = 100401
+        },
+        [51215186] = {
+          Content = "时间差不多了，汽笛沙龙那边的演出应该也要开始了吧，小仆从，我们要不要先去站厅？",
+          ContentKR = "슬슬 시간이 다 됐어. 기적 소리 살롱의 공연이 곧 시작될 거야. 시종, 우리 일단 대합실로 갈까?",
+          DialogueId = 51215186,
+          GUID = "80363B74",
+          SpeakNpcId = 100402
+        },
+        [51215187] = {
+          Content = "先等等，玛吉还在昏迷，奥特赛德，你先把她抬去安全的地方吧，白，有纸和笔吗？",
+          ContentKR = "잠깐만. 마지가 아직 의식이 없어. 아웃사이더, 마지를 먼저 안전한 곳으로 옮겨 줘. 스노우, 종이랑 펜 있어?",
+          DialogueId = 51215187,
+          GUID = "80363B9E",
+          SpeakNpcId = 100001
+        },
+        [51215188] = {
+          Content = "有的有的！不过你要这个做什么啊？",
+          ContentKR = "응, 있어! 그런데 시종, 이걸로 뭐 하게?",
+          DialogueId = 51215188,
+          GUID = "80363BC8",
+          SpeakNpcId = 100402
+        },
+        [51215189] = {
+          Content = "我来看看你在写什么……给玛吉……寄存人，{nickname}……号码，712……",
+          ContentKR = "어디 보자... 마지에게... 맡긴 사람, {nickname}... 번호, 712...",
+          DialogueId = 51215189,
+          GUID = "80363BF2",
+          SpeakNpcId = 100402
+        },
+        [51215190] = {
+          Content = "小仆从，那不是那个汉迪·西塞罗的遗物吗？就是那个……",
+          ContentKR = "시종, 그거 핸디 시세로의 유품 아니야? 그, 뭐였더라...",
+          DialogueId = 51215190,
+          GUID = "80363C1C",
+          SpeakNpcId = 100402
+        },
+        [51215191] = {
+          Content = "《芙罗蒂娅百花车站年度账目明细》。最危险的地方就是最安全的地方，所以我们当时把它换了个柜子，重新寄存了起来。",
+          ContentKR = "〈플로렌티아 블룸필드역 연간 결산 내역〉이야. 등잔 밑이 가장 어둡다고 하잖아. 그래서 그때 이걸 다른 보관함으로 옮겨서 보관해 뒀었어.",
+          DialogueId = 51215191,
+          GUID = "80363C46",
+          SpeakNpcId = 100001
+        },
+        [51215192] = {
+          Content = "你想让玛吉去取那册账本，可是为什么？",
+          ContentKR = "마지한테 그 장부를 찾아오게 하려는 거구나. 그런데 이유가 뭐야?",
+          DialogueId = 51215192,
+          GUID = "80363C70",
+          SpeakNpcId = 100401
+        },
+        [51215193] = {
+          Content = "一种直觉……我现在还不能确定，好，留言塞在玛吉口袋里了，我们该出发去演出了。",
+          ContentKR = "그냥 직감이야... 사실 나도 확신은 없어. 좋아, 쪽지는 마지 주머니에 넣었고, 이제 공연장으로 가자.",
+          DialogueId = 51215193,
+          GUID = "80363C9A",
+          SpeakNpcId = 100001
+        },
+        [51215194] = {DialogueId = 51215194, GUID = "80363CC4"},
+        [51215195] = {
+          Content = "好多人！呜哇，我踮起脚都看不到前面，小仆从，奥特赛德，现在怎么样了？",
+          ContentKR = "사람 진짜 많다! 우와, 까치발을 들어도 앞이 안 보여. 시종, 아웃사이더, 지금 어떻게 되어가고 있어?",
+          DialogueId = 51215195,
+          GUID = "80363CEE",
+          SpeakNpcId = 100402
+        },
+        [51215196] = {
+          Content = "别急，还没正式开始。啊，那是西顿！",
+          ContentKR = "진정해, 아직 공연은 시작 전이라고. 아, 저기 시돈이다.",
+          DialogueId = 51215196,
+          GUID = "80363D18",
+          SpeakNpcId = 100401
+        },
+        [51215197] = {
+          Content = "那么，我曾经亲爱的战友，艾森巴恩站长大人，为了庆祝您抵达百花车站任职十年，我们汽笛沙龙排练了一场戏剧，传播您的功绩，希望您能喜欢。",
+          ContentKR = "그럼, 저의 친애하는 전우였던 아이젠반 역장님께서 블룸필드역에 부임하신 지 10년이 된 것을 기념해, 저희 기적 소리 살롱이 역장님의 공로를 알리는 연극을 준비했습니다. 부디 마음에 드시길 바랍니다.",
+          DialogueId = 51215197,
+          GUID = "80363D42",
+          SpeakNpcId = 700580
+        },
+        [51215198] = {
+          Content = "我这个人，书没看过几本，更是没怎么看过戏剧，我看还是算了吧。",
+          ContentKR = "전 책도 몇 권 읽은 적이 없고, 연극엔 더더욱 문외한입니다. 차라리 그만두는 게 어떻겠습니까?",
+          DialogueId = 51215198,
+          GUID = "80363D6C",
+          SpeakNpcId = 100416
+        },
+        [51215199] = {
+          Content = "……这，如果艾森巴恩站长大人不愿意看的话，那我们自然会听从您的吩咐。但我们汽笛沙龙的列维为了这一刻，苦苦排练了一个月。",
+          ContentKR = "...아, 아이젠반 역장님께서 원치 않으신다면, 저희는 당연히 분부를 따라야겠지요. 다만 저희 기적 소리 살롱의 레비가 이 순간을 위해 한 달 내내 고생하며 연습했습니다.",
+          DialogueId = 51215199,
+          GUID = "80363D96",
+          SpeakNpcId = 700580
+        },
+        [51215200] = {
+          Content = "还请您不要让他的心血白费！",
+          ContentKR = "부디 그 노력이 헛되지 않게 해 주셨으면 합니다!",
+          DialogueId = 51215200,
+          GUID = "80363DC0",
+          SpeakNpcId = 700580
+        },
+        [51215201] = {
+          Content = "好吧……那我姑且听听看，以后不要再搞这种名堂了。",
+          ContentKR = "좋습니다. 그렇게까지 말씀하시니, 한 번 보도록 하죠. 다만 이런 불필요한 행사는 앞으로 없었으면 좋겠군요.",
+          DialogueId = 51215201,
+          GUID = "80363DEA",
+          SpeakNpcId = 100416
+        },
+        [51215202] = {
+          Content = "遵命，站长大人，没有以后了。",
+          ContentKR = "물론이죠, 역장님. 다시는 없을 겁니다.",
+          DialogueId = 51215202,
+          GUID = "80363E14",
+          SpeakNpcId = 700580
+        },
+        [51215203] = {
+          Content = "随着站厅内的灯光逐渐变暗，列维扮成了年轻的艾森巴恩，出现在了众人视线的焦点中。",
+          ContentKR = "(대합실 안의 조명이 서서히 어두워지고, 젊은 아이젠반으로 분장한 레비가 시선 속에 모습을 드러낸다.)",
+          DialogueId = 51215203,
+          GUID = "80363E3E"
+        },
+        [51215204] = {
+          Content = "我……艾森巴恩，在南方的要塞中以血肉之躯见证了死神的降世。他人入梦时，我们在硝烟中剪下裤腿，包裹伤口。",
+          ContentKR = "나, 아이젠반은 남부 요새에서 죽음의 신이 내려오는 광경에 맨몸으로 맞섰다. 모두가 잠든 시간, 우리는 포연 속에서 바짓단을 찢어 상처를 동여맸다.",
+          DialogueId = 51215204,
+          GUID = "80363E68",
+          SpeakNpcId = 700594
+        },
+        [51215205] = {
+          Content = "战争结束了，也轮到我独一个入梦，可是那狡诈的睡魔却在梦境中也不予我宽容，向我低语一串又一串数字——214，97，83，7.62，1。",
+          ContentKR = "전쟁이 끝나고 나서야 홀로 잠들 시간이 왔다. 하지만 교활한 수마는 꿈속에서조차 자비를 베풀지 않고, 귓가에 숫자들을 끝없이 속삭였다. 214, 97, 83, 7.62, 1.",
+          DialogueId = 51215205,
+          GUID = "80363E92",
+          SpeakNpcId = 700594
+        },
+        [51215206] = {
+          Content = "214天，是叛乱持续的时间。97队，是前来平叛的小队的数目。",
+          ContentKR = "반란이 이어진 시간, 214일. 반란 진압에 투입된 소대 수, 97.",
+          DialogueId = 51215206,
+          GUID = "80363EBC",
+          SpeakNpcId = 700594
+        },
+        [51215207] = {
+          Content = "83克，是每天分配到的军粮的重量。7.62毫米，是燧发枪子弹的口径。",
+          ContentKR = "매일 배급받은 군량의 무게, 83g. 머스킷 소총 탄환의 구경, 7.62mm.",
+          DialogueId = 51215207,
+          GUID = "80363EE6",
+          SpeakNpcId = 700594
+        },
+        [51215208] = {
+          Content = "1名，是战争结束时，小队的存活数量。",
+          ContentKR = "전쟁이 끝났을 때 우리 소대에 남은 생존자 수, 1명.",
+          DialogueId = 51215208,
+          GUID = "80363F10",
+          SpeakNpcId = 700594
+        },
+        [51215209] = {
+          Content = "那黄铜的子弹没有中我，那阴冷的战壕没有伤我。而战友们离世前的目光也没有离我一分一毫。",
+          ContentKR = "황동 탄환도, 차갑고 음습한 참호도 내게 상처를 입히지 못했다. 하지만 죽어 가던 전우들의 눈빛만은 한순간도 내게서 떠나지 않았다.",
+          DialogueId = 51215209,
+          GUID = "80363F3A",
+          SpeakNpcId = 700594
+        },
+        [51215210] = {
+          Content = "忘记他们的眼神我无法坦然死，牢记他们的眼神我不能好好活。所以最终逃到这北方的雪之国度，想要在冰雪中寻找比南方更加温暖的太阳。",
+          ContentKR = "그 눈빛을 잊으면 편안히 눈 감을 수 없고, 그 눈빛을 기억하면 편안히 살 수 없었다. 그래서 끝내 이 눈 덮인 북쪽 땅으로 도망쳐, 얼음과 눈 속에서 남쪽보다 더 따뜻한 태양을 찾으려 했다.",
+          DialogueId = 51215210,
+          GUID = "80363F64",
+          SpeakNpcId = 700594
+        },
+        [51215211] = {
+          Content = "这段是艾森巴恩到百花车站前的经历吧，我记得仓库的那个管理员提到过，之前他们是并肩作战的战友。",
+          ContentKR = "지금 내용은 아이젠반이 블룸필드역에 오기 전 이야기겠지? 그러고 보니 창고 관리인이 예전에 아이젠반이랑 전장에서 같이 싸운 전우였다고 했는데.",
+          DialogueId = 51215211,
+          GUID = "80363F8E",
+          SpeakNpcId = 100401
+        },
+        [51215212] = {
+          Content = "哇……艾森巴恩在揉眼睛诶，难道他真的被感动到了？",
+          ContentKR = "와... 아이젠반이 눈가를 훔치는 것 같아. 설마 진짜 감동한 거야?",
+          DialogueId = 51215212,
+          GUID = "80363FB8",
+          SpeakNpcId = 100402
+        },
+        [51215213] = {
+          Content = "看来西顿是真的下功夫了，应该是想要趁着艾森巴恩看地入神了，再突然出手吧。",
+          ContentKR = "시돈이 정말 공들여 준비했나 봐. 아이젠반이 연극에 푹 빠진 순간을 노려서 기습하려는 거겠지.",
+          DialogueId = 51215213,
+          GUID = "80363FE2",
+          SpeakNpcId = 100001
+        },
+        [51215214] = {DialogueId = 51215214, GUID = "8036400C"},
+        [51215215] = {
+          Content = "不过，既然我们放了罗连特走，那么艾森巴恩就应该做好了准备才是。",
+          ContentKR = "근데 우리가 로렌트를 그냥 보내 줬잖아. 아이젠반도 이미 대비하고 있을 거야.",
+          DialogueId = 51215215,
+          GUID = "80364036",
+          SpeakNpcId = 100001
+        },
+        [51215216] = {
+          Content = "呜哇！还以为艾森巴恩看哭了，原来是鳄鱼的眼泪吗？",
+          ContentKR = "으아! 스노우는 아이젠반이 연극 보고 우는 줄 알았는데, 저거 악어의 눈물이었어?",
+          DialogueId = 51215216,
+          GUID = "80364060",
+          SpeakNpcId = 100402
+        },
+        [51215217] = {
+          Content = "管他是真是假，我们先到周围观察一下，看看艾森巴恩提前准备了什么吧。",
+          ContentKR = "연기인지 진짜 눈물인지는 아무도 모르지. 일단 주변부터 살펴보자. 아이젠반이 미리 뭘 준비해 뒀는지 확인해야 해.",
+          DialogueId = 51215217,
+          GUID = "8036408A",
+          SpeakNpcId = 100001
+        },
+        [51215218] = {DialogueId = 51215218, GUID = "803640B4"},
+        [51215219] = {
+          Content = "（观察四周。）",
+          ContentKR = "(주위를 둘러본다.)",
+          DialogueId = 51215219,
+          GUID = "803640DE"
+        },
+        [51215220] = {
+          Content = "周围的柱子后面都藏满了车站警卫……不应该啊，西顿没察觉到吗？",
+          ContentKR = "기둥 뒤마다 기차역 경비원들이 숨어 있어... 이상한데, 시돈은 이걸 못 봤나?",
+          DialogueId = 51215220,
+          GUID = "80364108",
+          SpeakNpcId = 100001
+        },
+        [51215221] = {
+          Content = "这个角度，正好在西顿的视觉盲区，他看不见这些埋伏。",
+          ContentKR = "저 각도면 시돈 자리에서는 안 보여. 매복을 눈치채지 못했을 거야.",
+          DialogueId = 51215221,
+          GUID = "80364132",
+          SpeakNpcId = 100401
+        },
+        [51215222] = {
+          Content = "但他也应该有手下替他通风报信才是……还是说，这些人都已经被艾森巴恩干掉了。",
+          ContentKR = "그래도 상황을 알려 줄 부하 하나쯤은 있었을 텐데... 설마 아이젠반이 그것도 미리 다 손써 둔 건가?",
+          DialogueId = 51215222,
+          GUID = "8036415C",
+          SpeakNpcId = 100001
+        },
+        [51215223] = {
+          Content = "很有可能。",
+          ContentKR = "충분히 가능해.",
+          DialogueId = 51215223,
+          GUID = "80364186",
+          SpeakNpcId = 100401
+        },
+        [51215224] = {DialogueId = 51215224, GUID = "803641B0"},
+        [51215225] = {
+          Content = "（观察车站的出入口。）",
+          ContentKR = "(역 출입구 쪽을 살펴본다.)",
+          DialogueId = 51215225,
+          GUID = "803641DA"
+        },
+        [51215226] = {
+          Content = "入口都是看守的警卫，通往工厂的烟囱那边是螺丝刀行会的人，所有的逃跑路径都被封死了。",
+          ContentKR = "입구마다 경비원이 지키고 있고, 공장 굴뚝으로 이어지는 길목엔 드라이버 협회 사람들이 깔려 있어. 도망칠 길은 다 막혔군.",
+          DialogueId = 51215226,
+          GUID = "80364204",
+          SpeakNpcId = 100401
+        },
+        [51215227] = {
+          Content = "刚刚那些嚷嚷着艾森巴恩走私，反对艾森巴恩的人好像也都不见了诶。可能也被他赶走了。",
+          ContentKR = "아까 아이젠반을 밀수범이라고 몰아붙이던 사람들도 다 안 보이네. 아이젠반이 쫓아낸 걸까?",
+          DialogueId = 51215227,
+          GUID = "8036422E",
+          SpeakNpcId = 100402
+        },
+        [51215228] = {
+          Content = "看来艾森巴恩是胜券在握，不仅不害怕刺杀，还想着要把汽笛沙龙一网打尽。",
+          ContentKR = "아이젠반은 이미 승기를 잡았다고 보는 거야. 암살을 막고 끝낼 생각이 아니라, 기적 소리 살롱까지 한꺼번에 잡아들이려는 거지.",
+          DialogueId = 51215228,
+          GUID = "80364258",
+          SpeakNpcId = 100001
+        },
+        [51215229] = {DialogueId = 51215229, GUID = "80364282"},
+        [51215230] = {
+          Content = "现在看来，多少有点庆幸听了罗连特的意见，想要在百花车站这个地方去和艾森巴恩抗衡还是太困难了。西顿应该讨不到便宜。",
+          ContentKR = "이제 보니 로렌트 말 듣길 잘했네. 블룸필드역 안에서 아이젠반과 정면으로 맞서는 건 무리야. 시돈도 여기선 별 수 없겠어.",
+          DialogueId = 51215230,
+          GUID = "803642AC",
+          SpeakNpcId = 100401
+        },
+        [51215231] = {
+          Content = "……戏剧应该差不多到了开枪的桥段了，我们看看艾森巴恩会怎么应对。",
+          ContentKR = "...이제 곧 총을 쏘는 장면이 나올 거야. 아이젠반이 어떻게 나오는지 보자.",
+          DialogueId = 51215231,
+          GUID = "803642D6",
+          SpeakNpcId = 100401
+        },
+        [51215232] = {DialogueId = 51215232, GUID = "80364300"},
+        [51215233] = {
+          Content = "趁这个时候找西顿聊聊吧，看他准备的如何了，顺便也告诉他螺丝刀行会里有内鬼的事。",
+          ContentKR = "이 틈에 시돈한테 가자. 준비는 어디까지 됐는지 확인하고, 드라이버 협회에 내통자가 있다는 것도 알려야 해.",
+          DialogueId = 51215233,
+          GUID = "8036432A",
+          SpeakNpcId = 100001
+        },
+        [51215234] = {
+          Content = "对哦，我们上来了之后还没有和西顿联系过，不过看列维演出的样子，应该是做了十足的准备。",
+          ContentKR = "맞아. 여기 올라온 뒤로는 시돈하고 한 번도 연락 못 했지. 그래도 레비가 저 정도로 연기하고 있는 걸 보면, 준비를 단단히 한 것 같아.",
+          DialogueId = 51215234,
+          GUID = "80364354",
+          SpeakNpcId = 100401
+        },
+        [51215235] = {DialogueId = 51215235, GUID = "8036437E"},
+        [51215236] = {
+          Content = "哦，是你们啊，姗姗来迟，想必是带着重磅好消息前来。怎么样，螺丝刀行会愿意支援我们吗？",
+          ContentKR = "꽤 늦으셨군요. 그만큼 중요한 소식을 가져오셨겠죠. 어떻습니까, 드라이버 협회는 저희를 돕기로 했습니까?",
+          DialogueId = 51215236,
+          GUID = "803643A8",
+          SpeakNpcId = 700580
+        },
+        [51215237] = {
+          Content = "不过，这个问题应该有答案了，我看这大厅之中有不少锻铁工们的身影，就知道一定是你们的功劳。",
+          ContentKR = "아니, 물을 필요도 없겠군요. 대합실에 드라이버 협회 사람들이 꽤 보이네요. 여러분이 잘 움직여 주신 덕분이겠죠.",
+          DialogueId = 51215237,
+          GUID = "803643D2",
+          SpeakNpcId = 700580
+        },
+        [51215238] = {
+          Content = "是艾森巴恩的功劳，没有他的话，这些锻铁工也不会愿意站出来反对他。",
+          ContentKR = "아이젠반이 덕분이라고 해야겠죠. 아이젠반이 저지른 일들이 없었다면, 드라이버 협회 사람들도 이렇게까지 나오진 않았을 테니까요.",
+          DialogueId = 51215238,
+          GUID = "803643FC",
+          SpeakNpcId = 100001
+        },
+        [51215239] = {
+          Content = "说得好！不过，螺丝刀行会的首领们在哪里？我还没见过他们，总不至于这时候还躲躲藏藏吧。",
+          ContentKR = "그렇지요! 그런데 드라이버 협회의 책임자들은 어디 있습니까? 아직 못 본 것 같은데, 이런 상황에서까지 뒤로 빠져 있을 생각은 아니겠지요.",
+          DialogueId = 51215239,
+          GUID = "80364426",
+          SpeakNpcId = 700580
+        },
+        [51215240] = {
+          Content = "他们啊……",
+          ContentKR = "그쪽은...",
+          DialogueId = 51215240,
+          GUID = "80364450",
+          SpeakNpcId = 100401
+        },
+        [51215241] = {
+          Content = "（向西顿讲述了在螺丝刀行会的遭遇。）",
+          ContentKR = "(시돈에게 드라이버 협회에서 있었던 일을 설명한다.)",
+          DialogueId = 51215241,
+          GUID = "8036447A"
+        },
+        [51215242] = {
+          Content = "你是说，螺丝刀那个叫罗连特的家伙实际上是个勾结艾森巴恩的叛徒？",
+          ContentKR = "그러니까, 드라이버 협회의 로렌트라는 자가 사실은 아이젠반과 내통한 배신자라는 말씀이십니까?",
+          DialogueId = 51215242,
+          GUID = "803644A4",
+          SpeakNpcId = 700580
+        },
+        [51215243] = {
+          Content = "骇人听闻！这事你没告诉过其他人吧……这不行……等明天我就要把这些锻铁工全都换掉！",
+          ContentKR = "이런 소름 끼치는 일이! 이 일은 다른 사람에게는 비밀로... 아니죠, 내일 당장 저 일꾼들을 전부 갈아치워야겠어요!",
+          DialogueId = 51215243,
+          GUID = "803644CE",
+          SpeakNpcId = 700580
+        },
+        [51215244] = {
+          Content = "他们不忠诚，不老实，说不定还有艾森巴恩的余孽。",
+          ContentKR = "다들 충성심도 없고, 정직하지도 않아요. 어쩌면 아이젠반의 잔당이 아직 섞여 있을지도 모르죠.",
+          DialogueId = 51215244,
+          GUID = "803644F8",
+          SpeakNpcId = 700580
+        },
+        [51215245] = {
+          Content = "等等，你是说他们全部？他们不少是今天在场帮你的战友！",
+          ContentKR = "잠깐만요, 전부 갈아치운다고요? 오늘 현장에서 당신을 도와 함께 싸워 준 사람들도 많잖아요!",
+          DialogueId = 51215245,
+          GUID = "80364522",
+          SpeakNpcId = 100001
+        },
+        [51215246] = {
+          Content = "今天罢了，今天的太阳落下后，到了明天，我们的身份可就不一样了。",
+          ContentKR = "그건 오늘까지의 이야기입니다. 내일 새로운 태양이 밝으면, 저들과 우리의 신분은 달라질 겁니다.",
+          DialogueId = 51215246,
+          GUID = "8036454C",
+          SpeakNpcId = 700580
+        },
+        [51215247] = {
+          Content = "我劝你也调整调整心态。要有身为赢家的自觉，不是所有人都值得信任的。",
+          ContentKR = "당신도 마음가짐을 좀 바꾸시는 게 좋겠습니다. 승자라는 자각을 가지셔야죠. 아무나 믿어서는 안 되는 법입니다.",
+          DialogueId = 51215247,
+          GUID = "80364576",
+          SpeakNpcId = 700580
+        },
+        [51215248] = {
+          Content = "好了，没意义的闲聊到此为止，注意力集中到表演上吧。真正的好戏，马上就要开始了。",
+          ContentKR = "자, 쓸데없는 이야기는 여기까지 하고, 이제 무대에 집중하시죠. 진짜 볼거리가 곧 시작될 겁니다.",
+          DialogueId = 51215248,
+          GUID = "803645A0",
+          SpeakNpcId = 700580
+        },
+        [51215249] = {DialogueId = 51215249, GUID = "803645CA"},
+        [51215250] = {
+          Content = "此时，列维所扮演的艾森巴恩所演的戏剧已经到了精彩段落——",
+          ContentKR = "무대 위에서는 아이젠반 역을 맡은 레비의 연기가 클라이맥스를 향해 달려가고 있다.",
+          DialogueId = 51215250,
+          GUID = "803645F4"
+        },
+        [51215251] = {
+          Content = "你们到底是被什么东西夺走了魂灵。不，哪怕是魂灵也不应该会有如此多的疑心——担心大雪吞没轨道，狂风掀翻车辆。",
+          ContentKR = "그대들은 대체 무엇에 영혼을 빼앗긴 것인가. 아니, 영혼이라 해도 이토록 의심이 많지는 않을 터, 어찌 큰 눈이 선로를 집어삼키고, 거센 바람이 차량을 뒤집을까 두려워하는가?",
+          DialogueId = 51215251,
+          GUID = "8036461E",
+          SpeakNpcId = 700594
+        },
+        [51215252] = {
+          Content = "倘若这种事情都占据了你们的心头，让你们不敢当这个站长。那你们为何又能安心饮食，不担心自己被浓汤溺毙，被气味噎死。",
+          ContentKR = "고작 그런 걱정에 사로잡혀 역장의 자리를 두려워한다면, 먹고 마시는 일에는 어찌 의심도 걱정도 없는가? 걸쭉한 수프에 익사하거나, 냄새에 질식해 죽는 일은 왜 걱정하지 않는가?",
+          DialogueId = 51215252,
+          GUID = "80364648",
+          SpeakNpcId = 700594
+        },
+        [51215253] = {
+          Content = "风暴终究会过去，长夜也终将结束。列车也必定如同太阳放射出的金色丝线一般，连接起冰湖城与迪斯玛尼亚。",
+          ContentKR = "폭풍은 지나가고, 긴 밤도 끝날 것이다. 그리고 열차는 태양이 내뿜는 황금 빛줄기처럼, 찬란한 길이 되어 아이스레이크 시티와 디즈마니아를 이어 줄 것이다!",
+          DialogueId = 51215253,
+          GUID = "80364672",
+          SpeakNpcId = 700594
+        },
+        [51215254] = {
+          Content = "所以，我诅咒它，诅咒这迟滞一切的风暴，我将以我的全部恨意灌注至这三颗弹丸内，向着这怒吼的无形畜类开火。",
+          ContentKR = "그러니 나는 이 폭풍을, 모든 것을 늦추는 이 폭풍을 저주하노라. 나의 모든 증오는 이 세 발의 탄환에 담겨, 울부짖는 저 보이지 않는 짐승을 향하리라!",
+          DialogueId = 51215254,
+          GUID = "8036469C",
+          SpeakNpcId = 700594
+        },
+        [51215255] = {
+          Content = "并最终，成为驱散它的太阳——",
+          ContentKR = "그리고 마침내, 그 짐승을 몰아내는 태양이 되리라...",
+          DialogueId = 51215255,
+          GUID = "803646C6",
+          SpeakNpcId = 700594
+        },
+        [51215256] = {
+          Content = "去死吧，艾森巴恩！",
+          ContentKR = "죽어라, 아이젠반!",
+          DialogueId = 51215256,
+          GUID = "803646F0",
+          SpeakNpcId = 700594
+        },
+        [51215257] = {
+          Content = "演技很好，可惜了，我还不能让你如愿。",
+          ContentKR = "연기는 훌륭했다만, 아쉽게도 네 바람대로 되게 둘 수는 없지.",
+          DialogueId = 51215257,
+          GUID = "8036471A",
+          SpeakNpcId = 100416
+        },
+        [51215258] = {
+          Content = "列维把枪对准艾森巴恩，扣下了扳机却没有任何异动。与此同时，几束子弹同时贯穿了他的身体。",
+          ContentKR = "레비가 아이젠반을 향해 총을 겨누고 방아쇠를 당겼지만, 아무 일도 일어나지 않았다. 그와 동시에 총탄 여러 발이 레비의 몸을 꿰뚫었다.",
+          DialogueId = 51215258,
+          GUID = "80364744"
+        },
+        [51215259] = {
+          Content = "什么……",
+          ContentKR = "무슨...",
+          DialogueId = 51215259,
+          GUID = "8036476E",
+          SpeakNpcId = 700594
+        },
+        [51215260] = {
+          Content = "太天真了，年轻人，你的那把枪，早在上场之前，就已经被人去掉了子弹。",
+          ContentKR = "어리석은 젊은이, 그 총은 네가 무대에 오르기도 전에 이미 총알이 빠져 있었다.",
+          DialogueId = 51215260,
+          GUID = "80364798",
+          SpeakNpcId = 100416
+        },
+        [51215261] = {
+          Content = "经常杀人的人，不会察觉不到这几颗子弹的重量差异。所以，当你面带仇恨地出现在我面前的时候，我就已经赢了。",
+          ContentKR = "사람을 자주 죽여 본 자라면 총알 몇 발의 무게 차이를 모를 리가 없지. 네가 증오를 얼굴에 드러내고 내 앞에 나타난 순간부터, 이 승부는 이미 끝나 있었다.",
+          DialogueId = 51215261,
+          GUID = "803647C2",
+          SpeakNpcId = 100416
+        },
+        [51215262] = {
+          Content = "你是一个好演员，只不过你出演的最好的角色，是一个失败的刺客。",
+          ContentKR = "넌 훌륭한 배우였다. 네 최고의 배역이 실패한 암살자였을 뿐이지.",
+          DialogueId = 51215262,
+          GUID = "803647EC",
+          SpeakNpcId = 100416
+        },
+        [51215263] = {
+          Content = "罗连特，让你的人动起来吧，把那些不安分的汽笛沙龙的家伙都抓起来。那个西顿，直接乱枪打死。",
+          ContentKR = "로렌트, 네 부하들을 움직여, 기적 소리 살롱의 불온분자들을 전부 잡아들여라. 그리고 시돈은 그 자리에서 사살하도록.",
+          DialogueId = 51215263,
+          GUID = "80364816",
+          SpeakNpcId = 100416
+        },
+        [51215264] = {
+          Content = "遵命，大人。只不过，您不要亲自审问他吗？",
+          ContentKR = "네, 역장님! 그런데 시돈을 직접 심문하지 않으셔도 괜찮겠습니까?",
+          DialogueId = 51215264,
+          GUID = "80364840",
+          SpeakNpcId = 700582
+        },
+        [51215265] = {
+          Content = "不用，他是个蠢人，我连他的尸体也不想见到，直接扔出去喂雪狼。",
+          ContentKR = "필요 없다. 그런 멍청이의 시체 따위는 보고 싶지도 않으니, 스노우 울프의 먹이로 던져 줘.",
+          DialogueId = 51215265,
+          GUID = "8036486A",
+          SpeakNpcId = 100416
+        },
+        [51215266] = {
+          Content = "时间是很宝贵的东西，愿意配合他们演这样一出戏已经让我感到焦躁。而真正的威胁还没有被排除，我必须亲自对付他们。",
+          ContentKR = "내 귀중한 시간을 들여 이런 촌극에 장단 맞춰 주는 것만으로도 부아가 치밀던 참이었다. 게다가 진짜 위협이 아직 남아 있어. 내가 직접 상대하겠다.",
+          DialogueId = 51215266,
+          GUID = "80364894",
+          SpeakNpcId = 100416
+        },
+        [51215267] = {
+          Content = "对吧，狩月人们。",
+          ContentKR = "그렇지 않나, 월석 사냥꾼 여러분.",
+          DialogueId = 51215267,
+          GUID = "803648BE",
+          SpeakNpcId = 100416
+        },
+        [51215268] = {DialogueId = 51215268, GUID = "803648E8"},
+        [51215269] = {
+          Content = "列维把枪对准艾森巴恩，想要扣下扳机，但是艾森巴恩却在更早前就抬起了枪，发射了子弹。",
+          ContentKR = "레비가 아이젠반을 향해 총을 겨누고 방아쇠를 당기려 했지만, 그보다 먼저 아이젠반이 총을 들어 발포했다.",
+          DialogueId = 51215269,
+          GUID = "80364912"
+        },
+        [51215270] = {
+          Content = "什么……你……为什么会知道……",
+          ContentKR = "뭐야... 너... 어떻게 안 거지...",
+          DialogueId = 51215270,
+          GUID = "8036493C",
+          SpeakNpcId = 700594
+        },
+        [51215271] = {
+          Content = "我倒想要反问你为什么觉得我不知道你们的小动作。",
+          ContentKR = "오히려 묻고 싶군. 네놈들의 그 잔수작을 내가 모를 거라고 생각한 이유가 뭐지?",
+          DialogueId = 51215271,
+          GUID = "80364966",
+          SpeakNpcId = 100416
+        },
+        [51215272] = {
+          Content = "西顿没有告诉你吗？他正是当时那个不愿意担责，而被我抢走了站长位子的几个软蛋之一。",
+          ContentKR = "시돈이 말하지 않던가? 그자야말로 책임을 맡지 않으려다 내게 역장 자리를 빼앗긴 겁쟁이 중 하나라고.",
+          DialogueId = 51215272,
+          GUID = "80364990",
+          SpeakNpcId = 100416
+        },
+        [51215273] = {
+          Content = "这么多年过去，他还是没有任何变化，就连刺杀这种事情，都不敢亲自上手。",
+          ContentKR = "그렇게 오랜 세월이 흘렀는데도, 그놈은 하나도 변한 게 없군. 암살조차 남의 손을 빌려서 한다니 말이야.",
+          DialogueId = 51215273,
+          GUID = "803649BA",
+          SpeakNpcId = 100416
+        },
+        [51215274] = {
+          Content = "不许你诋毁西顿会长……他是……",
+          ContentKR = "시돈 회장님을 모욕하지 마... 그분은...",
+          DialogueId = 51215274,
+          GUID = "803649E4",
+          SpeakNpcId = 700594
+        },
+        [51215275] = {
+          Content = "他什么都不是。相反，你很勇敢。只可惜，你没法看到他的丑态了。",
+          ContentKR = "그자는 아무것도 아니다. 용감한 건 너야. 다만 아쉽게도, 시돈의 추잡한 모습을 보진 못하겠군.",
+          DialogueId = 51215275,
+          GUID = "80364A0E",
+          SpeakNpcId = 100416
+        },
+        [51215276] = {
+          Content = "把那个懦夫带过来。",
+          ContentKR = "그 겁쟁이를 이리 끌고 와라.",
+          DialogueId = 51215276,
+          GUID = "80364A38",
+          SpeakNpcId = 100416
+        },
+        [51215277] = {
+          Content = "你……你要干什么？你知道的，我姓布鲁图斯，是贵族，想要对我动手的话，得要想清楚后果！",
+          ContentKR = "지, 지금... 무슨 짓을 하려는 거야? 난 브루투스 가문의 귀족이야. 날 건드리면, 어떤 대가가 따를지 잘 생각해야 할걸!",
+          DialogueId = 51215277,
+          GUID = "80364A62",
+          SpeakNpcId = 700580
+        },
+        [51215278] = {
+          Content = "后果？什么后果，多写一张事故报告书罢了。",
+          ContentKR = "대가? 무슨 대가? 사고 보고서만 한 장 더 쓰면 그만이지.",
+          DialogueId = 51215278,
+          GUID = "80364A8C",
+          SpeakNpcId = 100416
+        },
+        [51215279] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51215279,
+          GUID = "80364AB6",
+          SpeakNpcId = 700580
+        },
+        [51215280] = {
+          Content = "……告诉我，你是怎么知道的？一直以来，我都在扮演你的支持者，跪服在你的身前，我自己觉得没有任何破绽，你为什么会对我有所防备？",
+          ContentKR = "...대체 어떻게 알아챈 거지? 그동안 난 네 지지자 노릇을 하며, 네 앞에 무릎까지 꿇었어. 아무런 허점도 없다고 생각했는데, 왜 날 경계한 거야?",
+          DialogueId = 51215280,
+          GUID = "80364AE0",
+          SpeakNpcId = 700580
+        },
+        [51215281] = {
+          Content = "没有破绽？无缘无故的吹捧就是最大的破绽。",
+          ContentKR = "허점이 없어? 이유 없는 아부야말로 가장 큰 허점이지.",
+          DialogueId = 51215281,
+          GUID = "80364B0A",
+          SpeakNpcId = 100416
+        },
+        [51215282] = {
+          Content = "所以我故意测试了你一下，要知道，平时我做月髓液交易，可是不会让任何人知道的。",
+          ContentKR = "그래서 널 일부러 시험해 본 거야. 몰랐나 본데, 평소에 내가 액체 폭시코르를 거래할 때는 그 사실을 아무에게도 흘리지 않아.",
+          DialogueId = 51215282,
+          GUID = "80364B34",
+          SpeakNpcId = 100416
+        },
+        [51215283] = {
+          Content = "你是说，那张照片……是你故意被我拍到的？",
+          ContentKR = "그럼 그 사진은... 일부러 찍히게 둔 거란 말이야?",
+          DialogueId = 51215283,
+          GUID = "80364B5E",
+          SpeakNpcId = 700580
+        },
+        [51215284] = {
+          Content = "行了，我没有回答你的问题的义务。虽然你给我制造的麻烦也还在可控范围内，但也足够碍眼了。",
+          ContentKR = "그쯤 해 두지. 네 질문에 대답할 의무는 없다. 네가 벌인 소동이 아직 수습 가능한 범위 안에 있긴 하지만, 충분히 눈에 거슬렸어.",
+          DialogueId = 51215284,
+          GUID = "80364B88",
+          SpeakNpcId = 100416
+        },
+        [51215285] = {
+          Content = "艾森巴恩面无表情地对着西顿扣下了扳机，但是脑袋却转了过来……",
+          ContentKR = "아이젠반은 표정 하나 바꾸지 않은 채 시돈을 향해 방아쇠를 당겼다. 그리곤 곧장 고개를 돌려 이쪽을 바라보았다...",
+          DialogueId = 51215285,
+          GUID = "80364BB2"
+        },
+        [51215286] = {DialogueId = 51215286, GUID = "80364BDC"},
+        [51215287] = {
+          Content = "不好，他盯上我们了，得逃出去。",
+          ContentKR = "이걸 어쩐다, 저 녀석이 우리를 노리고 있어. 빠져나가야 해.",
+          DialogueId = 51215287,
+          GUID = "80364C06",
+          SpeakNpcId = 100401
+        },
+        [51215288] = {
+          Content = "一下子涌出来这么多士兵，根本没有办法跑掉嘛！",
+          ContentKR = "갑자기 병사들이 이렇게 많이 쏟아져 나오면 도망칠 수가 없잖아!",
+          DialogueId = 51215288,
+          GUID = "80364C30",
+          SpeakNpcId = 100402
+        },
+        [51215289] = {
+          Content = "只能打出去了。",
+          ContentKR = "뚫고 나가는 수밖에 없어.",
+          DialogueId = 51215289,
+          GUID = "80364C5A",
+          SpeakNpcId = 100001
+        },
+        [51215290] = {DialogueId = 51215290, GUID = "80364C84"},
+        [51215291] = {
+          Content = "放弃挣扎吧，这里是百花车站，对我而言几乎是身体的一部分。",
+          ContentKR = "발버둥 쳐 봐야 소용없다. 블룸필드역 안에서 벌어지는 일은 내 손바닥 보듯 훤하거든.",
+          DialogueId = 51215291,
+          GUID = "80364CAE",
+          SpeakNpcId = 100416
+        },
+        [51215292] = {
+          Content = "你们在这里的一举一动就好像是阳光下的鼹鼠，笨拙而明显。",
+          ContentKR = "너희가 하는 짓들은 처음부터 다 보고 있었다. 어찌나 눈에 띄던지, 어설프기 짝이 없더군.",
+          DialogueId = 51215292,
+          GUID = "80364CD8",
+          SpeakNpcId = 100416
+        },
+        [51215293] = {
+          Content = "大人……他们在螺丝刀行会帮了我不少……能不能放了他们。",
+          ContentKR = "역장님... 저 친구들은 드라이버 협회에서 제 일을 많이 도와줬는데... 눈 감아 주시면 안 되겠습니까?",
+          DialogueId = 51215293,
+          GUID = "80364D02",
+          SpeakNpcId = 700582
+        },
+        [51215294] = {
+          Content = "看吧，看吧，你的这句话反而让我更加确信，他们不能活着离开这个车站。",
+          ContentKR = "그렇지, 바로 그 말 때문에 더 확신이 드는 거야. 저놈들은 결코 살아서 이 역을 나가게 해선 안 돼.",
+          DialogueId = 51215294,
+          GUID = "80364D2C",
+          SpeakNpcId = 100416
+        },
+        [51215295] = {
+          Content = "你永远不会为西顿求情，甚至向我提出改善工人待遇的请求也会犹豫再三。但你却在这种时候为他们说了话。",
+          ContentKR = "넌 시돈을 감싸준 적도 없고, 일꾼들 처우를 말할 때도 늘 한참을 망설였다. 그런 네가 지금 저놈들을 두둔했어.",
+          DialogueId = 51215295,
+          GUID = "80364D56",
+          SpeakNpcId = 100416
+        },
+        [51215296] = {
+          Content = "罗连特，你明白吗，这种失控的感觉非常糟糕。当我当上站长以来，就没有过了。",
+          ContentKR = "알겠나, 로렌트? 통제가 안 되는 기분은 아주 불쾌하지. 내가 역장이 된 뒤로는 처음 있는 일이야.",
+          DialogueId = 51215296,
+          GUID = "80364D80",
+          SpeakNpcId = 100416
+        },
+        [51215297] = {
+          Content = "他们几乎弥合了火车站内的两个组织。想要控制我的左手和右手挥拳击向自己的脸。",
+          ContentKR = "저놈들은 기차역 안의 두 조직을 하나로 합치려 했어. 내가 쥐고 흔들던 두 세력을 서로 손잡게 만들어서, 나를 치게 하려던 거야.",
+          DialogueId = 51215297,
+          GUID = "80364DAA",
+          SpeakNpcId = 100416
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51215298,
+    MaxKey = 60140206,
+    Loader = function()
+      return {
+        [51215298] = {
+          Content = "多谢你的夸奖，我们只是在打探情报的同时，力所能及地帮助了车站里的人们而已。",
+          ContentKR = "칭찬 감사합니다. 우린 정보를 알아보면서, 힘닿는 데까지 역 사람들을 도왔을 뿐이에요.",
+          DialogueId = 51215298,
+          GUID = "80364DD4",
+          SpeakNpcId = 100001
+        },
+        [51215299] = {
+          Content = "如果说这是魔力的话，那么给我们魔力的应该是你，艾森巴恩。如果你能够解决他们的问题，那我们根本就无机可乘。",
+          ContentKR = "그런 힘을 준 건 바로 아이젠반 당신이에요. 당신이 사람들의 문제를 제대로 해결했다면, 우리가 끼어들 틈도 없었을 테니까요.",
+          DialogueId = 51215299,
+          GUID = "80364DFE",
+          SpeakNpcId = 100001
+        },
+        [51215300] = {
+          Content = "狩月人，你们是不是一直在盯着天上的月亮，却忘记了一些基本的常识。没有人能够讨所有人喜欢。",
+          ContentKR = "월석 사냥꾼. 너무 먼 곳만 보느라 기본을 잊었나 보군. 어떻게 해도 모두를 만족시킬 순 없어.",
+          DialogueId = 51215300,
+          GUID = "80364E28",
+          SpeakNpcId = 100416
+        },
+        [51215301] = {
+          Content = "哪怕是平等照亮一切的太阳，也会造就阴影。而你们，却躲在这阴影里，指责太阳是不公平的。不觉得可笑吗？",
+          ContentKR = "심지어 온세상을 공평하게 비추는 태양 아래도 그늘은 있는 법이지. 그런데 너희는 그 그늘 뒤에 숨어, 태양이 불공평하다고 떠들고 있지. 우습지 않나?",
+          DialogueId = 51215301,
+          GUID = "80364E52",
+          SpeakNpcId = 100416
+        },
+        [51215302] = {
+          Content = "想要解决所有人的问题的话，我既要减少锻铁工们的工作时间让他们休息，又要延长他们的工作时间以赚到更多资金。",
+          ContentKR = "모든 문제를 해결하려면, 인부들이 쉴 수 있도록 작업 시간을 줄이는 동시에, 더 많은 돈을 벌기 위해 인부들의 작업 시간을 늘려야 한다.",
+          DialogueId = 51215302,
+          GUID = "80364E7C",
+          SpeakNpcId = 100416
+        },
+        [51215303] = {
+          Content = "我要尽可能多地招揽乘客以确保收益，又要尽可能少地接纳乘客以让列车不那么拥挤。",
+          ContentKR = "수익을 내기 위해 승객을 최대한 늘리는 동시에, 열차가 덜 붐비게 승객을 줄여야 하지.",
+          DialogueId = 51215303,
+          GUID = "80364EA6",
+          SpeakNpcId = 100416
+        },
+        [51215304] = {
+          Content = "我要扶持螺丝刀行会，让工程师们主导一切，又要资助汽笛沙龙，以推广他们的高尚品味。",
+          ContentKR = "드라이버 협회를 지원해 기술자들에게 힘을 몰아 주는 동시에, 기적 소리 살롱을 후원해 이들의 고상한 취향을 역 전체로 확대해야 한다.",
+          DialogueId = 51215304,
+          GUID = "80364ED0",
+          SpeakNpcId = 100416
+        },
+        [51215305] = {
+          Content = "这就是我当上站长前几年时眼前的东西。不是一个车站，而是一个眼睛朝天，几千张嘴提意见，没有耳朵，只长了一个右手食指到处指指点点的怪物。",
+          ContentKR = "내가 역장이 되었을 무렵의 블룸필드역이 딱 그랬다. 역이 아니라 불평만 쏟아 내는 괴물이었지. 듣지 않고, 요구하고, 남 탓만 해 대는 괴물.",
+          DialogueId = 51215305,
+          GUID = "80364EFA",
+          SpeakNpcId = 100416
+        },
+        [51215306] = {
+          Content = "火车是无法依靠这种东西运行的，于是我掏出了枪，请它吃了一梭子子弹。",
+          ContentKR = "그런 상태로는 열차를 굴릴 수 없다. 그래서 나는 총을 들었다. 탄창 하나면 충분했지.",
+          DialogueId = 51215306,
+          GUID = "80364F24",
+          SpeakNpcId = 100416
+        },
+        [51215307] = {
+          Content = "世界安静了。虽然时不时也有一些杂音，但是姑且百花车站还在前进。这个怪物再也没出现过，直到……你们的到来。",
+          ContentKR = "그 뒤로 역은 조용해졌어. 잡음이 아주 없진 않았지만, 블룸필드역은 계속 굴러갔다. 그 괴물이 다시 고개를 든 건... 너희가 나타나고부터야.",
+          DialogueId = 51215307,
+          GUID = "80364F4E",
+          SpeakNpcId = 100416
+        },
+        [51215308] = {
+          Content = "照你这么说，我们今天是非死不可了？",
+          ContentKR = "당신 말대로라면, 우린 오늘 여기서 꼼짝없이 죽어야 한다는 거네?",
+          DialogueId = 51215308,
+          GUID = "80364F78",
+          SpeakNpcId = 100401
+        },
+        [51215309] = {
+          Content = "狩月人在百花车站内平白无故失踪，虽然不是一件大事，但足够让大人物们注意到这里了。",
+          ContentKR = "블룸필드역 안에서 월석 사냥꾼들이 이유 없이 실종된다면, 큰일은 아닐지 몰라도, 높으신 분들이 여길 주목하게 만들기엔 충분할걸.",
+          DialogueId = 51215309,
+          GUID = "80364FA2",
+          SpeakNpcId = 100401
+        },
+        [51215310] = {
+          Content = "哈哈，大人物，别逗我笑了。如果你是说今天那位自称监军的女士，那我告诉你，她现在早就自身难保，哪里还顾得上你们。",
+          ContentKR = "하하, 높으신 분들이라, 웃기지도 않는군. 오늘 감찰실장을 자처하던 그 여자를 말하는 거라면, 지금은 제 몸 하나 건사하기도 바빠서 너희를 신경 쓸 겨를도 없을 거야.",
+          DialogueId = 51215310,
+          GUID = "80364FCC",
+          SpeakNpcId = 100416
+        },
+        [51215311] = {
+          Content = "你以为我走私月髓液是为了什么？还不是为了喂饱那些脑满肠肥，贪得无厌的大人物们。",
+          ContentKR = "내가 액체 폭시코르를 밀수한 이유가 뭐라고 생각하나? 바로 탐욕으로 배가 불룩해진 높으신 분들의 욕심을 채워 주기 위해서였어.",
+          DialogueId = 51215311,
+          GUID = "80364FF6",
+          SpeakNpcId = 100416
+        },
+        [51215312] = {
+          Content = "所以西顿他也是天真，以为造出这么一个大乱子来，就能把我怎么样。可能是梦做多了吧。",
+          ContentKR = "시돈도 참 순진하지. 그런 큰 난리를 벌이면 나를 어떻게 해볼 수 있을 줄 알았으니까. 헛꿈을 너무 오래 꾼 모양이군.",
+          DialogueId = 51215312,
+          GUID = "80365020",
+          SpeakNpcId = 100416
+        },
+        [51215313] = {
+          Content = "没有上面人的点头，我又怎么可能在这里干这么久。所以，你们还指望有哪位大人物会注意到你们啊？说出名字来。",
+          ContentKR = "윗선의 묵인이 없었다면 내가 과연 이렇게 오래 버틸 수 있었을까? 그래도 아직 너희를 신경 써 줄 높으신 분이 있다고 생각한다면, 어디 한번 이름을 말해 봐.",
+          DialogueId = 51215313,
+          GUID = "8036504A",
+          SpeakNpcId = 100416
+        },
+        [51215314] = {
+          Content = "原本我们还把这个东西当做最后的护身符，没想到你自己这么要求，那可就怪不得我们了。",
+          ContentKR = "원래 이 물건은 마지막 보험으로 아껴 두려 했는데, 당신이 직접 요구했으니 우릴 탓하진 마.",
+          DialogueId = 51215314,
+          GUID = "80365074",
+          SpeakNpcId = 100401
+        },
+        [51215315] = {
+          Content = "说来也巧，我们偶然从一个人手上，获得了一本小册子。",
+          ContentKR = "공교롭게도 우리가 우연히 어떤 사람한테서 작은 책자 하나를 얻었거든요.",
+          DialogueId = 51215315,
+          GUID = "8036509E",
+          SpeakNpcId = 100001
+        },
+        [51215316] = {
+          Content = "那位死在你手上的勇敢者，努力留下了最后的遗物——《芙罗蒂娅百花车站年度账目明细》。",
+          ContentKR = "당신 손에 죽은 그 용감한 사람이 필사적으로 남긴 유품, 〈플로렌티아 블룸필드역 연간 결산 내역〉이에요.",
+          DialogueId = 51215316,
+          GUID = "803650C8",
+          SpeakNpcId = 100001
+        },
+        [51215317] = {
+          Content = "而我们也非常偶然地发现，这本账目明细上，写着这些名字和数字……白。",
+          ContentKR = "그리고 우린 아주 우연히도, 이 장부에 이런 이름과 숫자가 적혀 있다는 걸 발견했죠... 스노우.",
+          DialogueId = 51215317,
+          GUID = "803650F2",
+          SpeakNpcId = 100001
+        },
+        [51215318] = {
+          Content = "来了来了！科赛托斯省财务次官，菲斯库斯，12000金币。",
+          ContentKR = "자~ 여기! 코퀴투스 성 재무차관 피스쿠스, 12,000골드!",
+          DialogueId = 51215318,
+          GUID = "8036511C",
+          SpeakNpcId = 100402
+        },
+        [51215319] = {
+          Content = "第六军团副军团长，佩索，3000金币。",
+          ContentKR = "제6군단 부군단장 페소, 3,000골드!",
+          DialogueId = 51215319,
+          GUID = "80365146",
+          SpeakNpcId = 100402
+        },
+        [51215320] = {
+          Content = "冰湖城市政官贴身男仆，诺门，15000金币。",
+          ContentKR = "아이스레이크 시티 안찰관 시종 노먼, 15,000골드!",
+          DialogueId = 51215320,
+          GUID = "80365170",
+          SpeakNpcId = 100402
+        },
+        [51215321] = {
+          Content = "而这些支出却被记录到了车站内雇工劳动条件改善里！怎么样，还要听吗？里面还有其他条目，我可都记得清清楚楚！",
+          ContentKR = "그런데 이 지출 내역들이 전부 역 안 일꾼들의 처우 개선 항목으로 처리되어 있지 뭐야! 어때, 더 들어볼래? 다른 내역들도 스노우가 아주 똑똑히 외우고 있다구!",
+          DialogueId = 51215321,
+          GUID = "8036519A",
+          SpeakNpcId = 100402
+        },
+        [51215322] = {
+          Content = "千算万算，没想到丢了的账本在你们的手上。你们确实比我想象中，要更有本事一点。",
+          ContentKR = "치밀하게 계산했다고 생각했는데, 잃어버린 장부가 너희 손에 있을 줄은 몰랐군. 확실히 내 예상보다 제법 능력이 있어.",
+          DialogueId = 51215322,
+          GUID = "803651C4",
+          SpeakNpcId = 100416
+        },
+        [51215323] = {
+          Content = "怕了吧，要是怕了的话，就放我们离开这里！",
+          ContentKR = "무섭지? 겁나면 당장 우리를 보내 줘!",
+          DialogueId = 51215323,
+          GUID = "803651EE",
+          SpeakNpcId = 100402
+        },
+        [51215324] = {
+          Content = "嗯，这么有底气的话，我也非常确信，你们肯定把原本放到了我找不到的地方，即使是杀了你们也无济于事。",
+          ContentKR = "음, 그렇게 자신만만하게 나오니 확신이 드는군. 분명 내가 찾을 수 없는 곳에 원본을 숨겨 뒀겠지? 여기서 너희를 죽여 봐야 아무 소용이 없도록 말이야.",
+          DialogueId = 51215324,
+          GUID = "80365218",
+          SpeakNpcId = 100416
+        },
+        [51215325] = {
+          Content = "但看你的神态，似乎毫不担心这件事？还是说，你在硬撑？",
+          ContentKR = "그런데 표정을 보니 장부 일은 전혀 걱정하지 않는 것 같은데? 아니면 그런 척하는 건가?",
+          DialogueId = 51215325,
+          GUID = "80365242",
+          SpeakNpcId = 100401
+        },
+        [51215326] = {
+          Content = "察言观色的能力不错，事实上，我必须承认，我被你们将了一军。我无法承受那份账本被传出的风险。",
+          ContentKR = "눈치가 빠르군. 너희에게 제대로 허를 찔렸다는 점은 인정하지. 그 장부는 절대 외부로 나가서는 안 되거든.",
+          DialogueId = 51215326,
+          GUID = "8036526C",
+          SpeakNpcId = 100416
+        },
+        [51215327] = {
+          Content = "只不过嘛，你们依旧还是天真了，我怎么会害怕它传出冰湖城，你没有发现吗？这几个大人物一旦齐心协力，就连一只云雀都没法离开这里。",
+          ContentKR = "하지만 너희는 여전히 순전해. 그 장부가 아이스레이크 시티 밖으로 나갈까 봐 내가 겁낼 거라 생각했나? 그 높으신 분들이 마음만 먹으면, 이 도시에서 빠져나갈 수 있는 건 아무것도 없어.",
+          DialogueId = 51215327,
+          GUID = "80365296",
+          SpeakNpcId = 100416
+        },
+        [51215328] = {
+          Content = "那你在害怕什么？看你的样子也不像是拿我们寻开心。",
+          ContentKR = "그럼 대체 뭘 겁내는 거죠? 태도를 보면, 우릴 가지고 장난치는 것 같진 않은데.",
+          DialogueId = 51215328,
+          GUID = "803652C0",
+          SpeakNpcId = 100001
+        },
+        [51215329] = {
+          Content = "……我知道了，问题就出在<H>这些人</>身上。",
+          ContentKR = "...알았어. 문제는 바로 <H>이 사람들</>한테 있었던 거야.",
+          DialogueId = 51215329,
+          GUID = "803652EA",
+          SpeakNpcId = 100401
+        },
+        [51215330] = {
+          Content = "财务次官，应该能够管理百花车站的拨款，所以艾森巴恩确实应该巴结他，给了他12000金币。",
+          ContentKR = "재무차관이라면 블룸필드역의 예산을 관리할 권한이 있겠지. 그러니 아이젠반도 비위를 맞출 수밖에 없었을 거야. 12,000골드나 쥐여 주면서 말이지.",
+          DialogueId = 51215330,
+          GUID = "80365314",
+          SpeakNpcId = 100401
+        },
+        [51215331] = {
+          Content = "第六军团的副军团长……虽然官职不小，算是驻扎在这里的地头蛇，但实际上和百花车站日常运营没有任何关系，所以只给了3000金币。",
+          ContentKR = "제6군단의 부군단장은... 직위도 높고 여기 터줏대감이지만, 실제로는 블룸필드역의 일상 운영과 아무 관련이 없으니 겨우 3,000골드만 건넸겠지.",
+          DialogueId = 51215331,
+          GUID = "8036533E",
+          SpeakNpcId = 100401
+        },
+        [51215332] = {
+          Content = "为什么这个市政官的男仆能拿这么多？",
+          ContentKR = "그런데 안찰관의 시종은 왜 이렇게 큰돈을 받은 거지?",
+          DialogueId = 51215332,
+          GUID = "80365368",
+          SpeakNpcId = 100001
+        },
+        [51215333] = {
+          Content = "这就是关键。有的大人物会把仆人当做自己的助理，所以这个仆人看似低微，却能经手很多实际的重要事务。这种关键的小人物有时候比很多大人物还有用呢。",
+          ContentKR = "그게 바로 핵심이야. 높으신 분들 중에는 시종을 조수처럼 부리는 경우도 있거든. 그래서 그 사람은 겉보기엔 신분이 낮아도, 실제로는 중요한 실무를 꽤 많이 처리하고 있을 거야. 이런 말단 실무자가 때론 어설픈 고위층보다 훨씬 쓸모가 있지.",
+          DialogueId = 51215333,
+          GUID = "80365392",
+          SpeakNpcId = 100401
+        },
+        [51215334] = {
+          Content = "艾森巴恩按照自己需求的重要程度给他们送了不同数额的金币，只是嘛……这个数目好像和他们的官职大小完全反过来。",
+          ContentKR = "아이젠반은 자기에게 중요한 정도에 따라 골드를 차등 지급한 셈이야. 문제는... 액수가 직급의 높낮이와는 정반대로 매겨졌다는 거지.",
+          DialogueId = 51215334,
+          GUID = "803653BC",
+          SpeakNpcId = 100401
+        },
+        [51215335] = {
+          Content = "所以，艾森巴恩真正担心的是账本一旦流传出去，每个人都知道别人拿了多少，第六军团的人就会因为拿得太少过来兴师问罪。",
+          ContentKR = "그러니 아이젠반이 두려워하는 건, 장부가 유출돼서 누가 얼마를 받았는지 서로 알게 되는 거야. 제6군단 쪽에서 자기들 몫이 너무 적다는 걸 알면 당장 책임을 물으러 올 테니까.",
+          DialogueId = 51215335,
+          GUID = "803653E6",
+          SpeakNpcId = 100401
+        },
+        [51215336] = {
+          Content = "艾森巴恩虽然能在这座车站呼风唤雨，但是出了这座车站，他可是得罪不起军团的。",
+          ContentKR = "아이젠반이 이 역 안에서는 떵떵거릴 수 있을지 몰라도, 역 밖으로 나가면 군단을 함부로 적으로 돌릴 수는 없거든.",
+          DialogueId = 51215336,
+          GUID = "80365410",
+          SpeakNpcId = 100401
+        },
+        [51215337] = {
+          Content = "原来是这样……大人物的世界真深奥啊。",
+          ContentKR = "그런 거였구나... 높으신 분들의 세계는 참 복잡하네.",
+          DialogueId = 51215337,
+          GUID = "8036543A",
+          SpeakNpcId = 100001
+        },
+        [51215338] = {
+          Content = "我们分析的没错吧，站长大人？",
+          ContentKR = "우리 분석이 맞죠, 아이젠반 역장님?",
+          DialogueId = 51215338,
+          GUID = "80365464",
+          SpeakNpcId = 100001
+        },
+        [51215339] = {
+          Content = "确实如此，能想到这一层，我简直想要雇佣你们了。汽笛沙龙这帮家伙虽然不堪大用，但一下子少了这么多人，车站的日常运行肯定会受到影响。",
+          ContentKR = "맞다. 거기까지 생각하다니, 당장이라도 너희를 고용하고 싶어질 정도군. 기적 소리 살롱 녀석들이 큰 쓸모는 없지만, 그렇다고 갑자기 이렇게 한꺼번에 빠지면 역의 운영에 분명히 차질이 있을 테니까.",
+          DialogueId = 51215339,
+          GUID = "8036548E",
+          SpeakNpcId = 100416
+        },
+        [51215340] = {
+          Content = "这就免了，我们可不想再被人用枪指着。",
+          ContentKR = "그건 사양할게요. 다시 누군가의 총구 앞에 서고 싶진 않거든요.",
+          DialogueId = 51215340,
+          GUID = "803654B8",
+          SpeakNpcId = 100001
+        },
+        [51215341] = {
+          Content = "同感。所以我们以后还是不要再面对面比较好。相信你们也是聪明人，能够妥善处理好那本账本。",
+          ContentKR = "이쪽도 마찬가지야. 앞으론 두 번 다시 얼굴을 마주치지 않도록 하지. 똑똑한 녀석들이니 그 장부는 알아서 잘 처리할 거라 믿겠다.",
+          DialogueId = 51215341,
+          GUID = "803654E2",
+          SpeakNpcId = 100416
+        },
+        [51215342] = {
+          Content = "我们会的，作为交换，你必须答应我一件事。",
+          ContentKR = "그러죠. 그 대신 그쪽도 약속 한 가지 해 줘야겠어요.",
+          DialogueId = 51215342,
+          GUID = "8036550C",
+          SpeakNpcId = 100001
+        },
+        [51215343] = {
+          Content = "放过今天卷入这件事的螺丝刀工人，不要伤害他们。否则，第二天，账本上的那些大人物就会人手一份账本的复印册。",
+          ContentKR = "오늘 이 일에 휘말린 드라이버 협회 일꾼들을 풀어 주고, 절대 해치지 마세요. 그렇지 않으면 내일 당장 그 명단에 쓰인 높으신 분들에게 장부 사본이 한 부씩 들어갈 테니까요.",
+          DialogueId = 51215343,
+          GUID = "80365536",
+          SpeakNpcId = 100001
+        },
+        [51215344] = {
+          Content = "可以，我也相信你们能说到做到。",
+          ContentKR = "좋아. 너흰 한다고 한 건 꼭 할 녀석들이니까.",
+          DialogueId = 51215344,
+          GUID = "80365560",
+          SpeakNpcId = 100416
+        },
+        [51215345] = {
+          Content = "这么多年来，你们是唯一能够让我出了一身冷汗的对手，引以为傲吧。",
+          ContentKR = "지난 수년 동안 나를 이렇게 식은땀 나게 한 상대는 너희가 유일해. 자부심을 가져도 좋아.",
+          DialogueId = 51215345,
+          GUID = "8036558A",
+          SpeakNpcId = 100416
+        },
+        [51215346] = {DialogueId = 51215346, GUID = "803655B4"},
+        [51215347] = {
+          Content = "呼~事情终于告一段落了，上次被士兵拿枪指着还是上次。",
+          ContentKR = "휴, 이제야 한숨 돌리겠네. 군인들이 총을 들이대는 것도 꽤 오랜만이었어.",
+          DialogueId = 51215347,
+          GUID = "803655DE",
+          SpeakNpcId = 100401
+        },
+        [51215348] = {
+          Content = "还有最后一件事……回去找一趟玛吉吧。",
+          ContentKR = "마지막으로 할 일이 하나 남았어... 마지를 찾으러 가자.",
+          DialogueId = 51215348,
+          GUID = "80365608",
+          SpeakNpcId = 100001
+        },
+        [51215349] = {
+          Content = "是因为账本吗？的确该和那孩子说清楚。",
+          ContentKR = "장부 때문이지? 하긴, 마지한테는 제대로 설명해 줘야지.",
+          DialogueId = 51215349,
+          GUID = "80365632",
+          SpeakNpcId = 100401
+        },
+        [51215350] = {
+          Content = "对哦！玛吉现在应该清醒了，她是不是还不知道罗连特是叛徒的事情？我们快去找她吧！",
+          ContentKR = "아, 맞다! 마지도 지금쯤 정신이 들었을 거야. 로렌트가 배신했다는 건 아직 모를 테니까, 빨리 마지한테 가자!",
+          DialogueId = 51215350,
+          GUID = "8036565C",
+          SpeakNpcId = 100402
+        },
+        [51215351] = {DialogueId = 51215351, GUID = "80365686"},
+        [51215352] = {
+          Content = "你现在就去把罗连特揍一顿！那家伙是个彻彻底底的叛徒！他居然让警卫打我！",
+          ContentKR = "당장 로렌트 그 자식 좀 패 주고 와! 배신자! 경비원이 날 때리는데 가만히 보고만 있다니!",
+          DialogueId = 51215352,
+          GUID = "803656B0",
+          SpeakNpcId = 700581
+        },
+        [51215353] = {
+          Content = "*的，什么情况……我是回来问你今天站厅唱的戏是怎么回事。",
+          ContentKR = "*발, 이건 또 뭐야... 난 오늘 대합실에서 벌어진 그 난리가 뭔지 물어보러 온 것뿐인데.",
+          DialogueId = 51215353,
+          GUID = "803656DA",
+          SpeakNpcId = 700591
+        },
+        [51215354] = {
+          Content = "别问了！别问了！罗连特这家伙跟警卫说我是个古怪的妮子！还看着他打我！我不管，你现在就去找他，揍他一顿，让我解气！！！",
+          ContentKR = "물어보지도 마! 로렌트 그 자식이, 경비병보고 내가 희한한 애라고 했어! 내가 맞는 걸 보고만 있었다고! 아무튼 딴 건 모르겠고, 당장 그 녀석 찾아가서 담*버려. 그래야 속이 풀릴 것 같으니까!!!",
+          DialogueId = 51215354,
+          GUID = "80365704",
+          SpeakNpcId = 700581
+        },
+        [51215355] = {
+          Content = "玛吉……",
+          ContentKR = "마지...",
+          DialogueId = 51215355,
+          GUID = "8036572E",
+          SpeakNpcId = 100001
+        },
+        [51215356] = {
+          Content = "谁？！{nickname}？白？大高个？",
+          ContentKR = "누구야?! {nickname}, 스노우, 꺽다리?",
+          DialogueId = 51215356,
+          GUID = "80365758",
+          SpeakNpcId = 700581
+        },
+        [51215357] = {
+          Content = "我不叫大高个，我叫奥特赛德……",
+          ContentKR = "꺽다리가 아니고, 아웃사이더거든...",
+          DialogueId = 51215357,
+          GUID = "80365782",
+          SpeakNpcId = 100401
+        },
+        [51215358] = {
+          Content = "{nickname}，刚才你都看到了吧？我说的一点没错吧！罗连特是叛徒，他跟警卫骂我！",
+          ContentKR = "{nickname}, 너도 아까 다 봤지? 내 말이 맞잖아! 로렌트는 배신자야. 경비원이랑 같이 날 욕했다니까!",
+          DialogueId = 51215358,
+          GUID = "803657AC",
+          SpeakNpcId = 700581
+        },
+        [51215359] = {
+          Content = "罗连特的确是叛徒，但是可能和玛吉你所说的这个叛徒不是同一种叛徒……",
+          ContentKR = "로렌트가 배신자인 건 맞아. 그런데 네가 지금 화내는 그 일하고는 조금 다른 문제야...",
+          DialogueId = 51215359,
+          GUID = "803657D6",
+          SpeakNpcId = 100001
+        },
+        [51215360] = {
+          Content = "（与在场的两人仔细说明了罗连特背叛螺丝刀行会的始末，以及今天的艾森巴恩刺杀事件。）",
+          ContentKR = "(로렌트가 어쩌다 드라이버 협회를 배신하게 됐는지, 그리고 오늘 아이젠반 암살 시도는 어떻게 됐는지 두 사람에게 자세히 설명한다.)",
+          DialogueId = 51215360,
+          GUID = "80365800"
+        },
+        [51215361] = {
+          Content = "我*，早知道今天车站里面事情这么大，我就不该跟休出门的！",
+          ContentKR = "제길, 오늘 역이 이렇게 뒤집힐 줄 알았으면 휴를 따라 나가는 게 아니었는데!",
+          DialogueId = 51215361,
+          GUID = "8036582A",
+          SpeakNpcId = 700591
+        },
+        [51215362] = {
+          Content = "罗连特他……怎么会这样呢？他不是那种人啊……他……",
+          ContentKR = "로렌트가... 왜 그런 짓을 해? 그럴 녀석이 아닌데... 로렌트는...",
+          DialogueId = 51215362,
+          GUID = "80365854",
+          SpeakNpcId = 700581
+        },
+        [51215363] = {
+          Content = "他怎么不是？我早觉得他不对劲，身为工人，居然不说脏话，还整天摆出一副温文尔雅的伪善样子，我早知道他不是好东西！",
+          ContentKR = "아니긴 뭐가 아니야? 난 진작부터 수상했어. 일꾼이라는 놈이 욕은 한 마디도 안 하고 맨날 샌님처럼 점잖은 척이나 했잖아. 좋은 놈일 리 없다니까!",
+          DialogueId = 51215363,
+          GUID = "8036587E",
+          SpeakNpcId = 700591
+        },
+        [51215364] = {
+          Content = "可是他……",
+          ContentKR = "그래도 로렌트는...",
+          DialogueId = 51215364,
+          GUID = "803658A8",
+          SpeakNpcId = 700581
+        },
+        [51215365] = {
+          Content = "小朋友，有没有一种可能，大人的世界从来就不是非黑即白的呢？",
+          ContentKR = "꼬마야, 어른들이 사는 세상엔 좋다 나쁘다로 딱 잘라 말하기 어려운 일이 있어.",
+          DialogueId = 51215365,
+          GUID = "803658D2",
+          SpeakNpcId = 100401
+        },
+        [51215366] = {
+          Content = "奥特赛德说的没错。罗连特……他可能并没有你想象中那么坏。虽然想法和你不同，但他也在用另一种方式守护螺丝刀行会。",
+          ContentKR = "아웃사이더 말이 맞아. 로렌트는... 네가 생각하는 것만큼 나쁜 사람은 아닐지도 몰라. 방법은 틀렸지만, 로렌트도 드라이버 협회를 지키려는 마음은 있었을 거야.",
+          DialogueId = 51215366,
+          GUID = "803658FC",
+          SpeakNpcId = 100001
+        },
+        [51215367] = {
+          Content = "但他也的确在给艾森巴恩通风报信！虽然报不报信结果都一样啦……",
+          ContentKR = "그래도 아이젠반한테 몰래 연락해서 정보를 넘긴 건 맞잖아! 뭐, 넘겼든 안 넘겼든 결과는 똑같았겠지만...",
+          DialogueId = 51215367,
+          GUID = "80365926",
+          SpeakNpcId = 100402
+        },
+        [51215368] = {
+          Content = "所以，你们让我去货柜取的账本……",
+          ContentKR = "그럼... 너희가 나한테 보관함에서 꺼내 오라고 한 그 장부는...",
+          DialogueId = 51215368,
+          GUID = "80365950",
+          SpeakNpcId = 700581
+        },
+        [51215369] = {
+          Content = "是我们之前意外找到的，我们不会在这里久留，所以这东西对于我们也没用，但从今天与艾森巴恩的对峙来看，它对你们想必很重要。",
+          ContentKR = "전에 우리가 우연히 찾은 거야. 우린 곧 떠날 거라서 이 장부를 가지고 있어도 쓸 곳이 없거든. 그런데 오늘 아이젠반을 상대해 보니, 너희한텐 꼭 필요할 것 같아.",
+          DialogueId = 51215369,
+          GUID = "8036597A",
+          SpeakNpcId = 100001
+        },
+        [51215370] = {
+          Content = "罗连特这么急着要找账本，根本不是想和我一起干翻艾森巴恩，而是想还给他，是吗？",
+          ContentKR = "그러니까 로렌트가 그렇게 장부를 찾아다닌 건, 나랑 같이 아이젠반을 쓰러뜨리려고 그런 게 아니라... 아이젠반한테 돌려주려고였던 거네? 맞지?",
+          DialogueId = 51215370,
+          GUID = "803659A4",
+          SpeakNpcId = 700581
+        },
+        [51215371] = {
+          Content = "我只能回答你，我不知道。",
+          ContentKR = "그 질문에 대한 대답은, 나도 잘 몰라.",
+          DialogueId = 51215371,
+          GUID = "803659CE",
+          SpeakNpcId = 100001
+        },
+        [51215372] = {
+          Content = "……",
+          ContentKR = "......",
+          DialogueId = 51215372,
+          GUID = "803659F8",
+          SpeakNpcId = 700581
+        },
+        [51215373] = {
+          Content = "我只能帮你们到这儿了，这本账本是唯一可能动摇艾森巴恩根基的关键，就托付给你了，玛吉。",
+          ContentKR = "내가 도와줄 수 있는 건 여기까지야. 지금으로선 이 장부가 아이젠반을 흔들 유일한 증거야. 마지, 이건 너한테 맡길게.",
+          DialogueId = 51215373,
+          GUID = "80365A22",
+          SpeakNpcId = 100001
+        },
+        [51215374] = {
+          Content = "你身上可是肩负起了很重的担子呢，得加把劲了！",
+          ContentKR = "앞으로 네가 맡을 일이 꽤 커졌어. 힘내, 마지.",
+          DialogueId = 51215374,
+          GUID = "80365A4C",
+          SpeakNpcId = 100001
+        },
+        [51215375] = {
+          Content = "哇！怎么说得好像是螺丝刀行会的未来突然交给了我这个吉祥物一样！",
+          ContentKR = "와! 드라이버 협회의 미래가 갑자기 이 마스코트한테 맡겨진 분위기인데!",
+          DialogueId = 51215375,
+          GUID = "80365A76",
+          SpeakNpcId = 700581
+        },
+        [51215376] = {
+          Content = "怕什么！小玛吉！没有罗连特还有我呢！有了这个，我们迟早能把艾森巴恩干下去，然后我们再一起去狠狠地踢罗连特的屁股！",
+          ContentKR = "겁내지 마, 마지! 로렌트가 없어도 내가 있잖아! 이 장부만 갖고 있으면, 언젠가 아이젠반을 끌어내릴 수 있어. 그다음엔 다 같이 로렌트 그놈 엉덩이를 걷어차 주자고!",
+          DialogueId = 51215376,
+          GUID = "80365AA0",
+          SpeakNpcId = 700591
+        },
+        [51215377] = {
+          Content = "好……好！我们要干倒艾森巴恩！狠狠踢罗连特的屁股！",
+          ContentKR = "그, 그래! 아이젠반을 끌어내리고, 로렌트 엉덩이도 걷어차 주자!",
+          DialogueId = 51215377,
+          GUID = "80365ACA",
+          SpeakNpcId = 700581
+        },
+        [51215378] = {
+          Content = "干倒艾森巴恩！狠狠踢罗连特的屁股！",
+          ContentKR = "아이젠반을 끌어내리고, 로렌트 그놈 엉덩이도 걷어차 주자고!",
+          DialogueId = 51215378,
+          GUID = "80365AF4",
+          SpeakNpcId = 700591
+        },
+        [51215379] = {
+          Content = "干倒艾森巴恩！狠狠踢罗连特的屁股！",
+          ContentKR = "아이젠반을 끌어내리고, 로렌트 그놈 엉덩이도 걷어차 주는 거야!",
+          DialogueId = 51215379,
+          GUID = "80365B1E",
+          SpeakNpcId = 100402
+        },
+        [51215380] = {
+          Content = "小矮子，有你什么事啊？我们该走啦~",
+          ContentKR = "꼬맹이, 네가 왜 거기 끼어들어? 우린 이제 갈 길 가야지.",
+          DialogueId = 51215380,
+          GUID = "80365B48",
+          SpeakNpcId = 100401
+        },
+        [51215381] = {
+          Content = "两位，借用我曾去过的国家听到的谚语——山高水远，后会有期！",
+          ContentKR = "저기, 내가 예전에 어느 나라에서 배운 작별 인사가 있어! \"이 넓은 세상에서, 우리 언젠가 꼭 다시 만나자!\"",
+          DialogueId = 51215381,
+          GUID = "80365B72",
+          SpeakNpcId = 100001
+        },
+        [51215382] = {
+          Content = "（今天的车站发生了很多事，但我们并不能多做停留。在这儿，我们还有更重要的任务。螺丝刀，汽笛沙龙，还有艾森巴恩……这些人注定只是一段短暂的插曲。）",
+          ContentKR = "(오늘 기차역에서 많은 일이 벌어졌지만, 여기 오래 머무를 수는 없다. 우리에겐 더 중요한 임무가 남아 있다. 드라이버 협회와 기적 소리 살롱, 아이젠반... 이곳에서 만난 사람들은 짧은 여정의 한 장면으로 남게 될 것이다.)",
+          DialogueId = 51215382,
+          GUID = "80365B9C",
+          SpeakNpcId = 100001
+        },
+        [51215383] = {
+          Content = "（但这些形形色色的人们的面容，总是一遍遍在我眼中浮现。）",
+          ContentKR = "(하지만 그들의 얼굴이 자꾸만 눈앞에 떠오른다.)",
+          DialogueId = 51215383,
+          GUID = "80365BC6",
+          SpeakNpcId = 100001
+        },
+        [51215384] = {
+          Content = "钢铁巨兽驰骋在海伯利亚的荒原，引擎在轰鸣，每一枚齿轮都在发烫，烙着人们的灵魂。",
+          ContentKR = "거대한 강철 짐승이 휘페르보레아의 황야를 내달린다. 엔진이 굉음을 울리고, 달아오른 톱니바퀴는 사람들의 영혼에 낙인을 새긴다.",
+          DialogueId = 51215384,
+          GUID = "80365BF0"
+        },
+        [51215385] = {
+          Content = "可那些灵魂是否终有一日将缠缚上战车的缰绳与车轮，直到那钢铁巨兽失控，坠落地面？",
+          ContentKR = "그러나 그 영혼들이 언젠가 전차의 고삐와 바퀴를 옭아매, 강철 짐승의 질주를 멈추고 끝내 땅으로 끌어 내리지는 않을까?",
+          DialogueId = 51215385,
+          GUID = "80365C1A"
+        },
+        [51215386] = {
+          Content = "我不知道。但我相信的是……",
+          ContentKR = "앞으로 어떻게 될지는 알 수 없다. 다만, 이것만은 믿는다...",
+          DialogueId = 51215386,
+          GUID = "80365C44"
+        },
+        [51215387] = {
+          Content = "改变已经悄然开始了。西顿那出自私欲的抗争只是一枚微茫的火种，但在这枚火种之下，是真正的薪柴。",
+          ContentKR = "변화는 이미 조용히 시작되었다. 시돈의 싸움은 사사로운 욕망이 피워 올린 희미한 불씨에 지나지 않지만, 그 불씨 아래에는 언젠가 큰 불길을 일으킬 장작이 놓여 있다.",
+          DialogueId = 51215387,
+          GUID = "80365C6E"
+        },
+        [51215388] = {
+          Content = "是汽笛沙龙理想仍存的年轻人，是螺丝刀每一位渴求着幸福的锻铁工，是追寻着正义与真相的汉迪，是玛吉和柯尼……那些眼睛遥望着未来的孩子们。",
+          ContentKR = "그건 바로, 아직 이상을 포기하지 않은 기적 소리 살롱의 젊은이들, 더 나은 삶을 바라는 드라이버 협회 사람들, 정의와 진실을 좇는 핸디, 그리고 마지와 코니처럼... 먼 미래를 바라보는 아이들이다.",
+          DialogueId = 51215388,
+          GUID = "80365C98"
+        },
+        [51215389] = {
+          Content = "这座车站的未来，就交给孩子们见证吧。",
+          ContentKR = "이 역의 미래를 지켜보는 역할은, 저 아이들의 몫으로 남겨두자.",
+          DialogueId = 51215389,
+          GUID = "80365CC2"
         },
         [60010101] = {
           Content = "诶？周围这么多毒雾，血清根本不够用呀！去附近回收一些再安安全全地离开这里吧~",
@@ -265338,15 +279384,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/600307/9647D2E3",
           bTurnOffVoice = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 60030801,
-    MaxKey = 69992301,
-    Loader = function()
-      return {
+        },
         [60030801] = {
           Content = "我启动了一个新的药剂台！",
           ContentKR = "새로운 제약 설비를 가동했어!",
@@ -266134,7 +280172,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 2,
           GUID = "968E008C",
           VoiceName = "sfx/boss/Saiqi/vo_$Locale$_skill03"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 60140207,
+    MaxKey = 70016005,
+    Loader = function()
+      return {
         [60140207] = {
           Content = "……快……逃……！",
           ContentKR = "...어서... 도망가...!",
@@ -266616,6 +280662,34 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 3,
           GUID = "9834E970",
           VoiceName = "sfx/boss/Heilong/vo_$Locale$_Skill07"
+        },
+        [60190001] = {
+          Content = "乐园不欢迎你！",
+          DialogueId = 60190001,
+          Duration = 4,
+          GUID = "96ADEA0A",
+          VoiceName = "sfx/boss/Aida/vo_$Locale$_BattleStart"
+        },
+        [60190002] = {
+          Content = "唔……",
+          DialogueId = 60190002,
+          Duration = 3,
+          GUID = "96ADEA34",
+          VoiceName = "sfx/boss/Aida/vo_$Locale$_Condemn"
+        },
+        [60190003] = {
+          Content = "为……什么……",
+          DialogueId = 60190003,
+          Duration = 4,
+          GUID = "96ADEA5E",
+          VoiceName = "sfx/boss/Aida/vo_$Locale$_BattleEnd"
+        },
+        [60190004] = {
+          Content = "埋葬在这乐园中！",
+          DialogueId = 60190004,
+          Duration = 4,
+          GUID = "96ADEA88",
+          VoiceName = "sfx/boss/Aida/vo_$Locale$_Skill13"
         },
         [60200101] = {
           Content = "不好，我们被敌人发现了！",
@@ -267232,15 +281306,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "AF37E7E2",
           NextDialogue = 69992302,
           RougeTalkActorType = 3
-        }
-      }
-    end
-  },
-  {
-    MinKey = 69992302,
-    MaxKey = 71000906,
-    Loader = function()
-      return {
+        },
         [69992302] = {
           Content = "第二段对话",
           DialogueId = 69992302,
@@ -267868,7 +281934,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentKR = "삐뚤어진 리본이 달린 소박한 선물 상자. 선물 상자 옆에는 제국 최고의 진통제 한 병, 그리고 무슨 이유에서인지 선물 상자에 넣지 못한 쪽지가 있다. 쪽지에는 \"쾌유하시길 바랍니다.\"라는 글귀가 적혀있다.",
           DialogueId = 70016005,
           GUID = "AF4718D2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 70016006,
+    MaxKey = 71002001,
+    Loader = function()
+      return {
         [70016006] = {
           Camera = "-35.015625,151.625,225.035156,0.000034,-14.798724,-71.592674,35.0,100000.0,false,Manual,22.0,16:9 Digital Film",
           Content = "（内城城墙下姐弟的合照，照片的右上角写着“黎瑟·费西尔”与“布鲁斯·费西尔”两个名字，还有庆祝弟弟布鲁斯通过第六军团考核的祝语。）",
@@ -268809,15 +282883,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 3,
           GUID = "B1BE4A24",
           SpeakNpcId = 800006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71000907,
-    MaxKey = 71004102,
-    Loader = function()
-      return {
+        },
         [71000907] = {
           Content = "（孩子们兴奋地跳了起来，一眨眼就消失在了街角。现在该好好想想去哪里寻找这些孩子了。）",
           ContentKR = "(아이들이 신나서 펄쩍 뛰더니 순식간에 골목 모퉁이로 사라졌다. 이제 이 아이들을 어디서 찾아야 할지 잘 생각해 봐야겠다.)",
@@ -269386,7 +283452,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71002001,
           GUID = "B1BEFDCA",
           SpeakNpcId = 818017
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71002002,
+    MaxKey = 71005137,
+    Loader = function()
+      return {
         [71002002] = {
           Content = "能拜托你找找我跑丢的<H>猫</>吗，它应该就在这附近才对……",
           ContentKR = "<H>고양이</>를 잃어버렸어요... 혹시 찾아주실 수 있나요? 분명 이 근처 어딘가에 있을 거예요...",
@@ -270317,15 +284391,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71004102,
           GUID = "B1C056A6",
           SpeakNpcId = 800006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71004103,
-    MaxKey = 71006501,
-    Loader = function()
-      return {
+        },
         [71004103] = {
           Content = "（敌人退去，现在可以清点下你方才收集的物资了。）",
           ContentKR = "(적들을 물리친 지금, 방금 모은 물자들을 확인해 보자.)",
@@ -270889,7 +284955,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B1C0FEFC",
           NextDialogue = 71005138,
           SpeakNpcId = 800006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71005138,
+    MaxKey = 71007019,
+    Loader = function()
+      return {
         [71005138] = {
           Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，就会有无数鱼争相咬钩。",
           ContentKR = "낚시는 꼭 물고기만 낚는 게 아니에요. 말 몇 마디 흘리고, 이상한 짓 몇 번 하면— 미끼를 물고 달려드는 '물고기'는 생각보다 많거든요.",
@@ -271858,15 +285932,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71006501,
           GUID = "B1C1E012",
           SpeakNpcId = 818060
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71006502,
-    MaxKey = 71008902,
-    Loader = function()
-      return {
+        },
         [71006502] = {
           Content = "恰逢奉香大典临近，本店特推出节庆活动，在举办一个叫非常大脑的智力问答活动，答错也有安慰奖，要不要来挑战一下？",
           ContentKR = "얼마 안 있으면 봉향대전이라, 슈퍼 브레인이라는 특별 이벤트를 준비했거든요. 틀려도 참가상은 받을 수 있는데, 어때요?",
@@ -272487,7 +286553,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71007019,
           GUID = "B1C2350E",
           SpeakNpcId = 800006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71007101,
+    MaxKey = 72001603,
+    Loader = function()
+      return {
         [71007101] = {
           Content = "唉……怎么时间刚好都撞一块了呢……",
           ContentKR = "으음... 시간이 이렇게 딱 겹칠 게 뭐람...",
@@ -273473,15 +287547,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           },
           SpeakNpcId = 818095,
           bForbidSkipOptions = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71008903,
-    MaxKey = 72004802,
-    Loader = function()
-      return {
+        },
         [71008903] = {
           Content = "谢谢你，我在这附近再看看。其他地方就拜托你了。",
           ContentKR = "고마워요. 이 근처는 제가 다시 한번 확인해 볼 테니까, 다른 곳을 찾아봐 주세요.",
@@ -274283,7 +288349,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B43F9AFE",
           NextDialogue = 72001604,
           SpeakNpcId = 820000
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72001604,
+    MaxKey = 72006205,
+    Loader = function()
+      return {
         [72001604] = {
           Content = "山不就是高高的，尖尖的地方，这里就是山！",
           ContentKR = "산은 높고 뾰족한 곳이잖아. 여기가 바로 산이야!",
@@ -275718,15 +289792,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B441A7D4",
           NextDialogue = 72004803,
           SpeakNpcId = 820000
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72004803,
-    MaxKey = 72201304,
-    Loader = function()
-      return {
+        },
         [72004803] = {
           Content = "这里又乱，大家都很忙，所以我一直待在这里，想看看什么时候才会被注意到。",
           ContentKR = "여긴 정신도 없고, 다들 너무 바빠. 그래서 언제 날 알아채 줄까 싶어서, 계속 여기서 기다려 봤어.",
@@ -276646,7 +290712,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 820000,
           bAllowClickSkipScript = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72006206,
+    MaxKey = 80001014,
+    Loader = function()
+      return {
         [72006206] = {
           ContentKR = "{空格}",
           DialogueId = 72006206,
@@ -277730,15 +291804,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B4BF9670",
           Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72201401,
-    MaxKey = 80010210,
-    Loader = function()
-      return {
+        },
         [72201401] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72201401,
@@ -278367,7 +292433,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           HeadIconType = "Npc",
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120111/C8462E5C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80001015,
+    MaxKey = 80010501,
+    Loader = function()
+      return {
         [80001015] = {
           Content = "这里也开出漂亮的花了。",
           ContentKR = "여기도 예쁜 꽃이 피어 있네.",
@@ -279710,15 +293784,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 80010210,
           GUID = "C84C1314",
           VoiceName = "voice/$Locale$/inv/Fuluo/002/C84C1314"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80010211,
-    MaxKey = 80030116,
-    Loader = function()
-      return {
+        },
         [80010211] = {
           Content = "而您又是一名受雇于主，混迹于一众家仆之中，想要夺取我性命的“窥伺者”，",
           DialogueId = 80010211,
@@ -280162,7 +294228,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 80010501,
           GUID = "C84C42D2",
           VoiceName = "voice/$Locale$/inv/Fuluo/005/C84C42D2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80010502,
+    MaxKey = 80030438,
+    Loader = function()
+      return {
         [80010502] = {
           Content = "如果事关我们的契约，谈判桌远比这里更加合适。",
           DialogueId = 80010502,
@@ -281501,15 +295575,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           GUID = "C858D419",
           NextDialogue = 80030117,
           SpeakNpcId = 94202
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80030117,
-    MaxKey = 80040314,
-    Loader = function()
-      return {
+        },
         [80030117] = {
           Content = "你这时候装傻也有点晚。",
           ContentKR = "이제 와서 모른 척하기에는 너무 늦었어.",
@@ -282187,7 +296253,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           TalkActionId = {
             [1] = "94202:Sit_Talk01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80030439,
+    MaxKey = 80050130,
+    Loader = function()
+      return {
         [80030439] = {
           Content = "别担心，下次见面的时候，我还是你熟悉的那个兰迪。万一我又做噩梦了，就劳烦你再给我调制一杯饮料吧。",
           ContentKR = "걱정 마, 다음에 만날 때도 나는 여전히 네가 아는 그 랜디일 거야. 만약 또 악몽을 꾼다면, 그때 다시 한번 나한테 음료를 만들어 줘.",
@@ -284017,15 +298091,7 @@ CameraMoveTo{TargetPosition{"-147.953125,208.777832,193.795288,-1.999998,-17.801
             [1] = "790008:n(790007)"
           },
           VoiceName = "voice/$Locale$/inv/Heitao/003/C85F5E04"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80040315,
-    MaxKey = 80050430,
-    Loader = function()
-      return {
+        },
         [80040315] = {
           Content = "和贝蕾在一起，我什么都不怕。不。一定要说的话，我……有点兴奋。这对我们来说，也许是一个<H>机会</>。",
           ContentKR = "베레와 함께라면, 난 아무것도 무섭지 않아. 아니... 굳이 말하자면... 조금 기뻐. 이번 일은 어쩌면 우리에게 <H>기회</>일지도 몰라.",
@@ -285052,7 +299118,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "790017:Talk02_End"
           },
           VoiceName = "voice/$Locale$/inv/Feina/001/C865A874"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80050131,
+    MaxKey = 80060136,
+    Loader = function()
+      return {
         [80050131] = {
           Content = "我就只能趁他不在的时候，把凳子堆起来，偷偷去拿——对了对了，这个你千万别和其他人说！",
           ContentKR = "그래서 오빠가 없을 때 의자 위로 올라가 몰래 꺼내 봐야 해. 아, 참! 이건 비밀이야!",
@@ -286544,15 +300618,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           DialogueId = 80050430,
           GUID = "C865D9AC",
           NextDialogue = 80050431
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050431,
-    MaxKey = 80060446,
-    Loader = function()
-      return {
+        },
         [80050431] = {
           Content = "嗯……这样旅伴又变多了，更热闹啦。",
           ContentKR = "음... 그럼 함께하는 사람이 늘어나니까 더 즐겁겠다.",
@@ -287412,7 +301478,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "95101:Sit_Talk03_Start"
           },
           VoiceName = "voice/$Locale$/inv/Songlu/001/C86C1210"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060137,
+    MaxKey = 80070228,
+    Loader = function()
+      return {
         [80060137] = {
           Content = "总之真的谢谢你不嫌弃它！",
           ContentKR = "어쨌든 진짜 고마워!",
@@ -288920,15 +302994,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           DialogueId = 80060446,
           GUID = "C86C44EC",
           NextDialogue = 80060447
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060447,
-    MaxKey = 80080242,
-    Loader = function()
-      return {
+        },
         [80060447] = {
           Content = "啊，这个不行，榛子如果离开了我，会害怕的……",
           ContentKR = "아, 그건 안돼. 헤이즐넛이 내 곁에 없으면 무서울 것 같아...",
@@ -289895,7 +303961,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [2] = "790013:Disagree"
           },
           VoiceName = "voice/$Locale$/inv/Xibi/002/C87289C8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80070229,
+    MaxKey = 80090125,
+    Loader = function()
+      return {
         [80070229] = {
           Camera = "-1154.983398,-1628.61377,1072.589844,0.000071,-26.199942,47.398281,35.000008,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "而很多躺在家族纹章上的蠹虫们生来便在高处，手握权力，却醉死在名声与荣誉之中，只看脚下，甚至谋算着如何把那些肩负着真正理想的人击落悬崖。",
@@ -291636,15 +305710,7 @@ PlayAnimation{ActorId{790004},AnimationId{"DisagreeHead"},Duration{1}}
             [1] = "790004:Explain02_Start"
           },
           VoiceName = "voice/$Locale$/inv/Saiqi/002/C878F4B4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080243,
-    MaxKey = 80090435,
-    Loader = function()
-      return {
+        },
         [80080243] = {
           Camera = "15.410156,46.214355,140.125,0.0,-4.199951,-129.79097,35.000011,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "谢谢你，艾丽莎！果然，你比我聪明多了。",
@@ -292609,7 +306675,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           GUID = "C87F4A22",
           NextDialogue = 80090126,
           SpeakNpcId = 790008
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80090126,
+    MaxKey = 80100302,
+    Loader = function()
+      return {
         [80090126] = {
           Content = "但之后还是别变箱子罐子垃圾桶了，万一被人路过随手打烂了然后翻翻找找有用的东西可怎么办……",
           ContentKR = "그래도 캔이나 상자, 쓰레기통 같은 것들로 변하지는 마. 지나가던 누군가 부수거나 뒤지면 어떡해...",
@@ -293855,15 +307929,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           },
           SpeakNpcId = 92301,
           SpeakNpcName = "UI_Npc_Name_Wanzu4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80090436,
-    MaxKey = 80110225,
-    Loader = function()
-      return {
+        },
         [80090436] = {
           Content = "懂了，人在梦里，正在发昏。",
           ContentKR = "아, 그래. 여긴 꿈속이구나.",
@@ -294756,7 +308822,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "92101:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Shuimu/003/C885CFCC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80100303,
+    MaxKey = 80120126,
+    Loader = function()
+      return {
         [80100303] = {
           Content = "直截了当也是你的魅力之一呢。",
           ContentKR = "솔직함도 당신의 매력 중 하나죠.",
@@ -296417,15 +310491,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "93101:Sit_Talk01_End"
           },
           VoiceName = "voice/$Locale$/inv/Linen/002/C88C2BCA"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80110226,
-    MaxKey = 80120431,
-    Loader = function()
-      return {
+        },
         [80110226] = {
           Camera = "164.130432,-127.039795,145.762421,0.000003,0.8,176.399841,35.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "我相信你不会说出去。",
@@ -297465,7 +311531,15 @@ PlayAnimation{_delay{3},ActorId{790019},AnimationId{"Think_End"},Duration{1},_cl
             [1] = "790019:Explain02_Start"
           },
           VoiceName = "voice/$Locale$/inv/Maer/001/C892842C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120127,
+    MaxKey = 80130224,
+    Loader = function()
+      return {
         [80120127] = {
           Camera = "-37.370605,-328.404663,168.14209,0.000007,-11.000026,70.593628,35.000008,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "总之，可萨克先生回到了迪斯玛尼亚，贫民窟的大家收获了生活物资，虽然我被他数落了一两句，但是没关系！只要开始干活，很快就会忘掉！",
@@ -299278,15 +313352,7 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Think_End"
           },
           VoiceName = "voice/$Locale$/inv/Maer/004/C892B636"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120432,
-    MaxKey = 80140129,
-    Loader = function()
-      return {
+        },
         [80120432] = {
           Content = "然后……我真的见到了它。胖尾巴正在和一只雪狼打架……为了一只银贝鼠，那是它们共同的猎物。",
           ContentKR = "그러다 정말 팻테일을 만났어요. 스노우 울프랑 싸우고 있었는데, 은빛 쥐를 놓고 다투고 있더라고요. 둘 다 그걸 사냥감으로 노리고 있었거든요.",
@@ -300353,7 +314419,15 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93103:Sit_Talk01_Start"
           },
           VoiceName = "voice/$Locale$/inv/Yeer/002/C898FCE0"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80130225,
+    MaxKey = 80140239,
+    Loader = function()
+      return {
         [80130225] = {
           Content = "我其实很舍不得这家店……好不容易习惯了去和小朋友们打招呼，和他们推销新的玩具，那个本来的主人能做到这些吗？",
           ContentKR = "이 가게를 포기하긴 사실 아쉽거든요... 겨우 아이들하고 인사하고, 새로운 장난감을 추천하는 일에 익숙해졌는데, 그 애가 과연 이런 걸 할 수 있을까요? ",
@@ -302144,15 +316218,7 @@ PlayAnimation{_delay{1.5},ActorId{790031},AnimationId{"Explain01_Start"},Duratio
             [1] = "790031:Confident_Start"
           },
           VoiceName = "voice/$Locale$/inv/Tuosi/001/C89F55EA"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140130,
-    MaxKey = 80140438,
-    Loader = function()
-      return {
+        },
         [80140130] = {
           Camera = "310.552002,-526.269592,200.597656,0.000119,-8.998903,116.991135,41.455132,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "唉，真拿你没办法……但我不会让你一个人承担责任。我说过，进了剧团就是一家人，无论遇到什么事都要齐心协力解决。道具的事就交给我吧。",
@@ -303150,7 +317216,15 @@ PlayAnimation{ActorId{790041},AnimationId{"Think_End"},Duration{1},_click{false}
             [1] = "790041:Disagree"
           },
           VoiceName = "voice/$Locale$/inv/Tuosi/002/C89F67F6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140240,
+    MaxKey = 80150223,
+    Loader = function()
+      return {
         [80140240] = {
           Content = "近期这出戏还会再演吗？",
           ContentKR = "이 연극, 조만간 다시 공연할 계획이라도 있나?",
@@ -304725,15 +318799,7 @@ PlayAnimation{ActorId{790027},AnimationId{"Explain02_End"},Duration{1}}
           },
           ToFinalCameraBlendTime = 15,
           VoiceName = "voice/$Locale$/inv/Tuosi/004/C89F889C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140439,
-    MaxKey = 80160312,
-    Loader = function()
-      return {
+        },
         [80140439] = {
           Content = "说不定下次我们去这些国家巡演的时候，就会发现他已经摇身一变，成了老师那样的大明星呢！",
           ContentKR = "혹시 다음에 우리가 그 나라들로 공연 투어를 다니게 된다면, 선생님처럼 대스타가 된 파르지팔을 발견하게 될지도 몰라!",
@@ -305893,7 +319959,15 @@ PlayFacial{_delay{2},ActorId{790044},FacialId{"Ahaha01"}},
           },
           ToFinalCameraBlendTime = 6,
           VoiceName = "voice/$Locale$/inv/Lise/002/C8A5CDF6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80150224,
+    MaxKey = 80160418,
+    Loader = function()
+      return {
         [80150224] = {
           Camera = "407.091949,-65.960449,176.961502,0.001397,-9.59744,171.546249,35.000008,291.99585,false,DoNotOverride,15.0,16:9 Digital Film",
           Content = "新的目标……我还没有找到。或者说，我发现，实际上我一直在等待别人给我目标。",
@@ -307604,15 +321678,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           },
           SpeakNpcId = 93201,
           VoiceName = "voice/$Locale$/inv/Haier/003/C8AC4530"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80160313,
-    MaxKey = 80170314,
-    Loader = function()
-      return {
+        },
         [80160313] = {
           Content = "……不。",
           ContentKR = "...아니.",
@@ -308377,7 +322443,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80160419,
           SpeakNpcId = 93201,
           VoiceName = "voice/$Locale$/inv/Haier/003/C8AC5694"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80160419,
+    MaxKey = 80170437,
+    Loader = function()
+      return {
         [80160419] = {
           Content = "“为海伯利亚的正义而战斗，为海伯利亚的光明而燃烧，为海伯利亚的屹立而坚守。”",
           ContentKR = "\"우리는 휘페르보레아의 정의를 위해 싸운다. 휘페르보레아의 빛을 위해 타오른다. 휘페르보레아를 길이 지킨다.\"",
@@ -309700,15 +323774,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80170315,
           SpeakNpcId = 91502,
           VoiceName = "voice/$Locale$/inv/Nifu/003/C8B2AE24"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80170315,
-    MaxKey = 80180327,
-    Loader = function()
-      return {
+        },
         [80170315] = {
           Content = "在艾利西安，没有比信仰异教更加严重的罪行。一旦这个秘密暴露，养父母就算不将她交给处刑人，也一定会立刻抛弃她。",
           ContentKR = "엘리시안에서는 이교를 믿는 것이 가장 큰 죄였어. 이 비밀이 드러나면 양부모는 그 아이를 처형인에게 넘기지 않을 지언정, 버릴 게 뻔했지.",
@@ -310477,7 +324543,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80170438,
           SpeakNpcId = 91502,
           VoiceName = "voice/$Locale$/inv/Nifu/004/C8B2C252"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80170438,
+    MaxKey = 80190303,
+    Loader = function()
+      return {
         [80170438] = {
           Content = "只可惜，他们没能看到我长大的模样。在他们被处刑人杀死的那一刻，属于那个无忧无虑的妮弗尔的人生也就结束了。",
           ContentKR = "안타깝게도, 그들은 내가 자라는 모습을 보지 못했단다. 그들이 처형인에게 살해당한 순간, 걱정 없던 나이플의 삶도 끝났어.",
@@ -312121,15 +326195,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Dafu/003/C8B918E6"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80180328,
-    MaxKey = 80200122,
-    Loader = function()
-      return {
+        },
         [80180328] = {
           Camera = "513.552734,-224.316406,18.752075,0.000019,6.799938,154.605255,30.000002,529.988831,false,Manual,1.2,16:9 Digital Film",
           Content = "……好，我答应你。我一定把话带到。",
@@ -312990,7 +327056,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [2] = 801903032
           },
           SpeakNpcId = 95102
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80190304,
+    MaxKey = 80200239,
+    Loader = function()
+      return {
         [80190304] = {
           Content = "……",
           ContentKR = "......",
@@ -314562,15 +328636,7 @@ MoveTo{ActorId{790053},TargetPoint{"BP_Stage_200201a fushu00"},MoveSpeed{75},Vis
           SpeakNpcId = 790053,
           ToFinalCameraBlendTime = 15,
           VoiceName = "voice/$Locale$/inv/Fushu/002/C8C5C884"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200123,
-    MaxKey = 80210229,
-    Loader = function()
-      return {
+        },
         [80200123] = {
           Content = "……我怎么听了更不放心了！",
           ContentKR = "...그런 얘길 들으니까 오히려 더 불안하잖아!",
@@ -315749,7 +329815,15 @@ PlayAnimation{_delay{10.01},ActorId{790054},AnimationId{"DisagreeHead"},Duration
           NextDialogue = 80200240,
           SpeakNpcId = 790054,
           VoiceName = "voice/$Locale$/inv/Fushu/003/C8C5D5F8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200240,
+    MaxKey = 80210346,
+    Loader = function()
+      return {
         [80200240] = {
           Camera = "60.828491,978.365967,136.150391,0.000078,-7.614254,-76.449127,35.0,78.697502,false,Manual,8.071544,16:9 Digital Film",
           Content = "扶疏瞧着冷淡疏离，你瞧着风风火火，但只要涉及问诊的时候，那份一本正经，温和耐心简直如出一辙。",
@@ -317604,15 +331678,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80210230,
           SpeakNpcId = 790068,
           VoiceName = "voice/$Locale$/inv/Kezhou/002/C8CC42B2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210230,
-    MaxKey = 80220157,
-    Loader = function()
-      return {
+        },
         [80210230] = {
           Content = "然后呢？",
           ContentKR = "그다음엔?",
@@ -318509,7 +332575,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 790071,
           ToFinalCameraBlendTime = 5,
           VoiceName = "voice/$Locale$/inv/Kezhou/003/C8CC55E4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80210347,
+    MaxKey = 80220332,
+    Loader = function()
+      return {
         [80210347] = {
           Camera = "-400.648438,-387.972656,82.464844,0.000133,1.999995,51.002842,20.0,592.152588,false,Manual,2.8,16:9 Digital Film",
           Content = "要得，但切记，只许和朋友说这是卯金叔做的，要是多说一句，我把你舌头割下来做成卤菜。",
@@ -319836,15 +333910,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220158,
           SpeakNpcId = 790074,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D29F82"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80220158,
-    MaxKey = 80230211,
-    Loader = function()
-      return {
+        },
         [80220158] = {
           Content = "任何选择都伴随着所失和所得。就像咱们飘零人，丢下了大风九章，便是选择自己庇护自己。这无关对错，只关抉择。",
           ContentKR = "모든 선택엔 대가가 따르는 법이다. 우리 나그네들이 스스로를 지키기 위해 대풍구장에 기대지 않기로 한 것처럼 말이다. 옳고 그름이 아닌, 선택의 문제야.",
@@ -320501,7 +334567,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220333,
           SpeakNpcId = 790074,
           VoiceName = "voice/$Locale$/inv/Yuming/003/C8D2BC38"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80220333,
+    MaxKey = 80230330,
+    Loader = function()
+      return {
         [80220333] = {
           Content = "……没有……",
           ContentKR = "...아닙니다...",
@@ -321630,15 +335704,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80230212,
           SpeakNpcId = 790076,
           VoiceName = "voice/$Locale$/inv/Zhiliu/002/C8D910FE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80230212,
-    MaxKey = 80240227,
-    Loader = function()
-      return {
+        },
         [80230212] = {
           Content = "就是这样！我还好端端地站在这里呢，不然还有死人诈尸的道理吗？",
           ContentKR = "맞아요! 전 여기 멀쩡히 서 있잖아요. 언닌 절 해친 게 아니에요.",
@@ -322299,7 +336365,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SnapShot = "MONSTER",
           SpeakNpcName = "UI_Npc_Name_Xinmo",
           VoiceName = "voice/$Locale$/inv/Zhiliu/003/C8D92484"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80230331,
+    MaxKey = 80240362,
+    Loader = function()
+      return {
         [80230331] = {
           DialogueId = 80230331,
           GUID = "C8D924AE",
@@ -323405,15 +337479,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240228,
           SpeakNpcId = 790084,
           VoiceName = "voice/$Locale$/inv/Suyi/002/C8DF7C3E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80240228,
-    MaxKey = 80250320,
-    Loader = function()
-      return {
+        },
         [80240228] = {
           Content = "为了安稳度日，那些机枢理想统统可以让步。你年轻，还不懂这样的道理。等你受伤的时候再后悔，就来不及了！",
           ContentKR = "평온하게 살 수만 있다면, 기추나 이상 따윈 얼마든 포기할 수 있는 거야. 넌 어려서 잘 모르겠지만, 다치고 나서 후회해 봐야 아무 소용 없어!",
@@ -324078,7 +338144,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240363,
           SpeakNpcId = 790085,
           VoiceName = "voice/$Locale$/inv/Suyi/003/C8DF9264"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80240363,
+    MaxKey = 80260141,
+    Loader = function()
+      return {
         [80240363] = {
           Content = "我那犟脾气的哥哥在山外山一待就是十几年，不知道现今过得如何，也是时候走动走动了……",
           ContentKR = "우리 황소고집 형님도 산외산에 틀어박힌 지 십수 년인데, 잘 사나 모르겠군. 나도 슬슬 찾아가 봐야겠어...",
@@ -325209,15 +339283,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250321,
           SpeakNpcId = 790014,
           VoiceName = "voice/$Locale$/inv/Kami/003/14172E10"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80250321,
-    MaxKey = 80260427,
-    Loader = function()
-      return {
+        },
         [80250321] = {
           Content = "对，就这么简单。有了手段和门路，很多事情只要稍微迂回让利一下，远没有想象中那么难。",
           ContentKR = "그래, 간단히. 수완과 인맥만 있으면 돼. 뒤로 적당히 챙겨 주면서 살살 구슬리면, 웬만한 일들은 생각보다 쉽게 해결할 수 있거든.",
@@ -325882,7 +339948,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80260142,
           SpeakNpcId = 790088,
           VoiceName = "voice/$Locale$/inv/Fuluo/001/C8EC3F62"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80260142,
+    MaxKey = 90040201,
+    Loader = function()
+      return {
         [80260142] = {
           Content = "父亲早已成为墓园的白骨，而杀害他的凶手还端坐在王座上，享受千万人的欢呼和忠诚。",
           ContentKR = "아버지께선 이미 무덤의 흙이 되셨는데, 그분의 목숨을 빼앗은 이는 버젓이 왕좌에 앉아, 수많은 사람에게 환호와 충성을 받고 있어.",
@@ -327005,15 +341079,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80260428,
           SpeakNpcId = 790090,
           VoiceName = "voice/$Locale$/inv/Fuluo/004/C8EC6E4E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80260428,
-    MaxKey = 90090501,
-    Loader = function()
-      return {
+        },
         [80260428] = {
           Content = "而希尔妲，我最亲爱的女儿……",
           ContentKR = "그리고, 눈에 넣어도 아프지 않을 내 딸 힐다는...",
@@ -327754,7 +341820,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "82101:Shock_Start"
           },
           VoiceName = "voice/$Locale$/char/Shuimu/vo_topic_02_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90040203,
+    MaxKey = 90120304,
+    Loader = function()
+      return {
         [90040203] = {
           Content = "应该如何描述呢……嗯，就像这香薰中的水：亲吻拥抱每一剂原料，吞噬汲取它们的气味，并最终在长久的馥郁中合为一体。",
           ContentKR = "어떻게 표현해야 할까... 음, 이 아로마의 물처럼, 모든 향료를 끌어안고 키스하며 그들의 향기를 삼키고, 마지막으로 오랜 시간 지속되는 향기 속에서 하나가 되는 거죠.",
@@ -329280,15 +343354,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E18838D2",
           SpeakNpcId = 84301,
           VoiceName = "voice/$Locale$/char/Xibi/vo_companio_01"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90090801,
-    MaxKey = 90170203,
-    Loader = function()
-      return {
+        },
         [90090801] = {
           Content = "你的伪装越是完美，就说明你的獠牙在暗地里打磨地越发锋锐，我等着你脱缰的那一天，亲手敲断你的大牙。",
           ContentKR = "네 위장이 완벽할수록, 어둠 속에서 송곳니를 더 날카롭게 갈았다는 걸 의미하겠지. 네 고삐가 풀릴 그날을 기다리마. 직접 네 이빨을 부러뜨려 줄 테니.",
@@ -330164,7 +344230,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           },
           VoiceName = "voice/$Locale$/char/Songlu/vo_topic_03_2",
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90120401,
+    MaxKey = 90190305,
+    Loader = function()
+      return {
         [90120401] = {
           Content = "谢谢夸奖，不过我要纠正一下，这其实是裤子。一开始倒的确是裙子，白色的，长长的，可好看啦。是裁缝店的婆婆帮我改成了裤子。",
           ContentKR = "고맙지만 정정할 게 있어. 사실 이건 바지야. 처음에는 하얗고 긴 치마였어. 정말 예뻤지. 지금은 재봉 가게 아주머니가 바지로 수선한 거야.",
@@ -331581,15 +345655,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "83301:Give"
           },
           VoiceName = "voice/$Locale$/char/Maer/vo_topic_02_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90170204,
-    MaxKey = 90220414,
-    Loader = function()
-      return {
+        },
         [90170204] = {
           Content = "不过我们这行旱涝不保收，能有多少进账，大部分时候还得靠运气……",
           ContentKR = "하지만 수입이 안정적이지 않아요. 대부분 운에 맡겨야 하죠...",
@@ -332447,7 +346513,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "85401:Explain02_Start"
           },
           VoiceName = "voice/$Locale$/char/Dafu/vo_topic_03_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90190306,
+    MaxKey = 90250302,
+    Loader = function()
+      return {
         [90190306] = {
           Content = "我希望……他们的家人看到的他们，可以干净一些、安详一些……久别重逢，父母应该看到孩子们安然睡去的脸，而不是被疼痛扭曲五官的凄惨面容。",
           ContentKR = "저는... 그들이 가족들과 다시 만날 때, 조금은 더 깔끔하고, 평화로운 모습이길 바라요. 오랜만에 만나는 자식의 모습은 고통에 일그러진 처참한 모습이 아니라, 편히 잠든 모습이어야 한다고 생각합니다.",
@@ -333843,15 +347917,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           },
           VoiceName = "voice/$Locale$/char/Nifu/vo_topic_04_11",
           bForbidSkipOptions = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90220501,
-    MaxKey = 100499100,
-    Loader = function()
-      return {
+        },
         [90220501] = {
           Content = "人无法真正逃离自己的过去。总有一天，你会需要面对它们……希望到那时，你已经获得了足够与之对抗的力量。",
           ContentKR = "누구도 자신의 과거에서 벗어날 수 없어. 언젠가 너도 그것들과 마주해야겠지... 그때가 되면 그들과 맞설 힘을 얻었길 바랄게.",
@@ -334656,7 +348722,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1EEA22C",
           NextDialogue = 90250303,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90250303,
+    MaxKey = 100499150,
+    Loader = function()
+      return {
         [90250303] = {
           Content = "可不是嘛……因为这个称号，我总是被教导要用忍耐去对抗愤怒。可这就像是打哈欠打到一半被人搭话，又或是举剑后被告知眼前的敌人并非敌人而是同伴一样。总之就是，反而会让人更加生……",
           ContentKR = "내 말이... 난 이 칭호 때문에 항상 인내심으로 분노를 이겨내라고 배웠어. 근데 그건 하품하는 중에 누가 딱 말 거는 느낌이야. 검을 딱 들었는데 눈앞의 상대가 적이 아니라 아군이었단 소릴 들은 느낌이기도 하고. 아무튼, 오히려 더 화만 나는...",
@@ -335793,6 +349867,217 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 81102,
           VoiceName = "voice/$Locale$/char/Fuluo/vo_companio_03"
         },
+        [90290000] = {
+          Content = "这个地方还不够热闹呀！看我复制一百个乌乌，一百个小白，把每一个角落都塞满，咿呜咿呜~",
+          ContentKR = "여긴 너무 조용하잖아! 까망이 백 마리랑 스노우 백 명을 복제해서 여길 가득 채워 버려야겠어~ 이휴~",
+          DialogueId = 90290000,
+          GUID = "E2081320",
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_idle"
+        },
+        [90290001] = {
+          Content = "咿呜~今天打算做些什么呀，又要一口气做几十个委托吗？",
+          ContentKR = "이휴~ 오늘은 뭐 할 거야? 또 한 번에 의뢰를 수십 개씩 해치울 거야?",
+          DialogueId = 90290001,
+          GUID = "E208134A",
+          NextOptions = {
+            [1] = 90290100,
+            [2] = 90290200
+          },
+          RandomOptionNum = 3,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_welcome",
+          bForbidSkipOptions = true
+        },
+        [90290002] = {
+          Content = "聊点别的",
+          ContentKR = "다른 이야기를 하자",
+          DialogueId = 90290002,
+          GUID = "E2081374",
+          NextDialogue = 90290001
+        },
+        [90290003] = {
+          Content = "再见",
+          ContentKR = "안녕",
+          DialogueId = 90290003,
+          GUID = "E208139E"
+        },
+        [90290100] = {
+          Content = "你待在角落里干什么呢？",
+          ContentKR = "너 구석에서 뭐 해?",
+          DialogueId = 90290100,
+          GUID = "E2082388",
+          NextDialogue = 90290101
+        },
+        [90290101] = {
+          Content = "嘘……！我在你的家里发现了一种从没见过的神奇虫子，快看，就在那个缝隙里！",
+          ContentKR = "쉿...! 너희 집에서 처음 보는 신기한 벌레를 발견했어. 봐봐, 바로 저기 틈새에 있어!",
+          DialogueId = 90290101,
+          GUID = "E20823B2",
+          NextDialogue = 90290102,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_01_1"
+        },
+        [90290102] = {
+          Content = "棕色的，有拇指那么大，翅膀亮亮的，长着两根触须，六条毛毛的脚……",
+          ContentKR = "갈색에, 엄지손가락 크기만 하고, 반짝이는 날개에, 더듬이는 2개, 다리는 6개에 털도 나 있어...",
+          DialogueId = 90290102,
+          GUID = "E20823DC",
+          NextDialogue = 90290103,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_01_2"
+        },
+        [90290103] = {
+          Content = "？！",
+          ContentKR = "?!",
+          DialogueId = 90290103,
+          GUID = "E2082406",
+          NextDialogue = 90290104,
+          SpeakNpcId = 100001
+        },
+        [90290104] = {
+          Content = "你看不清吗？没关系，我马上就把它抓过来给你看！",
+          ContentKR = "잘 안 보여? 괜찮아, 내가 금방 가서 잡아다 줄게!",
+          DialogueId = 90290104,
+          GUID = "E2082430",
+          NextDialogue = 90290105,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_01_3"
+        },
+        [90290105] = {
+          Content = "不要！！那是害虫！！",
+          ContentKR = "싫어!! 저거 해충이잖아!!",
+          DialogueId = 90290105,
+          GUID = "E208245A",
+          NextDialogue = 90290106,
+          SpeakNpcId = 100001
+        },
+        [90290106] = {
+          Content = "咿呜？原来是这样吗，我还以为是什么有趣的虫子呢……其实我刚才还看到你家的灰色小猫咪在……",
+          ContentKR = "이휴? 그랬구나. 난 웃기게 생긴 벌레 같은 건 줄 알았지... 사실 내가 아까 보니까, 너희 집 회색 고양이도...",
+          DialogueId = 90290106,
+          GUID = "E2082484",
+          NextDialogue = 90290107,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_01_4"
+        },
+        [90290107] = {
+          Content = "不要再说了……",
+          ContentKR = "그 얘긴 그만하자...",
+          DialogueId = 90290107,
+          GUID = "E20824AE",
+          NextDialogue = 90290108,
+          SpeakNpcId = 100001
+        },
+        [90290108] = {
+          Content = "咿呜……既然你不喜欢，那我不抓就是啦。",
+          ContentKR = "이휴... 네가 싫다면, 안 잡아오면 그만이지 뭐.",
+          DialogueId = 90290108,
+          GUID = "E20824D8",
+          NextOptions = {
+            [1] = 90290002,
+            [2] = 90290003
+          },
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_01_5",
+          bForbidSkipOptions = true
+        },
+        [90290200] = {
+          Content = "嗯？你手里拿着的是什么？",
+          ContentKR = "어? 손에 뭐 들고 있는 거야?",
+          DialogueId = 90290200,
+          GUID = "E20833F0",
+          NextDialogue = 90290201
+        },
+        [90290201] = {
+          Content = "是很多的“银币”哦！我今天帮助了一位打扮得很漂亮的阿姨，她给了我一枚银币作为报酬。",
+          ContentKR = "어마어마하게 많은 '실버'야! 오늘 엄청 예쁘게 생긴 아주머니를 도와드렸더니, 고맙다고 실버를 주셨거든.",
+          DialogueId = 90290201,
+          GUID = "E208341A",
+          NextDialogue = 90290202,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_02_1"
+        },
+        [90290202] = {
+          Content = "她说这是特别有用的好东西，所以我就复制了好多好多，这些银币你一半，我一半，怎么样，我对你很好吧~",
+          ContentKR = "진짜 유용한 물건이라고 하시길래, 잔뜩 복제해 뒀어. 너랑 나랑 반반씩 나눠 갖자, 어때? 나 엄청 좋은 사람이지?",
+          DialogueId = 90290202,
+          GUID = "E2083444",
+          NextDialogue = 90290203,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_02_2"
+        },
+        [90290203] = {
+          Content = "（与心中的道德展开激烈斗争！）",
+          ContentKR = "(내 안의 양심이 이러면 안 된다고 난리를 치고 있어!)",
+          DialogueId = 90290203,
+          GUID = "E208346E",
+          NextDialogue = 90290204,
+          SpeakNpcId = 100001
+        },
+        [90290204] = {
+          Content = "咿呜？你怎么啦，为什么一脸为难的样子？是觉得一半不够吗？那我多分给你一点也可以的！",
+          ContentKR = "이휴? 왜 그래? 되게 곤란하단 표정이네? 혹시 절반으론 부족해서 그런 거야? 그럼 내 걸 좀 더 나눠 줄 수도 있어!",
+          DialogueId = 90290204,
+          GUID = "E2083498",
+          NextDialogue = 90290205,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_02_3"
+        },
+        [90290205] = {
+          Content = "好像不太对……这些银币掂起来轻轻的。",
+          ContentKR = "이 실버들, 뭔가 이상한데... 손바닥에 올려 보니까 너무 가벼워.",
+          DialogueId = 90290205,
+          GUID = "E20834C2",
+          NextDialogue = 90290206,
+          SpeakNpcId = 100001
+        },
+        [90290206] = {
+          Content = "怎么啦？",
+          ContentKR = "그게 왜?",
+          DialogueId = 90290206,
+          GUID = "E20834EC",
+          NextDialogue = 90290207,
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_02_4"
+        },
+        [90290207] = {
+          Content = "这很明显是假币，赶紧销毁，否则会被抓走的。",
+          ContentKR = "누가 봐도 가짜 돈이잖아. 빨리 없애버려, 잘못하면 잡혀갈지도 몰라.",
+          DialogueId = 90290207,
+          GUID = "E2083516",
+          NextDialogue = 90290208,
+          SpeakNpcId = 100001
+        },
+        [90290208] = {
+          Content = "咿呜……看来我的复制能力还是没有练习到位，复制出的东西还是有瑕疵。接下来得再加把劲了。",
+          ContentKR = "이휴... 아직 내 실력이 서툰가 봐. 아무리 해도 완벽한 복제품이 만들어지지 않네. 다음엔 더 힘내서 잘해 볼게.",
+          DialogueId = 90290208,
+          GUID = "E2083540",
+          NextOptions = {
+            [1] = 90290002,
+            [2] = 90290003
+          },
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_topic_02_5",
+          bForbidSkipOptions = true
+        },
+        [90290601] = {
+          Content = "蓝头发的小鸟妹妹，我也会变“魔法朋友”哦，你看你看，这是小灰猫，这是小黄鸭……咿呜？！不，不，我不是故意变出三个翅膀的！呜呜，好妹妹，你假装刚才什么都没看见好不好？",
+          ContentKR = "파란 머리 새 친구야, 나도 '마법 친구' 만들 줄 알아. 자~ 이건 회색 고양이고, 이건 노란 오리... 이휴?! 아, 아니야! 일부러 날개를 3개 만들려던 건 아니었어! 힝... 저기, 방금 본 건 잊어 주면 안 될까?",
+          DialogueId = 90290601,
+          GUID = "E20875BA",
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_companio_01"
+        },
+        [90290701] = {
+          Content = "咿呜咿呜咿呜，好乖的小猪，我摸摸，我摸摸……“统领群猪的花帽将军”，能不能把你的这只小猪借我骑一下下？就一下下，拜托了嘛~",
+          ContentKR = "이휴이휴이휴~ 착하지, 꿀꿀아. 쓰담쓰담, 쓰담쓰담... '돼지 부대를 이끄는 꽃모자 장군님', 나 이 돼지 한 번만 타게 해 주면 안 될까? 딱 한 번만! 제발~",
+          DialogueId = 90290701,
+          GUID = "E2088622",
+          SpeakNpcId = 82102,
+          VoiceName = "voice/$Locale$/char/Eve/vo_companio_02"
+        },
         [100365691] = {
           DialogueId = 100365691,
           DialoguePanelType = "None",
@@ -335898,15 +350183,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "100499100",
           SpeakNpcId = 100431,
           VoiceName = "voice/$Locale$/story/1004/100499/100499100"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 100499101,
-    MaxKey = 101078171,
-    Loader = function()
-      return {
+        },
         [100499101] = {
           Content = "奶酪呢，是两种发酵程度的牛奶酪、羊奶酪，最后是鸭奶酪。",
           ContentKR = "치즈는 말이지, 양젖 치즈랑 소젖 치즈를 숙성 기간이 다른 걸로 두 가지씩 가져왔고, 대망의 오리젖 치즈도 가져왔어.",
@@ -336304,7 +350581,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "100499150",
           SpeakNpcId = 100405,
           VoiceName = "voice/$Locale$/story/1004/100499/100499150"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 100499151,
+    MaxKey = 101292023,
+    Loader = function()
+      return {
         [100499151] = {
           Content = "就在我们的脚底下，有一座巨大的工厂制造新车，维护零件，可惜我还没有去过。",
           ContentKR = "우리 발밑에 커다란 공장이 있거든! 거기서 새 기차도 만들고, 부품 수리도 한대. 아쉽게도 아직 나도 구경은 못 해 봤지만 말이야.",
@@ -337309,15 +351594,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           DialogueId = 101078171,
           GUID = "101078171",
           NextDialogue = 10107818
-        }
-      }
-    end
-  },
-  {
-    MinKey = 101089031,
-    MaxKey = 510001041,
-    Loader = function()
-      return {
+        },
         [101089031] = {
           Content = "调查炉子",
           ContentKR = "난로를 조사한다.",
@@ -337661,7 +351938,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           DialogueId = 101292023,
           GUID = "101292023",
           NextDialogue = 10129211
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 101292024,
+    MaxKey = 510012043,
+    Loader = function()
+      return {
         [101292024] = {
           Content = "再见。",
           ContentKR = "가볼게요.",
@@ -338876,15 +353161,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510001041",
           ImprPlusId = 1004,
           NextDialogue = 51000105
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510001042,
-    MaxKey = 510050261,
-    Loader = function()
-      return {
+        },
         [510001042] = {
           Content = "（灵巧地闪开——你并不信任陌生人过分的热情。）",
           ContentKR = "(재빨리 피한다. 낯선 사람의 지나친 호의를 믿지 않는다.)",
@@ -339272,7 +353549,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510012043",
           ImprPlusId = 1001,
           NextDialogue = 51001207
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510013011,
+    MaxKey = 510059372,
+    Loader = function()
+      return {
         [510013011] = {
           Content = "你不能这样侮辱一位受尊敬的女士。",
           ContentKR = "사람들이 존경하는 사람을 그렇게 욕하면 안 되지.",
@@ -339343,14 +353628,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [510013091] = {
           Content = "好吧，来一桶。",
-          ContentKR = "좋아, 한 통만 줘.",
+          ContentKR = "그럼, 한 통만 줘.",
           DialogueId = 510013091,
           GUID = "510013091",
           NextDialogue = 51001310
         },
         [510013092] = {
           Content = "便宜没好货。",
-          ContentKR = "싼 게 비지떡이지. 됐어.",
+          ContentKR = "싼게 비지떡인 건 아니고?",
           DialogueId = 510013092,
           GUID = "510013092",
           NextDialogue = 51001313
@@ -339373,7 +353658,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [510013281] = {
           Content = "假货害人啊……",
-          ContentKR = "가짜 술이 사람을 잡네요...",
+          ContentKR = "가짜술은 정말 몸에 안좋네...",
           DialogueId = 510013281,
           GUID = "510013281",
           NextDialogue = 51001329
@@ -340473,15 +354758,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510050261",
           ImprCheckId = 1025,
           NextDialogue = 51005028
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510050291,
-    MaxKey = 710020021,
-    Loader = function()
-      return {
+        },
         [510050291] = {
           Content = "莱娜女士，你认得这把钥匙吗？",
           ContentKR = "레나 아주머니, 이 열쇠를 아세요?",
@@ -340868,7 +355145,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510059372",
           ImprPlusId = 1005,
           NextDialogue = 51005939
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510060171,
+    MaxKey = 710058031,
+    Loader = function()
+      return {
         [510060171] = {
           Content = "有的人光看这个名字就会感到不适的。",
           ContentKR = "솔직히 이름만 들어도 불편해할 사람도 있을 것 같아.",
@@ -341981,15 +356266,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 710020021,
           GUID = "710020021",
           NextDialogue = 71002007
-        }
-      }
-    end
-  },
-  {
-    MinKey = 710020022,
-    MaxKey = 741147042,
-    Loader = function()
-      return {
+        },
         [710020022] = {
           Content = "（拒绝。）",
           ContentKR = "(거절한다.)",
@@ -342319,7 +356596,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "710058031",
           NextDialogue = 71005804,
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 710058032,
+    MaxKey = 741147092,
+    Loader = function()
+      return {
         [710058032] = {
           Content = "（拒绝。）",
           ContentKR = "(거절한다.)",
@@ -343532,15 +357817,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114702:Give"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147043,
-    MaxKey = 741147242,
-    Loader = function()
-      return {
+        },
         [741147043] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Shock_Start",
@@ -344038,7 +358315,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114704:Explain01_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147093,
+    MaxKey = 741147292,
+    Loader = function()
+      return {
         [741147093] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Explain01_End",
@@ -345530,15 +359815,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114727:Think_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147243,
-    MaxKey = 741147526,
-    Loader = function()
-      return {
+        },
         [741147243] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "L90",
@@ -346035,7 +360312,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114731:p(-90)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147293,
+    MaxKey = 741147721,
+    Loader = function()
+      return {
         [741147293] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "R180",
@@ -346205,7 +360490,6 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           }
         },
         [741147331] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "L180",
           DialogueId = 741147331,
           NextDialogue = 741147332,
@@ -346215,7 +360499,6 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           }
         },
         [741147332] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "R90",
           DialogueId = 741147332,
           NextDialogue = 741147333,
@@ -346225,7 +360508,6 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           }
         },
         [741147333] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "R180",
           DialogueId = 741147333,
           NextDialogue = 741147334,
@@ -346235,232 +360517,232 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           }
         },
         [741147334] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Agree",
           DialogueId = 741147334,
           NextDialogue = 741147335,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Agree"
+            [1] = "74114733:Agree",
+            [2] = "0:Agree"
           }
         },
         [741147335] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Angry01_Start",
           DialogueId = 741147335,
           NextDialogue = 741147336,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Angry01_Start"
+            [1] = "74114733:Angry01_Start",
+            [2] = "0:Angry01_Start"
           }
         },
         [741147336] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Angry01_End",
           DialogueId = 741147336,
           NextDialogue = 741147337,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Angry01_End"
+            [1] = "74114733:Angry01_End",
+            [2] = "0:Angry01_End"
           }
         },
         [741147337] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Confident_Start",
           DialogueId = 741147337,
           NextDialogue = 741147338,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Confident_Start"
+            [1] = "74114733:Confident_Start",
+            [2] = "0:Confident_Start"
           }
         },
         [741147338] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Confident_End",
           DialogueId = 741147338,
           NextDialogue = 741147339,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Confident_End"
+            [1] = "74114733:Confident_End",
+            [2] = "0:Confident_End"
           }
         },
         [741147339] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Disagree",
           DialogueId = 741147339,
           NextDialogue = 741147340,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Disagree"
+            [1] = "74114733:Disagree",
+            [2] = "0:Disagree"
           }
         },
         [741147340] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Explain01_Start",
           DialogueId = 741147340,
           NextDialogue = 741147341,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Explain01_Start"
+            [1] = "74114733:Explain01_Start",
+            [2] = "0:Explain01_Start"
           }
         },
         [741147341] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Explain01_End",
           DialogueId = 741147341,
           NextDialogue = 741147342,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Explain01_End"
+            [1] = "74114733:Explain01_End",
+            [2] = "0:Explain01_End"
           }
         },
         [741147342] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Explain02_Start",
           DialogueId = 741147342,
           NextDialogue = 741147343,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Explain02_Start"
+            [1] = "74114733:Explain02_Start",
+            [2] = "0:Explain02_Start"
           }
         },
         [741147343] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Explain02_End",
           DialogueId = 741147343,
           NextDialogue = 741147344,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Explain02_End"
+            [1] = "74114733:Explain02_End",
+            [2] = "0:Explain02_End"
           }
         },
         [741147344] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Give",
           DialogueId = 741147344,
           NextDialogue = 741147345,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Give"
+            [1] = "74114733:Give",
+            [2] = "0:Give"
           }
         },
         [741147345] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Shock_Start",
           DialogueId = 741147345,
           NextDialogue = 741147346,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Shock_Start"
+            [1] = "74114733:Shock_Start",
+            [2] = "0:Shock_Start"
           }
         },
         [741147346] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Shock_End",
           DialogueId = 741147346,
           NextDialogue = 741147347,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Shock_End"
+            [1] = "74114733:Shock_End",
+            [2] = "0:Shock_End"
           }
         },
         [741147347] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Sigh_Start",
           DialogueId = 741147347,
           NextDialogue = 741147348,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Sigh_Start"
+            [1] = "74114733:Sigh_Start",
+            [2] = "0:Sigh_Start"
           }
         },
         [741147348] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Sigh_End",
           DialogueId = 741147348,
           NextDialogue = 741147349,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Sigh_End"
+            [1] = "74114733:Sigh_End",
+            [2] = "0:Sigh_End"
           }
         },
         [741147349] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Talk01_Start",
           DialogueId = 741147349,
           NextDialogue = 741147350,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Talk01_Start"
+            [1] = "74114733:Talk01_Start",
+            [2] = "0:Talk01_Start"
           }
         },
         [741147350] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Talk01_End",
           DialogueId = 741147350,
           NextDialogue = 741147351,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Talk01_End"
+            [1] = "74114733:Talk01_End",
+            [2] = "0:Talk01_End"
           }
         },
         [741147351] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Talk02_Start",
           DialogueId = 741147351,
           NextDialogue = 741147352,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Talk02_Start"
+            [1] = "74114733:Talk02_Start",
+            [2] = "0:Talk02_Start"
           }
         },
         [741147352] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Talk02_End",
           DialogueId = 741147352,
           NextDialogue = 741147353,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Talk02_End"
+            [1] = "74114733:Talk02_End",
+            [2] = "0:Talk02_End"
           }
         },
         [741147353] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Talk03_Start",
           DialogueId = 741147353,
           NextDialogue = 741147354,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Talk03_Start"
+            [1] = "74114733:Talk03_Start",
+            [2] = "0:Talk03_Start"
           }
         },
         [741147354] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Talk03_End",
           DialogueId = 741147354,
           NextDialogue = 741147355,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Talk03_End"
+            [1] = "74114733:Talk03_End",
+            [2] = "0:Talk03_End"
           }
         },
         [741147355] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Think_Start",
           DialogueId = 741147355,
           NextDialogue = 741147356,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Think_Start"
+            [1] = "74114733:Think_Start",
+            [2] = "0:Think_Start"
           }
         },
         [741147356] = {
-          Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Think_End",
           DialogueId = 741147356,
           SpeakNpcId = 74114733,
           TalkActionId = {
-            [1] = "74114733:Think_End"
+            [1] = "74114733:Think_End",
+            [2] = "0:Think_End"
           }
         },
         [741147360] = {
@@ -347529,15 +361811,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114741:Think_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147527,
-    MaxKey = 741148305,
-    Loader = function()
-      return {
+        },
         [741147527] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Think_End",
@@ -348035,7 +362309,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114745:Talk01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147722,
+    MaxKey = 741148501,
+    Loader = function()
+      return {
         [741147722] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Talk02_Start",
@@ -349513,15 +363795,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114759:Agree"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148306,
-    MaxKey = 741149017,
-    Loader = function()
-      return {
+        },
         [741148306] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Angry01_Start",
@@ -350019,7 +364293,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114763:p(90)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148502,
+    MaxKey = 741149213,
+    Loader = function()
+      return {
         [741148502] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "L180",
@@ -351514,15 +365796,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114771:Shock_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149018,
-    MaxKey = 741149728,
-    Loader = function()
-      return {
+        },
         [741149018] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Sigh_Start",
@@ -352020,7 +366294,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114775:Explain02_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149214,
+    MaxKey = 750001106,
+    Loader = function()
+      return {
         [741149214] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Explain02_End",
@@ -353509,15 +367791,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 741149728,
           DialoguePanelType = "{type:showtext;topic:Reading_Title_200208;content:Reading_Content_200208}",
           NextDialogue = 741149702
-        }
-      }
-    end
-  },
-  {
-    MinKey = 750000101,
-    MaxKey = 801202042,
-    Loader = function()
-      return {
+        },
         [750000101] = {
           Camera = "0.0,725.0,112.072174,0.000002,0.0,-89.999985,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "成男 小白 看向测试 角度1",
@@ -353968,7 +368242,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           },
           NextDialogue = 750001107,
           SpeakNpcId = 76000017
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 750001107,
+    MaxKey = 801303022,
+    Loader = function()
+      return {
         [750001107] = {
           Camera = "43.609863,-3.280762,155.0,0.0,-0.200008,179.000198,35.000008,100000.0,false,DoNotOverride,2.8",
           Content = "CM_Smile01",
@@ -355096,15 +369378,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801202042,
           GUID = "801202042",
           NextDialogue = 80120206
-        }
-      }
-    end
-  },
-  {
-    MinKey = 801202111,
-    MaxKey = 802001502,
-    Loader = function()
-      return {
+        },
         [801202111] = {
           Content = "这一页夹了张纸条，上面写了些什么？",
           ContentKR = "이 페이지에 쪽지가 끼워져 있네. 뭐라고 쓰여 있어?",
@@ -355454,7 +369728,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801303022,
           GUID = "801303022",
           NextDialogue = 80130304
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 801303071,
+    MaxKey = 901100011,
+    Loader = function()
+      return {
         [801303071] = {
           Content = "虽然不知道发生了什么，但是你这并不是请求人的态度。",
           ContentKR = "무슨 일이 있었는지는 잘 모르겠지만, 이건 부탁하는 사람의 태도가 아닌 것 같은데.",
@@ -356503,15 +370785,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 802001502,
           GUID = "C8C5CD70",
           NextDialogue = 80200153
-        }
-      }
-    end
-  },
-  {
-    MinKey = 802002251,
-    MaxKey = 7411482302,
-    Loader = function()
-      return {
+        },
         [802002251] = {
           Content = "扶疏待人诚挚，对病人也用心，我们是朋友。",
           ContentKR = "부소는 성실하고, 환자한테도 정성을 다해요. 우린 친구고요.",
@@ -356859,7 +371133,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 901100011,
           GUID = "901100011",
           NextDialogue = 90110101
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 901100012,
+    MaxKey = 7411482302,
+    Loader = function()
+      return {
         [901100012] = {
           Content = "扶疏的梦想是什么？",
           ContentKR = "부소의 꿈은 뭐야?",

@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -417,7 +417,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1430.730664612702, y = -229.7682604817402},
-            propsData = {bEnablePP = true, PPEnum = 11}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 11,
+              PPWeight = 1
+            }
           },
           ["17627547513151093"] = {
             key = "17627547513151093",
@@ -638,7 +642,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 3596.7063732043957, y = 873.597389545383},
-            propsData = {bEnablePP = false, PPEnum = 11}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 11,
+              PPWeight = 1
+            }
           },
           ["17627548197573389"] = {
             key = "17627548197573389",
@@ -742,7 +750,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1868.9529911638751, y = 1541.2692872173218},
-            propsData = {bEnablePP = false, PPEnum = 11}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 11,
+              PPWeight = 1
+            }
           },
           ["17627548724965286"] = {
             key = "17627548724965286",
@@ -883,8 +895,7 @@ return {
               SoundPath = "event:/bgm/1_1/0102_story_dafengjiuzhang",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104105},
+              RelatedRegionId = {104105},
               bStoreToServer = false
             }
           },

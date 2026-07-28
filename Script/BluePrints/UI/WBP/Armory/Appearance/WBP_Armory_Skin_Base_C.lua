@@ -347,6 +347,7 @@ function M:CreateActorController(Params)
     self.ActorController:OnOpened()
   elseif self.ParentActorController then
     self.ActorController = self.ParentActorController
+    self.ActorController.OnRecoverPlayerAppearance = self.OnRecoverPlayerAppearance
     self.ActorController:BindViewUI(self)
     self.ActorController:SetCurrentViewUI(self)
     self.SkipFirstUpdateMontage = true
@@ -363,6 +364,12 @@ function M:CreateActorController(Params)
     end
     self.ActorController = ActorController:New(InitParams)
     self.ActorController:OnOpened()
+  end
+end
+
+function M:OnRecoverPlayerAppearance()
+  if self.Type == "Char" then
+    return self.ActorController.LastCharAppearanceInfo
   end
 end
 
@@ -396,10 +403,14 @@ function M:Init(Params)
       else
         JumpToTabIdx = self.AccessoryTabIdx
       end
-    elseif Params.AccessoryType and Params.AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
-      JumpToTabIdx = self.AccessoryTabIdx
+    elseif Params.AccessoryType then
+      if Params.AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
+        JumpToTabIdx = self.AccessoryTabIdx
+      else
+        JumpToTabIdx = self.WeaponStanceFXTabIdx
+      end
     else
-      JumpToTabIdx = self.WeaponStanceFXTabIdx
+      JumpToTabIdx = self.AccessoryTabIdx
     end
     self.JumpToAccessoryId = Params.AccessoryId
     self.Tab_Skin:SelectTab(JumpToTabIdx)
@@ -718,11 +729,13 @@ function M:UpdateFunctionBtn(Content, CurrentContent)
       self.Btn_Package_Open:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Btn_Package_Open:BindEventOnClicked(self, self.OnRightConfirmBtnClicked)
       self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
-      self.Btn_Package_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      self.Btn_Package_Buy:SetText(GText("UI_Skin_GotoBuy"))
-      self.Btn_Package_Buy:ForbidBtn(false)
-      self.Btn_Package_Buy:BindEventOnClicked(self, self.OnLeftConfirmBtnClicked)
-      self.LeftConfirmBtnFunc = self.OnLeftConfirmBtnClicked
+      if CurGoToShopState == GoToShopState.CanGoToShop then
+        self.Btn_Package_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+        self.Btn_Package_Buy:SetText(GText("UI_Skin_GotoBuy"))
+        self.Btn_Package_Buy:ForbidBtn(false)
+        self.Btn_Package_Buy:BindEventOnClicked(self, self.OnLeftConfirmBtnClicked)
+        self.LeftConfirmBtnFunc = self.OnLeftConfirmBtnClicked
+      end
     elseif CurGoToShopState == GoToShopState.CanGoToShop then
       self.Btn_Function:SetText(GText("UI_Skin_GotoBuy"))
       self.Btn_Function:ForbidBtn(false)
@@ -816,6 +829,9 @@ function M:CheckSkinGoToShopState()
 end
 
 function M:OnAccessoryItemClicked(Content)
+  if Content.IsSelect then
+    return
+  end
   if self.CurrentTopTabIdx == self.HairTabIdx then
     self:OnHairItemClicked(Content)
   else
@@ -1249,7 +1265,7 @@ function M:CheckIsOptReward(Content)
                 GestureId = Data.Id[Index]
               }
             end
-            Params.SkinId = not self.SelectedSkinId and self.Target and self.Target:GetAppearance().SkinId
+            Params.SkinId = not self.SelectedSkinId and self.Target and self.Target:GetAppearance(self.AppearanceSuitIndex).SkinId
             return Params
           end
         end
@@ -1311,6 +1327,9 @@ function M:OpenDye()
   elseif self.CurrentTopTabIdx == self.HairTabIdx then
     Content = self.HairMap[self.SelectedHairId]
     SkinType = CommonConst.DataType.Hair
+  end
+  if self.Type == CommonConst.AppearanceCollectType.Weapon and self.SkinMap[self.SelectedSkinId].IsDefaultSkin then
+    SkinType = CommonConst.AppearanceCollectType.Weapon
   end
   if not (not self.IsTargetUnowned and Content and Content.bDyeable) or Content.LockType and not self.IsPreviewMode then
     return
@@ -1414,6 +1433,7 @@ function M:Destruct()
     end
     if self.ParentActorController then
       self.ActorController:UnBindViewUI(self)
+      self.ActorController.OnRecoverPlayerAppearance = nil
     end
     self.ActorController:ResetCurrentViewUI()
   end

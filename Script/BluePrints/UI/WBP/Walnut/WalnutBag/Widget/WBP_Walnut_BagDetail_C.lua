@@ -100,6 +100,7 @@ function M:RefreshItemDetails(WalnutInfo)
   else
     self:PlayAnimationForward(self.Refresh)
   end
+  self.ScrollBox_Detail:ScrollToStart()
 end
 
 function M:RefreshIconAsset(bIsAsync, WalnutTypeConfigData, WalnutId)

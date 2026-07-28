@@ -653,5 +653,6 @@ return {
       }
     }
   },
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

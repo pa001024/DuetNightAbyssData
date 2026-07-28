@@ -156,6 +156,7 @@ function M:OnAddRegionOtherPlayer(Eid, Uid, Player, ObjId)
     if WidgetComp then
       PlayerHeadWidgetUtils:RefreshRegionNameInfo(WidgetComp, Uid, ObjId)
       PlayerHeadWidgetUtils:RefreshTitleInfo(WidgetComp, ObjId)
+      self:_RefreshRegionPlayerAutoOnlineActionTag(Eid, ObjId)
       local Widget = WidgetComp:GetWidget() or nil
       if Widget and Widget.Npc_Name_PC then
         Widget.Npc_Name_PC:SetRenderOpacity(1.0)
@@ -236,6 +237,17 @@ function M:OnRemoveRegionOtherPlayer(Eid, Uid)
     return
   end
   self:RemoveRegionPlayer(Player)
+end
+
+function M:_RefreshRegionPlayerAutoOnlineActionTag(Eid, ObjId)
+  if not Eid or not ObjId then
+    return
+  end
+  local Player = Battle(self):GetEntity(Eid)
+  if not Player or not Player.RefreshAutoOnlineActionTagByRegionState then
+    return
+  end
+  Player:RefreshAutoOnlineActionTagByRegionState(ObjId)
 end
 
 function M:PlayEmoji(ObjId, Eid, EmojiPath)

@@ -360,7 +360,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102101},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -401,7 +400,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102101},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -831,7 +829,7 @@ return {
               IsNpcNode = false,
               FirstDialogueId = 11011601,
               FlowAssetPath = "",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "EX01_FixSimple_10",
               BlendInTime = 0,
               BlendOutTime = 2,
@@ -1332,7 +1330,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -2323,7 +2320,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           }
@@ -2650,7 +2646,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -2667,7 +2662,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -3588,7 +3582,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -3823,7 +3816,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -4171,7 +4163,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -4188,7 +4179,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -4460,7 +4450,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -4670,7 +4659,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -4987,7 +4975,7 @@ return {
               IsNpcNode = false,
               FirstDialogueId = 11018001,
               FlowAssetPath = "",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "EX01_FixSimple_30",
               BlendInTime = 0.5,
               BlendOutTime = 0,
@@ -5209,7 +5197,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102101},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -5505,7 +5492,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102101},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -6257,7 +6243,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },

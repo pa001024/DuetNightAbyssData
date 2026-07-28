@@ -183,6 +183,7 @@ function AbyssComponent:AbyssTeleport(Location, Rotation, IsBoss)
   local LastLevelId = self:GetLevelLoader():GetLevelIdByLocation(PlayerCharacter:K2_GetActorLocation())
   local NewLevelId = self:GetLevelLoader():GetLevelIdByLocation(Location)
   PlayerCharacter:K2_TeleportTo(Location, Rotation, false, nil, false)
+  PlayerCharacter:TeleportFollowSummons(Location, Rotation)
   EventManager:FireEvent(EventID.ForceUpdatePlayerCurrentLevelId)
   self.LevelGameMode.IsAbyssTeleporting = true
   self:AddTimer(2, self.OnCharacterChangeLevel, false, 0, "AbyssTeleport", false, LastLevelId, NewLevelId)

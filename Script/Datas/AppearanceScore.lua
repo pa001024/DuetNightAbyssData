@@ -256,5 +256,41 @@ return ReadOnly("AppearanceScore", {
     Score = 0,
     TotalScoreId = 42,
     Type = "Hair"
+  },
+  [43] = {
+    Rarity = 6,
+    Score = 0,
+    TotalScoreId = 43,
+    Type = "Weapon"
+  },
+  [44] = {
+    Rarity = 5,
+    Score = 0,
+    TotalScoreId = 44,
+    Type = "Weapon"
+  },
+  [45] = {
+    Rarity = 4,
+    Score = 0,
+    TotalScoreId = 45,
+    Type = "Weapon"
+  },
+  [46] = {
+    Rarity = 3,
+    Score = 0,
+    TotalScoreId = 46,
+    Type = "Weapon"
+  },
+  [47] = {
+    Rarity = 2,
+    Score = 0,
+    TotalScoreId = 47,
+    Type = "Weapon"
+  },
+  [48] = {
+    Rarity = 1,
+    Score = 0,
+    TotalScoreId = 48,
+    Type = "Weapon"
   }
 })

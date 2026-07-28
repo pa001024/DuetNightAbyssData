@@ -23,6 +23,20 @@ local function SafeStringFormat(Template, ...)
   return Template
 end
 
+local function GetMessageConfig(MessageData)
+  if not MessageData then
+    return nil
+  end
+  local RawMsgType = TrimString(MessageData.Type)
+  local MsgType = RawMsgType
+  if type(RawMsgType) == "string" then
+    MsgType = GuildMessageTypeAlias[RawMsgType] or RawMsgType
+  end
+  return DataMgr.GuildMessage and (DataMgr.GuildMessage[MsgType] or DataMgr.GuildMessage[MessageData.Type]) or nil
+end
+
+local MessageContentWidgetIndex = 0
+local MessageEmptyWidgetIndex = 1
 M.TabDefs = {
   {
     TabId = 1,
@@ -30,13 +44,13 @@ M.TabDefs = {
     bIsLocked = false
   },
   {
-    TabId = 2,
-    Name = GText("UI_DevelopmentProgress"),
+    TabId = 3,
+    Name = GText("UI_EventHistory"),
     bIsLocked = true
   },
   {
-    TabId = 3,
-    Name = GText("UI_EventHistory"),
+    TabId = 2,
+    Name = GText("UI_DevelopmentProgress"),
     bIsLocked = true
   }
 }
@@ -47,6 +61,8 @@ function M:Initialize(Initializer)
   rawset(self, "MemberNameCache", {})
   rawset(self, "PendingMemberNameQuery", {})
   rawset(self, "FailedMemberNameQuery", {})
+  rawset(self, "bMessageEmpty", false)
+  rawset(self, "bCanPlayTabClickSound", false)
   rawset(self, "bDestroyed", false)
 end
 
@@ -87,6 +103,7 @@ function M:Init()
   self.bDestroyed = false
   self.SelectedTabId = nil
   self.SelectedTabEntry = nil
+  self.bCanPlayTabClickSound = false
   self:InitListTab()
   if self.In then
     self:PlayAnimation(self.In, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1)
@@ -165,31 +182,86 @@ function M:OnTabSelected(TabId)
   if self.SelectedTabId == TabId then
     return
   end
+  local bNeedPlaySound = self.bCanPlayTabClickSound
   self.SelectedTabId = TabId
+  self.bCanPlayTabClickSound = true
+  if bNeedPlaySound then
+    self:PlayTabClickSound()
+  end
   self:RefreshContent()
+end
+
+function M:PlayTabClickSound()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
 end
 
 function M:RefreshContent()
   local CurrGuild = GuildController:GetModel():GetCurrGuild()
   self.GuildFullInfo = CurrGuild
   if not CurrGuild then
-    self.Panel_Content:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:SetMessageEmptyState(true)
     return
   end
-  self.Panel_Content:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  if 1 == self.SelectedTabId then
-    self:RefreshMessages(CurrGuild.GuildMessages)
+  if self:IsTabUnlocked(self.SelectedTabId) then
+    self:RefreshMessages(self:FilterMessagesByTab(CurrGuild.GuildMessages, self.SelectedTabId))
+  else
+    self.List_Message:ClearListItems()
+    self:SetMessageEmptyState(true)
   end
   if self.Refresh then
     self:PlayAnimation(self.Refresh)
   end
 end
 
+function M:IsTabUnlocked(TabId)
+  for _, TabDef in ipairs(self.TabDefs) do
+    if TabDef.TabId == TabId then
+      return not TabDef.bIsLocked
+    end
+  end
+  return false
+end
+
+function M:GetMessageTabId(MessageData)
+  local Config = GetMessageConfig(MessageData)
+  return Config and tonumber(Config.TabId) or 0
+end
+
+function M:FilterMessagesByTab(GuildMessages, TabId)
+  local Result = {}
+  if not GuildMessages or not TabId then
+    return Result
+  end
+  for _, Msg in ipairs(GuildMessages) do
+    if self:GetMessageTabId(Msg) == TabId then
+      table.insert(Result, Msg)
+    end
+  end
+  return Result
+end
+
+function M:SetMessageEmptyState(bIsEmpty)
+  self.bMessageEmpty = bIsEmpty
+  if self.Text_Empty then
+    self.Text_Empty:SetText(GText("GuildNoActivity"))
+  end
+  if self.WS_Type then
+    self.WS_Type:SetActiveWidgetIndex(bIsEmpty and MessageEmptyWidgetIndex or MessageContentWidgetIndex)
+  elseif self.Panel_Content then
+    self.Panel_Content:SetVisibility(bIsEmpty and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+  if bIsEmpty and self.Key_01 then
+    self.Key_01:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
 function M:RefreshMessages(GuildMessages)
   self.List_Message:ClearListItems()
   if not GuildMessages or 0 == #GuildMessages then
+    self:SetMessageEmptyState(true)
     return
   end
+  self:SetMessageEmptyState(false)
   self:PreloadMessageMemberNames(GuildMessages)
   local SortedMessages = {}
   for _, Msg in ipairs(GuildMessages) do
@@ -327,7 +399,7 @@ function M:RequestMemberNames(Uids)
         self.FailedMemberNameQuery[Uid] = true
       end
     end
-    if bHasNewName and 1 == self.SelectedTabId then
+    if bHasNewName and self:IsTabUnlocked(self.SelectedTabId) then
       self:RefreshContent()
     end
   end, QueryUids, true)
@@ -359,6 +431,7 @@ function M:PreloadMessageMemberNames(GuildMessages)
   for _, Msg in ipairs(GuildMessages) do
     local FormatText = Msg and Msg.FormatText
     if FormatText then
+      AddUid(FormatText.OperatorUid)
       AddUid(FormatText.EditorUid)
       AddUid(FormatText.Uid)
       AddUid(FormatText.RequestUid)
@@ -397,17 +470,37 @@ function M:GetGuildTitleDisplayName(Title)
   return tostring(Title)
 end
 
+function M:GetFormatTextValue(FormatText, ...)
+  if not FormatText then
+    return ""
+  end
+  local Keys = {
+    ...
+  }
+  for _, Key in ipairs(Keys) do
+    local Value = FormatText[Key]
+    if nil ~= Value and "" ~= Value then
+      return tostring(Value)
+    end
+  end
+  return ""
+end
+
+function M:GetGuildBossStageDisplayText(StageId)
+  StageId = tonumber(StageId) or 0
+  if StageId <= 0 then
+    return ""
+  end
+  return tostring(StageId) .. "%"
+end
+
 function M:FormatMessageText(MessageData)
   if not MessageData then
     return ""
   end
   local RawMsgType = TrimString(MessageData.Type)
-  local MsgType = RawMsgType
-  if type(RawMsgType) == "string" then
-    MsgType = GuildMessageTypeAlias[RawMsgType] or RawMsgType
-  end
   local FormatText = MessageData.FormatText or {}
-  local Config = not DataMgr.GuildMessage or DataMgr.GuildMessage[MsgType] or DataMgr.GuildMessage[MessageData.Type]
+  local Config = GetMessageConfig(MessageData)
   local Template = Config and Config.Content and GText(Config.Content) or nil
   if Template then
     if "GuildCreateSuccess" == RawMsgType then
@@ -430,6 +523,14 @@ function M:FormatMessageText(MessageData)
       return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.RequestUid))
     elseif "SetTitle" == RawMsgType then
       return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.RequestUid), self:GetMemberDisplayName(FormatText.TargetUid), self:GetGuildTitleDisplayName(FormatText.Title))
+    elseif "ExchangeFund" == RawMsgType then
+      return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.OperatorUid), self:GetFormatTextValue(FormatText, "CostCount"), self:GetFormatTextValue(FormatText, "AddFund"))
+    elseif "BuyComponent" == RawMsgType then
+      return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.OperatorUid), self:GetFormatTextValue(FormatText, "Count"), self:GetFormatTextValue(FormatText, "ComponentName", "ComponentId"))
+    elseif "PublishLayout" == RawMsgType then
+      return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.OperatorUid))
+    elseif "GuildBossStageReward" == RawMsgType then
+      return SafeStringFormat(Template, self:GetGuildBossStageDisplayText(FormatText.StageId), self:GetFormatTextValue(FormatText, "AddFund", "ConfigAddFund"))
     end
     local Result = Template
     for Key, Value in pairs(FormatText) do
@@ -601,7 +702,7 @@ function M:UpdateScrollbarVisibility()
 end
 
 function M:UpdateKey01Visibility()
-  if self.Scroll:GetScrollOffsetOfEnd() > 0 then
+  if not self.bMessageEmpty and self.Scroll:GetScrollOffsetOfEnd() > 0 then
     self.Key_01:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Key_01:SetVisibility(UE4.ESlateVisibility.Collapsed)

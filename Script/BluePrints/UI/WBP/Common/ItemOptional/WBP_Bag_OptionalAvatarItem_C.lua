@@ -145,6 +145,16 @@ function M:SetRarity(Rarity)
   self.Item:SetRarity(Rarity)
 end
 
+function M:SwitchToEmptyState(IsEmpty)
+  if IsEmpty then
+    self.Item.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    self.Panel_Content:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.Item.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    self.Panel_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
 function M:OnAddedToFocusPath(InFocusEvent)
   if UIUtils.IsGamepadInput() then
     self:OnBtnChooseHovered()

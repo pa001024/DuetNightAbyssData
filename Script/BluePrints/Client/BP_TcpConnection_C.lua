@@ -1,5 +1,6 @@
 require("UnLua")
 local RpcRecorder = require("NetworkEngine.Rpc.RpcRecorder")
+local RpcUtils = require("Utils.RpcUtils")
 local table = _ENV.table
 local BP_TcpConnection_C = Class()
 

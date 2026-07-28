@@ -33,12 +33,22 @@ function ChangeTextToKeyInfoComponent:GetFinalContentText(ContentText)
       Key, KeyType = self:GetKeyName(ActionName)
       if Key and KeyType then
         local KeyInfo = DataMgr.KeyboardText[Key]
-        local KeyWidth = KeyInfo and KeyInfo.KeyImgWidth or 48
-        local KeyHeight = KeyInfo and KeyInfo.KeyImgHeight or 48
-        if "GamepadKey" == KeyType then
-          final_str = final_str .. "<img id=\"" .. KeyInfo.Key .. "\" platform=\"" .. CurrentGamepadName .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
+        if not KeyInfo and Key then
+          local CompatKey = string.gsub(Key, "DPad", "Dpad")
+          if CompatKey ~= Key then
+            KeyInfo = DataMgr.KeyboardText[CompatKey]
+          end
+        end
+        if not KeyInfo then
+          DebugPrint("yly GetFinalContentText KeyInfo nil, Key =", Key)
         else
-          final_str = final_str .. "<img id=\"" .. KeyInfo.Key .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
+          local KeyWidth = KeyInfo and KeyInfo.KeyImgWidth or 48
+          local KeyHeight = KeyInfo and KeyInfo.KeyImgHeight or 48
+          if "GamepadKey" == KeyType then
+            final_str = final_str .. "<img id=\"" .. KeyInfo.Key .. "\" platform=\"" .. CurrentGamepadName .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
+          else
+            final_str = final_str .. "<img id=\"" .. KeyInfo.Key .. "\" width=\"" .. KeyWidth .. "\" height=\"" .. KeyHeight .. "\"></>"
+          end
         end
       end
     else

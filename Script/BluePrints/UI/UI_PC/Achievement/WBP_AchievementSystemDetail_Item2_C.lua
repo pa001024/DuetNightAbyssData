@@ -11,6 +11,9 @@ function M:Construct()
   self.Common_RewardsBtn_PC:SetText(GText("UI_Achievement_GetReward"))
   self.RewardItems = {}
   self.RewardItemWidth = nil
+  self.Common_RewardsBtn_PC:SetDefaultGamePadImg("A")
+  self.Common_RewardsBtn_PC.WS_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Common_RewardsBtn_PC:SetKey_PCVisibility(UIConst.VisibilityOp.Collapsed)
   self.PreAchvUrl = {}
 end
 
@@ -278,9 +281,9 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-    self.AchievementSystem.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC.Img_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.AchievementSystem.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.AchievementSystem.OpenRewardDetail = false
-    self.Common_RewardsBtn_PC.Img_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Common_RewardsBtn_PC:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.AchievementSystem.Com_Tab_P.Com_KeyTips.Panel_Key:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self["Achievement_SystemDetail_Item2Condition_PC_" .. 1].Key_Condition:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.AchievementSystem:UpdateComTab(nil, true)
@@ -291,7 +294,7 @@ end
 function M:OnFocusLost(InFocusEvent)
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
-  self.Common_RewardsBtn_PC.Img_GamePad:SetVisibility(ESlateVisibility.Collapsed)
+  self.Common_RewardsBtn_PC:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   self["Achievement_SystemDetail_Item2Condition_PC_" .. 1].Key_Condition:SetVisibility(ESlateVisibility.Collapsed)
   self:StopAnimation(self.Hover)
   self:PlayAnimation(self.Normal)

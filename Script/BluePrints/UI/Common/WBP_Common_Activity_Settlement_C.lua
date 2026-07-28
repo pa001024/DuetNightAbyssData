@@ -22,6 +22,15 @@ end
 function M:InitParams(Params)
   self.Params = Params
   self:InitDungeonInfo()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if GameMode and GameMode.RegisterWorldTravelDelegate then
+    GameMode:RegisterWorldTravelDelegate(function()
+      if self.Params and self.Params.DungeonType == "AutoChess" then
+        return true
+      end
+      return false
+    end)
+  end
   self.Btn_Exit.Button_Area.OnClicked:Add(self, self.OnExitClicked)
   if self.Params and 2 == self.Params.MissionType and self.Params.IsWin then
     self.Btn_Continue:ForbidBtn(true)
@@ -34,6 +43,15 @@ function M:InitParams(Params)
   if self.Btn_Data then
     self.Btn_Data.Button_Area.OnClicked:Add(self, self.InitBattleInfo)
   end
+  
+  function self.Btn_Exit.SoundFunc()
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+  end
+  
+  function self.Btn_Continue.SoundFunc()
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+  end
+  
   self:InitUI()
   self:StopAllAnimations()
   self:AddTimer(0.1, function()
@@ -60,6 +78,7 @@ function M:InitParams(Params)
   self:AddTimer(1, self.CountDown, true, -1, "ActivitySettlementCountDown")
   self:SetupGamepadControls()
   self:UpdateBottomKeyInfo(false)
+  self.IsInit = true
 end
 
 function M:InitDungeonInfo()
@@ -145,7 +164,11 @@ function M:InitUI()
     self.Num_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.VB_Time:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
-  if self.Text_TotalTime then
+  if self.Params.Text_TotalTime then
+    if self.Text_TotalTime then
+      self.Text_TotalTime:SetText(GText(self.Params.Text_TotalTime))
+    end
+  elseif self.Text_TotalTime then
     self.Text_TotalTime:SetText(GText("RaidDungeon_Time_Remain"))
   end
   if self.Text_Return then
@@ -278,12 +301,14 @@ function M:InitUI()
           RewardWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
         end
       end
-    else
+    elseif self.Settlement_RewardItem then
       self.Settlement_RewardItem:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   else
     local RewardWidget = self.Settlement_RewardItem
-    RewardWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if RewardWidget then
+      RewardWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     if self.ScroePanel then
       self.ScorePanel:SetVisibility(ESlateVisibility.Collapsed)
     end
@@ -311,6 +336,37 @@ function M:InitUI()
       self:InitRankIcon()
     end
   end
+  self:InitNextButtonBase()
+end
+
+function M:InitNextButtonBase()
+  if not self.Btn_Next then
+    return
+  end
+  self.Btn_Next:UnBindEventOnClickedByObj(self)
+  if self:IsNextButtonSupported() then
+    self.Btn_Next:BindEventOnClicked(self, self.OnNextButtonClicked)
+    if self.VB_Next then
+      self.VB_Next:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+    self:InitNextButtonUI()
+  elseif self.VB_Next then
+    self.VB_Next:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function M:OnNextButtonClicked()
+  self:OnBtnNextClicked()
+end
+
+function M:IsNextButtonSupported()
+  return false
+end
+
+function M:InitNextButtonUI()
+end
+
+function M:OnBtnNextClicked()
 end
 
 function M:CheckIsTopRank(CurRank)
@@ -552,6 +608,15 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
       end
       self.Btn_Exit:SetGamePadVisibility(UE4.ESlateVisibility.Visible)
       self.Btn_Continue:SetGamePadVisibility(UE4.ESlateVisibility.Visible)
+      if self.Btn_ContinueSmall and self.Btn_ContinueSmall.Key_GamePad then
+        self.Btn_ContinueSmall:SetGamePadVisibility(UE4.ESlateVisibility.Visible)
+      end
+      if self:IsNextButtonSupported() and self.Btn_Next and not self.Btn_Next:IsBtnForbidden() then
+        self.Btn_Next:SetGamePadVisibility(UE4.ESlateVisibility.Visible)
+      end
+      if self.Params.DungeonType == "AutoChess" and self:IsNextButtonSupported() and self.PanelKey then
+        self.PanelKey:SetVisibility(UE4.ESlateVisibility.Visible)
+      end
       self:UpdateBottomKeyInfo(false)
       isHandle = true
     end
@@ -560,14 +625,10 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
     isHandle = true
   elseif "Gamepad_FaceButton_Top" == InKeyName then
     if self.Params and self.Params.DungeonType == "AutoChess" then
-      if 1 == self.Params.MissionType then
+      if 2 == self.Params.MissionType and self.Params.IsWin then
+        DebugPrint("yly OnPreviewKeyDown Gamepad_FaceButton_Top AutoChess MissionType=2 IsWin=true")
+      else
         self:OnContinueClicked()
-      elseif 2 == self.Params.MissionType then
-        if self.Params.IsWin then
-          UIManager(self):ShowUITip("CommonToastMain", GText("UI_AutoChess_CantStartAgain"))
-        else
-          self:OnContinueClicked()
-        end
       end
     else
       self:OnContinueClicked()
@@ -589,10 +650,24 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
     end
     self.Btn_Exit:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Continue:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.Btn_Next then
+      self.Btn_Next:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.Btn_ContinueSmall and self.Btn_ContinueSmall.Key_GamePad then
+      self.Btn_ContinueSmall:SetGamePadVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.Params.DungeonType == "AutoChess" and self:IsNextButtonSupported() and self.PanelKey then
+      self.PanelKey:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     self:UpdateBottomKeyInfo(true)
     isHandle = true
   elseif "Gamepad_Special_Right" == InKeyName then
     self:InitBattleInfo()
+    isHandle = true
+  elseif "Gamepad_FaceButton_Left" == InKeyName then
+    if self:IsNextButtonSupported() and self.Btn_Next and not self.Btn_Next:IsBtnForbidden() then
+      self:OnNextButtonClicked()
+    end
     isHandle = true
   end
   if isHandle then
@@ -678,7 +753,12 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       RewardWidget.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
     self.IsFocusList = false
-    self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.Key_GamePad then
+      self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.Params.DungeonType == "AutoChess" and self:IsNextButtonSupported() and self.PanelKey then
+      self.PanelKey:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
   elseif CurInputDevice == ECommonInputType.Gamepad then
     if self.Switch_Mode then
       self.Switch_Mode:SetActiveWidgetIndex(1)
@@ -694,7 +774,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     else
       self:SetFocus()
       self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
-      self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      if self.Key_GamePad then
+        self.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
     end
     local RewardWidget = self.Settlement_RewardItem
     if RewardWidget and RewardWidget.Key_GamePad then
@@ -702,6 +784,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     end
     if self.Cost and self.Cost.Key then
       self.Cost.Key:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.Params.DungeonType == "AutoChess" and self:IsNextButtonSupported() and self.PanelKey then
+      self.PanelKey:SetVisibility(UE4.ESlateVisibility.Visible)
     end
   end
 end
@@ -790,6 +875,9 @@ function M:SetupGamepadControls()
   end
   self.Btn_Exit:SetGamePadImg("B")
   self.Btn_Continue:SetGamePadImg("Y")
+  if self.Btn_Next and self:IsNextButtonSupported() then
+    self.Btn_Next:SetGamePadImg("X")
+  end
 end
 
 function M:SequenceEvent_PlayScoreItemAnim()
@@ -802,6 +890,13 @@ function M:Destruct()
     self.ScoreAnimationTimer = nil
   end
   self.GameInputModeSubsystem:DisableInputMode("Settlement")
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if GameMode and GameMode.UnRegisterWorldTravelDelegate then
+    GameMode:UnRegisterWorldTravelDelegate()
+  end
+  if self.Btn_Next then
+    self.Btn_Next:UnBindEventOnClickedByObj(self)
+  end
 end
 
 return M

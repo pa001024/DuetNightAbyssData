@@ -40,6 +40,9 @@ function M:OnListItemObjectSet(Content)
   self.TableName = Content.TableName
   self.Content.SelfWidget = self
   self.Parent = self.Content.Parent
+  if not self.Parent then
+    return
+  end
   self.Content.Parent.UsingItemList[self.Content] = 1
   self.Slot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(self.SizeBox_0)
   self.Slot:SetPadding(FMargin(0))

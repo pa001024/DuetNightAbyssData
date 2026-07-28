@@ -15,6 +15,7 @@ function SupportSkill_Phone_C:Construct()
 end
 
 function SupportSkill_Phone_C:Destruct()
+  self:TryClearFoldSkillInputPressed()
   local Avatar = GWorld:GetAvatar()
   if nil == Avatar then
     return
@@ -58,15 +59,43 @@ function SupportSkill_Phone_C:OnPressed()
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, "UI_SKILL_FORBIDDEN")
     return
   end
+  self:TryMarkFoldSkillInputPressed()
   self.OwnerPanel:TryToPlayTargetCommand("Skill3", false)
   self:OnPressed_Presentation()
 end
 
 function SupportSkill_Phone_C:OnReleased()
-  if self.CurButtonState == "Empty" or self.CurButtonState == "Ban" then
+  if self.CurButtonState ~= "Empty" and self.CurButtonState ~= "Ban" then
+    self.OwnerPanel:TryToStopTargetCommand("Skill3", false)
+  end
+  self:TryClearFoldSkillInputPressed()
+end
+
+function SupportSkill_Phone_C:CanCountAsFoldSkillInput()
+  return self.CurButtonState ~= "Empty" and self.CurButtonState ~= "Ban" and self.CurButtonState ~= "InCDTime" and self.CurButtonState ~= "InCDTimeSustain"
+end
+
+function SupportSkill_Phone_C:TryMarkFoldSkillInputPressed()
+  if self.bFoldSkillInputPressed then
     return
   end
-  self.OwnerPanel:TryToStopTargetCommand("Skill3", false)
+  if not self:CanCountAsFoldSkillInput() then
+    return
+  end
+  self.bFoldSkillInputPressed = true
+  if self.OwnerPanel and self.OwnerPanel.SetFoldSkillInputPressed then
+    self.OwnerPanel:SetFoldSkillInputPressed("Skill3", true)
+  end
+end
+
+function SupportSkill_Phone_C:TryClearFoldSkillInputPressed()
+  if not self.bFoldSkillInputPressed then
+    return
+  end
+  self.bFoldSkillInputPressed = false
+  if self.OwnerPanel and self.OwnerPanel.SetFoldSkillInputPressed then
+    self.OwnerPanel:SetFoldSkillInputPressed("Skill3", false)
+  end
 end
 
 function SupportSkill_Phone_C:OnPressed_Presentation()

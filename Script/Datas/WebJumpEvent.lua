@@ -118,5 +118,43 @@ return ReadOnly("WebJumpEvent", {
       ServerId = "SEA",
       WebId = 6
     }
+  },
+  [109004] = {
+    America = {
+      EventId = 109004,
+      Reward = 109002,
+      ServerId = "America",
+      WebId = 4
+    },
+    Asian = {
+      EventId = 109004,
+      Reward = 109002,
+      ServerId = "Asian",
+      WebId = 3
+    },
+    China = {
+      EventId = 109004,
+      Reward = 109002,
+      ServerId = "China",
+      WebId = 1
+    },
+    Europe = {
+      EventId = 109004,
+      Reward = 109002,
+      ServerId = "Europe",
+      WebId = 5
+    },
+    HMT = {
+      EventId = 109004,
+      Reward = 109002,
+      ServerId = "HMT",
+      WebId = 2
+    },
+    SEA = {
+      EventId = 109004,
+      Reward = 109002,
+      ServerId = "SEA",
+      WebId = 6
+    }
   }
 })

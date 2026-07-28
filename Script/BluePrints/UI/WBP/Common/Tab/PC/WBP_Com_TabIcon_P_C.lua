@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Update(Idx, Info)
@@ -71,7 +72,7 @@ function M:GetTabIndex()
 end
 
 function M:SetDisturbIcon(bNotDisturb)
-  RunAsyncTask(self, "SetDisturbIconTask", function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "SetDisturbIconTask", function(CoroutineObj)
     if bNotDisturb then
       if not self.DisturbUI then
         self.DisturbUI = UIManager():CreateWidgetAsync(nil, CoroutineObj, "/Game/UI/WBP/Chat/Widget/WBP_Chat_DontDisturb.WBP_Chat_DontDisturb", false)

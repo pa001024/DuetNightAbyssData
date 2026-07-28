@@ -1,3 +1,4 @@
+local CoroutineUtils = require("CoroutineUtils")
 local ModModel = ModController:GetModel()
 local Component = {}
 
@@ -5,7 +6,7 @@ function Component:TryAbortImport()
   if ModModel:IsInImport() then
     ModModel:StopImport()
     self:StopImportTimer()
-    ForceStopAsyncTask(self, "ImportModTask")
+    CoroutineUtils.ForceStopAsyncTask(self, "ImportModTask")
     self:NotifyEvent(ModCommon.EventId.OnImportAbort)
   end
 end
@@ -126,14 +127,14 @@ function Component:CopyModToRealAvatar(TargetType, TargetUuid, ModSuitIndex, Cal
     self.ImportTimeOutKey = self:AddTimer(5, function()
       ModModel:StopImport()
       self.ImportTimeOutKey = nil
-      ForceStopAsyncTask(self, "ImportModTask")
+      CoroutineUtils.ForceStopAsyncTask(self, "ImportModTask")
       self:CheckError(ErrorCode.RET_MOD_AUTOPUTON_FAILD)
       self:NotifyEvent(ModCommon.EventId.OnImportTimeOut)
     end)
     ModModel.ImportData.CallBack = CallBack
     ModModel.ImportData.ModSuitIndex = ModSuitIndex
     ModModel.ImportData.ImportModList = RealImportMods
-    RunAsyncTask(self, "ImportModTask", self.ImportModTaskFunc)
+    CoroutineUtils.RunAsyncTask(self, "ImportModTask", self.ImportModTaskFunc)
   end
   
   if #NotOwnedMods > 0 or #LackCostMods > 0 then

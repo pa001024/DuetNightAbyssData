@@ -47,6 +47,7 @@ function M:InitGuildInviteItem(GuildInviteInfo, isFromOther)
     return
   end
   self.Text_GuildName:SetText(GuildInviteInfo.GuildName or "")
+  self.Text_Lv:SetText(GText("UI_LEVEL_NAME"))
   self.Text_Level:SetText(tostring(tonumber(GuildInviteInfo.Level) or 0))
   local MemberCount = tonumber(GuildInviteInfo.MemberCount) or 0
   local MemberLimit = tonumber(GuildInviteInfo.MemberLimit) or 0

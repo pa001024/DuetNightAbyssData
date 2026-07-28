@@ -108,4 +108,14 @@ function M:ForbidBtn(IsForbid)
   end
 end
 
+function M:SetNew(bShow)
+  local Vis = bShow and ESlateVisibility.HitTestInvisible or ESlateVisibility.Collapsed
+  if self.Group_New then
+    self.Group_New:SetVisibility(Vis)
+  end
+  if self.Img_New then
+    self.Img_New:SetVisibility(Vis)
+  end
+end
+
 return M

@@ -385,7 +385,7 @@ function M:AddPrivateChatReddotNode(Uid, SubTabType, bAppendParent, bSkipCurrent
     end
     local GrandNodeName = ChatCommon.ReddotNamePre .. ChatCommon.ChannelNames[ChatCommon.ChannelDef.Friend]
     local GrandNode
-    if ReddotManager.GetTreeNode(GrandNodeName) and ParentNode then
+    if ParentNode then
       GrandNode = ReddotManager.AddNodeEx(GrandNodeName, {
         [ParentNodeName] = {}
       })

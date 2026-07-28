@@ -21,53 +21,57 @@ T.RT_6 = {
 T.RT_7 = {
   [1] = T.RT_6
 }
-T.RT_8 = {500, 0}
+T.RT_8 = {200, -300}
 T.RT_9 = {
   OffsetXY = T.RT_8
 }
-T.RT_10 = {0, 500}
+T.RT_10 = {500, 0}
 T.RT_11 = {
   OffsetXY = T.RT_10
 }
-T.RT_12 = {-500, 0}
+T.RT_12 = {200, 0}
 T.RT_13 = {
   OffsetXY = T.RT_12
 }
-T.RT_14 = {0, -500}
+T.RT_14 = {
+  [1] = T.RT_13
+}
 T.RT_15 = {
-  OffsetXY = T.RT_14
-}
-T.RT_16 = {200, 0}
-T.RT_17 = {
-  OffsetXY = T.RT_16
-}
-T.RT_18 = {
-  [1] = T.RT_17
-}
-T.RT_19 = {
   0,
   0,
   0
 }
-T.RT_20 = {
-  OffsetXY = T.RT_19
+T.RT_16 = {
+  OffsetXY = T.RT_15
 }
-T.RT_21 = {
+T.RT_17 = {
   Interval = 30,
   PreFormationType = "Circle",
   Radius = 200,
   Random = 1
 }
-T.RT_22 = {0, 300}
-T.RT_23 = {
-  OffsetXY = T.RT_22
+T.RT_18 = {0, 300}
+T.RT_19 = {
+  OffsetXY = T.RT_18
 }
-T.RT_24 = {0, -300}
-T.RT_25 = {
-  OffsetXY = T.RT_24
+T.RT_20 = {0, -300}
+T.RT_21 = {
+  OffsetXY = T.RT_20
 }
+T.RT_22 = {
+  [1] = T.RT_16
+}
+T.RT_23 = {0, -500}
+T.RT_24 = {
+  OffsetXY = T.RT_23
+}
+T.RT_25 = {0, 500}
 T.RT_26 = {
-  [1] = T.RT_20
+  OffsetXY = T.RT_25
+}
+T.RT_27 = {-500, 0}
+T.RT_28 = {
+  OffsetXY = T.RT_27
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -126,24 +130,95 @@ return ReadOnly("EliteTeamData", {
     LocationCheckParam = T.RT_4,
     Offsets = T.RT_7
   },
+  [210201] = {
+    EliteId = 210201,
+    LocationCheckParam = T.RT_4,
+    OffsetInherentState = 1,
+    Offsets = {
+      [1] = {
+        OffsetXY = {350, 0}
+      },
+      [2] = T.RT_9,
+      [3] = {
+        OffsetXY = {50, 250}
+      },
+      [4] = {
+        OffsetXY = {250, -150}
+      },
+      [5] = {
+        OffsetXY = {200, 150}
+      },
+      [6] = {
+        OffsetXY = {150, -250}
+      },
+      [7] = {
+        OffsetXY = {200, 250}
+      },
+      [8] = {
+        OffsetXY = {400, 0}
+      }
+    }
+  },
+  [210202] = {
+    EliteId = 210202,
+    LocationCheckParam = T.RT_4,
+    OffsetInherentState = 1,
+    Offsets = {
+      [1] = {
+        OffsetXY = {350, 300}
+      },
+      [2] = {
+        OffsetXY = {350, -300}
+      }
+    }
+  },
+  [210203] = {
+    EliteId = 210203,
+    LocationCheckParam = T.RT_4,
+    Offsets = {
+      [1] = T.RT_11
+    }
+  },
+  [210204] = {
+    EliteId = 210204,
+    LocationCheckParam = T.RT_4,
+    Offsets = T.RT_7
+  },
+  [220101] = {
+    EliteId = 220101,
+    LocationCheckParam = T.RT_4,
+    Offsets = {
+      [1] = {
+        OffsetXY = {100, 0}
+      }
+    }
+  },
   [220102] = {
     EliteId = 220102,
     Offsets = {
-      [1] = T.RT_9,
+      [1] = {
+        OffsetXY = {800, 0}
+      },
       [2] = {
-        OffsetXY = {250, 250}
+        OffsetXY = {560, 560}
       },
-      [3] = T.RT_11,
+      [3] = {
+        OffsetXY = {0, 800}
+      },
       [4] = {
-        OffsetXY = {-250, 250}
+        OffsetXY = {-560, 560}
       },
-      [5] = T.RT_13,
+      [5] = {
+        OffsetXY = {-800, 0}
+      },
       [6] = {
-        OffsetXY = {-250, -250}
+        OffsetXY = {-560, -560}
       },
-      [7] = T.RT_15,
+      [7] = {
+        OffsetXY = {0, -800}
+      },
       [8] = {
-        OffsetXY = {250, -250}
+        OffsetXY = {560, -560}
       }
     }
   },
@@ -155,9 +230,7 @@ return ReadOnly("EliteTeamData", {
     EliteId = 230102,
     LocationCheckParam = T.RT_4,
     Offsets = {
-      [1] = {
-        OffsetXY = {200, -300}
-      },
+      [1] = T.RT_9,
       [2] = {
         OffsetXY = {550, 50}
       },
@@ -232,7 +305,7 @@ return ReadOnly("EliteTeamData", {
   },
   [430101] = {
     EliteId = 430101,
-    Offsets = T.RT_18
+    Offsets = T.RT_14
   },
   [510101] = {
     EliteId = 510101,
@@ -254,11 +327,11 @@ return ReadOnly("EliteTeamData", {
   },
   [600501] = {
     EliteId = 600501,
-    SummonPresetShape = T.RT_21
+    SummonPresetShape = T.RT_17
   },
   [600502] = {
     EliteId = 600502,
-    SummonPresetShape = T.RT_21
+    SummonPresetShape = T.RT_17
   },
   [601301] = {
     EliteId = 601301,
@@ -266,8 +339,8 @@ return ReadOnly("EliteTeamData", {
       [1] = {
         OffsetXY = {300, 0}
       },
-      [2] = T.RT_23,
-      [3] = T.RT_25
+      [2] = T.RT_19,
+      [3] = T.RT_21
     }
   },
   [700201] = {
@@ -280,7 +353,7 @@ return ReadOnly("EliteTeamData", {
   },
   [700202] = {
     EliteId = 700202,
-    Offsets = T.RT_18
+    Offsets = T.RT_14
   },
   [700801] = {
     EliteId = 700801,
@@ -297,15 +370,15 @@ return ReadOnly("EliteTeamData", {
   [800201] = {
     EliteId = 800201,
     Offsets = {
-      [1] = T.RT_23,
-      [2] = T.RT_25
+      [1] = T.RT_19,
+      [2] = T.RT_21
     }
   },
   [800202] = {
     EliteId = 800202,
     Offsets = {
-      [1] = T.RT_23,
-      [2] = T.RT_25,
+      [1] = T.RT_19,
+      [2] = T.RT_21,
       [3] = {
         OffsetXY = {0, 600}
       },
@@ -316,22 +389,22 @@ return ReadOnly("EliteTeamData", {
   },
   [850061] = {
     EliteId = 850061,
-    Offsets = T.RT_26
+    Offsets = T.RT_22
   },
   [850081] = {
     EliteId = 850081,
-    Offsets = T.RT_26
+    Offsets = T.RT_22
   },
   [850401] = {
     EliteId = 850401,
     Offsets = {
-      [1] = T.RT_15
+      [1] = T.RT_24
     }
   },
   [850402] = {
     EliteId = 850402,
     Offsets = {
-      [1] = T.RT_11
+      [1] = T.RT_26
     }
   },
   [850403] = {
@@ -380,7 +453,7 @@ return ReadOnly("EliteTeamData", {
   },
   [850901] = {
     EliteId = 850901,
-    Offsets = T.RT_26
+    Offsets = T.RT_22
   },
   [851001] = {
     EliteId = 851001,
@@ -396,10 +469,10 @@ return ReadOnly("EliteTeamData", {
   [851002] = {
     EliteId = 851002,
     Offsets = {
-      [1] = T.RT_11,
-      [2] = T.RT_15,
-      [3] = T.RT_9,
-      [4] = T.RT_13
+      [1] = T.RT_26,
+      [2] = T.RT_24,
+      [3] = T.RT_11,
+      [4] = T.RT_28
     }
   },
   [851801] = {
@@ -414,7 +487,7 @@ return ReadOnly("EliteTeamData", {
       [3] = {
         OffsetXY = {700, 0}
       },
-      [4] = T.RT_13,
+      [4] = T.RT_28,
       [5] = {
         OffsetXY = {524, 424}
       },
@@ -454,7 +527,7 @@ return ReadOnly("EliteTeamData", {
     LocationCheckParam = T.RT_4,
     Offsets = {
       [1] = {
-        OffsetXY = {400, 0}
+        OffsetXY = {380, 0}
       },
       [2] = {
         OffsetXY = {-200, 346}
@@ -466,7 +539,7 @@ return ReadOnly("EliteTeamData", {
   },
   [900301] = {
     EliteId = 900301,
-    Offsets = T.RT_18
+    Offsets = T.RT_14
   },
   [900601] = {
     EliteId = 900601,
@@ -499,7 +572,7 @@ return ReadOnly("EliteTeamData", {
   [6000009] = {
     EliteId = 6000009,
     Offsets = {
-      [1] = T.RT_20,
+      [1] = T.RT_16,
       [2] = {
         OffsetXY = {
           1500,

@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -255,7 +255,8 @@ return {
               LongPressTime = 1,
               MontageName = "",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["1776934016540543"] = {

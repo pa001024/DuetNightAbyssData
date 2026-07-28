@@ -99,12 +99,13 @@ function BP_TestPlayerAnimInstance_C:EnterArmoryIdle()
   end
 end
 
-function BP_TestPlayerAnimInstance_C:SetArmoryIdleTag(bHideUntilLoop)
+function BP_TestPlayerAnimInstance_C:SetArmoryIdleTag(bHideUntilLoop, TargetIdleTag)
   if self.IsEnterArmory ~= "None" then
-    self:SetIdleTag(self:GetArmoryIdleTag())
+    TargetIdleTag = TargetIdleTag or self:GetArmoryIdleTag()
+    self:SetIdleTag(TargetIdleTag)
     if self:GetPawnOwner() and (self:GetPawnOwner():IsPlayer() or self:GetPawnOwner():IsPhantom()) then
       self.EnableHandIk = false
-      self:GetPawnOwner():PlayShowIdleMontage(self.IdleTag, bHideUntilLoop)
+      self:GetPawnOwner():PlayShowIdleMontage(TargetIdleTag, bHideUntilLoop)
     end
   end
 end

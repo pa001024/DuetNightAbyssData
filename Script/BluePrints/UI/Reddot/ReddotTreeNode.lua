@@ -235,7 +235,12 @@ function ReddotTreeNode:Dispose()
 end
 
 function ReddotTreeNode:AddOnCountChangeCb(Obj, Callback)
-  Obj.ReddotNodeIns = self
+  if not Obj.ReddotNodeIns then
+    Obj.ReddotNodeIns = {}
+  end
+  if Obj.ReddotNodeIns then
+    Obj.ReddotNodeIns[self.Name] = 1
+  end
   self.OnCountChange[Obj] = Callback
   if not IsEmptyTable(self.Children) then
     self:UpdateRdType()
@@ -248,13 +253,20 @@ function ReddotTreeNode:HadAddChangeCb(Obj)
 end
 
 function ReddotTreeNode:RemoveOnCountChangeCb(Obj)
-  Obj.ReddotNodeIns = nil
+  if Obj.ReddotNodeIns then
+    if Obj.ReddotNodeIns[self.Name] then
+      Obj.ReddotNodeIns[self.Name] = nil
+    end
+    if not next(Obj.ReddotNodeIns) then
+      Obj.ReddotNodeIns = nil
+    end
+  end
   self.OnCountChange[Obj] = nil
 end
 
 function ReddotTreeNode:CleanOnCountChangeCb()
   for Obj, Func in pairs(self.OnCountChange) do
-    Obj.ReddotNodeIns = nil
+    self:RemoveOnCountChangeCb(Obj)
   end
   self.OnCountChange = {}
 end
@@ -268,8 +280,7 @@ function ReddotTreeNode:TryFireOnCountChange(OldCount, Force)
       Callback(Obj, self.Count, self.ReddotType, self.Name)
     elseif Obj.Object and IsValid(Obj) == false then
       DebugPrint(ErrorTag, "[laixiaoyang]ReddotTreeNode:TryFireOnCountChange,NodeName: " .. self.Name, " Delegate Obj Is Invalid!!!! You must call ReddotManager.RemoveListener before Your Obj Destruct!!!!!!")
-      Obj.ReddotNodeIns = nil
-      self.OnCountChange[Obj] = nil
+      self:RemoveOnCountChangeCb(Obj)
     end
   end
   return

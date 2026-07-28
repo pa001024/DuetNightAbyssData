@@ -9,6 +9,10 @@ local FameTaskType = {RecurringTask = 1, ReputationEntrust = 2}
 function M:Destruct()
   M.Super.Destruct(self)
   EventManager:RemoveEvent(EventID.RegionReputationsChange, self, self.RefreshUI)
+  ReddotManager.RemoveListener(self.UIName, self)
+  ReddotManager.RemoveListener("RecurringFameTask", self)
+  ReddotManager.RemoveListener("EntrustFameTask", self)
+  ReddotManager.RemoveListener("MountLicense_Item", self)
   self:RemoveTimer("UpdateRefreshRemainingTime", true)
 end
 
@@ -50,6 +54,7 @@ function M:InitLicenseUI()
       {Type = "Img", ImgShortPath = "Menu"}
     }
   })
+  ReddotManager.AddListenerEx("MountLicense_Item", self, self.InitLicenseRedDot)
   self:InitLicenseRedDot()
 end
 

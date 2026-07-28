@@ -80,12 +80,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_Zhaogong_2480019",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -191,7 +191,7 @@ return {
               AllowSurroundDialogue = true,
               FirstDialogueId = 10040701,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10040801.10040801'",
-              TalkType = "Impression",
+              TalkType = "FreeSimple",
               BlendInTime = 1,
               BlendOutTime = 1,
               InType = "BlendIn",
@@ -210,6 +210,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -231,7 +232,17 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
                   TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100407,
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
@@ -291,7 +302,9 @@ return {
               TargetTime = 15,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17796807862961287"] = {
@@ -334,12 +347,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "Mechanism_MuqiangGuizu_2480021",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1305,12 +1318,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Gongtou_132480155",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1406,6 +1419,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1417,7 +1431,7 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
@@ -1428,6 +1442,11 @@ return {
                   TalkActorType = "Npc",
                   TalkActorId = 100402,
                   TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
@@ -1450,7 +1469,7 @@ return {
               bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10049401.10049401'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -1471,6 +1490,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1478,7 +1498,33 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100001,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100411,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100401,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100402,
+                  TalkActorVisible = true
+                }
+              },
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,

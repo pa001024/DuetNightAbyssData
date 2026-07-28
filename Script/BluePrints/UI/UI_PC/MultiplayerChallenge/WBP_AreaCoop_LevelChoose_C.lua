@@ -355,8 +355,9 @@ function M:OpenTicketDialog_Solo()
   if not DungeonId then
     return
   end
-  UIManager(self):ShowCommonPopupUI(100123, {
+  local DialogParams = {
     DungeonId = DungeonId,
+    ButtonBarName = "Dialog_Button_CountDown",
     RightCallbackObj = self,
     RightCallbackFunction = function(Obj, PackageData)
       local SelectedTicketId = PackageData and PackageData.Content_1 and PackageData.Content_1.TicketId or nil
@@ -365,7 +366,25 @@ function M:OpenTicketDialog_Solo()
     end,
     ForbiddenRightCallbackObj = self,
     AutoFocus = true
-  }, self)
+  }
+  local Avatar = GWorld:GetAvatar()
+  local bIsInTeam = Avatar and (Avatar:IsInMultiSettlement() or Avatar:IsInTeam())
+  local bIsInMultiDungeon = Avatar and Avatar:IsInMultiDungeon()
+  local bIsInTempScene = GWorld.GameInstance:IsInTempScene()
+  if bIsInTeam or bIsInMultiDungeon and not bIsInTempScene then
+    DialogParams.CountDownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
+    
+    function DialogParams.CountDownCallbackFunction(_, Data, PopupUI)
+      if not bIsInTeam and bIsInMultiDungeon and not bIsInTempScene then
+        local TicketId = Data and Data.Content_1 and Data.Content_1.TicketId
+        EventManager:FireEvent(EventID.OnSelectTicketTimeout, TicketId)
+      end
+      if PopupUI then
+        PopupUI:OnClose()
+      end
+    end
+  end
+  UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
 end
 
 function M:OpenTicketDialog_Multi()
@@ -373,8 +392,9 @@ function M:OpenTicketDialog_Multi()
   if not DungeonId then
     return
   end
-  UIManager(self):ShowCommonPopupUI(100123, {
+  local DialogParams = {
     DungeonId = DungeonId,
+    ButtonBarName = "Dialog_Button_CountDown",
     RightCallbackObj = self,
     RightCallbackFunction = function(Obj, PackageData)
       self.TicketId = PackageData and PackageData.Content_1 and PackageData.Content_1.TicketId or nil
@@ -382,7 +402,25 @@ function M:OpenTicketDialog_Multi()
     end,
     ForbiddenRightCallbackObj = self,
     AutoFocus = true
-  }, self)
+  }
+  local Avatar = GWorld:GetAvatar()
+  local bIsInTeam = Avatar and (Avatar:IsInMultiSettlement() or Avatar:IsInTeam())
+  local bIsInMultiDungeon = Avatar and Avatar:IsInMultiDungeon()
+  local bIsInTempScene = GWorld.GameInstance:IsInTempScene()
+  if bIsInTeam or bIsInMultiDungeon and not bIsInTempScene then
+    DialogParams.CountDownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
+    
+    function DialogParams.CountDownCallbackFunction(_, Data, PopupUI)
+      if not bIsInTeam and bIsInMultiDungeon and not bIsInTempScene then
+        local TicketId = Data and Data.Content_1 and Data.Content_1.TicketId
+        EventManager:FireEvent(EventID.OnSelectTicketTimeout, TicketId)
+      end
+      if PopupUI then
+        PopupUI:OnClose()
+      end
+    end
+  end
+  UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
 end
 
 function M:TeamMatchTimingStart()

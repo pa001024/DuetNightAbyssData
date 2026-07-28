@@ -1,4 +1,5 @@
 local HitResult = FHitResult()
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local M = {}
 local PlayerActorRefs = {}
 local PlayerReflectionRefs = {}
@@ -246,7 +247,9 @@ function M:ChangeCharModel(Info, bIfNoDelay, bNoCharVoice, bForceChange, IsProta
     self.CurrentAppearanceInfo = {}
   end
   local CharId = ChangeCharModelInternal(self, PlayCharacter, Avatar, Info, Char)
-  ChangeCharModelInternal(self, self:GetReflectionActor(PlayCharacter), Avatar, Info, Char)
+  if self.bEnableReflection then
+    ChangeCharModelInternal(self, self:GetReflectionActor(PlayCharacter), Avatar, Info, Char)
+  end
   self:UpdatePlayerReflectionTrans()
   if IsProtagonist then
     self.IsProtagonist = true
@@ -399,7 +402,9 @@ function M:ChangeRealPlayerInfo()
   end
   if 0 ~= Avatar.CurrentPet then
     local Pet = Avatar.Pets[Avatar.CurrentPet]
-    Player:ServerSetBattlePet(Pet.PetId, Pet:GetSkillLevel(), false, TArray(0))
+    if Pet then
+      Player:ServerSetBattlePet(Pet.PetId, Pet:GetSkillLevel(), false, TArray(0))
+    end
   end
   if Player.CurrentMasterBan then
     Player:WithChangeBackToHero()
@@ -471,7 +476,9 @@ function M:CharLvUpOrBreakUp()
   end
   
   CharLvUpOrBreakUpInternal(self:GetPlayerActor())
-  CharLvUpOrBreakUpInternal(self:GetReflectionActor(self:GetPlayerActor()))
+  if self.bEnableReflection then
+    CharLvUpOrBreakUpInternal(self:GetReflectionActor(self:GetPlayerActor()))
+  end
 end
 
 function M:StopPlayerMontage(Params)
@@ -509,11 +516,17 @@ function M:PlayResourceMotion(ResourceId)
     if nil == PlayerCharacter then
       return
     end
+    PlayerCharacter:SetArmoryTag("None")
+    if PlayerCharacter.EMAnimInstance and PlayerCharacter.EMAnimInstance.ResetIdleTag then
+      PlayerCharacter.EMAnimInstance:ResetIdleTag()
+    end
     PlayerCharacter:InvokeResourceBPFunction(ResourceId)
   end
   
   PlayResourceMotionInternal(self:GetPlayerActor())
-  PlayResourceMotionInternal(self:GetReflectionActor(self:GetPlayerActor()))
+  if self.bEnableReflection then
+    PlayResourceMotionInternal(self:GetReflectionActor(self:GetPlayerActor()))
+  end
 end
 
 function M:RemovePlayerGestureEffectCreature()

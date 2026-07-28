@@ -173,7 +173,7 @@ function M:CreateCharContents(Params)
         local Gender2RoleIds = Const.DefaultAttributeMaster
         local ExcludeCharId = Gender2RoleIds[1 - RealAvatar.Sex]
         for CharId, value in pairs(DataMgr.Char) do
-          if not value.IsNotOpen and ExcludeCharId ~= CharId and not OwnedChars[CharId] and CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Char, CharId) then
+          if not value.IsNotOpen and ExcludeCharId ~= CharId and not OwnedChars[CharId] and CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.Char, CharId) then
             local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
               CharIds = {CharId}
             })

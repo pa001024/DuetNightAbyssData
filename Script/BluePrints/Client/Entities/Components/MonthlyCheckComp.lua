@@ -2,14 +2,16 @@ local MonthSignInController = require("BluePrints.UI.WBP.Perk.MonthSignIn.MonthS
 local TimeUtils = require("Utils.TimeUtils")
 local Component = {}
 
-function Component:MonthlyCheckGetReward(CheckCount, Callback)
-  self.logger.info("MonthlyCheckGetReward", CheckCount)
-  self:CallServer("MonthlyCheckGetReward", Callback, CheckCount)
-end
-
 function Component:MonthlyCheckGetTotalReward(Step, Callback)
   self.logger.info("MonthlyCheckGetTotalReward", Step)
   self:CallServer("MonthlyCheckGetTotalReward", Callback, Step)
+end
+
+function Component:MonthlyCheckUpdatePopupTime(Callback)
+  self.logger.info("MonthlyCheckUpdatePopupTime")
+  Callback = Callback or function()
+  end
+  self:CallServer("MonthlyCheckUpdatePopupTime", Callback)
 end
 
 function Component:_OnPropChangeMonthlyCheck()

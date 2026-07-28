@@ -88,7 +88,7 @@ function WBP_Build_List_C:OnListItemInited(Content, EntryUI)
   EntryUI:SetInGear(false)
   EntryUI:SetWeaponMiniPhantomIcon()
   EntryUI:SetSelected(false)
-  if SquadMainUI.CurSquadInfo then
+  if SquadMainUI and SquadMainUI.CurSquadInfo then
     for key, value in pairs(SquadMainUI.CurSquadInfo) do
       local IsEquipped, WidgetName = SquadMainUI:CheckThisContentIsEquippedByOtherSlot(Content.Uuid)
       if IsEquipped then

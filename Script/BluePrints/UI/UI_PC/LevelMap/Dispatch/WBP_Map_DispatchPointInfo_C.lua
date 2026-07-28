@@ -124,12 +124,12 @@ function M:OnClicked()
   self.Owner:RefreshAllDispatchPoint()
   self.Slot:SetZOrder(20)
   self:ShowMiniHead(self.DispatchInfo.DispatchId)
-  if self.Owner.MainMap.DispatchList then
+  if self.Owner.ModeComp:HasDispatchList() then
     EventManager:FireEvent(EventID.ChangeDispatchItem, self.DispatchInfo.DispatchId)
   end
-  self.Owner.MainMap:CreateOrRefreshDispatchDetail(self.DispatchInfo)
-  if self.Owner.MainMap.DispatchAgentList then
-    self.Owner.MainMap:OpenAgentList()
+  self.Owner.ModeComp:CreateOrRefreshDispatchDetail(self.DispatchInfo)
+  if self.Owner.ModeComp:HasDispatchAgentList() then
+    self.Owner.ModeComp:OpenAgentList()
   end
   self:OnItemSelect(false)
 end
@@ -143,11 +143,11 @@ function M:OnItemSelect(IsPlayAni)
       end)
     end
   elseif self.DispatchInfo.State == CommonConst.DispatchState.Unlock then
-    if self.Owner.MainMap.DispatchList and self.Owner.MainMap.DispatchDetail and self.Owner.MainMap.DispatchAgentList == nil then
+    if self.Owner.ModeComp:HasDispatchList() and self.Owner.ModeComp:HasDispatchDetail() and not self.Owner.ModeComp:HasDispatchAgentList() then
       self:IsShowTime(false)
-    elseif self.Owner.MainMap.DispatchList == nil and self.Owner.MainMap.DispatchDetail and self.Owner.MainMap.DispatchAgentList == nil then
+    elseif not self.Owner.ModeComp:HasDispatchList() and self.Owner.ModeComp:HasDispatchDetail() and not self.Owner.ModeComp:HasDispatchAgentList() then
       self:IsShowTime(true)
-    elseif self.Owner.MainMap.DispatchDetail and self.Owner.MainMap.DispatchAgentList then
+    elseif self.Owner.ModeComp:HasDispatchDetail() and self.Owner.ModeComp:HasDispatchAgentList() then
       self:IsShowTime(true)
     end
   end
@@ -317,7 +317,7 @@ function M:ShowMiniHead(Id)
   elseif self.DispatchInfo.State == CommonConst.DispatchState.Unlock then
     self:IsShowTime(false)
     if Id == self.DispatchInfo.DispatchId then
-      if self.Owner.MainMap.DispatchAgentList then
+      if self.Owner.ModeComp:HasDispatchAgentList() then
         self:IsShowTime(true)
       else
         self:IsShowTime(false)
@@ -331,7 +331,7 @@ function M:ShowMiniHead(Id)
       self:StopAnimation(self.Out_Click)
       self:PlayAnimation(self.In)
       AudioManager(self):PlayUISound(self, "event:/ui/common/dispatch_flag_show", "", nil)
-      if self.Owner.MainMap.DispatchAgentList then
+      if self.Owner.ModeComp:HasDispatchAgentList() then
         self:IsShowTime(true)
       else
         self:IsShowTime(false)

@@ -27,6 +27,7 @@ local SimpleDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local TalkOptionData_C = require("BluePrints.Story.Talk.Model.TalkOptionData").TalkOptionData_C
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local EMLuaConst = require("EMLuaConst")
 local WaitQueueTag = {
@@ -48,10 +49,6 @@ local WaitItemUniqueTag = {
   WaitFlowEnd = "WaitFlowEnd",
   AutoPlayDelay = "AutoPlayDelay"
 }
-local DisableMotionBlurTalkIdMap = {
-  ["177772041577114019460"] = true,
-  ["177919559781411108256"] = true
-}
 local CommonTalkTask = Class({
   "BluePrints.Story.Talk.Controller.TalkTaskBase"
 })
@@ -68,13 +65,9 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
     return
   end
   AudioManager(GWorld.GameInstance):AddAuANotifyForbidTag(self.UnitKey)
-  if self.TalkTaskData.Key == "176778347795010204954" then
-    GWorld.GameInstance:ReloadLightingScenario()
-  end
-  if DisableMotionBlurTalkIdMap[self.TalkTaskData.Key] then
+  if self.TalkTaskData.bCloseMotionBlur then
     local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     if IsValid(PlayerController) then
-      DebugPrint("TTT:Talk:", self.TalkTaskData.Key, "disable motion blur")
       PlayerController:ShowFlags("MotionBlur", false)
     end
   end
@@ -161,7 +154,7 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
     self:NPCEnableSkeletalMeshActorRules(self.TalkTaskData.BasicTalkType == "Cinematic", false)
     self:ResetStageSetting(self.TalkTaskData.TalkStage)
     self:ResetDefaultNpcTransform()
-    self:ResetSurroundDialogue((self.BasicTalkType == "FreeSimple" or self.BasicTalkType == "Impression") and self.TalkTaskData.bAllowSurroundDialogue, self.Player, self.TalkContext.InteractiveActor, self.TalkTaskData.TalkActors)
+    self:ResetSurroundDialogue(self.BasicTalkType == "FreeSimple" and self.TalkTaskData.bAllowSurroundDialogue, self.Player, self.TalkTaskData.InteractiveActor, self.TalkTaskData.TalkActors)
     self.TalkContext:DestoryTalkActors(self, self.TalkTaskData.TalkActors)
     self:TryHideDialogueBlackUI()
     self.TalkContext:ConditionalRecoverCharacterShadowSetting(self.TalkTaskData)
@@ -174,7 +167,7 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
           if self.TalkTaskData.CameraLookAtTartgetPoint then
             UE4.UAsyncCameraLookToTargetAction.CameraLookToNewTargetPoint(self.TalkContext, self.TalkTaskData.CameraLookAtTartgetPoint, 0, nil, false)
           end
-          self:FadeOutBlack(self.TalkTaskData.BlendOutType == "FadeOut", self.TalkTaskData.BlendOutTime, function()
+          self:FadeOutBlack(self.TalkTaskData.BasicTalkType ~= "Cinematic" and self.TalkTaskData.BlendOutType == "FadeOut", self.TalkTaskData.BlendOutTime, function()
             self:End(self.FinishType, self.FinishOptionIndex)
           end)
         end)
@@ -184,10 +177,9 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
 end
 
 function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
-  if DisableMotionBlurTalkIdMap[self.TalkTaskData.Key] then
+  if self.TalkTaskData.bCloseMotionBlur then
     local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
     if IsValid(PlayerController) then
-      DebugPrint("TTT:Talk:", self.TalkTaskData.Key, "enable motion blur")
       PlayerController:ShowFlags("MotionBlur", true)
     end
   end
@@ -206,8 +198,6 @@ function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
   end
   URuntimeCommonFunctionLibrary.SetSceneOcclusionThreshold(45.0, 10000)
   GWorld.GameInstance:SetDynamicResolution("Talk", false)
-  self:Clear()
-  self:OnTalkEnd()
   self:SwitchEnableComponent(self.DisableNpcPerformanceOptimizationComponent, false)
   self:SwitchEnableComponent(self.DisableCharacterDitherComponent, false)
   self:SwitchEnableComponent(self.EnableCharacterDitherComponent, false)
@@ -226,20 +216,15 @@ function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
   self:SwitchEnableComponent(self.LockNpcSpawnComponent, false)
   self:TryReleaseStoryPanelUI()
   self.TalkContext:UnRegisterTalkTask(self)
-  EventManager:FireEvent(EventID.EndTalk, {
-    TalkType = self.TalkTaskData.TalkType,
-    BasicTalkType = self.TalkTaskData.BasicTalkType,
-    TalkCategory = self.TalkTaskData.TalkCategory,
-    bExitOnline = self.TalkTaskData.bExitOnline,
-    bDisableGameInput = self.TalkTaskData.bDisableGameInput
-  })
+  self:OnTalkEnd()
+  self:Clear()
   self:TryFireEndingCallback(TalkNodeFinishType, OptionIndex)
 end
 
 function CommonTalkTask:Clear()
   TalkUtils:RemovePlayerInvincible()
   local BasicType = self:GetBasicTalkType()
-  if BasicType == ETalkType.FixSimple or BasicType == ETalkType.FreeSimple or BasicType == ETalkType.Black or BasicType == ETalkType.Cinematic or BasicType == ETalkType.Impression then
+  if BasicType == ETalkType.FixSimple or BasicType == ETalkType.FreeSimple or BasicType == ETalkType.Black or BasicType == ETalkType.Cinematic then
     if self.TalkContext then
       self.TalkContext.TalkTimerManager:ClearTimer(self)
       self.TalkContext.WaitQueueManager:ClearGroup(self)
@@ -274,6 +259,13 @@ function CommonTalkTask:Clear()
     self.StageViewTarget:K2_DestroyActor()
     self.StageViewTarget = nil
   end
+  EventManager:FireEvent(EventID.EndTalk, {
+    TalkType = self.TalkTaskData.TalkType,
+    BasicTalkType = self.TalkTaskData.BasicTalkType,
+    TalkCategory = self.TalkTaskData.TalkCategory,
+    bExitOnline = self.TalkTaskData.bExitOnline,
+    bDisableGameInput = self.TalkTaskData.bDisableGameInput
+  })
 end
 
 function CommonTalkTask:PreStartPerformance()
@@ -291,7 +283,7 @@ function CommonTalkTask:PreStartPerformance()
       Tag = WaitQueueTag.CreateActors
     }
   }, nil, function()
-    self:SetupSurroundDialogue((self.BasicTalkType == "FreeSimple" or self.BasicTalkType == "Impression") and self.TalkTaskData.bAllowSurroundDialogue, self.Player, self.TalkContext.InteractiveActor, self.TalkTaskData.TalkActors)
+    self:SetupSurroundDialogue(self.BasicTalkType == "FreeSimple" and self.TalkTaskData.bAllowSurroundDialogue, self.Player, self.TalkTaskData.InteractiveActor, self.TalkTaskData.TalkActors)
     self:ApplyDefaultTransform()
     self:ApplyStageSetting(self.TalkTaskData.TalkStage)
     TS:TalkHidePlayerCharacter(self.Player, false, Const.TalkHideTag)
@@ -393,20 +385,6 @@ function CommonTalkTask:HandleTalkActorsVisibility(ActorInfos)
     local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
     if ActorData and IsValid(ActorData.TalkActor) then
       self.TalkContext:ShowHideActor(ActorData.TalkActor, ActorInfo.TalkActorVisible)
-    end
-    if ActorInfo.TalkActorType == "Player" and ActorInfo.TalkActorVisible == false then
-      local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-      if IsValid(GameState) and GameState.HideAllNpcs then
-        local CustomNpcSet = GameState.CustomNpcSet:ToTable()
-        for _, entity in pairs(CustomNpcSet) do
-          if IsValid(entity) and entity.CharacterFashion then
-            entity.CharacterFashion:SetDitherAlpha(0, 1)
-            if entity.HeadAccessory then
-              entity.HeadAccessory:SetScalarParameterValueOnMaterials("DitherAlpha", 0)
-            end
-          end
-        end
-      end
     end
   end
 end
@@ -638,7 +616,7 @@ function CommonTalkTask:DefaultCameraBlendIn(BlendSeconds, Callback)
 end
 
 function CommonTalkTask:FreeCameraBlendIn(BlendSeconds, Callback)
-  local TargetCamera = self.TalkCameraManager:GetTalkPawnNew(self.TalkTaskData.bUseProceduralCamera, self.TalkTaskData.ProceduralCameraId)
+  local TargetCamera = self.TalkCameraManager:GetTalkPawnNew(self.TalkTaskData.InteractiveActor, self.TalkTaskData.bUseProceduralCamera, self.TalkTaskData.ProceduralCameraId)
   self.TalkCameraManager:SetTalkPawnEnableChangeView(true)
   local WaitQueue = self.WaitQueueManager:CreateWaitQueue(self, {
     {
@@ -651,12 +629,12 @@ function CommonTalkTask:FreeCameraBlendIn(BlendSeconds, Callback)
       Tag = WaitQueueTag.PlayerRotateToNpc
     }
   }, Callback.Obj, Callback.Func)
-  self.TalkActionManager:FreeTalkNpcRotateToPlayer(self, self.TalkContext.InteractiveActor, {
+  self.TalkActionManager:FreeTalkNpcRotateToPlayer(self, self.TalkTaskData.InteractiveActor, {
     Func = function()
       WaitQueue:CompleteWaitItem(WaitQueueTag.NpcRotateToPlayer)
     end
   }, self.TalkTaskData.BlendInType == "FadeIn")
-  self.TalkActionManager:FreeTalkPlayerRotateToNpc(self, self.TalkContext.InteractiveActor, {
+  self.TalkActionManager:FreeTalkPlayerRotateToNpc(self, self.TalkTaskData.InteractiveActor, {
     Func = function()
       WaitQueue:CompleteWaitItem(WaitQueueTag.PlayerRotateToNpc)
     end
@@ -710,7 +688,7 @@ function CommonTalkTask:DefaultCameraBlendOut(BlendSeconds, Callback)
 end
 
 function CommonTalkTask:FreeCameraBlendOut(BlendSeconds, Callback)
-  self.TalkActionManager:FreeTalkNpcRotateRecover(self.TalkContext.InteractiveActor, self, self.TalkTaskData)
+  self.TalkActionManager:FreeTalkNpcRotateRecover(self.TalkTaskData.InteractiveActor, self, self.TalkTaskData)
   self.TalkCameraManager:FreeSimpleCameraBlendOutTo(Callback, self.TalkTaskData, self.Player, BlendSeconds)
 end
 
@@ -834,20 +812,6 @@ function CommonTalkTask:TravelViewTarget(ViewTarget, bIsFullLoad, OnFinished)
     return
   end
   local BlackHandle = UIManager(self.TalkContext):ShowCommonBlackScreen({})
-  if self.TalkTaskData.TalkNodeId == "176251735161126752346" then
-    self.TalkTimerManager:AddTimer(self, 2, nil, nil, self, function()
-      WorldCompositionSubSystem:SetViewTargetWithWC(ViewTarget, {
-        self.TalkContext,
-        function()
-          UIManager(self.TalkContext):HideCommonBlackScreen(BlackHandle)
-          if OnFinished then
-            OnFinished()
-          end
-        end
-      }, bIsFullLoad, false)
-    end)
-    return
-  end
   WorldCompositionSubSystem:SetViewTargetWithWC(ViewTarget, {
     self.TalkContext,
     function()
@@ -940,7 +904,7 @@ function CommonTalkTask:PlayDialogue(bPauseResume, bSkipping)
     end)
     return
   end
-  self:OnPlayingDialogue(Dialogue)
+  self:UpdateTalkSnapShot(Dialogue)
   self.bAutoToNext = DialogueData.bAutoToNext
   local PanelType = DialogueData.DialoguePanelType
   self.bForceAutoPlay = "None" == PanelType or "AllHide" == PanelType
@@ -1220,33 +1184,23 @@ function CommonTalkTask:ShowTalkOptions(OptionData)
   self:SetCanResponseUIClick(false)
   self:TryHideDialogueBlackUI()
   self.TalkTaskState = TalkTaskState.ShowingOption
-  local CopiedOptionTexts = {}
-  for i, Option in ipairs(OptionData.Options) do
-    table.insert(CopiedOptionTexts, {
-      Index = Option.Index,
-      Text = Option.OptionText,
-      bIsSelected = Option.bIsSelected,
-      bCanReselect = Option.bCanReselect,
-      OptionStyle = Option.OptionStyle
-    })
-  end
-  local FinalOptionTexts = {}
   if OptionData.OptionType == "random" and OptionData.RandomOptionNum > 0 then
-    local FinialOptionNum = math.min(#CopiedOptionTexts, self.TalkTaskData.RandomOptionNum)
-    for i = 1, FinialOptionNum do
-      local RandomIndex = math.random(1, #CopiedOptionTexts)
-      local RandOption = CopiedOptionTexts[RandomIndex]
-      table.insert(FinalOptionTexts, {
-        Index = RandOption.Index,
-        Text = RandOption.Text
-      })
-      table.remove(CopiedOptionTexts, RandomIndex)
+    local ValidOptions = {}
+    for _, Option in ipairs(OptionData.Options) do
+      table.insert(ValidOptions, Option)
     end
-  else
-    FinalOptionTexts = CopiedOptionTexts
+    local RandomOptions = {}
+    local FinialOptionNum = math.min(#ValidOptions, OptionData.RandomOptionNum)
+    for i = 1, FinialOptionNum do
+      local RandomIndex = math.random(1, #ValidOptions)
+      local RandOption = ValidOptions[RandomIndex]
+      table.insert(RandomOptions, RandOption)
+      table.remove(ValidOptions, RandomIndex)
+    end
+    OptionData.Options = RandomOptions
   end
   OptionData.bTalkOptions = true
-  self.UI:ShowOptions(self, FinalOptionTexts, OptionData, function(ItemIdx, SpecifyFinishType)
+  self.UI:ShowOptions(self, OptionData, function(ItemIdx, SpecifyFinishType)
     self.UI:ClearOptions()
     local Option = OptionData.Options[ItemIdx]
     if Option.OverrideBlend then
@@ -1285,7 +1239,7 @@ function CommonTalkTask:ShowTalkOptions(OptionData)
           VisitedOptions = {},
           SelectedOption = Options[ItemIdx]
         })
-        self:Finish(ETalkNodeFinishType.Option, ItemIdx)
+        self:Finish(ETalkNodeFinishType.Option, Option.Index)
       end
     end)
   end)
@@ -1298,37 +1252,12 @@ function CommonTalkTask:ShowDialogueOptions(OptionIds)
   self:SetCanResponseUIClick(false)
   self:TryHideDialogueBlackUI()
   self.TalkTaskState = TalkTaskState.ShowingOption
-  local DialougeType = "null"
-  for i, OptionId in ipairs(OptionIds) do
-    local DialogueData = DataMgr.Dialogue[OptionId]
-    local Type = "dialogue"
-    if DialogueData.ImprCheckId then
-      Type = "check"
-    end
-    if DialogueData.ImprPlusId then
-      Type = "plus"
-    end
-    if "null" ~= DialougeType and Type ~= DialougeType then
-      local Message = "Dialogue各选项之间类型不同\nDialogueId: " .. OptionId
-      local Title = "印象系统错误：选项类型不同"
-      UStoryLogUtils.PrintToFeiShu(self, UE4.EStoryLogType.Impression, Title, Message)
-      DebugPrint("lhr@Dialogue各选项之间类型不同\nDialogueId:", OptionId)
-      return
-    end
-    DialougeType = Type
+  local DialougeType = ImpressionModel:CheckDialogueOptionType(OptionIds)
+  if not DialougeType then
+    return
   end
   local NewOptionData = TalkOptionData_C.New(DialougeType, nil, OptionIds, self.DialogueIterationComponent)
-  local OptionTexts = {}
-  for i, OptionData in ipairs(NewOptionData.Options) do
-    table.insert(OptionTexts, {
-      Index = i,
-      Text = OptionData.OptionText,
-      bIsSelected = OptionData.bIsSelected,
-      bCanReselect = OptionData.bCanReselect,
-      OptionStyle = OptionData.OptionStyle
-    })
-  end
-  self.UI:ShowOptions(self, OptionTexts, NewOptionData, function(ItemIdx, SpecifyFinishType)
+  self.UI:ShowOptions(self, NewOptionData, function(ItemIdx, SpecifyFinishType)
     self.UI:ClearOptions()
     local OptionId = OptionIds[ItemIdx]
     local OptionData = NewOptionData.Options[ItemIdx]
@@ -1558,6 +1487,9 @@ function CommonTalkTask:OnInterrupted(TalkNodeFinishType)
   end
   self:ResumeAllExecutedComps()
   self.TalkContext:RemoveSimpleBlackUI()
+  if self.TalkTaskData and self.TalkTaskData.FlowAsset then
+    self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+  end
   self:End(TalkNodeFinishType)
 end
 
@@ -1570,6 +1502,9 @@ function CommonTalkTask:OnExceptionInterruptedBySTL()
   end
   if self.TalkTaskData.SequencePlayer then
     self.TalkTaskData.SequencePlayer:Stop()
+  end
+  if self.TalkTaskData and self.TalkTaskData.FlowAsset then
+    self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
   end
   self:ResumeAllExecutedComps()
   self:Clear()
@@ -1598,10 +1533,20 @@ function CommonTalkTask:RecordDialogueCompleted(DialogueId)
   if nil == Avatar then
     return
   end
-  if nil == DataMgr.DialogueId2WikiTextIds[DialogueId] then
+  if not self:CanRecordDialogueCompleted(DialogueId) then
     return
   end
   Avatar:CompletedDialogue(DialogueId)
+end
+
+function CommonTalkTask:CanRecordDialogueCompleted(DialogueId)
+  if DataMgr.DialogueId2WikiTextIds[DialogueId] then
+    return true
+  end
+  if DataMgr.ClueContentTrigger.Dialogue[DialogueId] then
+    return true
+  end
+  return false
 end
 
 function CommonTalkTask:OnPaused()

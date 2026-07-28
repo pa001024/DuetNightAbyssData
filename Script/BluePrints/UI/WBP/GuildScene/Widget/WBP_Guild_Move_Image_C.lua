@@ -4,7 +4,7 @@ local M = Class({
 })
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(MouseEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   DebugPrint("chenxiaokang test")
   self.ParentTest.bIsDragActor = true

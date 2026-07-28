@@ -784,5 +784,6 @@ return {
     }
   },
   Explore = {},
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

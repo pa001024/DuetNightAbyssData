@@ -47,7 +47,7 @@
     "cost": 4,
     "buffId": 4020105,
     "extraBuffDesc": "基本のルーン石",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "def": 0.45,
     "hp": 0.3
   },
@@ -59,7 +59,7 @@
     "cost": 4,
     "buffId": 4020106,
     "extraBuffDesc": "基本のルーン石",
-    "unlockQuestId": 10300103,
+    "unlockQuestId": 10300127,
     "atk": 0.3,
     "def": 0.45
   },
@@ -71,7 +71,7 @@
     "cost": 4,
     "buffId": 4020107,
     "extraBuffDesc": "基本のルーン石",
-    "unlockQuestId": 10300102,
+    "unlockQuestId": 10300126,
     "atk": 0.3,
     "hp": 0.3
   },
@@ -83,7 +83,7 @@
     "cost": 4,
     "buffId": 4020108,
     "extraBuffDesc": "基本のルーン石",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "hp": 0.65,
     "shield": 0.6
   },
@@ -95,7 +95,7 @@
     "cost": 4,
     "buffId": 4020109,
     "extraBuffDesc": "基本のルーン石",
-    "unlockQuestId": 10300101,
+    "unlockQuestId": 10300125,
     "atk": 0.3,
     "shield": 0.4
   },
@@ -108,7 +108,7 @@
     "buffId": 4020501,
     "extraBuffDesc": "タグ効果: ダメージを与えた時、対象の防御力を45.0%ダウンさせる。10秒間持続。",
     "extraBuffId": 4020201,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.3
   },
   {
@@ -120,7 +120,7 @@
     "buffId": 4020502,
     "extraBuffDesc": "タグ効果: ダメージを与えた時、対象の防御力を20.0%ダウンさせる。最大3.0スタックまで重ねがけ可、10秒間持続。",
     "extraBuffId": 4020202,
-    "unlockQuestId": 10300105,
+    "unlockQuestId": 10300129,
     "atk": 0.45
   },
   {
@@ -132,7 +132,7 @@
     "buffId": 4020503,
     "extraBuffDesc": "タグ効果: ダメージを受けた時、自身の防御力が25.0%アップする。最大3.0スタックまで重ねがけ可、10秒間持続。",
     "extraBuffId": 4020203,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "hp": 0.9
   },
   {
@@ -144,7 +144,7 @@
     "buffId": 4020504,
     "extraBuffDesc": "タグ効果: ダメージを受けた時、自身の攻撃力が25.0%アップする。最大3.0スタックまで重ねがけ可、10秒間持続。",
     "extraBuffId": 4020204,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "shield": 0.9
   },
   {
@@ -156,7 +156,7 @@
     "buffId": 4020505,
     "extraBuffDesc": "タグ効果: 治療効果を与えた時、対象の防御力が45.0%アップする、10秒間持続。",
     "extraBuffId": 4020205,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -168,7 +168,7 @@
     "buffId": 4020506,
     "extraBuffDesc": "タグ効果: 治療効果を与えた時、対象の攻撃力が35.0%アップする。10秒間持続。",
     "extraBuffId": 4020206,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -180,7 +180,7 @@
     "buffId": 4020507,
     "extraBuffDesc": "タグ効果: 治療効果を与えた時、自身の攻撃力が45.0%アップする。10秒間持続。",
     "extraBuffId": 4020207,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -192,7 +192,7 @@
     "buffId": 4020508,
     "extraBuffDesc": "タグ効果: ダメージを受けた時、自身の攻撃力20.0%、防御力20.0%がアップする。最大3.0スタックまで重ねがけ可、10秒間持続。",
     "extraBuffId": 4020208,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "def": 0.3
   },
   {
@@ -204,7 +204,7 @@
     "buffId": 4020509,
     "extraBuffDesc": "タグ効果: ダメージを与えた時、自身の攻撃力20.0%、防御力20.0%がアップする。最大3.0スタックまで重ねがけ可、10秒間持続。",
     "extraBuffId": 4020209,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.2
   },
   {
@@ -216,7 +216,7 @@
     "buffId": 4020510,
     "extraBuffDesc": "タグ効果: HPが25.0%まで低下すると、毎秒最大HPの7.5%を回復する。10秒間持続。",
     "extraBuffId": 4020210,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -226,9 +226,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020511,
-    "extraBuffDesc": "タグ効果: HPが20%減少するたびに、自身の15.0%攻撃力がアップする。",
+    "extraBuffDesc": "タグ効果: HPが20%減少するたびに、自身の攻撃力が15.0%アップする。",
     "extraBuffId": 4020211,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -238,9 +238,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020512,
-    "extraBuffDesc": "タグ効果: HPが20%減少するたびに、自身の4.0防御力がアップする。",
+    "extraBuffDesc": "タグ効果: HPが20%減少するたびに、自身の防御力が4.0アップする。",
     "extraBuffId": 4020212,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -250,9 +250,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020513,
-    "extraBuffDesc": "タグ効果: ダメージを与えた時、対象がシールドを持っている場合、ダメージが100.0%アップする。\"",
+    "extraBuffDesc": "タグ効果: ダメージを与えた時、対象がシールドを持っている場合、ダメージが100.0%アップする。",
     "extraBuffId": 4020213,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.55
   },
   {
@@ -264,7 +264,7 @@
     "buffId": 4020514,
     "extraBuffDesc": "タグ効果: ダメージを与えた時、対象にシールドがない場合、ダメージが100.0%アップする。",
     "extraBuffId": 4020214,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.5
   },
   {
@@ -274,9 +274,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020602,
-    "extraBuffDesc": "タグ効果:ホルダー能力「ボム」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「ボム」獲得。一定間隔で自身を中心に爆発を起こし、周りの敵対目標を吹き飛ばす。",
     "extraBuffId": 4020302,
-    "unlockQuestId": 10300111,
+    "unlockQuestId": 10300135,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -289,9 +289,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020603,
-    "extraBuffDesc": "タグ効果:ホルダー能力「ベノム」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「ベノム」獲得。一定の間隔で自身の足元に「毒液」エリアを生成する。「毒液」エリアに入った敵は持続ダメージを受けるとともに、防御力がダウンする。",
     "extraBuffId": 4020303,
-    "unlockQuestId": 10300113,
+    "unlockQuestId": 10300137,
     "atk": 0.5,
     "def": 0.5,
     "hp": 0.5,
@@ -304,9 +304,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020604,
-    "extraBuffDesc": "タグ効果:ホルダー能力「エレキ」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「エレキ」獲得。一定の間隔で自身を中心に「電球」を発射する。「電球」は一定時間ごとに周囲の狭い範囲内の敵対目標に電流を放ち、ダメージを与える。攻撃を受けると消滅する。",
     "extraBuffId": 4020304,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -319,9 +319,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020605,
-    "extraBuffDesc": "タグ効果:ホルダー能力「ブラッド」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「ブラッド」獲得。一定の間隔で自身の周りに「腐敗した沼地」を生成する。「腐敗した沼地」：範囲内の敵は持続ダメージを受ける。味方はHPが持続的に回復する。",
     "extraBuffId": 4020305,
-    "unlockQuestId": 10300109,
+    "unlockQuestId": 10300133,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -334,9 +334,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020606,
-    "extraBuffDesc": "タグ効果:ホルダー能力「ウィザー」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「ウィザー」獲得。一定の間隔で自身の周囲に「ウィザーレーザー」を放ち（一定時間持続）、それが命中した敵はダメージを受けるとともに、SPがダウン。",
     "extraBuffId": 4020306,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -349,9 +349,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020608,
-    "extraBuffDesc": "タグ効果:ホルダー能力「リベンジャー」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「リベンジャー」獲得。撃破されると、攻撃力、防御力、移動速度、攻撃速度がアップする「ハイパワー」効果を付近の味方へと付加する。一定時間持続。",
     "extraBuffId": 4020308,
-    "unlockQuestId": 10300112,
+    "unlockQuestId": 10300136,
     "atk": 1.5
   },
   {
@@ -361,9 +361,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020610,
-    "extraBuffDesc": "タグ効果:ホルダー能力「フレイム」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「フレイム」獲得。一定の間隔で自らに「残火状態」を付与する。この持続時間中にダメージを受けると、状態が終了して爆発を引き起こし、周囲の敵対目標にダメージを与える。",
     "extraBuffId": 4020310,
-    "unlockQuestId": 10300114,
+    "unlockQuestId": 10300138,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -376,9 +376,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020611,
-    "extraBuffDesc": "タグ効果:ホルダー能力「バーサーク」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「バーサーク」獲得。倒されると、爆発が発生し、範囲内の敵にダメージを与える。",
     "extraBuffId": 4020311,
-    "unlockQuestId": 10300110,
+    "unlockQuestId": 10300134,
     "atk": 1.5
   },
   {
@@ -388,12 +388,48 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020613,
-    "extraBuffDesc": "タグ効果:ホルダー能力「レイズ」獲得",
+    "extraBuffDesc": "タグ効果: ホルダー能力「レイズ」獲得。ダメージを与えると、自身のHPを回復する。",
     "extraBuffId": 4020313,
-    "unlockQuestId": 10300107,
+    "unlockQuestId": 10300131,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
     "shield": 1.0
+  },
+  {
+    "id": 37,
+    "name": "集中のルーン石",
+    "icon": "Item03",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020515,
+    "extraBuffDesc": "タグ効果: ダメージを与えた時、自身の攻撃速度が20.0%アップする。最大5.0スタックまで重ねがけ可、対象を切り替えるとリセットされる。",
+    "extraBuffId": 4020215,
+    "unlockQuestId": 10300145,
+    "atk": 0.5
+  },
+  {
+    "id": 38,
+    "name": "挑戦のルーン石",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020516,
+    "extraBuffDesc": "タグ効果: ダメージを与えた時、対象とのHP差が250.0ごとに、そのダメージが25.0%アップする。最大4.0スタックまで重ねがけ可。",
+    "extraBuffId": 4020216,
+    "unlockQuestId": 10300132,
+    "atk": 0.5
+  },
+  {
+    "id": 39,
+    "name": "救済のルーン石",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020517,
+    "extraBuffDesc": "タグ効果:治療効果を与えた時、対象に持続回復効果を付与し、毎秒最大HPの3.5%を回復する。5.0秒間持続。",
+    "extraBuffId": 4020217,
+    "unlockQuestId": 10300131,
+    "atk": 0.5
   }
 ]

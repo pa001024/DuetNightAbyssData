@@ -56,7 +56,10 @@ function M:OnListItemObjectSet(Content)
   self:SetPrice(math.floor(Prices * self.Discount))
   self.RealPrices = math.floor(Prices * self.Discount)
   if Content.IsSelect then
-    self:SetSelect()
+    if self.Content.Parent and self.Content.Parent.NeedDeferDefaultSelect then
+    else
+      self:SetSelect()
+    end
   else
     self:SetUnSelect()
   end
@@ -145,9 +148,10 @@ function M:ResetItem()
 end
 
 function M:SetSelect()
+  self.Content.IsSelect = true
+  self.Com_Item_Shop:StopAllAnimations()
   self.Com_Item_Shop:PlayAnimation(self.Com_Item_Shop.Click)
   EventManager:FireEvent(EventID.OnRougeShopItemSelect, self.Content, self.ItemType, self.ItemId, self.ShopId, self.RealPrices, self.IsSoldOut, self.IsCanLevelUp)
-  self.Content.IsSelect = true
 end
 
 function M:SetUnSelect()

@@ -1,7 +1,14 @@
 require("Unlua")
 local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
-local TRIAL_LAYOUT_PLAN_INDEX = 7
 local M = Class("BluePrints.UI.BP_UIState_C")
+
+local function GetTrialLayoutPlanIndex(Avatar)
+  if Avatar and Avatar.GetTrialMobileHudPlanIndex then
+    return Avatar:GetTrialMobileHudPlanIndex()
+  end
+  return nil
+end
+
 M._components = {
   "BluePrints.UI.UI_Phone.Battle.Component.HUDWidgetDesignComponent"
 }
@@ -43,7 +50,7 @@ function M:OnLoaded(...)
       WidgetObj:HideRelativeNodeWhenUnSelected(true)
     end
   end
-  self.SchemeRight:InitClickInfo(self, self.ManualAddWidgetsList, self.OnClickToAddManualWidget)
+  self.SchemeRight:InitClickInfo(self, self:_GetMappedPlanIndex(self.CurEditPlan), self.ManualAddWidgetsList, self.OnClickToAddManualWidget)
   self.Btn_Anew:ForbidBtn(self.bIsDefaultLayoutData)
   self.Jump:ChangeByLayout(self.CurEditPlan)
   self:PlayInAnim()
@@ -74,6 +81,12 @@ function M:PlayInAnim()
 end
 
 function M:PlayOutAnim()
+  local BattleMain = UIManager(self):GetUIObj("BattleMain")
+  local LeftBtn = BattleMain and BattleMain.LeftAutoBtn
+  if IsValid(LeftBtn) then
+    LeftBtn.bSettingJustClosed = nil
+    LeftBtn.bAnchorWasOpen = nil
+  end
   self.IsPlayingOutAnim = true
   self:BindToAnimationFinished(self.Out, {
     self,
@@ -322,7 +335,7 @@ function M:OnMobileHudPlanChanged(OpType, PlanIndex, PlanInfo, IsChangeName)
   if "Update" == OpType then
     self.bHaveModifiedLayoutData = false
     self.AllWidgetOperationHistory = {}
-    if PlanIndex ~= TRIAL_LAYOUT_PLAN_INDEX then
+    if PlanIndex ~= GetTrialLayoutPlanIndex(self.PlayerAvatar) then
       if IsChangeName then
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Change_Success"))
       else
@@ -461,6 +474,7 @@ function M:OnClickedAnewSet()
   
   function CommonDialogParams.RightCallbackFunction()
     self:ResetToDefaultLayout()
+    self:UpdateSliderValue("Size", BattleHUDCommonConst.LayOutSettingConfig.DefaultScaleValue)
     self.bHaveModifiedLayoutData = true
     self.Btn_Retract:ForbidBtn(true)
     self.Btn_Anew:ForbidBtn(true)
@@ -513,7 +527,11 @@ end
 function M:OnClickedTrial()
   ReddotManager.ClearLeafNodeCount("Setting_Control_TrailBtn")
   local WidgetPlanData = self:GetCurrentWidgetPlanData()
-  self.PlayerAvatar:UpdateMobileHudPlan(TRIAL_LAYOUT_PLAN_INDEX, WidgetPlanData)
+  local TrialLayoutPlanIndex = GetTrialLayoutPlanIndex(self.PlayerAvatar)
+  if not TrialLayoutPlanIndex then
+    return
+  end
+  self.PlayerAvatar:UpdateMobileHudPlan(TrialLayoutPlanIndex, WidgetPlanData)
   self:PlayOutAnimAndCloseSettingAndMenuWorld()
   UIManager(self):LoadUINew("CustomHUDSettingTrailUI", self.CurEditPlan, WidgetPlanData)
 end
@@ -548,7 +566,7 @@ function M:SetEditPlanName()
   if not PlanData then
     return
   end
-  local DefaultPlanName = GText("UI_CustomLayout_DefaultPlanName" .. tostring(math.ceil(self.CurEditPlan / 2)))
+  local DefaultPlanName = Avatar:GetDefaultMobileHudPlanName(self.CurEditPlan)
   local PlanName = PlanData.HudPlanName or DefaultPlanName
   self.PlanName = PlanName
   self.Text_PlanName:SetText(PlanName)

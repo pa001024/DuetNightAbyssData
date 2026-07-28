@@ -22,6 +22,7 @@ end
 function M:Construct()
   self.SelectAppearanceIndex = nil
   self.SelectModIndex = nil
+  self.UseAppearanceOnlyMode = false
   self.Btn_Confirm.Button_Area.OnClicked:Add(self, self.OnComfirmClicked)
   self.Btn_Confirm.Button_Area.OnClicked:Add(self, self.GetPlan)
   ModController:SyncTarget(self.Uuid)
@@ -80,6 +81,11 @@ function M:SetComfirmCallball(Callback, obj)
   self.ComfirmCallbackobj = obj
 end
 
+function M:SetOnCloseByGamepadCallback(Callback, Obj)
+  self.OnCloseByGamepadCallback = Callback
+  self.OnCloseByGamepadObj = Obj
+end
+
 function M:OnComfirmClicked()
   if self.ComfirmCallback then
     self.ComfirmCallback(self.ComfirmCallbackobj, self.SelectModIndex, self.SelectAppearanceIndex)
@@ -109,9 +115,15 @@ function M:OnFashionSelected(index)
   self["FashionType0" .. self.SelectAppearanceIndex]:PlayAnimation(self["FashionType0" .. self.SelectAppearanceIndex].Click)
   self["FashionType0" .. self.SelectAppearanceIndex]:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self:SetIsDealWithVirtualAccept(true)
+  if self.OnAppearancePlanChangedCallback then
+    self.OnAppearancePlanChangedCallback(self.OnAppearancePlanChangedObj, self, self.SelectAppearanceIndex)
+  end
 end
 
 function M:OnModSelected(index)
+  if self.UseAppearanceOnlyMode == true then
+    return
+  end
   if index == self.SelectModIndex then
     return
   end
@@ -161,6 +173,7 @@ function M:FreshModText(Uuid)
 end
 
 function M:FreahWeaponView(Name, Rarity, Uuid, SelectModId, IsCharSound)
+  self.UseAppearanceOnlyMode = false
   if IsCharSound then
     self.TipsType = TipsEnum.Char
   else
@@ -175,45 +188,86 @@ function M:FreahWeaponView(Name, Rarity, Uuid, SelectModId, IsCharSound)
   self.Text_Title:SetText(GText(Name))
   self.Panel_Fashion:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.HB_FashionType:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Text_FashionTypeTitle and self.Text_FashionTypeTitle.SetVisibility then
+    self.Text_FashionTypeTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.Text_ModTypeTitle and self.Text_ModTypeTitle.SetVisibility then
+    self.Text_ModTypeTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  for i = 1, 3 do
+    local ModItem = self["ModType0" .. i]
+    if ModItem and ModItem.SetVisibility then
+      ModItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  end
   local currentSize = self.Group_Tips.Slot:GetSize()
   self.Group_Tips.Slot:SetSize(FVector2D(currentSize.X, self.Group_TipsSize_Weapon))
   self:FreshModText(Uuid)
 end
 
 function M:FreahCharView(Name, Rarity, SelectFashionId, SelectModId, Uuid)
+  self.UseAppearanceOnlyMode = true
   self.TipsType = TipsEnum.Char
   if Uuid then
     self:FreshSuitText(Uuid)
   end
   UIUtils:SetTextColorInMaterialByRarity(self, self.Text_Title, Rarity)
   self.Text_Title:SetText(GText(Name))
-  if SelectModId then
-    self:OnModSelected(SelectModId)
-  else
-    self:OnModSelected(1)
-  end
+  self.SelectModIndex = nil
   if SelectFashionId then
     self:OnFashionSelected(SelectFashionId)
   else
     self:OnFashionSelected(1)
   end
   local currentSize = self.Group_Tips.Slot:GetSize()
-  self.Group_Tips.Slot:SetSize(FVector2D(currentSize.X, self.Group_TipsSize_Avatar))
+  local TargetHeight = self.Group_TipsSize_Weapon or self.Group_TipsSize_Avatar
+  self.Group_Tips.Slot:SetSize(FVector2D(currentSize.X, TargetHeight))
   self.Panel_Fashion:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.HB_FashionType:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self:FreshModText(Uuid)
+  if self.Text_FashionTypeTitle and self.Text_FashionTypeTitle.SetVisibility then
+    self.Text_FashionTypeTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  if self.Text_ModTypeTitle and self.Text_ModTypeTitle.SetVisibility then
+    self.Text_ModTypeTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  for i = 1, 3 do
+    local ModItem = self["ModType0" .. i]
+    if ModItem and ModItem.SetVisibility then
+      ModItem:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
 end
 
 function M:FocuesFirstItem()
-  if self.Text_FashionTypeTitle.Visibility == UIConst.VisibilityOp.Visible then
+  if self.UseAppearanceOnlyMode == true then
     self.FashionType01:SetFocus()
   else
     self.ModType01:SetFocus()
   end
 end
 
+function M:OnKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  end
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName == UIConst.GamePadKey.FaceButtonRight then
+    if self.OnCloseByGamepadCallback then
+      self.OnCloseByGamepadCallback(self.OnCloseByGamepadObj)
+    end
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
 function M:SetOnFocusSelectedItemCallback(Callback)
   self.OnFocusSelectedItem = Callback
+end
+
+function M:SetOnAppearancePlanChangedCallback(Callback, Obj)
+  self.OnAppearancePlanChangedCallback = Callback
+  self.OnAppearancePlanChangedObj = Obj
 end
 
 function M:SetOnFocusNotSelectedItemCallback(Callback)

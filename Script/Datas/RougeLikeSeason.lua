@@ -114,7 +114,7 @@ return ReadOnly("RougeLikeSeason", {
       112
     },
     OuterShopTokenId = 215,
-    PointContractRate = 0.03,
+    PointContractRate = 0.04,
     SeasonEndTime = LocalTimeProxy(8204817600),
     SeasonId = 1,
     SeasonStartTime = LocalTimeProxy(1641009600),

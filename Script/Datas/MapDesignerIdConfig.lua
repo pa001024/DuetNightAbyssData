@@ -26,12 +26,15 @@ return ReadOnly("MapDesignerIdConfig", {
     DesignerID = 25,
     DesignerName = "shenglinyun"
   },
+  sunyijie = {DesignerID = 34, DesignerName = "sunyijie"},
   tianyuxin = {DesignerID = 20, DesignerName = "tianyuxin"},
+  xiachunyu = {DesignerID = 36, DesignerName = "xiachunyu"},
   xiongcai = {DesignerID = 31, DesignerName = "xiongcai"},
   yangnongquan = {
     DesignerID = 19,
     DesignerName = "yangnongquan"
   },
+  yishuying = {DesignerID = 35, DesignerName = "yishuying"},
   zhangkaiqi = {DesignerID = 17, DesignerName = "zhangkaiqi"},
   zhangsiyu = {DesignerID = 33, DesignerName = "zhangsiyu"},
   zhangxiang = {DesignerID = 11, DesignerName = "zhangxiang"},

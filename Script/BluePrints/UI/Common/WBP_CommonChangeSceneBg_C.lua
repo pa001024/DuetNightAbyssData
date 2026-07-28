@@ -46,7 +46,6 @@ function WBP_CommonChangeSceneBg_C:OnShowLoading()
   end
   local isDungeonData = true
   self.bEnableTick = true
-  self:ConstructSoundFunc()
   local SojournsGameInstanceSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, USojournsGameInstanceSubsystem)
   self:SetIsShowNavigateGuide(false)
   if SojournsGameInstanceSubsystem and SojournsGameInstanceSubsystem:IsInInvitation() then
@@ -135,6 +134,7 @@ function WBP_CommonChangeSceneBg_C:OnShowLoading()
     Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
     self:UpdateShowUI()
   end
+  self:ConstructSoundFunc()
   local GameInputSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   if IsValid(GameInputSubsystem) then
     local Params = FGameInputModeParams()
@@ -163,6 +163,10 @@ function WBP_CommonChangeSceneBg_C:Construct()
 end
 
 function WBP_CommonChangeSceneBg_C:ConstructSoundFunc()
+  if self.WidgetLoading and self.WidgetLoading.ConstructSoundFunc then
+    self.WidgetLoading:ConstructSoundFunc()
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/loading_common", "Loading", nil)
   AudioManager(self):PausePlayBGMCauseIsLoadingOrBlackScreen()
   AudioManager(self):AddAuANotifyForbidTag("LoadingUI")
@@ -181,6 +185,10 @@ end
 local EMCache = require("EMCache.EMCache")
 
 function WBP_CommonChangeSceneBg_C:DestructSoundFunc()
+  if self.WidgetLoading and self.WidgetLoading.DestructSoundFunc then
+    self.WidgetLoading:DestructSoundFunc()
+    return
+  end
   AudioManager(self):SetEventSoundParam(self, "Loading", {ToEnd = 1})
   AudioManager(self):ResumePlayBGMCauseIsLoadingOrBlackScreen()
   AudioManager(self):RemoveAuANotifyForbidTag("LoadingUI")
@@ -233,7 +241,7 @@ function WBP_CommonChangeSceneBg_C:UpdateShowUI()
   if self.WidgetLoading then
     if self.WidgetLoading.UpdateProgressBar then
       self.WidgetLoading:UpdateProgressBar(self.NowPercentNum)
-    else
+    elseif self.WidgetLoading.ProgressBar then
       self.WidgetLoading.ProgressBar:SetPercent(self.NowPercentNum / 100)
       self.WidgetLoading.Text_Progress:SetText(string.format("%.0f", self.NowPercentNum))
       self.WidgetLoading.Text_Progress_Back:SetText(string.format("%.0f", self.NowPercentNum))

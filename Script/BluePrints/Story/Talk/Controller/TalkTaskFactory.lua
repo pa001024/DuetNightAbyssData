@@ -3,7 +3,7 @@ local TalkTaskFactory = {}
 function TalkTaskFactory:CreateTalkTask(TalkNodeData)
   local TalkTypeData = DataMgr.TalkType[TalkNodeData.TalkType]
   local BasicTalkType = TalkTypeData.BasicType
-  if "Cinematic" == BasicTalkType or "FreeSimple" == BasicTalkType or "FixSimple" == BasicTalkType or "Impression" == BasicTalkType or "Black" == BasicTalkType then
+  if "Cinematic" == BasicTalkType or "FreeSimple" == BasicTalkType or "FixSimple" == BasicTalkType or "Black" == BasicTalkType then
     return self:CreateCommonTalkTask(TalkNodeData)
   elseif "Guide" == BasicTalkType or "Audio" == BasicTalkType or "Boss" == BasicTalkType or "Bubble" == BasicTalkType then
     return self:CreateLightTalkTask(TalkNodeData)

@@ -17,8 +17,11 @@ local Dungeon = {Server = ServerDungeon, GameMode = GameModeDungeon}
 
 local function CreateFunction(Type)
   local Value = Dungeon[Type]
-  DungeonClass.AssembleComponents(Value)
-  return Value()
+  if Value then
+    DungeonClass.AssembleComponents(Value)
+    return Value()
+  end
+  return nil
 end
 
 return CreateFunction

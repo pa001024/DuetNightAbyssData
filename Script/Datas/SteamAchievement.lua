@@ -18,11 +18,11 @@ return ReadOnly("SteamAchievement", {
     SteamAPIName = "STEAM_ACH_20101"
   },
   [4] = {
-    AchvId = 9910301,
-    SteamAPIName = "STEAM_ACH_9910301"
-  },
-  [5] = {
     AchvId = 1005170101,
     SteamAPIName = "STEAM_ACH_1005170101"
+  },
+  [5] = {
+    AchvId = 9910301,
+    SteamAPIName = "STEAM_ACH_9910301"
   }
 })

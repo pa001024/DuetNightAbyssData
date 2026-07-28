@@ -65,7 +65,7 @@ local function CreateTabContent(self, Tab, TabId, Params)
   Obj.Name = Tab.Name
   Obj.Type = Tab.Type
   Obj.Tag = Tab.Tag
-  Obj.Text = Tab.Text
+  Obj.Text = GText(Tab.Text)
   Obj.IconPath = Tab.IconPath
   Obj.WidgetPath = Tab.WidgetPath
   if not Params.NoRedDot then
@@ -159,7 +159,7 @@ local ConstTabsConfig = {
       WidgetPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/WBP_Appearance_AvatarPart.WBP_Appearance_AvatarPart'",
       Name = AppearanceUtils.AppearanceMainTabNames.Char,
       Type = CommonConst.DataType.Char,
-      Text = GText(DataMgr.AppearanceMainTab[1].Text),
+      Text = DataMgr.AppearanceMainTab[1].Text,
       IconPath = DataMgr.AppearanceMainTab[1].IconPath,
       CheckIsUnlocked = function(self, Params)
         return not self.Params.bHideCharTab
@@ -174,7 +174,7 @@ local ConstTabsConfig = {
       Name = AppearanceUtils.AppearanceMainTabNames.Melee,
       Type = CommonConst.DataType.Weapon,
       Tag = ArmoryUtils.ArmoryMainTabNames.Melee,
-      Text = GText(DataMgr.AppearanceMainTab[2].Text),
+      Text = DataMgr.AppearanceMainTab[2].Text,
       IconPath = DataMgr.AppearanceMainTab[2].IconPath,
       CheckIsUnlocked = function(self, Params)
         if self.Params.bHideMeleeTab then
@@ -207,7 +207,7 @@ local ConstTabsConfig = {
       Name = AppearanceUtils.AppearanceMainTabNames.Ranged,
       Type = CommonConst.DataType.Weapon,
       Tag = AppearanceUtils.AppearanceMainTabNames.Ranged,
-      Text = GText(DataMgr.AppearanceMainTab[3].Text),
+      Text = DataMgr.AppearanceMainTab[3].Text,
       IconPath = DataMgr.AppearanceMainTab[3].IconPath,
       CheckIsUnlocked = function(self, Params)
         if self.Params.bHideRangedTab then
@@ -240,7 +240,7 @@ local ConstTabsConfig = {
       Name = AppearanceUtils.AppearanceMainTabNames.Mount,
       Type = CommonConst.DataType.Mount,
       Tag = CommonConst.DataType.Mount,
-      Text = GText(DataMgr.AppearanceMainTab[4].Text),
+      Text = DataMgr.AppearanceMainTab[4].Text,
       IconPath = DataMgr.AppearanceMainTab[4].IconPath,
       CheckIsUnlocked = function(self, Params)
         if self.Params.bHideMountTab then
@@ -252,7 +252,7 @@ local ConstTabsConfig = {
     [AppearanceUtils.AppearanceMainTabNames.Gesture] = {
       WidgetPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/WBP_Appearance_GeaturePart.WBP_Appearance_GeaturePart'",
       Name = AppearanceUtils.AppearanceMainTabNames.Gesture,
-      Text = GText(DataMgr.AppearanceMainTab[5].Text),
+      Text = DataMgr.AppearanceMainTab[5].Text,
       IconPath = DataMgr.AppearanceMainTab[5].IconPath,
       CheckIsUnlocked = function(self, Params)
         if self.IsPreviewMode or self.Params.bHideGestureTab then
@@ -266,7 +266,8 @@ local ConstTabsConfig = {
     AppearanceUtils.AppearanceMainTabNames.Char,
     AppearanceUtils.AppearanceMainTabNames.Melee,
     AppearanceUtils.AppearanceMainTabNames.Ranged,
-    AppearanceUtils.AppearanceMainTabNames.Mount
+    AppearanceUtils.AppearanceMainTabNames.Mount,
+    AppearanceUtils.AppearanceMainTabNames.Gesture
   }
 }
 

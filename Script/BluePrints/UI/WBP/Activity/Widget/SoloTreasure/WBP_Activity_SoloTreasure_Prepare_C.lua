@@ -11,6 +11,7 @@ local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
 local CommonUtils = require("Utils.CommonUtils")
 local SquadPresetUtils = require("Utils.SquadPresetUtils")
+local ShopUtils = require("Utils.ShopUtils")
 M._components = {
   "BluePrints.UI.UI_PC.Common.SquadBuildComponent",
   "BluePrints.UI.WBP.Activity.Widget.SoloTreasure.WBP_Activity_SoloTreasure_Prepare_GamepadComp"
@@ -94,13 +95,13 @@ function M:SwitchIn(...)
   self.Build.Bag:PlayAnimation(self.Build.Bag.Normal)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.In)
-  self:InitTable()
   self.DungeonType, self.DungeonId, self.IsHardMode = ...
   if self.IsHardMode == nil then
     self.IsHardMode = false
   end
   self:CreateActorController()
   self:Enter(self.DungeonType, self.DungeonId, self.IsHardMode)
+  self:InitTable()
   self:SwitchUIType(self.EUIType.Listing)
   self:AddTimer(0.1, function()
     self:SetDefaultFocus()
@@ -164,7 +165,7 @@ function M:SaveSquadToServer(Callback)
     end
     return
   end
-  CurrentSquad.BagIndex = self.ChooseBagContent.Index
+  CurrentSquad.BagIndex = self.ChooseBagContent.BagId
   Avatar:SetTreasureHuntSquad(EventId, self.DungeonId, CurrentSquad, self.IsHardMode, Callback)
 end
 
@@ -283,21 +284,39 @@ function M:DoClearSlots()
   self:UpdateActionButtonsState()
 end
 
+function M:JumpToTicketShop(ShopItemId, CloseCallback)
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
+  if not ShopItemData then
+    return
+  end
+  local SubTabData = DataMgr.ShopTabSub[ShopItemData.SubTabId]
+  if not SubTabData then
+    return
+  end
+  local MainTabId = SubTabData.MainTabId
+  local ShopType = DataMgr.ShopMainTab2ShopType[MainTabId]
+  if not ShopType then
+    return
+  end
+  PageJumpUtils:JumpToShopPage(MainTabId, ShopItemData.SubTabId, ShopItemId, ShopType, CloseCallback, self)
+end
+
 function M:OnStartClicked()
   if self.Btn_Start.Btn_Click:GetForbidden() then
     local CanStart, ErrorMsg = self:CheckCanStart()
     if -1 == ErrorMsg then
+      if 0 == ShopUtils:GetShopItemPurchaseLimit(self.SoloTreasureTicketShopId) then
+        UIManager():ShowUITip(UIConst.Tip_CommonToast, ErrorCode:GetText(ErrorCode.RET_SOLO_TREASURE_DUNGEON_RESOURCE_NOT_ENOUGH))
+        return
+      end
       local Params = {}
       
       function Params.RightCallbackFunction()
-        local ShopItemId = self.SoloTreasureTicketShopId
-        local SubTabId = DataMgr.ShopItem[ShopItemId].SubTabId
-        local MainTabId = DataMgr.ShopTabSub[SubTabId].MainTabId
         self.List_Bag:ClearListItems()
-        PageJumpUtils:JumpToShopPage(MainTabId, SubTabId, ShopItemId, "SoloTreasureShop", function()
+        self:JumpToTicketShop(self.SoloTreasureTicketShopId, function()
           self:UpdateActionButtonsState()
           self:UpdateChooseBagUI()
-        end, self)
+        end)
       end
       
       UIManager(self):ShowCommonPopupUI(100339, Params)
@@ -361,7 +380,7 @@ function M:EnterEventDungeon()
         }
         GWorld.GameInstance:SetExitDungeonData(ExitDungeonInfo)
       else
-        UIManager():ShowUITip(UIConst.Tip_CommonToast, ErrorCode:GetText(Ret))
+        UIManager():ShowError(Ret, nil, UIConst.Tip_CommonToast)
       end
     end
     
@@ -402,10 +421,8 @@ function M:OnPreviewBagClicked()
   end
   local ShopItemId = self.SelectBagContent.ShopItemId
   if self.SelectBagContent.IsLock then
-    local SubTabId = DataMgr.ShopItem[ShopItemId].SubTabId
-    local MainTabId = DataMgr.ShopTabSub[SubTabId].MainTabId
-    PageJumpUtils:JumpToShopPage(MainTabId, SubTabId, ShopItemId, "SoloTreasureShop", function()
-    end, self)
+    self:JumpToTicketShop(ShopItemId, function()
+    end)
   else
     self.LastSelectedBagItemUI:SetIsChosen(true)
     self.Preview.Btn_Bag.Btn_Click:SetForbidden(true)
@@ -462,6 +479,7 @@ function M:Enter(DungeonType, DungeonId, IsHardMode)
   if not self.DungeonId then
     DebugPrint("WBP_Activity_Wuyousheng_TeamBuild_C:Enter - DungeonId无效")
   end
+  self:GetModeFeeInfo()
   self:CalculateModeFee()
   self:UpdateModeUI()
   local SavedSquad
@@ -608,7 +626,15 @@ end
 function M:InitBagList(LevelBackPack)
   self.List_Bag:ClearListItems()
   local Avatar = GWorld:GetAvatar()
-  local ChooseBagIndex = self.TeamInfos and self.TeamInfos.BagIndex or 1
+  local ChooseBagIndex = 1
+  if self.TeamInfos and self.TeamInfos.BagIndex then
+    for i = 1, #LevelBackPack do
+      if LevelBackPack[i] == self.TeamInfos.BagIndex then
+        ChooseBagIndex = i
+        break
+      end
+    end
+  end
   if self.ChooseBagIndex then
     ChooseBagIndex = self.ChooseBagIndex
   end
@@ -620,6 +646,7 @@ function M:InitBagList(LevelBackPack)
     ItemContent.Price = BagData.Price
     ItemContent.Shape = BagData.Shape
     ItemContent.Index = i
+    ItemContent.BagId = BagID
     ItemContent.ParentWidget = self
     ItemContent.Name = BagData.Name
     ItemContent.ShapeType = BagData.ShapeType
@@ -646,6 +673,25 @@ function M:InitBagList(LevelBackPack)
     end
   end
   self.List_Bag:RequestFillEmptyContent()
+end
+
+function M:GetModeFeeInfo()
+  if not self.DungeonId or not DataMgr.PermanentTreasureHunt then
+    return
+  end
+  for _, SeasonConfig in pairs(DataMgr.PermanentTreasureHunt) do
+    local SeasonDungeonIds = SeasonConfig.SeasonDungeonId
+    if SeasonDungeonIds then
+      for _, DungeonId in ipairs(SeasonDungeonIds) do
+        if DungeonId == self.DungeonId then
+          self.SoloTreasureCurrentId = SeasonConfig.SeasonCurrency
+          self.SoloTreasureTicketResourceId = SeasonConfig.SeasonTicket
+          self.SoloTreasureTicketShopId = SeasonConfig.SeasonTicketShopId
+          return
+        end
+      end
+    end
+  end
 end
 
 function M:CalculateModeFee()
@@ -909,6 +955,9 @@ function M:UpdateActionButtonsState()
 end
 
 function M:CheckCanStart()
+  if self.TotalCost == nil then
+    return false, GText("UI_SoloTreasure_ArmoryLackEntryFee")
+  end
   local CanStart = self:CheckTeamCondition()
   if not CanStart then
     return false, GText("UI_SoloTreasure_ArmoryLackNecessaryComponent")

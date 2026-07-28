@@ -130,7 +130,21 @@ function M:StartRegionOnline(bContinue)
   end
   if PlayerCharacter.bFirstInitRegionOnline or self.bNotShowEnterUI == false and not bContinue then
     self.bNotShowEnterUI = true
-    TimeUI = UIManager(self):LoadUINew("RegionOnlineFloat", "In")
+    if UIUtils.AmIInGuildScene() then
+      local function Callback()
+        TimeUI = UIManager(self):LoadUINew("RegionOnlineFloat", "In")
+      end
+      
+      local BattleMain = UIManager(self):GetUIObj("BattleMain")
+      if BattleMain then
+        local GuildInfoWidget = BattleMain:GetGuildInfoWidget()
+        if GuildInfoWidget then
+          GuildInfoWidget:BindToAnimationFinished(GuildInfoWidget.In, {self, Callback})
+        end
+      end
+    else
+      TimeUI = UIManager(self):LoadUINew("RegionOnlineFloat", "In")
+    end
     PlayerCharacter.bFirstInitRegionOnline = false
   end
   if bContinue then
@@ -172,11 +186,20 @@ function M:OnTriggerEnd()
   if not Avatar then
     return
   end
+  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if PlayerCharacter then
+    local NextTickHandle = PlayerCharacter.RegionOnlineNextTick
+    if not Avatar.IsInRegionOnline and NextTickHandle and UE4.UKismetSystemLibrary.K2_IsValidTimerHandle(NextTickHandle) then
+      UE4.UKismetSystemLibrary.K2_ClearTimerHandle(PlayerCharacter, NextTickHandle)
+    end
+  end
   if not Avatar.IsInRegionOnline and self:IsExistTimer("CheckIdleTagTimer") then
     self:RemoveTimer("CheckIdleTagTimer")
     return
   end
-  local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not PlayerCharacter then
+    return
+  end
   PlayerCharacter:RemoveCurRegionOnline(self)
 end
 
@@ -296,9 +319,12 @@ function M:RealStartTrigger()
 end
 
 function M:RealCloseTrigger()
+  self:OnTriggerEnd()
   for key, value in pairs(self.Boxes) do
     local currentResponse = value:GetCollisionResponseToChannel(UE4.ECollisionChannel.ECC_Pawn)
+    print("[OnlineComp] CZC RealCloseTrigger: ", value:GetName(), currentResponse)
     if currentResponse ~= UE4.ECollisionResponse.ECR_Ignore then
+      print("[OnlineComp] CZC RealCloseTrigger: ", value:GetName(), currentResponse)
       value:SetCollisionResponseToChannel(UE4.ECollisionChannel.ECC_Pawn, UE4.ECollisionResponse.ECR_Ignore)
     end
   end

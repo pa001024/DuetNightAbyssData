@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -22,6 +23,8 @@ local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local CommonUtils = require("Utils.CommonUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
+local FullScreenModeComp = require("BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.FullScreenModeComponent")
+local MiniMapModeComp = require("BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.MiniMapModeComponent")
 local ControlPriority = {
   Normal = 0,
   Inertia = 1,
@@ -96,8 +99,8 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.ConditionComplete, self)
   self:RemoveTimer("TickRegionMapImageOpen")
   self:RemoveTimer("TickPointActivityTime")
-  if not self.IsMiniMap and not self.IsEmpty then
-    self:ClosePanel(true)
+  if self.ModeComp then
+    self.ModeComp:OnDestruct(self)
   end
   self:ClearData()
   if self.Indicator then
@@ -129,20 +132,9 @@ function M:Destruct()
   if self.InteractivePanel then
     self.InteractivePanel.WBox:ClearChildren()
   end
-  if self.PointWidgetPool then
-    for _, Point in ipairs(self.PointWidgetPool) do
-      if Point.Super and Point.Super.RemoveFromParent then
-        Point.Super.RemoveFromParent(Point)
-      end
-    end
-    self.PointWidgetPool = {}
-  end
-  if self.SelectWidgetPool then
-    for _, Select in ipairs(self.SelectWidgetPool) do
-      Select:RemoveFromParent()
-    end
-    self.SelectWidgetPool = {}
-  end
+  self.Panel_Point:ClearChildren()
+  self.PointWidgetPool = {}
+  self.SelectWidgetPool = {}
   self:RemoveFocusTarget("Right")
   if self.ColorBg then
     self.ColorBg:RemoveFromParent()
@@ -172,6 +164,9 @@ function M:Init(IsMiniMap, RegionID, MainMap, InitCompleteFunc)
     self.RegionID = RegionID
   end
   self.MainMap = MainMap
+  local ModeCompProto = IsMiniMap and MiniMapModeComp or FullScreenModeComp
+  self.ModeComp = setmetatable({}, {__index = ModeCompProto})
+  self.ModeComp:SetHost(MainMap)
   self.InitComplete = false
   if self.CoroutineInitObj then
     coroutine.close(self.CoroutineInitObj)
@@ -190,17 +185,21 @@ function M:Init(IsMiniMap, RegionID, MainMap, InitCompleteFunc)
     self.Panel_Gamer:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_Describe:SetText(GText("UI_Banned_Des_Map"))
     self.IsEmpty = true
-    self.MainMap.Slider_Zoom:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.WildMapKeysShow = false
-    self.MainMap.Tab:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetSliderZoomVisible(false)
+    self.ModeComp:SetWildMapKeysShow(false)
+    local PageHost = self.ModeComp:GetPageHost()
+    if PageHost and PageHost.SetTabVisible then
+      PageHost:SetTabVisible(false)
+    end
+    self.ModeComp:SetEntranceDispatchVisible(false)
+    local fw = self.ModeComp:GetFloorWidget()
+    if fw then
+      fw:SetVisibility(ESlateVisibility.Collapsed)
+    end
     self:PlayAnimation(self.Auto_In)
     self.InitComplete = true
-    if self.MainMap.Btn_Location then
-      self.MainMap.Btn_Location:SetVisibility(ESlateVisibility.Collapsed)
-    end
-    self.MainMap.Btn_ReturnHome:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetLocationBtnVisible(false)
+    self.ModeComp:SetReturnHomeVisible(false)
     self:PlayAnimation(self.WhiteBg)
     return
   end
@@ -212,7 +211,7 @@ function M:Init(IsMiniMap, RegionID, MainMap, InitCompleteFunc)
   end
   self.InitCompleteFunc = InitCompleteFunc
   self.InitCoroutines = {}
-  self.CoroutineInitObj = CreateCoroutine(self.InitCoroutine)
+  self.CoroutineInitObj = CoroutineUtils.CreateCoroutine(self.InitCoroutine)
   coroutine.resume(self.CoroutineInitObj, self)
 end
 
@@ -231,11 +230,7 @@ function M:InitCoroutine()
     end
     RegionMapImageClass = RegionMapImageClass or LoadClass(self.RegionData.RegionMapImage)
     self.MapImage = UIManager(self):_CreateWidgetByUMGClass(RegionMapImageClass, nil, nil, nil, false)
-    if _G.ShowRegionmapPane and not self.IsMiniMap then
-      self.MapImage:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    else
-      self.MapImage:SetVisibility(ESlateVisibility.HitTestInvisible)
-    end
+    self.MapImage:SetVisibility(self.ModeComp:GetMapImageVisibility())
     if self.MapImage then
       self.Panel_Map:AddChild(self.MapImage)
       self.MapImage:SetRenderTransformAngle(self.MapRotation)
@@ -317,13 +312,7 @@ function M:InitCoroutine()
   self.TaskArea = {}
   self.SelectWidgetTable = {}
   self.IsConveyClicked = false
-  if self.IsMiniMap then
-    self:InitInMiniMap()
-  else
-    self.MainMap.WildMapKeysShow = true
-    self.MainMap.Tab:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self:InitInRegionMap()
-  end
+  self.ModeComp:InitMode(self)
   self:InitComponentCoroutine()
   coroutine.yield()
   self:InitMapFog()
@@ -345,30 +334,7 @@ function M:InitCoroutine()
   if self.TrackTarget then
     self:CreateTrackIndicator(self.TrackTarget)
   end
-  if self.IsMiniMap then
-    local Array = GWorld.GameInstance:GetSceneManager().FloorBoxArray
-    if Array then
-      self.CurrentFloorId = nil
-      for _, FloorBox in pairs(Array) do
-        FloorBox:CheckPlayerIn()
-        DebugPrint("MiniMap Wild CheckPlayerIn", FloorBox:GetName())
-      end
-      DebugPrint("MiniMap Wild CheckPlayerIn", self.CurrentFloorId)
-    end
-    if not self.CurrentFloorId then
-      self:ShowFloor(self.MaxFloorId)
-    end
-    if self.WheelMaxScale ~= self.WheelMinScale and self.MiniMapScale then
-      self.MiniMapScale = math.clamp(self.MiniMapScale, 0, 1)
-      self:OnScaleChange((self.MiniMapScale - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
-      self.MainMap.Scale = self.Scale * self.MapScale.X
-    end
-    self:MinimapDelayMapImagePos("OnScaleChange")
-    if GWorld.GameInstance.TrackingPack then
-      local TrackingType, Id = table.unpack(GWorld.GameInstance.TrackingPack)
-      self:OnCommonTrack(TrackingType, Id, true)
-    end
-  end
+  self.ModeComp:PostInit(self)
 end
 
 function M:InitCoroutineCheck(Index)
@@ -503,7 +469,7 @@ function M:InitInRegionMap()
   end
   if not self.RegionInfo then
     self.RegionInfo = self:CreateWidgetAsync("RegionMapRegionInfo", self.CoroutineInitObj)
-    self.MainMap.AreaInfo:AddChild(self.RegionInfo)
+    self.ModeComp:AddChildToAreaInfo(self.RegionInfo)
     self.RegionInfo.Btn_ShowUp:BindEventOnClicked(self, self.OnClickOpenRegionList)
     self.RegionInfo.Btn_Name.OnClicked:Clear()
     self.RegionInfo.Btn_Name.OnClicked:Add(self, self.OnClickOpenRegionList_Sound)
@@ -523,18 +489,18 @@ function M:InitInRegionMap()
     self.RegionInfo.GuidePoint:StopAllAnimations()
     self.RegionInfo.Panel_Guidepoint:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self.RegionInfo:Init(self.RegionID, self.MainMap.Spacer_Impression)
+  self.RegionInfo:Init(self.RegionID, self.ModeComp:GetImpressionSpacer())
   if self.MapImage then
     self.MapImage:SetRenderTranslation(self.CurrentDragOffset)
     self.Bg_Map:SetRenderTranslation(self.CurrentDragOffset * self.BackgroundDragRatio)
   end
   self.Panel_Gamer:SetRenderTranslation(self.CurrentDragOffset)
   self.Panel_Point:SetRenderTranslation(self.CurrentDragOffset)
-  self.FloorWidget = self.MainMap.FloorWidget
+  self.FloorWidget = self.ModeComp:GetFloorWidget()
   self.FloorWidget:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   if not self.TureHardBoss_MapTips then
     self.TureHardBoss_MapTips = self:CreateWidgetAsync("HardBossMapTips", self.CoroutineInitObj)
-    self.MainMap.Convey_HardBoss:AddChild(self.TureHardBoss_MapTips)
+    self.ModeComp:AddChildToConveyHardBoss(self.TureHardBoss_MapTips)
     self.TureHardBoss_MapTips:BindToAnimationFinished(self.TureHardBoss_MapTips.Out, {
       self.TureHardBoss_MapTips,
       self.TureHardBoss_MapTips.PlayOutAnimFinished
@@ -545,7 +511,7 @@ function M:InitInRegionMap()
   if not self.ChanllengeTips then
     local TipsBpPath = "WidgetBlueprint'/Game/UI/WBP/AreaCoop/Widget/WBP_AreaCoop_MapTips.WBP_AreaCoop_MapTips'"
     self.ChanllengeTips = UIManager(self):CreateWidgetAsync(nil, self.CoroutineInitObj, TipsBpPath)
-    self.MainMap.Convey_AreaCoop:AddChild(self.ChanllengeTips)
+    self.ModeComp:AddChildToConveyAreaCoop(self.ChanllengeTips)
     self.ChanllengeTips:SetVisibility(ESlateVisibility.Collapsed)
     self.ChanllengeTips.Parent = self
   end
@@ -558,7 +524,7 @@ function M:InitInRegionMap()
   self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
   self:InitConveyWidget()
   if not self.InteractivePanel then
-    self.InteractivePanel = self.MainMap.Interactive_Locate
+    self.InteractivePanel = self.ModeComp:GetInteractiveLocatePanel()
     local Item1 = self:CreateWidgetAsync("RegionMapSelectItem", self.CoroutineInitObj)
     self.InteractivePanel.WBox:AddChild(Item1)
     Item1.Img_Icon:SetBrushResourceObject(self.Gamer.Brush.ResourceObject)
@@ -569,13 +535,9 @@ function M:InitInRegionMap()
     Item2.Img_Icon:SetBrushFromTexture(LoadObject("/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_SideMission.T_Gp_SideMission"))
     Item2.Text_Interactive:SetText(GText("UI_RegionMap_GotoCurrentTask"))
     Item2.Button_Area.OnClicked:Add(self, self.JumpToTaskPosition)
-    if self.MainMap.Btn_Location then
-      self.MainMap.Btn_Location:SetText(GText("UI_RegionMap_GotoPosition"))
-      self.MainMap.Btn_Location:BindEventOnClicked(self, self.OpenOptionSelect)
-      self.MainMap.Btn_Location:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    end
+    self.ModeComp:BindLocationBtn(self)
   end
-  self.BgHeight = FVector2D(0, self.MainMap.Tab_Top.Slot:GetSize().Y)
+  self.BgHeight = FVector2D(0, self.ModeComp:GetTabTopHeight())
   if not self.Indicator then
     self.Indicator = self:CreateWidgetAsync("RegionMapIndicator", self.CoroutineInitObj)
     self.Panel_Floor:AddChild(self.Indicator)
@@ -606,10 +568,10 @@ function M:InitInRegionMap()
       self.WS_Indoor:SetVisibility(ESlateVisibility.Collapsed)
     end
   end
-  self.Panel_Close = self.MainMap.Btn_Panel_Close
+  self.Panel_Close = self.ModeComp:GetPanelCloseButton()
   self.Panel_Close.OnClicked:Clear()
   self.Panel_Close.OnClicked:Add(self, self.OnPanelClose)
-  self.MainMap.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.ModeComp:SetSliderZoomVisible(true)
   self:InitTouchLayer(self.Player, 0, 0, true)
   self:AddStaticSubTouchItem("RegionMapLayer", self.Panel_Touch, {
     MultiMove = self.TouchWildMapMultiMove,
@@ -625,7 +587,7 @@ end
 function M:InitConveyWidget()
   if not self.LevelMap_Convey_Widget_PC then
     self.LevelMap_Convey_Widget_PC = self:CreateWidgetAsync("RegionMapConvey", self.CoroutineInitObj)
-    self.MainMap.Convey:AddChild(self.LevelMap_Convey_Widget_PC)
+    self.ModeComp:AddChildToConvey(self.LevelMap_Convey_Widget_PC)
     self.LevelMap_Convey_Widget_PC.Text_LockTips:SetText(GText("UI_TELEPORTPOINT_UNLOCK"))
     self.LevelMap_Convey_Widget_PC.Btn_Go:SetText(GText("UI_MECHANISM_105"))
     self.LevelMap_Convey_Widget_PC.Btn_Track:SetText(GText("UI_RegionMap_Track"))
@@ -647,23 +609,7 @@ function M:OnConveyGoTrace()
 end
 
 function M:InitDispatchCondition()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  local ConditionId = DataMgr.UIUnlockRule.Dispatch.ConditionId
-  local Res = ConditionUtils.CheckCondition(Avatar, ConditionId)
-  if not self.NormalInit then
-    return
-  end
-  if Res then
-    if self.MainMap.Entrance_Dispatch then
-      self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-      SystemGuideManager:RunGuideById(2057)
-    end
-  elseif self.MainMap.Entrance_Dispatch then
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
-  end
+  self.ModeComp:InitDispatchCondition(self)
 end
 
 function M:OnReturnKeyDown()
@@ -685,31 +631,26 @@ function M:CreateMapFog(MapWidget, FloorId, SubRegionId)
   end
   local NoFog = DataMgr.Region[self.RegionID].CloseBlock
   for Index, Map in pairs(MapTable) do
-    self.MapFog[SubRegionId][FloorId][Index] = Map
-    local Material
-    if self.IsMiniMap then
-      Material = UKismetMaterialLibrary.CreateDynamicMaterialInstance(self, self.MapMistyMaterialMiniMap)
-    else
-      Material = UKismetMaterialLibrary.CreateDynamicMaterialInstance(self, self.MapMistyMaterial)
-    end
+    local Material = self.ModeComp:GetMistyMaterial(self)
     Material:SetTextureParameterValue("Map", Map.Brush.ResourceObject)
     Material:SetScalarParameterValue("Layer", FloorId)
     Material:SetScalarParameterValue("Appear", NoFog and 0 or 1)
     Map:SetBrushFromMaterial(Material)
+    self.MapFog[SubRegionId][FloorId][Index] = {Widget = Map, Material = Material}
   end
 end
 
 function M:InitMapFog()
-  if self.IsMiniMap then
-  else
-    UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRT)
-    UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRT2)
-    self:AddTimer(0.01, function()
-      self:GetTeleportLocalPos()
-      self:GetMapImageLocalPos()
-      self.TickRegionMapImageOpen = true
-    end)
+  if self.ModeComp:IsMiniMap() then
+    return
   end
+  UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRT)
+  UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRT2)
+  self:AddTimer(0.01, function()
+    self:GetTeleportLocalPos()
+    self:GetMapImageLocalPos()
+    self.TickRegionMapImageOpen = true
+  end)
 end
 
 function M:UpdateMapImageFog()
@@ -721,8 +662,8 @@ function M:UpdateMapImageFog()
   local TempPos
   for SubRegionId, table1 in pairs(self.MapFog) do
     for FloorId, table2 in pairs(table1) do
-      for _, Map in pairs(table2) do
-        TempPos = self.MapImage2LocalPos:Find(Map)
+      for _, MapData in pairs(table2) do
+        TempPos = self.MapImage2LocalPos:Find(MapData.Widget)
         AddX = math.min(AddX, TempPos.X)
         AddY = math.min(AddY, TempPos.Y)
       end
@@ -735,22 +676,23 @@ function M:UpdateMapImageFog()
   for SubRegionId, table1 in pairs(self.MapFog) do
     for FloorId, table2 in pairs(table1) do
       table.sort(table2, function(X, Y)
-        local PosX = self.MapImage2LocalPos:Find(X)
-        local PosY = self.MapImage2LocalPos:Find(Y)
+        local PosX = self.MapImage2LocalPos:Find(X.Widget)
+        local PosY = self.MapImage2LocalPos:Find(Y.Widget)
         if PosX.Y == PosY.Y then
           return PosX.X < PosY.X
         else
           return PosX.Y < PosY.Y
         end
       end)
-      for Index, Map in pairs(table2) do
-        local Material = Map:GetDynamicMaterial()
-        local Pos = self.MapImage2LocalPos:Find(Map)
+      for Index, MapData in pairs(table2) do
+        local Material = MapData.Material
+        local Pos = self.MapImage2LocalPos:Find(MapData.Widget)
         FVector2D.Sub(Pos, self.MapImageAddVector)
         FVector2D.Div(Pos, self.MapPosPer)
         local LinerColor = FLinearColor(Pos.X, Pos.Y, 0, 0)
         Material:SetVectorParameterValue("Offset", LinerColor)
         Material:SetScalarParameterValue("Rotator", self.MapRotation / 360.0)
+        MapData.Offset = LinerColor
         if _G.ShowRegionmapPane and not self.IsMiniMap then
           if not self.PaneBtns then
             self.PaneBtns = {}
@@ -762,15 +704,15 @@ function M:UpdateMapImageFog()
             self.PaneBtns[FloorId][Index] = {}
           end
           local Pane = UIManager(self):CreateWidget("/Game/UI/WBP/Map/Widget/RegionMap/WBP_Map_Pane.WBP_Map_Pane_C")
-          Map:GetParent():AddChild(Pane)
+          MapData.Widget:GetParent():AddChild(Pane)
           if UKismetMathLibrary.ClassIsChildOf(Pane.Slot:GetClass(), UUniformGridSlot:StaticClass()) then
-            Pane.Slot:SetRow(Map.Slot.Row)
-            Pane.Slot:SetColumn(Map.Slot.Column)
+            Pane.Slot:SetRow(MapData.Widget.Slot.Row)
+            Pane.Slot:SetColumn(MapData.Widget.Slot.Column)
             Pane.Text:SetText(Index)
           else
-            Pane.Slot:SetAnchors(Map.Slot:GetAnchors())
-            Pane.Slot:SetPosition(Map.Slot:GetPosition())
-            Pane.Slot:SetAlignment(Map.Slot:GetAlignment())
+            Pane.Slot:SetAnchors(MapData.Widget.Slot:GetAnchors())
+            Pane.Slot:SetPosition(MapData.Widget.Slot:GetPosition())
+            Pane.Slot:SetAlignment(MapData.Widget.Slot:GetAlignment())
             Pane.Slot:SetZOrder(1)
             Pane.Text:SetText(Index)
           end
@@ -824,11 +766,15 @@ function M:UpdateMapImageFog()
   if self.ShowFogPos then
     local Seconds, PartialSeconds = UGameplayStatics.GetAccurateRealTime()
     local Time = Seconds + PartialSeconds
-    for _, Image in pairs(self.AllMapImage) do
-      local Material = Image:GetDynamicMaterial()
-      if Material then
-        Material:SetVectorParameterValue("Position", self.ShowFogPos)
-        Material:SetScalarParameterValue("Time", Time)
+    for _, table1 in pairs(self.MapFog) do
+      for _, table2 in pairs(table1) do
+        for _, MapData in pairs(table2) do
+          local Material = MapData.Material
+          if Material then
+            Material:SetVectorParameterValue("Position", self.ShowFogPos)
+            Material:SetScalarParameterValue("Time", Time)
+          end
+        end
       end
     end
     AudioManager(self):PlayUISound(self, "event:/ui/common/map_mist_disappear", nil, nil)
@@ -868,8 +814,9 @@ function M:UpdateSingleMapFogByTeleport(TeleportJson, ShowFog, ShowAnimId)
     local SubRegionId = self.NewMapType and Block.SubRegionId or self.RegionID
     if SubRegionId and self.MapFog[SubRegionId] and self.MapFog[SubRegionId][Block.FloorId] and self.MapFog[SubRegionId][Block.FloorId][Block.Big] then
       if ShowFog then
-        local MapMaterial = self.MapFog[SubRegionId][Block.FloorId][Block.Big]:GetDynamicMaterial()
-        MistyMaterial:SetVectorParameterValue("Offset", MapMaterial:K2_GetVectorParameterValue("Offset"))
+        local MapData = self.MapFog[SubRegionId][Block.FloorId][Block.Big]
+        local MapMaterial = MapData.Material
+        MistyMaterial:SetVectorParameterValue("Offset", MapData.Offset or MapMaterial:K2_GetVectorParameterValue("Offset"))
         MistyMaterial:SetScalarParameterValue("Layer", Block.FloorId)
         for _, Index in pairs(Block.Small) do
           MistyMaterial:SetScalarParameterValue("Pos", Index - 1)
@@ -895,30 +842,7 @@ function M:OnConditionComplete(ConditionId)
 end
 
 function M:OnSkipRegion(SubRegionId)
-  if not self.IsMiniMap or not self.MapImage then
-    return
-  end
-  if DataMgr.SubRegion[SubRegionId].NotShowInRegionMap then
-    self.Panel_Point:SetVisibility(ESlateVisibility.Collapsed)
-    self.MapImage:SetVisibility(ESlateVisibility.Collapsed)
-    self.HideTrack = true
-  else
-    self.Panel_Point:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.MapImage:SetVisibility(ESlateVisibility.HitTestInvisible)
-    self.HideTrack = false
-    if not self.TickRegionMapImageOpen then
-      UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRTMiniMap)
-      self:AddTimer(0.1, function()
-        local UIManager = GWorld.GameInstance:GetGameUIManager()
-        local Battle = UIManager:GetUIObj("BattleMain")
-        if self.MainMap.Battle and self.MainMap.Battle:IsVisible() and self.MainMap:IsVisible() and Battle and not Battle:IsHide() then
-          self:MinimapDelayMapImagePos("OnSkipRegion")
-          self:RemoveTimer("TickRegionMapImageOpen")
-        end
-      end, true, 0, "TickRegionMapImageOpen")
-    end
-  end
-  self:CheckRegionPointCancelTrack(SubRegionId)
+  self.ModeComp:OnSkipRegion(self, SubRegionId)
 end
 
 function M:PlayCloseAnimation()
@@ -947,14 +871,8 @@ end
 
 function M:NewPoint()
   local point, select = self.Overridden.NewPoint(self)
-  if self.IsMiniMap then
-    point:SetRenderScale(self.MinimapIconScale)
-  else
-    point:SetRenderScale(UKismetMathLibrary.Vector2D_One())
-  end
-  if self.IsMiniMap then
-    self.MapPointQueue:Add(point)
-  end
+  point:SetRenderScale(self.ModeComp:GetIconScale(self))
+  self.ModeComp:RegisterPoint(self, point)
   return point, select
 end
 
@@ -976,16 +894,10 @@ function M:NewPointAsync(Coroutine)
   end
   Point.SelectWidget = Select
   Select:SetVisibility(ESlateVisibility.Collapsed)
-  if self.IsMiniMap then
-    Point:SetRenderScale(self.MinimapIconScale)
-  else
-    Point:SetRenderScale(UKismetMathLibrary.Vector2D_One())
-  end
+  Point:SetRenderScale(self.ModeComp:GetIconScale(self))
   Point.Slot:SetZOrder(0)
   Select.Slot:SetZOrder(10)
-  if self.IsMiniMap then
-    self.MapPointQueue:Add(Point)
-  end
+  self.ModeComp:RegisterPoint(self, Point)
   return Point, Select
 end
 
@@ -1020,7 +932,7 @@ end
 
 function M:OpenOptionSelect()
   self:OnPanelOpen(6)
-  self.MainMap:OpenOptionSelect()
+  self.ModeComp:OpenOptionSelect()
   local Avatar = GWorld:GetAvatar()
   local TaskCheck = false
   if Avatar then
@@ -1051,7 +963,7 @@ function M:GoToCurrentPosition()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  if self.IsMiniMap then
+  if not self.ModeComp:ShouldHandleInput() then
     return UWidgetBlueprintLibrary.Unhandled()
   end
   if not self.InitComplete then
@@ -1066,17 +978,10 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     return UWidgetBlueprintLibrary.Handled()
   end
   if "Escape" == InKeyName or InKeyName == UIConst.GamePadKey.FaceButtonRight then
-    if self.MainMap.DispatchAgentList ~= nil then
-      self.MainMap.DispatchAgentList:OnClickClose()
-      self.MainMap.DispatchAgentList = nil
+    if self.ModeComp:TryCloseDispatchAgentList() then
       return UWidgetBlueprintLibrary.Handled()
     end
-    if nil ~= self.MainMap.DispatchList and nil ~= self.MainMap.DispatchDetail or nil ~= self.MainMap.DispatchList then
-      if self.MainMap.DispatchList then
-        self.MainMap.DispatchList:Close()
-      end
-      self.MainMap.Dispatch = nil
-      self.MainMap.DispatchList = nil
+    if self.ModeComp:TryCloseDispatchList() then
       return UWidgetBlueprintLibrary.Handled()
     end
     return self:ClosePanel() and UWidgetBlueprintLibrary.Handled() or UWidgetBlueprintLibrary.Unhandled()
@@ -1124,17 +1029,13 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       end
     end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft or "L" == InKeyName then
-    if self.MainMap.Entrance_Dispatch and self.MainMap.Entrance_Dispatch:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
-      self.MainMap:OnClickDispatch()
-    end
+    self.ModeComp:OnClickDispatch()
     if self.KeyLocPanel then
       self.KeyLocPanel:OnOpenClick()
     end
     return UWidgetBlueprintLibrary.Handled()
   elseif "SpaceBar" == InKeyName then
-    if self.MainMap.DispatchList and self.MainMap.DispatchAgentList == nil then
-      self.MainMap.DispatchList:OnClickSpace()
-    end
+    self.ModeComp:TryClickDispatchListSpace()
     if self.KeyLocPanel then
       self.KeyLocPanel:OnOpenClick()
     end
@@ -1178,7 +1079,7 @@ function M:GetBuildingNameAndId(InName)
 end
 
 function M:OnMouseWheel(MyGeometry, Event)
-  if self.MainMap.IsPanelOpen or not self.BgHeight then
+  if not self.ModeComp or self.ModeComp.IsPanelOpen and self.ModeComp:IsPanelOpen() or not self.BgHeight then
     return UWidgetBlueprintLibrary.Unhandled()
   end
   local delta = UKismetInputLibrary.PointerEvent_GetWheelDelta(Event) * 0.05
@@ -1188,7 +1089,7 @@ function M:OnMouseWheel(MyGeometry, Event)
   elseif temp > self.WheelMaxScale then
     temp = self.WheelMaxScale
   end
-  self.MainMap:OnMouseWheelTurned((temp - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
+  self.ModeComp:OnMouseWheelTurned((temp - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
   return UWidgetBlueprintLibrary.Handled()
 end
 
@@ -1204,14 +1105,7 @@ function M:OnScaleChange(Percent)
   local TargetOffset = self.CurrentDragOffset * temp / self.MapScale.X
   self.MapScale:Set(temp, temp)
   self.MapImage:SetRenderScale(self.MapScale)
-  if not self.IsMiniMap then
-    self.BackgroundScale:Set(self.BackgroundMaxScale.X, self.BackgroundMaxScale.Y)
-    FVector2D.Sub(self.BackgroundScale, self.BackgroundMinScale)
-    self.BackgroundScale = self.BackgroundScale * Percent
-    FVector2D.Add(self.BackgroundScale, self.BackgroundMinScale)
-    self.Bg_Map:SetRenderScale(self.BackgroundScale)
-    self:UpdateLimitOffset()
-  end
+  self.ModeComp:OnScaleChangeExtra(self, Percent, TargetOffset)
   if self.CurrentInnerSubRegionId and self.CurrentInnerId then
     if self.RegionPointLocation[self.CurrentInnerId] then
       self.Gamer_Indoor:SetRenderTranslation(self:TransformWorldLocToUILoc(self.RegionPointLocation[self.CurrentInnerId].X, self.RegionPointLocation[self.CurrentInnerId].Y))
@@ -1222,7 +1116,7 @@ function M:OnScaleChange(Percent)
     self.Direction:SetRenderTranslation(self.gamerLoc)
   end
   self:OnScaleChange_Component(Percent)
-  if not self.IsMiniMap then
+  if self.ModeComp:ShouldMoveMapOnScale() then
     self:MoveMapTo(TargetOffset)
   end
 end
@@ -1382,11 +1276,7 @@ function M:LimitDragOffset()
 end
 
 function M:GameViewportSizeChanged()
-  if self.IsMiniMap then
-    return
-  end
-  self.ScreenSize = UIManager(self):GetDesignedScreenSize(self)
-  FVector2D.Div(self.ScreenSize, 2)
+  self.ModeComp:OnViewportSizeChanged(self)
 end
 
 function M:OnPointerUp(MyGeometry, Event)
@@ -1435,7 +1325,7 @@ function M:ClosePanel(IsImmediately)
   end
   if not IsImmediately then
     self.LastPanelId = nil
-    self.MainMap.IsPanelOpen = false
+    self.ModeComp:SetPanelOpen(false)
     self:SetFocus()
     self:InitDispatchCondition()
     if self.RegionInfo then
@@ -1444,14 +1334,14 @@ function M:ClosePanel(IsImmediately)
         self.RegionInfo:PlayAnimation(self.RegionInfo.Spin_Arrow)
       end
     end
-    self.MainMap:ShoworHideTopTab(true)
-    self.MainMap.WildMapKeysShow = true
-    self.MainMap:UpdateWildMapKeys()
+    self.ModeComp:ShoworHideTopTab(true)
+    self.ModeComp:SetWildMapKeysShow(true)
+    self.ModeComp:UpdateWildMapKeys()
     if self.GamepadSelect then
       self.GamepadSelect:PlayAnimation(self.GamepadSelect.Normal)
     end
   end
-  self.MainMap:ShoworHideBottomTab(true)
+  self.ModeComp:ShoworHideBottomTab(true)
   if 1 ~= self.WS_Indoor.RenderOpacity then
     self:PlayAnimation(self.Gamer_In)
   end
@@ -1459,26 +1349,28 @@ function M:ClosePanel(IsImmediately)
     if self.FloorWidget then
       self.FloorWidget:SetVisibility(IsEmptyTable(self.FloorWidgetTable) and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
     end
-    self.MainMap.DispatchId = -1
+    self.ModeComp:SetDispatchId(-1)
   end
-  if self.KeyLocPanel then
-    self.KeyLocPanel:Show()
+  if self.KeyLocPanel and IsValid(self.KeyLocPanel) then
+    if IsImmediately then
+      self.KeyLocPanel:Close()
+    else
+      self.KeyLocPanel:Show()
+    end
   end
-  if self.MainMap.DispatchDetail then
-    self.MainMap.DispatchDetail:RealClose()
+  if self.ModeComp:HasDispatchDetail() then
+    self.ModeComp:CloseDispatchDetailIfAny()
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
     self.CurClickDispatchId = -1
     return true
   end
-  if self.LevelMap_Convey_Widget_PC and self.LevelMap_Convey_Widget_PC:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
+  if not IsImmediately and IsValid(self.LevelMap_Convey_Widget_PC) and self.LevelMap_Convey_Widget_PC:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
     self.CurrentConveyId = nil
     self:OnScaleChange(self.CurrentPercent)
     self.LevelMap_Convey_Widget_PC.Group_Temple:SetVisibility(ESlateVisibility.Collapsed)
     self.LevelMap_Convey_Widget_PC:RemoveKey()
-    if IsImmediately then
-      self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
-    elseif not self.LevelMap_Convey_Widget_PC:IsAnimationPlaying(self.LevelMap_Convey_Widget_PC.Auto_Out) then
+    if not self.LevelMap_Convey_Widget_PC:IsAnimationPlaying(self.LevelMap_Convey_Widget_PC.Auto_Out) then
       self.LevelMap_Convey_Widget_PC:PlayAnimation(self.LevelMap_Convey_Widget_PC.Auto_Out)
       return true
     end
@@ -1544,21 +1436,19 @@ function M:OnMouseLeave(Event)
 end
 
 function M:OnPanelOpen(panel)
-  self.MainMap:ShoworHideTopTab(false)
-  self.MainMap.WildMapKeysShow = false
-  self.MainMap.IsPanelOpen = true
-  self.MainMap:UpdateWildMapKeys()
+  self.ModeComp:ShoworHideTopTab(false)
+  self.ModeComp:SetWildMapKeysShow(false)
+  self.ModeComp:SetPanelOpen(true)
+  self.ModeComp:UpdateWildMapKeys()
   if 0 == panel then
     self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
     self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
     self.RegionInfo:Close()
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
-    if self.MainMap.DispatchDetail then
-      self.MainMap.DispatchDetail:RealClose()
-    end
+    self.ModeComp:CloseDispatchDetailIfAny()
     self:CheckAndHidePlayer(self.TempMark)
   elseif 1 == panel then
     if self.MarkPanel then
@@ -1567,13 +1457,11 @@ function M:OnPanelOpen(panel)
     self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
     self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
-    if self.MainMap.DispatchDetail then
-      self.MainMap.DispatchDetail:RealClose()
-    end
-    self.MainMap:ShoworHideBottomTab(false)
+    self.ModeComp:CloseDispatchDetailIfAny()
+    self.ModeComp:ShoworHideBottomTab(false)
     self.RegionInfo:Close()
   elseif 2 == panel then
     if self.MarkPanel then
@@ -1581,33 +1469,27 @@ function M:OnPanelOpen(panel)
     end
     self.RegionInfo:Close()
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
-    if self.MainMap.DispatchDetail then
-      self.MainMap.DispatchDetail:RealClose()
-    end
+    self.ModeComp:CloseDispatchDetailIfAny()
     self:CheckAndHidePlayer()
   elseif 3 == panel then
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
-    if self.MainMap.DispatchDetail then
-      self.MainMap.DispatchDetail:RealClose()
-    end
+    self.ModeComp:CloseDispatchDetailIfAny()
   elseif 4 == panel then
     self.RegionInfo:Close()
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
-    if self.MainMap.DispatchDetail then
-      self.MainMap.DispatchDetail:RealClose()
-    end
+    self.ModeComp:CloseDispatchDetailIfAny()
   elseif 5 == panel then
     self.RegionInfo:SetVisibility(ESlateVisibility.Collapsed)
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
   elseif 6 == panel then
     if self.MarkPanel then
       self.MarkPanel:SetVisibility(ESlateVisibility.Collapsed)
@@ -1616,12 +1498,10 @@ function M:OnPanelOpen(panel)
     self.TureHardBoss_MapTips:SetVisibility(ESlateVisibility.Collapsed)
     self.RegionInfo:Close()
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
-    if self.MainMap.DispatchDetail then
-      self.MainMap.DispatchDetail:RealClose()
-    end
+    self.ModeComp:CloseDispatchDetailIfAny()
   end
   self.LastPanelId = panel
 end
@@ -1660,7 +1540,7 @@ function M:TouchWildMapMultiMove(TouchFingerCount, Index, Pos1, Pos2, TwoPointDi
   elseif DeltaDis <= -5 then
     temp = math.max(temp - 0.05, self.WheelMinScale)
   end
-  self.MainMap:OnMouseWheelTurned((temp - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
+  self.ModeComp:OnMouseWheelTurned((temp - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
   self.LastTouchMultiDist = TwoPointDist
 end
 
@@ -1734,7 +1614,7 @@ function M:MoveMapAndCheck(DeltaLoc)
 end
 
 function M:JumpToCurrentPosition()
-  self.MainMap:OnAreaClicked()
+  self.ModeComp:OnAreaClicked()
   local Avatar = GWorld:GetAvatar()
   local RegionId = DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId
   if DataMgr.Region[RegionId].RegionMapId then
@@ -1746,7 +1626,7 @@ function M:JumpToCurrentPosition()
 end
 
 function M:JumpToTaskPosition()
-  self.MainMap:OnAreaClicked()
+  self.ModeComp:OnAreaClicked()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -1863,7 +1743,7 @@ function M:CheckSelect(Point)
   if 1 == #SelectTable then
     return true
   else
-    self.MainMap:OpenSelectList(SelectTable)
+    self.ModeComp:OpenSelectList(SelectTable)
     return false
   end
 end
@@ -1960,7 +1840,7 @@ function M:OnClickOpenRegionList()
   self.RegionInfo.Btn_ShowUp:PlayAnimation(self.RegionInfo.Btn_ShowUp.Btn_Click)
   if not self.ChangeAreaWidget then
     self.ChangeAreaWidget = UIManager(self):_CreateWidgetNew("RegionMapChangeRegion")
-    self.MainMap.ChangeArea:AddChild(self.ChangeAreaWidget)
+    self.ModeComp:AddChildToChangeArea(self.ChangeAreaWidget)
     self.ChangeAreaWidget:Init(self)
     self:OnPanelOpen(1)
     self.ChangeAreaWidget:PlayAnimation(self.ChangeAreaWidget.Auto_In)
@@ -1982,16 +1862,25 @@ function M:OnRegionClick(RegionId)
   self:ChangeRegion(RegionId, function()
     self:ShowMissionIndicatorsInRegionMap()
   end)
-  self.MainMap:UpdateWildMapKeys()
-  self.MainMap.Btn_ReturnHome:SetVisibility(ESlateVisibility.Collapsed)
+  self.ModeComp:UpdateWildMapKeys()
+  self.ModeComp:SetReturnHomeVisible(false)
   self:AddTimer(0.01, function()
-    self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetEntranceDispatchVisible(false)
   end)
 end
 
 function M:ChangeRegion(RegionId, InitCompleteFunc)
+  local PageHost
+  if self.ModeComp and self.ModeComp.GetPageHost then
+    PageHost = self.ModeComp:GetPageHost()
+  end
+  PageHost = PageHost or self.MainMap
+  if not PageHost then
+    DebugPrint("[LevelMap_Wild_Dialog_PC] ChangeRegion skipped: PageHost is nil, RegionId =", RegionId)
+    return
+  end
   self:ClearData()
-  self:Init(false, RegionId, self.MainMap, InitCompleteFunc)
+  self:Init(false, RegionId, PageHost, InitCompleteFunc)
 end
 
 function M:SetAllMissionIndicatorsPlayerFloorId(InFloorId)
@@ -2094,21 +1983,11 @@ function M:ChangeRegionForSmartIndicator(InTaskSubRegionId, TrackingQuestChainId
 end
 
 function M:OnCommonTrack(TrackingType, Id, IsAdd)
-  if self.IsMiniMap and TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint and DataMgr.Dispatch[Id] ~= nil and true == IsAdd then
-    local Path = "/Game/UI/WBP/Map/Widget/Dispatch/WBP_Map_DispatchPointInfo.WBP_Map_DispatchPointInfo"
-    local Point = UIManager(self):CreateWidget(Path)
-    local UIPos = DataMgr.DispatchUI[Id].UIPos
-    local Pos = self:TransformWorldLocToUILoc(UIPos[1], UIPos[2])
-    Point:SetRenderTranslation(Pos)
-    Point:InitMini(Id)
-    self.MiniDispatchPoint[Id] = Point
-    DebugPrint("Point", Point, IsAdd)
-    GWorld.GameInstance.TrackingPack = {TrackingType, Id}
-  end
+  self.ModeComp:OnCommonTrackMiniMap(self, TrackingType, Id, IsAdd)
   if TrackingType ~= CommonConst.RegionMapTrackingType.SpecialSideQuest then
     self:OnCommonTrackDeleteSpecialSideQuestTrack(TrackingType)
   end
-  if not self.IsMiniMap then
+  if not self.ModeComp:ShouldReturnOnCommonTrack() then
     return
   end
   if IsAdd then
@@ -2167,13 +2046,16 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
         self:AddGuideRandomCreator(Id)
       end
     end
-    local arrow = self.MainMap:NewPointArrow()
+    local arrow = self.ModeComp:NewPointArrow()
     self:AddTrack(trackTarget, arrow, TargetActor)
     local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
     if GameMode then
       GameMode:OpenGuideIconRegion(nil, StaticCreartorId, ManualItemId, nil, nil)
     end
-    self.MainMap.TracePanel:AddChild(trackTarget)
+    local TracePanel = self.ModeComp:GetTracePanel()
+    if TracePanel then
+      TracePanel:AddChild(trackTarget)
+    end
     if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
       trackTarget:ReInitTeleportPoint(DataMgr.TeleportPoint[Id])
     end
@@ -2181,7 +2063,7 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
     trackTarget:SetRenderScale(self.MinimapIconScale / FVector2D(0.7, 0.7))
     trackTarget:StopAllAnimations()
     trackTarget:PlayAnimation(trackTarget.Loop, 0, 0)
-  elseif self.MainMap.TracePanel:HasChild(trackTarget) then
+  elseif self.ModeComp:GetTracePanel() and self.ModeComp:GetTracePanel():HasChild(trackTarget) then
     local StaticCreartorId = TArray(0)
     local ManualItemId = TArray(0)
     if TrackingType == CommonConst.RegionMapTrackingType.TeleportPoint then
@@ -2211,7 +2093,7 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
         self:RemoveGuideRandomCreator(Id)
       end
     end
-    if TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint and DataMgr.Dispatch[Id] ~= nil then
+    if TrackingType == CommonConst.RegionMapTrackingType.MiniDispatchPoint and nil ~= DataMgr.Dispatch[Id] then
       self:RemoveTrack(trackTarget)
       local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
       if GameMode then
@@ -2244,9 +2126,10 @@ function M:OnCommonTrack(TrackingType, Id, IsAdd)
 end
 
 function M:OnCommonTrackDeleteSpecialSideQuestTrack(TrackingType)
-  if self.IsMiniMap then
-    return
-  end
+  self.ModeComp:OnCommonTrackDeleteSpecialSideQuest(self, TrackingType)
+end
+
+function M:OnCommonTrackDeleteSpecialSideQuestTrack_Impl(TrackingType)
   if TrackingType ~= CommonConst.RegionMapTrackingType and MissionIndicatorManager.TrackingSpecialSideQuestChainId ~= nil then
     local SpecialSideQuestWidget
     for k, v in pairs(self.IndicatorWidgets) do
@@ -2325,21 +2208,7 @@ function M:OnClickDimension()
 end
 
 function M:CreateTrackIndicator(TrackTarget)
-  if self.IsMiniMap then
-    return
-  end
-  if not self.InitComplete then
-    self.TrackTarget = TrackTarget
-    return
-  end
-  if not self.TrackIndicator then
-    self.TrackIndicator = self:NewIndicator()
-    self.TrackIndicator:Init(self, self.ScreenSize - self.BgHeight, TrackTarget, false)
-    self.TrackIndicator.Slot:SetZOrder(2)
-  end
-  self.TrackTarget = TrackTarget
-  self.TrackIndicator:SetIcon(TrackTarget.Img_Point.Brush.ResourceObject)
-  self.TrackIndicator:OnPointerMove(self.CurrentDragOffset, self.TrackTarget.RenderTransform.Translation)
+  self.ModeComp:CreateTrackIndicator(self, TrackTarget)
 end
 
 function M:RemoveTrackIndicator()
@@ -2361,7 +2230,7 @@ end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.Gamepad then
-    if self.MainMap:IsInteractiveOpen() or self.IsOpenDispatch then
+    if self.ModeComp:IsInteractiveOpen() or self.IsOpenDispatch then
       return
     end
     if UIManager(self):GetUIObj("RegionMapImpression") then
@@ -2391,7 +2260,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
 end
 
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
-  if self.IsMiniMap then
+  if not self.ModeComp:ShouldHandleInput() then
     return UWidgetBlueprintLibrary.Unhandled()
   end
   if self.IsEmpty then
@@ -2424,7 +2293,7 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
     elseif temp > self.WheelMaxScale then
       temp = self.WheelMaxScale
     end
-    self.MainMap:OnMouseWheelTurned((temp - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
+    self.ModeComp:OnMouseWheelTurned((temp - self.WheelMinScale) / (self.WheelMaxScale - self.WheelMinScale))
     return UWidgetBlueprintLibrary.Handled()
   end
   if UKismetMathLibrary.EqualEqual_Vector2DVector2D(self.CurrentAnalogDelta, UKismetMathLibrary.Vector2D_Zero(), 2.25) then
@@ -2447,10 +2316,10 @@ function M:CheckGamepadSelect()
       self.GamepadSelect:PlayAnimation(self.GamepadSelect.Hover)
       self:MoveMapTo(self.GamepadSelectPoint.RenderTransform.Translation * -1)
       if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-        self.MainMap.Key_Tip:UpdateKeyInfo(self.MainMap.WildMapGamePadEnsureKeys)
+        self.ModeComp:UpdateKeyTipEnsure()
       end
     elseif self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-      self.MainMap.Key_Tip:UpdateKeyInfo(self.MainMap.WildMapGamePadKeys)
+      self.ModeComp:UpdateKeyTipNormal()
     end
   end
 end
@@ -2481,6 +2350,75 @@ function M:TryToastNotInSameRegion()
   if self.RegionID ~= RegionId then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_RegionMap_NotInSameRegion"))
   end
+end
+
+function M:SetIsOpenDispatch(Value)
+  self.IsOpenDispatch = Value
+end
+
+function M:GetIsOpenDispatch()
+  return self.IsOpenDispatch == true
+end
+
+function M:IsMapEmpty()
+  return self.IsEmpty
+end
+
+function M:IsMapTipsWidgetVisible()
+  return self.MapTipsWidget and self.MapTipsWidget:IsVisible()
+end
+
+function M:IsChallengeTipsVisible()
+  return self.ChanllengeTips and self.ChanllengeTips:IsVisible()
+end
+
+function M:GetMaxSize()
+  return self.ScreenSize * 2 - self.BgHeight
+end
+
+function M:OpenKeyLocPanel()
+  if self.KeyLocPanel then
+    self.KeyLocPanel:OnOpenClick()
+  end
+end
+
+function M:HasLastPanelId()
+  return self.LastPanelId ~= nil
+end
+
+function M:SetCheckBreak(Value)
+  self.CheckBreak = Value
+end
+
+function M:HostNewPointArrow()
+  return self.ModeComp and self.ModeComp:NewPointArrow()
+end
+
+function M:HostIsTracePanelValid()
+  return self.ModeComp and self.ModeComp:IsTracePanelValid()
+end
+
+function M:HostTracePanelHasChild(Widget)
+  return self.ModeComp and self.ModeComp:TracePanelHasChild(Widget)
+end
+
+function M:HostTracePanelRemoveChild(Widget)
+  if self.ModeComp then
+    self.ModeComp:TracePanelRemoveChild(Widget)
+  end
+end
+
+function M:HostTracePanelAddChild(Widget)
+  if self.ModeComp then
+    self.ModeComp:TracePanelAddChild(Widget)
+  end
+end
+
+function M:HostGetTracePanelScaleXY()
+  if self.ModeComp then
+    return self.ModeComp:GetTracePanelScaleXY()
+  end
+  return 1, 1
 end
 
 AssembleComponents(M)

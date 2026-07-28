@@ -1,3 +1,4 @@
+local CoroutineUtils = require("CoroutineUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local ModModel = ModController:GetModel()
 local SlotToDrag = FVector2D()
@@ -515,6 +516,10 @@ end
 
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
+  if self.CurTargetTabContent then
+    self:SyncTarget(self.CurTargetTabContent)
+    ModController:SetUICamera(FVector(0, 0, 0))
+  end
   self.IsReceiveEnterState = true
   if ModModel:IsInPolarityEditMode() then
     self:ShowTabResourceBar(true)
@@ -1175,7 +1180,6 @@ function M:NotifyOnModLevelUp(OldModUuid, NewModUuid, bTakeOff, NewSelectedStuff
     end
     if bTakeOff then
       self:AppendModToListByUuid(NewModUuid)
-      self:DoModItemSelected(NewModUuid, true)
     end
     self:UpdateSlotUIBySlotId(SlotId)
   elseif OldModUuid ~= NewModUuid then
@@ -1183,7 +1187,6 @@ function M:NotifyOnModLevelUp(OldModUuid, NewModUuid, bTakeOff, NewSelectedStuff
       self:RemoveModToListByUuid(OldModUuid)
     end
     self:AppendModToListByUuid(NewModUuid)
-    self:DoModItemSelected(NewModUuid, true)
   else
     self:UpdateModContent(NewMod)
   end
@@ -1521,16 +1524,11 @@ function M:DoModItemSelected(ModUuid, bSelected, bJumpList)
     SelectedContent.IsSelected = bSelected
     if IsValid(SelectedContent.UI) then
       SelectedContent.UI:SetIsSelected(bSelected)
-    else
-      bListUnprepared = true
-    end
-  end
-  if bJumpList then
-    self.List_Select_Mod:BP_ScrollItemIntoView(SelectedContent)
-    if bListUnprepared then
-      self:AddTimer(0.01, function()
+    elseif bJumpList then
+      self.List_Select_Mod:BP_ScrollItemIntoView(SelectedContent)
+      self:AddTimer(0.1, function()
         if IsValid(SelectedContent.UI) then
-          SelectedContent.UI:SetIsSelected(bSelected)
+          SelectedContent.UI:SetIsSelected(SelectedContent.IsSelected)
         end
       end)
     end
@@ -1630,6 +1628,10 @@ function M:AddModContentToList(Mod)
   local ModContent = self:CreateModContent(Mod, true, true)
   if not ModContent then
     return
+  end
+  local SelectStuff = ModModel:GetSelectStuff()
+  if SelectStuff then
+    ModContent.IsSelected = SelectStuff.ModUuid == Mod.Uuid
   end
   self.ModContents[Mod.Uuid] = ModContent
   self.List_Select_Mod:AddItem(ModContent)
@@ -1940,12 +1942,12 @@ function M:StopModCostVX()
     self:RemoveTimer(self.ModCostVXTimerKey)
     self.ModCostVXTimerKey = nil
   end
-  ForceStopAsyncTask(self, "RefreshModCostVXTask")
+  CoroutineUtils.ForceStopAsyncTask(self, "RefreshModCostVXTask")
 end
 
 function M:RefreshModCostVX()
   self:StopModCostVX()
-  RunAsyncTask(self, "RefreshModCostVXTask", function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "RefreshModCostVXTask", function(CoroutineObj)
     local CurrCost = ModModel:GetCurrentSuitCost()
     local CostDiff = CurrCost - self.CachedCost
     if 0 == CostDiff then

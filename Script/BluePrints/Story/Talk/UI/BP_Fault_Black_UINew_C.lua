@@ -1,6 +1,3 @@
-require("UnLua")
-require("DataMgr")
-local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local BP_Fault_Black_UINew_C = Class("BluePrints.Story.Talk.UI.BP_TalkBaseUINew_C")
 
 function BP_Fault_Black_UINew_C:Construct()
@@ -18,13 +15,14 @@ function BP_Fault_Black_UINew_C:Construct()
   end
   self.CanvasPanel_0:SetRenderOpacity(0)
   self.BackGround:SetRenderOpacity(0)
-  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "FaultBlackUI", nil)
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "FaultBlackUI", {fade_in_time = 0})
   self:SetStoryInputModeEnabled(true)
   self:RefreshBaseInfo()
 end
 
 function BP_Fault_Black_UINew_C:Destruct()
   EventManager:RemoveEvent(EventID.SetPlayerLocWithLoadLevel, self)
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "FaultBlackUI", {fade_out_time = 0, ToEnd = 1})
   AudioManager(self):StopSound(self, "FaultBlackUI")
   self.Super.Destruct(self)
 end

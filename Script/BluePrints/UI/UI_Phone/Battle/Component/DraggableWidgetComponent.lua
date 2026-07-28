@@ -52,7 +52,11 @@ function M:_GetMappedPlanIndex(EditPlanIndex)
   if nil == EditPlanIndex then
     return 1
   end
-  return (EditPlanIndex - 1) % 2 + 1
+  if EditPlanIndex >= 7 and EditPlanIndex <= 9 then
+    return 3
+  else
+    return (EditPlanIndex - 1) % 2 + 1
+  end
 end
 
 function M:GetSelectWidgetTextMapContent()
@@ -68,6 +72,18 @@ function M:MoveWidgetByOffset(Offset)
     return
   end
   local CurParentNodePos = self:GetWidgetPosition()
+  local ParentNodeWorldPos = UIManager(self):GetWorldPosition(self.ParentLayoutNode)
+  local ParentNodeWorldSize = UIManager(self):GetWidgetRenderSize(self.ParentLayoutNode)
+  local ParentNodeWorldMidPos = ParentNodeWorldPos + ParentNodeWorldSize * 0.5 * UE4.UWidgetLayoutLibrary.GetViewportScale(self)
+  local CacluToTestPos = ParentNodeWorldMidPos + Offset
+  if CacluToTestPos.X < self.LimitDraggableAreaInMidAnchor.MinX or CacluToTestPos.X > self.LimitDraggableAreaInMidAnchor.MaxX then
+    DebugPrint("MoveWidgetByOffset: X out of range", Offset)
+    return
+  end
+  if CacluToTestPos.Y < self.LimitDraggableAreaInMidAnchor.MinY or CacluToTestPos.Y > self.LimitDraggableAreaInMidAnchor.MaxY then
+    DebugPrint("MoveWidgetByOffset: Y out of range", Offset)
+    return
+  end
   local NewPosition = CurParentNodePos + Offset
   self:SetWidgetPosition(NewPosition)
   if self.OwnerWidget and type(self.OwnerWidget.OnDraggableWidgetInfoChanged) == "function" then
@@ -104,7 +120,8 @@ function M:RegisterDraggableComponent(OwnerWidget, DraggableWidget, ParentLayout
   self.CurrentPositionInScreen = FVector2D(0, 0)
   self.DragOffset = FVector2D(0, 0)
   self.TouchPointLocalOffset = nil
-  self.LimitDraggableArea = nil
+  self.LimitDraggableAreaInDiyAnchor = nil
+  self.LimitDraggableAreaInMidAnchor = nil
   self:InitializeVariable()
 end
 
@@ -241,13 +258,13 @@ function M:GetWidgetPosition()
 end
 
 function M:ClampPositionToViewport(Position)
-  if self.LimitDraggableArea == nil then
+  if self.LimitDraggableAreaInDiyAnchor == nil then
     return Position
   end
-  local StartClampedX = self.LimitDraggableArea.MinX
-  local EndClampedX = self.LimitDraggableArea.MaxX
-  local StartClampedY = self.LimitDraggableArea.MinY
-  local EndClampedY = self.LimitDraggableArea.MaxY
+  local StartClampedX = self.LimitDraggableAreaInDiyAnchor.MinX
+  local EndClampedX = self.LimitDraggableAreaInDiyAnchor.MaxX
+  local StartClampedY = self.LimitDraggableAreaInDiyAnchor.MinY
+  local EndClampedY = self.LimitDraggableAreaInDiyAnchor.MaxY
   local ClampedX = UE.UKismetMathLibrary.FClamp(Position.X, StartClampedX, EndClampedX)
   local ClampedY = UE.UKismetMathLibrary.FClamp(Position.Y, StartClampedY, EndClampedY)
   return FVector2D(ClampedX, ClampedY)
@@ -266,7 +283,8 @@ function M:SetDraggableArea(DraggableWidgetGeometry)
     ParentGeometry = self.OwnerWidget:GetCachedGeometry()
   end
   if nil == ParentGeometry then
-    self.LimitDraggableArea = nil
+    self.LimitDraggableAreaInDiyAnchor = nil
+    self.LimitDraggableAreaInMidAnchor = nil
     return
   end
   local AbsoluteTopLeftPosition = UE4.USlateBlueprintLibrary.LocalToAbsolute(self.OwnerWidget:GetCachedGeometry(), UE4.USlateBlueprintLibrary.GetLocalTopLeft(ParentGeometry))
@@ -277,10 +295,20 @@ function M:SetDraggableArea(DraggableWidgetGeometry)
   local EndClampedX = AbsoluteTopLeftPosition.X + AbsoluteParentSize.X - WidgetAbsoluteSize.X * (1 - self.TouchPointLocalOffset.X / WidgetLocalSize.X)
   local StartClampedY = AbsoluteTopLeftPosition.Y + WidgetAbsoluteSize.Y * (self.TouchPointLocalOffset.Y / WidgetLocalSize.Y)
   local EndClampedY = AbsoluteTopLeftPosition.Y + AbsoluteParentSize.Y - WidgetAbsoluteSize.Y * (1 - self.TouchPointLocalOffset.Y / WidgetLocalSize.Y)
+  local StartClampedXInMidAnchor = AbsoluteTopLeftPosition.X + WidgetAbsoluteSize.X * 0.5
+  local EndClampedXInMidAnchor = AbsoluteTopLeftPosition.X + AbsoluteParentSize.X - WidgetAbsoluteSize.X * 0.5
+  local StartClampedYInMidAnchor = AbsoluteTopLeftPosition.Y + WidgetAbsoluteSize.Y * 0.5
+  local EndClampedYInMidAnchor = AbsoluteTopLeftPosition.Y + AbsoluteParentSize.Y - WidgetAbsoluteSize.Y * 0.5
+  self.LimitDraggableAreaInMidAnchor = {
+    MinX = StartClampedXInMidAnchor,
+    MaxX = EndClampedXInMidAnchor,
+    MinY = StartClampedYInMidAnchor,
+    MaxY = EndClampedYInMidAnchor
+  }
   if self.bHasExtraLimitArea then
     self:UpdateLimitDraggableAreaFromDesign(StartClampedX, EndClampedX, StartClampedY, EndClampedY, AbsoluteParentSize)
   else
-    self.LimitDraggableArea = {
+    self.LimitDraggableAreaInDiyAnchor = {
       MinX = StartClampedX,
       MaxX = EndClampedX,
       MinY = StartClampedY,
@@ -295,14 +323,14 @@ function M:UpdateLimitDraggableAreaFromDesign(StartClampedX, EndClampedX, StartC
     local CurAreaRangeYPercent = self.CurAreaRangeYPercent
     local NewEndClampedX = EndClampedX - AbsoluteParentSize.X * CurAreaRangeXPercent
     local NewStartClampedY = StartClampedY + AbsoluteParentSize.Y * (1.0 - CurAreaRangeYPercent)
-    self.LimitDraggableArea = {
+    self.LimitDraggableAreaInDiyAnchor = {
       MinX = StartClampedX,
       MaxX = NewEndClampedX,
       MinY = NewStartClampedY,
       MaxY = EndClampedY
     }
   else
-    self.LimitDraggableArea = {
+    self.LimitDraggableAreaInDiyAnchor = {
       MinX = StartClampedX,
       MaxX = EndClampedX,
       MinY = StartClampedY,

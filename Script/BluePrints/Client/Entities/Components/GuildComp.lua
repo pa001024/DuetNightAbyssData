@@ -2,6 +2,9 @@ local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildControl
 local GuildModel = GuildController:GetModel()
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local Decorator = require("BluePrints.Client.Wrapper.Decorator")
+local GuildTypes = require("BluePrints.Client.CustomTypes.Guild")
+local GuildAttr = GuildTypes.GuildAttr
+local CommonUtils = require("Utils.CommonUtils")
 local Component = {}
 Decorator:ApplyDecorator(Component)
 
@@ -31,6 +34,99 @@ local function CallGuildRpc(self, RpcName, Callback, ...)
   end, ...)
 end
 
+local function CallGuildLocalCallback(RpcName, Callback, SrcParams, ErrCode, ...)
+  if Callback then
+    Callback(ErrCode, ...)
+  end
+  DispatchGuildController(RpcName, SrcParams, ErrCode, ...)
+end
+
+local function BuildGuildSimpleInfo(GuildInfo)
+  if type(GuildInfo) ~= "table" then
+    return {}
+  end
+  local GuildHomeData = "table" == type(GuildInfo.GuildHomeData) and GuildInfo.GuildHomeData or {}
+  local HeatData = "table" == type(GuildHomeData.Heat) and GuildHomeData.Heat or {}
+  local Heat = math.max(0, math.floor(tonumber(GuildInfo.Heat or GuildInfo.GuildHomeHeatRank or HeatData.RankValue) or 0))
+  return {
+    GuildId = tonumber(GuildInfo.GuildId or 0) or 0,
+    Name = GuildInfo.Name or "",
+    Logo = GuildInfo.Logo or "",
+    Level = tonumber(GuildInfo.Level or 1) or 1,
+    ActivityLevel = tonumber(GuildInfo.ActivityLevel or 0) or 0,
+    Heat = Heat,
+    MemberCount = tonumber(GuildInfo.MemberCount or 0) or 0,
+    OwnerUid = tonumber(GuildInfo.OwnerUid or 0) or 0,
+    AutoAgreeJoinRequest = GuildInfo.AutoAgreeJoinRequest == true
+  }
+end
+
+local function DumpLocalGuildInfo(GuildInfo)
+  local Result = {}
+  for PropName, AttrProp in pairs(GuildAttr) do
+    if type(PropName) == "string" and type(AttrProp) == "table" and AttrProp.is_prop then
+      local DumpValue = AttrProp:GetBinaryDump(GuildInfo[PropName])
+      if nil ~= DumpValue then
+        Result[PropName] = DumpValue
+      end
+    end
+  end
+  return Result
+end
+
+local function BuildLocalGuildMemberInfo(Uid, Member)
+  if type(Member) ~= "table" then
+    return nil
+  end
+  return {
+    Uid = tonumber(Member.Uid) or tonumber(Uid) or 0,
+    Title = tonumber(Member.Title) or 1,
+    LastLogin = tonumber(Member.LastLogin) or 0,
+    WeekActivity = tonumber(Member.WeekActivity) or 0,
+    JoinTime = tonumber(Member.JoinTime) or 0
+  }
+end
+
+local function CloneLocalGuildValue(Value, Depth)
+  if type(Value) ~= "table" then
+    return Value
+  end
+  Depth = (Depth or 0) + 1
+  if Depth > 8 then
+    return Value
+  end
+  local Result = {}
+  local HasArrayValue = false
+  for Index, Child in ipairs(Value) do
+    HasArrayValue = true
+    Result[Index] = CloneLocalGuildValue(Child, Depth)
+  end
+  if HasArrayValue then
+    return Result
+  end
+  for Key, Child in pairs(Value) do
+    if type(Key) ~= "string" or string.sub(Key, 1, 2) ~= "__" then
+      Result[Key] = CloneLocalGuildValue(Child, Depth)
+    end
+  end
+  return Result
+end
+
+local function GetLocalGuildInfo(self, GuildId)
+  local GuildInfo = type(self.GuildInfo) == "table" and self.GuildInfo or nil
+  local LocalGuildId = math.floor(tonumber((GuildInfo or {}).GuildId) or 0)
+  GuildId = math.floor(tonumber(GuildId) or 0)
+  if GuildId <= 0 then
+    GuildId = math.floor(tonumber(self.GuildId) or 0)
+  end
+  if GuildId > 0 and LocalGuildId == GuildId then
+    return GuildInfo, GuildId
+  end
+  return nil, GuildId
+end
+
+local NormalizeInt = CommonUtils.NormalizeInt
+
 function Component:_OnLoginSuccess()
   GuildController:Init()
 end
@@ -49,6 +145,9 @@ function Component:_OnPropChangeGuildId()
   if not GuildModel:GetCurrGuild() and 0 ~= GuildId then
     self:GuildJoinNotify(self.GuildId)
   end
+  if 0 ~= GuildId then
+    GuildModel:RefreshGuildBossPersonPointRewardReddot()
+  end
   DispatchGuildController("GuildIdChanged", nil, self.GuildId)
 end
 
@@ -59,8 +158,42 @@ function Component:SetGuildSimpleInfo(GuildSimpleInfo)
   self.GuildSimpleInfo = GuildSimpleInfo
 end
 
+function Component:DispatchGuildPropChange(PropName, NewValue, OldValue, ChangeKeys)
+  if type(PropName) ~= "string" or "" == PropName then
+    return
+  end
+  local FuncName = "GuildPropChange" .. PropName
+  local Func = self[FuncName]
+  if type(Func) == "function" then
+    Func(self, NewValue, OldValue, self.GuildInfo or {}, ChangeKeys or {})
+  end
+  DispatchGuildController("NotifyGuildPropChanged", nil, PropName, NewValue, OldValue, self.GuildInfo or {}, ChangeKeys or {})
+end
+
+function Component:GuildPropChangeOwnerUid(NewValue, OldValue, GuildInfo, ChangeKeys)
+end
+
+function Component:_OnPropChangeGuildInfo(ChangeKeys, OldValue)
+  local GuildInfo = self.GuildInfo
+  local GuildId = tonumber((GuildInfo or {}).GuildId or 0) or 0
+  if GuildId <= 0 then
+    self:SetGuildSimpleInfo({})
+  else
+    self:SetGuildSimpleInfo(BuildGuildSimpleInfo(GuildInfo))
+  end
+  local PropName = type(ChangeKeys) == "table" and ChangeKeys[1] or nil
+  if type(PropName) == "string" then
+    self:DispatchGuildPropChange(PropName, GuildInfo and GuildInfo[PropName], OldValue, ChangeKeys)
+  end
+  DispatchGuildController("GuildInfoChanged", nil, GuildInfo or {})
+end
+
 function Component:_OnPropChangeGuildActivityLevel()
   GuildModel:TryAddReddotCount("GuildWeekActivity")
+end
+
+function Component:_OnPropChangeGuildBossData(ChangeKeys, OldValue)
+  GuildModel:RefreshGuildBossPersonPointRewardReddot()
 end
 
 function Component:CreateGuild(Callback, GuildName, GuildDecl, GuildExtInfo)
@@ -142,15 +275,105 @@ function Component:GuildSearch(Callback, Keyword)
 end
 
 function Component:GetGuildInfo(Callback, GuildId)
-  CallGuildRpc(self, "GetGuildInfo", Callback, GuildId)
+  local SrcParams = table.pack(GuildId or 0)
+  local GuildInfo, TargetGuildId = GetLocalGuildInfo(self, GuildId)
+  if GuildInfo then
+    CallGuildLocalCallback("GetGuildInfo", Callback, SrcParams, ErrorCode.RET_SUCCESS, DumpLocalGuildInfo(GuildInfo))
+    return
+  end
+  CallGuildRpc(self, "GetGuildInfo", Callback, TargetGuildId)
 end
 
 function Component:GetGuildSimpleInfo(Callback, GuildId)
-  CallGuildRpc(self, "GetGuildSimpleInfo", Callback, GuildId)
+  local SrcParams = table.pack(GuildId or 0)
+  local GuildInfo, TargetGuildId = GetLocalGuildInfo(self, GuildId)
+  if GuildInfo then
+    CallGuildLocalCallback("GetGuildSimpleInfo", Callback, SrcParams, ErrorCode.RET_SUCCESS, BuildGuildSimpleInfo(GuildInfo))
+    return
+  end
+  CallGuildRpc(self, "GetGuildSimpleInfo", Callback, TargetGuildId)
 end
 
 function Component:GetGuildSimpleInfoBatch(Callback, GuildIds)
-  CallGuildRpc(self, "GetGuildSimpleInfoBatch", Callback, GuildIds or {})
+  GuildIds = type(GuildIds) == "table" and GuildIds or {}
+  local UniqueGuildIds = {}
+  local LocalGuildInfos = {}
+  local RemoteGuildIds = {}
+  local UniqueCount = 0
+  for _, GuildId in ipairs(GuildIds) do
+    GuildId = NormalizeInt(GuildId, 0)
+    if GuildId > 0 and not UniqueGuildIds[GuildId] then
+      UniqueGuildIds[GuildId] = true
+      UniqueCount = UniqueCount + 1
+      local GuildInfo = GetLocalGuildInfo(self, GuildId)
+      if GuildInfo then
+        table.insert(LocalGuildInfos, BuildGuildSimpleInfo(GuildInfo))
+      else
+        table.insert(RemoteGuildIds, GuildId)
+      end
+    end
+  end
+  if UniqueCount <= 0 then
+    CallGuildLocalCallback("GetGuildSimpleInfoBatch", Callback, table.pack(GuildIds), ErrorCode.RET_SUCCESS, {}, {})
+    return
+  end
+  if #RemoteGuildIds <= 0 then
+    CallGuildLocalCallback("GetGuildSimpleInfoBatch", Callback, table.pack(GuildIds), ErrorCode.RET_SUCCESS, LocalGuildInfos, {})
+    return
+  end
+  local SrcParams = table.pack(GuildIds)
+  self:CallServer("GetGuildSimpleInfoBatch", function(ErrCode, GuildInfos, Failed)
+    GuildInfos = type(GuildInfos) == "table" and GuildInfos or {}
+    for _, GuildInfo in ipairs(GuildInfos) do
+      table.insert(LocalGuildInfos, GuildInfo)
+    end
+    CallGuildLocalCallback("GetGuildSimpleInfoBatch", Callback, SrcParams, ErrCode, LocalGuildInfos, Failed or {})
+  end, RemoteGuildIds)
+end
+
+function Component:QueryGuildAttrs(Callback, GuildId, PropNames)
+  PropNames = type(PropNames) == "table" and PropNames or {}
+  local SrcParams = table.pack(GuildId or 0, PropNames)
+  local GuildInfo, TargetGuildId = GetLocalGuildInfo(self, GuildId)
+  if GuildInfo then
+    local Attrs = GuildAttr.Merge({}, GuildInfo, PropNames)
+    CallGuildLocalCallback("QueryGuildAttrs", Callback, SrcParams, ErrorCode.RET_SUCCESS, Attrs)
+    return
+  end
+  CallGuildRpc(self, "QueryGuildAttrs", Callback, TargetGuildId, PropNames)
+end
+
+function Component:QueryGuildMembers(Callback, GuildId, Uids)
+  Uids = type(Uids) == "table" and Uids or {}
+  local SrcParams = table.pack(GuildId or 0, Uids)
+  local GuildInfo, TargetGuildId = GetLocalGuildInfo(self, GuildId)
+  if GuildInfo then
+    local Members = "table" == type(GuildInfo.Members) and GuildInfo.Members or {}
+    local Result = {}
+    if #Uids <= 0 then
+      for Uid, Member in pairs(Members) do
+        local Info = BuildLocalGuildMemberInfo(Uid, Member)
+        if Info then
+          Result[Info.Uid] = Info
+        end
+      end
+    else
+      local Used = {}
+      for _, Uid in ipairs(Uids) do
+        Uid = tonumber(Uid) or 0
+        if Uid > 0 and not Used[Uid] then
+          Used[Uid] = true
+          local Info = BuildLocalGuildMemberInfo(Uid, Members[Uid] or Members[tostring(Uid)])
+          if Info then
+            Result[Uid] = Info
+          end
+        end
+      end
+    end
+    CallGuildLocalCallback("QueryGuildMembers", Callback, SrcParams, ErrorCode.RET_SUCCESS, Result)
+    return
+  end
+  CallGuildRpc(self, "QueryGuildMembers", Callback, TargetGuildId, Uids)
 end
 
 function Component:GuildGetIdByName(Callback, Name)
@@ -161,7 +384,61 @@ function Component:RpcGetGuildActivityPointReward(Callback, Index)
   CallGuildRpc(self, "RpcGetGuildActivityPointReward", Callback, Index)
 end
 
+function Component:GuildBossClaimPointReward(Callback, RewardIndex)
+  CallGuildRpc(self, "GuildBossClaimPointReward", Callback, RewardIndex or 0)
+end
+
+function Component:GuildBossClaimAllPointReward(Callback)
+  CallGuildRpc(self, "GuildBossClaimAllPointReward", Callback)
+end
+
+function Component:GuildBossClaimStageReward(Callback, TargetGuildId, BossId, StageId)
+  CallGuildRpc(self, "GuildBossClaimStageReward", Callback, TargetGuildId or 0, BossId or 0, StageId or 0)
+end
+
+function Component:GuildBossClaimAllReward(Callback)
+  CallGuildRpc(self, "GuildBossClaimAllReward", Callback)
+end
+
+function Component:GuildHomeGetBuildData(Callback, TargetGuildId)
+  CallGuildRpc(self, "GuildHomeGetBuildData", Callback, TargetGuildId or 0)
+end
+
+function Component:GuildHomeEnterBuild(Callback)
+  CallGuildRpc(self, "GuildHomeEnterBuild", Callback)
+end
+
+function Component:GuildHomeExitBuild(Callback)
+  CallGuildRpc(self, "GuildHomeExitBuild", Callback)
+end
+
+function Component:GuildHomeBuyComponent(Callback, ComponentId, Count)
+  CallGuildRpc(self, "GuildHomeBuyComponent", Callback, ComponentId or 0, Count or 0)
+end
+
+function Component:GuildHomeExchangeFund(Callback, Count)
+  CallGuildRpc(self, "GuildHomeExchangeFund", Callback, Count or 0)
+end
+
+function Component:GuildHomePublishLayout(Callback, BaseVersion, FullSnapshot)
+  CallGuildRpc(self, "GuildHomePublishLayout", Callback, BaseVersion or 0, FullSnapshot or {})
+end
+
+function Component:GuildHomeGetRandomVisitGuild(Callback, ExcludeGuildId)
+  CallGuildRpc(self, "GuildHomeGetRandomVisitGuild", Callback, ExcludeGuildId or 0)
+end
+
 function Component:GetGuildMessage(Callback)
+  local SrcParams = table.pack()
+  if NormalizeInt(self.GuildId, 0) <= 0 then
+    CallGuildLocalCallback("GetGuildMessage", Callback, SrcParams, ErrorCode.RET_GUILD_NOT_IN_GUILD, {})
+    return
+  end
+  local GuildInfo = GetLocalGuildInfo(self, self.GuildId)
+  if GuildInfo then
+    CallGuildLocalCallback("GetGuildMessage", Callback, SrcParams, ErrorCode.RET_SUCCESS, CloneLocalGuildValue(GuildInfo.GuildMessages or {}))
+    return
+  end
   CallGuildRpc(self, "GetGuildMessage", Callback)
 end
 
@@ -174,6 +451,17 @@ function Component:SetGuildChatOpen(Callback, IsOpen)
 end
 
 function Component:QueryGuildChatOpen(Callback, Uid, bCallbackOnly)
+  Uid = NormalizeInt(Uid, 0)
+  if Uid > 0 and Uid == NormalizeInt(self.Uid, 0) then
+    if bCallbackOnly then
+      if Callback then
+        Callback(ErrorCode.RET_SUCCESS, self.GuildChatOpen ~= false)
+      end
+    else
+      CallGuildLocalCallback("QueryGuildChatOpen", Callback, table.pack(Uid), ErrorCode.RET_SUCCESS, self.GuildChatOpen ~= false)
+    end
+    return
+  end
   if bCallbackOnly then
     self:CallServer("QueryGuildChatOpen", function(...)
       if Callback then
@@ -362,6 +650,14 @@ function Component:ChatToGuild(Callback, Content)
   end
   
   CallGuildRpc(self, "ChatToGuild", InnerCallback, Content)
+end
+
+function Component:GuildHomeExchangeFund(Callback, Count)
+  CallGuildRpc(self, "GuildHomeExchangeFund", Callback, Count or 0)
+end
+
+function Component:GuildHomeBuyComponent(Callback, ComponentId, Count)
+  CallGuildRpc(self, "GuildHomeBuyComponent", Callback, ComponentId or 0, Count or 0)
 end
 
 return Component

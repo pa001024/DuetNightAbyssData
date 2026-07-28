@@ -16,6 +16,7 @@ function M:OnListItemObjectSet(Content)
   self.Parent = Content.Parent
   self.TabId = Content.TabId
   self.bShowNew = Content.bShowNew
+  self.bShowGiftPack = Content.bShowGiftPack
   self.Text_PoolTitle:SetText(GText(Content.TabName))
   local IconDynaMaterial = self.Image_Pool:GetDynamicMaterial()
   if IconDynaMaterial then
@@ -33,12 +34,27 @@ function M:_UpdateIndicatorVisibility()
   if self.bShowReddot then
     self.Reddot:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.New:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Group_GiftSign then
+      self.Group_GiftSign:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  elseif self.bShowGiftPack then
+    self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
+    self.New:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Group_GiftSign then
+      self.Group_GiftSign:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
   elseif self.bShowNew then
     self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
     self.New:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.Group_GiftSign then
+      self.Group_GiftSign:SetVisibility(ESlateVisibility.Collapsed)
+    end
   else
     self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
     self.New:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Group_GiftSign then
+      self.Group_GiftSign:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -55,6 +71,14 @@ function M:SetNew(bShow)
     return
   end
   self.bShowNew = bShow
+  self:_UpdateIndicatorVisibility()
+end
+
+function M:SetGiftPack(bShow)
+  if self.bShowGiftPack == bShow then
+    return
+  end
+  self.bShowGiftPack = bShow
   self:_UpdateIndicatorVisibility()
 end
 
@@ -104,10 +128,8 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local IsEventHandled = false
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and InKeyName == UIConst.GamePadKey.DPadLeft then
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and (InKeyName == UIConst.GamePadKey.DPadLeft or InKeyName == UIConst.GamePadKey.DPadRight) then
     self.Parent:OnGamePadDown(InKeyName)
-  else
   end
 end
 

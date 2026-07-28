@@ -23,6 +23,7 @@ function M:InitContent(Content)
     OnMenuOpenChangedCallBack = self.OnDescOpenChanged
   })
   self:AddDispatcher(EventID.UnLoadUI, self, self.OnUIUnLoad)
+  self:AddDispatcher(EventID.OnRechargeFinished, self, self.OnRechargeFinished)
 end
 
 function M:OnUIUnLoad(UIName)
@@ -160,6 +161,8 @@ function M:InitGiftInfo()
   end
   local Cost = ShopUtils:GetShopItemPrice(self.ShopItemId)
   local isPayGoods = DataMgr.ShopItem2PayGoods and DataMgr.ShopItem2PayGoods[self.ShopItemId] ~= nil
+  self.PriceType = ShopItemData.PriceType
+  self.IsPayGoods = isPayGoods
   if isPayGoods then
     local moneySymbol = ShopUtils:GetCurrencyType()
     if self.Text_Price then
@@ -180,6 +183,7 @@ function M:InitGiftInfo()
       end
     end
   end
+  self:UpdatePriceState()
   if isPayGoods then
     self._TopResourceIdList = nil
   else
@@ -226,6 +230,29 @@ function M:InitGiftInfo()
     else
       self.Group_More:SetVisibility(ESlateVisibility.Collapsed)
     end
+  end
+end
+
+function M:OnRechargeFinished()
+  self:UpdatePriceState()
+end
+
+function M:UpdatePriceState()
+  if not self.Text_Price then
+    return
+  end
+  self.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("FFFFFFFF"))
+  if not (not self.IsPayGoods and self.PriceType) or not self.ShopItemId then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local HasCount = Avatar.Resources[self.PriceType] and Avatar.Resources[self.PriceType].Count or 0
+  local NeedCount = ShopUtils:GetShopItemPrice(self.ShopItemId) or 0
+  if HasCount < NeedCount then
+    self.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("DA2A4A"))
   end
 end
 

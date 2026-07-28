@@ -149,5 +149,33 @@
     "access": [
       "Échange à durée limitée dans Boutique > Prismes"
     ]
+  },
+  {
+    "id": 1011,
+    "name": "Bi’an obscur mécanisé – Bleu céleste",
+    "des": "Monture mécanisée développée par Maître Gongshang, reproduisant fidèlement un Bi’an obscur. Le chevaucher à toute allure dans Port-des-Brumes ne manquera pas de laisser les passants bouche bée.",
+    "icon": "Mounts_0012",
+    "resourceIcon": "Icon_Mounts_0012",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49988,
+    "fly": 1,
+    "access": [
+      "Boutique"
+    ]
+  },
+  {
+    "id": 1012,
+    "name": "Chevalier aux lames d’argent – Bleu céleste",
+    "des": "Même l’immortel finit par se perdre, comme des larmes dans la pluie.",
+    "icon": "Mounts_0013",
+    "resourceIcon": "Icon_Mounts_0013",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49987,
+    "fly": 1,
+    "access": [
+      "Boutique"
+    ]
   }
 ]

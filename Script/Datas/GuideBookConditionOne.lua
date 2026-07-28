@@ -656,6 +656,26 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    ExpMount = {
+      [1] = {
+        CompleteUIGuideId = 155,
+        GuideId = 155,
+        GuideNoteId = 168,
+        GuideNoteTab = 3,
+        MechanismTag = "ExpMount",
+        RewardId = 7000
+      }
+    },
+    ExpMountFly = {
+      [1] = {
+        CompleteUIGuideId = 156,
+        GuideId = 156,
+        GuideNoteId = 169,
+        GuideNoteTab = 3,
+        MechanismTag = "ExpMountFly",
+        RewardId = 7000
+      }
+    },
     ExpYanque = {
       [1] = {
         CompleteUIGuideId = 145,

@@ -25,7 +25,6 @@ function TalkCameraManager_C.New(TalkContext, Player, PlayerController)
   Obj.TalkPawn = nil
   Obj.CineCamera = nil
   Obj.CurrentCamera = nil
-  Obj.InteractiveActor = nil
   Obj.BlendRunTime = 0
   Obj.BlendType = nil
   Obj.BlendTime = 0
@@ -437,7 +436,7 @@ function TalkCameraManager_C:GetTalkPawn()
   return self.TalkPawn
 end
 
-function TalkCameraManager_C:GetTalkPawnNew(bUseProceduralCamera, ProceduralCameraId)
+function TalkCameraManager_C:GetTalkPawnNew(InteractiveActor, bUseProceduralCamera, ProceduralCameraId)
   local ProceduralParams
   if bUseProceduralCamera and ProceduralCameraId then
     local ProceduralCameraData = DataMgr.FreeCamera[ProceduralCameraId]
@@ -452,7 +451,7 @@ function TalkCameraManager_C:GetTalkPawnNew(bUseProceduralCamera, ProceduralCame
       MinCameraDis = ProceduralCameraData.MinCameraDistance
     }
   end
-  local Loc, Rot = self:CalculateTalkPawnTrans((ProceduralParams or {}).PivotOffset)
+  local Loc, Rot = self:CalculateTalkPawnTrans(InteractiveActor, (ProceduralParams or {}).PivotOffset)
   if not IsValid(self.TalkPawn) then
     local TalkPawnClass = LoadClass("/Game/BluePrints/Story/Talk/Base/BP_TalkPlayerPawn.BP_TalkPlayerPawn_C")
     self.TalkPawn = self.TalkContext:GetWorld():SpawnActor(TalkPawnClass, UE4.UKismetMathLibrary.MakeTransform(Loc, Rot, FVector(1)))
@@ -460,7 +459,7 @@ function TalkCameraManager_C:GetTalkPawnNew(bUseProceduralCamera, ProceduralCame
   self.TalkPawn:K2_SetActorTransform(UE4.UKismetMathLibrary.MakeTransform(Loc, Rot, FVector(1)), false, nil, false)
   if ProceduralParams then
     local CameraActor = self:GetCurrentCamera()
-    self.TalkContext:FreeSimpleProceduralCamera(CameraActor, self.TalkPawn, self.Player, self.InteractiveActor, ProceduralParams.PushX, ProceduralParams.PullX, ProceduralParams.AngleThreshold, ProceduralParams.AngleAfterBlock, ProceduralParams.CameraHeight)
+    self.TalkContext:FreeSimpleProceduralCamera(CameraActor, self.TalkPawn, self.Player, InteractiveActor, ProceduralParams.PushX, ProceduralParams.PullX, ProceduralParams.AngleThreshold, ProceduralParams.AngleAfterBlock, ProceduralParams.CameraHeight)
     if ProceduralParams.CameraControl == nil or ProceduralParams.CameraControl == false then
       self.TalkPawn:SetDisableRotation(true)
     end
@@ -473,8 +472,8 @@ function TalkCameraManager_C:GetTalkPawnNew(bUseProceduralCamera, ProceduralCame
   return self.TalkPawn
 end
 
-function TalkCameraManager_C:CalculateTalkPawnTrans(PivotOffset)
-  local InteractiveActor = self.InteractiveActor or self.Player
+function TalkCameraManager_C:CalculateTalkPawnTrans(InteractiveActor, PivotOffset)
+  InteractiveActor = InteractiveActor or self.Player
   local StoryPlayable = InteractiveActor:Cast(UStoryPlayableInterface)
   local CameraLocationOffset = FVector(0, 0, PivotOffset or 0)
   if StoryPlayable then
@@ -491,6 +490,10 @@ end
 
 function TalkCameraManager_C:GetCurrentCamera()
   return self.CurrentCamera or self.Player
+end
+
+function TalkCameraManager_C:GetCurrentCameraComponent()
+  return self:GetCameraComponent(self:GetCurrentCamera()) or self:GetCurrentCamera():GetComponentByClass(UPlayerCameraComponent)
 end
 
 function TalkCameraManager_C:GetCurrentCameraInfo()
@@ -797,7 +800,7 @@ function TalkCameraManager_C:SetPostProcess_Internal(PostProcessInfo)
   self.CachedPPInfo = PostProcessInfo
   local MaterialType = PostProcessInfo.MaterialType
   local DynamicInstance = PostProcessInfo.DynamicInstance
-  local CameraComponent = self:GetCameraComponent(self:GetCurrentCamera()) or self:GetCurrentCamera():GetComponentByClass(UPlayerCameraComponent)
+  local CameraComponent = self:GetCurrentCameraComponent()
   if not CameraComponent then
     DebugPrint("lhr@SetPostProcess: CameraComponent is nil", self:GetCurrentCamera() and self:GetCurrentCamera():GetName())
     return

@@ -78,11 +78,21 @@ function M:Destory()
 end
 
 function M:OnNewCharObtained(CharUuid)
-  self:RefreshCharReddot(CharUuid)
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local Char = Avatar.Chars[CharUuid]
+  self:RefreshCharReddot(Char and Char.CharId)
 end
 
 function M:OnCharDeleted(CharUuid)
-  self:RefreshCharReddot(CharUuid)
+  local Avatar = self:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local Char = Avatar.Chars[CharUuid]
+  self:RefreshCharReddot(Char and Char.CharId)
 end
 
 function M:GetCharNodeName()
@@ -93,6 +103,9 @@ function M:GetCharNodeName()
 end
 
 function M:RefreshCharReddot(Uuid)
+  if not Uuid then
+    return
+  end
   local NodeName = self:GetCharNodeName()
   if not ReddotManager.GetTreeNode(NodeName) then
     ReddotManager.AddNodeEx(NodeName)

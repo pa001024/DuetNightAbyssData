@@ -29,6 +29,17 @@ function BP_MonsterCharacter_C:ReceiveBeginPlay()
   end
 end
 
+function BP_MonsterCharacter_C:ReceiveOnCharacterReady()
+  self.Overridden.ReceiveOnCharacterReady(self)
+  if self.UnitId == 210201 then
+    local GameState = UGameplayStatics.GetGameState(self)
+    local Avatar = GWorld:GetAvatar()
+    if GameState.MonsterHideTagInTalk == "Talk" and Avatar and Avatar:IsInHardBoss() then
+      GameState:HideMonster(false, "Talk", self)
+    end
+  end
+end
+
 function BP_MonsterCharacter_C:TryStartOutAirWallCheck(Info)
   local GameState = UGameplayStatics.GetGameState(self)
   local IsInDungeon = GameState and GameState:IsInDungeon()
@@ -549,9 +560,6 @@ end
 function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
   Battle(self):ShowError_Monster_Inner_Lua("PhysStateErrorReset_Lua" .. self:GetName())
   self.Mesh:TermBodiesBelow("Root")
-end
-
-function BP_MonsterCharacter_C:MonsterSkeletonLodLua_Stamp()
 end
 
 AssembleComponents(BP_MonsterCharacter_C)

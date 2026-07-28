@@ -9,7 +9,8 @@ function Common_Button_Reward_PC:Construct()
   self:SetGamePadImg(self.GamePadImgName)
   self:RefreshIconAndGamePadVisibility()
   self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-  self.IsGamePadIconVisible = false
+  self:SetKey_PCVisibility(UIConst.VisibilityOp.Collapsed)
+  self.bGamepadIconVisible = false
 end
 
 function Common_Button_Reward_PC:SetText(Text)
@@ -49,30 +50,50 @@ function Common_Button_Reward_PC:OnInputMethodChanged(NewGameInputType, NewGamep
 end
 
 function Common_Button_Reward_PC:RefreshIconAndGamePadVisibility()
-  if not self.IsGamePadIconVisible then
-    self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-    return
-  end
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
-    self:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.WS_Key then
+      self.WS_Key:SetActiveWidgetIndex(0)
+    end
+    if self.bGamepadIconVisible or self.bGamepadIconVisible == nil then
+      self:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   else
+    if self.WS_Key then
+      self.WS_Key:SetActiveWidgetIndex(1)
+    end
     self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
 function Common_Button_Reward_PC:SetGamePadImg(ImgShortPath, ImgLongPath)
-  local ImgPath, Img
-  if ImgShortPath and "None" ~= ImgShortPath then
-    ImgPath = UIUtils.UtilsGetKeyIconPathInGamepad(ImgShortPath, self.CurGamepadName)
-    Img = LoadObject(ImgPath)
-  elseif ImgLongPath then
-    Img = LoadObject(ImgLongPath)
+  if self.Key_GamePad then
+    self.Key_GamePad:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = ImgShortPath,
+          ImgLongPath = ImgLongPath
+        }
+      },
+      bLongPress = self:GetIsLongPressButton(),
+      bButton = self:GetIsLongPressButton()
+    })
+  else
+    local ImgPath, Img
+    if ImgShortPath and "None" ~= ImgShortPath then
+      ImgPath = UIUtils.UtilsGetKeyIconPathInGamepad(ImgShortPath, self.CurGamepadName)
+      Img = LoadObject(ImgPath)
+    elseif ImgLongPath then
+      Img = LoadObject(ImgLongPath)
+    end
+    if not IsValid(Img) then
+      DebugPrint("缺少图片资源: ImgPath = ", ImgPath, ImgShortPath, ImgLongPath)
+      return
+    end
+    self.Img_GamePad:SetBrushResourceObject(Img)
   end
-  if not IsValid(Img) then
-    DebugPrint("缺少图片资源: ImgPath = ", ImgPath, ImgShortPath, ImgLongPath)
-    return
-  end
-  self.Img_GamePad:SetBrushResourceObject(Img)
 end
 
 function Common_Button_Reward_PC:SetDefaultGamePadImg(ImgShortPath)
@@ -81,12 +102,41 @@ function Common_Button_Reward_PC:SetDefaultGamePadImg(ImgShortPath)
 end
 
 function Common_Button_Reward_PC:SetGamePadVisibility(Op)
-  self.Img_GamePad:SetVisibility(Op)
+  if self.Key_GamePad then
+    self.Key_GamePad:SetVisibility(Op)
+  else
+    self.Img_GamePad:SetVisibility(Op)
+  end
 end
 
 function Common_Button_Reward_PC:SetGamePadIconVisible(IsVisible)
-  self.IsGamePadIconVisible = IsVisible
+  self.bGamepadIconVisible = IsVisible
   self:RefreshIconAndGamePadVisibility()
+end
+
+function Common_Button_Reward_PC:SetPCImg(ImgShortPath, ImgLongPath)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" or not self.Key_PC then
+    return
+  end
+  self.Key_PC:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Text",
+        ImgShortPath = ImgShortPath,
+        ImgLongPath = ImgLongPath
+      }
+    },
+    bLongPress = self:GetIsLongPressButton(),
+    bButton = self:GetIsLongPressButton()
+  })
+  self:SetKey_PCVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function Common_Button_Reward_PC:SetKey_PCVisibility(Op)
+  if not self.Key_PC then
+    return
+  end
+  self.Key_PC:SetVisibility(Op)
 end
 
 return Common_Button_Reward_PC

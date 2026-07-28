@@ -110,12 +110,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104110,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "QuestPoint_Bainianchun",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -304,6 +304,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -444,8 +445,7 @@ return {
               SoundPath = "event:/ambience/common/pad_noise_rain_plain_heavy",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104110},
+              RelatedRegionId = {104110},
               bStoreToServer = false
             }
           },
@@ -495,8 +495,7 @@ return {
               SoundPath = "event:/bgm/mute",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104110},
+              RelatedRegionId = {104110},
               bStoreToServer = false
             }
           },
@@ -512,8 +511,7 @@ return {
               SoundPath = "event:/bgm/1_1/0101_story_zhuyinzhizai_low",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104110},
+              RelatedRegionId = {104110},
               bStoreToServer = false
             }
           }
@@ -547,12 +545,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104105,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "SpawnPoint_FilToAlt",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 0
       },
       questNodeData = {
@@ -981,8 +979,7 @@ return {
               SoundPath = "event:/ambience/common/pad_noise_rain_plain_heavy",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104105},
+              RelatedRegionId = {104105},
               bStoreToServer = false
             }
           },
@@ -1048,12 +1045,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 105701,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "RegionPoint_Alt_01",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1323,6 +1320,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1390,6 +1388,11 @@ return {
                   TalkActorType = "Npc",
                   TalkActorId = 210104,
                   TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 210097,
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
@@ -1423,6 +1426,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1430,6 +1434,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1488,8 +1493,7 @@ return {
               SoundPath = "event:/bgm/1_1/0126_cs_reach_heilongjitan",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {105701},
+              RelatedRegionId = {105701},
               bStoreToServer = false
             }
           },
@@ -1541,12 +1545,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 105701,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "RegionPoint_Alt_01",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1646,6 +1650,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1706,6 +1711,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1713,6 +1719,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1763,6 +1770,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1775,6 +1783,11 @@ return {
                   TalkActorType = "Player",
                   TalkActorId = 0,
                   TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100001,
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
@@ -1801,8 +1814,7 @@ return {
               SoundPath = "event:/bgm/1_1/0130_cs_heilongjitan_parkour",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {105701},
+              RelatedRegionId = {105701},
               bStoreToServer = false
             }
           },
@@ -1818,8 +1830,7 @@ return {
               SoundPath = "event:/bgm/1_1/0102_story_dafengjiuzhang",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {105701},
+              RelatedRegionId = {105701},
               bStoreToServer = false
             }
           },
@@ -1864,12 +1875,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 105701,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "RegionPoint_Alt_01",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2039,6 +2050,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2046,6 +2058,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2077,8 +2090,7 @@ return {
               SoundPath = "event:/bgm/1_1/0122_boss_heilong_intro",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {105701},
+              RelatedRegionId = {105701},
               bStoreToServer = false
             }
           }
@@ -2112,12 +2124,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 105701,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "RegionPoint_Alt_01",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2268,7 +2280,7 @@ return {
               bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1201/120106/12022301.12022301'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "East01_FixSimple_59",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -2289,6 +2301,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2371,6 +2384,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2443,6 +2457,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2503,6 +2518,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2510,6 +2526,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2548,6 +2565,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2555,6 +2573,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2593,6 +2612,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2600,6 +2620,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2716,7 +2737,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {105701},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -2733,7 +2753,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {105701},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -2750,7 +2769,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {105701},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -2767,7 +2785,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {105701},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -2795,7 +2812,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {105701},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           }
@@ -2836,12 +2852,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104105,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "QuestPoint_12010608",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2964,6 +2980,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2971,6 +2988,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3027,6 +3045,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3034,6 +3053,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3079,8 +3099,7 @@ return {
               SoundPath = "event:/bgm/mute",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104105},
+              RelatedRegionId = {104105},
               bStoreToServer = false
             }
           },
@@ -3139,12 +3158,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 105701,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "RegionPoint_Alt_01",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {

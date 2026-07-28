@@ -21,7 +21,7 @@ function M:InitUI(Index, bSelected, Owner)
   if not PlanData then
     return
   end
-  local DefaultPlanName = GText("UI_CustomLayout_DefaultPlanName" .. tostring(math.ceil(self.Index / 2)))
+  local DefaultPlanName = Avatar:GetDefaultMobileHudPlanName(self.Index)
   local PlanName = PlanData.HudPlanName or DefaultPlanName
   self.PlanName = PlanName
   self.TextContent:SetText(PlanName)

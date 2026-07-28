@@ -341,6 +341,17 @@ return ReadOnly("AttrConfig", {
     IsPercent = true,
     Name = "HitMontageRate_Name"
   },
+  HyperTriggerRate = {
+    AttrDesc = "Attr_DESC_HyperTriggerRate",
+    Id = "HyperTriggerRate",
+    IsPercent = true,
+    Name = "Attr_HyperTriggerRate_Name",
+    ShowInInspector = true,
+    SortIndex1 = 14.1,
+    SortIndex2 = 14.1,
+    SortIndex3 = 14.1,
+    SortIndex4 = 14.1
+  },
   JumpVelocityModifier = {
     Id = "JumpVelocityModifier",
     IsPercent = true,

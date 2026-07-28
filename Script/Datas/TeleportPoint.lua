@@ -4335,6 +4335,99 @@ return ReadOnly("TeleportPoint", {
     TeleportPointSubRegion = 106001,
     UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
   },
+  [1700] = {
+    Id = 1700,
+    IsDefault = 1,
+    MechanismPos = {4740, -4868},
+    MechanismStateId = 901002,
+    StaticId = 292780001,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107001_1",
+    TeleportPointPos = 1,
+    TeleportPointSubRegion = 107001,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1701] = {
+    Id = 1701,
+    MechanismPos = {7613, -39897},
+    MechanismStateId = 901002,
+    StaticId = 292780002,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107001_2",
+    TeleportPointPos = 2,
+    TeleportPointSubRegion = 107001,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1702] = {
+    Id = 1702,
+    MechanismPos = {-21821, -76669},
+    MechanismStateId = 901002,
+    StaticId = 292780003,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107001_3",
+    TeleportPointPos = 3,
+    TeleportPointSubRegion = 107001,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1703] = {
+    Id = 1703,
+    IsDefault = 1,
+    MechanismPos = {-49721, -51971},
+    MechanismStateId = 901002,
+    StaticId = 292790001,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107101_1",
+    TeleportPointPos = 2,
+    TeleportPointSubRegion = 107101,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1704] = {
+    Id = 1704,
+    MechanismPos = {-53967, -19890},
+    MechanismStateId = 901002,
+    StaticId = 292790002,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107101_2",
+    TeleportPointPos = 3,
+    TeleportPointSubRegion = 107101,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1705] = {
+    Id = 1705,
+    MechanismPos = {-20624, -30522},
+    MechanismStateId = 901002,
+    StaticId = 292790003,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107101_3",
+    TeleportPointPos = 1,
+    TeleportPointSubRegion = 107101,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1706] = {
+    Id = 1706,
+    IsDefault = 1,
+    MechanismPos = {-76640, -27516},
+    MechanismStateId = 901002,
+    StaticId = 292800001,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_1",
+    TeleportPointPos = 1,
+    TeleportPointSubRegion = 107201,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1707] = {
+    Id = 1707,
+    MechanismPos = {-33285, -14447},
+    MechanismStateId = 901002,
+    StaticId = 292800002,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_2",
+    TeleportPointPos = 2,
+    TeleportPointSubRegion = 107201,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1708] = {
+    Id = 1708,
+    MechanismPos = {6900, -74208},
+    MechanismStateId = 901002,
+    StaticId = 292800003,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_3",
+    TeleportPointPos = 3,
+    TeleportPointSubRegion = 107201,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
   [8000] = {
     Id = 8000,
     MechanismPos = {38273, 6442},

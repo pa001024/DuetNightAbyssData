@@ -1,11 +1,16 @@
 require("UnLua")
 local M = Class("BluePrints.UI.UI_PC.Common.Common_Button.Common_Button_PC")
+M._components = {
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
+}
 
 function M:Construct()
   M.Super.Construct(self, self.Btn)
+  self:AddInputMethodChangedListen()
+  self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
 end
 
-function M:SetKeyInfo(Key, KeyText)
+function M:SetKeyInfo(Key, KeyText, GamepadKey)
   self.Key:CreateCommonKey({
     KeyInfoList = {
       {Type = "Text", Text = Key}
@@ -14,7 +19,7 @@ function M:SetKeyInfo(Key, KeyText)
   })
   self.Key_Controller:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Y"}
+      {Type = "Img", ImgShortPath = GamepadKey}
     }
   })
 end
@@ -54,8 +59,10 @@ function M:StopLoopRemind()
   })
 end
 
-function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
-  self.WS_Type:SetActiveWidgetIndex(CurInputType == ECommonInputType.Gamepad and 1 or 0)
+function M:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName)
+  if self.WS_Type then
+    self.WS_Type:SetActiveWidgetIndex(CurInputType == ECommonInputType.Gamepad and 1 or 0)
+  end
 end
 
 function M:OnRemindAnimationFinished()
@@ -67,4 +74,5 @@ function M:OnBtnClicked()
   M.Super.OnBtnClicked(self)
 end
 
+AssembleComponents(M)
 return M

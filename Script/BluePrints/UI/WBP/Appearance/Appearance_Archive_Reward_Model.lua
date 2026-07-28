@@ -20,7 +20,9 @@ function AppearanceArchiveRewardModel:SetRewardParams(Type)
   end
   local SortedArchiveInfo = {}
   for _, Data in pairs(DataMgr.AppearanceCollect) do
-    table.insert(SortedArchiveInfo, Data)
+    if not Data.ExcludeCollect then
+      table.insert(SortedArchiveInfo, Data)
+    end
   end
   table.sort(SortedArchiveInfo, function(a, b)
     return a.Entrance < b.Entrance
@@ -150,6 +152,9 @@ end
 
 function AppearanceArchiveRewardModel:CheckHaveRewardToGet(Type)
   local ArchiveInfo = DataMgr.AppearanceCollect[Type]
+  if ArchiveInfo.ExcludeCollect then
+    return false
+  end
   local Avatar = GWorld:GetAvatar()
   local Archive = Avatar.AppearanceCollects[ArchiveInfo.Entrance]
   local CurrentNum = NumberModel:GetCurrentNumber(ArchiveInfo.Entrance)

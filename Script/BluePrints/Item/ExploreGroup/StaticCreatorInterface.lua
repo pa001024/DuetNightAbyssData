@@ -1,6 +1,7 @@
 local Component = {}
 local BattleUtils = require("Utils.BattleUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local QuestStateType = {Doing = 1, Success = 2}
 local TalkStateType = {
   Compelete = 0,
@@ -88,19 +89,19 @@ function Component:TryGetFlexibleActiveResult()
       end
     elseif 1 == TempFlexibleMap[i].NpcActiveArray.EditableStructType then
       if TalkState == TalkStateType.Compelete then
-        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
           return true, IsActive
         end
       elseif TalkState == TalkStateType.UnCompelete then
-        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
           return true, IsActive
         end
       elseif TalkState == TalkStateType.CheckSuccess then
-        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
           return true, IsActive
         end
       else
-        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
           return true, IsActive
         else
         end
@@ -170,19 +171,19 @@ function Component:TryGetFlexibleActiveResultOptimized()
       local TalkState = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.ImpressionTalk.TalkQuestState
       local IsActive = self.ReverseFlexibleActiveInactive:FindRef(i).IsActive
       if TalkState == TalkStateType.Compelete then
-        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
           return true, IsActive
         end
       elseif TalkState == TalkStateType.UnCompelete then
-        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
           return true, IsActive
         end
       elseif TalkState == TalkStateType.CheckSuccess then
-        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
           return true, IsActive
         end
       else
-        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
           return true, IsActive
         else
         end
@@ -262,7 +263,13 @@ function Component:RealActiveStaticCreator(ExtraInfo, bForceSync)
     if ExtraInfo.DungeonState then
       Context:AddLuaTable("DungeonState", ExtraInfo.DungeonState)
     end
+    if ExtraInfo.ServerUniqueId then
+      Context.StrParams:Add("ServerUniqueId", tostring(ExtraInfo.ServerUniqueId))
+    end
     Context:AddLuaTable("ExtraInfo", ExtraInfo)
+  end
+  if self.QuestId and self.QuestId > 0 then
+    Context.IntParams:Add("QuestId", self.QuestId)
   end
   if not self.IsFullRegionStore and self:IsActorNeedFullRegionStore(self.UnitType, self.UnitId) then
     GWorld.logger.error("需要勾选全区域存储的Actor没有勾选 " .. "UnitType = " .. Context.UnitType .. "; UnitId = " .. Context.UnitId .. "; StaticCreatorId = " .. self.StaticCreatorId .. "; Map = " .. self:GetWorld():GetName())
@@ -499,22 +506,22 @@ function Component:SetNpcShowHideByFlexible_Lua(Unit)
       end
     elseif 1 == TempFlexibleMap[i].NpcArray.EditableStructType then
       if TalkState == TalkStateType.Compelete then
-        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       elseif TalkState == TalkStateType.UnCompelete then
-        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       elseif TalkState == TalkStateType.CheckSuccess then
-        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       else
-        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         else
@@ -574,7 +581,7 @@ function Component:FlexibleCheckVarFunc(FunctionName, VarName, ParamName, ParamV
   elseif 1 == Ret then
     return true
   end
-  return true
+  return false
 end
 
 function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
@@ -638,22 +645,22 @@ function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
       end
     elseif 1 == TempFlexibleMap[i].NpcArray.EditableStructType then
       if TalkState == TalkStateType.Compelete then
-        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       elseif TalkState == TalkStateType.UnCompelete then
-        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       elseif TalkState == TalkStateType.CheckSuccess then
-        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       else
-        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         else

@@ -1,8 +1,9 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 
 function Component:InitComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitMark)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitMark)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
@@ -28,7 +29,7 @@ end
 function Component:OpenMark(Mark, Position)
   if not self.MarkPanel then
     self.MarkPanel = NewObject(self.MarkPanelClass, self)
-    self.MainMap.Mark:AddChild(self.MarkPanel)
+    self.ModeComp:AddChildToMark(self.MarkPanel)
     self.MarkPanel.Parent = self
     self.MarkPanel.Btn_Confirm:TryOverrideSoundFunc(self.OnTraceSound)
     self.MarkPanel.Btn_Track:TryOverrideSoundFunc(self.OnTraceSound)

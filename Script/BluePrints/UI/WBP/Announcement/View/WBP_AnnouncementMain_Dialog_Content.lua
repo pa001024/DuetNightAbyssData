@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local UIUtils = require("Utils.UIUtils")
 local AnnounceModel = AnnounceController:GetModel()
 local Utils = require("Utils")
@@ -163,7 +164,7 @@ function M:PreInitContent(Params, PopupData, Owner)
   
   function self.Owner.CloseBtnCallbackFunction()
     AudioManager(self):SetEventSoundParam(self, "AnnouncementMainOpen", {ToEnd = 1})
-    ForceStopAsyncTask(self, "UpdateAnnoucementTask")
+    CoroutineUtils.ForceStopAsyncTask(self, "UpdateAnnoucementTask")
     self:StopAllAnimations()
     self:PlayAnimation(self.Out)
     self.WebContent:LoadUrl("about:blank")
@@ -210,8 +211,8 @@ end
 
 function M:UpdateAnnoucement()
   if self.bNeedRequest then
-    ForceStopAsyncTask(self, "UpdateAnnoucementTask")
-    RunAsyncTask(self, "UpdateAnnoucementTask", function(Coroutine)
+    CoroutineUtils.ForceStopAsyncTask(self, "UpdateAnnoucementTask")
+    CoroutineUtils.RunAsyncTask(self, "UpdateAnnoucementTask", function(Coroutine)
       AnnounceController:GetAnnouncementDataAsync(self.ShowTag, Coroutine, self.HostId)
       self:RefreshAllAnnouncement()
     end)

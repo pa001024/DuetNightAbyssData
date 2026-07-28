@@ -1670,7 +1670,7 @@ function CommonUtils.IsOpenVersion(OpenVersionId)
   end
 end
 
-function CommonUtils.IsCurrentVersionRealease(TableName, Id)
+function CommonUtils.IsCurrentVersionRelease(TableName, Id)
   local Data = DataMgr[TableName] and DataMgr[TableName][Id]
   if not Data then
     return
@@ -1681,7 +1681,7 @@ function CommonUtils.IsCurrentVersionRealease(TableName, Id)
   return DataMgr.GlobalConstant.CurrentVersion.ConstantValue >= Data.ReleaseVersion
 end
 
-function CommonUtils.IsCurrentVersionNewRealease(TableName, Id)
+function CommonUtils.IsCurrentVersionNewRelease(TableName, Id)
   local Data = DataMgr[TableName] and DataMgr[TableName][Id]
   if not Data then
     return
@@ -1692,7 +1692,7 @@ function CommonUtils.IsCurrentVersionNewRealease(TableName, Id)
   return DataMgr.GlobalConstant.CurrentVersion.ConstantValue == Data.ReleaseVersion
 end
 
-function CommonUtils.IsCurrentTimeRealease(TableName, Id)
+function CommonUtils.IsCurrentTimeRelease(TableName, Id)
   local Data = DataMgr[TableName] and DataMgr[TableName][Id]
   if not Data then
     return
@@ -1838,6 +1838,65 @@ function CommonUtils.FormatNumInFrench(ret)
   end
   DebugPrint("CommonUtils.FormatNumInFrench After", ret)
   return ret
+end
+
+local function GetRaceLotteryTodayTimeStamp(ConstantKey, NowTime)
+  local ConstantValue = DataMgr.RaceLotteryConstant[ConstantKey] and DataMgr.RaceLotteryConstant[ConstantKey].ConstantValue
+  local DailySecond = tonumber(ConstantValue)
+  if nil == DailySecond then
+    return nil
+  end
+  NowTime = NowTime or TimeUtils.NowTime()
+  local Year, Month, Day = TimeUtils.TimestampToData(NowTime)
+  return TimeUtils.DataToTimestamp(Year, Month, Day, 0, 0, 0) + math.floor(DailySecond * 24 * 3600 + 0.5)
+end
+
+function CommonUtils.IsRaceLotterySelectPlayerTime()
+  local NowTime = TimeUtils.NowTime()
+  local RaceLotteryStartTime = GetRaceLotteryTodayTimeStamp("RaceLotteryStartTime", NowTime)
+  local RaceLotteryEndTime = GetRaceLotteryTodayTimeStamp("RaceLotteryEndTime", NowTime)
+  if nil == RaceLotteryStartTime or nil == RaceLotteryEndTime then
+    return false
+  end
+  return NowTime >= RaceLotteryStartTime and NowTime < RaceLotteryEndTime
+end
+
+function CommonUtils.IsRaceLotteryGetRewardTime()
+  local NowTime = TimeUtils.NowTime()
+  local RaceLotteryStartTime = GetRaceLotteryTodayTimeStamp("RaceLotteryStartTime", NowTime)
+  local RaceLotteryResultTime = GetRaceLotteryTodayTimeStamp("RaceLotteryResultTime", NowTime)
+  if nil == RaceLotteryStartTime or nil == RaceLotteryResultTime then
+    return false
+  end
+  return NowTime < RaceLotteryStartTime or NowTime >= RaceLotteryResultTime
+end
+
+function CommonUtils.GetRaceLotteryAlreadyOpenDays(IsServer)
+  local EventId = tonumber(DataMgr.RaceLotteryConstant.EventId.ConstantValue)
+  local tabEventData = DataMgr.EventMain[EventId]
+  if nil == tabEventData then
+    return -1
+  end
+  local openDays = 0
+  if IsServer then
+    openDays = TimeUtils.GetIntervalDay(TimeUtils.EastEightToLocalTimestamp(tabEventData.EventStartTime), TimeUtils.NowTime())
+  else
+    openDays = TimeUtils.GetIntervalDay(tabEventData.EventStartTime, TimeUtils.NowTime())
+  end
+  return openDays + 1
+end
+
+function CommonUtils.NormalizeInt(Value, DefaultValue, MinValue, MaxValue)
+  Value = tonumber(Value)
+  Value = Value or DefaultValue or 0
+  Value = math.floor(Value)
+  if nil ~= MinValue and MinValue > Value then
+    Value = MinValue
+  end
+  if nil ~= MaxValue and MaxValue < Value then
+    Value = MaxValue
+  end
+  return Value
 end
 
 return CommonUtils

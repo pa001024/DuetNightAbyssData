@@ -32,7 +32,6 @@ function M:OnListItemObjectSet(Content)
   end
   self.List_Probability:ClearChildren()
   for _, ItemData in ipairs(Content.ItemLst) do
-    local Probability = math.min(math.max(ItemData.Probability / GachaCommon.GACHA_PROBABILITY_BASE, 0), 1) * 100
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     local Type = GachaCommon.GachaItemTypeMap[ItemData.Type]
     Content.Id = ItemData.Id

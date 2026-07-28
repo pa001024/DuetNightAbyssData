@@ -23,7 +23,7 @@ end
 function M:Refresh(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecondaryResource, CurrentWeapon)
   CurrentWeaponSp = CurrentWeaponSp or 0
   MaxWeaponSp = MaxWeaponSp or 0
-  CurrentSecondaryCount = CurrentSecondaryCount or 0
+  CurrentSecondaryCount = math.max(0, CurrentSecondaryCount or 0)
   HasSecondaryResource = HasSecondaryResource or false
   local IsTalentActive = self:CalcTalentActive(CurrentWeapon)
   self:UpdateNumberDisplay(CurrentWeaponSp, CurrentSecondaryCount, HasSecondaryResource)
@@ -116,9 +116,6 @@ function M:HandleStateAndAnim(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCoun
   if CurrentWeaponSp > self.LastWeaponSp and CurrentWeaponSp < MaxWeaponSp then
     self:PlayAnimationForward(self.Prigress_Add)
   end
-  if HasSecondaryResource and CurrentSecondaryCount > self.LastSecondaryCount and not self:IsAnimationPlaying(self.Progress_Num_Add) then
-    self:PlayAnimationForward(self.Progress_Num_Add)
-  end
 end
 
 function M:CalcDisplayState(CurrentWeaponSp, CurrentSecondaryCount, HasSecondaryResource, IsTalentActive)
@@ -143,6 +140,7 @@ function M:HandleFullState(CurrentWeaponSp, MaxWeaponSp)
   if IsFull and not self.bInFullState then
     self.bInFullState = true
     self:PlayAnimationForward(self.Progress_Full_In)
+    self:PlayAnimationForward(self.Progress_Num_Add)
     self:BindToAnimationFinished(self.Progress_Full_In, {
       self,
       self.OnFullInFinished

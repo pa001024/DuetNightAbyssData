@@ -23,6 +23,11 @@ return ReadOnly("SpecialLoading", {
     LoadingId = 103001,
     Region = {From = "EX", To = "Main"}
   },
+  [3001] = {
+    Id = 3001,
+    LoadingId = 300101,
+    Region = {SubId = 300101}
+  },
   [10001] = {
     Id = 10001,
     LoadingId = 10410801,
@@ -242,5 +247,13 @@ return ReadOnly("SpecialLoading", {
     Id = 10044,
     LoadingId = 10600103,
     Region = {SpawnPoint = 10, SubId = 106001}
+  },
+  [10045] = {
+    Id = 10045,
+    LoadingId = 10600104,
+    Region = {SpawnPoint = 22, SubId = 106001},
+    TriggerCondition = {
+      ActivityRacing = {}
+    }
   }
 })

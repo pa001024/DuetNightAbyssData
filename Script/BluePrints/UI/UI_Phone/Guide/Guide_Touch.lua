@@ -400,7 +400,16 @@ function Guide_Touch:GetUIComp()
               self:ErrorAndFinish(path)
             end
           end
-          Widget = self:SetWidgetParent(Widget, UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(Widget, Index), Names[1] .. ":" .. Index)
+          local Entry = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(Widget, Index)
+          if nil == Entry and Index >= 0 and Index < Widget:GetNumItems() and Widget:Cast(UE4.UEMListView) then
+            local Item = Widget:GetItemAt(Index)
+            if Item then
+              DebugPrint("guidetouch EMListView ScrollItemIntoView Index:", Index, Widget:GetName())
+              Widget:ScrollItemIntoViewWithAnim(Item, false, UE4.EDescendantScrollDestination.IntoView)
+              return false
+            end
+          end
+          Widget = self:SetWidgetParent(Widget, Entry, Names[1] .. ":" .. Index)
           if nil == Widget or false == Widget then
             self:ErrorAndFinish(path)
             return false
@@ -428,6 +437,12 @@ function Guide_Touch:GetUIComp()
               end
             end
             if Child then
+              local FunctionScrollBox = self.WidgetUIRoot and self.WidgetUIRoot.ScrollBox_Function
+              if FunctionScrollBox and not self:IsWidgetInsideScrollView(FunctionScrollBox, Child) then
+                DebugPrint("guidetouch MainUI ScrollWidgetIntoView EnterId:", Names[2], Child:GetName())
+                FunctionScrollBox:ScrollWidgetIntoView(Child, false, UE4.EDescendantScrollDestination.IntoView)
+                return false
+              end
               Widget = self:SetWidgetParent(Widget, Child, Child:GetName())
             else
               return false
@@ -480,6 +495,19 @@ function Guide_Touch:GetUIComp()
     return false
   end
   return true
+end
+
+function Guide_Touch:IsWidgetInsideScrollView(ScrollBox, Child)
+  local SGeo = ScrollBox:GetTickSpaceGeometry()
+  local CGeo = Child:GetTickSpaceGeometry()
+  local SSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(SGeo)
+  local CSize = UE4.USlateBlueprintLibrary.GetAbsoluteSize(CGeo)
+  if 0 == SSize.X or 0 == SSize.Y or 0 == CSize.X or 0 == CSize.Y then
+    return false
+  end
+  local SPos = UE4.USlateBlueprintLibrary.LocalToAbsolute(SGeo, FVector2D(0, 0))
+  local CPos = UE4.USlateBlueprintLibrary.LocalToAbsolute(CGeo, FVector2D(0, 0))
+  return CPos.X >= SPos.X - 1 and CPos.Y >= SPos.Y - 1 and CPos.X + CSize.X <= SPos.X + SSize.X + 1 and CPos.Y + CSize.Y <= SPos.Y + SSize.Y + 1
 end
 
 function Guide_Touch:GetIndexByBtnId(ListView, BtnId)

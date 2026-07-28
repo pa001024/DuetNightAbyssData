@@ -75,6 +75,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 11003
     },
+    ["172640158"] = {
+      CreatorId = 172640158,
+      UnitType = "Mechanism",
+      UnitId = 11009
+    },
     ["172640021"] = {
       CreatorId = 172640021,
       UnitType = "Mechanism",
@@ -232,6 +237,11 @@ return {
     },
     ["272640140"] = {
       CreatorId = 272640140,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["272640049"] = {
+      CreatorId = 272640049,
       UnitType = "Mechanism",
       UnitId = 1
     },
@@ -654,11 +664,6 @@ return {
       CreatorId = 272640152,
       UnitType = "Phantom",
       UnitId = 0
-    },
-    ["172640158"] = {
-      CreatorId = 172640158,
-      UnitType = "Mechanism",
-      UnitId = 11009
     }
   },
   ManualItem = {
@@ -839,5 +844,6 @@ return {
     }
   },
   Explore = {},
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

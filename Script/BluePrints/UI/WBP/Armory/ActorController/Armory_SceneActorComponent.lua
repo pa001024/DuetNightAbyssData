@@ -89,6 +89,11 @@ function M:TryLoadPreviewScene(SceneType)
     self.PreviewSceneTrans = TargetTrans
     local PreviewLevelName = "PreviewLevel" .. self.EPreviewSceneType
     self.IsPreviewSceneLoading = true
+    local UnitBudgetMgr = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UE4.UUnitBudgetAllocatorSubsystem)
+    if UnitBudgetMgr then
+      self.EnableUnitHiddenOptimizationBeforeLoadScene = UnitBudgetMgr.bEnableUnitHiddenOptimization
+      UnitBudgetMgr.bEnableUnitHiddenOptimization = false
+    end
     if not IsPreviewSceneHasRef(PreviewLevelName) then
       local bSuccess = WorldLoader:LoadPreviewLevel(PreviewLevelName, Path, function()
         self.ViewUI:AddTimer(0.1, function()
@@ -125,6 +130,11 @@ function M:UnloadPreviewScene()
     self.bPreviewSceneLoaded = false
     DecreacePreviewSceneRefCount(PreviewLevelName)
     if not IsPreviewSceneHasRef(PreviewLevelName) then
+      local UnitBudgetMgr = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UE4.UUnitBudgetAllocatorSubsystem)
+      if UnitBudgetMgr then
+        UnitBudgetMgr.bEnableUnitHiddenOptimization = self.EnableUnitHiddenOptimizationBeforeLoadScene
+        self.EnableUnitHiddenOptimizationBeforeLoadScene = nil
+      end
       local GameMode = UE4.UGameplayStatics.GetGameMode(self.ViewUI)
       local WorldLoader = GameMode:GetLevelLoader()
       if WorldLoader then

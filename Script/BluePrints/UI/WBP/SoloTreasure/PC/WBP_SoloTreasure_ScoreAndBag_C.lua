@@ -78,6 +78,14 @@ function WBP_SoloTreasure_HudScore_C:InitBtn()
   Content.BtnId = 2
   self.Btn_Bag.CurContent = Content
   self.Btn_Bag:LoadImage()
+  local VSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.Btn_Bag.VerticalBox_0)
+  if VSlot then
+    local Anchors = FAnchors()
+    VSlot:SetAlignment(FVector2D(1, 0))
+    Anchors.Minimum = FVector2D(1, 1)
+    Anchors.Maximum = FVector2D(1, 1)
+    VSlot:SetAnchors(Anchors)
+  end
   self.Btn_Bag:RebindClickEvent(self, self.OpenBag)
 end
 

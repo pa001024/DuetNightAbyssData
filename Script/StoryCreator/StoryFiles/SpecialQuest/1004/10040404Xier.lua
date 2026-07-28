@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -268,6 +268,12 @@ return {
             startPort = "QuestStart",
             endQuest = "17795207159622903847",
             endPort = "In"
+          },
+          {
+            startQuest = "17787400372049740485",
+            startPort = "Out",
+            endQuest = "17833460200721059572",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -343,7 +349,8 @@ return {
               LongPressTime = 3,
               MontageName = "Interactive_Pick_Montage",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["17787400372049740483"] = {
@@ -651,9 +658,19 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0167_story_fuluo_theme.0167_story_fuluo_theme'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106001},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
+            }
+          },
+          ["17833460200721059572"] = {
+            key = "17833460200721059572",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1264.5597826086955, y = 1200.758295194508},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

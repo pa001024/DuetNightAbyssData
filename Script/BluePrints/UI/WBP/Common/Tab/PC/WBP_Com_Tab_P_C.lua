@@ -642,6 +642,10 @@ function M:OnTabSwitchOn(TabWidget, CalledFromInputType)
   if self.EventTabSelected then
     self.EventTabSelected(self.ObjTabSelected, TabWidget, self.Tabs[TabWidget.Idx])
   end
+  local Chat = self.Group_Chat:GetChildAt(0)
+  if Chat then
+    Chat:NotInvalidationBoxCacheForAWhile(self.OwnerPanel)
+  end
 end
 
 function M:OnTabHoverOnOrOff(TabWidget, bHover)

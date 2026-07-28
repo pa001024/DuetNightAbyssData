@@ -149,5 +149,33 @@
     "access": [
       "프리즘 상점 기간 한정 교환"
     ]
+  },
+  {
+    "id": 1011,
+    "name": "실사 검은 폐안·스카이 블루",
+    "des": "공상 사부가 개발한 기추 탈것. 진짜 검은 폐안과 똑같이 움직인다. 만약 이걸 타고 연진 나루터를 활보한다면, 적지 않은 행인들의 이목을 끌 것이다.",
+    "icon": "Mounts_0012",
+    "resourceIcon": "Icon_Mounts_0012",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49988,
+    "fly": 1,
+    "access": [
+      "상점"
+    ]
+  },
+  {
+    "id": 1012,
+    "name": "칼날 위의 기사·스카이 블루",
+    "des": "불멸은 사라질 것이다, 빗속에 사라지는 눈물처럼.",
+    "icon": "Mounts_0013",
+    "resourceIcon": "Icon_Mounts_0013",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49987,
+    "fly": 1,
+    "access": [
+      "상점"
+    ]
   }
 ]

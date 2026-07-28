@@ -14,12 +14,14 @@ function M:Construct()
 end
 
 function M:OnPressed()
+  if self.OwnerLeftBtn and self.OwnerLeftBtn.bPanelOpen then
+    return
+  end
   local Player = self.OwnerPanel and self.OwnerPanel.OwnerPlayer
   if not IsValid(Player) then
     return
   end
-  local bCurrentEnabled = Player:IsAutoShootEnabled()
-  Player:SetAutoShootEnabled(not bCurrentEnabled)
+  Player:SetAutoShootEnabled(not Player:IsAutoShootEnabled())
 end
 
 function M:OnAutoShootStateChanged(Player, bEnabled, bIsAutoOff)
@@ -28,8 +30,7 @@ function M:OnAutoShootStateChanged(Player, bEnabled, bIsAutoOff)
   end
   self.IsAutoShootOn = bEnabled
   if bEnabled then
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
-    UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_HUDToast_AutoShot"))
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Using)
   else
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end

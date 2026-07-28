@@ -3,6 +3,7 @@ local Component = {}
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local IndicatorRangeScalarChangeValue = 10
 
 function Component:InitComponentCoroutine()
 end
@@ -30,8 +31,8 @@ function Component:ClearData()
       if IsValid(v) then
         self:RemoveTrack(v)
         v:RemoveFromParent()
-        if self.MainMap.TracePanel:HasChild(v) then
-          self.MainMap.TracePanel:RemoveChild(v)
+        if self:HostTracePanelHasChild(v) then
+          self:HostTracePanelRemoveChild(v)
         end
         if self.Panel_Gamer:HasChild(v) then
           self.Panel_Gamer:RemoveChild(v)
@@ -138,8 +139,8 @@ function Component:UpdateMiniMapIndicatorsByStoryNode(InUIName, InUIType, OpType
     if IsValid(DelWidget) and DelWidget then
       self:AddOrDeleteMissionIndicatorArray(false, DelWidget)
       self:RemoveTrack(DelWidget)
-      if IsValid(self.MainMap.TracePanel) and self.MainMap.TracePanel:HasChild(DelWidget) then
-        self.MainMap.TracePanel:RemoveChild(DelWidget)
+      if self:HostTracePanelHasChild(DelWidget) then
+        self:HostTracePanelRemoveChild(DelWidget)
       end
       if IsValid(self.Panel_Gamer) and self.Panel_Gamer:HasChild(DelWidget) then
         self.Panel_Gamer:RemoveChild(DelWidget)
@@ -155,8 +156,8 @@ function Component:UpdateMiniMapIndicatorsByStoryNode(InUIName, InUIType, OpType
     if IsValid(DelWidget) and DelWidget then
       self:AddOrDeleteMissionIndicatorArray(false, DelWidget)
       self:RemoveTrack(DelWidget)
-      if IsValid(self.MainMap.TracePanel) and self.MainMap.TracePanel:HasChild(DelWidget) then
-        self.MainMap.TracePanel:RemoveChild(DelWidget)
+      if self:HostTracePanelHasChild(DelWidget) then
+        self:HostTracePanelRemoveChild(DelWidget)
       end
       if IsValid(self.Panel_Gamer) and self.Panel_Gamer:HasChild(DelWidget) then
         self.Panel_Gamer:RemoveChild(DelWidget)
@@ -173,8 +174,8 @@ function Component:UpdateMiniMapIndicatorsByStoryNode(InUIName, InUIType, OpType
         if IsValid(v) then
           self:AddOrDeleteMissionIndicatorArray(false, v)
           self:RemoveTrack(v)
-          if IsValid(self.MainMap.TracePanel) and self.MainMap.TracePanel:HasChild(v) then
-            self.MainMap.TracePanel:RemoveChild(v)
+          if self:HostTracePanelHasChild(v) then
+            self:HostTracePanelRemoveChild(v)
           end
           if IsValid(self.Panel_Gamer) and self.Panel_Gamer:HasChild(v) then
             self.Panel_Gamer:RemoveChild(v)
@@ -235,8 +236,8 @@ function Component:ChangeMissionIndicatorLocationtoSmartPointLoc(InUIName, InWid
   if IsValid(DelWidget) and DelWidget then
     self:AddOrDeleteMissionIndicatorArray(false, DelWidget)
     self:RemoveTrack(DelWidget)
-    if IsValid(self.MainMap.TracePanel) and self.MainMap.TracePanel:HasChild(DelWidget) then
-      self.MainMap.TracePanel:RemoveChild(DelWidget)
+    if self:HostTracePanelHasChild(DelWidget) then
+      self:HostTracePanelRemoveChild(DelWidget)
     end
     if IsValid(self.Panel_Gamer) and self.Panel_Gamer:HasChild(DelWidget) then
       self.Panel_Gamer:RemoveChild(DelWidget)
@@ -340,10 +341,11 @@ function Component:AddTaskMiniMapIndicator(InUIName, Widget)
     if IsValid(self.Panel_Gamer) then
       self.Panel_Gamer:AddChild(Widget)
     end
-    Widget.RenderTransform.Scale.X = self.MainMap.TracePanel.RenderTransform.Scale.X * 0.75 * self.MiniMapScale
-    Widget.RenderTransform.Scale.Y = self.MainMap.TracePanel.RenderTransform.Scale.Y * 0.75 * self.MiniMapScale
-  elseif IsValid(self.MainMap.TracePanel) then
-    self.MainMap.TracePanel:AddChild(Widget)
+    local TraceScaleX, TraceScaleY = self:HostGetTracePanelScaleXY()
+    Widget.RenderTransform.Scale.X = TraceScaleX * 0.75 * self.MiniMapScale
+    Widget.RenderTransform.Scale.Y = TraceScaleY * 0.75 * self.MiniMapScale
+  elseif self:HostIsTracePanelValid() then
+    self:HostTracePanelAddChild(Widget)
   end
   self:SetIndicatorRangeMaterial(Widget, TrackingQuestChainId, false)
   self:SetIndicatorLoopColor(Widget, TrackingQuestChainId)
@@ -372,10 +374,11 @@ function Component:AddTaskMiniMapIndicator(InUIName, Widget)
   if nil ~= Location.R and Location.R > 0 then
     Widget.Img_GuidePoint_Icon:SetVisibility(UE4.ESlateVisibility.Collapsed)
     Widget.Img_Range:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    Widget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale, Location.R * 2 * self.Scale))
+    Widget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue, Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue))
+    Widget.Img_Range:GetDynamicMaterial():SetScalarParameterValue("Size", 1 / IndicatorRangeScalarChangeValue)
     Widget:ClearAllFunc()
   else
-    local arrow = self.MainMap:NewPointArrow()
+    local arrow = self:HostNewPointArrow()
     if TargetActor.IsNPC and TargetActor:IsNPC() then
       self:AddOrDeleteMissionIndicatorArray(true, Widget)
       self:AddTrack(Widget, arrow, TargetActor)
@@ -438,8 +441,8 @@ function Component:AddSpecialSideMiniMapIndicator(InUIName, Widget)
   if IconTexture then
     Widget.Img_GuidePoint_Icon:SetBrushResourceObject(IconTexture)
   end
-  if IsValid(self.MainMap.TracePanel) then
-    self.MainMap.TracePanel:AddChild(Widget)
+  if self:HostIsTracePanelValid() then
+    self:HostTracePanelAddChild(Widget)
   end
   local GuidePointSlot = Widget.Slot
   
@@ -463,7 +466,7 @@ function Component:AddSpecialSideMiniMapIndicator(InUIName, Widget)
   self:ChangeMiniMapIndicatorsFloorStyle(Widget, InUIName)
   local LocInUI = self:TransformWorldLocToUILoc(Location.X, Location.Y)
   Widget:SetRenderTranslation(LocInUI)
-  local arrow = self.MainMap:NewPointArrow()
+  local arrow = self:HostNewPointArrow()
   if TargetActor.IsNPC and TargetActor:IsNPC() then
     self:AddOrDeleteMissionIndicatorArray(true, Widget)
     self:AddTrack(Widget, arrow, TargetActor)
@@ -615,10 +618,11 @@ function Component:AddDynamicMiniMapIndicator(InUIName, Widget)
     if IsValid(self.Panel_Gamer) then
       self.Panel_Gamer:AddChild(Widget)
     end
-    Widget.RenderTransform.Scale.X = self.MainMap.TracePanel.RenderTransform.Scale.X * 0.75 * self.MiniMapScale
-    Widget.RenderTransform.Scale.Y = self.MainMap.TracePanel.RenderTransform.Scale.Y * 0.75 * self.MiniMapScale
-  elseif IsValid(self.MainMap.TracePanel) then
-    self.MainMap.TracePanel:AddChild(Widget)
+    local TraceScaleX, TraceScaleY = self:HostGetTracePanelScaleXY()
+    Widget.RenderTransform.Scale.X = TraceScaleX * 0.75 * self.MiniMapScale
+    Widget.RenderTransform.Scale.Y = TraceScaleY * 0.75 * self.MiniMapScale
+  elseif self:HostIsTracePanelValid() then
+    self:HostTracePanelAddChild(Widget)
   end
   self:SetIndicatorRangeMaterial(Widget, nil, true)
   local GuidePointSlot = Widget.Slot
@@ -646,10 +650,11 @@ function Component:AddDynamicMiniMapIndicator(InUIName, Widget)
   if nil ~= Location.R and Location.R > 0 then
     Widget.Img_GuidePoint_Icon:SetVisibility(UE4.ESlateVisibility.Collapsed)
     Widget.Img_Range:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    Widget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale, Location.R * 2 * self.Scale))
+    Widget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue, Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue))
+    Widget.Img_Range:GetDynamicMaterial():SetScalarParameterValue("Size", 1 / IndicatorRangeScalarChangeValue)
     Widget:ClearAllFunc()
   else
-    local arrow = self.MainMap:NewPointArrow()
+    local arrow = self:HostNewPointArrow()
     if TargetActor and TargetActor.IsNPC and TargetActor:IsNPC() then
       self:AddOrDeleteMissionIndicatorArray(true, Widget)
       self:AddTrack(Widget, arrow, TargetActor)
@@ -853,7 +858,12 @@ function Component:AddSpecialSideTaskGuidePointToRegionMap()
     elseif Avatar.QuestChains[QuestChainId] and 1 == Avatar.QuestChains[QuestChainId].State and GuidePointLocData[QuestChainData.SpecialQuestDisplayName] and GuidePointLocData[QuestChainData.SpecialQuestDisplayName].SubRegionId > 0 then
       local SubRegionId = GuidePointLocData[QuestChainData.SpecialQuestDisplayName].SubRegionId
       local TaskRegionId = DataMgr.Subregion[SubRegionId].RegionId
-      if TaskRegionId == self.RegionID then
+      if SubRegionId == Const.HomeBaseSubRegionId then
+        if self.MainMap and self.MainMap.Btn_ReturnHome then
+          self.MainMap.Btn_ReturnHome.Tip_AcceptMission:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+          self.MainMap.Btn_ReturnHome.Tip_AcceptMission.Text_Accept:SetText(GText("UI_Quest_CanTakeQuest"))
+        end
+      elseif TaskRegionId == self.RegionID then
         local function CreateSpecialSideIndicatorRegionMapWidget()
           local PointPath = "/Game/UI/WBP/Map/Widget/WBP_Map_Point.WBP_Map_Point"
           
@@ -1043,7 +1053,8 @@ function Component:AddMainTaskGuidePointToRegionMap()
             if nil ~= Location.R and Location.R > 0 then
               IndicatorWidget.Img_Point:SetVisibility(UE4.ESlateVisibility.Collapsed)
               IndicatorWidget.Img_Range:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-              IndicatorWidget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale, Location.R * 2 * self.Scale))
+              IndicatorWidget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue, Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue))
+              IndicatorWidget.Img_Range:GetDynamicMaterial():SetScalarParameterValue("Size", 1 / IndicatorRangeScalarChangeValue)
               if IndicatorWidget:IsAnimationPlaying(IndicatorWidget.Loop) then
                 IndicatorWidget:StopAnimation(IndicatorWidget.Loop)
                 IndicatorWidget:ClearAllFunc()
@@ -1147,7 +1158,8 @@ function Component:AddMainTaskGuidePointToRegionMapForTrackingQuest(TargetKey)
       if nil ~= Location.R and Location.R > 0 then
         IndicatorWidget.Img_Point:SetVisibility(UE4.ESlateVisibility.Collapsed)
         IndicatorWidget.Img_Range:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-        IndicatorWidget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale, Location.R * 2 * self.Scale))
+        IndicatorWidget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue, Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue))
+        IndicatorWidget.Img_Range:GetDynamicMaterial():SetScalarParameterValue("Size", 1 / IndicatorRangeScalarChangeValue)
         if IndicatorWidget:IsAnimationPlaying(IndicatorWidget.Loop) then
           IndicatorWidget:StopAnimation(IndicatorWidget.Loop)
           IndicatorWidget:ClearAllFunc()
@@ -1272,7 +1284,8 @@ function Component:AddDynamicGuidePointToRegionMap()
             IndicatorWidget.Button_GuidePoint:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
             IndicatorWidget.Img_GuidePoint_Icon:SetVisibility(UE4.ESlateVisibility.Collapsed)
             IndicatorWidget.Img_Range:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-            IndicatorWidget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale, Location.R * 2 * self.Scale))
+            IndicatorWidget.Img_Range.Slot:SetSize(FVector2D(Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue, Location.R * 2 * self.Scale * IndicatorRangeScalarChangeValue))
+            IndicatorWidget.Img_Range:GetDynamicMaterial():SetScalarParameterValue("Size", 1 / IndicatorRangeScalarChangeValue)
             if IndicatorWidget:IsAnimationPlaying(IndicatorWidget.Loop) then
               IndicatorWidget:StopAnimation(IndicatorWidget.Loop)
               IndicatorWidget:ClearAllFunc()
@@ -1513,7 +1526,7 @@ function Component:RealChangeRangesGuideInMap(WidgetName, IsRange)
   if not IsRange then
     if IsValid(Widget) and self.Panel_Gamer:HasChild(Widget) then
       self.Panel_Gamer:RemoveChild(Widget)
-      self.MainMap.TracePanel:AddChild(Widget)
+      self:HostTracePanelAddChild(Widget)
     end
     AdjustSlot(Widget.Slot)
     Widget:SetRenderScale(FVector2D(1, 1))
@@ -1522,14 +1535,15 @@ function Component:RealChangeRangesGuideInMap(WidgetName, IsRange)
     Widget:PlayAnimation(Widget.Loop, 0, 0)
   else
     AudioManager(self):PlayUISound(self, "event:/ui/common/reach_target_region", nil, nil)
-    if IsValid(Widget) and self.MainMap.TracePanel:HasChild(Widget) then
-      self.MainMap.TracePanel:RemoveChild(Widget)
+    if IsValid(Widget) and self:HostTracePanelHasChild(Widget) then
+      self:HostTracePanelRemoveChild(Widget)
       self.Panel_Gamer:AddChild(Widget)
     end
     if IsValid(Widget) and self.Panel_Gamer:HasChild(Widget) then
       AdjustSlot(Widget.Slot)
-      Widget.RenderTransform.Scale.X = self.MainMap.TracePanel.RenderTransform.Scale.X * 0.75 * self.MiniMapScale
-      Widget.RenderTransform.Scale.Y = self.MainMap.TracePanel.RenderTransform.Scale.Y * 0.75 * self.MiniMapScale
+      local TraceScaleX, TraceScaleY = self:HostGetTracePanelScaleXY()
+      Widget.RenderTransform.Scale.X = TraceScaleX * 0.75 * self.MiniMapScale
+      Widget.RenderTransform.Scale.Y = TraceScaleY * 0.75 * self.MiniMapScale
       self:RemoveTrack(Widget)
       Widget.Img_GuidePoint_Icon:SetVisibility(UE4.ESlateVisibility.Collapsed)
       Widget.Img_Range:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -1586,14 +1600,14 @@ function Component:ShowQuestDetailInRegionMap(InQuestChainId)
     return
   end
   if self.MapTipsWidget == nil then
-    local IsHasChildren = self.MainMap.CommonMapTips:HasAnyChildren()
+    local IsHasChildren = self.ModeComp:CommonMapTipsHasAnyChildren()
     if IsHasChildren then
-      self.MainMap.CommonMapTips:ClearChildren()
+      self.ModeComp:CommonMapTipsClearChildren()
     end
     local Path = "/Game/UI/WBP/Map/Widget/WBP_Map_Task.WBP_Map_Task"
     self.MapTipsWidget = UE4.UWidgetBlueprintLibrary.Create(self, LoadClass(Path))
-    self.MapTipsWidget:Init(self.MainMap)
-    self.MainMap.CommonMapTips:AddChild(self.MapTipsWidget)
+    self.MapTipsWidget:Init(self.ModeComp:GetMapTipsHost())
+    self.ModeComp:CommonMapTipsAddChild(self.MapTipsWidget)
     self.MapTipsWidget:PlayAnimation(self.MapTipsWidget.Auto_In)
   else
     local VisibleStatue = self.MapTipsWidget:GetVisibility()

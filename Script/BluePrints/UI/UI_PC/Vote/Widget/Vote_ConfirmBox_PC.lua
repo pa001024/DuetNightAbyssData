@@ -160,7 +160,7 @@ function M:GetRewardsList(IsCurrentWave, Type, CurrentDungeonProgress, RewardId,
   Obj.CurrentDungeonProgress = CurrentDungeonProgress
   Obj.RewardId = RewardId
   Obj.DefenceWave = DefenceWave
-  Obj.IsIronSurvival = self.VoteMain.IsType_IronSurvival
+  Obj.IsIronDungeon = self.VoteMain.IsType_IronDungeon
   if "Continue" == Type then
     self.Box_Continue:AddItem(Obj)
   else

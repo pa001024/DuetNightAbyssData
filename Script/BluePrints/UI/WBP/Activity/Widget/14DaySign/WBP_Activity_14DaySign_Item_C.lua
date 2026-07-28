@@ -34,7 +34,14 @@ function M:InitReward(Index, ConfigData, ParentWidget)
   self.CanReceiveReward = ConfigData.CanReceiveReward ~= false
   self.RewardData = DataMgr.Reward[self.RewardId]
   if self.Text_Day then
-    self.Text_Day:SetText("Day")
+    local Language = CommonConst.SystemLanguage
+    local text
+    if Language == CommonConst.SystemLanguages.CN or Language == CommonConst.SystemLanguages.TC then
+      text = "Day"
+    else
+      text = GText("UI_Event_14LoginEvent_Day")
+    end
+    self.Text_Day:SetText(text)
   end
   if self.Text_DayNum then
     self.Text_DayNum:SetText(tostring(self.SourceDay))

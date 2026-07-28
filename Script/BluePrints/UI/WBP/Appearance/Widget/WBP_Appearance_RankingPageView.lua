@@ -1,6 +1,282 @@
 require("UnLua")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local CommonUtils = require("Utils.CommonUtils")
 local M = Class({})
+
+local function BuildTableKeySummary(Value)
+  if type(Value) ~= "table" then
+    return tostring(Value)
+  end
+  local Keys = {}
+  for Key, _ in pairs(Value) do
+    table.insert(Keys, tostring(Key))
+  end
+  table.sort(Keys)
+  return table.concat(Keys, ",")
+end
+
+local function BuildRankPreviewTargetSummary(RankInfo)
+  if type(RankInfo) ~= "table" then
+    return tostring(RankInfo)
+  end
+  return string.format("Uid=%s Rank=%s Nickname=%s Score=%s", tostring(RankInfo.Uid), tostring(RankInfo.RankNum), tostring(RankInfo.Nickname), tostring(RankInfo.Score))
+end
+
+local function NormalizeSlotData(Info)
+  if type(Info) ~= "table" then
+    return Info
+  end
+  local SlotData = Info.SlotData
+  if type(SlotData) ~= "table" then
+    return Info
+  end
+  local NeedConvert = false
+  for _, Value in pairs(SlotData) do
+    if type(Value) ~= "table" then
+      NeedConvert = true
+      break
+    end
+  end
+  if not NeedConvert then
+    return Info
+  end
+  local NewInfo = {}
+  for Key, Value in pairs(Info) do
+    NewInfo[Key] = Value
+  end
+  local NewSlotData = {}
+  for Key, Value in pairs(SlotData) do
+    if type(Value) == "table" then
+      NewSlotData[Key] = Value
+    elseif type(Value) == "number" then
+      NewSlotData[Key] = {
+        SlotId = Key,
+        Polarity = Value,
+        ModEid = -1
+      }
+    end
+  end
+  NewInfo.SlotData = NewSlotData
+  return NewInfo
+end
+
+local function NormalizeRankPreviewInfoList(Info)
+  if type(Info) ~= "table" then
+    return {}
+  end
+  if nil ~= Info[1] then
+    return Info
+  end
+  return {Info}
+end
+
+local function ConvertRankPreviewCharInfos(CharInfos)
+  local Chars = {}
+  for _, CharInfo in ipairs(NormalizeRankPreviewInfoList(CharInfos)) do
+    local Appearance = CharInfo.Appearance or {}
+    local CurrentPlanIndex = Appearance.CurrentPlanIndex or 1
+    local AppearanceSuit = {
+      Colors = Appearance.SkinColors and Appearance.SkinColors[CurrentPlanIndex],
+      SkinId = Appearance.SkinId,
+      SkinLevel = Appearance.SkinSelectedLevel or Appearance.SkinLevel or 1,
+      AccessorySuit = Appearance.Accessory or {},
+      AccessoryCustomParams = Appearance.AccessoryCustomParams or {},
+      HairId = Appearance.HairId,
+      HairColors = Appearance.HairColors,
+      IsShowPartMesh = Appearance.IsShowPartMesh,
+      IsCornerVisible = Appearance.IsCornerVisible,
+      CharId = CharInfo.CharId
+    }
+    local SkillInfos = {}
+    for _, Skill in ipairs(CharInfo.Skills or {}) do
+      if 1 ~= Skill.LockState then
+        local bOnlyPhantom = false
+        local SkillData = DataMgr.Skill[Skill.SkillId] and DataMgr.Skill[Skill.SkillId][Skill.Level] and DataMgr.Skill[Skill.SkillId][Skill.Level][CharInfo.GradeLevel]
+        if SkillData then
+          bOnlyPhantom = SkillData.OnlyPhantom
+        end
+        if not bOnlyPhantom then
+          local SkillInfo = {
+            Level = Skill.Level,
+            ExtraLevel = Skill.ExtraLevel
+          }
+          if 0 ~= CharInfo.GradeLevel then
+            SkillInfo.Grade = CharInfo.GradeLevel
+          end
+          table.insert(SkillInfos, {
+            SkillId = Skill.SkillId,
+            SkillInfo = SkillInfo
+          })
+        end
+      end
+    end
+    local SlotData = {}
+    local ModData = {}
+    for Index, ModSuit in ipairs(CharInfo.ModSuit or {}) do
+      table.insert(SlotData, {
+        ModEid = ModSuit.Mod and ModSuit.Mod.ModId or nil,
+        SlotId = Index,
+        Polarity = ModSuit.Polarity
+      })
+      if ModSuit.Mod then
+        table.insert(ModData, {
+          Uuid = ModSuit.Mod.ModId,
+          ModId = ModSuit.Mod.ModId,
+          Level = ModSuit.Mod.Level,
+          CurrentModCardLevel = ModSuit.Mod.CurrentModCardLevel
+        })
+      end
+    end
+    table.insert(Chars, {
+      AppearanceSuit = AppearanceSuit,
+      RoleId = CharInfo.CharId,
+      Level = CharInfo.Level or 1,
+      GradeLevel = CharInfo.GradeLevel or 0,
+      EnhanceLevel = CharInfo.EnhanceLevel or 0,
+      SkillInfos = SkillInfos,
+      SlotData = SlotData,
+      ModData = ModData,
+      SkillTreeInfos = CharInfo.SkillTree,
+      ModSuitIndex = 1
+    })
+  end
+  return Chars
+end
+
+local function ConvertRankPreviewWeaponInfos(WeaponInfos)
+  local Weapons = {}
+  for _, WeaponInfo in ipairs(NormalizeRankPreviewInfoList(WeaponInfos)) do
+    local Appearance = WeaponInfo.Appearance or {}
+    local CurrentPlanIndex = Appearance.CurrentPlanIndex or 1
+    local AppearanceInfo = {
+      SkinId = Appearance.SkinId,
+      AccessoryId = Appearance.Accessory and Appearance.Accessory[1],
+      Colors = {
+        Colors = Appearance.SkinColors and Appearance.SkinColors[CurrentPlanIndex],
+        SpecialColor = Appearance.SpecialColor and Appearance.SpecialColor[CurrentPlanIndex]
+      }
+    }
+    local SlotData = {}
+    local ModData = {}
+    for Index, ModSuit in ipairs(WeaponInfo.ModSuit or {}) do
+      table.insert(SlotData, {
+        ModEid = ModSuit.Mod and ModSuit.Mod.ModId or nil,
+        SlotId = Index,
+        Polarity = ModSuit.Polarity
+      })
+      if ModSuit.Mod then
+        table.insert(ModData, {
+          Uuid = ModSuit.Mod.ModId,
+          ModId = ModSuit.Mod.ModId,
+          Level = ModSuit.Mod.Level,
+          CurrentModCardLevel = ModSuit.Mod.CurrentModCardLevel
+        })
+      end
+    end
+    table.insert(Weapons, {
+      AppearanceInfo = AppearanceInfo,
+      WeaponId = WeaponInfo.WeaponId,
+      Level = WeaponInfo.Level or 1,
+      GradeLevel = WeaponInfo.GradeLevel or 0,
+      HyperCardLevel = WeaponInfo.HyperCardLevel or 0,
+      EnhanceLevel = WeaponInfo.EnhanceLevel or 0,
+      SlotData = SlotData,
+      ModData = ModData,
+      ModSuitIndex = 1
+    })
+  end
+  return Weapons
+end
+
+local function ExtractRankPreviewInfo(Ret)
+  if type(Ret) ~= "table" then
+    return nil, nil
+  end
+  local Candidates = {
+    Ret,
+    Ret.RankAccessoryInfo,
+    Ret.PlayerInfo
+  }
+  local DumpRet = CommonUtils.BinaryDump(Ret)
+  if type(DumpRet) == "table" then
+    table.insert(Candidates, DumpRet)
+    table.insert(Candidates, DumpRet.RankAccessoryInfo)
+    table.insert(Candidates, DumpRet.PlayerInfo)
+  end
+  for _, Candidate in ipairs(Candidates) do
+    if type(Candidate) == "table" then
+      local CharInfo = not Candidate.char and not Candidate.Char and not Candidate.CharInfos and Candidate.PlayerInfo and Candidate.PlayerInfo.Char
+      local WeaponInfo = not Candidate.weapon and not Candidate.Weapon and not Candidate.WeaponInfos and Candidate.PlayerInfo and Candidate.PlayerInfo.Weapon
+      if type(CharInfo) == "table" or type(WeaponInfo) == "table" then
+        return CharInfo, WeaponInfo
+      end
+    end
+  end
+  return nil, nil
+end
+
+local function HandleRankPreviewPayload(self, Ret, Source)
+  if not self.PendingPreviewUid or type(Ret) ~= "table" then
+    return false
+  end
+  DebugPrint("[AccessoryRank] HandleRankPreviewPayload source:", Source or "Unknown")
+  DebugPrint("[AccessoryRank] HandleRankPreviewPayload target:", BuildRankPreviewTargetSummary(self.PendingPreviewRankInfo))
+  DebugPrint("[AccessoryRank] HandleRankPreviewPayload keys:", BuildTableKeySummary(Ret))
+  local DumpRet = CommonUtils.BinaryDump(Ret)
+  if type(DumpRet) == "table" then
+    DebugPrint("[AccessoryRank] HandleRankPreviewPayload binary dump keys:", BuildTableKeySummary(DumpRet))
+  end
+  local CharInfo, WeaponInfo = ExtractRankPreviewInfo(Ret)
+  if type(CharInfo) == "table" then
+    PrintTable(CharInfo, 5, "[AccessoryRank] Preview CharInfo")
+  end
+  if type(WeaponInfo) == "table" then
+    PrintTable(WeaponInfo, 5, "[AccessoryRank] Preview WeaponInfo")
+  end
+  if type(CharInfo) ~= "table" or type(WeaponInfo) ~= "table" then
+    DebugPrint("[AccessoryRank] Preview payload missing CharInfo or WeaponInfo", CharInfo, WeaponInfo)
+    DebugPrint("[AccessoryRank] Preview target missing usable payload:", BuildRankPreviewTargetSummary(self.PendingPreviewRankInfo))
+    if "table" == type(Ret.RankAccessoryInfo) then
+      DebugPrint("[AccessoryRank] Preview payload RankAccessoryInfo keys:", BuildTableKeySummary(Ret.RankAccessoryInfo))
+    end
+    if type(DumpRet) == "table" then
+      local DumpCharInfo, DumpWeaponInfo = ExtractRankPreviewInfo(DumpRet)
+      DebugPrint("[AccessoryRank] Preview binary dump char/weapon type:", type(DumpCharInfo), type(DumpWeaponInfo))
+      if type(DumpCharInfo) == "table" then
+        PrintTable(DumpCharInfo, 5, "[AccessoryRank] Preview BinaryDump CharInfo")
+      end
+      if type(DumpWeaponInfo) == "table" then
+        PrintTable(DumpWeaponInfo, 5, "[AccessoryRank] Preview BinaryDump WeaponInfo")
+      end
+    end
+    return false
+  end
+  DebugPrint("[AccessoryRank] Preview payload ready, switching target:", BuildRankPreviewTargetSummary(self.PendingPreviewRankInfo))
+  self.PendingPreviewUid = nil
+  self.PendingPreviewRankInfo = nil
+  self:ShowRankTargetPreviewByInfo(CharInfo, WeaponInfo)
+  return true
+end
+
+local function BuildDummyAvatarByRankAccessoryInfo(CharInfo, WeaponInfo)
+  local CharInfos = ConvertRankPreviewCharInfos(CharInfo)
+  local WeaponInfos = ConvertRankPreviewWeaponInfos(WeaponInfo)
+  if 0 == #CharInfos or 0 == #WeaponInfos then
+    DebugPrint("[AccessoryRank] BuildDummyAvatarByRankAccessoryInfo invalid data", #CharInfos, #WeaponInfos)
+    return nil
+  end
+  local DummyAvatar = {}
+  ArmoryUtils._CreateDummyAvatarCustom(DummyAvatar, {
+    CharInfos = {
+      NormalizeSlotData(CharInfos[1])
+    },
+    WeaponInfos = {
+      NormalizeSlotData(WeaponInfos[1])
+    }
+  })
+  return DummyAvatar
+end
 
 local function FillSelfRankWidgetFallback(SelfWidget, RankInfo)
   if not SelfWidget or not RankInfo then
@@ -76,7 +352,11 @@ end
 
 function M:OnLoaded(...)
   self.SelfRankInfo, self.TopNInfo = NormalizeRankData(...)
+  self.PreviewRequestId = 0
+  self.PendingPreviewUid = nil
+  self.PendingPreviewRankInfo = nil
   self.IsGamePad = false
+  EventManager:AddEvent(EventID.OnPlayerRankAccessoryInfo, self, self.OnPlayerRankAccessoryInfo)
   self:InitPreviewScene()
   self:InitRankInfoTopN(self.TopNInfo)
   self:InitRankInfoSelf(self.SelfRankInfo)
@@ -101,6 +381,7 @@ function M:Destruct()
   if IsValid(self.GameInputModeSubsystem) then
     self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
   end
+  EventManager:RemoveEvent(EventID.OnPlayerRankAccessoryInfo, self, self.OnPlayerRankAccessoryInfo)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -109,11 +390,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if WasGamePad ~= self.IsGamePad then
     self:ClearRankItemVisualState()
   end
-  if self:IsRankItemSelectable() and self.IsGamePad then
-    if self.List_Ranking and not UIUtils.HasAnyFocus(self) then
+  if self.IsGamePad and self.List_Ranking then
+    if not UIUtils.HasAnyFocus(self) then
       self.List_Ranking:SetFocus()
     end
-    if self.List_Ranking and UIUtils.HasAnyFocus(self) then
+    if UIUtils.HasAnyFocus(self) then
       if self.LastClickedItem and self.LastClickedItem.RankInfo then
         self.List_Ranking:NavigateToIndex(self.LastClickedItem.RankInfo.RankNum - 1)
       elseif self.ValidItemNum and self.ValidItemNum > 0 then
@@ -121,10 +402,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       end
     end
   end
-end
-
-function M:IsRankItemSelectable()
-  return self.IsGamePad == true
 end
 
 function M:ClearRankItemVisualState()
@@ -145,7 +422,11 @@ function M:ClearRankItemVisualState()
           if ItemWidget.Press then
             ItemWidget:StopAnimation(ItemWidget.Press)
           end
-          if ItemWidget.Normal then
+          if self.LastClickedItem and ItemWidget.Content == self.LastClickedItem then
+            if ItemWidget.Click then
+              ItemWidget:PlayAnimation(ItemWidget.Click)
+            end
+          elseif ItemWidget.Normal then
             ItemWidget:PlayAnimation(ItemWidget.Normal)
           end
         end
@@ -168,9 +449,6 @@ function M:ClearRankItemVisualState()
     if self.Ranking_Myself.Normal then
       self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Normal)
     end
-  end
-  if not self.IsGamePad then
-    self.LastClickedItem = nil
   end
 end
 
@@ -219,6 +497,57 @@ function M:InitPreviewScene()
   end
 end
 
+function M:ShowRankTargetPreviewByInfo(CharInfo, WeaponInfo)
+  if not self.ActorController then
+    return
+  end
+  local DummyAvatar = BuildDummyAvatarByRankAccessoryInfo(CharInfo, WeaponInfo)
+  if not DummyAvatar then
+    return
+  end
+  local _, CharModel = next(DummyAvatar.Chars)
+  local _, WeaponModel = next(DummyAvatar.Weapons)
+  if not CharModel or not WeaponModel then
+    return
+  end
+  self.ActorController:SetAvatar(DummyAvatar)
+  self.ActorController:ChangeCharModel(CharModel, true)
+  self.ActorController:ChangeWeaponModel(WeaponModel)
+  local Tag = WeaponModel:IsMelee() and "Melee" or "Ranged"
+  self.ActorController:SetMontageAndCamera("Weapon", Tag)
+end
+
+function M:RequestRankTargetPreview(Uid)
+  if not self.Avatar or not Uid then
+    return
+  end
+  self.PreviewRequestId = (self.PreviewRequestId or 0) + 1
+  self.PendingPreviewUid = Uid
+  DebugPrint("[AccessoryRank] RequestRankTargetPreview", self.PreviewRequestId, tostring(Uid), BuildRankPreviewTargetSummary(self.PendingPreviewRankInfo))
+  local RequestId = self.PreviewRequestId
+  self.Avatar:GetPlayerRankAccessoryInfo(function(ErrCode, Ret)
+    if not IsValid(self) then
+      return
+    end
+    if RequestId ~= self.PreviewRequestId or self.PendingPreviewUid ~= Uid then
+      return
+    end
+    if not ErrorCode:Check(ErrCode) then
+      DebugPrint("[AccessoryRank] RequestRankTargetPreview failed", ErrorCode:Name(ErrCode), BuildRankPreviewTargetSummary(self.PendingPreviewRankInfo))
+      self.PendingPreviewUid = nil
+      self.PendingPreviewRankInfo = nil
+      return
+    end
+    if type(Ret) == "table" then
+      HandleRankPreviewPayload(self, Ret, "Callback")
+    end
+  end, Uid)
+end
+
+function M:OnPlayerRankAccessoryInfo(Obj, Ret)
+  HandleRankPreviewPayload(self, Ret, "Event")
+end
+
 function M:InitRankInfoTopN(TopNInfo)
   if not TopNInfo or not next(TopNInfo) then
     if self.WS_Type then
@@ -255,7 +584,6 @@ function M:InitRankInfoTopN(TopNInfo)
   end
   self.ValidItemNum = RankCount
   self.List_Ranking:NavigateToIndex(0)
-  self.List_Ranking:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.List_Ranking.BP_OnItemClicked:Clear()
   self.List_Ranking.BP_OnItemIsHoveredChanged:Clear()
   self.List_Ranking.BP_OnItemClicked:Add(self, self.OnListRankItemClicked)
@@ -294,9 +622,6 @@ function M:InitRankInfoSelf(SelfRankInfo)
 end
 
 function M:OnMyselfButtonClicked()
-  if not self:IsRankItemSelectable() then
-    return
-  end
   if self.Ranking_Myself and not self.IsGamePad then
     self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Click)
   end
@@ -313,22 +638,19 @@ function M:OnMyselfButtonClicked()
       self.LastClickedItem = nil
     end
     self.List_Ranking:NavigateToIndex(SelfRankNum - 1)
+  elseif self.Avatar and self.Avatar.Uid then
+    self.PendingPreviewRankInfo = self.SelfItemData.RankInfo
+    self:RequestRankTargetPreview(self.Avatar.Uid)
   end
 end
 
 function M:OnMyselfButtonPressed()
-  if not self:IsRankItemSelectable() then
-    return
-  end
   if self.Ranking_Myself then
     self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Press)
   end
 end
 
 function M:OnMyselfButtonHovered()
-  if not self:IsRankItemSelectable() then
-    return
-  end
   if self.Ranking_Myself then
     self.Ranking_Myself:StopAnimation(self.Ranking_Myself.UnHover)
     self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Hover)
@@ -336,37 +658,68 @@ function M:OnMyselfButtonHovered()
 end
 
 function M:OnListRankItemIsHoveredChanged(Item, IsHovered)
-  if self.IsGamePad or Item.IsSelected or Item.Empty then
+  if self.IsGamePad or Item.Empty or Item.IsSelected or self.LastClickedItem == Item then
     return
   end
   local ItemWidget = Item.SelfWidget
   if ItemWidget then
-    if ItemWidget.Hover then
-      ItemWidget:StopAnimation(ItemWidget.Hover)
-    end
-    if ItemWidget.UnHover then
-      ItemWidget:StopAnimation(ItemWidget.UnHover)
-    end
-    if ItemWidget.Normal then
-      ItemWidget:PlayAnimation(ItemWidget.Normal)
+    if IsHovered then
+      if ItemWidget.UnHover then
+        ItemWidget:StopAnimation(ItemWidget.UnHover)
+      end
+      if ItemWidget.Hover then
+        ItemWidget:PlayAnimation(ItemWidget.Hover)
+      end
+    else
+      if ItemWidget.Hover then
+        ItemWidget:StopAnimation(ItemWidget.Hover)
+      end
+      if ItemWidget.UnHover then
+        ItemWidget:PlayAnimation(ItemWidget.UnHover)
+      elseif ItemWidget.Normal then
+        ItemWidget:PlayAnimation(ItemWidget.Normal)
+      end
     end
   end
 end
 
-function M:OnListRankItemClicked(Item)
-  if not self:IsRankItemSelectable() then
+function M:OnListRankItemClicked(Item, bForceRefresh)
+  if Item.Empty then
     return
   end
-  if Item.Empty or self.LastClickedItem == Item then
+  if self.LastClickedItem == Item and not bForceRefresh then
     return
   end
   local ItemWidget = Item.SelfWidget
   if not ItemWidget then
     return
   end
+  if self.LastClickedItem == Item then
+    Item.IsSelected = true
+    ItemWidget:StopAnimation(ItemWidget.Normal)
+    if ItemWidget.Hover then
+      ItemWidget:StopAnimation(ItemWidget.Hover)
+    end
+    if ItemWidget.UnHover then
+      ItemWidget:StopAnimation(ItemWidget.UnHover)
+    end
+    if ItemWidget.Click then
+      ItemWidget:StopAnimation(ItemWidget.Click)
+      ItemWidget:PlayAnimation(ItemWidget.Click)
+    end
+    return
+  end
+  Item.IsSelected = true
   ItemWidget:StopAnimation(ItemWidget.Normal)
+  if ItemWidget.Hover then
+    ItemWidget:StopAnimation(ItemWidget.Hover)
+  end
+  if ItemWidget.UnHover then
+    ItemWidget:StopAnimation(ItemWidget.UnHover)
+  end
   ItemWidget:PlayAnimation(ItemWidget.Click)
   if self.LastClickedItem then
+    self.LastClickedItem.IsSelected = false
     local LastItemWidget = self.LastClickedItem.SelfWidget
     if LastItemWidget then
       LastItemWidget:StopAnimation(LastItemWidget.Click)
@@ -374,6 +727,16 @@ function M:OnListRankItemClicked(Item)
     end
   end
   self.LastClickedItem = Item
+  DebugPrint("[AccessoryRank] Click rank item:", BuildRankPreviewTargetSummary(Item.RankInfo))
+  if self.Avatar and Item and Item.RankInfo and Item.RankInfo.Uid == self.Avatar.Uid then
+    self.PendingPreviewRankInfo = Item.RankInfo
+    self:RequestRankTargetPreview(Item.RankInfo.Uid)
+    return
+  end
+  if Item and Item.RankInfo and Item.RankInfo.Uid then
+    self.PendingPreviewRankInfo = Item.RankInfo
+    self:RequestRankTargetPreview(Item.RankInfo.Uid)
+  end
 end
 
 return M

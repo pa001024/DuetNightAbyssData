@@ -765,6 +765,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 1",
     "episode": "Black Iron and White Flower",
+    "detail": "Separated from Berenica and cast into the sea, {nickname} was rescued by a mysterious figure in white and taken to Icelake, a city in northern Hyperborea...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -774,6 +775,7 @@
     "quests": [
       {
         "id": 10020701,
+        "sr": 101101,
         "next": {
           "Success": 10020702
         }
@@ -841,6 +843,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 1",
     "episode": "Black Iron and White Flower",
+    "detail": "Separated from Berenica and cast into the sea, {nickname} was rescued by a mysterious figure in white and taken to Icelake, a city in northern Hyperborea...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -908,6 +911,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -1028,6 +1032,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -1101,6 +1106,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -1161,6 +1167,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -1219,6 +1226,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -1315,6 +1323,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -1334,6 +1343,7 @@
     "chapterName": "Chapter Noctoyager",
     "chapterNumber": "Chapter 2",
     "episode": "Children From the Snowfield",
+    "detail": "In the dead of night, a grotesque creature stalked the streets of Icelake. Seeking the truth behind the tragedy known as the Charon Hunt, the Noctoyagers accepted a request from Rhythm, a junior officer in the Icelake Escort...",
     "type": 1,
     "main": 1,
     "icon": "T_Chapter_Icon01",
@@ -7434,7 +7444,7 @@
     "name": "Black Bread and Butter",
     "chapterName": "Chapter Noctoyager",
     "episode": "Black Bread and Butter",
-    "desc": "For your own reasons, you decide to buy the cigarette pack.",
+    "desc": "Buy the cigarette pack for your own reasons",
     "detail": "The merchant shows you a strange, antique-looking cigarette pack. You cannot help wondering whether something so small could really contain any treasure.",
     "type": 3,
     "reward": [
@@ -7480,7 +7490,7 @@
     "name": "When the Whistle Weeps",
     "chapterName": "Chapter Noctoyager",
     "episode": "When the Whistle Weeps",
-    "desc": "You encounter a strange travelling merchant at Bloomfield Station. Ask what \"good stuff\" he has for sale.",
+    "desc": "Ask the strange travelling merchant at Bloomfield Station what \"good stuff\" he has for sale",
     "detail": "While wandering around Bloomfield Station with Snow and Outsider, you encounter a travelling merchant. Perhaps sensing that you have coin to spare, he tries to interest you in his wares.",
     "type": 3,
     "reward": [
@@ -7618,8 +7628,518 @@
     ]
   },
   {
+    "id": 200404,
+    "name": "What Do You Live For?",
+    "chapterName": "Chapter Noctoyager",
+    "episode": "What Do You Live For?",
+    "desc": "Go to the Screwdriver Union base",
+    "detail": "You have only just seen Coney off when a strange man approaches you. He looks vaguely familiar... Lorent, was it? What could he want?",
+    "type": 3,
+    "reward": [
+      50638
+    ],
+    "npc": 700486,
+    "quests": [
+      {
+        "id": 20040400,
+        "sr": 106301,
+        "next": {
+          "Success": 20040401
+        }
+      },
+      {
+        "id": 20040401,
+        "sr": 106301,
+        "next": {
+          "Success": 20040402
+        }
+      },
+      {
+        "id": 20040402,
+        "sr": 106301,
+        "next": {
+          "Success": 20040403
+        }
+      },
+      {
+        "id": 20040403,
+        "sr": 106301,
+        "next": {
+          "Success": 20040404
+        }
+      },
+      {
+        "id": 20040404,
+        "sr": 106301,
+        "next": {
+          "Success": 20040405
+        }
+      },
+      {
+        "id": 20040405,
+        "sr": 106301,
+        "next": {
+          "Success": 20040406
+        }
+      },
+      {
+        "id": 20040406,
+        "sr": 106301,
+        "next": {
+          "Success": 20040407
+        }
+      },
+      {
+        "id": 20040407,
+        "sr": 106301,
+        "next": {
+          "Success": 20040408
+        }
+      },
+      {
+        "id": 20040408,
+        "sr": 106301,
+        "next": {
+          "easymode": 20040409,
+          "normalmode": 20040410
+        }
+      },
+      {
+        "id": 20040409,
+        "sr": 106301,
+        "next": {
+          "Success": 20040411
+        }
+      },
+      {
+        "id": 20040411,
+        "sr": 106301,
+        "next": {
+          "Success": 20040412
+        }
+      },
+      {
+        "id": 20040412,
+        "sr": 106301,
+        "next": {
+          "Success": 20040413
+        }
+      },
+      {
+        "id": 20040413,
+        "sr": 106301,
+        "next": {
+          "Success": 20040414
+        }
+      },
+      {
+        "id": 20040414,
+        "sr": 106301,
+        "next": {
+          "betray": 20040417,
+          "help": 20040415
+        }
+      },
+      {
+        "id": 20040417,
+        "sr": 106301
+      },
+      {
+        "id": 20040415,
+        "sr": 106301,
+        "next": {
+          "Success": 20040418
+        }
+      },
+      {
+        "id": 20040418,
+        "sr": 106301,
+        "next": {
+          "Success": 20040419
+        }
+      },
+      {
+        "id": 20040419,
+        "sr": 106301,
+        "next": {
+          "Success": 20040416
+        }
+      },
+      {
+        "id": 20040416,
+        "sr": 106301
+      },
+      {
+        "id": 20040410,
+        "sr": 106301,
+        "next": {
+          "Success": 20040411
+        }
+      }
+    ]
+  },
+  {
+    "id": 200405,
+    "name": "Zen and the Art of Locomotive Maintenance",
+    "chapterName": "Chapter Noctoyager",
+    "episode": "Zen and the Art of Locomotive Maintenance",
+    "desc": "Report back to the Screwdriver Union",
+    "detail": "However you handled it, you successfully completed Lorent's request and cooled most of the workers' interest in Mr Jack's game. It's time to return to the Screwdriver Union and collect your reward.",
+    "type": 3,
+    "reward": [
+      50639
+    ],
+    "quests": [
+      {
+        "id": 20040501,
+        "sr": 106301,
+        "next": {
+          "Success": 20040502
+        }
+      },
+      {
+        "id": 20040502,
+        "sr": 106301,
+        "next": {
+          "【分支1】自己想办法": 20040503,
+          "【分支2】听听克罗格的主意": 20040504
+        }
+      },
+      {
+        "id": 20040503,
+        "sr": 106301,
+        "next": {
+          "Success": 20040505
+        }
+      },
+      {
+        "id": 20040505,
+        "sr": 106001,
+        "next": {
+          "Success": 20040513
+        }
+      },
+      {
+        "id": 20040513,
+        "sr": 106001,
+        "next": {
+          "Success": 20040506
+        }
+      },
+      {
+        "id": 20040506,
+        "sr": 106301,
+        "next": {
+          "Success": 20040507
+        }
+      },
+      {
+        "id": 20040507,
+        "sr": 106301,
+        "next": {
+          "Success": 20040508
+        }
+      },
+      {
+        "id": 20040508,
+        "sr": 106301,
+        "next": {
+          "Success": 20040509
+        }
+      },
+      {
+        "id": 20040509,
+        "sr": 106301,
+        "next": {
+          "Success": 20040510
+        }
+      },
+      {
+        "id": 20040510,
+        "sr": 106301,
+        "next": {
+          "Success": 20040511
+        }
+      },
+      {
+        "id": 20040511,
+        "sr": 106301,
+        "next": {
+          "Success": 20040512
+        }
+      },
+      {
+        "id": 20040512,
+        "sr": 106301
+      },
+      {
+        "id": 20040504,
+        "sr": 106301,
+        "next": {
+          "Success": 20040505
+        }
+      }
+    ]
+  },
+  {
+    "id": 200406,
+    "name": "Behind the Curtains",
+    "chapterName": "Chapter Noctoyager",
+    "episode": "Behind the Curtains",
+    "desc": "Description_200406_1",
+    "detail": "Content_200406_1",
+    "type": 3,
+    "reward": [
+      50640
+    ],
+    "questReward": {
+      "20040602": 506401,
+      "20040605": 506402
+    },
+    "quests": [
+      {
+        "id": 20040601,
+        "sr": 106001,
+        "next": {
+          "Success": 20040602
+        }
+      },
+      {
+        "id": 20040602,
+        "sr": 106001,
+        "next": {
+          "Success": 20040603
+        }
+      },
+      {
+        "id": 20040603,
+        "sr": 106001,
+        "next": {
+          "Success": 20040604
+        }
+      },
+      {
+        "id": 20040604,
+        "sr": 106001,
+        "next": {
+          "Success": 20040605
+        }
+      },
+      {
+        "id": 20040605,
+        "sr": 106001,
+        "next": {
+          "Success": 20040606
+        }
+      },
+      {
+        "id": 20040606,
+        "sr": 106001,
+        "next": {
+          "Success": 20040607
+        }
+      },
+      {
+        "id": 20040607,
+        "sr": 106001,
+        "next": {
+          "Success": 20040612
+        }
+      },
+      {
+        "id": 20040612,
+        "sr": 106001,
+        "next": {
+          "Success": 20040613
+        }
+      },
+      {
+        "id": 20040613,
+        "sr": 106001,
+        "next": {
+          "Success": 20040616
+        }
+      },
+      {
+        "id": 20040616,
+        "sr": 106001
+      }
+    ]
+  },
+  {
+    "id": 200407,
+    "name": "A Portrait of Guilt",
+    "chapterName": "Chapter Noctoyager",
+    "episode": "A Portrait of Guilt",
+    "desc": "Description_200407_1",
+    "detail": "Content_200407_1",
+    "type": 3,
+    "reward": [
+      50641
+    ],
+    "quests": [
+      {
+        "id": 20040700,
+        "sr": 106001,
+        "next": {
+          "Success": 20040701
+        }
+      },
+      {
+        "id": 20040701,
+        "sr": 106001,
+        "next": {
+          "Success": 20040702
+        }
+      },
+      {
+        "id": 20040702,
+        "sr": 106001,
+        "next": {
+          "Success": 20040703
+        }
+      },
+      {
+        "id": 20040703,
+        "sr": 106001,
+        "next": {
+          "Success": 20040704
+        }
+      },
+      {
+        "id": 20040704,
+        "sr": 106001,
+        "next": {
+          "Success": 20040705
+        }
+      },
+      {
+        "id": 20040705,
+        "sr": 106001
+      }
+    ]
+  },
+  {
+    "id": 200408,
+    "name": "The Fall of Phaethon",
+    "chapterName": "Chapter Noctoyager",
+    "episode": "The Fall of Phaethon",
+    "desc": "After helping the Steamwhistle Salon with numerous commissions, the organisation that outwardly supports Eisenbahn while secretly seeking evidence to bring him down has finally revealed their true intentions. Just before this carefully orchestrated takedown begins, Seaton seems to have something to tell you...",
+    "detail": "Speak with Seaton",
+    "type": 3,
+    "reward": [
+      50642
+    ],
+    "npc": 700400,
+    "quests": [
+      {
+        "id": 20040801,
+        "sr": 106001,
+        "next": {
+          "Success": 20040802
+        }
+      },
+      {
+        "id": 20040802,
+        "sr": 106301,
+        "next": {
+          "Success": 20040803
+        }
+      },
+      {
+        "id": 20040803,
+        "sr": 106301,
+        "next": {
+          "Success": 20040805
+        }
+      },
+      {
+        "id": 20040805,
+        "sr": 106301,
+        "next": {
+          "Success": 20040806
+        }
+      },
+      {
+        "id": 20040806,
+        "sr": 106301,
+        "next": {
+          "Success": 20040807
+        }
+      },
+      {
+        "id": 20040807,
+        "sr": 106301,
+        "next": {
+          "Success": 20040808
+        }
+      },
+      {
+        "id": 20040808,
+        "sr": 106301,
+        "next": {
+          "Success": 20040809
+        }
+      },
+      {
+        "id": 20040809,
+        "sr": 106001,
+        "next": {
+          "分支一：如果上文选择了放过罗连特，让艾森巴恩做好准备": 20040810,
+          "分支二：如果上文选择了不放过罗连特": 20040811
+        }
+      },
+      {
+        "id": 20040810,
+        "sr": 106001,
+        "next": {
+          "Success": 20040812
+        }
+      },
+      {
+        "id": 20040812,
+        "sr": 106001,
+        "next": {
+          "Success": 20040814
+        }
+      },
+      {
+        "id": 20040814,
+        "sr": 106001,
+        "next": {
+          "Success": 20040816
+        }
+      },
+      {
+        "id": 20040816,
+        "sr": 106001,
+        "next": {
+          "Success": 20040817
+        }
+      },
+      {
+        "id": 20040817,
+        "sr": 106301
+      },
+      {
+        "id": 20040811,
+        "sr": 106001,
+        "next": {
+          "Success": 20040813
+        }
+      },
+      {
+        "id": 20040813,
+        "sr": 106001,
+        "next": {
+          "Success": 20040814
+        }
+      }
+    ]
+  },
+  {
     "id": 400101,
-    "name": "Commission: Hunt (Ⅰ)",
+    "name": "Epilogue",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7639,7 +8159,7 @@
   },
   {
     "id": 400102,
-    "name": "Commission: Hunt (Ⅱ)",
+    "name": "Commission: Hunt (Ⅰ)",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7659,7 +8179,7 @@
   },
   {
     "id": 400103,
-    "name": "Commission: Hunt (Ⅲ)",
+    "name": "Commission: Hunt (Ⅱ)",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7679,7 +8199,7 @@
   },
   {
     "id": 400104,
-    "name": "Commission: Hunt (Ⅳ)",
+    "name": "Commission: Hunt (Ⅲ)",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7699,7 +8219,7 @@
   },
   {
     "id": 400105,
-    "name": "Commission: Hunt (Ⅴ)",
+    "name": "Commission: Hunt (Ⅳ)",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7719,7 +8239,7 @@
   },
   {
     "id": 400106,
-    "name": "Commission: Hunt (Ⅵ)",
+    "name": "Commission: Hunt (Ⅴ)",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7739,7 +8259,7 @@
   },
   {
     "id": 400107,
-    "name": "Commission: Hunt (Ⅶ)",
+    "name": "Commission: Hunt (Ⅵ)",
     "chapterName": "Journey Across the Lands",
     "chapterNumber": "Huaxu",
     "episode": "Mistwharf – Veiled in Fragrant Haze",
@@ -7759,7 +8279,7 @@
   },
   {
     "id": 400111,
-    "name": "Luno's Special Theatre",
+    "name": "Commission: Hunt (Ⅶ)",
     "chapterName": "Journey Across the Lands",
     "episode": "Luno's Special Theatre",
     "type": 5,

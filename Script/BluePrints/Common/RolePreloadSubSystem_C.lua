@@ -262,4 +262,39 @@ function M:CacheDungeonGameAssetsOuter_Test(FinishCallback)
   return true
 end
 
+function M:GetSupplementaryDataFromLua(ModelId, Type, Label)
+  local Out = {}
+  if not AssetPathTable or not ModelId then
+    return Out
+  end
+  local TypeName = Type and tostring(Type) or ""
+  local LabelName = Label and tostring(Label) or ""
+  local ModelEntry = AssetPathTable[ModelId]
+  if not ModelEntry then
+    return Out
+  end
+  local TypeEntry = ModelEntry[TypeName]
+  if not TypeEntry then
+    return Out
+  end
+  
+  local function ProcressSingleLabel(inLabel)
+    local all = TypeEntry[inLabel]
+    if all and type(all) == "table" then
+      for _, p in ipairs(all) do
+        table.insert(Out, p)
+      end
+    end
+  end
+  
+  if "" == LabelName or nil == LabelName or "None" == LabelName then
+    for k, _ in pairs(TypeEntry) do
+      ProcressSingleLabel(k)
+    end
+  else
+    ProcressSingleLabel(LabelName)
+  end
+  return Out
+end
+
 return M

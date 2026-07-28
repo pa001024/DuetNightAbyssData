@@ -1,13 +1,13 @@
 local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueIterType
 local M = Class()
 
-function M:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
+function M:New(DialogueId, Context, NodeEvents, FlowChecker, Comps, NodeMaps)
   local TalkFlowNode = setmetatable({}, {__index = self})
-  rawset(TalkFlowNode, "TalkTask", TalkTask)
+  rawset(TalkFlowNode, "Context", Context)
   rawset(TalkFlowNode, "Comps", Comps)
   rawset(TalkFlowNode, "NodeMaps", NodeMaps)
-  rawset(TalkFlowNode, "Events", Events)
-  TalkFlowNode:BindNodeEvents(Events)
+  rawset(TalkFlowNode, "FlowChecker", FlowChecker)
+  TalkFlowNode:BindNodeEvents(NodeEvents)
   TalkFlowNode:BuildNode(DialogueId, Comps)
   return TalkFlowNode
 end
@@ -28,7 +28,7 @@ end
 
 function M:Enter(bSkip)
   if self.OnNodeEnter then
-    self.OnNodeEnter(self.EventReceiver, self)
+    self.OnNodeEnter(self)
   end
   self:Execute(bSkip)
 end
@@ -47,6 +47,9 @@ function M:Pause()
 end
 
 function M:Resume()
+end
+
+function M:Stop()
 end
 
 function M:RealSkip()
@@ -71,16 +74,16 @@ end
 function M:RecordNodeInMap(DialogueId, NodeMaps)
 end
 
-function M:BindNodeEvents(Events)
-  self.EventReceiver = Events.EventReceiver
-  self.OnNodeEnter = Events.OnNodeEnter
-  self.OnNodeCreated = Events.OnNodeCreated
-  self.OnFlowCreated = Events.OnFlowCreated
+function M:BindNodeEvents(NodeEvents)
+  self.OnNodeEnter = NodeEvents.OnNodeEnter
+  self.OnNodeCreated = NodeEvents.OnNodeCreated
+  self.OnFlowCreated = NodeEvents.OnFlowCreated
+  self.OnDialogueEnd = NodeEvents.OnDialogueEnd
 end
 
 function M:CreateNodeData(DialogueId)
   if self.OnNodeCreated then
-    self.OnNodeCreated(self.EventReceiver, self)
+    self.OnNodeCreated(self)
   end
 end
 

@@ -16,6 +16,7 @@ function M:Construct()
   self:InitGamepadTips()
   self.Btn_Unlock:SetGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
   self.Btn_Unlock_Free:SetGamePadImg(UIConst.GamePadImgKey.FaceButtonTop)
+  self.Btn_Unlock_Free:SetGamePadIconVisible(true)
   self.Key_Consume:CreateGamepadKey(UIConst.GamePadImgKey.LeftThumb)
   self.Key_Qa:CreateGamepadKey(UIConst.GamePadImgKey.SpecialRight)
   self:SwitchGamepadKeyState(FocusStates.Incarnon)
@@ -67,7 +68,7 @@ function M:RefreshGamepadUIVisibility()
   if self.Panel_FreeHint:IsVisible() then
     self.Key_Qa:SetVisibility(Visibility)
   end
-  self.Btn_Unlock_Free.Img_GamePad:SetVisibility(Visibility)
+  self.Btn_Unlock_Free.WS_Key:SetVisibility(Visibility)
 end
 
 function M:RefreshConsumeVisibility()

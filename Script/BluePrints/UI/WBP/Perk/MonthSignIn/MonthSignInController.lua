@@ -38,15 +38,17 @@ function M:TryPopUpMonthSignIn()
   if not UIUnlocked then
     return
   end
-  if Avatar:IsInDungeon() then
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld:GetMainPlayer())
+  if GameState:IsInDungeon() then
     return
   end
-  local PreCheckCount = EMCache:Get("PreCheckCount", true)
-  if not PreCheckCount then
+  local LastPopupTime = Avatar.MonthlyCheck.LastPopupTime
+  if not LastPopupTime or 0 == LastPopupTime then
     self:GetUIMgr():LoadUINew("MonthSignInPopMain")
   else
-    DebugPrint("Yihan@ TryPopUpMonthSignIn", PreCheckCount ~= Avatar.MonthlyCheck.MonthlyCheckCount)
-    if PreCheckCount ~= Avatar.MonthlyCheck.MonthlyCheckCount then
+    DebugPrint("Yihan@ TryPopUpMonthSignIn", LastPopupTime)
+    local IsSameDay = 0 == TimeUtils.GetIntervalDay(LastPopupTime, TimeUtils.NowTime())
+    if not IsSameDay then
       self:GetUIMgr():LoadUINew("MonthSignInPopMain")
     end
   end

@@ -129,9 +129,11 @@ function M:ProcessOnKeyDown(MyGeometry, InKeyEvent)
       end, false, 0, TimerKey)
     end
   end
-  local KeyDownEvent = self.KeyDownEvents[InKeyName]
-  if KeyDownEvent then
-    return KeyDownEvent(self)
+  if not LongPressEvent.Duration then
+    local KeyDownEvent = self.KeyDownEvents[InKeyName]
+    if KeyDownEvent then
+      return KeyDownEvent(self)
+    end
   end
 end
 

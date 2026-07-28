@@ -74,6 +74,9 @@ end
 
 function ServerRandomCreator:NotifyGameModeActiveRandomCreator(Infos)
   self:NotifyGameModeDungeonEvent("ServerActiveRandomCreator", Infos)
+  if self.OnServerActiveRandomCreator then
+    self:OnServerActiveRandomCreator(Infos)
+  end
 end
 
 function ServerRandomCreator:GetRandomCreatorRuleInfo(RandomRuleId)

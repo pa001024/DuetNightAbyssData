@@ -20,6 +20,10 @@ function M:ReceiveBeginPlay()
 end
 
 function M:StartSkillFeature()
+  local UIManagerObj = UIManager(self)
+  if UIManagerObj and UIManagerObj.GetUIObj and UIManagerObj:GetUIObj("PhotoCameraMain") then
+    UIManagerObj:UnLoadUINew("PhotoCameraMain")
+  end
   EventManager:FireEvent(EventID.OnStartSkillFeature, self.HideAllUI)
   if self.HideAllUI then
     UIManager(self):AddUIManagerCurrentModeTag(Const.SkillFeatureHideTag)

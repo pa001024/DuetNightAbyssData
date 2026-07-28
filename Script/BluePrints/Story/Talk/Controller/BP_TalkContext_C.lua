@@ -43,7 +43,6 @@ function BP_TalkContext_C:Initialize(Initializer)
   self.TalkStageMap = {}
   self.Player = nil
   self.PlayerController = nil
-  self.InteractiveActor = nil
   self.MisImmunePausedActors = {}
   self.SequenceImmunePausedActors = {}
   self.TalkImmunePausedActors = {}
@@ -178,6 +177,22 @@ function BP_TalkContext_C:TalkHidePlayer(Player, bHide)
   if IsValid(TS) then
     TS:TalkHidePlayerCharacter(Player, bHide, Const.TalkHideTag)
   end
+  self:ResetCustomNPCMaterialsByHidePlayer()
+end
+
+function BP_TalkContext_C:ResetCustomNPCMaterialsByHidePlayer()
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  if IsValid(GameState) and GameState.HideAllNpcs then
+    local CustomNpcSet = GameState.CustomNpcSet:ToTable()
+    for _, entity in pairs(CustomNpcSet) do
+      if IsValid(entity) and entity.CharacterFashion then
+        entity.CharacterFashion:SetDitherAlpha(0, 1)
+        if entity.HeadAccessory then
+          entity.HeadAccessory:SetScalarParameterValueOnMaterials("DitherAlpha", 0)
+        end
+      end
+    end
+  end
 end
 
 function BP_TalkContext_C:AddTalkActor(TalkTask, UnitType, UnitId, Unit, bIsExternal)
@@ -186,7 +201,7 @@ function BP_TalkContext_C:AddTalkActor(TalkTask, UnitType, UnitId, Unit, bIsExte
     return
   end
   if TalkTask.TalkTaskData.BasicTalkType == "Cinematic" and Unit:IsA(UE4.ANpcCharacter) and Unit:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
-    Unit:TriggerKawaiiLayerLink(false)
+    Unit:TriggerKawaiiLayerLink(TalkTask.TalkTaskData.bOpenDefaultSkinKawaii)
   end
   Unit:PreEnterStory({}, TalkTask.TalkTaskData.BasicTalkType == "Cinematic", TalkTask.TalkTaskData.bPauseNpcBT)
   TalkTask.TalkActorDatas[UnitId] = TalkActorData_C.New(Unit, UnitType, UnitId, bIsExternal)
@@ -211,24 +226,6 @@ end
 function BP_TalkContext_C:GetTalkActorData(TalkTask, SearchUnitId)
   TalkTask.TalkActorDatas = TalkTask.TalkActorDatas or {}
   return TalkTask.TalkActorDatas[SearchUnitId]
-end
-
-function BP_TalkContext_C:RegisterInteractiveActor(TalkActor)
-  DebugPrint("BP_TalkContext_C:RegisterInteractiveActor", TalkActor)
-  self.InteractiveActor = TalkActor
-  self.TalkCameraManager.InteractiveActor = TalkActor
-end
-
-function BP_TalkContext_C:UnregisterInteractiveActor()
-  DebugPrint("BP_TalkContext_C:UnregisterInteractiveActor")
-  self.InteractiveActor = nil
-  self.TalkCameraManager.InteractiveActor = nil
-end
-
-function BP_TalkContext_C:ShowInteractiveActor(bShow)
-  if self.InteractiveActor then
-    self:ShowHideActor(self.InteractiveActor, bShow)
-  end
 end
 
 function BP_TalkContext_C:GetTalkActionData(ActorId, AnimationId)
@@ -326,18 +323,6 @@ function BP_TalkContext_C:BindActors(TalkTask)
   end
 end
 
-function BP_TalkContext_C:RegisterBranchTriggerId(Id)
-  self.BranchTriggerId = Id
-end
-
-function BP_TalkContext_C:UnregisterBranchTriggerId()
-  self.BranchTriggerId = nil
-end
-
-function BP_TalkContext_C:GetBranchTriggerId()
-  return self.BranchTriggerId
-end
-
 function BP_TalkContext_C:ConditionalSetupCharacterShadowSetting(TalkTaskData)
   DebugPrint("ConditionalSetupCharacterShadowSetting", TalkTaskData.DoNotReceiveCharacterShadow, self.SetCharacterShadowSetting, self.GetCharacterShadowSetting)
   if TalkTaskData.DoNotReceiveCharacterShadow == true and self.SetCharacterShadowSetting and self.GetCharacterShadowSetting then
@@ -395,113 +380,9 @@ function BP_TalkContext_C:GetBubbleLastPlayTime(TalkTaskData)
   return self.BubbleLastPlayTime[TalkTaskData.TalkNodeId] or 0
 end
 
-function BP_TalkContext_C:StartTalk(TalkTriggerId, OverridenStoryLinePath, OverridenTalkId, Player, InteractiveActor, OnTalkEndCallback, OnPlayDialogue, RelatedNpcIds)
-  local TalkTriggerInfo = TalkTriggerId and DataMgr.TalkTrigger[TalkTriggerId] or {}
-  local StoryLinePath = OverridenStoryLinePath or TalkTriggerInfo.StoryLinePath
-  local BranchId = tonumber(OverridenTalkId or TalkTriggerInfo.TalkId)
-  local GameInstance = GWorld.GameInstance
-  if not StoryLinePath and TalkTriggerId then
-    self:StartDirectTalkByTalkTriggerId_CPP(TalkTriggerId, nil, function()
-      if OnTalkEndCallback then
-        OnTalkEndCallback.Func(OnTalkEndCallback.Obj)
-      end
-    end)
-    return
-  end
-  local TalkContext = GameInstance:GetTalkContext()
-  TalkContext:RegisterBranchTriggerId(BranchId)
-  
-  local function STLCallback()
-    if not IsValid(self) then
-      return
-    end
-    if OnTalkEndCallback and OnTalkEndCallback.Func then
-      OnTalkEndCallback.Func(OnTalkEndCallback.Obj)
-    end
-  end
-  
-  local TalkActors = {
-    {
-      TalkActorType = "Player",
-      TalkActorId = 0,
-      TalkActorVisible = true
-    }
-  }
-  local InteractiveActorId
-  if IsValid(InteractiveActor) then
-    InteractiveActorId = InteractiveActor.UnitId or InteractiveActor.NpcId
-    if InteractiveActor.UnitType == "NPC" or InteractiveActor.UnitType == "Npc" then
-      table.insert(TalkActors, {
-        TalkActorType = "Npc",
-        TalkActorId = InteractiveActorId,
-        TalkActorVisible = true
-      })
-    end
-  end
-  if RelatedNpcIds then
-    for _, NpcId in pairs(RelatedNpcIds) do
-      table.insert(TalkActors, {
-        TalkActorType = "Npc",
-        TalkActorId = NpcId,
-        TalkActorVisible = true
-      })
-    end
-  end
-  return GWorld.StoryMgr:RunStory(StoryLinePath, nil, nil, STLCallback, STLCallback, {
-    TalkTriggerId = TalkTriggerId,
-    PlayDialogueCallBack = OnPlayDialogue,
-    TalkActors = TalkActors,
-    InteractiveActorId = InteractiveActorId
-  })
-end
-
 function BP_TalkContext_C:StopTalk(StoryLinePath)
   DebugPrint("StopTalk", StoryLinePath, UE4.UKismetSystemLibrary.GetFrameCount())
   GWorld.StoryMgr:StopStoryline(StoryLinePath)
-end
-
-function BP_TalkContext_C:StartDirectTalkByTalkTriggerId_CPP(TalkTriggerId, AudioAttachActor, EndCallback)
-  DebugPrint("StartDirectTalkByTalkTriggerId_CPP ", TalkTriggerId)
-  if not self:CheckTalkTriggerId() then
-    DebugPrint("检测TalkTriggerId不通过，请检查配置", TalkTriggerId)
-    if EndCallback then
-      EndCallback()
-    end
-    return
-  end
-  local TS = TalkSubsystem()
-  if not TS then
-    DebugPrint("获取TalkSubsystem失败:")
-    if EndCallback then
-      EndCallback()
-    end
-    return
-  end
-  local TalkTriggerInfo = DataMgr.TalkTrigger[TalkTriggerId]
-  if not TalkTriggerInfo then
-    Utils.ScreenPrint("Warning: 调用直接播放对话时传入了无效的TalkTriggerId,请检查。TalkTriggerId: " .. TalkTriggerId)
-    if EndCallback then
-      EndCallback()
-    end
-    return
-  end
-  if TalkTriggerInfo.StoryLinePath then
-    self:StartTalk(TalkTriggerId, nil, nil, nil, nil, {Func = EndCallback, Obj = self})
-  else
-    local RawData = {
-      TalkType = TalkTriggerInfo.TalkType,
-      FirstDialogueId = TalkTriggerInfo.DialogueId,
-      AudioAttachActor = AudioAttachActor,
-      TalkTriggerId = TalkTriggerId,
-      BlendInTime = 0.5,
-      BlendOutTime = 0.5
-    }
-    local TaskDataKey = TS:RegisterTalkData(RawData)
-    local TA = UE4.UPlayTalkAsyncAction.PlayTalk(GWorld.GameInstance, TaskDataKey, nil)
-    if type(EndCallback) == "function" then
-      TA.OnPlayTalkEnd:Add(self, EndCallback)
-    end
-  end
 end
 
 function BP_TalkContext_C:CheckTalkTriggerId(Id)

@@ -14,7 +14,7 @@ function Component:OpeningSequence_Lua()
       self:ClientHardBossOpeningCallback()
     end
     
-    self:ClientSafeRunStory(StorylinePath, 10100, STLCallback)
+    self:ClientSafeRunStory(StorylinePath, STLCallback)
     return
   else
     self:ClientHardBossOpeningCallback()

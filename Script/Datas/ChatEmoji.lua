@@ -986,5 +986,103 @@ return ReadOnly("ChatEmoji", {
       Id = "Imagine99",
       Name = "UI_Chat_Imagine99"
     }
+  },
+  [8] = {
+    Imagine109 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_01.T_Chat_Pack08_01'",
+      Id = "Imagine109",
+      Name = "UI_Chat_Imagine109"
+    },
+    Imagine110 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_02.T_Chat_Pack08_02'",
+      Id = "Imagine110",
+      Name = "UI_Chat_Imagine110"
+    },
+    Imagine111 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_03.T_Chat_Pack08_03'",
+      Id = "Imagine111",
+      Name = "UI_Chat_Imagine111"
+    },
+    Imagine112 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_04.T_Chat_Pack08_04'",
+      Id = "Imagine112",
+      Name = "UI_Chat_Imagine112"
+    },
+    Imagine113 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_05.T_Chat_Pack08_05'",
+      Id = "Imagine113",
+      Name = "UI_Chat_Imagine113"
+    },
+    Imagine114 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_06.T_Chat_Pack08_06'",
+      Id = "Imagine114",
+      Name = "UI_Chat_Imagine114"
+    },
+    Imagine115 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_07.T_Chat_Pack08_07'",
+      Id = "Imagine115",
+      Name = "UI_Chat_Imagine115"
+    },
+    Imagine116 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_08.T_Chat_Pack08_08'",
+      Id = "Imagine116",
+      Name = "UI_Chat_Imagine116"
+    },
+    Imagine117 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_09.T_Chat_Pack08_09'",
+      Id = "Imagine117",
+      Name = "UI_Chat_Imagine117"
+    },
+    Imagine118 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_10.T_Chat_Pack08_10'",
+      Id = "Imagine118",
+      Name = "UI_Chat_Imagine118"
+    },
+    Imagine119 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_11.T_Chat_Pack08_11'",
+      Id = "Imagine119",
+      Name = "UI_Chat_Imagine119"
+    },
+    Imagine120 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_12.T_Chat_Pack08_12'",
+      Id = "Imagine120",
+      Name = "UI_Chat_Imagine120"
+    },
+    Imagine121 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_13.T_Chat_Pack08_13'",
+      Id = "Imagine121",
+      Name = "UI_Chat_Imagine121"
+    },
+    Imagine122 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_14.T_Chat_Pack08_14'",
+      Id = "Imagine122",
+      Name = "UI_Chat_Imagine122"
+    },
+    Imagine123 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_15.T_Chat_Pack08_15'",
+      Id = "Imagine123",
+      Name = "UI_Chat_Imagine123"
+    },
+    Imagine124 = {
+      GroupId = 8,
+      Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chat/T_Chat_Pack08_16.T_Chat_Pack08_16'",
+      Id = "Imagine124",
+      Name = "UI_Chat_Imagine124"
+    }
   }
 })

@@ -118,6 +118,12 @@ return ReadOnly("AttrLimit", {
   MaxTriggerProbability = {
     AttachAttrName = "TriggerProbability",
     AttrName = "MaxTriggerProbability",
+    CovertRate = {
+      Weapon = "HyperTriggerCovertRate"
+    },
+    CovertTargetAttr = {
+      Char = "HyperTriggerRate"
+    },
     LimitValue = 1
   },
   MaxWalkSpeedModifier = {

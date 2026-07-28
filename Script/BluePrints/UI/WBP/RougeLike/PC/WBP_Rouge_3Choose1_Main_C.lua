@@ -1,5 +1,6 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local RougeUtils = require("Utils.RougeUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Construct()

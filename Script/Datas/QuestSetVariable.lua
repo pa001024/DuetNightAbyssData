@@ -38,6 +38,10 @@ T.RT_15 = {
 T.RT_16 = {
   [1] = T.RT_15
 }
+T.RT_17 = {Name = "IQ200404", Value = 0}
+T.RT_18 = {
+  [1] = T.RT_17
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -149,30 +153,21 @@ return ReadOnly("QuestSetVariable", {
       QuestStartorSuccess = "Success"
     }
   },
+  [10040203] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040205", Value = 1}
+      },
+      QuestId = 10040203,
+      QuestStartorSuccess = "Success"
+    }
+  },
   [10040204] = {
     Success = {
       Info = {
         [1] = {Name = "IQ10040204", Value = 1}
       },
       QuestId = 10040204,
-      QuestStartorSuccess = "Success"
-    }
-  },
-  [10040205] = {
-    Success = {
-      Info = {
-        [1] = {Name = "IQ10040205", Value = 1}
-      },
-      QuestId = 10040205,
-      QuestStartorSuccess = "Success"
-    }
-  },
-  [10040206] = {
-    Success = {
-      Info = {
-        [1] = {Name = "IQ10040205", Value = 0}
-      },
-      QuestId = 10040206,
       QuestStartorSuccess = "Success"
     }
   },
@@ -200,6 +195,15 @@ return ReadOnly("QuestSetVariable", {
         [1] = {Name = "IQ10040208", Value = 0}
       },
       QuestId = 10040209,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040210] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040205", Value = 0}
+      },
+      QuestId = 10040210,
       QuestStartorSuccess = "Success"
     }
   },
@@ -846,6 +850,47 @@ return ReadOnly("QuestSetVariable", {
         [1] = {Name = "IQ120315", Value = 1}
       },
       QuestId = 20031505,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [20040401] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ200404", Value = 1}
+      },
+      QuestId = 20040401,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [20040416] = {
+    Success = {
+      Info = T.RT_18,
+      QuestId = 20040416,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [20040417] = {
+    Success = {
+      Info = T.RT_18,
+      QuestId = 20040417,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [20040501] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ200405", Value = 1}
+      },
+      QuestId = 20040501,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [20040512] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ200405", Value = 0}
+      },
+      QuestId = 20040512,
       QuestStartorSuccess = "Success"
     }
   }

@@ -7,6 +7,7 @@ T.RT_1 = {
 }
 T.RT_2 = {}
 T.RT_3 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 100101,
   nextQuestIds = T.RT_2
@@ -18,11 +19,13 @@ T.RT_4 = {
   StartIndex = 1
 }
 T.RT_5 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 0,
   nextQuestIds = T.RT_2
 }
 T.RT_6 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 101107,
   nextQuestIds = T.RT_2
@@ -40,6 +43,7 @@ T.RT_8 = {
   StartIndex = 1
 }
 T.RT_9 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 0,
   SuccQuestDeliver = T.RT_8,
@@ -52,6 +56,7 @@ T.RT_10 = {
   StartIndex = 1
 }
 T.RT_11 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 101901,
   nextQuestIds = T.RT_2
@@ -63,6 +68,7 @@ T.RT_12 = {
   StartIndex = 1
 }
 T.RT_13 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 106001,
   nextQuestIds = T.RT_2
@@ -80,21 +86,25 @@ T.RT_15 = {
   StartIndex = 1
 }
 T.RT_16 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 210101,
   nextQuestIds = T.RT_2
 }
 T.RT_17 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 102101,
   nextQuestIds = T.RT_2
 }
 T.RT_18 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 102102,
   nextQuestIds = T.RT_2
 }
 T.RT_19 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104110,
   nextQuestIds = T.RT_2
@@ -106,16 +116,19 @@ T.RT_20 = {
   StartIndex = 1
 }
 T.RT_21 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104104,
   nextQuestIds = T.RT_2
 }
 T.RT_22 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104105,
   nextQuestIds = T.RT_2
 }
 T.RT_23 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 101105,
   nextQuestIds = T.RT_2
@@ -163,6 +176,7 @@ T.RT_30 = {
   StartIndex = 1
 }
 T.RT_31 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 105201,
   nextQuestIds = T.RT_2
@@ -186,46 +200,84 @@ T.RT_34 = {
   StartIndex = 1
 }
 T.RT_35 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104504,
   nextQuestIds = T.RT_2
 }
 T.RT_36 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104501,
   nextQuestIds = T.RT_2
 }
 T.RT_37 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104506,
   nextQuestIds = T.RT_2
 }
 T.RT_38 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104108,
   nextQuestIds = T.RT_2
 }
 T.RT_39 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 101103,
   nextQuestIds = T.RT_2
 }
 T.RT_40 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 101101,
   nextQuestIds = T.RT_2
 }
 T.RT_41 = {Success = 20020905}
 T.RT_42 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 101101,
   nextQuestId = 20020905,
   nextQuestIds = T.RT_41
 }
 T.RT_43 = {
+  IsBacktrack = false,
   IsMultiQuest = false,
   SubRegionId = 104107,
   nextQuestIds = T.RT_2
+}
+T.RT_44 = {Success = 20040411}
+T.RT_45 = {
+  IsBacktrack = false,
+  IsMultiQuest = false,
+  SubRegionId = 106301,
+  nextQuestId = 20040411,
+  nextQuestIds = T.RT_44
+}
+T.RT_46 = {
+  IsBacktrack = false,
+  IsMultiQuest = false,
+  SubRegionId = 106301,
+  nextQuestIds = T.RT_2
+}
+T.RT_47 = {Success = 20040505}
+T.RT_48 = {
+  IsBacktrack = false,
+  IsMultiQuest = false,
+  SubRegionId = 106301,
+  nextQuestId = 20040505,
+  nextQuestIds = T.RT_47
+}
+T.RT_49 = {Success = 20040814}
+T.RT_50 = {
+  IsBacktrack = false,
+  IsMultiQuest = false,
+  SubRegionId = 106001,
+  nextQuestId = 20040814,
+  nextQuestIds = T.RT_49
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -241,6 +293,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100101,
     Quests = {
       [10010101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100103,
         SuccQuestDeliver = T.RT_1,
@@ -248,54 +301,63 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10010102}
       },
       [10010102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010103,
         nextQuestIds = {Success = 10010103}
       },
       [10010103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010104,
         nextQuestIds = {Success = 10010104}
       },
       [10010104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010105,
         nextQuestIds = {Success = 10010105}
       },
       [10010105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 10010106,
         nextQuestIds = {Success = 10010106}
       },
       [10010106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010107,
         nextQuestIds = {Success = 10010107}
       },
       [10010107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010108,
         nextQuestIds = {Success = 10010108}
       },
       [10010108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 10010109,
         nextQuestIds = {Success = 10010109}
       },
       [10010109] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 10010110,
         nextQuestIds = {Success = 10010110}
       },
       [10010110] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 10010111,
@@ -312,66 +374,77 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100102,
     Quests = {
       [10010201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010203,
         nextQuestIds = {Success = 10010203}
       },
       [10010203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 10010204,
         nextQuestIds = {Success = 10010204}
       },
       [10010204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 10010205,
         nextQuestIds = {Success = 10010205}
       },
       [10010205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010206,
         nextQuestIds = {Success = 10010206}
       },
       [10010206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestId = 10010207,
         nextQuestIds = {Success = 10010207}
       },
       [10010207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestId = 10010208,
         nextQuestIds = {Success = 10010208}
       },
       [10010208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestId = 10010209,
         nextQuestIds = {Success = 10010209}
       },
       [10010209] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestId = 10010210,
         nextQuestIds = {Success = 10010210}
       },
       [10010210] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestId = 10010212,
         nextQuestIds = {Success = 10010212}
       },
       [10010212] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestId = 10010213,
         nextQuestIds = {Success = 10010213}
       },
       [10010213] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100102,
         nextQuestIds = T.RT_2
@@ -386,42 +459,49 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100103,
     Quests = {
       [10010301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010302,
         nextQuestIds = {Success = 10010302}
       },
       [10010302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100103,
         nextQuestId = 10010303,
         nextQuestIds = {Success = 10010303}
       },
       [10010303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100103,
         nextQuestId = 10010304,
         nextQuestIds = {Success = 10010304}
       },
       [10010304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100103,
         nextQuestId = 10010305,
         nextQuestIds = {Success = 10010305}
       },
       [10010305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010306,
         nextQuestIds = {Success = 10010306}
       },
       [10010306] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100103,
         nextQuestId = 10010310,
         nextQuestIds = {Success = 10010310}
       },
       [10010307] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = T.RT_4,
@@ -430,18 +510,21 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10010308] = T.RT_5,
       [10010310] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010307,
         nextQuestIds = {Success = 10010307}
       },
       [10010311] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010312,
         nextQuestIds = {Success = 10010312}
       },
       [10010312] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10010301,
@@ -457,54 +540,63 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100201,
     Quests = {
       [10020101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020102,
         nextQuestIds = {Success = 10020102}
       },
       [10020102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020103,
         nextQuestIds = {Success = 10020103}
       },
       [10020103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020104,
         nextQuestIds = {Success = 10020104}
       },
       [10020104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020105,
         nextQuestIds = {Success = 10020105}
       },
       [10020105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020106,
         nextQuestIds = {Success = 10020106}
       },
       [10020106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020107,
         nextQuestIds = {Success = 10020107}
       },
       [10020107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020108,
         nextQuestIds = {Success = 10020108}
       },
       [10020108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020111,
         nextQuestIds = {Success = 10020111}
       },
       [10020111] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020112,
@@ -521,72 +613,84 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100202,
     Quests = {
       [10020201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020202,
         nextQuestIds = {Success = 10020202}
       },
       [10020202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020203,
         nextQuestIds = {Success = 10020203}
       },
       [10020203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020204,
         nextQuestIds = {Success = 10020204}
       },
       [10020204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020205,
         nextQuestIds = {Success = 10020205}
       },
       [10020205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020206,
         nextQuestIds = {Success = 10020206}
       },
       [10020206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020207,
         nextQuestIds = {Success = 10020207}
       },
       [10020207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020208,
         nextQuestIds = {Success = 10020208}
       },
       [10020208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020209,
         nextQuestIds = {Success = 10020209}
       },
       [10020209] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020210,
         nextQuestIds = {Success = 10020210}
       },
       [10020210] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020211,
         nextQuestIds = {Success = 10020211}
       },
       [10020211] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020215,
         nextQuestIds = {Success = 10020215}
       },
       [10020215] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         SuccQuestDeliver = T.RT_4,
@@ -594,12 +698,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020221}
       },
       [10020221] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 10020222,
         nextQuestIds = {Success = 10020222}
       },
       [10020222] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020223,
@@ -616,66 +722,77 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100203,
     Quests = {
       [10020301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020302,
         nextQuestIds = {Success = 10020302}
       },
       [10020302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020303,
         nextQuestIds = {Success = 10020303}
       },
       [10020303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020304,
         nextQuestIds = {Success = 10020304}
       },
       [10020304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020305,
         nextQuestIds = {Success = 10020305}
       },
       [10020305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101301,
         nextQuestId = 10020308,
         nextQuestIds = {Success = 10020308}
       },
       [10020308] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101305,
         nextQuestId = 10020310,
         nextQuestIds = {Success = 10020310}
       },
       [10020310] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020311,
         nextQuestIds = {Success = 10020311}
       },
       [10020311] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101303,
         nextQuestId = 10020312,
         nextQuestIds = {Success = 10020312}
       },
       [10020312] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101304,
         nextQuestId = 10020313,
         nextQuestIds = {Success = 10020313}
       },
       [10020313] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020314,
         nextQuestIds = {Success = 10020314}
       },
       [10020314] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101304,
         SuccQuestDeliver = {
@@ -698,60 +815,70 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100204,
     Quests = {
       [10020401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020402,
         nextQuestIds = {Success = 10020402}
       },
       [10020402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020403,
         nextQuestIds = {Success = 10020403}
       },
       [10020403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020404,
         nextQuestIds = {Success = 10020404}
       },
       [10020404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10020405,
         nextQuestIds = {Success = 10020405}
       },
       [10020405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020406,
         nextQuestIds = {Success = 10020406}
       },
       [10020406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020407,
         nextQuestIds = {Success = 10020407}
       },
       [10020407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020408,
         nextQuestIds = {Success = 10020408}
       },
       [10020408] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020409,
         nextQuestIds = {Success = 10020409}
       },
       [10020409] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020410,
         nextQuestIds = {Success = 10020410}
       },
       [10020410] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -780,6 +907,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020502}
       },
       [10020502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         StartQuestDeliver = {
           DeliverType = 1,
@@ -792,24 +920,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020503}
       },
       [10020503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020504,
         nextQuestIds = {Success = 10020504}
       },
       [10020504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020505,
         nextQuestIds = {Success = 10020505}
       },
       [10020505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020506,
         nextQuestIds = {Success = 10020506}
       },
       [10020506] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020507,
@@ -826,60 +958,70 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100206,
     Quests = {
       [10020602] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020603,
         nextQuestIds = {Success = 10020603}
       },
       [10020603] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020604,
         nextQuestIds = {Success = 10020604}
       },
       [10020604] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020605,
         nextQuestIds = {Success = 10020605}
       },
       [10020605] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020606,
         nextQuestIds = {Success = 10020606}
       },
       [10020606] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020607,
         nextQuestIds = {Success = 10020607}
       },
       [10020607] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020608,
         nextQuestIds = {Success = 10020608}
       },
       [10020608] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020611,
         nextQuestIds = {Success = 10020611}
       },
       [10020611] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020612,
         nextQuestIds = {Success = 10020612}
       },
       [10020612] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020613,
         nextQuestIds = {Success = 10020613}
       },
       [10020613] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020615,
@@ -887,12 +1029,14 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10020615] = T.RT_5,
       [10020651] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020652,
         nextQuestIds = {Success = 10020652}
       },
       [10020652] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10020602,
@@ -908,54 +1052,63 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100207,
     Quests = {
       [10020701] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
-        SubRegionId = 0,
+        SubRegionId = 101101,
         nextQuestId = 10020702,
         nextQuestIds = {Success = 10020702}
       },
       [10020702] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020703,
         nextQuestIds = {Success = 10020703}
       },
       [10020703] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020704,
         nextQuestIds = {Success = 10020704}
       },
       [10020704] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020705,
         nextQuestIds = {Success = 10020705}
       },
       [10020705] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020706,
         nextQuestIds = {Success = 10020706}
       },
       [10020706] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10020707,
         nextQuestIds = {Success = 10020707}
       },
       [10020707] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020710,
         nextQuestIds = {Success = 10020710}
       },
       [10020708] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020709,
         nextQuestIds = {Success = 10020709}
       },
       [10020709] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -967,6 +1120,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = T.RT_2
       },
       [10020710] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020708,
@@ -982,6 +1136,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100208,
     Quests = {
       [10020801] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -994,12 +1149,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020802}
       },
       [10020802] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020803,
         nextQuestIds = {Success = 10020803}
       },
       [10020803] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -1012,6 +1169,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020804}
       },
       [10020804] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -1024,24 +1182,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020806}
       },
       [10020806] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020807,
         nextQuestIds = {Success = 10020807}
       },
       [10020807] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10020808,
         nextQuestIds = {Success = 10020808}
       },
       [10020808] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10020809,
         nextQuestIds = {Success = 10020809}
       },
       [10020809] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = T.RT_1,
@@ -1049,6 +1211,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10020810}
       },
       [10020810] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         StartQuestDeliver = T.RT_1,
         SubRegionId = 0,
@@ -1065,84 +1228,98 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100301,
     Quests = {
       [10030101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 10030103,
         nextQuestIds = {Success = 10030103}
       },
       [10030103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030104,
         nextQuestIds = {Success = 10030104}
       },
       [10030104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030105,
         nextQuestIds = {Success = 10030105}
       },
       [10030105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030106,
         nextQuestIds = {Success = 10030106}
       },
       [10030106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030107,
         nextQuestIds = {Success = 10030107}
       },
       [10030107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030198,
         nextQuestIds = {Success = 10030198}
       },
       [10030108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030109,
         nextQuestIds = {Success = 10030109}
       },
       [10030109] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030110,
         nextQuestIds = {Success = 10030110}
       },
       [10030110] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030111,
         nextQuestIds = {Success = 10030111}
       },
       [10030111] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030112,
         nextQuestIds = {Success = 10030112}
       },
       [10030112] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030113,
         nextQuestIds = {Success = 10030113}
       },
       [10030113] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030114,
         nextQuestIds = {Success = 10030114}
       },
       [10030114] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030115,
         nextQuestIds = {Success = 10030115}
       },
       [10030115] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030116,
@@ -1150,12 +1327,14 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10030116] = T.RT_5,
       [10030197] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10030108,
         nextQuestIds = {Success = 10030108}
       },
       [10030198] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10030197,
@@ -1171,48 +1350,56 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100302,
     Quests = {
       [10030201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030202,
         nextQuestIds = {Success = 10030202}
       },
       [10030202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030203,
         nextQuestIds = {Success = 10030203}
       },
       [10030203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030205,
         nextQuestIds = {Success = 10030205}
       },
       [10030205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030206,
         nextQuestIds = {Success = 10030206}
       },
       [10030206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101701,
         nextQuestId = 10030207,
         nextQuestIds = {Success = 10030207}
       },
       [10030207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030208,
         nextQuestIds = {Success = 10030208}
       },
       [10030208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030209,
         nextQuestIds = {Success = 10030209}
       },
       [10030209] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030214,
@@ -1220,6 +1407,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10030214] = T.RT_9,
       [10030299] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030201,
@@ -1236,36 +1424,42 @@ return ReadOnly("STLExportQuestChain", {
     Quests = {
       [10030301] = T.RT_5,
       [10030394] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101108,
         nextQuestId = 10030301,
         nextQuestIds = {Success = 10030301}
       },
       [10030395] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030394,
         nextQuestIds = {Success = 10030394}
       },
       [10030396] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030395,
         nextQuestIds = {Success = 10030395}
       },
       [10030397] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030396,
         nextQuestIds = {Success = 10030396}
       },
       [10030398] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101110,
         nextQuestId = 10030397,
         nextQuestIds = {Success = 10030397}
       },
       [10030399] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10030398,
@@ -1281,30 +1475,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100304,
     Quests = {
       [10030401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10030402,
         nextQuestIds = {Success = 10030402}
       },
       [10030402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030403,
         nextQuestIds = {Success = 10030403}
       },
       [10030403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030404,
         nextQuestIds = {Success = 10030404}
       },
       [10030404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030405,
         nextQuestIds = {Success = 10030405}
       },
       [10030405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -1316,12 +1515,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = T.RT_2
       },
       [10030498] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 10030499,
         nextQuestIds = {Success = 10030499}
       },
       [10030499] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = T.RT_8,
@@ -1338,42 +1539,49 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100305,
     Quests = {
       [10030501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         nextQuestId = 10030502,
         nextQuestIds = {Success = 10030502}
       },
       [10030502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         nextQuestId = 10030503,
         nextQuestIds = {Success = 10030503}
       },
       [10030503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         nextQuestId = 10030504,
         nextQuestIds = {Success = 10030504}
       },
       [10030504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         nextQuestId = 10030505,
         nextQuestIds = {Success = 10030505}
       },
       [10030505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         nextQuestId = 10030506,
         nextQuestIds = {Success = 10030506}
       },
       [10030506] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         nextQuestId = 10030507,
         nextQuestIds = {Success = 10030507}
       },
       [10030507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 103201,
         SuccQuestDeliver = {
@@ -1386,6 +1594,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10030508}
       },
       [10030508] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101703,
         SuccQuestDeliver = {
@@ -1398,12 +1607,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10030509}
       },
       [10030509] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 10030510,
         nextQuestIds = {Success = 10030510}
       },
       [10030510] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         SuccQuestDeliver = T.RT_10,
@@ -1411,6 +1622,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10030511}
       },
       [10030511] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 10030512,
@@ -1427,6 +1639,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100306,
     Quests = {
       [10030601] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         SuccQuestDeliver = T.RT_8,
@@ -1442,6 +1655,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100307,
     Quests = {
       [10030701] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10030702,
@@ -1458,24 +1672,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100401,
     Quests = {
       [10040101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 10040116,
         nextQuestIds = {Success = 10040116}
       },
       [10040103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040104,
         nextQuestIds = {Success = 10040104}
       },
       [10040104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040106,
         nextQuestIds = {Success = 10040106}
       },
       [10040106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         SuccQuestDeliver = T.RT_12,
@@ -1483,24 +1701,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10040107}
       },
       [10040107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         nextQuestId = 10040109,
         nextQuestIds = {Success = 10040109}
       },
       [10040109] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         nextQuestId = 10040110,
         nextQuestIds = {Success = 10040110}
       },
       [10040110] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         nextQuestId = 10040111,
         nextQuestIds = {Success = 10040111}
       },
       [10040111] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         SuccQuestDeliver = {
@@ -1514,6 +1736,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10040112] = T.RT_13,
       [10040116] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 10040103,
@@ -1529,30 +1752,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100402,
     Quests = {
       [10040201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040208,
         nextQuestIds = {Success = 10040208}
       },
       [10040202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040209,
         nextQuestIds = {Success = 10040209}
       },
       [10040203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040210,
         nextQuestIds = {Success = 10040210}
       },
       [10040204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040206,
         nextQuestIds = {Success = 10040206}
       },
       [10040205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         SuccQuestDeliver = T.RT_14,
@@ -1560,6 +1788,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10040207}
       },
       [10040206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         SuccQuestDeliver = T.RT_12,
@@ -1568,30 +1797,35 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10040207] = T.RT_13,
       [10040208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040202,
         nextQuestIds = {Success = 10040202}
       },
       [10040209] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040214,
         nextQuestIds = {Success = 10040214}
       },
       [10040210] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040213,
         nextQuestIds = {Success = 10040213}
       },
       [10040213] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040204,
         nextQuestIds = {Success = 10040204}
       },
       [10040214] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040203,
@@ -1607,66 +1841,77 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100403,
     Quests = {
       [10040301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040302,
         nextQuestIds = {Success = 10040302}
       },
       [10040302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040303,
         nextQuestIds = {Success = 10040303}
       },
       [10040303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040305,
         nextQuestIds = {Success = 10040305}
       },
       [10040304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040306,
         nextQuestIds = {Success = 10040306}
       },
       [10040305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040304,
         nextQuestIds = {Success = 10040304}
       },
       [10040306] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040313,
         nextQuestIds = {Success = 10040313}
       },
       [10040307] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040308,
         nextQuestIds = {Success = 10040308}
       },
       [10040308] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040309,
         nextQuestIds = {Success = 10040309}
       },
       [10040309] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040310,
         nextQuestIds = {Success = 10040310}
       },
       [10040310] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040311,
         nextQuestIds = {Success = 10040311}
       },
       [10040311] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040312,
@@ -1674,6 +1919,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10040312] = T.RT_13,
       [10040313] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 10040307,
@@ -1689,6 +1935,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100404,
     Quests = {
       [10040401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         SuccQuestDeliver = T.RT_15,
@@ -1696,149 +1943,174 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10040402}
       },
       [10040402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040403,
         nextQuestIds = {Success = 10040403}
       },
       [10040403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040422,
         nextQuestIds = {Success = 10040422}
       },
       [10040404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040423,
         nextQuestIds = {Success = 10040423}
       },
       [10040405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040406,
         nextQuestIds = {Success = 10040406}
       },
       [10040406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040424,
         nextQuestIds = {Success = 10040424}
       },
       [10040407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040408,
         nextQuestIds = {Success = 10040408}
       },
       [10040408] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040409,
         nextQuestIds = {Success = 10040409}
       },
       [10040409] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040410,
         nextQuestIds = {Success = 10040410}
       },
       [10040410] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040411,
         nextQuestIds = {Success = 10040411}
       },
       [10040411] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040413,
         nextQuestIds = {Success = 10040413}
       },
       [10040413] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040414,
         nextQuestIds = {Success = 10040414}
       },
       [10040414] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040415,
         nextQuestIds = {Success = 10040415}
       },
       [10040415] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040416,
         nextQuestIds = {Success = 10040416}
       },
       [10040416] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040417,
         nextQuestIds = {Success = 10040417}
       },
       [10040417] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040418,
         nextQuestIds = {Success = 10040418}
       },
       [10040418] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040419,
         nextQuestIds = {Success = 10040419}
       },
       [10040419] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040420,
         nextQuestIds = {Success = 10040420}
       },
       [10040420] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040421,
         nextQuestIds = {Success = 10040421}
       },
       [10040421] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040428,
         nextQuestIds = {Success = 10040428}
       },
       [10040422] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040404,
         nextQuestIds = {Success = 10040404}
       },
       [10040423] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040405,
         nextQuestIds = {Success = 10040405}
       },
       [10040424] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040407,
         nextQuestIds = {Success = 10040407}
       },
       [10040426] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestIds = T.RT_2
       },
       [10040427] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040426,
         nextQuestIds = {Success = 10040426}
       },
       [10040428] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040427,
@@ -1854,36 +2126,42 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 100405,
     Quests = {
       [10040501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040502,
         nextQuestIds = {Success = 10040502}
       },
       [10040502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040503,
         nextQuestIds = {Success = 10040503}
       },
       [10040503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040504,
         nextQuestIds = {Success = 10040504}
       },
       [10040504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040514,
         nextQuestIds = {Success = 10040514}
       },
       [10040506] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040512,
         nextQuestIds = {Success = 10040512}
       },
       [10040507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         SuccQuestDeliver = {
@@ -1896,6 +2174,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10040508}
       },
       [10040508] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106201,
         SuccQuestDeliver = T.RT_14,
@@ -1903,6 +2182,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10040511}
       },
       [10040509] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         SuccQuestDeliver = T.RT_7,
@@ -1911,6 +2191,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [10040510] = T.RT_16,
       [10040511] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         SuccQuestDeliver = T.RT_15,
@@ -1918,12 +2199,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 10040509}
       },
       [10040512] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040507,
         nextQuestIds = {Success = 10040507}
       },
       [10040514] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106101,
         nextQuestId = 10040506,
@@ -1939,6 +2222,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 110101,
     Quests = {
       [11010101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100104,
         SuccQuestDeliver = {
@@ -1951,6 +2235,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 11010104}
       },
       [11010103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         SuccQuestDeliver = T.RT_1,
@@ -1958,24 +2243,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 11010101}
       },
       [11010104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010106,
         nextQuestIds = {Success = 11010106}
       },
       [11010106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010107,
         nextQuestIds = {Success = 11010107}
       },
       [11010107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010108,
         nextQuestIds = {Success = 11010108}
       },
       [11010108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010109,
@@ -1992,30 +2281,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 110103,
     Quests = {
       [11010301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010311,
         nextQuestIds = {Success = 11010311}
       },
       [11010303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010312,
         nextQuestIds = {Success = 11010312}
       },
       [11010305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010306,
         nextQuestIds = {Success = 11010306}
       },
       [11010306] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010309,
         nextQuestIds = {Success = 11010309}
       },
       [11010307] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010303,
@@ -2023,30 +2317,35 @@ return ReadOnly("STLExportQuestChain", {
       },
       [11010308] = T.RT_17,
       [11010309] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010308,
         nextQuestIds = {Success = 11010308}
       },
       [11010311] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010314,
         nextQuestIds = {Success = 11010314}
       },
       [11010312] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010313,
         nextQuestIds = {Success = 11010313}
       },
       [11010313] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010305,
         nextQuestIds = {Success = 11010305}
       },
       [11010314] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010307,
@@ -2062,66 +2361,77 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 110105,
     Quests = {
       [11010501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010525,
         nextQuestIds = {Success = 11010525}
       },
       [11010502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010520,
         nextQuestIds = {Success = 11010520}
       },
       [11010505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010518,
         nextQuestIds = {Success = 11010518}
       },
       [11010507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010509,
         nextQuestIds = {Success = 11010509}
       },
       [11010509] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010510,
         nextQuestIds = {Success = 11010510}
       },
       [11010510] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010521,
         nextQuestIds = {Success = 11010521}
       },
       [11010511] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010528,
         nextQuestIds = {Success = 11010528}
       },
       [11010512] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010513,
         nextQuestIds = {Success = 11010513}
       },
       [11010513] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010514,
         nextQuestIds = {Success = 11010514}
       },
       [11010514] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010519,
         nextQuestIds = {Success = 11010519}
       },
       [11010515] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010516,
@@ -2129,72 +2439,84 @@ return ReadOnly("STLExportQuestChain", {
       },
       [11010516] = T.RT_18,
       [11010518] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010524,
         nextQuestIds = {Success = 11010524}
       },
       [11010519] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010515,
         nextQuestIds = {Success = 11010515}
       },
       [11010520] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010507,
         nextQuestIds = {Success = 11010507}
       },
       [11010521] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010522,
         nextQuestIds = {Success = 11010522}
       },
       [11010522] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010523,
         nextQuestIds = {Success = 11010523}
       },
       [11010523] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010526,
         nextQuestIds = {Success = 11010526}
       },
       [11010524] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010502,
         nextQuestIds = {Success = 11010502}
       },
       [11010525] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102101,
         nextQuestId = 11010505,
         nextQuestIds = {Success = 11010505}
       },
       [11010526] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010511,
         nextQuestIds = {Success = 11010511}
       },
       [11010527] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010529,
         nextQuestIds = {Success = 11010529}
       },
       [11010528] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010527,
         nextQuestIds = {Success = 11010527}
       },
       [11010529] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 11010512,
@@ -2210,18 +2532,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 110107,
     Quests = {
       [11010702] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010705,
         nextQuestIds = {Success = 11010705}
       },
       [11010704] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010706,
         nextQuestIds = {Success = 11010706}
       },
       [11010705] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010704,
@@ -2238,18 +2563,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 110108,
     Quests = {
       [11010801] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102103,
         nextQuestId = 11010802,
         nextQuestIds = {Success = 11010802}
       },
       [11010802] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102103,
         nextQuestId = 11010804,
         nextQuestIds = {Success = 11010804}
       },
       [11010804] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102103,
         SuccQuestDeliver = {
@@ -2262,36 +2590,42 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 11010816}
       },
       [11010808] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010809,
         nextQuestIds = {Success = 11010809}
       },
       [11010809] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010815,
         nextQuestIds = {Success = 11010815}
       },
       [11010810] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010813,
         nextQuestIds = {Success = 11010813}
       },
       [11010812] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010814,
         nextQuestIds = {Success = 11010814}
       },
       [11010813] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010812,
         nextQuestIds = {Success = 11010812}
       },
       [11010814] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         SuccQuestDeliver = {
@@ -2304,12 +2638,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 11010801}
       },
       [11010815] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102102,
         nextQuestId = 11010810,
         nextQuestIds = {Success = 11010810}
       },
       [11010816] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestIds = T.RT_2
@@ -2324,30 +2660,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 110109,
     Quests = {
       [11010902] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010907,
         nextQuestIds = {Success = 11010907}
       },
       [11010903] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010904,
         nextQuestIds = {Success = 11010904}
       },
       [11010904] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010910,
         nextQuestIds = {Success = 11010910}
       },
       [11010905] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010906,
         nextQuestIds = {Success = 11010906}
       },
       [11010906] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         SuccQuestDeliver = T.RT_10,
@@ -2355,24 +2696,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 11010909}
       },
       [11010907] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010908,
         nextQuestIds = {Success = 11010908}
       },
       [11010908] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010903,
         nextQuestIds = {Success = 11010903}
       },
       [11010909] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         SuccQuestDeliver = T.RT_7,
         nextQuestIds = T.RT_2
       },
       [11010910] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 102104,
         nextQuestId = 11010905,
@@ -2388,18 +2733,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120001,
     Quests = {
       [12000101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 12000102,
         nextQuestIds = {Success = 12000102}
       },
       [12000102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000103,
         nextQuestIds = {Success = 12000103}
       },
       [12000103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000104,
@@ -2416,48 +2764,56 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120002,
     Quests = {
       [12000201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 12000202,
         nextQuestIds = {Success = 12000202}
       },
       [12000202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 12000203,
         nextQuestIds = {Success = 12000203}
       },
       [12000203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 12000204,
         nextQuestIds = {Success = 12000204}
       },
       [12000204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 12000205,
         nextQuestIds = {Success = 12000205}
       },
       [12000205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 12000206,
         nextQuestIds = {Success = 12000206}
       },
       [12000206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101901,
         nextQuestId = 12000207,
         nextQuestIds = {Success = 12000207}
       },
       [12000207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000208,
         nextQuestIds = {Success = 12000208}
       },
       [12000208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000209,
@@ -2474,6 +2830,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120003,
     Quests = {
       [12000301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         SuccQuestDeliver = T.RT_7,
@@ -2481,42 +2838,49 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12000302}
       },
       [12000302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 12000303,
         nextQuestIds = {Success = 12000303}
       },
       [12000303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12000304,
         nextQuestIds = {Success = 12000304}
       },
       [12000304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12000305,
         nextQuestIds = {Success = 12000305}
       },
       [12000305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000306,
         nextQuestIds = {Success = 12000306}
       },
       [12000306] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000307,
         nextQuestIds = {Success = 12000307}
       },
       [12000307] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12000308,
         nextQuestIds = {Success = 12000308}
       },
       [12000308] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         SuccQuestDeliver = {
@@ -2537,66 +2901,77 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120101,
     Quests = {
       [12010101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12010102,
         nextQuestIds = {Success = 12010102}
       },
       [12010102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010103,
         nextQuestIds = {Success = 12010103}
       },
       [12010103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010104,
         nextQuestIds = {Success = 12010104}
       },
       [12010104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010105,
         nextQuestIds = {Success = 12010105}
       },
       [12010105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010106,
         nextQuestIds = {Success = 12010106}
       },
       [12010106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010107,
         nextQuestIds = {Success = 12010107}
       },
       [12010107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010108,
         nextQuestIds = {Success = 12010108}
       },
       [12010108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010109,
         nextQuestIds = {Success = 12010109}
       },
       [12010109] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010110,
         nextQuestIds = {Success = 12010110}
       },
       [12010110] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010111,
         nextQuestIds = {Success = 12010111}
       },
       [12010111] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 12010112,
@@ -2613,72 +2988,84 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120102,
     Quests = {
       [12010201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12010203,
         nextQuestIds = {Success = 12010203}
       },
       [12010203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010204,
         nextQuestIds = {Success = 12010204}
       },
       [12010204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010205,
         nextQuestIds = {Success = 12010205}
       },
       [12010205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010206,
         nextQuestIds = {Success = 12010206}
       },
       [12010206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010250,
         nextQuestIds = {Success = 12010250}
       },
       [12010207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12010208,
         nextQuestIds = {Success = 12010208}
       },
       [12010208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010253,
         nextQuestIds = {Success = 12010253}
       },
       [12010209] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010252,
         nextQuestIds = {Success = 12010252}
       },
       [12010210] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010211,
         nextQuestIds = {Success = 12010211}
       },
       [12010211] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010212,
         nextQuestIds = {Success = 12010212}
       },
       [12010212] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010213,
         nextQuestIds = {Success = 12010213}
       },
       [12010213] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010214,
@@ -2686,30 +3073,35 @@ return ReadOnly("STLExportQuestChain", {
       },
       [12010214] = T.RT_5,
       [12010250] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010254,
         nextQuestIds = {Success = 12010254}
       },
       [12010251] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010210,
         nextQuestIds = {Success = 12010210}
       },
       [12010252] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010251,
         nextQuestIds = {Success = 12010251}
       },
       [12010253] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104103,
         nextQuestId = 12010209,
         nextQuestIds = {Success = 12010209}
       },
       [12010254] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 12010207,
@@ -2728,90 +3120,105 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120103,
     Quests = {
       [12010301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010302,
         nextQuestIds = {Success = 12010302}
       },
       [12010302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010303,
         nextQuestIds = {Success = 12010303}
       },
       [12010303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010304,
         nextQuestIds = {Success = 12010304}
       },
       [12010304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010306,
         nextQuestIds = {Success = 12010306}
       },
       [12010306] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12010307,
         nextQuestIds = {Success = 12010307}
       },
       [12010307] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010308,
         nextQuestIds = {Success = 12010308}
       },
       [12010308] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010322,
         nextQuestIds = {Success = 12010322}
       },
       [12010309] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 12010351,
         nextQuestIds = {Success = 12010351}
       },
       [12010310] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 12010311,
         nextQuestIds = {Success = 12010311}
       },
       [12010311] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 12010312,
         nextQuestIds = {Success = 12010312}
       },
       [12010312] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 12010313,
         nextQuestIds = {Success = 12010313}
       },
       [12010313] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 12010314,
         nextQuestIds = {Success = 12010314}
       },
       [12010314] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010320,
         nextQuestIds = {Success = 12010320}
       },
       [12010315] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010316,
         nextQuestIds = {Success = 12010316}
       },
       [12010316] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 104110,
         nextQuestId = 12010317,
@@ -2823,24 +3230,28 @@ return ReadOnly("STLExportQuestChain", {
       [12010317] = T.RT_19,
       [12010318] = T.RT_19,
       [12010320] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010315,
         nextQuestIds = {Success = 12010315}
       },
       [12010322] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010309,
         nextQuestIds = {Success = 12010309}
       },
       [12010351] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 12010352,
         nextQuestIds = {Success = 12010352}
       },
       [12010352] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 12010310,
@@ -2856,84 +3267,98 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120104,
     Quests = {
       [12010401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 12010402,
         nextQuestIds = {Success = 12010402}
       },
       [12010402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 12010403,
         nextQuestIds = {Success = 12010403}
       },
       [12010403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 12010404,
         nextQuestIds = {Success = 12010404}
       },
       [12010404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 12010405,
         nextQuestIds = {Success = 12010405}
       },
       [12010405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010406,
         nextQuestIds = {Success = 12010406}
       },
       [12010406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010407,
         nextQuestIds = {Success = 12010407}
       },
       [12010407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010408,
         nextQuestIds = {Success = 12010408}
       },
       [12010408] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010409,
         nextQuestIds = {Success = 12010409}
       },
       [12010409] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010411,
         nextQuestIds = {Success = 12010411}
       },
       [12010411] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010412,
         nextQuestIds = {Success = 12010412}
       },
       [12010412] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010413,
         nextQuestIds = {Success = 12010413}
       },
       [12010413] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010414,
         nextQuestIds = {Success = 12010414}
       },
       [12010414] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 12010415,
         nextQuestIds = {Success = 12010415}
       },
       [12010415] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         SuccQuestDeliver = T.RT_20,
@@ -2941,6 +3366,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010416}
       },
       [12010416] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -2953,6 +3379,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010417}
       },
       [12010417] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -2965,6 +3392,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010418}
       },
       [12010418] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -2977,6 +3405,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010419}
       },
       [12010419] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12010420,
@@ -2993,24 +3422,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120105,
     Quests = {
       [12010501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 12010502,
         nextQuestIds = {Success = 12010502}
       },
       [12010502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 12010503,
         nextQuestIds = {Success = 12010503}
       },
       [12010503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104102,
         nextQuestId = 12010504,
         nextQuestIds = {Success = 12010504}
       },
       [12010504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104102,
         SuccQuestDeliver = {
@@ -3023,29 +3456,34 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010517}
       },
       [12010513] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104102,
         nextQuestId = 12010514,
         nextQuestIds = {Success = 12010514}
       },
       [12010514] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104102,
         nextQuestId = 12010515,
         nextQuestIds = {Success = 12010515}
       },
       [12010515] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104102,
         nextQuestId = 12010516,
         nextQuestIds = {Success = 12010516}
       },
       [12010516] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104102,
         nextQuestIds = T.RT_2
       },
       [12010517] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -3058,6 +3496,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010518}
       },
       [12010518] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -3070,6 +3509,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010519}
       },
       [12010519] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -3091,12 +3531,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120106,
     Quests = {
       [12010601] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 12010602,
         nextQuestIds = {Success = 12010602}
       },
       [12010602] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         SuccQuestDeliver = {
@@ -3109,30 +3551,35 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12010603}
       },
       [12010603] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105701,
         nextQuestId = 12010604,
         nextQuestIds = {Success = 12010604}
       },
       [12010604] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105701,
         nextQuestId = 12010605,
         nextQuestIds = {Success = 12010605}
       },
       [12010605] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105701,
         nextQuestId = 12010606,
         nextQuestIds = {Success = 12010606}
       },
       [12010606] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105701,
         nextQuestId = 12010607,
         nextQuestIds = {Success = 12010607}
       },
       [12010607] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105701,
         SuccQuestDeliver = {
@@ -3155,30 +3602,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120111,
     Quests = {
       [12011101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011102,
         nextQuestIds = {Success = 12011102}
       },
       [12011102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011103,
         nextQuestIds = {Success = 12011103}
       },
       [12011103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011105,
         nextQuestIds = {Success = 12011105}
       },
       [12011105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011106,
         nextQuestIds = {Success = 12011106}
       },
       [12011106] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101101,
         nextQuestId = 12011107,
@@ -3188,12 +3640,14 @@ return ReadOnly("STLExportQuestChain", {
         }
       },
       [12011107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011108,
         nextQuestIds = {Success = 12011108}
       },
       [12011108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011109,
@@ -3207,6 +3661,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011107}
       },
       [12011150] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011101,
@@ -3222,24 +3677,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120112,
     Quests = {
       [12011201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011202,
         nextQuestIds = {Success = 12011202}
       },
       [12011202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011203,
         nextQuestIds = {Success = 12011203}
       },
       [12011203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011204,
         nextQuestIds = {Success = 12011204}
       },
       [12011204] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101101,
         nextQuestId = 12011205,
@@ -3249,12 +3708,14 @@ return ReadOnly("STLExportQuestChain", {
         }
       },
       [12011205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011206,
         nextQuestIds = {Success = 12011206}
       },
       [12011206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011207,
@@ -3268,6 +3729,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011205}
       },
       [12011250] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011201,
@@ -3283,18 +3745,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120113,
     Quests = {
       [12011301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011302,
         nextQuestIds = {Success = 12011302}
       },
       [12011302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011303,
         nextQuestIds = {Success = 12011303}
       },
       [12011303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         SuccQuestDeliver = T.RT_24,
@@ -3302,12 +3767,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011305}
       },
       [12011305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011306,
         nextQuestIds = {Success = 12011306}
       },
       [12011306] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101105,
         nextQuestId = 12011308,
@@ -3324,6 +3791,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [12011308] = T.RT_23,
       [12011350] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011301,
@@ -3339,12 +3807,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120114,
     Quests = {
       [12011401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011403,
         nextQuestIds = {Success = 12011403}
       },
       [12011403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         SuccQuestDeliver = T.RT_24,
@@ -3352,6 +3822,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011404}
       },
       [12011404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         SuccQuestDeliver = T.RT_25,
@@ -3359,42 +3830,49 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011405}
       },
       [12011405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011406,
         nextQuestIds = {Success = 12011406}
       },
       [12011406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 12011407,
         nextQuestIds = {Success = 12011407}
       },
       [12011407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 12011408,
         nextQuestIds = {Success = 12011408}
       },
       [12011408] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 12011409,
         nextQuestIds = {Success = 12011409}
       },
       [12011409] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 12011410,
         nextQuestIds = {Success = 12011410}
       },
       [12011410] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 12011411,
         nextQuestIds = {Success = 12011411}
       },
       [12011411] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         SuccQuestDeliver = T.RT_25,
@@ -3402,12 +3880,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011415}
       },
       [12011412] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011413,
         nextQuestIds = {Success = 12011413}
       },
       [12011413] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101105,
         nextQuestId = 12011414,
@@ -3418,6 +3898,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [12011414] = T.RT_23,
       [12011415] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         SuccQuestDeliver = T.RT_24,
@@ -3431,6 +3912,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12011414}
       },
       [12011450] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101105,
         nextQuestId = 12011401,
@@ -3446,6 +3928,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120201,
     Quests = {
       [12020101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105602,
         SuccQuestDeliver = T.RT_26,
@@ -3453,66 +3936,77 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020102}
       },
       [12020102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020103,
         nextQuestIds = {Success = 12020103}
       },
       [12020103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020104,
         nextQuestIds = {Success = 12020104}
       },
       [12020104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020105,
         nextQuestIds = {Success = 12020105}
       },
       [12020105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020106,
         nextQuestIds = {Success = 12020106}
       },
       [12020106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020107,
         nextQuestIds = {Success = 12020107}
       },
       [12020107] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020108,
         nextQuestIds = {Success = 12020108}
       },
       [12020108] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104502,
         nextQuestId = 12020122,
         nextQuestIds = {Success = 12020122}
       },
       [12020109] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020125,
         nextQuestIds = {Success = 12020125}
       },
       [12020110] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020111,
         nextQuestIds = {Success = 12020111}
       },
       [12020111] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020112,
         nextQuestIds = {Success = 12020112}
       },
       [12020112] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = {
@@ -3524,24 +4018,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = T.RT_2
       },
       [12020122] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104502,
         nextQuestId = 12020109,
         nextQuestIds = {Success = 12020109}
       },
       [12020123] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020124,
         nextQuestIds = {Success = 12020124}
       },
       [12020124] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020110,
         nextQuestIds = {Success = 12020110}
       },
       [12020125] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020123,
@@ -3557,48 +4055,56 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120202,
     Quests = {
       [12020201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104505,
         nextQuestId = 12020202,
         nextQuestIds = {Success = 12020202}
       },
       [12020202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020203,
         nextQuestIds = {Success = 12020203}
       },
       [12020203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020204,
         nextQuestIds = {Success = 12020204}
       },
       [12020204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020214,
         nextQuestIds = {Success = 12020214}
       },
       [12020205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105101,
         nextQuestId = 12020206,
         nextQuestIds = {Success = 12020206}
       },
       [12020206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105101,
         nextQuestId = 12020207,
         nextQuestIds = {Success = 12020207}
       },
       [12020207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105101,
         nextQuestId = 12020213,
         nextQuestIds = {Success = 12020213}
       },
       [12020208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105101,
         SuccQuestDeliver = T.RT_27,
@@ -3606,6 +4112,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020210}
       },
       [12020210] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         SuccQuestDeliver = {
@@ -3618,24 +4125,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020211}
       },
       [12020211] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020212,
         nextQuestIds = {Success = 12020212}
       },
       [12020212] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = T.RT_28,
         nextQuestIds = T.RT_2
       },
       [12020213] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105101,
         nextQuestId = 12020208,
         nextQuestIds = {Success = 12020208}
       },
       [12020214] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = {
@@ -3657,24 +4168,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120203,
     Quests = {
       [12020301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105501,
         nextQuestId = 12020302,
         nextQuestIds = {Success = 12020302}
       },
       [12020302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105501,
         nextQuestId = 12020303,
         nextQuestIds = {Success = 12020303}
       },
       [12020303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105501,
         nextQuestId = 12020304,
         nextQuestIds = {Success = 12020304}
       },
       [12020304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105501,
         SuccQuestDeliver = T.RT_29,
@@ -3682,6 +4197,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020305}
       },
       [12020305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105601,
         SuccQuestDeliver = T.RT_28,
@@ -3689,24 +4205,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020306}
       },
       [12020306] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105501,
         nextQuestId = 12020307,
         nextQuestIds = {Success = 12020307}
       },
       [12020307] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104505,
         nextQuestId = 12020308,
         nextQuestIds = {Success = 12020308}
       },
       [12020308] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104505,
         nextQuestId = 12020323,
         nextQuestIds = {Success = 12020323}
       },
       [12020309] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104505,
         SuccQuestDeliver = T.RT_30,
@@ -3714,66 +4234,77 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020310}
       },
       [12020310] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020311,
         nextQuestIds = {Success = 12020311}
       },
       [12020311] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020312,
         nextQuestIds = {Success = 12020312}
       },
       [12020312] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020313,
         nextQuestIds = {Success = 12020313}
       },
       [12020313] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020314,
         nextQuestIds = {Success = 12020314}
       },
       [12020314] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020315,
         nextQuestIds = {Success = 12020315}
       },
       [12020315] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020316,
         nextQuestIds = {Success = 12020316}
       },
       [12020316] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020317,
         nextQuestIds = {Success = 12020317}
       },
       [12020317] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020318,
         nextQuestIds = {Success = 12020318}
       },
       [12020318] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020319,
         nextQuestIds = {Success = 12020319}
       },
       [12020319] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020320,
         nextQuestIds = {Success = 12020320}
       },
       [12020320] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020321,
@@ -3781,12 +4312,14 @@ return ReadOnly("STLExportQuestChain", {
       },
       [12020321] = T.RT_31,
       [12020322] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104505,
         nextQuestId = 12020309,
         nextQuestIds = {Success = 12020309}
       },
       [12020323] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104505,
         nextQuestId = 12020322,
@@ -3802,30 +4335,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120204,
     Quests = {
       [12020401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020402,
         nextQuestIds = {Success = 12020402}
       },
       [12020402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020403,
         nextQuestIds = {Success = 12020403}
       },
       [12020403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020404,
         nextQuestIds = {Success = 12020404}
       },
       [12020404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020405,
         nextQuestIds = {Success = 12020405}
       },
       [12020405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         SuccQuestDeliver = {
@@ -3838,12 +4376,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020406}
       },
       [12020406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104801,
         nextQuestId = 12020407,
         nextQuestIds = {Success = 12020407}
       },
       [12020407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104801,
         SuccQuestDeliver = T.RT_30,
@@ -3851,24 +4391,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020409}
       },
       [12020409] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020410,
         nextQuestIds = {Success = 12020410}
       },
       [12020410] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020411,
         nextQuestIds = {Success = 12020411}
       },
       [12020411] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020412,
         nextQuestIds = {Success = 12020412}
       },
       [12020412] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         SuccQuestDeliver = T.RT_29,
@@ -3876,6 +4420,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020413}
       },
       [12020413] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105601,
         SuccQuestDeliver = T.RT_27,
@@ -3883,6 +4428,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020414}
       },
       [12020414] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         SuccQuestDeliver = T.RT_30,
@@ -3898,30 +4444,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120205,
     Quests = {
       [12020501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020502,
         nextQuestIds = {Success = 12020502}
       },
       [12020502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020503,
         nextQuestIds = {Success = 12020503}
       },
       [12020503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020505,
         nextQuestIds = {Success = 12020505}
       },
       [12020505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12020506,
         nextQuestIds = {Success = 12020506}
       },
       [12020506] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         SuccQuestDeliver = T.RT_32,
@@ -3929,30 +4480,35 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020507}
       },
       [12020507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12020508,
         nextQuestIds = {Success = 12020508}
       },
       [12020508] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12020509,
         nextQuestIds = {Success = 12020509}
       },
       [12020509] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12020510,
         nextQuestIds = {Success = 12020510}
       },
       [12020510] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12020511,
         nextQuestIds = {Success = 12020511}
       },
       [12020511] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         SuccQuestDeliver = T.RT_29,
@@ -3960,6 +4516,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020512}
       },
       [12020512] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105601,
         SuccQuestDeliver = T.RT_33,
@@ -3967,12 +4524,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020513}
       },
       [12020513] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105301,
         nextQuestId = 12020516,
         nextQuestIds = {Success = 12020516}
       },
       [12020516] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105301,
         SuccQuestDeliver = T.RT_34,
@@ -3980,6 +4539,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020517}
       },
       [12020517] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = T.RT_32,
@@ -3995,6 +4555,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120206,
     Quests = {
       [12020601] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         SuccQuestDeliver = T.RT_26,
@@ -4002,48 +4563,56 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020602}
       },
       [12020602] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020603,
         nextQuestIds = {Success = 12020603}
       },
       [12020603] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020605,
         nextQuestIds = {Success = 12020605}
       },
       [12020605] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12020606,
         nextQuestIds = {Success = 12020606}
       },
       [12020606] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020607,
         nextQuestIds = {Success = 12020607}
       },
       [12020607] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020608,
         nextQuestIds = {Success = 12020608}
       },
       [12020608] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020610,
         nextQuestIds = {Success = 12020610}
       },
       [12020610] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12020611,
         nextQuestIds = {Success = 12020611}
       },
       [12020611] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = T.RT_27,
@@ -4051,6 +4620,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020612}
       },
       [12020612] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         SuccQuestDeliver = T.RT_33,
@@ -4058,18 +4628,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020613}
       },
       [12020613] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105301,
         nextQuestId = 12020614,
         nextQuestIds = {Success = 12020614}
       },
       [12020614] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105301,
         nextQuestId = 12020615,
         nextQuestIds = {Success = 12020615}
       },
       [12020615] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105301,
         SuccQuestDeliver = T.RT_34,
@@ -4077,6 +4650,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020617}
       },
       [12020617] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = T.RT_33,
@@ -4084,6 +4658,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020619}
       },
       [12020619] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105301,
         SuccQuestDeliver = {
@@ -4096,12 +4671,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020620}
       },
       [12020620] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105401,
         nextQuestId = 12020622,
         nextQuestIds = {Success = 12020622}
       },
       [12020622] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105401,
         SuccQuestDeliver = {
@@ -4114,24 +4691,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 12020623}
       },
       [12020623] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         nextQuestId = 12020624,
         nextQuestIds = {Success = 12020624}
       },
       [12020624] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         nextQuestId = 12020625,
         nextQuestIds = {Success = 12020625}
       },
       [12020625] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         nextQuestId = 12020626,
         nextQuestIds = {Success = 12020626}
       },
       [12020626] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104506,
         SuccQuestDeliver = T.RT_32,
@@ -4149,24 +4730,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120301,
     Quests = {
       [12030101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12030102,
         nextQuestIds = {Success = 12030102}
       },
       [12030102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12030103,
         nextQuestIds = {Success = 12030103}
       },
       [12030103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12030104,
         nextQuestIds = {Success = 12030104}
       },
       [12030104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12030105,
@@ -4183,24 +4768,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120302,
     Quests = {
       [12030201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030202,
         nextQuestIds = {Success = 12030202}
       },
       [12030202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030203,
         nextQuestIds = {Success = 12030203}
       },
       [12030203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12030204,
         nextQuestIds = {Success = 12030204}
       },
       [12030204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 12030205,
@@ -4217,18 +4806,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120303,
     Quests = {
       [12030301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030302,
         nextQuestIds = {Success = 12030302}
       },
       [12030302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030303,
         nextQuestIds = {Success = 12030303}
       },
       [12030303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12030304,
@@ -4245,18 +4837,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120304,
     Quests = {
       [12030401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030402,
         nextQuestIds = {Success = 12030402}
       },
       [12030402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030403,
         nextQuestIds = {Success = 12030403}
       },
       [12030403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = T.RT_30,
@@ -4272,12 +4867,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120305,
     Quests = {
       [12030502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12030503,
         nextQuestIds = {Success = 12030503}
       },
       [12030503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 105201,
         nextQuestId = 12030504,
@@ -4294,18 +4891,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120306,
     Quests = {
       [12030601] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030602,
         nextQuestIds = {Success = 12030602}
       },
       [12030602] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030603,
         nextQuestIds = {Success = 12030603}
       },
       [12030603] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030604,
@@ -4322,36 +4922,42 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 120307,
     Quests = {
       [12030701] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030702,
         nextQuestIds = {Success = 12030702}
       },
       [12030702] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         nextQuestId = 12030703,
         nextQuestIds = {Success = 12030703}
       },
       [12030703] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12030708,
         nextQuestIds = {Success = 12030708}
       },
       [12030704] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12030705,
         nextQuestIds = {Success = 12030705}
       },
       [12030705] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12030706,
         nextQuestIds = {Success = 12030706}
       },
       [12030706] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104503,
         SuccQuestDeliver = T.RT_27,
@@ -4360,6 +4966,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [12030707] = T.RT_37,
       [12030708] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 12030704,
@@ -4385,24 +4992,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200101,
     Quests = {
       [20010101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010102,
         nextQuestIds = {Success = 20010102}
       },
       [20010102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010103,
         nextQuestIds = {Success = 20010103}
       },
       [20010103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010104,
         nextQuestIds = {Success = 20010104}
       },
       [20010104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010105,
@@ -4419,24 +5030,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200102,
     Quests = {
       [20010201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010202,
         nextQuestIds = {Success = 20010202}
       },
       [20010202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010203,
         nextQuestIds = {Success = 20010203}
       },
       [20010203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010204,
         nextQuestIds = {Success = 20010204}
       },
       [20010204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20010205,
@@ -4453,30 +5068,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200103,
     Quests = {
       [20010301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 20010302,
         nextQuestIds = {Success = 20010302}
       },
       [20010302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20010303,
         nextQuestIds = {Success = 20010303}
       },
       [20010303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20010304,
         nextQuestIds = {Success = 20010304}
       },
       [20010304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20010305,
         nextQuestIds = {Success = 20010305}
       },
       [20010305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20010306,
@@ -4493,12 +5113,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200104,
     Quests = {
       [20010401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 20010409,
         nextQuestIds = {Success = 20010409}
       },
       [20010402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         SuccQuestDeliver = T.RT_4,
@@ -4506,30 +5128,35 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20010403}
       },
       [20010403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 20010404,
         nextQuestIds = {Success = 20010404}
       },
       [20010404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20010405,
         nextQuestIds = {Success = 20010405}
       },
       [20010405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         nextQuestId = 20010406,
         nextQuestIds = {Success = 20010406}
       },
       [20010406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         nextQuestId = 20010407,
         nextQuestIds = {Success = 20010407}
       },
       [20010407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         nextQuestId = 20010410,
@@ -4537,18 +5164,21 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20010408] = T.RT_6,
       [20010409] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20010402,
         nextQuestIds = {Success = 20010402}
       },
       [20010410] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         nextQuestId = 20010415,
         nextQuestIds = {Success = 20010415}
       },
       [20010415] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         SuccQuestDeliver = T.RT_4,
@@ -4575,18 +5205,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20020102}
       },
       [20020102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20020104,
         nextQuestIds = {Success = 20020104}
       },
       [20020104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20020105,
         nextQuestIds = {Success = 20020105}
       },
       [20020105] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 0,
         nextQuestId = 20020106,
@@ -4617,24 +5250,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20020312}
       },
       [20020302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020314,
         nextQuestIds = {Success = 20020314}
       },
       [20020303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20020305,
         nextQuestIds = {Success = 20020305}
       },
       [20020305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20020306,
         nextQuestIds = {Success = 20020306}
       },
       [20020306] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 0,
         nextQuestId = 20020319,
@@ -4646,30 +5283,35 @@ return ReadOnly("STLExportQuestChain", {
       [20020309] = T.RT_5,
       [20020310] = T.RT_40,
       [20020312] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020313,
         nextQuestIds = {Success = 20020313}
       },
       [20020313] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020302,
         nextQuestIds = {Success = 20020302}
       },
       [20020314] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020303,
         nextQuestIds = {Success = 20020303}
       },
       [20020319] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020309,
         nextQuestIds = {Success = 20020309}
       },
       [20020320] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020310,
@@ -4698,6 +5340,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20020404}
       },
       [20020404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 20020405,
@@ -4721,18 +5364,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20020503}
       },
       [20020503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 20020504,
         nextQuestIds = {Success = 20020504}
       },
       [20020504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 20020505,
         nextQuestIds = {Success = 20020505}
       },
       [20020505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 20020507,
@@ -4740,24 +5386,28 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20020506] = T.RT_40,
       [20020507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 20020508,
         nextQuestIds = {Success = 20020508}
       },
       [20020508] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 20020512,
         nextQuestIds = {Success = 20020512}
       },
       [20020509] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 100101,
         nextQuestId = 20020510,
         nextQuestIds = {Success = 20020510}
       },
       [20020510] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020506,
@@ -4786,24 +5436,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20020603}
       },
       [20020603] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 20020605,
         nextQuestIds = {Success = 20020605}
       },
       [20020605] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020609,
         nextQuestIds = {Success = 20020609}
       },
       [20020606] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020607,
         nextQuestIds = {Success = 20020607}
       },
       [20020607] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020608,
@@ -4811,6 +5465,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20020608] = T.RT_6,
       [20020609] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020606,
@@ -4833,24 +5488,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20020702}
       },
       [20020702] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020703,
         nextQuestIds = {Success = 20020703}
       },
       [20020703] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020704,
         nextQuestIds = {Success = 20020704}
       },
       [20020704] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020705,
         nextQuestIds = {Success = 20020705}
       },
       [20020705] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101305,
         nextQuestId = 20020707,
@@ -4858,6 +5517,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20020706] = T.RT_40,
       [20020707] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101305,
         nextQuestId = 20020706,
@@ -4873,12 +5533,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200208,
     Quests = {
       [20020802] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101106,
         nextQuestId = 20020803,
         nextQuestIds = {Success = 20020803}
       },
       [20020803] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101106,
         nextQuestIds = T.RT_2
@@ -4893,12 +5555,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200209,
     Quests = {
       [20020901] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20020902,
         nextQuestIds = {Success = 20020902}
       },
       [20020902] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101101,
         nextQuestId = 20020903,
@@ -4910,6 +5574,7 @@ return ReadOnly("STLExportQuestChain", {
       [20020903] = T.RT_42,
       [20020904] = T.RT_42,
       [20020905] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101106,
         nextQuestId = 20020906,
@@ -4926,18 +5591,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200210,
     Quests = {
       [20021001] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         nextQuestId = 20021002,
         nextQuestIds = {Success = 20021002}
       },
       [20021002] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021003,
         nextQuestIds = {Success = 20021003}
       },
       [20021003] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021004,
@@ -4945,6 +5613,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20021004] = T.RT_39,
       [20021007] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101702,
         nextQuestId = 20021001,
@@ -4967,24 +5636,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20021101}
       },
       [20021101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021102,
         nextQuestIds = {Success = 20021102}
       },
       [20021102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021103,
         nextQuestIds = {Success = 20021103}
       },
       [20021103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021104,
         nextQuestIds = {Success = 20021104}
       },
       [20021104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021105,
@@ -5011,6 +5684,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20021205}
       },
       [20021202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021203,
@@ -5018,12 +5692,14 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20021203] = T.RT_40,
       [20021205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021206,
         nextQuestIds = {Success = 20021206}
       },
       [20021206] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101103,
         nextQuestId = 20021207,
@@ -5050,18 +5726,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20021301}
       },
       [20021301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021302,
         nextQuestIds = {Success = 20021302}
       },
       [20021302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20021303,
         nextQuestIds = {Success = 20021303}
       },
       [20021303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021304,
@@ -5085,36 +5764,42 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20021501}
       },
       [20021501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021510,
         nextQuestIds = {Success = 20021510}
       },
       [20021502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021503,
         nextQuestIds = {Success = 20021503}
       },
       [20021503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021504,
         nextQuestIds = {Success = 20021504}
       },
       [20021504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021509,
         nextQuestIds = {Success = 20021509}
       },
       [20021506] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021507,
         nextQuestIds = {Success = 20021507}
       },
       [20021507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20021508,
@@ -5143,18 +5828,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200216,
     Quests = {
       [20021601] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021602,
         nextQuestIds = {Success = 20021602}
       },
       [20021602] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021603,
         nextQuestIds = {Success = 20021603}
       },
       [20021603] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021604,
@@ -5171,30 +5859,35 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200219,
     Quests = {
       [20021901] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021902,
         nextQuestIds = {Success = 20021902}
       },
       [20021902] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021903,
         nextQuestIds = {Success = 20021903}
       },
       [20021903] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021905,
         nextQuestIds = {Success = 20021905}
       },
       [20021904] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20021901,
         nextQuestIds = {Success = 20021901}
       },
       [20021905] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20021906,
@@ -5211,36 +5904,42 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200220,
     Quests = {
       [20022002] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 20022004,
         nextQuestIds = {Success = 20022004}
       },
       [20022004] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022005,
         nextQuestIds = {Success = 20022005}
       },
       [20022005] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022006,
         nextQuestIds = {Success = 20022006}
       },
       [20022006] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022007,
         nextQuestIds = {Success = 20022007}
       },
       [20022007] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022008,
         nextQuestIds = {Success = 20022008}
       },
       [20022008] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022009,
@@ -5257,18 +5956,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200221,
     Quests = {
       [20022101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022102,
         nextQuestIds = {Success = 20022102}
       },
       [20022102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022103,
         nextQuestIds = {Success = 20022103}
       },
       [20022103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022104,
@@ -5276,6 +5978,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20022104] = T.RT_5,
       [20022105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022101,
@@ -5298,24 +6001,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20022202}
       },
       [20022202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101701,
         nextQuestId = 20022203,
         nextQuestIds = {Success = 20022203}
       },
       [20022203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101701,
         nextQuestId = 20022204,
         nextQuestIds = {Success = 20022204}
       },
       [20022204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101701,
         nextQuestId = 20022205,
         nextQuestIds = {Success = 20022205}
       },
       [20022205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101701,
         nextQuestIds = T.RT_2
@@ -5347,18 +6054,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200224,
     Quests = {
       [20022401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022402,
         nextQuestIds = {Success = 20022402}
       },
       [20022402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022403,
         nextQuestIds = {Success = 20022403}
       },
       [20022403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101701,
         nextQuestId = 20022404,
@@ -5375,18 +6085,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200225,
     Quests = {
       [20022501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022502,
         nextQuestIds = {Success = 20022502}
       },
       [20022502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022503,
         nextQuestIds = {Success = 20022503}
       },
       [20022503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20022504,
@@ -5406,6 +6119,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200227,
     Quests = {
       [20022701] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101101,
         nextQuestId = 20022703,
@@ -5426,12 +6140,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200228,
     Quests = {
       [20022801] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022802,
         nextQuestIds = {Success = 20022802}
       },
       [20022802] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022803,
@@ -5454,12 +6170,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200229,
     Quests = {
       [20022901] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022902,
         nextQuestIds = {Success = 20022902}
       },
       [20022902] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         nextQuestId = 20022903,
@@ -5489,30 +6207,35 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20023001}
       },
       [20023001] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023002,
         nextQuestIds = {Success = 20023002}
       },
       [20023002] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023003,
         nextQuestIds = {Success = 20023003}
       },
       [20023003] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023004,
         nextQuestIds = {Success = 20023004}
       },
       [20023004] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023006,
         nextQuestIds = {Success = 20023006}
       },
       [20023006] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023007,
@@ -5536,24 +6259,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20023101}
       },
       [20023101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023102,
         nextQuestIds = {Success = 20023102}
       },
       [20023102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023103,
         nextQuestIds = {Success = 20023103}
       },
       [20023103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20023105,
         nextQuestIds = {Success = 20023105}
       },
       [20023105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101301,
         nextQuestId = 20023108,
@@ -5570,24 +6297,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200232,
     Quests = {
       [20023201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023202,
         nextQuestIds = {Success = 20023202}
       },
       [20023202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023203,
         nextQuestIds = {Success = 20023203}
       },
       [20023203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20023204,
         nextQuestIds = {Success = 20023204}
       },
       [20023204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 20023205,
@@ -5607,18 +6338,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200233,
     Quests = {
       [20023301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023302,
         nextQuestIds = {Success = 20023302}
       },
       [20023302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 20023304,
         nextQuestIds = {Success = 20023304}
       },
       [20023304] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 101101,
         nextQuestId = 20023305,
@@ -5639,6 +6373,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200234,
     Quests = {
       [20023401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 20023402,
@@ -5685,6 +6420,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20023602] = T.RT_5,
       [20023603] = {
+        IsBacktrack = false,
         IsMultiQuest = true,
         SubRegionId = 0,
         nextQuestId = 20023604,
@@ -5704,6 +6440,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200237,
     Quests = {
       [20023701] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 20023702,
@@ -5728,6 +6465,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20023801] = T.RT_16,
       [20023802] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 20023801,
@@ -5751,6 +6489,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20023901] = T.RT_16,
       [20023902] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 20023901,
@@ -5774,6 +6513,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20024001] = T.RT_16,
       [20024002] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 20024001,
@@ -5789,24 +6529,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200301,
     Quests = {
       [20030100] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 20030101,
         nextQuestIds = {Success = 20030101}
       },
       [20030101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 20030104,
         nextQuestIds = {Success = 20030104}
       },
       [20030103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 20030106,
         nextQuestIds = {Success = 20030106}
       },
       [20030104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 20030103,
@@ -5830,18 +6574,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20030201}
       },
       [20030201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20030202,
         nextQuestIds = {Success = 20030202}
       },
       [20030202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030203,
         nextQuestIds = {Success = 20030203}
       },
       [20030203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030204,
@@ -5865,18 +6612,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20030301}
       },
       [20030301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 20030302,
         nextQuestIds = {Success = 20030302}
       },
       [20030302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 20030303,
         nextQuestIds = {Success = 20030303}
       },
       [20030303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104105,
         nextQuestId = 20030304,
@@ -5900,48 +6650,56 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20030401}
       },
       [20030401] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030402,
         nextQuestIds = {Success = 20030402}
       },
       [20030402] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030403,
         nextQuestIds = {Success = 20030403}
       },
       [20030403] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030404,
         nextQuestIds = {Success = 20030404}
       },
       [20030404] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030405,
         nextQuestIds = {Success = 20030405}
       },
       [20030405] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030406,
         nextQuestIds = {Success = 20030406}
       },
       [20030406] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030407,
         nextQuestIds = {Success = 20030407}
       },
       [20030407] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030408,
         nextQuestIds = {Success = 20030408}
       },
       [20030408] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20030409,
@@ -5958,48 +6716,56 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200305,
     Quests = {
       [20030500] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030501,
         nextQuestIds = {Success = 20030501}
       },
       [20030501] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030509,
         nextQuestIds = {Success = 20030509}
       },
       [20030502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030503,
         nextQuestIds = {Success = 20030503}
       },
       [20030503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030504,
         nextQuestIds = {Success = 20030504}
       },
       [20030504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030505,
         nextQuestIds = {Success = 20030505}
       },
       [20030505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030506,
         nextQuestIds = {Success = 20030506}
       },
       [20030506] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030507,
         nextQuestIds = {Success = 20030507}
       },
       [20030507] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030508,
@@ -6007,6 +6773,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20030508] = T.RT_19,
       [20030509] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030502,
@@ -6029,12 +6796,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20030601}
       },
       [20030601] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20030602,
         nextQuestIds = {Success = 20030602}
       },
       [20030602] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20030603,
@@ -6058,12 +6827,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20030701}
       },
       [20030701] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20030702,
         nextQuestIds = {Success = 20030702}
       },
       [20030702] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20030703,
@@ -6087,12 +6858,14 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20030801}
       },
       [20030801] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20030802,
         nextQuestIds = {Success = 20030802}
       },
       [20030802] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -6115,24 +6888,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200309,
     Quests = {
       [20030901] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104104,
         nextQuestId = 20030902,
         nextQuestIds = {Success = 20030902}
       },
       [20030902] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030903,
         nextQuestIds = {Success = 20030903}
       },
       [20030903] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030906,
         nextQuestIds = {Success = 20030906}
       },
       [20030904] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030905,
@@ -6140,6 +6917,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20030905] = T.RT_21,
       [20030906] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104106,
         nextQuestId = 20030904,
@@ -6162,18 +6940,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20031003}
       },
       [20031003] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20031004,
         nextQuestIds = {Success = 20031004}
       },
       [20031004] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20031005,
         nextQuestIds = {Success = 20031005}
       },
       [20031005] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20031006,
@@ -6190,12 +6971,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200311,
     Quests = {
       [20031100] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031101,
         nextQuestIds = {Success = 20031101}
       },
       [20031101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031103,
@@ -6203,6 +6986,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20031102] = T.RT_19,
       [20031103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20031102,
@@ -6218,18 +7002,21 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200312,
     Quests = {
       [20031200] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031201,
         nextQuestIds = {Success = 20031201}
       },
       [20031201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031204,
         nextQuestIds = {Success = 20031204}
       },
       [20031202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031203,
@@ -6237,6 +7024,7 @@ return ReadOnly("STLExportQuestChain", {
       },
       [20031203] = T.RT_19,
       [20031204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031202,
@@ -6259,24 +7047,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20031302}
       },
       [20031302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104108,
         nextQuestId = 20031303,
         nextQuestIds = {Success = 20031303}
       },
       [20031303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20031304,
         nextQuestIds = {Success = 20031304}
       },
       [20031304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104107,
         nextQuestId = 20031305,
         nextQuestIds = {Success = 20031305}
       },
       [20031305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104110,
         nextQuestId = 20031306,
@@ -6310,24 +7102,28 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20031502}
       },
       [20031502] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 20031503,
         nextQuestIds = {Success = 20031503}
       },
       [20031503] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 20031504,
         nextQuestIds = {Success = 20031504}
       },
       [20031504] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestId = 20031505,
         nextQuestIds = {Success = 20031505}
       },
       [20031505] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104109,
         nextQuestIds = T.RT_2
@@ -6349,54 +7145,63 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20031701}
       },
       [20031701] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031702,
         nextQuestIds = {Success = 20031702}
       },
       [20031702] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031703,
         nextQuestIds = {Success = 20031703}
       },
       [20031703] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031704,
         nextQuestIds = {Success = 20031704}
       },
       [20031704] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031705,
         nextQuestIds = {Success = 20031705}
       },
       [20031705] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031706,
         nextQuestIds = {Success = 20031706}
       },
       [20031706] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031707,
         nextQuestIds = {Success = 20031707}
       },
       [20031707] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031708,
         nextQuestIds = {Success = 20031708}
       },
       [20031708] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031710,
         nextQuestIds = {Success = 20031710}
       },
       [20031710] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104504,
         nextQuestId = 20031711,
@@ -6413,24 +7218,28 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 200318,
     Quests = {
       [20031801] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 20031803,
         nextQuestIds = {Success = 20031803}
       },
       [20031803] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 20031805,
         nextQuestIds = {Success = 20031805}
       },
       [20031805] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         nextQuestId = 20031806,
         nextQuestIds = {Success = 20031806}
       },
       [20031806] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 104501,
         SuccQuestDeliver = T.RT_20,
@@ -6438,6 +7247,7 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20031807}
       },
       [20031807] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 0,
         SuccQuestDeliver = {
@@ -6467,18 +7277,21 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20040102}
       },
       [20040102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         nextQuestId = 20040103,
         nextQuestIds = {Success = 20040103}
       },
       [20040103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         nextQuestId = 20040104,
         nextQuestIds = {Success = 20040104}
       },
       [20040104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040105,
@@ -6502,48 +7315,56 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20040201}
       },
       [20040201] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040202,
         nextQuestIds = {Success = 20040202}
       },
       [20040202] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040203,
         nextQuestIds = {Success = 20040203}
       },
       [20040203] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040204,
         nextQuestIds = {Success = 20040204}
       },
       [20040204] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040205,
         nextQuestIds = {Success = 20040205}
       },
       [20040205] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040206,
         nextQuestIds = {Success = 20040206}
       },
       [20040206] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040207,
         nextQuestIds = {Success = 20040207}
       },
       [20040207] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040208,
         nextQuestIds = {Success = 20040208}
       },
       [20040208] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040209,
@@ -6567,30 +7388,35 @@ return ReadOnly("STLExportQuestChain", {
         nextQuestIds = {Success = 20040301}
       },
       [20040301] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040302,
         nextQuestIds = {Success = 20040302}
       },
       [20040302] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040303,
         nextQuestIds = {Success = 20040303}
       },
       [20040303] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040304,
         nextQuestIds = {Success = 20040304}
       },
       [20040304] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106301,
         nextQuestId = 20040305,
         nextQuestIds = {Success = 20040305}
       },
       [20040305] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 106001,
         nextQuestId = 20040306,
@@ -6599,6 +7425,439 @@ return ReadOnly("STLExportQuestChain", {
       [20040306] = T.RT_13
     },
     StartQuestId = 20040300
+  },
+  [200404] = {
+    EndQuestIds = {
+      [20040416] = true,
+      [20040417] = true
+    },
+    HavePreQuest = true,
+    IsMultiEndQuest = true,
+    QuestChainId = 200404,
+    Quests = {
+      [20040400] = {
+        IsMultiQuest = false,
+        IsPreQuest = true,
+        SubRegionId = 106301,
+        nextQuestId = 20040401,
+        nextQuestIds = {Success = 20040401}
+      },
+      [20040401] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040402,
+        nextQuestIds = {Success = 20040402}
+      },
+      [20040402] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040403,
+        nextQuestIds = {Success = 20040403}
+      },
+      [20040403] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        SuccQuestDeliver = T.RT_12,
+        nextQuestId = 20040404,
+        nextQuestIds = {Success = 20040404}
+      },
+      [20040404] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040405,
+        nextQuestIds = {Success = 20040405}
+      },
+      [20040405] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040406,
+        nextQuestIds = {Success = 20040406}
+      },
+      [20040406] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040407,
+        nextQuestIds = {Success = 20040407}
+      },
+      [20040407] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040408,
+        nextQuestIds = {Success = 20040408}
+      },
+      [20040408] = {
+        IsBacktrack = false,
+        IsMultiQuest = true,
+        SubRegionId = 106301,
+        nextQuestId = 20040409,
+        nextQuestIds = {easymode = 20040409, normalmode = 20040410}
+      },
+      [20040409] = T.RT_45,
+      [20040410] = T.RT_45,
+      [20040411] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040412,
+        nextQuestIds = {Success = 20040412}
+      },
+      [20040412] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040413,
+        nextQuestIds = {Success = 20040413}
+      },
+      [20040413] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040414,
+        nextQuestIds = {Success = 20040414}
+      },
+      [20040414] = {
+        IsBacktrack = false,
+        IsMultiQuest = true,
+        SubRegionId = 106301,
+        nextQuestId = 20040415,
+        nextQuestIds = {betray = 20040417, help = 20040415}
+      },
+      [20040415] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040418,
+        nextQuestIds = {Success = 20040418}
+      },
+      [20040416] = T.RT_46,
+      [20040417] = T.RT_46,
+      [20040418] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040419,
+        nextQuestIds = {Success = 20040419}
+      },
+      [20040419] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040416,
+        nextQuestIds = {Success = 20040416}
+      }
+    },
+    StartQuestId = 20040400
+  },
+  [200405] = {
+    EndQuestId = 20040512,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 200405,
+    Quests = {
+      [20040501] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040502,
+        nextQuestIds = {Success = 20040502}
+      },
+      [20040502] = {
+        IsBacktrack = false,
+        IsMultiQuest = true,
+        SubRegionId = 106301,
+        nextQuestId = 20040503,
+        nextQuestIds = {
+          ["【分支1】自己想办法"] = 20040503,
+          ["【分支2】听听克罗格的主意"] = 20040504
+        }
+      },
+      [20040503] = T.RT_48,
+      [20040504] = T.RT_48,
+      [20040505] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040513,
+        nextQuestIds = {Success = 20040513}
+      },
+      [20040506] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040507,
+        nextQuestIds = {Success = 20040507}
+      },
+      [20040507] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040508,
+        nextQuestIds = {Success = 20040508}
+      },
+      [20040508] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040509,
+        nextQuestIds = {Success = 20040509}
+      },
+      [20040509] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040510,
+        nextQuestIds = {Success = 20040510}
+      },
+      [20040510] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040511,
+        nextQuestIds = {Success = 20040511}
+      },
+      [20040511] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040512,
+        nextQuestIds = {Success = 20040512}
+      },
+      [20040512] = T.RT_46,
+      [20040513] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040506,
+        nextQuestIds = {Success = 20040506}
+      }
+    },
+    StartQuestId = 20040501
+  },
+  [200406] = {
+    EndQuestId = 20040616,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 200406,
+    Quests = {
+      [20040601] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040602,
+        nextQuestIds = {Success = 20040602}
+      },
+      [20040602] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040603,
+        nextQuestIds = {Success = 20040603}
+      },
+      [20040603] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040604,
+        nextQuestIds = {Success = 20040604}
+      },
+      [20040604] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040605,
+        nextQuestIds = {Success = 20040605}
+      },
+      [20040605] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040606,
+        nextQuestIds = {Success = 20040606}
+      },
+      [20040606] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040607,
+        nextQuestIds = {Success = 20040607}
+      },
+      [20040607] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040612,
+        nextQuestIds = {Success = 20040612}
+      },
+      [20040612] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040613,
+        nextQuestIds = {Success = 20040613}
+      },
+      [20040613] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040616,
+        nextQuestIds = {Success = 20040616}
+      },
+      [20040616] = T.RT_13
+    },
+    StartQuestId = 20040601
+  },
+  [200407] = {
+    EndQuestId = 20040705,
+    HavePreQuest = true,
+    IsMultiEndQuest = false,
+    QuestChainId = 200407,
+    Quests = {
+      [20040700] = {
+        IsMultiQuest = false,
+        IsPreQuest = true,
+        SubRegionId = 106001,
+        nextQuestId = 20040701,
+        nextQuestIds = {Success = 20040701}
+      },
+      [20040701] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040702,
+        nextQuestIds = {Success = 20040702}
+      },
+      [20040702] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040703,
+        nextQuestIds = {Success = 20040703}
+      },
+      [20040703] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040704,
+        nextQuestIds = {Success = 20040704}
+      },
+      [20040704] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040705,
+        nextQuestIds = {Success = 20040705}
+      },
+      [20040705] = T.RT_13
+    },
+    StartQuestId = 20040700
+  },
+  [200408] = {
+    EndQuestId = 20040817,
+    HavePreQuest = false,
+    IsMultiEndQuest = false,
+    QuestChainId = 200408,
+    Quests = {
+      [20040801] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        SuccQuestDeliver = T.RT_12,
+        nextQuestId = 20040802,
+        nextQuestIds = {Success = 20040802}
+      },
+      [20040802] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040803,
+        nextQuestIds = {Success = 20040803}
+      },
+      [20040803] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040805,
+        nextQuestIds = {Success = 20040805}
+      },
+      [20040805] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040806,
+        nextQuestIds = {Success = 20040806}
+      },
+      [20040806] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040807,
+        nextQuestIds = {Success = 20040807}
+      },
+      [20040807] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040808,
+        nextQuestIds = {Success = 20040808}
+      },
+      [20040808] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106301,
+        nextQuestId = 20040809,
+        nextQuestIds = {Success = 20040809}
+      },
+      [20040809] = {
+        IsBacktrack = false,
+        IsMultiQuest = true,
+        SubRegionId = 106001,
+        nextQuestId = 20040810,
+        nextQuestIds = {
+          ["分支一：如果上文选择了放过罗连特，让艾森巴恩做好准备"] = 20040810,
+          ["分支二：如果上文选择了不放过罗连特"] = 20040811
+        }
+      },
+      [20040810] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040812,
+        nextQuestIds = {Success = 20040812}
+      },
+      [20040811] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040813,
+        nextQuestIds = {Success = 20040813}
+      },
+      [20040812] = T.RT_50,
+      [20040813] = T.RT_50,
+      [20040814] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        nextQuestId = 20040816,
+        nextQuestIds = {Success = 20040816}
+      },
+      [20040816] = {
+        IsBacktrack = false,
+        IsMultiQuest = false,
+        SubRegionId = 106001,
+        SuccQuestDeliver = T.RT_12,
+        nextQuestId = 20040817,
+        nextQuestIds = {Success = 20040817}
+      },
+      [20040817] = T.RT_46
+    },
+    StartQuestId = 20040801
   },
   [400101] = {
     EndQuestId = 4001011,
@@ -6677,36 +7936,42 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 400111,
     Quests = {
       [40011101] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101107,
         nextQuestId = 40011102,
         nextQuestIds = {Success = 40011102}
       },
       [40011102] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 40011103,
         nextQuestIds = {Success = 40011103}
       },
       [40011103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 40011104,
         nextQuestIds = {Success = 40011104}
       },
       [40011104] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 40011105,
         nextQuestIds = {Success = 40011105}
       },
       [40011105] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101103,
         nextQuestId = 40011106,
         nextQuestIds = {Success = 40011106}
       },
       [40011106] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 40011107,
@@ -6723,6 +7988,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 400121,
     Quests = {
       [40012103] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 210101,
         nextQuestId = 40012104,
@@ -6759,6 +8025,7 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 400124,
     Quests = {
       [40012400] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101703,
         nextQuestIds = T.RT_2
@@ -6803,12 +8070,14 @@ return ReadOnly("STLExportQuestChain", {
     QuestChainId = 400128,
     Quests = {
       [40012800] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 40012801,
         nextQuestIds = {Success = 40012801}
       },
       [40012801] = {
+        IsBacktrack = false,
         IsMultiQuest = false,
         SubRegionId = 101101,
         nextQuestId = 40012802,

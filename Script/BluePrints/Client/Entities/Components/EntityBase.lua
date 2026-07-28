@@ -124,19 +124,36 @@ function Component:ClientPropSet(name, key, value)
   if not prop then
     return
   end
-  local OldValue = self[name][key]
+  local FirstAttr = self[name]
+  local OldValue = FirstAttr and FirstAttr[key]
   if type(value) == "table" and value.__type and value.value then
-    self[name][key] = value.value
+    FirstAttr[key] = value.value
   else
-    local _type = prop:GetType()
-    local _key_type = _type.KeyType
-    local _value_type = _type.ValueType
-    local _value_type_name = _value_type.__Name__
-    if self.UseProtoAttr and self.AttrTypes[_value_type_name] and nil ~= value then
-      value = pb.decode("." .. _value_type_name, value)
-      self[name]._inner[_key_type:convert(key)] = _value_type:proto_load(value)
+    local PropType = prop:GetType()
+    local FieldProp = PropType.Props and PropType.Props[key]
+    if FieldProp then
+      local FieldType = FieldProp:GetType()
+      local FieldTypeName = FieldType.__Name__
+      if self.UseProtoAttr and self.AttrTypes[FieldTypeName] and nil ~= value then
+        value = pb.decode("." .. FieldTypeName, value)
+        FirstAttr[key] = FieldProp:ProtoGetTypeInstance(value)
+      else
+        FirstAttr[key] = FieldProp:GetTypeInstance(value)
+      end
     else
-      self[name][key] = value
+      local _key_type = PropType.KeyType
+      local _value_type = PropType.ValueType
+      if not _key_type or not _value_type then
+        self.logger.error("ClientPropSet unsupported prop type", name, key)
+        return
+      end
+      local _value_type_name = _value_type.__Name__
+      if self.UseProtoAttr and self.AttrTypes[_value_type_name] and nil ~= value then
+        value = pb.decode("." .. _value_type_name, value)
+        FirstAttr._inner[_key_type:convert(key)] = _value_type:proto_load(value)
+      else
+        FirstAttr[key] = value
+      end
     end
   end
   local func = self["_OnPropChange" .. name]

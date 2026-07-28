@@ -1,5 +1,6 @@
 local SkillUtils = require("Utils.SkillUtils")
 local TimeUtils = require("Utils.TimeUtils")
+local LuaConst = require("EMLuaConst")
 local Component = {}
 
 function Component:SyncLocation_Lua(ActorLoc, ActorRot, CurVel, Acceleration, MovementMode)
@@ -371,6 +372,35 @@ end
 function Component:ClearCacheAction()
   self.CurrentCacheAction = nil
   self.HasCacheAction = false
+end
+
+function Component:ReceiveMountPassengerState_Lua(bRideOn, Driver, SocketName)
+  if not LuaConst.bEnableMountPassenger then
+    return
+  end
+  if bRideOn then
+    if not Driver then
+      return
+    end
+    self.OtherWorldCrouching = false
+    self:SetCrouch(false)
+    self:EnterMountAsPassenger(Driver)
+    return
+  end
+  self:ExitMountAsPassenger()
+end
+
+function Component:OnSelfLeaveMountPassenger_Lua()
+  if not LuaConst.bEnableMountPassenger then
+    return
+  end
+  self:ReceiveMountPassengerState_Lua(false)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.RegionSyncHandleMountPassengerRideOff then
+    Avatar:RegionSyncHandleMountPassengerRideOff({
+      PassengerEid = Avatar.Eid
+    })
+  end
 end
 
 return Component

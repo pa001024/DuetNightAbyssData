@@ -38,7 +38,19 @@ end
 function M:WaitStartOccupateProgress()
   if IsAuthority(self) then
     self:AddTimer(self.Time, self.StartOccupateProgress, false, 0, "Occupation")
+    self:NotifyServerAddOccupationValue(self.Speed)
   end
+end
+
+function M:NotifyServerAddOccupationValue(AddValue)
+  if not IsAuthority(self) then
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not (GameMode and GameMode.CheckServerDungeonEnable) or not GameMode:CheckServerDungeonEnable() then
+    return
+  end
+  GameMode:AddOccupationValue(self.ServerUniqueId, AddValue)
 end
 
 function M:OnOneOccupationSucceed()

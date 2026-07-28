@@ -41,6 +41,9 @@ return ReadOnly("DamageTag", {
     DamageTag = "HeavyAttack"
   },
   Hot = {DamageTag = "Hot"},
+  HyperTrigger = {
+    DamageTag = "HyperTrigger"
+  },
   IceOrb = {DamageTag = "IceOrb"},
   KamiCrack = {DamageTag = "KamiCrack"},
   KamiPassive = {
@@ -104,6 +107,7 @@ return ReadOnly("DamageTag", {
   Shotgun20406 = {
     DamageTag = "Shotgun20406"
   },
+  Shred = {DamageTag = "Shred"},
   ShuimuSummonAttack = {
     DamageTag = "ShuimuSummonAttack"
   },
@@ -129,10 +133,17 @@ return ReadOnly("DamageTag", {
   TuosiFinish = {
     DamageTag = "TuosiFinish"
   },
+  Ultra = {DamageTag = "Ultra"},
   UnlockChest = {
     DamageTag = "UnlockChest"
   },
+  WVEventNotTrigger = {
+    DamageTag = "WVEventNotTrigger"
+  },
   Weapon = {DamageTag = "Weapon"},
+  WeaponVerify15 = {
+    DamageTag = "WeaponVerify15"
+  },
   WeeklyPaoTai = {
     DamageTag = "WeeklyPaoTai"
   },

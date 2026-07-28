@@ -212,6 +212,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -219,7 +220,13 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 701087,
+                  TalkActorVisible = true
+                }
+              },
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,
@@ -245,7 +252,14 @@ return {
               GuideMeshIndexList = {},
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
-              OverrideFailBlend = false
+              OverrideFailBlend = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 200002,
+                  TalkActorVisible = true
+                }
+              }
             }
           },
           ["1766654712934357624"] = {
@@ -292,12 +306,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_2080415",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -426,7 +440,14 @@ return {
               GuideMeshIndexList = {},
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
-              OverrideFailBlend = false
+              OverrideFailBlend = false,
+              TalkActors = {
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 200002,
+                  TalkActorVisible = true
+                }
+              }
             }
           },
           ["17674953116426417"] = {
@@ -502,12 +523,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_2080419",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -634,12 +655,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104107,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_ZhongNianNan_2080411",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -706,7 +727,7 @@ return {
               bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/SpecialSideStory/2003/200310/20031005.20031005'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "Stage_20031001",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -727,6 +748,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -826,12 +848,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 104110,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_2110319",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -933,6 +955,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

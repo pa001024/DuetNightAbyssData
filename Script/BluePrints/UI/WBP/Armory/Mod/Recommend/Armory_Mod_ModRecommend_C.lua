@@ -28,7 +28,7 @@ function WBP_Armory_ModRecommend_C:Construct()
     self.Key_Gamepad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.List_Item:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  self.Btn_Delete:BindEventOnReleased(self, self.OnClearFliterClicked)
+  self.Btn_Delete:BindEventOnClicked(self, self.OnClearFliterClicked)
   self.CheckBox_Owned:BindEventOnClicked({
     Inst = self,
     Func = self.ShowOwnedChange

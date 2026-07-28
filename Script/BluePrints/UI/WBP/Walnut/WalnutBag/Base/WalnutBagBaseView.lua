@@ -128,6 +128,15 @@ function M:OnListItemSelected(Content, NotAddToSellList, bDefaultSelect)
     return
   end
   NotAddToSellList = NotAddToSellList or false
+  if not (Content and Content.Id) or self.CurSelectContent and self.CurSelectContent.Id == Content.Id then
+    if self.CurSelectContent.Id == Content.Id and self.BagSellState and not NotAddToSellList then
+      self:AddItemToSaleList(Content.Id, 1)
+    end
+    if self.ListRefreshed then
+      self:RefreshDetailPanelView()
+    end
+    return
+  end
   if self.BagSellState then
     if self.DesireSaleWalnutObjList[Content.Id] then
       self:RefreshBottomKeyInfo("WalnutSell")

@@ -86,6 +86,10 @@ function M:TransformCamera(EndLocation, EndRotation, Duration, Ease, StartLocati
   local trans = self.OriginalRootTrans or self.ViewActor.RootComponent:K2_GetComponentToWorld()
   self.EndPos = UE4.UKismetMathLibrary.TransformLocation(trans, EndLocation)
   self.EndRot = UE4.UKismetMathLibrary.TransformRotation(trans, EndRotation)
+  self.StartPos = self.StartPos or self.Camera and self.Camera:K2_GetComponentLocation() or self.EndPos or self:GetViewActorLocation()
+  self.StartRot = self.StartRot or self.Camera and self.Camera:K2_GetComponentRotation() or self.EndRot or self:GetViewActorRotation()
+  self.EndPos = self.EndPos or self.StartPos or self:GetViewActorLocation()
+  self.EndRot = self.EndRot or self.StartRot or self:GetViewActorRotation()
   self:CalcCircle()
   self.Duration = Duration or 0
   self:Move(function()
@@ -96,9 +100,14 @@ function M:TransformCamera(EndLocation, EndRotation, Duration, Ease, StartLocati
 end
 
 function M:CalcCircle()
-  local StartDiff = self:GetViewActorLocation() - self.StartPos
-  local EndDiff = self:GetViewActorLocation() - self.EndPos
-  self.CenterOfCircle = self:GetViewActorLocation()
+  local ViewActorLocation = self:GetViewActorLocation()
+  self.StartPos = self.StartPos or self.Camera and self.Camera:K2_GetComponentLocation() or ViewActorLocation
+  self.EndPos = self.EndPos or self.StartPos
+  self.StartRot = self.StartRot or self.Camera and self.Camera:K2_GetComponentRotation() or self:GetViewActorRotation()
+  self.EndRot = self.EndRot or self.StartRot
+  local StartDiff = ViewActorLocation - self.StartPos
+  local EndDiff = ViewActorLocation - self.EndPos
+  self.CenterOfCircle = ViewActorLocation
   if StartDiff:Size() > EndDiff:Size() then
     self.CenterOfCircle.Z = self.EndPos.Z
   else
@@ -232,16 +241,21 @@ function M:CallBP_OnCameraRotated()
 end
 
 function M:ResetStart(RelativeLocation, RelativeRotation, Transform)
-  local trans = Transform or self.ViewActor.RootComponent:K2_GetComponentToWorld()
+  local trans = Transform
+  if (RelativeLocation or RelativeRotation) and not trans and self.ViewActor and self.ViewActor.RootComponent then
+    trans = self.ViewActor.RootComponent:K2_GetComponentToWorld()
+  end
+  local CameraLocation = self.Camera and self.Camera:K2_GetComponentLocation() or nil
+  local CameraRotation = self.Camera and self.Camera:K2_GetComponentRotation() or nil
   if RelativeLocation then
     self.StartPos = UE4.UKismetMathLibrary.TransformLocation(trans, RelativeLocation)
   else
-    self.StartPos = self.EnableCameraScrolling and self.Camera:K2_GetComponentLocation() or self.EndPos
+    self.StartPos = self.EnableCameraScrolling and CameraLocation or self.EndPos or CameraLocation or self:GetViewActorLocation()
   end
   if RelativeRotation then
     self.StartRot = UE4.UKismetMathLibrary.TransformRotation(trans, RelativeRotation)
   else
-    self.StartRot = self.EnableCameraScrolling and self.Camera:K2_GetComponentRotation() or self.EndRot
+    self.StartRot = self.EnableCameraScrolling and CameraRotation or self.EndRot or CameraRotation or self:GetViewActorRotation()
   end
 end
 
@@ -662,9 +676,14 @@ function M:K2_OnBecomeViewTarget(PC)
 end
 
 function M:GetActorToRotate()
-  if self:GetPreviewLevelActor() then
-    return self:GetPreviewLevelActor():GetGroundActor()
+  local PreviewLevelActor = self:GetPreviewLevelActor()
+  if PreviewLevelActor and PreviewLevelActor.GetGroundActor then
+    local GroundActor = PreviewLevelActor:GetGroundActor()
+    if GroundActor then
+      return GroundActor
+    end
   end
+  return self:GetViewActor()
 end
 
 return M

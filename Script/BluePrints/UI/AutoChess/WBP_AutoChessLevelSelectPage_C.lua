@@ -1,5 +1,4 @@
 require("UnLua")
-local UIUtils = require("Utils.UIUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local View = Class({
@@ -12,8 +11,15 @@ local LevelState = {
   UnPass = 1,
   UnLock = 2
 }
-local ActiveId = 103016
 local Model = require("BluePrints.UI.AutoChess.AutoChessDataModel")
+
+function View:Construct()
+  self:AddDispatcher(EventID.OnChallengeBuffChange, self, self.OnChallengeBuffChange)
+end
+
+function View:OnChallengeBuffChange()
+  self:UpdateRandomDetail()
+end
 
 function View:InitView(Type, MissionId, IsWin, First)
   DebugPrint("Tianyi@ AutoChessLevelSelectPage InitView, Type: " .. tostring(Type))
@@ -21,7 +27,8 @@ function View:InitView(Type, MissionId, IsWin, First)
   self.Type = Type
   self.SelectedItem = nil
   self.LinearList = {}
-  for Id, Info in pairs(DataMgr.AutoChessMission) do
+  for _, Id in ipairs(DataMgr.AutoChessConstant[AutoChessConst.ActiveId].EventMissionId) do
+    local Info = DataMgr.AutoChessMission[Id]
     if 1 == Info.MissionType then
       table.insert(self.LinearList, Id)
     end
@@ -49,12 +56,20 @@ function View:InitView(Type, MissionId, IsWin, First)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.OnUpdateUIStyleByInputTypeChange)
   self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  if self.Details then
+    self.Details:SetCallbacks({
+      OnChallenge = function()
+        self:OnClickEnter()
+      end,
+      OnRefresh = function()
+        self:OnClickRefresh()
+      end
+    })
+  end
   self:InitGamePad()
 end
 
 function View:BindEvents()
-  self.Details.Btn_Challenge.Button_Area.OnClicked:Add(self, self.OnClickEnter)
-  self.Details.Btn_Refresh:BindEventOnClicked(self, self.OnClickRefresh)
   self.List_Linear.OnUserScrolled:Add(self, self.OnUserScrolled)
   self.List_Linear.OnMouseButtonUp:Add(self, self.ScrollBoxOnMouseButtonUp)
   self.Arrow_R.Btn_Click.OnClicked:Add(self, self.OnBtnRClicked)
@@ -132,6 +147,16 @@ function View:RandomInit()
   self.RandomId = Avatar.AutoChess.RandomMissionId
   local DungeonId = DataMgr.AutoChessMission[self.RandomId].DungeonId
   self.Level_Random.Text_Name:SetText(GText(DataMgr.Dungeon[DungeonId].DungeonName))
+  if self.Level then
+    self.Level:SetCallbacks({
+      OnBuffEdit = function()
+        self:OnClickBuffEdit()
+      end,
+      OnWeatherEdit = function()
+        self:OnClickWeatherEdit()
+      end
+    })
+  end
   self:UpdateRandomDetail()
 end
 
@@ -265,167 +290,16 @@ function View:UpdateArrow()
 end
 
 function View:UpdateLinearDetail()
-  self.Details:PlayAnimation(self.Details.Change)
   local Info = DataMgr.AutoChessMission[self.SelectedItem.Id]
-  self.Details.Text_Name:SetText(GText(DataMgr.Dungeon[Info.DungeonId].DungeonName))
-  self.Details.WS_Type:SetActiveWidgetIndex(0)
-  local State = self.SelectedItem.State
-  self:InitRankInfo(Info, State)
-  self.Details.List_Condition:ClearListItems()
-  self.Details.List_Enemy:ClearListItems()
-  self.Details.List_Buff:ClearListItems()
-  self.Details.List_Reward:ClearListItems()
-  self.Details.Text_Condition:SetText(GText("UI_AutoChess_UnlockInfo"))
-  if State ~= LevelState.UnLock then
-    self.Details.Panel_Enemy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Details.Panel_Buff:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Details.Panel_Reward:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self:InitCondition(Info, State)
-    self:InitEnemy(Info)
-    self:InitBuff(Info)
-    self:InitReward(Info)
-    self:InitBtn()
-  else
-    self:InitCondition(Info, State)
-    self.Details.Panel_Enemy:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.Panel_Buff:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.Panel_Reward:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.WS_Btn:SetActiveWidgetIndex(1)
-    self.Details.Btn_Lock.Text_Button:SetText(GText("UI_AutoChess_MissionEntryUnlock"))
-  end
-end
-
-function View:InitRankInfo(Info, State)
-  if Info.UnlockRankID then
-    self.Details.Panel_RankUp:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Details.Text_RankUp:SetTexT(GText("UI_AutoChess_RankLimitUpAfter"))
-    local RankInfo = DataMgr.AutoChessPoint[Info.UnlockRankID]
-    self.Details.Icon_Rank:SetBrushResourceObject(LoadObject(RankInfo.RankIcon))
-    if State == LevelState.Pass then
-      self.Details:PlayAnimation(self.Details.Rank_Complete)
-    else
-      self.Details:PlayAnimation(self.Details.Rank_Normal)
-    end
-  else
-    self.Details.Panel_RankUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
-end
-
-function View:InitCondition(Info, State)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  if Info.UnlockMissionId then
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.State = State
-    local PreDungeonId = DataMgr.AutoChessMission[Info.UnlockMissionId].DungeonId
-    local Language = CommonConst.SystemLanguage
-    Content.Text = nil
-    if Language == CommonConst.SystemLanguages.KR then
-      Content.Text = GText(DataMgr.Dungeon[PreDungeonId].DungeonName) .. " " .. GText("UI_AutoChess_CompleteText")
-    else
-      Content.Text = GText("UI_AutoChess_CompleteText") .. GText(DataMgr.Dungeon[PreDungeonId].DungeonName)
-    end
-    local bPrePass = false
-    if Avatar.Dungeons[PreDungeonId] and Avatar.Dungeons[PreDungeonId].IsPass then
-      bPrePass = true
-    else
-      bPrePass = false
-    end
-    if bPrePass then
-      Content.Success = true
-    else
-      Content.Success = false
-    end
-    self.Details.List_Condition:AddItem(Content)
-  end
-  if Info.UnlockDay then
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    local TimeUnlock = self:CheckUnlockDay(Info)
-    if TimeUnlock then
-      Content.Success = true
-    else
-      Content.Success = false
-    end
-    Content.Text = GText(Info.UnlockText)
-    self.Details.List_Condition:AddItem(Content)
-  end
-  if self.Details.List_Condition:GetNumItems() <= 0 then
-    self.Details.WS_Type:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.Details.WS_Type:SetVisibility(UIConst.VisibilityOp.Visible)
-  end
-end
-
-function View:InitEnemy(Info)
-  if not Info then
-    return
-  end
-  self.Details.Text_Enemy:SetText(GText("UI_AutoChess_EnemyInfo"))
-  local MosterInfoData = Model:GetMonsterInfoByMissionId(Info.MissionId)
-  for Index = 1, #MosterInfoData do
-    local Row = MosterInfoData[Index]
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.AutoChessId = Row.MonsterId
-    Content.EquipCount = #Row.EquipList
-    Content.MissionId = nil
-    if self.SelectedItem then
-      Content.MissionId = self.SelectedItem.Id
-    else
-      Content.MissionId = self.RandomId
-    end
-    self.Details.List_Enemy:AddItem(Content)
-  end
-end
-
-function View:InitBuff(Info)
-  if not Info then
-    return
-  end
-  self.Details.Text_Buff:SetText(GText("UI_AutoChess_BuffInfo"))
-  local MissionId
-  if self.SelectedItem then
-    MissionId = self.SelectedItem.Id
-  else
-    MissionId = self.RandomId
-  end
-  if Info.RegularBuffId then
-    local BuffInfo = DataMgr.AutoChessBuff[Info.RegularBuffId]
-    local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.Path = BuffInfo.BuffIcon
-    Content.MissionId = MissionId
-    self.Details.List_Buff:AddItem(Content)
-  end
-  if Info.SpecifyBuffId then
-    for key, value in pairs(Info.SpecifyBuffId) do
-      local BuffInfo = DataMgr.AutoChessBuff[value]
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.Path = BuffInfo.BuffIcon
-      Content.MissionId = MissionId
-      self.Details.List_Buff:AddItem(Content)
-    end
-  end
-  if self.Type == AutoChessConst.LevelSelectType.Random then
-    local Avatar = GWorld:GetAvatar()
-    if not Avatar then
-      return
-    end
-    local Buff = Avatar.AutoChess.RandomBuffList
-    for key, value in pairs(Buff) do
-      local BuffInfo = DataMgr.AutoChessBuff[value]
-      local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.Path = BuffInfo.BuffIcon
-      Content.MissionId = MissionId
-      self.Details.List_Buff:AddItem(Content)
-    end
-  end
+  self.Details:RefreshLinear(Info, self.SelectedItem.State, self.SelectedItem)
 end
 
 function View:OnClickBuff()
   local MissionId
   if self.SelectedItem then
+    if self.SelectedItem.State == LevelState.UnLock then
+      return
+    end
     MissionId = self.SelectedItem.Id
   else
     MissionId = self.RandomId
@@ -437,6 +311,9 @@ end
 function View:OnClickMonster()
   local MissionId
   if self.SelectedItem then
+    if self.SelectedItem.State == LevelState.UnLock then
+      return
+    end
     MissionId = self.SelectedItem.Id
   else
     MissionId = self.RandomId
@@ -445,93 +322,30 @@ function View:OnClickMonster()
   UIManager(self):LoadUINew("AutoChessDeputeMonsterInfoUI", MissionId)
 end
 
-function View:InitReward(Info)
-  if not Info then
-    return
-  end
-  self.Details.Text_Reward:SetText(GText("UI_AutoChess_RewardInfo"))
-  local DungeonRewardView = DataMgr.Dungeon[Info.DungeonId].DungeonRewardView
-  local RewardInfo = DataMgr.RewardView[DungeonRewardView]
-  if RewardInfo then
-    local Ids = RewardInfo.Id or {}
-    local RewardCount = RewardInfo.Count or {}
-    local TableName = RewardInfo.Type or {}
-    for i = 1, #Ids do
-      local ItemId = Ids[i]
-      local Count = RewardUtils:GetCount(RewardCount[i])
-      local Icon = ItemUtils.GetItemIconPath(ItemId, TableName[i])
-      local Rarity = ItemUtils.GetItemRarity(ItemId, TableName[i])
-      local ItemType = TableName[i]
-      local RewardContent = NewObject(UIUtils.GetCommonItemContentClass())
-      RewardContent.Id = ItemId
-      if 0 ~= Count then
-        RewardContent.Count = Count
-      end
-      RewardContent.Icon = Icon
-      RewardContent.Rarity = Rarity
-      RewardContent.ItemType = ItemType
-      RewardContent.IsShowDetails = true
-      RewardContent.MenuPlacement = EMenuPlacement.MenuPlacement_MenuLeft
-      if self.Type == AutoChessConst.LevelSelectType.Linear then
-        if self.SelectedItem.State == LevelState.Pass then
-          RewardContent.bHasGot = true
-        else
-          RewardContent.bHasGot = false
-        end
-      else
-        RewardContent.bHasGot = false
-      end
-      self.Details.List_Reward:AddItem(RewardContent)
-    end
-  end
+function View:OnClickBuffEdit()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small_crystal", nil, nil)
+  local InitParams = {bSkipConfirmSave = true}
+  UIManager(self):LoadUINew("AutoChessShareBuff", InitParams)
 end
 
-function View:InitBtn()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  self.Details.WS_Btn:SetActiveWidgetIndex(0)
-  self.Details.Btn_Challenge.Text_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Details.Btn_Challenge.Text_Button:SetText(GText("UI_AutoChess_MissionEntry"))
-  if self.Type == AutoChessConst.LevelSelectType.Random then
-    self.Details.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Details.Btn_Refresh.Text_Refresh:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Details.Btn_Refresh.Text_Button:SetText(GText("UI_AutoChess_Refresh"))
-    local Count = DataMgr.GlobalConstant.AUTO_CHESS_MAX_REFRESH.ConstantValue - Avatar.AutoChess.RefreshCount
-    if 0 == Count then
-      self.Details.Btn_Refresh:ForbidBtn(true)
-    else
-      self.Details.Btn_Refresh:ForbidBtn(false)
-    end
-    self.Details.Btn_Refresh.Text_Refresh:SetText(Count .. "/" .. DataMgr.GlobalConstant.AUTO_CHESS_MAX_REFRESH.ConstantValue)
-  else
-    self.Details.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  end
+function View:OnClickWeatherEdit()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small_crystal", nil, nil)
+  UIManager(self):ShowCommonPopupUI(100402, {}, self)
 end
 
 function View:UpdateRandomDetail()
-  self.Details:PlayAnimation(self.Details.Change)
+  if self.Type ~= AutoChessConst.LevelSelectType.Random then
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
-  local Info
-  Info = DataMgr.AutoChessMission[self.RandomId]
-  self.Details.Text_Name:SetText(GText(DataMgr.Dungeon[Info.DungeonId].DungeonName))
-  self.Details.WS_Type:SetActiveWidgetIndex(1)
-  self.Details.Panel_RankUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self:InitRandomRank()
-  self.Details.List_Enemy:ClearListItems()
-  self.Details.List_Buff:ClearListItems()
-  self.Details.List_Reward:ClearListItems()
-  self.Details.Panel_Enemy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Details.Panel_Buff:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Details.Panel_Reward:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self:InitEnemy(Info)
-  self:InitBuff(Info)
-  self:InitReward(Info)
-  self:InitBtn()
+  local Info = DataMgr.AutoChessMission[self.RandomId]
+  self.Details:RefreshRandom(Info, Avatar, self.RandomId)
+  if self.Level then
+    self.Level:Refresh(self.RandomId)
+  end
 end
 
 function View:InitLinearRank()
@@ -544,18 +358,6 @@ function View:InitLinearRank()
   self.Rank.Icon_Rank:SetBrushResourceObject(LoadObject(Info.RankIcon))
   self.Rank.Text_Rank:SetText(GText(Info.RankName))
   self.Rank.Text_Exp:SetText(Avatar.AutoChess.RankScore .. "/" .. Info.RankMaxPoint)
-end
-
-function View:InitRandomRank()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  local Rank = Avatar.AutoChess.RankLevel
-  local Info = DataMgr.AutoChessPoint[Rank]
-  self.Details.Rank.Icon_Rank:SetBrushResourceObject(LoadObject(Info.RankIcon))
-  self.Details.Rank.Text_Rank:SetText(GText(Info.RankName))
-  self.Details.Rank.Text_Exp:SetText(Avatar.AutoChess.RankScore .. "/" .. Info.RankMaxPoint)
 end
 
 function View:OnClickEnter()
@@ -580,7 +382,7 @@ function View:OnClickEnter()
   local CustomParams = {}
   CustomParams.MissionId = ChessMissionId
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
-  Avatar:EnterEventDungeon(nil, Info.DungeonId, nil, ActiveId, CustomParams)
+  Avatar:EnterEventDungeon(nil, Info.DungeonId, nil, AutoChessConst.ActiveId, CustomParams)
 end
 
 function View:OnClickRefresh()
@@ -647,7 +449,7 @@ function View:CheckUnlockDay(Info)
   if not UnlockDay then
     return true
   end
-  local EventStartTime = DataMgr.EventMain[103016].EventStartTime
+  local EventStartTime = DataMgr.EventMain[AutoChessConst.ActiveId].EventStartTime
   local StartTimestamp = EventStartTime:GetTime()
   local CurrentTime = TimeUtils.NowTime()
   local StartDate = os.date("*t", StartTimestamp)
@@ -683,7 +485,9 @@ function View:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
   else
     self.UsingGamepad = true
     self:ShowOrHideGamePad(true)
-    self:SetFocus()
+    if self:IsVisible() then
+      self:SetFocus()
+    end
   end
 end
 
@@ -702,24 +506,9 @@ function View:InitGamePad()
       }
     })
   end
-  self.Details.Controller_Enemy:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Up"}
-    }
-  })
-  self.Details.Controller_Buff:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Down"}
-    }
-  })
-  self.Details.Controller_Reward:CreateCommonKey({
-    KeyInfoList = {
-      {Type = "Img", ImgShortPath = "LS"}
-    }
-  })
-  self.Details.Btn_Challenge:SetGamePadImg("A")
-  self.Details.Btn_Lock:SetGamePadImg("A")
-  self.Details.Btn_Refresh:SetGamePadImg("Y")
+  if self.Details then
+    self.Details:InitGamePad()
+  end
 end
 
 function View:ShowOrHideGamePad(bShow)
@@ -730,12 +519,6 @@ function View:ShowOrHideGamePad(bShow)
     if self.WS_R then
       self.WS_R:SetActiveWidgetIndex(1)
     end
-    self.Details.Controller_Enemy:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Details.Controller_Buff:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Details.Controller_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Details.Btn_Refresh:SetGamepadIconVisibility(true)
-    self.Details.Btn_Challenge:SetGamepadIconVisibility(true)
-    self.Details.Btn_Lock:SetGamepadIconVisibility(false)
   else
     if self.WS_L then
       self.WS_L:SetActiveWidgetIndex(0)
@@ -743,12 +526,10 @@ function View:ShowOrHideGamePad(bShow)
     if self.WS_R then
       self.WS_R:SetActiveWidgetIndex(0)
     end
-    self.Details.Controller_Enemy:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.Controller_Buff:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.Controller_Reward:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Details.Btn_Refresh:SetGamepadIconVisibility(false)
-    self.Details.Btn_Challenge:SetGamepadIconVisibility(false)
-    self.Details.Btn_Lock:SetGamepadIconVisibility(false)
+  end
+  self.Details:ShowOrHideGamePad(bShow)
+  if self.Type == AutoChessConst.LevelSelectType.Random then
+    self.Level:ShowOrHideGamePad(bShow)
   end
 end
 
@@ -772,16 +553,31 @@ function View:OnKeyDown(MyGeometry, InKeyEvent)
     self:OnClickMonster()
     return UE4.UWidgetBlueprintLibrary.Handled()
   elseif "Gamepad_LeftThumbstick" == InKeyName then
+    if self.SelectedItem and self.SelectedItem.State == LevelState.UnLock then
+      return UE4.UWidgetBlueprintLibrary.Unhandled()
+    end
     self:ShowOrHideGamePad(false)
-    self.Details.List_Reward:SetFocus()
+    if self.Details then
+      self.Details:SetRewardListFocus()
+    end
     return UE4.UWidgetBlueprintLibrary.Handled()
   elseif "Gamepad_FaceButton_Top" == InKeyName then
     if self.Type == AutoChessConst.LevelSelectType.Random then
       self:OnClickRefresh()
       return UE4.UWidgetBlueprintLibrary.Handled()
     end
+  elseif "Gamepad_FaceButton_Left" == InKeyName then
+    if (not self.Details or not self.Details:HasRewardListFocus()) and self.Type == AutoChessConst.LevelSelectType.Random then
+      self:OnClickBuffEdit()
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+  elseif "Gamepad_RightThumbstick" == InKeyName then
+    if (not self.Details or not self.Details:HasRewardListFocus()) and self.Type == AutoChessConst.LevelSelectType.Random then
+      self:OnClickWeatherEdit()
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
   elseif "Gamepad_FaceButton_Right" == InKeyName then
-    if self.Details.List_Reward:HasFocusedDescendants() or self.Details.List_Reward:HasAnyUserFocus() then
+    if self.Details and self.Details:HasRewardListFocus() then
       self:SetFocus()
       self:ShowOrHideGamePad(true)
       return UE4.UWidgetBlueprintLibrary.Handled()

@@ -9,6 +9,7 @@ local AllPlayerBloodState = require("BluePrints.UI.BloodBar.BloodBarUtils").AllB
 local CoopUtils = require("BluePrints.UI.WBP.Activity.PC.Coop.CoopUtils")
 local EMCache = require("EMCache.EMCache")
 local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
+local GuildPermissionUtils = require("BluePrints.UI.WBP.Guild.Common.GuildPermissionUtils")
 local WBP_Battle_C = Class("BluePrints.UI.BP_UIState_C")
 WBP_Battle_C._components = {
   "BluePrints.UI.WBP.Chat.View.WBP_Battle_C_ChatComp",
@@ -18,6 +19,8 @@ WBP_Battle_C._components = {
 }
 
 function WBP_Battle_C:Construct()
+  EventManager:AddEvent(EventID.GameViewportInputKeyPressed, self, self.OnInputKeyPressed)
+  EventManager:AddEvent(EventID.GameViewportInputKeyReleased, self, self.OnInputKeyReleased)
   WBP_Battle_C.Super.Construct(self)
   if self.Platform == nil then
     self.Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
@@ -73,7 +76,7 @@ function WBP_Battle_C:OnLoaded(...)
   })
   self:ListenForInputAction("OpenMenu", EInputEvent.IE_Pressed, false, {
     self,
-    self.OpenCommonSetup
+    self.OpenCommonSetupByEsc
   })
   self:ListenForInputAction("OpenGuideBook", EInputEvent.IE_Pressed, false, {
     self,
@@ -106,6 +109,10 @@ function WBP_Battle_C:OnLoaded(...)
   self:ListenForInputAction("GamepadOpenSystem", EInputEvent.IE_Released, false, {
     self,
     self.CloseSystemEntrance
+  })
+  self:ListenForInputAction("OpenAppearanceGestureGruop", EInputEvent.IE_Released, false, {
+    self,
+    self.OpenAppearanceGestureGruop
   })
   self:AddDispatcher(EventID.ShowTeammateBloodUI, self, self.AddTeammateUI)
   self:AddDispatcher(EventID.CloseTeammateBloodUI, self, self.RemoveTeammateUI)
@@ -141,13 +148,32 @@ function WBP_Battle_C:OnLoaded(...)
   self:AddDispatcher(EventID.OnTeleportReady, self, self.TeleportReady)
   self:AddDispatcher(EventID.OnSwitchWeapon, self, self.RefreshSpiritualized)
   self:AddDispatcher(EventID.OnSelectWeapon, self, self.RefreshSpiritualized)
-  self:AddDispatcher(EventID.UpdateMainPlayerWeaponSp, self, function(self, NowWeaponSp, OldWeaponSp, OwnerActor)
-    self:RefreshSpiritualized({CurrentWeaponSp = NowWeaponSp})
+  self:AddDispatcher(EventID.UpdateMainPlayerWeaponSp, self, function(self, NowWeaponSp, bImmediateOrOwnerActor, OwnerActor)
+    local bImmediate = true == bImmediateOrOwnerActor
+    if not OwnerActor and not bImmediate then
+      OwnerActor = bImmediateOrOwnerActor
+    end
+    if not IsValid(OwnerActor) or not OwnerActor:IsMainPlayer() then
+      return
+    end
+    self:RefreshSpiritualized({CurrentWeaponSp = NowWeaponSp, bImmediate = bImmediate})
   end)
-  self:AddDispatcher(EventID.UpdateMainPlayerMaxWeaponSp, self, function(self, NowMaxWeaponSp, OldMaxWeaponSp, OwnerActor)
+  self:AddDispatcher(EventID.UpdateMainPlayerMaxWeaponSp, self, function(self, NowMaxWeaponSp, OwnerActorOrOldMaxWeaponSp, OwnerActor)
+    OwnerActor = OwnerActor or OwnerActorOrOldMaxWeaponSp
+    if not IsValid(OwnerActor) or not OwnerActor:IsMainPlayer() then
+      return
+    end
     self:RefreshSpiritualized({MaxWeaponSp = NowMaxWeaponSp})
   end)
-  self:AddDispatcher(EventID.UpdateMainPlayerSecondaryResource, self, function(self, NowSecondaryResource, OldSecondaryResource, OwnerActor)
+  self:AddDispatcher(EventID.UpdateMainPlayerSecondaryResource, self, function(self, NowSecondaryResource, OwnerActorOrOldSecondaryResource, OwnerActor)
+    OwnerActor = OwnerActor or OwnerActorOrOldSecondaryResource
+    if not IsValid(OwnerActor) or not OwnerActor:IsMainPlayer() then
+      return
+    end
+    AIDeBugLog.Log("AIDeBug_Attribute_SecondaryResource", "UI_RECV", {
+      Now = NowSecondaryResource,
+      Arg2 = tostring(OwnerActorOrOldSecondaryResource)
+    })
     self:RefreshSpiritualized({CurrentSecondaryCount = NowSecondaryResource})
   end)
   self:AddDispatcher(EventID.OnRepClientDungeonMessage, self, self.RepClientDungeonMessage)
@@ -211,6 +237,8 @@ function WBP_Battle_C:OnLoaded(...)
   end
   self.TeammateEidSet = {}
   self.Pos_Coop:ClearChildren()
+  self.Pos_GuildBossScore:ClearChildren()
+  self.Pos_GuildBossProgress:ClearChildren()
   self:HidePlayerDeadUI()
   self:InitKeyTip()
   self:HideDynamicEventUI()
@@ -219,6 +247,8 @@ function WBP_Battle_C:OnLoaded(...)
   self:InitGameJumpWord()
   self:CheckTheaterEventState()
   self:InitAsyncCombatHUD()
+  self:InitGuildConstructHUD()
+  self:InitGuildBossHUD()
   self:UpdateMobileLayoutInfoByServerData("Update")
 end
 
@@ -760,6 +790,8 @@ function WBP_Battle_C:InitEsc()
 end
 
 function WBP_Battle_C:Destruct()
+  EventManager:RemoveEvent(EventID.GameViewportInputKeyPressed, self)
+  EventManager:RemoveEvent(EventID.GameViewportInputKeyReleased, self)
   for Eid, TeammateUI in pairs(self.TeammateEidSet or {}) do
     self:RemoveTeammateUI(Eid, TeammateUI)
   end
@@ -776,6 +808,9 @@ function WBP_Battle_C:Destruct()
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self:UnbindSecondaryBuffDelegates(Player)
+  if self.bPlayingGuildBGM then
+    self:StopGuildBGM()
+  end
   local NodeName = DataMgr.ReddotNode.Quest.NodeName
   ReddotManager.RemoveListener(NodeName, self)
   WBP_Battle_C.Super.Destruct(self)
@@ -835,7 +870,8 @@ function WBP_Battle_C:SetBattery(BatteryLevel, LastBatteryLevel)
 end
 
 function WBP_Battle_C:UpdateSignalStrength(LastSignalStrength)
-  local IsConnectWifi = UE4.UMobilePatchingLibrary.HasActiveWiFiConnection()
+  local NetworkMonitorSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UNetworkMonitorSubsystem)
+  local IsConnectWifi = NetworkMonitorSubsystem and NetworkMonitorSubsystem:GetCachedWiFiConnectionState() or false
   self.Battery.Switcher_Net:SetActiveWidgetIndex(IsConnectWifi and 1 or 0)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if not Player then
@@ -919,6 +955,13 @@ function WBP_Battle_C:ContinueBattle()
     local GameMode = UE4.UGameplayStatics.GetGameMode(Player)
     GameMode:SetGamePaused(UIConst.CommonSetUP, false)
   end
+end
+
+function WBP_Battle_C:OpenCommonSetupByEsc()
+  if self.AppearanceGestureGruopH and self.AppearanceGestureGruopH:IsVisible() then
+    return
+  end
+  self:OpenCommonSetup()
 end
 
 function WBP_Battle_C:OpenCommonSetup()
@@ -1008,7 +1051,11 @@ function WBP_Battle_C:OpenArmory()
 end
 
 function WBP_Battle_C:OpenBag()
-  self:OpenSystemByAction("OpenBag")
+  if self.bInGuildScene and UIUtils.IsGamepadInput() then
+    self:OnGuildQuitBtnClicked()
+  else
+    self:OpenSystemByAction("OpenBag")
+  end
 end
 
 function WBP_Battle_C:OpenPlay()
@@ -1032,7 +1079,11 @@ function WBP_Battle_C:OpenCamera()
 end
 
 function WBP_Battle_C:OpenEvent()
-  self:OpenSystemByAction("OpenEvent")
+  if self.bInGuildScene and UIUtils.IsGamepadInput() then
+    self:OnGuildVisitBtnClicked()
+  else
+    self:OpenSystemByAction("OpenEvent")
+  end
 end
 
 function WBP_Battle_C:OpenForge()
@@ -1046,6 +1097,58 @@ end
 function WBP_Battle_C:OpenRogueShop()
   local UIManager = self:GetGameInstance():GetGameUIManager()
   UIManager:LoadUINew("RougeBag")
+end
+
+function WBP_Battle_C:OnInputKeyPressed(Key, EventType)
+  if UIUtils.IsGamepadInput() then
+    if Key.KeyName == UIConst.GamePadKey.DPadLeft then
+      self.AppearanceGestureGruopH_DPadLeft_Press = true
+    elseif Key.KeyName == UIConst.GamePadKey.SpecialLeft then
+      self.OpenAppearanceGestureGruopH_SpecialLeft_Press = true
+    end
+    if self.AppearanceGestureGruopH_DPadLeft_Press and self.OpenAppearanceGestureGruopH_SpecialLeft_Press then
+      self:OpenAppearanceGestureGruop()
+      EventType.bHandled = true
+    end
+  end
+end
+
+function WBP_Battle_C:OnInputKeyReleased(Key, EventType)
+  if UIUtils.IsGamepadInput() then
+    if Key.KeyName == UIConst.GamePadKey.DPadLeft then
+      self.AppearanceGestureGruopH_DPadLeft_Press = false
+    elseif Key.KeyName == UIConst.GamePadKey.SpecialLeft then
+      self.OpenAppearanceGestureGruopH_SpecialLeft_Press = false
+    end
+  end
+end
+
+function WBP_Battle_C:OpenAppearanceGestureGruop()
+  local Avatar = GWorld:GetAvatar()
+  if not (Avatar and Avatar:CheckUIUnlocked("AppearanceScore")) or not Avatar:CheckSystemUICanOpen("AppearanceScore") then
+    return
+  end
+  if self.AppearanceGestureGruopH then
+    return
+  end
+  self.AppearanceGestureGruopH = self:CreateWidgetNew("AppearanceGestureGruopH")
+  self.Pos_GestureGruop:AddChild(self.AppearanceGestureGruopH)
+  self.Pos_GestureGruop:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.AppearanceGestureGruopH:SetFocus()
+  self.Char_Skill:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Team:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  Player:TryHideAllSkillUI()
+end
+
+function WBP_Battle_C:CloseAppearanceGestureGruop(AppearanceGestureGruop)
+  self.Pos_GestureGruop:RemoveChild(AppearanceGestureGruop)
+  self.Pos_GestureGruop:SetVisibility(ESlateVisibility.Collapsed)
+  self.AppearanceGestureGruopH = nil
+  self.Char_Skill:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Team:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  Player:TryShowAllSkillUI()
 end
 
 function WBP_Battle_C:OpenSystemByAction(ActionName, bEscMenu, ...)
@@ -1286,7 +1389,9 @@ function WBP_Battle_C:InitBtnList()
       Node:OnCheckEscShowCondition(Data.EnterId)
     end
   end
-  self:InitSystemEntrance()
+  if not UIUtils.AmIInGuildScene() then
+    self:InitSystemEntrance()
+  end
   if self.Btn_GuideBook then
     self:InitGuideBookBtn()
   end
@@ -1392,9 +1497,9 @@ function WBP_Battle_C:TriggerSignBoardNpc()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local CreatorMap = GameState.StaticCreatorMap:ToTable()
   local DisplayName = {
-    "ShowNpc" .. string.sub(DataMgr.TextMap.UI_SHOWNPC_NAME_SCENE1.TextMapId, -7),
-    "ShowNpc" .. string.sub(DataMgr.TextMap.UI_SHOWNPC_NAME_SCENE2.TextMapId, -7),
-    "ShowNpc" .. string.sub(DataMgr.TextMap.UI_SHOWNPC_NAME_SCENE3.TextMapId, -7)
+    "ShowNpc_SCENE1",
+    "ShowNpc_SCENE2",
+    "ShowNpc_SCENE3"
   }
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   self.NpcStaticCreator = {}
@@ -1665,7 +1770,7 @@ function WBP_Battle_C:UnLoadSystem(UIName)
     for SystemId, Info in pairs(SystemInfo) do
       if self:CheckNeedPlayInOutAnim(SystemId) then
         local SystemName = Info.SystemUIName
-        if SystemName and SystemName == UIName then
+        if SystemName and SystemName == UIName or UIName == UIConst.MenuWorld then
           local MenuWorld = UIManager(self):GetUIObj(UIConst.MenuWorld)
           if MenuWorld then
             return false
@@ -2398,6 +2503,18 @@ function WBP_Battle_C:InitGameJumpWord()
       EMCache:Set(OptionName2, GameDamageTextScale)
     end
     JumpWordManager:SetJumpWordSize(tonumber(GameDamageTextScale))
+    local OptionName3 = "DamageTextMini"
+    local GameDamageTextMini = EMCache:Get(OptionName3)
+    if nil == GameDamageTextMini then
+      local OptionInfo = DataMgr.Option[OptionName3]
+      if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" and OptionInfo.DefaultValueM then
+        GameDamageTextMini = OptionInfo.DefaultValueM == "True"
+      else
+        GameDamageTextMini = OptionInfo.DefaultValue == "True"
+      end
+      EMCache:Set(OptionName3, GameDamageTextMini)
+    end
+    JumpWordManager:SetbOpenJumpWordNumberFormat(GameDamageTextMini)
   end
 end
 
@@ -2709,7 +2826,11 @@ function WBP_Battle_C:_GetMappedPlanIndex(EditPlanIndex)
   if nil == EditPlanIndex then
     return 1
   end
-  return (EditPlanIndex - 1) % 2 + 1
+  if EditPlanIndex >= 7 and EditPlanIndex <= 9 then
+    return 3
+  else
+    return (EditPlanIndex - 1) % 2 + 1
+  end
 end
 
 function WBP_Battle_C:InitAsyncCombatHUD()
@@ -2983,6 +3104,10 @@ function WBP_Battle_C:OnSecondaryBuffChanged()
 end
 
 function WBP_Battle_C:UnbindSecondaryBuffDelegates(Player)
+  if self:IsExistTimer(self.SecondaryBuffCountdownTimer) then
+    self:RemoveTimer(self.SecondaryBuffCountdownTimer)
+    self.SecondaryBuffCountdownTimer = nil
+  end
   if not (Player and Player.BuffManager) or not self.SecondaryResourceBuffIds then
     return
   end
@@ -3029,10 +3154,25 @@ function WBP_Battle_C:BindSecondaryBuffDelegates(Player, BuffUIId)
       self.OnSecondaryBuffChanged
     })
   end
+  if BuffUIInfo.Type == "LastTime" then
+    self.SecondaryBuffCountdownTimer = self:AddTimer(0.5, function()
+      self:OnSecondaryBuffChanged()
+    end, true)
+  end
 end
 
 function WBP_Battle_C:RefreshSpiritualized(content)
-  self.PendingSpiritualizedContent = content or {}
+  content = content or {}
+  if content.bImmediate then
+    if self:IsExistTimer(self.SpiritualizedThrottleTimer) then
+      self:RemoveTimer(self.SpiritualizedThrottleTimer)
+      self.SpiritualizedThrottleTimer = nil
+    end
+    self.PendingSpiritualizedContent = nil
+    self:_DoRefreshSpiritualized(content)
+    return
+  end
+  self.PendingSpiritualizedContent = content
   if self:IsExistTimer(self.SpiritualizedThrottleTimer) then
     return
   end
@@ -3082,6 +3222,7 @@ function WBP_Battle_C:_DoRefreshSpiritualized(content)
       local PC = UE4 and UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
       local PS = PC and PC.PlayerState
       if not PS or not PS.HyperWeaponSkillIds then
+        AIDeBugLog.Abort("AIDeBug_Attribute_SecondaryResource", "CONFIG", PS and "NoHyperWeaponSkillIds" or "NoPlayerState", {WeaponId = WeaponId})
         return false, nil
       end
       local SkillEntries = PS.HyperWeaponSkillIds:ToTable()
@@ -3103,9 +3244,23 @@ function WBP_Battle_C:_DoRefreshSpiritualized(content)
       local TalentInfo = DataMgr.HyperWeaponSkillTree[TalentId]
       if TalentInfo and TalentInfo.bShowSecondaryResource then
         local BuffUIId = TalentInfo.SecondaryResourceBuffID
+        AIDeBugLog.Log("AIDeBug_Attribute_SecondaryResource", "CONFIG", {
+          Result = "Has",
+          MatchedTalentId = TalentId,
+          BuffUIId = BuffUIId,
+          TalentCount = #ActivatedTalentIds,
+          Talents = ActivatedTalentIds,
+          WeaponId = WeaponId
+        })
         return true, BuffUIId
       end
     end
+    AIDeBugLog.Log("AIDeBug_Attribute_SecondaryResource", "CONFIG", {
+      Result = "None",
+      TalentCount = #ActivatedTalentIds,
+      Talents = ActivatedTalentIds,
+      WeaponId = WeaponId
+    })
     return false, nil
   end
   
@@ -3128,9 +3283,9 @@ function WBP_Battle_C:_DoRefreshSpiritualized(content)
     for _, Buff in pairs(BuffManager.Buffs) do
       if IsValid(Buff) and BuffIdSet[Buff.BuffId] then
         if BuffUIInfo.Type == "Layer" then
-          return Buff.Layer or 0
+          return math.max(0, Buff.Layer or 0)
         elseif BuffUIInfo.Type == "LastTime" then
-          return math.floor(Buff.LastTime or 0)
+          return math.max(0, math.floor(Buff:GetLeftTime() or 0))
         end
       end
     end
@@ -3139,9 +3294,14 @@ function WBP_Battle_C:_DoRefreshSpiritualized(content)
   
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if not IsValid(Player) then
+    AIDeBugLog.Abort("AIDeBug_Attribute_SecondaryResource", "UI_REFRESH", "PlayerInvalid")
     if self.SecondaryResourceBuffUIId then
       self.SecondaryResourceBuffIds = nil
       self.SecondaryResourceBuffUIId = nil
+    end
+    if self:IsExistTimer(self.SecondaryBuffCountdownTimer) then
+      self:RemoveTimer(self.SecondaryBuffCountdownTimer)
+      self.SecondaryBuffCountdownTimer = nil
     end
     Hide()
     return
@@ -3161,6 +3321,7 @@ function WBP_Battle_C:_DoRefreshSpiritualized(content)
     end
   end
   if not CurrentWeapon then
+    AIDeBugLog.Abort("AIDeBug_Attribute_SecondaryResource", "UI_REFRESH", "NoHyperWeapon")
     self:UnbindSecondaryBuffDelegates(Player)
     Hide()
     return
@@ -3198,7 +3359,306 @@ function WBP_Battle_C:_DoRefreshSpiritualized(content)
   elseif nil == CurrentSecondaryCount then
     CurrentSecondaryCount = Player:GetAttr("SecondaryResource") or 0
   end
+  AIDeBugLog.Log("AIDeBug_Attribute_SecondaryResource", "UI_REFRESH", {
+    HasSecondaryResource = HasSecondaryResource,
+    BuffUIId = BuffUIId,
+    CurrentSecondaryCount = CurrentSecondaryCount,
+    ContentCount = content.CurrentSecondaryCount,
+    WeaponId = CurrentWeapon.WeaponId
+  })
   Spiritualized:Refresh(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecondaryResource, CurrentWeapon)
+end
+
+function WBP_Battle_C:InitGuildBossHUD()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameMode or not GameState then
+    DebugPrint("WBP_Battle_C:InitGuildBossCombatHUD 获取GameMode或GameState失败")
+    return
+  end
+  if GameState.GameModeType ~= "GuildBoss" then
+    DebugPrint("WBP_Battle_C:InitGuildBossCombatHUD 当前模式不是GuildBoss")
+    self.Pos_GuildBossScore:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Pos_GuildBossProgress:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  self.SizeBox_Map:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Pos_TaskBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:InitGuildBossHUDCommon()
+  local Platform = CommonUtils:GetDeviceTypeByPlatformName(self)
+  if "PC" == Platform then
+    self:InitGuildBossHUDPC()
+  else
+    self:InitGuildBossHUDMobile()
+  end
+end
+
+function WBP_Battle_C:InitGuildBossHUDCommon()
+  self:CreateGuildBossScoreHUD()
+  self:CreateGuildBossProgressHUD()
+end
+
+function WBP_Battle_C:CreateGuildBossScoreHUD()
+  if not self.GuildBossScoreHUD then
+    local ScoreHUDBPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Boss/WBP_Guild_Boss_Hud_Score.WBP_Guild_Boss_Hud_Score'"
+    self.GuildBossScoreHUD = UIManager(self):CreateWidget(ScoreHUDBPPath)
+    if not self.GuildBossScoreHUD then
+      DebugPrint("WBP_Battle_C:CreateGuildBossScoreHUD 创建WBP_Guild_Boss_Hud_Score失败")
+      return
+    end
+    self.Pos_GuildBossScore:AddChild(self.GuildBossScoreHUD)
+    self.Pos_GuildBossScore:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
+function WBP_Battle_C:CreateGuildBossProgressHUD()
+  if not self.GuildBossProgressHUD then
+    local ProgressHUDBPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Boss/WBP_Guild_Boss_Hud_TrialProgress.WBP_Guild_Boss_Hud_TrialProgress'"
+    self.GuildBossProgressHUD = UIManager(self):CreateWidget(ProgressHUDBPPath)
+    if not self.GuildBossProgressHUD then
+      DebugPrint("WBP_Battle_C:CreateGuildBossProgressHUD 创建WBP_Guild_Boss_Hud_Progress失败")
+      return
+    end
+    self.Pos_GuildBossProgress:AddChild(self.GuildBossProgressHUD)
+    self.Pos_GuildBossProgress:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
+function WBP_Battle_C:InitGuildBossHUDPC()
+  self:ListenForInputAction("SwitchMovement", EInputEvent.IE_Released, false, {
+    self,
+    self.OpenGuildBossHUDList
+  })
+  
+  local function ResetHandlingGuildBossHUDList()
+    if self.HandlingGuildBossHUDList then
+      self.HandlingGuildBossHUDList = false
+    end
+  end
+  
+  self:StopListeningForInputAction("GamepadOpenSystem", EInputEvent.IE_Pressed)
+  self:StopListeningForInputAction("GamepadOpenSystem", EInputEvent.IE_Released)
+  self:ListenForInputAction("GamepadOpenSystem", EInputEvent.IE_Pressed, false, {
+    self,
+    self.OpenGuildBossHUDList
+  })
+  self:ListenForInputAction("GamepadOpenSystem", EInputEvent.IE_Released, false, {self, ResetHandlingGuildBossHUDList})
+end
+
+function WBP_Battle_C:InitGuildBossHUDMobile()
+end
+
+function WBP_Battle_C:OpenGuildBossHUDList()
+  if UIUtils.IsGamepadInput() and UIUtils.UtilsGetCurrentGamepadName() == "PS" and self.HandlingGuildBossHUDList then
+    return
+  end
+  if self.GuildBossProgressHUD then
+    self.GuildBossProgressHUD:OpenList()
+    self.HandlingGuildBossHUDList = true
+  end
+end
+
+function WBP_Battle_C:UpdateGuildBossCountDown(GameRemainTime)
+  if self.GuildBossScoreHUD then
+    self.GuildBossScoreHUD:UpdateRemainTime(GameRemainTime)
+  else
+    DebugPrint("ayff test no GuildBossScoreHUD found")
+  end
+end
+
+function WBP_Battle_C:GetGuildInfoWidget()
+  local Child = self.Pos_GuildInfo:GetChildAt(0)
+  return Child
+end
+
+function WBP_Battle_C:CreateGuildInfoWidget()
+  local BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Construct/WBP_Guild_Construct_Hud_GuildInfo.WBP_Guild_Construct_Hud_GuildInfo'"
+  local GuildInfoWidget = UIManager(self):CreateWidget(BPPath)
+  if not GuildInfoWidget then
+    DebugPrint("WBP_Battle_C:CreateGuildInfoWidget 创建WBP_Guild_Construct_Hud_GuildInfo失败")
+    return
+  end
+  return GuildInfoWidget
+end
+
+function WBP_Battle_C:RefreshGuildLeftTopCorner()
+  self.Btn_Esc:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.SizeBox_Map:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Btn_GuideBook:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function WBP_Battle_C:InitGuildInfo(Info)
+  if not Info then
+    return
+  end
+  self.Pos_GuildInfo:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  local GuildInfoWidget = self:GetGuildInfoWidget()
+  GuildInfoWidget = GuildInfoWidget or self:CreateGuildInfoWidget()
+  self.Pos_GuildInfo:AddChild(GuildInfoWidget)
+  GuildInfoWidget:InitializeGuildInfo(Info.Name, Info.LogoInfo)
+end
+
+function WBP_Battle_C:InitGuildEntrance()
+  self.Pos_Entry:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.ListView:ClearListItems()
+  local ClassPath = UE4.LoadClass("/Game/UI/WBP/Battle/Widget/WBP_Main_Btnlist_Content.WBP_Main_Btnlist_Content_C")
+  local Contents = {
+    {
+      TexturePath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Guild_Visit.T_Entrance_Guild_Visit'",
+      Name = "UI_VisitGuild_2",
+      Obj = self,
+      GuildCallback = self.OnGuildVisitBtnClicked,
+      ImgShortPath = "Y"
+    },
+    {
+      TexturePath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Quit.T_Entrance_Quit'",
+      Name = "UI_QuitGuild_2",
+      Obj = self,
+      GuildCallback = self.OnGuildQuitBtnClicked,
+      ImgShortPath = "B"
+    }
+  }
+  for _, Cont in pairs(Contents) do
+    local Content = NewObject(ClassPath)
+    Content.bForbidReddot = true
+    Content.bGuild = true
+    Content.TexturePath = Cont.TexturePath
+    Content.Name = Cont.Name
+    Content.GuildCallback = Cont.GuildCallback
+    Content.ImgShortPath = Cont.ImgShortPath
+    Content.Obj = Cont.Obj
+    self.ListView:AddItem(Content)
+  end
+end
+
+function WBP_Battle_C:InitGuildConstructHUD()
+  local Avatar = GWorld:GetAvatar()
+  GuildController:UnRegisterEvent(self)
+  if not (Avatar and Avatar.CurrentGuildId) or not UIUtils.AmIInGuildScene() then
+    self.Pos_GuildInfo:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.bInGuildScene = false
+    if GWorld.GameInstance and GWorld.GameInstance.GuildSceneGuildInfo then
+      GWorld.GameInstance.GuildSceneGuildInfo = nil
+    end
+    self.bPlayedGuildInfoIn = false
+    return
+  end
+  self:RefreshGuildLeftTopCorner()
+  self:InitGuildEntrance()
+  local bGuildInfoInitialized = false
+  
+  local function OnReceiveGuildInfo(Obj, EventID, Info)
+    if not bGuildInfoInitialized and Info then
+      self:InitGuildInfo(Info)
+      self:PlayGuildInfoIn()
+      self.bPlayedGuildInfoIn = false
+      local GuildName = Info.Name
+      local ChangeToGuildText = string.format(GText("UI_SwitchedToGuildChannel"), GuildName)
+      local FakeMessage = ChatController:CreateFakeMsg(ChangeToGuildText, CommonConst.MESSAGE_TYPE_SYSTEM, CommonConst.ChatChannel.RegionOnline)
+      ChatController:_AddMessage(FakeMessage, false)
+      bGuildInfoInitialized = true
+      if GWorld.GameInstance then
+        GWorld.GameInstance.GuildSceneGuildInfo = Info
+      end
+    end
+  end
+  
+  GuildController:RegisterEvent(self, OnReceiveGuildInfo, GuildCommon.EventID.OnGetGuildInfo)
+  GuildController:SendGetGuildInfo(Avatar.CurrentGuildId)
+  self.bInGuildScene = true
+  self:PlayGuildBGM()
+end
+
+function WBP_Battle_C:OnGuildConstructionBtnClicked()
+  local function SuccessCallback(...)
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked 进入建造模式")
+    
+    local ErrCode, RelatedData, BuildLock = ...
+    if not ErrCode then
+      DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no ErrCode")
+      return
+    end
+    if not RelatedData then
+      DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no data")
+      return
+    end
+    if not BuildLock then
+      DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no BuildLock")
+      return
+    end
+    local bCanEnterBuild = RelatedData.PermissionSummary.CanEnterBuild
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked ErrorCode:" .. ErrCode)
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked bCanEnterBuild:" .. tostring(bCanEnterBuild))
+    DebugPrint(string.format("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked IsLocked: %s, IsSelf: %s", tostring(BuildLock.IsLocked), tostring(BuildLock.IsSelf)))
+    if not ErrorCode:Check(ErrCode) then
+      return
+    end
+    if not bCanEnterBuild then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_NoEditPermission_2")
+      return
+    end
+    if BuildLock.IsLocked and not BuildLock.IsSelf then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_GuildConstructing"), BuildLock.HolderName))
+      return
+    end
+    local GameMode = UE.UGameplayStatics.GetGameMode(self)
+    GameMode:InitGuildConstruct()
+  end
+  
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.Uid then
+    DebugPrint("lxc: WBP_Battle_C:OnGuildConstructionBtnClicked no Avatar")
+    return
+  end
+  Avatar:GuildHomeEnterBuild(SuccessCallback)
+end
+
+function WBP_Battle_C:OnGuildVisitBtnClicked()
+  local GuildVisitPage = UIManager(self):LoadUINew("GuildVisitPage")
+  DebugPrint(string.format("lxc: WBP_Battle_C:OnGuildVisitBtnClicked: GuildVisitPage: %s", tostring(GuildVisitPage)))
+end
+
+function WBP_Battle_C:OnGuildQuitBtnClicked()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.CurrentGuildId then
+    DebugPrint(string.format("lxc: WBP_Battle_C:OnGuildQuitBtnClicked RequestLeaveGuildOnline failed, Avatar: %s, CurrentGuildId: %s", tostring(Avatar), tostring(Avatar and Avatar.CurrentGuildId)))
+    return
+  end
+  DebugPrint(string.format("lxc: WBP_Battle_C:OnGuildQuitBtnClicked RequestLeaveGuildOnline CurrentGuildId: %s", tostring(Avatar.CurrentGuildId)))
+  Avatar:RequestLeaveGuildOnline(Avatar.CurrentGuildId)
+  self:StopGuildBGM()
+end
+
+function WBP_Battle_C:PlayGuildBGM()
+  if AudioManager(self).PlayGuildBGM and not self.bPlayingGuildBGM then
+    AudioManager(self):PlayGuildBGM("event:/bgm/cbt02/0046_level_xunlianchang")
+    self.bPlayingGuildBGM = true
+  end
+end
+
+function WBP_Battle_C:StopGuildBGM()
+  if AudioManager(self).StopGuildBGM and self.bPlayingGuildBGM then
+    AudioManager(self):StopGuildBGM()
+    self.bPlayingGuildBGM = false
+  end
+end
+
+function WBP_Battle_C:PlayGuildInfoIn()
+  local GuildInfoWidget = self:GetGuildInfoWidget()
+  if not GuildInfoWidget or self.bPlayedGuildInfoIn then
+    return
+  end
+  GuildInfoWidget:PlayAnimation(GuildInfoWidget.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/association_map_flag_in", nil, nil)
+  self.bPlayedGuildInfoIn = true
+end
+
+function WBP_Battle_C:PetRaceHideOrShowBattleUI(IsHide, HideUITable)
+  if HideUITable then
+    for Name, _ in pairs(HideUITable) do
+      self:HideSubSystem(Name, "PetRace", IsHide)
+    end
+  end
 end
 
 AssembleComponents(WBP_Battle_C)

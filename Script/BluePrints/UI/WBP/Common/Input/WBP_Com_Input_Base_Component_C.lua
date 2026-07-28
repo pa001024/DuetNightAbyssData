@@ -53,7 +53,7 @@ function M:Init(Config, DialogParams)
   self:SetText(Config.Text or "")
   self:BindEvent(Config.Events or {})
   self.HintText = Config.HintText or GText("UI_Chat_InputHint")
-  self.bLimitBr = Config.bLimitBr
+  self.bAllowBr = Config.bAllowBr
   self.TextLimit = Config.TextLimit or 9999
   self.bLimitSpaces = Config.bLimitSpaces
   self.bNeedPasteBtn = Config.bNeedPasteBtn
@@ -285,10 +285,10 @@ function M:ClampText(Text, MaxLen)
 end
 
 function M:FilterSpaceAndBr(Text)
-  if not self.bLimitSpaces and not self.bLimitBr then
+  if not self.bLimitSpaces and self.bAllowBr then
     return Text
   end
-  if self.bLimitBr then
+  if not self.bAllowBr then
     Text = string.gsub(Text, "\n", "")
     Text = string.gsub(Text, "\r", "")
   end

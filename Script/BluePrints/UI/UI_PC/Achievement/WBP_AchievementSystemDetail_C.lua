@@ -154,9 +154,9 @@ function M:Construct()
     self.Achievement_Root.List_Achievement:NavigateToIndex(0)
   end
   self.CurGamepadName = UIUtils.UtilsGetCurrentGamepadName()
-  local ImgPath = UIUtils.UtilsGetKeyIconPathInGamepad("Y", self.CurGamepadName)
-  local Img = LoadObject(ImgPath)
-  self.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC.Img_GamePad:SetBrushResourceObject(Img)
+  self.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC:SetDefaultGamePadImg("Y")
+  self.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC.WS_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC:SetKey_PCVisibility(UIConst.VisibilityOp.Collapsed)
   self.Achievement_Root.List_Achievement.OnListViewScrolled:Add(self, self.OnListAchievementScrolled)
   self:AddTimer(0.1, function()
     self:OnListAchievementScrolled()
@@ -483,7 +483,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:GamepadToPC()
-  self.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC.Img_GamePad:SetVisibility(ESlateVisibility.Collapsed)
   local Items = self.Achievement_Root.List_Item:GetDisplayedEntryWidgets()
   for _, Item in pairs(Items) do
     Item:OnFocusLost()
@@ -493,7 +492,6 @@ end
 function M:PCToGamepad()
   self.Achievement_Root.List_Achievement:NavigateToIndex(0)
   self.OpenRewardDetail = false
-  self.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC.Img_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
 end
 
 function M:UpdateComTab(GetAllReward, CheckItem)

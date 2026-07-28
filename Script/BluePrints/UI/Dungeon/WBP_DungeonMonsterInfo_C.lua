@@ -168,6 +168,12 @@ function M:RefreshMonsterList()
   end
   self.DisplayMonsters = DisplayMonsters
   self:CheckDisplayMonsters(DisplayMonsters)
+  local ListItemNum = self.List_Tab and self.List_Tab:GetNumItems()
+  if ListItemNum <= 1 and self.List_Tab:IsVisible() then
+    self.Tab_Monster:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  else
+    self.Tab_Monster:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
 end
 
 function M:OnButtonBackClicked()
@@ -178,13 +184,13 @@ function M:OnButtonBackClicked()
 end
 
 function M:TryMoveMonsterInfo(OffsetIndex)
-  if not self.SelectMonster then
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
-  end
   local WillIndex = OffsetIndex + self.NowSelectingIndex
   local MaxIndex = #self.DisplayMonsters
   if WillIndex < 1 or WillIndex > MaxIndex then
     return
+  end
+  if not self.SelectMonster then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
   end
   self.NowSelectingIndex = WillIndex
   self:PlaySwitchAnim(OffsetIndex)

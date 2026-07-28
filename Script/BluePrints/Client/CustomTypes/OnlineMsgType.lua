@@ -106,6 +106,18 @@ SwitchShowWeapon.__Props__ = {
   ShowWeapon = prop.prop("Str", "")
 }
 FormatProperties(SwitchShowWeapon)
+local SwitchShowPet = Class("SwitchShowPet", CustomTypes.CustomAttr)
+SwitchShowPet.__Props__ = {
+  Type = prop.prop("Str", ""),
+  ShowPet = prop.prop("Bool", "")
+}
+FormatProperties(SwitchShowPet)
+local SwitchAutoAgreeInvite = Class("SwitchAutoAgreeInvite", CustomTypes.CustomAttr)
+SwitchAutoAgreeInvite.__Props__ = {
+  Type = prop.prop("Str", ""),
+  AutoAgreeInvite = prop.prop("Bool", "")
+}
+FormatProperties(SwitchAutoAgreeInvite)
 local UseTargetParam = Class("UseTargetParam", CustomTypes.CustomAttr)
 UseTargetParam.__Props__ = {
   SubState = prop.prop("Int", ""),
@@ -141,8 +153,10 @@ OnlineClientMessage.__Props__ = {
   StopAction = prop.prop("StopActionMessage", ""),
   Hide = prop.prop("HideActionMessage", ""),
   SwitchShowWeapon = prop.prop("SwitchShowWeapon", ""),
+  SwitchShowPet = prop.prop("SwitchShowPet", ""),
   SwitchOnlineState = prop.prop("SwitchOnlineState", ""),
-  UseGouSuo = prop.prop("UseGouSuoMessage", "")
+  UseGouSuo = prop.prop("UseGouSuoMessage", ""),
+  SwitchAutoAgreeInvite = prop.prop("SwitchAutoAgreeInvite", "")
 }
 FormatProperties(OnlineClientMessage)
 local OnlineClientMessageList = Class("OnlineClientMessageList", CustomTypes.CustomList)
@@ -162,6 +176,8 @@ return {
   OnlineClientMessage = OnlineClientMessage,
   OnlineClientMessageList = OnlineClientMessageList,
   SwitchOnlineState = SwitchOnlineState,
+  SwitchShowPet = SwitchShowPet,
   ActionBaseInfo = ActionBaseInfo,
-  UseTargetParam = UseTargetParam
+  UseTargetParam = UseTargetParam,
+  SwitchAutoAgreeInvite = SwitchAutoAgreeInvite
 }

@@ -11,9 +11,11 @@ function Storyline:Init(StorylineData, FileName, EndCallback, StopCallback, Payl
   self.StopCallback = StopCallback
   self.Payload = Payload
   self:TimerInit()
-  self.WaitingRestartNodeList = {}
   self.RunningNodeList = {}
+  self.FinishedNodeList = {}
   self.bLockRunningNodeList = false
+  self.OnStartNodeCallbacks = {}
+  self.OnFinishNodeCallbacks = {}
   self:BuildStoryline()
 end
 
@@ -61,6 +63,10 @@ FileName:]] .. self.FileName
   end
 end
 
+function Storyline:GetStoryNode(QuestId)
+  return self.QuestIdNodeList[QuestId]
+end
+
 function Storyline:StartStory(QuestId, NodeId)
   DebugPrint("Storyline StartStory QuestId:", QuestId, ",NodeId:", NodeId)
   if self.HasStarted then
@@ -84,7 +90,7 @@ QuestId:]] .. QuestId
     end
     if self.QuestChainId and 0 ~= self.QuestChainId then
       local Avatar = GWorld:GetAvatar()
-      if Avatar:IsQuestFinished(QuestId) then
+      if Avatar and Avatar:IsQuestFinished(QuestId) then
         self.StartedNode:Finish("Success")
         return
       end
@@ -121,8 +127,8 @@ NodeInfo: %s]], self.FileName, Node:ToString())
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, "节点已开始，开始节点失败", Message)
     return
   end
-  if Node.QuestId then
-    GWorld.StoryMgr:TryRemoveStoryBlackScreenOnSucc(self.QuestChainId, Node.QuestId)
+  for _, Callback in ipairs(self.OnStartNodeCallbacks) do
+    Callback.Func(Callback.Obj, self.QuestChainId, Node.QuestId)
   end
   Node.HasStarted = true
   Node.HasFinished = false
@@ -155,16 +161,25 @@ NodeInfo: %s]], self.FileName, Node:ToString())
   end
   Node.HasFinished = true
   Node.HasStarted = false
+  table.insert(self.FinishedNodeList, Node)
   self.RunningNodeList[Node.Key] = nil
   DebugPrint("----------------------------------------------------------FinishNode", Result, Node:ToString())
+  for _, Callback in ipairs(self.OnFinishNodeCallbacks) do
+    Callback.Func(Callback.Obj, self.QuestChainId, Node, OutPortNames, Result)
+  end
   if Node == self._EndNode then
-    self:FinishStory()
+    if false == self._EndNode:GetEndResult() then
+      self:Stop()
+    else
+      self:FinishStory()
+    end
     return
   end
   if not self.QuestChainId or 0 == self.QuestChainId then
     local HaveFailOutPort = self:CheckHaveOutPort(OutPortNames, "Fail")
     local HaveNextNode = self:CheckHaveNextNode(Node, OutPortNames)
     if false == Result and false == HaveNextNode and HaveFailOutPort then
+      self._EndNode:SetEndResult(false)
       self:StartNode(self._EndNode)
     else
       for _, OutPortName in pairs(OutPortNames) do
@@ -177,36 +192,10 @@ NodeInfo: %s]], self.FileName, Node:ToString())
         end
       end
     end
-  elseif not Result then
-    self:AddToWaitingRestartNodeList(Node)
-    GWorld.StoryMgr:AddToWaitingRestartList(self)
-    if Node.bIsPlayBlackScreenOnFail then
-      GWorld.StoryMgr:AddStoryBlackScreenOnFail()
-    end
-  elseif Node.bIsPlayBlackScreenOnComplete then
-    local WaitingQuest = {}
-    local QuestChainInfo = DataMgr.STLExportQuestChain[self.QuestChainId]
-    if Node.QuestId == QuestChainInfo.EndQuestId then
-      local QuestChainCInfo = DataMgr.ConditionId2QuestChainId[self.QuestChainId]
-      if QuestChainCInfo then
-        for QuestChainId, value in pairs(QuestChainCInfo) do
-          local Avatar = GWorld:GetAvatar()
-          local QuestChain = Avatar.QuestChains:GetQuestChain(QuestChainId)
-          if QuestChain.IfAutoStart then
-            table.insert(WaitingQuest, QuestChainId)
-          end
-        end
-      end
-    else
-      local nextQuestInfo = QuestChainInfo.Quests[Node.QuestId]
-      local nextQuestId = nextQuestInfo.nextQuestId
-      table.insert(WaitingQuest, nextQuestId)
-    end
-    GWorld.StoryMgr:AddStoryBlackScreenOnSucc(WaitingQuest)
   end
 end
 
-function Storyline:FinishStory()
+function Storyline:FinishStory(IgnoreFinishClear)
   if self.HasFinished then
     local Message = "任务链已结束" .. [[
 
@@ -216,14 +205,14 @@ QuestChainId:]] .. self.QuestChainId
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, "任务链已结束", Message)
     return
   end
-  self:ClearStory()
+  self:ClearStory(IgnoreFinishClear)
   self.HasFinished = true
   self.HasStarted = false
+  self:OnFinish()
   DebugPrint("Storyline Finish", self.QuestChainId)
   if self.EndCallback then
     self:EndCallback()
   end
-  GWorld.StoryMgr:FinishStory(self.FilePath)
 end
 
 function Storyline:ClearStory(IgnoreFinishClear)
@@ -236,16 +225,20 @@ function Storyline:ClearStory(IgnoreFinishClear)
     if Node.StopQuest then
       Node:StopQuest(IgnoreFinishClear)
     end
+    Node.HasFinished = true
+    Node.HasStarted = false
+    table.insert(self.FinishedNodeList, Node)
   end
   self.bLockRunningNodeList = false
   self.RunningNodeList = {}
-  self.WaitingRestartNodeList = {}
+  self:ClearNodeCallbacks()
 end
 
 function Storyline:Stop(IgnoreFinishClear)
   self:ClearStory(IgnoreFinishClear)
   self.HasFinished = true
   self.HasStarted = false
+  self:OnStop()
   if self.StopCallback then
     self:StopCallback()
   end
@@ -286,7 +279,7 @@ function Storyline:GetTimerSource(IsRealTime)
 end
 
 function Storyline:StopStory()
-  GWorld.StoryMgr:StopStoryline(self.FilePath)
+  self:Stop()
 end
 
 function Storyline:CheckHaveNextNode(Node, OutPortNames)
@@ -308,21 +301,65 @@ function Storyline:CheckHaveOutPort(OutPortNames, TargetOutPortName)
   return false
 end
 
-function Storyline:AddToWaitingRestartNodeList(Node)
-  self.WaitingRestartNodeList[Node.Key] = Node
+function Storyline:ClearNodeCallbacks()
+  self.OnStartNodeCallbacks = {}
+  self.OnFinishNodeCallbacks = {}
 end
 
-function Storyline:RestartNodes()
-  local WaitingRestartNodes = {}
-  for _, Node in pairs(self.WaitingRestartNodeList) do
-    table.insert(WaitingRestartNodes, Node)
+function Storyline:AddFinishNodeCallback(Obj, Func)
+  table.insert(self.OnFinishNodeCallbacks, {Obj = Obj, Func = Func})
+end
+
+function Storyline:RemoveFinishNodeCallback(Obj)
+  for i = #self.OnFinishNodeCallbacks, 1, -1 do
+    if self.OnFinishNodeCallbacks[i].Obj == Obj then
+      table.remove(self.OnFinishNodeCallbacks, i)
+    end
   end
-  for _, Node in pairs(WaitingRestartNodes) do
-    DebugPrint("Storyline RestartNode")
-    Node.HasFinished = false
-    self:StartNode(Node, nil)
+end
+
+function Storyline:AddStartNodeCallback(Obj, Func)
+  table.insert(self.OnStartNodeCallbacks, {Obj = Obj, Func = Func})
+end
+
+function Storyline:RemoveStartNodeCallback(Obj)
+  for i = #self.OnStartNodeCallbacks, 1, -1 do
+    if self.OnStartNodeCallbacks[i].Obj == Obj then
+      table.remove(self.OnStartNodeCallbacks, i)
+    end
   end
-  self.WaitingRestartNodeList = {}
+end
+
+function Storyline:IsGuideNodeRunning()
+  if self.HasFinished then
+    return false
+  end
+  for _, StoryNode in pairs(self.RunningNodeList or {}) do
+    if StoryNode.IsGuideNodeRunning and StoryNode:IsGuideNodeRunning() then
+      return true
+    end
+  end
+  return false
+end
+
+function Storyline:OnStop()
+  for i = #self.FinishedNodeList, 1, -1 do
+    local Node = self.FinishedNodeList[i]
+    if Node.HasFinished then
+      Node:OnStop()
+    end
+  end
+  self.FinishedNodeList = {}
+end
+
+function Storyline:OnFinish()
+  for i = #self.FinishedNodeList, 1, -1 do
+    local Node = self.FinishedNodeList[i]
+    if Node.HasFinished then
+      Node:OnFinish()
+    end
+  end
+  self.FinishedNodeList = {}
 end
 
 return Storyline

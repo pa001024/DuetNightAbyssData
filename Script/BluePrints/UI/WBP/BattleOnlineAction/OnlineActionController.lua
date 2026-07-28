@@ -30,6 +30,8 @@ function M:InitEvent()
   EventManager:AddEvent(EventID.OnReceivedOnlineActionApplicationAgree, self, self.OnReceivedOnlineActionApplicationAgree)
   EventManager:RemoveEvent(EventID.OnReceivedOnlineActionInvitationAgree, self)
   EventManager:AddEvent(EventID.OnReceivedOnlineActionInvitationAgree, self, self.OnReceivedOnlineActionInvitationAgree)
+  EventManager:RemoveEvent(EventID.OnRegionOnlineAutoAgreeInviteChanged, self)
+  EventManager:AddEvent(EventID.OnRegionOnlineAutoAgreeInviteChanged, self, self.OnRegionOnlineAutoAgreeInviteChanged)
 end
 
 function M:RemoveEvent()
@@ -40,16 +42,23 @@ function M:RemoveEvent()
   EventManager:RemoveEvent(EventID.RequestDeadRegionOnlineItem, self)
   EventManager:RemoveEvent(EventID.OnReceivedOnlineActionApplicationAgree, self)
   EventManager:RemoveEvent(EventID.OnReceivedOnlineActionInvitationAgree, self)
+  EventManager:RemoveEvent(EventID.OnRegionOnlineAutoAgreeInviteChanged, self)
 end
 
 function M:OnCreatOnlineAction(UniqueId)
+  DebugPrint("OnlineActionController:OnCreatOnlineAction Enter", UniqueId)
   if not OnlineActionModel:IsInRegionOnline() then
+    DebugPrint("OnlineActionController:OnCreatOnlineAction NotInRegionOnline", UniqueId)
     return
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if not Player then
+    DebugPrint("OnlineActionController:OnCreatOnlineAction NoPlayer", UniqueId)
+    return false
+  end
   local CurResourceId = Player.CurResourceId
   if 0 == CurResourceId then
-    DebugPrint("角色已停止联机动作")
+    DebugPrint("OnlineActionController:OnCreatOnlineAction CurResourceId==0", UniqueId)
     return false
   end
   if OnlineActionCommon.UseSyncNearbyPlayers then
@@ -60,6 +69,12 @@ function M:OnCreatOnlineAction(UniqueId)
   end
   self.OpenReason = 1
   self:ChangeAction(UniqueId)
+  local LocalPlayer = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  local Avatar = GWorld:GetAvatar()
+  if LocalPlayer and LocalPlayer.RefreshAutoOnlineActionTagByRegionState and Avatar and Avatar.Eid then
+    LocalPlayer:RefreshAutoOnlineActionTagByRegionState(Avatar.Eid)
+  end
+  EventManager:FireEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, OnlineActionModel:GetAutoAcceptOnlineAction())
   self:ShowBtn(1)
   DebugPrint("yklua :角色创建联机机关 UniqueId " .. UniqueId)
 end
@@ -81,6 +96,12 @@ function M:OnEndOnlineAction()
     end
   end
   OnlineActionModel:ClearAllApply()
+  self:ChangeAction(nil)
+  local LocalPlayer = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  local Avatar = GWorld:GetAvatar()
+  if LocalPlayer and LocalPlayer.RefreshAutoOnlineActionTagByRegionState and Avatar and Avatar.Eid then
+    LocalPlayer:RefreshAutoOnlineActionTagByRegionState(Avatar.Eid)
+  end
   if 1 == self.OpenReason then
     if OnlineActionModel:HaveOtherInvitation() then
       self.OpenReason = 2
@@ -89,10 +110,27 @@ function M:OnEndOnlineAction()
       self:HideBtn()
     end
   end
+  EventManager:FireEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, OnlineActionModel:GetAutoAcceptOnlineAction())
+end
+
+function M:NotifyRegionOnlineInteractionChanged(UniqueId, InteractiveId, UserEid, bInteractive)
+  local Avatar = not OnlineActionModel._Avatar and GWorld and GWorld.GetAvatar and GWorld:GetAvatar()
+  if Avatar and Avatar.UpdateMechanismUser and UniqueId and nil ~= InteractiveId and UserEid then
+    Avatar:UpdateMechanismUser(UniqueId, InteractiveId, UserEid, true == bInteractive)
+  end
+  if Avatar and Avatar.FireRegionOnlineInteractionChangedEvent then
+    Avatar:FireRegionOnlineInteractionChangedEvent(UniqueId, InteractiveId, UserEid, true == bInteractive)
+  elseif EventManager and EventID and EventID.OnRegionOnlineInteractionChanged then
+    EventManager:FireEvent(EventID.OnRegionOnlineInteractionChanged, UniqueId, InteractiveId, UserEid, true == bInteractive, false)
+  end
 end
 
 function M:IsShowingBtn()
   return self.OpenReason ~= nil
+end
+
+function M:IsHostDoingOnlineAction()
+  return 1 == self.OpenReason and OnlineActionModel:GetActionUniqueId() ~= nil
 end
 
 function M:ShowBtn(Reason)
@@ -228,13 +266,13 @@ function M:SendAcceptApplication(ApplyInfo)
       end
     end
   end
-  local CanSit = self:CheckCanSit(ApplyInfo.UniqueId, ApplyInfo.Eid, true)
+  local CanSit = self:CheckCanSit(ApplyInfo.UniqueId, ApplyInfo.Eid, ApplyInfo.InteractiveId, true)
   OnlineActionModel:RemoveApplyInfo(ApplyInfo)
   if true ~= CanSit then
     return
   end
   if OnlineActionModel._Avatar and ApplyInfo.UniqueId then
-    OnlineActionModel._Avatar:OnRequestUseOwnerRegionOnlineItem(ApplyInfo.Eid, true, OnlineActionModel:GetActionUniqueId(), ApplyInfo.InteractiveId)
+    OnlineActionModel._Avatar:OnRequestUseOwnerRegionOnlineItem(ApplyInfo.Eid, true, ApplyInfo.UniqueId, ApplyInfo.InteractiveId)
   else
     DebugPrint("缺少了UniqueId，应该是加假数据OnlineAction:OnReceivedRejectApply")
   end
@@ -249,6 +287,7 @@ function M:SendAcceptApplication(ApplyInfo)
   print(_G.LogTag, "LXZ SendAcceptApplication", Mechanism, Mechanism:IsCanOnlineInteractive())
   if Mechanism and Mechanism:IsCanOnlineInteractive(Player) then
     Player:InteractiveMechanism(Mechanism.Eid, Player.Eid, InteractiveComp.NextStateId, InteractiveComp.CommonUIConfirmID, true, ApplyInfo.InteractiveId or 0)
+    self:NotifyRegionOnlineInteractionChanged(ApplyInfo.UniqueId, ApplyInfo.InteractiveId, ApplyInfo.Eid, true)
   end
 end
 
@@ -431,6 +470,18 @@ end
 
 function M:OnReceivedOnlineActionInvitationAgree(RequestEid, UniqueId, InteractiveId)
   AudioManager(self):PlayUISound(self.OnlineActionBtn, "event:/ui/common/online_invite_interact_accept", "OnlineActionAgreed", nil)
+end
+
+function M:OnRegionOnlineAutoAgreeInviteChanged(IsEnable)
+  EventManager:FireEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, true == IsEnable)
+  if self.MainPage and self.MainPage.RefreshAutoAcceptUI then
+    self.MainPage:RefreshAutoAcceptUI()
+  end
+  local Avatar = GWorld:GetAvatar()
+  local LocalPlayer = Avatar and UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0) or nil
+  if LocalPlayer and LocalPlayer.RefreshAutoOnlineActionTagByRegionState and Avatar and Avatar.Eid then
+    LocalPlayer:RefreshAutoOnlineActionTagByRegionState(Avatar.Eid)
+  end
 end
 
 function M:ShowToastByErrorCode(IsInvite, ErrorCode)

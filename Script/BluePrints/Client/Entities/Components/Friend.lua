@@ -57,7 +57,7 @@ function Component:FriendSendAddRequest(Uid, Remark)
   
   local function Cb(ErrCode)
     DebugPrint("FriendSendAddRequest", ErrorCode:Name(ErrCode))
-    FriendController:RecvResponse(FriendCommon.EventId.AddFriendRequest, ErrCode, Uid)
+    FriendController:RecvResponse(FriendCommon.EventId.AddFriend, ErrCode, Uid)
   end
   
   self:CallServer("FriendSendAddRequest", Cb, Uid, tostring(Remark) or "")

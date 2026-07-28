@@ -534,13 +534,17 @@ end
 
 function M:SetLineUIProcess(UI, Proess)
   local Meterial = UI.RetainerBox:GetEffectMaterial()
-  Meterial:SetScalarParameterValue("Process", Proess)
+  if Meterial then
+    Meterial:SetScalarParameterValue("Process", Proess)
+  end
   self:SetLineBGBlurProcess(UI, Proess)
 end
 
 function M:SetLineBGBlurProcess(UI, Proess)
   local BlurMI = self:GetBGBlurMI(UI)
-  BlurMI:SetScalarParameterValue("Process", Proess)
+  if BlurMI then
+    BlurMI:SetScalarParameterValue("Process", Proess)
+  end
 end
 
 function M:RealTyping(DeltaTime)

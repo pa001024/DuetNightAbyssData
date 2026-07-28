@@ -1,5 +1,8 @@
 local T = {}
-T.RT_1 = {Count = "#1"}
+T.RT_1 = {Buff = 2012112}
+T.RT_2 = {Buff = 2013122}
+T.RT_3 = {Buff = 2013222}
+T.RT_4 = {Count = "#1"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -75,7 +78,7 @@ return ReadOnly("GlobalPassiveData", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
     Camp = "Player",
     ID = 12112,
-    Vars = {Buff = 2012112}
+    Vars = T.RT_1
   },
   [12121] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SkillAddBuff.BP_AbyssGP_SkillAddBuff",
@@ -121,7 +124,7 @@ return ReadOnly("GlobalPassiveData", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
     Camp = "Player",
     ID = 13122,
-    Vars = {Buff = 2013122}
+    Vars = T.RT_2
   },
   [13211] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SpAddBuff.BP_AbyssGP_SpAddBuff",
@@ -153,7 +156,7 @@ return ReadOnly("GlobalPassiveData", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
     Camp = "Player",
     ID = 13222,
-    Vars = {Buff = 2013222}
+    Vars = T.RT_3
   },
   [14111] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
@@ -199,6 +202,112 @@ return ReadOnly("GlobalPassiveData", {
     Camp = "Player",
     ID = 14221,
     Vars = {Buff = 2014221, LastTime = 18}
+  },
+  [15111] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_PersonalAddBuff.BP_AbyssGP_PersonalAddBuff",
+    Camp = "Player",
+    ID = 15111,
+    Vars = {Buff = 2015111, LastTime = 10}
+  },
+  [15121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 15121,
+    Vars = {
+      Buff = 2015121,
+      HitCount = 5,
+      LastTime = 10
+    }
+  },
+  [15211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 15211,
+    Vars = {
+      Buff = 2015211,
+      HitCount = 10,
+      LastTime = 10
+    }
+  },
+  [15221] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SummonBuff.BP_AbyssGP_SummonBuff",
+    Camp = "Player",
+    ID = 15221,
+    Vars = {Buff = 2015221, LastTime = 10}
+  },
+  [20002] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20002,
+    Vars = {Condition = "Crit", ExtraLayer = 1}
+  },
+  [20003] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20003,
+    Vars = {
+      Condition = "Tag",
+      DamageTag = "Ranged",
+      ExtraLayer = 1
+    }
+  },
+  [20004] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20004,
+    Vars = {
+      Condition = "Tag",
+      DamageTag = "Weapon",
+      ExtraLayer = 1
+    }
+  },
+  [20005] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20005,
+    Vars = {
+      Condition = "Tag",
+      DamageTag = "Melee",
+      ExtraLayer = 3
+    }
+  },
+  [20006] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20006,
+    Vars = {
+      Condition = "Tag",
+      DamageTag = "Dot",
+      ExtraLayer = 4
+    }
+  },
+  [20007] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitRemoveBuffNew.BP_AbyssGP_HitRemoveBuffNew",
+    Camp = "Monster",
+    ID = 20007,
+    Vars = {
+      Condition = "Tag",
+      DamageTag = "Skill",
+      ExtraLayer = 4
+    }
+  },
+  [20011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 20011,
+    Vars = T.RT_2
+  },
+  [20012] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 20012,
+    Vars = T.RT_3
+  },
+  [20021] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 20021,
+    Vars = T.RT_1
   },
   [20030] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
@@ -373,6 +482,123 @@ return ReadOnly("GlobalPassiveData", {
     ID = 22004,
     Vars = {DamagePerLayer = 0.15, MaxLayer = 12}
   },
+  [23001] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Player",
+    ID = 23001,
+    Vars = {Buff = 4030001, LastTime = -1}
+  },
+  [23002] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Player",
+    ID = 23002,
+    Vars = {Buff = 4030002, LastTime = -1}
+  },
+  [23003] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Player",
+    ID = 23003,
+    Vars = {Buff = 4030003, LastTime = -1}
+  },
+  [23004] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Monster",
+    ID = 23004,
+    Vars = {Buff = 4030004, LastTime = -1}
+  },
+  [23005] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Player",
+    ID = 23005,
+    Vars = {Buff = 4030005, LastTime = -1}
+  },
+  [23006] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Monster",
+    ID = 23006,
+    Vars = {Buff = 4030006, LastTime = -1}
+  },
+  [23007] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_AddBuff.BP_EventGP_AddBuff",
+    Camp = "Monster",
+    ID = 23007,
+    Vars = {Buff = 4030007, LastTime = -1}
+  },
+  [23101] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_01.BP_EventGP_WV_01",
+    Camp = "Player",
+    ID = 23101
+  },
+  [23102] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_02.BP_EventGP_WV_02",
+    Camp = "Player",
+    ID = 23102
+  },
+  [23103] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_03.BP_EventGP_WV_03",
+    Camp = "Player",
+    ID = 23103
+  },
+  [23104] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_04.BP_EventGP_WV_04",
+    Camp = "Player",
+    ID = 23104
+  },
+  [23105] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_05.BP_EventGP_WV_05",
+    Camp = "Player",
+    ID = 23105
+  },
+  [23106] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_06.BP_EventGP_WV_06",
+    Camp = "Player",
+    ID = 23106
+  },
+  [23107] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_07.BP_EventGP_WV_07",
+    Camp = "Player",
+    ID = 23107
+  },
+  [23108] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_08.BP_EventGP_WV_08",
+    Camp = "Player",
+    ID = 23108
+  },
+  [23109] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_09.BP_EventGP_WV_09",
+    Camp = "Player",
+    ID = 23109
+  },
+  [23110] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_10.BP_EventGP_WV_10",
+    Camp = "Player",
+    ID = 23110
+  },
+  [23111] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_11.BP_EventGP_WV_11",
+    Camp = "Player",
+    ID = 23111
+  },
+  [23112] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_12.BP_EventGP_WV_12",
+    Camp = "Player",
+    ID = 23112
+  },
+  [23113] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_13.BP_EventGP_WV_13",
+    Camp = "Player",
+    ID = 23113
+  },
+  [23114] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_14.BP_EventGP_WV_14",
+    Camp = "Player",
+    ID = 23114
+  },
+  [23115] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_EventGP_WV_15.BP_EventGP_WV_15",
+    Camp = "Player",
+    ID = 23115
+  },
   [30100] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_Common.BP_RaidGP_Common",
     Camp = "Monster",
@@ -385,6 +611,7 @@ return ReadOnly("GlobalPassiveData", {
     ID = 30101,
     Vars = {
       Divider = 0.3,
+      Element = "Wind",
       MaxSkillInten = 4,
       Penetration = 0.05
     }
@@ -420,6 +647,17 @@ return ReadOnly("GlobalPassiveData", {
       Divider = 0.12,
       MaxStrong = 0.6,
       Penetration = 0.1
+    }
+  },
+  [30105] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_010.BP_RaidGP_010",
+    Camp = "Player",
+    ID = 30105,
+    Vars = {
+      Divider = 0.4,
+      Element = "Water",
+      MaxSkillInten = 5,
+      Penetration = 0.05
     }
   },
   [30101001] = {
@@ -458,18 +696,18 @@ return ReadOnly("GlobalPassiveData", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Contract/BP_Rou_Contract_30103001.BP_Rou_Contract_30103001",
     Camp = "Player",
     ID = 30103001,
-    Vars = T.RT_1
+    Vars = T.RT_4
   },
   [30103002] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Contract/BP_Rou_Contract_30103002.BP_Rou_Contract_30103002",
     Camp = "Player",
     ID = 30103002,
-    Vars = T.RT_1
+    Vars = T.RT_4
   },
   [30103003] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Contract/BP_Rou_Contract_30103003.BP_Rou_Contract_30103003",
     Camp = "Player",
     ID = 30103003,
-    Vars = T.RT_1
+    Vars = T.RT_4
   }
 })

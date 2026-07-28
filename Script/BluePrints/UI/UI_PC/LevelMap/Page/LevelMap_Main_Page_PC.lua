@@ -320,6 +320,7 @@ function M:InitCommonWidget()
     else
       self.Btn_ReturnHome.GuidePoint:SetVisibility(ESlateVisibility.Collapsed)
     end
+    self.Btn_ReturnHome.Tip_AcceptMission:SetVisibility(ESlateVisibility.Collapsed)
   end
   self.Entrance_Dispatch.Btn_Click.OnClicked:Add(self, self.OnClickDispatch)
   self.Entrance_Dispatch.Text_Name:SetText(GText("UI_Disptach_Title"))
@@ -453,21 +454,21 @@ function M:OnTabItemClick(TabWidget)
 end
 
 function M:UpdateWildMapKeys()
-  self:UpdateDispatchKeyVisibility()
   if not self.DeviceInPc or not self.RealWildMap then
     return
   end
-  if self.RealWildMap.IsOpenDispatch == true then
+  if self.RealWildMap:GetIsOpenDispatch() then
     return
   end
-  if self.WildMapKeysShow or self.RealWildMap.IsEmpty then
+  if self.WildMapKeysShow or self.RealWildMap:IsMapEmpty() then
     if self.ReturnHomeConditionRes then
       self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Visible)
     end
+    self:UpdateDispatchKeyVisibility()
   else
     self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Collapsed)
   end
-  local MapTipsWidgetVisible = self.RealWildMap.MapTipsWidget and self.RealWildMap.MapTipsWidget:IsVisible()
+  local MapTipsWidgetVisible = self.RealWildMap:IsMapTipsWidgetVisible()
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     if not MapTipsWidgetVisible then
       self.Key_Tip:UpdateKeyInfo(not (not self:IsInteractiveOpen() and self.WildMapKeysShow) and self.BackGamePadKey or self.WildMapGamePadKeys)
@@ -486,7 +487,7 @@ function M:UpdateWildMapKeys()
       }
     })
   end
-  if self.IsPanelOpen or self.RealWildMap.IsEmpty then
+  if self.IsPanelOpen or self.RealWildMap:IsMapEmpty() then
     self.Slider_Zoom:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -559,7 +560,7 @@ function M:OnUIReturnKeyDown()
     self.DispatchList = nil
     return
   end
-  if self.RealWildMap and not self.RealWildMap.IsEmpty and self.RealWildMap:ClosePanel() then
+  if self.RealWildMap and not self.RealWildMap:IsMapEmpty() and self.RealWildMap:ClosePanel() then
     return
   end
   if self:IsInteractiveOpen() then
@@ -691,12 +692,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       self.RealWildMap:SetFocus()
       return UWidgetBlueprintLibrary.Handled()
     end
-    if self.RealWildMap and self.RealWildMap.MapTipsWidget and self.RealWildMap.MapTipsWidget:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
+    if self.RealWildMap and self.RealWildMap:IsMapTipsWidgetVisible() then
       self.RealWildMap:ClosePanel()
       self.RealWildMap:SetFocus()
       return UWidgetBlueprintLibrary.Handled()
     end
-    if self.RealWildMap and self.RealWildMap.ChanllengeTips and self.RealWildMap.ChanllengeTips:IsVisible() then
+    if self.RealWildMap and self.RealWildMap:IsChallengeTipsVisible() then
       self.RealWildMap:ClosePanel()
       return UWidgetBlueprintLibrary.Handled()
     end
@@ -845,7 +846,7 @@ function M:OpenSelectList(SelectTable)
     local ItemSize = FVector2D(612, 60)
     local AbsolutePosition = UUIFunctionLibrary.GetGeometryAbsolutePosition(SelectTable[1]:GetCachedGeometry())
     local LocalPosition = USlateBlueprintLibrary.AbsoluteToLocal(self.Panel_Interactive:GetCachedGeometry(), AbsolutePosition)
-    local MaxSize = self.RealWildMap.ScreenSize * 2 - self.RealWildMap.BgHeight
+    local MaxSize = self.RealWildMap:GetMaxSize()
     local Alignment = self.Overlay_Interactive.Slot:GetAlignment()
     if LocalPosition.Y + #SelectTable * ItemSize.Y >= MaxSize.Y then
       Alignment:Set(0, 1)
@@ -909,7 +910,7 @@ end
 
 function M:OnClickDispatch()
   DebugPrint("OnClickDispatch")
-  self.RealWildMap.IsOpenDispatch = true
+  self.RealWildMap:SetIsOpenDispatch(true)
   self.RealWildMap:ClosePanel(true)
   self.RealWildMap:CloseForDispatch(true)
   self.RealWildMap:OnPanelOpen(5)
@@ -926,7 +927,7 @@ end
 
 function M:OnCloseDispatch()
   DebugPrint("OnCloseDispatch")
-  self.RealWildMap.IsOpenDispatch = false
+  self.RealWildMap:SetIsOpenDispatch(false)
   self.RealWildMap:ClosePanel(false)
   self.RealWildMap:CloseForDispatch(false)
   self.Panel_UI:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -945,7 +946,7 @@ function M:OpenAgentList()
   if self.DispatchList ~= nil then
     self.DispatchList:SetVisibility(ESlateVisibility.Collapsed)
   end
-  self.RealWildMap.IsOpenDispatch = true
+  self.RealWildMap:SetIsOpenDispatch(true)
   self.RealWildMap:CloseForDispatch(true)
   if nil == self.DispatchAgentList then
     self.DispatchAgentList = self:CreateWidgetNew("DispatchAgentList")
@@ -1040,7 +1041,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
           self.ScrollBox_Interactive:GetChildAt(0):SetFocus()
         end
       elseif self.RealWildMap then
-        if self.RealWildMap.IsOpenDispatch == true then
+        if self.RealWildMap:GetIsOpenDispatch() then
           if self.DispatchAgentList ~= nil then
             self.DispatchAgentList.List_Agent:SetFocus()
           end
@@ -1049,7 +1050,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
           end
         elseif self.DispatchDetail then
           self.DispatchDetail:SetFocus()
-        elseif not self.RealWildMap.LastPanelId then
+        elseif not self.RealWildMap:HasLastPanelId() then
           self.RealWildMap:SetFocus()
         end
       end
@@ -1099,6 +1100,223 @@ end
 function M:SetRegionMapBlock(Block)
   if self.RealWildMap then
     self.RealWildMap:SetRegionMapBlock(Block)
+  end
+end
+
+function M:SetWildMapKeysShow(Value)
+  self.WildMapKeysShow = Value
+end
+
+function M:SetIsPanelOpen(Value)
+  self.IsPanelOpen = Value
+end
+
+function M:GetIsPanelOpen()
+  return self.IsPanelOpen
+end
+
+function M:SetDispatchIdValue(ID)
+  self.DispatchId = ID
+end
+
+function M:SetTabVisible(Visible)
+  local Vis = Visible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed
+  self.Tab:SetVisibility(Vis)
+end
+
+function M:TryCloseDispatchAgentList()
+  if self.DispatchAgentList ~= nil then
+    self.DispatchAgentList:OnClickClose()
+    self.DispatchAgentList = nil
+    return true
+  end
+  return false
+end
+
+function M:TryCloseDispatchList()
+  if self.DispatchList ~= nil and nil ~= self.DispatchDetail or self.DispatchList ~= nil then
+    if self.DispatchList then
+      self.DispatchList:Close()
+    end
+    self.Dispatch = nil
+    self.DispatchList = nil
+    return true
+  end
+  return false
+end
+
+function M:TryClickDispatchListSpace()
+  if self.DispatchList and self.DispatchAgentList == nil then
+    self.DispatchList:OnClickSpace()
+  end
+end
+
+function M:HasDispatchAgentList()
+  return self.DispatchAgentList ~= nil
+end
+
+function M:HasDispatchDetail()
+  return self.DispatchDetail ~= nil
+end
+
+function M:CloseDispatchDetailIfAny()
+  if self.DispatchDetail then
+    self.DispatchDetail:RealClose()
+  end
+end
+
+function M:IsEntranceDispatchVisible()
+  return self.Entrance_Dispatch and self.Entrance_Dispatch:GetVisibility() == ESlateVisibility.SelfHitTestInvisible
+end
+
+function M:SetEntranceDispatchVisible(Visible)
+  local Vis = Visible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed
+  self.Entrance_Dispatch:SetVisibility(Vis)
+end
+
+function M:SetReturnHomeVisible(Visible)
+  if Visible then
+    self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Visible)
+  else
+    self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:SetSliderZoomVisible(Visible)
+  local Vis = Visible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed
+  self.Slider_Zoom:SetVisibility(Vis)
+end
+
+function M:SetLocationBtnVisible(Visible)
+  if self.Btn_Location then
+    self.Btn_Location:SetVisibility(Visible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  end
+end
+
+function M:BindLocationBtn(RegionMap)
+  if self.Btn_Location then
+    self.Btn_Location:SetText(GText("UI_RegionMap_GotoPosition"))
+    self.Btn_Location:BindEventOnClicked(RegionMap, RegionMap.OpenOptionSelect)
+    self.Btn_Location:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function M:AddChildToAreaInfo(Widget)
+  self.AreaInfo:AddChild(Widget)
+end
+
+function M:AddChildToConvey(Widget)
+  self.Convey:AddChild(Widget)
+end
+
+function M:AddChildToConveyHardBoss(Widget)
+  self.Convey_HardBoss:AddChild(Widget)
+end
+
+function M:AddChildToConveyAreaCoop(Widget)
+  self.Convey_AreaCoop:AddChild(Widget)
+end
+
+function M:AddChildToChangeArea(Widget)
+  self.ChangeArea:AddChild(Widget)
+end
+
+function M:GetFloorWidget()
+  return self.FloorWidget
+end
+
+function M:GetImpressionSpacer()
+  return self.Spacer_Impression
+end
+
+function M:GetTabTopHeight()
+  return self.Tab_Top.Slot:GetSize().Y
+end
+
+function M:GetPanelCloseButton()
+  return self.Btn_Panel_Close
+end
+
+function M:GetInteractiveLocatePanel()
+  return self.Interactive_Locate
+end
+
+function M:UpdateKeyTipEnsure()
+  self.Key_Tip:UpdateKeyInfo(self.WildMapGamePadEnsureKeys)
+end
+
+function M:UpdateKeyTipNormal()
+  self.Key_Tip:UpdateKeyInfo(self.WildMapGamePadKeys)
+end
+
+function M:GetWildMapGamePadEnsureKeys()
+  return self.WildMapGamePadEnsureKeys
+end
+
+function M:GetMapRegionType()
+  return self.MapRegionType
+end
+
+function M:InsertBackGamePadKeyAtFirst(KeyEntry)
+  table.insert(self.BackGamePadKey, 1, KeyEntry)
+end
+
+function M:RemoveFirstBackGamePadKeyIfRS()
+  if self.BackGamePadKey and self.BackGamePadKey[1] and self.BackGamePadKey[1].KeyInfoList[1] and self.BackGamePadKey[1].KeyInfoList[1].ImgShortPath == "RS" then
+    table.remove(self.BackGamePadKey, 1)
+  end
+end
+
+function M:HasDispatchList()
+  return self.DispatchList ~= nil
+end
+
+function M:AddChildToMark(Widget)
+  if self.Mark then
+    self.Mark:AddChild(Widget)
+  end
+end
+
+function M:AddChildToPosSoloTreasureKeyLocation(Widget)
+  if self.Pos_SoloTreasure_KeyLocation then
+    self.Pos_SoloTreasure_KeyLocation:AddChild(Widget)
+  end
+end
+
+function M:GetCommonMapTipsPanel()
+  return self.CommonMapTips
+end
+
+function M:CommonMapTipsHasAnyChildren()
+  return self.CommonMapTips and self.CommonMapTips:HasAnyChildren()
+end
+
+function M:CommonMapTipsClearChildren()
+  if self.CommonMapTips then
+    self.CommonMapTips:ClearChildren()
+  end
+end
+
+function M:CommonMapTipsAddChild(Widget)
+  if self.CommonMapTips then
+    self.CommonMapTips:AddChild(Widget)
+  end
+end
+
+function M:BindAutoOutOnFinished(Callback)
+  if self.Auto_Out then
+    self:BindToAnimationFinished(self.Auto_Out, Callback)
+  end
+end
+
+function M:HostClose()
+  if self:IsAnimationPlaying(self.Auto_In) then
+    self:BindToAnimationFinished(self.Auto_In, {
+      self,
+      self.Close
+    })
+  else
+    self:Close()
   end
 end
 

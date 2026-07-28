@@ -30,7 +30,7 @@ function WBP_Activity_SoloTreasure_LevelItem:OnListItemObjectSet(LevelObj)
     self.Text_ExtraCoin:SetText(GText("UI_SoloTreasure_TicketLevelSubTitle"))
   end
   self:BindBtnState()
-  self.ReddotNode = "SoloTreasure_LevelListView"
+  self.ReddotNode = LevelObj.ReddotNode or "SoloTreasure_LevelListView"
   if self.ReddotNodeListening then
     ReddotManager.RemoveListener(self.ReddotNodeListening, self)
     self.ReddotNodeListening = nil
@@ -50,9 +50,14 @@ function WBP_Activity_SoloTreasure_LevelItem:RefreshNewReddot()
     self:EMShowReddot(false, EReddotType.New, 0)
     return
   end
-  local EventId = SoloTreasureDataModel:GetEventId()
+  local EventId = self.Content.EventId or SoloTreasureDataModel:GetEventId()
   local Index = self.Content.Index
-  local bRead = SoloTreasureDataModel:IsLevelEntryRead(EventId, Index)
+  local bRead
+  if self.Content.IsReadCallback then
+    bRead = self.Content.IsReadCallback(EventId, Index)
+  else
+    bRead = SoloTreasureDataModel:IsLevelEntryRead(EventId, Index)
+  end
   local bShow = not bRead
   self:EMShowReddot(bShow, EReddotType.New, bShow and 1 or 0)
 end

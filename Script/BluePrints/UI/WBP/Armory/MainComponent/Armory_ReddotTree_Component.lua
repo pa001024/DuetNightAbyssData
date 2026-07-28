@@ -119,7 +119,10 @@ function Component:AddMainTabReddotListen()
     end
   end)
   self:AddNewPetReddotListen(function(self, Count)
-    self:MainTabReddotFunc(ArmoryUtils.ArmoryMainTabNames.Pet, Count > 0)
+    local PetNode = ReddotManager.GetTreeNode(CommonConst.DataType.Pet) or {Count = 0}
+    local PetIsShowNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.PetIsShow.Name) or {Count = 0}
+    local bNew = PetNode.Count > 0 or PetIsShowNode.Count > 0
+    self:MainTabReddotFunc(ArmoryUtils.ArmoryMainTabNames.Pet, bNew)
     if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Pet then
       self:UpdateBoxReddot()
     end
@@ -357,13 +360,24 @@ function Component:AddNewPetReddotListen(Callback)
     ReddotManager.AddListener(NodeName, self, Callback, nil, 1)
     self.NewPetNodeNames[NodeName] = 1
   end
+  local PetIsShowNodeName = DataMgr.ReddotNode.PetIsShow.Name
+  if not self.NewPetNodeNames[PetIsShowNodeName] then
+    ReddotManager.AddListener(PetIsShowNodeName, self, Callback, nil, 1)
+    self.NewPetNodeNames[PetIsShowNodeName] = 1
+  end
 end
 
 function Component:RemoveNewPetReddotListen()
   if self.IsPreviewMode or self.NoReddot then
     return
   end
-  self:_RemoveReddotListenerCommon(CommonConst.DataType.Pet)
+  if not self.NewPetNodeNames then
+    return
+  end
+  for NodeName, _ in pairs(self.NewPetNodeNames) do
+    ReddotManager.RemoveListener(NodeName, self)
+  end
+  self.NewPetNodeNames = nil
 end
 
 function Component:AddCharSkillReddotListen(Callback, CharUuid)
@@ -543,7 +557,7 @@ function Component:RemoveWeaponAttributeReddotListen()
   if self.IsPreviewMode or self.NoReddot then
     return
   end
-  self:_RemoveReddotListenerCommon(CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.Appearance)
+  self:_RemoveReddotListenerCommon(CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.Attribute)
 end
 
 function Component:AddSubTabWeaponHyperGradeReddotListen(Callback, WeaponId, WeaponType)
@@ -603,13 +617,14 @@ function Component:AddWeaponAppearanceReddotListen(Callback, WeaponId)
     return
   end
   self:RemoveWeaponAppearanceReddotListen()
-  local NodeName = CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.Appearance .. WeaponId
   if not self.WeaponAppearanceNodeNames then
     self.WeaponAppearanceNodeNames = {}
   end
+  self.WeaponAppearanceNodeNames[CommonConst.DataType.WeaponAccessory] = 1
+  ReddotManager.AddListener(CommonConst.DataType.WeaponAccessory, self, Callback)
+  local NodeName = CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.Appearance .. WeaponId
   local LeafNodes = {}
-  local LeafNodeName = CommonConst.DataType.WeaponAccessory
-  LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
+  local LeafNodeName
   local Data = DataMgr.Weapon[WeaponId]
   if Data and Data.SkinApplicationType then
     for _, value in pairs(Data.SkinApplicationType) do

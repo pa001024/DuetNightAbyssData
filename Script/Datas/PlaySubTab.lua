@@ -59,6 +59,19 @@ return ReadOnly("PlaySubTab", {
     TitleBp = "/Game/UI/WBP/RougeLike/Widget/Title/WBP_Rouge_LightLessChasm.WBP_Rouge_LightLessChasm",
     WidgetUI = "PlayCommon"
   },
+  SoloTreasurePlaySubtabMain = {
+    BgImage = "/Game/UI/Texture/Static/Image/Max2048/T_SoloTreasure_Permanent_BG.T_SoloTreasure_Permanent_BG",
+    EnterImage = "/Game/UI/Texture/Static/Image/Max2048/T_SoloTreasure_Permanent_BG.T_SoloTreasure_Permanent_BG",
+    JumpUIId = 118,
+    Sequence = 89,
+    ShopJumpId = 119,
+    SubTabDes = "UI_Play_TreasureHunt_Des",
+    SubTabName = "UI_Play_TreasureHunt_Title",
+    SubTabUnlockRuleId = "SoloTreasurePerm",
+    SubWidgetUI = "SoloTreasurePlaySubtabMain",
+    TitleBp = "/Game/UI/WBP/SoloTreasure/Widget/Permanent/WBP_SoloTreasure_Permanent_Title.WBP_SoloTreasure_Permanent_Title",
+    WidgetUI = "PlayCommon"
+  },
   StarterQuest = {
     Sequence = 100,
     SubTabName = "MAIN_UI_STARTERQUEST",

@@ -292,19 +292,22 @@ function BP_EffectCreature_C:OnResourceReady()
 end
 
 function BP_EffectCreature_C:RefreshEffectAnimation()
-  if not self.LoadTime then
+  local LoadTime = self.LoadTime
+  if not LoadTime then
     return
   end
   local Owner = self:GetOwner()
-  local EffectCreatureData = DataMgr.EffectCreature[self.EffectCreatureId]
+  local EffectCreatureId = self.EffectCreatureId
+  local EffectCreatureData = DataMgr.EffectCreature[EffectCreatureId]
   local SkillSpeed = self.SkillSpeed
   if EffectCreatureData.ForbidAnimAccelerate then
     SkillSpeed = 1
   end
-  local Interval = Owner.SumDeltaSeconds - self.LoadTime
+  local Interval = Owner.SumDeltaSeconds - LoadTime
   Interval = Interval * SkillSpeed
-  self.SkeletalMesh:SetPosition(Interval, false)
-  self.SkeletalMesh:SetPlayRate(SkillSpeed)
+  local SkeletalMesh = self.SkeletalMesh
+  SkeletalMesh:SetPosition(Interval, false)
+  SkeletalMesh:SetPlayRate(SkillSpeed)
 end
 
 function BP_EffectCreature_C:UpdateTickableWhenPaused()

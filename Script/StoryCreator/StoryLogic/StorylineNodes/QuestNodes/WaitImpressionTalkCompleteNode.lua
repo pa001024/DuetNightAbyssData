@@ -1,4 +1,5 @@
 local WaitImpressionTalkCompleteNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 
 function WaitImpressionTalkCompleteNode:Init()
   self.ImpressionTalkTriggerId = nil
@@ -16,11 +17,7 @@ function WaitImpressionTalkCompleteNode:Execute(Callback)
   end
   GWorld.StoryMgr:RegisterWaitTalkCompleted(self.ImpressionTalkTriggerId, self.Context.QuestChainId, self:GetPayload("SpecialQuestId"), self:GetPayload("DynQuestId"), self.bShowGuide)
   self.ListenTimer = GWorld.GameInstance:AddTimer(self.ListenInterval, function()
-    local Avatar = GWorld:GetAvatar()
-    if nil == Avatar then
-      return
-    end
-    if Avatar:IsStorylineComplete(self.ImpressionTalkTriggerId) then
+    if ImpressionModel:IsStorylineComplete(self.ImpressionTalkTriggerId) then
       Callback()
     end
   end, true)

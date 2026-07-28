@@ -5,6 +5,47 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("MapIdConfig", {
+  ["/Haiboliya_Thc_Zchj_Design"] = {
+    MapID = 282,
+    MapName = "/Haiboliya_Thc_Zchj_Design"
+  },
+  Ailixian_Anzhixin_Design = {
+    ExploreID = 7095,
+    MapID = 298,
+    MapName = "Ailixian_Anzhixin_Design"
+  },
+  Ailixian_Chenmian_Design = {
+    ExploreID = 7092,
+    MapID = 295,
+    MapName = "Ailixian_Chenmian_Design"
+  },
+  Ailixian_DreamSailafei_Design = {
+    MapID = 292,
+    MapName = "Ailixian_DreamSailafei_Design"
+  },
+  Ailixian_LizibeierHJ_Design = {
+    ExploreID = 7096,
+    MapID = 299,
+    MapName = "Ailixian_LizibeierHJ_Design"
+  },
+  Ailixian_Manyue_Design = {
+    ExploreID = 7094,
+    MapID = 297,
+    MapName = "Ailixian_Manyue_Design"
+  },
+  Ailixian_Miandao_Design = {
+    MapID = 290,
+    MapName = "Ailixian_Miandao_Design"
+  },
+  Ailixian_Sailafei_Design = {
+    MapID = 291,
+    MapName = "Ailixian_Sailafei_Design"
+  },
+  Ailixian_Shendianfeixu_Design = {
+    ExploreID = 7093,
+    MapID = 296,
+    MapName = "Ailixian_Shendianfeixu_Design"
+  },
   BH_Thea_Design = {
     ExploreID = 7062,
     MapID = 196,
@@ -384,34 +425,6 @@ return ReadOnly("MapIdConfig", {
     MapID = 254,
     MapName = "Haiboliya_Chezhan_ZZZ_Design"
   },
-  Haiboliya_FTLake_BF_Design = {
-    MapID = 282,
-    MapName = "Haiboliya_FTLake_BF_Design"
-  },
-  Haiboliya_FTLake_Design = {
-    MapID = 280,
-    MapName = "Haiboliya_FTLake_Design"
-  },
-  Haiboliya_FTNew_Boss_Design = {
-    MapID = 284,
-    MapName = "Haiboliya_FTNew_Boss_Design"
-  },
-  Haiboliya_FTNew_Design = {
-    MapID = 278,
-    MapName = "Haiboliya_FTNew_Design"
-  },
-  Haiboliya_FTNew_Home_Design = {
-    MapID = 283,
-    MapName = "Haiboliya_FTNew_Home_Design"
-  },
-  Haiboliya_FTOld_Design = {
-    MapID = 279,
-    MapName = "Haiboliya_FTOld_Design"
-  },
-  Haiboliya_FTOld_NPark_Design = {
-    MapID = 281,
-    MapName = "Haiboliya_FTOld_NPark_Design"
-  },
   Haiboliya_Longsha01_Design = {
     ExploreID = 7030,
     MapID = 164,
@@ -431,6 +444,41 @@ return ReadOnly("MapIdConfig", {
     ExploreID = 7023,
     MapID = 166,
     MapName = "Haiboliya_Longsha04_Design"
+  },
+  Haiboliya_Thc_Boss_Design = {
+    MapID = 284,
+    MapName = "Haiboliya_Thc_Boss_Design"
+  },
+  Haiboliya_Thc_Ck_Design = {
+    MapID = 294,
+    MapName = "Haiboliya_Thc_Ck_Design"
+  },
+  Haiboliya_Thc_Emyly_Design = {
+    MapID = 281,
+    MapName = "Haiboliya_Thc_Emyly_Design"
+  },
+  Haiboliya_Thc_Jhs_Design = {
+    MapID = 293,
+    MapName = "Haiboliya_Thc_Jhs_Design"
+  },
+  Haiboliya_Thc_Lxzs01_Design = {
+    ExploreID = 7085,
+    MapID = 278,
+    MapName = "Haiboliya_Thc_Lxzs01_Design"
+  },
+  Haiboliya_Thc_Lxzs02_Design = {
+    ExploreID = 7086,
+    MapID = 279,
+    MapName = "Haiboliya_Thc_Lxzs02_Design"
+  },
+  Haiboliya_Thc_Lxzx_Design = {
+    ExploreID = 7087,
+    MapID = 280,
+    MapName = "Haiboliya_Thc_Lxzx_Design"
+  },
+  Haiboliya_Thc_Zjfj_Design = {
+    MapID = 283,
+    MapName = "Haiboliya_Thc_Zjfj_Design"
   },
   HomeBase_Design = {
     MapID = 121,

@@ -1560,7 +1560,7 @@ return ReadOnly("TalkAction", {
     MontageSection = "Loop"
   },
   Elegant_Loop = {
-    ActionMontage = "Story_Elegent",
+    ActionMontage = "Story_Elegant",
     AnimationId = "Elegant_Loop",
     BlendInTime = 0,
     BlendOutTime = 0,
@@ -3140,6 +3140,14 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "End"
   },
+  Sad02_Loop = {
+    ActionMontage = "Emo_Sad02",
+    AnimationId = "Sad02_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
   Sad02_Start = {
     ActionMontage = "Emo_Sad02",
     AnimationId = "Sad02_Start",
@@ -3394,6 +3402,14 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "End"
   },
+  Shy02_Loop = {
+    ActionMontage = "Emo_Shy02",
+    AnimationId = "Shy02_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
   Shy02_Start = {
     ActionMontage = "Emo_Shy02",
     AnimationId = "Shy02_Start",
@@ -3410,6 +3426,14 @@ return ReadOnly("TalkAction", {
     IsOnceAction = true,
     IsSpecialAnim = false,
     MontageSection = "End"
+  },
+  Shy03_Loop = {
+    ActionMontage = "Emo_Shy03",
+    AnimationId = "Shy03_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
   },
   Shy03_Start = {
     ActionMontage = "Emo_Shy03",
@@ -4285,6 +4309,30 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Loop",
     bUseIK = false
+  },
+  Story_KneelDown_End = {
+    ActionMontage = "Story_KneelDown",
+    AnimationId = "Story_KneelDown_End",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "End"
+  },
+  Story_KneelDown_Loop = {
+    ActionMontage = "Story_KneelDown",
+    AnimationId = "Story_KneelDown_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Story_KneelDown_Start = {
+    ActionMontage = "Story_KneelDown",
+    AnimationId = "Story_KneelDown_Start",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Start"
   },
   Talk01_End = {
     ActionMontage = "Emo_Talk01",

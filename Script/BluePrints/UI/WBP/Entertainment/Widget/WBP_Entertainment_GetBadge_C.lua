@@ -110,7 +110,6 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   if InKeyName == Const.GamepadFaceButtonDown then
-    self.Btn_Close.OnClicked:Broadcast()
     return UIUtils.Handled
   end
   return UIUtils.Unhandled

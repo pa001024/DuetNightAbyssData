@@ -17,8 +17,7 @@ return ReadOnly("Mail", {
     MailReward = 10000,
     MailSenderId = 85101,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_100001",
-    Provider = "hero"
+    MailTitle = "Mail_Title_100001"
   },
   [10002] = {
     MailContent = "Mail_Content_100002",
@@ -595,29 +594,22 @@ return ReadOnly("Mail", {
     MailTitle = "Mail_Title_10085"
   },
   [19101] = {
-    Condition = 4100,
-    ImgProvider = "Hero",
     MailContent = "Mail_Content_19101",
     MailId = 19101,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "hero"
+    MailTitle = "Mail_Title_19101"
   },
   [19102] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19102,
     MailReward = 79022,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "wegame"
+    MailTitle = "Mail_Title_19101"
   },
   [19103] = {
-    Condition = 4100,
-    ImgProvider = "TapTap",
     MailContent = "Mail_Content_19101",
     MailId = 19103,
     MailReward = 79023,
@@ -626,18 +618,14 @@ return ReadOnly("Mail", {
     MailTitle = "Mail_Title_19101"
   },
   [19104] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19104,
     MailReward = 79024,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "bilibili"
+    MailTitle = "Mail_Title_19101"
   },
   [19105] = {
-    Condition = 4100,
-    ImgProvider = "HaoYouKuaiBao",
     MailContent = "Mail_Content_19101",
     MailId = 19105,
     MailReward = 79025,
@@ -646,18 +634,14 @@ return ReadOnly("Mail", {
     MailTitle = "Mail_Title_19101"
   },
   [19106] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19106,
     MailReward = 79026,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "lenovo"
+    MailTitle = "Mail_Title_19101"
   },
   [19107] = {
-    Condition = 4100,
-    ImgProvider = "DouYin",
     MailContent = "Mail_Content_19101",
     MailId = 19107,
     MailReward = 79027,
@@ -666,84 +650,68 @@ return ReadOnly("Mail", {
     MailTitle = "Mail_Title_19101"
   },
   [19108] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19108,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "cloud"
+    MailTitle = "Mail_Title_19101"
   },
   [19109] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19109,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "oppo"
+    MailTitle = "Mail_Title_19101"
   },
   [19110] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19110,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "honor"
+    MailTitle = "Mail_Title_19101"
   },
   [19111] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19111,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "harmony"
+    MailTitle = "Mail_Title_19101"
   },
   [19112] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19112,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "huawei"
+    MailTitle = "Mail_Title_19101"
   },
   [19113] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19113,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "vivo"
+    MailTitle = "Mail_Title_19101"
   },
   [19114] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19114,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "xiaomi"
+    MailTitle = "Mail_Title_19101"
   },
   [19115] = {
-    Condition = 4100,
     MailContent = "Mail_Content_19101",
     MailId = 19115,
     MailReward = 79021,
     MailSenderId = 900003,
     MailTimeLimit = -1,
-    MailTitle = "Mail_Title_19101",
-    Provider = "hero"
+    MailTitle = "Mail_Title_19101"
   },
   [19116] = {
     MailContent = "Mail_Content_19101",

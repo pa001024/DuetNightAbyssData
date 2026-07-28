@@ -1,8 +1,10 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.Item.BP_CombatItemBase_C",
-  "BluePrints.Common.DelayFrameComponent"
+  "BluePrints.Item.BP_CombatItemBase_C"
 })
+M._components = {
+  "BluePrints.Common.DelayFrameComponent"
+}
 
 function M:OnActorReady(Info)
   print(_G.LogTag, "LXZ OnActorReady", self:GetName())
@@ -259,4 +261,5 @@ function M:ReceiveEndPlay(Reason)
   M.Super.ReceiveEndPlay(self, Reason)
 end
 
+AssembleComponents(M)
 return M

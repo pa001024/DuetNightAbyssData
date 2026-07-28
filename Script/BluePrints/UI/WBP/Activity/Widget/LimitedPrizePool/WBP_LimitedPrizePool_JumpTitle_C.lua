@@ -47,7 +47,11 @@ function M:SetInputType(NewInputType, NewGamepadName)
 end
 
 function M:FadeIn()
-  self:PlayAnimation(self.FadeInAnimation)
+  if not self.FadeInAnimation then
+    return
+  end
+  self:StopAnimation(self.FadeInAnimation)
+  self:PlayAnimation(self.FadeInAnimation, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1.0)
 end
 
 function M:SetTitle(Text)

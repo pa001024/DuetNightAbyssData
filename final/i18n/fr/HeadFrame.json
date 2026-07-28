@@ -273,5 +273,33 @@
     "desc": "GRAAAAH—————— !",
     "icon": "T_Head_Frame32",
     "access": "Disponible dans la boutique"
+  },
+  {
+    "id": 10043,
+    "name": "Fête foraine",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame39",
+    "access": "Disponible via le Pass mensuel"
+  },
+  {
+    "id": 10044,
+    "name": "Nuit envoûtante – Jade noir",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame42",
+    "access": "Disponible via les événements"
+  },
+  {
+    "id": 10045,
+    "name": "Nuit envoûtante – Rouille",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame41",
+    "access": "Disponible via les événements"
+  },
+  {
+    "id": 10046,
+    "name": "Reflets scintillants",
+    "desc": "Permet de modifier votre cadre d’avatar.",
+    "icon": "T_Head_Frame40",
+    "access": "Disponible dans la boutique"
   }
 ]

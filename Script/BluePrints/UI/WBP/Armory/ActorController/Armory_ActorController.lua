@@ -122,6 +122,7 @@ function M:LoadCloseArmoryCameraInfo()
 end
 
 function M:OnHelperBecomeViewTarget(PC)
+  UIManager(self.ViewUI):HideOrShowOtherUINpcActor(true, "ActorController_BecomeViewTarget", 0)
   DebugPrint("CY@ OnHelperBecomeViewTarget:", self.ObjId, "FirstBeComeViewTarget:", self.OnFirstBecomeViewTarget, "SequencePlaying:", self.IsPlayingSequence)
   self.IsControled = true
   self.bTryDestroyActorsWhenDestruct = false
@@ -173,8 +174,20 @@ function M:RecoverToPlayerActor()
     IsRoleChanged = self:ChangeToProtagonist(true, true, true)
   else
     IsRoleChanged = self:ChangeCharModel(LastCharModelInfo, true, true, true)
-    if self.LastCharAppearanceInfo then
-      self:ChangeCharAppearance(self.LastCharAppearanceInfo)
+    local AppearanceInfo
+    local RealAvatar = GWorld:GetAvatar()
+    if self:GetAvatar() == RealAvatar then
+      local Char = RealAvatar.Chars[LastCharModelInfo.Uuid]
+      if Char then
+        if self.OnRecoverPlayerAppearance then
+          AppearanceInfo = self.OnRecoverPlayerAppearance(self.ViewUI, Char)
+        end
+        AppearanceInfo = AppearanceInfo or Char:DumpAppearanceSuit(RealAvatar)
+      end
+    end
+    AppearanceInfo = AppearanceInfo or self.LastCharAppearanceInfo
+    if AppearanceInfo then
+      self:ChangeCharAppearance(AppearanceInfo)
     end
   end
   if self.CurrentPetInfo then
@@ -213,11 +226,16 @@ function M:RecoverToSingleWeapon()
 end
 
 function M:OnHelperEndViewTarget(PC)
+  UIManager(self.ViewUI):HideOrShowOtherUINpcActor(false, "ActorController_BecomeViewTarget", 0)
   self.IsControled = false
   self.LastCharModelInfo = self.CurrentCharInfo
   self.LastWeaponInfo = self.CurrentWeaponInfo
   self.LastCharAppearanceInfo = self.CurrentAppearanceInfo
   self.LastWeaponAppearanceInfo = self.CurrentWeaponAppearanceInfo
+  if self.bPreviewSceneLoaded then
+    self.ArmoryHelper:OnPreviewSceneUnloaded()
+  end
+  self:TryDestroyActors()
   if self.bDestructed then
     return
   end
@@ -866,6 +884,7 @@ local CameraDataConfig = {
   [SystemUI.GuildWarRank.UIName] = DataMgr.GuildWarRankCameraData,
   [SystemUI.PersonalInfoDataRanking.UIName] = DataMgr.GuildWarRankCameraData,
   [SystemUI.AppearanceRank.UIName] = DataMgr.GuildWarRankCameraData,
+  [SystemUI.CommonRanking.UIName] = DataMgr.GuildWarRankCameraData,
   [SystemUI.ShopMain.UIName] = DataMgr.RecommendCameraData,
   [SystemUI.MountsMain.UIName] = DataMgr.MountCameraData,
   [SystemUI.ActivitySoloTreasureMain.UIName] = DataMgr.SoloTreasureCameraData
@@ -876,6 +895,10 @@ function M:GetCameraData()
     return CameraDataConfig[self.UIName]
   end
   return DataMgr.ArmoryCameraData
+end
+
+function M:SetCameraData(CameraData)
+  DataMgr.ArmoryCameraData = CameraData
 end
 
 function M:OnDragViewActor(CursorDelta)
@@ -1010,7 +1033,6 @@ function M:ViewTarget()
 end
 
 function M:OnAfterHelperEndViewTarget(NewTarget)
-  self:TryDestroyActors()
   if self.Event_AfterEndViewTarget then
     self.Event_AfterEndViewTarget.Func(self.Event_AfterEndViewTarget.Obj)
   end
@@ -1030,7 +1052,7 @@ end
 
 function M:IsViewTarget()
   if self.ViewUI then
-    return self.ViewUI:GetOwningPlayer():GetViewTarget() == self:GetViewTarget()
+    return self.IsControled and self.ViewUI:GetOwningPlayer():GetViewTarget() == self:GetViewTarget()
   end
 end
 
@@ -1069,9 +1091,9 @@ end
 function M:DestroyCreature(Key)
   if self.Creatures[Key] then
     self.Creatures[Key]:DestroyEffectCreature()
-    self.LastCreateIds[Key] = nil
     self.Creatures[Key] = nil
   end
+  self.LoadingCreateIds[Key] = nil
 end
 
 function M:DestroyAllCreature()
@@ -1081,8 +1103,8 @@ function M:DestroyAllCreature()
         value:DestroyEffectCreature()
       end
     end
-    self.Creatures = nil
-    self.LastCreateIds = nil
+    self.Creatures = {}
+    self.LoadingCreateIds = {}
   end
   if self.ArmoryPlayer then
     self.ArmoryPlayer:RemoveAllEffectCreature(false)
@@ -1108,6 +1130,10 @@ function M:SetCurrentViewUI(ViewUI)
     self.UIName = self.ViewUI:GetUIConfigName()
     DebugPrint("CY@ActorController SetCurrentViewUI", self.UIName)
   end
+end
+
+function M:GetCurrentViewUI()
+  return self.ViewUI
 end
 
 function M:ResetCurrentViewUI()
@@ -1147,9 +1173,10 @@ function M:Init(Params)
   self.Event_OnRecorverCameraStart = Params.OnRecorverCameraStart
   self.Event_OnRecorverCameraEnd = Params.OnRecorverCameraEnd
   self.Event_AfterEndViewTarget = Params.AfterEndViewTarget
+  self.OnRecoverPlayerAppearance = Params.OnRecoverPlayerAppearance
   self.ViewActorTypes = {Player = 1, SingleWeapon = 2}
   self.Creatures = {}
-  self.LastCreateIds = {}
+  self.LoadingCreateIds = {}
   self.Reflections = {}
   self.ReflectionOwners = {}
   self.ObjId = SelfObjCount

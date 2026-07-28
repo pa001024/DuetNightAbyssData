@@ -128,5 +128,12 @@ return ReadOnly("AppearanceCollect", {
     QuantityTarget = T.RT_4,
     SubTabId = {601},
     Type = "Resource"
+  },
+  [7] = {
+    Entrance = 7,
+    EntranceName = "UI_SHOP_SUBTAB_NAME_WEAPON",
+    ExcludeCollect = true,
+    SubTabId = {701},
+    Type = "Weapon"
   }
 })

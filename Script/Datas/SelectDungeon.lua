@@ -233,5 +233,19 @@ return ReadOnly("SelectDungeon", {
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_IronExpedition01.T_Play_Depute_IronExpedition01",
     RewardViewId = 303001,
     Sequence = 1
+  },
+  [12] = {
+    ChapterContent = "UI_DUNGEON_CONTENT_DEFENCE_2",
+    ChapterId = 12,
+    ChapterName = "UI_DUNGEON_TYPE_IRONDEFENCE_2",
+    ChapterSubName = "UI_DUNGEON_DROP_HyperWeapon",
+    Condition = {3002, 3004},
+    DungeonList = {91701},
+    GuidanceTitle = 200001,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = true,
+    Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_IronExpeditionPro.T_Play_Depute_IronExpeditionPro",
+    RewardViewId = 313001,
+    Sequence = 2
   }
 })

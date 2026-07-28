@@ -60,6 +60,11 @@ return ReadOnly("CommonQuestPhase", {
     Index = 1,
     QuestPhaseId = 1203
   },
+  [1204] = {
+    EventId = 112004,
+    Index = 1,
+    QuestPhaseId = 1204
+  },
   [1301] = {
     EventId = 103014,
     Index = 1,
@@ -187,6 +192,18 @@ return ReadOnly("CommonQuestPhase", {
     QuestPhaseId = 2008,
     QuestPhaseName = "RaidDungeon_PreRaid_Rank"
   },
+  [2009] = {
+    EventId = 111005,
+    Index = 1,
+    QuestPhaseId = 2009,
+    QuestPhaseName = "RaidDungeon_Raid_Rank"
+  },
+  [2010] = {
+    EventId = 111005,
+    Index = 2,
+    QuestPhaseId = 2010,
+    QuestPhaseName = "RaidDungeon_PreRaid_Rank"
+  },
   [3001] = {
     EventId = 103016,
     Index = 1,
@@ -210,10 +227,37 @@ return ReadOnly("CommonQuestPhase", {
     QuestPhaseId = 3004,
     QuestPhaseName = "AutoChess_Phase_3"
   },
+  [3005] = {
+    EventId = 10301601,
+    Index = 1,
+    QuestPhaseId = 3005,
+    QuestPhaseName = "AutoChess_Phase_1"
+  },
+  [3006] = {
+    EventId = 10301601,
+    Index = 2,
+    QuestPhaseId = 3006,
+    QuestPhaseName = "AutoChess_Phase_2"
+  },
+  [3007] = {
+    EventId = 10301601,
+    Index = 3,
+    QuestPhaseId = 3007,
+    QuestPhaseName = "AutoChess_Phase_3"
+  },
   [4001] = {
     EventId = 1030031,
     Index = 1,
     QuestPhaseId = 4001
+  },
+  [102003] = {
+    EntranceIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/WorldExplore/V14/T_Activity_WorldExplore_V14_IconMainStory.T_Activity_WorldExplore_V14_IconMainStory'",
+    EventId = 102003,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_WorldExplore_V14_MainStory.T_Tab_WorldExplore_V14_MainStory'",
+    Index = 1,
+    QuestPhaseId = 102003,
+    QuestPhaseName = "Event_102003_QuestName1",
+    SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/V15/Spine/WBP_Activity_WorldExplore_V15_Spine_01.WBP_Activity_WorldExplore_V15_Spine_01'"
   },
   [1020021] = {
     EntranceIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/WorldExplore/V14/T_Activity_WorldExplore_V14_IconMainStory.T_Activity_WorldExplore_V14_IconMainStory'",
@@ -244,5 +288,34 @@ return ReadOnly("CommonQuestPhase", {
     QuestPhaseName = "Event_102002_QuestName1",
     RewardPreview = 1020011,
     SplineBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/WorldExplore/V14/Spine/WBP_Activity_WorldExplore_V14_Season01_Spine_03.WBP_Activity_WorldExplore_V14_Season01_Spine_03'"
+  },
+  [1030250] = {
+    EventId = 103025,
+    Index = 1,
+    QuestPhaseId = 1030250,
+    QuestPhaseName = "RaceLottery_DailyTask"
+  },
+  [1030251] = {
+    EventId = 103025,
+    Index = 2,
+    QuestPhaseId = 1030251,
+    QuestPhaseName = "RaceLottery_NormalTask"
+  },
+  [1030270] = {
+    EventId = 103027,
+    Index = 1,
+    QuestPhaseId = 1030270,
+    QuestPhaseName = "UI_TreasureHunt_QuestPhase1"
+  },
+  [1030271] = {
+    EventId = 103027,
+    Index = 2,
+    QuestPhaseId = 1030271,
+    QuestPhaseName = "UI_TreasureHunt_QuestPhase2"
+  },
+  [103020021] = {
+    EventId = 10302002,
+    Index = 1,
+    QuestPhaseId = 103020021
   }
 })

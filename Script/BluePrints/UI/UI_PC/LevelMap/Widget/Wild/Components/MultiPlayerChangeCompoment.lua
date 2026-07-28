@@ -1,9 +1,10 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 local TipsBpPath = "WidgetBlueprint'/Game/UI/WBP/AreaCoop/Widget/WBP_AreaCoop_MapTips.WBP_AreaCoop_MapTips'"
 
 function Component:InitComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitMultiplayerChallenge)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitMultiplayerChallenge)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
@@ -120,7 +121,7 @@ function Component:FreshOrCreatTips(ChallengeId)
       ScreenPrint("创建多人传送点详情失败")
       return
     end
-    self.MainMap.Convey_Area_Coop:AddChild(self.ChanllengeTips)
+    self.ModeComp:AddChildToConveyAreaCoop(self.ChanllengeTips)
     self.ChanllengeTips:SetVisibility(ESlateVisibility.Collapsed)
   end
   if self.ChanllengeTips then

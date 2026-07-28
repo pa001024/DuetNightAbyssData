@@ -3,6 +3,8 @@ local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
 local UIUtils = require("Utils.UIUtils")
 local ReasoningUtils = require("BluePrints.UI.WBP.DetectiveMinigame.ReasoningUtils")
+local bGiftSignActive = false
+local CurGiftSignWidget
 local WBP_HomeBaseMain_Item_C = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
@@ -92,7 +94,11 @@ function WBP_HomeBaseMain_Item_C:OnListItemObjectSet(Content)
   self.CurContent = Content
   self.CurContent.SelfWidget = self
   self:ReddotTreePlugOut()
-  self:LoadImage()
+  if self.CurContent and self.CurContent.bGuild then
+    self:LoadImageGuild()
+  else
+    self:LoadImage()
+  end
   self:UpdateGuidePoint()
   self:InitListenEvent()
   if Content.bForbidReddot then
@@ -170,6 +176,9 @@ function WBP_HomeBaseMain_Item_C:InitWidgetInfoInGamePad(IsUseGamePad)
   if not IsUseGamePad then
     return
   end
+  if UIUtils.AmIInGuildScene() then
+    return
+  end
   local BtnInfo = DataMgr.MainUI
   local Id = self.CurContent.BtnId
   local ActionName = BtnInfo[Id].ActionName
@@ -230,6 +239,7 @@ function WBP_HomeBaseMain_Item_C:LoadImage(MainUIId)
   end
   if Id == CommonConst.GachaEnterId then
     self:RefreshTimeLimitResource()
+    self:CheckAndShowGiftSign()
   end
   local ActionName = BtnInfo[Id].ActionName
   self.Name:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -364,6 +374,8 @@ function WBP_HomeBaseMain_Item_C:OnBtnClick()
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if GameMode and GameMode.EMGameState.GameModeType == "Trial" then
     GameMode:TriggerDungeonComponentFun("ShowArmory")
+  elseif self.CurContent and self.CurContent.bGuild and self.CurContent.GuildCallback then
+    self.CurContent.GuildCallback(self.CurContent.Obj)
   else
     UIUtils.OpenSystem(self.CurContent.BtnId)
     CommonUtils:CloseGuideTouchIfExist(self)
@@ -513,6 +525,98 @@ function WBP_HomeBaseMain_Item_C:HideBubble(EndTime)
   self:AddTimer(EndTime, HideBubble, false, 0.1, "HideBubble", true)
 end
 
+function WBP_HomeBaseMain_Item_C:_ShowGiftSignContent()
+  self.Common_Item_Subsize_New_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Group_GiftSign:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if self.Remind then
+    self:PlayAnimation(self.Remind)
+  end
+  if not self.HudBubbleWidget then
+    self.HudBubbleWidget = UIManager(self):_CreateWidgetNew("CommonHudBubble")
+  end
+  self.Pos_Bubble:AddChild(self.HudBubbleWidget)
+  local OverlaySlot = UE4.UWidgetLayoutLibrary.SlotAsOverlaySlot(self.HudBubbleWidget)
+  OverlaySlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Center)
+  OverlaySlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Center)
+  self.HudBubbleWidget:Init({
+    IconPath = "",
+    Text = "UI_PopupPack_Bubble",
+    ColorType = 2,
+    Arrow = 1
+  })
+  self.HudBubbleWidget:PlayInAnimation()
+  AudioManager(self):PlayUISound(nil, "event:/ui/common/gacha_hub_bubble", nil, nil)
+  self.SizeBox_Bubble:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.IsBubblePlaying = true
+end
+
+function WBP_HomeBaseMain_Item_C:_HideGiftSignContent()
+  if not IsValid(self) then
+    return
+  end
+  if self.Group_GiftSign then
+    self.Group_GiftSign:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.HudBubbleWidget then
+    self.HudBubbleWidget:PlayOutAnimation()
+  end
+  if self.SizeBox_Bubble then
+    self.SizeBox_Bubble:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  self.IsBubblePlaying = false
+end
+
+function WBP_HomeBaseMain_Item_C:CheckAndShowGiftSign()
+  if not self.Group_GiftSign then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  if self.IsBubblePlaying then
+    return
+  end
+  if Avatar.bGiftSignBubbleShown then
+    if bGiftSignActive then
+      CurGiftSignWidget = self
+      self:_ShowGiftSignContent()
+    end
+    return
+  end
+  local Now = TimeUtils.NowTime()
+  local HasUrgentPack = false
+  for PackId, Config in pairs(DataMgr.PopupPack) do
+    local Record = Avatar.PopupPack:GetPopupData(PackId)
+    if Record and Record.TriggerNum <= Config.MaxTrigger then
+      local Remain = Record.LastPopTimeStamp + Config.Duration * 60 - Now
+      if Remain > 0 and Remain < 1800 then
+        HasUrgentPack = true
+        break
+      end
+    end
+  end
+  if not HasUrgentPack then
+    return
+  end
+  Avatar.bGiftSignBubbleShown = true
+  bGiftSignActive = true
+  CurGiftSignWidget = self
+  self:_ShowGiftSignContent()
+  if self:IsExistTimer("HideGiftSign") then
+    self:RemoveTimer("HideGiftSign")
+  end
+  self:AddTimer(4, function()
+    bGiftSignActive = false
+    local Target = CurGiftSignWidget
+    CurGiftSignWidget = nil
+    if Target then
+      Target:_HideGiftSignContent()
+    end
+  end, false, 0, "HideGiftSign", true)
+end
+
 function WBP_HomeBaseMain_Item_C:OnHomeBaseBtnPlayAnim(UIName, AnimationName)
   if not UIName then
     return
@@ -573,6 +677,38 @@ function WBP_HomeBaseMain_Item_C:InitInterface(IconPath, KeyText, Name)
     self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Switcher:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
+function WBP_HomeBaseMain_Item_C:LoadImageGuild()
+  self.Common_Item_Subsize_New_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  local Content = self.CurContent
+  local ImageResource = LoadObject(Content.TexturePath)
+  local VSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.VerticalBox_0)
+  local Anchors = UE4.FAnchors()
+  VSlot:SetAlignment(FVector2D(0.5, 0))
+  Anchors.Minimum = FVector2D(0.5, 1)
+  Anchors.Maximum = FVector2D(0.5, 1)
+  VSlot:SetAnchors(Anchors)
+  if nil ~= ImageResource then
+    self:SetButtonStyle(ImageResource)
+  end
+  self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Name:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Name:SetText(GText(Content.Name))
+  self.Switcher:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.HasGamePadTips = true
+  if self.Common_Key_Hud_Gamepad and self.CurContent.ImgShortPath then
+    self.Common_Key_Hud_Gamepad:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = self.CurContent.ImgShortPath
+        }
+      }
+    })
+  end
 end
 
 AssembleComponents(WBP_HomeBaseMain_Item_C)

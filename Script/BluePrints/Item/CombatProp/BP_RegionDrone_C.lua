@@ -5,6 +5,7 @@ local M = Class({
 
 function M:CommonInitInfo(Info)
   M.Super.CommonInitInfo(self, Info)
+  self.CanAttack = self.UnitParams.CanAttack or false
   self.ChestInteractiveComponent:InitInteractiveComponent(self.Data.InteractiveId)
 end
 
@@ -27,6 +28,9 @@ function M:CheckAllGroupDroneReset()
 end
 
 function M:OnBreakCountDown(SourceEid)
+  if self.CanAttack and self.OnBreak then
+    self:OnBreak()
+  end
 end
 
 function M:AddDrone()

@@ -524,7 +524,23 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100001,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100404,
+                  TalkActorVisible = true
+                }
+              },
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,

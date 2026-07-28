@@ -4,6 +4,7 @@ local FriendModel = FriendController:GetModel()
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
+local PageJumpUtils = require("Utils.PageJumpUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 local function SetDefaultMenuFocus(SelfWidget)
@@ -13,12 +14,14 @@ local function SetDefaultMenuFocus(SelfWidget)
   local FocusWidget = SelfWidget.List_Btn
   if SelfWidget.List_Btn:GetNumItems() > 0 then
     local FirstItem = SelfWidget.List_Btn:GetItemAt(0)
-    if FirstItem then
+    if FirstItem and SelfWidget.List_Btn.GetEntryWidgetFromItem then
       local EntryWidget = SelfWidget.List_Btn:GetEntryWidgetFromItem(FirstItem)
-      if EntryWidget.Button_Area then
-        FocusWidget = EntryWidget.Button_Area
-      else
-        FocusWidget = EntryWidget
+      if EntryWidget then
+        if EntryWidget.Button_Area then
+          FocusWidget = EntryWidget.Button_Area
+        else
+          FocusWidget = EntryWidget
+        end
       end
     end
   end
@@ -79,7 +82,6 @@ local function RefreshControllerVisibility(SelfWidget)
   SelfWidget.Group_Bottom:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   SelfWidget.Key_Confirm:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   SelfWidget.Key_Back:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
-  local ShowGuildGamepadKey = IsGamepad and SelfWidget.bCanOpenGuildDetail == true
   if IsGamepad then
     SelfWidget.Controller_Guild:CreateCommonKey({
       KeyInfoList = {
@@ -87,10 +89,11 @@ local function RefreshControllerVisibility(SelfWidget)
           Type = "Img",
           ImgShortPath = UIConst.GamePadImgKey.FaceButtonLeft
         }
-      }
+      },
+      Desc = SelfWidget.bCanOpenGuildDetail and GText("UI_Guild_Detail") or GText("UI_Chat_ShowRecord")
     })
   end
-  SelfWidget.Controller_Guild:SetVisibility(ShowGuildGamepadKey and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  SelfWidget.Controller_Guild:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   RefreshActionBtnStyle(SelfWidget.Btn_Block, IsGamepad, UIConst.GamePadKey.SpecialLeft)
   RefreshActionBtnStyle(SelfWidget.Btn_Report, IsGamepad, UIConst.GamePadKey.SpecialRight)
 end
@@ -121,12 +124,31 @@ function M:Destruct()
 end
 
 local function CloseHeadAnchor(Owner)
-  if Owner and Owner.HeadAnchor then
+  if Owner and IsValid(Owner) and Owner.HeadAnchor then
     Owner.HeadAnchor:Close()
     return
   end
-  if Owner and Owner.Head_Anchor then
+  if Owner and IsValid(Owner) and Owner.Head_Anchor then
     Owner.Head_Anchor:Close()
+  end
+end
+
+local function GetStableWorldContext(SelfWidget)
+  return SelfWidget.Owner or SelfWidget
+end
+
+local function BindHeadBtnAction(BtnWidget, SelfWidget, Action)
+  if not BtnWidget or not Action then
+    return
+  end
+  if BtnWidget.Button_Area then
+    BtnWidget.Button_Area.OnClicked:Clear()
+    BtnWidget.Button_Area.OnClicked:Add(SelfWidget, Action)
+  elseif BtnWidget.BindSingleEventOnClicked then
+    BtnWidget:BindSingleEventOnClicked(SelfWidget, Action)
+  elseif BtnWidget.BindEventOnClicked then
+    BtnWidget:UnBindEventOnClickedByObj(SelfWidget)
+    BtnWidget:BindEventOnClicked(SelfWidget, Action)
   end
 end
 
@@ -209,16 +231,16 @@ local function BindBlockButton(SelfWidget, AvatarInfo)
   local TargetUid = FriendController:GetSocialUid(RawUid, AvatarInfo)
   
   function SelfWidget.DoBlockAction()
+    local WorldContext = GetStableWorldContext(SelfWidget)
     if FriendModel:GetBlackListDict()[TargetUid] then
       FriendController:SendCancelBlackList(TargetUid, AvatarInfo)
     else
-      FriendController:OpenAddBlacklistDialog(SelfWidget, AvatarInfo)
+      FriendController:OpenAddBlacklistDialog(WorldContext, AvatarInfo)
     end
     CloseHeadAnchor(SelfWidget.Owner)
   end
   
-  SelfWidget.Btn_Block.Button_Area.OnClicked:Clear()
-  SelfWidget.Btn_Block.Button_Area.OnClicked:Add(SelfWidget, function()
+  BindHeadBtnAction(SelfWidget.Btn_Block, SelfWidget, function()
     SelfWidget.DoBlockAction()
   end)
 end
@@ -285,14 +307,14 @@ local function BindReportButton(SelfWidget, AvatarInfo, AllowNegative)
     CloseHeadAnchor(SelfWidget.Owner)
   end
   
-  SelfWidget.Btn_Report.Button_Area.OnClicked:Clear()
-  SelfWidget.Btn_Report.Button_Area.OnClicked:Add(SelfWidget, function()
+  BindHeadBtnAction(SelfWidget.Btn_Report, SelfWidget, function()
     SelfWidget.DoReportAction()
   end)
 end
 
 local function InitReportButton(SelfWidget, AvatarInfo, BtnOption)
   local ShowReportBtn = BtnOption.ShowReportBtn
+  local AllowReportInNonChatContext = BtnOption.AllowReportInNonChatContext == true
   if nil == ShowReportBtn then
     ShowReportBtn = true
   end
@@ -305,8 +327,19 @@ local function InitReportButton(SelfWidget, AvatarInfo, BtnOption)
   local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
   local Channel = ChatController:GetModel():GetCurrentChannel()
   local ShowNegativeAttitudeOption = Channel == ChatCommon.ChannelDef.InTeam
-  local AllowNegative = FriendController:GetAllowNegativeAttitude(ShowNegativeAttitudeOption)
-  local AllowReport = not InBounsScene and not IsInDungeon and SelfWidget.Owner and nil ~= SelfWidget.Owner._MessageContent
+  local AllowNegative = BtnOption.AllowNegativeAttitude
+  if nil == AllowNegative then
+    AllowNegative = FriendController:GetAllowNegativeAttitude(ShowNegativeAttitudeOption)
+  end
+  local HasMessageContent = SelfWidget.Owner and nil ~= SelfWidget.Owner._MessageContent
+  local AllowReport = false
+  if GWorld:GetAvatar():IsInHardBoss() then
+    AllowReport = not InBounsScene and HasMessageContent
+  elseif InBounsScene or IsInDungeon then
+    AllowReport = true
+  else
+    AllowReport = HasMessageContent or AllowReportInNonChatContext
+  end
   if not AllowReport then
     SelfWidget.Btn_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
@@ -358,10 +391,26 @@ function M:Init(AvatarInfo, GuildInfo, FuncList, BtnOption)
   InitOtherButtons(self, AvatarInfo, self.BtnOption)
   InitMenuList(self, FuncList, AvatarInfo, GuildInfo)
   RefreshControllerVisibility(self)
+  SetDefaultMenuFocus(self)
 end
 
 function M:BP_GetDesiredFocusTarget()
   return self.List_Btn or self
+end
+
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    if InKeyName == UIConst.GamePadKey.SpecialLeft or "Gamepad_Special_Left" == InKeyName then
+      self.DoBlockAction()
+      return UWidgetBlueprintLibrary.Handled()
+    elseif InKeyName == UIConst.GamePadKey.SpecialRight or "Gamepad_Special_Right" == InKeyName then
+      self.DoReportAction()
+      return UWidgetBlueprintLibrary.Handled()
+    end
+  end
+  return UWidgetBlueprintLibrary.UnHandled()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -375,13 +424,13 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       if self.bCanOpenGuildDetail then
         self:OpenGuildDetailPopup()
         return UWidgetBlueprintLibrary.Handled()
+      else
+        return self:TriggerFirstMenuAction()
       end
-    elseif InKeyName == UIConst.GamePadKey.SpecialLeft then
-      self.Owner.IgnoreNextSpecialLeftKeyUp = true
+    elseif InKeyName == UIConst.GamePadKey.SpecialLeft or "Gamepad_Special_Left" == InKeyName then
       self.DoBlockAction()
       return UWidgetBlueprintLibrary.Handled()
-    elseif InKeyName == UIConst.GamePadKey.SpecialRight then
-      self.Owner.IgnoreNextSpecialLeftKeyUp = true
+    elseif InKeyName == UIConst.GamePadKey.SpecialRight or "Gamepad_Special_Right" == InKeyName then
       self.DoReportAction()
       return UWidgetBlueprintLibrary.Handled()
     end
@@ -398,7 +447,19 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
   return UWidgetBlueprintLibrary.UnHandled()
 end
 
+function M:TriggerFirstMenuAction()
+  if self.List_Btn:GetNumItems() > 0 then
+    local FirstItem = self.List_Btn:GetItemAt(0)
+    if FirstItem and FirstItem.Callback then
+      FirstItem.Callback()
+      return UWidgetBlueprintLibrary.Handled()
+    end
+  end
+  return UWidgetBlueprintLibrary.UnHandled()
+end
+
 function M:OpenGuildDetailPopup()
+  PageJumpUtils:CloseFrontDialog()
   AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_small", nil, nil)
   GuildController:OpenGuildDetailPopup(self, self.GuildDetailGuildId)
   CloseHeadAnchor(self.Owner)

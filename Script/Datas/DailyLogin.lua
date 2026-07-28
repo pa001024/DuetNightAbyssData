@@ -148,5 +148,16 @@ return ReadOnly("DailyLogin", {
     EventId = 101015,
     EventReward = T.RT_2,
     LoginDuration = 5
+  },
+  [101016] = {
+    EventId = 101016,
+    EventReward = T.RT_2,
+    LoginDuration = 5
+  },
+  [101017] = {
+    EventId = 101017,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Eve/WBP_Activity_SevenDayItems_Eve.WBP_Activity_SevenDayItems_Eve"
   }
 })

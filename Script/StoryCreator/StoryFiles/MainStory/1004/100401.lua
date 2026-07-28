@@ -122,12 +122,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101107,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Kamila_1220002",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -209,6 +209,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "BP_Chapeter03TalkEnd",
@@ -265,12 +266,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101101,
         SubRegionIdList = {106001},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_Chao03QuestDe01",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -300,12 +301,6 @@ return {
           },
           {
             startQuest = "177743259002215801",
-            startPort = "Region_1",
-            endQuest = "177735136648843043295",
-            endPort = "In"
-          },
-          {
-            startQuest = "177743259002215801",
             startPort = "LastDefaultOut",
             endQuest = "177735136648843043295",
             endPort = "In"
@@ -317,15 +312,21 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "177797312496510322946",
+            startPort = "Out",
+            endQuest = "177743256136615097",
+            endPort = "In"
+          },
+          {
             startQuest = "177743259002215801",
-            startPort = "Region_2",
+            startPort = "Region_1",
             endQuest = "177797312496510322946",
             endPort = "Input"
           },
           {
-            startQuest = "177797312496510322946",
-            startPort = "Out",
-            endQuest = "177743256136615097",
+            startQuest = "177743259002215801",
+            startPort = "Region_2",
+            endQuest = "177735136648843043295",
             endPort = "In"
           }
         },
@@ -355,7 +356,7 @@ return {
             key = "177735136648843043295",
             type = "PickUpInteractiveNode",
             name = "任务交互",
-            pos = {x = 1315.1176470588234, y = 308},
+            pos = {x = 1297.470588235294, y = 304.47058823529414},
             propsData = {
               StaticCreatorId = 271192074,
               UnitId = 10092,
@@ -364,7 +365,8 @@ return {
               LongPressTime = 0,
               MontageName = "",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["177743256136615097"] = {
@@ -398,6 +400,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -448,6 +451,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -477,7 +481,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10040301.10040301'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -498,6 +502,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -536,19 +541,21 @@ return {
             pos = {x = 751.0284669957992, y = 285.8081555468126},
             propsData = {
               IsWaitingEnterRegion = false,
-              RegionIds = {101101, 106001}
+              RegionIds = {106001, 101101}
             }
           },
           ["177797312496510322946"] = {
             key = "177797312496510322946",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 1043.64637721625, y = 457.93452464051376},
+            pos = {x = 1024.9133455420417, y = 553.952624188025},
             propsData = {
               TargetTime = 13,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           }
         },
@@ -581,12 +588,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Dudu_272480277",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 100401
       },
       questNodeData = {
@@ -747,6 +754,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -819,12 +827,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToDX_272480302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1012,12 +1020,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {106301},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToPart_272480303",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1211,12 +1219,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106301,
         SubRegionIdList = {106001},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToDX_272480302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1404,12 +1412,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106301,
         SubRegionIdList = {106001},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToDX_272480302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1597,12 +1605,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106301,
         SubRegionIdList = {106001},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToDX_272480302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1790,12 +1798,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106301,
         SubRegionIdList = {106001},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToDX_272480302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2048,12 +2056,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_BackToDX_272480302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {

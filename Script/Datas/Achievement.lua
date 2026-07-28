@@ -5613,6 +5613,16 @@ return ReadOnly("Achievement", {
     TargetProgress = 15,
     TargetProgressRenew = T.RT_13
   },
+  [10200301] = {
+    AchievementDescribe = "UI_Achievement_Des_10200301",
+    AchievementId = 10200301,
+    AchievementName = "UI_Achievement_Name_10200301",
+    AchievementRarity = 3,
+    AchievementReward = 506380,
+    AchievementType = 1,
+    TargetId = {10200301},
+    TargetProgress = 1
+  },
   [17002001] = {
     AchievementDescribe = "UI_Achievement_Des_17002001",
     AchievementId = 17002001,

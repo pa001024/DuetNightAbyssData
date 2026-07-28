@@ -28,7 +28,8 @@ ActivityCommon.AllUpdateTag = {
 ActivityCommon.EventId = {
   OnRefreshInNextDay = "OnRefreshInNextDay",
   OnRefreshWithActivityOpen = "OnRefreshWithActivityOpen",
-  OnRefreshWithActivityClose = "OnRefreshWithActivityClose"
+  OnRefreshWithActivityClose = "OnRefreshWithActivityClose",
+  RefreshActivityEntryVideo = "RefreshActivityEntryVideo"
 }
 ActivityCommon.NeedRefreshInNextDay = {
   DailyLoginFirst = 101001,
@@ -39,8 +40,12 @@ ActivityCommon.NeedRefreshInNextDay = {
 ActivityCommon.GlobalPakForbidTabId = {
   [105001] = 1
 }
-ActivityCommon.AccessoryDropActivityIds = {103020, 10302001}
-ActivityCommon.AccessoryDropResources = {221, 223}
+ActivityCommon.AccessoryDropActivityIds = {10302002}
+ActivityCommon.AccessoryDropResources = {
+  221,
+  223,
+  224
+}
 
 function ActivityCommon.GenerateAllRewardIds(RewardIds)
   local RewardType, RewardList = DataMgr.RewardType, {}

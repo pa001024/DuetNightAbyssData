@@ -10,7 +10,8 @@ local PlayTypes = {
 local SoundPrioritys = {
   Level = "Level",
   StoryCustom = "StoryCustom",
-  Invite = "Invite"
+  Invite = "Invite",
+  CGReview = "CGReview"
 }
 local SoundTypeMap = {
   SOUND_BGM = 0,
@@ -216,7 +217,7 @@ function M:PlayOrStopBGM(Params)
   local Value = Params.Value or 0
   local RelatedRegionId = Params.RelatedRegionId or {}
   local ClientRelatedRegionId = Params.ClientRelatedRegionId or {}
-  local bStoreToServer = Params.bStoreToServer or true
+  local bStoreToServer = Params.bStoreToServer
   local SoundType = SoundTypeMap[Params.SoundType]
   local PlayType = Params.PlayType
   local RelateRegionIdArray = {}
@@ -263,6 +264,8 @@ function M:PlayBGM(SoundPriority, SoundType, EventPath, Key, Value, RelatedRegio
     self:PlayStoryCustomBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer, SoundUnitKey)
   elseif SoundPriority == SoundPrioritys.Invite then
     self:PlayInviteBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId, bStoreToServer)
+  elseif SoundPriority == SoundPrioritys.CGReview then
+    self:PlayCGReviewBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId)
   else
     DebugPrint("Error: TalkDSL PlayOrStopBGM Func Play. SoundPriority is Wrong!", SoundPriority)
   end
@@ -285,6 +288,10 @@ function M:PlayStoryCustomBGM(SoundType, Event, Key, Value, RelatedRegionId, Cli
   self.AudioManager:PlayStoryCustomBGM(SoundType, Event, SoundUnitKey, Key, Value, RelatedRegionId, ClientRelatedRegionId)
 end
 
+function M:PlayCGReviewBGM(SoundType, Event, Key, Value, RelatedRegionId, ClientRelatedRegionId)
+  self.AudioManager:PlayCGReviewBGM(SoundType, Event, RelatedRegionId, ClientRelatedRegionId, Key, Value, false)
+end
+
 function M:PauseBGM(SoundType)
   self.AudioManager:SetSceneSoundPause(SoundType, true)
 end
@@ -296,6 +303,8 @@ function M:StopBGM(SoundPriority, SoundType, SoundUnitKey)
     self:StopStoryCustomBGM(SoundType, SoundUnitKey)
   elseif SoundPriority == SoundPrioritys.Invite then
     self:StopInviteBGM(SoundType)
+  elseif SoundPriority == SoundPrioritys.CGReview then
+    self:StopCGReviewBGM(SoundType)
   else
     DebugPrint("Error: TalkDSL PlayOrStopBGM Func Play. SoundPriority is Wrong!", SoundPriority)
   end
@@ -316,6 +325,10 @@ function M:StopStoryCustomBGM(SoundType, SoundUnitKey)
     return
   end
   self.AudioManager:StopStoryCustomBGM(SoundType, SoundUnitKey)
+end
+
+function M:StopCGReviewBGM(SoundType)
+  self.AudioManager:StopCGReviewBGM(SoundType)
 end
 
 function M:ResumeBGM(SoundType)

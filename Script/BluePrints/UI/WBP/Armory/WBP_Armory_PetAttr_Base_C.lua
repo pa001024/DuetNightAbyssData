@@ -19,6 +19,7 @@ function M:Construct()
     self.Btn_Intensify,
     self.Btn_Replace
   }
+  self.Text_Invisible:SetText(GText("Pet_Invisible"))
   self.Text_Skill:SetText(GText("UI_Armory_Skill"))
   self.List_Skill:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.List_Skill.bIsFocusable = false
@@ -33,6 +34,20 @@ function M:Construct()
     OnAddedToFocusPath = self.OnEntryWidgetAddedToFocusPath
   })
   self.Text_Preview:SetText(GText("UI_Preview_Title"))
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and self.Com_SwitchCheckBox then
+    self.Com_SwitchCheckBox:SetChecked(not Avatar.ShowPet)
+  end
+  if self.Btn_Invisible_Area then
+    self.Btn_Invisible_Area.OnClicked:Add(self, self.BtnInvisibleArea)
+    self.Btn_Invisible_Area.OnHovered:Add(self, self.OnHovered)
+    self.Btn_Invisible_Area.OnUnHovered:Add(self, self.OnUnHovered)
+  end
+  self:InitPetIsShowReddot()
+  self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if EMCache:Get("PetIsShowNew", true) then
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnIntensifyBtnClicked()
@@ -285,6 +300,77 @@ function M:OnPlayPetFresnel()
   rawset(self, "ShouldPlayNormalIn", true)
   self.WB_EntryItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:PlayEntriesInAnim()
+end
+
+function M:InitPetIsShowReddot()
+  if self.IsPreviewMode or not self.Com_SwitchCheckBox then
+    return
+  end
+end
+
+function M:OnHovered()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar.ShowPet then
+    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Close_Hover)
+  else
+    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Open_Hover)
+  end
+end
+
+function M:OnUnHovered()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar.ShowPet then
+    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Close_Unhover)
+  else
+    self.Com_SwitchCheckBox:PlayAnimation(self.Com_SwitchCheckBox.Open_Unhover)
+  end
+end
+
+function M:BtnInvisibleArea()
+  if not EMCache:Get("PetIsShowNew", true) then
+    ArmoryUtils:SetPetIsShowReddotRead()
+  end
+  if not EMCache:Get("PetIsShowNew", true) then
+    self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar.ShowPet then
+    local Params = {}
+    
+    function Params.RightCallbackFunction()
+      local function SetShowPetCallBack(Ret, IsShow)
+        if 0 == Ret then
+          self.Com_SwitchCheckBox:SetChecked(not IsShow)
+        end
+      end
+      
+      local Avatar = GWorld:GetAvatar()
+      Avatar:SetShowPet(SetShowPetCallBack, not Avatar.ShowPet)
+    end
+    
+    UIManager(self):ShowCommonPopupUI(100382, Params, self)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/switch_off", nil, nil)
+  else
+    local function SetShowPetCallBack(Ret, IsShow)
+      if 0 == Ret then
+        self.Com_SwitchCheckBox:SetChecked(not IsShow)
+      end
+    end
+    
+    local Avatar = GWorld:GetAvatar()
+    Avatar:SetShowPet(SetShowPetCallBack, not Avatar.ShowPet)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/switch_on", nil, nil)
+  end
+end
+
+function M:Destruct()
+  if self.Btn_Invisible_Area then
+    self.Btn_Invisible_Area.OnClicked:Remove(self, self.BtnInvisibleArea)
+    self.Btn_Invisible_Area.OnClicked:Remove(self, self.OnUnHovered)
+    self.Btn_Invisible_Area.OnClicked:Remove(self, self.OnHovered)
+  end
 end
 
 AssembleComponents(M)

@@ -38,6 +38,30 @@
     "t": 1
   },
   {
+    "id": 111,
+    "icon": "Exchange",
+    "n": "Adagio coordonné : Jusqu’à la dernière goutte de sang",
+    "d": "L’ATQ des alliés diminue de 150%, mais leur Puissance de compétence augmente de 100%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 112,
+    "icon": "Exchange",
+    "n": "Adagio coordonné : Tempête à la dérive",
+    "d": "L’ATQ des alliés diminue de 150%, mais leur Tir multiple augmente de 120%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 121,
+    "icon": "Exchange",
+    "n": "Adagio coordonné : Adieux pesants",
+    "d": "Les dégâts infligés par les alliés sont réduits de 12%, mais leurs DGT d’arme sont augmentés de 50%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
     "id": 201,
     "icon": "Mon_Survive02",
     "n": "Résonance défensive : Paladin tremblant",
@@ -98,6 +122,54 @@
     "icon": "Mon_Survive02",
     "n": "Résonance de bouclier : Ombre de l’immortel",
     "d": "Les ennemis restaurent 30% de leur bouclier maximal toutes les 3 s. Cette régénération est interrompue lorsqu’un Effet supplémentaire élémentaire est actif.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 212,
+    "icon": "Mon_Survive02",
+    "n": "Résonance défensive : Talon du héros",
+    "d": "Les ennemis subissent 80% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts, cette réduction diminue de 1%. Chaque fois qu’ils subissent un coup critique, cette réduction diminue d’un montant supplémentaire de 1%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 213,
+    "icon": "Mon_Survive02",
+    "n": "Résonance défensive : Gloire du tireur d’élite",
+    "d": "Les ennemis subissent 80% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts, cette réduction diminue de 1%. Les DGT d’arme à distance réduisent cet effet d’un montant supplémentaire de 1%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 214,
+    "icon": "Mon_Survive02",
+    "n": "Résonance défensive : Cœur vaillant",
+    "d": "Les ennemis subissent 80% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts, cette réduction diminue de 1%. Les DGT d’arme réduisent cet effet d’un montant supplémentaire de 1%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 215,
+    "icon": "Mon_Survive02",
+    "n": "Résonance défensive : Gloire du bretteur",
+    "d": "Les ennemis subissent 80% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts, cette réduction diminue de 1%. Les DGT d’arme de mêlée réduisent cet effet d’un montant supplémentaire de 3%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 216,
+    "icon": "Mon_Survive02",
+    "n": "Résonance défensive : Épreuve ininterrompue",
+    "d": "Les ennemis subissent 80% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts, cette réduction diminue de 1%. Les Dégâts sur la durée réduisent cet effet d’un montant supplémentaire de 4%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 217,
+    "icon": "Mon_Survive02",
+    "n": "Résonance défensive : Trempe de l’esprit",
+    "d": "Les ennemis subissent 80% de dégâts en moins. Chaque fois qu’ils reçoivent des dégâts, cette réduction diminue de 1%. Les Dégâts de compétence réduisent cet effet d’un montant supplémentaire de 4%.",
     "t": 2,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -428,6 +500,38 @@
     "icon": "Skill",
     "n": "Allegro féroce : Appel à la victoire",
     "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne un cumul augmentant la Puissance de compétence de 30% pendant 18 s, cumulable jusqu’à 5 fois.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 15111,
+    "icon": "Common",
+    "n": "Andante furioso : À force d’eau, la pierre cède",
+    "d": "Lorsqu’un allié inflige des dégâts, les dégâts subis par la cible augmentent de 5% pendant 10 s. Les effets appliqués par des alliés différents peuvent se cumuler, jusqu’à 10 cumuls.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 15121,
+    "icon": "Common",
+    "n": "Andante furioso : Don de l’assaut",
+    "d": "Toutes les 5 instances de dégâts infligées par un allié confèrent un cumul de +15% d’ATQ pendant 10 s, jusqu’à 10 cumuls.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 15211,
+    "icon": "Common",
+    "n": "Andante furioso : Expédition glorieuse",
+    "d": "Toutes les 10 instances de dégâts infligées par un allié confèrent un cumul de +6% de Vigueur pendant 10 s, jusqu’à 10 cumuls.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 15221,
+    "icon": "Common",
+    "n": "Allegro féroce : Astres resplendissants",
+    "d": "Lorsqu’un allié effectue une invocation, tous les alliés obtiennent un effet augmentant les dégâts infligés de 5% pendant 10 s, jusqu’à 10 cumuls.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   }

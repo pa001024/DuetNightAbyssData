@@ -6,6 +6,10 @@ local View = Class({
   "BluePrints.Common.TimerMgr"
 })
 
+function View:Construct()
+  self.List_Equipment:Disablescroll(true)
+end
+
 function View:InitView()
   local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   if GameInputModeSubsystem then
@@ -65,21 +69,8 @@ end
 
 function View:SetNameRarity(Rarity)
   local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
-  if 6 == Rarity then
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_6)
-  elseif 5 == Rarity then
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_5)
-  elseif 4 == Rarity then
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_4)
-  elseif 3 == Rarity then
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_3)
-  elseif 2 == Rarity then
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_2)
-  elseif 1 == Rarity then
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_1)
-  else
-    FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_0)
-  end
+  local Img = self[string.format("Img_Text_%s", Rarity or 0)]
+  FontMaterial:SetTextureParameterValue("IconTex", Img)
 end
 
 return View

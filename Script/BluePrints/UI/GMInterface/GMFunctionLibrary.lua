@@ -884,6 +884,10 @@ function GMFunctionLibrary.HideGMBtnInHUD(WorldContext)
   end
 end
 
+function GMFunctionLibrary.ShowPersonalInfoPage(WorldContext, IsOtherPageKind)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm ShowPersonalInfoPage " .. tostring(IsOtherPageKind or ""))
+end
+
 function GMFunctionLibrary.RecordePlayerRoute(WorldContext, bEnabled)
   local player = UE4.UGameplayStatics.GetPlayerCharacter(WorldContext, 0)
   local class = LoadClass("/Game/BluePrints/Scene/BP_GMRecordPlayerRoute.BP_GMRecordPlayerRoute_C")

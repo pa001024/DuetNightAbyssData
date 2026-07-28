@@ -83,7 +83,7 @@ return {
       key = "17562898248993749",
       type = "StoryNode",
       name = "【变量=0】",
-      pos = {x = 1006.9336870026526, y = 209.18502722323052},
+      pos = {x = 1005.5700506390162, y = 210.5486635868669},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -104,12 +104,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -468,12 +468,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17601671253802615234",
-            startPort = "Out",
-            endQuest = "176543733256461290248",
-            endPort = "In"
-          },
-          {
             startQuest = "176543733256461290253",
             startPort = "Out",
             endQuest = "1756299784976671514",
@@ -525,6 +519,30 @@ return {
             startQuest = "1765883761703655463",
             startPort = "Mobile",
             endQuest = "1765883755179655362",
+            endPort = "In"
+          },
+          {
+            startQuest = "17601671253802615234",
+            startPort = "Out",
+            endQuest = "17828878712043526",
+            endPort = "In"
+          },
+          {
+            startQuest = "17828878712043526",
+            startPort = "Fail",
+            endQuest = "176543733256461290248",
+            endPort = "In"
+          },
+          {
+            startQuest = "17829022551993327",
+            startPort = "Out",
+            endQuest = "1756299784976671514",
+            endPort = "In"
+          },
+          {
+            startQuest = "17828878712043526",
+            startPort = "Success",
+            endQuest = "17829022551993327",
             endPort = "In"
           }
         },
@@ -606,7 +624,7 @@ return {
             pos = {x = 1948.3006928273903, y = 789.6362090372983},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "RespawnPoint_Phase02",
+              NewTargetPointName = "NewRespawnPoint_Phase02",
               FadeIn = false,
               FadeOut = false,
               bResetCamera = false,
@@ -686,6 +704,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -707,6 +726,11 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 210017,
                   TalkActorVisible = true
                 }
               },
@@ -858,6 +882,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1260,7 +1285,7 @@ return {
             key = "176543733256461290251",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 7051.581842311903, y = -511.78449638988906},
+            pos = {x = 6986.127296857358, y = -582.69358729898},
             propsData = {WaitTime = 8}
           },
           ["176543733256461290252"] = {
@@ -1284,7 +1309,7 @@ return {
             key = "176543733256461290253",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 7358.039816668053, y = 112.66954391516451},
+            pos = {x = 7359.239816668053, y = 112.66954391516451},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2320039,
@@ -1375,7 +1400,7 @@ return {
             key = "176543733256461290260",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 7350.679061630251, y = -208.3898093913756},
+            pos = {x = 7347.821918773108, y = -206.96123796280418},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2320041,
@@ -1446,6 +1471,28 @@ return {
             name = "PC/手机平台判断",
             pos = {x = 6128.741874747674, y = -880.3617741381852},
             propsData = {}
+          },
+          ["17828878712043526"] = {
+            key = "17828878712043526",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 6353.5220403384255, y = 300.0709268370001},
+            propsData = {ConditionId = 12010418}
+          },
+          ["17829022551993327"] = {
+            key = "17829022551993327",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 7098.853070041714, y = 411.19065761604065},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "NewRespawnPoint_Phase02",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = false,
+              bForceAsyncLoading = false,
+              IsWhite = false
+            }
           }
         },
         commentData = {
@@ -1526,12 +1573,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1679,6 +1726,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1906,12 +1954,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2247,6 +2295,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2632,12 +2681,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2985,6 +3034,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3432,12 +3482,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -3813,12 +3863,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -4109,6 +4159,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -4116,6 +4167,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4366,12 +4418,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -4505,6 +4557,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -4512,6 +4565,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4543,8 +4597,7 @@ return {
               SoundPath = "event:/bgm/1_1/0116_cs_fushuhuanjing",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {105001},
+              RelatedRegionId = {105001},
               bStoreToServer = false
             }
           },

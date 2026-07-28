@@ -64,6 +64,7 @@ function M:InitCommonView(Content)
     Obj = self,
     Callback = self.OnMenuOpenChangedEvents
   }
+  PropContent.bNotShowAccess = true
   self.Item_Gift:Init(PropContent)
   self:AddTimer(0.01, function()
     self:InitComInput()

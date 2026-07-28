@@ -5,6 +5,13 @@ local M = Class({
 function M:CommonInitInfo(Info)
   M.Super.CommonInitInfo(self, Info)
   self:SetbCanTriggerGameMode(true)
+  if IsAuthority(self) then
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    if GameState then
+      print(_G.LogTag, "gyy BP_Paotai_Weekly_C RegisterGameModeEvent OnDisconnect")
+      GameState:RegisterGameModeEvent("OnDisconnect", self, self.OnDisconnect)
+    end
+  end
 end
 
 function M:GetCanTriggerGameMode()
@@ -70,7 +77,28 @@ function M:EndInteractive(Player)
   self.ChestInteractiveComponent:EndInteractive(Player)
 end
 
+function M:OnDisconnect(AvatarEidStr)
+  print(_G.LogTag, "gyy BP_Paotai_Weekly_C OnDisconnect")
+  if self.OpenState and self.PlayerEid then
+    local Player = Battle(self):GetEntity(self.PlayerEid)
+    if Player and Player.PlayerState then
+      local PlayerAvatarEidStr = Player.PlayerState.AvatarEidStr
+      if PlayerAvatarEidStr == AvatarEidStr then
+        print(_G.LogTag, "gyy BP_Paotai_Weekly_C OnDisconnect CloseMechanism")
+        self:CloseMechanism(self.PlayerEid)
+      end
+    end
+  end
+end
+
 function M:ReceiveEndPlay()
+  if IsAuthority(self) then
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    if GameState then
+      print(_G.LogTag, "gyy BP_Paotai_Weekly_C RemoveGameModeEvent OnDisconnect")
+      GameState:RemoveGameModeEvent("OnDisconnect", self, self.OnDisconnect)
+    end
+  end
   self:CloseUI(self.PlayerEid)
 end
 

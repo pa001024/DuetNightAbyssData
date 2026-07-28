@@ -19,6 +19,13 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopActivity",
     SystemName = "AccessoryDropShop"
   },
+  AccessoryDropShop2 = {
+    MainTabId = {10015},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_AccessoryDrop2.WBP_Shop_BG_AccessoryDrop2'",
+    ShopName = "Event_FreeAppearance_tittle01",
+    ShopUIName = "ShopActivity",
+    SystemName = "AccessoryDropShop2"
+  },
   AppearenceShop = {
     MainTabId = {10010},
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Appearence.WBP_Shop_BG_Appearence'",
@@ -59,9 +66,10 @@ return ReadOnly("Shop", {
   GiftShop = {
     MainTabId = {
       90001,
-      90002,
       90003,
-      90004
+      90004,
+      90005,
+      90006
     },
     PlaySystemUIBGM = "event:/bgm/1_0/0083_system_shop_normal",
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Normal.WBP_Shop_BG_Normal'",
@@ -89,6 +97,20 @@ return ReadOnly("Shop", {
     ShopName = "HuaxuExploreShop",
     ShopUIName = "ShopActivity",
     SystemName = "HuaxuExploreShop"
+  },
+  IronModeShop = {
+    MainTabId = {10013},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Iron.WBP_Shop_BG_Iron'",
+    ShopName = "UI_Play_IronModeShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "IronModeShop"
+  },
+  RaceLotteryShop = {
+    MainTabId = {10011},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Normal.WBP_Shop_BG_Normal'",
+    ShopName = "RaceLotteryShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "RaceLotteryShop"
   },
   RaidShopSeason01 = {
     MainTabId = {10004},
@@ -121,6 +143,13 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopMain",
     SpawnNPCId = 900002,
     SystemName = "Shop"
+  },
+  SoloTreasurePermShop = {
+    MainTabId = {10012},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_SoloTreasure_Permanent.WBP_Shop_BG_SoloTreasure_Permanent'",
+    ShopName = "UI_Play_TreasureHunt_Shop",
+    ShopUIName = "ShopActivity",
+    SystemName = "SoloTreasurePermShop"
   },
   SoloTreasureShop = {
     MainTabId = {10007},

@@ -6,7 +6,8 @@ BagCommon.StuffType = {
   Weapon = "Weapon",
   Mod = "Mod",
   Resource = "Resource",
-  Draft = "Draft"
+  Draft = "Draft",
+  IronTicket = "IronTicket"
 }
 BagCommon.ItemTypeToTabId = {
   MeleeWeapon = 101,

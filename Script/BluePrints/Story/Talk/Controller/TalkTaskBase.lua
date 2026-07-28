@@ -9,6 +9,8 @@ local FHideAllNpcsComponent = require("BluePrints.Story.Components.HideAllNpcsCo
 local FExecutionFlowUtils = require("BluePrints.Story.ExecutionFlow.ExecutionFlowUtils")
 local ExpressionComp_C = require("BluePrints.Story.Talk.Controller.ExpressionComp")
 local TalkAudioComp_C = require("BluePrints.Story.Talk.Controller.TalkAudioComp")
+local TalkFlow_C = require("BluePrints.Story.Talk.TalkFlow.TalkFlow")
+local TalkFlowController_C = require("BluePrints.Story.Talk.TalkFlow.TalkFlowController")
 local TalkTaskBase_C = Class()
 
 function TalkTaskBase_C:New(TaskData, TalkType)
@@ -58,11 +60,30 @@ function TalkTaskBase_C:ResumeComp(CompType)
 end
 
 function TalkTaskBase_C:StartWorking(TalkTaskData, TaskFinished_Callback)
-  self:Start(TalkTaskData, TaskFinished_Callback)
+  if TalkTaskData.FlowAsset then
+    self.NodeFinished_Callback = TaskFinished_Callback
+    local TS = TalkSubsystem()
+    TS:StartFlowTalkTask(TalkTaskData.FlowAsset)
+  else
+    self:Start(TalkTaskData, TaskFinished_Callback)
+  end
+end
+
+function TalkTaskBase_C:ContinueFlowStart(OnFlowReady)
+  self.FlowReadyCallback = OnFlowReady
+  self:Start(self.TaskData, self.NodeFinished_Callback)
 end
 
 function TalkTaskBase_C:TryEndFlowGraph()
   self.DialogueFlowGraphComponent:OnTalkEnd()
+end
+
+function TalkTaskBase_C:TryFireEndingCallback(...)
+  if self.NodeFinished_Callback and self.NodeFinished_Callback[2] then
+    local NodeFinished_Obj = self.NodeFinished_Callback[1]
+    local NodeFinished_Func = self.NodeFinished_Callback[2]
+    NodeFinished_Func(NodeFinished_Obj, self, ...)
+  end
 end
 
 function TalkTaskBase_C:GetTalkComps()
@@ -93,7 +114,7 @@ function TalkTaskBase_C:PauseSnapShot()
   AudioManager(GWorld.GameInstance):UpdateTalkSnapShotParam(0)
 end
 
-function TalkTaskBase_C:OnPlayingDialogue(DialogueData)
+function TalkTaskBase_C:UpdateTalkSnapShot(DialogueData)
   local RawData = DataMgr.Dialogue[DialogueData.DialogueId]
   if RawData and RawData.SnapShot then
     AudioManager(GWorld.GameInstance):UpdateTalkSnapShotParam(Const.DialogueSnapShot[RawData.SnapShot])
@@ -112,6 +133,73 @@ function TalkTaskBase_C:IterateDialogue(...)
   if self.DialogueIterationComponent then
     self.DialogueIterationComponent:Iterate(...)
   end
+end
+
+function TalkTaskBase_C:StartTalkFlow()
+  if not self.TalkFlowController then
+    DebugPrint("TalkTaskBase_C:StartTalkFlow TalkFlowController is nil", self:GetTalkType())
+    return
+  end
+  if self.DialogueFlowGraphComponent and self.TalkTaskData and IsValid(self.TalkTaskData.FlowAsset) then
+    self.TalkFlowController:RegisterFlowGraph(self.DialogueFlowGraphComponent)
+    self.TalkFlowController:Start()
+    return
+  end
+  local TalkFlow = self:CreateTalkFlow()
+  if not TalkFlow then
+    self:EndDialogue()
+    return
+  end
+  self.TalkFlowController:RegisterFlow(TalkFlow)
+  self.TalkFlowController:Start()
+end
+
+function TalkTaskBase_C:GetTalkFlowComps()
+  return {
+    RecordComp = self.DialogueRecordComponent
+  }
+end
+
+function TalkTaskBase_C:CreateTalkFlow()
+  local TalkTaskData = self.TalkTaskData
+  local FirstDialogueId = TalkTaskData and TalkTaskData.FirstDialogueId
+  if not FirstDialogueId or not DataMgr.Dialogue[FirstDialogueId] then
+    return nil
+  end
+  local Comps = self:GetTalkFlowComps()
+  local FlowType = TalkTaskData and TalkTaskData.TalkType
+  local TalkFlow = TalkFlow_C:New(FirstDialogueId, FlowType, self, Comps)
+  if self.OnFlowCreated then
+    TalkFlow:BindOnFlowCreatedEvent(self, self.OnFlowCreated)
+  end
+  TalkFlow:BindOnDialogueEndEvent(self, self.EndDialogue)
+  TalkFlow:BindOnFlowEndEvent(self, self.OnFlowEnd)
+  TalkFlow:BuildFlow()
+  return TalkFlow
+end
+
+function TalkTaskBase_C:StopTalkFlow()
+  if not self.TalkFlowController then
+    DebugPrint("TalkTaskBase_C:StopTalkFlow TalkFlowController is nil", self:GetTalkType())
+    return
+  end
+  self.TalkFlowController:Stop()
+end
+
+function TalkTaskBase_C:PauseTalkFlow()
+  if not self.TalkFlowController then
+    DebugPrint("TalkTaskBase_C:PauseTalkFlow TalkFlowController is nil", self:GetTalkType())
+    return
+  end
+  self.TalkFlowController:Pause()
+end
+
+function TalkTaskBase_C:ResumeTalkFlow()
+  if not self.TalkFlowController then
+    DebugPrint("TalkTaskBase_C:ResumeTalkFlow TalkFlowController is nil", self:GetTalkType())
+    return
+  end
+  self.TalkFlowController:Resume()
 end
 
 function TalkTaskBase_C:EndDialogue(...)
@@ -173,9 +261,13 @@ end
 function TalkTaskBase_C:Clear()
   TalkUtils:RemovePlayerInvincible()
   local BasicType = self:GetBasicTalkType()
-  if BasicType == ETalkType.FixSimple or BasicType == ETalkType.FreeSimple or BasicType == ETalkType.Black or BasicType == ETalkType.Cinematic or BasicType == ETalkType.Impression then
+  if BasicType == ETalkType.FixSimple or BasicType == ETalkType.FreeSimple or BasicType == ETalkType.Black or BasicType == ETalkType.Cinematic then
     self:ClearDefault()
-  else
+  elseif self.TalkTaskData and self.TalkTaskData.FlowAsset then
+    local TS = TalkSubsystem()
+    if IsValid(TS) then
+      TS:UnRegisterFlowTalkTask(self.TalkTaskData.FlowAssetPath)
+    end
   end
 end
 
@@ -226,7 +318,7 @@ end
 function TalkTaskBase_C:OnExceptionInterruptedBySTL()
   TalkUtils:RemovePlayerInvincible()
   local BasicType = self:GetBasicTalkType()
-  if BasicType == ETalkType.FixSimple or BasicType == ETalkType.FreeSimple or BasicType == ETalkType.Black or BasicType == ETalkType.Cinematic or BasicType == ETalkType.Impression or BasicType == ETalkType.RougeLike then
+  if BasicType == ETalkType.FixSimple or BasicType == ETalkType.FreeSimple or BasicType == ETalkType.Black or BasicType == ETalkType.Cinematic or BasicType == ETalkType.RougeLike then
     self:OnExceptionInterruptedBySTLDefault()
   else
     DebugPrint("@@@ error OnExceptionInterruptedBySTL函数未实现", self:GetTalkType())
@@ -514,6 +606,7 @@ end
 function TalkTaskBase_C:CreateComponents()
   self:CreateDialogueRecordComponent()
   self:CreateDialogueFlowGraphComponent()
+  self.TalkFlowController = TalkFlowController_C:New(self)
 end
 
 function TalkTaskBase_C:OnTalkStart(TalkTaskData)
@@ -564,7 +657,7 @@ function TalkTaskBase_C:ProcessShowHide(bIsBegin)
       self.HideAllNpcsComponent:DoHide()
     end
     if self.TalkTaskData.bShowInteractiveActor then
-      self.TalkContext:ShowInteractiveActor(true)
+      self.TalkContext:ShowHideActor(self.TalkTaskData.InteractiveActor, true)
     end
   else
     if self.HideAllMonstersComponent then

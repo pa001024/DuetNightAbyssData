@@ -33,89 +33,176 @@ T.RT_11 = {
   DialogueIds = T.RT_10
 }
 T.RT_12 = {
-  End = "D22CF9684E1C2C9D75EBDCB3404D9F3B"
+  10043601,
+  10043602,
+  10043603,
+  10043604
 }
 T.RT_13 = {
-  End = "B12E988749E2B01A64989B9FF1369476"
+  DialogueIds = T.RT_12
 }
 T.RT_14 = {
-  End = "48EFCE1940260F0BE8CE81BAED6F1E6C"
+  End = "D22CF9684E1C2C9D75EBDCB3404D9F3B"
 }
 T.RT_15 = {
-  End = "B2EDB10A4D1F21FF37AC8BA57F83CF13"
+  End = "B12E988749E2B01A64989B9FF1369476"
 }
 T.RT_16 = {
-  End = "2F0B511C44206C1F4825D0A9FD7A6790"
+  End = "48EFCE1940260F0BE8CE81BAED6F1E6C"
 }
 T.RT_17 = {
-  End = "5AECFABE417D180CC07913BC75B7AE2A"
+  End = "B2EDB10A4D1F21FF37AC8BA57F83CF13"
 }
-T.RT_18 = {
-  End = "A0BBDF7F4009182EF7A90D945389203B"
-}
+T.RT_18 = {10044321}
 T.RT_19 = {
-  End = "D064B9A34693884EDB0F77AF563DAB84"
+  DialogueIds = T.RT_18
 }
 T.RT_20 = {
-  End = "E504BBC244783B26D9DA2897CE8402DC"
+  End = "2F0B511C44206C1F4825D0A9FD7A6790"
 }
 T.RT_21 = {
+  End = "5AECFABE417D180CC07913BC75B7AE2A"
+}
+T.RT_22 = {
+  End = "A0BBDF7F4009182EF7A90D945389203B"
+}
+T.RT_23 = {
+  End = "D064B9A34693884EDB0F77AF563DAB84"
+}
+T.RT_24 = {
+  End = "E504BBC244783B26D9DA2897CE8402DC"
+}
+T.RT_25 = {
   End = "D01D770242D508BFAFBD17A9D47D55F3"
 }
-T.RT_22 = {12042912, 12042913}
-T.RT_23 = {
+T.RT_26 = {12042912, 12042913}
+T.RT_27 = {
   [12042912] = "Fail_12",
   [12042913] = "Fail_13"
 }
-T.RT_24 = {
+T.RT_28 = {
   [12042912] = "Option_12",
   [12042913] = "Option_13"
 }
-T.RT_25 = {
-  DialogueIds = T.RT_22,
-  OptionFailOutPut = T.RT_23,
-  OptionOutput = T.RT_24
-}
-T.RT_26 = {
-  End = "434CB0D14C54F1DCEABB8CB1142D7BD1"
-}
-T.RT_27 = {
-  End = "2A61C0AF40761FEEE03000B14B2189EF"
-}
-T.RT_28 = {
-  End = "7FE724794A930F17719DF1BCD049EAF5"
-}
 T.RT_29 = {
-  End = "11009553468701C535686FAD9EEED76D"
+  DialogueIds = T.RT_26,
+  OptionFailOutPut = T.RT_27,
+  OptionOutput = T.RT_28
 }
 T.RT_30 = {
-  End = "3FF0AF724F8BEAEAEA1C75977A95DEBE"
+  End = "434CB0D14C54F1DCEABB8CB1142D7BD1"
 }
 T.RT_31 = {
-  End = "F9268C8B4249A71925C452AD42FD3AA2"
+  End = "2A61C0AF40761FEEE03000B14B2189EF"
 }
 T.RT_32 = {
-  End = "FFB47D074189596A682AD1B6BF0F448E"
+  End = "7FE724794A930F17719DF1BCD049EAF5"
 }
 T.RT_33 = {
-  End = "9A93A3374B168AE2803418AD9CB8BA20"
+  Option_6 = "29960D2A4DAF1149A2A39991B2A5D486",
+  Option_7 = "993093B345C052C18BEB0A9736E4A140"
 }
-T.RT_34 = {
-  End = "C798E34B4B583E99FA3EF59B33243526"
-}
+T.RT_34 = {10044606, 10044607}
 T.RT_35 = {
-  End = "183A21E1454ED5BBF5E0B381367B9645"
+  [10044606] = "Option_6",
+  [10044607] = "Option_7"
 }
 T.RT_36 = {
-  End = "454ED4A141C91546F4374DA1A4C1C8B0"
+  End = "11009553468701C535686FAD9EEED76D"
 }
 T.RT_37 = {
-  End = "639EDE774A2B6DF4AEE739B27CEB887E"
+  End = "3FF0AF724F8BEAEAEA1C75977A95DEBE"
 }
 T.RT_38 = {
-  End = "80BC98E3420465902151B698993509F4"
+  End = "F9268C8B4249A71925C452AD42FD3AA2"
 }
 T.RT_39 = {
+  End = "FFB47D074189596A682AD1B6BF0F448E"
+}
+T.RT_40 = {
+  10043605,
+  10043606,
+  10043607
+}
+T.RT_41 = {
+  [10043605] = "Fail_5",
+  [10043606] = "Fail_6",
+  [10043607] = "Fail_7"
+}
+T.RT_42 = {
+  [10043605] = "Option_5",
+  [10043606] = "Option_6",
+  [10043607] = "Option_7"
+}
+T.RT_43 = {
+  DialogueIds = T.RT_40,
+  OptionFailOutPut = T.RT_41,
+  OptionOutput = T.RT_42
+}
+T.RT_44 = {
+  End = "9A93A3374B168AE2803418AD9CB8BA20"
+}
+T.RT_45 = {
+  End = "C798E34B4B583E99FA3EF59B33243526"
+}
+T.RT_46 = {
+  End = "183A21E1454ED5BBF5E0B381367B9645"
+}
+T.RT_47 = {
+  End = "454ED4A141C91546F4374DA1A4C1C8B0"
+}
+T.RT_48 = {
+  End = "C34EFEC64A53ABAEDAD2B18F4E0F8E54"
+}
+T.RT_49 = {
+  10043611,
+  10043612,
+  10043613,
+  10043614,
+  10043615,
+  10043616,
+  10043617,
+  10043618,
+  10043619,
+  10043620,
+  10043621,
+  10043622,
+  10043623,
+  10043624,
+  10043625
+}
+T.RT_50 = {
+  DialogueIds = T.RT_49
+}
+T.RT_51 = {
+  10044301,
+  10044302,
+  10044303,
+  10044304,
+  10044305,
+  10044306,
+  10044307,
+  10044308,
+  10044309,
+  10044310,
+  10044311,
+  10044312,
+  10044313,
+  10044314,
+  10044315,
+  10044316,
+  10044317
+}
+T.RT_52 = {
+  DialogueIds = T.RT_51
+}
+T.RT_53 = {
+  End = "639EDE774A2B6DF4AEE739B27CEB887E"
+}
+T.RT_54 = {
+  End = "80BC98E3420465902151B698993509F4"
+}
+T.RT_55 = {
   12042916,
   12042917,
   12042918,
@@ -150,27 +237,40 @@ T.RT_39 = {
   12042947,
   12042948
 }
-T.RT_40 = {
-  DialogueIds = T.RT_39
+T.RT_56 = {
+  DialogueIds = T.RT_55
 }
-T.RT_41 = {
+T.RT_57 = {
   End = "244FAAED40B0158B3C6B728ED4C1AD4B"
 }
-T.RT_42 = {
+T.RT_58 = {
   End = "8CF5C82444D4E687A11E2AB19DCC0E07"
 }
-T.RT_43 = {
+T.RT_59 = {
   12043716,
   12043717,
   12043718
 }
-T.RT_44 = {
-  DialogueIds = T.RT_43
+T.RT_60 = {
+  DialogueIds = T.RT_59
 }
-T.RT_45 = {
+T.RT_61 = {
   End = "2DBE6FC74BE99594907E43A930A984E9"
 }
-T.RT_46 = {
+T.RT_62 = {
+  End = "DFD354524BD98132BA4100BE09438BAA"
+}
+T.RT_63 = {
+  10044001,
+  10044002,
+  10044003,
+  10044004,
+  10044005
+}
+T.RT_64 = {
+  DialogueIds = T.RT_63
+}
+T.RT_65 = {
   12043751,
   12043752,
   12043753,
@@ -178,81 +278,100 @@ T.RT_46 = {
   12043755,
   12043756
 }
-T.RT_47 = {
-  DialogueIds = T.RT_46
+T.RT_66 = {
+  DialogueIds = T.RT_65
 }
-T.RT_48 = {
+T.RT_67 = {
   End = "38D455C7415668E49CA93BAC6BDC012C"
 }
-T.RT_49 = {12042914}
-T.RT_50 = {
-  DialogueIds = T.RT_49
+T.RT_68 = {12042914}
+T.RT_69 = {
+  DialogueIds = T.RT_68
 }
-T.RT_51 = {
+T.RT_70 = {
   End = "F848BD404E3C5E25E0966197D97AF0E7"
 }
-T.RT_52 = {
+T.RT_71 = {
   End = "17A04D32439175C7A478D6815C8DCAF1"
 }
-T.RT_53 = {
+T.RT_72 = {
+  End = "B7BDFE564D9CF695CDB54C9FA42F069C"
+}
+T.RT_73 = {
   End = "E1139E7B4250AD3E67576BAF1E1A5CA8"
 }
-T.RT_54 = {
+T.RT_74 = {10043610}
+T.RT_75 = {
+  DialogueIds = T.RT_74
+}
+T.RT_76 = {
   End = "63CD31FB4A81A44642F1EC90B801CB65"
 }
-T.RT_55 = {
+T.RT_77 = {
   End = "B29CD1E34F0717BF7A5A8AB80CF15303"
 }
-T.RT_56 = {
+T.RT_78 = {
   End = "CD24F7D84EF3967BB7A1E399838DC0F7"
 }
-T.RT_57 = {12043750}
-T.RT_58 = {
+T.RT_79 = {12043750}
+T.RT_80 = {
   [12043750] = "Option_50"
 }
-T.RT_59 = {
-  DialogueIds = T.RT_57,
-  OptionOutput = T.RT_58
+T.RT_81 = {
+  DialogueIds = T.RT_79,
+  OptionOutput = T.RT_80
 }
-T.RT_60 = {12043711, 12043712}
-T.RT_61 = {
+T.RT_82 = {12043711, 12043712}
+T.RT_83 = {
   [12043711] = "Fail_11",
   [12043712] = "Fail_12"
 }
-T.RT_62 = {
+T.RT_84 = {
   [12043711] = "Option_11",
   [12043712] = "Option_12"
 }
-T.RT_63 = {
-  DialogueIds = T.RT_60,
-  OptionFailOutPut = T.RT_61,
-  OptionOutput = T.RT_62
+T.RT_85 = {
+  DialogueIds = T.RT_82,
+  OptionFailOutPut = T.RT_83,
+  OptionOutput = T.RT_84
 }
-T.RT_64 = {
+T.RT_86 = {
   End = "76828C0045C719129F357880960C1AAE"
 }
-T.RT_65 = {
+T.RT_87 = {
   End = "758DF9BA46E67793880EFCACF6AAFE1B"
 }
-T.RT_66 = {
+T.RT_88 = {
   Option_281 = "56B7C1C045101E31A2BBAD84D43CAF84",
   Option_282 = "2F65012C448211F784D8139F997774CF"
 }
-T.RT_67 = {120223281, 120223282}
-T.RT_68 = {
+T.RT_89 = {120223281, 120223282}
+T.RT_90 = {
   [120223281] = "Option_281",
   [120223282] = "Option_282"
 }
-T.RT_69 = {12043741, 12043742}
-T.RT_70 = {
+T.RT_91 = {12043741, 12043742}
+T.RT_92 = {
   [12043741] = "Option_41",
   [12043742] = "Option_42"
 }
-T.RT_71 = {
-  DialogueIds = T.RT_69,
-  OptionOutput = T.RT_70
+T.RT_93 = {
+  DialogueIds = T.RT_91,
+  OptionOutput = T.RT_92
 }
-T.RT_72 = {
+T.RT_94 = {
+  End = "2FA3EEDB496C97D24BC8B9BD01D5198F"
+}
+T.RT_95 = {10043609}
+T.RT_96 = {
+  DialogueIds = T.RT_95
+}
+T.RT_97 = {
+  10044318,
+  10044319,
+  10044320
+}
+T.RT_98 = {
   12043743,
   12043744,
   12043745,
@@ -261,32 +380,32 @@ T.RT_72 = {
   12043748,
   12043749
 }
-T.RT_73 = {
-  DialogueIds = T.RT_72
+T.RT_99 = {
+  DialogueIds = T.RT_98
 }
-T.RT_74 = {
+T.RT_100 = {
   End = "EB8DA646413570F9928A9BA308ABDBC7"
 }
-T.RT_75 = {
+T.RT_101 = {
   End = "F4A852AB43FB5112DC974B9B7C396840"
 }
-T.RT_76 = {
+T.RT_102 = {
   End = "76C1BA0C4C8B058F88A5E9B77F7FF265"
 }
-T.RT_77 = {
+T.RT_103 = {
   End = "6D30E9114F6B989BFD7B5483592340CF"
 }
-T.RT_78 = {12042915}
-T.RT_79 = {
-  DialogueIds = T.RT_78
+T.RT_104 = {12042915}
+T.RT_105 = {
+  DialogueIds = T.RT_104
 }
-T.RT_80 = {
+T.RT_106 = {
   End = "4E6BF83348F3B28C037FA587817E7D4C"
 }
-T.RT_81 = {
+T.RT_107 = {
   End = "CC2FA2AA47DCDE62F31218BDFD40B57A"
 }
-T.RT_82 = {
+T.RT_108 = {
   10040144,
   10040145,
   10040146,
@@ -294,29 +413,29 @@ T.RT_82 = {
   10040148,
   10040149
 }
-T.RT_83 = {
-  DialogueIds = T.RT_82
+T.RT_109 = {
+  DialogueIds = T.RT_108
 }
-T.RT_84 = {
+T.RT_110 = {
   End = "C59BA6BE49BE9DDA1DC949AA7C925DAF"
 }
-T.RT_85 = {
+T.RT_111 = {
   End = "139FC5664F70AE34E2240EACF06D6A66"
 }
-T.RT_86 = {
+T.RT_112 = {
   End = "FCDCF7AD44A737A45E0E0BB8E5C32645"
 }
-T.RT_87 = {
+T.RT_113 = {
   End = "B8746AE94422D6D2ABCAB999127692E8"
 }
-T.RT_88 = {10042410, 10042411}
-T.RT_89 = {
+T.RT_114 = {10042410, 10042411}
+T.RT_115 = {
   End = "F09E9E7B45697E0AF3627C9FF38F01A2"
 }
-T.RT_90 = {
+T.RT_116 = {
   End = "56132B7447EE9FE9A08BB190401F69F4"
 }
-T.RT_91 = {
+T.RT_117 = {
   12022001,
   12022002,
   12022003,
@@ -334,26 +453,50 @@ T.RT_91 = {
   12022015,
   12022016
 }
-T.RT_92 = {
-  DialogueIds = T.RT_91
+T.RT_118 = {
+  DialogueIds = T.RT_117
 }
-T.RT_93 = {
+T.RT_119 = {
   End = "54B2AC914386315F4CC0A4941DFF7927"
 }
-T.RT_94 = {
+T.RT_120 = {
+  End = "941AE44D4C44C97169273791E459B77F"
+}
+T.RT_121 = {
+  10044324,
+  10044325,
+  10044326,
+  10044327,
+  10044328,
+  10044329,
+  10044330,
+  10044331,
+  10044332,
+  10044333,
+  10044334,
+  10044335
+}
+T.RT_122 = {
+  DialogueIds = T.RT_121
+}
+T.RT_123 = {
   End = "3BCC55A744AA44E4BEFB54AA98C5C3B8"
 }
-T.RT_95 = {
+T.RT_124 = {
   End = "27C4E6E94B62CDF4CC7C189124015BA0"
 }
-T.RT_96 = {
+T.RT_125 = {10043608}
+T.RT_126 = {
+  DialogueIds = T.RT_125
+}
+T.RT_127 = {
   End = "0B401D1B4442AD4E468CB08BD94809D6"
 }
-T.RT_97 = {10040139}
-T.RT_98 = {
-  DialogueIds = T.RT_97
+T.RT_128 = {10040139}
+T.RT_129 = {
+  DialogueIds = T.RT_128
 }
-T.RT_99 = {
+T.RT_130 = {
   12043719,
   12043720,
   12043721,
@@ -377,13 +520,13 @@ T.RT_99 = {
   12043739,
   12043740
 }
-T.RT_100 = {
-  DialogueIds = T.RT_99
+T.RT_131 = {
+  DialogueIds = T.RT_130
 }
-T.RT_101 = {
+T.RT_132 = {
   End = "E655BB2E4904DF48827B2F93C3BB6CFD"
 }
-T.RT_102 = {
+T.RT_133 = {
   End = "BF7378E642565EA9B75033AA8719EC9C"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -462,7 +605,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_ImpressingOption",
-    TalkId = 100405
+    TalkId = 100499
   },
   ["009809B645102EB4F574A597C4FFDFC5"] = {
     Connect = T.RT_2,
@@ -781,7 +924,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "04CCE6E5499CAB66D9247FB62BE02402",
     NodeType = "FlowNode_Start",
-    TalkId = 100484
+    TalkId = 100499
   },
   ["0517E5EC47508BF477B41BB3B803F1EB"] = {
     Connect = T.RT_1,
@@ -927,7 +1070,9 @@ return ReadOnly("FlowExport", {
   },
   ["085830A24DC69E0BD29369842AE9BF2B"] = {
     Connect = {
-      End = "2DCBA2474E1082A6128EAE8235FE0414"
+      End = "2DCBA2474E1082A6128EAE8235FE0414",
+      NormalPin_1 = "2FEB4F5A46F9E132F6F0FCBB7AD7F062",
+      NormalPin_2 = "40E0CF694DC930995CCB50990B3B7F12"
     },
     GUID = "085830A24DC69E0BD29369842AE9BF2B",
     NodeParams = {
@@ -961,7 +1106,7 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "089BA7204EAA087F66C5BBA9DC46CF47",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100431
+    TalkId = 100499
   },
   ["0902F40F41B580908B3CC08BC6F1033B"] = {
     Connect = T.RT_6,
@@ -1055,7 +1200,9 @@ return ReadOnly("FlowExport", {
   },
   ["0AA956224C29FE49E4D98CAA268B978A"] = {
     Connect = {
-      End = "9943F7264AAC72FCE3C00B820C01FF33"
+      End = "9943F7264AAC72FCE3C00B820C01FF33",
+      NormalPin_1 = "FB41AE574AAA01BD5D2BD98E725F1564",
+      NormalPin_4 = "5CE5ED284ED257DC97BB0786269F6030"
     },
     GUID = "0AA956224C29FE49E4D98CAA268B978A",
     NodeParams = {
@@ -1114,7 +1261,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100405
+    TalkId = 100499
   },
   ["0B48A1794504C7BF3FC4A389B30DA28B"] = {
     Connect = {
@@ -1328,14 +1475,7 @@ return ReadOnly("FlowExport", {
       End = "4C2A69D04C505F09A188D6B9BC98840C"
     },
     GUID = "0CEDC2884072B30F513EB5AC25B7A03F",
-    NodeParams = {
-      DialogueIds = {
-        10043601,
-        10043602,
-        10043603,
-        10043604
-      }
-    },
+    NodeParams = T.RT_13,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100436
   },
@@ -1418,7 +1558,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120199
   },
   ["0E3F848A469CE3F10D2C458770141EE3"] = {
-    Connect = T.RT_12,
+    Connect = T.RT_14,
     GUID = "0E3F848A469CE3F10D2C458770141EE3",
     NodeParams = {
       DialogueIds = {10049416}
@@ -1427,7 +1567,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100494
   },
   ["0E70FA1A447BCF2AB91C78B44F051AFC"] = {
-    Connect = T.RT_13,
+    Connect = T.RT_15,
     GUID = "0E70FA1A447BCF2AB91C78B44F051AFC",
     NodeParams = {
       DialogueIds = {
@@ -1478,7 +1618,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120183
   },
   ["0EEF11AB4C05872A1635B4A2114B5B15"] = {
-    Connect = T.RT_14,
+    Connect = T.RT_16,
     GUID = "0EEF11AB4C05872A1635B4A2114B5B15",
     NodeParams = {
       DialogueIds = {51165006}
@@ -1487,11 +1627,9 @@ return ReadOnly("FlowExport", {
     TalkId = 511650
   },
   ["0EF0F1A646199EE082C7F7B819C96DD9"] = {
-    Connect = T.RT_15,
+    Connect = T.RT_17,
     GUID = "0EF0F1A646199EE082C7F7B819C96DD9",
-    NodeParams = {
-      DialogueIds = {10044321}
-    },
+    NodeParams = T.RT_19,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100443
   },
@@ -1565,7 +1703,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511000
   },
   ["0FC8D86245766523AF6FD89DECA2227C"] = {
-    Connect = T.RT_16,
+    Connect = T.RT_20,
     GUID = "0FC8D86245766523AF6FD89DECA2227C",
     NodeParams = {
       DialogueIds = {10040810}
@@ -1636,6 +1774,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 511661
   },
+  ["1143DA09459634B30FCC7CA6B7651228"] = {
+    Connect = T.RT_1,
+    GUID = "1143DA09459634B30FCC7CA6B7651228",
+    NodeType = "FlowNode_Script",
+    TalkId = 100404
+  },
   ["118E4A124F3EE59F6B36CC9C1961B273"] = {
     Connect = {
       End = "2B8FEF80469E0A2B5549F491137C63D2"
@@ -1682,7 +1826,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100489
   },
   ["11C21F4D48A620884D6014B469C079B6"] = {
-    Connect = T.RT_17,
+    Connect = T.RT_21,
     GUID = "11C21F4D48A620884D6014B469C079B6",
     NodeParams = {
       DialogueIds = {51165024}
@@ -1691,7 +1835,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511650
   },
   ["11C7A54348319EE1296ACDB3B639B0B3"] = {
-    Connect = T.RT_18,
+    Connect = T.RT_22,
     GUID = "11C7A54348319EE1296ACDB3B639B0B3",
     NodeParams = {
       DialogueIds = {51163009}
@@ -1715,7 +1859,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["122040BE42FA3CB45C7B688EC1B9C173"] = {
-    Connect = T.RT_19,
+    Connect = T.RT_23,
     GUID = "122040BE42FA3CB45C7B688EC1B9C173",
     NodeParams = {
       DialogueIds = {12048211, 12048212}
@@ -1736,7 +1880,7 @@ return ReadOnly("FlowExport", {
     TalkId = -1
   },
   ["12842BA14CC4B3C750AFC3B1413854CE"] = {
-    Connect = T.RT_20,
+    Connect = T.RT_24,
     GUID = "12842BA14CC4B3C750AFC3B1413854CE",
     NodeParams = {
       DialogueIds = {51165524}
@@ -1792,6 +1936,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120442
+  },
+  ["13AC6BF547A0725BC7467DB1BE310076"] = {
+    Connect = T.RT_1,
+    GUID = "13AC6BF547A0725BC7467DB1BE310076",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   ["13B4CFD547B7E6DF727944B19BB09670"] = {
     Connect = {
@@ -1938,7 +2088,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["155C18C2476797066B9C728A5F8D80B2"] = {
-    Connect = T.RT_21,
+    Connect = T.RT_25,
     GUID = "155C18C2476797066B9C728A5F8D80B2",
     NodeParams = {
       DialogueIds = {12040222}
@@ -1972,7 +2122,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "1616AFAE477CF2E372C2748B5EA112C5",
     NodeType = "FlowNode_Start",
-    TalkId = 100476
+    TalkId = 100499
   },
   ["16417837425BE463DB1DF98ADF1811C0"] = {
     Connect = T.RT_1,
@@ -1997,7 +2147,7 @@ return ReadOnly("FlowExport", {
       Option_13 = "E54E88A94FDE1F808797348E6DB49CB9"
     },
     GUID = "16AEE4364B771B9D5E4CAE94D43D22FE",
-    NodeParams = T.RT_25,
+    NodeParams = T.RT_29,
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 120429
   },
@@ -2085,7 +2235,8 @@ return ReadOnly("FlowExport", {
   },
   ["17BFDFCE4BB06277D0F253B9A44BFF82"] = {
     Connect = {
-      End = "80C3E2F64FCC5760BBB7A68A7FB005A5"
+      End = "80C3E2F64FCC5760BBB7A68A7FB005A5",
+      NormalPin_1 = "21C2E9714D8154790F5A32B99120685D"
     },
     GUID = "17BFDFCE4BB06277D0F253B9A44BFF82",
     NodeParams = {
@@ -2188,7 +2339,7 @@ return ReadOnly("FlowExport", {
     TalkId = 510122
   },
   ["18F1147D46E3AC12DB2144AE58C9A8B6"] = {
-    Connect = T.RT_26,
+    Connect = T.RT_30,
     GUID = "18F1147D46E3AC12DB2144AE58C9A8B6",
     NodeParams = {
       DialogueIds = {
@@ -2262,7 +2413,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "1985A464414855C92C6C2BBE1347B6B1",
     NodeParams = {
-      DialogueIds = {10049938, 10049939}
+      DialogueIds = {10049938}
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 100499
@@ -2287,7 +2438,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120131
   },
   ["1A37F7B04684AFA433BD9D8F05FAF7F1"] = {
-    Connect = T.RT_27,
+    Connect = T.RT_31,
     GUID = "1A37F7B04684AFA433BD9D8F05FAF7F1",
     NodeParams = {
       DialogueIds = {51100022}
@@ -2319,7 +2470,9 @@ return ReadOnly("FlowExport", {
   },
   ["1B339CAD4976B43B55BE26BFACB47305"] = {
     Connect = {
-      End = "FA6B35DB4BDADA58617A5CBDF6FA4F97"
+      End = "FA6B35DB4BDADA58617A5CBDF6FA4F97",
+      NormalPin_1 = "89E8EF22416CC40806E10C910F5AAF1C",
+      NormalPin_7 = "FCC8431D487580F23D7AD8B9F9954195"
     },
     GUID = "1B339CAD4976B43B55BE26BFACB47305",
     NodeParams = {
@@ -2385,7 +2538,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100427
   },
   ["1B85DBAF4E76CCD7FA1C19900FD05553"] = {
-    Connect = T.RT_28,
+    Connect = T.RT_32,
     GUID = "1B85DBAF4E76CCD7FA1C19900FD05553",
     NodeParams = {
       DialogueIds = {
@@ -2426,17 +2579,11 @@ return ReadOnly("FlowExport", {
     TalkId = 511658
   },
   ["1BBB767E4D633064234B4084A6A33B08"] = {
-    Connect = {
-      Option_6 = "29960D2A4DAF1149A2A39991B2A5D486",
-      Option_7 = "993093B345C052C18BEB0A9736E4A140"
-    },
+    Connect = T.RT_33,
     GUID = "1BBB767E4D633064234B4084A6A33B08",
     NodeParams = {
-      DialogueIds = {10044606, 10044607},
-      OptionOutput = {
-        [10044606] = "Option_6",
-        [10044607] = "Option_7"
-      }
+      DialogueIds = T.RT_34,
+      OptionOutput = T.RT_35
     },
     NodeType = "FlowNode_Option",
     TalkId = 100446
@@ -2512,7 +2659,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120445
   },
   ["1CEFD48644178A337B4412B993FFBC35"] = {
-    Connect = T.RT_20,
+    Connect = T.RT_24,
     GUID = "1CEFD48644178A337B4412B993FFBC35",
     NodeParams = {
       DialogueIds = {51165517, 51165518}
@@ -2578,7 +2725,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120448
   },
   ["1E0EA56A44761D2D639A5491EDDF4515"] = {
-    Connect = T.RT_15,
+    Connect = T.RT_17,
     GUID = "1E0EA56A44761D2D639A5491EDDF4515",
     NodeParams = {
       DialogueIds = {10044322, 10044323}
@@ -2592,7 +2739,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "1E264BDA4491AD1467794BB4EB64BB8F",
     NodeType = "FlowNode_Start",
-    TalkId = 100405
+    TalkId = 100499
   },
   ["1E4EEAC946D584C17D7FD4BED0FC52FA"] = {
     Connect = T.RT_6,
@@ -2837,6 +2984,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
+  ["21C2E9714D8154790F5A32B99120685D"] = {
+    Connect = T.RT_1,
+    GUID = "21C2E9714D8154790F5A32B99120685D",
+    NodeType = "FlowNode_Script",
+    TalkId = 100480
+  },
   ["2208ECD940A659E8E66BE89BDA71B4C1"] = {
     Connect = {
       End = "9DFDD683446C6D7C2D8DC5BAF37F543F"
@@ -2871,6 +3024,12 @@ return ReadOnly("FlowExport", {
   ["23487AE1496C0F1C7E561FB437490178"] = {
     Connect = T.RT_1,
     GUID = "23487AE1496C0F1C7E561FB437490178",
+    NodeType = "FlowNode_TalkFinish",
+    TalkId = 100499
+  },
+  ["234D47FF474586FEBD663D9339A4ECF3"] = {
+    Connect = T.RT_1,
+    GUID = "234D47FF474586FEBD663D9339A4ECF3",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100499
   },
@@ -2914,7 +3073,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120134
   },
   ["23DCC0AE4042EB1826B386BEEB8F7B46"] = {
-    Connect = T.RT_29,
+    Connect = T.RT_36,
     GUID = "23DCC0AE4042EB1826B386BEEB8F7B46",
     NodeParams = {
       DialogueIds = {51163507}
@@ -3000,9 +3159,16 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 100499
   },
+  ["24C2FBF0421B773CD1E5F0B32533B224"] = {
+    Connect = T.RT_1,
+    GUID = "24C2FBF0421B773CD1E5F0B32533B224",
+    NodeType = "FlowNode_Script",
+    TalkId = 100467
+  },
   ["24D46BFD4B26B214DA0B379AB8ADC401"] = {
     Connect = {
-      End = "EE13F6DF43E131E9F26BD8B922D0FC62"
+      End = "EE13F6DF43E131E9F26BD8B922D0FC62",
+      NormalPin_8 = "2C25B91C4840086924D0D2A1FA65C756"
     },
     GUID = "24D46BFD4B26B214DA0B379AB8ADC401",
     NodeParams = {
@@ -3098,6 +3264,14 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 100469
   },
+  ["254062CD49BA25C22BD4009CD4652AAB"] = {
+    Connect = {
+      Out = "56C947A94D7234C19CC5F0B25F0085EF"
+    },
+    GUID = "254062CD49BA25C22BD4009CD4652AAB",
+    NodeType = "FlowNode_Start",
+    TalkId = 100499
+  },
   ["25EB73384FA84A053D7728A38D01EE9A"] = {
     Connect = {
       End = "E853B6AA492EFF2B7CB9538656058DC6"
@@ -3153,7 +3327,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120221
   },
   ["267D6B0D4E98C27219248FAA2F1B9C91"] = {
-    Connect = T.RT_30,
+    Connect = T.RT_37,
     GUID = "267D6B0D4E98C27219248FAA2F1B9C91",
     NodeParams = {
       DialogueIds = {10040613}
@@ -3230,6 +3404,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120406
+  },
+  ["2744955440E51208E25D9687B23BF834"] = {
+    Connect = T.RT_1,
+    GUID = "2744955440E51208E25D9687B23BF834",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   ["27488B14460DDA0EBC79BD8A818BCAE9"] = {
     Connect = {
@@ -3442,7 +3622,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120402
   },
   ["295E6FF74EBC0B010F5E45B9626161FB"] = {
-    Connect = T.RT_31,
+    Connect = T.RT_38,
     GUID = "295E6FF74EBC0B010F5E45B9626161FB",
     NodeParams = {
       DialogueIds = {
@@ -3455,7 +3635,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120445
   },
   ["29960D2A4DAF1149A2A39991B2A5D486"] = {
-    Connect = T.RT_32,
+    Connect = T.RT_39,
     GUID = "29960D2A4DAF1149A2A39991B2A5D486",
     NodeParams = {
       DialogueIds = {10044608}
@@ -3486,6 +3666,17 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 511000
+  },
+  ["2A6521B14ED323103F31E59A7DEE2CFF"] = {
+    Connect = {
+      Option_5 = "BFF429AF462E88727E04D98F755D1FB5",
+      Option_6 = "66D04A984165308932848997F7909CC5",
+      Option_7 = "ED08FDF44D5CD5C2C037418602471238"
+    },
+    GUID = "2A6521B14ED323103F31E59A7DEE2CFF",
+    NodeParams = T.RT_43,
+    NodeType = "FlowNode_ImpressingOption",
+    TalkId = 100436
   },
   ["2A76F5AA4B7081BE15552DAB1E1B6C84"] = {
     Connect = T.RT_1,
@@ -3562,7 +3753,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100422
   },
   ["2C04DB9C44612AB4014CC3B904CE405C"] = {
-    Connect = T.RT_31,
+    Connect = T.RT_38,
     GUID = "2C04DB9C44612AB4014CC3B904CE405C",
     NodeParams = {
       DialogueIds = {
@@ -3579,7 +3770,7 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "2C15DFF14311CAC4426321BEF3175159",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100484
+    TalkId = 100499
   },
   ["2C21A26443501C20B252E98CED408896"] = {
     Connect = {
@@ -3588,6 +3779,12 @@ return ReadOnly("FlowExport", {
     GUID = "2C21A26443501C20B252E98CED408896",
     NodeType = "FlowNode_Start",
     TalkId = 120448
+  },
+  ["2C25B91C4840086924D0D2A1FA65C756"] = {
+    Connect = T.RT_1,
+    GUID = "2C25B91C4840086924D0D2A1FA65C756",
+    NodeType = "FlowNode_Script",
+    TalkId = 100426
   },
   ["2C32C27B490CE9F13D0171A27472E206"] = {
     Connect = T.RT_1,
@@ -3603,14 +3800,14 @@ return ReadOnly("FlowExport", {
   },
   ["2C80FC6C44EBEFCC0F26CBA0CCD8F699"] = {
     Connect = {
-      Out = "934362E7477C451DFBABC7ACBDFCD54D"
+      Out = "3259BE8149E2F8081164428EB1F781C1"
     },
     GUID = "2C80FC6C44EBEFCC0F26CBA0CCD8F699",
     NodeType = "FlowNode_Start",
-    TalkId = 100443
+    TalkId = 1004430
   },
   ["2CAAA1A5494C760AFE9E5D882C57D50B"] = {
-    Connect = T.RT_33,
+    Connect = T.RT_44,
     GUID = "2CAAA1A5494C760AFE9E5D882C57D50B",
     NodeParams = {
       DialogueIds = {51100053}
@@ -3631,7 +3828,7 @@ return ReadOnly("FlowExport", {
   },
   ["2CDAE23C4402C55112F1BC89620F4F00"] = {
     Connect = {
-      Out = "0CEDC2884072B30F513EB5AC25B7A03F"
+      Out = "9D7313FD4FCDBAC0BD32AF924A25935E"
     },
     GUID = "2CDAE23C4402C55112F1BC89620F4F00",
     NodeType = "FlowNode_Start",
@@ -3691,7 +3888,8 @@ return ReadOnly("FlowExport", {
   },
   ["2DBE6FC74BE99594907E43A930A984E9"] = {
     Connect = {
-      End = "09E9916D4B0B5AE4D7C91E9254DCEE69"
+      End = "09E9916D4B0B5AE4D7C91E9254DCEE69",
+      NormalPin_2 = "77F6ED364D6BB613A0D06CBD03EDD2BA"
     },
     GUID = "2DBE6FC74BE99594907E43A930A984E9",
     NodeParams = {
@@ -3787,7 +3985,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120233
   },
   ["2E0DB2D349F1D94B1E6388BAC8FCE4D1"] = {
-    Connect = T.RT_34,
+    Connect = T.RT_45,
     GUID = "2E0DB2D349F1D94B1E6388BAC8FCE4D1",
     NodeParams = {
       DialogueIds = {51165533}
@@ -3797,7 +3995,9 @@ return ReadOnly("FlowExport", {
   },
   ["2E148612487BD067BE729387906D767A"] = {
     Connect = {
-      End = "D02B3298415AAD21A6A9B5A6559B59DF"
+      End = "D02B3298415AAD21A6A9B5A6559B59DF",
+      NormalPin_0 = "6A2FFC5745A528A78BD6F3B65A6FECC5",
+      NormalPin_5 = "9C0D86F342816E33018527A9AE68D3DA"
     },
     GUID = "2E148612487BD067BE729387906D767A",
     NodeParams = {
@@ -3839,7 +4039,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120415
   },
   ["2E6D22BC4138440F01144498DA65976E"] = {
-    Connect = T.RT_35,
+    Connect = T.RT_46,
     GUID = "2E6D22BC4138440F01144498DA65976E",
     NodeParams = {
       DialogueIds = {12012712}
@@ -3857,7 +4057,9 @@ return ReadOnly("FlowExport", {
   },
   ["2E871CC248995AF1E684459F096B4029"] = {
     Connect = {
-      End = "6BA15E254DB6FDE3CE6E14907461CDEE"
+      End = "6BA15E254DB6FDE3CE6E14907461CDEE",
+      NormalPin_3 = "561996B54DE80C7F681F64852CA0B6ED",
+      NormalPin_4 = "9BD4766A48C88944ADCE548ABF2FDFCC"
     },
     GUID = "2E871CC248995AF1E684459F096B4029",
     NodeParams = {
@@ -3896,7 +4098,9 @@ return ReadOnly("FlowExport", {
   },
   ["2EEDC89747FAC4455E9641A09374EF4E"] = {
     Connect = {
-      End = "2C15DFF14311CAC4426321BEF3175159"
+      End = "2C15DFF14311CAC4426321BEF3175159",
+      NormalPin_1 = "F8F79CD742EC876E3CFEB8B1CCBC1E62",
+      NormalPin_5 = "725BCFFD4E586A812679799F3206F757"
     },
     GUID = "2EEDC89747FAC4455E9641A09374EF4E",
     NodeParams = {
@@ -3914,7 +4118,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100484
+    TalkId = 100499
   },
   ["2F0B511C44206C1F4825D0A9FD7A6790"] = {
     Connect = {
@@ -3947,13 +4151,20 @@ return ReadOnly("FlowExport", {
     TalkId = 511646
   },
   ["2F65012C448211F784D8139F997774CF"] = {
-    Connect = T.RT_36,
+    Connect = T.RT_47,
     GUID = "2F65012C448211F784D8139F997774CF",
     NodeParams = {
       DialogueIds = {12022330}
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120223
+  },
+  ["2FA3EEDB496C97D24BC8B9BD01D5198F"] = {
+    Connect = T.RT_48,
+    GUID = "2FA3EEDB496C97D24BC8B9BD01D5198F",
+    NodeParams = T.RT_50,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100436
   },
   ["2FA7739849CACD3DB39D5AAD72D599B4"] = {
     Connect = {
@@ -3973,7 +4184,6 @@ return ReadOnly("FlowExport", {
         10041109,
         10041110,
         10041111,
-        10041112,
         10041113,
         10041114,
         10041115
@@ -3989,6 +4199,12 @@ return ReadOnly("FlowExport", {
     GUID = "2FC9B96641D77B795469709D9BD3B59B",
     NodeType = "FlowNode_Start",
     TalkId = 100474
+  },
+  ["2FEB4F5A46F9E132F6F0FCBB7AD7F062"] = {
+    Connect = T.RT_1,
+    GUID = "2FEB4F5A46F9E132F6F0FCBB7AD7F062",
+    NodeType = "FlowNode_Script",
+    TalkId = 100475
   },
   ["3087BEC041B67C2EAA34EEAD165B3E6C"] = {
     Connect = {
@@ -4050,6 +4266,15 @@ return ReadOnly("FlowExport", {
     GUID = "3150A41A4E74FE499D2A15ADA8F6F90B",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100448
+  },
+  ["3259BE8149E2F8081164428EB1F781C1"] = {
+    Connect = {
+      End = "6D32FF7B4A48159486597E92E0F5E244"
+    },
+    GUID = "3259BE8149E2F8081164428EB1F781C1",
+    NodeParams = T.RT_52,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004430
   },
   ["32827F01489F683EB9159089409EEE17"] = {
     Connect = T.RT_1,
@@ -4167,6 +4392,20 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 511659
   },
+  ["33CC79C74D361900826EDEA46E6E64A2"] = {
+    Connect = T.RT_33,
+    GUID = "33CC79C74D361900826EDEA46E6E64A2",
+    NodeParams = {
+      DialogueIds = T.RT_34,
+      OptionFailOutPut = {
+        [10044606] = "Fail_6",
+        [10044607] = "Fail_7"
+      },
+      OptionOutput = T.RT_35
+    },
+    NodeType = "FlowNode_ImpressingOption",
+    TalkId = 100446
+  },
   ["33E3B92E4E5255B4FF76E5A25C6BAD0D"] = {
     Connect = {
       Out = "0AA956224C29FE49E4D98CAA268B978A"
@@ -4190,7 +4429,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511010
   },
   ["34C24122419C656F69A9B9B013475702"] = {
-    Connect = T.RT_37,
+    Connect = T.RT_53,
     GUID = "34C24122419C656F69A9B9B013475702",
     NodeParams = {
       DialogueIds = {51101014}
@@ -4258,11 +4497,15 @@ return ReadOnly("FlowExport", {
   },
   ["352186FD4AD99000C77108AAC9889E3A"] = {
     Connect = {
-      End = "F6EC5B904E36F64395B73FBBCD6AB262"
+      End = "F6EC5B904E36F64395B73FBBCD6AB262",
+      NormalPin_2 = "D55D834142B91CF44F34BDB814C9621C",
+      NormalPin_402 = "8CDBE45C411E2B17B1846180BABEACD0",
+      NormalPin_403 = "A24C02B646F0B35EA8F5ADACAE7B2156"
     },
     GUID = "352186FD4AD99000C77108AAC9889E3A",
     NodeParams = {
       DialogueIds = {
+        100499402,
         10048301,
         10048302,
         10048303,
@@ -4313,11 +4556,12 @@ return ReadOnly("FlowExport", {
         10048348,
         10048349,
         10048350,
-        10048351
+        10048351,
+        100499403
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100483
+    TalkId = 100499
   },
   ["35390FB2444050D1FFEDDB908DDD6D31"] = {
     Connect = {
@@ -4367,7 +4611,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100407
   },
   ["3563F352465DC7F0C2BCB988AC333484"] = {
-    Connect = T.RT_33,
+    Connect = T.RT_44,
     GUID = "3563F352465DC7F0C2BCB988AC333484",
     NodeParams = {
       DialogueIds = {51100055}
@@ -4442,7 +4686,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511633
   },
   ["3741DA7E462552A021CA37855114060C"] = {
-    Connect = T.RT_38,
+    Connect = T.RT_54,
     GUID = "3741DA7E462552A021CA37855114060C",
     NodeParams = {
       DialogueIds = {51140040}
@@ -4570,7 +4814,7 @@ return ReadOnly("FlowExport", {
   },
   ["38CB480A44C21F1B85FEAB9627E05B67"] = {
     Connect = {
-      End = "1BBB767E4D633064234B4084A6A33B08"
+      End = "33CC79C74D361900826EDEA46E6E64A2"
     },
     GUID = "38CB480A44C21F1B85FEAB9627E05B67",
     NodeParams = {
@@ -4588,7 +4832,7 @@ return ReadOnly("FlowExport", {
       End = "0962AAB44D36F97633757C9165CCF212"
     },
     GUID = "38D455C7415668E49CA93BAC6BDC012C",
-    NodeParams = T.RT_40,
+    NodeParams = T.RT_56,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120429
   },
@@ -4692,7 +4936,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["3A71CB0849AD769F2DA8B8B5199BCA9B"] = {
-    Connect = T.RT_41,
+    Connect = T.RT_57,
     GUID = "3A71CB0849AD769F2DA8B8B5199BCA9B",
     NodeParams = {
       DialogueIds = {51165531, 51165534}
@@ -4726,7 +4970,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511662
   },
   ["3AC355034CF066B16F652D8075B11782"] = {
-    Connect = T.RT_19,
+    Connect = T.RT_23,
     GUID = "3AC355034CF066B16F652D8075B11782",
     NodeParams = {
       DialogueIds = {
@@ -4784,6 +5028,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Option",
     TalkId = 100401
   },
+  ["3B701BD74A995788CB220392E55620F0"] = {
+    Connect = T.RT_1,
+    GUID = "3B701BD74A995788CB220392E55620F0",
+    NodeType = "FlowNode_Script",
+    TalkId = 100454
+  },
   ["3B71313E49F6DEF6A3115CBBAF61D7CA"] = {
     Connect = T.RT_1,
     GUID = "3B71313E49F6DEF6A3115CBBAF61D7CA",
@@ -4799,7 +5049,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100408
   },
   ["3BC17E8B46C307B0F5D48A8731F649B3"] = {
-    Connect = T.RT_42,
+    Connect = T.RT_58,
     GUID = "3BC17E8B46C307B0F5D48A8731F649B3",
     NodeParams = {
       DialogueIds = {
@@ -4846,7 +5096,8 @@ return ReadOnly("FlowExport", {
   },
   ["3C05B4F34D9B6A7802055D9E8CA9B12D"] = {
     Connect = {
-      End = "F05CA21748D789A0851122B36847A463"
+      End = "F05CA21748D789A0851122B36847A463",
+      NormalPin_1 = "BE14FA1F465763FFE7C1909CE245EB24"
     },
     GUID = "3C05B4F34D9B6A7802055D9E8CA9B12D",
     NodeParams = {
@@ -4963,9 +5214,15 @@ return ReadOnly("FlowExport", {
   ["3E6D1BF84A7A6E00F795818692DA173D"] = {
     Connect = T.RT_9,
     GUID = "3E6D1BF84A7A6E00F795818692DA173D",
-    NodeParams = T.RT_44,
+    NodeParams = T.RT_60,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
+  },
+  ["3EA64FCE4171A7DA516860A170E3CD5E"] = {
+    Connect = T.RT_1,
+    GUID = "3EA64FCE4171A7DA516860A170E3CD5E",
+    NodeType = "FlowNode_Script",
+    TalkId = 100472
   },
   ["3ECE6FC6450538F7AB174AA5AD2540D4"] = {
     Connect = {
@@ -5176,7 +5433,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100432
   },
   ["403FCF324A3D89A0395B75A90AC404AF"] = {
-    Connect = T.RT_45,
+    Connect = T.RT_61,
     GUID = "403FCF324A3D89A0395B75A90AC404AF",
     NodeParams = {
       DialogueIds = {10046116}
@@ -5208,20 +5465,16 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 100499
   },
+  ["40E0CF694DC930995CCB50990B3B7F12"] = {
+    Connect = T.RT_1,
+    GUID = "40E0CF694DC930995CCB50990B3B7F12",
+    NodeType = "FlowNode_Script",
+    TalkId = 100475
+  },
   ["40E9C6AF47DE6E512AD0279EFB0B42EB"] = {
-    Connect = {
-      End = "DFD354524BD98132BA4100BE09438BAA"
-    },
+    Connect = T.RT_62,
     GUID = "40E9C6AF47DE6E512AD0279EFB0B42EB",
-    NodeParams = {
-      DialogueIds = {
-        10044001,
-        10044002,
-        10044003,
-        10044004,
-        10044005
-      }
-    },
+    NodeParams = T.RT_64,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100440
   },
@@ -5272,6 +5525,17 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120446
   },
+  ["41D6DB274F058BFCADAA04A2E5CAEB3D"] = {
+    Connect = {
+      End = "FC177B184F777716407204B98845AFD1"
+    },
+    GUID = "41D6DB274F058BFCADAA04A2E5CAEB3D",
+    NodeParams = {
+      DialogueIds = {100499173}
+    },
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100499
+  },
   ["41D8576D449324996E8F46A50E5BCD9D"] = {
     Connect = {
       Out = "C9E21A4245E7CD8080F87FA392BEAD5C"
@@ -5318,7 +5582,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100407
   },
   ["41F3E76B4CD682795BC9BB807C8C61BB"] = {
-    Connect = T.RT_41,
+    Connect = T.RT_57,
     GUID = "41F3E76B4CD682795BC9BB807C8C61BB",
     NodeParams = {
       DialogueIds = {51165540}
@@ -5378,7 +5642,7 @@ return ReadOnly("FlowExport", {
       End = "89A9A37546D3F5F0966CDD8B3C3D9243"
     },
     GUID = "42FBFABD475290DF1B5B479E5C8F94DD",
-    NodeParams = T.RT_47,
+    NodeParams = T.RT_66,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -5446,6 +5710,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 100454
   },
+  ["4396A44940D0053637CC55B18E520E1E"] = {
+    Connect = T.RT_1,
+    GUID = "4396A44940D0053637CC55B18E520E1E",
+    NodeType = "FlowNode_Script",
+    TalkId = 100477
+  },
   ["4399FF264CBB8D2CB23A2885BF53497A"] = {
     Connect = T.RT_1,
     GUID = "4399FF264CBB8D2CB23A2885BF53497A",
@@ -5473,7 +5743,8 @@ return ReadOnly("FlowExport", {
   },
   ["43D6FA2642C408550F0916A38F085C16"] = {
     Connect = {
-      End = "003C060845C5E54A4592AB92B04D44AC"
+      End = "003C060845C5E54A4592AB92B04D44AC",
+      NormalPin_5 = "D7599B5346F3AC903C8332B16E53499F"
     },
     GUID = "43D6FA2642C408550F0916A38F085C16",
     NodeParams = {
@@ -5490,6 +5761,7 @@ return ReadOnly("FlowExport", {
         10040510,
         10040511,
         10040512,
+        100499203,
         10040513,
         10040514,
         10040515,
@@ -5515,7 +5787,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100405
+    TalkId = 100499
   },
   ["44246363468EDF20B65D78914C1BF8C4"] = {
     Connect = {
@@ -5561,9 +5833,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100438
   },
   ["447116E241EC317EA1F0DFA3FB970801"] = {
-    Connect = T.RT_48,
+    Connect = T.RT_67,
     GUID = "447116E241EC317EA1F0DFA3FB970801",
-    NodeParams = T.RT_50,
+    NodeParams = T.RT_69,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120429
   },
@@ -5687,6 +5959,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120159
   },
+  ["462341D8475BD3D085A5C283F2FFA41D"] = {
+    Connect = T.RT_1,
+    GUID = "462341D8475BD3D085A5C283F2FFA41D",
+    NodeType = "FlowNode_Script",
+    TalkId = 100410
+  },
   ["4634CF534304C11E7533DCBE7D83E752"] = {
     Connect = {
       Out = "9113E8014A4D80CDF36DC3B5B6F32A42"
@@ -5710,7 +5988,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100465
   },
   ["4694F801483BAF575BAA699B12C02D61"] = {
-    Connect = T.RT_37,
+    Connect = T.RT_53,
     GUID = "4694F801483BAF575BAA699B12C02D61",
     NodeParams = {
       DialogueIds = {51101016}
@@ -5731,7 +6009,8 @@ return ReadOnly("FlowExport", {
   },
   ["46B0CA114D52838BB8B5DDA7BCC835DB"] = {
     Connect = {
-      End = "23A8311E427C78E8F628F7A0252091E6"
+      End = "23A8311E427C78E8F628F7A0252091E6",
+      NormalPin_9 = "13AC6BF547A0725BC7467DB1BE310076"
     },
     GUID = "46B0CA114D52838BB8B5DDA7BCC835DB",
     NodeParams = {
@@ -5876,6 +6155,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 511400
   },
+  ["4710AD3945052219C8D244B596F056E1"] = {
+    Connect = T.RT_1,
+    GUID = "4710AD3945052219C8D244B596F056E1",
+    NodeType = "FlowNode_Script",
+    TalkId = 100423
+  },
   ["474299964B90C8D5F1E57F8DBDBF1C6D"] = {
     Connect = {
       Out = "AF946FD74BC9C55BFD4372BAFCED3D18"
@@ -5883,6 +6168,18 @@ return ReadOnly("FlowExport", {
     GUID = "474299964B90C8D5F1E57F8DBDBF1C6D",
     NodeType = "FlowNode_Start",
     TalkId = 511647
+  },
+  ["478E68D34388AA4EE0A11381EBB271A8"] = {
+    Connect = T.RT_1,
+    GUID = "478E68D34388AA4EE0A11381EBB271A8",
+    NodeType = "FlowNode_Script",
+    TalkId = 100479
+  },
+  ["47C097DB42C144EE920E75B2BB059DE4"] = {
+    Connect = T.RT_1,
+    GUID = "47C097DB42C144EE920E75B2BB059DE4",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   ["480F3E6A464BF649A91091A0C5B68E3D"] = {
     Connect = {
@@ -5964,7 +6261,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120415
   },
   ["496216BF48E08E33A2AF119C45C45FEB"] = {
-    Connect = T.RT_51,
+    Connect = T.RT_70,
     GUID = "496216BF48E08E33A2AF119C45C45FEB",
     NodeParams = {
       DialogueIds = {
@@ -5979,7 +6276,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511400
   },
   ["49A25B4D480A439C5944D4B35A5CAB62"] = {
-    Connect = T.RT_52,
+    Connect = T.RT_71,
     GUID = "49A25B4D480A439C5944D4B35A5CAB62",
     NodeParams = {
       DialogueIds = {12045524}
@@ -6004,6 +6301,15 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 511630
   },
+  ["4A041F95413E5B62A14CCD91B11F604D"] = {
+    Connect = T.RT_72,
+    GUID = "4A041F95413E5B62A14CCD91B11F604D",
+    NodeParams = {
+      DialogueIds = {10044322}
+    },
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004430
+  },
   ["4A113F4A497FC5A0A07FD5B9CA91F474"] = {
     Connect = {
       Out = "85696FF440696E9FAF8CF884996555A7"
@@ -6013,7 +6319,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120453
   },
   ["4A1734CA4C7CFB820932F695147AB16E"] = {
-    Connect = T.RT_16,
+    Connect = T.RT_20,
     GUID = "4A1734CA4C7CFB820932F695147AB16E",
     NodeParams = {
       DialogueIds = {10040812}
@@ -6028,11 +6334,9 @@ return ReadOnly("FlowExport", {
     TalkId = 120456
   },
   ["4A76A0904BFFE622028FBEBFF2179D01"] = {
-    Connect = T.RT_53,
+    Connect = T.RT_73,
     GUID = "4A76A0904BFFE622028FBEBFF2179D01",
-    NodeParams = {
-      DialogueIds = {10043610}
-    },
+    NodeParams = T.RT_75,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100436
   },
@@ -6041,7 +6345,7 @@ return ReadOnly("FlowExport", {
       End = "0FAC7EB24E993DFAFDF49F8C03571188"
     },
     GUID = "4ADFFF5042F9DAB243896AA12476FF37",
-    NodeParams = T.RT_47,
+    NodeParams = T.RT_66,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -6082,23 +6386,7 @@ return ReadOnly("FlowExport", {
       Option_7 = "4A76A0904BFFE622028FBEBFF2179D01"
     },
     GUID = "4C2A69D04C505F09A188D6B9BC98840C",
-    NodeParams = {
-      DialogueIds = {
-        10043605,
-        10043606,
-        10043607
-      },
-      OptionFailOutPut = {
-        [10043605] = "Fail_5",
-        [10043606] = "Fail_6",
-        [10043607] = "Fail_7"
-      },
-      OptionOutput = {
-        [10043605] = "Option_5",
-        [10043606] = "Option_6",
-        [10043607] = "Option_7"
-      }
-    },
+    NodeParams = T.RT_43,
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 100436
   },
@@ -6160,7 +6448,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120233
   },
   ["4CF11C864B1E5D4D168559B4E0E70B40"] = {
-    Connect = T.RT_17,
+    Connect = T.RT_21,
     GUID = "4CF11C864B1E5D4D168559B4E0E70B40",
     NodeParams = {
       DialogueIds = {51165022}
@@ -6258,7 +6546,7 @@ return ReadOnly("FlowExport", {
     TalkId = 1004062
   },
   ["4E4993AF4F0EF0DF2E2EED8F6940A2CE"] = {
-    Connect = T.RT_54,
+    Connect = T.RT_76,
     GUID = "4E4993AF4F0EF0DF2E2EED8F6940A2CE",
     NodeParams = {
       DialogueIds = {51100036}
@@ -6289,6 +6577,13 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 511654
   },
+  ["4E6E150A4825AFDFFB41A692E1375968"] = {
+    Connect = T.RT_72,
+    GUID = "4E6E150A4825AFDFFB41A692E1375968",
+    NodeParams = T.RT_19,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004430
+  },
   ["4E9B41D342283B912B3CE286DA9AC428"] = {
     Connect = {
       Out = "ABA04F004A10F1362F83BA9F46C0B0DD"
@@ -6298,7 +6593,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120431
   },
   ["4F7A505A402A198F083C119DC75C8ACA"] = {
-    Connect = T.RT_55,
+    Connect = T.RT_77,
     GUID = "4F7A505A402A198F083C119DC75C8ACA",
     NodeParams = {
       DialogueIds = {10040141, 10040142}
@@ -6370,7 +6665,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "503CD1F7431874E50CD2ED9A7FEACE08",
     NodeType = "FlowNode_Start",
-    TalkId = 100431
+    TalkId = 100499
   },
   ["505005FF45B37CA11D1AE69BA420EA6D"] = {
     Connect = T.RT_7,
@@ -6397,7 +6692,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511632
   },
   ["50A4F5424AF7AB240C93CE8D9872D803"] = {
-    Connect = T.RT_28,
+    Connect = T.RT_32,
     GUID = "50A4F5424AF7AB240C93CE8D9872D803",
     NodeParams = {
       DialogueIds = {
@@ -6454,7 +6749,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120402
   },
   ["50D497914879B4B8D6FBE4A29267CBEE"] = {
-    Connect = T.RT_56,
+    Connect = T.RT_78,
     GUID = "50D497914879B4B8D6FBE4A29267CBEE",
     NodeParams = {
       DialogueIds = {10041810, 10041811}
@@ -6487,7 +6782,7 @@ return ReadOnly("FlowExport", {
       Option_50 = "42FBFABD475290DF1B5B479E5C8F94DD"
     },
     GUID = "518EE879414672B6C8F168B6FE9DA328",
-    NodeParams = T.RT_59,
+    NodeParams = T.RT_81,
     NodeType = "FlowNode_Option",
     TalkId = 120437
   },
@@ -6749,7 +7044,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100427
   },
   ["550A340F4AF0BD5E904C25A3F10FD429"] = {
-    Connect = T.RT_12,
+    Connect = T.RT_14,
     GUID = "550A340F4AF0BD5E904C25A3F10FD429",
     NodeParams = {
       DialogueIds = {10049417}
@@ -6915,6 +7210,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120104
   },
+  ["561996B54DE80C7F681F64852CA0B6ED"] = {
+    Connect = T.RT_1,
+    GUID = "561996B54DE80C7F681F64852CA0B6ED",
+    NodeType = "FlowNode_Script",
+    TalkId = 100474
+  },
   ["56436B0C4474E064F41DF2B421A75391"] = {
     Connect = T.RT_1,
     GUID = "56436B0C4474E064F41DF2B421A75391",
@@ -6981,13 +7282,33 @@ return ReadOnly("FlowExport", {
     TalkId = 100496
   },
   ["56B7C1C045101E31A2BBAD84D43CAF84"] = {
-    Connect = T.RT_36,
+    Connect = T.RT_47,
     GUID = "56B7C1C045101E31A2BBAD84D43CAF84",
     NodeParams = {
       DialogueIds = {12022329}
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120223
+  },
+  ["56C947A94D7234C19CC5F0B25F0085EF"] = {
+    Connect = {
+      End = "234D47FF474586FEBD663D9339A4ECF3"
+    },
+    GUID = "56C947A94D7234C19CC5F0B25F0085EF",
+    NodeParams = {
+      DialogueIds = {
+        100499300,
+        100499301,
+        100499302,
+        100499303,
+        100499304,
+        100499305,
+        100499306,
+        100499307
+      }
+    },
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100499
   },
   ["56E42CCB4F2C1341897895B20C37EC55"] = {
     Connect = {
@@ -7060,7 +7381,7 @@ return ReadOnly("FlowExport", {
       Option_13 = "71985963468CBCB3BD74759CBBAEFD72"
     },
     GUID = "57C11CFD43862BAA853FD9A3E302F4B4",
-    NodeParams = T.RT_25,
+    NodeParams = T.RT_29,
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 120429
   },
@@ -7087,7 +7408,7 @@ return ReadOnly("FlowExport", {
       Option_12 = "8A3196C34E05B18AC98F49943AE15FD2"
     },
     GUID = "585A5A99424C0340CF4BDE969EEB9F68",
-    NodeParams = T.RT_63,
+    NodeParams = T.RT_85,
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 120437
   },
@@ -7142,7 +7463,7 @@ return ReadOnly("FlowExport", {
     TalkId = 0
   },
   ["590EC4B3446E49CD57722986558546FA"] = {
-    Connect = T.RT_64,
+    Connect = T.RT_86,
     GUID = "590EC4B3446E49CD57722986558546FA",
     NodeParams = {
       DialogueIds = {12012005}
@@ -7159,7 +7480,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100492
   },
   ["5935DD39459291A20C0DB19B56338C72"] = {
-    Connect = T.RT_13,
+    Connect = T.RT_15,
     GUID = "5935DD39459291A20C0DB19B56338C72",
     NodeParams = {
       DialogueIds = {
@@ -7204,6 +7525,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120485
+  },
+  ["5AAAEA7F4BACBF984C9952B59FF806F6"] = {
+    Connect = T.RT_1,
+    GUID = "5AAAEA7F4BACBF984C9952B59FF806F6",
+    NodeType = "FlowNode_Script",
+    TalkId = 100461
   },
   ["5AE1DB7541FA50A77A04A9B3326066E7"] = {
     Connect = T.RT_1,
@@ -7256,7 +7583,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120479
   },
   ["5BC5BBE84BF9DFBB67D029BE3C4B366B"] = {
-    Connect = T.RT_65,
+    Connect = T.RT_87,
     GUID = "5BC5BBE84BF9DFBB67D029BE3C4B366B",
     NodeParams = {
       DialogueIds = {51165516}
@@ -7304,6 +7631,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120449
   },
+  ["5CE5ED284ED257DC97BB0786269F6030"] = {
+    Connect = T.RT_1,
+    GUID = "5CE5ED284ED257DC97BB0786269F6030",
+    NodeType = "FlowNode_Script",
+    TalkId = 100456
+  },
   ["5CF211694C3764F6AF9D28B7C922D08E"] = {
     Connect = T.RT_1,
     GUID = "5CF211694C3764F6AF9D28B7C922D08E",
@@ -7311,17 +7644,17 @@ return ReadOnly("FlowExport", {
     TalkId = 100445
   },
   ["5CFC752649CB2D466D108B9A2E657497"] = {
-    Connect = T.RT_66,
+    Connect = T.RT_88,
     GUID = "5CFC752649CB2D466D108B9A2E657497",
     NodeParams = {
-      DialogueIds = T.RT_67,
-      OptionOutput = T.RT_68
+      DialogueIds = T.RT_89,
+      OptionOutput = T.RT_90
     },
     NodeType = "FlowNode_Option",
     TalkId = 120223
   },
   ["5D19DE634B349055B975DCA0F0EB056A"] = {
-    Connect = T.RT_20,
+    Connect = T.RT_24,
     GUID = "5D19DE634B349055B975DCA0F0EB056A",
     NodeParams = {
       DialogueIds = {51165523}
@@ -7424,7 +7757,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120131
   },
   ["5E29563342194DE7FAF4E5A2683F654E"] = {
-    Connect = T.RT_16,
+    Connect = T.RT_20,
     GUID = "5E29563342194DE7FAF4E5A2683F654E",
     NodeParams = {
       DialogueIds = {10040811}
@@ -7574,7 +7907,8 @@ return ReadOnly("FlowExport", {
   },
   ["5F643A024A0BD987B4BE6F85F471D818"] = {
     Connect = {
-      End = "931FBB0A44145F00DBC19F8B6B8270DF"
+      End = "931FBB0A44145F00DBC19F8B6B8270DF",
+      NormalPin_5 = "9BE94A1C4228CDB9AB3C00AEE551C840"
     },
     GUID = "5F643A024A0BD987B4BE6F85F471D818",
     NodeParams = {
@@ -7599,7 +7933,7 @@ return ReadOnly("FlowExport", {
       Option_42 = "684F61F84CC0B9CDB86D8C9E7EBED7D3"
     },
     GUID = "5FA3F4874BB5EA42435F04A92BC5C0E7",
-    NodeParams = T.RT_71,
+    NodeParams = T.RT_93,
     NodeType = "FlowNode_Option",
     TalkId = 120437
   },
@@ -7763,7 +8097,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["62AC3BA54BEDE2F1C1C78686E8AFCAF2"] = {
-    Connect = T.RT_34,
+    Connect = T.RT_45,
     GUID = "62AC3BA54BEDE2F1C1C78686E8AFCAF2",
     NodeParams = {
       DialogueIds = {51165525, 51165526}
@@ -7925,7 +8259,7 @@ return ReadOnly("FlowExport", {
       Option_12 = "3E6D1BF84A7A6E00F795818692DA173D"
     },
     GUID = "652235CF4E9AFEF4AC6A82B0451534F9",
-    NodeParams = T.RT_63,
+    NodeParams = T.RT_85,
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 120437
   },
@@ -8030,6 +8364,13 @@ return ReadOnly("FlowExport", {
     GUID = "665CDC9548E724FDC2B641B439F5EBDC",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100498
+  },
+  ["66D04A984165308932848997F7909CC5"] = {
+    Connect = T.RT_94,
+    GUID = "66D04A984165308932848997F7909CC5",
+    NodeParams = T.RT_96,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100436
   },
   ["66F6CE51455E1535C9BC9F82027AE050"] = {
     Connect = {
@@ -8159,11 +8500,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "683D9F544C353746D4A6A1B59287C3F6",
     NodeParams = {
-      DialogueIds = {
-        10044318,
-        10044319,
-        10044320
-      },
+      DialogueIds = T.RT_97,
       OptionFailOutPut = {
         [10044318] = "Fail_18",
         [10044319] = "Fail_19",
@@ -8189,7 +8526,7 @@ return ReadOnly("FlowExport", {
       End = "B828D5C146010CC211D987B097461C80"
     },
     GUID = "684F61F84CC0B9CDB86D8C9E7EBED7D3",
-    NodeParams = T.RT_73,
+    NodeParams = T.RT_99,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -8256,6 +8593,12 @@ return ReadOnly("FlowExport", {
     GUID = "68FD4F2348CF3262230DFEAECC5ECA18",
     NodeType = "FlowNode_Start",
     TalkId = 100453
+  },
+  ["6900A63A4C518B0CF22C18B9891F9B4B"] = {
+    Connect = T.RT_1,
+    GUID = "6900A63A4C518B0CF22C18B9891F9B4B",
+    NodeType = "FlowNode_Script",
+    TalkId = 100479
   },
   ["6919C29246B0BC21C5F947B4DCA88A3A"] = {
     Connect = {
@@ -8340,7 +8683,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["69A9639D4D28E0D021CFC787FD32D454"] = {
-    Connect = T.RT_74,
+    Connect = T.RT_100,
     GUID = "69A9639D4D28E0D021CFC787FD32D454",
     NodeParams = {
       DialogueIds = {51164430}
@@ -8364,8 +8707,14 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 120134
   },
+  ["6A2FFC5745A528A78BD6F3B65A6FECC5"] = {
+    Connect = T.RT_1,
+    GUID = "6A2FFC5745A528A78BD6F3B65A6FECC5",
+    NodeType = "FlowNode_Script",
+    TalkId = 100444
+  },
   ["6A305F2D4756EE59F3F1C8BC1DD455A1"] = {
-    Connect = T.RT_75,
+    Connect = T.RT_101,
     GUID = "6A305F2D4756EE59F3F1C8BC1DD455A1",
     NodeParams = {
       DialogueIds = {12045645, 12045646}
@@ -8447,7 +8796,8 @@ return ReadOnly("FlowExport", {
   },
   ["6AD676EF4CB8A93C2A5FFB8650421C5F"] = {
     Connect = {
-      End = "1C357127470EF853328D138EEAE5415C"
+      End = "1C357127470EF853328D138EEAE5415C",
+      NormalPin_1 = "F002FC62429988C340805FA7FF50729F"
     },
     GUID = "6AD676EF4CB8A93C2A5FFB8650421C5F",
     NodeParams = {
@@ -8596,7 +8946,7 @@ return ReadOnly("FlowExport", {
   },
   ["6D30E9114F6B989BFD7B5483592340CF"] = {
     Connect = {
-      End = "E140DDAF4564E34303C013A74985989C"
+      End = "D8E1D1B84DA3A28CFF61F391B6A6C08F"
     },
     GUID = "6D30E9114F6B989BFD7B5483592340CF",
     NodeParams = {
@@ -8618,14 +8968,29 @@ return ReadOnly("FlowExport", {
         10041424,
         10041425,
         10041426,
-        10041427,
-        10041428,
-        10041429,
-        10041430
+        10041427
       }
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 100414
+  },
+  ["6D32FF7B4A48159486597E92E0F5E244"] = {
+    Connect = {
+      Option_0 = "C522FEA24416D4DCE5DD6680EDF664AF",
+      Option_8 = "4E6E150A4825AFDFFB41A692E1375968",
+      Option_9 = "4A041F95413E5B62A14CCD91B11F604D"
+    },
+    GUID = "6D32FF7B4A48159486597E92E0F5E244",
+    NodeParams = {
+      DialogueIds = T.RT_97,
+      OptionOutput = {
+        [10044318] = "Option_8",
+        [10044319] = "Option_9",
+        [10044320] = "Option_0"
+      }
+    },
+    NodeType = "FlowNode_Option",
+    TalkId = 1004430
   },
   ["6D39C1D748AE1677DDB985B9E88E6445"] = {
     Connect = T.RT_1,
@@ -8685,7 +9050,8 @@ return ReadOnly("FlowExport", {
   },
   ["6DD362A54C9363A46718A88B742A8DB4"] = {
     Connect = {
-      End = "F7C6DB1241504F68A0663584E917714C"
+      End = "F7C6DB1241504F68A0663584E917714C",
+      NormalPin_7 = "A0672C294B06CCF9848DD19093A52526"
     },
     GUID = "6DD362A54C9363A46718A88B742A8DB4",
     NodeParams = {
@@ -8776,7 +9142,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120426
   },
   ["6ECAA8654E6ED4C64B48D984CE768011"] = {
-    Connect = T.RT_17,
+    Connect = T.RT_21,
     GUID = "6ECAA8654E6ED4C64B48D984CE768011",
     NodeParams = {
       DialogueIds = {51165023}
@@ -8785,7 +9151,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511650
   },
   ["6EE6A1214860C0BD1D286A897C3A2FE0"] = {
-    Connect = T.RT_45,
+    Connect = T.RT_61,
     GUID = "6EE6A1214860C0BD1D286A897C3A2FE0",
     NodeParams = {
       DialogueIds = {10046115}
@@ -8828,7 +9194,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["711389FA4C5436EE0B691E920D03D6C7"] = {
-    Connect = T.RT_76,
+    Connect = T.RT_102,
     GUID = "711389FA4C5436EE0B691E920D03D6C7",
     NodeParams = {
       DialogueIds = {51163706, 51163707}
@@ -8851,7 +9217,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120485
   },
   ["7193273540C3EFC1E0369E8A98F7BE41"] = {
-    Connect = T.RT_77,
+    Connect = T.RT_103,
     GUID = "7193273540C3EFC1E0369E8A98F7BE41",
     NodeParams = {
       DialogueIds = {10041408}
@@ -8860,9 +9226,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100414
   },
   ["71985963468CBCB3BD74759CBBAEFD72"] = {
-    Connect = T.RT_48,
+    Connect = T.RT_67,
     GUID = "71985963468CBCB3BD74759CBBAEFD72",
-    NodeParams = T.RT_79,
+    NodeParams = T.RT_105,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120429
   },
@@ -8924,6 +9290,12 @@ return ReadOnly("FlowExport", {
     GUID = "72551F59488F4DD1E414CEA37409222C",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 120104
+  },
+  ["725BCFFD4E586A812679799F3206F757"] = {
+    Connect = T.RT_1,
+    GUID = "725BCFFD4E586A812679799F3206F757",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   ["728F1C474DE508768B14EAA0726864B1"] = {
     Connect = {
@@ -9088,11 +9460,14 @@ return ReadOnly("FlowExport", {
   },
   ["743C747A437F95A1C4341985A80D223D"] = {
     Connect = {
-      End = "AE86FD1C44875CE9BBC6BCAEEA7C5C1A"
+      End = "AE86FD1C44875CE9BBC6BCAEEA7C5C1A",
+      NormalPin_3 = "2744955440E51208E25D9687B23BF834",
+      NormalPin_6 = "47C097DB42C144EE920E75B2BB059DE4"
     },
     GUID = "743C747A437F95A1C4341985A80D223D",
     NodeParams = {
       DialogueIds = {
+        100499401,
         10047601,
         10047602,
         10047603,
@@ -9122,7 +9497,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100476
+    TalkId = 100499
   },
   ["744818004590D3ABFD0CDCA4633D4839"] = {
     Connect = T.RT_1,
@@ -9195,6 +9570,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 511400
+  },
+  ["757EF69645974CB641A1FEB2E1D34280"] = {
+    Connect = T.RT_1,
+    GUID = "757EF69645974CB641A1FEB2E1D34280",
+    NodeType = "FlowNode_Script",
+    TalkId = 100410
   },
   ["758DF9BA46E67793880EFCACF6AAFE1B"] = {
     Connect = {
@@ -9293,6 +9674,12 @@ return ReadOnly("FlowExport", {
     GUID = "763621BD4C65B1D472EB57A613362361",
     NodeType = "FlowNode_Start",
     TalkId = 100499
+  },
+  ["7641D7224A08D13D9F073FA6A9869D22"] = {
+    Connect = T.RT_1,
+    GUID = "7641D7224A08D13D9F073FA6A9869D22",
+    NodeType = "FlowNode_Script",
+    TalkId = 100452
   },
   ["7652BAC7473A901601C05EAA083127C0"] = {
     Connect = {
@@ -9410,7 +9797,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511637
   },
   ["76C48C35435BFBE36E225592DEBC9C98"] = {
-    Connect = T.RT_80,
+    Connect = T.RT_106,
     GUID = "76C48C35435BFBE36E225592DEBC9C98",
     NodeParams = {
       DialogueIds = {51165410, 51165411}
@@ -9449,7 +9836,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100451
   },
   ["77547A484F5E5D6600BB7C8AE69943C1"] = {
-    Connect = T.RT_76,
+    Connect = T.RT_102,
     GUID = "77547A484F5E5D6600BB7C8AE69943C1",
     NodeParams = {
       DialogueIds = {
@@ -9490,6 +9877,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120448
+  },
+  ["77F6ED364D6BB613A0D06CBD03EDD2BA"] = {
+    Connect = T.RT_1,
+    GUID = "77F6ED364D6BB613A0D06CBD03EDD2BA",
+    NodeType = "FlowNode_Script",
+    TalkId = 100461
   },
   ["77FC33874319614B383FDDB94FA1139F"] = {
     Connect = T.RT_1,
@@ -9756,7 +10149,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "7CC9F22046DCE900B3F3EFA7FC034A8A",
     NodeType = "FlowNode_Start",
-    TalkId = 100483
+    TalkId = 100499
   },
   ["7CD199FA4D3C9450A06A1E81AD707102"] = {
     Connect = {
@@ -10169,9 +10562,9 @@ return ReadOnly("FlowExport", {
     TalkId = 511520
   },
   ["8276BD734A0E004763D207AD74AA28AF"] = {
-    Connect = T.RT_81,
+    Connect = T.RT_107,
     GUID = "8276BD734A0E004763D207AD74AA28AF",
-    NodeParams = T.RT_83,
+    NodeParams = T.RT_109,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100401
   },
@@ -10230,7 +10623,8 @@ return ReadOnly("FlowExport", {
   },
   ["8339911C44FEF2B35895299C470DB688"] = {
     Connect = {
-      End = "8E60845E4111C76B20313BAD383AEE66"
+      End = "8E60845E4111C76B20313BAD383AEE66",
+      NormalPin_5 = "5AAAEA7F4BACBF984C9952B59FF806F6"
     },
     GUID = "8339911C44FEF2B35895299C470DB688",
     NodeParams = {
@@ -10304,9 +10698,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100432
   },
   ["84A743794CBBF1D0988BBDA602E8AD55"] = {
-    Connect = T.RT_84,
+    Connect = T.RT_110,
     GUID = "84A743794CBBF1D0988BBDA602E8AD55",
-    NodeParams = T.RT_50,
+    NodeParams = T.RT_69,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120429
   },
@@ -10315,7 +10709,7 @@ return ReadOnly("FlowExport", {
       End = "518EE879414672B6C8F168B6FE9DA328"
     },
     GUID = "84E521344E5C3458692ABF9200AFD675",
-    NodeParams = T.RT_73,
+    NodeParams = T.RT_99,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -10508,7 +10902,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120469
   },
   ["87B82BC9485E07FF8845E3BC54FBA074"] = {
-    Connect = T.RT_29,
+    Connect = T.RT_36,
     GUID = "87B82BC9485E07FF8845E3BC54FBA074",
     NodeParams = {
       DialogueIds = {
@@ -10534,7 +10928,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100431
+    TalkId = 100499
   },
   ["87CB10E4432ED6749A4BC2B1B1486DF2"] = {
     Connect = T.RT_1,
@@ -10559,7 +10953,7 @@ return ReadOnly("FlowExport", {
     TalkId = 1004662
   },
   ["87FF1E9E4D2FBDA21A673F95D9D3093F"] = {
-    Connect = T.RT_74,
+    Connect = T.RT_100,
     GUID = "87FF1E9E4D2FBDA21A673F95D9D3093F",
     NodeParams = {
       DialogueIds = {51164429}
@@ -10576,7 +10970,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100418
   },
   ["8815885D4441159B383E2C843003C26F"] = {
-    Connect = T.RT_85,
+    Connect = T.RT_111,
     GUID = "8815885D4441159B383E2C843003C26F",
     NodeParams = {
       DialogueIds = {12044215}
@@ -10625,7 +11019,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100454
   },
   ["887084F54122D7C618871BB1740BC4A9"] = {
-    Connect = T.RT_74,
+    Connect = T.RT_100,
     GUID = "887084F54122D7C618871BB1740BC4A9",
     NodeParams = {
       DialogueIds = {
@@ -10649,6 +11043,13 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 100482
   },
+  ["898FE406433B6301F10C4E96EE866A16"] = {
+    Connect = T.RT_62,
+    GUID = "898FE406433B6301F10C4E96EE866A16",
+    NodeParams = T.RT_64,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004400
+  },
   ["89A9A37546D3F5F0966CDD8B3C3D9243"] = {
     Connect = T.RT_1,
     GUID = "89A9A37546D3F5F0966CDD8B3C3D9243",
@@ -10657,7 +11058,9 @@ return ReadOnly("FlowExport", {
   },
   ["89C1114F4C71C483FC0BB794F96A3E6F"] = {
     Connect = {
-      End = "5CF211694C3764F6AF9D28B7C922D08E"
+      End = "5CF211694C3764F6AF9D28B7C922D08E",
+      NormalPin_1 = "F887C68C43BEF679B8A61785345FFDE1",
+      NormalPin_9 = "FEECA25341ADA7B505452DA0EB0BF86F"
     },
     GUID = "89C1114F4C71C483FC0BB794F96A3E6F",
     NodeParams = {
@@ -10693,10 +11096,16 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 511637
   },
+  ["89E8EF22416CC40806E10C910F5AAF1C"] = {
+    Connect = T.RT_1,
+    GUID = "89E8EF22416CC40806E10C910F5AAF1C",
+    NodeType = "FlowNode_Script",
+    TalkId = 100485
+  },
   ["8A3196C34E05B18AC98F49943AE15FD2"] = {
-    Connect = T.RT_86,
+    Connect = T.RT_112,
     GUID = "8A3196C34E05B18AC98F49943AE15FD2",
-    NodeParams = T.RT_44,
+    NodeParams = T.RT_60,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -10715,7 +11124,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120468
   },
   ["8A73BE9648BD9427E380328935B2F6AA"] = {
-    Connect = T.RT_38,
+    Connect = T.RT_54,
     GUID = "8A73BE9648BD9427E380328935B2F6AA",
     NodeParams = {
       DialogueIds = {51140041}
@@ -10737,6 +11146,24 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 100499
+  },
+  ["8AAC07E249F5A67F5493E0BAF53EA19E"] = {
+    Connect = {
+      End = "95B6FBF144C965382490818A46714CEE",
+      NormalPin_146 = "F1A2EC374142ECEE45F1C888819F62AC"
+    },
+    GUID = "8AAC07E249F5A67F5493E0BAF53EA19E",
+    NodeParams = {
+      DialogueIds = {
+        10048701,
+        10048702,
+        10048703,
+        10048704,
+        100499146
+      }
+    },
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004870
   },
   ["8ABC8E774A41B3AA704AE6AB0375BAF6"] = {
     Connect = {
@@ -10780,7 +11207,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["8B38A03B438EA51984F2AFA28F621D83"] = {
-    Connect = T.RT_74,
+    Connect = T.RT_100,
     GUID = "8B38A03B438EA51984F2AFA28F621D83",
     NodeParams = {
       DialogueIds = {51164428}
@@ -10795,7 +11222,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["8B817FE34F6B89A798081096CAC14E38"] = {
-    Connect = T.RT_87,
+    Connect = T.RT_113,
     GUID = "8B817FE34F6B89A798081096CAC14E38",
     NodeParams = {
       DialogueIds = {51163214}
@@ -10932,13 +11359,19 @@ return ReadOnly("FlowExport", {
     TalkId = 120423
   },
   ["8CBC531D45A8DA2E70AAE6B57E27400B"] = {
-    Connect = T.RT_54,
+    Connect = T.RT_76,
     GUID = "8CBC531D45A8DA2E70AAE6B57E27400B",
     NodeParams = {
       DialogueIds = {51100034, 51100035}
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 511000
+  },
+  ["8CDBE45C411E2B17B1846180BABEACD0"] = {
+    Connect = T.RT_1,
+    GUID = "8CDBE45C411E2B17B1846180BABEACD0",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   ["8CE199854EDDE355525D639B85764A59"] = {
     Connect = {
@@ -11077,7 +11510,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "8E9AA19C46CC9C1CCCEA6F931185258C",
     NodeParams = {
-      DialogueIds = T.RT_88,
+      DialogueIds = T.RT_114,
       OptionFailOutPut = {
         [10042410] = "Fail_0",
         [10042411] = "Fail_1"
@@ -11391,27 +11824,7 @@ return ReadOnly("FlowExport", {
       End = "683D9F544C353746D4A6A1B59287C3F6"
     },
     GUID = "934362E7477C451DFBABC7ACBDFCD54D",
-    NodeParams = {
-      DialogueIds = {
-        10044301,
-        10044302,
-        10044303,
-        10044304,
-        10044305,
-        10044306,
-        10044307,
-        10044308,
-        10044309,
-        10044310,
-        10044311,
-        10044312,
-        10044313,
-        10044314,
-        10044315,
-        10044316,
-        10044317
-      }
-    },
+    NodeParams = T.RT_52,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100443
   },
@@ -11427,7 +11840,13 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "941AE44D4C44C97169273791E459B77F",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100443
+    TalkId = 1004430
+  },
+  ["943949B7412EFD7A73A0ED9434EF09FE"] = {
+    Connect = T.RT_1,
+    GUID = "943949B7412EFD7A73A0ED9434EF09FE",
+    NodeType = "FlowNode_Script",
+    TalkId = 1004781
   },
   ["944BB27B40066296073EF6BB0142C4DA"] = {
     Connect = {
@@ -11458,7 +11877,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120126
   },
   ["9481A4454666B7CA137DAD9C137DC5F1"] = {
-    Connect = T.RT_89,
+    Connect = T.RT_115,
     GUID = "9481A4454666B7CA137DAD9C137DC5F1",
     NodeParams = {
       DialogueIds = {12010428}
@@ -11543,7 +11962,7 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "95B6FBF144C965382490818A46714CEE",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100487
+    TalkId = 1004870
   },
   ["95E7CE6949AD9D6A603F63ADD003BE20"] = {
     Connect = {
@@ -11685,7 +12104,8 @@ return ReadOnly("FlowExport", {
   },
   ["98FA9FDE424CE2D9E6618998813E14AC"] = {
     Connect = {
-      End = "01C7939640B84795367DB2BD200BC0C1"
+      End = "01C7939640B84795367DB2BD200BC0C1",
+      NormalPin_7 = "7641D7224A08D13D9F073FA6A9869D22"
     },
     GUID = "98FA9FDE424CE2D9E6618998813E14AC",
     NodeParams = {
@@ -11731,7 +12151,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   ["993093B345C052C18BEB0A9736E4A140"] = {
-    Connect = T.RT_32,
+    Connect = T.RT_39,
     GUID = "993093B345C052C18BEB0A9736E4A140",
     NodeParams = {
       DialogueIds = {10044609}
@@ -11804,7 +12224,8 @@ return ReadOnly("FlowExport", {
   },
   ["9A3C13E342575F01093661B45B84C661"] = {
     Connect = {
-      End = "878F1B184EAD34A5735B12BC8F674C3B"
+      End = "878F1B184EAD34A5735B12BC8F674C3B",
+      NormalPin_1 = "4396A44940D0053637CC55B18E520E1E"
     },
     GUID = "9A3C13E342575F01093661B45B84C661",
     NodeParams = {
@@ -11845,7 +12266,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100477
   },
   ["9A49781F4105FFF3FB9544B629C88423"] = {
-    Connect = T.RT_87,
+    Connect = T.RT_113,
     GUID = "9A49781F4105FFF3FB9544B629C88423",
     NodeParams = {
       DialogueIds = {51163215}
@@ -11903,7 +12324,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511000
   },
   ["9A93B7D54EBB868425D3D791E876EA52"] = {
-    Connect = T.RT_51,
+    Connect = T.RT_70,
     GUID = "9A93B7D54EBB868425D3D791E876EA52",
     NodeParams = {
       DialogueIds = {
@@ -12010,6 +12431,18 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120402
   },
+  ["9BD4766A48C88944ADCE548ABF2FDFCC"] = {
+    Connect = T.RT_1,
+    GUID = "9BD4766A48C88944ADCE548ABF2FDFCC",
+    NodeType = "FlowNode_Script",
+    TalkId = 100474
+  },
+  ["9BE94A1C4228CDB9AB3C00AEE551C840"] = {
+    Connect = T.RT_1,
+    GUID = "9BE94A1C4228CDB9AB3C00AEE551C840",
+    NodeType = "FlowNode_Script",
+    TalkId = 100422
+  },
   ["9C088B9C45AF8978700C5AA4C167C8CA"] = {
     Connect = {
       End = "06C1E7064DC73EE64CCC0A98184A380D"
@@ -12027,6 +12460,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 100413
+  },
+  ["9C0D86F342816E33018527A9AE68D3DA"] = {
+    Connect = T.RT_1,
+    GUID = "9C0D86F342816E33018527A9AE68D3DA",
+    NodeType = "FlowNode_Script",
+    TalkId = 100444
   },
   ["9C5BC71343A4EA6E5D619492D47D5E28"] = {
     Connect = {
@@ -12119,6 +12558,14 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120473
   },
+  ["9D080C114EAB935C5D1CDD93BC1A544E"] = {
+    Connect = {
+      Out = "41D6DB274F058BFCADAA04A2E5CAEB3D"
+    },
+    GUID = "9D080C114EAB935C5D1CDD93BC1A544E",
+    NodeType = "FlowNode_Start",
+    TalkId = 100499
+  },
   ["9D1539A44784E3F7E94398A6075A658C"] = {
     Connect = T.RT_1,
     GUID = "9D1539A44784E3F7E94398A6075A658C",
@@ -12138,6 +12585,15 @@ return ReadOnly("FlowExport", {
     GUID = "9D60C8A24D53FFCE51B28B9BBB0CE0AA",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100471
+  },
+  ["9D7313FD4FCDBAC0BD32AF924A25935E"] = {
+    Connect = {
+      End = "2A6521B14ED323103F31E59A7DEE2CFF"
+    },
+    GUID = "9D7313FD4FCDBAC0BD32AF924A25935E",
+    NodeParams = T.RT_13,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100436
   },
   ["9D9765A246ED2B71762C9B816CE088C3"] = {
     Connect = {
@@ -12330,9 +12786,16 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 120475
   },
+  A0672C294B06CCF9848DD19093A52526 = {
+    Connect = T.RT_1,
+    GUID = "A0672C294B06CCF9848DD19093A52526",
+    NodeType = "FlowNode_Script",
+    TalkId = 100481
+  },
   A0682B3B4E1E54BCF49CC09767F2C154 = {
     Connect = {
-      End = "C4461CE1442997B34B0E21821210A7AE"
+      End = "C4461CE1442997B34B0E21821210A7AE",
+      NormalPin_7 = "3EA64FCE4171A7DA516860A170E3CD5E"
     },
     GUID = "A0682B3B4E1E54BCF49CC09767F2C154",
     NodeParams = {
@@ -12429,8 +12892,14 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 120442
   },
+  A24C02B646F0B35EA8F5ADACAE7B2156 = {
+    Connect = T.RT_1,
+    GUID = "A24C02B646F0B35EA8F5ADACAE7B2156",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
+  },
   A2A43ECF4D61947DA19A7EBF91CC3515 = {
-    Connect = T.RT_55,
+    Connect = T.RT_77,
     GUID = "A2A43ECF4D61947DA19A7EBF91CC3515",
     NodeParams = {
       DialogueIds = {10040140}
@@ -12519,7 +12988,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100414
   },
   A467AE37450CE945856BE49A117AAC93 = {
-    Connect = T.RT_90,
+    Connect = T.RT_116,
     GUID = "A467AE37450CE945856BE49A117AAC93",
     NodeParams = {
       DialogueIds = {12010414}
@@ -12700,7 +13169,7 @@ return ReadOnly("FlowExport", {
       End = "515C97924F45ED725A0365917F472520"
     },
     GUID = "A704BB9B40981F05B2729CA6DABBAC09",
-    NodeParams = T.RT_92,
+    NodeParams = T.RT_118,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120220
   },
@@ -12824,7 +13293,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   A763BB9446F7F2D8D4C4FEA8939B9AF4 = {
-    Connect = T.RT_64,
+    Connect = T.RT_86,
     GUID = "A763BB9446F7F2D8D4C4FEA8939B9AF4",
     NodeParams = {
       DialogueIds = {12012007, 12012008}
@@ -12851,7 +13320,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100430
   },
   A7A5ED7A42B311758500A69498CE4F4A = {
-    Connect = T.RT_85,
+    Connect = T.RT_111,
     GUID = "A7A5ED7A42B311758500A69498CE4F4A",
     NodeParams = {
       DialogueIds = {12044216}
@@ -12879,7 +13348,7 @@ return ReadOnly("FlowExport", {
       Option_42 = "84E521344E5C3458692ABF9200AFD675"
     },
     GUID = "A87AD91A47B831485D0A02987DF7753D",
-    NodeParams = T.RT_71,
+    NodeParams = T.RT_93,
     NodeType = "FlowNode_Option",
     TalkId = 120437
   },
@@ -12919,7 +13388,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100429
   },
   A9A8C9CE4C0E10FBA20C73B37E406D72 = {
-    Connect = T.RT_93,
+    Connect = T.RT_119,
     GUID = "A9A8C9CE4C0E10FBA20C73B37E406D72",
     NodeParams = {
       DialogueIds = {10042711}
@@ -12928,13 +13397,19 @@ return ReadOnly("FlowExport", {
     TalkId = 100427
   },
   A9B4570D4648733F417899BD13C61B70 = {
-    Connect = T.RT_14,
+    Connect = T.RT_16,
     GUID = "A9B4570D4648733F417899BD13C61B70",
     NodeParams = {
       DialogueIds = {51165005}
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 511650
+  },
+  A9E4128A4D585F34B24EC79A6CCEA2E8 = {
+    Connect = T.RT_1,
+    GUID = "A9E4128A4D585F34B24EC79A6CCEA2E8",
+    NodeType = "FlowNode_Script",
+    TalkId = 100454
   },
   A9F905E543F06760C2AC15A03B2EE185 = {
     Connect = {
@@ -12957,7 +13432,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100439
   },
   AA0CEA8342D2637F0AFEDE9983FF154E = {
-    Connect = T.RT_31,
+    Connect = T.RT_38,
     GUID = "AA0CEA8342D2637F0AFEDE9983FF154E",
     NodeParams = {
       DialogueIds = {
@@ -13044,7 +13519,8 @@ return ReadOnly("FlowExport", {
   },
   ABD104C84E01661581711EA9E0C31C8D = {
     Connect = {
-      End = "C79881034E0372CFFC4D3390E51ADC2B"
+      End = "C79881034E0372CFFC4D3390E51ADC2B",
+      NormalPin_1 = "4710AD3945052219C8D244B596F056E1"
     },
     GUID = "ABD104C84E01661581711EA9E0C31C8D",
     NodeParams = {
@@ -13099,7 +13575,8 @@ return ReadOnly("FlowExport", {
   },
   ACC23D6045E3CC4E1B9205B75AB0126E = {
     Connect = {
-      End = "5D2A2D0B47A9760E73DA3AA0C806BF9B"
+      End = "5D2A2D0B47A9760E73DA3AA0C806BF9B",
+      NormalPin_8 = "1143DA09459634B30FCC7CA6B7651228"
     },
     GUID = "ACC23D6045E3CC4E1B9205B75AB0126E",
     NodeParams = {
@@ -13128,7 +13605,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100404
   },
   ACD6C9A74DC9A468FD8E34914DFA8676 = {
-    Connect = T.RT_13,
+    Connect = T.RT_15,
     GUID = "ACD6C9A74DC9A468FD8E34914DFA8676",
     NodeParams = {
       DialogueIds = {10040311, 10040312}
@@ -13159,7 +13636,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120102
   },
   AD18D336483A9A6AE80B9F903B10E739 = {
-    Connect = T.RT_29,
+    Connect = T.RT_36,
     GUID = "AD18D336483A9A6AE80B9F903B10E739",
     NodeParams = {
       DialogueIds = {51163505, 51163506}
@@ -13219,10 +13696,10 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "AE86FD1C44875CE9BBC6BCAEEA7C5C1A",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100476
+    TalkId = 100499
   },
   AE8DF6EE42647C1F7AC6C58B06747F47 = {
-    Connect = T.RT_27,
+    Connect = T.RT_31,
     GUID = "AE8DF6EE42647C1F7AC6C58B06747F47",
     NodeParams = {
       DialogueIds = {51100026}
@@ -13289,12 +13766,23 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 511647
   },
+  AF9D17414A203B3E394558B556021352 = {
+    Connect = {
+      End = "E140DDAF4564E34303C013A74985989C"
+    },
+    GUID = "AF9D17414A203B3E394558B556021352",
+    NodeParams = {
+      DialogueIds = {10041429, 10041430}
+    },
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100414
+  },
   AFCAFBDD49325D06DE01B4B4AC5A3345 = {
     Connect = {
       End = "D02FAD75420C2E856E62ACABE899C09B"
     },
     GUID = "AFCAFBDD49325D06DE01B4B4AC5A3345",
-    NodeParams = T.RT_92,
+    NodeParams = T.RT_118,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120220
   },
@@ -13345,7 +13833,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120405
   },
   B123B97642222DA9B4118397744FCDDF = {
-    Connect = T.RT_15,
+    Connect = T.RT_17,
     GUID = "B123B97642222DA9B4118397744FCDDF",
     NodeParams = {
       DialogueIds = {10044336}
@@ -13419,26 +13907,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100401
   },
   B2EDB10A4D1F21FF37AC8BA57F83CF13 = {
-    Connect = {
-      End = "941AE44D4C44C97169273791E459B77F"
-    },
+    Connect = T.RT_120,
     GUID = "B2EDB10A4D1F21FF37AC8BA57F83CF13",
-    NodeParams = {
-      DialogueIds = {
-        10044324,
-        10044325,
-        10044326,
-        10044327,
-        10044328,
-        10044329,
-        10044330,
-        10044331,
-        10044332,
-        10044333,
-        10044334,
-        10044335
-      }
-    },
+    NodeParams = T.RT_122,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100443
   },
@@ -13485,10 +13956,10 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "B3394ACA4E7A46BF42F698B097573E1E",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100405
+    TalkId = 100499
   },
   B3681174409BAA87E78BB687286CF4AF = {
-    Connect = T.RT_41,
+    Connect = T.RT_57,
     GUID = "B3681174409BAA87E78BB687286CF4AF",
     NodeParams = {
       DialogueIds = {51165541}
@@ -13497,7 +13968,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511655
   },
   B3A3E2F54AA92BA6CF075CBF48618E5F = {
-    Connect = T.RT_75,
+    Connect = T.RT_101,
     GUID = "B3A3E2F54AA92BA6CF075CBF48618E5F",
     NodeParams = {
       DialogueIds = {
@@ -13552,7 +14023,9 @@ return ReadOnly("FlowExport", {
   },
   B43B41A343D4AECB6E103FB361C91D38 = {
     Connect = {
-      End = "AD020F5A4FE635C34B1EE8B801BBC1D4"
+      End = "AD020F5A4FE635C34B1EE8B801BBC1D4",
+      NormalPin_1 = "BC38ADD24DB4F4F1A0276CBA1C4FC49A",
+      NormalPin_7 = "24C2FBF0421B773CD1E5F0B32533B224"
     },
     GUID = "B43B41A343D4AECB6E103FB361C91D38",
     NodeParams = {
@@ -13629,7 +14102,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   B54EDBAC4CF02F6DE78BBD95E3B98AF1 = {
-    Connect = T.RT_65,
+    Connect = T.RT_87,
     GUID = "B54EDBAC4CF02F6DE78BBD95E3B98AF1",
     NodeParams = {
       DialogueIds = {51165515}
@@ -13644,7 +14117,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100486
   },
   B560146546B774E8660231AD05AF7314 = {
-    Connect = T.RT_94,
+    Connect = T.RT_123,
     GUID = "B560146546B774E8660231AD05AF7314",
     NodeParams = {
       DialogueIds = {10041921}
@@ -13689,7 +14162,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120453
   },
   B68FB3D8406558AE876050A495953A7D = {
-    Connect = T.RT_35,
+    Connect = T.RT_46,
     GUID = "B68FB3D8406558AE876050A495953A7D",
     NodeParams = {
       DialogueIds = {12012711}
@@ -13737,6 +14210,13 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 120483
   },
+  B7BDFE564D9CF695CDB54C9FA42F069C = {
+    Connect = T.RT_120,
+    GUID = "B7BDFE564D9CF695CDB54C9FA42F069C",
+    NodeParams = T.RT_122,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004430
+  },
   B803BC5B465C2045733E1D9440D0D440 = {
     Connect = {
       End = "C4C166C849EA7E4681FE198D5BA74E15"
@@ -13761,7 +14241,7 @@ return ReadOnly("FlowExport", {
       Option_50 = "4ADFFF5042F9DAB243896AA12476FF37"
     },
     GUID = "B828D5C146010CC211D987B097461C80",
-    NodeParams = T.RT_59,
+    NodeParams = T.RT_81,
     NodeType = "FlowNode_Option",
     TalkId = 120437
   },
@@ -13898,7 +14378,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511645
   },
   B8CDC1F842B4A546C68D22A456501CB0 = {
-    Connect = T.RT_86,
+    Connect = T.RT_112,
     GUID = "B8CDC1F842B4A546C68D22A456501CB0",
     NodeParams = T.RT_11,
     NodeType = "FlowNode_Dialogue",
@@ -14068,6 +14548,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 100499
   },
+  BC38ADD24DB4F4F1A0276CBA1C4FC49A = {
+    Connect = T.RT_1,
+    GUID = "BC38ADD24DB4F4F1A0276CBA1C4FC49A",
+    NodeType = "FlowNode_Script",
+    TalkId = 100467
+  },
   BD064842495179B3E8167B9922EDF267 = {
     Connect = T.RT_1,
     GUID = "BD064842495179B3E8167B9922EDF267",
@@ -14104,7 +14590,9 @@ return ReadOnly("FlowExport", {
   },
   BD2EA85C4B860B54D65E78BCF438ABA4 = {
     Connect = {
-      End = "886FDAE4405E9E35C797DA9A114061D6"
+      End = "886FDAE4405E9E35C797DA9A114061D6",
+      NormalPin_1 = "3B701BD74A995788CB220392E55620F0",
+      NormalPin_9 = "A9E4128A4D585F34B24EC79A6CCEA2E8"
     },
     GUID = "BD2EA85C4B860B54D65E78BCF438ABA4",
     NodeParams = {
@@ -14158,7 +14646,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120484
   },
   BDF539734020699EA5E4F2928C44F86C = {
-    Connect = T.RT_95,
+    Connect = T.RT_124,
     GUID = "BDF539734020699EA5E4F2928C44F86C",
     NodeParams = {
       DialogueIds = {51164908}
@@ -14193,6 +14681,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 100434
+  },
+  BE14FA1F465763FFE7C1909CE245EB24 = {
+    Connect = T.RT_1,
+    GUID = "BE14FA1F465763FFE7C1909CE245EB24",
+    NodeType = "FlowNode_Script",
+    TalkId = 100455
   },
   BE599A624A4193DCEF5B17ADEF7B7607 = {
     Connect = {
@@ -14399,6 +14893,13 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120443
+  },
+  BFF429AF462E88727E04D98F755D1FB5 = {
+    Connect = T.RT_94,
+    GUID = "BFF429AF462E88727E04D98F755D1FB5",
+    NodeParams = T.RT_126,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100436
   },
   C00BC6554646277BC8DF11B51EEDF616 = {
     Connect = {
@@ -14734,13 +15235,13 @@ return ReadOnly("FlowExport", {
     TalkId = 100472
   },
   C4590AB247B7547E01EE3CA74EF4C2C4 = {
-    Connect = T.RT_96,
+    Connect = T.RT_127,
     GUID = "C4590AB247B7547E01EE3CA74EF4C2C4",
     NodeParams = {
       DialogueIds = {10040544, 10040545}
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100405
+    TalkId = 100499
   },
   C46723EF4B1C38F5FC315398AD446142 = {
     Connect = {
@@ -14762,7 +15263,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120473
   },
   C48792D64F10252A81649B8D33753F05 = {
-    Connect = T.RT_93,
+    Connect = T.RT_119,
     GUID = "C48792D64F10252A81649B8D33753F05",
     NodeParams = {
       DialogueIds = {10042712}
@@ -14796,6 +15297,15 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100453
   },
+  C522FEA24416D4DCE5DD6680EDF664AF = {
+    Connect = T.RT_72,
+    GUID = "C522FEA24416D4DCE5DD6680EDF664AF",
+    NodeParams = {
+      DialogueIds = {10044323}
+    },
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 1004430
+  },
   C533CCC04CBCA350BF74FEB7714FFE64 = {
     Connect = {
       Out = "6DD362A54C9363A46718A88B742A8DB4"
@@ -14825,14 +15335,14 @@ return ReadOnly("FlowExport", {
     TalkId = 120233
   },
   C59BA6BE49BE9DDA1DC949AA7C925DAF = {
-    Connect = T.RT_26,
+    Connect = T.RT_30,
     GUID = "C59BA6BE49BE9DDA1DC949AA7C925DAF",
-    NodeParams = T.RT_40,
+    NodeParams = T.RT_56,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120429
   },
   C5BA7257409A2FE296BDD4B61FAD7BCD = {
-    Connect = T.RT_30,
+    Connect = T.RT_37,
     GUID = "C5BA7257409A2FE296BDD4B61FAD7BCD",
     NodeParams = {
       DialogueIds = {10040612}
@@ -15062,7 +15572,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100419
   },
   C7FEA2DE47D402C32FE9EE8E80F0A580 = {
-    Connect = T.RT_12,
+    Connect = T.RT_14,
     GUID = "C7FEA2DE47D402C32FE9EE8E80F0A580",
     NodeParams = {
       DialogueIds = {10049418}
@@ -15110,7 +15620,8 @@ return ReadOnly("FlowExport", {
   },
   C8609EB9445BEA92F740469B75BCCC05 = {
     Connect = {
-      End = "8E9AA19C46CC9C1CCCEA6F931185258C"
+      End = "8E9AA19C46CC9C1CCCEA6F931185258C",
+      NormalPin_1 = "FCD310E041DC6287EBB8F0983C3B2759"
     },
     GUID = "C8609EB9445BEA92F740469B75BCCC05",
     NodeParams = {
@@ -15142,7 +15653,7 @@ return ReadOnly("FlowExport", {
     },
     GUID = "C863980B45ACC598F3DB8A82D9F73BB6",
     NodeParams = {
-      DialogueIds = T.RT_88,
+      DialogueIds = T.RT_114,
       OptionOutput = {
         [10042410] = "Option_10",
         [10042411] = "Option_11"
@@ -15331,7 +15842,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511636
   },
   CC565AF044D1A446E9F192A9C5DC3B15 = {
-    Connect = T.RT_28,
+    Connect = T.RT_32,
     GUID = "CC565AF044D1A446E9F192A9C5DC3B15",
     NodeParams = {
       DialogueIds = {51163810, 51163811}
@@ -15375,9 +15886,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   CCC716E14BB8995783E7F3977A48477F = {
-    Connect = T.RT_55,
+    Connect = T.RT_77,
     GUID = "CCC716E14BB8995783E7F3977A48477F",
-    NodeParams = T.RT_98,
+    NodeParams = T.RT_129,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100401
   },
@@ -15436,7 +15947,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120125
   },
   CD229EEC4774C00DA5DDC7BFB5B78513 = {
-    Connect = T.RT_34,
+    Connect = T.RT_45,
     GUID = "CD229EEC4774C00DA5DDC7BFB5B78513",
     NodeParams = {
       DialogueIds = {51165532}
@@ -15578,7 +16089,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120106
   },
   D01D770242D508BFAFBD17A9D47D55F3 = {
-    Connect = T.RT_42,
+    Connect = T.RT_58,
     GUID = "D01D770242D508BFAFBD17A9D47D55F3",
     NodeParams = {
       DialogueIds = {
@@ -15636,7 +16147,9 @@ return ReadOnly("FlowExport", {
   },
   D05BEA2A4B4429B5C3B1E3B9418B6866 = {
     Connect = {
-      End = "6BC088164FBECCA7EE8DA8BC6D07713B"
+      End = "6BC088164FBECCA7EE8DA8BC6D07713B",
+      NormalPin_1 = "757EF69645974CB641A1FEB2E1D34280",
+      NormalPin_3 = "462341D8475BD3D085A5C283F2FFA41D"
     },
     GUID = "D05BEA2A4B4429B5C3B1E3B9418B6866",
     NodeParams = {
@@ -15677,7 +16190,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120482
   },
   D066546A46FC4433CB100E83D934F726 = {
-    Connect = T.RT_96,
+    Connect = T.RT_127,
     GUID = "D066546A46FC4433CB100E83D934F726",
     NodeParams = {
       DialogueIds = {
@@ -15688,7 +16201,7 @@ return ReadOnly("FlowExport", {
       }
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100405
+    TalkId = 100499
   },
   D0E0D7634170C6513C5B65A3AA191383 = {
     Connect = {
@@ -15809,7 +16322,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   D20A8D0245D6B1D73264078EB75C1469 = {
-    Connect = T.RT_27,
+    Connect = T.RT_31,
     GUID = "D20A8D0245D6B1D73264078EB75C1469",
     NodeParams = {
       DialogueIds = {51100024}
@@ -15842,9 +16355,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100457
   },
   D219762D4E7447B3066B9E8EE4543420 = {
-    Connect = T.RT_55,
+    Connect = T.RT_77,
     GUID = "D219762D4E7447B3066B9E8EE4543420",
-    NodeParams = T.RT_98,
+    NodeParams = T.RT_129,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100401
   },
@@ -15932,13 +16445,13 @@ return ReadOnly("FlowExport", {
     TalkId = 120474
   },
   D38A6CA34B32D2E3F49B22884E196F3E = {
-    Connect = T.RT_96,
+    Connect = T.RT_127,
     GUID = "D38A6CA34B32D2E3F49B22884E196F3E",
     NodeParams = {
       DialogueIds = {10040538, 10040539}
     },
     NodeType = "FlowNode_Dialogue",
-    TalkId = 100405
+    TalkId = 100499
   },
   D3EB60774F6BA540C940D3A1F756C63F = {
     Connect = {
@@ -15991,6 +16504,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 511010
+  },
+  D55D834142B91CF44F34BDB814C9621C = {
+    Connect = T.RT_1,
+    GUID = "D55D834142B91CF44F34BDB814C9621C",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   D57B8FED4A07124C1BE075A85D463456 = {
     Connect = {
@@ -16174,12 +16693,18 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 120198
   },
+  D7599B5346F3AC903C8332B16E53499F = {
+    Connect = T.RT_1,
+    GUID = "D7599B5346F3AC903C8332B16E53499F",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
+  },
   D764193F4D4A1B315DA490B01FCFBE9A = {
     Connect = {
       End = "5FA3F4874BB5EA42435F04A92BC5C0E7"
     },
     GUID = "D764193F4D4A1B315DA490B01FCFBE9A",
-    NodeParams = T.RT_100,
+    NodeParams = T.RT_131,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -16208,7 +16733,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120420
   },
   D83A1E364D1AB8D17A46B6B5836F1049 = {
-    Connect = T.RT_65,
+    Connect = T.RT_87,
     GUID = "D83A1E364D1AB8D17A46B6B5836F1049",
     NodeParams = {
       DialogueIds = {
@@ -16229,7 +16754,9 @@ return ReadOnly("FlowExport", {
   },
   D83E4250464E9030F124B8BA1B0C51CF = {
     Connect = {
-      End = "76A812D9417D6A8D70CED7A1D2ECE73A"
+      End = "76A812D9417D6A8D70CED7A1D2ECE73A",
+      NormalPin_1 = "6900A63A4C518B0CF22C18B9891F9B4B",
+      NormalPin_4 = "478E68D34388AA4EE0A11381EBB271A8"
     },
     GUID = "D83E4250464E9030F124B8BA1B0C51CF",
     NodeParams = {
@@ -16312,6 +16839,20 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120193
+  },
+  D8E1D1B84DA3A28CFF61F391B6A6C08F = {
+    Connect = {
+      Option_8 = "AF9D17414A203B3E394558B556021352"
+    },
+    GUID = "D8E1D1B84DA3A28CFF61F391B6A6C08F",
+    NodeParams = {
+      DialogueIds = {10041428},
+      OptionOutput = {
+        [10041428] = "Option_8"
+      }
+    },
+    NodeType = "FlowNode_Option",
+    TalkId = 100414
   },
   D99828854C1B97F4C2ADB9A2C9C37CA5 = {
     Connect = {
@@ -16409,7 +16950,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120464
   },
   DBF886EC42B44F53691B16A0E18BC959 = {
-    Connect = T.RT_30,
+    Connect = T.RT_37,
     GUID = "DBF886EC42B44F53691B16A0E18BC959",
     NodeParams = {
       DialogueIds = {10040614}
@@ -16418,7 +16959,7 @@ return ReadOnly("FlowExport", {
     TalkId = 1004062
   },
   DC18151B4B87BE01DEECBBBB03F58C34 = {
-    Connect = T.RT_52,
+    Connect = T.RT_71,
     GUID = "DC18151B4B87BE01DEECBBBB03F58C34",
     NodeParams = {
       DialogueIds = {
@@ -16455,9 +16996,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100460
   },
   DE26936F477C55CCE471E59F3DD37129 = {
-    Connect = T.RT_81,
+    Connect = T.RT_107,
     GUID = "DE26936F477C55CCE471E59F3DD37129",
-    NodeParams = T.RT_83,
+    NodeParams = T.RT_109,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100401
   },
@@ -16474,11 +17015,9 @@ return ReadOnly("FlowExport", {
     TalkId = 120408
   },
   DEF1339A4465A1A99A53CD8376E951B2 = {
-    Connect = T.RT_53,
+    Connect = T.RT_73,
     GUID = "DEF1339A4465A1A99A53CD8376E951B2",
-    NodeParams = {
-      DialogueIds = {10043609}
-    },
+    NodeParams = T.RT_96,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100436
   },
@@ -16506,7 +17045,7 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "DFD354524BD98132BA4100BE09438BAA",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100440
+    TalkId = 1004400
   },
   DFDCB90043E665FCA87BAAB046E87B3D = {
     Connect = {
@@ -16525,7 +17064,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100487
   },
   DFEA7CD549A88068F063409F32C4BFD3 = {
-    Connect = T.RT_101,
+    Connect = T.RT_132,
     GUID = "DFEA7CD549A88068F063409F32C4BFD3",
     NodeParams = {
       DialogueIds = {
@@ -16563,29 +17102,9 @@ return ReadOnly("FlowExport", {
     TalkId = 120476
   },
   E1139E7B4250AD3E67576BAF1E1A5CA8 = {
-    Connect = {
-      End = "C34EFEC64A53ABAEDAD2B18F4E0F8E54"
-    },
+    Connect = T.RT_48,
     GUID = "E1139E7B4250AD3E67576BAF1E1A5CA8",
-    NodeParams = {
-      DialogueIds = {
-        10043611,
-        10043612,
-        10043613,
-        10043614,
-        10043615,
-        10043616,
-        10043617,
-        10043618,
-        10043619,
-        10043620,
-        10043621,
-        10043622,
-        10043623,
-        10043624,
-        10043625
-      }
-    },
+    NodeParams = T.RT_50,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100436
   },
@@ -16766,7 +17285,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511655
   },
   E422FC1F490BC5AD5CFBCEAE46468DAC = {
-    Connect = T.RT_29,
+    Connect = T.RT_36,
     GUID = "E422FC1F490BC5AD5CFBCEAE46468DAC",
     NodeParams = {
       DialogueIds = {51163501}
@@ -16819,11 +17338,9 @@ return ReadOnly("FlowExport", {
     TalkId = 100490
   },
   E4D0C8B5417423886D654AADC9DEEEFB = {
-    Connect = T.RT_53,
+    Connect = T.RT_73,
     GUID = "E4D0C8B5417423886D654AADC9DEEEFB",
-    NodeParams = {
-      DialogueIds = {10043608}
-    },
+    NodeParams = T.RT_126,
     NodeType = "FlowNode_Dialogue",
     TalkId = 100436
   },
@@ -16847,7 +17364,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   E53AEDC546FB144747432F9ABC1FF17E = {
-    Connect = T.RT_76,
+    Connect = T.RT_102,
     GUID = "E53AEDC546FB144747432F9ABC1FF17E",
     NodeParams = {
       DialogueIds = {
@@ -16878,9 +17395,9 @@ return ReadOnly("FlowExport", {
     TalkId = 120485
   },
   E54E88A94FDE1F808797348E6DB49CB9 = {
-    Connect = T.RT_84,
+    Connect = T.RT_110,
     GUID = "E54E88A94FDE1F808797348E6DB49CB9",
-    NodeParams = T.RT_79,
+    NodeParams = T.RT_105,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120429
   },
@@ -16990,7 +17507,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120449
   },
   E6F671A84D5828BD3F7635AFAF94DAEE = {
-    Connect = T.RT_102,
+    Connect = T.RT_133,
     GUID = "E6F671A84D5828BD3F7635AFAF94DAEE",
     NodeParams = {
       DialogueIds = {
@@ -17036,7 +17553,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120107
   },
   E71242F6405D15814B8C3584A8BC137E = {
-    Connect = T.RT_56,
+    Connect = T.RT_78,
     GUID = "E71242F6405D15814B8C3584A8BC137E",
     NodeParams = {
       DialogueIds = {
@@ -17206,7 +17723,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120104
   },
   EA14DD214EB7BEB14210398D24EF6EE0 = {
-    Connect = T.RT_95,
+    Connect = T.RT_124,
     GUID = "EA14DD214EB7BEB14210398D24EF6EE0",
     NodeParams = {
       DialogueIds = {51164910}
@@ -17288,7 +17805,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511637
   },
   EC3E39CA4CDB5EE95272C894E87F2E44 = {
-    Connect = T.RT_94,
+    Connect = T.RT_123,
     GUID = "EC3E39CA4CDB5EE95272C894E87F2E44",
     NodeParams = {
       DialogueIds = {10041920}
@@ -17303,7 +17820,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120121
   },
   EC9E59C94828DE2223F18388E694349B = {
-    Connect = T.RT_19,
+    Connect = T.RT_23,
     GUID = "EC9E59C94828DE2223F18388E694349B",
     NodeParams = {
       DialogueIds = {12048209, 12048210}
@@ -17336,6 +17853,13 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120424
+  },
+  ED08FDF44D5CD5C2C037418602471238 = {
+    Connect = T.RT_94,
+    GUID = "ED08FDF44D5CD5C2C037418602471238",
+    NodeParams = T.RT_75,
+    NodeType = "FlowNode_Dialogue",
+    TalkId = 100436
   },
   ED5216B249C0CE42E0058B8FE4B7CA64 = {
     Connect = {
@@ -17407,7 +17931,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511662
   },
   EE04DD1444D1FE85167A0E8BA1D0204D = {
-    Connect = T.RT_89,
+    Connect = T.RT_115,
     GUID = "EE04DD1444D1FE85167A0E8BA1D0204D",
     NodeParams = {
       DialogueIds = T.RT_1
@@ -17444,7 +17968,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511500
   },
   EEAB9F9C4EEE3CA2FC1C2C84D7E45479 = {
-    Connect = T.RT_102,
+    Connect = T.RT_133,
     GUID = "EEAB9F9C4EEE3CA2FC1C2C84D7E45479",
     NodeParams = {
       DialogueIds = {12040409, 12040410}
@@ -17454,8 +17978,8 @@ return ReadOnly("FlowExport", {
   },
   EEC7E0334DB4C4DA3C7A32AB23909BC9 = {
     Connect = {
-      Option_18 = "EC3E39CA4CDB5EE95272C894E87F2E44",
-      Option_19 = "B560146546B774E8660231AD05AF7314"
+      Option_18 = "B560146546B774E8660231AD05AF7314",
+      Option_19 = "EC3E39CA4CDB5EE95272C894E87F2E44"
     },
     GUID = "EEC7E0334DB4C4DA3C7A32AB23909BC9",
     NodeParams = {
@@ -17479,15 +18003,15 @@ return ReadOnly("FlowExport", {
     TalkId = 511658
   },
   EF467BD8411DD2E1D47E4C9D8ED36E2B = {
-    Connect = T.RT_66,
+    Connect = T.RT_88,
     GUID = "EF467BD8411DD2E1D47E4C9D8ED36E2B",
     NodeParams = {
-      DialogueIds = T.RT_67,
+      DialogueIds = T.RT_89,
       OptionFailOutPut = {
         [120223281] = "Fail_281",
         [120223282] = "Fail_282"
       },
-      OptionOutput = T.RT_68
+      OptionOutput = T.RT_90
     },
     NodeType = "FlowNode_ImpressingOption",
     TalkId = 120223
@@ -17507,7 +18031,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120159
   },
   EF8A9EFF40AB019028A020884487F366 = {
-    Connect = T.RT_101,
+    Connect = T.RT_132,
     GUID = "EF8A9EFF40AB019028A020884487F366",
     NodeParams = {
       DialogueIds = {
@@ -17522,7 +18046,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100409
   },
   EF8AFC53451D7784B903ECACEB297BBC = {
-    Connect = T.RT_93,
+    Connect = T.RT_119,
     GUID = "EF8AFC53451D7784B903ECACEB297BBC",
     NodeParams = {
       DialogueIds = {10042710}
@@ -17560,7 +18084,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100499
   },
   EFB2F2CB40FF90D1EE1038BBA56A3A69 = {
-    Connect = T.RT_21,
+    Connect = T.RT_25,
     GUID = "EFB2F2CB40FF90D1EE1038BBA56A3A69",
     NodeParams = {
       DialogueIds = {
@@ -17572,6 +18096,12 @@ return ReadOnly("FlowExport", {
     },
     NodeType = "FlowNode_Dialogue",
     TalkId = 120402
+  },
+  F002FC62429988C340805FA7FF50729F = {
+    Connect = T.RT_1,
+    GUID = "F002FC62429988C340805FA7FF50729F",
+    NodeType = "FlowNode_Script",
+    TalkId = 100458
   },
   F04AEB5448D1D99F8189C59D52766EC5 = {
     Connect = {
@@ -17625,7 +18155,7 @@ return ReadOnly("FlowExport", {
     TalkId = 100438
   },
   F0F47E6F4B33331813031FAF5BCB615B = {
-    Connect = T.RT_45,
+    Connect = T.RT_61,
     GUID = "F0F47E6F4B33331813031FAF5BCB615B",
     NodeParams = {
       DialogueIds = {10046114}
@@ -17640,7 +18170,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120450
   },
   F1110AFB4536FD9599C87C910DFDC0D9 = {
-    Connect = T.RT_18,
+    Connect = T.RT_22,
     GUID = "F1110AFB4536FD9599C87C910DFDC0D9",
     NodeParams = {
       DialogueIds = {51163008}
@@ -17655,6 +18185,12 @@ return ReadOnly("FlowExport", {
     GUID = "F115D5D34239061B4398C9B7D2D6F7F7",
     NodeType = "FlowNode_Start",
     TalkId = 100499
+  },
+  F1A2EC374142ECEE45F1C888819F62AC = {
+    Connect = T.RT_1,
+    GUID = "F1A2EC374142ECEE45F1C888819F62AC",
+    NodeType = "FlowNode_Script",
+    TalkId = 1004870
   },
   F1F712F244F663D063C479B0311FCA0A = {
     Connect = {
@@ -17848,11 +18384,11 @@ return ReadOnly("FlowExport", {
   },
   F41EEF8B42EE260A429F9FA312DF0FC3 = {
     Connect = {
-      Out = "40E9C6AF47DE6E512AD0279EFB0B42EB"
+      Out = "898FE406433B6301F10C4E96EE866A16"
     },
     GUID = "F41EEF8B42EE260A429F9FA312DF0FC3",
     NodeType = "FlowNode_Start",
-    TalkId = 100440
+    TalkId = 1004400
   },
   F45307B14A052DEC632DD7950F1181B1 = {
     Connect = {
@@ -18049,10 +18585,10 @@ return ReadOnly("FlowExport", {
     Connect = T.RT_1,
     GUID = "F6EC5B904E36F64395B73FBBCD6AB262",
     NodeType = "FlowNode_TalkFinish",
-    TalkId = 100483
+    TalkId = 100499
   },
   F6F5171D45C99C728EF11A8CDE26708C = {
-    Connect = T.RT_90,
+    Connect = T.RT_116,
     GUID = "F6F5171D45C99C728EF11A8CDE26708C",
     NodeParams = {
       DialogueIds = {12010413}
@@ -18076,7 +18612,8 @@ return ReadOnly("FlowExport", {
   },
   F73DEF0B41AAAB1815C2E2B49A74F335 = {
     Connect = {
-      End = "6B0BDD9140A95EB0ABE239B15CDF5913"
+      End = "6B0BDD9140A95EB0ABE239B15CDF5913",
+      NormalPin_4 = "943949B7412EFD7A73A0ED9434EF09FE"
     },
     GUID = "F73DEF0B41AAAB1815C2E2B49A74F335",
     NodeParams = {
@@ -18102,7 +18639,7 @@ return ReadOnly("FlowExport", {
     TalkId = 1004781
   },
   F74C796344F3A7C339384EBB48E11A49 = {
-    Connect = T.RT_77,
+    Connect = T.RT_103,
     GUID = "F74C796344F3A7C339384EBB48E11A49",
     NodeParams = {
       DialogueIds = {10041409}
@@ -18182,7 +18719,7 @@ return ReadOnly("FlowExport", {
     TalkId = 511520
   },
   F842C2954206A1B48E7A36B28B5C3FC0 = {
-    Connect = T.RT_80,
+    Connect = T.RT_106,
     GUID = "F842C2954206A1B48E7A36B28B5C3FC0",
     NodeParams = {
       DialogueIds = {
@@ -18216,11 +18753,23 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 511400
   },
+  F887C68C43BEF679B8A61785345FFDE1 = {
+    Connect = T.RT_1,
+    GUID = "F887C68C43BEF679B8A61785345FFDE1",
+    NodeType = "FlowNode_Script",
+    TalkId = 100445
+  },
   F8EC35894B24D893CF831DAF2A32D85D = {
     Connect = T.RT_1,
     GUID = "F8EC35894B24D893CF831DAF2A32D85D",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 120446
+  },
+  F8F79CD742EC876E3CFEB8B1CCBC1E62 = {
+    Connect = T.RT_1,
+    GUID = "F8F79CD742EC876E3CFEB8B1CCBC1E62",
+    NodeType = "FlowNode_Script",
+    TalkId = 100499
   },
   F911A5114F142C58D55FAA915A113341 = {
     Connect = {
@@ -18232,7 +18781,6 @@ return ReadOnly("FlowExport", {
         10041201,
         10041202,
         10041203,
-        10041204,
         10041205,
         10041206,
         10041207,
@@ -18328,7 +18876,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120402
   },
   FAD64C3C4324C1374BB9C0B68B618749 = {
-    Connect = T.RT_95,
+    Connect = T.RT_124,
     GUID = "FAD64C3C4324C1374BB9C0B68B618749",
     NodeParams = {
       DialogueIds = {51164909}
@@ -18343,6 +18891,12 @@ return ReadOnly("FlowExport", {
     GUID = "FAFFBE484A3B81F32972C4A15E83951D",
     NodeType = "FlowNode_Start",
     TalkId = 120121
+  },
+  FB41AE574AAA01BD5D2BD98E725F1564 = {
+    Connect = T.RT_1,
+    GUID = "FB41AE574AAA01BD5D2BD98E725F1564",
+    NodeType = "FlowNode_Script",
+    TalkId = 100456
   },
   FB730B3A42476DC8C84F2183399226B0 = {
     Connect = {
@@ -18364,6 +18918,12 @@ return ReadOnly("FlowExport", {
     GUID = "FBAA35224F90EC3AEB0E619659B07C63",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100468
+  },
+  FC177B184F777716407204B98845AFD1 = {
+    Connect = T.RT_1,
+    GUID = "FC177B184F777716407204B98845AFD1",
+    NodeType = "FlowNode_TalkFinish",
+    TalkId = 100499
   },
   FC4643FE46BD6D0F6B8D5793D831B93F = {
     Connect = {
@@ -18396,6 +18956,12 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Dialogue",
     TalkId = 100499
   },
+  FCC8431D487580F23D7AD8B9F9954195 = {
+    Connect = T.RT_1,
+    GUID = "FCC8431D487580F23D7AD8B9F9954195",
+    NodeType = "FlowNode_Script",
+    TalkId = 100485
+  },
   FCC9E3CA4E338F277B23AABBCB1AB01D = {
     Connect = {
       Out = "C01C95A24786EFFBB5C23D8FE0DEE79E"
@@ -18404,12 +18970,18 @@ return ReadOnly("FlowExport", {
     NodeType = "FlowNode_Start",
     TalkId = 100499
   },
+  FCD310E041DC6287EBB8F0983C3B2759 = {
+    Connect = T.RT_1,
+    GUID = "FCD310E041DC6287EBB8F0983C3B2759",
+    NodeType = "FlowNode_Script",
+    TalkId = 100424
+  },
   FCDCF7AD44A737A45E0E0BB8E5C32645 = {
     Connect = {
       End = "A87AD91A47B831485D0A02987DF7753D"
     },
     GUID = "FCDCF7AD44A737A45E0E0BB8E5C32645",
-    NodeParams = T.RT_100,
+    NodeParams = T.RT_131,
     NodeType = "FlowNode_Dialogue",
     TalkId = 120437
   },
@@ -18448,7 +19020,7 @@ return ReadOnly("FlowExport", {
     TalkId = 120134
   },
   FD5DE9B443B31E87AEAA7EAE7F6DBE52 = {
-    Connect = T.RT_14,
+    Connect = T.RT_16,
     GUID = "FD5DE9B443B31E87AEAA7EAE7F6DBE52",
     NodeParams = {
       DialogueIds = {51165007}
@@ -18504,11 +19076,11 @@ return ReadOnly("FlowExport", {
   },
   FE09801E4C5D29C191575F919E6A3DC6 = {
     Connect = {
-      Out = "DFDCB90043E665FCA87BAAB046E87B3D"
+      Out = "8AAC07E249F5A67F5493E0BAF53EA19E"
     },
     GUID = "FE09801E4C5D29C191575F919E6A3DC6",
     NodeType = "FlowNode_Start",
-    TalkId = 100487
+    TalkId = 1004870
   },
   FE4DC5334ADA3E6563F2B08228D27586 = {
     Connect = T.RT_1,
@@ -18533,6 +19105,12 @@ return ReadOnly("FlowExport", {
     GUID = "FED96D25461A830C8EC8BB9D11D4A737",
     NodeType = "FlowNode_TalkFinish",
     TalkId = 100417
+  },
+  FEECA25341ADA7B505452DA0EB0BF86F = {
+    Connect = T.RT_1,
+    GUID = "FEECA25341ADA7B505452DA0EB0BF86F",
+    NodeType = "FlowNode_Script",
+    TalkId = 100445
   },
   FFB47D074189596A682AD1B6BF0F448E = {
     Connect = T.RT_1,

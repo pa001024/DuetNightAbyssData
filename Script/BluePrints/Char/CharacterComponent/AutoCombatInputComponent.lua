@@ -378,6 +378,7 @@ end
 function Component:TriggerAutoAttackOnce()
   self.AutoAttackPressing = true
   self:ActionCallback("Attack", EInputEvent.IE_Pressed)
+  EventManager:FireEvent(EventID.OnBattleMeleeTriggered)
   if self.AutoAttackReleaseTimer then
     self:RemoveTimer(self.AutoAttackReleaseTimer)
     self.AutoAttackReleaseTimer = nil
@@ -411,6 +412,7 @@ function Component:TriggerAutoShootOnce()
   end
   self.AutoShootPressing = true
   self:ActionCallback("Fire", EInputEvent.IE_Pressed)
+  EventManager:FireEvent(EventID.OnBattleFireTriggered)
   if self.AutoShootReleaseTimer then
     self:RemoveTimer(self.AutoShootReleaseTimer)
     self.AutoShootReleaseTimer = nil

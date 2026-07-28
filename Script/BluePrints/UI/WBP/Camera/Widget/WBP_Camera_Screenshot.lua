@@ -15,6 +15,11 @@ local DisableShareImgChannelSet = {
   [23] = true,
   [270] = true
 }
+local HeroUsdkShareResult = {
+  Success = 0,
+  Failed = -1,
+  Cancel = -2
+}
 
 function M:Construct()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
@@ -119,6 +124,14 @@ function M:Init(Params)
   if not IsValid(Params.Image) then
     self:Hide()
     return
+  end
+  self:StopAllAnimations()
+  self:SetRenderOpacity(1)
+  if self.CanvasPanel_Screenshot then
+    self.CanvasPanel_Screenshot:SetRenderOpacity(1)
+  end
+  if self.Screenshot then
+    self.Screenshot:SetRenderOpacity(1)
   end
   self.bSaved = false
   self.bSavedInLocal = false
@@ -290,6 +303,13 @@ end
 
 function M:ShareDelegateCallback(Result, SharePlatform, msg)
   DebugPrint("LogEMHeroUsdk ShareDelegateCallback: ", Result, SharePlatform, msg)
+  if Result == HeroUsdkShareResult.Success then
+    msg = GText("UI_Output_Success")
+  elseif Result == HeroUsdkShareResult.Failed then
+    msg = GText("UI_Output_Fail")
+  elseif Result == HeroUsdkShareResult.Cancel then
+    msg = GText("UI_Output_Cancelled")
+  end
   UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(msg), 2.5)
 end
 
@@ -459,6 +479,14 @@ end
 
 function M:OnHideAnimFinished()
   self.Parent:BlockAllUIInput(false)
+  self:StopAllAnimations()
+  self:SetRenderOpacity(1)
+  if self.CanvasPanel_Screenshot then
+    self.CanvasPanel_Screenshot:SetRenderOpacity(1)
+  end
+  if self.Screenshot then
+    self.Screenshot:SetRenderOpacity(1)
+  end
   self:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.OnHideCallback then
     self.OnHideCallback(self.Parent, self.bSaved)

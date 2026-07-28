@@ -183,7 +183,9 @@ function WBP_DungeonSettlement_Role_C:GetCharInfo(Player)
       Level = Player:GetAttr("Level")
     }
   end
-  local CharId = Player.CurrentRoleId or self.Id
+  local bUseQuestRole = Player.AvatarQuestRoleID and 0 ~= Player.AvatarQuestRoleID
+  local CurrentRoleId = not bUseQuestRole and Player.CurrentRoleId or nil
+  local CharId = CurrentRoleId or self.Id
   local EnhanceLevel = self.EnhanceLevel
   local CurrentExp = self.CurInfo.Exp
   local CurrentLevel = self.CurInfo.Level

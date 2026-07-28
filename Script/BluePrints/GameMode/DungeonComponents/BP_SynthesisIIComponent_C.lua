@@ -201,6 +201,22 @@ function BP_SynthesisIIComponent_C:StartChargeGame()
   end
 end
 
+function BP_SynthesisIIComponent_C:OnPlayerEnter(Eid)
+  if self.CurMission == "Charge" then
+    local EMGameState = self.GameMode.EMGameState
+    local bCanWriteGuideOrder = EMGameState and IsAuthority(EMGameState)
+    for CreatorId, Eid in pairs(self.ChargeCreatorIdToEid) do
+      if bCanWriteGuideOrder and self.ChargeCreatorIdToGuideOrder then
+        local OrderIndex = self.ChargeCreatorIdToGuideOrder[CreatorId]
+        if OrderIndex then
+          EMGameState:MulticastSetGuideOrder(Eid, OrderIndex)
+        end
+      end
+    end
+  end
+  self.Overridden.OnPlayerEnter(self, Eid)
+end
+
 function BP_SynthesisIIComponent_C:ShowChargeProgressUI()
   self.GameMode:AddDungeonEvent("ShowSynthesisIIChargeProgressUI")
 end

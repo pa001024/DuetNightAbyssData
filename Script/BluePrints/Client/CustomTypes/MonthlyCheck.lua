@@ -9,6 +9,7 @@ MonthlyCheck.__Props__ = {
   CheckCount = prop.prop("Int", "client save", 0),
   MonthlyCheckCount = prop.prop("Int", "client save", 0),
   LastCheckTime = prop.prop("Int", "client save", 0),
+  LastPopupTime = prop.prop("Int", "client save", 0),
   DailyRewardRecord = prop.prop("Int2IntDict", "client save", {}),
   TotalRewardRecord = prop.prop("Int2IntDict", "client save", {})
 }

@@ -75,7 +75,7 @@ function LightTalkTask:PlayDialogue(bPauseResume)
     DebugPrint("lhr@Dialogue Iteration Error: Dialogue为空")
     return
   end
-  self:OnPlayingDialogue(Dialogue)
+  self:UpdateTalkSnapShot(Dialogue)
   local DialogueData = self:GetDialogueDataWithCheck(Dialogue)
   self.CurrentDialogueData = DialogueData
   self:ConstructWaitTag(self, self.OnTaskPlayDialogueFinished)
@@ -166,12 +166,18 @@ function LightTalkTask:OnExceptionInterruptedBySTL()
   DebugPrint("LightTalkTask:OnExceptionInterruptedBySTL")
   TalkUtils:RemovePlayerInvincible()
   self.bHasInterrupted = true
+  if self.TalkTaskData and self.TalkTaskData.FlowAsset then
+    self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+  end
   self:Clear()
 end
 
 function LightTalkTask:OnInterrupted()
   DebugPrint("LightTalkTask:OnInterrupted")
   self.bHasInterrupted = true
+  if self.TalkTaskData and self.TalkTaskData.FlowAsset then
+    self.TalkTaskData.FlowAsset:FinishFlow(UE4.EFlowFinishPolicy.Keep)
+  end
   self:Clear()
 end
 

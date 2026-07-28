@@ -409,5 +409,6 @@ return {
       }
     }
   },
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

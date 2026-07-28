@@ -1,6 +1,21 @@
 require("UnLua")
 local M = Class()
 
+function M:InitFromTemplate(level_loader)
+  if level_loader and level_loader.GetCurrentRoomDesignPath then
+    local LevelId, DesignName = level_loader:GetCurrentRoomDesignPath()
+    if not LevelId then
+      return
+    end
+    local LevelId = tostring(LevelId)
+    local Path, Translation, Rotation = level_loader:K2_GetArtPathByLevelId(LevelId)
+    self:Init_FromTemplate(DesignName, Translation, Rotation, level_loader)
+    DebugPrint("Tacmap Init From Template:", LevelId, Path, Translation, Rotation)
+  else
+    DebugPrint("Tacmap Init From Template Error")
+  end
+end
+
 function M:Init(level_loader)
   local json_short_name = level_loader.shortname
   self:Init_CPP(json_short_name, level_loader)

@@ -911,7 +911,7 @@
               5.05,
               5.4
             ],
-            "削韧": 15
+            "削韧": 5
           },
           {
             "名称": "[Valse]Rayon des dégâts de trajectoire",
@@ -6102,6 +6102,470 @@
     ]
   },
   {
+    "id": 2102,
+    "icon": "Eve",
+    "名称": "Ada (?)",
+    "版本": "1.5",
+    "别名": "Lapin Solitaire du Paradis",
+    "出生地": "Empire Hyperboréen",
+    "势力": "Aucune affiliation",
+    "生日": "09-06",
+    "中文CV": "张小豆",
+    "日文CV": "雨宮天",
+    "英文CV": "Rhiannon Moushall",
+    "韩文CV": "김이안",
+    "阵营": "Aucune affiliation",
+    "属性": "水",
+    "精通": [
+      "Arme d’hast",
+      "Doubles pistolets"
+    ],
+    "标签": [
+      "DPS",
+      "Invocation",
+      "Dégâts de compétence"
+    ],
+    "基础攻击": 26,
+    "基础生命": 95,
+    "基础防御": 255,
+    "基础护盾": 95,
+    "基础神智": 180,
+    "加成": {
+      "Puissance de compétence": 0.2,
+      "Efficacité de compétence": 0.125
+    },
+    "突破": [
+      {
+        "Pièce": 5200,
+        "Poudre de pierre": 10,
+        "Perle azurée": 5
+      },
+      {
+        "Pièce": 10400,
+        "Enduit isolant": 5,
+        "Hydrorésine": 7
+      },
+      {
+        "Pièce": 16300,
+        "Enduit isolant": 10,
+        "Hydrorésine": 15
+      },
+      {
+        "Pièce": 34700,
+        "Enduit isolant": 20,
+        "Purificateur d’eau": 6
+      },
+      {
+        "Pièce": 81600,
+        "Enduit isolant": 40,
+        "Purificateur d’eau": 12
+      },
+      {
+        "Pièce": 243000,
+        "Enduit isolant": 80,
+        "Purificateur d’eau": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 210201,
+        "名称": "Conception du Paradis",
+        "类型": "Invocation",
+        "描述": "Invoque 1 [Le Chariot].\nMaintenez pour entrer dans le [Paradis du Lapin Blanc]. Dans ce mode, vous pouvez copier, déplacer et placer les objets mis en surbrillance dans la scène. Maintenez à nouveau pour quitter le [Paradis du Lapin Blanc].",
+        "icon": "Eve01",
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts de compétence de [Le Chariot]",
+            "影响": "技能威力",
+            "值": [
+              1.36,
+              1.65,
+              1.94,
+              2.23,
+              2.52,
+              2.81,
+              3.1,
+              3.39,
+              3.68,
+              3.97,
+              4.26,
+              4.55
+            ],
+            "削韧": 5
+          },
+          {
+            "名称": "Rayon des dégâts de [Le Chariot]",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Durée de [Le Chariot]",
+            "影响": "技能耐久",
+            "值": 20,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Dégâts de compétence de [L’Empereur]",
+            "影响": "技能威力",
+            "值": [
+              5.25,
+              6.43,
+              7.61,
+              8.79,
+              9.97,
+              11.15,
+              12.33,
+              13.51,
+              14.69,
+              15.87,
+              17.05,
+              18.23
+            ],
+            "削韧": 15
+          },
+          {
+            "名称": "Rayon des dégâts de [L’Empereur]",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Durée de [L’Empereur]",
+            "影响": "技能耐久",
+            "值": 25,
+            "格式": "{}s"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Poudre de pierre": 3,
+            "Enduit isolant": 1
+          },
+          {
+            "Pièce": 2600,
+            "Poudre de pierre": 6,
+            "Enduit isolant": 2
+          },
+          {
+            "Pièce": 3200,
+            "Poudre de pierre": 9,
+            "Enduit isolant": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Poudre de pierre": 15,
+            "Enduit isolant": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Poudre de pierre": 30,
+            "Enduit isolant": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau de la libération": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau de la libération": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau de la libération": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau de la libération": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Invocation : Le Chariot": "Hérite de 100 % des statistiques de son invocateur. Toutes les 3 s, inflige des Dégâts Hydro aux ennemis proches. Jusqu’à 8 [Le Chariot] peuvent exister simultanément.\nLorsque 4 [Le Chariot] sont présents simultanément et que la limite de [L’Empereur] n’est pas atteinte, ils sont détruits et déclenchent [Magie scintillante du Lapin Blanc].",
+          "Magie scintillante du Lapin Blanc": "Lorsque [Le Chariot] déclenche cet effet, invoque 1 [L’Empereur].\nLorsque [L’Empereur] déclenche cet effet, invoque 1 [Le Jugement].",
+          "Invocation : L’Empereur": "Hérite de 100 % des statistiques de son invocateur. Toutes les 3 s, tire un projectile aqueux sur un ennemi aléatoire à proximité. À l’impact, inflige des Dégâts Hydro de zone. Jusqu’à 2 [L’Empereur] peuvent exister simultanément."
+        },
+        "子技能": [
+          {
+            "id": 210291,
+            "类型": "",
+            "icon": "",
+            "名称": "Invocation : Le Chariot"
+          },
+          {
+            "id": 210217,
+            "类型": "Invocation",
+            "icon": "Eve01",
+            "名称": "Magie scintillante du Lapin Blanc"
+          }
+        ]
+      },
+      {
+        "id": 210202,
+        "名称": "Que la fête commence !",
+        "类型": "Invocation",
+        "描述": "Ordonne à [Le Monde] d’ouvrir la [Fête du Lapin Blanc]. Consomme continuellement de la Lucidité. La [Fête du Lapin Blanc] prend fin lorsque la Lucidité atteint 0 ou lorsque la compétence est réutilisée.",
+        "icon": "Eve02_On",
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 20,
+            "格式": "{}"
+          },
+          {
+            "名称": "Coût en Lucidité par seconde",
+            "影响": "技能效益,技能耐久",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts de compétence de [Le Jugement]",
+            "影响": "技能威力",
+            "值": [
+              52.92,
+              64.67,
+              76.42,
+              88.17,
+              99.92,
+              111.67,
+              123.42,
+              135.17,
+              146.92,
+              158.67,
+              170.42,
+              182.17
+            ],
+            "削韧": 120
+          },
+          {
+            "名称": "Rayon de la zone [Fête du Lapin Blanc]",
+            "影响": "技能范围",
+            "值": 15,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Poudre de pierre": 3,
+            "Enduit isolant": 1
+          },
+          {
+            "Pièce": 2600,
+            "Poudre de pierre": 6,
+            "Enduit isolant": 2
+          },
+          {
+            "Pièce": 3200,
+            "Poudre de pierre": 9,
+            "Enduit isolant": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Poudre de pierre": 15,
+            "Enduit isolant": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Poudre de pierre": 30,
+            "Enduit isolant": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau de la libération": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau de la libération": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau de la libération": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau de la libération": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Fête du Lapin Blanc": "Chaque fois que l’invocateur ou [Le Monde] invoque un [Le Chariot], une [Convergence] se produit dans la zone de la [Fête du Lapin Blanc].\nLorsque 2 [L’Empereur] sont présents simultanément et que la limite de [Le Jugement] n’est pas atteinte, ils sont détruits et déclenchent [Magie scintillante du Lapin Blanc] avec [Le Monde].",
+          "Convergence": "Invoque 1 [Le Chariot] dans la zone de la [Fête du Lapin Blanc]. Les invocations issues de [Convergence] ne déclenchent pas cet effet.",
+          "Invocation : Le Jugement": "Hérite de 100 % des statistiques de son invocateur. Toutes les 3 s, lance [Parade du Paradis] et inflige des Dégâts Hydro aux ennemis dans la zone de la [Fête du Lapin Blanc].\nLorsque la [Fête du Lapin Blanc] prend fin, [Le Jugement] se dissipe et redevient [Le Monde]."
+        },
+        "子技能": [
+          {
+            "id": 210221,
+            "类型": "Invocation",
+            "icon": "Eve02_Off",
+            "名称": "Fête du Lapin Blanc"
+          }
+        ]
+      },
+      {
+        "id": 210203,
+        "名称": "Bonjour, monde !",
+        "类型": "Passive",
+        "描述": "Invoque un [Le Monde] permanent pour combattre à ses côtés.",
+        "icon": "Eve03",
+        "字段": [
+          {
+            "名称": "Chance d’activation de l’effet [Hier renaît]",
+            "值": [
+              0.25,
+              0.32,
+              0.39,
+              0.46,
+              0.53,
+              0.6,
+              0.67,
+              0.74,
+              0.81,
+              0.88,
+              0.95,
+              1
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Poudre de pierre": 3,
+            "Enduit isolant": 1
+          },
+          {
+            "Pièce": 2600,
+            "Poudre de pierre": 6,
+            "Enduit isolant": 2
+          },
+          {
+            "Pièce": 3200,
+            "Poudre de pierre": 9,
+            "Enduit isolant": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Poudre de pierre": 15,
+            "Enduit isolant": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Poudre de pierre": 30,
+            "Enduit isolant": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau de la libération": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau de la libération": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau de la libération": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau de la libération": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Invocation : Le Monde": "Hérite de 100 % des statistiques de son invocateur et utilise les Doubles pistolets de son invocateur comme arme à distance.\nLorsqu’un allié effectue une invocation, [Le Monde] a une probabilité d’effectuer [Hier renaît]. Peut se produire jusqu’à 4 fois par seconde.",
+          "Hier renaît": "Invoque 1 [Le Chariot] et recharge 50 munitions pour [Le Monde]. Les invocations issues de [Hier renaît], [Convergence] et [Magie scintillante du Lapin Blanc] ne déclenchent pas cet effet."
+        }
+      },
+      {
+        "id": 210204,
+        "名称": "À la prochaine~",
+        "类型": "Passive",
+        "描述": "Lorsque vous ou un allié effectuez une invocation, restaure de la Lucidité avec une probabilité basée sur l’Efficacité de compétence.\nLorsque [Le Chariot] est détruit, sélectionne un ennemi aléatoire dans la zone et inflige des Dégâts Hydro de zone à son emplacement.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "Régénération de Lucidité",
+            "值": 2,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts",
+            "影响": "技能威力",
+            "值": 9.52,
+            "削韧": 100
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ]
+      },
+      {
+        "id": 210003,
+        "名称": "Déluge des Sept Jours",
+        "类型": "Support",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Hydro.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Augmentation d’ATQ",
+            "值": 0.5
+          }
+        ]
+      }
+    ],
+    "溯源": [
+      "Lorsque [Le Jugement] utilise [Parade du Paradis], a une probabilité égale à l’Efficacité de compétence × 60% d’invoquer 1 [Le Chariot].",
+      "Avant la fin de la durée de [L’Empereur], il est possible de consommer 1 [Le Chariot] pour réinitialiser sa durée. Les projectiles aqueux tirés par [L’Empereur] bénéficient des modificateurs de Tir multiple des armes à distance de leur invocateur.",
+      "[Conception du Paradis] niveau +2 ; [Bonjour, monde !] niveau +1.",
+      "La part de la Vitesse d’attaque des invocations dépassant 100 % est convertie à hauteur de 100 % en bonus au multiplicateur des Dégâts de compétence.\nLa Portée de ramassage auto augmente de 25. Tant que [Le Jugement] est présent, la Vitesse d’attaque de vos invocations augmente de 30%.",
+      "[Que la fête commence !] niveau +2 ; [Bonjour, monde !] niveau +1.",
+      "Tant que [Le Jugement] est présent, Ada (?) et ses invocations gagnent 40% de Pénétration de tous les attributs.\nLorsque [Le Chariot] est détruit, [Le Jugement] a 50% de chances de lancer immédiatement [Parade du Paradis]. Cet effet ne peut se déclencher qu’une fois toutes les 2.5 s."
+    ],
+    "碎片": 1002102,
+    "专武": 20207
+  },
+  {
     "id": 2301,
     "icon": "Zhangyu",
     "名称": "Tabethe",
@@ -7877,7 +8341,7 @@
         "id": 310204,
         "名称": "Multitâche",
         "类型": "Passive",
-        "描述": "Les [Crassinators] ont une chance de tirer 1 projectile supplémentaire.\nLa probabilité est égale à : 30 % + 20 % × Taux de Tir multiple de l’arme à distance d’Hilda.\nAugmente également les dégâts des [Rayons incinérateurs] selon la même formule, jusqu’à un maximum de 100%.",
+        "描述": "Les [Crassinators] ont une chance de tirer 1 projectile supplémentaire.\nLa probabilité est égale à : 20 % + 15 % × Taux de Tir multiple de l’arme à distance d’Hilda.\nLes dégâts des [Rayons incinérateurs] augmentent également selon la même formule, jusqu’à un maximum de 100%.",
         "icon": "ExtraPassive"
       },
       {

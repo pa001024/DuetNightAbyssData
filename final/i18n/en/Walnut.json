@@ -1560,6 +1560,66 @@
     "类型": 1
   },
   {
+    "id": 1026,
+    "名称": "Secret Letter: \"Ada\"",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声",
+      "沉浸式戏剧"
+    ],
+    "奖励": [
+      {
+        "id": 1002102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Thought: \"Ada\""
+      },
+      {
+        "id": 1002102,
+        "type": "Resource",
+        "count": 2,
+        "name": "Thought: \"Ada\""
+      },
+      {
+        "id": 30001,
+        "type": "Resource",
+        "count": 1,
+        "name": "Essence Gelatin"
+      },
+      {
+        "id": 2012,
+        "type": "Resource",
+        "count": 1,
+        "name": "Combat Melody Ⅱ"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Weapon Manual Ⅱ"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Secret Letter Clue"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 1
+  },
+  {
     "id": 2001,
     "名称": "Secret Letter: Blade Amberglow",
     "获取途径": [
@@ -2480,7 +2540,7 @@
         "id": 12122,
         "type": "Resource",
         "count": 1,
-        "name": "Tumeborn: Frame"
+        "name": "Excresduo: Frame"
       },
       {
         "id": 30002,
@@ -2492,7 +2552,7 @@
         "id": 12123,
         "type": "Resource",
         "count": 1,
-        "name": "Tumeborn: Barrel"
+        "name": "Excresduo: Barrel"
       },
       {
         "id": 211,
@@ -2600,7 +2660,7 @@
         "id": 12124,
         "type": "Resource",
         "count": 1,
-        "name": "Ruinstem: Bolt"
+        "name": "Destructo: Bolt"
       },
       {
         "id": 30002,
@@ -2612,13 +2672,13 @@
         "id": 12125,
         "type": "Resource",
         "count": 1,
-        "name": "Ruinstem: Frame"
+        "name": "Destructo: Frame"
       },
       {
         "id": 12126,
         "type": "Resource",
         "count": 1,
-        "name": "Ruinstem: Barrel"
+        "name": "Destructo: Barrel"
       },
       {
         "id": 211,
@@ -2720,7 +2780,7 @@
         "id": 12127,
         "type": "Resource",
         "count": 1,
-        "name": "Wailmaw: Bolt"
+        "name": "Screamshot: Bolt"
       },
       {
         "id": 30002,
@@ -2732,13 +2792,13 @@
         "id": 12128,
         "type": "Resource",
         "count": 1,
-        "name": "Wailmaw: Frame"
+        "name": "Screamshot: Frame"
       },
       {
         "id": 12129,
         "type": "Resource",
         "count": 1,
-        "name": "Wailmaw: Barrel"
+        "name": "Screamshot: Barrel"
       },
       {
         "id": 211,
@@ -2840,7 +2900,7 @@
         "id": 12130,
         "type": "Resource",
         "count": 1,
-        "name": "Marrowseep: Bolt"
+        "name": "Osteobreaker: Bolt"
       },
       {
         "id": 30002,
@@ -2852,13 +2912,13 @@
         "id": 12131,
         "type": "Resource",
         "count": 1,
-        "name": "Marrowseep: Frame"
+        "name": "Osteobreaker: Frame"
       },
       {
         "id": 12132,
         "type": "Resource",
         "count": 1,
-        "name": "Marrowseep: Barrel"
+        "name": "Osteobreaker: Barrel"
       },
       {
         "id": 211,
@@ -5205,6 +5265,186 @@
         "type": "Resource",
         "count": 1,
         "name": "Secret Letter Clue"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2062,
+    "名称": "Secret Letter: The Best Day",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20207,
+        "type": "Weapon",
+        "count": 1,
+        "name": "The Best Day",
+        "d": 1
+      },
+      {
+        "id": 12166,
+        "type": "Resource",
+        "count": 1,
+        "name": "The Best Day: Frame"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Precision Magnet"
+      },
+      {
+        "id": 12167,
+        "type": "Resource",
+        "count": 1,
+        "name": "The Best Day: Barrel"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Secret Letter Clue"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Weapon Manual Ⅱ"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2063,
+    "名称": "Secret Letter: Sanguis Sanctus – Pistol",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 20104,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Sanguis Sanctus – Pistol",
+        "d": 1
+      },
+      {
+        "id": 12163,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sanguis Sanctus – Pistol: Bolt"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Precision Magnet"
+      },
+      {
+        "id": 12164,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sanguis Sanctus – Pistol: Frame"
+      },
+      {
+        "id": 12165,
+        "type": "Resource",
+        "count": 1,
+        "name": "Sanguis Sanctus – Pistol: Barrel"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Secret Letter Clue"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 2
+  },
+  {
+    "id": 2064,
+    "名称": "Secret Letter: Obsidian Heart-Reaper",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 10209,
+        "type": "Weapon",
+        "count": 1,
+        "name": "Obsidian Heart-Reaper",
+        "d": 1
+      },
+      {
+        "id": 12168,
+        "type": "Resource",
+        "count": 1,
+        "name": "Obsidian Heart-Reaper: Grip"
+      },
+      {
+        "id": 30002,
+        "type": "Resource",
+        "count": 1,
+        "name": "Precision Magnet"
+      },
+      {
+        "id": 12169,
+        "type": "Resource",
+        "count": 1,
+        "name": "Obsidian Heart-Reaper: Blade"
+      },
+      {
+        "id": 211,
+        "type": "Resource",
+        "count": 1,
+        "name": "Secret Letter Clue"
+      },
+      {
+        "id": 2008,
+        "type": "Resource",
+        "count": 1,
+        "name": "Weapon Manual Ⅱ"
       }
     ],
     "稀有度": 5,
@@ -8400,6 +8640,126 @@
     "类型": 3
   },
   {
+    "id": 151725,
+    "名称": "Secret Letter: Feathered Serpent's Awakening",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51725,
+        "type": "Mod",
+        "count": 1,
+        "name": "Awakening",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151726,
+    "名称": "Secret Letter: Feathered Serpent's Eternity",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51726,
+        "type": "Mod",
+        "count": 1,
+        "name": "Eternity",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
     "id": 151727,
     "名称": "Secret Letter: Covenanter's Volition – Awakening",
     "获取途径": [
@@ -8414,6 +8774,66 @@
         "type": "Mod",
         "count": 1,
         "name": "Volition – Awakening",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151728,
+    "名称": "Secret Letter: Covenanter's Blaze – Morale",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51728,
+        "type": "Mod",
+        "count": 1,
+        "name": "Blaze – Morale",
         "d": 1
       },
       {
@@ -9554,6 +9974,66 @@
         "type": "Mod",
         "count": 1,
         "name": "Resolve – Volition",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 151758,
+    "名称": "Secret Letter: Covenanter's Blaze – Tempered",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 51758,
+        "type": "Mod",
+        "count": 1,
+        "name": "Blaze – Tempered",
         "d": 1
       },
       {
@@ -10754,6 +11234,246 @@
         "type": "Mod",
         "count": 1,
         "name": "Arrow·Abundance",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156111,
+    "名称": "Secret Letter: Changeling's Huntdown",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56111,
+        "type": "Mod",
+        "count": 1,
+        "name": "Huntdown",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156112,
+    "名称": "Secret Letter: Siren's Wings – Inspo – Huntdown",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56112,
+        "type": "Mod",
+        "count": 1,
+        "name": "Wings·Inspo·Huntdown",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156113,
+    "名称": "Secret Letter: Changeling's Rage",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56113,
+        "type": "Mod",
+        "count": 1,
+        "name": "Rage",
+        "d": 1
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 100,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 50,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 30,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 20,
+        "name": "Carmine Globule"
+      },
+      {
+        "id": 102,
+        "type": "Resource",
+        "count": 10,
+        "name": "Carmine Globule"
+      }
+    ],
+    "稀有度": 5,
+    "模式": "SequenceCeiling",
+    "参数": [
+      1,
+      7,
+      10,
+      13,
+      13,
+      13
+    ],
+    "类型": 3
+  },
+  {
+    "id": 156114,
+    "名称": "Secret Letter: Siren's Wings – Inspo – Rage",
+    "获取途径": [
+      "副本",
+      "委托密函商店",
+      "观剧纪念",
+      "梦魇残声"
+    ],
+    "奖励": [
+      {
+        "id": 56114,
+        "type": "Mod",
+        "count": 1,
+        "name": "Wings·Inspo·Rage",
         "d": 1
       },
       {

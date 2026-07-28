@@ -653,7 +653,7 @@ return ReadOnly("SystemGuide", {
     FinishQuest = 12010309,
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
-    GuideSkip = 1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Qianji.story",
     IsInRegion = 1,
@@ -714,7 +714,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2087
   },
   [2088] = {
-    EnterDungeon = 40401,
+    EnterDungeon = 40801,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
     GuideSkip = 0,
@@ -923,7 +923,7 @@ return ReadOnly("SystemGuide", {
   [2111] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
-    GuideSkip = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_Appearance.story",
     IsInRegion = 1,
@@ -982,11 +982,86 @@ return ReadOnly("SystemGuide", {
     ConditionCheck = 4450,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
+    GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_ChangeElem.story",
     IsInRegion = 1,
     OpenInterface = "BattleMain",
     PlayerInControl = 1,
     SysGuideId = 2116
+  },
+  [2117] = {
+    FirstSeenTag = "ExpMount",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ExpMount.story",
+    IsInRegion = 1,
+    PlayerInControl = 1,
+    SysGuideId = 2117
+  },
+  [2118] = {
+    FirstSeenTag = "ExpMountFly",
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ExpMountFly.story",
+    IsInRegion = 1,
+    PlayerInControl = 1,
+    SysGuideId = 2118
+  },
+  [2119] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_RacingChoosePet.story",
+    IsInRegion = 1,
+    OpenInterface = "RacingChoosePet",
+    SysGuideId = 2119
+  },
+  [2121] = {
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ActivityWeapon.story",
+    IsInRegion = 1,
+    OpenInterface = "ActivityWeaponLevelMain",
+    SysGuideId = 2121
+  },
+  [2122] = {
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_AutoChessShare.story",
+    IsInRegion = 1,
+    OpenInterface = "AutoChessMain",
+    PreSysGuideId = 2123,
+    SysGuideId = 2122
+  },
+  [2123] = {
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_AutoChessinfinity.story",
+    IsInRegion = 1,
+    OpenInterface = "AutoChessMain",
+    PreSysGuideId = 2087,
+    SysGuideId = 2123
+  },
+  [2124] = {
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_SoloTreasurePermanentMain.story",
+    IsInRegion = 1,
+    OpenInterface = "SoloTreasurePermanentMain",
+    SysGuideId = 2124
   }
 })

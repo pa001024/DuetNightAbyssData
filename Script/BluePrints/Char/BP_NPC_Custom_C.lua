@@ -1,9 +1,19 @@
 require("UnLua")
+local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
+local QuestStateType = {Doing = 1, Success = 2}
+local TalkStateType = {
+  Compelete = 0,
+  UnCompelete = 1,
+  CheckSuccess = 2,
+  CheckFail = 3
+}
+local QuestChainStateType = {Doing = 1, Success = 2}
 local M = Class()
 
 function M:ReceiveBeginPlay()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "IOS" == PlatformName or "OpenHarmony" == PlatformName then
+  if "Android" == PlatformName or "IOS" == PlatformName or "OpenHarmony" == PlatformName then
     self.bMeshLodBudgetEnable = true
   else
     self.bMeshLodBudgetEnable = false
@@ -69,6 +79,10 @@ function M:ReceiveEndPlay()
 end
 
 function M:SetCustomNpcFlexibShowOrHide()
+  if Const.IsOpenFlexibleShowHideCppOpt then
+    self:SetCustomNpcFlexibShowOrHideOptimized()
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -130,22 +144,22 @@ function M:SetCustomNpcFlexibShowOrHide()
         CheckFail = 3
       }
       if TalkState == TalkStateType.Compelete then
-        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       elseif TalkState == TalkStateType.UnCompelete then
-        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       elseif TalkState == TalkStateType.CheckSuccess then
-        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         end
       else
-        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
           return
         else
@@ -180,6 +194,102 @@ function M:SetCustomNpcFlexibShowOrHide()
   end
 end
 
+function M:SetNpcShowOrHide(IsShow)
+  if IsShow then
+    self:SetCustomNpcHideTag("Flexible", false)
+    self:SetCollisionDisableTag("Flexible", false)
+  else
+    self:SetCustomNpcHideTag("Flexible", true)
+    self:SetCollisionDisableTag("Flexible", true)
+  end
+end
+
+function M:SetCustomNpcFlexibShowOrHideOptimized()
+  if self.GenerateReverseFlexibleData == nil or self:GenerateReverseFlexibleData() == false then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  for i = 1, self.ReverseFlexibleShowHide:Num() do
+    if 0 == self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.EditableStructType then
+      local TargetQuestId = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.Quest.QuestId
+      local IsActive = self.ReverseFlexibleShowHide:FindRef(i).IsActive
+      local TargetQuestState = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.Quest.MyQuestState
+      local QuestChainId = tonumber(string.sub(TargetQuestId, 1, 6))
+      if not Avatar.QuestChains[QuestChainId] then
+      else
+        local QuestChains = Avatar.QuestChains[QuestChainId]
+        if TargetQuestState == QuestStateType.Doing and QuestChains.DoingQuestId == TargetQuestId then
+          self:SetNpcShowOrHide(IsActive)
+          return
+        else
+          if TargetQuestState == QuestStateType.Success and QuestChains:CheckQuestIdComplete(TargetQuestId) then
+            self:SetNpcShowOrHide(IsActive)
+            return
+          else
+          end
+        end
+      end
+    elseif 1 == self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.EditableStructType then
+      local TargetTalkTriggerId = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.ImpressionTalk.TalkTriggerId
+      local TalkState = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.ImpressionTalk.TalkQuestState
+      local IsActive = self.ReverseFlexibleShowHide:FindRef(i).IsActive
+      if TalkState == TalkStateType.Compelete then
+        if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
+          self:SetNpcShowOrHide(IsActive)
+          return
+        end
+      elseif TalkState == TalkStateType.UnCompelete then
+        if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
+          self:SetNpcShowOrHide(IsActive)
+          return
+        end
+      elseif TalkState == TalkStateType.CheckSuccess then
+        if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
+          self:SetNpcShowOrHide(IsActive)
+          return
+        end
+      else
+        if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
+          self:SetNpcShowOrHide(IsActive)
+          return
+        else
+        end
+      end
+    elseif 2 == self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.EditableStructType then
+      local FlexibleQuestChainId = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.QuestChain.QuestChainId
+      local FlexibleQuestChainState = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.QuestChain.QuestChainState
+      local IsActive = self.ReverseFlexibleShowHide:FindRef(i).IsActive
+      if not Avatar.QuestChains[FlexibleQuestChainId] then
+      else
+        local TargetQuestChain = Avatar.QuestChains[FlexibleQuestChainId]
+        if FlexibleQuestChainState == QuestChainStateType.Doing and Avatar:IsQuestChainDoing(FlexibleQuestChainId) then
+          self:SetNpcShowOrHide(IsActive)
+          return
+        else
+          if FlexibleQuestChainState == QuestChainStateType.Success and Avatar:IsQuestChainFinished(FlexibleQuestChainId) then
+            self:SetNpcShowOrHide(IsActive)
+            return
+          else
+          end
+        end
+      end
+    elseif 4 == self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.EditableStructType then
+      local FuncName = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.Var.FunctionName
+      local VarName = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.Var.VarName
+      local ParamName = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.Var.ParamName
+      local ParamValue = self.ReverseFlexibleShowHide:FindRef(i).ReverseShowHideArray.Var.ParamValue
+      local IsActive = self.ReverseFlexibleShowHide:FindRef(i).IsActive
+      if self:FlexibleCheckVarFunc(FuncName, VarName, ParamName, ParamValue) then
+        self:SetNpcShowOrHide(IsActive)
+        return
+      end
+    end
+  end
+end
+
 function M:FlexibleCheckVarFunc(FunctionName, VarName, ParamName, ParamValue)
   if not VarName or "" == VarName then
     return false
@@ -198,7 +308,7 @@ function M:FlexibleCheckVarFunc(FunctionName, VarName, ParamName, ParamValue)
   local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
   local Ret = StorySubsystem:ExecuteBlueprintVarFunction(FunctionName, VarName, NewVarInfos, nil, true)
   if type(Ret) ~= "number" or 0 ~= Ret % 1 then
-    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "灵活显隐/生成执行出错", "函数[" .. tostring(FunctionName) .. "]的返回值不是bool类型")
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "CustomNPC灵活显隐出错", "函数[" .. tostring(FunctionName) .. "]的返回值不是bool类型")
     return false
   end
   if 0 == Ret then
@@ -263,14 +373,65 @@ function M:EnableNameWidget(bEnable, Name)
   self:EnableHeadWidget("Name", bEnable, GText(Name))
 end
 
-function M:ResetNpcAfterParamChanged()
-  self.Overridden.ResetNpcAfterParamChanged(self)
-  local Mesh = self.Mesh
-  if Mesh and Mesh.AnimScriptInstance and not Mesh.AnimScriptInstance.CurrentAsset and Mesh.AnimationData.AnimToPlay and Mesh.AnimationMode == UE4.EAnimationMode.AnimationSingleNode and self.AnimationParam.LoopMode == UE4.ECustomNpcAnimationLoopMode.None then
-    Mesh:SetAnimation(Mesh.AnimationData.AnimToPlay)
-    Mesh:OverrideAnimationData(Mesh.AnimationData.AnimToPlay)
-    Mesh:Play(true)
+function M:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
+  if self.bInStory then
+    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+    return
   end
+  if bCacheMeshMaterials and self.CharacterFashion then
+    self.CharacterFashion:PreEnterStory(bCacheMeshMaterials)
+  end
+  self:AddTimer(0.01, function()
+    self.NativeMeshTickOptions = {}
+    self.NativeInSetShadow = {}
+    local SKMeshComps = self:K2_GetComponentsByClass(USkeletalMeshComponent):ToTable()
+    for _, SKMeshComp in pairs(SKMeshComps) do
+      if IsValid(SKMeshComp) then
+        self.NativeMeshTickOptions[SKMeshComp] = SKMeshComp.VisibilityBasedAnimTickOption
+        SKMeshComp.VisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.AlwaysTickPoseAndRefreshBones
+        self.NativeInSetShadow[SKMeshComp] = SKMeshComp.bCastInsetShadow
+        SKMeshComp:SetCastInsetShadow(true)
+      end
+    end
+  end)
+  if bPauseBT and self.StopBT then
+    self:StopBT("Talk")
+  end
+  self.bInStory = true
+  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+end
+
+function M:PreExitStory(OnFinished, bStartBT, bIsExternal)
+  if not self.bInStory then
+    StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+    return
+  end
+  if self.CharacterFashion then
+    self.CharacterFashion:PreExitStory()
+  end
+  for SKMeshComp, TickOption in pairs(self.NativeMeshTickOptions or {}) do
+    if IsValid(SKMeshComp) then
+      SKMeshComp.VisibilityBasedAnimTickOption = TickOption
+    end
+  end
+  self.NativeMeshTickOptions = nil
+  for SKMeshComp, bCastInsetShadow in pairs(self.NativeInSetShadow or {}) do
+    if IsValid(SKMeshComp) then
+      SKMeshComp:SetCastInsetShadow(bCastInsetShadow)
+    end
+  end
+  self.NativeInSetShadow = nil
+  if bStartBT and self.RestartBT then
+    self:RestartBT()
+  end
+  local EMGameState = UE4.UGameplayStatics.GetGameState(self)
+  EMGameState:HideNpc(false, Const.TalkHideTag, self)
+  self.bInStory = false
+  StoryPlayableUtils:ExecuteStoryDelegate(OnFinished)
+end
+
+function M:IsInStory()
+  return self.bInStory
 end
 
 return M

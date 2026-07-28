@@ -273,5 +273,33 @@
     "desc": "嘎啊—————",
     "icon": "T_Head_Frame32",
     "access": "通過商店獲得"
+  },
+  {
+    "id": 10043,
+    "name": "遊園會",
+    "desc": "適用於頭像框。",
+    "icon": "T_Head_Frame39",
+    "access": "透過月度訂單獲得"
+  },
+  {
+    "id": 10044,
+    "name": "惑夜伶人·墨玉",
+    "desc": "適用於頭像框。",
+    "icon": "T_Head_Frame42",
+    "access": "透過活動獲得"
+  },
+  {
+    "id": 10045,
+    "name": "惑夜伶人·銹紅",
+    "desc": "適用於頭像框。",
+    "icon": "T_Head_Frame41",
+    "access": "透過活動獲得"
+  },
+  {
+    "id": 10046,
+    "name": "波光粼粼",
+    "desc": "適用於頭像框。",
+    "icon": "T_Head_Frame40",
+    "access": "通過商店獲得"
   }
 ]

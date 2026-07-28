@@ -4,6 +4,7 @@ local WBP_VideoPlayer_C = Class("BluePrints.UI.BP_UIState_C")
 function WBP_VideoPlayer_C:Construct()
   WBP_VideoPlayer_C.Super.Construct(self)
   self.IsInit = true
+  self:HideVideoSurfaceForLoading()
 end
 
 function WBP_VideoPlayer_C:OnLoaded(...)
@@ -60,6 +61,44 @@ function WBP_VideoPlayer_C:Stop()
   self:Close()
 end
 
+function WBP_VideoPlayer_C:ShowVideoSurface()
+  if self.Image_Video then
+    self.Image_Video:SetRenderOpacity(1)
+    self.Image_Video:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  if self.Image_Mask then
+    self.Image_Mask:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
+function WBP_VideoPlayer_C:HideVideoSurfaceForLoading()
+  if self.Image_Video then
+    self.Image_Video:SetRenderOpacity(0)
+    self.Image_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.Image_Mask then
+    self.Image_Mask:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
+function WBP_VideoPlayer_C:ClearVideoSurface()
+  if self.MediaPlayer then
+    self.MediaPlayer:Close()
+  end
+  if self.MediaPlayer_VideoTexture then
+    pcall(function()
+      self.MediaPlayer_VideoTexture:SetMediaPlayer(nil)
+    end)
+  end
+  if self.Image_Video then
+    self.Image_Video:SetRenderOpacity(0)
+    self.Image_Video:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.Image_Mask then
+    self.Image_Mask:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+end
+
 function WBP_VideoPlayer_C:IsPlaying()
   return self.MediaPlayer and self.MediaPlayer:IsPlaying()
 end
@@ -77,6 +116,7 @@ function WBP_VideoPlayer_C:Play()
   if not self.MediaPlayer then
     return
   end
+  self:HideVideoSurfaceForLoading()
   if self.MediaPlayer:IsPreparing() then
     return false
   end
@@ -88,6 +128,7 @@ function WBP_VideoPlayer_C:Play()
     self.MediaPlayer:Play()
   else
     print(_G.LogTag, "Error: Failed to open url:" .. self.Url)
+    self:ClearVideoSurface()
     return false
   end
   return true
@@ -120,7 +161,10 @@ function WBP_VideoPlayer_C:SetLooping(Looping)
 end
 
 function WBP_VideoPlayer_C:OnMediaPlayStart()
-  self.Image_Mask:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:ShowVideoSurface()
+  if self.Image_Mask then
+    self.Image_Mask:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   if rawget(self, "bShouldPauseOnFirstFrame") then
     self:AddTimer(0.1, function()
       self.MediaPlayer:Rewind()

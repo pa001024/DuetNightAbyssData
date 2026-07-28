@@ -37,7 +37,7 @@ function View:OnListItemObjectSet(Content)
   end
   self:SetLocked(Content.Data.Locked)
   if Content.Data.IsNew then
-    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -70,7 +70,7 @@ end
 
 function View:SetLocked(bLocked)
   if bLocked then
-    self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:PlayAnimation(self.Lock)
   else
     self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -121,7 +121,7 @@ end
 function View:SetIsNew(bIsNew)
   self.Content.Data.IsNew = bIsNew
   if bIsNew then
-    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end

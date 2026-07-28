@@ -17,6 +17,7 @@ function M:Construct()
   self.Btn_Info.bIsFocusable = true
   self:AddInputMethodChangedListen()
   self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType())
+  self:AddDispatcher(EventID.OnInGear, self, self.OnFaceButtonTopKeyDown)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -33,8 +34,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   end
   self:ClearAllKeyEvents()
   self:AddKeyDownEvent(UIConst.GamePadKey.RightThumb, self.OnGamepadRightThumbstick)
-  self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyDown)
-  self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonLeft, self.OnFaceButtonLeftKeyDown)
+  self:AddKeyClickEvent(UIConst.GamePadKey.FaceButtonLeft, self.OnFaceButtonLeftClick)
   self:AddKeyUpEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyUp)
   self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonLeft, 1, self.OnGamepad_FaceButton_Left_LongPressStart, self.OnGamepad_FaceButton_Left_LongPressCancel, self.OnGamepad_FaceButton_Left_LongPressEnd)
   if self.UnlockBtnParams and self.UnlockBtnParams.bShowCoin then
@@ -153,7 +153,7 @@ function M:OnFaceButtonTopKeyDown()
   end
 end
 
-function M:OnFaceButtonLeftKeyDown()
+function M:OnFaceButtonLeftClick()
   if not self.Btn_MaxSwitch:IsVisible() then
     return
   end
@@ -179,6 +179,7 @@ function M:OnGamepad_FaceButton_Left_LongPressEnd()
   if not self.Btn_MaxSwitch:IsVisible() then
     return
   end
+  self:OnGamepad_FaceButton_Left_LongPressCancel()
   self.Btn_MaxSwitch:OnClicked()
 end
 

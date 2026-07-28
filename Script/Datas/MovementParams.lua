@@ -18,14 +18,23 @@ return ReadOnly("MovementParams", {
     ParamValue = 1000,
     SlideParam = "CanInteractiveDis"
   },
-  FlySpeed = {ParamValue = 800, SlideParam = "FlySpeed"},
+  FlySpeed = {ParamValue = 3000, SlideParam = "FlySpeed"},
+  FlySpeedAccTime = {
+    ParamValue = 0.3,
+    SlideParam = "FlySpeedAccTime"
+  },
+  IsLockCamera = {
+    ParamValue = 1,
+    SlideParam = "IsLockCamera"
+  },
   PassiveDeattachSpeedPer = {
     ParamValue = 1.5,
     SlideParam = "PassiveDeattachSpeedPer"
   },
   SideJumpAttachTime = {
-    ParamValue = 0.2,
+    ParamValue = 0.45,
     SlideParam = "SideJumpAttachTime"
   },
-  Speed = {ParamValue = 2000, SlideParam = "Speed"}
+  Speed = {ParamValue = 1500, SlideParam = "Speed"},
+  TurnTime = {ParamValue = 0.4, SlideParam = "TurnTime"}
 })

@@ -1,3 +1,4 @@
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local Component = {}
 
 function Component:HasHandlePenalize()

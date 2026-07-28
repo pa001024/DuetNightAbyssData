@@ -11,15 +11,6 @@ function M:NewMonInitComponent_GetDataInfo(Owner)
     return
   end
   Owner.BattleCharInfo = DataMgr.BattleMonster[RoleId]
-  if Owner:GetLocalRole() == UE4.ENetRole.ROLE_Authority then
-    return
-  end
-  for _, TableId in pairs(Const.EnableDisableFixLocationAndPushMonUnitIds) do
-    if TableId == RoleId then
-      Owner.bDisableFixLocationAndPushMon = true
-      break
-    end
-  end
 end
 
 function M:NewMonInitComponent_TriggerSTLPostStaticCreatorEvent(Mode, Actor)

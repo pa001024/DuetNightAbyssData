@@ -55,7 +55,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 3,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_0",
     HPValue = "$#Buff[4020105].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300117
+    UnlockQuestId = 10300142
   },
   [6] = {
     ATKValue = "$#Buff[4020106].AddAttrs[1].Rate*100$%",
@@ -67,7 +67,7 @@ return ReadOnly("RobotEquip", {
     EquipName = "UI_WEAPON_NAME_AutoChess_6",
     EquipRarity = 3,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_0",
-    UnlockQuestId = 10300103
+    UnlockQuestId = 10300127
   },
   [7] = {
     ATKValue = "$#Buff[4020107].AddAttrs[1].Rate*100$%",
@@ -79,7 +79,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 3,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_0",
     HPValue = "$#Buff[4020107].AddAttrs[2].Rate*100$%",
-    UnlockQuestId = 10300102
+    UnlockQuestId = 10300126
   },
   [8] = {
     AttrBuffId = 4020108,
@@ -91,7 +91,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_0",
     HPValue = "$#Buff[4020108].AddAttrs[2].Rate*100$%",
     ShieldValue = "$#Buff[4020108].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300117
+    UnlockQuestId = 10300142
   },
   [9] = {
     ATKValue = "$#Buff[4020109].AddAttrs[1].Rate*100$%",
@@ -103,7 +103,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 3,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_0",
     ShieldValue = "$#Buff[4020109].AddAttrs[2].Rate*100$%",
-    UnlockQuestId = 10300101
+    UnlockQuestId = 10300125
   },
   [10] = {
     ATKValue = "$#Buff[4020501].AddAttrs[1].Rate*100$%",
@@ -118,7 +118,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_1",
     ExtraBuffId = 4020201,
-    UnlockQuestId = 10300104
+    UnlockQuestId = 10300128
   },
   [11] = {
     ATKValue = "$#Buff[4020502].AddAttrs[1].Rate*100$%",
@@ -134,7 +134,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_2",
     ExtraBuffId = 4020202,
-    UnlockQuestId = 10300105
+    UnlockQuestId = 10300129
   },
   [12] = {
     AttrBuffId = 4020503,
@@ -150,7 +150,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_3",
     ExtraBuffId = 4020203,
     HPValue = "$#Buff[4020503].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300106
+    UnlockQuestId = 10300130
   },
   [13] = {
     AttrBuffId = 4020504,
@@ -166,7 +166,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_4",
     ExtraBuffId = 4020204,
     ShieldValue = "$#Buff[4020504].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300106
+    UnlockQuestId = 10300130
   },
   [14] = {
     ATKValue = "$#Buff[4020505].AddAttrs[1].Rate*100$%",
@@ -181,7 +181,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_5",
     ExtraBuffId = 4020205,
-    UnlockQuestId = 10300118
+    UnlockQuestId = 10300143
   },
   [15] = {
     ATKValue = "$#Buff[4020506].AddAttrs[1].Rate*100$%",
@@ -196,7 +196,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_6",
     ExtraBuffId = 4020206,
-    UnlockQuestId = 10300118
+    UnlockQuestId = 10300143
   },
   [16] = {
     ATKValue = "$#Buff[4020507].AddAttrs[1].Rate*100$%",
@@ -211,7 +211,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_7",
     ExtraBuffId = 4020207,
-    UnlockQuestId = 10300118
+    UnlockQuestId = 10300143
   },
   [17] = {
     AttrBuffId = 4020508,
@@ -228,7 +228,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_8",
     ExtraBuffId = 4020208,
-    UnlockQuestId = 10300119
+    UnlockQuestId = 10300144
   },
   [18] = {
     ATKValue = "$#Buff[4020509].AddAttrs[1].Rate*100$%",
@@ -245,7 +245,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_9",
     ExtraBuffId = 4020209,
-    UnlockQuestId = 10300119
+    UnlockQuestId = 10300144
   },
   [19] = {
     AttrBuffId = 4020510,
@@ -261,7 +261,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_10",
     ExtraBuffId = 4020210,
     HPValue = "$#Buff[4020510].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300120
+    UnlockQuestId = 10300145
   },
   [20] = {
     AttrBuffId = 4020511,
@@ -277,7 +277,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_11",
     ExtraBuffId = 4020211,
     HPValue = "$#Buff[4020511].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300120
+    UnlockQuestId = 10300145
   },
   [21] = {
     AttrBuffId = 4020512,
@@ -293,7 +293,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_12",
     ExtraBuffId = 4020212,
     HPValue = "$#Buff[4020512].AddAttrs[1].Rate*100$%",
-    UnlockQuestId = 10300120
+    UnlockQuestId = 10300145
   },
   [22] = {
     ATKValue = "$#Buff[4020513].AddAttrs[1].Rate*100$%",
@@ -308,7 +308,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_13",
     ExtraBuffId = 4020213,
-    UnlockQuestId = 10300104
+    UnlockQuestId = 10300128
   },
   [23] = {
     ATKValue = "$#Buff[4020514].AddAttrs[1].Rate*100$%",
@@ -323,7 +323,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 4,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_14",
     ExtraBuffId = 4020214,
-    UnlockQuestId = 10300119
+    UnlockQuestId = 10300144
   },
   [25] = {
     ATKValue = "$#Buff[4020602].AddAttrs[1].Rate*100$%",
@@ -338,7 +338,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020302,
     HPValue = "$#Buff[4020602].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020602].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300111
+    UnlockQuestId = 10300135
   },
   [26] = {
     ATKValue = "$#Buff[4020603].AddAttrs[1].Rate*100$%",
@@ -353,7 +353,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020303,
     HPValue = "$#Buff[4020603].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020603].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300113
+    UnlockQuestId = 10300137
   },
   [27] = {
     ATKValue = "$#Buff[4020604].AddAttrs[1].Rate*100$%",
@@ -368,7 +368,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020304,
     HPValue = "$#Buff[4020604].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020604].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300122
+    UnlockQuestId = 10300147
   },
   [28] = {
     ATKValue = "$#Buff[4020605].AddAttrs[1].Rate*100$%",
@@ -383,7 +383,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020305,
     HPValue = "$#Buff[4020605].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020605].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300109
+    UnlockQuestId = 10300133
   },
   [29] = {
     ATKValue = "$#Buff[4020606].AddAttrs[1].Rate*100$%",
@@ -398,7 +398,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020306,
     HPValue = "$#Buff[4020606].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020606].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300122
+    UnlockQuestId = 10300147
   },
   [31] = {
     ATKValue = "$#Buff[4020608].AddAttrs[1].Rate*100$%",
@@ -410,7 +410,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 5,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_22",
     ExtraBuffId = 4020308,
-    UnlockQuestId = 10300112
+    UnlockQuestId = 10300136
   },
   [33] = {
     ATKValue = "$#Buff[4020610].AddAttrs[1].Rate*100$%",
@@ -425,7 +425,7 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020310,
     HPValue = "$#Buff[4020610].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020610].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300114
+    UnlockQuestId = 10300138
   },
   [34] = {
     ATKValue = "$#Buff[4020611].AddAttrs[1].Rate*100$%",
@@ -437,7 +437,7 @@ return ReadOnly("RobotEquip", {
     EquipRarity = 5,
     ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_25",
     ExtraBuffId = 4020311,
-    UnlockQuestId = 10300110
+    UnlockQuestId = 10300134
   },
   [36] = {
     ATKValue = "$#Buff[4020613].AddAttrs[1].Rate*100$%",
@@ -452,6 +452,55 @@ return ReadOnly("RobotEquip", {
     ExtraBuffId = 4020313,
     HPValue = "$#Buff[4020613].AddAttrs[3].Rate*100$%",
     ShieldValue = "$#Buff[4020613].AddAttrs[4].Rate*100$%",
-    UnlockQuestId = 10300107
+    UnlockQuestId = 10300131
+  },
+  [37] = {
+    ATKValue = "$#Buff[4020515].AddAttrs[1].Rate*100$%",
+    AttrBuffId = 4020515,
+    DeployCost = 15,
+    DescValue = {
+      [1] = "$#Buff[4020413].AddAttrs[1].Rate*100$%",
+      [2] = "$#Buff[4020413].MaxLayer$"
+    },
+    EquipIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item03.T_Activity_Autochess_Item03'",
+    EquipId = 37,
+    EquipName = "UI_WEAPON_NAME_AutoChess_37",
+    EquipRarity = 4,
+    ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_28",
+    ExtraBuffId = 4020215,
+    UnlockQuestId = 10300145
+  },
+  [38] = {
+    ATKValue = "$#Buff[4020516].AddAttrs[1].Rate*100$%",
+    AttrBuffId = 4020516,
+    DeployCost = 15,
+    DescValue = {
+      [1] = "$#PassiveEffect[4020116].Vars.Divisor$",
+      [2] = "$#Buff[4020414].AddAttrs[1].Value*100$%",
+      [3] = "$#Buff[4020414].MaxLayer$"
+    },
+    EquipIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    EquipId = 38,
+    EquipName = "UI_WEAPON_NAME_AutoChess_38",
+    EquipRarity = 4,
+    ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_29",
+    ExtraBuffId = 4020216,
+    UnlockQuestId = 10300132
+  },
+  [39] = {
+    ATKValue = "$#Buff[4020517].AddAttrs[1].Rate*100$%",
+    AttrBuffId = 4020517,
+    DeployCost = 15,
+    DescValue = {
+      [1] = "$#Buff[4020415].DotDatas[1].Rate*100$%",
+      [2] = "$#PassiveEffect[4020117].Vars.Time$"
+    },
+    EquipIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Activity/AutoChess/T_Activity_Autochess_Item04.T_Activity_Autochess_Item04'",
+    EquipId = 39,
+    EquipName = "UI_WEAPON_NAME_AutoChess_39",
+    EquipRarity = 4,
+    ExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_30",
+    ExtraBuffId = 4020217,
+    UnlockQuestId = 10300131
   }
 })

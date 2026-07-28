@@ -52,11 +52,6 @@ function M:UpdateModItem(Content)
     if Mod:IsLock() then
       self:SetLock(1)
     end
-    if Mod.ConflictUuids:Length() > 0 and not Content.bEnhance then
-      self:ShowContentWarning(GText("UI_Armory_Conflict"))
-    else
-      self:ShowContentWarning(nil)
-    end
     if Mod.Level and 0 ~= Mod.Level then
       self:SetItemStartLevel(Mod.Level)
     end
@@ -68,11 +63,19 @@ function M:UpdateModItem(Content)
       self.PolarityWidget = nil
     end
     self:SetItemPolarity(Mod.Polarity, Mod.Cost)
+    if Mod.ConflictUuids:Length() > 0 and not Content.bEnhance then
+      self:ShowContentWarning(GText("UI_Armory_Conflict"))
+    else
+      self:ShowContentWarning(nil)
+    end
   end
   if Content.IsNew then
     self:SetRedDot(UIConst.RedDotType.NewRedDot)
   else
     self:DisableReddot()
+  end
+  if self.Content.IsSelected then
+    self:SetSelected(self.Content.IsSelected)
   end
   self:SetItemSelect(Content.IsChosen)
 end
@@ -106,7 +109,6 @@ function M:InitCompView()
   self.Item.ItemDetails_MenuAnchor:SetNavigatePosAngle(0)
   self.Item.ItemDetails_MenuAnchor:SetNavigatePosOffsetAlignment(FVector2D(0.5, 1.0))
   self:UpdateModItem(Content)
-  self:SetIsChosen(Content.IsChosen)
   self:SetName(GText(Content.UnitName))
 end
 
@@ -216,6 +218,7 @@ function M:ShowContentWarning(WarningText)
     if WarningText then
       self.ConflictWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
       self.ConflictWidget.Text_SoldOut:SetText(WarningText)
+      self:CheckWidgetIsTop(self.ConflictWidget)
     elseif IsValid(self.ConflictWidget) then
       self.ConflictWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end

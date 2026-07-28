@@ -9,6 +9,7 @@ local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local SettingUtils = require("Utils.SettingUtils")
 local GuildWarUtils = require("BluePrints.UI.WBP.Activity.Widget.GuildWar.GuildWarUtils")
+local LuaMemoryManager = require("LuaMemoryManager")
 local Language2ESystemLanguage = {
   TextMapContent = ESystemLanguage.TextMapContent,
   ContentEN = ESystemLanguage.ContentEN,
@@ -63,6 +64,7 @@ function BP_EMGameInstance_C:_FontOptimizeSetting()
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.RemoveLastNoUseFontFace 1")
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.ForcePreserveFontFaceCount 6")
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.GrowFontAtlasFrameWindow 10")
+    UKismetSystemLibrary.ExecuteConsoleCommand(self, "SafeZone.ForceLBBlance 1")
   elseif "IOS" == PlatformName then
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.AsyncLazyLoad 1")
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.RemoveLastNoUseFontFace 1")
@@ -323,7 +325,9 @@ function BP_EMGameInstance_C:OnPlayerControllerGameEnd_Internal(IsWin, BattleInf
   local Avatar = GWorld:GetAvatar()
   local IsHardBoss = Avatar and Avatar:IsInHardBoss()
   local WorldCompositionSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self, UE4.UWorldCompositionSubSystem)
-  local AvatarStatusEnable = Avatar and not WorldCompositionSubSystem and not Avatar:IsInRougeLike()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local IsRougePro = GameState and GameState.GameModeType == "RougePro"
+  local AvatarStatusEnable = Avatar and not WorldCompositionSubSystem and not Avatar:IsInRougeLike() and not IsRougePro
   if AvatarStatusEnable and not Avatar:IsInNarrowDungeon() then
     GWorld.DungeonSettlementAgainInVisible = true
   end
@@ -824,6 +828,8 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
         self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
       elseif CurDungeonType == CommonConst.DungeonType.AsyncCombat then
         UIManager:LoadUINew("CoopSettlement", LogicServerInfo)
+      elseif CurDungeonType == CommonConst.DungeonType.GuildBoss then
+        UIManager:LoadUINew("GuildBossSettlement", LogicServerInfo)
       elseif "SoloTreasure" == CurDungeonType then
         local IsSoloWin = false
         if LogicServerInfo then
@@ -923,7 +929,13 @@ function BP_EMGameInstance_C:IsInTempScene()
   return false
 end
 
+function BP_EMGameInstance_C:StopSettlementSequence()
+  EventManager:RemoveEvent(EventID.InLoading, self)
+  USkillFeatureFunctionLibrary.SKillFeatureForceStop()
+end
+
 function BP_EMGameInstance_C:PrePlayerDungeonSettlement(PlayWinMontage)
+  EventManager:AddEvent(EventID.InLoading, self, self.StopSettlementSequence)
   self.DungeonSettlementCharacter = {}
   self.DungeonSettlementData = nil
   local EMGameState = UE4.UGameplayStatics.GetGameState(self)
@@ -1363,10 +1375,47 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
     end
     
     ActivityUtils.OpenActivitySettlement(WuyoushengEventLevelData.EventId, CurrentDungeonId, Params)
+  elseif CurDungeonType and "WeaponVerify" == CurDungeonType then
+    local WeaponVerifyEventLevelData = DataMgr.WeaponVerifyEventLevel[CurrentDungeonId]
+    local FinishTime = math.floor(ClientRes and ClientRes.TimeElapsed or PlayerTime or 0)
+    local TotalTime = DataMgr.WeaponVerify[CurrentDungeonId].TotalTime or 0
+    local EventId = 103026
+    local Params = {
+      TimeRemain = FinishTime,
+      IsWin = IsWin,
+      Text_Title = "FeinaEvent_DungeonFinish_Title",
+      ActivityId = EventId,
+      DungeonId = CurrentDungeonId,
+      Text_TotalTime = "UI_Wuyousheng_FinishTime"
+    }
+    Params.ScoreInfo = {}
+    for i = 1, 3 do
+      local LevelGoalRequiredTime1 = WeaponVerifyEventLevelData.LevelGoalRequiredTime[i]
+      local GoalText
+      local IsFinish = false
+      if -1 == LevelGoalRequiredTime1 then
+        GoalText = GText("WeaponVerify_Target_FinishLevel")
+        IsFinish = IsWin
+      else
+        GoalText = string.format(GText("WeaponVerify_Target_LevelLimitTime"), LevelGoalRequiredTime1)
+        IsFinish = IsWin and LevelGoalRequiredTime1 <= TotalTime - FinishTime
+      end
+      table.insert(Params.ScoreInfo, {text = GoalText, isFinish = IsFinish})
+    end
+    if DungeonRewards and next(DungeonRewards) ~= nil then
+      Params.RewardsInfo = DungeonRewards
+    end
+    
+    function Params.ContinueCallback()
+      Avatar:EnterEventDungeon(nil, CurrentDungeonId, nil, EventId)
+    end
+    
+    ActivityUtils.OpenActivitySettlement(EventId, CurrentDungeonId, Params)
   elseif CurDungeonType and "AutoChess" == CurDungeonType then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     local MissionType = 1
     local MissionId = 1001
+    local AutochessActivityId = CommonConst.AutoChessEventId
     local AutoChessMissionInfo = DataMgr.AutoChessMission
     if not AutoChessMissionInfo then
       return
@@ -1375,15 +1424,36 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
       if Info.DungeonId == CurrentDungeonId then
         MissionType = Info.MissionType
         MissionId = Info.MissionId
+        AutochessActivityId = Info.SettlementID
       end
     end
     local Params = {
-      ActivityId = 103016,
+      ActivityId = AutochessActivityId,
       MissionId = MissionId,
       IsWin = IsWin,
       Text_GetReward = "UI_AutoChess_WinReward",
       DungeonType = "AutoChess",
       ContinueCallback = function()
+        local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+        if GameMode and GameMode.UnRegisterWorldTravelDelegate then
+          GameMode:UnRegisterWorldTravelDelegate()
+        end
+        if 3 == MissionType then
+          Avatar:EnterEventDungeon(function(Ret)
+            if Ret and Ret == ErrorCode.RET_SUCCESS then
+              DebugPrint("AutoChessContinueSuccess MissionType == 3 RetCode:", Ret)
+            else
+              DebugPrint("AutoChessContinueFail MissionType == 3 RetCode:", Ret)
+              self.AutoChessMissionId = nil
+              Avatar:ExitDungeonSettlement()
+            end
+          end, CurrentDungeonId, 0, AutochessActivityId, {
+            ShareCode = ClientRes and ClientRes.ShareCode,
+            MissionId = MissionId,
+            IsShareChallenge = true
+          })
+          return
+        end
         Avatar:EnterDungeonAgain(function(Ret)
           if Ret and Ret == ErrorCode.RET_SUCCESS then
             DebugPrint("AutoChessContinueSuccess RetCode:", Ret)
@@ -1423,7 +1493,7 @@ function BP_EMGameInstance_C:LoadGameEventSettlementUI(CurrentDungeonId, CurDung
       GWorld.GameInstance:SetExitDungeonData(ExitDungeonData)
       Avatar:ExitDungeonSettlement()
     else
-      ActivityUtils.OpenActivitySettlement(103016, nil, Params)
+      ActivityUtils.OpenActivitySettlement(AutochessActivityId, nil, Params)
     end
   else
     UIManager:LoadUINew("DungeonSettlement", LogicServerInfo, self.DungeonIdCache, self.CombatData)

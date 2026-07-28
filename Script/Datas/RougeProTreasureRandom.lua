@@ -76,5 +76,9 @@ return ReadOnly("RougeProTreasureRandom", {
     RandomType = 2,
     TreasureRandom = 12,
     TreasureRarity = T.RT_4
-  }
+  },
+  [1001] = {TreasureRandom = 1001},
+  [1002] = {TreasureRandom = 1002},
+  [1003] = {TreasureRandom = 1003},
+  [1004] = {TreasureRandom = 1004}
 })

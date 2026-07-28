@@ -334,4 +334,18 @@ function ItemUtils.GetItemNum(Id, ItemType)
   return Num
 end
 
+function ItemUtils.HasBackground(BackgroundId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local ownedBgIds = Avatar.BackgroundList or {}
+  for _, bgId in pairs(ownedBgIds) do
+    if bgId == BackgroundId then
+      return true
+    end
+  end
+  return false
+end
+
 return ItemUtils

@@ -95,7 +95,11 @@ function M:GetHaveWalnutDict()
 end
 
 function M:GetDungeonNextRefreshTime()
-  local LastRefreshTime = self:GetAvatar().Walnuts.WalnutLastRefreshTime
+  local PlayerAvatar = self:GetAvatar()
+  if not PlayerAvatar then
+    return 0
+  end
+  local LastRefreshTime = PlayerAvatar.Walnuts.WalnutLastRefreshTime
   if nil == LastRefreshTime then
     LastRefreshTime = TimeUtils.NowTime()
   end

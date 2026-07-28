@@ -467,8 +467,7 @@ function M:PurchaseDailyPack()
         PaymentParameters.cpOrder = OrderId
         PaymentParameters.callbackUrl = CallbackUrl
         local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-        local ItemName = ""
-        ItemName = GText(ItemUtils:GetDropName(ShopItemData.TypeId, ShopItemData.ItemType))
+        local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
         HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
         local TrackInfo = {}
         TrackInfo.product_id = DataMgr.ShopItem2PayGoods[ShopItemData.ItemId]

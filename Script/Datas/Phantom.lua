@@ -26,6 +26,9 @@ T.RT_8 = {
 T.RT_9 = {
   [1] = "/Game/AssetDesign/AI/Player/Baiheng/BT_Phantom_Baiheng.BT_Phantom_Baiheng"
 }
+T.RT_10 = {
+  [1] = "/Game/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.BT_Phantom_Linen"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -457,6 +460,21 @@ return ReadOnly("Phantom", {
     UnitName = "水母-魅影",
     WearMeleeWeapon = 1
   },
+  [2102] = {
+    AutoRespawn = 5,
+    BT = {
+      [1] = "/Game/AssetDesign/AI/Player/Eve/BT_Phantom_Eve.BT_Phantom_Eve"
+    },
+    BattleRoleId = 2102,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 2102,
+    UnitName = "伊薇-魅影",
+    WearMeleeWeapon = 1
+  },
   [2301] = {
     AutoRespawn = 5,
     BT = {
@@ -487,9 +505,7 @@ return ReadOnly("Phantom", {
   },
   [3101] = {
     AutoRespawn = 5,
-    BT = {
-      [1] = "/Game/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.BT_Phantom_Linen"
-    },
+    BT = T.RT_10,
     BattleRoleId = 3101,
     Camp = "Player",
     GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
@@ -529,6 +545,19 @@ return ReadOnly("Phantom", {
     UnitId = 3103,
     UnitName = "耶尔-魅影",
     WearRangedWeapon = 1
+  },
+  [3104] = {
+    AutoRespawn = 5,
+    BT = T.RT_10,
+    BattleRoleId = 3104,
+    Camp = "Player",
+    GuideIconAni = "/Game/UI/UI_PC/Guide/Guide_Point/Guide_Icon_Phantom.Guide_Icon_Phantom",
+    HatredRatio = 0.5,
+    RespawnUI = 20001,
+    UnitBPPath = "/Game/BluePrints/Char/BP_Phantom/BP_PhantomCharacter.BP_PhantomCharacter",
+    UnitId = 3104,
+    UnitName = "法露茜-魅影",
+    WearMeleeWeapon = 1
   },
   [3201] = {
     AutoRespawn = 5,

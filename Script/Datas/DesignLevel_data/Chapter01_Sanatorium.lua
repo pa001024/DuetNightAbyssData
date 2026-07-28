@@ -438,5 +438,6 @@ return {
       }
     }
   },
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

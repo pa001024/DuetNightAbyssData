@@ -273,33 +273,35 @@ function WBP_Forging_Convert_C:UpdateMaterialSlot(ChoosedTbl, IsShow)
   self.CurrentCount = 1
   self.HasAnyModLocked = false
   local Seen = {}
-  for _, Content in ipairs(ChoosedTbl) do
-    if not Seen[Content.Id] then
-      local NewItem = {
-        Id = Content.Id,
-        ItemId = Content.UnitId,
-        Icon = Content.Icon,
-        Rarity = Content.Rarity,
-        ItemType = Content.ItemType,
-        ChoosedCount = 1,
-        Uuid = Content.Uuid,
-        ModId = Content.UnitId,
-        UnitId = Content.UnitId,
-        ProductType = Content.ProductType == CommonConst.ArmoryType.Mod and CommonConst.ArmoryType.Mod or nil,
-        IsMod = Content.ProductType == CommonConst.ArmoryType.Mod,
-        LockType = Content.LockType,
-        IsLocked = Content.IsLocked,
-        Level = Content.Level,
-        Developed = Content.Developed
-      }
-      if Content.IsLocked then
-        self.HasAnyModLocked = true
+  if 0 ~= #ChoosedTbl then
+    for _, Content in ipairs(ChoosedTbl) do
+      if not Seen[Content.Id] then
+        local NewItem = {
+          Id = Content.Id,
+          ItemId = Content.UnitId,
+          Icon = Content.Icon,
+          Rarity = Content.Rarity,
+          ItemType = Content.ItemType,
+          ChoosedCount = 1,
+          Uuid = Content.Uuid,
+          ModId = Content.UnitId,
+          UnitId = Content.UnitId,
+          ProductType = Content.ProductType == CommonConst.ArmoryType.Mod and CommonConst.ArmoryType.Mod or nil,
+          IsMod = Content.ProductType == CommonConst.ArmoryType.Mod,
+          LockType = Content.LockType,
+          IsLocked = Content.IsLocked,
+          Level = Content.Level,
+          Developed = Content.Developed
+        }
+        if Content.IsLocked then
+          self.HasAnyModLocked = true
+        end
+        table.insert(self.MergeTbl, NewItem)
+        Seen[Content.Id] = #self.MergeTbl
+      else
+        local ExistIndex = Seen[Content.Id]
+        self.MergeTbl[ExistIndex].ChoosedCount = self.MergeTbl[ExistIndex].ChoosedCount + 1
       end
-      table.insert(self.MergeTbl, NewItem)
-      Seen[Content.Id] = #self.MergeTbl
-    else
-      local ExistIndex = Seen[Content.Id]
-      self.MergeTbl[ExistIndex].ChoosedCount = self.MergeTbl[ExistIndex].ChoosedCount + 1
     end
   end
   if IsShow then

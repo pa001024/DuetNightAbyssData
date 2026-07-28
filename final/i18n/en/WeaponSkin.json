@@ -74,9 +74,17 @@
   {
     "id": 3010110,
     "name": "The Scream – Greatsword",
-    "desc": "",
+    "desc": "Graaahhhhh!",
     "icon": "T_Head_Claymore_Nahan",
     "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010111,
+    "name": "UI_WeaponSkin_Name_3010111",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
@@ -136,6 +144,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010208,
+    "name": "UI_WeaponSkin_Name_3010208",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3010301,
     "name": "Sunrise Scherzo",
     "desc": "Where is the sun? Look — it's dancing in the palm of my hand.",
@@ -189,6 +205,14 @@
     "desc": "Graaahhhhh!",
     "icon": "T_Head_Bow_Nahan02",
     "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010308,
+    "name": "UI_WeaponSkin_Name_3010308",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
@@ -253,6 +277,14 @@
     "desc": "Heed the eternal summons of the stars.",
     "icon": "T_Head_Polearm_Huanyu",
     "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010409,
+    "name": "The Scream – Polearm",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Polearm_Nahan",
+    "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
@@ -332,6 +364,22 @@
     "name": "Verdant Finale – Dual Blades",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010611,
+    "name": "The Scream – Dual Blades",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Dualblade_Nahan",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010613,
+    "name": "UI_WeaponSkin_Name_3010610",
+    "desc": "",
+    "icon": "",
     "rarity": 5,
     "unlock": "Available at Shop"
   },
@@ -472,6 +520,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010904,
+    "name": "UI_WeaponSkin_Name_3010904",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3011001,
     "name": "Guitabby No. 2",
     "desc": "Meeow♪ meow-meow-meow♪ meow-meow♪♪",
@@ -501,6 +557,14 @@
     "desc": "Graaahhhhh!",
     "icon": "T_Head_Shotgun_Nahan",
     "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011005,
+    "name": "UI_WeaponSkin_Name_3011005",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "Available at Shop"
   },
   {
@@ -549,6 +613,22 @@
     "desc": "Graaahhhhh!",
     "icon": "T_Head_Crossbow_Nahan",
     "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011207,
+    "name": "Untouched Rime",
+    "desc": "Before the first snow fades, hold its fragile grace in your heart.",
+    "icon": "T_Head_Crossbow_Weirong",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011209,
+    "name": "Banana Buddy",
+    "desc": "Oi, wanna be ma banana buddy?",
+    "icon": "T_Head_Crossbow_Jiaoge",
+    "rarity": 5,
     "unlock": "Available at Shop"
   }
 ]

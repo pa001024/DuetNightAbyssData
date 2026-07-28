@@ -1,13 +1,13 @@
 local T = {}
 T.RT_1 = {"0", "1"}
-T.RT_2 = {
+T.RT_2 = {"Rarity"}
+T.RT_3 = {
   "1",
   "2",
   "3",
   "4",
   "5"
 }
-T.RT_3 = {"Rarity"}
 T.RT_4 = {
   "WeaponRarity"
 }
@@ -71,8 +71,8 @@ return ReadOnly("SiftDimens", {
   [2] = {
     HasSelectAll = true,
     Id = 2,
-    SelectionDatas = T.RT_2,
-    SelectionField = T.RT_3,
+    SelectionDatas = T.RT_3,
+    SelectionField = T.RT_2,
     SelectionText = {
       "ModFilter_Rarity1",
       "ModFilter_Rarity2",
@@ -164,21 +164,29 @@ return ReadOnly("SiftDimens", {
   [100101] = {
     HasSelectAll = true,
     Id = 100101,
-    SelectionDatas = T.RT_2,
-    SelectionField = T.RT_3,
+    SelectionDatas = {
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    },
+    SelectionField = T.RT_2,
     SelectionText = {
       "BackpackResource_Rarity1",
       "BackpackResource_Rarity2",
       "BackpackResource_Rarity3",
       "BackpackResource_Rarity4",
-      "BackpackResource_Rarity5"
+      "BackpackResource_Rarity5",
+      "BackpackResource_Rarity6"
     },
     Title = "BackpackResource_SubTitle_Rarity"
   },
   [100301] = {
     HasSelectAll = true,
     Id = 100301,
-    SelectionDatas = T.RT_2,
+    SelectionDatas = T.RT_3,
     SelectionField = T.RT_4,
     SelectionText = {
       "BackpackMeele_Rarity1",
@@ -214,7 +222,7 @@ return ReadOnly("SiftDimens", {
   [100401] = {
     HasSelectAll = true,
     Id = 100401,
-    SelectionDatas = T.RT_2,
+    SelectionDatas = T.RT_3,
     SelectionField = T.RT_4,
     SelectionText = {
       "BackpackRanged_Rarity1",
@@ -284,7 +292,7 @@ return ReadOnly("SiftDimens", {
       "4",
       "5"
     },
-    SelectionField = T.RT_3,
+    SelectionField = T.RT_2,
     SelectionText = {
       "ModFilter_Rarity2",
       "ModFilter_Rarity3",

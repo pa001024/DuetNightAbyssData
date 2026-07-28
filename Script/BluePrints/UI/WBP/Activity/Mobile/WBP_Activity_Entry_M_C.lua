@@ -1,4 +1,5 @@
 require("UnLua")
+local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local M = Class({
   "BluePrints.UI.BP_UIState_C",
   "BluePrints.UI.WBP.Activity.WBP_Activity_EntryBase_C",
@@ -45,6 +46,7 @@ function M:OnLoaded(...)
   EventManager:AddEvent(EventID.OnLeaveActivityEntry, self, self.OnLeaveActivityEntry)
   EventManager:AddEvent(EventID.OnActivityEntryShowVisible, self, self.OnActivityEntryShowVisible)
   EventManager:AddEvent(EventID.OnActivityComplete, self, self.OnActivityComplete)
+  EventManager:AddEvent(ActivityCommon.EventId.RefreshActivityEntryVideo, self, self.RefreshCurrentBGVideo)
 end
 
 function M:InitListenEvent()
@@ -73,10 +75,7 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.OnReturnToActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnLeaveActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnActivityComplete, self)
-  local BattleView = UIManager():GetUIObj("BattleMain")
-  if BattleView then
-    BattleView:Show("Temp1.4Fix")
-  end
+  EventManager:RemoveEvent(ActivityCommon.EventId.RefreshActivityEntryVideo, self)
   self.NeedShowVersionView = nil
   self.Super.Destruct(self)
 end

@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local AnnounceController = require("BluePrints.UI.WBP.Announcement.AnnounceController")
 local AnnounceModel = AnnounceController:GetModel()
 local Utils = require("Utils")
@@ -57,7 +58,7 @@ function Component:OpenAnnouncementOnce(bReset)
 end
 
 function Component:ClearOpenAnnouncementAsync()
-  ForceStopAsyncTask(self, "OpenAnnouncementAsync")
+  CoroutineUtils.ForceStopAsyncTask(self, "OpenAnnouncementAsync")
 end
 
 function Component:OnClickAnnoucement(bNeedRequest)
@@ -69,7 +70,7 @@ function Component:OnClickAnnoucement(bNeedRequest)
     bNeedRequest = not AnnounceController.bInit
   end
   self:ClearOpenAnnouncementAsync()
-  RunAsyncTask(self, "OpenAnnouncementAsync", function(Coroutine)
+  CoroutineUtils.RunAsyncTask(self, "OpenAnnouncementAsync", function(Coroutine)
     AnnounceController:OpenAnnouncementMain(AnnounceCommon.ShowTag.InLogin, bNeedRequest, HostId, self, Coroutine)
   end)
 end

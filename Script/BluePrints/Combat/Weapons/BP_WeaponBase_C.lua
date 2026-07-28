@@ -55,6 +55,22 @@ function BP_WeaponBase_C:Lua_InitWeaponAppearance()
   self:InitWeaponAppearance(self.AppearanceInfo)
 end
 
+function BP_WeaponBase_C:InitForExhibit()
+  local Avatar = GWorld and GWorld.GetAvatar and GWorld:GetAvatar()
+  local ItemInfo = Avatar and Avatar.GetGuildExhibitItemInfo and Avatar:GetGuildExhibitItemInfo(self.ExhibitUuid)
+  if not ItemInfo then
+    return
+  end
+  local WeaponInfo = ItemInfo
+  if not WeaponInfo.AppearanceInfo then
+    WeaponInfo = {}
+    Utils.FormatWeaponInfo(WeaponInfo, ItemInfo)
+  end
+  self.AppearanceInfo = WeaponInfo.AppearanceInfo or WeaponInfo
+  self.HyperWeaponLevel = WeaponInfo.HyperCardLevel or 0
+  self:InitWeaponAppearance(self.AppearanceInfo)
+end
+
 function BP_WeaponBase_C:InitWeaponAppearance(AppearanceInfo)
   self.AppearanceInfo = AppearanceInfo
   if AppearanceInfo then

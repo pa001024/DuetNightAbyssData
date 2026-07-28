@@ -1,8 +1,9 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 
 function Component:InitComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitDispatchPoint)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitDispatchPoint)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
@@ -264,9 +265,7 @@ function Component:CancelDispatch(Id)
   local Select = self.DispatchSelect[Id]
   Item:RemoveFromParent()
   Select:RemoveFromParent()
-  if self.MainMap.DispatchDetail then
-    self.MainMap.DispatchDetail:RealClose()
-  end
+  self.ModeComp:CloseDispatchDetailIfAny()
   self.DispatchPoint[Id] = nil
   self.DispatchSelect[Id] = nil
   self.DispatchLocations[Id] = nil
@@ -280,9 +279,7 @@ function Component:CompleteDispatch(TotalReward, Id)
   local Select = self.DispatchSelect[Id]
   Item:RemoveFromParent()
   Select:RemoveFromParent()
-  if self.MainMap.DispatchDetail then
-    self.MainMap.DispatchDetail:RealClose()
-  end
+  self.ModeComp:CloseDispatchDetailIfAny()
   self.DispatchPoint[Id] = nil
   self.DispatchSelect[Id] = nil
   self.DispatchLocations[Id] = nil
@@ -373,7 +370,7 @@ end
 
 function Component:DispatchSelectClick(Id)
   self.CurClickDispatchId = Id
-  self.MainMap.DispatchId = Id
+  self.ModeComp:SetDispatchId(Id)
   local UIId = DataMgr.Dispatch[Id].DispatchUIId
   local FloorId = DataMgr.DispatchUI[UIId].FloorId
   self:OnFloorBtnClicked(FloorId, true)
@@ -398,7 +395,7 @@ function Component:OnDispatchExistingComplete(Id)
   if self.IsMiniMap then
     return
   end
-  if self.MainMap.DispatchAgentList then
+  if self.ModeComp:HasDispatchAgentList() then
     return
   end
   local Point = self.DispatchPoint[Id]
@@ -470,10 +467,10 @@ function Component:CloseForDispatch(ShowDispatch)
   end
   if ShowDispatch then
     self.Panel_Gamer:SetVisibility(ESlateVisibility.Collapsed)
-    self.MainMap.Slider_Zoom:SetVisibility(ESlateVisibility.Collapsed)
+    self.ModeComp:SetSliderZoomVisible(false)
   elseif self.IsInRegion and not DataMgr.SubRegion[Avatar.CurrentRegionId].NotShowInRegionMap then
     self.Panel_Gamer:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.MainMap.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.ModeComp:SetSliderZoomVisible(true)
   end
 end
 

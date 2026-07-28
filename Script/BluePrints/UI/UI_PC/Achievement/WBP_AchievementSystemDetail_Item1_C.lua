@@ -156,7 +156,7 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
     self.Common_List_Subcell_PC_0:SelectCell()
     self:OpenDetail()
     self.Common_List_Subcell_PC_0.Button_Area:SetFocus()
-    self.AchievementSystem.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC.Img_GamePad:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.AchievementSystem.Achievement_Root.BP_Common_OneClickGet.Common_Button_Reward_PC:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.AchievementSystem:UpdateComTab(nil, false)
   end
   return self.ID

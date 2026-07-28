@@ -3,6 +3,8 @@ local WBP_ImpressionResult_Common = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.DelayFrameComponent"
 })
+local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local ECheckMode = {
   Normal = "Normal",
   ImpressionShop = "ImpressionShop"
@@ -240,11 +242,10 @@ end
 
 function WBP_ImpressionResult_Common:RefreshResouces()
   DebugPrint("WBP_ImpressionResult_Common RefreshResouces")
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     return
   end
-  local Ret = Avatar:CanImpressionCheck(self.CheckParams.ImpressionAreaId)
+  local Ret = ImpressionModel:CanImpressionCheck(self.CheckParams.ImpressionAreaId)
   self.bCanRetry = Ret.bCanCheck
   self.Com_Cost:SetPossess(Ret.ResourceCount)
   self.Button_Retry:ForbidBtn(not self.bCanRetry)
@@ -464,11 +465,10 @@ function WBP_ImpressionResult_Common:TryRequestCheck()
   local CheckInfo = self.CheckParams.CheckInfo
   local OptionId = self.CheckParams.OptionId
   local UsingGM = self.CheckParams.UsingGM
-  local Avatar = GWorld:GetAvatar()
   if self.CheckParams.Type == "Check" then
-    local DialogueChain = self.ImpressionUI.TalkTask.DialogueRecordComponent:GetChain()
-    if Avatar then
-      Avatar:ImpressionCheckByEnumId_New(DialogueChain, OptionId, TalkTriggerId, ImpressionAreaId, {
+    if ImpressionController:IsValid() then
+      local DialogueChain = self.ImpressionUI.TalkTask.DialogueRecordComponent:GetChain()
+      ImpressionController:TryRequestCheck(DialogueChain, OptionId, TalkTriggerId, ImpressionAreaId, {
         self,
         self.OnRetryCheck,
         self.OnImpressionTimeout
@@ -568,6 +568,7 @@ end
 function WBP_ImpressionResult_Common:InterruptExit()
   DebugPrint("WBP_ImpressionResult_Common InterruptExit")
   AudioManager(self):StopSound(self, "ImpressionResultPressing")
+  self:DisablePlayerInput(false)
   self:RemoveFromParent()
   if self.OnInterruptedExitDelegate then
     self.OnInterruptedExitDelegate[2](self.OnInterruptedExitDelegate[1])

@@ -421,25 +421,33 @@ function M:InitEvents()
   self:AddDispatcher(EventID.OnMatchPrepareToBattle, self, self.OnMatchPrepareToBattle)
   self:AddDispatcher(EventID.TeamMatchSquadFold, self, self.OnTeamMatchSquadFold)
   self:AddDispatcher(EventID.TeamMatchSquadUnfold, self, self.OnTeamMatchSquadUnfold)
-  self:AddDispatcher(EventID.GameViewportInputKeyReleased, self, function(self, Key)
+  self:AddDispatcher(EventID.GameViewportInputKeyReleased, self, function(self, Key, AnyHandled)
     if Key.KeyName == self.YES_KEY_TEXT then
       self:ConfirmKeyDown()
+      AnyHandled.bHandled = true
     elseif Key.KeyName == self.NO_KEY_TEXT then
       self:RefuseKeyDown()
+      AnyHandled.bHandled = true
     end
   end)
-  self:AddDispatcher(EventID.GameViewportInputKeyPressed, self, function(self, Key)
+  self:AddDispatcher(EventID.GameViewportInputKeyPressed, self, function(self, Key, AnyHandled)
     DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:InitEvents", Key.KeyName)
     if Key.KeyName == Const.GamepadSpecialRight then
       self:ConfirmKeyDown()
+      AnyHandled.bHandled = true
     elseif Key.KeyName == Const.GamepadSpecialLeft then
       self:RefuseKeyDown()
+      AnyHandled.bHandled = true
     elseif Key.KeyName == Const.GamepadRightThumbstick then
       if self.Btn_Qa and self.Btn_Qa:GetVisibility() ~= ESlateVisibility.Collapsed and self.SquadFolding and not self.bQaBubbleOpen then
         self:OpenQaBubble()
       end
-    elseif Key.KeyName == Const.GamepadFaceButtonRight and self.bQaBubbleOpen then
-      self:CloseQaBubble()
+      AnyHandled.bHandled = true
+    elseif Key.KeyName == Const.GamepadFaceButtonRight then
+      if self.bQaBubbleOpen then
+        self:CloseQaBubble()
+      end
+      AnyHandled.bHandled = true
     end
   end)
   self:AddDispatcher(EventID.OnRequestToMatch, self, self.OnTeamMatchCancel)

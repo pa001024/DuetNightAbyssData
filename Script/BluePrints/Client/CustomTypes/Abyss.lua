@@ -82,8 +82,8 @@ AbyssLevel.__Props__ = {
   PassTime = prop.prop("IntList", "save", {-1, -1}),
   FastestPassTime = prop.prop("Int", "save", -1),
   AbyssDungeonEnterCount = prop.prop("IntList", "save", {0, 0}),
-  PlayerInfo1 = prop.prop("Str", "save"),
-  PlayerInfo2 = prop.prop("Str", "save"),
+  PlayerInfo1 = prop.prop("Bytes", "save"),
+  PlayerInfo2 = prop.prop("Bytes", "save"),
   AbyssType = prop.getter("Data", "AbyssType"),
   NextLevelId = prop.getter("Data", "NextLevelId"),
   InitLevel = prop.getter("Data", "InitLevel"),
@@ -410,14 +410,31 @@ function Abyss:UpdateFastestTeamList(TeamList)
 end
 
 function Abyss:GetAllPassRoomCount()
-  local AllPassRoomCount = 0
-  for LevelIndex = 1, self.MaxAbyssProgress[1] - 1 do
-    local AbyssLevel = self.AbyssLevelList[LevelIndex]
-    if AbyssLevel then
-      AllPassRoomCount = AllPassRoomCount + AbyssLevel.MaxAbyssLevelProgress
-    end
+  local AllPassRoomCount = self.MaxAbyssProgress[2] or 0
+  local LevelCount = math.max(0, (self.MaxAbyssProgress[1] or 1) - 1)
+  if LevelCount <= 0 then
+    return AllPassRoomCount
   end
-  return AllPassRoomCount + self.MaxAbyssProgress[2]
+  local LevelIdList = self.AbyssLevelId
+  if not LevelIdList or 0 == #LevelIdList then
+    return AllPassRoomCount
+  end
+  local FirstLevelId = LevelIdList[1]
+  local AbyssLevelInfo = FirstLevelId and DataMgr.AbyssLevel[FirstLevelId]
+  if not AbyssLevelInfo then
+    return AllPassRoomCount
+  end
+  local AbyssDungeon1 = AbyssLevelInfo.AbyssDungeon1
+  local AbyssDungeonInfo = AbyssDungeon1 and DataMgr.AbyssDungeon[AbyssDungeon1]
+  if not AbyssDungeonInfo or not AbyssDungeonInfo.RoomId then
+    return AllPassRoomCount
+  end
+  local RoomCount = #AbyssDungeonInfo.RoomId
+  if not self:IsLoopAbyss() then
+    RoomCount = RoomCount * 2
+  end
+  AllPassRoomCount = AllPassRoomCount + RoomCount * LevelCount
+  return AllPassRoomCount
 end
 
 FormatProperties(Abyss)

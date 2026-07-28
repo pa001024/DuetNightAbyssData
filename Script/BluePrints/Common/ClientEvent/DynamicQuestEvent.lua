@@ -3,6 +3,7 @@ local DynamicQuestEvent = Class({
   "BluePrints.Common.TimerMgr"
 })
 local TimeUtils = require("Utils.TimeUtils")
+local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
 
 function DynamicQuestEvent:InitEvent(DynamicQuestId, Callback)
   self.Type = "DynamicQuest"
@@ -166,21 +167,20 @@ function DynamicQuestEvent:OnFinishEvent(Result, Callback, DialogueId, ForbidAni
     if true ~= ForbidAnim then
       DynEventUI:PlaySuccessAnim(GText("UI_DYNQUEST_SUCCESS"), PlayTaskBarAnim)
     end
-    local Avatar = GWorld:GetAvatar()
     if self.DynamicQuestConfig.DynImpression then
       for Key, ImprPlusId in pairs(self.DynamicQuestConfig.DynImpression) do
         if Key == DialogueId then
-          if Avatar and ImprPlusId > 0 then
-            Avatar:ShowImpressionPlusUI(ImprPlusId, function()
+          if ImprPlusId > 0 then
+            ImpressionController:ShowImpressionPlusUI(ImprPlusId, function()
               self:ShowReward()
             end)
           end
-          goto lbl_94
+          goto lbl_90
         end
       end
     end
     self:ShowReward()
-    ::lbl_94::
+    ::lbl_90::
   end
   self:Destroy(Result)
   if Callback then

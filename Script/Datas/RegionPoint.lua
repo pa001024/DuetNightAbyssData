@@ -833,5 +833,18 @@ return ReadOnly("RegionPoint", {
     TeleportPointPos = 15,
     TeleportSubRegion = 106001,
     UnlockConditionId = 20021513
+  },
+  [2855] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Map/T_Map_MarkIcon_Pet.T_Map_MarkIcon_Pet",
+    Id = 2855,
+    Name = "Event_Title_103025",
+    Pos = {-18687, 2},
+    SingleCreate = true,
+    StaticId = 332480620,
+    SubRegion = 106001,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1600,
+    TeleportPointPos = 22,
+    TeleportSubRegion = 106001
   }
 })

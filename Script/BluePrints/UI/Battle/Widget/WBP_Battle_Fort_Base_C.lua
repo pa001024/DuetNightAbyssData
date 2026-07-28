@@ -35,7 +35,8 @@ function WBP_Battle_Fort_Base_C:OnLoaded(...)
       Team = 1,
       Chat_Entry = 1,
       HBox = 1,
-      SizeBox_Map = 1
+      SizeBox_Map = 1,
+      Btn_Task = 1
     }
   end
   self.FortEid, self.IsWeekly = ...

@@ -1,5 +1,6 @@
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
 require("UnLua")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local BP_PhantomCharacter = Class({
   "BluePrints.Char.BP_MonsterCharacter_C",
   "BluePrints.Char.CharacterComponent.PlayerCommonInterface"

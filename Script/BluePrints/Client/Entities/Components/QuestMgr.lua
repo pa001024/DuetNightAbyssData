@@ -8,6 +8,8 @@ local WBP_Task_Main_C = require("BluePrints.UI.TaskPanel.WBP_Task_Main_C")
 local ChapMutexUtils = require("Utils.ChapMutexUtils")
 local ChapMutexQueueMgr = require("BluePrints.Story.ChapMutexQueueMgr")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+local FClientQuestChain = require("BluePrints.Client.Quest.ClientQuestChain")
+local FQuestDetails = require("StoryCreator.StoryLogic.QuestDetails")
 local Component = {}
 
 function Component:NotifyAvatarRegionAllReady()
@@ -19,19 +21,103 @@ function Component:NotifyAvatarRegionAllReady()
   end
   self:TriggerQuestChain()
   EventManager:FireEvent(EventID.OnRegionLoaded)
+  local QuestChainId = self.TrackingQuestChainId
+  if QuestChainId and QuestChainId > 0 then
+    self:PlayTrackingQuestChainBGM(QuestChainId)
+  else
+    self:StopTrackingQuestChainBGM(QuestChainId, true)
+  end
 end
 
 function Component:EnterWorld()
   DebugPrint("QuestMgr EnterWorld")
   self.DoingQuestChainIds = {}
   self.DoingQuestIds = {}
+  self.ClientQuestChains = {}
+  self.QuestChainsNeedRestart = {}
   self.IsChapMutexChecked = false
   self.IsChapMutexChoosing = false
   self.ChapMutexQueueMgr = ChapMutexQueueMgr.New(self, self.OnChapMutexQueueDrained)
+  for QuestChainId, QuestChain in pairs(self.QuestChains) do
+    self.ClientQuestChains[QuestChainId] = FClientQuestChain(QuestChainId)
+  end
 end
 
 function Component:OnLoginSuccess()
   self:RefreshTaskRedDot()
+end
+
+function Component:GetOrCreateClientQuestChain(QuestChainId)
+  if not QuestChainId then
+    return
+  end
+  if not self.ClientQuestChains[QuestChainId] then
+    local QuestChain = self.QuestChains[QuestChainId]
+    if not QuestChain then
+      return
+    end
+    self.ClientQuestChains[QuestChainId] = FClientQuestChain(QuestChainId)
+  end
+  return self.ClientQuestChains[QuestChainId]
+end
+
+function Component:GetClientQuestChain(QuestChainId)
+  if not QuestChainId then
+    return
+  end
+  return self.ClientQuestChains[QuestChainId]
+end
+
+function Component:RemoveClientQuestChain(QuestChainId)
+  local ClientQuestChain = self.ClientQuestChains[QuestChainId]
+  if ClientQuestChain then
+    ClientQuestChain:StopStoryline()
+    self.ClientQuestChains[QuestChainId] = nil
+  end
+end
+
+function Component:CheckQuestIdIsInStoryByQuest(QuestChainId, TargetQuestId)
+  local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+  if ClientQuestChain then
+    return ClientQuestChain:CheckQuestIdIsInStory(TargetQuestId)
+  end
+  return false
+end
+
+function Component:TryStartClientQuestChainStoryline(QuestChainId, QuestId, NodeId)
+  local ClientQuestChain = self:GetOrCreateClientQuestChain(QuestChainId)
+  if not ClientQuestChain then
+    return
+  end
+  if ClientQuestChain:StartStoryline(QuestId, NodeId) then
+    ClientQuestChain:AddStartQuestCallback(self, self.HandleQuestStart)
+    ClientQuestChain:AddFinishQuestCallback(self, self.HandleQuestFinish)
+  end
+end
+
+function Component:TryRestartClientQuestChainStoryline(QuestChainId, QuestId, NodeId)
+  local ClientQuestChain = self:GetOrCreateClientQuestChain(QuestChainId)
+  if not ClientQuestChain then
+    return
+  end
+  if ClientQuestChain:RestartStoryline(QuestId, NodeId) then
+    ClientQuestChain:AddStartQuestCallback(self, self.HandleQuestStart)
+    ClientQuestChain:AddFinishQuestCallback(self, self.HandleQuestFinish)
+  end
+end
+
+function Component:StopClientQuestChainStoryline(QuestChainId)
+  local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+  if not ClientQuestChain then
+    return
+  end
+  ClientQuestChain:StopStoryline()
+end
+
+function Component:StopAllClientQuestChainStoryline()
+  for _, ClientQuestChain in pairs(self.ClientQuestChains) do
+    ClientQuestChain:StopStoryline()
+  end
 end
 
 function Component:RefreshTaskRedDot()
@@ -157,17 +243,13 @@ function Component:TriggerQuestChain()
       if Chain.DoingQuestId and Chain.DoingQuestId > 0 then
         self.CanReciveQuestId2QuestChainId[Chain.DoingQuestId] = id
       end
-      if GWorld.StoryMgr:IsRunningStoryline(DataMgr.QuestChain[Chain.QuestChainId].StoryPath) == false then
-        GWorld.StoryMgr:RunStory(DataMgr.QuestChain[Chain.QuestChainId].StoryPath, Chain.DoingQuestId)
-      end
+      self:TryStartClientQuestChainStoryline(id)
     end
     if Chain and Chain:IsDoing() then
       if Chain.DoingQuestId and Chain.DoingQuestId > 0 then
         self.CanReciveQuestId2QuestChainId[Chain.DoingQuestId] = id
       end
-      if GWorld.StoryMgr:IsRunningStoryline(DataMgr.QuestChain[Chain.QuestChainId].StoryPath) == false then
-        GWorld.StoryMgr:RunStory(DataMgr.QuestChain[Chain.QuestChainId].StoryPath, Chain.DoingQuestId)
-      end
+      self:TryStartClientQuestChainStoryline(id)
       EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Quest", Chain.DoingQuestId)
       EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Quest", Chain.DoingQuestId)
       EventManager:FireEvent(EventID.TriggerFlexibleActive, "Quest")
@@ -202,20 +284,18 @@ function Component:ServerStartQuest(Ret, QuestChainId, ClientVarParams)
   EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Quest", QuestChain.DoingQuestId)
   EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Quest", QuestChain.DoingQuestId)
   EventManager:FireEvent(EventID.TriggerFlexibleActive, "Quest")
-  local Story = GWorld.StoryMgr:GetStory(QuestChain.StoryPath)
+  EventManager:FireEvent(EventID.OnMissionGroupStart, QuestChain.DoingQuestId)
   GameMode:TriggerQuestArtLevelChange(ClientVarParams)
   local RegionDataMgr = GameMode:GetRegionDataMgrSubSystem()
   if RegionDataMgr then
     RegionDataMgr:RecoverQuestLockedDatas(QuestChainId)
   end
-  if not Story then
-    local MainStoryData = DataMgr.QuestChain[QuestChainId]
-    if QuestChainId and QuestChainId > 0 and nil ~= MainStoryData and MainStoryData.StoryPath ~= nil then
-      GWorld.StoryMgr:RunStory(MainStoryData.StoryPath, self.QuestChains[QuestChainId].DoingQuestId)
-    end
-    return
+  local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+  if ClientQuestChain and ClientQuestChain:IsStorylineRunning() then
+    ClientQuestChain:StartQuest(ClientQuestChain:GetDoingQuestId())
+  else
+    self:TryStartClientQuestChainStoryline(QuestChainId)
   end
-  Story:StartStory(QuestChain.DoingQuestId)
 end
 
 function Component:_OnPropChangeTrackingQuestChainId(key)
@@ -246,7 +326,7 @@ function Component:RealUpdateQuestChain(QuestChainId)
     return
   end
   DebugPrint("ZJT_ RealUpdateQuestChain ", QuestChainId)
-  GWorld.StoryMgr:RunStory(QuestChain.StoryPath, QuestChain.DoingQuestId)
+  self:TryStartClientQuestChainStoryline(QuestChainId)
 end
 
 function Component:IsCanRunQuestConditionCheck(Ret, QuestChainId)
@@ -288,8 +368,11 @@ function Component:QuestChainFinish(Ret, QuestChainId, RewardBox, TargetComplete
   EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "QuestChain", QuestChainId)
   EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "QuestChain", QuestChainId)
   EventManager:FireEvent(EventID.TriggerFlexibleActive, "QuestChain")
-  local StoryPath = QuestChain.StoryPath
-  GWorld.StoryMgr:StopStoryline(StoryPath)
+  local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+  if ClientQuestChain then
+    ClientQuestChain:FinishStoryline()
+  end
+  self:StopTrackingQuestChainBGM(QuestChainId, true)
   GWorld.UploadQuestChainData = true
   GameMode:HandleQuestChainFinish(QuestChainId)
   GWorld.UploadQuestChainData = false
@@ -674,6 +757,7 @@ function Component:SetQuestTracking(QuestChainId, SubRegionId)
       
       return
     end
+    self:PlayTrackingQuestChainBGM(QuestChainId)
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     local BattleMain = UIManager:GetUIObj("BattleMain")
     if BattleMain and BattleMain.Pos_TaskBar:GetChildAt(0) then
@@ -734,6 +818,7 @@ function Component:CancelQuestTracking(QuestChainId)
       
       return
     end
+    self:StopTrackingQuestChainBGM(QuestChainId, true)
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     local BattleMain = UIManager:GetUIObj("BattleMain")
     if BattleMain then
@@ -805,11 +890,10 @@ function Component:FailerSpecialQuest(SpecialQuestId, infos, NodeCallback)
   local function Callback(Ret)
     DebugPrint("ZJT_ FailerSpecialQuest ", Ret, SpecialQuestId)
     
-    if ErrorCode:Check(Ret) then
-      NodeCallback()
-    else
+    if not ErrorCode:Check(Ret) then
       self:OnPrintToFeiShu_Quest(ErrorCode.RET_SUCCESS, Ret, " FailerSpecialQuest_特殊任务失败错误 ", SpecialQuestId)
     end
+    NodeCallback(Ret)
   end
   
   self:CallServer("FailerSpecialQuest", Callback, SpecialQuestId, infos)
@@ -819,11 +903,10 @@ function Component:SuccessSpecialQuest(SpecialQuestId, infos, NodeCallback)
   local function Callback(Ret)
     DebugPrint("ZJT_ SuccessSpecialQuest ", Ret, SpecialQuestId)
     
-    if ErrorCode:Check(Ret) then
-      NodeCallback()
-    else
+    if not ErrorCode:Check(Ret) then
       self:OnPrintToFeiShu_Quest(ErrorCode.RET_SUCCESS, Ret, " SuccessSpecialQuest_成功特殊任务失败 ", SpecialQuestId)
     end
+    NodeCallback(Ret)
   end
   
   self:CallServer("SuccessSpecialQuest", Callback, SpecialQuestId, infos)
@@ -833,11 +916,10 @@ function Component:StartSpecialQuest(SpecialQuestId, infos, NodeCallback)
   local function Callback(Ret)
     DebugPrint("ZJT_ StartSpecialQuest ServerCallBack ", Ret, SpecialQuestId)
     
-    if ErrorCode:Check(Ret) then
-      NodeCallback()
-    else
+    if not ErrorCode:Check(Ret) then
       self:OnPrintToFeiShu_Quest(ErrorCode.RET_SUCCESS, Ret, " StartSpecialQuest_开始特殊任务错误 ", SpecialQuestId)
     end
+    NodeCallback(Ret)
   end
   
   self:CallServer("StartSpecialQuest", Callback, SpecialQuestId, infos)
@@ -848,8 +930,10 @@ function Component:StopQuestChainExcept(ChainId)
   for index, id in ipairs(self.CanReciveQuestChainIds) do
     chain = self.QuestChains[id]
     if chain and id ~= ChainId and (chain:IsDoing() or chain:IsUnlock()) then
-      local FilePath = chain.StoryPath
-      GWorld.StoryMgr:StopStoryline(FilePath)
+      local ClientQuestChain = self:GetClientQuestChain(id)
+      if ClientQuestChain then
+        ClientQuestChain:StopStoryline()
+      end
     end
   end
 end
@@ -940,6 +1024,7 @@ function Component:S2C_SwitchGuide_QuestChain()
   end
   local DoingQuestId = QuestChain.DoingQuestId
   AudioManager(GWorld):UpdateQuestChainIdAndQuestId(TrackQuestChainId, DoingQuestId)
+  self:PlayTrackingQuestChainBGM(TrackQuestChainId)
   local UIObjs = MissionIndicatorManager:GetIndicatorUIObjBySTLType("Task")
   local TargetSubRegionId = 0
   if not IsEmptyTable(UIObjs) then
@@ -994,9 +1079,10 @@ function Component:NotifyActiveQuestChainEnd(QuestChainId)
       ClientEventUtils:TryInterruptSpecialQuestEvent(SpecialQuestId, "ServerNotifyEnd")
     end
   end
-  local QuestChain = self.QuestChains[QuestChainId]
-  local StoryPath = QuestChain.StoryPath
-  GWorld.StoryMgr:StopStoryline(StoryPath)
+  local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+  if ClientQuestChain then
+    ClientQuestChain:StopStoryline()
+  end
   local GameMode = UGameplayStatics.GetGameMode(GWorld.GameInstance)
   GameMode:ClearRegionActorData("QuestChainId", QuestChainId, EDestroyReason.QuestChainClear, function(Target, Key, Value)
     return Target.QuestChainId == Value
@@ -1039,14 +1125,14 @@ end
 function Component:HandleAddBlackScreenOnDelivery(bIsPlayBlackScreenOnComplete, QuestChain, QuestId)
   if bIsPlayBlackScreenOnComplete and self:CheckHaveSuccQuestDeliver(QuestChain, QuestId) then
     DebugPrint("gyy@HandleAddBlackScreenOnDelivery ", QuestChain, QuestId)
-    GWorld.StoryMgr:AddStoryBlackScreenOnDelivery()
+    self:AddStoryBlackScreenOnDelivery()
   end
 end
 
 function Component:HandleRemoveBlackScreenOnDelivery(bIsPlayBlackScreenOnComplete, QuestChain, QuestId)
   if bIsPlayBlackScreenOnComplete and self:CheckHaveSuccQuestDeliver(QuestChain, QuestId) then
     DebugPrint("gyy@HandleRemoveBlackScreenOnDelivery ", QuestChain, QuestId)
-    GWorld.StoryMgr:RemoveStoryBlackScreenOnDelivery()
+    self:RemoveStoryBlackScreenOnDelivery()
   end
 end
 
@@ -1163,12 +1249,7 @@ function Component:GiveUpQuestChain(QuestChainId)
     GameMode:ClearRegionActorData("QuestChainId", QuestChainId, EDestroyReason.QuestChainClear, function(Target, Key, Value)
       return Target.QuestChainId == Value
     end)
-    local QuestChainData = DataMgr.QuestChain[QuestChainId]
-    if QuestChainData then
-      local StoryPath = QuestChainData.StoryPath
-      GWorld.StoryMgr:StopStoryline(StoryPath)
-      GWorld.StoryMgr:RunStory(StoryPath, self.QuestChains[QuestChainId].DoingQuestId)
-    end
+    self:TryRestartClientQuestChainStoryline(QuestChainId)
     EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "GiveUpQuestChain", QuestChainId)
     EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "GiveUpQuestChain", QuestChainId)
     EventManager:FireEvent(EventID.TriggerFlexibleActive, "GiveUpQuestChain")
@@ -1178,8 +1259,13 @@ function Component:GiveUpQuestChain(QuestChainId)
 end
 
 function Component:NotifyChooseQuestChapterUnlock(NeedUnlockChapterIdList)
-  self.logger.debug("NotifyChooseQuestChapterUnlock", NeedUnlockChapterIdList and #NeedUnlockChapterIdList or 0)
-  local Added = self.ChapMutexQueueMgr and self.ChapMutexQueueMgr:Enqueue(NeedUnlockChapterIdList, "server_notify")
+  self.logger.debug("NotifyChooseQuestChapterUnlock begin", NeedUnlockChapterIdList and table.concat(NeedUnlockChapterIdList, ", "))
+  local FilteredGroup = ChapMutexUtils.FilterGroupByExternalDoing(self, NeedUnlockChapterIdList)
+  self.logger.debug("NotifyChooseQuestChapterUnlock, FilteredGroup", FilteredGroup and table.concat(FilteredGroup, ", "))
+  if #FilteredGroup <= 0 then
+    return
+  end
+  local Added = self.ChapMutexQueueMgr and self.ChapMutexQueueMgr:Enqueue(FilteredGroup, "server_notify")
   if Added then
     self.IsChapMutexChoosing = true
     self.ChapMutexQueueMgr:Process()
@@ -1204,6 +1290,357 @@ function Component:ChooseQuestChapterUnlock(ChapterId, InCallback)
   end
   
   self:CallServer("ChooseQuestChapterUnlock", Callback, ChapterId)
+end
+
+function Component:UnlockQuestChapterForce(ChapterId, InCallback)
+  self.logger.debug("UnlockQuestChapterForce Begin", ChapterId)
+  
+  local function Callback(Ret)
+    self.logger.debug("UnlockQuestChapterForce Callback ", Ret, ChapterId)
+    if InCallback then
+      InCallback(Ret, ChapterId)
+    end
+  end
+  
+  self:CallServer("UnlockQuestChapterForce", Callback, ChapterId)
+end
+
+function Component:NotifyClearSTLNode(QuestChainIdList)
+  self.logger.debug("NotifyClearSTLNode", QuestChainIdList)
+  if not QuestChainIdList then
+    return
+  end
+  for _, QuestChainId in pairs(QuestChainIdList) do
+    local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+    if ClientQuestChain then
+      ClientQuestChain:StopStoryline()
+    end
+  end
+end
+
+function Component:UnlockQuestChainAdvance(QuestChainId, InCallback)
+  self.logger.debug("UnlockQuestChainAdvance Begin", QuestChainId)
+  
+  local function Callback(Ret)
+    self.logger.debug("UnlockQuestChainAdvance Callback ", Ret, QuestChainId)
+    if InCallback then
+      InCallback(Ret, QuestChainId)
+    end
+  end
+  
+  self:CallServer("UnlockQuestChainAdvance", Callback, QuestChainId)
+end
+
+function Component:HandleQuestStart(QuestChainId, QuestId)
+  self:TryRemoveStoryBlackScreenOnSucc(QuestChainId, QuestId)
+end
+
+function Component:HandleQuestFinish(QuestChainId, Node, OutPortNames, Result)
+  if not Result then
+    self:AddToWaitingRestartList(QuestChainId, Node.QuestId)
+    if Node.bIsPlayBlackScreenOnFail then
+      self:AddStoryBlackScreenOnFail()
+    end
+  elseif Node.bIsPlayBlackScreenOnComplete then
+    local WaitingQuest = {}
+    local QuestChainInfo = DataMgr.STLExportQuestChain[QuestChainId]
+    if Node.QuestId == QuestChainInfo.EndQuestId then
+      local QuestChainCInfo = DataMgr.ConditionId2QuestChainId[QuestChainId]
+      if QuestChainCInfo then
+        for QuestChainId, value in pairs(QuestChainCInfo) do
+          local Avatar = GWorld:GetAvatar()
+          local QuestChain = Avatar.QuestChains:GetQuestChain(QuestChainId)
+          if QuestChain.IfAutoStart then
+            table.insert(WaitingQuest, QuestChainId)
+          end
+        end
+      end
+    else
+      local nextQuestInfo = QuestChainInfo.Quests[Node.QuestId]
+      local nextQuestIds = nextQuestInfo.nextQuestIds
+      for _, OutPortName in pairs(OutPortNames) do
+        if nextQuestIds[OutPortName] then
+          table.insert(WaitingQuest, nextQuestIds[OutPortName])
+        end
+      end
+    end
+    self:AddStoryBlackScreenOnSucc(WaitingQuest)
+  end
+end
+
+function Component:AddToWaitingRestartList(QuestChainId, QuestId)
+  table.insert(self.QuestChainsNeedRestart, {QuestChainId = QuestChainId, QuestId = QuestId})
+end
+
+function Component:AddStoryBlackScreen(ExtralInfo)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if not UIManager:IsCommonBlackScreenExist(ExtralInfo.HandleName) then
+    local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+    local Params = {}
+    Params.BlackScreenHandle = ExtralInfo.HandleName
+    Params.InAnimationPlayTime = ExtralInfo.InTime or 0
+    Params.OutAnimationPlayTime = ExtralInfo.OutTime or 0
+    if IsValid(Player) then
+      Player:AddDisableInputTag(ExtralInfo.HandleName)
+    end
+    UIManager:SetBannedActionCallback("BlackScreen", true, ExtralInfo.HandleName)
+    UIManager:ShowCommonBlackScreen(Params)
+  end
+  
+  local function BlackUIFadeOut()
+    if ExtralInfo.TimeOverCallback then
+      local Obj = ExtralInfo.TimeOverCallback.Obj
+      local Func = ExtralInfo.TimeOverCallback.Func
+      local Params = ExtralInfo.TimeOverCallback.Params
+      Func(Obj, Params)
+    end
+    self:RemoveStoryBlackScreen(ExtralInfo.HandleName)
+  end
+  
+  GWorld.GameInstance:AddTimer(ExtralInfo.ContinueTime or 10, BlackUIFadeOut, false, nil, ExtralInfo.HandleName, true)
+end
+
+function Component:RemoveStoryBlackScreen(HandleName)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if UIManager:IsCommonBlackScreenExist(HandleName) then
+    GWorld.GameInstance:RemoveTimer(HandleName)
+    local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+    if IsValid(Player) then
+      Player:RemoveDisableInputTag(HandleName)
+    end
+    UIManager:SetBannedActionCallback("BlackScreen", false, HandleName)
+    UIManager:HideCommonBlackScreen(HandleName)
+  end
+end
+
+function Component:AddStoryBlackScreenOnFail()
+  local ExtralInfo = {
+    HandleName = "StoryBlackScreenOnFail"
+  }
+  self:AddStoryBlackScreen(ExtralInfo)
+end
+
+function Component:RemoveStoryBlackScreenOnFail()
+  local HandleName = "StoryBlackScreenOnFail"
+  self:RemoveStoryBlackScreen(HandleName)
+end
+
+function Component:AddStoryBlackScreenOnSucc(WaitingQuest)
+  if not self.WaitingQuest then
+    self.WaitingQuest = {}
+  end
+  local AddFlag = false
+  for _, Id in pairs(WaitingQuest) do
+    if not self.WaitingQuest[Id] then
+      self.WaitingQuest[Id] = 1
+      AddFlag = true
+    end
+  end
+  if AddFlag then
+    local ExtralInfo = {
+      HandleName = "StoryBlackScreenOnSucc",
+      TimeOverCallback = {
+        Obj = self,
+        Func = self.RemoveWaitingQuest
+      }
+    }
+    self:AddStoryBlackScreen(ExtralInfo)
+  end
+end
+
+function Component:RemoveWaitingQuest()
+  self.WaitingQuest = nil
+end
+
+function Component:TryRemoveStoryBlackScreenOnSucc(QuestChainId, QuestId)
+  if not self.WaitingQuest or not self.WaitingQuest[QuestChainId] and not self.WaitingQuest[QuestId] then
+    return
+  end
+  self.WaitingQuest[QuestChainId] = nil
+  self.WaitingQuest[QuestId] = nil
+  if not next(self.WaitingQuest) then
+    self:RemoveStoryBlackScreenOnSucc()
+  end
+end
+
+function Component:RemoveStoryBlackScreenOnSucc()
+  local HandleName = "StoryBlackScreenOnSucc"
+  self:RemoveWaitingQuest()
+  self:RemoveStoryBlackScreen(HandleName)
+end
+
+function Component:AddStoryBlackScreenOnDelivery()
+  local ExtralInfo = {
+    HandleName = "StoryBlackScreenOnDelivery"
+  }
+  self:AddStoryBlackScreen(ExtralInfo)
+end
+
+function Component:RemoveStoryBlackScreenOnDelivery()
+  local HandleName = "StoryBlackScreenOnDelivery"
+  self:RemoveStoryBlackScreen(HandleName)
+end
+
+function Component:TryRestartQuestChains()
+  DebugPrint("QuestMgr TryRestartQuestChains")
+  local Flag = false
+  local RestartQuestChains = {}
+  for _, Info in pairs(self.QuestChainsNeedRestart) do
+    Flag = true
+    table.insert(RestartQuestChains, Info)
+  end
+  if Flag then
+    DebugPrint("QuestMgr RestartQuestChains")
+    for _, Info in pairs(RestartQuestChains) do
+      if self.ClientQuestChains[Info.QuestChainId] then
+        self:TryRestartClientQuestChainStoryline(Info.QuestChainId, Info.QuestId)
+      end
+    end
+    self:RemoveStoryBlackScreenOnFail()
+  end
+  self.QuestChainsNeedRestart = {}
+end
+
+function Component:PrintQuestChainsNeedRestart()
+  for _, Info in pairs(self.QuestChainsNeedRestart) do
+    DebugPrint("QuestchainId,QuestId: ", Info.QuestChainId, Info.QuestId)
+  end
+end
+
+function Component:GetResurgencePointInfo()
+  if not self.TrackingQuestChainId then
+    return
+  end
+  local CurrentRegionId = self:GetCurrentRegionId()
+  if not CurrentRegionId or CurrentRegionId <= 0 then
+    return
+  end
+  local ClientQuestChain = self:GetClientQuestChain(self.TrackingQuestChainId)
+  if not ClientQuestChain then
+    return
+  end
+  return ClientQuestChain:GetResurgencePointInfo(CurrentRegionId)
+end
+
+function Component:GetTrackingStoryNode()
+  local TrackingClientQuestChain = self:GetTrackingClientQuestChain()
+  if not TrackingClientQuestChain then
+    return
+  end
+  return TrackingClientQuestChain:GetDoingStoryNode()
+end
+
+function Component:IsDeadTriggerQuestFail()
+  local TrackingStoryNode = self:GetTrackingStoryNode()
+  if not TrackingStoryNode then
+    return
+  end
+  return TrackingStoryNode.bDeadTriggerQuestFail
+end
+
+function Component:FailTrackingQuest()
+  local TrackingClientQuestChain = self:GetTrackingClientQuestChain()
+  if not TrackingClientQuestChain then
+    return
+  end
+  TrackingClientQuestChain:FailDoingQuest()
+end
+
+function Component:GetTrackingClientQuestChain()
+  if not self.TrackingQuestChainId or self.TrackingQuestChainId <= 0 then
+    return
+  end
+  return self:GetClientQuestChain(self.TrackingQuestChainId)
+end
+
+function Component:IsCanStartClientQuestChainStoryline()
+  if IsStandAlone(GWorld.GameInstance) or IsClient(GWorld.GameInstance) then
+    return true
+  end
+  return false
+end
+
+function Component:ClientQuestChainsHandleInLoading()
+  if self:IsCanStartClientQuestChainStoryline() == false then
+    return
+  end
+  self:StopAllClientQuestChainStoryline()
+end
+
+function Component:CreateQuestDetails(QuestChainId)
+  local QuestChainInfo = DataMgr.QuestChain[QuestChainId]
+  if nil == QuestChainInfo then
+    DebugPrint("Warning: QuestMgr.CreateQuestDetails: QuestChainInfo is Empty")
+    return nil
+  end
+  local FileName = QuestChainInfo.StoryPath
+  if nil == FileName then
+    DebugPrint("Warning: QuestMgr.CreateQuestDetails: FileName is Empty")
+    return nil
+  end
+  local ClientQuestChain = self:GetOrCreateClientQuestChain(QuestChainId)
+  if not ClientQuestChain then
+    DebugPrint("Warning: QuestMgr.CreateQuestDetails: FileName is Empty")
+    return nil
+  end
+  local Storyline = ClientQuestChain:GetStoryline()
+  Storyline = Storyline or StorylineUtils.BuildStoryline(FileName)
+  if nil == Storyline then
+    DebugPrint("Warning: QuestMgr.CreateQuestDetails: Storyline is Empty")
+    return nil
+  end
+  return FQuestDetails:New(Storyline)
+end
+
+function Component:GetClientQuestChainStoryline(QuestChainId)
+  local ClientQuestChain = self:GetClientQuestChain(QuestChainId)
+  if not ClientQuestChain then
+    return
+  end
+  return ClientQuestChain:GetStoryline()
+end
+
+function Component:IsGuideNodeRunning()
+  for _, ClientQuestChain in pairs(self.ClientQuestChains) do
+    if ClientQuestChain:IsGuideNodeRunning() then
+      return true
+    end
+  end
+  return false
+end
+
+function Component:PrintClientQuestChainStorylineInfo()
+  for _, ClientQuestChain in pairs(self.ClientQuestChains) do
+    ClientQuestChain:PrintStorylineInfo()
+  end
+end
+
+function Component:OnDestroy()
+  GWorld.StoryMgr.ClientQuestChains = self.ClientQuestChains
+end
+
+function Component:PlayTrackingQuestChainBGM(QuestChainId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local AudioMgr = AudioManager(GWorld.GameInstance)
+  if not AudioMgr then
+    return
+  end
+  local BGMTable = Avatar:GetQuestChainBGMSuitBase(QuestChainId)
+  if not BGMTable or not BGMTable:IsEmpty() then
+  end
+  local BGMParams = Avatar:GetQuestChainBGMParamsSuitBase(QuestChainId)
+  if not BGMParams or not BGMParams:IsEmpty() then
+  end
+end
+
+function Component:StopTrackingQuestChainBGM(QuestChainId, bNeedRemove)
+  local AudioMgr = AudioManager(GWorld.GameInstance)
+  if not AudioMgr then
+    return
+  end
 end
 
 return Component

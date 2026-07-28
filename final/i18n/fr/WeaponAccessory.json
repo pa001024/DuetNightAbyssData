@@ -432,6 +432,38 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 10055,
+    "name": "Cristal astral glacé – Bleu céleste",
+    "desc": "Les flocons sont les messagers du ciel.",
+    "icon": "T_Fashion_Waist34_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10056,
+    "name": "Cristal astral glacé – Blanc sakura",
+    "desc": "Les flocons sont les messagers du ciel.",
+    "icon": "T_Fashion_Waist34_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10057,
+    "name": "Cristal astral glacé – Blanc ivoire",
+    "desc": "Les flocons sont les messagers du ciel.",
+    "icon": "T_Fashion_Waist34_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10058,
+    "name": "Cristal astral glacé – Bleu indigo",
+    "desc": "Les flocons sont les messagers du ciel.",
+    "icon": "T_Fashion_Waist34_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
     "id": 20001,
     "name": "Graffiti détonant",
     "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Entaille rugissante.",
@@ -445,6 +477,14 @@
     "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Résonance transperçante.",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "Disponible dans la boutique"
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40001,
+    "name": "Entaille phasique",
+    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Splendeur éblouissante.",
+    "icon": "T_Fashion_Fx38",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
   }
 ]

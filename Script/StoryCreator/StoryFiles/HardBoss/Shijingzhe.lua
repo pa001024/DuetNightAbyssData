@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "177778519010029999561",
+      startStory = "1748589440643384323",
       startPort = "Success",
-      endStory = "177778519010029999560",
+      endStory = "1748589440643384322",
       endPort = "StoryEnd"
     },
     {
-      startStory = "177778519010029999559",
+      startStory = "1748589440643384321",
       startPort = "StoryStart",
-      endStory = "177778519010029999561",
+      endStory = "1748589440643384323",
       endPort = "In"
     }
   },
   storyNodeData = {
-    ["177778519010029999559"] = {
+    ["1748589440643384321"] = {
       isStoryNode = true,
-      key = "177778519010029999559",
+      key = "1748589440643384321",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 103, y = 138},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["177778519010029999560"] = {
+    ["1748589440643384322"] = {
       isStoryNode = true,
-      key = "177778519010029999560",
+      key = "1748589440643384322",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 721, y = 176},
@@ -42,9 +42,9 @@ return {
         commentData = {}
       }
     },
-    ["177778519010029999561"] = {
+    ["1748589440643384323"] = {
       isStoryNode = true,
-      key = "177778519010029999561",
+      key = "1748589440643384323",
       type = "StoryNode",
       name = "开场剧情",
       pos = {x = 378, y = 130},
@@ -68,52 +68,52 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
           {
-            startQuest = "177778519010029999562",
+            startQuest = "1748589440643384325",
             startPort = "QuestStart",
-            endQuest = "177778519010029999565",
+            endQuest = "1748589440643384328",
             endPort = "In"
           },
           {
-            startQuest = "177778519010029999565",
+            startQuest = "1748589440643384328",
             startPort = "Out",
-            endQuest = "177778519010029999563",
+            endQuest = "1748589440643384326",
             endPort = "Success"
           }
         },
         nodeData = {
-          ["177778519010029999562"] = {
-            key = "177778519010029999562",
+          ["1748589440643384325"] = {
+            key = "1748589440643384325",
             type = "QuestStartNode",
             name = "QuestStart",
             pos = {x = 100, y = 140},
             propsData = {ModeType = 0}
           },
-          ["177778519010029999563"] = {
-            key = "177778519010029999563",
+          ["1748589440643384326"] = {
+            key = "1748589440643384326",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
             pos = {x = 1500, y = 140},
             propsData = {ModeType = 0}
           },
-          ["177778519010029999564"] = {
-            key = "177778519010029999564",
+          ["1748589440643384327"] = {
+            key = "1748589440643384327",
             type = "QuestFailNode",
             name = "QuestFail",
             pos = {x = 1500, y = 340},
             propsData = {}
           },
-          ["177778519010029999565"] = {
-            key = "177778519010029999565",
+          ["1748589440643384328"] = {
+            key = "1748589440643384328",
             type = "BossBattleOpenNode",
             name = "BOSS战开场播片",
             pos = {x = 399, y = 129},

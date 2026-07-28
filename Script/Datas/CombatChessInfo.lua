@@ -14,6 +14,7 @@ return ReadOnly("CombatChessInfo", {
     MonsterDes = "Mon_DesDetail_AutoChess_1",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Jichong.T_Head_Gr_Jichong",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
     PositionName = "UI_AutoChess_BuffName1"
   },
   [2] = {
@@ -23,8 +24,10 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 6002071,
     FriendMonsterUnitId = 6002072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_55",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Youji.T_Head_Gr_Youji",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1"
   },
   [3] = {
@@ -34,10 +37,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 6003071,
     FriendMonsterUnitId = 6003072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_55",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Piaofu.T_Head_Gr_Piaofu",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_06.T_Armory_RoleType_06'",
+    PositionId = 3,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300118
+    UnlockQuestId = 10300143
   },
   [4] = {
     CombatChessId = 4,
@@ -46,10 +51,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 6004071,
     FriendMonsterUnitId = 6004072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_56",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Baotu.T_Head_Gr_Baotu",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_09.T_Armory_RoleType_09'",
+    PositionId = 4,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300120
+    UnlockQuestId = 10300145
   },
   [5] = {
     CombatChessId = 5,
@@ -60,8 +67,9 @@ return ReadOnly("CombatChessInfo", {
     MonsterDes = "Mon_DesDetail_AutoChess_1",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_GR_Longcao.T_Head_GR_Longcao",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300105
+    UnlockQuestId = 10300129
   },
   [6] = {
     CombatChessId = 6,
@@ -70,10 +78,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 6011071,
     FriendMonsterUnitId = 6011072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_58",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Jichong_C01.T_Head_Gr_Jichong_C01",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300110
+    UnlockQuestId = 10300134
   },
   [7] = {
     CombatChessId = 7,
@@ -82,10 +92,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 6012071,
     FriendMonsterUnitId = 6012072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_56",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Gr_Youji_C01.T_Head_Gr_Youji_C01",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300107
+    UnlockQuestId = 10300131
   },
   [8] = {
     CombatChessId = 8,
@@ -94,10 +106,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7001071,
     FriendMonsterUnitId = 7001072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_58",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Juji.T_Head_Jt_Juji",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300102
+    UnlockQuestId = 10300126
   },
   [9] = {
     CombatChessId = 9,
@@ -106,8 +120,10 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7002071,
     FriendMonsterUnitId = 7002072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_57",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Pizhuo.T_Head_Jt_Pizhuo",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_09.T_Armory_RoleType_09'",
+    PositionId = 4,
     PositionName = "UI_AutoChess_BuffName1"
   },
   [10] = {
@@ -117,8 +133,10 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7003071,
     FriendMonsterUnitId = 7003072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_57",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Ranger.T_Head_Jt_Ranger",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1"
   },
   [11] = {
@@ -128,10 +146,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7008072,
     FriendMonsterUnitId = 7008073,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_57",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhihui.T_Head_Jt_Zhihui",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300113
+    UnlockQuestId = 10300137
   },
   [12] = {
     CombatChessId = 12,
@@ -140,10 +160,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7009071,
     FriendMonsterUnitId = 7009072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_57",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhiren.T_Head_Jt_Zhiren",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300111
+    UnlockQuestId = 10300135
   },
   [13] = {
     CombatChessId = 13,
@@ -152,10 +174,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7013071,
     FriendMonsterUnitId = 7013072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_58",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Ranger_C01.T_Head_Jt_Ranger_C01",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300108
+    UnlockQuestId = 10300132
   },
   [14] = {
     CombatChessId = 14,
@@ -164,10 +188,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7014071,
     FriendMonsterUnitId = 7014072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_58",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Tuji_C01.T_Head_Jt_Tuji_C01",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_09.T_Armory_RoleType_09'",
+    PositionId = 4,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300121
+    UnlockQuestId = 10300146
   },
   [15] = {
     CombatChessId = 15,
@@ -176,10 +202,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 7015071,
     FriendMonsterUnitId = 7015072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_55",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Jingjie.T_Head_JT_Jingjie",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300112
+    UnlockQuestId = 10300136
   },
   [16] = {
     CombatChessId = 16,
@@ -190,6 +218,7 @@ return ReadOnly("CombatChessInfo", {
     MonsterDes = "Mon_DesDetail_AutoChess_1",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Zhishi.T_Head_Jh_Zhishi",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1"
   },
   [17] = {
@@ -199,8 +228,10 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 8002071,
     FriendMonsterUnitId = 8002072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_55",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Xianfeng.T_Head_Jh_Xianfeng",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
     PositionName = "UI_AutoChess_BuffName1"
   },
   [18] = {
@@ -212,8 +243,9 @@ return ReadOnly("CombatChessInfo", {
     MonsterDes = "Mon_DesDetail_AutoChess_1",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jh_Shenfu.T_Head_Jh_Shenfu",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_06.T_Armory_RoleType_06'",
+    PositionId = 3,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300109
+    UnlockQuestId = 10300133
   },
   [19] = {
     CombatChessId = 19,
@@ -222,10 +254,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 9001071,
     FriendMonsterUnitId = 9001072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_57",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Yinxie.T_Head_SQ_Yinxie",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_09.T_Armory_RoleType_09'",
+    PositionId = 4,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300117
+    UnlockQuestId = 10300142
   },
   [20] = {
     CombatChessId = 20,
@@ -234,10 +268,12 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 9002071,
     FriendMonsterUnitId = 9002072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_55",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Dufeng.T_Head_SQ_Dufeng",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300101
+    UnlockQuestId = 10300125
   },
   [21] = {
     CombatChessId = 21,
@@ -246,9 +282,66 @@ return ReadOnly("CombatChessInfo", {
     EnemyMonsterUnitId = 9007071,
     FriendMonsterUnitId = 9007072,
     MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_56",
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_SQ_Niaopao.T_Head_SQ_Niaopao",
     PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
     PositionName = "UI_AutoChess_BuffName1",
-    UnlockQuestId = 10300103
+    UnlockQuestId = 10300127
+  },
+  [22] = {
+    CombatChessId = 22,
+    CombatChessName = "Mon_Name_AutoChess_22",
+    DeployCost = 12,
+    EnemyMonsterUnitId = 10004071,
+    FriendMonsterUnitId = 10004072,
+    MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_56",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Bian02.T_Head_HX_Bian02",
+    PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_04.T_Armory_RoleType_04'",
+    PositionId = 2,
+    PositionName = "UI_AutoChess_BuffName1",
+    UnlockQuestId = 10300133
+  },
+  [23] = {
+    CombatChessId = 23,
+    CombatChessName = "Mon_Name_AutoChess_23",
+    DeployCost = 10,
+    EnemyMonsterUnitId = 7018071,
+    FriendMonsterUnitId = 7018072,
+    MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_56",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Tiequan.T_Head_JT_Tiequan",
+    PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
+    PositionName = "UI_AutoChess_BuffName1",
+    UnlockQuestId = 10300129
+  },
+  [24] = {
+    CombatChessId = 24,
+    CombatChessName = "Mon_Name_AutoChess_24",
+    DeployCost = 5,
+    EnemyMonsterUnitId = 10001071,
+    FriendMonsterUnitId = 10001072,
+    MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_58",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Tianshi01.T_Head_HX_Tianshi01",
+    PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_02.T_Armory_RoleType_02'",
+    PositionId = 1,
+    PositionName = "UI_AutoChess_BuffName1"
+  },
+  [25] = {
+    CombatChessId = 25,
+    CombatChessName = "Mon_Name_AutoChess_25",
+    DeployCost = 15,
+    EnemyMonsterUnitId = 10002071,
+    FriendMonsterUnitId = 10002072,
+    MonsterDes = "Mon_DesDetail_AutoChess_1",
+    MonsterExtraBuffDesc = "UI_AutoChess_ExtraBuffDesc_55",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_HX_Tianwei.T_Head_HX_Tianwei",
+    PositionIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_RoleType_09.T_Armory_RoleType_09'",
+    PositionId = 4,
+    PositionName = "UI_AutoChess_BuffName1",
+    UnlockQuestId = 10300138
   }
 })

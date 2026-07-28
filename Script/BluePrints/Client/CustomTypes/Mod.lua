@@ -50,6 +50,13 @@ end
 function Mod:_Init()
   if not skynet then
     self.ConflictUuids = CustomTypes.ObjectIdList()
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      local OldMod = Avatar.Mods[self.Uuid]
+      if OldMod then
+        self.ConflictUuids = OldMod.ConflictUuids
+      end
+    end
   end
 end
 

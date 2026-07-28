@@ -348,7 +348,7 @@ function Component:GM_MaxES(Eid)
   Target:SetAddAttr("MaxES", "GM", nil)
   local Change = 10000000 - Target:GetAttr("MaxES")
   Target:SetAddAttr("MaxES", "GM", Change)
-  Battle(self):AddEnergyShield(Target, Target, Target:GetAttr("MaxES"), false, false, nil)
+  Battle(self):AddEnergyShield(Target, Target, Target:GetAttr("MaxES"), false, false, "")
 end
 
 function Component:GM_AddES(Eid, Value)
@@ -597,8 +597,10 @@ function Component:GM_DSShowDetails()
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if GameInstance.DSShowDetails then
     GameInstance.DSShowDetails = false
+    require("EMLuaConst").bShowDamageDetails = false
   else
     GameInstance.DSShowDetails = true
+    require("EMLuaConst").bShowDamageDetails = true
   end
 end
 

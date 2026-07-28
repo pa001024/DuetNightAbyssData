@@ -2123,10 +2123,164 @@ return {
         UnitId = 121035,
         RarelyId = 7071016
       }
+    },
+    ["7071036"] = {
+      AutoReset = 1,
+      ["292410503"] = {
+        CreatorId = 292410503,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410497"] = {
+        CreatorId = 292410497,
+        UnitType = "Mechanism",
+        UnitId = 70105,
+        RarelyId = 7071036
+      },
+      ["292410500"] = {
+        CreatorId = 292410500,
+        UnitType = "Drop",
+        UnitId = 20503,
+        RarelyId = 7071036
+      },
+      ["292410499"] = {
+        CreatorId = 292410499,
+        UnitType = "Mechanism",
+        UnitId = 702035,
+        RarelyId = 7071036
+      },
+      ["292410502"] = {
+        CreatorId = 292410502,
+        UnitType = "",
+        UnitId = 0,
+        RarelyId = 7071036
+      },
+      ["292410504"] = {
+        CreatorId = 292410504,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410513"] = {
+        CreatorId = 292410513,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7071036
+      },
+      ["292410514"] = {
+        CreatorId = 292410514,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7071036
+      },
+      ["292410515"] = {
+        CreatorId = 292410515,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410516"] = {
+        CreatorId = 292410516,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7071036
+      },
+      ["292410517"] = {
+        CreatorId = 292410517,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410518"] = {
+        CreatorId = 292410518,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410519"] = {
+        CreatorId = 292410519,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410520"] = {
+        CreatorId = 292410520,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7071036
+      },
+      ["292410521"] = {
+        CreatorId = 292410521,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7071036
+      },
+      ["292410522"] = {
+        CreatorId = 292410522,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410505"] = {
+        CreatorId = 292410505,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7071036
+      },
+      ["292410506"] = {
+        CreatorId = 292410506,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7071036
+      },
+      ["292410507"] = {
+        CreatorId = 292410507,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410508"] = {
+        CreatorId = 292410508,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410509"] = {
+        CreatorId = 292410509,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410510"] = {
+        CreatorId = 292410510,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7071036
+      },
+      ["292410511"] = {
+        CreatorId = 292410511,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7071036
+      },
+      ["292410512"] = {
+        CreatorId = 292410512,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7071036
+      },
+      ["292410501"] = {
+        CreatorId = 292410501,
+        UnitType = "Mechanism",
+        UnitId = 702021,
+        RarelyId = 7071036
+      }
     }
   },
   RandomRule = {
     ["9050501"] = {RandomRuleId = 9050501},
     ["7050001"] = {RandomRuleId = 7050001}
-  }
+  },
+  MissionGroup = {}
 }

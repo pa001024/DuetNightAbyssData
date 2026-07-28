@@ -25,8 +25,8 @@ function WBP_Simple_PC:ClearOptions()
   self:RefreshBaseInfo()
 end
 
-function WBP_Simple_PC:ShowOptions(TalkTask, OptionTexts, OptionData, OnOptionItemClicked)
-  WBP_Simple_PC.Super.ShowOptions(self, TalkTask, OptionTexts, OptionData, OnOptionItemClicked)
+function WBP_Simple_PC:ShowOptions(TalkTask, OptionData, OnOptionItemClicked)
+  WBP_Simple_PC.Super.ShowOptions(self, TalkTask, OptionData, OnOptionItemClicked)
   self:RefreshBaseInfo()
 end
 

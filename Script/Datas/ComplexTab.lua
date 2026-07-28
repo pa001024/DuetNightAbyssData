@@ -100,5 +100,25 @@ return ReadOnly("ComplexTab", {
     ShopEntryId = 9,
     ShopName = "UI_AppearenceShop",
     SubTabId = 2001
+  },
+  [10] = {
+    BackgroundIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_JumpEntry_SoloTreasure_Permanent.T_Shop_JumpEntry_SoloTreasure_Permanent'",
+    BackgroundVx = "VX_Icon_SoloTreasure",
+    CoinId = {6000006},
+    EntrySort = 88,
+    InterfaceJumpId = 119,
+    ShopEntryId = 10,
+    ShopName = "UI_Play_TreasureHunt_Shop",
+    SubTabId = 2002
+  },
+  [11] = {
+    BackgroundIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_JumpEntry_Iron_1172_2850.T_Shop_JumpEntry_Iron_1172_2850'",
+    BackgroundVx = "Vx_Icon_Iron",
+    CoinId = {15039, 15040},
+    EntrySort = 87,
+    InterfaceJumpId = 133,
+    ShopEntryId = 11,
+    ShopName = "UI_Play_IronModeShop",
+    SubTabId = 2001
   }
 })

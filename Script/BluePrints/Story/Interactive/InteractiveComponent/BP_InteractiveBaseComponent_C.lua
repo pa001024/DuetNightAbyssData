@@ -236,10 +236,12 @@ function BP_InteractiveBaseComponent_C:CheckInteractiveCondition(PlayerEid)
 end
 
 function BP_InteractiveBaseComponent_C:InteractiveFailed()
-  local TalkContext = GWorld.GameInstance:GetTalkContext()
   local TalkTriggerId = DataMgr.CommonUIConfirm[self.CommonUIConfirmID].TalkTriggerId
   if TalkTriggerId then
-    TalkContext:StartTalk(TalkTriggerId)
+    local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkTriggerId, nil)
+    if IsValid(TalkAsyncAction) then
+      TalkAsyncAction:Activate()
+    end
   end
   local FailMsg = self:GetOverridenFailMsg()
   FailMsg = FailMsg or DataMgr.CommonUIConfirm[self.CommonUIConfirmID].InteractiveFailMsg

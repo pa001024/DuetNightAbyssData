@@ -139,6 +139,9 @@ function M:RefreshSubTabData(SubTabData)
   if self.Change then
     self:PlayAnimation(self.Change)
   end
+  if self.Common_Tab.WBP_Com_Tab_ResourceBar then
+    self.Common_Tab.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(self.List_Item)
+  end
   self:UpdateShopDetail(self.CurSubTabMap)
 end
 

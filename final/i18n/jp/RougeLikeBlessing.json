@@ -1779,7 +1779,7 @@
     "id": 411,
     "name": "逆性発根",
     "desc": "召喚ユニット召喚時、6m以内の敵に体勢削り効果。",
-    "simple_desc": "召喚物召喚時、周囲の敵に体勢削り効果。",
+    "simple_desc": "召喚ユニット召喚時、周囲の敵に体勢削り効果。",
     "blessing_group": 4,
     "blessing_rarity": 2,
     "blessing_weight": 300,

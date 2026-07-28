@@ -5,6 +5,7 @@ local TimeUtils = require("Utils.TimeUtils")
 local StoryPlayableUtils = require("BluePrints.Story.StoryPlayableUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local MiscUtils = require("Utils.MiscUtils")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local BP_CharacterBase_C = Class({
   "BluePrints.Combat.Components.CharacterComponent"
 })
@@ -504,7 +505,7 @@ function BP_CharacterBase_C:PlayShowIdleMontage(IldeTag, bHideUntilLoop)
   local Data = DataMgr.Model[self.ModelId]
   local MontageFolder = Data.MontageFolder
   local MontagePrefix
-  if "Armory" == IldeTag then
+  if "Armory" == IldeTag or "Armory_ChangeAttr" == IldeTag then
     MontagePrefix = Data.ArmoryMontagePrefix or Data.MontagePrefix
   else
     MontagePrefix = Data.MontagePrefix
@@ -1533,6 +1534,26 @@ function BP_CharacterBase_C:CheckCanMountInCurrentRegion()
   else
     return true
   end
+end
+
+function BP_CharacterBase_C:IsInMountState()
+  return 0 ~= self.CurrentMountId and self:IsInRideMove()
+end
+
+function BP_CharacterBase_C:HasCurrentRegionFlyLicense()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local SubRegion = DataMgr.SubRegion[Avatar.CurrentRegionId]
+  if not SubRegion then
+    return false
+  end
+  local FlyLicense = SubRegion.FlyLicense
+  if not FlyLicense or -1 == FlyLicense then
+    return false
+  end
+  return Avatar:HasMountLicenseById(FlyLicense)
 end
 
 AssembleComponents(BP_CharacterBase_C)

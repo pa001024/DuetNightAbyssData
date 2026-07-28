@@ -95,6 +95,7 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
       if FireBtn.CurrentTime - FireBtn.StartTime > FireBtn.BtnHoldCD then
         FireBtn.IsLockingShoot = true
         UIManager(FireBtn):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_Toast_FireLocked"))
+        Battle_Button_Phone:ExitFoldState()
         return
       end
     end
@@ -102,7 +103,9 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
   end
   FireBtn.AutoYawRotate = false
   FireBtn.IsFireDown = false
+  local WasLockingShoot = FireBtn.IsLockingShoot
   FireBtn.IsLockingShoot = false
+  FireBtn.OwnerPanel:TryStartFoldTimer()
   FireBtn.Joystick:SetRenderOpacity(0)
   FireBtn.Joystick_Border:SetVisibility(UIConst.VisibilityOp.Hidden)
   if FireBtn.CurButtonState ~= "Forbidden" and FireBtn.CurButtonState ~= "Ban" and FireBtn.CurButtonState ~= "Empty" then
@@ -111,7 +114,11 @@ function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTo
     end
     EMUIAnimationSubsystem:EMPlayAnimation(FireBtn, FireBtn.Click)
     FireBtn:AddTimer(FireBtn.Click:GetEndTime(), function()
-      EMUIAnimationSubsystem:EMPlayAnimation(FireBtn, FireBtn.Normal)
+      if FireBtn.IsUltimateEnabled and FireBtn.CurrentUltimateAnim == FireBtn.Enable_2 then
+        EMUIAnimationSubsystem:EMPlayAnimation(FireBtn, FireBtn.Enable_2)
+      else
+        EMUIAnimationSubsystem:EMPlayAnimation(FireBtn, FireBtn.Normal)
+      end
     end)
   end
 end
@@ -145,6 +152,10 @@ function M:UpdateWeaponIcon()
     WeaponHUDIcon = "/Game/UI/Texture/Dynamic/Atlas/Battle/Weapon/T_Crossbow_Chixing.T_Crossbow_Chixing"
   end
   self.WeaponHUDIcon = WeaponHUDIcon
+  if self.IsUltimateBan then
+    self:GetCurrentWeaponHeavyShooting(IsUltra)
+    return
+  end
   if -1 ~= self.OwnerPlayer.ActivePropEffectId then
     return
   end
@@ -228,6 +239,7 @@ end
 function M:UpdateButtonInTimer()
   if self.IsLockingShoot and self.OwnerPlayer:GetCharacterTag() ~= "Shooting" then
     self.ButtonFireUp(self.OwnerPanel)
+    self.OwnerPanel:TryStartFoldTimer()
   end
 end
 
@@ -262,8 +274,10 @@ function M:UpdateRangeWeaponButton()
     self.ImageMat:SetScalarParameterValue("IconState", 2)
     self.CurButtonState = "Normal"
     self:ChangeLeftShootState()
-    self:StopAllAnimations()
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    if not self.IsUltimateEnabled then
+      self:StopAllAnimations()
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    end
     self.Image_Main:SetRenderOpacity(1.0)
     if self.IsFireDown then
       self.Joystick:SetRenderOpacity(1)
@@ -293,6 +307,40 @@ function M:CalcFinalAngle(LastPos)
     FinalAngle = Angle * 180
   end
   return FinalAngle
+end
+
+function M:OnUltimateStateChanged(IsActive, IsType1)
+  if IsActive then
+    self.IsUltimateEnabled = true
+    local Anim = IsType1 and self.Enable or self.Enable_2
+    self.CurrentUltimateAnim = Anim
+    if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, Anim) then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, Anim)
+    end
+  elseif self.IsUltimateEnabled then
+    self.IsUltimateEnabled = false
+    local Anim = self.CurrentUltimateAnim or self.Enable_2
+    EMUIAnimationSubsystem:EMStopAnimation(self, Anim)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.EnableEnd)
+    self.CurrentUltimateAnim = nil
+  end
+end
+
+function M:EnterUltimateBan()
+  self.IsUltimateBan = false
+  if self.CurButtonState == "Ban" and (not (self.OwnerPlayer and self.OwnerPlayer.IsAutoShootEnabled) or not self.OwnerPlayer:IsAutoShootEnabled()) then
+    self.CurButtonState = nil
+    self:UpdateRangeWeaponButton()
+  end
+end
+
+function M:ExitUltimateBan()
+  if not self.IsUltimateBan then
+    return
+  end
+  self.IsUltimateBan = false
+  self.CurButtonState = "Normal"
+  self:UpdateRangeWeaponButton()
 end
 
 AssembleComponents(M)

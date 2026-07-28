@@ -7,6 +7,7 @@ function Common_Button_Text_PC:Construct()
   self.CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
   self.CurGamepadName = UIUtils.UtilsGetCurrentGamepadName()
   self:SetGamePadImg(self.GamePadImgName)
+  self.bPCKeyVisible = false
   self.bAutoButtonChange = true
   self:RefreshIconAndGamePadVisibility()
   self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -41,7 +42,11 @@ function Common_Button_Text_PC:RefreshIconAndGamePadVisibility()
       self.WS_Key:SetActiveWidgetIndex(1)
     end
     self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-    self:SetIconPanelVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.bPCKeyVisible then
+      self:SetIconPanelVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      self:SetIconPanelVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   end
 end
 
@@ -129,19 +134,37 @@ function Common_Button_Text_PC:UpdateSpacerVisibility()
 end
 
 function Common_Button_Text_PC:SetUpOnFranch()
-  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
-    self.Spacer_L:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Spacer_R:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    local NewSize = FVector2D(5, 1)
-    self.Spacer_L:SetSize(NewSize)
-    self.Spacer_R:SetSize(NewSize)
-  else
-    self.Spacer_L:SetVisibility(self._NowSpacerVisibility)
-    self.Spacer_R:SetVisibility(self._NowSpacerVisibility)
-    local NewSize = FVector2D(self.SpacerWidth, 1)
-    self.Spacer_L:SetSize(NewSize)
-    self.Spacer_R:SetSize(NewSize)
+  local ImgVisible = self.Img_Slot:IsVisible() and self.Img_Slot:GetContent()
+  local TextUpperSlot = UWidgetLayoutLibrary.SlotAsHorizontalBoxSlot(self.Text:GetParent())
+  TextUpperSlot = TextUpperSlot or UWidgetLayoutLibrary.SlotAsHorizontalBoxSlot(self.Text)
+  if not TextUpperSlot then
+    return
   end
+  if not self.UpperPadding then
+    self.UpperPadding = TextUpperSlot.Padding.Left
+  end
+  if not self.SpacerWidth then
+    self.SpacerWidth = self.Spacer_L.Size.X
+  end
+  local Padding = TextUpperSlot.Padding
+  local NewSize, MinWidth = 0, 5
+  local Visibility
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR and not ImgVisible then
+    Visibility = UIConst.VisibilityOp.SelfHitTestInvisible
+    NewSize = FVector2D(MinWidth, 1)
+    Padding.Left = MinWidth
+    Padding.Right = MinWidth
+  else
+    Visibility = self._NowSpacerVisibility
+    NewSize = FVector2D(self.SpacerWidth, 1)
+    Padding.Left = self.UpperPadding
+    Padding.Right = self.UpperPadding
+  end
+  self.Spacer_L:SetVisibility(Visibility)
+  self.Spacer_R:SetVisibility(Visibility)
+  self.Spacer_L:SetSize(NewSize)
+  self.Spacer_R:SetSize(NewSize)
+  TextUpperSlot:SetPadding(Padding)
 end
 
 function Common_Button_Text_PC:SetReddotVisibility(Op)
@@ -252,6 +275,8 @@ end
 function Common_Button_Text_PC:SetKey_PCVisibility(Op)
   if self.Key_PC then
     self.Key_PC:SetVisibility(Op)
+    self.bPCKeyVisible = Op ~= UIConst.VisibilityOp.Collapsed and Op ~= UIConst.VisibilityOp.Hidden
+    self:RefreshIconAndGamePadVisibility()
   end
 end
 

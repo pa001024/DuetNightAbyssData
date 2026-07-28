@@ -602,6 +602,9 @@ function M:ChangeMainTaskBarCountInfoByBranchQuestNode(InQuestChainId, InQuestId
   else
     CurrentText = self.CurTaskInfo.TaskDescribe
   end
+  if not CurrentText or "" == CurrentText then
+    return
+  end
   local CheckEndsWithCountInfo = string.match(CurrentText, "%(%d+/%d+%)$") ~= nil
   
   local function SetTaskContentUICountInfo(InCountInfo)

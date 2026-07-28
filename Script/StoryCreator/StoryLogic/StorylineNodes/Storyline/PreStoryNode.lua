@@ -53,4 +53,11 @@ function PreStoryNode:GetRunningNodeTableByType(NodeType, OutRunningNodeTable)
   end
 end
 
+function PreStoryNode:IsGuideNodeRunning()
+  if self.Questline then
+    return self.Questline:IsGuideNodeRunning()
+  end
+  return false
+end
+
 return PreStoryNode

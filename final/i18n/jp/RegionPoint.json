@@ -1239,5 +1239,25 @@
     "manualItemId": 248032,
     "staticId": null,
     "singleCreate": false
+  },
+  {
+    "id": 2855,
+    "name": "黄金の旅・ジェネモン疾走",
+    "icon": "",
+    "pos": [
+      -18687,
+      2
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1600,
+    "teleportPointPos": 22,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": null,
+    "manualItemId": null,
+    "staticId": 332480620,
+    "singleCreate": true
   }
 ]

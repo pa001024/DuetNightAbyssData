@@ -17,6 +17,9 @@ function MonsterDungeonLogic:CreateMonster(UnitId, CreatorType, CreatorId)
   _MonsterInfo.CreatorType = CreatorType
   _MonsterInfo.CreatorId = CreatorId
   self.MonsterMap[_MonsterInfo.UniqueId] = _MonsterInfo
+  if self.OnCreateMonster then
+    self:OnCreateMonster(_MonsterInfo.UniqueId, CreatorType, CreatorId)
+  end
   return _MonsterInfo
 end
 
@@ -26,6 +29,9 @@ function MonsterDungeonLogic:DestroyMonster(UniqueId)
     return
   end
   self.MonsterMap[UniqueId] = nil
+  if self.OnDestroyMonster then
+    self:OnDestroyMonster(UniqueId)
+  end
 end
 
 function MonsterDungeonLogic:GetMonster(UniqueId)

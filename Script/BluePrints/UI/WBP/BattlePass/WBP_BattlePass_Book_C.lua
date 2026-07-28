@@ -31,6 +31,7 @@ function WBP_BattlePass_Book_C:Construct()
   self.Btn_GetAll:SetGamePadIconVisible(true)
   self.Btn_GetAll:SetText(GText("UI_BattlePass_ClaimAll"))
   self.Btn_GetAll:BindEventOnClicked(self, self.GetAllReward)
+  self.BattlePass_Level.Text_Lv:SetText(GText("UI_LEVEL_NAME"))
   self.Btn_Unlock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_BuyLv:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Reward_Sp.Content = nil

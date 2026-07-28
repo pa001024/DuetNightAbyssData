@@ -19,6 +19,7 @@ function M:Construct()
   self.NoneTab = {Name = "None"}
   self.CurMainTab = self.NoneTab
   self.CurSubTab = self.NoneTab
+  self.CurSelectItem = self.NoneTab
   self.Panel_SubUI:ClearChildren()
   self.SubUIs = {}
   self.SelectedContents = {}
@@ -63,6 +64,10 @@ function M:Construct()
     end)
     self.Image_Click.OnMouseButtonDownEvent:Unbind()
     self.Image_Click.OnMouseButtonDownEvent:Bind(self, self.On_Image_Click_MouseButtonDown)
+    self.Btn_StarTarget:BindEventOnClicked(self, self.OnStarTargetBtnClicked)
+    self.Btn_StarPet:BindEventOnClicked(self, self.OnStarTargetBtnClicked)
+    self.Btn_ReName:BindEventOnClicked(self, self.OnPetReNameBtnClicked)
+    self.Btn_More:BindEventOnClicked(self, self.OnPetMoreBtnClicked)
   end)
   if GWorld.GameInstance then
     GWorld.GameInstance:SetHighFrequencyMemoryCheckGCEnabled(true, "ArmoryMain")
@@ -72,6 +77,7 @@ function M:Construct()
     Inst = self,
     Func = self.OnFilterCheckBoxClicked
   })
+  self.Btn_StarTarget.bIsFocusable = true
 end
 
 function M:GetDesiredFocusTargetInfo(Info)
@@ -100,6 +106,7 @@ function M:ComponentInitDispatcher()
 end
 
 function M:On_Image_Click_MouseButtonDown(MyGeometry, MouseEvent)
+  self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnImageClickMouseButtonDown")
   return self:OnPointerDown(MyGeometry, MouseEvent)
 end
 
@@ -136,6 +143,22 @@ end
 
 function M:OnLockBtnClicked()
   self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnLockBtnClicked")
+end
+
+function M:OnStarTargetBtnClicked()
+  self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnStarTargetBtnClicked")
+end
+
+function M:OnPetMoreBtnClicked()
+  self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnPetMoreBtnClicked")
+end
+
+function M:OnStarPetBtnClicked()
+  self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnStarPetBtnClicked")
+end
+
+function M:OnPetReNameBtnClicked()
+  self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnPetReNameBtnClicked")
 end
 
 function M:OnBtnElementHovered()
@@ -251,6 +274,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.ComparedChar = self.CurrentChar or Avatar.Chars[1]
   local Type = MainTabName_JumpTo
   if self.IsPreviewMode then
+    self.WS_State:SetVisibility(UIConst.VisibilityOp.Collapsed)
     if not Params.Title then
       self.MainTabsStyle.TitleName = GText("UI_Preview_Title")
     end
@@ -579,6 +603,11 @@ function M:ShowFilterCheckBox(Content)
   if not Content or not Content.Type then
     return
   end
+  local WeaponTag = self.WeaponTag or ArmoryUtils.ArmoryMainTabNames.Weapon
+  local HyperWeaponArray = self[WeaponTag .. "Hyper" .. "ItemContentsArray"]
+  if not HyperWeaponArray or #HyperWeaponArray < 1 then
+    return
+  end
   if ArmoryUtils:IsShowHyperWeapon(Content.Tag) then
     local Avatar = GWorld:GetAvatar()
     local UIUnlockRuleInfo = DataMgr.UIUnlockRule.HyperWeapon
@@ -639,6 +668,7 @@ function M:DefaultInitSubUI(Params)
   end
   if SubUI and SubUI.Init then
     Params = Params or {}
+    Params.bFromArchive = self.bFromArchive
     self:ModifySubUIInitParams(Params)
     SubUI:Init(Params)
     SubUI:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -785,6 +815,9 @@ function M:OnArmoryModClosed(...)
 end
 
 function M:UpdateMontageAndCamera(Duration)
+  if self.ActorController:GetCurrentViewUI() ~= self then
+    return
+  end
   self.ActorController:FixedCameraTransTimeOnce(Duration)
   local TabType = self.CurSubTab.Type
   local TabTag = self.CurSubTab.Tag
@@ -863,14 +896,16 @@ function M:Close()
         self:ModifyWaitForCloseEventCount(false)
       end
     })
-  elseif not self.IsSecondaryUI then
-    local MenuWorld = UIManager(self):GetUIObj(UIConst.MenuWorld)
-    if not MenuWorld then
-      local BattleMainUI = UIManager(self):GetUI("BattleMain")
-      if BattleMainUI then
-        BattleMainUI:RemovePlayInOutSystems(self.WidgetName)
+  else
+    if not self.IsSecondaryUI then
+      local MenuWorld = UIManager(self):GetUIObj(UIConst.MenuWorld)
+      if not MenuWorld then
+        local BattleMainUI = UIManager(self):GetUI("BattleMain")
+        if BattleMainUI then
+          BattleMainUI:RemovePlayInOutSystems(self.WidgetName)
+        end
+        UIUtils.PlayBattleMainInAnim()
       end
-      UIUtils.PlayBattleMainInAnim()
     end
     self:PlayOutAnim()
   end

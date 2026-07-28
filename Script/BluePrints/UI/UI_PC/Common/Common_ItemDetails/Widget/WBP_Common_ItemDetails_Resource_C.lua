@@ -8,37 +8,27 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
   self.Panel_TimeLimit:SetVisibility(ESlateVisibility.Collapsed)
   self.Panel_Title:SetVisibility(ESlateVisibility.Collapsed)
+  self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+  self.ParentWidget.WBox_AnglingTag:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if "Tips" == ItemType then
     self:InitTipsInfo(self.ParentWidget.Content)
     return
   end
   self:SetFocus()
-  if "TreasureGroup" == ItemType then
-    self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
-    local TreasureGroupInfo = DataMgr[ItemType][ItemId]
-    if not self.ParentWidget.Content.bGuide then
-      if self.ParentWidget.Content.bActive then
-        self.Text_Describe:SetText(GText("已激活"))
-      else
-        self.Text_Describe:SetText(GText("未激活"))
-      end
-    else
-      self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
-    end
-    self.Text_LongDescribe:SetText(GText(TreasureGroupInfo.GroupEffectDesc))
-    return
-  end
+  self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   if "CharPartMesh" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType then
     assert(DataMgr[ItemType][ItemId], "未找到对应CharPartMesh信息：", ItemType, ItemId)
     local CharPartMeshInfo = DataMgr[ItemType][ItemId]
     self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
     if "WeaponSkin" == ItemType then
-      self.Text_Describe:SetText(GText(CharPartMeshInfo.Dec))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(CharPartMeshInfo.Dec))
     else
-      self.Text_Describe:SetText(GText(CharPartMeshInfo.Des))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(CharPartMeshInfo.Des))
     end
     if "TitleFrame" == ItemType then
       self.Panel_Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Visible)
+      self.ParentWidget.Switch_Show:SetActiveWidgetIndex(4)
       local Widget = UIManager(self):LoadTitleFrameWidget(ItemId)
       if Widget then
         self.Pos_Title:AddChild(Widget)
@@ -49,21 +39,61 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
         local TitleBefore = Avatar.TitleBefore
         local TitleAfter = Avatar.TitleAfter
         local TitleText = UIUtils.CalculateHoleTitle(TitleBefore, TitleAfter)
+        local TitleFrameData = {}
+        TitleFrameData[ItemId] = 1
+        if Avatar:CheckTitleFrameEnough(TitleFrameData) then
+          self.ParentWidget.Text_Describe:SetText(GText("UI_PersonInfo_Held"))
+        else
+          self.ParentWidget.Text_Describe:SetText(GText("UI_PersonInfo_NotHeld"))
+        end
         Widget.Text_Title:SetText(TitleText)
       end
     end
     self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
+  local FishId = DataMgr.ResourceId2FishId[ItemId]
+  local FishData = DataMgr.Fish[FishId]
+  if FishData and FishData.FishAppearPeriod then
+    local Result = {}
+    for i, v in pairs(FishData.FishAppearPeriod) do
+      if 1 == v then
+        Result.IsMorn = true
+      elseif 2 == v then
+        Result.IsNoon = true
+      elseif 3 == v then
+        Result.IsNight = true
+      end
+    end
+    if Result.IsMorn then
+      self.ParentWidget.Morn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.ParentWidget.Morn.WS_DayAndNight:SetActiveWidgetIndex(0)
+    else
+      self.ParentWidget.Morn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if Result.IsNoon then
+      self.ParentWidget.Noon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.ParentWidget.Noon.WS_DayAndNight:SetActiveWidgetIndex(1)
+    else
+      self.ParentWidget.Noon:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if Result.IsNight then
+      self.ParentWidget.Night:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.ParentWidget.Night.WS_DayAndNight:SetActiveWidgetIndex(2)
+    else
+      self.ParentWidget.Night:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    self.ParentWidget.WBox_AnglingTag:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
   if "IronTicket" == ItemType then
     local ironTicketData = DataMgr.IronTicket[ItemId]
     if not ironTicketData then
       return
     end
-    self.Text_Describe:SetVisibility(ironTicketData.FunctionDes ~= nil and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
+    self.ParentWidget.Panel_Describe:SetVisibility(ironTicketData.FunctionDes ~= nil and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
     self.Text_LongDescribe:SetVisibility(nil ~= ironTicketData.DetailDes and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
     if ironTicketData.FunctionDes then
-      self.Text_Describe:SetText(GText(ironTicketData.FunctionDes))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(ironTicketData.FunctionDes))
     end
     if ironTicketData.DetailDes then
       self.Text_LongDescribe:SetText(GText(ironTicketData.DetailDes))
@@ -81,6 +111,12 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
       end
     end
     self.ParentWidget.Text_Hold02:SetText(level)
+    local MaxLevel = ironTicketData.MaxLevel or 9999
+    if level >= MaxLevel then
+      self.ParentWidget.Text_ItemName:SetText(GText(ironTicketData.MaxName or ""))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(ironTicketData.MaxFunctionDes or ""))
+      self.Text_LongDescribe:SetText(GText(ironTicketData.MaxDetailDes or ""))
+    end
     return
   end
   if "CharAccessory" == ItemType or "WeaponAccessory" == ItemType then
@@ -89,10 +125,10 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
     if CharAccessoryInfo.AccessoryType then
       assert(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType], "未知的配饰部位：" .. CharAccessoryInfo.AccessoryType)
-      self.Text_Describe:SetText(GText(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType]))
-      self.Text_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType]))
+      self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     else
-      self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+      self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
     end
     self.Text_LongDescribe:SetText(GText(CharAccessoryInfo.Des))
     if not self.ParentWidget.Content.bCustomStype then
@@ -157,6 +193,10 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
             if CommonDialog then
               CommonDialog:OnCloseBtnClicked()
             end
+            local CommonDialog = GWorld.GameInstance:GetGameUIManager():GetUIObj("CommonDialog")
+            if CommonDialog then
+              CommonDialog:OnCloseBtnClicked()
+            end
             UIManager(self):ShowCommonPopupUI(100344, CommonDialogParams, self, nil, 102)
           else
             PageJumpUtils:CloseFrontDialog()
@@ -178,7 +218,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     assert(DataMgr[ItemType][ItemId], "未找到对应坐骑信息：", ItemType, ItemId)
     local MountInfo = DataMgr[ItemType][ItemId]
     self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
-    self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_LongDescribe:SetText(GText(MountInfo.MountDes))
     return
   end
@@ -187,9 +227,9 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     local HeadInfo = DataMgr[ItemType][ItemId]
     self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
     if "HeadSculpture" == ItemType then
-      self.Text_Describe:SetText(GText("UI_HeadFrame_Head"))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_HeadFrame_Head"))
     else
-      self.Text_Describe:SetText(GText("UI_HeadFrame_Frame"))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_HeadFrame_Frame"))
     end
     self.Text_LongDescribe:SetText(GText(HeadInfo.Des))
     return
@@ -212,8 +252,12 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
         Desc = "RLTreasure_Desc_Unknown"
       end
     end
-    self.Text_Describe:SetText(GText(Desc))
+    self.ParentWidget.Text_ItemDescribe:SetText(GText(Desc))
     self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  if "Background" == ItemType then
+    self:RefreshBackgroundInfo(ItemId)
     return
   end
   if "Resource" == ItemType and DataMgr.LimitedTimeResource[ItemId] then
@@ -283,9 +327,9 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     ItemId = math.tointeger(ItemId)
   end
   local ResourceServerData = PlayerAvatar.Resources[ItemId]
-  self.Text_Describe:SetVisibility(ResourceInfo.FunctionDes == nil and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
+  self.ParentWidget.Panel_Describe:SetVisibility(ResourceInfo.FunctionDes == nil and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
   self.Text_LongDescribe:SetVisibility(nil == ResourceInfo.DetailDes and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
-  self.Text_Describe:SetText(GText(ResourceInfo.FunctionDes))
+  self.ParentWidget.Text_ItemDescribe:SetText(GText(ResourceInfo.FunctionDes))
   self.Text_LongDescribe:SetText(GText(ResourceInfo.DetailDes))
   local Count = 0
   if ResourceServerData then
@@ -315,12 +359,12 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
     local TreasureGroupInfo = DataMgr[ItemType][ItemId]
     if not Content.bGuide then
       if Content.bActive then
-        self.Text_Describe:SetText(GText("已激活"))
+        self.ParentWidget.Text_ItemDescribe:SetText(GText("已激活"))
       else
-        self.Text_Describe:SetText(GText("未激活"))
+        self.ParentWidget.Text_ItemDescribe:SetText(GText("未激活"))
       end
     else
-      self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+      self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
     end
     self.Text_LongDescribe:SetText(GText(TreasureGroupInfo.GroupEffectDesc))
     return
@@ -329,9 +373,9 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
     assert(DataMgr[ItemType][ItemId], "未找到对应CharPartMesh信息：", ItemType, ItemId)
     local CharPartMeshInfo = DataMgr[ItemType][ItemId]
     if "WeaponSkin" == ItemType then
-      self.Text_Describe:SetText(GText(CharPartMeshInfo.Dec))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(CharPartMeshInfo.Dec))
     else
-      self.Text_Describe:SetText(GText(CharPartMeshInfo.Des))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(CharPartMeshInfo.Des))
     end
     if "TitleFrame" == ItemType then
       self.Panel_Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -356,10 +400,10 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
     local CharAccessoryInfo = DataMgr[ItemType][ItemId]
     if CharAccessoryInfo.AccessoryType then
       assert(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType], "未知的配饰部位：" .. CharAccessoryInfo.AccessoryType)
-      self.Text_Describe:SetText(GText(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType]))
-      self.Text_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.ParentWidget.Text_ItemDescribe:SetText(GText(UIConst.AccessoryTypeTextMap[CharAccessoryInfo.AccessoryType]))
+      self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     else
-      self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+      self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
     end
     self.Text_LongDescribe:SetText(GText(CharAccessoryInfo.Des))
     if not Content.bCustomStype then
@@ -398,7 +442,7 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
   if "Mount" == ItemType then
     assert(DataMgr[ItemType][ItemId], "未找到对应坐骑信息：", ItemType, ItemId)
     local MountInfo = DataMgr[ItemType][ItemId]
-    self.Text_Describe:SetVisibility(ESlateVisibility.Collapsed)
+    self.ParentWidget.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_LongDescribe:SetText(GText(MountInfo.MountDes))
     return
   end
@@ -406,9 +450,9 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
     assert(DataMgr[ItemType][ItemId], "未找到对应配饰信息：", ItemType, ItemId)
     local HeadInfo = DataMgr[ItemType][ItemId]
     if "HeadSculpture" == ItemType then
-      self.Text_Describe:SetText(GText("UI_HeadFrame_Head"))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_HeadFrame_Head"))
     else
-      self.Text_Describe:SetText(GText("UI_HeadFrame_Frame"))
+      self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_HeadFrame_Frame"))
     end
     self.Text_LongDescribe:SetText(GText(HeadInfo.Des))
     return
@@ -431,8 +475,12 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
         Desc = "RLTreasure_Desc_Unknown"
       end
     end
-    self.Text_Describe:SetText(GText(Desc))
+    self.ParentWidget.Text_ItemDescribe:SetText(GText(Desc))
     self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  if "Background" == ItemType then
+    self:RefreshBackgroundInfo(ItemId)
     return
   end
   if "Resource" == ItemType and DataMgr.LimitedTimeResource[ItemId] then
@@ -495,16 +543,16 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
     ItemId = math.tointeger(ItemId)
   end
   local ResourceServerData = PlayerAvatar.Resources[ItemId]
-  self.Text_Describe:SetVisibility(ResourceInfo.FunctionDes == nil and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
+  self.ParentWidget.Panel_Describe:SetVisibility(ResourceInfo.FunctionDes == nil and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
   self.Text_LongDescribe:SetVisibility(nil == ResourceInfo.DetailDes and ESlateVisibility.Collapsed or ESlateVisibility.Visible)
-  self.Text_Describe:SetText(GText(ResourceInfo.FunctionDes))
+  self.ParentWidget.Text_ItemDescribe:SetText(GText(ResourceInfo.FunctionDes))
   self.Text_LongDescribe:SetText(GText(ResourceInfo.DetailDes))
 end
 
 function M:InitTipsInfo(ItemInfo)
   local Itemdata = DataMgr[ItemInfo.Type][ItemInfo.ItemId]
   self.ParentWidget:InitItemBaseInfo(Itemdata)
-  self.Text_Describe:SetText(GText(self.ParentWidget.Content.Tips))
+  self.ParentWidget.Text_ItemDescribe:SetText(GText(self.ParentWidget.Content.Tips))
   self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
   local PlayerAvatar = GWorld:GetAvatar()
   local Count = 0
@@ -553,6 +601,37 @@ function M:FreshMountInfo(ItemId)
   else
     DebugPrint("没找到对应坐骑信息的使用限制描述UseLimitDes   --- MountId:" .. tostring(MountId))
   end
+end
+
+function M:RefreshBackgroundInfo(ItemId)
+  local BackgroundInfo = DataMgr.Background[ItemId]
+  if not BackgroundInfo then
+    ScreenPrint("没找到对应名片背景信息 ItemId:" .. tostring(ItemId))
+    return
+  end
+  self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Visible)
+  self.ParentWidget.Switch_Show:SetActiveWidgetIndex(3)
+  local HasBackground = ItemUtils.HasBackground(ItemId)
+  if HasBackground then
+    self.ParentWidget.Text_Describe:SetText(GText("UI_Background_Owned"))
+  else
+    self.ParentWidget.Text_Describe:SetText(GText("UI_Background_Unowned"))
+  end
+  self.ParentWidget.Text_ItemDescribe:SetText(GText("UI_Background_CardStyle"))
+  self.Panel_Title:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  local Widget = UIManager(self):CreateWidget("WidgetBlueprint'/Game/UI/WBP/NameCard/Widget/WBP_NameCard_TipsItem.WBP_NameCard_TipsItem'", false)
+  if Widget then
+    self.Pos_Title:ClearChildren()
+    self.Pos_Title:AddChild(Widget)
+    if BackgroundInfo.BigIcon then
+      local IconImage = LoadObject(BackgroundInfo.BigIcon)
+      if IconImage and Widget.Image_ItemIcon then
+        Widget.Image_ItemIcon:SetBrushFromTexture(IconImage)
+      end
+    end
+  end
+  self.Text_LongDescribe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Text_LongDescribe:SetText(GText(BackgroundInfo.Des) or "")
 end
 
 return M

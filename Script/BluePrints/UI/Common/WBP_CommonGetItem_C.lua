@@ -162,6 +162,15 @@ function M:ItemMenuAnchorChanged(bIsOpen)
   if bIsOpen then
     self.bCantClose = bIsOpen
   end
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  if GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+    if not self.IsShowDetails then
+      self.Panel_Key:SetVisibility(ESlateVisibility.Visible)
+    else
+      self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
 end
 
 function M:InitOptRewardsInfo()
@@ -177,6 +186,10 @@ function M:InitOptRewardsInfo()
       })
       OptCount = OptCount + 1
     end
+  end
+  local BagMain = UIManager(self):GetUI("BagMain")
+  if BagMain then
+    OptCount = 0
   end
   if 0 ~= OptCount then
     self.IsOptRewardsView = true
@@ -890,7 +903,7 @@ function M:OnGamePadDown(InKeyName)
   if "Gamepad_FaceButton_Right" == InKeyName and not self.IsOptRewardsView then
     self:CloseSelf()
     IsEventHandled = true
-  elseif "Gamepad_FaceButton_Top" == InKeyName then
+  elseif "Gamepad_FaceButton_Top" == InKeyName and self.Btn_Open then
     self.Btn_Open:OnBtnClicked()
     IsEventHandled = true
   end

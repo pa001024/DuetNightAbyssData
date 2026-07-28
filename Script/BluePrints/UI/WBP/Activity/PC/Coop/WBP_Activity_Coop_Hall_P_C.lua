@@ -592,10 +592,6 @@ end
 
 function View:OnBtnCreateClicked()
   AudioManager(self):PlayUISound(self, "event:/ui/activity/lianmeiyanyi_btn_large_confirm_click", nil, nil)
-  if self.CreateRoomLimit == true then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_HostLimitExceeded"))
-    return
-  end
   local NodeName = self.NewNodeName
   if not ReddotManager.GetTreeNode(NodeName) then
     ReddotManager.AddNode(NodeName)
@@ -604,6 +600,10 @@ function View:OnBtnCreateClicked()
   if CacheDetail and CacheDetail.New and CacheDetail.New >= 1 then
     ReddotManager.DecreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
     EMCache:Set("AsyncCombatBtnTime", TimeUtils.NowTime(), true)
+  end
+  if self.CreateRoomLimit == true then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_HostLimitExceeded"))
+    return
   end
   local UI = UIManager(self):LoadUINew("CoopCreate")
   if UI then

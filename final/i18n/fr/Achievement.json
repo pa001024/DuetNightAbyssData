@@ -5254,6 +5254,17 @@
     }
   },
   {
+    "id": 10200301,
+    "名称": "Je veux vérifier les cartes",
+    "分类": "Entre deux rives",
+    "品质": 3,
+    "描述": "Ce qui fait peur, ce n’est pas de perdre... mais de ne plus avoir le courage de rejouer une partie.",
+    "版本": "1.5",
+    "奖励": {
+      "Indice de Mandat scellé": 1
+    }
+  },
+  {
     "id": 17002001,
     "名称": "Instants figés : Berenica",
     "分类": "Joyeux moments",
@@ -6025,7 +6036,7 @@
     "名称": "La tempête approche",
     "分类": "Instant merveilleux",
     "品质": 2,
-    "描述": "S’asseoir sur le \"Trône du Pouvoir\"",
+    "描述": "S’asseoir sur le « Trône du Pouvoir »",
     "版本": "1.0",
     "奖励": {
       "Indice de Mandat scellé": 1

@@ -1,19 +1,20 @@
 local FTalkTriggerComponent = require("BluePrints.Story.Talk.Component.TalkTriggerComponent")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class("BluePrints.Story.FlowGraph.FlowNode.TalkFlowNode.FlowNode_TalkNodeBase")
 local FlowLogType = UE.EStoryLogType.TalkFlow
 
 function M:K2_InitializeInstance()
   self.Options = self.OptionData:ToTable()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     return
   end
   local FlowExportBranchImpr = DataMgr.FlowExportBranchImpr
-  for _, OptionId in pairs(self.Options) do
+  for _, OptionData in pairs(self.Options) do
+    local OptionId = OptionData.DialogueId
     local bSelected = false
     if FlowExportBranchImpr[OptionId] then
       for _, ImprOptionId in pairs(FlowExportBranchImpr[OptionId]) do
-        if Avatar:IsImpressionCheckFailure(OptionId) then
+        if ImpressionModel:IsImpressionCheckFailure(ImprOptionId) then
           self.RestartTag = true
           return
         end
@@ -147,17 +148,17 @@ function M:SelectOption(OptionId, FinishType)
 end
 
 function M:GetSavedOptions()
-  local Avatar = GWorld:GetAvatar()
   local Res = {}
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     return Res
   end
   local FlowExportBranchImpr = DataMgr.FlowExportBranchImpr
-  for _, OptionId in pairs(self.Options) do
+  for _, OptionData in pairs(self.Options) do
+    local OptionId = OptionData.DialogueId
     local bSelected = false
     if FlowExportBranchImpr[OptionId] then
       for _, ImprOptionId in pairs(FlowExportBranchImpr[OptionId]) do
-        if Avatar:IsImpressionCheckSuccess(OptionId) then
+        if ImpressionModel:IsImpressionCheckSuccess(ImprOptionId) then
           bSelected = true
           break
         end

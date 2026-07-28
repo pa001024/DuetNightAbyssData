@@ -6,6 +6,10 @@ local M = Class({
 function M:OnListItemObjectSet(Content)
   self.MissionId = Content.MissionId
   local Info = DataMgr.CombatChessInfo[Content.AutoChessId]
+  if not Info then
+    DebugPrint(ErrorTag, string.format("CombatChessInfo查表失败，ID：%s不存在数据", Content.AutoChessId))
+    return
+  end
   self.Monster_Head:SetBrushResourceObject(LoadObject(Info.MonsterIcon))
   self.Icon_Type.Icon:SetBrushResourceObject(LoadObject(Info.PositionIcon))
   if 2 == Content.EquipCount then

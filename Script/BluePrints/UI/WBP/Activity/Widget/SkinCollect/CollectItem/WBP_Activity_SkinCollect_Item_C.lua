@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local M = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.UI.BP_EMUserWidget_C"
@@ -113,9 +114,7 @@ local function CancelComItemAsyncTask(comItem, taskName)
   if not comItem or not taskName then
     return
   end
-  if ForceStopAsyncTask then
-    ForceStopAsyncTask(comItem, taskName)
-  end
+  CoroutineUtils.ForceStopAsyncTask(comItem, taskName)
   if comItem.ComItemAsyncTasks then
     comItem.ComItemAsyncTasks[taskName] = nil
   end

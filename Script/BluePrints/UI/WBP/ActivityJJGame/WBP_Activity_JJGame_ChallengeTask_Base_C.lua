@@ -55,6 +55,7 @@ function M:Init(Params)
   self.MidTermTask = Model.MidTermTasks
   self.MidTermAchvProgressRewarded = Model.MidTermAchvProgressRewarded
   self.EventEndTime = Model.EventEndTime
+  self.RewardEndTime = Model.RewardEndTime
   self:InitTaskList()
   self:InitChallengeScoreItem()
   self.ChallengeTaskScore = self:CalChallengeTaskScore()
@@ -65,9 +66,14 @@ function M:Init(Params)
   else
     self.Text_BottomOneClickTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  if TimeUtils.NowTime() > self.EventEndTime then
-    self:ClearChallengeReddot()
+  local NowTime = TimeUtils.NowTime()
+  if NowTime > self.EventEndTime then
+    self:TryClearChallengeTaskNewReddot()
+    JJGameController:ClearChallengeTaskRewardReddotByTasks(self.MidTermTask)
     self.WS_Right:SetActiveWidgetIndex(1)
+    if NowTime > self.RewardEndTime then
+      self:ClearChallengeReddot()
+    end
   end
   if CommonUtils.GetDeviceTypeByPlatformName() ~= "Mobile" then
     self.Key_TitleScore:CreateCommonKey({
@@ -109,14 +115,20 @@ function M:RefreshTaskView()
   self.MidTermTask = Model.MidTermTasks
   self.MidTermAchvProgressRewarded = Model.MidTermAchvProgressRewarded
   self.EventEndTime = Model.EventEndTime
+  self.RewardEndTime = Model.RewardEndTime
   self.EventDay = Model.EventDay
   self:UpdateChallengeTaskList()
   self.ChallengeTaskScore = self:CalChallengeTaskScore()
   self:UpdateChallengeTaskScore(self.ChallengeTaskScore)
   self:UpdateOneClickBtnState()
-  if TimeUtils.NowTime() > self.EventEndTime then
-    self:ClearChallengeReddot()
+  local NowTime = TimeUtils.NowTime()
+  if NowTime > self.EventEndTime then
+    self:TryClearChallengeTaskNewReddot()
+    JJGameController:ClearChallengeTaskRewardReddotByTasks(self.MidTermTask)
     self.WS_Right:SetActiveWidgetIndex(1)
+    if NowTime > self.RewardEndTime then
+      self:ClearChallengeReddot()
+    end
   end
 end
 

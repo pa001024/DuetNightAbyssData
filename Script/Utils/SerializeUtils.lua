@@ -1,6 +1,4 @@
-local bson = require("bson")
-local zlib = require("zlib")
-local bOpenCompress = false
+local bOpenCompress = true
 local SerializeUtils = {}
 
 local function IsObjId(str)
@@ -10,10 +8,10 @@ local function IsObjId(str)
   return false
 end
 
-function SerializeUtils:ToStringEx(value)
+function SerializeUtils:ToStringEx(value, visited)
   local ValueType = type(value)
   if "table" == ValueType then
-    return self:TableToStr(value)
+    return self:TableToStr(value, visited)
   elseif "string" == ValueType then
     if IsObjId(value) then
       return self:SerializeObjId(value)
@@ -24,6 +22,8 @@ function SerializeUtils:ToStringEx(value)
     return tostring(value)
   elseif "userdata" == ValueType then
     return self:SerializeUserdata(value)
+  else
+    return string.format("%q", tostring(value))
   end
 end
 
@@ -55,38 +55,41 @@ function SerializeUtils:IsArrayTable(t)
   return max_index == count
 end
 
-function SerializeUtils:TableToStr(t)
+function SerializeUtils:TableToStr(t, visited)
   if nil == t then
     return ""
   end
-  local retstr = "{"
-  if SerializeUtils:IsArrayTable(t) then
+  if type(t) ~= "table" then
+    return self:ToStringEx(t, visited)
+  end
+  visited = visited or {}
+  if visited[t] then
+    return string.format("%q", "<循环引用>")
+  end
+  visited[t] = true
+  local parts = {"{"}
+  if self:IsArrayTable(t) then
     for i = 1, #t do
-      local signal = ","
-      if 1 == i then
-        signal = ""
+      if i > 1 then
+        parts[#parts + 1] = ","
       end
-      retstr = retstr .. signal .. self:ToStringEx(t[i])
+      parts[#parts + 1] = self:ToStringEx(t[i], visited)
     end
   else
-    local signal = ""
+    local first = true
     for key, value in pairs(t) do
-      if type(key) == "number" or type(key) == "string" then
-        retstr = retstr .. signal .. "[" .. self:ToStringEx(key) .. "]=" .. self:ToStringEx(value)
-      elseif type(key) == "userdata" then
-        retstr = retstr .. signal .. "*s" .. self:TableToStr(getmetatable(key)) .. "*e" .. "=" .. self:ToStringEx(value)
-      else
-        retstr = retstr .. signal .. key .. ":" .. self:ToStringEx(value)
+      if not first then
+        parts[#parts + 1] = ","
       end
-      signal = ","
+      first = false
+      parts[#parts + 1] = "[" .. self:ToStringEx(key, visited) .. "]=" .. self:ToStringEx(value, visited)
     end
   end
-  retstr = retstr .. "}"
-  return retstr
+  parts[#parts + 1] = "}"
+  return table.concat(parts)
 end
 
 function SerializeUtils:StrToTable(str)
-  print(_G.LogTag, str)
   if nil == str or type(str) ~= "string" or "" == str then
     return {}
   end
@@ -106,8 +109,8 @@ function SerializeUtils:SerializeUserdata(value)
   local str = CommonUtils.Split(tostring(value), ":")
   result.SerializeName = str[1]
   local ValueString = value:ToString()
-  ValueString = string.gsub(ValueString, "\r\n", "")
-  ValueString = string.gsub(ValueString, "%s+", "")
+  ValueString = string.gsub(ValueString, "\r\n", "\n")
+  ValueString = string.gsub(ValueString, "^%s*(.-)%s*$", "%1")
   result.ValueString = ValueString
   return self:TableToStr(result)
 end
@@ -128,6 +131,7 @@ function SerializeUtils:TransformTable(Table)
     userdata:InitFromString(Table.ValueString)
     return userdata
   elseif Table.ObjIdStr then
+    local bson = require("bson")
     return bson.objectid(Table.ObjIdStr)
   end
   for key, value in pairs(Table) do
@@ -164,6 +168,7 @@ function SerializeUtils:CompressString(str)
     return str
   end
   local ok, compressed = pcall(function()
+    local zlib = require("zlib")
     local deflate = zlib.deflate()
     return deflate(str, "finish")
   end)
@@ -187,6 +192,7 @@ function SerializeUtils:DecompressString(Str)
   end
   local compressed_data = Str:sub(2)
   local ok, decompressed = pcall(function()
+    local zlib = require("zlib")
     local inflate = zlib.inflate()
     return inflate(compressed_data, "finish")
   end)

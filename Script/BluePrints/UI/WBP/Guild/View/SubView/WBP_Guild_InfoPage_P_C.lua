@@ -26,18 +26,57 @@ function M:InitView(GuildInfo)
   self.Text_GuildName:SetText(GText(self.CurrGuildInfo.Name or ""))
   self.Text_IntroTitle:SetText(GText("UI_GuildDeclaration"))
   self.Text_Intro:SetText(GText(self.CurrGuildInfo.Declaration or ""))
-  self.GuildInfo:InitView(self, self.CurrGuildInfo)
+  self.GuildInfo:InitView(self, self.CurrGuildInfo, function()
+    self:CancelFocusListBtn()
+  end)
   self.UserActivity:InitView(self, self.CurrGuildInfo)
-  self.Btn_Dynamics:SetText(GText("UI_GuildActivityFeed"))
-  self.Btn_Dynamics:BindEventOnClicked(self, self.OnBtnDynamicsClicked)
-  self.Btn_Dynamics:SetGamepadIconVisibility(false)
   self.Btn_Confirm:SetText(GText("UI_GuildTerritory"))
-  self.Btn_Confirm:BindEventOnClicked(self, self.OnBtnConfirmClicked)
   self.Btn_Confirm:BindForbidStateExecuteEvent(self, self.OnBtnConfirmClicked)
+  self.Btn_Confirm:ForbidBtn(true)
   self.Btn_Confirm:LockBtn(true)
   self.Btn_Confirm:SetDefaultGamePadImg("RS")
   self:RefreshOpInfoByInputDevice()
   self:InitEditIntro()
+  self:InitFunctionList()
+  self:InitGamepad()
+end
+
+function M:InitFunctionList()
+  local FunctionList = {
+    {
+      Name = "Btn_Dynamics",
+      Text = "UI_GuildActivityFeed",
+      OnClick = self.OnBtnDynamicsClicked
+    }
+  }
+  self.List_Function:ClearListItems()
+  for _, Function in ipairs(FunctionList) do
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.ParentWidget = self
+    Content.Text = Function.Text
+    Content.bGamepadIconVisible = false
+    Content.OnClickFunction = Function.OnClick
+    self.List_Function:AddItem(Content)
+  end
+end
+
+function M:InitGamepad()
+  if not UIUtils.IsGamepadInput() then
+    return
+  end
+  self.Controller_Function:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = "A",
+        Owner = self
+      }
+    }
+  })
+  self.Btn_Confirm:SetGamePadImg("RS")
+  self.bShoulFocusToLastFocusedWidget = false
+  self:SetIsShowNavigateGuide(false)
+  self:SetIsDealWithVirtualAccept(true)
 end
 
 function M:RefreshUIInfo()
@@ -148,7 +187,14 @@ end
 function M:InitGamepadView()
   self:SetAutoFocus()
   self:SetGamepadIconVisibility(true)
-  if self.ParentWidget then
+  self:UpdateParentComTab()
+end
+
+function M:UpdateParentComTab()
+  if not self.ParentWidget then
+    return
+  end
+  if UIUtils.HasAnyFocus(self.List_Function) then
     local BottomKeyInfo = {
       {
         GamePadInfoList = {
@@ -172,6 +218,20 @@ function M:InitGamepadView()
       }
     }
     self.ParentWidget:UpdateComTab(BottomKeyInfo)
+  else
+    local BottomKeyInfo = {
+      {
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BACK")
+      }
+    }
+    self.ParentWidget:UpdateComTab(BottomKeyInfo)
   end
 end
 
@@ -180,6 +240,21 @@ function M:InitKeyboardView()
 end
 
 function M:_OnPagePoped()
+end
+
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
+  end
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName == Const.GamepadFaceButtonDown and self:HasAnyUserFocus() then
+    self.List_Function:SetFocus()
+    self:UpdateParentComTab()
+    self:SetGamepadIconVisibility(false)
+    self.WidgetFocus = self.List_Function
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
 function M:OnContentKeyDown(MyGeometry, InKeyEvent)
@@ -203,31 +278,40 @@ function M:Handle_KeyDownOnKeyboard(InKeyName)
   return IsHandled
 end
 
+function M:CancelFocusListBtn()
+  if self.WidgetFocus then
+    self.WidgetFocus = false
+    self:SetGamepadIconVisibility(true)
+    self.GuildInfo:SetEditPanelVisible(false)
+    self:UpdateParentComTab()
+  end
+end
+
 function M:Handle_KeyDownOnGamePad(InKeyName)
   local IsHandled = false
   if self.WidgetFocus then
     if "Gamepad_FaceButton_Right" == InKeyName then
-      self.Btn_Dynamics:SetFocus()
-      self.WidgetFocus = false
-      self:SetGamepadIconVisibility(true)
-      self.GuildInfo:SetEditPanelVisible(false)
+      self:SetFocus()
+      self:CancelFocusListBtn()
+      IsHandled = true
+    end
+  elseif "Gamepad_Special_Left" == InKeyName then
+    self.GuildInfo:Copy()
+    IsHandled = true
+  elseif "Gamepad_RightThumbstick" == InKeyName then
+    self:OnBtnConfirmClicked()
+    IsHandled = true
+  elseif "Gamepad_LeftThumbstick" == InKeyName then
+    if self.GuildInfo.Btn_Edit:IsVisible() then
+      self.GuildInfo:OnBtnEditClicked()
+      self.GuildInfo.List_Edit:SetFocus()
+      self.GuildInfo.List_Edit:NavigateToIndex(0)
+      self.WidgetFocus = true
+      self:SetGamepadIconVisibility(false)
       IsHandled = true
     end
   elseif "Gamepad_FaceButton_Top" == InKeyName then
     self.UserActivity:OnBtnClick()
-    IsHandled = true
-  elseif "Gamepad_Special_Left" == InKeyName then
-    self.GuildInfo:Copy()
-    IsHandled = true
-  elseif "Gamepad_LeftThumbstick" == InKeyName then
-    self.GuildInfo:OnBtnEditClicked()
-    self.GuildInfo.List_Edit:SetFocus()
-    self.GuildInfo.List_Edit:NavigateToIndex(0)
-    self.WidgetFocus = true
-    self:SetGamepadIconVisibility(false)
-    IsHandled = true
-  elseif "Gamepad_RightThumbstick" == InKeyName then
-    self:OnBtnConfirmClicked()
     IsHandled = true
   elseif "Gamepad_FaceButton_Left" == InKeyName and self.ParentWidget and self.ParentWidget.Entrance_Shop then
     self.ParentWidget.Entrance_Shop:SetFocus()
@@ -239,18 +323,15 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
 end
 
 function M:InitNavigation()
+  self.List_Function:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.List_Function:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.List_Function:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+  self.List_Function:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
   self.Btn_EditIntro:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
   self.Btn_EditIntro:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
   self.Btn_EditIntro:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
-  self.Btn_Dynamics:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  self.Btn_Dynamics:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
-  self.Btn_Dynamics:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
-  if self.EditIntroAuthority then
-    self.Btn_EditIntro:SetNavigationRuleExplicit(EUINavigation.Down, self.Btn_Dynamics)
-    self.Btn_Dynamics:SetNavigationRuleExplicit(EUINavigation.Up, self.Btn_EditIntro)
-  else
+  if not self.EditIntroAuthority then
     self.Btn_EditIntro:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-    self.Btn_Dynamics:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
   end
   self.ParentWidget.Entrance_Shop:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
   self.ParentWidget.Entrance_Shop:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
@@ -265,6 +346,9 @@ function M:SetGamepadIconVisibility(Visable)
   self.GuildInfo:SetGamepadIconVisibility(Visable)
   self.Btn_Confirm:SetGamepadIconVisibility(Visable)
   self.ParentWidget:SetGamepadIconVisibility(Visable)
+  if self.Panel_Controller_Function then
+    self.Panel_Controller_Function:SetVisibility(Visable and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  end
 end
 
 function M:OnContentFocusReceived(MyGeometry, InFocusEvent)
@@ -277,9 +361,7 @@ function M:SetAutoFocus()
   if CommonDialog then
     CommonDialog:SetFocus()
   else
-    self:AddTimer(0.05, function()
-      self.Btn_Dynamics:SetFocus()
-    end)
+    self:SetFocus()
   end
   self.WidgetFocus = false
 end

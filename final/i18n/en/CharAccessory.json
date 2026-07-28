@@ -688,9 +688,17 @@
     "unlock": "Available from events"
   },
   {
+    "id": 10093,
+    "name": "Nightglow Lantern: Mint",
+    "desc": "Even the longest night will end. May its light guide you home.",
+    "icon": "T_Fashion_Head53",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
     "id": 10094,
     "name": "Quill: Opaque White",
-    "desc": "Let's write a story of our own.",
+    "desc": "A story inscribed, and ours alone.",
     "icon": "T_Fashion_Head58_01",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -698,7 +706,7 @@
   {
     "id": 10095,
     "name": "Quill: Caramel",
-    "desc": "Let's write a story of our own.",
+    "desc": "A story inscribed, and ours alone.",
     "icon": "T_Fashion_Head58_02",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -706,7 +714,7 @@
   {
     "id": 10096,
     "name": "Quill: Dark Jade",
-    "desc": "Let's write a story of our own.",
+    "desc": "A story inscribed, and ours alone.",
     "icon": "T_Fashion_Head58_03",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -714,7 +722,7 @@
   {
     "id": 10097,
     "name": "Quill: Rust Red",
-    "desc": "Let's write a story of our own.",
+    "desc": "A story inscribed, and ours alone.",
     "icon": "T_Fashion_Head58_04",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -979,15 +987,55 @@
     "id": 10132,
     "name": "Luno's Device (Ⅰ)",
     "desc": "One of Lunoxplorer's surveying devices. Once activated, it begins gathering the data she needs.",
+    "icon": "T_Fashion_Head67_03",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10133,
+    "name": "Luno's Device (Ⅱ)",
+    "desc": "One of Lunoxplorer's surveying devices. Once activated, it begins gathering the data she needs.",
+    "icon": "T_Fashion_Head67_02",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10134,
+    "name": "Luno's Device (Ⅲ)",
+    "desc": "One of Lunoxplorer's surveying devices. Once activated, it begins gathering the data she needs.",
     "icon": "T_Fashion_Head67_01",
     "rarity": 3,
     "unlock": "Available from events"
   },
   {
-    "id": 10139,
-    "name": "Festival Balloon: Azure",
+    "id": 10135,
+    "name": "Colourful Balloon: Opaque White",
     "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
-    "icon": "T_Fashion_Head60_04",
+    "icon": "T_Fashion_Head69_04",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10136,
+    "name": "Colourful Balloon: Mint",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head69_03",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10137,
+    "name": "Colourful Balloon: Caramel",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head69_02",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10138,
+    "name": "Colourful Balloon: Azure",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head69_01",
     "rarity": 3,
     "unlock": "Available from events"
   },
@@ -1000,12 +1048,100 @@
     "unlock": "Available from events"
   },
   {
-    "id": 10149,
-    "name": "Festival Balloon: Mint",
-    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
-    "icon": "T_Fashion_Head60_02",
+    "id": 10142,
+    "name": "Outer Peaks Cog",
+    "desc": "In Outer Peaks, even the mightiest machine depends on every single cog.",
+    "icon": "T_Fashion_Head73",
     "rarity": 3,
     "unlock": "Available from events"
+  },
+  {
+    "id": 10143,
+    "name": "Stoney Snarl",
+    "desc": "Wards off evil and misfortune.",
+    "icon": "T_Fashion_Head70",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10144,
+    "name": "Astral Aureola: Opaque White",
+    "desc": "Snowflakes rest upon your hair, forever frozen at their most beautiful.",
+    "icon": "T_Fashion_Head71_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10145,
+    "name": "Astral Aureola: Gilt",
+    "desc": "Snowflakes rest upon your hair, forever frozen at their most beautiful.",
+    "icon": "T_Fashion_Head71_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10146,
+    "name": "Astral Aureola: Rust Red",
+    "desc": "Snowflakes rest upon your hair, forever frozen at their most beautiful.",
+    "icon": "T_Fashion_Head71_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10147,
+    "name": "Astral Aureola: Violet",
+    "desc": "Snowflakes rest upon your hair, forever frozen at their most beautiful.",
+    "icon": "T_Fashion_Head71_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10148,
+    "name": "Festival Balloon: Caramel",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head60_01",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10150,
+    "name": "Festival Balloon: Rust Red",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head60_03",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10151,
+    "name": "Fold-Ear Kitty Headpiece: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head72_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10152,
+    "name": "Fold-Ear Kitty Headpiece: Caramel",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head72_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10153,
+    "name": "Fold-Ear Kitty Headpiece: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head72_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10154,
+    "name": "Fold-Ear Kitty Headpiece: White Sakura",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
+    "icon": "T_Fashion_Head72_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
   },
   {
     "id": 11001,
@@ -1052,6 +1188,14 @@
     "name": "Everbloom Expanse",
     "desc": "Flowers bloom where angels once fell.",
     "icon": "T_Fashion_Fx27",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 11008,
+    "name": "Frost Fetter",
+    "desc": "Life was never meant for the bitter cold.",
+    "icon": "T_Fashion_Fx37",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -1180,6 +1324,86 @@
     "name": "Nocturne Veil",
     "desc": "A veil of black gauze falls over her finery.",
     "icon": "T_Fashion_Hat16",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12017,
+    "name": "Squishy Octo: White Sakura",
+    "desc": "Boingy, boingy, bloop~",
+    "icon": "T_Fashion_Hat19_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12018,
+    "name": "Squishy Octo: Azure",
+    "desc": "Boingy, boingy, bloop~",
+    "icon": "T_Fashion_Hat19_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12019,
+    "name": "Squishy Octo: Mint",
+    "desc": "Boingy, boingy, bloop~",
+    "icon": "T_Fashion_Hat19_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12020,
+    "name": "Squishy Octo: Opaque White",
+    "desc": "Boingy, boingy, bloop~",
+    "icon": "T_Fashion_Hat19_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12021,
+    "name": "Puffy Puffer: White Sakura",
+    "desc": "Hmph! Puff, puff!",
+    "icon": "T_Fashion_Hat18_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12022,
+    "name": "Puffy Puffer: Rust Red",
+    "desc": "Hmph! Puff, puff!",
+    "icon": "T_Fashion_Hat18_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12023,
+    "name": "Puffy Puffer: Celeste",
+    "desc": "Hmph! Puff, puff!",
+    "icon": "T_Fashion_Hat18_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12024,
+    "name": "Puffy Puffer: Opaque White",
+    "desc": "Hmph! Puff, puff!",
+    "icon": "T_Fashion_Hat18_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12025,
+    "name": "Grace of Loong",
+    "desc": "The sovereign ascends, and darkness knows its place.",
+    "icon": "T_Fashion_Hat21",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12026,
+    "name": "Myriad Knot",
+    "desc": "Fate's threads tangle beyond the reach of foresight.",
+    "icon": "T_Fashion_Hat20",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
@@ -1552,6 +1776,70 @@
     "unlock": "Available from events"
   },
   {
+    "id": 13041,
+    "name": "Wavy Tail: Opaque White",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a fish tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Back49_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13042,
+    "name": "Wavy Tail: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a fish tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Back49_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13043,
+    "name": "Wavy Tail: Celeste",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a fish tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Back49_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13044,
+    "name": "Wavy Tail: White Sakura",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a fish tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Back49_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13049,
+    "name": "Fold-Ear Kitty Tail: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Back51_02",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 13050,
+    "name": "Fold-Ear Kitty Tail: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Back51_03",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 13051,
+    "name": "Fold-Ear Kitty Tail: Caramel",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Back51_04",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
+    "id": 13052,
+    "name": "Fold-Ear Kitty Tail: White Sakura",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a feline tail.",
+    "icon": "T_Fashion_Back51_01",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
     "id": 20001,
     "name": "Sage's Spectacles",
     "desc": "Wisdom precisely encircled in those round frames, greatly magnifying the wearer's aura of sagacity.",
@@ -1889,7 +2177,7 @@
   },
   {
     "id": 20043,
-    "name": "Loongscale Shades: Dark Jade",
+    "name": "Loong Insight: Dark Jade",
     "desc": "Shielding you from glare and dust, they lay bare what is real and what is not.",
     "icon": "T_Fashion_Face21_02",
     "rarity": 5,
@@ -2208,6 +2496,54 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 20090,
+    "name": "Bubblegum Pop: Celeste",
+    "desc": "Once you're done chewing, don't just spit it out anywhere.",
+    "icon": "T_Fashion_Face27_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20091,
+    "name": "Bubblegum Pop: Gilt",
+    "desc": "Once you're done chewing, don't just spit it out anywhere.",
+    "icon": "T_Fashion_Face27_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20092,
+    "name": "Bubblegum Pop: Opaque White",
+    "desc": "Once you're done chewing, don't just spit it out anywhere.",
+    "icon": "T_Fashion_Face27_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20093,
+    "name": "Bubblegum Pop: White Sakura",
+    "desc": "Once you're done chewing, don't just spit it out anywhere.",
+    "icon": "T_Fashion_Face27_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20094,
+    "name": "Midnight Veil: Dark Jade",
+    "desc": "Even the night falls for the smile hidden behind the veil.",
+    "icon": "T_Fashion_Face29_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 20095,
+    "name": "Midnight Veil: Violet",
+    "desc": "Even the night falls for the smile hidden behind the veil.",
+    "icon": "T_Fashion_Face29_04",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -2286,6 +2622,14 @@
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 21014,
+    "name": "Frostflake",
+    "desc": "The aurora is nature's miracle.",
+    "icon": "T_Fashion_Fx36",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
   },
   {
     "id": 30001,
@@ -2632,6 +2976,38 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 30050,
+    "name": "Kitty Popsicle: White Sakura",
+    "desc": "Boss... are these popsicles really going to sell?",
+    "icon": "T_Fashion_Back52_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30051,
+    "name": "Kitty Popsicle: Celeste",
+    "desc": "Boss... are these popsicles really going to sell?",
+    "icon": "T_Fashion_Back52_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30052,
+    "name": "Kitty Popsicle: Caramel",
+    "desc": "Boss... are these popsicles really going to sell?",
+    "icon": "T_Fashion_Back52_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30053,
+    "name": "Kitty Popsicle: Mauve",
+    "desc": "Boss... are these popsicles really going to sell?",
+    "icon": "T_Fashion_Back52_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 30054,
     "name": "Bottled Joy: Rust Red",
     "desc": "A refreshing sip for the sweltering summer heat.",
@@ -2728,6 +3104,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 30070,
+    "name": "Everlight Lantern",
+    "desc": "Even the longest night will end. May its light guide you home.",
+    "icon": "T_Fashion_Back53",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
     "id": 31001,
     "name": "Victory Posture: Shore Leisure",
     "desc": "Changes your Victory Posture.",
@@ -2764,6 +3148,14 @@
     "name": "Victory Posture: Miserere Ground",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 31006,
+    "name": "Victory Posture: Snowfall Serenade",
+    "desc": "Changes your Victory Posture.",
+    "icon": "T_Fashion_SettlementAction_06",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -3296,6 +3688,62 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 40076,
+    "name": "Frostbell: Opaque White",
+    "desc": "With every gentle sway, it plays a nursery rhyme for a winter's night.",
+    "icon": "T_Fashion_Back48_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40077,
+    "name": "Frostbell: White Sakura",
+    "desc": "With every gentle sway, it plays a nursery rhyme for a winter's night.",
+    "icon": "T_Fashion_Back48_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40078,
+    "name": "Frostbell: Violet",
+    "desc": "With every gentle sway, it plays a nursery rhyme for a winter's night.",
+    "icon": "T_Fashion_Back48_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40079,
+    "name": "Frostbell: Rust Red",
+    "desc": "With every gentle sway, it plays a nursery rhyme for a winter's night.",
+    "icon": "T_Fashion_Back48_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40080,
+    "name": "Midnight Wings: Rust Red",
+    "desc": "A kiss from the night, resting upon your shoulder.",
+    "icon": "T_Fashion_Back47_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 40083,
+    "name": "Midnight Wings: Emerald",
+    "desc": "A kiss from the night, resting upon your shoulder.",
+    "icon": "T_Fashion_Back47_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 40084,
+    "name": "Moonlit Reflection",
+    "desc": "I send my longing to the bright moon above.",
+    "icon": "T_Fashion_Back50",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -3325,7 +3773,7 @@
     "desc": " ",
     "icon": "T_Fashion_Fx25",
     "rarity": 4,
-    "unlock": ""
+    "unlock": "Available through Myriad"
   },
   {
     "id": 60001,
@@ -3380,6 +3828,22 @@
     "name": "Floral Eternity: Violet",
     "desc": "Even flowers born from cursed soil may bloom forever.",
     "icon": "T_Fashion_Fx31_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70006,
+    "name": "Midnight Traces: White Sakura",
+    "desc": "Footsteps echo through the night... a beacon of hope, or a tempting snare?",
+    "icon": "T_Fashion_Fx32_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 70007,
+    "name": "Frostbloom: Mauve",
+    "desc": "Freeze the world solid.",
+    "icon": "T_Fashion_Fx35_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -3508,6 +3972,46 @@
     "name": "Floral Eternity: Gilt",
     "desc": "Even flowers born from cursed soil may bloom forever.",
     "icon": "T_Fashion_Fx31_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70061,
+    "name": "Midnight Traces: Gilt",
+    "desc": "Footsteps echo through the night... a beacon of hope, or a tempting snare?",
+    "icon": "T_Fashion_Fx32_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 70062,
+    "name": "Midnight Traces: Celeste",
+    "desc": "Footsteps echo through the night... a beacon of hope, or a tempting snare?",
+    "icon": "T_Fashion_Fx32_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 70071,
+    "name": "Frostbloom: Violet",
+    "desc": "Freeze the world solid.",
+    "icon": "T_Fashion_Fx35_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70072,
+    "name": "Frostbloom: Rust Red",
+    "desc": "Freeze the world solid.",
+    "icon": "T_Fashion_Fx35_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70073,
+    "name": "Frostbloom: Gilt",
+    "desc": "Freeze the world solid.",
+    "icon": "T_Fashion_Fx35_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -3668,6 +4172,38 @@
     "name": "Ethereal Sprite: White Sakura",
     "desc": "Sound the horn, and welcome the angels' descent.",
     "icon": "T_Fashion_Fx28_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80055,
+    "name": "Frostpetal Gyre: Violet",
+    "desc": "Beautiful fairy tales shimmer within eternal ice.",
+    "icon": "T_Fashion_Fx34_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80056,
+    "name": "Frostpetal Gyre: Gilt",
+    "desc": "Beautiful fairy tales shimmer within eternal ice.",
+    "icon": "T_Fashion_Fx34_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80057,
+    "name": "Frostpetal Gyre: Rust Red",
+    "desc": "Beautiful fairy tales shimmer within eternal ice.",
+    "icon": "T_Fashion_Fx34_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80058,
+    "name": "Frostpetal Gyre: Azure",
+    "desc": "Beautiful fairy tales shimmer within eternal ice.",
+    "icon": "T_Fashion_Fx34_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   }

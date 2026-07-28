@@ -20,6 +20,7 @@ end
 
 function GM_Command:Init_Command()
   self.Commands = {
+    Copymode = "Copymode",
     R = "ReloadAll",
     Hotfix = "Hotfix",
     GA = "GetAvatar",
@@ -56,8 +57,10 @@ function GM_Command:Init_Command()
     LowerArmScale = "LowerArmScale",
     HandScale = "HandScale",
     Debug = "Debug",
+    AiDebugLog = "AiDebugLog",
     UpdateVLM = "UpdateVLM",
     GlobalTimeDilation = "GlobalTimeDilation",
+    SetGlobalGravityDirection = "SetGlobalGravityDirection",
     TakePhotoAddWaterMark = "TakePhotoAddWaterMark",
     SetWeather = "SetWeather",
     EnterDungeon = "EnterDungeon",
@@ -111,7 +114,11 @@ function GM_Command:Init_Command()
     AYF = "AYFTEST",
     LGC = "LGCTEST",
     YLY = "YLYTEST",
+    PetRaceLottery = "PetRaceLottery",
     DungeonEventTest = "DungeonEventTest",
+    WVActivate = "WVActivate",
+    WVDeactivate = "WVDeactivate",
+    WVDeactivateAll = "WVDeactivateAll",
     SwitchSurvivalValueChange = "SwitchSurvivalValueChange",
     PrintLevelDebugInfo = "PrintLevelDebugInfo",
     PrintPlayerInfoOnScreen = "PrintPlayerInfoOnScreen",
@@ -142,6 +149,7 @@ function GM_Command:Init_Command()
     MoveTo = "MoveTo",
     Target = "Target",
     TargetAll = "TargetAll",
+    TargetGuardMech = "TargetGuardMech",
     MoveDebug = "MoveDebug",
     PerMonsterDebug = "PerMonsterDebug",
     StopMonsterSkill = "StopMonsterSkill",
@@ -175,6 +183,10 @@ function GM_Command:Init_Command()
     MaxES = "MaxES",
     TestGuildWarRanking = "TestGuildWarRanking",
     TestCoopRank = "TestCoopRank",
+    SE = "SimulateExhibit",
+    SimulateExhibit = "SimulateExhibit",
+    SEC = "SimulateExhibitClear",
+    SimulateExhibitClear = "SimulateExhibitClear",
     AddES = "AddES",
     God = "God",
     DefCoreGod = "DefCoreGod",
@@ -269,11 +281,8 @@ function GM_Command:Init_Command()
     RunStory = "RunStoryline",
     StopStory = "StopStoryline",
     ForbidAllStory = "ForbidAllStory",
-    RunQuest = "RunQuest",
-    SkipQuest = "SkipQuest",
-    SuccessAllQuest = "SuccessAllQuest",
     PrintStorylineInfo = "PrintStorylineInfo",
-    PrintStorylinesNeedRestartInfo = "PrintStorylinesNeedRestartInfo",
+    PrintQuestChainsNeedRestart = "PrintQuestChainsNeedRestart",
     RemoveAllImpression = "RemoveAllImpression",
     CIS = "CompleteImpressionSystem",
     PlayTalk = "PlayTalk",
@@ -420,6 +429,7 @@ function GM_Command:Init_Command()
     CompleteCondition = "CompleteCondition",
     CompleteSystemCondition = "CompleteSystemCondition",
     CompleteSystemConditionWithoutGuide = "CompleteSystemConditionWithoutGuide",
+    CompleteSystemConditionWithoutGuideAndBlockQuest = "CompleteSystemConditionWithoutGuideAndBlockQuest",
     ShowSystemUnlock = "ShowSystemUnlock",
     FakeUIUnlockConditionComplete = "FakeUIUnlockConditionComplete",
     MockAllSystemCondition = "MockAllSystemCondition",
@@ -514,6 +524,7 @@ function GM_Command:Init_Command()
     QuitGame = "QuitGame",
     SyncTest = "SyncTest",
     GM_SkipMonthCardPay = "GM_SkipMonthCardPay",
+    GM_ShowLoginPopup = "GM_ShowLoginPopup",
     GetWorldRegionEidByCreatorId = "GetWorldRegionEidByCreatorId",
     GetWorldRegionEidByManualItemId = "GetWorldRegionEidByManualItemId",
     GetWorldRegionEidByRandomRuleId = "GetWorldRegionEidByRandomRuleId",
@@ -521,6 +532,7 @@ function GM_Command:Init_Command()
     EnablePropEffect = "EnablePropEffect",
     ShowSequenceTime = "ShowSequenceTime",
     CommonActivitySettlement = "CommonActivitySettlement",
+    ToggleNewSettlementCamera = "ToggleNewSettlementCamera",
     EnterPaotai = "EnterPaotai",
     EnterEventDungeon = "EnterEventDungeon",
     PrintLevelbound = "PrintLevelbound",
@@ -563,6 +575,10 @@ function GM_Command:Init_Command()
     SoloTreasureBag = "SoloTreasureBag",
     OpenUIAndAddSoloTreaureScore = "OpenUIAndAddSoloTreaureScore",
     OpenUIMainSoloTreasure = "OpenUIMainSoloTreasure",
+    OpenUISoloTreasurePermanentIllustrated = "OpenUISoloTreasurePermanentIllustrated",
+    OpenUISoloTreasurePermanentLimitReward = "OpenUISoloTreasurePermanentLimitReward",
+    OpenUISoloTreasurePermanentLevel = "OpenUISoloTreasurePermanentLevel",
+    PermanentSoloTreasureDebugReset = "PermanentSoloTreasureDebugReset",
     OpenReturnWelcomeBanner = "OpenReturnWelcomeBanner",
     OpenSecPassWordUI = "OpenSecPassWordUI",
     VerifySecPassword = "VerifySecPassword",
@@ -574,7 +590,13 @@ function GM_Command:Init_Command()
     TestCoopCreate = "TestCoopCreate",
     GP = "GP",
     GenerateNpcLocation = "GenerateNpcLocation",
-    GuildInit = "GuildInit"
+    EnterRougePro = "EnterRougePro",
+    GMEnterTriggerBox = "GMEnterTriggerBox",
+    GMExitTriggerBox = "GMExitTriggerBox",
+    RougeProCmd = "RougeProCmd",
+    GuildInit = "GuildInit",
+    ShowNetPrint = "ShowNetPrint",
+    TestRaceInGame = "TestRaceInGame"
   }
 end
 
@@ -583,9 +605,44 @@ function GM_Command:GuildInit()
   GameMode:InitGuildConstruct()
 end
 
+function GM_Command:EnterRougePro(DungeonId, IsDSDungeon)
+  DungeonId = tonumber(DungeonId)
+  IsDSDungeon = tonumber(IsDSDungeon)
+  if not DungeonId then
+    return
+  end
+  local avatar = self:GetClientAvatar()
+  if avatar then
+    if 1 == IsDSDungeon then
+      avatar:EnterDungeon(DungeonId, CommonConst.DungeonNetMode.DedicatedServer)
+    else
+      avatar:EnterDungeon(DungeonId)
+    end
+  end
+end
+
 function GM_Command:OpenUIMainSoloTreasure(Mode)
   local EventId = 103014
   UIManager(self):LoadUINew("ActivitySoloTreasureMain", EventId, Mode)
+end
+
+function GM_Command:OpenUISoloTreasurePermanentIllustrated(Mode)
+  UIManager(self):LoadUINew("SoloTreasurePermanentIllustrated", Mode)
+end
+
+function GM_Command:OpenUISoloTreasurePermanentLimitReward()
+  local SoloTreasurePermanentDataModel = require("BluePrints.UI.UI_PC.SoloTreasure.SoloTreasurePermanentDataModel")
+  SoloTreasurePermanentDataModel:OpenReward()
+  DebugPrint("cjh @ OpenUISoloTreasurePermanentLimitReward")
+end
+
+function GM_Command:OpenUISoloTreasurePermanentLevel()
+  UIManager(self):LoadUINew("SoloTreasurePermanentMain")
+end
+
+function GM_Command:PermanentSoloTreasureDebugReset()
+  local PermanentSoloTreasureDataModel = require("BluePrints.UI.WBP.Activity.Widget.SoloTreasure.PermanentSoloTreasureDataModel")
+  PermanentSoloTreasureDataModel:PermanentSoloTreasureDataModelDebugReset()
 end
 
 function GM_Command:OpenAutoChessDeputeMonsterInfoUI(MissionID)
@@ -611,6 +668,74 @@ function GM_Command:LGCTEST(UUid)
   local TreasureDatas = InventoryController:GetTreasureDatasById(10111)
   local MainWidget = InventoryController.MainWidget
   MainWidget:BlockAllUIInput(false)
+end
+
+function GM_Command:WVActivate(EntryId)
+  if not EntryId then
+    print("[WeaponVerify] 请输入词条ID，例如：WVActivate 1")
+    return
+  end
+  EntryId = tonumber(EntryId)
+  local EntryData = DataMgr.WeaponVerifyEntry[EntryId]
+  if not EntryData then
+    print("[WeaponVerify] 词条不存在，ID=" .. tostring(EntryId))
+    return
+  end
+  local Battle = Battle(self.Player)
+  if not IsValid(Battle) then
+    print("[WeaponVerify] 请先进入战斗场景")
+    return
+  end
+  local GpIds = EntryData.GlobalPassives or {}
+  print("[WeaponVerify] 激活词条 " .. EntryId .. "，包含全局被动：" .. table.concat(GpIds, ", "))
+  for _, GpId in ipairs(GpIds) do
+    Battle:AddGlobalPassive(GpId, nil)
+  end
+  Battle:PrintCurrentGlobalPassives()
+end
+
+function GM_Command:WVDeactivate(EntryId)
+  if not EntryId then
+    print("[WeaponVerify] 请输入词条ID，例如：WVDeactivate 1")
+    return
+  end
+  EntryId = tonumber(EntryId)
+  local EntryData = DataMgr.WeaponVerifyEntry[EntryId]
+  if not EntryData then
+    print("[WeaponVerify] 词条不存在，ID=" .. tostring(EntryId))
+    return
+  end
+  local Battle = Battle(self.Player)
+  if not IsValid(Battle) then
+    print("[WeaponVerify] 请先进入战斗场景")
+    return
+  end
+  local GpIds = EntryData.GlobalPassives or {}
+  print("[WeaponVerify] 取消词条 " .. EntryId .. "，移除全局被动：" .. table.concat(GpIds, ", "))
+  for _, GpId in ipairs(GpIds) do
+    Battle:RemoveGlobalPassive(GpId, nil)
+  end
+  Battle:PrintCurrentGlobalPassives()
+end
+
+function GM_Command:WVDeactivateAll()
+  local Battle = Battle(self.Player)
+  if not IsValid(Battle) then
+    print("[WeaponVerify] 请先进入战斗场景")
+    return
+  end
+  local Count = 0
+  for _, EntryData in pairs(DataMgr.WeaponVerifyEntry) do
+    local GlobalPassives = EntryData.GlobalPassives or {}
+    for _, GpId in ipairs(GlobalPassives) do
+      Battle:RemoveGlobalPassive(GpId, nil)
+    end
+    if #GlobalPassives > 0 then
+      Count = Count + 1
+    end
+  end
+  print("[WeaponVerify] 已尝试移除所有词条，共 " .. Count .. " 条")
+  Battle:PrintCurrentGlobalPassives()
 end
 
 function GM_Command:GMUseCDK(CDK)
@@ -783,6 +908,16 @@ end
 function GM_Command:ResetEMCache()
   local EMCache = require("EMCache.EMCache")
   EMCache:Reset()
+end
+
+function GM_Command:ShowNetPrint()
+  if not self.Player or not self.Player.RPCComponent then
+    return
+  end
+  local bEnable = not GM_Command.bShowNetworkDebugPrint and true
+  GM_Command.bShowNetworkDebugPrint = bEnable
+  self.Player.RPCComponent:ServerRegisterNetworkDebugPrint(bEnable)
+  DebugPrint("ShowNetPrint bEnable", bEnable)
 end
 
 function GM_Command:ExecuteGM(WorldContextObject, FunctionName, Args, IsClient, IsDedicatedServer)
@@ -2043,16 +2178,54 @@ function GM_Command:LJLTEST(arg)
 end
 
 function GM_Command:YXDTEST(type)
-  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
-  GameMode:yxdtest("yxdtest")
+  local WorldCompositionSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.Player, UE4.UWorldCompositionSubSystem)
+  if not WorldCompositionSubSystem then
+    return
+  end
+  if "clear" == type then
+    local CustomLocations = WorldCompositionSubSystem:GetCustomStreamingLocations()
+    if CustomLocations then
+      print("========== CustomStreamingLocations Data ==========")
+      for i = 1, CustomLocations:Length() do
+        local Location = CustomLocations:Get(i)
+        if Location then
+          print(string.format("  [%d] Location: X=%.2f, Y=%.2f, Z=%.2f", i, Location.X, Location.Y, Location.Z))
+        end
+      end
+      print("================================================")
+    else
+      print("CustomStreamingLocations is nil or empty")
+    end
+    WorldCompositionSubSystem:ClearCustomStreamingLocations()
+    print("CustomStreamingLocations cleared")
+  else
+    local Key = "GM_TestLocation"
+    local Location = FVector(-196.26416, -1296.751343, -3750.818848)
+    local Location1 = FVector(-35094.207031, 5853, -6153)
+    WorldCompositionSubSystem:AddCustomStreamingLocation(Key, Location)
+    WorldCompositionSubSystem:AddCustomStreamingLocation("3123213", Location1)
+    print(string.format("Added CustomStreamingLocation: Key=%s, X=10000, Y=20000, Z=0", Key))
+  end
 end
 
-function GM_Command:YLYTEST(type)
-  local GameInstance = self:GetGameInstance()
+function GM_Command:YLYTEST(type, StaticCreatorId, Speed, TransTime)
+  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
   if "1" == type then
     UIManager(GWorld.GameInstance):LoadUINew("SoloTreasureEvacuation")
   elseif "2" == type then
-    DebugPrint("yly     gm")
+    UIManager(GWorld.GameInstance):LoadUINew("SoloTreasureHudTips01", {
+      [1] = 88101
+    })
+  elseif "3" == type then
+    UIManager(GWorld.GameInstance):LoadUINew("CoopSettlement")
+  elseif "4" == type then
+    DebugPrint("yly gm StaticCreatorId", StaticCreatorId)
+    GameMode:TriggerMechanism(tonumber(StaticCreatorId), 1800011)
+  elseif "5" == type then
+    local TargetSpeed = tonumber(Speed) or 0
+    local TransitionTime = tonumber(TransTime) or 0
+    DebugPrint("yly gm SetRollerCoasterSpeed", StaticCreatorId, "Speed =", TargetSpeed, "Time =", TransitionTime)
+    GameMode:SetRollerCoasterSpeed(tonumber(StaticCreatorId), TargetSpeed, TransitionTime)
   end
 end
 
@@ -2417,6 +2590,18 @@ end
 function GM_Command:Debug()
   _G.DrawDebugTest = not _G.DrawDebugTest
   Battle(self.Player).DrawDebugTest = _G.DrawDebugTest
+  if self.Player and self.Player.RPCComponent then
+    self.Player.RPCComponent:ServerSetBattleDrawDebugTest(_G.DrawDebugTest)
+  end
+end
+
+function GM_Command:AiDebugLog()
+  local bNew = not UE4.UEMLuaConst.GetAIDebugLog()
+  UE4.UEMLuaConst.SetAIDebugLog(bNew)
+  if self.Player and self.Player.RPCComponent then
+    self.Player.RPCComponent:ServerSetAIDebugLog(bNew)
+  end
+  DebugPrint("AIDebugLog =", tostring(bNew))
 end
 
 function GM_Command:ResetLoc()
@@ -2689,6 +2874,21 @@ function GM_Command:GlobalTimeDilation(val)
   UE4.UGameplayStatics.SetGlobalTimeDilation(self.Player, tonumber(val))
 end
 
+function GM_Command:SetGlobalGravityDirection(X, Y, Z)
+  local GravityX = tonumber(X)
+  local GravityY = tonumber(Y)
+  local GravityZ = tonumber(Z)
+  if not (GravityX and GravityY) or not GravityZ then
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self.Player)
+  if not GameMode then
+    return
+  end
+  local GravityDirection = UE4.FVector(GravityX, GravityY, GravityZ)
+  GameMode:SetGlobalGravityDirection(GravityDirection)
+end
+
 function GM_Command:TakePhotoAddWaterMark(bEnable)
   Const.bTakePhotoAddWatermark = tonumber(bEnable) > 0
 end
@@ -2748,6 +2948,18 @@ function GM_Command:Target(...)
     return
   end
   self.Monster:BBSetTarget(Battle(self.Player):GetCharacter(self.Player.Eid))
+end
+
+function GM_Command:TargetGuardMech(eid)
+  if self:HasTargetMonster() == false then
+    return
+  end
+  local Entity = Battle(self.Player):GetEntity(tonumber(eid))
+  if not Entity then
+    GWorld.logger.error("yly@  找不到GuardMech")
+    return
+  end
+  self.Monster:BBSetTarget(Entity)
 end
 
 function GM_Command:TargetAll(...)
@@ -2883,8 +3095,8 @@ function GM_Command:TestStory1(path, QuestId, NodeId)
   self:RunStoryline("test_czc1.story")
 end
 
-function GM_Command:RunStoryline(path, QuestId, NodeId)
-  GWorld.StoryMgr:RunStory(path, QuestId, NodeId)
+function GM_Command:RunStoryline(path)
+  GWorld.StoryMgr:RunStory(path)
 end
 
 function GM_Command:StopStoryline(QuestChainId)
@@ -2893,17 +3105,10 @@ function GM_Command:StopStoryline(QuestChainId)
     UIManager(GWorld.GameInstance):ShowError(6001)
     return
   end
-  if GWorld.StoryMgr:IsRunningStoryline(QuestChainInfo.StoryPath) then
-    GWorld.StoryMgr:StopStoryline(QuestChainInfo.StoryPath)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:StopClientQuestChainStoryline(QuestChainId)
   end
-end
-
-function GM_Command:RunQuest(QuestId)
-  GWorld.StoryMgr:RunQuest(tonumber(QuestId))
-end
-
-function GM_Command:SkipQuest(QuestId)
-  GWorld.StoryMgr:CompleteQuest(tonumber(QuestId))
 end
 
 function GM_Command:RemoveAllImpression()
@@ -2946,12 +3151,8 @@ function GM_Command:FinishImpressionTalk(TalkTriggerId)
     printError()
     return
   end
-  Avatar:SetTalkTriggerComplete_New(TalkTriggerId, {
-    self,
-    function()
-      DebugPrint("Log: Impression Talk Finished", TalkTriggerId)
-    end
-  })
+  local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
+  ImpressionController:SetTalkTriggerComplete(TalkTriggerId)
 end
 
 function GM_Command:ImpressionCheckByEnumId(DialogueChain, CurrentDialogueId, TalkTriggerId, RegionId)
@@ -2972,11 +3173,13 @@ function GM_Command:ImpressionCheckByEnumId(DialogueChain, CurrentDialogueId, Ta
   CurrentDialogueId = CurrentDialogueId or 7411482301
   TalkTriggerId = TalkTriggerId or 74114730
   RegionId = RegionId or 1011
-  if Avatar:IsImpressionCheckSuccess(CurrentDialogueId) then
+  local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
+  if ImpressionModel:IsImpressionCheckSuccess(CurrentDialogueId) then
     ErrorCode = "对应的选项已被记录，无法重复选择"
     printError()
   end
-  Avatar:ImpressionCheckByEnumId_New(DialogueChain, CurrentDialogueId, TalkTriggerId, RegionId)
+  local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
+  ImpressionController:TryRequestCheck(DialogueChain, CurrentDialogueId, TalkTriggerId, RegionId)
 end
 
 function GM_Command:ImpressionAddByEnumId(DialogueChain, CurrentDialogueId)
@@ -2996,12 +3199,14 @@ function GM_Command:ImpressionAddByEnumId(DialogueChain, CurrentDialogueId)
   end
   DialogueChain = DialogueChain or {741148229}
   CurrentDialogueId = CurrentDialogueId or 7411482291
-  if Avatar:IsImpressionCheckSuccess(CurrentDialogueId) then
+  local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
+  if ImpressionModel:IsImpressionCheckSuccess(CurrentDialogueId) then
     ErrorCode = "对应的选项已被记录，无法重复选择"
     printError()
     return
   end
-  Avatar:ImpressionAddByEnumId_New(DialogueChain, CurrentDialogueId)
+  local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
+  ImpressionController:TryRequestPlus(DialogueChain, CurrentDialogueId)
 end
 
 function GM_Command:CompleteDialogueByText(Text)
@@ -3071,7 +3276,10 @@ function GM_Command:PlayTalk(FindKey, bIncludeFilterFiles)
       DebugPrint("PlayTalk执行结束")
     end)
   else
-    UE4.UPlayTalkAsyncAction.PlayTalk(GWorld.GameInstance, tonumber(FindKey), nil)
+    local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(GWorld.GameInstance, tonumber(FindKey), nil)
+    if IsValid(TalkAsyncAction) then
+      TalkAsyncAction:Activate()
+    end
   end
 end
 
@@ -4201,7 +4409,7 @@ end
 
 function GM_Command:Reconnect()
   local NetworkManager = self:GetGameInstance():GetNetworkManager()
-  NetworkManager:TestAck()
+  NetworkManager:TestReconnect()
 end
 
 function GM_Command:TestNetworkFailure(FailureType)
@@ -4564,16 +4772,23 @@ function GM_Command:ShowCacheUseCountSkill()
   DebugPrint("CountSkillUsedTime->----------------------------")
 end
 
-function GM_Command:SuccessAllQuest()
-  GWorld.StoryMgr:SuccessAllQuest()
-end
-
 function GM_Command:PrintStorylineInfo()
+  DebugPrint("---------------------- QuestMgr Start ----------------------")
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:PrintClientQuestChainStorylineInfo()
+  end
+  DebugPrint("---------------------- QuestMgr End ------------------------")
+  DebugPrint("---------------------- StoryMgr Start ----------------------")
   GWorld.StoryMgr:PrintStorylineInfo()
+  DebugPrint("---------------------- StoryMgr End ------------------------")
 end
 
-function GM_Command:PrintStorylinesNeedRestartInfo()
-  GWorld.StoryMgr:PrintStorylinesNeedRestartInfo()
+function GM_Command:PrintQuestChainsNeedRestart()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:PrintQuestChainsNeedRestart()
+  end
 end
 
 function GM_Command:ForbidAllStory(bForbid)
@@ -4587,6 +4802,10 @@ function GM_Command:ForbidAllStory(bForbid)
   if bShouldForbid > 0 then
     GWorld.StoryMgr:DisableStory()
     GWorld.StoryMgr:StopAllStoryline()
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:StopAllClientQuestChainStoryline()
+    end
     ScreenPrint("All story triggers disabled")
   else
     GWorld.StoryMgr:EnableStory()
@@ -5247,7 +5466,8 @@ function GM_Command:CompleteImpressionSystem(TalkTriggerId, State)
     printError()
     return
   end
-  Avatar:SetTalkTriggerComplete_New(TalkTriggerId)
+  local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
+  ImpressionController:SetTalkTriggerComplete(TalkTriggerId)
 end
 
 function GM_Command:SystemGuideSwitch(val)
@@ -6727,6 +6947,13 @@ function GM_Command:DetectiveMinigame(type, Id)
   end
 end
 
+function GM_Command:ToggleNewSettlementCamera()
+  local GameInstance = GWorld.GameInstance
+  GameInstance.UseNewSettlementCamera = not GameInstance.UseNewSettlementCamera
+  DebugPrint("NewSettlementCamera:", GameInstance.UseNewSettlementCamera and "开" or "关")
+  ScreenPrint("NewSettlementCamera: " .. (GameInstance.UseNewSettlementCamera and "开" or "关"))
+end
+
 function GM_Command:CommonActivitySettlement()
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   local Params = {
@@ -7045,15 +7272,975 @@ function GM_Command:LHQTEST(InNpcId, InFlag)
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
   if GameState then
     local TargetNpc = GameState.NpcCharacterMap:FindRef(npcId)
-    local AssetPath1 = "AnimMontage'/Game/Asset/Char/Player/Char009_Xibi/Animation/Montage/Interactive/MechInteractive/Xibi_Interactive_Sit_F_Montage.Xibi_Interactive_Sit_F_Montage'"
+    local AssetPath1 = "AnimMontage'/Game/Asset/Char/Npc/Npc_Custom/CM_Qingnian/Animation/Montage/Interactive/Npc_Qingnian_F_Emo_Disagree_Montage.Npc_Qingnian_F_Emo_Disagree_Montage'"
     local AnimationAsset1 = LoadObject(AssetPath1)
-    local AssetPath2 = "AnimMontage'/Game/Asset/Char/Player/Char010_Saiqi/Animation/Montage/Interactive/MechInteractive/Saiqi_Interactive_Sit_F_Montage.Saiqi_Interactive_Sit_F_Montage'"
-    local AnimationAsset2 = LoadObject(AssetPath1)
-    if TargetNpc and TargetNpc.NpcAnimInstance and 1 == flag then
-      TargetNpc:RotateOffset(60)
+    local AssetPath2 = "AnimMontage'/Game/Asset/Char/Player/Char032_Suyi/Animation/Montage/Interactive/Suyi_Story_Walkwithbird_Montage.Suyi_Story_Walkwithbird_Montage'"
+    local AnimationAsset2 = LoadObject(AssetPath2)
+    local AssetPath3 = "AnimMontage'/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Locomotion/Heitao_WalkRotation_Montage.Heitao_WalkRotation_Montage'"
+    local AnimationAsset3 = LoadObject(AssetPath3)
+    local AssetPath4 = "AnimMontage'/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Sequence/Locomotion/Heitao_WalkTurn.Heitao_WalkTurn'"
+    local AnimationAsset4 = LoadObject(AssetPath4)
+    local AnimationAsset2 = LoadObject(AssetPath2)
+    local Spline = GameState.PetRaceSplineMaps:FindRef(InNpcId)
+    if 1 == flag then
+      if Spline then
+        Spline:StartRaceLottery()
+      end
+    elseif 0 == flag then
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        Avatar:RaceLotteryQueryRandomRaceId()
+      end
+    elseif 3 == flag then
+      Spline:SpawnCelebrateFX()
+    elseif 4 == flag then
+      Spline:DestoryCelebrateFX()
     else
-      TargetNpc:RotateOffset(-120)
+      Spline:GMEndRaceLottery()
     end
+  end
+end
+
+function GM_Command:PetRaceLottery(RaceId, InStr, PetUnitId, InFlag)
+  local TargetPetId = tonumber(PetUnitId)
+  local TargetRaceId = tonumber(RaceId)
+  local TargetFlag = tonumber(InFlag)
+  local StrNumber = tonumber(InStr)
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local Spline = GameState.PetRaceSplineMaps:FindRef(TargetRaceId)
+  if 1 == StrNumber then
+    if Spline then
+      Spline:GMStartPetRaceProcess()
+    end
+  elseif 0 == StrNumber then
+    self:GMPetRaceStartProgress()
+  elseif 3 == StrNumber then
+    Spline:SpawnCelebrateFX()
+  elseif 4 == StrNumber then
+    Spline:SetCameraUpdateType(PetUnitId, 1 == TargetFlag)
+  elseif 2 == StrNumber then
+    Spline:GMEndRaceLottery()
+  elseif 5 == StrNumber then
+    Spline:GMSetRaceTimes(TargetPetId)
+  elseif 6 == StrNumber then
+    self:GMStartPetRace()
+  end
+end
+
+function GM_Command:BuildTestPetRaceData()
+  local PetRacePlayerIds = {
+    4013,
+    4023,
+    4033,
+    4043,
+    4053,
+    4063,
+    4073,
+    4083,
+    4093,
+    4113,
+    4123,
+    4133,
+    4143,
+    4153,
+    4163,
+    4913,
+    4923,
+    4931
+  }
+  local PetRaceSpeedInfo = {
+    [4013] = 2.2007175935262,
+    [4023] = 1.3357772592175,
+    [4033] = 4.5678426349906,
+    [4043] = 1.3667826418815,
+    [4053] = 2.6945339905985,
+    [4063] = 1.7264321786704,
+    [4073] = 1.883867289398,
+    [4083] = 1.658853578739,
+    [4093] = 4.64108155313,
+    [4113] = 3.207106355304,
+    [4123] = 3.3101702646426,
+    [4133] = 5.9845525290361,
+    [4143] = 1.154614261225,
+    [4153] = 4.2476565364135,
+    [4163] = 0.63353991328783,
+    [4913] = 1.5118579103253,
+    [4923] = 4.7829686617563,
+    [4931] = 3.7278616907607
+  }
+  local PetRaceProcessRecordMap = {
+    [4013] = {
+      {
+        5,
+        5001,
+        -1.1003587967631
+      },
+      {
+        10,
+        5001,
+        -1.1003587967631
+      },
+      {
+        15,
+        4001,
+        0.91329780131335
+      },
+      {
+        20,
+        3001,
+        1.3204305561157
+      },
+      {
+        25,
+        3001,
+        1.3204305561157
+      },
+      {
+        30,
+        3002,
+        2.2007175935262
+      }
+    },
+    [4023] = {
+      {
+        1,
+        1001,
+        0.66788862960875
+      },
+      {
+        6,
+        1001,
+        0.66788862960875
+      },
+      {
+        11,
+        3001,
+        0.8014663555305
+      },
+      {
+        16,
+        1001,
+        0.66788862960875
+      },
+      {
+        21,
+        1001,
+        0.66788862960875
+      },
+      {
+        26,
+        1001,
+        0.66788862960875
+      },
+      {
+        30,
+        3002,
+        1.3357772592175
+      }
+    },
+    [4033] = {
+      {
+        5,
+        1001,
+        2.2839213174953
+      },
+      {
+        10,
+        1001,
+        2.2839213174953
+      },
+      {
+        15,
+        3001,
+        2.7407055809944
+      },
+      {
+        20,
+        4001,
+        1.8956546935211
+      },
+      {
+        25,
+        1001,
+        2.2839213174953
+      },
+      {
+        30,
+        3002,
+        4.5678426349906
+      }
+    },
+    [4043] = {
+      {
+        1,
+        1001,
+        0.68339132094077
+      },
+      {
+        6,
+        1001,
+        0.68339132094077
+      },
+      {
+        11,
+        1001,
+        0.68339132094077
+      },
+      {
+        16,
+        3001,
+        0.82006958512892
+      },
+      {
+        21,
+        1001,
+        0.68339132094077
+      },
+      {
+        26,
+        4001,
+        0.56721479638084
+      },
+      {
+        30,
+        3002,
+        1.3667826418815
+      }
+    },
+    [4053] = {
+      {
+        1,
+        1001,
+        1.3472669952992
+      },
+      {
+        6,
+        1001,
+        1.3472669952992
+      },
+      {
+        11,
+        1001,
+        1.3472669952992
+      },
+      {
+        16,
+        1001,
+        1.3472669952992
+      },
+      {
+        21,
+        3001,
+        1.6167203943591
+      },
+      {
+        26,
+        2001,
+        0
+      },
+      {
+        30,
+        3002,
+        2.6945339905985
+      }
+    },
+    [4063] = {
+      {
+        2,
+        3001,
+        1.0358593072022
+      },
+      {
+        7,
+        1001,
+        0.86321608933521
+      },
+      {
+        12,
+        3001,
+        1.0358593072022
+      },
+      {
+        17,
+        1001,
+        0.86321608933521
+      },
+      {
+        22,
+        1001,
+        0.86321608933521
+      },
+      {
+        27,
+        1001,
+        0.86321608933521
+      },
+      {
+        30,
+        3002,
+        1.7264321786704
+      }
+    },
+    [4073] = {
+      {
+        5,
+        4001,
+        0.78180492510017
+      },
+      {
+        10,
+        2001,
+        0
+      },
+      {
+        15,
+        4001,
+        0.78180492510017
+      },
+      {
+        20,
+        2001,
+        0
+      },
+      {
+        25,
+        1001,
+        0.94193364469899
+      },
+      {
+        30,
+        3002,
+        1.883867289398
+      }
+    },
+    [4083] = {
+      {
+        5,
+        3001,
+        0.99531214724339
+      },
+      {
+        10,
+        5001,
+        -0.82942678936949
+      },
+      {
+        15,
+        3001,
+        0.99531214724339
+      },
+      {
+        20,
+        3001,
+        0.99531214724339
+      },
+      {
+        25,
+        3001,
+        0.99531214724339
+      },
+      {
+        30,
+        3002,
+        1.658853578739
+      }
+    },
+    [4093] = {
+      {
+        5,
+        4001,
+        4.64108155313
+      },
+      {
+        10,
+        3001,
+        6.7099974262121
+      },
+      {
+        15,
+        4001,
+        4.64108155313
+      }
+    },
+    [4113] = {
+      {
+        5,
+        1001,
+        1.603553177652
+      },
+      {
+        10,
+        1001,
+        1.603553177652
+      },
+      {
+        15,
+        4001,
+        1.3309491374511
+      },
+      {
+        20,
+        4001,
+        1.3309491374511
+      },
+      {
+        25,
+        4001,
+        1.3309491374511
+      },
+      {
+        30,
+        3002,
+        3.207106355304
+      }
+    },
+    [4123] = {
+      {
+        1,
+        1001,
+        1.6550851323213
+      },
+      {
+        6,
+        3001,
+        1.9861021587856
+      },
+      {
+        11,
+        1001,
+        1.6550851323213
+      },
+      {
+        16,
+        1001,
+        1.6550851323213
+      },
+      {
+        21,
+        1001,
+        1.6550851323213
+      },
+      {
+        26,
+        3001,
+        1.9861021587856
+      },
+      {
+        30,
+        3002,
+        3.3101702646426
+      }
+    },
+    [4133] = {
+      {
+        1,
+        3001,
+        3.5907315174216
+      },
+      {
+        6,
+        1001,
+        2.992276264518
+      },
+      {
+        11,
+        1001,
+        2.992276264518
+      },
+      {
+        16,
+        1001,
+        2.992276264518
+      },
+      {
+        21,
+        1001,
+        2.992276264518
+      },
+      {
+        26,
+        1001,
+        2.992276264518
+      },
+      {
+        30,
+        3002,
+        5.9845525290361
+      }
+    },
+    [4143] = {
+      {
+        1,
+        1001,
+        0.5773071306125
+      },
+      {
+        6,
+        1001,
+        0.5773071306125
+      },
+      {
+        11,
+        1001,
+        0.5773071306125
+      },
+      {
+        16,
+        1001,
+        0.5773071306125
+      },
+      {
+        21,
+        1001,
+        0.5773071306125
+      },
+      {
+        26,
+        1001,
+        0.5773071306125
+      },
+      {
+        30,
+        3002,
+        1.154614261225
+      }
+    },
+    [4153] = {
+      {
+        5,
+        4001,
+        2.937962437686
+      },
+      {
+        10,
+        3001,
+        4.2476565364135
+      },
+      {
+        15,
+        1001,
+        3.5397137803446
+      },
+      {
+        20,
+        1001,
+        3.5397137803446
+      },
+      {
+        25,
+        3001,
+        4.2476565364135
+      }
+    },
+    [4163] = {
+      {
+        2,
+        1001,
+        0.31676995664392
+      },
+      {
+        7,
+        1001,
+        0.31676995664392
+      },
+      {
+        12,
+        4001,
+        0.26291906401445
+      },
+      {
+        17,
+        1001,
+        0.31676995664392
+      },
+      {
+        22,
+        1001,
+        0.31676995664392
+      },
+      {
+        27,
+        3001,
+        0.3801239479727
+      },
+      {
+        30,
+        3002,
+        0.63353991328783
+      }
+    },
+    [4913] = {
+      {
+        5,
+        3001,
+        0.90711474619516
+      },
+      {
+        10,
+        4001,
+        0.62742103278498
+      },
+      {
+        15,
+        3001,
+        0.90711474619516
+      },
+      {
+        20,
+        3001,
+        0.90711474619516
+      },
+      {
+        25,
+        4001,
+        0.62742103278498
+      },
+      {
+        30,
+        3002,
+        1.5118579103253
+      }
+    },
+    [4923] = {
+      {
+        1,
+        1001,
+        2.3914843308781
+      },
+      {
+        6,
+        1001,
+        2.3914843308781
+      },
+      {
+        11,
+        1001,
+        2.3914843308781
+      },
+      {
+        16,
+        2001,
+        0
+      },
+      {
+        21,
+        1001,
+        2.3914843308781
+      },
+      {
+        26,
+        1001,
+        2.3914843308781
+      },
+      {
+        30,
+        3002,
+        4.7829686617563
+      }
+    },
+    [4931] = {
+      {
+        1,
+        3001,
+        2.2367170144564
+      },
+      {
+        6,
+        1001,
+        1.8639308453804
+      },
+      {
+        11,
+        1001,
+        1.8639308453804
+      },
+      {
+        16,
+        1001,
+        1.8639308453804
+      },
+      {
+        21,
+        1001,
+        1.8639308453804
+      },
+      {
+        26,
+        4001,
+        1.5470626016657
+      },
+      {
+        30,
+        3002,
+        3.7278616907607
+      }
+    }
+  }
+  local TotalPlayerList = {
+    {
+      PlayerId = 4093,
+      RumorList = {
+        1004,
+        1006,
+        1003
+      },
+      TotalCostSecond = 19
+    },
+    {
+      PlayerId = 4153,
+      RumorList = {
+        1001,
+        1003,
+        1006
+      },
+      TotalCostSecond = 28
+    },
+    {
+      PlayerId = 4133,
+      RumorList = {
+        1001,
+        2002,
+        1006
+      },
+      TotalCostSecond = 32
+    },
+    {
+      PlayerId = 4033,
+      RumorList = {
+        2002,
+        2001,
+        1002
+      },
+      TotalCostSecond = 37
+    },
+    {
+      PlayerId = 4923,
+      RumorList = {
+        1003,
+        1002,
+        2001
+      },
+      TotalCostSecond = 39
+    },
+    {
+      PlayerId = 4931,
+      RumorList = {
+        1004,
+        1002,
+        2001
+      },
+      TotalCostSecond = 42
+    },
+    {
+      PlayerId = 4123,
+      RumorList = {
+        1001,
+        2001,
+        2002
+      },
+      TotalCostSecond = 45
+    },
+    {
+      PlayerId = 4113,
+      RumorList = {
+        1003,
+        2002,
+        1004
+      },
+      TotalCostSecond = 48
+    },
+    {
+      PlayerId = 4053,
+      RumorList = {
+        1004,
+        2002,
+        2003
+      },
+      TotalCostSecond = 54
+    },
+    {
+      PlayerId = 4013,
+      RumorList = {
+        2005,
+        1001,
+        1002
+      },
+      TotalCostSecond = 70
+    },
+    {
+      PlayerId = 4063,
+      RumorList = {
+        1003,
+        2001,
+        1002
+      },
+      TotalCostSecond = 72
+    },
+    {
+      PlayerId = 4073,
+      RumorList = {
+        2003,
+        2002,
+        2005
+      },
+      TotalCostSecond = 74
+    },
+    {
+      PlayerId = 4083,
+      RumorList = {
+        1001,
+        2002,
+        2001
+      },
+      TotalCostSecond = 79
+    },
+    {
+      PlayerId = 4913,
+      RumorList = {
+        1003,
+        1005,
+        1001
+      },
+      TotalCostSecond = 81
+    },
+    {
+      PlayerId = 4043,
+      RumorList = {
+        2001,
+        2003,
+        1005
+      },
+      TotalCostSecond = 89
+    },
+    {
+      PlayerId = 4023,
+      RumorList = {
+        1001,
+        2003,
+        1003
+      },
+      TotalCostSecond = 90
+    },
+    {
+      PlayerId = 4143,
+      RumorList = {
+        2006,
+        2002,
+        2004
+      },
+      TotalCostSecond = 102
+    },
+    {
+      PlayerId = 4163,
+      RumorList = {
+        2002,
+        1001,
+        2001
+      },
+      TotalCostSecond = 173
+    }
+  }
+  local CopyArray
+  
+  function CopyArray(Array)
+    local NewArray = {}
+    for Index, Value in ipairs(Array) do
+      if type(Value) == "table" then
+        NewArray[Index] = CopyArray(Value)
+      else
+        NewArray[Index] = Value
+      end
+    end
+    return NewArray
+  end
+  
+  local function BuildTrackRange(PetId, SampleNum)
+    local Ranges = {}
+    local PetBias = (PetId % 17 - 8) * 0.07
+    for Index = 1, SampleNum do
+      local WaveBias = (Index % 9 - 4) * 0.045
+      Ranges[Index] = PetBias + WaveBias
+    end
+    return Ranges
+  end
+  
+  local function BuildRaceTrackData(SampleNum)
+    local MockTrackData = {
+      RaceTrackData = {},
+      SpeedInfp = {},
+      TotalSecondNum = 173,
+      PlayerList = {
+        4013,
+        4023,
+        4033,
+        4043,
+        4053,
+        4063
+      }
+    }
+    for _, PetId in ipairs(PetRacePlayerIds) do
+      MockTrackData.RaceTrackData[tostring(PetId)] = BuildTrackRange(PetId, SampleNum)
+      MockTrackData.SpeedInfp[PetId] = PetRaceSpeedInfo[PetId]
+    end
+    return MockTrackData
+  end
+  
+  local function BuildRaceProcessRecord(PetId)
+    local Record = PetRaceProcessRecordMap[PetId]
+    if Record then
+      return CopyArray(Record)
+    end
+    local Speed = PetRaceSpeedInfo[PetId] or 1
+    return {
+      {
+        5,
+        1001,
+        Speed * 0.5
+      },
+      {
+        10,
+        3001,
+        Speed * 0.6
+      },
+      {
+        15,
+        4001,
+        Speed * 0.4
+      },
+      {
+        20,
+        1001,
+        Speed * 0.5
+      },
+      {
+        25,
+        3001,
+        Speed * 0.6
+      },
+      {
+        30,
+        3002,
+        Speed
+      }
+    }
+  end
+  
+  local RaceProcessRecordMap = {}
+  for _, PetId in ipairs(PetRacePlayerIds) do
+    RaceProcessRecordMap[PetId] = BuildRaceProcessRecord(PetId)
+  end
+end
+
+function GM_Command:GMPetRaceStartProgress()
+  local GuideCountDownFloat = UIManager(self):GetUIObj("GuideCountDown")
+  GuideCountDownFloat = GuideCountDownFloat or UIManager(self):LoadUINew("GuideCountDown")
+  GuideCountDownFloat:InitStartPetRaceCountDown(4, false)
+end
+
+function GM_Command:GMStartPetRace()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:RaceLotteryQueryRandomRaceId()
   end
 end
 
@@ -7131,6 +8318,36 @@ function GM_Command:GM_SkipMonthCardPay()
       Avatar:BuyMonthlyCard()
     end
   end
+end
+
+function GM_Command:GM_ShowLoginPopup(LoginPopId1, LoginPopId2, LoginPopId3)
+  DebugPrint("GM_ShowLoginPopup")
+  local LoginPopUpModel = require("BluePrints.UI.WBP.Activity.Widget.AdvertisingPopUp.LoginPopUpModel")
+  local LoginPopUp = DataMgr.LoginPopUp or {}
+  local NeedShowList = {}
+  local params = {
+    LoginPopId1,
+    LoginPopId2,
+    LoginPopId3
+  }
+  for i = 1, 3 do
+    local PopId = params[i]
+    if PopId then
+      local LoginPopId = tonumber(PopId) or PopId
+      if LoginPopUp[LoginPopId] then
+        table.insert(NeedShowList, LoginPopUp[LoginPopId])
+      else
+        ScreenPrint("参数错误，LoginPopId " .. tostring(LoginPopId) .. " 没找到")
+        return
+      end
+    end
+  end
+  if 0 == #NeedShowList then
+    ScreenPrint("参数错误，没有可用的LoginPopId")
+    return
+  end
+  local PlayerCharacter = GWorld:GetMainPlayer()
+  UIManager(PlayerCharacter):LoadUINew("AdvertisingPopUpMain", NeedShowList)
 end
 
 function GM_Command:DungeonDoubleCost(bDouble)
@@ -7419,6 +8636,9 @@ end
 
 function GM_Command:RandomChar()
   local A = GWorld:GetAvatar()
+  if not A then
+    return
+  end
   A:ChangeBattleWheel(1, 1, 41022)
   A:ChangeBattleWheel(1, 2, 41017)
   A:ChangeBattleWheel(1, 3, 49996)
@@ -7464,33 +8684,65 @@ function GM_Command:RandomChar()
     return Keys[RandomIndex]
   end
   
-  local Uuid = RandomKey(A.Chars)
+  local AvatarChars = A.Chars or {}
+  local AvatarWeapons = A.Weapons or {}
+  local AvatarPets = A.Pets or {}
+  local OwnedWeaponSkins = A.OwnedWeaponSkins or {}
+  local CharAccessorys = A.CharAccessorys or {}
+  local WeaponAccessorys = A.WeaponAccessorys or {}
+  local CommonChars = A.CommonChars or {}
+  local WeaponSkins = DataMgr.WeaponSkin or {}
+  local CharAccessories = DataMgr.CharAccessory or {}
+  local SwatchData = DataMgr.Swatch or {}
+  local Uuid = RandomKey(AvatarChars)
+  if not Uuid then
+    return
+  end
+  local CharInfo = AvatarChars[Uuid]
+  if not CharInfo then
+    return
+  end
   A:SwitchCurrentChar(Uuid)
   local Weapons = {}
-  for k, v in pairs(A.Weapons) do
-    Weapons[v.WeaponId] = k
+  for WeaponUuid, WeaponInfo in pairs(AvatarWeapons) do
+    if WeaponInfo and WeaponInfo.WeaponId then
+      Weapons[WeaponInfo.WeaponId] = WeaponUuid
+    end
   end
   local MeleeWeaponUuid = RandomValue(Weapons, function(k)
-    return A.Weapons[k]:IsMelee()
+    local Weapon = AvatarWeapons[k]
+    return Weapon and Weapon:IsMelee()
   end)
-  A:SwitchWeapon(CommonConst.WeaponType.MeleeWeapon, MeleeWeaponUuid)
+  if MeleeWeaponUuid then
+    A:SwitchWeapon(CommonConst.WeaponType.MeleeWeapon, MeleeWeaponUuid)
+  end
   local RangedWeaponUuid = RandomValue(Weapons, function(k)
-    return A.Weapons[k]:IsRanged()
+    local Weapon = AvatarWeapons[k]
+    return Weapon and Weapon:IsRanged()
   end)
-  A:SwitchWeapon(CommonConst.WeaponType.RangedWeapon, RangedWeaponUuid)
-  local PetUniqueID = RandomKey(A.Pets)
-  A:EquipPet(PetUniqueID)
-  local CharId = A.Chars[Uuid].CharId
+  if RangedWeaponUuid then
+    A:SwitchWeapon(CommonConst.WeaponType.RangedWeapon, RangedWeaponUuid)
+  end
+  local PetUniqueID = RandomKey(AvatarPets)
+  if PetUniqueID then
+    A:EquipPet(PetUniqueID)
+  end
+  local CharId = CharInfo.CharId
+  if not CharId then
+    return
+  end
   
   local function ChangeSkin(...)
-    local CommonChar = A.CommonChars[CharId]
-    local SkinId = RandomKey(CommonChar.OwnedSkins)
+    local CommonChar = CommonChars[CharId]
+    local OwnedSkins = CommonChar and CommonChar.OwnedSkins
+    local SkinId = OwnedSkins and RandomKey(OwnedSkins)
     if SkinId then
       A:ChangeCharAppearanceSkin(Uuid, 1, SkinId)
     end
     for k, v in pairs(CommonConst.CharAccessoryTypes) do
-      local AccessoryId = RandomValue(A.CharAccessorys, function(AccessoryId)
-        return DataMgr.CharAccessory[AccessoryId].AccessoryType == k
+      local AccessoryId = RandomValue(CharAccessorys, function(CurAccessoryId)
+        local AccessoryData = CharAccessories[CurAccessoryId]
+        return AccessoryData and AccessoryData.AccessoryType == k
       end)
       if AccessoryId then
         A:SetCharAppearanceAccessory(Uuid, 1, AccessoryId)
@@ -7499,42 +8751,54 @@ function GM_Command:RandomChar()
     if SkinId then
       local NewColorWithPart = {}
       for i = 1, DataMgr.GlobalConstant.CharColorPart.ConstantValue do
-        NewColorWithPart[i] = RandomKey(DataMgr.Swatch)
+        NewColorWithPart[i] = RandomKey(SwatchData)
       end
       A:ChangeCharSkinColors(SkinId, NewColorWithPart, 1)
     end
-    local MeleeWeapon = A.Weapons[MeleeWeaponUuid]
-    local SkinId = RandomKey(A.OwnedWeaponSkins, function(SkinId)
-      local Skin = DataMgr.WeaponSkin[SkinId]
-      return Skin.ApplicationType == MeleeWeapon.SkinApplicationType
+    local MeleeWeapon = MeleeWeaponUuid and AvatarWeapons[MeleeWeaponUuid]
+    local SkinId = MeleeWeapon and RandomKey(OwnedWeaponSkins, function(CurSkinId)
+      local Skin = WeaponSkins[CurSkinId]
+      return Skin and Skin.ApplicationType == MeleeWeapon.SkinApplicationType
     end)
-    SkinId = SkinId or MeleeWeapon.WeaponId
-    A:ChangeWeaponAppearanceSkin(MeleeWeaponUuid, SkinId)
-    local AccessoryId = RandomValue(A.WeaponAccessorys)
-    if AccessoryId then
+    if MeleeWeapon and not SkinId then
+      SkinId = MeleeWeapon.WeaponId
+    end
+    if MeleeWeaponUuid and SkinId then
+      A:ChangeWeaponAppearanceSkin(MeleeWeaponUuid, SkinId)
+    end
+    local AccessoryId = RandomValue(WeaponAccessorys)
+    if MeleeWeaponUuid and AccessoryId then
       A:ChangeWeaponAppearanceAccessory(MeleeWeaponUuid, AccessoryId)
     end
     local NewColorWithPart = {}
     for i = 1, DataMgr.GlobalConstant.WeaponColorPart.ConstantValue do
-      NewColorWithPart[i] = RandomKey(DataMgr.Swatch)
+      NewColorWithPart[i] = RandomKey(SwatchData)
     end
-    A:ChangeWeaponSkinColors(MeleeWeaponUuid, SkinId, 1, NewColorWithPart)
-    local RangedWeapon = A.Weapons[RangedWeaponUuid]
-    local SkinId = RandomKey(A.OwnedWeaponSkins, function(SkinId)
-      local Skin = DataMgr.WeaponSkin[SkinId]
-      return Skin.ApplicationType == RangedWeapon.SkinApplicationType
+    if MeleeWeaponUuid and SkinId then
+      A:ChangeWeaponSkinColors(MeleeWeaponUuid, SkinId, 1, NewColorWithPart)
+    end
+    local RangedWeapon = RangedWeaponUuid and AvatarWeapons[RangedWeaponUuid]
+    SkinId = RangedWeapon and RandomKey(OwnedWeaponSkins, function(CurSkinId)
+      local Skin = WeaponSkins[CurSkinId]
+      return Skin and Skin.ApplicationType == RangedWeapon.SkinApplicationType
     end)
-    SkinId = SkinId or RangedWeapon.WeaponId
-    A:ChangeWeaponAppearanceSkin(RangedWeaponUuid, SkinId)
-    AccessoryId = RandomValue(A.WeaponAccessorys)
-    if AccessoryId then
+    if RangedWeapon and not SkinId then
+      SkinId = RangedWeapon.WeaponId
+    end
+    if RangedWeaponUuid and SkinId then
+      A:ChangeWeaponAppearanceSkin(RangedWeaponUuid, SkinId)
+    end
+    AccessoryId = RandomValue(WeaponAccessorys)
+    if RangedWeaponUuid and AccessoryId then
       A:ChangeWeaponAppearanceAccessory(RangedWeaponUuid, AccessoryId)
     end
     NewColorWithPart = {}
     for i = 1, DataMgr.GlobalConstant.WeaponColorPart.ConstantValue do
-      NewColorWithPart[i] = RandomKey(DataMgr.Swatch)
+      NewColorWithPart[i] = RandomKey(SwatchData)
     end
-    A:ChangeWeaponSkinColors(RangedWeaponUuid, SkinId, 1, NewColorWithPart)
+    if RangedWeaponUuid and SkinId then
+      A:ChangeWeaponSkinColors(RangedWeaponUuid, SkinId, 1, NewColorWithPart)
+    end
   end
   
   ChangeSkin()
@@ -7558,7 +8822,6 @@ function GM_Command:CompleteSystemConditionWithoutGuide()
   if not Avatar then
     return
   end
-  Avatar.bGMBlockAllQuestTriggerOnce = true
   Avatar.bGMHideUnlockPopup = true
   local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
   GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm sysu")
@@ -7584,6 +8847,15 @@ function GM_Command:CompleteSystemConditionWithoutGuide()
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200103")
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200104")
   GMFunctionLibrary.ExecConsoleCommand(GameInstance, "sgm qcf 200215")
+end
+
+function GM_Command:CompleteSystemConditionWithoutGuideAndBlockQuest()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar.bGMBlockAllQuestTriggerOnce = true
+  self:CompleteSystemConditionWithoutGuide()
 end
 
 function GM_Command:OpenOnlineActionView(OpenModel)
@@ -8222,6 +9494,143 @@ function GM_Command:TestCoopCreate()
   end
 end
 
+function GM_Command:TestRaceInGame(flag)
+  if "1" == flag then
+    local UI = UIManager(self):LoadUINew("ActivityRacingResult")
+    local TotalPlayerList = {
+      [4011] = {
+        No = 1,
+        Speed = 1.18,
+        Ranking = 2,
+        RumorList = {
+          1001,
+          1004,
+          2002
+        }
+      },
+      [4012] = {
+        No = 2,
+        Speed = 1.05,
+        Ranking = 8,
+        RumorList = {
+          1002,
+          2001,
+          2004
+        }
+      },
+      [4013] = {
+        No = 3,
+        Speed = 1.32,
+        Ranking = 1,
+        RumorList = {1003, 1006}
+      },
+      [4021] = {
+        No = 4,
+        Speed = 0.98,
+        Ranking = 10,
+        RumorList = {2001, 2003}
+      },
+      [4022] = {
+        No = 5,
+        Speed = 1.12,
+        Ranking = 5,
+        RumorList = {
+          1002,
+          1005,
+          2001
+        }
+      },
+      [4023] = {
+        No = 6,
+        Speed = 1.08,
+        Ranking = 6,
+        RumorList = {1001, 2002}
+      },
+      [4031] = {
+        No = 7,
+        Speed = 0.92,
+        Ranking = 14,
+        RumorList = {2003, 2005}
+      },
+      [4032] = {
+        No = 8,
+        Speed = 1.24,
+        Ranking = 3,
+        RumorList = {1004, 1001}
+      },
+      [4033] = {
+        No = 9,
+        Speed = 1.01,
+        Ranking = 11,
+        RumorList = {2002, 1001}
+      },
+      [4039] = {
+        No = 10,
+        Speed = 1.16,
+        Ranking = 4,
+        RumorList = {1003, 2001}
+      },
+      [4041] = {
+        No = 11,
+        Speed = 0.95,
+        Ranking = 13,
+        RumorList = {2004}
+      },
+      [4042] = {
+        No = 12,
+        Speed = 1.09,
+        Ranking = 7,
+        RumorList = {1002, 2002}
+      },
+      [4043] = {
+        No = 13,
+        Speed = 0.88,
+        Ranking = 17,
+        RumorList = {2006}
+      },
+      [4049] = {
+        No = 14,
+        Speed = 1.03,
+        Ranking = 9,
+        RumorList = {1001, 2003}
+      },
+      [4051] = {
+        No = 15,
+        Speed = 0.9,
+        Ranking = 16,
+        RumorList = {2005, 2001}
+      },
+      [4052] = {
+        No = 16,
+        Speed = 1.21,
+        Ranking = 12,
+        RumorList = {1005, 2002}
+      },
+      [4053] = {
+        No = 17,
+        Speed = 0.86,
+        Ranking = 18,
+        RumorList = {2003, 2006}
+      },
+      [4059] = {
+        No = 18,
+        Speed = 1.14,
+        Ranking = 15,
+        RumorList = {1003, 2004}
+      }
+    }
+    local testPlayerList = {
+      4011,
+      4012,
+      4013,
+      4021
+    }
+    UI:ShowList(TotalPlayerList, testPlayerList)
+  else
+    local UI = UIManager(self):LoadUINew("PetRaceInGame")
+  end
+end
+
 function GM_Command:TestCoopRank(RoomConfId, RoomUniId)
   local CoopModel = require("BluePrints.UI.WBP.Activity.PC.Coop.Model.CoopModel")
   
@@ -8379,6 +9788,120 @@ function GM_Command:TestCoopRank(RoomConfId, RoomUniId)
   OpenCoopRank(SelfRankInfo, TopNInfo, {
     RoomConfId = SelfRankInfo.RoomConfId
   })
+end
+
+function GM_Command:Copymode(Step)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  Step = tonumber(Step) or 1
+  if 1 == Step then
+    Player:CopyModeEnter()
+  elseif 2 == Step then
+    Player:CopyModeExit()
+  end
+end
+
+function GM_Command:RougeProCmd(Cmd, ...)
+  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
+  if not Avatar or not Avatar.Eid then
+    print("RougeProCmd: Avatar.Eid is nil")
+    return
+  end
+  if IsStandAlone(self.Player) then
+    local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
+    if not GameMode or not GameMode.NotifyServerDungeonEvent then
+      print("RougeProCmd: GameMode unavailable")
+      return
+    end
+    GameMode:NotifyServerDungeonEvent("RougeProCmd", Avatar.Eid, Cmd, ...)
+  else
+    self:DedicatedServerCommand("RougeProCmd", Avatar.Eid, Cmd, ...)
+  end
+end
+
+function GM_Command:SimulateExhibit(Type, UnitId, SkinId)
+  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
+  if not Avatar then
+    print("[SimulateExhibit] Avatar is nil")
+    return
+  end
+  if not Avatar.GuildExhibitMgr then
+    print("[SimulateExhibit] GuildExhibitMgr component not found on Avatar")
+    return
+  end
+  UnitId = tonumber(UnitId)
+  SkinId = tonumber(SkinId) or 0
+  if not (Type and UnitId) or UnitId <= 0 then
+    print("[SimulateExhibit] Usage: SE <Character|Weapon|Mount> <UnitId> [SkinId]")
+    return
+  end
+  local ItemInfo = {}
+  local TypeLower = string.lower(Type)
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  local DefaultLocation = {
+    X = 0,
+    Y = 0,
+    Z = 0
+  }
+  local DefaultRotation = {
+    Pitch = 0,
+    Yaw = 0,
+    Roll = 0
+  }
+  if Player then
+    local PlayerLoc = Player:K2_GetActorLocation()
+    DefaultLocation = {
+      X = PlayerLoc.X,
+      Y = PlayerLoc.Y,
+      Z = PlayerLoc.Z
+    }
+  end
+  if "character" == TypeLower then
+    ItemInfo.Type = UE4.EExhibitType.Character
+    ItemInfo.CharId = UnitId
+    ItemInfo.SkinId = SkinId
+    if SkinId <= 0 then
+      ItemInfo.SkinId = UnitId
+    end
+    print(string.format("[SimulateExhibit] Pushing Character CharId=%d SkinId=%d", UnitId, ItemInfo.SkinId))
+  elseif "weapon" == TypeLower then
+    ItemInfo.Type = UE4.EExhibitType.Weapon
+    ItemInfo.WeaponId = UnitId
+    ItemInfo.AppearanceInfo = {SkinId = SkinId}
+    print(string.format("[SimulateExhibit] Pushing Weapon WeaponId=%d SkinId=%d", UnitId, SkinId))
+  elseif "mount" == TypeLower then
+    ItemInfo.Type = UE4.EExhibitType.Mount
+    ItemInfo.MountId = UnitId
+    print(string.format("[SimulateExhibit] Pushing Mount MountId=%d", UnitId))
+  else
+    print("[SimulateExhibit] Unknown Type: " .. tostring(Type) .. ", expected Character/Weapon/Mount")
+    return
+  end
+  ItemInfo.Location = DefaultLocation
+  ItemInfo.Rotation = DefaultRotation
+  local ObjId = tostring(os.time())
+  local ok, err = pcall(function()
+    Avatar.GuildExhibitMgr:AddGuildExhibitActor(ObjId, ItemInfo)
+  end)
+  if not ok then
+    print("[SimulateExhibit] Failed: " .. tostring(err))
+  else
+    print("[SimulateExhibit] Successfully pushed exhibit data")
+  end
+end
+
+function GM_Command:SimulateExhibitClear()
+  local Avatar = self:GetClientAvatar() or GWorld:GetAvatar()
+  if not Avatar then
+    print("[SimulateExhibitClear] Avatar is nil")
+    return
+  end
+  if not Avatar.GuildExhibitMgr then
+    print("[SimulateExhibitClear] GuildExhibitMgr component not found on Avatar")
+    return
+  end
+  print("[SimulateExhibitClear] Clearing all exhibit data...")
+  Avatar.GuildExhibitMgr:RemoveGuildExhibitActor(nil, nil)
+  print("[SimulateExhibitClear] All exhibit data cleared")
 end
 
 return GM_Command

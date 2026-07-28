@@ -1,63 +1,71 @@
-local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
 local NormalRewardReddotName = "JJGameTask_Normal_Reddot"
 local ChallengeRewardReddotName = "JJGameTask_Challenge_Reddot"
 local NormalTaskNewReddotName = "JJGameTask_Normal_New"
 local ChallengeTaskNewReddotName = "JJGameTask_Challenge_New"
+local JJGameReddotName = "Acti_JJGame"
 local ReddotTreeNode_JJGame = Class("BluePrints.UI.Reddot.Child.Activity.ActivityBase")
 
+function ReddotTreeNode_JJGame:OnRefreshNodeData(EventId)
+  local HasRed = self:_Judge(EventId)
+  if HasRed then
+    ReddotManager.IncreaseLeafNodeCount(self.Name, 1, {CacheKey = "Red", EventId = EventId})
+  else
+    ReddotManager.DecreaseLeafNodeCount(self.Name, 1, {CacheKey = "Red", EventId = EventId})
+  end
+  local HasNew = self:HasTaskNewReddot()
+  if HasNew then
+    ReddotManager.IncreaseLeafNodeCount(self.Name, 1, {CacheKey = "New", EventId = EventId})
+  else
+    ReddotManager.DecreaseLeafNodeCount(self.Name, 1, {CacheKey = "New", EventId = EventId})
+  end
+  if not HasRed and not HasNew then
+    self:ClearJJGameReddot()
+  end
+end
+
+function ReddotTreeNode_JJGame:OnIncreaseJudge(AddValue, CacheDetailChangedParams)
+  if not CacheDetailChangedParams then
+    return ReddotTreeNode_JJGame.Super.OnIncreaseJudge(self, AddValue, CacheDetailChangedParams)
+  end
+  local CacheKey = CacheDetailChangedParams.CacheKey
+  local EventId = CacheDetailChangedParams.EventId
+  if "Red" == CacheKey and 1 == AddValue then
+    local CacheDetail = self.Cache.Detail
+    return self:_Judge(EventId) and 1 ~= CacheDetail[CacheKey]
+  end
+  if "New" == CacheKey and 1 == AddValue then
+    local CacheDetail = self.Cache.Detail
+    return self:HasTaskNewReddot() and 1 ~= CacheDetail[CacheKey]
+  end
+  return ReddotTreeNode_JJGame.Super.OnIncreaseJudge(self, AddValue, CacheDetailChangedParams)
+end
+
+function ReddotTreeNode_JJGame:OnDecreaseJudge(SubValue, CacheDetailChangedParams)
+  if not CacheDetailChangedParams then
+    return ReddotTreeNode_JJGame.Super.OnDecreaseJudge(self, SubValue, CacheDetailChangedParams)
+  end
+  if CacheDetailChangedParams.bClearAll then
+    return ReddotTreeNode_JJGame.Super.OnDecreaseJudge(self, SubValue, CacheDetailChangedParams)
+  end
+  local CacheKey = CacheDetailChangedParams.CacheKey
+  local EventId = CacheDetailChangedParams.EventId
+  if "Red" == CacheKey and 1 == SubValue then
+    local CacheDetail = self.Cache.Detail
+    if 1 == CacheDetail[CacheKey] then
+      return not self:_Judge(EventId)
+    end
+  end
+  return ReddotTreeNode_JJGame.Super.OnDecreaseJudge(self, SubValue, CacheDetailChangedParams)
+end
+
 function ReddotTreeNode_JJGame:_Judge(ActivityID)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return false
-  end
-  local MidTermGoals = Avatar.MidTermGoals[ActivityID]
-  if not MidTermGoals then
-    return false
-  end
-  local TaskFinishCounts = MidTermGoals.TaskFinishCount or {}
-  local EventEndTime = DataMgr.EventMain[ActivityID].EventEndTime
-  local RewardEndTime = DataMgr.EventMain[ActivityID].RewardEndTime
-  if RewardEndTime < TimeUtils.NowTime() then
+  local EventData = DataMgr.EventMain[ActivityID]
+  if EventData and TimeUtils.NowTime() > EventData.RewardEndTime then
     self:ClearJJGameReddotWhenActivityEnd()
     return false
   end
-  if EventEndTime < TimeUtils.NowTime() then
-    if CommonUtils.Size(MidTermGoals.ScoresRewards) > 0 then
-      return true
-    else
-      return false
-    end
-  end
-  if CommonUtils.Size(MidTermGoals.ScoresRewards) > 0 then
-    return true
-  end
-  local allRewardsClaimed = Avatar:CheckIsChallengeRewardAllClaimed()
-  for TaskId, Task in pairs(MidTermGoals.Tasks) do
-    local TaskData = DataMgr.MidTermTask[TaskId]
-    local isAchievementTask = 4 == TaskData.TaskType
-    if isAchievementTask and allRewardsClaimed then
-    else
-      if TaskFinishCounts[TaskId] and TaskFinishCounts[TaskId] > 0 then
-        return true
-      end
-      if Task.Progress >= Task.Target and Task.RewardsGot == false and TaskData.EnableDay <= self:CalEventDay() then
-        return true
-      end
-    end
-  end
-  if not allRewardsClaimed then
-    local MidTermAchvScores = MidTermGoals.AchvScores or 0
-    local MidTermAchvProgressRewarded = MidTermGoals.AchvProgressRewarded or {}
-    for Count in pairs(DataMgr.AchievementPrize) do
-      if Count <= MidTermAchvScores and 1 ~= MidTermAchvProgressRewarded[Count] then
-        return true
-      end
-    end
-  end
-  if self:IsAllChildrenEmpty() then
-    self:ClearJJGameReddot()
-  end
-  return false
+  return JJGameController:HasActivityTabRewardReddot()
 end
 
 function ReddotTreeNode_JJGame:CalEventDay()
@@ -71,7 +79,6 @@ end
 
 function ReddotTreeNode_JJGame:OnInitNodeCache(NodeCache)
   ReddotTreeNode_JJGame.Super.OnInitNodeCache(self, NodeCache)
-  ReddotManager.AddListenerEx("Acti_JJGame", self, self.OnJJGameReddotChange)
   ReddotManager.AddListenerEx(NormalRewardReddotName, self, self.OnChildReddotChange)
   ReddotManager.AddListenerEx(ChallengeRewardReddotName, self, self.OnChildReddotChange)
   ReddotManager.AddListenerEx(NormalTaskNewReddotName, self, self.OnChildReddotChange)
@@ -82,7 +89,6 @@ function ReddotTreeNode_JJGame:OnInitNodeCache(NodeCache)
 end
 
 function ReddotTreeNode_JJGame:OnDisposeNode()
-  ReddotManager.RemoveListener("Acti_JJGame", self)
   ReddotManager.RemoveListener(NormalRewardReddotName, self)
   ReddotManager.RemoveListener(ChallengeRewardReddotName, self)
   ReddotManager.RemoveListener(NormalTaskNewReddotName, self)
@@ -97,15 +103,26 @@ function ReddotTreeNode_JJGame:IsAllChildrenEmpty()
     ChallengeTaskNewReddotName
   }
   for _, name in ipairs(nodeNames) do
-    local node = ReddotManager.GetTreeNode(name)
-    if node and node.Count and node.Count > 0 then
+    if self:IsNodeCountActive(name) then
       return false
     end
   end
   return true
 end
 
+function ReddotTreeNode_JJGame:IsNodeCountActive(NodeName)
+  local Node = ReddotManager.GetTreeNode(NodeName)
+  return Node and Node.Count and Node.Count > 0
+end
+
+function ReddotTreeNode_JJGame:HasTaskNewReddot()
+  return self:IsNodeCountActive(NormalTaskNewReddotName) or self:IsNodeCountActive(ChallengeTaskNewReddotName)
+end
+
 function ReddotTreeNode_JJGame:OnChildReddotChange(Count, RdType, RdName)
+  if ReddotManager.GetTreeNode(self.Name) ~= self then
+    return
+  end
   if self:IsAllChildrenEmpty() then
     if self.Count and self.Count > 0 then
       self:ClearJJGameReddot()
@@ -114,13 +131,6 @@ function ReddotTreeNode_JJGame:OnChildReddotChange(Count, RdType, RdName)
     local MidTermGoalEventId = DataMgr.MidTermGoalConstant.MidTermGoalEventId.ConstantValue
     self:OnRefreshNodeData(MidTermGoalEventId)
   end
-end
-
-function ReddotTreeNode_JJGame:OnJJGameReddotChange(Count, RdType, RdName)
-  if 0 ~= Count then
-    return
-  end
-  self:ClearJJGameReddotWhenActivityEnd()
 end
 
 function ReddotTreeNode_JJGame:ClearJJGameReddotWhenActivityEnd()
@@ -187,15 +197,17 @@ function ReddotTreeNode_JJGame:ClearNormalRewardReddot()
 end
 
 function ReddotTreeNode_JJGame:ClearJJGameReddot()
-  if not ReddotManager.GetTreeNode("Acti_JJGame") then
-    ReddotManager.AddNodeEx("Acti_JJGame", nil, Const.ReddotCacheType.UserCache)
+  if not ReddotManager.GetTreeNode(JJGameReddotName) then
+    ReddotManager.AddNodeEx(JJGameReddotName, nil, Const.ReddotCacheType.UserCache)
   end
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail("Acti_JJGame")
+  local CacheData = ReddotManager.GetLeafNodeCacheDetail(JJGameReddotName)
   if CacheData then
     for key, _ in pairs(CacheData) do
       CacheData[key] = nil
     end
-    ReddotManager.ClearLeafNodeCount("Acti_JJGame")
+    CacheData.New = 0
+    CacheData.Red = 0
+    ReddotManager.ClearLeafNodeCount(JJGameReddotName)
   end
 end
 

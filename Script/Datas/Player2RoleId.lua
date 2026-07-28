@@ -15,6 +15,10 @@ return ReadOnly("Player2RoleId", {
     [1] = 113
   },
   Player = T.RT_1,
+  PlayerDark = {
+    [0] = 120101,
+    [1] = 1201
+  },
   PlayerLight = T.RT_1,
   PlayerRed = {
     [0] = 160103,

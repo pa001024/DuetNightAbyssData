@@ -6,7 +6,9 @@ T.RT_4 = {91132}
 T.RT_5 = {601}
 T.RT_6 = {612}
 T.RT_7 = {100601}
-T.RT_8 = {200602}
+T.RT_8 = {300601}
+T.RT_9 = {300602}
+T.RT_10 = {200602}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -124,7 +126,7 @@ return ReadOnly("SurvivalMiniPro", {
   },
   [90604] = {
     DungeonId = 90604,
-    MonsterSpawnId = T.RT_8,
+    MonsterSpawnId = T.RT_10,
     SpMonsterSpawnId = T.RT_2,
     SpMonsterSpawnTime = 40
   },
@@ -154,7 +156,7 @@ return ReadOnly("SurvivalMiniPro", {
   },
   [91133] = {
     DungeonId = 91133,
-    MonsterSpawnId = T.RT_8,
+    MonsterSpawnId = T.RT_10,
     SpMonsterSpawnId = {91133},
     SpMonsterSpawnTime = 1
   },
@@ -166,7 +168,7 @@ return ReadOnly("SurvivalMiniPro", {
   },
   [91145] = {
     DungeonId = 91145,
-    MonsterSpawnId = T.RT_8,
+    MonsterSpawnId = T.RT_10,
     SpMonsterSpawnId = {91145},
     SpMonsterSpawnTime = 1
   },
@@ -178,7 +180,7 @@ return ReadOnly("SurvivalMiniPro", {
   },
   [91149] = {
     DungeonId = 91149,
-    MonsterSpawnId = T.RT_8,
+    MonsterSpawnId = T.RT_10,
     SpMonsterSpawnId = {91149},
     SpMonsterSpawnTime = 1
   },
@@ -220,13 +222,13 @@ return ReadOnly("SurvivalMiniPro", {
   },
   [614005] = {
     DungeonId = 614005,
-    MonsterSpawnId = {300601},
+    MonsterSpawnId = T.RT_8,
     SpMonsterSpawnId = {614005},
     SpMonsterSpawnTime = 1
   },
   [614006] = {
     DungeonId = 614006,
-    MonsterSpawnId = {300602},
+    MonsterSpawnId = T.RT_9,
     SpMonsterSpawnId = {614006},
     SpMonsterSpawnTime = 1
   },
@@ -240,6 +242,30 @@ return ReadOnly("SurvivalMiniPro", {
     DungeonId = 614106,
     MonsterSpawnId = {300602, 6141060},
     SpMonsterSpawnId = {614106},
+    SpMonsterSpawnTime = 1
+  },
+  [615003] = {
+    DungeonId = 615003,
+    MonsterSpawnId = T.RT_8,
+    SpMonsterSpawnId = {615003},
+    SpMonsterSpawnTime = 1
+  },
+  [615004] = {
+    DungeonId = 615004,
+    MonsterSpawnId = T.RT_9,
+    SpMonsterSpawnId = {615004},
+    SpMonsterSpawnTime = 1
+  },
+  [615103] = {
+    DungeonId = 615103,
+    MonsterSpawnId = {300601, 6151030},
+    SpMonsterSpawnId = {615103},
+    SpMonsterSpawnTime = 1
+  },
+  [615104] = {
+    DungeonId = 615104,
+    MonsterSpawnId = {300602, 6151040},
+    SpMonsterSpawnId = {615104},
     SpMonsterSpawnTime = 1
   }
 })

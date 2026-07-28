@@ -73,6 +73,7 @@ return ReadOnly("IronSurvival", {
   [91601] = {
     DungeonId = 91601,
     LevelThreshold = T.RT_1,
+    MiniGameCreatorId = 101,
     MonsterSpawnId = T.RT_8,
     StrongKillCount = T.RT_9,
     StrongLoopSpawnId = T.RT_13
@@ -80,6 +81,7 @@ return ReadOnly("IronSurvival", {
   [91602] = {
     DungeonId = 91602,
     LevelThreshold = T.RT_1,
+    MiniGameCreatorId = 101,
     MonsterSpawnId = T.RT_8,
     StrongKillCount = T.RT_9,
     StrongLoopSpawnId = T.RT_13
@@ -87,6 +89,7 @@ return ReadOnly("IronSurvival", {
   [91603] = {
     DungeonId = 91603,
     LevelThreshold = T.RT_1,
+    MiniGameCreatorId = 101,
     MonsterSpawnId = T.RT_8,
     StrongKillCount = T.RT_9,
     StrongLoopSpawnId = T.RT_13
@@ -94,6 +97,7 @@ return ReadOnly("IronSurvival", {
   [91604] = {
     DungeonId = 91604,
     LevelThreshold = T.RT_1,
+    MiniGameCreatorId = 101,
     MonsterSpawnId = T.RT_8,
     StrongKillCount = T.RT_9,
     StrongLoopSpawnId = T.RT_13
@@ -101,6 +105,7 @@ return ReadOnly("IronSurvival", {
   [91605] = {
     DungeonId = 91605,
     LevelThreshold = T.RT_1,
+    MiniGameCreatorId = 101,
     MonsterSpawnId = T.RT_8,
     StrongKillCount = T.RT_9,
     StrongLoopSpawnId = T.RT_13
@@ -108,6 +113,7 @@ return ReadOnly("IronSurvival", {
   [91606] = {
     DungeonId = 91606,
     LevelThreshold = T.RT_1,
+    MiniGameCreatorId = 101,
     MonsterSpawnId = T.RT_8,
     StrongKillCount = T.RT_9,
     StrongLoopSpawnId = T.RT_13

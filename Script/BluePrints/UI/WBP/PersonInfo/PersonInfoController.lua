@@ -18,6 +18,7 @@ function M:Init()
   M.Super.Init(self)
   PersonInfoEditModel:Init()
   self.CurPage = nil
+  self.bIsHide = false
 end
 
 function M:Destory()
@@ -45,11 +46,20 @@ function M:OpenView(PlayerInfo, ForceServerData)
   end
   self.CurPage = M.PageEnum.MainPage
   PersonInfoModel:InitData(PlayerInfo)
+  self.bIsHide = false
   self.bReturnMain = false
   self.MainPage = M.Super.OpenView(self, nil, PersonInfoCommon.UIName)
   self.MainPage:SetFocus()
   self.CurPage = M.PageEnum.MainPage
   return self.MainPage
+end
+
+function M:IsMainPageUIHidden()
+  return self.bIsHide == true
+end
+
+function M:SetMainPageUIHidden(bHidden)
+  self.bIsHide = true == bHidden
 end
 
 function M:RefreshMainPageGuildInfo()
@@ -100,10 +110,11 @@ function M:OpenEditView(TabName, BoxIndex)
   if self.CurPage == M.PageEnum.EditPage then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoEditPageOpen", nil)
   self.CurPage = M.PageEnum.EditPage
   self:ExitMainPage()
-  if self.MainPage.PersonInfoMainPage.ActorController and self.MainPage.PersonInfoMainPage.ActorController.ArmoryPlayer then
-    self.MainPage.PersonInfoMainPage.ActorController:HidePlayerActor("PersonInfoEdit", true)
+  if self.MainPage.PersonInfoMainPage.ActorController then
+    self.MainPage.PersonInfoMainPage.ActorController:HideAllCharacterActors("PersonInfoEdit", true)
   end
   local Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
   local PCBluePrint
@@ -131,6 +142,7 @@ function M:OpenDataView()
     DebugPrint("数据统计界面正在关闭中")
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoDataPageOpen", nil)
   self.CurPage = M.PageEnum.DataPage
   self:ExitMainPageWithoutTab()
   PersonInfoDataModel:Init(PersonInfoModel.OtherPersonInfo)
@@ -138,8 +150,8 @@ function M:OpenDataView()
   self.DataPage.Root = self.MainPage
   self.DataPage:InitBaseView()
   local ActorController = self.MainPage.PersonInfoMainPage.ActorController
-  if -1 ~= self.MainPage.PersonInfoMainPage.SelectCharIndex then
-    ActorController:SetMontageAndCamera("Char", nil, "Personal", "Data")
+  if -1 ~= self.MainPage.PersonInfoMainPage.SelectCharIndex and ActorController then
+    ActorController:SetArmoryMontageTag(nil)
   end
 end
 
@@ -165,8 +177,8 @@ function M:CreatDataPage()
 end
 
 function M:OnCloseDateView()
+  AudioManager(self):SetEventSoundParam(self, "PersonInfoDataPageOpen", {ToEnd = 1})
   self.CurPage = M.PageEnum.MainPage
-  self.MainPage.PersonInfoMainPage:FreshCamera()
   self.MainPage.PersonInfoMainPage:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.MainPage:InitTabInfo()
   self.MainPage.PersonInfoMainPage:PlayAnimation(self.MainPage.PersonInfoMainPage.In)
@@ -193,6 +205,7 @@ end
 
 function M:CloseEditView()
   PersonInfoEditModel.Handler = nil
+  AudioManager(self):SetEventSoundParam(self, "PersonInfoEditPageOpen", {ToEnd = 1})
   if self.EditPage then
     self.EditPage:RemovefromParent()
     self.EditPage:PlayAnimation(self.EditPage.Out)
@@ -216,12 +229,49 @@ end
 function M:ReturnMainPage()
   self.CurPage = M.PageEnum.MainPage
   self.MainPage.MainPageItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  if self.MainPage.PersonInfoMainPage.ActorController and self.MainPage.PersonInfoMainPage.ActorController.ArmoryPlayer then
-    self.MainPage.PersonInfoMainPage.ActorController:HidePlayerActor("PersonInfoEdit", false)
+  if self.MainPage.PersonInfoMainPage.ActorController then
+    self.MainPage.PersonInfoMainPage.ActorController:HideAllCharacterActors("PersonInfoEdit", false)
   end
   self.MainPage.PersonInfoMainPage:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.MainPage.PersonInfoMainPage:InitDisplayBoxView(true)
+  self.MainPage.PersonInfoMainPage:InitDisplayBoxView()
+  local RootPage = self.MainPage
+  if RootPage and RootPage.GameInputModeSubsystem and RootPage.GameInputModeSubsystem.GetCurrentInputType then
+    RootPage.CurInputDeviceType = RootPage.GameInputModeSubsystem:GetCurrentInputType()
+  end
+  if RootPage and RootPage.FreshViewByInputDevice then
+    RootPage:FreshViewByInputDevice(RootPage.CurInputDeviceType == ECommonInputType.Gamepad)
+  end
   self.MainPage.PersonInfoMainPage:SetOriginFocus()
+  if RootPage and RootPage.CurInputDeviceType == ECommonInputType.Gamepad and RootPage.AddTimer then
+    RootPage:AddTimer(0.01, function()
+      if not RootPage or not RootPage.PersonInfoMainPage then
+        return
+      end
+      RootPage.PersonInfoMainPage:FreshFocusLeaveEditListView()
+      RootPage.PersonInfoMainPage:SetOriginFocus()
+    end)
+  end
+end
+
+function M:RestoreMainPageAfterCustomEditClosed()
+  local RootPage = self.MainPage
+  if not RootPage or not RootPage.PersonInfoMainPage then
+    return
+  end
+  if RootPage.GameInputModeSubsystem and RootPage.GameInputModeSubsystem.GetCurrentInputType then
+    RootPage.CurInputDeviceType = RootPage.GameInputModeSubsystem:GetCurrentInputType()
+  end
+  local PersonInfoMainPage = RootPage.PersonInfoMainPage
+  if RootPage.FreshViewByInputDevice then
+    RootPage:FreshViewByInputDevice(RootPage.CurInputDeviceType == ECommonInputType.Gamepad)
+  end
+  if RootPage._RefreshMainPageFocusAfterCustomEditClosed then
+    RootPage:_RefreshMainPageFocusAfterCustomEditClosed()
+    return
+  end
+  if PersonInfoMainPage.SetOriginFocus then
+    PersonInfoMainPage:SetOriginFocus()
+  end
 end
 
 function M:GetView(WorldContex)

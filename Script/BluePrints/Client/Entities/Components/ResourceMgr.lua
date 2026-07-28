@@ -298,4 +298,26 @@ function Component:RegainItemAutoConvertResource(ItemId, ItemType, ItemCount, Re
   UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonTop, GText(string.format(GText("UI_RegainItem_Toast"), GText(DataMgr.Resource[RegainItemId].ResourceName), RegainItemNum)))
 end
 
+function Component:SetGestureItemPanel(InCallback, PageIndex, SlotIndex, ResourceId)
+  self.logger.info("SetGestureItemPanel begin", PageIndex, SlotIndex, ResourceId)
+  
+  local function Callback(Ret)
+    self.logger.info("SetGestureItemPanel callback", Ret, PageIndex, SlotIndex, ResourceId)
+    InCallback(Ret, PageIndex, SlotIndex, ResourceId)
+  end
+  
+  self:CallServer("SetGestureItemPanel", Callback, PageIndex, SlotIndex, ResourceId)
+end
+
+function Component:RemoveGestureItemPanel(InCallback, PageIndex, SlotIndex)
+  self.logger.info("RemoveGestureItemPanel begin", PageIndex, SlotIndex)
+  
+  local function Callback(Ret)
+    self.logger.info("RemoveGestureItemPanel callback", Ret, PageIndex, SlotIndex)
+    InCallback(Ret, PageIndex, SlotIndex)
+  end
+  
+  self:CallServer("RemoveGestureItemPanel", Callback, PageIndex, SlotIndex)
+end
+
 return Component

@@ -145,7 +145,7 @@ function DungeonReplicatedProperty:InitReplicatedProperties(Owner, PropName, Def
     end)
   end
   if bReplicateCreate then
-    self:ReplicatedActor(Owner.__Class__, Node.NetGuid, GetReplicatedProperties(Node.Props), Node.ReplicatedUsing)
+    self:ReplicatedActor(Owner.__Class__, Node.NetGuid, GetReplicatedProperties(Node.PropValues), Node.ReplicatedUsing)
   elseif nil ~= DefaultValue then
     self:ReplicatedProperty(Node.NetGuid, PropName, GetReplicatedProperties(DefaultValue), ReplicatedUsing)
   end

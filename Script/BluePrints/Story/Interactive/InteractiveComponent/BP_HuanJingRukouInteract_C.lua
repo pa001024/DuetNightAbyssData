@@ -42,7 +42,7 @@ function BP_HuanJingRuKouInteract_C:StartInteractive(PlayerActor)
     end
     local TaskName = DataMgr.QuestChain[self.QuestChainId].QuestChainName
     local Params = {
-      ShortText = string.format("%s <H>%s</>", GText("UI_Prompt_QuestTrans"), GText(TaskName)),
+      ShortText = string.format(GText("UI_Prompt_QuestTrans"), GText(TaskName)),
       LeftCallbackObj = self,
       LeftCallbackFunction = self.CancelDeliverTo,
       RightCallbackObj = self,

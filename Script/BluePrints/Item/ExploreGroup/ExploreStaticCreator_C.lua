@@ -53,6 +53,16 @@ function M:TrySpecialActive()
   end
 end
 
+function M:AddScore(Add)
+  Add = tonumber(Add) or 0
+  self.Score = (self.Score or 0) + Add
+  return self.Score
+end
+
+function M:GetScore()
+  return self.Score or 0
+end
+
 function M:AddRemainLimitTime(AddTime, MobileAddTime)
   local RealAddTime = AddTime
   if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
@@ -69,6 +79,15 @@ function M:AddRemainLimitTime(AddTime, MobileAddTime)
 end
 
 function M:ReceiveOnExploreGroupReset()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState then
+    for CreatorId, _ in pairs(self.StaticCreatorMap) do
+      GameState.MechanismStateIdMap:Remove(CreatorId)
+    end
+    for ManualItemId, _ in pairs(self.StaticCreatorMap) do
+      GameState.ManualMechanismStateIdMap:Remove(ManualItemId)
+    end
+  end
   local Components = self:K2_GetComponentsByClass(UExploreSplineComponent:StaticClass())
   if Components then
     for _, SplineComponent in pairs(Components) do
@@ -343,7 +362,8 @@ function M:ShowExploreTaskPanel(Title, Des, TotalTargetNum)
       DynamicEventUI.ExplorationChallenge.Panel_Tips:SetVisibility(ESlateVisibility.Collapsed)
       if DynamicEventUI.ExplorationChallenge.Panel_Tips2 and DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3 then
         DynamicEventUI.ExplorationChallenge.Panel_Tips2:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-        DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3:BindEventOnClicked(self, self.OnPressQuitChallenge)
+        DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3.ClickLogics = {}
+        DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3:BindSingleEventOnClicked(self, self.OnPressQuitChallenge)
         DynamicEventUI.ExplorationChallenge.WBP_Btn_Tips3:SetText(GText("UI_Esc_Challenge"))
       end
     end
@@ -466,6 +486,10 @@ function M:SetPlayerToTransform(Transform)
 end
 
 function M:ResetCompletedExploreGroup()
+  if self:GetStatus() == EExploreGroupStatus.EGS_Complete then
+    DebugPrint("zwk 探索组已完成，不进行重置 ", self.ExploreGroupId)
+    return
+  end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if GameState.ActiveLimitTimeExploreGroup == self.ExploreGroupId then
     self:GMReceiveOnExploreGroupResetUI()
@@ -530,8 +554,49 @@ function M:BPSetStoneShowEndCallback(CreatorId)
   Mechanism.ShowEndCallback = Callback
 end
 
+function M:_IsTransferBlockedBySpecialQuest(Player)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar:IsInSpecialQuest() then
+    return true
+  end
+  if IsValid(Player) then
+    local Controller = Player:GetController()
+    if Controller and Controller:GetStoryModeState() then
+      return true
+    end
+  end
+  return false
+end
+
+function M:_PrepareMountTransfer(Player)
+  if not Player.IsInMountState or not Player:IsInMountState() then
+    return
+  end
+  if Player.StopRideFly and Player.IsFlying and Player:IsFlying() then
+    Player:StopRideFly()
+  end
+  local MoveComp = Player:GetMovementComponent()
+  if MoveComp and MoveComp.StopMovementImmediately then
+    MoveComp:StopMovementImmediately()
+  end
+end
+
+function M:_ApplyTransferPlayer(Player, TargetTransform)
+  if not IsValid(Player) then
+    return
+  end
+  self:_PrepareMountTransfer(Player)
+  Player:K2_SetActorLocation(TargetTransform.Translation, false, nil, false)
+  Player:K2_SetActorRotation(TargetTransform.Rotation:ToRotator(), false)
+  Player:GetMovementComponent():ForceClientUpdate()
+  Player:EnableCheckOverlapPush({})
+  Player:GetController():SetControlRotation(Player:K2_GetActorRotation())
+  Player:Landed()
+end
+
 function M:TriggerTransferPlayer(TargetTransform, BlackScreenTime)
   local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
+  self:_PrepareMountTransfer(Player)
   Player:K2_SetActorLocation(TargetTransform.Translation, false, nil, false)
   Player:K2_SetActorRotation(TargetTransform.Rotation:ToRotator(), false)
   Player:GetMovementComponent():ForceClientUpdate()
@@ -539,6 +604,59 @@ function M:TriggerTransferPlayer(TargetTransform, BlackScreenTime)
   Player:ShowBlackScreenFade_StandAlone("Black", BlackScreenTime)
   Player:GetController():SetControlRotation(Player:K2_GetActorRotation())
   Player:Landed()
+end
+
+function M:TriggerTransferPlayerNew(TargetTransform, bEnableBlackScreenFade, BlackScreenFadeInTime, BlackScreenFadeOutTime)
+  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    return
+  end
+  if self:_IsTransferBlockedBySpecialQuest(Player) then
+    UIManager(self):ShowError(ErrorCode.RET_STORYMODE_STOP_HANDLE_DELIVER_REGION)
+    return
+  end
+  if not bEnableBlackScreenFade then
+    self:_ApplyTransferPlayer(Player, TargetTransform)
+    return
+  end
+  local FadeIn = tonumber(BlackScreenFadeInTime) or 0.5
+  local FadeOut = tonumber(BlackScreenFadeOutTime) or 0.5
+  if not IsClient(self) and not IsStandAlone(self) then
+    self:_ApplyTransferPlayer(Player, TargetTransform)
+    return
+  end
+  self._ExploreTransferBlackSeq = (self._ExploreTransferBlackSeq or 0) + 1
+  local Handle = "ExploreStaticCreator_Transfer_" .. tostring(self.ExploreGroupId or 0) .. "_" .. tostring(self._ExploreTransferBlackSeq)
+  local UI = UIManager(self)
+  UI:HideCommonBlackScreen(Handle)
+  UI:ShowCommonBlackScreen({
+    BlackScreenHandle = Handle,
+    InAnimationObj = self,
+    InAnimationPlayTime = FadeIn,
+    IsPlayOutWhenLoaded = false,
+    InAnimationCallback = function()
+      if not IsValid(self) or not IsValid(Player) then
+        return
+      end
+      if self:_IsTransferBlockedBySpecialQuest(Player) then
+        UI:HideCommonBlackScreen(Handle)
+        UIManager(self):ShowError(ErrorCode.RET_STORYMODE_STOP_HANDLE_DELIVER_REGION)
+        return
+      end
+      self:_ApplyTransferPlayer(Player, TargetTransform)
+      UI:HideCommonBlackScreen(Handle)
+      UI:ShowCommonBlackScreen({
+        BlackScreenHandle = Handle,
+        InAnimationPlayTime = 0,
+        OutAnimationObj = self,
+        OutAnimationPlayTime = FadeOut,
+        IsPlayOutWhenLoaded = true,
+        OutAnimationCallback = function()
+          UI:HideCommonBlackScreen(Handle)
+        end
+      })
+    end
+  })
 end
 
 function M:BindExploreSpline(StaticCreator, SplineComponent)

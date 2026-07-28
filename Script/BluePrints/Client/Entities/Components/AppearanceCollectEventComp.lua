@@ -38,11 +38,10 @@ function Component:GetAppearanceScore(type, id)
     return 0
   end
   local EntranceInfo = self:CheckAppearanceCollectType(id, type)
-  if not EntranceInfo or not EntranceInfo.CollectType then
+  if not EntranceInfo then
     return 0
   end
-  local CollectType = EntranceInfo.CollectType
-  local AppearanceScoreInfo = DataMgr.Appearance2Score[CollectType]
+  local AppearanceScoreInfo = DataMgr.Appearance2Score[type]
   if not AppearanceScoreInfo then
     return 0
   end

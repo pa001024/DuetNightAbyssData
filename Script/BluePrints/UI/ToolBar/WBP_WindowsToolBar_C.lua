@@ -4,16 +4,19 @@ local M = Class({
   "BluePrints.Common.TimerMgr"
 })
 M.TipsEnabled = false
-M.IsPinned = false
 M.IsMaximized = false
 M.ToastState = "Idle"
 M.ToastWaitHandle = nil
 M.PendingToastText = nil
-M.HoverPinnedState = nil
+M.HoverPinState = nil
 M.HoverSessionActive = false
 
+local function IsWindowPinned()
+  return UE.UWindowTitleBarFunctionLibrary.IsGameWindowAlwaysOnTop()
+end
+
 function M:GetPinAnim(Base)
-  local name = (self.IsPinned and "Pin_Up_" or "Pin_") .. Base
+  local name = (IsWindowPinned() and "Pin_Up_" or "Pin_") .. Base
   return self[name]
 end
 
@@ -47,24 +50,24 @@ function M:OnPinHovered()
   if not self.TipsEnabled then
     self:EnableTips()
   end
-  self.HoverPinnedState = self.IsPinned
+  self.HoverPinState = IsWindowPinned()
   self.HoverSessionActive = true
   self:PlayPinAnim("Hover")
 end
 
 function M:OnPinUnhovered()
   if not self.HoverSessionActive then
-    self.HoverPinnedState = nil
+    self.HoverPinState = nil
     return
   end
-  if self.HoverPinnedState ~= nil and self.HoverPinnedState ~= self.IsPinned then
-    self.HoverPinnedState = nil
+  if self.HoverPinState ~= nil and self.HoverPinState ~= IsWindowPinned() then
+    self.HoverPinState = nil
     self.HoverSessionActive = false
     self:StopPinAnimations()
     self:PlayPinAnim("Normal")
     return
   end
-  self.HoverPinnedState = nil
+  self.HoverPinState = nil
   self.HoverSessionActive = false
   if self:GetPinAnim("UnHover") then
     self:PlayPinAnim("UnHover")
@@ -83,7 +86,7 @@ end
 
 function M:SetToolTips()
   if self.Btn_PinBtn then
-    local key = self.IsPinned and "UI_Windows_Unpin" or "UI_Windows_PinToTop"
+    local key = IsWindowPinned() and "UI_Windows_Unpin" or "UI_Windows_PinToTop"
     UE.UWindowTitleBarFunctionLibrary.SetAntiScaledToolTip(self.Btn_PinBtn, GText(key))
   end
   if self.Btn_MinBtn then
@@ -124,13 +127,11 @@ function M:Construct()
   if self.Text_GameTitle then
     self.Text_GameTitle:SetText(GText("UI_Windows_GameName"))
   end
-  if self.Btn_PinBtn and self.Btn_PinBtn.OnClicked then
-    self.Btn_PinBtn.OnClicked:Clear()
+  if self.Btn_PinBtn then
     self.Btn_PinBtn.OnHovered:Clear()
     self.Btn_PinBtn.OnUnhovered:Clear()
     self.Btn_PinBtn.OnPressed:Clear()
     self.Btn_PinBtn.OnReleased:Clear()
-    self.Btn_PinBtn.OnClicked:Add(self, self.OnPinClicked)
     if self.Btn_PinBtn.OnHovered then
       self.Btn_PinBtn.OnHovered:Add(self, self.OnPinHovered)
     end
@@ -144,16 +145,11 @@ function M:Construct()
       self.Btn_PinBtn.OnReleased:Add(self, self.OnPinReleased)
     end
   end
-  if self.Btn_MinBtn then
-    self.Btn_MinBtn.OnClicked:Add(self, self.OnMinimizeClicked)
-  end
-  if self.Btn_FullBtn and self.Btn_FullBtn.OnClicked then
-    self.Btn_FullBtn.OnClicked:Clear()
+  if self.Btn_FullBtn then
     self.Btn_FullBtn.OnHovered:Clear()
     self.Btn_FullBtn.OnUnhovered:Clear()
     self.Btn_FullBtn.OnPressed:Clear()
     self.Btn_FullBtn.OnReleased:Clear()
-    self.Btn_FullBtn.OnClicked:Add(self, self.OnMaximizeClicked)
     if self.Btn_FullBtn.OnHovered then
       self.Btn_FullBtn.OnHovered:Add(self, self.OnFullHovered)
     end
@@ -167,12 +163,8 @@ function M:Construct()
       self.Btn_FullBtn.OnReleased:Add(self, self.OnFullReleased)
     end
   end
-  if self.Btn_Close then
-    self.Btn_Close.OnClicked:Add(self, self.OnCloseClicked)
-  end
   local isMax = UE.UWindowTitleBarFunctionLibrary.IsGameWindowMaximized()
   self.IsMaximized = isMax and true or false
-  self.IsPinned = self.IsPinned and true or false
   if self.WidgetSwitcher_Max then
     self.WidgetSwitcher_Max:SetActiveWidgetIndex(self.IsMaximized and 1 or 0)
   end
@@ -195,7 +187,7 @@ function M:Construct()
   local Root = UE.UWindowTitleBarFunctionLibrary.GetWindowTitleBarRootWidget()
   if Root then
     if Root.WidgetTree and Root.WidgetTree.RootWidget then
-      Root.WidgetTree.RootWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+      Root.WidgetTree.RootWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
     if Root.OnWindowMaximizeStateChanged then
       Root.OnWindowMaximizeStateChanged:Add(self, self.OnWindowMaximizeStateChanged)
@@ -205,9 +197,9 @@ end
 
 function M:OnPinClicked()
   self.HoverSessionActive = false
-  self.HoverPinnedState = nil
-  local willPin = not self.IsPinned
-  self.IsPinned = willPin
+  self.HoverPinState = nil
+  UE.UWindowTitleBarFunctionLibrary.ToggleAlwaysOnTopGameWindow()
+  local willPin = IsWindowPinned()
   if willPin then
     AudioManager(self):PlayUISound(self, "event:/ui/common/pin", nil, nil)
   else
@@ -221,11 +213,10 @@ function M:OnPinClicked()
       self:PlayAnimationReverse(self.Pin_Click)
     end
   end
-  UE.UWindowTitleBarFunctionLibrary.ToggleAlwaysOnTopGameWindow()
   if self.TipsEnabled then
     self:SetToolTips()
   end
-  local key = self.IsPinned and "UI_Windows_Toast_PinToTop" or "UI_Windows_Toast_Unpin"
+  local key = willPin and "UI_Windows_Toast_PinToTop" or "UI_Windows_Toast_Unpin"
   self:ShowTopToast(key)
 end
 

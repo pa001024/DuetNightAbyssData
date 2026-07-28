@@ -2804,6 +2804,29 @@
                 ]
               },
               {
+                "id": 1011140,
+                "itemType": "Resource",
+                "typeId": 1001201,
+                "typeName": "思緒片段·狩月人·暗",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 18,
+                "subTabId": 1005,
+                "sequence": 1,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  60
+                ]
+              },
+              {
                 "id": 1410010,
                 "itemType": "Resource",
                 "typeId": 31005004,

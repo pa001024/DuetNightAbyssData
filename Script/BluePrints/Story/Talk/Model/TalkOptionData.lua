@@ -1,4 +1,5 @@
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local ETalkOptionType = {
   Dialogue = "dialogue",
   Normal = "normal",
@@ -21,7 +22,6 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
     DebugPrint("TalkOptionData_C.New:TalkNodeData与DialogueOptionData都为nil")
     return
   end
-  local Avatar = GWorld:GetAvatar()
   if OptionType == ETalkOptionType.Dialogue then
     for idx, Option in ipairs(DialogueOptionData) do
       local bIsClientSelected = Obj.bHasFinalDialogue and DialogueIterComp and DialogueIterComp:IsOptionSelected(Option)
@@ -79,7 +79,7 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
           Index = idx
         })
         Obj.OptionId2Idx[OptionId] = idx
-        if Avatar and Avatar:IsImpressionCheckSuccess(OptionId) then
+        if ImpressionModel:IsImpressionCheckSuccess(OptionId) then
           table.insert(Obj.SavedOptions, OptionId)
         end
       end
@@ -112,7 +112,7 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
           Index = idx
         })
         Obj.OptionId2Idx[OptionId] = idx
-        if Avatar and Avatar:IsImpressionCheckSuccess(OptionId) then
+        if ImpressionModel:IsImpressionCheckSuccess(OptionId) then
           table.insert(Obj.SavedOptions, OptionId)
         end
       end
@@ -152,14 +152,6 @@ function TalkOptionData_C.New(OptionType, TalkNodeData, DialogueOptionData, Dial
     Option.bCanReselect = Template.bCanReselect
   end
   return Obj
-end
-
-function TalkOptionData_C:GetOptionTexts()
-  local OptionTexts = {}
-  for _, Option in ipairs(self.Options) do
-    table.insert(OptionTexts, Option.OptionText)
-  end
-  return OptionTexts
 end
 
 function TalkOptionData_C:IsShow()

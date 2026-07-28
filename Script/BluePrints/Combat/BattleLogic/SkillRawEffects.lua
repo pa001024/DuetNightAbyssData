@@ -1,11 +1,17 @@
 local SkillUtils = require("Utils.SkillUtils")
 local SettingUtils = require("Utils.SettingUtils")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
-local CommonConst = require("CommonConst")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local Component = {}
+local AI_DEBUG_SKILL_EFFECT = "AIDeBug_SkillEffect"
+local AI_DEBUG_GATHER_TARGETS = "AIDeBug_GatherTargets"
 
 function Component:RealExecuteOneEffect_Lua(EffectStruct, Index)
   if not IsValid(EffectStruct.Source) then
+    AIDeBugLog.Abort(AI_DEBUG_SKILL_EFFECT, "LUA_FUNC", "SourceInvalid", {
+      EffectId = EffectStruct.EffectId,
+      TaskIdx = Index
+    })
     return
   end
   local EffectId = EffectStruct.EffectId
@@ -15,6 +21,11 @@ function Component:RealExecuteOneEffect_Lua(EffectStruct, Index)
   })
   local FunctionName = Effect.Function
   if not self["Effect_" .. FunctionName] then
+    AIDeBugLog.Abort(AI_DEBUG_SKILL_EFFECT, "LUA_FUNC", "LuaFuncNotFound", {
+      EffectId = EffectId,
+      TaskIdx = Index,
+      Func = FunctionName
+    })
     self:ShowBattleError("技能效果编号: " .. EffectId .. ", 执行效果编号: " .. Index .. ", 方法: " .. FunctionName .. ", 在 SkillRawEffects.lua 中不存在。")
     return
   end
@@ -22,6 +33,17 @@ function Component:RealExecuteOneEffect_Lua(EffectStruct, Index)
     ID = EffectStruct.EffectId,
     Index = Index
   }
+  local HitCount = EffectStruct.HitTargets and EffectStruct.HitTargets:Num() or 0
+  local SrcEid = EffectStruct.Source and EffectStruct.Source.Eid or -1
+  AIDeBugLog.Log(AI_DEBUG_SKILL_EFFECT, "LUA_FUNC", {
+    EffectId = EffectId,
+    TaskIdx = Index,
+    Func = FunctionName,
+    Route = "LUA",
+    HitCount = HitCount,
+    SrcEid = SrcEid,
+    Next = "DONE"
+  })
   self["Effect_" .. FunctionName](self, EffectStruct, Effect, EffectDataParam)
   if not self.Result.IsEmpty then
     self.Result.Index = Index
@@ -29,6 +51,12 @@ function Component:RealExecuteOneEffect_Lua(EffectStruct, Index)
     self.Results:Add(self.Result)
     self.Result = EffectResults.Result()
   end
+  AIDeBugLog.Done(AI_DEBUG_SKILL_EFFECT, {
+    EffectId = EffectId,
+    TaskIdx = Index,
+    Func = FunctionName,
+    Route = "LUA"
+  })
 end
 
 function Component:Effect_AddTnToMax(EffectStruct, ParamentsTable)
@@ -214,99 +242,60 @@ function Component:Effect_GatherTargets(EffectStruct, ParamentsTable)
   local Acceleration = ParamentsTable.Acceleration
   local LocationOffset = ParamentsTable.LocationOffset
   local Time = ParamentsTable.Time
+  Acceleration = Acceleration or FVector(0, 0, 0)
   LocationOffset = LocationOffset and FVector(LocationOffset[1], LocationOffset[2], LocationOffset[3]) or FVector(0, 0, 0)
   if not next(HitTargets) then
+    AIDeBugLog.Abort(AI_DEBUG_GATHER_TARGETS, "ENTRY", "TargetEmpty", {
+      EffectId = EffectStruct.EffectId,
+      Path = "Unknown"
+    })
     return
   end
-  local Cfg = CommonConst.GatherTargets
-  local Now = self:GetWorld():GetTimeSeconds()
-  if not self._GatherThrottle then
-    self._GatherThrottle = {}
+  local Params = UE4.FGatherSharedParams()
+  Params.GatherPoint = GatherPoint
+  Params.TargetSocketName = TargetSocketName
+  Params.GatherSpeed = GatherSpeed
+  Params.StopDistance = StopDistance
+  Params.Acceleration = Acceleration
+  Params.LocationOffset = LocationOffset
+  Params.Time = Time
+  local TargetEids = TArray(0)
+  for _, Eid in ipairs(HitTargets) do
+    TargetEids:Add(Eid)
   end
-  if not self._GatherPendingQueue then
-    self._GatherPendingQueue = {}
-  end
-  if not self._GatherFrameCount then
-    self._GatherFrameCount = 0
-  end
-  
-  local function DoGatherItem(Battle, Item)
-    local Target = Battle:GetEntity(Item.Eid)
-    if not Target then
-      return
-    end
-    if Item.CreatureInfo and Target.GatherToCreature then
-      Target:GatherToCreature(Item.CreatureInfo, Item.GatherPoint, Item.TargetSocketName, Item.GatherSpeed, Item.StopDistance, Item.Acceleration, Item.LocationOffset, Item.Time)
-    elseif not Item.CreatureInfo and Target.GatherToSource then
-      Target:GatherToSource(Item.Source, Item.GatherPoint, Item.TargetSocketName, Item.GatherSpeed, Item.StopDistance, Item.Acceleration, Item.LocationOffset, Item.Time)
-    end
-  end
-  
-  local function FlushGatherQueue(Battle)
-    Battle._GatherFrameCount = 0
-    while Battle._GatherFrameCount < Cfg.MaxPerFrame and #Battle._GatherPendingQueue > 0 do
-      DoGatherItem(Battle, table.remove(Battle._GatherPendingQueue, 1))
-      Battle._GatherFrameCount = Battle._GatherFrameCount + 1
-    end
-    if #Battle._GatherPendingQueue > 0 then
-      Battle:AddDelayFrameFunc(function()
-        FlushGatherQueue(Battle)
-      end, 1, "GatherTargetsFlush")
-    end
-  end
-  
-  local function EnqueueOrExecGather(Eid, CreatureInfo, Src)
-    for k, t in pairs(self._GatherThrottle) do
-      if Now - t >= Cfg.CDTime then
-        self._GatherThrottle[k] = nil
-      end
-    end
-    local LastTime = self._GatherThrottle[Eid]
-    if LastTime and Now - LastTime < Cfg.CDTime then
-      return
-    end
-    self._GatherThrottle[Eid] = Now
-    local Item = {
-      Eid = Eid,
-      CreatureInfo = CreatureInfo,
-      Source = Src,
-      GatherPoint = GatherPoint,
-      TargetSocketName = TargetSocketName,
-      GatherSpeed = GatherSpeed,
-      StopDistance = StopDistance,
-      Acceleration = Acceleration,
-      LocationOffset = LocationOffset,
-      Time = Time
-    }
-    if self._GatherFrameCount < Cfg.MaxPerFrame then
-      DoGatherItem(self, Item)
-      self._GatherFrameCount = self._GatherFrameCount + 1
-      if self._GatherFrameCount == Cfg.MaxPerFrame and #self._GatherPendingQueue > 0 then
-        self:AddDelayFrameFunc(function()
-          FlushGatherQueue(self)
-        end, 1, "GatherTargetsFlush")
-      end
-    else
-      table.insert(self._GatherPendingQueue, Item)
-      self:AddDelayFrameFunc(function()
-        FlushGatherQueue(self)
-      end, 1, "GatherTargetsFlush")
-    end
-  end
-  
   if 0 ~= EffectStruct.CreatureInfo.CreatureEid then
     local SkillCreatureConfig = DataMgr.SkillCreature[EffectStruct.CreatureInfo.CreatureId]
     if Source:IsPlayer() and SkillCreatureConfig.ClientOwner and IsDedicatedServer(self) then
+      AIDeBugLog.Abort(AI_DEBUG_GATHER_TARGETS, "ENTRY", "ClientOwnerUnsupported", {
+        EffectId = EffectStruct.EffectId,
+        Path = "Creature",
+        SourceEid = Source and Source.Eid or -1,
+        CreatureEid = EffectStruct.CreatureInfo.CreatureEid,
+        HitCount = #HitTargets
+      })
       self:ShowBattleError("当前不支持由玩家直接执行的技能效果编号: " .. EffectStruct.EffectId .. ", 执行效果GatherTargets，技能创生物id为" .. EffectStruct.CreatureInfo.CreatureId .. "ClientOwner为true的技能效果")
       return
     end
-    for _, Eid in ipairs(HitTargets) do
-      EnqueueOrExecGather(Eid, EffectStruct.CreatureInfo, nil)
-    end
+    AIDeBugLog.Log(AI_DEBUG_GATHER_TARGETS, "ENTRY", {
+      Path = "Creature",
+      EffectId = EffectStruct.EffectId,
+      SourceEid = Source and Source.Eid or -1,
+      CreatureEid = EffectStruct.CreatureInfo.CreatureEid,
+      CreatureId = EffectStruct.CreatureInfo.CreatureId,
+      HitCount = #HitTargets,
+      Targets = HitTargets
+    })
+    self:ApplyGatherToCreatureBatch(EffectStruct.CreatureInfo, Params, TargetEids)
   else
-    for _, Eid in ipairs(HitTargets) do
-      EnqueueOrExecGather(Eid, nil, Source)
-    end
+    local SourceEid = Source and Source.Eid or 0
+    AIDeBugLog.Log(AI_DEBUG_GATHER_TARGETS, "ENTRY", {
+      Path = "Source",
+      EffectId = EffectStruct.EffectId,
+      SourceEid = SourceEid,
+      HitCount = #HitTargets,
+      Targets = HitTargets
+    })
+    self:ApplyGatherToSourceBatch(Source, Params, TargetEids)
   end
 end
 

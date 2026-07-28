@@ -150,8 +150,14 @@ function Component:InitEnhanceComp(...)
   self:InitEnhanceWidget()
   self:AddTimer(0.2, self.RefreshBaseInfo)
   self:AddDispatcher(EventID.OnUpdateBagItem, self, self.OnBagItemLockedOrUnlocked)
+  self:AddDispatcher(EventID.OnCompleteProduce, self, self.OnCompleteProduce)
+  self:AddDispatcher(EventID.OnCompleteBatchProduce, self, self.OnCompleteProduce)
   self:UpdateTopResourceBar()
   ModModel:GenerateEnhanceData()
+end
+
+function Component:OnCompleteProduce()
+  ModModel:SetTarget(ModModel:GetTarget())
 end
 
 function Component:SelectContentChanged(Content)
@@ -421,6 +427,7 @@ function Component:ReceiveEnterStateComp()
   end
   if self.IsInit then
     self:RefreshListComp()
+    self:ShowItemDetails(false)
   end
 end
 

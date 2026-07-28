@@ -304,7 +304,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 10040401,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10040501.10040501'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "Chapter03fixsimple04",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -520,7 +520,9 @@ return {
               TargetTime = 13,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["17784685906481439138"] = {
@@ -705,7 +707,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 10040501,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10040601.10040601'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 1,
               BlendOutTime = 0,
@@ -857,7 +859,9 @@ return {
               TargetTime = 13,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           }
         },

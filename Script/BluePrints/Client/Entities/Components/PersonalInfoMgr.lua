@@ -2,6 +2,16 @@ local Component = {}
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local GuildBaseInfo = require("BluePrints.UI.WBP.Guild.Common.GuildBaseInfo")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
+local UIUtils = require("Utils.UIUtils")
+
+local function EnsurePersonalInfoSceneReddotTree()
+  if not ReddotManager.GetTreeNode("PersonalInfoCustomizeEntry") then
+    ReddotManager.AddNodeEx("PersonalInfoCustomizeEntry")
+  end
+  if not ReddotManager.GetTreeNode("PersonalInfoScene") then
+    ReddotManager.AddNodeEx("PersonalInfoScene")
+  end
+end
 
 local function ExtractGuildDisplayData(SourceInfo)
   if type(SourceInfo) ~= "table" then
@@ -307,6 +317,72 @@ function Component:SetPersonalInfoVisible(VisibleType)
     return
   end
   self:CallServerMethod("SetPersonalInfoVisible", VisibleType)
+end
+
+function Component:SetPersonalInfoBg(Callback, BgType, BgId)
+  if not BgType or not BgId then
+    DebugPrint("SetPersonalInfoBg Invalid arguments")
+    return
+  end
+  
+  local function cb(ret)
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    if Callback then
+      Callback(ret)
+    end
+  end
+  
+  self:CallServer("SetPersonalInfoBg", cb, BgType, BgId)
+end
+
+function Component:_OnPropChangeBackgroundList(Keys)
+  for _, bgId in ipairs(self.BackgroundList) do
+    UIUtils.TryAddReddotCacheDetailNumber(bgId, "NameCard_Esc")
+    UIUtils.TryAddReddotCacheDetailNumber(bgId, "NameCard_PersonalInfo")
+    UIUtils.TryAddReddotCacheDetailNumber(bgId, "NameCard_Friend")
+  end
+end
+
+function Component:_OnPropChangePersonalInfoSceneList(Keys)
+  EnsurePersonalInfoSceneReddotTree()
+  local SceneIdList = self.PersonalInfoSceneList or {}
+  local DefaultSceneId = 101
+  for _, SceneId in ipairs(SceneIdList) do
+    if type(SceneId) == "number" and SceneId ~= DefaultSceneId then
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("PersonalInfoScene")
+      if nil == CacheDetail[SceneId] then
+        UIUtils.TryAddReddotCacheDetailNumber(SceneId, "PersonalInfoScene")
+      end
+    end
+  end
+end
+
+function Component:_OnPropChangePersonalInfoGestureList(Keys)
+end
+
+function Component:_OnPropChangePersonalInfoStickList(Keys)
+end
+
+function Component:SetCustomDisplay(Callback, CustomDisplay)
+  if not CustomDisplay then
+    DebugPrint("SetCustomDisplay Invalid arguments")
+    return
+  end
+  
+  local function cb(ret)
+    GreenPrint("SetCustomDisplay上传RPC发送成功")
+    if not ErrorCode:Check(ret) then
+      return
+    end
+    if Callback then
+      Callback(ret)
+    end
+  end
+  
+  GreenPrint("SetCustomDisplay上传RPC已发送")
+  self:CallServer("SetCustomDisplay", cb, CustomDisplay)
 end
 
 return Component

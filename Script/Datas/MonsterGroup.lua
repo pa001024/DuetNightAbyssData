@@ -158,6 +158,14 @@ return ReadOnly("MonsterGroup", {
       [2] = {UnitId = 6013001, UnitProb = 1}
     }
   },
+  [6024] = {
+    GroupId = 6024,
+    MemberSpawnProb = {
+      [1] = T.RT_11,
+      [2] = T.RT_15,
+      [3] = T.RT_16
+    }
+  },
   [6030] = {
     GroupId = 6030,
     MemberSpawnProb = {
@@ -1276,6 +1284,12 @@ return ReadOnly("MonsterGroup", {
       [1] = {UnitId = 9001701, UnitProb = 1}
     }
   },
+  [9001702] = {
+    GroupId = 9001702,
+    MemberSpawnProb = {
+      [1] = {UnitId = 9001702, UnitProb = 1}
+    }
+  },
   [9002011] = {
     GroupId = 9002011,
     MemberSpawnProb = {
@@ -1340,6 +1354,12 @@ return ReadOnly("MonsterGroup", {
     GroupId = 9002701,
     MemberSpawnProb = {
       [1] = {UnitId = 9002701, UnitProb = 1}
+    }
+  },
+  [9002702] = {
+    GroupId = 9002702,
+    MemberSpawnProb = {
+      [1] = {UnitId = 9002702, UnitProb = 1}
     }
   },
   [9003601] = {
@@ -1418,6 +1438,31 @@ return ReadOnly("MonsterGroup", {
     GroupId = 9007024,
     MemberSpawnProb = {
       [1] = {UnitId = 9007024, UnitProb = 1}
+    }
+  },
+  [10001001] = {
+    GroupId = 10001001,
+    MemberSpawnProb = {
+      [1] = {UnitId = 10001062, UnitProb = 1},
+      [2] = {UnitId = 10005061, UnitProb = 1}
+    }
+  },
+  [10002001] = {
+    GroupId = 10002001,
+    MemberSpawnProb = {
+      [1] = {UnitId = 10002001, UnitProb = 1}
+    }
+  },
+  [10003001] = {
+    GroupId = 10003001,
+    MemberSpawnProb = {
+      [1] = {UnitId = 10003062, UnitProb = 1}
+    }
+  },
+  [10004001] = {
+    GroupId = 10004001,
+    MemberSpawnProb = {
+      [1] = {UnitId = 10004062, UnitProb = 1}
     }
   },
   [10005011] = {

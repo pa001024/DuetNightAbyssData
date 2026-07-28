@@ -939,14 +939,6 @@ GMCommandConfig.commands.UI.commands = {
     }
   },
   {
-    text = "打开外观排行榜(测试10条)",
-    mode = "button",
-    callback = "ExecConsoleCommand",
-    parameters = {
-      "gm OpenAppearanceRank 1"
-    }
-  },
-  {
     text = "打开外观方案导入",
     mode = "button",
     callback = "ExecConsoleCommand",
@@ -1364,6 +1356,14 @@ GMCommandConfig.commands["系统"].commands = {
     }
   },
   {
+    text = "解锁所有系统(服务端)(霸体版)（屏蔽任务）",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm CompleteSystemConditionWithoutGuideAndBlockQuest"
+    }
+  },
+  {
     text = "跳过所有引导",
     mode = "button",
     callback = "ExecConsoleCommand",
@@ -1376,7 +1376,7 @@ GMCommandConfig.commands["系统"].commands = {
     mode = "button",
     callback = "ExecConsoleCommand",
     parameters = {
-      "gm UnLockAllDungeonSelectLevels"
+      "sgm UnLockAllDungeonSelectLevels"
     }
   },
   {
@@ -1384,7 +1384,7 @@ GMCommandConfig.commands["系统"].commands = {
     mode = "button",
     callback = "ExecConsoleCommand",
     parameters = {
-      "gm UnLockAllDungeonLevels"
+      "sgm UnLockAllDungeonLevels"
     }
   },
   {
@@ -1512,6 +1512,41 @@ GMCommandConfig.commands["系统"].commands = {
     mode = "button",
     callback = "ExecConsoleCommand",
     parameters = {"sgm aahf"}
+  },
+  {
+    text = "个人主页-获得所有背景图",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"sgm aabg"}
+  },
+  {
+    text = "个人主页-获得所有自定义场景",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"sgm aasc"}
+  },
+  {
+    text = "个人主页-获得所有姿势",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"sgm aage"}
+  },
+  {
+    text = "打开个人主页",
+    mode = "menu",
+    widget_path = TipsPaths.MultiInput,
+    commands = {
+      {
+        text = "是否使用服务端数据(1=是,选填)",
+        mode = "edit",
+        callback = "ShowPersonalInfoPage"
+      },
+      {
+        text = "执行",
+        mode = "button",
+        callback = "ShowPersonalInfoPage"
+      }
+    }
   },
   {
     text = "打开送礼商店",

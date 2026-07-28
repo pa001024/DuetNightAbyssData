@@ -52,5 +52,16 @@ return ReadOnly("RaidSeason", {
     RaidSeason = 1004,
     RaidTime = 168,
     Shop = "RaidShopSeason01"
+  },
+  [1005] = {
+    EventId = 111005,
+    PreRaidRank = 1,
+    PreRaidTime = 62,
+    RaidPointToRewrad = T.RT_1,
+    RaidPointToRewradMaxTime = 750,
+    RaidRankCount = 1000,
+    RaidSeason = 1005,
+    RaidTime = 168,
+    Shop = "RaidShopSeason01"
   }
 })

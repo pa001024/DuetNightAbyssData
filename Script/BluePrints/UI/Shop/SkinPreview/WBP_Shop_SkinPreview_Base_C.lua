@@ -313,6 +313,12 @@ function M:OnClickDyeingPreview()
   if self.bBlockClickSuitPreview or self.bBlockClickChangeSkin then
     return
   end
+  if self.ShopItemData.ItemType == "Hair" then
+    local HairData = self.ShopItemData.TypeId and DataMgr.Hair[self.ShopItemData.TypeId]
+    if not HairData or HairData.IsCommon == true then
+      return
+    end
+  end
   if self.ShopItemData.ItemType ~= "Skin" and self.ShopItemData.ItemType ~= "WeaponSkin" and self.ShopItemData.ItemType ~= "Hair" then
     return
   end
@@ -1058,8 +1064,7 @@ function M:PurchaseShopItem(Count)
       PaymentParameters.cpOrder = OrderId
       PaymentParameters.callbackUrl = CallbackUrl
       local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-      local ItemName = ""
-      ItemName = GText(ItemUtils:GetDropName(self.ShopItemData.TypeId, self.ShopItemData.ItemType))
+      local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
       HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
       local TrackInfo = {}
       TrackInfo.product_id = DataMgr.ShopItem2PayGoods[self.ShopItemData.ItemId]
@@ -1365,7 +1370,7 @@ function M:OnLevelUpWidgetClicked(Level)
   end
   if SkinLevelUpData then
     self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Text_Undiscounted_Price:SetVisibility(ESlateVisibility.Collapsed)
+    self.Text_Undiscounted_Price:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.WBP_Com_Cost:InitContent({
       CostText = GText("UI_Skin_Upgrade_Cost"),
       ResourceId = SkinLevelUpData.UnlockCurrency,
@@ -1373,6 +1378,11 @@ function M:OnLevelUpWidgetClicked(Level)
     })
     self.WBP_Com_Cost:SetGamePadIconVisible(false)
     self.Btn_Function:ForbidBtn(true)
+    if self.HidePurchase then
+      self.WidgetSwitcher_BtnState:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(2)
+      self.Text_Lock:SetText(GText("UI_Skin_Upgrade_Locked"))
+    end
   elseif not self.HidePurchase then
     self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self:UpdateDiscount()
@@ -1380,6 +1390,7 @@ function M:OnLevelUpWidgetClicked(Level)
     self:UpdateButtonBuy()
   else
     self.Panel_Buy:SetVisibility(ESlateVisibility.Collapsed)
+    self.WidgetSwitcher_BtnState:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   if self.UpdateSkinLevelPreview then
     self:UpdateSkinLevelPreview(Level)

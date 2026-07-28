@@ -60,7 +60,7 @@ local LuaBaseTypes = {
 function Decorator:Rpc(args)
   self:AddDecorator(function(FuncName, f)
     local args_type = SplitAndTrim(args, ",")
-    GWorld:AddRpcFunc(FuncName)
+    GWorld:AddRpcFunc(FuncName, args_type)
     
     local function NewFunc(obj, ...)
       local args_value = {

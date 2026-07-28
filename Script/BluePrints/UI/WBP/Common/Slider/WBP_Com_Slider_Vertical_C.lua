@@ -17,18 +17,6 @@ end
 function M:MiniMaxUseGamePadStyle(UseGamePadStyle)
 end
 
-function M:ForbidMinOperation(Forbidden)
-  self.ForbidMin = Forbidden
-  self.Btn_Min:ForbidBtn(Forbidden)
-  self.Key_Min:SetForbidKey(Forbidden)
-end
-
-function M:ForbidAddOperation(Forbidden)
-  self.ForbidAdd = Forbidden
-  self.Btn_Add:ForbidBtn(Forbidden)
-  self.Key_Add:SetForbidKey(Forbidden)
-end
-
 function M:UpdateMouseGamePadImage(CurGamepadName)
   if self.CurGamepadNameName == CurGamepadName then
     return

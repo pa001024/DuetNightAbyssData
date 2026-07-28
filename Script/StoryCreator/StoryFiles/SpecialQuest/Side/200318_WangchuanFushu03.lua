@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -579,7 +579,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 4776.209485827454, y = 1982.5070957007688},
-            propsData = {bEnablePP = true, PPEnum = 8}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 8,
+              PPWeight = 1
+            }
           },
           ["1773296529859484"] = {
             key = "1773296529859484",
@@ -600,7 +604,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 4790.770526985195, y = 2210.078115122968},
-            propsData = {bEnablePP = false, PPEnum = 8}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 8,
+              PPWeight = 1
+            }
           },
           ["1773296529860487"] = {
             key = "1773296529860487",
@@ -614,7 +622,11 @@ return {
             type = "SimplePostProcessNode",
             name = "确保关闭屏幕后处理",
             pos = {x = 3326.0399584407196, y = 648.7669446825112},
-            propsData = {bEnablePP = false, PPEnum = 14}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 14,
+              PPWeight = 1
+            }
           },
           ["1773296529860489"] = {
             key = "1773296529860489",
@@ -705,6 +717,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -953,7 +966,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 2838.165565213941, y = 665.3994730759437},
-            propsData = {bEnablePP = true, PPEnum = 14}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 14,
+              PPWeight = 1
+            }
           },
           ["17739190943043348131"] = {
             key = "17739190943043348131",
@@ -980,7 +997,11 @@ return {
             type = "SimplePostProcessNode",
             name = "确保关闭屏幕后处理",
             pos = {x = 1594.0866473948086, y = 1120.3927720585652},
-            propsData = {bEnablePP = false, PPEnum = 14}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 14,
+              PPWeight = 1
+            }
           },
           ["17739191197843348939"] = {
             key = "17739191197843348939",
@@ -1026,8 +1047,7 @@ return {
               SoundPath = "event:/bgm/1_1/0106_scene_cave_near_sea",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104501, 104503},
+              RelatedRegionId = {104501, 104503},
               bStoreToServer = false
             }
           },

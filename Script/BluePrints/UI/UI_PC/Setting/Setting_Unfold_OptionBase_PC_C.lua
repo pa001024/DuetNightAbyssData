@@ -322,14 +322,11 @@ function S:SaveMiniOptionSetting()
 end
 
 function S:SetSystemLanguageOldOptionId()
-  self.SystemLanguageList = {
-    [1] = "CN",
-    [2] = "EN",
-    [3] = "JP",
-    [4] = "KR",
-    [5] = "TC",
-    [6] = "FR"
-  }
+  local LangOptionTable = DataMgr.Option.SystemLanguage.UnFoldText
+  self.SystemLanguageList = {}
+  for i, TextId in ipairs(LangOptionTable) do
+    self.SystemLanguageList[i] = table.last(string.split(TextId, "_"))
+  end
   local NowSystemLanguage = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.SystemLanguageList[tonumber(self.DefaultValue)])
   self.OldOptionId = self:SetOldOptionId(self.SystemLanguageList, NowSystemLanguage)
 end

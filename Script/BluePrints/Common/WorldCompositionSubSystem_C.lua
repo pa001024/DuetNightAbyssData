@@ -112,7 +112,11 @@ Traceback:
 end
 
 function M:OnWaitForDataIdle_Lua()
-  GWorld.StoryMgr:TryRestartStoryline()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar:TryRestartQuestChains()
 end
 
 function M:Initialize_Lua()

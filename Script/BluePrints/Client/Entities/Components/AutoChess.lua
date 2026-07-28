@@ -1,3 +1,4 @@
+local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local AutoChessModel = require("BluePrints.UI.AutoChess.AutoChessDataModel")
 local Component = {}
 
@@ -27,7 +28,7 @@ function Component:AutoChessAddEquip(Callback, MonsterId, EquipId, ReplaceEquipI
     if Callback then
       Callback(Ret)
     end
-    EventManager:FireEvent(EventID.OnAutoChessEquipChange, MonsterId, EquipId, ReplaceEquipIndex)
+    EventManager:FireEvent(EventID.OnAutoChessEquipChange, MonsterId, ReplaceEquipIndex, EquipId)
   end
   
   self:CallServer("AutoChessAddEquip", cb, MonsterId, EquipId, ReplaceEquipIndex)
@@ -40,9 +41,12 @@ function Component:AutoChessRemoveEquip(Callback, MonsterId, EquipIdx)
   
   local function cb(Ret)
     if Callback then
-      Callback(Ret)
+      local ok, err = pcall(Callback, Ret)
+      if not ok then
+        DebugPrint(ErrorTag, "AutoChessRemoveEquip callback error: " .. tostring(err))
+      end
     end
-    EventManager:FireEvent(EventID.OnAutoChessEquipChange, MonsterId, EquipId)
+    EventManager:FireEvent(EventID.OnAutoChessEquipChange, MonsterId, EquipIdx)
   end
   
   self:CallServer("AutoChessRemoveEquip", cb, MonsterId, EquipIdx)
@@ -73,6 +77,66 @@ function Component:AutoChessRemoveSquad(Callback, SquadId)
   end
   
   self:CallServer("AutoChessRemoveSquad", cb, SquadId)
+end
+
+function Component:AutoChessSetChallengeBuff(Callback, ChallengeBuffs)
+  DebugPrint("AutoChessSetChallengeBuff", ChallengeBuffs)
+  assert(ChallengeBuffs)
+  
+  local function cb(Ret)
+    if ErrorCode:Check(Ret) then
+      EventManager:FireEvent(EventID.OnChallengeBuffChange, ChallengeBuffs)
+      if Callback then
+        Callback(Ret)
+      end
+    end
+  end
+  
+  self:CallServer("AutoChessSetChallengeBuff", cb, ChallengeBuffs)
+end
+
+function Component:AutoChessSetSharedSquad(Callback, SquadIdx, Squad, Buffs, Equips)
+  DebugPrint("AutoChessSetSharedSquad", SquadIdx)
+  assert(SquadIdx)
+  assert(Squad)
+  assert(Buffs)
+  assert(Equips)
+  
+  local function cb(Ret)
+    EventManager:FireEvent(EventID.OnAutoChessSetSharedSquad, SquadIdx)
+    if ErrorCode:Check(Ret) and Callback then
+      Callback(Ret)
+    end
+  end
+  
+  self:CallServer("AutoChessSetSharedSquad", cb, SquadIdx, Squad, Buffs, Equips)
+end
+
+function Component:AutoChessGetSharedCode(Callback, SquadIdx)
+  DebugPrint("AutoChessGetSharedCode", SquadIdx)
+  assert(SquadIdx)
+  
+  local function cb(Ret, ShareCode)
+    if Callback then
+      Callback(Ret, ShareCode)
+    end
+  end
+  
+  self:CallServer("AutoChessGetSharedCode", cb, SquadIdx)
+end
+
+function Component:AutoChessGetSharedSquadByShareCode(Callback, ShareCode)
+  DebugPrint("AutoChessGetSharedSquadByShareCode", ShareCode)
+  assert(ShareCode)
+  
+  local function cb(Ret, ShareData)
+    ErrorCode:Check(Ret)
+    if Callback then
+      Callback(Ret, ShareData)
+    end
+  end
+  
+  self:CallServer("AutoChessGetSharedSquadByShareCode", cb, ShareCode)
 end
 
 function Component:AutoChessCombatStart(Callback, Squad)

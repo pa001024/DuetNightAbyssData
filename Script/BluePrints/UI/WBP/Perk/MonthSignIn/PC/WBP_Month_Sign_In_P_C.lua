@@ -288,7 +288,10 @@ function M:Close()
   if self.bIsInGetAnimation or self.IsInAnimation or self.bIsInRefresh then
     return
   end
-  M.Super.Close(self)
+  if self.IsClosing then
+    return
+  end
+  self.IsClosing = true
   self:OnViewClose()
 end
 

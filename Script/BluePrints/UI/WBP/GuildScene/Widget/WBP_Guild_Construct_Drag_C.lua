@@ -1,4 +1,5 @@
 require("UnLua")
+require("DataMgr")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -10,10 +11,14 @@ function M:InitOperation()
 end
 
 function M:CopyActor()
-  local ModifiedState = FGuildActorState()
+  local ModifiedState = FGuildConstructActorState()
   local Ret = self.GuildManager:GetActorState(self.ActorId, ModifiedState)
-  local Operator = UE4.UGuildFunctionLibrary.CopyActor(ModifiedState)
-  UE4.UGuildFunctionLibrary.CreateActorExec(self.GuildManager, Operator)
+  if not Ret then
+    ScreenPrint("请先选中后复制")
+    return
+  end
+  local Operator = UE4.UGuildConstructFunctionLibrary.CopyActor(self.GuildManager, ModifiedState)
+  UE4.UGuildConstructFunctionLibrary.CreateActorExec(self.GuildManager, Operator)
 end
 
 function M:InitButton()
@@ -22,35 +27,41 @@ function M:InitButton()
 end
 
 function M:GetActorLocation()
-  local State = self.GuildManager:GetActorState(self.ActorId, ModifiedState)
-  return State.Location
+  local State = self.GuildManager:GetActorState(self.ActorId)
+  return State.LocalLocation
 end
 
 function M:UpdateCurrentRotation()
   local RotationYaw = self.Slider_Rotation.CurrentCount
-  local ModifiedState = FGuildActorState()
-  local Ret = self.GuildManager:GetActorState(self.ActorId, ModifiedState)
-  ModifiedState.Rotation.Yaw = RotationYaw
-  local ActorCreateState = TArray(FGuildActorState)
-  ActorCreateState:Add(ModifiedState)
-  local Operator = UE4.UGuildFunctionLibrary.ModifyOperator(ActorCreateState)
-  UE4.UGuildFunctionLibrary.ModifyOperatorExec(self.GuildManager, Operator)
+  local ModifiedState, Ret = self.GuildManager:GetActorState(self.ActorId)
+  ModifiedState.LocalRotation.Yaw = RotationYaw
+  local Operator = UE4.UGuildConstructFunctionLibrary.ModifyOperator(self.GuildManager, ModifiedState)
+  UE4.UGuildConstructFunctionLibrary.ModifyOperatorExec(self.GuildManager, Operator)
 end
 
 function M:UpdateCurrentScale()
-  local Scale = self.Slider_Scale.CurrentCount
-  local ModifiedState = FGuildActorState()
-  local Ret = self.GuildManager:GetActorState(self.ActorId, ModifiedState)
-  ModifiedState.Scale = FVector(Scale, Scale, Scale)
-  local ActorCreateState = TArray(FGuildActorState)
-  ActorCreateState:Add(ModifiedState)
-  local Operator = UE4.UGuildFunctionLibrary.ModifyOperator(ActorCreateState)
-  UE4.UGuildFunctionLibrary.ModifyOperatorExec(self.GuildManager, Operator)
+  local Scale = self.Slider_Scale.CurrentCount / 100.0
+  local ModifiedState, Ret = self.GuildManager:GetActorState(self.ActorId)
+  ModifiedState.LocalScale = FVector(Scale, Scale, Scale)
+  local Operator = UE4.UGuildConstructFunctionLibrary.ModifyOperator(self.GuildManager, ModifiedState)
+  UE4.UGuildConstructFunctionLibrary.ModifyOperatorExec(self.GuildManager, Operator)
+end
+
+function M:LeftRotate()
+  self.Slider_Rotation:OnClickToMinus()
+end
+
+function M:RightRotate()
+  self.Slider_Rotation:OnClickToAdd()
+end
+
+function M:SetSliderRotation()
+  self.Slider_Rotation:SetValue()
 end
 
 function M:InitSlider()
-  local ActorState = self.GuildManager:GetActorState(self.ActorId, ModifiedState)
-  local Yaw = ActorState.Rotation.Yaw
+  local ActorState, Ret = self.GuildManager:GetActorState(self.ActorId)
+  local Yaw = ActorState.LocalRotation.Yaw
   local ConfigData = {
     InitValue = Yaw,
     MinValue = 0,
@@ -65,14 +76,22 @@ function M:InitSlider()
     OwnerPanel = self,
     bForbidPressAccelerate = true
   }
+  self.Slider_Rotation:Init(ConfigData)
+  local ScaleData = DataMgr.GuildItem[ActorState.UnitId].ScaleConfig
+  local Length = #ScaleData
+  if Length < 3 then
+    self.Slider_Scale:SetVisibility(UE4.ESlateVisibility.Hidden)
+    return
+  end
+  self.Slider_Scale:SetVisibility(UE4.ESlateVisibility.Visible)
   local Scale = ActorState.Scale.X
   local ScaleConfigData = {
-    InitValue = Scale,
-    MinValue = 1,
-    MaxValue = 5,
+    InitValue = Scale * 100,
+    MinValue = ScaleData[1] * 100,
+    MaxValue = ScaleData[2] * 100,
     EnableMiniBtn = true,
     EnableMaxBtn = true,
-    ClickInterval = 1,
+    ClickInterval = ScaleData[3] * 100,
     MaxBtnCallback = self.UpdateCurrentScale,
     MinusBtnCallback = self.UpdateCurrentScale,
     AddBtnCallback = self.UpdateCurrentScale,
@@ -80,7 +99,6 @@ function M:InitSlider()
     OwnerPanel = self,
     bForbidPressAccelerate = true
   }
-  self.Slider_Rotation:Init(ConfigData)
   self.Slider_Scale:Init(ScaleConfigData)
 end
 

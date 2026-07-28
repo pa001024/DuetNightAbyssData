@@ -157,7 +157,6 @@ function Component:InitContent(Params, PopupData, Owner)
     OnTextChanged = self.OnNameChanged
   }
   if not Params.ChangeName and not Params.IsExchangeCode then
-    Params.EditTextConfig.bLimitBr = true
     self.WS_Input:SetActiveWidgetIndex(0)
     self.CurrentInputWidget = self.Input_Multiline
     self.Input_Multiline:Init(Params.EditTextConfig, Params)

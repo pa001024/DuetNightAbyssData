@@ -177,27 +177,23 @@ function WBP_DungeonCapture_C:UIStateChange_OnTarget()
   self:AddTimer(2, self.AfterGuideIconReplaced, true, 0, "AfterGuideIconReplaced")
 end
 
-function WBP_DungeonCapture_C:AfterGuideIconReplaced()
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManager = GameInstance:GetGameUIManager()
-  if nil == UIManager or not UE4.UKismetSystemLibrary.IsValid(UIManager) then
+function WBP_DungeonCapture_C:AfterGuideIconReplaced(eid)
+  local CachedEid = rawget(self, "GuideEid")
+  local TargetEid = CachedEid and 0 ~= CachedEid and CachedEid or eid and 0 ~= eid and eid or nil
+  if not TargetEid then
     return
   end
-  local Result = TArray("")
-  for k, v in pairs(UIConst.DUNGEONINDICATOR) do
-    local ret = UIManager:GetAllUINameByBPClass(UE4.UClass.Load(v))
-    if ret:Length() > 0 then
-      for i = 1, ret:Length() do
-        Result:Add(ret:GetRef(i))
-      end
-    end
+  if eid and 0 ~= eid then
+    rawset(self, "GuideEid", eid)
   end
-  for i = 1, Result:Length() do
-    local UIName = Result:GetRef(i)
-    local GuideIcon = UIManager:GetUIObj(UIName)
-    if nil ~= GuideIcon then
-      GuideIcon:RePlayAppearAnim()
-    end
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local SceneManager = GameInstance:GetSceneManager()
+  if nil == SceneManager then
+    return
+  end
+  local GuideIcon = SceneManager:GetGuideIconByEid(TargetEid)
+  if GuideIcon then
+    GuideIcon:RePlayAppearAnim()
   end
 end
 

@@ -22,10 +22,21 @@ function M:RegisterEvent()
   EventManager:AddEvent(EventID.OnInitRoleBattleInfo, self, self.OnInitRoleBattleInfo)
 end
 
+function M:ResetBattleStatistics()
+  self.AllDamageInfo = {}
+  self.AllDamageValue = 0
+  self.AutoChessItemTable = {}
+  self:RemoveTimer("RefreshBattlePassTime")
+  if self.GridPanelLayout then
+    self.GridPanelLayout:ClearChildren()
+  end
+end
+
 function M:OnInitRoleBattleInfo(AutoChessBattleInfo)
   if not AutoChessBattleInfo then
     return
   end
+  self:ResetBattleStatistics()
   local AllyDamageInfos = self:GetDamageInfosByCamp("Ally")
   for Eid, DamageInfo in pairs(AutoChessBattleInfo.Ally) do
     table.insert(AllyDamageInfos, {

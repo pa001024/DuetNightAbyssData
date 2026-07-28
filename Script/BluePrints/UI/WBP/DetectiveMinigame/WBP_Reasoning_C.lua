@@ -78,7 +78,6 @@ function M:UnbindEvents()
 end
 
 function M:Close()
-  self.Super.Close(self)
   if self.Book.IsClueUi then
     self:PlayAnimation(self.Guide_Out)
   end
@@ -90,6 +89,7 @@ function M:Close()
       TaskPanel.AutoClose = true
     end
   end
+  self.Super.Close(self)
 end
 
 function M:AddCloseCallback(Obj, Callback)
@@ -116,6 +116,18 @@ function M:RealClose(...)
     end
     self.CloseCallbacks = nil
   end
+end
+
+function M:OnEndClose()
+  if not self.AutoClose then
+    return
+  end
+  local BattleMain = UIManager(self):GetUIObj("BattleMain")
+  if BattleMain then
+    BattleMain:RemovePlayInOutSystems("TaskPanel")
+    BattleMain:RemovePlayInOutSystems("DetectiveMinigame")
+  end
+  UIUtils.PlayBattleMainInAnim()
 end
 
 function M:InitQuestion()

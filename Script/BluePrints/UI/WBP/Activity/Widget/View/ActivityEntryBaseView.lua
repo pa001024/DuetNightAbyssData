@@ -2,6 +2,8 @@ require("UnLua")
 local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local CommonVideoBgBPPath = "/Game/UI/WBP/Activity/Widget/WBP_Activity_CommonVideoBG.WBP_Activity_CommonVideoBG_C"
+local RefreshActivityEntryVideoTimerName = "RefreshActivityEntryVideoTimer"
 local M = {}
 
 function M:PlayInAnim()
@@ -268,6 +270,9 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
   if not ActivityConfigData then
     return
   end
+  self.CurrentActivityConfigData = ActivityConfigData
+  self.CurrentPageConfigData = PageConfigData
+  self.CurrentVideoBgWidget = nil
   local EventBgBPPath
   if CommonUtils.GetDeviceTypeByPlatformName(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
     EventBgBPPath = ActivityConfigData.EventBgBPPathMobile or ActivityConfigData.EventBgBPPathPC
@@ -281,11 +286,6 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
     local NewBgWidget = UIManager(self):CreateWidget(EventBgBPPath)
     if NewBgWidget.InitUI then
       NewBgWidget:InitUI(ActivityConfigData, PageConfigData, self.CurTabId, self)
-    end
-    if NewBgWidget.PlayBGVideo then
-      self:AddTimer(0.01, function()
-        NewBgWidget:PlayBGVideo(ActivityConfigData, PageConfigData)
-      end)
     end
     if nil ~= NewBgWidget then
       local NeedHideNodeList = PageConfigData.HideBPNode
@@ -316,6 +316,23 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
       if nil ~= NewBgWidget.PlaySplineAnimation then
         NewBgWidget:PlaySplineAnimation()
       end
+      if nil ~= ActivityConfigData.VideoPath and ActivityConfigData.VideoPath ~= "" then
+        local VideoBgWidget = UIManager(self):CreateWidget(CommonVideoBgBPPath)
+        if nil ~= VideoBgWidget and self:AttachVideoBgToNewBgWidget(NewBgWidget, VideoBgWidget) then
+          VideoBgWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+          self.CurrentVideoBgWidget = VideoBgWidget
+          if VideoBgWidget.BeforePlayBGVideo then
+            VideoBgWidget:BeforePlayBGVideo()
+          end
+          if VideoBgWidget.PlayBGVideo then
+            self:AddTimer(0.01, function()
+              if IsValid(VideoBgWidget) then
+                VideoBgWidget:PlayBGVideo(ActivityConfigData, PageConfigData)
+              end
+            end)
+          end
+        end
+      end
     end
     self.WidgetBGAnchor:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   elseif PageConfigData and PageConfigData.EventBg then
@@ -330,6 +347,63 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
     local FinalEventBgSound = "event:" .. ActivityConfigData.EventBgSound
     AudioManager(self):PlayUISound(self, FinalEventBgSound, ActivityCommon.MainUIName, nil)
   end
+end
+
+function M:RefreshCurrentBGVideo()
+  local VideoBgWidget = self.CurrentVideoBgWidget
+  if not IsValid(VideoBgWidget) then
+    return
+  end
+  self:PlayCurrentActiveBgInAnimation()
+  VideoBgWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self:RemoveTimer(RefreshActivityEntryVideoTimerName)
+  self:AddTimer(0.01, function()
+    if not IsValid(VideoBgWidget) or VideoBgWidget ~= self.CurrentVideoBgWidget then
+      return
+    end
+    self:ReplayCurrentBGVideo()
+  end, false, 0, RefreshActivityEntryVideoTimerName)
+end
+
+function M:PlayCurrentActiveBgInAnimation()
+  local CurrentActiveBg = self.CurrentActiveBg
+  if not IsValid(CurrentActiveBg) or CurrentActiveBg.In == nil then
+    return
+  end
+  CurrentActiveBg:StopAnimation(CurrentActiveBg.In)
+  CurrentActiveBg:PlayAnimation(CurrentActiveBg.In, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1.0)
+end
+
+function M:ReplayCurrentBGVideo()
+  local VideoBgWidget = self.CurrentVideoBgWidget
+  if not IsValid(VideoBgWidget) then
+    return
+  end
+  VideoBgWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if VideoBgWidget.ReplayBGVideo then
+    VideoBgWidget:ReplayBGVideo()
+    return
+  end
+  if VideoBgWidget.PlayBGVideo then
+    VideoBgWidget:PlayBGVideo(self.CurrentActivityConfigData, self.CurrentPageConfigData, true)
+  end
+end
+
+function M:AttachVideoBgToNewBgWidget(NewBgWidget, VideoBgWidget)
+  local BgOverlay = NewBgWidget and NewBgWidget.Bg
+  if not (BgOverlay and IsValid(BgOverlay)) or not BgOverlay.AddChildToOverlay then
+    DebugPrint("ActivityEntryBaseView: NewBgWidget.Bg is not a valid Overlay")
+    return false
+  end
+  local VideoSlot
+  if BgOverlay.InsertChildAt then
+    VideoSlot = BgOverlay:InsertChildAt(0, VideoBgWidget)
+  else
+    VideoSlot = BgOverlay:AddChildToOverlay(VideoBgWidget)
+  end
+  VideoSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+  VideoSlot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+  return true
 end
 
 function M:CreateActivityPage(EventConfigData)

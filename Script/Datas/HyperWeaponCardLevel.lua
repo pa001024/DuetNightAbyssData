@@ -131,8 +131,13 @@ return ReadOnly("HyperWeaponCardLevel", {
   [10399] = {
     [1] = {
       CollectRewardExp = 200,
-      ResourceId = T.RT_6,
-      ResourceNum = T.RT_7,
+      ResourceId = {
+        [1] = 15006,
+        [2] = 202,
+        [3] = 15030,
+        [4] = 15027
+      },
+      ResourceNum = T.RT_1,
       UnlockCondition = 443001,
       UnlockConditionDes = "UI_HyperWeapon_ForgeLevel1",
       WeaponCardLevel = 1,
@@ -140,8 +145,14 @@ return ReadOnly("HyperWeaponCardLevel", {
     },
     [2] = {
       CollectRewardExp = 200,
-      ResourceId = T.RT_6,
-      ResourceNum = T.RT_7,
+      ResourceId = {
+        [1] = 15006,
+        [2] = 15031,
+        [3] = 20027,
+        [4] = 15030,
+        [5] = 15027
+      },
+      ResourceNum = T.RT_2,
       UnlockCondition = 443002,
       UnlockConditionDes = "UI_HyperWeapon_ForgeLevel2",
       WeaponCardLevel = 2,
@@ -149,8 +160,15 @@ return ReadOnly("HyperWeaponCardLevel", {
     },
     [3] = {
       CollectRewardExp = 200,
-      ResourceId = T.RT_6,
-      ResourceNum = T.RT_7,
+      ResourceId = {
+        [1] = 15006,
+        [2] = 15031,
+        [3] = 15037,
+        [4] = 202,
+        [5] = 15030,
+        [6] = 15027
+      },
+      ResourceNum = T.RT_3,
       UnlockCondition = 443003,
       UnlockConditionDes = "UI_HyperWeapon_ForgeLevel3",
       WeaponCardLevel = 3,
@@ -158,8 +176,15 @@ return ReadOnly("HyperWeaponCardLevel", {
     },
     [4] = {
       CollectRewardExp = 200,
-      ResourceId = T.RT_6,
-      ResourceNum = T.RT_7,
+      ResourceId = {
+        [1] = 15006,
+        [2] = 15031,
+        [3] = 15037,
+        [4] = 20027,
+        [5] = 15030,
+        [6] = 15027
+      },
+      ResourceNum = T.RT_4,
       UnlockCondition = 443004,
       UnlockConditionDes = "UI_HyperWeapon_ForgeLevel4",
       WeaponCardLevel = 4,
@@ -167,8 +192,15 @@ return ReadOnly("HyperWeaponCardLevel", {
     },
     [5] = {
       CollectRewardExp = 200,
-      ResourceId = T.RT_6,
-      ResourceNum = T.RT_7,
+      ResourceId = {
+        [1] = 15006,
+        [2] = 15031,
+        [3] = 15037,
+        [4] = 1006,
+        [5] = 15030,
+        [6] = 15027
+      },
+      ResourceNum = T.RT_5,
       UnlockCondition = 443005,
       UnlockConditionDes = "UI_HyperWeapon_ForgeLevel5",
       WeaponCardLevel = 5,

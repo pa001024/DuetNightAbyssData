@@ -281,8 +281,11 @@ function M:OnGetMenuContent(Anchor)
   end
   self.bOpenMenu = true
   self.InGameOnly = true
-  local Widget = ChatController:OpenPlayerBtnList(self, self.Member, Switch)
-  Widget:DontShowBottom()
+  local BtnOption = {
+    AllowReportWithoutMessageContent = true,
+    AllowNegativeAttitude = FriendController:GetAllowNegativeAttitude(true)
+  }
+  local Widget = ChatController:OpenPlayerBtnList(self, self.Member, Switch, nil, BtnOption)
   return Widget
 end
 

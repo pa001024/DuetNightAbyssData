@@ -126,6 +126,130 @@ function Guide_Text_CountDown_PC:InitTempleCountDown(Duration, bShowZeroText)
   AudioManager(self):PlayUISound(self, "event:/ui/common/count_down_multi_player_challenge", nil, nil)
 end
 
+function Guide_Text_CountDown_PC:StartPetRaceCountDown(Duration, bShowZeroText)
+  if self.InCountDown then
+    self:OnClose()
+    return
+  end
+  local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
+  if BattleMainUI then
+    BattleMainUI.Pos_CountDown:AddChild(self)
+    BattleMainUI.Pos_CountDown:SetVisibility(UE.ESlateVisibility.SelfHitTestInvisible)
+  end
+  if self.PetRaceTimerHandle then
+    self:RemoveTimer("GuideTextCountDownTick", false)
+    self.PetRaceTimerHandle = nil
+  end
+  self.InCountDown = true
+  self.ShowZeroText = bShowZeroText
+  self.IsPetRaceCountDownEnd = false
+  self:AddTimer(Duration, self.OnPetRaceCountDownEnd, false, 0, "PetRaceGuideCountDown", false)
+  if nil ~= self.Guide_Text_CountDown_PC.In then
+    self.Guide_Text_CountDown_PC:PlayAnimation(self.Guide_Text_CountDown_PC.In)
+  end
+  self.PetRaceTimerHandle = self:AddTimer(1, self.PetRaceTick, true, 0, "GuideTextCountDownTick", false)
+  self.CountDownTime = math.floor(Duration - 1)
+  self.Guide_Text_CountDown_PC.Text_CountDown:SetText(string.format("%d", self.CountDownTime))
+  AudioManager(self):PlayUISound(self, "event:/ui/common/count_down_multi_player_challenge", nil, nil)
+end
+
+function Guide_Text_CountDown_PC:InitStartPetRaceCountDown(Duration, bShowZeroText, RaceId)
+  if self.HideUITable == nil then
+    self.HideUITable = {
+      Pos_Entry = 1,
+      Pos_Drops = 1,
+      Pos_SpecialDrops = 1,
+      Pos_NewMonster = 1,
+      Battle_Map = 1,
+      Btn_Esc = 1,
+      Btn_GuideBook = 1,
+      Group_ChatEntry = 1,
+      Buff = 1,
+      Char_Skill = 1,
+      Team = 1,
+      Chat_Entry = 1,
+      HBox = 1,
+      SizeBox_Map = 1,
+      Btn_Task = 1,
+      Pos_TaskBar = 1,
+      Pos_Aim = 1,
+      LeftAutoBtnPos = 1,
+      HUD_Bar = 1
+    }
+  end
+  local CountDown = Duration or 4
+  self.RaceId = RaceId
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local Spline = GameState.PetRaceSplineMaps:FindRef(self.RaceId)
+  if Spline then
+    Spline:PlayCountDownSequence()
+  end
+  self.TimerHandle = GWorld.GameInstance:AddTimer(CountDown, function()
+    local BattleMain = UIManager(self):GetUIObj("BattleMain")
+    if BattleMain then
+      BattleMain:PetRaceHideOrShowBattleUI(false, self.HideUITable)
+    end
+    if IsValid(Player) then
+      Player:RemoveDisableInputTag("PetRace")
+      Player:SetCanInteractiveTrigger(true, "PetRace")
+      Player:SetESCMenuForbiddenState(false)
+    end
+    if Spline then
+      Spline:StartRaceLottery()
+      Spline.GameLogicComponent:ShowPetRaceInGame(self.RaceId)
+      local AudioManager = AudioManager(self)
+      local Event = AudioManager:GetFMODEventByPath_Sync("event:/bgm/1_0/0090_system_shooting")
+      AudioManager:PlayWorldChallengeSound(Event, nil, 0, true)
+    end
+  end, false, 0, "PetRaceStartCountDown")
+  local BattleMain = UIManager(self):GetUIObj("BattleMain")
+  if BattleMain then
+    BattleMain:Show("PetRace")
+    BattleMain:PetRaceHideOrShowBattleUI(true, self.HideUITable)
+  end
+  self:StartPetRaceCountDown(CountDown, bShowZeroText)
+end
+
+function Guide_Text_CountDown_PC:PetRaceTick()
+  self.CountDownTime = math.floor(self.CountDownTime - 1)
+  if self.CountDownTime < 0 then
+    self:OnPetRaceCountDownEnd()
+    return
+  end
+  self.Guide_Text_CountDown_PC.Text_CountDown:SetText(string.format("%d", self.CountDownTime))
+  if 0 == self.CountDownTime then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/count_down_multi_player_challenge_last_count", nil, nil)
+    if self.ShowZeroText == false then
+      self.Guide_Text_CountDown_PC.Text_CountDown:SetText(GText("UI_Temple_Countdown_Go"))
+    end
+  elseif self.CountDownTime > 0 then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/count_down_multi_player_challenge", nil, nil)
+  end
+end
+
+function Guide_Text_CountDown_PC:OnPetRaceCountDownEnd()
+  if self.IsPetRaceCountDownEnd then
+    return
+  end
+  self.IsPetRaceCountDownEnd = true
+  self:OnPetRaceCountDownRealEnd()
+  if self.Guide_Text_CountDown_PC.Out then
+    self.Guide_Text_CountDown_PC:PlayAnimation(self.Guide_Text_CountDown_PC.Out)
+  end
+  local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
+  if BattleMainUI then
+    BattleMainUI.Pos_CountDown:RemoveChild(self)
+  end
+end
+
+function Guide_Text_CountDown_PC:OnPetRaceCountDownRealEnd()
+  self.InCountDown = false
+  self:RemoveTimer("GuideTextCountDownTick", false)
+  self:RemoveTimer("PetRaceGuideCountDown", false)
+  self.PetRaceTimerHandle = nil
+end
+
 function Guide_Text_CountDown_PC:TempleTick()
   self.CountDownTime = math.floor(self.CountDownTime - 1)
   if self.CountDownTime < 0 then

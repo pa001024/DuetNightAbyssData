@@ -628,7 +628,9 @@ return ReadOnly("UIGuide", {
     ChildGuideId = {
       11601,
       11602,
+      11609,
       11603,
+      11610,
       11604,
       11605,
       11606,
@@ -837,7 +839,9 @@ return ReadOnly("UIGuide", {
     ChildGuideId = {
       14801,
       14802,
-      14803
+      14803,
+      14804,
+      14805
     },
     GuideId = 148,
     MainGuideTitle = "MAINUIGUIDE_TITLE_Appearance_1"
@@ -884,6 +888,45 @@ return ReadOnly("UIGuide", {
     },
     GuideId = 154,
     MainGuideTitle = "MAINUIGUIDE_TITLE_Conveyor_1"
+  },
+  [155] = {
+    ChildGuideId = {
+      15501,
+      15502,
+      15503
+    },
+    GuideId = 155,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ExpMount_1"
+  },
+  [156] = {
+    ChildGuideId = {
+      15601,
+      15602,
+      15603,
+      15604
+    },
+    GuideId = 156,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ExpMountFly_1"
+  },
+  [157] = {
+    ChildGuideId = {
+      15701,
+      15702,
+      15703,
+      15704
+    },
+    GuideId = 157,
+    MainGuideTitle = "Message_Guide_RacingChoosePet_T"
+  },
+  [158] = {
+    ChildGuideId = {
+      15801,
+      15802,
+      15803,
+      15804
+    },
+    GuideId = 158,
+    MainGuideTitle = "Message_Guide_ActivityWeapon_T"
   },
   [1001] = {
     ChildGuideId = {

@@ -156,7 +156,6 @@ function BP_CharBillboard_C:InitBossPlaceBillBoard(Owner, TypeStr, IsSync)
   self.Owner = Owner
   self.TypeStr = TypeStr
   local Path = "WidgetBlueprint'/Game/UI/WBP/Battle/Widget/HUD_Bar/WBP_Battle_BossPlaceBar.WBP_Battle_BossPlaceBar_C'"
-  self.RemoveDelayTimeWhenHidden = 0
   
   local function AfterLoad()
     if not IsSync then

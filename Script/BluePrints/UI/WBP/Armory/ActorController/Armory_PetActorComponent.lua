@@ -45,7 +45,7 @@ function M:PlayPetVoice(VoiceStr)
 end
 
 function M:OnArmoryShowPet()
-  if self.bWaitForNotifyToChangePet then
+  if self.bWaitForNotifyToChangePet and self.RealChangePetModel and self.IsControled then
     self.bWaitForNotifyToChangePet = false
     self.bShouldSetPetFresnel = true
     self.RealChangePetModel()

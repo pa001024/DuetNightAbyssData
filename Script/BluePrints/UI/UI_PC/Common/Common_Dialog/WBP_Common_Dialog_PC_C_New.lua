@@ -1,8 +1,8 @@
 require("UnLua")
 local DialogMinHeightWithButton = 136
 local DialogMinHeightWithoutButton = 216
-local DialogMinWidthNormal = 800
-local DialogMinWidthBig = 1100
+local DialogMinWidthNormal = 1000
+local DialogMinWidthBig = 1400
 local Rule = FSlateChildSize()
 Rule.SizeRule = UE.ESlateSizeRule.Fill
 Rule.Value = 1.0
@@ -168,13 +168,7 @@ function WBP_Common_Dialog_PC_C:InitGamepadView(CurGamepadName)
   end
   if self.Params and self.Params.AutoFocus and self.VB_Node:GetChildrenCount() > 2 then
     local Widget = self.VB_Node:GetChildAt(1)
-    if self.Params.AutoFocusDelayTime then
-      self:AddTimer(self.Params.AutoFocusDelayTime, function()
-        Widget:SetFocus()
-      end)
-    else
-      Widget:SetFocus()
-    end
+    Widget:SetFocus()
   end
   for _, ContentWidget in pairs(self.ContentWidgetTable) do
     if ContentWidget.InitGamepadView then
@@ -708,17 +702,7 @@ end
 function WBP_Common_Dialog_PC_C:OnAnimationFinished(InAnimation)
   if InAnimation == self.Out then
     if IsValid(self.ParentWidget) and self.ParentWidget.bIsFocusable and not self.DontFocusParentWidget then
-      if self.Params.AutoFocusDelayTime then
-        self:AddTimer(self.Params.AutoFocusDelayTime, function()
-          if IsValid(self.ParentWidget) then
-            if type(self.ParentWidget.SetFocus_Lua) == "function" then
-              self.ParentWidget:SetFocus_Lua()
-            else
-              self.ParentWidget:SetFocus()
-            end
-          end
-        end)
-      elseif type(self.ParentWidget.SetFocus_Lua) == "function" then
+      if type(self.ParentWidget.SetFocus_Lua) == "function" then
         self.ParentWidget:SetFocus_Lua()
       else
         self.ParentWidget:SetFocus()

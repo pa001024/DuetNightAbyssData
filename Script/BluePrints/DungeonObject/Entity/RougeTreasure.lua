@@ -10,5 +10,8 @@ function RougeTreasure:__Init__(DungeonObject, TreasureId)
   self:PostOnInit()
 end
 
+function RougeTreasure:PostOnInit()
+end
+
 DungeonClass.AssembleComponents(RougeTreasure)
 return RougeTreasure

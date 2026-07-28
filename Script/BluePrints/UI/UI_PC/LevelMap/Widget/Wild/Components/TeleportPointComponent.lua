@@ -1,8 +1,9 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 
 function Component:InitComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitTeleportPoint)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitTeleportPoint)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
@@ -276,6 +277,10 @@ function Component:OnTeleportPointClick(Id)
 end
 
 function Component:OnConveyClicked(ForceUnlock)
+  if not self.TeleportState then
+    DebugPrint("TeleportState is undefined")
+    return
+  end
   if not self.TeleportState[self.CurrentConveyId] and not Const.UnlockRegionTeleport and not ForceUnlock then
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_TELEPORTPOINT_UNLOCK"))
     return
@@ -290,10 +295,10 @@ function Component:OnConveyClicked(ForceUnlock)
         GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, data.TeleportPointSubRegion, data.TeleportPointPos, nil, true, true)
         return
       end
-      self.MainMap:BindToAnimationFinished(self.MainMap.Auto_Out, function()
+      self.ModeComp:BindAutoOutOnFinished(function()
         GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, data.TeleportPointSubRegion, data.TeleportPointPos, nil, true, true)
       end)
-      self.MainMap:Close()
+      self.ModeComp:HostClose()
       self.IsConveyClicked = true
     end
   end

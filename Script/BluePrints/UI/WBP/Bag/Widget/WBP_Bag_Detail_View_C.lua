@@ -4,6 +4,7 @@ local TimeUtils = require("Utils.TimeUtils")
 local CommonUtils = require("Utils.CommonUtils")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local ModModel = ModController:GetModel()
 local WBP_Bag_Detail_View_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_Bag_Detail_View_C:Initialize(Initializer)
@@ -88,16 +89,16 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
   if self.ParentWidget ~= nil then
     if self.StuffType == BagCommon.StuffType.Mod and nil ~= StuffServerData and StuffServerData.IsOriginal then
       self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     elseif self.StuffType == BagCommon.StuffType.Resource and StuffConfigData.Type == "Read" then
       self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     elseif self.StuffType == BagCommon.StuffType.Draft then
       self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     elseif nil ~= self.OwnerContent and -1 == self.OwnerContent.Price then
       self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
-      self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     else
       local IsLocked = false
       if BagCommon:IsFishResource(StuffServerData.ResourceId) then
@@ -109,13 +110,13 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
       self.IsCanLocked = true
       if self.ParentWidget.BagCurState == BagCommon.AllBagState.ChooseSaleState or self.ParentWidget.BagCurState == BagCommon.AllBagState.WeaponResolveState then
         self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.Collapsed)
-        self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
       else
         self.Btn_Locked:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
         if self.ParentWidget.GameInputModeSubsystem and self.ParentWidget.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-          self.Key_Lock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+          self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
         else
-          self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+          self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
         end
       end
     end
@@ -139,15 +140,11 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
       FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_0)
     end
   end
-  local ItemObject = {
-    UnitId = self.OwnerContent.UnitId,
-    ItemType = self.OwnerContent.ItemType,
-    Rarity = self.OwnerContent.Rarity,
-    Icon = self.OwnerContent.Icon
-  }
-  self.Item:Init(ItemObject)
-  self.Item:HideNotNeccessaryWidget(true)
-  self.Item:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  self.Icon_Item:SetBrushResourceObject(LoadObject(self.OwnerContent.Icon))
+  local RarityTexture = self["Img_Quality_" .. self.OwnerContent.Rarity]
+  if RarityTexture then
+    self.Image_Quality:SetBrushResourceObject(RarityTexture)
+  end
   if self.StuffType == BagCommon.StuffType.Mod and nil ~= self.OwnerContent then
     self:UpdateStarStyle(self.OwnerContent.Level)
     self.Star:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -155,6 +152,7 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
     self.Star:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Panel_Fish:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.WBox_AnglingTag:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if type(self["RefreshInfoWith" .. self.StuffType]) == "function" then
     self["RefreshInfoWith" .. self.StuffType](self, PlayerAvatar, StuffServerData, StuffConfigData)
   else
@@ -167,20 +165,10 @@ function WBP_Bag_Detail_View_C:RefreshDetailInfo(StuffServerData, StuffConfigDat
   else
     Animation = self.Refresh
   end
-  self:PlayAnimationForward(Animation)
+  self:PlayAnimation(Animation)
 end
 
 function WBP_Bag_Detail_View_C:RefreshDesignView()
-  if self.Panel_Equipped:IsVisible() and self.Panel_Equipped:IsVisible() then
-    self.Switch_Bg:SetActiveWidgetIndex(1)
-  else
-    self.Switch_Bg:SetActiveWidgetIndex(0)
-  end
-  if self.Panel_Button:IsVisible() then
-    self.Switch_LineBg:SetActiveWidgetIndex(0)
-  else
-    self.Switch_LineBg:SetActiveWidgetIndex(1)
-  end
 end
 
 function WBP_Bag_Detail_View_C:RefreshInfoWithWeapon(PlayerAvatar, StuffServerData, StuffConfigData)
@@ -196,7 +184,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithWeapon(PlayerAvatar, StuffServerDa
     self:SetNormalGradeLevelColor()
   end
   self.Polarity_1:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  local Cost = StuffServerData:GetModSuitCost()
+  local Cost = ModModel:GetCurrentSuitCost(StuffServerData)
   self.Text_Mod01:SetText(tostring(Cost))
   self.Text_Mod02:SetText(tostring(StuffServerData:LevelUpData().ModVolume))
   self.Swtich01:SetActiveWidgetIndex(0)
@@ -234,7 +222,6 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithWeapon(PlayerAvatar, StuffServerDa
   self.Panel_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
   local OwnerStuffUuid = self:GetStuffObjId(self.OwnerContent.Uuid)
   if OwnerStuffUuid == PlayerAvatar.MeleeWeapon or OwnerStuffUuid == PlayerAvatar.RangedWeapon then
@@ -291,7 +278,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithMod(PlayerAvatar, StuffServerData,
   if StuffConfigData.PassiveEffectsDesc then
     local PassiveEffectDesc = ArmoryUtils:GenModPassiveEffectDesc(StuffConfigData, StuffServerData.Level)
     local EffectDescribeObj = self:CreateEffectDescribeItem({IsAddAttr = false, ModAttrDescribe = PassiveEffectDesc}, "Effect")
-    self.EffectDetails:AddChildToWrapBox(EffectDescribeObj)
+    self.EffectDetails:AddChildToVerticalBox(EffectDescribeObj)
   end
   if StuffConfigData.ModDescribe ~= nil then
     self.Text_LongDescribe:SetText(GText(StuffConfigData.ModDescribe))
@@ -309,7 +296,6 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithMod(PlayerAvatar, StuffServerData,
   self.Panel_Skill:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if StuffServerData.WeaponUuids:Length() > 0 or StuffServerData.CharUuids:Length() > 0 then
     self.Text_Equipped:SetText(GText("UI_Bag_Equipped"))
     self.Panel_Equipped:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -348,6 +334,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithResource(PlayerAvatar, StuffServer
     self.Num_FishWeight:SetText(string.format("%.1f cm", FishWeight))
     self.Text_Hold02:SetText(Utils.FormatNumber(self.OwnerContent.Count, true))
     self.Panel_Fish:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self:UpdateFishTimeTag(StuffConfigData.ResourceId)
   else
     self.Text_Hold02:SetText(Utils.FormatNumber(StuffServerData.Count, true))
   end
@@ -408,7 +395,6 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithResource(PlayerAvatar, StuffServer
   self.Panel_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Panel_Equipped:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Polarity_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
@@ -446,7 +432,6 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithDraft(PlayerAvatar, StuffServerDat
   self.Panel_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Panel_Equipped:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Polarity_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
@@ -474,7 +459,6 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithOther(PlayerAvatar, StuffServerDat
   self.Panel_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Panel_Equipped:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Property:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.Img_Attribute:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_MountHint:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Polarity_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -539,6 +523,42 @@ function WBP_Bag_Detail_View_C:RefreshItemTextAgain()
   end, false, 0, "RefreshItemTextAgain")
 end
 
+function WBP_Bag_Detail_View_C:UpdateFishTimeTag(ResourceId)
+  local FishId = DataMgr.ResourceId2FishId[ResourceId]
+  local FishData = DataMgr.Fish[FishId]
+  if FishData and FishData.FishAppearPeriod then
+    local Result = {}
+    for i, v in pairs(FishData.FishAppearPeriod) do
+      if 1 == v then
+        Result.IsMorn = true
+      elseif 2 == v then
+        Result.IsNoon = true
+      elseif 3 == v then
+        Result.IsNight = true
+      end
+    end
+    if Result.IsMorn then
+      self.Morn:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Morn.WS_DayAndNight:SetActiveWidgetIndex(0)
+    else
+      self.Morn:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if Result.IsNoon then
+      self.Noon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Noon.WS_DayAndNight:SetActiveWidgetIndex(1)
+    else
+      self.Noon:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if Result.IsNight then
+      self.Night:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Night.WS_DayAndNight:SetActiveWidgetIndex(2)
+    else
+      self.Night:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    self.WBox_AnglingTag:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
 function WBP_Bag_Detail_View_C:UpdateAttrInfo(StuffType, TargetServerData, ...)
   if StuffType == BagCommon.StuffType.Weapon then
     self.ItemAttrs = {}
@@ -592,7 +612,7 @@ function WBP_Bag_Detail_View_C:UpdateAttrInfo(StuffType, TargetServerData, ...)
           IsAddAttr = Value >= 0,
           ModAttrDescribe = ModAttrText
         }, "AddValue")
-        self.EffectDetails:AddChildToWrapBox(EffectDescribeObj)
+        self.EffectDetails:AddChildToVerticalBox(EffectDescribeObj)
       end
     end
   end
@@ -822,10 +842,12 @@ end
 
 function WBP_Bag_Detail_View_C:UpdateUIStyleInPlatform(IsUseGamePad)
   if IsUseGamePad then
-    self.Key_Lock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.Btn_Locked:IsVisible() then
+      self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
     self.Key_Method:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
-    self.Key_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Key_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end

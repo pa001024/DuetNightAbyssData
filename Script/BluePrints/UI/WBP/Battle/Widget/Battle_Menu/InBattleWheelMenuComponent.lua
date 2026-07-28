@@ -199,7 +199,7 @@ function Component:TryUseSelectItem(ForceSelectSlot)
               DebugPrint("gmy@Component:TryUseSelectItem ResourceId, ToastTextId", ResourceId, ToastTextId)
             end
           else
-            local ToastText = string.format(GText(DataMgr.TextMap.BATTLE_MENU_ITEM_LACK.TextMapId), GText(DataMgr.TextMap[Resource.ResourceName].TextMapId))
+            local ToastText = string.format(GText("BATTLE_MENU_ITEM_LACK"), GText(Resource.ResourceName))
             UIManager(self):ShowUITip("CommonToastMain", ToastText, TOAST_DURATION)
           end
         end

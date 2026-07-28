@@ -97,6 +97,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Btn.WBP_Com_Dialog_Btn'",
     ContentId = "Dialog_Button"
   },
+  Dialog_Button_CountDown = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Btn_CountDown.WBP_Com_Dialog_Btn_CountDown'",
+    ContentId = "Dialog_Button_CountDown"
+  },
   Dialog_Button_L = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Btn_L.WBP_Com_Dialog_Btn_L'",
     ContentId = "Dialog_Button_L"
@@ -280,6 +284,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Text01.WBP_Com_Dialog_Text01'",
     ContentId = "Unlock_node_level"
   },
+  WBP_Activity_AutoChess_BuffChoose_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/WBP_Activity_AutoChess_BuffChoosePopUp.WBP_Activity_AutoChess_BuffChoosePopUp'",
+    ContentId = "WBP_Activity_AutoChess_BuffChoose_Content"
+  },
   WBP_Activity_BuffDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fort/WBP_Activity_BuffDialog.WBP_Activity_BuffDialog'",
     ContentId = "WBP_Activity_BuffDialog"
@@ -298,6 +306,18 @@ return ReadOnly("CommonDialogContent", {
   WBP_Activity_TotalRecharge_DetailHistoryContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TotalRecharge/WBP_Activity_TotalRecharge_DetailHistoryContent.WBP_Activity_TotalRecharge_DetailHistoryContent'",
     ContentId = "WBP_Activity_TotalRecharge_DetailHistoryContent"
+  },
+  WBP_Activity_Weapon_DescDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Weapon/WBP_Activity_Weapon_DescDialog.WBP_Activity_Weapon_DescDialog'",
+    ContentId = "WBP_Activity_Weapon_DescDialog"
+  },
+  WBP_Activity_Weapon_RefreshPopUp_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Weapon/WBP_Activity_Weapon_RefreshPopUp.WBP_Activity_Weapon_RefreshPopUp'",
+    ContentId = "WBP_Activity_Weapon_RefreshPopUp_Content"
+  },
+  WBP_Activity_Weapon_TeamPopUp = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Weapon/WBP_Activity_Weapon_TeamPopUp.WBP_Activity_Weapon_TeamPopUp'",
+    ContentId = "WBP_Activity_Weapon_TeamPopUp"
   },
   WBP_Appearance_Archive_FenghuaDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Archive/WBP_Appearance_Archive_FenghuaDialog.WBP_Appearance_Archive_FenghuaDialog'",
@@ -383,6 +403,18 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Gift/Widget/WBP_Gift_ShopTarget_ChooseFriendContent'",
     ContentId = "WBP_Gift_ShopTarget_ChooseFriendContent"
   },
+  WBP_Guild_Boss_DialogAssistPlayer_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Boss/DialogAssist/WBP_Guild_Boss_DialogAssistPlayer.WBP_Guild_Boss_DialogAssistPlayer'",
+    ContentId = "WBP_Guild_Boss_DialogAssistPlayer_Content"
+  },
+  WBP_Guild_Construct_BuyPart_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/WBP_Guild_Construct_BuyPart.WBP_Guild_Construct_BuyPart'",
+    ContentId = "WBP_Guild_Construct_BuyPart_Content"
+  },
+  WBP_Guild_Construct_ExchangePart_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Construct/WBP_Guild_Construct_ExchangePart.WBP_Guild_Construct_ExchangePart'",
+    ContentId = "WBP_Guild_Construct_ExchangePart_Content"
+  },
   WBP_Guild_DialogApplyList = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Apply/WBP_Guild_DialogApplyList.WBP_Guild_DialogApplyList'",
     ContentId = "WBP_Guild_DialogApplyList"
@@ -426,6 +458,10 @@ return ReadOnly("CommonDialogContent", {
   WBP_Shop_Brithday = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/OverSea/WBP_Shop_Brithday'",
     ContentId = "WBP_Shop_Brithday "
+  },
+  WBP_Shop_GachaExchangePart_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/WBP_Shop_GachaExchangePart.WBP_Shop_GachaExchangePart'",
+    ContentId = "WBP_Shop_GachaExchangePart_Content"
   },
   WBP_Shop_OptionalDialog_Content = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/Optional/WBP_Shop_OptionalDialog.WBP_Shop_OptionalDialog'",

@@ -47,6 +47,10 @@ return ReadOnly("MessageGroup", {
     MessageGroupId = 10110701,
     MessageList = {900434}
   },
+  [10110801] = {
+    MessageGroupId = 10110801,
+    MessageList = {900435}
+  },
   [10410201] = {
     MessageGroupId = 10410201,
     MessageList = {900107, 900224}
@@ -502,6 +506,10 @@ return ReadOnly("MessageGroup", {
   [10600103] = {
     MessageGroupId = 10600103,
     MessageList = {900431}
+  },
+  [10600104] = {
+    MessageGroupId = 10600104,
+    MessageList = {900436}
   },
   [10610101] = {
     MessageGroupId = 10610101,

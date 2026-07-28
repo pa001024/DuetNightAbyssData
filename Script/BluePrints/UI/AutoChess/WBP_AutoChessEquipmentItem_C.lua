@@ -34,7 +34,7 @@ function View:InitView(Content)
     return
   else
     self.BG.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-    self.Group_Item:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Group_Item:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
   local AutoChessEquipId = Content.Data.Id
   local AutoChessEquipData = DataMgr.RobotEquip[AutoChessEquipId]
@@ -51,15 +51,21 @@ function View:InitView(Content)
   local DynamicMaterial = self.BG.Item_BG:GetDynamicMaterial()
   DynamicMaterial:SetScalarParameterValue("IconOpacity", 1)
   DynamicMaterial:SetScalarParameterValue("Index", Content.Data.Rarity)
-  self.Text_Name:SetText(GText(AutoChessEquipData.EquipName))
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    self:AddTimer(0.1, function()
+      self.Text_Name:SetText(GText(AutoChessEquipData.EquipName), true)
+    end, false, 0, "DelayForceLayoutPrepass", true)
+  else
+    self.Text_Name:SetText(GText(AutoChessEquipData.EquipName))
+  end
   self.Text_Cost:SetText(AutoChessEquipData.DeployCost)
   if Content.Data.Locked then
-    self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Panel_Lock:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   if Content.Data.IsNew then
-    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -81,7 +87,7 @@ end
 function View:SetIsNew(bIsNew)
   self.Content.Data.IsNew = bIsNew
   if bIsNew then
-    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end

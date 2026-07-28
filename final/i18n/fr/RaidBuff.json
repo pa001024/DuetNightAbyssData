@@ -58,5 +58,17 @@
       "10%",
       "50%"
     ]
+  },
+  {
+    "RaidBuffID": 15,
+    "RaidBuffDes": "Lorsque la Puissance de compétence d’un personnage Hydro dépasse 100 %, chaque tranche de 40% au-delà de cette valeur augmente la Pénétration de tous les attributs de 5%, jusqu’à un maximum de 50%.",
+    "RaidBuffParameter": [
+      "40%",
+      "5%",
+      "50%",
+      null,
+      "10%",
+      "50%"
+    ]
   }
 ]

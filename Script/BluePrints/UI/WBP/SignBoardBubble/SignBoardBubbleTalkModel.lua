@@ -21,13 +21,8 @@ function M:GetRunningTalkTrigger()
   return self.RunningTalkTrigger
 end
 
-function M:GetRunningTalkTriggerBubbleKey()
-  return self.RunningTalkTriggerBubbleKey
-end
-
-function M:SetRunningTalkTrigger(TriggerId, RunningTalkTriggerBubbleKey)
+function M:SetRunningTalkTrigger(TriggerId)
   self.RunningTalkTrigger = TriggerId
-  self.RunningTalkTriggerBubbleKey = RunningTalkTriggerBubbleKey
 end
 
 function M:AddStartWaitTrigger(TriggerId)
@@ -178,7 +173,6 @@ function M:ResetTalkData()
   self.WaitTriggerQueue = {}
   self.FinishTrigger = {}
   self.RunningTalkTrigger = nil
-  self.RunningTalkTriggerBubbleKey = nil
 end
 
 function M:ResetTalkWaitTime(RunningTriggerId)
@@ -186,6 +180,9 @@ function M:ResetTalkWaitTime(RunningTriggerId)
   local InvitateBubbleTime = DataMgr.GlobalConstant.InvitateBubbleWaitTime.ConstantValue
   local NowTime = TimeUtils.NowTime()
   self.FinishTrigger[RunningTriggerId] = true
+  if not self.WaitTriggerQueue then
+    return
+  end
   for TriggerId, Time in pairs(self.WaitTriggerQueue) do
     self.WaitTriggerQueue[TriggerId] = NowTime
   end

@@ -795,6 +795,50 @@
     "m": 880000
   },
   {
+    "id": 1056,
+    "n": "Compas abyssal : Expédition",
+    "r": 5,
+    "v": "1.4",
+    "t": "IronTicket",
+    "c": 1,
+    "p": 1002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 209,
+        "n": "Carnet de mission — Tome IV",
+        "c": 4,
+        "t": "Resource"
+      }
+    ],
+    "m": 880000
+  },
+  {
+    "id": 1057,
+    "n": "Compas abyssal : Expédition",
+    "r": 5,
+    "v": "1.4",
+    "t": "IronTicket",
+    "c": 1,
+    "p": 1002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 15040,
+        "n": "Larme d’Embla : Défense",
+        "c": 250,
+        "t": "Resource"
+      }
+    ],
+    "m": 880000
+  },
+  {
     "id": 2011,
     "n": "Turbine convergente",
     "r": 3,
@@ -2827,6 +2871,60 @@
     "m": 50000
   },
   {
+    "id": 151725,
+    "n": "Éveil",
+    "r": 5,
+    "v": "1.5",
+    "t": "Mod",
+    "c": 1,
+    "p": 51725,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41725,
+        "n": "Éveil",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151726,
+    "n": "Éternité",
+    "r": 5,
+    "v": "1.5",
+    "t": "Mod",
+    "c": 1,
+    "p": 51726,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41726,
+        "n": "Éternité",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Module de transfert d’affinité",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151727,
     "n": "Décision · Éveil",
     "r": 5,
@@ -2841,6 +2939,27 @@
       {
         "id": 41727,
         "n": "Décision · Éveil",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151728,
+    "n": "Ardeur · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51728,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41728,
+        "n": "Ardeur · Vigueur",
         "c": 5,
         "t": "Mod"
       }
@@ -3264,6 +3383,27 @@
       {
         "id": 41757,
         "n": "Ténacité · Décision",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151758,
+    "n": "Ardeur · Trempe",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51758,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41758,
+        "n": "Ardeur · Trempe",
         "c": 5,
         "t": "Mod"
       }
@@ -5189,6 +5329,114 @@
       }
     ],
     "m": 200000
+  },
+  {
+    "id": 156121,
+    "n": "Éveil",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56121,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31005,
+        "n": "Ardeur · Ailes",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156122,
+    "n": "Ailes · Inspiration · Éveil",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56122,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56121,
+        "n": "Éveil",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20021,
+        "n": "Bougie sacrée",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156123,
+    "n": "Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56123,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31008,
+        "n": "Ardeur · Nirvana",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156124,
+    "n": "Ailes · Inspiration · Vigueur",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56124,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56123,
+        "n": "Vigueur",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Ailes · Inspiration",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20024,
+        "n": "Tentacule de Souillé",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
   },
   {
     "id": 156141,
@@ -8413,6 +8661,38 @@
     "m": 280000
   },
   {
+    "id": 910209,
+    "n": "Faucheuse d’obsidienne",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10209,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Élixir d’aiguisage",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12168,
+        "n": "Faucheuse d’obsidienne : Poignée",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12169,
+        "n": "Faucheuse d’obsidienne : Lame",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
     "id": 910299,
     "n": "Conflit perpétuel",
     "r": 5,
@@ -8597,6 +8877,32 @@
       }
     ],
     "m": 280000
+  },
+  {
+    "id": 910399,
+    "n": "Braise souveraine",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10399,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 15018,
+        "n": "Éveil de forge : Espadon",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 15006,
+        "n": "Prototype : Braise souveraine",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
   },
   {
     "id": 910401,
@@ -9145,6 +9451,44 @@
     "m": 280000
   },
   {
+    "id": 920104,
+    "n": "Sanguis Sanctus – Pistolet",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20104,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12163,
+        "n": "Sanguis Sanctus – Pistolet : Verrou",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12164,
+        "n": "Sanguis Sanctus – Pistolet : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12165,
+        "n": "Sanguis Sanctus – Pistolet : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
     "id": 920201,
     "n": "Duo infâme",
     "r": 5,
@@ -9234,6 +9578,38 @@
       {
         "id": 12099,
         "n": "Pneuma : Canon",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920207,
+    "n": "Le plus beau jour",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20207,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile explosif",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12166,
+        "n": "Le plus beau jour : Armature",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12167,
+        "n": "Le plus beau jour : Canon",
         "c": 1,
         "t": "Resource"
       }

@@ -168,7 +168,17 @@ end
 
 function M:UpdateText_ChatChannel()
   if ChatModel:IsInRegionOnlineChannelType() then
-    self.Text_ChatChannel:SetText(string.format(GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(%d)", ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())))
+    if not UIUtils.AmIInGuildScene() then
+      self.Text_ChatChannel:SetText(string.format(GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(%d)", ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())))
+    else
+      local GuildName = (not (GWorld.GameInstance and GWorld.GameInstance.GuildSceneGuildInfo) or not GWorld.GameInstance.GuildSceneGuildInfo.Name) and GuildController:GetModel():GetCurrGuild() and GuildController:GetModel():GetCurrGuild().Name
+      local Text = string.format(GText("UI_GuildMemberCount_2"), GuildName, UIUtils.RegionPlayerNum() + 1)
+      DebugPrint(string.format("lxc: UpdateText_ChatChannel: %s", Text))
+      if not GuildName then
+        return
+      end
+      self.Text_ChatChannel:SetText(Text)
+    end
   else
     self.Text_ChatChannel:SetText(string.format(GText("WorldChannelWithParam"), ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())))
   end
@@ -208,7 +218,9 @@ function M:OnSelectChannelSuccess(ChannelType, SelectIndex)
 end
 
 function M:HandleChannelPlayerNum(Channel_type, Channel_list)
-  self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Visible)
+  if not UIUtils.AmIInGuildScene() then
+    self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
   local Type = ChatModel:GetChannelState(ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel()))
   if 1 == Type then
     self.WS_ChannelSign:SetActiveWidgetIndex(0)
@@ -648,6 +660,8 @@ function M:OnTabSelected_Public(TabWidget, TabItemInfo)
     self:UpdateText_ChatChannel()
     self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
     ChatController:SendQueryChatChannelBusyInfo()
+    self.Button_ChangeChannel:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Group_ChangeChannelBtn:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -660,6 +674,13 @@ function M:OnTabSelected_Region(TabWidget, TabItemInfo)
       self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
       self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
       ChatController:SendQueryChatChannelBusyInfo()
+      if UIUtils.AmIInGuildScene() then
+        self.Button_ChangeChannel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Group_ChangeChannelBtn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      else
+        self.Button_ChangeChannel:SetVisibility(UIConst.VisibilityOp.Visible)
+        self.Group_ChangeChannelBtn:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
     end
   end
 end
@@ -1183,7 +1204,7 @@ function M:_HandleRefreshFriendInPrivateChannel()
   if 0 == NowCount then
     local CurrentPlatform = CommonUtils.GetDeviceTypeByPlatformName(self)
     local ShowEmptyText = "PC" == CurrentPlatform and GText("UI_Friend_NoAnyFriend") or GText("UI_Friend_AddBeforeChat")
-    self:_ShowDMPlayerListEmpty(ShowEmptyText, "Friend", self:_GetCurrentDialogEmptyText())
+    self:_ShowDMPlayerListEmpty(ShowEmptyText, "Friend", GText("UI_Friend_AddBeforeChat"))
     self:_SetGuildPrivateInputDisabledArea()
     return
   end

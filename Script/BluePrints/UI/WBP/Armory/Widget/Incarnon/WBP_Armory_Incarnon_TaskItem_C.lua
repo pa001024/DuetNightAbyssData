@@ -1,6 +1,5 @@
 require("UnLua")
 local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
-local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -47,18 +46,16 @@ end
 function M:RefreshRewardItems()
   local bHasRewardGot = self:HasRewardGot()
   local RewarId = self.QuestInfo.QuestReward and self.QuestInfo.QuestReward[1] or 0
-  local Rewards = RewardUtils:GetRewards(RewarId, self.Avatar)
-  local RewardList = ActivityCommon.GenerateAllRewardIds(Rewards)
+  local RewardList = RewardUtils:GetRewardViewInfoById(RewarId)
   local Contents = {}
-  for _, Value in pairs(RewardList) do
-    local ItemId, ItemInfo = Value.ItemId, Value.ItemInfo
+  for _, RewardInfo in pairs(RewardList) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.UnitId = ItemId
-    Content.Count = ItemInfo.ItemCount or 0
-    Content.Rarity = ItemInfo.Rarity or 1
+    Content.UnitId = RewardInfo.Id
+    Content.Count = RewardInfo.Quantity[1] or 0
+    Content.Rarity = RewardInfo.Rarity or 1
     Content.IsShowDetails = true
-    Content.ItemType = ItemInfo.TableName
-    Content.Icon = ItemUtils.GetItemIconPath(ItemId, ItemInfo.TableName)
+    Content.ItemType = RewardInfo.Type
+    Content.Icon = ItemUtils.GetItemIconPath(RewardInfo.Id, RewardInfo.Type)
     Content.RewardGot = bHasRewardGot
     Content.UIName = "ArmoryIncarnonDetail"
     Content.OnMenuOpenChangedEvents = {
@@ -143,25 +140,6 @@ function M:OnBtnRewardClicked()
   
   self.Parent:BlockAllUIInput(true)
   self.Avatar:WeaponForgeQuestGetReward(Callback, self.QuestId)
-end
-
-function M:PopUpRewardPanel()
-  local QuestReward = self.QuestInfo.QuestReward
-  local RewardId = QuestReward and QuestReward[1]
-  if not RewardId then
-    return
-  end
-  local Rewards = RewardUtils:GetRewards(RewardId, self.Avatar)
-  local RewardList = ActivityCommon.GenerateAllRewardIds(Rewards)
-  local AllRewards = {}
-  for _, Value in pairs(RewardList) do
-    local ItemId, ItemInfo = Value.ItemId, Value.ItemInfo
-    if not AllRewards[ItemInfo.TableName] then
-      AllRewards[ItemInfo.TableName] = {}
-    end
-    AllRewards[ItemInfo.TableName][ItemId] = ItemInfo.ItemCount or 0
-  end
-  UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, nil, self, true)
 end
 
 function M:RefreshParentInfo()

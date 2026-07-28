@@ -11,6 +11,7 @@ return ReadOnly("GoodsToDailyPack", {
   ["com.hero.dna.Pay_DailyCharaShards_kezhou"] = 9002,
   ["com.hero.dna.Pay_DailyCharaShards_suyi"] = 9005,
   ["com.hero.dna.Pay_DailyCharaShards_xiertan"] = 9008,
+  ["com.hero.dna.Pay_DailyCharaShards_yiwei"] = 9009,
   ["com.hero.dna.Pay_DailyCharaShards_yuming"] = 9004,
   ["com.hero.dna.Pay_DailyCharaShards_zhiliu"] = 9003
 })

@@ -17,6 +17,7 @@ function M:Construct()
   self.Text_Hint:SetText(GText("UI_HyperWeapon_ForgeLevelRewardLocked"))
   self.Text_Hint_1:SetText(GText("UI_EventReward_Achieved"))
   self.Text_Empty:SetText(GText("UI_HyperWeapon_ForgeLevelTaskPhaseLock"))
+  self.Text_Explain:SetText(GText("UI_Armory_HyperWeaponMissionTIps"))
   self.Btn_Left:BindEventOnClicked(self, function()
     if self.TargetLevel > 1 then
       AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", "IncarnonTaskSwitch", nil)
@@ -253,19 +254,17 @@ function M:RefreshRewardItems()
     return
   end
   local RewarId = ForgeInfo.ForgeLevelReward
-  local Rewards = RewardUtils:GetRewards(RewarId, self.Avatar)
-  local RewardList = ActivityCommon.GenerateAllRewardIds(Rewards)
+  local RewardList = RewardUtils:GetRewardViewInfoById(RewarId)
   local HasLevelRewardGot = self:HasForgeLevelRewardGot()
   local Contents = {}
-  for _, Value in pairs(RewardList) do
-    local ItemId, ItemInfo = Value.ItemId, Value.ItemInfo
+  for _, RewardInfo in pairs(RewardList) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
-    Content.UnitId = ItemId
-    Content.Count = ItemInfo.ItemCount or 0
-    Content.Rarity = ItemInfo.Rarity or 1
+    Content.UnitId = RewardInfo.Id
+    Content.Count = RewardInfo.Quantity[1] or 0
+    Content.Rarity = RewardInfo.Rarity or 1
     Content.IsShowDetails = true
-    Content.ItemType = ItemInfo.TableName
-    Content.Icon = ItemUtils.GetItemIconPath(ItemId, ItemInfo.TableName)
+    Content.ItemType = RewardInfo.Type
+    Content.Icon = ItemUtils.GetItemIconPath(RewardInfo.Id, RewardInfo.Type)
     Content.RewardGot = HasLevelRewardGot
     Content.UIName = "ArmoryIncarnonDetail"
     Content.OnMenuOpenChangedEvents = {
@@ -398,25 +397,6 @@ function M:OnForgeLevelRewardClidked()
   
   self:BlockAllUIInput(true)
   self.Avatar:WeaponForgeLevelUp(Callback)
-end
-
-function M:PopUpRewardPanel()
-  local ForgeInfo = DataMgr.ForgeLevel[self.TargetLevel]
-  if not ForgeInfo then
-    return
-  end
-  local RewardId = ForgeInfo.ForgeLevelReward
-  local Rewards = RewardUtils:GetRewards(RewardId, self.Avatar)
-  local RewardList = ActivityCommon.GenerateAllRewardIds(Rewards)
-  local AllRewards = {}
-  for _, Value in pairs(RewardList) do
-    local ItemId, ItemInfo = Value.ItemId, Value.ItemInfo
-    if not AllRewards[ItemInfo.TableName] then
-      AllRewards[ItemInfo.TableName] = {}
-    end
-    AllRewards[ItemInfo.TableName][ItemId] = ItemInfo.ItemCount or 0
-  end
-  UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, nil, self, true)
 end
 
 function M:PlayOutAnimation()

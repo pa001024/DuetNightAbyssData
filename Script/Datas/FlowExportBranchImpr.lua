@@ -9,6 +9,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("FlowExportBranchImpr", {
+  [10044602] = {},
   [12022315] = {},
   [12040210] = T.RT_1,
   [12040211] = T.RT_1,

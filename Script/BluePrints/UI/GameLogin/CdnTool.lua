@@ -185,6 +185,25 @@ function CdnTool:GetCdnHideData(HostId)
   end)
 end
 
+function CdnTool:DevGetAllAvatars(Account, ServerInfo, Callback)
+  GWorld.NetworkMgr.IsQuickLogin = false
+  if not (ServerInfo and ServerInfo.hostnum and ServerInfo.ip) or not ServerInfo.port then
+    print("[CdnTool:DevGetAllAvatars] ServerInfo is invalid", ServerInfo and ServerInfo.hostnum, ServerInfo and ServerInfo.ip, ServerInfo and ServerInfo.port)
+    Callback(false, "Dev ServerInfo Invalid")
+    return
+  end
+  local CallbackServers = {}
+  local DevServerList = require("BluePrints/UI/GameLogin/DevServerList")
+  for _, DevServerInfo in pairs(DevServerList) do
+    if DevServerInfo.hostnum then
+      CallbackServers[DevServerInfo.hostnum] = DevServerInfo
+    end
+  end
+  CallbackServers[ServerInfo.hostnum] = CallbackServers[ServerInfo.hostnum] or ServerInfo
+  GWorld.NetworkMgr:ConnectServer(ServerInfo.hostnum, ServerInfo.ip, ServerInfo.port, Account, false, true)
+  Callback(true, "Start Dev Connect Server, Please Wait...", CallbackServers)
+end
+
 function CdnTool:GetAllAvatars(Account, Callback)
   GWorld.NetworkMgr.IsQuickLogin = false
   

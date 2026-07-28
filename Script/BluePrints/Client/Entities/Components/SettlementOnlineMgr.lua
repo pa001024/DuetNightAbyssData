@@ -126,15 +126,23 @@ function Component:SettlementBattleEvent_SelectTicket(DungeonId)
   end
   
   local CurSelectedDungeonId = DungeonId
-  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, {
+  local DialogParams = {
     DungeonId = CurSelectedDungeonId,
+    ButtonBarName = "Dialog_Button_CountDown",
+    CountDownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue,
+    CountDownCallbackFunction = function(_, Data, PopupUI)
+      if PopupUI then
+        PopupUI:OnClose()
+      end
+    end,
     RightCallbackFunction = OnRightConfirm,
     LeftCallbackFunction = OnCancelVote,
     CloseBtnCallbackFunction = OnCancelVote,
     DontCloseWhenRightBtnClicked = true,
     AutoFocus = true,
     YesButtonText = GText("UI_CONFIRM_SELECTION")
-  }, self)
+  }
+  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
 end
 
 function Component:SettlementBattleEvent_Matching()

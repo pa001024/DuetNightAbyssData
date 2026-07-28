@@ -1,6 +1,9 @@
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
+local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayDraft")
+local PersonalInfoCustomTypes = require("BluePrints.Client.CustomTypes.PersonalInfo")
+local DisplayTypes = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayTypes")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class("BluePrints.Common.MVC.Model")
 
@@ -47,11 +50,16 @@ function M:InitData(PlayerInfo)
       WeaponForgeLevel = PlayerInfo.WeaponForgeLevel or 0
     }
     self.OtherPersonInfo = PlayerInfo
+    local CustomDisplay = PlayerInfo.CustomDisplay or {}
+    local CustomCharParams = CustomDisplay.CharParamGroup or {}
     for i = 1, 3 do
       if self.OtherPersonInfo.Char[i] then
         self.OtherPersonInfo.Char[i].RoleId = self.OtherPersonInfo.Char[i].CharId
+        local CustomParam = CustomCharParams[i]
         self._DisplayPlan.CharDisplayPlans[i] = {
-          CharId = self.OtherPersonInfo.Char[i].CharId
+          CharId = self.OtherPersonInfo.Char[i].CharId,
+          AppearancePlan = CustomParam and CustomParam.AppearancePlan or nil,
+          ModPlan = CustomParam and CustomParam.ModPlan or nil
         }
       end
       if self.OtherPersonInfo.Weapon[i] then
@@ -98,9 +106,6 @@ function M:InitData(PlayerInfo)
       Plan.WeaponId = -1
     end
   end
-end
-
-function M:IniOthersAvatar()
 end
 
 function M:fakaini()
@@ -320,6 +325,479 @@ function M:GetPersonalBaseInfo()
   return _ModelInfo
 end
 
+function M:GetPersonalInfoBackground()
+  local BackgroundId
+  if self:IsOwener() then
+    BackgroundId = self._Avatar.PersonalInfo.BackgroundIds and self._Avatar.PersonalInfo.BackgroundIds[CommonConst.PersonalInfoBgType.PersonalInfo] or nil
+  else
+    BackgroundId = self.OtherPersonInfo.BackgroundIds and self.OtherPersonInfo.BackgroundIds[CommonConst.PersonalInfoBgType.PersonalInfo] or nil
+  end
+  if BackgroundId and -1 ~= BackgroundId then
+    local BgConfig = DataMgr.Background[BackgroundId]
+    if BgConfig then
+      return BgConfig.PersonalInfoWidget or nil
+    end
+  end
+  return nil
+end
+
+function M:GetCustomDisplaySceneId()
+  local DefaultSceneId = 101
+  if self:IsOwener() then
+    local PersonalInfo = self._Avatar and self._Avatar.PersonalInfo or nil
+    local CustomDisplay = PersonalInfo and PersonalInfo.CustomDisplay or nil
+    return CustomDisplay and CustomDisplay.SceneId or DefaultSceneId
+  end
+  local CustomDisplay = self.OtherPersonInfo and self.OtherPersonInfo.CustomDisplay or nil
+  return CustomDisplay and CustomDisplay.SceneId or DefaultSceneId
+end
+
+function M:GetOwnedCustomDisplaySceneIdList()
+  if not self:IsOwener() then
+    return {}
+  end
+  local Avatar = self._Avatar or GWorld:GetAvatar()
+  local SceneIdList = Avatar and Avatar.PersonalInfoSceneList or nil
+  local Result = {}
+  for _, SceneId in ipairs(SceneIdList or {}) do
+    if type(SceneId) == "number" then
+      Result[#Result + 1] = SceneId
+    end
+  end
+  return Result
+end
+
+function M:GetOwnedCustomDisplayGestureIdList()
+  if not self:IsOwener() then
+    return {}
+  end
+  local Avatar = self._Avatar or GWorld:GetAvatar()
+  local GestureIdList = Avatar and Avatar.PersonalInfoGestureList or nil
+  local Result = {}
+  for _, PoseId in ipairs(GestureIdList or {}) do
+    if type(PoseId) == "number" then
+      Result[#Result + 1] = PoseId
+    end
+  end
+  return Result
+end
+
+function M:HasOwnedCustomDisplayScene(SceneId)
+  if not self:IsOwener() then
+    return true
+  end
+  if type(SceneId) ~= "number" then
+    return false
+  end
+  for _, OwnedSceneId in ipairs(self:GetOwnedCustomDisplaySceneIdList()) do
+    if OwnedSceneId == SceneId then
+      return true
+    end
+  end
+  return false
+end
+
+function M:HasOwnedCustomDisplayGesture(PoseId)
+  if not self:IsOwener() then
+    return true
+  end
+  if type(PoseId) ~= "number" then
+    return false
+  end
+  for _, OwnedPoseId in ipairs(self:GetOwnedCustomDisplayGestureIdList()) do
+    if OwnedPoseId == PoseId then
+      return true
+    end
+  end
+  return false
+end
+
+function M:GetFirstOwnedCustomDisplaySceneId(FallbackSceneId)
+  if not self:IsOwener() then
+    return FallbackSceneId or self:GetCustomDisplaySceneId()
+  end
+  if type(FallbackSceneId) == "number" and self:HasOwnedCustomDisplayScene(FallbackSceneId) then
+    return FallbackSceneId
+  end
+  local CurrentSceneId = self:GetCustomDisplaySceneId()
+  if self:HasOwnedCustomDisplayScene(CurrentSceneId) then
+    return CurrentSceneId
+  end
+  local SceneIdList = self:GetOwnedCustomDisplaySceneIdList()
+  if #SceneIdList > 0 then
+    return SceneIdList[1]
+  end
+  return FallbackSceneId or CurrentSceneId or 101
+end
+
+local function BuildTransformFromServerParam(ParamInfo)
+  if not ParamInfo then
+    return nil
+  end
+  local Position = ParamInfo.Position
+  local Rotation = ParamInfo.Rotation
+  if type(Position) ~= "table" and type(Rotation) ~= "table" then
+    return nil
+  end
+  local Location = FVector(Position and Position[1] or 0, Position and Position[2] or 0, Position and Position[3] or 0)
+  local Rotator = FRotator(Rotation and Rotation[2] or 0, Rotation and Rotation[3] or 0, Rotation and Rotation[1] or 0)
+  return FTransform(Rotator:ToQuat(), Location, FVector(1, 1, 1))
+end
+
+local function BuildTransformRotationFromServerParam(ParamInfo)
+  local Rotation = ParamInfo and ParamInfo.Rotation or nil
+  if type(Rotation) ~= "table" then
+    return nil
+  end
+  return {
+    Roll = Rotation[1] or 0,
+    Pitch = Rotation[2] or 0,
+    Yaw = Rotation[3] or 0
+  }
+end
+
+local function BuildCameraDataFromServerParam(CameraParam)
+  if not CameraParam then
+    return nil
+  end
+  local Position = CameraParam.Position
+  local Rotation = CameraParam.Rotation
+  if type(Position) ~= "table" or type(Rotation) ~= "table" then
+    return nil
+  end
+  if nil == Position[1] or nil == Position[2] or nil == Position[3] or nil == Rotation[1] or nil == Rotation[2] or nil == Rotation[3] then
+    return nil
+  end
+  local PositionX = Position and Position[1] or 0
+  local PositionY = Position and Position[2] or 0
+  local PositionZ = Position and Position[3] or 0
+  local RotationRoll = Rotation and Rotation[1] or 0
+  local RotationPitch = Rotation and Rotation[2] or 0
+  local RotationYaw = Rotation and Rotation[3] or 0
+  if 0 == PositionX and 0 == PositionY and 0 == PositionZ and 0 == RotationRoll and 0 == RotationPitch and 0 == RotationYaw then
+    DebugPrint("PersonInfoModel: ignore zero camera param from server")
+    return nil
+  end
+  local LocalPosition = {
+    X = PositionX,
+    Y = PositionY,
+    Z = PositionZ
+  }
+  local LocalRotation = {
+    Roll = RotationRoll,
+    Pitch = RotationPitch,
+    Yaw = RotationYaw
+  }
+  return {
+    LocalPosition = LocalPosition,
+    LocalRotation = LocalRotation,
+    Offset = {
+      Horizontal = LocalPosition.Y or 0,
+      Vertical = LocalPosition.Z or 0
+    },
+    Distance = LocalPosition.X or 0,
+    Rotation = {
+      Pitch = LocalRotation.Pitch or 0,
+      Yaw = LocalRotation.Yaw or 0
+    },
+    HasCustomCamera = true
+  }
+end
+
+local function BuildCharacterActionFromServerParam(CharParam)
+  if not CharParam then
+    return nil
+  end
+  local PoseId = CharParam.PoseId
+  if nil == PoseId then
+    return nil
+  end
+  local GestureConfig = PoseId and DataMgr.CustomGesture and DataMgr.CustomGesture[PoseId] or nil
+  if not GestureConfig then
+    return nil
+  end
+  local ReleaseWheel = GestureConfig.ReleaseWheel
+  if ReleaseWheel and 0 ~= ReleaseWheel then
+    local Resource = DataMgr.Resource and DataMgr.Resource[ReleaseWheel] or nil
+    return {
+      PoseId = PoseId,
+      Mode = DisplayTypes.AnimMode.Montage,
+      GestureTag = GestureConfig.GestureTag or "Gesture",
+      ReleaseWheel = ReleaseWheel,
+      ResourceId = ReleaseWheel,
+      MontagePath = Resource and Resource.PlayAnim or nil
+    }
+  end
+  return {
+    PoseId = PoseId,
+    Mode = DisplayTypes.AnimMode.Sequence,
+    GestureTag = GestureConfig.GestureTag or "Pose",
+    Document = GestureConfig.Document,
+    PoseName = GestureConfig.PoseName
+  }
+end
+
+local function BuildDefaultWeaponActionFromWeaponData(WeaponData)
+  if not WeaponData then
+    return nil
+  end
+  local PoseTag = "Melee"
+  if WeaponData.HasTag and WeaponData:HasTag("Ranged") then
+    PoseTag = "Ranged"
+  end
+  return {PoseTag = PoseTag}
+end
+
+local function NormalizeCustomDisplayInfo(CustomDisplayInfo)
+  if type(CustomDisplayInfo) ~= "table" then
+    return CustomDisplayInfo
+  end
+  local CharParamGroup = CustomDisplayInfo.CharParamGroup
+  if type(CharParamGroup) == "table" then
+    for _, CharParam in ipairs(CharParamGroup) do
+      if type(CharParam) == "table" then
+        local PoseId = CharParam.PoseId
+        local GestureConfig = PoseId and DataMgr.CustomGesture and DataMgr.CustomGesture[PoseId] or nil
+        if not GestureConfig then
+          CharParam.PoseId = nil
+        end
+      end
+    end
+  end
+  return CustomDisplayInfo
+end
+
+function M:_FindOwnerCharByCharId(CharId)
+  if not self._Avatar or not CharId then
+    return nil, nil
+  end
+  CharId = tonumber(CharId)
+  for Uuid, CharData in pairs(self._Avatar.Chars or {}) do
+    if CharData and tonumber(CharData.CharId) == CharId then
+      return CharData, Uuid
+    end
+  end
+  return nil, nil
+end
+
+function M:_FindOwnerWeaponByWeaponId(WeaponId)
+  if not self._Avatar or not WeaponId then
+    return nil
+  end
+  WeaponId = tonumber(WeaponId)
+  for _, WeaponData in pairs(self._Avatar.Weapons or {}) do
+    if WeaponData and tonumber(WeaponData.WeaponId) == WeaponId then
+      return WeaponData
+    end
+  end
+  return nil
+end
+
+function M:_FindFakeCharByCharId(CharId)
+  if not CharId then
+    return nil
+  end
+  CharId = tonumber(CharId)
+  local Avatar = self:GetFakeAvatar()
+  for _, CharData in pairs(Avatar and Avatar.Chars or {}) do
+    if CharData and tonumber(CharData.CharId) == CharId then
+      return CharData
+    end
+  end
+  return nil
+end
+
+function M:_FindFakeWeaponByWeaponId(WeaponId)
+  if not WeaponId then
+    return nil
+  end
+  WeaponId = tonumber(WeaponId)
+  local Avatar = self:GetFakeAvatar()
+  for _, WeaponData in pairs(Avatar and Avatar.Weapons or {}) do
+    if WeaponData and tonumber(WeaponData.WeaponId) == WeaponId then
+      return WeaponData
+    end
+  end
+  return nil
+end
+
+function M:_GetOwnerAppearanceByDisplay(CharUuid, DisplayUnit)
+  if not CharUuid or not self._Avatar then
+    return nil
+  end
+  local CharData = self._Avatar.Chars and self._Avatar.Chars[CharUuid] or nil
+  if not CharData then
+    return nil
+  end
+  local ResolvedDisplayUnit = DisplayUnit
+  if not ResolvedDisplayUnit then
+    local PersonalInfo = self._Avatar.PersonalInfo
+    local CharDisplayList = PersonalInfo and PersonalInfo.CharDisplay or nil
+    local DisplayCount = CharDisplayList and CharDisplayList.Length and CharDisplayList:Length() or 0
+    for Index = 1, DisplayCount do
+      local Candidate = CharDisplayList:Get(Index)
+      if Candidate and Candidate.Id == CharUuid then
+        ResolvedDisplayUnit = Candidate
+        break
+      end
+    end
+  end
+  local AppearancePlan = ResolvedDisplayUnit and ResolvedDisplayUnit.AppearancePlan or nil
+  if AppearancePlan and AppearancePlan > 0 then
+    return CharData:DumpAppearanceSuit(self._Avatar, AppearancePlan)
+  end
+  return nil
+end
+
+function M:_GetOtherCustomDisplayAppearance(CharId, SlotIndex)
+  local CustomDisplay = self.OtherPersonInfo and self.OtherPersonInfo.CustomDisplay or nil
+  local CharParamGroup = CustomDisplay and CustomDisplay.CharParamGroup or nil
+  if not CharParamGroup then
+    return nil
+  end
+  local CharParam = CharParamGroup[SlotIndex]
+  if CharParam and CharParam.CharId == CharId then
+    return CharParam.Appearance
+  end
+  return nil
+end
+
+function M:_ConvertServerAppearanceToSuit(ServerAppearance)
+  if not ServerAppearance then
+    return nil
+  end
+  local CurrentPlanIndex = ServerAppearance.CurrentPlanIndex or 1
+  local CurrentHairPlanIndex = ServerAppearance.CurrentHairPlanIndex or 1
+  local SkinColors = ServerAppearance.SkinColors or {}
+  local HairColors = ServerAppearance.HairColors or {}
+  local AccessorySuit = {}
+  for AccessoryTypeIndex, AccessoryId in pairs(ServerAppearance.Accessory or {}) do
+    local NumericAccessoryId = tonumber(AccessoryId)
+    if NumericAccessoryId and NumericAccessoryId > 0 then
+      AccessorySuit[AccessoryTypeIndex] = NumericAccessoryId
+    end
+  end
+  
+  local function ResolveColorPlan(Colors, PlanIndex)
+    local PlanColors = Colors[PlanIndex]
+    if type(PlanColors) == "table" then
+      return PlanColors
+    end
+    return Colors
+  end
+  
+  return {
+    SkinId = ServerAppearance.SkinId,
+    SkinLevel = ServerAppearance.SkinSelectedLevel or ServerAppearance.SkinLevel or 1,
+    HairId = ServerAppearance.HairId,
+    Colors = ResolveColorPlan(SkinColors, CurrentPlanIndex),
+    HairColors = ResolveColorPlan(HairColors, CurrentHairPlanIndex),
+    AccessorySuit = AccessorySuit,
+    AccessoryCustomParams = ServerAppearance.AccessoryCustomParams or {},
+    IsShowPartMesh = ServerAppearance.IsShowPartMesh,
+    IsCornerVisible = ServerAppearance.IsCornerVisible,
+    CurrentPlanIndex = CurrentPlanIndex,
+    CharId = ServerAppearance.CharId
+  }
+end
+
+function M:GetDisplayPreviewSourceSlots()
+  local Slots = {}
+  if self:IsOwener() then
+    local PersonalInfo = self._Avatar and self._Avatar.PersonalInfo or nil
+    local CharDisplayList = PersonalInfo and PersonalInfo.CharDisplay or nil
+    local WeaponDisplayList = PersonalInfo and PersonalInfo.WeaponDisplay or nil
+    for SlotIndex = 1, 3 do
+      local CharDisplay = CharDisplayList and CharDisplayList.Get and CharDisplayList:Get(SlotIndex) or nil
+      local CharUuid = CharDisplay and CharDisplay.Id or nil
+      local CharData = CharUuid and self._Avatar and self._Avatar.Chars and self._Avatar.Chars[CharUuid] or nil
+      if CharData then
+        local WeaponDisplay = WeaponDisplayList and WeaponDisplayList.Get and WeaponDisplayList:Get(SlotIndex) or nil
+        local WeaponUuid = WeaponDisplay and WeaponDisplay.Id or nil
+        Slots[SlotIndex] = {
+          CharData = CharData,
+          Avatar = self._Avatar,
+          WeaponData = WeaponUuid and self._Avatar.Weapons and self._Avatar.Weapons[WeaponUuid] or nil,
+          Appearance = self:_GetOwnerAppearanceByDisplay(CharUuid, CharDisplay)
+        }
+      end
+    end
+    return Slots
+  end
+  for SlotIndex = 1, 3 do
+    local CharInfo = self.OtherPersonInfo and self.OtherPersonInfo.Char and self.OtherPersonInfo.Char[SlotIndex] or nil
+    if CharInfo and CharInfo.CharId then
+      local WeaponInfo = self.OtherPersonInfo and self.OtherPersonInfo.Weapon and self.OtherPersonInfo.Weapon[SlotIndex] or nil
+      local ServerAppearance = self:_GetOtherCustomDisplayAppearance(CharInfo.CharId, SlotIndex) or CharInfo.Appearance
+      Slots[SlotIndex] = {
+        CharData = self:_FindFakeCharByCharId(CharInfo.CharId),
+        Avatar = self:GetFakeAvatar(),
+        WeaponData = WeaponInfo and WeaponInfo.WeaponId and self:_FindFakeWeaponByWeaponId(WeaponInfo.WeaponId) or nil,
+        Appearance = ServerAppearance and self:_ConvertServerAppearanceToSuit(ServerAppearance) or nil
+      }
+    end
+  end
+  return Slots
+end
+
+function M:GetCustomDisplayDraft()
+  local PersonalInfo
+  if self:IsOwener() then
+    PersonalInfo = self._Avatar and self._Avatar.PersonalInfo or nil
+  else
+    PersonalInfo = self.OtherPersonInfo
+  end
+  local CustomDisplay = PersonalInfo and PersonalInfo.CustomDisplay or nil
+  if not CustomDisplay then
+    return nil
+  end
+  CustomDisplay = NormalizeCustomDisplayInfo(CustomDisplay)
+  local Draft = DisplayDraft:CreateEmpty(CustomDisplay.SceneId)
+  local Avatar = self:IsOwener() and self._Avatar or self:GetFakeAvatar()
+  for SlotIndex, CharParam in ipairs(CustomDisplay.CharParamGroup or {}) do
+    local Slot = DisplayDraft:GetCharacterSlot(Draft, SlotIndex)
+    local CharData, CharUuid
+    if CharParam and CharParam.CharId then
+      if self:IsOwener() then
+        CharData, CharUuid = self:_FindOwnerCharByCharId(CharParam.CharId)
+      else
+        CharData = self:_FindFakeCharByCharId(CharParam.CharId)
+      end
+    end
+    if CharData then
+      Slot.CharData = CharData
+      Slot.Avatar = Avatar
+      Slot.Transform = BuildTransformFromServerParam(CharParam)
+      Slot.TransformRotation = BuildTransformRotationFromServerParam(CharParam)
+      Slot.Action = BuildCharacterActionFromServerParam(CharParam)
+      if self:IsOwener() then
+        local DisplayUnit
+        if (CharParam.AppearancePlan or 0) > 0 then
+          DisplayUnit = {
+            AppearancePlan = CharParam.AppearancePlan
+          }
+        end
+        Slot.Appearance = self:_GetOwnerAppearanceByDisplay(CharUuid, DisplayUnit)
+      elseif CharParam.Appearance then
+        Slot.Appearance = self:_ConvertServerAppearanceToSuit(CharParam.Appearance)
+      end
+      local CharParamWeaponId = tonumber(CharParam.WeaponId)
+      if CharParamWeaponId and 0 ~= CharParamWeaponId then
+        if self:IsOwener() then
+          Slot.WeaponData = self:_FindOwnerWeaponByWeaponId(CharParamWeaponId)
+        else
+          Slot.WeaponData = self:_FindFakeWeaponByWeaponId(CharParamWeaponId)
+        end
+      end
+      if Slot.WeaponData and Slot.Action == nil then
+        Slot.Action = BuildDefaultWeaponActionFromWeaponData(Slot.WeaponData)
+      end
+    end
+  end
+  Draft.Camera = BuildCameraDataFromServerParam(CustomDisplay.CameraParam) or Draft.Camera
+  return Draft
+end
+
 function M:Destory()
   M.Super.Destory(self)
 end
@@ -511,6 +989,47 @@ function M:SaveShowPlan(TempCharShowPlan, TempWeaponShowPlan)
       end
     end
   end
+end
+
+function M:SaveCustomDisplay(CustomDisplayInfo, Callback)
+  if not self:IsOwener() then
+    DebugPrint("SaveCustomDisplay only owner can save")
+    return false
+  end
+  if not self._Avatar or not CustomDisplayInfo then
+    DebugPrint("SaveCustomDisplay Invalid arguments")
+    return false
+  end
+  CustomDisplayInfo = NormalizeCustomDisplayInfo(CustomDisplayInfo)
+  
+  local function OnSaveCallback(ret)
+    local bSuccess = ErrorCode:Check(ret)
+    if bSuccess and self._Avatar and self._Avatar.PersonalInfo then
+      self._Avatar.PersonalInfo.CustomDisplay = PersonalInfoCustomTypes.PersonalInfoCustomDisplay(CustomDisplayInfo)
+    end
+    if Callback then
+      Callback(ret)
+    end
+  end
+  
+  self._Avatar:SetCustomDisplay(OnSaveCallback, CustomDisplayInfo)
+  return true
+end
+
+function M:SaveCustomDisplayDraft(DisplayEditor, Callback)
+  local SaveData = DisplayEditor and DisplayEditor.ExportSaveData and DisplayEditor:ExportSaveData() or nil
+  if not SaveData then
+    DebugPrint("SaveCustomDisplayDraft Invalid arguments")
+    return false
+  end
+  local CharParamGroup = SaveData.CharParamGroup or {}
+  DebugPrint(string.format("PersonInfoSaveCustomDisplay: SceneId=%s CharCount=%s", tostring(SaveData.SceneId), tostring(#CharParamGroup)))
+  for Index, CharParam in ipairs(CharParamGroup) do
+    local Position = CharParam.Position or {}
+    local Rotation = CharParam.Rotation or {}
+    DebugPrint(string.format("PersonInfoSaveCustomDisplay: slot=%s CharId=%s AppearancePlan=%s WeaponId=%s PoseId=%s Pos=(%s,%s,%s) Rot=(%s,%s,%s)", tostring(Index), tostring(CharParam.CharId), tostring(CharParam.AppearancePlan), tostring(CharParam.WeaponId), tostring(CharParam.PoseId), tostring(Position[1]), tostring(Position[2]), tostring(Position[3]), tostring(Rotation[1]), tostring(Rotation[2]), tostring(Rotation[3])))
+  end
+  return self:SaveCustomDisplay(SaveData, Callback)
 end
 
 function M:GetDisplayCharInfos()
@@ -761,17 +1280,60 @@ end
 
 function M:GetFakeAvatar()
   if self._fakeAvatar == nil then
+    local CharInfos = {}
+    local AddedCharIds = {}
+    for i = 1, 3 do
+      local DumpChar = self.OtherBattleDumpInfo.Char[i]
+      if DumpChar then
+        AddedCharIds[DumpChar.RoleId] = true
+        CharInfos[#CharInfos + 1] = DumpChar
+      end
+    end
+    local CustomDisplay = self.OtherPersonInfo and self.OtherPersonInfo.CustomDisplay or nil
+    local CharParamGroup = CustomDisplay and CustomDisplay.CharParamGroup or nil
+    local ExtraWeaponIds = {}
+    if CharParamGroup then
+      for _, CharParam in ipairs(CharParamGroup) do
+        local CharId = CharParam and CharParam.CharId
+        if CharId and not AddedCharIds[CharId] then
+          AddedCharIds[CharId] = true
+          CharInfos[#CharInfos + 1] = {
+            RoleId = CharId,
+            Level = 1,
+            ModSuitIndex = 1
+          }
+        end
+        local WeaponId = CharParam and tonumber(CharParam.WeaponId)
+        if WeaponId and WeaponId > 0 then
+          ExtraWeaponIds[WeaponId] = true
+        end
+      end
+    end
+    local WeaponInfos = {}
+    local AddedWeaponIds = {}
+    for i = 1, 3 do
+      local DumpWeapon = self.OtherBattleDumpInfo.Weapon[i]
+      if DumpWeapon then
+        WeaponInfos[#WeaponInfos + 1] = DumpWeapon
+        AddedWeaponIds[tonumber(DumpWeapon.WeaponId)] = true
+      end
+    end
+    for WeaponId in pairs(ExtraWeaponIds) do
+      if not AddedWeaponIds[WeaponId] then
+        WeaponInfos[#WeaponInfos + 1] = {
+          WeaponId = WeaponId,
+          Level = 1,
+          ModSuitIndex = 1,
+          AppearanceInfo = {
+            Colors = {},
+            AccessoryId = -1
+          }
+        }
+      end
+    end
     ArmoryUtils:CreateDummyAvatar({
-      CharInfos = {
-        self.OtherBattleDumpInfo.Char[1],
-        self.OtherBattleDumpInfo.Char[2],
-        self.OtherBattleDumpInfo.Char[3]
-      },
-      WeaponInfos = {
-        self.OtherBattleDumpInfo.Weapon[1],
-        self.OtherBattleDumpInfo.Weapon[2],
-        self.OtherBattleDumpInfo.Weapon[3]
-      },
+      CharInfos = CharInfos,
+      WeaponInfos = WeaponInfos,
       WeaponForgeLevel = self.OtherBattleDumpInfo.WeaponForgeLevel
     })
     ArmoryUtils:SwitchPreviewTargetState(ArmoryUtils.PreviewTargetStates.Custom)

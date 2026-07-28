@@ -51,5 +51,15 @@ return ReadOnly("AccumulateTargetEvent", {
     MaxProgressType = "Day",
     QuestPhaseId = 1203,
     TargetDes = "Event_TargetDes_112001"
+  },
+  [112004] = {
+    EventId = 112004,
+    JumpUIId = 70,
+    JumpUnlockCondition = 112001,
+    JumpUnlockTips = "Event_JumpUnlock_112001",
+    MaxProgressNum = T.RT_1,
+    MaxProgressType = "Day",
+    QuestPhaseId = 1204,
+    TargetDes = "Event_TargetDes_112001"
   }
 })

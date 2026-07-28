@@ -1,4 +1,5 @@
 require("UnLua")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local BP_TempleEnergySupply_C = Class({
   "BluePrints.Item.Supply.BP_SupplyBase_C",
   "BluePrints.Combat.Components.EffectSourceInterface"

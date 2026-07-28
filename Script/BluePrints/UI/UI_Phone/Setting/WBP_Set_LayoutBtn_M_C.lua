@@ -3,6 +3,15 @@ local EMCache = require("EMCache.EMCache")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
+local FIRST_OPEN_LAYOUT_PLAN_03_KEY = "FirstOpenLayoutPlan03"
+
+local function GetLayoutSelectedIndexByPlanIndex(PlanIndex)
+  local Avatar = GWorld and GWorld:GetAvatar()
+  if not (Avatar and PlanIndex) or not Avatar.GetLayoutEntryIndexByPlanIndex then
+    return nil
+  end
+  return Avatar:GetLayoutEntryIndexByPlanIndex(PlanIndex)
+end
 
 function M:Construct()
   self.Btn_Area.OnPressed:Add(self, self.OnPressLayout)
@@ -90,18 +99,23 @@ function M:OnClickedLayout()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
 end
 
-function M:InitLayoutPlan(PlanIndex, LayoutIndex)
+function M:InitLayoutPlan(PlanIndex, LayoutIndex, IsSelected)
   self.PlanIndex = PlanIndex
   self.LayoutIndex = LayoutIndex
-  if self.Index % 2 == self.PlanIndex % 2 and self.LayoutState ~= UIConst.ButtonState.Click then
+  local bIsSelected = IsSelected
+  if nil == bIsSelected then
+    bIsSelected = self.Index == GetLayoutSelectedIndexByPlanIndex(self.PlanIndex)
+  end
+  if bIsSelected then
     self.LayoutState = UIConst.ButtonState.Click
     self:PlayAnimation(self.Click)
-  elseif self.Index % 2 ~= self.PlanIndex % 2 and self.LayoutState == UIConst.ButtonState.Click then
+  else
     self.LayoutState = UIConst.ButtonState.None
     self:PlayAnimation(self.Normal)
   end
-  local IsFirstShow = EMCache:Get("FirstOpenLayoutPlan", true)
-  if not IsFirstShow and 1 == PlanIndex and 2 == self.Index then
+  local IsFirstShow = EMCache:Get(FIRST_OPEN_LAYOUT_PLAN_03_KEY, true)
+  local LayoutSelectedIndex = GetLayoutSelectedIndexByPlanIndex(PlanIndex)
+  if not IsFirstShow and 3 == self.Index and (1 == LayoutSelectedIndex or 2 == LayoutSelectedIndex) then
     self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -110,7 +124,7 @@ end
 
 function M:OnSwitchMobileHUDLayout(PlanIndex)
   self.PlanIndex = PlanIndex
-  if PlanIndex % 2 == self.Index % 2 then
+  if GetLayoutSelectedIndexByPlanIndex(PlanIndex) == self.Index then
     self.LayoutIndex = PlanIndex
   end
 end

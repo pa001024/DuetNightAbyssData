@@ -114,4 +114,8 @@ function Component:RemoveGameModeOnDestroy(GameMode, Owner, Func)
   GameMode.OnUnitDestroyDelegates:Remove(Owner, Func)
 end
 
+function Component:RemoveGameModeOnDisconnect(GameMode, Owner, Func)
+  GameMode.OnDisconnectDelegates:Remove(Owner, Func)
+end
+
 return Component

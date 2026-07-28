@@ -90,6 +90,12 @@ return ReadOnly("ConditionText", {
   },
   ForgeLevel = {ConditionLogic = "S", ConditionType = "ForgeLevel"},
   GachaCount = {ConditionLogic = "S", ConditionType = "GachaCount"},
+  GuildBossTrialFinishedCount = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionName = "UI_QUEST_CONDITION_SoloTreasure",
+    ConditionType = "GuildBossTrialFinishedCount"
+  },
   GuildLevelMin = {
     ConditionLogic = "S",
     ConditionType = "GuildLevelMin"
@@ -217,6 +223,11 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionName = "UI_QUEST_CONDITION_FINISHQUEST",
     ConditionType = "QuestChain"
+  },
+  QuestChainTrueEnd = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "QuestChainTrueEnd"
   },
   RegionCapturePet = {
     ConditionLogic = "S",

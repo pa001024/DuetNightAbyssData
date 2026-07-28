@@ -6,6 +6,7 @@ local msgpack = require("msgpack_core")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local DungeonObjectConst = require("BluePrints.DungeonObject.DungeonObjectConst")
+local CoroutineUtils = require("CoroutineUtils")
 local BP_EMGameMode_C = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.GameMode.Components.AIBattleMgr",
@@ -20,6 +21,7 @@ local BP_EMGameMode_C = Class({
   "BluePrints.GameMode.Components.GameModeRegionMgr",
   "BluePrints.GameMode.Components.GameModeQuestMgr",
   "BluePrints.GameMode.Components.WalnutComponent",
+  "BluePrints.GameMode.Components.IronComponent",
   "BluePrints.GameMode.Components.TicketComponent",
   "BluePrints.GameMode.Components.RewardGenComponent",
   "BluePrints.GameMode.Components.DungeonDeliveryComponent"
@@ -47,6 +49,7 @@ function BP_EMGameMode_C:InitGameModeInfo(DungeonId)
     self.bBlock = false
   end
   self.BattleAvatars = {}
+  self.WorldTravelDelegate = nil
 end
 
 function BP_EMGameMode_C:ShouldSkipDropByRule(DropId)
@@ -123,7 +126,11 @@ function BP_EMGameMode_C:InitTacMapManager()
   end
   local TacMapManagerClass = LoadClass("/Game/BluePrints/Common/Level/BP_TacmapManagerNew.BP_TacmapManagerNew_C")
   self.TacMapManager = NewObject(TacMapManagerClass, self)
-  self.TacMapManager:Init(self.levelLoader)
+  if self.EMGameState and self.EMGameState.GameModeType == "RougePro" then
+    self.TacMapManager:InitFromTemplate(self.levelLoader)
+  else
+    self.TacMapManager:Init(self.levelLoader)
+  end
 end
 
 function BP_EMGameMode_C:TryRegisterPlayerToTacmap()
@@ -170,10 +177,14 @@ end
 function BP_EMGameMode_C:TryCreateDungeonObject()
   self.DungeonObject = GWorld:GetGameModeDungeonObject()
   if self.DungeonObject then
-    local ActorClassPath = self.DungeonObject:GetActorClassPath()
-    if ActorClassPath then
-      local ActorClass = LoadClass(ActorClassPath)
+    local ActorClassOrPath = self.DungeonObject:GetActorClassPath()
+    if ActorClassOrPath then
+      local ActorClass = ActorClassOrPath
+      if type(ActorClassOrPath) == "string" then
+        ActorClass = LoadClass(ActorClassOrPath)
+      end
       self:CreateDungeonObject(ActorClass)
+      DebugPrint("TryCreateDungeonObject: Create ARougePro ")
     else
       self:CreateDungeonObject()
     end
@@ -190,6 +201,7 @@ function BP_EMGameMode_C:ReceiveEndPlay(EndPlayReason)
   self.OnDestroyDelegates:Broadcast()
   self:UnbindTalkSubsystem()
   self.EMGameState:RemoveGameModeEvent("OnDeadStaticUnit", self, self.OnStaticUnitDeadEvent)
+  self:UnRegisterWorldTravelDelegate()
   GWorld:RemoveGameMode(self.GameModeIndex)
 end
 
@@ -542,6 +554,11 @@ end
 function BP_EMGameMode_C:OnUnitDestoryEvent(MonsterC, CombatItemBase, DestroyReason)
   if not self:IsSubGameMode() then
     self:TriggerDungeonComponentFun("OnUnitDestoryEvent", MonsterC, CombatItemBase)
+    if MonsterC then
+      self:TriggerDungeonObjectFunc("OnMonsterDestroyed", MonsterC, DestroyReason)
+    elseif CombatItemBase then
+      self:TriggerDungeonObjectFunc("OnSceneItemDestroyed", CombatItemBase, DestroyReason)
+    end
   end
   if MonsterC then
     self:TriggerSTLEvent("OnSTLActorDestroyed", MonsterC, DestroyReason)
@@ -665,6 +682,7 @@ end
 function BP_EMGameMode_C:OnTriggerAOIBase(TriggerEventId, TriggerBase, EMActorEid, TriggerType)
   if not self:IsSubGameMode() then
     self:TriggerSTLEvent("OnTriggerAOIBase", TriggerEventId, TriggerBase, EMActorEid, TriggerType)
+    self:TriggerDungeonObjectFunc("OnTriggerAOIBase", TriggerEventId, TriggerBase, EMActorEid, TriggerType)
   end
   self.Overridden.OnTriggerAOIBase(self, TriggerEventId, TriggerBase, EMActorEid, TriggerType)
   self:TriggerBPGameModeEvent("OnTriggerAOIBase", TriggerEventId, TriggerBase, EMActorEid, TriggerType)
@@ -992,9 +1010,8 @@ function BP_EMGameMode_C:TriggerMechanism(StaticCreatorId, StateId, PrivateEnabl
       if IsValid(Info) then
         print(_G.LogTag, "LXZ TriggerMechanism444", Info:GetName())
         if Info:IsCombatItemBase() then
-          bCanChange = true
           Info:ChangeState("Manual", 0, StateId)
-          if Info.RegionDataType == ERegionDataType.RDT_CommonQuestData then
+          if Info.RegionDataType == ERegionDataType.RDT_CommonQuestData and Info.BpBorn or Info.RegionDataType == ERegionDataType.RDT_QuestCommonData and not Info.BpBorn then
             Info.QuestId = QuestId
           end
         end
@@ -1033,12 +1050,27 @@ function BP_EMGameMode_C:TriggerMechanism(StaticCreatorId, StateId, PrivateEnabl
   end
   if StaticCreator.CreatedWorldRegionEid ~= "" and bCanChange then
     self:GetRegionDataMgrSubSystem():ChangeState(StaticCreator.CreatedWorldRegionEid, StateId)
+    if QuestId and QuestId > 0 then
+      self:GetRegionDataMgrSubSystem():UpdateQuestId(StaticCreator.CreatedWorldRegionEid, QuestId)
+    end
   end
 end
 
 function BP_EMGameMode_C:TriggerMechanismArray(StaticCreatorIds, StateId, PrivateEnable, QuestId)
   for i, v in pairs(StaticCreatorIds) do
     self:TriggerMechanism(v, StateId, PrivateEnable, QuestId)
+  end
+end
+
+function BP_EMGameMode_C:SetRollerCoasterSpeed(Id, TargetSpeed, TransitionTime)
+  local RollerCoaster = self.EMGameState:GetMechanismActorById(Id)
+  if not IsValid(RollerCoaster) then
+    DebugPrint("yly BP_EMGameMode_C SetRollerCoasterSpeed: RollerCoaster not found, Id =", Id)
+    return
+  end
+  if RollerCoaster.StartSpeedTransition then
+    RollerCoaster:StartSpeedTransition(TargetSpeed, TransitionTime or 0)
+    DebugPrint("yly BP_EMGameMode_C SetRollerCoasterSpeed: Id =", Id, "TargetSpeed =", TargetSpeed, "TransitionTime =", TransitionTime)
   end
 end
 
@@ -1383,6 +1415,9 @@ function BP_EMGameMode_C:ExecuteLogicStartDungeonVote()
   if self:CheckDungeonProgressIsMaxRound() then
     return
   end
+  if self:CheckIronDungeonIsMaxLevel() then
+    return
+  end
   self:TriggerDungeonComponentFun("TriggerDungeonVoteBegin")
   self:SetGamePaused("GameModeState", true)
 end
@@ -1429,6 +1464,9 @@ function BP_EMGameMode_C:DungeonFinish_OnPlayerRealDead(AvatarEids)
   elseif self.EMGameState.GameModeType == "SoloTreasure" then
     DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead SoloTreasure")
     self:TriggerDungeonComponentFun("FinishSolotreasure", false, "PlayerRealDead")
+  elseif self.EMGameState.GameModeType == "GuildBoss" then
+    DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead GuildBoss")
+    self:TriggerDungeonComponentFun("FinishGuildBoss", true, "PlayerRealDead")
   else
     DebugPrint("EMGameMode:DungeonFinish_OnPlayerRealDead Default")
     self:TriggerPlayerFailed(AvatarEids)
@@ -1567,38 +1605,11 @@ function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids, PlayerEndReason)
 end
 
 function BP_EMGameMode_C:CheckCustomPlayerFinishLogic(IsWin, AvatarEids, PlayerEndReason)
-  if self.EMGameState.GameModeType ~= "IronSurvival" then
-    return false
+  if self:IsIronDungeon() then
+    local IsInterrupt = self:TryIronDungeonCustomFinish(IsWin, AvatarEids, PlayerEndReason)
+    return IsInterrupt
   end
-  local HasTeamLeader = self:HasTeamLeaderByAvatarEids(AvatarEids)
-  if HasTeamLeader then
-    if "Vote" == PlayerEndReason then
-      self:NotifyServerGameEnd(true, "Vote")
-    else
-      self:NotifyServerGameEnd(false, "TeamLeaderLeave")
-    end
-    return true
-  else
-    return false
-  end
-end
-
-function BP_EMGameMode_C:HasTeamLeaderByAvatarEids(AvatarEids)
-  if type(AvatarEids) == "table" then
-    for _, AvatarEid in pairs(AvatarEids) do
-      if self:IsTeamLeaderByAvatarEid(AvatarEid) then
-        return true
-      end
-    end
-  else
-    return self:IsTeamLeaderByAvatarEid(AvatarEids)
-  end
-end
-
-function BP_EMGameMode_C:IsTeamLeaderByAvatarEid(AvatarEid)
-  local IsTeamLeader = self.TicketLeaderAvatarEid == AvatarEid
-  DebugPrint("IsTeamLeaderByAvatarEid", IsTeamLeader)
-  return IsTeamLeader
+  return false
 end
 
 function BP_EMGameMode_C:SendTimeDistCheatalert(PlayerChar, DungeonSpendTime, DungeonMoveDistance, MonitorType, SubId, DisThresh, TimeThresh)
@@ -1757,9 +1768,8 @@ end
 function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
   local PlayersInfo = {}
   if self.EMGameState.GameModeType == "Party" then
-    local Ordinal = self.EMGameState.PartyPlayerOrdinal
-    for i = 1, Ordinal:Length() do
-      local TargetEid = Ordinal[i]
+    local Ranking = self:TriggerDungeonComponentFun("GetFinalPlayerRanking") or {}
+    for _, TargetEid in pairs(Ranking) do
       local TargetCharacter = Battle(self):GetEntity(TargetEid)
       if TargetCharacter then
         local bIsPhantom = TargetCharacter:IsPhantom()
@@ -1787,7 +1797,7 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
           PlayerRoleId = PlayersInfo[#PlayersInfo].RoleInfo.RoleId
         end
         PlayersInfo[#PlayersInfo].ScenePlayerName = self:GetScenePlayerName(TargetCharacter.Eid, bIsPhantom, PlayerRoleId)
-        PlayersInfo[#PlayersInfo].MVPId = TargetCharacter.CharacterFashion.AccessoryType2Id:Find(CommonConst.CharAccessoryTypes.MVP)
+        PlayersInfo[#PlayersInfo].MVPId = self:GetCharacterMVPId(TargetCharacter.InfoForInit)
       end
     end
   else
@@ -1801,7 +1811,7 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
       PlayersInfo[1].CurrentWeaponMeleeOrRanged = MainPlayerWeapon:GetWeaponMeleeOrRanged()
     end
     PlayersInfo[1].ScenePlayerName = self:GetScenePlayerName(MainPlayer.Eid, false, PlayersInfo[1].RoleId)
-    PlayersInfo[1].MVPId = MainPlayer.CharacterFashion.AccessoryType2Id:Find(CommonConst.CharAccessoryTypes.MVP)
+    PlayersInfo[1].MVPId = self:GetCharacterMVPId(MainPlayer.InfoForInit)
     print(_G.LogTag, "GetScenePlayersInfo", MainPlayer:GetAllTeammates():Length())
     for _, v in pairs(MainPlayer:GetAllTeammates()) do
       if v ~= MainPlayer then
@@ -1838,7 +1848,7 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
           PlayerRoleId = PlayersInfo[#PlayersInfo].RoleInfo.RoleId
         end
         PlayersInfo[#PlayersInfo].ScenePlayerName = self:GetScenePlayerName(v.Eid, bIsPhantom, PlayerRoleId)
-        PlayersInfo[#PlayersInfo].MVPId = v.CharacterFashion.AccessoryType2Id:Find(CommonConst.CharAccessoryTypes.MVP)
+        PlayersInfo[#PlayersInfo].MVPId = self:GetCharacterMVPId(InitInfo)
       end
     end
   end
@@ -1846,6 +1856,28 @@ function BP_EMGameMode_C:GetScenePlayersInfo(MainPlayer)
   local RewardsMessage = FMessage()
   RewardsMessage:SetBytes(MsgStr, #MsgStr)
   return RewardsMessage
+end
+
+function BP_EMGameMode_C:GetCharacterMVPId(InfoForInit)
+  if not InfoForInit then
+    return nil
+  end
+  local AppearanceSuit = InfoForInit.AppearanceSuit
+  if not AppearanceSuit then
+    AppearanceSuit = InfoForInit.RoleInfo and InfoForInit.RoleInfo.AppearanceSuit
+    if not AppearanceSuit then
+      return nil
+    end
+  end
+  local AccessorySuit = AppearanceSuit.AccessorySuit
+  if not AccessorySuit then
+    return nil
+  end
+  local MvpId = AccessorySuit[CommonConst.NewCharAccessoryTypes.MVP]
+  if MvpId then
+    return MvpId
+  end
+  return nil
 end
 
 function BP_EMGameMode_C:GetPlayerUidByEid(Eid)
@@ -1905,6 +1937,9 @@ end
 function BP_EMGameMode_C:OnMiniGameSuccess(MiniGameType, CreatorId)
   self.Overridden.OnMiniGameSuccess(self, MiniGameType, CreatorId)
   self:TriggerDungeonComponentFun("OnMiniGameSuccess", MiniGameType, CreatorId)
+  if not self:IsSubGameMode() then
+    self:TriggerDungeonObjectFunc("OnMiniGameSuccess", MiniGameType, CreatorId)
+  end
 end
 
 function BP_EMGameMode_C:OnDefenceCoreActive(DefenceCore)
@@ -2286,9 +2321,9 @@ function BP_EMGameMode_C:RemoveMiniGameSuccessCallback(DisplayName, Callback)
   end
 end
 
-function BP_EMGameMode_C:RunStory(StoryPath, QuestId, EndCallback, StopCallback)
+function BP_EMGameMode_C:RunStory(StoryPath, EndCallback, StopCallback)
   DebugPrint("StoryPathStoryPathStoryPathStoryPath", StoryPath)
-  GWorld.StoryMgr:RunStory(StoryPath, QuestId, nil, EndCallback, StopCallback)
+  GWorld.StoryMgr:RunStory(StoryPath, nil, nil, EndCallback, StopCallback)
 end
 
 function BP_EMGameMode_C:PickUpForAllPlayers(FunctionName, PickUpCount, UseParam, UnitId, Transform, AvatarEid, bExtra)
@@ -2786,7 +2821,7 @@ function BP_EMGameMode_C:ActivateDynamicQuestEvent()
       NumDynquest = NumDynquest + 1
     end
     local NumPerFrame = NumDynquest // 5 + 1
-    local Coroutine = CreateCoroutine(function(NumPerFrame)
+    local Coroutine = CoroutineUtils.CreateCoroutine(function(NumPerFrame)
       DebugPrint("@@@ActivateDynamicQuestEvent StartDynamicEvent Start")
       local TaskProcessedNum = 0
       for _, DynamicQuest in pairs(Avatar.DynamicQuests) do
@@ -3038,6 +3073,26 @@ function BP_EMGameMode_C:ShowBattlePerformanceUI(FinishEventName)
     return
   end
   UIManager:LoadUINew("BattlePerformance", FinishEventName)
+end
+
+function BP_EMGameMode_C:RegisterWorldTravelDelegate(Callback)
+  self.WorldTravelDelegate = Callback
+end
+
+function BP_EMGameMode_C:UnRegisterWorldTravelDelegate()
+  self.WorldTravelDelegate = nil
+end
+
+function BP_EMGameMode_C:InvokeWorldTravelDelegate()
+  local func = self.WorldTravelDelegate
+  if not func then
+    return false
+  end
+  if func() then
+    self.PreInitInfo = GWorld.GameInstance:ConsumeGameModePreInitInfo()
+    return true
+  end
+  return false
 end
 
 AssembleComponents(BP_EMGameMode_C)

@@ -19,6 +19,7 @@ end
 
 function WBP_TrueHardBoss_HardLevelChoose_C:Destruct()
   print(_G.LogTag, "gyy HardLevelChoose Destruct")
+  AudioManager(self):StopSound(self, "HardLevelChooseOpenSound")
   self.Super.Destruct(self)
 end
 
@@ -84,6 +85,7 @@ function WBP_TrueHardBoss_HardLevelChoose_C:PlayInAnim()
   })
   self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self:PlayAnimationForward(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/common_panel_normal_expand", "HardLevelChooseOpenSound", nil)
 end
 
 function WBP_TrueHardBoss_HardLevelChoose_C:RefreshOtherInfo()
@@ -510,9 +512,6 @@ function WBP_TrueHardBoss_HardLevelChoose_C:Close(Flag, IsEsc)
     print(_G.LogTag, "gyy HardLevelChoose CloseFail IsPlayingAnimation")
     return
   end
-  if IsEsc then
-    AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "HardBossLevelChoose", nil)
-  end
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   local Player = PlayerController:GetMyPawn()
@@ -529,12 +528,14 @@ function WBP_TrueHardBoss_HardLevelChoose_C:Close(Flag, IsEsc)
     self.TeamHeadUI = nil
   end
   if Flag then
+    AudioManager(self):SetEventSoundParam(self, "HardLevelChooseOpenSound", {ToEnd = 1})
     self:BindToAnimationFinished(self.Out, {
       self,
       self.CloseDirectly
     })
     self:PlayAnimationForward(self.Out)
   else
+    AudioManager(self):StopSound(self, "HardLevelChooseOpenSound")
     self:CloseDirectly()
   end
 end

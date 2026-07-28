@@ -24,11 +24,10 @@ function M:ModelViewIni()
 end
 
 function M:FreshHideButton()
-  if -1 == self.SelectCharIndex then
-    PersonInfoController.MainPage.Com_BtnVisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    PersonInfoController.MainPage.Com_BtnVisible:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if not PersonInfoController.MainPage or not PersonInfoController.MainPage.Com_BtnVisible then
+    return
   end
+  PersonInfoController.MainPage.Com_BtnVisible:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
 end
 
 AssembleComponents(M)

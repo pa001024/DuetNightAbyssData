@@ -6,6 +6,9 @@ local EDetectTargetMethods = {
   ProjectToScreenAndLineTrace = 3
 }
 local M = Class("BluePrints.UI.BP_UIState_C")
+M._components = {
+  "BluePrints.UI.WBP.Camera.CameraParameterComponent"
+}
 local Rotation = FRotator()
 local Position = FVector()
 local HitResult = FHitResult()
@@ -20,7 +23,9 @@ end
 function M:Construct()
   M.Super.Construct(self)
   self:InitConstValue()
+  self.FocalLengthSlider:_SetExtraText(GText("UI_CameraSystem_CameraFocalLength"))
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  self.GuideLine:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   self.CameraIndexes = {
     1,
@@ -35,9 +40,9 @@ function M:Construct()
   self.PlayerCapsuleRadius = self.Player.CapsuleComponent:GetScaledCapsuleRadius()
   self.CameraProbeSize = math.min(self.CameraProbeSize, self.PlayerCapsuleRadius - 0.1)
   self.PlayerCapsuleHalfHeight = self.Player.CapsuleComponent:GetScaledCapsuleHalfHeight()
-  self:CreateCamera()
   self.PlayerLocation = self.Player:K2_GetActorLocation()
   self.PlayerForward = self.Player:GetActorForwardVector()
+  self:CreateCamera()
   self.TraceStartLocation = FVector(0, 0, 0)
   self.TraceStartLocation.X = self.PlayerLocation.X
   self.TraceStartLocation.Y = self.PlayerLocation.Y
@@ -52,13 +57,6 @@ function M:Construct()
   end
   self.RollScrollMin = -180
   self.RollScrollMax = 180
-  if self.RollScrollBar then
-    self.RollScrollBar:BindEvents({
-      EventObj = self,
-      OnScrolledEvent = self.OnRollScrollBarPercentChanged,
-      OnInertialScrollingEndEvent = self.OnRollScrollBarInertialScrollingEnd
-    })
-  end
   self.CameraTrans = {}
   self.Main:SetVisibility(UIConst.VisibilityOp.Visible)
   self.SoundFlags = {}
@@ -79,8 +77,8 @@ function M:Construct()
   self.IsShotTargetSucceeded = false
   self.CloseCallback = nil
   self.ActorTickableStates = {}
-  self.Btn_Pause:AddEventOnCheckStateChanged(self, self.NotifyGamePauseChange)
-  self.Text_Pause:SetText(GText("UI_CameraSystem_PauseGame"))
+  self.Btn_Parameter:BindEventOnClicked(self, self.ShowParameterWidget)
+  self.Btn_Shoot:BindEventOnClicked(self, self.Screenshot)
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
   GWorld.GameInstance:SetDynamicResolution("PhotoCameraMain", true)
 end
@@ -121,16 +119,7 @@ end
 function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   M.Super.InitUIInfo(self, Name, IsInUIMode, EventList, Params)
   USequenceFunctionLibrary.SetViewTarget(self:GetOwningPlayer(), self.Camera)
-  self.Hide_Role:SetText(GText("UI_CameraSystem_HideModel_Character"))
-  self.Hide_Role:SetHiddenState(false)
-  self.Hide_Player:SetText(GText("UI_CameraSystem_HideModel_OtherPlayer"))
-  self.Hide_Player:SetHiddenState(false)
-  self.Hide_NPC:SetText(GText("UI_CameraSystem_HideModel_NPC"))
-  self.Hide_NPC:SetHiddenState(false)
-  self.Hide_Monster:SetText(GText("UI_CameraSystem_HideModel_Monster"))
-  self.Hide_Monster:SetHiddenState(false)
-  self.Hide_Pet:SetText(GText("UI_CameraSystem_HideModel_Pet"))
-  self.Hide_Pet:SetHiddenState(false)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/camera_frame_in", "Camera_Opened", nil)
   self.InitParams = Params or nil
   if self.InitParams ~= nil then
     EventManager:FireEvent(EventID.OnInitScreenshotParams, self.InitParams)
@@ -140,12 +129,8 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
     EventManager:FireEvent(EventID.OnInitScreenshotParams, self.InitParams)
     self:SetInitParams(self.InitParams)
     local CurGamePause = UE4.UGameplayStatics.IsGamePaused(self)
-    self.Btn_Pause:SetChecked(CurGamePause, true)
-    self.Btn_Pause:StopAllAnimations()
     if CurGamePause then
-      self.Btn_Pause:PlayAnimation(self.Btn_Pause.Open_Normal)
     else
-      self.Btn_Pause:PlayAnimation(self.Btn_Pause.Close_Normal)
     end
     self:UISetGamePaused(self.WidgetName or self.ConfigName, CurGamePause)
   end
@@ -199,15 +184,17 @@ function M:SetInitParams(Params)
     end
   end
   if self.TargetActors and next(self.TargetActors) and not Params.IsLargeRange then
-    self.Panel_FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self.Border_FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.FindTarget.Panel_FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.FindTarget.Border_FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.FindTarget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
-    self.Panel_FindTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Border_FindTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.FindTarget.Panel_FindTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.FindTarget.Border_FindTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.FindTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Text_LostTarget:SetText(self.Text_TargetNotFound)
+  self.FindTarget.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.FindTarget.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.FindTarget.Text_LostTarget:SetText(self.Text_TargetNotFound)
   self.bHasFoundTargets = false
   if Params.IsAprilFoolsDayActivity then
     self.bFindTargetEveryFrame = false
@@ -216,21 +203,7 @@ function M:SetInitParams(Params)
   end
   self.CloseCallback = Params.CloseCallback
   self.OnShotTargetSuccess = Params.OnShotTargetSuccess
-  if Params.bStartHiddenRole then
-    self:OnHideBtnClickedImp(UIConst.PhotoCameraHiddenButton.Role, self.CharType.Char)
-  end
-  if Params.bStartHiddenPlayer then
-    self:OnHideBtnClickedImp(UIConst.PhotoCameraHiddenButton.Player, self.CharType.Player)
-  end
-  if Params.bStartHiddenNPC then
-    self:OnHideBtnClickedImp(UIConst.PhotoCameraHiddenButton.NPC, self.CharType.NPC)
-  end
-  if Params.bStartHiddenMonster then
-    self:OnHideBtnClickedImp(UIConst.PhotoCameraHiddenButton.Monster, self.CharType.Monster)
-  end
-  if Params.bStartHiddenPet then
-    self:OnHideBtnClickedImp(UIConst.PhotoCameraHiddenButton.Pet, self.CharType.Pet)
-  end
+  self:ApplyStartHiddenParams(Params)
   if Params.LockHiddenList and #Params.LockHiddenList > 0 then
     for i = 1, #Params.LockHiddenList do
       if Params.LockHiddenList[i] then
@@ -244,7 +217,6 @@ function M:SetInitParams(Params)
   if nil ~= Params and nil ~= Params.bForceGamePause then
     InitForcePaus = Params.bForceGamePause
   end
-  self.Btn_Pause:SetChecked(InitForcePaus)
   self:NotifyGamePauseChange(InitForcePaus)
   self:SetLockGamePause(Params.bLockGamePause)
   self:SetLockCameraPos(Params.bLockCameraPos)
@@ -256,6 +228,18 @@ function M:SetInitParams(Params)
       self.OriginalCameraTransform.Translation = self.Camera:K2_GetActorLocation()
       Params.bUseStartPos = true
     end
+  end
+  self.bDisableCustom = Params.bDisableCustom
+  if self.bDisableCustom then
+    self.Btn_Customize:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.Btn_Customize:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  self.bDisableCameraParameter = Params.bDisableCameraParameter
+  if self.bDisableCameraParameter then
+    self.Btn_Parameter:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.Btn_Parameter:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -314,6 +298,28 @@ function M:InitTaskInfo()
   end
 end
 
+function M:FlushCameraPausedLODMeshes()
+  if not self.NeedPauseNextFrameMeshes then
+    return
+  end
+  for _, Mesh in pairs(self.NeedPauseNextFrameMeshes) do
+    if IsValid(Mesh) then
+      Mesh:SetTickableWhenPaused(false)
+      if Mesh:GetComponentTickInterval() > 0 then
+        local bTickEnabled = Mesh:IsComponentTickEnabled()
+        Mesh:SetComponentTickEnabled(false)
+        if bTickEnabled then
+          Mesh:SetComponentTickEnabled(true)
+        end
+      end
+      if Mesh.GetOwner and Mesh:GetOwner() then
+        DebugPrint(TXTTag, "Reset mesh tickable when gamepause, Character: " .. tostring(Mesh:GetOwner():GetName()) .. "ForcedLOD: " .. tostring(Mesh:GetForcedLOD()))
+      end
+    end
+  end
+  self.NeedPauseNextFrameMeshes = {}
+end
+
 function M:Tick(MyGeometry, InDeltaTime)
   if self.CameraManager then
     local CameraLocation = self.CameraManager:GetCameraLocation()
@@ -338,15 +344,7 @@ function M:Tick(MyGeometry, InDeltaTime)
   end
   self:TickFindTargets()
   if UE4.UGameplayStatics.IsGamePaused(self) and self.NeedPauseNextFrameMeshes then
-    for _, Mesh in pairs(self.NeedPauseNextFrameMeshes) do
-      if IsValid(Mesh) then
-        Mesh:SetTickableWhenPaused(false)
-        if Mesh.GetOwner and Mesh:GetOwner() then
-          DebugPrint("@gulinan Reset mesh tickable when gamepause, Character: " .. tostring(Mesh:GetOwner():GetName()) .. "ForcedLOD: " .. tostring(Mesh:GetForcedLOD()))
-        end
-      end
-    end
-    self.NeedPauseNextFrameMeshes = {}
+    self:FlushCameraPausedLODMeshes()
   end
   if UE4.UGameplayStatics.IsGamePaused(self) and self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 and self.bNeedUpdateLODCharacterOnce then
     self.NeedPauseNextFrameMeshes = {}
@@ -393,7 +391,7 @@ function M:TryFindTargets()
   local TargetsLoc = {}
   if 0 ~= EDetectTargetMethods.ProjectToScreen & self.DetectTargetMethod then
     local ViewPortScale = UWidgetLayoutLibrary.GetViewportScale(self)
-    local RangeWidget = self.Border_FindTarget
+    local RangeWidget = self.FindTarget.Border_FindTarget
     if self.InitParams.IsLargeRange then
       RangeWidget = self
     end
@@ -425,11 +423,13 @@ function M:TryFindTargets()
   end
   if self.bFindTarget then
     if not self.bHasFoundTargets then
-      self:StopAnimation(self.TargetOut)
-      self:PlayAnimation(self.TargetIn)
-      self.Text_FindTarget:SetText(self.Text_TargetFound)
-      self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.FindTarget:StopAnimation(self.FindTarget.Out)
+      self.FindTarget:PlayAnimation(self.FindTarget.In)
+      self.FindTarget:StopAnimation(self.FindTarget.Fail_In)
+      self.FindTarget:PlayAnimation(self.FindTarget.Success_In)
+      self.FindTarget.Text_FindTarget:SetText(self.Text_TargetFound)
+      self.FindTarget.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.FindTarget.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
       self.bHasFoundTargets = true
       if self.InitParams.IsAprilFoolsDayActivity then
         self.bHasPlayedFoundSound = true
@@ -442,11 +442,13 @@ function M:TryFindTargets()
       end
     end
   elseif self.bHasFoundTargets then
-    self:StopAnimation(self.TargetIn)
-    self:PlayAnimation(self.TargetOut)
-    self.Text_LostTarget:SetText(self.Text_TargetNotFound)
-    self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Visible)
-    self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.FindTarget:StopAnimation(self.FindTarget.In)
+    self.FindTarget:PlayAnimation(self.FindTarget.Out)
+    self.FindTarget:StopAnimation(self.FindTarget.Success_In)
+    self.FindTarget:PlayAnimation(self.FindTarget.Fail_In)
+    self.FindTarget.Text_LostTarget:SetText(self.Text_TargetNotFound)
+    self.FindTarget.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.FindTarget.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.bHasFoundTargets = false
     if nil ~= self.bHasPlayedFoundSound and not self.bHasPlayedNotFoundSound then
       AudioManager(self):PlayUISound(self, "event:/ui/common/task_target_lost", "Camera_Target_Not_Found", nil)
@@ -485,7 +487,14 @@ end
 
 function M:CreateCamera()
   self.OriginalCameraTransform = FTransform()
-  self.OriginalCameraTransform.Translation = self.CameraManager:GetCameraLocation()
+  local StartLocation = self.CameraManager:GetCameraLocation()
+  local Diff = StartLocation - self.PlayerLocation
+  if Diff:Size() >= self.CameraMoveMaxRang then
+    Diff:Normalize()
+    self.OriginalCameraTransform.Translation = self.PlayerLocation + Diff * self.CameraMoveMaxRang
+  else
+    self.OriginalCameraTransform.Translation = StartLocation
+  end
   self.OriginalCameraTransform.Rotation = self.CameraManager:GetCameraRotation():ToQuat()
   self.Camera = self:GetWorld():SpawnActor(LoadClass("/Game/AssetDesign/Camera/BP_ScreenshotCamera.BP_ScreenshotCamera_C"), self.OriginalCameraTransform, UE4.ESpawnActorCollisionHandlingMethod.AdjustIfPossibleButAlwaysSpawn, nil, nil, nil)
   if not IsValid(self.Camera) then
@@ -530,17 +539,58 @@ function M:OnHidePetBtnClicked()
   self:OnHideBtnClickedImp(UIConst.PhotoCameraHiddenButton.Pet, self.CharType.Pet)
 end
 
+function M:ApplyStartHiddenParams(Params)
+  if not Params or not self.CharType then
+    return
+  end
+  local HiddenState = self.CurCharHiddenState or 0
+  if Params.bStartHiddenRole then
+    HiddenState = HiddenState | self.CharType.Char
+  end
+  if Params.bStartHiddenPlayer then
+    HiddenState = HiddenState | self.CharType.Player
+  end
+  if Params.bStartHiddenNPC then
+    HiddenState = HiddenState | self.CharType.NPC
+  end
+  if Params.bStartHiddenMonster then
+    HiddenState = HiddenState | self.CharType.Monster
+  end
+  if Params.bStartHiddenPet then
+    HiddenState = HiddenState | self.CharType.Pet
+  end
+  if HiddenState == (self.CurCharHiddenState or 0) then
+    return
+  end
+  self:SetCharHiddengState(HiddenState)
+  for HiddenButtonType, CharacterType in pairs({
+    [UIConst.PhotoCameraHiddenButton.Role] = self.CharType.Char,
+    [UIConst.PhotoCameraHiddenButton.Player] = self.CharType.Player,
+    [UIConst.PhotoCameraHiddenButton.NPC] = self.CharType.NPC,
+    [UIConst.PhotoCameraHiddenButton.Monster] = self.CharType.Monster,
+    [UIConst.PhotoCameraHiddenButton.Pet] = self.CharType.Pet
+  }) do
+    if self[HiddenButtonType] and self[HiddenButtonType].SetHiddenState then
+      self[HiddenButtonType]:SetHiddenState(0 ~= CharacterType & self.CurCharHiddenState)
+    end
+  end
+  self:UpdateCheckBox()
+end
+
 function M:OnHideBtnClickedImp(HiddenButtonType, CharacterType)
-  if self[HiddenButtonType].bLocked then
+  local HiddenButton = self[HiddenButtonType]
+  if HiddenButton and HiddenButton.bLocked then
     return
   end
   self:SetCharHiddengState(CharacterType ~ self.CurCharHiddenState)
-  self[HiddenButtonType]:SetHiddenState(0 ~= CharacterType & self.CurCharHiddenState)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click", "Camera_HideCharacter", nil)
+  if HiddenButton and HiddenButton.SetHiddenState then
+    HiddenButton:SetHiddenState(0 ~= CharacterType & self.CurCharHiddenState)
+  end
   self:UpdateCheckBox()
 end
 
 function M:SetCharHiddengState(CharHiddenState)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click", "Camera_HideCharacter", nil)
   self.bHasAnyOperation = true
   self:HideChar(CharHiddenState)
   self:HidePlayer(CharHiddenState)
@@ -643,7 +693,6 @@ function M:ResetCamera()
     self["ResetCamera" .. self.CurCameraIndex](self)
   end
   self:ResetFocalLength()
-  self:ResetRollScrollBar()
 end
 
 function M:ResetCamera0()
@@ -738,12 +787,6 @@ function M:ResetFocalLength()
   end
 end
 
-function M:ResetRollScrollBar()
-  if self.RollScrollBar then
-    self.RollScrollBar:Init(self.RollScrollMin, self.RollScrollMax, 10)
-  end
-end
-
 function M:ChangeCamera(CameraIndex)
   self.bHasAnyOperation = true
   AudioManager(self):PlayUISound(self, "event:/ui/common/camera_mode_switch", "Camera_ChangeCamera", nil)
@@ -756,20 +799,18 @@ function M:ChangeCamera(CameraIndex)
     self.Camera:SetActiveCamera(CameraIndex)
     if not self.CameraTrans[CameraIndex + 1] then
       self:ResetCamera()
-      return
     else
       local TransInfo = self.CameraTrans[self.CurCameraIndex + 1]
       self.Camera:SetLocation(TransInfo.Location)
       self.Camera:SetRotation(TransInfo.Rotation)
       local CameraComponent = self.Camera:GetActiveCamera()
       self.FocalLengthSlider:SetSliderValue(CameraComponent.CurrentFocalLength)
-      self.RollScrollBar:SetScrollPercent(self:CalcRollPercent(TransInfo.Rotation.Roll))
     end
   end
 end
 
 function M:Screenshot()
-  if self.bSelfHidden then
+  if self.bSelfHidden or self.Main:GetVisibility() ~= UIConst.VisibilityOp.Visible then
     return
   end
   if not self.IsShotTargetSucceeded and not self.bFindTargetEveryFrame then
@@ -782,9 +823,9 @@ function M:Screenshot()
     if not self.InitParams.IsAprilFoolsDayActivity then
       UIManager(self):ShowUITip("CommonTopTips", string.format(GText("UI_CameraSystem_QuestFinished_Default")))
     end
-    self.Text_FindTarget:SetText(GText("UI_CameraSystem_QuestFinished_Default"))
-    self.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.FindTarget.Text_FindTarget:SetText(GText("UI_CameraSystem_QuestFinished_Default"))
+    self.FindTarget.Panel_FailToast:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.FindTarget.Panel_SuccessToast:SetVisibility(UIConst.VisibilityOp.Visible)
     self.bHasFoundTargets = true
     if self.OnShotTargetSuccess then
       self.OnShotTargetSuccess()
@@ -811,6 +852,7 @@ function M:Screenshot()
   else
     self:SetSceneCaptureComponent(nil)
   end
+  rawset(self, "bScreenshotProcessing", true)
   self:ScreenshotCPP(Width, Height, CacheValue)
 end
 
@@ -822,6 +864,7 @@ function M:BP_OnSceneCapturedTest(RT1, RT2)
 end
 
 function M:BP_OnScreenshotFinished(Image)
+  rawset(self, "bScreenshotProcessing", false)
   if not IsValid(Image) then
     return
   end
@@ -920,7 +963,6 @@ function M:RotateCameraRoll(Roll)
     end
     self.Camera.CurRotation.Roll = self.Camera.DesiredRotation.Roll
     self.Camera:SetRotation(self.Camera.CurRotation)
-    self.RollScrollBar:SetScrollPercentWithAnim(self:CalcRollPercent(self.Camera.DesiredRotation.Roll))
   end
 end
 
@@ -934,64 +976,74 @@ function M:CalcRollPercent(Roll)
 end
 
 function M:SetRollPercent(Percent)
-  self.bHasAnyOperation = true
-  AudioManager(self):PlayUISound(self, "event:/ui/common/camera_scale_change", "Camera_Roll", nil)
-  self:PlayMotorSound("Camera_Motor")
   local DesiredRoll
   if Percent > 0.5 then
     DesiredRoll = self.RollScrollMax * ((Percent - 0.5) / 0.5)
   else
     DesiredRoll = self.RollScrollMin * ((0.5 - Percent) / 0.5)
   end
+  self:SetRoll(DesiredRoll)
+end
+
+function M:SetRoll(DesiredRoll, bNotifyEvent)
+  self.bHasAnyOperation = true
+  AudioManager(self):PlayUISound(self, "event:/ui/common/camera_scale_change", "Camera_Roll", nil)
+  self:PlayMotorSound("Camera_Motor")
   self.Camera.DesiredRotation.Roll = DesiredRoll
   self.Camera:SetRotation(self.Camera.DesiredRotation)
 end
 
-function M:OnRollScrollBarInertialScrollingEnd()
-  self:RoundRoll()
+function M:GetRoll()
+  return self.Camera.DesiredRotation.Roll
 end
 
 function M:RoundRoll()
   self.Camera.DesiredRotation.Roll = math.floor(self.Camera.DesiredRotation.Roll + 0.5)
   self.Camera:SetRotation(self.Camera.DesiredRotation)
-  self.RollScrollBar:SetScrollPercent(self:CalcRollPercent(self.Camera.DesiredRotation.Roll))
 end
 
 function M:CheckHasAnyOperationOrClose()
   self.AudioManager:PlayUISound(self, "event:/ui/common/click_btn_return", "Camera_Close", nil)
   if self.bSelfHidden then
-    self:OnHideUIKeyDown()
-  elseif self.bHasAnyOperation then
-    local function func1()
-    end
-    
-    local function func2()
+    self:ToggleHideSelf()
+  else
+    local bHasCustomizeOperation = self.HasCameraCustomizeExitOperation and self:HasCameraCustomizeExitOperation() == true
+    if self.bHasAnyOperation or bHasCustomizeOperation then
+      local function func1()
+      end
+      
+      local function func2()
+        self:Close()
+      end
+      
+      local Params = {
+        LeftCallbackFunction = func1,
+        CloseBtnCallbackFunction = func1,
+        RightCallbackFunction = func2
+      }
+      local PopupUI = UIManager(self):ShowCommonPopupUI(100087, Params, self)
+      if PopupUI then
+        PopupUI:SetFocus()
+      end
+    else
       self:Close()
     end
-    
-    local Params = {
-      LeftCallbackFunction = func1,
-      CloseBtnCallbackFunction = func1,
-      RightCallbackFunction = func2
-    }
-    UIManager(self):ShowCommonPopupUI(100087, Params, self)
-  else
-    self:Close()
   end
 end
 
 function M:Close()
+  self:BlockAllUIInput(true)
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   for key, value in pairs(self.SoundPaths) do
     self.AudioManager:StopSound(self, key)
   end
-  for _, value in pairs(UIConst.PhotoCameraHiddenButton) do
-    self[value].bLocked = false
-  end
   M.Super.Close(self)
+  self.Main:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
 end
 
 function M:Destruct()
+  self:BlockAllUIInput(false)
+  self:FlushCameraPausedLODMeshes()
   GWorld.GameInstance:SetDynamicResolution("PhotoCameraMain", false)
   self:SetCharHiddengState(0)
   self.Player:SetActorHideTag("CameraScreenshotTick", false)
@@ -1016,9 +1068,13 @@ function M:Destruct()
   if self.InitParams ~= nil or self.InitParams ~= {} then
     self:UISetGamePaused(self.WidgetName or self.ConfigName, false)
   end
-  for _, Character in pairs(self.NeedUpdateLODCharacter) do
-    Character.Mesh:SetForcedLOD(0)
-    DebugPrint("@gulinan Reset force lod to 0: " .. tostring(Character:GetName()))
+  if self.NeedUpdateLODCharacter then
+    for _, Character in pairs(self.NeedUpdateLODCharacter) do
+      if IsValid(Character) and IsValid(Character.Mesh) then
+        Character.Mesh:SetForcedLOD(0)
+        DebugPrint("@gulinan Reset force lod to 0: " .. tostring(Character:GetName()))
+      end
+    end
   end
 end
 
@@ -1074,49 +1130,43 @@ function M:RecoverActorTickableState()
 end
 
 function M:NotifyGamePauseChange(IsGamePause)
-  if IsGamePause and self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 then
-    self.bNeedUpdateLODCharacterOnce = true
+  if IsGamePause then
+    if self.NeedUpdateLODCharacter and #self.NeedUpdateLODCharacter > 0 then
+      self.bNeedUpdateLODCharacterOnce = true
+    end
+  else
+    self:FlushCameraPausedLODMeshes()
   end
   self:UISetGamePaused(self.WidgetName or self.ConfigName, IsGamePause)
 end
 
 function M:SetLockGamePause(bNewLock)
+  rawset(self, "bLockGamePause", bNewLock or false)
   if bNewLock then
-    self.Btn_Pause:RemoveAllBtnEvents()
-    self.Btn_Pause:AddBtnEvent("OnClicked", self, self.OnGamePauseBtnLockedClick)
   else
-    self.Btn_Pause:RemoveBtnEvent("OnClicked", self.OnGamePauseBtnLockedClick)
-    self.Btn_Pause:AddAllBtnEvents()
   end
   local TxtOpacity = bNewLock and 0.7 or 1
-  self.Btn_Pause:SetRenderOpacity(TxtOpacity)
-  self.Text_Pause:SetOpacity(TxtOpacity)
+end
+
+function M:GetLockGamePause()
+  return rawget(self, "bLockGamePause")
 end
 
 function M:SetLockHiddenButton(HiddenButton, bNewLock)
-  if nil == HiddenButton then
+  if nil == HiddenButton or nil == self[HiddenButton] then
     return
   end
   self[HiddenButton]:SetLockState(bNewLock)
   local TxtOpacity = bNewLock and 0.7 or 1
-  self.Btn_AISetting:SetRenderOpacity(TxtOpacity)
-  self.Text_Hide_All:SetOpacity(TxtOpacity)
+  if self.Text_Hide_All then
+    self.Text_Hide_All:SetOpacity(TxtOpacity)
+  end
 end
 
 function M:SetLockAllHiddenButton(bNewLock)
-  for _, value in pairs(UIConst.PhotoCameraHiddenButton) do
-    self:SetLockHiddenButton(value, bNewLock)
-  end
 end
 
 function M:SetLockHiddenAllButton(bNewLock)
-  if bNewLock then
-    self.Btn_AISetting:RemoveAllBtnEvents()
-    self.Btn_AISetting:AddBtnEvent("OnClicked", self, self.OnHiddenAllBtnLockedClick)
-  else
-    self.Btn_AISetting:RemoveBtnEvent("OnClicked", self.OnHiddenAllBtnLockedClick)
-    self.Btn_AISetting:AddAllBtnEvents()
-  end
   self.bAllHiddenButtonLocked = bNewLock
 end
 
@@ -1132,4 +1182,5 @@ function M:OnHiddenAllBtnLockedClick()
   self:PlayAnimation(self.AllHide_Warning)
 end
 
+AssembleComponents(M)
 return M

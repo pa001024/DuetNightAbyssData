@@ -45,14 +45,21 @@ function M:OnBtnReleased()
       EMUIAnimationSubsystem:EMStopAnimation(self, self.Press)
     end
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
+    self:AddTimer(self.Click:GetEndTime(), function()
+      if self.IsUltimateEnabled and self.CurrentUltimateAnim == self.Enable_2 then
+        EMUIAnimationSubsystem:EMPlayAnimation(self, self.Enable_2)
+      end
+    end)
   end
 end
 
 function M:OnWeaponHUDIconLoadFinish(Object)
-  self:WeaponIcon()
   self.ImageMat = self.Image_Main:GetDynamicMaterial()
   if self.ImageMat then
     self.ImageMat:SetTextureParameterValue("Icon_Ranged", Object)
+  end
+  if self.Icon_Skill then
+    self.Icon_Skill:GetDynamicMaterial():SetTextureParameterValue("Mask", nil)
   end
   self:UpdateRangeWeaponButtonByState(self.CurButtonState)
 end
@@ -74,11 +81,66 @@ function M:UpdateRangeWeaponButtonByState(CurButtonState)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   elseif self.CurButtonState == "Normal" then
     self.ImageMat:SetScalarParameterValue("IconState", 2)
-    self:StopAllAnimations()
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    if not self.IsUltimateEnabled then
+      self:StopAllAnimations()
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    end
     self.Image_Main:SetRenderOpacity(1.0)
   elseif self.CurButtonState == "Empty" then
     self.ImageMat:SetScalarParameterValue("IconState", 0)
+  end
+end
+
+function M:OnUltimateIconLoadFinish(Object)
+  if not IsValid(self) or not Object then
+    return
+  end
+  self.IsUltimateIconActive = true
+  self:WeaponIcon()
+  self.ImageMat = self.Image_Main:GetDynamicMaterial()
+  if self.ImageMat then
+    self.ImageMat:SetTextureParameterValue("Icon_Ranged", Object)
+  end
+  if self.Icon_Skill then
+    self.Icon_Skill:GetDynamicMaterial():SetTextureParameterValue("Mask", Object)
+  end
+  self:UpdateRangeWeaponButtonByState(self.CurButtonState)
+end
+
+function M:LoadUltimateIcon(OwnerPlayer)
+  if not OwnerPlayer or not OwnerPlayer.UltraWeapon then
+    return
+  end
+  local WeaponId = OwnerPlayer.UltraWeapon.WeaponId
+  local BattleWeaponConfig = DataMgr.BattleWeapon[WeaponId]
+  if not BattleWeaponConfig or not BattleWeaponConfig.WeaponHUDIcon then
+    return
+  end
+  local IconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/Weapon/T_" .. BattleWeaponConfig.WeaponHUDIcon
+  UE.UResourceLibrary.LoadObjectAsync(self, IconPath, {
+    self,
+    M.OnUltimateIconLoadFinish
+  })
+end
+
+function M:RestoreDefaultIcon()
+  self.IsUltimateIconActive = false
+end
+
+function M:OnUltimateStateChanged(IsActive, IsType1)
+  if IsActive then
+    self.IsUltimateEnabled = true
+    local Anim = IsType1 and self.Enable or self.Enable_2
+    self.CurrentUltimateAnim = Anim
+    if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, Anim) then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, Anim)
+    end
+  elseif self.IsUltimateEnabled then
+    self.IsUltimateEnabled = false
+    local Anim = self.CurrentUltimateAnim or self.Enable_2
+    EMUIAnimationSubsystem:EMStopAnimation(self, Anim)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.EnableEnd)
+    self.CurrentUltimateAnim = nil
   end
 end
 

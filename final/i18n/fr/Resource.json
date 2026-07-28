@@ -1828,6 +1828,19 @@
     "desc": "Pièce commémorative scintillant comme la lumière des étoiles, pouvant être échangée contre diverses récompenses. Parez-vous-en et brillez comme une étoile."
   },
   {
+    "id": 224,
+    "name": "Pièce stellaire",
+    "icon": "T_Resource_ActivityIcon_03",
+    "rarity": 5,
+    "desc": "Pièce commémorative scintillant comme la lumière des étoiles, pouvant être échangée contre diverses récompenses. Parez-vous-en et brillez comme une étoile."
+  },
+  {
+    "id": 225,
+    "name": "Engrenage",
+    "icon": "T_Activity_Autochess_Coin01",
+    "rarity": 5
+  },
+  {
     "id": 301,
     "name": "Avantages de réputation : Givrelac",
     "icon": "T_Fame_0101",
@@ -7330,7 +7343,7 @@
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
     "desc": "Conçu selon les plans de Plume affranchie, ce manche épouse naturellement la main de son porteur — une prise fluide, pensée pour répondre au moindre mouvement.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
   },
   {
     "id": 12156,
@@ -7338,7 +7351,7 @@
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
     "desc": "Forgée selon les plans de Plume affranchie, cette lame ne vit que pour le combat — qu’elle soit légère ou massive, droite ou courbe, son tranchant ne connaît aucune hésitation.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
   {
     "id": 12157,
@@ -7346,7 +7359,7 @@
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
     "desc": "Conçu selon les plans de Sanguis Sanctus – Katana, ce manche a été pensé pour ne faire qu’un avec son porteur — une prise stable, précise et instinctive.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
   },
   {
     "id": 12158,
@@ -7354,7 +7367,7 @@
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
     "desc": "Forgée selon les plans de Sanguis Sanctus – Katana, cette lame existe pour le champ de bataille — qu’elle soit courbe ou droite, légère ou pesante, son éclat n’a qu’un seul but : vaincre.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
   {
     "id": 12159,
@@ -7362,7 +7375,7 @@
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 5,
     "desc": "Assemblé selon les plans de Sanguis Sanctus – Katana, cet ornement incarne pleinement la volonté de son porteur — car seule la puissance peut imposer une telle singularité sur le champ de bataille.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« Qu’y a-t-il de mal à être différent ? Les autres s’échinent à prouver qu’ils sont uniques — moi, je le suis par nature. Né paria, rejeté de Père Ask, je suis devenu le plus étrange ornement de mon clan ! »\n\n— « Les Corvins » Chaos, des Déchus"
   },
   {
     "id": 12160,
@@ -7370,7 +7383,7 @@
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
     "desc": "Assemblé selon les plans du Pacte du crépuscule, ce verrou ne laisse aucun retour possible une fois la détente pressée — comme l’instant précis où une résolution est prise.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
   {
     "id": 12161,
@@ -7378,7 +7391,7 @@
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
     "desc": "Forgé selon les plans du Pacte du crépuscule, ce corps d’acier possède une solidité redoutable. Même à court de munitions, il reste une arme improvisée fiable — lourde, brutale et efficace.",
-    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+    "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
   {
     "id": 12162,
@@ -7387,6 +7400,62 @@
     "rarity": 5,
     "desc": "Conçu selon les plans du Pacte du crépuscule, ce canon déverse les balles dans une rafale brûlante — et à chaque tir, le métal comme le cœur du combattant s’embrasent ensemble.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12163,
+    "name": "Sanguis Sanctus – Pistolet : Verrou",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Assemblé selon les plans du Sanguis Sanctus – Pistolet, ce verrou ne laisse aucun retour possible une fois la détente pressée — comme l’instant précis où une résolution est prise.",
+    "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
+  },
+  {
+    "id": 12164,
+    "name": "Sanguis Sanctus – Pistolet : Armature",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Forgé selon les plans du Sanguis Sanctus – Pistolet, ce corps d’acier possède une solidité redoutable. Même à court de munitions, il reste une arme improvisée fiable — lourde, brutale et efficace.",
+    "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
+  },
+  {
+    "id": 12165,
+    "name": "Sanguis Sanctus – Pistolet : Canon",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Conçu selon les plans du Sanguis Sanctus – Pistolet, ce canon déverse les balles dans une rafale brûlante — et à chaque tir, le métal comme le cœur du combattant s’embrasent ensemble.",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12166,
+    "name": "Le plus beau jour : Armature",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Forgé selon les plans du plus beau jour, ce corps d’acier possède une solidité redoutable. Même à court de munitions, il reste une arme improvisée fiable — lourde, brutale et efficace.",
+    "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
+  },
+  {
+    "id": 12167,
+    "name": "Le plus beau jour : Canon",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Conçu selon les plans du plus beau jour, ce canon déverse les balles dans une rafale brûlante — et à chaque tir, le métal comme le cœur du combattant s’embrasent ensemble.",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12168,
+    "name": "Faucheuse d’obsidienne : Poignée",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Conçue selon les plans de la Faucheuse d’obsidienne, cette poignée assure une prise ferme et naturelle — pensée pour offrir un contrôle absolu à son porteur.",
+    "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
+  },
+  {
+    "id": 12169,
+    "name": "Faucheuse d’obsidienne : Lame",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Forgée selon les plans de la Faucheuse d’obsidienne, cette lame est née pour faucher ses ennemis — qu’elle soit légère ou massive, droite ou courbe, rien ne résiste à son tranchant.",
+    "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
   {
     "id": 15001,
@@ -7431,7 +7500,7 @@
   {
     "id": 15006,
     "name": "Prototype : Braise souveraine",
-    "icon": "T_Range_Weapon_Part02",
+    "icon": "T_Weapon_Claymore_Zaie",
     "rarity": 5,
     "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
@@ -7633,7 +7702,7 @@
     "name": "Cristal Hydro",
     "icon": "T_Resource_Zaie_Ice",
     "rarity": 4,
-    "desc": "Cristal imprégné de magie Hydro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal imprégné de magie Hydro. Obtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
   },
   {
@@ -7641,7 +7710,7 @@
     "name": "Cristal Pyro",
     "icon": "T_Resource_Zaie_Fire",
     "rarity": 4,
-    "desc": "Cristal imprégné de magie Pyro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal imprégné de magie Pyro. Obtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
   },
   {
@@ -7649,7 +7718,7 @@
     "name": "Cristal Anémo",
     "icon": "T_Resource_Zaie_Wind",
     "rarity": 4,
-    "desc": "Cristal imprégné de magie Anémo. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal imprégné de magie Anémo. Obtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
   },
   {
@@ -7657,7 +7726,7 @@
     "name": "Cristal Électro",
     "icon": "T_Resource_Zaie_Lighting",
     "rarity": 4,
-    "desc": "Cristal imprégné de magie Électro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal imprégné de magie Électro. Obtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
   },
   {
@@ -7665,7 +7734,7 @@
     "name": "Cristal Lumino",
     "icon": "T_Resource_Zaie_Light",
     "rarity": 4,
-    "desc": "Cristal imprégné de magie Lumino. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal imprégné de magie Lumino. Obtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
   },
   {
@@ -7673,7 +7742,7 @@
     "name": "Cristal Umbro",
     "icon": "T_Resource_Zaie_Dark",
     "rarity": 4,
-    "desc": "Cristal imprégné de magie Umbro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal imprégné de magie Umbro. Obtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
   },
   {
@@ -7681,7 +7750,7 @@
     "name": "Cristal radieux",
     "icon": "T_Resource_Zaie_Rainbow",
     "rarity": 5,
-    "desc": "Cristal aux reflets chatoyants. Dans ses facettes se laisse entrevoir toute la splendeur du continent d’Atlasia, saturé de la puissante énergie de tous les attributs élémentaires.\nObtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc": "Cristal aux reflets chatoyants. Dans ses facettes se laisse entrevoir toute la splendeur du continent d’Atlasia, saturé de la puissante énergie de tous les attributs élémentaires.\nObtenu lors des Missions abyssales. Peut servir à la fusion des Armes de calamité.",
     "desc2": "La Mère Embla pleure. Son enfant, meurtri de la tête aux pieds, rampe dans les flammes ardentes de la fournaise et implore son pardon.\nElle veut reprendre la joie et la miséricorde jadis offertes, retirer toutes les bénédictions qui furent autrefois des grâces.\nCar le mal qu’il a commis ne saurait être absous, et les péchés qu’il porte ne peuvent être pardonnés.\nLa Mère Embla laissa tomber une larme ; glissant le long de sa joue, elle se changea en un cristal précieux.\n \n— Légende tribale d’Askard"
   },
   {
@@ -7689,8 +7758,24 @@
     "name": "Compas abyssal Niv. %s",
     "icon": "T_Resource_Coin_Zaie",
     "rarity": 5,
-    "desc": "Suivez les traces de la calamité, cherchez le pouvoir capable de renverser le monde, et laissez le compas vous guider vers l’avant.\nPermet d’entrer en Expédition abyssale.",
+    "desc": "Suivez les traces de la calamité, cherchez le pouvoir capable de renverser le monde, et laissez le compas vous guider vers l’avant.\nPermet d’accéder aux Missions abyssales.",
     "desc2": "Celui qui s’est lancé à la poursuite de la calamité ne peut déjà plus revenir en arrière. Depuis que cette voix séduisante s’est mise à résonner dans son esprit, ses actes sont peu à peu guidés par elle à son insu. Il ne lui reste plus qu’à avancer à tâtons dans les ténèbres.\n \n— <I>Le Mystère du Fourneau de calamité</>, roman d’aventure"
+  },
+  {
+    "id": 15039,
+    "name": "Larme d’Embla : Expédition",
+    "icon": "T_Resource_Zaie_02",
+    "rarity": 5,
+    "desc": "Obtenu en recyclant un Compas abyssal ayant atteint un niveau spécifique. Permet d’échanger des objets dans la Boutique de la Calamité.",
+    "desc2": "Il avançait en tâtonnant le long d’une paroi rocheuse aux aspérités tranchantes. Ses mains étaient lacérées, couvertes de sang, mais il ne s’arrêtait pas. Sa respiration devenait de plus en plus lourde, ses jambes de plus en plus engourdies. Il avait le pressentiment qu’un seul faux pas suffirait à le précipiter dans sa chute et à sceller son destin.\nPuis il aperçut une lueur vacillante... si ténue qu’il crut d’abord à une illusion.\n« Qu’est-ce que... Suis-je déjà mort ? » murmura-t-il.\nPourtant, son instinct le poussa à suivre cette lumière.\n \n— <I>Le Mystère du Fourneau de calamité</>, roman d’aventure"
+  },
+  {
+    "id": 15040,
+    "name": "Larme d’Embla : Défense",
+    "icon": "T_Resource_Zaie_04",
+    "rarity": 5,
+    "desc": "Obtenu en recyclant un Compas abyssal ayant atteint un niveau spécifique. Permet d’échanger des objets dans la Boutique de la Calamité.",
+    "desc2": "Il avançait en tâtonnant le long d’une paroi rocheuse aux aspérités tranchantes. Ses mains étaient lacérées, couvertes de sang, mais il ne s’arrêtait pas. Sa respiration devenait de plus en plus lourde, ses jambes de plus en plus engourdies. Il avait le pressentiment qu’un seul faux pas suffirait à le précipiter dans sa chute et à sceller son destin.\nPuis il aperçut une lueur vacillante... si ténue qu’il crut d’abord à une illusion.\n« Qu’est-ce que... Suis-je déjà mort ? » murmura-t-il.\nPourtant, son instinct le poussa à suivre cette lumière.\n \n— <I>Le Mystère du Fourneau de calamité</>, roman d’aventure"
   },
   {
     "id": 19000,
@@ -11941,10 +12026,10 @@
   },
   {
     "id": 41060,
-    "name": "RESOURCE_NAME_41060",
+    "name": "Danse tic-tac",
     "icon": "T_Resource_Gesture_Dida",
     "rarity": 5,
-    "desc": "RESOURCE_DESC_41060"
+    "desc": "Laissez-vous porter par la danse."
   },
   {
     "id": 41061,
@@ -11968,6 +12053,41 @@
     "desc": "Les prières n’apportent aucun pardon. Seule la destruction mène à la rédemption."
   },
   {
+    "id": 41064,
+    "name": "Sérénade des premières neiges – Bleu céleste",
+    "icon": "T_Resource_Gesture_Eve01",
+    "rarity": 6,
+    "desc": "De minuscules flocons tombent dans les rêves d’une jeune fille et jouent avec elle une somptueuse sérénade nocturne."
+  },
+  {
+    "id": 41065,
+    "name": "Cœur de cristal",
+    "icon": "T_Resource_Gesture_Liuli",
+    "rarity": 5,
+    "desc": "Figé pour l’éternité à l’instant de son éclosion."
+  },
+  {
+    "id": 41066,
+    "name": "RESOURCE_NAME_41066",
+    "icon": "T_Resource_Gesture_Liuli",
+    "rarity": 5,
+    "desc": "RESOURCE_DESC_41066"
+  },
+  {
+    "id": 41067,
+    "name": "Sérénade des premières neiges – Doré",
+    "icon": "T_Resource_Gesture_Eve02",
+    "rarity": 6,
+    "desc": "De minuscules flocons tombent dans les rêves d’une jeune fille et jouent avec elle une somptueuse sérénade nocturne."
+  },
+  {
+    "id": 41068,
+    "name": "Sérénade des premières neiges – Blanc sakura",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "De minuscules flocons tombent dans les rêves d’une jeune fille et jouent avec elle une somptueuse sérénade nocturne."
+  },
+  {
     "id": 42001,
     "name": "Nexus mécanique : Fléau des Souillures",
     "icon": "T_Icon_CentralSquare_Equip01",
@@ -11982,6 +12102,34 @@
     "rarity": 4,
     "desc": "Un dispositif mécanique quadrangulaire d’une conception aussi complexe que raffinée, forgé selon des techniques perdues de la Secte Jishu.\nSon cœur énergétique libère une puissante aspiration capable de dissiper les désastres de la Poussière-corrompue engendrés par le Fléau de Zhuyin.",
     "desc2": "« Taixu naquit aux origines du chaos primordial, sans forme ni couleur, emplissant les six directions de toute chose. Lorsque le Fléau de Zhuyin le souilla, ses impuretés se figèrent et s’abattirent, donnant naissance à la Poussière-corrompue...\nComment ? Tu voudrais que je passe les principes et que j’aille directement au mode d’emploi ? Quelle impatience... vraiment, la jeunesse manque de constance. »\n\n— Maître Gongshang, mécanicien de la Secte Jishu"
+  },
+  {
+    "id": 49985,
+    "name": "RESOURCE_NAME_49985",
+    "icon": "T_Mounts_Gesture_0701",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_49985"
+  },
+  {
+    "id": 49986,
+    "name": "RESOURCE_NAME_49986",
+    "icon": "T_Mounts_Gesture_0701",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_49986"
+  },
+  {
+    "id": 49987,
+    "name": "Chevalier aux lames d’argent – Bleu céleste",
+    "icon": "T_Mounts_Gesture_09",
+    "rarity": 5,
+    "desc": "Même l’immortel finit par se perdre, comme des larmes dans la pluie."
+  },
+  {
+    "id": 49988,
+    "name": "Bi’an obscur mécanisé – Bleu céleste",
+    "icon": "T_Mounts_Gesture_08",
+    "rarity": 4,
+    "desc": "Monture mécanisée développée par Maître Gongshang, reproduisant fidèlement un Bi’an obscur. Le chevaucher à toute allure dans Port-des-Brumes ne manquera pas de laisser les passants bouche bée."
   },
   {
     "id": 49989,
@@ -12277,8 +12425,7 @@
     "id": 110038,
     "name": "Portrait : Mademoiselle Rossignol – Ombre feuillue",
     "icon": "T_Head_Other0014",
-    "rarity": 4,
-    "pack": 114100
+    "rarity": 1
   },
   {
     "id": 110039,
@@ -12421,6 +12568,29 @@
     "select": 4005
   },
   {
+    "id": 110059,
+    "name": "Coffret de sélection de cristaux II",
+    "icon": "T_Pack_ZaieRes01",
+    "rarity": 5,
+    "desc": "Après utilisation, permet de choisir un matériau parmi Cristal Lumino, Cristal Hydro et Cristal Umbro.",
+    "select": 4006
+  },
+  {
+    "id": 110060,
+    "name": "Coffret de sélection d’apparence – Horizon",
+    "icon": "T_Pack_Common05_01",
+    "rarity": 5,
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Flora, Dame Nifle, Su Yi, Rebecca, Fushu, Lynn, Vulcera, Margie, Rhythm, Zhiliu, Psyche ou Daphne.",
+    "select": 5009
+  },
+  {
+    "id": 110061,
+    "name": "Coffre de Sceau démoniaque — Pactisant",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5,
+    "select": 350025
+  },
+  {
     "id": 120001,
     "name": "Bon d’Héritage paternel",
     "icon": "T_Resource_DiscountTicket_01",
@@ -12447,6 +12617,13 @@
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
+  },
+  {
+    "id": 120005,
+    "name": "Bon d’accessoires du Paradis",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Réduction de 240 Gemmes de Phoxène pour tout achat d’au moins 300 Gemmes de Phoxène"
   },
   {
     "id": 1001101,
@@ -12538,8 +12715,8 @@
   },
   {
     "id": 1002102,
-    "name": "Fragment de pensée : Eve",
-    "icon": "T_Resource_Root_Star5",
+    "name": "Fragment de pensée : Ada (?)",
+    "icon": "T_CharPiece_Eve",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -12580,6 +12757,14 @@
     "id": 1003103,
     "name": "Fragment de pensée : Yale et Oliver",
     "icon": "T_CharPiece_Yeer",
+    "rarity": 5,
+    "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1003104,
+    "name": "Fragment de pensée : Falsi",
+    "icon": "T_CharPiece_Falu",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -12681,6 +12866,14 @@
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
   },
   {
+    "id": 1005402,
+    "name": "RESOURCE_NAME_1005402",
+    "icon": "T_CharPiece_Dafu",
+    "rarity": 5,
+    "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
     "id": 1011101,
     "name": "Emblème : Berenica",
     "icon": "T_Phantom_Heitao",
@@ -12770,8 +12963,8 @@
   },
   {
     "id": 1012102,
-    "name": "Emblème : Eve",
-    "icon": "T_Phantom_Shuimu",
+    "name": "Emblème : Ada (?)",
+    "icon": "T_Phantom_Eve",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
@@ -12812,6 +13005,14 @@
     "id": 1013103,
     "name": "Emblème : Yale et Oliver",
     "icon": "T_Phantom_Yeer",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
+    "id": 1013104,
+    "name": "Emblème : Falsi",
+    "icon": "T_Phantom_Falu",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
@@ -12907,6 +13108,14 @@
   {
     "id": 1015401,
     "name": "Emblème : Daphne",
+    "icon": "T_Phantom_Dafu",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
+    "id": 1015402,
+    "name": "RESOURCE_NAME_1015402",
     "icon": "T_Phantom_Dafu",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
@@ -13755,7 +13964,7 @@
     "icon": "T_Read_02",
     "rarity": 3,
     "desc": "Un parchemin portant en son centre l’emblème des Déchus. Il a été froissé à la hâte puis jeté dans les égouts. Au bas de la page, une fine ligne griffonnée :\n« Que la vengeance éclaire notre route. »",
-    "desc2": "Citoyens Charons de Givrelac — peut-être avez-vous déjà oublié...\n\nLes bouchers et les menteurs de l’Empire Hyperboréen se sont emparés de la cité-État bâtie par nos ancêtres. Un peuple autrefois fier a été réduit à l’obéissance hébétée.\n\nIls nous ont ôté la vue, pour que jamais nous ne puissions retrouver les vérités que l’Empire a enfouies.\nIls nous ont arraché la voix, pour que nos cris de défi ne résonnent plus contre Hyperborea.\nIls nous ont brisé les crocs, pour nous forcer à genoux — à mâcher les miettes que les Solariens daignent \"offrir\".\n\nEt ensuite, avec l’arrogance des vainqueurs, ils ont peint cette violence aux couleurs de la stabilité, de la prospérité — érigeant une stèle sanglante sur les ossements des Charons.\n\nIl est temps d’ouvrir les yeux, mes frères et sœurs !\nLa soumission n’apporte pas la paix : seul le sang refonde l’ordre.\nN’étouffez plus votre colère. Ne compromettez plus votre dignité !\n\nQue les Solariens ressentent notre souffrance. Alors seulement nous pourrons reconquérir ce qui appartient à notre peuple : le bonheur, la fierté... l’avenir.",
+    "desc2": "Citoyens Charons de Givrelac — peut-être avez-vous déjà oublié...\n\nLes bouchers et les menteurs de l’Empire Hyperboréen se sont emparés de la cité-État bâtie par nos ancêtres. Un peuple autrefois fier a été réduit à l’obéissance hébétée.\n\nIls nous ont ôté la vue, pour que jamais nous ne puissions retrouver les vérités que l’Empire a enfouies.\nIls nous ont arraché la voix, pour que nos cris de défi ne résonnent plus contre Hyperborea.\nIls nous ont brisé les crocs, pour nous forcer à genoux — à mâcher les miettes que les Solariens daignent « offrir ».\n\nEt ensuite, avec l’arrogance des vainqueurs, ils ont peint cette violence aux couleurs de la stabilité, de la prospérité — érigeant une stèle sanglante sur les ossements des Charons.\n\nIl est temps d’ouvrir les yeux, mes frères et sœurs !\nLa soumission n’apporte pas la paix : seul le sang refonde l’ordre.\nN’étouffez plus votre colère. Ne compromettez plus votre dignité !\n\nQue les Solariens ressentent notre souffrance. Alors seulement nous pourrons reconquérir ce qui appartient à notre peuple : le bonheur, la fierté... l’avenir.",
     "source": [
       {
         "srId": 101701,
@@ -13798,7 +14007,7 @@
     "icon": "T_Read_01",
     "rarity": 3,
     "desc": "Une transcription manuscrite réalisée par Rhythm, décrivant une rixe survenue en pleine représentation au Théâtre Galea, il y a deux ans.",
-    "desc2": "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de <I>Né du blizzard</> sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\nJ’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt...\""
+    "desc2": "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de <I>Né du blizzard</> sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\n« J’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt... »"
   },
   {
     "id": 2000050,
@@ -14288,7 +14497,7 @@
     "icon": "T_Read_East01",
     "rarity": 3,
     "desc": "Un ouvrage délabré, couvert de ratures. L’auteur y a consigné de nombreux exemples visant à enseigner comment prendre l’ascendant dans une discussion. Abandonné ici, on ignore par qui.",
-    "desc2": "À Huaxu, l’usage excessif de la violence est proscrit. Mais chacun sait que les mots, eux aussi, peuvent blesser sans laisser de trace.\nC’est pourquoi, au fil de mes voyages à travers Huaxu, j’ai consacré plusieurs années à observer les échanges humains, pour en distiller l’essence en quatre principes fondamentaux : la Joie, la Référence, la Piété et l’Urgence.\nQuiconque les maîtrise pourra s’imposer sans jamais faillir dans toute interaction sociale.\nPermettez-moi d’illustrer cela par quelques exemples. Commençons par l’usage de la \"Joie\"...\n(Le reste de l’ouvrage a été lourdement rayé à l’encre. En refermant le livre, vous découvrez, inscrit en grandes lettres sur la couverture arrière, un unique caractère : « Référence ».)",
+    "desc2": "À Huaxu, l’usage excessif de la violence est proscrit. Mais chacun sait que les mots, eux aussi, peuvent blesser sans laisser de trace.\nC’est pourquoi, au fil de mes voyages à travers Huaxu, j’ai consacré plusieurs années à observer les échanges humains, pour en distiller l’essence en quatre principes fondamentaux : la Joie, la Référence, la Piété et l’Urgence.\nQuiconque les maîtrise pourra s’imposer sans jamais faillir dans toute interaction sociale.\nPermettez-moi d’illustrer cela par quelques exemples. Commençons par l’usage de la « Joie »...\n(Le reste de l’ouvrage a été lourdement rayé à l’encre. En refermant le livre, vous découvrez, inscrit en grandes lettres sur la couverture arrière, un unique caractère : « Référence ».)",
     "source": [
       {
         "srId": 104103,
@@ -14725,7 +14934,7 @@
     "icon": "T_Read_01",
     "rarity": 3,
     "desc": "Un carnet abandonné dans la Fosse de Glevum. À en juger par le style, il aurait appartenu à un érudit.",
-    "desc2": "Journal de l’alchimiste – I\n\n(Un carnet abandonné dans la Fosse de Glevum. À en juger par le style, il aurait appartenu à un érudit.)\n...\n16 avril\nNous avons découvert dans cette fosse abandonnée un étrange <H>amas de cristaux jaunes</>.\nÀ en juger par leur texture, ce ne sont ni les Éclats stellaires qu’on dit enfouis au plus profond des montagnes, ni le Phoxène laissé jadis dans la Fosse, mais bien un minéral encore inconnu.\n...\n18 avril\nBob a eu la surprise de constater que ces cristaux jaunes, qui émettaient une faible lueur, avaient <H>grossi</>. Ils sont passés de la taille d’une paume à celle d’un petit buisson cristallin.\n...\n20 avril\n... Les amas ont encore \"poussé\" et se sont changés en piques acérés, bouchant les galeries comme s’ils étaient vivants. Heureusement, ces cristaux jaunes sont friables : un peu de <H>poudre explosive</> suffit à les faire sauter.\n\nBob a avancé une hypothèse : ces cristaux ne seraient pas des minéraux, mais une sorte de <H>sécrétion de Souillés</>, voire une \"forme secondaire\" de ces créatures. Avec le temps, ils gonfleraient comme des éponges trempées d’eau. Bien que Bob s’y connaisse en biologie des Souillés, cela reste une supposition audacieuse.\n...\n21 avril\nPour vérifier cette théorie, nous avons décidé d’explorer plus profondément les galeries. Si Bob a raison, il doit exister dans cette fosse abandonnée un Souillé <H>Progéniteur</> unique, différent de ceux que l’on croise à l’extérieur...\n...",
+    "desc2": "Journal de l’alchimiste – I\n\n(Un carnet abandonné dans la Fosse de Glevum. À en juger par le style, il aurait appartenu à un érudit.)\n...\n16 avril\nNous avons découvert dans cette fosse abandonnée un étrange <H>amas de cristaux jaunes</>.\nÀ en juger par leur texture, ce ne sont ni les Éclats stellaires qu’on dit enfouis au plus profond des montagnes, ni le Phoxène laissé jadis dans la Fosse, mais bien un minéral encore inconnu.\n...\n18 avril\nBob a eu la surprise de constater que ces cristaux jaunes, qui émettaient une faible lueur, avaient <H>grossi</>. Ils sont passés de la taille d’une paume à celle d’un petit buisson cristallin.\n...\n20 avril\n... Les amas ont encore « poussé » et se sont changés en piques acérés, bouchant les galeries comme s’ils étaient vivants. Heureusement, ces cristaux jaunes sont friables : un peu de <H>poudre explosive</> suffit à les faire sauter.\n\nBob a avancé une hypothèse : ces cristaux ne seraient pas des minéraux, mais une sorte de <H>sécrétion de Souillés</>, voire une « forme secondaire » de ces créatures. Avec le temps, ils gonfleraient comme des éponges trempées d’eau. Bien que Bob s’y connaisse en biologie des Souillés, cela reste une supposition audacieuse.\n...\n21 avril\nPour vérifier cette théorie, nous avons décidé d’explorer plus profondément les galeries. Si Bob a raison, il doit exister dans cette fosse abandonnée un Souillé <H>Progéniteur</> unique, différent de ceux que l’on croise à l’extérieur...\n...",
     "source": [
       {
         "srId": 101301,
@@ -14744,7 +14953,7 @@
     "icon": "T_Read_01",
     "rarity": 3,
     "desc": "Un carnet abandonné au fond de la Fosse de Glevum, taché de rouge sombre. L’écriture est la même que celle du journal précédent. La dernière partie est extrêmement brouillonne, griffonnée à la hâte.",
-    "desc2": "Journal de l’alchimiste – II\n\n(Un carnet abandonné au fond de la Fosse de Glevum, taché de rouge sombre. L’écriture est la même que celle du journal précédent. La dernière partie est extrêmement brouillonne, griffonnée à la hâte.)\n...\n23 avril\nComme Bob l’avait prévu, nous avons découvert, dans les profondeurs, nous avons trouvé l’ancien \"territoire interdit\" de la Fosse de Glevum... ainsi que cette créature.\nIl mesure plus de vingt mètres de long, le plus grand Souillé que j’aie jamais rencontré. Il ressemble à un squelette, et des cristaux jaunes ne cessent de croître aux extrémités de ses membres. Nous pouvons en être certains : c’est bien le Souillé \"Progéniteur\" à l’origine de tous les cristaux jaunes que nous avons vus jusqu’ici.\nNous avons décidé de rester tapis pour observer son comportement.\n...\n26 avril\nComparée aux autres Souillés errants, cette créature présente, en plus de sa taille gigantesque, une singularité manifeste : il semble fasciné par les <H>minéraux luminescents</>.\nIl erre souvent dans les galeries abandonnées, répétant inlassablement le même geste de fouille. Chaque fois qu’il déterre un minerai brillant, comme des fragments de Phoxène laissés dans la fosse ou des éclats d’Argentite provenant des montagnes, de nouveaux cristaux jaunes se développent au bout de ses membres pour englober ces pierres lumineuses.\n\nBob est fasciné par cette habitude. Son excavation, sa collecte et l’enrobage de ces minéraux luminescents ne relèvent pas d’une simple attirance pour la lumière, toute cette séquence ressemble bien davantage à un comportement conscient.\nLes Souillés pourraient-ils conserver une forme de conscience, proche de celle des humains ?\n\nSi cette hypothèse venait à être confirmée, elle bouleverserait de fond en comble les fondements actuels de la biologie des Souillés.\n...\n27 avril\nNous avons commis une erreur fatale.\nPour tester davantage ses réactions, Bob a voulu lui voler une partie de ses \"trésors\" et observer ce qui se passerait.\nMais nous avons terriblement sous-estimé sa vitesse. La créature a bondi sur nous avec une rapidité inouïe, bien décidée à réduire ces intrus importuns en lambeaux.\n\nBob m’a offert une chance de fuir son antre... mais je sais trop bien que mes blessures sont mortelles. Je n’en ressortirai jamais vivante.\nSi quelqu’un retrouve ce journal, je vous en conjure : portez-le aux Spathatoi à Dismania.\nL’étude de ce Souillé que nous avons baptisé le « Cristallophage » pourrait marquer un tournant décisif dans la compréhension de ces créatures.\n\nLa connaissance ne doit pas être enterrée avec nous dans cette fosse.\n\nAlchimiste Ines Morley",
+    "desc2": "Journal de l’alchimiste – II\n\n(Un carnet abandonné au fond de la Fosse de Glevum, taché de rouge sombre. L’écriture est la même que celle du journal précédent. La dernière partie est extrêmement brouillonne, griffonnée à la hâte.)\n...\n23 avril\nComme Bob l’avait prévu, nous avons découvert, dans les profondeurs, nous avons trouvé l’ancien « territoire interdit » de la Fosse de Glevum... ainsi que cette créature.\nIl mesure plus de vingt mètres de long, le plus grand Souillé que j’aie jamais rencontré. Il ressemble à un squelette, et des cristaux jaunes ne cessent de croître aux extrémités de ses membres. Nous pouvons en être certains : c’est bien le Souillé « Progéniteur » à l’origine de tous les cristaux jaunes que nous avons vus jusqu’ici.\nNous avons décidé de rester tapis pour observer son comportement.\n...\n26 avril\nComparée aux autres Souillés errants, cette créature présente, en plus de sa taille gigantesque, une singularité manifeste : il semble fasciné par les <H>minéraux luminescents</>.\nIl erre souvent dans les galeries abandonnées, répétant inlassablement le même geste de fouille. Chaque fois qu’il déterre un minerai brillant, comme des fragments de Phoxène laissés dans la fosse ou des éclats d’Argentite provenant des montagnes, de nouveaux cristaux jaunes se développent au bout de ses membres pour englober ces pierres lumineuses.\n\nBob est fasciné par cette habitude. Son excavation, sa collecte et l’enrobage de ces minéraux luminescents ne relèvent pas d’une simple attirance pour la lumière, toute cette séquence ressemble bien davantage à un comportement conscient.\nLes Souillés pourraient-ils conserver une forme de conscience, proche de celle des humains ?\n\nSi cette hypothèse venait à être confirmée, elle bouleverserait de fond en comble les fondements actuels de la biologie des Souillés.\n...\n27 avril\nNous avons commis une erreur fatale.\nPour tester davantage ses réactions, Bob a voulu lui voler une partie de ses « trésors » et observer ce qui se passerait.\nMais nous avons terriblement sous-estimé sa vitesse. La créature a bondi sur nous avec une rapidité inouïe, bien décidée à réduire ces intrus importuns en lambeaux.\n\nBob m’a offert une chance de fuir son antre... mais je sais trop bien que mes blessures sont mortelles. Je n’en ressortirai jamais vivante.\nSi quelqu’un retrouve ce journal, je vous en conjure : portez-le aux Spathatoi à Dismania.\nL’étude de ce Souillé que nous avons baptisé le « Cristallophage » pourrait marquer un tournant décisif dans la compréhension de ces créatures.\n\nLa connaissance ne doit pas être enterrée avec nous dans cette fosse.\n\nAlchimiste Ines Morley",
     "source": [
       {
         "srId": 101304,
@@ -20434,7 +20643,7 @@
     "icon": "T_Fish_Sea_Normal_2",
     "rarity": 2,
     "desc": "Présente dans les eaux les plus limpides, cette espèce se distingue par l’éclat de ses couleurs et la rangée d’épines lumineuses qui lui parcourt le dos. Méfiante au moindre mouvement, elle exige davantage de patience que de réflexes : tirer trop tôt, c’est la laisser filer.",
-    "desc2": "Autrefois, ses couleurs vives et ses épines dorsales avaient fait croire aux pêcheurs qu’il était venimeux. On le faisait sécher pour en vendre des spécimens décoratifs... jusqu’au jour où un \"courageux\", ou peut-être un inconscient, osa y goûter. Depuis, l’Épine prismatique a conquis les tables — et ses épines éclatantes ont rejoint la longue liste des déchets impossibles à recycler.\n\n— <I>Réfractions</>, par Fiama"
+    "desc2": "Autrefois, ses couleurs vives et ses épines dorsales avaient fait croire aux pêcheurs qu’il était venimeux. On le faisait sécher pour en vendre des spécimens décoratifs... jusqu’au jour où un « courageux », ou peut-être un inconscient, osa y goûter. Depuis, l’Épine prismatique a conquis les tables — et ses épines éclatantes ont rejoint la longue liste des déchets impossibles à recycler.\n\n— <I>Réfractions</>, par Fiama"
   },
   {
     "id": 5011021,
@@ -20442,7 +20651,7 @@
     "icon": "T_Fish_Sea_Normal_2_1",
     "rarity": 2,
     "desc": "Présente dans les eaux les plus limpides, cette espèce se distingue par l’éclat de ses couleurs et la rangée d’épines lumineuses qui lui parcourt le dos. Méfiante au moindre mouvement, elle exige davantage de patience que de réflexes : tirer trop tôt, c’est la laisser filer.",
-    "desc2": "Autrefois, ses couleurs vives et ses épines dorsales avaient fait croire aux pêcheurs qu’il était venimeux. On le faisait sécher pour en vendre des spécimens décoratifs... jusqu’au jour où un \"courageux\", ou peut-être un inconscient, osa y goûter. Depuis, l’Épine prismatique a conquis les tables — et ses épines éclatantes ont rejoint la longue liste des déchets impossibles à recycler.\n\n— <I>Réfractions</>, par Fiama"
+    "desc2": "Autrefois, ses couleurs vives et ses épines dorsales avaient fait croire aux pêcheurs qu’il était venimeux. On le faisait sécher pour en vendre des spécimens décoratifs... jusqu’au jour où un « courageux », ou peut-être un inconscient, osa y goûter. Depuis, l’Épine prismatique a conquis les tables — et ses épines éclatantes ont rejoint la longue liste des déchets impossibles à recycler.\n\n— <I>Réfractions</>, par Fiama"
   },
   {
     "id": 5011030,
@@ -20722,7 +20931,7 @@
     "icon": "T_Fish_FreshWater_IceLake_3",
     "rarity": 3,
     "desc": "Son corps évoque le Phoxène, jusque dans sa texture étonnamment dure. Chaque individu varie légèrement, mais tous partagent le même défaut : une chair presque immangeable, sauf en cas de véritable famine.",
-    "desc2": "Si la douleur devient insupportable, attrapez une Phoxénotruite. Faites-la bouillir — inutile d’espérer un meilleur goût — puis croquez-y à pleines dents. Votre dent malade se détachera d’elle-même.\n\n— Remède de grand-mère de Givrelac (version \"douleur garantie\")"
+    "desc2": "Si la douleur devient insupportable, attrapez une Phoxénotruite. Faites-la bouillir — inutile d’espérer un meilleur goût — puis croquez-y à pleines dents. Votre dent malade se détachera d’elle-même.\n\n— Remède de grand-mère de Givrelac (version « douleur garantie »)"
   },
   {
     "id": 5023011,
@@ -20730,23 +20939,23 @@
     "icon": "T_Fish_FreshWater_IceLake_3_1",
     "rarity": 3,
     "desc": "Son corps évoque le Phoxène, jusque dans sa texture étonnamment dure. Chaque individu varie légèrement, mais tous partagent le même défaut : une chair presque immangeable, sauf en cas de véritable famine.",
-    "desc2": "Si la douleur devient insupportable, attrapez une Phoxénotruite. Faites-la bouillir — inutile d’espérer un meilleur goût — puis croquez-y à pleines dents. Votre dent malade se détachera d’elle-même.\n\n— Remède de grand-mère de Givrelac (version \"douleur garantie\")"
+    "desc2": "Si la douleur devient insupportable, attrapez une Phoxénotruite. Faites-la bouillir — inutile d’espérer un meilleur goût — puis croquez-y à pleines dents. Votre dent malade se détachera d’elle-même.\n\n— Remède de grand-mère de Givrelac (version « douleur garantie »)"
   },
   {
     "id": 5023020,
     "name": "Dame du Lac",
     "icon": "T_Fish_FreshWater_IceLake_2",
     "rarity": 3,
-    "desc": "Ce poisson aux couleurs chatoyantes se déplace comme un ruban de soie porté par le courant. Ses nageoires translucides flottent autour d’elle telles des voiles. Malgré sa grâce, un seul \"baiser\" empoisonné peut terrasser une proie massive — mais jamais un humain.",
-    "desc2": "La Dame du Lac est bien plus dangereuse que sa grâce ne le laisse croire. Même en chasse, sa silhouette reste souveraine. Un simple \"baiser\", et une proie trois fois plus lourde s’effondre. Curieusement, jamais elle n’a porté atteinte à un humain, allant même jusqu’à partager ses prises avec les pêcheurs.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>"
+    "desc": "Ce poisson aux couleurs chatoyantes se déplace comme un ruban de soie porté par le courant. Ses nageoires translucides flottent autour d’elle telles des voiles. Malgré sa grâce, un seul « baiser » empoisonné peut terrasser une proie massive — mais jamais un humain.",
+    "desc2": "La Dame du Lac est bien plus dangereuse que sa grâce ne le laisse croire. Même en chasse, sa silhouette reste souveraine. Un simple « baiser », et une proie trois fois plus lourde s’effondre. Curieusement, jamais elle n’a porté atteinte à un humain, allant même jusqu’à partager ses prises avec les pêcheurs.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>"
   },
   {
     "id": 5023021,
     "name": "Dame du Lac variante",
     "icon": "T_Fish_FreshWater_IceLake_2_1",
     "rarity": 3,
-    "desc": "Ce poisson aux couleurs chatoyantes se déplace comme un ruban de soie porté par le courant. Ses nageoires translucides flottent autour d’elle telles des voiles. Malgré sa grâce, un seul \"baiser\" empoisonné peut terrasser une proie massive — mais jamais un humain.",
-    "desc2": "La Dame du Lac est bien plus dangereuse que sa grâce ne le laisse croire. Même en chasse, sa silhouette reste souveraine. Un simple \"baiser\", et une proie trois fois plus lourde s’effondre. Curieusement, jamais elle n’a porté atteinte à un humain, allant même jusqu’à partager ses prises avec les pêcheurs.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>"
+    "desc": "Ce poisson aux couleurs chatoyantes se déplace comme un ruban de soie porté par le courant. Ses nageoires translucides flottent autour d’elle telles des voiles. Malgré sa grâce, un seul « baiser » empoisonné peut terrasser une proie massive — mais jamais un humain.",
+    "desc2": "La Dame du Lac est bien plus dangereuse que sa grâce ne le laisse croire. Même en chasse, sa silhouette reste souveraine. Un simple « baiser », et une proie trois fois plus lourde s’effondre. Curieusement, jamais elle n’a porté atteinte à un humain, allant même jusqu’à partager ses prises avec les pêcheurs.\n\n— Harriet, autrice scientifique, <I>Le monde sous les flots</>"
   },
   {
     "id": 5023030,
@@ -21640,6 +21849,20 @@
     "desc": "Depuis son lancement, le Tournoi de l’Encens suscite un immense engouement à travers toute Huaxu. Les performances remarquables des participants de renom attirent particulièrement l’attention.\nAfin d’encourager les jeunes générations à embrasser les profonds changements que traverse Huaxu, les organisateurs ont convié ces compétiteurs d’exception à participer à un tournoi sur invitation plus exigeant, accompagné de lettres d’invitation exclusives."
   },
   {
+    "id": 6000006,
+    "name": "Jeton stratégique et martial – Épreuve",
+    "icon": "T_Activity_SoloTreasure_24",
+    "rarity": 5,
+    "desc": "Monnaie utilisée dans les simulations d’entraînement, inspirée des Jetons stratégiques et martiaux employés lors du Tournoi de l’Encens.\n \nLes Jetons stratégiques et martiaux sont une monnaie utilisée dans le Tournoi de l’Encens afin de comptabiliser les scores des participants pendant les épreuves. Avant l’interdiction des arts martiaux en Huaxu, les compétitions étaient divisées entre épreuves stratégiques et martiales. Deux types de jetons étaient alors utilisés pour distinguer les scores correspondants."
+  },
+  {
+    "id": 6000007,
+    "name": "Invitation à l’épreuve",
+    "icon": "T_Activity_SoloTreasure_ResIcon",
+    "rarity": 5,
+    "desc": "Simulation inspirée du Tournoi de l’Encens de Huaxu. Cette invitation permet de participer à l’épreuve."
+  },
+  {
     "id": 6100001,
     "name": "Rune de PV",
     "icon": "T_Activity_Autochess_Item02",
@@ -21856,6 +22079,24 @@
     "rarity": 5
   },
   {
+    "id": 6100037,
+    "name": "Rune de concentration",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100038,
+    "name": "Rune de défi",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100039,
+    "name": "Rune de secours",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
     "id": 6100101,
     "name": "Méchapoupée Souillé fulgurant I",
     "icon": "T_Head_Gr_Jichong",
@@ -21986,6 +22227,37 @@
     "name": "Points de partie",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
+  },
+  {
+    "id": 6100123,
+    "name": "Méchapoupée Bi’an I",
+    "icon": "T_Head_HX_Bian02",
+    "rarity": 1
+  },
+  {
+    "id": 6100124,
+    "name": "Méchapoupée Sentinelle poing-de-fer I",
+    "icon": "T_Tiequan",
+    "rarity": 1
+  },
+  {
+    "id": 6100125,
+    "name": "Méchapoupée Garde de Yingtian I",
+    "icon": "T_Head_HX_Tianshi01",
+    "rarity": 1
+  },
+  {
+    "id": 6100126,
+    "name": "Méchapoupée Magistrat de Yingtian I",
+    "icon": "T_Head_HX_Tianwei",
+    "rarity": 1
+  },
+  {
+    "id": 10302501,
+    "name": "Insigne de Géniemon",
+    "icon": "T_Coin_ActivityRacing",
+    "rarity": 5,
+    "desc": "Insigne métallique spécialement conçu par la gare pour chaque Géniemon participant. Le nom de son propriétaire et ses résultats sont gravés au dos. Leurs maîtres en sont ravis... et les Géniemons semblent tout aussi enchantés par ces petits objets brillants !"
   },
   {
     "id": 31001001,
@@ -23147,6 +23419,48 @@
   },
   {
     "id": 60000046,
+    "name": "Certificat d’amélioration VI",
+    "icon": "T_Activity_SoloTreasure_BagSign06",
+    "rarity": 5,
+    "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 60000051,
+    "name": "Certificat d’amélioration I",
+    "icon": "T_Activity_SoloTreasure_BagSign01",
+    "rarity": 5,
+    "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 60000052,
+    "name": "Certificat d’amélioration II",
+    "icon": "T_Activity_SoloTreasure_BagSign02",
+    "rarity": 5,
+    "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 60000053,
+    "name": "Certificat d’amélioration III",
+    "icon": "T_Activity_SoloTreasure_BagSign03",
+    "rarity": 5,
+    "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 60000054,
+    "name": "Certificat d’amélioration IV",
+    "icon": "T_Activity_SoloTreasure_BagSign04",
+    "rarity": 5,
+    "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 60000055,
+    "name": "Certificat d’amélioration V",
+    "icon": "T_Activity_SoloTreasure_BagSign05",
+    "rarity": 5,
+    "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 60000056,
     "name": "Certificat d’amélioration VI",
     "icon": "T_Activity_SoloTreasure_BagSign06",
     "rarity": 5,

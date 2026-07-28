@@ -16,7 +16,8 @@ function M:InitData(Content)
     self.Text_Level:SetText(tostring(Content.CurrGuildInfo.Level or 0))
     self.Text_LevelDesc:SetText(GText("UI_GuildLvSuggestionDes"))
     self.Text_PreviewTitle:SetText(GText("UI_NextLevelPreview"))
-    self.Text_PreviewDesc:SetText(GText(DataMgr.GuildLevel[self.CurrGuildInfo.Level].GuildDes))
+    local GuildLevelConf = DataMgr.GuildLevel[self.CurrGuildInfo.Level]
+    self.Text_PreviewDesc:SetText(GText(GuildLevelConf and GuildLevelConf.GuildDes or ""))
     self.Logo:Init(self.CurrGuildInfo.LogoInfo)
     local SystemLanguage = EMCache:Get("SystemLanguage") or "CN"
     if "CN" == SystemLanguage or "TC" == SystemLanguage then

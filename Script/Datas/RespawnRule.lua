@@ -116,5 +116,16 @@ return ReadOnly("RespawnRule", {
     PlayerRecoverTimes = 0,
     RecoverUI = "None",
     RuleId = "SpecialQuestNoRes"
+  },
+  WeaponVerify = {
+    DelayTime = 1.8,
+    DissolveAfterDead = false,
+    DyingDuration = 20,
+    PhantomRecoverSpeed = 0,
+    PhantomRecoverTimes = 0,
+    PlayerRecoverSpeed = 10,
+    PlayerRecoverTimes = -1,
+    RecoverUI = "BattleResurgence",
+    RuleId = "WeaponVerify"
   }
 })

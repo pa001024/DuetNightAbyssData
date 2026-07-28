@@ -11,6 +11,9 @@ local View = Class({
 
 function View:InitView()
   self.LevelSelect:InitView()
+  if self.Share and self.Share.InitView then
+    self.Share:InitView()
+  end
   self.Rank:UpdateRankInfo(Model:GetRankInfo())
   self.Title.Text_Title:SetText(GText("Event_Title_103016"))
   self.Btn_Monster.Text_Name:SetText(GText("UI_AutoChess_MonsterOverview"))
@@ -105,8 +108,13 @@ function View:Handle_KeyDownOnGamePad(InKeyName)
       self.BindedCallbacks.OnBtnLinearLevelClicked()
       IsHandled = true
     end
-  elseif InKeyName == Const.GamepadRightShoulder and self.BindedCallbacks and self.BindedCallbacks.OnBtnRandomLevelClicked then
-    self.BindedCallbacks.OnBtnRandomLevelClicked()
+  elseif InKeyName == Const.GamepadRightShoulder then
+    if self.BindedCallbacks and self.BindedCallbacks.OnBtnRandomLevelClicked then
+      self.BindedCallbacks.OnBtnRandomLevelClicked()
+      IsHandled = true
+    end
+  elseif InKeyName == Const.GamepadDPadLeft and self.BindedCallbacks and self.BindedCallbacks.OnBtnShareClicked then
+    self.BindedCallbacks.OnBtnShareClicked()
     IsHandled = true
   end
   return IsHandled
@@ -117,10 +125,10 @@ function View:GetDefaultControllerFSMState()
 end
 
 function View:InitGamepadView()
-  self.Entrance_Shop.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
-  self.Entrance_Task.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
-  self.Btn_Monster.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
-  self.Btn_Equipment.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+  self.Entrance_Shop.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Entrance_Task.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Btn_Monster.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Btn_Equipment.Key_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
 function View:InitKeyboardView()
@@ -137,6 +145,9 @@ end
 function View:BindEvents(Callbacks)
   self.BindedCallbacks = Callbacks
   self.LevelSelect:BindEvents(Callbacks.OnBtnLinearLevelClicked, Callbacks.OnBtnRandomLevelClicked)
+  if self.Share and self.Share.BindEvents then
+    self.Share:BindEvents(Callbacks.OnBtnShareClicked)
+  end
   self.Btn_Monster.Btn_Click.OnClicked:Add(self, Callbacks.OnBtnMonsterClicked)
   self.Btn_Equipment.Btn_Click.OnClicked:Add(self, Callbacks.OnBtnEquipmentClicked)
   self.Entrance_Shop.Btn_Click.OnClicked:Add(self, Callbacks.OnBtnOpenShopClicked)
@@ -146,7 +157,7 @@ end
 function View:OnMonsterReddotChanged(Count, RdType, RdName)
   DebugPrint("Tianyi@ OnMonsterReddotChanged, Count: " .. tostring(Count) .. ", RdType: " .. tostring(RdType) .. ", RdName: " .. tostring(RdName))
   if Count > 0 then
-    self.Btn_Monster.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Btn_Monster.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Btn_Monster.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
@@ -155,7 +166,7 @@ end
 function View:OnEquipReddotChanged(Count, RdType, RdName)
   DebugPrint("Tianyi@ OnEquipReddotChanged, Count: " .. tostring(Count) .. ", RdType: " .. tostring(RdType) .. ", RdName: " .. tostring(RdName))
   if Count > 0 then
-    self.Btn_Equipment.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+    self.Btn_Equipment.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Btn_Equipment.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end

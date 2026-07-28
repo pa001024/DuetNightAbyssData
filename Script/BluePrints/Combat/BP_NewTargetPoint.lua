@@ -12,7 +12,7 @@ function BP_NewTargetPoint:ReceiveBeginPlay()
     GameState:AddTargetPointInfo(self)
   elseif self.TargetPointType == Const.Hijack then
     GameState:AddHijackPointInfo(self)
-  elseif self.TargetPointType == Const.RougeLike then
+  elseif self.TargetPointType == Const.RougeLike and GWorld.RougeLikeManager then
     GWorld.RougeLikeManager:AddDeliveryPointInfo(self)
   end
   if IsAuthority(self) and -1 ~= self.SpawnTriggerBoxId and self.SpawnBoxType == ENTPSpawnBoxType.ReceiveBegin then

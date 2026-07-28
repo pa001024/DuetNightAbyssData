@@ -92,8 +92,88 @@ function M:OnGetMoreWalnutBtnClicked()
   if self.JumpToWalnutFunc then
     self.JumpToWalnutFunc()
   else
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Walnut_Toast_CanNotGet"))
+    self:ShowUnLockTips()
   end
+end
+
+function M:ShowUnLockTips()
+  local ShowText = GText("UI_Walnut_Toast_CanNotGet")
+  local TargetDifficultyID
+  local bDifficultyUnlocked = false
+  local bHardBossUnlocked = false
+  local Avatar = GWorld:GetAvatar()
+  if DataMgr.ShopItem2ShopSubId.Walnut.Shop[self.WalnutData.WalnutId] then
+    local ShopDatas = setmetatable({}, {
+      __index = DataMgr.ShopItem2ShopSubId.Walnut.Shop[self.WalnutData.WalnutId]
+    })
+    if ShopDatas and not next(ShopDatas) then
+      local ShopData
+      for _, Data in ipairs(ShopDatas) do
+        if ShopUtils:GetShopItemCanShow(Data.ShopItemId) and 0 ~= ShopUtils:GetShopItemPurchaseLimit(Data.ShopItemId) then
+          ShowText = GText("UI_WalnutAccessTips_ShopLocked")
+          break
+        end
+      end
+    end
+  end
+  if Avatar then
+    local HardBossDifficultyIds = {}
+    for _, HardBossData in pairs(DataMgr.HardbossMain) do
+      for _, DifficultyId in pairs(HardBossData.DifficultyId) do
+        table.insert(HardBossDifficultyIds, DifficultyId)
+      end
+    end
+    local HardBossDifficulty = DataMgr.HardBossDifficulty
+    local HardBossDifficultySorted = {}
+    for _, DifficultyId in pairs(HardBossDifficultyIds) do
+      table.insert(HardBossDifficultySorted, HardBossDifficulty[DifficultyId])
+    end
+    table.sort(HardBossDifficultySorted, function(a, b)
+      return a.DifficultyID < b.DifficultyID
+    end)
+    for _, HardBossDifficultyData in ipairs(HardBossDifficultySorted) do
+      if bDifficultyUnlocked then
+        break
+      end
+      local DynamicRewardId = HardBossDifficultyData.DifficultyReward
+      local DynamicRewardInfo = UIUtils.GetDynamicRewardInfo(DynamicRewardId)
+      if DynamicRewardInfo then
+        local RewardInfo = DataMgr.RewardView[DynamicRewardInfo.RewardView]
+        if RewardInfo then
+          local Ids = RewardInfo.Id or {}
+          for i = 1, #Ids do
+            local Id = Ids[i]
+            if self.WalnutData.WalnutId == Id then
+              ShowText = GText("UI_WalnutAccessTips_HardBossLocked")
+            end
+          end
+        end
+      end
+    end
+  end
+  if Avatar then
+    local AbyssSeasonId = Avatar.CurrentAbyssSeasonId
+    if AbyssSeasonId and DataMgr.AbyssSeasonList[AbyssSeasonId] then
+      local EventId = DataMgr.AbyssSeasonList[AbyssSeasonId].EventId
+      if EventId and DataMgr.EventPortal[EventId] then
+        local RewardPreviewId = DataMgr.EventPortal[EventId].RewardPreview
+        if RewardPreviewId and DataMgr.RewardView[RewardPreviewId] then
+          local RewardInfo = DataMgr.RewardView[RewardPreviewId]
+          if RewardInfo then
+            local Ids = RewardInfo.Id or {}
+            for i = 1, #Ids do
+              local Id = Ids[i]
+              if self.WalnutData.WalnutId == Id then
+                ShowText = GText("UI_WalnutAccessTips_AbyssLocked")
+                break
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  UIManager(self):ShowUITip(UIConst.Tip_CommonToast, ShowText)
 end
 
 function M:OnJumpToForginPathBtnClicked()

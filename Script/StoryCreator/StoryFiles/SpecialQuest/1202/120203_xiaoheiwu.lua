@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -581,7 +581,7 @@ return {
             key = "176336802849558",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 0.02192982456142545, y = 262.2916666666667},
+            pos = {x = 383.3552631578948, y = 275.625},
             propsData = {ModeType = 0}
           },
           ["176336802849565"] = {
@@ -624,6 +624,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -631,6 +632,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -681,6 +683,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -731,6 +734,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -754,7 +758,7 @@ return {
             key = "1765889325964492",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 175.69480519480516, y = 29.471861471861402},
+            pos = {x = 1285.6948051948052, y = -292.19480519480527},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049044,
@@ -771,7 +775,7 @@ return {
             key = "17659597793261170",
             type = "SendMessageNode",
             name = "开启小黑屋玩法",
-            pos = {x = 1228.584444163155, y = 272.1200650316094},
+            pos = {x = 1257.646944163155, y = 294.6200650316094},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "StartBox1",
@@ -857,7 +861,7 @@ return {
             key = "17733920630992525598",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 101.37243589743585, y = -304.4955964325531},
+            pos = {x = 1529.7057692307692, y = -167.82892976588641},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0.5,
@@ -869,7 +873,7 @@ return {
             key = "1773494558755848786",
             type = "SendMessageNode",
             name = "开启小黑屋玩法",
-            pos = {x = 948.4060518428939, y = 283.50332040194746},
+            pos = {x = 993.4060518428939, y = 291.8366537352808},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "ReStartBox1",
@@ -880,21 +884,21 @@ return {
             key = "1773494571264849045",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1064.8015063883483, y = 446.4078259840845},
+            pos = {x = 1170.1390063883484, y = 462.7203259840845},
             propsData = {WaitTime = 1}
           },
           ["17739041094387134739"] = {
             key = "17739041094387134739",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 379.5269070010448, y = 249.300026123302},
+            pos = {x = 706.1935736677115, y = 275.96669278996865},
             propsData = {QuestRoleId = 24010102, IsPlayFX = false}
           },
           ["1774182557582630"] = {
             key = "1774182557582630",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 121.61443727896841, y = -125.03417585465655},
+            pos = {x = 613.2811039456351, y = 4.965824145343447},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -903,7 +907,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -1091,7 +1094,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 951.8568867394657, y = -104.6495960479632},
-            propsData = {bEnablePP = true, PPEnum = 4}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["17743428322255078362"] = {
             key = "17743428322255078362",
@@ -1463,7 +1470,7 @@ return {
             key = "17747876470111801",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 665.8854167932084, y = 272.88499340641755},
+            pos = {x = 1160.8854167932084, y = 71.21832673975085},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "XHWstart1",

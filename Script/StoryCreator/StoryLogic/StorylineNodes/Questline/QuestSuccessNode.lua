@@ -1,5 +1,6 @@
 local QuestSuccessNode = Class("StoryCreator.StoryLogic.StorylineNodes.BaseQuestNode")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
 QuestSuccessNode.IsSuccessNode = true
 
 function QuestSuccessNode:OnQuestlineFinish()
@@ -83,13 +84,7 @@ function QuestSuccessNode:OnQuestlineFinish()
     TaskUtils:UpdateSpecialTaskInfo("DeleteSpecialTaskInfo", nil)
   end
   local TalkTriggerId = self:GetPayload("TalkTriggerId")
-  local TalkTrigger = DataMgr.TalkTrigger[TalkTriggerId]
-  if TalkTrigger then
-    EventManager:FireEvent(EventID.OnTalkTriggerComplete, TalkTriggerId)
-    if TalkTrigger.Type == "Impression" then
-      Avatar:SetTalkTriggerComplete_New(TalkTriggerId)
-    end
-  end
+  ImpressionController:SetTalkTriggerComplete(TalkTriggerId)
   PlayerCharacter:SavePlayerSkillUsedTimes()
   GWorld.UploadQuestChainData = false
   return

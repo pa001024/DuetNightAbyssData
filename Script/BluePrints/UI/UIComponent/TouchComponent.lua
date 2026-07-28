@@ -25,6 +25,7 @@ function TouchComponent:Initialize(Initializer)
   self.CurrentTouchingGestureEvent = {}
   self.AllTouchCallBack = {}
   self.Owner_Player = nil
+  self.DisabledTouchItems = {}
   self.m_UpdateTimerFlag_X = false
   self.m_UpdateTimerFlag_Y = false
   self.CanLimitRange = false
@@ -35,6 +36,10 @@ function TouchComponent:Initialize(Initializer)
   self.Offset = FVector2D(0, 0)
   self.bNotUseOptimizationMove = false
   self.BackgroundPlateOffset = 100
+end
+
+function TouchComponent:SetTouchItemEnabled(name, enabled)
+  self.DisabledTouchItems[name] = not enabled
 end
 
 function TouchComponent:SetClickMaxLen(MaxLen)
@@ -167,28 +172,29 @@ function TouchComponent:MouseOrTouchButtonDown(InGeometry, InGestureEvent)
   local thisPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, ScreenSpacePosition) * Scale
   local SubTouchItem, SubTouchItemName, SubTouchItemStartPos, SubTouchParentWidget
   for k, v in pairs(self.AllTouchItems) do
-    local WidgetWorldPos, WidgetWorldSize = self:GetWorldPos(v)
-    local WidgetLocalPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, WidgetWorldPos) * Scale
-    local ParentWidgetNode = self.AllParentWidget[k]
-    local WidgetLocalScale = ParentWidgetNode and ParentWidgetNode.RenderTransform.Scale.X or 1.0
-    local ParentSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(ParentWidgetNode)
-    local ParentAlignment = ParentSlot and ParentSlot:GetAlignment() or FVector2D(1, 0)
-    local StartCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * (ParentAlignment.X - 1)
-    local EndCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * ParentAlignment.X
-    if StartCamparePosX <= ScreenSpacePosition.X and EndCamparePosX >= ScreenSpacePosition.X and ScreenSpacePosition.Y >= WidgetWorldPos.Y and ScreenSpacePosition.Y <= WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale then
-      if nil == SubTouchItem then
-        SubTouchItem = v
-        SubTouchItemName = k
-        SubTouchItemStartPos = FVector2D(WidgetLocalPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetLocalPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
-        SubTouchParentWidget = self.AllParentWidget[k]
-      else
-        local ChooseCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(SubTouchItem)
-        local TouchCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(v)
-        if ChooseCanvasSlot and TouchCanvasSlot and TouchCanvasSlot.ZOrder > ChooseCanvasSlot.ZOrder then
+    if self.DisabledTouchItems[k] then
+    else
+      local WidgetWorldPos, WidgetWorldSize = self:GetWorldPos(v)
+      local WidgetLocalPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, WidgetWorldPos) * Scale
+      local ParentWidgetNode = self.AllParentWidget[k]
+      local WidgetLocalScale = ParentWidgetNode and ParentWidgetNode.RenderTransform.Scale.X or 1.0
+      local StartCamparePosX = WidgetWorldPos.X
+      local EndCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale
+      if StartCamparePosX <= ScreenSpacePosition.X and EndCamparePosX >= ScreenSpacePosition.X and ScreenSpacePosition.Y >= WidgetWorldPos.Y and ScreenSpacePosition.Y <= WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale then
+        if nil == SubTouchItem then
           SubTouchItem = v
           SubTouchItemName = k
           SubTouchItemStartPos = FVector2D(WidgetLocalPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetLocalPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
           SubTouchParentWidget = self.AllParentWidget[k]
+        else
+          local ChooseCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(SubTouchItem)
+          local TouchCanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(v)
+          if ChooseCanvasSlot and TouchCanvasSlot and TouchCanvasSlot.ZOrder > ChooseCanvasSlot.ZOrder then
+            SubTouchItem = v
+            SubTouchItemName = k
+            SubTouchItemStartPos = FVector2D(WidgetLocalPos.X + WidgetWorldSize.X * 0.5 * Scale * WidgetLocalScale, WidgetLocalPos.Y + WidgetWorldSize.Y * 0.5 * Scale * WidgetLocalScale)
+            SubTouchParentWidget = self.AllParentWidget[k]
+          end
         end
       end
     end
@@ -205,9 +211,9 @@ function TouchComponent:MouseOrTouchButtonDown(InGeometry, InGestureEvent)
   self.SubTouchParentWidget[PointerIndex + 1] = SubTouchParentWidget
   self.SubTouchItemsName[PointerIndex + 1] = SubTouchItemName
   self.SubTouchItemsStartPos[PointerIndex + 1] = SubTouchItemStartPos
-  self.WidgetCurPos = CanvasSlot:GetPosition()
+  self.WidgetCurPos = CanvasSlot and CanvasSlot:GetPosition() or FVector2D(0, 0)
   if nil == self.WidgetStartPos then
-    self.WidgetStartPos = CanvasSlot:GetPosition()
+    self.WidgetStartPos = CanvasSlot and CanvasSlot:GetPosition() or FVector2D(0, 0)
   else
     local LimitRangeInfo = self.LimitRangeParam[SubTouchItem]
     if LimitRangeInfo and LimitRangeInfo.NeedResetPos then

@@ -2,6 +2,7 @@ require("UnLua")
 local CommonUtils = require("Utils.CommonUtils")
 local SerializeUtils = require("Utils.SerializeUtils")
 local WalnutUtils = require("BluePrints.UI.WBP.Walnut.WalnutChoice.WalnutUtils")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local ProgressSnapShotComponent = {}
 
 function ProgressSnapShotComponent:TryResetBattleEid()

@@ -2,19 +2,19 @@ require("UnLua")
 local M = Class()
 
 function M:OnInputKey_Lua(ControllerId, Key, EventType)
-  DebugPrint(LXYTag, "BP_EMGameViewportClient_C:: OnInputKey_Lua", Key.KeyName, EventType)
+  local AnyHandled = {bHandled = false}
   local bNeedRecord = false
   if EventType == EInputEvent.IE_Pressed then
     bNeedRecord = true
-    EventManager:FireEvent(EventID.GameViewportInputKeyPressed, Key, EventType)
+    EventManager:FireEvent(EventID.GameViewportInputKeyPressed, Key, AnyHandled)
   elseif EventType == EInputEvent.IE_Released then
     bNeedRecord = true
-    EventManager:FireEvent(EventID.GameViewportInputKeyReleased, Key, EventType)
+    EventManager:FireEvent(EventID.GameViewportInputKeyReleased, Key, AnyHandled)
   elseif EventType == EInputEvent.IE_Repeat then
-    EventManager:FireEvent(EventID.GameViewportInputKeyLongPressed, Key, EventType)
+    EventManager:FireEvent(EventID.GameViewportInputKeyLongPressed, Key, AnyHandled)
   end
-  if not bNeedRecord then
-    return
+  if not bNeedRecord and not AnyHandled.bHandled then
+    return false
   end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   if IsValid(GameInstance) then
@@ -23,9 +23,11 @@ function M:OnInputKey_Lua(ControllerId, Key, EventType)
       SceneMgr:ReceivedInputKey(Key, EventType)
     end
   end
+  return AnyHandled.bHandled
 end
 
 function M:OnInputAxis_Lua(ControllerId, Key, Delta, DeltaTime, NumSamples, bGamepad)
+  return false
 end
 
 function M:OnViewportSizeChanged_Lua()

@@ -7,6 +7,29 @@ local WBP_Setting_PC_C = Class({
 local Rule = FSlateChildSize()
 Rule.SizeRule = UE.ESlateSizeRule.Fill
 Rule.Value = 1.0
+local LayoutPlanForbiddenCaches = {
+  LeftBulletJumpShow = true,
+  BulletJumpCamAdjust = true,
+  AutoBulletJumpCam = true
+}
+local LayoutPlanForbiddenReddotNodes = {Setting_Control_Setting_SaveBulletJumpCamAdjustBtn = true, Setting_Control_Setting_SaveAutoBulletJumpCamBtn = true}
+
+local function GetLayoutSelectedIndexByPlanIndex(Avatar, PlanIndex)
+  if not Avatar or not PlanIndex then
+    return nil
+  end
+  return Avatar:GetLayoutEntryIndexByPlanIndex(PlanIndex)
+end
+
+local function ApplyLayoutPlanForbiddenState(SwitchWidget, bForbidden, bForce)
+  if not SwitchWidget or not SwitchWidget.RefreshForbiddenState then
+    return
+  end
+  if bForce and bForbidden and SwitchWidget.HasBeenForbidden then
+    rawset(SwitchWidget, "HasBeenForbidden", false)
+  end
+  SwitchWidget:RefreshForbiddenState(bForbidden)
+end
 
 function WBP_Setting_PC_C:Initialize(Initializer)
   self.NpcId = 900003
@@ -32,9 +55,10 @@ function WBP_Setting_PC_C:OnLoaded(...)
   self.IsInLoginMainPage, self.LastSystem = ...
   self.Plan1CurrentLayout = 1
   self.Plan2CurrentLayout = 2
+  self.Plan3CurrentLayout = 7
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    self.Plan1CurrentLayout, self.Plan2CurrentLayout = Avatar:GetMappedPlanCurrentLayout()
+    self.Plan1CurrentLayout, self.Plan2CurrentLayout, self.Plan3CurrentLayout = Avatar:GetMappedPlanCurrentLayout()
   end
   rawset(self, "SettingUIs", {})
   rawset(self, "HoverContentList", {})
@@ -62,11 +86,40 @@ function WBP_Setting_PC_C:OnLoaded(...)
 end
 
 function WBP_Setting_PC_C:OnSwitchMobileHUDLayout(PlanIndex)
-  if 0 == PlanIndex % 2 then
-    self.Plan2CurrentLayout = PlanIndex
-  else
+  self.CurPlanIndex = PlanIndex
+  local Avatar = GWorld:GetAvatar()
+  local LayoutSelectedIndex = GetLayoutSelectedIndexByPlanIndex(Avatar, PlanIndex)
+  if 1 == LayoutSelectedIndex then
     self.Plan1CurrentLayout = PlanIndex
+  elseif 2 == LayoutSelectedIndex then
+    self.Plan2CurrentLayout = PlanIndex
+  elseif 3 == LayoutSelectedIndex then
+    self.Plan3CurrentLayout = PlanIndex
   end
+  if LayoutSelectedIndex then
+    self.LayoutSelectedIndex = LayoutSelectedIndex
+  end
+  if self.IsInitLayoutPlan then
+    self:RefreshLayoutPlanButtonState()
+  end
+end
+
+function WBP_Setting_PC_C:RefreshMappedPlanCurrentLayoutFromAvatar()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.GetMappedPlanCurrentLayout then
+    return Avatar
+  end
+  local Plan1CurrentLayout, Plan2CurrentLayout, Plan3CurrentLayout = Avatar:GetMappedPlanCurrentLayout()
+  if Plan1CurrentLayout then
+    self.Plan1CurrentLayout = Plan1CurrentLayout
+  end
+  if Plan2CurrentLayout then
+    self.Plan2CurrentLayout = Plan2CurrentLayout
+  end
+  if Plan3CurrentLayout then
+    self.Plan3CurrentLayout = Plan3CurrentLayout
+  end
+  return Avatar
 end
 
 function WBP_Setting_PC_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -403,6 +456,88 @@ function WBP_Setting_PC_C:OnScrollBoxTaskScrolled()
   end, 2)
 end
 
+function WBP_Setting_PC_C:RefreshLayoutPlanButtonState()
+  if not (self.IsInitLayoutPlan and self.Layout_01) or not self.Layout_02 then
+    return
+  end
+  self.Layout_01:InitLayoutPlan(self.CurPlanIndex, self.Plan1CurrentLayout, 1 == self.LayoutSelectedIndex)
+  self.Layout_02:InitLayoutPlan(self.CurPlanIndex, self.Plan2CurrentLayout, 2 == self.LayoutSelectedIndex)
+  if self.Layout_03 then
+    self.Layout_03:InitLayoutPlan(self.CurPlanIndex, self.Plan3CurrentLayout, 3 == self.LayoutSelectedIndex)
+  end
+  self:RefreshLayoutPlanForbiddenState()
+end
+
+function WBP_Setting_PC_C:RefreshForbiddenStateInListView(ListView, bForbidden, bForce)
+  if not ListView then
+    return
+  end
+  for i = 0, ListView:GetNumItems() - 1 do
+    local Item = ListView:GetItemAt(i)
+    if Item and LayoutPlanForbiddenCaches[Item.Cache] and Item.SelfWidget then
+      ApplyLayoutPlanForbiddenState(Item.SelfWidget.Switcher_Option:GetActiveWidget(), bForbidden, bForce)
+    end
+  end
+  local DisplayedEntries = ListView:GetDisplayedEntryWidgets()
+  for _, Entry in pairs(DisplayedEntries) do
+    if LayoutPlanForbiddenCaches[Entry.Cache] then
+      ApplyLayoutPlanForbiddenState(Entry.Switcher_Option:GetActiveWidget(), bForbidden, bForce)
+    end
+  end
+end
+
+function WBP_Setting_PC_C:RefreshLayoutPlanForbiddenState(bForce)
+  if not self.IsInitLayoutPlan then
+    return
+  end
+  local bForbidden = 3 == self.LayoutSelectedIndex
+  self:RefreshForbiddenStateInListView(self.List_CustomOption, bForbidden, bForce)
+  if not self.SettingUIs or not self.CommonTabInfo then
+    return
+  end
+  for tabIdx, settingUIs in pairs(self.SettingUIs) do
+    if self.CommonTabInfo[tabIdx] and self.CommonTabInfo[tabIdx].TabName == "Control" then
+      for _, settingUI in pairs(settingUIs) do
+        self:RefreshForbiddenStateInListView(settingUI.List_Options, bForbidden, bForce)
+      end
+    end
+  end
+  self:RefreshReddot()
+end
+
+function WBP_Setting_PC_C:GetEffectiveSettingBtnReddotCount()
+  local SettingBtn = ReddotManager.GetTreeNode("Setting_Control_SettingBtn")
+  if not SettingBtn then
+    return 0
+  end
+  if not self.IsInitLayoutPlan or 3 ~= self.LayoutSelectedIndex then
+    return SettingBtn.Count
+  end
+  local Count = 0
+  for LeafName, Leaf in pairs(SettingBtn.LeafChildrens) do
+    if not LayoutPlanForbiddenReddotNodes[LeafName] and Leaf.Count > 0 then
+      Count = Count + Leaf.Count
+    end
+  end
+  return Count
+end
+
+function WBP_Setting_PC_C:GetEffectiveControlReddotCount()
+  local LayOutBtn = ReddotManager.GetTreeNode("Setting_Control_LayOutBtn")
+  local LayOutCount = LayOutBtn and LayOutBtn.Count or 0
+  return LayOutCount + self:GetEffectiveSettingBtnReddotCount()
+end
+
+function WBP_Setting_PC_C:OnLayoutPlanOptionItemSet(OptionWidget, Content)
+  if not self.IsInitLayoutPlan or not LayoutPlanForbiddenCaches[Content.Cache] then
+    return
+  end
+  local bForbidden = 3 == self.LayoutSelectedIndex
+  self:AddDelayFrameFunc(function()
+    ApplyLayoutPlanForbiddenState(OptionWidget.Switcher_Option:GetActiveWidget(), bForbidden, true)
+  end, 2)
+end
+
 function WBP_Setting_PC_C:InitLayoutPlantUI()
   self.IsInitLayoutPlan = false
   if self.Platform ~= "Mobile" then
@@ -419,11 +554,13 @@ function WBP_Setting_PC_C:InitLayoutPlantUI()
     return
   end
   local Count = Avatar:GetMobileHudPlanCount()
-  for i = Count + 1, 2 do
+  local ExpectedPlanCount = Avatar.GetExpectedMobileHudPlanCount and Avatar:GetExpectedMobileHudPlanCount() or 2
+  for i = Count + 1, ExpectedPlanCount do
     Avatar:AddMobileHudPlan({})
   end
   self.IsInitLayoutPlan = true
   self.CurPlanIndex = Avatar:GetCurrentMobileHudPlanIndex()
+  self.LayoutSelectedIndex = GetLayoutSelectedIndexByPlanIndex(Avatar, self.CurPlanIndex) or 1
   self.Tab_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Panel_Tab:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Tab_State:Init({
@@ -441,15 +578,25 @@ function WBP_Setting_PC_C:InitLayoutPlantUI()
   self.LayoutPlantIndex = nil
   self.Layout_01.Index = 1
   self.Layout_02.Index = 2
+  if self.Layout_03 then
+    self.Layout_03.Index = 3
+  end
   self.Tab_State:BindEventOnTabSelected(self, self.OnOperateTabSelected)
-  self.Tab_State:SelectTab(1)
   self.Layout_01.Text_Plan:SetText(GText("UI_Setting_Layout01"))
   self.Layout_02.Text_Plan:SetText(GText("UI_Setting_Layout02"))
+  self.Layout_03.Text_Plan:SetText(GText("UI_Setting_Layout03"))
   self.Layout_01.Btn_CustomLayout.Text_Button:SetText(GText("UI_Setting_CustomLayout"))
   self.Layout_02.Btn_CustomLayout.Text_Button:SetText(GText("UI_Setting_CustomLayout"))
+  if self.Layout_03 and self.Layout_03.Btn_CustomLayout and self.Layout_03.Btn_CustomLayout.Text_Button then
+    self.Layout_03.Btn_CustomLayout.Text_Button:SetText(GText("UI_Setting_CustomLayout"))
+  end
   self.Layout_01.Btn_Area.OnClicked:Add(self, self.OnClickLayout1)
   self.Layout_02.Btn_Area.OnClicked:Add(self, self.OnClickLayout2)
+  if self.Layout_03 and self.Layout_03.Btn_Area then
+    self.Layout_03.Btn_Area.OnClicked:Add(self, self.OnClickLayout3)
+  end
   self:InitLayoutPlanList()
+  self.Tab_State:SelectTab(1)
   self:RefreshReddot()
 end
 
@@ -462,14 +609,16 @@ function WBP_Setting_PC_C:RefreshReddot()
       self.Tab_State:ShowTabRedDotByTabId(1)
     end
   end
-  RedDot = ReddotManager.GetTreeNode("Setting_Control_SettingBtn")
-  if RedDot and RedDot.Count > 0 and self.Tab_State then
-    self.Tab_State:ShowTabRedDotByTabId(2, true)
-  elseif self.Tab_State then
-    self.Tab_State:ShowTabRedDotByTabId(2)
+  local SettingBtnCount = self:GetEffectiveSettingBtnReddotCount()
+  if self.Tab_State then
+    if SettingBtnCount > 0 then
+      self.Tab_State:ShowTabRedDotByTabId(2, true)
+    else
+      self.Tab_State:ShowTabRedDotByTabId(2)
+    end
   end
-  RedDot = ReddotManager.GetTreeNode("Setting_Control")
-  if RedDot and RedDot.Count > 0 and self.CurrentTab and self.CommonTabInfo[self.CurrentTab].TabName == "Control" then
+  local ControlCount = self:GetEffectiveControlReddotCount()
+  if ControlCount > 0 and self.CurrentTab and self.CommonTabInfo[self.CurrentTab].TabName == "Control" then
     self.Tab_Set:ShowTabRedDotByTabId(self.CurrentTab, true)
   else
     self.Tab_Set:ShowTabRedDotByTabId(self.CurrentTab)
@@ -510,6 +659,9 @@ function WBP_Setting_PC_C:InitLayoutPlanList()
     
     self.List_CustomOption:AddItem(OptionContent)
   end
+  self:AddDelayFrameFunc(function()
+    self:RefreshLayoutPlanForbiddenState(true)
+  end, 2)
 end
 
 function WBP_Setting_PC_C:OnClickLayout1()
@@ -517,13 +669,19 @@ function WBP_Setting_PC_C:OnClickLayout1()
     self.Layout_02:PlayAnimation(self.Layout_02.Normal)
     self.Layout_02.LayoutState = UIConst.ButtonState.None
   end
+  if self.Layout_03 and self.Layout_03.LayoutState == UIConst.ButtonState.Click then
+    self.Layout_03:PlayAnimation(self.Layout_03.Normal)
+    self.Layout_03.LayoutState = UIConst.ButtonState.None
+  end
+  local Avatar = self:RefreshMappedPlanCurrentLayoutFromAvatar()
+  self.LayoutSelectedIndex = 1
   self.CurPlanIndex = self.Plan1CurrentLayout
   EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, self.Plan1CurrentLayout)
-  local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
   Avatar:SwitchMobileHudPlan(self.Plan1CurrentLayout)
+  self:RefreshLayoutPlanButtonState()
 end
 
 function WBP_Setting_PC_C:OnClickLayout2()
@@ -531,11 +689,19 @@ function WBP_Setting_PC_C:OnClickLayout2()
     self.Layout_01:PlayAnimation(self.Layout_01.Normal)
     self.Layout_01.LayoutState = UIConst.ButtonState.None
   end
+  if self.Layout_03 and self.Layout_03.LayoutState == UIConst.ButtonState.Click then
+    self.Layout_03:PlayAnimation(self.Layout_03.Normal)
+    self.Layout_03.LayoutState = UIConst.ButtonState.None
+  end
+  local Avatar = self:RefreshMappedPlanCurrentLayoutFromAvatar()
+  self.LayoutSelectedIndex = 2
   self.CurPlanIndex = self.Plan2CurrentLayout
   EMCache:Set("FirstOpenLayoutPlan", true, true)
   self.Layout_02.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if self.Layout_03 and self.Layout_03.New then
+    self.Layout_03.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
   EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, self.Plan2CurrentLayout)
-  local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
@@ -544,6 +710,37 @@ function WBP_Setting_PC_C:OnClickLayout2()
   if RedDot and RedDot.Count > 0 then
     ReddotManager.ClearLeafNodeCount("Setting_Layout")
   end
+  self:RefreshLayoutPlanButtonState()
+end
+
+function WBP_Setting_PC_C:OnClickLayout3()
+  if self.Layout_01.LayoutState == UIConst.ButtonState.Click then
+    self.Layout_01:PlayAnimation(self.Layout_01.Normal)
+    self.Layout_01.LayoutState = UIConst.ButtonState.None
+  end
+  if self.Layout_02.LayoutState == UIConst.ButtonState.Click then
+    self.Layout_02:PlayAnimation(self.Layout_02.Normal)
+    self.Layout_02.LayoutState = UIConst.ButtonState.None
+  end
+  local Avatar = self:RefreshMappedPlanCurrentLayoutFromAvatar()
+  self.LayoutSelectedIndex = 3
+  self.CurPlanIndex = self.Plan3CurrentLayout
+  EMCache:Set("FirstOpenLayoutPlan", true, true)
+  EMCache:Set("FirstOpenLayoutPlan03", true, true)
+  self.Layout_02.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if self.Layout_03 and self.Layout_03.New then
+    self.Layout_03.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  EventManager:FireEvent(EventID.OnSwitchMobileHUDLayout, self.Plan3CurrentLayout)
+  if not Avatar then
+    return
+  end
+  Avatar:SwitchMobileHudPlan(self.Plan3CurrentLayout)
+  local RedDot = ReddotManager.GetTreeNode("Setting_Layout")
+  if RedDot and RedDot.Count > 0 then
+    ReddotManager.ClearLeafNodeCount("Setting_Layout")
+  end
+  self:RefreshLayoutPlanButtonState()
 end
 
 function WBP_Setting_PC_C:OnOperateTabSelected(TabWidget)
@@ -553,11 +750,11 @@ function WBP_Setting_PC_C:OnOperateTabSelected(TabWidget)
   self.LayoutPlantIndex = TabWidget.Idx
   if 1 == self.LayoutPlantIndex then
     self.WS_State:SetActiveWidgetIndex(1)
-    self.Layout_01:InitLayoutPlan(self.CurPlanIndex, self.Plan1CurrentLayout)
-    self.Layout_02:InitLayoutPlan(self.CurPlanIndex, self.Plan2CurrentLayout)
+    self:RefreshLayoutPlanButtonState()
   else
     self.WS_State:SetActiveWidgetIndex(0)
     self:UpdateEmptyGridCount()
+    self:RefreshLayoutPlanForbiddenState(true)
   end
 end
 
@@ -1095,6 +1292,9 @@ function WBP_Setting_PC_C:OnTabSelected(TabWidget, NeedInit)
       self.Tab_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       self.Panel_Tab:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       self.Tab_State:SelectTab(1)
+      self:AddDelayFrameFunc(function()
+        self:RefreshLayoutPlanForbiddenState(true)
+      end, 2)
     end
   end
   self:AddTimer(0.1, function()

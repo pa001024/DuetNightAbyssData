@@ -670,6 +670,138 @@ return ReadOnly("AbyssSeason", {
     WalnutId = 1010,
     WalnutNum = 45
   },
+  [1501] = {
+    AbyssEndTime = LocalTimeProxy(1787018400),
+    AbyssId = 1501,
+    AbyssIdName = "Abyss_Rotate",
+    AbyssLevelId = {
+      15021,
+      15022,
+      15023
+    },
+    AbyssRewardList = {
+      150201,
+      150202,
+      150203,
+      150204,
+      150205,
+      150206,
+      150207,
+      150208,
+      150209,
+      150210,
+      150211,
+      150212,
+      150213,
+      150214,
+      150215
+    },
+    AbyssRewardListTitle = "Abyss_RotateReward_Title",
+    AbyssSeasonId = 1011,
+    AbyssStartTime = LocalTimeProxy(1785204000),
+    AbyssType = 2,
+    DifficultyLock = 9991,
+    DifficultyLockToast = "Abyss_RotateLockToast",
+    Order = 3,
+    WalnutId = 1026,
+    WalnutNum = 20
+  },
+  [1502] = {
+    AbyssEndTime = LocalTimeProxy(1787018400),
+    AbyssId = 1502,
+    AbyssIdName = "Abyss_Infinite",
+    AbyssLevelId = {
+      15031,
+      15032,
+      15033,
+      15034,
+      15035,
+      15036
+    },
+    AbyssRewardList = {
+      150301,
+      150302,
+      150303,
+      150000
+    },
+    AbyssRewardListTitle = "Abyss_InfiniteReward_Title",
+    AbyssSeasonId = 1011,
+    AbyssStartTime = LocalTimeProxy(1785204000),
+    AbyssType = 3,
+    DifficultyLock = 1501,
+    DifficultyLockToast = "Abyss_InfiniteLockToast",
+    InfiniteNode = T.RT_5,
+    LastInfinite = 1404,
+    Order = 4,
+    WalnutId = 1026,
+    WalnutNum = 45
+  },
+  [1503] = {
+    AbyssEndTime = LocalTimeProxy(1788771600),
+    AbyssId = 1503,
+    AbyssIdName = "Abyss_Rotate",
+    AbyssLevelId = {
+      15121,
+      15122,
+      15123
+    },
+    AbyssRewardList = {
+      151201,
+      151202,
+      151203,
+      151204,
+      151205,
+      151206,
+      151207,
+      151208,
+      151209,
+      151210,
+      151211,
+      151212,
+      151213,
+      151214,
+      151215
+    },
+    AbyssRewardListTitle = "Abyss_RotateReward_Title",
+    AbyssSeasonId = 1012,
+    AbyssStartTime = LocalTimeProxy(1787018400),
+    AbyssType = 2,
+    DifficultyLock = 9991,
+    DifficultyLockToast = "Abyss_RotateLockToast",
+    Order = 3,
+    ResourceId = 214,
+    ResourceNum = 800
+  },
+  [1504] = {
+    AbyssEndTime = LocalTimeProxy(1788771600),
+    AbyssId = 1504,
+    AbyssIdName = "Abyss_Infinite",
+    AbyssLevelId = {
+      15131,
+      15132,
+      15133,
+      15134,
+      15135,
+      15136
+    },
+    AbyssRewardList = {
+      151301,
+      151302,
+      151303,
+      151000
+    },
+    AbyssRewardListTitle = "Abyss_InfiniteReward_Title",
+    AbyssSeasonId = 1012,
+    AbyssStartTime = LocalTimeProxy(1787018400),
+    AbyssType = 3,
+    DifficultyLock = 1503,
+    DifficultyLockToast = "Abyss_InfiniteLockToast",
+    InfiniteNode = T.RT_5,
+    LastInfinite = 1502,
+    Order = 4,
+    ResourceId = 214,
+    ResourceNum = 1800
+  },
   [9991] = {
     AbyssId = 9991,
     AbyssIdName = "Abyss_Normal_1",

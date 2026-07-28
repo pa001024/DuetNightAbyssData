@@ -537,6 +537,8 @@ Const.ArmoryIdleTags = {
   Armory = "Armory",
   Armory_Mod = "Armory_Mod",
   Armory_Grade = "Armory_Grade",
+  Armory_ChangeAttr = "Armory_ChangeAttr",
+  Armory_ChangeAttr_Reverse = "Armory_ChangeAttr_Reverse",
   Armory_Pet = "Armory_Pet",
   Armory_BullutJump = "Armory_BullutJump",
   Armory_FallAttack_Sword = "Armory_FallAttack_Sword"
@@ -936,6 +938,7 @@ Const.EnableCreateUnitLog = false
 Const.IsOpenCNPCForceShow = true
 Const.IsOpenCNPCGenPriority = true
 Const.IsOpenFlexibleCppOpt = true
+Const.IsOpenFlexibleShowHideCppOpt = true
 Const.IsOpenNpcInitOpt = true
 Const.IsOpenNpcGetBattleCharTag = true
 Const.IsNpcUseNavFixPawnLoc = false
@@ -1096,9 +1099,9 @@ Const.OnlineMonsterCanCache = true
 Const.DungeonPreloadMonster = true
 Const.MonsterNeedCache = true
 Const.MonsterCanSpawnFromCache = true
-Const.SummonDeadCache_Windows = false
-Const.SummonDeadCache_Android = false
-Const.SummonDeadCache_IOS = false
+Const.SummonDeadCache_Windows = true
+Const.SummonDeadCache_Android = true
+Const.SummonDeadCache_IOS = true
 Const.PlayerPreloadSummon_Windows = false
 Const.PlayerPreloadSummon_Android = false
 Const.PlayerPreloadSummon_IOS = false
@@ -1110,9 +1113,7 @@ Const.OnlineNPCCreateOptimize = true
 Const.CNPCDelHide = true
 Const.bCustomNPCMoveBalanceTick = true
 Const.EnableCacheSummonID = {
-  [2] = 210101,
-  [3] = 230101,
-  [11] = 530101
+  [13] = 210202
 }
 Const.RegionPreloadSupportSceneId = {
   [0] = 1041
@@ -1297,14 +1298,7 @@ Const.MobileScalabilityLevelNum = {
 Const.bTakePhotoAddWatermark = false
 Const.SynthesisCheckResetPointTime = 10
 Const.bEditorUnlockAllHyperWeaponSkills = false
-Const.EnableDisableFixLocationAndPushMonUnitIds = {
-  8519001,
-  8519002,
-  8519501,
-  8519502,
-  8519503,
-  8519504,
-  8519505,
-  8519506
-}
+Const.UseNewSettlementCamera = false
+Const.SettlementCameraPathPrefix = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Sequence/Interactive/LevelFinish/"
+Const.PostProcessFunctionLibraryPath = "/Game/Asset/Effect/Blueprint/PostProcess/PostProcessFunctionLibrary.PostProcessFunctionLibrary"
 return Const

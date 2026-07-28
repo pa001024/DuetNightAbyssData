@@ -64,6 +64,9 @@ end
 
 function M:GetMyWeekActivityValue()
   local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   self.GuildMemberInfo = GuildController:GetModel():GetCurrMember(Avatar.Uid)
   local Ttt = GuildController:GetModel()
   local CurrActivityValue = GuildController:GetModel():GetGuildActivityLevel()

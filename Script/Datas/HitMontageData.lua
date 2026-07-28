@@ -66,6 +66,7 @@ return ReadOnly("HitMontageData", {
   BossJishi = {
     DeadDissolveTime = 1,
     DeadMontage = T.RT_2,
+    HitAddtiveDirection = 1,
     HitAddtiveDuration = 0.3,
     HitMontageId = "BossJishi",
     LightHitMontage = T.RT_8

@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 105901,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -396,6 +396,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -403,6 +404,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -447,7 +449,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {105901},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },

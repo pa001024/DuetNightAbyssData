@@ -11,7 +11,9 @@ function M:Execute(bSkip)
   if bSkip then
     return
   end
-  self.TalkTask:EndDialogue()
+  if self.OnDialogueEnd then
+    self.OnDialogueEnd()
+  end
 end
 
 function M:Iterate(...)

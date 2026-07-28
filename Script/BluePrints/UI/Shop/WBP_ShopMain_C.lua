@@ -548,7 +548,9 @@ function M:CommonInitPage(OverlayWidget, WidgetName)
 end
 
 function M:InitPayGiftPage(ShopItemsData)
+  self.PayGiftWidget = nil
   local Widget = self:CommonInitPage(self.Group_PayGift, "PayGiftPage")
+  self.PayGiftWidget = Widget
   if self.Common_Tab and self.Common_Tab.WBP_Com_Tab_ResourceBar then
     self.Common_Tab.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(Widget)
   end
@@ -563,6 +565,11 @@ function M:InitPayGiftPage(ShopItemsData)
     self.Group_Empty:SetVisibility(ESlateVisibility.Collapsed)
   end
   Widget:InitPayGiftInfo(ShopItemsData)
+  if not CommonUtils:IfExistSystemGuideUI(self) or self:HasAnyFocus() or self:HasFocusedDescendants() then
+    self:AddTimer(0.1, function()
+      Widget:SetFocus()
+    end)
+  end
 end
 
 function M:InitRechargePage(SubTabData)

@@ -1,6 +1,8 @@
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
+local LuaConst = require("EMLuaConst")
 local MiscUtils = require("Utils.MiscUtils")
 local Component = {}
+local AI_DEBUG_BATTLE_PET_HIDE = "AIDeBug_BattlePetHide"
 
 function Component:RegisterInfo(Info)
   if Info then
@@ -11,6 +13,16 @@ end
 
 function Component:OnRep_ServerBornInfo()
   self.BornInfo = EffectResults.UnpackEffectStruct(self.ServerBornInfo)
+end
+
+function Component:OnRep_ServerAppearanceSuit()
+  self.AppearanceSuit = EffectResults.UnpackEffectStruct(self.ServerAppearanceSuit)
+  if self.InfoForInit and not self.InfoForInit.AppearanceSuit then
+    self.InfoForInit.AppearanceSuit = self.AppearanceSuit
+  end
+  if self.ServerInitSuccess and self.InitSuccess and (self:IsPlayer() or self:IsPhantom()) then
+    self:InitAppearanceSuit(self.AppearanceSuit)
+  end
 end
 
 function Component:OnRep_ServerInitSuccessOld()
@@ -29,7 +41,8 @@ function Component:GetInfoForInit()
   return {
     RoleId = self.CurrentRoleId,
     UnitId = self.UnitId,
-    ShadowModelId = self.ShadowModelId
+    ShadowModelId = self.ShadowModelId,
+    AppearanceSuit = self.AppearanceSuit or EffectResults.UnpackEffectStruct(self.ServerAppearanceSuit)
   }
 end
 
@@ -127,6 +140,35 @@ function Component:RegionPlayerInitInfo(ObjId, EidOverride)
   if RoleInfo.MountDatas and 0 ~= RoleInfo.MountDatas.MountId then
     RoleInfo.IsCrouching = false
     self:EnableBattleMount(RoleInfo.MountDatas.MountId, 0, true)
+    if LuaConst.bEnableMountPassenger then
+      local DriverAvatar = GWorld:GetAvatar()
+      if DriverAvatar and DriverAvatar.OtherRoleInfo then
+        for PassengerObjId, PassengerInfo in pairs(DriverAvatar.OtherRoleInfo) do
+          if PassengerInfo.MountDatas and PassengerInfo.MountDatas.PassengerDriverEid == LuaObjId then
+            local Passenger = DriverAvatar:GetBornedChar(PassengerObjId)
+            if Passenger then
+              Passenger:ReceiveMountPassengerState_Lua(true, self, PassengerInfo.MountDatas.PassengerSocketName)
+            end
+          end
+        end
+        if DriverAvatar.LocalMountPassengerInfo and DriverAvatar.LocalMountPassengerInfo.IsMountPassenger and DriverAvatar.LocalMountPassengerInfo.PassengerDriverEid == LuaObjId then
+          local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+          if Player then
+            Player:ReceiveMountPassengerState_Lua(true, self, DriverAvatar.LocalMountPassengerInfo.PassengerSocketName)
+          end
+        end
+      end
+    end
+  end
+  if LuaConst.bEnableMountPassenger and RoleInfo.MountDatas and RoleInfo.MountDatas.IsMountPassenger and RoleInfo.MountDatas.PassengerDriverEid then
+    RoleInfo.IsCrouching = false
+    local Driver = Avatar:GetBornedChar(RoleInfo.MountDatas.PassengerDriverEid)
+    if not Driver and Avatar.Eid == RoleInfo.MountDatas.PassengerDriverEid then
+      Driver = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+    end
+    if Driver then
+      self:ReceiveMountPassengerState_Lua(true, Driver, RoleInfo.MountDatas.PassengerSocketName)
+    end
   end
   if RoleInfo.IsCrouching then
     self:SetCrouch(true)
@@ -604,19 +646,26 @@ end
 function Component:OnCharacterReady(Info)
   self:SetActorHideTag("login", false)
   if Info.FromOtherWorld then
-    if Info.IsDungeonEnd then
-      self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, Info.UltraWeapons)
+    if self.PreviewModel then
+      self:ClearWeapon()
     else
-      self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, nil)
-    end
-    if Info.ShowWeapon then
-      self:ChangeUsingWeaponByType(Info.ShowWeapon)
+      if Info.IsDungeonEnd then
+        self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, Info.UltraWeapons)
+      else
+        self:ServerSetUpWeapons(Info.MeleeWeapon, Info.RangedWeapon, nil)
+      end
+      if Info.ShowWeapon then
+        self:ChangeUsingWeaponByType(Info.ShowWeapon)
+      end
     end
     self.DontInitColor = true
     self:HandleModelFashion()
     self.Overridden.OnCharacterReady(self)
     self.Overridden.ReceiveBeginPlay(self)
     self:ReceiveOnCharacterReady()
+    if not Info.IsDungeonEnd then
+      self:HandleHidePet(Info)
+    end
     return
   end
   if self.CurrentRoleId == 1504 then
@@ -650,6 +699,7 @@ function Component:OnCharacterReady(Info)
         end
         local PetLevel = Info.Pet.PetLevel or 1
         self:ServerSetBattlePet(PetId, PetLevel, true, AffixList)
+        self:HandleHidePet()
       end
     end
   elseif self.GetAccessories then
@@ -759,6 +809,76 @@ function Component:OnCharacterReady(Info)
   end
 end
 
+function Component:HandleHidePet(Info)
+  if Info then
+    AIDeBugLog.Log(AI_DEBUG_BATTLE_PET_HIDE, "APPLY_SOURCE", {
+      Source = "Info",
+      IsPlayer = self:IsPlayer(),
+      InfoShowPet = Info.ShowPet,
+      Next = self:IsPlayer() and "APPLY_DONE" or "DONE"
+    })
+    if self:IsPlayer() then
+      local bHidePet = Info.ShowPet == false
+      self:HideBattlePet("ArmoryHidePet", bHidePet)
+      AIDeBugLog.Done(AI_DEBUG_BATTLE_PET_HIDE, {
+        Source = "Info",
+        ShowPet = Info.ShowPet,
+        bHidePet = bHidePet,
+        Tag = "ArmoryHidePet"
+      })
+    end
+  else
+    local bHidePet = false
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      bHidePet = not Avatar.ShowPet
+      AIDeBugLog.Log(AI_DEBUG_BATTLE_PET_HIDE, "APPLY_SOURCE", {
+        Source = "Avatar",
+        AvatarShowPet = Avatar.ShowPet,
+        bHidePet = bHidePet,
+        Next = "APPLY_DONE"
+      })
+    else
+      local Controller = self:GetController()
+      local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+      if GameMode and Controller then
+        local AvatarEid = Controller.AvatarEidStr
+        local AvatarInfo = GameMode.AvatarInfos[AvatarEid]
+        local PlayerInfo = AvatarInfo and AvatarInfo.PlayerInfo
+        if PlayerInfo then
+          bHidePet = not PlayerInfo.ShowPet
+          AIDeBugLog.Log(AI_DEBUG_BATTLE_PET_HIDE, "APPLY_SOURCE", {
+            Source = "GameModePlayerInfo",
+            AvatarEid = AvatarEid,
+            ShowPet = PlayerInfo.ShowPet,
+            bHidePet = bHidePet,
+            Next = "APPLY_DONE"
+          })
+        else
+          AIDeBugLog.Abort(AI_DEBUG_BATTLE_PET_HIDE, "APPLY_SOURCE", "ShowPetMissing", {
+            AvatarEid = AvatarEid,
+            HasAvatarInfo = nil ~= AvatarInfo,
+            HasPlayerInfo = nil ~= PlayerInfo,
+            DefaultHide = bHidePet
+          })
+        end
+      else
+        AIDeBugLog.Abort(AI_DEBUG_BATTLE_PET_HIDE, "APPLY_SOURCE", "SourceMissing", {
+          HasController = nil ~= Controller,
+          HasGameMode = nil ~= GameMode,
+          DefaultHide = bHidePet
+        })
+      end
+    end
+    self:HideBattlePet("ArmoryHidePet", bHidePet)
+    AIDeBugLog.Done(AI_DEBUG_BATTLE_PET_HIDE, {
+      Source = "NoInfo",
+      bHidePet = bHidePet,
+      Tag = "ArmoryHidePet"
+    })
+  end
+end
+
 function Component:CheckAndApplyDungeonForbidSkills()
   DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills")
   if not self.ForbidAllSkillsByBuff then
@@ -855,15 +975,16 @@ function Component:PlayerCommonInit(Info)
   if self:IsPlayer() or self:IsPhantom() then
     self:SetupActionLogicPramas()
     self:InitAnimIntanceParam()
-    self:InitAppearanceSuit(Info.AppearanceSuit or self.BornInfo.AppearanceSuit)
+    self:InitAppearanceSuit(Info.AppearanceSuit or self.AppearanceSuit)
   end
 end
 
 function Component:GetNewSkinId(Context)
+  local CurrentSkinId
   if not Context then
     return CurrentSkinId
   end
-  local Info = Context:GetLuaTable("AppearanceSuit") or self.BornInfo.AppearanceSuit
+  local Info = Context:GetLuaTable("AppearanceSuit") or self.AppearanceSuit
   if Info and Info.SkinId then
     return Info.SkinId
   end
@@ -874,8 +995,26 @@ function Component:NewPlayerCommonInit(Context)
   if self:IsPlayer() or self:IsPhantom() then
     self:SetupActionLogicPramas()
     self:InitAnimIntanceParam()
-    self:InitAppearanceSuit(Context:GetLuaTable("AppearanceSuit") or self.BornInfo.AppearanceSuit)
+    self:InitAppearanceSuit(Context:GetLuaTable("AppearanceSuit") or self.AppearanceSuit)
   end
+end
+
+function Component:SyncAppearanceSuit(AppearanceSuit)
+  self.AppearanceSuit = AppearanceSuit
+  if not IsAuthority(self) or self.ServerAppearanceSuit == nil then
+    return
+  end
+  local Result
+  if AppearanceSuit then
+    Result = EffectResults.Result()
+    for Key, Value in pairs(AppearanceSuit) do
+      Result[Key] = Value
+    end
+    Result = Result:ToEffectStruct(self.ServerAppearanceSuit)
+  else
+    Result = FEffectStruct()
+  end
+  self.ServerAppearanceSuit = Result
 end
 
 function Component:InitAnimIntanceParam()
@@ -934,9 +1073,7 @@ function Component:InitAppearanceSuit(AppearanceSuit)
     if self.CharacterFashion then
       self.CharacterFashion:InitAppearanceSuit(AppearanceSuit)
     end
-    if self.BornInfo then
-      self.BornInfo.AppearanceSuit = AppearanceSuit
-    end
+    self:SyncAppearanceSuit(AppearanceSuit)
   else
     self:ClearAllSuitItem()
     self:InitPartMeshCompWithDefault()
@@ -958,6 +1095,7 @@ function Component:InitAppearanceSuit(AppearanceSuit)
   end
   AppearanceSuit = {}
   AppearanceSuit.AccessorySuit = self.CharacterFashion:GetDefaultAccessorySuit()
+  self:SyncAppearanceSuit(AppearanceSuit)
   self.CharacterFashion:InitAppearanceSuit(AppearanceSuit)
 end
 

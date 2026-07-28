@@ -319,6 +319,21 @@ return ReadOnly("BattleCharBuffUI", {
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Dafu03.T_Skill_Dafu03'",
     Type = "Layer"
   },
+  [5402] = {
+    BuffId = {
+      [0] = 540221,
+      [1] = 540221,
+      [2] = 540221,
+      [3] = 540221,
+      [4] = 540221,
+      [5] = 540221,
+      [6] = 540221
+    },
+    ElementAttr = "Wind",
+    ID = 5402,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Dafu03.T_Skill_Dafu03'",
+    Type = "LastTime"
+  },
   [1029901] = {
     BuffId = {
       [0] = 1029901
@@ -332,5 +347,12 @@ return ReadOnly("BattleCharBuffUI", {
     },
     ID = 1029903,
     Type = "Layer"
+  },
+  [1039901] = {
+    BuffId = {
+      [0] = 1039901
+    },
+    ID = 1039901,
+    Type = "LastTime"
   }
 })

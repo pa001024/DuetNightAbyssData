@@ -2,6 +2,46 @@ require("UnLua")
 local GachaModel = require("BluePrints.UI.WBP.Gacha.GachaModel")
 local GachaCommon = require("BluePrints.UI.WBP.Gacha.GachaCommon")
 local GachaController = require("BluePrints.UI.WBP.Gacha.GachaController")
+local TimeUtils = require("Utils.TimeUtils")
+local GIFT_ENTRY_TIMER_KEY = "GachaGiftEntryRefresh"
+
+local function SecondsToTimeDict(Seconds)
+  local Dict = {}
+  local TimeCount = 0
+  local Remain = math.max(0, math.floor(Seconds))
+  if Remain > 86400 then
+    TimeCount = TimeCount + 1
+    table.insert(Dict, {
+      TimeType = "Day",
+      TimeValue = math.floor(Remain / 86400)
+    })
+    Remain = Remain % 86400
+  end
+  if Remain > 3600 or 1 == TimeCount then
+    TimeCount = TimeCount + 1
+    table.insert(Dict, {
+      TimeType = "Hour",
+      TimeValue = math.floor(Remain / 3600)
+    })
+    Remain = Remain % 3600
+  end
+  if Remain > 60 and TimeCount < 2 or 1 == TimeCount then
+    TimeCount = TimeCount + 1
+    table.insert(Dict, {
+      TimeType = "Min",
+      TimeValue = math.floor(Remain / 60)
+    })
+    Remain = Remain % 60
+  end
+  if Remain > 0 and TimeCount < 2 or 1 == TimeCount then
+    table.insert(Dict, {
+      TimeType = "Sec",
+      TimeValue = math.floor(Remain)
+    })
+  end
+  return Dict
+end
+
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -35,7 +75,6 @@ function M:Construct()
     AudioManager(self):PlayUISound(self, "event:/ui/common/gacha_btn_click_normal", nil, nil)
   end
   
-  self.Com_Time.Text_TimeTitle:SetText(GText("UI_SkinGacha_Remain_Time"))
   self.Group_ShopExchange:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Btn_ShopExChange:SetText(GText("UI_SkinGacha_Shop_Goto"))
   self.Btn_ShopExChange:BindEventOnClicked(self, self.OnClickBtnShop)
@@ -49,11 +88,18 @@ function M:Construct()
   self.Group_ListTop:SetVisibility(ESlateVisibility.Collapsed)
   self.Group_ListBottom:SetVisibility(ESlateVisibility.Collapsed)
   self.OpenKey = CommonUtils:GetActionMappingKeyName("OpenGacha")
+  if self.Gacha_GiftBtn then
+    self.Gacha_GiftBtn.Btn_Click.OnClicked:Add(self, self.OnClickGiftPackBtn)
+    if self.Gacha_GiftBtn.Com_KeyImg then
+      self.Gacha_GiftBtn.Com_KeyImg:CreateGamepadKey(UIConst.GamePadImgKey.DPadRight)
+    end
+  end
   self:UnLoadNavMeshLevel()
   self:InitListenEvent()
 end
 
 function M:Destruct()
+  self:RemoveTimer(GIFT_ENTRY_TIMER_KEY)
   AudioManager(self):StopSystemUIBGM(self.CurrentGachaId)
   self.Super.Destruct(self)
 end
@@ -76,11 +122,19 @@ function M:ReceiveEnterState(StackAction)
   if self.bInGachaMain then
     self:RefreshGachaInfo(self.TabId)
   end
+  if UIUtils.IsGamepadInput() then
+    local GiftPopup = UIManager(self):GetUIObj("GachaGiftPopup")
+    if IsValid(GiftPopup) then
+      GiftPopup:SetFocus_Lua()
+    end
+  end
 end
 
 function M:InitListenEvent()
   self:AddDispatcher(EventID.OnDrawGacha, self, self.OnDrawGacha)
   self:AddDispatcher(EventID.OnGachaPoolUpdate, self, self.OnGachaPoolUpdate)
+  self:AddDispatcher(EventID.OnShowPopupPack, self, self.OnShowPopupPack)
+  self:AddDispatcher(EventID.OnPopupPackStateUpdate, self, self.OnPopupPackStateUpdate)
 end
 
 function M:OnLoaded(Params)
@@ -105,6 +159,7 @@ function M:InitGachaUI(SkinGachaTabId)
   self.ExchangeBtnCanClick = false
   self.bCanNotClick = false
   self.bNeedUpdate = false
+  self.bPendingShowPopupPack = false
   self.GachaPoolDict = GachaModel:GetEffectiveGachaInfo()
   self.GachaTabInfoLst = GachaModel:GetGachaTabInfo()
   if SkinGachaTabId then
@@ -129,6 +184,10 @@ function M:InitGachaUI(SkinGachaTabId)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "GachaMainIn", nil)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:FillGachaItem()
+  self:RefreshGiftPackPeriodic()
+  self:RemoveTimer(GIFT_ENTRY_TIMER_KEY)
+  self:AddTimer(1, self.RefreshGiftPackPeriodic, true, 0, GIFT_ENTRY_TIMER_KEY, true)
+  self:TryAutoOpenGiftPopup()
 end
 
 function M:InitCommonTab()
@@ -194,6 +253,7 @@ function M:FillGachaItem()
       }
       local GachaId = self.GachaPoolDict[GachaInfo.TabId][1]
       Content.bShowNew = GachaModel:IsGachaNew(GachaId)
+      Content.bShowGiftPack = self:HasActivePopupPackByTabId(GachaInfo.TabId)
       self.PoolItemMap[GachaInfo.TabId] = Content
       self.List_Pool:AddItem(Content)
     end
@@ -214,6 +274,7 @@ function M:OnGachaTypeItemClick(TabId, Content, bPlaySound, bIsAutoSelect)
   end
   self.TabId = TabId
   self:RefreshGachaInfo(self.TabId, bIsAutoSelect)
+  self:RefreshGiftPackEntry()
 end
 
 function M:RefreshGachaInfo(TabId, bIsAutoSelect)
@@ -245,7 +306,8 @@ function M:RefreshGachaInfo(TabId, bIsAutoSelect)
   self:RefreshGachaQualityTips(GachaData)
   self.Text_PoolGachaDetail:SetText(string.format(GText(GachaData.GachaDes), GText(GachaData.GachaName)))
   self:RemoveTimer("RefreshGacha")
-  if GachaData.IsHIdeCountdown then
+  local EndEmpty = not GachaData.GachaEndTime or GachaData.GachaEndTime == ""
+  if GachaData.IsHIdeCountdown or EndEmpty then
     self.Com_Time:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Com_Time:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -482,6 +544,7 @@ function M:RefreshCumulativeDrawReward()
     end
     assert(Icon, "抽卡累计奖励图标不合法, Id:" .. Id .. " Type:" .. Type)
     self.ExchangeBtn.Image_ExchangeIcon:SetBrushResourceObject(Icon)
+    self.ExchangeBtn.Text_Num:SetText("x" .. tostring(RewardUtils:GetCount(RewardData.Count[1])))
   end
   GachaModel:CheckReddot()
   local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(GWorld.GameInstance)
@@ -489,14 +552,18 @@ function M:RefreshCumulativeDrawReward()
 end
 
 function M:UpdateGachaTime(GachaEndTime)
+  if not GachaEndTime or "" == GachaEndTime then
+    self:RemoveTimer("RefreshGacha")
+    self.Com_Time:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
   local CurrentTime = TimeUtils.NowTime()
   local RemainRefreshTime = GachaEndTime - CurrentTime
   if RemainRefreshTime <= 0 then
     self:RemoveTimer("RefreshGacha")
     self:InitGachaUI(self.TabId)
   end
-  local RemainTimeStr = ShopUtils:GetRefreshTimeStr(RemainRefreshTime)
-  self.Com_Time.Text_TimeDesc:SetText(RemainTimeStr)
+  self.Com_Time:SetTimeText(GText("UI_SkinGacha_Remain_Time"), SecondsToTimeDict(RemainRefreshTime))
 end
 
 function M:GetGachaAnime()
@@ -567,6 +634,7 @@ function M:GetGachaResultPage(Data, RebateData)
       self:RefreshGachaInfo(self.TabId)
       self.bInGachaMain = true
       self:CheckBubbleShow()
+      self:ShowPendingPopupPackIfNeeded()
     end
   end)
 end
@@ -661,35 +729,25 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
             Avatar:PurchaseShopItemUseCoin1(ShopItemId, math.ceil(ResourceNeedPurchaseCount / ShopData.TypeNum), OnPurchaseShopItemUseCoin1)
           end
           
-          local ItemList = {}
-          table.insert(ItemList, {
-            ItemId = Coin4,
-            ItemType = CommonConst.ItemType.Resource,
-            ItemNum = Coin4OwnedCount,
-            ItemNeed = Coin1NeededCount
-          })
-          local PopUpId = 100136
-          local ResourceData = DataMgr.Resource[CoinId]
-          local PopoverText = GText(DataMgr.CommonPopupUIContext[PopUpId].PopoverText)
-          if string.find(PopoverText, "&ResourceName&") then
-            PopoverText = string.gsub(PopoverText, "&ResourceName&", GText(ResourceData.ResourceName))
-          end
-          if string.find(PopoverText, "&ResourceName1&") then
-            PopoverText = string.gsub(PopoverText, "&ResourceName1&", GText(DataMgr.Resource[Coin4].ResourceName))
-          end
-          if string.find(PopoverText, "&ResourceName2&") then
-            PopoverText = string.gsub(PopoverText, "&ResourceName2&", GText(ResourceData.ResourceName))
-          end
-          if string.find(PopoverText, "&Num1&") then
-            PopoverText = string.gsub(PopoverText, "&Num1&", Coin1NeededCount)
-          end
-          if string.find(PopoverText, "&Num2&") then
-            PopoverText = string.gsub(PopoverText, "&Num2&", Coin1NeededCount)
-          end
+          local LeftItems = {
+            {
+              ItemId = Coin4,
+              ItemType = CommonConst.ItemType.Resource,
+              Count = Coin1NeededCount
+            }
+          }
+          local RightItems = {
+            {
+              ItemId = CoinId,
+              ItemType = CommonConst.ItemType.Resource,
+              Count = Coin1NeededCount
+            }
+          }
+          local PopUpId = 100391
           local Params = {
             RightCallbackFunction = Confirm,
-            ItemList = ItemList,
-            ShortText = PopoverText
+            LeftItems = LeftItems,
+            RightItems = RightItems
           }
           self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
           return
@@ -718,35 +776,25 @@ function M:PurchaseGachaResource(IsSingleGacha, bFromGachaRes)
         end)
       end
       
-      local ItemList = {}
-      table.insert(ItemList, {
-        ItemId = CoinId,
-        ItemType = CommonConst.ItemType.Resource,
-        ItemNum = Coin1OwnedCount,
-        ItemNeed = CoinNeededCount
-      })
-      local PopUpId = 100136
-      local ResourceData = DataMgr.Resource[ShopResourceId]
-      local PopoverText = GText(DataMgr.CommonPopupUIContext[PopUpId].PopoverText)
-      if string.find(PopoverText, "&ResourceName&") then
-        PopoverText = string.gsub(PopoverText, "&ResourceName&", GText(ResourceData.ResourceName))
-      end
-      if string.find(PopoverText, "&ResourceName1&") then
-        PopoverText = string.gsub(PopoverText, "&ResourceName1&", GText(DataMgr.Resource[CoinId].ResourceName))
-      end
-      if string.find(PopoverText, "&ResourceName2&") then
-        PopoverText = string.gsub(PopoverText, "&ResourceName2&", GText(ResourceData.ResourceName))
-      end
-      if string.find(PopoverText, "&Num1&") then
-        PopoverText = string.gsub(PopoverText, "&Num1&", CoinNeededCount)
-      end
-      if string.find(PopoverText, "&Num2&") then
-        PopoverText = string.gsub(PopoverText, "&Num2&", ResourceNeedPurchaseCount)
-      end
+      local LeftItems = {
+        {
+          ItemId = CoinId,
+          ItemType = CommonConst.ItemType.Resource,
+          Count = CoinNeededCount
+        }
+      }
+      local RightItems = {
+        {
+          ItemId = ShopResourceId,
+          ItemType = CommonConst.ItemType.Resource,
+          Count = ResourceNeedPurchaseCount
+        }
+      }
+      local PopUpId = 100391
       local Params = {
         RightCallbackFunction = Confirm,
-        ItemList = ItemList,
-        ShortText = PopoverText
+        LeftItems = LeftItems,
+        RightItems = RightItems
       }
       self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
     end
@@ -1008,7 +1056,11 @@ function M:GetHistoryTab()
   local TabMapGacha = {}
   local TabIndex = 1
   for key, value in pairs(DataMgr.SkinGacha) do
-    if NowTime >= value.GachaStartTime and NowTime < value.GachaEndTime then
+    local StartEmpty = not value.GachaStartTime or value.GachaStartTime == ""
+    local EndEmpty = not value.GachaEndTime or "" == value.GachaEndTime
+    local StartOk = StartEmpty or NowTime >= value.GachaStartTime
+    local EndOk = EndEmpty or NowTime < value.GachaEndTime
+    if StartOk and EndOk then
       if 2 == value.GachaHistoryType and self.CurrentGachaId ~= key then
         table.insert(HistoryTab, {
           GachaId = key,
@@ -1290,6 +1342,15 @@ function M:OnAnimationFinished(InAnim)
 end
 
 function M:Close()
+  local GiftPopup = UIManager(self):GetUIObj("GachaGiftPopup")
+  if IsValid(GiftPopup) then
+    GiftPopup.GiftParent = nil
+    if GiftPopup.CloseByParent then
+      GiftPopup:CloseByParent()
+    else
+      GiftPopup:Close()
+    end
+  end
   if self.autoSelectedNewGacha then
     local info = self.autoSelectedNewGacha
     GachaModel:MarkGachaAsOpened(info.GachaId)
@@ -1353,9 +1414,15 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
     if self.ExchangeBtnCanClick then
       self.Key_Exchange:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
+    if self.Gacha_GiftBtn and self.Gacha_GiftBtn.Com_KeyImg then
+      self.Gacha_GiftBtn.Com_KeyImg:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
     self:SetFocus_Lua()
   else
     self.Key_Exchange:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Gacha_GiftBtn and self.Gacha_GiftBtn.Com_KeyImg then
+      self.Gacha_GiftBtn.Com_KeyImg:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -1413,10 +1480,226 @@ function M:OnGamePadDown(InKeyName)
     if self.ExchangeBtnCanClick then
       self:OpenCumulativeDrawReward()
     end
+  elseif InKeyName == UIConst.GamePadKey.DPadRight then
+    self:OnClickGiftPackBtn()
   else
     IsEventHandled = self.Com_Tab:Handle_KeyEventOnGamePad(InKeyName)
   end
   return IsEventHandled
+end
+
+function M:IsPopupPackActive(PackId)
+  local Config = DataMgr.PopupPack[PackId]
+  if not Config then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local Record = Avatar.PopupPack:GetPopupData(PackId)
+  if not Record then
+    return false
+  end
+  if not (Record.TriggerNum <= Config.MaxTrigger) or not (Record.LastPopTimeStamp + Config.Duration * 60 > TimeUtils.NowTime()) then
+    return false
+  end
+  local RemainLimit = ShopUtils:GetShopItemPurchaseLimit(Config.ShopItemId)
+  return RemainLimit and RemainLimit > 0
+end
+
+function M:HasActivePopupPackByTabId(TabId)
+  if not TabId then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local NowSec = TimeUtils.NowTime()
+  for PackId, Config in pairs(DataMgr.PopupPack) do
+    if Config.TabId == TabId then
+      local Record = Avatar.PopupPack:GetPopupData(PackId)
+      if Record and NowSec < Record.LastPopTimeStamp + Config.Duration * 60 then
+        local RemainLimit = ShopUtils:GetShopItemPurchaseLimit(Config.ShopItemId)
+        if RemainLimit and RemainLimit > 0 then
+          return true
+        end
+      end
+    end
+  end
+  return false
+end
+
+function M:GetAllActivePopupPacks(TabId)
+  local Result = {}
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return Result
+  end
+  for PackId, Record in pairs(Avatar.PopupPack) do
+    local Config = DataMgr.PopupPack[PackId]
+    if Config and (not TabId or Config.TabId == TabId) and Record.LastPopTimeStamp + Config.Duration * 60 > TimeUtils.NowTime() then
+      local RemainLimit = ShopUtils:GetShopItemPurchaseLimit(Config.ShopItemId)
+      if RemainLimit and RemainLimit > 0 then
+        table.insert(Result, PackId)
+      end
+    end
+  end
+  if #Result > 1 then
+    table.sort(Result, function(A, B)
+      local RecA = Avatar.PopupPack:GetPopupData(A)
+      local RecB = Avatar.PopupPack:GetPopupData(B)
+      local CfgA = DataMgr.PopupPack[A]
+      local CfgB = DataMgr.PopupPack[B]
+      local ExpA = RecA and RecA.LastPopTimeStamp + CfgA.Duration * 60 or 0
+      local ExpB = RecB and RecB.LastPopTimeStamp + CfgB.Duration * 60 or 0
+      return ExpA < ExpB
+    end)
+  end
+  return Result
+end
+
+function M:GetOrCreateGiftPopup()
+  local Popup = UIManager(self):GetUIObj("GachaGiftPopup")
+  if not IsValid(Popup) then
+    Popup = UIManager(self):LoadUINew("GachaGiftPopup")
+  end
+  if IsValid(Popup) then
+    Popup.GiftParent = self
+  end
+  return Popup
+end
+
+function M:OnGiftPopupClosed()
+  local GetItemPageSP = UIManager(self):GetUIObj("GetItemPageSP")
+  local GetItemPage = UIManager(self):GetUIObj("GetItemPage")
+  if IsValid(GetItemPageSP) or IsValid(GetItemPage) then
+    return
+  end
+  if IsValid(self.List_Pool) then
+    self.List_Pool:SetFocus()
+  end
+end
+
+function M:OnShowPopupPack(_PackId)
+  self:RefreshGiftPackEntry()
+  self:RefreshTabGiftPackIndicator()
+  if self.bInGachaMain and not self.bGachaing and not self.bGachaRes and not self.bSpecialShow then
+    self:ShowActivePopupPacks()
+  else
+    self.bPendingShowPopupPack = true
+  end
+end
+
+function M:ShowActivePopupPacks()
+  local ActivePacks = self:GetAllActivePopupPacks(self.TabId)
+  if #ActivePacks > 0 then
+    local Popup = self:GetOrCreateGiftPopup()
+    if IsValid(Popup) then
+      Popup:Open(ActivePacks)
+    end
+  end
+end
+
+function M:ShowPendingPopupPackIfNeeded()
+  if not self.bPendingShowPopupPack then
+    return
+  end
+  self.bPendingShowPopupPack = false
+  self:ShowActivePopupPacks()
+end
+
+function M:TryAutoOpenGiftPopup()
+  if IsValid(UIManager(self):GetUIObj("GachaGiftPopup")) then
+    return
+  end
+  local ActivePacks = self:GetAllActivePopupPacks(self.TabId)
+  if 0 == #ActivePacks then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  for _, PackId in ipairs(ActivePacks) do
+    local Config = DataMgr.PopupPack[PackId]
+    local Record = Avatar.PopupPack:GetPopupData(PackId)
+    if Config and Record then
+      local Remain = Record.LastPopTimeStamp + Config.Duration * 60 - TimeUtils.NowTime()
+      if Remain >= 86400 then
+        local Popup = self:GetOrCreateGiftPopup()
+        if IsValid(Popup) then
+          Popup:Open(ActivePacks)
+        end
+        return
+      end
+    end
+  end
+end
+
+function M:OnPopupPackStateUpdate()
+  self:RefreshGiftPackEntry()
+  self:RefreshTabGiftPackIndicator()
+end
+
+function M:RefreshTabGiftPackIndicator()
+  if not self.PoolItemMap then
+    return
+  end
+  for TabId, Content in pairs(self.PoolItemMap) do
+    local bShow = self:HasActivePopupPackByTabId(TabId)
+    Content.bShowGiftPack = bShow
+    if IsValid(Content.SelfWidget) and Content.SelfWidget.SetGiftPack then
+      Content.SelfWidget:SetGiftPack(bShow)
+    end
+  end
+end
+
+function M:RefreshGiftPackPeriodic()
+  self:RefreshGiftPackEntry()
+  self:RefreshTabGiftPackIndicator()
+end
+
+function M:OnClickGiftPackBtn()
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/drama_gift_btn_click", nil, nil)
+  local ActivePacks = self:GetAllActivePopupPacks(self.TabId)
+  if #ActivePacks > 0 then
+    local Popup = self:GetOrCreateGiftPopup()
+    if IsValid(Popup) then
+      Popup:Open(ActivePacks)
+    end
+  end
+end
+
+function M:RefreshGiftPackEntry()
+  if not self.Gacha_GiftBtn then
+    return
+  end
+  local ActivePacks = self:GetAllActivePopupPacks(self.TabId)
+  if 0 == #ActivePacks then
+    self.Gacha_GiftBtn:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
+  self.Gacha_GiftBtn:SetVisibility(ESlateVisibility.Visible)
+  self.Gacha_GiftBtn.Text_Num:SetText("x" .. tostring(#ActivePacks))
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local MinRemain = math.huge
+    for _, Id in ipairs(ActivePacks) do
+      local Cfg = DataMgr.PopupPack[Id]
+      local Rec = Avatar.PopupPack:GetPopupData(Id)
+      if Rec then
+        local Remain = Rec.LastPopTimeStamp + Cfg.Duration * 60 - TimeUtils.NowTime()
+        if MinRemain > Remain then
+          MinRemain = Remain
+        end
+      end
+    end
+    if MinRemain < math.huge and MinRemain > 0 then
+      self.Gacha_GiftBtn.Com_Time:SetTimeText("", SecondsToTimeDict(MinRemain))
+    end
+  end
 end
 
 return M

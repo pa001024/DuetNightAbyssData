@@ -155,6 +155,7 @@ function WBP_MainBar_C:OnUpdateCharLevelAndExp()
     return
   end
   local NowLevel = self.Owner:GetAttr("Level")
+  self.Lv:SetText(GText("UI_LEVEL_NAME"))
   self.Num_Lv_elite:SetText(NowLevel)
   if self.OldLevel and NowLevel > self.OldLevel and self.Owner:IsMainPlayer() then
     EventManager:FireEvent(EventID.MainPlayerLevelUp, NowLevel)

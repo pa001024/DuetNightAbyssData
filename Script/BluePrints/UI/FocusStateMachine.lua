@@ -20,7 +20,8 @@ function FSM:Init(Owner, Params)
   self._CheckFunction = Params.CheckFunction
   self._OnPeakInvalidState = Params.OnPeakInvalidState
   self._SupportNilState = false
-  self._bReplaceSameState = true
+  self._bReplaceSameState = Params.bReplaceSameState or true
+  self._bAlwaysCallStateChanged = Params.bAlwaysCallStateChanged or false
 end
 
 function FSM:GetInvalidState()

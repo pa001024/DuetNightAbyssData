@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -316,6 +316,7 @@ return {
               ShowReviewButton = false,
               ShowWikiButton = false,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -323,6 +324,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -355,6 +357,7 @@ return {
               ShowReviewButton = false,
               ShowWikiButton = false,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -362,6 +365,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -578,21 +582,33 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1193.1304347826087, y = -10.000000000000014},
-            propsData = {bEnablePP = true, PPEnum = 10}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 10,
+              PPWeight = 1
+            }
           },
           ["17562005443671594812"] = {
             key = "17562005443671594812",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 2214.3726708074537, y = 399.1925465838509},
-            propsData = {bEnablePP = false, PPEnum = 10}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 10,
+              PPWeight = 1
+            }
           },
           ["17562106001075401941"] = {
             key = "17562106001075401941",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1567.5, y = 1215},
-            propsData = {bEnablePP = false, PPEnum = 10}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 10,
+              PPWeight = 1
+            }
           }
         },
         commentData = {}

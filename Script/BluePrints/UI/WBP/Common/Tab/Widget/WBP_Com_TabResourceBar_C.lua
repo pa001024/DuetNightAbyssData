@@ -199,6 +199,19 @@ function M:OnBtnClicked()
         }
       })
     end
+  elseif self.Id == CommonConst.GuildFundsCoin then
+    local GameInstance = self:GetGameInstance()
+    local UIManager = GameInstance:GetGameUIManager()
+    local CommonDialogWidget = UIManager:GetUIObj("CommonDialog")
+    if CommonDialogWidget then
+      if CommonDialogWidget:GetContentWidgetByName("WBP_Guild_Construct_ExchangePart") then
+        return
+      end
+      UIManager:ShowCommonPopupUI_Interrupt(100385, {AutoFocus = true})
+    else
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+      UIManager:ShowCommonPopupUI(100385, {AutoFocus = true})
+    end
   elseif 99 == self.Id then
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
     self:TryCloseOwnerCommonDialogBeforeJumpToShop()

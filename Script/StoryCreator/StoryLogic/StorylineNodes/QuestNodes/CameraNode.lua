@@ -130,6 +130,8 @@ function M:OnInitScreenshotParams(InOutParams)
   if self.LookAtTargetName and "" ~= self.LookAtTargetName then
     InOutParams.LookAtTargetName = self.LookAtTargetName
   end
+  InOutParams.bDisableCustom = self.bIsForceOpenCamera
+  InOutParams.bDisableCameraParameter = self.bIsForceOpenCamera
   
   function InOutParams.CloseCallback(Params)
     if self.bIsForceOpenCamera and self.bFadeInOut then

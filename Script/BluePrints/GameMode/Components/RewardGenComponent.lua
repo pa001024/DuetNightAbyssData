@@ -179,7 +179,7 @@ function Component:GetAvatarEidByBattleEid(Eid)
     return AvatarEid
   end
   local PlayerCharacter = Battle(self):GetEntity(Eid)
-  if not PlayerCharacter:IsPlayer() then
+  if not PlayerCharacter or not PlayerCharacter:IsPlayer() then
     print(_G.LogTag, "Cannot Generate Logic Reward for Player Character is nil")
     return
   end
@@ -248,42 +248,7 @@ function Component:HandleRewardDrop(Drops, Reason, Transform, ExtraInfo, OtherPa
     DropsArray:Add(Entry)
   end
   Params.Drops = DropsArray
-  local GameState = self.EMGameState
-  local LevelId = self:GetItemLevelId(Transform.Translation)
-  
-  local function CreateDrop(DropId, Count, bExtra, CreateIndex)
-    DebugPrint("HandleRewardDrop in Dungeon1111", DropId, Count)
-    if self.LevelGameMode.DropRule[DropId] then
-      return
-    end
-    DebugPrint("HandleRewardDrop in Dungeon2222", DropId, Count)
-    if IsStandAlone(self) then
-      if self:IsInRegion() then
-        DebugPrint("ZJT_ 111111111111111 DropId ,Count ", DropId, bExtra, CreateIndex)
-        GameState.EventMgr:RealSpawnRewards_Region(DropId, Count, Transform, Reason, ExtraInfo, bExtra, CreateIndex, OtherParams.RewardDropDatas)
-      else
-        DebugPrint("HandleRewardDrop in Dungeon", DropId, Count)
-        GameState.EventMgr:RealSpawnRewards_Normal(DropId, Count, Transform, Reason, ExtraInfo, bExtra)
-      end
-    elseif IsDedicatedServer(self) then
-      if ItemUtils:IsServerCreate(DropId) then
-        GameState.EventMgr:RealSpawnRewards_Normal(DropId, Count, Transform, Reason, ExtraInfo, bExtra)
-      else
-        print(_G.LogTag, "CreateDrop For Player", DropId)
-        local Avatar = OtherParams.Avatar or ""
-        self:PickupToSpecPlayer(DropId, Count, Avatar, Reason, Transform, LevelId, bExtra)
-        self.bNeedNotifyClientCreateDrop = true
-      end
-    end
-  end
-  
-  if ExtraInfo and ExtraInfo.MultiWave and self:IsInDungeon() then
-    local Mechanism = Battle(self):GetEntity(ExtraInfo.ParentEid)
-    print(_G.LogTag, "HandleCreateDrop For Player", OtherParams.Avatar)
-    Mechanism:MultiWaveCreateDrop(Drops, CreateDrop, OtherParams.Avatar)
-  else
-    self.Overridden.HandleRewardDrop(self, Params)
-  end
+  self.Overridden.HandleRewardDrop(self, Params)
 end
 
 function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, UniqueSign, KillerEid, bKilledByPlayer, WeaponType, Level, IsSummonMonster, MonEid, DamageCauserLocation, UniqueId, CreatorType, CreatorId, RelationSpawn, DeathReason, IsFallTrigger, bCreateByUnitButNoSummon)

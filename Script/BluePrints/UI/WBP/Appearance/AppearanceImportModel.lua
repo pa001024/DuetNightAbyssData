@@ -238,8 +238,7 @@ local function NormalizeAppearanceInfo(AppearanceInfo, CharId)
   local Result = CloneTable(AppearanceInfo)
   Result.CharId = Result.CharId or CharId
   Result.SkinId = Result.SkinId or Result.CharSkinId
-  Result.HairId = Result.HairId or Result.CharHairId or Result.HariId
-  Result.HariId = nil
+  Result.HairId = Result.HairId or Result.CharHairId
   Result.AccessorySuit = Result.AccessorySuit or Result.Accessory or {}
   Result.Accessory = Result.AccessorySuit
   Result.AccessoryCustomParams = Result.AccessoryCustomParams or {}

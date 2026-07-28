@@ -43,7 +43,7 @@ return ReadOnly("LimitedTimeResource", {
       TransType = "Ordinary"
     },
     [5] = {
-      EndTime = LocalTimeProxy(1789074000),
+      EndTime = LocalTimeProxy(1789160400),
       LimitedTimeId = 5,
       MailRemindId = 10061,
       ResourceId = 217,
@@ -76,7 +76,7 @@ return ReadOnly("LimitedTimeResource", {
       ResourceId = 220
     },
     [4] = {
-      EndTime = LocalTimeProxy(1789074000),
+      EndTime = LocalTimeProxy(1789160400),
       LimitedTimeId = 4,
       ResourceId = 220
     }
@@ -93,6 +93,25 @@ return ReadOnly("LimitedTimeResource", {
       EndTime = LocalTimeProxy(1783890000),
       LimitedTimeId = 1,
       ResourceId = 223
+    },
+    [2] = {
+      EndTime = LocalTimeProxy(1783893600),
+      LimitedTimeId = 2,
+      ResourceId = 223
+    }
+  },
+  [224] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1788210000),
+      LimitedTimeId = 1,
+      ResourceId = 224
+    }
+  },
+  [225] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1788771600),
+      LimitedTimeId = 1,
+      ResourceId = 225
     }
   },
   [1004] = {
@@ -194,12 +213,27 @@ return ReadOnly("LimitedTimeResource", {
       TransCount = 1,
       TransResourceId = 1001,
       TransType = "Rare"
+    },
+    [12] = {
+      EndTime = LocalTimeProxy(1788771600),
+      LimitedTimeId = 12,
+      MailRemindId = 10009,
+      ResourceId = 1004,
+      TransCount = 1,
+      TransResourceId = 1001,
+      TransType = "Rare"
     }
   },
   [120001] = {
     [1] = {
       EndTime = LocalTimeProxy(1780304400),
       LimitedTimeId = 1,
+      MailRemindId = 10077,
+      ResourceId = 120001
+    },
+    [2] = {
+      EndTime = LocalTimeProxy(1788771600),
+      LimitedTimeId = 2,
       MailRemindId = 10077,
       ResourceId = 120001
     }
@@ -228,11 +262,33 @@ return ReadOnly("LimitedTimeResource", {
       ResourceId = 120004
     }
   },
+  [120005] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1788771600),
+      LimitedTimeId = 1,
+      MailRemindId = 10077,
+      ResourceId = 120005
+    }
+  },
   [6000002] = {
     [1] = {
       EndTime = LocalTimeProxy(1776114000),
       LimitedTimeId = 1,
       ResourceId = 6000002
+    }
+  },
+  [6000006] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1788814800),
+      LimitedTimeId = 1,
+      ResourceId = 6000006
+    }
+  },
+  [6000007] = {
+    [1] = {
+      EndTime = LocalTimeProxy(1788814800),
+      LimitedTimeId = 1,
+      ResourceId = 6000007
     }
   }
 })

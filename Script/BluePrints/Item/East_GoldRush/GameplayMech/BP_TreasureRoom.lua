@@ -10,7 +10,7 @@ function M:CommonInitInfo(Info)
     self.TimeOutTime = self.UnitParams.TimeOutTime or 5
   end
   if self.TreasureId then
-    self.KeyID = DataMgr.ExtractionTreasureRewardRoom[self.TreasureId] and DataMgr.ExtractionTreasureRewardRoom[self.TreasureId].KeyID or 0
+    self.KeyID = DataMgr.ExtractionTreasureRewardRoom[self.TreasureId] and DataMgr.ExtractionTreasureRewardRoom[self.TreasureId].KeyID or {}
   end
   self.DungeonObject = GWorld:GetGameModeDungeonObject()
   self.CanExeuteOpenSuccess = true
@@ -20,9 +20,17 @@ function M:CheckCanInteractive(Player)
   if not self.DungeonObject then
     return false
   end
-  local TreasureDatas = self.DungeonObject:GetTreasureDatasById(self.KeyID)
-  self.KeyNum = #TreasureDatas
-  return next(TreasureDatas)
+  local HaveKey = false
+  self.KeyNum = 0
+  for _, KeyId in pairs(self.KeyID) do
+    local TreasureDatas = self.DungeonObject:GetTreasureDatasById(KeyId)
+    if next(TreasureDatas) then
+      HaveKey = true
+      self.KeyNum = 1
+      break
+    end
+  end
+  return HaveKey
 end
 
 function M:OpenMechanism(PlayerId)

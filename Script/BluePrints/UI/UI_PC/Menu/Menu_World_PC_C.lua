@@ -52,6 +52,7 @@ function Menu_World_PC_C:OnLoaded(...)
   self:AddDispatcher(EventID.OnAchvRedPoint, self, self.UpdateRedDotStates)
   self:AddDispatcher(EventID.OnReceiveNewQuest, self, self.UpdateRedDotStates)
   self:AddDispatcher(EventID.OnGotTopicReward, self, self.UpdateRedDotStates)
+  EventManager:AddEvent(EventID.OnPersonalInfoBgChanged, self, self.OnPersonalInfoBgChanged)
   local BattleMainUI = UIManager(self):GetUI("BattleMain")
   if nil ~= BattleMainUI then
     BattleMainUI:PlayOutAnim(nil, nil, self.WidgetName)
@@ -67,6 +68,9 @@ function Menu_World_PC_C:OnLoaded(...)
     self.SizeBox_EditList:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self.ScrollBox_Function.OnUserScrolled:Add(self, self.OnScrollBox_FunctionScrolled)
+  if self.ScrollBox_Function.SetScrollWhenFocusChanges and UE4.EScrollWhenFocusChanges then
+    self.ScrollBox_Function:SetScrollWhenFocusChanges(UE4.EScrollWhenFocusChanges.AnimatedScroll)
+  end
   self:AddTimer(0.1, function()
     self:OnScrollBox_FunctionScrolled()
   end)
@@ -128,6 +132,30 @@ function Menu_World_PC_C:IsFoucsLeftPanelFunctionBtn()
   return false
 end
 
+function Menu_World_PC_C:GetFocusedFunctionItemIndex()
+  local ItemCount = self.Panel_Function:GetChildrenCount()
+  for Index = 0, ItemCount - 1 do
+    local Item = self.Panel_Function:GetChildAt(Index)
+    if Item and (Item:HasFocusedDescendants() or Item:HasAnyUserFocus()) then
+      return Index, ItemCount
+    end
+  end
+end
+
+function Menu_World_PC_C:FocusFunctionItemByIndex(Index)
+  local Item = self.Panel_Function:GetChildAt(Index)
+  if not Item then
+    return nil
+  end
+  self.ScrollBox_Function:ScrollWidgetIntoView(Item, true, UE4.EDescendantScrollDestination.IntoView)
+  if self.GameInputModeSubsystem then
+    self.GameInputModeSubsystem:SetTargetUIFocusWidget(Item)
+  else
+    Item:SetFocus()
+  end
+  return Item
+end
+
 function Menu_World_PC_C:OnScrollBox_FunctionScrolled()
   local function ReddotAndNewCalFunc(...)
     local Widget = (...)
@@ -167,7 +195,6 @@ function Menu_World_PC_C:InitCommonBtn()
   self.Btn_TEXT.OnClicked:Add(self, self.OnClickChangeSignature)
   self.Button_Copy.AudioEventPath = "event:/ui/common/click_btn_small"
   self.Button_Copy.OnClicked:Add(self, function()
-    self.Button_Area_Experience:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:StopPress()
     self:OnCopyUID()
   end)
@@ -295,6 +322,7 @@ function Menu_World_PC_C:InitExperienceBtn()
   end
   
   self.ExperienceBtn_Buff:Init(Params)
+  self.ExperienceBtn_Buff.Button_EX:SetNavigatePosOffsetPercent(UE4.FVector2D(1, 0.5))
   self.Btn_Experience.AudioEventPath = "event:/ui/common/click_btn_small"
 end
 
@@ -353,10 +381,7 @@ function Menu_World_PC_C:Close()
         Player:ImmersionModel()
       end
     end
-    if BattleMainUI:RemovePlayInOutSystems(self.WidgetName) and BattleMainUI:TryRecoverUI() then
-      BattleMainUI:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    end
-    BattleMainUI:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    BattleMainUI:RemovePlayInOutSystems(self.WidgetName)
   end
   if self.IsEditOpen then
     self.IsEditOpen = false
@@ -476,13 +501,49 @@ function Menu_World_PC_C:InitBg()
   if not Avatar then
     return
   end
-  local Char = Avatar.Chars[Avatar.CurrentChar]
-  local CharIconPath = DataMgr.Char[Char.CharId].EscMenuBg
-  local Image = LoadObject(CharIconPath)
-  if Image then
-    local DynamicMaterial = self.Img_Avatar:GetDynamicMaterial()
-    DynamicMaterial:SetTextureParameterValue("MainTex", Image)
+  
+  local function SetDefaultCharacterBackground()
+    self.WS_Img:SetActiveWidgetIndex(0)
+    local Char = Avatar.Chars[Avatar.CurrentChar]
+    if Char then
+      local CharConfig = DataMgr.Char[Char.CharId]
+      if CharConfig and CharConfig.EscMenuBg then
+        local CharImage = LoadObject(CharConfig.EscMenuBg)
+        if CharImage then
+          local DynamicMaterial = self.Img_Avatar:GetDynamicMaterial()
+          if DynamicMaterial then
+            DynamicMaterial:SetTextureParameterValue("MainTex", CharImage)
+          end
+        end
+      end
+    end
   end
+  
+  local MenuWorldBackground = Avatar.PersonalInfo and Avatar.PersonalInfo.BackgroundIds and Avatar.PersonalInfo.BackgroundIds[CommonConst.PersonalInfoBgType.Esc] or nil
+  if nil ~= MenuWorldBackground and MenuWorldBackground ~= CommonConst.DefaultNoBackground then
+    local BgConfig = DataMgr.Background[MenuWorldBackground]
+    if BgConfig and BgConfig.EscWidget then
+      self.WS_Img:SetActiveWidgetIndex(1)
+      local Image = LoadObject(BgConfig.EscWidget)
+      if Image then
+        local DynamicMaterial = self.Img_Color:GetDynamicMaterial()
+        if DynamicMaterial then
+          DynamicMaterial:SetTextureParameterValue("MainTex", Image)
+        end
+      end
+    else
+      SetDefaultCharacterBackground()
+    end
+  else
+    SetDefaultCharacterBackground()
+  end
+end
+
+function Menu_World_PC_C:OnPersonalInfoBgChanged(BgType, BgId)
+  if BgType ~= CommonConst.PersonalInfoBgType.Esc then
+    return
+  end
+  self:InitBg()
 end
 
 function Menu_World_PC_C:PlayInAnim()
@@ -541,89 +602,92 @@ function Menu_World_PC_C:InitSystemItem()
   local UnlockNum = 0
   for _, Value in pairs(self.SystemSortList) do
     local id = Value.Id
-    local MainUIConfig = DataMgr.MainUI[Value.Id]
-    local bUnlocked = true
-    local UIUnlockRuleName = DataMgr.MainUI[id].UIUnlockRuleName
-    if "GameEvent" == UIUnlockRuleName then
-      local a = 1
-    end
-    if UIUnlockRuleName then
-      local UIUnlockRule = DataMgr.UIUnlockRule
-      local UIUnlockRuleId = UIUnlockRule[UIUnlockRuleName].UIUnlockRuleId
-      if Avatar then
-        bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
-      end
-    end
-    if MainUIConfig and UIUtils.CheckCdnHide(MainUIConfig.SystemUIName) then
-      bUnlocked = false
-    end
-    if DataMgr.MainUI[id].EscShowCondition and bUnlocked then
-      local Type
-      local WidgetName = "MenuEntranceBtn"
-      if 1 == DataMgr.MainUI[id].EscShowType then
-        Type = "Small"
-        WidgetName = "MenuEntranceBtnS"
-      end
-      local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
-      local IgnoreCNChannelIds = {
-        [46] = true,
-        [303] = true,
-        [269] = true,
-        [286] = true,
-        [297] = true,
-        [301] = true,
-        [300] = true
-      }
-      local Item
-      if id == self.ShopEntranceId or id == self.ActivityEntranceId then
-        Type = "Large"
-        if id == self.ShopEntranceId then
-          Item = self.Entrance_Shop
-        else
-          Item = self.Entrance_Activity
-        end
-      elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
-        goto lbl_273
-      elseif id == self.CloudGameEntranceId and (UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId]) then
-        goto lbl_273
-      else
-        local TaskName = "MenuEntranceBtn_" .. id
-        Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)
-      end
-      if Item then
-        local ConditionSucc = ConditionUtils.CheckCondition(Avatar, DataMgr.MainUI[id].EscShowCondition)
-        if ConditionSucc then
-          self:HideOrShowReddot(Item, id)
-          Item.BtnId = id
-          if id == CommonConst.ArmoryEnterId then
-            self.ArmoryItem = Item
-          end
-          Item:LoadImage(id, Type)
-          Item.Owner = self
-          Item.LinkName = DataMgr.MainUI[id].Link
-          if "Small" == Type then
-            self.WB_Entrance:AddChildToWrapBox(Item)
-          else
-            if "Large" ~= Type then
-              self.Panel_Function:AddChildToWrapBox(Item)
-              InitSuccNum = InitSuccNum + 1
-            end
-            Item.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-          end
-          local IsForbid, ForbidToast = self:CheckSystemForbid(MainUIConfig.SystemUIName)
-          Item:InitButton(self, IsForbid, ForbidToast)
-        end
-      end
+    if 20 == id and UIUtils.AmIInGuildScene() then
     else
-      if 4 == id or 18 == id then
-        UnlockNum = UnlockNum + 1
+      local MainUIConfig = DataMgr.MainUI[Value.Id]
+      local bUnlocked = true
+      local UIUnlockRuleName = DataMgr.MainUI[id].UIUnlockRuleName
+      if "GameEvent" == UIUnlockRuleName then
+        local a = 1
       end
-      if 2 == UnlockNum then
-        self.Entrance_Shop:SetVisibility(UIConst.VisibilityOp.Collapsed)
-        self.Entrance_Activity:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      if UIUnlockRuleName then
+        local UIUnlockRule = DataMgr.UIUnlockRule
+        local UIUnlockRuleId = UIUnlockRule[UIUnlockRuleName].UIUnlockRuleId
+        if Avatar then
+          bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+        end
+      end
+      if MainUIConfig and UIUtils.CheckCdnHide(MainUIConfig.SystemUIName) then
+        bUnlocked = false
+      end
+      if DataMgr.MainUI[id].EscShowCondition and bUnlocked then
+        local Type
+        local WidgetName = "MenuEntranceBtn"
+        if 1 == DataMgr.MainUI[id].EscShowType then
+          Type = "Small"
+          WidgetName = "MenuEntranceBtnS"
+        end
+        local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+        local IgnoreCNChannelIds = {
+          [46] = true,
+          [303] = true,
+          [269] = true,
+          [286] = true,
+          [297] = true,
+          [301] = true,
+          [300] = true
+        }
+        local Item
+        if id == self.ShopEntranceId or id == self.ActivityEntranceId then
+          Type = "Large"
+          if id == self.ShopEntranceId then
+            Item = self.Entrance_Shop
+          else
+            Item = self.Entrance_Activity
+          end
+        elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
+          goto lbl_280
+        elseif id == self.CloudGameEntranceId and (UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId]) then
+          goto lbl_280
+        else
+          local TaskName = "MenuEntranceBtn_" .. id
+          Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)
+        end
+        if Item then
+          local ConditionSucc = ConditionUtils.CheckCondition(Avatar, DataMgr.MainUI[id].EscShowCondition)
+          if ConditionSucc then
+            self:HideOrShowReddot(Item, id)
+            Item.BtnId = id
+            if id == CommonConst.ArmoryEnterId then
+              self.ArmoryItem = Item
+            end
+            Item:LoadImage(id, Type)
+            Item.Owner = self
+            Item.LinkName = DataMgr.MainUI[id].Link
+            if "Small" == Type then
+              self.WB_Entrance:AddChildToWrapBox(Item)
+            else
+              if "Large" ~= Type then
+                self.Panel_Function:AddChildToWrapBox(Item)
+                InitSuccNum = InitSuccNum + 1
+              end
+              Item.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+            end
+            local IsForbid, ForbidToast = self:CheckSystemForbid(MainUIConfig.SystemUIName)
+            Item:InitButton(self, IsForbid, ForbidToast)
+          end
+        end
+      else
+        if 4 == id or 18 == id then
+          UnlockNum = UnlockNum + 1
+        end
+        if 2 == UnlockNum then
+          self.Entrance_Shop:SetVisibility(UIConst.VisibilityOp.Collapsed)
+          self.Entrance_Activity:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        end
       end
     end
-    ::lbl_273::
+    ::lbl_280::
   end
   ItemNum = ItemNum + 4 - ItemNum % 4
   local EmptyNum = ItemNum - InitSuccNum
@@ -726,6 +790,7 @@ end
 function Menu_World_PC_C:Destruct()
   self:RemoveReddotListener("EditBtn", self.OnEditBtnReddotChange)
   self:RemoveReddotListener("ExperienceMain")
+  EventManager:RemoveEvent(EventID.OnPersonalInfoBgChanged, self)
   self:RemoveInputMethodChangedListen()
   self.Super.Destruct(self)
 end
@@ -839,7 +904,20 @@ function Menu_World_PC_C:RefreshOpInfoByInputDevice(CurInputType, CurGamepadName
 end
 
 function Menu_World_PC_C:OnPanelNavigationToBoundary(NavigationDirection)
+  local CurrentIndex, ItemCount = self:GetFocusedFunctionItemIndex()
+  if NavigationDirection == EUINavigation.Down then
+    if CurrentIndex then
+      local NextIndex = CurrentIndex + 2
+      if ItemCount > NextIndex then
+        return self:FocusFunctionItemByIndex(NextIndex)
+      end
+    end
+    return nil
+  end
   if NavigationDirection == EUINavigation.Up then
+    if CurrentIndex and CurrentIndex >= 2 then
+      return self:FocusFunctionItemByIndex(CurrentIndex - 2)
+    end
     local IsFocusLeft = self:IsFoucsLeftPanelFunctionBtn()
     local LeftUnlocked = 0 == self.Entrance_Shop.WidgetSwitcher_State:GetActiveWidgetIndex()
     local RightUnlocked = 0 == self.Entrance_Activity.WidgetSwitcher_State:GetActiveWidgetIndex()

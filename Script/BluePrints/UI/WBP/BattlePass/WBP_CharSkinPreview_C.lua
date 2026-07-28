@@ -590,7 +590,7 @@ function M:Destruct(...)
   end
   M.Super.Destruct(self, ...)
   BattlePassController:GetModel():RemoveModelDataRefCount("BagActorController", function(Target)
-    if not Target or not IsValid(Target) then
+    if not Target then
       return
     end
     Target:OnClosed()
@@ -2127,6 +2127,11 @@ function M:ApplyRoleListVisibility()
     end
   else
     self.Btn_Confirm:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if not bShow then
+    self:AddTimer(0.1, function()
+      self.VB_Info:SetRenderOpacity(1)
+    end)
   end
 end
 

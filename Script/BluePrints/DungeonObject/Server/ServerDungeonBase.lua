@@ -8,6 +8,7 @@ ServerDungeonBase.__Component__ = {
 
 function ServerDungeonBase:BeginPlay()
   self.ActiveMonsterSpawnRewardIds = {}
+  self.DungeonFeishuOnceMap = {}
 end
 
 function ServerDungeonBase:OnNotifyServerDungeonEvent_OnInit()
@@ -180,6 +181,35 @@ function ServerDungeonBase:FillMonsterSpawnRewardIds(ExtraInfo, MonsterId)
   else
     ExtraInfo.MonsterSpawnRewardIds = nil
   end
+end
+
+function ServerDungeonBase:ReportDungeonWarningToFeishu(Msg, Opt)
+  Opt = Opt or {}
+  self.DungeonFeishuOnceMap = self.DungeonFeishuOnceMap or {}
+  local OnceKey = Opt.OnceKey
+  if OnceKey and self.DungeonFeishuOnceMap[OnceKey] then
+    return false
+  end
+  if self.DSEntity then
+    local AvatarEid = Opt.AvatarEid
+    if not AvatarEid and self.PlayerIterator then
+      for Eid, _ in self:PlayerIterator() do
+        AvatarEid = Eid
+        break
+      end
+    end
+    if not AvatarEid then
+      self:Log("ReportDungeonWarningToFeishu failed, AvatarEid is nil", Msg)
+      return false
+    end
+    self:NotifyServerAvatar("ReportDungeonWarningToFeishu", AvatarEid, Msg)
+  else
+    self:NotifyServerAvatar("ReportDungeonWarningToFeishu", nil, Msg)
+  end
+  if OnceKey then
+    self.DungeonFeishuOnceMap[OnceKey] = true
+  end
+  return true
 end
 
 DungeonClass.AssembleComponents(ServerDungeonBase)

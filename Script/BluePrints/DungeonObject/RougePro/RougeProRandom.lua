@@ -1,3 +1,4 @@
+local ConditionUtils = require("BluePrints.Common.ConditionUtils")
 local RougeProRandom = {}
 
 function RougeProRandom:BeginPlay()
@@ -27,8 +28,8 @@ function RougeProRandom:GetTreasureByRandomId(Player, RandomId)
   local function InnerGetTreasureByRandomId()
     if RandomType == CommonConst.RougeLikeAwardType.SpecifyOne then
       return self:SpecifyOneRougeProTreasure(Player, RandomInfo, ExcludeTreasure, ExcludeGroup)
-    elseif RandomType == RandomType == CommonConst.RougeLikeAwardType.ManualRandomThree then
-      RandomCount = 3
+    elseif RandomType == CommonConst.RougeLikeAwardType.ManualRandomThree then
+      RandomCount = self:GetRougeProEffect("ChoiceNumber", Player)
     end
     local Result = {}
     local ResultLeft = self:GetRandomTreasureForCount(RandomCount, Result, LimitGroup, Rarity, ExcludeTreasure, ExcludeGroup)
@@ -50,8 +51,8 @@ function RougeProRandom:GetTreasureByRandomId(Player, RandomId)
     Result = {
       Result[1]
     }
-    return Result
   end
+  return Result
 end
 
 function RougeProRandom:GetRandomTreasureForCount(Count, Result, LimitGroup, Rarity, ExcludeTreasure, ExcludeGroup)
@@ -165,6 +166,10 @@ function RougeProRandom:SpecifyOneRougeProTreasure(Player, RandomInfo, ExcludeTr
     return {}
   end
   return {SpecifyAwardId}
+end
+
+function RougeProRandom:PlayerReceiveRandomTreasure(AvatarEid, RandomId)
+  print(string.format("PlayerReceiveRandomTreasure(AvatarEid=%s, RandomId=%s)", tostring(AvatarEid), tostring(RandomId)))
 end
 
 return RougeProRandom

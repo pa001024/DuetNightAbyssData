@@ -17,30 +17,47 @@ T.RT_11 = {BuffRate = "#1"}
 T.RT_12 = {LastTime = 30}
 T.RT_13 = {LastTime = 15}
 T.RT_14 = {LastTime = 6}
-T.RT_15 = {DamageRate = 0.3}
-T.RT_16 = {CD = 6}
-T.RT_17 = {DamageRate = -0.5}
-T.RT_18 = {TriggerProb1 = 0.25, TriggerProb2 = 0.5}
-T.RT_19 = {
+T.RT_15 = {
+  CDValue = 30,
+  HpPercent = 0.3,
+  LastTime = 2
+}
+T.RT_16 = {SPCD = 10}
+T.RT_17 = {DamageRate = 0.3}
+T.RT_18 = {DamageRate = 0.4}
+T.RT_19 = {DamageRate = 0.05}
+T.RT_20 = {LastTime = 8}
+T.RT_21 = {CD = 6}
+T.RT_22 = {CD = 2}
+T.RT_23 = {DamageRate = -0.5}
+T.RT_24 = {DamageRate = 4}
+T.RT_25 = {CD = 5, TNTrigger = 0.5}
+T.RT_26 = {DamageRate = 0.3, TNTrigger = 0.5}
+T.RT_27 = {DamagedRate = 0.2}
+T.RT_28 = {CD = 10, DamageRate = 0.1}
+T.RT_29 = {TriggerProb1 = 0.25, TriggerProb2 = 0.5}
+T.RT_30 = {
   EveryTimeChange = 0.01,
   Increment = 0.15,
   MaxDamageUp = 0.6
 }
-T.RT_20 = {AttrName = "GrRate", MonTag = "Mon.Gr"}
-T.RT_21 = {AttrName = "JtRate", MonTag = "Mon.Jt"}
-T.RT_22 = {AttrName = "JhRate", MonTag = "Mon.Jh"}
-T.RT_23 = {AttrName = "SqRate", MonTag = "Mon.Sq"}
-T.RT_24 = {WildFireCountMax = 10, WildFireRate = "#1"}
-T.RT_25 = {Rate = 1}
-T.RT_26 = {SkillEffectId = 600000101, SkillEffectId2 = 600000103}
-T.RT_27 = {
+T.RT_31 = {CD = 10}
+T.RT_32 = {AttrName = "GrRate", MonTag = "Mon.Gr"}
+T.RT_33 = {AttrName = "JtRate", MonTag = "Mon.Jt"}
+T.RT_34 = {AttrName = "JhRate", MonTag = "Mon.Jh"}
+T.RT_35 = {AttrName = "SqRate", MonTag = "Mon.Sq"}
+T.RT_36 = {WildFireCountMax = 10, WildFireRate = "#1"}
+T.RT_37 = {Rate = 0.5}
+T.RT_38 = {Rate = 1}
+T.RT_39 = {SkillEffectId = 600000101, SkillEffectId2 = 600000103}
+T.RT_40 = {
   SkillEffectId = 600000401,
   SkillEffectId2 = 600000403,
   SkillEffectId3 = 600000404,
   Time = 5,
   WarningDelay = 2.5
 }
-T.RT_28 = {
+T.RT_41 = {
   PreFXColorIndex = 0,
   PreFXRadius = 300,
   PreFXTime = 2,
@@ -48,32 +65,34 @@ T.RT_28 = {
   SkillEffectId = 600000501,
   Time = 10.0
 }
-T.RT_29 = {
+T.RT_42 = {
   SkillEffectId = 600000601,
   Time = 15,
   WarningDelay = 0.2
 }
-T.RT_30 = {SkillEffectId = 600000701, Time = 15}
-T.RT_31 = {SkillEffectId = 600000801, SkillEffectId2 = 600000802}
-T.RT_32 = {
+T.RT_43 = {SkillEffectId = 600000701, Time = 15}
+T.RT_44 = {SkillEffectId = 600000801, SkillEffectId2 = 600000802}
+T.RT_45 = {
   SkillEffectId = 600000901,
   Time = 10,
   UseSkillDis = 2500
 }
-T.RT_33 = {SkillEffectId = 600001101}
-T.RT_34 = {HealRate = 0.02, SkillEffectId = 600001301}
-T.RT_35 = {
+T.RT_46 = {SkillEffectId = 600001101}
+T.RT_47 = {HealRate = 0.02, SkillEffectId = 600001301}
+T.RT_48 = {
   AddDamageRate = 1.5,
   SkillEffectId = 600001401,
   SkillEffectId2 = 600001402,
   SkillEffectId3 = 600001403
 }
-T.RT_36 = {
+T.RT_49 = {SkillEffectId1 = 600001501, SkillEffectId2 = 600001502}
+T.RT_50 = {SkillEffectId = 600001601}
+T.RT_51 = {
   SkillEffectId = 600000201,
   Time = 5,
   WarningDelay = 2.5
 }
-T.RT_37 = {
+T.RT_52 = {
   PreFXColorIndex = 8,
   PreFXRadius = 500,
   PreFXTime = 3,
@@ -81,7 +100,7 @@ T.RT_37 = {
   SkillEffectId = 600000301,
   Time = 5
 }
-T.RT_38 = {
+T.RT_53 = {
   SkillEffectId = 600001001,
   SkillEffectId2 = 600001005,
   SkillEffectId3 = 600001003,
@@ -89,7 +108,7 @@ T.RT_38 = {
   SkillEffectId5 = 600001002,
   Time = 6
 }
-T.RT_39 = {SkillEffectId = 600001201, Time = 12}
+T.RT_54 = {SkillEffectId = 600001201, Time = 12}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -351,6 +370,11 @@ return ReadOnly("PassiveEffect", {
     ID = 1532,
     UniquePassive = 1
   },
+  [1725] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_1727.BP_Char_1727",
+    ID = 1725,
+    Vars = T.RT_1
+  },
   [1727] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_1727.BP_Char_1727",
     ID = 1727,
@@ -553,25 +577,25 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 2501,
     UniquePassive = 1,
-    Vars = T.RT_20
+    Vars = T.RT_32
   },
   [2502] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 2502,
     UniquePassive = 1,
-    Vars = T.RT_21
+    Vars = T.RT_33
   },
   [2503] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 2503,
     UniquePassive = 1,
-    Vars = T.RT_22
+    Vars = T.RT_34
   },
   [2504] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 2504,
     UniquePassive = 1,
-    Vars = T.RT_23
+    Vars = T.RT_35
   },
   [2701] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2701.BP_Melee_2701",
@@ -655,25 +679,25 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 3501,
     UniquePassive = 1,
-    Vars = T.RT_20
+    Vars = T.RT_32
   },
   [3502] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 3502,
     UniquePassive = 1,
-    Vars = T.RT_21
+    Vars = T.RT_33
   },
   [3503] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 3503,
     UniquePassive = 1,
-    Vars = T.RT_22
+    Vars = T.RT_34
   },
   [3504] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2500.BP_Melee_2500",
     ID = 3504,
     UniquePassive = 1,
-    Vars = T.RT_23
+    Vars = T.RT_35
   },
   [3604] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Ranged_3000.BP_Ranged_3000",
@@ -726,18 +750,18 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_6100.BP_Char_6100",
     ID = 6121,
     Vars = {
-      AttrName = "SkillRange",
+      AttrName = "SkillEfficiency",
       BuffId = 6121,
-      CompareBase = 1.5
+      CompareBase = 1.65
     }
   },
   [6123] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_6100.BP_Char_6100",
     ID = 6123,
     Vars = {
-      AttrName = "SkillEfficiency",
+      AttrName = "SkillIntensity",
       BuffId = 6123,
-      CompareBase = 1.5
+      CompareBase = 3.5
     }
   },
   [6131] = {
@@ -812,6 +836,11 @@ return ReadOnly("PassiveEffect", {
       CompareBase = 2
     }
   },
+  [6201] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Common_SkillTrigger.BP_Common_SkillTrigger",
+    ID = 6201,
+    Vars = {TriggerProb = 0.8}
+  },
   [10001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.BP_Nvzhu",
     ID = 10001
@@ -880,6 +909,11 @@ return ReadOnly("PassiveEffect", {
     ID = 10208,
     Vars = T.RT_8
   },
+  [10209] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Polearm_10209.BP_Polearm_10209",
+    ID = 10209,
+    Vars = {LastTime = 15, TriggerProb = 0.3}
+  },
   [10299] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Polearm_10299.BP_Polearm_10299",
     ID = 10299,
@@ -912,6 +946,20 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Claymore_10305.BP_Claymore_10305",
     ID = 10305,
     Vars = T.RT_8
+  },
+  [10399] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Claymore_10399.BP_Claymore_10399",
+    ID = 10399,
+    Vars = {
+      AddWeaponSP01 = 2,
+      AddWeaponSP02 = 2,
+      AddWeaponSP03 = 4,
+      AddWeaponSP04 = 80,
+      BaseAttrRate = 0.25,
+      BuffTime = 5,
+      DamageRate3_1 = 0.75,
+      DamageRate3_2 = 0.75
+    }
   },
   [10401] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Dualblade_10401.BP_Dualblade_10401",
@@ -971,6 +1019,11 @@ return ReadOnly("PassiveEffect", {
     ID = 20103,
     Vars = T.RT_10
   },
+  [20104] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Pistol_20104.BP_Pistol_20104",
+    ID = 20104,
+    Vars = T.RT_10
+  },
   [20203] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Crossbow_20203.BP_Crossbow_20203",
     ID = 20203,
@@ -979,6 +1032,11 @@ return ReadOnly("PassiveEffect", {
   [20205] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Crossbow_20205.BP_Crossbow_20205",
     ID = 20205,
+    Vars = T.RT_10
+  },
+  [20207] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Crossbow_20207.BP_Crossbow_20207",
+    ID = 20207,
     Vars = T.RT_10
   },
   [20301] = {
@@ -1323,18 +1381,6 @@ return ReadOnly("PassiveEffect", {
     ID = 120104,
     Vars = {AddDamagedRate = 0.6}
   },
-  [120201] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive.BP_Falu_Passive",
-    ID = 120201
-  },
-  [120202] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Target_Passive.BP_Falu_Target_Passive",
-    ID = 120202
-  },
-  [120203] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive2.BP_Falu_Passive2",
-    ID = 120203
-  },
   [150001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Common_PhantomPassive.BP_Common_PhantomPassive",
     ID = 150001,
@@ -1526,12 +1572,24 @@ return ReadOnly("PassiveEffect", {
   },
   [210201] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Eve_Passive.BP_Eve_Passive",
-    ID = 210201
+    ID = 210201,
+    VarSkillLevelSource = {Summon02LifeTime = 210201},
+    Vars = {
+      Grade6CD = 2.5,
+      Grade6Prob = 0.5,
+      PassiveProb = "#1",
+      Summon02LifeTime = 25
+    }
+  },
+  [210203] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Eve_Passive2.BP_Eve_Passive2",
+    ID = 210203,
+    Vars = {SpIncrease = 2}
   },
   [210212] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Eve_FriendSummoned_Skill02.BP_Eve_FriendSummoned_Skill02",
     ID = 210212,
-    Vars = {Prob = 0.5}
+    Vars = {Prob = 0.6}
   },
   [220101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_WeitaF_Water_Passvie.BP_WeitaF_Water_Passvie",
@@ -1540,6 +1598,10 @@ return ReadOnly("PassiveEffect", {
   [220102] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_WeitaF_Water_Passvie2.BP_WeitaF_Water_Passvie2",
     ID = 220102
+  },
+  [220103] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_WeitaF_Water_CreateSummon.BP_WeitaF_Water_CreateSummon",
+    ID = 220103
   },
   [230101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Zhangyu.BP_Zhangyu",
@@ -1632,12 +1694,12 @@ return ReadOnly("PassiveEffect", {
   [310111] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Linen_Skill1.BP_Linen_Skill1",
     ID = 310111,
-    Vars = T.RT_24
+    Vars = T.RT_36
   },
   [310112] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Linen_Skill1Extra.BP_Linen_Skill1Extra",
     ID = 310112,
-    Vars = T.RT_24
+    Vars = T.RT_36
   },
   [310201] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Xier_Passive.BP_Xier_Passive",
@@ -1679,6 +1741,18 @@ return ReadOnly("PassiveEffect", {
     ID = 310302,
     Vars = {BuffLastTime = 5}
   },
+  [310401] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive.BP_Falu_Passive",
+    ID = 310401
+  },
+  [310402] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Target_Passive.BP_Falu_Target_Passive",
+    ID = 310402
+  },
+  [310403] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive2.BP_Falu_Passive2",
+    ID = 310403
+  },
   [320101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Haier_Passive.BP_Haier_Passive",
     ID = 320101,
@@ -1700,7 +1774,7 @@ return ReadOnly("PassiveEffect", {
   [320104] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Haier_Passive2.BP_Haier_Passive2",
     ID = 320104,
-    Vars = {Rate = 0.5}
+    Vars = T.RT_37
   },
   [320105] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Haier_UltraPassive.BP_Haier_UltraPassive",
@@ -1879,7 +1953,7 @@ return ReadOnly("PassiveEffect", {
   [430102] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Xibi_Passive2.BP_Xibi_Passive2",
     ID = 430102,
-    Vars = T.RT_25
+    Vars = T.RT_38
   },
   [430103] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Xibi_Skill02_Target.BP_Xibi_Skill02_Target",
@@ -1986,10 +2060,6 @@ return ReadOnly("PassiveEffect", {
   [540202] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Lilikou_Extra.BP_Lilikou_Extra",
     ID = 540202
-  },
-  [540211] = {
-    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Lilikou_Friend.BP_Lilikou_Friend",
-    ID = 540211
   },
   [600501] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Gr_Longcao_DefenceState.BP_Gr_Longcao_DefenceState",
@@ -2121,6 +2191,15 @@ return ReadOnly("PassiveEffect", {
     ID = 851901,
     Vars = {BuffId = 851901, LastTime = -1}
   },
+  [852211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Common_AddDamageRateToMech.BP_Common_AddDamageRateToMech",
+    ID = 852211,
+    Vars = {AddDamageRate = 19, IntVar = 1}
+  },
+  [852212] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Boss_Tuisheng_ExecuteSkillEffectInterval.BP_Boss_Tuisheng_ExecuteSkillEffectInterval",
+    ID = 852212
+  },
   [900001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Common_Addbuff.BP_Common_Addbuff",
     ID = 900001,
@@ -2181,6 +2260,10 @@ return ReadOnly("PassiveEffect", {
   [1050102] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/BP_Swordwhip_HeavyAttack.BP_Swordwhip_HeavyAttack",
     ID = 1050102
+  },
+  [1050103] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/BP_Swordwhip_Mod02_HeavyAttack.BP_Swordwhip_Mod02_HeavyAttack",
+    ID = 1050103
   },
   [1961001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_1961.BP_Char_1961",
@@ -2245,12 +2328,46 @@ return ReadOnly("PassiveEffect", {
   [4020113] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020212.BP_AutoChess_4020212",
     ID = 4020113,
-    Vars = T.RT_25
+    Vars = T.RT_38
   },
   [4020114] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020213.BP_AutoChess_4020213",
     ID = 4020114,
-    Vars = T.RT_25
+    Vars = T.RT_38
+  },
+  [4020115] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020215.BP_AutoChess_4020215",
+    ID = 4020115
+  },
+  [4020116] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020216.BP_AutoChess_4020216",
+    ID = 4020116,
+    Vars = {Divisor = 250}
+  },
+  [4020117] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020217.BP_AutoChess_4020217",
+    ID = 4020117,
+    Vars = {Time = 5}
+  },
+  [4020118] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020218.BP_AutoChess_4020218",
+    ID = 4020118,
+    Vars = {BuffId = 4020725}
+  },
+  [4020119] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020219.BP_AutoChess_4020219",
+    ID = 4020119,
+    Vars = {BuffId = 6000211, LastTime = 3}
+  },
+  [4020120] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/AutoChess/BP_AutoChess_4020220.BP_AutoChess_4020220",
+    ID = 4020120,
+    Vars = T.RT_37
+  },
+  [4030008] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Common_Executed.BP_Common_Executed",
+    ID = 4030008,
+    Vars = {BuffId = 4030008}
   },
   [5000303] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Dungeon/BP_Dungeon_5000303.BP_Dungeon_5000303",
@@ -2307,7 +2424,7 @@ return ReadOnly("PassiveEffect", {
   [6000017] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Common_AddDamageRateToMech.BP_Common_AddDamageRateToMech",
     ID = 6000017,
-    Vars = {AddDamageRate = 3}
+    Vars = {AddDamageRate = 3, IntVar = 0}
   },
   [6000018] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Common_Addbuff.BP_Common_Addbuff",
@@ -2324,10 +2441,15 @@ return ReadOnly("PassiveEffect", {
     ID = 6000021,
     Vars = {AddDamageRate = 1}
   },
+  [6000022] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Common_Addbuff.BP_Common_Addbuff",
+    ID = 6000022,
+    Vars = {BuffId = 6000213, LastTime = -1}
+  },
   [6000101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Frozen.BP_Strong_Frozen",
     ID = 6000101,
-    Vars = T.RT_26
+    Vars = T.RT_39
   },
   [6000102] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Burst.BP_Strong_Burst",
@@ -2353,32 +2475,32 @@ return ReadOnly("PassiveEffect", {
   [6000104] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Thunder.BP_Strong_Thunder",
     ID = 6000104,
-    Vars = T.RT_27
+    Vars = T.RT_40
   },
   [6000105] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Blood.BP_Strong_Blood",
     ID = 6000105,
-    Vars = T.RT_28
+    Vars = T.RT_41
   },
   [6000106] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Fade.BP_Strong_Fade",
     ID = 6000106,
-    Vars = T.RT_29
+    Vars = T.RT_42
   },
   [6000107] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Shield.BP_Strong_Shield",
     ID = 6000107,
-    Vars = T.RT_30
+    Vars = T.RT_43
   },
   [6000108] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Revenge.BP_Strong_Revenge",
     ID = 6000108,
-    Vars = T.RT_31
+    Vars = T.RT_44
   },
   [6000109] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_IceOrb.BP_Strong_IceOrb",
     ID = 6000109,
-    Vars = T.RT_32
+    Vars = T.RT_45
   },
   [6000110] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Reflect.BP_Strong_Reflect",
@@ -2395,7 +2517,7 @@ return ReadOnly("PassiveEffect", {
   [6000111] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Kamikaze.BP_Strong_Kamikaze",
     ID = 6000111,
-    Vars = T.RT_33
+    Vars = T.RT_46
   },
   [6000112] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_ThunderLaser.BP_Strong_ThunderLaser",
@@ -2405,152 +2527,182 @@ return ReadOnly("PassiveEffect", {
   [6000113] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Vampire.BP_Strong_Vampire",
     ID = 6000113,
-    Vars = T.RT_34
+    Vars = T.RT_47
   },
   [6000114] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Threefold.BP_Strong_Threefold",
     ID = 6000114,
-    Vars = T.RT_35
+    Vars = T.RT_48
+  },
+  [6000115] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Empower.BP_Strong_Empower",
+    ID = 6000115,
+    Vars = T.RT_49
+  },
+  [6000116] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Shred.BP_Strong_Shred",
+    ID = 6000116,
+    Vars = T.RT_50
   },
   [6000201] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Frozen.BP_Strong_Frozen",
     ID = 6000201,
-    Vars = T.RT_26
+    Vars = T.RT_39
   },
   [6000202] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Burst.BP_Strong_Burst",
     ID = 6000202,
-    Vars = T.RT_36
+    Vars = T.RT_51
   },
   [6000203] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Poison.BP_Strong_Poison",
     ID = 6000203,
-    Vars = T.RT_37
+    Vars = T.RT_52
   },
   [6000204] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Thunder.BP_Strong_Thunder",
     ID = 6000204,
-    Vars = T.RT_27
+    Vars = T.RT_40
   },
   [6000205] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Blood.BP_Strong_Blood",
     ID = 6000205,
-    Vars = T.RT_28
+    Vars = T.RT_41
   },
   [6000206] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Fade.BP_Strong_Fade",
     ID = 6000206,
-    Vars = T.RT_29
+    Vars = T.RT_42
   },
   [6000207] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Shield.BP_Strong_Shield",
     ID = 6000207,
-    Vars = T.RT_30
+    Vars = T.RT_43
   },
   [6000208] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Revenge.BP_Strong_Revenge",
     ID = 6000208,
-    Vars = T.RT_31
+    Vars = T.RT_44
   },
   [6000209] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_IceOrb.BP_Strong_IceOrb",
     ID = 6000209,
-    Vars = T.RT_32
+    Vars = T.RT_45
   },
   [6000210] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Reflect.BP_Strong_Reflect",
     ID = 6000210,
-    Vars = T.RT_38
+    Vars = T.RT_53
   },
   [6000211] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Kamikaze.BP_Strong_Kamikaze",
     ID = 6000211,
-    Vars = T.RT_33
+    Vars = T.RT_46
   },
   [6000212] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_ThunderLaser.BP_Strong_ThunderLaser",
     ID = 6000212,
-    Vars = T.RT_39
+    Vars = T.RT_54
   },
   [6000213] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Vampire.BP_Strong_Vampire",
     ID = 6000213,
-    Vars = T.RT_34
+    Vars = T.RT_47
   },
   [6000214] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Threefold.BP_Strong_Threefold",
     ID = 6000214,
-    Vars = T.RT_35
+    Vars = T.RT_48
+  },
+  [6000215] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Empower.BP_Strong_Empower",
+    ID = 6000215,
+    Vars = T.RT_49
+  },
+  [6000216] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Shred.BP_Strong_Shred",
+    ID = 6000216,
+    Vars = T.RT_50
   },
   [6000301] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Frozen.BP_Strong_Frozen",
     ID = 6000301,
-    Vars = T.RT_26
+    Vars = T.RT_39
   },
   [6000302] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Burst.BP_Strong_Burst",
     ID = 6000302,
-    Vars = T.RT_36
+    Vars = T.RT_51
   },
   [6000303] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Poison.BP_Strong_Poison",
     ID = 6000303,
-    Vars = T.RT_37
+    Vars = T.RT_52
   },
   [6000304] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Thunder.BP_Strong_Thunder",
     ID = 6000304,
-    Vars = T.RT_27
+    Vars = T.RT_40
   },
   [6000305] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Blood.BP_Strong_Blood",
     ID = 6000305,
-    Vars = T.RT_28
+    Vars = T.RT_41
   },
   [6000306] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Fade.BP_Strong_Fade",
     ID = 6000306,
-    Vars = T.RT_29
+    Vars = T.RT_42
   },
   [6000307] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Shield.BP_Strong_Shield",
     ID = 6000307,
-    Vars = T.RT_30
+    Vars = T.RT_43
   },
   [6000308] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Revenge.BP_Strong_Revenge",
     ID = 6000308,
-    Vars = T.RT_31
+    Vars = T.RT_44
   },
   [6000309] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_IceOrb.BP_Strong_IceOrb",
     ID = 6000309,
-    Vars = T.RT_32
+    Vars = T.RT_45
   },
   [6000310] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Reflect.BP_Strong_Reflect",
     ID = 6000310,
-    Vars = T.RT_38
+    Vars = T.RT_53
   },
   [6000311] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Kamikaze.BP_Strong_Kamikaze",
     ID = 6000311,
-    Vars = T.RT_33
+    Vars = T.RT_46
   },
   [6000312] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_ThunderLaser.BP_Strong_ThunderLaser",
     ID = 6000312,
-    Vars = T.RT_39
+    Vars = T.RT_54
   },
   [6000313] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Vampire.BP_Strong_Vampire",
     ID = 6000313,
-    Vars = T.RT_34
+    Vars = T.RT_47
   },
   [6000314] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Threefold.BP_Strong_Threefold",
     ID = 6000314,
-    Vars = T.RT_35
+    Vars = T.RT_48
+  },
+  [6000315] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Empower.BP_Strong_Empower",
+    ID = 6000315,
+    Vars = T.RT_49
+  },
+  [6000316] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Monster/BP_Strong_Shred.BP_Strong_Shred",
+    ID = 6000316,
+    Vars = T.RT_50
   },
   [10101103] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Blessing/101/BP_10101103.BP_10101103",
@@ -2979,16 +3131,12 @@ return ReadOnly("PassiveEffect", {
   [20101001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20101001.BP_20101001",
     ID = 20101001,
-    Vars = {
-      CDValue = 30,
-      HpPercent = 0.3,
-      LastTime = 2
-    }
+    Vars = T.RT_15
   },
   [20102001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20102001.BP_20102001",
     ID = 20102001,
-    Vars = {SPCD = 10}
+    Vars = T.RT_16
   },
   [20104001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20104001.BP_20104001",
@@ -3001,37 +3149,37 @@ return ReadOnly("PassiveEffect", {
   [20108001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20108001.BP_20108001",
     ID = 20108001,
-    Vars = T.RT_15
+    Vars = T.RT_17
   },
   [20109001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20109001.BP_20109001",
     ID = 20109001,
-    Vars = T.RT_15
+    Vars = T.RT_17
   },
   [20110001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20110001.BP_20110001",
     ID = 20110001,
-    Vars = T.RT_15
+    Vars = T.RT_17
   },
   [20111001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20111001.BP_20111001",
     ID = 20111001,
-    Vars = T.RT_15
+    Vars = T.RT_17
   },
   [20112001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20112001.BP_20112001",
     ID = 20112001,
-    Vars = T.RT_15
+    Vars = T.RT_17
   },
   [20113001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20113001.BP_20113001",
     ID = 20113001,
-    Vars = T.RT_15
+    Vars = T.RT_17
   },
   [20114001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20114001.BP_20114001",
     ID = 20114001,
-    Vars = {DamageRate = 0.4}
+    Vars = T.RT_18
   },
   [20115001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20115001.BP_20115001",
@@ -3054,7 +3202,7 @@ return ReadOnly("PassiveEffect", {
   [20118001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20118001.BP_20118001",
     ID = 20118001,
-    Vars = {DamageRate = 0.05}
+    Vars = T.RT_19
   },
   [20119001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20119001.BP_20119001",
@@ -3063,7 +3211,7 @@ return ReadOnly("PassiveEffect", {
   [20120001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20120001.BP_20120001",
     ID = 20120001,
-    Vars = {LastTime = 8}
+    Vars = T.RT_20
   },
   [20121001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20121001.BP_20121001",
@@ -3073,32 +3221,32 @@ return ReadOnly("PassiveEffect", {
   [20130001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20130001.BP_20130001",
     ID = 20130001,
-    Vars = T.RT_16
+    Vars = T.RT_21
   },
   [20131001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20131001.BP_20131001",
     ID = 20131001,
-    Vars = T.RT_16
+    Vars = T.RT_21
   },
   [20132001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20132001.BP_20132001",
     ID = 20132001,
-    Vars = T.RT_16
+    Vars = T.RT_21
   },
   [20133001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20133001.BP_20133001",
     ID = 20133001,
-    Vars = T.RT_16
+    Vars = T.RT_21
   },
   [20134001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20134001.BP_20134001",
     ID = 20134001,
-    Vars = {CD = 2}
+    Vars = T.RT_22
   },
   [20135001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20135001.BP_20135001",
     ID = 20135001,
-    Vars = T.RT_16
+    Vars = T.RT_21
   },
   [20151001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20151001.BP_20151001",
@@ -3107,27 +3255,27 @@ return ReadOnly("PassiveEffect", {
   [20152001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20152001.BP_20152001",
     ID = 20152001,
-    Vars = T.RT_17
+    Vars = T.RT_23
   },
   [20153001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20153001.BP_20153001",
     ID = 20153001,
-    Vars = T.RT_17
+    Vars = T.RT_23
   },
   [20154001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20154001.BP_20154001",
     ID = 20154001,
-    Vars = {DamageRate = 4}
+    Vars = T.RT_24
   },
   [20156001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20156001.BP_20156001",
     ID = 20156001,
-    Vars = {CD = 5, TNTrigger = 0.5}
+    Vars = T.RT_25
   },
   [20157001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20157001.BP_20157001",
     ID = 20157001,
-    Vars = {DamageRate = 0.3, TNTrigger = 0.5}
+    Vars = T.RT_26
   },
   [20161001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20161001.BP_20161001",
@@ -3141,32 +3289,32 @@ return ReadOnly("PassiveEffect", {
   [20171001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20171001.BP_20171001",
     ID = 20171001,
-    Vars = {DamagedRate = 0.2}
+    Vars = T.RT_27
   },
   [20172001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20172001.BP_20172001",
     ID = 20172001,
-    Vars = {CD = 10, DamageRate = 0.1}
+    Vars = T.RT_28
   },
   [20181001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20181001.BP_20181001",
     ID = 20181001,
-    Vars = T.RT_18
+    Vars = T.RT_29
   },
   [20182001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20182001.BP_20182001",
     ID = 20182001,
-    Vars = T.RT_18
+    Vars = T.RT_29
   },
   [20183001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20183001.BP_20183001",
     ID = 20183001,
-    Vars = T.RT_18
+    Vars = T.RT_29
   },
   [20184001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_20184001.BP_20184001",
     ID = 20184001,
-    Vars = T.RT_18
+    Vars = T.RT_29
   },
   [20191001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_Char_20108001.BP_Char_20108001",
@@ -3175,16 +3323,246 @@ return ReadOnly("PassiveEffect", {
   [20192001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_Char_20105001.BP_Char_20105001",
     ID = 20192001,
-    Vars = T.RT_19
+    Vars = T.RT_30
   },
   [20193001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_Char_20104001.BP_Char_20104001",
     ID = 20193001,
-    Vars = T.RT_19
+    Vars = T.RT_30
   },
   [20194001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougeLike/Treasure/BP_Char_20102001.BP_Char_20102001",
     ID = 20194001
+  },
+  [21101031] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21101031.BP_21101031",
+    ID = 21101031,
+    Vars = T.RT_31
+  },
+  [21101041] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21101041.BP_21101041",
+    ID = 21101041,
+    Vars = T.RT_31
+  },
+  [21101061] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21101061.BP_21101061",
+    ID = 21101061,
+    Vars = T.RT_15
+  },
+  [21101071] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21101071.BP_21101071",
+    ID = 21101071,
+    Vars = T.RT_20
+  },
+  [21101101] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21101101.BP_21101101",
+    ID = 21101101,
+    Vars = T.RT_18
+  },
+  [21101131] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21101131.BP_21101131",
+    ID = 21101131,
+    Vars = T.RT_3
+  },
+  [21102021] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102021.BP_21102021",
+    ID = 21102021,
+    Vars = T.RT_16
+  },
+  [21102061] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102061.BP_21102061",
+    ID = 21102061,
+    Vars = {
+      CrdDownWeight = 25,
+      CrdUpProWeight = 5,
+      CrdUpWeight = 70
+    }
+  },
+  [21102081] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102081.BP_21102081",
+    ID = 21102081,
+    Vars = {
+      CD = 5,
+      HpPercent = 0.5,
+      SpPercent = 0.5
+    }
+  },
+  [21102091] = {ID = 21102091},
+  [21102101] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102101.BP_21102101",
+    ID = 21102101,
+    Vars = {
+      CD = 5,
+      CountInPassive = 10,
+      DamageRate = 1
+    }
+  },
+  [21102111] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102111.BP_21102111",
+    ID = 21102111,
+    Vars = {DamageRate = 0.5}
+  },
+  [21102121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102121.BP_21102121",
+    ID = 21102121,
+    Vars = {DamageRate = 0.1}
+  },
+  [21102131] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102131.BP_21102131",
+    ID = 21102131,
+    Vars = {CD = 10, HpPercent = 0.3}
+  },
+  [21102141] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102141.BP_21102141",
+    ID = 21102141,
+    Vars = {DamageRate = 1, Dis = 800}
+  },
+  [21102181] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102181.BP_21102181",
+    ID = 21102181,
+    Vars = T.RT_6
+  },
+  [21102191] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102191.BP_21102191",
+    ID = 21102191,
+    Vars = {StrongValueLimit = 0.2}
+  },
+  [21102201] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21102201.BP_21102201",
+    ID = 21102201,
+    Vars = {LastTime = 10, TriggerProb = 0.1}
+  },
+  [21103011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21103011.BP_21103011",
+    ID = 21103011
+  },
+  [21103021] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21103021.BP_21103021",
+    ID = 21103021,
+    Vars = T.RT_19
+  },
+  [21103041] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21103041.BP_21103041",
+    ID = 21103041,
+    Vars = {TriggerDamage = 5000}
+  },
+  [21103061] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21103061.BP_21103061",
+    ID = 21103061,
+    Vars = T.RT_6
+  },
+  [21171011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21171011.BP_21171011",
+    ID = 21171011,
+    Vars = T.RT_22
+  },
+  [21172011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21172011.BP_21172011",
+    ID = 21172011,
+    Vars = {CD = 3, DamageRate = 2}
+  },
+  [21181011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21181011.BP_21181011",
+    ID = 21181011,
+    Vars = {LastTime = 20}
+  },
+  [21182011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21182011.BP_21182011",
+    ID = 21182011,
+    Vars = {EnmityValueLimit = 0.2, LastTime = 20}
+  },
+  [21183011] = {ID = 21183011},
+  [21191011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21191011.BP_21191011",
+    ID = 21191011,
+    Vars = T.RT_27
+  },
+  [21192011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21192011.BP_21192011",
+    ID = 21192011,
+    Vars = T.RT_28
+  },
+  [21201011] = {ID = 21201011},
+  [21201021] = {ID = 21201021},
+  [21202011] = {ID = 21202011},
+  [21221011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21221011.BP_21221011",
+    ID = 21221011,
+    Vars = T.RT_29
+  },
+  [21221021] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21221021.BP_21221021",
+    ID = 21221021,
+    Vars = T.RT_29
+  },
+  [21221031] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21221031.BP_21221031",
+    ID = 21221031,
+    Vars = T.RT_29
+  },
+  [21221041] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21221041.BP_21221041",
+    ID = 21221041,
+    Vars = T.RT_29
+  },
+  [21231011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21231011.BP_21231011",
+    ID = 21231011
+  },
+  [21232011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21232011.BP_21232011",
+    ID = 21232011,
+    Vars = T.RT_23
+  },
+  [21232021] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21232021.BP_21232021",
+    ID = 21232021,
+    Vars = T.RT_23
+  },
+  [21233011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21233011.BP_21233011",
+    ID = 21233011,
+    Vars = T.RT_24
+  },
+  [21241011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21241011.BP_21241011",
+    ID = 21241011,
+    Vars = T.RT_25
+  },
+  [21242011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21242011.BP_21242011",
+    ID = 21242011,
+    Vars = T.RT_26
+  },
+  [21253011] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21253011.BP_21253011",
+    ID = 21253011,
+    Vars = T.RT_21
+  },
+  [21253021] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21253021.BP_21253021",
+    ID = 21253021,
+    Vars = T.RT_21
+  },
+  [21253031] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21253031.BP_21253031",
+    ID = 21253031,
+    Vars = T.RT_21
+  },
+  [21253041] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21253041.BP_21253041",
+    ID = 21253041,
+    Vars = T.RT_21
+  },
+  [21253051] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21253051.BP_21253051",
+    ID = 21253051,
+    Vars = T.RT_22
+  },
+  [21253061] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/RougePro/Treasure/BP_21253061.BP_21253061",
+    ID = 21253061,
+    Vars = T.RT_21
   },
   [40101000] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mechanism/BP_Mechanism_ExcuteSkillEffects_Rouge.BP_Mechanism_ExcuteSkillEffects_Rouge",

@@ -106,7 +106,7 @@ function BP_PickUpInteractiveComponent_C:BtnPressed(PlayerActor)
         self:RemoveTimer(self.PressTimer)
         if PlayerActor and PlayerActor.SetEnterInteractive then
           PlayerActor:SetEnterInteractive(false, self.MontageName or "Interactive_01_Montage", nil, "MechInteractive")
-          PlayerActor:SetCharacterTag(nil)
+          PlayerActor:SetCharacterTag("Idle")
         end
         if not self:CheckInteractiveSucc(PlayerActor.Eid) then
           self:InteractiveFailed()
@@ -130,11 +130,19 @@ function BP_PickUpInteractiveComponent_C:BtnReleased(PlayerActor, InPressTimeSec
   if not self:IsLastingInteract() then
     return
   end
+  self.bWaitingInteractiveFinish = true
+  self.WaitingInteractiveFinishTimer = self:AddTimer(2.0, function()
+    if self.bWaitingInteractiveFinish then
+      DebugPrint("yly Interactive montage finish timeout, you can interact now")
+      self.bWaitingInteractiveFinish = false
+      self:RemoveTimer(self.WaitingInteractiveFinishTimer)
+    end
+  end)
   self:RemoveTimer(self.PressTimer)
   local Owner = self:GetOwner()
   if PlayerActor and PlayerActor.SetEnterInteractive then
     PlayerActor:SetEnterInteractive(false, self.MontageName or "Interactive_01_Montage", nil, "MechInteractive")
-    PlayerActor:SetCharacterTag(nil)
+    PlayerActor:SetCharacterTag("Idle")
     self:OnBtnReleased()
   end
 end

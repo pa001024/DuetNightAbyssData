@@ -38,6 +38,30 @@
     "t": 1
   },
   {
+    "id": 111,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: The Last Drop of Blood",
+    "d": "Reduces allies' ATK by 150% and increases their Skill Intensity by 100%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 112,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Adrift in the Storm",
+    "d": "Reduces allies' ATK by 150% and increases their Multishot by 120%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 121,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Ireversible Farewell",
+    "d": "Allies lose 12% Damage Dealt and gain 50% Weapon DMG",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
     "id": 201,
     "icon": "Mon_Survive02",
     "n": "Bulwark Cadence: Trembling Paladin",
@@ -98,6 +122,54 @@
     "icon": "Mon_Survive02",
     "n": "Aegis Cadence: Gloom of the Undying",
     "d": "Enemies regenerate 30% of their Max Shield every 3 seconds. Regeneration pauses while any elemental bonus effect is active.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 212,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Hero's Heel",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. CRIT DMG lowers it by an additional 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 213,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Sniper's Honour",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. Ranged Weapon DMG lowers it by an additional 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 214,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Braveheart",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. Weapon DMG lowers it by an additional 1%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 215,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Swordsman's Honour",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. Melee Weapon DMG lowers it by an additional 3%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 216,
+    "icon": "Mon_Survive02",
+    "n": "Bulwark Cadence: Endless Trial",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. Periodic DMG lowers it by an additional 4%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 217,
+    "icon": "Mon_Survive02",
+    "n": "Defence Cadence: Tempered Mind",
+    "d": "Enemy units take 80% less damage, but each time they take damage, this reduction is lowered by 1%. Skill DMG lowers it by an additional 4%.",
     "t": 2,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
@@ -428,6 +500,38 @@
     "icon": "Skill",
     "n": "Allegro Agitato: Call to Victory",
     "d": "When an ally uses a Combat Skill or Ultimate Skill, gains 1 stack of +30% Skill Intensity for 18s, stacking up to 5 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 15111,
+    "icon": "Common",
+    "n": "Andante Furioso: Enduring Persistence",
+    "d": "When an ally deals damage, the target takes 5% increased damage for 10s. This effect stacks across different allies, up to 10 stacks.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 15121,
+    "icon": "Common",
+    "n": "Andante Furioso: Onslaught's Boon",
+    "d": "Every 5 instances of damage dealt by allies grants 1 stack of +15% ATK for 10s, stacking up to 10 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 15211,
+    "icon": "Common",
+    "n": "Andante Furioso: Glorious Expedition",
+    "d": "Every 10 instances of damage dealt by allies increases Morale by 6% for 10s, stacking up to 10 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 15221,
+    "icon": "Common",
+    "n": "Allegro Agitato: Stellar Radiance",
+    "d": "When an ally summons a unit, all allies gain +5% Damage Dealt for 10s. Max 10 stacks.",
     "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   }

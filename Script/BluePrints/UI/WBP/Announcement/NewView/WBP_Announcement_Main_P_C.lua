@@ -25,7 +25,6 @@ end
 
 function M:_CreateTabParams()
   local TabParams = {
-    PlatformName = PlatformName,
     Tabs = {
       {
         Text = GText(DataMgr.NoticeTab[1].Text),

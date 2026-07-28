@@ -215,7 +215,7 @@ function M:InitGamePadTip(Params)
     else
       self.Tip_GamePad:AddExecuteLogic(Params.ClickFuncObj, Params.ClickFunc)
     end
-  else
+  elseif Params.KeyInfo then
     self.Tip_GamePad:CreateCommonKey(Params.KeyInfo)
   end
   self.Tip_PC.Button_Area.OnClicked:Clear()

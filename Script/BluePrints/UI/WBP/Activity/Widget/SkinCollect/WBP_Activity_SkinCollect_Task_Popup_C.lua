@@ -27,9 +27,6 @@ local GAMEPAD_ANALOG_DIRECTION_EPSILON = 0.16
 local GAMEPAD_ANALOG_AXIS_DOMINANCE_MARGIN = 0.18
 local GAMEPAD_ANALOG_REPEAT_TIME = 0.25
 local GAMEPAD_ANALOG_NATIVE_FOCUS_SUPPRESS_DELAY = 0.25
-local TASK_POPUP_SHOW_SOUND = "event:/ui/common/role_trial_level_panel_show"
-local TASK_POPUP_SHOW_SOUND_NAME = "SkinCollectTaskPopupShow"
-local TASK_TYPE_TOGGLE_SOUND = "event:/ui/activity/feina_chapter_select_btn_click"
 
 local function GetCloseButton(Widget)
   if Widget and Widget.Btn_Close and Widget.Btn_Close.OnClicked then
@@ -236,11 +233,40 @@ local function GetFontBGAnchor(Widget)
   return Widget and (Widget.FontBGAnchor or Widget.FrontBGAnchor) or nil
 end
 
+local function GetTitleAnchor(Widget)
+  return Widget and (Widget.Group_TitleAnchor or Widget.TitleAnchor or Widget.Title) or nil
+end
+
+local function GetListAnchor(Widget)
+  return Widget and (Widget.ListAnchor or Widget.Group_ListAnchor) or nil
+end
+
 function M:RefreshTitle()
-  local PopupTitle = self.WBP_Activity_SkinCollect_Task_PopupTitle
-  if PopupTitle and PopupTitle.Text_Title then
-    PopupTitle.Text_Title:SetText(GText("UI_AppearanceCollect_AppearanceCollectTask"))
+  local PopupTitle = self.CurrentSkinCollectTitleWidget or self.WBP_Activity_SkinCollect_Task_PopupTitle
+  if PopupTitle and PopupTitle.RefreshTitle then
+    PopupTitle:RefreshTitle()
   end
+end
+
+function M:RefreshTitleByActivityId(EventId)
+  local ActivityId = NormalizeEventId(EventId)
+  if nil == ActivityId then
+    return
+  end
+  local RewardConfigData = DataMgr.AppearanceCollectReward and DataMgr.AppearanceCollectReward[ActivityId]
+  local TitlePath = RewardConfigData and RewardConfigData.TitleBP
+  self:RefreshAnchorWidgetByPath(GetTitleAnchor(self), TitlePath, "CurrentSkinCollectTitleWidget", "CurrentSkinCollectTitlePath", RewardConfigData, ActivityId)
+  self:RefreshTitle()
+end
+
+function M:RefreshTaskTypeListWidgetByActivityId(EventId)
+  local ActivityId = NormalizeEventId(EventId)
+  if nil == ActivityId then
+    return
+  end
+  local RewardConfigData = DataMgr.AppearanceCollectReward and DataMgr.AppearanceCollectReward[ActivityId]
+  local ListPath = RewardConfigData and RewardConfigData.ListBP
+  self:RefreshAnchorWidgetByPath(GetListAnchor(self), ListPath, "CurrentSkinCollectTaskTypeListWidget", "CurrentSkinCollectTaskTypeListPath", RewardConfigData, ActivityId)
 end
 
 function M:RefreshUIBGByActivityId(EventId)
@@ -331,21 +357,6 @@ function M:NotifyReturnToActivityEntryIfNeeded()
   EventManager:FireEvent(EventID.OnActivityEntryShowVisible)
 end
 
-local function ClearTaskTypeContainer(Container)
-  if not Container or not Container.ClearListItems then
-    return
-  end
-  Container:ClearListItems()
-end
-
-local function AddTaskTypeItem(OwnerWidget, Container, Content)
-  if not (OwnerWidget and Container) or not Container.AddItem then
-    return nil
-  end
-  Container:AddItem(Content)
-  return nil
-end
-
 local function ApplyTaskTypeInfoToContent(Content, TaskTypeInfo, TaskTypeIndex, OwnerWidget)
   if not Content or not TaskTypeInfo then
     return
@@ -361,79 +372,6 @@ local function ApplyTaskTypeInfoToContent(Content, TaskTypeInfo, TaskTypeIndex, 
   Content.Highlight = TaskTypeInfo.Highlight
   Content.SubTaskList = TaskTypeInfo.SubTaskList or {}
   Content.OwnerPopup = OwnerWidget
-end
-
-local function ResetTaskTypeScrollOffset(PopupItemList)
-  local ScrollPopItem = PopupItemList and PopupItemList.ScrollPopItem
-  if ScrollPopItem then
-    if ScrollPopItem.ScrollToStart then
-      ScrollPopItem:ScrollToStart()
-    elseif ScrollPopItem.SetScrollOffset then
-      ScrollPopItem:SetScrollOffset(0)
-    end
-  end
-  local ListPopItem = PopupItemList and PopupItemList.List_PopItem
-  if not ListPopItem then
-    return
-  end
-  if ListPopItem.ScrollIndexIntoView then
-    ListPopItem:ScrollIndexIntoView(0)
-    return
-  end
-  if ListPopItem.NavigateToIndex then
-    ListPopItem:NavigateToIndex(0)
-  end
-end
-
-local function CanBindUserScrolled(Widget)
-  return Widget and Widget.OnUserScrolled and Widget.OnUserScrolled.Add and Widget.OnUserScrolled.Remove
-end
-
-local function CanBindEntryLifecycle(Widget)
-  return Widget and Widget.BP_OnEntryGenerated and Widget.BP_OnEntryGenerated.Add and Widget.BP_OnEntryGenerated.Remove and Widget.BP_OnEntryReleased and Widget.BP_OnEntryReleased.Add and Widget.BP_OnEntryReleased.Remove
-end
-
-local function GetTaskTypeArrowScrollWidget(PopupItemList)
-  local ScrollPopItem = PopupItemList and PopupItemList.ScrollPopItem
-  if ScrollPopItem and ScrollPopItem.GetScrollOffset and ScrollPopItem.GetScrollOffsetOfEnd then
-    return ScrollPopItem
-  end
-  return nil
-end
-
-local function GetTaskTypeScrollOffsetInfo(PopupItemList)
-  local ScrollWidget = GetTaskTypeArrowScrollWidget(PopupItemList)
-  if not ScrollWidget or not ScrollWidget.GetScrollOffset then
-    return nil, nil, nil
-  end
-  local CurrentOffset = ScrollWidget:GetScrollOffset()
-  local EndOffset = ScrollWidget.GetScrollOffsetOfEnd and ScrollWidget:GetScrollOffsetOfEnd() or nil
-  return ScrollWidget, CurrentOffset, EndOffset
-end
-
-local function SetWidgetScrollOffset(Widget, Offset)
-  if not Widget or type(Offset) ~= "number" then
-    return false
-  end
-  if Widget.SetScrollOffset then
-    Widget:SetScrollOffset(Offset)
-    return true
-  end
-  if Widget.SetCurrentScrollOffset then
-    Widget:SetCurrentScrollOffset(Offset)
-    return true
-  end
-  if Offset <= TASK_TYPE_SCROLL_OFFSET_EPSILON and Widget.ScrollToStart then
-    Widget:ScrollToStart()
-    return true
-  end
-  return false
-end
-
-local function SetArrowVisible(ArrowWidget, bVisible)
-  if ArrowWidget then
-    ArrowWidget:SetVisibility(bVisible and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed)
-  end
 end
 
 local function GetTaskTypeStableId(Content)
@@ -498,12 +436,12 @@ end
 function M:OnLoaded(EventId)
   self.bIsFocusable = true
   self.CurActivityId = NormalizeEventId(EventId)
-  self:PlayTaskPopupShowSound()
+  self:RefreshTaskTypeListWidgetByActivityId(EventId)
   self:StopNativeUINavigation()
   self:AddDispatcher(EventID.OnAppearanceCollectEventChanged, self, self.OnAppearanceCollectEventChanged)
   self:BindBtnEvent()
   self:BindTaskTypeScrollEvent()
-  self:RefreshTitle()
+  self:RefreshTitleByActivityId(EventId)
   self:RefreshUIBGByActivityId(EventId)
   self:RefreshFontBGByActivityId(EventId)
   self:RefreshTaskTypeList(EventId)
@@ -535,8 +473,12 @@ end
 function M:StopNativeUINavigation()
   StopUINavigation(self)
   StopUINavigation(GetCloseButton(self))
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
+  local PopupItemList = self:GetTaskTypeListWidget()
   if not PopupItemList then
+    return
+  end
+  if PopupItemList.StopNativeUINavigation then
+    PopupItemList:StopNativeUINavigation()
     return
   end
   StopUINavigation(PopupItemList)
@@ -566,7 +508,6 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
 end
 
 function M:OnDestroyed()
-  self:EndTaskPopupShowSound()
   self:RemoveTimer(POPUP_SET_FOCUS_TIMER)
   self:RemoveTimer(GAMEPAD_INIT_FOCUS_TIMER)
   self:RemoveTimer(TASK_TYPE_ENTER_BATCH_TIMER)
@@ -575,9 +516,11 @@ function M:OnDestroyed()
   self:RemoveTimer(TASK_POPUP_RESTORE_VIEW_STATE_TIMER)
   self:ClearAnchorWidget(self.BGAnchor, "CurrentSkinCollectBgWidget", "CurrentSkinCollectBgPath")
   self:ClearAnchorWidget(GetFontBGAnchor(self), "CurrentSkinCollectFontBgWidget", "CurrentSkinCollectFontBgPath")
+  self:ClearAnchorWidget(GetTitleAnchor(self), "CurrentSkinCollectTitleWidget", "CurrentSkinCollectTitlePath")
   self:ClearGamepadFocus()
   self:ReleaseTaskTypeList()
   self:UnBindTaskTypeScrollEvent()
+  self:ClearAnchorWidget(GetListAnchor(self), "CurrentSkinCollectTaskTypeListWidget", "CurrentSkinCollectTaskTypeListPath")
   self:UnBindBtnEvent()
   self:RemoveDispatcher(EventID.OnAppearanceCollectEventChanged)
   M.Super.OnDestroyed(self)
@@ -630,23 +573,10 @@ function M:OnCloseClicked()
   self:Close()
 end
 
-function M:PlayTaskPopupShowSound()
-  AudioManager(self):PlayUISound(self, TASK_POPUP_SHOW_SOUND, TASK_POPUP_SHOW_SOUND_NAME, nil)
-end
-
-function M:EndTaskPopupShowSound()
-  AudioManager(self):SetEventSoundParam(self, TASK_POPUP_SHOW_SOUND_NAME, {ToEnd = 1})
-end
-
-function M:PlayTaskTypeToggleSound()
-  AudioManager(self):PlayUISound(self, TASK_TYPE_TOGGLE_SOUND, nil, nil)
-end
-
 function M:Close()
   if self.bClosingWithOutAnim then
     return
   end
-  self:EndTaskPopupShowSound()
   self:PlaySkinCollectBgAnimation("Bg_Out")
   self:NotifyReturnToActivityEntryIfNeeded()
   if self.Out then
@@ -656,17 +586,31 @@ function M:Close()
   self.Super.Close(self)
 end
 
+function M:GetTaskTypeListWidget()
+  return self.CurrentSkinCollectTaskTypeListWidget or self.WBP_Activity_SkinCollect_Task_PopupItemList
+end
+
 function M:GetTaskTypeListView()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.GetListView then
+    return PopupItemList:GetListView()
+  end
   return PopupItemList and PopupItemList.List_PopItem
 end
 
 function M:GetTaskTypeScrollBox()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.GetScrollBox then
+    return PopupItemList:GetScrollBox()
+  end
   return PopupItemList and PopupItemList.ScrollPopItem
 end
 
 function M:GetTaskTypeCount()
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.GetItemCount then
+    return PopupItemList:GetItemCount()
+  end
   local ListPopItem = self:GetTaskTypeListView()
   if not ListPopItem or not ListPopItem.GetListItems then
     return 0
@@ -675,6 +619,10 @@ function M:GetTaskTypeCount()
 end
 
 function M:GetTaskTypeListContent(Index)
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.GetItemByIndex then
+    return PopupItemList:GetItemByIndex(Index)
+  end
   local ListPopItem = self:GetTaskTypeListView()
   if not ListPopItem or not ListPopItem.GetListItems then
     return nil
@@ -711,9 +659,8 @@ function M:GetTaskTypeIndexFromState(TaskTypeId, FallbackIndex)
 end
 
 function M:ApplyTaskTypeScrollOffset(Offset)
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local ScrollWidget = GetTaskTypeArrowScrollWidget(PopupItemList) or self:GetTaskTypeScrollBox()
-  if SetWidgetScrollOffset(ScrollWidget, Offset) then
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.SetScrollOffset and PopupItemList:SetScrollOffset(Offset, TASK_TYPE_SCROLL_OFFSET_EPSILON) then
     self.LastTaskTypeScrollOffset = Offset
     return true
   end
@@ -722,9 +669,11 @@ end
 
 function M:CaptureTaskPopupViewState(FocusSubTaskItem)
   local State = {}
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local _, TaskTypeScrollOffset = GetTaskTypeScrollOffsetInfo(PopupItemList)
-  State.TaskTypeScrollOffset = TaskTypeScrollOffset
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.GetScrollOffsetInfo then
+    local _, TaskTypeScrollOffset = PopupItemList:GetScrollOffsetInfo()
+    State.TaskTypeScrollOffset = TaskTypeScrollOffset
+  end
   local ExpandedItem = self.CurrentExpandedTaskTypeItem
   local FocusSubTaskContent = IsValid(FocusSubTaskItem) and FocusSubTaskItem.Content or nil
   if IsValid(ExpandedItem) and ExpandedItem.IsDetailExpanded == true and ExpandedItem.Content then
@@ -1452,59 +1401,17 @@ end
 
 function M:BindTaskTypeScrollEvent()
   self:UnBindTaskTypeScrollEvent()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  if not PopupItemList then
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if not PopupItemList or not PopupItemList.BindListEvents then
     return
   end
-  self.TaskTypeScrollWidgets = {}
-  self.TaskTypeEntryLifecycleWidgets = {}
-  
-  local function BindScrollWidget(Widget)
-    if not CanBindUserScrolled(Widget) then
-      return
-    end
-    Widget.OnUserScrolled:Remove(self, self.OnTaskTypeListScrolled)
-    Widget.OnUserScrolled:Add(self, self.OnTaskTypeListScrolled)
-    table.insert(self.TaskTypeScrollWidgets, Widget)
-  end
-  
-  local function BindEntryLifecycle(Widget)
-    if not CanBindEntryLifecycle(Widget) then
-      return
-    end
-    Widget.BP_OnEntryGenerated:Remove(self, self.OnTaskTypeListEntryGenerated)
-    Widget.BP_OnEntryGenerated:Add(self, self.OnTaskTypeListEntryGenerated)
-    Widget.BP_OnEntryReleased:Remove(self, self.OnTaskTypeListEntryReleased)
-    Widget.BP_OnEntryReleased:Add(self, self.OnTaskTypeListEntryReleased)
-    table.insert(self.TaskTypeEntryLifecycleWidgets, Widget)
-  end
-  
-  local ScrollPopItem = GetTaskTypeArrowScrollWidget(PopupItemList)
-  local ListPopItem = PopupItemList.List_PopItem
-  BindScrollWidget(ScrollPopItem)
-  if not ScrollPopItem then
-    BindScrollWidget(ListPopItem)
-  end
-  BindEntryLifecycle(ListPopItem)
+  PopupItemList:BindListEvents(self, self.OnTaskTypeListScrolled, self.OnTaskTypeListEntryGenerated, self.OnTaskTypeListEntryReleased)
 end
 
 function M:UnBindTaskTypeScrollEvent()
-  if self.TaskTypeScrollWidgets then
-    for _, Widget in ipairs(self.TaskTypeScrollWidgets) do
-      if CanBindUserScrolled(Widget) then
-        Widget.OnUserScrolled:Remove(self, self.OnTaskTypeListScrolled)
-      end
-    end
-    self.TaskTypeScrollWidgets = nil
-  end
-  if self.TaskTypeEntryLifecycleWidgets then
-    for _, Widget in ipairs(self.TaskTypeEntryLifecycleWidgets) do
-      if CanBindEntryLifecycle(Widget) then
-        Widget.BP_OnEntryGenerated:Remove(self, self.OnTaskTypeListEntryGenerated)
-        Widget.BP_OnEntryReleased:Remove(self, self.OnTaskTypeListEntryReleased)
-      end
-    end
-    self.TaskTypeEntryLifecycleWidgets = nil
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.UnBindListEvents then
+    PopupItemList:UnBindListEvents()
   end
 end
 
@@ -1518,37 +1425,12 @@ function M:QueueUpdateTaskTypeScrollArrow(Delay, RetryCount)
 end
 
 function M:UpdateTaskTypeScrollArrow()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local ArrowScrollWidget = GetTaskTypeArrowScrollWidget(PopupItemList)
-  if ArrowScrollWidget then
-    local CurrentOffset = ArrowScrollWidget:GetScrollOffset()
-    local EndOffset = ArrowScrollWidget:GetScrollOffsetOfEnd()
-    if type(CurrentOffset) ~= "number" or type(EndOffset) ~= "number" or EndOffset <= TASK_TYPE_SCROLL_OFFSET_EPSILON then
-      SetWidgetScrollOffset(ArrowScrollWidget, 0)
-      SetArrowVisible(self.List_ArrowTop, false)
-      SetArrowVisible(self.List_ArrowBottom, false)
-      return
-    end
-    if CurrentOffset > EndOffset then
-      SetWidgetScrollOffset(ArrowScrollWidget, EndOffset)
-      CurrentOffset = EndOffset
-    elseif CurrentOffset <= TASK_TYPE_SCROLL_OFFSET_EPSILON then
-      SetWidgetScrollOffset(ArrowScrollWidget, 0)
-      CurrentOffset = 0
-    end
-    SetArrowVisible(self.List_ArrowTop, CurrentOffset > TASK_TYPE_SCROLL_OFFSET_EPSILON)
-    SetArrowVisible(self.List_ArrowBottom, EndOffset - CurrentOffset > TASK_TYPE_SCROLL_OFFSET_EPSILON)
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if not PopupItemList or not PopupItemList.UpdateArrow then
     return
   end
-  local ListPopItem = PopupItemList and PopupItemList.List_PopItem
-  if not ListPopItem then
-    SetArrowVisible(self.List_ArrowTop, false)
-    SetArrowVisible(self.List_ArrowBottom, false)
-    return
-  end
-  local ListItemCount = ListPopItem.GetListItems and GetWidgetCount(ListPopItem:GetListItems()) or 0
-  local DisplayedWidgetCount = ListPopItem.GetDisplayedEntryWidgets and GetWidgetCount(ListPopItem:GetDisplayedEntryWidgets()) or 0
-  if ListItemCount > 0 and 0 == DisplayedWidgetCount then
+  local bNeedRetry = PopupItemList:UpdateArrow(self.List_ArrowTop, self.List_ArrowBottom, TASK_TYPE_SCROLL_OFFSET_EPSILON)
+  if bNeedRetry then
     local RetryCount = self.TaskTypeScrollArrowRetryCount or 0
     if RetryCount < TASK_TYPE_SCROLL_ARROW_RETRY_MAX then
       self:QueueUpdateTaskTypeScrollArrow(TASK_TYPE_SCROLL_ARROW_DELAY, RetryCount + 1)
@@ -1556,13 +1438,17 @@ function M:UpdateTaskTypeScrollArrow()
     end
   end
   self.TaskTypeScrollArrowRetryCount = 0
-  UIUtils.UpdateListArrow(ListPopItem, self.List_ArrowTop, self.List_ArrowBottom)
 end
 
 function M:OnTaskTypeListScrolled()
   self:UpdateTaskTypeScrollArrow()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local _, CurrentOffset, EndOffset = GetTaskTypeScrollOffsetInfo(PopupItemList)
+  local PopupItemList = self:GetTaskTypeListWidget()
+  local CurrentOffset, EndOffset
+  if PopupItemList and PopupItemList.GetScrollOffsetInfo then
+    local _, ScrollOffset, ScrollEndOffset = PopupItemList:GetScrollOffsetInfo()
+    CurrentOffset = ScrollOffset
+    EndOffset = ScrollEndOffset
+  end
   if type(CurrentOffset) == "number" then
     local LastOffset = self.LastTaskTypeScrollOffset
     self.LastTaskTypeScrollOffset = CurrentOffset
@@ -1593,8 +1479,8 @@ function M:OnTaskTypeListEntryReleased()
 end
 
 function M:RefreshTaskTypeList(EventId, bSkipDefaultGamepadFocus)
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  if not PopupItemList or not PopupItemList.List_PopItem then
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if not (PopupItemList and PopupItemList.AddItem) or not PopupItemList.ClearItems then
     return
   end
   local DisplayTaskTypeList = SkinCollectTaskPopupModel.GetTaskTypeListByEventId(EventId)
@@ -1605,15 +1491,19 @@ function M:RefreshTaskTypeList(EventId, bSkipDefaultGamepadFocus)
   self.bTaskTypeVisibleEnterTimerPending = false
   self.LastTaskTypeScrollOffset = nil
   self:BeginTaskTypeEnterBatch(#DisplayTaskTypeList)
-  PopupItemList.List_PopItem:SetVisibility(UE4.ESlateVisibility.Visible)
+  if PopupItemList.SetListVisible then
+    PopupItemList:SetListVisible(true)
+  end
   self:StopNativeUINavigation()
-  ClearTaskTypeContainer(PopupItemList.List_PopItem)
+  PopupItemList:ClearItems()
   for TaskTypeIndex, TaskTypeInfo in ipairs(DisplayTaskTypeList) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     ApplyTaskTypeInfoToContent(Content, TaskTypeInfo, TaskTypeIndex, self)
-    AddTaskTypeItem(self, PopupItemList.List_PopItem, Content)
+    PopupItemList:AddItem(Content)
   end
-  ResetTaskTypeScrollOffset(PopupItemList)
+  if PopupItemList.ResetScrollOffset then
+    PopupItemList:ResetScrollOffset()
+  end
   self:UpdateTaskTypeScrollArrow()
   self:QueueUpdateTaskTypeScrollArrow(0.3)
   self:ClearGamepadFocus()
@@ -1623,13 +1513,12 @@ function M:RefreshTaskTypeList(EventId, bSkipDefaultGamepadFocus)
 end
 
 function M:TickRefreshTaskTypeList(EventId)
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local ListPopItem = PopupItemList and PopupItemList.List_PopItem
-  if not ListPopItem or not ListPopItem.GetListItems then
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if not PopupItemList or not PopupItemList.GetItems then
     return false
   end
   local DisplayTaskTypeList = SkinCollectTaskPopupModel.GetTaskTypeListByEventId(EventId)
-  local ContentList = GetWidgetArrayTable(ListPopItem:GetListItems())
+  local ContentList = PopupItemList:GetItems()
   if #ContentList ~= #DisplayTaskTypeList then
     return false
   end
@@ -1671,12 +1560,12 @@ function M:TickRefreshTaskTypeList(EventId)
 end
 
 function M:ReleaseTaskTypeList()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  if not PopupItemList or not PopupItemList.List_PopItem then
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if not PopupItemList or not PopupItemList.ClearItems then
     return
   end
   self:ClearGamepadFocus()
-  ClearTaskTypeContainer(PopupItemList.List_PopItem)
+  PopupItemList:ClearItems()
   self.CurrentExpandedTaskTypeItem = nil
   self.bTaskTypeVisibleStateInitialized = false
   self.TaskTypeVisibleStateMap = {}
@@ -1691,7 +1580,12 @@ function M:OnTaskTypeItemClicked(TaskTypeItem)
   if not TaskTypeItem then
     return
   end
-  self:PlayTaskTypeToggleSound()
+  if UIUtils.IsGamepadInput() and TaskTypeItem.GetActiveTypeItem then
+    local ActiveTypeItem = TaskTypeItem:GetActiveTypeItem()
+    if ActiveTypeItem and not ActiveTypeItem.IsForbidden and ActiveTypeItem.PlayClickSound then
+      ActiveTypeItem:PlayClickSound()
+    end
+  end
   if self.CurrentExpandedTaskTypeItem == TaskTypeItem then
     local ShouldExpand = not TaskTypeItem.IsDetailExpanded
     TaskTypeItem:SetDetailExpanded(ShouldExpand)
@@ -1762,8 +1656,11 @@ function M:RequestTaskTypeItemEnterAnimation(TaskTypeItem)
 end
 
 function M:GetDisplayedTaskTypeItems()
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local ListPopItem = PopupItemList and PopupItemList.List_PopItem
+  local PopupItemList = self:GetTaskTypeListWidget()
+  if PopupItemList and PopupItemList.GetDisplayedEntryWidgets then
+    return PopupItemList:GetDisplayedEntryWidgets()
+  end
+  local ListPopItem = self:GetTaskTypeListView()
   if not ListPopItem or not ListPopItem.GetDisplayedEntryWidgets then
     return {}
   end
@@ -1780,8 +1677,13 @@ function M:GetTaskTypeItemVisibilityKey(TaskTypeItem)
 end
 
 function M:IsTaskTypeItemVisible(TaskTypeItem)
-  local PopupItemList = self.WBP_Activity_SkinCollect_Task_PopupItemList
-  local ViewportWidget = PopupItemList and PopupItemList.ScrollPopItem
+  local PopupItemList = self:GetTaskTypeListWidget()
+  local ViewportWidget
+  if PopupItemList and PopupItemList.GetViewportWidget then
+    ViewportWidget = PopupItemList:GetViewportWidget()
+  else
+    ViewportWidget = PopupItemList and PopupItemList.ScrollPopItem
+  end
   local ViewportRect = GetWidgetAbsoluteRect(ViewportWidget)
   local ItemRect = GetWidgetAbsoluteRect(TaskTypeItem)
   return IsHorizontalRectIntersected(ViewportRect, ItemRect)

@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -239,6 +239,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -246,6 +247,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -311,6 +313,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -420,7 +423,7 @@ return {
             type = "WaitOfTimeNode",
             name = "延迟等待",
             pos = {x = 2540.8781036635182, y = 405.8322501870889},
-            propsData = {WaitTime = 10}
+            propsData = {WaitTime = 6}
           },
           ["17795211629842903298"] = {
             key = "17795211629842903298",
@@ -435,8 +438,7 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {106101},
-              ClientRelatedRegionId = {},
-              bStoreToServer = false
+              bStoreToServer = true
             }
           },
           ["17795211687542903557"] = {
@@ -473,9 +475,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
             }
           },
           ["177969863473044520369"] = {
@@ -490,9 +491,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt03/0080_story_the_abandoned_theme.0080_story_the_abandoned_theme'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
             }
           },
           ["177969865796344520572"] = {

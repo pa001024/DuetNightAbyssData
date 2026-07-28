@@ -38,18 +38,41 @@ function M:InitContent(Params, PopupData, Owner)
     self.Icon:SetBrushResourceObject(Icon)
     self.Icon:SetVisibility(UIConst.VisibilityOp.Visible)
   end
-  self.Btn_GetAll:SetText(GText(ConfigData.ReceiveButtonText))
-  self.Btn_GetAll:SetDefaultGamePadImg("Y")
-  self.Btn_GetAll:UnBindEventOnClickedByObj(self)
-  self.Btn_GetAll:BindEventOnClicked(self, function()
-    if self.HasTab then
-      ConfigData.Datas[self.Type].ReceiveAllParam.SelfWidget = self
-      ConfigData.Datas[self.Type].ReceiveAllCallBack(self, ConfigData.Datas[self.Type].ReceiveAllParam)
-    else
-      ConfigData.ReceiveAllParam.SelfWidget = self
-      ConfigData.ReceiveAllCallBack(self, ConfigData.ReceiveAllParam)
+  local DefaultTabData
+  if ConfigData.HasTab and ConfigData.Datas then
+    DefaultTabData = ConfigData.Datas[ConfigData.Type]
+  end
+  local EffectiveReceiveBtnText = DefaultTabData and DefaultTabData.ReceiveButtonText or ConfigData.ReceiveButtonText
+  if DefaultTabData and DefaultTabData.HideReceiveButton then
+    self.Btn_GetAll:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Text_Tip and DefaultTabData.TipText then
+      self.Text_Tip:SetText(DefaultTabData.TipText)
+      self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
-  end)
+  else
+    self.Btn_GetAll:SetText(GText(EffectiveReceiveBtnText))
+    self.Btn_GetAll:SetPCImg(ConfigData.ReceiveAllKeyInPC or "SpaceBar")
+    self.Btn_GetAll:SetDefaultGamePadImg(ConfigData.ReceiveAllKeyInGamePad or "Y")
+    self.Btn_GetAll:UnBindEventOnClickedByObj(self)
+    self.Btn_GetAll:BindEventOnClicked(self, function()
+      if self.bReceivingAll then
+        return
+      end
+      self.bReceivingAll = true
+      if self.HasTab then
+        ConfigData.Datas[self.Type].ReceiveAllParam.SelfWidget = self
+        ConfigData.Datas[self.Type].ReceiveAllCallBack(self, ConfigData.Datas[self.Type].ReceiveAllParam)
+      else
+        ConfigData.ReceiveAllParam.SelfWidget = self
+        ConfigData.ReceiveAllCallBack(self, ConfigData.ReceiveAllParam)
+      end
+      self:AddTimer(2.0, function()
+        if IsValid(self) then
+          self.bReceivingAll = false
+        end
+      end, false, 0, nil, true)
+    end)
+  end
   if self.HasTab then
     self:InitListTabInfo()
     self:ScrollToSelectTab()
@@ -77,7 +100,10 @@ function M:ScrollToSelectTab()
   self:AddTimer(0.1, function()
     self.List_Tab:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     local Item = self.List_Tab:GetItemAt(SelectIndex - 1)
-    self.Btn_GetAll:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    local CurConfigData = self.HasTab and self.Datas and self.Datas[self.Type] or self.ConfigData
+    if not CurConfigData or not CurConfigData.HideReceiveButton then
+      self.Btn_GetAll:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
     if Item then
       self.List_Tab:SetSelectedIndex(SelectIndex - 1)
       Item.Entry:OnCellClicked(true)
@@ -122,10 +148,12 @@ function M:InitItem(ConfigData)
       self.List_Item:ScrollIndexIntoView(IndexToScroll)
     end, false, 0, nil, true)
   end
-  if Count > 0 then
-    self.Btn_GetAll:ForbidBtn(false)
-  else
-    self.Btn_GetAll:ForbidBtn(true)
+  if not ConfigData.HideReceiveButton then
+    if Count > 0 then
+      self.Btn_GetAll:ForbidBtn(false)
+    else
+      self.Btn_GetAll:ForbidBtn(true)
+    end
   end
 end
 
@@ -220,6 +248,8 @@ function M:InitListTabInfo()
     Obj.ReddotName = TabItem.ReddotName
     Obj.IsShowIcon = TabItem.IsShowIcon
     Obj.IconPath = TabItem.IconPath
+    Obj.IsForbidden = TabItem.IsForbidden
+    Obj.ForbiddenReasonText = TabItem.ForbiddenReasonText
     self.List_Tab:AddItem(Obj)
     self.Type2Index[TabItem.Type] = Index
   end
@@ -242,6 +272,10 @@ function M:RealRefreshListRewardInfo(TabType)
 end
 
 function M:RefreshBtnGetAll(ConfigData)
+  if ConfigData.HideReceiveButton then
+    self.Btn_GetAll:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
   local HasRewardToGet = false
   for _, Item in pairs(ConfigData.Items) do
     if Item.CanReceive and not Item.RewardsGot then
@@ -306,11 +340,15 @@ function M:NavigateToFirstDisplayedItem(List)
 end
 
 function M:InitGamepadView()
-  if self:HasAnyFocus() then
+  local GetItemPage = UIManager(self):GetUIObj("GetItemPage")
+  local GetItemPageSP = UIManager(self):GetUIObj("GetItemPageSP")
+  if not GetItemPage and not GetItemPageSP then
     self:NavigateToFirstDisplayedItem(self.List_Item)
   end
+  self.Btn_GetAll:SetKey_PCVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_GetAll:SetGamePadIconVisible(true)
-  if not self.Btn_GetAll:IsBtnForbidden() then
+  local CurConfigData = self.HasTab and self.Datas and self.Datas[self.Type] or self.ConfigData
+  if (not CurConfigData or not CurConfigData.HideReceiveButton) and not self.Btn_GetAll:IsBtnForbidden() then
     self.Btn_GetAll:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   end
   self:ShowGamepadViewBtn(false)
@@ -319,8 +357,10 @@ end
 
 function M:InitKeyBoardView()
   self.IsInViewMode = false
+  self.Btn_GetAll:SetKey_PCVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_GetAll:SetGamePadIconVisible(false)
-  if not self.Btn_GetAll:IsBtnForbidden() then
+  local CurConfigData = self.HasTab and self.Datas and self.Datas[self.Type] or self.ConfigData
+  if (not CurConfigData or not CurConfigData.HideReceiveButton) and not self.Btn_GetAll:IsBtnForbidden() then
     self.Btn_GetAll:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self:ShowGamepadViewBtn(false)
@@ -391,6 +431,12 @@ function M:ShowGamepadViewSingleBtn(bShow)
 end
 
 function M:RefreshButton(CanReceiveAll)
+  self.bReceivingAll = false
+  local ConfigData = self.HasTab and self.Datas and self.Datas[self.Type] or self.ConfigData
+  if ConfigData and ConfigData.HideReceiveButton then
+    self.Btn_GetAll:SetVisibility(ESlateVisibility.Collapsed)
+    return
+  end
   if not CanReceiveAll then
     self.Btn_GetAll:ForbidBtn(true)
   else
@@ -418,12 +464,33 @@ function M:Refresh(ConfigData)
     end
     self.Icon:SetVisibility(UIConst.VisibilityOp.Visible)
   end
-  self.Btn_GetAll:SetText(GText(ConfigData.ReceiveButtonText))
-  self.Btn_GetAll:UnBindEventOnClickedByObj(self)
-  self.Btn_GetAll:BindEventOnClicked(self, function()
-    ConfigData.ReceiveAllParam.SelfWidget = self
-    ConfigData.ReceiveAllCallBack(self, ConfigData.ReceiveAllParam)
-  end)
+  if ConfigData.HideReceiveButton then
+    self.Btn_GetAll:SetVisibility(ESlateVisibility.Collapsed)
+    if self.Text_Tip and ConfigData.TipText then
+      self.Text_Tip:SetText(ConfigData.TipText)
+      self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    end
+  else
+    self.Btn_GetAll:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_GetAll:SetText(GText(ConfigData.ReceiveButtonText))
+    self.Btn_GetAll:UnBindEventOnClickedByObj(self)
+    self.Btn_GetAll:BindEventOnClicked(self, function()
+      if self.bReceivingAll then
+        return
+      end
+      self.bReceivingAll = true
+      ConfigData.ReceiveAllParam.SelfWidget = self
+      ConfigData.ReceiveAllCallBack(self, ConfigData.ReceiveAllParam)
+      self:AddTimer(2.0, function()
+        if IsValid(self) then
+          self.bReceivingAll = false
+        end
+      end, false, 0, nil, true)
+    end)
+    if self.Text_Tip then
+      self.Text_Tip:SetText(GText("UI_ActivityFromMemo"))
+    end
+  end
   self:InitItem(ConfigData)
 end
 
@@ -479,6 +546,17 @@ function M:UpdateUIStyle(IsVisible)
   elseif self.Owner then
     self.Owner:HideAllGamepadShortcut()
   end
+end
+
+function M:OnContentPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local IsEventHandled = false
+  if "SpaceBar" == InKeyName then
+    IsEventHandled = true
+    self.Btn_GetAll:OnBtnClicked()
+  end
+  return IsEventHandled
 end
 
 function M:OnContentKeyDown(MyGeometry, InKeyEvent)

@@ -33,13 +33,11 @@ function M:StopTalkTrigger(RunningTriggerId)
   if RunningTriggerId ~= SignBoardBubbleTalkModel:GetRunningTalkTrigger() then
     return
   end
-  local InvitateBubbleTalkKey = SignBoardBubbleTalkModel:GetRunningTalkTriggerBubbleKey()
-  self.InvitateBubbleTalkKey = nil
   local TS = TalkSubsystem()
-  SignBoardBubbleTalkModel:SetRunningTalkTrigger(nil, nil)
-  if InvitateBubbleTalkKey then
+  SignBoardBubbleTalkModel:SetRunningTalkTrigger(nil)
+  if RunningTriggerId and 0 ~= RunningTriggerId then
     TS:ForceInterruptTalkTaskData(function(TalkTaskData)
-      return TalkTaskData.FilePath == InvitateBubbleTalkKey
+      return TalkTaskData.TalkTriggerId == SignBoardBubbleTalkModel:GetTalkTriggerId(RunningTriggerId)
     end)
     SignBoardBubbleTalkModel:ResetTalkWaitTime(RunningTriggerId)
   end
@@ -77,13 +75,22 @@ function M:StartTalkTrigger(GossipTriggerId)
   
   local function OnTriggerSucces()
     local GameInstance = GWorld.GameInstance
-    local TalkContext = GameInstance:GetTalkContext()
-    local InvitateBubbleTalkKey = TalkContext:StartTalk(TalkTriggerId, nil, nil, nil, nil, {Func = OnTriggerFailedOrEnd, Obj = self}, {
-      Obj = self,
-      Func = self.RecordBubbleDialogue
-    }, SignBoardBubbleTalkModel:GetNpcCombination(GossipTriggerId))
-    if GossipTriggerId == SignBoardBubbleTalkModel:GetRunningTalkTrigger() then
-      SignBoardBubbleTalkModel:SetRunningTalkTrigger(GossipTriggerId, InvitateBubbleTalkKey)
+    local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, TalkTriggerId, nil)
+    
+    local function OnPlayDialogue(Obj, DialogueId)
+      self:RecordBubbleDialogue(DialogueId)
+    end
+    
+    if IsValid(TalkAsyncAction) then
+      TalkAsyncAction.OnPlayTalkEnd:Add(GWorld.GameInstance, OnTriggerFailedOrEnd)
+      TalkAsyncAction.OnPlayTalkInterrupted:Add(GWorld.GameInstance, OnTriggerFailedOrEnd)
+      TalkAsyncAction.OnPlayDialogue:Add(GWorld.GameInstance, OnPlayDialogue)
+      local Array = TArray(0)
+      for _, NpcId in pairs(SignBoardBubbleTalkModel:GetNpcCombination(GossipTriggerId)) do
+        Array:Add(NpcId)
+      end
+      TalkAsyncAction.RelatedNPCIds = Array
+      TalkAsyncAction:Activate()
     end
   end
   

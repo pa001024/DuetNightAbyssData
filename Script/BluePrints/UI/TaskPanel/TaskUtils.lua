@@ -77,7 +77,11 @@ function TaskUtils:GetQuestDetail(QuestChainId, QuestId)
   if QuestDataInStoryLine[QuestChainId] and QuestDataInStoryLine[QuestChainId][QuestId] then
     return QuestDataInStoryLine[QuestChainId][QuestId]
   end
-  local StoryLineDetails = StorylineUtils.CreateQuestDetails(QuestChainId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return nil
+  end
+  local StoryLineDetails = Avatar:CreateQuestDetails(QuestChainId)
   local NodeList = StoryLineDetails.QuestStoryNodeQuestInfos
   for _, Node in pairs(NodeList) do
     QuestDataInStoryLine[QuestChainId][Node.PropsData.QuestId] = Node.PropsData
@@ -609,28 +613,15 @@ function TaskUtils:QuestOpenMainMapByQuestTrack()
     end
     local TaskName = DataMgr.QuestChain[Avatar.TrackingQuestChainId].QuestChainName
     local Params
-    local Language = CommonConst.SystemLanguage
-    if Language == CommonConst.SystemLanguages.KR then
-      Params = {
-        ShortText = string.format("<H>%s</> %s", GText(TaskName), GText("UI_Prompt_QuestTrans")),
-        LeftCallbackObj = self,
-        LeftCallbackFunction = CancelDeliverTo,
-        RightCallbackObj = self,
-        RightCallbackFunction = DoDeliverTo,
-        CloseBtnCallbackObj = self,
-        CloseBtnCallbackFunction = CancelDeliverTo
-      }
-    else
-      Params = {
-        ShortText = string.format("%s <H>%s</>", GText("UI_Prompt_QuestTrans"), GText(TaskName)),
-        LeftCallbackObj = self,
-        LeftCallbackFunction = CancelDeliverTo,
-        RightCallbackObj = self,
-        RightCallbackFunction = DoDeliverTo,
-        CloseBtnCallbackObj = self,
-        CloseBtnCallbackFunction = CancelDeliverTo
-      }
-    end
+    Params = {
+      ShortText = string.format(GText("UI_Prompt_QuestTrans"), GText(TaskName)),
+      LeftCallbackObj = self,
+      LeftCallbackFunction = CancelDeliverTo,
+      RightCallbackObj = self,
+      RightCallbackFunction = DoDeliverTo,
+      CloseBtnCallbackObj = self,
+      CloseBtnCallbackFunction = CancelDeliverTo
+    }
     UIManager:ShowCommonPopupUI(100160, Params)
   end
 end

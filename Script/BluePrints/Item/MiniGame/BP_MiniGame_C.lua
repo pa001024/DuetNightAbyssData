@@ -30,6 +30,14 @@ end
 
 function BP_MiniGame_C:OnActorReady(Info)
   BP_MiniGame_C.Super.OnActorReady(self, Info)
+  local StateData = DataMgr.MechanismState[self.StateId]
+  if StateData and StateData.StateEvent then
+    for i, v in pairs(StateData.StateEvent) do
+      if v.TypeNextState and v.TypeNextState.Type == "InteractBreak" then
+        self:ChangeState("InteractBreak", 0)
+      end
+    end
+  end
   EventManager:FireEvent(EventID.OnMiniGameCreated, self)
 end
 
@@ -62,6 +70,8 @@ function BP_MiniGame_C:LoadMiniGameUMG()
     self.MiniGameLogic = UIManager:LoadUINew("TiaoPin")
   elseif self.MiniGameType == "Morse" then
     self.MiniGameLogic = UIManager:LoadUINew("Morse")
+  elseif self.MiniGameType == "Hammer" then
+    self.MiniGameLogic = UIManager:LoadUINew("Hammer")
   end
   self.MiniGameLogic.UseActor = self
   self.MiniGameLogic.Time = self.GameTime - 1

@@ -56,6 +56,12 @@ function M:CreatePreviewTargetData(Params)
           AppearanceSuit.Accessory[k] = v
         end
       end
+      if Params.AccessoryCustomParams then
+        local AppearanceSuit = Char:GetAppearance()
+        for k, v in pairs(Params.AccessoryCustomParams) do
+          AppearanceSuit.AccessoryCustomParams[k] = v
+        end
+      end
     end
     return Char
   elseif Params.Type == "Weapon" then

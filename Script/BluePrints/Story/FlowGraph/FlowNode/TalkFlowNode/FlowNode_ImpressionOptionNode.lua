@@ -1,5 +1,6 @@
 local FTalkTriggerComponent = require("BluePrints.Story.Talk.Component.TalkTriggerComponent")
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class("BluePrints.Story.FlowGraph.FlowNode.TalkFlowNode.FlowNode_OptionNode")
 local FlowLogType = UE.EStoryLogType.TalkFlow
 
@@ -8,15 +9,14 @@ end
 
 function M:K2_InitializeInstance()
   M.Super.K2_InitializeInstance(self)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     return
   end
   if not self.bRestartDialogueOnFail then
     return
   end
   for _, OptionData in pairs(self.Options) do
-    if Avatar and Avatar:IsImpressionCheckFailure(OptionData.DialogueId) then
+    if ImpressionModel:IsImpressionCheckFailure(OptionData.DialogueId) then
       DebugPrint("印象检定失败对话尝试发生回退, 失败Id，回退Id： ", OptionData.DialogueId, self.RestartDialogueId)
       local FlowAsset = self:GetFlowAsset()
       if FlowAsset and FlowAsset:SetRestartDialogueId(self.RestartDialogueId) then
@@ -27,12 +27,11 @@ function M:K2_InitializeInstance()
 end
 
 function M:GetLastCheckSuccessId()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     return nil
   end
   for _, OptionData in pairs(self.Options) do
-    if Avatar and Avatar:IsImpressionCheckSuccess(OptionData.DialogueId) then
+    if ImpressionModel:IsImpressionCheckSuccess(OptionData.DialogueId) then
       return OptionData.DialogueId
     end
   end

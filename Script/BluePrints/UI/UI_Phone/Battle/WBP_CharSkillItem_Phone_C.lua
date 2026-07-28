@@ -11,6 +11,7 @@ function M:Initialize(Initializer)
 end
 
 function M:Destruct()
+  self:TryClearFoldSkillInputPressed()
   if EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.UnLock) then
     self.CurButtonState = "Normal"
     EMUIAnimationSubsystem:EMStopAnimation(self, self.AnimationList.UnLock)
@@ -49,7 +50,8 @@ function M:InitVariable()
     Lock_In = self.Skill_Lock_In,
     UnLock = self.Skill_UnLock,
     Sustain_CD = self.Skill_Sustain_CD,
-    Ban = self.Skill_Ban
+    Ban = self.Skill_Ban,
+    Enable = self.Skill_Enable
   }
   self.Button_Area.OnPressed:Add(self, self.OnPressedSkill)
   self.Button_Area.OnReleased:Add(self, self.OnReleasedSkill)
@@ -57,12 +59,41 @@ function M:InitVariable()
 end
 
 function M:OnPressedSkill()
+  self:TryMarkFoldSkillInputPressed()
   self.OwnerPanel:TryToPlayTargetCommand(self.SkillAction, true)
   self:OnPressed_Presentation(self.SkillName)
 end
 
 function M:OnReleasedSkill()
   self.OwnerPanel:TryToStopTargetCommand(self.SkillAction, true)
+  self:TryClearFoldSkillInputPressed()
+end
+
+function M:CanCountAsFoldSkillInput()
+  return self.CurButtonState ~= "Ban" and self.CurButtonState ~= "Empty" and self.CurButtonState ~= "InCDTime" and self.CurButtonState ~= "InCDTimeSustain" and self.CurButtonState ~= "MP_Deficiency"
+end
+
+function M:TryMarkFoldSkillInputPressed()
+  if self.bFoldSkillInputPressed then
+    return
+  end
+  if not self:CanCountAsFoldSkillInput() then
+    return
+  end
+  self.bFoldSkillInputPressed = true
+  if self.OwnerPanel and self.OwnerPanel.SetFoldSkillInputPressed then
+    self.OwnerPanel:SetFoldSkillInputPressed(self.SkillAction, true)
+  end
+end
+
+function M:TryClearFoldSkillInputPressed()
+  if not self.bFoldSkillInputPressed then
+    return
+  end
+  self.bFoldSkillInputPressed = false
+  if self.OwnerPanel and self.OwnerPanel.SetFoldSkillInputPressed then
+    self.OwnerPanel:SetFoldSkillInputPressed(self.SkillAction, false)
+  end
 end
 
 function M:OnPressed_Presentation(SkillName)
@@ -106,33 +137,37 @@ end
 
 function M:PlayButtonStateAnimation()
   if self.CurButtonState == "InCDTime" then
-    DebugPrint(self.SkillAction, "进入CD态")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入CD态")
     if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.CD) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.CD)
     end
   elseif self.CurButtonState == "InCDTimeSustain" then
-    DebugPrint(self.SkillAction, "进入CD持续态")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入CD持续态")
     if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.Sustain_CD) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.Sustain_CD)
     end
   elseif self.CurButtonState == "SustainLoop" then
-    DebugPrint(self.SkillAction, "进入持续态")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入持续态")
     if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.Sustain_Loop) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.Sustain_Loop)
     end
+    if self.IsUltimateEnabled and self.AnimationList.Enable and not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.Enable) then
+      DebugPrint("[Skill2 Animation] 播放Skill_Enable动画")
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.Enable)
+    end
   elseif self.CurButtonState == "Normal" then
-    DebugPrint(self.SkillAction, "进入常规态")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入常规态")
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.Normal)
   elseif self.CurButtonState == "MP_Deficiency" then
-    DebugPrint(self.SkillAction, "进入蓝量不足")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入蓝量不足")
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.MP_Deficiency)
   elseif self.CurButtonState == "Lock_In" then
-    DebugPrint(self.SkillAction, "进入锁定态")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入锁定态")
     if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.Lock_In) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.Lock_In)
     end
   elseif self.CurButtonState == "Ban" then
-    DebugPrint(self.SkillAction, "进入Ban态")
+    DebugPrint(self.SkillAction, "[Skill2 Animation] 进入Ban态")
     if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.AnimationList.Ban) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.AnimationList.Ban)
     end
@@ -252,6 +287,10 @@ function M:RefreshButtonStyle()
     return
   end
   local SkillBaseConfig = self.Skill.Data
+  self.EnableHoldMoveCamera = SkillBaseConfig.EnableHoldMoveCamera == true
+  if self.Button_Area then
+    self.Button_Area:SetVisibility(self.EnableHoldMoveCamera and ESlateVisibility.HitTestInvisible or ESlateVisibility.Visible)
+  end
   self.SkillInfo.CostSp = self:CalculateSkillCostSp(self.Skill)
   self.Energy_Num:SetText(self.SkillInfo.CostSp)
   if self.OwnerPanel and self.OwnerPanel.Skill.NowSp < self.SkillInfo.CostSp then
@@ -334,9 +373,59 @@ function M:CalculateSkillCostSp(Skill)
     local SkillNodeConfig = DataMgr.SkillNode[SkillNodeId] or {}
     CostSpNum = SkillNodeConfig.CostSp or 0
   end
-  local ModifyValue = SkillUtils.CalcBuffSpModify(self.OwnerPlayer.BuffManager, Skill.SkillId)
+  local ModifyValue = self.OwnerPlayer.BuffManager:GetBuffSpModify(Skill.SkillId)
   CostSpNum = math.max(math.ceil(CostSpNum + ModifyValue), 0)
   return self.OwnerPlayer:ApplySkillEfficiency(CostSpNum) or 0
+end
+
+function M:ButtonSkillDown(Index, StartPos)
+  self:TryMarkFoldSkillInputPressed()
+  self.OwnerPanel:TryToPlayTargetCommand(self.SkillAction, true)
+  self:OnPressed_Presentation(self.SkillName)
+  if self.Joystick and self.EnableHoldMoveCamera then
+    self.Joystick:SetRenderOpacity(1.0)
+    self.Joystick:SetRenderTranslation(FVector2D(0, 0))
+  end
+end
+
+function M:ButtonSkillMove(TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis, TouchLocalPos, ScreenSpacePos)
+  if not self.EnableHoldMoveCamera then
+    return
+  end
+  local WorldDeltaTime = UE4.UGameplayStatics.GetWorldDeltaSeconds(self)
+  self.OwnerPlayer:AddCharacterPitchInput(-2 * LastDeltaDis.Y * WorldDeltaTime)
+  self.OwnerPlayer:AddCharacterYawInput(4.5 * LastDeltaDis.X * WorldDeltaTime)
+  if self.Joystick then
+    local Radius = 40
+    local Dx, Dy = TotalDeltaDis.X, TotalDeltaDis.Y
+    local Dist = math.sqrt(Dx * Dx + Dy * Dy)
+    if Radius < Dist then
+      local S = Radius / Dist
+      Dx, Dy = Dx * S, Dy * S
+    end
+    self.Joystick:SetRenderTranslation(FVector2D(Dx, Dy))
+  end
+end
+
+function M:ButtonSkillUp(Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis, ScreenSpacePos)
+  self.OwnerPanel:TryToStopTargetCommand(self.SkillAction, true)
+  self:TryClearFoldSkillInputPressed()
+  if self.Joystick then
+    self.Joystick:SetRenderOpacity(0)
+    self.Joystick:SetRenderTranslation(FVector2D(0, 0))
+  end
+end
+
+function M:OnUltimateStateChanged(IsActive)
+  if not self.AnimationList.Enable then
+    return
+  end
+  if IsActive then
+    self.IsUltimateEnabled = true
+  elseif self.IsUltimateEnabled then
+    self.IsUltimateEnabled = false
+    self:PlayAnimationReverse(self.AnimationList.Enable)
+  end
 end
 
 function M:ToNormalStateAfterAnim()

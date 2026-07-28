@@ -1226,6 +1226,40 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
+  [2210101] = {
+    GroupDetectDelayTime = 2,
+    GroupDetectTime = 1,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_22,
+    GroupLimit = 40,
+    GroupNumber = {
+      6,
+      1,
+      0,
+      1,
+      6
+    },
+    GroupRadius = 600,
+    GroupRangeZ = 500,
+    GroupReplenishInterval = 0.5,
+    GroupSpawnId = 2210101,
+    GroupThreshold = 30,
+    GroupUnitSpawnCenterRange = {300, 2000},
+    GroupWeight = {
+      18,
+      0,
+      0,
+      0,
+      18
+    },
+    MonsterGroupIds = {
+      10001001,
+      10002001,
+      10003001,
+      10004001,
+      6024
+    }
+  },
   [6001012] = {
     CloseGroupReplenish = true,
     GroupDetectDelayTime = 0,
@@ -3402,6 +3436,23 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupWeight = T.RT_6,
     MonsterGroupIds = {9001701}
   },
+  [9001702] = {
+    CloseGroupReplenish = true,
+    GroupDetectDelayTime = 0,
+    GroupDetectTime = 0,
+    GroupInitUnitSpawnCenterRange = T.RT_4,
+    GroupLevel = T.RT_5,
+    GroupLimit = 60,
+    GroupNumber = T.RT_6,
+    GroupRadius = 300,
+    GroupRangeZ = 500,
+    GroupReplenishInterval = 0,
+    GroupSpawnId = 9001702,
+    GroupThreshold = 10,
+    GroupUnitSpawnCenterRange = T.RT_7,
+    GroupWeight = T.RT_6,
+    MonsterGroupIds = {9001702}
+  },
   [9002011] = {
     CloseGroupReplenish = true,
     GroupDetectDelayTime = 0,
@@ -3588,6 +3639,23 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupUnitSpawnCenterRange = T.RT_7,
     GroupWeight = T.RT_6,
     MonsterGroupIds = {9002701}
+  },
+  [9002702] = {
+    CloseGroupReplenish = true,
+    GroupDetectDelayTime = 0,
+    GroupDetectTime = 0,
+    GroupInitUnitSpawnCenterRange = T.RT_4,
+    GroupLevel = T.RT_5,
+    GroupLimit = 60,
+    GroupNumber = T.RT_6,
+    GroupRadius = 300,
+    GroupRangeZ = 500,
+    GroupReplenishInterval = 0,
+    GroupSpawnId = 9002702,
+    GroupThreshold = 10,
+    GroupUnitSpawnCenterRange = T.RT_7,
+    GroupWeight = T.RT_6,
+    MonsterGroupIds = {9002702}
   },
   [9007011] = {
     CloseGroupReplenish = true,

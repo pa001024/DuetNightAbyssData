@@ -1,17 +1,13 @@
 local M = Class({
-  "BluePrints.GameMode.DungeonComponents.BP_DungeonVoteComponent_C",
-  "BluePrints.Common.TimerMgr"
+  "BluePrints.GameMode.DungeonComponents.BP_DungeonVoteComponent_C"
 })
 
 function M:InitIronSurvivalComponent()
   self.GameMode = self:GetOwner()
   self:InitVoteComponent()
-  self.IsPoisonMonsterCache = {}
-  self.IsPoisonMonsterCache[0] = false
 end
 
 function M:InitIronSurvivalBaseInfo()
-  self:AddTimer(self.ExtraFixVitaminValueTickTime, self.CheckPoisonMonster, true)
 end
 
 function M:OnSyncGameModeLevel(NewGameModeLevel)
@@ -41,44 +37,8 @@ function M:GameModeRoundEnd()
 end
 
 function M:AddSurvivalValueServerDungeon(Value)
-end
-
-function M:CheckPoisonMonster()
-  if not self.GameMode.EMGameState:CheckGameModeStateEnable() then
-    return
-  end
-  if self.GameMode.EMGameState.SurvivalMiniValue <= 0 then
-    return
-  end
-  local PoisonMonsterNum = self:CountPoisonMonster()
-  DebugPrint("IronSurvivalComponent:CheckPoisonMonster", PoisonMonsterNum)
-  if PoisonMonsterNum > 0 then
-    local Value = PoisonMonsterNum * self.ExtraFixVitaminValue
-    self.GameMode:NotifyServerDungeonEvent("AddSurvivalValueGameMode", Value)
-  end
-end
-
-function M:CountPoisonMonster()
-  local Res = 0
-  for _, Monster in pairs(self.GameMode.EMGameState.MonsterMap) do
-    if self:IsPoisonMonster(Monster) then
-      Res = Res + 1
-    end
-  end
-  return Res
-end
-
-function M:IsPoisonMonster(Monster)
-  if not IsValid(Monster) then
-    return false
-  end
-  local UnitId = Monster.UnitId
-  if self.IsPoisonMonsterCache[UnitId] ~= nil then
-    return self.IsPoisonMonsterCache[UnitId]
-  end
-  local IsPoison = Monster:HasAnyTags_Table(Monster, Const.ExtraFixVitamin, false)
-  self.IsPoisonMonsterCache[UnitId] = IsPoison
-  return IsPoison
+  DebugPrint("IronSurvivalComponent:AddSurvivalValueServerDungeon", Value)
+  self.GameMode:NotifyServerDungeonEvent("AddSurvivalValueGameMode", Value)
 end
 
 function M:OnServerUpdateSurvivalMiniValue(CurSurvivalMiniValue)

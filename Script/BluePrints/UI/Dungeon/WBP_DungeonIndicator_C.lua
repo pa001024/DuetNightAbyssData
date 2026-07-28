@@ -98,6 +98,7 @@ function WBP_DungeonIndicatorUI_C:InitConfigData()
   self:OnInitConfig()
   self:InitIndicatorByConfigData(self.GuideAnim or "", GuideIconBPPath or "", ConfigData.GuideText or "")
   self:InitFlyToTarget()
+  self:InitMechanismLocFunc()
 end
 
 function WBP_DungeonIndicatorUI_C:RequestSnapShotInfo()
@@ -136,6 +137,16 @@ function WBP_DungeonIndicatorUI_C:OnInitConfig()
   local PlayerIndex = self.ConfigData.PlayerIndex
   if PlayerIndex and PlayerIndex > 0 then
     rawset(self, "PlayerIndex", PlayerIndex)
+  end
+end
+
+function WBP_DungeonIndicatorUI_C:InitMechanismLocFunc()
+  local TargetActor = self.TargetActor
+  if TargetActor and self.GuideType == "Mechanism" then
+    local GuidePosFunc = TargetActor.GetGuidePos
+    if GuidePosFunc then
+      rawset(self, "MechanismLocFunc", GuidePosFunc)
+    end
   end
 end
 
@@ -326,12 +337,14 @@ function WBP_DungeonIndicatorUI_C:CaluCurGuideNeedShowPos()
 end
 
 function WBP_DungeonIndicatorUI_C:SetMechanismRelativePosition()
-  if self.TargetActor and self.TargetActor.GetGuidePos then
-    local RelativePosition = self.TargetActor:GetGuidePos()
-    if RelativePosition then
-      self.MechanismLoc.X = RelativePosition.X
-      self.MechanismLoc.Y = RelativePosition.Y
-      self.MechanismLoc.Z = RelativePosition.Z
+  local TargetActor = self.TargetActor
+  if TargetActor then
+    local GuidePosFunc = rawget(self, "MechanismLocFunc")
+    if GuidePosFunc then
+      local RelativePosition = GuidePosFunc(TargetActor)
+      if RelativePosition then
+        self.MechanismLoc = RelativePosition
+      end
     end
   end
 end

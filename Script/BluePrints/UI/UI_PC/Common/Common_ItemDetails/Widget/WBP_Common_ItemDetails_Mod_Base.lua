@@ -53,7 +53,6 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     ModCost = ModServerData.CostMod
     ModCardLvel = ModServerData.CurrentModCardLevel or 0
   else
-    self.ParentWidget.Line.Switch_Bg:SetActiveWidgetIndex(0)
     self.ParentWidget.Line.Switch_Text:SetActiveWidgetIndex(0)
     self.ParentWidget:SetConflictLine(true, GText("UI_ModTips_MaxLvPreview"), 2)
     ModLevel = ModInfo.MaxLevel

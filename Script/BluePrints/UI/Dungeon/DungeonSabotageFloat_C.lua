@@ -98,7 +98,10 @@ function M:UpdateGuide(Eids, UnitIds)
     if 0 ~= Eid then
       if #UnitIdsTable > 0 and not self.FirstSeen then
         self.FirstSeen = true
-        UE4.UPlayTalkAsyncAction.PlayTalk(self, 601305, nil)
+        local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, 601305, nil)
+        if IsValid(TalkAsyncAction) then
+          TalkAsyncAction:Activate()
+        end
       end
       local Monster = DataMgr.Monster[UnitId]
       local MonsterName = GText(Monster.UnitName)

@@ -77,6 +77,24 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 12,
     Type = "Skin"
   },
+  [13] = {
+    Id = 210201,
+    Score = 600,
+    SingleScoreId = 13,
+    Type = "Skin"
+  },
+  [14] = {
+    Id = 310201,
+    Score = 160,
+    SingleScoreId = 14,
+    Type = "Skin"
+  },
+  [15] = {
+    Id = 320201,
+    Score = 160,
+    SingleScoreId = 15,
+    Type = "Skin"
+  },
   [1001] = {
     Id = 80054,
     Score = 100,
@@ -533,6 +551,120 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 1076,
     Type = "CharAccessory"
   },
+  [1077] = {
+    Id = 31006,
+    Score = 100,
+    SingleScoreId = 1077,
+    Type = "CharAccessory"
+  },
+  [1078] = {
+    Id = 11008,
+    Score = 100,
+    SingleScoreId = 1078,
+    Type = "CharAccessory"
+  },
+  [1079] = {
+    Id = 21014,
+    Score = 100,
+    SingleScoreId = 1079,
+    Type = "CharAccessory"
+  },
+  [1080] = {
+    Id = 40076,
+    Score = 100,
+    SingleScoreId = 1080,
+    Type = "CharAccessory"
+  },
+  [1081] = {
+    Id = 40077,
+    Score = 100,
+    SingleScoreId = 1081,
+    Type = "CharAccessory"
+  },
+  [1082] = {
+    Id = 40078,
+    Score = 100,
+    SingleScoreId = 1082,
+    Type = "CharAccessory"
+  },
+  [1083] = {
+    Id = 40079,
+    Score = 100,
+    SingleScoreId = 1083,
+    Type = "CharAccessory"
+  },
+  [1084] = {
+    Id = 80055,
+    Score = 100,
+    SingleScoreId = 1084,
+    Type = "CharAccessory"
+  },
+  [1085] = {
+    Id = 80056,
+    Score = 100,
+    SingleScoreId = 1085,
+    Type = "CharAccessory"
+  },
+  [1086] = {
+    Id = 80057,
+    Score = 100,
+    SingleScoreId = 1086,
+    Type = "CharAccessory"
+  },
+  [1087] = {
+    Id = 80058,
+    Score = 100,
+    SingleScoreId = 1087,
+    Type = "CharAccessory"
+  },
+  [1088] = {
+    Id = 70007,
+    Score = 100,
+    SingleScoreId = 1088,
+    Type = "CharAccessory"
+  },
+  [1089] = {
+    Id = 70073,
+    Score = 100,
+    SingleScoreId = 1089,
+    Type = "CharAccessory"
+  },
+  [1090] = {
+    Id = 70072,
+    Score = 100,
+    SingleScoreId = 1090,
+    Type = "CharAccessory"
+  },
+  [1091] = {
+    Id = 70071,
+    Score = 100,
+    SingleScoreId = 1091,
+    Type = "CharAccessory"
+  },
+  [1092] = {
+    Id = 10144,
+    Score = 100,
+    SingleScoreId = 1092,
+    Type = "CharAccessory"
+  },
+  [1093] = {
+    Id = 10145,
+    Score = 100,
+    SingleScoreId = 1093,
+    Type = "CharAccessory"
+  },
+  [1094] = {
+    Id = 10146,
+    Score = 100,
+    SingleScoreId = 1094,
+    Type = "CharAccessory"
+  },
+  [1095] = {
+    Id = 10147,
+    Score = 100,
+    SingleScoreId = 1095,
+    Type = "CharAccessory"
+  },
   [2001] = {
     Id = 3010401,
     Score = 400,
@@ -563,10 +695,22 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 2005,
     Type = "WeaponSkin"
   },
+  [2006] = {
+    Id = 3011207,
+    Score = 400,
+    SingleScoreId = 2006,
+    Type = "WeaponSkin"
+  },
   [3001] = {
     Id = 20001,
     Score = 150,
     SingleScoreId = 3001,
+    Type = "WeaponAccessory"
+  },
+  [3002] = {
+    Id = 40001,
+    Score = 150,
+    SingleScoreId = 3002,
     Type = "WeaponAccessory"
   },
   [4001] = {
@@ -862,5 +1006,23 @@ return ReadOnly("AppearanceSingleScore", {
     Score = 0,
     SingleScoreId = 5046,
     Type = "Hair"
+  },
+  [5020001] = {
+    Id = 41064,
+    Score = 1200,
+    SingleScoreId = 5020001,
+    Type = "Resource"
+  },
+  [5020002] = {
+    Id = 41067,
+    Score = 1200,
+    SingleScoreId = 5020002,
+    Type = "Resource"
+  },
+  [5020003] = {
+    Id = 41068,
+    Score = 1200,
+    SingleScoreId = 5020003,
+    Type = "Resource"
   }
 })

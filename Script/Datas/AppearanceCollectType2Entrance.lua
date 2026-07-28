@@ -48,6 +48,11 @@ return ReadOnly("AppearanceCollectType2Entrance", {
     EntranceId = 1,
     SubTypes = T.RT_1
   },
+  Weapon = {
+    CollectType = "Weapon",
+    EntranceId = 7,
+    SubTypes = T.RT_1
+  },
   WeaponAccessory = {
     CollectType = "WeaponAccessory",
     EntranceId = 4,

@@ -223,6 +223,8 @@ end
 
 function M:OnClickedClose()
   AudioManager(self):SetEventSoundParam(nil, "LimitTimeRewardPreview", {ToEnd = 1})
+  AudioManager(self):StopSound(self, "LimitTimeRewardPreview")
+  self:StopAnimation(self.In)
   self:PlayAnimation(self.Out)
   local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
   if ActivityMain then

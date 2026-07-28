@@ -48,7 +48,7 @@ function M:Construct()
   if self.Head_Player and self.Head_Player.BindOnClickEvent then
     self.Head_Player:BindOnClickEvent(function()
       self:OpenHeadAnchorMenu()
-      if self.ParentWidget and self.ParentWidget:IsRankItemSelectable() then
+      if self.ParentWidget then
         self.ParentWidget:OnListRankItemClicked(self.Content)
       end
     end)
@@ -81,7 +81,8 @@ function M:OnListItemObjectSet(Content)
     self:InitPlayerRank()
     self:InitPlayerInfo()
     self:InitPlayerPoint()
-    if self.ParentWidget and self.ParentWidget:IsRankItemSelectable() and self.ParentWidget.LastClickedItem == Content then
+    Content.IsSelected = self.ParentWidget and self.ParentWidget.LastClickedItem == Content or false
+    if Content.IsSelected then
       self:PlayAnimation(self.Click)
     else
       self:PlayAnimation(self.Normal)
@@ -110,7 +111,7 @@ function M:BP_OnEntryReleased()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  if self.ParentWidget and self.ParentWidget:IsRankItemSelectable() then
+  if self.ParentWidget and self.ParentWidget.IsGamePad then
     self.ParentWidget:OnListRankItemClicked(self.Content, true)
   end
   return UIUtils.Handled

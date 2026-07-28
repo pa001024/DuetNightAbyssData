@@ -109,11 +109,17 @@ function M:GetSelectedWeapon()
 end
 
 function M:GetSelectedMeleeWeapon()
-  return self.MeleeItemContentsMap[self:GetSelectedMeleeWeaponContent().Uuid]
+  local Content = self:GetSelectedMeleeWeaponContent()
+  local Avatar = ArmoryUtils:GetAvatar()
+  local Uuid = Content and Content.Uuid or Avatar.MeleeWeapon
+  return Avatar.Weapons[Uuid]
 end
 
 function M:GetSelectedRangedWeapon()
-  return self.RangedItemContentsMap[self:GetSelectedRangedWeaponContent().Uuid]
+  local Content = self:GetSelectedRangedWeaponContent()
+  local Avatar = ArmoryUtils:GetAvatar()
+  local Uuid = Content and Content.Uuid or Avatar.RangeWeapon
+  return Avatar.Weapons[Uuid]
 end
 
 function M:IsSelectedWeaponOwned()
@@ -251,7 +257,7 @@ function M:CreateWeaponContents(Params)
       exec = function()
         ArmoryUtils:DontResetUuid(true)
         for WeaponId, value in pairs(DataMgr.Weapon) do
-          if not value.IsNotOpen and not OwnedWeapons[WeaponId] and CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Weapon, WeaponId) and (not HyperWeaponUtils.IsHyperWeapon(WeaponId) or ArmoryUtils:IsShowHyperWeapon("Melee")) then
+          if not value.IsNotOpen and not OwnedWeapons[WeaponId] and CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.Weapon, WeaponId) and (not HyperWeaponUtils.IsHyperWeapon(WeaponId) or ArmoryUtils:IsShowHyperWeapon("Melee")) then
             local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
               WeaponIds = {WeaponId}
             })

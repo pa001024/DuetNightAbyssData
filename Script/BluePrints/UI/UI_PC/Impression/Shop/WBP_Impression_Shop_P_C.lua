@@ -1,6 +1,7 @@
 require("UnLua")
 local M = Class("BluePrints.UI.Shop.WBP_Shop_Main_Base_C")
 local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionTypes
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 M._components = {
   "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp",
   "BluePrints.UI.UI_PC.Common.LSFocusComp"
@@ -105,12 +106,8 @@ function M:InitImpressionShop(MainTabIdx, SubTabIdx, ShopItemId, bNotPlayBgBlend
   self.Text_None:SetText(GText("UI_SHOP_NOTOWNED"))
   local MainTabIdx = MainTabIdx
   if not MainTabIdx then
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      local RegionId = Avatar:GetSubRegionId2RegionId()
-      RegionId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
-      MainTabIdx = DataMgr.RegionId2ImpressionMainTab[RegionId]
-    end
+    local RegionId = ImpressionModel:GetImpressionAreaIdFromRegionId()
+    MainTabIdx = RegionId and DataMgr.RegionId2ImpressionMainTab[RegionId] or 1
   end
   self:InitBg(bNotPlayBgBlend)
   self:InitSortList()
@@ -160,11 +157,7 @@ function M:InitRegionInfo(MainTabIdx)
   if not RegionId then
     local Message = string.format("未在ImpressionShopMainTab中找到对应的区域信息，MainTabId：%d", MainTabIdx)
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Impression, "印象商店MainTab未填写区域Id", Message)
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      RegionId = Avatar:GetSubRegionId2RegionId()
-      RegionId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
-    end
+    RegionId = ImpressionModel:GetImpressionAreaIdFromRegionId()
   end
   RegionId = RegionId and tonumber(RegionId)
   self.RegionId = RegionId
@@ -220,12 +213,10 @@ end
 
 function M:UpdateResource(ResourceId)
   local ResourceId = ResourceId or self.ShopData and self.ShopData.TabCoin
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    local SubRegionId = Avatar:GetSubRegionId2RegionId()
-    local ImpressionRegionId = Avatar:GetImpressionAreaIdFromRegionId(SubRegionId)
-    local Data = DataMgr.ImpressionResource[ImpressionRegionId]
-    ResourceId = ResourceId or Data and Data.ResourceId
+  if not ResourceId and ImpressionModel:IsValid() then
+    local ImpressionRegionId = ImpressionModel:GetImpressionAreaIdFromRegionId()
+    local Data = ImpressionRegionId and DataMgr.ImpressionResource[ImpressionRegionId]
+    ResourceId = Data and Data.ResourceId
   end
   ResourceId = ResourceId or {3001}
   self.Common_Tab:OverrideTopResource(ResourceId, true)

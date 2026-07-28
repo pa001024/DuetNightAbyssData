@@ -46,6 +46,16 @@ function M:Destruct()
   self:RemoveWeaponListReddotListen()
 end
 
+function M:ReceiveEnterState(StackAction)
+  if self.MainModel then
+    local FuncName = "Get" .. self.Tag .. "WeaponContents"
+    local AllWeaponContent = self.MainModel[FuncName](self.MainModel)
+    if AllWeaponContent then
+      AppearanceUtils.UpdateWeaponListReddot(AllWeaponContent)
+    end
+  end
+end
+
 function M:Init(Params)
   self.Parent = Params.Parent
   self.Type = CommonConst.ArmoryType.Weapon

@@ -1,5 +1,6 @@
 local SettingUtils = {}
 local EMCache = require("EMCache.EMCache")
+local FIRST_OPEN_LAYOUT_PLAN_03_KEY = "FirstOpenLayoutPlan03"
 
 function SettingUtils.InitPerformanceSetting()
   SettingUtils.InitGameOverallPerformance()
@@ -374,9 +375,10 @@ function SettingUtils.IsShowRedDotForLayoutPlan()
   if not Avatar then
     return false
   end
-  local IsFirstShow = EMCache:Get("FirstOpenLayoutPlan", true)
+  local IsFirstShow = EMCache:Get(FIRST_OPEN_LAYOUT_PLAN_03_KEY, true)
   local Index = Avatar:GetCurrentMobileHudPlanIndex()
-  if 1 == Index and not IsFirstShow and UIUtils.IsMobileInput() then
+  local LayoutEntryIndex = Avatar.GetLayoutEntryIndexByPlanIndex and Avatar:GetLayoutEntryIndexByPlanIndex(Index) or Index
+  if (1 == LayoutEntryIndex or 2 == LayoutEntryIndex) and not IsFirstShow and UIUtils.IsMobileInput() then
     return true
   end
   return false

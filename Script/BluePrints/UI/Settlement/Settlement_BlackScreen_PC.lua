@@ -12,6 +12,7 @@ function Settlement_BlackScreen_PC_C:OnLoaded(...)
     end
   end)
   self:BindToAnimationFinished(self.Out, function()
+    AudioManager(self):StopSound(self, "SettlementBlackScreen")
     local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:HideAllUI(false, Const.BlackScreenHideTag)
     if self.OnOutAnimFinished then
@@ -27,14 +28,15 @@ end
 function Settlement_BlackScreen_PC_C:FadeIn(OnInAnimFinished, bIsWin)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.OnInAnimFinished = OnInAnimFinished
-  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "SettlementBlackScreen", nil)
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui_level_ending", "SettlementBlackScreen", {fade_in_time = 1.75})
   if bIsWin then
     AudioManager(self):PlayUISound(self, "event:/ui/common/level_end_success", nil, nil)
   else
     AudioManager(self):PlayUISound(self, "event:/ui/common/level_end_fail", nil, nil)
   end
   local Avatar = GWorld:GetAvatar()
-  if Avatar:IsInHardBoss() then
+  local bSkipFadeIn = (not Avatar or not Avatar:IsInHardBoss()) and GWorld.GameInstance and GWorld.GameInstance:CheckInAutoChessDungeon()
+  if bSkipFadeIn then
     self:PlayAnimation(self.In, self.In:GetEndTime())
   else
     self:PlayAnimation(self.In)
@@ -42,10 +44,11 @@ function Settlement_BlackScreen_PC_C:FadeIn(OnInAnimFinished, bIsWin)
 end
 
 function Settlement_BlackScreen_PC_C:FadeOut(OnOutAnimFinished, bSkipOutAnim)
-  AudioManager(self):StopSound(self, "SettlementBlackScreen")
   if bSkipOutAnim then
     OnOutAnimFinished()
   else
+    AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui_level_ending", "SettlementBlackScreen", {fade_out_time = 1})
+    AudioManager(self):SetEventSoundParam(self, "SettlementBlackScreen", {ToEnd = 1})
     self.OnOutAnimFinished = OnOutAnimFinished
     self:AddTimer(0.1, function()
       local UIManager = GWorld.GameInstance:GetGameUIManager()

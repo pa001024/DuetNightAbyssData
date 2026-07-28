@@ -4,11 +4,18 @@ local ReplicatedClassRegistry = require("BluePrints.DungeonObject.Replication.Re
 local ClassRegistry = {}
 local GameModeDungeonReplicatedProperty = {}
 
+local function InitLocalAttr()
+  NetGuidMap = {}
+  OnRepFuncLayer = {}
+  ClassRegistry = {}
+end
+
 function GameModeDungeonReplicatedProperty:Init(Env)
-  self:InitClassRegistry()
   if not Env.NetGuid then
     return
   end
+  InitLocalAttr()
+  self:InitClassRegistry()
   local NetGuid = Env.NetGuid
   NetGuidMap[NetGuid] = self
 end
@@ -110,6 +117,10 @@ function GameModeDungeonReplicatedProperty:OnRepTestRep()
       print("ReplicatedDungeonObject TestClass2", self.TestClass.TestClass2.C)
     end
   end
+end
+
+function GameModeDungeonReplicatedProperty:GetReplicatedActorByNetGuid(NetGuid)
+  return NetGuidMap[NetGuid]
 end
 
 return GameModeDungeonReplicatedProperty

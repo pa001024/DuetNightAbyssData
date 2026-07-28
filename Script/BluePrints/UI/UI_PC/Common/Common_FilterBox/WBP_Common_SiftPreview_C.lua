@@ -14,6 +14,61 @@ function M:Construct()
   self.Btn_Focus.OnUnhovered:Add(self, self.OnBtnFocusUnhovered)
 end
 
+function M:GetSelectionValueMode(ItemData)
+  if ItemData and ItemData.SelectionValueMode then
+    return ItemData.SelectionValueMode
+  end
+  if ItemData and ItemData.ShowItemIcon then
+    return "Value"
+  end
+  return "Index"
+end
+
+function M:IsSameSelectionValue(ValueA, ValueB)
+  return ValueA == ValueB or tostring(ValueA) == tostring(ValueB)
+end
+
+function M:GetSelectionIndexByValue(ItemData, SelectionValue)
+  if not ItemData or not ItemData.SelectionDatas then
+    return nil
+  end
+  for index, value in pairs(ItemData.SelectionDatas) do
+    if self:IsSameSelectionValue(value, SelectionValue) then
+      return index
+    end
+  end
+  if ItemData.SelectionDatas[SelectionValue] ~= nil then
+    return SelectionValue
+  end
+  return nil
+end
+
+function M:GetResourceName(SelectionValue)
+  if DataMgr and DataMgr.Resource and DataMgr.Resource[SelectionValue] then
+    return DataMgr.Resource[SelectionValue].ResourceName
+  end
+  local NumberValue = tonumber(SelectionValue)
+  if NumberValue and DataMgr and DataMgr.Resource and DataMgr.Resource[NumberValue] then
+    return DataMgr.Resource[NumberValue].ResourceName
+  end
+  return nil
+end
+
+function M:GetSelectionPreviewText(ItemData, SelectionIndexOrValue)
+  if not ItemData then
+    return nil
+  end
+  local selectionIndex = SelectionIndexOrValue
+  if self:GetSelectionValueMode(ItemData) == "Value" then
+    selectionIndex = self:GetSelectionIndexByValue(ItemData, SelectionIndexOrValue)
+  end
+  local text = ItemData.SelectionText and selectionIndex and ItemData.SelectionText[selectionIndex] or nil
+  if not text and self:GetSelectionValueMode(ItemData) == "Value" then
+    text = self:GetResourceName(SelectionIndexOrValue)
+  end
+  return text
+end
+
 function M:Init(Owner, ItemUI, SelectedItems, ItemDatas)
   self:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Owner = Owner
@@ -22,8 +77,9 @@ function M:Init(Owner, ItemUI, SelectedItems, ItemDatas)
   for i, items in pairs(SelectedItems) do
     if type(items) == "table" then
       local processedItems = {}
+      local itemData = ItemDatas and ItemDatas[i] or nil
       for _, index in pairs(items) do
-        local text = ItemDatas[i].SelectionText[index]
+        local text = self:GetSelectionPreviewText(itemData, index)
         if text then
           table.insert(processedItems, GText(text))
         end

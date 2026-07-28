@@ -22,7 +22,7 @@ function M:ReceiveEnterState(StackAction)
   if self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx and self.ComparedContent and self.ComparedContent ~= self.NoneAccessory then
     self:UpdateWeaponStanceFXInfo(self.ComparedContent)
     local bAllowModTag = self.ComparedContent.bAllowModTag
-    if bAllowModTag and not self:IsModBtnForbidden() then
+    if bAllowModTag then
       local bModEquiped = ModController:GetModel():HasTargetEquipedMod(self.Target.Uuid, self.ComparedContent.ModId)
       self.ComparedContent.bModEquiped = bModEquiped
       if self.ComparedContent.SelfWidget then
@@ -151,6 +151,7 @@ function M:InitWeaponSkinList()
   rawset(DefaultSkin, "OnClicked", self.OnSkinItemClicked)
   rawset(DefaultSkin, "bDyeable", true)
   rawset(DefaultSkin, "IsTargetUnowned", self.IsTargetUnowned)
+  rawset(DefaultSkin, "IsDefaultSkin", true)
   self.SkinMap[DefaultSkin.SkinId] = DefaultSkin
   table.insert(self.SkinArray, 1, DefaultSkin)
   self:OnSkinContentCreated(DefaultSkin)
@@ -337,9 +338,7 @@ function M:CreateWeaponAccessoryContent(Data)
   if WeaponStanceFXTag2ModId and WeaponStanceFXTag2ModId[rawget(Obj, "StanceFXTag")] then
     Obj.bAllowModTag = true
     local ModId = next(WeaponStanceFXTag2ModId[Obj.StanceFXTag])
-    if bAllowModTag and not self:IsModBtnForbidden() then
-      Obj.bModEquiped = ModController:GetModel():HasTargetEquipedMod(self.Target.Uuid, ModId)
-    end
+    Obj.bModEquiped = ModController:GetModel():HasTargetEquipedMod(self.Target.Uuid, ModId)
     rawset(Obj, "ModId", ModId)
   end
   return Obj
@@ -641,7 +640,7 @@ function M:UpdateWeaponStanceFXInfo(Content)
     Target = self.Target,
     Type = self.Type,
     Tag = self.Target:HasTag("Melee") and "Melee" or "Ranged",
-    ForbidModBtn = self:IsModBtnForbidden(),
+    ForbidModBtn = self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned,
     ModId = Content.ModId,
     Owner = self,
     OnModBtnClicked = self.OnModBtnClicked
@@ -649,10 +648,6 @@ function M:UpdateWeaponStanceFXInfo(Content)
   self.WBP_Armory_SkinMod:Init(Params)
   self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Mod_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-end
-
-function M:IsModBtnForbidden()
-  return self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned
 end
 
 function M:OnTopTabSelected(TabWidget, Content)

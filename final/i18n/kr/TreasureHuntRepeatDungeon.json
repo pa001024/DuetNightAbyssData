@@ -148,5 +148,151 @@
       20502002
     ],
     "unlockCondition": 10301404
+  },
+  {
+    "id": 10302701,
+    "name": "연진 나루터",
+    "desc": "연진 나루터는 원래 호경에서 가장 큰 운송 부두이자, 별을 잇는 자들이 화서를 드나드는 첫 번째 관문이며 요충지로, 점차 도시로 성장하였다. 봉향대전이 열리자, 별을 잇는 자들은 봉향 영웅대회를 지원하기 위해 대량의 진귀한 보물을 기부했고, 이로 인해 주최 측은 첫 번째 경기장을 연진 나루터로 정하게 되었다.",
+    "image": "T_SoloTreasure_Gangkou",
+    "easyDungeonId": 42801,
+    "easyModeFee": 0,
+    "hardDungeonId": 42802,
+    "hardModeFee": 1000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302702,
+    "name": "낙진의 바다",
+    "desc": "낙진의 바다는 일찍이 촉룡의 재앙으로 인해, 화서 사람들은 듣기만 해도 벌벌 떠는 곳이 되었고, 이후 사람들의 발길이 거의 닿지 않게 되었다. 촉룡이 제자리를 되찾은 지금도 낙진 현상은 완전히 사라지지 않았다. 사람들의 공포를 완화하고 이곳에 남아있는 필토이드를 소탕하기 위해, 주최 측은 두 번째 경기장을 낙진의 바다로 정하게 되었다.",
+    "image": "T_SoloTreasure_Wuhui",
+    "easyDungeonId": 42803,
+    "easyModeFee": 500,
+    "hardDungeonId": 42804,
+    "hardModeFee": 2000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302703,
+    "name": "호경 서쪽 교외",
+    "desc": "호경 서쪽 교외는 인적이 드문 삼림 지대이다. 호경 성안의 일부 건물이 촉룡과 백룡의 소동으로 피해를 입게 되면서, 호경 서쪽 교외가 이번 대회의 최종 경기장으로 지정되었다.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "hardDungeonId": 42805,
+    "hardModeFee": 4000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302704,
+    "name": "특별 초청전",
+    "desc": "봉향 영웅대회가 개최된 이래, 선수 여러분이 펼친 눈부신 활약과 뜨거운 열기는 화서 전역을 사로잡았습니다. 이제 주최 측은 더 많은 젊은 세대가 화서의 거대한 변화를 체감할 수 있도록, 여러분을 한 차원 더 높은 도전이 기다리는 특별 초청전에 모시고자 합니다.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "easyDungeonId": 42806,
+    "easyModeFee": 1,
+    "hardDungeonId": 42807,
+    "hardModeFee": 3,
+    "easyMaxConvertResource": 1000000,
+    "easyScoreToResource": {
+      "101": 2
+    },
+    "hardMaxConvertResource": 3000000,
+    "hardScoreToResource": {
+      "101": 0.5
+    },
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
   }
 ]

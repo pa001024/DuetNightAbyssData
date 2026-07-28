@@ -120,6 +120,7 @@ function M:RefreshProgress()
 end
 
 function M:RefresDailyGoalTask()
+  self.SelectItem = nil
   self.List_Task:ClearListItems()
   local TaskList = {}
   for _, Task in pairs(self.PlayerAvatar.DailyTasks) do
@@ -160,9 +161,26 @@ function M:RefresDailyGoalTask()
 end
 
 function M:SetNavigateToIndex()
+  self.GamepadFocusMode = nil
   self:AddTimer(0.01, function()
+    if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad and not self:HasAnyFocus() and not self:HasFocusedDescendants() then
+      self.List_Task:SetFocus()
+    end
     self.List_Task:NavigateToIndex(0)
   end, false, 0, "Play_Daily_List_Task")
+end
+
+function M:OnSelectChange(Item)
+  if self.SelectItem == Item then
+    return
+  end
+  if IsValid(self.SelectItem) then
+    self.SelectItem:OnUnselect()
+  end
+  if IsValid(Item) then
+    Item:OnSelect()
+  end
+  self.SelectItem = Item
 end
 
 function M:OnAddedToFocusPath(InFocusEvent)

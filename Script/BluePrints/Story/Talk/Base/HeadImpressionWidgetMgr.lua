@@ -1,5 +1,6 @@
 require("UnLua")
 local HeadImpressionWidgetMgr = Class("BluePrints.Common.TimerMgr")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local EImpressionState = {
   Undefined = 0,
   Unopened = 1,
@@ -38,11 +39,10 @@ function HeadImpressionWidgetMgr:GetNpcImpressionState(Npc)
   local TalkTriggers = DataMgr.TalkTrigger
   local TalkContext = GWorld.GameInstance:GetTalkContext()
   local State = EImpressionState.Completed
-  local Avatar = GWorld:GetAvatar()
   for _, TalkTriggerId in pairs(RelatedTalks) do
     local TalkTriggerData = TalkTriggers[TalkTriggerId]
     if TalkTriggerData and TalkContext.TalkTriggerComponent:IsImpression(TalkTriggerData) then
-      local bCompleted = Avatar and Avatar:IsStorylineComplete(TalkTriggerId)
+      local bCompleted = ImpressionModel:IsStorylineComplete(TalkTriggerId)
       if not bCompleted then
         local bConditionMet = TalkContext.TalkTriggerComponent:CheckCondition(TalkTriggerId)
         if bConditionMet then

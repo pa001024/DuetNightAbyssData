@@ -116,11 +116,13 @@ end
 function M:SetIsSelected(IsSelected)
   self.IsSelected = IsSelected
   if IsSelected then
-    self:StopAllAnimations()
-    self:PlayAnimation(self.Click)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Normal)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Hover)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Press)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
   else
-    self:StopAnimation(self.Click)
-    self:PlayAnimation(self.Normal)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Click)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end
 end
 
@@ -128,22 +130,24 @@ function M:OnMouseEnter(MyGeometry, MouseEvent)
   if self.IsSelected then
     return
   end
-  self:PlayAnimationForward(self.Hover)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.UnHover)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Hover)
 end
 
 function M:OnMouseLeave(MouseEvent)
   if self.IsSelected then
     return
   end
-  self:StopAnimation(self.Press)
-  self:PlayAnimationReverse(self.Hover)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Press)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Hover)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.UnHover)
 end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   if self.IsSelected then
     return UE4.UWidgetBlueprintLibrary.Unhandled()
   end
-  self:PlayAnimation(self.Press)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
@@ -154,7 +158,7 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
   if self:IsHovered() then
     self:OnMouseEnter()
   else
-    self:PlayAnimation(self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end

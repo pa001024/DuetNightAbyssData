@@ -290,10 +290,11 @@ function M:GetShopItemCanShow(ShopItemId)
   if not Avatar then
     return
   end
+  local ShopItemData = DataMgr.ShopItem[ShopItemId]
   if not Avatar:CheckIsEffective(ShopItemId) then
     return false
   end
-  if 0 == self:GetShopItemPurchaseLimit(ShopItemId) and not DataMgr.ShopItem[ShopItemId].RefreshTime and not DataMgr.ShopItem[ShopItemId].SoldOutDisplay then
+  if 0 == self:GetShopItemPurchaseLimit(ShopItemId) and not ShopItemData.RefreshTime and not ShopItemData.SoldOutDisplay then
     return false
   end
   if Avatar:CheckShopItemHasRequire(ShopItemId) then
@@ -302,7 +303,10 @@ function M:GetShopItemCanShow(ShopItemId)
   if Avatar:CheckShopItemHasRexclusionGroup(ShopItemId) then
     return false
   end
-  if Avatar:CheckShopItemUnique(ShopItemId) and not DataMgr.ShopItem[ShopItemId].SoldOutDisplay then
+  if Avatar:CheckShopItemUnique(ShopItemId) and not ShopItemData.SoldOutDisplay then
+    return false
+  end
+  if ShopItemData.ItemCondition and ShopItemData.HideIfConditionNotMet == true and self:CheckShopItemCondition(ShopItemData) then
     return false
   end
   return true
@@ -489,10 +493,13 @@ function M:IsLaterThanNow(Time, NowRealTime)
   return true
 end
 
-function M:CanPurchase(ShopItemData, PriceType, Price)
+function M:CanPurchase(ShopItemData, PriceType, Price, ShopItemNum)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return false
+  end
+  if not ShopItemNum or 0 == ShopItemNum then
+    ShopItemNum = 1
   end
   ShopItemData.PurchaseFailRes = 0
   local ShopItemRemainTimes = self:GetShopItemPurchaseLimit(ShopItemData.ItemId)
@@ -516,10 +523,10 @@ function M:CanPurchase(ShopItemData, PriceType, Price)
     return true
   end
   local PriceCount = Avatar.Resources[PriceType] and Avatar.Resources[PriceType].Count or 0
-  if Price > PriceCount then
+  if PriceCount < Price * ShopItemNum then
     if ShopItemData.PriceType == CommonConst.Coins.Coin1 then
       local totalCount = PriceCount + (Avatar.Resources[CommonConst.Coins.Coin4] and Avatar.Resources[CommonConst.Coins.Coin4].Count or 0)
-      if Price <= totalCount then
+      if totalCount >= Price * ShopItemNum then
         ShopItemData.PurchaseFailRes = 4
       else
         ShopItemData.PurchaseFailRes = 5
@@ -560,8 +567,7 @@ function M:Purchase(ShopItemData, ParentWidget)
         PaymentParameters.cpOrder = OrderId
         PaymentParameters.callbackUrl = CallbackUrl
         local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-        local ItemName = ""
-        ItemName = GText(ItemUtils:GetDropName(ShopItemData.TypeId, ShopItemData.ItemType))
+        local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
         HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
         local TrackInfo = {}
         TrackInfo.product_id = DataMgr.ShopItem2PayGoods[ShopItemData.ItemId]
@@ -777,7 +783,8 @@ function M:ShowPurchaseDialog(ItemType, ItemId, ShopType, UIName)
       PaymentParameters.cpOrder = OrderId
       PaymentParameters.callbackUrl = CallbackUrl
       local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+      local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
+      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
     end)
   else
     AudioManager(self):PlayItemSound(self, ShopItemData.TypeId, "Click", ShopItemData.ItemType)
@@ -842,10 +849,13 @@ function M:ShowPurchaseDialog(ItemType, ItemId, ShopType, UIName)
   end
 end
 
-function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum, VoucherId)
+function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum, VoucherId, ShopItemNum)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
+  end
+  if not ShopItemNum or 0 == ShopItemNum then
+    ShopItemNum = 1
   end
   local OwnedResource = Avatar.Resources[PriceType]
   local OwnedCurrencyAmount = OwnedResource and OwnedResource.Count or 0
@@ -854,7 +864,7 @@ function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum, VoucherId)
     Cost = CostNum
   end
   if ShopItemId then
-    Cost = ShopUtils:GetShopItemPrice(ShopItemId, VoucherId) or 0
+    Cost = (ShopUtils:GetShopItemPrice(ShopItemId, VoucherId) or 0) * ShopItemNum
   end
   if CommonConst.Coins.Coin1 == PriceType then
     local Coin4Data = Avatar.Resources[CommonConst.Coins.Coin4]
@@ -868,10 +878,13 @@ function M:GetNeedRechargeCount(ShopItemId, PriceType, CostNum, VoucherId)
   return NeedCount
 end
 
-function M:GetRechargeItem(ShopItemId, PriceType, CostNum, VoucherId)
+function M:GetRechargeItem(ShopItemId, PriceType, CostNum, VoucherId, ShopItemNum)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
+  end
+  if not ShopItemNum or 0 == ShopItemNum then
+    ShopItemNum = 1
   end
   local OwnedResource = Avatar.Resources[PriceType]
   local OwnedCurrencyAmount = OwnedResource and OwnedResource.Count or 0
@@ -885,7 +898,7 @@ function M:GetRechargeItem(ShopItemId, PriceType, CostNum, VoucherId)
     Cost = CostNum
   end
   if ShopItemId then
-    Cost = ShopUtils:GetShopItemPrice(ShopItemId, VoucherId) or 0
+    Cost = (ShopUtils:GetShopItemPrice(ShopItemId, VoucherId) or 0) * ShopItemNum
   end
   local NeedCount = Cost - OwnedCurrencyAmount
   if NeedCount <= 0 then

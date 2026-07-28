@@ -295,6 +295,13 @@ return ReadOnly("WeaponModifierAttrs", {
     WeaponModifierAttr = "WeaponCRDModifierRate_Ranged",
     WeaponTag = "Ranged"
   },
+  WeaponCRDModifierRate_Ultra = {
+    AttrNames = T.RT_11,
+    RateAttr = "WeaponCRDModifierRate_Ultra",
+    ValueAttr = "WeaponCRDModifierValue_Ultra",
+    WeaponModifierAttr = "WeaponCRDModifierRate_Ultra",
+    WeaponTag = "Ultra"
+  },
   WeaponCRDModifierValue_Melee = {
     AttrNames = T.RT_11,
     RateAttr = "WeaponCRDModifierRate_Melee",
@@ -314,6 +321,13 @@ return ReadOnly("WeaponModifierAttrs", {
     ValueAttr = "WeaponCRDModifierValue_Ranged",
     WeaponModifierAttr = "WeaponCRDModifierValue_Ranged",
     WeaponTag = "Ranged"
+  },
+  WeaponCRDModifierValue_Ultra = {
+    AttrNames = T.RT_11,
+    RateAttr = "WeaponCRDModifierRate_Ultra",
+    ValueAttr = "WeaponCRDModifierValue_Ultra",
+    WeaponModifierAttr = "WeaponCRDModifierValue_Ultra",
+    WeaponTag = "Ultra"
   },
   WeaponCRIModifierRate_Melee = {
     AttrNames = T.RT_12,
@@ -335,6 +349,13 @@ return ReadOnly("WeaponModifierAttrs", {
     WeaponModifierAttr = "WeaponCRIModifierRate_Ranged",
     WeaponTag = "Ranged"
   },
+  WeaponCRIModifierRate_Ultra = {
+    AttrNames = T.RT_12,
+    RateAttr = "WeaponCRIModifierRate_Ultra",
+    ValueAttr = "WeaponCRIModifierValue_Ultra",
+    WeaponModifierAttr = "WeaponCRIModifierRate_Ultra",
+    WeaponTag = "Ultra"
+  },
   WeaponCRIModifierValue_Melee = {
     AttrNames = T.RT_12,
     RateAttr = "WeaponCRIModifierRate_Melee",
@@ -354,5 +375,12 @@ return ReadOnly("WeaponModifierAttrs", {
     ValueAttr = "WeaponCRIModifierValue_Ranged",
     WeaponModifierAttr = "WeaponCRIModifierValue_Ranged",
     WeaponTag = "Ranged"
+  },
+  WeaponCRIModifierValue_Ultra = {
+    AttrNames = T.RT_12,
+    RateAttr = "WeaponCRIModifierRate_Ultra",
+    ValueAttr = "WeaponCRIModifierValue_Ultra",
+    WeaponModifierAttr = "WeaponCRIModifierValue_Ultra",
+    WeaponTag = "Ultra"
   }
 })

@@ -47,7 +47,10 @@ function M:TalkEndOverlap(Component, OtherActor)
     return
   end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, self.TriggerTalkId, nil)
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, self.TriggerTalkId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction:Activate()
+  end
 end
 
 function M:CreateTriggerRule(Creator)

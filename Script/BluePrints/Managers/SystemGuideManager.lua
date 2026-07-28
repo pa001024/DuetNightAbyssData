@@ -8,6 +8,7 @@ SystemGuideManager.RunningId = -1
 SystemGuideManager.bOpenDebug = false
 SystemGuideManager.GuideEventList = {}
 SystemGuideManager.DispatchId = 2057
+SystemGuideManager.SystemGuideBlockUIConfigs = {LayoutPlan = true}
 
 function SystemGuideManager:AddListenerSystemGuide()
   self:ClearSystemGuideData()
@@ -21,6 +22,7 @@ function SystemGuideManager:AddSystemGuideEvents()
   self:AddSystemGuideEvent(EventID.SystemGuideExitRegion, self.ExitRegionEvent)
   self:AddSystemGuideEvent(EventID.SystemGuideEnterDungeon, self.EnterDungeonEvent)
   self:AddSystemGuideEvent(EventID.SystemGuideExitDungeon, self.ExitDungeonEvent)
+  self:AddSystemGuideEvent(EventID.InLoading, self.InLoadingEvent)
   self:AddSystemGuideEvent(EventID.LoadUI, self.LoadUIEvent)
   self:AddSystemGuideEvent(EventID.UnLoadUI, self.UnLoadUIEvent)
   self:AddSystemGuideEvent(EventID.QuestFinished, self.FinishQuestEvent)
@@ -41,10 +43,22 @@ function SystemGuideManager:AddSystemGuideEvents()
 end
 
 function SystemGuideManager:IsNeedAddListener(EventId)
+  local HasUnfinishedGuide = false
+  for _ in pairs(self.GuideUnfinishedDic) do
+    HasUnfinishedGuide = true
+    break
+  end
+  if HasUnfinishedGuide and (EventId == EventID.LoadUI or EventId == EventID.UnLoadUI) then
+    for _ in pairs(self.SystemGuideBlockUIConfigs or {}) do
+      return true
+    end
+  end
   for key, value in pairs(self.GuideUnfinishedDic) do
     if (EventId == EventID.SystemGuideEnterRegion or EventId == EventID.SystemGuideExitRegion) and value.Data.IsInRegion ~= nil then
       return true
     elseif (EventId == EventID.SystemGuideEnterDungeon or EventId == EventID.SystemGuideExitDungeon) and nil ~= value.Data.EnterDungeon then
+      return true
+    elseif EventId == EventID.InLoading and (value.Data.IsInRegion ~= nil or nil ~= value.Data.EnterDungeon) then
       return true
     elseif (EventId == EventID.LoadUI or EventId == EventID.UnLoadUI) and nil ~= value.Data.OpenInterface then
       return true
@@ -117,6 +131,9 @@ function SystemGuideManager:ClearSystemGuideData()
   self.GuideDic = {}
   self.GuideUnfinishedDic = {}
   self.GuideQueue = {}
+  self.SystemGuideBlockUIs = {}
+  self.PendingSystemGuideIds = {}
+  self.PendingSystemGuideQueue = {}
   self.IsGuideStoryRunning = false
   self.RunningId = -1
   self.IsUIOnly = nil
@@ -447,6 +464,15 @@ function SystemGuideManager:TryRunStoryByGuideId(Source, GuideId, IsDelay)
     return
   end
   if self.GuideDic[GuideId].Finished == false and self.GuideDic[GuideId].IsBroken ~= true and self.GuideDic[GuideId].FinishedPreSysGuide and self.GuideDic[GuideId].FinishedQuest and self.GuideDic[GuideId].FinishedQuestChain and self.GuideDic[GuideId].UIUnlockRule and self.GuideDic[GuideId].FinishedOpenInterface and self.GuideDic[GuideId].FinishedEnterDungeon and self.GuideDic[GuideId].FinishedEnterRegion and self.GuideDic[GuideId].FinishedPlayerInControl and self.GuideDic[GuideId].FinishedSpecialCondition and self.GuideDic[GuideId].FinishedOutTalkComp and self.GuideDic[GuideId].FinishedFirstSeenTag and self.GuideDic[GuideId].ConditionCheck and self.GuideDic[GuideId].FinishedSystemUnlockWorking and 0 == self.GuideDic[GuideId].GuideStart then
+    if self:HasSystemGuideBlockUI() then
+      self:DelaySystemGuideByBlockUI(GuideId)
+      return
+    end
+    if self:IsSystemGuideStartBlocked() then
+      self:RemoveGuideQueueOnly(GuideId, "TryRunStoryByGuideIdBlocked:" .. (Source or ""))
+      DebugPrint("SystemGuideStartBlocked:" .. GuideId .. ",Source:" .. (Source or ""))
+      return
+    end
     if true ~= IsDelay then
       table.insert(self.GuideQueue, GuideId)
     end
@@ -460,7 +486,66 @@ function SystemGuideManager:TryRunStoryByGuideId(Source, GuideId, IsDelay)
   end
 end
 
+function SystemGuideManager:HasSystemGuideBlockUI()
+  for _ in pairs(self.SystemGuideBlockUIs or {}) do
+    return true
+  end
+  return false
+end
+
+function SystemGuideManager:DelaySystemGuideByBlockUI(GuideId)
+  self.PendingSystemGuideIds = self.PendingSystemGuideIds or {}
+  self.PendingSystemGuideQueue = self.PendingSystemGuideQueue or {}
+  if self.PendingSystemGuideIds[GuideId] ~= true then
+    self.PendingSystemGuideIds[GuideId] = true
+    table.insert(self.PendingSystemGuideQueue, GuideId)
+  end
+  self:RemoveGuideQueueOnly(GuideId, "DelayByBlockUI", true)
+end
+
+function SystemGuideManager:TryRunPendingSystemGuides(Source)
+  if self:HasSystemGuideBlockUI() then
+    return
+  end
+  if self.PendingSystemGuideQueue == nil or #self.PendingSystemGuideQueue <= 0 then
+    return
+  end
+  local PendingQueue = self.PendingSystemGuideQueue
+  self.PendingSystemGuideQueue = {}
+  self.PendingSystemGuideIds = {}
+  for i = 1, #PendingQueue do
+    local GuideId = PendingQueue[i]
+    self:TryRunStoryByGuideId(Source, GuideId)
+  end
+end
+
+function SystemGuideManager:IsSystemGuideStartBlocked()
+  if GWorld and GWorld.GameInstance and GWorld.GameInstance.GetLoadingUI then
+    local LoadingUI = GWorld.GameInstance:GetLoadingUI()
+    if LoadingUI and LoadingUI.bIsInLoading then
+      return true
+    end
+  end
+  if GWorld and GWorld.StoryMgr and GWorld.StoryMgr.bEnableStory == false then
+    return true
+  end
+  return false
+end
+
 function SystemGuideManager:PrintDataInfo(Data, Guide)
+end
+
+function SystemGuideManager:RemoveGuideQueueOnly(GuideId, Source, bSilent)
+  if #self.GuideQueue > 0 then
+    for j = #self.GuideQueue, 1, -1 do
+      if self.GuideQueue[j] == GuideId and self.RunningId ~= GuideId then
+        table.remove(self.GuideQueue, j)
+        if true ~= bSilent then
+          DebugPrint("SystemGuideQueueRemove:" .. GuideId .. ",Source:" .. (Source or ""))
+        end
+      end
+    end
+  end
 end
 
 function SystemGuideManager:GuideQueueRemove(GuideId, Source)
@@ -479,8 +564,31 @@ function SystemGuideManager:GuideQueueRemove(GuideId, Source)
   end
 end
 
+function SystemGuideManager:InLoadingEvent()
+  if self.Invalid then
+    return
+  end
+  DebugPrint("SystemGuide InLoadingEvent")
+  for GuideId, Item in pairs(self.GuideUnfinishedDic) do
+    local Data = Item.Data
+    if Data.IsInRegion ~= nil or nil ~= Data.EnterDungeon then
+      if Data.IsInRegion ~= nil then
+        Item.FinishedEnterRegion = false
+      end
+      if nil ~= Data.EnterDungeon then
+        Item.FinishedEnterDungeon = false
+      end
+      self:RemoveGuideQueueOnly(GuideId, "InLoadingEvent")
+    end
+  end
+end
+
 function SystemGuideManager:LoadUIEvent(UIKey)
   DebugPrint("SystemGuide LoadUIEvent UIKey:", UIKey)
+  if self.SystemGuideBlockUIConfigs and self.SystemGuideBlockUIConfigs[UIKey] then
+    self.SystemGuideBlockUIs = self.SystemGuideBlockUIs or {}
+    self.SystemGuideBlockUIs[UIKey] = true
+  end
   self:ShowUIEvent(UIKey)
 end
 
@@ -507,6 +615,12 @@ end
 function SystemGuideManager:UnLoadUIEvent(UIKey)
   DebugPrint("SystemGuide UnLoadUIEvent UIKey:", UIKey)
   self:HideUIEvent(UIKey)
+  if self.SystemGuideBlockUIConfigs and self.SystemGuideBlockUIConfigs[UIKey] then
+    if self.SystemGuideBlockUIs then
+      self.SystemGuideBlockUIs[UIKey] = nil
+    end
+    self:TryRunPendingSystemGuides("BlockUIClosed:" .. UIKey)
+  end
 end
 
 function SystemGuideManager:HideUIEvent(UIKey)

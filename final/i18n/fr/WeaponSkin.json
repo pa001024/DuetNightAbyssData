@@ -74,9 +74,17 @@
   {
     "id": 3010110,
     "name": "Le Cri – Espadon",
-    "desc": "",
+    "desc": "GRAAAAH—————— !",
     "icon": "T_Head_Claymore_Nahan",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010111,
+    "name": "UI_WeaponSkin_Name_3010111",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -136,6 +144,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010208,
+    "name": "UI_WeaponSkin_Name_3010208",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010301,
     "name": "Scherzo de l’aurore",
     "desc": "Où se cache le soleil ? Là, regarde... il danse au creux de ma paume.",
@@ -189,6 +205,14 @@
     "desc": "GRAAAAH—————— !",
     "icon": "T_Head_Bow_Nahan02",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010308,
+    "name": "UI_WeaponSkin_Name_3010308",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -253,6 +277,14 @@
     "desc": "Écoutez l’appel éternel venu des étoiles.",
     "icon": "T_Head_Polearm_Huanyu",
     "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010409,
+    "name": "Le Cri – Arme d’hast",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Polearm_Nahan",
+    "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -332,6 +364,22 @@
     "name": "Chant du Firmament – Doubles lames",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010611,
+    "name": "Le Cri – Doubles lames",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Dualblade_Nahan",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010613,
+    "name": "UI_WeaponSkin_Name_3010610",
+    "desc": "",
+    "icon": "",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
@@ -472,6 +520,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010904,
+    "name": "UI_WeaponSkin_Name_3010904",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3011001,
     "name": "Guitare miaou n° 2",
     "desc": "Miaouuu ♪ miaou-miaou-miaou ♪ miaou-miaou ♪♪",
@@ -501,6 +557,14 @@
     "desc": "GRAAAAH—————— !",
     "icon": "T_Head_Shotgun_Nahan",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011005,
+    "name": "UI_WeaponSkin_Name_3011005",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -549,6 +613,22 @@
     "desc": "GRAAAAH—————— !",
     "icon": "T_Head_Crossbow_Nahan",
     "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011207,
+    "name": "Première neige immaculée",
+    "desc": "Avant que la première neige ne fonde, n’oubliez pas son éclat originel.",
+    "icon": "T_Head_Crossbow_Weirong",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011209,
+    "name": "Banamis",
+    "desc": "Bonjour, faisons connaissance.",
+    "icon": "T_Head_Crossbow_Jiaoge",
+    "rarity": 5,
     "unlock": "Disponible dans la boutique"
   }
 ]

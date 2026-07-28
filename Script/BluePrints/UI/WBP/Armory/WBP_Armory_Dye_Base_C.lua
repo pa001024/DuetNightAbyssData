@@ -360,9 +360,9 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.Parent = Params.Parent
   self.IsPreviewMode = Params.IsPreviewMode
   self.Type = Params.Type
-  self.DyeType = Params.Type
   self.Target = Params.Target
   self.SkinType = Params.SkinType or CommonConst.DataType.Skin
+  self.DyeType = Params.SkinType
   self.bOwnTargetSkin = false
   self.OnCloseCallback = Params.OnCloseCallback
   self.ContrastKeyDownCount = 0
@@ -448,11 +448,15 @@ function M:OnActorCreated(WeaponActor)
   else
     self.ActorController:SetArmoryCameraTag("Default")
   end
-  if self.Type == "Char" then
-    self.DyeType = CommonConst.AppearanceCollectType.Skin
-  elseif self.Type == "Weapon" then
-    self.DyeType = CommonConst.AppearanceCollectType.WeaponSkin
-  elseif self.Type == "Hair" then
+  if self.SkinType == "Skin" then
+    if self.Type == "Char" then
+      self.DyeType = CommonConst.AppearanceCollectType.Skin
+    elseif self.Type == "Weapon" then
+      self.DyeType = CommonConst.AppearanceCollectType.WeaponSkin
+    end
+  elseif self.SkinType == "Weapon" then
+    self.DyeType = CommonConst.AppearanceCollectType.Weapon
+  elseif self.SkinType == "Hair" then
     self.DyeType = CommonConst.AppearanceCollectType.Hair
   end
   local Avatar = GWorld:GetAvatar()
@@ -1214,17 +1218,17 @@ function M:OnNormalDyeTabInit(TabContent)
     PartColorIds = DyePartData.ColorID
     local HighLightPartColorContent = CurTabComparedColorContent or CurTabSelectedColorContent
     self:ChangePartColor(CurPartTabIdx, HighLightPartColorContent.ActualColor, HighLightPartColorContent.Fresnel)
-    self:StartPlayerPartHighLight(HighLightPartColorContent.ActualColor, CurPartTabIdx)
+    self:StartPlayerPartHighLight(HighLightPartColorContent.ActualColor, HighLightPartColorContent.Fresnel, CurPartTabIdx)
   elseif self.Type == CommonConst.ArmoryType.Mount then
     local DyePartData = DataMgr.DyePart[CurPartTabIdx] or {}
     PartColorIds = DyePartData.ColorID
     local HighLightPartColorContent = CurTabComparedColorContent or CurTabSelectedColorContent
     self:ChangePartColor(CurPartTabIdx, HighLightPartColorContent.ActualColor, HighLightPartColorContent.Fresnel)
-    self:StartMountPartHighLight(HighLightPartColorContent.ActualColor, CurPartTabIdx)
+    self:StartMountPartHighLight(HighLightPartColorContent.ActualColor, HighLightPartColorContent.Fresnel, CurPartTabIdx)
   else
     local HighLightPartColorContent = CurTabComparedColorContent or CurTabSelectedColorContent
     self:ChangePartColor(CurPartTabIdx, HighLightPartColorContent.ActualColor, HighLightPartColorContent.Fresnel)
-    self:StartWeaponPartHighLight(HighLightPartColorContent.ActualColor, CurPartTabIdx)
+    self:StartWeaponPartHighLight(HighLightPartColorContent.ActualColor, HighLightPartColorContent.Fresnel, CurPartTabIdx)
   end
   self.EMList_Normal:ClearListItems()
   local AddedContents = {}
@@ -1278,10 +1282,10 @@ function M:StopWeaponPartHighLight(PartIdx)
   self.ActorController:StopWeaponPartHighLight(PartIdx)
 end
 
-function M:StartPlayerPartHighLight(LastColor, PartIdx)
+function M:StartPlayerPartHighLight(LastColor, Fresnel, PartIdx)
   if self.SkinType == CommonConst.DataType.Hair then
   else
-    self.ActorController:StartPlayerPartHighLight(LastColor, PartIdx, self.HighLightColor, self.Curve_WPHighLight)
+    self.ActorController:StartPlayerPartHighLight(LastColor, Fresnel, PartIdx, self.HighLightColor, self.Curve_WPHighLight)
   end
 end
 

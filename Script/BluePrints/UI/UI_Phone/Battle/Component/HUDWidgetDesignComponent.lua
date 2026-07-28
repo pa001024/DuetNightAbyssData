@@ -1,3 +1,5 @@
+local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
+local TRIAL_LAYOUT_PLAN_INDEX = BattleHUDCommonConst.TRIAL_LAYOUT_PLAN_INDEX
 local M = {}
 
 function M:RegisterHUDDesignComponent(AllHUDWidgetConfigData, bCreateWidgetAfterLayoutLoad, bAsyncWidgetLoading)
@@ -124,7 +126,11 @@ end
 function M:IsEffectWidgetInCurrentPlan(WidgetConfig)
   local MappedPlanIndex = self:_GetMappedPlanIndex(self.EditPlanIndex)
   if WidgetConfig.bIsNeedManualAdd then
-    return 2 == MappedPlanIndex
+    if WidgetConfig.WidgetName == "SlidingJump" then
+      return 3 == MappedPlanIndex
+    else
+      return 2 == MappedPlanIndex or 3 == MappedPlanIndex
+    end
   else
     return true
   end
@@ -221,7 +227,11 @@ function M:_GetMappedPlanIndex(EditPlanIndex)
   if nil == EditPlanIndex then
     return 1
   end
-  return (EditPlanIndex - 1) % 2 + 1
+  if EditPlanIndex >= 7 and EditPlanIndex <= 9 then
+    return 3
+  else
+    return (EditPlanIndex - 1) % 2 + 1
+  end
 end
 
 function M:_GetRelativeNodeDesireSaveData(WidgetNodeName)
@@ -542,14 +552,31 @@ end
 
 function M:_SetWidgetInfoToBPValue(ParentNode, TypeStr, Value)
   local TargetChildIndex = self.RootLayoutNode:GetChildIndex(ParentNode) + 1
+  local MappedPlanIndex = self:_GetMappedPlanIndex(self.EditPlanIndex)
   if TargetChildIndex > 0 then
     if "Pos" == TypeStr then
-      local CurPositionPlan = self["InPosition0" .. tostring(self.EditPlanIndex)]
+      local CurPositionPlan
+      if 3 == MappedPlanIndex then
+        local RestValue = self.EditPlanIndex - 6
+        CurPositionPlan = self["InPosition3_" .. tostring(RestValue)]
+      elseif self.EditPlanIndex == TRIAL_LAYOUT_PLAN_INDEX then
+        CurPositionPlan = self.InPosition_Trail
+      else
+        CurPositionPlan = self["InPosition0" .. tostring(self.EditPlanIndex)]
+      end
       if CurPositionPlan and CurPositionPlan:Get(TargetChildIndex) then
         CurPositionPlan:Set(TargetChildIndex, Value)
       end
     elseif "Scale" == TypeStr then
-      local CurScalePlan = self["PosScale0" .. tostring(self.EditPlanIndex)]
+      local CurScalePlan
+      if 3 == MappedPlanIndex then
+        local RestValue = self.EditPlanIndex - 6
+        CurScalePlan = self["PosScale3_" .. tostring(RestValue)]
+      elseif self.EditPlanIndex == TRIAL_LAYOUT_PLAN_INDEX then
+        CurScalePlan = self.PosScale_Trail
+      else
+        CurScalePlan = self["PosScale0" .. tostring(self.EditPlanIndex)]
+      end
       if CurScalePlan and CurScalePlan:Get(TargetChildIndex) then
         CurScalePlan:Set(TargetChildIndex, Value)
       end

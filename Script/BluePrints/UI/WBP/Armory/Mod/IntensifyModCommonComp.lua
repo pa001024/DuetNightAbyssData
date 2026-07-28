@@ -102,7 +102,6 @@ end
 
 function Component:CloseForModCommon()
   ModController:UnRegisterEvent(self)
-  ModController:SetUICamera(FVector(0, 0, 0))
   local SelectStuff = ModModel:GetSelectStuff()
   if SelectStuff then
     ModController:SetSelectedStuff(nil, nil)

@@ -87,7 +87,7 @@ return ReadOnly("TalkType", {
     ShowInStoryReview = true,
     TalkType = "FixSimple",
     UICanInteractive = true,
-    UIName = "SimpleTalkUI"
+    UIName = "ImpressionMainUI"
   },
   ForgingGuide = {
     BasicType = "Guide",
@@ -108,7 +108,7 @@ return ReadOnly("TalkType", {
     ShowInStoryReview = true,
     TalkType = "FreeSimple",
     UICanInteractive = true,
-    UIName = "SimpleTalkUI"
+    UIName = "ImpressionMainUI"
   },
   Guide = {
     BasicType = "Guide",
@@ -129,17 +129,6 @@ return ReadOnly("TalkType", {
     TalkType = "HintGuide",
     UICanInteractive = false,
     UIName = "TalkGuideUI"
-  },
-  Impression = {
-    BasicType = "Impression",
-    CameraType = "FreeCamera",
-    GameInput = false,
-    SetPlayerInvincible = true,
-    ShowGameUI = false,
-    ShowInStoryReview = true,
-    TalkType = "Impression",
-    UICanInteractive = true,
-    UIName = "ImpressionMainUI"
   },
   LevelSequence = {
     BasicType = "Cinematic",
@@ -163,7 +152,7 @@ return ReadOnly("TalkType", {
     ShowInStoryReview = true,
     TalkType = "NoIntFixSimple",
     UICanInteractive = true,
-    UIName = "SimpleTalkUI"
+    UIName = "ImpressionMainUI"
   },
   PanFixSimple = {
     BasicType = "FixSimple",
@@ -174,18 +163,6 @@ return ReadOnly("TalkType", {
     ShowGameUI = false,
     ShowInStoryReview = true,
     TalkType = "PanFixSimple",
-    UICanInteractive = true,
-    UIName = "SimpleTalkUI"
-  },
-  QuestImpression = {
-    BasicType = "FixSimple",
-    CameraType = "FixedCamera",
-    ExtraParams = T.RT_2,
-    GameInput = false,
-    SetPlayerInvincible = true,
-    ShowGameUI = false,
-    ShowInStoryReview = true,
-    TalkType = "QuestImpression",
     UICanInteractive = true,
     UIName = "ImpressionMainUI"
   },

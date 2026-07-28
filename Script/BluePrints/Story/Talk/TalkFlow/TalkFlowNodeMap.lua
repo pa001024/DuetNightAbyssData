@@ -5,11 +5,12 @@ local FOptionNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_O
 local FStartNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Start")
 local FEndNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_End")
 
-function M:New(TalkTask, Comps, Events)
+function M:New(Context, Comps, NodeEvents, FlowChecker)
   local NodeMap = setmetatable({}, {__index = M})
-  NodeMap.TalkTask = TalkTask
+  NodeMap.Context = Context
   NodeMap.Comps = Comps
-  NodeMap.Events = Events
+  NodeMap.NodeEvents = NodeEvents
+  NodeMap.FlowChecker = FlowChecker
   NodeMap.CheckConditionNodeMap = {}
   NodeMap.DialogueNodeMap = {}
   NodeMap.OptionNodeMap = {}
@@ -21,19 +22,20 @@ function M:GetOrCreateNode(NodeType, DialogueId)
   if nil ~= Node then
     return Node
   end
-  local TalkTask = self.TalkTask
+  local Context = self.Context
   local Comps = self.Comps
-  local Events = self.Events
+  local NodeEvents = self.NodeEvents
+  local FlowChecker = self.FlowChecker
   if "Dialogue" == NodeType then
-    Node = FDialogueNode:New(DialogueId, TalkTask, Comps, self, Events)
+    Node = FDialogueNode:New(DialogueId, Context, NodeEvents, FlowChecker, Comps, self)
   elseif "Option" == NodeType then
-    Node = FOptionNode:New(DialogueId, TalkTask, Comps, self, Events)
+    Node = FOptionNode:New(DialogueId, Context, NodeEvents, FlowChecker, Comps, self)
   elseif "CheckOptionCondition" == NodeType then
-    Node = FCheckOptionConditionNode:New(DialogueId, TalkTask, Comps, self, Events)
+    Node = FCheckOptionConditionNode:New(DialogueId, Context, NodeEvents, FlowChecker, Comps, self)
   elseif "Start" == NodeType then
-    Node = FStartNode:New(DialogueId, TalkTask, Comps, self, Events)
+    Node = FStartNode:New(DialogueId, Context, NodeEvents, FlowChecker, Comps, self)
   elseif "End" == NodeType then
-    Node = FEndNode:New(nil, TalkTask, nil, nil, Events)
+    Node = FEndNode:New(nil, Context, NodeEvents, FlowChecker, nil, nil)
   else
     DebugPrint("FTalkFlow:GetOrCreateNode: NodeType无效", NodeType)
     return

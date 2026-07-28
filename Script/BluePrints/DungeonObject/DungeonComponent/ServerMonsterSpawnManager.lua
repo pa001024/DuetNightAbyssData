@@ -1,4 +1,5 @@
 local ServerMonsterSpawn = require("BluePrints.DungeonObject.DungeonComponent.ServerMonsterSpawn")
+local ServerGroupMonsterSpawn = require("BluePrints.DungeonObject.DungeonComponent.ServerGroupMonsterSpawn")
 local ServerMonsterSpawnManager = DungeonClass.Class()
 ServerMonsterSpawnManager.__Name__ = "ServerMonsterSpawnManager"
 ServerMonsterSpawnManager.__Component__ = {}
@@ -61,7 +62,12 @@ function ServerMonsterSpawnManager:CreateSingleMonsterSpawn(UnitSpawnId, OnlyRel
     return
   end
   print("ServerMonsterSpawnManager:CreateSingleMonsterSpawn", UnitSpawnId, OnlyRelation)
-  local NewServerMonsterSpawn = ServerMonsterSpawn()
+  local SpawnData = DataMgr.MonsterSpawn[UnitSpawnId]
+  local SpawnClass = ServerMonsterSpawn
+  if SpawnData and SpawnData.OpenGroupSpawn then
+    SpawnClass = ServerGroupMonsterSpawn
+  end
+  local NewServerMonsterSpawn = SpawnClass()
   self.MonsterSpawnMap[UnitSpawnId] = NewServerMonsterSpawn
   NewServerMonsterSpawn:InitMonsterSpawn(UnitSpawnId, OnlyRelation, self)
 end
@@ -107,7 +113,7 @@ function ServerMonsterSpawnManager:RealDestroyMonsterSpawn(UnitSpawnId)
 end
 
 function ServerMonsterSpawnManager:DungeonMonsterDead(MonsterInfo)
-  print("HTYServerTest111 ServerMonsterSpawnManager:DungeonMonsterDead", MonsterInfo.CreatorId, MonsterInfo.CreatorType, MonsterInfo.UnitId, MonsterInfo.UniqueId)
+  print("ServerMonsterSpawnManager:DungeonMonsterDead", MonsterInfo.CreatorId, MonsterInfo.CreatorType, MonsterInfo.UnitId, MonsterInfo.UniqueId)
   if MonsterInfo.CreatorType ~= "MonsterSpawn" then
     return
   end
@@ -128,7 +134,11 @@ function ServerMonsterSpawnManager:OnNotifyServerDungeonEvent_MultiInfoResChange
 end
 
 function ServerMonsterSpawnManager:DebugPrint(Str, UnitSpawnId)
-  print("[ServerMonsterSpawnLog] UnitSpawnId: " .. UnitSpawnId .. " " .. Str)
+  if nil ~= UnitSpawnId then
+    print("[ServerMonsterSpawnLog] UnitSpawnId: " .. UnitSpawnId .. " " .. Str)
+  else
+    print("[ServerMonsterSpawnLog] " .. Str)
+  end
 end
 
 DungeonClass.AssembleComponents(ServerMonsterSpawnManager)

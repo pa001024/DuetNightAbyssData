@@ -253,13 +253,20 @@
   },
   {
     "id": 2102,
-    "name": "Eve's Accessory",
-    "desc": "UI_Skin_Des_2102",
-    "icon": "T_Head_Shuimu",
+    "name": "\"Ada\"'s Accessory",
+    "desc": "The blue folds ripple like layered water, mirroring a vibrant world caught in her gaze.",
+    "icon": "T_Head_Eve",
     "rarity": 5,
     "charId": 2102,
     "release": "1.5",
     "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10032,
+          "name": "Portrait: White Bunny",
+          "num": 1
+        }
+      ],
       "Resource": [
         {
           "id": 110,
@@ -376,6 +383,31 @@
     "icon": "T_Head_Yeer",
     "rarity": 5,
     "charId": 3103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10021,
+          "name": "Portrait: The Undivided Two",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3104,
+    "name": "UI_Skin_Name_3104",
+    "desc": "UI_Skin_Des_3104",
+    "icon": "T_Head_Yeer",
+    "rarity": 5,
+    "charId": 3104,
     "release": "1.0",
     "defaultItem": {
       "HeadSculpture": [
@@ -695,6 +727,40 @@
     }
   },
   {
+    "id": 5402,
+    "name": "UI_Skin_Name_5402",
+    "desc": "UI_Skin_Des_5402",
+    "icon": "T_Head_Dafu",
+    "rarity": 5,
+    "charId": 5402,
+    "release": "2.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10013,
+          "name": "Portrait: The Alchemist",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "Lucent Prism",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 110101,
+    "name": "UI_Skin_Name_110101",
+    "desc": "UI_Skin_Des_110101",
+    "icon": "T_Head_Heitao",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.6"
+  },
+  {
     "id": 110201,
     "name": "The Absolver",
     "desc": "The noble angel takes up the sword of judgement. Sinners shall be condemned. The innocent shall be absolved.",
@@ -751,16 +817,7 @@
     "rarity": 5,
     "charId": 1502,
     "tag": "Nifu01",
-    "release": "1.4",
-    "defaultItem": {
-      "HeadSculpture": [
-        {
-          "id": 20008,
-          "name": "Portrait: Ferrywoman of the Misty Sea – Hymn",
-          "num": 1
-        }
-      ]
-    }
+    "release": "1.4"
   },
   {
     "id": 150401,
@@ -906,6 +963,46 @@
     }
   },
   {
+    "id": 210201,
+    "name": "Snowlight Chase",
+    "desc": "Snowflakes rest in her palms, whispering fairytales from a dreamer's distance.",
+    "icon": "T_Head_Eve01",
+    "rarity": 5,
+    "charId": 2102,
+    "tag": "Eve01",
+    "release": "1.5",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 210292,
+          "name": "",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20010,
+          "name": "Portrait: White Bunny – Snow Chase",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "Gliscent Needle"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "Gliscent Needle"
+      }
+    ]
+  },
+  {
     "id": 240101,
     "name": "Tidal Repose",
     "desc": "Tides to wash away the dust, waves to still the heart.",
@@ -939,16 +1036,34 @@
     "rarity": 5,
     "charId": 3101,
     "tag": "Linen01",
-    "release": "1.4",
-    "defaultItem": {
-      "HeadSculpture": [
-        {
-          "id": 20009,
-          "name": "Portrait: The Self-Denying – Hymn",
-          "num": 1
-        }
-      ]
-    }
+    "release": "1.4"
+  },
+  {
+    "id": 310201,
+    "name": "Nightfall Enchantress: Hilda",
+    "desc": "Veiled in moonlight, adorned in shadows.",
+    "icon": "T_Head_Xier01",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.5"
+  },
+  {
+    "id": 310401,
+    "name": "UI_Skin_Name_310401",
+    "desc": "UI_Skin_Des_310401",
+    "icon": "",
+    "rarity": 5,
+    "charId": 3104,
+    "release": "1.6"
+  },
+  {
+    "id": 320201,
+    "name": "Nightfall Enchantress: Camilla",
+    "desc": "Veiled in moonlight, adorned in shadows.",
+    "icon": "T_Head_Kami01",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.5"
   },
   {
     "id": 410101,
@@ -1062,6 +1177,24 @@
     }
   },
   {
+    "id": 530102,
+    "name": "UI_Skin_Name_530102",
+    "desc": "UI_Skin_Des_530102",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.6"
+  },
+  {
+    "id": 540201,
+    "name": "UI_Skin_Name_540201",
+    "desc": "UI_Skin_Des_540201",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5402,
+    "release": "2.0"
+  },
+  {
     "id": 11010010,
     "name": "Starry Hopes",
     "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
@@ -1125,6 +1258,15 @@
     "release": "1.4"
   },
   {
+    "id": 11010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.5"
+  },
+  {
     "id": 11020141,
     "name": "Black Gospel",
     "desc": "Sin needs no hothouse. It blooms in silence, deep within the human heart.",
@@ -1132,6 +1274,15 @@
     "rarity": 5,
     "charId": 1102,
     "release": "1.4"
+  },
+  {
+    "id": 11020151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.5"
   },
   {
     "id": 11030010,
@@ -1413,6 +1564,15 @@
     "release": "1.4"
   },
   {
+    "id": 15020151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.5"
+  },
+  {
     "id": 15030011,
     "name": "Verdant Serenity",
     "desc": "Beauty unveiled, grace in its wake.",
@@ -1474,6 +1634,15 @@
     "rarity": 5,
     "charId": 1504,
     "release": "1.4"
+  },
+  {
+    "id": 15040151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.5"
   },
   {
     "id": 16010010,
@@ -1733,6 +1902,15 @@
     "release": "1.4"
   },
   {
+    "id": 18010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05_05",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.5"
+  },
+  {
     "id": 21010010,
     "name": "Starry Hopes",
     "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
@@ -1794,6 +1972,24 @@
     "rarity": 5,
     "charId": 2101,
     "release": "1.4"
+  },
+  {
+    "id": 21010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.5"
+  },
+  {
+    "id": 21020151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "9.9"
   },
   {
     "id": 23010010,
@@ -1904,6 +2100,15 @@
     "release": "1.4"
   },
   {
+    "id": 24010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.5"
+  },
+  {
     "id": 31010010,
     "name": "Starry Hopes",
     "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
@@ -1967,6 +2172,15 @@
     "release": "1.4"
   },
   {
+    "id": 31010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.5"
+  },
+  {
     "id": 31020141,
     "name": "Black Gospel",
     "desc": "Sin needs no hothouse. It blooms in silence, deep within the human heart.",
@@ -1974,6 +2188,15 @@
     "rarity": 5,
     "charId": 3102,
     "release": "1.4"
+  },
+  {
+    "id": 31020151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "9.9"
   },
   {
     "id": 31030010,
@@ -2093,6 +2316,15 @@
     "release": "1.4"
   },
   {
+    "id": 32010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.5"
+  },
+  {
     "id": 32020131,
     "name": "Rebel Riff",
     "desc": "We drink deep on sleepless, velvet-blue nights, whistling as we race into the midnight chill.",
@@ -2109,6 +2341,15 @@
     "rarity": 5,
     "charId": 3202,
     "release": "1.4"
+  },
+  {
+    "id": 32020151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "9.9"
   },
   {
     "id": 33010010,
@@ -2174,6 +2415,15 @@
     "release": "1.4"
   },
   {
+    "id": 33010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.5"
+  },
+  {
     "id": 41010010,
     "name": "Starry Hopes",
     "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
@@ -2237,6 +2487,15 @@
     "release": "1.4"
   },
   {
+    "id": 41010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.5"
+  },
+  {
     "id": 41020121,
     "name": "Frosty Fantasy",
     "desc": "Why is one of the snowmen so much bigger than the others?",
@@ -2280,6 +2539,15 @@
     "rarity": 5,
     "charId": 4102,
     "release": "1.4"
+  },
+  {
+    "id": 41020151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.5"
   },
   {
     "id": 42010121,
@@ -2433,6 +2701,15 @@
     "rarity": 5,
     "charId": 4301,
     "release": "9.9"
+  },
+  {
+    "id": 43010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05_04",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.5"
   },
   {
     "id": 51010010,
@@ -2606,6 +2883,15 @@
     "release": "1.4"
   },
   {
+    "id": 53010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.5"
+  },
+  {
     "id": 54010010,
     "name": "Starry Hopes",
     "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
@@ -2667,5 +2953,14 @@
     "rarity": 5,
     "charId": 5401,
     "release": "9.9"
+  },
+  {
+    "id": 54010151,
+    "name": "Azure Tides",
+    "desc": "Drift in the midsummer breeze, and raise a glass to azure waves, to golden fireworks, and to the freedom of this moment.",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.5"
   }
 ]

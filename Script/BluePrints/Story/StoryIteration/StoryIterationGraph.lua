@@ -107,10 +107,6 @@ function FStoryIterationGraph:IsCinematic()
   return self.BasicTalkType == ETalkType.Cinematic
 end
 
-function FStoryIterationGraph:UsingImpressionUI()
-  return self.TalkTask.TalkType == "Impression" or self.TalkTask.TalkType == "QuestImpression"
-end
-
 function FStoryIterationGraph:GetCurrentNode()
   return self.CurrentNode
 end

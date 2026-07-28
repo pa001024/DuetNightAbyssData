@@ -52,6 +52,8 @@ function PlayOrStopBGMNode:Start(Context)
         return
       end
       AudioManager(GameInstance):PlayStoryCustomBGM(self.SoundType, Event, self.SoundUnitKey, self.ParamKey, self.ParamValue, RelatedRegionIdArray, ClientRelatedRegionIdArray)
+    elseif 3 == self.SoundPriority then
+      AudioManager(GameInstance):PlayCGReviewBGM(self.SoundType, Event, RelatedRegionIdArray, ClientRelatedRegionIdArray, self.ParamKey, self.ParamValue, false)
     end
   elseif 3 == self.SoundStateType then
     if 0 == self.SoundPriority then
@@ -66,6 +68,8 @@ function PlayOrStopBGMNode:Start(Context)
         return
       end
       AudioManager(GameInstance):StopStoryCustomBGM(self.SoundType, self.SoundUnitKey)
+    elseif 3 == self.SoundPriority then
+      AudioManager(GameInstance):StopCGReviewBGM(self.SoundType)
     end
   elseif 1 == self.SoundStateType then
     AudioManager(GameInstance):SetSceneSoundPause(self.SoundType, true)

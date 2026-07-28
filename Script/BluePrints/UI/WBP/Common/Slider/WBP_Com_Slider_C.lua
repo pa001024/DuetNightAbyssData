@@ -19,6 +19,7 @@ function M:Construct()
   self.StepCount = 1
   self.AddTime = 0
   self.MinTime = 0
+  self.ExternalOperationForbidden = false
   self.SliderType = self.SliderType or "Horizontal"
 end
 
@@ -30,6 +31,7 @@ end
 
 function M:Init(ConfigData)
   self.ConfigData = ConfigData
+  self.ExternalOperationForbidden = false
   self.CurrentCount = ConfigData.InitValue or 1
   self.MinValue = ConfigData.MinValue or 1
   self.MaxValue = ConfigData.MaxValue or 999
@@ -39,7 +41,9 @@ function M:Init(ConfigData)
   rawset(self, "MiniBtnGamePadKey", self.EnableMiniBtn and (ConfigData.MiniBtnGamePadKey or "DPadLeft") or nil)
   rawset(self, "MaxBtnGamePadKey", self.EnableMaxBtn and (ConfigData.MaxBtnGamePadKey or "DPadRight") or nil)
   self.MinusBtnCallback = ConfigData.MinusBtnCallback
+  self.MinusBtnForbidCallback = ConfigData.MinusBtnForbidCallback
   self.AddBtnCallback = ConfigData.AddBtnCallback
+  self.AddBtnForbidCallback = ConfigData.AddBtnForbidCallback
   self.MaxBtnCallback = ConfigData.MaxBtnCallback
   self.SliderChangeCallback = ConfigData.SliderChangeCallback
   self.SoundResPath = ConfigData.SoundResPath or {}
@@ -116,8 +120,8 @@ function M:RefreshBaseInfo()
       self.Btn_NumRight:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
   end
-  self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
-  self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+  self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
+  self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
   if self.ParentContainer then
     if 1 == self.MaxValue then
       self.ParentContainer:SetVisibility(ESlateVisibility.Collapsed)
@@ -283,8 +287,20 @@ function M:BindAllClickAction()
   end
   self.Btn_Min:BindEventOnPressed(self, self.OnMinusKeyDown)
   self.Btn_Min:BindEventOnReleased(self, self.OnMinusKeyUp)
+  if self.Btn_Min.BindForbidStateExecuteEvent then
+    self.Btn_Min:BindForbidStateExecuteEvent(self, self.OnClickToMinusInForbidState)
+  end
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+    self.Btn_Min.Btn.OnUnhovered:Add(self, self.OnMinusKeyUp)
+  end
   self.Btn_Add:BindEventOnPressed(self, self.OnAddKeyDown)
   self.Btn_Add:BindEventOnReleased(self, self.OnAddKeyUp)
+  if self.Btn_Add.BindForbidStateExecuteEvent then
+    self.Btn_Add:BindForbidStateExecuteEvent(self, self.OnClickToAddInForbidState)
+  end
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+    self.Btn_Add.Btn.OnUnhovered:Add(self, self.OnAddKeyUp)
+  end
   self.Slider.OnValueChanged:Add(self, self.OnSliderValueChanged)
   self.Slider.OnMouseCaptureBegin:Add(self, self.OnSelectedSlider)
   self.Slider.OnMouseCaptureEnd:Add(self, self.OnUnSelectedSlider)
@@ -322,6 +338,10 @@ function M:GetChangeCount()
 end
 
 function M:MinusSpecificBtnClicked()
+  if self.ExternalOperationForbidden then
+    self:OnClickToMinusInForbidState()
+    return
+  end
   local FinalCount = self.SpecificChangeCount
   if FinalCount > self.CurrentCount - self.MinValue then
     FinalCount = self.CurrentCount - self.MinValue
@@ -339,9 +359,9 @@ function M:MinusSpecificBtnClicked()
   self.CurrentCount = self.CurrentCount - FinalCount
   self:UpdateSliderAndProgress()
   if self.ForbidAdd then
-    self:ForbidAddOperation(false)
+    self:ForbidAddOperation(false, true)
   end
-  self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+  self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
   if type(self.MinusBtnCallback) == "function" then
     self.MinusBtnCallback(self.OwnerPanel, self.CurrentCount, OldNumberValue)
   end
@@ -350,6 +370,10 @@ function M:MinusSpecificBtnClicked()
 end
 
 function M:AddSpecificBtnClicked()
+  if self.ExternalOperationForbidden then
+    self:OnClickToAddInForbidState()
+    return
+  end
   local FinalCount = self.SpecificChangeCount
   if FinalCount > self.MaxValue - self.CurrentCount then
     FinalCount = self.MaxValue - self.CurrentCount
@@ -367,9 +391,9 @@ function M:AddSpecificBtnClicked()
   self.CurrentCount = self.CurrentCount + FinalCount
   self:UpdateSliderAndProgress()
   if self.ForbidMin then
-    self:ForbidMinOperation(false)
+    self:ForbidMinOperation(false, true)
   end
-  self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
+  self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
   if type(self.AddBtnCallback) == "function" then
     self.AddBtnCallback(self.OwnerPanel, self.CurrentCount, OldNumberValue)
   end
@@ -378,6 +402,9 @@ function M:AddSpecificBtnClicked()
 end
 
 function M:OnClickToMinus()
+  if self.ExternalOperationForbidden then
+    return
+  end
   self.MinTime = self.MinTime + LongPressInterval
   local FinalCount = self:GetChangeCount()
   if FinalCount > self.CurrentCount - self.MinValue then
@@ -397,9 +424,9 @@ function M:OnClickToMinus()
   self.CurrentCount = self.CurrentCount - FinalCount
   self:UpdateSliderAndProgress()
   if self.ForbidAdd then
-    self:ForbidAddOperation(false)
+    self:ForbidAddOperation(false, true)
   end
-  self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+  self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
   if type(self.MinusBtnCallback) == "function" then
     self.MinusBtnCallback(self.OwnerPanel, self.CurrentCount, OldNumberValue)
   end
@@ -408,6 +435,9 @@ function M:OnClickToMinus()
 end
 
 function M:OnClickToAdd()
+  if self.ExternalOperationForbidden then
+    return
+  end
   self.AddTime = self.AddTime + LongPressInterval
   local FinalCount = self:GetChangeCount()
   if FinalCount > self.MaxValue - self.CurrentCount then
@@ -427,9 +457,9 @@ function M:OnClickToAdd()
   self.CurrentCount = self.CurrentCount + FinalCount
   self:UpdateSliderAndProgress()
   if self.ForbidMin then
-    self:ForbidMinOperation(false)
+    self:ForbidMinOperation(false, true)
   end
-  self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
+  self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
   if type(self.AddBtnCallback) == "function" then
     self.AddBtnCallback(self.OwnerPanel, self.CurrentCount, OldNumberValue)
   end
@@ -438,6 +468,9 @@ function M:OnClickToAdd()
 end
 
 function M:OnMinusKeyDown()
+  if self.ExternalOperationForbidden then
+    return
+  end
   self:AddTimer(LongPressInterval, self.OnClickToMinus, true, 0, "PreMinusLoop", true)
   local AddTimerKey = self:_GetTimerInfo("PreAddLoop")
   if AddTimerKey then
@@ -459,6 +492,9 @@ function M:OnMinusKeyUp()
 end
 
 function M:OnAddKeyDown()
+  if self.ExternalOperationForbidden then
+    return
+  end
   self:AddTimer(LongPressInterval, self.OnClickToAdd, true, 0, "PreAddLoop", true)
   local AddTimerKey = self:_GetTimerInfo("PreMinusLoop")
   if AddTimerKey then
@@ -479,6 +515,18 @@ function M:OnAddKeyUp()
   end
 end
 
+function M:OnClickToMinusInForbidState()
+  if type(self.MinusBtnForbidCallback) == "function" then
+    self.MinusBtnForbidCallback(self.OwnerPanel, self.CurrentCount)
+  end
+end
+
+function M:OnClickToAddInForbidState()
+  if type(self.AddBtnForbidCallback) == "function" then
+    self.AddBtnForbidCallback(self.OwnerPanel, self.CurrentCount)
+  end
+end
+
 function M:TriggerKeyUpEvent()
   self:OnMinusKeyUp()
   self.MinusPressed = false
@@ -486,31 +534,52 @@ function M:TriggerKeyUpEvent()
   self.AddPressed = false
 end
 
-function M:ForbidMinOperation(Forbidden)
-  if not Forbidden and self.CurrentCount - self.ClickInterval < self.MinValue then
+function M:ForbidMinOperation(Forbidden, FromSliderValueChanged)
+  if not FromSliderValueChanged and not Forbidden and self.CurrentCount - self.ClickInterval < self.MinValue then
     Forbidden = true
+  end
+  if self.ExternalOperationForbidden then
+    Forbidden = true
+  end
+  if Forbidden then
+    ScreenPrint("WYX ForbidMinOperation Forbidden = true")
   end
   self.ForbidMin = Forbidden
   self.Btn_Min:ForbidBtn(Forbidden)
   self.Key_Min:SetForbidKey(Forbidden)
-  self.Btn_Mini:ForbidBtn(Forbidden)
-  self.Key_Mini:SetForbidKey(Forbidden)
-  self.Text_Mini:SetOpacity(Forbidden and 0.6 or 1)
+  if self.Btn_Mini then
+    self.Btn_Mini:ForbidBtn(Forbidden)
+  end
+  if self.Key_Mini then
+    self.Key_Mini:SetForbidKey(Forbidden)
+  end
+  if self.Text_Mini then
+    self.Text_Mini:SetOpacity(Forbidden and 0.6 or 1)
+  end
   if self.Btn_NumLeft then
     self.Btn_NumLeft:SetForbid(Forbidden)
   end
 end
 
-function M:ForbidAddOperation(Forbidden)
-  if not Forbidden and self.CurrentCount + self.ClickInterval > self.MaxValue then
+function M:ForbidAddOperation(Forbidden, FromSliderValueChanged)
+  if not FromSliderValueChanged and not Forbidden and self.CurrentCount + self.ClickInterval > self.MaxValue then
+    Forbidden = true
+  end
+  if self.ExternalOperationForbidden then
     Forbidden = true
   end
   self.ForbidAdd = Forbidden
   self.Btn_Add:ForbidBtn(Forbidden)
   self.Key_Add:SetForbidKey(Forbidden)
-  self.Btn_Max:ForbidBtn(Forbidden)
-  self.Key_Max:SetForbidKey(Forbidden)
-  self.Text_Max:SetOpacity(Forbidden and 0.6 or 1)
+  if self.Btn_Max then
+    self.Btn_Max:ForbidBtn(Forbidden)
+  end
+  if self.Key_Max then
+    self.Key_Max:SetForbidKey(Forbidden)
+  end
+  if self.Text_Max then
+    self.Text_Max:SetOpacity(Forbidden and 0.6 or 1)
+  end
   if self.Btn_NumRight then
     self.Btn_NumRight:SetForbid(Forbidden)
   end
@@ -526,6 +595,10 @@ function M:UpdateSliderValue()
 end
 
 function M:OnMiniKeyDown()
+  if self.ExternalOperationForbidden then
+    self:OnClickToMinusInForbidState()
+    return
+  end
   if self.ForbidMin then
     return
   end
@@ -535,6 +608,10 @@ function M:OnMiniKeyDown()
 end
 
 function M:OnMaxKeyDown()
+  if self.ExternalOperationForbidden then
+    self:OnClickToAddInForbidState()
+    return
+  end
   if self.ForbidAdd then
     return
   end
@@ -555,8 +632,8 @@ function M:OnSliderValueChanged(Value)
   self:UpdateSliderValue()
   if NewCount ~= self.CurrentCount then
     self.CurrentCount = NewCount
-    self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
-    self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+    self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
+    self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
     self:UpdateSliderAndProgress(true)
     if self.SelectedSlider then
       local EventSoundPath = self.SoundResPath.Slider or "event:/ui/common/click"
@@ -581,8 +658,8 @@ function M:ChangeSliderValueByInputNumber(Value, NoNeedCallback)
     Value = self.MaxValue
   end
   self.CurrentCount = Value
-  self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
-  self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+  self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
+  self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
   self:UpdateSliderAndProgress(not NoNeedCallback)
 end
 
@@ -605,8 +682,8 @@ function M:OverrideValueLimit(InitValue, MaxValue, MinValue, bRefresh)
   if bRefresh then
     self:RefreshBaseInfo()
   else
-    self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
-    self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+    self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
+    self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
   end
 end
 
@@ -626,6 +703,25 @@ function M:SetEnabled(IsEnabled)
   end
 end
 
+function M:SetExternalOperationForbidden(bForbidden)
+  local Forbidden = true == bForbidden
+  if self.ExternalOperationForbidden == Forbidden then
+    if Forbidden then
+      self:ForbidMinOperation(true, true)
+      self:ForbidAddOperation(true, true)
+    end
+    return
+  end
+  self.ExternalOperationForbidden = Forbidden
+  self:TriggerKeyUpEvent()
+  if Forbidden then
+    self:ForbidMinOperation(true, true)
+    self:ForbidAddOperation(true, true)
+  else
+    self:RefreshBtnState()
+  end
+end
+
 function M:UpdateSliderAndProgress(NeedCallback)
   self:UpdateSliderValue()
   self.ProgressBar_Slider:SetPercent(self.Slider:GetValue())
@@ -641,8 +737,20 @@ function M:RefreshCurInputNumber(NewNumber)
 end
 
 function M:RefreshBtnState()
-  self:ForbidAddOperation(self.CurrentCount + self.ClickInterval > self.MaxValue)
-  self:ForbidMinOperation(self.CurrentCount - self.ClickInterval < self.MinValue)
+  self:ForbidAddOperation(self.CurrentCount >= self.MaxValue, true)
+  self:ForbidMinOperation(self.CurrentCount <= self.MinValue, true)
+end
+
+function M:IsOperationGamePadKey(InKeyName)
+  return not self.ForbidGamePadLTRTKey and (InKeyName == UIConst.GamePadKey.RightTriggerThreshold or InKeyName == UIConst.GamePadKey.LeftTriggerThreshold) or not self.ForbidGamePadRSKey and (InKeyName == GamePadAddKey[self.SliderType] or InKeyName == GamePadMinKey[self.SliderType]) or self.bEnableMinusSpecificBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MinusSpecificBtnGamePadKey] or self.bEnableAddSpecificBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.AddSpecificBtnGamePadKey] or self.EnableMiniBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MiniBtnGamePadKey] or self.EnableMaxBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MaxBtnGamePadKey]
+end
+
+function M:NotifyExternalOperationForbiddenByGamePadKey(InKeyName)
+  if not self.ForbidGamePadLTRTKey and InKeyName == UIConst.GamePadKey.LeftTriggerThreshold or not self.ForbidGamePadRSKey and InKeyName == GamePadMinKey[self.SliderType] or self.bEnableMinusSpecificBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MinusSpecificBtnGamePadKey] or self.EnableMiniBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MiniBtnGamePadKey] then
+    self:OnClickToMinusInForbidState()
+  elseif not self.ForbidGamePadLTRTKey and InKeyName == UIConst.GamePadKey.RightTriggerThreshold or not self.ForbidGamePadRSKey and InKeyName == GamePadAddKey[self.SliderType] or self.bEnableAddSpecificBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.AddSpecificBtnGamePadKey] or self.EnableMaxBtn and self.InGamePadMode and InKeyName == UIConst.GamePadKey[self.MaxBtnGamePadKey] then
+    self:OnClickToAddInForbidState()
+  end
 end
 
 function M:UpdateMouseGamePadImage(CurGamepadName)
@@ -660,6 +768,11 @@ function M:UpdateMouseGamePadImage(CurGamepadName)
 end
 
 function M:Handle_KeyDownEventOnGamePad(InKeyName)
+  if self.ExternalOperationForbidden and self:IsOperationGamePadKey(InKeyName) then
+    self:NotifyExternalOperationForbiddenByGamePadKey(InKeyName)
+    self:TriggerKeyUpEvent()
+    return true
+  end
   local IsEventHandled = true
   if not self.ForbidGamePadLTRTKey and InKeyName == UIConst.GamePadKey.RightTriggerThreshold then
     if not self.AddPressed then
@@ -696,6 +809,10 @@ function M:Handle_KeyDownEventOnGamePad(InKeyName)
 end
 
 function M:Handle_KeyUpEventOnGamePad(InKeyName)
+  if self.ExternalOperationForbidden and self:IsOperationGamePadKey(InKeyName) then
+    self:TriggerKeyUpEvent()
+    return true
+  end
   local IsEventHandled = true
   if not self.ForbidGamePadLTRTKey and InKeyName == UIConst.GamePadKey.RightTriggerThreshold then
     self:OnAddKeyUp()

@@ -191,7 +191,6 @@ function WBP_Bag_Main_M_C:InitTabInfo()
     BackCallback = self.OnReturnKeyDown
   })
   self.Tab_Bag:BindEventOnTabSelected(self, self.TabBagItemClick)
-  self:SetConsumeReddot()
   self:BindReddotTreeEvents()
   self.AllStuffData = {}
   self.FilteredStuffData = {}
@@ -263,6 +262,7 @@ function WBP_Bag_Main_M_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
     DebugPrint("Avatar is nil, Not Connect to Server")
     return
   end
+  self:SetConsumeReddot()
   local PlayerStuffs, AllWeaponCount = nil, 0
   self.NeedSelectGridIndex = -1
   if TabId == BagCommon.ItemTypeToTabId.MeleeWeapon or TabId == BagCommon.ItemTypeToTabId.RangedWeapon then
@@ -366,7 +366,8 @@ function WBP_Bag_Main_M_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
           if self.CurTabId == BagCommon.ItemTypeToTabId.ConsumableItem and StuffObj and StuffObj.StuffId then
             DebugPrint("Yihan@ FillPlayerDataByTypeInFrame:StuffObj.StuffId", StuffObj.StuffId)
             local BagConsumeNodeDetails = ReddotManager.GetLeafNodeCacheDetail("Bag_Consume")
-            if BagConsumeNodeDetails[StuffObj.StuffId].ShowReddot then
+            local ReddotDetail = BagConsumeNodeDetails and BagConsumeNodeDetails[StuffObj.StuffId]
+            if ReddotDetail and ReddotDetail.ShowReddot then
               StuffObj.RedDotType = UIConst.RedDotType.CommonRedDot
             else
               StuffObj.RedDotType = nil
@@ -482,11 +483,15 @@ function WBP_Bag_Main_M_C:EnterStuffSellState()
     TitleName = GText("UI_Bag_ModExtract")
     self.HB_Check:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    self.Spacer_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:StartMultiSelectWidget()
   elseif self.CurTabId == BagCommon.ItemTypeToTabId.FishItem then
     self.HB_Check:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    self.Spacer_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:StartMultiSelectWidget()
+  else
+    self.Spacer_State:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Tab_Bag:EnterViewSingleMode(TitleName)
   self.BagCurState = BagCommon.AllBagState.ChooseSaleState
@@ -543,6 +548,7 @@ end
 function WBP_Bag_Main_M_C:LeaveStuffSellState()
   self.Tab_Bag:LeaveViewSingleMode()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+  self.Spacer_State:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ResetMultiSelectWidget()
   self.BagCurState = BagCommon.AllBagState.NormalState
   self:RecoverAllItemsStyle()
@@ -584,10 +590,13 @@ function WBP_Bag_Main_M_C:RealToSaleItems(AllStuffContentList, AllStuffSellInfo)
       end
     end
   end
+  local IsRequestServerToSell = false
   if not IsEmptyTable(ModList) then
+    IsRequestServerToSell = true
     PlayerAvatar:ModBulkDecompose(ModList)
   end
   if not IsEmptyTable(ResourceList) then
+    IsRequestServerToSell = true
     if BagCommon:IsFishResource(IntegerUuid) then
       PlayerAvatar:ResourceBulkSaleFish(ResourceList)
     else
@@ -595,7 +604,11 @@ function WBP_Bag_Main_M_C:RealToSaleItems(AllStuffContentList, AllStuffSellInfo)
     end
   end
   if not IsEmptyTable(DraftsList) then
+    IsRequestServerToSell = true
     PlayerAvatar:DraftSale(DraftsList)
+  end
+  if IsRequestServerToSell then
+    self:BlockAllUIInput(true)
   end
 end
 
@@ -607,6 +620,7 @@ function WBP_Bag_Main_M_C:EnterWeaponResolveState()
   self.Tab_Bag:EnterViewSingleMode(GText("UI_Bag_Decompose"))
   self.HB_Check:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+  self.Spacer_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:StartMultiSelectWidget()
   self.BagCurState = BagCommon.AllBagState.WeaponResolveState
   self.DesireResolveWeaponList = {}
@@ -654,6 +668,7 @@ end
 function WBP_Bag_Main_M_C:LeaveWeaponResolveState()
   self.Tab_Bag:LeaveViewSingleMode()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+  self.Spacer_State:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ResetMultiSelectWidget()
   self.BagCurState = BagCommon.AllBagState.NormalState
   self.DesireResolveWeaponList = {}
@@ -674,7 +689,10 @@ function WBP_Bag_Main_M_C:RealToResolveWeapon(AllWeaponContentList)
     local WeaponUuid = self:GetStuffObjId(v.Uuid)
     table.insert(AllWeaponUuid, WeaponUuid)
   end
-  PlayerAvatar:WeaponBulkBreakDown(AllWeaponUuid)
+  if not IsEmptyTable(AllWeaponUuid) then
+    PlayerAvatar:WeaponBulkBreakDown(AllWeaponUuid)
+    self:BlockAllUIInput(true)
+  end
 end
 
 function WBP_Bag_Main_M_C:UpdateNpcDialogue(DialogueId)

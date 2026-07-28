@@ -72,13 +72,13 @@ end
 
 function M:Construct()
   M.Super.Construct(self)
-  self.Button_Invite:BindEventOnReleased(self, self.OnBtnInviteReleased)
+  self.Button_Invite:BindEventOnClicked(self, self.OnBtnInviteReleased)
   FriendController:OverrideButtonSound(self.Button_Funtion, "event:/ui/common/click_btn_small", nil)
-  self.Button_Funtion:BindEventOnReleased(self, self.OnBtnFunctionReleased)
+  self.Button_Funtion:BindEventOnClicked(self, self.OnBtnFunctionReleased)
   FriendController:OverrideButtonSound(self.Button_Yes, "event:/ui/common/click_btn_confirm", nil)
-  self.Button_Yes:BindEventOnReleased(self, self.OnBtnYesOrNoRelease, true)
+  self.Button_Yes:BindEventOnClicked(self, self.OnBtnYesOrNoRelease, true)
   FriendController:OverrideButtonSound(self.Button_No, "event:/ui/common/click_btn_cancel", nil)
-  self.Button_No:BindEventOnReleased(self, self.OnBtnYesOrNoRelease, false)
+  self.Button_No:BindEventOnClicked(self, self.OnBtnYesOrNoRelease, false)
   self.Head_Friend:BindOnClickEvent(function()
     self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid)
   end)
@@ -170,6 +170,7 @@ function M:ResetUI()
     self.Title:ClearChildren()
     self.Title:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  self.Img_Color:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnAnchorGetUserMenuContent()
@@ -191,7 +192,7 @@ function M:OnAnchorGetUserMenuContent()
       if TeamModel:IsYourself(AvatarInfo.Uid) then
         PersonInfoController:OpenView()
       else
-        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo)
+        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo, self.CardGuildFullInfo)
       end
       self.Head_Anchor:Close()
       if FriendController:GetDialog(self) then
@@ -264,7 +265,11 @@ function M:OnAnchorGetUserMenuContent()
     Switch = {InviteTeam, InitShowRecordBtn}
   end
   AddGuildAction(Switch, self.CardGuildFullInfo, self.PersonData)
-  return ChatController:OpenPlayerBtnList(self, self.PersonData, Switch, self.CardGuildFullInfo)
+  local BtnOption
+  if self.Type == FriendCommon.FriendTabType.RecentMatch then
+    BtnOption = {AllowReportInNonChatContext = true, AllowNegativeAttitude = true}
+  end
+  return ChatController:OpenPlayerBtnList(self, self.PersonData, Switch, self.CardGuildFullInfo, BtnOption)
 end
 
 function M:OnBtnYesOrNoRelease(bYes)
@@ -489,6 +494,28 @@ function M:_SetSign(SignText)
   self.Text_Intro:SetText(SignText)
 end
 
+function M:_SetNameCard(BackgroundId)
+  if BackgroundId and BackgroundId ~= CommonConst.DefaultNoBackground and 0 ~= BackgroundId then
+    local BgConfig = DataMgr.Background[BackgroundId]
+    if BgConfig and BgConfig.FriendWidget then
+      local Image = LoadObject(BgConfig.FriendWidget)
+      if Image then
+        local DynamicMaterial = self.Img_Color:GetDynamicMaterial()
+        if DynamicMaterial then
+          DynamicMaterial:SetTextureParameterValue("MainTex", Image)
+        end
+        self.Img_Color:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      else
+        self.Img_Color:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      end
+    else
+      self.Img_Color:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  else
+    self.Img_Color:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
 function M:OnListItemObjectSet_MyFriend(Content)
   self.FriendData = Content.Data
   self.PersonData = self.FriendData.Info
@@ -503,6 +530,7 @@ function M:OnListItemObjectSet_MyFriend(Content)
   self:_SetupBtnFunction()
   self:_SetOnlineState(self.FriendData.Info.IsOnline)
   self:_SetSign(self.FriendData.Info.Signature)
+  self:_SetNameCard(self.FriendData.Info.BackgroundId)
   if Content.bShowGift then
     self.HB_Gift:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self:_UpdateGiftButtonState()
@@ -531,6 +559,7 @@ function M:OnListItemObjectSet_AddFriend(Content)
   self:_SetHeadIcon(self.PersonData)
   UIUtils.SetTitle(self.Title, self.PersonData)
   self:_SetSign(self.PersonData.Signature)
+  self:_SetNameCard(self.PersonData.BackgroundId)
   self.Key_Function:CreateCommonKey({
     KeyInfoList = {
       {Type = "Img", ImgShortPath = "A"}
@@ -548,6 +577,7 @@ function M:OnListItemObjectSet_RecentMatch(Content)
   self:_SetupBtnInvite()
   self:_SetupBtnFunction()
   self:_SetSign(self.PersonData.Signature)
+  self:_SetNameCard(self.PersonData.BackgroundId)
 end
 
 function M:OnListItemObjectSet_BlackList(Content)
@@ -557,6 +587,7 @@ function M:OnListItemObjectSet_BlackList(Content)
   self:_SetHeadIcon(self.PersonData)
   UIUtils.SetTitle(self.Title, self.PersonData)
   self:_SetSign()
+  self:_SetNameCard(self.PersonData.BackgroundId)
   self.HB_Button:SetVisibility(UIConst.VisibilityOp.Visible)
   self:_SetupBtnInvite()
 end
@@ -569,6 +600,7 @@ function M:OnListItemObjectSet_FriendRequest(Content)
   self:_SetHeadIcon(self.PersonData)
   UIUtils.SetTitle(self.Title, self.PersonData)
   self:_SetSign(self.RequestData.Remark)
+  self:_SetNameCard(self.PersonData.BackgroundId)
   self.HB_Button_Request:SetVisibility(UIConst.VisibilityOp.Visible)
 end
 
@@ -577,6 +609,7 @@ function M:OnListItemObjectSet_Empty()
   self.HB_Name:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.HB_Button_Request:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.HB_Intro:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Img_Color:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:OnBtnGiftClick()
@@ -610,10 +643,10 @@ end
 
 function M:Destruct()
   GuildController:UnRegisterEvent(self)
-  self.Button_Invite:UnBindEventOnReleased(self, self.OnBtnInviteReleased)
-  self.Button_Funtion:UnBindEventOnReleased(self, self.OnBtnFunctionReleased)
-  self.Button_Yes:UnBindEventOnReleased(self, self.OnBtnYesOrNoRelease)
-  self.Button_No:UnBindEventOnReleased(self, self.OnBtnYesOrNoRelease)
+  self.Button_Invite:UnBindEventOnClicked(self, self.OnBtnInviteReleased)
+  self.Button_Funtion:UnBindEventOnClicked(self, self.OnBtnFunctionReleased)
+  self.Button_Yes:UnBindEventOnClicked(self, self.OnBtnYesOrNoRelease)
+  self.Button_No:UnBindEventOnClicked(self, self.OnBtnYesOrNoRelease)
   self.Head_Anchor.OnGetUserMenuContentEvent:Unbind()
   self.Head_Anchor.OnMenuOpenChanged:Remove(self, self.HeadMenuOpenChanged)
   self:PlayAnimation(self.Out)

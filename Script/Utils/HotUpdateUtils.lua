@@ -56,7 +56,8 @@ function HotUpdateUtils.GetNecessoryPatchSigns()
 end
 
 function HotUpdateUtils.TryAutoDownloadNextNecessoryPatch(WorldContextObject)
-  local bHasWifi = UHotUpdateFunctionLibrary.HasActiveWiFiConnection()
+  local NetworkMonitorSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(WorldContextObject, UNetworkMonitorSubsystem)
+  local bHasWifi = NetworkMonitorSubsystem and NetworkMonitorSubsystem:GetCachedWiFiConnectionState() or false
   if not bHasWifi and not EMCache:Get("AllowDataDownload") then
     return
   end

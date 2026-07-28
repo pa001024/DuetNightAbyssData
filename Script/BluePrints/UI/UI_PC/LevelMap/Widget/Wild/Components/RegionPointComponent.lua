@@ -1,8 +1,9 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local Component = {}
 
 function Component:InitComponentCoroutine()
-  local Coroutine = CreateCoroutine(self.InitRegionPoint)
+  local Coroutine = CoroutineUtils.CreateCoroutine(self.InitRegionPoint)
   table.insert(self.InitCoroutines, Coroutine)
   coroutine.resume(Coroutine, self, #self.InitCoroutines)
 end
@@ -265,10 +266,10 @@ function Component:OnRegionPointTeleportClicked()
         GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, Data.TeleportSubRegion, Data.TeleportPointPos, nil, true, true)
         return
       end
-      self.MainMap:BindToAnimationFinished(self.MainMap.Auto_Out, function()
+      self.ModeComp:BindAutoOutOnFinished(function()
         GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, Data.TeleportSubRegion, Data.TeleportPointPos, nil, true, true)
       end)
-      self.MainMap:Close()
+      self.ModeComp:HostClose()
       self.IsConveyClicked = true
     end
   end

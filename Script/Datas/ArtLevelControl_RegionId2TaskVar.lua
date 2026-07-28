@@ -78,5 +78,9 @@ return ReadOnly("ArtLevelControl_RegionId2TaskVar", {
     [4] = "IQ10040406",
     [5] = "IQ10040424",
     [6] = "IQ10040506"
+  },
+  [1063] = {
+    [1] = "IQ200404",
+    [2] = "IQ200405"
   }
 })

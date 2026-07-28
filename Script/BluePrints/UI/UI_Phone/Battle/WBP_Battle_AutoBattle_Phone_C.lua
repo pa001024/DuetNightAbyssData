@@ -14,12 +14,14 @@ function M:Construct()
 end
 
 function M:OnPressed()
+  if self.OwnerLeftBtn and self.OwnerLeftBtn.bPanelOpen then
+    return
+  end
   local Player = self.OwnerPanel and self.OwnerPanel.OwnerPlayer
   if not IsValid(Player) then
     return
   end
-  local bCurrentEnabled = Player:IsAutoAttackEnabled()
-  Player:SetAutoAttackEnabled(not bCurrentEnabled)
+  Player:SetAutoAttackEnabled(not Player:IsAutoAttackEnabled())
 end
 
 function M:OnAutoAttackStateChanged(Player, bEnabled, bIsAutoOff)
@@ -28,8 +30,7 @@ function M:OnAutoAttackStateChanged(Player, bEnabled, bIsAutoOff)
   end
   self.IsAutoAttackOn = bEnabled
   if bEnabled then
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
-    UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_HUDToast_AutoMelee"))
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Using)
   else
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   end

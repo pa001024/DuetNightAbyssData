@@ -278,7 +278,8 @@ function M:StartPayRank2()
         PaymentParameters.cpOrder = OrderId
         PaymentParameters.callbackUrl = CallbackUrl
         local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-        HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+        local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
+        HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
         self:TrackPayInfo(goodsId, OrderId)
       end
     end)
@@ -308,7 +309,8 @@ function M:StartPayRank3()
       PaymentParameters.cpOrder = OrderId
       PaymentParameters.callbackUrl = CallbackUrl
       local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+      local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
+      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
       self:TrackPayInfo(goodsId, OrderId)
     end)
   end)

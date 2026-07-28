@@ -9,11 +9,11 @@ function ClientDungeonRPC:NotifyServerDungeonEvent(...)
 end
 
 function ClientDungeonRPC:NotifyGameModeDungeonEvent(...)
-  local DungeonObject = GWorld:GetGameModeDungeonObject()
-  if not DungeonObject then
+  local CProperty = GWorld:GetDungeonObjectCProperty()
+  if not CProperty then
     return
   end
-  DungeonObject:OnNotifyGameModeDungeonEvent(...)
+  CProperty:NotifyGameModeDungeonEvent(...)
 end
 
 function ClientDungeonRPC:NotifyClientDungeonEvent(...)

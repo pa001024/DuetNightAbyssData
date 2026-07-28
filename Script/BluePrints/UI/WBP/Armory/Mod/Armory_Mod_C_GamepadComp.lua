@@ -348,7 +348,9 @@ function Component:SetCanRectGamepadVisible(Visible)
       self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Visible)
-      self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+      if ModModel:IsModUINormal() then
+        self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+      end
       self.Key_Search:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Btn_EditPolarity:SetGamePadVisibility(UIConst.VisibilityOp.Visible)
     end
@@ -417,7 +419,9 @@ function Component:SwitchMainUIToGamePad()
   self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+  if ModModel:IsModUINormal() then
+    self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
   self.Sift.Img_Key_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.List_Role:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self.CheckBox_Mod:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)

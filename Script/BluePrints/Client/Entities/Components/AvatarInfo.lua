@@ -169,8 +169,9 @@ function Component:_OnPropChangeHeadFrameList()
   end
 end
 
-function Component:NotifyNextDay5AM()
+function Component:NotifyNextDay5AM(ServerTime)
   DebugPrint("NotifyNextDay5AM, Start Refresh!!!")
+  TimeUtils.OnRequestSetNowTime(ServerTime)
   if self:IsInBigWorld() then
     EventManager:FireEvent(EventID.OnRefreshWithNextDay)
   end
@@ -498,6 +499,57 @@ function Component:OnGetAccessoryRankList(RetErrorCode, RankInfo)
     DebugPrint("[AccessoryRank] RankInfo is not table:", RankInfo)
   end
   EventManager:FireEvent(EventID.OnAccessoryRankList, RankInfo)
+end
+
+function Component:GetPlayerRankAccessoryInfo(InCallBack, Uid)
+  self.logger.info("GetPlayerRankAccessoryInfo")
+  
+  local function Cb(ErrCode, Ret)
+    local function BuildTableKeySummary(Value)
+      if type(Value) ~= "table" then
+        return tostring(Value)
+      end
+      local Keys = {}
+      for Key, _ in pairs(Value) do
+        table.insert(Keys, tostring(Key))
+      end
+      table.sort(Keys)
+      return table.concat(Keys, ",")
+    end
+    
+    DebugPrint("GetPlayerRankAccessoryInfo", ErrorCode:Name(ErrCode))
+    DebugPrint("[AccessoryRank] GetPlayerRankAccessoryInfo callback payload type:", type(Ret))
+    if type(Ret) == "table" then
+      PrintTable(Ret, 10, "[AccessoryRank] GetPlayerRankAccessoryInfo callback payload")
+      DebugPrint("[AccessoryRank] GetPlayerRankAccessoryInfo callback payload keys:", BuildTableKeySummary(Ret))
+      local DumpRet = CommonUtils.BinaryDump(Ret)
+      if type(DumpRet) == "table" then
+        DebugPrint("[AccessoryRank] GetPlayerRankAccessoryInfo callback binary dump keys:", BuildTableKeySummary(DumpRet))
+        PrintTable(DumpRet, 6, "[AccessoryRank] GetPlayerRankAccessoryInfo callback binary dump")
+      end
+    elseif nil ~= Ret then
+      DebugPrint("[AccessoryRank] GetPlayerRankAccessoryInfo callback payload:", Ret)
+    end
+    if InCallBack then
+      InCallBack(ErrCode, Ret)
+    end
+  end
+  
+  self:CallServer("GetPlayerRankAccessoryInfo", Cb, Uid)
+end
+
+function Component:OnGetPlayerRankAccessoryInfo(RetErrorCode, Ret)
+  self.logger.debug("OnGetPlayerRankAccessoryInfo", RetErrorCode, Ret)
+  if not ErrorCode:Check(RetErrorCode) then
+    return
+  end
+  DebugPrint("[AccessoryRank] OnGetPlayerRankAccessoryInfo payload type:", type(Ret))
+  if type(Ret) == "table" then
+    PrintTable(Ret, 10, "[AccessoryRank] PlayerRankAccessoryInfo")
+  else
+    DebugPrint("[AccessoryRank] PlayerRankAccessoryInfo is not table:", Ret)
+  end
+  EventManager:FireEvent(EventID.OnPlayerRankAccessoryInfo, Ret)
 end
 
 function Component:OnHourlyRefresh(ServerTime)

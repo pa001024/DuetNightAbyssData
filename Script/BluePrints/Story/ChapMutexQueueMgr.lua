@@ -39,11 +39,13 @@ function ChapMutexQueueMgr:StartFlowIfNeeded()
     return
   end
   self.FlowReady = false
+  local Handled = false
   local FlowId = GameFlowUtils:AddFlow(FLOW_CHANNEL, {
     GWorld.GameInstance,
     function(_, flowId)
       self.FlowReady = true
       self.FlowId = flowId
+      Handled = true
       LogDebug("Flow started", FLOW_CHANNEL, flowId)
       self:Process()
     end
@@ -53,7 +55,7 @@ function ChapMutexQueueMgr:StartFlowIfNeeded()
     LogDebug("Flow start failed", FLOW_CHANNEL)
     return
   end
-  if self.FlowReady then
+  if true == Handled then
     return
   end
   self.FlowId = FlowId
@@ -130,6 +132,7 @@ function ChapMutexQueueMgr:Process()
     return
   end
   ChapMutexUtils.ShowChooseChapterPopup(NeedUnlockChapterIdList, function(ChapterId)
+    LogDebug("Chosen", Task.Key, ChapterId)
     local Avatar = GWorld:GetAvatar()
     if not Avatar then
       self:FinishTask(Task)
@@ -139,6 +142,7 @@ function ChapMutexQueueMgr:Process()
       self:FinishTask(Task)
     end)
   end, function()
+    LogDebug("Cancelled", Task.Key)
     self:FinishTask(Task)
   end)
 end

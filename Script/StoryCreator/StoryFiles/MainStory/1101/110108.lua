@@ -128,12 +128,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 102103,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -530,12 +530,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 102103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -943,12 +943,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 102103,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1046,7 +1046,7 @@ return {
               IsNpcNode = false,
               FirstDialogueId = 11015101,
               FlowAssetPath = "",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "EX01_FixSimple_23",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -1067,6 +1067,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1122,6 +1123,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1129,6 +1131,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1151,7 +1154,7 @@ return {
               IsNpcNode = false,
               FirstDialogueId = 11015131,
               FlowAssetPath = "",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "EX01_FixSimple_23",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -1172,6 +1175,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1227,6 +1231,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1234,6 +1239,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1320,7 +1326,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102103},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1355,6 +1360,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1421,12 +1427,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "questpoint1111011105",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1508,7 +1514,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1554,6 +1559,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1620,6 +1626,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1709,12 +1716,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_questpoint_1650464",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1836,7 +1843,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1882,12 +1888,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "questpoint1111011103",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1935,7 +1941,7 @@ return {
               IsNpcNode = false,
               FirstDialogueId = 11014401,
               FlowAssetPath = "",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "EX01_FixSimple_22",
               BlendInTime = 1,
               BlendOutTime = 1,
@@ -1956,6 +1962,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2022,12 +2029,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "questpoint1111011103",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2103,7 +2110,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -2149,12 +2155,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_TpSew_1650136",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2254,7 +2260,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -2305,12 +2310,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_TaoLiSTART",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2475,7 +2480,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102102},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -2550,12 +2554,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 102102,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "questpoint1111011105",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2661,6 +2665,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2668,6 +2673,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2751,12 +2757,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 102104,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },

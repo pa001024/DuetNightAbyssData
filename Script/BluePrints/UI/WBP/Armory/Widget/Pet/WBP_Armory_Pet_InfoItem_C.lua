@@ -6,6 +6,7 @@ local M = Class({
 function M:Construct()
   self.Bg_List:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Text_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Text_Level:SetText(GText("UI_LEVEL_NAME"))
   self.Text_Level_Now:SetText(GText("Moling_Level"))
   self.Text_Level_Now:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end

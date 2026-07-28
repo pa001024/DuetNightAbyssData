@@ -530,6 +530,30 @@ return ReadOnly("ArtLevelControl_TaskVar2Data", {
       VarName = "IQ120315"
     }
   },
+  IQ200404 = {
+    [1063] = {
+      Id = 53,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_CZDX/Task_Data/Haiboliya_Chezhan_CZDX_IQ200404_Task.Haiboliya_Chezhan_CZDX_IQ200404_Task"
+      },
+      OutTime = 0,
+      RegionId = 1063,
+      VarName = "IQ200404"
+    }
+  },
+  IQ200405 = {
+    [1063] = {
+      Id = 54,
+      InTime = 0,
+      LoadLevel = {
+        [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_CZDX/Task_Data/Haiboliya_Chezhan_CZDX_IQ200405_Task.Haiboliya_Chezhan_CZDX_IQ200405_Task"
+      },
+      OutTime = 0,
+      RegionId = 1063,
+      VarName = "IQ200405"
+    }
+  },
   Int12020208 = {
     [1051] = {
       Id = 43,

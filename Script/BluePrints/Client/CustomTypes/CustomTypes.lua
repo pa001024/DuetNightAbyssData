@@ -22,6 +22,19 @@ end
 
 local CustomAttr = Class("CustomAttr", CustomType)
 
+function CustomAttr.SetOwnerInfo(value, owner, prop)
+  CustomType.SetOwnerInfo(value, owner, prop)
+  if not (type(value) == "table" and value.Props) or not value.__Class__ then
+    return
+  end
+  for name, child_prop in pairs(value.__Class__.Props or {}) do
+    local attr = value.Props[name]
+    if nil ~= attr and child_prop and child_prop.SetAttrOwnerInfo then
+      child_prop:SetAttrOwnerInfo(attr, value)
+    end
+  end
+end
+
 function CustomAttr:load(data)
   local _type = ClassModule.IsClass(self) and self or self.__Class__
   if ClassModule.IsInstance(data, _type) then
@@ -210,6 +223,14 @@ function CustomAttr:GetKeyId()
   return rawget(self, "__KeyId")
 end
 
+function CustomAttr:_NotifyOwnerAttrChange(prop, value)
+  local owner = rawget(self, "__Owner")
+  local owner_prop = rawget(self, "__Prop")
+  if prop and prop.client and owner and owner_prop and owner._OnAttrPropChange then
+    owner:_OnAttrPropChange(owner_prop, prop, value)
+  end
+end
+
 function CustomAttr:_OnPropChange(prop, value)
   local dict_owner = self:GetDictOwner()
   local key_id = self:GetKeyId()
@@ -217,6 +238,19 @@ function CustomAttr:_OnPropChange(prop, value)
     local attr_client = prop:GetClientDump(value)
     dict_owner:_OnDictValueChange(key_id, prop.name, attr_client)
   end
+  self:_NotifyOwnerAttrChange(prop, value)
+end
+
+function CustomAttr:_OnPropSet(prop, key, value)
+  self:_NotifyOwnerAttrChange(prop, value)
+end
+
+function CustomAttr:_OnPropDictChange(prop, key_id, prop_name, attr_client)
+  self:_NotifyOwnerAttrChange(prop, attr_client)
+end
+
+function CustomAttr:_OnAttrPropChange(owner_prop, child_prop, value)
+  self:_NotifyOwnerAttrChange(owner_prop, value)
 end
 
 local CustomMetaAttr = Class("CustomMetaAttr", CustomAttr)
@@ -377,6 +411,26 @@ end
 local CustomDict = Class("CustomDict", CustomType)
 CustomDict.KeyType = nil
 CustomDict.ValueType = nil
+
+function CustomDict.SetOwnerInfo(value, owner, prop)
+  CustomType.SetOwnerInfo(value, owner, prop)
+  if type(value) == "table" and value._RefreshCollectionValueOwnerInfo then
+    value:_RefreshCollectionValueOwnerInfo()
+  end
+end
+
+function CustomDict:_SetCollectionValueOwnerInfo(key, value)
+  if type(value) == "table" and value.SetDictOwner then
+    value:SetDictOwner(self)
+    value:SetKeyId(key)
+  end
+end
+
+function CustomDict:_RefreshCollectionValueOwnerInfo()
+  for key, value in pairs(self._inner or {}) do
+    self:_SetCollectionValueOwnerInfo(key, value)
+  end
+end
 
 function CustomDict:Init(inner, ...)
   assert(BaseTypes[self.KeyType.__Name__])
@@ -600,21 +654,35 @@ function CustomDict:IsEmpty()
 end
 
 function CustomDict:AddValue(key, value)
-  self._inner[self.KeyType:convert(key)] = self.ValueType:convert(value)
+  local _key = self.KeyType:convert(key)
+  local _value = self.ValueType:convert(value)
+  self:_SetCollectionValueOwnerInfo(_key, _value)
+  self._inner[_key] = _value
+  self:_OnCollectionChange()
 end
 
 function CustomDict:RemoveValue(key)
   self._inner[self.KeyType:convert(key)] = nil
+  self:_OnCollectionChange()
 end
 
 function CustomDict:Clear()
   self._inner = {}
+  self:_OnCollectionChange()
 end
 
 function CustomDict:_OnDictValueChange(key_id, prop_name, attr_client)
   local owner = rawget(self, "__Owner")
   if owner and owner._OnPropDictChange then
     owner:_OnPropDictChange(rawget(self, "__Prop"), key_id, prop_name, attr_client)
+  end
+end
+
+function CustomDict:_OnCollectionChange()
+  local owner = rawget(self, "__Owner")
+  local owner_prop = rawget(self, "__Prop")
+  if owner and owner_prop and owner._OnAttrPropChange then
+    owner:_OnAttrPropChange(owner_prop, nil, self)
   end
 end
 
@@ -639,12 +707,17 @@ end
 function CustomList:Append(value)
   local _value = self.ValueType:convert(value)
   table.insert(self._inner, _value)
+  self:_SetCollectionValueOwnerInfo(#self._inner, _value)
+  self:_OnCollectionChange()
 end
 
 function CustomList:Pop(index)
   index = index or #self._inner
   if index > 0 and index <= #self._inner then
-    return table.remove(self._inner, index)
+    local Value = table.remove(self._inner, index)
+    self:_RefreshCollectionValueOwnerInfo()
+    self:_OnCollectionChange()
+    return Value
   end
 end
 
@@ -659,6 +732,8 @@ function CustomList:Remove(value)
   end
   if Pos then
     table.remove(self._inner, Pos)
+    self:_RefreshCollectionValueOwnerInfo()
+    self:_OnCollectionChange()
     return true
   end
   return false
@@ -669,6 +744,8 @@ function CustomList:RemoveByIndex(index)
     return
   end
   table.remove(self._inner, index)
+  self:_RefreshCollectionValueOwnerInfo()
+  self:_OnCollectionChange()
 end
 
 function CustomList:load(data)
@@ -806,6 +883,8 @@ local ObjectIdList = Class("ObjectIdList", CustomList)
 ObjectIdList.ValueType = BaseTypes.ObjId
 local StrList = Class("StrList", CustomList)
 StrList.ValueType = BaseTypes.Str
+local BytesList = Class("BytesList", CustomList)
+BytesList.ValueType = BaseTypes.Bytes
 local Int2IntDict = Class("Int2IntDict", CustomDict)
 Int2IntDict.KeyType = BaseTypes.Int
 Int2IntDict.ValueType = BaseTypes.Int
@@ -840,6 +919,9 @@ end
 local Int2StrDict = Class("Int2StrDict", CustomDict)
 Int2StrDict.KeyType = BaseTypes.Int
 Int2StrDict.ValueType = BaseTypes.Str
+local Int2BytesDict = Class("Int2BytesDict", CustomDict)
+Int2BytesDict.KeyType = BaseTypes.Int
+Int2BytesDict.ValueType = BaseTypes.Bytes
 local Str2StrListDict = Class("Str2StrListDict", CustomDict)
 Str2StrListDict.KeyType = BaseTypes.Str
 Str2StrListDict.ValueType = StrList
@@ -913,6 +995,7 @@ function CustomSetDict:AddElement(key, value)
     self[key] = {}
   end
   self[key]:AddElement(value)
+  self:_OnCollectionChange()
   return true
 end
 
@@ -922,6 +1005,7 @@ function CustomSetDict:RemoveElement(key, value)
     return
   end
   set:RemoveElement(value)
+  self:_OnCollectionChange()
 end
 
 function CustomSetDict:HasElement(key, value)
@@ -974,6 +1058,8 @@ local CustomTypes = {
   Str2StrSetDict = Str2StrSetDict,
   IntSet = IntSet,
   StrSet = StrSet,
-  Int2StrDict = Int2StrDict
+  Int2StrDict = Int2StrDict,
+  BytesList = BytesList,
+  Int2BytesDict = Int2BytesDict
 }
 return CustomTypes

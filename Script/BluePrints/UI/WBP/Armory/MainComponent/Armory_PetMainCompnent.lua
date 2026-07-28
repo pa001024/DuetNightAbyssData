@@ -13,10 +13,17 @@ function M:ComponentInitDispatcher()
   self:AddDispatcher(EventID.OnPetDeleted, self, self.OnPetDeleted)
   self:AddDispatcher(EventID.OnPropChangePets, self, self.OnPropChangePets)
   self:AddDispatcher(EventID.OnPetReddotRead, self, self.OnPetReddotRead)
+  self:AddDispatcher(EventID.OnStarTargetChanged, self, self.OnStarTargetChanged)
 end
 
 function M:PetMain_Init()
+  self.Btn_More:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.WS_State:SetActiveWidgetIndex(1)
   self.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Btn_ReName:SetText(GText("UI_Btn_Armory_PetReName"))
+  self.Btn_StarTarget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_ReName.Button_Area.OnHovered:Add(self, self.OnBtnReNameHovered)
+  self.Btn_StarPet.Button_Area.OnHovered:Add(self, self.OnBtnStarPetHovered)
   if self.IsPreviewMode then
     self.Tab_PetAlive:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
@@ -35,6 +42,9 @@ function M:PetMain_Init()
     self.Tab_PetAlive:Forbid(false)
   else
     self.Tab_PetAlive:Forbid(true)
+  end
+  if self.Panel_Btn:IsVisible() then
+    self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.PetMain_LastChar = self.ComparedChar
   self.ActorController:ChangeToProtagonist()
@@ -119,6 +129,11 @@ function M:PetMain_InitContentState()
   end
   self.PetMain_CmpContent = self.PetItemContentsMap[self.ComparedPet.UniqueId]
   self.PetMain_CmpContent.IsSelect = true
+  if self.ComparedPet.IsStar then
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect_Normal)
+  else
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect_Normal)
+  end
 end
 
 function M:PetMain_PreMainTabChange()
@@ -215,6 +230,14 @@ function M:PetMain_SelectRoleListItem(Content)
   self.ComparedPet = Avatar.Pets[Content.UniqueId]
   ArmoryUtils:SetItemIsSelected(self.PetMain_CmpContent, false)
   ArmoryUtils:SetItemIsSelected(Content, true)
+  ArmoryUtils:SetItemInStarTarget(Content, Content.IsStar)
+  if Content.IsStar then
+    self.Btn_StarPet:SetText(GText("UI_Btn_Armory_PetCancelStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect_Normal)
+  else
+    self.Btn_StarPet:SetText(GText("UI_Btn_Armory_PetStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect_Normal)
+  end
   self.PetMain_CmpContent = Content
   self:UpdatePetInfos(Content)
   self:CreateAndSelectSubTab({
@@ -222,6 +245,13 @@ function M:PetMain_SelectRoleListItem(Content)
   })
   self.ActorController:ChangePetModel(self.ComparedPet)
   self.EMListView_Role:BP_ScrollItemIntoView(Content)
+  if Content.IsOwned then
+    if not self.IsPreviewMode then
+      self.WS_State:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  else
+    self.WS_State:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:PetMain_InitRoleList()
@@ -245,12 +275,13 @@ function M:PetMain_SortItemContents()
     }, CommonConst.DESC)
   else
     ArmoryUtils:SortItemContents(self.PetItemContentsArray, {
+      "LockType",
       "BreakNum",
       "Level",
       "Rarity",
       "SortPriority",
       "UnitId"
-    }, CommonConst.DESC, self.PetMain_CurContent)
+    }, CommonConst.DESC, self.PetMain_CurContent, ArmoryUtils.IsOwnedCmpFunc)
   end
 end
 
@@ -258,6 +289,8 @@ local function AddContent(self, Pet)
   local Obj = ArmoryUtils:NewPetItemContent(Pet)
   Obj.bHideItemLevel = self.bFromArchive
   Obj.IsOwned = true
+  Obj.IsStar = Pet.IsStar
+  Obj.bCollection = Pet.IsStar
   self.BP_PetItemContents:Add(Obj)
   if Obj.IsResourcePet then
     rawset(Obj, "_PetEntryId", Obj.PetEntry and Obj.PetEntry[1])
@@ -450,11 +483,53 @@ function M:OnPetDeleted(UniqueID)
   self:UpdateBoxReddot()
 end
 
+function M:PetMain_OnStarTargetBtnClicked()
+  EMCache:Set("PetIsShowNew", false, true)
+  local Avatar = GWorld:GetAvatar()
+  local TargetType = CommonConst.DataType.Pet
+  local TargetId = self.PetMain_CmpContent.UniqueId
+  local IsStar = true
+  if self.PetMain_CmpContent.IsStar then
+    IsStar = false
+  else
+  end
+  Avatar:SwitchArmoryTargetStar(nil, TargetType, TargetId, IsStar)
+end
+
+function M:PetMain_OnStarTargetGamePadKeyDown()
+  self.LockStar = true
+  self:InitKeySetting()
+  if self.Btn_Locked then
+    self.Btn_Locked:SetFocus()
+  end
+end
+
+function M:OnStarTargetChanged(TargetInfo)
+  if TargetInfo.TargetType ~= CommonConst.DataType.Pet then
+    return
+  end
+  if TargetInfo.IsStar then
+    self.Btn_StarPet:SetText(GText("UI_Btn_Armory_PetCancelStared"))
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Toast_Armory_HasStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect)
+  else
+    self.Btn_StarPet:SetText(GText("UI_Btn_Armory_PetStared"))
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Toast_Armory_CancelStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect)
+  end
+  self.PetMain_CmpContent.bCollection = TargetInfo.IsStar
+  ArmoryUtils:SetItemInStarTarget(self.PetMain_CmpContent, TargetInfo.IsStar)
+end
+
 function M:OnSwitchPet()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
-  self.CurrentPet = self.ComparedPet
   ArmoryUtils:SetItemInGear(self.PetMain_CurContent, false)
   ArmoryUtils:SetItemInGear(self.PetMain_CmpContent, true)
+  if self.CurrentPet then
+    ArmoryUtils:SetItemInStarTarget(self.PetMain_CurContent, self.CurrentPet.IsStar)
+  end
+  ArmoryUtils:SetItemInStarTarget(self.PetMain_CmpContent, self.ComparedPet.IsStar)
+  self.CurrentPet = self.ComparedPet
   self.PetMain_CurContent = self.PetMain_CmpContent
   self.CurrentSubUI:UpdateButtonStyle(self.CurrentPet, self.ComparedPet)
   if self.ActorController then
@@ -514,12 +589,39 @@ function M:OnPetEntryUp(ErrCode, UniqueId, EntryIndex, ConsumePetUniqueIds)
   end
 end
 
+function M:PetMain_OnPetMoreBtnClicked()
+  if self.Panel_Btn:IsVisible() then
+    self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Btn_StarPet:SetFocus()
+    self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:PetMain_OnStarPetBtnClicked()
+end
+
+function M:PetMain_OnPetReNameBtnClicked()
+  self.LockEdit = true
+  self:PetMain_OnEditBtnClicked()
+end
+
 function M:PetMain_OnEditBtnClicked()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
   local PetName = self.PetMain_CmpContent.UnitName
   local UniqueId = self.PetMain_CmpContent.UniqueId
   local MaxNameLen = CommonConst.PetNameLenghtLimit or 14
+  
+  local function PetMain_OnCloseEditName()
+    self.Btn_ReName:SetFocus()
+  end
+  
+  SecondaryPasswordController:Pet_OpenSeconderyPassword(self.ComparedPet.UniqueId, self)
   self.NameEditDialog = UIManager(self):ShowCommonPopupUI(100176, {
+    CloseBtnCallbackFunction = PetMain_OnCloseEditName,
+    LeftCallbackFunction = PetMain_OnCloseEditName,
     EditTextConfig = {
       Text = PetName,
       IsMultiLine = false,
@@ -547,7 +649,7 @@ function M:PetMain_OnEditBtnClicked()
         end
       end
     }
-  }, self)
+  }, self.Btn_Edit)
 end
 
 function M:OnPetNameChanged(ErrCode, UniqueId, Name)
@@ -566,7 +668,7 @@ end
 function M:PetMain_OnLockBtnClicked()
   if self.ComparedPet.IsLock then
     local function CancelFunc()
-      self:SetFocus()
+      self.Btn_Locked:SetFocus()
     end
     
     local function ConfirmFunc()
@@ -577,7 +679,7 @@ function M:PetMain_OnLockBtnClicked()
       LeftCallbackFunction = CancelFunc,
       RightCallbackFunction = ConfirmFunc,
       CloseBtnCallbackFunction = CancelFunc
-    }, self)
+    }, self.Btn_locked)
   else
     self:BlockAllUIInput(true)
     local Avatar = ArmoryUtils:GetAvatar()
@@ -615,6 +717,12 @@ function M:UpdatePetLockState(UniqueId)
         end
       end
     end
+  end
+end
+
+function M:PetMain_OnImageClickMouseButtonDown()
+  if self.Panel_Btn:IsVisible() then
+    self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
@@ -703,30 +811,26 @@ function M:Destruct()
 end
 
 function M:PetMain_OnFocusReceived(ReplyInfo)
+  if self.LockStar then
+    ReplyInfo.IsHandled = true
+    ReplyInfo.Reply = UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Btn_Locked)
+    if self.Panel_Btn:IsVisible() then
+      self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+end
+
+function M:PetMain_OnBackKeyDown(ReplyInfo)
 end
 
 function M:PetMain_UpdateGamepadStyle()
-  if self.IsGamepadInput and not self.IsPreviewMode and not self.IsListExpanded then
-    self.Key_GamePad_Lock:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "Right"}
-      }
-    })
-    if not self.IsSubUIFocused then
-      self.Key_GamePad_Lock:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    else
-      self.Key_GamePad_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+  if not self.IsGamepadInput or self.IsPreviewMode or not self.IsListExpanded then
   else
-    self.Key_GamePad_Lock:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Btn_Edit:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   if self.IsGamepadInput then
     self.Btn_Edit:SetVisibility(UIConst.VisibilityOp.Collapsed)
   elseif self.IsPreviewMode then
     self.Btn_Edit:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  else
-    self.Btn_Edit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 
@@ -743,9 +847,12 @@ function M:PetMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
     if self.IsSubUIFocused then
       table.insert(BottomKeyInfo, self.SelectBottomKeyInfoList)
     else
-      table.insert(BottomKeyInfo, self.EditNameBottomKeyInfoList)
+      if not self.LockStar then
+        table.insert(BottomKeyInfo, self.EditNameBottomKeyInfoList)
+      end
       self:AddKeyEvents(KeyDownEvents, self.EditNameKeyDownEvents)
       self:AddKeyEvents(KeyDownEvents, self.LockKeyDownEvents)
+      self:AddKeyEvents(KeyDownEvents, self.StarTargetNameKeyDownEvents)
       if self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute and not self.SubUIButtonStyleInfo[1].ForbidBtn then
         self:AddKeyEvents(KeyDownEvents, self.UpgradeKeyDownEvents)
       end
@@ -753,6 +860,53 @@ function M:PetMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
   end
   self:AddKeyEvents(KeyDownEvents, self.LeftThumbstickKeyDownEvents)
   table.insert(BottomKeyInfo, self.ESCKeyInfoList)
+  self:AddKeyClickEvent(UIConst.GamePadKey.FaceButtonTop, self.OnSetInGear)
+  self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonTop, 0.5, self.OnGamepad_LongPressStart_Pet, self.OnGamepad_LongPressEnd_Pet)
+end
+
+function M:PetMain_OnFaceButtonBottomKeyDown()
+  if self.LockStar then
+    if UIUtils.HasAnyFocus(self.Btn_Locked) then
+      self:PetnMain_OnLockBtnClicked()
+    elseif UIUtils.HasAnyFocus(self.Btn_More) then
+      self:PetMain_OnPetMoreBtnClicked()
+    elseif UIUtils.HasAnyFocus(self.Btn_StarPet) then
+      self:PetMain_OnStarTargetBtnClicked()
+    elseif UIUtils.HasAnyFocus(self.Btn_ReName) then
+      self:PetMain_OnEditBtnClicked()
+    end
+    return
+  end
+end
+
+function M:OnGamepad_LongPressEnd_Pet()
+  self.Key_GamePad_Btn:RemoveExecuteLogic()
+  self.Key_GamePad_Btn:OnButtonReleased()
+end
+
+function M:OnGamepad_LongPressStart_Pet()
+  self.Key_GamePad_Btn:AddExecuteLogic(self, function()
+    self:PetMain_OnStarTargetGamePadKeyDown()
+    self:OnGamepad_LongPressEnd_Pet()
+  end)
+  self.Key_GamePad_Btn:OnButtonPressed(nil, true, 0, 0.5)
+end
+
+function M:OnSetInGear()
+  if self.CurMainTab.Name ~= ArmoryUtils.ArmoryMainTabNames.Pet then
+    return
+  end
+  EventManager:FireEvent(EventID.OnInGear)
+end
+
+function M:OnBtnReNameHovered()
+  self.Btn_ReName.WS_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Btn_StarPet.WS_Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
+
+function M:OnBtnStarPetHovered()
+  self.Btn_StarPet.WS_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Btn_ReName.WS_Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:PetMain_InitNavigationRules()

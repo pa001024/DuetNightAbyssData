@@ -64,12 +64,15 @@ function M:Tick(MyGeometry, InDeltaTime)
     local Percentt = math.clamp(Length / self.Radius, 0, 1)
     self.JoyStickCanvas:SetPosition(self.HalfDesiredSize * Dir * Percentt)
     Dir.Y = -Dir.Y
-    self.Event_OnMoved(self.Obj, Dir * InDeltaTime, Percentt)
+    if self.Event_OnMoved then
+      self.Event_OnMoved(self.Obj, Dir * InDeltaTime, Percentt)
+    end
   end
 end
 
 function M:BindEvnetOnJoyStick(Obj, Events)
   self.Obj = Obj
+  Events = Events or {}
   self.Event_OnMoved = Events.OnMoved
   self.Event_OnPointerDown = Events.OnPointerDown
   self.Event_OnPointerUp = Events.OnPointerUp

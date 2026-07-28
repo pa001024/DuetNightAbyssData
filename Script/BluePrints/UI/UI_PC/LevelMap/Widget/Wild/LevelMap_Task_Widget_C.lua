@@ -19,9 +19,9 @@ function M:Destruct()
   self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
 end
 
-function M:Init(MainMap)
-  self.MainMap = MainMap
-  self.Key_Tip = MainMap.Key_Tip
+function M:Init(PageHost)
+  self.PageHost = PageHost
+  self.Key_Tip = PageHost.Key_Tip
   self:InitCommonWidget()
   self.ScrollBox_TaskDetail:ScrollToStart()
 end
@@ -118,7 +118,7 @@ end
 
 function M:OnHide()
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-    self.Key_Tip:UpdateKeyInfo(self.MainMap.WildMapGamePadEnsureKeys)
+    self.Key_Tip:UpdateKeyInfo(self.PageHost:GetWildMapGamePadEnsureKeys())
   end
 end
 
@@ -205,8 +205,8 @@ function M:InitCommonWidget()
         {
           Type = "Text",
           Text = "Esc",
-          Owner = self.MainMap,
-          ClickCallback = self.MainMap.OnUIReturnKeyDown
+          Owner = self.PageHost,
+          ClickCallback = self.PageHost.OnUIReturnKeyDown
         }
       },
       Desc = GText("UI_BACK")

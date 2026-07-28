@@ -110,12 +110,13 @@ function M:IsPopUpMonthSignInReward()
   if not Avatar then
     return
   end
-  local PreCheckCount = EMCache:Get("PreCheckCount", true)
-  if not PreCheckCount then
+  local LastPopupTime = Avatar.MonthlyCheck.LastPopupTime
+  DebugPrint("Yihan@ PlayGetAnimation ", LastPopupTime)
+  if not LastPopupTime or 0 == LastPopupTime then
     return true
   else
-    DebugPrint("Yihan@ TryPopUpMonthSignIn")
-    if PreCheckCount ~= Avatar.MonthlyCheck.MonthlyCheckCount then
+    local IsSameDay = 0 == TimeUtils.GetIntervalDay(LastPopupTime, TimeUtils.NowTime())
+    if not IsSameDay then
       return true
     end
   end

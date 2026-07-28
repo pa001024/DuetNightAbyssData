@@ -90,8 +90,11 @@ function M:InitPage(ActivityId, TabId, ActivityInfo, ParentWidget)
   self:SetPool(ActivityId, true)
 end
 
-function M:UpdatePage()
+function M:UpdatePage(OperateSrc)
   self:SetEndTime(self.EventEndTime)
+  if "BackToPageWithJump" == OperateSrc then
+    self:PlayFadeIn()
+  end
 end
 
 function M:HandleKeyDownInPage(MyGeometry, InKeyEvent)
@@ -148,8 +151,11 @@ function M:Handle_KeyDownOnGamePad(KeyName)
   return bHandled
 end
 
-function M:ShowPage()
+function M:ShowPage(IsNeedPlayInAnim)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if IsNeedPlayInAnim then
+    self:PlayFadeIn()
+  end
 end
 
 function M:HidePage()
@@ -157,8 +163,13 @@ function M:HidePage()
 end
 
 function M:PlayFadeIn()
-  self:PlayAnimation(self.FadeInAnimation)
-  self.Title:FadeIn()
+  if self.FadeInAnimation then
+    self:StopAnimation(self.FadeInAnimation)
+    self:PlayAnimation(self.FadeInAnimation, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1.0)
+  end
+  if self.Title and self.Title.FadeIn then
+    self.Title:FadeIn()
+  end
 end
 
 function M:PlayFadeOut()

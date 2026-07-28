@@ -33,7 +33,6 @@ return ReadOnly("RegionReputation", {
       1017,
       1019,
       1021,
-      1022,
       1032,
       2101,
       1060,

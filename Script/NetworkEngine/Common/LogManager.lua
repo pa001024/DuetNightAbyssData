@@ -55,7 +55,11 @@ function LogManager:GenClientLogger(Id, ModuleName)
     else
       str = tostring(...)
     end
-    Function(GWorld.GameInstance, str)
+    if GWorld and GWorld.GameInstance then
+      Function(GWorld.GameInstance, str)
+    else
+      UE.UFormulaFunctionLibrary.ShowErrorOnlyLog(str)
+    end
     Traceback()
   end
   Logger.errorlog = not (not bDistribution or bEnableShippingLog) and EmptyFunction or function(...)

@@ -1,5 +1,4 @@
 local TalkFlowUtils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUtils")
-local ReviewUtils = require("BluePrints.UI.WBP.StoryReview.StoryReviewUtils")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local EDialogueIterType = TalkUtils.EDialogueIterType
@@ -13,18 +12,26 @@ function M:BuildNode(DialogueId, Comps)
   rawset(self, "DialogueWikiComponent", Comps.WikiComp)
   M.Super.BuildNode(self, DialogueId, Comps)
   self.bStoped = false
+  self.bPendingIterate = false
+  self.PendingIterArgs = nil
+  self.bSkipToNext = false
 end
 
-function M:CreateSubFlow(DialogueId)
-  local SubFlow, ParallelNode, WaitAllNode = TalkFlowUtils:CreateFlow(DialogueId, self.TalkTask, function()
+function M:CreateFlow(DialogueId)
+  local SubFlow, ParallelNode, WaitAllNode = TalkFlowUtils:CreateFlow(DialogueId, self.Context.FlowType, self.Context.FlowOwner, function()
     if not self.bStoped then
-      self:Iterate(EDialogueIterType.Out)
+      if self.bSkipToNext then
+        self.bSkipToNext = false
+        self:Iterate(EDialogueIterType.Out)
+      else
+        self:RequestIterate(EDialogueIterType.Out)
+      end
     end
     self.SubFlow = nil
   end)
   self.SubFlow = SubFlow
   if self.OnFlowCreated then
-    self.OnFlowCreated(self.EventReceiver, self.SubFlow, ParallelNode, WaitAllNode)
+    self.OnFlowCreated(self.SubFlow, ParallelNode, WaitAllNode)
   end
 end
 
@@ -86,15 +93,34 @@ function M:Execute(bSkip)
   if self.bStoped then
     return
   end
-  self:CreateSubFlow(self.DialogueId)
+  self:CreateFlow(self.DialogueId)
   if self.SubFlow then
     self.SubFlow:Start()
-    if bSkip then
-      self.SubFlow:Skip()
-    end
   else
     self:Iterate(EDialogueIterType.Out)
   end
+end
+
+function M:RequestIterate(...)
+  local OutPortName = (...) or EDialogueIterType.Out
+  if self.FlowChecker.CheckAutoIterate() then
+    self:Iterate(OutPortName)
+    return true
+  end
+  self.bPendingIterate = true
+  self.PendingIterArgs = {OutPortName}
+  return false
+end
+
+function M:ResumePendingIterate()
+  if not self.bPendingIterate then
+    return false
+  end
+  local Args = self.PendingIterArgs or {}
+  self.bPendingIterate = false
+  self.PendingIterArgs = nil
+  self:Iterate(table.unpack(Args))
+  return true
 end
 
 function M:Pause()
@@ -116,14 +142,21 @@ function M:Stop()
   end
 end
 
-function M:AllowSkip()
-  return self.SubFlow and self.SubFlow.bAllowClick or false
+function M:RequestSkip()
+  if self.SubFlow then
+    self.SubFlow:Skip()
+    return true
+  end
+  return self:ResumePendingIterate()
 end
 
 function M:RealSkip()
   if self.SubFlow then
+    self.bSkipToNext = true
     self.SubFlow:Skip()
+    return true
   end
+  return self:ResumePendingIterate()
 end
 
 function M:Record()

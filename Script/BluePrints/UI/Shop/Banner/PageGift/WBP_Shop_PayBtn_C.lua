@@ -9,7 +9,8 @@ function WBP_Shop_GiftPayBtn_C:Construct()
   self:RefreshIconAndGamePadVisibility()
   self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.IsGamePadIconVisible = false
+  self:SetKey_PCVisibility(UIConst.VisibilityOp.Collapsed)
+  self.bGamepadIconVisible = false
 end
 
 function WBP_Shop_GiftPayBtn_C:SwitchNormalAnimation()
@@ -45,13 +46,19 @@ function WBP_Shop_GiftPayBtn_C:OnInputMethodChanged(NewGameInputType, NewGamepad
 end
 
 function WBP_Shop_GiftPayBtn_C:RefreshIconAndGamePadVisibility()
-  if not self.IsGamePadIconVisible then
-    self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
-    return
-  end
   if self.CurInputDeviceType == ECommonInputType.Gamepad then
-    self:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.WS_Key then
+      self.WS_Key:SetActiveWidgetIndex(0)
+    end
+    if self.bGamepadIconVisible or self.bGamepadIconVisible == nil then
+      self:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   else
+    if self.WS_Key then
+      self.WS_Key:SetActiveWidgetIndex(1)
+    end
     self:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
@@ -70,8 +77,32 @@ function WBP_Shop_GiftPayBtn_C:SetGamePadVisibility(Op)
 end
 
 function WBP_Shop_GiftPayBtn_C:SetGamePadIconVisible(IsVisible)
-  self.IsGamePadIconVisible = IsVisible
+  self.bGamepadIconVisible = IsVisible
   self:RefreshIconAndGamePadVisibility()
+end
+
+function WBP_Shop_GiftPayBtn_C:SetPCImg(ImgShortPath, ImgLongPath)
+  if not self.Key_PCBuy or CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" then
+    return
+  end
+  self.Key_PCBuy:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Text",
+        ImgShortPath = ImgShortPath,
+        ImgLongPath = ImgLongPath
+      }
+    },
+    bLongPress = self:GetIsLongPressButton(),
+    bButton = self:GetIsLongPressButton()
+  })
+  self:SetKey_PCVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function WBP_Shop_GiftPayBtn_C:SetKey_PCVisibility(Op)
+  if self.Key_PCBuy then
+    self.Key_PCBuy:SetVisibility(Op)
+  end
 end
 
 return WBP_Shop_GiftPayBtn_C

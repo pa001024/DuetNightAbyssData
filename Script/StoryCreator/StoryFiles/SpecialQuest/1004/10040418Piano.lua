@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -273,6 +273,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -280,6 +281,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -309,7 +311,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 10010101,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10047201.10047201'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -330,6 +332,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -407,14 +410,15 @@ return {
               LongPressTime = 4,
               MontageName = "Interactive_Bow_Montage",
               bFocusEnable = false,
-              SequencePath = ""
+              SequencePath = "",
+              SoundEventPath = ""
             }
           },
           ["177874842771626293805"] = {
             key = "177874842771626293805",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 1582.7753779047598, y = 145.16537911499609},
+            pos = {x = 1573.0694955518186, y = 118.69479087970197},
             propsData = {
               WeaponTags = {"Melee"},
               bForbid = true,
@@ -426,7 +430,7 @@ return {
             key = "177874842771626293806",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 1843.7836860217635, y = 142.37535150975123},
+            pos = {x = 1858.7836860217635, y = 109.6480787824785},
             propsData = {
               PlayerId = 0,
               bActiveEnable = false,
@@ -439,7 +443,8 @@ return {
                 "Skill1",
                 "Skill2",
                 "Avoid",
-                "Skill3"
+                "Skill3",
+                "Jump"
               }
             }
           },
@@ -559,8 +564,7 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0170_story_fuluo_play_piano.0170_story_fuluo_play_piano'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
+              RelatedRegionId = {106101},
               bStoreToServer = false
             }
           }

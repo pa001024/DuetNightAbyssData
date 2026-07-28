@@ -1,5 +1,6 @@
 local net = {}
 local msgpack = require("msgpack_core")
+local RpcUtils = require("Utils.RpcUtils")
 
 function net:LuaInit()
   self:log("net:LuaInit")

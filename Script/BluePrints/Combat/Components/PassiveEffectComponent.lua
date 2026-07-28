@@ -1,5 +1,6 @@
 local SkillUtils = require("Utils.SkillUtils")
 local CommonUtils = require("Utils.CommonUtils")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local Component = {}
 
 function Component:InitPassiveVars(Effect)

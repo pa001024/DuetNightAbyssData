@@ -259,6 +259,13 @@ function table.findValue(t, targetValue, finder)
   end
 end
 
+function table.last(t)
+  if #t <= 0 then
+    return nil
+  end
+  return t[#t]
+end
+
 function string.split(str, reps)
   local resultStrList = {}
   string.gsub(str, "[^" .. reps .. "]+", function(w)
@@ -319,43 +326,6 @@ local function try(block, ...)
 end
 
 _G.try = try
-
-local function CreateCoroutine(Func, ...)
-  return coroutine.create(function(...)
-    try({exec = Func}, ...)
-  end)
-end
-
-_G.CreateCoroutine = CreateCoroutine
-
-local function RunAsyncTask(Obj, TaskName, TaskFunc)
-  if rawget(Obj, TaskName) then
-    return
-  end
-  rawset(Obj, TaskName, coroutine.create(function()
-    local Co = rawget(Obj, TaskName)
-    try({exec = TaskFunc}, Co, Obj)
-    rawset(Obj, TaskName, nil)
-    coroutine.close(Co)
-  end))
-  coroutine.resume(rawget(Obj, TaskName))
-end
-
-_G.RunAsyncTask = RunAsyncTask
-
-local function ForceStopAsyncTask(Obj, TaskName)
-  if not rawget(Obj, TaskName) then
-    return
-  end
-  local Co = rawget(Obj, TaskName)
-  rawset(Obj, TaskName, nil)
-  local Status = coroutine.status(Co)
-  if "running" == Status or "suspended" == Status then
-    coroutine.close(Co)
-  end
-end
-
-_G.ForceStopAsyncTask = ForceStopAsyncTask
 require("BluePrints.Managers.EventManager")
 require("LogPrint")
 _G.print = print_t
@@ -381,40 +351,23 @@ _G.CommonConst = require("CommonConst")
 _G.Const = require("Const")
 _G.UIConst = require("BluePrints.UI.UIConst")
 _G.GWorld = require("GWorld")
-_G.BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 _G.DialogEvent = require("BluePrints.UI.UI_PC.Common.Common_Dialog.DialogEvent")
 _G.ErrorCode = require("BluePrints.Client.ErrorCode")
 _G.ConditionUtils = require("BluePrints.Common.ConditionUtils")
 _G.AvatarUtils = require("BluePrints.Client.AvatarUtils")
 _G.ItemUtils = require("Utils.ItemUtils")
 _G.CommonUtils = require("Utils.CommonUtils")
-_G.RpcUtils = require("Utils.RpcUtils")
 _G.RewardUtils = require("Utils.RewardUtils")
 _G.UIUtils = require("Utils.UIUtils")
 _G.UseDungeonLevelBounds = false
 _G.UseMinimumLoad = true
-_G.LuaMemoryManager = require("LuaMemoryManager")
 _G.SystemGuideManager = require("BluePrints.Managers.SystemGuideManager")
 _G.MissionIndicatorManager = require("BluePrints.Managers.MissionIndicatorManager")
 _G.ReddotManager = require("BluePrints.UI.Reddot.ReddotManager")
 _G.I18nUtils = require("Utils.I18nUtils")
 _G.PageJumpUtils = require("Utils.PageJumpUtils")
 _G.ShopUtils = require("Utils.ShopUtils")
-_G.RougeUtils = require("Utils.RougeUtils")
 _G.SerializeUtils = require("Utils.SerializeUtils")
-_G.TestClass = TestClass or function()
-  local Class = {}
-  Class.__index = Class
-  
-  function Class.New()
-    local o = {}
-    setmetatable(o, Class)
-    return o
-  end
-  
-  return Class
-end
-_G.Serpent = require("Utils.Serpent")
 _G.EMGlobalLuaTable = require("EMGlobalLuaTable")
 _G.ServerConfig = require("ServerConfig")
 _G.Json = require("rapidjson")

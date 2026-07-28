@@ -4755,6 +4755,117 @@ return {
         UnitId = 70302,
         RarelyId = 7017063
       }
+    },
+    ["7017094"] = {
+      AutoReset = 1,
+      ["291241183"] = {
+        CreatorId = 291241183,
+        UnitType = "Drop",
+        UnitId = 20503,
+        RarelyId = 7017094
+      },
+      ["291241184"] = {
+        CreatorId = 291241184,
+        UnitType = "",
+        UnitId = 0,
+        RarelyId = 7017094
+      },
+      ["291241185"] = {
+        CreatorId = 291241185,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7017094
+      },
+      ["291241188"] = {
+        CreatorId = 291241188,
+        UnitType = "Mechanism",
+        UnitId = 70202,
+        RarelyId = 7017094
+      },
+      ["291241186"] = {
+        CreatorId = 291241186,
+        UnitType = "Mechanism",
+        UnitId = 702035,
+        RarelyId = 7017094
+      },
+      ["291241189"] = {
+        CreatorId = 291241189,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7017094
+      },
+      ["291241198"] = {
+        CreatorId = 291241198,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7017094
+      },
+      ["291241199"] = {
+        CreatorId = 291241199,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7017094
+      },
+      ["291241200"] = {
+        CreatorId = 291241200,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7017094
+      },
+      ["291241190"] = {
+        CreatorId = 291241190,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7017094
+      },
+      ["291241191"] = {
+        CreatorId = 291241191,
+        UnitType = "Mechanism",
+        UnitId = 702032,
+        RarelyId = 7017094
+      },
+      ["291241192"] = {
+        CreatorId = 291241192,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7017094
+      },
+      ["291241193"] = {
+        CreatorId = 291241193,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7017094
+      },
+      ["291241194"] = {
+        CreatorId = 291241194,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7017094
+      },
+      ["291241195"] = {
+        CreatorId = 291241195,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7017094
+      },
+      ["291241196"] = {
+        CreatorId = 291241196,
+        UnitType = "Mechanism",
+        UnitId = 702031,
+        RarelyId = 7017094
+      },
+      ["291241197"] = {
+        CreatorId = 291241197,
+        UnitType = "Mechanism",
+        UnitId = 702033,
+        RarelyId = 7017094
+      },
+      ["291241187"] = {
+        CreatorId = 291241187,
+        UnitType = "Mechanism",
+        UnitId = 70105,
+        RarelyId = 7017094
+      }
     }
   },
   RandomRule = {
@@ -4787,5 +4898,6 @@ return {
     ["7012005"] = {RandomRuleId = 7012005},
     ["7012004"] = {RandomRuleId = 7012004},
     ["8010104"] = {RandomRuleId = 8010104}
-  }
+  },
+  MissionGroup = {}
 }

@@ -1,6 +1,7 @@
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
 local EDialogueNodeType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueNodeType
 local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueIterType
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local FOptionNode = Class({
   "BluePrints.Story.StoryIteration.StoryIterationNode"
 })
@@ -8,7 +9,6 @@ FOptionNode.NodeType = EDialogueNodeType.Option
 
 function FOptionNode:CreateNodeData(DialogueId)
   local Dialogue = self.Dialogues[DialogueId]
-  local Avatar = GWorld:GetAvatar()
   self.IsImpression = false
   self.OptionType = nil
   local Options = {}
@@ -35,7 +35,7 @@ function FOptionNode:CreateNodeData(DialogueId)
           self.OptionType = "Check"
         end
       end
-      if self.IsImpression and Avatar and Avatar:IsImpressionCheckSuccess(OptionId) then
+      if self.IsImpression and ImpressionModel:IsImpressionCheckSuccess(OptionId) then
         table.insert(LastSelectedId, OptionId)
       end
       table.insert(Options, OptionId)
@@ -46,7 +46,7 @@ function FOptionNode:CreateNodeData(DialogueId)
   if self.IsImpression then
     if not next(LastSelectedId) and Dialogue.RestartTag then
       for _, OptionId in pairs(Options) do
-        if Avatar and Avatar:IsImpressionCheckFailure(OptionId) then
+        if ImpressionModel:IsImpressionCheckFailure(OptionId) then
           self.IterGraph:SetRestartTag(Dialogue.RestartTag)
           break
         end
@@ -156,10 +156,6 @@ function FOptionNode:GetOptions()
 end
 
 function FOptionNode:IsImpressionSuccess(DialogueId)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return false
-  end
   local DialogueData = DataMgr.Dialogue[DialogueId]
   if not DialogueData then
     return false
@@ -169,7 +165,7 @@ function FOptionNode:IsImpressionSuccess(DialogueId)
     return false
   end
   for _, OptionId in ipairs(OptionData) do
-    if Avatar:IsImpressionCheckSuccess(OptionId) then
+    if ImpressionModel:IsImpressionCheckSuccess(OptionId) then
       return true
     end
   end

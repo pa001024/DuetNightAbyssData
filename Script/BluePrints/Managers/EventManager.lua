@@ -32,6 +32,8 @@ EventID.OnHyperWeaponForgeLevelUp = "OnHyperWeaponForgeLevelUp"
 EventID.OnHyperWeaponForgeQuestRewardGot = "OnHyperWeaponForgeQuestRewardGot"
 EventID.OnDrawGacha = "OnDrawGacha"
 EventID.OnGachaPoolUpdate = "OnGachaPoolUpdate"
+EventID.OnShowPopupPack = "OnShowPopupPack"
+EventID.OnPopupPackStateUpdate = "OnPopupPackStateUpdate"
 EventID.OnGetMailRewards = "OnGetMailRewards"
 EventID.OnMarkMailStar = "OnMarkMailStar"
 EventID.OnCancelMailStar = "OnCancelMailStar"
@@ -46,6 +48,7 @@ EventID.OnSwitchCurrentChar = "OnSwitchCurrentChar"
 EventID.OnCharacterAttributeSwitched = "OnCharacterAttributeSwitched"
 EventID.OnCharAttributeSwitched = "OnCharAttributeSwitched"
 EventID.OnChangeWeapon = "OnChangeWeapon"
+EventID.OnInGear = "OnInGear"
 EventID.OnSwitchWeapon = "OnSwitchWeapon"
 EventID.OnCloseSkillInfo = "OnCloseSkillInfo"
 EventID.OnSwitchSkin = "OnSwitchSkin"
@@ -59,6 +62,7 @@ EventID.OnUnlockCharUsePiece = "OnUnlockCharUsePiece"
 EventID.OnAutoClaimWeaponBreakCollectReward = "OnAutoClaimWeaponBreakCollectReward"
 EventID.OnPetReddotRead = "OnPetReddotRead"
 EventID.OnMVPSequenceFinish = "OnMVPSequenceFinish"
+EventID.OnStarTargetChanged = "OnStarTargetChanged"
 EventID.OnCharShowPartMesh = "OnCharShowPartMesh"
 EventID.OnCharCornerVisibilityChanged = "OnCharCornerVisibilityChanged"
 EventID.OnCharAppearanceChanged = "OnCharAppearanceChanged"
@@ -131,6 +135,7 @@ EventID.OnEnableStory = "OnEnableStory"
 EventID.OnDisableEscOnDungeonLoading = "OnDisableEscOnDungeonLoading"
 EventID.OnRepBattleProgressNum = "OnRepBattleProgressNum"
 EventID.OnRepBattleProgressInfo = "OnRepBattleProgressInfo"
+EventID.OnGuildBossStatsUpdate = "OnGuildBossStatsUpdate"
 EventID.TeamMatchStartEntering = "TeamMatchStartEntering"
 EventID.TeamMatchStartMatching = "TeamMatchStartMatching"
 EventID.TeamMatchOneRefused = "TeamMatchOneRefused"
@@ -184,6 +189,7 @@ EventID.OnTempleSmeltChangeBlue = "OnTempleSmeltChangeBlue"
 EventID.OnTempleCageEnterDown = "OnTempleCageEnterDown"
 EventID.OnNoticeCageUp = "OnNoticeCageUp"
 EventID.OnTempleTipButtonShow = "OnTempleTipButtonShow"
+EventID.OnPlayerRankAccessoryInfo = "OnPlayerRankAccessoryInfo"
 EventID.OnUpdatePartyLeftUI = "OnUpdatePartyLeftUI"
 EventID.OnUpdatePartyRightUI = "OnUpdatePartyRightUI"
 EventID.OnPartyProgressStart = "OnPartyProgressStart"
@@ -193,6 +199,8 @@ EventID.OnPlayerEnterToExit = "OnPlayerEnterToExit"
 EventID.OnOnePlayerEnd = "OnOnePlayerEnd"
 EventID.OnPartyPlayerTriggerFallTrigger = "OnPartyPlayerTriggerFallTrigger"
 EventID.OnPlayerGetDeBuff = "OnPlayerGetDeBuff"
+EventID.OnUpdateWeaponVerifyTime = "OnUpdateWeaponVerifyTime"
+EventID.OnUpdateWeaponVerifyKillCount = "OnUpdateWeaponVerifyKillCount"
 EventID.OnRepRescueCountDownTime = "OnRepRescueCountDownTime"
 EventID.UpdateHostageDyingCountDown = "UpdateHostageDyingCountDown"
 EventID.NotifyClientChangeHostageInvincible = "NotifyClientChangeHostageInvincible"
@@ -439,6 +447,8 @@ EventID.OnUpdateQuestChain = "OnUpdateQuestChain"
 EventID.OnCompleteQuestChain = "OnCompleteQuestChain"
 EventID.CheckShowMap = "CheckShowMap"
 EventID.OnCalcVarChange = "OnCalcVarChange"
+EventID.OnMissionGroupStart = "OnMissionGroupStart"
+EventID.OnQuestRestart = "OnQuestRestart"
 EventID.OnSpecialQuestFail = "OnSpecialQuestFail"
 EventID.OnNpcEnterOrQuitSpecialQuest = "OnNpcEnterOrQuitSpecialQuest"
 EventID.SpecialQuestOpenRegionOnline = "SpecialQuestOpenRegionOnline"
@@ -529,6 +539,7 @@ EventID.RegionReputationsChange = "RegionReputationsChange"
 EventID.OpenChatView = "OpenChatView"
 EventID.InterruptChatView = "InterruptChatView"
 EventID.ComfirmDisturbClick = "ComfirmDisturbClick"
+EventID.OnBattleOnlineActionAutoAcceptChanged = "OnBattleOnlineActionAutoAcceptChanged"
 EventID.GameViewportInputKeyPressed = "GameViewportInputKeyPressed"
 EventID.GameViewportInputKeyReleased = "GameViewportInputKeyReleased"
 EventID.GameViewportInputKeyLongPressed = "GameViewportInputKeyLongPressed"
@@ -574,8 +585,13 @@ EventID.OnNetDisconnect = "OnNetDisconnect"
 EventID.OnConnectSuccess = "OnConnectSuccess"
 EventID.ChangeSelectMusicScore = "ChangeSelectMusicScore"
 EventID.ChangeStoredCustomBGM = "ChangeStoredCustomBGM"
+EventID.ChangeStoredChapterBGM = "ChangeStoredChapterBGM"
 EventID.ChangePlayedMusicItem = "ChangePlayedMusicItem"
+EventID.ChangeSelectMusicItem = "ChangeSelectMusicItem"
+EventID.ChangeHoverMusicItem = "ChangeHoverMusicItem"
+EventID.ChangeHoverAlbumItem = "ChangeHoverAlbumItem"
 EventID.ChangeMusicItemNewState = "ChangeMusicItemNewState"
+EventID.ChangePianoSelectScene = "ChangePianoSelectScene"
 EventID.BattlePassTaskProgressChange = "BattlePassTaskProgressChange"
 EventID.BattlePassLevelChange = "BattlePassLevelChange"
 EventID.BattlePassRank2Unlock = "BattlePassRank2Unlock"
@@ -630,6 +646,7 @@ EventID.OnUpdateBagTreasureScore = "OnUpdateBagTreasureScore"
 EventID.OnPlayShowDamageEffect = "OnPlayShowDamageEffect"
 EventID.OnSoloTreasureTribute = "OnSoloTreasureTribute"
 EventID.OpenSoloTreasure3Choose1 = "OpenSoloTreasure3Choose1"
+EventID.OnTreasureHuntManualInfoChanged = "OnTreasureHuntManualInfoChanged"
 EventID.OnCommunityFollowActivityJJJFinish = "OnCommunityFollowActivityJJJFinish"
 EventID.OnComeBackNewPhaseUnlocked = "OnCommunityFollowActivityJJJFinish"
 EventID.OnEntryTextUnlocked = "OnEntryTextUnlocked"
@@ -637,6 +654,7 @@ EventID.OnGetTitle = "OnGetTitle"
 EventID.OnGetTitleFrame = "OnGetTitleFrame"
 EventID.OnChangeTitle = "OnChangeTitle"
 EventID.OnChangeNickName = "OnClickChangeName"
+EventID.OnPersonalInfoBgChanged = "OnPersonalInfoBgChanged"
 EventID.OnGetFeiNaReward = "OnGetFeiNaReward"
 EventID.RefreshVoiceName = "RefreshVoiceName"
 EventID.OnUpdateNumInputLimit = "OnUpdateNumInputLimit"
@@ -656,6 +674,8 @@ EventID.OnReceivedOnlineActionInvitationReject = "OnReceivedOnlineActionInvitati
 EventID.OnReceivedOnlineActionApplicationAgree = "OnReceivedOnlineActionApplicationAgree"
 EventID.OnReceivedOnlineActionApplicationReject = "OnReceivedOnlineActionApplicationReject"
 EventID.RequestDeadRegionOnlineItem = "RequestDeadRegionOnlineItem"
+EventID.OnRegionOnlineAutoAgreeInviteChanged = "OnRegionOnlineAutoAgreeInviteChanged"
+EventID.OnRegionOnlineInteractionChanged = "OnRegionOnlineInteractionChanged"
 EventID.OnHardBossOpeningSequencePause = "OnHardBossOpeningSequencePause"
 EventID.OnHardBossOpeningAllPlayerReady = "OnHardBossOpeningAllPlayerReady"
 EventID.OnPreRaidRankInfo = "OnPreRaidRankInfo"
@@ -688,6 +708,10 @@ EventID.OnSwitchRendering = "OnSwitchRendering"
 EventID.OnAutoChessCreateMonster = "OnAutoChessCreateMonster"
 EventID.OnAutoChessRemoveMonster = "OnAutoChessRemoveMonster"
 EventID.OnCheckIsGameOver = "OnCheckIsGameOver"
+EventID.OnChallengeBuffChange = "OnChallengeBuffChange"
+EventID.OnAutoChessSetSharedSquad = "OnAutoChessSetSharedSquad"
+EventID.OnAutoChessCreateItem = "OnAutoChessCreateItem"
+EventID.OnAutoChessRemoveItem = "OnAutoChessRemoveItem"
 EventID.OnBattleChessFight = "OnBattleChessFight"
 EventID.OnBattleChessFightDamage = "OnBattleChessFightDamage"
 EventID.OnAutoChessBattleStart = "OnAutoChessBattleStart"
@@ -695,7 +719,11 @@ EventID.OnAutoChessMotivateStart = "OnAutoChessMotivateStart"
 EventID.OnAutoChessCubeChangeState = "OnAutoChessCubeChangeState"
 EventID.OnInitRoleBattleInfo = "OnInitRoleBattleInfo"
 EventID.OnAutoChessDisableCubeInteraction = "OnAutoChessDisableCubeInteraction"
+EventID.OnAutoChessEnableCubeInteraction = "OnAutoChessEnableCubeInteraction"
 EventID.OnAutoChessEquipChange = "OnAutoChessEquipChange"
+EventID.OnAutoChessWeatherChanged = "OnAutoChessWeatherChanged"
+EventID.OnAutoChessChallengeBuffChanged = "OnAutoChessChallengeBuffChanged"
+EventID.OnAutoChessSquadChanged = "OnAutoChessSquadChanged"
 EventID.OnDungeonEscClose = "OnDungeonEscClose"
 EventID.StopTrollyBoxLocationSync = "StopTrollyBoxLocationSync"
 EventID.OnWuyoushengLevelProgress = "OnWuyoushengLevelProgress"
@@ -722,6 +750,7 @@ EventID.OnChatUpdateInput = "OnChatUpdateInput"
 EventID.OnRecordButtonOptionChanged = "OnRecordButtonOptionChanged"
 EventID.OnMoveModelOptionChanged = "OnMoveModelOptionChanged"
 EventID.OnBlockQuestSelect = "OnBlockQuestSelect"
+EventID.OnRaceGameTimesSet = "OnRaceGameTimesSet"
 local Event = {}
 EventID.OnSendGiftFinished = "OnSendGiftFinished"
 Event.List = nil
@@ -734,6 +763,9 @@ function Event:New()
   o.FuncMap = {}
   o.NowCount = 0
   o.LastCount = 0
+  o._InvokeDepth = 0
+  o._Snapshot = {}
+  o._InvalidObjs = {}
   return o
 end
 
@@ -790,37 +822,76 @@ function Event:CheckIsLeak(eventName, bLog)
 end
 
 function Event:Invoke(...)
-  local InvalidObjs = {}
-  local TmpCalls = {}
-  for obj, funcs in pairs(self.List) do
-    if obj then
-      local objType = type(obj)
-      if ("userdata" == objType or "table" == objType and obj.Object) and IsValid(obj) or "table" == objType and not obj.Object then
-        table.insert(TmpCalls, {obj, funcs})
-      else
-        table.insert(InvalidObjs, obj)
-      end
-    end
-  end
-  local args = {
+  local Args = {
     ...
   }
-  for _, call in ipairs(TmpCalls) do
-    local obj = call[1]
-    local funcs = call[2]
-    for _, func in ipairs(funcs) do
-      try({
-        exec = function()
-          func(obj, table.unpack(args))
-        end,
-        catch = function(err)
-          GWorld.logger.error(Traceback(ErrorTag, err, true))
+  self._InvokeDepth = self._InvokeDepth + 1
+  local IsTopLevel = 1 == self._InvokeDepth
+  local Snapshot = IsTopLevel and self._Snapshot or {}
+  local InvalidObjs = IsTopLevel and self._InvalidObjs or {}
+  local SnapshotCount = 0
+  local InvalidCount = 0
+  local ok, err = xpcall(function()
+    for obj, funcs in pairs(self.List) do
+      if obj then
+        local objType = type(obj)
+        local IsValidObj = ("userdata" == objType or "table" == objType and obj.Object) and IsValid(obj) or "table" == objType and not obj.Object
+        if IsValidObj then
+          SnapshotCount = SnapshotCount + 1
+          local Item = Snapshot[SnapshotCount]
+          if not Item then
+            Item = {}
+            Snapshot[SnapshotCount] = Item
+          end
+          Item[1] = obj
+          Item[2] = funcs
+        else
+          InvalidCount = InvalidCount + 1
+          InvalidObjs[InvalidCount] = obj
         end
-      })
+      end
     end
+    for i = 1, SnapshotCount do
+      local Item = Snapshot[i]
+      local obj = Item[1]
+      local funcs = Item[2]
+      for _, func in ipairs(funcs) do
+        try({
+          exec = function()
+            func(obj, table.unpack(Args))
+          end,
+          catch = function(InvokeErr)
+            GWorld.logger.error(Traceback(ErrorTag, InvokeErr, true))
+          end
+        })
+      end
+    end
+    for i = 1, InvalidCount do
+      local obj = InvalidObjs[i]
+      local funcs = self.List[obj]
+      if funcs then
+        self.NowCount = self.NowCount - #funcs
+      end
+      self.List[obj] = nil
+      if self.FuncMap then
+        self.FuncMap[obj] = nil
+      end
+    end
+  end, function(InvokeErr)
+    GWorld.logger.error(Traceback(ErrorTag, InvokeErr, true))
+    return InvokeErr
+  end)
+  for i = 1, SnapshotCount do
+    local Item = Snapshot[i]
+    Item[1] = nil
+    Item[2] = nil
   end
-  for _, obj in ipairs(InvalidObjs) do
-    self.List[obj] = nil
+  for i = 1, InvalidCount do
+    InvalidObjs[i] = nil
+  end
+  self._InvokeDepth = self._InvokeDepth - 1
+  if not ok then
+    error(err)
   end
 end
 

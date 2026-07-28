@@ -1,8 +1,10 @@
 require("UnLua")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
+local PersonInfoModel = require("BluePrints.UI.WBP.PersonInfo.PersonInfoModel")
 local M = Class("BluePrints.UI.BP_UIState_C")
 M._components = {
-  "BluePrints.UI.WBP.PersonInfo.Base.PersonInfoEntryBaseView"
+  "BluePrints.UI.WBP.PersonInfo.Base.PersonInfoEntryBaseView",
+  "BluePrints.UI.WBP.PersonInfo.Base.PersonInfoScreenshotComponent"
 }
 
 function M:InitTabInfo()
@@ -43,6 +45,8 @@ end
 function M:OnLoaded(...)
   M.Super.OnLoaded(self, ...)
   self:InitListenEvent()
+  self.Com_BtnCamera:UnBindEventOnClickedByObj(self)
+  self.Com_BtnCamera:BindEventOnClicked(self, self.OnScreenshotKeyDown)
   self.Com_BtnVisible.Button_Area.OnClicked:Add(self, self.OnBtnVisibleClick)
 end
 
@@ -54,6 +58,8 @@ function M:RefreshBaseInfo()
   if self.PersonInfoMainPage then
     self.PersonInfoMainPage:PlayAnimation(self.PersonInfoMainPage.In)
   end
+  self.Com_BtnCamera:SetVisibility(PersonInfoModel:IsOwener() and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  self.Com_BtnVisible:SetVisibility(PersonInfoModel:IsOwener() and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
   self:SetFocus()
 end
 
@@ -71,29 +77,40 @@ function M:OnReturnKeyDown()
 end
 
 function M:Hideui()
-  self.bIsHide = true
-  self.PersonInfoMainPage.MainPanel:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-  self.Com_Tab_M:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  PersonInfoController:SetMainPageUIHidden(true)
+  self.MainPageItem:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:PlayAnimation(self.HideUi)
 end
 
 function M:Recoverui()
-  self.bIsHide = false
-  self.PersonInfoMainPage.MainPanel:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Com_Tab_M:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  PersonInfoController:SetMainPageUIHidden(false)
+  self.MainPageItem:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:PlayAnimation(self.ShowUi)
 end
 
 function M:OnBtnVisibleClick()
-  self.bIsHide = not self.bIsHide
-  if self.bIsHide == true then
+  local bIsHide = not PersonInfoController:IsMainPageUIHidden()
+  PersonInfoController:SetMainPageUIHidden(bIsHide)
+  if bIsHide then
     self:Hideui()
   else
     self:Recoverui()
   end
 end
 
+function M:On_Image_Click_MouseButtonDown(MyGeometry, MouseEvent)
+  if PersonInfoController:IsMainPageUIHidden() then
+    self:Recoverui()
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
 function M:OnKeyDown(MyGeometry, InKeyEvent)
+  if self.bScreenshotWidgetShow and IsValid(self.ScreenshotWidget) then
+    self.ScreenshotWidget:OnKeyDown(MyGeometry, InKeyEvent)
+    return UE4.UWidgetBlueprintLibrary.Handled()
+  end
   local IsEventHandled = false
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)

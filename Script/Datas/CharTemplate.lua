@@ -2299,6 +2299,15 @@ return ReadOnly("CharTemplate", {
     SkillLevel = 8,
     SkillTreeUnlock = T.RT_19
   },
+  [702102] = {
+    CharId = 2102,
+    CharLevel = 70,
+    ModId = T.RT_79,
+    ModLevel = T.RT_1,
+    RuleId = 702102,
+    SkillLevel = 8,
+    SkillTreeUnlock = T.RT_19
+  },
   [702301] = {
     CharId = 2301,
     CharLevel = 70,
@@ -4014,6 +4023,16 @@ return ReadOnly("CharTemplate", {
     ModId = T.RT_76,
     ModLevel = T.RT_1,
     RuleId = 70210103,
+    SkillLevel = 8,
+    SkillTreeUnlock = T.RT_19
+  },
+  [70210201] = {
+    CharCostumeId = 210201,
+    CharId = 2102,
+    CharLevel = 70,
+    ModId = T.RT_79,
+    ModLevel = T.RT_1,
+    RuleId = 70210201,
     SkillLevel = 8,
     SkillTreeUnlock = T.RT_19
   },

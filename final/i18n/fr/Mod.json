@@ -2885,30 +2885,29 @@
   {
     "id": 41725,
     "icon": "FeatheredSnake01_Blue",
-    "名称": "Vigueur",
-    "版本": "99.9",
+    "名称": "Éveil",
+    "版本": "1.5",
     "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "A",
     "属性": "Hydro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Personnages",
-    "昂扬": 1.0,
-    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "效果": "L’effet élémentaire ne s’active que si tous les Sceaux démoniaques équipés sont différents. Les dégâts infligés par vos propres invocations augmentent de 60.0%."
   },
   {
     "id": 41726,
     "icon": "FeatheredSnake01_Blue",
-    "名称": "Décision",
-    "版本": "99.9",
+    "名称": "Éternité",
+    "版本": "1.5",
     "系列": "de Quetzalcoatl",
     "品质": "紫",
-    "极性": "V",
+    "极性": "O",
     "属性": "Hydro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Personnages",
-    "技能威力": 1.0,
-    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "技能耐久": 0.36,
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
     "id": 41727,
@@ -2923,6 +2922,21 @@
     "类型": "Personnages",
     "技能威力": 0.3,
     "效果": "Les dégâts infligés par vos invocations augmentent de 30.0%. Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
+    "id": 41728,
+    "icon": "Mephisto01_Blue",
+    "名称": "Ardeur · Vigueur",
+    "版本": "1.5",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Hydro",
+    "耐受": 26,
+    "类型": "Personnages",
+    "攻击": 0.72,
+    "昂扬": 0.24,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 41731,
@@ -3230,6 +3244,21 @@
     "类型": "Personnages",
     "背水": 0.054,
     "技能威力": 0.3,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
+    "id": 41758,
+    "icon": "Mephisto01_Green",
+    "名称": "Ardeur · Trempe",
+    "版本": "1.5",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Anémo",
+    "耐受": 27,
+    "类型": "Personnages",
+    "攻击": 0.72,
+    "增伤": 0.18,
     "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
@@ -5623,30 +5652,35 @@
   {
     "id": 51725,
     "icon": "FeatheredSnake01_Blue",
-    "名称": "Vigueur",
-    "版本": "99.9",
+    "名称": "Éveil",
+    "版本": "1.5",
     "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "A",
     "属性": "Hydro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Personnages",
-    "昂扬": 1.0,
-    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité A sont équipés."
+    "消耗": [
+      51725
+    ],
+    "效果": "L’effet élémentaire ne s’active que si tous les Sceaux démoniaques équipés sont différents. Les dégâts infligés par vos propres invocations augmentent de 110.0%."
   },
   {
     "id": 51726,
     "icon": "FeatheredSnake01_Blue",
-    "名称": "Décision",
-    "版本": "99.9",
+    "名称": "Éternité",
+    "版本": "1.5",
     "系列": "de Quetzalcoatl",
     "品质": "金",
-    "极性": "V",
+    "极性": "O",
     "属性": "Hydro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Personnages",
-    "技能威力": 1.0,
-    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "消耗": [
+      51726
+    ],
+    "技能耐久": 0.66,
+    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
     "id": 51727,
@@ -5664,6 +5698,24 @@
     ],
     "技能威力": 0.55,
     "效果": "Les dégâts infligés par vos invocations augmentent de 55.0%. Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
+    "id": 51728,
+    "icon": "Mephisto01_Blue",
+    "名称": "Ardeur · Vigueur",
+    "版本": "1.5",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Hydro",
+    "耐受": 28,
+    "类型": "Personnages",
+    "消耗": [
+      51728
+    ],
+    "攻击": 1.32,
+    "昂扬": 0.44,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 51731,
@@ -6028,6 +6080,24 @@
     ],
     "背水": 0.099,
     "技能威力": 0.55,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
+    "id": 51758,
+    "icon": "Mephisto01_Green",
+    "名称": "Ardeur · Trempe",
+    "版本": "1.5",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Anémo",
+    "耐受": 30,
+    "类型": "Personnages",
+    "消耗": [
+      51758
+    ],
+    "攻击": 1.32,
+    "增伤": 0.33,
     "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
@@ -6693,6 +6763,23 @@
     "效果": "Lors de l’obtention de points de Combo via une attaque, a 100.0% de chance d’obtenir 1 point de Combo supplémentaire."
   },
   {
+    "id": 52801,
+    "icon": "Fenrir01",
+    "名称": "缠缚·满溢（远期待包装）",
+    "版本": "1.6",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52204
+    ],
+    "触发": 1.0,
+    "HyperTriggerCovertRate": 1.0,
+    "效果": "La part de Chance de déclenchement dépassant 100 % est convertie en Puissance de Surabondance du personnage à hauteur de 100.0%."
+  },
+  {
     "id": 53001,
     "icon": "Lilith01",
     "名称": "Fulgurance",
@@ -6896,6 +6983,23 @@
     ],
     "限定": "震荡",
     "物理": 0.99
+  },
+  {
+    "id": 53801,
+    "icon": "Fafnir01",
+    "名称": "缠缚·满溢（远期待包装）",
+    "版本": "1.6",
+    "系列": "de Fáfnir",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 22,
+    "类型": "Armes à distance",
+    "消耗": [
+      53013
+    ],
+    "触发": 1.0,
+    "HyperTriggerCovertRate": 1.0,
+    "效果": "La part de Chance de déclenchement dépassant 100 % est convertie en Puissance de Surabondance du personnage à hauteur de 100.0%."
   },
   {
     "id": 54001,
@@ -7342,74 +7446,74 @@
   {
     "id": 56121,
     "icon": "Changeling01_Blue",
-    "名称": "Ardeur",
-    "版本": "99.9",
+    "名称": "Éveil",
+    "版本": "1.5",
     "系列": "du Métamorphe",
     "品质": "金",
     "极性": "D",
     "属性": "Hydro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Personnages",
     "消耗": [
       56121
     ],
     "减伤": 0.3,
-    "效果": "Lorsque la Portée de compétence est ≥ 150.0%, votre ATQ augmente de 100.0%."
+    "效果": "Lorsque l’Efficacité de compétence est ≥ 165.0%, les dégâts infligés par vos invocations augmentent de 110.0%."
   },
   {
     "id": 56122,
     "icon": "Siren01_Blue",
-    "名称": "Ailes · Inspiration · Ardeur",
-    "版本": "99.9",
+    "名称": "Ailes · Inspiration · Éveil",
+    "版本": "1.5",
     "系列": "de la Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Hydro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Personnages",
     "消耗": [
       56122
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Lorsque la Portée de compétence est ≥ 150.0%, votre ATQ augmente de 100.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Lorsque l’Efficacité de compétence est ≥ 165.0%, les dégâts infligés par vos invocations augmentent de 110.0%."
   },
   {
     "id": 56123,
     "icon": "Changeling01_Blue",
-    "名称": "Décision",
-    "版本": "99.9",
+    "名称": "Vigueur",
+    "版本": "1.5",
     "系列": "du Métamorphe",
     "品质": "金",
     "极性": "D",
     "属性": "Hydro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Personnages",
     "消耗": [
       56123
     ],
     "减伤": 0.3,
-    "效果": "Lorsque l’Efficacité de compétence est ≥ 150.0%, votre Puissance de compétence et celle de vos alliés augmentent de 100.0%."
+    "效果": "Lorsque la Puissance de compétence est ≥ 350.0%, votre Vigueur et celle de vos alliés augmentent de 66.0%."
   },
   {
     "id": 56124,
     "icon": "Siren01_Blue",
-    "名称": "Ailes · Inspiration · Décision",
-    "版本": "99.9",
+    "名称": "Ailes · Inspiration · Vigueur",
+    "版本": "1.5",
     "系列": "de la Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Hydro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Personnages",
     "消耗": [
       56124
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Lorsque l’Efficacité de compétence est ≥ 150.0%, votre Puissance de compétence et celle de vos alliés augmentent de 100.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Lorsque la Puissance de compétence est ≥ 350.0%, votre Vigueur et celle de vos alliés augmentent de 66.0%."
   },
   {
     "id": 56131,
@@ -7700,6 +7804,22 @@
     "效果": "Lorsque la Durée de compétence est ≥ 200.0%, votre Taux CRIT et celui de vos alliés augmentent de 99.0%."
   },
   {
+    "id": 56201,
+    "icon": "Pan01",
+    "名称": "充盈·巧击(远期待包装)",
+    "版本": "1.6",
+    "系列": "du Faune",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 27,
+    "类型": "Personnages",
+    "消耗": [
+      56201
+    ],
+    "充盈威力": 1.0,
+    "效果": "Les Dégâts de compétence ont 80.0% de chances de déclencher un Effet supplémentaire élémentaire."
+  },
+  {
     "id": 101001,
     "icon": "Fenrir01",
     "名称": "Tourbillon illusoire",
@@ -7951,7 +8071,7 @@
         "类型": "武器伤害",
         "字段": [
           {
-            "名称": "Dégâts d’attaque chargée",
+            "名称": "Dégâts de trajectoire",
             "值": 1.24,
             "削韧": 40,
             "取消": 1.4
@@ -8216,6 +8336,38 @@
             "值": 0.88,
             "削韧": 28,
             "取消": 2
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 105001,
+    "icon": "Fenrir01",
+    "名称": "Ombre perce-ciel",
+    "版本": "1.5",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "攻速": 0.2,
+    "效果": "Modifie l’Attaque chargée de l’Épée-fouet : déclenche une ruée vers l’avant, infligeant des dégâts aux ennemis sur la trajectoire. Les dégâts sont augmentés de 100 % par rapport à l’attaque de base.",
+    "技能替换": {
+      "1050102": {
+        "id": 1050202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.24,
+            "削韧": 10
+          },
+          {
+            "名称": "Dégâts de trajectoire",
+            "值": 1.23,
+            "削韧": 36
           }
         ]
       }

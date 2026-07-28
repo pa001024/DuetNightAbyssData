@@ -8,18 +8,21 @@ return ReadOnly("GuildLevel", {
   [1] = {
     GuildDes = "GuildUpgradeDes_1",
     GuildEXP = 30000,
+    GuildFinancialReward = 3000,
     GuildLv = 1,
     GuildMembersNum = 25
   },
   [2] = {
     GuildDes = "GuildUpgradeDes_2",
     GuildEXP = 43000,
+    GuildFinancialReward = 5000,
     GuildLv = 2,
     GuildMembersNum = 30
   },
   [3] = {
     GuildDes = "GuildUpgradeDes_3",
     GuildEXP = 58000,
+    GuildFinancialReward = 8000,
     GuildLv = 3,
     GuildMembersNum = 35
   },

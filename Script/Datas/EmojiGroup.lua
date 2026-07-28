@@ -52,5 +52,11 @@ return ReadOnly("EmojiGroup", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chat_Tab07.T_Chat_Tab07'",
     Name = "UI_Chat_ImagineGroup3",
     bDefault = true
+  },
+  [8] = {
+    GroupId = 8,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Chat/T_Chat_Tab08.T_Chat_Tab08'",
+    Name = "UI_Chat_ImagineGroup3",
+    bDefault = true
   }
 })

@@ -48,5 +48,6 @@ return {
   },
   ManualItem = {},
   Explore = {},
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

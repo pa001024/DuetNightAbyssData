@@ -187,6 +187,12 @@ function M:UpdateMonthSignInRewardInfo()
     self.List:AddItem(Content)
   end
   self.List:RequestPlayEntriesAnim()
+  self.List.OnCreateEmptyContent:Bind(self, function(self)
+    local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+    Obj.IsEmpty = true
+    return Obj
+  end)
+  self.List:RequestFillEmptyContent()
 end
 
 function M:TryPlayGetAnimationFromItem()
@@ -213,22 +219,21 @@ function M:PlayGetAnimation(Item, Widget)
   AudioManager(self):PlayUISound(self, "event:/ui/common/month_signin_daily_gift_in", nil, nil)
   local IsHasMonthCard = MonthCardModel:HasMonthCard()
   if IsHasMonthCard then
-    local PreMonthCardGetRewardTime = EMCache:Get("PreMonthCardGetRewardTime", true)
-    local CurTimestamp = TimeUtils.NowTime()
-    if not PreMonthCardGetRewardTime then
-      self:PlayAnimation(self.GetNew)
-      EMCache:Set("PreMonthCardGetRewardTime", CurTimestamp, true)
-    elseif 0 ~= TimeUtils.GetIntervalDay(CurTimestamp, PreMonthCardGetRewardTime) then
-      EMCache:Set("PreMonthCardGetRewardTime", CurTimestamp, true)
-      self:PlayAnimation(self.GetNew)
-    end
+    self:PlayAnimation(self.GetNew)
   end
   self:AddTimer(1.0, function()
     self:ShowGetItemPage(Item)
     Item.bIsGet = true
+    self:UpdateCumulativeSignInText()
     self:UpdateCumulativeRewardInfo()
     self.bIsInGetAnimation = false
     Widget:SetIsReceived()
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:MonthlyCheckUpdatePopupTime(function()
+        DebugPrint("Yihan@ PlayGetAnimation:callback ")
+      end)
+    end
     self:RemoveTimer("TimeToShowGetItemUI")
   end, false, 0, "TimeToShowGetItemUI")
 end
@@ -239,10 +244,6 @@ function M:ShowGetItemPage(Content)
   UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardToShow, false, function()
     local Item = self.List:GetItemAt(MonthSignInModel:GetTodaySignInDay() - 1)
     self:IsShowTextDoneAndSwitchBtn(true)
-    local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      EMCache:Set("PreCheckCount", Avatar.MonthlyCheck.MonthlyCheckCount, true)
-    end
     Item.UI:SetFocus()
   end, self, true)
 end
@@ -427,6 +428,9 @@ function M:OnAnimationFinished(InAnimation)
     self.IsInAnimation = false
   elseif InAnimation == self.Card02_In or InAnimation == self.Card02_Out then
     self.IsInSwitching = false
+  elseif InAnimation == self.Out and self.IsClosing then
+    self.IsClosing = false
+    M.Super.Close(self)
   end
 end
 

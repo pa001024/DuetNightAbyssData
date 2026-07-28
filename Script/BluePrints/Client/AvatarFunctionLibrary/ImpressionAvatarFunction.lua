@@ -1,35 +1,20 @@
 local M = {}
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 
 function M:IsStorylineComplete(TalkTriggerId)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    return Avatar:IsStorylineComplete(TalkTriggerId)
-  end
-  return false
+  return ImpressionModel:IsStorylineComplete(TalkTriggerId)
 end
 
 function M:IsStorylineUnComplete(TalkTriggerId)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    return Avatar:IsStorylineUnComplete(TalkTriggerId)
-  end
-  return false
+  return ImpressionModel:IsStorylineUnComplete(TalkTriggerId)
 end
 
 function M:IsImpressionCheckSuccess(DialogueId)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    return Avatar:IsImpressionCheckSuccess(DialogueId)
-  end
-  return false
+  return ImpressionModel:IsImpressionCheckSuccess(DialogueId)
 end
 
 function M:IsImpressionCheckFailure(DialogueId)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    return Avatar:IsImpressionCheckFailure(DialogueId)
-  end
-  return false
+  return ImpressionModel:IsImpressionCheckFailure(DialogueId)
 end
 
 return M

@@ -57,6 +57,7 @@ function M:InitBaseView(TabName, BoxIndex)
   if BoxIndex then
     self.FixedBoxindex = BoxIndex
   end
+  self.bSuppressNextTabSelectedSound = true
   self:InitTabContent(TabName)
 end
 
@@ -358,6 +359,10 @@ function M:OnTabItemSelected(TabWidget, TabData)
   if self.CurInputDeviceType == ECommonInputType.Gamepad and self.RefreshFocusItem then
     self:RefreshFocusItem()
   end
+  if self.bSuppressNextTabSelectedSound then
+    self.bSuppressNextTabSelectedSound = false
+    return
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
 end
 
@@ -610,6 +615,7 @@ function M:InitEditListView(Parent, Params)
     self.FilterContentObj_All.Index = 0
     self.FilterContentObj_All.Icon = "/Game/UI/Texture/Static/Atlas/Armory/T_Armory_Select.T_Armory_Select"
     self.FilterContentObj_All.IsSelected = true
+    self.FilterContentObj_All.Owner = self
     self.LastSelectedFilterContent = self.FilterContentObj_All
     self.EMListView_Filter:AddItem(self.FilterContentObj_All)
     self.Panel_FilterTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -622,6 +628,7 @@ function M:InitEditListView(Parent, Params)
       Obj[key] = value
     end
     Obj.Index = Index
+    Obj.Owner = self
     self.EMListView_Filter:AddItem(Obj)
   end
   self.Common_Sort_List:Init(self.Root, self.OrderByDisplayNames, self.SortType or CommonConst.DESC, {
@@ -806,6 +813,31 @@ function M:SetFocusToList()
       ReturnWidget:SetFocus()
     end
   end
+end
+
+function M:SetFocusToList()
+  self.TileView_Select_Role:SetFocus()
+  if self.LastSelectedListContent then
+    self.TileView_Select_Role:BP_SetSelectedItem(self.LastSelectedListContent)
+    self.TileView_Select_Role:BP_NavigateToItem(self.LastSelectedListContent)
+  else
+    error("LastSelectedListContent is nil")
+  end
+  local FocusWidget = self.LastSelectedListContent.SelfWidget or self.LastSelectedListContent.ParentWidget or self.LastSelectedListContent.UI
+  if FocusWidget and IsValid(FocusWidget) then
+    FocusWidget:SetFocus()
+    return
+  end
+  self:AddTimer(0.001, function()
+    if not self.TileView_Select_Role or self.TileView_Select_Role:HasFocusedDescendants() then
+      return
+    end
+    local DelayFocusContent = self.LastSelectedListContent
+    local DelayFocusWidget = DelayFocusContent and (DelayFocusContent.SelfWidget or DelayFocusContent.ParentWidget or DelayFocusContent.UI)
+    if DelayFocusWidget and IsValid(DelayFocusWidget) then
+      DelayFocusWidget:SetFocus()
+    end
+  end, false, 0, "DelayFocusPersonInfoEditListItem", true)
 end
 
 AssembleComponents(M)

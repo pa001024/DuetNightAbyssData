@@ -47,7 +47,7 @@
     "cost": 4,
     "buffId": 4020105,
     "extraBuffDesc": "Rune de base",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "def": 0.45,
     "hp": 0.3
   },
@@ -59,7 +59,7 @@
     "cost": 4,
     "buffId": 4020106,
     "extraBuffDesc": "Rune de base",
-    "unlockQuestId": 10300103,
+    "unlockQuestId": 10300127,
     "atk": 0.3,
     "def": 0.45
   },
@@ -71,7 +71,7 @@
     "cost": 4,
     "buffId": 4020107,
     "extraBuffDesc": "Rune de base",
-    "unlockQuestId": 10300102,
+    "unlockQuestId": 10300126,
     "atk": 0.3,
     "hp": 0.3
   },
@@ -83,7 +83,7 @@
     "cost": 4,
     "buffId": 4020108,
     "extraBuffDesc": "Rune de base",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "hp": 0.65,
     "shield": 0.6
   },
@@ -95,7 +95,7 @@
     "cost": 4,
     "buffId": 4020109,
     "extraBuffDesc": "Rune de base",
-    "unlockQuestId": 10300101,
+    "unlockQuestId": 10300125,
     "atk": 0.3,
     "shield": 0.4
   },
@@ -106,9 +106,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "Effet du trait : Lorsqu’un ennemi subit des dégâts, réduit sa DÉF de 45.0% pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts, la DÉF de la cible est réduite de 45.0% pendant 10 s.",
     "extraBuffId": 4020201,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.3
   },
   {
@@ -118,9 +118,9 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020502,
-    "extraBuffDesc": "Effet du trait : Lorsqu’un ennemi subit des dégâts, réduit sa DÉF de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts, la DÉF de la cible est réduite de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020202,
-    "unlockQuestId": 10300105,
+    "unlockQuestId": 10300129,
     "atk": 0.45
   },
   {
@@ -130,9 +130,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020503,
-    "extraBuffDesc": "Effet du trait : Lorsque vous subissez des dégâts, augmente votre DÉF de 25.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité subit des dégâts, sa DÉF augmente de 25.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020203,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "hp": 0.9
   },
   {
@@ -142,9 +142,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020504,
-    "extraBuffDesc": "Effet du trait : Lorsque vous subissez des dégâts, augmente votre ATQ de 25.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité subit des dégâts, son ATQ augmente de 25.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020204,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "shield": 0.9
   },
   {
@@ -154,9 +154,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020505,
-    "extraBuffDesc": "Effet du trait : Lorsque vous prodiguez des soins, augmente la DÉF de la cible de 45.0% pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité prodigue des soins, la DÉF de la cible augmente de 45.0% pendant 10 s.",
     "extraBuffId": 4020205,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -166,9 +166,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020506,
-    "extraBuffDesc": "Effet du trait : Lorsque vous prodiguez des soins, augmente l’ATQ de la cible de 35.0% pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité prodigue des soins, l’ATQ de la cible augmente de 35.0% pendant 10 s.",
     "extraBuffId": 4020206,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -178,9 +178,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020507,
-    "extraBuffDesc": "Effet du trait : Lorsque vous prodiguez des soins, augmente votre ATQ de 45.0% pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité prodigue des soins, son ATQ augmente de 45.0% pendant 10 s.",
     "extraBuffId": 4020207,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -190,9 +190,9 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020508,
-    "extraBuffDesc": "Effet du trait : Lorsque vous subissez des dégâts, augmente votre ATQ de 20.0% et votre DÉF de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité subit des dégâts, son ATQ augmente de 20.0% et sa DÉF augmente de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020208,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "def": 0.3
   },
   {
@@ -202,9 +202,9 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020509,
-    "extraBuffDesc": "Effet du trait : Lorsque vous infligez des dégâts, augmente votre ATQ de 20.0% et votre DÉF de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts, son ATQ augmente de 20.0% et sa DÉF augmente de 20.0%, cumulable jusqu’à 3.0 fois, pendant 10 s.",
     "extraBuffId": 4020209,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.2
   },
   {
@@ -214,9 +214,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020510,
-    "extraBuffDesc": "Effet du trait : Lorsque vos PV chutent à 25.0% ou moins, restaure chaque seconde 7.5% des PV max. pendant 10 s.",
+    "extraBuffDesc": "Effet du trait : Lorsque les PV de l’unité chutent à 25.0% ou moins, elle restaure chaque seconde 7.5% de ses PV max pendant 10 s.",
     "extraBuffId": 4020210,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -226,9 +226,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020511,
-    "extraBuffDesc": "Effet du trait : Chaque tranche de 20 % de PV perdus augmente votre ATQ de 15.0%.",
+    "extraBuffDesc": "Effet du trait : Chaque tranche de 20 % de PV perdus par l’unité augmente son ATQ de 15.0%.",
     "extraBuffId": 4020211,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -238,9 +238,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020512,
-    "extraBuffDesc": "Effet du trait : Chaque tranche de 20 % de PV perdus augmente votre DÉF de 4.0.",
+    "extraBuffDesc": "Effet du trait : Chaque tranche de 20 % de PV perdus par l’unité augmente sa DÉF de 4.0.",
     "extraBuffId": 4020212,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -250,9 +250,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020513,
-    "extraBuffDesc": "Effet du trait : Lorsque vous infligez des dégâts à une cible protégée par un bouclier, les dégâts infligés augmentent de 100.0%.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts à une cible protégée par un bouclier, les dégâts infligés augmentent de 100.0%.",
     "extraBuffId": 4020213,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.55
   },
   {
@@ -262,9 +262,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020514,
-    "extraBuffDesc": "Effet du trait : lorsque vous infligez des dégâts à une cible sans bouclier, les dégâts infligés augmentent de 100.0%.",
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts à une cible sans bouclier, les dégâts infligés augmentent de 100.0%.",
     "extraBuffId": 4020214,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.5
   },
   {
@@ -274,9 +274,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020602,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Déflagration",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Déflagration. Elle déclenche périodiquement une explosion autour d’elle, projetant les cibles ennemies alentour.",
     "extraBuffId": 4020302,
-    "unlockQuestId": 10300111,
+    "unlockQuestId": 10300135,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -289,9 +289,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020603,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Corrosion",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Corrosion. Elle génère périodiquement une flaque de [Venin] sous ses pieds, réduisant la DÉF des cibles ennemies qui s’y trouvent et leur infligeant des dégâts sur la durée.",
     "extraBuffId": 4020303,
-    "unlockQuestId": 10300113,
+    "unlockQuestId": 10300137,
     "atk": 0.5,
     "def": 0.5,
     "hp": 0.5,
@@ -304,9 +304,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020604,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Éclair foudroyant",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Éclair foudroyant. Elle projette périodiquement des [Orbes électriques] autour d’elle. Ceux-ci libèrent régulièrement une décharge infligeant des dégâts aux cibles ennemies dans une petite zone, puis disparaissent lorsqu’ils subissent une attaque.",
     "extraBuffId": 4020304,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -319,9 +319,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020605,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Pourriture cramoisie",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Pourriture cramoisie. Elle génère périodiquement un [Marais putride] autour d’elle. Les cibles ennemies dans la zone subissent des dégâts sur la durée, tandis que les cibles alliées récupèrent progressivement des PV.",
     "extraBuffId": 4020305,
-    "unlockQuestId": 10300109,
+    "unlockQuestId": 10300133,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -334,9 +334,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020606,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Flétrissure",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Flétrissure. Elle projette périodiquement des [Rayons flétrissants] autour d’elle. Ceux-ci persistent un certain temps, tournent en continu, infligent des dégâts aux cibles ennemies touchées et réduisent leur Lucidité.",
     "extraBuffId": 4020306,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -349,9 +349,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020608,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Représailles",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Représailles. Lorsqu’elle est vaincue, elle applique [Renforcé] aux cibles alliées proches, augmentant leur ATQ, leur DÉF, leur Vitesse de déplacement et leur Vitesse d’attaque pendant un certain temps.",
     "extraBuffId": 4020308,
-    "unlockQuestId": 10300112,
+    "unlockQuestId": 10300136,
     "atk": 1.5
   },
   {
@@ -361,9 +361,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020610,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Feu résiduel",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Feu résiduel. Elle entre périodiquement en [État de Feu résiduel]. Si elle subit des dégâts pendant la durée de l’effet, celui-ci prend fin et déclenche une explosion infligeant des dégâts aux cibles ennemies dans la zone.",
     "extraBuffId": 4020310,
-    "unlockQuestId": 10300114,
+    "unlockQuestId": 10300138,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -376,9 +376,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020611,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Sacrifice",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Sacrifice. Lorsqu’elle est vaincue, elle explose et inflige des dégâts aux cibles ennemies dans la zone.",
     "extraBuffId": 4020311,
-    "unlockQuestId": 10300110,
+    "unlockQuestId": 10300134,
     "atk": 1.5
   },
   {
@@ -388,12 +388,48 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020613,
-    "extraBuffDesc": "Effet du trait : obtient l’aptitude d’Ordonnateur — Bain de sang",
+    "extraBuffDesc": "Effet du trait : l’unité obtient la capacité d’Ordonnateur — Bain de sang. Lorsqu’elle inflige des dégâts, elle récupère des PV.",
     "extraBuffId": 4020313,
-    "unlockQuestId": 10300107,
+    "unlockQuestId": 10300131,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
     "shield": 1.0
+  },
+  {
+    "id": 37,
+    "name": "Rune de concentration",
+    "icon": "Item03",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020515,
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts, sa Vitesse d’attaque augmente de 20.0%, jusqu’à 5.0 cumuls. L’effet est réinitialisé lorsque l’unité change de cible.",
+    "extraBuffId": 4020215,
+    "unlockQuestId": 10300145,
+    "atk": 0.5
+  },
+  {
+    "id": 38,
+    "name": "Rune de défi",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020516,
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité inflige des dégâts, les dégâts de cette attaque augmentent de 25.0% pour chaque tranche de 250.0 PV d’écart avec la cible, jusqu’à 4.0 cumuls.",
+    "extraBuffId": 4020216,
+    "unlockQuestId": 10300132,
+    "atk": 0.5
+  },
+  {
+    "id": 39,
+    "name": "Rune de secours",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020517,
+    "extraBuffDesc": "Effet du trait : Lorsque l’unité prodigue des soins, la cible obtient un effet de soins continus restaurant 3.5% de ses PV max par seconde pendant 5.0 s.",
+    "extraBuffId": 4020217,
+    "unlockQuestId": 10300131,
+    "atk": 0.5
   }
 ]

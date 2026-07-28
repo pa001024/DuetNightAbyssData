@@ -200,6 +200,7 @@ function WBP_Play_HardBoss_Root_C:RefreshListBossInfo(Index, IsFirstTime)
   self.Text_BossDetail:SetText(GText(BossInfo.HardBossDes))
   if not IsFirstTime then
     self:PlayAnimation(self.Change)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/normal_boss_select_in", nil, nil)
   end
   if self.TitleWidget then
     self.TitleWidget:PlayAnimation(self.TitleWidget.In)
@@ -620,6 +621,7 @@ function WBP_Play_HardBoss_Root_C:FocusOnFirstItem()
 end
 
 function WBP_Play_HardBoss_Root_C:SwitchIn()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/normal_boss_select_in", nil, nil)
   self:InitNormalTab()
   if self.TitleWidget then
     self.TitleWidget:PlayAnimation(self.TitleWidget.In)

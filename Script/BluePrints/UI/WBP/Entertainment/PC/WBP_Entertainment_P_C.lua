@@ -195,6 +195,28 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   return M.Super.OnPreviewKeyDown(self, MyGeometry, InKeyEvent)
 end
 
+function M:ReceiveEnterState(StackAction)
+  M.Super.ReceiveEnterState(self, StackAction)
+  self:SetFocus()
+  self.bEnterState = true
+end
+
+function M:ReceiveExitState(StackAction)
+  M.Super.ReceiveExitState(self, StackAction)
+  self.bEnterState = false
+end
+
+function M:OnRemovedFromFocusPath(InFocusEvent)
+  self:AddDelayFrameFunc(function()
+    if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and self.bEnterState and not self:IsHide() then
+      local S = self.GameInputModeSubsystem:GetCurrentLocalPlayerFocusWidgetType()
+      if "SViewport" == S then
+        self:SetFocus()
+      end
+    end
+  end)
+end
+
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   if self:IsInteractionEnabled() == false then
     return
@@ -205,6 +227,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   end
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   DebugPrint("@@@ OnKeyDown", InKeyName)
+  if self.Tab:Handle_KeyEventOnGamePad(InKeyName) then
+    return UIUtils.Handled
+  end
+  if self.Tab:HasAnyUserFocus() or self.Tab:HasFocusedDescendants() then
+    return UIUtils.Handled
+  end
   if self.HandleKeyDown then
     return UIUtils.Unhandled
   end
@@ -227,9 +255,6 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       return UIUtils.Handled
     end
     return UIUtils.Unhandled
-  end
-  if self.Tab:Handle_KeyEventOnGamePad(InKeyName) then
-    return UIUtils.Handled
   end
   if self.State == EEntertainmentState.SwitchCharacter and self.SwitchCharacter:OnGamePadKeyDown(MyGeometry, InKeyEvent) then
     return UIUtils.Handled
@@ -255,6 +280,9 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
   end
   if false == self:IsInteractionEnabled() then
     return
+  end
+  if self.Tab:HasAnyUserFocus() or self.Tab:HasFocusedDescendants() then
+    return UIUtils.Handled
   end
   if not UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     return M.Super.OnKeyUp(self, MyGeometry, InKeyEvent)

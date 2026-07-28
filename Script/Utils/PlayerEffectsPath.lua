@@ -61,6 +61,8 @@ local PlayerEffectsPath = {
     },
     [1101] = {
       "/Game/Asset/Effect/Common/NPC/NDC_Heitao_Hit.NDC_Heitao_Hit",
+      "/Game/Asset/Effect/Niagara/Costume/13Cos/NS_Cos_SP14_Hand.NS_Cos_SP14_Hand",
+      "/Game/Asset/Effect/Niagara/Costume/13Cos/NS_Cos_SP14_pelvis.NS_Cos_SP14_pelvis",
       "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_BodyBuff.NS_Heitao_BodyBuff",
       "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_Buff_Body_Spine.NS_Heitao_Buff_Body_Spine",
       "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_Condemned_Absorb.NS_Heitao_Condemned_Absorb",
@@ -98,24 +100,47 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Blade01.NS_Fuluo_HeavyAttack_Blade01",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Blade02.NS_Fuluo_HeavyAttack_Blade02",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Burst01.NS_Fuluo_HeavyAttack_Burst01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_weapon.NS_Fuluo_HeavyAttack_weapon",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01.NS_Fuluo_Skill01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01_02.NS_Fuluo_Skill01_02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01_Canying.NS_Fuluo_Skill01_Canying",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01_Hit.NS_Fuluo_Skill01_Hit",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_Blackground_C.NS_Fuluo_skill02_Blackground_C",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen.NS_Fuluo_skill02_fazhen",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen_C.NS_Fuluo_skill02_fazhen_C",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen_Center.NS_Fuluo_skill02_fazhen_Center",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen_Center_C.NS_Fuluo_skill02_fazhen_Center_C",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger01.NS_Fuluo_skill02_finger01",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger01_C.NS_Fuluo_skill02_finger01_C",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger02.NS_Fuluo_skill02_finger02",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger02_C.NS_Fuluo_skill02_finger02_C",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger03.NS_Fuluo_skill02_finger03",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger03_C.NS_Fuluo_skill02_finger03_C",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger04.NS_Fuluo_skill02_finger04",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger04_c.NS_Fuluo_skill02_finger04_C",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger05.NS_Fuluo_skill02_finger05",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger05_C.NS_Fuluo_skill02_finger05_C",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_foreground_C.NS_Fuluo_skill02_foreground_C",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_HeavyAttack_trail1.NS_Fuluo_skill02_HeavyAttack_trail1",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_loop.NS_Fuluo_skill02_loop",
       "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill03_ChangDoll.NS_Fuluo_skill03_ChangDoll",
-      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill03_Marks.NS_Fuluo_skill03_Marks"
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill03_Marks.NS_Fuluo_skill03_Marks",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill1_Hit.NS_Fuluo_Skill1_Hit",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill1_weapon01.NS_Fuluo_skill1_weapon01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill1_weapon02.NS_Fuluo_skill1_weapon02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill2.NS_Fuluo_Skill2",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Absorb.NS_Fuluo01_HeavyAttack_Absorb",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Blade01.NS_Fuluo01_HeavyAttack_Blade01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Blade02.NS_Fuluo01_HeavyAttack_Blade02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Blade03.NS_Fuluo01_HeavyAttack_Blade03",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Burst01.NS_Fuluo01_HeavyAttack_Burst01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_weapon.NS_Fuluo01_HeavyAttack_weapon",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_AngelFall.NS_Fuluo01_skill02_AngelFall",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_Blackground_C.NS_Fuluo01_skill02_Blackground_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_fazhen.NS_Fuluo01_skill02_fazhen",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_fazhen_Center.NS_Fuluo01_skill02_fazhen_Center",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_hand_C.NS_Fuluo01_skill02_hand_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01.NS_Fuluo_SP01_Skill01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01_3_03.NS_Fuluo_SP01_Skill01_3_03",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01_Canying.NS_Fuluo_SP01_Skill01_Canying",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01_Splash.NS_Fuluo_SP01_Skill01_Splash",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill02_HeavyAttack_Blade06.NS_Fuluo_SP01_Skill02_HeavyAttack_Blade06",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill02_HeavyAttack_Blade07.NS_Fuluo_SP01_Skill02_HeavyAttack_Blade07",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_SM_hand_l.NS_Fuluo_SP01_SM_hand_l",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_SM_hand_l_Trail.NS_Fuluo_SP01_SM_hand_l_Trail",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_SM_hand_r.NS_Fuluo_SP01_SM_hand_r",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_SM_hand_r_Trail.NS_Fuluo_SP01_SM_hand_r_Trail",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_SM_head.NS_Fuluo_SP01_SM_head",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_SM_shawl_right04_c.NS_Fuluo_SP01_SM_shawl_right04_c"
     },
     [1103] = {
       "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_Condemned_Wind.NS_Heitao_Condemned_Wind",
@@ -156,7 +181,24 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Xibi/NS_Xibi_Skill01_Hit.NS_Xibi_Skill01_Hit"
     },
     [1201] = {
-      "/Game/Asset/Effect/Niagara/Player/Nifu/NS_Nifu_Skill01_3.NS_Nifu_Skill01_3",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/NS_Nanzhu_Hit_Anxi.NS_Nanzhu_Hit_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/NS_Nanzhu_Skill02_Anxi.NS_Nanzhu_Skill02_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/NS_Nanzhu_Skill02_Buff_Anxi.NS_Nanzhu_Skill02_Buff_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/NS_Nanzhu_Skill02_Loop_Anxi.NS_Nanzhu_Skill02_Loop_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/NS_Zhujue_Arm.NS_Zhujue_Arm",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/NS_Zhujue_Hudie.NS_Zhujue_Hudie",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Boom_Anxi.NS_Nanzhu_Boom_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Debuff_Anxi.NS_Nanzhu_Debuff_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_001.NS_Nanzhu_Skill01_Anxi_001",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_002.NS_Nanzhu_Skill01_Anxi_002",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_Hit_E.NS_Nanzhu_Skill01_Anxi_Hit_E",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_Hit_summon.NS_Nanzhu_Skill01_Anxi_Hit_summon",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Dark_Summon_Skill02_Anxi_singleSocket.NS_Nanzhu_Dark_Summon_Skill02_Anxi_singleSocket",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_BG.NS_Nanzhu_Skill02_BG",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_CameraFX_Anxi.NS_Nanzhu_Skill02_CameraFX_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_Eye_anxi.NS_Nanzhu_Skill02_Eye_anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_OutLine_Anxi.NS_Nanzhu_Skill02_OutLine_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_Smoke.NS_Nanzhu_Skill02_Smoke",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_BlackGround.NS_BlackGround",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Body.NS_Body",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Bodyred.NS_Bodyred",
@@ -170,11 +212,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Out.NS_WeaponFX_Out",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Outred.NS_WeaponFX_Outred",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Start.NS_WeaponFX_Start",
-      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Startred.NS_WeaponFX_Startred",
-      "/Game/Asset/Effect/Niagara/Roguelike/Rou_Contract_Bomb_Burst.Rou_Contract_Bomb_Burst"
-    },
-    [1202] = {
-      "/Game/Asset/Effect/Niagara/Player/Zhangyu/zhangyu_skill_new/NS_zhangyu_idle_shuiquan.NS_zhangyu_idle_shuiquan"
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Startred.NS_WeaponFX_Startred"
     },
     [1501] = {
       "/Game/Asset/Effect/Niagara/Player/Baonu/NS_Baonu_Passive_buff.NS_Baonu_Passive_Buff",
@@ -204,6 +242,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Baonu/NS_Baonu_WP.NS_Baonu_WP"
     },
     [1502] = {
+      "/Game/Asset/Effect/Niagara/Costume/13Cos/NS_Cos_XiuNv_001.NS_Cos_XiuNv_001",
       "/Game/Asset/Effect/Niagara/Player/Nifu/NS_GbufferOutline_2.NS_GbufferOutline_2",
       "/Game/Asset/Effect/Niagara/Player/Nifu/NS_Nifu_Skill01_1.NS_Nifu_Skill01_1",
       "/Game/Asset/Effect/Niagara/Player/Nifu/NS_Nifu_Skill01_2.NS_Nifu_Skill01_2",
@@ -270,13 +309,16 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Banzi/NS_Banzi_Explode.NS_Banzi_Explode"
     },
     [1504] = {
-      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Baiheng01_SeqNew1.NS_Baiheng01_SeqNew1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NDC_Suyi_Explode.NDC_Suyi_Explode",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Bullet1.NS_Suyi_Bullet1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Core_Seq.NS_Suyi_Core_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Creature_Yinxin.NS_Suyi_Creature_Yinxin",
-      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Explode.NS_Suyi_Explode",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Explode1.NS_Suyi_Explode1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Explode_Batch.NS_Suyi_Explode_Batch",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_FlyBuff.NS_Suyi_FlyBuff",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_JetRush1.NS_Suyi_JetRush1",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_OpenFire.NS_Suyi_OpenFire",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Seq.NS_Suyi_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Shield.NS_Suyi_Shield",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Shield_End.NS_Suyi_Shield_End",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Shield_End2.NS_Suyi_Shield_End2",
@@ -291,6 +333,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_01.NS_Suyi_Skill02_01",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_02.NS_Suyi_Skill02_02",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_Explode.NS_Suyi_Skill02_Explode",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_Explode6.NS_Suyi_Skill02_Explode6",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_Off.NS_Suyi_Skill02_Off",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_WP01.NS_Suyi_Skill02_WP01",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_SlashTrail.NS_Suyi_SlashTrail",
@@ -300,6 +343,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_SlowFlyL_04.NS_Suyi_SlowFlyL_04",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_SlowFlyL_05.NS_Suyi_SlowFlyL_05",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_SlowFlyL_06.NS_Suyi_SlowFlyL_06",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Target.NS_Suyi_Target",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Trall_seq.NS_Suyi_Trall_seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Trall_seq1.NS_Suyi_Trall_seq1",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Word.NS_Suyi_Word",
@@ -313,13 +357,20 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_BugSeq.NS_Suyi01_BugSeq",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Core_Seq.NS_Suyi01_Core_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Fly_Trail01.NS_Suyi01_Fly_Trail01",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_JetRush1.NS_Suyi01_JetRush1",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Seq.NS_Suyi01_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Seq1.NS_Suyi01_Seq1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01_02.NS_Suyi01_Skill01_02",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01_Root.NS_Suyi01_Skill01_Root",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01Fly.NS_Suyi01_Skill01Fly",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_01.NS_Suyi01_Skill02_01",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_Off.NS_Suyi01_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_On.NS_Suyi01_Skill02_On",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_SlowFly.NS_Suyi01_SlowFly",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Target.NS_Suyi01_Target",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Trall_seq1.NS_Suyi01_Trall_seq1",
-      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_WP.NS_Suyi01_WP"
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_WP.NS_Suyi01_WP",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Xishou.NS_Suyi01_Xishou"
     },
     [1505] = {
       "/Game/Asset/Effect/Niagara/Player/Haier/NS_Haier_Body_Scene.NS_Haier_Body_Scene",
@@ -354,6 +405,7 @@ local PlayerEffectsPath = {
     [2101] = {
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NDC_Shuimu_Debuff_Spread.NDC_Shuimu_Debuff_Spread",
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NDC_Shuimu_Skill02_Shuizhu.NDC_Shuimu_Skill02_Shuizhu",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Armory_Shuipao.NS_Shuimu_Armory_Shuipao",
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Debuff_Spread_Batch.NS_Shuimu_Debuff_Spread_Batch",
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Debuff_Weak.NS_Shuimu_Debuff_Weak",
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill02_fazhen.NS_Shuimu_Skill02_fazhen",
@@ -364,11 +416,65 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_04.NS_Shuimu_skill02_sequence_04",
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_05.NS_Shuimu_skill02_sequence_05",
       "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill02_shuizhu_Batch.NS_Shuimu_Skill02_shuizhu_Batch",
-      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill02_Trail.NS_Shuimu_Skill02_Trail"
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill02_Trail.NS_Shuimu_Skill02_Trail",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_BlingSeq.NS_Shuimu01_BlingSeq",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Skill02_Ripple.NS_Shuimu01_Skill02_Ripple",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_01.NS_Shuimu01_skill02_sequence_01",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_03.NS_Shuimu01_skill02_sequence_03",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_04.NS_Shuimu01_skill02_sequence_04",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_05.NS_Shuimu01_skill02_sequence_05",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_06.NS_Shuimu01_skill02_sequence_06",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Skill02_Trail.NS_Shuimu01_Skill02_Trail",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Update_Hand.NS_Shuimu01_Update_Hand",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Update_Loop01.NS_Shuimu01_Update_Loop01",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Update_Loop02.NS_Shuimu01_Update_Loop02",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Update_neck.NS_Shuimu01_Update_neck",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Update_Seq.NS_Shuimu01_Update_Seq"
     },
     [2102] = {
-      "/Game/Asset/Effect/Niagara/Player/Feina/NS_Feina_Skill02_WaterCircle.NS_Feina_Skill02_WaterCircle",
-      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_02.NS_Shuimu_skill02_sequence_02"
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_01_Star01.NS_Eve_Skill01_01_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_01_Star02.NS_Eve_Skill01_01_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star01.NS_Eve_Skill01_02_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star02.NS_Eve_Skill01_02_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star03_hand.NS_Eve_Skill01_02_Star03_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_03_Close.NS_Eve_Skill01_03_Close",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_Hand.NS_Eve_Skill01_Hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_BuffDisappear.NS_Eve_Skill02_BuffDisappear",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CamBg.NS_Eve_Skill02_CamBg",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CamBg02.NS_Eve_Skill02_CamBg02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CloneBuff.NS_Eve_Skill02_CloneBuff",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake.NS_Eve_Skill02_HandShake",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake02.NS_Eve_Skill02_HandShake02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake_Cam.NS_Eve_Skill02_HandShake_Cam",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Loop.NS_Eve_Skill02_Loop",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Loop1.NS_Eve_Skill02_Loop1",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_LoopDie.NS_Eve_Skill02_LoopDie",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Off.NS_Eve_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Start.NS_Eve_Skill02_Start",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Sum02_Shengbian.NS_Eve_Skill02_Sum02_Shengbian",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Sum02_ShengbianTrail.NS_Eve_Skill02_Sum02_ShengbianTrail",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Touch.NS_Eve_Skill02_Touch",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Touch_Cam.NS_Eve_Skill02_Touch_Cam",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Summon01_die_Ball.NS_Eve_Summon01_die_Ball",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Summon01_shenbian.NS_Eve_Summon01_shenbian",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Summon02_Bullet.NS_Eve_Summon02_Bullet",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Summon_Disappear.NS_Eve_Summon_Disappear",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Summon02_Hit.NS_Summon02_Hit",
+      "/Game/Asset/Effect/Niagara/Player/Eve/queen/NS_Eve_Queen_Attack02_hit.NS_Eve_Queen_Attack02_hit",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/Levelup/NS_Eve_SP11_foot.NS_Eve_SP11_foot",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/Levelup/NS_Eve_SP11_hand.NS_Eve_SP11_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_02_Star01.NS_Eve01_Skill01_02_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_02_Star03_hand.NS_Eve01_Skill01_02_Star03_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star01.NS_Eve01_Skill01_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star02.NS_Eve01_Skill01_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star03.NS_Eve01_Skill01_Star03",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_HandShake.NS_Eve01_Skill02_HandShake",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_HandShake02.NS_Eve01_Skill02_HandShake02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Off.NS_Eve01_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_skill02_seq.NS_Eve01_skill02_seq",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Seq01.NS_Eve01_Skill02_Seq01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Seq02.NS_Eve01_Skill02_Seq02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Touch.NS_Eve01_Skill02_Touch"
     },
     [2301] = {
       "/Game/Asset/Effect/Niagara/Player/Zhangyu/zhangyu_skill_new/NDC_Zhangyu_Tentacle_Birth.NDC_Zhangyu_Tentacle_Birth",
@@ -442,7 +548,10 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Linen/NS_LinenSkill01_Trail_R.NS_LinenSkill01_Trail_R"
     },
     [3102] = {
+      "/Game/Asset/Effect/Niagara/Costume/13Cos/NS_Cos_SP12_Body.NS_Cos_SP12_Body",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Buff.NS_Xier_Buff",
+      "/Game/Asset/Effect/Niagara/Player/Xier/NS_xier_Cam_001.NS_xier_Cam_001",
+      "/Game/Asset/Effect/Niagara/Player/Xier/NS_xier_Cam_002.NS_xier_Cam_002",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_xier_chain.NS_xier_chain",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_OpenFire.NS_Xier_OpenFire",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Projectile.NS_Xier_Projectile",
@@ -454,7 +563,6 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_Buff.NS_Xier_Skill02_Buff",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_Drop.NS_Xier_Skill02_Drop",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_eyes.NS_Xier_Skill02_eyes",
-      "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_Flower.NS_Xier_Skill02_Flower",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_GroundChain.NS_Xier_Skill02_GroundChain",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_GroundChainDetial.NS_Xier_Skill02_GroundChainDetial",
       "/Game/Asset/Effect/Niagara/Player/Xier/NS_Xier_Skill02_Particle.NS_Xier_Skill02_Particle",
@@ -474,6 +582,14 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Yeer/NS_Yeer_Skill02_Hand_02.NS_Yeer_Skill02_Hand_02",
       "/Game/Asset/Effect/Niagara/Player/Yeer/NS_Yeer_Skill02_Star.NS_Yeer_Skill02_Star",
       "/Game/Asset/Effect/Niagara/Player/Yeer/NS_Yeer_Skill02_Star02.NS_Yeer_Skill02_Star02"
+    },
+    [3104] = {
+      "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_01.NS_QNF_SP13_01'",
+      "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_calf.NS_QNF_SP13_calf'",
+      "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_calf_l.NS_QNF_SP13_calf_l'",
+      "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_hand.NS_QNF_SP13_hand'",
+      "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_QNF_SP13_spine_03.NS_QNF_SP13_spine_03'",
+      "NiagaraSystem'/Game/Asset/Effect/Niagara/Player/Falu01/NS_Sp_claviclependant_right01_b.NS_Sp_claviclependant_right01_b'"
     },
     [3201] = {
       "/Game/Asset/Effect/Niagara/Player/Haier/NS_Haier_AuraRange.NS_Haier_AuraRange",
@@ -505,7 +621,6 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02_Star.NS_Kami_Skill02_Star",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02_Starbody.NS_Kami_Skill02_Starbody",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02_StarFlare.NS_Kami_Skill02_StarFlare",
-      "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02_StarFlare1.NS_Kami_Skill02_StarFlare1",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02_Trail.NS_Kami_Skill02_Trail",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02Creature_Attack.NS_Kami_Skill02Creature_Attack",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kami_Skill02Creature_Attack02.NS_Kami_Skill02Creature_Attack02",
@@ -516,11 +631,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kamila_daoguang_13.NS_Kamila_daoguang_13",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kamila_daoguang_14.NS_Kamila_daoguang_14",
       "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kamila_Skill02_Blackground.NS_Kamila_Skill02_Blackground",
-      "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kamila_Skill02_Blackground_Fire.NS_Kamila_Skill02_Blackground_Fire",
-      "/Game/Asset/Effect/Niagara/Player/Linen/NS_Linen_Skill01_Wave.NS_Linen_Skill01_Wave",
-      "/Game/Asset/Effect/Niagara/Player/Linen/NS_LinenSkill01_Trail_L.NS_LinenSkill01_Trail_L",
-      "/Game/Asset/Effect/Niagara/Player/Linen/NS_LinenSkill01_Trail_R.NS_LinenSkill01_Trail_R",
-      "/Game/Asset/Effect/Niagara/Weapon/Dualblade/NS_Dualblade_SlideAttack_Knife.NS_Dualblade_SlideAttack_Knife"
+      "/Game/Asset/Effect/Niagara/Player/Kami/NS_Kamila_Skill02_Blackground_Fire.NS_Kamila_Skill02_Blackground_Fire"
     },
     [3301] = {
       "/Game/Asset/Effect/Niagara/Player/Maer/NS_Maer_Skill01_Hit.NS_Maer_Skill01_Hit",
@@ -542,6 +653,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Maer/NS_Maer_Skill02_Wind.NS_Maer_Skill02_Wind"
     },
     [4101] = {
+      "/Game/Asset/Effect/Niagara/Costume/13Cos/NS_Cos_SP07.NS_Cos_SP07",
       "/Game/Asset/Effect/Niagara/Costume/13Cos/NS_Cos_SP07_001.NS_Cos_SP07_001",
       "/Game/Asset/Effect/Niagara/Player/Lise/NS_lise_BUff.NS_lise_Buff",
       "/Game/Asset/Effect/Niagara/Player/Lise/NS_lise_BUff_duiyou.NS_lise_BUff_duiyou",
@@ -830,6 +942,19 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/A_Common/NS_Common_Buff_Loop.NS_Common_Buff_Loop",
       "/Game/Asset/Effect/Niagara/Player/A_Common/NS_Common_DeBuff_Loop.NS_Common_DeBuff_Loop"
     },
+    [5402] = {
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill01_InBuff.NS_Saiqi_Skill01_InBuff",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill01_InBuff_Wind.NS_Saiqi_Skill01_InBuff_Wind",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill02_Body_CamScene.NS_Saiqi_Skill02_Body_CamScene",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill02_Body_Scene.NS_Saiqi_Skill02_Body_Scene",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill02_Pre.NS_Saiqi_Skill02_Pre",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill02_RedButterfly.NS_Saiqi_Skill02_RedButterfly",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Skill02_Wind.NS_Saiqi_Skill02_Wind",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi/NS_Saiqi_Wing.NS_Saiqi_Wing",
+      "/Game/Asset/Effect/Niagara/Player/Saiqi01/NS_Saiqi01_Skill01_InBuff.NS_Saiqi01_Skill01_InBuff",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill01_Summon_Attack.NS_Shuimu_Skill01_Summon_Attack",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Skill01_Summon_Attack.NS_Shuimu01_Skill01_Summon_Attack"
+    },
     [103010] = {
       "/Game/Asset/Effect/Niagara/Player/Feina/Feina_Bullet_Blue.Feina_Bullet_Blue",
       "/Game/Asset/Effect/Niagara/Player/Feina/Feina_Bullet_Green.Feina_Bullet_Green",
@@ -838,6 +963,47 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Feina/NS_Feina_Part_Burst.NS_Feina_Part_Burst",
       "/Game/Asset/Effect/Niagara/Player/Feina/NS_Feina_Part_Hit.NS_Feina_Part_Hit",
       "/Game/Asset/Effect/Niagara/Player/Feina/NS_Feina_Sum02_AddBuff.NS_Feina_Sum02_AddBuff"
+    },
+    [110299] = {
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Absorb.NS_Fuluo_HeavyAttack_Absorb",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Blade01.NS_Fuluo_HeavyAttack_Blade01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Blade02.NS_Fuluo_HeavyAttack_Blade02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_Burst01.NS_Fuluo_HeavyAttack_Burst01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_HeavyAttack_weapon.NS_Fuluo_HeavyAttack_weapon",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01.NS_Fuluo_Skill01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01_02.NS_Fuluo_Skill01_02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01_Canying.NS_Fuluo_Skill01_Canying",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_Skill01_Hit.NS_Fuluo_Skill01_Hit",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_Blackground_C.NS_Fuluo_skill02_Blackground_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen.NS_Fuluo_skill02_fazhen",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen_C.NS_Fuluo_skill02_fazhen_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen_Center.NS_Fuluo_skill02_fazhen_Center",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_fazhen_Center_C.NS_Fuluo_skill02_fazhen_Center_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill02_finger01.NS_Fuluo_skill02_finger01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill1_weapon01.NS_Fuluo_skill1_weapon01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo/NS_Fuluo_skill1_weapon02.NS_Fuluo_skill1_weapon02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Absorb.NS_Fuluo01_HeavyAttack_Absorb",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Blade01.NS_Fuluo01_HeavyAttack_Blade01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Blade02.NS_Fuluo01_HeavyAttack_Blade02",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Blade03.NS_Fuluo01_HeavyAttack_Blade03",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_Burst01.NS_Fuluo01_HeavyAttack_Burst01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_HeavyAttack_weapon.NS_Fuluo01_HeavyAttack_weapon",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_AngelFall.NS_Fuluo01_skill02_AngelFall",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_Blackground_C.NS_Fuluo01_skill02_Blackground_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_fazhen.NS_Fuluo01_skill02_fazhen",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_fazhen_Center.NS_Fuluo01_skill02_fazhen_Center",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_hand_C.NS_Fuluo01_skill02_hand_C",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill02_loop.NS_Fuluo01_skill02_loop",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill03_ChangDoll.NS_Fuluo01_skill03_ChangDoll",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo01_skill03_Marks.NS_Fuluo01_skill03_Marks",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01.NS_Fuluo_SP01_Skill01",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01_3_03.NS_Fuluo_SP01_Skill01_3_03",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01_Canying.NS_Fuluo_SP01_Skill01_Canying",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill01_Splash.NS_Fuluo_SP01_Skill01_Splash",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill02_HeavyAttack_Blade05.NS_Fuluo_SP01_Skill02_HeavyAttack_Blade05",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill02_HeavyAttack_Blade06.NS_Fuluo_SP01_Skill02_HeavyAttack_Blade06",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill02_HeavyAttack_Blade07.NS_Fuluo_SP01_Skill02_HeavyAttack_Blade07",
+      "/Game/Asset/Effect/Niagara/Player/Fuluo01/NS_Fuluo_SP01_Skill1_Hit.NS_Fuluo_SP01_Skill1_Hit"
     },
     [110301] = {
       "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_Condemned_Wind.NS_Heitao_Condemned_Wind",
@@ -914,6 +1080,9 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Tuosi/Tuosi03/NS_Tuosi03_Shoothit.NS_Tuosi03_Shoothit"
     },
     [120101] = {
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_001.NS_Nanzhu_Skill01_Anxi_001",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_002.NS_Nanzhu_Skill01_Anxi_002",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_Eye_anxi.NS_Nanzhu_Skill02_Eye_anxi",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Body.NS_Body",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Bodyred.NS_Bodyred",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_nanzhu_skill01.NS_nanzhu_skill01",
@@ -927,7 +1096,10 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Startred.NS_WeaponFX_Startred"
     },
     [150499] = {
-      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Baiheng01_SeqNew1.NS_Baiheng01_SeqNew1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Core_Seq.NS_Suyi_Core_Seq",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_JetRush1.NS_Suyi_JetRush1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_OpenFire1.NS_Suyi_OpenFire1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Seq.NS_Suyi_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill01_01.NS_Suyi_Skill01_01",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill01_02.NS_Suyi_Skill01_02",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Skill02_01.NS_Suyi_Skill02_01",
@@ -938,24 +1110,41 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Word.NS_Suyi_Word",
       "/Game/Asset/Effect/Niagara/Player/Suyi/NS_Suyi_Xishou.NS_Suyi_Xishou",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_BugSeq.NS_Suyi01_BugSeq",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Bullet.NS_Suyi01_Bullet",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Core_Seq.NS_Suyi01_Core_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Creature_Yinxin.NS_Suyi01_Creature_Yinxin",
-      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Explode.NS_Suyi01_Explode",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Explode1.NS_Suyi01_Explode1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Explode_Batch.NS_Suyi01_Explode_Batch",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_FlyBuff.NS_Suyi01_FlyBuff",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_JetRush1.NS_Suyi01_JetRush1",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Seq.NS_Suyi01_Seq",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Seq1.NS_Suyi01_Seq1",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Shield.NS_Suyi01_Shield",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Shield_End.NS_Suyi01_Shield_End",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Shield_End2.NS_Suyi01_Shield_End2",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_ShieldAtk.NS_Suyi01_ShieldAtk",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01_02.NS_Suyi01_Skill01_02",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01_Ghost.NS_Suyi01_Skill01_Ghost",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01_Ghost_Base.NS_Suyi01_Skill01_Ghost_Base",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill01_JuGuai.NS_Suyi01_Skill01_JuGuai",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_01.NS_Suyi01_Skill02_01",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_Explode.NS_Suyi01_Skill02_Explode",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_Explode6.NS_Suyi01_Skill02_Explode6",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_Off.NS_Suyi01_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_On.NS_Suyi01_Skill02_On",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Skill02_WP01.NS_Suyi01_Skill02_WP01",
       "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_SlashTrail.NS_Suyi01_SlashTrail",
-      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Trall_seq1.NS_Suyi01_Trall_seq1"
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Trall_seq1.NS_Suyi01_Trall_seq1",
+      "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_Suyi01_Xishou.NS_Suyi01_Xishou"
     },
     [160102] = {
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_001.NS_Nanzhu_Skill01_Anxi_001",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_002.NS_Nanzhu_Skill01_Anxi_002",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_BG.NS_Nanzhu_Skill02_BG",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_CameraFX_Anxi.NS_Nanzhu_Skill02_CameraFX_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_Eye_anxi.NS_Nanzhu_Skill02_Eye_anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_OutLine_Anxi.NS_Nanzhu_Skill02_OutLine_Anxi",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_Smoke.NS_Nanzhu_Skill02_Smoke",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_BlackGround.NS_BlackGround",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Body.NS_Body",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Bodyred.NS_Bodyred",
@@ -979,6 +1168,9 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Startred.NS_WeaponFX_Startred"
     },
     [160103] = {
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_001.NS_Nanzhu_Skill01_Anxi_001",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill01/NS_Nanzhu_Skill01_Anxi_002.NS_Nanzhu_Skill01_Anxi_002",
+      "/Game/Asset/Effect/Niagara/Player/Anxi/Skill02/NS_Nanzhu_Skill02_Eye_anxi.NS_Nanzhu_Skill02_Eye_anxi",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Body.NS_Body",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Bodyred.NS_Bodyred",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_nanzhu_skill01.NS_nanzhu_skill01",
@@ -997,6 +1189,71 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Outred.NS_WeaponFX_Outred",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Start.NS_WeaponFX_Start",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Startred.NS_WeaponFX_Startred"
+    },
+    [210189] = {
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill02_Ripple.NS_Shuimu_Skill02_Ripple",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_01.NS_Shuimu_skill02_sequence_01",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_03.NS_Shuimu_skill02_sequence_03",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_04.NS_Shuimu_skill02_sequence_04",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_skill02_sequence_05.NS_Shuimu_skill02_sequence_05",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu/NS_Shuimu_Skill02_Trail.NS_Shuimu_Skill02_Trail",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NDC_Shuimu01_Debuff_Spread.NDC_Shuimu01_Debuff_Spread",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NDC_Shuimu01_Skill02_Shuizhu.NDC_Shuimu01_Skill02_Shuizhu",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Armory_Shuipao.NS_Shuimu01_Armory_Shuipao",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_BlingSeq.NS_Shuimu01_BlingSeq",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Debuff_Weak.NS_Shuimu01_Debuff_Weak",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Skill02_fazhen.NS_Shuimu01_Skill02_fazhen",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Skill02_Ripple.NS_Shuimu01_Skill02_Ripple",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_01.NS_Shuimu01_skill02_sequence_01",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_02.NS_Shuimu01_skill02_sequence_02",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_03.NS_Shuimu01_skill02_sequence_03",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_04.NS_Shuimu01_skill02_sequence_04",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_05.NS_Shuimu01_skill02_sequence_05",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_skill02_sequence_06.NS_Shuimu01_skill02_sequence_06",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Skill02_Trail.NS_Shuimu01_Skill02_Trail",
+      "/Game/Asset/Effect/Niagara/Player/Shuimu01/NS_Shuimu01_Update_Seq.NS_Shuimu01_Update_Seq"
+    },
+    [210299] = {
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_01_Star01.NS_Eve_Skill01_01_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_01_Star02.NS_Eve_Skill01_01_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star01.NS_Eve_Skill01_02_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star02.NS_Eve_Skill01_02_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star03_hand.NS_Eve_Skill01_02_Star03_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_Hand.NS_Eve_Skill01_Hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CamBg.NS_Eve_Skill02_CamBg",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CamBg02.NS_Eve_Skill02_CamBg02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake.NS_Eve_Skill02_HandShake",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake02.NS_Eve_Skill02_HandShake02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake_Cam.NS_Eve_Skill02_HandShake_Cam",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Off.NS_Eve_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Touch.NS_Eve_Skill02_Touch",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Touch_Cam.NS_Eve_Skill02_Touch_Cam",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_02_Star01.NS_Eve01_Skill01_02_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_02_Star03_hand.NS_Eve01_Skill01_02_Star03_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star01.NS_Eve01_Skill01_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star02.NS_Eve01_Skill01_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star03.NS_Eve01_Skill01_Star03",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_BuffDisappear.NS_Eve01_Skill02_BuffDisappear",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_CloneBuff.NS_Eve01_Skill02_CloneBuff",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_HandShake.NS_Eve01_Skill02_HandShake",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_HandShake02.NS_Eve01_Skill02_HandShake02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Loop.NS_Eve01_Skill02_Loop",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Loop1.NS_Eve01_Skill02_Loop1",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_LoopDie.NS_Eve01_Skill02_LoopDie",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Off.NS_Eve01_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_skill02_seq.NS_Eve01_skill02_seq",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Seq01.NS_Eve01_Skill02_Seq01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Seq02.NS_Eve01_Skill02_Seq02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Start.NS_Eve01_Skill02_Start",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Sum02_Shengbian.NS_Eve01_Skill02_Sum02_Shengbian",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Sum02_ShengbianTrail.NS_Eve01_Skill02_Sum02_ShengbianTrail",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Touch.NS_Eve01_Skill02_Touch",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Summon01_die_Ball.NS_Eve01_Summon01_die_Ball",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Summon01_shenbian.NS_Eve01_Summon01_shenbian",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Summon02_Bullet.NS_Eve01_Summon02_Bullet",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Summon02_Hit.NS_Eve01_Summon02_Hit",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Summon03_Attack02_01.NS_Eve01_Summon03_Attack02_01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Summon_Disappear.NS_Eve01_Summon_Disappear"
     },
     [240199] = {
       "/Game/Asset/Effect/Niagara/Player/Baiheng/NS_Baiheng_Skill2_Fan.NS_Baiheng_Skill2_Fan",
@@ -1173,21 +1430,62 @@ local PlayerEffectsPath = {
     },
     [10101] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao01.NS_Weapon_Miao01",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Sword/NS_Sword_SZRM.NS_Sword_SZRM",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Yejin/NS_Sword_Yejin.NS_Sword_Yejin",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_01_Star01.NS_Eve_Skill01_01_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_01_Star02.NS_Eve_Skill01_01_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star01.NS_Eve_Skill01_02_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star02.NS_Eve_Skill01_02_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_02_Star03_hand.NS_Eve_Skill01_02_Star03_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill01_Hand.NS_Eve_Skill01_Hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CamBg.NS_Eve_Skill02_CamBg",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_CamBg02.NS_Eve_Skill02_CamBg02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake.NS_Eve_Skill02_HandShake",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake02.NS_Eve_Skill02_HandShake02",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_HandShake_Cam.NS_Eve_Skill02_HandShake_Cam",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Off.NS_Eve_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Touch.NS_Eve_Skill02_Touch",
+      "/Game/Asset/Effect/Niagara/Player/Eve/NS_Eve_Skill02_Touch_Cam.NS_Eve_Skill02_Touch_Cam",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_02_Star01.NS_Eve01_Skill01_02_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_02_Star03_hand.NS_Eve01_Skill01_02_Star03_hand",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star01.NS_Eve01_Skill01_Star01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star02.NS_Eve01_Skill01_Star02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill01_Star03.NS_Eve01_Skill01_Star03",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_HandShake.NS_Eve01_Skill02_HandShake",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_HandShake02.NS_Eve01_Skill02_HandShake02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Off.NS_Eve01_Skill02_Off",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_skill02_seq.NS_Eve01_skill02_seq",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Seq01.NS_Eve01_Skill02_Seq01",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Seq02.NS_Eve01_Skill02_Seq02",
+      "/Game/Asset/Effect/Niagara/Player/Eve01/NS_Eve01_Skill02_Touch.NS_Eve01_Skill02_Touch",
       "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_HeavyAttack_Slash01.NS_Katana_HeavyAttack_Slash01",
       "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_HeavyAttack_Slash02.NS_Katana_HeavyAttack_Slash02"
     },
     [10103] = {
       "/Game/Asset/Effect/Niagara/Weapon/Sword/NS_SwordMod02_03.NS_SwordMod02_03"
     },
+    [10107] = {
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Body.NS_Body",
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Nvzhu_PostEye_02.NS_Nvzhu_PostEye_02",
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_nvzhu_Prism.NS_nvzhu_Prism",
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Nvzhu_Skill02_LingYu.NS_Nvzhu_Skill02_LingYu",
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Out.NS_WeaponFX_Out",
+      "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_WeaponFX_Start.NS_WeaponFX_Start"
+    },
     [10201] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bixiao/NS_Polearm_Bixiao.NS_Polearm_Bixiao",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao04.NS_Weapon_Miao04",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Huanyu/NS_Polearm_Huanyu01.NS_Polearm_Huanyu01",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Tlwq.NS_Polearm_Tlwq",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Xyxy.NS_Polearm_Xyxy"
     },
     [10202] = {
       "/Game/Asset/Effect/Niagara/Weapon/Polearm/NS_Polearm_HeavyAttack_Bullet.NS_Polearm_HeavyAttack_Bullet",
       "/Game/Asset/Effect/Niagara/Weapon/Polearm/NS_Polearm_Mod_01.NS_Polearm_Mod_01"
+    },
+    [10299] = {
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Linghua_Hit.NS_Linghua_Hit",
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Polearm_Linghua.NS_Polearm_Linghua"
     },
     [10301] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Claymore/NS_Claymore_DHY.NS_Claymore_DHY",
@@ -1206,6 +1504,9 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Weapon/Claymore/NS_Claymore_Mod_03.NS_Claymore_Mod_03",
       "/Game/Asset/Effect/Niagara/Weapon/Claymore/NS_Claymore_Mod_05.NS_Claymore_Mod_05"
     },
+    [10399] = {
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Claymore_Linghua.NS_Claymore_Linghua"
+    },
     [10401] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao04.NS_Weapon_Miao04",
       "/Game/Asset/Effect/Niagara/Player/Nvzhu/NS_Body.NS_Body",
@@ -1217,13 +1518,20 @@ local PlayerEffectsPath = {
     },
     [10501] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bixiao/NS_Swordwhip_Bixiao.NS_Swordwhip_Bixiao",
-      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao03.NS_Weapon_Miao03"
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao03.NS_Weapon_Miao03",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Huanyu/NS_Swordwhip_Huanyu01.NS_Swordwhip_Huanyu01",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Huanyu/NS_Swordwhip_Huanyu02.NS_Swordwhip_Huanyu02"
     },
     [10502] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Swordwhip/NS_Swordwhip_Zeshi.NS_Swordwhip_Zeshi"
     },
     [10601] = {
-      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao03.NS_Weapon_Miao03"
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bixiao/NS_Katana_Bixiao.NS_Katana_Bixiao",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao03.NS_Weapon_Miao03",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Huanyu/NS_Katana_Huanyu01.NS_Katana_Huanyu01",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Huanyu/NS_Katana_Huanyu02.NS_Katana_Huanyu02",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Katana/NS_Katana_Youlan_001.NS_Katana_Youlan_001",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Katana/NS_Katana_Youlan_002.NS_Katana_Youlan_002"
     },
     [10602] = {
       "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_Flash02.NS_Katana_Mod01_Flash02"
@@ -1239,20 +1547,28 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Weapon/Pistol/Pistol_Wuxu/NS_Wuxu_OpenFire_02.NS_Wuxu_OpenFire_02"
     },
     [20104] = {
-      "/Game/Asset/Effect/Niagara/Player/Zhiliu/Zhiliu_Skill02_2/NS_Zhiliu_Skill02_02_JG02.NS_Zhiliu_Skill02_02_JG02"
+      "/Game/Asset/Effect/Niagara/Weapon/Pistol/Pistol_Leishen/NS_Leishen_Bullet01.NS_Leishen_Bullet01",
+      "/Game/Asset/Effect/Niagara/Weapon/Pistol/Pistol_Leishen/NS_Leishen_Explode01.NS_Leishen_Explode01",
+      "/Game/Asset/Effect/Niagara/Weapon/Pistol/Pistol_Leishen/NS_Leishen_Explode02.NS_Leishen_Explode02",
+      "/Game/Asset/Effect/Niagara/Weapon/Pistol/Pistol_Leishen/NS_Leishen_Openfire.NS_Leishen_Openfire"
     },
     [20201] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao01.NS_Weapon_Miao01",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Crossbow/NS_Crossbow_weirong.NS_Crossbow_weirong",
       "/Game/Asset/Effect/Niagara/Weapon/Crossbow/NS_Chixing_Bullet.NS_Chixing_Bullet"
     },
     [20203] = {
       "/Game/Asset/Effect/Niagara/Weapon/Crossbow/Lanse/NS_Lanse_Bullet.NS_Lanse_Bullet"
     },
     [20207] = {
-      "/Game/Asset/Effect/Niagara/Weapon/Crossbow/NS_Leyuan_Bullet.NS_Leyuan_Bullet"
+      "/Game/Asset/Effect/Niagara/Weapon/Crossbow/Leyuan/NS_Leyuan_Bullet.NS_Leyuan_Bullet"
+    },
+    [20298] = {
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Crossbow_Linghua.NS_Crossbow_Linghua"
     },
     [20301] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao01.NS_Weapon_Miao01",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Yejin/NS_Cannon_Yejin.NS_Cannon_Yejin",
       "/Game/Asset/Effect/Niagara/Weapon/Cannon/NS_Chixing_Bullet.NS_Chixing_Bullet",
       "/Game/Asset/Effect/Niagara/Weapon/Cannon/NS_Chixing_Explode.NS_Chixing_Explode"
     },
@@ -1277,6 +1593,7 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Weapon/Cannon/yinbai/NS_Yinbai_Bullet.NS_Yinbai_Bullet"
     },
     [20401] = {
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bixiao/NS_Shotgun_Bixiao.NS_Shotgun_Bixiao",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao01.NS_Weapon_Miao01",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Machinegun/NS_weapon_dalang_01.NS_weapon_dalang_01",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/ShotGun/NS_Shotgun_Huoli.NS_Shotgun_Huoli",
@@ -1303,11 +1620,12 @@ local PlayerEffectsPath = {
     },
     [20407] = {
       "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Guchu/NS_Guchu_Bullet.NS_Guchu_Bullet",
-      "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Guchu/NS_Guchu_Hit.NS_Guchu_Hit"
+      "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Guchu/NS_Guchu_Hit_Batch.NS_Guchu_Hit_Batch"
     },
     [20501] = {
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bixiao/NS_Machinegun_Bixiao.NS_Machinegun_Bixiao",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao01.NS_Weapon_Miao01",
+      "/Game/Asset/Effect/Niagara/Weapon/Claymore/NS_Machinegun_Huangtong_001.NS_Machinegun_Huangtong_001",
       "/Game/Asset/Effect/Niagara/Weapon/Smg/Common/NS_Smg_Common_Bullet.NS_Smg_Common_Bullet",
       "/Game/Asset/Effect/Niagara/Weapon/Smg/Common/NS_Smg_Common_Shoot.NS_Smg_Common_Shoot"
     },
@@ -1352,17 +1670,26 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Ruohua/NS_Ruohua_OpenFire.NS_Ruohua_OpenFire"
     },
     [20511] = {
-      "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Baopo/NS_Baopo_Explode.NS_Baopo_Explode",
-      "/Game/Asset/Effect/Niagara/Weapon/Shotgun/Shengcai/NS_Shengcai_Bullet.NS_Shengcai_Bullet"
+      "/Game/Asset/Effect/Niagara/Weapon/Machinegun/Bomu/NS_Machinegun_Bomu_Bullet.NS_Machinegun_Bomu_Bullet",
+      "/Game/Asset/Effect/Niagara/Weapon/Machinegun/Bomu/NS_Machinegun_Bomu_Explode.NS_Machinegun_Bomu_Explode",
+      "/Game/Asset/Effect/Niagara/Weapon/Machinegun/Bomu/NS_Machinegun_Bomu_Fash.NS_Machinegun_Bomu_Fash",
+      "/Game/Asset/Effect/Niagara/Weapon/Machinegun/Bomu/NS_Machinegun_Bomu_Shoot.NS_Machinegun_Bomu_Shoot"
     },
     [20512] = {
       "/Game/Asset/Effect/Niagara/Weapon/Machinegun/NS_weapon_Beizhong_01.NS_weapon_Beizhong_01",
       "/Game/Asset/Effect/Niagara/Weapon/Machinegun/NS_weapon_Beizhong_02.NS_weapon_Beizhong_02",
       "/Game/Asset/Effect/Niagara/Weapon/Machinegun/NS_weapon_poxiao_shouji_01_Batch.NS_weapon_poxiao_shouji_01_Batch"
     },
+    [20599] = {
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Linghua_Bullet.NS_Linghua_Bullet",
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Linghua_bz.NS_Linghua_bz",
+      "/Game/Asset/Effect/Niagara/Weapon/LingHua/NS_Machinegun_Linghua.NS_Machinegun_Linghua"
+    },
     [20601] = {
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bixiao/NS_Bow_BixiaoA.NS_Bow_BixiaoA",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Bow/Ns_Bow01_Huanri.Ns_Bow01_Huanri",
       "/Game/Asset/Effect/Niagara/Costume/09Weapon/Common/NS_Weapon_Miao02.NS_Weapon_Miao02",
+      "/Game/Asset/Effect/Niagara/Costume/09Weapon/Yejin/NS_Bow_Yejin.NS_Bow_Yejin",
       "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Bullet_01.NS_Bow_Bullet_01",
       "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Bullet_02.NS_Bow_Bullet_02",
       "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Bullet_03.NS_Bow_Bullet_03",
@@ -1380,7 +1707,11 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_ZimiaoSign.NS_Bow_ZimiaoSign"
     },
     [20605] = {
-      "/Game/Asset/Effect/Niagara/Boss/Jushizhe/NS_jushi_skill05_hit01.NS_jushi_skill05_hit01"
+      "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Maojiang_Bullet01.NS_Bow_Maojiang_Bullet01",
+      "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Maojiang_Bullet02.NS_Bow_Maojiang_Bullet02",
+      "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Maojiang_Exp.NS_Bow_Maojiang_Exp",
+      "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Maojiang_Shoot01_Batch.NS_Bow_Maojiang_Shoot01_Batch",
+      "/Game/Asset/Effect/Niagara/Weapon/Bow/NS_Bow_Maojiang_Shoot02.NS_Bow_Maojiang_Shoot02"
     },
     [110301] = {
       "/Game/Asset/Effect/Niagara/Player/Heitao/NS_Heitao_Condemned_Wind.NS_Heitao_Condemned_Wind",
@@ -1552,10 +1883,31 @@ local PlayerEffectsPath = {
       "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Zombie_Blue.NS_BulletJump_Zombie_Blue"
     },
     [21007] = {
-      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Zombie_Purple.NS_BulletJump_Zombie_Purple"
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Zombie_Yellow.NS_BulletJump_Zombie_Yellow"
     },
     [21008] = {
       "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Zombie_Yellow.NS_BulletJump_Zombie_Yellow"
+    },
+    [21009] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Zombie_Purple.NS_BulletJump_Zombie_Purple"
+    },
+    [21010] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Hellflower.NS_BulletJump_Hellflower"
+    },
+    [21011] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_XiuNv_01.NS_BulletJump_XiuNv_01"
+    },
+    [21012] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_XiuNv_02.NS_BulletJump_XiuNv_02"
+    },
+    [21013] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_Bride.NS_BulletJump_Bride"
+    },
+    [21014] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_YiWei.NS_BulletJump_YiWei"
+    },
+    [21015] = {
+      "/Game/Asset/Effect/Niagara/Costume/11LXFY/NS_BulletJump_FaLuXi.NS_BulletJump_FaLuXi"
     },
     [70001] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Hudie_001.NS_JY_Hudie_001"
@@ -1566,8 +1918,14 @@ local PlayerEffectsPath = {
     [70003] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_GoldenDragon_001.NS_JY_GoldenDragon_001"
     },
-    [70004] = {
-      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Xiangsu_001_B.NS_JY_Xiangsu_001_B"
+    [70005] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_bianhua_001_blue.NS_JY_bianhua_001_blue"
+    },
+    [70006] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_meimo_001_pink.NS_JY_meimo_001_pink"
+    },
+    [70007] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Bing_001_B.NS_JY_Bing_001_B"
     },
     [70011] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Hudie_001_R.NS_JY_Hudie_001_R"
@@ -1596,14 +1954,41 @@ local PlayerEffectsPath = {
     [70033] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_BlueDragon_001.NS_JY_BlueDragon_001"
     },
-    [70041] = {
+    [70034] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Xiangsu_001_G.NS_JY_Xiangsu_001_G"
     },
-    [70042] = {
+    [70035] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Xiangsu_001_B.NS_JY_Xiangsu_001_B"
+    },
+    [70036] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Xiangsu_001_P.NS_JY_Xiangsu_001_P"
     },
-    [70043] = {
+    [70037] = {
       "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Xiangsu_001_R.NS_JY_Xiangsu_001_R"
+    },
+    [70051] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_bianhua_001_pink.NS_JY_bianhua_001_pink"
+    },
+    [70052] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_bianhua_001_red.NS_JY_bianhua_001_red"
+    },
+    [70053] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_bianhua_001_yellow.NS_JY_bianhua_001_yellow"
+    },
+    [70061] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_meimo_001_yellow.NS_JY_meimo_001_yellow"
+    },
+    [70062] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_meimo_001_blue.NS_JY_meimo_001_blue"
+    },
+    [70071] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Bing_001_P.NS_JY_Bing_001_P"
+    },
+    [70072] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Bing_001_R.NS_JY_Bing_001_R"
+    },
+    [70073] = {
+      "/Game/Asset/Effect/Niagara/Costume/07JY/NS_JY_Bing_001_Y.NS_JY_Bing_001_Y"
     },
     [80001] = {
       "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_001.NS_HW_001"
@@ -1655,6 +2040,48 @@ local PlayerEffectsPath = {
     },
     [80043] = {
       "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_red.NS_suyi_HW_red"
+    },
+    [80044] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_pink.NS_suyi_HW_pink"
+    },
+    [80045] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_red.NS_suyi_HW_red"
+    },
+    [80046] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_Cyan.NS_suyi_HW_Cyan"
+    },
+    [80047] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_suyi_HW_blue.NS_suyi_HW_blue"
+    },
+    [80055] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_YiWei_HW_Purple.NS_YiWei_HW_Purple"
+    },
+    [80056] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_YiWei_HW_Yellow.NS_YiWei_HW_Yellow"
+    },
+    [80057] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_YiWei_HW_Red.NS_YiWei_HW_Red"
+    },
+    [80058] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_YiWei_HW_001.NS_YiWei_HW_001"
+    },
+    [80059] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_DollHWProMax.NS_DollHWProMax"
+    },
+    [80060] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_Falu_001.NS_HW_Falu_001"
+    },
+    [80061] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_Falu_001.NS_HW_Falu_001"
+    },
+    [80062] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_Falu_001.NS_HW_Falu_001"
+    },
+    [80063] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_HW_Falu_001.NS_HW_Falu_001"
+    },
+    [80064] = {
+      "/Game/Asset/Effect/Niagara/Costume/08HW/NS_DollHW_001.NS_DollHW_001"
     }
   },
   AccessoryGroups = {
@@ -1662,7 +2089,11 @@ local PlayerEffectsPath = {
     [11002] = "FallAttack_Costume_01",
     [11003] = "FallAttack_Costume_02",
     [11004] = "FallAttack_Costume_03",
-    [11005] = "FallAttack_Costume_04"
+    [11005] = "FallAttack_Costume_04",
+    [11006] = "FallAttack_Costume_04",
+    [11007] = "FallAttack_Costume_05",
+    [11008] = "FallAttack_Costume_06",
+    [11009] = "FallAttack_Costume_07"
   }
 }
 return PlayerEffectsPath

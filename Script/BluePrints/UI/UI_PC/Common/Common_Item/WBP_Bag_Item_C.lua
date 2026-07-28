@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
 local M = Class({
@@ -41,13 +42,7 @@ end
 function M:InitCompView()
   M.Super.InitCompView(self)
   if self.ItemType == "IronTicket" or self.Content.bIronExpTicket then
-    if self.Content.bShowNotHaveStyle then
-      self:SetShadow(true)
-      self:SetName("UI_BattlePass_PetHasnotGot")
-    else
-      self:CheckAndSetVisibility(self.CountWidget, UIConst.VisibilityOp.Collapsed)
-      self:SetLevel(self.Content.Level)
-    end
+    self:ApplyIronTicketVisual()
     self:PlayFadeInAnim()
     return
   end
@@ -91,6 +86,73 @@ function M:PlayFadeInAnim()
   end
 end
 
+function M:ApplyIronTicketVisual()
+  local c = self.Content
+  self:CheckAndSetVisibility(self.CountWidget, UIConst.VisibilityOp.Collapsed)
+  self:SetItemMinus(false)
+  if c.StateTagInfo and c.StateTagInfo.Name == "InSelectList" then
+    self:SetItemConflict(false)
+    self:SetShadow(false)
+    self:SetName(nil)
+    self:SetLevel(c.Level)
+    self:_BindIronDecomposeMinus(self.CancelSelectClick)
+    return
+  end
+  if c.bShowNotHaveStyle then
+    self:SetItemConflict(false)
+    self:SetShadow(true)
+    self:SetName("UI_BattlePass_PetHasnotGot")
+  elseif c.bDecomposeMode and c.bDecomposeLowLevel then
+    self:SetShadow(true)
+    self:SetName(nil)
+    self.ShowWarningText = GText("UI_IronTicket_CannotDecompose")
+    self:SetItemConflict(true)
+    self:SetLevel(c.Level)
+  elseif c.bDecomposeMode then
+    self:SetItemConflict(false)
+    self:SetShadow(false)
+    self:SetName(nil)
+    self:SetLevel(c.bTicketMaxLevel and "-" or c.Level)
+    if c.IsSelect then
+      self:_BindIronDecomposeMinus(self.OnIronDecomposeMinusClick)
+    end
+  elseif c.bTicketMaxLevel then
+    self:SetShadow(false)
+    self:SetName(nil)
+    self.ShowWarningText = GText("UI_IronTicket_MaxTicket")
+    self:SetItemConflict(true)
+    self:SetLevel("-")
+  else
+    self:SetItemConflict(false)
+    self:SetShadow(false)
+    self:SetName(nil)
+    self:SetLevel(c.Level)
+  end
+end
+
+function M:SetIronDecomposeState(bInDecompose, bLowLevel)
+  if self.ItemType ~= "IronTicket" and not self.Content.bIronExpTicket then
+    return
+  end
+  self.Content.bDecomposeMode = bInDecompose or nil
+  self.Content.bDecomposeLowLevel = bInDecompose and bLowLevel or nil
+  self:ApplyIronTicketVisual()
+end
+
+function M:_BindIronDecomposeMinus(clickCallback)
+  self:SetItemMinus(true)
+  if self.MinusWidget and IsValid(self.MinusWidget.Btn_Minus) then
+    self.MinusWidget.Btn_Minus:UnBindEventOnClicked(self, clickCallback)
+    self.MinusWidget.Btn_Minus:BindEventOnClicked(self, clickCallback)
+  end
+end
+
+function M:OnIronDecomposeMinusClick()
+  if self.Content and self.Content.ParentWidget and self.Content.ParentWidget.OnDecomposeTicketClicked then
+    self.Content.ParentWidget:OnDecomposeTicketClicked(self.Content, true)
+  end
+end
+
 function M:IsInAnimationPlaying()
   if self.Content.AnimNameWithCreate and self[self.Content.AnimNameWithCreate] then
     return self:IsAnimationPlaying(self[self.Content.AnimNameWithCreate])
@@ -126,6 +188,9 @@ function M:OnPressed()
     return
   end
   if not self:IsInSaleOrResolveState() then
+    return
+  end
+  if self.ItemType == "IronTicket" then
     return
   end
   if self.Content.Price < 0 then
@@ -180,6 +245,9 @@ function M:OnReleased()
   AudioManager(self):PlayItemSound(self, self.Id, "Click", self.ItemType)
   if not self:IsInSaleOrResolveState() then
     self:TriggerClickCallback(0)
+    return
+  end
+  if self.ItemType == "IronTicket" then
     return
   end
   if self.Content.Price < 0 then

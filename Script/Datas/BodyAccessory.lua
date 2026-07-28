@@ -472,8 +472,8 @@ return ReadOnly("BodyAccessory", {
       "Lilikou_Story_lyre_Small_End",
       "Lilikou_Story_lyre_Small_Idle"
     },
-    AnimPath = "/Game/Asset/Char/Player/Char034_Lilikou/Animation/Summon/Sequence/",
+    AnimPath = "/Game/Asset/Char/Npc/NPC_Lilikou/Animation/Summon/Sequence/",
     AttachRule = T.RT_20,
-    ModelPath = "/Game/Asset/Char/Player/Char034_Lilikou/Mesh/Lilikou_Part02_SM.Lilikou_Part02_SM"
+    ModelPath = "/Game/Asset/Char/Npc/NPC_Lilikou/Mesh/Lilikou_Part02_SM.Lilikou_Part02_SM"
   }
 })

@@ -40,7 +40,7 @@ end
 
 function BP_CombatPropBase_C:CommonInitInfo(Info)
   self:SetActiveType()
-  self:AddBuffManager_Hotfix473015()
+  self:AddBuffManager()
   if self.ActiveType ~= "" and self.ActiveType ~= "PlayerAttack" then
     self.IsActive = false
     self.InitHandle = self:AddTimer(0.2, self.InitInvincible, false)

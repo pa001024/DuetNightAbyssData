@@ -738,7 +738,7 @@ function M:OnSkillTab1Clicked()
   self.WidgetSwitcher_Page:SetActiveWidgetIndex(0)
   self:UpdateBtnCheckVisibility()
   if self.IsNexLevelInfoShowed then
-    self:ShowNextLevelInfo(not self.self.IsNexLevelInfoShowed)
+    self:ShowNextLevelInfo(not self.IsNexLevelInfoShowed)
   end
 end
 

@@ -25,6 +25,9 @@ return ReadOnly("DataSetIgnore", {
     ID = "DeadDissolveTime"
   },
   HitMoveDis = {ID = "HitMoveDis"},
+  Hook_LandHeavy = {
+    ID = "Hook_LandHeavy"
+  },
   IsDestructPart = {
     ID = "IsDestructPart"
   },

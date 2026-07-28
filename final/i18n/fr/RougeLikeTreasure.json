@@ -2,7 +2,7 @@
   {
     "id": 10101,
     "name": "Flamme éternelle de l’artisan",
-    "desc": "Octroie <Highlight>@1</> tentatives d’actualisation supplémentaires. La première actualisation ne consomme pas de [Braises].",
+    "desc": "Octroie <Highlight>@1</> tentative d’actualisation supplémentaire. La première actualisation ne consomme pas de [Braises].",
     "simple_desc": "Octroie une [Actualisation] supplémentaire. La première utilisation ne consomme pas de Braises.",
     "ip_desc": "La lueur des bougies faisait naître des sourires sur les visages des enfants, dissipait le froid et apportait l’espoir.\nMais les flammes du monde mortel finissent toujours par s’éteindre ; alors, encore et encore, elle rallumait de nouvelles bougies.\nAu plus profond du Lac Sacré, l’artisan de Lucimèches forgea enfin une flamme qui ne s’éteindrait jamais.\nPourtant, ceux qui attendaient jadis sa lumière avaient depuis longtemps disparu.",
     "treasure_group": 1,
@@ -1136,7 +1136,7 @@
   },
   {
     "id": 10306,
-    "name": "Grâce du Seigneur \"Générosité\"",
+    "name": "Grâce du Seigneur « Générosité »",
     "desc": "Augmente les dégâts infligés de <Highlight>$1</> pour chaque Artéfact possédé.",
     "simple_desc": "Plus vous possédez d’Artéfacts, plus les dégâts infligés augmentent.",
     "ip_desc": "Les richesses, bien sûr, sont meilleures en abondance... mais les amasser sans fin, quelle simplicité ennuyeuse. Qu’elles prennent des formes plus nobles ; que le monde m’en soit reconnaissant, qu’il chante mes louanges pour les bénédictions de ma générosité. Recevez ce présent — il ajoutera une nouvelle ligne à mon mérite.",
@@ -1731,7 +1731,7 @@
   },
   {
     "id": 14201,
-    "name": "Épée rouillée du chevalier pénitent",
+    "name": "Lame rouillée du chevalier pénitent",
     "desc": "Augmente les dégâts infligés de <Highlight>$2</> au prix d’une réduction de <Highlight>$1</> des dégâts des armes de mêlée.",
     "simple_desc": "Augmente les dégâts infligés au prix de dégâts réduits pour les armes de mêlée.",
     "ip_desc": "Les adultes murmuraient que sa sœur avait offensé les dieux dans le Lac Sacré, et qu’ils lui avaient arraché une part de son âme en châtiment.\nNon. Sa sœur était droite et pieuse. Elle n’avait rien offensé : elle avait seulement égaré son âme, là-bas. Si personne n’y croit... alors je le prouverai.\nJ’entrerai dans l’Abysse et je ramènerai l’âme que ma sœur y a perdue.",
@@ -1757,7 +1757,7 @@
   },
   {
     "id": 14202,
-    "name": "Lance usée du chevalier pénitent",
+    "name": "Pistolet usé du chevalier pénitent",
     "desc": "Augmente les dégâts infligés de <Highlight>$2</> au prix d’une réduction de <Highlight>$1</> des dégâts des armes à distance.",
     "simple_desc": "Augmente les dégâts infligés au prix de dégâts réduits pour les armes à distance.",
     "ip_desc": "Ma sœur... est-ce toi ? Pourquoi es-tu devenue ainsi ? Pourquoi lèves-tu ton épée contre moi ?\n— « Mensonge... mensonge... » répète l’ombre noire d’une voix stridente.\n« Il n’existe pas de justice, seulement des mensonges. »\nAlors le souvenir lui revient : sa sœur lui avait un jour confié, en secret, vouloir quitter l’ordre des chevaliers... pour devenir une personne ordinaire.",

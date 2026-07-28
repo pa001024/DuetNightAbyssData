@@ -106,6 +106,7 @@ function GameModeRegionMgr:HandleLevelDeliverBlackCurtainEnd()
     PlayerCharacter:DisablePlayerInputInDeliver(false)
   end
   EventManager:FireEvent(EventID.OnLevelDeliverBlackCurtainEnd, PlayerCharacter.Eid)
+  self:PrepareLevelDelivery(nil, nil)
 end
 
 function GameModeRegionMgr:CloseCurUI()

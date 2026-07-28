@@ -528,6 +528,34 @@ T.RT_211 = {
   [9] = T.RT_183,
   [10] = T.RT_207
 }
+T.RT_212 = {
+  [1] = T.RT_186,
+  [2] = T.RT_187,
+  [3] = T.RT_188,
+  [4] = T.RT_189,
+  [5] = T.RT_190,
+  [6] = T.RT_191,
+  [7] = T.RT_192,
+  [8] = T.RT_193,
+  [9] = T.RT_194,
+  [10] = T.RT_207
+}
+T.RT_213 = {
+  [1] = T.RT_153,
+  [2] = T.RT_154,
+  [3] = T.RT_155,
+  [4] = T.RT_156,
+  [5] = T.RT_157,
+  [6] = T.RT_158,
+  [7] = T.RT_164,
+  [8] = T.RT_165,
+  [9] = T.RT_166,
+  [10] = T.RT_159,
+  [11] = T.RT_160,
+  [12] = T.RT_161,
+  [13] = T.RT_162,
+  [14] = T.RT_163
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -3181,18 +3209,7 @@ return ReadOnly("RandomCreator", {
     Count = 3,
     NotOverLap = 1,
     RandomId = 9050701,
-    RandomInfos = {
-      [1] = T.RT_186,
-      [2] = T.RT_187,
-      [3] = T.RT_188,
-      [4] = T.RT_189,
-      [5] = T.RT_190,
-      [6] = T.RT_191,
-      [7] = T.RT_192,
-      [8] = T.RT_193,
-      [9] = T.RT_194,
-      [10] = T.RT_207
-    },
+    RandomInfos = T.RT_212,
     RegionDataType = 6,
     RuleType = 1,
     UnitType = "Pet"
@@ -3201,22 +3218,7 @@ return ReadOnly("RandomCreator", {
     Count = 2,
     NotOverLap = 1,
     RandomId = 9060101,
-    RandomInfos = {
-      [1] = T.RT_153,
-      [2] = T.RT_154,
-      [3] = T.RT_155,
-      [4] = T.RT_156,
-      [5] = T.RT_157,
-      [6] = T.RT_158,
-      [7] = T.RT_164,
-      [8] = T.RT_165,
-      [9] = T.RT_166,
-      [10] = T.RT_159,
-      [11] = T.RT_160,
-      [12] = T.RT_161,
-      [13] = T.RT_162,
-      [14] = T.RT_163
-    },
+    RandomInfos = T.RT_213,
     RegionDataType = 6,
     RuleType = 1,
     UnitType = "Pet"
@@ -3323,6 +3325,24 @@ return ReadOnly("RandomCreator", {
     NotOverLap = 1,
     RandomId = 9060106,
     RandomInfos = T.RT_167,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9070101] = {
+    Count = 2,
+    NotOverLap = 1,
+    RandomId = 9070101,
+    RandomInfos = T.RT_213,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9070102] = {
+    Count = 2,
+    NotOverLap = 1,
+    RandomId = 9070102,
+    RandomInfos = T.RT_212,
     RegionDataType = 6,
     RuleType = 1,
     UnitType = "Pet"

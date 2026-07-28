@@ -172,8 +172,21 @@ function M:Construct()
   self.Btn_Close.OnClicked:Add(self, self.HandleOnCloseButtonClicked)
 end
 
+function M:FilterSortOpen(FilterSort)
+  FilterSort.IsInFocusPath = true
+  FilterSort:UpdateGamePadFocus()
+  UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), FilterSort)
+end
+
+function M:FilterSortClose(FilterSort)
+  UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self)
+end
+
 function M:Init(Parent)
-  self.FilterSort:Init(Parent, self.SortRules, self.SortType)
+  self.FilterSort:Init(self, self.SortRules, self.SortType, {
+    OnListOpened = self.FilterSortOpen,
+    OnListClosed = self.FilterSortClose
+  })
   self.FilterSort:BindEventOnSortTypeChanged(self, self.HandleOnSortTypeChanged)
 end
 

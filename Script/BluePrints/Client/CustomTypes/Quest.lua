@@ -4,7 +4,8 @@ local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
 local CommonConst = require("CommonConst")
-local Region = require("BluePrints.Client.CustomTypes.Region")
+local QuestUtils = require("Utils.QuestUtils")
+local QuestSuit = require("BluePrints.Client.CustomTypes.QuestSuit")
 local SpecialQuestData = Class("SpecialQuestData", CustomTypes.CustomAttr)
 SpecialQuestData.__Props__ = {
   SpecialQuestId = prop.prop("Int", "client save"),
@@ -293,6 +294,8 @@ QuestChain.__Props__ = {
   QuestCoordinate = prop.prop("Coordinate", "client save"),
   QuestSaveDatas = prop.prop("QuestDataDict", "client save"),
   IsAssumeFinish = prop.prop("Bool", "client save", false),
+  IsAdvanceUnlock = prop.prop("Bool", "client save", false),
+  Suit = prop.prop("QuestSuit.QuestChainSuit", "client save"),
   QuestChainType = prop.getter("Data", "QuestChainType"),
   QuestChainName = prop.getter("Data", "QuestChainName"),
   QuestChainDescription = prop.getter("Data", "QuestChainDescription"),
@@ -306,7 +309,6 @@ QuestChain.__Props__ = {
   IsDefaultTrack = prop.getter("Data", "IsDefaultTrack"),
   LoginPlayerTransform = prop.getter("Data", "LoginPlayerTransform"),
   QuestReward = prop.getter("Data", "QuestReward"),
-  PreStoryPath = prop.getter("Data", "PreStoryPath"),
   IsShowWindow = prop.getter("Data", "IsShowWindow"),
   ActivelyAccept = prop.getter("Data", "ActivelyAccept")
 }
@@ -336,6 +338,10 @@ function QuestChain:SetAssumeFinish(IsAssumeFinish)
   end
   self.IsAssumeFinish = IsAssumeFinish
   return true
+end
+
+function QuestChain:SetAdvanceUnlock()
+  self.IsAdvanceUnlock = true
 end
 
 function QuestChain:AddCompleteQuestId(QuestId)
@@ -372,6 +378,14 @@ function QuestChain:CheckQuestIdComplete(QuestId)
     return true
   end
   return false
+end
+
+function QuestChain:IsRunning()
+  return self:IsDoing() or self:IsPreDoing()
+end
+
+function QuestChain:IsPreDoing()
+  return self:IsUnlock() and self.DoingQuestId > 0 and QuestUtils:IsPreQuest(self.DoingQuestId)
 end
 
 function QuestChain:IsLock()
@@ -452,6 +466,30 @@ function QuestChain:ForceToStop()
   self.State = CommonConst.QuestChainState.stop
 end
 
+function QuestChain:DumpBacktrackSnapshot(Snapshot)
+  Snapshot = Snapshot or {}
+  Snapshot.QuestChainId = self.QuestChainId
+  Snapshot.State = self.State
+  Snapshot.DoingQuestId = self.DoingQuestId
+  Snapshot.CompleteQuestId = self.CompleteQuestId:save_dump(self.CompleteQuestId) or {}
+  Snapshot.QuestPicks = self.QuestPicks:save_dump(self.QuestPicks) or {}
+  Snapshot.QuestCoordinate = self.QuestCoordinate:save_dump(self.QuestCoordinate) or {}
+  Snapshot.QuestSaveDatas = self.QuestSaveDatas:save_dump(self.QuestSaveDatas) or {}
+  Snapshot.Suit = self.Suit:save_dump(self.Suit) or {}
+  return Snapshot
+end
+
+function QuestChain:LoadBacktrackSnapshot(Snapshot)
+  Snapshot = Snapshot or {}
+  self.State = Snapshot.State
+  self.DoingQuestId = Snapshot.DoingQuestId
+  self.CompleteQuestId = self.CompleteQuestId:load(Snapshot.CompleteQuestId or {})
+  self.QuestPicks = self.QuestPicks:load(Snapshot.QuestPicks or {})
+  self.QuestCoordinate = self.QuestCoordinate:load(Snapshot.QuestCoordinate or {})
+  self.QuestSaveDatas = self.QuestSaveDatas:load(Snapshot.QuestSaveDatas or {})
+  self.Suit = self.Suit:load(Snapshot.Suit or {})
+end
+
 FormatProperties(QuestChain)
 local QuestChains = Class("QuestChains", CustomTypes.CustomDict)
 QuestChains.KeyType = BaseTypes.Int
@@ -509,6 +547,22 @@ end
 
 function QuestChapter:Data()
   return DataMgr.QuestMutualExclusion[self.QuestChapterId]
+end
+
+function QuestChapter:IsNoneStart()
+  return self.State == CommonConst.QuestChapterState.NoneStart
+end
+
+function QuestChapter:IsLock()
+  return self.State == CommonConst.QuestChapterState.Lock
+end
+
+function QuestChapter:IsDoing()
+  return self.State == CommonConst.QuestChapterState.Doing
+end
+
+function QuestChapter:IsFinish()
+  return self.State == CommonConst.QuestChapterState.Finish
 end
 
 FormatProperties(QuestChapter)

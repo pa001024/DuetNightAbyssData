@@ -20,7 +20,11 @@ function M:Start()
     return
   end
   self.__driver = nil
-  if IsValid(self:GetSequenceByGender()) then
+  local TalkTask = self:TryGetTalkTask()
+  local TalkTaskData = TalkTask and TalkTask.TalkTaskData
+  local BaseType = TalkTaskData and TalkTaskData.BasicTalkType
+  local bCanUseSeq = "FixSimple" == BaseType or "Cinematic" == BaseType
+  if bCanUseSeq and IsValid(self:GetSequenceByGender()) then
     self.__driver = SequenceDriver.New(self)
     if not self.__driver:Start() then
       self.__driver = nil

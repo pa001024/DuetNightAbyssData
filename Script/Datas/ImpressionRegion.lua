@@ -25,7 +25,15 @@ return ReadOnly("ImpressionRegion", {
       1060,
       1061,
       1062,
-      1063
+      1063,
+      1070,
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1077,
+      1078
     },
     RegionName = "ImpressionRegionName_1011",
     RegionPointId = 2612,

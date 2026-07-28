@@ -19,10 +19,10 @@ T.RT_6 = {
   [1] = "DailyDetail"
 }
 T.RT_7 = {
-  [1] = "Dialog_Input_new"
+  [1] = "Item_Tip2"
 }
 T.RT_8 = {
-  [1] = "Item_Tip2"
+  [1] = "Dialog_Input_new"
 }
 T.RT_9 = {
   [1] = "WBP_Bag_OptionalAvatar_Content"
@@ -43,14 +43,18 @@ T.RT_14 = {
   [1] = "Shop_BuySinglePart"
 }
 T.RT_15 = {
+  [1] = "Item_Currency",
+  [2] = "Item_Tip3"
+}
+T.RT_16 = {
   [1] = "Item_Tip1",
   [2] = "Item_Currency"
 }
-T.RT_16 = {
+T.RT_17 = {
   [1] = "Short_Text",
   [2] = "WBP_Task_Dialog_Ticket_Content"
 }
-T.RT_17 = {
+T.RT_18 = {
   [1] = "Item_Tip3",
   [2] = "Item_Tip2",
   [3] = "Item_Tip1"
@@ -99,6 +103,18 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "Activity_TotalRecharge_DetailHistoryContent",
     UseTabTitle = true
+  },
+  Activity_Weapon_DescDialog = {
+    ShowContent = {
+      [1] = "WBP_Activity_Weapon_DescDialog"
+    },
+    StyleId = "Activity_Weapon_DescDialog"
+  },
+  Activity_Weapon_TeamPopUp = {
+    ShowContent = {
+      [1] = "WBP_Activity_Weapon_TeamPopUp"
+    },
+    StyleId = "Activity_Weapon_TeamPopUp"
   },
   AlertDefault = {
     ShowContent = T.RT_2,
@@ -194,6 +210,15 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "AttrRestraint_Dialog"
   },
+  AutoChess_BuffChoose = {
+    ShowContent = {
+      [1] = "WBP_Activity_AutoChess_BuffChoose_Content"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_3,
+    StyleId = "AutoChess_BuffChoose"
+  },
   BagSellConfirm = {
     ShowContent = T.RT_4,
     ShowLeftButton = 1,
@@ -205,7 +230,6 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "BagSellConfirm"
   },
   BattlePassDialog = {
-    BigSize = true,
     ShowContent = {
       [1] = "BattlePassLevelPurchase"
     },
@@ -366,10 +390,6 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "Dispatch_RewardPreview"
   },
-  Dye_dialog_input = {
-    ShowContent = T.RT_7,
-    StyleId = "Dye_dialog_input"
-  },
   EliteDropDialog = {
     ShowContent = {
       [1] = "EliteDrop"
@@ -411,7 +431,7 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_2,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_8,
+    ShowTip = T.RT_7,
     StyleId = "ForgeConfirm"
   },
   Forging_BatchDialog = {
@@ -539,7 +559,7 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "Impression_Shop_Confirm_1"
   },
   Input_WithTips1 = {
-    ShowContent = T.RT_7,
+    ShowContent = T.RT_8,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     ShowTip = T.RT_1,
@@ -620,6 +640,14 @@ return ReadOnly("CommonPopupUIStyle", {
       [1] = "Text03_ListView"
     },
     StyleId = "LongTextDefault_Line"
+  },
+  LongTextDefault_long = {
+    BigSize = true,
+    ShowContent = T.RT_10,
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_3,
+    StyleId = "LongTextDefault_long"
   },
   Menu_Head_Dialog = {
     BigSize = true,
@@ -720,7 +748,7 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_12,
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = T.RT_8,
+    ShowTip = T.RT_7,
     StyleId = "SettingChangeKey_4"
   },
   Setting_EnhanceLog = {
@@ -770,10 +798,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 1,
-    ShowTip = {
-      [1] = "Item_Currency",
-      [2] = "Item_Tip3"
-    },
+    ShowTip = T.RT_15,
     StyleId = "Shop_ExchangePart_Dialog"
   },
   ShortTextComfirm = {
@@ -855,7 +880,7 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_9,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_15,
+    ShowTip = T.RT_16,
     StyleId = "WBP_Bag_OptionalAvatar"
   },
   WBP_Bag_OptionalGift = {
@@ -872,7 +897,7 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_15,
+    ShowTip = T.RT_16,
     StyleId = "WBP_Bag_OptionalProp"
   },
   WBP_Forging_ExchangePart = {
@@ -883,6 +908,31 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowRightButton = 1,
     ShowTip = T.RT_5,
     StyleId = "WBP_Forging_ExchangePart"
+  },
+  WBP_Guild_Boss_DialogAssistPlayer = {
+    BigSize = true,
+    ShowContent = {
+      [1] = "WBP_Guild_Boss_DialogAssistPlayer_Content"
+    },
+    StyleId = "WBP_Guild_Boss_DialogAssistPlayer"
+  },
+  WBP_Guild_Construct_BuyPart = {
+    ShowContent = {
+      [1] = "WBP_Guild_Construct_BuyPart_Content"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_5,
+    StyleId = "WBP_Guild_Construct_BuyPart"
+  },
+  WBP_Guild_Construct_ExchangePart = {
+    ShowContent = {
+      [1] = "WBP_Guild_Construct_ExchangePart_Content"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_15,
+    StyleId = "WBP_Guild_Construct_ExchangePart"
   },
   WBP_Guild_DialogDetails = {
     ShowContent = {
@@ -928,6 +978,14 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowRightButton = 2,
     StyleId = "WBP_Set_MultipleLangContent_Dialog"
   },
+  WBP_Shop_GachaExchangePart = {
+    ShowContent = {
+      [1] = "WBP_Shop_GachaExchangePart_Content"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    StyleId = "WBP_Shop_GachaExchangePart"
+  },
   WBP_Shop_OptionalDialog = {
     ShowContent = {
       [1] = "WBP_Shop_OptionalDialog_Content"
@@ -940,20 +998,29 @@ return ReadOnly("CommonPopupUIStyle", {
       [1] = "WBP_Task_Conflict_Content"
     },
     ShowRightButton = 2,
-    ShowTip = T.RT_8,
+    ShowTip = T.RT_7,
     StyleId = "WBP_Task_Conflict"
   },
   WBP_Task_Dialog_Ticket_1 = {
-    ShowContent = T.RT_16,
+    ShowContent = T.RT_17,
     ShowLeftButton = 1,
     ShowRightButton = 1,
     ShowTip = T.RT_3,
     StyleId = "WBP_Task_Dialog_Ticket_1"
   },
   WBP_Task_Dialog_Ticket_2 = {
-    ShowContent = T.RT_16,
+    ShowContent = T.RT_17,
     ShowRightButton = 1,
     StyleId = "WBP_Task_Dialog_Ticket_2"
+  },
+  WBP_Weapon_RefreshPopUp = {
+    ShowContent = {
+      [1] = "WBP_Activity_Weapon_RefreshPopUp_Content"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_3,
+    StyleId = "WBP_Weapon_RefreshPopUp"
   },
   WeaponResolveDialog = {
     ShowContent = {
@@ -971,21 +1038,21 @@ return ReadOnly("CommonPopupUIStyle", {
     StyleId = "catching_pets"
   },
   common_dialog_input = {
-    ShowContent = T.RT_7,
+    ShowContent = T.RT_8,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_17,
+    ShowTip = T.RT_18,
     StyleId = "common_dialog_input"
   },
   common_dialog_input_LayoutCustom = {
-    ShowContent = T.RT_7,
+    ShowContent = T.RT_8,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_17,
+    ShowTip = T.RT_18,
     StyleId = "common_dialog_input_LayoutCustom"
   },
   common_dialog_input_red = {
-    ShowContent = T.RT_7,
+    ShowContent = T.RT_8,
     ShowLeftButton = 1,
     ShowRightButton = 2,
     ShowTip = T.RT_3,

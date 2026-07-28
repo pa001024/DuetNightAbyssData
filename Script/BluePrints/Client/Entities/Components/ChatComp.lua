@@ -10,14 +10,16 @@ end
 
 function Component:_OnLoginSuccess()
   ChatController:Init()
-  self.InWorldChatChannel = {}
+  if not self.InWorldChatChannel then
+    self.InWorldChatChannel = {}
+  end
   self.InWorldChatChannel[CommonConst.ChatChannel.Help] = false
   self.InWorldChatChannel[CommonConst.ChatChannel.TeamUp] = false
-  self.InWorldChatChannel[CommonConst.ChatChannel.RegionOnline] = false
 end
 
 function Component:LeaveWorld()
   ChatController:Destory()
+  self.InWorldChatChannel = nil
 end
 
 function Component:OnReconnectSuccessChatComp()
@@ -27,13 +29,14 @@ function Component:OnReconnectSuccessChatComp()
   local st1 = self.InWorldChatChannel[CommonConst.ChatChannel.Help]
   local st2 = self.InWorldChatChannel[CommonConst.ChatChannel.TeamUp]
   if st1 or st2 then
-    self.InWorldChatChannel = {}
+    if not self.InWorldChatChannel then
+      self.InWorldChatChannel = {}
+    end
     self.InWorldChatChannel[CommonConst.ChatChannel.Help] = false
     self.InWorldChatChannel[CommonConst.ChatChannel.TeamUp] = false
     self:RequestEnterWorldChannel(CommonConst.ChatChannel.Help, -1)
     self:RequestEnterWorldChannel(CommonConst.ChatChannel.TeamUp, -1)
   end
-  self.InWorldChatChannel[CommonConst.ChatChannel.RegionOnline] = false
 end
 
 function Component:RequestEnterWorldChannel(channel_type)

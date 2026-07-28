@@ -23,6 +23,7 @@ return ReadOnly("SkillType", {
     EnumValue = 19,
     SkillType = "HeavyShooting"
   },
+  MonSPSkill = {EnumValue = 51, SkillType = "MonSPSkill"},
   Movement = {EnumValue = 21, SkillType = "Movement"},
   Passive = {EnumValue = 7, SkillType = "Passive"},
   PhantomPassive = {

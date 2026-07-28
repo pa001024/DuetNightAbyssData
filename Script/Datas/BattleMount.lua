@@ -139,6 +139,7 @@ return ReadOnly("BattleMount", {
   [1008] = {
     CharAnimInstance = "ABP_Mount_",
     CharMeshSocket = true,
+    FollowCharScale = true,
     MonsterId = 1006,
     MountDieSlotName = "MountDie07",
     MountId = 1008,
@@ -152,6 +153,7 @@ return ReadOnly("BattleMount", {
   [1009] = {
     CharAnimInstance = "ABP_Mount_",
     CharMeshSocket = true,
+    FollowCharScale = true,
     MonsterId = 1007,
     MountDieSlotName = "MountDie06",
     MountId = 1009,
@@ -201,6 +203,58 @@ return ReadOnly("BattleMount", {
       10057,
       10058
     },
-    MountPrefix = "Mnt08"
+    MountPrefix = "Mnt08",
+    VlerpFloat = 0.5
+  },
+  [1011] = {
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    MonsterId = 1011,
+    MountDieSlotName = "MountDie01",
+    MountId = 1011,
+    MountLayerTag = 0,
+    MountPrefix = "Mnt01",
+    MountTurnPrefix = "Mnt01",
+    TurnSlotName = "DefaultSlot"
+  },
+  [1012] = {
+    BodyScaleRule = T.RT_1,
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    MonsterId = 1012,
+    MountDieSlotName = "MountDie03",
+    MountId = 1012,
+    MountLayerTag = 2,
+    MountPermanentVX = {
+      10062,
+      10063,
+      10064
+    },
+    MountPrefix = "Mnt03",
+    MountTurnPrefix = "Mnt03",
+    RolePermanentVX = {10065, 10066},
+    TurnSlotName = "DefaultSlot"
+  },
+  [1013] = {
+    BodyScaleRule = T.RT_1,
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    MonsterId = 1013,
+    MountDieSlotName = "MountDie04",
+    MountId = 1013,
+    MountLayerTag = 3,
+    MountPrefix = "Mnt04",
+    MountTurnPrefix = "Mnt01",
+    TurnSlotName = "MountTurnNull"
+  },
+  [1014] = {
+    CharAnimInstance = "ABP_Mount_",
+    CharMeshSocket = true,
+    FroceRideFly = true,
+    MonsterId = 1014,
+    MountDieSlotName = "MountDie09",
+    MountId = 1014,
+    MountLayerTag = 8,
+    MountPrefix = "Mnt09"
   }
 })

@@ -6,7 +6,12 @@ local ScriptLogType = UE.EStoryLogType.Script
 function M:CreateNode(Flow, TalkTask, Params)
   self.DialogueId = Flow.DialogueId
   local TalkTaskData = TalkTask.TalkTaskData
-  local StoryLine = GWorld.StoryMgr:GetStory(TalkTaskData.FilePath)
+  local StoryLine
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    StoryLine = Avatar:GetClientQuestChainStoryline(TalkTaskData.QuestChainId)
+  end
+  StoryLine = StoryLine or GWorld.StoryMgr:GetStory(TalkTaskData.FilePath)
   for _, StoryNode in pairs(StoryLine.RunningNodeList) do
     local Questline = StoryNode.Questline
     if Questline and Questline:GetNode(TalkTaskData.TalkNodeId) then

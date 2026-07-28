@@ -49,6 +49,11 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "Achievement",
     UnlockPopupType = "Light"
   },
+  AdvertisingPopUp = {
+    ConditionId = 4220,
+    IsHideUnlockPopup = 1,
+    UIUnlockRuleId = "AdvertisingPopUp"
+  },
   Announcement = {
     AfterUIUnlockDesc = "System_Des_Notice",
     ConditionId = 4150,
@@ -430,6 +435,20 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "Match",
     UnlockPopupType = "Normal"
   },
+  Memory = {
+    AfterUIUnlockDesc = "System_Des_Memory",
+    ConditionId = 4470,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Memory.T_Entrance_Memory",
+    OpenConditionId = T.RT_6,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_Memory",
+      "UI_Disabled_InStoryMode"
+    },
+    UIUnlockDesc = "UI_Locked_Des_Memory",
+    UIUnlockName = "MAIN_UI_MEMORY",
+    UIUnlockRuleId = "Memory",
+    UnlockPopupType = "Normal"
+  },
   Mod = {
     AfterUIUnlockDesc = "System_Des_Mod",
     ConditionId = 4160,
@@ -700,6 +719,19 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockDesc = "UI_Locked_Des_Armory",
     UIUnlockName = "MAIN_UI_SKILL",
     UIUnlockRuleId = "Skill",
+    UnlockPopupType = "Normal"
+  },
+  SoloTreasurePerm = {
+    AfterUIUnlockDesc = "System_Des_SoloTreasure",
+    ConditionId = 4480,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Escape.T_Entrance_Escape'",
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_SoloTreasure"
+    },
+    UIUnlockDesc = "UI_Locked_Des_SoloTreasure",
+    UIUnlockName = "UI_Play_TreasureHunt_Title",
+    UIUnlockRuleId = "SoloTreasurePerm",
     UnlockPopupType = "Normal"
   },
   Squad = {

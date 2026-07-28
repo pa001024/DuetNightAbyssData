@@ -547,7 +547,7 @@ end
 function BP_TalkBaseUINew_C:PlayDialogue(TalkTask, DialogueData, TaskData)
 end
 
-function BP_TalkBaseUINew_C:ShowOptions(TalkTask, OptionTexts, OptionData, OnOptionItemClicked)
+function BP_TalkBaseUINew_C:ShowOptions(TalkTask, OptionData, OnOptionItemClicked)
   OnOptionItemClicked(1)
 end
 

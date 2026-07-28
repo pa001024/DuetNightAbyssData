@@ -14,8 +14,6 @@ function M:Destruct()
   self:UnBindInputMethodChangedDelegate()
   self:PlayAnimation(self.Out)
   self:RemoveTimer("UpdateTime")
-  AudioManager(self):SetEventSoundParam(self, "fengrao02_entrance_loop", {ToEnd = 1})
-  AudioManager(self):StopSound(self, "fengrao02_entrance_loop")
 end
 
 function M:RefreshUI()
@@ -111,7 +109,6 @@ function M:InitUI(ActivityConfigData, PageConfigData, ParentTabId, ParentWidget,
     self.BG:PlayAnimationIn()
     self:AddTimer(1.0, self.UpdateTime, true, 0, "UpdateTime", true)
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/fengrao02_entrance_loop", "fengrao02_entrance_loop", nil)
 end
 
 function M:UpdateTime()

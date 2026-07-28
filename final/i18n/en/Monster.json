@@ -33,7 +33,7 @@
   },
   {
     "id": 6001011,
-    "n": "Veloci Filthoid - Frostbite",
+    "n": "Veloci Filthoid – Frostbite",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -51,7 +51,7 @@
   },
   {
     "id": 6001012,
-    "n": "Veloci Filthoid - Blast",
+    "n": "Veloci Filthoid – Blast",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -69,7 +69,7 @@
   },
   {
     "id": 6001013,
-    "n": "Veloci Filthoid - Corrosion",
+    "n": "Veloci Filthoid – Corrosion",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -88,7 +88,7 @@
   },
   {
     "id": 6001014,
-    "n": "Veloci Filthoid - Thunderclap",
+    "n": "Veloci Filthoid – Thunderclap",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -106,7 +106,7 @@
   },
   {
     "id": 6001016,
-    "n": "Veloci Filthoid - Wither",
+    "n": "Veloci Filthoid – Wither",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -124,7 +124,7 @@
   },
   {
     "id": 6001018,
-    "n": "Veloci Filthoid - Revenge",
+    "n": "Veloci Filthoid – Revenge",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -142,7 +142,7 @@
   },
   {
     "id": 6001301,
-    "n": "Veloci Filthoid -  Sacrifice & Wither & Blast",
+    "n": "Veloci Filthoid – Sacrifice & Wither & Blast",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -213,7 +213,7 @@
   },
   {
     "id": 6002011,
-    "n": "Guerrilla Filthoid - Frostbite",
+    "n": "Guerrilla Filthoid – Frostbite",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -231,7 +231,7 @@
   },
   {
     "id": 6002015,
-    "n": "Guerrilla Filthoid - Decay",
+    "n": "Guerrilla Filthoid – Decay",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -249,7 +249,7 @@
   },
   {
     "id": 6002016,
-    "n": "Guerrilla Filthoid - Wither",
+    "n": "Guerrilla Filthoid – Wither",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -267,7 +267,7 @@
   },
   {
     "id": 6002017,
-    "n": "Guerrilla Filthoid - Guardian",
+    "n": "Guerrilla Filthoid – Guardian",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -285,7 +285,7 @@
   },
   {
     "id": 6002018,
-    "n": "Guerrilla Filthoid - Revenge",
+    "n": "Guerrilla Filthoid – Revenge",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -421,7 +421,7 @@
   },
   {
     "id": 6004012,
-    "n": "Savage Filthoid - Blast",
+    "n": "Savage Filthoid – Blast",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -439,7 +439,7 @@
   },
   {
     "id": 6004013,
-    "n": "Savage Filthoid - Corrosion",
+    "n": "Savage Filthoid – Corrosion",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -458,7 +458,7 @@
   },
   {
     "id": 6004014,
-    "n": "Savage Filthoid - Thunderbolt",
+    "n": "Savage Filthoid – Thunderbolt",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -476,7 +476,7 @@
   },
   {
     "id": 6004020,
-    "n": "Savage Filthoid - Glimmer",
+    "n": "Savage Filthoid – Glimmer",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -494,7 +494,7 @@
   },
   {
     "id": 6004301,
-    "n": "Savage Filthoid - Thunderbolt & Blast & Icehell",
+    "n": "Savage Filthoid – Thunderbolt & Blast & Icehell",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -613,7 +613,7 @@
   },
   {
     "id": 6007011,
-    "n": "Soul-Scorching Filthoid - Frostbite",
+    "n": "Soul-Scorching Filthoid – Frostbite",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -631,7 +631,7 @@
   },
   {
     "id": 6007016,
-    "n": "Soul-Scorching Filthoid - Wither",
+    "n": "Soul-Scorching Filthoid – Wither",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -649,7 +649,7 @@
   },
   {
     "id": 6007024,
-    "n": "Soul-Scorching Filthoid - Phantom",
+    "n": "Soul-Scorching Filthoid – Phantom",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 5.56,
@@ -667,7 +667,7 @@
   },
   {
     "id": 6007301,
-    "n": "Soul-Scorching Filthoid - Revenge & Blast & Glimmer ",
+    "n": "Soul-Scorching Filthoid – Revenge & Blast & Glimmer ",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -719,7 +719,7 @@
   },
   {
     "id": 6011301,
-    "n": "Veloci Filthoid Ⅱ - Sacrifice & Wither & Blast",
+    "n": "Veloci Filthoid Ⅱ – Sacrifice & Wither & Blast",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 10,
@@ -826,7 +826,7 @@
   },
   {
     "id": 6013015,
-    "n": "Floating Filthoid Ⅱ - Decay",
+    "n": "Floating Filthoid Ⅱ – Decay",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -846,7 +846,7 @@
   },
   {
     "id": 6013017,
-    "n": "Floating Filthoid Ⅱ - Guard",
+    "n": "Floating Filthoid Ⅱ – Guard",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -866,7 +866,7 @@
   },
   {
     "id": 6013018,
-    "n": "Floating Filthoid Ⅱ - Revenge",
+    "n": "Floating Filthoid Ⅱ – Revenge",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -941,7 +941,7 @@
   },
   {
     "id": 6014301,
-    "n": "Savage Filthoid Ⅱ - Thunderbolt & Blast & Icehell",
+    "n": "Savage Filthoid Ⅱ – Thunderbolt & Blast & Icehell",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 20,
@@ -1521,7 +1521,7 @@
   },
   {
     "id": 7001005,
-    "n": "Sniper Private - Stealth",
+    "n": "Sniper Private – Stealth",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1556,7 +1556,7 @@
   },
   {
     "id": 7001011,
-    "n": "Sniper Private - Frostbite",
+    "n": "Sniper Private – Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1575,7 +1575,7 @@
   },
   {
     "id": 7001015,
-    "n": "Sniper Private - Decay",
+    "n": "Sniper Private – Decay",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1594,7 +1594,7 @@
   },
   {
     "id": 7001016,
-    "n": "Sniper Private - Wither",
+    "n": "Sniper Private – Wither",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1613,7 +1613,7 @@
   },
   {
     "id": 7001017,
-    "n": "Sniper Private - Guardian",
+    "n": "Sniper Private – Guardian",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1632,7 +1632,7 @@
   },
   {
     "id": 7001018,
-    "n": "Sniper Private - Revenge",
+    "n": "Sniper Private – Revenge",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1651,7 +1651,7 @@
   },
   {
     "id": 7001024,
-    "n": "Sniper Private - Phantom",
+    "n": "Sniper Private – Phantom",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1724,7 +1724,7 @@
   },
   {
     "id": 7002005,
-    "n": "Cleaving Private - Battlewise",
+    "n": "Cleaving Private – Battlewise",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1759,7 +1759,7 @@
   },
   {
     "id": 7002011,
-    "n": "Cleaving Private - Frostbite",
+    "n": "Cleaving Private – Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1778,7 +1778,7 @@
   },
   {
     "id": 7002012,
-    "n": "Cleaving Private - Blast",
+    "n": "Cleaving Private – Blast",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1797,7 +1797,7 @@
   },
   {
     "id": 7002014,
-    "n": "Cleaving Private - Thunderclap",
+    "n": "Cleaving Private – Thunderclap",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1816,7 +1816,7 @@
   },
   {
     "id": 7002016,
-    "n": "Cleaving Private - Wither",
+    "n": "Cleaving Private – Wither",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1835,7 +1835,7 @@
   },
   {
     "id": 7002018,
-    "n": "Cleaving Private - Revenge",
+    "n": "Cleaving Private – Revenge",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1854,7 +1854,7 @@
   },
   {
     "id": 7002019,
-    "n": "Cleaver Private - Icehell",
+    "n": "Cleaver Private – Icehell",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -1927,7 +1927,7 @@
   },
   {
     "id": 7003005,
-    "n": "Expedition Private - Armed Assault",
+    "n": "Expedition Private – Armed Assault",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1946,7 +1946,7 @@
   },
   {
     "id": 7003011,
-    "n": "Expedition Private - Frostbite",
+    "n": "Expedition Private – Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1965,7 +1965,7 @@
   },
   {
     "id": 7003015,
-    "n": "Expedition Private - Decay",
+    "n": "Expedition Private – Decay",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1984,7 +1984,7 @@
   },
   {
     "id": 7003016,
-    "n": "Expedition Private - Wither",
+    "n": "Expedition Private – Wither",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2003,7 +2003,7 @@
   },
   {
     "id": 7003017,
-    "n": "Expedition Private - Guardian",
+    "n": "Expedition Private – Guardian",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2022,7 +2022,7 @@
   },
   {
     "id": 7003018,
-    "n": "Expedition Private - Revenge",
+    "n": "Expedition Private – Revenge",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2041,7 +2041,7 @@
   },
   {
     "id": 7003022,
-    "n": "Expedition Private - Thunderstorm",
+    "n": "Expedition Private – Thunderstorm",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2114,7 +2114,7 @@
   },
   {
     "id": 7004017,
-    "n": "Assault Private - Guard",
+    "n": "Assault Private – Guard",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2133,7 +2133,7 @@
   },
   {
     "id": 7004020,
-    "n": "Assault Private - Glimmer ",
+    "n": "Assault Private – Glimmer",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2232,7 +2232,7 @@
   },
   {
     "id": 7008023,
-    "n": "Elite Sergeant - Bloodbath",
+    "n": "Elite Sergeant – Bloodbath",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2308,7 +2308,7 @@
   },
   {
     "id": 7009020,
-    "n": "Benevolent Tyrant - Glimmer",
+    "n": "Benevolent Tyrant – Glimmer",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2388,7 +2388,7 @@
   },
   {
     "id": 7010022,
-    "n": "Spathatoi Alchemist - Thunderstorm",
+    "n": "Spathatoi Alchemist – Thunderstorm",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2641,7 +2641,7 @@
   },
   {
     "id": 7015011,
-    "n": "Patrol Drone - Frostbite",
+    "n": "Patrol Drone – Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2660,7 +2660,7 @@
   },
   {
     "id": 7015301,
-    "n": "Patrol Drone - Revenge & Wither & Frostbite",
+    "n": "Patrol Drone – Revenge & Wither & Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2861,7 +2861,7 @@
   },
   {
     "id": 8001015,
-    "n": "Blessed Deacon - Decay",
+    "n": "Blessed Deacon – Decay",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -2880,7 +2880,7 @@
   },
   {
     "id": 8001019,
-    "n": "Blessed Deacon - Icehell",
+    "n": "Blessed Deacon – Icehell",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -2899,7 +2899,7 @@
   },
   {
     "id": 8001021,
-    "n": "Blessed Deacon - Sacrifice",
+    "n": "Blessed Deacon – Sacrifice",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -2918,7 +2918,7 @@
   },
   {
     "id": 8001301,
-    "n": "Blessed Deacon - Wither & Thunderstorm & Frostbite",
+    "n": "Blessed Deacon – Wither & Thunderstorm & Frostbite",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -2972,7 +2972,7 @@
   },
   {
     "id": 8002012,
-    "n": "Blessed Vanguard - Blast",
+    "n": "Blessed Vanguard – Blast",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -2991,7 +2991,7 @@
   },
   {
     "id": 8002014,
-    "n": "Blessed Vanguard - Thunderbolt",
+    "n": "Blessed Vanguard – Thunderbolt",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3010,7 +3010,7 @@
   },
   {
     "id": 8002016,
-    "n": "Blessed Vanguard - Wither",
+    "n": "Blessed Vanguard – Wither",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3029,7 +3029,7 @@
   },
   {
     "id": 8002018,
-    "n": "Blessed Vanguard - Revenge",
+    "n": "Blessed Vanguard – Revenge",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3048,7 +3048,7 @@
   },
   {
     "id": 8002020,
-    "n": "Blessed Vanguard - Glimmer",
+    "n": "Blessed Vanguard – Glimmer",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3105,7 +3105,7 @@
   },
   {
     "id": 8002701,
-    "n": "Blessed Vanguard - Thunderbolt & Icehell",
+    "n": "Blessed Vanguard – Thunderbolt & Icehell",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 32,
@@ -3126,7 +3126,7 @@
   },
   {
     "id": 8002702,
-    "n": "Blessed Vanguard - Thunderbolt",
+    "n": "Blessed Vanguard – Thunderbolt",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 32,
@@ -3145,7 +3145,7 @@
   },
   {
     "id": 8002703,
-    "n": "Blessed Vanguard - Icehell",
+    "n": "Blessed Vanguard – Icehell",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 32,
@@ -3201,7 +3201,7 @@
   },
   {
     "id": 8003016,
-    "n": "Blessed Priest - Wither",
+    "n": "Blessed Priest – Wither",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -3220,7 +3220,7 @@
   },
   {
     "id": 8003021,
-    "n": "Blessed Priest - Sacrifice",
+    "n": "Blessed Priest – Sacrifice",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -3239,7 +3239,7 @@
   },
   {
     "id": 8003022,
-    "n": "Blessed Priest - Thunderstorm",
+    "n": "Blessed Priest – Thunderstorm",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 11,
@@ -3258,7 +3258,7 @@
   },
   {
     "id": 8003024,
-    "n": "Blessed Priest - Phantom",
+    "n": "Blessed Priest – Phantom",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 5.56,
@@ -3293,7 +3293,7 @@
   },
   {
     "id": 8003701,
-    "n": "Blessed Priest - Wither & Guard",
+    "n": "Blessed Priest – Wither & Guard",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3314,7 +3314,7 @@
   },
   {
     "id": 8003702,
-    "n": "Blessed Priest - Wither",
+    "n": "Blessed Priest – Wither",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3333,7 +3333,7 @@
   },
   {
     "id": 8003703,
-    "n": "Blessed Priest - Revenge",
+    "n": "Blessed Priest – Revenge",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 20,
@@ -3673,7 +3673,7 @@
     "n": "The Warden of the Inferno",
     "t": "Boss",
     "atk": 24,
-    "def": 135,
+    "def": 0,
     "hp": 6000,
     "tn": 4500,
     "icon": "Boss_05_Lianhuo",
@@ -4246,7 +4246,7 @@
   },
   {
     "id": 8514701,
-    "n": "Blessed Arbiter - Thunderbolt",
+    "n": "Blessed Arbiter – Thunderbolt",
     "t": "Boss",
     "atk": 60,
     "def": 300,
@@ -4479,7 +4479,7 @@
     "atk": 25,
     "def": 0,
     "hp": 4000,
-    "tn": 0,
+    "tn": 6000,
     "icon": "Empty",
     "tags": [
       "Mon.Boss",
@@ -4554,6 +4554,21 @@
     "tags": [
       "Mon.Boss",
       "Mon.Reward"
+    ]
+  },
+  {
+    "id": 8521701,
+    "n": "Halogi the Deceiver",
+    "t": "Boss",
+    "atk": 60,
+    "def": 300,
+    "hp": 225000,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward",
+      "Mon.Strong.Fade"
     ]
   },
   {
@@ -4641,6 +4656,21 @@
     ]
   },
   {
+    "id": 8522607,
+    "n": "Eclosis",
+    "t": "Elite_Monster",
+    "atk": 20,
+    "def": 300,
+    "hp": 256,
+    "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 8522701,
     "n": "Eclosis – Frostbite",
     "t": "Boss",
@@ -4657,13 +4687,13 @@
   },
   {
     "id": 8523001,
-    "n": "教会基石【远期待包装】",
+    "n": "Blessed Paladin",
     "t": "Boss",
     "atk": 15,
     "def": 0,
     "hp": 6000,
     "tn": 2000,
-    "icon": "Empty",
+    "icon": "Boss23_Jishi",
     "tags": [
       "Mon.Boss",
       "Mon.Reward.A",
@@ -4701,8 +4731,28 @@
     ]
   },
   {
+    "id": 9001013,
+    "n": "Wildswarm's Sword – Corrosion",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Poison",
+      "Mon.Elite",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
     "id": 9001014,
-    "n": "Wildswarm's Sword - Thunderbolt",
+    "n": "Wildswarm's Sword – Thunderbolt",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4721,7 +4771,7 @@
   },
   {
     "id": 9001017,
-    "n": "Wildswarm's Sword - Guard",
+    "n": "Wildswarm's Sword – Guard",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4740,7 +4790,7 @@
   },
   {
     "id": 9001023,
-    "n": "Wildswarm's Sword - Bloodbath",
+    "n": "Wildswarm's Sword – Bloodbath",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4759,7 +4809,7 @@
   },
   {
     "id": 9001024,
-    "n": "Wildswarm's Sword - Phantom",
+    "n": "Wildswarm's Sword – Phantom",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 12,
@@ -4836,6 +4886,27 @@
     ]
   },
   {
+    "id": 9001702,
+    "n": "Wildswarm's Sword – Sacrifice & Blast",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 32,
+    "def": 300,
+    "es": 3268,
+    "hp": 408,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Strong.Kamikaze.Double",
+      "Mon.Strong.Burst.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
+    ]
+  },
+  {
     "id": 9002001,
     "n": "Wildswarm's Arrow",
     "f": 3,
@@ -4853,7 +4924,7 @@
   },
   {
     "id": 9002015,
-    "n": "Wildswarm's Arrow - Decay",
+    "n": "Wildswarm's Arrow – Decay",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -4872,7 +4943,7 @@
   },
   {
     "id": 9002019,
-    "n": "Wildswarm's Arrow - Icehell",
+    "n": "Wildswarm's Arrow – Icehell",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -4891,7 +4962,7 @@
   },
   {
     "id": 9002023,
-    "n": "Wildswarm's Arrow - Bloodbath",
+    "n": "Wildswarm's Arrow – Bloodbath",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -4910,7 +4981,7 @@
   },
   {
     "id": 9002024,
-    "n": "Wildswarm's Arrow - Phantom",
+    "n": "Wildswarm's Arrow – Phantom",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 5.56,
@@ -4987,6 +5058,27 @@
     ]
   },
   {
+    "id": 9002702,
+    "n": "Wildswarm's Arrow – Thunderbolt & Frostbite",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 3268,
+    "hp": 408,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Strong.Thunder.Double",
+      "Mon.Strong.Frozen.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
+    ]
+  },
+  {
     "id": 9003001,
     "n": "Toymaker",
     "t": "Elite_Monster",
@@ -5020,6 +5112,25 @@
       "Mon.Melee",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9003019,
+    "n": "\"Toymaker\" – Icehell",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Wanju",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb"
     ]
   },
   {
@@ -5081,6 +5192,26 @@
     ]
   },
   {
+    "id": 9005013,
+    "n": "\"Bombaholic\" – Corrosion",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Baozha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
     "id": 9005301,
     "n": "\"Bombaholic\" – Thunderbolt, Glimmer & Icehell",
     "t": "Elite_Monster",
@@ -5139,6 +5270,25 @@
     ]
   },
   {
+    "id": 9006019,
+    "n": "\"Deceiver\" – Icehell",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Qizha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb"
+    ]
+  },
+  {
     "id": 9006301,
     "n": "\"Deceiver\" – Sacrifice, Revenge & Frostbite",
     "t": "Elite_Monster",
@@ -5177,8 +5327,27 @@
     ]
   },
   {
+    "id": 9007012,
+    "n": "Wildswarm's Agent – Blast",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 9007019,
-    "n": "Wildswarm's Agent - Icehell",
+    "n": "Wildswarm's Agent – Icehell",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -5197,7 +5366,7 @@
   },
   {
     "id": 9007021,
-    "n": "Wildswarm's Agent - Sacrifice",
+    "n": "Wildswarm's Agent – Sacrifice",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -5216,7 +5385,7 @@
   },
   {
     "id": 9007022,
-    "n": "Wildswarm's Agent - Thunderstorm",
+    "n": "Wildswarm's Agent – Thunderstorm",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -5235,7 +5404,7 @@
   },
   {
     "id": 9007023,
-    "n": "Wildswarm's Agent - Bloodbath",
+    "n": "Wildswarm's Agent – Bloodbath",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -5340,6 +5509,20 @@
       "Mon.Melee",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9511001,
+    "n": "Nutcracker",
+    "atk": 10,
+    "def": 130,
+    "es": 34,
+    "hp": 47,
+    "tn": 150,
+    "icon": "NE_Hutao",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
     ]
   },
   {

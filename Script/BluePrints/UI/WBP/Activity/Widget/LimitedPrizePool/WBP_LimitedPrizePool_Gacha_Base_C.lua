@@ -16,7 +16,6 @@ local DrawCurveSpeed = {
 }
 local ResultShowDelay = 0.8
 local ResultAnimStartDelay = 0.6
-local GachaShowSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_show_xiunv"
 local GachaShowSoundKey = "LimitedPrizePoolGachaShow"
 local RollSingleSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_roll_single"
 local RollSingleEndSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_roll_single_end"
@@ -50,6 +49,11 @@ function M:ApplyInitData(WonIndex, bIsBigPrize, AcquiredList, DrawCount, Convert
   self.EventId = EventId
 end
 
+function M:GetGachaShowSoundEvent()
+  local PoolData = self.EventId and DataMgr and DataMgr.LimitedPrizePool and DataMgr.LimitedPrizePool[self.EventId]
+  return PoolData and PoolData.ProcessSoundEffects
+end
+
 function M:PlayInThenStartDraw()
   if not self.In then
     self:StartDrawAnimation()
@@ -75,7 +79,10 @@ function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, Conv
   self.Panel_Toast:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ClearTimers()
   self:PopulateList(RewardPool)
-  AudioManager(self):PlayUISound(self, GachaShowSoundEvent, GachaShowSoundKey, nil)
+  local GachaShowSoundEvent = self:GetGachaShowSoundEvent()
+  if GachaShowSoundEvent then
+    AudioManager(self):PlayUISound(self, GachaShowSoundEvent, GachaShowSoundKey, nil)
+  end
   if self.ItemCount <= 1 then
     self:ShowResult()
   else

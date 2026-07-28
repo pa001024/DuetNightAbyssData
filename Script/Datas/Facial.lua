@@ -402,6 +402,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Curious_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Curious02 = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Curious02",
+    NpcEye = "Curious02",
+    NpcMouth = "Curious02_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Disappoint01 = {
     Eye1BlendInTime = 0.4,
     FacialId = "Disappoint01",
@@ -577,6 +584,13 @@ return ReadOnly("Facial", {
     NpcMouth = "None_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  Pain = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Pain",
+    NpcEye = "Pain",
+    NpcMouth = "Pain_Mouth",
+    SoundBaseMouth = "LipSyncBase_Normal_Mouth"
+  },
   Pain01 = {
     Eye1BlendInTime = 0.4,
     FacialId = "Pain01",
@@ -705,6 +719,13 @@ return ReadOnly("Facial", {
     NpcMouth = "Shy_Mouth",
     SoundBaseMouth = "LipSyncBase_Normal_Mouth"
   },
+  SillyLaugh = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "SillyLaugh",
+    NpcEye = "SillyLaugh",
+    NpcMouth = "SillyLaugh_Mouth",
+    SoundBaseMouth = "LipSyncBase_Smile_Mouth"
+  },
   Smile01 = {
     Eye1BlendInTime = 0.4,
     FacialId = "Smile01",
@@ -731,6 +752,13 @@ return ReadOnly("Facial", {
     FacialId = "Smile04",
     NpcEye = "Smile04",
     NpcMouth = "Smile04_Mouth",
+    SoundBaseMouth = "LipSyncBase_Smile_Mouth"
+  },
+  Smirk = {
+    Eye1BlendInTime = 0.4,
+    FacialId = "Smirk",
+    NpcEye = "Smirk",
+    NpcMouth = "Smirk_Mouth",
     SoundBaseMouth = "LipSyncBase_Smile_Mouth"
   },
   Sneer = {

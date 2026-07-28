@@ -51,14 +51,13 @@ T.RT_21 = {
   10005,
   10003
 }
-T.RT_22 = {10001}
-T.RT_23 = {
+T.RT_22 = {
   120101,
   120102,
   120103,
   120104
 }
-T.RT_24 = {
+T.RT_23 = {
   [1] = "GRADEUP_1201_01",
   [2] = "GRADEUP_1201_02",
   [3] = "GRADEUP_1201_03",
@@ -66,7 +65,7 @@ T.RT_24 = {
   [5] = "GRADEUP_1201_05",
   [6] = "GRADEUP_1201_06"
 }
-T.RT_25 = {
+T.RT_24 = {
   [1] = "$#SkillEffects[120133].TaskEffects[2].ComboCount$",
   [2] = "$#SkillCreature[120121].TimeLife$",
   [3] = "$#Buff[120103].AddAttrs[1].Value*(-100)$%",
@@ -74,72 +73,72 @@ T.RT_25 = {
   [5] = "$#Buff[120112].AddAttrs[1].Value*100$%",
   [6] = "$#PassiveEffect[120101].Vars.Grade6BuffLastTime$"
 }
-T.RT_26 = {
+T.RT_25 = {
   "ATK_Dark",
   "SkillEfficiency",
   "SkillSustain"
 }
-T.RT_27 = {
+T.RT_26 = {
   120101,
   120102,
   120103,
   120104,
   100005
 }
-T.RT_28 = {
+T.RT_27 = {
   ExtraLv = 2,
   Grade = 3,
   SkillId = 120101
 }
-T.RT_29 = {
+T.RT_28 = {
   ExtraLv = 2,
   Grade = 5,
   SkillId = 120102
 }
-T.RT_30 = {
+T.RT_29 = {
   ExtraLv = 1,
   Grade = 3,
   SkillId = 120103
 }
-T.RT_31 = {
+T.RT_30 = {
   ExtraLv = 1,
   Grade = 5,
   SkillId = 120103
 }
-T.RT_32 = {
+T.RT_31 = {
+  T.RT_27,
   T.RT_28,
   T.RT_29,
-  T.RT_30,
-  T.RT_31
+  T.RT_30
 }
-T.RT_33 = {"Loli"}
-T.RT_34 = {
+T.RT_32 = {"Loli"}
+T.RT_33 = {
   Crouch = T.RT_3,
   OriHalfHeight = 65,
   OriRadius = 20,
   Slide = T.RT_3
 }
-T.RT_35 = {"Woman"}
-T.RT_36 = {
+T.RT_34 = {"Woman"}
+T.RT_35 = {
   Crouch = T.RT_3,
   OriHalfHeight = 87,
   OriRadius = 20,
   Slide = T.RT_3
 }
-T.RT_37 = {"Katana", "Pistol"}
-T.RT_38 = {
+T.RT_36 = {"Katana", "Pistol"}
+T.RT_37 = {
   "ATK_Light",
   "SkillIntensity",
   "SkillEfficiency",
   "SkillRange"
 }
-T.RT_39 = {
+T.RT_38 = {
   150301,
   150302,
   150303,
   150304
 }
-T.RT_40 = {
+T.RT_39 = {
   MaxAccelerationFly = 2048,
   MaxAccelerationRun = 2048,
   MaxAccelerationWalk = 2048,
@@ -147,14 +146,14 @@ T.RT_40 = {
   MaxSpeedRun = 500,
   MaxSpeedWalk = 100
 }
-T.RT_41 = {"Polearm", "Shotgun"}
-T.RT_42 = {
+T.RT_40 = {"Polearm", "Shotgun"}
+T.RT_41 = {
   160101,
   160102,
   160103,
   160104
 }
-T.RT_43 = {
+T.RT_42 = {
   [1] = "GRADEUP_1601_01",
   [2] = "GRADEUP_1601_02",
   [3] = "GRADEUP_1601_03",
@@ -162,7 +161,7 @@ T.RT_43 = {
   [5] = "GRADEUP_1601_05",
   [6] = "GRADEUP_1601_06"
 }
-T.RT_44 = {
+T.RT_43 = {
   [1] = "$#PassiveEffect[160101].Vars.AddDamageRate*100$%",
   [2] = "$#SkillCreature[160103].TimeLife$",
   [3] = "$#Buff[160102].AddAttrs[1].Value*(-100)$%",
@@ -171,61 +170,61 @@ T.RT_44 = {
   [6] = "$#Buff[160103].MaxLayer$",
   [7] = "$#Buff[160104].AddAttrs[1].Value*100$%"
 }
-T.RT_45 = {"Support"}
-T.RT_46 = {
+T.RT_44 = {"Support"}
+T.RT_45 = {
   "ATK_Light",
   "SkillIntensity",
   "SkillSustain",
   "SkillRange"
 }
-T.RT_47 = {
+T.RT_46 = {
   160101,
   160102,
   160103,
   160104,
   100005
 }
-T.RT_48 = {
+T.RT_47 = {
   ExtraLv = 2,
   Grade = 3,
   SkillId = 160101
 }
-T.RT_49 = {
+T.RT_48 = {
   ExtraLv = 2,
   Grade = 5,
   SkillId = 160102
 }
-T.RT_50 = {
+T.RT_49 = {
   ExtraLv = 1,
   Grade = 3,
   SkillId = 160103
 }
-T.RT_51 = {
+T.RT_50 = {
   ExtraLv = 1,
   Grade = 5,
   SkillId = 160103
 }
-T.RT_52 = {
+T.RT_51 = {
+  T.RT_47,
   T.RT_48,
   T.RT_49,
-  T.RT_50,
-  T.RT_51
+  T.RT_50
 }
-T.RT_53 = {
+T.RT_52 = {
   160191,
   160192,
   160103,
   160104,
   100005
 }
-T.RT_54 = {
+T.RT_53 = {
   "MaxSp",
   "SkillEfficiency",
   "SkillSustain",
   "SkillRange"
 }
-T.RT_55 = {1}
-T.RT_56 = {
+T.RT_54 = {1}
+T.RT_55 = {
   [1] = "GRADEUP_4101_01",
   [2] = "GRADEUP_4101_02",
   [3] = "GRADEUP_4101_03",
@@ -233,57 +232,63 @@ T.RT_56 = {
   [5] = "GRADEUP_4101_05",
   [6] = "GRADEUP_4101_06"
 }
-T.RT_57 = {
+T.RT_56 = {
   [1] = "$#PassiveEffect[410101].Vars.Grade4Per*100$%"
 }
-T.RT_58 = {"Katana", "Machinegun"}
-T.RT_59 = {1, 14}
-T.RT_60 = {
+T.RT_57 = {"Katana", "Machinegun"}
+T.RT_58 = {1, 14}
+T.RT_59 = {
   410101,
   410102,
   410103,
   410104,
   410001
 }
-T.RT_61 = {
+T.RT_60 = {
   ExtraLv = 2,
   Grade = 3,
   SkillId = 410101
 }
-T.RT_62 = {
+T.RT_61 = {
   ExtraLv = 2,
   Grade = 5,
   SkillId = 410102
 }
-T.RT_63 = {
+T.RT_62 = {
   ExtraLv = 1,
   Grade = 3,
   SkillId = 410103
 }
-T.RT_64 = {
+T.RT_63 = {
   ExtraLv = 1,
   Grade = 5,
   SkillId = 410103
 }
-T.RT_65 = {
+T.RT_64 = {
+  T.RT_60,
   T.RT_61,
   T.RT_62,
-  T.RT_63,
-  T.RT_64
+  T.RT_63
 }
-T.RT_66 = {"Polearm", "Cannon"}
-T.RT_67 = {1, 12}
-T.RT_68 = {
+T.RT_65 = {"Polearm", "Cannon"}
+T.RT_66 = {1, 12}
+T.RT_67 = {
   "DPS",
   "Minion",
   "SkillDPS"
 }
-T.RT_69 = {
+T.RT_68 = {
   "ATK_Water",
   "SkillIntensity",
   "SkillEfficiency",
   "SkillSustain",
   "SkillRange"
+}
+T.RT_69 = {
+  210201,
+  210202,
+  210203,
+  210204
 }
 T.RT_70 = {
   220101,
@@ -295,40 +300,53 @@ T.RT_70 = {
 T.RT_71 = {"Claymore", "Crossbow"}
 T.RT_72 = {1, 13}
 T.RT_73 = {
+  "ATK_Fire",
+  "SkillIntensity",
+  "SkillEfficiency",
+  "SkillSustain"
+}
+T.RT_74 = {"Dualblade", "Cannon"}
+T.RT_75 = {
   "DPS",
   "SkillDPS",
   "WeaponDPS"
 }
-T.RT_74 = {
+T.RT_76 = {
   "ATK_Fire",
   "SkillIntensity",
   "SkillEfficiency",
   "SkillRange"
 }
-T.RT_75 = {
+T.RT_77 = {
   "DPS",
   "HP",
   "SkillDPS"
 }
-T.RT_76 = {
+T.RT_78 = {
   "MaxHp",
   "SkillIntensity",
   "SkillEfficiency",
   "SkillSustain",
   "SkillRange"
 }
-T.RT_77 = {"Swordwhip", "Machinegun"}
-T.RT_78 = {
+T.RT_79 = {"Swordwhip", "Machinegun"}
+T.RT_80 = {
+  410101,
+  410102,
+  410103,
+  410104
+}
+T.RT_81 = {
   "ATK_Thunder",
   "SkillIntensity",
   "SkillEfficiency",
   "SkillSustain",
   "SkillRange"
 }
-T.RT_79 = {"Polearm", "Machinegun"}
-T.RT_80 = {1, 15}
-T.RT_81 = {510101}
-T.RT_82 = {530101}
+T.RT_82 = {"Polearm", "Machinegun"}
+T.RT_83 = {1, 15}
+T.RT_84 = {510101}
+T.RT_85 = {530101}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -498,7 +516,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 200,
     MaxHpLevelGrow = "MaxHpA",
     MaxSp = 120,
-    ModApplicationType = T.RT_55,
+    ModApplicationType = T.RT_54,
     ModelId = 201,
     RoleId = 201,
     SkillList = {20101, 20102},
@@ -511,7 +529,7 @@ return ReadOnly("BattleChar", {
     Attribute = "Default",
     BTMotionParams = T.RT_1,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
+    BattleCharTag = T.RT_34,
     CapsuleInfo = T.RT_4,
     CharName = "UI_Npc_Name_Dafu",
     CondemnWeapon = 30,
@@ -525,7 +543,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 200,
     MaxHpLevelGrow = "MaxHpA",
     MaxSp = 120,
-    ModApplicationType = T.RT_55,
+    ModApplicationType = T.RT_54,
     ModelId = 5401,
     RoleId = 202,
     SkillList = {
@@ -599,15 +617,15 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
-    CapsuleInfo = T.RT_36,
-    CharGradeDescription = T.RT_56,
-    CharGradeParameter = T.RT_57,
+    CapsuleInfo = T.RT_35,
+    CharGradeDescription = T.RT_55,
+    CharGradeParameter = T.RT_56,
     CharName = "UI_CHAR_NAME_4101",
     CondemnWeapon = 30,
     DEF = 276,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_58,
+    ExcelWeaponTags = T.RT_57,
     GuideIconImg = "Mini_Lise",
     MaxES = 300,
     MaxESLevelGrow = "MaxESS",
@@ -615,15 +633,15 @@ return ReadOnly("BattleChar", {
     MaxHpLevelGrow = "MaxHpS",
     MaxSecondSp = 150,
     MaxSp = 300,
-    ModApplicationType = T.RT_59,
+    ModApplicationType = T.RT_58,
     ModelId = 4101,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_lise_Client.BP_lise_Client'",
     RangedWeapon = 20201,
     RoleId = 207,
-    SkillList = T.RT_60,
+    SkillList = T.RT_59,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_65,
+    UpgradeSkillExtraLevel = T.RT_64,
     WeaponId = 10101
   },
   [1101] = {
@@ -937,9 +955,9 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
     CapsuleInfo = T.RT_4,
-    CharAddonAttr = T.RT_23,
-    CharGradeDescription = T.RT_24,
-    CharGradeParameter = T.RT_25,
+    CharAddonAttr = T.RT_22,
+    CharGradeDescription = T.RT_23,
+    CharGradeParameter = T.RT_24,
     CharName = "UI_CHAR_NAME_101",
     CondemnWeapon = 30,
     DEF = 300,
@@ -957,48 +975,13 @@ return ReadOnly("BattleChar", {
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Nvzhu_Dark_Client.BP_Nvzhu_Dark_Client'",
     Positioning = T.RT_8,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_26,
+    RecommendAttr = T.RT_25,
     RoleId = 1201,
-    SkillList = T.RT_27,
+    SkillList = T.RT_26,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_32,
+    UpgradeSkillExtraLevel = T.RT_31,
     WeaponId = 10103
-  },
-  [1202] = {
-    ATK = 21,
-    ATKLevelGrow = "ATKS",
-    Attribute = "Dark",
-    BTMotionParams = T.RT_1,
-    BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_2,
-    CapsuleInfo = T.RT_4,
-    CharName = "UI_CHAR_NAME_1202",
-    CondemnWeapon = 30,
-    DEF = 300,
-    DEFLevelGrow = "DEFS",
-    ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_11,
-    GuideIconImg = "Mini_Heitao",
-    MaxES = 100,
-    MaxESLevelGrow = "MaxESS",
-    MaxHp = 150,
-    MaxHpLevelGrow = "MaxHpS",
-    MaxSp = 180,
-    ModApplicationType = T.RT_5,
-    ModelId = 1101,
-    PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Falu_Client.BP_Falu_Client'",
-    RangedWeapon = 20201,
-    RoleId = 1202,
-    SkillList = {
-      120201,
-      120202,
-      120203,
-      120204
-    },
-    Sp = -1,
-    UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    WeaponId = 10101
   },
   [1501] = {
     ATK = 24,
@@ -1007,8 +990,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BaseMVPScore = 2.4,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_33,
-    CapsuleInfo = T.RT_34,
+    BattleCharTag = T.RT_32,
+    CapsuleInfo = T.RT_33,
     CharAddonAttr = {
       150101,
       150102,
@@ -1098,8 +1081,8 @@ return ReadOnly("BattleChar", {
     BaseMVPScore = 2,
     BattleCharBuffUI = 1502,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       150201,
       150202,
@@ -1127,7 +1110,7 @@ return ReadOnly("BattleChar", {
     DEF = 255,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_37,
+    ExcelWeaponTags = T.RT_36,
     GuideIconImg = "Mini_Nifu",
     MaxES = 105,
     MaxESLevelGrow = "MaxESS",
@@ -1139,7 +1122,7 @@ return ReadOnly("BattleChar", {
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Nifu_Client.BP_Nifu_Client'",
     Positioning = T.RT_13,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_38,
+    RecommendAttr = T.RT_37,
     RoleId = 1502,
     SkillList = {
       150201,
@@ -1183,7 +1166,7 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_9,
     CapsuleInfo = T.RT_10,
-    CharAddonAttr = T.RT_39,
+    CharAddonAttr = T.RT_38,
     CharGradeDescription = {
       [1] = "GRADEUP_1503_01",
       [2] = "GRADEUP_1503_02",
@@ -1235,7 +1218,7 @@ return ReadOnly("BattleChar", {
       150003
     },
     Sp = -1,
-    UltraWeapon = T.RT_39,
+    UltraWeapon = T.RT_38,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
     UpgradeSkillExtraLevel = {
       {
@@ -1265,7 +1248,7 @@ return ReadOnly("BattleChar", {
     ATK = 29,
     ATKLevelGrow = "ATKS",
     Attribute = "Light",
-    BTMotionParams = T.RT_40,
+    BTMotionParams = T.RT_39,
     BattleCharBuffUI = 1504,
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
@@ -1298,7 +1281,7 @@ return ReadOnly("BattleChar", {
     EnableAnimFly = true,
     EnableJetJump = true,
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_41,
+    ExcelWeaponTags = T.RT_40,
     GuideIconImg = "Mini_Suyi",
     MaxES = 140,
     MaxESLevelGrow = "MaxESS",
@@ -1364,14 +1347,14 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BattleCharBuffUI = 1505,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharName = "大暴怒",
     CondemnWeapon = 30,
     DEF = 255,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_37,
+    ExcelWeaponTags = T.RT_36,
     GuideIconImg = "Mini_Nifu",
     MaxES = 105,
     MaxESLevelGrow = "MaxESS",
@@ -1382,7 +1365,7 @@ return ReadOnly("BattleChar", {
     ModelId = 1505,
     Positioning = T.RT_6,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_38,
+    RecommendAttr = T.RT_37,
     RoleId = 1505,
     SkillList = {
       150501,
@@ -1405,9 +1388,9 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
     CapsuleInfo = T.RT_4,
-    CharAddonAttr = T.RT_42,
-    CharGradeDescription = T.RT_43,
-    CharGradeParameter = T.RT_44,
+    CharAddonAttr = T.RT_41,
+    CharGradeDescription = T.RT_42,
+    CharGradeParameter = T.RT_43,
     CharName = "UI_CHAR_NAME_101",
     CondemnWeapon = 30,
     DEF = 300,
@@ -1422,14 +1405,14 @@ return ReadOnly("BattleChar", {
     MaxSp = 100,
     ModApplicationType = T.RT_18,
     ModelId = 101,
-    Positioning = T.RT_45,
+    Positioning = T.RT_44,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_46,
+    RecommendAttr = T.RT_45,
     RoleId = 1601,
-    SkillList = T.RT_47,
+    SkillList = T.RT_46,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_52,
+    UpgradeSkillExtraLevel = T.RT_51,
     WeaponId = 10101
   },
   [1801] = {
@@ -1477,9 +1460,9 @@ return ReadOnly("BattleChar", {
     MaxSp = 160,
     ModApplicationType = T.RT_18,
     ModelId = 1801,
-    Positioning = T.RT_45,
+    Positioning = T.RT_44,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_54,
+    RecommendAttr = T.RT_53,
     RoleId = 1801,
     SkillList = {
       180101,
@@ -1523,8 +1506,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BaseMVPScore = 4,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       210101,
       210102,
@@ -1551,18 +1534,18 @@ return ReadOnly("BattleChar", {
     DEF = 252,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_66,
+    ExcelWeaponTags = T.RT_65,
     GuideIconImg = "Mini_Shuimu",
     MaxES = 100,
     MaxESLevelGrow = "MaxESS",
     MaxHp = 100,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 150,
-    ModApplicationType = T.RT_67,
+    ModApplicationType = T.RT_66,
     ModelId = 2101,
-    Positioning = T.RT_68,
+    Positioning = T.RT_67,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_69,
+    RecommendAttr = T.RT_68,
     RoleId = 2101,
     SkillList = {
       210101,
@@ -1601,31 +1584,48 @@ return ReadOnly("BattleChar", {
   },
   [2102] = {
     AIBTPath = "/Game/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.BT_TestAI_Shuimu",
-    ATK = 25,
+    ATK = 26,
     ATKLevelGrow = "ATKS",
     Attribute = "Water",
     BTMotionParams = T.RT_1,
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
-    CapsuleInfo = T.RT_36,
-    CharName = "UI_CHAR_NAME_2101",
-    CharUIId = 1,
+    CapsuleInfo = T.RT_35,
+    CharAddonAttr = T.RT_69,
+    CharGradeDescription = {
+      [1] = "GRADEUP_2102_01",
+      [2] = "GRADEUP_2102_02",
+      [3] = "GRADEUP_2102_03",
+      [4] = "GRADEUP_2102_04",
+      [5] = "GRADEUP_2102_05",
+      [6] = "GRADEUP_2102_06"
+    },
+    CharGradeParameter = {
+      [1] = "$#PassiveEffect[210212].Vars.Prob*100$%",
+      [2] = "$#Buff[210213].AddAttrs[1].Rate*100$%",
+      [3] = "$#Buff[210211].AddAttrs[1].Value/100$",
+      [4] = "$#Buff[210215].AddAttrs[1].Value*100$%",
+      [5] = "$#PassiveEffect[210201].Vars.Grade6Prob*100$%",
+      [6] = "$#PassiveEffect[210201].Vars.Grade6CD$"
+    },
+    CharName = "UI_CHAR_NAME_2102",
+    CharUIId = 41,
     CondemnWeapon = 30,
-    DEF = 252,
+    DEF = 255,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_66,
-    GuideIconImg = "Mini_Shuimu",
-    MaxES = 100,
+    ExcelWeaponTags = {"Polearm", "Crossbow"},
+    GuideIconImg = "Mini_Eve",
+    MaxES = 95,
     MaxESLevelGrow = "MaxESS",
-    MaxHp = 100,
+    MaxHp = 95,
     MaxHpLevelGrow = "MaxHpS",
-    MaxSp = 200,
-    ModApplicationType = T.RT_67,
-    ModelId = 2101,
-    Positioning = T.RT_68,
-    RangedWeapon = 20207,
-    RecommendAttr = T.RT_69,
+    MaxSp = 180,
+    ModApplicationType = T.RT_66,
+    ModelId = 2102,
+    Positioning = T.RT_67,
+    RangedWeapon = 20201,
+    RecommendAttr = T.RT_68,
     RoleId = 2102,
     SkillList = {
       210201,
@@ -1635,7 +1635,30 @@ return ReadOnly("BattleChar", {
       210003
     },
     Sp = -1,
+    SummonId = T.RT_69,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
+    UpgradeSkillExtraLevel = {
+      {
+        ExtraLv = 2,
+        Grade = 3,
+        SkillId = 210201
+      },
+      {
+        ExtraLv = 2,
+        Grade = 5,
+        SkillId = 210202
+      },
+      {
+        ExtraLv = 1,
+        Grade = 3,
+        SkillId = 210203
+      },
+      {
+        ExtraLv = 1,
+        Grade = 5,
+        SkillId = 210203
+      }
+    },
     WeaponId = 10201
   },
   [2103] = {
@@ -1643,25 +1666,25 @@ return ReadOnly("BattleChar", {
     ATKLevelGrow = "ATKS",
     Attribute = "Water",
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharName = "UI_CHAR_NAME_2101",
     CondemnWeapon = 30,
     DEF = 252,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_66,
+    ExcelWeaponTags = T.RT_65,
     GuideIconImg = "Mini_Shuimu",
     MaxES = 100,
     MaxESLevelGrow = "MaxESS",
     MaxHp = 100,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 200,
-    ModApplicationType = T.RT_67,
+    ModApplicationType = T.RT_66,
     ModelId = 2101,
-    Positioning = T.RT_68,
+    Positioning = T.RT_67,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_69,
+    RecommendAttr = T.RT_68,
     RoleId = 2103,
     Sp = -1,
     SummonId = {210301},
@@ -1704,8 +1727,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BaseMVPScore = 5,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_33,
-    CapsuleInfo = T.RT_34,
+    BattleCharTag = T.RT_32,
+    CapsuleInfo = T.RT_33,
     CharAddonAttr = {
       230101,
       230102,
@@ -1737,7 +1760,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 115,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 150,
-    ModApplicationType = T.RT_67,
+    ModApplicationType = T.RT_66,
     ModelId = 2301,
     Positioning = {
       "Support",
@@ -1794,8 +1817,8 @@ return ReadOnly("BattleChar", {
     BaseMVPScore = 2,
     BattleCharBuffUI = 2401,
     BattleCharDetailTag = 1,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       240101,
       240102,
@@ -1830,7 +1853,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 105,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 150,
-    ModApplicationType = T.RT_67,
+    ModApplicationType = T.RT_66,
     ModelId = 2401,
     Positioning = {
       "Support",
@@ -1888,8 +1911,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BaseMVPScore = 0.8,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       310101,
       310102,
@@ -1929,12 +1952,7 @@ return ReadOnly("BattleChar", {
     ModelId = 3101,
     Positioning = T.RT_6,
     RangedWeapon = 20201,
-    RecommendAttr = {
-      "ATK_Fire",
-      "SkillIntensity",
-      "SkillEfficiency",
-      "SkillSustain"
-    },
+    RecommendAttr = T.RT_73,
     RoleId = 3101,
     SkillList = {
       310101,
@@ -1978,8 +1996,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BattleCharBuffUI = 3102,
     BattleCharDetailTag = 1,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       310201,
       310202,
@@ -2006,7 +2024,7 @@ return ReadOnly("BattleChar", {
     DEF = 265,
     DEFLevelGrow = "DEFA",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = {"Dualblade", "Cannon"},
+    ExcelWeaponTags = T.RT_74,
     GuideIconImg = "Mini_Xier",
     MaxES = 90,
     MaxESLevelGrow = "MaxESA",
@@ -2016,7 +2034,7 @@ return ReadOnly("BattleChar", {
     ModApplicationType = T.RT_72,
     ModelId = 3102,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Xier_Client.BP_Xier_Client'",
-    Positioning = T.RT_73,
+    Positioning = T.RT_75,
     RangedWeapon = 20201,
     RecommendAttr = {
       "ATK_Fire",
@@ -2107,7 +2125,7 @@ return ReadOnly("BattleChar", {
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Yeer_Client.BP_Yeer_Client'",
     Positioning = T.RT_13,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_74,
+    RecommendAttr = T.RT_76,
     RoleId = 3103,
     SkillList = {
       310301,
@@ -2143,6 +2161,43 @@ return ReadOnly("BattleChar", {
     },
     WeaponId = 10101
   },
+  [3104] = {
+    ATK = 21,
+    ATKLevelGrow = "ATKS",
+    Attribute = "Fire",
+    BTMotionParams = T.RT_1,
+    BattleCharDetailTag = 0,
+    BattleCharTag = T.RT_2,
+    CapsuleInfo = T.RT_4,
+    CharName = "UI_CHAR_NAME_3104",
+    CondemnWeapon = 30,
+    DEF = 288,
+    DEFLevelGrow = "DEFS",
+    ExcelWeaponRate = 0.2,
+    ExcelWeaponTags = T.RT_74,
+    GuideIconImg = "Mini_Falu",
+    MaxES = 96,
+    MaxESLevelGrow = "MaxESS",
+    MaxHp = 96,
+    MaxHpLevelGrow = "MaxHpS",
+    MaxSp = 180,
+    ModApplicationType = T.RT_72,
+    ModelId = 3104,
+    PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Falu_Client.BP_Falu_Client'",
+    Positioning = T.RT_13,
+    RangedWeapon = 20201,
+    RecommendAttr = T.RT_73,
+    RoleId = 3104,
+    SkillList = {
+      310401,
+      310402,
+      310403,
+      310404
+    },
+    Sp = -1,
+    UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
+    WeaponId = 10401
+  },
   [3201] = {
     ATK = 15,
     ATKLevelGrow = "ATKA",
@@ -2151,8 +2206,8 @@ return ReadOnly("BattleChar", {
     BaseMVPScore = 5,
     BattleCharBuffUI = 3201,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       320101,
       320102,
@@ -2186,9 +2241,9 @@ return ReadOnly("BattleChar", {
     MaxSp = 120,
     ModApplicationType = T.RT_72,
     ModelId = 3201,
-    Positioning = T.RT_75,
+    Positioning = T.RT_77,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_76,
+    RecommendAttr = T.RT_78,
     RoleId = 3201,
     SkillList = {
       320101,
@@ -2231,8 +2286,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BaseMVPScore = 0.6,
     BattleCharDetailTag = 1,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       320201,
       320202,
@@ -2261,7 +2316,7 @@ return ReadOnly("BattleChar", {
     DEF = 330,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_77,
+    ExcelWeaponTags = T.RT_79,
     GuideIconImg = "Mini_Kami",
     MaxES = 120,
     MaxESLevelGrow = "MaxESS",
@@ -2352,7 +2407,7 @@ return ReadOnly("BattleChar", {
     DEF = 264,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_41,
+    ExcelWeaponTags = T.RT_40,
     GuideIconImg = "Mini_Maer",
     MaxES = 83,
     MaxESLevelGrow = "MaxESS",
@@ -2367,7 +2422,7 @@ return ReadOnly("BattleChar", {
       "SkillDPS"
     },
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_74,
+    RecommendAttr = T.RT_76,
     RoleId = 3301,
     SkillList = {
       330101,
@@ -2410,22 +2465,17 @@ return ReadOnly("BattleChar", {
     BaseMVPScore = 1.4,
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
-    CapsuleInfo = T.RT_36,
-    CharAddonAttr = {
-      410101,
-      410102,
-      410103,
-      410104
-    },
-    CharGradeDescription = T.RT_56,
-    CharGradeParameter = T.RT_57,
+    CapsuleInfo = T.RT_35,
+    CharAddonAttr = T.RT_80,
+    CharGradeDescription = T.RT_55,
+    CharGradeParameter = T.RT_56,
     CharName = "UI_CHAR_NAME_4101",
     CharUIId = 16,
     CondemnWeapon = 30,
     DEF = 276,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_58,
+    ExcelWeaponTags = T.RT_57,
     GuideIconImg = "Mini_Lise",
     MaxES = 94,
     MaxESLevelGrow = "MaxESS",
@@ -2433,17 +2483,17 @@ return ReadOnly("BattleChar", {
     MaxHpLevelGrow = "MaxHpS",
     MaxSecondSp = 150,
     MaxSp = 150,
-    ModApplicationType = T.RT_59,
+    ModApplicationType = T.RT_58,
     ModelId = 4101,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_lise_Client.BP_lise_Client'",
     Positioning = T.RT_13,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_78,
+    RecommendAttr = T.RT_81,
     RoleId = 4101,
-    SkillList = T.RT_60,
+    SkillList = T.RT_59,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_65,
+    UpgradeSkillExtraLevel = T.RT_64,
     WeaponId = 10101
   },
   [4102] = {
@@ -2454,8 +2504,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BattleCharBuffUI = 4102,
     BattleCharDetailTag = 1,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       410201,
       410202,
@@ -2490,12 +2540,12 @@ return ReadOnly("BattleChar", {
     MaxHp = 80,
     MaxHpLevelGrow = "MaxHpA",
     MaxSp = 240,
-    ModApplicationType = T.RT_59,
+    ModApplicationType = T.RT_58,
     ModelId = 4102,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Zhiliu_Client.BP_Zhiliu_Client'",
     Positioning = T.RT_13,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_78,
+    RecommendAttr = T.RT_81,
     RoleId = 4102,
     SkillList = {
       410201,
@@ -2529,6 +2579,40 @@ return ReadOnly("BattleChar", {
         SkillId = 410203
       }
     },
+    WeaponId = 10101
+  },
+  [4103] = {
+    ATK = 22,
+    ATKLevelGrow = "ATKS",
+    Attribute = "Thunder",
+    BTMotionParams = T.RT_1,
+    BaseMVPScore = 1.4,
+    BattleCharDetailTag = 0,
+    BattleCharTag = T.RT_2,
+    CapsuleInfo = T.RT_35,
+    CharName = "UI_CHAR_NAME_4101",
+    CharUIId = 16,
+    CondemnWeapon = 30,
+    DEF = 276,
+    DEFLevelGrow = "DEFS",
+    ExcelWeaponRate = 0.2,
+    ExcelWeaponTags = T.RT_57,
+    GuideIconImg = "Mini_Lise",
+    MaxES = 94,
+    MaxESLevelGrow = "MaxESS",
+    MaxHp = 94,
+    MaxHpLevelGrow = "MaxHpS",
+    MaxSecondSp = 150,
+    MaxSp = 150,
+    ModApplicationType = T.RT_58,
+    ModelId = 4101,
+    Positioning = T.RT_13,
+    RangedWeapon = 20201,
+    RecommendAttr = T.RT_81,
+    RoleId = 4103,
+    SkillList = T.RT_80,
+    Sp = -1,
+    UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
     WeaponId = 10101
   },
   [4201] = {
@@ -2574,19 +2658,19 @@ return ReadOnly("BattleChar", {
     DEF = 300,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_79,
+    ExcelWeaponTags = T.RT_82,
     GuideIconImg = "Mini_Yuming",
     MaxES = 50,
     MaxESLevelGrow = "MaxESS",
     MaxHp = 150,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 200,
-    ModApplicationType = T.RT_59,
+    ModApplicationType = T.RT_58,
     ModelId = 4201,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Yuming_Client.BP_Yuming_Client'",
-    Positioning = T.RT_73,
+    Positioning = T.RT_75,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_78,
+    RecommendAttr = T.RT_81,
     RoleId = 4201,
     SkillList = {
       420101,
@@ -2661,7 +2745,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 105,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 120,
-    ModApplicationType = T.RT_59,
+    ModApplicationType = T.RT_58,
     ModelId = 4202,
     Positioning = {
       "Support",
@@ -2717,8 +2801,8 @@ return ReadOnly("BattleChar", {
     BTMotionParams = T.RT_1,
     BaseMVPScore = 4,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
-    CapsuleInfo = T.RT_36,
+    BattleCharTag = T.RT_34,
+    CapsuleInfo = T.RT_35,
     CharAddonAttr = {
       430101,
       430102,
@@ -2754,11 +2838,11 @@ return ReadOnly("BattleChar", {
     MaxHp = 185,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 200,
-    ModApplicationType = T.RT_59,
+    ModApplicationType = T.RT_58,
     ModelId = 4301,
-    Positioning = T.RT_75,
+    Positioning = T.RT_77,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_76,
+    RecommendAttr = T.RT_78,
     RoleId = 4301,
     SkillList = {
       430101,
@@ -2802,8 +2886,8 @@ return ReadOnly("BattleChar", {
     BaseMVPScore = 2.4,
     BattleCharBuffUI = 5101,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_33,
-    CapsuleInfo = T.RT_34,
+    BattleCharTag = T.RT_32,
+    CapsuleInfo = T.RT_33,
     CharAddonAttr = {
       510101,
       510102,
@@ -2839,7 +2923,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 185,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 120,
-    ModApplicationType = T.RT_80,
+    ModApplicationType = T.RT_83,
     ModelId = 5101,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Songlu_PassiveClient.BP_Songlu_PassiveClient'",
     Positioning = {
@@ -2863,8 +2947,8 @@ return ReadOnly("BattleChar", {
       510191
     },
     Sp = -1,
-    SummonId = T.RT_81,
-    UltraWeapon = T.RT_81,
+    SummonId = T.RT_84,
+    UltraWeapon = T.RT_84,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
     UpgradeSkillExtraLevel = {
       {
@@ -2933,7 +3017,7 @@ return ReadOnly("BattleChar", {
     MaxHp = 85,
     MaxHpLevelGrow = "MaxHpA",
     MaxSp = 120,
-    ModApplicationType = T.RT_80,
+    ModApplicationType = T.RT_83,
     ModelId = 5102,
     Positioning = T.RT_8,
     RangedWeapon = 20201,
@@ -2983,7 +3067,7 @@ return ReadOnly("BattleChar", {
     ATK = 28,
     ATKLevelGrow = "ATKS",
     Attribute = "Wind",
-    BTMotionParams = T.RT_40,
+    BTMotionParams = T.RT_39,
     BattleCharBuffUI = 5301,
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
@@ -3016,14 +3100,14 @@ return ReadOnly("BattleChar", {
     DEF = 252,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_79,
+    ExcelWeaponTags = T.RT_82,
     GuideIconImg = "Mini_Saiqi",
     MaxES = 140,
     MaxESLevelGrow = "MaxESS",
     MaxHp = 70,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 150,
-    ModApplicationType = T.RT_80,
+    ModApplicationType = T.RT_83,
     ModelId = 5301,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Saiqi_Client.BP_Saiqi_Client'",
     Positioning = {
@@ -3049,8 +3133,8 @@ return ReadOnly("BattleChar", {
       510003
     },
     Sp = -1,
-    SummonId = T.RT_82,
-    UltraWeapon = T.RT_82,
+    SummonId = T.RT_85,
+    UltraWeapon = T.RT_85,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
     UpgradeSkillExtraLevel = {
       {
@@ -3084,7 +3168,7 @@ return ReadOnly("BattleChar", {
     BaseMVPScore = 5,
     BattleCharBuffUI = 5401,
     BattleCharDetailTag = 0,
-    BattleCharTag = T.RT_35,
+    BattleCharTag = T.RT_34,
     CapsuleInfo = T.RT_4,
     CharAddonAttr = {
       540101,
@@ -3113,14 +3197,14 @@ return ReadOnly("BattleChar", {
     DEF = 285,
     DEFLevelGrow = "DEFA",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_77,
+    ExcelWeaponTags = T.RT_79,
     GuideIconImg = "Mini_Dafu",
     MaxES = 100,
     MaxESLevelGrow = "MaxESA",
     MaxHp = 100,
     MaxHpLevelGrow = "MaxHpA",
     MaxSp = 160,
-    ModApplicationType = T.RT_80,
+    ModApplicationType = T.RT_83,
     ModelId = 5401,
     Positioning = {
       "Support",
@@ -3128,7 +3212,7 @@ return ReadOnly("BattleChar", {
       "Heal"
     },
     RangedWeapon = 20101,
-    RecommendAttr = T.RT_54,
+    RecommendAttr = T.RT_53,
     RoleId = 5401,
     SkillList = {
       540101,
@@ -3167,7 +3251,8 @@ return ReadOnly("BattleChar", {
     ATK = 28,
     ATKLevelGrow = "ATKS",
     Attribute = "Wind",
-    BTMotionParams = T.RT_40,
+    BTMotionParams = T.RT_39,
+    BattleCharBuffUI = 5402,
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
     CapsuleInfo = T.RT_4,
@@ -3176,22 +3261,23 @@ return ReadOnly("BattleChar", {
     DEF = 252,
     DEFLevelGrow = "DEFS",
     ExcelWeaponRate = 0.2,
-    ExcelWeaponTags = T.RT_79,
+    ExcelWeaponTags = T.RT_82,
     GuideIconImg = "Mini_Lilikou",
     MaxES = 140,
     MaxESLevelGrow = "MaxESS",
     MaxHp = 70,
     MaxHpLevelGrow = "MaxHpS",
     MaxSp = 150,
-    ModApplicationType = T.RT_80,
-    ModelId = 5301,
+    ModApplicationType = T.RT_83,
+    ModelId = 5402,
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Lilikou_Client.BP_Lilikou_Client'",
     RangedWeapon = 20201,
     RoleId = 5402,
     SkillList = {
       540201,
-      540231,
-      540203
+      540202,
+      540203,
+      540204
     },
     Sp = -1,
     UltraWeapon = {540201},
@@ -3221,7 +3307,7 @@ return ReadOnly("BattleChar", {
     ModApplicationType = T.RT_18,
     ModelId = 10301,
     RoleId = 11301,
-    SkillList = T.RT_22,
+    SkillList = {11301},
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
     WeaponId = 10103
@@ -3249,7 +3335,7 @@ return ReadOnly("BattleChar", {
     ModApplicationType = T.RT_18,
     ModelId = 10401,
     RoleId = 11401,
-    SkillList = T.RT_22,
+    SkillList = {10001},
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
     WeaponId = 10103
@@ -3380,9 +3466,9 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_20,
     CapsuleInfo = T.RT_4,
-    CharAddonAttr = T.RT_23,
-    CharGradeDescription = T.RT_24,
-    CharGradeParameter = T.RT_25,
+    CharAddonAttr = T.RT_22,
+    CharGradeDescription = T.RT_23,
+    CharGradeParameter = T.RT_24,
     CharName = "UI_CHAR_NAME_101",
     CondemnWeapon = 30,
     DEF = 300,
@@ -3400,12 +3486,12 @@ return ReadOnly("BattleChar", {
     PassiveEffectClient = "Blueprint'/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Client/BP_Nvzhu_Dark_Client.BP_Nvzhu_Dark_Client'",
     Positioning = T.RT_8,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_26,
+    RecommendAttr = T.RT_25,
     RoleId = 120101,
-    SkillList = T.RT_27,
+    SkillList = T.RT_26,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_32,
+    UpgradeSkillExtraLevel = T.RT_31,
     WeaponId = 10103
   },
   [160101] = {
@@ -3418,9 +3504,9 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_20,
     CapsuleInfo = T.RT_4,
-    CharAddonAttr = T.RT_42,
-    CharGradeDescription = T.RT_43,
-    CharGradeParameter = T.RT_44,
+    CharAddonAttr = T.RT_41,
+    CharGradeDescription = T.RT_42,
+    CharGradeParameter = T.RT_43,
     CharName = "UI_CHAR_NAME_101",
     CondemnWeapon = 30,
     DEF = 300,
@@ -3435,14 +3521,14 @@ return ReadOnly("BattleChar", {
     MaxSp = 100,
     ModApplicationType = T.RT_18,
     ModelId = 102,
-    Positioning = T.RT_45,
+    Positioning = T.RT_44,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_46,
+    RecommendAttr = T.RT_45,
     RoleId = 160101,
-    SkillList = T.RT_47,
+    SkillList = T.RT_46,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_52,
+    UpgradeSkillExtraLevel = T.RT_51,
     WeaponId = 10101
   },
   [160102] = {
@@ -3454,9 +3540,9 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_2,
     CapsuleInfo = T.RT_4,
-    CharAddonAttr = T.RT_42,
-    CharGradeDescription = T.RT_43,
-    CharGradeParameter = T.RT_44,
+    CharAddonAttr = T.RT_41,
+    CharGradeDescription = T.RT_42,
+    CharGradeParameter = T.RT_43,
     CharName = "UI_CHAR_NAME_101",
     CondemnWeapon = 30,
     DEF = 300,
@@ -3471,14 +3557,14 @@ return ReadOnly("BattleChar", {
     MaxSp = 100,
     ModApplicationType = T.RT_18,
     ModelId = 160102,
-    Positioning = T.RT_45,
+    Positioning = T.RT_44,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_46,
+    RecommendAttr = T.RT_45,
     RoleId = 160102,
-    SkillList = T.RT_53,
+    SkillList = T.RT_52,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_52,
+    UpgradeSkillExtraLevel = T.RT_51,
     WeaponId = 10101
   },
   [160103] = {
@@ -3490,9 +3576,9 @@ return ReadOnly("BattleChar", {
     BattleCharDetailTag = 0,
     BattleCharTag = T.RT_20,
     CapsuleInfo = T.RT_4,
-    CharAddonAttr = T.RT_42,
-    CharGradeDescription = T.RT_43,
-    CharGradeParameter = T.RT_44,
+    CharAddonAttr = T.RT_41,
+    CharGradeDescription = T.RT_42,
+    CharGradeParameter = T.RT_43,
     CharName = "UI_CHAR_NAME_101",
     CondemnWeapon = 30,
     DEF = 300,
@@ -3507,14 +3593,14 @@ return ReadOnly("BattleChar", {
     MaxSp = 100,
     ModApplicationType = T.RT_18,
     ModelId = 160103,
-    Positioning = T.RT_45,
+    Positioning = T.RT_44,
     RangedWeapon = 20201,
-    RecommendAttr = T.RT_46,
+    RecommendAttr = T.RT_45,
     RoleId = 160103,
-    SkillList = T.RT_53,
+    SkillList = T.RT_52,
     Sp = -1,
     UnitBPPath = "/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C",
-    UpgradeSkillExtraLevel = T.RT_52,
+    UpgradeSkillExtraLevel = T.RT_51,
     WeaponId = 10101
   },
   [220101] = {

@@ -99,6 +99,7 @@ function M:OnTaskItemInited(Content, Widget)
       end)
     end
   end
+  Widget:StopAllAnimations()
   if ConfigData.RewardsGot then
     Widget:PlayAnimation(Widget.Received)
   elseif ConfigData.CanReceive then
@@ -332,6 +333,7 @@ function M:RefreshList()
   for Idx, Content in ipairs(Contents) do
     self.List_Item:AddItem(Content)
   end
+  self.List_Item:RequestPlayEntriesAnim()
   if Count > 0 or ReturnModel:CheckHaveProgressRewardToGet() then
     self:RefreshButton(true)
   else

@@ -11,6 +11,112 @@ function M:InitializeLua(TalkTask)
   self.CachedNpcTransforms = {}
 end
 
+function M:PreStartFlowNode(StartNode)
+  self.PendingStartNode = StartNode
+  if self.TalkTask then
+    self.TalkTask:ContinueFlowStart(function()
+      local Node = self.PendingStartNode
+      self.PendingStartNode = nil
+      if IsValid(Node) then
+        Node:TriggerFirstOutput(true)
+      end
+      if self.RestartDialogueId then
+        self:SetSkipInRestartTag(true)
+        self:SkipToEnd()
+        self:SetSkipInRestartTag(nil)
+      end
+    end)
+  elseif UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
+    self:StartDebugTalkTaskCreation()
+  end
+end
+
+function M:StartDebugTalkTaskCreation()
+  local TemplatePath = UE4.UKismetSystemLibrary.GetPathName(self.TemplateAsset)
+  local AssetName = UE4.UNameStringFunctionLibrary.LongPathNameToName(TemplatePath)
+  Utils.ScreenPrint("DialogueFlow Debug Run: " .. TemplatePath)
+  local TS = TalkSubsystem()
+  TS:RegisterExistingFlowTalkTask(TemplatePath, self)
+  local RawData = self:BuildDebugTalkNodeData(TemplatePath, AssetName)
+  if not RawData then
+    return
+  end
+  self.bDebugRun = true
+  local Key = TS:RegisterTalkData(RawData)
+  local Task, TaskData = TS:CreateTalkTaskData(Key)
+  TS:TryFireEnterStoryEvent(Task)
+  Task:ContinueFlowStart(function()
+    local Node = self.PendingStartNode
+    self.PendingStartNode = nil
+    if IsValid(Node) then
+      Node:TriggerFirstOutput(true)
+    end
+    if self.RestartDialogueId then
+      self:SetSkipInRestartTag(true)
+      self:SkipToEnd()
+      self:SetSkipInRestartTag(nil)
+    end
+  end)
+end
+
+function M:BuildDebugTalkNodeData(AssetPath, AssetName)
+  local pro_path = UE4.UKismetSystemLibrary.GetProjectContentDirectory()
+  local talkNodesPath = pro_path .. "../Tools/storycreator/talk_nodes.json"
+  if UBlueprintPathsLibrary.FileExists(talkNodesPath) then
+    local a, Info = UE4.URuntimeCommonFunctionLibrary.ParseTalkNodesByPath(GWorld, talkNodesPath, AssetName, true)
+    if Info and "" ~= Info then
+      local TalkNodeInfo = Json.decode(Info)
+      local FilePath = TalkNodeInfo.filePath
+      Utils.ScreenPrint("DialogueFlow Debug Run TalkNode: " .. FilePath)
+      if FilePath then
+        local ModulePath = self:FilePathToModulePath(FilePath)
+        local ok, module = pcall(require, ModulePath)
+        if ok and module then
+          local Props = self:ExtractTalkNodeProps(module, AssetName, true)
+          if Props then
+            return Props
+          end
+        end
+      end
+    end
+  end
+  Utils.ScreenPrint("DialogueFlow Debug Run: fallback to FlowTemplate")
+  local ok, module = pcall(require, "StoryCreator.StoryFiles.FlowTemplate")
+  if ok and module then
+    local Props = self:ExtractTalkNodeProps(module, AssetName, false)
+    if Props then
+      Props.FlowAssetPath = AssetPath
+    end
+    return Props
+  end
+  return nil
+end
+
+function M:FilePathToModulePath(FilePath)
+  local ModulePath = string.gsub(FilePath, "../../Content/Script/", "")
+  ModulePath = string.gsub(ModulePath, "%.lua$", "")
+  ModulePath = string.gsub(ModulePath, "[/\\]", ".")
+  return ModulePath
+end
+
+function M:ExtractTalkNodeProps(Module, AssetName, bMatchFlowAsset)
+  local storyNodes = Module.storyNodeData or {}
+  for _, storyNode in pairs(storyNodes) do
+    local nodeData = storyNode.questNodeData and storyNode.questNodeData.nodeData or {}
+    for nodeId, node in pairs(nodeData) do
+      if node.type == "TalkNode" and node.propsData then
+        if not bMatchFlowAsset then
+          return node.propsData
+        end
+        if node.propsData.FlowAssetPath and node.propsData.FlowAssetPath ~= "" and string.find(node.propsData.FlowAssetPath, AssetName, 1, true) then
+          return node.propsData
+        end
+      end
+    end
+  end
+  return nil
+end
+
 function M:IsFinish()
   return self:IsActive()
 end
@@ -96,6 +202,13 @@ end
 function M:OnFinishEvent()
   self:RecoverTalkActorsOptimization()
   self:ResetNpcTransform()
+  if self:GetFinishPolicy() == UE4.EFlowFinishPolicy.Abort and self.TalkTask then
+    self.TalkTask:EndDialogue()
+  end
+  if self.bDebugRun then
+    self.bDebugRun = nil
+    TalkSubsystem():TryFireLeaveStoryEvent()
+  end
 end
 
 function M:RecoverTalkActorsOptimization()

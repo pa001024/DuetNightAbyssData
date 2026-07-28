@@ -1,3 +1,4 @@
+local CoroutineUtils = require("CoroutineUtils")
 local ModModel = require("BluePrints.UI.WBP.Armory.Mod.Utils.ModModel")
 local ModDatas = require("BluePrints.UI.WBP.Armory.Mod.Utils.ModDatas")
 local SelectedStuff = ModDatas.SelectedStuff
@@ -129,10 +130,10 @@ end
 
 function M:SetUICamera(Offset)
   local ArmoryUI = self:GetUIMgr():GetArmoryUIObj()
-  if not IsValid(ArmoryUI) then
+  local ActorController = self.ActorController or ArmoryUI and ArmoryUI.ActorController
+  if not ActorController then
     return
   end
-  local ActorController = self.ActorController or ArmoryUI.ActorController
   if Offset then
     ActorController:SetExCameraOffset(Offset)
   end
@@ -569,11 +570,11 @@ function M:LaunchAutoEquipMod(ModSuitCopyInfo)
   self.AutoEquipTimeOutKey = self:AddTimer(500000, function()
     ModModel:StopAutoEquip()
     self.AutoEquipTimeOutKey = nil
-    ForceStopAsyncTask(self, "AutoEquipModTask")
+    CoroutineUtils.ForceStopAsyncTask(self, "AutoEquipModTask")
     self:CheckError(ErrorCode.RET_MOD_AUTOPUTON_FAILD)
     self:NotifyEvent(ModCommon.EventId.OnAutoEquipTimeOut)
   end)
-  RunAsyncTask(self, "AutoEquipModTask", self.AutoEquipModTaskFunc)
+  CoroutineUtils.RunAsyncTask(self, "AutoEquipModTask", self.AutoEquipModTaskFunc)
 end
 
 function M.AutoEquipModTaskFunc(CoroutineObj, self)
@@ -635,7 +636,7 @@ function M:TryAbortAutoEquip()
   if ModModel:IsInAutoEquip() then
     ModModel:StopAutoEquip()
     self:StopAutoEquipTimer()
-    ForceStopAsyncTask(self, "AutoEquipModTask")
+    CoroutineUtils.ForceStopAsyncTask(self, "AutoEquipModTask")
     self:NotifyEvent(ModCommon.EventId.OnAutoEquipAbort)
   end
 end

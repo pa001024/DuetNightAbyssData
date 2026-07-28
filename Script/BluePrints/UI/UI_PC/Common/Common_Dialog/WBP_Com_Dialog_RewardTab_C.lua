@@ -22,6 +22,8 @@ function WBP_Com_Dialog_RewardTab_C:OnListItemObjectSet(Content)
   self.ReddotName = Content.ReddotName
   self.IsShowIcon = Content.IsShowIcon
   self.IconPath = Content.IconPath
+  self.IsForbidden = Content.IsForbidden
+  self.ForbiddenReasonText = Content.ForbiddenReasonText
   self.Content.Entry = self
   self.IsSelect = false
   if self.Content.Root.SelectedContent and self.Content.Root.SelectedContent.Index == self.Content.Index then
@@ -43,6 +45,9 @@ function WBP_Com_Dialog_RewardTab_C:OnListItemObjectSet(Content)
   if not self.AddListenerFinish then
     self.AddListenerFinish = true
     ReddotManager.AddListener(self.ReddotName, self, self.RefreshReddot)
+  end
+  if self.IsForbidden and self.Forbidden then
+    self:PlayAnimation(self.Forbidden)
   end
   self:RefreshReddot()
 end
@@ -69,11 +74,16 @@ function WBP_Com_Dialog_RewardTab_C:OnCellClicked(NotPlaySound)
   if self.IsSelect then
     return
   end
+  if self.IsForbidden then
+    local ToastText = self.ForbiddenReasonText or "This feature is not available."
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, ToastText)
+    return
+  end
   self.Content.Root:RefreshListRewardInfo(self, NotPlaySound)
 end
 
 function WBP_Com_Dialog_RewardTab_C:OnCellHovered()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
@@ -86,7 +96,7 @@ function WBP_Com_Dialog_RewardTab_C:OnCellHovered()
 end
 
 function WBP_Com_Dialog_RewardTab_C:OnCellUnhovered()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   if not self:IsAnimationPlaying(self.Click) then
@@ -97,14 +107,14 @@ function WBP_Com_Dialog_RewardTab_C:OnCellUnhovered()
 end
 
 function WBP_Com_Dialog_RewardTab_C:OnCellPressed()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   self:PlayAnimation(self.Press)
 end
 
 function WBP_Com_Dialog_RewardTab_C:OnCellReleased()
-  if self.IsSelect then
+  if self.IsSelect or self.IsForbidden then
     return
   end
   self:StopAnimation(self.Press)

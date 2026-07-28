@@ -82,6 +82,14 @@ function M:EMDestruct()
   if self.ClearScriptRegister then
     self:ClearScriptRegister()
   end
+  if self.ReddotNodeIns then
+    if ReddotManager then
+      for RdName in pairs(self.ReddotNodeIns) do
+        ReddotManager.RemoveListener(RdName, self)
+      end
+    end
+    self.ReddotNodeIns = nil
+  end
 end
 
 return M

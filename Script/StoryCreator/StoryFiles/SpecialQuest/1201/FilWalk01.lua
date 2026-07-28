@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -388,7 +388,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1626.2960224572034, y = -810.1096295547654},
-            propsData = {bEnablePP = true, PPEnum = 4}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["1762699661729836"] = {
             key = "1762699661729836",
@@ -629,7 +633,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 2969.293380258432, y = 513.011575806823},
-            propsData = {bEnablePP = false, PPEnum = 4}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["1762699661733859"] = {
             key = "1762699661733859",
@@ -712,7 +720,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1639.8569152085233, y = 955.0835900557114},
-            propsData = {bEnablePP = false, PPEnum = 4}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["1762699661734867"] = {
             key = "1762699661734867",

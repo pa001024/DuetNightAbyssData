@@ -38,7 +38,8 @@ Weapon.__Props__ = {
   DecomposeReward = prop.getter("Data", "DecomposeReward"),
   WeaponSubType = prop.getter("Data", "WeaponSubType"),
   HyperCardLevel = prop.prop("Int", "client save", 0),
-  HyperTalent = prop.prop("Int2IntSetDict", "client save")
+  HyperTalent = prop.prop("Int2IntSetDict", "client save"),
+  IsStar = prop.prop("Bool", "client save", false)
 }
 
 function Weapon:Init(Uuid, WeaponId, Level)
@@ -131,6 +132,9 @@ end
 
 function Weapon:GetCurrentSkin()
   local Appearance = self:GetAppearance()
+  if not Appearance then
+    return
+  end
   return self:GetSkin(Appearance.SkinId)
 end
 
@@ -501,6 +505,9 @@ end
 function Weapon:DumpAccessory()
   local Appearance = self:GetAppearance()
   local Res = {}
+  if not Appearance or not Appearance.Accessory then
+    return Res
+  end
   for key, value in pairs(Appearance.Accessory) do
     Res[key] = value
   end

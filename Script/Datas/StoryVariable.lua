@@ -166,6 +166,7 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "Entrance110101"
   },
+  FAET = {IsGlobal = true, VarName = "FAET"},
   FakeQuest1002 = {
     IsGlobal = true,
     VarName = "FakeQuest1002"
@@ -385,6 +386,10 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "First10040410FuluoTalk"
   },
+  First20040613 = {
+    IsGlobal = true,
+    VarName = "First20040613"
+  },
   FirstEscape = {
     IsGlobal = true,
     VarName = "FirstEscape"
@@ -531,6 +536,10 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "GlassThird10040106"
   },
+  Haiboliya_Chezhan_Online = {
+    IsGlobal = true,
+    VarName = "Haiboliya_Chezhan_Online"
+  },
   HaierYaoyue1 = {
     IsGlobal = true,
     VarName = "HaierYaoyue1"
@@ -581,6 +590,8 @@ return ReadOnly("StoryVariable", {
     VarName = "IQ12030706_jlc"
   },
   IQ120315 = {IsGlobal = true, VarName = "IQ120315"},
+  IQ200404 = {IsGlobal = true, VarName = "IQ200404"},
+  IQ200405 = {IsGlobal = true, VarName = "IQ200405"},
   Int12020208 = {
     IsGlobal = true,
     VarName = "Int12020208"
@@ -952,6 +963,50 @@ return ReadOnly("StoryVariable", {
   ZhilvTopBattle_Danger = {
     IsGlobal = true,
     VarName = "ZhilvTopBattle_Danger"
+  },
+  ex02_11020102 = {
+    IsGlobal = true,
+    VarName = "ex02_11020102"
+  },
+  ex02_11020103 = {
+    IsGlobal = true,
+    VarName = "ex02_11020103"
+  },
+  ex02_11020104 = {
+    IsGlobal = true,
+    VarName = "ex02_11020104"
+  },
+  ex02_110202 = {
+    IsGlobal = true,
+    VarName = "ex02_110202"
+  },
+  ex02_11020201 = {
+    IsGlobal = true,
+    VarName = "ex02_11020201"
+  },
+  ex02_11020202 = {
+    IsGlobal = true,
+    VarName = "ex02_11020202"
+  },
+  ex02_110213 = {
+    IsGlobal = true,
+    VarName = "ex02_110213"
+  },
+  ex02_110214 = {
+    IsGlobal = true,
+    VarName = "ex02_110214"
+  },
+  ex02_110215 = {
+    IsGlobal = true,
+    VarName = "ex02_110215"
+  },
+  ex02_11023101_First = {
+    IsGlobal = true,
+    VarName = "ex02_11023101_First"
+  },
+  ex02_11023102_Dinner = {
+    IsGlobal = true,
+    VarName = "ex02_11023102_Dinner"
   },
   icl100303 = {IsGlobal = true, VarName = "icl100303"},
   icl100303bf = {

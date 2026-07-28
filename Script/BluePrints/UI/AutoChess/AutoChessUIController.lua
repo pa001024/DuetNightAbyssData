@@ -43,6 +43,9 @@ function AutoChessUIController:BindViewEvents()
     end,
     OnBtnOpenQuestClicked = function()
       self:OpenAutoChessQuest()
+    end,
+    OnBtnShareClicked = function()
+      self:ShowBattleShareView()
     end
   }
   self.MainPageView:BindEvents(MainPageCallbacks)
@@ -70,8 +73,12 @@ function AutoChessUIController:ShowLevelSelectView(SelectType, MissionId, IsWin,
     LevelSelectPage = self.MainUI:PushSubPage("AutoChessLevelSelectPage", SelectType, MissionId, IsWin, First)
   elseif SelectType == AutoChessConst.LevelSelectType.Random then
     LevelSelectPage = self.MainUI:PushSubPage("AutoChessLevelSelectPage", SelectType, MissionId, IsWin, First)
+  elseif SelectType == AutoChessConst.LevelSelectType.Editor then
+    self:ShowBattleShareView()
   end
-  LevelSelectPage:BindEvents()
+  if LevelSelectPage then
+    LevelSelectPage:BindEvents()
+  end
 end
 
 function AutoChessUIController:ShowMonsterDetails(AutoChessId)
@@ -85,6 +92,11 @@ end
 function AutoChessUIController:OpenAutoChessShop()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
   PageJumpUtils:JumpToTargetPageByJumpId(81)
+end
+
+function AutoChessUIController:ShowBattleShareView()
+  AudioManager(self.MainUI):PlayUISound(self.MainUI, "event:/ui/activity/sub_btn_click", nil, nil)
+  UIManager(self.MainUI):LoadUINew("AutoChessShare")
 end
 
 function AutoChessUIController:OpenAutoChessQuest()

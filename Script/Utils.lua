@@ -42,11 +42,11 @@ function Utils.IsStandAlone(Actor)
   return UNeModeFunctionLibrary.IsStandAlone(Actor)
 end
 
-function Utils.IsDedicatedServer(Actor)
+function Utils.IsDedicatedServer(Obj)
   if GWorld._IsDedicatedServer ~= nil and not GWorld.IsDev then
     return GWorld._IsDedicatedServer
   end
-  return UNeModeFunctionLibrary.IsDedicatedServer(Actor)
+  return UKismetSystemLibrary.IsDedicatedServer(Obj)
 end
 
 function Utils.IsClient(Actor)
@@ -100,12 +100,21 @@ Utils.SPrint = not (not bDistribution or bEnableShippingLog) and MiscUtils.Empty
   UE4.UKismetSystemLibrary.PrintString(GWorld.GameInstance, tostring(text), true, false, color, duration)
 end
 
-function Utils.GreenPrint(text)
-  Utils.SPrint(text, nil, UE4.FLinearColor(0, 1, 0, 1))
+local function BuildPrintText(...)
+  local Params = table.pack(...)
+  local MsgList = {}
+  for Idx = 1, Params.n do
+    MsgList[#MsgList + 1] = tostring(Params[Idx])
+  end
+  return table_concat(MsgList, " ")
 end
 
-function Utils.RedPrint(text)
-  Utils.SPrint(text, nil, UE4.FLinearColor(1, 0, 0, 1))
+function Utils.GreenPrint(...)
+  Utils.SPrint(BuildPrintText(...), nil, UE4.FLinearColor(0, 1, 0, 1))
+end
+
+function Utils.RedPrint(...)
+  Utils.SPrint(BuildPrintText(...), nil, UE4.FLinearColor(1, 0, 0, 1))
 end
 
 function Utils.GLink(LinkId)
@@ -139,15 +148,6 @@ function Utils.EnText(Text)
 end
 
 _G.EnText = Utils.EnText
-
-function Utils.GDate(Month, Day, Language)
-  Language = Language or CommonConst.SystemLanguage
-  if Language == CommonConst.SystemLanguages.CN or Language == CommonConst.SystemLanguages.JP or Language == CommonConst.SystemLanguages.KR then
-    return string.format("%02d-%02d", Month, Day)
-  else
-    return string.format("%02d-%02d", Day, Month)
-  end
-end
 
 function Utils.GDate_YMD(Year, Month, Day, Language)
   Language = Language or CommonConst.SystemLanguage

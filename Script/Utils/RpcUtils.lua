@@ -54,11 +54,17 @@ function RpcUtils.LoadArg(Arg)
   end
 end
 
-function RpcUtils.PackOfflineArgs(Args)
+function RpcUtils.PackOfflineArgs(Args, PackArgs)
+  if false == PackArgs then
+    return Args
+  end
   return SerializeUtils:Serialize(Args)
 end
 
-function RpcUtils.UnpackOfflineArgs(Args)
+function RpcUtils.UnpackOfflineArgs(Args, PackArgs)
+  if false == PackArgs then
+    return Args
+  end
   if type(Args) == "string" then
     return SerializeUtils:UnSerialize(Args)
   end

@@ -112,6 +112,13 @@ function M:PlayFadeIn()
   if self.In then
     self:PlayAnimation(self.In)
   end
+  self:PlayTitleFadeIn()
+end
+
+function M:PlayTitleFadeIn()
+  if self.TitleWidget and self.TitleWidget.In then
+    self.TitleWidget:PlayAnimation(self.TitleWidget.In)
+  end
 end
 
 function M:InitCommonUI()
@@ -130,9 +137,7 @@ function M:InitCommonUI()
     if self.TitleWidget.Text_Title then
       self.TitleWidget.Text_Title:SetText(GText(self.ActivityConfigData.EventName or ""))
     end
-    if self.TitleWidget.In then
-      self.TitleWidget:PlayAnimation(self.TitleWidget.In)
-    end
+    self:PlayTitleFadeIn()
   end
   local descText = self.ActivityConfigData and self.ActivityConfigData.EventDes and GText(self.ActivityConfigData.EventDes) or ""
   if self.Text_Desc then

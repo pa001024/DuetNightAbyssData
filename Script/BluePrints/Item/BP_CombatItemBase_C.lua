@@ -19,6 +19,21 @@ function BP_CombatItemBase_C:OnEMActorDestroy(DestroyReason)
     if self.Data and self.Data.GuideInactive then
       GameState:RemoveGuideEid(self.Eid)
     end
+    if GameMode and GameMode:CheckServerDungeonEnable() then
+      local Info = {
+        UnitId = self.UnitId,
+        UniqueId = self.ServerUniqueId,
+        Reason = DestroyReason
+      }
+      GameMode:NotifyServerMechanismDead(Info)
+    end
+  end
+  if DestroyReason and DestroyReason == EDestroyReason.QuestChainClear then
+    local GameState = UE4.UGameplayStatics.GetGameState(self)
+    if GameState then
+      GameState.MechanismStateIdMap:Remove(self.CreatorId)
+      GameState.ManualMechanismStateIdMap:Remove(self.ManualItemId)
+    end
   end
 end
 
@@ -47,30 +62,8 @@ end
 function BP_CombatItemBase_C:AuthorityInitInfo(Info)
   BP_CombatItemBase_C.Super.AuthorityInitInfo(self, Info)
   self:AdjustLocation(Info)
-  if 0 ~= self.SourceEid and self.RegionDataType ~= ERegionDataType.RDT_None then
+  if 0 ~= self.SourceEid and self.RegionDataType ~= ERegionDataType.RDT_None and not Info.Creator then
     GWorld.logger.errorlog("Eid = " .. tostring(self.Eid) .. "的机关 RegionDataType不为None, 可能导致机关恢复两份")
-  end
-end
-
-function BP_CombatItemBase_C:AddBuffManager_Hotfix473015()
-  if self._AddBuffManagerHotfix473015 then
-    return
-  end
-  self._AddBuffManagerHotfix473015 = true
-  local RealBuffManager = self.BuffManager
-  if not IsValid(RealBuffManager) then
-    self:AddBuffManager()
-    RealBuffManager = self.BuffManager
-  end
-  if not IsValid(RealBuffManager) then
-    return
-  end
-  self:GetBuffNum()
-  self:AddBuffManager()
-  local TempBuffManager = self.BuffManager
-  self.BuffManager = RealBuffManager
-  if IsValid(TempBuffManager) and TempBuffManager ~= RealBuffManager then
-    TempBuffManager:K2_DestroyComponent(TempBuffManager)
   end
 end
 
@@ -376,16 +369,31 @@ function BP_CombatItemBase_C:ChangeState(Type, PlayerId, NextState)
   if not (IsAuthority(self) or IsStandAlone(self)) or not self.InitSuccess then
     return
   end
+  if nil ~= NextState then
+    local HookName = "CanChangeState_" .. NextState
+    local Hook = self[HookName]
+    if type(Hook) == "function" then
+      local Ok, Result = pcall(Hook, self)
+      if not Ok then
+        print(_G.ErrorTag, "ChangeState hook failed:", HookName, Result)
+        return
+      end
+      if false == Result then
+        return
+      end
+    end
+  end
   if MechanismStateCpp then
     local GameMode = UGameplayStatics.GetGameMode(self)
-    local UseServer = false
-    if UseServer and GameMode:CheckServerDungeonEnable() then
+    local UseDungeonServer = GameMode and GameMode:CheckServerDungeonEnable()
+    if UseDungeonServer then
       print(_G.LogTag, "LXZ DungeonLogic ChangeState")
       local Info = {
         UnitId = self.UnitId,
         UniqueId = self.ServerUniqueId,
         StateId = NextState,
         PlayerId = PlayerId,
+        PlayerEid = GameMode:GetAvatarEidByBattleEid(PlayerId),
         Type = Type
       }
       GameMode:NotifyServerMechanismStateChange(Info)
@@ -431,6 +439,43 @@ function BP_CombatItemBase_C:TriggerBluePrintEvent_Lua(EventName)
   if not IsAuthority(self) or IsStandAlone(self) then
     self[EventName](self)
   end
+end
+
+function BP_CombatItemBase_C:_DispatchShowPopupUIMechanismEvent(EventNameStr)
+  if not EventNameStr or "" == EventNameStr then
+    return
+  end
+  if not IsAuthority(self) or IsStandAlone(self) then
+    local Fn = self[EventNameStr]
+    if nil ~= Fn then
+      local Ok, Err = pcall(Fn, self)
+      if not Ok then
+        print(_G.ErrorTag, "ShowPopupUI dispatch failed:", EventNameStr, Err)
+      end
+    end
+  end
+end
+
+function BP_CombatItemBase_C:ShowPopupUI(PopupId, CancelEventName, ConfirmEventName)
+  if not IsClient(self) and not IsStandAlone(self) then
+    return
+  end
+  local Params = {}
+  Params.LeftCallbackObj = self
+  
+  function Params.LeftCallbackFunction()
+    self:_DispatchShowPopupUIMechanismEvent(CancelEventName)
+  end
+  
+  Params.RightCallbackObj = self
+  
+  function Params.RightCallbackFunction()
+    self:_DispatchShowPopupUIMechanismEvent(ConfirmEventName)
+  end
+  
+  Params.CloseBtnCallbackObj = self
+  Params.CloseBtnCallbackFunction = Params.LeftCallbackFunction
+  UIManager(self):ShowCommonPopupUI(PopupId, Params, nil)
 end
 
 function BP_CombatItemBase_C:GetDungeonSaveData()

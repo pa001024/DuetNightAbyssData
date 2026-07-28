@@ -4,8 +4,16 @@ local View = Class({
 })
 
 function View:OnListItemObjectSet(Content)
-  self.Switch_Type:SetActiveWidgetIndex(1)
-  self.Text_Effect01:SetText(Content.EffectText)
+  if Content.bGreen then
+    self.Switch_Type:SetActiveWidgetIndex(2)
+    self.Text_Effect01_1:SetText(Content.EffectText)
+  else
+    self.Switch_Type:SetActiveWidgetIndex(1)
+    self.Text_Effect01:SetText(Content.EffectText)
+  end
+  if Content.PlayAddAnim then
+    self:PlayAnimation(self.Add)
+  end
 end
 
 return View

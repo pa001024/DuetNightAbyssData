@@ -21,10 +21,13 @@ function M:Construct()
   self.Text_Method:SetText(GText("UI_Tips_Obtining"))
   self.Line:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:AddInputMethodChangedListen()
+  self.Line.Text_Level.Font.FontMaterial = nil
+  self.Panel_Describe:SetVisibility(ESlateVisibility.Collapsed)
   self.Btn02_Mod:SetVisibility(ESlateVisibility.Collapsed)
   self.Btn01_Mod:SetVisibility(ESlateVisibility.Collapsed)
   self.Img_Aura:SetVisibility(ESlateVisibility.Collapsed)
   self.List_ModStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_Locked:SetVisibility(ESlateVisibility.Collapsed)
   self.Btn02PadKey = UIConst.GamePadKey.FaceButtonTop
   self.Btn01PadKey = UIConst.GamePadKey.FaceButtonLeft
   self.LockPadKey = UIConst.GamePadKey.SpecialRight
@@ -69,6 +72,7 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
   end
   self.Btn02_Mod:SetVisibility(ESlateVisibility.Collapsed)
   self.Btn01_Mod:SetVisibility(ESlateVisibility.Collapsed)
+  self.Panel_CardLevel:SetVisibility(ESlateVisibility.Collapsed)
   self.EMScrollBox_1:ScrollToStart()
   self.Type = Content.ItemType or Content.Type
   self.ItemId = Content.ItemId or Content.Id or Content.UnitId
@@ -82,7 +86,7 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
   self.OnRemovedFromFocusPathEvent = Content.OnItemRemovedFromFocusPathEvent or Content.OnRemovedFromFocusPathEvent
   self.Content = Content
   self.JumpReturnCallBack = Content.JumpReturnCallBack
-  if self.Type ~= "Tips" then
+  if self.Type ~= "Tips" and self.Type ~= "GuildConstruct" then
     local ItemInfo
     if self.ItemId then
       ItemInfo = DataMgr[self.Type][self.ItemId]
@@ -112,6 +116,8 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
       self.OutLine_Quality:SetBrushFromTexture(self.Img_Line_2)
     elseif 1 == Rarity then
       self.OutLine_Quality:SetBrushFromTexture(self.Img_Line_1)
+    else
+      self.OutLine_Quality:SetBrushFromTexture(self.Img_Line_0)
     end
     local FontMaterial = self.Text_ItemName:GetDynamicFontMaterial()
     if 6 == Rarity then
@@ -129,11 +135,7 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
     else
       FontMaterial:SetTextureParameterValue("IconTex", self.Img_Text_0)
     end
-    if not Rarity or 0 == Rarity then
-      self.OutLine_Quality:SetVisibility(ESlateVisibility.Collapsed)
-    else
-      self.OutLine_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    end
+    self.OutLine_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Text_ItemName:SetText(GText(ItemInfo.Name or ItemInfo[self.Type .. "Name"]))
   end
   self:InitItemDetails(self.Type, self.ItemId, Content.Uuid)
@@ -143,11 +145,11 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
   if bInitLockedEvent then
     self.Btn_Locked:ForbidBtn(false)
     if not Content.LockType then
-      self.Key_Lock:SetVisibility(ESlateVisibility.Collapsed)
+      self.Panel_Controller_Lock:SetVisibility(ESlateVisibility.Collapsed)
       self.Btn_Locked:SetVisibility(ESlateVisibility.Collapsed)
     else
       if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
-        self.Key_Lock:SetVisibility(ESlateVisibility.Visible)
+        self.Panel_Controller_Lock:SetVisibility(ESlateVisibility.Visible)
       end
       self.Btn_Locked:SetVisibility(ESlateVisibility.Visible)
       self:InitLockedEvent(Content)
@@ -177,11 +179,7 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
   self.Switch_Show:SetActiveWidgetIndex(0)
   local Avatar = GWorld:GetAvatar()
   self.Panel_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Switch_Bg:SetActiveWidgetIndex(0)
-  self.Switch_Frame:SetActiveWidgetIndex(0)
   if self.Content and self.Content.DetailsButtonClickCallback then
-    self.Switch_Bg:SetActiveWidgetIndex(1)
-    self.Switch_Frame:SetActiveWidgetIndex(1)
     self.Panel_Extra:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Line:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Btn02_Mod:SetVisibility(ESlateVisibility.Visible)
@@ -201,14 +199,12 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     else
       self.Img_Aura:SetVisibility(ESlateVisibility.Collapsed)
     end
-  elseif "Tips" == ItemType or "Resource" == ItemType or "IronTicket" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType or "Mount" == ItemType then
+  elseif "Tips" == ItemType or "Resource" == ItemType or "IronTicket" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType or "Mount" == ItemType or "Background" == ItemType then
     if Avatar.Resources[ItemId] and Avatar.Resources[ItemId]:IsInfiniteBattleItem() and self:IsHasChar(ItemId) then
       self.Switch_Show:SetActiveWidgetIndex(1)
       ItemInfoWidget = self:CreateWidgetNew("PhantomItemDetails")
     else
       self.Panel_Extra:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      self.Switch_Bg:SetActiveWidgetIndex(0)
-      self.Switch_Frame:SetActiveWidgetIndex(0)
       ItemInfoWidget = self:CreateWidgetNew("ResourceItemDetails")
     end
   elseif "Draft" == ItemType then
@@ -242,6 +238,9 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
   elseif "ExtractionTreasure" == ItemType then
     self.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
     ItemInfoWidget = self:CreateWidgetNew("ExtractionTreasureDetails")
+  elseif "GuildConstruct" == ItemType then
+    self.Panel_Hold:GetParent():SetVisibility(ESlateVisibility.Collapsed)
+    ItemInfoWidget = self:CreateWidgetNew("GuildConstructItemDetails")
   elseif self.Parent then
     self.Parent:Close()
     return
@@ -293,8 +292,6 @@ function M:IsHasChar(ItemId)
 end
 
 function M:InitButtonStyle()
-  self.Switch_Bg:SetActiveWidgetIndex(1)
-  self.Switch_Frame:SetActiveWidgetIndex(1)
   self.Panel_Extra:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Panel_Button:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Line:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -411,12 +408,14 @@ function M:SetConflictLine(bShow, Text, ColorNumber)
   if bShow then
     self.Line:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Line.Text_Level:SetText(GText(Text))
+    self.Line.Text_Max:SetText(GText(Text))
+    self.Line.Switch_Text:SetActiveWidgetIndex(0)
     if 1 == ColorNumber then
-      self.Line.Bg02:SetColorAndOpacity(self.Line.Red)
+      self.Line.Text_Level:SetColorAndOpacity(self.Line.Text_Warn)
     elseif 2 == ColorNumber then
-      self.Line.Bg02:SetColorAndOpacity(self.Line.Yellow)
+      self.Line.Text_Level:SetColorAndOpacity(self.Line.Text_Normal)
     else
-      self.Line.Bg02:SetColorAndOpacity(self.Line.White)
+      self.Line.Switch_Text:SetActiveWidgetIndex(2)
     end
   else
     self.Line:SetVisibility(ESlateVisibility.Collapsed)
@@ -558,7 +557,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   local bHoverState = self.Content and not self.Content.bIsHoverState
   if CurInputDevice == UE4.ECommonInputType.Gamepad and bHoverState then
     if self.bShowLock then
-      self.Key_Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+      self.Panel_Controller_Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
     if self.Content and not self.Content.bHideGamePad then
       self.Panel_Controller:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -569,7 +568,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     self:InitGamepadView(CurGamepadName)
     self.Key_Confirm:SetVisibility(ESlateVisibility.Collapsed)
   elseif CurInputDevice == UE4.ECommonInputType.MouseAndKeyboard then
-    self.Key_Lock:SetVisibility(ESlateVisibility.Collapsed)
+    self.Panel_Controller_Lock:SetVisibility(ESlateVisibility.Collapsed)
     self.Panel_Controller:SetVisibility(ESlateVisibility.Collapsed)
     self.Key_Controller_Method:SetVisibility(ESlateVisibility.Collapsed)
   elseif CurInputDevice == UE4.ECommonInputType.Gamepad and self.Content and self.Content.ConfirmDesc then

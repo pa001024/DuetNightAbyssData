@@ -56,7 +56,10 @@ function M:ToSelectBagItemWithRarity(IsChecked, Rarity)
     if ItemObj and ItemObj.Rarity == Rarity then
       if IsChecked then
         local RetData = self:TryToAddItemToTargetListWithRarity(ItemObj, SellPageMainUI)
-        local IsReserveOne, IsCanAdd = self.CheckBox_Retain:IsChecked(), true
+        local IsReserveOne, IsCanAdd = false, true
+        if self.CurTabId == BagCommon.ItemTypeToTabId.Mod then
+          IsReserveOne = self.CheckBox_Retain:IsChecked()
+        end
         if IsReserveOne and RetData and RetData.StuffCount <= 1 then
           IsCanAdd = false
         end
@@ -953,6 +956,11 @@ function M:GetStuffObjId(StuffUuid)
 end
 
 function M:UpdatePageInfoFromStackAction()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
+    self.OverLay_List:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  else
+    self.ListCanvas:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
+  end
   if IsValid(self.CurSelectStuffContent) then
     if self.CurSelectStuffContent.SelfWidget then
       self.CurSelectStuffContent.SelfWidget:SetSelected(false)
@@ -1432,34 +1440,14 @@ function M:ConfirmDealWithConsumableResource(UseEffectType)
         AllRewards.Resources[v] = OptionalList[v] * OptionalItemsDataConfig.Count[k]
       end
     end
-    UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, nil, self, true)
-    local AllItemCount = self.List_Item:GetNumItems()
-    for i = 0, AllItemCount - 1 do
-      local ItemObj = self.List_Item:GetItemAt(i)
-      if ItemObj and ItemObj.StuffId == ResourceId then
-        local StuffServerData = self:GetStuffServerData(ItemObj.Uuid, BagCommon.StuffType.Resource)
-        if nil == StuffServerData or type(StuffServerData.Count) == "number" and StuffServerData.Count <= 0 then
-          self.List_Item:RemoveItem(ItemObj)
-          local EmptyStuffObj = StuffIconObject:CreateBagItemContent({
-            Uuid = "",
-            StuffType = "EmptyGrid",
-            StuffCount = 0,
-            StuffIcon = nil,
-            ParentWidget = self
-          })
-          self.List_Item:AddItem(EmptyStuffObj)
-          self.List_Item:AddEmptyGridItemCount(1)
-          self.NeedSelectGridIndex = 0
-          self:JumpToSelectItem(false)
-          self:RefreshAllGridIndex()
-        else
-          ItemObj.Count = StuffServerData.Count
-          if ItemObj.SelfWidget then
-            ItemObj.SelfWidget:SetCount(StuffServerData.Count)
-          end
-        end
+    
+    local function RefreshBagAfterGetItemClosed(BagWidget)
+      if IsValid(BagWidget) then
+        BagWidget:UpdatePageInfoFromStackAction()
       end
     end
+    
+    UIManager(self):LoadUINew("GetItemPageSP", nil, nil, nil, AllRewards, RefreshBagAfterGetItemClosed, self, true)
     if self.Panel_Detail:IsVisible() then
       self.Panel_Detail:UpdateItemNumber()
     end
@@ -1481,6 +1469,9 @@ function M:ConfirmDealWithConsumableRandomBox()
   
   local function DealWithConsumableItemsCallback(RewardInfo)
     self:BlockAllUIInput(false)
+    if not RewardInfo or RewardInfo.bEmpty then
+      return
+    end
     UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardInfo, false, function()
     end, self, false)
     local AllItemCount = self.List_Item:GetNumItems()
@@ -1863,7 +1854,7 @@ end
 
 function M:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
   if not ErrorCode:Check(ErrCode, UIConst.Tip_CommonToast) then
-    if "StateChange" == OpAction or "FishStateChange" == OpAction then
+    if "ReceiveStuffItem" ~= OpAction then
       self:BlockAllUIInput(false)
     end
     return
@@ -1924,6 +1915,7 @@ function M:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
       end
     end
   elseif "WeaponBulkBreakDown" == OpAction then
+    self:BlockAllUIInput(false)
     if self.CurTabId == BagCommon.ItemTypeToTabId.MeleeWeapon or self.CurTabId == BagCommon.ItemTypeToTabId.RangedWeapon then
       local _, ResolveWeaponSucc = ...
       local SellCount, IsNeedRefreshAll = 0, false
@@ -1958,6 +1950,7 @@ function M:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
     end
     self.Tab_Bag:UpdateResource()
   elseif UE4.UKismetStringLibrary.EndsWith(OpAction, "Sale", ESearchCase.CaseSensitive) then
+    self:BlockAllUIInput(false)
     local SellCount, IsNeedRefreshAll, bIsIgnore = 0, false, false
     if "ModBulkSale" == OpAction and self.CurTabId == BagCommon.ItemTypeToTabId.Mod then
       local DecomposeSuccStuff, DecomposeModSucc = ...

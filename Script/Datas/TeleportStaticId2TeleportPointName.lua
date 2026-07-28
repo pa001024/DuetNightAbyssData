@@ -303,6 +303,33 @@ return ReadOnly("TeleportStaticId2TeleportPointName", {
   [292480060] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
   },
+  [292780001] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107001_1"
+  },
+  [292780002] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107001_2"
+  },
+  [292780003] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107001_3"
+  },
+  [292790001] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107101_1"
+  },
+  [292790002] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107101_2"
+  },
+  [292790003] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107101_3"
+  },
+  [292800001] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_1"
+  },
+  [292800002] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_2"
+  },
+  [292800003] = {
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_107201_3"
+  },
   [292890080] = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2",
     Temples = {

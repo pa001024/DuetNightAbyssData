@@ -438,7 +438,7 @@ return ReadOnly("RougeLikeDifficulty", {
       24
     },
     TMRoomType = T.RT_5,
-    UnlockCondition = {5056, 5069},
-    UnlockLevel = 60
+    UnlockCondition = {5055, 5069},
+    UnlockLevel = 55
   }
 })

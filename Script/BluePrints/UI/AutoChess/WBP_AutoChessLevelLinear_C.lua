@@ -37,7 +37,6 @@ local LevelState = {
   UnPass = 1,
   UnLock = 2
 }
-local ActiveId = 103016
 
 function M:Construct()
 end
@@ -91,7 +90,7 @@ function M:Init(Content)
   if self.State == LevelState.Pass then
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.WS_Type:SetActiveWidgetIndex(0)
-    self.Text_State:SetTexT(GText("UI_AutoChess_FirstComplete"))
+    self.Text_State:SetText(GText("UI_AutoChess_FirstComplete"))
   else
     if self.State == LevelState.UnPass then
       local Node = ReddotManager.GetTreeNode("AutoChessLinear")
@@ -105,7 +104,7 @@ function M:Init(Content)
     end
     if Info.UnlockRankID then
       self.WS_Type:SetActiveWidgetIndex(1)
-      self.Text_RankUp:SetTexT(GText("UI_AutoChess_RankLimitUp"))
+      self.Text_RankUp:SetText(GText("UI_AutoChess_RankLimitUp"))
       local RankInfo = DataMgr.AutoChessPoint[Info.UnlockRankID]
       self.Icon_Rank:SetBrushResourceObject(LoadObject(RankInfo.RankIcon))
     else

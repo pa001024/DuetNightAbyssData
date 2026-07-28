@@ -167,10 +167,14 @@ return ReadOnly("Hair", {
     Sound = "SOUND_ITEM_NORMAL"
   },
   [2102] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Eve.T_Icon_Eve'",
     CharId = 2102,
+    CharPartId = 210202,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     HairId = 2102,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Eve.T_Icon_Eve'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Eve.T_Icon_Eve'",
     Rarity = 0,
     ReleaseVersion = 150,
     Sound = "SOUND_ITEM_NORMAL"
@@ -245,6 +249,19 @@ return ReadOnly("Hair", {
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     HairId = 3103,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
+    Rarity = 0,
+    ReleaseVersion = 100,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [3104] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
+    CharId = 3104,
+    CharPartId = 310402,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    HairId = 3104,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Yeer.T_Icon_Yeer'",
     Rarity = 0,
@@ -419,6 +436,8 @@ return ReadOnly("Hair", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head48.T_Fashion_Head48'",
     Name = "UI_Accessory_Name_12122",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [10123] = {
@@ -448,6 +467,8 @@ return ReadOnly("Hair", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head50.T_Fashion_Head50'",
     Name = "UI_Accessory_Name_12124",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 16,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [10125] = {
@@ -596,16 +617,28 @@ return ReadOnly("Hair", {
     Sound = "SOUND_ITEM_NORMAL"
   },
   [210182] = {
-    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Shuimu_02.T_Fashion_Shuimu_02'",
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Shuimu.T_Icon_Shuimu'",
     CharId = 2101,
     CharPartId = 210182,
     ExcludeCollect = true,
     HairId = 210182,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Shuimu_02.T_Fashion_Shuimu_02'",
-    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Shuimu_02.T_Fashion_Shuimu_02'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Shuimu.T_Icon_Shuimu'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Shuimu.T_Icon_Shuimu'",
     Name = "UI_Skin_Name_210101",
     Rarity = 5,
     ReleaseVersion = 140,
+    Sound = "SOUND_ITEM_NORMAL"
+  },
+  [210292] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Eve_01.T_Fashion_Eve_01'",
+    CharId = 2102,
+    CharPartId = 210292,
+    ExcludeCollect = true,
+    HairId = 210292,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Eve_01.T_Fashion_Eve_01'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Eve_01.T_Fashion_Eve_01'",
+    Rarity = 5,
+    ReleaseVersion = 150,
     Sound = "SOUND_ITEM_NORMAL"
   },
   [240192] = {

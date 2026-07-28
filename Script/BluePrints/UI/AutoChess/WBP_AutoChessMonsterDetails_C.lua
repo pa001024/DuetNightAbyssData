@@ -2,10 +2,16 @@ require("UnLua")
 local UIUtils = require("Utils.UIUtils")
 local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local AutoChessDataModel = require("BluePrints.UI.AutoChess.AutoChessDataModel")
+local SkillUtils = require("Utils.SkillUtils")
 local View = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
 })
+
+function View:Construct()
+  self.List_Equipment:Disablescroll(true)
+  self.Key_MonsterInfo_1:SetVisibility(UIConst.VisibilityOp.Collapsed)
+end
 
 function View:InitView(ParentWidget)
   self.ParentWidget = ParentWidget
@@ -33,18 +39,21 @@ function View:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function View:InitGamepadView()
-  self.Controller_Equipment:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvinsible)
+  if self.DisableGamepadKey then
+    self:InitKeyboardView()
+  end
+  self.Controller_Equipment:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
 function View:InitKeyboardView()
   self.Controller_Equipment:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
-function View:RefreshDetails(AutoChessData)
+function View:RefreshDetails(AutoChessData, HideChosen)
   self.ChessData = AutoChessData
   local CombatChessData = DataMgr.CombatChessInfo[AutoChessData.Id]
   self.Text_Name:SetText(GText(CombatChessData.CombatChessName))
-  self.Text_Equipment:SetText(GText("UI_AutoChess_Equip"))
+  self.Text_Equipment:SetText(GText("UI_AutoChess_Equip2"))
   if CombatChessData.PositionIcon then
     local ImgType = LoadObject(CombatChessData.PositionIcon)
     self.Icon_Type.Icon:SetBrushFromTexture(ImgType)
@@ -57,11 +66,15 @@ function View:RefreshDetails(AutoChessData)
   self.Value_02:InitView(GText("UI_AutoChess_MonsterProp2"), AutoChessData.MaxHp)
   self.Value_03:InitView(GText("UI_AutoChess_MonsterProp3"), AutoChessData.Def)
   self.Value_04:InitView(GText("UI_AutoChess_MonsterProp4"), AutoChessData.MaxEs)
+  if HideChosen then
+    self.WS_Type:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
   self.List_Equipment:ClearListItems()
   if AutoChessData.Locked then
     self.WS_Type:SetActiveWidgetIndex(1)
   else
     self.WS_Type:SetActiveWidgetIndex(0)
+    self:RefreshPassiveEffects(CombatChessData)
     local EquipInfos = AutoChessData.EquipItems
     for Index, EquipId in ipairs(EquipInfos) do
       local EquipData = DataMgr.RobotEquip[EquipId]
@@ -71,7 +84,68 @@ function View:RefreshDetails(AutoChessData)
         self.List_Equipment:AddItem(Obj)
       end
     end
-    self:UpdateEquipInfo(EquipInfos)
+    if not HideChosen then
+      self:UpdateEquipInfo(EquipInfos)
+    end
+  end
+end
+
+function View:RefreshPreview(EquipId, bPositive, bAnim)
+  self:RefreshPassiveEffectsPreview(EquipId, bPositive, bAnim)
+  self:RefreshValuesPreview(EquipId, bPositive, bAnim)
+end
+
+function View:RefreshPassiveEffectsPreview(EquipId, bPositive, bAnim)
+  self:RevertListEquipment()
+  if bPositive then
+    local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+    Obj.EffectText = AutoChessDataModel:CalcEquipExtraDesc(EquipId)
+    Obj.PlayAddAnim = bAnim
+    self.List_Equipment:AddItem(Obj)
+  end
+end
+
+function View:RefreshValuesPreview(EquipId, bPositive, bAnim)
+  local AutoChessData = self.ChessData
+  if not AutoChessData then
+    return
+  end
+  local PreviewData = AutoChessDataModel:CalcMonsterPreviewAttr(AutoChessData.Id, EquipId, not bPositive)
+  self.Value_01:InitView(GText("UI_AutoChess_MonsterProp1"), AutoChessData.Atk, PreviewData.Atk, bAnim)
+  self.Value_02:InitView(GText("UI_AutoChess_MonsterProp2"), AutoChessData.MaxHp, PreviewData.MaxHp, bAnim)
+  self.Value_03:InitView(GText("UI_AutoChess_MonsterProp3"), AutoChessData.Def, PreviewData.Def, bAnim)
+  self.Value_04:InitView(GText("UI_AutoChess_MonsterProp4"), AutoChessData.MaxEs, PreviewData.MaxEs, bAnim)
+end
+
+function View:RefreshPassiveEffects(CombatChessData)
+  local BuffDescKey = CombatChessData.MonsterExtraBuffDesc
+  if not BuffDescKey or "" == BuffDescKey then
+    return
+  end
+  local EffectText = GText(BuffDescKey)
+  if not EffectText or "" == EffectText then
+    return
+  end
+  EffectText = AutoChessDataModel:CalcDescCommom(CombatChessData, EffectText)
+  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+  Obj.EffectText = EffectText
+  Obj.bGreen = true
+  self.List_Equipment:AddItem(Obj)
+end
+
+function View:RevertListEquipment()
+  local AutoChessData = self.ChessData
+  self.List_Equipment:ClearListItems()
+  local CombatChessData = DataMgr.CombatChessInfo[AutoChessData.Id]
+  self:RefreshPassiveEffects(CombatChessData)
+  local EquipInfos = AutoChessData.EquipItems
+  for Index, EquipId in ipairs(EquipInfos) do
+    local EquipData = DataMgr.RobotEquip[EquipId]
+    if EquipData then
+      local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+      Obj.EffectText = AutoChessDataModel:CalcEquipExtraDesc(EquipId)
+      self.List_Equipment:AddItem(Obj)
+    end
   end
 end
 
@@ -93,7 +167,7 @@ function View:UpdateEquipInfo(EquipItems)
           Obj = self,
           Callback = function()
             AudioManager(self):PlayUISound(self, "event:/ui/common/combat_bag_cell_place_common", nil, nil)
-            UIManager(self):LoadUINew("AutoChessChooseEquip", self.ChessData, ParentWidget)
+            UIManager(self):LoadUINew("AutoChessChooseEquip", self.ChessData, self.ParentWidget)
             if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
               CommonUtils:CloseGuideTouchIfExist(self)
             end

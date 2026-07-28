@@ -1,4 +1,5 @@
 require("UnLua")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local BP_EnergySupply_C = Class({
   "BluePrints.Item.Supply.BP_SupplyBase_C",
   "BluePrints.Combat.Components.EffectSourceInterface"
@@ -50,7 +51,7 @@ function BP_EnergySupply_C:AuthorityInitInfo(Info)
   self.HasFindPlayer = false
   self.HasAllEnergyGuideCloseLua = {}
   self:SetCamp(Info.Camp or self.Data.Camp)
-  self:AddBuffManager_Hotfix473015()
+  self:AddBuffManager()
 end
 
 function BP_EnergySupply_C:CommonInitInfo(Info)
@@ -517,7 +518,10 @@ end
 
 function BP_EnergySupply_C:PlaySurvivalTalk(TalkId)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, TalkId, nil)
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, TalkId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction:Activate()
+  end
 end
 
 function BP_EnergySupply_C:CheckCanChangeEnergy()

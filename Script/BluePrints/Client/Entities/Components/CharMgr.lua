@@ -426,6 +426,33 @@ function Component:CheckAlternativeChar(InCallback)
   self:CallServer("CheckAlternativeChar", callback)
 end
 
+function Component:GetArmoryTargetIsStar(TargetType, TargetId)
+  if not (TargetType and TargetId) or not self[TargetType .. "s"] then
+    return false
+  end
+  local Target = self[TargetType .. "s"][TargetId]
+  if not Target then
+    return false
+  end
+  return Target.IsStar
+end
+
+function Component:SwitchArmoryTargetStar(Inallback, TargetType, TargetId, IsStar)
+  self.logger.debug("SwitchArmoryTargetStar Begin", TargetType, TargetId, IsStar)
+  local TargetInfo = {
+    TargetType = TargetType,
+    TargetId = TargetId,
+    IsStar = IsStar
+  }
+  
+  local function Callback(ret)
+    self.logger.debug("SwitchArmoryTargetStar Callback", ret, TargetType, TargetId, IsStar)
+    EventManager:FireEvent(EventID.OnStarTargetChanged, TargetInfo)
+  end
+  
+  self:CallServer("SwitchArmoryTargetStar", Callback, TargetInfo)
+end
+
 function Component:_CopyCharacterAttributeSwitchMap(SourceMap)
   local TargetMap = {}
   for CharGroupId, CharId in pairs(SourceMap or {}) do

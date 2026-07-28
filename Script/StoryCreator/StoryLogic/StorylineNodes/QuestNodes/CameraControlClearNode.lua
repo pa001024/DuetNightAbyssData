@@ -18,7 +18,7 @@ function CameraControlClearNode:Execute()
       Controller:RemoveDisableRotationInputTag("CameraControlNode")
     end
     if STLCameraControlInfo.CameraName then
-      Player.CameraControlComponent:FixedCameraStateTransitionTimeOnce(self.Duration)
+      Player.CameraControlComponent:FixedCameraStateTransitionTimeOnce(self.Duration or 0)
       Player.CameraControlComponent:PopCameraState(STLCameraControlInfo.CameraName)
     end
     if STLCameraControlInfo.FOV then

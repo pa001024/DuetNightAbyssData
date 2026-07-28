@@ -15,7 +15,7 @@ end
 
 function M:InitChatChannelUI()
   self.CurChannel = ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel())
-  if ChatModel:IsInRegionOnline() then
+  if ChatModel:IsInRegionOnline() and not UIUtils.AmIInGuildScene() then
     self:SetVisibility(UIConst.VisibilityOp.Visible)
     self.Text_ChatChannel:SetText(string.format(GText(DataMgr.RegionOnline[ChatModel:GetRegionId()].RegionChannelName) .. "(%d)", self.CurChannel))
     ChatController:SendQueryChatChannelBusyInfo()

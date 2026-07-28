@@ -377,14 +377,20 @@ function RegionDataMgrSubsystem_C:GetQuestChainData(QuestChainId)
   if not Table then
     return {}
   end
-  local CopyTable = CommonUtils.DeepCopy(Table)
-  for _, RegionData in ipairs(CopyTable) do
-    RegionData.Creator = nil
+  local CopyTable = {}
+  for _, RegionData in pairs(Table) do
+    local Temp = {}
     for Key, Value in pairs(RegionData) do
-      if type(Value) == "userdata" then
-        RegionData[Key] = nil
+      local Type = type(Value)
+      if "table" == Type then
+        if "Creator" ~= Key then
+          Temp[Key] = CommonUtils.DeepCopy(Value)
+        end
+      elseif "userdata" ~= Type then
+        Temp[Key] = Value
       end
     end
+    table.insert(CopyTable, Temp)
   end
   return CopyTable
 end
@@ -1343,6 +1349,11 @@ function RegionDataMgrSubsystem_C:ReportRemoveLocalDataOnce(LuaTableIndex)
   if Avatar and Data then
     Avatar:ReportRemoveLocalDataOnce(Data)
   end
+end
+
+function RegionDataMgrSubsystem_C:UpdateQuestId(WorldRegionEid, QuestId)
+  local Index = self:GetLuaDataIndex(WorldRegionEid)
+  self.DataPool:UpdateQuestId(Index, QuestId)
 end
 
 return RegionDataMgrSubsystem_C

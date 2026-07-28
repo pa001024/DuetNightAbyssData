@@ -253,13 +253,20 @@
   },
   {
     "id": 2102,
-    "name": "伊薇的衣飾",
-    "desc": "UI_Skin_Des_2102",
-    "icon": "T_Head_Shuimu",
+    "name": "艾達（？？）的衣飾",
+    "desc": "藍色的裙褶如同水中層疊的漣漪，倒映著少女眼中多彩的世界。",
+    "icon": "T_Head_Eve",
     "rarity": 5,
     "charId": 2102,
     "release": "1.5",
     "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10032,
+          "name": "白兔的肖像",
+          "num": 1
+        }
+      ],
       "Resource": [
         {
           "id": 110,
@@ -376,6 +383,31 @@
     "icon": "T_Head_Yeer",
     "rarity": 5,
     "charId": 3103,
+    "release": "1.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10021,
+          "name": "一體雙生的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 3104,
+    "name": "UI_Skin_Name_3104",
+    "desc": "UI_Skin_Des_3104",
+    "icon": "T_Head_Yeer",
+    "rarity": 5,
+    "charId": 3104,
     "release": "1.0",
     "defaultItem": {
       "HeadSculpture": [
@@ -695,6 +727,40 @@
     }
   },
   {
+    "id": 5402,
+    "name": "UI_Skin_Name_5402",
+    "desc": "UI_Skin_Des_5402",
+    "icon": "T_Head_Dafu",
+    "rarity": 5,
+    "charId": 5402,
+    "release": "2.0",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 10013,
+          "name": "煉金術師的肖像",
+          "num": 1
+        }
+      ],
+      "Resource": [
+        {
+          "id": 110,
+          "name": "水色稜鏡",
+          "num": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": 110101,
+    "name": "UI_Skin_Name_110101",
+    "desc": "UI_Skin_Des_110101",
+    "icon": "T_Head_Heitao",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.6"
+  },
+  {
     "id": 110201,
     "name": "赦罪者",
     "desc": "高潔的天使執起裁決的劍，她必將那有罪者審判，她必將那無罪者寬恕。",
@@ -751,16 +817,7 @@
     "rarity": 5,
     "charId": 1502,
     "tag": "Nifu01",
-    "release": "1.4",
-    "defaultItem": {
-      "HeadSculpture": [
-        {
-          "id": 20008,
-          "name": "霧海引渡人的肖像·禱音",
-          "num": 1
-        }
-      ]
-    }
+    "release": "1.4"
   },
   {
     "id": 150401,
@@ -906,6 +963,46 @@
     }
   },
   {
+    "id": 210201,
+    "name": "逐光追雪",
+    "desc": "少女捧起手中的雪花，聆聽著它們從遠方捎來的童話。",
+    "icon": "T_Head_Eve01",
+    "rarity": 5,
+    "charId": 2102,
+    "tag": "Eve01",
+    "release": "1.5",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 210292,
+          "name": "",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20010,
+          "name": "白兔的肖像·追雪",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "流光織針"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "流光織針"
+      }
+    ]
+  },
+  {
     "id": 240101,
     "name": "素浪濯心",
     "desc": "易水滌塵，白浪靜心。",
@@ -939,16 +1036,34 @@
     "rarity": 5,
     "charId": 3101,
     "tag": "Linen01",
-    "release": "1.4",
-    "defaultItem": {
-      "HeadSculpture": [
-        {
-          "id": 20009,
-          "name": "違心之人的肖像·禱音",
-          "num": 1
-        }
-      ]
-    }
+    "release": "1.4"
+  },
+  {
+    "id": 310201,
+    "name": "惑夜伶人·希爾妲",
+    "desc": "月華作幕，魅影為妝。",
+    "icon": "T_Head_Xier01",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.5"
+  },
+  {
+    "id": 310401,
+    "name": "UI_Skin_Name_310401",
+    "desc": "UI_Skin_Des_310401",
+    "icon": "",
+    "rarity": 5,
+    "charId": 3104,
+    "release": "1.6"
+  },
+  {
+    "id": 320201,
+    "name": "惑夜伶人·卡蜜拉",
+    "desc": "月華作幕，魅影為妝。",
+    "icon": "T_Head_Kami01",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.5"
   },
   {
     "id": 410101,
@@ -1062,6 +1177,24 @@
     }
   },
   {
+    "id": 530102,
+    "name": "UI_Skin_Name_530102",
+    "desc": "UI_Skin_Des_530102",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.6"
+  },
+  {
+    "id": 540201,
+    "name": "UI_Skin_Name_540201",
+    "desc": "UI_Skin_Des_540201",
+    "icon": "T_Head_Saiqi01",
+    "rarity": 5,
+    "charId": 5402,
+    "release": "2.0"
+  },
+  {
     "id": 11010010,
     "name": "星芒夜願",
     "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
@@ -1125,6 +1258,15 @@
     "release": "1.4"
   },
   {
+    "id": 11010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.5"
+  },
+  {
     "id": 11020141,
     "name": "黑色福音",
     "desc": "罪惡不需要溫室的滋養，便能在人心中悄然盛開。",
@@ -1132,6 +1274,15 @@
     "rarity": 5,
     "charId": 1102,
     "release": "1.4"
+  },
+  {
+    "id": 11020151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.5"
   },
   {
     "id": 11030010,
@@ -1413,6 +1564,15 @@
     "release": "1.4"
   },
   {
+    "id": 15020151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.5"
+  },
+  {
     "id": 15030011,
     "name": "墨玉韶華",
     "desc": "風華盡顯，雅韻自成。",
@@ -1474,6 +1634,15 @@
     "rarity": 5,
     "charId": 1504,
     "release": "1.4"
+  },
+  {
+    "id": 15040151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.5"
   },
   {
     "id": 16010010,
@@ -1733,6 +1902,15 @@
     "release": "1.4"
   },
   {
+    "id": 18010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05_05",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.5"
+  },
+  {
     "id": 21010010,
     "name": "星芒夜願",
     "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
@@ -1794,6 +1972,24 @@
     "rarity": 5,
     "charId": 2101,
     "release": "1.4"
+  },
+  {
+    "id": 21010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.5"
+  },
+  {
+    "id": 21020151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 2102,
+    "release": "9.9"
   },
   {
     "id": 23010010,
@@ -1904,6 +2100,15 @@
     "release": "1.4"
   },
   {
+    "id": 24010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.5"
+  },
+  {
     "id": 31010010,
     "name": "星芒夜願",
     "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
@@ -1967,6 +2172,15 @@
     "release": "1.4"
   },
   {
+    "id": 31010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.5"
+  },
+  {
     "id": 31020141,
     "name": "黑色福音",
     "desc": "罪惡不需要溫室的滋養，便能在人心中悄然盛開。",
@@ -1974,6 +2188,15 @@
     "rarity": 5,
     "charId": 3102,
     "release": "1.4"
+  },
+  {
+    "id": 31020151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "9.9"
   },
   {
     "id": 31030010,
@@ -2093,6 +2316,15 @@
     "release": "1.4"
   },
   {
+    "id": 32010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.5"
+  },
+  {
     "id": 32020131,
     "name": "叛逆風尚",
     "desc": "我們在藍絲絨般的不眠之夜痛飲，吹著口哨疾馳於午夜的涼風中。",
@@ -2109,6 +2341,15 @@
     "rarity": 5,
     "charId": 3202,
     "release": "1.4"
+  },
+  {
+    "id": 32020151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "9.9"
   },
   {
     "id": 33010010,
@@ -2174,6 +2415,15 @@
     "release": "1.4"
   },
   {
+    "id": 33010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.5"
+  },
+  {
     "id": 41010010,
     "name": "星芒夜願",
     "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
@@ -2237,6 +2487,15 @@
     "release": "1.4"
   },
   {
+    "id": 41010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.5"
+  },
+  {
     "id": 41020121,
     "name": "冬日幻想",
     "desc": "一地雪人中為什麼有一個看起來格外的大？",
@@ -2280,6 +2539,15 @@
     "rarity": 5,
     "charId": 4102,
     "release": "1.4"
+  },
+  {
+    "id": 41020151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.5"
   },
   {
     "id": 42010121,
@@ -2433,6 +2701,15 @@
     "rarity": 5,
     "charId": 4301,
     "release": "9.9"
+  },
+  {
+    "id": 43010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05_04",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "1.5"
   },
   {
     "id": 51010010,
@@ -2606,6 +2883,15 @@
     "release": "1.4"
   },
   {
+    "id": 53010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.5"
+  },
+  {
     "id": 54010010,
     "name": "星芒夜願",
     "desc": "在白晝最短的時節，當鈴兒響起，人們便將心願寄予夜空，讓它乘著星芒飛向未來。",
@@ -2667,5 +2953,14 @@
     "rarity": 5,
     "charId": 5401,
     "release": "9.9"
+  },
+  {
+    "id": 54010151,
+    "name": "蔚藍之海",
+    "desc": "徜徉在盛夏的海風中，為蔚藍的浪花乾杯，為橙黃的焰火乾杯，為此刻無拘無束的你我乾杯",
+    "icon": "T_Pack_Common05",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "1.5"
   }
 ]

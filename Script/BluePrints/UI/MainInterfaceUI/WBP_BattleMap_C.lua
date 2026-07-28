@@ -237,14 +237,14 @@ function WBP_BattleMap_C:InitMapWidth()
 end
 
 function WBP_BattleMap_C:OnUnfoldMapOutAnimFinished()
+  if not IsValid(self.UnfoldMap) then
+    self.UnfoldMap = nil
+    self.IsAnimating = false
+    return
+  end
   self:PlayAnimation(self.CollapsedMap)
   self.UnfoldMap:SetVisibility(ESlateVisibility.Collapsed)
-  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Touch then
-    self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  else
-    self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.WS_Type:SetActiveWidgetIndex(0)
-  end
+  self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.IsAnimating = false
 end
 
@@ -353,14 +353,24 @@ function WBP_BattleMap_C:ChangeEvent()
     self:InitKeyInfo(true)
   else
     self.RetainerBox_101:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    if self.UnfoldMap then
+    local UnfoldMap = self.UnfoldMap
+    if IsValid(UnfoldMap) then
       self.Panel_Root:RemoveFromParent()
       self.TracePanel:RemoveFromParent()
       self.GamerPanel:RemoveFromParent()
-      self.UnfoldMap.Map_Img:SetVisibility(ESlateVisibility.Collapsed)
-      self.UnfoldMap:PlayAnimation(self.UnfoldMap.Out)
-      self:RestoreWSControllerPosition()
+      if IsValid(UnfoldMap.Map_Img) then
+        UnfoldMap.Map_Img:SetVisibility(ESlateVisibility.Collapsed)
+      else
+        DebugPrint("yly WBP_BattleMap_C:ChangeEvent: UnfoldMap.Map_Img is not valid!")
+      end
+      UnfoldMap:PlayAnimation(UnfoldMap.Out)
+    else
+      self.UnfoldMap = nil
+      self.IsAnimating = false
+      DebugPrint("yly WBP_BattleMap_C:ChangeEvent: UnfoldMap is not valid, skip close animation")
     end
+    self:RestoreWSControllerPosition()
+    self.WS_Type:SetActiveWidgetIndex(0)
     self:SetRenderOpacity(1)
     if self.WildMap then
       self.WildMap:RemoveFromParent()
@@ -573,7 +583,8 @@ function WBP_BattleMap_C:OnClickRealOpen()
     self:OnKeyboardClick()
     return
   end
-  if self.DungeonData and (self.DungeonData.DungeonType == "Temple" or self.DungeonData.bHideBatttleMap) then
+  local SkipOpen = self.DungeonData and (self.DungeonData.DungeonType == "Temple" or self.DungeonData.DungeonType == "WeaponVerify" or self.DungeonData.DungeonType == "Party" or self.DungeonData.bHideBatttleMap)
+  if SkipOpen then
     return
   end
   if self.IsOpen == true then
@@ -608,6 +619,10 @@ function WBP_BattleMap_C:OnKeyboardClick()
   local GameState = UGameplayStatics.GetGameState(self)
   if GameState and GameState:IsInRegion() then
     local Avatar = GWorld:GetAvatar()
+    if UIUtils.AmIInGuildScene() then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "GuildCampsiteCanNotOpenMap")
+      return
+    end
     if not (Avatar and Avatar:IsRealInBigWorld()) or Avatar:IsInHardBoss() then
       return
     end
@@ -1089,7 +1104,7 @@ end
 function WBP_BattleMap_C:OnChangeKeyBoardSet()
   local platformName = UGameplayStatics.GetPlatformName()
   DebugPrint("yly WBP_BattleMap_C:OnChangeKeyBoardSet GetPlatformName = ", platformName)
-  local IsTemple = self.DungeonData and self.DungeonData.DungeonType == "Temple"
+  local IsTemple = self.DungeonData and (self.DungeonData.DungeonType == "Temple" or self.DungeonData.DungeonType == "WeaponVerify" or self.DungeonData.DungeonType == "Party")
   local IsGamepad = self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad
   self.HudKeyShow = "Windows" == platformName and not IsTemple and IsGamepad
   local Avatar = GWorld:GetAvatar()
@@ -1652,6 +1667,48 @@ function WBP_BattleMap_C:SwitchMapState(bEmpty)
   else
     self.WS_Type:SetActiveWidgetIndex(0)
   end
+end
+
+function WBP_BattleMap_C:SetScaleValue(Value)
+  self.Scale = Value
+end
+
+function WBP_BattleMap_C:GetTracePanel()
+  return self.TracePanel
+end
+
+function WBP_BattleMap_C:IsBattleVisibleAndSelfVisible()
+  return self.Battle and self.Battle:IsVisible() and self:IsVisible()
+end
+
+function WBP_BattleMap_C:GetTracePanelScaleXY()
+  if self.TracePanel and IsValid(self.TracePanel) then
+    return self.TracePanel.RenderTransform.Scale.X, self.TracePanel.RenderTransform.Scale.Y
+  end
+  return 1, 1
+end
+
+function WBP_BattleMap_C:TracePanelHasChild(Widget)
+  local TracePanel = self.TracePanel
+  return TracePanel and IsValid(TracePanel) and TracePanel:HasChild(Widget)
+end
+
+function WBP_BattleMap_C:TracePanelRemoveChild(Widget)
+  local TracePanel = self.TracePanel
+  if TracePanel and IsValid(TracePanel) then
+    TracePanel:RemoveChild(Widget)
+  end
+end
+
+function WBP_BattleMap_C:TracePanelAddChild(Widget)
+  local TracePanel = self.TracePanel
+  if TracePanel and IsValid(TracePanel) then
+    TracePanel:AddChild(Widget)
+  end
+end
+
+function WBP_BattleMap_C:IsTracePanelValid()
+  return self.TracePanel and IsValid(self.TracePanel)
 end
 
 AssembleComponents(WBP_BattleMap_C)

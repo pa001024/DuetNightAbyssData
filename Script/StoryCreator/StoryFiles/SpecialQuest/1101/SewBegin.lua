@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = true,
         bDeadTriggerQuestFail = true,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
         JumpId = 0,
+        IsBacktrack = false,
         FailBlackScreenText = "",
         FadeInTime = 1,
         FadeOutTime = 1,
@@ -353,7 +353,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {102103},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },

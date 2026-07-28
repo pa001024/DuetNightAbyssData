@@ -35,4 +35,8 @@ function SplineMoveFinishNode:Clear()
   self.bEventExecuted = false
 end
 
+function SplineMoveFinishNode:OnQuestlineFail()
+  self:Clear()
+end
+
 return SplineMoveFinishNode

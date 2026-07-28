@@ -41,10 +41,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:Destruct()
-  local BattleView = UIManager():GetUIObj("BattleMain")
-  if BattleView then
-    BattleView:Show("Temp1.4Fix")
-  end
   self.Super.Destruct(self)
 end
 

@@ -3,11 +3,12 @@ local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialo
 local TalkFlowNodeMap = require("BluePrints.Story.Talk.TalkFlow.TalkFlowNodeMap")
 local M = {}
 
-function M:New(FirstDialogueId, TalkTask, Comps)
+function M:New(FirstDialogueId, FlowType, FlowOwner, Comps)
   local TalkFlow = setmetatable({}, {__index = M})
   rawset(TalkFlow, "FirstDialogueId", FirstDialogueId)
-  rawset(TalkFlow, "TalkTask", TalkTask)
-  rawset(TalkFlow, "Comps", Comps)
+  rawset(TalkFlow, "FlowType", FlowType)
+  rawset(TalkFlow, "FlowOwner", FlowOwner)
+  rawset(TalkFlow, "Comps", Comps or {})
   return TalkFlow
 end
 
@@ -16,17 +17,35 @@ function M:BuildFlow()
     DebugPrint("FTalkFlow:BuildFlow, FirstDialogueId is Invalid", self.FirstDialogueId)
     return
   end
-  if not self.TalkTask then
-    DebugPrint("FTalkFlow:BuildFlow, TalkTask is nil", self.FirstDialogueId)
+  if not self.FlowOwner then
+    DebugPrint("FTalkFlow:BuildFlow, FlowOwner is nil", self.FirstDialogueId)
     return
   end
-  local NodeEvents = {
-    EventReceiver = self,
-    OnNodeEnter = self.OnNodeEnter,
-    OnNodeCreated = self.OnNodeCreated,
-    OnFlowCreated = self.OnFlowCreated
+  local Context = {
+    FlowType = self.FlowType,
+    FlowOwner = self.FlowOwner,
+    TalkTaskData = self.FlowOwner and self.FlowOwner.TalkTaskData
   }
-  local NodeMaps = TalkFlowNodeMap:New(self.TalkTask, self.Comps, NodeEvents)
+  local NodeEvents = {
+    OnNodeEnter = function(Node)
+      self:OnNodeEnter(Node)
+    end,
+    OnNodeCreated = function(Node)
+      self:OnNodeCreated(Node)
+    end,
+    OnFlowCreated = function(Flow, ParallelNode, WaitAllNode)
+      self:OnFlowCreated(Flow, ParallelNode, WaitAllNode)
+    end,
+    OnDialogueEnd = function()
+      self:OnDialogueEnd()
+    end
+  }
+  local FlowChecker = {
+    CheckAutoIterate = function()
+      return self:IsAutoIterateDialogue()
+    end
+  }
+  local NodeMaps = TalkFlowNodeMap:New(Context, self.Comps, NodeEvents, FlowChecker)
   self.NodeMaps = NodeMaps
   self.EndNode = NodeMaps:GetOrCreateNode("End")
   self.StartNode = NodeMaps:GetOrCreateNode("Start", self.FirstDialogueId)
@@ -47,6 +66,24 @@ function M:Iterate(...)
   else
     DebugPrint("FTalkFlow:Iterate(),CurrentNode is nil", ...)
   end
+end
+
+function M:IsAutoIterateDialogue()
+  if self.OnCheckAutoIterateObj and self.OnCheckAutoIterateEvent then
+    return self.OnCheckAutoIterateEvent(self.OnCheckAutoIterateObj, self)
+  end
+  return true
+end
+
+function M:RequestSkipDialogue()
+  if not self:IsInText() then
+    return false
+  end
+  local CurrentNode = self.CurrentNode
+  if CurrentNode then
+    return CurrentNode:RequestSkip()
+  end
+  return false
 end
 
 function M:Pause()
@@ -92,8 +129,9 @@ end
 function M:OnNodeEnd(...)
 end
 
-function M:BindDelegateOnEnd(Func)
-  self.OnEndDelegate = Func
+function M:BindOnFlowEndEvent(Obj, Event)
+  self.OnFlowEndObj = Obj
+  self.OnFlowEndEvent = Event
 end
 
 function M:OnNodeCreated(Node)
@@ -102,14 +140,25 @@ function M:OnNodeCreated(Node)
   end
 end
 
-function M:BindOnFlowEndEvent(Obj, Func)
-  self.OnFlowEndObj = Obj
-  self.OnFlowEndEvent = Func
+function M:BindOnDialogueEndEvent(Obj, Event)
+  self.OnDialogueEndObj = Obj
+  self.OnDialogueEndEvent = Event
+end
+
+function M:OnDialogueEnd()
+  if self.OnDialogueEndObj and self.OnDialogueEndEvent then
+    self.OnDialogueEndEvent(self.OnDialogueEndObj)
+  end
 end
 
 function M:BindOnFlowCreatedEvent(Obj, Event)
   self.OnFlowCreatedObj = Obj
   self.OnFlowCreatedEvent = Event
+end
+
+function M:BindOnCheckAutoIterateEvent(Obj, Event)
+  self.OnCheckAutoIterateObj = Obj
+  self.OnCheckAutoIterateEvent = Event
 end
 
 function M:OnFlowCreated(Flow, ParallelNode, WaitAllNode)
@@ -204,7 +253,7 @@ function M:IsLastAndOnlyOption()
   return NextNode:GetType() == EDialogueNodeType.End
 end
 
-function M:IsSelectedOption(OptionId)
+function M:IsOptionSelected(OptionId)
   local CurrentNode = self.CurrentNode
   if not CurrentNode or CurrentNode:GetType() ~= EDialogueNodeType.Option then
     return false

@@ -49,6 +49,9 @@ end
 
 function M:FocusList_WalnutItem()
   local ItemData = self.List_Walnut:GetItemAt(0)
+  if not ItemData then
+    return
+  end
   if ItemData.SelfWidget then
     ItemData.SelfWidget:SetFocus()
   else

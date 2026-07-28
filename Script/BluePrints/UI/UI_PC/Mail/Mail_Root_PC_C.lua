@@ -1250,9 +1250,9 @@ function M:OnCancelMailStar(Ret, UniqueID)
     self.StarMailList[UniqueID] = nil
     self.NormalMailList[UniqueID] = TempData
     self.NormalMailList[UniqueID].IsStar = false
+    local SelectMailIndex = self.CurContent.Id
     self.StarMailNums = self.StarMailNums - 1
     self.NorMailNums = self.NorMailNums + 1
-    local SelectMailIndex = self.CurContent.Id
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Tosat_Mail_Remove"))
     if self:IsExistTimer("CancelStar") then
       self:RemoveTimer("CancelStar")

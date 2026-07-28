@@ -15,7 +15,8 @@ return ReadOnly("GoodsToBattlePass", {
     [100007] = "RANK2",
     [100008] = "RANK2",
     [100009] = "RANK2",
-    [100010] = "RANK2"
+    [100010] = "RANK2",
+    [100011] = "RANK2"
   },
   ["com.hero.dna.Pay_BattlePassRank2to3"] = {
     [100001] = "RANK2_UPGRADE_RANK3",
@@ -27,7 +28,8 @@ return ReadOnly("GoodsToBattlePass", {
     [100007] = "RANK2_UPGRADE_RANK3",
     [100008] = "RANK2_UPGRADE_RANK3",
     [100009] = "RANK2_UPGRADE_RANK3",
-    [100010] = "RANK2_UPGRADE_RANK3"
+    [100010] = "RANK2_UPGRADE_RANK3",
+    [100011] = "RANK2_UPGRADE_RANK3"
   },
   ["com.hero.dna.Pay_BattlePassRank3"] = {
     [100001] = "RANK3",
@@ -39,6 +41,7 @@ return ReadOnly("GoodsToBattlePass", {
     [100007] = "RANK3",
     [100008] = "RANK3",
     [100009] = "RANK3",
-    [100010] = "RANK3"
+    [100010] = "RANK3",
+    [100011] = "RANK3"
   }
 })

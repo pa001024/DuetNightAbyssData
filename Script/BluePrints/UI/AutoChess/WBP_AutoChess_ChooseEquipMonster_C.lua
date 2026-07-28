@@ -32,7 +32,7 @@ function M:OnListItemObjectSet(Content)
   self.CurCost = Info.DeployCost
   self.Chess.Image_Head:SetBrushResourceObject(LoadObject(Info.MonsterIcon))
   self.Chess.Icon_Type.Icon:SetBrushResourceObject(LoadObject(Info.PositionIcon))
-  self.Chess.Text_Name:SetTexT(GText(Info.CombatChessName))
+  self.Chess.Text_Name:SetText(GText(Info.CombatChessName))
   self.Chess:SetLocked(false)
   local Equips = Model:GetMonsterEquipInfo(Content.Id)
   self:UpdateCost(Equips)
@@ -44,7 +44,7 @@ function M:UpdateCost(Equips)
     local DeployCost = DataMgr.RobotEquip[value].DeployCost
     self.CurCost = self.CurCost + DeployCost
   end
-  self.Chess.Text_Cost:SetTexT(self.CurCost)
+  self.Chess.Text_Cost:SetText(self.CurCost)
 end
 
 function M:OnClick()
@@ -90,7 +90,7 @@ function M:AddEquip(Id)
   if Info then
     local Cost = self.CurCost + Info.DeployCost
     self.CurCost = Cost
-    self.Chess.Text_Cost:SetTexT(Cost)
+    self.Chess.Text_Cost:SetText(Cost)
   end
 end
 
@@ -107,7 +107,7 @@ function M:RemoveEquip(Count, Id)
   if Info then
     local Cost = self.CurCost - Info.DeployCost
     self.CurCost = Cost
-    self.Chess.Text_Cost:SetTexT(Cost)
+    self.Chess.Text_Cost:SetText(Cost)
   end
 end
 

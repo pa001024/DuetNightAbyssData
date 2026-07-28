@@ -110,6 +110,16 @@ return ReadOnly("BattleCharAttr", {
     DefaultValue = 0,
     RoleAttrDisplay = "AlwaysTrue"
   },
+  ExcelWeaponModifierRate = {
+    AttrName = "ExcelWeaponModifierRate",
+    DefaultValue = 1,
+    RoleAttrDisplay = "OnlyModified"
+  },
+  ExcelWeaponModifierValue = {
+    AttrName = "ExcelWeaponModifierValue",
+    DefaultValue = 0,
+    RoleAttrDisplay = "OnlyModified"
+  },
   ExcelWeaponTag = {
     AttrName = "ExcelWeaponTag",
     RoleAttrDisplay = "AlwaysTrue"
@@ -123,6 +133,11 @@ return ReadOnly("BattleCharAttr", {
     AttrName = "HpRates",
     DefaultValue = 0,
     RoleAttrDisplay = "AlwaysFalse"
+  },
+  HyperTriggerRate = {
+    AttrName = "HyperTriggerRate",
+    DefaultValue = 1,
+    RoleAttrDisplay = "OnlyModified"
   },
   InitSp = {
     AttrName = "InitSp",

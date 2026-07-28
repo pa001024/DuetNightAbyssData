@@ -134,6 +134,7 @@ UIConst.ROUGELIKESUCESSTOAST = "/Game/UI/WBP/Common/Toast/WBP_Com_ToastSuccess.W
 UIConst.SEVENDAYSIGNPOPUPUI = "/Game/UI/WBP/Activity/Widget/SevenDay/WBP_Activity_SevenDayPopUp.WBP_Activity_SevenDayPopUp_C"
 UIConst.PianoMusicScoreData = "/Game/UI/WBP/Piano/Widget/Piano_MusicScore_Data.Piano_MusicScore_Data_C"
 UIConst.PianoMusicItemData = "/Game/UI/WBP/Piano/Widget/Piano_MusicItem_Data.Piano_MusicItem_Data_C"
+UIConst.PianoSceneData = "/Game/UI/WBP/Piano/Widget/Piano_Scene_Data.Piano_Scene_Data_C"
 UIConst.TEXTMEMORYINFOFLOAT = "/Game/BluePrints/UI/Rank/WBP_TestInfoFloat.WBP_TestInfoFloat_C"
 UIConst.DUNGEONINDICATOR = {
   Hostage = "/Game/UI/WBP/GuidePoint/WBP_GuidePoint_Hostage.WBP_GuidePoint_Hostage",
@@ -681,7 +682,11 @@ UIConst.CommonHideTagName = {
   DefaultTag = "DefaultTag",
   GMShowUIOnly = "GMShowUIOnly"
 }
-UIConst.GameUIShowState = {HUD = 1, System = 2}
+UIConst.GameUIShowState = {
+  HUD = 1,
+  System = 2,
+  Other = 3
+}
 UIConst.IsEnablePageJumpAnimEffect = true
 UIConst.AnimOutSpeedWithPageJump = {
   LittleFastSpeed = 3,
@@ -692,6 +697,11 @@ UIConst.AnimOutSpeedWithPageJump = {
 UIConst.AnimWithJumpConfig = {
   ShopMain = {InAnimWithJumpTime = 0.05, IsNeedFadeOut = false},
   AutoChessMain = {IsNeedFadeOut = false},
+  GuildMain = {
+    IsNeedFadeOut = false,
+    InAnimWithJumpTime = 0.5,
+    IsNeedFadeIn = true
+  },
   FameMain = {IsNeedFadeOut = false, IsNeedFadeIn = true},
   ShopActivity = {IsNeedFadeOut = true},
   ActivityRewardPacking = {IsNeedFadeOut = true, IsNeedFadeIn = false},

@@ -6,6 +6,7 @@ local WBP_BattlePass_PetSelection_C = Class({
 })
 
 function WBP_BattlePass_PetSelection_C:Construct()
+  self.CurrentSelectId = nil
   self.Avatar = GWorld:GetAvatar()
   assert(self.Avatar, "拿不到Avatar")
   self.PetItemList = {
@@ -119,6 +120,8 @@ function WBP_BattlePass_PetSelection_C:InitBtn()
       end
     end
   end
+  self.Btn_Reward:SetGamePadIconVisible(true)
+  self.Btn_Reward:SetGamePadImg("A")
   self.Btn_Reward.Button_Area.OnClicked:Add(self, self.OnClaimBtnClicked)
   self.Btn_Check:BindEventOnClicked(self, self.OnBtnChecked)
   self.Key_Check:CreateCommonKey({
@@ -244,13 +247,11 @@ end
 function WBP_BattlePass_PetSelection_C:InitGamepadView()
   DebugPrint("@zyh InitGamepadView Pet")
   self.WS_Check:SetActiveWidgetIndex(1)
-  self.Btn_Reward.Img_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WB_Pet:GetChildAt(0).Button_Area:SetFocus()
 end
 
 function WBP_BattlePass_PetSelection_C:InitKeyboardView()
   self.WS_Check:SetActiveWidgetIndex(0)
-  self.Btn_Reward.Img_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function WBP_BattlePass_PetSelection_C:BP_GetDesiredFocusTarget()

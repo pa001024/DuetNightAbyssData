@@ -62,6 +62,12 @@ function M:Init(Params)
   self.Btn.Btn:SetForbidden(true)
   self:UpdateGamepadKeyVisibility()
   self:UpdateConfirmBtnAttrIcon(self.SelectedContent)
+  local ArmoryUI = UIManager(self):GetArmoryUIObj()
+  if ArmoryUI.ActorController then
+    ArmoryUI.ActorController:BindViewUI(self.Parent)
+    ArmoryUI.ActorController:SetCurrentViewUI(self.Parent)
+    ArmoryUI.ActorController:SetArmoryMontageTag("Armory_ChangeAttr")
+  end
 end
 
 function M:OnAttrBtnClick(Content)
@@ -73,6 +79,11 @@ function M:OnAttrBtnClick(Content)
   self:CheckNeedForbidConfirmBtn(CurCharId)
   self:UpdateConfirmBtnAttrIcon(Content)
   self:ChangeCharModelByCharId(Content.CharId)
+  local ArmoryUI = UIManager(self):GetArmoryUIObj()
+  if ArmoryUI.ActorController then
+    ArmoryUI:UpdateMontageAndCamera()
+    ArmoryUI.ActorController:SetArmoryMontageTag("Armory_ChangeAttr")
+  end
 end
 
 function M:CheckNeedForbidConfirmBtn(CurCharId)
@@ -110,6 +121,12 @@ function M:OnCharAttributeSwitched(Ret)
   if not ErrorCode:Check(Ret) then
     return
   end
+  local CharInfo = DataMgr.BattleChar[self.SelectedContent.CharId]
+  local PlayerInfo = DataMgr.Model[CharInfo.ModelId]
+  local ArmoryUI = UIManager(self):GetArmoryUIObj()
+  if ArmoryUI.ActorController and ArmoryUI.ActorController.ArmoryPlayer.FXComponent and PlayerInfo.AttrConfimEffect then
+    ArmoryUI.ActorController.ArmoryPlayer.FXComponent:PlayEffectByIDParams(PlayerInfo.AttrConfimEffect, {bTickEvenWhenPaused = true, NotAttached = true})
+  end
   UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Char_AttrChanged"))
   local CurCharId = AvatarUtils:GetCurrentCharIdByGroupId(self.Avatar, self.CharGroupId)
   self:CheckNeedForbidConfirmBtn(CurCharId)
@@ -128,19 +145,26 @@ end
 function M:ChangeCharModelByCharId(CharId)
   local CharUuid = self.Avatar:GetCharUuidByCharId(CharId)
   local Char = self.Avatar.Chars[CharUuid]
+  local CharInfo = DataMgr.BattleChar[CharId]
+  local PlayerInfo = DataMgr.Model[CharInfo.ModelId]
   local ArmoryUI = UIManager(self):GetArmoryUIObj()
   if ArmoryUI.ActorController and Char then
     ArmoryUI.ActorController:ChangeCharModel(Char)
-    if ArmoryUI then
-      ArmoryUI:UpdateMontageAndCamera()
-    end
   end
 end
 
 function M:Destruct()
+  local ArmoryUI = UIManager(self):GetArmoryUIObj()
   local CurCharId = AvatarUtils:GetCurrentCharIdByGroupId(self.Avatar, self.CharGroupId)
   if CurCharId and CurCharId > 0 and self.SelectedContent and CurCharId ~= self.SelectedContent.CharId then
     self:ChangeCharModelByCharId(CurCharId)
+  end
+  if ArmoryUI then
+    if ArmoryUI.ActorController then
+      ArmoryUI.ActorController:UnBindViewUI(self.Parent)
+      ArmoryUI.ActorController:ResetCurrentViewUI()
+    end
+    ArmoryUI:UpdateMontageAndCamera()
   end
 end
 

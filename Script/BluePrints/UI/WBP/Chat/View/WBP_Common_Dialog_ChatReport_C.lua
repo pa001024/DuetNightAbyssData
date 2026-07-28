@@ -148,9 +148,9 @@ function WBP_Common_Dialog_ChatReport_C:InitContent(Params, PopupData, Owner)
   if self.IsGuildReport then
     self.Owner.DontCloseWhenRightBtnClicked = true
   end
-  self.Owner:GetButtonBar().Btn_Yes:BindEventOnReleased(self, self.OnBtnYes)
+  self.Owner:GetButtonBar().Btn_Yes:BindEventOnClicked(self, self.OnBtnYes)
   self.Owner:GetButtonBar().Btn_Yes:ForbidBtn(true)
-  self.Owner:GetButtonBar().Btn_Quit:BindEventOnReleased(self, self.OnBtnNo)
+  self.Owner:GetButtonBar().Btn_Quit:BindEventOnClicked(self, self.OnBtnNo)
   if self.IsGuildReport then
     self.Text_Title:SetText(GText("UI_ReportGuild"))
     self.Text_PlayerName:SetText(string.format("%s ", Params.GuildName or Params.Nickname or ""))
@@ -604,8 +604,8 @@ function WBP_Common_Dialog_ChatReport_C:OnBtnNo()
 end
 
 function WBP_Common_Dialog_ChatReport_C:OnClose()
-  self.Owner:GetButtonBar().Btn_Yes:UnbindEventOnReleased(self)
-  self.Owner:GetButtonBar().Btn_Quit:UnbindEventOnReleased(self)
+  self.Owner:GetButtonBar().Btn_Yes:UnBindEventOnClicked(self)
+  self.Owner:GetButtonBar().Btn_Quit:UnBindEventOnClicked(self)
   if self.bPendingAutoSelect then
     self.bPendingAutoSelect = false
     self.List_Report.BP_OnEntryInitialized:Remove(self, self.OnReportEntryInitialized)

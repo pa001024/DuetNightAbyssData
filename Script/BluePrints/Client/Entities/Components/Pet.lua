@@ -292,4 +292,15 @@ function Component:ConditionCapturePet(ConditionId)
   self.logger.info("ZJT_ ConditionCapturePet Success ", ConditionId)
 end
 
+function Component:SetShowPet(InCallback, IsShow)
+  self.logger.debug("SetShowPet Begin", IsShow)
+  
+  local function Callback(Ret)
+    self.logger.debug("SetShowPet Callback ", Ret, IsShow)
+    InCallback(Ret, IsShow)
+  end
+  
+  self:CallServer("SetShowPet", Callback, IsShow)
+end
+
 return Component

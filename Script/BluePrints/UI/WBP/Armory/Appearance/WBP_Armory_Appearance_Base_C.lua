@@ -121,11 +121,12 @@ end
 function M:InitDispatcher()
   if self.Type == CommonConst.ArmoryType.Char then
     self:AddDispatcher(EventID.OnCharAppearanceChanged, self, self.OnCharAppearanceChanged)
-    self:AddDispatcher(EventID.OnCharAccessorySetted, self, self.ResetTarget)
-    self:AddDispatcher(EventID.OnCharAccessoryRemoved, self, self.ResetTarget)
+    self:AddDispatcher(EventID.OnCharAccessorySetted, self, self.OnCharAppearancePartChanged)
+    self:AddDispatcher(EventID.OnCharAccessoryRemoved, self, self.OnCharAppearancePartChanged)
     self:AddDispatcher(EventID.OnCharShowPartMesh, self, self.ResetTarget)
     self:AddDispatcher(EventID.OnCharCornerVisibilityChanged, self, self.ResetTarget)
-    self:AddDispatcher(EventID.OnCharSkinChanged, self, self.ResetTarget)
+    self:AddDispatcher(EventID.OnCharSkinChanged, self, self.OnCharAppearancePartChanged)
+    self:AddDispatcher(EventID.OnCharHairChanged, self, self.OnCharAppearancePartChanged)
     self:AddDispatcher(EventID.OnCharAppearanSuitRenamed, self, self.OnCharAppearanSuitRenamed)
   else
     self:AddDispatcher(EventID.OnWeaponAppearanSuitRenamed, self, self.OnWeaponAppearanSuitRenamed)
@@ -528,6 +529,23 @@ function M:ResetTarget()
   else
     self.Target = Avatar.Weapons[self.Target.Uuid] or self.Target
   end
+end
+
+function M:OnCharAppearancePartChanged(Ret, CharUuid, AppearanceIndex)
+  if not ErrorCode:Check(Ret) then
+    return
+  end
+  if not self.Target or CharUuid ~= self.Target.Uuid then
+    return
+  end
+  self:ResetTarget()
+  local CurrentAppearanceIndex = tonumber(self.CurrentSuitsIdx) or 0
+  local ChangedAppearanceIndex = tonumber(AppearanceIndex) or 0
+  if CurrentAppearanceIndex ~= ChangedAppearanceIndex then
+    return
+  end
+  self:InitCharAppearanceSuits()
+  self:CheckCharAppearanceBtnReddot()
 end
 
 function M:PlayInAnim()

@@ -1828,6 +1828,19 @@
     "desc": "A commemorative coin that gleams like starlight. Exchange it for various rewards.\nDress to impress and shine like a star."
   },
   {
+    "id": 224,
+    "name": "Starglow Coin",
+    "icon": "T_Resource_ActivityIcon_03",
+    "rarity": 5,
+    "desc": "A commemorative coin that gleams like starlight. Exchange it for various rewards.\nDress to impress and shine like a star."
+  },
+  {
+    "id": 225,
+    "name": "Cog",
+    "icon": "T_Activity_Autochess_Coin01",
+    "rarity": 5
+  },
+  {
     "id": 301,
     "name": "Reputation Perk: Icelake",
     "icon": "T_Fame_0101",
@@ -7062,90 +7075,90 @@
   },
   {
     "id": 12122,
-    "name": "Tumeborn: Frame",
+    "name": "Excresduo: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Tumeborn. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc": "Crafted with precision from the blueprint of Excresduo. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12123,
-    "name": "Tumeborn: Barrel",
+    "name": "Excresduo: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Tumeborn. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc": "Crafted with precision from the blueprint of Excresduo. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12124,
-    "name": "Ruinstem: Bolt",
+    "name": "Destructo: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Ruinstem. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
+    "desc": "Crafted with precision from the blueprint of Destructo. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12125,
-    "name": "Ruinstem: Frame",
+    "name": "Destructo: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Ruinstem. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc": "Crafted with precision from the blueprint of Destructo. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12126,
-    "name": "Ruinstem: Barrel",
+    "name": "Destructo: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Ruinstem. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc": "Crafted with precision from the blueprint of Destructo. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12127,
-    "name": "Wailmaw: Bolt",
+    "name": "Screamshot: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Wailmaw. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
+    "desc": "Crafted with precision from the blueprint of Screamshot. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12128,
-    "name": "Wailmaw: Frame",
+    "name": "Screamshot: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Wailmaw. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc": "Crafted with precision from the blueprint of Screamshot. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12129,
-    "name": "Wailmaw: Barrel",
+    "name": "Screamshot: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Wailmaw. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc": "Crafted with precision from the blueprint of Screamshot. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12130,
-    "name": "Marrowseep: Bolt",
+    "name": "Osteobreaker: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Marrowseep. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
+    "desc": "Crafted with precision from the blueprint of Osteobreaker. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12131,
-    "name": "Marrowseep: Frame",
+    "name": "Osteobreaker: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Marrowseep. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc": "Crafted with precision from the blueprint of Osteobreaker. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12132,
-    "name": "Marrowseep: Barrel",
+    "name": "Osteobreaker: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Marrowseep. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc": "Crafted with precision from the blueprint of Osteobreaker. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
@@ -7330,7 +7343,7 @@
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Chainbreak Pinion. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
     "id": 12156,
@@ -7338,7 +7351,7 @@
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Chainbreak Pinion. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
   {
     "id": 12157,
@@ -7346,7 +7359,7 @@
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Katana. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
     "id": 12158,
@@ -7354,7 +7367,7 @@
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Katana. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
   {
     "id": 12159,
@@ -7362,7 +7375,7 @@
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Katana. It embodies the wielder's will — only the strong are entitled to showcase their unique individuality on the battlefield.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"What's so bad about being different? People are always bending over backwards trying to prove how unique they are. Me? Ha, I was born an outcast, a natural oddity shunned by Father Ask, the most bizarre ornament in the tribe!\"\n\n— \"The Raven\" Chaos, from The Forsakens"
   },
   {
     "id": 12160,
@@ -7370,7 +7383,7 @@
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Gloam Oath. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
   {
     "id": 12161,
@@ -7378,7 +7391,7 @@
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Gloam Oath. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
-    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+    "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
   {
     "id": 12162,
@@ -7387,6 +7400,62 @@
     "rarity": 5,
     "desc": "Crafted with precision from the blueprint of Gloam Oath. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12163,
+    "name": "Sanguis Sanctus – Pistol: Bolt",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Pistol. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
+    "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
+  },
+  {
+    "id": 12164,
+    "name": "Sanguis Sanctus – Pistol: Frame",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Pistol. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
+  },
+  {
+    "id": 12165,
+    "name": "Sanguis Sanctus – Pistol: Barrel",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Pistol. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12166,
+    "name": "The Best Day: Frame",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of The Best Day. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
+    "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
+  },
+  {
+    "id": 12167,
+    "name": "The Best Day: Barrel",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of The Best Day. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12168,
+    "name": "Obsidian Heart-Reaper: Grip",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Obsidian Heart-Reaper. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
+    "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
+  },
+  {
+    "id": 12169,
+    "name": "Obsidian Heart-Reaper: Blade",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "Crafted with precision from the blueprint of Obsidian Heart-Reaper. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
+    "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
   {
     "id": 15001,
@@ -7431,7 +7500,7 @@
   {
     "id": 15006,
     "name": "Prototype: Sovereign Ember",
-    "icon": "T_Range_Weapon_Part02",
+    "icon": "T_Weapon_Claymore_Zaie",
     "rarity": 5,
     "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
@@ -7633,7 +7702,7 @@
     "name": "Hydro Crystal",
     "icon": "T_Resource_Zaie_Ice",
     "rarity": 4,
-    "desc": "A crystal infused with Hydro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal infused with Hydro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
   },
   {
@@ -7641,7 +7710,7 @@
     "name": "Pyro Crystal",
     "icon": "T_Resource_Zaie_Fire",
     "rarity": 4,
-    "desc": "A crystal infused with Pyro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal infused with Pyro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
   },
   {
@@ -7649,7 +7718,7 @@
     "name": "Anemo Crystal",
     "icon": "T_Resource_Zaie_Wind",
     "rarity": 4,
-    "desc": "A crystal infused with Anemo magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal infused with Anemo magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
   },
   {
@@ -7657,7 +7726,7 @@
     "name": "Electro Crystal",
     "icon": "T_Resource_Zaie_Lighting",
     "rarity": 4,
-    "desc": "A crystal infused with Electro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal infused with Electro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
   },
   {
@@ -7665,7 +7734,7 @@
     "name": "Lumino Crystal",
     "icon": "T_Resource_Zaie_Light",
     "rarity": 4,
-    "desc": "A crystal infused with Lumino magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal infused with Lumino magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
   },
   {
@@ -7673,7 +7742,7 @@
     "name": "Umbro Crystal",
     "icon": "T_Resource_Zaie_Dark",
     "rarity": 4,
-    "desc": "A crystal infused with Umbro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal infused with Umbro magic. Obtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
   },
   {
@@ -7681,7 +7750,7 @@
     "name": "Radiant Crystal",
     "icon": "T_Resource_Zaie_Rainbow",
     "rarity": 5,
-    "desc": "A crystal aglow with shifting colours. Within its facets, one may glimpse the splendour of all Atlasia, suffused with the power of every element. \nObtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc": "A crystal aglow with shifting colours. Within its facets, one may glimpse the splendour of all Atlasia, suffused with the power of every element. \nObtained through Abyssal Commissions. Can be used as smelting material for Calamity Weapons.",
     "desc2": "Mother Embla weeps. Her child, battered and bloodied, crawls through the blazing furnace, begging her for absolution.\nShe would reclaim the joy and mercy once bestowed, and strip away every blessing once granted by her grace.\nFor the evil he has wrought cannot be pardoned, nor the sins he bears forgiven.\nThen she sheds a single tear, and as it slips down her cheek, it hardens into a precious crystal.\n\n— A tribal legend from Askard"
   },
   {
@@ -7689,8 +7758,24 @@
     "name": "Abyssal Compass Lv. %s",
     "icon": "T_Resource_Coin_Zaie",
     "rarity": 5,
-    "desc": "Follow in Calamity's wake, seek the power to overturn the world, and let the compass lead you onward.\nCan be used to enter the Abyss Expedition.",
+    "desc": "Follow in Calamity's wake, seek the power to overturn the world, and let the compass lead you onward.\nCan be used to enter Abyssal Commissions.",
     "desc2": "The explorer who set out in pursuit of Calamity can no longer turn back. From the moment that enticing voice first began to whisper in his mind, every step he took was already being bent to its will. Now, all he can do is feel his way forward through the dark.\n\n— The Mystery of the Calamity Furnace, an adventure novel"
+  },
+  {
+    "id": 15039,
+    "name": "Tear of Embla: Expedition",
+    "icon": "T_Resource_Zaie_02",
+    "rarity": 5,
+    "desc": "Obtained by disassembling Abyssal Compasses of certain levels. Can be used to exchange for items in the Calamity Shop.",
+    "desc2": "He groped his way along the rough rock wall, never stopping even as his palms were cut raw and stained red. His breathing grew heavy, his steps grew numb. He had a feeling that one wrong step would send him falling — and that would be the end.\nUntil he saw a light — so faint it could have been a hallucination. What is that? Am I dead? He muttered to himself, but instinct drove him toward that faint glimmer.\n\n— The Mystery of the Calamity Furnace, an adventure novel"
+  },
+  {
+    "id": 15040,
+    "name": "Tear of Embla: Defence",
+    "icon": "T_Resource_Zaie_04",
+    "rarity": 5,
+    "desc": "Obtained by disassembling Abyssal Compasses of certain levels. Can be used to exchange for items in the Calamity Shop.",
+    "desc2": "He groped his way along the rough rock wall, never stopping even as his palms were cut raw and stained red. His breathing grew heavy, his steps grew numb. He had a feeling that one wrong step would send him falling — and that would be the end.\nUntil he saw a light — so faint it could have been a hallucination. What is that? Am I dead? He muttered to himself, but instinct drove him toward that faint glimmer.\n\n— The Mystery of the Calamity Furnace, an adventure novel"
   },
   {
     "id": 19000,
@@ -11941,10 +12026,10 @@
   },
   {
     "id": 41060,
-    "name": "RESOURCE_NAME_41060",
+    "name": "Pitter-Patter Waltz",
     "icon": "T_Resource_Gesture_Dida",
     "rarity": 5,
-    "desc": "RESOURCE_DESC_41060"
+    "desc": "Dance with light, lively steps."
   },
   {
     "id": 41061,
@@ -11968,6 +12053,41 @@
     "desc": "Prayer earns no absolution. Only destruction offers redemption."
   },
   {
+    "id": 41064,
+    "name": "Snowfall Serenade: Celeste",
+    "icon": "T_Resource_Gesture_Eve01",
+    "rarity": 6,
+    "desc": "A tiny snowflake drifts into a young girl's dream, joining her in an enchanting serenade."
+  },
+  {
+    "id": 41065,
+    "name": "Crystal Heart",
+    "icon": "T_Resource_Gesture_Liuli",
+    "rarity": 5,
+    "desc": "Eternity, captured at the moment of bloom."
+  },
+  {
+    "id": 41066,
+    "name": "RESOURCE_NAME_41066",
+    "icon": "T_Resource_Gesture_Liuli",
+    "rarity": 5,
+    "desc": "RESOURCE_DESC_41066"
+  },
+  {
+    "id": 41067,
+    "name": "Snowfall Serenade: Gilt",
+    "icon": "T_Resource_Gesture_Eve02",
+    "rarity": 6,
+    "desc": "A tiny snowflake drifts into a young girl's dream, joining her in an enchanting serenade."
+  },
+  {
+    "id": 41068,
+    "name": "Snowfall Serenade: White Sakura",
+    "icon": "T_Resource_Gesture_Eve03",
+    "rarity": 6,
+    "desc": "A tiny snowflake drifts into a young girl's dream, joining her in an enchanting serenade."
+  },
+  {
     "id": 42001,
     "name": "Mechanical Nexus: The Bane",
     "icon": "T_Icon_CentralSquare_Equip01",
@@ -11982,6 +12102,34 @@
     "rarity": 4,
     "desc": "An intricately designed square construct built using techniques long lost to the Jishu Sect. Its power core generates a powerful suction capable of clearing the Gritblight caused by the Scourge of Zhuyin.",
     "desc2": "Taixu arose from the primeval mists — formless, colourless, diffusing through all six directions. Later, when Zhuyin succumbed to corruption, its impurities settled and hardened, giving rise to the tangible substance we now call Gritblight... What's that — you'd rather I skip the principles and go straight to the instructions? Alas. Youngsters these days have no patience at all.\n \n— Master Gongshang, Mechanist of Jishu Sect"
+  },
+  {
+    "id": 49985,
+    "name": "RESOURCE_NAME_49985",
+    "icon": "T_Mounts_Gesture_0701",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_49985"
+  },
+  {
+    "id": 49986,
+    "name": "RESOURCE_NAME_49986",
+    "icon": "T_Mounts_Gesture_0701",
+    "rarity": 6,
+    "desc": "RESOURCE_DESC_49986"
+  },
+  {
+    "id": 49987,
+    "name": "Blade-run Knight: Celeste",
+    "icon": "T_Mounts_Gesture_09",
+    "rarity": 5,
+    "desc": "All those moments will be lost in time, like tears in rain."
+  },
+  {
+    "id": 49988,
+    "name": "Mecha-Sable Bi'an: Celeste",
+    "icon": "T_Mounts_Gesture_08",
+    "rarity": 4,
+    "desc": "A mechanical mount developed by Master Gongshang, lifelike enough to pass for a real Sable Bi'an. Ride it through Mistwharf, and you are sure to turn a few heads."
   },
   {
     "id": 49989,
@@ -12277,8 +12425,7 @@
     "id": 110038,
     "name": "Portrait: Miss Nightingale – Dappled Shade",
     "icon": "T_Head_Other0014",
-    "rarity": 4,
-    "pack": 114100
+    "rarity": 1
   },
   {
     "id": 110039,
@@ -12421,6 +12568,29 @@
     "select": 4005
   },
   {
+    "id": 110059,
+    "name": "Crystal Selection Chest Ⅱ",
+    "icon": "T_Pack_ZaieRes01",
+    "rarity": 5,
+    "desc": "Grants a material from Lumino Crystal, Umbro Crystal or Hydro Crystal.",
+    "select": 4006
+  },
+  {
+    "id": 110060,
+    "name": "Character Skin Selection – Boundless",
+    "icon": "T_Pack_Common05_01",
+    "rarity": 5,
+    "desc": "Grants a character skin from: Berenica, Flora, Lady Nifle, Su Yi, Rebecca, Fushu, Lynn, Hellfire, Margie, Rhythm, Zhiliu, Psyche and Daphne.",
+    "select": 5009
+  },
+  {
+    "id": 110061,
+    "name": "Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5,
+    "select": 350025
+  },
+  {
     "id": 120001,
     "name": "Tough Love Coupon",
     "icon": "T_Resource_DiscountTicket_01",
@@ -12447,6 +12617,13 @@
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Spend Phoxene Plumule ×480 to save Phoxene Plumule ×300"
+  },
+  {
+    "id": 120005,
+    "name": "Paradise Accessory Coupon",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Spend 300 Phoxene Plumules to save 240"
   },
   {
     "id": 1001101,
@@ -12538,8 +12715,8 @@
   },
   {
     "id": 1002102,
-    "name": "Thought: Eve",
-    "icon": "T_Resource_Root_Star5",
+    "name": "Thought: \"Ada\"",
+    "icon": "T_CharPiece_Eve",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -12580,6 +12757,14 @@
     "id": 1003103,
     "name": "Thought: Yale and Oliver",
     "icon": "T_CharPiece_Yeer",
+    "rarity": 5,
+    "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1003104,
+    "name": "Thought: Falsi",
+    "icon": "T_CharPiece_Falu",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -12681,6 +12866,14 @@
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
   },
   {
+    "id": 1005402,
+    "name": "RESOURCE_NAME_1005402",
+    "icon": "T_CharPiece_Dafu",
+    "rarity": 5,
+    "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
     "id": 1011101,
     "name": "Sigil: Berenica",
     "icon": "T_Phantom_Heitao",
@@ -12770,8 +12963,8 @@
   },
   {
     "id": 1012102,
-    "name": "Sigil: Eve",
-    "icon": "T_Phantom_Shuimu",
+    "name": "Sigil: \"Ada\"",
+    "icon": "T_Phantom_Eve",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
@@ -12812,6 +13005,14 @@
     "id": 1013103,
     "name": "Sigil: Yale and Oliver",
     "icon": "T_Phantom_Yeer",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
+    "id": 1013104,
+    "name": "Sigil: Falsi",
+    "icon": "T_Phantom_Falu",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
@@ -12907,6 +13108,14 @@
   {
     "id": 1015401,
     "name": "Sigil: Daphne",
+    "icon": "T_Phantom_Dafu",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
+    "id": 1015402,
+    "name": "RESOURCE_NAME_1015402",
     "icon": "T_Phantom_Dafu",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
@@ -14534,7 +14743,7 @@
     "name": "Footsteps Across Huaxu — Mistwharf",
     "icon": "T_Read_East01",
     "rarity": 3,
-    "desc": "This piece is part of Xu Xingke's Footsteps collection. Commissioned by Huaxu's local council, the renowned travel writer records his reflections on the many regions of his homeland.",
+    "desc": "An excerpt from Xu Xingke's Footsteps Across Huaxu, an officially commissioned travelogue. In it, Xu sets down his impressions of his homeland — its regions, its people, and the ideas they awaken.",
     "desc2": "Mistwharf\n Step off the boat, and the first thing you'll see is Mistwharf. For the people of Huaxu, this stretch of land runs long — from Starwharf in the south to the Gritblight Expanse in the north.\n\nStarwharf\nWhen I meet visitors arriving in Huaxu for the first time, I always tell them not to rush inland. Linger on the quay a moment: hawkers call without pause, hardworking Huaxu porters haul crates from river barges, and Starweavers trade stories with friends from distant lands. There are few places more full of life.\n\nEverSpring\nNear the roots of the great tree lies EverSpring — another stop not to be missed. In Huaxu, everyone knows what the name stands for: to the Starweavers, it is the realm's largest guild; to visitors, a trove of rare and wondrous wares. Even if you plan to buy nothing, the towering statue of Lord Argent at the gate alone is worth the journey.\n\nTwilight Ravine\n Few from Huaxu ever venture here. Set deep within the wilderness, the Twilight Ravine is said to be the resting place of Wishen — beings other lands might call \"ghosts\". These gentle spirits are best left undisturbed.\nAs a child, I once lost my way here and stumbled upon a vast pagoda tree, its gnarled branches aglow with a soft light. I followed the shimmer to a small island at the heart of a lake, where unfamiliar voices gently led me back to the path. Looking back now, that faint glimmer must have been the Spring of Yu, hidden deep within the Ravine.\n\nHall of Ephemerality\nThe Hall of Ephemerality is Fu family's ancestral hall of healing, devoted for generations to the Zhuyou method. Should you fall ill while travelling here, this is the place to seek aid. The healer cherishes silence: whether you come for treatment or merely pass through the apricot grove beyond, please keep your voice low, that her quietude may remain undisturbed.\n\nCrowsong Hollow\nWhen I was little, my parents would tell me the tale of the Battle of Shuli at bedtime — how the Xuanheng Sect and the Jishu clashed upon this plain, leaving not a soul standing. But when I asked what they had fought for, they never had an answer.\nNow, under Taihao's protection, Huaxu has known peace for generations. The rusted remnants of Mechapuppets lie scattered across the plain, worn by wind and time — a silent draw for scholars from far and wide.",
     "source": [
       {
@@ -21640,6 +21849,20 @@
     "desc": "Since its launch, the Incense Proving has drawn widespread attention across Huaxu, with its star contestants earning particular acclaim. To inspire more young talents amid the changes sweeping Huaxu, the organisers have invited these standout competitors to take part in an even more demanding Invitational, and issued invitations to them accordingly."
   },
   {
+    "id": 6000006,
+    "name": "Civil & Martial Tokens (Trial)",
+    "icon": "T_Activity_SoloTreasure_24",
+    "rarity": 5,
+    "desc": "A currency used in Treasure Hunt Trials, modelled after the Civil & Martial Tokens used in the Incense Proving.\nCivil & Martial Tokens were issued to contestants as a way to record their scores. Before Huaxu's prohibition on fighting, the competition was divided into civil and martial events, each with its own tokens for tallying points."
+  },
+  {
+    "id": 6000007,
+    "name": "Trial Invitation",
+    "icon": "T_Activity_SoloTreasure_ResIcon",
+    "rarity": 5,
+    "desc": "Grants access to a special simulation modelled on Huaxu's Incense Proving."
+  },
+  {
     "id": 6100001,
     "name": "HP Rune",
     "icon": "T_Activity_Autochess_Item02",
@@ -21856,6 +22079,24 @@
     "rarity": 5
   },
   {
+    "id": 6100037,
+    "name": "Rune: Focus",
+    "icon": "T_Activity_Autochess_Item03",
+    "rarity": 4
+  },
+  {
+    "id": 6100038,
+    "name": "Rune: Challenge",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
+    "id": 6100039,
+    "name": "Rune: Rescue",
+    "icon": "T_Activity_Autochess_Item04",
+    "rarity": 4
+  },
+  {
     "id": 6100101,
     "name": "Veloci Filthoid Mechapuppet Ⅰ",
     "icon": "T_Head_Gr_Jichong",
@@ -21986,6 +22227,37 @@
     "name": "Match Points",
     "icon": "T_Activity_Autochess_Coin02",
     "rarity": 5
+  },
+  {
+    "id": 6100123,
+    "name": "Bi'an Mechapuppet Ⅰ",
+    "icon": "T_Head_HX_Bian02",
+    "rarity": 1
+  },
+  {
+    "id": 6100124,
+    "name": "Ironfist Sentinel Mechapuppet Ⅰ",
+    "icon": "T_Tiequan",
+    "rarity": 1
+  },
+  {
+    "id": 6100125,
+    "name": "Guard of Yingtian Mechapuppet Ⅰ",
+    "icon": "T_Head_HX_Tianshi01",
+    "rarity": 1
+  },
+  {
+    "id": 6100126,
+    "name": "Magistrate of Yingtian Mechapuppet Ⅰ",
+    "icon": "T_Head_HX_Tianwei",
+    "rarity": 1
+  },
+  {
+    "id": 10302501,
+    "name": "Geniemon Medal",
+    "icon": "T_Coin_ActivityRacing",
+    "rarity": 5,
+    "desc": "To commemorate the first Geniemon Derby, the station has specially crafted metal medals for all participating Geniemons, with their racer names and records engraved on the back. The owners are pleased — and the Geniemons seem quite fond of these shiny little trinkets too!"
   },
   {
     "id": 31001001,
@@ -23147,6 +23419,48 @@
   },
   {
     "id": 60000046,
+    "name": "Upgrade Voucher Ⅵ",
+    "icon": "T_Activity_SoloTreasure_BagSign06",
+    "rarity": 5,
+    "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 60000051,
+    "name": "Upgrade Voucher Ⅰ",
+    "icon": "T_Activity_SoloTreasure_BagSign01",
+    "rarity": 5,
+    "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 60000052,
+    "name": "Upgrade Voucher Ⅱ",
+    "icon": "T_Activity_SoloTreasure_BagSign02",
+    "rarity": 5,
+    "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 60000053,
+    "name": "Upgrade Voucher Ⅲ",
+    "icon": "T_Activity_SoloTreasure_BagSign03",
+    "rarity": 5,
+    "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 60000054,
+    "name": "Upgrade Voucher Ⅳ",
+    "icon": "T_Activity_SoloTreasure_BagSign04",
+    "rarity": 5,
+    "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 60000055,
+    "name": "Upgrade Voucher Ⅴ",
+    "icon": "T_Activity_SoloTreasure_BagSign05",
+    "rarity": 5,
+    "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 60000056,
     "name": "Upgrade Voucher Ⅵ",
     "icon": "T_Activity_SoloTreasure_BagSign06",
     "rarity": 5,

@@ -1,3 +1,4 @@
+local CoroutineUtils = require("CoroutineUtils")
 local AnnounceCommon = require("BluePrints.UI.WBP.Announcement.AnnounceCommon")
 local CdnTool = require("BluePrints.UI.GameLogin.CdnTool")
 local AnnounceModel = require("BluePrints.UI.WBP.Announcement.AnnounceModel")
@@ -41,13 +42,13 @@ function M:GetAnnouncementDataAsync(ShowTag, Coroutine, HostId)
   end
   if nil == HostId then
     if Avatar and Avatar.Hostnum then
-      HostId = tonumber(PlayerAvatar.Hostnum)
+      HostId = tonumber(Avatar.Hostnum)
     else
       Utils.Traceback(ErrorTag, LXYTag .. "HostId不存在，不知道你选了什么服...")
       return
     end
   end
-  ForceStopAsyncTask(M, "PendingCo")
+  CoroutineUtils.ForceStopAsyncTask(M, "PendingCo")
   self.PendingCo = Coroutine
   self:GetModel():CacheLastConf()
   self:GetModel().bInit = true

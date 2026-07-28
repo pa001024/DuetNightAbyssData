@@ -134,5 +134,141 @@
     "shapeType": 3,
     "eventUnlockCondition": 10301421,
     "shopItemId": 10007125
+  },
+  {
+    "id": 11,
+    "name": "Treasure Pouch Ⅰ",
+    "desc": "24",
+    "price": 0,
+    "shape": [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "shapeType": 1
+  },
+  {
+    "id": 12,
+    "name": "Treasure Pouch Ⅱ",
+    "desc": "35",
+    "price": 800,
+    "shape": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "shapeType": 0,
+    "eventUnlockCondition": 10302717,
+    "shopItemId": 10012121
+  },
+  {
+    "id": 13,
+    "name": "Treasure Pouch Ⅲ",
+    "desc": "45",
+    "price": 4000,
+    "shape": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "shapeType": 0,
+    "eventUnlockCondition": 10302718,
+    "shopItemId": 10012122
+  },
+  {
+    "id": 14,
+    "name": "Treasure Pouch Ⅳ",
+    "desc": "55",
+    "price": 10000,
+    "shape": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "shapeType": 2,
+    "eventUnlockCondition": 10302719,
+    "shopItemId": 10012123
+  },
+  {
+    "id": 15,
+    "name": "Treasure Pouch Ⅴ",
+    "desc": "60",
+    "price": 30000,
+    "shape": [
+      [
+        5,
+        12
+      ]
+    ],
+    "shapeType": 3,
+    "eventUnlockCondition": 10302720,
+    "shopItemId": 10012124
+  },
+  {
+    "id": 16,
+    "name": "Treasure Pouch Ⅵ",
+    "desc": "70",
+    "price": 150000,
+    "shape": [
+      [
+        5,
+        14
+      ]
+    ],
+    "shapeType": 3,
+    "eventUnlockCondition": 10302721,
+    "shopItemId": 10012125
   }
 ]

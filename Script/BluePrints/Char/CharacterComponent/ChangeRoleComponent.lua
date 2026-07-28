@@ -9,6 +9,9 @@ function Component:ChangeRole(RoleId, AvatarInfo)
   end
   AvatarInfo = AvatarInfo or AvatarUtils:GetDefaultAvatarInfo()
   self:RealChangeRole(RoleId, AvatarInfo)
+  if self.PreviewModel then
+    return
+  end
   self:SetupCameraControlComponent()
 end
 
@@ -25,6 +28,7 @@ end
 function Component:RealChangeRoleByAvatarInfo(RoleId, AvatarInfo)
   self:GetCharPreloadComp():ReleaseCacheAssets()
   self.BornInfo = nil
+  self.AppearanceSuit = nil
   local InfoForInit = {
     Camp = "Player",
     RoleId = RoleId,

@@ -1,14 +1,7 @@
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
 local Component = {}
-local NormalRewardReddotName = "JJGameTask_Normal_Reddot"
-local ChallengeRewardReddotName = "JJGameTask_Challenge_Reddot"
 local MidTermGoalEventId = DataMgr.MidTermGoalConstant.MidTermGoalEventId.ConstantValue
-local TaskType = {
-  Daily = {1, 2},
-  Cycle = 3,
-  Achievement = 4
-}
 
 function Component:_OnLoginSuccess()
   JJGameController:Init()
@@ -86,7 +79,7 @@ end
 function Component:NotifyMidTermTaskComplete(TaskId)
   self.logger.info("NotifyMidTermTaskComplete", TaskId)
   EventManager:FireEvent(EventID.OnMidTermTaskComplete, TaskId)
-  self:UpdateJJGameReddot(TaskId)
+  self:DelayUpdateJJGameReddot()
 end
 
 function Component:NotifyMidTermTaskProgressChange(TaskId, Progress)
@@ -94,69 +87,21 @@ function Component:NotifyMidTermTaskProgressChange(TaskId, Progress)
   EventManager:FireEvent(EventID.OnMidTermTaskProgressChange, TaskId, Progress)
 end
 
-function Component:UpdateJJGameReddot(TaskId)
+function Component:DelayUpdateJJGameReddot()
+  local WorldContextObject = GWorld and GWorld.GameInstance
+  UE4.UBattleFunctionLibrary.DeferredCall(WorldContextObject, "MidTermMgr_UpdateJJGameReddot", function()
+    self:UpdateJJGameReddot()
+  end)
+end
+
+function Component:UpdateJJGameReddot()
   if not ActivityUtils.CheckEventIsOpen(MidTermGoalEventId, nil, true) then
     return
   end
-  local Task = self.MidTermGoals[MidTermGoalEventId].Tasks[TaskId]
-  if Task then
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    local EventData = DataMgr.EventMain[MidTermGoalEventId]
-    local currentTime = TimeUtils.NowTime()
-    if TaskData and TaskData.TaskType == TaskType.Achievement then
-      local intervalDays = TimeUtils.GetIntervalDay(EventData.EventStartTime, currentTime)
-      local calculatedEventDay = intervalDays + 1
-      if calculatedEventDay >= TaskData.EnableDay and currentTime < EventData.EventEndTime then
-        self:TryIncreaceChallengeTaskRewardReddot(TaskId)
-      end
-    end
-  end
+  JJGameController:RefreshEntryReddotState()
   local ActiNode = ReddotManager.GetTreeNode("Acti_JJGame")
   if ActiNode and ActiNode.OnRefreshNodeData then
     ActiNode:OnRefreshNodeData(MidTermGoalEventId)
-  end
-end
-
-function Component:TryIncreaceChallengeTaskRewardReddot(TaskId)
-  if self:CheckIsChallengeRewardAllClaimed() then
-    return
-  end
-  local CacheKey = ChallengeRewardReddotName .. TaskId
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(ChallengeRewardReddotName)
-  end
-end
-
-function Component:CheckIsChallengeRewardAllClaimed()
-  local AchievementPrize = DataMgr.AchievementPrize
-  local MidTermGoals = self.MidTermGoals[MidTermGoalEventId] or {}
-  local MidTermAchvScores = MidTermGoals.AchvScores or 0
-  local MidTermAchvProgressRewarded = MidTermGoals.AchvProgressRewarded or {}
-  local maxCount = 0
-  for Count, _ in pairs(AchievementPrize) do
-    if Count > maxCount then
-      maxCount = Count
-    end
-  end
-  if MidTermAchvScores < maxCount then
-    return false
-  end
-  for Count, _ in pairs(AchievementPrize) do
-    if Count <= MidTermAchvScores and 1 ~= MidTermAchvProgressRewarded[Count] then
-      return false
-    end
-  end
-  return true
-end
-
-function Component:TryIncreaceNormalRewardReddot(TaskId)
-  local CacheKey = NormalRewardReddotName .. TaskId
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(NormalRewardReddotName)
   end
 end
 

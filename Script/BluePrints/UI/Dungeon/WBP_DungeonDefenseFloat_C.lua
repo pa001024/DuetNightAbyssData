@@ -731,7 +731,7 @@ function WBP_DungeonDefenseFloat_C:UpdateWaveCount()
     return
   end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
-  local WavesFinished = (GameState.DefenceWave - 1) % 3
+  local WavesFinished = (GameState.DefenceWave - 1) % GameState.DefenceWavesPerStage
   self.WavesRemained = GameState.DefenceWavesPerStage - WavesFinished
   if self.IsNewDefenceMode then
     self.Num_DefensedWave:SetText(WavesFinished)

@@ -39,7 +39,7 @@ return ReadOnly("AsyncCombatEventConstant", {
   },
   AsyncCombat_EventId = {
     ConstantName = "AsyncCombat_EventId",
-    ConstantValue = 121001
+    ConstantValue = 121002
   },
   AsyncCombat_HomeownerLimit = {
     ConstantName = "AsyncCombat_HomeownerLimit",
@@ -55,7 +55,7 @@ return ReadOnly("AsyncCombatEventConstant", {
   },
   AsyncCombat_MakePublicTime = {
     ConstantName = "AsyncCombat_MakePublicTime",
-    ConstantValue = 60
+    ConstantValue = 720
   },
   AsyncCombat_RoomCapacityLimit = {
     ConstantName = "AsyncCombat_RoomCapacityLimit",

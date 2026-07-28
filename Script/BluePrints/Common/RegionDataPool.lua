@@ -364,6 +364,9 @@ function M:FillStaticCreatorData(DataTable, Info)
   DataTable.QuestChainId = Info.Creator.QuestChainId
   DataTable.State = Info:GetLuaTable("State")
   DataTable.Level = Info.Creator:GetUnitLevel()
+  if Info.Creator.QuestId and Info.Creator.QuestId > 0 then
+    DataTable.QuestId = Info.Creator.QuestId
+  end
   DataTable.Type = 1
 end
 
@@ -570,6 +573,14 @@ function M:GetAllRegionDataByUnitType(UnitType)
     end
   end
   return NewTable
+end
+
+function M:UpdateQuestId(Index, QuestId)
+  local Data = self.RegionData[Index]
+  if Data and Data.RegionDataType == ERegionDataType.RDT_QuestCommonData then
+    Data.QuestId = QuestId
+    DebugPrint("RegionData UpdateQuestId", Data.WorldRegionEid, QuestId)
+  end
 end
 
 return M

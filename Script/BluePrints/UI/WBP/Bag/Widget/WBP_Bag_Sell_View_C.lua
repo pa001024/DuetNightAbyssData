@@ -1,3 +1,4 @@
+local MiscUtils = require("Utils.MiscUtils")
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
 local StuffIconObject = require("BluePrints.UI.WBP.Bag.Widget.BagStuffIconObject")
@@ -29,7 +30,36 @@ end
 function WBP_Bag_Sell_View_C:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self.List_Item:ClearListItems()
-  self.ParentWidget, self.CloseCallback, self.RemoveCallback, self.ConfirmCallback, self.InitStuffDataInList, self.CurrentMode = ...
+  self.CurStuffCountInList = 0
+  self.CurSelectStuffContentInList = nil
+  self.bIsOpenList = false
+  self.NeedDealWithStuffData = {}
+  self.NeedDealWithStuffCount = {}
+  self.AllTypeRewardsInfo = {}
+  self.AllTypeCoinInfo = {}
+  self.AllRewardContentList = {}
+  self.ParentWidget, self.CloseCallback, self.RemoveCallback, self.ConfirmCallback, self.InitStuffDataInList, self.CurrentMode, self.bIronTicketMode = ...
+  if self.bIronTicketMode then
+    local NoopMeta = {
+      __index = function()
+        return function()
+        end
+      end
+    }
+    
+    local function EnsureNoop(name)
+      if not self[name] then
+        self[name] = setmetatable({}, NoopMeta)
+      end
+    end
+    
+    EnsureNoop("Com_NumInput")
+    EnsureNoop("Com_Slider")
+    EnsureNoop("Panel_Empty")
+    EnsureNoop("Panel_KeyCount")
+    EnsureNoop("Text_Num")
+    EnsureNoop("WidgetSwitcher_State")
+  end
   if CommonUtils.GetDeviceTypeByPlatformName(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
     local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.Panel_Content)
     if nil ~= CanvasSlot then
@@ -125,13 +155,14 @@ function WBP_Bag_Sell_View_C:OnUpdateBagItemByAction(OpAction, ErrCode, ...)
   end
 end
 
-function WBP_Bag_Sell_View_C:ShowGetItemPage(AllRewards)
+function WBP_Bag_Sell_View_C:ShowGetItemPage(AllRewards, CustomCloseCallback)
+  local CloseCb = CustomCloseCallback or self.PlayOutAnim
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     self:AddTimer(0.8, function()
-      UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, self.PlayOutAnim, self, true)
+      UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, CloseCb, self, true)
     end)
   else
-    UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, self.PlayOutAnim, self, true)
+    UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, AllRewards, CloseCb, self, true)
   end
 end
 
@@ -188,36 +219,57 @@ function WBP_Bag_Sell_View_C:RefreshBaseInfo()
       }
     })
   end
-  self.Com_NumInput:Init({
-    MinusBtnCallback = self.OnClickToMinusStuff,
-    AddBtnCallback = self.OnClickToAddStuff,
-    MinBtnCallback = self.OnClickToMinStuff,
-    MaxBtnCallback = self.OnClickToMaxStuff,
-    InputCallback = self.OnInputStuffNum,
-    LeaveFocusWidget = self.ParentWidget,
-    OwnerPanel = self
-  })
-  self.Com_NumInput:SetSimpleMode(true)
-  self.Com_Slider:Init({
-    MinusBtnCallback = self.OnClickToMinusStuff,
-    AddBtnCallback = self.OnClickToAddStuff,
-    SliderChangeCallback = self.SliderChangeCallback,
-    SoundResPath = {
-      Minus = "event:/ui/common/click_btn_minus"
-    },
-    OwnerPanel = self,
-    EnableMiniBtn = false,
-    EnableMaxBtn = false
-  })
+  if self.Com_NumInput then
+    self.Com_NumInput:Init({
+      MinusBtnCallback = self.OnClickToMinusStuff,
+      AddBtnCallback = self.OnClickToAddStuff,
+      MinBtnCallback = self.OnClickToMinStuff,
+      MaxBtnCallback = self.OnClickToMaxStuff,
+      InputCallback = self.OnInputStuffNum,
+      LeaveFocusWidget = self.ParentWidget,
+      OwnerPanel = self
+    })
+    self.Com_NumInput:SetSimpleMode(true)
+  end
+  if self.Com_Slider then
+    self.Com_Slider:Init({
+      MinusBtnCallback = self.OnClickToMinusStuff,
+      AddBtnCallback = self.OnClickToAddStuff,
+      SliderChangeCallback = self.SliderChangeCallback,
+      SoundResPath = {
+        Minus = "event:/ui/common/click_btn_minus"
+      },
+      OwnerPanel = self,
+      EnableMiniBtn = false,
+      EnableMaxBtn = false
+    })
+  end
   self.ItemBox:ClearChildren()
-  self.Num_Select:SetText(tostring(BagCommon.MinSellInputCount))
-  self.Num_Select_Max:SetText(tostring(BagCommon.MaxSellInputCount))
-  self.Text_Num:SetText(GText("UI_Bag_Sell_Amount"))
+  if self.Num_Select then
+    self.Num_Select:SetText(tostring(BagCommon.MinSellInputCount))
+  end
+  if self.Num_Select_Max then
+    self.Num_Select_Max:SetText(tostring(BagCommon.MaxSellInputCount))
+  end
+  if self.Text_Num then
+    self.Text_Num:SetText(GText("UI_Bag_Sell_Amount"))
+  end
   self.Text_Select:SetText(GText("UI_Bag_Sell_Select"))
   self.Text_Total:SetText(GText("UI_Bag_Decompose_Expect"))
   self.Text_Empty:SetText(GText("UI_BAG_Nochosen"))
   self.Button_Purchase:SetGamePadImg("Y")
-  if self.ParentWidget and (self.ParentWidget.CurTabId == BagCommon.ItemTypeToTabId.MeleeWeapon or self.ParentWidget.CurTabId == BagCommon.ItemTypeToTabId.RangedWeapon) then
+  if self.bIronTicketMode then
+    self.Button_Purchase:SetText(GText("UI_Bag_Decompose"))
+    self.Button_Purchase:UnBindEventOnClicked(self, self.TryToBreakDownIronTickets)
+    self.Button_Purchase:BindEventOnClicked(self, self.TryToBreakDownIronTickets)
+    if self.WidgetSwitcher_State then
+      self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+    end
+    if self.Btn_Close and self.Btn_Close.BindEventOnClicked then
+      self.Btn_Close:UnBindEventOnClicked(self, self.OnIronTicketClose)
+      self.Btn_Close:BindEventOnClicked(self, self.OnIronTicketClose)
+    end
+  elseif self.ParentWidget and (self.ParentWidget.CurTabId == BagCommon.ItemTypeToTabId.MeleeWeapon or self.ParentWidget.CurTabId == BagCommon.ItemTypeToTabId.RangedWeapon) then
     self.Button_Purchase:SetText(GText("UI_Bag_Decompose"))
     self.Button_Purchase:BindEventOnClicked(self, self.TryToResolveStuff)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
@@ -246,18 +298,28 @@ function WBP_Bag_Sell_View_C:RefreshBaseInfo()
   if self.InitStuffDataInList ~= nil then
     self:AddBagItemToList(self.InitStuffDataInList)
     self.CurSelectStuffContentInList = self.List_Item:GetItemAt(0)
-    self.Panel_Empty:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    if self.CurrentMode == BagCommon.BagItemSelectOpMode.ResolveMode then
-      self.Panel_KeyCount:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    else
-      self.Panel_KeyCount:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    if self.Panel_Empty then
+      self.Panel_Empty:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.Panel_KeyCount then
+      if self.CurrentMode == BagCommon.BagItemSelectOpMode.ResolveMode then
+        self.Panel_KeyCount:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      else
+        self.Panel_KeyCount:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      end
     end
     self.Button_Purchase:ForbidBtn(false)
   else
     self.CurSelectStuffContentInList = nil
-    self.Panel_Empty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.Panel_Total:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Panel_KeyCount:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if self.Panel_Empty then
+      self.Panel_Empty:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+    if self.Panel_Total then
+      self.Panel_Total:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+    if self.Panel_KeyCount then
+      self.Panel_KeyCount:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     self.Button_Purchase:ForbidBtn(true)
   end
   self.List_Item.BP_OnItemSelectionChanged:Add(self, self.OnSelectStuffItemChanged)
@@ -267,7 +329,7 @@ function WBP_Bag_Sell_View_C:RefreshBaseInfo()
   end
   
   if self.ParentWidget then
-    self.BagCurState = self.ParentWidget.BagCurState
+    self.BagCurState = self.bIronTicketMode and BagCommon.AllBagState.WeaponResolveState or self.ParentWidget.BagCurState
     if type(self.ParentWidget.SetFocus_Lua) == "function" then
       self.ParentWidget:SetFocus_Lua()
     else
@@ -418,16 +480,43 @@ function WBP_Bag_Sell_View_C:RefreshRewardInfo()
     end
   end
   
-  local RewardIds = {}
-  for k, v in pairs(self.AllTypeRewardsInfo) do
-    if RewardIds[v] then
-      RewardIds[v] = RewardIds[v] + 1
-    else
-      RewardIds[v] = 1
+  if self.bIronTicketMode then
+    local ResMap = {}
+    for _, ItemData in pairs(self.NeedDealWithStuffData) do
+      local TicketInfo = ItemData.StuffId and DataMgr.IronTicket[ItemData.StuffId]
+      if TicketInfo and TicketInfo.BreakDown then
+        for ResId, Num in pairs(TicketInfo.BreakDown) do
+          ResMap[ResId] = (ResMap[ResId] or 0) + Num
+        end
+      end
     end
-  end
-  for RewardId, RewardCount in pairs(RewardIds) do
-    FillWithRewardData(RewardId, RewardCount)
+    for ResId, Num in pairs(ResMap) do
+      local ResInfo = DataMgr.Resource[ResId]
+      if ResInfo then
+        table.insert(self.AllRewardContentList, {
+          Id = ResId,
+          Icon = ItemUtils.GetItemIconPath(ResId, BagCommon.StuffType.Resource),
+          ParentWidget = self,
+          ItemType = BagCommon.StuffType.Resource,
+          Rarity = ResInfo.Rarity or 0,
+          IsShowDetails = true,
+          UIName = BagCommon.BagStuffSelectUIName,
+          Count = Num
+        })
+      end
+    end
+  else
+    local RewardIds = {}
+    for k, v in pairs(self.AllTypeRewardsInfo) do
+      if RewardIds[v] then
+        RewardIds[v] = RewardIds[v] + 1
+      else
+        RewardIds[v] = 1
+      end
+    end
+    for RewardId, RewardCount in pairs(RewardIds) do
+      FillWithRewardData(RewardId, RewardCount)
+    end
   end
   local AllChildren = self.ItemBox:GetAllChildren()
   if #self.AllRewardContentList > 0 then
@@ -790,6 +879,54 @@ function WBP_Bag_Sell_View_C:TryToResolveStuff()
   end
 end
 
+function WBP_Bag_Sell_View_C:OnIronTicketClose()
+  if self.ParentWidget and self.ParentWidget.BeginExitDecomposeMode then
+    self.ParentWidget:BeginExitDecomposeMode()
+  elseif type(self.CloseCallback) == "function" then
+    self.CloseCallback(self.ParentWidget)
+  end
+end
+
+function WBP_Bag_Sell_View_C:TryToBreakDownIronTickets()
+  if self.CurStuffCountInList <= 0 then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_BAG_Nochosen"))
+    return
+  end
+  local CommonDialogParams = {}
+  CommonDialogParams.StuffInfoList = {}
+  for _, ItemData in pairs(self.NeedDealWithStuffData) do
+    table.insert(CommonDialogParams.StuffInfoList, {
+      StuffId = ItemData.StuffId,
+      StuffIcon = ItemData.Icon,
+      StuffType = BagCommon.StuffType.IronTicket,
+      Rarity = ItemData.Rarity,
+      Level = ItemData.Level,
+      StuffCount = 1,
+      ParentWidget = self
+    })
+  end
+  CommonDialogParams.LeftText = GText("UI_IronTicket_ToDecompose")
+  CommonDialogParams.RightText = GText("UI_Bag_Decompose_Get")
+  CommonDialogParams.RewardList = {}
+  for _, v in ipairs(self.AllRewardContentList) do
+    table.insert(CommonDialogParams.RewardList, {
+      StuffId = v.Id,
+      StuffIcon = v.Icon,
+      StuffType = v.ItemType,
+      Rarity = v.Rarity,
+      Count = v.Count,
+      ParentWidget = self
+    })
+  end
+  
+  function CommonDialogParams.RightCallbackFunction()
+    self:ConfirmDealWithItems()
+  end
+  
+  CommonDialogParams.HideItemTips = true
+  UIManager(self):ShowCommonPopupUI(100063, CommonDialogParams, self)
+end
+
 function WBP_Bag_Sell_View_C:GetStuffObjId(StuffUuid)
   local FinalObjId = StuffUuid
   if type(FinalObjId) == "string" and CommonUtils.IsObjIdStr(FinalObjId) then
@@ -801,13 +938,6 @@ end
 function WBP_Bag_Sell_View_C:ConfirmDealWithItems()
   if self.ConfirmCallback ~= nil then
     self.ConfirmCallback(self.ParentWidget, self.NeedDealWithStuffData, self.NeedDealWithStuffCount)
-  end
-  if self.ParentWidget then
-    if type(self.ParentWidget.SetFocus_Lua) == "function" then
-      self.ParentWidget:SetFocus_Lua()
-    else
-      self.ParentWidget:SetFocus()
-    end
   end
 end
 
@@ -1081,8 +1211,10 @@ function WBP_Bag_Sell_View_C:FillWithWeaponResolveData(StuffData, bIsAllAddInLis
   self.NeedDealWithStuffData[StuffObj.Uuid] = StuffObj
   self.NeedDealWithStuffCount[StuffObj.Uuid] = 1
   self.List_Item:AddItem(StuffObj)
-  local SelectItemObj = self.List_Item:GetItemAt(self.CurStuffCountInList)
-  self:OnListSelectStuffClicked(SelectItemObj, "AddNewItem")
+  if not self.bIronTicketMode then
+    local SelectItemObj = self.List_Item:GetItemAt(self.CurStuffCountInList)
+    self:OnListSelectStuffClicked(SelectItemObj, "AddNewItem")
+  end
   self.CurStuffCountInList = self.CurStuffCountInList + 1
   self.AllTypeRewardsInfo[StuffObj.Uuid] = StuffObj.CoinId
 end
@@ -1308,6 +1440,9 @@ function WBP_Bag_Sell_View_C:UpdateItemNumFromList(StuffContent, DeltaNum)
 end
 
 function WBP_Bag_Sell_View_C:OnListSelectStuffClicked(Content, ClickReason)
+  if not Content then
+    return
+  end
   local GridIndex, StuffUuid = Content.GridIndex, Content.Uuid
   if IsValid(self.CurSelectStuffContentInList) and self.CurSelectStuffContentInList.Uuid == StuffUuid then
     self:RefreshKeyCount()
@@ -1346,9 +1481,16 @@ function WBP_Bag_Sell_View_C:OnSelectStuffItemChanged(SelectItem, bIsSelect)
 end
 
 function WBP_Bag_Sell_View_C:RefreshKeyCount()
+  if self.bIronTicketMode then
+    return
+  end
   if self.CurSelectStuffContentInList then
+    local StuffData = self.NeedDealWithStuffData[self.CurSelectStuffContentInList.Uuid]
+    if not StuffData then
+      return
+    end
     local InitDealWithStuffCount = self.NeedDealWithStuffCount[self.CurSelectStuffContentInList.Uuid]
-    local MaxDealWithStuffCount = self.NeedDealWithStuffData[self.CurSelectStuffContentInList.Uuid].Count
+    local MaxDealWithStuffCount = StuffData.Count
     self.Com_NumInput:OverrideValueLimit(InitDealWithStuffCount, MaxDealWithStuffCount, 1, true)
     self.Com_Slider:OverrideValueLimit(InitDealWithStuffCount, MaxDealWithStuffCount, 1, true)
   end
@@ -1374,8 +1516,17 @@ end
 
 function WBP_Bag_Sell_View_C:SetFocus_Lua()
   if self.bIsOpenList then
-    self.List_Item:SetFocus()
-    self:UpdateCurFocusInfo("ToSellListView")
+    if self.bIronTicketMode and self.ParentWidget and self.ParentWidget._bJustUncollapsed then
+      self:AddTimer(0.016, function()
+        if self.List_Item then
+          self.List_Item:SetFocus()
+          self:UpdateCurFocusInfo("ToSellListView")
+        end
+      end, false, 0, nil, true)
+    else
+      self.List_Item:SetFocus()
+      self:UpdateCurFocusInfo("ToSellListView")
+    end
   elseif self.ParentWidget then
     self:UpdateCurFocusInfo("DefaultWidget")
     if self.ParentWidget.SetFocus_Lua then
@@ -1401,7 +1552,11 @@ function WBP_Bag_Sell_View_C:OnKeyDown(MyGeometry, InKeyEvent)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
     IsEventHandled = self:OnGamePadButtonDown(InKeyName)
   elseif InKeyName == UE4.EKeys.Escape.KeyName then
-    self:PlayOutAnim()
+    if self.ParentWidget and self.ParentWidget.BeginExitDecomposeMode then
+      self.ParentWidget:BeginExitDecomposeMode()
+    else
+      self:PlayOutAnim()
+    end
     IsEventHandled = true
   elseif InKeyName == UE4.EKeys.Q.KeyName then
     self.ParentWidget.Tab_Bag:TabToLeft()
@@ -1435,13 +1590,19 @@ function WBP_Bag_Sell_View_C:OnGamePadButtonDown(InKeyName)
   local IsEventHandled = false
   if self.CurSelectStuffContentInList then
     IsEventHandled = self.Com_Slider:Handle_KeyDownEventOnGamePad(InKeyName)
-    IsEventHandled = IsEventHandled or self.Com_NumInput:Handle_KeyEventOnGamePad(InKeyName)
+    if not IsEventHandled and self.CurrentMode == BagCommon.BagItemSelectOpMode.SellMode then
+      IsEventHandled = self.Com_NumInput:Handle_KeyEventOnGamePad(InKeyName)
+    end
   end
   if not IsEventHandled then
     if InKeyName == UIConst.GamePadKey.FaceButtonRight then
       DebugPrint("OnGamePadButtonDown   ---  ", self.CurFocusWidget)
       if self.CurFocusWidget == "DefaultWidget" then
-        self:PlayOutAnim()
+        if self.ParentWidget and self.ParentWidget.BeginExitDecomposeMode then
+          self.ParentWidget:BeginExitDecomposeMode()
+        else
+          self:PlayOutAnim()
+        end
         IsEventHandled = true
       elseif self.CurFocusWidget == "ToSellListView" then
         self.CurFocusWidget = "DefaultWidget"
@@ -1453,8 +1614,12 @@ function WBP_Bag_Sell_View_C:OnGamePadButtonDown(InKeyName)
       elseif self.CurFocusWidget == "GetItemBox" then
         self.CurFocusWidget = "DefaultWidget"
         self:SetFocus_Lua()
+        self:UpdateUIStyleInPlatform(true)
         if self.ParentWidget then
           self.ParentWidget:RefreshBottomKeyInfo()
+          if self.ParentWidget.UpdateUIStyleInPlatform then
+            self.ParentWidget:UpdateUIStyleInPlatform(true)
+          end
         end
         IsEventHandled = true
       elseif self.Com_NumInput:CheckIsFocusInTextInput() then
@@ -1477,7 +1642,9 @@ function WBP_Bag_Sell_View_C:OnGamePadButtonDown(InKeyName)
         self:UpdateUIStyleInPlatform(true)
         if self.ParentWidget then
           self.ParentWidget:RefreshBottomKeyInfo()
-          self.ParentWidget:UpdateUIStyleInPlatform(true)
+          if self.ParentWidget.UpdateUIStyleInPlatform then
+            self.ParentWidget:UpdateUIStyleInPlatform(true)
+          end
           if self.ParentWidget.SetFocus_Lua then
             self.ParentWidget:SetFocus_Lua()
           else
@@ -1494,7 +1661,9 @@ function WBP_Bag_Sell_View_C:OnGamePadButtonDown(InKeyName)
         self:UpdateUIStyleInPlatform(false)
         if self.ParentWidget then
           self.ParentWidget:RefreshBottomKeyInfo("GetItemBox")
-          self.ParentWidget:UpdateUIStyleInPlatform(false)
+          if self.ParentWidget.UpdateUIStyleInPlatform then
+            self.ParentWidget:UpdateUIStyleInPlatform(false)
+          end
         end
       end
     elseif InKeyName == UIConst.GamePadKey.SpecialRight then
@@ -1511,13 +1680,15 @@ function WBP_Bag_Sell_View_C:OnGamePadButtonDown(InKeyName)
       end
     elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
       if not self.Com_NumInput:CheckIsFocusInTextInput() then
-        if self.CurrentMode == BagCommon.BagItemSelectOpMode.ResolveMode then
+        if self.bIronTicketMode then
+          self:TryToBreakDownIronTickets()
+        elseif self.CurrentMode == BagCommon.BagItemSelectOpMode.ResolveMode then
           self:TryToResolveStuff()
         else
           self:TryToSaleStuff()
         end
       end
-    elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft and (self.BagCurState == BagCommon.AllBagState.ChooseSaleState or BagCommon.AllBagState.WeaponResolveState) and self.CurSelectStuffContentInList and self.CurSelectStuffContentInList.bMinus then
+    elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft and (self.BagCurState == BagCommon.AllBagState.ChooseSaleState or self.BagCurState == BagCommon.AllBagState.WeaponResolveState) and self.CurSelectStuffContentInList and self.CurSelectStuffContentInList.bMinus then
       self:RemoveBagItemInList(self.CurSelectStuffContentInList.Uuid)
       if self.CurSelectStuffContentInList then
         self.ParentWidget:RefreshBottomKeyInfo("ToSellListView")

@@ -1,0 +1,161 @@
+local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
+  return x
+end
+local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
+  return x
+end
+return ReadOnly("LoginPopUp", {
+  [1] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_07.WBP_AdvertisingPopUp_Bg_07'",
+    EndConditonId = 4030038,
+    PopCycle = "DAY",
+    PopDes = "SkinGacha_Des_Special",
+    PopEndTime = LocalTimeProxy(1787018400),
+    PopId = 1,
+    PopInterfaceJump = 5,
+    PopStartTime = LocalTimeProxy(1785117600),
+    PopTimePerCycle = 1,
+    PopTitle = "SkinGacha_Name_Special_6",
+    RewardView = 1039007,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Gacha/Banner/T_Gacha_PoolBanner_Eve01.T_Gacha_PoolBanner_Eve01",
+    TitleBp = "/Game/UI/WBP/GachaNew/Widget/Title/WBP_Gacha_PoolTitle_Eve01.WBP_Gacha_PoolTitle_Eve01"
+  },
+  [2] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_11.WBP_AdvertisingPopUp_Bg_11'",
+    EndConditonId = 103021003,
+    PopCycle = "DAY",
+    PopDes = "Event_Des_10302102",
+    PopEndTime = LocalTimeProxy(1788832800),
+    PopId = 2,
+    PopInterfaceJump = 122,
+    PopStartTime = LocalTimeProxy(1787018400),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_10302102",
+    RewardView = 10302102,
+    TabBp = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_LimitedPrizePool_Succubus.T_Activity_Tab_Head_LimitedPrizePool_Succubus'",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Succubus/WBP_LimitedPrizePool_JumpTitle_Succubus.WBP_LimitedPrizePool_JumpTitle_Succubus"
+  },
+  [3] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_09.WBP_AdvertisingPopUp_Bg_09'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Rule_103016",
+    PopEndTime = LocalTimeProxy(1785981600),
+    PopId = 3,
+    PopInterfaceJump = 124,
+    PopStartTime = LocalTimeProxy(1785376800),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_103016",
+    RewardView = 10301601,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_AutoChess.T_Activity_Tab_Head_AutoChess",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/AutoChess/ActivityJump/WBP_Activity_AutoChess_JumpTitle.WBP_Activity_AutoChess_JumpTitle"
+  },
+  [4] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_04.WBP_AdvertisingPopUp_Bg_04'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Des_103009001",
+    PopEndTime = LocalTimeProxy(1785963599),
+    PopId = 4,
+    PopInterfaceJump = 125,
+    PopStartTime = LocalTimeProxy(1785376800),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_103009001",
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_DoubleMod.T_Activity_Tab_Head_DoubleMod",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Title.WBP_Activity_DoubleMod_Title"
+  },
+  [5] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_08.WBP_AdvertisingPopUp_Bg_08'",
+    PopCycle = "WEEK",
+    PopDes = "UI_AsyncCombat_Tips",
+    PopEndTime = LocalTimeProxy(1786586400),
+    PopId = 5,
+    PopInterfaceJump = 126,
+    PopStartTime = LocalTimeProxy(1785981600),
+    PopTimePerCycle = 1,
+    PopTitle = "UI_AsyncCombat_Name",
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Coop.T_Activity_Tab_Head_Coop",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_CoopTitle.WBP_Activity_CoopTitle"
+  },
+  [6] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_01.WBP_AdvertisingPopUp_Bg_01'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Des_112001",
+    PopEndTime = LocalTimeProxy(1787191200),
+    PopId = 6,
+    PopInterfaceJump = 127,
+    PopStartTime = LocalTimeProxy(1786586400),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_112001",
+    RewardView = 112004,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_OnlineTime.T_Activity_Tab_Head_OnlineTime",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/OnlineTime/WBP_Activity_OnlineTime_Title.WBP_Activity_OnlineTime_Title"
+  },
+  [7] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_10.WBP_AdvertisingPopUp_Bg_10'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Des_103026",
+    PopEndTime = LocalTimeProxy(1787191200),
+    PopId = 7,
+    PopInterfaceJump = 128,
+    PopStartTime = LocalTimeProxy(1786586400),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_103026",
+    RewardView = 103026,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Weapon.T_Activity_Tab_Head_Weapon",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Weapon/WBP_Activity_Weapon_Title.WBP_Activity_Weapon_Title'"
+  },
+  [8] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_06.WBP_AdvertisingPopUp_Bg_06'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Des_10302002",
+    PopEndTime = LocalTimeProxy(1787709600),
+    PopId = 8,
+    PopInterfaceJump = 129,
+    PopStartTime = LocalTimeProxy(1787191200),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_10302002",
+    RewardView = 10302003,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_AccessoryDrop_PhaseTwo.T_Activity_Tab_Head_AccessoryDrop_PhaseTwo",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AccessoryDrop/PhaseTwo/WBP_Activity_AccessoryDrop_Title.WBP_Activity_AccessoryDrop_Title'"
+  },
+  [9] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_04.WBP_AdvertisingPopUp_Bg_04'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Des_103009001",
+    PopEndTime = LocalTimeProxy(1787691599),
+    PopId = 9,
+    PopInterfaceJump = 130,
+    PopStartTime = LocalTimeProxy(1787191200),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_103009001",
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_DoubleMod.T_Activity_Tab_Head_DoubleMod",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Title.WBP_Activity_DoubleMod_Title"
+  },
+  [10] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_03.WBP_AdvertisingPopUp_Bg_03'",
+    PopCycle = "WEEK",
+    PopDes = "Event_Des_103025",
+    PopEndTime = LocalTimeProxy(1786586400),
+    PopId = 10,
+    PopInterfaceJump = 131,
+    PopStartTime = LocalTimeProxy(1785981600),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Title_103025",
+    RewardView = 103025,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Racing",
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Racing/Entry/WBP_Activity_Racing_Title.WBP_Activity_Racing_Title'"
+  },
+  [11] = {
+    BgBp = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AdvertisingPopUp/Bg/WBP_AdvertisingPopUp_Bg_05.WBP_AdvertisingPopUp_Bg_05'",
+    PopCycle = "DAY",
+    PopDes = "Event_Raid_Des",
+    PopEndTime = LocalTimeProxy(1788537600),
+    PopId = 11,
+    PopInterfaceJump = 132,
+    PopStartTime = LocalTimeProxy(1787709600),
+    PopTimePerCycle = 1,
+    PopTitle = "Event_Raid_Title",
+    RewardView = 1030083,
+    TabBp = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_GuildWar.T_Activity_Tab_Head_GuildWar",
+    TitleBp = "/Game/UI/WBP/Activity/Widget/GuildWar/WBP_Activity_GuildWar_Title.WBP_Activity_GuildWar_Title"
+  }
+})

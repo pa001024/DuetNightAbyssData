@@ -1,6 +1,15 @@
 local PropUtils = require("BluePrints.Client.PropUtils")
 local Class = _G.TypeClass
 local ClassMgr = require("NetworkEngine.Common.ClassManager")
+
+local function ReportMissingType(self, func_name, value)
+  local msg = string.format("Prop type missing in %s, owner=%s, prop=%s, type_str=%s, value_type=%s, value=%s", tostring(func_name), tostring(self.owner_type_name), tostring(self.name), tostring(self.type_str), type(value), tostring(value))
+  if DebugPrint then
+    DebugPrint(ErrorTag, "::Error::", msg)
+  end
+  error(msg)
+end
+
 local Prop = Class("Prop")
 
 function Prop:Init(type_str, options, default, others)
@@ -24,6 +33,8 @@ function Prop:ParseType(type_str)
   local _type = ClassMgr:GetType(type_str)
   if _type then
     self.type = _type
+  elseif DebugPrint then
+    DebugPrint(ErrorTag, "::Error::", "Prop ParseType failed", "owner", tostring(self.owner_type_name), "prop", tostring(self.name), "type_str", tostring(type_str))
   end
 end
 
@@ -48,6 +59,9 @@ function Prop:GetType()
 end
 
 function Prop:GetDefault()
+  if not self.type then
+    ReportMissingType(self, "GetDefault", self.default)
+  end
   if self.default then
     return self.type:convert(self.default)
   else
@@ -56,10 +70,16 @@ function Prop:GetDefault()
 end
 
 function Prop:GetTypeDefault()
+  if not self.type then
+    ReportMissingType(self, "GetTypeDefault")
+  end
   return self.type:GetDefault()
 end
 
 function Prop:GetTypeInstance(value)
+  if not self.type then
+    ReportMissingType(self, "GetTypeInstance", value)
+  end
   return self.type:convert(value)
 end
 
@@ -87,10 +107,16 @@ function Prop:GetAllDump(value)
 end
 
 function Prop:GetBinaryDump(value)
+  if not self.type then
+    ReportMissingType(self, "GetBinaryDump", value)
+  end
   return self.type:binary_dump(value)
 end
 
 function Prop:ProtoGetTypeInstance(value)
+  if not self.type then
+    ReportMissingType(self, "ProtoGetTypeInstance", value)
+  end
   return self.type:proto_convert(value)
 end
 
@@ -107,6 +133,9 @@ function Prop:GetProtoAllDump(value)
 end
 
 function Prop:SetAttrOwnerInfo(value, owner)
+  if not self.type then
+    ReportMissingType(self, "SetAttrOwnerInfo", value)
+  end
   self.type.SetOwnerInfo(value, owner, self)
 end
 

@@ -215,6 +215,8 @@ function Component:CheckAppearanceAddDyeScore(TargetId, TargetType)
     return nil ~= HairInfo.CharId and 0 ~= HairInfo.CharId
   elseif TargetType == AppearanceCollectType.WeaponSkin then
     return nil ~= DataMgr.WeaponSkin and nil ~= DataMgr.WeaponSkin[TargetId]
+  elseif TargetType == AppearanceCollectType.Weapon then
+    return nil ~= DataMgr.Weapon and nil ~= DataMgr.Weapon[TargetId]
   end
   return false
 end
@@ -308,6 +310,9 @@ end
 
 function Component:_TryAddAppearanceRewardReddotCommon(EntranceId)
   local Info = DataMgr.AppearanceCollect[EntranceId]
+  if Info.ExcludeCollect then
+    return
+  end
   local Count = AppearanceNumberModel:GetCurrentNumber(Info.Entrance)
   local SumNum = AppearanceNumberModel["Get" .. Info.Type .. "SumNumber"](AppearanceNumberModel)
   if Count > SumNum then
@@ -335,6 +340,10 @@ function Component:_TryAddAppearanceRewardReddotCommon(EntranceId)
 end
 
 function Component:_TryAddAppearanceRewardNewCommon(EntranceId, RefreshAll, IsFirstTime)
+  local Info = DataMgr.AppearanceCollect[EntranceId]
+  if Info.ExcludeCollect then
+    return
+  end
   if self.AppearanceCollects and self.AppearanceCollects[EntranceId] and self.AppearanceCollects[EntranceId].AppearanceCollectList then
     local AppearanceCollectList = self.AppearanceCollects[EntranceId].AppearanceCollectList
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("AppearanceArchiveNew")

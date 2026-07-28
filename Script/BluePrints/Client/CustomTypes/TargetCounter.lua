@@ -3,6 +3,20 @@ local BaseTypes = require("BluePrints.Client.CustomTypes.BaseTypes")
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
+
+local function GetGuildBossMaxPointRewardNeedPoint(ConfigId)
+  local GuildBossPonitReward = DataMgr and DataMgr.GuildBossPonitReward or {}
+  local Info = GuildBossPonitReward[tonumber(ConfigId) or 0]
+  if not Info then
+    return 0
+  end
+  local RewardIds = Info.RewardIds or Info.RewardId or Info.Reward or Info.StageReward
+  if type(RewardIds) ~= "table" then
+    return 0
+  end
+  return (tonumber(Info.EachGradePoints or Info.Point or Info.NeedPoint) or 0) * #RewardIds
+end
+
 local TargetCounter = Class("TargetCounter", CustomTypes.CustomAttr)
 TargetCounter.__Props__ = {
   UniqueID = prop.prop("Int", "client save"),
@@ -135,6 +149,15 @@ function TargetCounter:FixByAvatarData()
       DebugPrint("TargetTypeLoginDay Auto Complete Success <TargetId>", TargetId, Date)
       self:TargetRefreshProgress(TargetId, Date, 1)
       break
+    end
+    if TargetExcel and TargetExcel.TargetType == CommonConst.TargetTypeGuildBossPointMax then
+      local GuildBossData = Avatar.GuildBossData
+      local MaxPoint = GuildBossData and GetGuildBossMaxPointRewardNeedPoint(GuildBossData.PointRewardConfigId) or 0
+      if MaxPoint > 0 and MaxPoint <= (tonumber(GuildBossData.Point) or 0) then
+        DebugPrint("TargetTypeGuildBossPointMax Auto Complete Success <TargetId>", TargetId)
+        self:TargetRefreshProgress(TargetId, nil, 1)
+        break
+      end
     end
   end
 end

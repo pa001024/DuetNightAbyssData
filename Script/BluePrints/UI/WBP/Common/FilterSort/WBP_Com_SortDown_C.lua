@@ -100,6 +100,7 @@ function M:Construct()
   self.Btn_Filter_List.OnUnhovered:Add(self, self.OnBtn_Filter_List_Unhovered)
   self:PlayAnimation(self.SortList_Normal)
   self.bIsFocusable = true
+  rawset(self, "ShowGamePadKey", true)
   self:AddInputMethodChangedListen()
 end
 
@@ -222,7 +223,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       self:OnListClosed()
     end
     if self.Parent then
-      local Widget = self.Parent:GetDesiredFocusTarget()
+      local Widget = self.Parent.GetDesiredFocusTarget and self.Parent:GetDesiredFocusTarget()
       return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), Widget or self.Parent)
     end
   end
@@ -268,9 +269,13 @@ function M:UpdateGamePadFocus()
   self.Btn_Filter_List:SetFocus()
 end
 
+function M:SetShowGamePadKey(bShow)
+  rawset(self, "ShowGamePadKey", bShow)
+end
+
 function M:UpdateGamePadIcon(CurInputType)
   local bHide = self.HideControllerTags and next(self.HideControllerTags) ~= nil
-  if CurInputType == ECommonInputType.Gamepad and not self.bAddedToFocusPath and not bHide then
+  if self.ShowGamePadKey and CurInputType == ECommonInputType.Gamepad and not self.bAddedToFocusPath and not bHide then
     self.Controller:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self.Controller:SetVisibility(ESlateVisibility.Collapsed)

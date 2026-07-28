@@ -252,12 +252,12 @@ function WBP_Simple_Common:ResetNormalButton()
   end
 end
 
-function WBP_Simple_Common:BuildSimpleOptionItemDatas(OptionTexts)
+function WBP_Simple_Common:BuildSimpleOptionItemDatas(OptionData)
   local OptionItemDatas = {}
-  for _, OptionItem in ipairs(OptionTexts or {}) do
+  for _, OptionItem in ipairs(OptionData.Options or {}) do
     table.insert(OptionItemDatas, {
       Index = OptionItem.Index,
-      Text = OptionItem.Text,
+      Text = OptionItem.OptionText,
       bIsSelected = OptionItem.bIsSelected,
       bCanReselect = OptionItem.bCanReselect,
       OptionStyle = OptionItem.OptionStyle,
@@ -277,7 +277,7 @@ end
 local FirstInitTime = 0.5
 local DefaultItemUIPath = "/Game/UI/WBP/Story/Widget/WBP_Story_TalkItem.WBP_Story_TalkItem"
 
-function WBP_Simple_Common:ShowOptions(TalkTask, OptionTexts, OptionData, OnOptionItemClicked)
+function WBP_Simple_Common:ShowOptions(TalkTask, OptionData, OnOptionItemClicked)
   DebugPrint("WBP_Simple_Common:ShowOptions")
   self:StopTypingAudio()
   self:SwitchEnableAutoPlayButton(false)
@@ -295,7 +295,7 @@ function WBP_Simple_Common:ShowOptions(TalkTask, OptionTexts, OptionData, OnOpti
   self.OptionList:SwitchEnableUpDownEvents(false)
   self.OptionList:SwitchEnableConfirmEvents(false)
   self:SetDialogueButtonListVisibility(ESlateVisibility.Visible)
-  local OptionItemDatas = self:BuildSimpleOptionItemDatas(OptionTexts)
+  local OptionItemDatas = self:BuildSimpleOptionItemDatas(OptionData)
   self.OptionList:AddItems(OptionItemDatas)
   self.OptionList:SetDefaultItem()
   self.OptionList:UpdateImgMouse()

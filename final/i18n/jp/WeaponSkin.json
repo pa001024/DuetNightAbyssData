@@ -74,9 +74,17 @@
   {
     "id": 3010110,
     "name": "グワグワッ！・大剣",
-    "desc": "",
+    "desc": "グワッ――—————！",
     "icon": "T_Head_Claymore_Nahan",
     "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010111,
+    "name": "UI_WeaponSkin_Name_3010111",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "ショップで獲得"
   },
   {
@@ -136,6 +144,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010208,
+    "name": "UI_WeaponSkin_Name_3010208",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010301,
     "name": "太陽を呼ぶプレスト",
     "desc": "お日さまはどこに？お日さまはどこに？お日さまは、私たちの手のひらの中に。",
@@ -189,6 +205,14 @@
     "desc": "グワッ――—————！",
     "icon": "T_Head_Bow_Nahan02",
     "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010308,
+    "name": "UI_WeaponSkin_Name_3010308",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "ショップで獲得"
   },
   {
@@ -253,6 +277,14 @@
     "desc": "星々より届く悠久の招待に耳を澄ませ。",
     "icon": "T_Head_Polearm_Huanyu",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010409,
+    "name": "グワグワッ！・長柄",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Polearm_Nahan",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   },
   {
@@ -332,6 +364,22 @@
     "name": "青空の龍吟・双剣",
     "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
     "icon": "T_Head_Dualblade_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010611,
+    "name": "グワグワッ！・双剣",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Dualblade_Nahan",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010613,
+    "name": "UI_WeaponSkin_Name_3010610",
+    "desc": "",
+    "icon": "",
     "rarity": 5,
     "unlock": "ショップで獲得"
   },
@@ -472,6 +520,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010904,
+    "name": "UI_WeaponSkin_Name_3010904",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3011001,
     "name": "ビリビリネコ2号",
     "desc": "にゃう♪にゃにゃ～♪にゃん♪",
@@ -501,6 +557,14 @@
     "desc": "グワッ――—————！",
     "icon": "T_Head_Shotgun_Nahan",
     "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011005,
+    "name": "UI_WeaponSkin_Name_3011005",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
     "unlock": "ショップで獲得"
   },
   {
@@ -549,6 +613,22 @@
     "desc": "グワッ――—————！",
     "icon": "T_Head_Crossbow_Nahan",
     "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011207,
+    "name": "溶け残る初雪",
+    "desc": "初雪が溶けてしまう前に、その本当の姿を忘れないで。",
+    "icon": "T_Head_Crossbow_Weirong",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011209,
+    "name": "バナナショット",
+    "desc": "そんなバナナ！",
+    "icon": "T_Head_Crossbow_Jiaoge",
+    "rarity": 5,
     "unlock": "ショップで獲得"
   }
 ]

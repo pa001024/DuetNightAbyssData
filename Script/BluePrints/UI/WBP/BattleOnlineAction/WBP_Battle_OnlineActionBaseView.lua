@@ -10,6 +10,7 @@ function M:InitBaseView(OpenReason)
   self:StaticInit()
   self:BindEvent()
   self:DynamicInit()
+  self:BindAutoAcceptInAnimation()
   self:PlayAnimation(self.In)
   self:SetFocus()
 end
@@ -53,6 +54,7 @@ end
 function M:StaticInit()
   self.Text_Empty:SetText(GText("UI_RegionOnline_NoInvitation"))
   self.Text_Title:SetText(GText("UI_RegionOnline_CommonList"))
+  self:InitAutoAcceptUI()
 end
 
 function M:BindEvent()
@@ -64,6 +66,7 @@ function M:BindEvent()
   
   self.Btn_Close.btn_close.OnClicked:Add(self, ReturnClick)
   self.Tab_OnlineAction:BindEventOnTabSelected(self, self.OnTabSwitchOn)
+  self:BindAutoAcceptEvent()
 end
 
 function M:DynamicInit()
@@ -75,6 +78,7 @@ function M:DynamicInit()
     self.Text_Title:SetText(GText("UI_RegionOnline_CommonList"))
     self:OnInvitationspageOpen()
   end
+  self:RefreshAutoAcceptUI()
 end
 
 local ApplicationTab = {
@@ -180,6 +184,7 @@ function M:OnTabSwitchOn(TabWidget, TabInfo)
     self:SwitchEmptyBG(TabWidget, TabInfo)
     self:OnInvitationsTabSwitchOn(TabWidget, TabInfo)
   end
+  self:RefreshAutoAcceptUI()
 end
 
 function M:GenerateListItem(Kind, needAni)
@@ -284,6 +289,7 @@ function M:RemoveItemsAndAutoSwitch(Items, Kind)
       self:SwitchEmptyBG(kindToUse)
     end
   end
+  self:RefreshAutoAcceptKeyVisible()
 end
 
 function M:FocusFirstItem()
@@ -473,7 +479,120 @@ function M:OnReturnKeyDown()
 end
 
 function M:MyClose()
+  if self.Com_SwitchCheckBox then
+    self.Com_SwitchCheckBox:RemoveEventOnCheckStateChanged(self)
+  end
   self.Super.Close(self)
+end
+
+function M:InitAutoAcceptUI()
+  if self.Text_Auto then
+    self.Text_Auto:SetText(GText(OnlineActionCommon.AutoAcceptText))
+  end
+  if self.Text_New then
+    self.Text_New:SetText(GText("UI_COMMON_NEW"))
+  end
+  self:InitAutoAcceptKey()
+end
+
+function M:InitAutoAcceptKey()
+  if not self.Key_Switch then
+    return
+  end
+  self.Key_Switch:CreateGamepadKey(UIConst.GamePadImgKey.SpecialRight)
+end
+
+function M:BindAutoAcceptEvent()
+  if not self.Com_SwitchCheckBox then
+    return
+  end
+  self.Com_SwitchCheckBox:RemoveEventOnCheckStateChanged(self)
+  self.Com_SwitchCheckBox:AddEventOnCheckStateChanged(self, self.OnAutoAcceptCheckStateChanged)
+end
+
+function M:ShouldShowAutoAcceptPanel()
+  return 1 == self.OpenReason and 1 == self.TabKind
+end
+
+function M:RefreshAutoAcceptTabReddot()
+  if not self.Tab_OnlineAction or not self.Tab_OnlineAction.ShowTabRedDotByTabId then
+    return
+  end
+  local IsFirstShow = OnlineActionModel:IsAutoAcceptOnlineActionFirstShow()
+  self.Tab_OnlineAction:ShowTabRedDotByTabId(1, IsFirstShow, false, false)
+end
+
+function M:RefreshAutoAcceptUI()
+  local bShowPanel = self:ShouldShowAutoAcceptPanel()
+  if self.Panel_AutoInvite then
+    self.Panel_AutoInvite:SetVisibility(bShowPanel and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
+  local IsAutoAccept = OnlineActionModel:GetAutoAcceptOnlineAction()
+  if self.Com_SwitchCheckBox then
+    self.Com_SwitchCheckBox:SetChecked(IsAutoAccept, false)
+  end
+  self:SetAutoAcceptNewVisible(OnlineActionModel:IsAutoAcceptOnlineActionFirstShow())
+  self:RefreshAutoAcceptTabReddot()
+  self:RefreshAutoAcceptKeyVisible()
+end
+
+function M:CanUseAutoAcceptGamepadKey()
+  if not (self.IsGamePad and self.Com_SwitchCheckBox) or not self:ShouldShowAutoAcceptPanel() then
+    return false
+  end
+  return true
+end
+
+function M:TryToggleAutoAcceptByGamepad()
+  if not self:CanUseAutoAcceptGamepadKey() then
+    return false
+  end
+  local IsChecked = self.Com_SwitchCheckBox.GetChecked and self.Com_SwitchCheckBox:GetChecked() or false
+  if self.Com_SwitchCheckBox.PlayCheckedSound then
+    self.Com_SwitchCheckBox:PlayCheckedSound()
+  end
+  self.Com_SwitchCheckBox:SetChecked(not IsChecked, true)
+  return true
+end
+
+function M:RefreshAutoAcceptKeyVisible()
+  if not self.Key_Switch then
+    return
+  end
+  if self:CanUseAutoAcceptGamepadKey() then
+    self.Key_Switch:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Key_Switch:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:BindAutoAcceptInAnimation()
+  if not self.In then
+    return
+  end
+  self:UnbindAllFromAnimationFinished(self.In)
+  self:BindToAnimationFinished(self.In, function()
+    if not IsValid(self) then
+      return
+    end
+    self:SetAutoAcceptNewVisible(OnlineActionModel:IsAutoAcceptOnlineActionFirstShow())
+  end)
+end
+
+function M:SetAutoAcceptNewVisible(IsVisible)
+  if self.New then
+    self.New:SetVisibility(IsVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
+  if self.Text_New then
+    self.Text_New:SetVisibility(IsVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:OnAutoAcceptCheckStateChanged(IsChecked)
+  OnlineActionModel:SetAutoAcceptOnlineAction(IsChecked)
+  self:SetAutoAcceptNewVisible(false)
+  self:RefreshAutoAcceptTabReddot()
+  EventManager:FireEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, IsChecked)
 end
 
 return M

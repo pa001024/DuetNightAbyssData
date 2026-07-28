@@ -5,40 +5,39 @@ function RougeProContract:BeginPlay()
   self.bCanSelectContract = false
 end
 
-function RougeProContract:StartContractSelect()
-  self:NotifyGameModeDungeonEvent("OnStartContractSelect")
-  self.bCanSelectContract = true
+function RougeProContract:GetRougeProContract()
+  local Contract = 0
+  for AvatarEid, Player in self:PlayerIterator() do
+    local PlayerCrossAttr = self:GetAvatarCrossAttr(AvatarEid)
+    if PlayerCrossAttr and PlayerCrossAttr.RougePro and PlayerCrossAttr.RougePro.Contract then
+      Contract = math.max(Contract, PlayerCrossAttr.RougePro.Contract)
+    end
+  end
+  return Contract
 end
 
-function RougeProContract:OnNotifyServerDungeonEvent_OnSelectContract(Id, Level)
-  if not self.bCanSelectContract then
-    return ErrorCode.RET_ROUGEPRO_CANNOT_SELECT_CONTRACT
+function RougeProContract:ApplyRougeProContract()
+  local ContractValue = self:GetRougeProContract()
+  print(string.format("DungeonInstance Contract Value = %s", tostring(ContractValue)))
+  for _, tabRougePro_Contract in pairs(DataMgr.RougeProContract) do
+    if tabRougePro_Contract.StartHeat and ContractValue >= tabRougePro_Contract.StartHeat then
+      table.insert(self.Contract, tabRougePro_Contract.Id)
+    end
   end
-  local Info = DataMgr.RougeProContract[Id]
-  if not Info then
-    return ErrorCode.RET_ROUGEPRO_CONTRACT_NOT_EXIST
-  end
-  local MaxLevel = Info.MaxLevel
-  if Level > MaxLevel then
-    return ErrorCode.RET_ROUGEPRO_CONTRACT_LEVEL_NOT_VALID
-  end
-  local CurLevel = self.Contract[Id]
-  self.Contract[Id] = Level > 0 and (not CurLevel or Level ~= CurLevel) and Level or nil
-  if CurLevel ~= self.Contract[Id] then
-    self.Contract = self.Contract
+  self.Contract = self.Contract
+  for i = 1, #self.Contract do
+    self:RealEffectContract(self.Contract[i])
   end
 end
 
-function RougeProContract:OnNotifyServerDungeonEvent_OnEnsureContract()
-  self.bCanSelectContract = false
-  self:RealEffectContract()
-end
-
-function RougeProContract:RealEffectContract()
-  for Id, Level in pairs(self.Contract) do
-    local Info = DataMgr.RougeProContract[Id]
-    local Effect = Info.Effect
-    self:ActivateRougeProEffects(self, Effect)
+function RougeProContract:RealEffectContract(Id)
+  print(string.format("RougeProContract:RealEffectContract(Id=%s)", tostring(Id)))
+  local tabRougePro_Contract = DataMgr.RougeProContract[Id]
+  if nil == tabRougePro_Contract then
+    return
+  end
+  if tabRougePro_Contract.Effect then
+    self:ActivateRougeProEffects(self, tabRougePro_Contract.Effect)
   end
 end
 

@@ -18,9 +18,9 @@ function WBP_NpcSwitchMain_PC_C:Initialize(Initializer)
   self.NpcIndexWithUnitId = {}
   self.AnimTime = 0.033
   self.DisplayName = {
-    "ShowNpc" .. string.sub(DataMgr.TextMap.UI_SHOWNPC_NAME_SCENE1.TextMapId, -7),
-    "ShowNpc" .. string.sub(DataMgr.TextMap.UI_SHOWNPC_NAME_SCENE2.TextMapId, -7),
-    "ShowNpc" .. string.sub(DataMgr.TextMap.UI_SHOWNPC_NAME_SCENE3.TextMapId, -7)
+    "ShowNpc_SCENE1",
+    "ShowNpc_SCENE2",
+    "ShowNpc_SCENE3"
   }
   self.CameraInfo = {}
   self.Camera = nil

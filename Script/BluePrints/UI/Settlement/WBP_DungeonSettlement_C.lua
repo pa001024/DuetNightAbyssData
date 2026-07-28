@@ -26,6 +26,10 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.IsWin, self.BattleInfo, self.Rewards, self.SpRewards, self.PlayerTime, self.GameTime = table.unpack(LogicServerInfo, 1, LogicServerInfo.n)
   self.DungeonId = _DungeonId
   self.CombatData = _CombatData
+  if AIDeBugLog.IsEnabled() or self.CombatData and self.CombatData.AIDeBugFightAttrEnabled then
+    local Frame = UE4.UKismetSystemLibrary.GetFrameCount()
+    print(string.format("[AIDeBug_FightAttr][Frame=%s][DISPLAY] %s", tostring(Frame), "Trigger=InitUIInfo | DungeonId=" .. tostring(self.DungeonId) .. " | TotalDamage=" .. tostring(self.CombatData and self.CombatData.TotalDamage) .. " | MeleeDamage=" .. tostring(self.CombatData and self.CombatData.MeleeDamage) .. " | RangedDamage=" .. tostring(self.CombatData and self.CombatData.RangedDamage) .. " | SkillDamageDisplayed=" .. tostring(self.CombatData and self.CombatData.SkillDamage) .. " | SupportDamage=" .. tostring(self.CombatData and self.CombatData.SupportDamage) .. " | PhantomNum=" .. tostring(self.CombatData and self.CombatData.PhantomNum) .. " | TeammateNum=" .. tostring(self.CombatData and self.CombatData.TeammateNum)))
+  end
   self.IsWeeklyDungeon = self.DungeonId and DataMgr.Dungeon[self.DungeonId] and DataMgr.Dungeon[self.DungeonId].IsWeeklyDungeon
   self.IntervalTime = 0.06666666666666667
   self.FirstDelayTime = 0.3333333333333333 - self.IntervalTime
@@ -34,7 +38,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:CheckIsPartyMode()
   self:CheckIsWalnutMode()
   self:CheckIsNoExpMode()
-  self:CheckIsIronSurvivalMode()
+  self:CheckIsIronDungeonMode()
   self:CheckIsAutoNextRoundMode()
   self:CheckIsAutoBanMode()
   self.HideUITag = "DungeonSettlement"
@@ -241,8 +245,9 @@ function M:InitHeadline()
 end
 
 function M:InitDungeonClearanceTime()
-  local Minute = math.floor(self.PlayerTime / 60)
-  local Second = math.floor(self.PlayerTime % 60)
+  local Time = self.PlayerTime > 0 and self.PlayerTime or 0
+  local Minute = math.floor(Time / 60)
+  local Second = math.floor(Time % 60)
   self.TimeDict = {}
   table.insert(self.TimeDict, 1, {TimeType = "Min", TimeValue = Minute})
   table.insert(self.TimeDict, 2, {TimeType = "Sec", TimeValue = Second})
@@ -354,7 +359,7 @@ function M:InitMainButtons()
     self.WalnutAgainNotAvailable = true
   end
   self:AddDispatcher(EventID.OnDungeonsUpdate, self, self.OnWalnutDungeonUpdate)
-  if not self:CheckIronSurvivalAgainAvailable() then
+  if not self:CheckIronDungeonAgainAvailable() then
     self.Btn_Continue:ForbidBtn(true)
   end
   self.Btn_Close:SetVisibility(ESlateVisibility.Visible)
@@ -366,6 +371,15 @@ function M:InitMainButtons()
   end
   self.Btn_Close:BindEventOnClicked(self, self.Exit)
   self.Btn_Close:SetDefaultGamePadImg("B")
+  
+  function self.Btn_Close.SoundFunc()
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+  end
+  
+  function self.Btn_Continue.SoundFunc()
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
+  end
+  
   if self.IsWin then
     self:BindToAnimationFinished(self.Victory_In, {
       self,
@@ -630,7 +644,7 @@ function M:ForbidContinue()
     GameState(self):ShowDungeonToast_Lua("UI_WALNUTDUNGEON_REFRESH_TOAST", 2, EToastType.Common)
     return
   end
-  if self.IsIronSurvival then
+  if self.IsIronDungeon then
     GameState(self):ShowDungeonToast_Lua("UI_IronSurvival_NotLeaderDisableDesc", 2, EToastType.Common)
     return
   end
@@ -702,8 +716,8 @@ function M:DefaultContinue()
     self:RequestServerContinue()
     return
   end
-  if self.IsIronSurvival then
-    self:DoIronSurvivalContinue()
+  if self.IsIronDungeon then
+    self:DoIronDungeonContinue()
     return
   end
   if self.IsWalnut and self:IsStandAloneSolo() then
@@ -936,7 +950,8 @@ function M:CalcPropInfo()
 end
 
 function M:SetDetailsContent()
-  self.Widget_DetailsTime = self:InitDataContent(GText("UI_STAT_Time"), self:GetTimeStr(self.PlayerTime))
+  local Time = self.PlayerTime > 0 and self.PlayerTime or 0
+  self.Widget_DetailsTime = self:InitDataContent(GText("UI_STAT_Time"), self:GetTimeStr(Time))
   self:SetOnlineDetails()
   self:SetDamageDetails()
   self:SetKillDetails()
@@ -1061,6 +1076,10 @@ function M:SetPhantomAttrsDetails()
         }
       }
       self:WrapedInitChildDetailContentFunc(self["Widget_PhantomDetails" .. PhantomNumber], PhantomDetails, 4)
+      if AIDeBugLog.IsEnabled() or self.CombatData and self.CombatData.AIDeBugFightAttrEnabled then
+        local Frame = UE4.UKismetSystemLibrary.GetFrameCount()
+        print(string.format("[AIDeBug_FightAttr][Frame=%s][DISPLAY] %s", tostring(Frame), "Trigger=SetPhantomAttrsDetails" .. " | PhantomIndex=" .. tostring(PhantomNumber) .. " | PhantomRoleId=" .. tostring(PhantomAttrInfo.PhantomRoleId) .. " | PhantomFinalDamage=" .. tostring(PhantomAttrInfo.FinalDamage) .. " | PhantomTakedDamage=" .. tostring(PhantomAttrInfo.TakedDamage) .. " | PhantomKill=" .. tostring(PhantomAttrInfo.TotalKillCount) .. " | PhantomDeath=" .. tostring(PhantomAttrInfo.DeathCount)))
+      end
     end
   end
 end
@@ -1095,6 +1114,10 @@ function M:SetDamageDetails()
   local RangedDamage = self.CombatData.RangedDamage or 0
   local SkillDamage = self.CombatData.SkillDamage or 0
   local SupportDamage = self.CombatData.SupportDamage or 0
+  if AIDeBugLog.IsEnabled() or self.CombatData and self.CombatData.AIDeBugFightAttrEnabled then
+    local Frame = UE4.UKismetSystemLibrary.GetFrameCount()
+    print(string.format("[AIDeBug_FightAttr][Frame=%s][DISPLAY] %s", tostring(Frame), "Trigger=SetDamageDetails" .. " | TotalDamage=" .. tostring(TotalDamage) .. " | MeleeDamage=" .. tostring(MeleeDamage) .. " | RangedDamage=" .. tostring(RangedDamage) .. " | SkillDamageDisplayed=" .. tostring(SkillDamage) .. " | SupportDamage=" .. tostring(SupportDamage) .. " | TotalDamagePercent=" .. tostring(TotalDamagePercent)))
+  end
   local TotalDamageText = tostring(MiscUtils.Round(TotalDamage))
   if not IsStandAlone(self) then
     TotalDamageText = TotalDamageText .. "(" .. MiscUtils.Round(TotalDamagePercent * 100) .. "%)"
@@ -1121,6 +1144,10 @@ function M:SetDamageDetails()
   table.sort(DamageDetails, function(a, b)
     return a.Value > b.Value
   end)
+  if AIDeBugLog.IsEnabled() or self.CombatData and self.CombatData.AIDeBugFightAttrEnabled then
+    local Frame = UE4.UKismetSystemLibrary.GetFrameCount()
+    print(string.format("[AIDeBug_FightAttr][Frame=%s][DISPLAY] %s", tostring(Frame), "Trigger=SetDamageDetailsSorted" .. " | Slot1=" .. tostring(DamageDetails[1] and DamageDetails[1].Name) .. ":" .. tostring(DamageDetails[1] and DamageDetails[1].Value) .. " | Slot2=" .. tostring(DamageDetails[2] and DamageDetails[2].Name) .. ":" .. tostring(DamageDetails[2] and DamageDetails[2].Value) .. " | Slot3=" .. tostring(DamageDetails[3] and DamageDetails[3].Name) .. ":" .. tostring(DamageDetails[3] and DamageDetails[3].Value) .. " | Slot4=" .. tostring(DamageDetails[4] and DamageDetails[4].Name) .. ":" .. tostring(DamageDetails[4] and DamageDetails[4].Value)))
+  end
   self:WrapedInitChildDetailContentFunc(self.Widget_DamageDetail, DamageDetails, 4)
 end
 
@@ -1299,15 +1326,25 @@ function M:CreateIronTicketRewards(TotalRewards, RewardsTable, RewardTypeValue, 
     if Avatar.IronSurvivalTicket then
       for _, ticket in pairs(Avatar.IronSurvivalTicket) do
         if ticket.Uid == Uid then
-          IronTicketRewardUid2TicketId[Uid] = ticket.TicketId
+          IronTicketRewardUid2TicketId[Uid] = {
+            TicketId = ticket.TicketId,
+            Level = ticket.Level
+          }
           break
         end
       end
     end
   end
-  PrintTable(IronTicketRewardUid2TicketId, 2)
-  for Uid, TicketId in pairs(IronTicketRewardUid2TicketId) do
-    local RewardData = self:CreateOneReward("IronTicket", RewardTypeValue, TicketId, 1, IsSpecial, false, false, false, Uid)
+  PrintTable(IronTicketRewardUid2TicketId, 3)
+  for Uid, Info in pairs(IronTicketRewardUid2TicketId) do
+    local RewardData = self:CreateOneReward("IronTicket", RewardTypeValue, Info.TicketId, 1, IsSpecial, false, false, false, Uid)
+    local IronTicketInfo = DataMgr.IronTicket[Info.TicketId]
+    if IronTicketInfo then
+      local MaxLevel = IronTicketInfo.MaxLevel or 999
+      if MaxLevel <= Info.Level then
+        RewardData.Icon = IronTicketInfo.MaxIcon or RewardData.Icon
+      end
+    end
     table.insert(TotalRewards, RewardData)
   end
 end
@@ -1615,12 +1652,10 @@ function M:CheckIsWalnutMode()
   end
 end
 
-function M:CheckIsIronSurvivalMode()
-  self.IsIronSurvival = false
-  local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
-  if DungeonInfo then
-    self.IsIronSurvival = DungeonInfo.DungeonType == "IronSurvival"
-  end
+function M:CheckIsIronDungeonMode()
+  self.IsIronDungeon = false
+  local DungeonInfo = DataMgr.IronSurvivalDungeon[self.DungeonId]
+  self.IsIronDungeon = nil ~= DungeonInfo
 end
 
 function M:CheckIsHardBossMode()
@@ -1656,8 +1691,8 @@ function M:CheckWalnutAgainAvailable()
   return false
 end
 
-function M:CheckIronSurvivalAgainAvailable()
-  if not self.IsIronSurvival then
+function M:CheckIronDungeonAgainAvailable()
+  if not self.IsIronDungeon then
     return true
   end
   local Avatar = GWorld:GetAvatar()
@@ -2460,7 +2495,6 @@ function M:UpdateMainUIWithPCOrMoble()
     self.WBP_Chat_CommonEnter:IsShowGamePad(false)
   end
   self.AutoNextRound:UpdateUIStyleInPlatform(true)
-  self.AutoNextRound:SetAutoNextRoundFocus(false)
   self.CurrentFocusType = ""
   DebugPrint("thy     Update PC")
   self:InitHandleKeyInfo()
@@ -2789,7 +2823,7 @@ function M:OnTeamMatchTimingStart()
 end
 
 function M:OnTeamMatchTimingEnd()
-  if self.IsIronSurvival then
+  if self.IsIronDungeon then
     if self:IsTeamLeader() then
       self.Btn_Continue:ForbidBtn(false)
     end
@@ -2854,8 +2888,9 @@ function M:IsStandAloneSolo()
 end
 
 function M:OpenTicketDialog(DungeonId)
-  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, {
+  local DialogParams = {
     DungeonId = self.DungeonId,
+    ButtonBarName = "Dialog_Button_CountDown",
     RightCallbackObj = self,
     RightCallbackFunction = function(Obj, PackageData)
       local SelectedTicketId = PackageData.Content_1.TicketId
@@ -2877,27 +2912,49 @@ function M:OpenTicketDialog(DungeonId)
     end,
     ForbiddenRightCallbackObj = self,
     AutoFocus = true
-  }, self)
+  }
+  local Avatar = GWorld:GetAvatar()
+  local bIsInTeam = Avatar and (Avatar:IsInMultiSettlement() or Avatar:IsInTeam())
+  local bIsInMultiDungeon = Avatar and Avatar:IsInMultiDungeon()
+  local bIsInTempScene = GWorld.GameInstance:IsInTempScene()
+  if bIsInTeam or bIsInMultiDungeon and not bIsInTempScene then
+    DialogParams.CountDownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
+    
+    function DialogParams.CountDownCallbackFunction(_, Data, PopupUI)
+      if not bIsInTeam and bIsInMultiDungeon and not bIsInTempScene then
+        local TicketId = Data and Data.Content_1 and Data.Content_1.TicketId
+        EventManager:FireEvent(EventID.OnSelectTicketTimeout, TicketId)
+      end
+      if PopupUI then
+        PopupUI:OnClose()
+      end
+    end
+  end
+  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
 end
 
-function M:DoIronSurvivalContinue()
+function M:DoIronDungeonContinue()
   UIManager(self):LoadUINew("IronExpPopup", {
     DungeonId = self.DungeonId,
     ParentWidget = self,
     StartCallback = function(TicketUid, TicketLevel)
-      self:TryEnterIronSurvivalAgain(TicketUid, TicketLevel)
-    end
+      self:TryEnterIronDungeonAgain(TicketUid, TicketLevel)
+    end,
+    HideIronBtns = true
   })
 end
 
-function M:TryEnterIronSurvivalAgain(TicketUid, TicketLevel)
-  DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronSurvivalAgain StandAloneSolo TicketUid", TicketUid)
+function M:TryEnterIronDungeonAgain(TicketUid, TicketLevel)
+  DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronDungeonAgain StandAloneSolo TicketUid", TicketUid)
   local CustomParams = {IronTicketId = TicketUid}
   local Avatar = GWorld:GetAvatar()
   if self:IsStandAloneSolo() then
     Avatar:EnterDungeonAgain(function(Ret)
       self:BlockAllUIInput(false)
-      DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronSurvivalAgain StandAloneSolo Callback", Ret)
+      DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronDungeonAgain StandAloneSolo Callback", Ret)
+      if Ret == ErrorCode.RET_IRONTICKET_REACH_MAX_AVAILABLE_LEVEL then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Toast_MaxTicketLevel"))
+      end
     end, nil, CustomParams)
     self:BlockAllUIInput(true)
     self:AddTimer(10, function()
@@ -2907,9 +2964,11 @@ function M:TryEnterIronSurvivalAgain(TicketUid, TicketLevel)
     end)
   else
     Avatar:EnterDungeonAgain(function(Ret)
-      DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronSurvivalAgain InTeam Callback", Ret)
+      DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronDungeonAgain InTeam Callback", Ret)
       if Ret == ErrorCode.RET_SUCCESS then
         UIManager(self):LoadUINew("DungeonMatchTimingBar", self.DungeonId, Const.DUNGEON_MATCH_BAR_STATE.SPONSOR_WAITING_CONFIRM, false, TicketLevel)
+      elseif Ret == ErrorCode.RET_IRONTICKET_REACH_MAX_AVAILABLE_LEVEL then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Toast_MaxTicketLevel"))
       end
     end, nil, CustomParams)
   end

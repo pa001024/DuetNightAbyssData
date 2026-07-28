@@ -110,14 +110,34 @@ local Str = Class("Str", BaseType)
 Str.default = ""
 
 function Str:load(value)
+  if type(value) == "string" and #value >= 3 and 0 == string.byte(value, 1) and 5 == string.byte(value, 2) and 0 == string.byte(value, 3) then
+    return string.sub(value, 4)
+  end
   return tostring(value)
+end
+
+function Str:save_dump(value)
+  if type(value) ~= "string" then
+    return tostring(value)
+  end
+  local len, pos = utf8.len(value)
+  if not len then
+    local bson = require("bson")
+    return bson.binary(value)
+  end
+  return value
 end
 
 local Int = Class("Int", BaseType)
 Int.default = 0
 
 function Int:load(value)
-  return math.ceil(tonumber(value))
+  local number_value = tonumber(value)
+  if not number_value then
+    DebugPrint("Int:load value is not a number, value = ", value)
+    return 0
+  end
+  return math.min(math.max(math.ceil(number_value), math.mininteger), math.maxinteger)
 end
 
 local Float = Class("Float", BaseType)
@@ -141,14 +161,17 @@ function Bytes:load(value)
   if type(value) ~= "string" then
     assert(false, "Bytes:load value must be string")
   end
-  if #value < 4 then
-    assert(false, "Bytes:load value length must be greater than 4")
+  if #value >= 3 and 0 == string.byte(value, 1) and 5 == string.byte(value, 2) and 0 == string.byte(value, 3) then
+    return string.sub(value, 4)
   end
-  return string.sub(value, 4)
+  return value
 end
 
 function Bytes:save_dump(value)
   local bson = require("bson")
+  if type(value) ~= "string" then
+    value = tostring(value)
+  end
   return bson.binary(value)
 end
 

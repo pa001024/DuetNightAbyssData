@@ -1,6 +1,7 @@
 local Class = _G.TypeClass
 local IdManager = require("NetworkEngine.Common.IdManager")
 local LogManager = require("NetworkEngine.Common.LogManager")
+local RpcUtils = require("Utils.RpcUtils")
 local AvatarEntity = Class("AvatarEntity")
 
 function AvatarEntity:Init(eid, override)

@@ -1270,6 +1270,23 @@ function UIUtils.BindListViewReddotAndNewClickEvent(TargetListView, ListView_Fro
   PlayNormalAnim(ListView_BackNew)
 end
 
+function UIUtils.CheckMouseInside(Widget)
+  if not Widget then
+    return false
+  end
+  if Widget:GetVisibility() == ESlateVisibility.Collapsed then
+    return false
+  end
+  local MousePos = UE4.UWidgetLayoutLibrary.GetMousePositionOnPlatform()
+  local WidgetGeo = Widget:GetTickSpaceGeometry()
+  local LocalPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(WidgetGeo, MousePos)
+  local WidgetSize = UE4.USlateBlueprintLibrary.GetLocalSize(WidgetGeo)
+  if LocalPos.X >= 0 and LocalPos.X <= WidgetSize.X and LocalPos.Y >= 0 and LocalPos.Y <= WidgetSize.Y then
+    return true
+  end
+  return false
+end
+
 function UIUtils.OpenSystem(SystemId, Option, ...)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if not Player or not IsValid(Player) then
@@ -1502,6 +1519,10 @@ end
 
 function UIUtils.PlayCommonBtnSe(context)
   UE4.UFMODBlueprintStatics.PlayEvent2D(nil, UE4.UFMODBlueprintStatics.FindEventbyName("event:/ui/common/click"))
+end
+
+function UIUtils.PlayLargeBtnSe(context)
+  UE4.UFMODBlueprintStatics.PlayEvent2D(nil, UE4.UFMODBlueprintStatics.FindEventbyName("event:/ui/common/click_btn_large"))
 end
 
 function UIUtils.PlayCommonForbiddenBtnSe(context)
@@ -3034,7 +3055,7 @@ function UIUtils.RefreshFeinaRewardReddot()
 end
 
 function UIUtils.ShouldDisplayItem(DataType, Id)
-  return CommonUtils.IsCurrentTimeRealease(DataType, Id) and CommonUtils.IsCurrentVersionRealease(DataType, Id)
+  return CommonUtils.IsCurrentTimeRelease(DataType, Id) and CommonUtils.IsCurrentVersionRelease(DataType, Id)
 end
 
 function UIUtils.CanOpenSkinPreview(ItemType, TypeId)
@@ -3050,6 +3071,26 @@ function UIUtils.CanOpenSkinPreview(ItemType, TypeId)
     return ResData and ResData.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResData.ResourceId]
   end
   return false
+end
+
+function UIUtils.AmIInGuildScene()
+  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(GWorld.GameInstance)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not GameState then
+    return false
+  end
+  local bInGuild = Avatar.CurrentRegionId and DataMgr.SubRegion[Avatar.CurrentRegionId] and DataMgr.SubRegion[Avatar.CurrentRegionId].SubRegionType == "guild"
+  local bIsInRouge = Avatar:IsInRougeLike()
+  local bIsInHB = Avatar:IsInHardBoss()
+  local bIsInSQ = Avatar:IsInSpecialQuest()
+  local bIsInDG = GameState:IsInDungeon()
+  return bInGuild and not bIsInRouge and not bIsInHB and not bIsInSQ and not bIsInDG
+end
+
+function UIUtils.RegionPlayerNum()
+  local Number = UE4.UGuildConstructFunctionLibrary.GetRegionSyncedPlayerNumber()
+  DebugPrint("lxc: GetActivePlayerNum: " .. tostring(Number))
+  return Number
 end
 
 AssembleComponents(UIUtils)

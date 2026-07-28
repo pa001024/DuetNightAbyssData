@@ -182,24 +182,57 @@ function WBP_Bag_Main_P_C:InitTabInfo()
     })
   end
   self.BottomKeyInfoList = {
-    {
-      KeyInfoList = {
-        {
-          Type = "Text",
-          Text = "Esc",
-          ClickCallback = self.OnReturnKeyDown,
-          Owner = self
-        }
+    Normal = {
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BACK")
+      }
+    },
+    Special = {
+      {
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "View",
+            Owner = self
+          }
+        },
+        Desc = GText("UI_Tips_Obtining")
       },
-      GamePadInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "B",
-          ClickCallback = self.OnReturnKeyDown,
-          Owner = self
-        }
-      },
-      Desc = GText("UI_BACK")
+      {
+        KeyInfoList = {
+          {
+            Type = "Text",
+            Text = "Esc",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        GamePadInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "B",
+            ClickCallback = self.OnReturnKeyDown,
+            Owner = self
+          }
+        },
+        Desc = GText("UI_BACK")
+      }
     }
   }
   self.Tab_Bag:Init({
@@ -211,7 +244,7 @@ function WBP_Bag_Main_P_C:InitTabInfo()
       "ResourceBar",
       "BottomKey"
     },
-    BottomKeyInfo = self.BottomKeyInfoList,
+    BottomKeyInfo = self.BottomKeyInfoList.Normal,
     StyleName = "Text",
     OwnerPanel = self,
     LastFocusWidget = self.List_Item,
@@ -219,7 +252,6 @@ function WBP_Bag_Main_P_C:InitTabInfo()
     BackCallback = self.OnReturnKeyDown
   })
   self.Tab_Bag:BindEventOnTabSelected(self, self.TabBagItemClick)
-  self:SetConsumeReddot()
   self:BindReddotTreeEvents()
   self.AllStuffData = {}
   self.FilteredStuffData = {}
@@ -291,6 +323,7 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
     DebugPrint("Avatar is nil, Not Connect to Server")
     return
   end
+  self:SetConsumeReddot()
   local PlayerStuffs, AllWeaponCount = nil, 0
   if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     self.NeedSelectGridIndex = 0
@@ -405,8 +438,9 @@ function WBP_Bag_Main_P_C:FillPlayerDataByTypeInFrame(TabId, NeedDelayJump)
           local StuffObj = StuffIconObject:CreateBagItemContent(OrderStuffData)
           if self.CurTabId == BagCommon.ItemTypeToTabId.ConsumableItem and StuffObj and StuffObj.StuffId then
             local BagConsumeNodeDetails = ReddotManager.GetLeafNodeCacheDetail("Bag_Consume")
-            DebugPrint("Yihan@ FillPlayerDataByTypeInFrame:StuffObj.StuffId", StuffObj.StuffId, BagConsumeNodeDetails[StuffObj.StuffId].ShowReddot)
-            if BagConsumeNodeDetails[StuffObj.StuffId].ShowReddot then
+            local ReddotDetail = BagConsumeNodeDetails and BagConsumeNodeDetails[StuffObj.StuffId]
+            DebugPrint("Yihan@ FillPlayerDataByTypeInFrame:StuffObj.StuffId", StuffObj.StuffId, ReddotDetail and ReddotDetail.ShowReddot)
+            if ReddotDetail and ReddotDetail.ShowReddot then
               StuffObj.RedDotType = UIConst.RedDotType.CommonRedDot
             else
               StuffObj.RedDotType = nil
@@ -460,7 +494,13 @@ function WBP_Bag_Main_P_C:OnFrameLoadCompleted(NeedDelayJump, AnimGridCount, bNe
     end
   end
   self.ListCanvas:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self:JumpToSelectItem(NeedDelayJump)
+  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+    if IsNeedSetFocus then
+      self:JumpToSelectItem(NeedDelayJump)
+    end
+  else
+    self:JumpToSelectItem(NeedDelayJump)
+  end
   self.NeedSelectStuffId = nil
   
   local function SetNavigateWidgetOpacityAndFocus()
@@ -541,13 +581,17 @@ function WBP_Bag_Main_P_C:EnterStuffSellState()
     TitleName = GText("UI_Bag_ModExtract")
     self.HB_Check:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    self.Spacer_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:StartMultiSelectWidget()
     self.Grey:SetNavigationRuleExplicit(EUINavigation.Right, self.CheckBox_Retain)
   elseif self.CurTabId == BagCommon.ItemTypeToTabId.FishItem then
     self.HB_Check:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+    self.Spacer_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self:StartMultiSelectWidget()
     self.Grey:SetNavigationRuleExplicit(EUINavigation.Right, EUINavigationRule.Stop)
+  else
+    self.Spacer_State:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   self.Tab_Bag:EnterViewSingleMode(TitleName)
   self.BagCurState = BagCommon.AllBagState.ChooseSaleState
@@ -608,6 +652,7 @@ end
 function WBP_Bag_Main_P_C:LeaveStuffSellState()
   self.Tab_Bag:LeaveViewSingleMode()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+  self.Spacer_State:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ResetMultiSelectWidget()
   self.BagCurState = BagCommon.AllBagState.NormalState
   self:RecoverAllItemsStyle()
@@ -649,10 +694,13 @@ function WBP_Bag_Main_P_C:RealToSaleItems(AllStuffContentList, AllStuffSellInfo)
       end
     end
   end
+  local IsRequestServerToSell = false
   if not IsEmptyTable(ModList) then
+    IsRequestServerToSell = true
     PlayerAvatar:ModBulkDecompose(ModList)
   end
   if not IsEmptyTable(ResourceList) then
+    IsRequestServerToSell = true
     if BagCommon:IsFishResource(IntegerUuid) then
       PlayerAvatar:ResourceBulkSaleFish(ResourceList)
     else
@@ -660,7 +708,11 @@ function WBP_Bag_Main_P_C:RealToSaleItems(AllStuffContentList, AllStuffSellInfo)
     end
   end
   if not IsEmptyTable(DraftsList) then
+    IsRequestServerToSell = true
     PlayerAvatar:DraftSale(DraftsList)
+  end
+  if IsRequestServerToSell then
+    self:BlockAllUIInput(true)
   end
 end
 
@@ -672,6 +724,7 @@ function WBP_Bag_Main_P_C:EnterWeaponResolveState()
   self.Tab_Bag:EnterViewSingleMode(GText("UI_Bag_Decompose"))
   self.HB_Check:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
+  self.Spacer_State:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:StartMultiSelectWidget()
   self.BagCurState = BagCommon.AllBagState.WeaponResolveState
   self.DesireResolveWeaponList = {}
@@ -719,6 +772,7 @@ end
 function WBP_Bag_Main_P_C:LeaveWeaponResolveState()
   self.Tab_Bag:LeaveViewSingleMode()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
+  self.Spacer_State:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ResetMultiSelectWidget()
   self.BagCurState = BagCommon.AllBagState.NormalState
   self.DesireResolveWeaponList = {}
@@ -739,7 +793,10 @@ function WBP_Bag_Main_P_C:RealToResolveWeapon(AllWeaponContentList)
     local WeaponUuid = self:GetStuffObjId(v.Uuid)
     table.insert(AllWeaponUuid, WeaponUuid)
   end
-  PlayerAvatar:WeaponBulkBreakDown(AllWeaponUuid)
+  if not IsEmptyTable(AllWeaponUuid) then
+    PlayerAvatar:WeaponBulkBreakDown(AllWeaponUuid)
+    self:BlockAllUIInput(true)
+  end
 end
 
 function WBP_Bag_Main_P_C:UpdateNpcDialogue(DialogueId)
@@ -756,10 +813,10 @@ function WBP_Bag_Main_P_C:UpdateNpcDialogue(DialogueId)
   end
 end
 
-function WBP_Bag_Main_P_C:RefreshBottomKeyInfo(FocusTypeName)
+function WBP_Bag_Main_P_C:RefreshBottomKeyInfo(FocusTypeName, bForceRefresh)
   FocusTypeName = FocusTypeName or "DefaultWidget"
-  DebugPrint("FocusTypeNameFocusTypeNameFocusTypeName  " .. FocusTypeName)
-  if self.CurFocusWidget == FocusTypeName then
+  DebugPrint("WBP_Bag_Main_P_C=== RefreshBottomKeyInfo= The FocusTypeName is ", FocusTypeName)
+  if self.CurFocusWidget == FocusTypeName and not bForceRefresh then
     return
   end
   if "FilterSort" == FocusTypeName then
@@ -1004,7 +1061,11 @@ function WBP_Bag_Main_P_C:RefreshBottomKeyInfo(FocusTypeName)
     }
     self.Tab_Bag:UpdateBottomKeyInfo(BottomKeyInfoList)
   elseif self.BottomKeyInfoList then
-    self.Tab_Bag:UpdateBottomKeyInfo(self.BottomKeyInfoList)
+    if self.Panel_Detail:IsVisible() and self.Panel_Detail.Panel_Method:IsVisible() and self.Panel_Detail:IsHaveAccessKeyCanFocus() then
+      self.Tab_Bag:UpdateBottomKeyInfo(self.BottomKeyInfoList.Special)
+    else
+      self.Tab_Bag:UpdateBottomKeyInfo(self.BottomKeyInfoList.Normal)
+    end
   end
   self.CurFocusWidget = FocusTypeName
 end
@@ -1081,6 +1142,7 @@ function WBP_Bag_Main_P_C:ClickChooseStuff(GridIndex, StuffUuid, AddNum)
   self:RefreshDetail(GridIndex, StuffUuid)
   self:RefreshSaleItemSelect(StuffUuid, GridIndex, AddNum)
   self:RefreshResolveWeaponSelect(StuffUuid, GridIndex)
+  self:RefreshBottomKeyInfo(nil, true)
 end
 
 function WBP_Bag_Main_P_C:CancelStuffClickAndHideDetail(bHasSelectStuffData)

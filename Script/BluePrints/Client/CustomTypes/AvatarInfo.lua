@@ -25,7 +25,8 @@ AvatarInfo.__Props__ = {
   IsInDungeon = prop.prop("Bool", "client save", false),
   IsInSpecialQuest = prop.prop("Bool", "client save", false),
   GuildId = prop.prop("Int", "client save", 0),
-  GuildSimpleInfo = prop.prop("Dict", "client", nil)
+  GuildSimpleInfo = prop.prop("Dict", "client", nil),
+  BackgroundId = prop.prop("Int", "client save")
 }
 
 function AvatarInfo:Init(Uid, Infos)

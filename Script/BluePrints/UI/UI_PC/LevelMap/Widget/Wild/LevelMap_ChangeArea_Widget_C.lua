@@ -242,7 +242,7 @@ function M:ShowOrHideRegionMapWidgtItemByTimeLine()
   if not self.WorldList then
     return
   end
-  local MapRegionType = self.Parent.MainMap.MapRegionType
+  local MapRegionType = self.Parent.ModeComp:GetMapRegionType()
   print(_G.LogTag, " [THY] MapRegionType: ", MapRegionType)
   for id, worldWidget in pairs(self.WorldList) do
     local UIRegionType = DataMgr.WorldMap[id].UIRegionType

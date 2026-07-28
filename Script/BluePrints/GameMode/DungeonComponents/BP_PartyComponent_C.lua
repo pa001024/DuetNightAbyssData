@@ -22,6 +22,26 @@ function BP_PartyComponent_C:CustomFinishInfo(AvatarStr)
   }
 end
 
+function BP_PartyComponent_C:GetFinalPlayerRanking()
+  local Res = self.GameMode.EMGameState.PartyPlayerOrdinal:ToTable()
+  table.sort(Res, function(Eid1, Eid2)
+    local IsComplete1 = self.PlayerRemainTime[Eid1] ~= nil
+    local IsComplete2 = self.PlayerRemainTime[Eid2] ~= nil
+    if IsComplete1 and not IsComplete2 then
+      return true
+    elseif not IsComplete1 and IsComplete2 then
+      return false
+    end
+    if IsComplete1 and IsComplete2 then
+      return self.PlayerRemainTime[Eid1] > self.PlayerRemainTime[Eid2]
+    end
+    local Percent1 = self.GameMode.EMGameState.PartyPlayerDisPercentValues:Find(Eid1)
+    local Percent2 = self.GameMode.EMGameState.PartyPlayerDisPercentValues:Find(Eid2)
+    return Percent1 > Percent2
+  end)
+  return Res
+end
+
 function BP_PartyComponent_C:PartySuccess()
   self.GameMode:TriggerDungeonWin()
 end

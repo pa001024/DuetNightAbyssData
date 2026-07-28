@@ -133,7 +133,7 @@ end
 
 function M:Init(Params)
   local Avatar = ArmoryUtils:GetAvatar()
-  if Avatar:CheckUIUnlocked("Mod") then
+  if Avatar:CheckUIUnlocked("Mod") and not Params.bFromArchive then
     self.IsShowModButton = true
     self.Panel_Mod:SetRenderOpacity(1)
     self.Panel_Mod:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -393,7 +393,7 @@ end
 
 function M:UpdateModPanel(Target)
   local ModVolume = ModModel:GetTargetMaxCost(Target)
-  local Cost = ModModel:CalcModSuitTotalCost(Target, Target.ModSuitIndex, true)
+  local Cost = ModModel:GetCurrentSuitCost(Target)
   self.Text_Capacity_Num:SetText(Cost)
   self.Text_Capacity_NumMax:SetText("/" .. ModVolume)
   if self.IsTargetUnowned then

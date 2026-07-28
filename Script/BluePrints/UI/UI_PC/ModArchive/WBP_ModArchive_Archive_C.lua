@@ -58,6 +58,12 @@ function WBP_ModArchive_Archive_C:OnSelected(Params)
   self.IsInPolarityView = false
   self.IsInSearchView = false
   self:RefreshInfo()
+  if self.CurInputDeviceType == ECommonInputType.Gamepad then
+    self:UpdateOnInputDeviceTypeChange()
+  else
+    self:SetFocus()
+    DebugPrint("ayff test try setfocus on self")
+  end
 end
 
 function WBP_ModArchive_Archive_C:InitTab()
@@ -87,7 +93,6 @@ function WBP_ModArchive_Archive_C:InitTab()
 end
 
 function WBP_ModArchive_Archive_C:OnTabSelected()
-  DebugPrint("zwkjkj OnTabSelected")
   self.FirstSelected = true
   local NextTab = self.ArchiveTab:GetCurrentTabIndex()
   if self.CurTab then
@@ -105,7 +110,12 @@ function WBP_ModArchive_Archive_C:InitTabList(NeedUpdateModCount)
   self.GroupInfo = {}
   self.Widgets = {}
   local ModBookModsViewState = EMCache:Get("ModBookModsViewState", true)
+  self:RemoveTimer("ModArchiveListFillEmptyContent")
   self.List_Item:ClearListItems()
+  if self.List_Item.SetEmptyGridItemCount then
+    self.List_Item:SetEmptyGridItemCount(0)
+  end
+  self.DelayAddItemNumPerFrame = nil
   self.FirstInitDone = false
   self.CurItemWidget = nil
   local Avatar = GWorld:GetAvatar()
@@ -167,6 +177,8 @@ function WBP_ModArchive_Archive_C:InitTabList(NeedUpdateModCount)
     return a.ModId < b.ModId
   end)
   self.DelayAddRequestId = (self.DelayAddRequestId or 0) + 1
+  self.DelayAddTotalNum = #AllInControlMods
+  self.DelayAddAddedNum = 0
   if #AllInControlMods > 0 then
     self:DelayAddModArchiveListItemByRow(1, AllInControlMods, ModBookModsViewState, self.DelayAddRequestId)
   else
@@ -185,14 +197,18 @@ function WBP_ModArchive_Archive_C:UpdateTabModCountText(UnlockedCount, LockedCou
 end
 
 function WBP_ModArchive_Archive_C:GetModArchiveItemNumPerFrame()
+  if self.DelayAddItemNumPerFrame then
+    return self.DelayAddItemNumPerFrame
+  end
   local ItemNumPerFrame = tonumber(self.ModArchiveItemNumPerRow)
   if not ItemNumPerFrame and self.List_Item and UIUtils and UIUtils.GetTileViewContentMaxCount then
-    ItemNumPerFrame = UIUtils.GetTileViewContentMaxCount(self.List_Item, "X")
+    ItemNumPerFrame = UIUtils.GetTileViewContentMaxCount(self.List_Item, "X", true, true)
   end
   ItemNumPerFrame = ItemNumPerFrame or 6
   if ItemNumPerFrame < 1 then
     ItemNumPerFrame = 1
   end
+  self.DelayAddItemNumPerFrame = ItemNumPerFrame
   return ItemNumPerFrame
 end
 
@@ -273,24 +289,55 @@ function WBP_ModArchive_Archive_C:AddModArchiveListItemContent(Entry, listIdx, M
   self.List_Item:AddItem(Content)
 end
 
+function WBP_ModArchive_Archive_C:TryFocusFirstModItemOnGamepad(DelayRequestId)
+  if not UIUtils.IsGamepadInput() then
+    return
+  end
+  if self.IsInPolarityView or self.IsInSearchView then
+    return
+  end
+  self:AddDelayFrameFunc(function()
+    if self.DelayAddRequestId ~= DelayRequestId then
+      return
+    end
+    local FirstWidget = self.Mods[1]
+    if not FirstWidget then
+      return
+    end
+    self.List_Item:NavigateToIndex(0)
+    FirstWidget:SetFocus()
+  end, 10, "ModArchiveTabFocusReset")
+end
+
 function WBP_ModArchive_Archive_C:DelayAddModArchiveListItemByRow(startIdx, AllInControlMods, ModBookModsViewState, DelayRequestId)
   if self.DelayAddRequestId ~= DelayRequestId then
     return
   end
   local ItemNumPerFrame = self:GetModArchiveItemNumPerFrame()
   local DelayFrameValue = 2
-  local EndIdx = math.min(startIdx + ItemNumPerFrame - 1, #AllInControlMods)
-  for listIdx = startIdx, EndIdx do
+  local TotalNum = #AllInControlMods
+  local RealStartIdx = math.max(startIdx or 1, (self.DelayAddAddedNum or 0) + 1)
+  local EndIdx = math.min(RealStartIdx + ItemNumPerFrame - 1, TotalNum)
+  for listIdx = RealStartIdx, EndIdx do
     self:AddModArchiveListItemContent(AllInControlMods[listIdx], listIdx, ModBookModsViewState)
+    self.DelayAddAddedNum = (self.DelayAddAddedNum or 0) + 1
   end
-  if EndIdx < #AllInControlMods then
-    local NextIdx = EndIdx + 1
+  if 1 == RealStartIdx then
+    self:TryFocusFirstModItemOnGamepad(DelayRequestId)
+  end
+  if TotalNum > (self.DelayAddAddedNum or 0) then
+    local NextIdx = (self.DelayAddAddedNum or 0) + 1
     local DelayKey = "DelayAddModArchiveListItem_" .. tostring(DelayRequestId) .. "_" .. tostring(NextIdx)
     self:AddDelayFrameFunc(function()
       self:DelayAddModArchiveListItemByRow(NextIdx, AllInControlMods, ModBookModsViewState, DelayRequestId)
     end, DelayFrameValue, DelayKey)
   elseif self.DelayAddRequestId == DelayRequestId then
-    self.List_Item:RequestFillEmptyContent()
+    self:AddTimer(0.1, function()
+      if self.DelayAddRequestId ~= DelayRequestId then
+        return
+      end
+      self.List_Item:RequestFillEmptyContent()
+    end, false, 0, "ModArchiveListFillEmptyContent")
   end
 end
 
@@ -407,9 +454,6 @@ function WBP_ModArchive_Archive_C:SetTipsInfo(ModInfo, LockState)
   end
   self.Com_Tips_Line:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Com_Tips_Line.Text_Level:SetText(GText("UI_ModTips_MaxLvPreview"))
-  self.Com_Tips_Line.Bg02:SetColorAndOpacity(self.Com_Tips_Line.Yellow)
-  self.Com_Tips_Line.Bg02_Straight:SetColorAndOpacity(self.Com_Tips_Line.Yellow)
-  self.Com_Tips_Line.Switch_Bg:SetActiveWidgetIndex(1)
   self.Content = {Test = 1}
   self.Text_Hold01:SetText(GText("UI_Bag_Sellconfirm_Hold"))
   self.Text_TaskRewards:SetText(GText("UI_Tips_Obtining"))

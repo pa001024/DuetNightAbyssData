@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -144,21 +144,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176951394343650428954",
-            startPort = "Out",
-            endQuest = "1768823572612114",
-            endPort = "Success"
-          },
-          {
             startQuest = "1768823572612106",
             startPort = "QuestStart",
             endQuest = "17688927641893424724",
-            endPort = "In"
-          },
-          {
-            startQuest = "176951380713049746399",
-            startPort = "Out",
-            endQuest = "176951394343650428954",
             endPort = "In"
           },
           {
@@ -196,6 +184,24 @@ return {
             startPort = "Out",
             endQuest = "176951291329743609045",
             endPort = "In"
+          },
+          {
+            startQuest = "17840964423535303285",
+            startPort = "Out",
+            endQuest = "1768823572612114",
+            endPort = "Success"
+          },
+          {
+            startQuest = "176951380713049746399",
+            startPort = "Out",
+            endQuest = "17840965905895304891",
+            endPort = "In"
+          },
+          {
+            startQuest = "17840965905895304891",
+            startPort = "Out",
+            endQuest = "17840964423535303285",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -210,7 +216,7 @@ return {
             key = "1768823572612114",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2573.9354822064206, y = 1159.9539046470047},
+            pos = {x = 2856.7992592962037, y = 1195.2015826655804},
             propsData = {ModeType = 0}
           },
           ["1768823572612122"] = {
@@ -686,37 +692,6 @@ return {
               MessageLocOffset = {X = 0, Y = 0}
             }
           },
-          ["176951394343650428954"] = {
-            key = "176951394343650428954",
-            type = "ShowGuideButtonNode",
-            name = "Button显示/隐藏信息",
-            pos = {x = 2271.550835253624, y = 1118.2314445949482},
-            propsData = {
-              ShowEnable = true,
-              MessageId = 303815,
-              MessageNote = "",
-              DelayTime = 0,
-              IsForceClick = true,
-              IsControlPlayer = false,
-              IsTimePause = false,
-              IsShowCursor = true,
-              HighLightUIPath = "AutoChessMain.Anchor:2.Details.Btn_Challenge",
-              UICompName = "Button_Area",
-              GamePadWidgetName = "",
-              IsAutoClick = false,
-              IsAutoClickByGamepad = false,
-              IsFindByMainUI = false,
-              UIShape = "Square",
-              IsResetPlayer = false,
-              IsForbidInAnim = true,
-              IsForbidOutAnim = false,
-              UICompSizeOffset = {X = 0, Y = 0},
-              UICompLocOffset = {X = 0, Y = 0},
-              MessageParentLoc = "HighLightUI",
-              MessageLoc = "Left",
-              MessageLocOffset = {X = 0, Y = 0}
-            }
-          },
           ["17700887244581366977"] = {
             key = "17700887244581366977",
             type = "PlatformJudgmentNode",
@@ -752,6 +727,68 @@ return {
               UICompLocOffset = {X = 0, Y = 0},
               MessageParentLoc = "HighLightUI",
               MessageLoc = "DownRight",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17840964423535303285"] = {
+            key = "17840964423535303285",
+            type = "ShowGuideButtonNode",
+            name = "Button显示/隐藏信息",
+            pos = {x = 2429.470588235294, y = 1175.786377708978},
+            propsData = {
+              ShowEnable = true,
+              MessageId = 303817,
+              MessageNote = "",
+              DelayTime = 0,
+              IsForceClick = true,
+              IsControlPlayer = false,
+              IsTimePause = false,
+              IsShowCursor = true,
+              HighLightUIPath = "AutoChessMain.Tab.Panel_Back:1.Btn_Back",
+              UICompName = "",
+              GamePadWidgetName = "",
+              IsAutoClick = false,
+              IsAutoClickByGamepad = false,
+              IsFindByMainUI = false,
+              UIShape = "Square",
+              IsResetPlayer = false,
+              IsForbidInAnim = true,
+              IsForbidOutAnim = false,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "DownRight",
+              MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17840965905895304891"] = {
+            key = "17840965905895304891",
+            type = "ShowGuideButtonNode",
+            name = "Button显示/隐藏信息",
+            pos = {x = 2147.8142414860686, y = 1173.9752321981425},
+            propsData = {
+              ShowEnable = true,
+              MessageId = 303815,
+              MessageNote = "",
+              DelayTime = 0,
+              IsForceClick = false,
+              IsControlPlayer = false,
+              IsTimePause = false,
+              IsShowCursor = true,
+              HighLightUIPath = "AutoChessMain.Anchor:2.Details.Btn_Challenge",
+              UICompName = "Button_Area",
+              GamePadWidgetName = "",
+              IsAutoClick = false,
+              IsAutoClickByGamepad = false,
+              IsFindByMainUI = false,
+              UIShape = "Square",
+              IsResetPlayer = false,
+              IsForbidInAnim = true,
+              IsForbidOutAnim = true,
+              UICompSizeOffset = {X = 0, Y = 0},
+              UICompLocOffset = {X = 0, Y = 0},
+              MessageParentLoc = "HighLightUI",
+              MessageLoc = "Left",
               MessageLocOffset = {X = 0, Y = 0}
             }
           }

@@ -26,8 +26,8 @@ return ReadOnly("AppearanceMainTab", {
     Text = "UI_Mount"
   },
   [5] = {
-    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Gesture",
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Action",
     TabId = 5,
-    Text = "UI_Gesture"
+    Text = "UI_Preview_GestureItem"
   }
 })

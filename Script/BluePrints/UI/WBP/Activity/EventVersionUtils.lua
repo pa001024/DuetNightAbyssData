@@ -40,6 +40,25 @@ end
 function EventVersionUtils.GetVersionPreviewEventBuckets(ver, now)
   local incoming, ing, lock = {}, {}, {}
   now = now or TimeUtils.NowTime()
+  
+  local function GetEventStartSec(cfg)
+    if not cfg then
+      return 0
+    end
+    return cfg.EventStartTime and cfg.EventStartTime:GetTime() or 0
+  end
+  
+  local function GetEventEndSec(cfg)
+    if not cfg then
+      return nil
+    end
+    local endSec = cfg.EventEndTime and cfg.EventEndTime:GetTime() or nil
+    if nil == endSec then
+      endSec = cfg.PermanenEventTime and cfg.PermanenEventTime:GetTime() or nil
+    end
+    return endSec
+  end
+  
   if nil == ver then
     return incoming, ing, lock
   end
@@ -53,11 +72,8 @@ function EventVersionUtils.GetVersionPreviewEventBuckets(ver, now)
       if eventId then
         local cfg = DataMgr.EventMain[eventId]
         if cfg then
-          local startSec = cfg.EventStartTime and cfg.EventStartTime:GetTime() or 0
-          local endSec = cfg.EventEndTime and cfg.EventEndTime:GetTime() or nil
-          if nil == endSec then
-            endSec = cfg.PermanenEventTime and cfg.PermanenEventTime:GetTime() or nil
-          end
+          local startSec = GetEventStartSec(cfg)
+          local endSec = GetEventEndSec(cfg)
           if now < startSec then
             table.insert(incoming, eventId)
           elseif nil ~= endSec and now > endSec then
@@ -69,8 +85,22 @@ function EventVersionUtils.GetVersionPreviewEventBuckets(ver, now)
       end
     end
   end
-  table.sort(incoming)
-  table.sort(ing)
+  table.sort(incoming, function(a, b)
+    local sa = GetEventStartSec(DataMgr.EventMain[a])
+    local sb = GetEventStartSec(DataMgr.EventMain[b])
+    if sa ~= sb then
+      return sa < sb
+    end
+    return a < b
+  end)
+  table.sort(ing, function(a, b)
+    local ea = GetEventEndSec(DataMgr.EventMain[a]) or math.huge
+    local eb = GetEventEndSec(DataMgr.EventMain[b]) or math.huge
+    if ea ~= eb then
+      return ea < eb
+    end
+    return a < b
+  end)
   table.sort(lock)
   return incoming, ing, lock
 end

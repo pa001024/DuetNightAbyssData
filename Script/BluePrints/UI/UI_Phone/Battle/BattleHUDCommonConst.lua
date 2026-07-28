@@ -1,4 +1,32 @@
 local BattleHUDCommonConst = {}
+BattleHUDCommonConst.TOTAL_MOBILE_HUD_PLAN_COUNT = 10
+BattleHUDCommonConst.TRIAL_LAYOUT_PLAN_INDEX = BattleHUDCommonConst.TOTAL_MOBILE_HUD_PLAN_COUNT
+BattleHUDCommonConst.AllLayoutIndexInfo = {
+  {
+    LayoutIndex = 1,
+    ServerPlanIndexList = {
+      1,
+      3,
+      5
+    }
+  },
+  {
+    LayoutIndex = 2,
+    ServerPlanIndexList = {
+      2,
+      4,
+      6
+    }
+  },
+  {
+    LayoutIndex = 3,
+    ServerPlanIndexList = {
+      7,
+      8,
+      9
+    }
+  }
+}
 BattleHUDCommonConst.DesignBaseConfigInHUD = {
   SkillPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_CharSkill_M.WBP_Battle_CharSkill_M_C'",
@@ -79,7 +107,8 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
     },
     MaskNodeName = {
       "Image_DodgeType01",
-      "Image_Dodgetype02"
+      "Image_Dodgetype02",
+      "Image_DodgeType03"
     }
   },
   FlyPos = {
@@ -148,21 +177,27 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_WalkPos"
   },
-  AutoBattlePos = {
-    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AutoBattle_M.WBP_Battle_AutoBattle_M_C'",
-    WidgetName = "AutoBattle",
-    HUDNodeName = "AutoBattle",
+  AutoLeftBtnPos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AutoRemote_M.WBP_Battle_AutoRemote_M_C'",
+    WidgetName = "AutoLeftBtn",
+    HUDNodeName = "LeftAutoBtnPos",
     TextMapContent = "UI_CustomLayout_WidgetName36",
     InnerActiveSlateName = "Button_Area",
-    MaskNodeName = "Image_AutoBattlePos"
-  },
-  AutoRemotePos = {
-    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AutoRemote_M.WBP_Battle_AutoRemote_M_C'",
-    WidgetName = "AutoRemote",
-    HUDNodeName = "AutoRemote",
-    TextMapContent = "UI_CustomLayout_WidgetName35",
-    InnerActiveSlateName = "Button_Area",
-    MaskNodeName = "Image_AutoRemotePos"
+    InnerActiveSlateName = {
+      {
+        "AutoRemote",
+        "Button_Area"
+      },
+      {
+        "AutoBattle",
+        "Button_Area"
+      },
+      {
+        "Set",
+        "Button_Area"
+      }
+    },
+    MaskNodeName = "Image_AutoLeftBtnPos"
   },
   BattleCancelLeftPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_BulletCancel_M.WBP_Battle_BulletCancel_M_C'",
@@ -202,6 +237,18 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
       "Button_Area"
     },
     MaskNodeName = "Image_SlidingSlash",
+    bIsNeedManualAdd = true
+  },
+  SlidingJumpMallPos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_SlidingJump_M.WBP_Battle_SlidingJump_M_C'",
+    WidgetName = "SlidingJump",
+    HUDNodeName = "SlidingJump",
+    TextMapContent = "UI_CustomLayout_WidgetName32",
+    InnerActiveSlateName = {
+      "Image_Hotspot",
+      "Button_Area"
+    },
+    MaskNodeName = "Image_SlidingJump",
     bIsNeedManualAdd = true
   },
   MapPos = {
@@ -294,6 +341,10 @@ BattleHUDCommonConst.ExtraNodeConfigInHUD = {
   Pos_Spiritualized = {
     SettingNodeName = "SpiritualizedPos",
     DefaultLayoutIndex = 7
+  },
+  LeftAutoBtnPos = {
+    SettingNodeName = "AutoLeftBtnPos",
+    DefaultLayoutIndex = 8
   }
 }
 BattleHUDCommonConst.AllHasRelativeNodeWidgetList = {"MovePos"}
@@ -302,6 +353,7 @@ BattleHUDCommonConst.ManualAdditionConfigInHUD = {
     NodeIdx = 2,
     LayoutInHUDPosName = "SlideTacklePos",
     EffectWidgetName = "Jump",
+    OwnerLayoutIndex = {2, 3},
     ShowText = GText("UI_CustomLayout_WidgetName32"),
     DefaultDesignPosition = {X = -610.0, Y = -180.0},
     DefaultDesignScale = 1.0
@@ -310,7 +362,17 @@ BattleHUDCommonConst.ManualAdditionConfigInHUD = {
     NodeIdx = 1,
     LayoutInHUDPosName = "SlidingSlashPos",
     EffectWidgetName = "Jump",
+    OwnerLayoutIndex = {2, 3},
     ShowText = GText("UI_CustomLayout_WidgetName33"),
+    DefaultDesignPosition = {X = -534.0, Y = -315.0},
+    DefaultDesignScale = 1.0
+  },
+  SlidingJump = {
+    NodeIdx = 3,
+    LayoutInHUDPosName = "SlidingJumpMallPos",
+    EffectWidgetName = "Jump",
+    OwnerLayoutIndex = {3},
+    ShowText = GText("UI_CustomLayout_WidgetName31"),
     DefaultDesignPosition = {X = -534.0, Y = -315.0},
     DefaultDesignScale = 1.0
   }

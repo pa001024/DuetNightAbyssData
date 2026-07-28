@@ -317,7 +317,8 @@ function M:ShowItemDetail()
       PaymentParameters.cpOrder = OrderId
       PaymentParameters.callbackUrl = CallbackUrl
       local GameRoleInfo = HeroUSDKUtils.GenHeroHDCGameRoleInfo()
-      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo)
+      local ItemName = GText(DataMgr.PayGoods[PaymentParameters.goodsId].Name)
+      HeroUSDKSubsystem():HeroSDKPay(PaymentParameters, GameRoleInfo, ItemName)
     end)
   else
     AudioManager(self):PlayItemSound(self, self.ShopItemData.TypeId, "Click", self.ShopItemData.ItemType)

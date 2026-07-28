@@ -23,6 +23,8 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.BattleLogic",
   "BluePrints.Client.Entities.Components.BonusMgr",
   "BluePrints.Client.Entities.Components.QuestMgr",
+  "BluePrints.Client.Entities.Components.QuestBacktrackMgr",
+  "BluePrints.Client.Entities.Components.QuestSuitMgr",
   "BluePrints.Client.Entities.Components.TargetMgr",
   "BluePrints.Client.Entities.Components.PlayerInfoMgr",
   "BluePrints.Client.Entities.Components.AchvMgr",
@@ -71,6 +73,7 @@ Avatar.__Component__ = {
   "Blueprints.Client.Entities.CommonComponents.GameModeWalnutComponent",
   "Blueprints.Client.Entities.Components.OnlineComp",
   "Blueprints.Client.Entities.Components.RegionMoveSyncMgr",
+  "Blueprints.Client.Entities.Components.GuildExhibitMgr",
   "Blueprints.Client.Entities.Components.LevelSequence",
   "BluePrints.Client.Entities.Components.NewImpressionMgr",
   "BluePrints.Client.Entities.Components.ArchiveMgr",
@@ -93,6 +96,7 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.MiscEnterWorldMgr",
   "BluePrints.Client.Entities.Components.FeiNaMgr",
   "BluePrints.Client.Entities.Components.TitleComp",
+  "BluePrints.Client.Entities.Components.RougePro",
   "BluePrints.Client.Entities.Components.DoubleModDrop",
   "BluePrints.Client.Entities.Components.SettlementOnlineMgr",
   "BluePrints.Client.Entities.Components.TheaterActivity",
@@ -100,6 +104,7 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.MountMgr",
   "BluePrints.Client.Entities.Components.WebJumpMgr",
   "BluePrints.Client.Entities.Components.WuyoushengActivity",
+  "BluePrints.Client.Entities.Components.WeaponVerifyMgr",
   "BluePrints.Client.Entities.Components.GiftComp",
   "BluePrints.Client.Entities.Components.RegionReputationMgr",
   "BluePrints.Client.Entities.Components.AutoChess",
@@ -110,6 +115,7 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.ExtractionTreasureMgr",
   "Blueprints.Client.Entities.CommonComponents.DungeonGameObjectComponent",
   "BluePrints.Client.Entities.Components.TreasureHuntMgr",
+  "BluePrints.Client.Entities.Components.PermanentTreasureHuntMgr",
   "BluePrints.Client.Entities.Components.BackpackPuzzleMgr",
   "BluePrints.Client.Entities.Components.GuildComp",
   "BluePrints.Client.Entities.Components.LimitedPrize",
@@ -117,7 +123,9 @@ Avatar.__Component__ = {
   "BluePrints.Client.Entities.Components.AccessoryDrop",
   "BluePrints.Client.Entities.Components.AsyncCombatEventMgr",
   "BluePrints.Client.Entities.Components.PopupPackComp",
-  "BluePrints.Client.Entities.Components.AppearanceCollectEventComp"
+  "BluePrints.Client.Entities.Components.LoginPopUpComp",
+  "BluePrints.Client.Entities.Components.AppearanceCollectEventComp",
+  "BluePrints.Client.Entities.Components.RaceLotteryComp"
 }
 
 function Avatar:Init(eid)
@@ -267,6 +275,11 @@ function Avatar:_OnPropChangeCurrentPet()
   DebugPrint("Avatar:_OnPropChangeCurrentPet self.NeedRefreshPlayer:", self.NeedRefreshPlayer)
 end
 
+function Avatar:_OnPropChangeShowPet()
+  self.NeedRefreshPlayer = true
+  DebugPrint("Avatar:_OnPropChangeShowPet self.ShowPet:", self.ShowPet)
+end
+
 function Avatar:_OnPropChangePets(keys)
   self.NeedRefreshPlayer = true
   DebugPrint("Avatar:_OnPropChangePets", CommonUtils.TableToString(keys))
@@ -301,12 +314,23 @@ function Avatar:_OnPropChangeLevel()
   EventManager:FireEvent(EventID.OnPlayerLevelUp)
 end
 
+function Avatar:_OnPropChangeUid()
+  local HeroSDK = HeroUSDKSubsystem()
+  if HeroSDK then
+    HeroSDK:SetNewBDCPublicAttriubute(tostring(self.Uid), tostring(self.Hostnum))
+  end
+end
+
 function Avatar:_OnPropChangeMailUniqueID()
   EventManager:FireEvent(EventID.OnChangePropMailUniqueID)
 end
 
 function Avatar:_OnPropChangeActionPoint()
   EventManager:FireEvent(EventID.OnChangeActionPoint, CommonConst.ActionPoint)
+end
+
+function Avatar:_OnPropChangeAutoAgreeInvite()
+  EventManager:FireEvent(EventID.OnRegionOnlineAutoAgreeInviteChanged, self.AutoAgreeInvite == true)
 end
 
 function Avatar:_OnPropChangeChars(keys)

@@ -72,7 +72,6 @@ function M:OnClickSelected()
           AudioManager(self):PlayUISound(self, "event:/ui/common/click_checkbox_check", nil, nil)
         else
           self:StopAllAnimations()
-          AudioManager(self):PlayUISound(self, "event:/ui/common/click_checkbox_uncheck", nil, nil)
           self:PlayAnimation(self.Normal)
           AudioManager(self):PlayUISound(self, "event:/ui/common/click_checkbox_uncheck", nil, nil)
         end

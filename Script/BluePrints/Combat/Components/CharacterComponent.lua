@@ -33,9 +33,31 @@ function Component:ServerInheritModAttr(ModData)
   end
 end
 
+function Component:BuildInheritedWeaponInfo(Source, WeaponId)
+  local WeaponInfo = {WeaponId = WeaponId}
+  local WeaponData = DataMgr.BattleWeapon[WeaponId]
+  if not (Source and WeaponData) or not WeaponData.WeaponSkillList then
+    return WeaponInfo
+  end
+  local SkillInfos = {}
+  for _, SkillId in ipairs(WeaponData.WeaponSkillList) do
+    local SrcSkill = Source:GetSkill(SkillId)
+    if SrcSkill then
+      SkillInfos[SkillId] = {
+        Level = SrcSkill.SkillLevel,
+        Grade = SrcSkill.SkillGrade
+      }
+    else
+      SkillInfos[SkillId] = {}
+    end
+  end
+  WeaponInfo.SkillInfos = SkillInfos
+  return WeaponInfo
+end
+
 function Component:CreateUnitServerSetRoleMod(RoleId, Source, OnlySummonInherit)
   local MonsterData = DataMgr.Monster[self.UnitId]
-  if MonsterData and MonsterData.InheritMod then
+  if not OnlySummonInherit and MonsterData and MonsterData.InheritMod then
     self:ServerInheritModAttr(Source.InfoForInit and Source.InfoForInit.ModData or {})
     self:ServerSetRoleMod(RoleId, Source.ModPassives, false)
   else
@@ -43,20 +65,14 @@ function Component:CreateUnitServerSetRoleMod(RoleId, Source, OnlySummonInherit)
   end
   if MonsterData and MonsterData.InheritWeapon then
     if MonsterData.InheritWeapon == "Melee" then
-      if Source.InfoForInit and Source.InfoForInit.MeleeWeapon then
-        self:SummonServerSetUpMeleeWeapon(Source.InfoForInit.MeleeWeapon)
-      elseif Source.CurrentRoleId and DataMgr.BattleChar[Source.CurrentRoleId].WeaponId then
-        self:SummonServerSetUpMeleeWeapon({
-          WeaponId = DataMgr.BattleChar[Source.CurrentRoleId].WeaponId
-        })
+      local SourceWeapon = Source.MeleeWeapon
+      if SourceWeapon then
+        self:SummonServerSetUpMeleeWeapon(self:BuildInheritedWeaponInfo(Source, SourceWeapon.WeaponId), SourceWeapon)
       end
     elseif MonsterData.InheritWeapon == "Ranged" then
-      if Source.InfoForInit and Source.InfoForInit.RangedWeapon then
-        self:SummonServerSetUpRangedWeapon(Source.InfoForInit.RangedWeapon)
-      elseif Source.CurrentRoleId and DataMgr.BattleChar[Source.CurrentRoleId].RangedWeapon then
-        self:SummonServerSetUpMeleeWeapon({
-          WeaponId = DataMgr.BattleChar[Source.CurrentRoleId].RangedWeapon
-        })
+      local SourceWeapon = Source.RangedWeapon
+      if SourceWeapon then
+        self:SummonServerSetUpRangedWeapon(self:BuildInheritedWeaponInfo(Source, SourceWeapon.WeaponId), SourceWeapon)
       end
     end
   end

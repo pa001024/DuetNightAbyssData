@@ -149,8 +149,10 @@ function M:ChangePlayerWeaponFashion(WeaponData, Player)
   end
   
   ChangePlayerWeaponFashionInternal(Player)
-  local PlayerReflection = self:GetReflectionActor(Player)
-  ChangePlayerWeaponFashionInternal(PlayerReflection)
+  if self.bEnableReflection then
+    local PlayerReflection = self:GetReflectionActor(Player)
+    ChangePlayerWeaponFashionInternal(PlayerReflection)
+  end
 end
 
 function M:PlayWeaponAppearFX()
@@ -190,8 +192,13 @@ function M:ChangePlayerWeapon(WeaponData, Player)
   end
   
   ChangePlayerWeaponInternal(Player)
-  local PlayerReflection = self:GetReflectionActor(Player)
-  ChangePlayerWeaponInternal(PlayerReflection)
+  if self.bEnableReflection then
+    local PlayerReflection = self:GetReflectionActor(Player)
+    ChangePlayerWeaponInternal(PlayerReflection)
+    if PlayerReflection and PlayerReflection.UsingWeapon and PlayerReflection.UsingWeapon.FXComponent then
+      PlayerReflection.UsingWeapon.FXComponent:DisableComponent(true)
+    end
+  end
 end
 
 function M:DestroyPlayerMeleeWeapon(PlayCharacter)
@@ -518,7 +525,9 @@ function M:WeaponLvUpOrBreakUp()
   end
   
   WeaponLvUpOrBreakUpInternal(self.ArmoryPlayer.UsingWeapon)
-  WeaponLvUpOrBreakUpInternal(self:GetReflectionActor(self.ArmoryPlayer.UsingWeapon))
+  if self.bEnableReflection then
+    WeaponLvUpOrBreakUpInternal(self:GetReflectionActor(self.ArmoryPlayer.UsingWeapon))
+  end
 end
 
 function M:Component_DestroyActors()

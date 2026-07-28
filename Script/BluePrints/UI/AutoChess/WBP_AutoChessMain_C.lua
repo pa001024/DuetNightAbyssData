@@ -46,6 +46,10 @@ function View:PushSubPage(SubPageWidgetName, ...)
   return SubPageWidget
 end
 
+function View:ReceiveEnterState(StackAction)
+  View.Super.ReceiveEnterState(self, StackAction)
+end
+
 function View:PopSubPage()
   if 0 == #self.SubPageStack then
     return

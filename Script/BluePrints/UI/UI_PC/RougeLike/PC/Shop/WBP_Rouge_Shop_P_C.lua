@@ -1,4 +1,5 @@
 require("UnLua")
+local RougeUtils = require("Utils.RougeUtils")
 local M = Class("BluePrints.UI.Shop.WBP_Shop_Main_Base_C")
 M._components = {
   "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp"
@@ -247,6 +248,8 @@ function M:UpdateShopDetail(MainTabId)
   self.TileList_Item:ScrollIndexIntoView(0)
   self:StopAttrListFramingIn()
   self.TileList_Item:ClearListItems()
+  self.NeedDeferDefaultSelect = true
+  self.DefaultSelectContent = nil
   self.ShopItemNum = #ShopDataList
   for i = 1, self.ShopItemNum do
     local Content = NewObject(self.ShopItemContentClass)
@@ -258,6 +261,7 @@ function M:UpdateShopDetail(MainTabId)
     Content.Parent = self
     if 1 == i then
       Content.IsSelect = true
+      self.DefaultSelectContent = Content
     else
       Content.IsSelect = false
     end
@@ -289,11 +293,26 @@ function M:UpdateShopDetail(MainTabId)
     end
     self.TileList_Item:RegenerateAllEntries()
     self:AddTimer(0.01, function()
+      self:ApplyDeferredDefaultSelect()
       self:PlayAttrListFramingIn()
       self:FocusOnPanel(true)
     end)
     self:RemoveTimer("AddEmptyContent", true)
   end, false, 0, "AddEmptyContent")
+end
+
+function M:ApplyDeferredDefaultSelect()
+  if not self.NeedDeferDefaultSelect then
+    return
+  end
+  self.NeedDeferDefaultSelect = false
+  if not self.DefaultSelectContent then
+    return
+  end
+  local DefaultWidget = self.DefaultSelectContent.SelfWidget
+  if DefaultWidget and DefaultWidget.SetSelect then
+    DefaultWidget:SetSelect()
+  end
 end
 
 function M:PlayAttrListFramingIn()
@@ -319,11 +338,17 @@ function M:RougeShopItemSelect(Content, ItemType, ItemId, ShopId, RealPrices, Is
   else
     self.DetailItem:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
+  if self.SelectContent and self.SelectContent == Content then
+    return
+  end
   self.DetailItem:UpdateDetails(ItemType, ItemId, ShopId, RealPrices, IsSoldOut, IsCanLevelUp)
   if self.SelectContent and self.SelectContent ~= Content then
     local EventSoundPath = "event:/ui/roguelike/choose_point_click"
     AudioManager(self):PlayUISound(self, EventSoundPath, nil, nil)
-    self.SelectContent.SelfWidget:SetUnSelect()
+    local PrevWidget = self.SelectContent.SelfWidget
+    if PrevWidget and PrevWidget.Content == self.SelectContent then
+      PrevWidget:SetUnSelect()
+    end
     if "Blessing" == ItemType then
       self.IsNeedAddCount = not IsCanLevelUp and not IsSoldOut
       self.SelectGroupId = DataMgr.RougeLikeBlessing[ItemId].BlessingGroup

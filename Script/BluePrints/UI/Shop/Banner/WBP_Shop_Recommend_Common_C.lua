@@ -755,6 +755,11 @@ function M:OnBtnPayClick()
       return
     end
     Avatar:PurchaseShopItem(DialogWidget.Params.ShopItemData.ItemId, SelectCount, false, function(Ret)
+      local GetCharPage = UIManager(GWorld.GameInstance):GetUIObj("GetCharPage")
+      if IsValid(GetCharPage) and IsValid(GetCharPage.ShopRecommendBanner) then
+        GetCharPage.bNeedResumeShopBannerTimer = true
+        return
+      end
       if self and self.Parent and self.Parent.Shop_RecommendBanner then
         self.Parent.Shop_RecommendBanner:StartBannerTimer()
       end

@@ -474,7 +474,10 @@ function M:CurrentStateEvent_PlayTalk(ParamentsTable)
     Player = Battle(self.Owner):GetEntity(self.PlayerEid)
   end
   Player = Player or UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  UE4.UPlayTalkAsyncAction.PlayTalk(self.Owner, TalkId, nil)
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self.Owner, TalkId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction:Activate()
+  end
 end
 
 function M:CurrentStateEvent_ChangeTrapSkillOpen(ParamentsTable)

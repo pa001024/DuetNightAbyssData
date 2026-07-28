@@ -5,7 +5,13 @@ function Component:PrepareToBattleSingleDungeon(DungeonId, AvatarBattleInfo, Cus
   self.logger.debug("PrepareToBattle", DungeonId)
   self.AvatarBattleInfo = AvatarBattleInfo
   GWorld.GameInstance:PreInitGameMode(CustomPreInitInfo)
-  WorldTravelSubsystem():ChangeDungeonByDungeonId(DungeonId, CommonConst.DungeonNetMode.Standalone)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+  if GameMode and GameMode.InvokeWorldTravelDelegate and GameMode:InvokeWorldTravelDelegate() then
+    self:AvatarStatusEnterSuccess()
+    return
+  else
+    WorldTravelSubsystem():ChangeDungeonByDungeonId(DungeonId, CommonConst.DungeonNetMode.Standalone)
+  end
 end
 
 function Component:PrepareToBattleMultiDungeon(DungeonId, AvatarBattleInfo)

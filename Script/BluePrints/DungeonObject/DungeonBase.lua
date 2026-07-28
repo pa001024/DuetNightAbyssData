@@ -8,7 +8,8 @@ DungeonBase.__Component__ = {
   "BluePrints.DungeonObject.DungeonComponent.ServerStaticCreator",
   "BluePrints.DungeonObject.DungeonComponent.ServerMonsterSpawnManager",
   "BluePrints.DungeonObject.DungeonComponent.ServerRandomCreator",
-  "BluePrints.DungeonObject.DungeonComponent.DungeonFinishComponent"
+  "BluePrints.DungeonObject.DungeonComponent.DungeonFinishComponent",
+  "BluePrints.DungeonObject.DungeonComponent.DungeonMonitorComponent"
 }
 DungeonClass.AssembleComponents(DungeonBase)
 return DungeonBase

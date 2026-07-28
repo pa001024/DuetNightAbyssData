@@ -354,7 +354,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 10006,
     SubName = "UI_AutoChess_ShopName",
     SubTabId = 100061,
-    TabCoin = {219},
+    TabCoin = {225},
     TabType = "Normal"
   },
   [100071] = {
@@ -385,6 +385,43 @@ return ReadOnly("ShopTabSub", {
     TabCoin = {112},
     TabType = "Normal"
   },
+  [100111] = {
+    MainTabId = 10011,
+    SubName = "RaceLotteryShop",
+    SubTabId = 100111,
+    TabCoin = {10302501},
+    TabType = "Normal"
+  },
+  [100121] = {
+    MainTabId = 10012,
+    SubName = "UI_Play_TreasureHunt_Shop",
+    SubTabId = 100121,
+    TabCoin = {6000006},
+    TabType = "Normal"
+  },
+  [100131] = {
+    ConditionId = "IronMode",
+    MainTabId = 10013,
+    SubName = "UI_Play_IronModeShop1",
+    SubTabId = 100131,
+    TabCoin = {15039},
+    TabType = "Normal"
+  },
+  [100132] = {
+    ConditionId = "IronMode",
+    MainTabId = 10013,
+    SubName = "UI_Play_IronModeShop2",
+    SubTabId = 100132,
+    TabCoin = {15040},
+    TabType = "Normal"
+  },
+  [100151] = {
+    MainTabId = 10015,
+    SubName = "Event_FreeAppearance_tittle01",
+    SubTabId = 100151,
+    TabCoin = {224},
+    TabType = "Normal"
+  },
   [900011] = {
     MainTabId = 90001,
     SubName = "UI_SHOP_SUBTAB_SKIN",
@@ -394,22 +431,36 @@ return ReadOnly("ShopTabSub", {
   },
   [900012] = {
     MainTabId = 90002,
-    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
+    SubName = "UI_Mount",
     SubTabId = 900012,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
   [900013] = {
     MainTabId = 90003,
-    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Head",
     SubTabId = 900013,
     TabCoin = T.RT_3,
     TabType = "Skin"
   },
   [900014] = {
     MainTabId = 90004,
-    SubName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
     SubTabId = 900014,
+    TabCoin = T.RT_3,
+    TabType = "Skin"
+  },
+  [900015] = {
+    MainTabId = 90005,
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    SubTabId = 900015,
+    TabCoin = T.RT_3,
+    TabType = "Normal"
+  },
+  [900016] = {
+    MainTabId = 90006,
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_EFFECT",
+    SubTabId = 900016,
     TabCoin = T.RT_3,
     TabType = "Skin"
   }

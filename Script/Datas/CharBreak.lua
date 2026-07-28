@@ -1058,6 +1058,59 @@ return ReadOnly("CharBreak", {
       ItemNum = T.RT_9
     }
   },
+  [3104] = {
+    [1] = {
+      CharBreakLevel = 20,
+      CharBreakNum = 1,
+      CharId = 3104,
+      CollectRewardExp = 50,
+      ItemId = T.RT_22,
+      ItemNum = T.RT_2
+    },
+    [2] = {
+      CharBreakLevel = 30,
+      CharBreakNum = 2,
+      CharId = 3104,
+      CollectReward = 61001,
+      CollectRewardExp = 100,
+      ItemId = T.RT_23,
+      ItemNum = T.RT_4
+    },
+    [3] = {
+      CharBreakLevel = 40,
+      CharBreakNum = 3,
+      CharId = 3104,
+      CollectRewardExp = 200,
+      ItemId = T.RT_23,
+      ItemNum = T.RT_5
+    },
+    [4] = {
+      CharBreakLevel = 50,
+      CharBreakNum = 4,
+      CharId = 3104,
+      CollectReward = 61002,
+      CollectRewardExp = 400,
+      ItemId = T.RT_24,
+      ItemNum = T.RT_7
+    },
+    [5] = {
+      CharBreakLevel = 60,
+      CharBreakNum = 5,
+      CharId = 3104,
+      CollectRewardExp = 800,
+      ItemId = T.RT_24,
+      ItemNum = T.RT_8
+    },
+    [6] = {
+      CharBreakLevel = 70,
+      CharBreakNum = 6,
+      CharId = 3104,
+      CollectReward = 61003,
+      CollectRewardExp = 1600,
+      ItemId = T.RT_24,
+      ItemNum = T.RT_9
+    }
+  },
   [3201] = {
     [1] = {
       CharBreakLevel = 20,

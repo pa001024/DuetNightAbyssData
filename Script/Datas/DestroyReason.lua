@@ -9,7 +9,7 @@ return ReadOnly("DestroyReason", {
     DestroyReason = "AutoChess",
     IsClearGuide = true,
     IsClearStaticCreatorRef = true,
-    IsMonClearBattleInfo = false,
+    IsMonClearBattleInfo = true,
     IsTriggerDestroyEvent = true,
     IsTriggrRelationSpawn = false
   },
@@ -221,6 +221,14 @@ return ReadOnly("DestroyReason", {
     IsTriggerDestroyEvent = false,
     IsTriggrRelationSpawn = false
   },
+  PetRace = {
+    DestroyReason = "PetRace",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = true,
+    IsTriggerDestroyEvent = false,
+    IsTriggrRelationSpawn = false
+  },
   PhantomChangeRole = {
     DestroyReason = "PhantomChangeRole",
     IsClearGuide = true,
@@ -307,6 +315,14 @@ return ReadOnly("DestroyReason", {
     IsClearStaticCreatorRef = true,
     IsMonClearBattleInfo = true,
     IsTriggerDestroyEvent = false,
+    IsTriggrRelationSpawn = false
+  },
+  ServerDestroy = {
+    DestroyReason = "ServerDestroy",
+    IsClearGuide = true,
+    IsClearStaticCreatorRef = true,
+    IsMonClearBattleInfo = false,
+    IsTriggerDestroyEvent = true,
     IsTriggrRelationSpawn = false
   },
   SpawnerClear = {

@@ -1,3 +1,4 @@
+local CoroutineUtils = require("CoroutineUtils")
 local TeamModel = TeamController:GetModel()
 local Component = {}
 
@@ -179,7 +180,7 @@ function Component:OpenTeamInfo()
   end
   DebugPrint(DebugTag, LXYTag, "OpenTeamInfo")
   self:PlayAnimation(self.Team_Out)
-  RunAsyncTask(self, "OpenTeamInfoAsync", function(CoObj)
+  CoroutineUtils.RunAsyncTask(self, "OpenTeamInfoAsync", function(CoObj)
     local TeamInfoUI = UIManager(self):GetUIObjAsync(TeamCommon.InfoUIName, CoObj)
     if IsValid(TeamInfoUI) then
       TeamInfoUI:UnbindAllFromAnimationFinished(TeamInfoUI.Auto_Out)
@@ -194,7 +195,7 @@ function Component:OpenTeamInfo()
 end
 
 function Component:CloseTeamInfo()
-  RunAsyncTask(self, "CloseTeamInfoAsync", function(CoObj)
+  CoroutineUtils.RunAsyncTask(self, "CloseTeamInfoAsync", function(CoObj)
     local TeamInfoUI = UIManager(self):GetUIObjAsync(TeamCommon.InfoUIName, CoObj)
     if IsValid(TeamInfoUI) then
       TeamInfoUI:Close()

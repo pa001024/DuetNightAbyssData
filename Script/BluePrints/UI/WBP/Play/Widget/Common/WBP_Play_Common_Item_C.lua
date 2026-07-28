@@ -51,6 +51,9 @@ function WBP_Play_Common_Item_C:OnListItemObjectSet(Content)
     end
     ReddotManager.AddListener(self.Content.SubWidgetUIName, self, self["On" .. self.Content.SubWidgetUIName .. "ReddotChange"])
   end
+  if self.Content.Parent.TryExecutePendingSoloTreasureJump then
+    self.Content.Parent:TryExecutePendingSoloTreasureJump()
+  end
 end
 
 function WBP_Play_Common_Item_C:OnCellClicked()
@@ -140,6 +143,27 @@ function WBP_Play_Common_Item_C:OnAbyssMainReddotChange()
     self.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
     self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function WBP_Play_Common_Item_C:OnSoloTreasurePlaySubtabMainReddotChange()
+  local PermNode = ReddotManager.GetTreeNode("Permanent_SoloTreasureMain")
+  local NewNode = ReddotManager.GetTreeNode("SoloTreasurePlaySubtabNew")
+  local PermCount = PermNode and PermNode.Count or 0
+  local PermType = PermNode and PermNode.ReddotType
+  local NewCount = NewNode and NewNode.Count or 0
+  local bShowReddot = PermCount > 0 and (PermType == EReddotType.Normal or PermType == EReddotType.Num)
+  local bShowNew = not bShowReddot and (NewCount > 0 or PermCount > 0 and PermType == EReddotType.New)
+  if bShowReddot then
+    self.Reddot:SetReddotStyle(0)
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Reddot:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if bShowNew then
+    self.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 

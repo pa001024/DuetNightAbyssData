@@ -4,10 +4,18 @@ local SkillUtils = require("Utils.SkillUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local AutoChessDataModel = {}
-local ActiveId = 103016
+local ActiveId = AutoChessConst.ActiveId
 
 function AutoChessDataModel:InitModel()
   self:InitReddotTree()
+end
+
+function AutoChessDataModel:SetEditingSquadIndex(Index)
+  self.EditingSuqadIndex = Index
+end
+
+function AutoChessDataModel:GetEditingSuqadIndex()
+  return self.EditingSuqadIndex
 end
 
 function AutoChessDataModel:InitReddotTree()
@@ -31,7 +39,7 @@ function AutoChessDataModel:RefreshAutoChessLinearReddot()
   
   local function CheckTimeLock(Info)
     local UnlockDay = Info.UnlockDay
-    local EventStartTime = DataMgr.EventMain[103016].EventStartTime
+    local EventStartTime = DataMgr.EventMain[AutoChessConst.ActiveId].EventStartTime
     local StartTimestamp = EventStartTime:GetTime()
     local CurrentTime = TimeUtils.NowTime()
     local StartDate = os.date("*t", StartTimestamp)
@@ -76,7 +84,24 @@ function AutoChessDataModel:RefreshAutoChessLinearReddot()
     return true
   end
   
+  if not self:IsAutoChessUnlock() then
+    return
+  end
+  for key, value in pairs(DataMgr.AutoChessMission) do
+    if 1 == value.MissionType and CheckLinear(value) then
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.AutoChessLinear.Name)
+      if CacheDetail and nil == CacheDetail[key] then
+        CacheDetail[key] = true
+        ReddotManager.IncreaseLeafNodeCount(DataMgr.ReddotNode.AutoChessLinear.Name, 1)
+      end
+    end
+  end
+end
+
+function AutoChessDataModel:IsAutoChessUnlock()
   local function GetQuestChainState(QuestChainId)
+    local Avatar = GWorld:GetAvatar()
+    
     if not Avatar.QuestChains[QuestChainId] then
       return "Unlock"
     end
@@ -90,17 +115,9 @@ function AutoChessDataModel:RefreshAutoChessLinearReddot()
   end
   
   if not ActivityUtils.CheckEventIsOpen(ActiveId) or GetQuestChainState(DataMgr.EventMain[ActiveId].PretextTasks1) == "Unlock" then
-    return
+    return false
   end
-  for key, value in pairs(DataMgr.AutoChessMission) do
-    if 1 == value.MissionType and CheckLinear(value) then
-      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(DataMgr.ReddotNode.AutoChessLinear.Name)
-      if CacheDetail and nil == CacheDetail[key] then
-        CacheDetail[key] = true
-        ReddotManager.IncreaseLeafNodeCount(DataMgr.ReddotNode.AutoChessLinear.Name, 1)
-      end
-    end
-  end
+  return true
 end
 
 function AutoChessDataModel:CheckLinearIsNew(MissionId)
@@ -173,9 +190,9 @@ function AutoChessDataModel:DecreaseEquipReddotById(EquipId)
 end
 
 function AutoChessDataModel:GetChessData()
-  local CombatChessInfo = DataMgr.CombatChessInfo
+  local ChessIds = DataMgr.AutoChessConstant[ActiveId].EventChessId
   local Result = {}
-  for Id, Info in pairs(CombatChessInfo) do
+  for _, Id in pairs(ChessIds) do
     table.insert(Result, self:GetMonsterInfoByCombatId(Id))
   end
   
@@ -194,9 +211,9 @@ function AutoChessDataModel:GetChessData()
 end
 
 function AutoChessDataModel:GetEquipsData()
-  local RobotEquip = DataMgr.RobotEquip
-  Result = {}
-  for Id, Info in pairs(RobotEquip) do
+  local RobotEquip = DataMgr.AutoChessConstant[AutoChessConst.ActiveId].EventEquipId
+  local Result = {}
+  for _, Id in ipairs(RobotEquip) do
     table.insert(Result, self:GetEquipInfoByEquipId(Id))
   end
   return Result
@@ -298,6 +315,32 @@ function AutoChessDataModel:_SortDatas(EquipDatas, SortMethod, IsIncrease)
   return EquipDatas
 end
 
+function AutoChessDataModel:GetBuffType(BuffId)
+  local BuffData = DataMgr.ChallengeBuff[BuffId]
+  if not BuffData then
+    return 0
+  end
+  if BuffData.BuffType then
+    return BuffData.BuffType
+  end
+  if BuffData.DailyChallengeId and 0 ~= BuffData.DailyChallengeId then
+    return AutoChessConst.BuffType.Weather
+  end
+  return AutoChessConst.BuffType.Challenge
+end
+
+function AutoChessDataModel:IsWeatherBuff(BuffId)
+  return self:GetBuffType(BuffId) == AutoChessConst.BuffType.Weather
+end
+
+function AutoChessDataModel:IsChallengeBuff(BuffId)
+  return self:GetBuffType(BuffId) == AutoChessConst.BuffType.Challenge
+end
+
+function AutoChessDataModel:IsFieldBuff(BuffId)
+  return self:GetBuffType(BuffId) == AutoChessConst.BuffType.Field
+end
+
 function AutoChessDataModel:GetBuffsByMissionId(MissionId)
   local Result = {}
   local MissionData = DataMgr.AutoChessMission[MissionId]
@@ -326,6 +369,123 @@ function AutoChessDataModel:GetBuffsByMissionId(MissionId)
   return Result
 end
 
+function AutoChessDataModel:IsLinearMission(MissionId)
+  local MissionData = MissionId and DataMgr.AutoChessMission[MissionId]
+  return nil ~= MissionData and MissionData.MissionType == AutoChessConst.LevelSelectType.Linear
+end
+
+function AutoChessDataModel:IsShareEditMode(MissionId)
+  local MissionData = MissionId and DataMgr.AutoChessMission[MissionId]
+  return nil ~= MissionData and MissionData.MissionType == AutoChessConst.LevelSelectType.Editor
+end
+
+function AutoChessDataModel:GetEditingSquadBuffs()
+  local Avatar = GWorld:GetAvatar()
+  if not (Avatar and Avatar.AutoChess) or not Avatar.AutoChess.SharedSquads then
+    return {}
+  end
+  local SquadIdx = self:GetEditingSuqadIndex() or 1
+  local Squad = Avatar.AutoChess.SharedSquads[SquadIdx]
+  if not Squad or not Squad.Buffs then
+    return {}
+  end
+  return Squad.Buffs
+end
+
+function AutoChessDataModel:GetDisplayWeatherBuff(MissionId, ActiveBuffIds)
+  if self:IsLinearMission(MissionId) then
+    return nil
+  end
+  if ActiveBuffIds then
+    for _, BuffId in ipairs(ActiveBuffIds) do
+      if self:IsWeatherBuff(BuffId) then
+        return BuffId
+      end
+    end
+    return nil
+  end
+  if self:IsShareEditMode(MissionId) then
+    for _, BuffId in ipairs(self:GetEditingSquadBuffs()) do
+      if self:IsWeatherBuff(BuffId) then
+        return BuffId
+      end
+    end
+    return nil
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not (Avatar and Avatar.AutoChess) or not Avatar.AutoChess.DailyChallengeBuffs then
+    return nil
+  end
+  for BuffId, _ in pairs(Avatar.AutoChess.DailyChallengeBuffs) do
+    return BuffId
+  end
+  return nil
+end
+
+function AutoChessDataModel:GetDisplayBuffs(MissionId, ActiveBuffIds)
+  local Result = {}
+  local BuffIds = self:GetBuffsByMissionId(MissionId) or {}
+  for _, BuffId in ipairs(BuffIds) do
+    local Row = DataMgr.AutoChessBuff[BuffId]
+    if Row then
+      table.insert(Result, {
+        BuffId = BuffId,
+        BuffIcon = Row.BuffIcon,
+        BuffName = GText(Row.BuffName),
+        BuffDesc = GText(Row.BuffDes)
+      })
+    end
+  end
+  if ActiveBuffIds then
+    for _, BuffId in ipairs(ActiveBuffIds) do
+      if not self:IsWeatherBuff(BuffId) then
+        local BuffData = DataMgr.ChallengeBuff[BuffId]
+        if BuffData then
+          table.insert(Result, {
+            BuffId = BuffId,
+            BuffIcon = BuffData.BuffIcon,
+            BuffName = GText(BuffData.BuffName),
+            BuffDesc = GText(BuffData.BuffDesc)
+          })
+        end
+      end
+    end
+    return Result
+  end
+  if self:IsLinearMission(MissionId) then
+    return Result
+  end
+  local SelectedBuffIds = {}
+  if self:IsShareEditMode(MissionId) then
+    for _, BuffId in ipairs(self:GetEditingSquadBuffs()) do
+      if not self:IsWeatherBuff(BuffId) then
+        table.insert(SelectedBuffIds, BuffId)
+      end
+    end
+  else
+    local Avatar = GWorld:GetAvatar()
+    if Avatar and Avatar.AutoChess and Avatar.AutoChess.ChallengeBuffs then
+      for ChallengeBuffId, _ in pairs(Avatar.AutoChess.ChallengeBuffs) do
+        if not self:IsWeatherBuff(ChallengeBuffId) then
+          table.insert(SelectedBuffIds, ChallengeBuffId)
+        end
+      end
+    end
+  end
+  for _, ChallengeBuffId in ipairs(SelectedBuffIds) do
+    local BuffData = DataMgr.ChallengeBuff[ChallengeBuffId]
+    if BuffData then
+      table.insert(Result, {
+        BuffId = ChallengeBuffId,
+        BuffIcon = BuffData.BuffIcon,
+        BuffName = GText(BuffData.BuffName),
+        BuffDesc = GText(BuffData.BuffDesc)
+      })
+    end
+  end
+  return Result
+end
+
 function AutoChessDataModel:GetMonsterInfoByMissionId(MissionId)
   local Result = {}
   local MissionData = DataMgr.AutoChessMission[MissionId]
@@ -347,12 +507,14 @@ function AutoChessDataModel:GetMonsterInfoByMissionId(MissionId)
     local Loc = FormationData["ACLocation" .. SlotIndex]
     if Loc then
       for MonsterId, EquipList in pairs(Loc) do
-        local MonsterInfo = DataMgr.CombatChessInfo[MonsterId]
-        table.insert(Result, {
-          MonsterId = MonsterId,
-          MonsterInfo = MonsterInfo,
-          EquipList = EquipList
-        })
+        if type(MonsterId) == "number" then
+          local MonsterInfo = DataMgr.CombatChessInfo[MonsterId]
+          table.insert(Result, {
+            MonsterId = MonsterId,
+            MonsterInfo = MonsterInfo,
+            EquipList = EquipList
+          })
+        end
       end
     end
   end
@@ -455,6 +617,66 @@ function AutoChessDataModel:ParsePercentToFloat(PercentStr)
   return 0
 end
 
+function AutoChessDataModel:CalcMonsterPreviewAttr(AutoChessId, PreviewEquipId, bRemoving)
+  local CombatChessData = DataMgr.CombatChessInfo[AutoChessId]
+  if not CombatChessData then
+    DebugPrint("Tianyi@ CalcMonsterPreviewAttr failed, invalid AutoChessId: " .. tostring(AutoChessId))
+    return nil
+  end
+  local CurrentEquips = self:GetMonsterEquipInfo(AutoChessId)
+  local PreviewEquips = {}
+  for _, EquipId in ipairs(CurrentEquips) do
+    table.insert(PreviewEquips, EquipId)
+  end
+  if bRemoving then
+    for i = #PreviewEquips, 1, -1 do
+      if PreviewEquips[i] == PreviewEquipId then
+        table.remove(PreviewEquips, i)
+        break
+      end
+    end
+  else
+    table.insert(PreviewEquips, PreviewEquipId)
+  end
+  local ChessAttrData = DataMgr.BattleMonster[CombatChessData.EnemyMonsterUnitId]
+  local BaseMaxHp = 0
+  local BaseMaxEs = 0
+  local BaseAtk = 0
+  local BaseDef = 0
+  if ChessAttrData then
+    BaseMaxHp = ChessAttrData.MaxHp or 0
+    BaseMaxEs = ChessAttrData.MaxES or 0
+    BaseAtk = ChessAttrData.ATK or 0
+    BaseDef = ChessAttrData.DEF or 0
+  end
+  local AtkBonus = 0
+  local DefBonus = 0
+  local HpBonus = 0
+  local EsBonus = 0
+  for _, EquipId in ipairs(PreviewEquips) do
+    local EquipInfo = self:GetEquipInfoByEquipId(EquipId)
+    if EquipInfo then
+      AtkBonus = AtkBonus + self:ParsePercentToFloat(EquipInfo.Atk)
+      DefBonus = DefBonus + self:ParsePercentToFloat(EquipInfo.Def)
+      HpBonus = HpBonus + self:ParsePercentToFloat(EquipInfo.Hp)
+      EsBonus = EsBonus + self:ParsePercentToFloat(EquipInfo.Es)
+    end
+  end
+  local Result = {}
+  Result.MaxHp = BaseMaxHp * (1 + HpBonus)
+  Result.MaxEs = BaseMaxEs * (1 + EsBonus)
+  Result.Atk = BaseAtk * (1 + AtkBonus)
+  Result.Def = BaseDef * (1 + DefBonus)
+  Result.TotalCost = CombatChessData.DeployCost or 0
+  for _, EquipId in ipairs(PreviewEquips) do
+    local EquipData = DataMgr.RobotEquip[EquipId]
+    if EquipData then
+      Result.TotalCost = Result.TotalCost + EquipData.DeployCost
+    end
+  end
+  return Result
+end
+
 function AutoChessDataModel:GetEquipInfoByEquipId(EquipId)
   local AutoChessEquipData = DataMgr.RobotEquip[EquipId]
   if not AutoChessEquipData then
@@ -481,8 +703,13 @@ function AutoChessDataModel:CalcEquipExtraDesc(EquipId)
     return nil
   end
   local RawDesc = GText(EquipData.ExtraBuffDesc)
+  return self:CalcDescCommom(EquipData, RawDesc)
+end
+
+function AutoChessDataModel:CalcDescCommom(Conf, Desc)
+  local RawDesc = Desc
   local ExtraDescValues = {}
-  for Index, Value in ipairs(EquipData.DescValue or {}) do
+  for Index, Value in ipairs(Conf.DescValue or {}) do
     local DescValue = SkillUtils.CalcSkillDescValue(Value, 1)
     DescValue = string.gsub(DescValue, "%%", "%%%%")
     RawDesc = string.gsub(RawDesc, "#" .. Index, DescValue)
@@ -502,7 +729,7 @@ end
 
 function AutoChessDataModel:GetEventInfo()
   local CurrentTime = TimeUtils.NowTime()
-  local EventStartTime = DataMgr.EventMain[103016].EventStartTime
+  local EventStartTime = DataMgr.EventMain[AutoChessConst.ActiveId].EventStartTime
   local Result = {}
   Result.TotalPassedTime = CurrentTime - EventStartTime
   local LinearMissions = {}

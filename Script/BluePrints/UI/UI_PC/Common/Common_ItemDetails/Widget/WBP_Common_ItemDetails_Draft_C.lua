@@ -69,7 +69,6 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
   self.ParentWidget.Text_Hold02:SetText(Count)
   local ItemName = ItemUtils:GetDraftName(ItemId)
   self.ParentWidget.Text_ItemName:SetText(ItemName)
-  self.ParentWidget.Line.Switch_Bg:SetActiveWidgetIndex(0)
   self.ParentWidget.Line.Switch_Text:SetActiveWidgetIndex(1)
   for FoundryId, CostNum in pairs(DraftInfo.FoundryCost) do
     local FoundryData = DataMgr.Resource[FoundryId]
@@ -87,7 +86,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
     end
   end
   self.ParentWidget.Line:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.ParentWidget.Line.Bg02:SetColorAndOpacity(self.ParentWidget.Line.White)
+  self.ParentWidget.Line.Text_Level:SetColorAndOpacity(self.ParentWidget.Line.Text_Normal)
   self.ParentWidget.Line.Text_RequiredTime:SetText(string.format(GText("UI_SHOP_REMAINTIME_MINUTE"), DraftInfo.Time))
 end
 

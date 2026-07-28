@@ -1,44 +1,42 @@
 local M = {}
 
-function M:GetTalkAudioComp(TalkTask)
-  if TalkTask then
-    if not TalkTask.TalkAudioComp then
-      TalkTask:CreateTalkAudioComponent()
-    end
-    return TalkTask.TalkAudioComp
+function M:GetTalkAudioComp(FlowOwner)
+  if not FlowOwner then
+    return nil
   end
-  return nil
+  if not FlowOwner.TalkAudioComp and type(FlowOwner.CreateTalkAudioComponent) == "function" then
+    FlowOwner:CreateTalkAudioComponent()
+  end
+  return FlowOwner.TalkAudioComp
 end
 
-function M:CreateNode(Flow, TalkTask, Params)
+function M:CreateNode(Flow, FlowOwner, Params)
   local VoiceName = Params and Params.VoiceName
-  local TalkAudioComp = self:GetTalkAudioComp(TalkTask)
+  local TalkAudioComp = self:GetTalkAudioComp(FlowOwner)
   local bAudioCleared = false
   
-  local function ClearAudio()
+  local function ClearAudioComp()
     if bAudioCleared then
       return
     end
     bAudioCleared = true
     if TalkAudioComp then
-      if TalkTask and TalkTask.ClearAudio then
-        TalkTask:ClearAudio()
-      else
-        TalkAudioComp:Clear()
-      end
+      TalkAudioComp:Clear()
     end
   end
   
   local PlayAudioNode = Flow:CreateNode(UEFNode_Delegate)
   PlayAudioNode.DebugLog = string.format("PlayAudioNode VoiceName: %s", tostring(VoiceName))
+  local bNodeFinished = false
   PlayAudioNode.OnStart:Add(PlayAudioNode, function(Node)
-    local bNodeFinished = false
-    
     local function FinishNode()
       if bNodeFinished then
         return
       end
       bNodeFinished = true
+      if Node.CurrentState == EExecutionFlowNodeState.Paused then
+        return
+      end
       Node:Finish({
         Node.FinishPin
       })
@@ -56,13 +54,14 @@ function M:CreateNode(Flow, TalkTask, Params)
     TalkAudioComp:PlayAudio(VoiceName, SrcActor, FinishNode, ExtraInfo, bIsAttachActor, SoundHandle, OverrideAttachActor, false, false)
   end)
   PlayAudioNode.OnSkip:Add(PlayAudioNode, function(Node)
-    ClearAudio()
+    ClearAudioComp()
     Node:Finish({
       Node.FinishPin
     })
   end)
   PlayAudioNode.OnFinish:Add(PlayAudioNode, function(Node)
-    ClearAudio()
+    bNodeFinished = true
+    ClearAudioComp()
   end)
   PlayAudioNode.OnPause:Add(PlayAudioNode, function(Node)
     if TalkAudioComp then
@@ -70,6 +69,21 @@ function M:CreateNode(Flow, TalkTask, Params)
     end
   end)
   PlayAudioNode.OnResume:Add(PlayAudioNode, function(Node)
+    if bNodeFinished then
+      local TalkContext = GWorld.GameInstance:GetTalkContext()
+      local TimerManager = TalkContext and TalkContext.TalkTimerManager
+      if TimerManager then
+        TimerManager:ClearTimer(Node)
+        TimerManager:AddTimer(Node, 0.02, nil, nil, nil, function()
+          if Node.CurrentState ~= EExecutionFlowNodeState.Paused then
+            Node:Finish({
+              Node.FinishPin
+            })
+          end
+        end)
+      end
+      return
+    end
     if TalkAudioComp then
       TalkAudioComp:OnPauseResumed()
     end

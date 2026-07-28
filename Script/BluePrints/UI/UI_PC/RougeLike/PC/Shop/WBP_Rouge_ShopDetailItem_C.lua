@@ -1,4 +1,5 @@
 require("UnLua")
+local RougeUtils = require("Utils.RougeUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_UIState_C"

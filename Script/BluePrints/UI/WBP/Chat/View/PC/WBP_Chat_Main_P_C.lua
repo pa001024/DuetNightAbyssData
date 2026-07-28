@@ -31,7 +31,7 @@ function M:Construct()
   M.Super.Construct(self)
   self.LastMousePos = nil
   AudioManager(self):PlayUISound(self.Btn_Min, "event:/ui/common/click_btn_small", nil, nil)
-  self.Btn_Min:BindEventOnReleased(self, self.BtnMinOnReleased)
+  self.Btn_Min:BindEventOnClicked(self, self.BtnMinOnReleased)
   self.Btn_DragRT.OnMouseButtonDownEvent:Bind(self, self.BtnDragOnMouseButtonDownRT)
   self.Btn_DragRB.OnMouseButtonDownEvent:Bind(self, self.BtnDragOnMouseButtonDownRB)
   self.Btn_DragLB.OnMouseButtonDownEvent:Bind(self, self.BtnDragOnMouseButtonDownLB)
@@ -166,7 +166,7 @@ function M:Destruct()
   self.Btn_DragLB.OnMouseButtonDownEvent:Unbind()
   self.Btn_DragLT.OnMouseButtonDownEvent:Unbind()
   self.Btn_Reset.OnClicked:Remove(self, self.BtnResetOnClicked)
-  self.Btn_Min:UnBindEventOnReleased(self, self.BtnMinOnReleased)
+  self.Btn_Min:UnBindEventOnClicked(self, self.BtnMinOnReleased)
   self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   M.Super.Destruct(self)
 end
@@ -721,7 +721,7 @@ function M:InitGamepadKeyTable(InKeyName)
         self:SetPlayerListFocus()
         return true
       end
-      if self.Key_ChangeChannel:IsVisible() and (self.CurrChannel == ChatCommon.ChannelDef.Public or self.CurrChannel == ChatCommon.ChannelDef.Region and ChatModel:IsInRegionOnline()) then
+      if self.Key_ChangeChannel:IsVisible() and (self.CurrChannel == ChatCommon.ChannelDef.Public or self.CurrChannel == ChatCommon.ChannelDef.Region and ChatModel:IsInRegionOnline() and not UIUtils.AmIInGuildScene()) then
         self:BtnChangeChannelOnPressed()
       end
       return false
@@ -849,7 +849,7 @@ function M:RefreshUIReset()
   IsShowKeyReset = IsShowKeyReset and self.FocusStateType ~= ChatFocusType.SelectChat and (self.FocusStateType ~= ChatFocusType.PlayerList or self.CurrChannel ~= ChatCommon.ChannelDef.InTeam)
   self.Btn_Reset:SetVisibility(IsShowReset and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Hidden)
   self.Key_Reset:SetVisibility(IsShowKeyReset and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Hidden)
-  self.Group_ChangeChannelKey:SetVisibility(IsGamepad and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  self.Group_ChangeChannelKey:SetVisibility(not (not IsGamepad or UIUtils.AmIInGuildScene()) and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
 end
 
 function M:RefreshUIPlayerItem()
@@ -1009,29 +1009,22 @@ function M:UpdateUIStyleInPlatform()
           Desc = GText("UI_CTL_PlayerOptions")
         })
         if self.CurrSelectChatItem.IsShowCheckPlan and self.CurrSelectChatItem:IsShowCheckPlan() then
-          if not self.CurrSelectChatItem.MsgWrap.AsyncCombatRoomInfo then
-            table.insert(BottomKeyInfo, {
-              KeyInfoList = {
-                {
-                  Type = "Img",
-                  ImgShortPath = "X",
-                  Owner = self
-                }
-              },
-              Desc = GText("UI_CTL_CheckPlan")
-            })
-          else
-            table.insert(BottomKeyInfo, {
-              KeyInfoList = {
-                {
-                  Type = "Img",
-                  ImgShortPath = "X",
-                  Owner = self
-                }
-              },
-              Desc = GText("UI_Controller_Check")
-            })
+          local TheDesc = GText("UI_CTL_CheckPlan")
+          if self.CurrSelectChatItem.MsgWrap.AsyncCombatRoomInfo then
+            TheDesc = GText("UI_Controller_Check")
+          elseif self.CurrSelectChatItem.MsgWrap.AutoChessShareInfo then
+            TheDesc = GText("UI_AutoChess_MissionEntry")
           end
+          table.insert(BottomKeyInfo, {
+            Desc = TheDesc,
+            KeyInfoList = {
+              {
+                Type = "Img",
+                ImgShortPath = "X",
+                Owner = self
+              }
+            }
+          })
         end
       end
       table.insert(BottomKeyInfo, {

@@ -22,6 +22,7 @@ function M:InitCommonKey(CommonKey, Index)
     return
   end
   local IsAddType = false
+  local IsOrType = false
   local KeyInfoList = {}
   if CommonKeyData.ImgShortPath and #CommonKeyData.ImgShortPath > 1 then
     for i, v in ipairs(CommonKeyData.ImgShortPath) do
@@ -36,6 +37,8 @@ function M:InitCommonKey(CommonKey, Index)
         ImgShortPath = CommonKeyData.ImgShortPath[1]
       }
     }
+  elseif CommonKeyData.KeyInfoList then
+    KeyInfoList = CommonKeyData.KeyInfoList
   else
     KeyInfoList = {
       {
@@ -44,6 +47,11 @@ function M:InitCommonKey(CommonKey, Index)
       }
     }
   end
+  if CommonKeyData.Type == "Add" then
+    IsAddType = true
+  elseif CommonKeyData.Type == "Or" then
+    IsOrType = true
+  end
   local KeyData = {
     KeyInfoList = KeyInfoList,
     bLongPress = CommonKeyData.bLongPress,
@@ -51,6 +59,11 @@ function M:InitCommonKey(CommonKey, Index)
   }
   if IsAddType then
     KeyData.Type = "Add"
+    KeyData.bIsSubKeyDesc = true
+    CommonKey:CreateSubKeyDesc(KeyData)
+  elseif IsOrType then
+    KeyData.Type = "Or"
+    KeyData.bIsSubKeyDesc = true
     CommonKey:CreateSubKeyDesc(KeyData)
   else
     CommonKey:CreateCommonKey(KeyData)

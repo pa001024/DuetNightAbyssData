@@ -126,7 +126,8 @@ local CommonConst = {
     MonsterRush = "WidgetUI",
     AutoChess = "Disable",
     SoloTreasure = "SoloTreasureCountDownTip",
-    SynthesisII = "DungenonDefenseFloat"
+    SynthesisII = "DungenonDefenseFloat",
+    WeaponVerify = "DungeonTempleFloat"
   },
   DungeonEMWidgetUINameMap = {
     SoloRaid = "SoloRaidScore",
@@ -151,12 +152,21 @@ local CommonConst = {
     MonsterRush = "MonsterRush",
     HardBossDg = "HardBossDg",
     SoloRaid = "SoloRaid",
+    GuildBoss = "GuildBoss",
     AutoChess = "AutoChess",
     SoloTreasure = "SoloTreasure",
     RougePro = "RougePro",
-    AsyncCombat = "AsyncCombat"
+    AsyncCombat = "AsyncCombat",
+    WeaponVerify = "WeaponVerify"
   },
   SubRegionType = {Field = "field", Home = "home"},
+  BlockLevelUpInfoDungeonType = {
+    Temple = true,
+    Party = true,
+    SoloTreasure = true,
+    MonsterRush = true,
+    HardBossDg = true
+  },
   AvatarStatus = {
     Normal = 1,
     InBigWorld = 2,
@@ -198,7 +208,8 @@ local CommonConst = {
     Hair = "Hair",
     CharAccessory = "CharAccessory",
     WeaponAccessory = "WeaponAccessory",
-    Pet = "Pet"
+    Pet = "Pet",
+    IronTicket = "IronTicket"
   },
   RegionDataType = {
     [0] = "Mistake",
@@ -252,6 +263,7 @@ local CommonConst = {
     Coin3 = 102,
     Coin4 = 99
   },
+  GuildFundsCoin = 4005,
   PhysicalStrengthId = 103,
   CoinsList = {
     100,
@@ -511,6 +523,10 @@ local CommonConst = {
   TargetTypeGuildMemberChat = 22203,
   TargetTypeGuildWeeklyDungeon = 22204,
   TargetTypeGuildMultiDungeon = 22205,
+  TargetTypeGuildRegionOnlineDuration = 22206,
+  TargetTypeVisitGuildRegionOnline = 22207,
+  TargetTypeGuildBossParticipate = 22208,
+  TargetTypeGuildBossPointMax = 22209,
   TargetTypeWeeklyScoreMax = 23002,
   MaxGradeLevel = 6,
   MailMaxDueTime = 9999,
@@ -521,7 +537,7 @@ local CommonConst = {
   TheaterEventId = 103011,
   ZhiliuEventId = 103005,
   RaidEventId = 111001,
-  AutoChessEventId = 103016,
+  AutoChessEventId = 10301601,
   SoloTreasureEventId = 103014,
   TargetCheckAll = {
     9001,
@@ -556,7 +572,9 @@ local CommonConst = {
     22005,
     10704,
     10802,
-    22013
+    22013,
+    22206,
+    22207
   },
   TargetCheckFirst = {
     10001,
@@ -704,6 +722,8 @@ local CommonConst = {
     FirstRegion = "FirstRegion",
     Sojourns = "Sojourns"
   },
+  HOME_BASE_REGIONID = 210101,
+  HOME_BASE_START_INDEX = 1,
   DropProjectileSe = {
     [0] = "event:/ui/common/dropItem_normal_open",
     [1] = "event:/ui/common/dropItem_purple_open",
@@ -755,7 +775,8 @@ local CommonConst = {
     Grade = "Grade",
     Mod = "Mod",
     Pet = "Pet",
-    Mount = "Mount"
+    Mount = "Mount",
+    GeaturePart = "GeaturePart"
   },
   ArmoryTag = {
     Char = "Char",
@@ -921,7 +942,8 @@ local CommonConst = {
     WeaponSkin = "WeaponSkin",
     WeaponAccessory = "WeaponAccessory",
     Mount = "Mount",
-    Resource = "Resource"
+    Resource = "Resource",
+    Weapon = "Weapon"
   },
   AppearanceCollectTypeEnum = {
     Skin = 1,
@@ -930,7 +952,8 @@ local CommonConst = {
     WeaponSkin = 4,
     WeaponAccessory = 5,
     Mount = 6,
-    Resource = 7
+    Resource = 7,
+    Weapon = 8
   },
   AppearanceScoreIndex = {
     Skin = "Skin",
@@ -939,9 +962,11 @@ local CommonConst = {
     WeaponAccessory = "WeaponAccessory",
     Mount = "Mount",
     Resource = "Resource",
+    Weapon = "Weapon",
     SkinDye = "SkinDye",
     WeaponSkinDye = "WeaponSkinDye",
     HairDye = "HairDye",
+    WeaponDye = "WeaponDye",
     Total = "Total"
   },
   ItemArchiveTypeList = {1, 2},
@@ -1063,6 +1088,12 @@ local CommonConst = {
     Success = 2,
     Failer = 3
   },
+  QuestVariableTimeType = {Start = "Start", Success = "Success"},
+  ActivityVariableTimeType = {
+    Start = "SetEventStartVariable",
+    End = "SetEventEndVariable"
+  },
+  StoryVariableOverrideSourceType = {CutSceneReview = 1},
   QuestChainState = {
     lock = 0,
     unlock = 1,
@@ -1076,6 +1107,27 @@ local CommonConst = {
     Lock = 1,
     Doing = 2,
     Finish = 3
+  },
+  QuestBacktrackState = {
+    NoneStart = 0,
+    Doing = 1,
+    Finish = 2
+  },
+  QuestBacktrackNodeState = {
+    NoneStart = 0,
+    Doing = 1,
+    Finish = 2
+  },
+  QuestEndType = {False = 0, True = 1},
+  ClueContentState = {
+    Locked = 0,
+    Unlocked = 1,
+    CrossedOut = 2
+  },
+  ClueState = {
+    Locked = 0,
+    Exploring = 1,
+    Finished = 2
   },
   RecurringTaskState = {
     NotAccept = 0,
@@ -1176,7 +1228,8 @@ local CommonConst = {
     "CurrentRegionId",
     "Friends",
     "Blacklist",
-    "ChannelId"
+    "ChannelId",
+    "PersonalInfo"
   },
   FriendDetailInfoProps = {
     "Account",
@@ -1448,6 +1501,8 @@ local CommonConst = {
     FriendOnly = 2,
     Self = 3
   },
+  DefaultPersonalInfoScene = {101, 102},
+  DefaultPersonalInfoGesture = {1001, 1002},
   DeliveryAnchorMechanismUnitId = 90100,
   AutoChess = {
     CubeState = {
@@ -1587,7 +1642,11 @@ CommonConst.TheaterPerformGameState = {
   Performing = 2,
   Settle = 3
 }
-CommonConst.RankType = {PreRaidRank = 1, RaidRank = 2}
+CommonConst.RankType = {
+  AccessoryRank = "AccessoryRank"
+}
+CommonConst.RankSortOrder = {Desc = 1, Asc = 2}
+CommonConst.RaidRankType = {PreRaidRank = 1, RaidRank = 2}
 CommonConst.CommonQuestType = {
   Normal = 1,
   Daily = 2,
@@ -1630,7 +1689,19 @@ CommonConst.DungeonSyncMsg = {
   AsyncCombatRoomPass = "AsyncCombatRoomPass",
   AsyncCombatRoomClose = "AsyncCombatRoomClose"
 }
-CommonConst.GatherTargets = {CDTime = 1, MaxPerFrame = 5}
+CommonConst.PersonalInfoBgType = {
+  PersonalInfo = 1,
+  Esc = 2,
+  Friend = 3
+}
+CommonConst.DefaultNoBackground = -1
+CommonConst.CustomDisplayGroupType = {
+  Char = 101,
+  Pet = 102,
+  Item = 103
+}
+CommonConst.GestureTagType = {Pose = "Pose", Gesture = "Gesture"}
+CommonConst.AutoChessBuffType = {Daily = 1, Challenge = 2}
 CommonConst.AsyncCombatCheatCheckDungeons = {
   [40604] = true
 }

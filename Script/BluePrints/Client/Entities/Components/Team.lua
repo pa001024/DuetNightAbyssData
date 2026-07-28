@@ -170,6 +170,11 @@ function Component:TeamBattleEvent_StartVote(DungeonId, bMatch, EventParams)
   DebugPrint("gmy@Component:TeamBattleEvent_StartVote", DungeonId, EventParams)
   local Avatar = GWorld:GetAvatar()
   assert(Avatar, "Avatar is nil")
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState.bInPetRace then
+    Avatar:VoteStartBattle(false, 0)
+    return
+  end
   local Model = TeamController and TeamController.GetModel and TeamController:GetModel() or nil
   if Model and Model.bPressedMulti then
     TeamController:RecvTeamOnVoteStart(DungeonId)
@@ -335,15 +340,23 @@ function Component:TeamBattleEvent_SelectTicket()
   end
   
   local CurSelectedDungeonId = TeamController:GetModel():GetNowDungeonId()
-  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, {
+  local DialogParams = {
     DungeonId = CurSelectedDungeonId,
+    ButtonBarName = "Dialog_Button_CountDown",
+    CountDownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue,
+    CountDownCallbackFunction = function(_, Data, PopupUI)
+      if PopupUI then
+        PopupUI:OnClose()
+      end
+    end,
     RightCallbackFunction = OnRightConfirm,
     LeftCallbackFunction = OnCancelVote,
     CloseBtnCallbackFunction = OnCancelVote,
     DontCloseWhenRightBtnClicked = true,
     AutoFocus = true,
     YesButtonText = GText("UI_CONFIRM_SELECTION")
-  }, self)
+  }
+  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
 end
 
 return Component

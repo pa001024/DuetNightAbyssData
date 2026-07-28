@@ -29,7 +29,9 @@ function Common_BlackScreen_C:OnLoaded(...)
     self:Close()
   end)
   UIManager(self):RegisterBlackScreenInstance(self.BlackScreenHandle, self)
-  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "CommonBlackScreen_" .. self.BlackScreenHandle, nil)
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "CommonBlackScreen_" .. self.BlackScreenHandle, {
+    fade_in_time = self.InAnimationPlayTime or 0
+  })
   self:InitScreenColor()
   self:InitBlackScreenText()
   if self.IsPlayOutWhenLoaded then
@@ -66,7 +68,7 @@ end
 
 function Common_BlackScreen_C:RealPlayInAnimation()
   local PlaySpeed = 1 / self.InAnimationPlayTime
-  DebugPrint("Common_BlackScreen_C:PlayInAnimation  PlayTime:", string.format("%.2f", 1 / PlaySpeed))
+  DebugPrint("Common_BlackScreen_C:", self.BlackScreenHandle, "PlayInAnimation  PlayTime:", string.format("%.2f", 1 / PlaySpeed))
   self:PlayAnimation(self.In, 0, 1, EUMGSequencePlayMode.Forward, PlaySpeed)
 end
 
@@ -75,16 +77,20 @@ function Common_BlackScreen_C:DirectSetIn()
   if self.InAnimationObj and self.InAnimationCallback then
     self.InAnimationCallback(self.InAnimationObj)
   end
-  DebugPrint("Common_BlackScreen_C:DirectSetIn")
+  DebugPrint("Common_BlackScreen_C:", self.BlackScreenHandle, "DirectSetIn")
 end
 
 function Common_BlackScreen_C:PlayOutAnimationWhenLoaded()
-  DebugPrint("Common_BlackScreen_C:PlayOutAnimationWhenLoaded")
+  DebugPrint("Common_BlackScreen_C:", self.BlackScreenHandle, "PlayOutAnimationWhenLoaded")
   self:DirectSetIn()
   self:HideCommonBlackScreen()
 end
 
 function Common_BlackScreen_C:HideCommonBlackScreen()
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "CommonBlackScreen_" .. self.BlackScreenHandle, {
+    fade_out_time = self.OutAnimationPlayTime or 0
+  })
+  AudioManager(self):SetEventSoundParam(self, "CommonBlackScreen_" .. self.BlackScreenHandle, {ToEnd = 1})
   if self.OutAnimationBPSetting then
     local SettingTime = self[self.OutAnimationBPSetting]
     if SettingTime and 0 ~= SettingTime then
@@ -102,13 +108,13 @@ function Common_BlackScreen_C:HideCommonBlackScreen()
 end
 
 function Common_BlackScreen_C:RealPlayOutAnimation(PlaySpeed)
-  DebugPrint("Common_BlackScreen_C:PlayOutAnimation  PlayTime:", string.format("%.2f", 1 / PlaySpeed))
+  DebugPrint("Common_BlackScreen_C:", self.BlackScreenHandle, "PlayOutAnimation  PlayTime:", string.format("%.2f", 1 / PlaySpeed))
   self:PlayAnimation(self.Out, 0, 1, EUMGSequencePlayMode.Forward, PlaySpeed)
 end
 
 function Common_BlackScreen_C:DirectSetOut()
   self.BlackScreen:SetRenderOpacity(0)
-  DebugPrint("Common_BlackScreen_C:DirectSetOut")
+  DebugPrint("Common_BlackScreen_C:", self.BlackScreenHandle, "DirectSetOut")
   AudioManager(self):StopSound(self, "CommonBlackScreen_" .. self.BlackScreenHandle)
   UIManager(self):OnCommonBlackScreenClosed(self.BlackScreenHandle)
   if self.OutAnimationObj and self.OutAnimationCallback then

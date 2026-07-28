@@ -5,9 +5,10 @@ local M = Class({
 M._components = {
   "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_TimeTag_Comp",
   "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_CustomTag_Comp",
-  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_NewGlow_Comp",
-  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_ModTag_Comp",
-  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_IncarnonRare_Comp"
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_NewGlow_Comp",
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_ModTag_Comp",
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_IncarnonRare_Comp",
+  "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_CollectionStar_Comp"
 }
 
 function M:InitData(Content)
@@ -87,6 +88,7 @@ function M:InitCompView()
   self:SetItemSold(self.bSold)
   self:SetAura(self.bAura)
   self:SetItemConflict(self.bConflict)
+  self:SetItemComItemOccupied(self.bOccupied)
   self:SetIsGot(self.bHasGot)
   self:SetLock(self.LockType)
   self:SetItemMinus(self.bMinus)
@@ -101,6 +103,7 @@ function M:InitCompView()
   self:SetSquadBuildTryOutText(self.SquadBuildTryOutText)
   self:SetTimeLimitData(self.TimeLimitData)
   self:SetTeamIcon(self.TeamIdx, self.TeamCharId)
+  self:SetCollectionStar(self.Content.bCollection)
   self:SetInGear(self.bInGear)
   self:SetTimeTag(self.Content.TimeTagList)
   self:SetCustomTag(self.Content.bAllowCustom)

@@ -20,6 +20,7 @@ return ReadOnly("QuestTurnInItem", {
   [10040108] = {
     ItemCounts = T.RT_1,
     ItemIds = T.RT_2,
+    QuestId = 10040106,
     QuestTurnInItemId = 10040108,
     SpecialQuestId = 10040106,
     bShowQuest = true
@@ -29,6 +30,7 @@ return ReadOnly("QuestTurnInItem", {
     ItemIds = {
       [1] = 3000021
     },
+    QuestId = 10040106,
     QuestTurnInItemId = 10040112,
     SpecialQuestId = 10040106,
     bShowQuest = true
@@ -43,6 +45,7 @@ return ReadOnly("QuestTurnInItem", {
   [10040205] = {
     ItemCounts = T.RT_1,
     ItemIds = T.RT_2,
+    QuestId = 10040203,
     QuestTurnInItemId = 10040205,
     SpecialQuestId = 10040203,
     bShowQuest = true
@@ -52,6 +55,7 @@ return ReadOnly("QuestTurnInItem", {
     ItemIds = {
       [1] = 3000022
     },
+    QuestId = 10040209,
     QuestTurnInItemId = 10040231,
     SpecialQuestId = 10040206
   },
@@ -66,6 +70,7 @@ return ReadOnly("QuestTurnInItem", {
       [2] = 3000024,
       [3] = 3000025
     },
+    QuestId = 10040305,
     QuestTurnInItemId = 10040305,
     SpecialQuestId = 10040305
   },
@@ -74,6 +79,7 @@ return ReadOnly("QuestTurnInItem", {
     ItemIds = {
       [1] = 3000018
     },
+    QuestId = 10040404,
     QuestTurnInItemId = 10040404,
     SpecialQuestId = 10040404
   },

@@ -58,10 +58,10 @@ function BP_UIState_C:InitUIInfo(Name, IsInUIMode, EventList, ...)
   DebugPrint("Hy@ UIState型界面打开 InitUIInfo，名称：", self:GetUIConfigName())
   self:SetBaseName(Name)
   self:BindInOutAnimationWithConfigParam()
-  self:LimitMaxFPSInDiffPlatform()
   self.IsInUIMode = IsInUIMode
   if self.IsInUIMode then
     self:SetInputUIOnly(true)
+    self:LimitMaxFPSInDiffPlatform()
   end
   local Params = {
     ...
@@ -123,8 +123,9 @@ function BP_UIState_C:BindInOutAnimationWithConfigParam()
 end
 
 function BP_UIState_C:LimitMaxFPSInDiffPlatform()
-  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" then
-    local MaxFPS = 15
+  local bIsHasSystemUI = UIManager(self):IsInSystemUIMode()
+  if UE4.UUIFunctionLibrary.GetDevicePlatformName(self) == "OpenHarmony" and bIsHasSystemUI then
+    local MaxFPS = 10
     UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS " .. MaxFPS)
     self.bOpenHarmonyUIMaxFPSLimited = true
     DebugPrint("Hy@ OpenHarmony平台，设置UI最大帧率为 ", MaxFPS)
@@ -135,12 +136,15 @@ end
 
 function BP_UIState_C:RecoverMaxFPSInDiffPlatform()
   if self.bOpenHarmonyUIMaxFPSLimited then
-    local bIsHaveExistOtherUI = UIManager(self):StateCount() > 1
-    DebugPrint("Hy@ OpenHarmony平台，恢复UI最大帧率，当前是否还有其他UI存在：", bIsHaveExistOtherUI)
-    if not bIsHaveExistOtherUI then
+    if not self.GameInputModeSubsystem then
+      self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
+    end
+    local bIsInUIMode = self.GameInputModeSubsystem:GetCurrentInputMode() == EGameInputMode.UI
+    DebugPrint("Hy@ OpenHarmony平台, 恢复UI最大帧率, 当前是否还是UI输入模式：", bIsInUIMode)
+    if not bIsInUIMode then
       UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "t.MaxFPS 0")
       self.bOpenHarmonyUIMaxFPSLimited = false
-      DebugPrint("Hy@ OpenHarmony平台，取消UI最大帧率限制")
+      DebugPrint("Hy@ OpenHarmony平台, 当前非UI模式, 取消UI最大帧率限制")
     end
   end
 end
@@ -527,6 +531,7 @@ function BP_UIState_C:Hide(HideTag)
     AudioManager(self):PauseObjectAllEvent(self, true)
     if self.IsInUIMode then
       self:SetInputUIOnly(false)
+      self:RecoverMaxFPSInDiffPlatform()
     end
     if self.bIsPauseWorldRendering then
       UIManager(self):SetPauseWorldRenderingSwitch(self.ConfigName, false)
@@ -597,6 +602,7 @@ function BP_UIState_C:Show(ShowTag)
     AudioManager(self):PauseObjectAllEvent(self, false)
     if self.IsInUIMode then
       self:SetInputUIOnly(true)
+      self:LimitMaxFPSInDiffPlatform()
     end
     if self.bIsPauseWorldRendering then
       UIManager(self):SetPauseWorldRenderingSwitch(self.ConfigName, true)

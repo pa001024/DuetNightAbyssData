@@ -46,7 +46,7 @@ return ReadOnly("Channel", {
     Name = "UI_Channel_Name_4",
     Order = 3,
     PlayerMax = 4,
-    RedDotPriority = 6,
+    RedDotPriority = 5,
     Remark = "小队频道",
     SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Team_B"
   },
@@ -61,7 +61,7 @@ return ReadOnly("Channel", {
     Name = "UI_Channel_Name_5",
     Order = 6,
     PlayerMax = 2,
-    RedDotPriority = 7,
+    RedDotPriority = 6,
     Remark = "好友频道",
     SIcon = "/Game/UI/Texture/Dynamic/Atlas/Chat/T_ChatChannel_Friend_B"
   },

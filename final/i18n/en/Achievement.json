@@ -1724,7 +1724,7 @@
   },
   {
     "id": 303403,
-    "名称": "Hair-BlowingTime Ⅲ",
+    "名称": "Hair-Blowing Time Ⅲ",
     "分类": "Beyond Numbers",
     "品质": 1,
     "描述": "Inflict a total of 3600 seconds of Bonus Effect: Anemo on any enemy",
@@ -3632,7 +3632,7 @@
   },
   {
     "id": 4020101,
-    "名称": "Warrior's Blade Ⅰ",
+    "名称": "Hero's Blade Ⅰ",
     "分类": "To the Top",
     "品质": 3,
     "描述": "Have 1 Lv. 60 weapons",
@@ -4652,7 +4652,7 @@
   },
   {
     "id": 7012501,
-    "名称": "Into the Downpour",
+    "名称": "Step into the Rainveil",
     "分类": "Between the Shores",
     "品质": 3,
     "描述": "If there's only room for one under the brolly, I'll brave the rain with you all.",
@@ -5249,6 +5249,17 @@
     "品质": 2,
     "描述": "Find 15 Advenspheres left by Lunoxplorer in Haojing",
     "版本": "1.3",
+    "奖励": {
+      "Secret Letter Clue": 1
+    }
+  },
+  {
+    "id": 10200301,
+    "名称": "Deck Check, Please!",
+    "分类": "Between the Shores",
+    "品质": 3,
+    "描述": "Losing a hand isn't the scary part. Losing the nerve to play another one is...",
+    "版本": "1.5",
     "奖励": {
       "Secret Letter Clue": 1
     }

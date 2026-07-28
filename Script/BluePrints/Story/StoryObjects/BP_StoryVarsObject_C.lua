@@ -33,6 +33,16 @@ function BP_StoryVarsObject_C:UpdateGlobalVariable(VarName, Value)
   end
 end
 
+function BP_StoryVarsObject_C:RemoveGlobalVariable(VarName)
+  local VarInfo = DataMgr.StoryVariable[VarName]
+  if VarInfo and VarInfo.IsGlobal then
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:RemoveStoryVariable(VarName)
+    end
+  end
+end
+
 function BP_StoryVarsObject_C:UpdateTaskQuestExtraData(InKey, InOldValue, InNewValue)
   EventManager:FireEvent(EventID.OnCalcVarChange, InKey, InOldValue, InNewValue)
   EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic)

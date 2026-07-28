@@ -4,5 +4,6 @@ return {
   Explore = {
     ["7078001"] = {}
   },
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

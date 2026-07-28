@@ -95,7 +95,9 @@ LastRegionData.__Props__ = {
   RegionId = prop.prop("Int", "client save", 0),
   SelfLocation = prop.prop("FloatList", "client save"),
   SelfRotation = prop.prop("FloatList", "client save"),
-  IsSojourns = prop.prop("Bool", "client save")
+  IsSojourns = prop.prop("Bool", "client save"),
+  IsCutSceneReview = prop.prop("Bool", "client save"),
+  CinematicId = prop.prop("Int", "client save")
 }
 
 function LastRegionData:UpdatePlayerInfo(Info)
@@ -133,8 +135,26 @@ function LastRegionData:GetSojourns()
   return self.IsSojourns
 end
 
-function LastRegionData:SetSojourns(CurrentSubRegionId)
+function LastRegionData:SetSojourns()
   self.IsSojourns = true
+end
+
+function LastRegionData:RemoveCutSceneReview()
+  self.IsCutSceneReview = false
+  self.CinematicId = nil
+end
+
+function LastRegionData:GetCutSceneReview()
+  return self.IsCutSceneReview
+end
+
+function LastRegionData:GetCinematicId()
+  return self.CinematicId
+end
+
+function LastRegionData:SetCutSceneReview(CinematicId)
+  self.IsCutSceneReview = true
+  self.CinematicId = CinematicId
 end
 
 function LastRegionData:GetRotation()

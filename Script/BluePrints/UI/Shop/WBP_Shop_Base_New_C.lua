@@ -597,6 +597,10 @@ function M:OnRechargeFinished(Result, GoodsId, ShopItems)
 end
 
 function M:SetFocus_Lua()
+  if self.CurSubTabMap.TabType == "Pack" and self.PayGiftWidget then
+    self.PayGiftWidget:SetFocus()
+    return
+  end
   local AllItemCount = self.List_Item:GetNumItems()
   if AllItemCount > 0 then
     self.List_Item:SetFocus()

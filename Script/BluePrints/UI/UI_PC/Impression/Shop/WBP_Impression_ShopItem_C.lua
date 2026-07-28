@@ -1,6 +1,7 @@
 require("UnLua")
 local TimeUtils = require("Utils.TimeUtils")
 local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionTypes
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class("BluePrints.UI.Shop.WBP_Shop_Item_Base_C")
 local CommonPopupUIID_Locked = 100103
 local CommonPopupUIID_UnLocked = 100112
@@ -60,11 +61,7 @@ function M:InitCommonItem(ShopItemData)
 end
 
 function M:InitColor()
-  local Avatar = GWorld:GetAvatar()
-  local bEnoughDice = false
-  if Avatar then
-    bEnoughDice = Avatar:CanImpressionCheck(self.ImpressionAreaId).bCanCheck
-  end
+  local bEnoughDice = ImpressionModel:CanImpressionCheck(self.ImpressionAreaId).bCanCheck
   if not bEnoughDice then
     self.Text_Price:SetColorAndOpacity(UE4.UUIFunctionLibrary.StringToSlateColor("DA2A4A"))
   else
@@ -79,12 +76,8 @@ function M:InitCheckData(ShopItemData)
     if CheckValue > 0 then
       self.CheckType = ImpressionType
       self.CheckValue = CheckValue
-      local Avatar = GWorld:GetAvatar()
-      if not Avatar then
-        return
-      end
-      local Impression = Avatar:GetRegionImpression(self.ImpressionAreaId)
-      self.PlayerValue = Impression:GetImpressionValueByType(self.CheckType)
+      local Impression = ImpressionModel:GetRegionImpression(self.ImpressionAreaId)
+      self.PlayerValue = Impression and Impression:GetImpressionValueByType(self.CheckType) or 0
     end
   end
 end
@@ -121,13 +114,12 @@ function M:InitGTexts()
 end
 
 function M:InitHardLevel(ShopItemData)
-  local Avatar = GWorld:GetAvatar()
-  local SuccRate = Avatar:GetSuccRate(self.PlayerValue, self.CheckValue)
+  local SuccRate = ImpressionModel:GetSuccRate(self.PlayerValue, self.CheckValue)
   self.Text_HardTitle:SetText(GText("Impression_UI_CheckSuccRate") .. " " .. tostring(SuccRate) .. "%")
   local ImpressionConfigInfo = DataMgr.ImpressionConfig[self.CheckType]
   local IconTexture = LoadObject(ImpressionConfigInfo.StatusCommonIcon)
   self.Image_TypeIcon:SetBrushFromTexture(IconTexture)
-  local DifficultyInfo = Avatar:GetDifficultyInfo(SuccRate)
+  local DifficultyInfo = ImpressionModel:GetDifficultyInfo(SuccRate)
   local DifficultyColor_ImageBG = self:SwitchDifficultyColor(DifficultyInfo.DifficultyId)
   self.Image_LevelBG:SetColorAndOpacity(DifficultyColor_ImageBG)
 end
@@ -311,11 +303,7 @@ end
 
 function M:SwitchSetPopupUIRightButton(Params)
   local bUnlocked = self.ShopUI:IsShopItemUnlocked(self.ShopItemData)
-  local Avatar = GWorld:GetAvatar()
-  local bEnoughDice = false
-  if Avatar then
-    bEnoughDice = Avatar:CanImpressionCheck(self.ImpressionAreaId).bCanCheck
-  end
+  local bEnoughDice = ImpressionModel:CanImpressionCheck(self.ImpressionAreaId).bCanCheck
   if bUnlocked then
     Params.Tips = {}
     if bEnoughDice then

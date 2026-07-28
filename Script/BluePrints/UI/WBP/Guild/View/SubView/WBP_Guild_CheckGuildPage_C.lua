@@ -10,8 +10,9 @@ end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   M.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
-  local GuildId = (...)
+  local GuildId, OnCloseCallback = ...
   self.GuildId = GuildId
+  self.OnCloseCallback = OnCloseCallback
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     local Info = (...)
     if EventId == GuildCommon.EventID.OnGetGuildInfo and self.GuildId == Info.GuildId then
@@ -54,8 +55,13 @@ function M:Close()
   self:BindToAnimationFinished(self.Out, {
     self,
     function()
+      local OnCloseCallback = self.OnCloseCallback
+      self.OnCloseCallback = nil
       self:BlockAllUIInput(false)
       M.Super.Close(self)
+      if OnCloseCallback then
+        OnCloseCallback()
+      end
     end
   })
   self:PlayAnimation(self.Out)

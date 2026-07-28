@@ -89,6 +89,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Content_120106_8",
     WildcardClassification = "Story"
   },
+  Content_120112_3 = {
+    TextMapId = "Content_120112_3",
+    WildcardClassification = "Story"
+  },
   Content_120112_3_1 = {
     TextMapId = "Content_120112_3_1",
     WildcardClassification = "Story"
@@ -269,6 +273,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Description_120205_5",
     WildcardClassification = "Story"
   },
+  Description_20040611 = {
+    TextMapId = "Description_20040611",
+    WildcardClassification = "Story"
+  },
   EntryTitle_204001 = {
     TextMapId = "EntryTitle_204001",
     WildcardClassification = "Story"
@@ -281,8 +289,16 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Event_Des_103005",
     WildcardClassification = "Story"
   },
+  Event_FreeAppearance_TokenNum = {
+    TextMapId = "Event_FreeAppearance_TokenNum",
+    WildcardClassification = "Story"
+  },
   Explore_Fort_Lift_Play2_CountTime = {
     TextMapId = "Explore_Fort_Lift_Play2_CountTime",
+    WildcardClassification = "Story"
+  },
+  FeeRefund_Rule_Content = {
+    TextMapId = "FeeRefund_Rule_Content",
     WildcardClassification = "Story"
   },
   FeinaEvent_DungeonDes_2 = {
@@ -293,8 +309,24 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "FeinaEvent_SimpleDungeonDes_2",
     WildcardClassification = "Story"
   },
+  GuildBoss_TestClear = {
+    TextMapId = "GuildBoss_TestClear",
+    WildcardClassification = "Story"
+  },
   HomePianoDes_1004005 = {
     TextMapId = "HomePianoDes_1004005",
+    WildcardClassification = "Story"
+  },
+  HomePianoDes_1005001 = {
+    TextMapId = "HomePianoDes_1005001",
+    WildcardClassification = "Story"
+  },
+  HomePianoDes_1005008 = {
+    TextMapId = "HomePianoDes_1005008",
+    WildcardClassification = "Story"
+  },
+  HomePianoDes_1005009 = {
+    TextMapId = "HomePianoDes_1005009",
     WildcardClassification = "Story"
   },
   HomePianoDes_1008003 = {
@@ -307,6 +339,22 @@ return ReadOnly("TextMapWildcard", {
   },
   MESSAGE_LOADING_312_PC = {
     TextMapId = "MESSAGE_LOADING_312_PC",
+    WildcardClassification = "Story"
+  },
+  MESSAGE_LOADING_35_PC = {
+    TextMapId = "MESSAGE_LOADING_35_PC",
+    WildcardClassification = "Story"
+  },
+  MESSAGE_TITLE_LOADING_35_PC = {
+    TextMapId = "MESSAGE_TITLE_LOADING_35_PC",
+    WildcardClassification = "Story"
+  },
+  MESSAGE_TITLE_LOADING_36_PC = {
+    TextMapId = "MESSAGE_TITLE_LOADING_36_PC",
+    WildcardClassification = "Story"
+  },
+  MESSAGE_TITLE_LOADING_37_PC = {
+    TextMapId = "MESSAGE_TITLE_LOADING_37_PC",
     WildcardClassification = "Story"
   },
   MOD_Type_Name_Changeling01 = {
@@ -401,6 +449,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Mail_Content_10056",
     WildcardClassification = "Story"
   },
+  Mail_Content_10058 = {
+    TextMapId = "Mail_Content_10058",
+    WildcardClassification = "Story"
+  },
   Mail_Content_10059 = {
     TextMapId = "Mail_Content_10059",
     WildcardClassification = "Story"
@@ -473,8 +525,20 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Mail_Content_102001",
     WildcardClassification = "Story"
   },
+  Mail_Content_19101 = {
+    TextMapId = "Mail_Content_19101",
+    WildcardClassification = "Story"
+  },
   Mail_Title_10033 = {
     TextMapId = "Mail_Title_10033",
+    WildcardClassification = "Story"
+  },
+  Message_Guide_Dungeon_2 = {
+    TextMapId = "Message_Guide_Dungeon_2",
+    WildcardClassification = "Story"
+  },
+  Message_Guide_Qianji_1 = {
+    TextMapId = "Message_Guide_Qianji_1",
     WildcardClassification = "Story"
   },
   MonsterRushEvent_Wuyou_DungeonDes03 = {
@@ -579,6 +643,10 @@ return ReadOnly("TextMapWildcard", {
   },
   QuestDesc_1003plus33 = {
     TextMapId = "QuestDesc_1003plus33",
+    WildcardClassification = "Story"
+  },
+  QuestMutualExclusion_Content_1002 = {
+    TextMapId = "QuestMutualExclusion_Content_1002",
     WildcardClassification = "Story"
   },
   READ_TEXT_2000006 = {
@@ -697,6 +765,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "ReputationLevel_Title01",
     WildcardClassification = "Story"
   },
+  RougeMiniGamePointsReach = {
+    TextMapId = "RougeMiniGamePointsReach",
+    WildcardClassification = "Story"
+  },
   SCEREAD_NAME_1000001 = {
     TextMapId = "SCEREAD_NAME_1000001",
     WildcardClassification = "Story"
@@ -727,6 +799,10 @@ return ReadOnly("TextMapWildcard", {
   },
   SKILL_310204_DESC = {
     TextMapId = "SKILL_310204_DESC",
+    WildcardClassification = "Story"
+  },
+  SKILL_DESC_ShootingPerSecond = {
+    TextMapId = "SKILL_DESC_ShootingPerSecond",
     WildcardClassification = "Story"
   },
   System_Des_Play = {
@@ -823,6 +899,26 @@ return ReadOnly("TextMapWildcard", {
   },
   TitleFrame_10032 = {
     TextMapId = "TitleFrame_10032",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10044 = {
+    TextMapId = "TitleFrame_10044",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10045 = {
+    TextMapId = "TitleFrame_10045",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10046 = {
+    TextMapId = "TitleFrame_10046",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10047 = {
+    TextMapId = "TitleFrame_10047",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10048 = {
+    TextMapId = "TitleFrame_10048",
     WildcardClassification = "Story"
   },
   Title_10001 = {
@@ -1209,10 +1305,6 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_AppearanceCollect_CurrentScore",
     WildcardClassification = "Story"
   },
-  UI_AppearanceCollect_UnlockReward = {
-    TextMapId = "UI_AppearanceCollect_UnlockReward",
-    WildcardClassification = "Story"
-  },
   UI_AppearanceScore_Score = {
     TextMapId = "UI_AppearanceScore_Score",
     WildcardClassification = "Story"
@@ -1275,6 +1367,34 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_AsyncCombat_WeeklyRemain = {
     TextMapId = "UI_AsyncCombat_WeeklyRemain",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_BuffLock = {
+    TextMapId = "UI_AutoChess_BuffLock",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_CompleteText = {
+    TextMapId = "UI_AutoChess_CompleteText",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_CurrentCost = {
+    TextMapId = "UI_AutoChess_CurrentCost",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_Holdings = {
+    TextMapId = "UI_AutoChess_Holdings",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_Refresh = {
+    TextMapId = "UI_AutoChess_Refresh",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_SuccessfulDefense = {
+    TextMapId = "UI_AutoChess_SuccessfulDefense",
+    WildcardClassification = "Story"
+  },
+  UI_AutoChess_WinRate = {
+    TextMapId = "UI_AutoChess_WinRate",
     WildcardClassification = "Story"
   },
   UI_Bag_Sellconfirm_Hold = {
@@ -1377,6 +1497,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_CHAR_DATA_TEXT_18010301",
     WildcardClassification = "Story"
   },
+  UI_CHAR_DATA_TEXT_21020201 = {
+    TextMapId = "UI_CHAR_DATA_TEXT_21020201",
+    WildcardClassification = "Story"
+  },
   UI_CHAR_DATA_TEXT_33010102 = {
     TextMapId = "UI_CHAR_DATA_TEXT_33010102",
     WildcardClassification = "Story"
@@ -1439,6 +1563,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_CHAR_SUBTITLE_160101 = {
     TextMapId = "UI_CHAR_SUBTITLE_160101",
+    WildcardClassification = "Story"
+  },
+  UI_CMName_Name_Jiaomaisheng = {
+    TextMapId = "UI_CMName_Name_Jiaomaisheng",
     WildcardClassification = "Story"
   },
   UI_COMMONPOP_TEXT_100090_1 = {
@@ -1557,6 +1685,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Event_ModDrop_DropRemain",
     WildcardClassification = "Story"
   },
+  UI_Event_RaceLottery_BetNum = {
+    TextMapId = "UI_Event_RaceLottery_BetNum",
+    WildcardClassification = "Story"
+  },
+  UI_Event_RaceLottery_RumorNum = {
+    TextMapId = "UI_Event_RaceLottery_RumorNum",
+    WildcardClassification = "Story"
+  },
   UI_FNNpc_Name_AnimalNvzhu = {
     TextMapId = "UI_FNNpc_Name_AnimalNvzhu",
     WildcardClassification = "Story"
@@ -1595,6 +1731,26 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_GameEvent_TimeRemain_Sec = {
     TextMapId = "UI_GameEvent_TimeRemain_Sec",
+    WildcardClassification = "Story"
+  },
+  UI_GuildBoss_Assisters = {
+    TextMapId = "UI_GuildBoss_Assisters",
+    WildcardClassification = "Story"
+  },
+  UI_GuildBoss_BrokenCondition = {
+    TextMapId = "UI_GuildBoss_BrokenCondition",
+    WildcardClassification = "Story"
+  },
+  UI_GuildBoss_DrillProgress_2 = {
+    TextMapId = "UI_GuildBoss_DrillProgress_2",
+    WildcardClassification = "Story"
+  },
+  UI_GuildBoss_EndDrill = {
+    TextMapId = "UI_GuildBoss_EndDrill",
+    WildcardClassification = "Story"
+  },
+  UI_GuildBoss_Start = {
+    TextMapId = "UI_GuildBoss_Start",
     WildcardClassification = "Story"
   },
   UI_Guild_OnlineTime = {
@@ -1657,6 +1813,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_MiniGame_SF_Hint1",
     WildcardClassification = "Story"
   },
+  UI_MiniGame_SF_Hint2 = {
+    TextMapId = "UI_MiniGame_SF_Hint2",
+    WildcardClassification = "Story"
+  },
   UI_ModArchive_CollectedNum = {
     TextMapId = "UI_ModArchive_CollectedNum",
     WildcardClassification = "Story"
@@ -1669,12 +1829,24 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_ModHolding_Num",
     WildcardClassification = "Story"
   },
+  UI_Name_Memory_1101_1101018 = {
+    TextMapId = "UI_Name_Memory_1101_1101018",
+    WildcardClassification = "Story"
+  },
   UI_Npc_Aside = {
     TextMapId = "UI_Npc_Aside",
     WildcardClassification = "Story"
   },
   UI_Npc_AwaAndMe = {
     TextMapId = "UI_Npc_AwaAndMe",
+    WildcardClassification = "Story"
+  },
+  ["UI_Npc_Name_1.5_keluogeplayerbai"] = {
+    TextMapId = "UI_Npc_Name_1.5_keluogeplayerbai",
+    WildcardClassification = "Story"
+  },
+  UI_Npc_Name_250032 = {
+    TextMapId = "UI_Npc_Name_250032",
     WildcardClassification = "Story"
   },
   UI_Npc_Name_Cat = {
@@ -1707,6 +1879,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_Pet_Skill_CD = {
     TextMapId = "UI_Pet_Skill_CD",
+    WildcardClassification = "Story"
+  },
+  UI_Play_TreasureHunt_TimeRemain = {
+    TextMapId = "UI_Play_TreasureHunt_TimeRemain",
     WildcardClassification = "Story"
   },
   UI_PlayerHead_Des_10025 = {
@@ -1759,6 +1935,10 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_RL_WeeklyScore = {
     TextMapId = "UI_RL_WeeklyScore",
+    WildcardClassification = "Story"
+  },
+  UI_RaceLottery_PlayerNum = {
+    TextMapId = "UI_RaceLottery_PlayerNum",
     WildcardClassification = "Story"
   },
   UI_RandomBox_Num = {
@@ -1829,8 +2009,24 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_SPECIALPOP_COMMON_TITLE",
     WildcardClassification = "Story"
   },
+  UI_SendGift_Condition3 = {
+    TextMapId = "UI_SendGift_Condition3",
+    WildcardClassification = "Story"
+  },
   UI_SendGift_Pay1 = {
     TextMapId = "UI_SendGift_Pay1",
+    WildcardClassification = "Story"
+  },
+  UI_SendGift_SendGiftLimit = {
+    TextMapId = "UI_SendGift_SendGiftLimit",
+    WildcardClassification = "Story"
+  },
+  UI_SendGift_SendTimes = {
+    TextMapId = "UI_SendGift_SendTimes",
+    WildcardClassification = "Story"
+  },
+  UI_Shop_ExchangeAmount = {
+    TextMapId = "UI_Shop_ExchangeAmount",
     WildcardClassification = "Story"
   },
   UI_SkillTree_Attr_Add = {
@@ -1953,6 +2149,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "VoiceDes002",
     WildcardClassification = "Story"
   },
+  VoiceDes008 = {
+    TextMapId = "VoiceDes008",
+    WildcardClassification = "Story"
+  },
   VoiceDes031 = {
     TextMapId = "VoiceDes031",
     WildcardClassification = "Story"
@@ -1993,12 +2193,368 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "VoiceDes040",
     WildcardClassification = "Story"
   },
+  VoiceDes051 = {
+    TextMapId = "VoiceDes051",
+    WildcardClassification = "Story"
+  },
+  VoiceDes052 = {
+    TextMapId = "VoiceDes052",
+    WildcardClassification = "Story"
+  },
+  VoiceDes053 = {
+    TextMapId = "VoiceDes053",
+    WildcardClassification = "Story"
+  },
+  VoiceDes054 = {
+    TextMapId = "VoiceDes054",
+    WildcardClassification = "Story"
+  },
+  VoiceDes055 = {
+    TextMapId = "VoiceDes055",
+    WildcardClassification = "Story"
+  },
+  VoiceDes056 = {
+    TextMapId = "VoiceDes056",
+    WildcardClassification = "Story"
+  },
+  VoiceDes057 = {
+    TextMapId = "VoiceDes057",
+    WildcardClassification = "Story"
+  },
+  VoiceDes058 = {
+    TextMapId = "VoiceDes058",
+    WildcardClassification = "Story"
+  },
+  VoiceDes059 = {
+    TextMapId = "VoiceDes059",
+    WildcardClassification = "Story"
+  },
+  VoiceDes060 = {
+    TextMapId = "VoiceDes060",
+    WildcardClassification = "Story"
+  },
+  VoiceDes061 = {
+    TextMapId = "VoiceDes061",
+    WildcardClassification = "Story"
+  },
+  VoiceDes062 = {
+    TextMapId = "VoiceDes062",
+    WildcardClassification = "Story"
+  },
+  VoiceDes063 = {
+    TextMapId = "VoiceDes063",
+    WildcardClassification = "Story"
+  },
+  VoiceDes064 = {
+    TextMapId = "VoiceDes064",
+    WildcardClassification = "Story"
+  },
+  VoiceDes065 = {
+    TextMapId = "VoiceDes065",
+    WildcardClassification = "Story"
+  },
+  VoiceDes066 = {
+    TextMapId = "VoiceDes066",
+    WildcardClassification = "Story"
+  },
+  VoiceDes067 = {
+    TextMapId = "VoiceDes067",
+    WildcardClassification = "Story"
+  },
+  VoiceDes068 = {
+    TextMapId = "VoiceDes068",
+    WildcardClassification = "Story"
+  },
+  VoiceDes069 = {
+    TextMapId = "VoiceDes069",
+    WildcardClassification = "Story"
+  },
+  VoiceDes070 = {
+    TextMapId = "VoiceDes070",
+    WildcardClassification = "Story"
+  },
+  VoiceDes071 = {
+    TextMapId = "VoiceDes071",
+    WildcardClassification = "Story"
+  },
+  VoiceDes072 = {
+    TextMapId = "VoiceDes072",
+    WildcardClassification = "Story"
+  },
+  VoiceDes073 = {
+    TextMapId = "VoiceDes073",
+    WildcardClassification = "Story"
+  },
+  VoiceDes074 = {
+    TextMapId = "VoiceDes074",
+    WildcardClassification = "Story"
+  },
+  VoiceDes075 = {
+    TextMapId = "VoiceDes075",
+    WildcardClassification = "Story"
+  },
+  VoiceDes076 = {
+    TextMapId = "VoiceDes076",
+    WildcardClassification = "Story"
+  },
+  VoiceDes077 = {
+    TextMapId = "VoiceDes077",
+    WildcardClassification = "Story"
+  },
+  VoiceDes078 = {
+    TextMapId = "VoiceDes078",
+    WildcardClassification = "Story"
+  },
+  VoiceDes079 = {
+    TextMapId = "VoiceDes079",
+    WildcardClassification = "Story"
+  },
+  VoiceDes080 = {
+    TextMapId = "VoiceDes080",
+    WildcardClassification = "Story"
+  },
+  VoiceDes081 = {
+    TextMapId = "VoiceDes081",
+    WildcardClassification = "Story"
+  },
+  VoiceDes082 = {
+    TextMapId = "VoiceDes082",
+    WildcardClassification = "Story"
+  },
+  VoiceDes083 = {
+    TextMapId = "VoiceDes083",
+    WildcardClassification = "Story"
+  },
+  VoiceDes084 = {
+    TextMapId = "VoiceDes084",
+    WildcardClassification = "Story"
+  },
+  VoiceDes085 = {
+    TextMapId = "VoiceDes085",
+    WildcardClassification = "Story"
+  },
+  VoiceDes086 = {
+    TextMapId = "VoiceDes086",
+    WildcardClassification = "Story"
+  },
+  VoiceDes087 = {
+    TextMapId = "VoiceDes087",
+    WildcardClassification = "Story"
+  },
+  VoiceDes088 = {
+    TextMapId = "VoiceDes088",
+    WildcardClassification = "Story"
+  },
+  VoiceDes089 = {
+    TextMapId = "VoiceDes089",
+    WildcardClassification = "Story"
+  },
+  VoiceDes090 = {
+    TextMapId = "VoiceDes090",
+    WildcardClassification = "Story"
+  },
+  VoiceDes091 = {
+    TextMapId = "VoiceDes091",
+    WildcardClassification = "Story"
+  },
+  VoiceDes092 = {
+    TextMapId = "VoiceDes092",
+    WildcardClassification = "Story"
+  },
+  VoiceDes093 = {
+    TextMapId = "VoiceDes093",
+    WildcardClassification = "Story"
+  },
+  VoiceDes094 = {
+    TextMapId = "VoiceDes094",
+    WildcardClassification = "Story"
+  },
+  VoiceDes095 = {
+    TextMapId = "VoiceDes095",
+    WildcardClassification = "Story"
+  },
+  VoiceDes096 = {
+    TextMapId = "VoiceDes096",
+    WildcardClassification = "Story"
+  },
+  VoiceDes097 = {
+    TextMapId = "VoiceDes097",
+    WildcardClassification = "Story"
+  },
+  VoiceDes098 = {
+    TextMapId = "VoiceDes098",
+    WildcardClassification = "Story"
+  },
+  VoiceDes099 = {
+    TextMapId = "VoiceDes099",
+    WildcardClassification = "Story"
+  },
+  VoiceDes100 = {
+    TextMapId = "VoiceDes100",
+    WildcardClassification = "Story"
+  },
+  VoiceDes101 = {
+    TextMapId = "VoiceDes101",
+    WildcardClassification = "Story"
+  },
+  VoiceDes102 = {
+    TextMapId = "VoiceDes102",
+    WildcardClassification = "Story"
+  },
+  VoiceDes103 = {
+    TextMapId = "VoiceDes103",
+    WildcardClassification = "Story"
+  },
+  VoiceDes104 = {
+    TextMapId = "VoiceDes104",
+    WildcardClassification = "Story"
+  },
+  VoiceDes105 = {
+    TextMapId = "VoiceDes105",
+    WildcardClassification = "Story"
+  },
+  VoiceDes106 = {
+    TextMapId = "VoiceDes106",
+    WildcardClassification = "Story"
+  },
+  VoiceDes107 = {
+    TextMapId = "VoiceDes107",
+    WildcardClassification = "Story"
+  },
+  VoiceDes108 = {
+    TextMapId = "VoiceDes108",
+    WildcardClassification = "Story"
+  },
+  VoiceDes109 = {
+    TextMapId = "VoiceDes109",
+    WildcardClassification = "Story"
+  },
+  VoiceDes110 = {
+    TextMapId = "VoiceDes110",
+    WildcardClassification = "Story"
+  },
   VoiceDes111 = {
     TextMapId = "VoiceDes111",
     WildcardClassification = "Story"
   },
+  VoiceDes112 = {
+    TextMapId = "VoiceDes112",
+    WildcardClassification = "Story"
+  },
+  VoiceDes113 = {
+    TextMapId = "VoiceDes113",
+    WildcardClassification = "Story"
+  },
+  VoiceDes114 = {
+    TextMapId = "VoiceDes114",
+    WildcardClassification = "Story"
+  },
+  VoiceDes115 = {
+    TextMapId = "VoiceDes115",
+    WildcardClassification = "Story"
+  },
+  VoiceDes116 = {
+    TextMapId = "VoiceDes116",
+    WildcardClassification = "Story"
+  },
+  VoiceDes117 = {
+    TextMapId = "VoiceDes117",
+    WildcardClassification = "Story"
+  },
+  VoiceDes118 = {
+    TextMapId = "VoiceDes118",
+    WildcardClassification = "Story"
+  },
+  VoiceDes119 = {
+    TextMapId = "VoiceDes119",
+    WildcardClassification = "Story"
+  },
+  VoiceDes120 = {
+    TextMapId = "VoiceDes120",
+    WildcardClassification = "Story"
+  },
+  VoiceDes121 = {
+    TextMapId = "VoiceDes121",
+    WildcardClassification = "Story"
+  },
+  VoiceDes122 = {
+    TextMapId = "VoiceDes122",
+    WildcardClassification = "Story"
+  },
+  VoiceDes123 = {
+    TextMapId = "VoiceDes123",
+    WildcardClassification = "Story"
+  },
+  VoiceDes124 = {
+    TextMapId = "VoiceDes124",
+    WildcardClassification = "Story"
+  },
+  VoiceDes125 = {
+    TextMapId = "VoiceDes125",
+    WildcardClassification = "Story"
+  },
+  VoiceDes126 = {
+    TextMapId = "VoiceDes126",
+    WildcardClassification = "Story"
+  },
+  VoiceDes127 = {
+    TextMapId = "VoiceDes127",
+    WildcardClassification = "Story"
+  },
+  VoiceDes128 = {
+    TextMapId = "VoiceDes128",
+    WildcardClassification = "Story"
+  },
+  VoiceDes129 = {
+    TextMapId = "VoiceDes129",
+    WildcardClassification = "Story"
+  },
+  VoiceDes130 = {
+    TextMapId = "VoiceDes130",
+    WildcardClassification = "Story"
+  },
+  VoiceDes131 = {
+    TextMapId = "VoiceDes131",
+    WildcardClassification = "Story"
+  },
+  VoiceDes132 = {
+    TextMapId = "VoiceDes132",
+    WildcardClassification = "Story"
+  },
+  VoiceDes133 = {
+    TextMapId = "VoiceDes133",
+    WildcardClassification = "Story"
+  },
+  VoiceDes134 = {
+    TextMapId = "VoiceDes134",
+    WildcardClassification = "Story"
+  },
+  VoiceDes135 = {
+    TextMapId = "VoiceDes135",
+    WildcardClassification = "Story"
+  },
   VoiceDes136 = {
     TextMapId = "VoiceDes136",
+    WildcardClassification = "Story"
+  },
+  VoiceDes142 = {
+    TextMapId = "VoiceDes142",
+    WildcardClassification = "Story"
+  },
+  VoiceDes143 = {
+    TextMapId = "VoiceDes143",
+    WildcardClassification = "Story"
+  },
+  VoiceDes144 = {
+    TextMapId = "VoiceDes144",
+    WildcardClassification = "Story"
+  },
+  VoiceDes145 = {
+    TextMapId = "VoiceDes145",
+    WildcardClassification = "Story"
+  },
+  VoiceDes146 = {
+    TextMapId = "VoiceDes146",
     WildcardClassification = "Story"
   },
   VoiceDes147 = {
@@ -2263,6 +2819,18 @@ return ReadOnly("TextMapWildcard", {
   },
   voice_ch_char_Dafu_vo_birthday = {
     TextMapId = "voice_ch_char_Dafu_vo_birthday",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Eve_vo_battleidle = {
+    TextMapId = "voice_ch_char_Eve_vo_battleidle",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Eve_vo_companio_03 = {
+    TextMapId = "voice_ch_char_Eve_vo_companio_03",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_Eve_vo_lvup = {
+    TextMapId = "voice_ch_char_Eve_vo_lvup",
     WildcardClassification = "Story"
   },
   voice_ch_char_Feina_vo_birthday = {

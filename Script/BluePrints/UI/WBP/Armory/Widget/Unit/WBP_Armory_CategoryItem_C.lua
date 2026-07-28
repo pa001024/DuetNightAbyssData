@@ -6,6 +6,7 @@ local M = Class({
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   Content.UI = self
+  self._OnAddedToFocusPath = Content.OnAddedToFocusPath
   self:SetIcon(Content.Icon)
   self:FlushAnimations()
   self.IsSelected = Content.IsSelected
@@ -127,6 +128,12 @@ function M:OnListItemNavigation(NavigationDirection)
     self.Owner.EMListView_Filter:NavigateToIndex(CurIndex + 1)
   end
   return self
+end
+
+function M:OnAddedToFocusPath()
+  if self._OnAddedToFocusPath then
+    self._OnAddedToFocusPath(self.Owner, self.Content)
+  end
 end
 
 return M

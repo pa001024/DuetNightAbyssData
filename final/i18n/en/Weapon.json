@@ -1908,6 +1908,175 @@
     ]
   },
   {
+    "id": 10209,
+    "icon": "Polearm_Zhuixin",
+    "名称": "Obsidian Heart-Reaper",
+    "版本": "1.5",
+    "描述": "Its blood-soaked blade strikes straight at the heart. Before the searing lava solidifies, there remains a fleeting moment to flee.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "切割",
+    "攻击": 22,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.2,
+    "加成": {
+      "暴击": 0.5
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
+    "熔炼": [
+      "CRIT Chance +50.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +3.0% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Chance +60.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +3.6% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Chance +70.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +4.2% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Chance +80.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +4.8% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Chance +90.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +5.4% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Chance +100.0%. Dealing CRIT Damage with this weapon has a 30.0% chance to grant 1 stack of +6.0% CRIT Damage for 15.0s, up to 25.0 stacks. This effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "id": 1020101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.35,
+            "削韧": 20,
+            "卡肉": 0.1,
+            "取消": 0.2333,
+            "连段": 0.3
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.25,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "取消": 0.4333,
+            "连段": 0.6333
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.5,
+            "削韧": 35,
+            "取消": 0.2667,
+            "连段": 0.5667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.4,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2333,
+            "连段": 0.5
+          },
+          {
+            "名称": "5-Hit DMG",
+            "值": 0.75,
+            "削韧": 50,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.4333
+          }
+        ]
+      },
+      {
+        "id": 1020102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.1,
+            "削韧": 5,
+            "取消": 1.5
+          }
+        ],
+        "实体": [
+          {
+            "id": 1020101,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 50,
+              "BoxLength": 100,
+              "BoxWidth": 200
+            },
+            "时长": 15,
+            "速度": 3000,
+            "Vars": {
+              "IsHeavyAttack": true
+            },
+            "特效循环间隔": 0.2
+          }
+        ]
+      },
+      {
+        "id": 1020103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.47,
+            "削韧": 30,
+            "取消": 1.6333
+          }
+        ]
+      },
+      {
+        "id": 1020104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 0.4,
+            "削韧": 26,
+            "卡肉": 0.1,
+            "取消": 0.3333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10299,
     "icon": "Polearm_Yemei",
     "名称": "Perpetual Strife",
@@ -2054,6 +2223,7 @@
             "id": 10299005,
             "名称": "Relentless – Assault",
             "icon": "T_Rouge_Talent_ATK",
+            "描述": "Character ATK +90.0%",
             "加成": {
               "ATK": 0.9
             },
@@ -3048,19 +3218,22 @@
   {
     "id": 10399,
     "icon": "Claymore_Yemei",
-    "名称": "Metal Greatsword",
-    "版本": "1.6",
-    "描述": "Ordinary greatsword. Crafted from the cheapest metal, so there's no shame if it breaks.",
+    "名称": "Sovereign Ember",
+    "版本": "1.5",
+    "描述": "One who bore this weapon was a sovereign, granted it by Father Ask in honour of his ambition. His people stood behind him, cheering his name and singing of his conquests.\nYet he did not stop, certain that ever more followers would gather beneath his banner. Instead, his enemies only multiplied. In the end, they closed in around his throne. There, he lit a great fire, reducing himself and all his glory to ash.",
     "类型": [
       "近战",
       "重剑"
     ],
-    "伤害类型": "震荡",
-    "攻击": 17,
-    "暴击": 0.24,
-    "暴伤": 2.1,
-    "触发": 0.2,
-    "加成": {},
+    "伤害类型": "灾厄",
+    "攻击": 21,
+    "暴击": 0.22,
+    "暴伤": 2.2,
+    "触发": 0.22,
+    "加成": {
+      "技能威力": 0.45,
+      "攻击": 0.9
+    },
     "突破": [
       {
         "Coin": 2800,
@@ -3098,37 +3271,213 @@
         "Advanced Weapon Component: Decoration": 8
       }
     ],
-    "熔炼": [],
+    "熔炼": [
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
+    ],
     "熔炉": [
+      {
+        "lv": 0,
+        "技能": [
+          {
+            "id": 10399001,
+            "名称": "Sovereign – Ignite",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Dealing damage with this weapon grants 2.0 Calamity. Calamity caps at 100.\nWhen Calamity reaches its cap, all Calamity is consumed to trigger [Flame-Wreathed]: Weapon DMG +50.0% for 5.0s."
+          }
+        ]
+      },
       {
         "lv": 1,
         "解锁": {
-          "Phoxene": 5
-        }
+          "Prototype: Sovereign Ember": 36,
+          "Weapon Track-Shift Module": 5,
+          "Emblem of Rebellion": 30,
+          "Emblem of Faith": 30
+        },
+        "技能": [
+          {
+            "id": 10399002,
+            "名称": "Sovereign – Spark",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Gain 80.0 Calamity at the start of battle. Dealing damage with a melee Consonance Weapon grants 2.0 Calamity.",
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10399003,
+            "名称": "Waning – Surge",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Triggering Bonus Effects grants 4.0 Calamity.",
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
       },
       {
         "lv": 2,
         "解锁": {
-          "Phoxene": 5
-        }
+          "Prototype: Sovereign Ember": 42,
+          "Hydro Crystal": 20,
+          "Sharpening Potion": 6,
+          "Emblem of Rebellion": 40,
+          "Emblem of Faith": 40
+        },
+        "技能": [
+          {
+            "id": 10399004,
+            "名称": "Sovereign – Might",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Skill Intensity": 0.45
+            },
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10399005,
+            "名称": "Waning – Assault",
+            "icon": "T_Rouge_Talent_ATK",
+            "描述": "Character ATK +90.0%",
+            "加成": {
+              "ATK": 0.9
+            },
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
       },
       {
         "lv": 3,
         "解锁": {
-          "Phoxene": 5
-        }
+          "Prototype: Sovereign Ember": 48,
+          "Hydro Crystal": 30,
+          "Radiant Crystal": 5,
+          "Weapon Track-Shift Module": 6,
+          "Emblem of Rebellion": 50,
+          "Emblem of Faith": 50
+        },
+        "技能": [
+          {
+            "id": 10399006,
+            "名称": "Sovereign – Blaze",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "While [Flame-Wreathed] is active, Charged Attack DMG dealt with a melee Consonance Weapon increases by 75.0%.",
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10399007,
+            "名称": "Waning – Scorch",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "While [Flame-Wreathed] is active, Normal Attack DMG dealt with a melee Consonance Weapon increases by 75.0%.",
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
       },
       {
         "lv": 4,
         "解锁": {
-          "Phoxene": 5
-        }
+          "Prototype: Sovereign Ember": 54,
+          "Hydro Crystal": 50,
+          "Radiant Crystal": 15,
+          "Sharpening Potion": 6,
+          "Emblem of Rebellion": 60,
+          "Emblem of Faith": 60
+        },
+        "技能": [
+          {
+            "id": 10399008,
+            "名称": "Sovereign – Pursuit",
+            "icon": "T_Rouge_Talent_BonusDamage",
+            "描述": "The character deals +35.0% additional damage of their own element.",
+            "加成": {
+              "追加伤害": 0.35
+            },
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10399009,
+            "名称": "Waning – Pierce",
+            "icon": "T_Rouge_Talent_AttrPenetration",
+            "描述": "PEN Stats +20.0%.",
+            "解锁": {
+              "Prototype: Sovereign Ember": 30,
+              "Lumino Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Rebellion": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
       },
       {
         "lv": 5,
         "解锁": {
-          "Phoxene": 5
-        }
+          "Prototype: Sovereign Ember": 100,
+          "Hydro Crystal": 90,
+          "Radiant Crystal": 20,
+          "Recasting Mould": 1,
+          "Emblem of Rebellion": 100,
+          "Emblem of Faith": 100
+        },
+        "技能": [
+          {
+            "id": 10399010,
+            "名称": "Sovereign – Ember",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "While [Flame-Wreathed] is active, the wielder's melee Consonance Weapon additionally gains 25.0% of Sovereign Ember's CRIT Chance, CRIT Damage, and Trigger Probability."
+          }
+        ]
       }
     ],
     "技能": [
@@ -4586,8 +4935,16 @@
           {
             "名称": "Charged Attack DMG",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -4744,8 +5101,16 @@
           {
             "名称": "Charged Attack DMG",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -4902,8 +5267,16 @@
           {
             "名称": "Charged Attack DMG",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -5060,8 +5433,16 @@
           {
             "名称": "Charged Attack DMG",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Charged Attack Finisher DMG",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -5417,6 +5798,115 @@
     "射击间隔": 0.6667
   },
   {
+    "id": 20104,
+    "icon": "Pistol_Shengxue",
+    "名称": "Sanguis Sanctus – Pistol",
+    "版本": "1.5",
+    "描述": "Blood runs dry. Conviction does not.",
+    "类型": [
+      "远程",
+      "手枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.23,
+    "暴伤": 2,
+    "触发": 0.3,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.65,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "CRIT Damage +62.5%. Defeating a target with this weapon grants 1 stack of +5.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Damage +75.0%. Defeating a target with this weapon grants 1 stack of +6.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Damage +87.5%. Defeating a target with this weapon grants 1 stack of +7.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Damage +100.0%. Defeating a target with this weapon grants 1 stack of +8.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Damage +112.5%. Defeating a target with this weapon grants 1 stack of +9.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons.",
+      "CRIT Damage +125.0%. Defeating a target with this weapon grants 1 stack of +10.0% CRIT Chance for 20.0s, up to 15.0 stacks. This effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "id": 2010401,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.71,
+            "削韧": 100
+          },
+          {
+            "名称": "Explosion DMG",
+            "值": 1,
+            "削韧": 100
+          },
+          {
+            "名称": "Explosion Radius",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "实体": [
+          {
+            "id": 2010411,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 5,
+              "BoxLength": 10,
+              "BoxWidth": 5
+            },
+            "时长": 3,
+            "速度": 15000,
+            "标签": [
+              "Bullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.5997
+  },
+  {
     "id": 20201,
     "icon": "Crossbow_Chixing",
     "名称": "Excresduo",
@@ -5760,10 +6250,111 @@
     "射击间隔": 0.6667
   },
   {
+    "id": 20207,
+    "icon": "Crossbow_Leyuan",
+    "名称": "The Best Day",
+    "版本": "1.5",
+    "描述": "May every day we greet with a smile be one of the best days of our lives.",
+    "类型": [
+      "远程",
+      "双枪"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 20,
+    "暴击": 0.21,
+    "暴伤": 2.1,
+    "触发": 0.3,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 1.1,
+    "最大射程": 2800,
+    "加成": {
+      "昂扬": 0.15
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Barrel": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Barrel": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Barrel": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Barrel": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Barrel": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Barrel": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "Morale +15.0%. When a Hydro character summons a unit, they gain 1 stack of +7.5% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
+      "Morale +18.0%. When a Hydro character summons a unit, they gain 1 stack of +9.0% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
+      "Morale +21.0%. When a Hydro character summons a unit, they gain 1 stack of +10.5% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
+      "Morale +24.0%. When a Hydro character summons a unit, they gain 1 stack of +12.0% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
+      "Morale +27.0%. When a Hydro character summons a unit, they gain 1 stack of +13.5% Damage Dealt by Summons for 18.0s. Max 9.0 stacks.",
+      "Morale +30.0%. When a Hydro character summons a unit, they gain 1 stack of +15.0% Damage Dealt by Summons for 18.0s. Max 9.0 stacks."
+    ],
+    "技能": [
+      {
+        "id": 2020701,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.021,
+            "削韧": 1
+          }
+        ],
+        "实体": [
+          {
+            "id": 2020711,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          },
+          {
+            "id": 2020712,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.8116
+  },
+  {
     "id": 20298,
     "icon": "Crossbow_Yemei",
     "名称": "Metal Dual Pistols",
-    "版本": "1.5",
+    "版本": "9.9",
     "描述": "Ordinary dual pistols. It's made from the cheapest metal, so there's no shame if it breaks.",
     "类型": [
       "远程",
@@ -5849,9 +6440,39 @@
         }
       }
     ],
-    "技能": [],
-    "装填": 0.8116,
-    "射击间隔": 0.6667
+    "技能": [
+      {
+        "id": 2020701,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.021,
+            "削韧": 1
+          }
+        ],
+        "实体": [
+          {
+            "id": 2020711,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          },
+          {
+            "id": 2020712,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.8116
   },
   {
     "id": 20301,

@@ -177,4 +177,5 @@ function Utils.GDate(DateFormatID, Time, Language)
   return nil
 end
 
+_G.GDate = Utils.GDate
 return Utils

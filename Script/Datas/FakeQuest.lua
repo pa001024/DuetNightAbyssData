@@ -57,7 +57,8 @@ return ReadOnly("FakeQuest", {
       2075,
       2076,
       2077,
-      2078
+      2078,
+      2111
     },
     PopUIContent = {
       [1] = "UI_SPECIALPOP_TEXT_CONTENT_1_1",
@@ -67,7 +68,6 @@ return ReadOnly("FakeQuest", {
     },
     PopUITitle = "UI_SPECIALPOP_TEXT_TITLE_1",
     QuestId = 10020108,
-    SystemUIId = "101",
     UnLockTeleportPoint = {
       1010,
       1011,

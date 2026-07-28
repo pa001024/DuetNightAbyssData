@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 local AnnounceModel = AnnounceController:GetModel()
 local ReddotNames = {
   "ActivityAnnouncement",
@@ -37,7 +38,7 @@ function M:Construct()
   end
   self.Text_Fail:SetText(GText("AFDayEvent_PhotoWall_LoadFailed"))
   self.Com_Empty.Text_Empty:SetText(GText("UI_Notice_None"))
-  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   self:SetWebContentVisible(false)
   self.Main:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Com_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -69,17 +70,9 @@ function M:Construct()
     if self.bWebFailed then
       return
     end
-    if UGameplayStatics.GetPlatformName() ~= "IOS" then
-      if not IsValid(self) then
-        return
-      end
-      if self.bWebFailed then
-        return
-      end
-      self:SetWebContentVisible(false)
-      self:SetActiveWidgetIndexWrap(2)
-      self:SetLoadingVisible(true)
-    end
+    self:SetWebContentVisible(false)
+    self:SetActiveWidgetIndexWrap(2)
+    self:SetLoadingVisible(true)
   end)
   self.Btn_Refresh.OnClicked:Add(self, self.ClickRetry)
   self.Btn_Close:Init("Close", self, function()
@@ -177,7 +170,6 @@ end
 
 function M:_CreateTabParams()
   local TabParams = {
-    PlatformName = PlatformName,
     Tabs = {
       {
         Text = GText(DataMgr.NoticeTab[1].Text),
@@ -220,8 +212,8 @@ end
 
 function M:UpdateAnnoucement()
   if self.bNeedRequest then
-    ForceStopAsyncTask(self, "UpdateAnnouncementTask")
-    RunAsyncTask(self, "UpdateAnnouncementTask", function(Coroutine)
+    CoroutineUtils.ForceStopAsyncTask(self, "UpdateAnnouncementTask")
+    CoroutineUtils.RunAsyncTask(self, "UpdateAnnouncementTask", function(Coroutine)
       AnnounceController:GetAnnouncementDataAsync(self.ShowTag, Coroutine, self.HostId)
       self:RefreshAllAnnouncement()
     end)

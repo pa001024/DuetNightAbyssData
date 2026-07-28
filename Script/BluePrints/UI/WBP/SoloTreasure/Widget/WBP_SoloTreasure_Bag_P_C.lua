@@ -85,6 +85,9 @@ function M:InitPCEvents()
         if self.Btn_Recycle and self.Btn_Recycle.CurState == InventoryCommonConst.RecycleBtnState.DragingOver then
           return
         end
+        if self.InventoryController and IsValid(self.InventoryController.SelectedGridWidget) then
+          return
+        end
         InventoryController:CustomOnDragCancelled()
       end
     elseif Key.KeyName == Const.GamepadFaceButtonDown then

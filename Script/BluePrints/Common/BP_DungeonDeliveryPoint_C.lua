@@ -2,10 +2,30 @@ require("UnLua")
 local M = Class()
 
 function M:ReceiveBeginPlay()
-  GameState(self).DungeonDeliveryPointMap:Add(self.DeliveryPointId, self)
   self.Overridden.ReceiveBeginPlay(self)
+  if not IsAuthority(self) then
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local LevelName = ""
+  if self.PrivateEnable then
+    LevelName = GameMode:GetActorLevelName(self)
+  end
+  self.RealDeliveryPointId = GameMode:GetRealDeliveryPointId(self.PrivateEnable, self.DeliveryPointId, LevelName)
+  GameMode.EMGameState.DungeonDeliveryPointMap:Add(self.RealDeliveryPointId, self)
   self.NextAvailableIndex = 1
   self.PlayerToIndex = {}
+  DebugPrint("BP_DungeonDeliveryPoint_C DeliveryPointId", self.DeliveryPointId, "LevelName", LevelName, "RealDeliveryPointId", self.RealDeliveryPointId)
+  GWorld:DSBLog("Info", "BP_DungeonDeliveryPoint_C: DeliveryPoint " .. self.DeliveryPointId .. ", LevelName " .. LevelName .. ", RealDeliveryPointId " .. self.RealDeliveryPointId, "GameMode")
+end
+
+function M:ReceiveEndPlay(...)
+  self.Overridden.ReceiveEndPlay(self, ...)
+  if not IsAuthority(self) then
+    return
+  end
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  GameMode.EMGameState.DungeonDeliveryPointMap:Remove(self.RealDeliveryPointId)
 end
 
 function M:GetDeliveryInfo(PlayerEid)

@@ -293,7 +293,23 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100001,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100422,
+                  TalkActorVisible = true
+                }
+              },
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,
@@ -358,6 +374,11 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100421,
                   TalkActorVisible = true
                 }
               },
@@ -426,6 +447,11 @@ return {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
                   TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100443,
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
@@ -571,7 +597,9 @@ return {
               TargetTime = 19,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = true
+              StopTimeElapse = true,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["1779421207812963"] = {

@@ -961,7 +961,8 @@ function GM_Command_Region:AddImpressionPreNode(PreDialogueId)
     printError()
     return
   end
-  if Avatar:IsImpressionCheckSuccess(PreDialogueId) then
+  local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
+  if ImpressionModel:IsImpressionCheckSuccess(PreDialogueId) then
     ErrorCode = "对应的选项已被记录，无法重复选择"
     printError()
     return

@@ -49,6 +49,8 @@ function M:Construct()
   self:AddDispatcher(EventID.CurrentSquadChange, self, self.OnCurrentSquadChange)
   self:AddDispatcher(EventID.FoucsDungeonSelectLevel, self, self.OnSelectCellFocus)
   self:AddDispatcher(EventID.OnDisableEscOnDungeonLoading, self, self.DisableEscOnDungeonLoading)
+  self:AddDispatcher(EventID.OnJumpToPage, self, self.OnJumpToPage)
+  self:AddDispatcher(EventID.OnJumpBackToPage, self, self.OnJumpBackToPage)
   TeamController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == TeamCommon.EventId.TeamOnInit or EventId == TeamCommon.EventId.TeamLeave or EventId == TeamCommon.EventId.TeamOnChangeLeader then
       self:RefreshBtnState()
@@ -822,7 +824,7 @@ function M:RefreshLevelCellContent(DungeonId)
   self:SetNightFlightManualText_MoreHide(self.CurrentTabIdx)
   self.Btn_Qa.Btn_Click.OnClicked:Add(self, self.OpenIntro)
   self.Panel_WarningHint:SetVisibility(ESlateVisibility.Collapsed)
-  if self.DefaultList.CurrentCharLevel <= DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonLevel - DataMgr.GlobalConstant.TaskWarningLevel.ConstantValue then
+  if not self.isIron and self.DefaultList.CurrentCharLevel <= DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonLevel - DataMgr.GlobalConstant.TaskWarningLevel.ConstantValue then
     self.Panel_WarningHint:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   local DungeonUIBG = DungeonData and DungeonData.DungeonUIBG or Const.DungeonBgBluePrint
@@ -2353,10 +2355,23 @@ function M:OnCurrentSquadChange(SquadId, IsComMissing)
   self.SquadId = SquadId
   self.IsComMissing = IsComMissing
   self:IsShowAttributeTips()
-  if self.DefaultList.CurrentCharLevel <= DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonLevel - DataMgr.GlobalConstant.TaskWarningLevel.ConstantValue then
+  if not self.isIron and self.DefaultList.CurrentCharLevel <= DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonLevel - DataMgr.GlobalConstant.TaskWarningLevel.ConstantValue then
     self.Panel_WarningHint:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self.Panel_WarningHint:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:OnJumpToPage(_, ToPage)
+  if ToPage and self:IsVisible() then
+    self.JumpToPage = ToPage
+  end
+end
+
+function M:OnJumpBackToPage(FromPage)
+  if self.JumpToPage and self.JumpToPage == FromPage then
+    self:PlayAnimation(self.In)
+    self.JumpToPage = nil
   end
 end
 
@@ -2547,15 +2562,34 @@ function M:IsMatching()
 end
 
 function M:OpenTicketDialog()
-  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, {
+  local DialogParams = {
     DungeonId = self.CurSelectedDungeonId,
+    ButtonBarName = "Dialog_Button_CountDown",
     RightCallbackObj = self,
     RightCallbackFunction = function(Obj, PackageData)
       self:EnterTicketDungeon(PackageData.Content_1.TicketId)
     end,
     ForbiddenRightCallbackObj = self,
     AutoFocus = true
-  }, self)
+  }
+  local Avatar = GWorld:GetAvatar()
+  local bIsInTeam = Avatar and (Avatar:IsInMultiSettlement() or Avatar:IsInTeam())
+  local bIsInMultiDungeon = Avatar and Avatar:IsInMultiDungeon()
+  local bIsInTempScene = GWorld.GameInstance:IsInTempScene()
+  if bIsInTeam or bIsInMultiDungeon and not bIsInTempScene then
+    DialogParams.CountDownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
+    
+    function DialogParams.CountDownCallbackFunction(_, Data, PopupUI)
+      if not bIsInTeam and bIsInMultiDungeon and not bIsInTempScene then
+        local TicketId = Data and Data.Content_1 and Data.Content_1.TicketId
+        EventManager:FireEvent(EventID.OnSelectTicketTimeout, TicketId)
+      end
+      if PopupUI then
+        PopupUI:OnClose()
+      end
+    end
+  end
+  local CommonDialog = UIManager(self):ShowCommonPopupUI(100123, DialogParams, self)
 end
 
 function M:PlayTabSound()
@@ -2584,6 +2618,8 @@ function M.HandleEnterDungeonRetCode(RetCode, ...)
   else
     if RetCode == ErrorCode.RET_DUNGEON_MAX_PLAYERS then
       UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Toast_TeamPlayerLimit"))
+    elseif RetCode == ErrorCode.RET_IRONTICKET_REACH_MAX_AVAILABLE_LEVEL then
+      UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Toast_MaxTicketLevel"))
     else
       local FailedMember = (...)
       if FailedMember then

@@ -208,8 +208,6 @@ function M:ExpandList(IsListExpanded)
       SortFuncion = self.ExpandList_SortItemContents,
       FilterFunction = self.FilterItemContents
     })
-    local SortFuncName = self.CurMainTab.Name .. "Main_SortItemContents"
-    rawset(self, SortFuncName, self["Replaced_" .. SortFuncName])
     local OrderByDisplayNames
     if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Pet and self.PetItemContentsArray == self.ResourcePetItemContentsArray then
       OrderByDisplayNames = self.ResourcePetOrderByDisplayNames
@@ -399,6 +397,10 @@ function M:GetCurSortIdx()
 end
 
 function M:ExpandList_SortItemContents(InOutContentArray, SortIdx, SortType)
+  if not self:GetCurSortIdx() then
+    local SortFuncName = self.CurMainTab.Name .. "Main_SortItemContents"
+    rawset(self, SortFuncName, self["Replaced_" .. SortFuncName])
+  end
   self:SetCurSortIdx(SortIdx)
   self:SetCurSortType(SortType)
   local FirtContent = self[self.CurMainTab.Name .. "Main_CurContent"]
@@ -561,6 +563,9 @@ function M:ExpandList_CharMain_InitKeySetting(KeyDownEvents, KeyUpEvents, Bottom
   if self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute and not self.AttributeButtonStyleParams[1].ForbidBtn and not self.IsPreviewMode then
     self:AddKeyEvents(KeyDownEvents, self.UpgradeKeyDownEvents)
   end
+  self.InGearKeyDownEvents = {}
+  self:AddKeyEvent(self.InGearKeyDownEvents, self.OnSetInGear, UIConst.GamePadKey.FaceButtonTop)
+  self:AddKeyEvents(KeyUpEvents, self.InGearKeyDownEvents)
   table.insert(BottomKeyInfo, self.ESCKeyInfoList)
 end
 
@@ -581,6 +586,9 @@ function M:ExpandList_WeaponMain_InitKeySetting(KeyDownEvents, KeyUpEvents, Bott
   if self.WeaponTag ~= CommonConst.ArmoryTag.UWeapon and not self.IsPreviewMode and self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute and not self.AttributeButtonStyleParams[1].ForbidBtn then
     self:AddKeyEvents(KeyDownEvents, self.UpgradeKeyDownEvents)
   end
+  self.InGearKeyDownEvents = {}
+  self:AddKeyEvent(self.InGearKeyDownEvents, self.OnSetInGear, UIConst.GamePadKey.FaceButtonTop)
+  self:AddKeyEvents(KeyUpEvents, self.InGearKeyDownEvents)
   table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
 end
 
@@ -592,6 +600,9 @@ function M:ExpandList_PetMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomK
   if self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute and not self.SubUIButtonStyleInfo[1].ForbidBtn then
     self:AddKeyEvents(KeyDownEvents, self.UpgradeKeyDownEvents)
   end
+  self.InGearKeyDownEvents = {}
+  self:AddKeyEvent(self.InGearKeyDownEvents, self.OnSetInGear, UIConst.GamePadKey.FaceButtonTop)
+  self:AddKeyEvents(KeyUpEvents, self.InGearKeyDownEvents)
   table.insert(BottomKeyInfo, self.ESCKeyInfoList)
 end
 
@@ -601,6 +612,16 @@ function M:InitKeySettingCommon()
   elseif self.BoxWidget:IsVisible() then
     self:AddKeyClickEvent(UIConst.GamePadKey.SpecialLeft, self.OnViewKeyDown)
   end
+end
+
+function M:OnSetInGear()
+  if not self.IsListExpanded then
+    return
+  end
+  if not rawget(self.CurrentSubUI, "OnFaceButtonTopKeyDown") then
+    return
+  end
+  self.CurrentSubUI:OnFaceButtonTopKeyDown()
 end
 
 function M:CharMain_OnViewKeyDown(ReplyInfo)

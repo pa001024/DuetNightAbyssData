@@ -2,6 +2,8 @@ local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst"
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
 local EImpressionButtonState = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").EImpressionButtonState
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
+local ImpressionController = require("BluePrints.Story.Talk.Controller.ImpressionController")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local WBP_ImpressionItem_Common = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
@@ -242,8 +244,7 @@ end
 function WBP_ImpressionItem_Common:DisplayCheck()
   DebugPrint("WBP_ImpressionItem_Common:DisplayCheck")
   local CheckInfo = DataMgr.ImpressionCheck[self.Option.CheckId]
-  local Avatar = GWorld:GetAvatar()
-  local Impression = Avatar and Avatar:GetRegionImpression(self.ImpressionAreaId)
+  local Impression = ImpressionModel:GetRegionImpression(self.ImpressionAreaId)
   for _, ImpressionType in pairs(ImpressionTypes) do
     local CheckValue = CheckInfo[ImpressionType .. "Check"]
     if CheckValue > 0 then
@@ -283,21 +284,19 @@ function WBP_ImpressionItem_Common:DisplayPlus()
 end
 
 function WBP_ImpressionItem_Common:GetSuccRate()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     DebugPrint("WBP_ImpressionItem_Common:NoAvatar")
     return 100
   end
-  return Avatar:GetSuccRate(self.PlayerValue, self.CheckValue)
+  return ImpressionModel:GetSuccRate(self.PlayerValue, self.CheckValue)
 end
 
 function WBP_ImpressionItem_Common:GetDifficultyInfo(SuccRate)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
+  if not ImpressionModel:IsValid() then
     DebugPrint("WBP_ImpressionItem_Common:NoAvatar")
     return
   end
-  return Avatar:GetDifficultyInfo(SuccRate)
+  return ImpressionModel:GetDifficultyInfo(SuccRate)
 end
 
 function WBP_ImpressionItem_Common:GetDifficultyCorlor(DifficultyInfo)
@@ -330,10 +329,9 @@ end
 
 function WBP_ImpressionItem_Common:HandlePlus()
   DebugPrint("WBP_ImpressionItem_Common:HandlePlus", self.OptionType)
-  local Avatar = GWorld:GetAvatar()
-  local DialogueChain = self.ImpressionUI.TalkTask.DialogueRecordComponent:GetChain()
-  if Avatar then
-    Avatar:ImpressionAddByEnumId_New(DialogueChain, self.Option.OptionId, {
+  if ImpressionController:IsValid() then
+    local DialogueChain = self.ImpressionUI.TalkTask.DialogueRecordComponent:GetChain()
+    ImpressionController:TryRequestPlus(DialogueChain, self.Option.OptionId, {
       self,
       self.OnImpressionHandled,
       self.OnImpressionTimeout
@@ -477,13 +475,8 @@ function WBP_ImpressionItem_Common:EndShowCheckOrPlusUI(bCheckSucceed)
   end
   
   if self.OptionType == ETalkOptionType.Check then
-    local Avatar = GWorld:GetAvatar()
     local Data = self:GetServerHandledInfo()
-    if Avatar then
-      Avatar:ShowCommonImpressionReward(Data.ErrorCode, bCheckSucceed, Data.CheckParams.CheckInfo, Data.CheckParams.Rewards, AfterShowRewardCallback)
-    else
-      AfterShowRewardCallback()
-    end
+    ImpressionController:ShowCommonImpressionReward(Data.ErrorCode, bCheckSucceed, Data.CheckParams.CheckInfo, Data.CheckParams.Rewards, AfterShowRewardCallback)
   else
     AfterShowRewardCallback()
   end

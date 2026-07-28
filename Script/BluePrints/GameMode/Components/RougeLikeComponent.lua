@@ -1,6 +1,7 @@
 require("UnLua")
 require("Const")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local RougeLikeComponent = {}
 
 function RougeLikeComponent:TriggerRougeLikeEnd(IsWin)

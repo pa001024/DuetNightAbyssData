@@ -1,4 +1,3 @@
-require("UnLua")
 local M = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.UI.BP_EMUserWidget_C"
@@ -37,7 +36,7 @@ function M:FadeIn(FadeTime, Callback)
     self:DestroyAllAnmations()
     self:PlayAnimation(self.AlphaChange, 0, 1, EUMGSequencePlayMode.Forward, AnimationTime / FadeTime)
   end
-  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui", "BlackScreenBorder", nil)
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui_border", "BlackScreenBorder", {fade_in_time = FadeTime})
 end
 
 function M:FadeOut(FadeTime, Callback)
@@ -45,24 +44,26 @@ function M:FadeOut(FadeTime, Callback)
   self.bPaused = false
   self.FadeTime = FadeTime
   self.FadeOutCallback = Callback
+  AudioManager(self):PlayUISound(self, "event:/snapshot/ui/filter_fade_ui_border", "BlackScreenBorder", {fade_out_time = FadeTime, ToEnd = 1})
   if FadeTime <= 0 then
     self:SetToTransparent()
     self:OnFadeOutFinished()
+    AudioManager(self):StopSound(self, "BlackScreenBorder")
   else
     self.bFadeOut = true
     local AnimationTime = self.AlphaChange:GetEndTime()
     self:BindToAnimationFinished(self.AlphaChange, {
       self,
       function()
-        self:UnbindAllFromAnimationFinished(self.AlphaChange)
-        self:OnFadeOutFinished()
         self.bFadeOut = false
+        self:UnbindAllFromAnimationFinished(self.AlphaChange)
+        AudioManager(self):StopSound(self, "BlackScreenBorder")
+        self:OnFadeOutFinished()
       end
     })
     self:DestroyAllAnmations()
     self:PlayAnimation(self.AlphaChange, 0, 1, EUMGSequencePlayMode.Reverse, AnimationTime / FadeTime)
   end
-  AudioManager(self):StopSound(self, "BlackScreenBorder")
 end
 
 function M:SetToBlack()

@@ -267,5 +267,11 @@ return ReadOnly("AppearanceSubTab", {
       "GestureItem"
     },
     TabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Action.T_Tab_Action'"
+  },
+  [701] = {
+    Entrance = 701,
+    Name = "UI_SHOP_SUBTAB_NAME_WEAPON",
+    ParentIndex = "Weapon",
+    TabIcon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_CloseIn_Weapons"
   }
 })

@@ -1,4 +1,10 @@
 require("UnLua")
+local FSM = require("Blueprints.UI.FocusStateMachine")
+local FocusStates = {
+  Filter = "Filter",
+  List = "List",
+  Sort = "Sort"
+}
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
@@ -18,6 +24,14 @@ function M:Construct()
     self.List_New_Bottom.Btn_Click.OnClicked:Add(self, self.OnBottomReddotClicked)
     self.List_RedDotBottom.Btn_Click.OnClicked:Add(self, self.OnBottomReddotClicked)
   end, false, 0, "DelayConstruct", true)
+  self.FSM = FSM:New(self, {
+    StateNames = FocusStates,
+    OnStateChanged = self.OnFocusStateChanged
+  })
+  self.FSM:Push({
+    Name = FocusStates.List,
+    Widget = self.TileView_Select_Role
+  })
 end
 
 function M:OnListItemInited(Content, EntryUI)
@@ -54,6 +68,7 @@ function M:Init(Parent, Params)
     self.FilterContentObj_All.Icon = "/Game/UI/Texture/Static/Atlas/Armory/T_Armory_Select.T_Armory_Select"
     self.FilterContentObj_All.IsSelected = true
     self.FilterContentObj_All.Owner = self
+    self.FilterContentObj_All.OnAddedToFocusPath = self.OnFilterItemAddedToFocusPath
     self.LastSelectedFilterContent = self.FilterContentObj_All
     self.EMListView_Filter:AddItem(self.FilterContentObj_All)
     self.Panel_FilterTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -68,6 +83,7 @@ function M:Init(Parent, Params)
     for key, value in pairs(Tag) do
       Obj[key] = value
     end
+    Obj.OnAddedToFocusPath = self.OnFilterItemAddedToFocusPath
     Obj.Index = Index
     Obj.Owner = self
     self.EMListView_Filter:AddItem(Obj)
@@ -336,6 +352,7 @@ function M:UpdateReddot()
 end
 
 function M:OnTopReddotClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/red_point_out_bound", nil, nil)
   local MinEntryIdx, MaxEntryIdx = UIUtils.GetMinAndMaxDisplayedItemIndex(self.TileView_Select_Role)
   local AllItems = self.TileView_Select_Role:GetListItems():ToTable()
   for i = MinEntryIdx - 1, 1, -1 do
@@ -347,6 +364,7 @@ function M:OnTopReddotClicked()
 end
 
 function M:OnBottomReddotClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/red_point_out_bound", nil, nil)
   local MinEntryIdx, MaxEntryIdx = UIUtils.GetMinAndMaxDisplayedItemIndex(self.TileView_Select_Role)
   local AllItems = self.TileView_Select_Role:GetListItems():ToTable()
   for i = MaxEntryIdx + 1, #AllItems do
@@ -427,7 +445,7 @@ function M:Destruct()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.LastFocusList or self.TileView_Select_Role)
+  return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget())
 end
 
 function M:GetItemAt(Index)
@@ -477,20 +495,44 @@ function M:OnFilterListNavigation(NavigationDirection)
 end
 
 function M:OnSortListWidgetBack(MyGeometry, InKeyEvent)
-  if self.LastFocusList:IsVisible() then
-    return self.LastFocusList
-  end
+  self.FSM:Pop()
+  return self:GetDesiredFocusTarget()
 end
 
 function M:OnSortListAddedToFocusPath()
-  if UIUtils.HasAnyFocus(self.EMListView_Filter) then
-    self.LastFocusList = self.EMListView_Filter
-  else
-    self.LastFocusList = self.TileView_Select_Role
-  end
+  self.FSM:Push({
+    Name = FocusStates.Sort,
+    Widget = self.Common_Sort_List
+  })
 end
 
 function M:OnSortListRemovedFromFocusPath()
+end
+
+function M:OnFilterItemAddedToFocusPath()
+  self.FSM:Push({
+    Name = FocusStates.Filter,
+    Widget = self.EMListView_Filter
+  })
+end
+
+function M:OnFocusStateChanged()
+end
+
+function M:GetDesiredFocusTarget()
+  local State = self.FSM:Peak()
+  local StateName = State.Name
+  if StateName == FocusStates.Filter then
+    self.EMListView_Filter:BP_SetSelectedItem(self.LastSelectedFilterContent)
+    self.EMListView_Filter:BP_NavigateToItem(self.LastSelectedFilterContent)
+    return self.EMListView_Filter
+  elseif StateName == FocusStates.Sort then
+    return self.Common_Sort_List
+  else
+    self.TileView_Select_Role:BP_SetSelectedItem(self.LastSelectedListContent)
+    self.TileView_Select_Role:BP_NavigateToItem(self.LastSelectedListContent)
+    return self.TileView_Select_Role
+  end
 end
 
 return M

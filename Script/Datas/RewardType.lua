@@ -5,6 +5,14 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("RewardType", {
+  Background = {
+    DungeonRewardSeq = 66,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "个人主页——背景图",
+    RewardType = "Background",
+    UniqueType = true
+  },
   Char = {
     DungeonRewardSeq = 90,
     OperationGM = true,
@@ -17,6 +25,30 @@ return ReadOnly("RewardType", {
     OperationGM = true,
     Remark = "角色配饰",
     RewardType = "CharAccessory",
+    UniqueType = true
+  },
+  CustomGesture = {
+    DungeonRewardSeq = 66,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "个人主页——姿势",
+    RewardType = "CustomGesture",
+    UniqueType = true
+  },
+  CustomScene = {
+    DungeonRewardSeq = 66,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "个人主页——自定义场景",
+    RewardType = "CustomScene",
+    UniqueType = true
+  },
+  CustomStick = {
+    DungeonRewardSeq = 66,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "个人主页——贴纸",
+    RewardType = "CustomStick",
     UniqueType = true
   },
   Draft = {

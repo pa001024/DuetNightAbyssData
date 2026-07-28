@@ -99,7 +99,8 @@ function M:OpenAddBlacklistDialog(WorldContext, AvatarInfo)
   if self:IsGamepad() then
     Params.AutoFocus = true
   end
-  self:GetUIMgr(WorldContext):ShowCommonPopupUI(FriendCommon.PullBlackDialog, Params, self:GetView(WorldContext))
+  local ParentWidget = self:GetView(WorldContext) or WorldContext
+  self:GetUIMgr(WorldContext):ShowCommonPopupUI_Push(FriendCommon.PullBlackDialog, Params, ParentWidget)
 end
 
 function M:OverrideButtonSound(button, soundEvent, eventKey)
@@ -311,7 +312,8 @@ function M:SendAddBlackList(TargetUid, AvatarInfo)
     Nickname = AvatarInfo.Nickname,
     HeadIconId = AvatarInfo.HeadIconId,
     HeadFrameId = AvatarInfo.HeadFrameId,
-    Level = AvatarInfo.Level
+    Level = AvatarInfo.Level,
+    BackgroundId = AvatarInfo.BackgroundId
   }
   self:GetAvatar():FriendAddBlackList(TargetUid, PureAvatarInfo)
 end

@@ -51,6 +51,7 @@ function ConditionTree:Not(Condition)
 end
 
 local LoadingCondition = {}
+local LoadingConditionState = {}
 
 function LoadingCondition:QuestStart(Params)
   local QuestId = Params.QuestId
@@ -82,6 +83,10 @@ function LoadingCondition:QuestFinish(Params)
   return RtnRes
 end
 
+function LoadingCondition:ActivityRacing(Params)
+  return LoadingConditionState.IsActivityRacing
+end
+
 local function WeightedRandom(Pool, TotalWeight)
   local Rand = math.random(1, TotalWeight)
   local Accumulated = 0
@@ -95,6 +100,26 @@ local function WeightedRandom(Pool, TotalWeight)
 end
 
 local SpecialLoadingRule = {}
+
+function SpecialLoadingRule:SetLoadingConditionState(Key, Value)
+  if Key then
+    LoadingConditionState[Key] = Value
+  end
+end
+
+function SpecialLoadingRule:TryEnterActivityRacingLoading()
+  self:SetLoadingConditionState("IsActivityRacing", true)
+end
+
+function SpecialLoadingRule:TryLeaveActivityRacingLoading(bForce)
+  if LoadingConditionState.IsActivityRacing then
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if not bForce and GameMode and GameMode.TargetSubRegion and GameMode.TargetSpawnPoint then
+      return
+    end
+    self:SetLoadingConditionState("IsActivityRacing", false)
+  end
+end
 
 function SpecialLoadingRule:CheckRegionCondition(Region, LastRegion, Rule, bIsCrossRegion)
   if not Rule then
@@ -122,7 +147,24 @@ function SpecialLoadingRule:CheckRegionCondition(Region, LastRegion, Rule, bIsCr
   return true
 end
 
+function SpecialLoadingRule:GetCutSceneInfo()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.IsInCutSceneReview and Avatar:IsInCutSceneReview() then
+    return Avatar:GetCutSceneReviewChapterId()
+  end
+end
+
 function SpecialLoadingRule:GetLoadingBpPath(bIsCrossRegion)
+  local LoadingData, SpecialLoadingBp = self:_GetLoadingBpPathExternal(bIsCrossRegion)
+  self:TryLeaveActivityRacingLoading(true)
+  return LoadingData, SpecialLoadingBp
+end
+
+function SpecialLoadingRule:_GetLoadingBpPathExternal(bIsCrossRegion)
+  local CutSceneInfo = self:GetCutSceneInfo()
+  if CutSceneInfo then
+    return CutSceneInfo, "WidgetBlueprint'/Game/UI/WBP/Memory/Widget/WBP_Memory_Loading.WBP_Memory_Loading'"
+  end
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if GameMode and GWorld.GameInstance.QuestDeliverId and GWorld.GameInstance.QuestDeliverLoadingId and GWorld.GameInstance.QuestDeliverId == GameMode.TargetSubRegion then
     local LoadingData = DataMgr.RegionLoading[GWorld.GameInstance.QuestDeliverLoadingId]

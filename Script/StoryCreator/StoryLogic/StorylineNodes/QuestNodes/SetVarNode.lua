@@ -32,7 +32,7 @@ function SetVarNode:Execute(Callback)
   end
   local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
   StorySubsystem:SetInt(self.VarName, self.VarValue)
-  if not VarInfo.IsGlobal then
+  if not VarInfo.IsGlobal or VarInfo.QuestChainId then
     Callback()
   else
     EventManager:AddEvent(EventID.OnStoryVarUpdated, self, function(Obj, VarName, VarValue)

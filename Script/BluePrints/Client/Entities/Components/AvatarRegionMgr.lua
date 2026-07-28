@@ -35,7 +35,8 @@ function Component:DisconnectRecoverCheck()
     return true
   end
   local SubRegionId = WorldLoader:GetRegionIdByLocation(PlayerCharacter:K2_GetActorLocation())
-  if -1 ~= SubRegionId and SubRegionId == self:GetCurrentRegionId() then
+  local GuildOnlineAreaID = DataMgr.GlobalConstant.GuildOnlineAreaID and tonumber(DataMgr.GlobalConstant.GuildOnlineAreaID.ConstantValue)
+  if -1 ~= SubRegionId and SubRegionId ~= GuildOnlineAreaID and SubRegionId == self:GetCurrentRegionId() then
     Avatar:AvatarStatusEnterSuccess()
     return false
   end

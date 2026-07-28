@@ -156,9 +156,6 @@ end
 function M:ClearScriptRegister()
   self:CleanTimer()
   self:RemoveAllDispatcher()
-  if self.ReddotNodeIns and ReddotManager then
-    ReddotManager.RemoveListener(self.ReddotNodeIns.Name, self)
-  end
 end
 
 function M:Destruct()

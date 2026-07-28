@@ -74,12 +74,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -216,6 +216,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -227,7 +228,7 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
@@ -237,6 +238,16 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100402,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100454,
                   TalkActorVisible = true
                 }
               },
@@ -288,6 +299,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -299,7 +311,7 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
@@ -309,6 +321,16 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100402,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100411,
                   TalkActorVisible = true
                 }
               },
@@ -419,12 +441,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -543,6 +565,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -554,7 +577,7 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
@@ -564,6 +587,16 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100402,
+                  TalkActorVisible = true
+                },
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                },
+                {
+                  TalkActorType = "Npc",
+                  TalkActorId = 100449,
                   TalkActorVisible = true
                 }
               },
@@ -614,7 +647,9 @@ return {
               TargetTime = 15,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = false,
+              RevertToDefaultWeather = false,
+              ForceWeatherType = -1
             }
           },
           ["177816461881471479534"] = {

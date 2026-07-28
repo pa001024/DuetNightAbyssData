@@ -201,7 +201,7 @@ return {
       propsData = {
         QuestId = 10040401,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040401_01",
+        QuestDescription = "Content_10040401_02",
         QuestDeatil = "Description_10040401_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -218,12 +218,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_Dengche_272480056",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 100407
       },
       questNodeData = {
@@ -336,12 +336,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_PTPre01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -419,6 +419,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -483,12 +484,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_OpenDoor_272640029",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -596,12 +597,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -722,12 +723,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -835,12 +836,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -948,12 +949,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1049,7 +1050,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 10010101,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10046101.10046101'",
-              TalkType = "QuestImpression",
+              TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -1070,6 +1071,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1134,9 +1136,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
             }
           }
         },
@@ -1169,12 +1170,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1289,9 +1290,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0161_scene_train_station.0161_scene_train_station'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
             }
           },
           ["177970699772366799680"] = {
@@ -1335,12 +1335,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1448,12 +1448,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1561,12 +1561,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1674,12 +1674,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1804,12 +1804,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -1917,12 +1917,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2030,12 +2030,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2156,12 +2156,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2269,12 +2269,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2425,12 +2425,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2538,12 +2538,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2651,12 +2651,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2764,12 +2764,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -2865,6 +2865,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2915,6 +2916,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2953,6 +2955,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -2960,6 +2963,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3025,6 +3029,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3074,12 +3079,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -3163,6 +3168,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3238,12 +3244,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -3333,6 +3339,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3378,9 +3385,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0167_story_fuluo_theme.0167_story_fuluo_theme'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
             }
           },
           ["17795207501623872609"] = {
@@ -3424,12 +3430,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -3537,23 +3543,17 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "177364906021122135839",
-            startPort = "Out",
-            endQuest = "177364900966722134817",
-            endPort = "Success"
-          },
           {
             startQuest = "177364900966722134814",
             startPort = "QuestStart",
@@ -3571,6 +3571,36 @@ return {
             startPort = "Out",
             endQuest = "177364906021122135839",
             endPort = "In"
+          },
+          {
+            startQuest = "17834247540648217",
+            startPort = "Out",
+            endQuest = "17834247477248119",
+            endPort = "In"
+          },
+          {
+            startQuest = "177364906021122135839",
+            startPort = "Out",
+            endQuest = "17834247655098622",
+            endPort = "In"
+          },
+          {
+            startQuest = "17834247655098622",
+            startPort = "Out",
+            endQuest = "177364900966722134817",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17800595418937283176",
+            startPort = "Out",
+            endQuest = "17834247540648217",
+            endPort = "In"
+          },
+          {
+            startQuest = "177364904417822135541",
+            startPort = "Out",
+            endQuest = "17834256782697945545",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -3578,14 +3608,14 @@ return {
             key = "177364900966722134814",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 754.0625, y = 294.375},
             propsData = {ModeType = 0}
           },
           ["177364900966722134817"] = {
             key = "177364900966722134817",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1925.4, y = 312.7333333333333},
+            pos = {x = 2172.9, y = 302.4208333333333},
             propsData = {ModeType = 0}
           },
           ["177364900966722134820"] = {
@@ -3626,6 +3656,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3676,6 +3707,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3699,7 +3731,7 @@ return {
             key = "17800595418937283176",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1120.65, y = 531.125},
+            pos = {x = 1019.4000000000001, y = 292.0625},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -3707,8 +3739,57 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
+              RelatedRegionId = {106101},
+              bStoreToServer = true
+            }
+          },
+          ["17834247477248119"] = {
+            key = "17834247477248119",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1620.2126623376626, y = 122.71623376623378},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["17834247540648217"] = {
+            key = "17834247540648217",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1251.7305194805201, y = 108.68051948051956},
+            propsData = {WaitTime = 17}
+          },
+          ["17834247655098622"] = {
+            key = "17834247655098622",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1909.578733766234, y = 302.2340909090909},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17834256782697945545"] = {
+            key = "17834256782697945545",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1634.891233766234, y = 499.1090909090909},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {106101},
               bStoreToServer = false
             }
           }
@@ -3742,12 +3823,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
-        IsBacktrack = false,
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
+        IsBacktrack = false,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
@@ -3825,6 +3906,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3832,6 +3914,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3884,9 +3967,8 @@ return {
               SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0169_cs_tiaoche.0169_cs_tiaoche'",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {106101},
-              bStoreToServer = false
+              RelatedRegionId = {106101},
+              bStoreToServer = true
             }
           }
         },

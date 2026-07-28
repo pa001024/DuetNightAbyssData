@@ -5,6 +5,7 @@ local UPostProcessFunctionLibrary = LoadClass(LibraryPath)
 function SimplePostProcessNode:Init()
   self.bEnablePP = true
   self.PPEnum = 0
+  self.PPWeight = 1
 end
 
 function SimplePostProcessNode:Start(Context)
@@ -17,6 +18,15 @@ function SimplePostProcessNode:Start(Context)
     return
   end
   self.Player = Player
+  local CameraComp
+  local PPWeight = math.clamp(self.PPWeight, 0, 1)
+  local TalkContext = GWorld.GameInstance:GetTalkContext()
+  if IsValid(TalkContext) and TalkContext.TalkCameraManager then
+    CameraComp = TalkContext.TalkCameraManager:GetCurrentCameraComponent()
+  end
+  if not IsValid(CameraComp) then
+    CameraComp = Player:GetComponentByClass(UPlayerCameraComponent)
+  end
   if self.bEnablePP then
     if not self.PPEnum or type(self.PPEnum) ~= "number" then
       local Message = "后处理效果枚举值无效:" .. "\n" .. tostring(self.PPEnum or "")
@@ -25,19 +35,19 @@ function SimplePostProcessNode:Start(Context)
       self:FinishAction()
       return
     end
-    self:ClearPostProcess(Player)
-    local MaterialInst = UPostProcessFunctionLibrary.SimplePostProcess(self.PPEnum)
+    self:ClearPostProcess(Player, CameraComp, PPWeight)
+    local MaterialInst = UPostProcessFunctionLibrary.SimplePostProcess(self.PPEnum, CameraComp, PPWeight)
     rawset(Player, "SimplePPMaterial", MaterialInst)
   else
-    self:ClearPostProcess(Player)
+    self:ClearPostProcess(Player, CameraComp, PPWeight)
   end
   self:FinishAction()
 end
 
-function SimplePostProcessNode:ClearPostProcess(Player)
+function SimplePostProcessNode:ClearPostProcess(Player, CameraComp, PPWeight)
   local MaterialCache = rawget(Player, "SimplePPMaterial")
   if MaterialCache then
-    UPostProcessFunctionLibrary.ClearSimplePostProcess(MaterialCache)
+    UPostProcessFunctionLibrary.ClearSimplePostProcess(MaterialCache, CameraComp, PPWeight)
     rawset(Player, "SimplePPMaterial", nil)
   end
 end

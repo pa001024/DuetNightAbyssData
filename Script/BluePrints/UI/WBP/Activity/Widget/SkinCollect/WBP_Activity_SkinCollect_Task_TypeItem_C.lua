@@ -1,6 +1,7 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
+local TASK_TYPE_CLICK_SOUND = "event:/ui/activity/feina_chapter_select_btn_click"
 
 local function FindWidgetByName(Widget, WidgetName)
   if not Widget or not WidgetName then
@@ -289,11 +290,16 @@ function M:SetGamepadFocused(IsFocused, bKeepCurrentState)
   end
 end
 
+function M:PlayClickSound()
+  AudioManager(self):PlayUISound(self, TASK_TYPE_CLICK_SOUND, nil, nil)
+end
+
 function M:OnBtnClicked()
   if self.IsForbidden then
     self:PlayStateAnimation("Forbidden")
     return
   end
+  self:PlayClickSound()
   self:PlayStateAnimation("Click")
   if self.ClickCallbackOwner and self.ClickCallback then
     self.ClickCallback(self.ClickCallbackOwner)

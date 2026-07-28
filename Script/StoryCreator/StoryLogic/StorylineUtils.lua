@@ -1,10 +1,8 @@
-local FQuestDetails = require("StoryCreator.StoryLogic.QuestDetails")
 local StorylineUtils = {}
 StorylineUtils.QuestNodePath = "StoryCreator.StoryLogic.StorylineNodes.QuestNodes"
 StorylineUtils.StoryNodePath = "StoryCreator.StoryLogic.StorylineNodes.StoryNodes"
 StorylineUtils.StorylinePath = "StoryCreator.StoryLogic.StorylineNodes.Storyline"
 StorylineUtils.QuestlinePath = "StoryCreator.StoryLogic.StorylineNodes.Questline"
-StorylineUtils.ImpressionlinePath = "StoryCreator.StoryLogic.StorylineNodes.Impressionline"
 
 function StorylineUtils.GMCreateQuestNode(NodeType, Args)
   local Node = StorylineUtils.CreateQuestNode(NodeType, CommonUtils.EmptyProxy)
@@ -89,26 +87,6 @@ function StorylineUtils.BuildStoryline(FileName, EndCallback, StopCallback, Payl
   return Storyline(FileData, FileName, EndCallback, StopCallback, Payload)
 end
 
-function StorylineUtils.CreateQuestDetails(QuestChainId)
-  local QuestChainInfo = DataMgr.QuestChain[QuestChainId]
-  if nil == QuestChainInfo then
-    DebugPrint("Warning: StorylineUtils.CreateQuestDetails: QuestChainInfo is Empty")
-    return nil
-  end
-  local FileName = QuestChainInfo.StoryPath
-  if nil == FileName then
-    DebugPrint("Warning: StorylineUtils.CreateQuestDetails: FileName is Empty")
-    return nil
-  end
-  local Storyline = GWorld.StoryMgr:GetStory(FileName)
-  Storyline = Storyline or StorylineUtils.BuildStoryline(FileName)
-  if nil == Storyline then
-    DebugPrint("Warning: StorylineUtils.CreateQuestDetails: Storyline is Empty")
-    return nil
-  end
-  return FQuestDetails:New(Storyline)
-end
-
 function StorylineUtils.GetFileData(FileName)
   local RequirePath = StorylineUtils.GetRequirePath(FileName)
   if nil == RequirePath then
@@ -152,19 +130,16 @@ function StorylineUtils.IsGuideNodeRunning()
   if SystemGuideManager.IsGuideStoryRunning then
     return not StorylineUtils.IsGuideStoryError
   end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar:IsGuideNodeRunning() then
+    return not StorylineUtils.IsGuideStoryError
+  end
   for _, Storyline in pairs(GWorld.StoryMgr.Storylines) do
     if Storyline.HasFinished then
     else
       for _, StoryNode in pairs(Storyline.RunningNodeList or {}) do
         if StoryNode.Questline and not StoryNode.Questline.HasFinished then
           for _, QuestNode in pairs(StoryNode.Questline.RunningNodeList or {}) do
-            if QuestNode.IsGuideNode and QuestNode:IsGuideNode() then
-              return not StorylineUtils.IsGuideStoryError
-            end
-          end
-        end
-        if StoryNode.Impressionline and not StoryNode.Impressionline.HasFinished then
-          for _, QuestNode in pairs(StoryNode.Impressionline.RunningNodeList or {}) do
             if QuestNode.IsGuideNode and QuestNode:IsGuideNode() then
               return not StorylineUtils.IsGuideStoryError
             end

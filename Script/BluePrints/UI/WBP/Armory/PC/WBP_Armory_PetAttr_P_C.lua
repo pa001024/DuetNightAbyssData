@@ -2,6 +2,7 @@ require("UnLua")
 local M = Class({
   "BluePrints.UI.WBP.Armory.WBP_Armory_PetAttr_Base_C"
 })
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 
 function M:Construct()
   M.Super.Construct(self)
@@ -16,6 +17,7 @@ function M:Construct()
   })
   self:AddInputMethodChangedListen()
   self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType())
+  self:AddDispatcher(EventID.OnInGear, self, self.OnInGear)
 end
 
 function M:Init(Params)
@@ -23,6 +25,17 @@ function M:Init(Params)
   self._OnAddedToFocusPath = Params.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Params.OnRemovedFromFocusPath
   self:InitNavigationRules()
+  self:InitPetIsShowReddot()
+  self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if EMCache:Get("PetIsShowNew", true) then
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:Destruct()
+  if self.Btn_Invisible_Area then
+    self.Btn_Invisible_Area.OnClicked:Remove(self, self.BtnInvisibleArea)
+  end
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -40,10 +53,36 @@ function M:UpdateGamepadKeyStyle()
       self.Btn_Replace:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
   end
+  if self.IsGamepadInput then
+    self.Key_Invisible:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = UIConst.GamePadImgKey.RightThumb
+        }
+      }
+    })
+    self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Key_Invisible:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
   return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurFocusEntryWidget or self.DisplayEntryItemWidgets[1])
+end
+
+function M:OnInGear()
+  if self.PreviewTab:IsVisible() then
+    self.PreviewTab:SwitchTab()
+  elseif self.Btn_Replace:IsVisible() then
+    if self.Btn_Replace.IsForbidden then
+      self:OnForbiddenReplaceBtnClicked()
+    else
+      self:OnReplaceBtnClicked()
+    end
+  end
+  return UIUtils.Handled, true
 end
 
 function M:OnParentKeyDown(MyGeometry, InKeyEvent)
@@ -59,16 +98,8 @@ function M:OnParentKeyDown(MyGeometry, InKeyEvent)
     end
     return UIUtils.Handled, true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
-    if self.PreviewTab:IsVisible() then
-      self.PreviewTab:SwitchTab()
-    elseif self.Btn_Replace:IsVisible() then
-      if self.Btn_Replace.IsForbidden then
-        self:OnForbiddenReplaceBtnClicked()
-      else
-        self:OnReplaceBtnClicked()
-      end
-    end
-    return UIUtils.Handled, true
+  elseif InKeyName == UIConst.GamePadKey.RightThumb then
+    self:BtnInvisibleArea()
   end
 end
 

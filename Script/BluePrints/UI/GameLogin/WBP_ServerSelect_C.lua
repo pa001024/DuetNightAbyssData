@@ -182,6 +182,7 @@ function WBP_ServerSelect_C:SearchServer(text)
         self.List:AddItem(self:NewServerItemContent(v))
       end
     end
+    self.List:RequestPlayEntriesAnim()
   end
 end
 

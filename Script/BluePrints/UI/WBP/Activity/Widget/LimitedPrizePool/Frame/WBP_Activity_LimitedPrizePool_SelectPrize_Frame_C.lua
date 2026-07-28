@@ -1,12 +1,15 @@
+local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:Construct()
   self.SelectPrizeWidget = nil
+  self.bHasRequestedActivityEntryVideoRefresh = false
 end
 
 function M:Destruct()
+  self:NotifyActivityEntryVideoRefresh()
   self.SelectPrizeWidget = nil
 end
 
@@ -17,7 +20,7 @@ function M:Init(PoolId, Prizes, OnConfirmSelection, OnClosed)
   end
   self.SelectPrizeWidget = Widget
   self:AttachWidgetToPosNode(Widget)
-  Widget:Init(Prizes, OnConfirmSelection, {
+  Widget:Init(PoolId, Prizes, OnConfirmSelection, {
     self,
     function()
       self:RemoveFromParent()
@@ -26,6 +29,7 @@ function M:Init(PoolId, Prizes, OnConfirmSelection, OnClosed)
       elseif type(OnClosed) == "table" and OnClosed[1] and OnClosed[2] then
         OnClosed[2](OnClosed[1])
       end
+      self:NotifyActivityEntryVideoRefresh()
     end
   })
   return true
@@ -36,7 +40,16 @@ function M:Close()
     self.SelectPrizeWidget:Close()
   else
     self:RemoveFromParent()
+    self:NotifyActivityEntryVideoRefresh()
   end
+end
+
+function M:NotifyActivityEntryVideoRefresh()
+  if self.bHasRequestedActivityEntryVideoRefresh then
+    return
+  end
+  self.bHasRequestedActivityEntryVideoRefresh = true
+  EventManager:FireEvent(ActivityCommon.EventId.RefreshActivityEntryVideo)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)

@@ -21,7 +21,7 @@ function M:TryDisplayReturnWelcomBanner()
   if GameInstance then
     local LoadingUI = GameInstance:GetLoadingUI()
     local LoginMainPage = UIManager(GameInstance):GetUIObj("LoginMainPage")
-    DebugPrint("DisplayMonthCardPop", LoadingUI)
+    DebugPrint("DisplayMonthCardPop", LoadingUI, LoginMainPage)
     if LoadingUI or LoginMainPage then
       self.DisplayReturnWelcomBannerCache = true
       return

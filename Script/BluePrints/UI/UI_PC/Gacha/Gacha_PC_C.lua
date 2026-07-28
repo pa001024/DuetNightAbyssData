@@ -1204,35 +1204,25 @@ function G:PurchaseGachaResource(IsSingleGacha)
             Avatar:PurchaseShopItemUseCoin1(ShopItemId, math.ceil(ResourceNeedPurchaseCount / ShopData.TypeNum), OnPurchaseShopItemUseCoin1)
           end
           
-          local ItemList = {}
-          table.insert(ItemList, {
-            ItemId = Coin4,
-            ItemType = CommonConst.ItemType.Resource,
-            ItemNum = Coin4OwnedCount,
-            ItemNeed = Coin1NeededCount
-          })
-          local PopUpId = 100136
-          local ResourceData = DataMgr.Resource[CoinId]
-          local PopoverText = GText(DataMgr.CommonPopupUIContext[PopUpId].PopoverText)
-          if string.find(PopoverText, "&ResourceName&") then
-            PopoverText = string.gsub(PopoverText, "&ResourceName&", GText(ResourceData.ResourceName))
-          end
-          if string.find(PopoverText, "&ResourceName1&") then
-            PopoverText = string.gsub(PopoverText, "&ResourceName1&", GText(DataMgr.Resource[Coin4].ResourceName))
-          end
-          if string.find(PopoverText, "&ResourceName2&") then
-            PopoverText = string.gsub(PopoverText, "&ResourceName2&", GText(ResourceData.ResourceName))
-          end
-          if string.find(PopoverText, "&Num1&") then
-            PopoverText = string.gsub(PopoverText, "&Num1&", Coin1NeededCount)
-          end
-          if string.find(PopoverText, "&Num2&") then
-            PopoverText = string.gsub(PopoverText, "&Num2&", Coin1NeededCount)
-          end
+          local LeftItems = {
+            {
+              ItemId = Coin4,
+              ItemType = CommonConst.ItemType.Resource,
+              Count = Coin1NeededCount
+            }
+          }
+          local RightItems = {
+            {
+              ItemId = CoinId,
+              ItemType = CommonConst.ItemType.Resource,
+              Count = Coin1NeededCount
+            }
+          }
+          local PopUpId = 100391
           local Params = {
             RightCallbackFunction = Confirm,
-            ItemList = ItemList,
-            ShortText = PopoverText
+            LeftItems = LeftItems,
+            RightItems = RightItems
           }
           self.PopupUI = UIManager(self):ShowCommonPopupUI(PopUpId, Params)
           return
@@ -1262,35 +1252,25 @@ function G:PurchaseGachaResource(IsSingleGacha)
         Avatar:PurchaseShopItem(ShopItemId, math.ceil(ResourceNeedPurchaseCount / ShopData.TypeNum), true)
       end
       
-      local ItemList = {}
-      table.insert(ItemList, {
-        ItemId = CoinId,
-        ItemType = CommonConst.ItemType.Resource,
-        ItemNum = Coin1OwnedCount,
-        ItemNeed = CoinNeededCount
-      })
-      local PopUpId = 100136
-      local ResourceData = DataMgr.Resource[ShopResourceId]
-      local PopoverText = GText(DataMgr.CommonPopupUIContext[PopUpId].PopoverText)
-      if string.find(PopoverText, "&ResourceName&") then
-        PopoverText = string.gsub(PopoverText, "&ResourceName&", GText(ResourceData.ResourceName))
-      end
-      if string.find(PopoverText, "&ResourceName1&") then
-        PopoverText = string.gsub(PopoverText, "&ResourceName1&", GText(DataMgr.Resource[CoinId].ResourceName))
-      end
-      if string.find(PopoverText, "&ResourceName2&") then
-        PopoverText = string.gsub(PopoverText, "&ResourceName2&", GText(ResourceData.ResourceName))
-      end
-      if string.find(PopoverText, "&Num1&") then
-        PopoverText = string.gsub(PopoverText, "&Num1&", CoinNeededCount)
-      end
-      if string.find(PopoverText, "&Num2&") then
-        PopoverText = string.gsub(PopoverText, "&Num2&", ResourceNeedPurchaseCount)
-      end
+      local LeftItems = {
+        {
+          ItemId = CoinId,
+          ItemType = CommonConst.ItemType.Resource,
+          Count = CoinNeededCount
+        }
+      }
+      local RightItems = {
+        {
+          ItemId = ShopResourceId,
+          ItemType = CommonConst.ItemType.Resource,
+          Count = ResourceNeedPurchaseCount
+        }
+      }
+      local PopUpId = 100391
       local Params = {
         RightCallbackFunction = Confirm,
-        ItemList = ItemList,
-        ShortText = PopoverText
+        LeftItems = LeftItems,
+        RightItems = RightItems
       }
       Params.OnKeyDownCallbackObj = self
       Params.OnKeyDownCallbackFunction = self.OnPopUIKeyDown

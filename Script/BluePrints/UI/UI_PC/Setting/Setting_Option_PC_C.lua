@@ -28,6 +28,11 @@ function S:OnListItemObjectSet(Content)
     self,
     self.OnNavigateDown
   })
+  local ParentWidget = Content.ParentWidget
+  local SettingPC = ParentWidget and (ParentWidget.OnLayoutPlanOptionItemSet and ParentWidget or ParentWidget.Parent)
+  if SettingPC and SettingPC.OnLayoutPlanOptionItemSet then
+    SettingPC:OnLayoutPlanOptionItemSet(self, Content)
+  end
 end
 
 function S:OnNavigateUp()

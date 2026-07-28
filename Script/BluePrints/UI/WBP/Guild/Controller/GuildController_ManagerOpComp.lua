@@ -73,6 +73,8 @@ function Component:SendGuildAgreeJoinRequest(Uids, Callback)
 end
 
 function Component:RecvGuildAgreeJoinRequest(SrcParams, Ret)
+  local Uids = table.unpack(SrcParams)
+  self:_JoinRequestRemovedCommon(Ret, Uids)
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildAgreeJoinRequest)
 end
 
@@ -81,6 +83,8 @@ function Component:SendGuildRejectJoinRequest(Uids)
 end
 
 function Component:RecvGuildRejectJoinRequest(SrcParams, Ret)
+  local Uids = table.unpack(SrcParams)
+  self:_JoinRequestRemovedCommon(Ret, Uids)
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildRejectJoinRequest)
 end
 
@@ -147,6 +151,7 @@ end
 function Component:RecvGuildSubmitEdit(SrcParams, Ret)
   self:UpdateCurrGuildCommon(Ret)
   self:UpdateCurrGuildProp(Ret, "LastNameEditTime", TimeUtils.NowTime())
+  self:UpdateCurrGuildProp(Ret, "LastLogoEditTime", TimeUtils.NowTime())
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildSubmitEdit)
 end
 
@@ -190,7 +195,11 @@ end
 
 function Component:RecvGuildEditLogo(SrcParams, Ret)
   local Logo = table.unpack(SrcParams)
-  self:UpdateCurrGuildCommon(Ret)
+  self:UpdateCurrGuildProp(Ret, "LogoInfo", function()
+    local LogoInfo = GuildLogoInfo.New(Logo)
+    return LogoInfo
+  end)
+  self:UpdateCurrGuildProp(Ret, "LastLogoEditTime", TimeUtils.NowTime())
   if Ret ~= ErrorCode.RET_SUCCESS then
     local CurrGuild = self:GetModel():GetCurrGuild()
     if CurrGuild then
@@ -239,13 +248,18 @@ function Component:RecvNotifyGuildRecvNewJoinRequest(SrcParams, RequestInfo)
 end
 
 function Component:RecvNotifyGuildRemoveJoinRequests(SrcParams, RemoveUids)
+  self:_JoinRequestRemovedCommon(ErrorCode.RET_SUCCESS, RemoveUids)
+  self:RecvCommon(nil, GuildCommon.EventID.OnNotifyGuildRemoveJoinRequests, RemoveUids)
+end
+
+function Component:_JoinRequestRemovedCommon(Ret, RemoveUids)
   local ReqTable = self:GetModel():GetReqLookTable()
   if ReqTable then
     for _, Uid in ipairs(RemoveUids) do
       ReqTable:RemoveReqByUid(Uid)
     end
   end
-  self:UpdateCurrGuildProp(ErrorCode.RET_SUCCESS, "JoinRequestUids", function()
+  self:UpdateCurrGuildProp(Ret, "JoinRequestUids", function()
     local JoinRequestUids = self:GetModel():GetCurrGuild().JoinRequestUids
     for _, Uid in ipairs(RemoveUids) do
       if JoinRequestUids[Uid] then
@@ -255,7 +269,6 @@ function Component:RecvNotifyGuildRemoveJoinRequests(SrcParams, RemoveUids)
     end
     return JoinRequestUids
   end)
-  self:RecvCommon(nil, GuildCommon.EventID.OnNotifyGuildRemoveJoinRequests, RemoveUids)
 end
 
 return Component

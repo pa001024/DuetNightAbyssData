@@ -67,12 +67,22 @@ function Component:Play_GatherTargets(Content, ParamentsTable)
     return
   end
   local HitTargets = Content.HitTargets
-  for _, Eid in ipairs(HitTargets) do
-    local Target = self:GetEntity(Eid)
-    if Target then
-      Target:GatherToSource(Source, ParamentsTable.GatherPoint, ParamentsTable.TargetSocketName, ParamentsTable.GatherSpeed, ParamentsTable.StopDistance, ParamentsTable.Acceleration, FVector(0, 0, 0), ParamentsTable.Time)
-    end
+  if not HitTargets or not next(HitTargets) then
+    return
   end
+  local Params = UE4.FGatherSharedParams()
+  Params.GatherPoint = ParamentsTable.GatherPoint
+  Params.TargetSocketName = ParamentsTable.TargetSocketName
+  Params.GatherSpeed = ParamentsTable.GatherSpeed
+  Params.StopDistance = ParamentsTable.StopDistance
+  Params.Acceleration = ParamentsTable.Acceleration or FVector(0, 0, 0)
+  Params.LocationOffset = FVector(0, 0, 0)
+  Params.Time = ParamentsTable.Time
+  local TargetEids = TArray(0)
+  for _, Eid in ipairs(HitTargets) do
+    TargetEids:Add(Eid)
+  end
+  self:ApplyGatherToSourceBatch(Source, Params, TargetEids)
 end
 
 function Component:Play_PlaySE(Content, ParamentsTable)

@@ -1,5 +1,4 @@
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
-local EDialogueNodeType = TalkUtils.EDialogueNodeType
 
 local function ShowUIDialoguePanel(UI)
   UI.Dialogue_Boss:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -15,64 +14,60 @@ local M = Class("BluePrints.Story.Talk.Controller.TalkTaskBase")
 
 function M:Start(TalkTaskData, TaskFinished_Callback)
   M.Super.Start(self, TalkTaskData, TaskFinished_Callback)
+  self.TalkTaskData = TalkTaskData
   self.NodeFinished_Callback = TaskFinished_Callback
+  self.bCleared = false
+  self.bHasInterrupted = false
   self:InitUI()
   AudioManager(GWorld.GameInstance):AddAuANotifyForbidTag(self.UnitKey)
   EventManager:AddEvent(EventID.OnTeamRecoveryStateChange, self, self.HandleOnTeamRecoveryStateChange)
-  self:StartPlayDialogue()
+  if not self.TalkTaskData.FirstDialogueId or not DataMgr.Dialogue[self.TalkTaskData.FirstDialogueId] then
+    self:EndDialogue()
+    return
+  end
+  self:StartTalkFlow()
 end
 
 function M:Clear()
+  if self.bCleared then
+    return
+  end
+  self.bCleared = true
   DebugPrint("NewBossTalkTask:Clear")
   self:ClearUI()
   self:ClearAudio()
   self:ClearAllTimers()
-  AudioManager():RemoveAuANotifyForbidTag(self.UnitKey)
+  AudioManager(GWorld.GameInstance):RemoveAuANotifyForbidTag(self.UnitKey)
   EventManager:RemoveEvent(EventID.OnTeamRecoveryStateChange, self)
 end
 
-function M:PlayDialogue(bPauseResume)
-  local NodeType = self.DialogueIterationComponent:GetCurrentNodeType()
-  if NodeType ~= EDialogueNodeType.Dialogue then
-    DebugPrint("lhr@Dialogue Iteration Error: NodeType", NodeType, "不合法")
+function M:CreatePrepareDialogueNode(SubFlow, Params)
+  local DialogueData = Params and Params.DialogueData
+  if not DialogueData then
     return
   end
-  local CurrentDialogue = self.DialogueIterationComponent:GetDialogue()
-  if not CurrentDialogue then
-    DebugPrint("lhr@Dialogue Iteration Error: Dialogue为空")
-    return
-  end
-  if bPauseResume and self.bAudioFinished then
-    return
-  end
-  local Content = TalkUtils:DialogueIdToContent(CurrentDialogue.DialogueId)
+  local Content = TalkUtils:DialogueIdToContent(DialogueData.DialogueId)
   if not Content then
-    self:IterateDialogue()
     return
   end
-  self:OnPlayingDialogue(CurrentDialogue)
-  self.UI.Text_Boss:SetText(Content)
-  local Duration = CurrentDialogue.Duration or 1
-  local bTimerFinish = false
-  if CurrentDialogue.VoiceName then
-    self.bAudioFinished = false
-    self:PlayAudio(CurrentDialogue, function(bUnFinished)
-      if not bUnFinished then
-        self.bAudioFinished = true
-        if bTimerFinish then
-          self:IterateDialogue()
-        end
-      end
-    end, nil, bPauseResume)
-  else
-    self.bAudioFinished = true
-  end
-  self.TalkContext.TalkTimerManager:AddTimer(self, Duration, nil, nil, nil, function()
-    bTimerFinish = true
-    if self.bAudioFinished then
-      self:IterateDialogue()
+  local PrepareNode = SubFlow:CreateNode(UEFNode_Delegate)
+  PrepareNode.DebugLog = string.format("NewBossTalkTask PrepareDialogueNode: %s", tostring(DialogueData and DialogueData.DialogueId))
+  PrepareNode.OnStart:Add(PrepareNode, function(Node)
+    if self.bCleared then
+      Node:Finish({
+        Node.FinishPin
+      })
+      return
     end
+    self:UpdateTalkSnapShot(DialogueData)
+    if self.UI and self.UI.Text_Boss then
+      self.UI.Text_Boss:SetText(Content)
+    end
+    Node:Finish({
+      Node.FinishPin
+    })
   end)
+  return PrepareNode
 end
 
 function M:InitUI()
@@ -93,7 +88,6 @@ function M:CreateComponents()
   self.TalkTaskData = self.TaskData
   self.TalkContext = self.TaskData.TalkContext
   self.TalkTimerManager = self.TalkContext.TalkTimerManager
-  self:CreateDialogueIteratorComponent()
   self:CreateTalkAudioComponent()
 end
 
@@ -125,18 +119,13 @@ function M:HandleOnTeamRecoveryStateChange(Eid, State, PrevState)
   end
 end
 
-function M:EndDialogue()
-  self:Finish()
-end
-
-function M:Finish()
+function M:FinishDialogue()
+  if self.bCleared then
+    return
+  end
   self:Clear()
   self:TryEndFlowGraph()
-  if self.NodeFinished_Callback and self.NodeFinished_Callback[2] then
-    local NodeFinished_Obj = self.NodeFinished_Callback[1]
-    local NodeFinished_Func = self.NodeFinished_Callback[2]
-    NodeFinished_Func(NodeFinished_Obj, self)
-  end
+  self:TryFireEndingCallback()
 end
 
 function M:ClearUI()
@@ -153,15 +142,14 @@ end
 function M:OnInterrupted()
   DebugPrint("NewBossTalkTask:OnInterrupted")
   self.bHasInterrupted = true
+  self:StopTalkFlow()
   self:Clear()
 end
 
 function M:OnPaused()
   DebugPrint("NewBossTalkTask:对话被暂停", self)
   self:PauseAllTimers(true)
-  if not self.bAudioFinished then
-    self:PauseAudio()
-  end
+  self:PauseTalkFlow()
 end
 
 function M:OnPauseResumed()
@@ -170,10 +158,7 @@ function M:OnPauseResumed()
   end
   DebugPrint("NewBossTalkTask:对话暂停恢复", self)
   self:PauseAllTimers(false)
-  self.DialogueIterationComponent:Resume()
-  if not self.bAudioFinished then
-    self:ResumePauseAudio()
-  end
+  self:ResumeTalkFlow()
 end
 
 return M

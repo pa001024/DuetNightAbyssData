@@ -502,6 +502,9 @@ function M:OnAccessoryListSelectionChanged(Content, IsSelected)
   if not IsSelected or not self.IsGamepadInput then
     return
   end
+  if Content.IsSelect then
+    return
+  end
   if self.CurrentTopTabIdx == self.HairTabIdx then
     self:OnHairItemClicked(Content)
   else

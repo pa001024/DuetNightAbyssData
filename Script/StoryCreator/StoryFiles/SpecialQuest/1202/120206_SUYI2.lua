@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -244,7 +244,7 @@ return {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
-              FlowAssetPath = "DialogueAsst'/Game/Dialogue/MainStory/1202/12047101.12047101'",
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1202/12047101.12047101'",
               TalkType = "FixSimple",
               TalkStageName = "East02_12020604",
               BlendInTime = 0,
@@ -266,6 +266,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",

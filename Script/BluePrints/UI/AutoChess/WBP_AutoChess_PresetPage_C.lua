@@ -9,6 +9,8 @@ function M:OnLoaded(...)
   self.Owner = (...)
   self.Com_Bg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Text_Tip:SetText(GText("UI_RougeLike_End__ClickEmpty"))
+  self.Text_Title:SetText(GText("UI_AutoChess_BattlePreset"))
+  self:InitSharedSquadInfo()
   self:InitPresets()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
   self:SetFocus()
@@ -24,6 +26,11 @@ function M:OnLoaded(...)
   })
   self:PlayAnimation(self.In)
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_team_preset_in", "AutoChessPresetPage_InSound", nil)
+end
+
+function M:InitSharedSquadInfo()
+  self.IsSharedSquad = self.Owner.GameMode:TriggerDungeonComponentFun("IsShareEditMode")
+  self.EditingIndex = self.Owner.GameMode:TriggerDungeonComponentFun("GetEditingSquadIndex")
 end
 
 function M:InitButtonNavigation()
@@ -160,17 +167,23 @@ function M:InitPresets()
   self.Preset_01:InitContent({
     IsSet = false,
     Owner = self,
-    PresetIndex = 1
+    PresetIndex = 1,
+    IsSharedSquad = self.IsSharedSquad,
+    IsEditing = 1 == self.EditingIndex
   })
   self.Preset_02:InitContent({
     IsSet = false,
     Owner = self,
-    PresetIndex = 2
+    PresetIndex = 2,
+    IsSharedSquad = self.IsSharedSquad,
+    IsEditing = 2 == self.EditingIndex
   })
   self.Preset_03:InitContent({
     IsSet = false,
     Owner = self,
-    PresetIndex = 3
+    PresetIndex = 3,
+    IsSharedSquad = self.IsSharedSquad,
+    IsEditing = 3 == self.EditingIndex
   })
 end
 
@@ -187,6 +200,14 @@ function M:RefreshSelect(PresetIndex)
   self.Preset_01:RefreshSelect(PresetIndex)
   self.Preset_02:RefreshSelect(PresetIndex)
   self.Preset_03:RefreshSelect(PresetIndex)
+end
+
+function M:RefreshEdit(EditIndex)
+  self.EditingIndex = EditIndex
+  self.Owner.GameMode:TriggerDungeonComponentFun("SetEditingSquadIndex", EditIndex)
+  self.Preset_01:RefreshEdit(EditIndex)
+  self.Preset_02:RefreshEdit(EditIndex)
+  self.Preset_03:RefreshEdit(EditIndex)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)

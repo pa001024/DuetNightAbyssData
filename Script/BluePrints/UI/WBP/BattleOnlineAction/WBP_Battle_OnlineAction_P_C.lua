@@ -135,6 +135,7 @@ end
 function M:OnGamePadDown(InKeyName)
   if not self.GamePadInputMap then
     self.GamePadInputMap = {
+      [UIConst.GamePadKey.SpecialRight] = self.OnGamePadAutoAcceptKeyDown,
       [UIConst.GamePadKey.FaceButtonRight] = self.OnGamePadReturnKeyDown,
       [UIConst.GamePadKey.LeftThumb] = self.OnRefreshAllKeyDown,
       [UIConst.GamePadKey.RightThumb] = self.OnRejectAllKeyDown,
@@ -158,6 +159,12 @@ function M:OnGamePadReturnKeyDown()
   self:OnReturnKeyDown()
 end
 
+function M:OnGamePadAutoAcceptKeyDown()
+  if self.TryToggleAutoAcceptByGamepad and self:TryToggleAutoAcceptByGamepad() then
+    return true
+  end
+end
+
 function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
   DebugPrint("BattleOnlineAction_P_C OnUpdateUIStyleByInputTypeChange CurInputType:" .. CurInputType)
   if CurInputType == ECommonInputType.MouseAndKeyboard then
@@ -175,6 +182,7 @@ function M:InitKeyboardUI()
   self.Key_Refuse:CreateCommonKey(self.RefuseKeyInfo)
   self.Key_Close:CreateCommonKey(self.CloseKeyInfo)
   self.IsGamePad = false
+  self:RefreshAutoAcceptKeyVisible()
 end
 
 function M:InitGamepadUI()
@@ -185,6 +193,7 @@ function M:InitGamepadUI()
   self.Key_Refresh:CreateCommonKey(self.GamePadRefreshKeyInfo)
   self.Key_Refuse:CreateCommonKey(self.GamePadRefuseKeyInfo)
   self.Key_Close:CreateCommonKey(self.GamePadCloseKeyInfo)
+  self:RefreshAutoAcceptKeyVisible()
   if self:HasAnyFocus() and self:IsListHaveItem() then
     self.List_Invite:BP_ClearSelection()
     self:FocusFirstItem()

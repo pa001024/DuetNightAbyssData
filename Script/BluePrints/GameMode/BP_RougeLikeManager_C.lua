@@ -1,3 +1,4 @@
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local BP_RougeLikeManager_C = Class("BluePrints.Common.TimerMgr")
 BP_RougeLikeManager_C._components = {
   "BluePrints.GameMode.RougeLikeComponents.RougeLikeAward",

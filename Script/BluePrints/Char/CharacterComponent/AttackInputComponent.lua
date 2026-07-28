@@ -1,4 +1,5 @@
 local SkillUtils = require("Utils.SkillUtils")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local Component = {}
 local CanCheckShootTag = {
   Idle = 1,

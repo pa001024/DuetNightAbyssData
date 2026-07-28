@@ -128,10 +128,36 @@ function S:GetNowValue(List)
 end
 
 function S:OnBtnAreaClicked()
+  if self.HasBeenForbidden then
+    return
+  end
   self:SetSwitcher(not self.NowValue)
 end
 
+function S:RefreshForbiddenState(bForbidden)
+  if bForbidden then
+    if not self.HasBeenForbidden then
+      self:PlayAnimation(self.Forbidden)
+      self.Button_Area:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.Bg_Set.Bg_Hover:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.Bg_Set.Bg_Outline:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self.HasBeenForbidden = true
+    end
+  elseif self.HasBeenForbidden then
+    self:PlayAnimationReverse(self.Forbidden)
+    self.Button_Area:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.Bg_Set.Bg_Hover:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.Bg_Set.Bg_Outline:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.HasBeenForbidden = false
+    self:SetHoverVisibility()
+  end
+  self:RefreshOptionNewBadge()
+end
+
 function S:SetSwitcher(bValue)
+  if self.HasBeenForbidden then
+    return
+  end
   if bValue == self.NowValue then
     return
   end
@@ -582,6 +608,9 @@ function S:SaveImmersionModelOptionSetting()
 end
 
 function S:Handle_KeyDownOnGamePad(InKeyName)
+  if self.HasBeenForbidden then
+    return false
+  end
   if InKeyName == UIConst.GamePadKey.LeftStickRight then
     self:SetSwitcher(true)
     return true
@@ -863,7 +892,7 @@ function S:SetLeftBulletJumpShowOldValue()
 end
 
 function S:RestoreDefaultLeftBulletJumpShowOptionSet()
-  self:SaveLeftShootShowOptionSetting()
+  self:SaveLeftBulletJumpShowOptionSetting()
 end
 
 function S:SaveLeftBulletJumpShowOptionSetting()
@@ -1007,12 +1036,20 @@ function S:OnSecPasswordReddotChange(Count)
   end
 end
 
-function S:RedDotChange(Count)
-  if Count > 0 then
-    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  else
-    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+function S:RefreshOptionNewBadge()
+  if not (self.CurOptionContent and self.CurOptionContent.SelfWidget) or not self.CurOptionContent.SelfWidget.New then
+    return
   end
+  if not (not self.HasBeenForbidden and self.LastRedDotCount) or self.LastRedDotCount <= 0 then
+    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  else
+    self.CurOptionContent.SelfWidget.New:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+end
+
+function S:RedDotChange(Count)
+  self.LastRedDotCount = Count
+  self:RefreshOptionNewBadge()
 end
 
 function S:SetSecondaryPasswordOldValue()
@@ -1123,6 +1160,22 @@ function S:SaveMoveModelOptionSetting()
   self.OldValue = self.NowValue
   ReddotManager.DecreaseLeafNodeCount("Setting_Control_Setting_MoveModelBtn", 1)
   EventManager:FireEvent(EventID.OnMoveModelOptionChanged, self.NowValue)
+end
+
+function S:SetDamageTextMiniOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultDamageTextMiniOptionSet()
+  self:SaveDamageTextMiniOptionSetting()
+end
+
+function S:SaveDamageTextMiniOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  local JumpWordManager = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UJumpWordManager)
+  if JumpWordManager then
+    JumpWordManager:SetbOpenJumpWordNumberFormat(self.NowValue)
+  end
 end
 
 return S

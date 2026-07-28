@@ -54,6 +54,12 @@ function BP_PetNPC_C:InitInteractiveState(WorldRegionEid)
   self.InteractiveState = PetStateInfo.PetState
 end
 
+function BP_PetNPC_C:ChangePetModelCPP()
+  if self.PetChangeModeId > 0 then
+    self:ChangePetModelBP(self.PetChangeModeId)
+  end
+end
+
 function BP_PetNPC_C:ClientInteractiveStateRecover()
   local ProgressWidget = self.PetHeadWidgetComponent:GetWidget()
   if ProgressWidget then

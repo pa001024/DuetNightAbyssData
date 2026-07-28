@@ -1,4 +1,5 @@
 require("UnLua")
+local AutoChessConst = require("BluePrints.UI.AutoChess.AutoChessConst")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotHelper")
 local M = {}
@@ -9,8 +10,9 @@ local NotNeedShowButtonActivityId = {
   [103015] = true
 }
 local NeedShowButtonActivityIdByTabName = {
-  [103016] = true,
-  [121001] = true
+  [AutoChessConst.ActiveId] = true,
+  [121001] = true,
+  [121002] = true
 }
 
 function M:PlayFadeIn()
@@ -128,8 +130,8 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
   if PageConfigData.JumpUnlockCondition and not ConditionUtils.CheckCondition(PlayerAvatar, PageConfigData.JumpUnlockCondition) then
     IsLock = true
   end
-  self.WS:SetVisibility(UIConst.VisibilityOp.VisibilityOp)
-  self.Group_Reward:SetVisibility(UIConst.VisibilityOp.VisibilityOp)
+  self.WS:SetVisibility(UIConst.VisibilityOp.Visible)
+  self.Group_Reward:SetVisibility(UIConst.VisibilityOp.Visible)
   if IsLock then
     self.WS:SetActiveWidgetIndex(1)
   elseif IsComplete then
@@ -281,8 +283,13 @@ function M:UpdateEventTitleInfo(ActivityConfigData, TitleWidget, PlayerAvatar)
     return
   end
   TitleWidget.Text_Title:SetText(GText(ActivityConfigData.EventName))
-  if ActivityConfigData.EventSName and TitleWidget.Text_SubTitle then
-    TitleWidget.Text_SubTitle:SetText(GText(ActivityConfigData.EventSName))
+  if TitleWidget.Text_SubTitle then
+    if ActivityConfigData.EventSName then
+      TitleWidget.Text_SubTitle:SetText(GText(ActivityConfigData.EventSName))
+      TitleWidget.Text_SubTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      TitleWidget.Text_SubTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 
@@ -317,7 +324,7 @@ function M:InitUIInfoByPlatform()
     })
     self.Key_More:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Img", ImgShortPath = "RS"}
+        {Type = "Img", ImgShortPath = "View"}
       }
     })
     self.Key_RewardTitle:CreateCommonKey({

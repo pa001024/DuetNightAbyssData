@@ -148,5 +148,151 @@
       20502002
     ],
     "unlockCondition": 10301404
+  },
+  {
+    "id": 10302701,
+    "name": "Port-des-Brumes",
+    "desc": "Port-des-Brumes était à l’origine le plus grand port de transport de Haojing, ainsi que le principal point de passage par lequel les Tisse-Étoiles entrent et sortent de Huaxu. Il s’est ensuite progressivement développé pour devenir une véritable ville.\nRépondant à l’appel de la Cérémonie de l’Encens, les Tisse-Étoiles ont offert d’importantes richesses et de nombreux trésors afin de soutenir le Tournoi de l’Encens. En reconnaissance de cette contribution, les organisateurs ont choisi d’établir la première arène de la compétition au Port-des-Brumes.",
+    "image": "T_SoloTreasure_Gangkou",
+    "easyDungeonId": 42801,
+    "easyModeFee": 0,
+    "hardDungeonId": 42802,
+    "hardModeFee": 1000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302702,
+    "name": "Mer de Poussière",
+    "desc": "La Mer de Poussière fut autrefois réduite à un territoire inhabité par le Fléau de Zhuyin, un nom qui suffit encore à glacer le sang des habitants de Huaxu. Bien que Zhuyin ait depuis retrouvé sa place, le phénomène de Poussière-corrompue qui marque ces terres ne peut être entièrement éradiqué. Afin d’apaiser les craintes persistantes de la population et d’éliminer les Souillés qui y rôdent encore, les organisateurs ont établi ici la deuxième arène de la compétition.",
+    "image": "T_SoloTreasure_Wuhui",
+    "easyDungeonId": 42803,
+    "easyModeFee": 500,
+    "hardDungeonId": 42804,
+    "hardModeFee": 2000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302703,
+    "name": "Banlieue Ouest de Haojing",
+    "desc": "La Banlieue Ouest de Haojing est principalement constituée de zones forestières et demeure peu habitée.\nÀ la suite des dégâts subis par plusieurs bâtiments de la ville lors du chaos des deux Seigneurs Dragons, cette région a été choisie comme arène finale de la compétition.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "hardDungeonId": 42805,
+    "hardModeFee": 4000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
+  },
+  {
+    "id": 10302704,
+    "name": "Tournoi sur invitation",
+    "desc": "Depuis son lancement, le Tournoi de l’Encens suscite un immense engouement à travers toute Huaxu. Les performances remarquables des participants de renom attirent particulièrement l’attention.\nAfin d’encourager les jeunes générations à embrasser les profonds changements que traverse Huaxu, les organisateurs ont convié ces compétiteurs d’exception à participer à un tournoi sur invitation plus exigeant, accompagné de lettres d’invitation exclusives.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "easyDungeonId": 42806,
+    "easyModeFee": 1,
+    "hardDungeonId": 42807,
+    "hardModeFee": 3,
+    "easyMaxConvertResource": 1000000,
+    "easyScoreToResource": {
+      "101": 2
+    },
+    "hardMaxConvertResource": 3000000,
+    "hardScoreToResource": {
+      "101": 0.5
+    },
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ]
   }
 ]

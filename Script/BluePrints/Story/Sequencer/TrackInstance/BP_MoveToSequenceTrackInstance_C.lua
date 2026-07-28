@@ -20,9 +20,6 @@ function M:StartMoveTo(MoveToData)
   local TargetLocation = MoveToData.TargetLocation
   local NowLocation = Character:K2_GetActorLocation()
   local SquaredDis = UE4.UKismetMathLibrary.Vector_DistanceSquared(NowLocation, SourceLocation)
-  if SquaredDis > 10000 then
-    Character:K2_SetActorLocation(SourceLocation, false, nil, false)
-  end
   local TargetRotation = MoveToData.TargetRotation
   if TargetRotation and (0 ~= TargetRotation.Roll or 0 ~= TargetRotation.Pitch or 0 ~= TargetRotation.Yaw) then
     Character:K2_SetActorRotation(TargetRotation, false, nil, false)
@@ -35,17 +32,12 @@ function M:StartMoveTo(MoveToData)
   end
   USequenceMontageLibrary.ClearAccumulatedRootMotion(Character)
   Character:SetMaxWalkSpeed(MoveToData.MoveToSpeed)
-  Character:SetNpcMovementTickEnable(true)
   Character.bUseControllerRotationYaw = false
   if Character:GetMovementComponent() then
     Character:GetMovementComponent():LockMovementMode(false, EMovementMode.MOVE_Walking)
   end
   Character:ForbidFootStep(not Section.EnableFootStepFX)
-  UAIBlueprintHelperLibrary.CreateMoveToProxyObject(Character, Character, TargetLocation, nil, Section.MoveAcceptRadius)
-  local CustomSequencePropertySystem = USubsystemBlueprintLibrary.GetWorldSubsystem(MoveToData.Character, UCustomSequencePropertySystem)
-  if IsValid(CustomSequencePropertySystem) then
-    CustomSequencePropertySystem:ForbiddenNpcTransform(MoveToData.Character, self)
-  end
+  USequenceMovementLibrary.CreateMoveToProxyObject(Character, Character, TargetLocation, nil, Section.MoveAcceptRadius, false, Section.bUsePathfinding)
 end
 
 function M:EndMoveTo(MoveToData)
@@ -61,17 +53,10 @@ function M:EndMoveTo(MoveToData)
   if not GameInstance then
     return
   end
-  if Character.NpcAnimInstance and not Character.NpcAnimInstance.IsRotating then
-    Character:SetNpcMovementTickEnable(false)
-  end
   Character.bUseControllerRotationYaw = MoveToData.UseControllerRotationYaw
   Character:ForbidFootStep(MoveToData.NpcForbidFootStep)
   Character:SetWalkSpeed()
   Character:CacheLastMovementLoc()
-  local CustomSequencePropertySystem = USubsystemBlueprintLibrary.GetWorldSubsystem(Character, UCustomSequencePropertySystem)
-  if IsValid(CustomSequencePropertySystem) then
-    CustomSequencePropertySystem:UnForbiddenNpcTransform(Character, self)
-  end
 end
 
 return M

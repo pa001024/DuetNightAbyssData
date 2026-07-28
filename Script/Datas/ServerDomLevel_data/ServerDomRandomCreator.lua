@@ -4885,2586 +4885,6 @@ return {
       }
     }
   },
-  [41805] = {
-    [7180012] = {
-      {
-        ActorLoc = {
-          x = -24952.15,
-          y = -36344.43,
-          z = 9314.15
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor6",
-        LabelName = "BP_RandomCreateActor6",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180009] = {
-      {
-        ActorLoc = {
-          x = -23562.29,
-          y = -2729.73,
-          z = 7704.05
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor",
-        LabelName = "BP_RandomCreateActor",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180010] = {
-      {
-        ActorLoc = {
-          x = -24523.54,
-          y = -12455.98,
-          z = 7337.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor2",
-        LabelName = "BP_RandomCreateActor2",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -24502.35,
-          y = -12678.25,
-          z = 7348.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor3",
-        LabelName = "BP_RandomCreateActor3",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180011] = {
-      {
-        ActorLoc = {
-          x = -17880.77,
-          y = -16179.03,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor4",
-        LabelName = "BP_RandomCreateActor4",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -17859.96,
-          y = -15955.63,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor5",
-        LabelName = "BP_RandomCreateActor5",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180013] = {
-      {
-        ActorLoc = {
-          x = -29292.43,
-          y = -36308.35,
-          z = 10024.07
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor7",
-        LabelName = "BP_RandomCreateActor7",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -19427.6,
-          y = -16710.51,
-          z = 7261.31
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor8",
-        LabelName = "BP_RandomCreateActor8",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -27896.65,
-          y = -13038.31,
-          z = 7573.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor9",
-        LabelName = "BP_RandomCreateActor9",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180014] = {
-      {
-        ActorLoc = {
-          x = -15925.52,
-          y = -30626.52,
-          z = 9360.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor10",
-        LabelName = "BP_RandomCreateActor10",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7230102] = {
-      {
-        ActorLoc = {
-          x = -27997.94,
-          y = -35637.02,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor11",
-        LabelName = "BP_RandomCreateActor11",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -27281.6,
-          y = -35703.74,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor12",
-        LabelName = "BP_RandomCreateActor12",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -26472.95,
-          y = -36371.33,
-          z = 9223.93
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor13",
-        LabelName = "BP_RandomCreateActor13",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -23370.66,
-          y = -25760.09,
-          z = 8918.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor14",
-        LabelName = "BP_RandomCreateActor14",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -22532.89,
-          y = -25363.78,
-          z = 8945.58
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor15",
-        LabelName = "BP_RandomCreateActor15",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -19720.54,
-          y = -26336.11,
-          z = 9132.7
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor16",
-        LabelName = "BP_RandomCreateActor16",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180113] = {
-      {
-        ActorLoc = {
-          x = -16321.96,
-          y = -22760.61,
-          z = 7544.61
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 47.65,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor17",
-        LabelName = "BP_RandomCreateActor17",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -25495.63,
-          y = -33110.23,
-          z = 9135.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 99.33,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor18",
-        LabelName = "BP_RandomCreateActor18",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -28410.77,
-          y = -17346.48,
-          z = 7634.64
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -95.82,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor19",
-        LabelName = "BP_RandomCreateActor19",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    }
-  },
-  [41806] = {
-    [7180012] = {
-      {
-        ActorLoc = {
-          x = -24952.15,
-          y = -36344.43,
-          z = 9314.15
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor6",
-        LabelName = "BP_RandomCreateActor6",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180009] = {
-      {
-        ActorLoc = {
-          x = -23562.29,
-          y = -2729.73,
-          z = 7704.05
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor",
-        LabelName = "BP_RandomCreateActor",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180010] = {
-      {
-        ActorLoc = {
-          x = -24523.54,
-          y = -12455.98,
-          z = 7337.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor2",
-        LabelName = "BP_RandomCreateActor2",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -24502.35,
-          y = -12678.25,
-          z = 7348.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor3",
-        LabelName = "BP_RandomCreateActor3",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180011] = {
-      {
-        ActorLoc = {
-          x = -17880.77,
-          y = -16179.03,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor4",
-        LabelName = "BP_RandomCreateActor4",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -17859.96,
-          y = -15955.63,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor5",
-        LabelName = "BP_RandomCreateActor5",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180013] = {
-      {
-        ActorLoc = {
-          x = -29292.43,
-          y = -36308.35,
-          z = 10024.07
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor7",
-        LabelName = "BP_RandomCreateActor7",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -19427.6,
-          y = -16710.51,
-          z = 7261.31
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor8",
-        LabelName = "BP_RandomCreateActor8",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -27896.65,
-          y = -13038.31,
-          z = 7573.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor9",
-        LabelName = "BP_RandomCreateActor9",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180014] = {
-      {
-        ActorLoc = {
-          x = -15925.52,
-          y = -30626.52,
-          z = 9360.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor10",
-        LabelName = "BP_RandomCreateActor10",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7230102] = {
-      {
-        ActorLoc = {
-          x = -27997.94,
-          y = -35637.02,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor11",
-        LabelName = "BP_RandomCreateActor11",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -27281.6,
-          y = -35703.74,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor12",
-        LabelName = "BP_RandomCreateActor12",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -26472.95,
-          y = -36371.33,
-          z = 9223.93
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor13",
-        LabelName = "BP_RandomCreateActor13",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -23370.66,
-          y = -25760.09,
-          z = 8918.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor14",
-        LabelName = "BP_RandomCreateActor14",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -22532.89,
-          y = -25363.78,
-          z = 8945.58
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor15",
-        LabelName = "BP_RandomCreateActor15",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -19720.54,
-          y = -26336.11,
-          z = 9132.7
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor16",
-        LabelName = "BP_RandomCreateActor16",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    },
-    [7180113] = {
-      {
-        ActorLoc = {
-          x = -16321.96,
-          y = -22760.61,
-          z = 7544.61
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 47.65,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor17",
-        LabelName = "BP_RandomCreateActor17",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -25495.63,
-          y = -33110.23,
-          z = 9135.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 99.33,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor18",
-        LabelName = "BP_RandomCreateActor18",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      },
-      {
-        ActorLoc = {
-          x = -28410.77,
-          y = -17346.48,
-          z = 7634.64
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -95.82,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor19",
-        LabelName = "BP_RandomCreateActor19",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41805, 41806}
-      }
-    }
-  },
-  [41807] = {
-    [7180028] = {
-      {
-        ActorLoc = {
-          x = -24952.15,
-          y = -36344.43,
-          z = 9314.15
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor6",
-        LabelName = "BP_RandomCreateActor6",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180025] = {
-      {
-        ActorLoc = {
-          x = -23562.29,
-          y = -2729.73,
-          z = 7704.05
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor",
-        LabelName = "BP_RandomCreateActor",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180026] = {
-      {
-        ActorLoc = {
-          x = -24523.54,
-          y = -12455.98,
-          z = 7337.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor2",
-        LabelName = "BP_RandomCreateActor2",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -24502.35,
-          y = -12678.25,
-          z = 7348.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor3",
-        LabelName = "BP_RandomCreateActor3",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180027] = {
-      {
-        ActorLoc = {
-          x = -17880.77,
-          y = -16179.03,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor4",
-        LabelName = "BP_RandomCreateActor4",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -17859.96,
-          y = -15955.63,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor5",
-        LabelName = "BP_RandomCreateActor5",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180017] = {
-      {
-        ActorLoc = {
-          x = -29292.43,
-          y = -36308.35,
-          z = 10024.07
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor7",
-        LabelName = "BP_RandomCreateActor7",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -19427.6,
-          y = -16710.51,
-          z = 7261.31
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor8",
-        LabelName = "BP_RandomCreateActor8",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -27896.65,
-          y = -13038.31,
-          z = 7573.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor9",
-        LabelName = "BP_RandomCreateActor9",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180018] = {
-      {
-        ActorLoc = {
-          x = -15925.52,
-          y = -30626.52,
-          z = 9360.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor10",
-        LabelName = "BP_RandomCreateActor10",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7230102] = {
-      {
-        ActorLoc = {
-          x = -27997.94,
-          y = -35637.02,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor11",
-        LabelName = "BP_RandomCreateActor11",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -27281.6,
-          y = -35703.74,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor12",
-        LabelName = "BP_RandomCreateActor12",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -26472.95,
-          y = -36371.33,
-          z = 9223.93
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor13",
-        LabelName = "BP_RandomCreateActor13",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -23370.66,
-          y = -25760.09,
-          z = 8918.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor14",
-        LabelName = "BP_RandomCreateActor14",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -22532.89,
-          y = -25363.78,
-          z = 8945.58
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor15",
-        LabelName = "BP_RandomCreateActor15",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -19720.54,
-          y = -26336.11,
-          z = 9132.7
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor16",
-        LabelName = "BP_RandomCreateActor16",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180129] = {
-      {
-        ActorLoc = {
-          x = -16321.96,
-          y = -22760.61,
-          z = 7544.61
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 47.65,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor17",
-        LabelName = "BP_RandomCreateActor17",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -25495.63,
-          y = -33110.23,
-          z = 9135.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 99.33,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor18",
-        LabelName = "BP_RandomCreateActor18",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -28410.77,
-          y = -17346.48,
-          z = 7634.64
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -95.82,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor19",
-        LabelName = "BP_RandomCreateActor19",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    }
-  },
-  [41808] = {
-    [7180028] = {
-      {
-        ActorLoc = {
-          x = -24952.15,
-          y = -36344.43,
-          z = 9314.15
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor6",
-        LabelName = "BP_RandomCreateActor6",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180025] = {
-      {
-        ActorLoc = {
-          x = -23562.29,
-          y = -2729.73,
-          z = 7704.05
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor",
-        LabelName = "BP_RandomCreateActor",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180026] = {
-      {
-        ActorLoc = {
-          x = -24523.54,
-          y = -12455.98,
-          z = 7337.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor2",
-        LabelName = "BP_RandomCreateActor2",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -24502.35,
-          y = -12678.25,
-          z = 7348.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor3",
-        LabelName = "BP_RandomCreateActor3",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180027] = {
-      {
-        ActorLoc = {
-          x = -17880.77,
-          y = -16179.03,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor4",
-        LabelName = "BP_RandomCreateActor4",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -17859.96,
-          y = -15955.63,
-          z = 7489.57
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor5",
-        LabelName = "BP_RandomCreateActor5",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180017] = {
-      {
-        ActorLoc = {
-          x = -29292.43,
-          y = -36308.35,
-          z = 10024.07
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor7",
-        LabelName = "BP_RandomCreateActor7",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -19427.6,
-          y = -16710.51,
-          z = 7261.31
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor8",
-        LabelName = "BP_RandomCreateActor8",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -27896.65,
-          y = -13038.31,
-          z = 7573.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor9",
-        LabelName = "BP_RandomCreateActor9",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180018] = {
-      {
-        ActorLoc = {
-          x = -15925.52,
-          y = -30626.52,
-          z = 9360.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor10",
-        LabelName = "BP_RandomCreateActor10",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7230102] = {
-      {
-        ActorLoc = {
-          x = -27997.94,
-          y = -35637.02,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor11",
-        LabelName = "BP_RandomCreateActor11",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -27281.6,
-          y = -35703.74,
-          z = 9237.47
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor12",
-        LabelName = "BP_RandomCreateActor12",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -26472.95,
-          y = -36371.33,
-          z = 9223.93
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -5.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor13",
-        LabelName = "BP_RandomCreateActor13",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -23370.66,
-          y = -25760.09,
-          z = 8918.19
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor14",
-        LabelName = "BP_RandomCreateActor14",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -22532.89,
-          y = -25363.78,
-          z = 8945.58
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor15",
-        LabelName = "BP_RandomCreateActor15",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -19720.54,
-          y = -26336.11,
-          z = 9132.7
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 25.32,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor16",
-        LabelName = "BP_RandomCreateActor16",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    },
-    [7180129] = {
-      {
-        ActorLoc = {
-          x = -16321.96,
-          y = -22760.61,
-          z = 7544.61
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 47.65,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor17",
-        LabelName = "BP_RandomCreateActor17",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -25495.63,
-          y = -33110.23,
-          z = 9135.78
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 99.33,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor18",
-        LabelName = "BP_RandomCreateActor18",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      },
-      {
-        ActorLoc = {
-          x = -28410.77,
-          y = -17346.48,
-          z = 7634.64
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -95.82,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "",
-        DisplayName = "BP_RandomCreateActor19",
-        LabelName = "BP_RandomCreateActor19",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41807, 41808}
-      }
-    }
-  },
   [41809] = {
     [7180301] = {
       {
@@ -7498,7 +4918,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -7531,7 +4955,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -7564,7 +4992,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180302] = {
@@ -7599,7 +5031,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -7632,7 +5068,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -7665,7 +5105,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180303] = {
@@ -7700,7 +5144,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180304] = {
@@ -7735,7 +5183,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180305] = {
@@ -7770,7 +5222,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180307] = {
@@ -7805,7 +5261,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180306] = {
@@ -7840,7 +5300,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180308] = {
@@ -7875,7 +5339,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180309] = {
@@ -7910,7 +5378,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180310] = {
@@ -7945,7 +5417,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -7978,7 +5454,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8011,7 +5491,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8044,7 +5528,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8077,7 +5565,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8110,7 +5602,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8143,7 +5639,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8176,7 +5676,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8209,7 +5713,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8242,7 +5750,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     }
   },
@@ -8279,7 +5791,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8312,7 +5828,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8345,7 +5865,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180302] = {
@@ -8380,7 +5904,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8413,7 +5941,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8446,7 +5978,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180303] = {
@@ -8481,7 +6017,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180304] = {
@@ -8516,7 +6056,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180305] = {
@@ -8551,7 +6095,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180307] = {
@@ -8586,7 +6134,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180306] = {
@@ -8621,7 +6173,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180308] = {
@@ -8656,7 +6212,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180309] = {
@@ -8691,7 +6251,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180310] = {
@@ -8726,7 +6290,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8759,7 +6327,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8792,7 +6364,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8825,7 +6401,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8858,7 +6438,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8891,7 +6475,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8924,7 +6512,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8957,7 +6549,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -8990,7 +6586,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9023,11 +6623,15 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41809, 41810}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     }
   },
-  [41812] = {
+  [42805] = {
     [7180301] = {
       {
         ActorLoc = {
@@ -9060,7 +6664,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9093,7 +6701,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9126,7 +6738,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180302] = {
@@ -9161,7 +6777,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9194,7 +6814,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9227,7 +6851,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180303] = {
@@ -9262,7 +6890,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180304] = {
@@ -9297,7 +6929,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180305] = {
@@ -9332,7 +6968,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180307] = {
@@ -9367,7 +7007,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180306] = {
@@ -9402,7 +7046,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180308] = {
@@ -9437,7 +7085,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180309] = {
@@ -9472,7 +7124,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     },
     [7180310] = {
@@ -9507,7 +7163,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9540,7 +7200,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9573,7 +7237,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9606,7 +7274,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9639,7 +7311,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9672,7 +7348,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9705,7 +7385,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9738,7 +7422,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9771,7 +7459,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       },
       {
         ActorLoc = {
@@ -9804,788 +7496,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41812}
-      }
-    }
-  },
-  [41811] = {
-    [7180311] = {
-      {
-        ActorLoc = {
-          x = -22741.27,
-          y = -58403.77,
-          z = 6798.34
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor",
-        LabelName = "BP_RandomCreateActor",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -23857.1,
-          y = -52457.07,
-          z = 5776.83
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor2",
-        LabelName = "BP_RandomCreateActor2",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -16179.31,
-          y = -53771.73,
-          z = 5463.55
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 0.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor3",
-        LabelName = "BP_RandomCreateActor3",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180312] = {
-      {
-        ActorLoc = {
-          x = 617.25,
-          y = -68396.12,
-          z = 5174.73
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2317BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor4",
-        LabelName = "BP_RandomCreateActor4",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -5934.99,
-          y = -34000.36,
-          z = 4981.0
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -85.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2320BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor5",
-        LabelName = "BP_RandomCreateActor5",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -31761.13,
-          y = -55837.87,
-          z = 5215.17
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 150.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor6",
-        LabelName = "BP_RandomCreateActor6",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180313] = {
-      {
-        ActorLoc = {
-          x = -4422.29,
-          y = -49143.69,
-          z = 5650.01
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 155.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor7",
-        LabelName = "BP_RandomCreateActor7",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180314] = {
-      {
-        ActorLoc = {
-          x = -4338.74,
-          y = -48969.9,
-          z = 5650.01
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 155.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor8",
-        LabelName = "BP_RandomCreateActor8",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180315] = {
-      {
-        ActorLoc = {
-          x = -27530.85,
-          y = -50507.58,
-          z = 5287.65
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -40.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor9",
-        LabelName = "BP_RandomCreateActor9",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180317] = {
-      {
-        ActorLoc = {
-          x = -27022.66,
-          y = -65300.78,
-          z = 9440.01
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor10",
-        LabelName = "BP_RandomCreateActor10",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180316] = {
-      {
-        ActorLoc = {
-          x = -27676.21,
-          y = -50680.81,
-          z = 5287.65
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = -40.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor11",
-        LabelName = "BP_RandomCreateActor11",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180318] = {
-      {
-        ActorLoc = {
-          x = -26898.05,
-          y = -65425.37,
-          z = 9440.01
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor12",
-        LabelName = "BP_RandomCreateActor12",
-        RegionDataType = 0,
-        AutoActive = true,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180319] = {
-      {
-        ActorLoc = {
-          x = -10645.31,
-          y = -51250.98,
-          z = 5247.4
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor13",
-        LabelName = "BP_RandomCreateActor13",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      }
-    },
-    [7180320] = {
-      {
-        ActorLoc = {
-          x = -6615.34,
-          y = -50951.2,
-          z = 5491.56
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor14",
-        LabelName = "BP_RandomCreateActor14",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -9101.52,
-          y = -54141.44,
-          z = 5358.46
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor15",
-        LabelName = "BP_RandomCreateActor15",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -11151.44,
-          y = -51290.54,
-          z = 5275.7
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor16",
-        LabelName = "BP_RandomCreateActor16",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -13573.91,
-          y = -53712.97,
-          z = 5275.4
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor17",
-        LabelName = "BP_RandomCreateActor17",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -18250.45,
-          y = -49298.94,
-          z = 5257.75
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor18",
-        LabelName = "BP_RandomCreateActor18",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -20405.51,
-          y = -50457.7,
-          z = 5329.91
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor19",
-        LabelName = "BP_RandomCreateActor19",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -22478.23,
-          y = -48856.12,
-          z = 5245.48
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor20",
-        LabelName = "BP_RandomCreateActor20",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -27089.68,
-          y = -51889.57,
-          z = 5245.92
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor21",
-        LabelName = "BP_RandomCreateActor21",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -28290.88,
-          y = -54227.41,
-          z = 5250.35
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor22",
-        LabelName = "BP_RandomCreateActor22",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
-      },
-      {
-        ActorLoc = {
-          x = -28963.26,
-          y = -58497.79,
-          z = 5248.29
-        },
-        ActorRot = {
-          pitch = 0.0,
-          yaw = 45.0,
-          roll = 0.0
-        },
-        ActorId = 0,
-        IdxInRule = 0,
-        UnitType = "",
-        UnitId = 0,
-        Level = 0,
-        LevelName = "",
-        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
-        PreviewUnitId = 0,
-        ActorUnitType = "Mechanism",
-        DisplayName = "BP_RandomCreateActor23",
-        LabelName = "BP_RandomCreateActor23",
-        RegionDataType = 0,
-        AutoActive = false,
-        OutBattleBehaviorType = 0,
-        PatrolId = 0,
-        StrollRange = 0.0,
-        LoopMontageId = 0,
-        MontageList = {},
-        BornChangeBT = "None",
-        UsedEid = {},
-        ValidDungeonId = {41811}
+        ValidDungeonId = {
+          41809,
+          41810,
+          42805
+        }
       }
     }
   },
@@ -10622,7 +7537,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180006] = {
@@ -10657,7 +7576,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180008] = {
@@ -10692,7 +7615,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180003] = {
@@ -10727,7 +7654,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180007] = {
@@ -10762,7 +7693,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -10795,7 +7730,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180005] = {
@@ -10830,7 +7769,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -10863,7 +7806,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180001] = {
@@ -10898,7 +7845,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -10931,7 +7882,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -10964,7 +7919,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -10997,7 +7956,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11030,7 +7993,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180002] = {
@@ -11065,7 +8032,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7230101] = {
@@ -11100,7 +8071,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11133,7 +8108,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11166,7 +8145,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11199,7 +8182,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11232,7 +8219,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11265,7 +8256,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11298,7 +8293,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11331,7 +8330,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11364,7 +8367,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11397,7 +8404,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11430,7 +8441,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11463,7 +8478,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180109] = {
@@ -11498,7 +8517,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11531,7 +8554,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11564,7 +8591,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11597,7 +8628,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11630,7 +8665,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     }
   },
@@ -11667,7 +8706,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180006] = {
@@ -11702,7 +8745,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180008] = {
@@ -11737,7 +8784,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180003] = {
@@ -11772,7 +8823,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180007] = {
@@ -11807,7 +8862,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11840,7 +8899,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180005] = {
@@ -11875,7 +8938,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11908,7 +8975,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180001] = {
@@ -11943,7 +9014,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -11976,7 +9051,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12009,7 +9088,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12042,7 +9125,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12075,7 +9162,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180002] = {
@@ -12110,7 +9201,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7230101] = {
@@ -12145,7 +9240,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12178,7 +9277,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12211,7 +9314,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12244,7 +9351,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12277,7 +9388,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12310,7 +9425,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12343,7 +9462,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12376,7 +9499,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12409,7 +9536,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12442,7 +9573,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12475,7 +9610,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12508,7 +9647,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     },
     [7180109] = {
@@ -12543,7 +9686,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12576,7 +9723,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12609,7 +9760,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12642,7 +9797,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       },
       {
         ActorLoc = {
@@ -12675,7 +9834,1180 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41801, 41802}
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    }
+  },
+  [42801] = {
+    [7180004] = {
+      {
+        ActorLoc = {
+          x = 33773.67,
+          y = 42037.95,
+          z = 4128.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1212BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180006] = {
+      {
+        ActorLoc = {
+          x = 58592.36,
+          y = 15292.15,
+          z = 8500.14
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180008] = {
+      {
+        ActorLoc = {
+          x = 38377.12,
+          y = 21862.65,
+          z = 7278.53
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1210BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180003] = {
+      {
+        ActorLoc = {
+          x = 37462.46,
+          y = 47953.45,
+          z = 5157.51
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1212BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180007] = {
+      {
+        ActorLoc = {
+          x = 48923.38,
+          y = 37254.04,
+          z = 5764.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 48843.38,
+          y = 37064.04,
+          z = 5764.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor22",
+        LabelName = "BP_RandomCreateActor22",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180005] = {
+      {
+        ActorLoc = {
+          x = 36301.85,
+          y = 32414.56,
+          z = 4986.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 36171.85,
+          y = 32564.56,
+          z = 4986.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor21",
+        LabelName = "BP_RandomCreateActor21",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180001] = {
+      {
+        ActorLoc = {
+          x = 34498.23,
+          y = 40794.98,
+          z = 4120.16
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 38518.27,
+          y = 25842.59,
+          z = 6648.3
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1210BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 54430.0,
+          y = 36978.38,
+          z = 8435.0
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1411BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor20",
+        LabelName = "BP_RandomCreateActor20",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 55740.8,
+          y = 25341.3,
+          z = 8167.06
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor23",
+        LabelName = "BP_RandomCreateActor23",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 41125.43,
+          y = 47710.09,
+          z = 5131.11
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1312BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor24",
+        LabelName = "BP_RandomCreateActor24",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180002] = {
+      {
+        ActorLoc = {
+          x = 43433.79,
+          y = 17660.37,
+          z = 7893.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor25",
+        LabelName = "BP_RandomCreateActor25",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7230101] = {
+      {
+        ActorLoc = {
+          x = 46227.9,
+          y = 22117.27,
+          z = 6959.43
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor26",
+        LabelName = "BP_RandomCreateActor26",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 46413.73,
+          y = 21771.7,
+          z = 6959.43
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor27",
+        LabelName = "BP_RandomCreateActor27",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 53985.91,
+          y = 27669.26,
+          z = 7203.28
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor28",
+        LabelName = "BP_RandomCreateActor28",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 54018.79,
+          y = 28211.18,
+          z = 7146.74
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1411BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor29",
+        LabelName = "BP_RandomCreateActor29",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 45611.64,
+          y = 29183.04,
+          z = 5893.84
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor30",
+        LabelName = "BP_RandomCreateActor30",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 46163.33,
+          y = 29149.6,
+          z = 5938.69
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor31",
+        LabelName = "BP_RandomCreateActor31",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 47842.68,
+          y = 36975.07,
+          z = 5672.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor32",
+        LabelName = "BP_RandomCreateActor32",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 48122.8,
+          y = 37656.65,
+          z = 5645.34
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor34",
+        LabelName = "BP_RandomCreateActor34",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 33797.33,
+          y = 40798.09,
+          z = 4116.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor35",
+        LabelName = "BP_RandomCreateActor35",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 33041.27,
+          y = 41133.02,
+          z = 4116.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1212BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor36",
+        LabelName = "BP_RandomCreateActor36",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 39435.91,
+          y = 26006.14,
+          z = 6426.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor37",
+        LabelName = "BP_RandomCreateActor37",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 39402.11,
+          y = 25448.41,
+          z = 6454.69
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor38",
+        LabelName = "BP_RandomCreateActor38",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      }
+    },
+    [7180109] = {
+      {
+        ActorLoc = {
+          x = 33789.91,
+          y = 67097.24,
+          z = 5241.25
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -35.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1214BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor33",
+        LabelName = "BP_RandomCreateActor33",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 58657.35,
+          y = 19438.58,
+          z = 8496.97
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 167.62,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor39",
+        LabelName = "BP_RandomCreateActor39",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 35374.98,
+          y = 34666.66,
+          z = 4643.96
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -140.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor40",
+        LabelName = "BP_RandomCreateActor40",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 50154.02,
+          y = 41606.61,
+          z = 6316.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 125.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1312BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor41",
+        LabelName = "BP_RandomCreateActor41",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
+      },
+      {
+        ActorLoc = {
+          x = 41420.95,
+          y = 70353.47,
+          z = 4316.79
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 145.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1314BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor42",
+        LabelName = "BP_RandomCreateActor42",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41801,
+          41802,
+          42801
+        }
       }
     }
   },
@@ -12712,7 +11044,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180022] = {
@@ -12747,7 +11083,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180024] = {
@@ -12782,7 +11122,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180019] = {
@@ -12817,7 +11161,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180023] = {
@@ -12852,7 +11200,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -12885,7 +11237,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180021] = {
@@ -12920,7 +11276,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -12953,7 +11313,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180015] = {
@@ -12988,7 +11352,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13021,7 +11389,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13054,7 +11426,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13087,7 +11463,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13120,7 +11500,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180016] = {
@@ -13155,7 +11539,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7230103] = {
@@ -13190,7 +11578,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13223,7 +11615,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13256,7 +11652,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13289,7 +11689,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13322,7 +11726,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13355,7 +11763,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13388,7 +11800,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13421,7 +11837,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13454,7 +11874,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13487,7 +11911,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13520,7 +11948,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13553,7 +11985,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180109] = {
@@ -13588,7 +12024,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13621,7 +12061,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13654,7 +12098,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13687,7 +12135,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13720,7 +12172,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     }
   },
@@ -13757,7 +12213,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180022] = {
@@ -13792,7 +12252,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180024] = {
@@ -13827,7 +12291,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180019] = {
@@ -13862,7 +12330,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180023] = {
@@ -13897,7 +12369,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13930,7 +12406,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180021] = {
@@ -13965,7 +12445,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -13998,7 +12482,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180015] = {
@@ -14033,7 +12521,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14066,7 +12558,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14099,7 +12595,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14132,7 +12632,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14165,7 +12669,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180016] = {
@@ -14200,7 +12708,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7230103] = {
@@ -14235,7 +12747,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14268,7 +12784,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14301,7 +12821,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14334,7 +12858,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14367,7 +12895,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14400,7 +12932,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14433,7 +12969,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14466,7 +13006,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14499,7 +13043,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14532,7 +13080,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14565,7 +13117,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14598,7 +13154,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       }
     },
     [7180109] = {
@@ -14633,7 +13193,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14666,7 +13230,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14699,7 +13267,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14732,7 +13304,11 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
       },
       {
         ActorLoc = {
@@ -14765,7 +13341,8630 @@ return {
         MontageList = {},
         BornChangeBT = "None",
         UsedEid = {},
-        ValidDungeonId = {41803, 41804}
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    }
+  },
+  [42802] = {
+    [7180020] = {
+      {
+        ActorLoc = {
+          x = 33773.67,
+          y = 42037.95,
+          z = 4128.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1212BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180022] = {
+      {
+        ActorLoc = {
+          x = 58592.36,
+          y = 15292.15,
+          z = 8500.14
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180024] = {
+      {
+        ActorLoc = {
+          x = 38377.12,
+          y = 21862.65,
+          z = 7278.53
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1210BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180019] = {
+      {
+        ActorLoc = {
+          x = 37462.46,
+          y = 47953.45,
+          z = 5157.51
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1212BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180023] = {
+      {
+        ActorLoc = {
+          x = 48923.38,
+          y = 37254.04,
+          z = 5764.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 48843.38,
+          y = 37064.04,
+          z = 5764.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor22",
+        LabelName = "BP_RandomCreateActor22",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180021] = {
+      {
+        ActorLoc = {
+          x = 36301.85,
+          y = 32414.56,
+          z = 4986.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 36171.85,
+          y = 32564.56,
+          z = 4986.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor21",
+        LabelName = "BP_RandomCreateActor21",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180015] = {
+      {
+        ActorLoc = {
+          x = 34498.23,
+          y = 40794.98,
+          z = 4120.16
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 38518.27,
+          y = 25842.59,
+          z = 6648.3
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1210BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 54430.0,
+          y = 36978.38,
+          z = 8435.0
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1411BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor20",
+        LabelName = "BP_RandomCreateActor20",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 55740.8,
+          y = 25341.3,
+          z = 8167.06
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor23",
+        LabelName = "BP_RandomCreateActor23",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 41125.43,
+          y = 47710.09,
+          z = 5131.11
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1312BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor24",
+        LabelName = "BP_RandomCreateActor24",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180016] = {
+      {
+        ActorLoc = {
+          x = 43433.79,
+          y = 17660.37,
+          z = 7893.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor25",
+        LabelName = "BP_RandomCreateActor25",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7230103] = {
+      {
+        ActorLoc = {
+          x = 46227.9,
+          y = 22117.27,
+          z = 6959.43
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor26",
+        LabelName = "BP_RandomCreateActor26",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 46413.73,
+          y = 21771.7,
+          z = 6959.43
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor27",
+        LabelName = "BP_RandomCreateActor27",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 53985.91,
+          y = 27669.26,
+          z = 7203.28
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor28",
+        LabelName = "BP_RandomCreateActor28",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 54018.79,
+          y = 28211.18,
+          z = 7146.74
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1411BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor29",
+        LabelName = "BP_RandomCreateActor29",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 45611.64,
+          y = 29183.04,
+          z = 5893.84
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor30",
+        LabelName = "BP_RandomCreateActor30",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 46163.33,
+          y = 29149.6,
+          z = 5938.69
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor31",
+        LabelName = "BP_RandomCreateActor31",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 47842.68,
+          y = 36975.07,
+          z = 5672.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor32",
+        LabelName = "BP_RandomCreateActor32",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 48122.8,
+          y = 37656.65,
+          z = 5645.34
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1311BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor34",
+        LabelName = "BP_RandomCreateActor34",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 33797.33,
+          y = 40798.09,
+          z = 4116.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor35",
+        LabelName = "BP_RandomCreateActor35",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 33041.27,
+          y = 41133.02,
+          z = 4116.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1212BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor36",
+        LabelName = "BP_RandomCreateActor36",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 39435.91,
+          y = 26006.14,
+          z = 6426.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor37",
+        LabelName = "BP_RandomCreateActor37",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 39402.11,
+          y = 25448.41,
+          z = 6454.69
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -3.47,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1310BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor38",
+        LabelName = "BP_RandomCreateActor38",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    },
+    [7180109] = {
+      {
+        ActorLoc = {
+          x = 33789.91,
+          y = 67097.24,
+          z = 5241.25
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -35.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1214BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor33",
+        LabelName = "BP_RandomCreateActor33",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 58657.35,
+          y = 19438.58,
+          z = 8496.97
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 167.62,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1410BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor39",
+        LabelName = "BP_RandomCreateActor39",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 35374.98,
+          y = 34666.66,
+          z = 4643.96
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -140.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1211BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor40",
+        LabelName = "BP_RandomCreateActor40",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 50154.02,
+          y = 41606.61,
+          z = 6316.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 125.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1312BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor41",
+        LabelName = "BP_RandomCreateActor41",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      },
+      {
+        ActorLoc = {
+          x = 41420.95,
+          y = 70353.47,
+          z = 4316.79
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 145.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_1314BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor42",
+        LabelName = "BP_RandomCreateActor42",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41803,
+          41804,
+          42802
+        }
+      }
+    }
+  },
+  [41805] = {
+    [7180012] = {
+      {
+        ActorLoc = {
+          x = -24952.15,
+          y = -36344.43,
+          z = 9314.15
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180009] = {
+      {
+        ActorLoc = {
+          x = -23562.29,
+          y = -2729.73,
+          z = 7704.05
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180010] = {
+      {
+        ActorLoc = {
+          x = -24523.54,
+          y = -12455.98,
+          z = 7337.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -24502.35,
+          y = -12678.25,
+          z = 7348.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180011] = {
+      {
+        ActorLoc = {
+          x = -17880.77,
+          y = -16179.03,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -17859.96,
+          y = -15955.63,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180013] = {
+      {
+        ActorLoc = {
+          x = -29292.43,
+          y = -36308.35,
+          z = 10024.07
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19427.6,
+          y = -16710.51,
+          z = 7261.31
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27896.65,
+          y = -13038.31,
+          z = 7573.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180014] = {
+      {
+        ActorLoc = {
+          x = -15925.52,
+          y = -30626.52,
+          z = 9360.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7230102] = {
+      {
+        ActorLoc = {
+          x = -27997.94,
+          y = -35637.02,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27281.6,
+          y = -35703.74,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -26472.95,
+          y = -36371.33,
+          z = 9223.93
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -23370.66,
+          y = -25760.09,
+          z = 8918.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -22532.89,
+          y = -25363.78,
+          z = 8945.58
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19720.54,
+          y = -26336.11,
+          z = 9132.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180113] = {
+      {
+        ActorLoc = {
+          x = -16321.96,
+          y = -22760.61,
+          z = 7544.61
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 47.65,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -25495.63,
+          y = -33110.23,
+          z = 9135.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 99.33,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -28410.77,
+          y = -17346.48,
+          z = 7634.64
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -95.82,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    }
+  },
+  [41806] = {
+    [7180012] = {
+      {
+        ActorLoc = {
+          x = -24952.15,
+          y = -36344.43,
+          z = 9314.15
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180009] = {
+      {
+        ActorLoc = {
+          x = -23562.29,
+          y = -2729.73,
+          z = 7704.05
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180010] = {
+      {
+        ActorLoc = {
+          x = -24523.54,
+          y = -12455.98,
+          z = 7337.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -24502.35,
+          y = -12678.25,
+          z = 7348.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180011] = {
+      {
+        ActorLoc = {
+          x = -17880.77,
+          y = -16179.03,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -17859.96,
+          y = -15955.63,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180013] = {
+      {
+        ActorLoc = {
+          x = -29292.43,
+          y = -36308.35,
+          z = 10024.07
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19427.6,
+          y = -16710.51,
+          z = 7261.31
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27896.65,
+          y = -13038.31,
+          z = 7573.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180014] = {
+      {
+        ActorLoc = {
+          x = -15925.52,
+          y = -30626.52,
+          z = 9360.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7230102] = {
+      {
+        ActorLoc = {
+          x = -27997.94,
+          y = -35637.02,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27281.6,
+          y = -35703.74,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -26472.95,
+          y = -36371.33,
+          z = 9223.93
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -23370.66,
+          y = -25760.09,
+          z = 8918.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -22532.89,
+          y = -25363.78,
+          z = 8945.58
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19720.54,
+          y = -26336.11,
+          z = 9132.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180113] = {
+      {
+        ActorLoc = {
+          x = -16321.96,
+          y = -22760.61,
+          z = 7544.61
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 47.65,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -25495.63,
+          y = -33110.23,
+          z = 9135.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 99.33,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -28410.77,
+          y = -17346.48,
+          z = 7634.64
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -95.82,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    }
+  },
+  [42803] = {
+    [7180012] = {
+      {
+        ActorLoc = {
+          x = -24952.15,
+          y = -36344.43,
+          z = 9314.15
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180009] = {
+      {
+        ActorLoc = {
+          x = -23562.29,
+          y = -2729.73,
+          z = 7704.05
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180010] = {
+      {
+        ActorLoc = {
+          x = -24523.54,
+          y = -12455.98,
+          z = 7337.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -24502.35,
+          y = -12678.25,
+          z = 7348.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180011] = {
+      {
+        ActorLoc = {
+          x = -17880.77,
+          y = -16179.03,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -17859.96,
+          y = -15955.63,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180013] = {
+      {
+        ActorLoc = {
+          x = -29292.43,
+          y = -36308.35,
+          z = 10024.07
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19427.6,
+          y = -16710.51,
+          z = 7261.31
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27896.65,
+          y = -13038.31,
+          z = 7573.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180014] = {
+      {
+        ActorLoc = {
+          x = -15925.52,
+          y = -30626.52,
+          z = 9360.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7230102] = {
+      {
+        ActorLoc = {
+          x = -27997.94,
+          y = -35637.02,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27281.6,
+          y = -35703.74,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -26472.95,
+          y = -36371.33,
+          z = 9223.93
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -23370.66,
+          y = -25760.09,
+          z = 8918.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -22532.89,
+          y = -25363.78,
+          z = 8945.58
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19720.54,
+          y = -26336.11,
+          z = 9132.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    },
+    [7180113] = {
+      {
+        ActorLoc = {
+          x = -16321.96,
+          y = -22760.61,
+          z = 7544.61
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 47.65,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -25495.63,
+          y = -33110.23,
+          z = 9135.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 99.33,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      },
+      {
+        ActorLoc = {
+          x = -28410.77,
+          y = -17346.48,
+          z = 7634.64
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -95.82,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41805,
+          41806,
+          42803
+        }
+      }
+    }
+  },
+  [41807] = {
+    [7180028] = {
+      {
+        ActorLoc = {
+          x = -24952.15,
+          y = -36344.43,
+          z = 9314.15
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180025] = {
+      {
+        ActorLoc = {
+          x = -23562.29,
+          y = -2729.73,
+          z = 7704.05
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180026] = {
+      {
+        ActorLoc = {
+          x = -24523.54,
+          y = -12455.98,
+          z = 7337.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -24502.35,
+          y = -12678.25,
+          z = 7348.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180027] = {
+      {
+        ActorLoc = {
+          x = -17880.77,
+          y = -16179.03,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -17859.96,
+          y = -15955.63,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180017] = {
+      {
+        ActorLoc = {
+          x = -29292.43,
+          y = -36308.35,
+          z = 10024.07
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19427.6,
+          y = -16710.51,
+          z = 7261.31
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27896.65,
+          y = -13038.31,
+          z = 7573.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180018] = {
+      {
+        ActorLoc = {
+          x = -15925.52,
+          y = -30626.52,
+          z = 9360.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7230102] = {
+      {
+        ActorLoc = {
+          x = -27997.94,
+          y = -35637.02,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27281.6,
+          y = -35703.74,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -26472.95,
+          y = -36371.33,
+          z = 9223.93
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -23370.66,
+          y = -25760.09,
+          z = 8918.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -22532.89,
+          y = -25363.78,
+          z = 8945.58
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19720.54,
+          y = -26336.11,
+          z = 9132.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180129] = {
+      {
+        ActorLoc = {
+          x = -16321.96,
+          y = -22760.61,
+          z = 7544.61
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 47.65,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -25495.63,
+          y = -33110.23,
+          z = 9135.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 99.33,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -28410.77,
+          y = -17346.48,
+          z = 7634.64
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -95.82,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    }
+  },
+  [41808] = {
+    [7180028] = {
+      {
+        ActorLoc = {
+          x = -24952.15,
+          y = -36344.43,
+          z = 9314.15
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180025] = {
+      {
+        ActorLoc = {
+          x = -23562.29,
+          y = -2729.73,
+          z = 7704.05
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180026] = {
+      {
+        ActorLoc = {
+          x = -24523.54,
+          y = -12455.98,
+          z = 7337.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -24502.35,
+          y = -12678.25,
+          z = 7348.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180027] = {
+      {
+        ActorLoc = {
+          x = -17880.77,
+          y = -16179.03,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -17859.96,
+          y = -15955.63,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180017] = {
+      {
+        ActorLoc = {
+          x = -29292.43,
+          y = -36308.35,
+          z = 10024.07
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19427.6,
+          y = -16710.51,
+          z = 7261.31
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27896.65,
+          y = -13038.31,
+          z = 7573.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180018] = {
+      {
+        ActorLoc = {
+          x = -15925.52,
+          y = -30626.52,
+          z = 9360.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7230102] = {
+      {
+        ActorLoc = {
+          x = -27997.94,
+          y = -35637.02,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27281.6,
+          y = -35703.74,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -26472.95,
+          y = -36371.33,
+          z = 9223.93
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -23370.66,
+          y = -25760.09,
+          z = 8918.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -22532.89,
+          y = -25363.78,
+          z = 8945.58
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19720.54,
+          y = -26336.11,
+          z = 9132.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180129] = {
+      {
+        ActorLoc = {
+          x = -16321.96,
+          y = -22760.61,
+          z = 7544.61
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 47.65,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -25495.63,
+          y = -33110.23,
+          z = 9135.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 99.33,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -28410.77,
+          y = -17346.48,
+          z = 7634.64
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -95.82,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    }
+  },
+  [42804] = {
+    [7180028] = {
+      {
+        ActorLoc = {
+          x = -24952.15,
+          y = -36344.43,
+          z = 9314.15
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180025] = {
+      {
+        ActorLoc = {
+          x = -23562.29,
+          y = -2729.73,
+          z = 7704.05
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0808BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180026] = {
+      {
+        ActorLoc = {
+          x = -24523.54,
+          y = -12455.98,
+          z = 7337.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -24502.35,
+          y = -12678.25,
+          z = 7348.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180027] = {
+      {
+        ActorLoc = {
+          x = -17880.77,
+          y = -16179.03,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -17859.96,
+          y = -15955.63,
+          z = 7489.57
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180017] = {
+      {
+        ActorLoc = {
+          x = -29292.43,
+          y = -36308.35,
+          z = 10024.07
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19427.6,
+          y = -16710.51,
+          z = 7261.31
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27896.65,
+          y = -13038.31,
+          z = 7573.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180018] = {
+      {
+        ActorLoc = {
+          x = -15925.52,
+          y = -30626.52,
+          z = 9360.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7230102] = {
+      {
+        ActorLoc = {
+          x = -27997.94,
+          y = -35637.02,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -27281.6,
+          y = -35703.74,
+          z = 9237.47
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -26472.95,
+          y = -36371.33,
+          z = 9223.93
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -5.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0705BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -23370.66,
+          y = -25760.09,
+          z = 8918.19
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -22532.89,
+          y = -25363.78,
+          z = 8945.58
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -19720.54,
+          y = -26336.11,
+          z = 9132.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 25.32,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0806BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    },
+    [7180129] = {
+      {
+        ActorLoc = {
+          x = -16321.96,
+          y = -22760.61,
+          z = 7544.61
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 47.65,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0807BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -25495.63,
+          y = -33110.23,
+          z = 9135.78
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 99.33,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0706BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      },
+      {
+        ActorLoc = {
+          x = -28410.77,
+          y = -17346.48,
+          z = 7634.64
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -95.82,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Yanjindu_Art_0707BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {
+          41807,
+          41808,
+          42804
+        }
+      }
+    }
+  },
+  [41811] = {
+    [7180311] = {
+      {
+        ActorLoc = {
+          x = -22741.27,
+          y = -58403.77,
+          z = 6798.34
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -23857.1,
+          y = -52457.07,
+          z = 5776.83
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -16179.31,
+          y = -53771.73,
+          z = 5463.55
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180312] = {
+      {
+        ActorLoc = {
+          x = 617.25,
+          y = -68396.12,
+          z = 5174.73
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2317BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -5934.99,
+          y = -34000.36,
+          z = 4981.0
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -85.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2320BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -31761.13,
+          y = -55837.87,
+          z = 5215.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 150.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180313] = {
+      {
+        ActorLoc = {
+          x = -4422.29,
+          y = -49143.69,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180314] = {
+      {
+        ActorLoc = {
+          x = -4338.74,
+          y = -48969.9,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180315] = {
+      {
+        ActorLoc = {
+          x = -27530.85,
+          y = -50507.58,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180317] = {
+      {
+        ActorLoc = {
+          x = -27022.66,
+          y = -65300.78,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180316] = {
+      {
+        ActorLoc = {
+          x = -27676.21,
+          y = -50680.81,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180318] = {
+      {
+        ActorLoc = {
+          x = -26898.05,
+          y = -65425.37,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180319] = {
+      {
+        ActorLoc = {
+          x = -10645.31,
+          y = -51250.98,
+          z = 5247.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180320] = {
+      {
+        ActorLoc = {
+          x = -6615.34,
+          y = -50951.2,
+          z = 5491.56
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -9101.52,
+          y = -54141.44,
+          z = 5358.46
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -11151.44,
+          y = -51290.54,
+          z = 5275.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -13573.91,
+          y = -53712.97,
+          z = 5275.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -18250.45,
+          y = -49298.94,
+          z = 5257.75
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -20405.51,
+          y = -50457.7,
+          z = 5329.91
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -22478.23,
+          y = -48856.12,
+          z = 5245.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor20",
+        LabelName = "BP_RandomCreateActor20",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -27089.68,
+          y = -51889.57,
+          z = 5245.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor21",
+        LabelName = "BP_RandomCreateActor21",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -28290.88,
+          y = -54227.41,
+          z = 5250.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor22",
+        LabelName = "BP_RandomCreateActor22",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -28963.26,
+          y = -58497.79,
+          z = 5248.29
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor23",
+        LabelName = "BP_RandomCreateActor23",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    }
+  },
+  [42806] = {
+    [7180311] = {
+      {
+        ActorLoc = {
+          x = -22741.27,
+          y = -58403.77,
+          z = 6798.34
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -23857.1,
+          y = -52457.07,
+          z = 5776.83
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -16179.31,
+          y = -53771.73,
+          z = 5463.55
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180312] = {
+      {
+        ActorLoc = {
+          x = 617.25,
+          y = -68396.12,
+          z = 5174.73
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2317BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -5934.99,
+          y = -34000.36,
+          z = 4981.0
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -85.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2320BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -31761.13,
+          y = -55837.87,
+          z = 5215.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 150.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180313] = {
+      {
+        ActorLoc = {
+          x = -4422.29,
+          y = -49143.69,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180314] = {
+      {
+        ActorLoc = {
+          x = -4338.74,
+          y = -48969.9,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180315] = {
+      {
+        ActorLoc = {
+          x = -27530.85,
+          y = -50507.58,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180317] = {
+      {
+        ActorLoc = {
+          x = -27022.66,
+          y = -65300.78,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180316] = {
+      {
+        ActorLoc = {
+          x = -27676.21,
+          y = -50680.81,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180318] = {
+      {
+        ActorLoc = {
+          x = -26898.05,
+          y = -65425.37,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180319] = {
+      {
+        ActorLoc = {
+          x = -10645.31,
+          y = -51250.98,
+          z = 5247.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    },
+    [7180320] = {
+      {
+        ActorLoc = {
+          x = -6615.34,
+          y = -50951.2,
+          z = 5491.56
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -9101.52,
+          y = -54141.44,
+          z = 5358.46
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -11151.44,
+          y = -51290.54,
+          z = 5275.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -13573.91,
+          y = -53712.97,
+          z = 5275.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -18250.45,
+          y = -49298.94,
+          z = 5257.75
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -20405.51,
+          y = -50457.7,
+          z = 5329.91
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -22478.23,
+          y = -48856.12,
+          z = 5245.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor20",
+        LabelName = "BP_RandomCreateActor20",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -27089.68,
+          y = -51889.57,
+          z = 5245.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor21",
+        LabelName = "BP_RandomCreateActor21",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -28290.88,
+          y = -54227.41,
+          z = 5250.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor22",
+        LabelName = "BP_RandomCreateActor22",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      },
+      {
+        ActorLoc = {
+          x = -28963.26,
+          y = -58497.79,
+          z = 5248.29
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor23",
+        LabelName = "BP_RandomCreateActor23",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41811, 42806}
+      }
+    }
+  },
+  [41812] = {
+    [7180301] = {
+      {
+        ActorLoc = {
+          x = -22741.27,
+          y = -58403.77,
+          z = 6798.34
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -23857.1,
+          y = -52457.07,
+          z = 5776.83
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -16179.31,
+          y = -53771.73,
+          z = 5463.55
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180302] = {
+      {
+        ActorLoc = {
+          x = 617.25,
+          y = -68396.12,
+          z = 5174.73
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2317BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -5934.99,
+          y = -34000.36,
+          z = 4981.0
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -85.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2320BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -31761.13,
+          y = -55837.87,
+          z = 5215.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 150.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180303] = {
+      {
+        ActorLoc = {
+          x = -4422.29,
+          y = -49143.69,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180304] = {
+      {
+        ActorLoc = {
+          x = -4338.74,
+          y = -48969.9,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180305] = {
+      {
+        ActorLoc = {
+          x = -27530.85,
+          y = -50507.58,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180307] = {
+      {
+        ActorLoc = {
+          x = -27022.66,
+          y = -65300.78,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180306] = {
+      {
+        ActorLoc = {
+          x = -27676.21,
+          y = -50680.81,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180308] = {
+      {
+        ActorLoc = {
+          x = -26898.05,
+          y = -65425.37,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180309] = {
+      {
+        ActorLoc = {
+          x = -10645.31,
+          y = -51250.98,
+          z = 5247.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180310] = {
+      {
+        ActorLoc = {
+          x = -6615.34,
+          y = -50951.2,
+          z = 5491.56
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -9101.52,
+          y = -54141.44,
+          z = 5358.46
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -11151.44,
+          y = -51290.54,
+          z = 5275.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -13573.91,
+          y = -53712.97,
+          z = 5275.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -18250.45,
+          y = -49298.94,
+          z = 5257.75
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -20405.51,
+          y = -50457.7,
+          z = 5329.91
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -22478.23,
+          y = -48856.12,
+          z = 5245.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor20",
+        LabelName = "BP_RandomCreateActor20",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -27089.68,
+          y = -51889.57,
+          z = 5245.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor21",
+        LabelName = "BP_RandomCreateActor21",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -28290.88,
+          y = -54227.41,
+          z = 5250.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor22",
+        LabelName = "BP_RandomCreateActor22",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -28963.26,
+          y = -58497.79,
+          z = 5248.29
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor23",
+        LabelName = "BP_RandomCreateActor23",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    }
+  },
+  [42807] = {
+    [7180301] = {
+      {
+        ActorLoc = {
+          x = -22741.27,
+          y = -58403.77,
+          z = 6798.34
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor",
+        LabelName = "BP_RandomCreateActor",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -23857.1,
+          y = -52457.07,
+          z = 5776.83
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor2",
+        LabelName = "BP_RandomCreateActor2",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -16179.31,
+          y = -53771.73,
+          z = 5463.55
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 0.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor3",
+        LabelName = "BP_RandomCreateActor3",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180302] = {
+      {
+        ActorLoc = {
+          x = 617.25,
+          y = -68396.12,
+          z = 5174.73
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2317BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor4",
+        LabelName = "BP_RandomCreateActor4",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -5934.99,
+          y = -34000.36,
+          z = 4981.0
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -85.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2320BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor5",
+        LabelName = "BP_RandomCreateActor5",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -31761.13,
+          y = -55837.87,
+          z = 5215.17
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 150.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor6",
+        LabelName = "BP_RandomCreateActor6",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180303] = {
+      {
+        ActorLoc = {
+          x = -4422.29,
+          y = -49143.69,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor7",
+        LabelName = "BP_RandomCreateActor7",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180304] = {
+      {
+        ActorLoc = {
+          x = -4338.74,
+          y = -48969.9,
+          z = 5650.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 155.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2319BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor8",
+        LabelName = "BP_RandomCreateActor8",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180305] = {
+      {
+        ActorLoc = {
+          x = -27530.85,
+          y = -50507.58,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor9",
+        LabelName = "BP_RandomCreateActor9",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180307] = {
+      {
+        ActorLoc = {
+          x = -27022.66,
+          y = -65300.78,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor10",
+        LabelName = "BP_RandomCreateActor10",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180306] = {
+      {
+        ActorLoc = {
+          x = -27676.21,
+          y = -50680.81,
+          z = 5287.65
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = -40.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor11",
+        LabelName = "BP_RandomCreateActor11",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180308] = {
+      {
+        ActorLoc = {
+          x = -26898.05,
+          y = -65425.37,
+          z = 9440.01
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor12",
+        LabelName = "BP_RandomCreateActor12",
+        RegionDataType = 0,
+        AutoActive = true,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180309] = {
+      {
+        ActorLoc = {
+          x = -10645.31,
+          y = -51250.98,
+          z = 5247.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor13",
+        LabelName = "BP_RandomCreateActor13",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      }
+    },
+    [7180310] = {
+      {
+        ActorLoc = {
+          x = -6615.34,
+          y = -50951.2,
+          z = 5491.56
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor14",
+        LabelName = "BP_RandomCreateActor14",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -9101.52,
+          y = -54141.44,
+          z = 5358.46
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor15",
+        LabelName = "BP_RandomCreateActor15",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -11151.44,
+          y = -51290.54,
+          z = 5275.7
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor16",
+        LabelName = "BP_RandomCreateActor16",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -13573.91,
+          y = -53712.97,
+          z = 5275.4
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor17",
+        LabelName = "BP_RandomCreateActor17",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -18250.45,
+          y = -49298.94,
+          z = 5257.75
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2219BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor18",
+        LabelName = "BP_RandomCreateActor18",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -20405.51,
+          y = -50457.7,
+          z = 5329.91
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor19",
+        LabelName = "BP_RandomCreateActor19",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -22478.23,
+          y = -48856.12,
+          z = 5245.48
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor20",
+        LabelName = "BP_RandomCreateActor20",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -27089.68,
+          y = -51889.57,
+          z = 5245.92
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor21",
+        LabelName = "BP_RandomCreateActor21",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -28290.88,
+          y = -54227.41,
+          z = 5250.35
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2119BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor22",
+        LabelName = "BP_RandomCreateActor22",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
+      },
+      {
+        ActorLoc = {
+          x = -28963.26,
+          y = -58497.79,
+          z = 5248.29
+        },
+        ActorRot = {
+          pitch = 0.0,
+          yaw = 45.0,
+          roll = 0.0
+        },
+        ActorId = 0,
+        IdxInRule = 0,
+        UnitType = "",
+        UnitId = 0,
+        Level = 0,
+        LevelName = "",
+        WCLevelName = "Huaxu_Haojing_Art_2118BigObjs",
+        PreviewUnitId = 0,
+        ActorUnitType = "Mechanism",
+        DisplayName = "BP_RandomCreateActor23",
+        LabelName = "BP_RandomCreateActor23",
+        RegionDataType = 0,
+        AutoActive = false,
+        OutBattleBehaviorType = 0,
+        PatrolId = 0,
+        StrollRange = 0.0,
+        LoopMontageId = 0,
+        MontageList = {},
+        BornChangeBT = "None",
+        UsedEid = {},
+        ValidDungeonId = {41812, 42807}
       }
     }
   }

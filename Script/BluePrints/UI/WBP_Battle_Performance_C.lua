@@ -23,7 +23,7 @@ function M:OnLoaded(...)
       GameMode:PostCustomEvent(FinishEventName)
     end
     if GameMode then
-      GameMode:PostCustomEvent("OnBattlePerformanceUIFinished")
+      GameMode:TriggerOnBattlePerformanceUIFinished()
     end
     self:Close()
     ClearInputCacheSafely(self)

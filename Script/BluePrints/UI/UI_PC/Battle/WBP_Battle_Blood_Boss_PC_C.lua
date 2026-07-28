@@ -439,13 +439,24 @@ function WBP_Battle_Blood_Boss_PC_C:RefreshBossInfoByAction(ActionName, DamageEv
   if "Attack" == ActionName then
     local NowTime = UE4.UGameplayStatics.GetRealTimeSeconds(self)
     local Info = DamageEvent.SkillId and DataMgr.Skill[DamageEvent.SkillId] or nil
-    if Info and Info[1] then
+    if Info and Info[1] and Info[1][0] then
       local SkillType = Info[1][0].SkillType
       if "Attack" == SkillType then
         self.LastAttackTime = NowTime
       end
       if "Attack" == SkillType or "FallAttack" == SkillType or "HeavyAttack" == SkillType or "SlideAttack" == SkillType then
         self.IsPlayHitAnimation = true
+      end
+    else
+      if not Info then
+        DebugPrint("WBP_Battle_Blood_Boss_PC_C:RefreshBossInfoByAction - Info is nil")
+      elseif not Info[1] then
+        DebugPrint("WBP_Battle_Blood_Boss_PC_C:RefreshBossInfoByAction - Info[1] is nil; Info:", Info)
+      elseif not Info[1][0] then
+        DebugPrint("WBP_Battle_Blood_Boss_PC_C:RefreshBossInfoByAction - Info[1][0] is nil; Info:", Info, " Info[1]:", Info[1])
+      end
+      if DataMgr then
+        DataMgr.Print_t(Info)
       end
     end
     if NowTime - self.LastAttackTime > self.ComboAttackTime then

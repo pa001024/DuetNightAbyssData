@@ -670,6 +670,66 @@ return {
       UnitType = "Npc",
       UnitId = 700392
     },
+    ["2010356"] = {
+      CreatorId = 2010356,
+      UnitType = "Npc",
+      UnitId = 700396
+    },
+    ["2010357"] = {
+      CreatorId = 2010357,
+      UnitType = "Npc",
+      UnitId = 700398
+    },
+    ["2010358"] = {
+      CreatorId = 2010358,
+      UnitType = "Npc",
+      UnitId = 700402
+    },
+    ["2010359"] = {
+      CreatorId = 2010359,
+      UnitType = "Npc",
+      UnitId = 700399
+    },
+    ["2010360"] = {
+      CreatorId = 2010360,
+      UnitType = "Npc",
+      UnitId = 700399
+    },
+    ["2010361"] = {
+      CreatorId = 2010361,
+      UnitType = "Npc",
+      UnitId = 700401
+    },
+    ["2010362"] = {
+      CreatorId = 2010362,
+      UnitType = "Npc",
+      UnitId = 700396
+    },
+    ["2010363"] = {
+      CreatorId = 2010363,
+      UnitType = "Npc",
+      UnitId = 700398
+    },
+    ["2010364"] = {
+      CreatorId = 2010364,
+      UnitType = "Npc",
+      UnitId = 700402
+    },
+    ["2010365"] = {
+      CreatorId = 2010365,
+      UnitType = "Npc",
+      UnitId = 700399
+    },
+    ["2010366"] = {
+      CreatorId = 2010366,
+      UnitType = "Npc",
+      UnitId = 700399
+    },
+    ["2010367"] = {
+      CreatorId = 2010367,
+      UnitType = "Npc",
+      UnitId = 700401
+    },
     ["232010265"] = {
       CreatorId = 232010265,
       UnitType = "Npc",
@@ -1341,5 +1401,6 @@ return {
   RandomRule = {
     ["9050101"] = {RandomRuleId = 9050101},
     ["8021001"] = {RandomRuleId = 8021001}
-  }
+  },
+  MissionGroup = {}
 }

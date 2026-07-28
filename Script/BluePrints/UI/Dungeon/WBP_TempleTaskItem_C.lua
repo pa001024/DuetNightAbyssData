@@ -39,4 +39,16 @@ function M:ShowStarGrey()
   self.StarSlot:GetChildAt(0).WS_Type:SetActiveWidgetIndex(0)
 end
 
+function M:PlayNormalAnimationToWeaponVerify()
+  self:PlayAnimation(self.Normal_Weapon)
+end
+
+function M:PlayStarAnimationToWeaponVerify()
+  self:PlayAnimation(self.Gain_Weapon)
+end
+
+function M:PlayLossAnimationToWeaponVerify()
+  self:PlayAnimation(self.Loss_Weapon)
+end
+
 return M

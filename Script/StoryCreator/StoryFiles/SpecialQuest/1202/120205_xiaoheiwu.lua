@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -624,6 +624,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -664,7 +665,7 @@ return {
             key = "17698459273514558764",
             type = "SendMessageNode",
             name = "开启小黑屋玩法",
-            pos = {x = 1242.705061274487, y = 294.76921387089186},
+            pos = {x = 1196.705061274487, y = 269.76921387089186},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "StartBox3",
@@ -784,7 +785,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -972,7 +972,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 717.56661110448, y = -84.65297299811016},
-            propsData = {bEnablePP = true, PPEnum = 4}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["17743430472068465074"] = {
             key = "17743430472068465074",

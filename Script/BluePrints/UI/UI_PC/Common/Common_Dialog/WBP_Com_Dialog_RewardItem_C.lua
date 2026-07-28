@@ -23,6 +23,7 @@ function M:OnListItemObjectSet(Content)
   self:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Content = Content
   self.Btn_Reward:UnBindEventOnClickedByObj(self)
+  self.bReceiving = false
   self.CanReceive = Content.ConfigData.CanReceive
   self.RewardsGot = Content.ConfigData.RewardsGot
   self.NotShowNum = Content.ConfigData.NotShowNum
@@ -50,7 +51,16 @@ function M:OnListItemObjectSet(Content)
   self.Btn_Reward:SetText(GText(Content.ConfigData.ReceiveButtonText) or GText("UI_Archive_CollectionClaim"))
   if Content.ConfigData.ReceiveCallBack then
     self.Btn_Reward:BindEventOnClicked(self, function()
+      if self.bReceiving then
+        return
+      end
+      self.bReceiving = true
       Content.ConfigData.ReceiveCallBack(self, Content)
+      self:AddTimer(2.0, function()
+        if IsValid(self) then
+          self.bReceiving = false
+        end
+      end, false, 0, nil, true)
     end)
   end
   self.Text_Content:SetText(GText(Content.ConfigData.Hint))
@@ -89,8 +99,14 @@ function M:OnListItemObjectSet(Content)
   self:InitRewards(Content.ConfigData)
   if Content.ConfigData.NeedSwitchType then
     if self.WS_Type then
-      self.WS_Type:SetActiveWidgetIndex(1)
-      self.Text_Abyss:SetText(GText(Content.ConfigData.EmptyHint))
+      if Content.ConfigData.EmptyHint then
+        self.WS_Type:SetActiveWidgetIndex(1)
+        self.Text_Abyss:SetText(GText(Content.ConfigData.EmptyHint))
+      elseif self.Text_Abyss then
+        self.WS_Type:SetActiveWidgetIndex(2)
+      else
+        self.WS_Type:SetActiveWidgetIndex(1)
+      end
     end
   elseif self.WS_Type then
     self.WS_Type:SetActiveWidgetIndex(0)
@@ -155,17 +171,19 @@ function M:InitRewards(Config)
   end
   for _, Reward in pairs(Config.Rewards) do
     local Item = self:NewItemContent(Reward.ItemType, Reward.ItemId, Reward.Count)
-    if Config.LeftAligned then
-      self.List_Item_L:AddItem(Item)
-    else
-      self.List_Item_R:AddItem(Item)
+    if Item then
+      if Config.LeftAligned then
+        self.List_Item_L:AddItem(Item)
+      else
+        self.List_Item_R:AddItem(Item)
+      end
     end
   end
   self:AddTimer(0.01, function()
     local AllItemCount = self.List_Item_L:GetNumItems()
     for i = 0, AllItemCount - 1 do
       local Item = self.List_Item_L:GetItemAt(i)
-      if Item.SelfWidget then
+      if Item and Item.SelfWidget then
         Item.SelfWidget:SetNavigationRuleCustom(UE4.EUINavigation.Up, {
           self,
           self.OnNavigateUp
@@ -179,7 +197,7 @@ function M:InitRewards(Config)
     AllItemCount = self.List_Item_R:GetNumItems()
     for i = 0, AllItemCount - 1 do
       local Item = self.List_Item_R:GetItemAt(i)
-      if Item.SelfWidget then
+      if Item and Item.SelfWidget then
         Item.SelfWidget:SetNavigationRuleCustom(UE4.EUINavigation.Up, {
           self,
           self.OnNavigateUp
@@ -195,6 +213,7 @@ function M:InitRewards(Config)
 end
 
 function M:RefreshBtn(IsGot, CanReceive)
+  self.bReceiving = false
   if IsGot then
     self.WS_State:SetActiveWidgetIndex(1)
     if self.Content.ConfigData.HideProgressAfterGot then

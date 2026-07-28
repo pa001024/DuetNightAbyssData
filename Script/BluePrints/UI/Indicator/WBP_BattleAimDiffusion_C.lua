@@ -11,13 +11,7 @@ function WBP_BattleAimDiffusion_C:UpdateDiffusionVector(DiffuseDis)
 end
 
 function WBP_BattleAimDiffusion_C:Refresh()
-  self.Root.IsDiffuseState = false
-  self.Root:RemoveTimer(self.Root.UpdateDiffusionStateTimer)
-  self.Root.UpdateDiffusionStateTimer = nil
-  self:UpadteDiffusionState("StopInit")
-  self.DiffusionPassedTime = 0
-  self.AimDiffusionPercent = 0
-  self:SetAimDiffusion(0)
+  self:UpdateFrontSightinfo()
 end
 
 function WBP_BattleAimDiffusion_C:SetAimDiffusion(Percent)
@@ -36,6 +30,8 @@ function WBP_BattleAimDiffusion_C:SetAimDiffusion(Percent)
 end
 
 function WBP_BattleAimDiffusion_C:UpdateFrontSightinfo()
+  self.FullDiffusionTime = nil
+  self.FullDiffusionBackTime = nil
   local BattleWeaponConfigData = DataMgr.BattleWeapon[self.Root.CurrentWeapon.WeaponId]
   if BattleWeaponConfigData.FrontSight then
     local FrontSightInfo = BattleWeaponConfigData.FrontSight
@@ -43,12 +39,12 @@ function WBP_BattleAimDiffusion_C:UpdateFrontSightinfo()
       self.FullDiffusionTime = FrontSightInfo.DiffuseTime
       self.FullDiffusionBackTime = FrontSightInfo.DiffuseBackTime
       self:UpdateDiffusionVector(FrontSightInfo.DiffuseDis)
-      self.DiffusionPassedTime = 0
-      self.AimDiffusionPercent = 0
-      self:SetAimDiffusion(self.AimDiffusionPercent)
-      self:UpadteDiffusionState("StopInit")
     end
   end
+  self.DiffusionPassedTime = 0
+  self.AimDiffusionPercent = 0
+  self:UpadteDiffusionState("StopInit")
+  self:SetAimDiffusion(self.AimDiffusionPercent)
 end
 
 function WBP_BattleAimDiffusion_C:SetAimDiffusionInTick(DeltaTime)
@@ -82,7 +78,7 @@ function WBP_BattleAimDiffusion_C:UpdateDiffusionStateInTick(InDeltaTime)
 end
 
 function WBP_BattleAimDiffusion_C:TryToPlayAimDiffusionStartAnim()
-  if self.DiffusionState ~= "StopMax" then
+  if self.FullDiffusionTime and self.FullDiffusionBackTime and self.DiffusionState ~= "StopMax" then
     if self.DiffusionState ~= "ToMax" then
       self.DiffusionPassedTime = self.AimDiffusionPercent * self.FullDiffusionTime
     end

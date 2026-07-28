@@ -75,6 +75,7 @@ function M:InitAllOptionalItemsInfo()
   if self.CurrentChooseInfo then
     self:ResetChooseInfo()
   end
+  self:FillWithEmptyItems()
 end
 
 function M:InitLimitedPrizePoolItemsInfo()
@@ -139,6 +140,21 @@ function M:InitLimitedPrizePoolItemsInfo()
       end
     end
   end)
+  self:FillWithEmptyItems()
+end
+
+function M:FillWithEmptyItems()
+  local Size = self.Root.WidthOverride
+  local ItemSize = self.AllItemsWidget[1].Root.WidthOverride
+  local SlotPadding = self.WB_Avatar.InnerSlotPadding.X
+  local RawCount = (Size + SlotPadding) / (ItemSize + SlotPadding)
+  local Count = math.ceil(RawCount)
+  local EmptyCount = math.max(0, Count - #self.OptionalItemsList)
+  for i = 1, EmptyCount do
+    local Item = self:CreateWidgetNew("ComOptionalAvatarItem")
+    Item:SwitchToEmptyState(true)
+    self.WB_Avatar:AddChildToWrapBox(Item)
+  end
 end
 
 function M:ChangeChooseClickCallback(bSelectState, ChooseInfo)

@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 require("DataMgr")
 local BP_SceneManagerComponent_C = Class("BluePrints.Common.TimerMgr")
 BP_SceneManagerComponent_C._components = {
@@ -133,24 +134,6 @@ function BP_SceneManagerComponent_C:GetTargetActorInSceneByBPPath(BPPath)
   return AllActors
 end
 
-function BP_SceneManagerComponent_C:UpdateSceneTargetDoorInfo(TargetEid, DoorName, NextLevelID)
-  if not self.Guide2NextLevelIdMaps:Find(TargetEid) then
-    self.Guide2NextLevelIdMaps:Add(TargetEid, NextLevelID)
-  end
-  if not self.Guide2InDoorNameMaps:Find(TargetEid) then
-    self.Guide2InDoorNameMaps:Add(TargetEid, DoorName)
-  end
-  if self.Guide2NextLevelIdMaps:Find(TargetEid) then
-    self.Guide2NextLevelIdMaps:Remove(TargetEid)
-    self.Guide2NextLevelIdMaps:Add(TargetEid, NextLevelID)
-  end
-  if self.Guide2InDoorNameMaps:Find(TargetEid) then
-    self.Guide2InDoorNameMaps:Remove(TargetEid)
-    self.Guide2InDoorNameMaps:Add(TargetEid, DoorName)
-  end
-  self:UpdateGuide2LevelDoorInfo(TargetEid, DoorName, NextLevelID, "Update")
-end
-
 function BP_SceneManagerComponent_C:IsDungeonScene()
   local SceneName = self:GetCurSceneName()
   for _, ConfigData in pairs(DataMgr.Dungeon) do
@@ -251,7 +234,7 @@ end
 
 function BP_SceneManagerComponent_C:RecoverGuideIcon()
   local GuideName = tostring(self.CaptureMonsterEid) .. "Replace"
-  RunAsyncTask(self, "RecoverGuideIcon_GetUIObjAsync" .. GuideName, function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "RecoverGuideIcon_GetUIObjAsync" .. GuideName, function(CoroutineObj)
     local GameInstance = GWorld.GameInstance
     local UIManager = GameInstance:GetGameUIManager()
     if not UIManager then
@@ -666,7 +649,7 @@ end
 function BP_SceneManagerComponent_C:RemoveRegionOtherPlayerGuide(Eid)
   DebugPrint("RemoveRegionOtherPlayerGuide Eid: ", Eid)
   local DeleteName = tostring(Eid)
-  RunAsyncTask(self, "RemoveRegionOtherPlayerGuide_GetUIObjAsync" .. DeleteName, function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "RemoveRegionOtherPlayerGuide_GetUIObjAsync" .. DeleteName, function(CoroutineObj)
     local GameInstance = GWorld.GameInstance
     local UIManager = GameInstance:GetGameUIManager()
     if not UIManager then
@@ -715,7 +698,7 @@ function BP_SceneManagerComponent_C:UpdateSceneOtherPlayerGuide(Eid, OpType)
     end
   elseif "Exit" == OpType then
     local DeleteName = tostring(Eid)
-    RunAsyncTask(self, "UpdateSceneOtherPlayerGuide_GetUIObjAsync" .. DeleteName, function(CoroutineObj)
+    CoroutineUtils.RunAsyncTask(self, "UpdateSceneOtherPlayerGuide_GetUIObjAsync" .. DeleteName, function(CoroutineObj)
       local GameInstance = GWorld.GameInstance
       local UIManager = GameInstance:GetGameUIManager()
       if not UIManager then
@@ -1028,7 +1011,7 @@ end
 function BP_SceneManagerComponent_C:ShowOrHideAllSceneGuideIcon(IsShow, OpTag)
   self.IsSceneGuideShow = IsShow
   for k, v in pairs(self.CurSceneGuideEids) do
-    RunAsyncTask(self, "ShowOrHideAllSceneGuideIcon_GetUIObjAsync" .. k, function(CoroutineObj)
+    CoroutineUtils.RunAsyncTask(self, "ShowOrHideAllSceneGuideIcon_GetUIObjAsync" .. k, function(CoroutineObj)
       local GameInstance = GWorld.GameInstance
       local UIManager = GameInstance:GetGameUIManager()
       if nil == UIManager then
@@ -1062,7 +1045,7 @@ function BP_SceneManagerComponent_C:ShowOrHideSceneGuideIcon(Eid, IsShow, OpTag)
     DebugPrint("Error: OpTag == nil 本接口必须传入显隐Tag")
     return
   end
-  RunAsyncTask(self, "ShowOrHideSceneGuideIcon_GetUIObjAsync" .. Eid, function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "ShowOrHideSceneGuideIcon_GetUIObjAsync" .. Eid, function(CoroutineObj)
     local GameInstance = GWorld.GameInstance
     local UIManager = GameInstance:GetGameUIManager()
     if nil == UIManager then
@@ -1091,7 +1074,7 @@ function BP_SceneManagerComponent_C:ExistPathfindingEid(TargetEid)
 end
 
 function BP_SceneManagerComponent_C:ShowOrHideGuideIconByGuideName(GuideName, IsShow)
-  RunAsyncTask(self, "ShowOrHideGuideIconByGuideName_GetUIObjAsync" .. GuideName, function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "ShowOrHideGuideIconByGuideName_GetUIObjAsync" .. GuideName, function(CoroutineObj)
     local GameInstance = GWorld.GameInstance
     local UIManager = GameInstance:GetGameUIManager()
     if not UIManager then

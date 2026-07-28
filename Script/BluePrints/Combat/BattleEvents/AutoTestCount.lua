@@ -1,5 +1,6 @@
 local Component = Class("BluePrints.Combat.BattleEvents.BaseEvent")
 Component = setmetatable(Component, getmetatable(Component.Super))
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 Component:Decorator(BattleEventName.Heal)
 
 function Component:CountHealData(Character, Heal, Source, Target)

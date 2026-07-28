@@ -9,6 +9,9 @@ local function GetMappedLayout(Layout)
   if nil == Layout then
     return 1
   end
+  if Layout >= 7 then
+    return 3
+  end
   return (Layout - 1) % 2 + 1
 end
 
@@ -61,8 +64,19 @@ function Jump_Phone_C:Construct()
   IconMat:SetTextureParameterValue("Icon_Ranged", self.Icon_Jump)
 end
 
-function Jump_Phone_C:ChangeByLayout(Layout)
+function Jump_Phone_C:ChangeByLayout(Layout, ForceMountedState)
   local MappedLayout = GetMappedLayout(Layout)
+  self.CurrentLayout = MappedLayout
+  local IsMounted = ForceMountedState
+  if nil == IsMounted then
+    IsMounted = nil ~= self.OwnerPlayer and nil ~= self.OwnerPlayer.CurMount
+  end
+  if IsMounted then
+    self.IconMaterial:SetScalarParameterValue("S_BulletJumpSplit", 0)
+    self.PanelMaterial:SetScalarParameterValue("S_BulletJumpSplit", 0)
+    self.PanelMaterialGuide:SetScalarParameterValue("S_BulletJumpSplit", 0)
+    return
+  end
   if 2 == MappedLayout then
     self.IconMaterial:SetScalarParameterValue("S_BulletJumpSplit", 1)
     self.PanelMaterial:SetScalarParameterValue("S_BulletJumpSplit", 1)
@@ -72,11 +86,14 @@ function Jump_Phone_C:ChangeByLayout(Layout)
     self.PanelMaterial:SetScalarParameterValue("S_BulletJumpSplit", 0)
     self.PanelMaterialGuide:SetScalarParameterValue("S_BulletJumpSplit", 0)
   end
-  self.CurrentLayout = MappedLayout
 end
 
 function Jump_Phone_C.ButtonJumpDown(Battle_Button_Phone, Index, StartPos)
   local Jump_M = Battle_Button_Phone.Jump
+  DebugPrint("[LAYOUT_DBG][Jump] ButtonJumpDown fired! OwnerPanel.CurrentLayout=", Battle_Button_Phone.CurrentLayout, "Jump.CurrentLayout=", Jump_M.CurrentLayout, "Jump:GetVisibility=", Jump_M:GetVisibility())
+  if Battle_Button_Phone.CurrentLayout >= 7 then
+    return
+  end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then
     return
   end
@@ -89,6 +106,9 @@ end
 
 function Jump_Phone_C.ButtonJumpMove(Battle_Button_Phone, TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
+  if Battle_Button_Phone.CurrentLayout >= 7 then
+    return
+  end
   if Jump_M.OwnerPlayer.CurMount then
     return
   end
@@ -128,6 +148,9 @@ end
 
 function Jump_Phone_C.ButtonJumpUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
+  if Battle_Button_Phone.CurrentLayout >= 7 then
+    return
+  end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then
     return
   end
@@ -348,16 +371,51 @@ function Jump_Phone_C:OnStopMountFly()
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.Flash)
 end
 
+function Jump_Phone_C:SyncMountFlyState()
+  local IsMounted = self.OwnerPlayer ~= nil and nil ~= self.OwnerPlayer.CurMount
+  local IsMountFlying = IsMounted and self.OwnerPlayer:IsFlying()
+  if IsMounted then
+    self:OnEnableBattleMount()
+  else
+    local OwnerPanel = self.OwnerPanel
+    local HasExtraSlide = OwnerPanel and OwnerPanel.HasExtraSlide
+    local HasExtraSlideAttack = OwnerPanel and OwnerPanel.HasExtraSlideAttack
+    if HasExtraSlide then
+      self:OnSkillInActive(ESkillName.Slide)
+    else
+      self:OnSkillActive(ESkillName.Slide)
+    end
+    if self.OwnerPlayer:CheckSkillInActive(ESkillName.Attack) or HasExtraSlideAttack then
+      self:OnSkillInActive(ESkillName.Attack)
+    else
+      self:OnSkillActive(ESkillName.Attack)
+    end
+    if self.OwnerPlayer:CheckSkillInActive(ESkillName.BulletJump) then
+      self:OnSkillInActive(ESkillName.BulletJump)
+    else
+      self:OnSkillActive(ESkillName.BulletJump)
+    end
+    self:ChangeByLayout(self.CurrentLayout, false)
+  end
+  if IsMountFlying then
+    self:OnStartMountFly()
+  else
+    self:OnStopMountFly()
+  end
+end
+
 function Jump_Phone_C:OnEnableBattleMount()
   self:OnSkillInActive(ESkillName.Slide)
   self:OnSkillInActive(ESkillName.Attack)
   self:OnSkillInActive(ESkillName.BulletJump)
+  self:ChangeByLayout(self.CurrentLayout, true)
 end
 
 function Jump_Phone_C:OnDisableBattleMount()
   self:OnSkillActive(ESkillName.Slide)
   self:OnSkillActive(ESkillName.Attack)
   self:OnSkillActive(ESkillName.BulletJump)
+  self:ChangeByLayout(self.CurrentLayout, false)
 end
 
 AssembleComponents(Jump_Phone_C)

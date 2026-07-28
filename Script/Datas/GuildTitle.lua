@@ -11,29 +11,43 @@ return ReadOnly("GuildTitle", {
   },
   [2] = {
     ApproveApplication = 1,
+    ComponentPlacement = 1,
+    FundExchange = 1,
     JoBLv = 2,
     LimitCount = 5,
     TitleName = "GuildOfficer"
   },
   [3] = {
     ApproveApplication = 1,
+    ComponentBuy = 1,
+    ComponentPlacement = 1,
+    FundExchange = 1,
     JoBLv = 3,
     KickMembers = 1,
     LimitCount = 1,
     ModifyDeclaration = 1,
+    SlotCoverage = 1,
     TitleName = "GuildAdmin"
   },
   [4] = {
     ApproveApplication = 1,
+    ComponentBuy = 1,
+    ComponentPlacement = 1,
+    FundExchange = 1,
     JoBLv = 4,
     KickMembers = 1,
     LimitCount = 1,
     ModifyDeclaration = 1,
     ModifyNameEmblem = 1,
+    SlotCoverage = 1,
     TitleName = "ViceGuildMaster"
   },
   [5] = {
     ApproveApplication = 1,
+    ComponentBuy = 1,
+    ComponentPlacement = 1,
+    EmptySlotUse = 1,
+    FundExchange = 1,
     JoBLv = 5,
     KickMembers = 1,
     LimitCount = 1,

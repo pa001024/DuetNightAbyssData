@@ -69,5 +69,11 @@ return ReadOnly("MusicScore", {
     MusicScoreId = 1013,
     MusicScoreName = "MusicScoreName_1013",
     MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Piano/T_Piano_Music13.T_Piano_Music13'"
+  },
+  [9001] = {
+    IsDungeon = true,
+    MusicScoreId = 9001,
+    MusicScoreName = "MusicScoreName_9001",
+    MusicScorePic = "Texture2D'/Game/UI/Texture/Dynamic/Image/Piano/T_Piano_LevelSelect_01.T_Piano_LevelSelect_01'"
   }
 })

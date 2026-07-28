@@ -58,14 +58,14 @@ function M:SetInteractiveInfo()
   
   function Info.StartInteractiveCallback(PlayerActor)
     local TalkContext = GWorld.GameInstance:GetTalkContext()
-    TalkContext:RegisterInteractiveActor(self)
-    TalkContext:StartTalk(self.TalkTriggerId, nil, nil, PlayerActor, self, {
-      Func = function()
-        TalkContext:UnregisterInteractiveActor()
+    local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, self.TalkTriggerId, nil)
+    if IsValid(TalkAsyncAction) then
+      TalkAsyncAction.InteractiveActor = self
+      TalkAsyncAction.OnPlayTalkEnd:Add(self, function()
         self:SetAccessibility(true)
-      end,
-      Obj = self
-    })
+      end)
+      TalkAsyncAction:Activate()
+    end
   end
   
   self.TalkItemInteractiveComponent:SetInteractiveInfo(Info)

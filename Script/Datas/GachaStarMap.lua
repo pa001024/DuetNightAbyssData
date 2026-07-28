@@ -23,23 +23,58 @@ T.RT_8 = {
   [1] = T.RT_7
 }
 T.RT_9 = {
+  [10001] = T.RT_8,
+  [10002] = T.RT_8,
+  [10003] = T.RT_8,
+  [10004] = T.RT_8,
+  [10021] = T.RT_8,
+  [10022] = T.RT_8,
+  [10023] = T.RT_8,
+  [10032] = T.RT_8,
+  [20002] = T.RT_8,
+  [20003] = T.RT_8,
+  [20004] = T.RT_8,
+  [20008] = T.RT_8,
+  [20009] = T.RT_8,
+  [20010] = T.RT_8,
+  [20011] = T.RT_8,
+  [20012] = T.RT_8,
+  [20013] = T.RT_8,
+  [20014] = T.RT_8,
+  [20015] = T.RT_8,
+  [20021] = T.RT_8,
+  [20022] = T.RT_8,
+  [20023] = T.RT_8,
+  [20024] = T.RT_8,
+  [20035] = T.RT_8
+}
+T.RT_10 = {
   [10005] = T.RT_8,
   [10006] = T.RT_8,
   [10007] = T.RT_8,
   [10008] = T.RT_8,
   [30004] = T.RT_8
 }
-T.RT_10 = {Count = 1, Weight = 4500}
 T.RT_11 = {
-  [1] = T.RT_10
+  Star3 = T.RT_10,
+  Star4 = T.RT_9,
+  Star5 = T.RT_1,
+  Up4 = T.RT_1,
+  Up5 = T.RT_1,
+  UpSum4 = 0,
+  UpSum5 = 0
 }
-T.RT_12 = {Count = 1, Weight = 3000}
+T.RT_12 = {Count = 1, Weight = 4500}
 T.RT_13 = {
   [1] = T.RT_12
 }
-T.RT_14 = {Count = 1, Weight = 2000}
+T.RT_14 = {Count = 1, Weight = 3000}
 T.RT_15 = {
   [1] = T.RT_14
+}
+T.RT_16 = {Count = 1, Weight = 2000}
+T.RT_17 = {
+  [1] = T.RT_16
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -55,8 +90,8 @@ return ReadOnly("GachaStarMap", {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [210102] = T.RT_15,
-          [510101] = T.RT_15
+          [210102] = T.RT_17,
+          [510101] = T.RT_17
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
@@ -67,55 +102,22 @@ return ReadOnly("GachaStarMap", {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [3010301] = T.RT_13,
-          [3010402] = T.RT_13
+          [3010301] = T.RT_15,
+          [3010402] = T.RT_15
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
         UpSum4 = 0,
         UpSum5 = 0
       },
-      [4] = {
-        Star3 = T.RT_9,
-        Star4 = {
-          [10001] = T.RT_8,
-          [10002] = T.RT_8,
-          [10003] = T.RT_8,
-          [10004] = T.RT_8,
-          [10021] = T.RT_8,
-          [10022] = T.RT_8,
-          [10023] = T.RT_8,
-          [10032] = T.RT_8,
-          [20002] = T.RT_8,
-          [20003] = T.RT_8,
-          [20004] = T.RT_8,
-          [20008] = T.RT_8,
-          [20009] = T.RT_8,
-          [20010] = T.RT_8,
-          [20011] = T.RT_8,
-          [20012] = T.RT_8,
-          [20013] = T.RT_8,
-          [20014] = T.RT_8,
-          [20015] = T.RT_8,
-          [20021] = T.RT_8,
-          [20022] = T.RT_8,
-          [20023] = T.RT_8,
-          [20024] = T.RT_8,
-          [20035] = T.RT_8
-        },
-        Star5 = T.RT_1,
-        Up4 = T.RT_1,
-        Up5 = T.RT_1,
-        UpSum4 = 0,
-        UpSum5 = 0
-      }
+      [4] = T.RT_11
     },
     [9002] = {
       [2] = {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [530101] = T.RT_11
+          [530101] = T.RT_13
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
@@ -123,7 +125,7 @@ return ReadOnly("GachaStarMap", {
         UpSum5 = 0
       },
       [4] = {
-        Star3 = T.RT_9,
+        Star3 = T.RT_10,
         Star4 = {
           [10001] = T.RT_8,
           [10002] = T.RT_8,
@@ -164,7 +166,7 @@ return ReadOnly("GachaStarMap", {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [240101] = T.RT_11
+          [240101] = T.RT_13
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
@@ -172,7 +174,7 @@ return ReadOnly("GachaStarMap", {
         UpSum5 = 0
       },
       [4] = {
-        Star3 = T.RT_9,
+        Star3 = T.RT_10,
         Star4 = {
           [10001] = T.RT_8,
           [10002] = T.RT_8,
@@ -213,7 +215,7 @@ return ReadOnly("GachaStarMap", {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [410201] = T.RT_11
+          [410201] = T.RT_13
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
@@ -221,7 +223,7 @@ return ReadOnly("GachaStarMap", {
         UpSum5 = 0
       },
       [4] = {
-        Star3 = T.RT_9,
+        Star3 = T.RT_10,
         Star4 = {
           [10001] = T.RT_8,
           [10002] = T.RT_8,
@@ -262,7 +264,7 @@ return ReadOnly("GachaStarMap", {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [150401] = T.RT_11
+          [150401] = T.RT_13
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
@@ -270,7 +272,7 @@ return ReadOnly("GachaStarMap", {
         UpSum5 = 0
       },
       [4] = {
-        Star3 = T.RT_9,
+        Star3 = T.RT_10,
         Star4 = {
           [10001] = T.RT_8,
           [10002] = T.RT_8,
@@ -306,12 +308,27 @@ return ReadOnly("GachaStarMap", {
       },
       [6] = T.RT_6
     },
+    [9007] = {
+      [2] = {
+        Star3 = T.RT_1,
+        Star4 = T.RT_1,
+        Star5 = {
+          [210201] = T.RT_13
+        },
+        Up4 = T.RT_1,
+        Up5 = T.RT_1,
+        UpSum4 = 0,
+        UpSum5 = 0
+      },
+      [4] = T.RT_11,
+      [6] = T.RT_6
+    },
     [90021] = {
       [2] = {
         Star3 = T.RT_1,
         Star4 = T.RT_1,
         Star5 = {
-          [110201] = T.RT_11
+          [110201] = T.RT_13
         },
         Up4 = T.RT_1,
         Up5 = T.RT_1,
@@ -319,7 +336,7 @@ return ReadOnly("GachaStarMap", {
         UpSum5 = 0
       },
       [4] = {
-        Star3 = T.RT_9,
+        Star3 = T.RT_10,
         Star4 = {
           [10001] = T.RT_8,
           [10002] = T.RT_8,

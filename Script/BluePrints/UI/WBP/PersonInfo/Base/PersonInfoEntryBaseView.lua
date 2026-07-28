@@ -13,6 +13,7 @@ function M:Construct()
     self:SetRenderOpacity(0)
   end
   self:AddTimer(0.231, function()
+    DebugPrint("PersonInfoEntryBaseView: delayed ModelViewIni tick")
     self.PersonInfoMainPage:ModelViewIni()
   end)
 end
@@ -32,8 +33,11 @@ end
 
 function M:Close()
   DebugPrint("开始关闭")
+  if self.PersonInfoMainPage then
+    self.PersonInfoMainPage:OnClose()
+  end
   self.Content:ClearChildren()
-  self.PersonInfoMainPage:OnClose()
+  self.PersonInfoMainPage = nil
   PersonInfoController:OnClose()
 end
 
@@ -57,6 +61,7 @@ function M:CheckIsCanCloseSelf()
   if self.PersonInfoMainPage.IsEditOpen then
     self.PersonInfoMainPage.IsEditOpen = false
     self.PersonInfoMainPage:PlayAnimation(self.PersonInfoMainPage.Edit_List_Out)
+    self.PersonInfoMainPage:ResetCameraRoamInput()
     return false
   end
   if self:IsAnimationPlaying(self.In) then

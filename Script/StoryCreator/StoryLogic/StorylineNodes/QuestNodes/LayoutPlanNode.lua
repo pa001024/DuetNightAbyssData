@@ -6,7 +6,8 @@ function LayoutPlanNode:Execute()
     return
   end
   local Index = Avatar:GetCurrentMobileHudPlanIndex()
-  if 1 == Index then
+  local LayoutEntryIndex = Avatar.GetLayoutEntryIndexByPlanIndex and Avatar:GetLayoutEntryIndexByPlanIndex(Index) or Index
+  if 1 == LayoutEntryIndex then
     return "OldPlan"
   else
     return "NewPlan"

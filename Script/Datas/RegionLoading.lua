@@ -62,6 +62,11 @@ return ReadOnly("RegionLoading", {
     LoadingId = 102001,
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/ChapterStart/Widget/WBP_Chapter_CharChange.WBP_Chapter_CharChange'"
   },
+  [300101] = {
+    LoadingId = 300101,
+    MessageGroup = 10110801,
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/PC/WBP_Guild_Loading.WBP_Guild_Loading'"
+  },
   [10110701] = {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Train06.LevelSelect_Bg_Train06'",
     LoadingId = 10110701,
@@ -334,6 +339,12 @@ return ReadOnly("RegionLoading", {
     BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Train09.LevelSelect_Bg_Train09'",
     LoadingId = 10600103,
     MessageGroup = 10600103,
+    WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
+  },
+  [10600104] = {
+    BackGroundBp = "WidgetBlueprint'/Game/UI/UI_PC/LevelSelect/LevelSelect_Bg/LevelSelect_Bg_Racing.LevelSelect_Bg_Racing'",
+    LoadingId = 10600104,
+    MessageGroup = 10600104,
     WBPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Loading/Widget/WBP_Com_ChangeScence_Dongguo.WBP_Com_ChangeScence_Dongguo'"
   },
   [10610101] = {

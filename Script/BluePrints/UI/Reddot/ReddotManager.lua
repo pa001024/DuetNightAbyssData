@@ -19,6 +19,7 @@ function ReddotManager._Init()
   ReddotManager.LeafNodes = {}
   ReddotManager.NonLeafNodes = {}
   ReddotManager._EventTickQueue = Deque.New()
+  ReddotManager._EventTickTable = {}
   ReddotManager._EventTicker = nil
 end
 
@@ -27,11 +28,18 @@ function ReddotManager.TryInvokeEvent(Node, Count, bForce)
     return
   end
   local bEmpty = ReddotManager._EventTickQueue:IsEmpty()
-  ReddotManager._EventTickQueue:PushFront({
-    _Node = Node,
-    _Count = Count,
-    _bForce = bForce
-  })
+  local Params = ReddotManager._EventTickTable[Node]
+  if not Params then
+    Params = {
+      _Node = Node,
+      _Count = Count,
+      _bForce = bForce
+    }
+    ReddotManager._EventTickTable[Node] = Params
+    ReddotManager._EventTickQueue:PushFront(Params)
+  end
+  Params._Count = Count
+  Params._bForce = bForce
   if GWorld.GameInstance:IsExistTimer(ReddotManager._EventTicker) then
     if bEmpty and not ReddotManager._EventTickQueue:IsEmpty() then
       GWorld.GameInstance:UnPauseTimer(ReddotManager._EventTicker)
@@ -40,6 +48,7 @@ function ReddotManager.TryInvokeEvent(Node, Count, bForce)
   end
   local _, TickerKey = GWorld.GameInstance:AddTimer(0.01, function()
     local Params = ReddotManager._EventTickQueue:PopBack()
+    ReddotManager._EventTickTable[Params._Node] = nil
     if Params and Params._Node and Params._Count then
       Params._Node:TryFireOnCountChange(Params._Count, Params._bForce)
     end
@@ -86,6 +95,7 @@ function ReddotManager._Close()
   end
   if ReddotManager._EventTickQueue then
     ReddotManager._EventTickQueue:Init()
+    ReddotManager._EventTickTable = {}
   end
 end
 

@@ -3673,7 +3673,7 @@
     "n": "지옥불의 교도소장",
     "t": "Boss",
     "atk": 24,
-    "def": 135,
+    "def": 0,
     "hp": 6000,
     "tn": 4500,
     "icon": "Boss_05_Lianhuo",
@@ -4479,7 +4479,7 @@
     "atk": 25,
     "def": 0,
     "hp": 4000,
-    "tn": 0,
+    "tn": 6000,
     "icon": "Empty",
     "tags": [
       "Mon.Boss",
@@ -4554,6 +4554,21 @@
     "tags": [
       "Mon.Boss",
       "Mon.Reward"
+    ]
+  },
+  {
+    "id": 8521701,
+    "n": "기만자 하로기",
+    "t": "Boss",
+    "atk": 60,
+    "def": 300,
+    "hp": 225000,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward",
+      "Mon.Strong.Fade"
     ]
   },
   {
@@ -4641,6 +4656,21 @@
     ]
   },
   {
+    "id": 8522607,
+    "n": "탈생자",
+    "t": "Elite_Monster",
+    "atk": 20,
+    "def": 300,
+    "hp": 256,
+    "tn": 4500,
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 8522701,
     "n": "탈생자·서리",
     "t": "Boss",
@@ -4657,13 +4687,13 @@
   },
   {
     "id": 8523001,
-    "n": "教会基石【远期待包装】",
+    "n": "몽은의 성기사",
     "t": "Boss",
     "atk": 15,
     "def": 0,
     "hp": 6000,
     "tn": 2000,
-    "icon": "Empty",
+    "icon": "Boss23_Jishi",
     "tags": [
       "Mon.Boss",
       "Mon.Reward.A",
@@ -4698,6 +4728,26 @@
       "Mon.Sq",
       "Mon.Melee",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 9001013,
+    "n": "와일드비 칼날·침식",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Poison",
+      "Mon.Elite",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -4831,6 +4881,27 @@
       "Mon.Reward.B",
       "Mon.Strong.Frozen.Double",
       "Mon.Strong.Shield.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
+    ]
+  },
+  {
+    "id": 9001702,
+    "n": "와일드비 칼날·희생·폭파",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 32,
+    "def": 300,
+    "es": 3268,
+    "hp": 408,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Strong.Kamikaze.Double",
+      "Mon.Strong.Burst.Double",
+      "Mon.Reward.B",
       "Mon.Elite",
       "Mon.Strong.Double"
     ]
@@ -4987,6 +5058,27 @@
     ]
   },
   {
+    "id": 9002702,
+    "n": "와일드비 불의의 화살·벼락·서리",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 3268,
+    "hp": 408,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Strong.Thunder.Double",
+      "Mon.Strong.Frozen.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
+    ]
+  },
+  {
     "id": 9003001,
     "n": "'토이박스'",
     "t": "Elite_Monster",
@@ -5020,6 +5112,25 @@
       "Mon.Melee",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9003019,
+    "n": "'토이박스'·서리옥",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Wanju",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb"
     ]
   },
   {
@@ -5081,6 +5192,26 @@
     ]
   },
   {
+    "id": 9005013,
+    "n": "'폭파광'·침식",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Baozha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
     "id": 9005301,
     "n": "'폭파광' 벼락·잔불·서리옥",
     "t": "Elite_Monster",
@@ -5139,6 +5270,25 @@
     ]
   },
   {
+    "id": 9006019,
+    "n": "'트릭스터'·서리옥",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Qizha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb"
+    ]
+  },
+  {
     "id": 9006301,
     "n": "'트릭스터' 희생·복수·서리",
     "t": "Elite_Monster",
@@ -5174,6 +5324,25 @@
       "Mon.Sq",
       "Mon.Ranged",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 9007012,
+    "n": "와일드비 요원·폭파",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst",
+      "Mon.Elite"
     ]
   },
   {
@@ -5340,6 +5509,20 @@
       "Mon.Melee",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9511001,
+    "n": "호두까기 인형",
+    "atk": 10,
+    "def": 130,
+    "es": 34,
+    "hp": 47,
+    "tn": 150,
+    "icon": "NE_Hutao",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
     ]
   },
   {

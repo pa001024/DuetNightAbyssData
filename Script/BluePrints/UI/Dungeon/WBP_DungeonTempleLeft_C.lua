@@ -18,6 +18,7 @@ function M:InitListenEvent()
   self:AddDispatcher(EventID.OnTempleEnter, self, self.OnTempleEnter)
   self:AddDispatcher(EventID.OnTempleTipButtonShow, self, self.OnTempleTipButtonShow)
   self:AddDispatcher(EventID.OnUpdatePartyLeftUI, self, self.OnUpdatePartyLeftUI)
+  self:AddDispatcher(EventID.OnUpdateWeaponVerifyKillCount, self, self.OnUpdateWeaponVerifyKillCount)
 end
 
 function M:OnLoaded(...)
@@ -60,6 +61,8 @@ function M:InitInfo()
       EventManager:FireEvent(EventID.OnPartyProgressStart)
     end
     self:InitParty()
+  elseif self.DungeonInfo.DungeonType == "WeaponVerify" then
+    self:InitWeaponVerify()
   end
   self.Btn_Click:SetText(GText("UI_TEMPLE_TIPS_" .. self.DungeonId))
   self.Text_TempleKeyDesc:SetText(GText("UI_TEMPLE_TIPS_" .. self.DungeonId))
@@ -247,6 +250,52 @@ function M:InitTipsKey()
     },
     Type = "Add"
   })
+end
+
+function M:InitWeaponVerify()
+  self.IsCountDown = true
+  self.HB_Time:SetVisibility(ESlateVisibility.Collapsed)
+  self:InitWeaponVerifyTargetInfo()
+  local UIBattleMain = UIManager(self):GetUI("BattleMain")
+  if UIBattleMain then
+    self:AddTimer(1, function()
+      UIBattleMain.Btn_Task:SetVisibility(ESlateVisibility.Collapsed)
+    end, false, nil, nil, false)
+  end
+end
+
+function M:InitWeaponVerifyTargetInfo()
+  local EventLevelInfo = DataMgr.WeaponVerifyEventLevel[self.DungeonId]
+  local WeaponVerifyInfo = DataMgr.WeaponVerify[self.DungeonId]
+  self.Text_TempleTitle:SetText(GText(EventLevelInfo and EventLevelInfo.LevelName or " "))
+  self.WeaponVerifyLevelDesKey = EventLevelInfo and EventLevelInfo.LevelDes
+  self.WeaponVerifyWinMode = WeaponVerifyInfo and WeaponVerifyInfo.WinMode or 2
+  self.WeaponVerifyWinTarget = WeaponVerifyInfo and WeaponVerifyInfo.WinTarget or 0
+  self:RefreshWeaponVerifyLevelDesc(0, false)
+  self.Text_TempleDesc:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
+function M:FormatWeaponVerifyLevelDes(Count)
+  if not self.WeaponVerifyLevelDesKey then
+    return ""
+  end
+  local Template = GText(self.WeaponVerifyLevelDesKey)
+  local CurCount = Count or 0
+  local Target = 2 == self.WeaponVerifyWinMode and (self.WeaponVerifyWinTarget or 0) or 1
+  return string.format(Template, CurCount, Target)
+end
+
+function M:RefreshWeaponVerifyLevelDesc(Count, IsWin)
+  if IsWin then
+    self.WeaponVerifyProgressCount = 2 == self.WeaponVerifyWinMode and (self.WeaponVerifyWinTarget or 0) or 1
+  else
+    self.WeaponVerifyProgressCount = Count or 0
+  end
+  self.Text_TempleDescTitle:SetText(self:FormatWeaponVerifyLevelDes(self.WeaponVerifyProgressCount))
+end
+
+function M:OnUpdateWeaponVerifyKillCount(KillCount, IsWin)
+  self:RefreshWeaponVerifyLevelDesc(KillCount, IsWin)
 end
 
 return M

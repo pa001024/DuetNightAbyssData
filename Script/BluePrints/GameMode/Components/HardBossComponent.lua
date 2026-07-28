@@ -37,10 +37,13 @@ function HardBossComponent:InitHardBoss(BossBattleId, DifficultyId)
   self.LevelGameMode.BossBattleInfo.DifficultyLevel = DifficultyLevel
   self.LevelGameMode.BossBattleInfo.HardBossBTRunning = false
   GWorld.StoryMgr:Clear()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:StopAllClientQuestChainStoryline()
+  end
   self.LevelGameMode:DestroyAllMonsterSpawn()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   local Controller = UE4.UGameplayStatics.GetPlayerController(self, 0)
-  local Avatar = GWorld:GetAvatar()
   local AvatarInfo = AvatarUtils:GetDefaultBattleInfo(Avatar)
   Player:ChangeRole(nil, AvatarInfo)
   local PlayerPoint = self.LevelGameMode.EMGameState:GetTargetPoint(BossInfo.PosDisplayName)
@@ -78,7 +81,7 @@ function HardBossComponent:InitHardBoss(BossBattleId, DifficultyId)
       self:InitBossBattleInfoCallBack()
     end
     
-    self:RunStory(BossInfo.StorylinePath, 10100, STLCallback, STLCallback)
+    GWorld.StoryMgr:RunStory(BossInfo.StorylinePath, nil, nil, STLCallback, STLCallback)
     return
   else
     self:InitBossBattleInfoCallBack()

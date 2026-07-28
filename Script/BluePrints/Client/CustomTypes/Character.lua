@@ -41,7 +41,8 @@ Char.__Props__ = {
   DispatchTag = prop.getter("Data", "DispatchTag"),
   DispatchUnlock = prop.getter("Data", "DispatchUnlock"),
   DefaultSkinId = prop.getter("Data", "DispatchUnlock"),
-  DefaultAccessory = prop.getter("Data", "DefaultAccessory")
+  DefaultAccessory = prop.getter("Data", "DefaultAccessory"),
+  IsStar = prop.prop("Bool", "client save", false)
 }
 
 function Char:Init(Uuid, CharId, Level)
@@ -466,6 +467,22 @@ function Char:BattleDump(Avatar, ExtraInfo)
   return Result
 end
 
+local function DumpSkillList(Skills)
+  if type(Skills) ~= "table" then
+    return "nil"
+  end
+  local Result = {}
+  for Index, Skill in ipairs(Skills) do
+    Result[#Result + 1] = string.format("%s:%s:%s", tostring(Skill and Skill.SkillId), tostring(Skill and Skill.Level), tostring(Skill and Skill.LockState))
+    if Index >= 12 then
+      break
+    end
+  end
+  return table.concat(Result, ",")
+end
+
+local PrintedMissingSkillConfigMap = {}
+
 function Char:DumpSkillInfos(Avatar, ExtraInfo)
   local ModData = ExtraInfo.ModData
   local IsPhantom = ExtraInfo.IsPhantom
@@ -474,28 +491,38 @@ function Char:DumpSkillInfos(Avatar, ExtraInfo)
     if self:CheckSkillIsLocked(Skill.SkillId) then
     else
       local bOnlyPhantom = false
-      local SkillData = DataMgr.Skill[Skill.SkillId][Skill.Level][self.GradeLevel]
-      if SkillData then
-        bOnlyPhantom = SkillData.OnlyPhantom
-      end
-      if not IsPhantom and bOnlyPhantom then
-      elseif SkillData and SkillData.SkillType == "UltraPassive" and self.ExtraGradeLevel <= 0 then
+      local SkillConfigById = DataMgr.Skill and DataMgr.Skill[Skill.SkillId]
+      local SkillConfigByLevel = SkillConfigById and SkillConfigById[Skill.Level]
+      local SkillData = SkillConfigByLevel and SkillConfigByLevel[self.GradeLevel]
+      if not SkillData then
+        do
+          local ErrorMessage = string.format("角色技能配置缺失，已跳过该技能。roleId=%s charId=%s skillId=%s level=%s grade=%s extraGrade=%s runtimeSkills=[%s]", tostring(self.RoleId), tostring(self.CharId), tostring(Skill.SkillId), tostring(Skill.Level), tostring(self.GradeLevel), tostring(self.ExtraGradeLevel), DumpSkillList(self.Skills))
+          if not PrintedMissingSkillConfigMap[ErrorMessage] then
+            PrintedMissingSkillConfigMap[ErrorMessage] = true
+            ScreenPrint(ErrorMessage)
+          end
+        end
       else
-        local SkillInfo = {}
-        local Level, ExtraLevel = Skill:GetRealSkill()
-        if 1 ~= Level then
-          SkillInfo.Level = Level
+        bOnlyPhantom = SkillData.OnlyPhantom
+        if not IsPhantom and bOnlyPhantom then
+        elseif SkillData and SkillData.SkillType == "UltraPassive" and self.ExtraGradeLevel <= 0 then
+        else
+          local SkillInfo = {}
+          local Level, ExtraLevel = Skill:GetRealSkill()
+          if 1 ~= Level then
+            SkillInfo.Level = Level
+          end
+          if ExtraLevel and 0 ~= ExtraLevel then
+            SkillInfo.ExtraLevel = ExtraLevel
+          end
+          if 0 ~= self.GradeLevel then
+            SkillInfo.Grade = self.GradeLevel
+          end
+          table.insert(Skills, {
+            SkillId = Skill.SkillId,
+            SkillInfo = SkillInfo
+          })
         end
-        if ExtraLevel and 0 ~= ExtraLevel then
-          SkillInfo.ExtraLevel = ExtraLevel
-        end
-        if 0 ~= self.GradeLevel then
-          SkillInfo.Grade = self.GradeLevel
-        end
-        table.insert(Skills, {
-          SkillId = Skill.SkillId,
-          SkillInfo = SkillInfo
-        })
       end
     end
   end

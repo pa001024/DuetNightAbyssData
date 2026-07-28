@@ -209,6 +209,21 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       end
       self.IsFocusInSpecialLeft = true
     end
+    if ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
+      local PageConfigData = DataMgr.EventPortal[self.CurActivityId]
+      local PreViewReward, RewardContentList = PageConfigData.RewardPreview, {}
+      local AllRewardList = RewardUtils:GetRewardViewInfoById(PreViewReward)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/tip_show_click", nil, nil)
+      local Params = {}
+      Params.RewardList = AllRewardList
+      
+      function Params.CloseBtnCallbackFunction()
+      end
+      
+      Params.AutoFocus = true
+      local UI = UIManager(self):ShowCommonPopupUI(100331, Params)
+      IsEventHandled = true
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
     local PageConfigData = DataMgr.EventPortal[self.CurActivityId]
     if PageConfigData.TaskId then
@@ -240,7 +255,7 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
   elseif InKeyName == UIConst.GamePadKey.LeftThumb then
     IsEventHandled = self:EnterStuffViewMode()
   elseif InKeyName == UIConst.GamePadKey.RightThumb then
-    IsEventHandled = self:GoToMoreClick()
+    IsEventHandled = self:GoToMoreClick(true)
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight then
     local ChildItemSubWidget = self:GetSupportsFocusSubWidget()
     local PlayerController = self:GetOwningPlayer()

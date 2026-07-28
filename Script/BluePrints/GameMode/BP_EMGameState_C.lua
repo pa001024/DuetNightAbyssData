@@ -156,6 +156,13 @@ function BP_EMGameState_C:AddTargetPointInfo(TargetPointInfo)
   end
 end
 
+function BP_EMGameState_C:AddPetRaceSpline(Spline)
+  if not IsValid(Spline) then
+    return
+  end
+  self.PetRaceSplineMaps:Add(Spline.RaceId, Spline)
+end
+
 function BP_EMGameState_C:AddQuestArea(TargetArea)
   if not IsValid(TargetArea) then
     return
@@ -269,6 +276,12 @@ function BP_EMGameState_C:GetNpcInfoAsync(InNpcId, CallBack)
   if not InNpcId and CallBack then
     CallBack(nil)
   end
+  if InNpcId and DataMgr.Npc[InNpcId] and DataMgr.Npc[InNpcId].NpcType == "Show" then
+    GWorld.GameInstance.IsAutoFashionSwitch = true
+  else
+    local bUseSkin = EMCache:Get("AutoFashion")
+    GWorld.GameInstance.IsAutoFashionSwitch = bUseSkin
+  end
   local NewInNpcId = URuntimeCommonFunctionLibrary.GetNPCIdByGender(self, InNpcId)
   if NewInNpcId ~= InNpcId then
     DebugPrint("ChangeNpcId", NewInNpcId, " : ", InNpcId)
@@ -287,6 +300,14 @@ function BP_EMGameState_C:GetNpcInfoAsync(InNpcId, CallBack)
   else
     CallBack(nil)
   end
+end
+
+function BP_EMGameState_C:GetCharacterAttributeCharId()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return -1
+  end
+  return AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
 end
 
 function BP_EMGameState_C:CanUnloadNavMeshLevel()
@@ -531,7 +552,7 @@ function BP_EMGameState_C:DealDungeonVoteResult()
     end
   else
     if 0 ~= #AvatarEids then
-      GameMode:TriggerPlayerWin(AvatarEids, PlayerEids)
+      GameMode:TriggerPlayerWin(AvatarEids, PlayerEids, "Vote")
     end
     if 0 == BattleNum then
       DebugPrint("Vote::: BattleNum = 0 ,触发副本结算")
@@ -1112,6 +1133,49 @@ function BP_EMGameState_C:GetMechanismInteractiveInSpecialQuest(Mechanism)
   return Res
 end
 
+function BP_EMGameState_C:GetMechanismActorById(Id)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode then
+    return nil
+  end
+  local Mechanism = GameMode.BPBornRegionActor:Find(Id)
+  if Mechanism then
+    return Mechanism
+  end
+  local Creator = self.StaticCreatorMap:Find(Id)
+  if Creator and Creator.ChildEids and Creator.ChildEids:Length() > 0 then
+    return Battle(self):GetEntity(Creator.ChildEids[1])
+  end
+  return nil
+end
+
+function BP_EMGameState_C:InActiveMechanismInteractiveByIds(bClose, Ids)
+  if not Ids then
+    return
+  end
+  if self.MechanismInteractiveClose == nil then
+    self.MechanismInteractiveClose = {}
+  end
+  if nil == self.InActiveByIdsEidSet then
+    self.InActiveByIdsEidSet = {}
+  end
+  for _, Id in pairs(Ids) do
+    local Mechanism = self:GetMechanismActorById(Id)
+    if not IsValid(Mechanism) then
+      GWorld.logger.error("特殊任务通用配置 InActiveInteractiveIds, 机关Id " .. tostring(Id) .. " 在 BPBornRegionActor 和 StaticCreatorMap 中均未找到对应机关")
+    else
+      local Eid = Mechanism.Eid
+      if bClose then
+        self.MechanismInteractiveClose[Eid] = true
+        self.InActiveByIdsEidSet[Eid] = true
+      elseif self.InActiveByIdsEidSet[Eid] then
+        self.MechanismInteractiveClose[Eid] = nil
+        self.InActiveByIdsEidSet[Eid] = nil
+      end
+    end
+  end
+end
+
 function BP_EMGameState_C:OnRep_PartyPlayerDisPercentValues()
   self:UpdatePatryPlayerOrdinal()
   EventManager:FireEvent(EventID.OnPartyProgressUpdate)
@@ -1254,22 +1318,28 @@ function BP_EMGameState_C:DungeonSafePlayTalk_Lua(TalkId)
   if LoadingUI then
     EventManager:AddEvent(EventID.OnEnableStory, self, function()
       EventManager:RemoveEvent(EventID.OnEnableStory, self)
-      UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkId, nil)
+      local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkId, nil)
+      if IsValid(TalkAsyncAction) then
+        TalkAsyncAction:Activate()
+      end
     end)
   else
-    UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkId, nil)
+    local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkId, nil)
+    if IsValid(TalkAsyncAction) then
+      TalkAsyncAction:Activate()
+    end
   end
 end
 
-function BP_EMGameState_C:ClientSafeRunStory(StorylinePath, QuestId, STLCallback)
+function BP_EMGameState_C:ClientSafeRunStory(StorylinePath, STLCallback)
   local LoadingUI = GWorld.GameInstance:GetLoadingUI()
   if LoadingUI then
     EventManager:AddEvent(EventID.OnEnableStory, self, function()
       EventManager:RemoveEvent(EventID.OnEnableStory, self)
-      GWorld.StoryMgr:RunStory(StorylinePath, QuestId, nil, STLCallback, STLCallback)
+      GWorld.StoryMgr:RunStory(StorylinePath, nil, nil, STLCallback, STLCallback)
     end)
   else
-    GWorld.StoryMgr:RunStory(StorylinePath, QuestId, nil, STLCallback, STLCallback)
+    GWorld.StoryMgr:RunStory(StorylinePath, nil, nil, STLCallback, STLCallback)
   end
 end
 

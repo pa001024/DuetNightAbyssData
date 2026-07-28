@@ -966,5 +966,6 @@ return {
     ["9050201"] = {RandomRuleId = 9050201},
     ["8014003"] = {RandomRuleId = 8014003},
     ["8014004"] = {RandomRuleId = 8014004}
-  }
+  },
+  MissionGroup = {}
 }

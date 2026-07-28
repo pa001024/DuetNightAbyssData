@@ -112,7 +112,7 @@ Appearance.__Props__ = {
   Accessory = prop.prop("IntList", "client save"),
   IsCornerVisible = prop.prop("Bool", "client save"),
   AppearanceName = prop.prop("Str", "client save", ""),
-  AccessoryCustomParams = prop.prop("Int2StrDict", "client save")
+  AccessoryCustomParams = prop.prop("Int2BytesDict", "client save")
 }
 
 function Appearance:Init(TargetId, TargetType)

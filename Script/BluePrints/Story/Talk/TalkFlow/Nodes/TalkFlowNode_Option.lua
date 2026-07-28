@@ -1,6 +1,7 @@
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
 local EDialogueNodeType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueNodeType
 local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueIterType
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class({
   "BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode"
 })
@@ -24,7 +25,6 @@ end
 function M:CreateNodeData(DialogueId)
   local Dialogues = DataMgr.Dialogue
   local Dialogue = Dialogues[DialogueId]
-  local Avatar = GWorld:GetAvatar()
   self.IsImpression = false
   self.OptionType = nil
   self.RestartTag = nil
@@ -52,7 +52,7 @@ function M:CreateNodeData(DialogueId)
           self.OptionType = "Check"
         end
       end
-      if self.IsImpression and Avatar and Avatar:IsImpressionCheckSuccess(OptionId) then
+      if self.IsImpression and ImpressionModel:IsImpressionCheckSuccess(OptionId) then
         table.insert(LastSelectedId, OptionId)
       end
       table.insert(Options, OptionId)
@@ -63,7 +63,7 @@ function M:CreateNodeData(DialogueId)
   if self.IsImpression then
     if not next(LastSelectedId) and Dialogue.RestartTag then
       for _, OptionId in pairs(Options) do
-        if Avatar and Avatar:IsImpressionCheckFailure(OptionId) then
+        if ImpressionModel:IsImpressionCheckFailure(OptionId) then
           self.RestartTag = Dialogue.RestartTag
           break
         end
@@ -184,10 +184,6 @@ function M:GetOptions()
 end
 
 function M:IsImpressionSuccess(DialogueId)
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return false
-  end
   local DialogueData = DataMgr.Dialogue[DialogueId]
   if not DialogueData then
     return false
@@ -197,7 +193,7 @@ function M:IsImpressionSuccess(DialogueId)
     return false
   end
   for _, OptionId in ipairs(OptionData) do
-    if Avatar:IsImpressionCheckSuccess(OptionId) then
+    if ImpressionModel:IsImpressionCheckSuccess(OptionId) then
       return true
     end
   end

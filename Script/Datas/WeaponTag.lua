@@ -107,6 +107,9 @@ return ReadOnly("WeaponTag", {
     WeaponTagfilter = "MeleeType"
   },
   Ranged = {WeaponTag = "Ranged"},
+  RealUltraMelee = {
+    WeaponTag = "RealUltraMelee"
+  },
   Shotgun = {
     GachaIcon = "/Game/UI/Texture/Dynamic/Image/WeaponType/T_Gacha_WeaponType_Shotgun.T_Gacha_WeaponType_Shotgun",
     GachaSpine = "/Game/UI/WBP/Gacha/Widget/CampAni/WBP_Gacha_CampAni_Shotgun.WBP_Gacha_CampAni_Shotgun",

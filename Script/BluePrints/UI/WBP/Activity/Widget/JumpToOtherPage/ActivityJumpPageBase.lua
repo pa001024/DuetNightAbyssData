@@ -318,7 +318,7 @@ function M:UpdateTheaterTaskReddot()
   end
 end
 
-function M:GoToMoreClick()
+function M:GoToMoreClick(IsGamepad)
   if self.CurActivityId == DataMgr.TheaterConstant.EventId.ConstantValue then
     local Params = {
       DataMap = {
@@ -402,10 +402,23 @@ function M:GoToMoreClick()
     Params.DataMap.Tabs[2] = DataMap
     UIManager(self):ShowCommonPopupUI(100257, Params)
     return true
-  elseif ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) then
+  elseif ActivityUtils.IsAccessoryDropActivity(self.CurActivityId) and not IsGamepad then
     local BPBg = self.ParentWidget.WidgetBGAnchor:GetChildAt(0)
     if BPBg.OpenRewardDetails then
       BPBg:OpenRewardDetails()
+    else
+      local PageConfigData = DataMgr.EventPortal[self.CurActivityId]
+      local PreViewReward, RewardContentList = PageConfigData.RewardPreview, {}
+      local AllRewardList = RewardUtils:GetRewardViewInfoById(PreViewReward)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/tip_show_click", nil, nil)
+      local Params = {}
+      Params.RewardList = AllRewardList
+      
+      function Params.CloseBtnCallbackFunction()
+      end
+      
+      Params.AutoFocus = true
+      local UI = UIManager(self):ShowCommonPopupUI(100331, Params)
     end
   end
   return false

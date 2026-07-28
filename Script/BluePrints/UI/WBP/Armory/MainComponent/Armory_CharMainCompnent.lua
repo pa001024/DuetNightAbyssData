@@ -15,6 +15,21 @@ function M:ComponentInitDispatcher()
   self:AddDispatcher(EventID.OnCharExtraGradeItemClick, self, self.OnCharExtraGradeItemClick)
   self:AddDispatcher(EventID.OnCharRewardStateChanged, self, self.OnCharRewardStateChanged)
   self:AddDispatcher(EventID.OnCharAttributeSwitched, self, self.OnCharAttributeSwitched)
+  self:AddDispatcher(EventID.OnStarTargetChanged, self, self.OnStarTargetChanged)
+end
+
+function M:Construct()
+  local CharTag = {
+    CommonConst.ArmoryTag.Char
+  }
+  self.CharMainFuncName = {
+    "Main_OnStarTargetBtnClicked"
+  }
+  for _, Tag in pairs(CharTag) do
+    for _, FuncName in pairs(self.CharMainFuncName) do
+      self[Tag .. FuncName] = self["Char" .. FuncName]
+    end
+  end
 end
 
 function M:CharMain_Close()
@@ -51,8 +66,10 @@ function M:CharMain_OnArmoryTargetStateChanged(NewAvatar)
 end
 
 function M:CharMain_Init()
+  self.WS_State:SetActiveWidgetIndex(0)
   self.Panel_SubTab:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Btn_Edit:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Btn_StarTarget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   if not self.CharItemContentsMap then
     self:CharMain_PreprocessContents()
   end
@@ -178,6 +195,8 @@ function M:CharMain_UpdatAttributeButton()
   if self.ComparedChar.Level >= DataMgr.Char[self.ComparedChar.CharId].CharMaxLevel then
     self.AttributeButtonStyleParams[1].Text = GText("Max_Level_Achieved")
     self.AttributeButtonStyleParams[1].ForbidBtn = true
+  elseif ArmoryUtils:GetCharByUuid(self.ComparedChar.Uuid) == nil then
+    self.AttributeButtonStyleParams[1].ForbidBtn = true
   else
     local MaxLevel = UpgradeUtils.GetMaxLevel(self.ComparedChar, CommonConst.ArmoryType.Char)
     if MaxLevel <= self.ComparedChar.Level then
@@ -301,6 +320,12 @@ function M:CharMain_SelectRoleListItem(Content)
   end
   ArmoryUtils:SetItemIsSelected(self.CharMain_CmpContent, false)
   ArmoryUtils:SetItemIsSelected(Content, true)
+  ArmoryUtils:SetItemInStarTarget(Content, Content.IsStar)
+  if Content.IsStar then
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect_Normal)
+  else
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect_Normal)
+  end
   self.CharMain_CmpContent = Content
   self:UpdateCharInfos()
   if self.CharMain_CmpContent.Avatar then
@@ -330,6 +355,11 @@ function M:CharMain_SelectRoleListItem(Content)
   if Content.IsOwned then
     self:_UpdateSkillUpgradeReddot(ArmoryUtils:GetAvatar(), Content.Uuid)
     self:AddSubTabReddotListen()
+    if not self.IsPreviewMode then
+      self.WS_State:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  else
+    self.WS_State:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
@@ -361,7 +391,9 @@ local function AddContent(self, Char)
   local Obj = ArmoryUtils:NewCharOrWeaponItemContent(Char, CommonConst.ArmoryType.Char, CommonConst.ArmoryTag.Char, nil, self.ReddotFrom)
   Obj.bHideItemLevel = self.bFromArchive
   Obj.IsOwned = true
-  Obj.IsNew = ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
+  Obj.bCollection = Char.IsStar
+  Obj.IsStar = Char.IsStar
+  Obj.IsNew = Obj.IsNew or ArmoryUtils:TryAddNewUltraGradeCharReddot(Char)
   if Obj.IsNew and not Obj.Upgradeable then
     Obj.RedDotType = UIConst.RedDotType.NewRedDot
   end
@@ -413,6 +445,8 @@ local function AddUnownedContent(self, Char)
   Obj.IsOwned = false
   Obj.LockType = 2
   Obj.Level = nil
+  Obj.IsStar = Char.IsStar
+  Obj.bCollection = Char.IsStar
   Obj.Unlockable = not not ArmoryUtils:TryAddUnlockableCharReddot(CharId)
   Obj.IsNew = ArmoryUtils:TryAddNewReleasedCharReddot(CharId)
   if Obj.Unlockable then
@@ -509,7 +543,7 @@ function M:CharMain_CreateItemContents()
         local Gender2RoleIds = Const.DefaultAttributeMaster
         local ExcludeCharId = Gender2RoleIds[1 - RealAvatar.Sex]
         for CharId, value in pairs(DataMgr.Char) do
-          if not value.IsNotOpen and ExcludeCharId ~= CharId and not OwnedChars[CharId] and CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Char, CharId) then
+          if not value.IsNotOpen and ExcludeCharId ~= CharId and not OwnedChars[CharId] and CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.Char, CharId) then
             local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
               CharIds = {CharId}
             })
@@ -592,6 +626,11 @@ function M:CharMain_InitContentState()
     self.CharMain_CmpContent = self.CharItemContentsMap[self.ComparedChar.Uuid]
   end
   self.CharMain_CmpContent.IsSelect = true
+  if self.CharMain_CmpContent.IsStar then
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect_Normal)
+  else
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect_Normal)
+  end
 end
 
 function M:CharMain_UpdateResourceInfos()
@@ -737,8 +776,68 @@ function M:OnSwitchCurrentChar(Ret)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
   ArmoryUtils:SetItemInGear(self.CharMain_CurContent, false)
   ArmoryUtils:SetItemInGear(self.CharMain_CmpContent, true)
+  if self.CharMain_CurContent then
+    ArmoryUtils:SetItemInStarTarget(self.CharMain_CurContent, self.CharMain_CurContent.IsStar)
+  end
+  ArmoryUtils:SetItemInStarTarget(self.CharMain_CmpContent, self.CharMain_CmpContent.IsStar)
   self.CharMain_CurContent = self.CharMain_CmpContent
   self:CharMain_UpdatAttributeButton()
+end
+
+function M:CharMain_OnStarTargetBtnClicked()
+  local Avatar = GWorld:GetAvatar()
+  local TargetType = CommonConst.DataType.Char
+  local TargetId = self.ComparedChar.Uuid
+  local IsStar = true
+  if self.CharMain_CmpContent.IsStar then
+    IsStar = false
+  else
+  end
+  Avatar:SwitchArmoryTargetStar(nil, TargetType, TargetId, IsStar)
+end
+
+function M:CharMain_PlayRetrySound()
+  if self.CharMain_CmpContent.IsStar then
+    AudioManager(self):PlayUISound(nil, "event:/ui/common/click_checkbox_uncheck", nil, nil)
+  else
+    AudioManager(self):PlayUISound(nil, "event:/ui/common/click_checkbox_check", nil, nil)
+  end
+end
+
+function M:OnGamepad_LongPressEnd_Char()
+  self.Key_GamePad_Btn:RemoveExecuteLogic()
+  self.Key_GamePad_Btn:OnButtonReleased()
+end
+
+function M:OnGamepad_LongPressStart_Char()
+  self.Key_GamePad_Btn:AddExecuteLogic(self, function()
+    self:CharMain_OnStarTargetGamePadKeyDown()
+    self:OnGamepad_LongPressEnd_Char()
+  end)
+  self.Key_GamePad_Btn:OnButtonPressed(nil, true, 0, 0.5)
+end
+
+function M:CharMain_OnStarTargetGamePadKeyDown()
+  if not self.StarCD then
+    self.StarCD = true
+    self:CharMain_OnStarTargetBtnClicked()
+  end
+end
+
+function M:OnStarTargetChanged(TargetInfo)
+  if TargetInfo.TargetType ~= CommonConst.DataType.Char then
+    return
+  end
+  if TargetInfo.IsStar then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Toast_Armory_HasStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.Collect)
+  else
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Toast_Armory_CancelStared"))
+    self.StarTarget:PlayAnimation(self.StarTarget.UnCollect)
+  end
+  self.StarCD = false
+  self.CharMain_CmpContent.bCollection = TargetInfo.IsStar
+  ArmoryUtils:SetItemInStarTarget(self.CharMain_CmpContent, TargetInfo.IsStar)
 end
 
 function M:OnCharUpgraded(Ret, Uuid, CurLevel, TargetLevel)
@@ -991,7 +1090,7 @@ function M:CharMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
   self:AddKeyEvents(KeyUpEvents, self.LeftThumbstickKeyUpEvents)
   self.LeftThumbstickBottomKeyInfoList.Desc = GText("UI_CTL_CheckProperty")
   table.insert(BottomKeyInfo, self.LeftThumbstickBottomKeyInfoList)
-  self:AddKeyEvents(KeyDownEvents, self.LeftThumbstickKeyDownEvents, self.MainTabKeyDownEvents, self.CommonKeyDownEvents)
+  self:AddKeyEvents(KeyDownEvents, self.LeftThumbstickKeyDownEvents, self.MainTabKeyDownEvents, self.CommonKeyDownEvents, self.StarTargetNameKeyDownEvents)
   if self.Tab_L:IsVisible() then
     table.insert(BottomKeyInfo, self.RoleUpDownBottomKeyInfoList)
     self:AddKeyEvents(KeyDownEvents, self.RoleTabKeyDownEvents)
@@ -1000,6 +1099,21 @@ function M:CharMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
     self:AddKeyUpEvent(UIConst.GamePadKey.FaceButtonLeft, self.OnUpgradeKeyDown)
   end
   table.insert(BottomKeyInfo, self.ESCKeyInfoList)
+  self:AddKeyClickEvent(UIConst.GamePadKey.FaceButtonTop, self.OnSetInGear)
+  self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonTop, 0.5, self.OnGamepad_LongPressStart_Char, self.OnGamepad_LongPressEnd_Char)
+end
+
+function M:OnSetInGear()
+  if self.IsListExpanded then
+    return
+  end
+  if self.CurMainTab.Name ~= ArmoryUtils.ArmoryMainTabNames.Char then
+    return
+  end
+  if not rawget(self.CurrentSubUI, "OnFaceButtonTopKeyDown") then
+    return
+  end
+  self.CurrentSubUI:OnFaceButtonTopKeyDown()
 end
 
 function M:CharMain_InitNavigationRules()

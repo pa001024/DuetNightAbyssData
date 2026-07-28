@@ -53,6 +53,10 @@ StoryNodeKey:]] .. self.Data.key
   self.HasFinished = true
 end
 
+function Questline:GetStorySubsystem()
+  return UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+end
+
 function Questline:StartQuest(NodeId)
   if self.Storyline.HasFinished then
     local Message = "开始任务时，任务链已结束" .. [[
@@ -104,6 +108,10 @@ QuestNodeKey:]] .. NodeId
   self.RunningNodeList = {}
   self.HasStarted = true
   self.HasFinished = false
+  local StorySubsystem = self:GetStorySubsystem()
+  if StorySubsystem then
+    StorySubsystem:CaptureGlobalQuestVarSnapshot(self.QuestChainId)
+  end
   self:HandleActivateSkill(self.QuestId, "Start")
   self:StartNode(self.StartedNode)
 end
@@ -280,10 +288,22 @@ StoryNodeKey:]] .. self.Data.key
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, STLogType, "任务已结束", Message)
     return
   end
+  self:ClearQuest()
   self.HasFinished = true
   self.HasStarted = false
-  self:ClearQuest()
   self:ClearNodeWhenQuestFinish(bSucceeded)
+  local StorySubsystem = self:GetStorySubsystem()
+  if StorySubsystem then
+    if bSucceeded then
+      if self.QuestData and self.QuestData.bIsEndQuest then
+        StorySubsystem:ClearGlobalQuestVarsByQuestChainId(self.QuestChainId)
+      else
+        StorySubsystem:FlushGlobalQuestVarsToServer(self.QuestChainId)
+      end
+    else
+      StorySubsystem:RestoreGlobalQuestVarSnapshot(self.QuestChainId)
+    end
+  end
   DebugPrint("Questline Finish", self.QuestId)
   self.StoryNode:FinishQuest(OutPortName, bSucceeded)
 end
@@ -306,7 +326,7 @@ function Questline:ClearQuest()
   self.bLockRunningNodeList = false
   self.RunningNodeList = {}
   if self.QuestChainId > 0 and self.QuestId > 0 then
-    local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+    local StorySubsystem = self:GetStorySubsystem()
     if StorySubsystem then
       StorySubsystem:ClearVarByQuestChainId(self.QuestChainId)
     end
@@ -328,6 +348,25 @@ function Questline:ClearNodeWhenQuestFinish(IsSuccess)
       end
     end
   end
+end
+
+function Questline:OnStop()
+  for i = #self.FinishedNodeList, 1, -1 do
+    local Node = self.FinishedNodeList[i]
+    if Node.HasFinished then
+      Node:OnStop()
+    end
+  end
+  self.FinishedNodeList = {}
+end
+
+function Questline:OnFinish()
+  for i = #self.FinishedNodeList, 1, -1 do
+    local Node = self.FinishedNodeList[i]
+    if Node.HasFinished then
+      Node:OnFinish()
+    end
+  end
   self.FinishedNodeList = {}
 end
 
@@ -339,13 +378,6 @@ function Questline:StopQuest(IgnoreFinishClear)
     self:ClearNodeWhenQuestFinish(false)
     self:QuestlineEnd("Stop")
   end
-end
-
-function Questline:RestartQuest()
-  self:ClearQuest()
-  self:ClearNodeWhenQuestFinish(false)
-  self:BuildQuestline()
-  self:StartQuest()
 end
 
 function Questline:SuccessQuest()
@@ -445,6 +477,18 @@ function Questline:QuestlineEnd(Reason)
       GameMode:RecoverDataByQuestChainId(self.QuestChainId, self.QuestId)
     end
   end
+end
+
+function Questline:IsGuideNodeRunning()
+  if self.HasFinished then
+    return false
+  end
+  for _, QuestNode in pairs(self.RunningNodeList or {}) do
+    if QuestNode.IsGuideNode and QuestNode:IsGuideNode() then
+      return true
+    end
+  end
+  return false
 end
 
 return Questline

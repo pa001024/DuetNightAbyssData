@@ -66,6 +66,7 @@ function M:RefreshList(bAnimation, FromSrc)
   self:GetListData()
   self.List_Item:ClearListItems()
   self.ItemId2Index = {}
+  self.ListRefreshed = true
   if 0 == #self.ListDatas then
     self:OnListEmpty(FromSrc)
     self:OnRefreshListEnd()

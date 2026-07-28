@@ -205,16 +205,24 @@ function WBP_ForgeMain_C:BP_GetDesiredFocusTarget()
     local CurrentState = self.ControllerFSM:Current()
     if CurrentState == ForgeConst.ControllerFSMStates.PathPage_Normal then
       return self.Forging_Path_PC:GetDesiredFocusTarget()
-    else
-      return self.ForgeContent
     end
+    local FocusItem = self.CurrentGamepadSelectedItem or self.LastGamepadSelectedItem
+    local FocusEntry = self:GetEntryFromItem(FocusItem)
+    if FocusEntry then
+      return FocusEntry
+    end
+    return self.ForgeContent
   else
     return self
   end
 end
 
 function WBP_ForgeMain_C:SetFocus_Lua()
-  return self:BP_GetDesiredFocusTarget()
+  local FocusTarget = self:BP_GetDesiredFocusTarget()
+  if FocusTarget then
+    FocusTarget:SetFocus()
+  end
+  return FocusTarget
 end
 
 function WBP_ForgeMain_C:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -421,6 +429,7 @@ function WBP_ForgeMain_C:UpdateKeyboardBottomKeyInfo(KeyTypeList)
 end
 
 function WBP_ForgeMain_C:OnForgeItemReceiveFocus(Widget)
+  self.LastGamepadSelectedItem = Widget.Content
   if self.CurrentGamepadSelectedItem == Widget.Content then
     return
   end
@@ -499,6 +508,7 @@ end
 function WBP_ForgeMain_C:OnForgeItemLostFocus(Widget)
   Widget:SetGamepadFocus(false)
   if self.CurrentGamepadSelectedItem == Widget.Content then
+    self.LastGamepadSelectedItem = Widget.Content
     self.CurrentGamepadSelectedItem = nil
   end
 end
@@ -734,7 +744,7 @@ function WBP_ForgeMain_C:HandleCloseDraftPathView()
 end
 
 function WBP_ForgeMain_C:HideDraftPathView()
-  if self.CurInputDeviceType == UE4.ECommonInputType.Gamepad then
+  if self.CurInputDeviceType == UE4.ECommonInputType.Gamepad and not self.IsNavigatingToTargetDraft then
     self.ForgeContent:SetFocus()
   end
   self.Panel_List:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -744,6 +754,9 @@ function WBP_ForgeMain_C:HideDraftPathView()
 end
 
 function WBP_ForgeMain_C:Handle_PreviewKeyDownOnGamePad(InKeyName)
+  if self.IsNavigatingToTargetDraft then
+    return true
+  end
   local IsEventHandled = false
   local CurrentState = self.ControllerFSM:Current()
   if CurrentState == ForgeConst.ControllerFSMStates.NormalPage_FocusItem then
@@ -769,6 +782,9 @@ end
 
 function WBP_ForgeMain_C:Handle_KeyDownOnGamePad(InKeyName)
   DebugPrint("Tianyi@ HandleKeyDownOnGamePad", InKeyName, self.ControllerFSM:Current())
+  if self.IsNavigatingToTargetDraft then
+    return true
+  end
   local IsEventHandled = false
   local CurrentState = self.ControllerFSM:Current()
   if CurrentState == ForgeConst.ControllerFSMStates.NormalPage_ShowItem then
@@ -1268,6 +1284,7 @@ function WBP_ForgeMain_C:OnDraftBtnStartClicked(DraftId)
   if self.DisableBtnStartClicked then
     return
   end
+  self:CancelNavigateToTargetDraft()
   DebugPrint("Tianyi@ OnDraftBtnStartClicked, DraftId = " .. DraftId)
   local DraftInfo = ForgeModel:CheckState(DraftId)
   if DraftInfo then
@@ -1291,6 +1308,7 @@ function WBP_ForgeMain_C:OnDraftShowPath(DraftId)
 end
 
 function WBP_ForgeMain_C:OnDraftBtnCancelClicked(DraftId)
+  self:CancelNavigateToTargetDraft()
   local DraftInfo = ForgeModel:CheckState(DraftId)
   if DraftInfo and DraftInfo.State == ForgeConst.DraftState.InProgress then
     self:ShowCancelProduceConfirmWindow(DraftId)
@@ -1319,8 +1337,22 @@ function WBP_ForgeMain_C:NavigateToTab(TabIndex, SubTabIndex)
   self.Tab:SelectTab(TabIndex)
 end
 
+function WBP_ForgeMain_C:CancelNavigateToTargetDraft()
+  if self.NavigateToTargetDraftTimer then
+    self:RemoveTimer(self.NavigateToTargetDraftTimer)
+    self.NavigateToTargetDraftTimer = nil
+  end
+  if self.NavigateToTargetDraftFocusTimer then
+    self:RemoveTimer(self.NavigateToTargetDraftFocusTimer)
+    self.NavigateToTargetDraftFocusTimer = nil
+  end
+  self.IsNavigatingToTargetDraft = false
+end
+
 function WBP_ForgeMain_C:NavigateToTargetDraft(DraftId)
   local IsGamepad = self.CurInputDeviceType == UE4.ECommonInputType.Gamepad
+  self:CancelNavigateToTargetDraft()
+  self.IsNavigatingToTargetDraft = true
   if self.IsShowingDraftPathView then
     self:HideDraftPathView()
   end
@@ -1328,7 +1360,11 @@ function WBP_ForgeMain_C:NavigateToTargetDraft(DraftId)
   self:NavigateToTab(1)
   local ListItems = self.ForgeContent:GetListItems()
   local ListItemsNum = ListItems:Num()
-  self:AddTimer(0.1, function()
+  self.NavigateToTargetDraftTimer = self:AddTimer(0.3, function()
+    self.NavigateToTargetDraftTimer = nil
+    if not self.IsNavigatingToTargetDraft then
+      return
+    end
     local TargetObject
     for i = 1, ListItemsNum do
       local ListItem = ListItems:GetRef(i)
@@ -1339,17 +1375,29 @@ function WBP_ForgeMain_C:NavigateToTargetDraft(DraftId)
           self.ForgeContent:ScrollIndexIntoView(i - 1)
         end
         TargetObject = ListItem
-        self:AddTimer(0.1, function()
+        self.NavigateToTargetDraftFocusTimer = self:AddTimer(0.1, function()
+          self.NavigateToTargetDraftFocusTimer = nil
+          if not self.IsNavigatingToTargetDraft then
+            return
+          end
           local TargetWidget = TargetObject.Widget
+          if not TargetWidget then
+            self.IsNavigatingToTargetDraft = false
+            return
+          end
           self:PlayEntryScanlineAnim(TargetWidget)
           if IsGamepad then
             TargetWidget:SetFocus()
             self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
             self:UpdateFocusItemSetTargetState()
           end
+          self.IsNavigatingToTargetDraft = false
         end)
         break
       end
+    end
+    if not TargetObject then
+      self.IsNavigatingToTargetDraft = false
     end
   end)
 end
@@ -1663,6 +1711,7 @@ function WBP_ForgeMain_C:ShowCompleteProduceWindow(DraftIDs)
     self:RefreshItemsView()
     self:SetInputUIOnly(true)
     self:SetEnableBtnStartClicked(true)
+    self:RestoreGamepadFocusAfterGetItem()
   end
   
   self:ShowGetItemWindow(Params, Callback)
@@ -1695,6 +1744,7 @@ function WBP_ForgeMain_C:ShowCancelProduceWindow(DraftId, InCount, Count)
   local function Callback()
     self:RefreshItemsView()
     self:SetInputUIOnly(true)
+    self:RestoreGamepadFocusAfterGetItem()
   end
   
   self:ShowGetItemWindow(Params, Callback)
@@ -1710,6 +1760,39 @@ function WBP_ForgeMain_C:ShowGetItemWindow(Params, Callback)
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local UIManager = GameInstance:GetGameUIManager()
   UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, Params, false, Callback, self)
+end
+
+function WBP_ForgeMain_C:RestoreGamepadFocusAfterGetItem()
+  if not UIUtils.IsGamepadInput() then
+    return
+  end
+  self:AddDelayFrameFunc(function()
+    if self.IsShowingDraftPathView then
+      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.PathPage_Normal)
+      self.Forging_Path_PC:SetGamepadFocus()
+      return
+    end
+    local HasForgeItem = false
+    local ContentItems = self.ForgeContent:GetListItems()
+    for Index = 1, ContentItems:Length() do
+      local Item = ContentItems:GetRef(Index)
+      if Item and not Item.IsEmptyWidget then
+        HasForgeItem = true
+        break
+      end
+    end
+    if HasForgeItem then
+      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_FocusItem)
+      local FocusEntry = self:GetEntryFromItem(self.LastGamepadSelectedItem)
+      if FocusEntry then
+        FocusEntry:SetFocus()
+      else
+        self:NavigateToFirstEntry()
+      end
+    else
+      self.ControllerFSM:Enter(ForgeConst.ControllerFSMStates.NormalPage_NoFocus)
+    end
+  end, 1)
 end
 
 function WBP_ForgeMain_C:RequestStartProduce(DraftId, CostItemList, ProduceNum)

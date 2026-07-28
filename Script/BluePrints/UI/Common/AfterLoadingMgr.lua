@@ -1,6 +1,10 @@
 local FSM = require("BluePrints.UI.ControllerFSM")
+local EMCache = require("EMCache.EMCache")
 local MiscUtils = require("Utils.MiscUtils")
 local StorylineUtils = require("StoryCreator.StoryLogic.StorylineUtils")
+local FIRST_OPEN_LAYOUT_PLAN_03_KEY = "FirstOpenLayoutPlan03"
+local LAYOUT_PLAN_QUEST_CHAIN_ID = 100201
+local LAYOUT_PLAN_QUEST_ID = 10020101
 
 local function IsBattleMainInVisible()
   local Player = GWorld:GetMainPlayer()
@@ -9,6 +13,59 @@ local function IsBattleMainInVisible()
   end
   local BattleMain = UIManager():GetUIObj("BattleMain")
   return not IsValid(BattleMain) or BattleMain.IsPlayOutAnim or not BattleMain:IsVisible()
+end
+
+local function ShouldHoldForLayoutPlanQuestProgress()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not UIUtils.IsMobileInput() then
+    return false
+  end
+  if EMCache:Get(FIRST_OPEN_LAYOUT_PLAN_03_KEY, true) then
+    return false
+  end
+  local TrackingQuestChainId = Avatar.TrackingQuestChainId
+  if not TrackingQuestChainId or 0 == TrackingQuestChainId then
+    return false
+  end
+  if TrackingQuestChainId < LAYOUT_PLAN_QUEST_CHAIN_ID then
+    return true
+  end
+  if TrackingQuestChainId > LAYOUT_PLAN_QUEST_CHAIN_ID then
+    return false
+  end
+  local QuestChain = Avatar.QuestChains and Avatar.QuestChains[LAYOUT_PLAN_QUEST_CHAIN_ID]
+  if not QuestChain then
+    return true
+  end
+  local DoingQuestId = QuestChain.DoingQuestId or 0
+  return DoingQuestId < LAYOUT_PLAN_QUEST_ID
+end
+
+local function GetNextStateWaitGuideOrBattleMain(self, AfterLoadingMgr)
+  if ShouldHoldForLayoutPlanQuestProgress() then
+    return self.StateName
+  end
+  if AfterLoadingMgr.bGuideEndPending then
+    AfterLoadingMgr.bGuideEndPending = nil
+    if IsBattleMainInVisible() then
+      return self.StateName
+    else
+      return DataMgr.AfterLoadingFSM[self.StateName].NextState
+    end
+  end
+  if StorylineUtils:IsGuideNodeRunning() or IsBattleMainInVisible() then
+    return self.StateName
+  else
+    return DataMgr.AfterLoadingFSM[self.StateName].NextState
+  end
+end
+
+local function IsOldLayoutUser(Avatar, PlanIndex)
+  if not Avatar or not PlanIndex then
+    return false
+  end
+  local LayoutEntryIndex = Avatar.GetLayoutEntryIndexByPlanIndex and Avatar:GetLayoutEntryIndexByPlanIndex(PlanIndex) or PlanIndex
+  return 1 == LayoutEntryIndex or 2 == LayoutEntryIndex
 end
 
 local State = {
@@ -81,7 +138,11 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
         if BattleView then
           BattleView:Hide("Temp1.4Fix")
         end
-        GWorld.GameInstance:AddTimer(0.1, function()
+        local Time = 0
+        if UGameplayStatics.GetPlatformName() == "IOS" then
+          Time = 0.1
+        end
+        GWorld.GameInstance:AddTimer(Time, function()
           GWorld.GameInstance:ClearExitDungeonData()
           if ExitDungeonInfo.Type == "Abyss" then
             local AbyssId = ExitDungeonInfo.AbyssId
@@ -122,17 +183,40 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
             PageJumpUtils:JumpToAutoChessMain()
           elseif ExitDungeonInfo.Type == "SoloTreasure" then
             if 1 == ExitDungeonInfo.Mode then
-              local EventId = ExitDungeonInfo.EventId
               local Mode = ExitDungeonInfo.Mode
               local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
               local EventDungeonId = ExitDungeonInfo.EventDungeonId
-              PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
+              if ExitDungeonInfo.IsPermanent then
+                PageJumpUtils:SoloTreasurePermanentRepeatLevel(Mode, bIsDifficulty, EventDungeonId)
+              else
+                local EventId = ExitDungeonInfo.EventId
+                PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
+              end
             end
           elseif ExitDungeonInfo.Type == "AsyncCombat" then
             local CurTabIndex = ExitDungeonInfo.CurTabIndex
             PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
+          elseif ExitDungeonInfo.Type == "GuildBoss" then
+            if not ExitDungeonInfo.IsFromRegionMechanism then
+              local SubRegionId = ExitDungeonInfo.SubRegionId
+              local TeleportPoint = ExitDungeonInfo.TeleportPoint or 1
+              if SubRegionId then
+                local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
+                if IsValid(GameMode) then
+                  GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, SubRegionId, TeleportPoint, nil, nil, true)
+                end
+              end
+            end
+          elseif ExitDungeonInfo.Type == "WeaponVerify" then
+            local CurTabIndex = ExitDungeonInfo.CurTabIndex
+            local CurSelectIndex = ExitDungeonInfo.CurSelectIndex
+            PageJumpUtils:JumpToWeaponVerify(CurTabIndex, CurSelectIndex)
           end
-          GWorld.GameInstance:AddTimer(0.1, function()
+          local Time = 0
+          if UGameplayStatics.GetPlatformName() == "IOS" then
+            Time = 0.5
+          end
+          GWorld.GameInstance:AddTimer(Time, function()
             local BattleView = UIManager():GetUIObj("BattleMain")
             if BattleView then
               BattleView:Show("Temp1.4Fix")
@@ -178,6 +262,30 @@ StateImpl.Entertainment = State:New("Entertainment", {
     return NextStateName
   end
 })
+StateImpl.CutSceneReview = State:New("CutSceneReview", {
+  OnEnter = function(AfterLoadingMgr)
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return
+    end
+    if Avatar:IsCutSceneReviewRunning() then
+      Avatar:RunCutSceneReviewStoryline()
+    elseif Avatar:IsCutSceneReviewStopping() then
+      Avatar:ExitCutSceneReview()
+    end
+  end,
+  GetNextState = function(self, AfterLoadingMgr)
+    local NextStateName = DataMgr.AfterLoadingFSM[self.StateName].NextState
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar then
+      return NextStateName
+    end
+    if not Avatar:IsInCutSceneReview() then
+      return NextStateName
+    end
+    return self.StateName
+  end
+})
 StateImpl.TriggerGuide = State:New("TriggerGuide", {
   OnEnter = function(AfterLoadingMgr)
     local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
@@ -210,7 +318,7 @@ StateImpl.TriggerGuide = State:New("TriggerGuide", {
     end
   end
 })
-StateImpl.OpenForcePopup = State:New("OpenForcePopup", {
+StateImpl.BackToTrial = State:New("BackToTrial", {
   OnEnter = function(AfterLoadingMgr)
     local GameMode = MiscUtils.GameMode()
     local GameState = GameState()
@@ -221,18 +329,37 @@ StateImpl.OpenForcePopup = State:New("OpenForcePopup", {
       end, false, 0, nil, true)
       return
     end
+  end
+})
+StateImpl.ReturnActivity = State:New("ReturnActivity", {
+  OnEnter = function(AfterLoadingMgr)
     local Avatar = GWorld:GetAvatar()
-    if Avatar then
-      if ReturnActivityController and ReturnActivityController.DisplayReturnWelcomBannerCache then
-        ReturnActivityController.DisplayReturnWelcomBannerCache = nil
+    if Avatar and ReturnActivityController and ReturnActivityController.DisplayReturnWelcomBannerCache then
+      ReturnActivityController.DisplayReturnWelcomBannerCache = nil
+      local ReturnUtils = require("Blueprints.UI.WBP.Activity.Widget.Return.ReturnUtils")
+      if ReturnUtils and nil ~= ReturnUtils.GetCurrentEventSchemeId() then
         ReturnActivityController:TryDisplayReturnWelcomBanner()
       end
-      MonthSignInController:TryPopUpMonthSignIn()
-      UIManager(PlayerCharacter):TryShowPlayerLevelUpInfo({
-        CurLevel = Avatar.Level,
-        ShowProgresBar = false
-      })
     end
+  end
+})
+StateImpl.Advertisement = State:New("Advertisement", {
+  OnEnter = function(AfterLoadingMgr)
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      local LoginPopUpModel = require("BluePrints.UI.WBP.Activity.Widget.AdvertisingPopUp.LoginPopUpModel")
+      local NeedShowList = LoginPopUpModel:CalculateNeedOpenLoginPopUp()
+      if table.isempty(NeedShowList) then
+        return
+      end
+      local PlayerCharacter = GWorld:GetMainPlayer()
+      UIManager(PlayerCharacter):LoadUINew("AdvertisingPopUpMain", NeedShowList)
+    end
+  end
+})
+StateImpl.MonthCard = State:New("MonthCard", {
+  OnEnter = function(AfterLoadingMgr)
+    MonthSignInController:TryPopUpMonthSignIn()
   end
 })
 StateImpl.LayoutPlan = State:New("LayoutPlan", {
@@ -241,9 +368,11 @@ StateImpl.LayoutPlan = State:New("LayoutPlan", {
     if Avatar and UIUtils.IsMobileInput() then
       local PlayerCharacter = GWorld:GetMainPlayer()
       local LayoutPlanIndex = Avatar:GetCurrentMobileHudPlanIndex()
-      local LayoutPlanCount = Avatar:GetMobileHudPlanCount()
-      local ResPlant = 0 == LayoutPlanCount and 1 == LayoutPlanIndex
-      if ResPlant then
+      local bHasSeenLayoutPlan03 = EMCache:Get(FIRST_OPEN_LAYOUT_PLAN_03_KEY, true)
+      local bIsOldLayoutUser = IsOldLayoutUser(Avatar, LayoutPlanIndex)
+      if not bHasSeenLayoutPlan03 and not bIsOldLayoutUser then
+        EMCache:Set(FIRST_OPEN_LAYOUT_PLAN_03_KEY, true, true)
+      elseif PlayerCharacter and bIsOldLayoutUser and not bHasSeenLayoutPlan03 then
         UIManager(PlayerCharacter):LoadUINew("LayoutPlan")
       end
     end
@@ -263,36 +392,8 @@ StateImpl.MainLineQuest = State:New("MainLineQuest", {
       Avatar:NotifyAvatarRegionAllReady()
     end
   end,
-  OnAfterEnter = function(AfterLoadingMgr, NowState)
-    if not GWorld.StoryMgr then
-      return
-    end
-    local WaitOfTimeNodeTable = {}
-    GWorld.StoryMgr:GetRunningNodeTableByType("WaitOfTimeNode", WaitOfTimeNodeTable)
-    if not table.isempty(WaitOfTimeNodeTable) then
-      return
-    end
-    local TalkNodeTable = {}
-    GWorld.StoryMgr:GetRunningNodeTableByType("TalkNode", WaitOfTimeNodeTable)
-    if not table.isempty(TalkNodeTable) then
-      return
-    end
-    AfterLoadingMgr:Fallback(NowState)
-  end,
   GetNextState = function(self, AfterLoadingMgr)
-    if AfterLoadingMgr.bGuideEndPending then
-      AfterLoadingMgr.bGuideEndPending = nil
-      if IsBattleMainInVisible() then
-        return self.StateName
-      else
-        return DataMgr.AfterLoadingFSM[self.StateName].NextState
-      end
-    end
-    if StorylineUtils:IsGuideNodeRunning() or IsBattleMainInVisible() then
-      return self.StateName
-    else
-      return DataMgr.AfterLoadingFSM[self.StateName].NextState
-    end
+    return GetNextStateWaitGuideOrBattleMain(self, AfterLoadingMgr)
   end
 })
 StateImpl.DynamicQuest = State:New("DynamicQuest", {
@@ -301,36 +402,40 @@ StateImpl.DynamicQuest = State:New("DynamicQuest", {
     if GameMode and GameMode.ActivateDynamicQuestEvent then
       GameMode:ActivateDynamicQuestEvent()
     end
-  end,
-  OnAfterEnter = function(AfterLoadingMgr, NowState)
-    if not GWorld.StoryMgr then
-      return
+  end
+})
+StateImpl.ShowLevel = State:New("ShowLevel", {
+  OnEnter = function(AfterLoadingMgr)
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      UIManager():TryShowPlayerLevelUpInfo({
+        CurLevel = Avatar.Level,
+        ShowProgresBar = false
+      })
     end
-    local WaitOfTimeNodeTable = {}
-    GWorld.StoryMgr:GetRunningNodeTableByType("WaitOfTimeNode", WaitOfTimeNodeTable)
-    if not table.isempty(WaitOfTimeNodeTable) then
-      return
-    end
-    local TalkNodeTable = {}
-    GWorld.StoryMgr:GetRunningNodeTableByType("TalkNode", WaitOfTimeNodeTable)
-    if not table.isempty(TalkNodeTable) then
-      return
-    end
-    AfterLoadingMgr:Fallback(NowState)
-  end,
-  GetNextState = function(self, AfterLoadingMgr)
-    if AfterLoadingMgr.bGuideEndPending then
-      AfterLoadingMgr.bGuideEndPending = nil
-      if IsBattleMainInVisible() then
-        return self.StateName
-      else
-        return DataMgr.AfterLoadingFSM[self.StateName].NextState
+  end
+})
+StateImpl.GuildSceneUI = State:New("GuildSceneUI", {
+  OnEnter = function(AfterLoadingMgr)
+    local GameState = GameState()
+    if GameState and GameState.IsInRegion and GameState:IsInRegion() and UIUtils.AmIInGuildScene() then
+      local BattleMain = UIManager():GetUIObj("BattleMain")
+      if BattleMain then
+        BattleMain:PlayGuildInfoIn()
       end
-    end
-    if StorylineUtils:IsGuideNodeRunning() or IsBattleMainInVisible() then
-      return self.StateName
-    else
-      return DataMgr.AfterLoadingFSM[self.StateName].NextState
+      local Avatar = GWorld:GetAvatar()
+      if not Avatar then
+        return
+      end
+      Avatar:NotifyCharacterStartSync(Avatar.CurrentOnlineType)
+      PrintTable({
+        GuildSceneUI_others = Avatar.RegionAvatars,
+        GlobalRegionItemCache = Avatar.GlobalRegionItemCache
+      }, 10)
+      for i, v in pairs(Avatar.RegionAvatars) do
+        Avatar:RegionSyncAddRoleToCreate(i, v)
+        Avatar:InitOnlineStateData(i, v)
+      end
     end
   end
 })

@@ -59,6 +59,7 @@ function BP_StartAndEndPoint_C:SetPlayerTrans()
   Character:K2_SetActorLocation(Location, false, nil, true)
   local Rotation = self:K2_GetActorRotation()
   Character:K2_SetActorRotation(Rotation, false)
+  Character:TeleportFollowSummons(Location, Rotation)
   local Controller = UE4.UGameplayStatics.GetPlayerController(self, 0)
   Controller:SetControlRotation(Rotation)
   self:OpenPlayerPositionSync()
@@ -87,6 +88,36 @@ function BP_StartAndEndPoint_C:InitSetPlayerTrans()
           print(_G.LogTag, "InitSetPlayerTrans SetLocation Succcesss", Player:K2_GetActorLocation())
           Player:MulticastSetPlayerRotation(Controller.TargetBornRotator)
           Player:GetMovementComponent():ForceClientUpdate()
+          Player:TeleportFollowSummons(Controller.TargetBornLocation, Controller.TargetBornRotator)
+          Player:RemoveGravityModifier(UE4.EGravityModifierTag.LoadLevel)
+        end
+      end
+    end
+  end
+end
+
+function BP_StartAndEndPoint_C:AlwaysSetPlayerTrans()
+  self:DebugPrint("AlwaysSetPlayerTrans")
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not IsValid(GameMode) then
+    return
+  end
+  for i = 0, GameMode:GetTargetPlayerNum() - 1 do
+    local Controller = UE4.UGameplayStatics.GetPlayerController(self, i)
+    if not Controller then
+    else
+      local Player = Controller:GetMyPawn()
+      if not Player then
+      else
+        self:SetInitTrans(Controller, i)
+        if not GameMode.ClientReadyMap:FindRef(Controller.AvatarEidStr) then
+          print(_G.LogTag, "InitSetPlayerTrans without client ready, continue", Controller.AvatarEidStr)
+        else
+          Player:K2_SetActorLocation(Controller.TargetBornLocation, false, nil, true)
+          print(_G.LogTag, "InitSetPlayerTrans SetLocation Succcesss", Player:K2_GetActorLocation())
+          Player:MulticastSetPlayerRotation(Controller.TargetBornRotator)
+          Player:GetMovementComponent():ForceClientUpdate()
+          Player:TeleportFollowSummons(Controller.TargetBornLocation, Controller.TargetBornRotator)
           Player:RemoveGravityModifier(UE4.EGravityModifierTag.LoadLevel)
         end
       end
@@ -130,7 +161,7 @@ function BP_StartAndEndPoint_C:SetEnteredPlayerTrans(PlayerController)
   end
 end
 
-function BP_StartAndEndPoint_C:RealSetNewEnteredPlayerTrans(AvatarEidStr)
+function BP_StartAndEndPoint_C:RealSetNewEnteredPlayerTrans(AvatarEidStr, NotUpdateLevelId)
   self:DebugPrint("RealSetNewEnteredPlayerTrans")
   local PlayerController = UE4.URuntimeCommonFunctionLibrary.GetPlayerControllerByAvatarEid(self, AvatarEidStr)
   local Character = PlayerController:GetMyPawn()
@@ -138,7 +169,9 @@ function BP_StartAndEndPoint_C:RealSetNewEnteredPlayerTrans(AvatarEidStr)
   NewLocation.Z = NewLocation.Z + Character.CapsuleComponent:GetUnscaledCapsuleHalfHeight()
   Character:K2_SetActorLocation(PlayerController.TargetBornLocation, false, nil, true)
   Character:K2_SetBase()
-  Character:UpdateCurrentLevelId()
+  if not NotUpdateLevelId then
+    Character:UpdateCurrentLevelId()
+  end
   Character:MulticastSetPlayerRotation(PlayerController.TargetBornRotator)
   Character:GetMovementComponent():ForceClientUpdate()
   Character:RemoveGravityModifier(UE4.EGravityModifierTag.LoadLevel)

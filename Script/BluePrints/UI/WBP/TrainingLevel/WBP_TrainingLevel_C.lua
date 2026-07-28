@@ -53,7 +53,7 @@ function M:InitRewardList()
   if not Avatar then
     return
   end
-  local formattedLevel = "Lv." .. tostring(self.CurrentLevel)
+  local formattedLevel = GText("UI_LEVEL_NAME") .. tostring(self.CurrentLevel)
   self.TrainingLevel_LevelItem.Text_LevelNum:SetText(formattedLevel)
   self.TrainingLevel_LevelItem.Text_LevelTitle:SetText(GText("PlayerLv_Now"))
   local maxItems = math.min(#self.levels, 5)

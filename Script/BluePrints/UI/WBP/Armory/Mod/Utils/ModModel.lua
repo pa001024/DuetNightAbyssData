@@ -508,7 +508,11 @@ end
 
 function M:GetCurrentSuitCost(Target)
   Target = Target or self:GetTarget()
-  return Target:GetModSuitCost()
+  local Cost = Target:GetModSuitCost()
+  if 0 == Cost then
+    Cost = self:CalcModSuitTotalCost(Target, Target.ModSuitIndex, true)
+  end
+  return Cost
 end
 
 function M:GetTargetMaxCost(Target)
@@ -1369,6 +1373,9 @@ function M:HasTargetEquipedMod(TargetUuid, ModId)
   local Target = self:GetAvatar().Weapons[TargetUuid]
   Target = Target or self:GetAvatar().UWeapons[TargetUuid]
   Target = Target or self:GetAvatar().Chars[TargetUuid]
+  if not Target then
+    return false
+  end
   for _, Slot in pairs(Target:GetModSuit()) do
     if not string.isempty(Slot.ModEid) then
       local Mod = self:GetMod(Slot.ModEid)

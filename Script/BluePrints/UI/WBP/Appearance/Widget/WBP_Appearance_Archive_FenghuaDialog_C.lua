@@ -1,10 +1,11 @@
 require("UnLua")
+local NumberModel = require("BluePrints.UI.WBP.Appearance.WBP_AppearanceArchive_Number_Model")
 local M = Class({
   "BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase"
 })
 
 function M:Construct()
-  self.MaxLength = 730
+  self.MaxLength = 930
   self.List_Info:SetScrollBarVisibility(ESlateVisibility.Hidden)
   self.List_Info:SetControlScrollbarInside(true)
   self.FenghuaProgress.Text_Fernghua:SetText(GText("UI_AppearanceScore_ScoreName"))
@@ -22,7 +23,8 @@ function M:InitScoreRule()
   self.DyeType = {
     Skin = 1,
     Hair = 2,
-    WeaponSkin = 3
+    Weapon = 3,
+    WeaponSkin = 4
   }
   for _, Info in pairs(DataMgr.AppearanceScore) do
     if not self.RuleTable[Info.Type] then
@@ -96,8 +98,9 @@ function M:Init()
         end
       end
     end
-    AppearacneScoreTable[AppearanceCollectInfo.Entrance] = SubScore
-    AppearacneScoreTable[AppearanceCollectInfo.Entrance] = {ScoreMax = SubScore}
+    if not AppearanceCollectInfo.ExcludeCollect then
+      AppearacneScoreTable[AppearanceCollectInfo.Entrance] = {ScoreMax = SubScore}
+    end
   end
   local SingleMaxDyeScore = 0
   for _, DyeScoreInfo in pairs(DataMgr.DyeScore) do
@@ -119,13 +122,15 @@ function M:Init()
   local SumAppearacneScore = 0
   for Entrance, ScoreInfo in ipairs(AppearacneScoreTable) do
     local ScoreCur = 0
+    local Type = DataMgr.AppearanceCollect[Entrance].Type
     if Avatar then
-      local Type = DataMgr.AppearanceCollect[Entrance].Type
       ScoreCur = Avatar.AppearanceScores[Type] or 0
     end
     ScoreInfo.ScoreCur = ScoreCur
     CurAppearacneScore = CurAppearacneScore + ScoreInfo.ScoreCur
     SumAppearacneScore = SumAppearacneScore + ScoreInfo.ScoreMax
+    ScoreInfo.NumCur = NumberModel:GetCurrentNumber(Entrance, true)
+    ScoreInfo.NumMax = NumberModel["Get" .. Type .. "SumNumber"](NumberModel, true)
   end
   local AppearacneScoreInfo = {}
   table.insert(AppearacneScoreInfo, {
@@ -139,6 +144,8 @@ function M:Init()
       IsSum = false,
       ScoreCur = ScoreInfo.ScoreCur,
       ScoreMax = ScoreInfo.ScoreMax,
+      NumCur = ScoreInfo.NumCur,
+      NumMax = ScoreInfo.NumMax,
       Text = DataMgr.AppearanceCollect[Entrance].EntranceName
     })
   end
@@ -184,6 +191,8 @@ function M:Init()
     Content.IsSum = Info.IsSum
     Content.ScoreCur = Info.ScoreCur
     Content.ScoreMax = Info.ScoreMax
+    Content.NumCur = Info.NumCur
+    Content.NumMax = Info.NumMax
     Content.Text = Info.Text
     self.List_Info:AddItem(Content)
   end
@@ -205,6 +214,14 @@ function M:CheckCanDye(Type, Id)
     if not Info.SkinSeries and not Info.SkinTag then
       return false
     else
+      local CharId = Info.CharId
+      if CharId then
+        local Sex = 0
+        local CharInfo = DataMgr.Char[CharId]
+        if CharInfo and CharInfo.GenderTag and CharInfo.GenderTag ~= Sex then
+          return false
+        end
+      end
       return true
     end
   elseif "Hair" == Type then
@@ -215,6 +232,8 @@ function M:CheckCanDye(Type, Id)
       return true
     end
   elseif "WeaponSkin" == Type then
+    return true
+  elseif "Weapon" == Type then
     return true
   end
   return false

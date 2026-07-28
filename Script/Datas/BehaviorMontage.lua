@@ -502,6 +502,19 @@ return ReadOnly("BehaviorMontage", {
     MontagePath = "/Game/Asset/Char/Monster/NE_Villiger07/Animation/Montage/Combat/Skill/NE_Villiger07_SpecialAlert_Montage.NE_Villiger07_SpecialAlert_Montage",
     MontageType = "EnterAlert"
   },
+  [9511001] = {
+    MontageGroupId = 9511,
+    MontageId = 9511001,
+    MontagePath = "/Game/Asset/Char/Monster/NE_Hutao/Animation/Montage/SpeicaIIdle/NE_Hutao_SpecialIdle01_Montage.NE_Hutao_SpecialIdle01_Montage",
+    MontageType = "OutBattleBehavior",
+    NextMontage = 9511100
+  },
+  [9511100] = {
+    MontageGroupId = 9511,
+    MontageId = 9511100,
+    MontagePath = "/Game/Asset/Char/Monster/NE_Hutao/Animation/Montage/SpeicaIIdle/NE_Hutao_SpecialAlert_Montage.NE_Hutao_SpecialAlert_Montage",
+    MontageType = "EnterAlert"
+  },
   [9801001] = {
     MontageGroupId = 9801,
     MontageId = 9801001,

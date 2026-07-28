@@ -64,7 +64,10 @@ function BP_SurvivalProComponent_C:OnMonsterDeadOut()
   if MaxMonsterDeadOut <= self.MonsterDeadOut and self.HasInEnergySurvival then
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-    UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, 600306, nil)
+    local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(GameInstance, 600306, nil)
+    if IsValid(TalkAsyncAction) then
+      TalkAsyncAction:Activate()
+    end
     self.MonsterDeadOut = 0
   end
 end

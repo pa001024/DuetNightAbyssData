@@ -22,17 +22,28 @@ function M:InitBaseInfo()
   self.CurSelectItem = nil
 end
 
-function M:InitClickInfo(ParentWidget, WidgetDataInfo, CheckBoxClickCallback, BackClickCallback)
+function M:InitClickInfo(ParentWidget, MappedEditPlan, WidgetDataInfo, CheckBoxClickCallback, BackClickCallback)
   self.ParentWidget = ParentWidget
   self.CheckBoxClickCallback = CheckBoxClickCallback
   self.BackClickCallback = BackClickCallback
   for key, value in pairs(BattleHUDCommonConst.ManualAdditionConfigInHUD) do
     local TargetWidget = self["Solution_Item" .. value.NodeIdx]
+    local OwnerLayoutIndex = value.OwnerLayoutIndex or {}
     if TargetWidget then
-      local SubItemDataInfo = WidgetDataInfo[key] or {}
-      TargetWidget:Init(key, value, SubItemDataInfo.bHasAddInHUDSetting, self.ClickToManualAddWidget, self)
-      table.insert(self.AllSolutionItem, TargetWidget)
+      if table.findValue(OwnerLayoutIndex, MappedEditPlan) then
+        local SubItemDataInfo = WidgetDataInfo[key] or {}
+        TargetWidget:Init(key, value, SubItemDataInfo.bHasAddInHUDSetting, self.ClickToManualAddWidget, self)
+        table.insert(self.AllSolutionItem, TargetWidget)
+        TargetWidget:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      else
+        TargetWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      end
     end
+  end
+  if MappedEditPlan == BattleHUDCommonConst.AllLayoutIndexInfo[3].LayoutIndex then
+    self.Group_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  else
+    self.Group_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
 end
 

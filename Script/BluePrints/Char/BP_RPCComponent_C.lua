@@ -1,5 +1,6 @@
 local RewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
 require("UnLua")
+local msgpack = require("msgpack_core")
 local BP_RPCComponent_C = Class()
 
 function BP_RPCComponent_C:OnRequestGuideInfo_Lua(GuideInfo)
@@ -160,7 +161,11 @@ function BP_RPCComponent_C:GMServerGetDrop_Lua(DropId, Count)
   local NormalTag = RewardBox:GetTag("Normal")
   DropCountTable[tostring(NormalTag)] = Count
   Drops[DropId] = DropCountTable
-  GameMode:HandleRewardDrop(Drops, CommonConst.RewardReason.REASON_GM_SPAWN, Transform, {}, nil)
+  if not GameMode:CheckServerDungeonEnable() then
+    GameMode:HandleRewardDrop(Drops, CommonConst.RewardReason.REASON_GM_SPAWN, Transform, {}, nil)
+  else
+    GameMode:NotifyServerDungeonEvent("GMCreatDrop", Drops, CommonConst.RewardReason.PickUp, CommonUtils:SerializeFTransform(Transform))
+  end
 end
 
 function BP_RPCComponent_C:NotifyServerPlaySequenceFinish_Lua(PlayerEid)
@@ -170,6 +175,24 @@ end
 
 function BP_RPCComponent_C:NotifyClientShowTeleportToast()
   EventManager:FireEvent(EventID.OnTeleportReady)
+end
+
+function BP_RPCComponent_C:SendGameModeDungeonEvent_GameMode(Message)
+  local MessageStr = Message:GetBytes()
+  local ParamTbl = msgpack.unpack(MessageStr)
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
+  if not DungeonObject then
+    return
+  end
+  DungeonObject:OnNotifyGameModeDungeonEvent(table.unpack(ParamTbl, 1, ParamTbl.n))
+end
+
+function BP_RPCComponent_C:SendClientDungeonEvent_Client(Message)
+  local CProperty = GWorld:GetDungeonObjectCProperty()
+  if not CProperty then
+    return
+  end
+  CProperty:SendClientDungeonEvent_Client(Message)
 end
 
 return BP_RPCComponent_C

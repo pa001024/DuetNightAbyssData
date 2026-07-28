@@ -1,5 +1,8 @@
 require("UnLua")
 local EMCache = require("EMCache.EMCache")
+local PageJumpUtils = require("Utils.PageJumpUtils")
+local IRON_SHOP_TYPE = "IronModeShop"
+local IRON_SHOP_ENTRY_CLICKED_KEY = "IronDeputeShopEntryClicked"
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.UI.BP_EMUserWidgetUtils_C"
@@ -23,6 +26,19 @@ function M:Construct()
     end
   })
   self:AddDispatcher(EventID.IronSurvivalSwitchTab, self, self.OnIronSwitchTab)
+  if self.Btn_ShopExChange then
+    if self.Btn_ShopExChange.BindEventOnClicked then
+      self.Btn_ShopExChange:BindEventOnClicked(self, self.OnClickIronShop)
+    elseif self.Btn_ShopExChange.OnClicked then
+      self.Btn_ShopExChange.OnClicked:Add(self, self.OnClickIronShop)
+    end
+    if self.Btn_ShopExChange.SetText then
+      self.Btn_ShopExChange:SetText(GText("UI_IronTicket_Shop"))
+    end
+    if self.Btn_ShopExChange.SetGamePadImg then
+      self.Btn_ShopExChange:SetGamePadImg("X")
+    end
+  end
   if self.Text_Qa then
     self.Text_Qa:SetText(GText("UI_DUNGEON_MODE_IRONMODE"))
   end
@@ -50,11 +66,24 @@ function M:Construct()
   end
 end
 
+function M:OnKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
+    local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+    if "Gamepad_FaceButton_Left" == InKeyName and self.Group_IronShopBtn and self.Group_IronShopBtn:IsVisible() then
+      self:OnClickIronShop()
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+  end
+  return UE4.UWidgetBlueprintLibrary.Unhandled()
+end
+
 function M:InitContent(Parent)
   self.Parent = Parent
   self.IronExpLoaded = false
   local IsOn = EMCache:Get("Is_IronSurvival_SwitchTab", true) or false
   self.WS_List:SetActiveWidgetIndex(IsOn and 1 or 0)
+  self:RefreshIronShopEntry(IsOn)
   self:LoadDeputeList(Parent)
   if IsOn then
     self:LoadIronExpList(Parent)
@@ -64,6 +93,7 @@ end
 
 function M:OnIronSwitchTab(IsOn)
   self.WS_List:SetActiveWidgetIndex(IsOn and 1 or 0)
+  self:RefreshIronShopEntry(IsOn)
   if IsOn and not self.IronExpLoaded then
     self:LoadIronExpList(self.Parent)
     self.IronExpLoaded = true
@@ -184,6 +214,34 @@ function M:OnGamepadMenuPressed()
     return
   end
   self:OnOpenDeputeQaPopup()
+end
+
+function M:IsIronShopNew()
+  return not EMCache:Get(IRON_SHOP_ENTRY_CLICKED_KEY, true)
+end
+
+function M:RefreshIronShopEntry(IsOn)
+  if not self.Group_IronShopBtn then
+    return
+  end
+  self.Group_IronShopBtn:SetVisibility(IsOn and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  if IsOn and self.Btn_ShopExChange and self.Btn_ShopExChange.SetReddot then
+    self.Btn_ShopExChange:SetReddot(self:IsIronShopNew(), false, false)
+  end
+end
+
+function M:OnClickIronShop()
+  if self:IsIronShopNew() then
+    EMCache:Set(IRON_SHOP_ENTRY_CLICKED_KEY, true, true)
+    if self.Btn_ShopExChange and self.Btn_ShopExChange.SetReddot then
+      self.Btn_ShopExChange:SetReddot(false, false, false)
+    end
+  end
+  if not IRON_SHOP_TYPE or not DataMgr.Shop[IRON_SHOP_TYPE] then
+    DebugPrint("[IronExp] 深境商店 ShopType 未配置，跳转跳过")
+    return
+  end
+  PageJumpUtils:JumpToShopPage(nil, nil, nil, IRON_SHOP_TYPE)
 end
 
 return M

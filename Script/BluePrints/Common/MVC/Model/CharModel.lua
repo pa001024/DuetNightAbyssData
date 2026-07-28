@@ -232,7 +232,7 @@ function M:OnNewCharSkinObtained(SkinId, CharId)
     return
   end
   _SkinIdToCharId[SkinId] = CharId
-  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Skin, SkinId) then
+  if not CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.Skin, SkinId) then
     return
   end
   if SkinId ~= CharId then
@@ -245,7 +245,7 @@ function M:OnNewCharHairObtained(HairId, CharId)
     return
   end
   _HairIdToCharId[HairId] = CharId
-  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Hair, HairId) then
+  if not CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.Hair, HairId) then
     return
   end
   if HairId ~= CharId then
@@ -262,7 +262,7 @@ function M:OnNewCharAccessoryObtained(AccessoryId)
   if not CharAccessoryData or _DefaultAccessories[CharAccessoryData.AccessoryType] == AccessoryId then
     return
   end
-  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.CharAccessory, AccessoryId) then
+  if not CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.CharAccessory, AccessoryId) then
     return
   end
   if CharAccessoryData.Skin then

@@ -123,7 +123,7 @@ function SoloTreasureInfo:SoloTreasureInfoOpenItemBoxMechanism(uid)
   end
   mechanism.OpenTimeStamp = os.time()
   local itemlist = {}
-  local ItemIdList = SoloTreasureUtils:GetExtractionTreasureMechanismItemList(RewardItemBoxId)
+  local ItemIdList = SoloTreasureUtils:GetExtractionTreasureMechanismItemList(RewardItemBoxId, self.EventId)
   print("ItemIdList = " .. CommonUtils.TableToString3(ItemIdList))
   for i = 1, #ItemIdList do
     local item = self:SoloTreasureInfoNewMechanismItem(uid, ItemIdList[i])
@@ -361,7 +361,7 @@ function SoloTreasureInfo:SoloTreasureInfo_RewardRoomOpen(Mechanism)
   local KeyId = tabExtractionTreasureRewardRoom.KeyID
   local ItemUniqueId = -1
   for uid, Item in pairs(self.AllItemHashMap) do
-    if 0 == Item.BagIndex and Item.Id == KeyId then
+    if 0 == Item.BagIndex and CommonUtils.HasValue(KeyId, Item.Id) then
       ItemUniqueId = Item.UniqueId
       break
     end
@@ -574,6 +574,7 @@ function SoloTreasureInfo:Init(param)
   self:CleanupSoloTreasureInfo()
   self.DungeonId = param.DungeonId
   self.BagId = param.CustomDungeonParams and param.CustomDungeonParams.BagId or 1
+  self.EventId = param.CustomDungeonParams and param.CustomDungeonParams.EventId
 end
 
 function SoloTreasureInfo:BeginPlay()

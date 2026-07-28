@@ -302,12 +302,15 @@ function M:FindTargetNpc()
 end
 
 function M:PerformAction(performId, TargetNpc)
-  local PlayerActor = GWorld:GetAvatar()
   local performData = DataMgr.TheaterRandom[performId]
   local TalkConfigId = performData.TalkConfigId
   local GameInstance = GWorld.GameInstance
-  local TalkContext = GameInstance:GetTalkContext()
-  self.BubbleTalkKey = TalkContext:StartTalk(TalkConfigId, nil, nil, PlayerActor, TargetNpc, nil)
+  self.BubbleTalkKey = TalkConfigId
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkConfigId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction.InteractiveActor = TargetNpc
+    TalkAsyncAction:Activate()
+  end
   if performData.Refer == "Pet" then
     local GameState = UE4.UGameplayStatics.GetGameState(GameInstance)
     local PetId = performData.PetNPCID or 900015
@@ -345,7 +348,7 @@ function M:ClearPerformAction()
     local TS = TalkSubsystem()
     if TS then
       TS:ForceInterruptTalkTaskData(function(TalkTaskData)
-        return TalkTaskData.FilePath == self.BubbleTalkKey
+        return TalkTaskData.TalkTriggerId == self.BubbleTalkKey
       end)
     end
     self.BubbleTalkKey = nil
@@ -535,10 +538,12 @@ function M:PlayTalk(TalkConfigId, TargetNpc)
   if not TargetNpc then
     return
   end
-  local PlayerActor = GWorld:GetAvatar()
-  local GameInstance = GWorld.GameInstance
-  local TalkContext = GameInstance:GetTalkContext()
-  self.BubbleTalkKey = TalkContext:StartTalk(TalkConfigId, nil, nil, PlayerActor, TargetNpc, nil)
+  self.BubbleTalkKey = TalkConfigId
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, TalkConfigId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction.InteractiveActor = TargetNpc
+    TalkAsyncAction:Activate()
+  end
 end
 
 return M

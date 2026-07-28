@@ -56,14 +56,14 @@ function FPlayAudioProxy:Clear()
 end
 
 function FPlayAudioProxy:Pause()
-  if not self.bIsValid or self.bPause then
+  if not self.bIsValid or self.bIsPaused then
     return
   end
   self.bIsPaused = true
 end
 
 function FPlayAudioProxy:Resume()
-  if not self.bIsValid or not self.bPause then
+  if not self.bIsValid or not self.bIsPaused then
     return
   end
   self.bIsPaused = false
@@ -138,7 +138,7 @@ function TalkAudioComp_C:PlayAudio(VoiceName, SrcActor, OriginalCallback, ExtraI
     end
     self.AttachActor = AttachActor
     local EventKey = self:GetEventKey(SoundHandle or "VO")
-    local SoundEventInstance = self:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, bIsAttachActor, ExtraInfo.ExStoryInfo, ExtraInfo.DisableMouth)
+    local SoundEventInstance = self:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, AttachActor, bIsPlay2D, ExtraInfo.ExStoryInfo, ExtraInfo.DisableMouth)
     self.sound_event_instance = SoundEventInstance
   end
   
@@ -148,22 +148,17 @@ function TalkAudioComp_C:PlayAudio(VoiceName, SrcActor, OriginalCallback, ExtraI
   end
 end
 
-function TalkAudioComp_C:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, bIsAttached, ExStoryInfo, DisableMouth)
-  local AttachedActor = VoiceActor
-  local bIsPlay2D = not bIsAttached
-  if bIsPlay2D then
-    AttachedActor = UE4.UGameplayStatics.GetPlayerController(AudioManager, 0)
-  end
+function TalkAudioComp_C:PlaySoundWithOral(AudioManager, VoiceName, VoiceActor, AttachActor, bIsPlay2D, ExStoryInfo, DisableMouth)
   local GameInstance = GWorld.GameInstance
   local RealEventPath, SelectKey, OralPath, EventExist = AudioManager:GetEventData(VoiceName, ExStoryInfo)
   local PlayStruct = FPlayFMODSoundStruct()
-  DebugPrint("TalkAudioComp_C:PlaySoundWithOral", RealEventPath, SelectKey, bIsPlay2D, AttachedActor:GetName())
+  DebugPrint("TalkAudioComp_C:PlaySoundWithOral", RealEventPath, SelectKey, bIsPlay2D, AttachActor)
   PlayStruct.FMODEvent = AudioManager:GetFMODEventByPath_Sync(RealEventPath)
   PlayStruct.EventKey = self:GetEventKey()
   PlayStruct.bStopWhenAttachedToDestoryed = true
   PlayStruct.bPlayAs2D = bIsPlay2D
   PlayStruct.SelectKey = SelectKey
-  PlayStruct = UE4.UAudioManager.SetObjectToFPlayFMODSoundStruct(PlayStruct, AttachedActor)
+  PlayStruct = UE4.UAudioManager.SetObjectToFPlayFMODSoundStruct(PlayStruct, AttachActor)
   PlayStruct.DynamicSoundStop = {
     GameInstance,
     function()

@@ -2,8 +2,8 @@
   {
     "id": 1001,
     "name": "深境羅盤·探險",
-    "desc": "用於開啟深境探險",
-    "func": "深境羅盤",
+    "desc": "追隨災厄的腳步，尋覓傾覆世界的力量，以羅盤指引前進的方向。\n可用於進入深境委託。",
+    "func": "用於進入深境委託",
     "icon": "T_Resource_Coin_Zaie",
     "level": 100,
     "rarity": 5,
@@ -13,11 +13,14 @@
   },
   {
     "id": 1002,
-    "name": "深境羅盤·探險",
-    "desc": "用於開啟深境探險",
-    "func": "深境羅盤",
-    "icon": "T_Resource_Coin_Zaie",
-    "level": 90,
-    "rarity": 3
+    "name": "深境羅盤·扼守",
+    "desc": "追隨災厄的腳步，尋覓傾覆世界的力量，以羅盤指引前進的方向。\n可用於進入深境委託。",
+    "func": "用於進入深境委託",
+    "icon": "T_Resource_Coin_Zaie01",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
   }
 ]

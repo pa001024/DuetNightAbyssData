@@ -5,6 +5,7 @@ local ActivityReddotHelper = require("BluePrints.UI.WBP.Activity.ActivityReddotH
 
 function M:PlayFadeIn()
   self:PlayAnimation(self.In)
+  self.Title:PlayAnimation(self.Title.In)
 end
 
 function M:PlayFadeOut(IsRemoveFromParent)

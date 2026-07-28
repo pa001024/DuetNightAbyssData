@@ -66,6 +66,27 @@ return ReadOnly("MonsterStrongAffixes", {
     Note = "爆破",
     Priority = 21
   },
+  ["Mon.Strong.Empower"] = {
+    AffixesBuffIds = {6000415},
+    EffectColor = T.RT_1,
+    GamePlayTag = "Mon.Strong.Empower",
+    Note = "王权",
+    Priority = 63
+  },
+  ["Mon.Strong.Empower.Double"] = {
+    AffixesBuffIds = {6000515},
+    EffectColor = T.RT_2,
+    GamePlayTag = "Mon.Strong.Empower.Double",
+    Note = "王权",
+    Priority = 63
+  },
+  ["Mon.Strong.Empower.Triple"] = {
+    AffixesBuffIds = {6000615},
+    EffectColor = T.RT_3,
+    GamePlayTag = "Mon.Strong.Empower.Triple",
+    Note = "王权",
+    Priority = 63
+  },
   ["Mon.Strong.Fade"] = {
     AffixesBuffIds = {6000406},
     EffectColor = T.RT_1,
@@ -233,6 +254,27 @@ return ReadOnly("MonsterStrongAffixes", {
     GamePlayTag = "Mon.Strong.Shield.Triple",
     Note = "守护",
     Priority = 16
+  },
+  ["Mon.Strong.Shred"] = {
+    AffixesBuffIds = {6000416},
+    EffectColor = T.RT_1,
+    GamePlayTag = "Mon.Strong.Shred",
+    Note = "蚀甲",
+    Priority = 64
+  },
+  ["Mon.Strong.Shred.Double"] = {
+    AffixesBuffIds = {6000516},
+    EffectColor = T.RT_2,
+    GamePlayTag = "Mon.Strong.Shred.Double",
+    Note = "蚀甲",
+    Priority = 64
+  },
+  ["Mon.Strong.Shred.Triple"] = {
+    AffixesBuffIds = {6000616},
+    EffectColor = T.RT_3,
+    GamePlayTag = "Mon.Strong.Shred.Triple",
+    Note = "蚀甲",
+    Priority = 64
   },
   ["Mon.Strong.Threefold"] = {
     AffixesBuffIds = {6000414},

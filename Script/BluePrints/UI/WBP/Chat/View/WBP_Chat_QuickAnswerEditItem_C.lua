@@ -5,8 +5,8 @@ local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Construct()
   self.Btn_Edit.OnClicked:Add(self, self.OnEditClicked)
-  self.Btn_No:BindEventOnReleased(self, self.OnNoReleased)
-  self.Btn_Yes:BindEventOnReleased(self, self.OnYesReleased)
+  self.Btn_No:BindEventOnClicked(self, self.OnNoReleased)
+  self.Btn_Yes:BindEventOnClicked(self, self.OnYesReleased)
   self.Com_Input_Light:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Com_Input_Light:Init({
     Owner = self,
@@ -56,8 +56,8 @@ end
 
 function M:Destruct()
   self.Btn_Edit.OnClicked:Remove(self, self.OnEditClicked)
-  self.Btn_No:UnBindEventOnReleased(self, self.OnNoReleased)
-  self.Btn_Yes:UnBindEventOnReleased(self, self.OnYesReleased)
+  self.Btn_No:UnBindEventOnClicked(self, self.OnNoReleased)
+  self.Btn_Yes:UnBindEventOnClicked(self, self.OnYesReleased)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
     if IsValid(GameInputModeSubsystem) then

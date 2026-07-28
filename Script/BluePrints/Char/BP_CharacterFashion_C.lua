@@ -91,15 +91,27 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit")
   rawset(self, "AppearanceSuitInfo", Info)
   rawset(self, "Type2Id", rawget(self, "Type2Id") or TMap(FName, 0))
+  local Owner = self:GetOwner()
+  if not Owner then
+    return
+  end
+  local CanExecute = Utils.IsStandAlone(Owner) or Utils.IsClient(Owner)
+  if not CanExecute then
+    if not Info then
+      print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit skip on server with nil Info", Owner:GetName(), Owner.Eid, Owner.CurrentRoleId, self.AppearanceSuitInfo, Owner.InfoForInit and Owner.InfoForInit.AppearanceSuit, Owner.CacheInfo and Owner.CacheInfo.AppearanceSuit)
+    else
+      print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit skip on server", Owner:GetName(), Owner.Eid, Owner.CurrentRoleId, Info.SkinId, Info.HairId, Info.SkinLevel)
+    end
+    return
+  end
+  if not Info then
+    print(_G.LogTag, "BP_CharacterFashion_C:InitAppearanceSuit execute with nil Info", Owner:GetName(), Owner.Eid, Owner.CurrentRoleId, Owner.InfoForInit and Owner.InfoForInit.AppearanceSuit, Owner.CacheInfo and Owner.CacheInfo.AppearanceSuit)
+  end
   self:InitWeaponColor(Info.Colors)
   self.InitPartIds = {}
   self.InitWithCombinePart = false
   self.SkinLevel = Info.SkinLevel
   CreateAccessoryHideTags(self)
-  local Owner = self:GetOwner()
-  if not Owner then
-    return
-  end
   if not Info then
     self:ChangeAccessoryWithDefautl()
     Owner:InitPartMeshCompWithDefault()
@@ -635,10 +647,14 @@ function BP_CharacterFashion_C:RefreshUncoloredSkinColors(Colors)
   if IsOriginalSkin then
     return
   end
+  local MeshName = GetMeshNameBySkinId(SkinId)
+  if not MeshName then
+    return
+  end
   local DefaultColors = {
-    self:GetCharDefaultColorsFromDataTable(GetMeshNameBySkinId(SkinId))
+    self:GetCharDefaultColorsFromDataTable(MeshName)
   }
-  if not DefaultColors or 0 == #DefaultColors then
+  if 0 == #DefaultColors then
     return
   end
   local PartCount = DataMgr.GlobalConstant and DataMgr.GlobalConstant.CharColorPart and DataMgr.GlobalConstant.CharColorPart.ConstantValue or #DefaultColors
@@ -1031,6 +1047,25 @@ function BP_CharacterFashion_C:GetHiarDefaultColors()
   local HairMeshName = self:GetCurrentHairMeshName()
   if HairMeshName then
     return self:GetHairDefaultColorsFromDataTable(HairMeshName)
+  end
+end
+
+function BP_CharacterFashion_C:PreEnterStory(bCacheMeshMaterials)
+  if bCacheMeshMaterials then
+    local Owner = self:GetOwner()
+    if Owner then
+      self:CacheMeshMaterials(Owner.Mesh)
+      self:ReplaceMeshAllDynamicMaterialAsParent(Owner.Mesh)
+    end
+  end
+end
+
+function BP_CharacterFashion_C:PreExitStory()
+  local Owner = self:GetOwner()
+  if Owner then
+    local MaterialArray = TArray(UMaterialInterface)
+    self:UncacheMeshMaterials(Owner.Mesh, MaterialArray)
+    self:SetMeshMaterials(Owner.Mesh, MaterialArray)
   end
 end
 

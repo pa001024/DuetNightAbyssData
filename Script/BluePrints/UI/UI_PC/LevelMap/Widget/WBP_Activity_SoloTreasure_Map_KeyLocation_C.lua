@@ -48,6 +48,9 @@ function M:OnOpenClick()
 end
 
 function M:Show()
+  if not IsValid(self) then
+    return
+  end
   if self:GetVisibility() == ESlateVisibility.Collapsed or self:IsAnimationPlaying(self.Auto_Out) then
     self:StopAllAnimations()
     self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -56,6 +59,9 @@ function M:Show()
 end
 
 function M:Close()
+  if not IsValid(self) then
+    return
+  end
   if self:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
     self:StopAllAnimations()
     self:PlayAnimation(self.Auto_Out)

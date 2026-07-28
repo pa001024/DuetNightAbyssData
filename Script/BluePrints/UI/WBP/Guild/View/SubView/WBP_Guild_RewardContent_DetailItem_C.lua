@@ -95,6 +95,7 @@ function M:OnListItemObjectSet(Content)
     if self.Btn_Reward.ForbidBtn then
       self.Btn_Reward:ForbidBtn(self.RewardsGot or not self.CanReceive)
     end
+    self.Btn_Reward:SetDefaultGamePadImg("A")
     self.Btn_Reward:SetText(GText(ConfigData.ReceiveButtonText) or GText("UI_Archive_CollectionClaim"))
     self.Btn_Reward:UnBindEventOnClickedByObj(self)
     if ConfigData.ReceiveCallBack then

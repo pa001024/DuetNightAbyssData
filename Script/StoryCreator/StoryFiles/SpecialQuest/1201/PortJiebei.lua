@@ -68,12 +68,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -598,6 +598,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -605,6 +606,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -641,7 +643,11 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1838.6027529084638, y = -174.31291330786894},
-            propsData = {bEnablePP = true, PPEnum = 4}
+            propsData = {
+              bEnablePP = true,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["1761142101038760"] = {
             key = "1761142101038760",
@@ -818,14 +824,22 @@ return {
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 1735.431959624782, y = 2019.2701220665786},
-            propsData = {bEnablePP = false, PPEnum = 4}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["17621549175114321"] = {
             key = "17621549175114321",
             type = "SimplePostProcessNode",
             name = "开启关闭屏幕后处理",
             pos = {x = 3624.4433487695806, y = 853.2294764802806},
-            propsData = {bEnablePP = false, PPEnum = 4}
+            propsData = {
+              bEnablePP = false,
+              PPEnum = 4,
+              PPWeight = 1
+            }
           },
           ["17621549954746587"] = {
             key = "17621549954746587",
@@ -1120,6 +1134,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1127,6 +1142,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1215,6 +1231,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1222,6 +1239,7 @@ return {
               HideMechanismsFX = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1382,8 +1400,7 @@ return {
               SoundPath = "event:/bgm/1_1/0102_story_dafengjiuzhang",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104108},
+              RelatedRegionId = {104108},
               bStoreToServer = false
             }
           },
@@ -1399,8 +1416,7 @@ return {
               SoundPath = "event:/bgm/1_1/0103_cs_dafengjiuzhang_expand",
               ParamKey = "",
               ParamValue = 0,
-              RelatedRegionId = {},
-              ClientRelatedRegionId = {104108},
+              RelatedRegionId = {104108},
               bStoreToServer = false
             }
           },

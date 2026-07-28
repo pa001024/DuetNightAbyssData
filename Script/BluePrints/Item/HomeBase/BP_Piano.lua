@@ -41,4 +41,8 @@ function M:GetCanOpen(PlayerEid)
   self.CanOpen = true
 end
 
+function M:RealLoadGameUI()
+  return UIManager(self):LoadUINew(self.UIName, {bHomeInteractOpen = true})
+end
+
 return M

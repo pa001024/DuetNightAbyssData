@@ -9,6 +9,14 @@ Menu_Level_PC_C._components = {
   "BluePrints.UI.UI_PC.Menu.MenuLevelAbyssComponent"
 }
 
+local function IsInGuildBossDungeon()
+  local TravelSubsystem = WorldTravelSubsystem()
+  if not TravelSubsystem or not TravelSubsystem:IsDungeonWorld() then
+    return false
+  end
+  return TravelSubsystem:GetCurrentDungeonType() == CommonConst.DungeonType.GuildBoss
+end
+
 function Menu_Level_PC_C:Initialize(Initializer)
   self.Super.Initialize(self)
   self.BtnName = {
@@ -35,7 +43,8 @@ function Menu_Level_PC_C:Initialize(Initializer)
     UI_CharTrial_LeaveTitle = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
     FeinaEvent_Exit_Title = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
     UI_Esc_ExitTemple = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
-    UI_AsyncCombat_LeaveStage = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit"
+    UI_AsyncCombat_LeaveStage = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
+    UI_AutoChess_Restart = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Restart.T_Menu_Restart"
   }
   self.BtnIdx = 0
   self.CloseBySelf = false
@@ -81,12 +90,18 @@ end
 function Menu_Level_PC_C:InitByType()
   local Avatar = GWorld:GetAvatar()
   self.InHardBoss = false
+  self.InGuildBoss = false
   self.InTemple = false
   self.InTraining = false
   self.InRougeLike = false
   self.IsInCommonDungeon = false
   if Avatar and Avatar:IsInHardBoss() then
     self.InHardBoss = true
+    self:InitHardBoss()
+    return
+  end
+  if IsInGuildBossDungeon() then
+    self.InGuildBoss = true
     self:InitHardBoss()
     return
   end
@@ -145,6 +160,10 @@ function Menu_Level_PC_C:InitByType()
       self:InitAsyncCombat()
       self.IsInAsyncCombat = true
       return
+    elseif GameState.GameModeType == "WeaponVerify" then
+      self.IsInWeaponVerify = true
+      self:InitHardBoss()
+      return
     end
   end
   self.IsInCommonDungeon = true
@@ -180,6 +199,8 @@ function Menu_Level_PC_C:InitAutoChess()
   self.WidgetSwitcher_Show:SetVisibility(UIConst.VisibilityOp.Collapsed)
   table.remove(self.BtnName, 3)
   table.remove(self.ClickFunction, 3)
+  table.insert(self.BtnName, 2, "UI_AutoChess_Restart")
+  table.insert(self.ClickFunction, 2, "OnAutoChessRelayout")
   table.insert(self.BtnName, "UI_HardBoss_TabName_2")
   table.insert(self.ClickFunction, "OnClickExitGame")
 end
@@ -1128,7 +1149,7 @@ function Menu_Level_PC_C:OnKeyUp(MyGeometry, InKeyEvent)
 end
 
 function Menu_Level_PC_C:OnListBtnClicked(Content)
-  UIUtils.PlayCommonBtnSe(self)
+  UIUtils.PlayLargeBtnSe(self)
   if not self:IsPlayingAnimation(self.Out) then
     local SetUpListUI = Content.SelfWidget
     
@@ -1155,6 +1176,14 @@ function Menu_Level_PC_C:OnClickContinueGame()
   self:CloseSelf()
 end
 
+function Menu_Level_PC_C:OnAutoChessRelayout()
+  self:CloseSelf()
+  local BattlePage = UIManager(self):GetUIObj("AutoChessBattlePage")
+  if BattlePage and BattlePage.ReturnToDeployPhase then
+    BattlePage:ReturnToDeployPhase()
+  end
+end
+
 function Menu_Level_PC_C:OnClickShowStatistics()
   UIManager(self):LoadUI(UIConst.DUNGEONBATTLECOUNT, "DungenonBattleCount", UIConst.ZORDER_FOR_SECONDARY_POPUP, nil, true)
 end
@@ -1170,6 +1199,10 @@ function Menu_Level_PC_C:OnClickExitGame()
   Params.RightCallbackFunction = self.ClickConfirmExitInBattle
   if self.InHardBoss then
     Params.RightCallbackFunction = self.ExitHardBossBattle
+    PopupId = 100028
+  end
+  if self.InGuildBoss then
+    Params.RightCallbackFunction = self.ExitGuildBossBattle
     PopupId = 100028
   end
   if self.InSpecialQuest then
@@ -1292,6 +1325,30 @@ function Menu_Level_PC_C:ExitHardBossBattle()
   end
   self.HasRequestedExit = true
   self:CloseSelf()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:ExitBattle(false, true)
+  end
+end
+
+function Menu_Level_PC_C:ExitGuildBossBattle()
+  local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
+  if CommonDialog then
+    CommonDialog:Close()
+  end
+  if self.HasRequestedExit then
+    return
+  end
+  self.HasRequestedExit = true
+  self:CloseSelf()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if GameMode then
+    local DungeonComponent = GameMode:GetDungeonComponent()
+    if DungeonComponent and DungeonComponent.TriggerGuildBossOnEnd then
+      GameMode:TriggerDungeonComponentFun("TriggerGuildBossOnEnd")
+      return
+    end
+  end
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     Avatar:ExitBattle(false, true)

@@ -273,5 +273,33 @@
     "desc": "Aaah—!!!",
     "icon": "T_Head_Frame32",
     "access": "Available at Shop"
+  },
+  {
+    "id": 10043,
+    "name": "Carnival",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame39",
+    "access": "Available through Monthly Pass"
+  },
+  {
+    "id": 10044,
+    "name": "Nightfall Enchantress: Dark Jade",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame42",
+    "access": "Available from events"
+  },
+  {
+    "id": 10045,
+    "name": "Nightfall Enchantress: Rust Red",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame41",
+    "access": "Available from events"
+  },
+  {
+    "id": 10046,
+    "name": "Sparks on the Water",
+    "desc": "Used as an avatar frame.",
+    "icon": "T_Head_Frame40",
+    "access": "Available at Shop"
   }
 ]

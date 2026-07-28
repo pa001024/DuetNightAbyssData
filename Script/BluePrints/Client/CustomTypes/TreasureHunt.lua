@@ -7,8 +7,8 @@ local TreasureHunt = Class("TreasureHunt", CustomTypes.CustomAttr)
 TreasureHunt.__Props__ = {
   EventId = prop.prop("Int", "client save"),
   TotalScore = prop.prop("Int", "client save", 0),
-  NormalSquadInfoMap = prop.prop("Int2StrDict", "client save", {}),
-  HardSquadInfoMap = prop.prop("Int2StrDict", "client save", {})
+  NormalSquadInfoMap = prop.prop("Int2BytesDict", "client save", {}),
+  HardSquadInfoMap = prop.prop("Int2BytesDict", "client save", {})
 }
 
 function TreasureHunt:Init(EventId)
@@ -57,4 +57,15 @@ function TreasureHuntDict:GetTreasureHunt(EventId)
   return self[EventId]
 end
 
-return {TreasureHunt = TreasureHunt, TreasureHuntDict = TreasureHuntDict}
+local TreasureHuntManualInfo = Class("TreasureHuntManualInfo", CustomTypes.CustomAttr)
+TreasureHuntManualInfo.__Props__ = {
+  Manual = prop.prop("IntSet", "client save"),
+  ManualReward = prop.prop("IntSet", "client save"),
+  NewManual = prop.prop("IntSet", "client save")
+}
+FormatProperties(TreasureHuntManualInfo)
+return {
+  TreasureHunt = TreasureHunt,
+  TreasureHuntDict = TreasureHuntDict,
+  TreasureHuntManualInfo = TreasureHuntManualInfo
+}

@@ -432,6 +432,38 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 10055,
+    "name": "星芒冰晶·晴藍",
+    "desc": "雪花是天空的信使。",
+    "icon": "T_Fashion_Waist34_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10056,
+    "name": "星芒冰晶·白櫻",
+    "desc": "雪花是天空的信使。",
+    "icon": "T_Fashion_Waist34_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10057,
+    "name": "星芒冰晶·涅白",
+    "desc": "雪花是天空的信使。",
+    "icon": "T_Fashion_Waist34_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10058,
+    "name": "星芒冰晶·黛藍",
+    "desc": "雪花是天空的信使。",
+    "icon": "T_Fashion_Waist34_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
     "id": 20001,
     "name": "爆裂塗鴉",
     "desc": "適用於招式魔之楔咆哮切割。",
@@ -445,6 +477,14 @@
     "desc": "適用於招式魔之楔穿引共鳴。",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "通過商店獲得"
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 40001,
+    "name": "相位切割",
+    "desc": "適用於招式魔之楔華光繚亂。",
+    "icon": "T_Fashion_Fx38",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
   }
 ]

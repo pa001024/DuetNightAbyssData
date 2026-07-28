@@ -23,12 +23,9 @@ function M:Construct()
     elseif EventId == GuildCommon.EventID.OnGuildEditDeclaration then
       self:OnGuildEditDeclarationSucceed(...)
     elseif EventId == GuildCommon.EventID.OnGuildEditLogo then
-      self.ChangeGuildLogoTag = true
+      self:OnGuildEditLogoSucceed()
+      self:InitBtnEdit()
     elseif EventId == GuildCommon.EventID.OnGetGuildInfo then
-      if self.ChangeGuildLogoTag then
-        self.ChangeGuildLogoTag = false
-        self:OnGuildEditLogoSucceed(...)
-      end
       local Info = (...)
       if self.CurrGuildInfo and self.CurrGuildInfo.GuildId == Info.GuildId then
         self:GetGuildFullInfo(Info)
@@ -76,12 +73,14 @@ function M:Destruct()
   end
 end
 
-function M:InitView(ParentWidget, GuildInfo)
+function M:InitView(ParentWidget, GuildInfo, ListBtnCloseCb)
   self.CurrGuildInfo = GuildInfo
   self.ParentWidget = ParentWidget
+  self.ListBtnCloseCb = ListBtnCloseCb
   self.Text_ExpDesc:SetText(GText("UI_GuildExperience"))
   local ExpNow = GuildInfo.Exp or 0
-  local ExpMax = DataMgr.GuildLevel[self.CurrGuildInfo.Level].GuildEXP or 0
+  local GuildLevelConf = DataMgr.GuildLevel[self.CurrGuildInfo.Level]
+  local ExpMax = GuildLevelConf and GuildLevelConf.GuildEXP or 0
   self.Text_ExpNow:SetText(ExpNow)
   self.Text_ExpMax:SetText(ExpMax)
   local Success = self:TrySetExpBarPercent(ExpNow, ExpMax)
@@ -100,7 +99,8 @@ function M:InitView(ParentWidget, GuildInfo)
   self.Text_ID:SetText(tostring(self.CurrGuildInfo.GuildId or 0))
   self.Text_NumDesc:SetText(GText("UI_GuildMemberCount"))
   self.Text_NowNum:SetText(tostring(self.CurrGuildInfo.MemberCount or 0))
-  local TotalNum = DataMgr.GuildLevel[self.CurrGuildInfo.Level].GuildMembersNum or 0
+  local GuildLevelConf = DataMgr.GuildLevel[self.CurrGuildInfo.Level]
+  local TotalNum = GuildLevelConf and GuildLevelConf.GuildMembersNum or 0
   self.Text_TotalNum:SetText(tostring(TotalNum))
   self.Text_ActivityDesc:SetText(GText("UI_GuildActivity"))
   self.Text_Activity:SetText(tostring(self.CurrGuildInfo.ActivityLevel or 0))
@@ -113,7 +113,8 @@ end
 function M:GetGuildFullInfo(Info)
   self.CurrGuildInfo = Info
   local ExpNow = self.CurrGuildInfo.Exp or 0
-  local ExpMax = DataMgr.GuildLevel[self.CurrGuildInfo.Level].GuildEXP or 0
+  local GuildLevelConf = DataMgr.GuildLevel[self.CurrGuildInfo.Level]
+  local ExpMax = GuildLevelConf and GuildLevelConf.GuildEXP or 0
   self.Text_ExpNow:SetText(ExpNow)
   self.Text_ExpMax:SetText(ExpMax)
   local Success = self:TrySetExpBarPercent(ExpNow, ExpMax)
@@ -129,7 +130,8 @@ function M:GetGuildFullInfo(Info)
   self.Text_Level:SetText(tostring(self.CurrGuildInfo.Level or 0))
   self.Text_ID:SetText(tostring(self.CurrGuildInfo.GuildId or 0))
   self.Text_NowNum:SetText(tostring(self.CurrGuildInfo.MemberCount or 0))
-  local TotalNum = DataMgr.GuildLevel[self.CurrGuildInfo.Level].GuildMembersNum or 0
+  local GuildLevelConf = DataMgr.GuildLevel[self.CurrGuildInfo.Level]
+  local TotalNum = GuildLevelConf and GuildLevelConf.GuildMembersNum or 0
   self.Text_TotalNum:SetText(tostring(TotalNum))
   self.Text_Activity:SetText(tostring(self.CurrGuildInfo.ActivityLevel or 0))
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
@@ -157,9 +159,13 @@ end
 
 function M:TrySetExpBarPercent(ExpNow, ExpMax)
   ExpNow = self.CurrGuildInfo.Exp or ExpNow
-  ExpMax = DataMgr.GuildLevel[self.CurrGuildInfo.Level].GuildEXP or ExpMax
+  local GuildLevelConf = DataMgr.GuildLevel[self.CurrGuildInfo.Level]
+  ExpMax = GuildLevelConf and GuildLevelConf.GuildEXP or ExpMax
   local Length = USlateBlueprintLibrary.GetLocalSize(self.Bg_Exp:GetCachedGeometry()).X
   local Percent = ExpMax > 0 and ExpNow / ExpMax or 0
+  if Percent > 1 then
+    Percent = 1
+  end
   if Length <= 0 then
     return false
   end
@@ -574,6 +580,9 @@ function M:SetGamepadIconVisibility(Visable)
 end
 
 function M:OnRemovedFromFocusPath(InFocusEvent)
+  if self.Panel_Edit:IsVisible() and self.ListBtnCloseCb then
+    self.ListBtnCloseCb(self.ParentWidget)
+  end
   self:SetEditPanelVisible(false)
 end
 

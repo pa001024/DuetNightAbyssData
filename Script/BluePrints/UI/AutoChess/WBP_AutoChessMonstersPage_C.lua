@@ -20,8 +20,20 @@ function View:InitView(ChessDatas)
     end, nil, nil, nil, true)
   end
   self:InitEvents()
+  EventManager:RemoveEvent(EventID.OnAutoChessEquipChange, self)
   EventManager:AddEvent(EventID.OnAutoChessEquipChange, self, self.OnChessEquipChanged)
+  EventManager:RemoveEvent(EventID.UnLoadUI, self)
+  EventManager:AddEvent(EventID.UnLoadUI, self, function(_, UIName)
+    if "AutoChessChooseEquip" == UIName and UIUtils:IsGamepadInput() then
+      self.List_Item:SetFocus()
+    end
+  end)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "AutoChessMonsterPage", nil)
+end
+
+function View:Destruct()
+  EventManager:RemoveEvent(EventID.OnAutoChessEquipChange, self)
+  EventManager:RemoveEvent(EventID.UnLoadUI, self)
 end
 
 function View:InitEvents()
@@ -96,7 +108,7 @@ function View:ShowChessDetails(ChessData)
   self:PlayAnimation(self.Change)
 end
 
-function View:OnChessEquipChanged(ChessId, EquipId)
+function View:OnChessEquipChanged(ChessId, EquipSlotIndex)
   local NewEquipInfo = Model:GetMonsterEquipInfo(ChessId)
   local NewChessData = Model:GetMonsterInfoByCombatId(ChessId)
   local ItemNum = self.List_Item:GetNumItems()

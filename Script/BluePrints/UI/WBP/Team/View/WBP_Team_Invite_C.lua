@@ -64,26 +64,32 @@ function M:Construct()
   else
     UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
     self:OnInputDeviceChange()
-    self:AddDispatcher(EventID.GameViewportInputKeyReleased, self, function(self, Key)
+    self:AddDispatcher(EventID.GameViewportInputKeyReleased, self, function(self, Key, AnyHandled)
       if Key.KeyName == "Y" then
         self:OnBtnClick(true)
+        AnyHandled.bHandled = true
       elseif Key.KeyName == "N" then
         self:OnBtnClick(false)
+        AnyHandled.bHandled = true
       elseif Key.KeyName == UIConst.GamePadKey.LeftShoulder then
         self.bLBPressed = false
+        AnyHandled.bHandled = true
       end
     end)
-    self:AddDispatcher(EventID.GameViewportInputKeyPressed, self, function(self, Key)
+    self:AddDispatcher(EventID.GameViewportInputKeyPressed, self, function(self, Key, AnyHandled)
       DebugPrint("OnInputKey_Lua" .. EventID.GameViewportInputKeyPressed, Key)
       if Key.KeyName == UIConst.GamePadKey.SpecialRight then
         self:OnBtnClick(true)
+        AnyHandled.bHandled = true
       elseif Key.KeyName == UIConst.GamePadKey.SpecialLeft then
         self:OnBtnClick(false)
+        AnyHandled.bHandled = true
       elseif Key.KeyName == UIConst.GamePadKey.DPadLeft then
         if self.bLBPressed then
           self.CheckBox_Tip:SetIsChecked(not self.CheckBox_Tip:IsChecked())
           self.bLBPressed = false
         end
+        AnyHandled.bHandled = true
       elseif Key.KeyName == UIConst.GamePadKey.LeftShoulder then
         self.bLBPressed = true
       end

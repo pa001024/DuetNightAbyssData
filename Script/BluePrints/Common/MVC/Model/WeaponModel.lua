@@ -372,7 +372,7 @@ function M:OnNewWeaponAccessoryObtained(AccessoryId)
     return
   end
   _WeaponAccessoryMap[AccessoryId] = true
-  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.WeaponAccessory, AccessoryId) then
+  if not CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.WeaponAccessory, AccessoryId) then
     return
   end
   ArmoryUtils:TryAddNewWeaponAccessoryReddot(AccessoryId)
@@ -387,7 +387,7 @@ function M:OnNewWeaponSkinObtained(SkinId)
     return
   end
   _WeaponSkinMap[SkinId] = true
-  if not CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.WeaponSkin, SkinId) then
+  if not CommonUtils.IsCurrentVersionRelease(CommonConst.DataType.WeaponSkin, SkinId) then
     return
   end
   ArmoryUtils:TryAddNewWeaponSkinReddot(SkinId)

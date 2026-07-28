@@ -43,6 +43,18 @@ function M:Init(Params)
   self.CurShowIndex = 0
   self.TargetType = self.Params.TargetType
   self.ShowTimes = #self.Params.TargetIdList
+  local GameUIManager = UIManager(GWorld.GameInstance)
+  local ShopMain = GameUIManager:GetUIObj("ShopMain")
+  if IsValid(ShopMain) and ShopMain.IsBannerPage and GameUIManager:GetWidgetObjInTopStack() == ShopMain and IsValid(ShopMain.Shop_RecommendBanner) and IsValid(ShopMain.VideoPlayer) then
+    self.ShopMain = ShopMain
+    self.ShopRecommendBanner = ShopMain.Shop_RecommendBanner
+    self.bNeedResumeShopBannerTimer = self.ShopRecommendBanner:IsExistTimer("SwitchBannerPage")
+    self.ShopRecommendBanner:StopBannerTimer()
+    self.bNeedResumeShopVideo = ShopMain:IsHasVideo() and ShopMain.bPlayVideoBG
+    if self.bNeedResumeShopVideo then
+      ShopMain:StopVideoBG()
+    end
+  end
   self:RefreshCommonShowUI()
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     self:InitGamepadView()
@@ -839,6 +851,23 @@ end
 function M:OnCloseCallback()
   self.CantClick = false
   AudioManager(self):SetEventSoundParam(self, "GachaAmb", {ToEnd = 1})
+  local ShopMain = self.ShopMain
+  if IsValid(self.VideoPlayer) and IsValid(self.VideoPlayer.MediaPlayer) then
+    self.VideoPlayer.MediaPlayer:Close()
+  end
+  if self.bNeedResumeShopVideo and IsValid(ShopMain) and ShopMain.IsBannerPage and ShopMain:IsHasVideo() then
+    if ShopMain.bPlayVideoBG then
+      ShopMain:StopVideoBG()
+    end
+    ShopMain:PlayVideoBG()
+  end
+  if self.bNeedResumeShopBannerTimer and IsValid(ShopMain) and ShopMain.IsBannerPage and IsValid(self.ShopRecommendBanner) then
+    self.ShopRecommendBanner:StartBannerTimer()
+  end
+  self.ShopMain = nil
+  self.ShopRecommendBanner = nil
+  self.bNeedResumeShopVideo = nil
+  self.bNeedResumeShopBannerTimer = nil
   self:Close()
   if self.Params.CallbackFunc then
     self.Params.CallbackFunc(self.Params.CallbackObj)

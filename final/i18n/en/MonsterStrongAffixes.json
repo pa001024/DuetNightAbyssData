@@ -75,6 +75,20 @@
     }
   },
   {
+    "id": "Mon.Strong.Empower",
+    "name": "Mon_Guide_Title_Strong_Empower",
+    "desc": "",
+    "vars": {
+      "BUFF持续": 5,
+      "加成": {
+        "移动速度": 0.5,
+        "DamagedRate": 0.5,
+        "DamageRate": 0.5,
+        "技能速度": 0.8
+      }
+    }
+  },
+  {
     "id": "Mon.Strong.Fade",
     "name": "Primander - Wither",
     "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nPrimander – Wither periodically unleashes 3 rotating [Withering Beams].\n[Withering Beam]: Lasts for 10s. Circles the Primander, dealing damage to targets on contact and reducing their Sanity.",
@@ -87,7 +101,7 @@
   {
     "id": "Mon.Strong.Frozen",
     "name": "Primander - Frostbite",
-    "desc": "Primanders are powerful entities among the hostile forces that wield unique Primander abilities.\nWhen Primander – Frostbite is hit by a ranged weapon, it retaliates by firing icicles at the attacker, dealing damage and applying 1 stack of [Slowness].\n[Slowness]: Reduces Attack Speed and Movement Speed for 3s, up to 5 stacks.",
+    "desc": "Primanders are powerful hostile entities with unique Primander abilities.\nWhen Primander – Frostbite is hit by a ranged weapon attack, it retaliates by firing icicles at the attacker, dealing damage on hit and applying 1 stack of [Slowness] for 3s, stacking up to 5 times.",
     "vars": {
       "飞行速度": 1500,
       "持续时间": 5,
@@ -279,6 +293,15 @@
       "持续时间": 9,
       "最大召唤数量": 1,
       "每次召唤数量": 1
+    }
+  },
+  {
+    "id": "Mon.Strong.Shred",
+    "name": "Mon_Guide_Title_Strong_Shred",
+    "desc": "",
+    "vars": {
+      "飞行速度": 0,
+      "持续时间": 5
     }
   },
   {

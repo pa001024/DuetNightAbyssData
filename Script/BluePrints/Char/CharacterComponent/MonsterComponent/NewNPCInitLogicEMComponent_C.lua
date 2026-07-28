@@ -1,5 +1,6 @@
 require("UnLua")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class({
   "BluePrints.Common.TimerMgr"
 })
@@ -12,6 +13,10 @@ function M:NewNpcInitComponent_PreInit_Lua(Owner, UnitType, UnitId)
   Owner.Data = DataMgr[UnitType][UnitId]
   if not Owner.BornInfo then
     Owner.BornInfo = EffectResults.Result()
+  end
+  if DataMgr.Npc[UnitId] and DataMgr.Npc[UnitId].NpcType ~= "Show" then
+    local bUseSkin = EMCache:Get("AutoFashion")
+    GWorld.GameInstance.IsAutoFashionSwitch = bUseSkin
   end
 end
 
@@ -121,19 +126,19 @@ function M:NewNpcInitComponent_CheckIsActiveFlexibleDestory(Object)
           CheckFail = 3
         }
         if TalkState == TalkStateType.Compelete then
-          if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+          if ImpressionModel:IsStorylineComplete(TargetTalkTriggerId) then
             return true
           end
         elseif TalkState == TalkStateType.UnCompelete then
-          if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+          if ImpressionModel:IsStorylineUnComplete(TargetTalkTriggerId) then
             return true
           end
         elseif TalkState == TalkStateType.CheckSuccess then
-          if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+          if ImpressionModel:IsStorylineSuccess(TargetTalkTriggerId) then
             return true
           end
         else
-          if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+          if TalkState == TalkStateType.CheckFail and ImpressionModel:IsStorylineFailure(TargetTalkTriggerId) then
             return true
           else
           end

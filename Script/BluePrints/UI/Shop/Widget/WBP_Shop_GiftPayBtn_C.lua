@@ -56,6 +56,20 @@ function WBP_Shop_GiftPayBtn_C:RefreshIconAndGamePadVisibility()
   end
 end
 
+function WBP_Shop_GiftPayBtn_C:SetGamePadImg(ImgShortPath)
+  if not ImgShortPath or "None" == ImgShortPath then
+    return
+  end
+  if self.Img_GamePad and self.Img_GamePad.CreateGamepadKey then
+    self.Img_GamePad:CreateGamepadKey(ImgShortPath)
+  end
+end
+
+function WBP_Shop_GiftPayBtn_C:SetDefaultGamePadImg(ImgShortPath)
+  self.GamePadImgName = ImgShortPath
+  self:SetGamePadImg(self.GamePadImgName)
+end
+
 function WBP_Shop_GiftPayBtn_C:SetGamePadVisibility(Op)
   self.Img_GamePad:SetVisibility(Op)
 end

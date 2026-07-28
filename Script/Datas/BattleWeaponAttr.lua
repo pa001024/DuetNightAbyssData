@@ -215,6 +215,13 @@ return ReadOnly("BattleWeaponAttr", {
     MeleeWeaponAttrDisplay = "AlwaysFalse",
     RangedWeaponAttrDisplay = "AlwaysFalse"
   },
+  HyperTriggerCovertRate = {
+    AttrName = "HyperTriggerCovertRate",
+    DefaultValue = 0,
+    MeleeWeaponAttrDisplay = "OnlyModified",
+    RangedWeaponAttrDisplay = "OnlyModified",
+    UltraWeaponInherit = 1
+  },
   JhRate = {
     AttrName = "JhRate",
     DefaultValue = 0,

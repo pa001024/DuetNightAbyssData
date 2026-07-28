@@ -24,6 +24,9 @@ function M:Construct()
   M.Super.Construct(self)
   self.bShoulFocusToLastFocusedWidget = false
   self.BoxWidget = self.WidgetSwitcher_MP
+  self.LockStar = false
+  self.LockEdit = false
+  self.StarCD = false
   self.Button_Element.bIsFocusable = false
   self.EMListView_Role.BP_OnItemSelectionChanged:Clear()
   self.EMListView_Role.BP_OnItemSelectionChanged:Add(self, self.OnRoleListItemSelectionChanged)
@@ -39,6 +42,7 @@ function M:Construct()
   self.BottomKeyInfo = {}
   self.KeyDownEvents = {}
   self.RepeatKeyDownEvents = {}
+  self.LongPressEvents = {}
   self.KeyUpEvents = {}
   self:CreateKeySetting()
   self:CreateKeyInfoLists()
@@ -48,6 +52,9 @@ function M:Construct()
     CheckFunction = self.IsFocusStateValid
   })
   self.CheckBox_Incarnon:InitGamepadKey(UIConst.GamePadImgKey.SpecialLeft, true)
+  self.Btn_StarTarget:TryOverrideSoundFunc(function(...)
+    self:CallKeyFunctionByName(self.CurMainTab.Name .. "Main_PlayRetrySound", ...)
+  end)
 end
 
 function M:CreateConstInfos()
@@ -122,10 +129,9 @@ function M:CreateKeySetting()
     self.UpgradeKey,
     UIConst.GamePadKey.FaceButtonLeft
   })
-  self.LockKeyDownEvents = {}
-  self:AddKeyEvent(self.LockKeyDownEvents, self.OnLockKeyDown, UIConst.GamePadKey.DPadRight)
-  self.EditNameKeyDownEvents = {}
-  self:AddKeyEvent(self.EditNameKeyDownEvents, self.OnEditNameKeyDown, UIConst.GamePadKey.DPadLeft)
+  self.InGearKeyDownEvents = {}
+  self.FaceButtonBottomKeyDownEvents = {}
+  self:AddKeyEvent(self.FaceButtonBottomKeyDownEvents, self.OnFaceButtonBottomKeyDown, UIConst.GamePadKey.FaceButtonBottom)
 end
 
 function M:AddKeyEvent(Events, Event, KeyName)
@@ -277,7 +283,12 @@ function M:OnRepeatKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
+  local MyInKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local MyInKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(MyInKey)
   if CommonUtils:IfExistSystemGuideUI(self) then
+    return Handled
+  end
+  if self.IsGamepadInput and self.LockStar and MyInKeyName ~= UIConst.GamePadKey.FaceButtonBottom and MyInKeyName ~= UIConst.GamePadKey.FaceButtonRight then
     return Handled
   end
   local Reply, IsHandled
@@ -287,8 +298,6 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       return Reply
     end
   end
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   Reply, IsHandled = self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
   if IsHandled then
     return Reply
@@ -297,7 +306,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnKeyUp(MyGeometry, InKeyEvent)
+  local MyInKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local MyInKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(MyInKey)
   if CommonUtils:IfExistSystemGuideUI(self) then
+    return Handled
+  end
+  if self.IsGamepadInput and self.LockStar and MyInKeyName ~= UIConst.GamePadKey.FaceButtonBottom and MyInKeyName ~= UIConst.GamePadKey.FaceButtonRight then
     return Handled
   end
   local Reply, IsHandled
@@ -307,13 +321,11 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
       return Reply
     end
   end
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   Reply, IsHandled = self:ProcessOnKeyUp(MyGeometry, InKeyEvent)
   if IsHandled then
     return Reply
   end
-  local KeyUpEvent = self.KeyUpEvents and self.KeyUpEvents[InKeyName]
+  local KeyUpEvent = self.KeyUpEvents and self.KeyUpEvents[MyInKeyName]
   if KeyUpEvent then
     Reply, IsHandled = KeyUpEvent(self, MyGeometry, InKeyEvent)
     if IsHandled then
@@ -326,9 +338,6 @@ end
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
   if self.CurrentSubUI and self.CurrentSubUI.UnlockDialog then
     return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentSubUI.UnlockDialog)
-  end
-  if not self.IsGamepadInput then
-    return UIUtils.Handled
   end
   local Reply = M.Super.OnFocusReceived(self, MyGeometry, InFocusEvent)
   local ReplyInfo = {}
@@ -385,6 +394,7 @@ function M:OnMainTabLeftKeyDown()
   if self.ComponentReceivedEvent.MainTabLeft then
     return
   end
+  self.LockStar = false
   self.Tab_Arm:TabToLeft()
   return self:GetReplyWhenMainTabChanged(), true
 end
@@ -393,6 +403,7 @@ function M:OnMainTabRightKeyDown()
   if self.ComponentReceivedEvent.MainTabRight then
     return
   end
+  self.LockStar = false
   self.Tab_Arm:TabToRight()
   return self:GetReplyWhenMainTabChanged(), true
 end
@@ -432,6 +443,24 @@ function M:OnOpenKeyUp()
   self.bUserLongPressOpenKeyWhenOpen = false
 end
 
+function M:NavigateToPre()
+  local State = self.FSM:Peak()
+  local StateName = State.Name
+  local WidgetToFocus
+  if StateName == FocusStates.RoleList then
+    WidgetToFocus = self:NavigateToRoleList()
+  elseif StateName == FocusStates.SubTab then
+    WidgetToFocus = self:NavigateToSubTab()
+  elseif StateName == FocusStates.SubUI then
+    WidgetToFocus = self.CurrentSubUI
+  elseif self.Tab_L:IsVisible() then
+    WidgetToFocus = self:NavigateToRoleList()
+  end
+  if WidgetToFocus then
+    WidgetToFocus:SetFocus()
+  end
+end
+
 function M:OnBackKeyDown()
   if self.ComponentReceivedEvent.Back then
     return
@@ -439,6 +468,18 @@ function M:OnBackKeyDown()
   if self.IsGamepadInput then
     local State = self.FSM:Peak()
     local StateName = State.Name
+    if UIUtils.HasAnyFocus(self.Btn_StarPet) or UIUtils.HasAnyFocus(self.Btn_ReName) then
+      if self.Panel_Btn:IsVisible() then
+        self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
+      return self.Btn_More:SetFocus()
+    end
+    if self.LockStar then
+      self.LockStar = false
+      self:InitKeySetting()
+      return self:NavigateToPre()
+    end
     self.FSM:Pop()
     local WidgetToFocus
     if StateName == FocusStates.RoleList then
@@ -510,6 +551,7 @@ end
 function M:InitSubUI(...)
   M.Super.InitSubUI(self, ...)
   self:InitNavigationRulesCommon()
+  self:InitLockAndStarNavigationRules()
   self:OnFocusChanged()
 end
 
@@ -537,6 +579,24 @@ function M:InitNavigationRulesCommon()
       self.OnSubUINavigation
     })
   end
+end
+
+function M:InitLockAndStarNavigationRules()
+  self.Btn_Locked:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.Btn_Locked:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.Btn_Locked:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+  self.Btn_StarTarget:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.Btn_StarTarget:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.Btn_StarTarget:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  self.Btn_More:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.Btn_More:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.Btn_More:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  self.Btn_StarPet:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.Btn_StarPet:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+  self.Btn_StarPet:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  self.Btn_ReName:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.Btn_ReName:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+  self.Btn_ReName:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
 end
 
 function M:OnRoleListNavigation(NavigationDirection)
@@ -668,6 +728,18 @@ function M:OnEditNameKeyDown(...)
   return self:CallKeyFunctionByName(self.CurMainTab.Name .. "Main_OnEditNameKeyDown", ...)
 end
 
+function M:OnFaceButtonBottomKeyDown(...)
+  return self:CallKeyFunctionByName(self.CurMainTab.Name .. "Main_OnFaceButtonBottomKeyDown", ...)
+end
+
+function M:OnStarTargetKeyDown(...)
+  return self:CallKeyFunctionByName(self.CurMainTab.Name .. "Main_OnStarTargetBtnClicked", ...)
+end
+
+function M:OnStarTargetGamePadKeyDown(...)
+  return self:CallKeyFunctionByName(self.CurMainTab.Name .. "Main_OnStarTargetGamePadKeyDown", ...)
+end
+
 function M:OnPreviewModeStateChanged()
   if not self.IsPreviewMode then
     return
@@ -743,6 +815,9 @@ function M:OnFocusChanged()
   if self.ComponentReceivedEvent.OnFocusChanged then
     return
   end
+  if not self.IsGamepadInput then
+    self.LockStar = false
+  end
   self:InitKeySetting()
   self:InitNavigationRules()
   self:UpdateGamepadStyle()
@@ -783,7 +858,27 @@ function M:InitKeySetting()
   self:UpdateBottomKeyInfo(self.BottomKeyInfo)
 end
 
+function M:InitLockStarKeySettingCommon()
+  self.BottomKeyInfo = {}
+  self:ClearAllKeyEvents()
+  self.EnableDrag = false
+  self.LockStarBottomKeyInfoList = {
+    GamePadInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = "FaceButtonBottom"
+      }
+    },
+    Desc = GText("UI_Tips_Ensure")
+  }
+  table.insert(self.BottomKeyInfo, self.LockStarBottomKeyInfoList)
+end
+
 function M:InitKeySettingCommon()
+  if self.LockStar then
+    self:InitLockStarKeySettingCommon()
+    return
+  end
   self.BottomKeyInfo = {}
   self:ClearAllKeyEvents()
   local ConstCurSubTab = self:GetConstTab(self.CurMainTab.Name, self.CurSubTab.Name)
@@ -834,6 +929,13 @@ function M:InitNavigationRules()
 end
 
 function M:UpdateGamepadStyle()
+  self.Key_GamePad_Btn:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Y"}
+    },
+    bLongPress = true,
+    bButton = true
+  })
   if self.IsGamepadInput then
     local State = self.FSM:Peak()
     local StateName = State.Name
@@ -847,11 +949,20 @@ function M:UpdateGamepadStyle()
     else
       self:ShowListShadow(self.EMListView_SubTab, false)
     end
+    if self.Panel_Btn:IsVisible() then
+      self.Panel_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     self.WidgetSwitcher_MP:SetActiveWidgetIndex(1)
+    if not self.IsPreviewMode then
+      self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Key_GamePad_Btn:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self:ShowListShadow(self.EMListView_Role, false)
     self:ShowListShadow(self.EMListView_SubTab, false)
     self.WidgetSwitcher_MP:SetActiveWidgetIndex(0)
+    self.Panel_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_GamePad_Btn:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self:CallFunctionByName(self.CurMainTab.Name .. "Main_UpdateGamepadStyle")
 end

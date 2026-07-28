@@ -1,4 +1,5 @@
 require("UnLua")
+local CoroutineUtils = require("CoroutineUtils")
 require("DataMgr")
 local Const = require("Const")
 local EMCache = require("EMCache.EMCache")
@@ -11,6 +12,8 @@ local AllPlayerBloodState = require("BluePrints.UI.BloodBar.BloodBarUtils").AllB
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local MiscUtils = require("Utils.MiscUtils")
 local EMLuaConst = require("EMLuaConst")
+local SettlementCameraData = require("SettlementCameraData")
+local BattleEventName = require("BluePrints/Combat/BattleEvents/BattleEventName")
 local BP_PlayerCharacter_C = Class("BluePrints.Char.BP_CharacterBase_C")
 BP_PlayerCharacter_C._components = {
   "BluePrints.Char.CharacterComponent.PickupComponent",
@@ -49,7 +52,7 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   self:RefreshTeamMemberInfo("ReceiveBeginPlay")
   if self:IsMainPlayer() then
     EventManager:RemoveEvent(EventID.ChangeRole, self)
-    EventManager:AddEvent(EventID.ChangeRole, self, self.CheckUnreleasedCharCheat)
+    EventManager:AddEvent(EventID.ChangeRole, self, self.OnChangeRole)
     EventManager:FireEvent(EventID.OnMainCharacterBeginPlay)
     local IsOpenHelperAim = EMCache:Get("IsOpenHelperAim")
     self.IsOpenHelperAim = nil == IsOpenHelperAim and true or IsOpenHelperAim
@@ -510,14 +513,20 @@ function BP_PlayerCharacter_C:SetLookAtParam()
   if not self.CurrentLookInfo then
     return
   end
-  for k, v in pairs(self.CurrentLookInfo.TurnHeadParam) do
-    if self.PlayerAnimInstance[k] ~= nil then
-      self.PlayerAnimInstance[k] = v
+  local TurnHeadParam = self.CurrentLookInfo.TurnHeadParam
+  if TurnHeadParam then
+    for k, v in pairs(TurnHeadParam) do
+      if self.PlayerAnimInstance[k] ~= nil then
+        self.PlayerAnimInstance[k] = v
+      end
     end
   end
   local Target = self.CurrentLookInfo.Target
   local Socket = self.CurrentLookInfo.SocketName
-  if self.CurrentLookType == "Actor" then
+  local TargetLocation = self.CurrentLookInfo.TargetLocation
+  if TargetLocation then
+    self.PlayerAnimInstance:SetLookAtLocation(TargetLocation)
+  elseif self.CurrentLookType == "Actor" then
     self.PlayerAnimInstance:SetLookAtActor(Target, Socket)
   elseif self.CurrentLookType == "Camera" then
   else
@@ -737,13 +746,19 @@ function BP_PlayerCharacter_C:ShowPlayerDeadUI()
 end
 
 function BP_PlayerCharacter_C:IsDeadDuringQuest()
-  local CurrentStoryNode = GWorld.StoryMgr:GetCurrentStoryNode()
-  return CurrentStoryNode and CurrentStoryNode.bDeadTriggerQuestFail
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  return Avatar:IsDeadTriggerQuestFail()
 end
 
 function BP_PlayerCharacter_C:HandleDeadDuringQuest()
-  local StoryMgr = GWorld.StoryMgr
-  local RespawnPointParams = StoryMgr:GetResurgencePointInfo()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local RespawnPointParams = Avatar:GetResurgencePointInfo()
   local RespawnDelayTime = 1.8
   if RespawnPointParams then
     self:AddTimer(RespawnDelayTime, function()
@@ -759,6 +774,7 @@ function BP_PlayerCharacter_C:RealOnDead_Lua(KillMineRoleEid, KillMineSkillId, D
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if nil ~= GameMode then
     GameMode:NotifyGameModePlayerDead(self)
+    GameMode:NotifyServerPlayerDead(self.Eid)
   end
   DebugPrint("Tianyi@ Player Die!!!!!!!!!!")
   self:SetHoldCrouch(false)
@@ -1262,6 +1278,10 @@ end
 
 function BP_PlayerCharacter_C:Recovery(...)
   BP_PlayerCharacter_C.Super.Recovery(self, ...)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if nil ~= GameMode then
+    GameMode:NotifyServerPlayerReborn(self.Eid)
+  end
   if self:IsInRideMove() then
     self:ServerResourceDisableBattleMount(true)
   end
@@ -1582,11 +1602,12 @@ function BP_PlayerCharacter_C:BeginEnterSlideMech(MechEid)
     end
   end
   local MoveSpeed = DataMgr.MovementParams.FlySpeed and DataMgr.MovementParams.FlySpeed.ParamValue or 500
+  local FlySpeedAccTime = DataMgr.MovementParams.FlySpeedAccTime and DataMgr.MovementParams.FlySpeedAccTime.ParamValue or 0.0
   local MoveTickInterval = 0.01
   local AllCallback = {
     OnNotifyBegin = function()
       DebugPrint("zwkkk OnNotifyBegin")
-      self:StartMoveToSplineOrigin(SplineStartLocation, MoveSpeed, MoveTickInterval)
+      self:StartMoveToSplineOrigin(SplineStartLocation, MoveSpeed, MoveTickInterval, FlySpeedAccTime)
     end,
     OnInterrupted = function()
       self:CleanUpSlideMechEnter()
@@ -1599,24 +1620,34 @@ function BP_PlayerCharacter_C:BeginEnterSlideMech(MechEid)
   self:DisableBattleWheel()
   self:AddForbidTag("SlideMech")
   self:SetActorEnableCollision(false)
-  self:PlayActionMontage("Interactive", "Interactive_SlideSpline_01_Montage", AllCallback)
+  self:PlayActionMontage("Interactive/MechInteractive", "Interactive_SlideSpline_Hook_Montage", AllCallback)
   self:ChangeGravityUseAnim(true, 1.0E-4, false, true, false)
   self:AddTimer(0.001, function()
     self:CheckAnimGravityScale()
   end, true, 0, "SlideMechGravity")
 end
 
-function BP_PlayerCharacter_C:StartMoveToSplineOrigin(TargetLocation, MoveSpeed, TickInterval)
+function BP_PlayerCharacter_C:StartMoveToSplineOrigin(TargetLocation, MoveSpeed, TickInterval, AccTime)
   self:RemoveTimer("SlideMechMoveToSpline")
   local AnimInstance = self.Mesh:GetAnimInstance()
   if AnimInstance then
     AnimInstance:Montage_JumpToSection("Loop")
   end
+  AccTime = AccTime or 0.0
+  local FlyElapsed = 0.0
   self.SlideMechMoveTimer = self:AddTimer(TickInterval, function()
     local CurrentLocation = self:K2_GetActorLocation()
     local Delta = TargetLocation - CurrentLocation
     local Distance = Delta:Size()
-    local StepDistance = MoveSpeed * TickInterval
+    FlyElapsed = FlyElapsed + TickInterval
+    local CurSpeed
+    if AccTime <= 0.0 or FlyElapsed >= AccTime then
+      CurSpeed = MoveSpeed
+    else
+      CurSpeed = MoveSpeed * (FlyElapsed / AccTime)
+    end
+    local StepDistance = CurSpeed * TickInterval
+    DebugPrint("zwk CurSpeed ", CurSpeed)
     if Distance <= 40.0 then
       self:K2_SetActorLocation(TargetLocation, false, nil, false)
       self:RemoveTimer("SlideMechMoveToSpline")
@@ -2204,23 +2235,44 @@ function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
     local WeaponMeleeOrRanged = GWorld.GameInstance.ScenePlayers[Index].CurrentWeaponMeleeOrRanged
     local Prefix, WinMont, PathExistResult = self:GetDungeonSettlementWinMont(Index, SettlementData)
     PathExist = PathExistResult
-    local BattleCharTag = self:GetBattleCharBodyType()
-    local CameraParam = FVector(0, 0, 0)
-    local CameraRotationParam = FRotator(0, 0, 0)
-    if SettlementData then
-      if SettlementData.CameraParam and SettlementData.CameraParam[BattleCharTag] then
-        CameraParam.X = SettlementData.CameraParam[BattleCharTag][1]
-        CameraParam.Y = SettlementData.CameraParam[BattleCharTag][2]
-        CameraParam.Z = SettlementData.CameraParam[BattleCharTag][3]
+    local UseNewCamera = GWorld.GameInstance.UseNewSettlementCamera or Const.UseNewSettlementCamera
+    if UseNewCamera then
+      local CameraMode = "Common"
+      if SettlementData and SettlementData.CameraMode then
+        CameraMode = SettlementData.CameraMode
       end
-      if SettlementData.CameraRotationParam and SettlementData.CameraRotationParam[BattleCharTag] then
-        CameraRotationParam.Pitch = -SettlementData.CameraRotationParam[BattleCharTag][2]
-        CameraRotationParam.Yaw = SettlementData.CameraRotationParam[BattleCharTag][3]
-        CameraRotationParam.Roll = -SettlementData.CameraRotationParam[BattleCharTag][1]
+      local CamData = self:GetLevelFinishCamData(CameraMode)
+      if CamData then
+        local ApertureInt = math.floor(CamData.Aperture)
+        local FocalLengthInt = math.floor(CamData.FocalLength)
+        local FileName = "LevelFinish_" .. CameraMode .. "_" .. ApertureInt .. "_" .. FocalLengthInt .. "_Cam"
+        local CameraPath = Const.SettlementCameraPathPrefix .. FileName .. "." .. FileName
+        local CameraParam = FVector(CamData.Location.X, CamData.Location.Y, CamData.Location.Z)
+        local CameraRotationParam = FRotator(CamData.Rotation.Pitch, CamData.Rotation.Yaw, CamData.Rotation.Roll)
+        DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement UseNewCamera", "CameraPath", CameraPath, "CameraParam", CameraParam, "CameraRotationParam", CameraRotationParam)
+        self:PlayDungeonSettlementSimpleSkillFeatureByPath(false, false, false, false, true, true, CameraPath, CameraParam, CameraRotationParam)
+      else
+        DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement UseNewCamera", "CameraData not found")
       end
+    else
+      local BattleCharTag = self:GetBattleCharBodyType()
+      local CameraParam = FVector(0, 0, 0)
+      local CameraRotationParam = FRotator(0, 0, 0)
+      if SettlementData then
+        if SettlementData.CameraParam and SettlementData.CameraParam[BattleCharTag] then
+          CameraParam.X = SettlementData.CameraParam[BattleCharTag][1]
+          CameraParam.Y = SettlementData.CameraParam[BattleCharTag][2]
+          CameraParam.Z = SettlementData.CameraParam[BattleCharTag][3]
+        end
+        if SettlementData.CameraRotationParam and SettlementData.CameraRotationParam[BattleCharTag] then
+          CameraRotationParam.Pitch = -SettlementData.CameraRotationParam[BattleCharTag][2]
+          CameraRotationParam.Yaw = SettlementData.CameraRotationParam[BattleCharTag][3]
+          CameraRotationParam.Roll = -SettlementData.CameraRotationParam[BattleCharTag][1]
+        end
+      end
+      DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement BattleCharTag", BattleCharTag, "CameraParam", CameraParam, "CameraRotationParam", CameraRotationParam)
+      self:PlayDungeonSettlementSimpleSkillFeature(false, false, false, false, true, true, CameraParam, CameraRotationParam)
     end
-    DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement BattleCharTag", BattleCharTag, "CameraParam", CameraParam, "CameraRotationParam")
-    self:PlayDungeonSettlementSimpleSkillFeature(false, false, false, false, true, true, CameraParam, CameraRotationParam)
     self:PlayActionMontage(Prefix, WinMont, {})
     self:SetEndPointOffset(Index, SettlementData)
     DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement PlayActionMontage: ", Prefix, WinMont)
@@ -2245,6 +2297,36 @@ function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
   end
 end
 
+function BP_PlayerCharacter_C:GetLevelFinishCamData(CameraMode)
+  local BodyType = self:GetBattleCharBodyType()
+  local RoleId = self.CurrentRoleId
+  local SkinId = self.CurrentSkinId
+  DebugPrint("OnDungeonSettlement GetLevelFinishCamData", "Mode", CameraMode, "BodyType", BodyType, "RoleId", RoleId, "SkinId", SkinId)
+  if RoleId and SkinId then
+    local Key = CameraMode .. "_" .. BodyType .. "_" .. RoleId .. "_" .. SkinId .. "_Cam"
+    local CamData = SettlementCameraData[Key]
+    if CamData then
+      DebugPrint("OnDungeonSettlement GetLevelFinishCamData", "Final Key", Key)
+      return CamData
+    end
+  end
+  if RoleId then
+    local Key = CameraMode .. "_" .. BodyType .. "_" .. RoleId .. "_Cam"
+    local CamData = SettlementCameraData[Key]
+    if CamData then
+      DebugPrint("OnDungeonSettlement GetLevelFinishCamData", "Final Key", Key)
+      return CamData
+    end
+  end
+  local Key = CameraMode .. "_" .. BodyType .. "_Cam"
+  local CamData = SettlementCameraData[Key]
+  if CamData then
+    DebugPrint("OnDungeonSettlement GetLevelFinishCamData", "Final Key", Key)
+    return CamData
+  end
+  return nil
+end
+
 function BP_PlayerCharacter_C:PlayDungeonSettlementMVPMontage(FileName)
   DebugPrint("PlayDungeonSettlementMVPMontage FileName", FileName)
   self:PlayActionMontage("Interactive/MVPShow", FileName, {})
@@ -2254,12 +2336,12 @@ end
 function BP_PlayerCharacter_C:PlayDungeonSettlementMVPSequence(FolderPath, Offset)
   local SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. FolderPath .. "_MVPShow_Cam." .. FolderPath .. "_MVPShow_Cam"
   if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-    if string.find(SequencePath, "Jisu_") then
-      SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/Jisu/Sequence/Jisu_MVPShow_Cam_Mobile.Jisu_MVPShow_Cam_Mobile"
-    elseif string.find(SequencePath, "Zuirang_") then
-      SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/Zuirang/Sequence/Zuirang_MVPShow_Cam_Mobile.Zuirang_MVPShow_Cam_Mobile"
+    local MobileSequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. "SQ_" .. FolderPath .. "_MVPShow_Cam_Mobile." .. "SQ_" .. FolderPath .. "_MVPShow_Cam_Mobile"
+    if UResourceLibrary.CheckResourceExistOnDisk(MobileSequencePath) then
+      SequencePath = MobileSequencePath
     end
   end
+  DebugPrint("PlayMVPSequence RealMVPSequencePath:", SequencePath)
   self:PlayMVPSequence(SequencePath, Offset)
 end
 
@@ -2269,6 +2351,9 @@ function BP_PlayerCharacter_C:OnMVPSequenceFinish()
     MVPUI:OnSequenceFinish()
   end
   EventManager:FireEvent(EventID.OnMVPSequenceFinish)
+end
+
+function BP_PlayerCharacter_C:ProcessMVPSequenceActor()
 end
 
 function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(PathPrefix, MontageSuffix)
@@ -3115,7 +3200,7 @@ end
 
 function BP_PlayerCharacter_C:LoadHitDirection(HitDirectionsObject, Attacker)
   HitDirectionsObject.CurHitDirectionNum = HitDirectionsObject.CurHitDirectionNum + 1
-  RunAsyncTask(self, "CreateHitDirectionHandler" .. HitDirectionsObject.CurHitDirectionNum, function(CoroutineObj)
+  CoroutineUtils.RunAsyncTask(self, "CreateHitDirectionHandler" .. HitDirectionsObject.CurHitDirectionNum, function(CoroutineObj)
     local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
     local UIManager = GameInstance:GetGameUIManager()
     local HitDirection = UIManager:LoadUIAsync("BattleHitDirection", CoroutineObj, Attacker, self)
@@ -3193,9 +3278,9 @@ function BP_PlayerCharacter_C:RequestDeadAsyncTravel(RespawnPointParams)
       LevelLoader:RemoveArtLevelLoadedCompleteCallback(TargetLevelId)
     end
     self:DisablePlayerInputInDeliver(false)
-    local StoryMgr = GWorld.StoryMgr
-    if StoryMgr then
-      StoryMgr:FailCurrentQuestWhenDead()
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      Avatar:FailTrackingQuest()
     end
   end
   
@@ -3595,6 +3680,28 @@ function BP_PlayerCharacter_C:CheckUnreleasedCharCheat()
     CheatMsg = string.format("UnreleasedChar CharId=%d OpenVersion=%s", CharId, tostring(CharData.OpenVersion))
   })
   Avatar:CallServerMethod("SendCheatMsgToServer", CommonConst.MonitorCheatType.UnreleasedChar, JsonMsg)
+end
+
+function BP_PlayerCharacter_C:CallResetFormationOffsetNowIndexs()
+  local PreRoleId = self.PreRoleId
+  local CurrentRoleId = self.CurrentRoleId
+  if not PreRoleId or not CurrentRoleId then
+    return
+  end
+  if PreRoleId <= 0 or CurrentRoleId <= 0 then
+    return
+  end
+  if PreRoleId == CurrentRoleId then
+    return
+  end
+  if self.ResetFormationOffsetNowIndexs then
+    self:ResetFormationOffsetNowIndexs()
+  end
+end
+
+function BP_PlayerCharacter_C:OnChangeRole()
+  self:CallResetFormationOffsetNowIndexs()
+  self:CheckUnreleasedCharCheat()
 end
 
 AssembleComponents(BP_PlayerCharacter_C, {

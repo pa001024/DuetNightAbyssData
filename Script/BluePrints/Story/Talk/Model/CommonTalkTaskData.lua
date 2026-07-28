@@ -48,17 +48,9 @@ local function AddExternTalkactors(TalkNodeData, ExternTalkActors, bUseExternAct
         end
       end
     end
-  else
-    if TalkNodeData.TalkActors then
-      for _, TalkActor in pairs(TalkNodeData.TalkActors) do
-        NativeTalkActors[TalkActor.TalkActorId] = true
-        table.insert(TalkActors, TalkActor)
-      end
-    end
-    for _, TalkActor in pairs(ExternTalkActors) do
-      if not NativeTalkActors[TalkActor.TalkActorId] then
-        table.insert(TalkActors, TalkActor)
-      end
+  elseif TalkNodeData.TalkActors then
+    for _, TalkActor in pairs(TalkNodeData.TalkActors) do
+      table.insert(TalkActors, TalkActor)
     end
   end
   local Avatar = GWorld:GetAvatar()
@@ -109,6 +101,17 @@ local function AddLevelSequenceTalkActors(TalkNodeData)
     end
   end
   TalkNodeData.TalkActors = NewActorDatas
+end
+
+local function TryAutoCreateStageForFixSimple(Obj)
+  if Obj.BasicTalkType ~= "FixSimple" or Obj.BlendInType == "BlendIn" or Obj.bNeedStage and Obj.TalkStage or not Obj.FlowAsset then
+    return
+  end
+  local Stage = Obj.FlowAsset:TryAutoSpawnStage()
+  if IsValid(Stage) then
+    Obj.TalkStage = Stage
+    Obj.bNeedStage = true
+  end
 end
 
 local CommonTalkTaskData_C = {}
@@ -178,8 +181,6 @@ function CommonTalkTaskData_C.New(TalkNodeData)
   Obj.bPauseNpcBT = TalkNodeData.PauseNpcBT
   Obj.QuestChainId = TalkNodeData.QuestChainId
   Obj.PlayerSwitchEmoIdle = TalkNodeData.PlayerSwitchEmoIdle
-  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
-  local bOpenHarmony = "OpenHarmony" == PlatformName
   Obj.SequencePath = TalkNodeData.ShowFilePath
   if Obj.SequencePath and "" ~= Obj.SequencePath then
     local World = Obj.TalkContext:GetWorld()
@@ -192,11 +193,6 @@ function CommonTalkTaskData_C.New(TalkNodeData)
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.Talk, "Seqeuence资源缺失/配置错误", Message)
     else
       UE4.UMovieSceneSequenceExtensions.SetClockSource(Sequence, UE4.EUpdateClockSource.Platform)
-      if bOpenHarmony and (string.find(Obj.SequencePath, "SQ_OBT0101_SC003") or string.find(Obj.SequencePath, "SQ_OBT0101_SC008")) then
-        UE4.UMovieSceneSequenceExtensions.SetEvaluationType(Sequence, UE4.EMovieSceneEvaluationType.FrameLocked)
-        local FrameRate = UE4.UKismetMathLibrary.MakeFrameRate(10, 1)
-        UE4.UMovieSceneSequenceExtensions.SetDisplayRate(Sequence, FrameRate)
-      end
       SequenceActor:SetSequence(Sequence)
       Obj.Sequence = Sequence
     end
@@ -214,7 +210,9 @@ function CommonTalkTaskData_C.New(TalkNodeData)
       local Message = "找不到DialogueAsset资源" .. "\nSequence路径:" .. TalkNodeData.FlowAssetPath .. "\n对话节点:" .. tostring(TalkNodeData.Name)
       UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE4.EStoryLogType.TalkFlow, "DialogueAsset资源缺失/配置错误", Message)
     elseif TS then
-      Obj.FlowAsset = TS:CreateFlowTalkTask(TalkNodeData.FlowAssetPath, UE4.LoadObject(TalkNodeData.FlowAssetPath))
+      local FlowKey = UE4.UKismetSystemLibrary.GetPathName(FlowAsset)
+      Obj.FlowAsset = TS:CreateFlowTalkTask(FlowKey, FlowAsset)
+      Obj.FlowAssetPath = FlowKey
       Obj.FirstDialogueId = Obj.FlowAsset:GetFirstDialogueId()
       local TalkActors = Obj.FlowAsset:GetTalkActorData()
       AddExternTalkactors(Obj, TalkActors, Obj.bUseFlowAssetActors, Obj.FlowAsset)
@@ -224,6 +222,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
     Obj.BlendInType = "FadeIn"
     Obj.BlendOutType = "FadeOut"
   end
+  TryAutoCreateStageForFixSimple(Obj)
   if Obj.BasicTalkType == "Cinematic" then
     AddLevelSequenceTalkActors(Obj)
   end

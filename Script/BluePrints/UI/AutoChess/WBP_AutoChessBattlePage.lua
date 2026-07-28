@@ -4,11 +4,26 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 local Const = CommonConst.AutoChess
 
 function M:OnLoaded(...)
+  self.UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
+  self.GameMode = UGameplayStatics.GetGameMode(self)
+  self.IsShareEditMode = self.GameMode:TriggerDungeonComponentFun("IsShareEditMode")
+  self.IsPvPMode = self.GameMode:TriggerDungeonComponentFun("IsPvPMode")
+  self:Deprecate()
   self:SetText()
   self:CountGamepadOnlyUI()
   self:BindCallBack()
-  self.UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
-  self.GameMode = UGameplayStatics.GetGameMode(self)
+  self.MonsterInfoDetails2 = self.MonsterInfoDetails2 or self.MonsterInfoDetails_2
+  if self.MonsterInfoDetails2 then
+    self.MonsterInfoDetails2:InitView()
+    self.MonsterInfoDetails2:InitInfo(self.Item_01, self.Item_02)
+  end
+  if self.Panel_MonsterInfo then
+    self.Panel_MonsterInfo:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.Panel_MonsterInfo2 then
+    self.Panel_MonsterInfo2:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self:AddDispatcher(EventID.OnAutoChessEquipChange, self, self.OnChessEquipChanged)
   if self.GameMode and self.GameMode.PreInitInfo then
     self.MissionId = self.GameMode.PreInitInfo.MissionId
   end
@@ -31,6 +46,10 @@ function M:OnLoaded(...)
       self.RandomCostFactor = 1
     end
     self.TotalDeployCost = self.TotalDeployCost - math.ceil(self.RandomFactor * self.RandomCostFactor)
+  end
+  local TotalCost = self.GameMode:TriggerDungeonComponentFun("GetShareModeTotalCost") or 0
+  if 0 ~= TotalCost then
+    self.TotalDeployCost = TotalCost
   end
   self.UsedDeployCost = 0
   self.Text_Max:SetText(self.TotalDeployCost)
@@ -62,17 +81,98 @@ function M:OnLoaded(...)
   self.bBannedEnemy = false
   self:ListenForInputAction("OpenMenu", EInputEvent.IE_Pressed, true, {
     self,
-    self.ProcessExit
+    self.ProcessOpenMenu
   })
   self:ListenForInputAction("OpenMenu", EInputEvent.IE_Released, true, {
     self,
-    self.ProcessExitRelease
+    self.ProcessOpenMenuRelease
   })
+  EventManager:AddEvent(EventID.OnDungeonEscClose, self, self.OnDungeonEscClose)
+  self.bNoFocus = false
+  self.FocusState = Const.GamepadFocusState.Focus1
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+  self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  if IsValid(self.GameInputModeSubsystem) then
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  end
+  self.AllPositionId = 999
+  self.State:InitInfo(self)
+  self:UpdateListChess()
+  self:DeploySelfItem()
+  self.List_Chess.OnCreateEmptyContent:Bind(self, function(self)
+    local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
+    ItemContent.IsEmpty = true
+    return ItemContent
+  end)
+end
+
+function M:Deprecate()
+  if self.Panel_MonsterInfo then
+    self.Panel_MonsterInfo:SetVisibility(ESlateVisibility.Collapsed)
+  end
+end
+
+function M:DeploySelfItem()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("DeploySelfItem: No Avatar")
+    return
+  end
+  local DailyChallengeBuff = Avatar.AutoChess.DailyChallengeBuff
+  local ChallengeBuffs = Avatar.AutoChess.ChallengeBuffs
+  local ChanllangeBuffIdList = {}
+  if DailyChallengeBuff then
+    for _, ChallengeBuffId in pairs(DailyChallengeBuff) do
+      table.insert(ChanllangeBuffIdList, ChallengeBuffId)
+    end
+  end
+  if ChallengeBuffs then
+    for _, ChallengeBuffId in pairs(ChallengeBuffs) do
+      table.insert(ChanllangeBuffIdList, ChallengeBuffId)
+    end
+  end
+  if 0 == #ChanllangeBuffIdList then
+    DebugPrint("DeploySelfItem: no ChallengeBuffId")
+    return
+  end
+  for _, ChallengeBuffId in pairs(ChanllangeBuffIdList) do
+    if DataMgr.ChallengeBuff[ChallengeBuffId] and DataMgr.ChallengeBuff[ChallengeBuffId].AutoChessFormatId then
+      local AutoChessFormatId = DataMgr.ChallengeBuff[ChallengeBuffId].AutoChessFormatId
+      local ACFormations = DataMgr.AutoChessFormat[AutoChessFormatId]
+      
+      local function get_last_number(s)
+        if type(s) ~= "string" then
+          return nil
+        end
+        local num = s:match("^ACLocation(%d+)$")
+        return num and tonumber(num) or nil
+      end
+      
+      for Location, Info in pairs(ACFormations) do
+        local CubeIndex = get_last_number(Location)
+        if CubeIndex then
+          CubeIndex = CubeIndex - 1
+          for ItemTag, ItemId in pairs(Info) do
+            EventManager:FireEvent(EventID.OnAutoChessCreateItem, ItemId, CubeIndex, false)
+            break
+          end
+        end
+      end
+    elseif not DataMgr.ChallengeBuff[ChallengeBuffId] then
+      DebugPrint("DataMgr.ChallengeBuff[ChallengeBuffId] is nil, ChallengeBuffId = " .. ChallengeBuffId)
+    elseif not DataMgr.ChallengeBuff[ChallengeBuffId].AutoChessFormatId then
+      DebugPrint("DataMgr.ChallengeBuff[ChallengeBuffId].AutoChessFormatId is nil, ChallengeBuffId = " .. ChallengeBuffId)
+    end
+  end
+end
+
+function M:UpdateListChess(PositionId)
   self.List_Chess:ClearListItems()
   local ResDeployCost = self.TotalDeployCost - self.UsedDeployCost
   local ChessDatas = Model:GetChessData()
+  self.FocusChessCardId = nil
   for _, ChessData in ipairs(ChessDatas) do
-    if not ChessData.Locked then
+    if not ChessData.Locked and (nil == PositionId or PositionId == self.AllPositionId or DataMgr.CombatChessInfo[ChessData.Id].PositionId == PositionId) then
       local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
       ItemContent.Data = ChessData
       ItemContent.bInGame = true
@@ -90,16 +190,16 @@ function M:OnLoaded(...)
       end
       
       self.List_Chess:AddItem(ItemContent)
+      if not self.FocusChessCardId then
+        self.FocusChessCardId = ChessData.Id
+      end
     end
   end
-  self.FocusChessCardId = ChessDatas[1].Id
-  self.List_Chess.OnCreateEmptyContent:Bind(self, function(self)
-    local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
-    ItemContent.IsEmpty = true
-    return ItemContent
-  end)
   self.List_Chess:RequestFillEmptyContent()
-  EventManager:AddEvent(EventID.OnDungeonEscClose, self, self.OnDungeonEscClose)
+  self:SetFocusState(Const.GamepadFocusState.Focus1)
+  self.SelectChessCardId = nil
+  self:ExitChessBoard()
+  self:AddDispatcher(EventID.OnDungeonEscClose, self, self.OnDungeonEscClose)
   self.bNoFocus = false
   self.FocusState = Const.GamepadFocusState.Focus1
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
@@ -107,11 +207,12 @@ function M:OnLoaded(...)
   if IsValid(self.GameInputModeSubsystem) then
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
+  self:PlayAnimation(self.Change)
 end
 
 function M:Close()
-  EventManager:RemoveEvent(EventID.OnDungeonEscClose, self)
   self:RemoveTimer(self.CountDownTimerName)
+  self:CancelSpecialRightPress()
   self:StopListeningForInputAction("OpenMenu", EInputEvent.IE_Pressed)
   self:StopListeningForInputAction("OpenMenu", EInputEvent.IE_Released)
   self.Super.Close(self)
@@ -138,6 +239,12 @@ function M:SelectChessCard(ChessId, bNoToast)
   if Entry.Content.bForbidden == true then
     self.SelectChessCardId = nil
     self:ExitChessBoard()
+    if Entry.Content.InGameCost > self.TotalDeployCost then
+      if not bNoToast then
+        self:TryShowClearChessEquipsPopup(ChessId)
+      end
+      return
+    end
     if not bNoToast then
       if self.bChessBoardFull then
         self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_MonsterOverflow"))
@@ -185,6 +292,53 @@ function M:SelectChessCard(ChessId, bNoToast)
   self:SetFocusState(Const.GamepadFocusState.Focus3)
 end
 
+function M:TryShowClearChessEquipsPopup(ChessId)
+  local EquipList = self:GetChessEquips(ChessId, false) or {}
+  if #EquipList <= 0 then
+    return true
+  end
+  local Params = {
+    ShortText = "UI_AutoChess_FullCostMonsterToast",
+    NoButtonText = "UI_PATCH_CANCEL",
+    YesButtonText = "UI_PATCH_ENSURE"
+  }
+  
+  function Params.LeftCallbackFunction()
+    self.bNoFocus = false
+  end
+  
+  function Params.CloseBtnCallbackFunction()
+    self.bNoFocus = false
+  end
+  
+  function Params.RightCallbackFunction()
+    self:ClearChessAllEquips(ChessId)
+  end
+  
+  self.bNoFocus = true
+  self.UIManager:ShowCommonPopupUI(100415, Params, self)
+  return true
+end
+
+function M:ClearChessAllEquips(ChessId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    self.bNoFocus = false
+    return
+  end
+  
+  local function RemoveNext()
+    local EquipList = self:GetChessEquips(ChessId, false) or {}
+    if #EquipList <= 0 then
+      self.bNoFocus = false
+      return
+    end
+    Avatar:AutoChessRemoveEquip(RemoveNext, ChessId, 1)
+  end
+  
+  RemoveNext()
+end
+
 function M:ExitChessBoard()
   EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Xuanzhong)
   EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.InitEffect)
@@ -199,7 +353,7 @@ end
 
 function M:ShowTips(bFlag, Mode)
   if bFlag then
-    self.Tips:SetVisibility(ESlateVisibility.Visible)
+    self.Tips:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Tips:PlayAnimation(self.Tips.In)
     self:UpdateTipsText(Mode)
     self:UpdateTipsKey()
@@ -257,55 +411,54 @@ function M:UpdateTipsKey()
 end
 
 function M:ShowChessInfo(CombatChessId, bIsEnemy, bIsCard)
+  self.bChessInfoIsEnemy = bIsEnemy
+  local DeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
+  if DeviceType ~= ECommonInputType.Touch then
+    if not bIsEnemy and DeviceType == ECommonInputType.Gamepad then
+      self.WBP_Com_KeyImg_193:SetVisibility(ESlateVisibility.Visible)
+    else
+      self.WBP_Com_KeyImg_193:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
   local CombatChessInfo = DataMgr.CombatChessInfo[CombatChessId]
   if not CombatChessInfo then
     return
   end
-  local CombatChessName = CombatChessInfo.CombatChessName
-  self.MonsterInfo.Text_Name:SetText(GText(CombatChessName))
-  if CombatChessInfo.PositionIcon then
-    local ImgType = LoadObject(CombatChessInfo.PositionIcon)
-    self.MonsterInfo.Icon_Type.Icon:SetBrushFromTexture(ImgType)
-  end
   local ChessData = Model:GetMonsterInfoByCombatId(CombatChessId)
-  self.MonsterInfo.Value_01:InitView(GText("UI_AutoChess_MonsterProp1"), ChessData.Atk)
-  self.MonsterInfo.Value_02:InitView(GText("UI_AutoChess_MonsterProp2"), ChessData.MaxHp)
-  self.MonsterInfo.Value_03:InitView(GText("UI_AutoChess_MonsterProp3"), ChessData.Def)
-  self.MonsterInfo.Value_04:InitView(GText("UI_AutoChess_MonsterProp4"), ChessData.MaxEs)
-  local RobotEquip = DataMgr.RobotEquip
   local ChessEquips = self:GetChessEquips(CombatChessId, bIsEnemy)
-  self.List_EquipmentEffect:ClearListItems()
-  local EquipsCount = #ChessEquips
-  if EquipsCount > 0 then
-    self.VBox_Equipment:SetVisibility(ESlateVisibility.Visible)
-    for _, EquipId in pairs(ChessEquips) do
-      local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
-      ItemContent.Text_Name = GText(RobotEquip[EquipId].EquipName)
-      ItemContent.Text_Desc = GText(Model:CalcEquipExtraDesc(EquipId))
-      self.List_EquipmentEffect:AddItem(ItemContent)
-    end
-  else
-    self.VBox_Equipment:SetVisibility(ESlateVisibility.Collapsed)
+  if self.MonsterInfoDetails2 then
+    self.MonsterInfoDetails2:RefreshDetails(ChessData, ChessEquips, bIsEnemy)
   end
   if not bIsEnemy and not bIsCard then
-    self.Btn_Delete:SetVisibility(ESlateVisibility.Visible)
-    if not self.Btn_Delete:IsPlayingAnimation(self.Btn_Delete.In) then
-      self.Btn_Delete:PlayAnimation(self.Btn_Delete.In)
+    if self.Btn_Delete2 then
+      self.Btn_Delete2:SetVisibility(ESlateVisibility.Visible)
+      if not self.Btn_Delete2:IsPlayingAnimation(self.Btn_Delete2.In) then
+        self.Btn_Delete2:PlayAnimation(self.Btn_Delete2.In)
+      end
     end
-  else
-    self.Btn_Delete:SetVisibility(ESlateVisibility.Collapsed)
+  elseif self.Btn_Delete2 then
+    self.Btn_Delete2:SetVisibility(ESlateVisibility.Collapsed)
   end
-  if self.Panel_MonsterInfo:GetVisibility() ~= ESlateVisibility.SelfHitTestInvisible then
-    DebugPrint("WBP_Activity_AutoChess_BattlePage PlayAnimation MonsterInfo_In")
-    self:PlayAnimation(self.MonsterInfo_In)
+  if self.Panel_MonsterInfo2 and self.Panel_MonsterInfo2:GetVisibility() ~= ESlateVisibility.SelfHitTestInvisible then
+    self.Panel_MonsterInfo2:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    DebugPrint("WBP_Activity_AutoChess_BattlePage PlayAnimation MonsterInfo2_In")
+    if self.MonsterInfo2_In then
+      self:PlayAnimation(self.MonsterInfo2_In)
+    end
   end
   self:AdjustScrollable()
 end
 
 function M:HideChessInfo()
-  if self.Panel_MonsterInfo:GetVisibility() ~= ESlateVisibility.Collapsed and not self.SelectChessCardId then
-    DebugPrint("WBP_Activity_AutoChess_BattlePage PlayAnimation MonsterInfo_Out")
-    self:PlayAnimation(self.MonsterInfo_Out)
+  if self.Panel_MonsterInfo2 and self.Panel_MonsterInfo2:GetVisibility() ~= ESlateVisibility.Collapsed and not self.SelectChessCardId then
+    self.Panel_MonsterInfo2:SetVisibility(ESlateVisibility.Collapsed)
+    DebugPrint("WBP_Activity_AutoChess_BattlePage PlayAnimation MonsterInfo2_Out")
+    if self.MonsterInfo2_Out then
+      self:PlayAnimation(self.MonsterInfo2_Out)
+    end
+  end
+  if self.Panel_MonsterInfo then
+    self.Panel_MonsterInfo:SetVisibility(ESlateVisibility.Collapsed)
   end
   EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Xuanzhong)
 end
@@ -333,12 +486,16 @@ function M:GetChessItemContentByChessId(ChessId)
 end
 
 function M:InitBuffUI()
-  if self.MissionId then
-    if self.Buff then
-      self.Buff:ShowBuff(self.MissionId)
-    end
-  else
+  if not self.MissionId then
     DebugPrint("-----------MissionId nil------------")
+    return
+  end
+  local bEditMode = self.GameMode and self.GameMode:TriggerDungeonComponentFun("IsShareEditMode") or false
+  if self.Btn_EditBuff then
+    self.Btn_EditBuff:Init(self.MissionId, bEditMode, self)
+  end
+  if self.Btn_EditWeather then
+    self.Btn_EditWeather:Init(bEditMode, self, self.MissionId)
   end
 end
 
@@ -364,34 +521,72 @@ function M:SetInputModeCustom(Flag)
 end
 
 function M:ProcessExit()
-  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.MouseAndKeyboard then
-    if self.SelectChessCardId then
-      self:SelectChessCard(self.SelectChessCardId, true)
-    elseif self.PickCubeIndex then
-      self:ExitPick()
-    else
-      self:OnClickExit()
-    end
-  elseif self.Btn_Explanation then
-    local PressKey = self.Btn_Explanation.Com_KeyImg
-    PressKey:AddExecuteLogic(self, self.ShowGuide)
-    PressKey:OnButtonPressed(nil, true, 0, 0.5)
-    self.LongPressDuration = PressKey.LongPressDuration or 0.8
-    self.PressStartTime = UE4.UGameplayStatics.GetTimeSeconds(self)
+  if self.SelectChessCardId then
+    self:SelectChessCard(self.SelectChessCardId, true)
+  elseif self.PickCubeIndex then
+    self:ExitPick()
+  else
+    self:OnClickExit()
   end
 end
 
-function M:ProcessExitRelease()
-  if self.Btn_Explanation then
+function M:ProcessOpenMenu()
+  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.MouseAndKeyboard then
+    self:ProcessExit()
+  else
+    self:BeginSpecialRightPress()
+  end
+end
+
+function M:BeginSpecialRightPress()
+  if self.bSpecialRightPressing then
+    return
+  end
+  self.bSpecialRightPressing = true
+  self.bExplanationLongPressed = false
+  if self.Btn_Explanation and self.Btn_Explanation.Com_KeyImg then
     local PressKey = self.Btn_Explanation.Com_KeyImg
-    PressKey:OnButtonReleased()
+    PressKey:AddExecuteLogic(self, self.OnSpecialRightLongPressed)
+    PressKey:OnButtonPressed(nil, true, 0, 0.5)
   end
-  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and self.PressStartTime then
-    local PassTime = UE4.UGameplayStatics.GetTimeSeconds(self) - self.PressStartTime
-    if PassTime < self.LongPressDuration - 0.01 then
-      self:OnClickExit()
-    end
+end
+
+function M:OnSpecialRightLongPressed()
+  if not self.bSpecialRightPressing then
+    return
   end
+  self.bExplanationLongPressed = true
+  self:ShowGuide()
+end
+
+function M:ProcessOpenMenuRelease()
+  if self.bSpecialRightPressing then
+    self:EndSpecialRightPress()
+  end
+end
+
+function M:EndSpecialRightPress()
+  if not self.bSpecialRightPressing then
+    return
+  end
+  local bLongPressed = self.bExplanationLongPressed
+  self:CancelSpecialRightPress()
+  if bLongPressed then
+    return
+  end
+  if self.bHadStartedBattle then
+    self:OnClickExit()
+  elseif self.bDeploying and self.FocusState == Const.GamepadFocusState.Focus1 and self.Btn_EditWeather then
+    self.Btn_EditWeather:TriggerAction()
+  end
+end
+
+function M:CancelSpecialRightPress()
+  if self.bSpecialRightPressing and self.Btn_Explanation and self.Btn_Explanation.Com_KeyImg then
+    self.Btn_Explanation.Com_KeyImg:OnButtonReleased()
+  end
+  self.bSpecialRightPressing = false
+  self.bExplanationLongPressed = false
 end
 
 function M:OnClickExit()
@@ -412,11 +607,16 @@ function M:OnClickExit()
     end
     
     self.bNoFocus = true
-    self.UIManager:ShowCommonPopupUI(100096, Params, self)
+    if self.IsShareEditMode then
+      self.UIManager:ShowCommonPopupUI(100430, Params, self)
+    else
+      self.UIManager:ShowCommonPopupUI(100096, Params, self)
+    end
   else
     self.bNoFocus = true
     UIUtils.OpenEsc()
   end
+  self:PlaySound("event:/ui/common/click_btn_return")
 end
 
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
@@ -439,9 +639,9 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
       end
     elseif InKeyName == UIConst.GamePadKey.RightAnalogY then
       local AddOffset = UE4.UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * 5
-      local CurScrollOffset = self.List_EquipmentEffect:GetScrollOffset()
-      local ScrollOffset = math.clamp(CurScrollOffset - AddOffset, 0, self.List_EquipmentEffect:GetScrollOffsetOfEnd())
-      self.List_EquipmentEffect:SetScrollOffset(ScrollOffset)
+      if self.MonsterInfoDetails2 then
+        self.MonsterInfoDetails2:ScrollEquipmentList(AddOffset)
+      end
     end
   end
   return UIUtils.Unhandled
@@ -451,11 +651,22 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and not IsEventHandled and self.bDeploying and self.FocusState == Const.GamepadFocusState.Focus1 and InKeyName == UIConst.GamePadKey.SpecialLeft then
-    if self.Buff and self.MissionId then
-      self.Buff:ShowBuffDetail()
+  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and not IsEventHandled and self.bDeploying and self.FocusState == Const.GamepadFocusState.Focus1 then
+    if InKeyName == UIConst.GamePadKey.SpecialLeft then
+      if self.Btn_EditBuff then
+        self.Btn_EditBuff:TriggerAction()
+      end
+      IsEventHandled = true
+    elseif InKeyName == UIConst.GamePadKey.SpecialRight then
+      self:BeginSpecialRightPress()
+      IsEventHandled = true
+    elseif InKeyName == UIConst.GamePadKey.LeftShoulder then
+      self.State:MoveTab(-1)
+      IsEventHandled = true
+    elseif InKeyName == UIConst.GamePadKey.RightShoulder then
+      self.State:MoveTab(1)
+      IsEventHandled = true
     end
-    IsEventHandled = true
   end
   return IsEventHandled
 end
@@ -465,8 +676,13 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    if InKeyName == UIConst.GamePadKey.SpecialRight then
-      self:ProcessExit()
+    if InKeyName == UIConst.GamePadKey.FaceButtonRight and self.FocusState == Const.GamepadFocusState.Focus1 then
+      if self.Btn_EditWeather and self.Btn_EditWeather:IsTipsOpen() then
+        self.Btn_EditWeather:CloseTips()
+        self:SetFocusState(Const.GamepadFocusState.Focus1)
+      else
+        self:ProcessExit()
+      end
       IsEventHandled = true
     elseif InKeyName == UIConst.GamePadKey.LeftShoulder and self.BattleStatisticsTips:GetVisibility() ~= UIConst.VisibilityOp.Collapsed then
       IsEventHandled = true
@@ -479,13 +695,17 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       if InKeyName == UIConst.GamePadKey.RightThumb then
         self:ResetLineup()
         IsEventHandled = true
-      elseif self.bDeploying and InKeyName == UIConst.GamePadKey.FaceButtonTop then
+      elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
         self:PresetLineup()
         IsEventHandled = true
-      elseif self.bDeploying and InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-        self:TryStartBattle()
+      elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
+        if self.IsShareEditMode then
+          self:TryToSaveSquad()
+        else
+          self:TryStartBattle()
+        end
         IsEventHandled = true
-      elseif self.bDeploying and InKeyName == UIConst.GamePadKey.LeftThumb then
+      elseif InKeyName == UIConst.GamePadKey.LeftThumb then
         self:SetFocusState(Const.GamepadFocusState.Focus2)
         IsEventHandled = true
       end
@@ -562,9 +782,12 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
           end
         end
         IsEventHandled = true
-      elseif InKeyName == UIConst.GamePadKey.RightThumb and self.Panel_MonsterInfo:GetVisibility() ~= ESlateVisibility.Collapsed then
+      elseif InKeyName == UIConst.GamePadKey.RightThumb and self.Panel_MonsterInfo2 and self.Panel_MonsterInfo2:GetVisibility() ~= ESlateVisibility.Collapsed then
         self.SelectCubeIndex = self.GamepadCubeIndex
         self:DeleteSelectedChess()
+        IsEventHandled = true
+      elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
+        self:OpenEquipment()
         IsEventHandled = true
       end
     end
@@ -581,12 +804,60 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   return IsEventHandled and UIUtils.Handled or UIUtils.Unhandled
 end
 
+function M:OpenEquipment()
+  if self.bChessInfoIsEnemy then
+    return
+  end
+  if self.MonsterInfoDetails2 then
+    self.MonsterInfoDetails2:OpenEquipment()
+  end
+end
+
+function M:ExitEquipment()
+  self:SetFocusState(self.FocusState)
+end
+
+function M:OnChessEquipChanged(ChessId, EquipSlotIndex)
+  local ChessEquips = self:GetChessEquips(ChessId, false)
+  local NewCost = self:GetChessCost(ChessId)
+  if self.MonsterInfoDetails2 and self.MonsterInfoDetails2.ChessData and self.MonsterInfoDetails2.ChessData.Id == ChessId then
+    local ChessData = Model:GetMonsterInfoByCombatId(ChessId)
+    self.MonsterInfoDetails2:RefreshDetails(ChessData, ChessEquips)
+  end
+  local Content = self:GetChessItemContentByChessId(ChessId)
+  if Content and Content.Data then
+    Content.Data.EquipItems = ChessEquips
+    Content.Data.TotalCost = NewCost
+    Content.InGameCost = NewCost
+    local Entry = self:GetChessItemEntryByChessId(ChessId)
+    if Entry and Entry.UpdateEquipInfo then
+      Entry:UpdateEquipInfo(ChessEquips)
+    end
+  end
+  local bIsDeployed = false
+  for Index, ChessInfo in pairs(self.Index2CubeInfo) do
+    if ChessInfo.CombatChessId == ChessId then
+      ChessInfo.EquipList = ChessEquips
+      bIsDeployed = true
+    end
+  end
+  if bIsDeployed then
+    local Cost = 0
+    for _, ChessInfo in pairs(self.Index2CubeInfo) do
+      Cost = Cost + self:GetChessCost(ChessInfo.CombatChessId)
+    end
+    self:UpdateDeployCost(true, Cost, self.ChessNum)
+  else
+    self:UpdateDeployCost(false, 0, 0)
+  end
+end
+
 function M:OnKeyUp(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and InKeyName == UIConst.GamePadKey.SpecialRight then
-    self:ProcessExitRelease()
+    self:ProcessOpenMenuRelease()
     IsEventHandled = true
   end
   return IsEventHandled and UIUtils.Handled or UIUtils.Unhandled
@@ -597,7 +868,11 @@ function M:BindCallBack()
     self.Btn_Exit.Btn_Click.OnClicked:Add(self, self.OnClickExit)
   end
   if self.Btn_Start and self.Btn_Start.Btn_Click then
-    self.Btn_Start.Btn_Click.OnClicked:Add(self, self.TryStartBattle)
+    if self.IsShareEditMode then
+      self.Btn_Start.Btn_Click.OnClicked:Add(self, self.TryToSaveSquad)
+    else
+      self.Btn_Start.Btn_Click.OnClicked:Add(self, self.TryStartBattle)
+    end
   end
   if self.Btn_Reset and self.Btn_Reset.Btn_Click then
     self.Btn_Reset.Btn_Click.OnClicked:Add(self, self.ResetLineup)
@@ -605,11 +880,12 @@ function M:BindCallBack()
   if self.Btn_Preset and self.Btn_Preset.Btn_Click then
     self.Btn_Preset.Btn_Click.OnClicked:Add(self, self.PresetLineup)
   end
-  if self.Btn_Delete and self.Btn_Delete.Btn_Click then
-    self.Btn_Delete.Btn_Click.OnClicked:Add(self, self.DeleteSelectedChess)
+  if self.Btn_Delete2 and self.Btn_Delete2.Btn_Click then
+    self.Btn_Delete2.Btn_Click.OnClicked:Add(self, self.DeleteSelectedChess)
   end
   if self.Btn_Explanation and self.Btn_Explanation.Btn_Area then
     self.Btn_Explanation.Btn_Area.OnClicked:Add(self, self.ShowGuide)
+    self.Btn_Explanation.Btn_Area.OnPressed:Add(self, self.OnPressedExplanation)
   end
 end
 
@@ -619,6 +895,10 @@ function M:ShowGuide(bFirst)
   else
     GWorld.StoryMgr:RunStory("Guide/Guide_AutoChess_Battle.story", nil, nil, nil, nil)
   end
+end
+
+function M:OnPressedExplanation()
+  self:PlaySound("event:/ui/common/click_mid")
 end
 
 function M:DeleteSelectedChess()
@@ -733,11 +1013,32 @@ function M:UpdateDeployCost(bDirectSet, CostChange, ChessNumChange)
   return bSuccess
 end
 
+function M:CanRecoverListFocus()
+  if self.bNoFocus or not self.bDeploying then
+    return false
+  end
+  if not IsValid(self.GameInputModeSubsystem) or self.GameInputModeSubsystem:GetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return false
+  end
+  local TopUI = UIManager(self):GetLastestAndFocusableUIWidgetObj()
+  if TopUI ~= self then
+    return false
+  end
+  return not self.Btn_EditWeather or not self.Btn_EditWeather.IsTipsOpen or not self.Btn_EditWeather:IsTipsOpen()
+end
+
 function M:RecoverListFocus()
+  if not self:CanRecoverListFocus() then
+    return
+  end
   local bSuccess = false
   local AllDisplayedEntries = self.List_Chess:GetDisplayedEntryWidgets()
-  for _, Entry in pairs(AllDisplayedEntries) do
+  for idx, Entry in pairs(AllDisplayedEntries) do
     if not (Entry and Entry.Content) or not Entry.Content.Data then
+      if not Entry.Content.Data then
+        self.List_Chess:BP_SetItemSelection(Entry.Content, true)
+        Entry:SetFocus()
+      end
       return
     end
     local ChessId = Entry.Content.Data.Id
@@ -764,6 +1065,9 @@ function M:RecoverListFocus()
       end
     end
     self:AddTimer(0.001, function()
+      if not self:CanRecoverListFocus() then
+        return
+      end
       local AllDisplayedEntries = self.List_Chess:GetDisplayedEntryWidgets()
       for _, Entry in pairs(AllDisplayedEntries) do
         if not (Entry and Entry.Content) or not Entry.Content.Data then
@@ -790,6 +1094,10 @@ function M:ResetLineup()
   self:PlaySound("event:/ui/activity/sub_btn_click")
   if self.Btn_Reset.Btn_Click:GetForbidden() then
     self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_EmptyResetToast"))
+    return
+  end
+  if self.GameMode:TriggerDungeonComponentFun("IsMonsterCreating") then
+    DebugPrint("AutoChessBattlePage TryStartBattle: there is monster creating")
     return
   end
   local Params = {}
@@ -822,21 +1130,51 @@ function M:PresetLineup()
   UIManager(self.Player):LoadUINew("AutoChessPresetPage", self)
 end
 
+function M:InitSharedSquadLayout(SquadIdx)
+  if not self.IsShareEditMode then
+    return
+  end
+  SquadIdx = SquadIdx or Model:GetEditingSuqadIndex() or 1
+  local Avatar = GWorld:GetAvatar()
+  if not (Avatar and Avatar.AutoChess) or not Avatar.AutoChess.SharedSquads then
+    DebugPrint("InitSharedSquadLayout: no SharedSquads")
+    return
+  end
+  local SharedSquad = Avatar.AutoChess.SharedSquads[SquadIdx]
+  if not SharedSquad or not SharedSquad.Squad then
+    DebugPrint("InitSharedSquadLayout: no squad data, SquadIdx = ", SquadIdx)
+    return
+  end
+  self.SharedSquadEquips = SharedSquad.Equips
+  self:SetLineup(SharedSquad.Squad)
+end
+
 function M:SetLineup(InfoList)
   for CubeIndex = 0, Const.MaxChessNum - 1 do
     self:MarkDeployChessState(CubeIndex, false)
     EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, CubeIndex, false)
   end
-  local Cost = 0
-  local ChessCount = 0
-  for CubeIndex, CombatChessId in pairs(InfoList) do
-    local CubeIndex = CubeIndex - 1
-    Cost = Cost + self:GetChessCost(CombatChessId)
-    self:MarkDeployChessState(CubeIndex, true)
-    EventManager:FireEvent(EventID.OnAutoChessCreateMonster, CombatChessId, CubeIndex, false, self:GetChessEquips(CombatChessId, false))
-    ChessCount = ChessCount + 1
+  
+  local function TrySetLineUp()
+    local Cost = 0
+    local ChessCount = 0
+    for CubeIndex, CombatChessId in pairs(InfoList) do
+      local CubeIndex = CubeIndex - 1
+      Cost = Cost + self:GetChessCost(CombatChessId)
+      self:MarkDeployChessState(CubeIndex, true)
+      EventManager:FireEvent(EventID.OnAutoChessCreateMonster, CombatChessId, CubeIndex, false, self:GetChessEquips(CombatChessId, false))
+      ChessCount = ChessCount + 1
+    end
+    self:UpdateDeployCost(true, Cost, ChessCount)
+    self:BlockAllUIInput(false)
   end
-  self:UpdateDeployCost(true, Cost, ChessCount)
+  
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    self:BlockAllUIInput(true)
+    self:AddTimer(1.0, TrySetLineUp, false, 0, "AutoChess_DelayTrySetLineUp", false)
+  else
+    TrySetLineUp()
+  end
 end
 
 function M:GetChessCost(CombatChessId)
@@ -853,6 +1191,11 @@ function M:GetChessEquips(ChessId, bIsEnemy)
   local Equips
   if bIsEnemy then
     Equips = self.EnemyChessEquips[ChessId]
+  elseif self.IsShareEditMode and self.SharedSquadEquips then
+    Equips = self.SharedSquadEquips[ChessId]
+    if not Equips or type(Equips) == "table" and 0 == #Equips then
+      Equips = Model:GetMonsterEquipInfo(ChessId)
+    end
   else
     Equips = Model:GetMonsterEquipInfo(ChessId)
   end
@@ -876,19 +1219,23 @@ end
 
 function M:TryStartBattle()
   if self.bHadStartedBattle == true then
+    DebugPrint("AutoChessBattlePage TryStartBattle: already started")
     return
   end
   self:PlaySound("event:/ui/activity/auto_chess_main_level_btn_click")
   if self.Btn_Start.Btn_Click:GetForbidden() then
     self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_NoMonsterToast"))
+    DebugPrint("AutoChessBattlePage TryStartBattle: no monster")
     return
   end
   if self.GameMode:TriggerDungeonComponentFun("IsMonsterCreating") then
+    DebugPrint("AutoChessBattlePage TryStartBattle: there is monster creating")
     return
   end
   if self.UsedDeployCost > self.TotalDeployCost then
     self:PlayAnimation(self.Cost_Warning)
     self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_IllegalToast"))
+    DebugPrint("AutoChessBattlePage TryStartBattle: client illegal")
     return
   end
   local SavedSquadInfo = {}
@@ -897,11 +1244,13 @@ function M:TryStartBattle()
   end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
+    DebugPrint("AutoChessBattlePage TryStartBattle: no avatar")
     return
   end
   Avatar:AutoChessCombatStart(function(Ret)
     if 0 ~= Ret then
       self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_IllegalToast"))
+      DebugPrint("AutoChessBattlePage TryStartBattle: server illegal")
     else
       local Params = {}
       
@@ -920,6 +1269,196 @@ function M:TryStartBattle()
   end, SavedSquadInfo)
 end
 
+function M:TryToSaveSquad()
+  if not self.IsShareEditMode then
+    return
+  end
+  self:PlaySound("event:/ui/activity/auto_chess_main_level_btn_click")
+  if self.Btn_Start.Btn_Click:GetForbidden() then
+    self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_NoMonsterToast"))
+    DebugPrint("AutoChessBattlePage TryToSaveSquad: no monster")
+    return
+  end
+  if self.GameMode:TriggerDungeonComponentFun("IsMonsterCreating") then
+    DebugPrint("AutoChessBattlePage TryToSaveSquad: there is monster creating")
+    return
+  end
+  if self.UsedDeployCost > self.TotalDeployCost then
+    self:PlayAnimation(self.Cost_Warning)
+    self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_IllegalToast"))
+    DebugPrint("AutoChessBattlePage TryToSaveSquad: client illegal")
+    return
+  end
+  local SavedSquadInfo = {}
+  for Index, value in pairs(self.Index2CubeInfo) do
+    SavedSquadInfo[Index + 1] = value.CombatChessId
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    DebugPrint("AutoChessBattlePage TryToSaveSquad: no avatar")
+    return
+  end
+  local SquadIdx = Model:GetEditingSuqadIndex() or 1
+  local Buffs = self:BuildSharedBuffData()
+  local Equips = self:BuildSharedEquipData(SavedSquadInfo)
+  local Params = {
+    ShortText = "UI_AutoChess_BattleSaveToast",
+    NoButtonText = "UI_PATCH_CANCEL",
+    YesButtonText = "UI_PATCH_ENSURE"
+  }
+  
+  function Params.RightCallbackFunction()
+    self.bNoFocus = false
+    Avatar:AutoChessSetSharedSquad(function(Ret)
+      if not ErrorCode:Check(Ret) then
+        return
+      end
+      self.UIManager:ShowUITip("CommonToastMain", GText("UI_AutoChess_SaveLineup"))
+      self.SharedSquadEquips = Equips
+    end, SquadIdx, SavedSquadInfo, Buffs, Equips)
+  end
+  
+  function Params.LeftCallbackFunction()
+    self.bNoFocus = false
+  end
+  
+  self.bNoFocus = true
+  self.UIManager:ShowCommonPopupUI(100407, Params, self)
+end
+
+function M:SaveBattleLineupSnapshot()
+  local AllyLineup = {}
+  for CubeIndex, Info in pairs(self.Index2CubeInfo or {}) do
+    if Info and Info.CombatChessId then
+      AllyLineup[CubeIndex] = {
+        CombatChessId = Info.CombatChessId,
+        EquipList = Info.EquipList
+      }
+    end
+  end
+  local EnemyLineup = {}
+  for CubeIndex, Info in pairs(self.Index2EnemyCubeInfo or {}) do
+    if Info and Info.CombatChessId then
+      EnemyLineup[CubeIndex] = {
+        CombatChessId = Info.CombatChessId,
+        EquipList = Info.EquipList
+      }
+    end
+  end
+  return AllyLineup, EnemyLineup
+end
+
+function M:ReturnToDeployPhase()
+  if self.bDeploying then
+    return
+  end
+  self.bReturningToDeploy = true
+  local AllyLineup, EnemyLineup = self:SaveBattleLineupSnapshot()
+  
+  local function UnbindMonsterDeadDelegate(IndexTable)
+    if not IndexTable then
+      return
+    end
+    for _, Info in pairs(IndexTable) do
+      if Info and Info.Eid then
+        local Monster = Battle(self):GetEntity(Info.Eid)
+        if Monster and Monster.EMActorDestroyDelegates then
+          Monster.EMActorDestroyDelegates:Remove(self, self.OnMonsterDead)
+        end
+      end
+    end
+  end
+  
+  UnbindMonsterDeadDelegate(self.Index2CubeInfo)
+  UnbindMonsterDeadDelegate(self.Index2EnemyCubeInfo)
+  self:RemoveTimer(self.CountDownTimerName)
+  self:ExitPick()
+  self:ExitChessBoard()
+  self:HideChessInfo()
+  self:ShowTips(false)
+  self.SelectChessCardId = nil
+  self.SelectCubeIndex = nil
+  self.SelectChessId = nil
+  self.GamepadCubeIndex = nil
+  self.bGamepadCubeEnemy = nil
+  for CubeIndex = 0, Const.MaxChessNum - 1 do
+    self:MarkDeployChessState(CubeIndex, false)
+    EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, CubeIndex, false)
+    EventManager:FireEvent(EventID.OnAutoChessRemoveMonster, CubeIndex, true)
+  end
+  self:PlayAnimation(self.In)
+  if self.Btn_Start then
+    self.Btn_Start:PlayAnimation(self.Btn_Start.Normal)
+    self.Btn_Start.Panel_Text:SetRenderOpacity(1)
+    self.Btn_Start.Panel_WorldText:SetRenderOpacity(1)
+  end
+  if self.CountDown then
+    self.CountDown:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.Toast_Start then
+    self.Toast_Start:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.Toast_Duel then
+    self.Toast_Duel:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.DuelScreen then
+    self.DuelScreen:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  local IsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile"
+  
+  local function TryReturnToDeploy()
+    local Cost = 0
+    local ChessCount = 0
+    for CubeIndex, Info in pairs(AllyLineup) do
+      Cost = Cost + self:GetChessCost(Info.CombatChessId)
+      ChessCount = ChessCount + 1
+      EventManager:FireEvent(EventID.OnAutoChessCreateMonster, Info.CombatChessId, CubeIndex, false, Info.EquipList)
+      self:MarkDeployChessState(CubeIndex, true)
+    end
+    for CubeIndex, Info in pairs(EnemyLineup) do
+      EventManager:FireEvent(EventID.OnAutoChessCreateMonster, Info.CombatChessId, CubeIndex, true, Info.EquipList)
+    end
+    self:UpdateDeployCost(true, Cost, ChessCount)
+    if self.AutoChessFormation then
+      self.Index2CubeInfo = self.AutoChessFormation:GetCurrentChessMonsterInfo(false)
+      self.Index2EnemyCubeInfo = self.AutoChessFormation:GetCurrentChessMonsterInfo(true)
+    end
+    self.GameMode:TriggerDungeonComponentFun("EnableCubeInteraction")
+    if IsMobile then
+      self:BlockAllUIInput(false)
+    end
+  end
+  
+  self.bHadStartedBattle = false
+  self.bDeploying = true
+  if self.GameInstance then
+    self.GameInstance.bAutoChessDeploying = true
+  end
+  self.GameMode:TriggerDungeonComponentFun("ResetDeployCamera")
+  if IsMobile then
+    self:BlockAllUIInput(true)
+    self:AddTimer(1.0, TryReturnToDeploy, false, 0, "AutoChess_DelayTryReturnToDeploy", false)
+  else
+    TryReturnToDeploy()
+  end
+  if self.Btn_EditBuff then
+    self.Btn_EditBuff:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+  if self.Btn_EditWeather then
+    self.Btn_EditWeather:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+  if self.BattleStatisticsTips and self.BattleStatisticsTips.ResetBattleStatistics then
+    self.BattleStatisticsTips:ResetBattleStatistics()
+  end
+  self:SetInputModeCustom(true)
+  self:SetFocusState(Const.GamepadFocusState.Focus1)
+  EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.InitEffect)
+  self:AddTimer(5, function()
+    self.bReturningToDeploy = false
+  end, false, 0, "WBP_AutoChessBattlePage_ClearReturningToDeploy", true)
+  self:RemoveExitGamepadKey(false)
+end
+
 function M:RealStartBattle()
   self.bHadStartedBattle = true
   self.Btn_Start:PlayAnimation(self.Btn_Start.Click)
@@ -928,6 +1467,13 @@ function M:RealStartBattle()
   self.CameraPawn:SwitchInputState(true)
   self:ExitPick()
   self:PlayAnimation(self.StartOut)
+  if self.Btn_EditBuff then
+    self.Btn_EditBuff:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  if self.Btn_EditWeather then
+    self.Btn_EditWeather:SetVisibility(ESlateVisibility.Collapsed)
+  end
+  self:RemoveExitGamepadKey(true)
   self:SetInputModeCustom(false)
   self.GameMode:TriggerDungeonComponentFun("DisableCubeInteraction")
   self:ActivateMonsters(self.Index2CubeInfo)
@@ -982,16 +1528,9 @@ end
 function M:InitButtonGamepadView()
   self.Btn_Exit.Key_Controller:CreateCommonKey({
     KeyInfoList = {
-      {Type = "Img", ImgShortPath = "Menu"}
+      {Type = "Img", ImgShortPath = "B"}
     }
   })
-  if self.Buff and self.Buff.Key_CheckBuff then
-    self.Buff.Key_CheckBuff:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = "View"}
-      }
-    })
-  end
   if self.Btn_Start and self.Btn_Start.Key_Controller then
     self.Btn_Start.Key_Controller:CreateCommonKey({
       KeyInfoList = {
@@ -1013,8 +1552,8 @@ function M:InitButtonGamepadView()
       }
     })
   end
-  if self.Btn_Delete and self.Btn_Delete.Key_GamePad then
-    self.Btn_Delete.Key_GamePad:CreateCommonKey({
+  if self.Btn_Delete2 and self.Btn_Delete2.Key_GamePad then
+    self.Btn_Delete2.Key_GamePad:CreateCommonKey({
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "RS"}
       }
@@ -1024,6 +1563,13 @@ function M:InitButtonGamepadView()
     self.Key_MonsterInfo:CreateCommonKey({
       KeyInfoList = {
         {Type = "Img", ImgShortPath = "RV"}
+      }
+    })
+  end
+  if self.WBP_Com_KeyImg_193 then
+    self.WBP_Com_KeyImg_193:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Img", ImgShortPath = "Y"}
       }
     })
   end
@@ -1068,41 +1614,16 @@ function M:InitButtonGamepadView()
   if self.WBox_Key then
     local WrapBox = self.WBox_Key
     WrapBox:ClearChildren()
-    local Key1 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyText.WBP_Com_KeyText", false)
-    WrapBox:AddChild(Key1)
-    Key1:CreateCommonKey({
+    local Key_Conbine = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyTextDesc.WBP_Com_KeyTextDesc", false)
+    WrapBox:AddChild(Key_Conbine)
+    Key_Conbine:CreateCommonKey({
       KeyInfoList = {
-        {Type = "Text", Text = "W"}
-      }
-    })
-    local Key2 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyOr.WBP_Com_KeyOr", false)
-    WrapBox:AddChild(Key2)
-    local Key3 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyTextDesc.WBP_Com_KeyTextDesc", false)
-    WrapBox:AddChild(Key3)
-    Key3:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Text", Text = "S"}
-      },
-      bLongPress = false,
-      Desc = GText("UI_CTL_MoveTB")
-    })
-    local Key4 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyText.WBP_Com_KeyText", false)
-    WrapBox:AddChild(Key4)
-    Key4:CreateCommonKey({
-      KeyInfoList = {
-        {Type = "Text", Text = "A"}
-      }
-    })
-    local Key5 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyOr.WBP_Com_KeyOr", false)
-    WrapBox:AddChild(Key5)
-    local Key6 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyTextDesc.WBP_Com_KeyTextDesc", false)
-    WrapBox:AddChild(Key6)
-    Key6:CreateCommonKey({
-      KeyInfoList = {
+        {Type = "Text", Text = "W"},
+        {Type = "Text", Text = "A"},
+        {Type = "Text", Text = "S"},
         {Type = "Text", Text = "D"}
       },
-      bLongPress = false,
-      Desc = GText("UI_CTL_MoveLR")
+      Desc = GText("UI_CTL_Move")
     })
     local Key7 = self.UIManager:CreateWidget("/Game/UI/WBP/Common/Key/WBP_Com_KeyTextDesc.WBP_Com_KeyTextDesc", false)
     WrapBox:AddChild(Key7)
@@ -1192,13 +1713,14 @@ function M:SetFocusState(NewFocusState)
   if self.WBox_Controller_Chess then
     if bIsGamepad then
       if NewFocusState == Const.GamepadFocusState.Focus1 then
-        self:AddTimer(0.001, function()
+        self:AddTimer(0.1, function()
           self:RecoverListFocus()
         end, false, 0, "WBP_AutoChessBattlePage_SetFocus1", true)
         self.Key_Chess_Edit:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_Chess_Move:SetVisibility(ESlateVisibility.Collapsed)
         self.Key_Chess_Back:SetVisibility(ESlateVisibility.Collapsed)
         self.Key_Chess_Confirm:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.State.Ws_Key:SetVisibility(ESlateVisibility.HitTestInvisible)
         EventManager:FireEvent(EventID.OnAutoChessCubeChangeState, Const.CubeState.Xuanzhong)
       elseif NewFocusState == Const.GamepadFocusState.Focus2 then
         self:AddTimer(0.1, self.SetFocus, false, 0, "WBP_AutoChessBattlePage_SetFocus2", true)
@@ -1207,6 +1729,7 @@ function M:SetFocusState(NewFocusState)
         self.Key_Chess_Move:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_Chess_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_Chess_Confirm:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.State.Ws_Key:SetVisibility(ESlateVisibility.Collapsed)
       elseif NewFocusState == Const.GamepadFocusState.Focus3 then
         self:AddTimer(0.1, self.SetFocus, false, 0, "WBP_AutoChessBattlePage_SetFocus3", true)
         self:GamepadLocateSelfFirstEmpty()
@@ -1214,6 +1737,7 @@ function M:SetFocusState(NewFocusState)
         self.Key_Chess_Move:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_Chess_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         self.Key_Chess_Confirm:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.State.Ws_Key:SetVisibility(ESlateVisibility.Collapsed)
       end
     else
       self.Key_Chess_Edit:SetVisibility(ESlateVisibility.Collapsed)
@@ -1226,11 +1750,26 @@ function M:SetFocusState(NewFocusState)
   self:SetGamepadOnlyUIVisibilityDueToFocusState(bIsGamepad)
 end
 
-function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  if self.Btn_Explanation then
-    local PressKey = self.Btn_Explanation.Com_KeyImg
-    PressKey:OnButtonReleased()
+function M:OnMatchStatusClosed()
+  if not self.bDeploying then
+    return
   end
+  self.bNoFocus = false
+  self:SetInputModeCustom(true)
+  self:SetFocus()
+  if not IsValid(self.GameInputModeSubsystem) then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+    self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
+  end
+  if IsValid(self.GameInputModeSubsystem) then
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  else
+    self:SetFocusState(self.FocusState or Const.GamepadFocusState.Focus1)
+  end
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  self:CancelSpecialRightPress()
   self:SetFocusState(self.FocusState)
   return UIUtils.Handled
 end
@@ -1243,8 +1782,8 @@ function M:CountGamepadOnlyUI()
   if self.Btn_Exit and self.Btn_Exit.Key_Controller then
     table.insert(self.GamepadOnly_UI, self.Btn_Exit.Key_Controller)
   end
-  if self.Btn_Delete and self.Btn_Delete.Key_GamePad then
-    table.insert(self.GamepadOnly_UI, self.Btn_Delete.Key_GamePad)
+  if self.Btn_Delete2 and self.Btn_Delete2.Key_GamePad then
+    table.insert(self.GamepadOnly_UI, self.Btn_Delete2.Key_GamePad)
   end
 end
 
@@ -1268,13 +1807,6 @@ function M:SetGamepadOnlyUIVisibilityDueToFocusState(bIsGamepad)
   if self.Btn_Reset and self.Btn_Reset.Key_Controller then
     self.Btn_Reset.Key_Controller:SetVisibility(Visibility)
   end
-  if self.Buff and self.Buff.WS_Controller then
-    if not bIsGamepad then
-      self.Buff.WS_Controller:SetVisibility(ESlateVisibility.Visible)
-    else
-      self.Buff.WS_Controller:SetVisibility(Visibility)
-    end
-  end
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
@@ -1282,7 +1814,8 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     self.BattleStatisticsTips:RefreshUIInfoOnUpdateDevice()
   end
   local TopUI = UIManager(self):GetLastestAndFocusableUIWidgetObj()
-  if self == TopUI then
+  local bWeatherTipsOpen = self.Btn_EditWeather and self.Btn_EditWeather.IsTipsOpen and self.Btn_EditWeather:IsTipsOpen()
+  if self == TopUI and not bWeatherTipsOpen then
     self:SetFocusState(self.FocusState)
   end
   if self.bDeploying then
@@ -1290,9 +1823,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   end
   if CurInputDevice == ECommonInputType.Gamepad then
     self:SetGamepadOnlyUIVisibility(true)
-    if self.Buff and self.Buff.WS_Controller then
-      self.Buff.WS_Controller:SetActiveWidgetIndex(1)
-    end
     if self.Btn_Explanation and self.Btn_Explanation.WidgetSwitcher_0 then
       self.Btn_Explanation.WidgetSwitcher_0:SetActiveWidgetIndex(1)
     end
@@ -1301,10 +1831,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     end
   else
     self:SetGamepadOnlyUIVisibility(false)
-    if self.Buff and self.Buff.WS_Controller then
-      self.Buff.WS_Controller:SetVisibility(ESlateVisibility.Visible)
-      self.Buff.WS_Controller:SetActiveWidgetIndex(0)
-    end
     if self.Btn_Explanation and self.Btn_Explanation.WidgetSwitcher_0 then
       self.Btn_Explanation.WidgetSwitcher_0:SetActiveWidgetIndex(0)
     end
@@ -1316,6 +1842,16 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     if self.WS_Battle_Controller then
       self.WS_Battle_Controller:SetActiveWidgetIndex(0)
     end
+    if self.WBP_Com_KeyImg_193 then
+      self.WBP_Com_KeyImg_193:SetVisibility(ESlateVisibility.Collapsed)
+    end
+  end
+  self.State:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  if self.Btn_EditBuff and self.Btn_EditBuff.RefreshOpInfoByInputDevice then
+    self.Btn_EditBuff:RefreshOpInfoByInputDevice(CurInputDevice)
+  end
+  if self.Btn_EditWeather and self.Btn_EditWeather.RefreshOpInfoByInputDevice then
+    self.Btn_EditWeather:RefreshOpInfoByInputDevice(CurInputDevice)
   end
 end
 
@@ -1327,10 +1863,11 @@ function M:SetText()
     self.Btn_Preset.Text_Name:SetText(GText("UI_AutoChess_Preset"))
   end
   if self.Btn_Start and self.Btn_Start.Text then
-    self.Btn_Start.Text:SetText(GText("UI_AutoChess_Begin"))
-  end
-  if self.Buff and self.Buff.Text_Buff then
-    self.Buff.Text_Buff:SetText(GText("UI_AutoChess_CurrentBuff"))
+    if self.IsShareEditMode then
+      self.Btn_Start.Text:SetText(GText("UI_AutoChess_SaveButton"))
+    else
+      self.Btn_Start.Text:SetText(GText("UI_AutoChess_Begin"))
+    end
   end
   if self.Toast_Start and self.Toast_Start.Text_Start then
     self.Toast_Start.Text_Start:SetText(GText("UI_AutoChess_FightTips"))
@@ -1341,8 +1878,8 @@ function M:SetText()
   if self.CountDown and self.CountDown.Text_Title then
     self.CountDown.Text_Title:SetText(GText("UI_AutoChess_RemainTime"))
   end
-  if self.Btn_Delete and self.Btn_Delete.Text_Button then
-    self.Btn_Delete.Text_Button:SetText(GText("UI_AutoChess_DeleteMonster"))
+  if self.Btn_Delete2 and self.Btn_Delete2.Text_Button then
+    self.Btn_Delete2.Text_Button:SetText(GText("UI_AutoChess_DeleteMonster"))
   end
   if self.Btn_Explanation and self.Btn_Explanation.Tex_Explanation then
     self.Btn_Explanation.Tex_Explanation:SetText(GText("UI_AutoChess_GuideReplay"))
@@ -1475,6 +2012,9 @@ function M:DeploySelfMonster(CubeIndex)
 end
 
 function M:OnMonsterDead(Unit)
+  if self.bReturningToDeploy then
+    return
+  end
   EventManager:FireEvent(EventID.OnCheckIsGameOver, Unit)
 end
 
@@ -1569,32 +2109,74 @@ function M:GamepadLocateSelfFirstEmpty()
 end
 
 function M:AdjustScrollable()
-  local ContentHeight = self.List_EquipmentEffect:GetDesiredSize().Y
-  local VisibleHeight = USlateBlueprintLibrary.GetLocalSize(self.List_EquipmentEffect:GetTickSpaceGeometry()).Y
-  self.LastVisibleHeight = self.LastVisibleHeight or VisibleHeight
-  if 0 == VisibleHeight then
-    self:AddTimer(0.001, self.AdjustScrollable, false, 0, "WBP_AutoChessBattlePage_AdjustScrollable", true)
-    return
-  elseif math.abs(VisibleHeight - self.LastVisibleHeight) > 0.001 then
-    self.LastVisibleHeight = VisibleHeight
-    self:AddTimer(0.001, self.AdjustScrollable, false, 0, "WBP_AutoChessBattlePage_AdjustScrollable", true)
+  if not self.MonsterInfoDetails2 then
     return
   end
-  if ContentHeight - VisibleHeight > 0.001 then
-    self.List_EquipmentEffect:DisableScroll(false)
-    if self.Key_MonsterInfo and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
-      self.Key_MonsterInfo:SetVisibility(ESlateVisibility.Visible)
+  local bNeedScroll = self.MonsterInfoDetails2:AdjustScrollable()
+  if nil == bNeedScroll then
+    return
+  end
+  if bNeedScroll then
+    if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and self.Key_MonsterInfo_1 then
+      self.Key_MonsterInfo_1:SetVisibility(ESlateVisibility.Visible)
     end
-  else
-    if self.Key_MonsterInfo then
-      self.Key_MonsterInfo:SetVisibility(ESlateVisibility.Collapsed)
-    end
-    self.List_EquipmentEffect:DisableScroll(true)
+  elseif self.Key_MonsterInfo_1 then
+    self.Key_MonsterInfo_1:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
 function M:PlaySound(SoundEvent)
   AudioManager(self):PlayUISound(self, SoundEvent, nil, nil)
+end
+
+function M:BuildSharedBuffData()
+  if not self.GameMode then
+    return {}
+  end
+  return self.GameMode:TriggerDungeonComponentFun("GetActiveChallengeBuffIdList") or {}
+end
+
+function M:BuildSharedEquipData(Squad)
+  local Equips = {}
+  for _, CombatChessId in pairs(Squad) do
+    local EquipList
+    for _, Info in pairs(self.Index2CubeInfo or {}) do
+      if Info and Info.CombatChessId == CombatChessId then
+        EquipList = Info.EquipList
+        break
+      end
+    end
+    Equips[CombatChessId] = EquipList or Model:GetMonsterEquipInfo(CombatChessId) or {}
+  end
+  return Equips
+end
+
+function M:BackToInnerConfirmPage()
+  self.bNoFocus = false
+  self:SetInputModeCustom(false)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    Avatar:ExitBattle(false, true)
+  end
+end
+
+function M:RemoveExitGamepadKey(IsRemoveKey)
+  if self.GamepadOnly_UI and self.Btn_Exit and self.Btn_Exit.Key_Controller then
+    local KeyController = self.Btn_Exit.Key_Controller
+    if IsRemoveKey then
+      CommonUtils.RemoveValue(self.GamepadOnly_UI, KeyController)
+    elseif not CommonUtils.HasValue(self.GamepadOnly_UI, KeyController) then
+      table.insert(self.GamepadOnly_UI, KeyController)
+    end
+  end
+  if not IsValid(self.GameInputModeSubsystem) then
+    return
+  end
+  local DeviceType = self.GameInputModeSubsystem:GetCurrentInputType()
+  if DeviceType ~= ECommonInputType.Gamepad then
+    return
+  end
+  self.Btn_Exit.Key_Controller:SetVisibility(IsRemoveKey and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
 end
 
 return M

@@ -196,6 +196,12 @@ return ReadOnly("QuestRoleInfo", {
     QuestRoleId = 2101,
     RangedWeaponRuleId = 7020303
   },
+  [2102] = {
+    CharTemplateRuleId = 702102,
+    MeleeWeaponRuleId = 7010201,
+    QuestRoleId = 2102,
+    RangedWeaponRuleId = 7020207
+  },
   [2401] = {
     CharTemplateRuleId = 702401,
     MeleeWeaponRuleId = 7010502,
@@ -273,6 +279,12 @@ return ReadOnly("QuestRoleInfo", {
     MeleeWeaponRuleId = 701020101,
     QuestRoleId = 210102,
     RangedWeaponRuleId = 7020201
+  },
+  [210201] = {
+    CharTemplateRuleId = 70210201,
+    MeleeWeaponRuleId = 7010201,
+    QuestRoleId = 210201,
+    RangedWeaponRuleId = 702020701
   },
   [240101] = {
     CharTemplateRuleId = 70240101,

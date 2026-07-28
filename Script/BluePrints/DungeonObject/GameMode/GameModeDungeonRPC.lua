@@ -20,10 +20,11 @@ function GameModeDungeonRPC:NotifyGameModeDungeonEvent(...)
 end
 
 function GameModeDungeonRPC:NotifyClientDungeonEvent(...)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar and Avatar.ClientDungeonObject then
-    Avatar.ClientDungeonObject:OnNotifyClientDungeonEvent(...)
-  end
+  self.CProperty:MulticastGameModeDungeonEvent(...)
+end
+
+function GameModeDungeonRPC:NotifySingleClientDungeonEvent(AvatarEidStr, ...)
+  self.CProperty:UnicastGameModeDungeonEvent(AvatarEidStr, ...)
 end
 
 DungeonClass.AssembleComponents(GameModeDungeonRPC)

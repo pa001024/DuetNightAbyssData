@@ -272,7 +272,8 @@ function M:OnDownloadButtonClicked()
     if not StartFunc then
       return
     end
-    local bHasWifi = UHotUpdateFunctionLibrary.HasActiveWiFiConnection()
+    local NetworkMonitorSubsystem = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UNetworkMonitorSubsystem)
+    local bHasWifi = NetworkMonitorSubsystem and NetworkMonitorSubsystem:GetCachedWiFiConnectionState() or false
     local bAllowMobile = IsAllowMobileDownload()
     if not bHasWifi and not bAllowMobile then
       local Params = {

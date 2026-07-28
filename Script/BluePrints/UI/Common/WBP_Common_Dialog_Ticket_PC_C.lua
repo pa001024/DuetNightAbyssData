@@ -33,17 +33,10 @@ function M:InitContent(Params, PopupData, Owner)
   self.bIsInTempScene = GWorld.GameInstance:IsInTempScene()
   if self.bIsInTeam then
     self:BindDialogEvent("OnRightBtnClicked", self.OnRightBtnClicked)
-    self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.CountdownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
-    self:StartSelectCountDown()
   elseif self.bIsInMultiDungeon and not self.bIsInTempScene then
     self:BindDialogEvent("OnRightBtnClicked", self.OnRightBtnClicked)
-    self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.CountdownSeconds = DataMgr.GlobalConstant.TicketSelectTime.ConstantValue
-    self:StartSelectCountDownInDungeon()
-  else
-    self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
+  self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
 end
 
 function M:OnRightBtnClicked()
@@ -128,47 +121,6 @@ function M:PackageData()
     TicketId = self.TicketId,
     DungeonId = self.DungeonId
   }
-end
-
-function M:StartSelectCountDown()
-  local EndTime = TimeUtils.NowTime() + self.CountdownSeconds
-  self:AddTimer(0.1, function()
-    local RemainSeconds = math.max(0, math.floor(EndTime - TimeUtils.NowTime()))
-    self.Text_CountDown:SetText(tostring(RemainSeconds))
-    if RemainSeconds <= 0 then
-      local Avatar = GWorld:GetAvatar()
-      if not Avatar then
-        return
-      end
-      self.Owner:OnClose()
-      self:RemoveTimer("TicketSelectCountDown")
-    end
-  end, true, 0, "TicketSelectCountDown")
-end
-
-function M:StartSelectCountDownInDungeon()
-  local GameState = UGameplayStatics.GetGameState(self)
-  local Info = GameState.ClientTimerStruct:GetTimerInfo("SelectTicket")
-  local NowTime = GameState.ReplicatedRealTimeSeconds
-  self:AddTimer(0.1, function()
-    local CurrentCountDown, CountDownPercent = self:GetRemainDungeonSelectTicketTime()
-    local IntCountDown = math.ceil(CurrentCountDown)
-    IntCountDown = math.max(IntCountDown, 0)
-    self.Text_CountDown:SetText(tostring(IntCountDown))
-    if CurrentCountDown < 1 then
-      EventManager:FireEvent(EventID.OnSelectTicketTimeout, self.TicketId)
-      self.Owner:OnClose()
-      self:RemoveTimer("TicketSelectCountDown")
-    end
-  end, true, 0, "TicketSelectCountDown")
-end
-
-function M:GetRemainDungeonSelectTicketTime()
-  local GameState = UGameplayStatics.GetGameState(self)
-  local Info = GameState.ClientTimerStruct:GetTimerInfo("SelectTicket")
-  local RemainVoteTime = Info.Time - (GameState.ReplicatedRealTimeSeconds - Info.RealTimeSeconds)
-  local RemainPercent = (GameState.ReplicatedRealTimeSeconds - Info.RealTimeSeconds) / Info.Time
-  return RemainVoteTime, RemainPercent
 end
 
 function M:OnTeamMatchCancel()

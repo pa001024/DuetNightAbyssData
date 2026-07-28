@@ -382,4 +382,13 @@ function Component:GM_PrintActorSCLoc(Args)
   end, true)
 end
 
+function Component:GM_RougeProCmd(Args)
+  if not Args or #Args < 2 then
+    return
+  end
+  local AvatarEid, Cmd = table.unpack(Args)
+  local GameMode = UE.UGameplayStatics.GetGameMode(self)
+  GameMode:NotifyServerDungeonEvent("RougeProCmd", AvatarEid, Cmd, select(3, table.unpack(Args)))
+end
+
 return Component

@@ -2,5 +2,6 @@ return {
   StaticCreator = {},
   ManualItem = {},
   Explore = {},
-  RandomRule = {}
+  RandomRule = {},
+  MissionGroup = {}
 }

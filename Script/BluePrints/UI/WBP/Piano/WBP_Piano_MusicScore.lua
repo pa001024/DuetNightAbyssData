@@ -1,13 +1,16 @@
 require("UnLua")
 require("DataMgr")
-local WBP_Piano_MusicScore = Class("BluePrints.UI.BP_UIState_C")
+local WBP_Piano_MusicScore = Class({
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
+})
 
 function WBP_Piano_MusicScore:Destruct()
   self.Btn_Album.OnClicked:Remove(self, self.OnBtnClicked)
   self.Btn_Album.OnHovered:Remove(self, self.OnBtnHovered)
   self.Btn_Album.OnUnHovered:Remove(self, self.OnBtnUnHovered)
   self:UnBindInputMethodChangedDelegate()
-  WBP_Piano_MusicScore.Super.Destruct(self)
+  self:ClearScriptRegister()
 end
 
 function WBP_Piano_MusicScore:OnListItemObjectSet(ListItemObject)
@@ -33,7 +36,7 @@ function WBP_Piano_MusicScore:OnListItemObjectSet(ListItemObject)
   self:AddDispatcher(EventID.ChangeMusicItemNewState, self, self.OnMusicItemNewStateChange)
   self:BindInputMethodChangedDelegate()
   self.bIsOnListItemSet = true
-  if self.MusicScoreId == DataMgr.Music[self.ParentUI.CurrentHomeBaseBGM].MusicScoreId then
+  if not ListItemObject.bIsDungeonAlbum and self.MusicScoreId == DataMgr.Music[self.ParentUI.CurrentHomeBaseBGM].MusicScoreId then
     if self.ParentUI.IsFirstOpen then
       self:OnBtnHovered()
       self:OnBtnClicked()
@@ -48,6 +51,9 @@ function WBP_Piano_MusicScore:OnListItemObjectSet(ListItemObject)
 end
 
 function WBP_Piano_MusicScore:OnMusicItemNewStateChange(MusicId)
+  if self.DataObject and self.DataObject.bIsDungeonAlbum then
+    return
+  end
   if DataMgr.Music[MusicId].MusicScoreId == self.MusicScoreId then
     self.ReddotNum = self.ReddotNum - 1
     if self.ReddotNum <= 0 then
@@ -58,8 +64,14 @@ end
 
 function WBP_Piano_MusicScore:InitUI()
   self.WidgetSwitcher_State:SetActiveWidgetIndex(0)
-  local MusicScoreInfo = DataMgr.MusicScore[self.MusicScoreId]
-  self.Img_Album:SetBrushFromTexture(LoadObject(MusicScoreInfo.MusicScorePic))
+  local MusicScorePic = self.DataObject and self.DataObject.MusicScorePic
+  if not MusicScorePic then
+    local MusicScoreInfo = DataMgr.MusicScore[self.MusicScoreId]
+    MusicScorePic = MusicScoreInfo and MusicScoreInfo.MusicScorePic
+  end
+  if MusicScorePic and self.Img_Album then
+    self.Img_Album:SetBrushFromTexture(LoadObject(MusicScorePic))
+  end
   self.Icon_Music:SetVisibility(UIConst.VisibilityOp.Collapsed)
   if self.IsLocked then
     self:StopAllAnimations()
@@ -94,7 +106,6 @@ function WBP_Piano_MusicScore:OnBtnClicked()
 end
 
 function WBP_Piano_MusicScore:OnBtnHovered()
-  self.ParentUI:UpdateMusicScoreTextShow(self.ListViewIndex)
   if self.IsLocked or not self.bCanPlayAnimation then
     return
   end
@@ -140,6 +151,9 @@ function WBP_Piano_MusicScore:Deselected()
 end
 
 function WBP_Piano_MusicScore:OnStoredCustomBGMChanged(NewMusicId)
+  if self.DataObject and self.DataObject.bIsDungeonAlbum then
+    return
+  end
   local NewMusicScoreId = DataMgr.Music[NewMusicId].MusicScoreId
   if NewMusicScoreId == self.MusicScoreId then
     self:IsStoredBGMMusicScore()

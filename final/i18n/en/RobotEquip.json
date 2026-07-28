@@ -47,7 +47,7 @@
     "cost": 4,
     "buffId": 4020105,
     "extraBuffDesc": "Basic Rune",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "def": 0.45,
     "hp": 0.3
   },
@@ -59,7 +59,7 @@
     "cost": 4,
     "buffId": 4020106,
     "extraBuffDesc": "Basic Rune",
-    "unlockQuestId": 10300103,
+    "unlockQuestId": 10300127,
     "atk": 0.3,
     "def": 0.45
   },
@@ -71,7 +71,7 @@
     "cost": 4,
     "buffId": 4020107,
     "extraBuffDesc": "Basic Rune",
-    "unlockQuestId": 10300102,
+    "unlockQuestId": 10300126,
     "atk": 0.3,
     "hp": 0.3
   },
@@ -83,7 +83,7 @@
     "cost": 4,
     "buffId": 4020108,
     "extraBuffDesc": "Basic Rune",
-    "unlockQuestId": 10300117,
+    "unlockQuestId": 10300142,
     "hp": 0.65,
     "shield": 0.6
   },
@@ -95,7 +95,7 @@
     "cost": 4,
     "buffId": 4020109,
     "extraBuffDesc": "Basic Rune",
-    "unlockQuestId": 10300101,
+    "unlockQuestId": 10300125,
     "atk": 0.3,
     "shield": 0.4
   },
@@ -106,9 +106,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020501,
-    "extraBuffDesc": "Buff Effect: When dealing damage, reduces the target's DEF by 45.0% for 10s.",
+    "extraBuffDesc": "Buff Effect: Dealing damage reduces the target's DEF by 45.0% for 10s.",
     "extraBuffId": 4020201,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.3
   },
   {
@@ -118,9 +118,9 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020502,
-    "extraBuffDesc": "Buff Effect: When dealing damage, reduces the target's DEF by 20.0% for 10s, stacking up to 3.0 times.",
+    "extraBuffDesc": "Buff Effect: Dealing damage reduces the target's DEF by 20.0% for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020202,
-    "unlockQuestId": 10300105,
+    "unlockQuestId": 10300129,
     "atk": 0.45
   },
   {
@@ -130,9 +130,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020503,
-    "extraBuffDesc": "Buff Effect: When taking damage, gains +25.0% DEF for 10s, stacking up to 3.0 times.",
+    "extraBuffDesc": "Buff Effect: Taking damage grants self +25.0% DEF for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020203,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "hp": 0.9
   },
   {
@@ -142,9 +142,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020504,
-    "extraBuffDesc": "Buff Effect: When taking damage, gains +25.0% ATK for 10s, stacking up to 3.0 times.",
+    "extraBuffDesc": "Buff Effect: Taking damage grants self +25.0% ATK for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020204,
-    "unlockQuestId": 10300106,
+    "unlockQuestId": 10300130,
     "shield": 0.9
   },
   {
@@ -154,9 +154,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020505,
-    "extraBuffDesc": "Buff Effect: When healing an ally, increases the ally's DEF by 45.0% for 10s.",
+    "extraBuffDesc": "Buff Effect: Healing a target increases their DEF by 45.0% for 10s.",
     "extraBuffId": 4020205,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -166,9 +166,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020506,
-    "extraBuffDesc": "Buff Effect: When healing an ally, gains +35.0% ATK for 10s.",
+    "extraBuffDesc": "Buff Effect: Healing a target increases their ATK by 35.0% for 10s.",
     "extraBuffId": 4020206,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -178,9 +178,9 @@
     "rarity": 4,
     "cost": 8,
     "buffId": 4020507,
-    "extraBuffDesc": "Buff Effect: When healing an ally,  gains +45.0% ATK for 10s.",
+    "extraBuffDesc": "Buff Effect: Healing a target grants self +45.0% ATK for 10s.",
     "extraBuffId": 4020207,
-    "unlockQuestId": 10300118,
+    "unlockQuestId": 10300143,
     "atk": 0.45
   },
   {
@@ -190,9 +190,9 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020508,
-    "extraBuffDesc": "Buff Effect: When taking damage, gains +20.0% ATK and +20.0% DEF for 10s, stacking up to 3.0 times.",
+    "extraBuffDesc": "Buff Effect: Taking damage grants self +20.0% ATK and +20.0% DEF for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020208,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "def": 0.3
   },
   {
@@ -202,9 +202,9 @@
     "rarity": 4,
     "cost": 12,
     "buffId": 4020509,
-    "extraBuffDesc": "Buff Effect: When dealing damage, gains +20.0% ATK and +20.0% DEF for 10s, stacking up to 3.0 times.",
+    "extraBuffDesc": "Buff Effect: Dealing damage grants self +20.0% ATK and +20.0% DEF for 10s, stacking up to 3.0 times.",
     "extraBuffId": 4020209,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.2
   },
   {
@@ -214,9 +214,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020510,
-    "extraBuffDesc": "Buff Effect: When HP falls below 25.0%, restores 7.5% Max HP per second for 10s.",
+    "extraBuffDesc": "Buff Effect: When HP falls below 25.0%, restores HP equal to 7.5% of Max HP per second for 10s.",
     "extraBuffId": 4020210,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -226,9 +226,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020511,
-    "extraBuffDesc": "Buff Effect: Gains +15.0% ATK for every 20% HP lost.",
+    "extraBuffDesc": "Buff Effect: Grants self +15.0% ATK for every 20% HP lost.",
     "extraBuffId": 4020211,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -238,9 +238,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020512,
-    "extraBuffDesc": "Buff Effect: Gains +4.0 DEF for every 20% HP lost.",
+    "extraBuffDesc": "Buff Effect: Grants self +4.0 DEF for every 20% HP lost.",
     "extraBuffId": 4020212,
-    "unlockQuestId": 10300120,
+    "unlockQuestId": 10300145,
     "hp": 0.9
   },
   {
@@ -250,9 +250,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020513,
-    "extraBuffDesc": "Buff Effect: When dealing damage to a shielded target, damage dealt is increased by 100.0%.",
+    "extraBuffDesc": "Buff Effect: Increases Damage Dealt by 100.0% against shielded targets.",
     "extraBuffId": 4020213,
-    "unlockQuestId": 10300104,
+    "unlockQuestId": 10300128,
     "atk": 0.55
   },
   {
@@ -262,9 +262,9 @@
     "rarity": 4,
     "cost": 15,
     "buffId": 4020514,
-    "extraBuffDesc": "Buff Effect: When dealing damage to an unshielded target, damage dealt is increased by 100.0%.",
+    "extraBuffDesc": "Buff Effect: Increases Damage Dealt by 100.0% against unshielded targets.",
     "extraBuffId": 4020214,
-    "unlockQuestId": 10300119,
+    "unlockQuestId": 10300144,
     "atk": 0.5
   },
   {
@@ -274,9 +274,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020602,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Blast",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Blast. Trigger an explosion centered on self at intervals, knocking back nearby enemy targets.",
     "extraBuffId": 4020302,
-    "unlockQuestId": 10300111,
+    "unlockQuestId": 10300135,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -289,9 +289,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020603,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Corrosion",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Corrosion. Spawn a pool of [Venom] beneath self at intervals, reducing the DEF of enemy targets within it and dealing damage over time.",
     "extraBuffId": 4020303,
-    "unlockQuestId": 10300113,
+    "unlockQuestId": 10300137,
     "atk": 0.5,
     "def": 0.5,
     "hp": 0.5,
@@ -304,9 +304,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020604,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Thunderbolt",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Thunderbolt. Fire [Electric Orbs] outward from self at intervals, releasing chain lightning to deal DMG to enemies within a small area. The orbs disappear after being attacked.",
     "extraBuffId": 4020304,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -319,9 +319,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020605,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Decay",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Decay. Create a [Decaying Swamp] around self at intervals, dealing continuous damage to enemies within the area and restoring HP to allies within it.",
     "extraBuffId": 4020305,
-    "unlockQuestId": 10300109,
+    "unlockQuestId": 10300133,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -334,9 +334,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020606,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Wither",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Wither. Fire [Withering Beam] outward at intervals. The rays rotate continuously for a duration, dealing damage to enemies hit and reducing their Sanity.",
     "extraBuffId": 4020306,
-    "unlockQuestId": 10300122,
+    "unlockQuestId": 10300147,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -349,9 +349,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020608,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Vengeance",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Revenge. When defeated, grant [Empowered] to nearby allies, increasing ATK, DEF, Movement Speed, and ATK Speed for a duration.",
     "extraBuffId": 4020308,
-    "unlockQuestId": 10300112,
+    "unlockQuestId": 10300136,
     "atk": 1.5
   },
   {
@@ -361,9 +361,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020610,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Glimmer",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Glimmer. Apply [Glimmer] to self at intervals. Upon taking damage while the state is active, end the state and trigger an explosion, dealing damage to enemies within range.",
     "extraBuffId": 4020310,
-    "unlockQuestId": 10300114,
+    "unlockQuestId": 10300138,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
@@ -376,9 +376,9 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020611,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Sacrifice",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Sacrifice. When defeated, trigger an explosion, dealing damage to enemies within range.",
     "extraBuffId": 4020311,
-    "unlockQuestId": 10300110,
+    "unlockQuestId": 10300134,
     "atk": 1.5
   },
   {
@@ -388,12 +388,48 @@
     "rarity": 5,
     "cost": 30,
     "buffId": 4020613,
-    "extraBuffDesc": "Buff Effect: Gain Primander Abilitiy – Bloodbath",
+    "extraBuffDesc": "Buff Effect: Grants Primander Ability – Bloodbath. Restore HP when dealing damage.",
     "extraBuffId": 4020313,
-    "unlockQuestId": 10300107,
+    "unlockQuestId": 10300131,
     "atk": 1.0,
     "def": 1.0,
     "hp": 1.0,
     "shield": 1.0
+  },
+  {
+    "id": 37,
+    "name": "Rune: Focus",
+    "icon": "Item03",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020515,
+    "extraBuffDesc": "Buff Effect: Dealing DMG grants self +20.0% ATK Speed, stacking up to 5.0 times. Resets upon switching targets.",
+    "extraBuffId": 4020215,
+    "unlockQuestId": 10300145,
+    "atk": 0.5
+  },
+  {
+    "id": 38,
+    "name": "Rune: Challenge",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020516,
+    "extraBuffDesc": "Buff Effect: Increases Damage Dealt by 25.0% for every 250.0 HP difference between self and the target when dealing damage, stacking up to 4.0 times.",
+    "extraBuffId": 4020216,
+    "unlockQuestId": 10300132,
+    "atk": 0.5
+  },
+  {
+    "id": 39,
+    "name": "Rune: Rescue",
+    "icon": "Item04",
+    "rarity": 4,
+    "cost": 15,
+    "buffId": 4020517,
+    "extraBuffDesc": "Buff Effect: Healing a target grants them continuous healing, restoring 3.5% of Max HP per second for 5.0s.",
+    "extraBuffId": 4020217,
+    "unlockQuestId": 10300131,
+    "atk": 0.5
   }
 ]

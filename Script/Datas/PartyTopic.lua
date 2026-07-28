@@ -467,6 +467,11 @@ return ReadOnly("PartyTopic", {
     PartyTopicReward = 7053,
     PartyTopicTalkId = "Invite/Shuimu_210104.story"
   },
+  [210201] = {
+    PartyTopicConsume = T.RT_5,
+    PartyTopicId = 210201,
+    PartyTopicReward = 7050
+  },
   [230101] = {
     MemoryDescription = "PartyReward_Description_230101",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Zhangyu_1.T_Entertainment_Zhangyu_1'",

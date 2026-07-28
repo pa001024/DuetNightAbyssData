@@ -14,6 +14,7 @@ function WBP_BattlePass_Main_C:Construct()
   BattlePassController:SetModelData("CurTabId", nil)
   BattlePassController:SetModelData("BPRewardTyppe", BattlePassController:GetModelData("BattlePassInfo").BPRewardTyppe)
   BattlePassController:SetModelData("TargetSkinId", nil)
+  BattlePassController:SetModelData("TargetHairId", nil)
   BattlePassController:SetModelData("AccessoryId", nil)
   BattlePassController:SetModelData("WeaponSkinId", nil)
   BattlePassController:SetModelData("WeaponTag", nil)
@@ -65,12 +66,15 @@ end
 function WBP_BattlePass_Main_C:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "SystemOpenSound", nil)
+  local Avatar = BattlePassController:GetAvatar()
+  if Avatar then
+    Avatar:RefreshBattlePassReddot()
+  end
   self:TryDecreaceBattlePassNewVisionReddot()
   self:SetPreviewActor()
   self:PlayInAnim()
   local TargetTabId = (...)
   TargetTabId = TargetTabId or self.DefaultTabId
-  local Avatar = BattlePassController:GetAvatar()
   if Avatar then
     BattlePassController:SetModelData("IsLastVersionPet", Avatar.BattlePassLastVersionHasUnclaimedPet)
   end
@@ -418,14 +422,17 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
   local Avatar = BattlePassController:GetAvatar()
   if Avatar then
     local GetCurrentCharAccessory = false
+    local GetCurrentHair = false
     local CharId = Avatar.Chars[Avatar.CurrentChar].CharId
     local SkinId = Avatar.Chars[Avatar.CurrentChar]:GetAppearance().SkinId
+    local HairId = Avatar.Chars[Avatar.CurrentChar]:GetAppearance().HairId
     if BattlePassController:GetModelData("BPRewardTyppe") == "Skin" then
       local SkinInfo = DataMgr.Skin
       for SkinId, Info in pairs(SkinInfo) do
         if Info.SkinSeries == BattlePassController:GetModelData("BattlePassInfo").PreviewSkinSeries then
           if Info.CharId == CharId then
             GetCurrentCharAccessory = true
+            GetCurrentHair = true
             BattlePassController:SetModelData("TargetSkinId", SkinId)
             break
           elseif not BattlePassController:GetModelData("TargetSkinId") or SkinId < BattlePassController:GetModelData("TargetSkinId") then
@@ -433,24 +440,42 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
           end
         end
       end
+      local TargetSkinId = BattlePassController:GetModelData("TargetSkinId")
+      if TargetSkinId then
+        local Info = SkinInfo[TargetSkinId]
+        if Info.DefaultItem and Info.DefaultItem.Hair then
+          for HairId, _ in pairs(Info.DefaultItem.Hair) do
+            if not BattlePassController:GetModelData("TargetHairId") or HairId > BattlePassController:GetModelData("TargetHairId") then
+              BattlePassController:SetModelData("TargetHairId", HairId)
+            end
+          end
+        end
+        if not BattlePassController:GetModelData("TargetHairId") and GetCurrentHair then
+          BattlePassController:SetModelData("TargetHairId", HairId)
+        end
+      end
       self.BattlePass_Book:InitSkinOrAccessoryInfo()
     elseif BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" then
       GetCurrentCharAccessory = true
       BattlePassController:SetModelData("TargetSkinId", SkinId)
+      BattlePassController:SetModelData("TargetHairId", HairId)
       BattlePassController:SetModelData("WeaponSkinId", BattlePassController:GetModelData("BattlePassInfo").WeaponSkinId)
       self.BattlePass_Book:InitSkinOrAccessoryInfo()
     elseif BattlePassController:GetModelData("BPRewardTyppe") == "Accessory" then
       GetCurrentCharAccessory = true
       BattlePassController:SetModelData("TargetSkinId", SkinId)
+      BattlePassController:SetModelData("TargetHairId", HairId)
       BattlePassController:SetModelData("AccessoryId", BattlePassController:GetModelData("BattlePassInfo").AccessoryId)
       self.BattlePass_Book:InitSkinOrAccessoryInfo()
     else
       GetCurrentCharAccessory = true
       BattlePassController:SetModelData("TargetSkinId", SkinId)
+      BattlePassController:SetModelData("TargetHairId", HairId)
     end
     local Params = {
       Type = "Char",
       SkinId = BattlePassController:GetModelData("TargetSkinId"),
+      HairId = BattlePassController:GetModelData("TargetHairId"),
       EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
       SystemType = "BattlePass",
       ViewUI = self
@@ -473,10 +498,16 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
       if not Params.Accessory then
         Params.Accessory = {}
       end
+      if not Params.AccessoryCustomParams then
+        Params.AccessoryCustomParams = {}
+      end
       local Char = Avatar.Chars[Avatar.CurrentChar]
       local AppearanceSuit = Char:GetAppearance()
       for k, v in pairs(AppearanceSuit.Accessory) do
         Params.Accessory[k] = v
+      end
+      for k, v in pairs(AppearanceSuit.AccessoryCustomParams) do
+        Params.AccessoryCustomParams[k] = v
       end
     end
     if BattlePassController:GetModelData("AccessoryId") then
@@ -484,7 +515,11 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
         Params.Accessory = {}
       end
       self.AccessoryType = DataMgr.CharAccessory[BattlePassController:GetModelData("AccessoryId")].AccessoryType
+      local OldAccessoryId = Params.Accessory[CommonConst.NewCharAccessoryTypes[self.AccessoryType]]
       Params.Accessory[CommonConst.NewCharAccessoryTypes[self.AccessoryType]] = BattlePassController:GetModelData("AccessoryId")
+      if OldAccessoryId and -1 ~= OldAccessoryId and Params.AccessoryCustomParams then
+        Params.AccessoryCustomParams[OldAccessoryId] = nil
+      end
     end
     self.Target = self:CreatePreviewTargetData(Params)
     Params.Target = self.Target

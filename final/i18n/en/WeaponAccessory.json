@@ -162,7 +162,7 @@
   {
     "id": 10021,
     "name": "Cinder",
-    "desc": "Modelled after Cinder, Lunosmith's faithful little helper, this charm burns with boundless spark and spirit — a tiny tribute to the forge flames it helped fan to life.",
+    "desc": "Filled with the boundless inspiration and fervour of Lunosmith, this portable Cinder always reminds you of the vibrant forge flames fanned by it.",
     "icon": "T_Fashion_Weapon12",
     "rarity": 5,
     "unlock": "Available at Lunoeggy's Impression Shop"
@@ -178,7 +178,7 @@
   {
     "id": 10023,
     "name": "Lunoeggy Plush Doll",
-    "desc": "Under the eggshell is still eggshell. Definitely not a Luno. Don't ask again.",
+    "desc": "Under the eggshell is still eggshell, absolutely not luno, never!",
     "icon": "T_Fashion_Weapon27",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -432,6 +432,38 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 10055,
+    "name": "Starlit Crystal: Celeste",
+    "desc": "Snowflakes are messengers from the sky.",
+    "icon": "T_Fashion_Waist34_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10056,
+    "name": "Starlit Crystal: White Sakura",
+    "desc": "Snowflakes are messengers from the sky.",
+    "icon": "T_Fashion_Waist34_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10057,
+    "name": "Starlit Crystal: Opaque White",
+    "desc": "Snowflakes are messengers from the sky.",
+    "icon": "T_Fashion_Waist34_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10058,
+    "name": "Starlit Crystal: Azure",
+    "desc": "Snowflakes are messengers from the sky.",
+    "icon": "T_Fashion_Waist34_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
     "id": 20001,
     "name": "Paint Pop",
     "desc": "Used for Move-Variant Demon Wedge: Savage Cleave.",
@@ -445,6 +477,14 @@
     "desc": "Used for Move-Variant Demon Wedge: Piercing Ascent",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "Available at Shop"
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40001,
+    "name": "Rift Sever",
+    "desc": "Used for Move-Variant Demon Wedge: Dazzling Radiance",
+    "icon": "T_Fashion_Fx38",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
   }
 ]

@@ -778,7 +778,7 @@
       },
       {
         "id": 90200108,
-        "content": "Le mot \"ami\" brille trop fort pour moi. Nous étions plutôt deux poissons échoués, abandonnés sur le lit desséché d’une rivière.",
+        "content": "Le mot « ami » brille trop fort pour moi. Nous étions plutôt deux poissons échoués, abandonnés sur le lit desséché d’une rivière.",
         "voice": "char/Tuosi/vo_topic_01_6",
         "npc": 81103,
         "options": [
@@ -2116,7 +2116,7 @@
       },
       {
         "id": 90040301,
-        "content": "Spéciale ? Oui... depuis que je suis petite, beaucoup m’ont traitée de \"monstre\".",
+        "content": "Spéciale ? Oui... depuis que je suis petite, beaucoup m’ont traitée de « monstre ».",
         "voice": "char/Shuimu/vo_topic_03_1",
         "npc": 82101,
         "next": 90040303
@@ -2257,7 +2257,7 @@
       },
       {
         "id": 90040305,
-        "content": "Dis-moi, quand tu dis \"spéciale\", tu veux dire spécial comme un monstre... ou plutôt spécialement envoûtante ?",
+        "content": "Dis-moi, quand tu dis « spéciale », tu veux dire spécial comme un monstre... ou plutôt spécialement envoûtante ?",
         "voice": "char/Shuimu/vo_topic_03_4",
         "npc": 82101,
         "options": [
@@ -2269,6 +2269,159 @@
           {
             "id": 90040003,
             "content": "<I>À bientôt.</>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 82102,
+    "name": "Ada (?)",
+    "camp": "NPC",
+    "charId": 2102,
+    "type": "Show",
+    "talks": [
+      {
+        "id": 90290001,
+        "content": "Yiou~ Qu’est-ce qu’on fait aujourd’hui ? Tu ne vas pas encore enchaîner des dizaines de missions d’un coup, si ?",
+        "voice": "char/Eve/vo_welcome",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290100,
+            "content": "Qu’est-ce que tu fais dans ce coin ?",
+            "next": 90290101
+          },
+          {
+            "id": 90290200,
+            "content": "Hm ? Qu’est-ce que tu as dans la main ?",
+            "next": 90290201
+          }
+        ]
+      },
+      {
+        "id": 90290101,
+        "content": "Chut... ! J’ai trouvé chez toi un insecte magique que je n’avais jamais vu ! Regarde, il est dans cette fissure !",
+        "voice": "char/Eve/vo_topic_01_1",
+        "npc": 82102,
+        "next": 90290102
+      },
+      {
+        "id": 90290201,
+        "content": "Plein de « pièces d’argent » ! Aujourd’hui, j’ai aidé une jolie dame très bien habillée, et elle m’en a donné une pour me remercier.",
+        "voice": "char/Eve/vo_topic_02_1",
+        "npc": 82102,
+        "next": 90290202
+      },
+      {
+        "id": 90290102,
+        "content": "Il est marron, gros comme un pouce, avec des ailes brillantes, deux antennes et six petites pattes toutes poilues...",
+        "voice": "char/Eve/vo_topic_01_2",
+        "npc": 82102,
+        "next": 90290103
+      },
+      {
+        "id": 90290202,
+        "content": "Elle m’a dit que c’était quelque chose de très utile, alors j’en ai copié tout plein ! La moitié pour toi, la moitié pour moi. Alors ? Je suis gentille, hein~",
+        "voice": "char/Eve/vo_topic_02_2",
+        "npc": 82102,
+        "next": 90290203
+      },
+      {
+        "id": 90290103,
+        "content": "?!",
+        "npc": 100001,
+        "next": 90290104
+      },
+      {
+        "id": 90290203,
+        "content": "Vous résistez de toutes vos forces à la tentation.",
+        "npc": 100001,
+        "next": 90290204
+      },
+      {
+        "id": 90290104,
+        "content": "Tu ne le vois pas bien ? Ce n’est pas grave, je vais te l’attraper pour que tu puisses le regarder de plus près !",
+        "voice": "char/Eve/vo_topic_01_3",
+        "npc": 82102,
+        "next": 90290105
+      },
+      {
+        "id": 90290204,
+        "content": "Yiou ? Qu’est-ce qu’il y a ? Pourquoi tu fais cette tête ? La moitié, ça ne suffit pas ? Je peux t’en donner un peu plus !",
+        "voice": "char/Eve/vo_topic_02_3",
+        "npc": 82102,
+        "next": 90290205
+      },
+      {
+        "id": 90290105,
+        "content": "Non ! C’est de la vermine !",
+        "npc": 100001,
+        "next": 90290106
+      },
+      {
+        "id": 90290205,
+        "content": "Il y a quelque chose qui cloche... Ces pièces sont trop légères.",
+        "npc": 100001,
+        "next": 90290206
+      },
+      {
+        "id": 90290106,
+        "content": "Yiou ? Ah bon ? Moi qui croyais que c’était un insecte rigolo... En fait, tout à l’heure, j’ai aussi vu ton petit chat gris en train de...",
+        "voice": "char/Eve/vo_topic_01_4",
+        "npc": 82102,
+        "next": 90290107
+      },
+      {
+        "id": 90290206,
+        "content": "Qu’est-ce qu’il y a ?",
+        "voice": "char/Eve/vo_topic_02_4",
+        "npc": 82102,
+        "next": 90290207
+      },
+      {
+        "id": 90290107,
+        "content": "N’en dis pas plus...",
+        "npc": 100001,
+        "next": 90290108
+      },
+      {
+        "id": 90290207,
+        "content": "Ce sont clairement des fausses pièces. Il faut vite les détruire, sinon on va se faire arrêter.",
+        "npc": 100001,
+        "next": 90290208
+      },
+      {
+        "id": 90290108,
+        "content": "Yiou... Si tu n’aimes pas ça, alors je ne l’attraperai pas.",
+        "voice": "char/Eve/vo_topic_01_5",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Parlons d’autre chose",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
+            "content": "À plus tard"
+          }
+        ]
+      },
+      {
+        "id": 90290208,
+        "content": "Yiou... On dirait que je ne maîtrise pas encore très bien mon pouvoir de copie. Les choses que je reproduis ont encore des défauts. Il faut que je m’entraîne plus sérieusement.",
+        "voice": "char/Eve/vo_topic_02_5",
+        "npc": 82102,
+        "options": [
+          {
+            "id": 90290002,
+            "content": "Parlons d’autre chose",
+            "next": 90290001
+          },
+          {
+            "id": 90290003,
+            "content": "À plus tard"
           }
         ]
       }
@@ -2364,7 +2517,7 @@
       },
       {
         "id": 90050403,
-        "content": "Alors pourquoi tu t’appelles \"Démon Tabethe, la Main Rouge\" ?",
+        "content": "Alors pourquoi tu t’appelles « Démon Tabethe, la Main Rouge » ?",
         "npc": 100001,
         "next": 90050404
       },
@@ -2390,7 +2543,7 @@
       },
       {
         "id": 90050404,
-        "content": "C’est parce que je veux rendre le mot \"démon\" cool. Maintenant, la simple mention de mon titre \"Démon Tabethe la Main Rouge\" fait frissonner ces voleurs.",
+        "content": "C’est parce que je veux rendre le mot « démon » cool. Maintenant, la simple mention de mon titre « Démon Tabethe la Main Rouge » fait frissonner ces voleurs.",
         "voice": "char/Zhangyu/vo_topic_04_2",
         "npc": 82301,
         "next": 90050405
@@ -2437,7 +2590,7 @@
       },
       {
         "id": 90050405,
-        "content": "Un jour, quand on entendra \"démon\", on pensera juste à moi, la plus cool de toutes ! C’est pas un rêve génial, ça ?",
+        "content": "Un jour, quand on entendra « démon », on pensera juste à moi, la plus cool de toutes ! C’est pas un rêve génial, ça ?",
         "voice": "char/Zhangyu/vo_topic_04_3",
         "npc": 82301,
         "options": [
@@ -2561,7 +2714,7 @@
       },
       {
         "id": 90110104,
-        "content": "À mon époque, la médecine n’était pas centrée sur les remèdes, on pratiquait un art miraculeux appelé \"Zhuyou\" pour chasser la maladie.",
+        "content": "À mon époque, la médecine n’était pas centrée sur les remèdes, on pratiquait un art miraculeux appelé « Zhuyou » pour chasser la maladie.",
         "voice": "char/Baiheng/vo_topic_01_2",
         "npc": 82401,
         "next": 90110105
@@ -2806,7 +2959,7 @@
       },
       {
         "id": 90130404,
-        "content": "J’aimerais bien, mais les clients, eux, s’en fichent. Tous les deux jours, c’est \"Alors, c’est fini ?\", \"Dépêche-toi un peu !\"… Toujours à me harceler. Si j’avais pas une famille à nourrir, je leur aurais déjà collé quelques bastos.",
+        "content": "J’aimerais bien, mais les clients, eux, s’en fichent. Tous les deux jours, c’est « Alors, c’est fini ? », « Dépêche-toi un peu ! »... Toujours à me harceler. Si j’avais pas une famille à nourrir, je leur aurais déjà collé quelques bastos.",
         "voice": "char/Linen/vo_topic_04_2",
         "npc": 83101,
         "options": [
@@ -2922,7 +3075,7 @@
       },
       {
         "id": 90140501,
-        "content": "Hein ? Où… où ça ? D’après son emploi du temps, elle ne devrait pas être ici aujourd’hui...",
+        "content": "Hein ? Où... où ça ? D’après son emploi du temps, elle ne devrait pas être ici aujourd’hui...",
         "voice": "char/Xier/vo_topic_05_1",
         "npc": 83102,
         "next": 90140503
@@ -2973,18 +3126,18 @@
         "options": [
           {
             "id": 90140002,
-            "content": "Parlons d’autre chose.",
+            "content": "Parlons d’autre chose",
             "next": 90140001
           },
           {
             "id": 90140003,
-            "content": "À plus tard."
+            "content": "À plus tard"
           }
         ]
       },
       {
         "id": 90140304,
-        "content": "...Je l’admets, j’ai un petit faible pour les armes à feu. Parmi tous les outils à ma disposition, ce sont ceux dont le maniement est le plus satisfaisant. Et leur efficacité pour \"faire le ménage\" est inégalée.",
+        "content": "...Je l’admets, j’ai un petit faible pour les armes à feu. Parmi tous les outils à ma disposition, ce sont ceux dont le maniement est le plus satisfaisant. Et leur efficacité pour « faire le ménage » est inégalée.",
         "voice": "char/Xier/vo_topic_03_2",
         "npc": 83102,
         "next": 90140305
@@ -3010,29 +3163,29 @@
         "options": [
           {
             "id": 90140002,
-            "content": "Parlons d’autre chose.",
+            "content": "Parlons d’autre chose",
             "next": 90140001
           },
           {
             "id": 90140003,
-            "content": "À plus tard."
+            "content": "À plus tard"
           }
         ]
       },
       {
         "id": 90140305,
-        "content": "Si vous avez du stress accumulé, je pourrais vous en prêter quelques-unes. Un petit \"ratatat\" ! Vous pourriez y prendre goût.",
+        "content": "Si vous avez du stress accumulé, je pourrais vous en prêter quelques-unes. Un petit « ratatat » ! Vous pourriez y prendre goût.",
         "voice": "char/Xier/vo_topic_03_3",
         "npc": 83102,
         "options": [
           {
             "id": 90140002,
-            "content": "Parlons d’autre chose.",
+            "content": "Parlons d’autre chose",
             "next": 90140001
           },
           {
             "id": 90140003,
-            "content": "À plus tard."
+            "content": "À plus tard"
           }
         ]
       },
@@ -3057,12 +3210,12 @@
         "options": [
           {
             "id": 90140002,
-            "content": "Parlons d’autre chose.",
+            "content": "Parlons d’autre chose",
             "next": 90140001
           },
           {
             "id": 90140003,
-            "content": "À plus tard."
+            "content": "À plus tard"
           }
         ]
       },
@@ -3087,12 +3240,12 @@
         "options": [
           {
             "id": 90140002,
-            "content": "Parlons d’autre chose.",
+            "content": "Parlons d’autre chose",
             "next": 90140001
           },
           {
             "id": 90140003,
-            "content": "À plus tard."
+            "content": "À plus tard"
           }
         ]
       }
@@ -3774,7 +3927,7 @@
           },
           {
             "id": 901700015,
-            "content": "Tu sais, les habitants des taudis t’appellent \"Princesse des Déchets\".",
+            "content": "Tu sais, les habitants des taudis t’appellent « Princesse des Déchets ».",
             "next": 90170501
           }
         ]
@@ -4734,7 +4887,7 @@
       },
       {
         "id": 90080401,
-        "content": "J’ai créé un truc génial pour toi : un petit robot compagnon ! En combat, il te suit, agite un drapeau et crie \"Allez ! T’assures grave !\"",
+        "content": "J’ai créé un truc génial pour toi : un petit robot compagnon ! En combat, il te suit, agite un drapeau et crie « Allez ! T’assures grave ! »",
         "voice": "char/Landi/vo_topic_04_1",
         "npc": 84202,
         "next": 90080403
@@ -5244,7 +5397,7 @@
       },
       {
         "id": 90120107,
-        "content": "Mais dans notre petite ville, moi et Filbert, ça suffit ! Sinon, il faudrait que j’apprenne à faire les papiers… et c’est trop compliqué pour moi !",
+        "content": "Mais dans notre petite ville, moi et Filbert, ça suffit ! Sinon, il faudrait que j’apprenne à faire les papiers... et c’est trop compliqué pour moi !",
         "voice": "char/Songlu/vo_topic_01_5",
         "npc": 85101,
         "options": [
@@ -5299,7 +5452,7 @@
           },
           {
             "id": 901600012,
-            "content": "Pourquoi l’Empire accorde-t-il autant d’importance aux \"Déchus\" ? Qui sont-ils ?",
+            "content": "Pourquoi l’Empire accorde-t-il autant d’importance aux « Déchus » ? Qui sont-ils ?",
             "next": 90160201
           },
           {
@@ -5804,7 +5957,7 @@
       },
       {
         "id": 90190202,
-        "content": "Au début, on cherchait à extraire de l’or du Phoxène. Puis on a découvert qu’elle pouvait aussi faire tourner les engrenages, produire des étincelles électriques... C’est la \"magie\" des Solariens.",
+        "content": "Au début, on cherchait à extraire de l’or du Phoxène. Puis on a découvert qu’elle pouvait aussi faire tourner les engrenages, produire des étincelles électriques... C’est la « magie » des Solariens.",
         "voice": "char/Dafu/vo_topic_02_2",
         "npc": 85401,
         "next": 90190203
@@ -5897,7 +6050,7 @@
       },
       {
         "id": 90190105,
-        "content": "Principalement des ouvrages sur les soins en champ de bataille : \"Stratégies d’intervention d’urgence\", \"Traumatologie pratique\", \"Montage d’un hôpital de campagne\"...",
+        "content": "Principalement des ouvrages sur les soins en champ de bataille : « Stratégies d’intervention d’urgence », « Traumatologie pratique », « Montage d’un hôpital de campagne »...",
         "voice": "char/Dafu/vo_topic_01_4",
         "npc": 85401,
         "next": 90190106
@@ -5995,7 +6148,7 @@
       },
       {
         "id": 90190108,
-        "content": "Oui, je lis aussi un livre qui s’appelle \"Chaussure de verre\". C’est une histoire de... euh, princesse et chevalier... Ce n’est pas que j’aime particulièrement les romans d’amour, je l’ai juste feuilleté...",
+        "content": "Oui, je lis aussi un livre qui s’appelle « Chaussure de verre ». C’est une histoire de... euh, princesse et chevalier... Ce n’est pas que j’aime particulièrement les romans d’amour, je l’ai juste feuilleté...",
         "voice": "char/Dafu/vo_topic_01_6",
         "npc": 85401,
         "options": [
@@ -6366,6 +6519,13 @@
     "type": "Normal"
   },
   {
+    "id": 92102,
+    "name": "Ada (?)",
+    "camp": "NPC",
+    "charId": 2102,
+    "type": "Normal"
+  },
+  {
     "id": 92301,
     "name": "Tabethe",
     "camp": "NPC",
@@ -6693,13 +6853,13 @@
   },
   {
     "id": 99998,
-    "name": "L’équipe opérationnelle",
+    "name": "Équipe opérationnelle",
     "camp": "NPC",
     "icon": "Gift"
   },
   {
     "id": 99999,
-    "name": "L’équipe opérationnelle",
+    "name": "Équipe opérationnelle",
     "camp": "NPC",
     "type": "Normal",
     "icon": "YunYingJJ"
@@ -6929,7 +7089,7 @@
     "talks": [
       {
         "id": 10037995,
-        "content": "Peu importe ce qu’ils exigent de nous... n’oublie jamais : nous ne sommes pas des monstres.",
+        "content": "Quoi qu’ils nous fassent faire, n’oublie jamais ça, nous ne sommes pas des monstres.",
         "voice": "story/1003/100379/19210B11",
         "npc": 100328
       }
@@ -7099,7 +7259,7 @@
     "talks": [
       {
         "id": 10037997,
-        "content": "Je demanderai au docteur de s’occuper du papier et de l’encre. Quant au sceau, je compte sur vous pour aller le récupérer. Désolée... cette blessure finit vraiment par vous ralentir.",
+        "content": "J’ai demandé au médecin de me prêter du papier et un stylo, je pourrai rédiger mes lettres. Mais le sceau... je compte sur vous. Désolée... mes blessures ne font que vous ralentir.",
         "voice": "story/1003/100379/19210B0G",
         "npc": 100304
       }
@@ -7942,7 +8102,7 @@
       },
       {
         "id": 11012407,
-        "content": "Alors, qu’est-ce que tu veux de moi ? Me faire la leçon, montrer à quel point les officiers hyperboréens savent pardonner ? Ou peut-être que tu as pitié de cette pauvre fille qui a été \"égarée\" et que tu essaies de me sauver de mes \"péchés\" ?",
+        "content": "Alors, qu’est-ce que tu veux de moi ? Me faire la leçon, montrer à quel point les officiers hyperboréens savent pardonner ? Ou peut-être que tu as pitié de cette pauvre fille qui a été « égarée » et que tu essaies de me sauver de mes « péchés » ?",
         "voice": "story/1002/110124/1B918306",
         "npc": 110009,
         "next": 11012408
@@ -8361,7 +8521,7 @@
       },
       {
         "id": 11018504,
-        "content": "« Monica, la prochaine fois, je te bats au concours de tir. »... ha ha... quel idiot...",
+        "content": "« Monica, la prochaine fois, je te bats au concours de tir. »... ha ha... quel idiot...",
         "voice": "story/1002/110185/1B956B50",
         "npc": 110022,
         "next": 11018505
@@ -8479,13 +8639,13 @@
     "talks": [
       {
         "id": 11011841,
-        "content": "Tenez-vous tranquille ! {性别2:Le|La} capitaine a dit pas de mouvements brusques, compris ?",
+        "content": "Tenez-vous tranquille ! {性别2:Le|La} capitaine a dit pas de mouvements brusques, compris ?",
         "npc": 110015,
         "next": 11011842
       },
       {
         "id": 11011842,
-        "content": "Mais si je ne bouge pas… comment pourrais-je vous guider ?",
+        "content": "Mais si je ne bouge pas... comment pourrais-je vous guider ?",
         "npc": 110034,
         "next": 11011843
       },
@@ -8509,13 +8669,13 @@
       },
       {
         "id": 11011846,
-        "content": "... Capitaine, pourquoi m’avez-vous arrêté !?",
+        "content": "... Capitaine, pourquoi m’avez-vous arrêté !?",
         "npc": 110016,
         "next": 11011847
       },
       {
         "id": 11011847,
-        "content": "Tous les Charons ne sont pas des Déchus, rappelle-toi, le Commandant Avar est un Charon. Même s’ils étaient des Déchus, ils ont plus de valeur vivants que morts. ",
+        "content": "Tous les Charons ne sont pas des Déchus, rappelle-toi, le Commandant Avar est un Charon. Même s’ils étaient des Déchus, ils ont plus de valeur vivants que morts. ",
         "npc": 110022,
         "next": 11011848
       },
@@ -8587,13 +8747,13 @@
     "talks": [
       {
         "id": 11011841,
-        "content": "Tenez-vous tranquille ! {性别2:Le|La} capitaine a dit pas de mouvements brusques, compris ?",
+        "content": "Tenez-vous tranquille ! {性别2:Le|La} capitaine a dit pas de mouvements brusques, compris ?",
         "npc": 110015,
         "next": 11011842
       },
       {
         "id": 11011842,
-        "content": "Mais si je ne bouge pas… comment pourrais-je vous guider ?",
+        "content": "Mais si je ne bouge pas... comment pourrais-je vous guider ?",
         "npc": 110034,
         "next": 11011843
       },
@@ -8617,13 +8777,13 @@
       },
       {
         "id": 11011846,
-        "content": "... Capitaine, pourquoi m’avez-vous arrêté !?",
+        "content": "... Capitaine, pourquoi m’avez-vous arrêté !?",
         "npc": 110016,
         "next": 11011847
       },
       {
         "id": 11011847,
-        "content": "Tous les Charons ne sont pas des Déchus, rappelle-toi, le Commandant Avar est un Charon. Même s’ils étaient des Déchus, ils ont plus de valeur vivants que morts. ",
+        "content": "Tous les Charons ne sont pas des Déchus, rappelle-toi, le Commandant Avar est un Charon. Même s’ils étaient des Déchus, ils ont plus de valeur vivants que morts. ",
         "npc": 110022,
         "next": 11011848
       },
@@ -8673,7 +8833,7 @@
           },
           {
             "id": 11010406,
-            "content": "<I>Tu en veux à qui ? Qui est-ce que tu insultes ?</>",
+            "content": "<I>Tu en veux à qui ? Qui est-ce que tu insultes ?</>",
             "next": 11010407,
             "impr": [
               1011,
@@ -8685,28 +8845,28 @@
       },
       {
         "id": 11010403,
-        "content": "Capitaine ! Je vais bien, je peux encore bouger... Hfff—",
+        "content": "Capitaine ! Je vais bien, je peux encore bouger... Hfff—",
         "voice": "story/1002/110104/1B903A3E",
         "npc": 110044,
         "next": 11010408
       },
       {
         "id": 11010405,
-        "content": "Non, Capitaine ! Vous avez fait de votre mieux !",
+        "content": "Non, Capitaine ! Vous avez fait de votre mieux !",
         "voice": "story/1002/110104/1B903A92",
         "npc": 110044,
         "next": 11010408
       },
       {
         "id": 11010407,
-        "content": "À part ces maudits Déchus, qui d’autre ?",
+        "content": "À part ces maudits Déchus, qui d’autre ?",
         "voice": "story/1002/110104/1B903AE6",
         "npc": 110044,
         "next": 11010408
       },
       {
         "id": 11010408,
-        "content": "Ces monstres ont osé utiliser les Souillés comme arme... Les Déchus sont des monstres, tout comme leurs Souillés !",
+        "content": "Ces monstres ont osé utiliser les Souillés comme arme... Les Déchus sont des monstres, tout comme leurs Souillés !",
         "voice": "story/1002/110104/1B903B10",
         "npc": 110044,
         "next": 11010409
@@ -8809,7 +8969,7 @@
       },
       {
         "id": 11010506,
-        "content": "Tout à l’heure, Docteur Daphne et vous avez couvert notre retraite... elle va bien ?",
+        "content": "Tout à l’heure, Docteur Daphne et vous avez couvert notre retraite... elle va bien ?",
         "voice": "story/1002/110105/1B904B24",
         "npc": 110045,
         "next": 11010507
@@ -8830,7 +8990,7 @@
       },
       {
         "id": 11010509,
-        "content": "... « Gloire et loyauté éternelles à notre Empereur » ? Ces aristocrates rabâchent toujours la même chose, mais là, coincés dans ce trou, je me demande s’ils ne regrettent pas leur enthousiasme.",
+        "content": "... « Gloire et loyauté éternelles à notre Empereur » ? Ces aristocrates rabâchent toujours la même chose, mais là, coincés dans ce trou, je me demande s’ils ne regrettent pas leur enthousiasme.",
         "voice": "story/1002/110105/1B904BA2",
         "npc": 110045,
         "next": 11010510
@@ -9038,7 +9198,7 @@
       },
       {
         "id": 11012407,
-        "content": "Alors, qu’est-ce que tu veux de moi ? Me faire la leçon, montrer à quel point les officiers hyperboréens savent pardonner ? Ou peut-être que tu as pitié de cette pauvre fille qui a été \"égarée\" et que tu essaies de me sauver de mes \"péchés\" ?",
+        "content": "Alors, qu’est-ce que tu veux de moi ? Me faire la leçon, montrer à quel point les officiers hyperboréens savent pardonner ? Ou peut-être que tu as pitié de cette pauvre fille qui a été « égarée » et que tu essaies de me sauver de mes « péchés » ?",
         "voice": "story/1002/110124/1B918306",
         "npc": 110009,
         "next": 11012408
@@ -9431,6 +9591,18 @@
     "type": "Normal"
   },
   {
+    "id": 111003,
+    "name": "Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111004,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 111110,
     "name": "Falsi",
     "camp": "NPC",
@@ -9456,7 +9628,7 @@
   },
   {
     "id": 111123,
-    "name": "« Le Monde » Maman Lapin",
+    "name": "« Le Jugement » Maman Lapin",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -9468,13 +9640,25 @@
   },
   {
     "id": 111125,
-    "name": "UI_CMNpc_Name_Cunzhang",
+    "name": "« L’Empereur » Cesare",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 111126,
-    "name": "« Le Chariot » Victor",
+    "name": "« Le Chariot » Victor ?",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111127,
+    "name": "« Le Chariot » Victor ?",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111128,
+    "name": "« Le Fou » Joy",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -9583,6 +9767,167 @@
   {
     "id": 111167,
     "name": "« Le Hiérophante » Sanctus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111168,
+    "name": "« La Roue de la Fortune » Karma",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111169,
+    "name": "« La Justice » Justus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111170,
+    "name": "« L’Empereur » Cesare",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111171,
+    "name": "« Le Pendu » Isaac",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111172,
+    "name": "Soldat des Narvals",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111173,
+    "name": "UI_CMNpc_Name_Anbixiu",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111174,
+    "name": "« L’Hermite » Tacita",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111175,
+    "name": "Fulvis",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111176,
+    "name": "Eve",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111177,
+    "name": "« Le Chariot » Victor ?",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111178,
+    "name": "« L’Empereur » Cesare",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111179,
+    "name": "« La Force » Bernard",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111180,
+    "name": "« L’Impératrice » Teresa",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111181,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111182,
+    "name": "« La Roue de la Fortune » Karma",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111183,
+    "name": "« Le Soleil » Elio",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111184,
+    "name": "« Le Pendu » Isaac",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111185,
+    "name": "« Le Hiérophante » Sanctus",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111186,
+    "name": "« La Lune » Selina",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111187,
+    "name": "« Le Magicien » Morgana",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111188,
+    "name": "« L’Impératrice » Teresa",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111189,
+    "name": "« L’Étoile » Stella",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111190,
+    "name": "« La Force » Bernard",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111191,
+    "name": "« La Papesse » Ada",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111192,
+    "name": "Falsi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111193,
+    "name": "Eve",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 111194,
+    "name": "« L’Impératrice » Teresa",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -9704,7 +10049,7 @@
       },
       {
         "id": 10104301,
-        "content": "Aux Asphodèles, on trouve bien plus que de l’alcool... bien plus. À condition, bien sûr, d’être prêt à en payer le prix.",
+        "content": "De retour ? Tu veux une boisson ?",
         "voice": "char/Kami/vo_npc_02",
         "npc": 200003,
         "options": [
@@ -9725,7 +10070,7 @@
           },
           {
             "id": 101043112,
-            "content": "<I>Merci, je n’ai rien d'autre à demander. </>"
+            "content": "<I>Merci, je n’ai rien d’autre à demander. </>"
           }
         ]
       },
@@ -9987,7 +10332,7 @@
           },
           {
             "id": 510019913,
-            "content": "<I>Surveille ton langage. Sinon, un autre \"Monsieur Wells\" risque de prendre une sacrée raclée aujourd’hui.</>",
+            "content": "<I>Surveille ton langage. Sinon, un autre « Monsieur Wells » risque de prendre une sacrée raclée aujourd’hui.</>",
             "next": 51001918,
             "imprCheck": [
               1011,
@@ -10588,7 +10933,7 @@
           },
           {
             "id": 510019913,
-            "content": "<I>Surveille ton langage. Sinon, un autre \"Monsieur Wells\" risque de prendre une sacrée raclée aujourd’hui.</>",
+            "content": "<I>Surveille ton langage. Sinon, un autre « Monsieur Wells » risque de prendre une sacrée raclée aujourd’hui.</>",
             "next": 51001918,
             "imprCheck": [
               1011,
@@ -13872,7 +14217,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
+        "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
         "npc": 700032
       }
     ]
@@ -14732,7 +15077,7 @@
         "options": [
           {
             "id": 510013041,
-            "content": "<I>Non, Camilla est une amie digne de confiance. Elle m’a déjà aidé.</>",
+            "content": "<I>Je préfère considérer Camilla comme une alliée forte et fiable. Elle nous a aidés à de nombreuses reprises. Pas seulement nous, d’ailleurs : au moins la moitié de Givrelac lui doit quelque chose.</>",
             "next": 51001306,
             "imprCheck": [
               1011,
@@ -14742,7 +15087,7 @@
           },
           {
             "id": 510013042,
-            "content": "<I>Laisse tomber, je fais confiance à mon jugement. Je sais qui est vraiment Camilla.</>",
+            "content": "<I>Ce n’est pas une raison pour déblatérer ici. Je crois en l’intégrité de Camilla, et ce n’est pas avec tes accusations ridicules que tu la saliras.</>",
             "next": 51001306,
             "imprCheck": [
               1011,
@@ -14752,7 +15097,7 @@
           },
           {
             "id": 510013043,
-            "content": "<I>En fait, tu voulais juste lui fourguer ta piquette et elle t’a rembarré. Voilà pourquoi tu rages.</>",
+            "content": "<I>J’ai vu de mes yeux le discernement de Camilla : qu’il s’agisse des gens ou des boissons, rien ne lui échappe. Celui qui ne reconnaît rien, ici, c’est toi.</>",
             "next": 51001306,
             "imprCheck": [
               1011,
@@ -14792,12 +15137,12 @@
         "options": [
           {
             "id": 510013091,
-            "content": "D’accord, je prends une pinte.",
+            "content": "<I>D’accord, je prends une pinte.</>",
             "next": 51001310
           },
           {
             "id": 510013092,
-            "content": "<I>Un alcool trop bon marché, c’est jamais bon signe. Je passe mon tour.</>",
+            "content": "<I>On en a pour son argent.</>",
             "next": 51001313
           }
         ]
@@ -14936,7 +15281,7 @@
         "options": [
           {
             "id": 510013281,
-            "content": "<I>Ces faux produits finissent toujours par faire du mal...</>",
+            "content": "<I>Sa camelote fait vraiment des ravages...</>",
             "next": 51001329
           }
         ]
@@ -14955,7 +15300,7 @@
       },
       {
         "id": 51001331,
-        "content": "Et si un jour tu veux boire autre chose que la \"bonne affaire\" de Dean, les Asphodèles t’accueilleront toujours. Chez nous, la qualité vaut son prix.",
+        "content": "Et si un jour tu veux boire autre chose que la « bonne affaire » de Dean, les Asphodèles t’accueilleront toujours. Chez nous, la qualité vaut son prix.",
         "npc": 200003
       }
     ]
@@ -16859,7 +17204,7 @@
       },
       {
         "id": 51003314,
-        "content": "Monsieur Buck a l’habitude d’écrire ses œuvres la nuit. Tes actions ont fait qu’il n’a rien écrit depuis un mois, alors il m’a engagé pour trouver le \"voleur d’inspiration\".",
+        "content": "Monsieur Buck a l’habitude d’écrire ses œuvres la nuit. Tes actions ont fait qu’il n’a rien écrit depuis un mois, alors il m’a engagé pour trouver le « voleur d’inspiration ».",
         "npc": 100001,
         "options": [
           {
@@ -19211,7 +19556,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
+        "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
         "npc": 700032
       },
       {
@@ -21162,7 +21507,7 @@
       },
       {
         "id": 51010324,
-        "content": "Et pourtant… je me demande : pourquoi l’auteur croyait-il si fermement à leur renaissance ? Ou plutôt... qu’est-ce qui définit l’essence d’Ask et d’Embla ?",
+        "content": "Et pourtant... je me demande : pourquoi l’auteur croyait-il si fermement à leur renaissance ? Ou plutôt... qu’est-ce qui définit l’essence d’Ask et d’Embla ?",
         "voice": "story/1002/510103/7FB2F148",
         "npc": 700342,
         "next": 51010325
@@ -21797,7 +22142,7 @@
       },
       {
         "id": 51010324,
-        "content": "Et pourtant… je me demande : pourquoi l’auteur croyait-il si fermement à leur renaissance ? Ou plutôt... qu’est-ce qui définit l’essence d’Ask et d’Embla ?",
+        "content": "Et pourtant... je me demande : pourquoi l’auteur croyait-il si fermement à leur renaissance ? Ou plutôt... qu’est-ce qui définit l’essence d’Ask et d’Embla ?",
         "voice": "story/1002/510103/7FB2F148",
         "npc": 700342,
         "next": 51010325
@@ -22352,6 +22697,144 @@
     "type": "Normal"
   },
   {
+    "id": 700428,
+    "name": "Lorent",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700429,
+    "name": "Kroger",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700430,
+    "name": "Rowan",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700431,
+    "name": "Ouvrière épuisée",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700432,
+    "name": "Ouvrier plutôt enthousiaste",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700433,
+    "name": "Présentatrice",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700434,
+    "name": "Nouveau joueur",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700435,
+    "name": "Croupier",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700436,
+    "name": "Homme parmi les spectateurs",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700437,
+    "name": "Donneur",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700438,
+    "name": "Homme à la table",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700439,
+    "name": "Femme à la table",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700440,
+    "name": "Joueur spectateur",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700441,
+    "name": "Employé de la salle de jeux",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700442,
+    "name": "Maggie",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700443,
+    "name": "Olaf",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700444,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700445,
+    "name": "Ouvrier spectateur",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700446,
+    "name": "Ouvrier moqueur",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700447,
+    "name": "Ouvrier d’usine",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700448,
+    "name": "Homme bienveillant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700449,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700450,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 700451,
     "name": "L’Étranger",
     "camp": "NPC",
@@ -22366,6 +22849,182 @@
   {
     "id": 700453,
     "name": "Snow"
+  },
+  {
+    "id": 700454,
+    "name": "Organisateur",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700455,
+    "name": "Noble dame",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700456,
+    "name": "Noble homme",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700457,
+    "name": "L’Étranger",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700458,
+    "name": "Arcia",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700459,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700460,
+    "name": "Seaton",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700461,
+    "name": "Kieran",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700462,
+    "name": "Levi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700463,
+    "name": "Toran"
+  },
+  {
+    "id": 700464,
+    "name": "Jeune homme déçu",
+    "type": "Normal"
+  },
+  {
+    "id": 700465,
+    "name": "Femme moqueuse",
+    "type": "Normal"
+  },
+  {
+    "id": 700466,
+    "name": "Marchand pensif",
+    "type": "Normal"
+  },
+  {
+    "id": 700467,
+    "name": "Manifestant fanatique",
+    "type": "Normal"
+  },
+  {
+    "id": 700468,
+    "name": "Maggie"
+  },
+  {
+    "id": 700469,
+    "name": "Lorent"
+  },
+  {
+    "id": 700470,
+    "name": "Ouvrier en pause"
+  },
+  {
+    "id": 700471,
+    "name": "Ouvrier en pleine discussion"
+  },
+  {
+    "id": 700472,
+    "name": "Ouvrier apathique"
+  },
+  {
+    "id": 700473,
+    "name": "Ouvrier plein d’entrain"
+  },
+  {
+    "id": 700474,
+    "name": "Garde de la gare"
+  },
+  {
+    "id": 700475,
+    "name": "Voix de Maggie"
+  },
+  {
+    "id": 700476,
+    "name": "Voix de Lorent"
+  },
+  {
+    "id": 700477,
+    "name": "Voix d’un garde"
+  },
+  {
+    "id": 700478,
+    "name": "Coney"
+  },
+  {
+    "id": 700479,
+    "name": "Rowan"
+  },
+  {
+    "id": 700480,
+    "name": "Kroger"
+  },
+  {
+    "id": 700481,
+    "name": "Médecin débordé"
+  },
+  {
+    "id": 700482,
+    "name": "Eisenbahn"
+  },
+  {
+    "id": 700483,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700484,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700485,
+    "name": "Hugh",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700486,
+    "name": "Homme bienveillant",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700487,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700488,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700489,
+    "camp": "NPC",
+    "type": "Normal"
   },
   {
     "id": 700501,
@@ -26821,7 +27480,7 @@
       },
       {
         "id": 51203526,
-        "content": "Alors quitte à finir comme ça… autant faire un truc qui marque, non ?",
+        "content": "Alors quitte à finir comme ça... autant faire un truc qui marque, non ?",
         "npc": 700539,
         "options": [
           {
@@ -26970,6 +27629,270 @@
     "type": "Normal"
   },
   {
+    "id": 700580,
+    "name": "Seaton",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700581,
+    "name": "Maggie",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700582,
+    "name": "Lorent",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700583,
+    "name": "L’Étranger",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700584,
+    "name": "Ouvrier en pause"
+  },
+  {
+    "id": 700585,
+    "name": "Ouvrier en pleine discussion"
+  },
+  {
+    "id": 700586,
+    "name": "Ouvrier apathique"
+  },
+  {
+    "id": 700588,
+    "name": "Garde de la gare"
+  },
+  {
+    "id": 700591,
+    "name": "Kroger",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700593,
+    "name": "Eisenbahn",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700594,
+    "name": "Levi",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700595,
+    "name": "Snow",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700596,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700597,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700598,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700599,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700600,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700601,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700602,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700603,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700604,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700605,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700606,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700607,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700608,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700609,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700610,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700611,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700612,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700613,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700614,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700615,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700616,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700617,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700618,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700619,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700620,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700621,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700622,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700623,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700624,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700625,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700626,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700627,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700628,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700629,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700630,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700631,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700632,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700633,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700634,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 700635,
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
     "id": 701001,
     "name": "Technicien des égouts",
     "camp": "NPC",
@@ -27056,7 +27979,7 @@
       },
       {
         "id": 51105903,
-        "content": "<I>Hss...</> attendez… je comprends ! Vous mettez mon cœur à l’épreuve !",
+        "content": "<I>Hss...</> attendez... je comprends ! Vous mettez mon cœur à l’épreuve !",
         "npc": 701005,
         "next": 51105904
       },
@@ -27098,7 +28021,7 @@
       },
       {
         "id": 51105914,
-        "content": "Laissez-moi vous expliquer. Il y a quelques jours, j’ai vu deux anciens des arts martiaux pourchassés par une bête féroce. J’ai voulu leur porter secours, mais j’étais trop faible… je n’ai même pas réussi à les rattraper.",
+        "content": "Laissez-moi vous expliquer. Il y a quelques jours, j’ai vu deux anciens des arts martiaux pourchassés par une bête féroce. J’ai voulu leur porter secours, mais j’étais trop faible... je n’ai même pas réussi à les rattraper.",
         "npc": 701005,
         "next": 51105915
       },
@@ -27311,7 +28234,7 @@
       },
       {
         "id": 51105951,
-        "content": "Comme d'habitude... fidèle à vous-même."
+        "content": "Comme d’habitude... fidèle à vous-même."
       }
     ]
   },
@@ -28546,7 +29469,7 @@
       },
       {
         "id": 51110026,
-        "content": "Ahouuu... ahoooo...",
+        "content": "<I>Ahouuu... ahoooo...</>",
         "npc": 701011,
         "next": 51110027
       },
@@ -28558,17 +29481,17 @@
       },
       {
         "id": 51110028,
-        "content": "Ahouooooooo... !",
+        "content": "<I>Ahouooooooo... !</>",
         "npc": 701011,
         "next": 51110029
       },
       {
         "id": 51110029,
-        "content": "Totalement absorbé par ses hurlements, l’enfant ne répond plus à rien. Vous finissez par vous éloigner discrètement, jugeant préférable de laisser ce \"petit Bi’an\" à son entraînement."
+        "content": "Totalement absorbé par ses hurlements, l’enfant ne répond plus à rien. Vous finissez par vous éloigner discrètement, jugeant préférable de laisser ce « petit Bi’an » à son entraînement."
       },
       {
         "id": 51110030,
-        "content": "Ahouuu— alors ? Vous y avez cru, hein ? On aurait dit qu’un vrai Bi’an arrivait !",
+        "content": "<I>Ahouuu— </>alors ? Vous y avez cru, hein ? On aurait dit qu’un vrai Bi’an arrivait !",
         "npc": 701011
       }
     ]
@@ -28586,13 +29509,13 @@
     "talks": [
       {
         "id": 51111000,
-        "content": "Urrh— urrh... n-non, ça suffit... vraiment, je ne peux plus avaler une bouchée...",
+        "content": "<I>Urrh— urrh...</> n-non, ça suffit... vraiment, je ne peux plus avaler une bouchée...",
         "npc": 701012,
         "next": 51111001
       },
       {
         "id": 51111001,
-        "content": "Pfiou... vous m’avez fait peur. J’ai cru que vous étiez un Tisse-Étoiles.",
+        "content": "<I>Pfiou...</> vous m’avez fait peur. J’ai cru que vous étiez un Tisse-Étoiles.",
         "npc": 701012,
         "options": [
           {
@@ -28607,7 +29530,7 @@
           },
           {
             "id": 51111004,
-            "content": "<I>Bonjour. Je suis </>{性别:<I>un</>|<I>une</>} <I>Tisse-Étoiles d’Hyperborea.</>",
+            "content": "<I>Bonjour. Je suis {性别:un|une} Tisse-Étoiles d’Hyperborea.</>",
             "next": 51111005,
             "impr": [
               1041,
@@ -28667,7 +29590,7 @@
       },
       {
         "id": 51111012,
-        "content": "Urrk... rien que d’y penser, j’ai envie de vomir...",
+        "content": "<I>Urrk...</> rien que d’y penser, j’ai envie de vomir...",
         "npc": 701012,
         "next": 51111013
       },
@@ -28696,7 +29619,7 @@
       },
       {
         "id": 51111017,
-        "content": "Urrk... huff.... huff...",
+        "content": "<I>Urrk... huff.... huff...</>",
         "npc": 701012
       }
     ]
@@ -28888,7 +29811,7 @@
       },
       {
         "id": 51113002,
-        "content": "Hmm~ Quel délice, quel délice... Une pureté rare !",
+        "content": "<I>Hmm~</> Quel délice, quel délice... Une pureté rare !",
         "npc": 701014,
         "options": [
           {
@@ -28960,7 +29883,7 @@
       },
       {
         "id": 51113011,
-        "content": "Hmm~ Sans aucun doute : du Bois de santal émeraude récolté autour du Quai-aux-Étoiles, relevé d’Armoise des Nuages-Verts et d’Herbe rosée-flottante.",
+        "content": "<I>Hmm~</> Sans aucun doute : du Bois de santal émeraude récolté autour du Quai-aux-Étoiles, relevé d’Armoise des Nuages-Verts et d’Herbe rosée-flottante.",
         "npc": 701014,
         "next": 51113012
       },
@@ -29492,7 +30415,7 @@
         "options": [
           {
             "id": 51116011,
-            "content": "Très bien... je vais réfléchir à une solution.",
+            "content": "<I>Très bien... je vais réfléchir à une solution.</>",
             "next": 51116013,
             "imprCheck": [
               1041,
@@ -29946,7 +30869,7 @@
       },
       {
         "id": 51117048,
-        "content": "Les enfants s’en vont en riant. Peut-être que la prochaine fois que vous verrez Fushu, vous pourrez lui raconter cette amusante anecdote."
+        "content": "<I>Les enfants s’en vont en riant. Peut-être que la prochaine fois que vous verrez Fushu, vous pourrez lui raconter cette amusante anecdote.</>"
       }
     ]
   },
@@ -30815,7 +31738,7 @@
         "options": [
           {
             "id": 51122019,
-            "content": "Vous prenez la coupe et en buvez une petite gorgée.",
+            "content": "<I>Vous prenez la coupe et en buvez une petite gorgée.</>",
             "next": 51122021,
             "imprCheck": [
               1041,
@@ -31364,7 +32287,7 @@
         "options": [
           {
             "id": 51125406,
-            "content": "<I>Pourquoi a-t-elle été abandonnée ?</>",
+            "content": "<I>Pourquoi a-t-elle été abandonnée ?</></>",
             "next": 51125407
           }
         ]
@@ -31407,7 +32330,7 @@
         "options": [
           {
             "id": 51125502,
-            "content": "{性别:Désolé|Désolée}.",
+            "content": "<I>{性别:Désolé|Désolée}.<I>",
             "next": 51125503,
             "impr": [
               1041,
@@ -31912,7 +32835,7 @@
         "options": [
           {
             "id": 51125804,
-            "content": "<I>Je suis </>{性别:<I>curieux</>|<I>curieuse</>} <I>de savoir ce que vous faites.</>",
+            "content": "<I>Je suis {性别:curieux|curieuse} de savoir ce que vous faites.</>",
             "next": 51125805,
             "impr": [
               1041,
@@ -32694,7 +33617,7 @@
           },
           {
             "id": 51126405,
-            "content": "<I>Je suis simplement {性别:curieux|curieuse}au sujet du Panneau aux Mille Étoiles.</>",
+            "content": "<I>Je suis simplement {性别:curieux|curieuse} au sujet du Panneau aux Mille Étoiles.</>",
             "next": 51126406
           }
         ]
@@ -32759,7 +33682,7 @@
           },
           {
             "id": 51126539,
-            "content": "Ce n’est rien.",
+            "content": "<I>Ce n’est rien.</>",
             "next": 51126540
           }
         ]
@@ -33126,7 +34049,7 @@
       },
       {
         "id": 51126903,
-        "content": "Un Wishen<I>...</> oui... maintenant je me souviens. Je suis né sans cause, venu au monde sans raison. Mais moi, je veux rentrer chez moi… peux-tu me dire où se trouve ma maison ?",
+        "content": "Un Wishen... oui... maintenant je me souviens. Je suis né sans cause, venu au monde sans raison. Mais moi, je veux rentrer chez moi... peux-tu me dire où se trouve ma maison ?",
         "npc": 701059,
         "next": 51126907
       },
@@ -33176,7 +34099,7 @@
           },
           {
             "id": 51126925,
-            "content": "Je m’en vais.",
+            "content": "<I>Je m’en vais.</>",
             "next": 51126926
           }
         ]
@@ -33244,7 +34167,7 @@
       },
       {
         "id": 51126922,
-        "content": "Mais je le sens... Je suis lié à tout ici. Nous partageons un même souffle. Respire... Cette chaleur nous enveloppe...  Je... je retourne à la maison...",
+        "content": "Mais je le sens... Je suis lié à tout ici. Nous partageons un même souffle. Respire... Cette chaleur nous enveloppe... Je... je retourne à la maison...",
         "npc": 701059
       },
       {
@@ -33437,7 +34360,7 @@
         "options": [
           {
             "id": 51127102,
-            "content": "<I>Tu parles toute seule ?</>",
+            "content": "<I>Tu parles toute seule ?",
             "next": 51127103,
             "impr": [
               1041,
@@ -33447,7 +34370,7 @@
           },
           {
             "id": 51127104,
-            "content": "<I>Tu parlais à un Wishen ?</>",
+            "content": "<I>Tu parlais à un Wishen ?",
             "next": 51127105,
             "impr": [
               1041,
@@ -33614,7 +34537,7 @@
           },
           {
             "id": 51127218,
-            "content": "Au revoir.",
+            "content": "<I>Au revoir.</>",
             "next": 51127219
           }
         ]
@@ -33800,7 +34723,7 @@
       },
       {
         "id": 51127325,
-        "content": "<I>Hmpf. </>Tu ne comprendrais pas. Pas plus que vous ne comprenez les arbres. Mais peu importe... L’arbre m’a déjà tout dit.",
+        "content": "<I>Hmpf.</> Tu ne comprendrais pas. Pas plus que vous ne comprenez les arbres. Mais peu importe... L’arbre m’a déjà tout dit.",
         "npc": 701063
       },
       {
@@ -33941,7 +34864,7 @@
       },
       {
         "id": 51127503,
-        "content": "Oh ho, du répondant ! Mais écoute bien : ici, c’est pas un terrain de jeu pour {性别:un morveux|une morveuse} qui sent encore le lait. Seuls des types comme moi... hic... des figures légendaires, qui font trembler les rues et les rumeurs... comme moi, Chizhatian, ont leur place ici. Compris ?",
+        "content": "Oh ho, du répondant ! Mais écoute bien : ici, c’est pas un terrain de jeu pour {性别:un morveux|une morveuse} qui sent encore le lait. Seuls des types comme moi... <I>hic...</> des figures légendaires, qui font trembler les rues et les rumeurs... comme moi, Chizhatian, ont leur place ici. Compris ?",
         "npc": 701066,
         "next": 51127504
       },
@@ -33953,7 +34876,7 @@
       },
       {
         "id": 51127504,
-        "content": "Alors fais donc vite appel à ton grand-père Chizhatian pour te protéger, histoire que toi, petit tendre... <I>hic... </>tu ne finisses pas dévoré par les Jiao.",
+        "content": "Alors fais donc vite appel à ton grand-père Chizhatian pour te protéger, histoire que toi, petit tendre... <I>hic...</> tu ne finisses pas dévoré par les Jiao.",
         "npc": 701066,
         "next": 51127508
       },
@@ -34273,7 +35196,7 @@
           },
           {
             "id": 51127831,
-            "content": "Je m’éclipse !",
+            "content": "<I>Je m’éclipse !</>",
             "next": 51127832
           }
         ]
@@ -34533,7 +35456,7 @@
     "talks": [
       {
         "id": 51128001,
-        "content": "<I>Brr... </>encore ce froid infernal ! Tout mon matériel archéologique est couvert de cristaux — mécanismes grippés, capteurs engourdis... Ah ! Maître Qiu va encore devoir payer les réparations !",
+        "content": "<I>Brr...</> encore ce froid infernal ! Tout mon matériel archéologique est couvert de cristaux — mécanismes grippés, capteurs engourdis... Ah ! Maître Qiu va encore devoir payer les réparations !",
         "npc": 701072,
         "next": 51128002
       },
@@ -34583,7 +35506,7 @@
       },
       {
         "id": 51128008,
-        "content": "<I>Pff... </>moi aussi, je vais rajouter une couche.",
+        "content": "<I>Pff...</> moi aussi, je vais rajouter une couche.",
         "npc": 701072
       },
       {
@@ -37304,7 +38227,7 @@
       },
       {
         "id": 51158811,
-        "content": "Aujourd’hui, je n’ai plus aucun recours... Je ne peux qu’espérer que les hommes envoyés chercher les oiseaux en retrouveront quelques-uns… même un petit nombre ferait déjà l’affaire...",
+        "content": "Aujourd’hui, je n’ai plus aucun recours... Je ne peux qu’espérer que les hommes envoyés chercher les oiseaux en retrouveront quelques-uns... même un petit nombre ferait déjà l’affaire...",
         "npc": 701135
       }
     ]
@@ -41535,7 +42458,7 @@
       },
       {
         "id": 51162816,
-        "content": "Ah~ dit comme ça… ça se tient, vous savez~ Ce serait donc pour ça qu’ils n’ont pas changé leurs motifs depuis des années~ ?",
+        "content": "Ah~ dit comme ça... ça se tient, vous savez~ Ce serait donc pour ça qu’ils n’ont pas changé leurs motifs depuis des années~ ?",
         "npc": 701177,
         "next": 51162817
       },
@@ -44050,7 +44973,7 @@
       },
       {
         "id": 51169739,
-        "content": "Exactement ce que dit mon fils ! Il prétend qu’un spectacle dérangerait les gens… déranger qui ? Qui dort au beau milieu de cette place ? Et puis quoi encore, on réveillerait le Seigneur Dragon dans les cieux ?",
+        "content": "Exactement ce que dit mon fils ! Il prétend qu’un spectacle dérangerait les gens... déranger qui ? Qui dort au beau milieu de cette place ? Et puis quoi encore, on réveillerait le Seigneur Dragon dans les cieux ?",
         "npc": 701200
       },
       {
@@ -48107,12 +49030,12 @@
       },
       {
         "id": 51173203,
-        "content": "<I>Hum... hum...</> Hmm…",
+        "content": "<I>Hum... hum...</> Hmm...",
         "next": 51173204
       },
       {
         "id": 51173204,
-        "content": "Je sens bien l’odeur… on dirait qu’il a séché longtemps au soleil, il y a comme une chaleur qui s’en dégage... comment ça pourrait ne pas être suffisant ?",
+        "content": "Je sens bien l’odeur... on dirait qu’il a séché longtemps au soleil, il y a comme une chaleur qui s’en dégage... comment ça pourrait ne pas être suffisant ?",
         "next": 51173205
       },
       {
@@ -53835,7 +54758,7 @@
       },
       {
         "id": 51014318,
-        "content": "Regardez autour de vous. Des machines, des treuils, des petits mécanismes… c’est ça, mon rêve. Un jour, j’entrerai dans un de ces trains... et je construirai quelque chose de bien meilleur.",
+        "content": "Regardez autour de vous. Des machines, des treuils, des petits mécanismes... c’est ça, mon rêve. Un jour, j’entrerai dans un de ces trains... et je construirai quelque chose de bien meilleur.",
         "npc": 701284,
         "next": 51014319
       },
@@ -54213,12 +55136,7 @@
     "id": 701286,
     "name": "Rowan",
     "camp": "NPC",
-    "type": "Normal",
-    "srId": 106001,
-    "pos": [
-      -2798,
-      -1695
-    ]
+    "type": "Normal"
   },
   {
     "id": 701287,
@@ -54763,7 +55681,7 @@
       },
       {
         "id": 51018009,
-        "content": "Alors quoi... ce maître de Huaxu avait peut-être raison... Je serais né sous une mauvaise étoile... condamné à rester seul toute ma vie... Même mes trains ne seraient que de petites locomotives solitaires…",
+        "content": "Alors quoi... ce maître de Huaxu avait peut-être raison... Je serais né sous une mauvaise étoile... condamné à rester seul toute ma vie... Même mes trains ne seraient que de petites locomotives solitaires...",
         "npc": 701289,
         "next": 51018010
       },
@@ -55903,7 +56821,7 @@
   },
   {
     "id": 701299,
-    "name": "Voyageur anxieux",
+    "name": "Voyageuse inquiète",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -56422,6 +57340,11 @@
     "name": "Contremaître arrogant",
     "camp": "NPC",
     "type": "Normal",
+    "srId": 106001,
+    "pos": [
+      -38541,
+      18279
+    ],
     "talks": [
       {
         "id": 51205001,
@@ -58481,6 +59404,235 @@
     ]
   },
   {
+    "id": 701327,
+    "name": "Coney",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51014400,
+        "content": "Lorsque vous vous approchez, Coney est tellement absorbé par ce qu’il tient entre les mains qu’il ne remarque même pas votre arrivée.",
+        "options": [
+          {
+            "id": 51014401,
+            "content": "<I>Coney, qu’est-ce que tu fais ?</>",
+            "next": 51014404,
+            "impr": [
+              1011,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51014402,
+            "content": "<I>Hé ! Mon fils !</>",
+            "next": 51014404,
+            "impr": [
+              1011,
+              "Chaos",
+              3
+            ]
+          },
+          {
+            "id": 51014403,
+            "content": "<I>Camilla sait que tu traînes au lieu de bosser ?</>",
+            "next": 51014404,
+            "impr": [
+              1011,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51014404,
+        "content": "C’est toi ! T’es vraiment {性别:revenu|revenue} aux Asphodèles ?!",
+        "npc": 701327,
+        "next": 51014405
+      },
+      {
+        "id": 51014405,
+        "content": "Ça t’étonne tant que ça de me revoir ?",
+        "npc": 100001,
+        "next": 51014406
+      },
+      {
+        "id": 51014406,
+        "content": "Camilla m’avait dit que tu ne reviendrais pas avant très longtemps... voire peut-être jamais !",
+        "npc": 701327,
+        "next": 51014407
+      },
+      {
+        "id": 51014407,
+        "content": "À te voir ici, j’imagine que Camilla t’a finalement recueilli ?",
+        "npc": 100001,
+        "next": 51014408
+      },
+      {
+        "id": 51014408,
+        "content": "Pas encore officiellement... En fait, après vous avoir quittés ce jour-là, je suis rentré récupérer toutes mes affaires, puis je suis allé me renseigner sur les Asphodèles.",
+        "npc": 701327,
+        "next": 51014409
+      },
+      {
+        "id": 51014409,
+        "content": "Tout le monde me disait que c’était un endroit incroyable. Que les gens y buvaient des alcools hors de prix, qu’il y avait des groupes entiers de Chasseurs de Phoxène qui traînaient là-bas... et que la patronne de la taverne était la personne la plus dangereuse de tout le coin.",
+        "npc": 701327,
+        "next": 51014410
+      },
+      {
+        "id": 51014410,
+        "content": "Franchement, j’étais terrifié. J’avais peur de venir jusqu’ici pour finalement me faire rejeter... mais abandonner sans même essayer, ça aurait été trop pitoyable. Surtout après tout ce que vous m’aviez dit...",
+        "npc": 701327,
+        "next": 51014411
+      },
+      {
+        "id": 51014411,
+        "content": "Alors je suis quand même venu ! Dès que j’ai expliqué pourquoi j’étais là, Camilla m’a lancé un regard noir. Elle disait des trucs du genre... « Snow me suffisait déjà largement, et maintenant qu’on me l’a enfin reprise, on m’en ramène un deuxième... »",
+        "npc": 701327,
+        "next": 51014412
+      },
+      {
+        "id": 51014412,
+        "content": "...",
+        "npc": 100001,
+        "next": 51014413
+      },
+      {
+        "id": 51014413,
+        "content": "Alors je me suis souvenu de ce que vous m’aviez conseillé. Je me suis assis par terre et je me suis mis à pleurer direct. Les Chasseurs de Phoxène autour demandaient même à Camilla si j’étais son fils caché ou un truc du genre.",
+        "npc": 701327,
+        "next": 51014414
+      },
+      {
+        "id": 51014414,
+        "content": "Et alors ? Tu ne l’as pas appelée « maman » sur-le-champ ?",
+        "npc": 100001,
+        "next": 51014415
+      },
+      {
+        "id": 51014415,
+        "content": "J’en avais envie ! Mais elle avait une tête vraiment terrifiante. Et avec toute mon expérience à observer les gens à la gare, je peux te garantir qu’au moment où le mot « maman » serait sorti de ma bouche, elle m’aurait probablement cloué au mur avec toutes mes affaires à l’aide de son couteau à ouvrir les bouteilles !",
+        "npc": 701327,
+        "next": 51014416
+      },
+      {
+        "id": 51014416,
+        "content": "... Alors comment as-tu réussi à rester ici ?",
+        "npc": 100001,
+        "next": 51014417
+      },
+      {
+        "id": 51014417,
+        "content": "Une fille aux cheveux bleus est arrivée. On aurait dit qu’elle connaissait bien Camilla. Elle m’a demandé ce qu’il se passait, alors je lui ai raconté toute mon histoire.",
+        "npc": 701327,
+        "next": 51014418
+      },
+      {
+        "id": 51014418,
+        "content": "Rhythm, hein...",
+        "npc": 100001,
+        "next": 51014419
+      },
+      {
+        "id": 51014419,
+        "content": "Oui oui ! C’est Rhythm ! Elle est super gentille ! J’ai voulu l’appeler « maman » moi aussi, mais elle m’a dit de l’appeler par son prénom.",
+        "npc": 701327,
+        "next": 51014420
+      },
+      {
+        "id": 51014420,
+        "content": "Enfin bref, Rhythm m’a payé un mois de période d’essai aux Asphodèles.",
+        "npc": 701327,
+        "next": 51014421
+      },
+      {
+        "id": 51014421,
+        "content": "Une période d’essai d’un mois ? Donc si tu ne travailles pas assez bien, ils peuvent encore te mettre dehors ?",
+        "npc": 100001,
+        "next": 51014422
+      },
+      {
+        "id": 51014422,
+        "content": "Exactement ! Mais t’inquiète pas, ces derniers temps je saute sur toutes les tâches possibles ici. Remplir les bouteilles, servir les boissons, nettoyer le sol, laver les vitres... je peux tout faire ! L’autre jour, Camilla m’a même dit que j’étais largement plus utile que Snow !",
+        "npc": 701327,
+        "next": 51014423
+      },
+      {
+        "id": 51014423,
+        "content": "Je suis sûr que je réussirai à tenir pendant tout le mois ! En ce moment, je lis même discrètement des livres sur les cocktails.",
+        "npc": 701327,
+        "next": 51014424
+      },
+      {
+        "id": 51014424,
+        "content": "Regarde, celui-là ! Rhythm me l’a apporté. Elle m’a dit qu’il y avait très peu de texte et surtout des illustrations, donc que je pourrais probablement le comprendre. Et plus tard, quand elle aura un peu de temps libre, elle m’apprendra aussi à lire.",
+        "npc": 701327,
+        "next": 51014425
+      },
+      {
+        "id": 51014425,
+        "content": "Je me dis que si j’apprends même à préparer des cocktails, Camilla n’aura plus aucune excuse pour me renvoyer, pas vrai ? Je deviendrai le meilleur serveur de tous les Asphodèles ! T’en penses quoi ?",
+        "npc": 701327,
+        "options": [
+          {
+            "id": 51014426,
+            "content": "<I>Pas mal ! Voilà un garçon ambitieux !</>",
+            "next": 51014429,
+            "impr": [
+              1011,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51014427,
+            "content": "<I>Commence déjà par réussir à rester ici.</>",
+            "next": 51014429,
+            "impr": [
+              1011,
+              "Benefit",
+              3
+            ]
+          },
+          {
+            "id": 51014428,
+            "content": "<I>On dirait que le chemin sera encore long...</>",
+            "next": 51014429,
+            "impr": [
+              1011,
+              "Wisdom",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51014429,
+        "content": "Quoi qu’il arrive... je vous remercie vraiment de m’avoir donné cette chance. Je vais tout faire pour ne pas la gâcher. En ce moment, j’ai l’impression d’avoir reçu une seconde vie ! Du matin au soir, j’ai une énergie impossible à épuiser !",
+        "npc": 701327,
+        "next": 51014430
+      },
+      {
+        "id": 51014430,
+        "content": "Au fond... ça ressemble un peu au fait de trouver enfin des parents, non ? Des vrais parents, c’est sûrement ça... pas seulement nous donner la vie, mais aussi nous apprendre comment vivre.",
+        "npc": 701327,
+        "next": 51014431
+      },
+      {
+        "id": 51014431,
+        "content": "Et maintenant... moi, je sais enfin comment vivre.",
+        "npc": 701327
+      },
+      {
+        "id": 51014432,
+        "content": "Oh, t’es {性别:revenu|revenue} ? Je me débrouille bien aussi en ce moment~",
+        "npc": 701327
+      }
+    ]
+  },
+  {
     "id": 790001,
     "name": "Mia",
     "camp": "NPC",
@@ -59848,7 +61000,7 @@
       },
       {
         "id": 90010301,
-        "content": "C’est mon ami. Il a beau être petit, il est sacrément costaud — il attise le feu de la forge pour moi.",
+        "content": "C’est mon fidèle compagnon. Pas bien grand, mais sacrément costaud ! Je lui confie le soin d’attiser le feu de la forge.",
         "npc": 900001
       }
     ]
@@ -60069,7 +61221,7 @@
       },
       {
         "id": 51151209,
-        "content": "... Mmh. Pas vraiment.",
+        "content": "... <I>Mmh</>. Pas vraiment.",
         "npc": 900012,
         "next": 51151210
       },
@@ -60392,6 +61544,13 @@
     "icon": "Theater01"
   },
   {
+    "id": 900054,
+    "name": "Luno, au sifflet",
+    "camp": "NPC",
+    "type": "Normal",
+    "icon": "Theater01"
+  },
+  {
     "id": 910001,
     "name": "Berenica",
     "camp": "NPC",
@@ -60435,6 +61594,12 @@
   },
   {
     "id": 910103,
+    "name": "Marchand abyssal",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 910104,
     "name": "Marchand abyssal",
     "camp": "NPC",
     "type": "Normal"
@@ -60887,6 +62052,13 @@
     "name": "Rebecca",
     "camp": "NPC",
     "charId": 2101,
+    "type": "Normal"
+  },
+  {
+    "id": 992102,
+    "name": "Ada (?)",
+    "camp": "NPC",
+    "charId": 2102,
     "type": "Normal"
   },
   {
@@ -61391,6 +62563,24 @@
     "name": "{nickname}",
     "camp": "NPC",
     "charId": 160101,
+    "type": "Normal"
+  },
+  {
+    "id": 11112601,
+    "name": "« Le Chariot » Victor ?",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 11112701,
+    "name": "« Le Chariot » Victor ?",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 11117701,
+    "name": "« Le Chariot » Victor ?",
+    "camp": "NPC",
     "type": "Normal"
   },
   {

@@ -5,6 +5,7 @@ local M = Class({
 })
 local OnlineActionController = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionController")
 local OnlineActionCommon = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionCommon")
+local OnlineActionModel = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionModel")
 local OpenKey = OnlineActionCommon.OpenOnlineActionPageKey
 local TextKey = {
   KeyInfoList = {
@@ -21,18 +22,23 @@ local ImgKey = {
 function M:Show()
   self.Btn_Area.OnClicked:Clear()
   self.Btn_Area.OnClicked:Add(self, self.OnClick)
-  self:PlayAnimation(self.In)
+  self:BindIndicatorInAnimation()
+  ReddotManager.AddListenerEx("OnlineActionBtn", self, self.OnReddotNumChange)
+  EventManager:RemoveEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, self)
+  EventManager:AddEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, self, self.OnAutoAcceptChanged)
   self.Key_OnlineAction:CreateCommonKey(TextKey)
   self.Key_OnlineAction_GamePad:CreateCommonKey(ImgKey)
+  self:RefreshAutoAcceptNewState()
+  self:RefreshReddotState()
+  self:PlayAnimation(self.In)
   AudioManager(self):PlayUISound(self, "event:/ui/activity/online_invite_interact_start", "OnlineActionBtnShow", nil)
-  ReddotManager.AddListenerEx("OnlineActionBtn", self, self.OnReddotNumChange)
 end
 
 function M:OnReddotNumChange(Count, RdType, RdName)
-  if Count > 0 then
-    self:ShowOrHideReddot(true)
-  else
-    self:ShowOrHideReddot(false)
+  self.OnlineActionBtnReddotCount = Count or 0
+  self:RefreshAutoAcceptNewState()
+  self:ShowOrHideReddot(false)
+  if self.OnlineActionBtnReddotCount <= 0 then
     self:ShowOrHideBubble(0)
   end
 end
@@ -121,11 +127,45 @@ function M:Construct()
   end
 end
 
-function M:ShowOrHideReddot(bShow)
-  if bShow then
-  else
-    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+function M:RefreshAutoAcceptNewState()
+  if not self.New then
+    return
   end
+  local IsFirstShow = OnlineActionModel:IsAutoAcceptOnlineActionFirstShow()
+  local HasInvitation = OnlineActionModel:HaveOtherInvitation()
+  local HasApply = OnlineActionModel:HaveOtherApply()
+  local IsHostMode = OnlineActionController and 1 == OnlineActionController.OpenReason
+  local bShow = IsFirstShow and IsHostMode and not HasInvitation and not HasApply
+  self.New:SetVisibility(bShow and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
+function M:RefreshReddotState()
+  self:ShowOrHideReddot(false)
+end
+
+function M:BindIndicatorInAnimation()
+  if not self.In then
+    return
+  end
+  self:UnbindAllFromAnimationFinished(self.In)
+  self:BindToAnimationFinished(self.In, function()
+    if not IsValid(self) then
+      return
+    end
+    self:RefreshAutoAcceptNewState()
+    self:RefreshReddotState()
+  end)
+end
+
+function M:OnAutoAcceptChanged()
+  self:RefreshAutoAcceptNewState()
+end
+
+function M:ShowOrHideReddot(bShow)
+  if not self.Reddot then
+    return
+  end
+  self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:ShowOrHideBubble(BubbleKind)
@@ -187,7 +227,7 @@ function M:InitKeyboardUI()
 end
 
 function M:UpdateBubbleState()
-  local OnlineActionModel = require("BluePrints.UI.WBP.BattleOnlineAction.OnlineActionModel")
+  self:RefreshAutoAcceptNewState()
   local hasInvitation = OnlineActionModel:HaveOtherInvitation()
   local hasApply = OnlineActionModel:HaveOtherApply()
   local cur = self.BubbleKind or 0
@@ -224,6 +264,7 @@ function M:Destruct()
   ReddotManager.RemoveAllListener("OnlineActionBtn", self)
   EventManager:RemoveEvent("GameViewportInputKeyPressed", self)
   EventManager:RemoveEvent("GameViewportInputKeyReleased", self)
+  EventManager:RemoveEvent(EventID.OnBattleOnlineActionAutoAcceptChanged, self)
 end
 
 return M

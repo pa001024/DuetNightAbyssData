@@ -1908,6 +1908,175 @@
     ]
   },
   {
+    "id": 10209,
+    "icon": "Polearm_Zhuixin",
+    "名称": "Faucheuse d’obsidienne",
+    "版本": "1.5",
+    "描述": "Sa lame sanglante vise le cœur sans détour.\nTant que la lave brûlante n’a pas figé, il vous reste un instant — un seul — pour fuir votre destin.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "切割",
+    "攻击": 22,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.2,
+    "加成": {
+      "暴击": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Taux CRIT +50.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 3.0% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +60.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 3.6% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +70.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 4.2% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +80.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 4.8% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +90.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 5.4% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Taux CRIT +100.0%. Lorsqu’un coup critique est infligé avec cette arme, il y a 30.0% de chances d’augmenter les DGT CRIT de 6.0% pendant 15.0 s. Cumulable jusqu’à 25.0 fois. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "id": 1020101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.35,
+            "削韧": 20,
+            "卡肉": 0.1,
+            "取消": 0.2333,
+            "连段": 0.3
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.25,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "取消": 0.4333,
+            "连段": 0.6333
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.5,
+            "削韧": 35,
+            "取消": 0.2667,
+            "连段": 0.5667
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.4,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2333,
+            "连段": 0.5
+          },
+          {
+            "名称": "Dégâts du 5ᵉ coup",
+            "值": 0.75,
+            "削韧": 50,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.4333
+          }
+        ]
+      },
+      {
+        "id": 1020102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.1,
+            "削韧": 5,
+            "取消": 1.5
+          }
+        ],
+        "实体": [
+          {
+            "id": 1020101,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 50,
+              "BoxLength": 100,
+              "BoxWidth": 200
+            },
+            "时长": 15,
+            "速度": 3000,
+            "Vars": {
+              "IsHeavyAttack": true
+            },
+            "特效循环间隔": 0.2
+          }
+        ]
+      },
+      {
+        "id": 1020103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 0.47,
+            "削韧": 30,
+            "取消": 1.6333
+          }
+        ]
+      },
+      {
+        "id": 1020104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 0.4,
+            "削韧": 26,
+            "卡肉": 0.1,
+            "取消": 0.3333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10299,
     "icon": "Polearm_Yemei",
     "名称": "Conflit perpétuel",
@@ -2054,6 +2223,7 @@
             "id": 10299005,
             "名称": "Incessant – Assaut",
             "icon": "T_Rouge_Talent_ATK",
+            "描述": "ATQ du personnage +90.0%",
             "加成": {
               "ATQ": 0.9
             },
@@ -3048,19 +3218,22 @@
   {
     "id": 10399,
     "icon": "Claymore_Yemei",
-    "名称": "Espadon en acier",
-    "版本": "1.6",
-    "描述": "Un espadon ordinaire, forgé dans un métal bon marché. Même s’il venait à se briser, nul n’en éprouverait le moindre regret.",
+    "名称": "Braise souveraine",
+    "版本": "1.5",
+    "描述": "L’un des porteurs de cette arme était un roi. Le Dieu-Père récompensa son ambition. Le peuple se tenait derrière lui, acclamant son nom et célébrant ses conquêtes.\nIl ne cessa jamais d’avancer sur la voie de la conquête, convaincu que toujours plus de gens se rallieraient à lui. Mais ses ennemis, eux, ne firent que se multiplier. Il finit encerclé sur son trône, embrasa un grand feu et se réduisit en cendres avec sa gloire.",
     "类型": [
       "近战",
       "重剑"
     ],
-    "伤害类型": "震荡",
-    "攻击": 17,
-    "暴击": 0.24,
-    "暴伤": 2.1,
-    "触发": 0.2,
-    "加成": {},
+    "伤害类型": "灾厄",
+    "攻击": 21,
+    "暴击": 0.22,
+    "暴伤": 2.2,
+    "触发": 0.22,
+    "加成": {
+      "技能威力": 0.45,
+      "攻击": 0.9
+    },
     "突破": [
       {
         "Pièce": 2800,
@@ -3098,37 +3271,213 @@
         "Composant d’arme avancé : Ornement": 8
       }
     ],
-    "熔炼": [],
+    "熔炼": [
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
+    ],
     "熔炉": [
+      {
+        "lv": 0,
+        "技能": [
+          {
+            "id": 10399001,
+            "名称": "Braise – Embrasement",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Lorsque cette arme inflige des dégâts, elle confère 2.0 points de calamité. Le maximum de calamité est de 100.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez l’effet [Flammes dévorantes] : les DGT d’arme augmentent de 50.0% pendant 5.0 s."
+          }
+        ]
+      },
       {
         "lv": 1,
         "解锁": {
-          "Phoxène": 5
-        }
+          "Prototype : Braise souveraine": 36,
+          "Module de transfert d’affinité d’arme": 5,
+          "Insigne d’inflexibilité": 30,
+          "Insigne de foi": 30
+        },
+        "技能": [
+          {
+            "id": 10399002,
+            "名称": "Braise – Étincelle",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Au début du combat, confère 80.0 points de calamité.\nInfliger des dégâts avec une Arme de Consonance de mêlée confère 2.0 points de calamité.",
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10399003,
+            "名称": "Vacillante – Ascension",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Chaque déclenchement d’un Effet supplémentaire confère 4.0 points de calamité.",
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
       },
       {
         "lv": 2,
         "解锁": {
-          "Phoxène": 5
-        }
+          "Prototype : Braise souveraine": 42,
+          "Cristal Hydro": 20,
+          "Élixir d’aiguisage": 6,
+          "Insigne d’inflexibilité": 40,
+          "Insigne de foi": 40
+        },
+        "技能": [
+          {
+            "id": 10399004,
+            "名称": "Braise – Puissance",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Puissance de compétence": 0.45
+            },
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10399005,
+            "名称": "Vacillante – Assaut",
+            "icon": "T_Rouge_Talent_ATK",
+            "描述": "ATQ du personnage +90.0%",
+            "加成": {
+              "ATQ": 0.9
+            },
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
       },
       {
         "lv": 3,
         "解锁": {
-          "Phoxène": 5
-        }
+          "Prototype : Braise souveraine": 48,
+          "Cristal Hydro": 30,
+          "Cristal radieux": 5,
+          "Module de transfert d’affinité d’arme": 6,
+          "Insigne d’inflexibilité": 50,
+          "Insigne de foi": 50
+        },
+        "技能": [
+          {
+            "id": 10399006,
+            "名称": "Braise – Flammes",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Lorsque l’effet [Flammes dévorantes] est actif, les dégâts des Attaques chargées de l’Arme de Consonance de mêlée augmentent de 75.0%.",
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10399007,
+            "名称": "Vacillante – Brasier",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Lorsque l’effet [Flammes dévorantes] est actif, les dégâts des Attaques normales de l’Arme de Consonance de mêlée augmentent de 75.0%.",
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
       },
       {
         "lv": 4,
         "解锁": {
-          "Phoxène": 5
-        }
+          "Prototype : Braise souveraine": 54,
+          "Cristal Hydro": 50,
+          "Cristal radieux": 15,
+          "Élixir d’aiguisage": 6,
+          "Insigne d’inflexibilité": 60,
+          "Insigne de foi": 60
+        },
+        "技能": [
+          {
+            "id": 10399008,
+            "名称": "Braise – Poursuite",
+            "icon": "T_Rouge_Talent_BonusDamage",
+            "描述": "Dégâts supplémentaires de l’attribut +35.0%.",
+            "加成": {
+              "追加伤害": 0.35
+            },
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10399009,
+            "名称": "Vacillante – Perforation",
+            "icon": "T_Rouge_Talent_AttrPenetration",
+            "描述": "Pénétration de tous les attributs +20.0%.",
+            "解锁": {
+              "Prototype : Braise souveraine": 30,
+              "Cristal Lumino": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne d’inflexibilité": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
       },
       {
         "lv": 5,
         "解锁": {
-          "Phoxène": 5
-        }
+          "Prototype : Braise souveraine": 100,
+          "Cristal Hydro": 90,
+          "Cristal radieux": 20,
+          "Moule de fusion": 1,
+          "Insigne d’inflexibilité": 100,
+          "Insigne de foi": 100
+        },
+        "技能": [
+          {
+            "id": 10399010,
+            "名称": "Braise – Cendres",
+            "icon": "T_Rouge_Talent_Claymore_Zaie",
+            "描述": "Lorsque l’effet [Flammes dévorantes] est actif, le Taux CRIT, les DGT CRIT et la Chance de déclenchement de votre Arme de Consonance de mêlée augmentent de 25.0% des valeurs correspondantes de Braise souveraine."
+          }
+        ]
       }
     ],
     "技能": [
@@ -4586,8 +4935,16 @@
           {
             "名称": "Dégâts d’attaque chargée",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Dégâts finaux d’attaque chargée",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -4744,8 +5101,16 @@
           {
             "名称": "Dégâts d’attaque chargée",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Dégâts finaux d’attaque chargée",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -4902,8 +5267,16 @@
           {
             "名称": "Dégâts d’attaque chargée",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Dégâts finaux d’attaque chargée",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -5060,8 +5433,16 @@
           {
             "名称": "Dégâts d’attaque chargée",
             "值": 0.1,
-            "格式": "{%}×9",
+            "格式": "{%}×8",
             "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          },
+          {
+            "名称": "Dégâts finaux d’attaque chargée",
+            "值": 0.25,
+            "削韧": 12,
+            "延迟": 0.441,
             "卡肉": 0.03,
             "取消": 1.9
           }
@@ -5417,6 +5798,115 @@
     "射击间隔": 0.6667
   },
   {
+    "id": 20104,
+    "icon": "Pistol_Shengxue",
+    "名称": "Sanguis Sanctus – Pistolet",
+    "版本": "1.5",
+    "描述": "Le sang ardent finira par se tarir, mais la foi ne s’éteindra jamais.",
+    "类型": [
+      "远程",
+      "手枪"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 20,
+    "暴击": 0.23,
+    "暴伤": 2,
+    "触发": 0.3,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 0.65,
+    "最大射程": 2800,
+    "加成": {
+      "暴伤": 0.625
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "DGT CRIT +62.5%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 5.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
+      "DGT CRIT +75.0%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 6.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
+      "DGT CRIT +87.5%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 7.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
+      "DGT CRIT +100.0%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 8.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
+      "DGT CRIT +112.5%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 9.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme.",
+      "DGT CRIT +125.0%. Lorsqu’un ennemi est vaincu avec cette arme, obtient 1 cumul augmentant le Taux CRIT de 10.0% pendant 20.0 s, jusqu’à 15.0 cumuls. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "id": 2010401,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du projectile",
+            "值": 0.71,
+            "削韧": 100
+          },
+          {
+            "名称": "Dégâts d’explosion",
+            "值": 1,
+            "削韧": 100
+          },
+          {
+            "名称": "Rayon d’explosion",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "实体": [
+          {
+            "id": 2010411,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 5,
+              "BoxLength": 10,
+              "BoxWidth": 5
+            },
+            "时长": 3,
+            "速度": 15000,
+            "标签": [
+              "Bullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.5997
+  },
+  {
     "id": 20201,
     "icon": "Crossbow_Chixing",
     "名称": "Duo infâme",
@@ -5760,10 +6250,111 @@
     "射击间隔": 0.6667
   },
   {
+    "id": 20207,
+    "icon": "Crossbow_Leyuan",
+    "名称": "Le plus beau jour",
+    "版本": "1.5",
+    "描述": "Puisse chaque jour où nous sourions être le plus beau de notre vie.",
+    "类型": [
+      "远程",
+      "双枪"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 20,
+    "暴击": 0.21,
+    "暴伤": 2.1,
+    "触发": 0.3,
+    "弹匣": 20,
+    "最大弹药": 150,
+    "弹药转化率": 1.1,
+    "最大射程": 2800,
+    "加成": {
+      "昂扬": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Canon": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Canon": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Canon": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Canon": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Canon": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Canon": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Vigueur +15.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 7.5% pendant 18.0 s, jusqu’à 9.0 cumuls.",
+      "Vigueur +18.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 9.0% pendant 18.0 s, jusqu’à 9.0 cumuls.",
+      "Vigueur +21.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 10.5% pendant 18.0 s, jusqu’à 9.0 cumuls.",
+      "Vigueur +24.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 12.0% pendant 18.0 s, jusqu’à 9.0 cumuls.",
+      "Vigueur +27.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 13.5% pendant 18.0 s, jusqu’à 9.0 cumuls.",
+      "Vigueur +30.0%. Lorsqu’un personnage Hydro effectue une invocation, obtient 1 cumul augmentant les dégâts infligés par ses propres invocations de 15.0% pendant 18.0 s, jusqu’à 9.0 cumuls."
+    ],
+    "技能": [
+      {
+        "id": 2020701,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du projectile",
+            "值": 0.021,
+            "削韧": 1
+          }
+        ],
+        "实体": [
+          {
+            "id": 2020711,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          },
+          {
+            "id": 2020712,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.8116
+  },
+  {
     "id": 20298,
     "icon": "Crossbow_Yemei",
     "名称": "Doubles pistolets en acier",
-    "版本": "1.5",
+    "版本": "9.9",
     "描述": "Une paire de pistolets ordinaires, forgée dans un métal bon marché. Même s’ils venaient à se briser, nul n’en éprouverait le moindre regret.",
     "类型": [
       "远程",
@@ -5849,9 +6440,39 @@
         }
       }
     ],
-    "技能": [],
-    "装填": 0.8116,
-    "射击间隔": 0.6667
+    "技能": [
+      {
+        "id": 2020701,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du projectile",
+            "值": 0.021,
+            "削韧": 1
+          }
+        ],
+        "实体": [
+          {
+            "id": 2020711,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          },
+          {
+            "id": 2020712,
+            "时长": 7,
+            "速度": 6500,
+            "标签": [
+              "Bullet"
+            ]
+          }
+        ]
+      }
+    ],
+    "装填": 0.8116
   },
   {
     "id": 20301,

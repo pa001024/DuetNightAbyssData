@@ -366,6 +366,14 @@ function M:Destruct()
   M.Super.Destruct(self)
 end
 
+local function GetOrAddTreeNode(NodeName)
+  local Node = ReddotManager.GetTreeNode(NodeName)
+  if not Node then
+    ReddotManager.AddNode(NodeName)
+  end
+  return Node
+end
+
 function M:AddMainTabReddotListen()
   if self.IsPreviewMode then
     return
@@ -383,10 +391,24 @@ function M:AddMainTabReddotListen()
     "CharSkinLevelUp",
     "AppearanceEntrance",
     "NewMeleeAppearance",
-    "NewRangedAppearance"
+    "NewRangedAppearance",
+    CommonConst.DataType.WeaponAccessory
   }
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.Weapons then
+    for Uuid, Weapon in pairs(Avatar.Weapons) do
+      local BattleWeaponData = DataMgr.BattleWeapon[Weapon.WeaponId]
+      if BattleWeaponData and BattleWeaponData.ModApplicationType then
+        local ModApplicationType = BattleWeaponData.ModApplicationType
+        for _, ApplicationType in pairs(ModApplicationType or {}) do
+          local StanceFXNodeName = "WeaponStanceFX" .. ApplicationType
+          table.insert(NodeNames, StanceFXNodeName)
+        end
+      end
+    end
+  end
   for _, NodeName in ipairs(NodeNames) do
-    if ReddotManager.GetTreeNode(NodeName) then
+    if GetOrAddTreeNode(NodeName) then
       ReddotManager.AddListener(NodeName, self, ListenerFunc, nil, true)
       self.MainTabReddotNodeNames[NodeName] = 1
     end

@@ -1,4 +1,5 @@
 local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionTypes
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Init(RegionId)
@@ -8,8 +9,12 @@ function M:Init(RegionId)
     return
   end
   local RegionId = RegionId or DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId
-  local ImpressionAreaId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
-  local Impression = Avatar:GetRegionImpression(ImpressionAreaId)
+  local ImpressionAreaId = ImpressionModel:GetImpressionAreaIdFromRegionId(RegionId)
+  local Impression = ImpressionModel:GetRegionImpression(ImpressionAreaId)
+  if not Impression then
+    GWorld.logger.error("BP_DimensionDrawAreaBtn_C：Init()，Impression不存在")
+    return
+  end
   local RegionData = DataMgr.ImpressionRegion[ImpressionAreaId]
   local ImpressionMaxValue = RegionData and RegionData.AxisMax or DataMgr.GlobalConstant.ImressionMax.ConstantValue
   for Index, ImpressionType in pairs(ImpressionTypes) do

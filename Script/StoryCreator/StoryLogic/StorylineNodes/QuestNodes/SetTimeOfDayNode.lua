@@ -6,6 +6,8 @@ function SetTimeOfDayNode:Init()
   self.NeedLerp = false
   self.LerpTime = 0
   self.StopTimeElapse = false
+  self.RevertToDefaultWeather = false
+  self.ForceWeatherType = -1
 end
 
 function SetTimeOfDayNode:GetTimeElapseTag()
@@ -23,6 +25,12 @@ function SetTimeOfDayNode:Execute()
     self.EnvironmentManager:SetEnableTimeElapse(false, Tag)
   else
     self.EnvironmentManager:RevertEnableTimeElapse(Tag)
+  end
+  DebugPrint("SetTimeOfDayNode ForceWeatherType", self.ForceWeatherType, "RevertToDefaultWeather", self.RevertToDefaultWeather)
+  if self.RevertToDefaultWeather then
+    self.EnvironmentManager:SetForceWeather(false)
+  elseif self.ForceWeatherType >= 0 then
+    self.EnvironmentManager:SetForceWeather(true, self.ForceWeatherType)
   end
 end
 

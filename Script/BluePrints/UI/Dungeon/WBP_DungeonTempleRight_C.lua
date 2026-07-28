@@ -12,17 +12,20 @@ function M:Initialize(Initializer)
 end
 
 function M:InitListenEvent()
-  self:AddDispatcher(EventID.OnSetTempleLimit, self, self.OnSetTempleLimit)
-  self:AddDispatcher(EventID.OnTempleTimeChanged, self, self.OnTempleTimeChanged)
-  self:AddDispatcher(EventID.OnTempleScoreCollectChanged, self, self.OnTempleScoreCollectChanged)
-  self:AddDispatcher(EventID.OnTempleEnter, self, self.OnTempleEnter)
-  self:AddDispatcher(EventID.OnUpdatePartyRightUI, self, self.OnUpdatePartyRightUI)
-  self:AddDispatcher(EventID.OnUpdatePartyLeftUI, self, self.OnUpdatePartyTime)
+  if self.DungeonInfo.DungeonType == "Temple" or self.DungeonInfo.DungeonType == "Party" then
+    self:AddDispatcher(EventID.OnSetTempleLimit, self, self.OnSetTempleLimit)
+    self:AddDispatcher(EventID.OnTempleTimeChanged, self, self.OnTempleTimeChanged)
+    self:AddDispatcher(EventID.OnTempleScoreCollectChanged, self, self.OnTempleScoreCollectChanged)
+    self:AddDispatcher(EventID.OnTempleEnter, self, self.OnTempleEnter)
+    self:AddDispatcher(EventID.OnUpdatePartyRightUI, self, self.OnUpdatePartyRightUI)
+    self:AddDispatcher(EventID.OnUpdatePartyLeftUI, self, self.OnUpdatePartyTime)
+  elseif self.DungeonInfo.DungeonType == "WeaponVerify" then
+    self:AddDispatcher(EventID.OnUpdateWeaponVerifyTime, self, self.OnUpdateWeaponVerifyTime)
+  end
 end
 
 function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
-  self:InitListenEvent()
   self:InitInfo()
 end
 
@@ -36,6 +39,7 @@ function M:InitInfo()
   if not self.DungeonInfo then
     return
   end
+  self:InitListenEvent()
   if self.DungeonInfo.DungeonType == "Temple" then
     self.TempleInfo = DataMgr.Temple[self.DungeonId]
     self.IsCountDown = false
@@ -47,6 +51,8 @@ function M:InitInfo()
     self.TempleInfo = DataMgr.Party[self.DungeonId]
     self.IsCountDown = false
     self:InitParty()
+  elseif self.DungeonInfo.DungeonType == "WeaponVerify" then
+    self:InitWeaponVerify()
   end
   for _, T in pairs(DataMgr.TempleEventLevel) do
     if T.TempleId == self.DungeonId and true == T.IsHardMode then
@@ -279,7 +285,6 @@ function M:OnTempleTimeChanged(CurrentTime, ThresholdTime)
 end
 
 function M:ConstructInfo()
-  self:InitListenEvent()
   self:InitInfo()
 end
 
@@ -350,6 +355,63 @@ function M:SwitchStarType()
     local Tex_Empty = LoadObject(ButtonIconPath_Empty)
     self["TempleItem_" .. i].Image_Star:SetBrushFromTexture(Tex_Star)
     self["TempleItem_" .. i].Image_Empty:SetBrushFromTexture(Tex_Empty)
+  end
+end
+
+function M:InitWeaponVerify()
+  self.Group_Score:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Group_Rank:SetVisibility(ESlateVisibility.Collapsed)
+  self.Group_TempleGoal:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.IsWeaponVerify = true
+  self:InitWeaponVerifyTargetInfo()
+end
+
+function M:InitWeaponVerifyTargetInfo()
+  self.Text_ScoreTitle:SetText(GText("UI_TEMPLE_LIMIT_TIME"))
+  self.WeaponVerifyTotalTime = DataMgr.WeaponVerify[self.DungeonId].TotalTime
+  self.Text_ScoreNum:SetText(self:GetTimeStr(self.WeaponVerifyTotalTime))
+  self.CurTime = self.WeaponVerifyTotalTime
+  self.WeaponVerifyLevelGoal = DataMgr.WeaponVerifyEventLevel[self.DungeonId].LevelGoalRequiredTime
+  for i = 1, 3 do
+    local GoalTime = self.WeaponVerifyLevelGoal[i]
+    if GoalTime < 0 then
+      self["TempleItem_" .. i]:SetTargetInfo(GText("WeaponVerify_Target_FinishLevel"))
+    else
+      self["TempleItem_" .. i]:SetTargetInfo(string.format(GText("WeaponVerify_Target_LevelLimitTime"), GoalTime))
+    end
+  end
+  self:InitWeaponVerifyStar()
+end
+
+function M:OnUpdateWeaponVerifyTime(RemainTime)
+  self.Text_ScoreNum:SetText(self:GetTimeStr(RemainTime))
+  self.CurTime = RemainTime
+  self:CheckWeaponVerifyStar()
+end
+
+function M:InitWeaponVerifyStar()
+  self.CurStar = 0
+  for i = 1, 3 do
+    local GoalTime = self.WeaponVerifyLevelGoal[i]
+    if GoalTime < 0 or GoalTime <= self.CurTime then
+      self.CurStar = i
+      self["TempleItem_" .. i]:PlayStarAnimationToWeaponVerify()
+    else
+      self["TempleItem_" .. i]:PlayNormalAnimationToWeaponVerify()
+    end
+  end
+end
+
+function M:CheckWeaponVerifyStar()
+  local RemainTime = self.CurTime
+  if self.CurStar > 0 and RemainTime < self.WeaponVerifyLevelGoal[self.CurStar] and self.WeaponVerifyLevelGoal[self.CurStar] > 0 then
+    self["TempleItem_" .. self.CurStar]:PlayLossAnimationToWeaponVerify()
+    self.CurStar = self.CurStar - 1
+    AudioManager(self):PlayUISound(self, "event:/ui/common/sp_goal_disable", nil, nil)
+  elseif self.CurStar < 3 and (RemainTime >= self.WeaponVerifyLevelGoal[self.CurStar + 1] or self.WeaponVerifyLevelGoal[self.CurStar + 1] < 0) then
+    self["TempleItem_" .. self.CurStar + 1]:PlayStarAnimationToWeaponVerify()
+    self.CurStar = self.CurStar + 1
+    AudioManager(self):PlayUISound(self, "event:/ui/common/sp_goal_enable", nil, nil)
   end
 end
 

@@ -13,7 +13,7 @@ function ReturnUtils.GetCurrentEventSchemeId()
     return nil
   end
   local CurComeBackData = Avatar.ComeBacks[CurrentEventId] or nil
-  if not Avatar then
+  if not (Avatar and CurComeBackData) or not CurComeBackData.EventSchemeId then
     return nil
   end
   return CurComeBackData.EventSchemeId

@@ -180,6 +180,26 @@ end
 function M:ShoworHideTopTab(bShow)
 end
 
+function M:GetTabTopHeight()
+  if self.Tab_Top and self.Tab_Top.Slot then
+    return self.Tab_Top.Slot:GetSize().Y
+  end
+  return 0
+end
+
+function M:SetSliderZoomVisible(Visible)
+  if not self.Slider_Zoom then
+    return
+  end
+  self.Slider_Zoom:SetVisibility(Visible and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+end
+
+function M:BindAutoOutOnFinished(Callback)
+  if self.Auto_Out then
+    self:BindToAnimationFinished(self.Auto_Out, Callback)
+  end
+end
+
 function M:UpdateWildMapKeys()
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" then
     return
@@ -225,8 +245,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnSpaceDown()
-  if self.RealWildMap and self.RealWildMap.KeyLocPanel then
-    self.RealWildMap.KeyLocPanel:OnOpenClick()
+  if self.RealWildMap then
+    self.RealWildMap:OpenKeyLocPanel()
   end
 end
 
@@ -261,6 +281,22 @@ function M:GoToCurrentPosition()
   self.RealWildMap:GoToCurrentPosition()
 end
 
+function M:AddChildToConvey(Widget)
+  if self.Convey then
+    self.Convey:AddChild(Widget)
+  elseif self.RealWildMap and self.RealWildMap.Convey then
+    self.RealWildMap.Convey:AddChild(Widget)
+  end
+end
+
+function M:AddChildToPosSoloTreasureKeyLocation(Widget)
+  if self.Pos_SoloTreasure_KeyLocation then
+    self.Pos_SoloTreasure_KeyLocation:AddChild(Widget)
+  elseif self.RealWildMap and self.RealWildMap.Pos_SoloTreasure_KeyLocation then
+    self.RealWildMap.Pos_SoloTreasure_KeyLocation:AddChild(Widget)
+  end
+end
+
 function M:OpenSelectList(SelectTable)
   if self.ScrollBox_Interactive:GetChildrenCount() > 0 then
     return
@@ -272,7 +308,7 @@ function M:OpenSelectList(SelectTable)
     local ItemSize = FVector2D(612, 60)
     local AbsolutePosition = UUIFunctionLibrary.GetGeometryAbsolutePosition(SelectTable[1]:GetCachedGeometry())
     local LocalPosition = USlateBlueprintLibrary.AbsoluteToLocal(self.Panel_Interactive:GetCachedGeometry(), AbsolutePosition)
-    local MaxSize = self.RealWildMap.ScreenSize * 2 - self.RealWildMap.BgHeight
+    local MaxSize = self.RealWildMap:GetMaxSize()
     local Alignment = self.Overlay_Interactive.Slot:GetAlignment()
     if LocalPosition.Y + #SelectTable * ItemSize.Y >= MaxSize.Y then
       Alignment:Set(0, 1)

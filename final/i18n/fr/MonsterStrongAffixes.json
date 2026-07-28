@@ -75,6 +75,20 @@
     }
   },
   {
+    "id": "Mon.Strong.Empower",
+    "name": "Mon_Guide_Title_Strong_Empower",
+    "desc": "",
+    "vars": {
+      "BUFF持续": 5,
+      "加成": {
+        "移动速度": 0.5,
+        "DamagedRate": 0.5,
+        "DamageRate": 0.5,
+        "技能速度": 0.8
+      }
+    }
+  },
+  {
     "id": "Mon.Strong.Fade",
     "name": "Ordonnateur — Flétrissure",
     "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nL’Ordonnateur — Flétrissure invoque régulièrement trois [Rayons flétrissants].\nCes rayons persistent 10 s et tournent autour de l’Ordonnateur, infligeant des dégâts aux cibles touchées et réduisant leur Lucidité.",
@@ -87,7 +101,7 @@
   {
     "id": "Mon.Strong.Frozen",
     "name": "Ordonnateur — Morsure de givre",
-    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nLorsqu’un Ordonnateur — Morsure de givre est touché par une attaque à distance, il projette des pointes de glace vers l’attaquant, infligeant des dégâts et appliquant 1 cumul de [Ralentissement].\n[Ralentissement] : réduit la Vitesse d’attaque et la Vitesse de déplacement pendant 3 s, jusqu’à 5 cumuls.",
+    "desc": "Les Ordonnateurs sont des ennemis d’élite dotés de capacités d’Ordonnateur.\nLorsqu’un Ordonnateur — Morsure de givre est touché par une attaque à distance, il projette des pointes de glace vers l’attaquant, infligeant des dégâts et appliquant 1 cumul de [Ralentissement] pendant 3 s, jusqu’à 5 cumuls.",
     "vars": {
       "飞行速度": 1500,
       "持续时间": 5,
@@ -279,6 +293,15 @@
       "持续时间": 9,
       "最大召唤数量": 1,
       "每次召唤数量": 1
+    }
+  },
+  {
+    "id": "Mon.Strong.Shred",
+    "name": "Mon_Guide_Title_Strong_Shred",
+    "desc": "",
+    "vars": {
+      "飞行速度": 0,
+      "持续时间": 5
     }
   },
   {

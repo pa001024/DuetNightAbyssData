@@ -115,4 +115,14 @@ function Component:_CheckModArchiveRewardReddot()
   end
 end
 
+function Component:_OnPropChangeHoldMods(keys, OldValue)
+  local Timer = "DelayOnPropChangeHoldMods"
+  if GWorld.GameInstance:IsExistTimer(Timer) then
+    GWorld.GameInstance:RemoveTimer(Timer)
+  end
+  GWorld.GameInstance:AddTimer(0.5, function()
+    self:RefreshModArchiveReddot()
+  end, false, 0, Timer, true)
+end
+
 return Component

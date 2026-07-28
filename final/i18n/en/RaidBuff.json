@@ -58,5 +58,17 @@
       "10%",
       "50%"
     ]
+  },
+  {
+    "RaidBuffID": 15,
+    "RaidBuffDes": "When a Hydro character's Skill Intensity exceeds 100%, PEN Stats increase by 5% for every 40% above 100%, up to 50%.",
+    "RaidBuffParameter": [
+      "40%",
+      "5%",
+      "50%",
+      null,
+      "10%",
+      "50%"
+    ]
   }
 ]

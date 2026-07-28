@@ -4,6 +4,9 @@ local AprilFoolDayUtils = require("BluePrints.UI.WBP.Activity.Widget.Fool.AprilF
 local AutoChessRewardModel = require("BluePrints.UI.AutoChess.WBP_AutoChess_Reward_Model")
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 local SoloTreasure = require("BluePrints.UI.WBP.SoloTreasure.Widget.WBP_SoloTreasure_Reward_Model")
+local SoloTreasurePermanentDataModel = require("BluePrints.UI.UI_PC.SoloTreasure.SoloTreasurePermanentDataModel")
+local RacingActivityConst = require("BluePrints.UI.WBP.Activity.Widget.Racing.RacingActivityConst")
+local RacingOutsiderModel = require("BluePrints.UI.WBP.Activity.Widget.Racing.Outsider.RacingOutsiderModel")
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildModel = GuildController:GetModel()
 local Component = {}
@@ -157,8 +160,12 @@ function Component:_OnPropChangeCommonQuestActivity(EventIDs, OldValue)
       end
     end
   end
+  SoloTreasurePermanentDataModel:RefreshLimitRewardReddot()
   if ActivityUtils.CheckEventIsOpen(CommonConst.AutoChessEventId, nil, false) then
     AutoChessRewardModel:RefreshReddotInfo()
+  end
+  if self:CheckActivityIfNeedRefresh(RacingActivityConst.ActivityEventId) then
+    RacingOutsiderModel:RefreshReddotInfo()
   end
   for _, EventId in pairs(EventIDs) do
     if EventId == GuildCommon.GuildDummyEventId then
@@ -168,6 +175,18 @@ function Component:_OnPropChangeCommonQuestActivity(EventIDs, OldValue)
       EventManager:FireEvent(EventID.RefreshAcvitityRewardPanel)
     end
   end
+end
+
+function Component:CheckActivityIfNeedRefresh(ActivityId)
+  local NeedRefresh = false
+  if ActivityUtils.CheckEventIsOpen(ActivityId, nil, false) and DataMgr.EventPortal and DataMgr.EventPortal[ActivityId] then
+    local ConditionId = DataMgr.EventPortal[ActivityId].JumpUnlockCondition
+    local PlayerAvatar = GWorld:GetAvatar()
+    if ConditionId and ConditionUtils.CheckCondition(PlayerAvatar, ConditionId) then
+      NeedRefresh = true
+    end
+  end
+  return NeedRefresh
 end
 
 function Component:OnLoginSuccess()
@@ -188,6 +207,7 @@ function Component:OnLoginSuccess()
       end
     end
   end
+  SoloTreasurePermanentDataModel:RefreshLimitRewardReddot(true)
 end
 
 return Component

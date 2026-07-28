@@ -149,5 +149,33 @@
     "access": [
       "稜鏡商店限時兌換"
     ]
+  },
+  {
+    "id": 1011,
+    "name": "擬真玄色狴犴·晴藍",
+    "des": "由公尚研發的機樞載具，如同真正的玄色狴犴一般逼真。若是騎著它在煙津渡橫衝直撞，定然會引來路人紛紛瞠目吧。",
+    "icon": "Mounts_0012",
+    "resourceIcon": "Icon_Mounts_0012",
+    "rarity": 4,
+    "sort": 97,
+    "resourceId": 49988,
+    "fly": 1,
+    "access": [
+      "商店"
+    ]
+  },
+  {
+    "id": 1012,
+    "name": "銀翼騎士·晴藍",
+    "des": "不朽將逝去，如眼淚消失在雨中。",
+    "icon": "Mounts_0013",
+    "resourceIcon": "Icon_Mounts_0013",
+    "rarity": 5,
+    "sort": 99,
+    "resourceId": 49987,
+    "fly": 1,
+    "access": [
+      "商店"
+    ]
   }
 ]

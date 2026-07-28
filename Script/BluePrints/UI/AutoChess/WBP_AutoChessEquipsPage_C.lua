@@ -64,8 +64,10 @@ function View:GetDefaultControllerFSMState()
 end
 
 function View:InitGamepadView()
-  self.List_Item:SetFocus()
-  self.List_Item:NavigateToIndex(0)
+  if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
+    self.List_Item:SetFocus()
+    self.List_Item:NavigateToIndex(0)
+  end
 end
 
 function View:InitKeyboardView()

@@ -80,7 +80,7 @@ local function FormatProperties(M)
     implement = require(implement_name)
   end
   for name, prop in pairs(implement) do
-    if prop.is_prop then
+    if type(prop) == "table" and prop.is_prop then
       prop:SetName(name)
       props[name] = prop
       if prop.save then
@@ -95,7 +95,7 @@ local function FormatProperties(M)
       if prop.cross then
         cross_props[#cross_props + 1] = name
       end
-    elseif prop.is_getter then
+    elseif type(prop) == "table" and prop.is_getter then
       getters[name] = prop
     end
   end

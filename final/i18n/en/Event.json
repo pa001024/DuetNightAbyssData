@@ -105,6 +105,20 @@
     "endTime": 1785790800
   },
   {
+    "id": 101016,
+    "name": "Shh! The Parade Begins",
+    "desc": "Welcome to Arcano, the home you came from — our paradise, everlasting and inviolate.\nSign in for 5 days during the event to claim gifts.",
+    "startTime": 1788400800,
+    "endTime": 1789419600
+  },
+  {
+    "id": 101017,
+    "name": "White Bunnies' Invitation",
+    "desc": "Log in for 7 days to claim rewards",
+    "startTime": 1785117600,
+    "endTime": 1788771600
+  },
+  {
     "id": 102001,
     "name": "Huaxu — Incense and Marvels",
     "desc": "Huaxu — a tranquil land wreathed in incense.\nYou arrive by invitation, awaiting the vision Zhiliu has promised to paint: a scene both timeless and unseen.",
@@ -119,6 +133,13 @@
     "endTime": 1785142800
   },
   {
+    "id": 102003,
+    "name": "Bloomfield Station: Tales Untold",
+    "desc": "On the eve of the Silver Star's journey south, Bloomfield Station was still alive with stories of its own.\nComplete the new Bloomfield Station questline to claim rewards.",
+    "startTime": 1785117600,
+    "endTime": 1788771600
+  },
+  {
     "id": 103001,
     "name": "Mystic Maze",
     "desc": "Allow me to lead you onto the endless pathways of time.",
@@ -128,7 +149,7 @@
   {
     "id": 103002,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1761512400,
     "endTime": 1764018000,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -277,7 +298,7 @@
     "desc": "During the event, you can obtain skins from the [Whispers Unspoken] series and other skin rewards.",
     "startTime": 1777946400,
     "endTime": 1780304400,
-    "rule": "1. This event features 2 rounds, each containing 8 rewards. One of these rewards is the featured skin. Once you obtain the featured skin in a round, you will immediately receive all remaining rewards from that round.\n2. Before making your first weave in a round, you can freely adjust the featured skin and the selected rewards for that round. Once you have made a weave in that round, you will no longer be able to change the featured skin or selected rewards.\n3. Rewards within the same round will not be obtained more than once. As the number of remaining rewards decreases, the probability of obtaining each remaining reward increases proportionally. After completing a round, the reward probabilities reset to their initial values.\n4. The initial probabilities for each reward are as follows:\n[Character Skin]: 0.08%\n[Helix Leap Effect]: 0.92%\n[Upper-Backpiece]: 1%\n[Headpiece]: 2%\n[Avatar Frame]: 13%\n[Avatar]: 13%\n[Iridescent Dye ×3]: 35%\n[Commission Manual: Volume Ⅲ ×6]: 35%\n5. The number of Starweave Threads consumed per weave increases with the number of weaves made. After completing a round, the consumption amount resets to its initial value.\nStarweave Threads required per weave:\n1st weave: Starweave Thread ×1\n2nd weave: Starweave Thread ×3\n3rd weave: Starweave Thread ×6\n4th weave: Starweave Thread ×10\n5th weave: Starweave Thread ×15\n6th weave: Starweave Thread ×20\n7th weave: Starweave Thread ×25\n8th weave: Starweave Thread ×30"
+    "rule": "\n1. This event features 2 rounds, each containing 8 rewards. One of these rewards is the featured skin. Once you obtain the featured skin in a round, you will immediately receive all remaining rewards from that round.\n2. Before making your first weave in a round, you can freely adjust the featured skin and the selected rewards for that round. Once you have made a weave in that round, you will no longer be able to change the featured skin or selected rewards.\n3. Rewards within the same round will not be obtained more than once. As the number of remaining rewards decreases, the probability of obtaining each remaining reward increases proportionally. After completing a round, the reward probabilities reset to their initial values.\n4. The initial probabilities for each reward are as follows:\n[Character Skin]: 0.08%\n[Helix Leap Effect]: 0.92%\n[Upper-Backpiece]: 1%\n[Headpiece]: 2%\n[Avatar Frame]: 13%\n[Avatar]: 13%\n[Iridescent Dye ×3]: 35%\n[Commission Manual: Volume Ⅲ ×6]: 35%\n5. The number of Starweave Threads consumed per weave increases with the number of weaves made. After completing a round, the consumption amount resets to its initial value.\nStarweave Threads required per weave:\n1st weave: Starweave Thread ×1\n2nd weave: Starweave Thread ×3\n3rd weave: Starweave Thread ×6\n4th weave: Starweave Thread ×10\n5th weave: Starweave Thread ×15\n6th weave: Starweave Thread ×20\n7th weave: Starweave Thread ×25\n8th weave: Starweave Thread ×30"
   },
   {
     "id": 103022,
@@ -300,6 +321,29 @@
     "startTime": 1780279200,
     "endTime": 1785142800,
     "rule": "During the event, complete collection tasks in the Cosmetics Collection list to earn cosmetic points. Spend Phoxene to unlock and claim bountiful rewards."
+  },
+  {
+    "id": 103025,
+    "name": "Golden Journey: Geniemon Derby",
+    "desc": "To Eisenbahn, time is everything. For the glory of Bloomfield Station, every employee is expected to keep pushing for greater speed — their Geniemons included.",
+    "startTime": 1785981600,
+    "endTime": 1787000400,
+    "rule": "<H>Golden Journey: Geniemon Derby Event Rules</>\n\n1. Once the event begins, the Prediction Phase runs daily from 05:00 to 20:00. During this time, you can select up to 6 racers to support via the event interface and submit Geniemon Medals as backing. You may change your chosen racers during this phase; submitted medals cannot be withdrawn, only added to.\n2. During the Prediction Phase, you can check each racer's status. Their starting speed for the day is determined by their base speed combined with their daily condition. You can spend Geniemon Medals to gather intel on racers' status.\n3. The Results Sync Phase runs from 20:00 to 20:30. During this time, you cannot change your selected racers or submit additional medals.\n4. The Results Phase runs from 20:30 to 05:00 the each day. During this time, you can visit the race venue, view the results, and claim your prediction rewards.\n5. If you did not select any racers or submit medals during the Prediction Phase, you will only be able to view the results and will not be able to claim prediction rewards.\n6. Prediction rewards must be claimed before 05:00 the following day. Please claim them in time."
+  },
+  {
+    "id": 103026,
+    "name": "Edge of Trial",
+    "desc": "Cross blades with worthy rivals and sharpen your edge.",
+    "startTime": 1786586400,
+    "endTime": 1788210000,
+    "rule": "1. After clearing a stage, the character, melee weapon, ranged weapon, and Buff Effects used in that stage will be locked.\n2. Each Difficulty has its own Buff Pool.\n3. Earn rewards based on the total number of Stars obtained."
+  },
+  {
+    "id": 103027,
+    "name": "Treasure Hunt Trials",
+    "desc": "A simulation modelled on Huaxu's Incense Proving. Clear trial stages to earn generous rewards.",
+    "startTime": 1785117600,
+    "endTime": 1788814800
   },
   {
     "id": 105001,
@@ -365,6 +409,13 @@
     "endTime": 1788382800
   },
   {
+    "id": 109004,
+    "name": "Paradise's 22nd White Bunny",
+    "desc": "Head to the [Event Webpage] to claim your gift.",
+    "startTime": 1788400800,
+    "endTime": 1791925200
+  },
+  {
     "id": 110001,
     "name": "Wishen's Daring Adventures",
     "desc": "Unfulfilled thoughts, ungranted wishes... With the arrival of these inexplicable beings, adventure stirs once more.",
@@ -404,6 +455,14 @@
     "rule": "Event Rules:\n1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.\n2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.\n3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.\n4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.\n5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.\n \nStage Rules:\n1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.\n2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.\n3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.\n4. If you fail to clear the stage, you will still earn points based on your progress when the time runs out."
   },
   {
+    "id": 111005,
+    "name": "Phoxhunter Summit",
+    "desc": "Competition is etched into the very bones of humanity — the primal drive that has pushed our kind to grow, thrive, and endure.\nBut this is not the law of the jungle. This is disciplined rivalry — the fire that fuels a team, and the forge where legends are made.",
+    "startTime": 1787709600,
+    "endTime": 1789160400,
+    "rule": "Event Rules:\n1. The Phoxhunter Summit is divided into two phases: the Group Stage (Preliminaries) and Apex Rankings (Finals). The event begins with the Group Stage.\n2. In the Group Stage, your Phoxhunter Team earns points based on battle performance. Your highest score determines your group placement. Rewards are distributed based on group placement when the stage ends, so be sure to claim them on the event page. The Apex Rankings phase begins immediately afterwards.\n3. In the Apex Rankings phase, your team earns Ranking Points based on performance in each stage. Your highest Ranking Point total determines your placement within the group. Each Apex Rankings attempt consumes a Team Pass and awards a set amount of Phoxcoins according to the Ranking Points gained.\n4. Phoxcoins can be exchanged for items in the Apex Shop. Certain items unlock based on your highest Ranking Point total in the Apex Rankings phase.\n5. Teams that skip the Group Stage will not be placed in a group or appear in group rankings during the Apex Rankings. However, they may still challenge Apex Rankings stages to earn Phoxcoins and exchange them in the Apex Shop, including for items unlocked by reaching higher Ranking Point milestones.\n \nStage Rules:\n1. In Group Stage challenges, defeat the required number of enemies within the time limit to clear the stage.\n2. In Apex Rankings challenges, defeating standard enemies also deals bonus damage to the extreme-threat enemy. Clear the stage by defeating the extreme-threat enemy within the time limit.\n3. You'll earn bonus points based on remaining time in both Group Stage and Apex Rankings challenges.\n4. If you fail to clear the stage, you will still earn points based on your progress when the time runs out."
+  },
+  {
     "id": 112001,
     "name": "Starry Sojourn",
     "desc": "Claim rewards based on your total time spent in Regional Co-op during the event",
@@ -423,6 +482,13 @@
     "desc": "Claim rewards based on your total time spent in Regional Co-op during the event",
     "startTime": 1783562400,
     "endTime": 1785142800
+  },
+  {
+    "id": 112004,
+    "name": "Starry Sojourn",
+    "desc": "Claim rewards based on your total time spent in Regional Co-op during the event",
+    "startTime": 1785981600,
+    "endTime": 1787518800
   },
   {
     "id": 113001,
@@ -446,6 +512,13 @@
     "endTime": 1785142800
   },
   {
+    "id": 121002,
+    "name": "Immersive Theatre",
+    "desc": "Together, we decide where the story will lead. Step onto the stage, and let us bring this performance to its perfect finale.",
+    "startTime": 1785981600,
+    "endTime": 1788771600
+  },
+  {
     "id": 1020012,
     "name": "Huaxu — Incense and Marvels: Ⅱ",
     "desc": "Huaxu — a tranquil land wreathed in incense.\nYou arrive by invitation, awaiting the vision Zhiliu has promised to paint: a scene both timeless and unseen.",
@@ -455,7 +528,7 @@
   {
     "id": 1030022,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1764018000,
     "endTime": 1766437200,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -463,7 +536,7 @@
   {
     "id": 1030023,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1766437200,
     "endTime": 1768874400,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -471,7 +544,7 @@
   {
     "id": 1030024,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1768874400,
     "endTime": 1770688800,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -479,7 +552,7 @@
   {
     "id": 1030025,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1770688800,
     "endTime": 1773108000,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -487,7 +560,7 @@
   {
     "id": 1030026,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1773108000,
     "endTime": 1775466000,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -495,7 +568,7 @@
   {
     "id": 1030027,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1775527200,
     "endTime": 1777946400,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -503,7 +576,7 @@
   {
     "id": 1030028,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1777946400,
     "endTime": 1780304400,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -511,7 +584,7 @@
   {
     "id": 1030029,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1780365600,
     "endTime": 1782784800,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -519,7 +592,7 @@
   {
     "id": 1030030,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": 1782784800,
     "endTime": 1785142800,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
@@ -527,9 +600,25 @@
   {
     "id": 1030031,
     "name": "Immersive Theatre",
-    "desc": "Spectator and protagonist - the choice is yours. Step into the fray, where courage meets towering foes, and victory awaits.",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
     "startTime": null,
     "endTime": null,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030032,
+    "name": "Immersive Theatre",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
+    "startTime": 1785204000,
+    "endTime": 1787018400,
+    "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
+  },
+  {
+    "id": 1030033,
+    "name": "Immersive Theatre",
+    "desc": "Spectator or protagonist — the choice is yours. Step into the fray, where courage faces towering foes... and victory awaits.",
+    "startTime": 1787018400,
+    "endTime": 1788771600,
     "rule": "<Title>About Immersive Theatre</>\n1. Immersive Theatre is divided into three sections: [Classic Repertoire], [Featured Repertoire], and [Immortal Repertoire]. Complete each section to unlock the next.\n[Classic Repertoire] are one-time challenges. [Featured Repertoire] and [Immortal Repertoire] rotate with version updates. [Immortal Repertoire] also include permanent stages that can be replayed after meeting certain conditions.\n2. Defeat all opponents within the time limit to clear a stage. Completing a stage awards [Stars] and [Ticket Stubs]. Stars unlock milestone rewards. Ticket Stubs can be exchanged for items at the Theatre Gift Shop.\n3. [Classic Repertoire] and [Featured Repertoire] include two rounds per stage: [Hero's Odyssey] and [Hero's Way Home]. You must use different teams for each round. Final rewards are based on your total stars earned across both rounds. [Immortal Repertoire] includes only [Hero's Odyssey].\n4. Each round consists of 5 rooms that must be cleared in order. Clear all rooms in both [Hero's Odyssey] and [Hero's Way Home] to unlock the next act. Failing to defeat the opponent or running out of time in any room will prevent further progress.\n5. All stages feature [Stage Score] — a unique mechanic that grants buffs or debuffs during battle. You can adjust your strategy based on the effects in play."
   },
   {
@@ -557,6 +646,14 @@
     "rule": "<H>Luno's Rail Rumpus Event Rules</>\n1. After the event starts, you can sign up for the event with <H>Lunotoot</> at <H>Bloomfield Station</>.\n2. In <H>Lunoball</>, follow Luno's instructions on the stage and display the matching <H>Geniemon</> and <H>posture</> to receive rewards. To meet the requirement, you can simply display the same type of Geniemon. Release the skill of Miraculous Bro Boxie to meet the requirement of <H>Shiny Bro Boxie</> and <H>Ardent Bro Boxie</>.\n3. If you meet one or more requirements in each <H>Lunoball</>, you can get <H>premium rewards</> at the end of the ball. Each account can get <H>Premium Rewards</> <H>5</> times at most during the event period, and after that, even if more reqirements are met, only <H>regular rewards</> will be granted. The interval between two <H>Lunoballs</> is half an hour.\n4. In <H>Festive Gathering: Bloomfield Station</>, rewards will be sent via mail after a certain progress of delivering materials.\n5. In <H>Festive Gathering: Bloomfield Station</>, clicking [Auto-Add] will automatically add deliverable materials according to the quality of the materials.\n6. In <H>Festive Gathering: Bloomfield Station</>, the [Auto-Add] function becomes unavailable once all delivery milestones are complete. You can still manually add and deliver materials to finish quests and claim rewards."
   },
   {
+    "id": 10301601,
+    "name": "Great Chaos of Mechapuppets",
+    "desc": "For as long as anyone can remember, people have argued themselves hoarse over who's stronger — even when they're from completely different worlds. Thanks to Master Gongshang, you can finally stop bickering and settle it on the board. Deploy the mechapuppets, and let the outcome speak for itself.",
+    "startTime": 1785376800,
+    "endTime": 1788771600,
+    "rule": "1. In Great Chaos of Mechapuppets, you need to strategically equip Runes and deploy Mechapuppets to clear boards. Complete Board Insights to earn generous rewards.\n2. Master Gongshang's Boards will open over time. Clearing a board unlocks new Mechapuppets and Runes in Board Insights. Clearing specific boards also raises your Rank cap.\n3. Clear Endless Games to earn Match Points. Accumulating points increases your Rank. Each Rank up also grants rewards via Board Insights and unlocks more challenging Endless Games for greater clearance rewards. Endless Games can be refreshed 5 times a day.\n4.You can customise your lineup for Endless Game challenges and take on more formidable boards.\n5. Completing Board Insights unlocks more powerful Mechapuppets and Runes, aiding you in clearing harder boards. Visit the Board Insights interface to view all available objectives.\n6. After unlocking a variety of Mechapuppets, Runes, and match challenges, you can build your own powerful lineup and challenge other Phoxhunters via match invitations.\n7. This season of Great Chaos of Mechapuppets features 9 Ranks in total. They are: \nFirst Steps\nMeasured Moves\nOpening Plays\nMidgame Clash\nInspired Plays\nRelentless Advance\nMasterful Control\nBeyond the Board\nGrand Master"
+  },
+  {
     "id": 10302001,
     "name": "Starry Gleanings",
     "desc": "Complete commissions during the event to claim rewards",
@@ -579,12 +676,50 @@
     }
   },
   {
+    "id": 10302002,
+    "name": "Starry Gleanings Ⅱ",
+    "desc": "Complete quests during the event to claim rewards",
+    "startTime": 1787191200,
+    "endTime": 1788209999,
+    "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Use 3 Starglow Coins to open each gift.\n2. Complete quests to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.\n3. Open up to 16 Starglow Gifts to claim Prismatic Hourglasses, Phoxene, Starweave Thread, Starglint, and all cosmetic rewards.",
+    "boxDrop": {
+      "boxCoinId": 224,
+      "boxMaximum": 24,
+      "boxPerDay": 2,
+      "coinPerBox": 3,
+      "eventId": 10302002,
+      "questId": [
+        1030200201,
+        1030200202,
+        1030200203,
+        1030200204,
+        1030200205,
+        1030200206
+      ],
+      "rewardCount": [
+        16
+      ],
+      "rewardId": [
+        114107,
+        114104
+      ]
+    }
+  },
+  {
     "id": 10302101,
     "name": "Resonant Orisons",
     "desc": "During the event, you can obtain skins from the [Seven-Day Covenant] series and other skin rewards.",
     "startTime": 1782784800,
     "endTime": 1785142800,
     "rule": "1. This event features 2 rounds, each containing 8 rewards. One of these rewards is the featured skin. Once you obtain the featured skin in a round, you will immediately receive all remaining rewards from that round.\n2. Before making your first weave in a round, you can freely adjust the featured skin and the selected rewards for that round. Once you have made a weave in that round, you will no longer be able to change the featured skin or selected rewards.\n3. Rewards within the same round will not be obtained more than once. As the number of remaining rewards decreases, the probability of obtaining each remaining reward increases proportionally. After completing a round, the reward probabilities reset to their initial values.\n4. The initial probabilities for each reward are as follows:\n[Character Skin]: 0.08%\n[Helix Leap Effect]: 0.92%\n[Lower-Backpiece]: 1%\n[Facepiece]: 2%\n[Avatar Frame]: 13%\n[Avatar]: 13%\n[Iridescent Dye ×3]: 35%\n[Commission Manual: Volume Ⅲ ×6]: 35%\n5. The number of Starweave Threads consumed per weave increases with the number of weaves made. After completing a round, the consumption amount resets to its initial value.\nStarweave Threads required per weave:\n1st weave: Starweave Thread ×1\n2nd weave: Starweave Thread ×3\n3rd weave: Starweave Thread ×6\n4th weave: Starweave Thread ×10\n5th weave: Starweave Thread ×15\n6th weave: Starweave Thread ×20\n7th weave: Starweave Thread ×25\n8th weave: Starweave Thread ×30"
+  },
+  {
+    "id": 10302102,
+    "name": "Crimson Mirage",
+    "desc": "During the event, you can obtain skins from the [Nightfall Enchantress] series and other skin rewards.",
+    "startTime": 1787018400,
+    "endTime": 1790629200,
+    "rule": "1. This event features 2 rounds, each containing 8 rewards. One of these rewards is the featured skin. Once you obtain the featured skin in a round, you will immediately receive all remaining rewards from that round.\n2. Before making your first weave in a round, you can freely adjust the featured skin and the selected rewards for that round. Once you have made a weave in that round, you will no longer be able to change the featured skin or selected rewards.\n3. Rewards within the same round will not be obtained more than once. As the number of remaining rewards decreases, the probability of obtaining each remaining reward increases proportionally. After completing a round, the reward probabilities reset to their initial values.\n4. The initial probabilities for each reward are as follows:\n[Character Skin]: 0.08%\n[Footprint Effect]: 0.92%\n[Upper-Backpiece]: 1%\n[Facepiece]: 2%\n[Avatar Frame]: 13%\n[Avatar]: 13%\n[Iridescent Dye ×3]: 35%\n[Commission Manual: Volume Ⅲ ×6]: 35%\n5. The number of Starweave Threads required for each weave increases with the number of weaves made. After completing a round, the required amount resets to its initial value.\nStarweave Threads required per weave:\n1st weave: Starweave Thread ×1\n2nd weave: Starweave Thread ×3\n3rd weave: Starweave Thread ×6\n4th weave: Starweave Thread ×10\n5th weave: Starweave Thread ×15\n6th weave: Starweave Thread ×20\n7th weave: Starweave Thread ×25\n8th weave: Starweave Thread ×30"
   },
   {
     "id": 103009001,
@@ -640,6 +775,22 @@
     "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
     "startTime": 1783648800,
     "endTime": 1784235600,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 103009008,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1785376800,
+    "endTime": 1785963600,
+    "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
+  },
+  {
+    "id": 103009009,
+    "name": "Bountiful Day",
+    "desc": "During the event, Demon Wedge drop rates are increased in Noctoyager Manual commissions. Limited-time Demon Wedge commissions are also available.",
+    "startTime": 1787191200,
+    "endTime": 1787778000,
     "rule": "1. During the event, Noctoyager Manual Commissions grant extra Demon Wedges (up to <highlight>6</> times daily). This stacks with the Manual's base bonus. Complete a Commission while the boost is active to earn more Demon Wedges.\n2. Logging in each day grants <highlight>1</> attempt for Limited-Time Demon Wedge Commissions. Attempts do not carry over and reset at the daily server reset. Each Demon Wedge Commission in the Noctoyager Manual has a Limited-Time variant, where Primanders appear in large numbers.\n3. The challenging times and reward bonus cannot be stacked to the next day."
   },
   {
@@ -706,6 +857,13 @@
     "endTime": 1785142800
   },
   {
+    "id": 105101022,
+    "name": "Traces in the Sand",
+    "desc": "She rises on her toes and turns, a dance with a guest in white, here in the paradise.\n\"Wanderer, don't leave yet. Let these happy days stretch a little longer.\"\nShe hums with her eyes closed, bidding farewell to the white carousel, here in the paradise.\n\"White horse, stop for a while. Let me wake from this long, drowsy day.\"",
+    "startTime": 1785117600,
+    "endTime": 1788771600
+  },
+  {
     "id": 105102011,
     "name": "When Dreams Gild the Night",
     "desc": "Midsummer night, beneath a sky of stars, a forest where violets and butterfly wings waltzed in delicate steps. A sight she had never seen.",
@@ -760,5 +918,12 @@
     "desc": "Hand in hand, we dance — and seal this moment into eternity.",
     "startTime": 1780279200,
     "endTime": 1785142800
+  },
+  {
+    "id": 105102024,
+    "name": "Snowveil Fairytale",
+    "desc": "Snow gathers on silent shoulders, as the tale begins to wake.",
+    "startTime": 1785117600,
+    "endTime": 1788771600
   }
 ]

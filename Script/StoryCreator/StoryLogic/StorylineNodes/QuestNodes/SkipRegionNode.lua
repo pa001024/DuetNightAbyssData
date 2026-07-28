@@ -27,6 +27,14 @@ function SkipRegionNode:Delivery()
   local bShouldReturnAndDownloadPatch = true
   local Res = GameMode:HandleLevelDeliver(self.ModeType, self.Id, self.StartIndex, self.IsWhite, self:GetPayload("bIsInvitation"), bIsFromMap, bShouldReturnAndDownloadPatch)
   DebugPrint("ZJT_ AddRegionSkipCallBack SkipRegionNode ", self.Id, Res, self.ModeType, self.StartIndex)
+  if DataMgr.SubRegion[self.Id] and DataMgr.SubRegion[self.Id].RegionId ~= DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId then
+    local Params = {}
+    Params.BlackScreenHandle = "HandleLevelDeliverBlackCurtain"
+    GWorld.GameInstance:GetGameUIManager():ShowCommonBlackScreen(Params)
+    self.BlackScreenHandle = GWorld.GameInstance:AddTimer(30, function()
+      GWorld.GameInstance:GetGameUIManager():HideCommonBlackScreen("HandleLevelDeliverBlackCurtain")
+    end)
+  end
   local WCSubsystem = GameMode:GetWCSubSystem()
   if not WCSubsystem then
     return
@@ -51,6 +59,10 @@ function SkipRegionNode:Clear()
     return
   end
   Avatar:RemoveSubRegionSkipCallback(self.Id, self, self.Callback)
+  if self.BlackScreenHandle then
+    GWorld.GameInstance:RemoveTimer(self.BlackScreenHandle)
+    self.BlackScreenHandle = nil
+  end
 end
 
 return SkipRegionNode

@@ -795,6 +795,50 @@
     "m": 880000
   },
   {
+    "id": 1056,
+    "n": "Abyssal Compass: Expedition",
+    "r": 5,
+    "v": "1.4",
+    "t": "IronTicket",
+    "c": 1,
+    "p": 1002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 209,
+        "n": "Commission Manual: Volume Ⅳ",
+        "c": 4,
+        "t": "Resource"
+      }
+    ],
+    "m": 880000
+  },
+  {
+    "id": 1057,
+    "n": "Abyssal Compass: Expedition",
+    "r": 5,
+    "v": "1.4",
+    "t": "IronTicket",
+    "c": 1,
+    "p": 1002,
+    "d": 0,
+    "b": 1,
+    "i": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 15040,
+        "n": "Tear of Embla: Defence",
+        "c": 250,
+        "t": "Resource"
+      }
+    ],
+    "m": 880000
+  },
+  {
     "id": 2011,
     "n": "Galeweaver",
     "r": 3,
@@ -2827,6 +2871,60 @@
     "m": 50000
   },
   {
+    "id": 151725,
+    "n": "Awakening",
+    "r": 5,
+    "v": "1.5",
+    "t": "Mod",
+    "c": 1,
+    "p": 51725,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41725,
+        "n": "Awakening",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Track-Shift Module",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151726,
+    "n": "Eternity",
+    "r": 5,
+    "v": "1.5",
+    "t": "Mod",
+    "c": 1,
+    "p": 51726,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41726,
+        "n": "Eternity",
+        "c": 5,
+        "t": "Mod"
+      },
+      {
+        "id": 201,
+        "n": "Track-Shift Module",
+        "c": 2,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
     "id": 151727,
     "n": "Volition – Awakening",
     "r": 5,
@@ -2841,6 +2939,27 @@
       {
         "id": 41727,
         "n": "Volition – Awakening",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151728,
+    "n": "Blaze – Morale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51728,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41728,
+        "n": "Blaze – Morale",
         "c": 5,
         "t": "Mod"
       }
@@ -3264,6 +3383,27 @@
       {
         "id": 41757,
         "n": "Resolve – Volition",
+        "c": 5,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 151758,
+    "n": "Blaze – Tempered",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 51758,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 41758,
+        "n": "Blaze – Tempered",
         "c": 5,
         "t": "Mod"
       }
@@ -5189,6 +5329,114 @@
       }
     ],
     "m": 200000
+  },
+  {
+    "id": 156121,
+    "n": "Awakening",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56121,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31005,
+        "n": "Blaze·Wings",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156122,
+    "n": "Wings·Inspo·Awakening",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56122,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56121,
+        "n": "Awakening",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Wings·Inspo",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20021,
+        "n": "Sacred Candle",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156123,
+    "n": "Morale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56123,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 31008,
+        "n": "Blaze·Nirvana",
+        "c": 10,
+        "t": "Mod"
+      }
+    ],
+    "m": 50000
+  },
+  {
+    "id": 156124,
+    "n": "Wings·Inspo·Morale",
+    "r": 5,
+    "v": "1.0",
+    "t": "Mod",
+    "c": 1,
+    "p": 56124,
+    "d": 30,
+    "b": 1,
+    "s": 1,
+    "x": [
+      {
+        "id": 56123,
+        "n": "Morale",
+        "c": 1,
+        "t": "Mod"
+      },
+      {
+        "id": 31301,
+        "n": "Wings·Inspo",
+        "c": 10,
+        "t": "Mod"
+      },
+      {
+        "id": 20024,
+        "n": "Filthoid Tentacle",
+        "c": 20,
+        "t": "Resource"
+      }
+    ],
+    "m": 50000
   },
   {
     "id": 156141,
@@ -8413,6 +8661,38 @@
     "m": 280000
   },
   {
+    "id": 910209,
+    "n": "Obsidian Heart-Reaper",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10209,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20027,
+        "n": "Sharpening Potion",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12168,
+        "n": "Obsidian Heart-Reaper: Grip",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12169,
+        "n": "Obsidian Heart-Reaper: Blade",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
     "id": 910299,
     "n": "Perpetual Strife",
     "r": 5,
@@ -8597,6 +8877,32 @@
       }
     ],
     "m": 280000
+  },
+  {
+    "id": 910399,
+    "n": "Sovereign Ember",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 10399,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 15018,
+        "n": "Forging Insight: Greatsword",
+        "c": 5,
+        "t": "Resource"
+      },
+      {
+        "id": 15006,
+        "n": "Prototype: Sovereign Ember",
+        "c": 50,
+        "t": "Resource"
+      }
+    ],
+    "m": 500000
   },
   {
     "id": 910401,
@@ -9145,6 +9451,44 @@
     "m": 280000
   },
   {
+    "id": 920104,
+    "n": "Sanguis Sanctus – Pistol",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20104,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12163,
+        "n": "Sanguis Sanctus – Pistol: Bolt",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12164,
+        "n": "Sanguis Sanctus – Pistol: Frame",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12165,
+        "n": "Sanguis Sanctus – Pistol: Barrel",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
     "id": 920201,
     "n": "Excresduo",
     "r": 5,
@@ -9163,13 +9507,13 @@
       },
       {
         "id": 12122,
-        "n": "Tumeborn: Frame",
+        "n": "Excresduo: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12123,
-        "n": "Tumeborn: Barrel",
+        "n": "Excresduo: Barrel",
         "c": 1,
         "t": "Resource"
       }
@@ -9234,6 +9578,38 @@
       {
         "id": 12099,
         "n": "Sacrosanct Chorus: Barrel",
+        "c": 1,
+        "t": "Resource"
+      }
+    ],
+    "m": 280000
+  },
+  {
+    "id": 920207,
+    "n": "The Best Day",
+    "r": 5,
+    "v": "1.5",
+    "t": "Weapon",
+    "c": 1,
+    "p": 20207,
+    "d": 180,
+    "s": 1,
+    "x": [
+      {
+        "id": 20028,
+        "n": "Projectile",
+        "c": 2,
+        "t": "Resource"
+      },
+      {
+        "id": 12166,
+        "n": "The Best Day: Frame",
+        "c": 1,
+        "t": "Resource"
+      },
+      {
+        "id": 12167,
+        "n": "The Best Day: Barrel",
         "c": 1,
         "t": "Resource"
       }
@@ -9335,19 +9711,19 @@
       },
       {
         "id": 12124,
-        "n": "Ruinstem: Bolt",
+        "n": "Destructo: Bolt",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12125,
-        "n": "Ruinstem: Frame",
+        "n": "Destructo: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12126,
-        "n": "Ruinstem: Barrel",
+        "n": "Destructo: Barrel",
         "c": 1,
         "t": "Resource"
       }
@@ -9443,19 +9819,19 @@
       },
       {
         "id": 12127,
-        "n": "Wailmaw: Bolt",
+        "n": "Screamshot: Bolt",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12128,
-        "n": "Wailmaw: Frame",
+        "n": "Screamshot: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12129,
-        "n": "Wailmaw: Barrel",
+        "n": "Screamshot: Barrel",
         "c": 1,
         "t": "Resource"
       }
@@ -9671,19 +10047,19 @@
       },
       {
         "id": 12130,
-        "n": "Marrowseep: Bolt",
+        "n": "Osteobreaker: Bolt",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12131,
-        "n": "Marrowseep: Frame",
+        "n": "Osteobreaker: Frame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12132,
-        "n": "Marrowseep: Barrel",
+        "n": "Osteobreaker: Barrel",
         "c": 1,
         "t": "Resource"
       }

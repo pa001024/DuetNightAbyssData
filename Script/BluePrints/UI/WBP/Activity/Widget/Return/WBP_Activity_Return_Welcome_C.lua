@@ -50,7 +50,10 @@ end
 
 function M:InitRewardList()
   self.CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
-  assert(self.CurrentEventSchemeId, "lgc@CurrentEventSchemeId is nil, 需要策划检查下ComeBackEventConstant表中的CurrentEventSchemeId")
+  if not self.CurrentEventSchemeId then
+    ScreenPrint("lgc@CurrentEventSchemeId is nil, 当前账号不符合回归条件检测")
+    self:Close()
+  end
   self.CurrentEventSchemeData = DataMgr.ComeBackEvent[self.CurrentEventSchemeId]
   if not self.CurrentEventSchemeData then
     return

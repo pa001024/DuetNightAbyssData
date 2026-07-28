@@ -8,6 +8,9 @@ function M:Construct()
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
 end
 
+function M:Destruct()
+end
+
 function M:FocusLost()
   self.IsFocus = false
   if not UIUtils.IsGamepadInput() then

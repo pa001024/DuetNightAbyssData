@@ -2,6 +2,7 @@ local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local ReviewUtils = require("BluePrints.UI.WBP.StoryReview.StoryReviewUtils")
 local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionTypes
 local ETalkType = require("BluePrints.Story.Talk.Base.ETalkType")
+local ImpressionModel = require("BluePrints.Story.Talk.Model.ImpressionModel")
 local FDialogueRecordComponent = {}
 
 function FDialogueRecordComponent:New(TalkTask, TalkTaskData)
@@ -48,12 +49,11 @@ function FDialogueRecordComponent:RecordOption(OptionData)
     end
     if OptionData.OptionType == "Check" then
       local AreaId = OptionInfo.RegionId
-      local Avatar = GWorld:GetAvatar()
-      if not Avatar then
-        DebugPrint("FStoryIterationGraph@RecordOption时，Avatar不存在")
+      local ImpressionInfo = ImpressionModel:GetRegionImpression(AreaId)
+      if not ImpressionInfo then
+        DebugPrint("FStoryIterationGraph@RecordOption时，该区域的Impression不存在")
         return
       end
-      local ImpressionInfo = Avatar:GetRegionImpression(AreaId)
       local PlayerValue = ImpressionInfo:GetImpressionValueByType(ImpressionConfigId)
       self.CheckHandle = ReviewUtils.AddOptionWithImpressionCheck(ImpressionConfigId, PlayerValue, OptionData.Options, OptionData.SelectedOption, OptionData.VisitedOptions)
     elseif OptionData.OptionType == "Plus" then
@@ -69,8 +69,8 @@ function FDialogueRecordComponent:RecordOption(OptionData)
 end
 
 function FDialogueRecordComponent:OnOptionRecord(OptionId, OptionData, NotRecordChain)
-  if self.PlayDialogueCallBack and self.PlayDialogueCallBack.Func then
-    self.PlayDialogueCallBack.Func(self.PlayDialogueCallBack.Obj, OptionId)
+  if self.PlayDialogueCallBack then
+    self.PlayDialogueCallBack(OptionId)
   end
   if OptionData.bImpression and not NotRecordChain then
     self:RecordChain(OptionId)
@@ -82,8 +82,8 @@ function FDialogueRecordComponent:OnOptionRecord(OptionId, OptionData, NotRecord
 end
 
 function FDialogueRecordComponent:OnDialogueRecord(DialogueId, DialogueData)
-  if self.PlayDialogueCallBack and self.PlayDialogueCallBack.Func then
-    self.PlayDialogueCallBack.Func(self.PlayDialogueCallBack.Obj, DialogueId)
+  if self.PlayDialogueCallBack then
+    self.PlayDialogueCallBack(DialogueId)
   end
   if not self.bShowInStoryReview then
     return
@@ -116,9 +116,6 @@ function FDialogueRecordComponent:OnDialogueRecord(DialogueId, DialogueData)
       NpcName = GText(NpcName)
       ReviewUtils.AddDialogueDataWithTalk(DialogueId, NpcName)
     end
-  end
-  if self.PlayDialogueCallBack and self.PlayDialogueCallBack.Func then
-    self.PlayDialogueCallBack.Func(self.PlayDialogueCallBack.Obj, DialogueId)
   end
 end
 

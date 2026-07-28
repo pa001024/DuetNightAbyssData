@@ -24,7 +24,9 @@ function M:OnCharGradeLevelUp(Ret, CharUuid, CurrentGradeLevel)
     end
     
     OnCharGradeLevelUpInternal(self.ArmoryPlayer)
-    OnCharGradeLevelUpInternal(self:GetReflectionActor(self.ArmoryPlayer))
+    if self.bEnableReflection then
+      OnCharGradeLevelUpInternal(self:GetReflectionActor(self.ArmoryPlayer))
+    end
   end
 end
 
@@ -56,29 +58,33 @@ function M:ChangeCharAppearance(AppearanceInfo)
   end
   
   ChangeCharAppearanceInternal(self.ArmoryPlayer)
-  local ReflectionActor = self:GetReflectionActor(self.ArmoryPlayer)
-  ChangeCharAppearanceInternal(ReflectionActor)
-  if ReflectionActor then
-    self:UpdatePlayerReflectionTrans()
+  if self.bEnableReflection then
+    local ReflectionActor = self:GetReflectionActor(self.ArmoryPlayer)
+    ChangeCharAppearanceInternal(ReflectionActor)
+    if ReflectionActor then
+      self:UpdatePlayerReflectionTrans()
+    end
   end
 end
 
-function M:ChangeCharHair(HariId)
+function M:ChangeCharHair(HairId)
   if not self.ArmoryPlayer then
     return
   end
-  self.CurrentAppearanceInfo.HariId = HariId
+  self.CurrentAppearanceInfo.HairId = HairId
   
   local function ChangeCharHairInternal(Character)
     local CharacterFashion = Character and Character.CharacterFashion
     if not CharacterFashion then
       return
     end
-    CharacterFashion:ChangeCharHair(HariId)
+    CharacterFashion:ChangeCharHair(HairId)
   end
   
   ChangeCharHairInternal(self.ArmoryPlayer)
-  ChangeCharHairInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  if self.bEnableReflection then
+    ChangeCharHairInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  end
   local HatId = self.CurrentAppearanceInfo.AccessorySuit[CommonConst.NewCharAccessoryTypes.Hat]
   local HatType = "Hat"
   local CustomParams = self.CurrentAppearanceInfo.AccessoryCustomParams[HatId]
@@ -100,7 +106,9 @@ function M:ChangeCharHairColor(Colors)
   end
   
   ChangeCharHairColorInternal(self.ArmoryPlayer)
-  ChangeCharHairColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  if self.bEnableReflection then
+    ChangeCharHairColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  end
 end
 
 function M:ChangeCharHairPartColor(PartIdx, Color, Fresnel)
@@ -114,7 +122,9 @@ function M:ChangeCharHairPartColor(PartIdx, Color, Fresnel)
   end
   
   ChangeCharHairPartColorInternal(self.ArmoryPlayer)
-  ChangeCharHairPartColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  if self.bEnableReflection then
+    ChangeCharHairPartColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  end
 end
 
 function M:ChangeCharSkinColor(Colors)
@@ -129,7 +139,9 @@ function M:ChangeCharSkinColor(Colors)
   end
   
   ChangeCharSkinColorInternal(self.ArmoryPlayer)
-  ChangeCharSkinColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  if self.bEnableReflection then
+    ChangeCharSkinColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  end
 end
 
 function M:ChangeCharPartColor(PartIdx, Color, Fresnel)
@@ -143,7 +155,9 @@ function M:ChangeCharPartColor(PartIdx, Color, Fresnel)
   end
   
   ChangeCharPartColorInternal(self.ArmoryPlayer)
-  ChangeCharPartColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  if self.bEnableReflection then
+    ChangeCharPartColorInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  end
 end
 
 function M:ChangeCharAccessory(AccessoryId, AccessoryType, CustomParams)
@@ -160,7 +174,9 @@ function M:ChangeCharAccessory(AccessoryId, AccessoryType, CustomParams)
   end
   
   ChangeCharAccessoryInternal(self.ArmoryPlayer)
-  ChangeCharAccessoryInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  if self.bEnableReflection then
+    ChangeCharAccessoryInternal(self:GetReflectionActor(self.ArmoryPlayer))
+  end
   self:ChangeCharSkinColor(self.CurrentAppearanceInfo.Colors)
   self:ChangeCharHairColor(self.CurrentAppearanceInfo.HairColors)
 end
@@ -172,9 +188,15 @@ M[ShowFXAccessoryPrefix .. CommonConst.CharAccessoryTypes.FX_Dead] = function(se
   local CreatureKey = AccessoryType
   self:DestroyCreature(CreatureKey)
   local CreatureId = Data and Data.CreatureId or 14001
+  self.LoadingCreateIds[CreatureKey] = CreatureId
   Player:AsyncCreateEffectCreatureWithCallBack(CreatureId, FTransform(FRotator(0, 0, 180), FVector(0, 0, 0), FVector(1)), true, "Root", {
-    self.ViewUI,
+    Player,
     function(_, Creature)
+      if not self.LoadingCreateIds[CreatureKey] or CreatureId ~= self.LoadingCreateIds[CreatureKey] or self.bDestructed then
+        self.LoadingCreateIds[CreatureKey] = nil
+        Creature:DestroyEffectCreature()
+        return
+      end
       self:DestroyCreature(CreatureKey)
       Creature:SetActorHiddenInGame(false)
       self.Creatures[CreatureKey] = Creature
@@ -600,10 +622,12 @@ function M:SetCharAccessoryOffset(AccessoryId, AccessoryType, Scale, Location, R
   end
   
   SetCharAccessoryOffsetInternal(self:GetPlayerActor())
-  SetCharAccessoryOffsetInternal(self:GetReflectionActor(self:GetPlayerActor()))
+  if self.bEnableReflection then
+    SetCharAccessoryOffsetInternal(self:GetReflectionActor(self:GetPlayerActor()))
+  end
 end
 
-function M:StartPlayerPartHighLight(LastColor, PartIdx, HighLightColor, Curve)
+function M:StartPlayerPartHighLight(LastColor, Fresnel, PartIdx, HighLightColor, Curve)
   local CharacterFashion = self.ArmoryPlayer and self.ArmoryPlayer.CharacterFashion
   local FunctionName = "SetCharTintColor" .. PartIdx
   local Func = CharacterFashion[FunctionName]
@@ -616,11 +640,11 @@ function M:StartPlayerPartHighLight(LastColor, PartIdx, HighLightColor, Curve)
       PassedTime = PassedTime + _TickFrequency
       if PassedTime >= MaxTime then
         self:StopPlayerPartHighLight(PartIdx)
-        self:ChangeCharPartColor(PartIdx, LastColor)
+        self:ChangeCharPartColor(PartIdx, LastColor, Fresnel)
         return
       end
       Alpha = Curve:GetFloatValue(PassedTime)
-      self:ChangeCharPartColor(PartIdx, UKismetMathLibrary.LinearColorLerp(HighLightColor, LastColor, Alpha))
+      self:ChangeCharPartColor(PartIdx, UKismetMathLibrary.LinearColorLerp(HighLightColor, LastColor, Alpha), Fresnel)
     end, true, 0.0, FunctionName, true)
   end
 end
@@ -846,7 +870,9 @@ function M:SetWeaponActorEnhanceLevel(EnhanceLevel)
   
   local Actor = self:GetWeaponActor()
   SetWeaponActorEnhanceLevelInternal(Actor)
-  SetWeaponActorEnhanceLevelInternal(self:GetReflectionActor(Actor))
+  if self.bEnableReflection then
+    SetWeaponActorEnhanceLevelInternal(self:GetReflectionActor(Actor))
+  end
 end
 
 function M:SkinWeaponVFX(ColorData)
@@ -878,6 +904,18 @@ end
 
 function M:Component_DestroyActors()
   self:TryDestroySequenceActorController()
+end
+
+function M:OnHelperEndViewTarget(PC)
+  if not self.IsPlayingSequence and self:HasLastSequenceInfo() then
+    UIManager(self.ViewUI):ShowCommonBlackScreen({OutAnimationPlayTime = 1, IsPlayOutWhenLoaded = true})
+  end
+end
+
+function M:OnHelperBecomeViewTarget(PC)
+  if not self.IsPlayingSequence and self:HasLastSequenceInfo() then
+    UIManager(self.ViewUI):ShowCommonBlackScreen({OutAnimationPlayTime = 1, IsPlayOutWhenLoaded = true})
+  end
 end
 
 return M

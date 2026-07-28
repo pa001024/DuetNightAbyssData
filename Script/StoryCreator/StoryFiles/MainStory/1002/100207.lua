@@ -128,12 +128,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
-        SubRegionId = 0,
+        SubRegionId = 101101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuidePointName = "QuestPoint_WaitSaiqi",
         JumpId = 0,
+        IsBacktrack = false,
         QuestUIId = 0
       },
       questNodeData = {
@@ -310,6 +310,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -375,6 +376,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -476,6 +478,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -548,6 +551,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -667,12 +671,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -882,6 +886,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -958,6 +963,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1012,7 +1018,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {101106, 101101},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           }
@@ -1046,12 +1051,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1373,7 +1378,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {101106},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1453,12 +1457,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -1629,6 +1633,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -1788,7 +1793,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {101106},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -1805,7 +1809,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {},
               bStoreToServer = false
             }
           },
@@ -1881,7 +1884,7 @@ return {
             key = "17469822903939993349",
             type = "TalkNode",
             name = "救救赛琪",
-            pos = {x = 969.4528265851794, y = 133.0951107715811},
+            pos = {x = 970.6066727390256, y = 133.0951107715811},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -1895,6 +1898,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -1902,12 +1906,19 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P101108Nvzhu1",
               CameraLookAtTartgetPoint = "P10110802",
               RestoreStand = false,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
               bLockHighestLOD = false,
               FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
@@ -1945,12 +1956,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2226,6 +2237,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2281,6 +2293,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2336,6 +2349,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -2653,12 +2667,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "TargetPoint_Saiqi8",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -2959,7 +2973,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -3003,6 +3016,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3010,6 +3024,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3386,12 +3401,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -3473,6 +3488,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3480,6 +3496,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3543,6 +3560,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3550,6 +3568,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -3599,12 +3618,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -3776,12 +3795,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -3964,6 +3983,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4087,6 +4107,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4170,6 +4191,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4225,6 +4247,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4296,7 +4319,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {101106},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -4373,12 +4395,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "Mechanism_QuestTrigger_1190005",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -4719,6 +4741,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -4854,6 +4877,7 @@ return {
               SkipToOption = false,
               DisableNpcOptimization = true,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "P200031Nvzhu",
@@ -5041,21 +5065,15 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "Mechanism_SaiqiBegin2_1240302",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "17213705168042311",
-            startPort = "QuestStart",
-            endQuest = "17241542218914839969",
-            endPort = "In"
-          },
           {
             startQuest = "172267502181419850",
             startPort = "Fail",
@@ -5090,18 +5108,6 @@ return {
             startQuest = "172267502181419850",
             startPort = "Fail",
             endQuest = "17253479640031855911",
-            endPort = "In"
-          },
-          {
-            startQuest = "17241542218914839969",
-            startPort = "Out",
-            endQuest = "17253480838422394874",
-            endPort = "In"
-          },
-          {
-            startQuest = "17253480838422394874",
-            startPort = "Out",
-            endQuest = "172267502181419850",
             endPort = "In"
           },
           {
@@ -5157,6 +5163,24 @@ return {
             startPort = "PassiveFail",
             endQuest = "1723626884094850093",
             endPort = "In"
+          },
+          {
+            startQuest = "17241542218914839969",
+            startPort = "Out",
+            endQuest = "172267502181419850",
+            endPort = "In"
+          },
+          {
+            startQuest = "17815073625007744",
+            startPort = "Out",
+            endQuest = "17241542218914839969",
+            endPort = "In"
+          },
+          {
+            startQuest = "17213705168042311",
+            startPort = "QuestStart",
+            endQuest = "17815073625007744",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -5164,7 +5188,7 @@ return {
             key = "17213705168042311",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 1041.25, y = 367.5},
+            pos = {x = 674.9342105263157, y = 376.97368421052624},
             propsData = {ModeType = 0}
           },
           ["17213705168042314"] = {
@@ -5207,7 +5231,7 @@ return {
             key = "17241542218914839969",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1284.0721038591337, y = 369.0722971731654},
+            pos = {x = 1465.6510512275547, y = 378.54598138369164},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 1240302,
@@ -5230,7 +5254,7 @@ return {
             key = "17251733575141633305",
             type = "GoToRegionNode",
             name = "等待玩家进入冰湖",
-            pos = {x = 1341.4884304366458, y = 210.24170340935976},
+            pos = {x = 1133.0673778050668, y = 154.9785455146229},
             propsData = {
               RegionType = 1,
               IsEnter = "Enter",
@@ -5262,23 +5286,6 @@ return {
               SoundType = 0
             }
           },
-          ["17253480838422394874"] = {
-            key = "17253480838422394874",
-            type = "PlayOrStopBGMNode",
-            name = "播放站桩Bgm",
-            pos = {x = 1550.026442114624, y = 399.3290013144185},
-            propsData = {
-              SoundStateType = 0,
-              SoundPriority = 0,
-              SoundType = 0,
-              SoundPath = "event:/bgm/cbt02/0042_story_find_saiqi",
-              ParamKey = "",
-              ParamValue = 0,
-              RelatedRegionId = {101103},
-              ClientRelatedRegionId = {},
-              bStoreToServer = true
-            }
-          },
           ["17289895830894995"] = {
             key = "17289895830894995",
             type = "TalkNode",
@@ -5300,7 +5307,7 @@ return {
             key = "1728991864523569110",
             type = "GoToRegionNode",
             name = "等待玩家进入公路",
-            pos = {x = 1285.8813131313123, y = 569.4567099567096},
+            pos = {x = 1162.7234183944702, y = 591.5619731146043},
             propsData = {
               RegionType = 1,
               IsEnter = "Enter",
@@ -5316,6 +5323,22 @@ return {
             name = "等待任务完成",
             pos = {x = 2355.246699022402, y = 600.2884836897113},
             propsData = {ListenCount = 3, NeedFinishCount = 3}
+          },
+          ["17815073625007744"] = {
+            key = "17815073625007744",
+            type = "PlayOrStopBGMNode",
+            name = "播放站桩Bgm",
+            pos = {x = 1087.578947368421, y = 378},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt02/0042_story_find_saiqi",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101103},
+              bStoreToServer = true
+            }
           }
         },
         commentData = {}
@@ -5347,12 +5370,12 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        IsBacktrack = false,
         SubRegionId = 101103,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "TargetPoint_Saiqi8",
-        JumpId = 0
+        JumpId = 0,
+        IsBacktrack = false
       },
       questNodeData = {
         lineData = {
@@ -5629,7 +5652,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },
@@ -5673,6 +5695,7 @@ return {
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = false,
+              bOpenDefaultSkinKawaii = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -5680,6 +5703,7 @@ return {
               HideMechanismsFX = true,
               DisableNpcOptimization = false,
               DoNotReceiveCharacterShadow = false,
+              CloseMotionBlur = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
               EndNewTargetPointName = "",
@@ -5888,7 +5912,6 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {101103},
-              ClientRelatedRegionId = {},
               bStoreToServer = true
             }
           },

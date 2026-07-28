@@ -101,7 +101,14 @@ function M:ApplyInfoToText(Info)
     self.Text_CharName:SetText(Info.DisplayName or "")
   end
   if self.Text_Day then
-    self.Text_Day:SetText("Day")
+    local Language = CommonConst.SystemLanguage
+    local text
+    if Language == CommonConst.SystemLanguages.CN or Language == CommonConst.SystemLanguages.TC then
+      text = "Day"
+    else
+      text = GText("UI_Event_14LoginEvent_Day")
+    end
+    self.Text_Day:SetText(text)
     self.Text_Day:SetVisibility(IsCompleted and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.HitTestInvisible)
   end
   if self.Text_Reward then

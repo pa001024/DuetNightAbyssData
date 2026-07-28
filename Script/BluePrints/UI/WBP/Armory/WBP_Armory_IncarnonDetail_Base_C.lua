@@ -6,9 +6,11 @@ local StateEnum = HyperWeaponUtils.ActiveState
 function M:Construct()
   self.Image_Click.OnMouseButtonDownEvent:Unbind()
   self.Image_Click.OnMouseButtonDownEvent:Bind(self, self.OnBackgroundClicked)
+  self.Com_Bg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Text_Consume:SetText(GText("Draft_Resource_Consume"))
   self.Tip_Unlock:SetText(GText("UI_HyperWeapon_ResourceFreeReminder"))
   self.Text_FreeHint:SetText(GText("UI_HyperWeapon_ResourceFree"))
+  self.Text_Explain:SetText(GText("UI_Armory_HyperWeaponTakeEffectTIps"))
   self.Text_SmeltLevel:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Armory_Incarnon.Panel_Title:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local Params = {

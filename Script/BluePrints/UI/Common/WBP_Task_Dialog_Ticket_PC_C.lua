@@ -4,9 +4,11 @@ local M = Class({
 })
 
 function M:Construct()
+  self.List_Item.BP_OnEntryGenerated:Add(self, self.OnListItemEntryGenerated)
 end
 
 function M:Destruct()
+  self.List_Item.BP_OnEntryGenerated:Remove(self, self.OnListItemEntryGenerated)
 end
 
 function M:InitContent(Params, PopupData, Owner)
@@ -63,6 +65,7 @@ function M:InitItemList(SubmitId)
   end)
   self.DisplayItems = DisplayItems
   self.DefaultSelectItemIdx = 1
+  self.bDefaultItemSelected = false
   for i, ItemData in ipairs(DisplayItems) do
     if ItemData.IsEnough then
       self.DefaultSelectItemIdx = i
@@ -104,18 +107,18 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
-function M:PostInitContent(Params, PopupData, Owner)
-  self:AddTimer(0.01, function()
-    local DefaultIndex = math.max(0, (self.DefaultSelectItemIdx or 1) - 1)
-    local DefaultEntryUI = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, DefaultIndex)
-    if IsValid(DefaultEntryUI) then
-      DefaultEntryUI:RealClicked(true)
-    end
-    if IsValid(self.List_Item) then
-      local CurrentItemIdx = math.max(0, (self.ItemIdx or 1) - 1)
-      self.List_Item:NavigateToIndex(CurrentItemIdx)
-    end
-  end, nil, nil, nil, true)
+function M:OnListItemEntryGenerated(Widget)
+  if not IsValid(Widget) then
+    return
+  end
+  if self.bDefaultItemSelected then
+    return
+  end
+  if Widget.ItemIdx == self.DefaultSelectItemIdx then
+    self.bDefaultItemSelected = true
+    Widget:RealClicked(true)
+    self.List_Item:NavigateToIndex(Widget.ItemIdx)
+  end
 end
 
 function M:InitGamepadView()
@@ -184,7 +187,6 @@ function M:OnItemClicked(EntryUI, bSelected, bNotPlaySound)
       if not bNotPlaySound then
         AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large", nil, nil)
       end
-      self.ItemId = EntryUI.ItemId
       self.ItemIdx = EntryUI.ItemIdx
     else
       AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_disable", nil, nil)
@@ -228,9 +230,9 @@ function M:BindOnDisplayConfirmed(SubmitId)
     })
     self.Owner.PopupData.YesButtonForbiddenToast = nil
     self.Owner:ForbidRightBtn(true)
-    local SelectedId = self.ItemId
     local SelectedIdx = self.ItemIdx or 1
     local SelectedItem = self.DisplayItems and self.DisplayItems[SelectedIdx]
+    local SelectedId = SelectedItem and SelectedItem.ItemId or -1
     local SourceIndex = SelectedItem and SelectedItem.SourceIndex
     SourceIndex = SourceIndex or SelectedIdx
     Avatar:ShowQuestItems(SubmitId, SelectedId, function(Ret)

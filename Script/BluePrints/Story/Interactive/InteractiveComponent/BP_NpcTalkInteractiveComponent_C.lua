@@ -226,9 +226,6 @@ function BP_NpcTalkInteractiveComponent_C:StartInteractive(PlayerActor)
   PlayerActor:SetCanInteractiveTrigger(false, "TalkInteractive")
   self.bIsInInteractive = true
   self.PlayerActor = PlayerActor
-  local GameInstance = GWorld.GameInstance
-  local TalkContext = GameInstance:GetTalkContext()
-  TalkContext:RegisterInteractiveActor(self.Owner)
   StoryInteractiveController:TryStartInteractive(self.UnitId, self.Owner, PlayerActor, {
     Obj = self,
     Func = self.TryExitInterativeTalkState
@@ -246,8 +243,6 @@ function BP_NpcTalkInteractiveComponent_C:EndInteractive()
   self.PlayerActor:SetCanInteractiveTrigger(true, "TalkInteractive")
   self.bIsInInteractive = false
   self.PlayerActor = nil
-  local TalkContext = GWorld.GameInstance:GetTalkContext()
-  TalkContext:UnregisterInteractiveActor()
 end
 
 function BP_NpcTalkInteractiveComponent_C:IsInInteractive()
@@ -320,10 +315,14 @@ function BP_NpcTalkInteractiveComponent_C:DisplayBubble(PlayerActor)
   self.bIsBubbleDisplayed = true
   local GameInstance = GWorld.GameInstance
   local TalkContext = GameInstance:GetTalkContext()
-  self.BubbleTalkKey = TalkContext:StartTalk(self.BubbleTalkTriggerId, nil, nil, PlayerActor, self:GetOwner(), {
-    Func = self.NotDisplayBubble,
-    Obj = self
-  })
+  self.DisplayBubbleTriggerId = self.BubbleTalkTriggerId
+  local TalkAsyncAction = UE4.UPlayTalkAsyncAction.PlayTalk(self, self.BubbleTalkTriggerId, nil)
+  if IsValid(TalkAsyncAction) then
+    TalkAsyncAction.InteractiveActor = self:GetOwner()
+    TalkAsyncAction.OnPlayTalkEnd:Add(self, self.NotDisplayBubble)
+    TalkAsyncAction.OnPlayTalkInterrupted:Add(self, self.NotDisplayBubble)
+    TalkAsyncAction:Activate()
+  end
 end
 
 function BP_NpcTalkInteractiveComponent_C:NotDisplayBubble(PlayerActor)
@@ -337,10 +336,10 @@ function BP_NpcTalkInteractiveComponent_C:NotDisplayBubble(PlayerActor)
   local TS = TalkSubsystem()
   if TS then
     TS:ForceInterruptTalkTaskData(function(TalkTaskData)
-      return TalkTaskData.FilePath == self.BubbleTalkKey
+      return TalkTaskData.TalkTriggerId == self.DisplayBubbleTriggerId
     end)
   end
-  self.BubbleTalkKey = nil
+  self.DisplayBubbleTriggerId = nil
 end
 
 function BP_NpcTalkInteractiveComponent_C:IsCanInteractTrigger(PlayerActor)

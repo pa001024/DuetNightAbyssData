@@ -104,6 +104,50 @@ function ConditionUtils:JudgeGuildLevelMin(Params)
   return false
 end
 
+local function GuildBossGetSyncedFinishedTrialCount(Avatar)
+  local GuildInfo = type(Avatar.GuildInfo) == "table" and Avatar.GuildInfo or {}
+  local GuildBossData = "table" == type(GuildInfo.GuildBossData) and GuildInfo.GuildBossData or {}
+  local TrialList = "table" == type(GuildBossData.TrialList) and GuildBossData.TrialList or {}
+  local TrialProgress = "table" == type(GuildBossData.TrialProgress) and GuildBossData.TrialProgress or nil
+  if not TrialProgress then
+    return nil
+  end
+  local Count = 0
+  for _, TrialId in pairs(TrialList) do
+    local TrialIdNumber = tonumber(TrialId) or 0
+    local Progress = tonumber(TrialProgress[TrialId] or TrialProgress[tostring(TrialId)] or TrialProgress[TrialIdNumber]) or 0
+    local Rule = (DataMgr and DataMgr.GuildWarTest or {})[TrialIdNumber] or {}.CalulationRule or {}
+    local Need = tonumber(Rule.Rate) or 0
+    if Need <= 0 then
+      Need = tonumber(Rule.Hit) or 0
+    end
+    if Need <= 0 then
+      Need = 1
+    end
+    if Progress >= Need then
+      Count = Count + 1
+    end
+  end
+  return Count
+end
+
+function ConditionUtils:JudgeGuildBossTrialFinishedCount(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local NeedCount = type(Params) == "table" and tonumber(Params[1] or Params.Count or Params.NeedCount) or tonumber(Params)
+    NeedCount = math.floor(NeedCount or 0)
+    if type(self.GetCachedGuildBossTrialFinishedCount) == "function" then
+      return NeedCount <= self:GetCachedGuildBossTrialFinishedCount()
+    end
+    local SyncedFinishedCount = GuildBossGetSyncedFinishedTrialCount(self)
+    if nil ~= SyncedFinishedCount then
+      return NeedCount <= SyncedFinishedCount
+    end
+    local Cache = self.GuildBossShopUnlockCache or {}
+    return NeedCount <= (tonumber(Cache.FinishedTrialCount) or 0)
+  end
+  return false
+end
+
 function ConditionUtils:JudgePlayerLevelMax(Params)
   if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
     return Params >= self.Level
@@ -145,6 +189,14 @@ end
 function ConditionUtils:JudgeTrueQuestChain(Params)
   if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
     return self.QuestChains[Params] and self.QuestChains[Params]:IsFinish() and true or false
+  end
+  return false
+end
+
+function ConditionUtils:JudgeQuestChainTrueEnd(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local QuestBacktrack = self.QuestBacktracks and self.QuestBacktracks[Params]
+    return QuestBacktrack and QuestBacktrack.IsFinishTrueEnd == true
   end
   return false
 end
@@ -1148,12 +1200,57 @@ end
 function ConditionUtils:JudgeFinishAbyss(Params)
   if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
     local AbyssType, LevelCount = Params[1], Params[2]
-    for _, Abyss in pairs(self.Abysses) do
-      if AbyssType == Abyss.AbyssType then
-        local AbyssLevel = Abyss.AbyssLevelList[LevelCount]
-        if AbyssLevel and AbyssLevel:IsAbyssLevelPass() then
-          return true
+    
+    local function IsAbyssLevelPassByProgress(TargetAbyss, LevelId)
+      local MaxProgress = TargetAbyss.MaxAbyssProgress
+      if LevelId < MaxProgress[1] then
+        return true
+      elseif MaxProgress[1] == LevelId then
+        local NewLevelIndex = LevelId
+        if TargetAbyss:IsLoopAbyss() then
+          local LevelCount = #TargetAbyss.AbyssLevelId
+          NewLevelIndex = LevelId % LevelCount
+          if 0 == NewLevelIndex then
+            NewLevelIndex = LevelCount
+          end
         end
+        local NewAbyssLevelId = TargetAbyss.AbyssLevelId[NewLevelIndex]
+        local AbyssLevelInfo = DataMgr.AbyssLevel[NewAbyssLevelId]
+        if not AbyssLevelInfo then
+          return false
+        end
+        local AbyssDungeon1 = AbyssLevelInfo.AbyssDungeon1
+        if not AbyssDungeon1 then
+          return false
+        end
+        local AbyssDungeonInfo = DataMgr.AbyssDungeon[AbyssDungeon1]
+        if not AbyssDungeonInfo then
+          return false
+        end
+        local RoomId1 = AbyssDungeonInfo.RoomId
+        if not RoomId1 then
+          return false
+        end
+        local RoomCount = #RoomId1
+        local AbyssDungeon2 = AbyssLevelInfo.AbyssDungeon2
+        if AbyssDungeon2 then
+          local AbyssDungeonInfo2 = DataMgr.AbyssDungeon[AbyssDungeon2]
+          if AbyssDungeonInfo2 then
+            local RoomId2 = AbyssDungeonInfo2.RoomId
+            if RoomId2 then
+              RoomCount = RoomCount + #RoomId2
+            end
+          end
+        end
+        return RoomCount <= MaxProgress[2]
+      else
+        return false
+      end
+    end
+    
+    for _, Abyss in pairs(self.Abysses) do
+      if AbyssType == Abyss.AbyssType and IsAbyssLevelPassByProgress(Abyss, LevelCount) then
+        return true
       end
     end
   end

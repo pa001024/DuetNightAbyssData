@@ -57,6 +57,21 @@ function M.GetWeaponListReddotType(WeaponId, IsOwned)
       break
     end
   end
+  if not HasNewSkin then
+    local BattleWeaponData = DataMgr.BattleWeapon[WeaponId]
+    if BattleWeaponData and BattleWeaponData.ModApplicationType then
+      local TypeArray = type(BattleWeaponData.ModApplicationType) == "table" and BattleWeaponData.ModApplicationType or {
+        BattleWeaponData.ModApplicationType
+      }
+      for _, ApplicationType in pairs(TypeArray) do
+        local WeaponStanceFXNode = ReddotManager.GetTreeNode("WeaponStanceFX" .. ApplicationType)
+        if WeaponStanceFXNode and WeaponStanceFXNode.Count > 0 then
+          HasNewSkin = true
+          break
+        end
+      end
+    end
+  end
   if HasNewSkin then
     return UIConst.RedDotType.NewRedDot
   end
@@ -81,7 +96,24 @@ end
 function M.GetWeaponTabReddot(WeaponType)
   local NodeName = "New" .. WeaponType .. "Appearance"
   local Node = ReddotManager.GetTreeNode(NodeName)
-  return Node and Node.Count > 0 or false
+  local WeaponAccessoryNode = ReddotManager.GetTreeNode(CommonConst.DataType.WeaponAccessory)
+  local NewWeaponStanceFXCount = 0
+  local Avatar = GWorld:GetAvatar()
+  if Avatar and Avatar.Weapons then
+    for Uuid, Weapon in pairs(Avatar.Weapons) do
+      if Weapon:HasTag(WeaponType) then
+        local BattleWeaponData = DataMgr.BattleWeapon[Weapon.WeaponId]
+        if BattleWeaponData and BattleWeaponData.ModApplicationType then
+          local ModApplicationType = BattleWeaponData.ModApplicationType
+          for _, ApplicationType in pairs(ModApplicationType or {}) do
+            local WeaponStanceFXNode = ReddotManager.GetTreeNode("WeaponStanceFX" .. ApplicationType)
+            NewWeaponStanceFXCount = NewWeaponStanceFXCount + (WeaponStanceFXNode and WeaponStanceFXNode.Count or 0)
+          end
+        end
+      end
+    end
+  end
+  return Node and Node.Count > 0 or WeaponAccessoryNode and WeaponAccessoryNode.Count > 0 or NewWeaponStanceFXCount > 0
 end
 
 function M.UpdateSingleCharReddot(Content)
