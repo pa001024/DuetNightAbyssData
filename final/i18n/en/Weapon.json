@@ -3449,6 +3449,9 @@
             "名称": "Waning – Pierce",
             "icon": "T_Rouge_Talent_AttrPenetration",
             "描述": "PEN Stats +20.0%.",
+            "加成": {
+              "PEN Stats": 0.2
+            },
             "解锁": {
               "Prototype: Sovereign Ember": 30,
               "Lumino Crystal": 90,

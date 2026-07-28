@@ -1024,6 +1024,25 @@ class WeaponProcessor(BaseProcessor):
                     rst["追加伤害"] = self.round_value(
                         attr.get("Value", attr.get("Rate", 0))
                     )
+                    continue
+
+                if (
+                    attr_name == "DamageRate"
+                    and skill_tree.get("WeaponCardLevel") in (2, 4)
+                ):
+                    attr_config = self._get_attr_config(attr, buff_id)
+                    attr_name_key = attr_config.get("Name", "")
+                    if not attr_name_key:
+                        continue
+                    translated_name = self.get_translated_text(attr_name_key)
+                    if not translated_name:
+                        continue
+                    value = attr.get("Value", attr.get("Rate"))
+                    if not isinstance(value, (int, float)):
+                        continue
+                    rst[P_MAP.get(translated_name, translated_name)] = self.round_value(
+                        value
+                    )
 
             if rst:
                 break

@@ -3449,6 +3449,9 @@
             "名称": "Vacillante – Perforation",
             "icon": "T_Rouge_Talent_AttrPenetration",
             "描述": "Pénétration de tous les attributs +20.0%.",
+            "加成": {
+              "Pénétration de tous les attributs": 0.2
+            },
             "解锁": {
               "Prototype : Braise souveraine": 30,
               "Cristal Lumino": 90,
