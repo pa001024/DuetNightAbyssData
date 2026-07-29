@@ -135,7 +135,7 @@
   {
     "id": 102003,
     "name": "Bloomfield Station: Tales Untold",
-    "desc": "On the eve of the Silver Star's journey south, Bloomfield Station was still alive with stories of its own.\nComplete the new Bloomfield Station questline to claim rewards.",
+    "desc": "On the eve of the Silver Star's journey south, Bloomfield Station was still alive with stories of its own.\nComplete the new Bloomfield Station questline to claim rewards.\n*After completing the main story chapter \"Silver Torrent, Rising Star,\" you can unlock this event by accepting and completing the side quests \"Black Bread and Butter\" and \"When the Whistle Weeps\" at Bloomfield Station.",
     "startTime": 1785117600,
     "endTime": 1788771600
   },
@@ -516,7 +516,7 @@
     "name": "Immersive Theatre",
     "desc": "Together, we decide where the story will lead. Step onto the stage, and let us bring this performance to its perfect finale.",
     "startTime": 1785981600,
-    "endTime": 1788771600
+    "endTime": 1788685200
   },
   {
     "id": 1020012,

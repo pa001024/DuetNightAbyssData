@@ -12461,7 +12461,8 @@ Searching for clues to Berenica's whereabouts, you enter its depths, ready to fa
         Event_Des_102003 = {
           ContentEN = [[
 On the eve of the Silver Star's journey south, Bloomfield Station was still alive with stories of its own.
-Complete the new Bloomfield Station questline to claim rewards.]]
+Complete the new Bloomfield Station questline to claim rewards.
+*After completing the main story chapter "Silver Torrent, Rising Star," you can unlock this event by accepting and completing the side quests "Black Bread and Butter" and "When the Whistle Weeps" at Bloomfield Station.]]
         },
         Event_Des_103001 = {
           ContentEN = "Allow me to lead you onto the endless pathways of time."

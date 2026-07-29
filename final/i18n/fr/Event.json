@@ -135,7 +135,7 @@
   {
     "id": 102003,
     "name": "Chroniques de la Gare des Cent-Fleurs",
-    "desc": "À la veille du Flot d’étoiles argentées vers le sud, les joies et les peines de chacun continuaient de se jouer sur la scène de la Gare des Cent-Fleurs.\nTerminez la nouvelle série de quêtes de la Gare des Cent-Fleurs pour obtenir des récompenses.",
+    "desc": "À la veille du Flot d’étoiles argentées vers le sud, les joies et les peines de chacun continuaient de se jouer sur la scène de la Gare des Cent-Fleurs.\nTerminez la nouvelle série de quêtes de la Gare des Cent-Fleurs pour obtenir des récompenses.\nCondition de déblocage : terminez le chapitre « Flot d’étoiles argentées » de l’histoire principale, puis acceptez et terminez les quêtes secondaires « Pain noir et beurre » et « Quand le sifflet pleure » à la Gare des Cent-Fleurs pour débloquer cet événement.",
     "startTime": 1785117600,
     "endTime": 1788771600
   },
@@ -516,7 +516,7 @@
     "name": "Théâtre immersif",
     "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
     "startTime": 1785981600,
-    "endTime": 1788771600
+    "endTime": 1788685200
   },
   {
     "id": 1020012,

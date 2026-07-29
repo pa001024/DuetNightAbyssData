@@ -1456,6 +1456,9 @@ function M:GenerateGiftMessage()
 end
 
 function M:_AddMessage(Message, bCalcUnread)
+  if UIUtils.IsAsyncCombatRoomMessage(Message) and not UIUtils.IsAsyncCombatRoomMessageValid(Message) then
+    return
+  end
   local TimeWrap, MsgWrap = self:GetModel():AddMessage(Message, bCalcUnread)
   local Channel = Message.ChannelType
   if MsgWrap:IsSticker() and Channel ~= ChatCommon.ChannelDef.Friend then

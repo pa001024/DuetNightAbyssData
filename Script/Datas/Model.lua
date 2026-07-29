@@ -5067,6 +5067,7 @@ return ReadOnly("Model", {
     WeaponScale = 1
   },
   [110201] = {
+    AudioPrefix = "Fuluo_",
     ModelId = 110201,
     SkeletonMeshPath = "Asset/Char/Player/Char016_Fuluo/Mesh/Fuluo_Sum_SM.Fuluo_Sum_SM"
   },
@@ -5079,6 +5080,7 @@ return ReadOnly("Model", {
     SkeletonMeshPath = "Asset/Char/Player/Char016_Fuluo/Mesh/Fuluo_SP01_Part01_SM.Fuluo_SP01_Part01_SM"
   },
   [110298] = {
+    AudioPrefix = "Fuluo01_",
     ModelId = 110298,
     SkeletonMeshPath = "Asset/Char/Player/Char016_Fuluo/Mesh/Fuluo_SP01_Sum_SM.Fuluo_SP01_Sum_SM"
   },
@@ -5086,7 +5088,7 @@ return ReadOnly("Model", {
     AdditionalFXID = {110294, 110295},
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Fuluo/ABP_Fuluo.ABP_Fuluo_C'",
     AssistSockets = T.RT_1,
-    AudioPrefix = "Fuluo_",
+    AudioPrefix = "Fuluo01_",
     CharAccessoryOffsetId = T.RT_14,
     DamageFXSockets = T.RT_1,
     FootType = "heeledMid",
@@ -5483,7 +5485,7 @@ return ReadOnly("Model", {
   [210199] = {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Shuimu/ABP_Shuimu01.ABP_Shuimu01_C'",
     AssistSockets = T.RT_1,
-    AudioPrefix = "Shuimu01_",
+    AudioPrefix = "Shuimu_",
     DamageFXSockets = T.RT_1,
     FootType = "heeledMid",
     HeadScale = 0.931,

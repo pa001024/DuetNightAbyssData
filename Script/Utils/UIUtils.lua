@@ -9,6 +9,7 @@ local Utils = require("Utils")
 local MiscUtils = require("Utils.MiscUtils")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
 local GameFlowUtils = require("Utils.GameFlowUtils")
+local json = require("rapidjson")
 local Deque = StrLib.Deque
 local UIUtils = Class()
 UIUtils._components = {
@@ -3091,6 +3092,51 @@ function UIUtils.RegionPlayerNum()
   local Number = UE4.UGuildConstructFunctionLibrary.GetRegionSyncedPlayerNumber()
   DebugPrint("lxc: GetActivePlayerNum: " .. tostring(Number))
   return Number
+end
+
+function UIUtils.IsAsyncCombatRoomMessage(InMessage)
+  DebugPrint(string.format("UIUtils.IsAsyncCombatRoomMessage: InMessage: %s, InMessage.Content: %s", tostring(InMessage), tostring(InMessage and InMessage.Content)))
+  if not InMessage or not InMessage.Content then
+    return false
+  end
+  if not ChatCommon.AsyncCombatRoomCopyHeader then
+    DebugPrint("UIUtils.IsAsyncCombatRoomMessage: 异步共斗ChatCommon.AsyncCombatRoomCopyHeader不存在，检查配置")
+    return false
+  end
+  return string.startswith(InMessage.Content, ChatCommon.AsyncCombatRoomCopyHeader)
+end
+
+function UIUtils.IsAsyncCombatRoomMessageValid(InMessage)
+  DebugPrint(string.format("UIUtils.IsAsyncCombatRoomMessageValid: InMessage: %s, InMessage.Content: %s", tostring(InMessage), tostring(InMessage and InMessage.Content)))
+  if not InMessage or not InMessage.Content then
+    return false
+  end
+  local JsonStr = string.sub(InMessage.Content, #ChatCommon.AsyncCombatRoomCopyHeader + 1)
+  DebugPrint("UIUtils.IsAsyncCombatRoomMessageValid: " .. JsonStr)
+  local AsyncCombatRoomInfo = json.decode(JsonStr)
+  DebugPrint("UIUtils.IsAsyncCombatRoomMessageValid: " .. tostring(AsyncCombatRoomInfo))
+  if not AsyncCombatRoomInfo or type(AsyncCombatRoomInfo) == "userdata" or not AsyncCombatRoomInfo.RoomConfId then
+    return false
+  end
+  return DataMgr.AsyncCombat[AsyncCombatRoomInfo.RoomConfId] ~= nil
+end
+
+function UIUtils.IsAsyncCombatRoomMessageWrap(InMessageWrap)
+  DebugPrint(string.format("UIUtils.IsAsyncCombatRoomMessageWrap: InMessageWrap: %s, InMessageWrap.AsyncCombatRoomInfo: %s", tostring(InMessageWrap), tostring(InMessageWrap and InMessageWrap.AsyncCombatRoomInfo)))
+  return InMessageWrap and InMessageWrap.AsyncCombatRoomInfo and InMessageWrap.AsyncCombatRoomInfo ~= nil
+end
+
+function UIUtils.IsAsyncCombatRoomMessageWrapValid(InMessageWrap)
+  DebugPrint(string.format("UIUtils.IsAsyncCombatRoomMessageWrapValid: InMessageWrap: %s", tostring(InMessageWrap)))
+  if not InMessageWrap then
+    return false
+  end
+  local RoomId = InMessageWrap.AsyncCombatRoomInfo and InMessageWrap.AsyncCombatRoomInfo.RoomConfId
+  DebugPrint(string.format("UIUtils.IsAsyncCombatRoomMessageWrapValid: RoomId: %s", tostring(RoomId)))
+  if not RoomId then
+    return false
+  end
+  return DataMgr.AsyncCombat[RoomId] ~= nil
 end
 
 AssembleComponents(UIUtils)

@@ -6850,7 +6850,7 @@ local Data = {
           ContentFR = "Clôture du tournoi en cours"
         },
         DUNGEON_SYNTHESIS_113 = {
-          ContentFR = "Champions adverses trouvées (%d/%d)"
+          ContentFR = "Champions adverses trouvées（%d/%d）"
         },
         DUNGEON_SYNTHESIS_114 = {
           ContentFR = "Éliminer les champions adverses"
@@ -12202,7 +12202,7 @@ local Data = {
           ContentFR = "La Gare des Cent-Fleurs, un édifice forgé dans le fer et le feu.\nÀ la recherche de traces de Berenica, vous pénétrez en ces lieux afin d’affronter la menace de la XIIIᵉ Légion."
         },
         Event_Des_102003 = {
-          ContentFR = "À la veille du Flot d’étoiles argentées vers le sud, les joies et les peines de chacun continuaient de se jouer sur la scène de la Gare des Cent-Fleurs.\nTerminez la nouvelle série de quêtes de la Gare des Cent-Fleurs pour obtenir des récompenses."
+          ContentFR = "À la veille du Flot d’étoiles argentées vers le sud, les joies et les peines de chacun continuaient de se jouer sur la scène de la Gare des Cent-Fleurs.\nTerminez la nouvelle série de quêtes de la Gare des Cent-Fleurs pour obtenir des récompenses.\nCondition de déblocage : terminez le chapitre « Flot d’étoiles argentées » de l’histoire principale, puis acceptez et terminez les quêtes secondaires « Pain noir et beurre » et « Quand le sifflet pleure » à la Gare des Cent-Fleurs pour débloquer cet événement."
         },
         Event_Des_103001 = {
           ContentFR = "Permettez-moi de vous guider dans les sentiers sans fin du temps."

@@ -111,6 +111,9 @@ local MessageList = {
     MsgCache = "",
     RemovedMsgs = nil,
     AddMessage = function(self, Message, bCalcUnread)
+      if UIUtils.IsAsyncCombatRoomMessage(Message) and not UIUtils.IsAsyncCombatRoomMessageValid(Message) then
+        return
+      end
       local MsgWrap = MessageWrap:New(Message)
       local LastMsgWrap = GetLastNormalChatMsgWrap(self.ViewList) or {
         Message = {Time = 0}

@@ -266106,7 +266106,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51207146] = {
           Content = "好啊！好！我们想留着这帮傻*的狗命，他们却反过来怪起我们了？",
-          ContentKR = "그래! 좋아! 우린 그 등신들을 위해서 하는 일인데, 그놈들은 오히려 우릴 원망한다 이거지?",
+          ContentKR = "그래! 좋아! 우린 그 *신들을 위해서 하는 일인데, 그놈들은 오히려 우릴 원망한다 이거지?",
           DialogueId = 51207146,
           GUID = "80311464",
           NextDialogue = 51207147,
