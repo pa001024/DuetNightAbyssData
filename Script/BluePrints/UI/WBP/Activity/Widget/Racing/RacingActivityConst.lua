@@ -9,6 +9,7 @@ M.RacingActivityStage = {
 M.ReddotRewardKey = "RacingTaskReward"
 M.ReddotChoosePetKey = "RacingChoosePet"
 M.ReddotWatchAndGetRewardKey = "RacingWatchAndGetReward"
+M.ReddotActivityKey = "Acti_RacingActivity"
 M.PerPageRecordCount = 6
 M.SelectPlayerText = "UI_Event_RaceLottery_InLotteryProgress"
 M.WaitingText = "UI_Event_RaceLottery_CountResultProgress"

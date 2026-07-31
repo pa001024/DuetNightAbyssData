@@ -1,5 +1,8 @@
 local Component = {}
+local RacingActivityConst = require("BluePrints.UI.WBP.Activity.Widget.Racing.RacingActivityConst")
+local RacingOutsiderModel = require("BluePrints.UI.WBP.Activity.Widget.Racing.Outsider.RacingOutsiderModel")
 local RacingOutsiderController = require("BluePrints.UI.WBP.Activity.Widget.Racing.Outsider.RacingOutsiderController")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 
 function Component:EnterWorld()
   DebugPrint("RaceLotteryComp EnterWorld")
@@ -12,6 +15,9 @@ function Component:LeaveWorld()
 end
 
 function Component:RaceLotteryChangeStatus(NewStatus)
+  if not ActivityUtils.CheckEventIsOpen(RacingActivityConst.ActivityEventId) or not RacingOutsiderModel:CheckActivityIsUnlock(RacingActivityConst.ActivityEventId) then
+    return
+  end
   DebugPrint("RaceLotteryChangeStatus NewStatus= " .. tostring(NewStatus))
   if 1 == NewStatus then
     RacingOutsiderController:OnRefreshInNextDay()

@@ -1,6 +1,7 @@
 local M = Class("BluePrints.Common.MVC.Controller")
 local RacingOutsiderModel = require("BluePrints.UI.WBP.Activity.Widget.Racing.Outsider.RacingOutsiderModel")
 local RacingActivityConst = require("BluePrints.UI.WBP.Activity.Widget.Racing.RacingActivityConst")
+local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
 
 function M:Init()
   M.Super.Init(self)
@@ -83,9 +84,8 @@ function M:BindRacingChoosePetEvent()
     return
   end
   self.GameEventUnlockKey = Avatar:BindOnUIFirstTimeUnlock("GameEvent", function()
-    if RacingOutsiderModel:CheckActivityIsUnlock(RacingActivityConst.ActivityEventId) then
-      RacingOutsiderModel:RefreshRacingChoosePetReddot()
-      RacingOutsiderModel:RefreshRacingOutSiderReddot()
+    if ActivityUtils.CheckEventIsOpen(RacingActivityConst.ActivityEventId) and RacingOutsiderModel:CheckActivityIsUnlock(RacingActivityConst.ActivityEventId) then
+      self:RefreshReddotWithCurrentStatus()
     end
   end)
 end
@@ -103,29 +103,35 @@ function M:OnRefreshInNextDay()
   RacingOutsiderModel.CurActivityStage = RacingActivityConst.RacingActivityStage.SelectPlayer
   RacingOutsiderModel.ChoosePetList = {}
   EventManager:FireEvent(RacingActivityConst.EventId.NextDayRefresh)
+  ReddotManager.ClearLeafNodeCount(RacingActivityConst.ReddotWatchAndGetRewardKey, true)
   RacingOutsiderModel:SetRacingChoosePetReddotCountOne()
   self:SetTodayPlayerList({})
 end
 
+function M:RefreshReddotWithCurrentStatus()
+  RacingOutsiderModel:InitCurrentStatus()
+  RacingOutsiderModel:InitReddotTree()
+end
+
 function M:RefreshReddotWithConditionUnlock(ConditionId)
-  local bIsOpen = RacingOutsiderModel:CheckActivityIsUnlock(RacingActivityConst.ActivityEventId)
-  if not bIsOpen then
+  if not ActivityUtils.CheckEventIsOpen(RacingActivityConst.ActivityEventId) or not RacingOutsiderModel:CheckActivityIsUnlock(RacingActivityConst.ActivityEventId) then
     return
   end
   local JumpUnlockCondition = DataMgr.EventPortal[RacingActivityConst.ActivityEventId].JumpUnlockCondition
   if JumpUnlockCondition ~= tonumber(ConditionId) then
     return
   end
-  RacingOutsiderModel:RefreshRacingChoosePetReddot()
-  RacingOutsiderModel:RefreshRacingOutSiderReddot()
+  self:RefreshReddotWithCurrentStatus()
 end
 
 function M:RefreshReddotWithActivityOpen(ActivityId)
   if RacingActivityConst.ActivityEventId ~= ActivityId then
     return
   end
-  RacingOutsiderModel:RefreshRacingChoosePetReddot()
-  RacingOutsiderModel:RefreshRacingOutSiderReddot()
+  if not ActivityUtils.CheckEventIsOpen(RacingActivityConst.ActivityEventId) or not RacingOutsiderModel:CheckActivityIsUnlock(RacingActivityConst.ActivityEventId) then
+    return
+  end
+  self:RefreshReddotWithCurrentStatus()
 end
 
 function M:RefreshReddotWithActivityClose(ActivityId)

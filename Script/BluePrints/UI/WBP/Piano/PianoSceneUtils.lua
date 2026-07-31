@@ -130,6 +130,29 @@ function PianoSceneUtils.ResolveCanonicalPianoSceneChapterId(ChapterId)
   return ChapterId
 end
 
+function PianoSceneUtils.ResolvePianoSceneDisplayChapterId(ChapterId)
+  ChapterId = PianoSceneUtils.ResolveCanonicalPianoSceneChapterId(ChapterId)
+  if not ChapterId then
+    return nil
+  end
+  local DungeonType = PianoSceneUtils.GetDungeonTypeKeyByChapterId(ChapterId)
+  if "Defence" ~= DungeonType then
+    return ChapterId
+  end
+  for _, ChapterInfo in ipairs(PianoSceneUtils.CollectPianoSceneChapters()) do
+    if ChapterInfo.DungeonType == DungeonType then
+      for _, Source in ipairs(ChapterInfo.SourceChapters or {}) do
+        local ChapterCfg = DataMgr.SelectDungeon and DataMgr.SelectDungeon[Source.ChapterId]
+        if ChapterCfg and not ChapterCfg.IronSurvival then
+          return Source.ChapterId
+        end
+      end
+      break
+    end
+  end
+  return ChapterId
+end
+
 function PianoSceneUtils.IsPianoSceneChapterGroupUnlocked(ChapterGroup)
   local SourceChapters = ChapterGroup and ChapterGroup.SourceChapters
   if not SourceChapters or 0 == #SourceChapters then
@@ -197,11 +220,23 @@ function PianoSceneUtils.IsDungeonBgmEnabledForChapter(ChapterId, DisabledChapte
   return not DisabledChapters[ChapterId] and not DisabledChapters[tostring(ChapterId)]
 end
 
+function PianoSceneUtils.GetCanonicalChapterIdByDungeonId(DungeonId)
+  if not DungeonId or 0 == DungeonId then
+    return nil
+  end
+  local ChapterId = DataMgr.Dungeon2Select and DataMgr.Dungeon2Select[DungeonId]
+  if not ChapterId then
+    local ParentDungeonId = DataMgr.Dungeon2SubDungeon and DataMgr.Dungeon2SubDungeon[DungeonId]
+    ChapterId = ParentDungeonId and DataMgr.Dungeon2Select and DataMgr.Dungeon2Select[ParentDungeonId]
+  end
+  return PianoSceneUtils.ResolveCanonicalPianoSceneChapterId(ChapterId)
+end
+
 function PianoSceneUtils.ShouldPlayDungeonBGMForDungeonId(DungeonId)
   if not DungeonId or 0 == DungeonId then
     return true
   end
-  local ChapterId = DataMgr.Dungeon2Select and DataMgr.Dungeon2Select[DungeonId]
+  local ChapterId = PianoSceneUtils.GetCanonicalChapterIdByDungeonId(DungeonId)
   if not ChapterId then
     return true
   end
@@ -281,16 +316,16 @@ function PianoSceneUtils.PlayEffectiveDungeonBGM(Context, DungeonId)
     AudioManager(Context):PauseDungeonBGM()
     return
   end
-  local ChapterId = DataMgr.Dungeon2Select and DataMgr.Dungeon2Select[DungeonId]
+  local ChapterId = PianoSceneUtils.GetCanonicalChapterIdByDungeonId(DungeonId)
   local CustomMusicId = PianoSceneUtils.GetChapterCustomMusicId(ChapterId)
   if CustomMusicId and CustomMusicId > 0 then
     local EventPath = PianoSceneUtils.GetEffectiveChapterBgmEvent(ChapterId)
-    local Original_EventPath = EventPath:gsub("/musicbox", "")
-    local bUseOriginal = AudioManager(Context):DoesEventPathIsLoop(Original_EventPath)
-    if bUseOriginal then
-      EventPath = Original_EventPath
-    end
     if EventPath then
+      local Original_EventPath = EventPath:gsub("/musicbox", "")
+      local bUseOriginal = AudioManager(Context):DoesEventPathIsLoop(Original_EventPath)
+      if bUseOriginal then
+        EventPath = Original_EventPath
+      end
       AudioManager(Context):PlayDungeonBGMWithEvent(EventPath)
       return
     end

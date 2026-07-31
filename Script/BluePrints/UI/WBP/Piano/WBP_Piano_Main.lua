@@ -403,6 +403,7 @@ function WBP_Piano_Main:GetPianoSceneConfig(ChapterId)
   if not ChapterId then
     return {BgWidgetPath = PIANO_HOME_SCENE_BG}
   end
+  ChapterId = PianoSceneUtils.ResolvePianoSceneDisplayChapterId(ChapterId)
   local ChapterCfg = DataMgr.SelectDungeon and DataMgr.SelectDungeon[ChapterId]
   local BgWidgetPath = PIANO_DEFAULT_SCENE_BG
   if ChapterCfg and ChapterCfg.DungeonList and ChapterCfg.DungeonList[1] then

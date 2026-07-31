@@ -1322,7 +1322,7 @@ return ReadOnly("WidgetUI", {
     UIName = "MemoryAnime"
   },
   MenuEntranceBtn = {
-    BPPath = "WidgetBlueprint'/Game/UI/WBP/Menu/Widget/WBP_Menu_EntranceBtn.WBP_Menu_EntranceBtn'",
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Menu/PC/WBP_Menu_EntranceBtn_P.WBP_Menu_EntranceBtn_P'",
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Menu/Widget/WBP_Menu_EntranceBtn.WBP_Menu_EntranceBtn'",
     UIName = "MenuEntranceBtn"
   },

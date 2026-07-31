@@ -305,6 +305,8 @@ end
 function M:ClearReddotTreeData()
   ReddotManager.ClearLeafNodeCount(RacingActivityConst.ReddotRewardKey, true)
   ReddotManager.ClearLeafNodeCount(RacingActivityConst.ReddotChoosePetKey, true)
+  ReddotManager.ClearLeafNodeCount(RacingActivityConst.ReddotWatchAndGetRewardKey, true)
+  ReddotManager.ClearLeafNodeCount(RacingActivityConst.ReddotActivityKey, true)
 end
 
 function M:RefreshRacingOutSiderReddot()
@@ -351,7 +353,7 @@ function M:RefreshWatchAndGetrewardReddot()
   local WatchAndGetRewardReddot = ReddotManager.GetTreeNode(RacingActivityConst.ReddotWatchAndGetRewardKey)
   if WatchAndGetRewardReddot then
     DebugPrint("RaceLotteryComp OnDailyEightThirtyReached:RefreshWatchAndGetrewardReddot", self:GetIsWatched(), self:IsServerChoosePetEnough())
-    if not self:GetIsWatched() and self:IsServerChoosePetEnough() then
+    if not self:GetIsWatched() and self:IsServerChoosePetEnough() and 0 == WatchAndGetRewardReddot.Count then
       ReddotManager.IncreaseLeafNodeCount(RacingActivityConst.ReddotWatchAndGetRewardKey)
     end
   end

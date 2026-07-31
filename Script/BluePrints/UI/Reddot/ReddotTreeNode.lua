@@ -96,10 +96,11 @@ function ReddotTreeNode:AddChild(Name, Node, IsLeaf, RdType, CacheType, Cache, N
       if not Node.UIUnlockKey then
         Node.UIUnlockKey = Avatar:BindOnUIFirstTimeUnlock(Node.Conf.RuleId, function()
           Avatar.SystemStates[Node.Conf.RuleId] = 1
+          local Key = Node.UIUnlockKey
+          Node.UIUnlockKey = nil
           Node:InitNodeCache()
           Node:UpdateParentsCount()
-          Avatar:UnBindOnUIFirstTimeUnlock(Node.Conf.RuleId, Node.UIUnlockKey)
-          Node.UIUnlockKey = nil
+          Avatar:UnBindOnUIFirstTimeUnlock(Node.Conf.RuleId, Key)
         end)
       end
       if Cache then
