@@ -94,7 +94,12 @@ class DraftProcessor(BaseProcessor):
             if accessory_name:
                 return accessory_name
         elif product_type == "IronTicket":
-            return self.get_translated_text("UI_IronTicket_Survival_Name")
+            ticket_index = self.data_loader.build_index("IronTicket.json", "TicketId")
+            ticket_name = self.get_translated_text(
+                ticket_index.get(product_id, {}).get("Name", "")
+            )
+            if ticket_name:
+                return ticket_name
 
         # 如果无法获取名称，返回默认格式
         return f"{product_type}_{product_id}"
