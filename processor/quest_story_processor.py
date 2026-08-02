@@ -553,7 +553,9 @@ class QuestStoryProcessor(BaseProcessor):
             if dialogue_id_str in emitted_ids or dialogue_id_str in emitted_option_ids:
                 continue
 
-            sub_chain = self.get_dialogue_chain(dialogue_id, language)
+            sub_chain = self.get_dialogue_chain(
+                dialogue_id, language, include_contentless_nodes=False
+            )
             if not sub_chain:
                 continue
 
@@ -645,7 +647,9 @@ class QuestStoryProcessor(BaseProcessor):
                     option_key = str(option_id)
                     option_item = None
 
-                    option_chain = self.get_dialogue_chain(option_id, language)
+                    option_chain = self.get_dialogue_chain(
+                        option_id, language, include_contentless_nodes=False
+                    )
                     if option_chain:
                         option_item = dict(option_chain[0])
                     else:

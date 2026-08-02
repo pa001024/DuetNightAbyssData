@@ -669,12 +669,15 @@ class BaseProcessor:
             return content
         return ""
 
-    def get_dialogue_chain(self, first_dialogue_id, language=""):
+    def get_dialogue_chain(
+        self, first_dialogue_id, language="", include_contentless_nodes=True
+    ):
         """获取对话链（支持分支）
 
         Args:
             first_dialogue_id: 第一个对话ID
             language: 语言类型
+            include_contentless_nodes: 是否保留无文本的选项结构节点
 
         Returns:
             list: 对话链列表，包含所有分支
@@ -697,10 +700,21 @@ class BaseProcessor:
 
             # 获取对话内容
             dialogue_text = self.get_dialogue_content(current_dialogue_id, language)
-            if not dialogue_text:
-                continue
-            dialogue_item = {"id": int(current_dialogue_id), "content": dialogue_text}
             voice_name = self.get_dialogue_voice_name(current_dialogue_id, language)
+            has_next_options = bool(dialogue_data.get("NextOptions"))
+            next_dialogue_id = dialogue_data.get("NextDialogue")
+            if not dialogue_text:
+                should_emit_contentless = voice_name or (
+                    include_contentless_nodes and has_next_options
+                )
+                if not should_emit_contentless:
+                    if next_dialogue_id:
+                        queue.append((str(next_dialogue_id), current_dialogue_id))
+                    continue
+
+            dialogue_item = {"id": int(current_dialogue_id)}
+            if dialogue_text:
+                dialogue_item["content"] = dialogue_text
             if voice_name:
                 dialogue_item["voice"] = voice_name
 
@@ -708,11 +722,8 @@ class BaseProcessor:
             if "SpeakNpcId" in dialogue_data and dialogue_data["SpeakNpcId"]:
                 dialogue_item["npc"] = dialogue_data["SpeakNpcId"]
 
-            has_next_options = bool(dialogue_data.get("NextOptions"))
-
             # NextOptions 与 NextDialogue 互斥：有选项时不走 NextDialogue 分支
             if not has_next_options:
-                next_dialogue_id = dialogue_data.get("NextDialogue")
                 if next_dialogue_id:
                     dialogue_item["next"] = int(next_dialogue_id)
                     # 将下一个对话加入队列
