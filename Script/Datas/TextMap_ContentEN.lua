@@ -12804,12 +12804,12 @@ Event Rules:
           ContentEN = [[
 <H>Golden Journey: Geniemon Derby Event Rules</>
 
-1. Once the event begins, the Prediction Phase runs daily from 05:00 to 20:00. During this time, you can select up to 6 racers to support via the event interface and submit Geniemon Medals as backing. You may change your chosen racers during this phase; submitted medals cannot be withdrawn, only added to.
+1. Once the event begins, the Prediction Phase runs daily from 05:00 to 20:00 (server time). During this time, you can select up to 6 racers to support via the event interface and submit Geniemon Medals as backing. You may change your chosen racers during this phase; submitted medals cannot be withdrawn, only added to.
 2. During the Prediction Phase, you can check each racer's status. Their starting speed for the day is determined by their base speed combined with their daily condition. You can spend Geniemon Medals to gather intel on racers' status.
-3. The Results Sync Phase runs from 20:00 to 20:30. During this time, you cannot change your selected racers or submit additional medals.
-4. The Results Phase runs from 20:30 to 05:00 the each day. During this time, you can visit the race venue, view the results, and claim your prediction rewards.
+3. The Results Sync Phase runs from 20:00 to 20:30 (server time). During this time, you cannot change your selected racers or submit additional medals.
+4. The Results Phase runs from 20:30 to 05:00 (server time) the each day. During this time, you can visit the race venue, view the results, and claim your prediction rewards.
 5. If you did not select any racers or submit medals during the Prediction Phase, you will only be able to view the results and will not be able to claim prediction rewards.
-6. Prediction rewards must be claimed before 05:00 the following day. Please claim them in time.]]
+6. Prediction rewards must be claimed before 05:00 (server time) the following day. Please claim them in time.]]
         },
         Event_Rule_103026 = {
           ContentEN = [[
