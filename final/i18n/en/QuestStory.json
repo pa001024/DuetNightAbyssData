@@ -122484,7 +122484,23 @@
                 "id": 51200131,
                 "content": "Though I'm not sure where to begin... I've half forgotten what you asked me already. Why don't you ask again?",
                 "npc": 700402,
-                "next": 512001310
+                "options": [
+                  {
+                    "id": 51200132,
+                    "content": "That name kept coming up — the Screwdrivers. Who are they?",
+                    "next": 51200133
+                  },
+                  {
+                    "id": 51200142,
+                    "content": "You owe those two men money?",
+                    "next": 51200143
+                  },
+                  {
+                    "id": 51200152,
+                    "content": "Who's Svea? Was he a friend of yours?",
+                    "next": 51200153
+                  }
+                ]
               },
               {
                 "id": 51200133,
@@ -122854,21 +122870,6 @@
                 "id": 51200196,
                 "content": "This isn't really the place for a conversation like that. Shall we talk somewhere else?",
                 "npc": 700406
-              },
-              {
-                "id": 51200132,
-                "content": "That name kept coming up — the Screwdrivers. Who are they?",
-                "next": 51200133
-              },
-              {
-                "id": 51200142,
-                "content": "You owe those two men money?",
-                "next": 51200143
-              },
-              {
-                "id": 51200152,
-                "content": "Who's Svea? Was he a friend of yours?",
-                "next": 51200153
               }
             ]
           }
@@ -125388,7 +125389,23 @@
               {
                 "id": 51200822,
                 "content": "(It smells of blood and raw fish, sharp enough to turn your stomach. One sniff is more than enough.)",
-                "next": 512008160
+                "options": [
+                  {
+                    "id": 51200817,
+                    "content": "Take a closer look at the crate.",
+                    "next": 51200818
+                  },
+                  {
+                    "id": 51200819,
+                    "content": "Give the crate a shake.",
+                    "next": 51200820
+                  },
+                  {
+                    "id": 51200821,
+                    "content": "Smell it.",
+                    "next": 51200822
+                  }
+                ]
               },
               {
                 "id": 51200823,
@@ -125526,21 +125543,6 @@
                 "id": 51200845,
                 "content": "Ugh. This isn't the place to talk. Let's go somewhere else — and bring that crate with you.",
                 "npc": 700410
-              },
-              {
-                "id": 51200817,
-                "content": "Take a closer look at the crate.",
-                "next": 51200818
-              },
-              {
-                "id": 51200819,
-                "content": "Give the crate a shake.",
-                "next": 51200820
-              },
-              {
-                "id": 51200821,
-                "content": "Smell it.",
-                "next": 51200822
               }
             ]
           }
@@ -130263,7 +130265,18 @@
                 "id": 51210025,
                 "content": "Oh, piss off. How's that on me? She picked up plenty of it herself out there.",
                 "npc": 700429,
-                "next": 51210073
+                "options": [
+                  {
+                    "id": 51210026,
+                    "content": "What do you mean by \"openly standing up to Eisenbahn\"?",
+                    "next": 51210027
+                  },
+                  {
+                    "id": 51210033,
+                    "content": "Why her, of all people?",
+                    "next": 51210034
+                  }
+                ]
               },
               {
                 "id": 51210027,
@@ -130541,16 +130554,6 @@
                 "id": 51210072,
                 "content": "Kroger is coming with you.",
                 "npc": 700428
-              },
-              {
-                "id": 51210026,
-                "content": "What do you mean by \"openly standing up to Eisenbahn\"?",
-                "next": 51210027
-              },
-              {
-                "id": 51210033,
-                "content": "Why her, of all people?",
-                "next": 51210034
               }
             ]
           }

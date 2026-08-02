@@ -122234,7 +122234,23 @@
                 "id": 51200131,
                 "content": "C’est juste que je me demande par où commencer... J’ai un peu oublié. Pourquoi ne pas reposer la question ?",
                 "npc": 700402,
-                "next": 512001310
+                "options": [
+                  {
+                    "id": 51200132,
+                    "content": "<I>Vous n’arrêtez pas de parler de l’Union du Tournevis. C’est quoi, au juste ?</>",
+                    "next": 51200133
+                  },
+                  {
+                    "id": 51200142,
+                    "content": "<I>Tu dois de l’argent à ces deux ouvriers ?</>",
+                    "next": 51200143
+                  },
+                  {
+                    "id": 51200152,
+                    "content": "<I>C’est qui, Svea ? Un ami à toi ?</>",
+                    "next": 51200153
+                  }
+                ]
               },
               {
                 "id": 51200133,
@@ -122604,21 +122620,6 @@
                 "id": 51200196,
                 "content": "Ce n’est pas un endroit idéal pour parler. Si nous allions ailleurs ?",
                 "npc": 700406
-              },
-              {
-                "id": 51200132,
-                "content": "<I>Vous n’arrêtez pas de parler de l’Union du Tournevis. C’est quoi, au juste ?</>",
-                "next": 51200133
-              },
-              {
-                "id": 51200142,
-                "content": "<I>Tu dois de l’argent à ces deux ouvriers ?</>",
-                "next": 51200143
-              },
-              {
-                "id": 51200152,
-                "content": "<I>C’est qui, Svea ? Un ami à toi ?</>",
-                "next": 51200153
               }
             ]
           }
@@ -125138,7 +125139,23 @@
               {
                 "id": 51200822,
                 "content": "Une odeur de poisson cru et de sang frais, comme sur une planche de cuisine. Une seule inspiration suffit largement.",
-                "next": 512008160
+                "options": [
+                  {
+                    "id": 51200817,
+                    "content": "<I>Examiner la forme de la caisse.</>",
+                    "next": 51200818
+                  },
+                  {
+                    "id": 51200819,
+                    "content": "<I>Secouer la caisse.</>",
+                    "next": 51200820
+                  },
+                  {
+                    "id": 51200821,
+                    "content": "<I>Sentir l’odeur</>",
+                    "next": 51200822
+                  }
+                ]
               },
               {
                 "id": 51200823,
@@ -125276,21 +125293,6 @@
                 "id": 51200845,
                 "content": "Il y a trop de monde ici pour parler tranquillement. Changeons d’endroit... et n’oubliez pas d’emporter cette caisse.",
                 "npc": 700410
-              },
-              {
-                "id": 51200817,
-                "content": "<I>Examiner la forme de la caisse.</>",
-                "next": 51200818
-              },
-              {
-                "id": 51200819,
-                "content": "<I>Secouer la caisse.</>",
-                "next": 51200820
-              },
-              {
-                "id": 51200821,
-                "content": "<I>Sentir l’odeur</>",
-                "next": 51200822
               }
             ]
           }
@@ -130013,7 +130015,18 @@
                 "id": 51210025,
                 "content": "Quoi ?! Pourquoi ce serait ma faute ? Elle apprend aussi des trucs dehors !",
                 "npc": 700429,
-                "next": 51210073
+                "options": [
+                  {
+                    "id": 51210026,
+                    "content": "<I>Qu’est-ce que vous entendez par « défier ouvertement Eisenbahn » ?</>",
+                    "next": 51210027
+                  },
+                  {
+                    "id": 51210033,
+                    "content": "<I>Pourquoi avoir choisi... elle ?</>",
+                    "next": 51210034
+                  }
+                ]
               },
               {
                 "id": 51210027,
@@ -130291,16 +130304,6 @@
                 "id": 51210072,
                 "content": "Kroger vous accompagnera.",
                 "npc": 700428
-              },
-              {
-                "id": 51210026,
-                "content": "<I>Qu’est-ce que vous entendez par « défier ouvertement Eisenbahn » ?</>",
-                "next": 51210027
-              },
-              {
-                "id": 51210033,
-                "content": "<I>Pourquoi avoir choisi... elle ?</>",
-                "next": 51210034
               }
             ]
           }

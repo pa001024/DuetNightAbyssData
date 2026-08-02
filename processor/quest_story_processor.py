@@ -394,8 +394,10 @@ class QuestStoryProcessor(BaseProcessor):
 
         return option_ids
 
-    def _resolve_upstream_dialogue_tail_id(self, node_guid, guid_to_node, incoming_map):
-        """向上游回溯，找到最近对白节点的最后一句 DialogueId。"""
+    def _resolve_upstream_dialogue_tail_id(
+        self, node_guid, guid_to_node, incoming_map, dialogue_item_map=None
+    ):
+        """向上游回溯，找到最近对白节点的最后一句已导出对白ID。"""
         queue = list(incoming_map.get(str(node_guid), []))
         visited = set()
 
@@ -411,7 +413,11 @@ class QuestStoryProcessor(BaseProcessor):
 
             dialogue_ids = self._extract_flow_dialogue_ids(node)
             if dialogue_ids:
-                return dialogue_ids[-1]
+                if dialogue_item_map is None:
+                    return dialogue_ids[-1]
+                for dialogue_id in reversed(dialogue_ids):
+                    if str(dialogue_id) in dialogue_item_map:
+                        return dialogue_id
 
             for parent_guid in incoming_map.get(current_guid, []):
                 if parent_guid not in visited:
@@ -573,7 +579,10 @@ class QuestStoryProcessor(BaseProcessor):
                     continue
 
                 parent_dialogue_id = self._resolve_upstream_dialogue_tail_id(
-                    option_node_guid, guid_to_node, incoming_map
+                    option_node_guid,
+                    guid_to_node,
+                    incoming_map,
+                    dialogue_item_map,
                 )
                 parent_item = None
                 if parent_dialogue_id:
