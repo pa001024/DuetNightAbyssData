@@ -2,275 +2,137 @@
   {
     "id": 101,
     "name": "窒息之域",
-    "desc": "自身受到的治療降低<Highlight>#1</>。",
-    "desc_values": [
+    "desc": "自身受到的治療降低<Highlight>20.0%</>。",
+    "descValues": [
       "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
     ],
-    "global_passive_id": 30101001,
-    "heat_value": 2,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_HealDown.T_Rou_Contract_Char_HealDown",
-    "max_level": 5,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30101001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_HealDown",
+    "maxLevel": 5
   },
   {
     "id": 102,
     "name": "困頓之域",
-    "desc": "自身攻擊降低<Highlight>#1</>。",
-    "desc_values": [
+    "desc": "自身攻擊降低<Highlight>20.0%</>。",
+    "descValues": [
       "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
     ],
-    "global_passive_id": 30101002,
-    "heat_value": 2,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Char_SpDown.T_Rou_Contract_Char_SpDown",
-    "max_level": 5,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30101002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_SpDown",
+    "maxLevel": 5
   },
   {
     "id": 103,
     "name": "滋長之域",
-    "desc": "敵人最大生命提高<Highlight>#1</>。",
-    "desc_values": [
+    "desc": "敵人最大生命提高<Highlight>40.0%</>。",
+    "descValues": [
       "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
     ],
-    "global_passive_id": 30102001,
-    "heat_value": 2,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
-    "max_level": 10,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30102001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 10
   },
   {
     "id": 104,
     "name": "折磨之域",
-    "desc": "敵人攻擊提高<Highlight>#1</>。",
-    "desc_values": [
+    "desc": "敵人攻擊提高<Highlight>20.0%</>。",
+    "descValues": [
       "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
     ],
-    "global_passive_id": 30102002,
-    "heat_value": 2,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon__AtkUp.T_Rou_Contract_Mon__AtkUp",
-    "max_level": 10,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30102002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon__AtkUp",
+    "maxLevel": 10
   },
   {
     "id": 105,
     "name": "麻木之域",
-    "desc": "敵人受到的傷害降低<Highlight>#1</>。",
-    "desc_values": [
+    "desc": "敵人受到的傷害降低<Highlight>20.0%</>。",
+    "descValues": [
       "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
     ],
-    "global_passive_id": 30102003,
-    "heat_value": 3,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_HpUp.T_Rou_Contract_Mon_HpUp",
-    "max_level": 5,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30102003,
+    "heatValue": 3,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5
   },
   {
     "id": 106,
     "name": "育種之域",
     "desc": "普通敵人被擊敗後產生1次半徑<Highlight>4</>米的爆炸，造成傷害。",
-    "desc_values": [],
-    "global_passive_id": 30102004,
-    "heat_value": 5,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mon_Explode.T_Rou_Contract_Mon_Explode",
-    "max_level": 1,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [
-      "Term_Rou_Contract_106_Blast"
-    ],
-    "server_build": []
+    "descValues": [],
+    "globalPassiveId": 30102004,
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Mon_Explode",
+    "maxLevel": 1
   },
   {
     "id": 107,
     "name": "騷動之域",
-    "desc": "戰鬥·微茫幽影和戰鬥·離散幽影中額外出現<Highlight>#1</>名號令者。",
-    "desc_values": [
+    "desc": "戰鬥·微茫幽影和戰鬥·離散幽影中額外出現<Highlight>2.0</>名號令者。",
+    "descValues": [
       "$#GlobalPassiveData[30103001].Vars.Count$"
     ],
-    "global_passive_id": 30103001,
-    "heat_value": 5,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraStrong.T_Rou_Contract_Room_ExtraStrong",
-    "max_level": 3,
-    "room_type": [
-      1,
-      6
-    ],
-    "unit_id": [
-      6001011,
-      6001012,
-      6001014,
-      6002015,
-      6001016,
-      6001017,
-      6001018,
-      6001019,
-      6001020,
-      6001021,
-      6002022,
-      6001023,
-      6001024,
-      7001011,
-      7002012,
-      7002014,
-      7001015,
-      7001016,
-      7001017,
-      7001018,
-      7001019,
-      7002020,
-      7001021,
-      7001022,
-      7001023,
-      7001024
-    ],
-    "unit_num": [
-      1,
-      2,
-      3
-    ],
-    "unit_type": "Monster",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30103001,
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Room_ExtraStrong",
+    "maxLevel": 3
   },
   {
     "id": 108,
     "name": "喧嘩之域",
-    "desc": "戰鬥·深邃幽影中額外出現<Highlight>#1</>名精英敵人。",
-    "desc_values": [
+    "desc": "戰鬥·深邃幽影中額外出現<Highlight>2.0</>名精英敵人。",
+    "descValues": [
       "$#GlobalPassiveData[30103002].Vars.Count$"
     ],
-    "global_passive_id": 30103002,
-    "heat_value": 5,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraElite.T_Rou_Contract_Room_ExtraElite",
-    "max_level": 2,
-    "room_type": [
-      2
-    ],
-    "unit_id": [
-      9901051,
-      9901052,
-      9901053
-    ],
-    "unit_num": [
-      1,
-      2
-    ],
-    "unit_type": "Monster",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30103002,
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Room_ExtraElite",
+    "maxLevel": 2
   },
   {
     "id": 109,
     "name": "構造之域",
-    "desc": "戰鬥中出現<Highlight>#1</>個敵對機關。",
-    "desc_values": [
+    "desc": "戰鬥中出現<Highlight>1.0</>個敵對機關。",
+    "descValues": [
       "$#GlobalPassiveData[30103003].Vars.Count$"
     ],
-    "global_passive_id": 30103003,
-    "heat_value": 3,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Room_ExtraMech.T_Rou_Contract_Room_ExtraMech",
-    "max_level": 1,
-    "room_type": [
-      1,
-      2,
-      6
-    ],
-    "unit_id": [
-      39002,
-      39004
-    ],
-    "unit_num": [
-      1
-    ],
-    "unit_type": "Mechanism",
-    "explanation_id": [],
-    "server_build": []
+    "globalPassiveId": 30103003,
+    "heatValue": 3,
+    "icon": "T_Rou_Contract_Room_ExtraMech",
+    "maxLevel": 1
   },
   {
     "id": 110,
     "name": "乾涸之域",
     "desc": "在深淵行商處購買時，所需余燼提高<Highlight>50%</>。",
-    "desc_values": [],
-    "global_passive_id": 0,
-    "heat_value": 12,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_CostUp.T_Rou_Contract_Mechanics_CostUp",
-    "max_level": 1,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": [
-      [
-        12
-      ]
-    ]
+    "descValues": [],
+    "globalPassiveId": 0,
+    "heatValue": 12,
+    "icon": "T_Rou_Contract_Mechanics_CostUp",
+    "maxLevel": 1
   },
   {
     "id": 111,
     "name": "盲目之域",
     "desc": "每次抉擇時，可選抉擇<Highlight>減少</>1個。",
-    "desc_values": [],
-    "global_passive_id": 0,
-    "heat_value": 9,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_LessChoice.T_Rou_Contract_Mechanics_LessChoice",
-    "max_level": 1,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": [
-      [
-        13
-      ]
-    ]
+    "descValues": [],
+    "globalPassiveId": 0,
+    "heatValue": 9,
+    "icon": "T_Rou_Contract_Mechanics_LessChoice",
+    "maxLevel": 1
   },
   {
     "id": 112,
     "name": "癡愚之域",
     "desc": "每次抉擇時，強制進行隨機抉擇。",
-    "desc_values": [],
-    "global_passive_id": 0,
-    "heat_value": 21,
-    "icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rou_Contract_Mechanics_RandomChoice.T_Rou_Contract_Mechanics_RandomChoice",
-    "max_level": 1,
-    "room_type": [],
-    "unit_id": [],
-    "unit_num": [],
-    "unit_type": "",
-    "explanation_id": [],
-    "server_build": [
-      [
-        14
-      ]
-    ]
+    "descValues": [],
+    "globalPassiveId": 0,
+    "heatValue": 21,
+    "icon": "T_Rou_Contract_Mechanics_RandomChoice",
+    "maxLevel": 1
   }
 ]

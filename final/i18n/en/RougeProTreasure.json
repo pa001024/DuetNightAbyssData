@@ -1,0 +1,1764 @@
+[
+  {
+    "id": 10101,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_01",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10102,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      14
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10102,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10103,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，生命恢复最大值的y%",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_05",
+    "modEquip": "Role",
+    "name": "Sacred Curing Soap",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，生命恢复最大值的y%",
+    "treasureGroup": 1,
+    "treasureId": 10103,
+    "treasureMod": 21101031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10104,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，神智恢复y",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_06",
+    "modEquip": "Role",
+    "name": "Sacred Revitalizing Soap",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，神智恢复y",
+    "treasureGroup": 1,
+    "treasureId": 10104,
+    "treasureMod": 21101041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10105,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10105,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10106,
+    "canSell": 1,
+    "desc": "When HP falls below <Highlight>$1</>, grants Hitstun immunity and -<Highlight>$3</> Damage Taken for <Highlight>$2</>s. Can trigger once every <Highlight>$4</>s.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_21",
+    "modEquip": "Role",
+    "name": "Ascetic's Shackles",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "When HP drops low, grants Hitstun immunity and reduces Damage Taken.",
+    "treasureGroup": 1,
+    "treasureId": 10106,
+    "treasureMod": 21101061,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10107,
+    "canSell": 1,
+    "desc": "After using Geniemon Support, grants +<Highlight>$1</>Damage Dealt for <Highlight>$2</>s.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_28",
+    "modEquip": "Role",
+    "name": "Pocket Companion's Snack",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Using Geniemon Support increases Damage Dealt.",
+    "treasureGroup": 1,
+    "treasureId": 10107,
+    "treasureMod": 21101071,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10108,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_03",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10108,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10109,
+    "canSell": 1,
+    "desc": "Max Dodge Attempts +<Highlight>2.0</>.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_19",
+    "modEquip": "Role",
+    "name": "Pioneer Scout's Boots",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Increases the character's Max Dodge Attempts.",
+    "treasureGroup": 1,
+    "treasureId": 10109,
+    "treasureMod": 21101091,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10110,
+    "canSell": 1,
+    "desc": "After each revival, grants 1 stack of +<Highlight>$1</> Damage Dealt.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_24",
+    "modEquip": "Role",
+    "name": "Fanatic's Ring",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Each revival increases Damage Dealt.",
+    "treasureGroup": 1,
+    "treasureId": 10110,
+    "treasureMod": 21101101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10111,
+    "canSell": 1,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10111,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10112,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10112,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10113,
+    "canSell": 1,
+    "desc": "Dealing damage with a Ranged Weapon spawns an [Ammo Supply Chest]. Can trigger once every <Highlight>$1</>s.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Windhunter's Silver Bullet",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Dealing damage with a Ranged Weapon spawns [Ammo Supply Chests].",
+    "treasureGroup": 1,
+    "treasureId": 10113,
+    "treasureMod": 21101131,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10202,
+    "canSell": 1,
+    "desc": "Restores <Highlight>$1</> Sanity after using a skill. Cooldown: <Highlight>$2</>s.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_22",
+    "modEquip": "Role",
+    "name": "Holy Grail of the Noclunism Believer",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Restores Sanity after using skills.",
+    "treasureGroup": 1,
+    "treasureId": 10202,
+    "treasureMod": 21102021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10203,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_23",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10203,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10204,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_17",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10204,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10205,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_20",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10205,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10206,
+    "canSell": 1,
+    "desc": "When a weapon attack lands a CRIT, one of the following effects triggers: <Highlight>25%</> chance to decrease CRIT Damage by <Highlight>20%</>, <Highlight>70%</> chance to increase CRIT Damage by <Highlight>30%</>, or <Highlight>5%</> chance to increase CRIT Damage by <Highlight>100%</>. Each effect can stack up to 5 times.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_30",
+    "modEquip": "Role",
+    "name": "A Lucky Fool's Cheer",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Weapon CRITs can randomly increase or decrease CRIT Damage.",
+    "treasureGroup": 1,
+    "treasureId": 10206,
+    "treasureMod": 21102061,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10207,
+    "canSell": 1,
+    "desc": "Sanity Auto-Recovery +<Highlight>4.0</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_10",
+    "modEquip": "Role",
+    "name": "Healer Priest's Earrings",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases Sanity Auto-Recovery.",
+    "treasureGroup": 1,
+    "treasureId": 10207,
+    "treasureMod": 21102071,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10208,
+    "canSell": 1,
+    "desc": "When you take damage and HP falls below <Highlight>50%</>, restore <Highlight>100%</> Sanity.\nWhen Sanity falls below <Highlight>50%</>, restore <Highlight>100%</> HP.\nThese effects share a cooldown and can trigger no more than once every <Highlight>120</>s.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_15",
+    "modEquip": "Role",
+    "name": "Bird-Masked Freak's Game",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Restores Sanity at low HP and HP at low Sanity.",
+    "treasureGroup": 1,
+    "treasureId": 10208,
+    "treasureMod": 21102081,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10209,
+    "canSell": 1,
+    "desc": "Charged Attacks summon an additional Holy Sword strike, dealing damage equal to <Highlight>50%</> of ATK. Cooldown: <Highlight>5</>s.\nAfter 20 Holy Sword summons, an additional strike is triggered, dealing damage equal to <Highlight>50%</> of ATK.\nAfter 50 Holy Sword summons, an additional strike is triggered, dealing damage equal to <Highlight>150%</> of ATK.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "The Dread Knight's Holy Sword",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Charged Attacks can summon a Holy Sword to strike enemies.",
+    "treasureGroup": 1,
+    "treasureId": 10209,
+    "treasureMod": 21102091,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10210,
+    "canSell": 1,
+    "desc": "While in mid-air, Shooting DMG increases by <Highlight>200%</>. After triggering <Highlight>10</> times, this effect enters a <Highlight>5</>s cooldown.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_27",
+    "modEquip": "Role",
+    "name": "Windhunter's Magazine",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases Shooting DMG in mid-air.",
+    "treasureGroup": 1,
+    "treasureId": 10210,
+    "treasureMod": 21102101,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10211,
+    "canSell": 1,
+    "desc": "Increases damage dealt to Primanders and Boss enemies by <Highlight>80%</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_29",
+    "modEquip": "Role",
+    "name": "Vanguard Commander's Gauntlet",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases damage dealt to Primanders and Boss enemies.",
+    "treasureGroup": 1,
+    "treasureId": 10211,
+    "treasureMod": 21102111,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10212,
+    "canSell": 1,
+    "desc": "The more types of Bonus Effects affecting an enemy, the more damage it takes, up to <Highlight>60%</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Rotblood Zealot's Confession",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "The more types of Bonus Effects affecting an enemy, the more damage it takes.",
+    "treasureGroup": 1,
+    "treasureId": 10212,
+    "treasureMod": 21102121,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10213,
+    "canSell": 1,
+    "desc": "When damage reduces a target's HP below <Highlight>$3</>, deals bonus damage equal to <Highlight>$1</> of Character ATK. Can trigger once every <Highlight>$2</>s on the same target.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Prayer's Echo: Core Flame",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Deals <Highlight>additional</> damage when an attack lowers a target's HP <Highlight>below a certain threshold</>.",
+    "treasureGroup": 1,
+    "treasureId": 10213,
+    "treasureMod": 21102131,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10214,
+    "canSell": 1,
+    "desc": "Dealing Ranged Weapon DMG to targets more than <Highlight>$2</>m away inflicts +<Highlight>$1</> Ranged Weapon DMG Taken, up to <Highlight>$3</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Prayer's Echo: Seaborne Moon",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Ranged Weapons deal gradually increasing damage to distant targets.",
+    "treasureGroup": 1,
+    "treasureId": 10214,
+    "treasureMod": 21102141,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10215,
+    "canSell": 1,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10215,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10216,
+    "canSell": 1,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10216,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10217,
+    "canSell": 1,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10217,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10218,
+    "canSell": 1,
+    "desc": "After creating a summon, PEN Stats increase by <Highlight>30%</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Prayer's Echo: Glimmerfly",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases PEN Stats after creating a summon.",
+    "treasureGroup": 1,
+    "treasureId": 10218,
+    "treasureMod": 21102181,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10219,
+    "canSell": 1,
+    "desc": "For Morale and Resolve calculations, your HP percentage is treated as <Highlight>1%</>. This effect is inactive while Morale is above <Highlight>30%</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Prayer's Echo: Vamprose",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "For Morale and Resolve calculations, your HP percentage is treated as <Highlight>1%</>. This effect is inactive while Morale is above <Highlight>30%</>.",
+    "treasureGroup": 1,
+    "treasureId": 10219,
+    "treasureMod": 21102191,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10220,
+    "canSell": 1,
+    "desc": "Dealing Melee Weapon DMG increases the target's Damage Taken by <Highlight>2.5%</> for <Highlight>5</>s, stacking up to <Highlight>10</> times.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Vanguard Commander's Blade",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Dealing Melee Weapon DMG increases the target's Damage Taken.",
+    "treasureGroup": 1,
+    "treasureId": 10220,
+    "treasureMod": 21102201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10301,
+    "canSell": 1,
+    "desc": "Each time you use a Combat Skill, roll a die. Higher rolls grant a greater damage boost, up to <Highlight>120%</>. The roll does not change until you use another Combat Skill. The initial roll is 1.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_16",
+    "modEquip": "Role",
+    "name": "Bird-Masked Freak's Magic Tricks",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "Using a Combat Skill rolls a die. Higher rolls grant a greater damage boost.",
+    "treasureGroup": 1,
+    "treasureId": 10301,
+    "treasureMod": 21103011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10302,
+    "canSell": 1,
+    "desc": "Damage Dealt +<Highlight>$1</> for each Artefact owned.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_18",
+    "modEquip": "Role",
+    "name": "Charity of Lord \"Generous\"",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "The more Artefacts owned, the higher the Damage Dealt.",
+    "treasureGroup": 1,
+    "treasureId": 10302,
+    "treasureMod": 21103021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10303,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_08",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10303,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10304,
+    "canSell": 1,
+    "desc": "When damage dealt is below <Highlight>$1</>, triggers an additional <Highlight>$2</> True Damage.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_54",
+    "modEquip": "Role",
+    "name": "Wandering Knight's Last Dream",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "Dealing low damage triggers bonus True Damage.",
+    "treasureGroup": 1,
+    "treasureId": 10304,
+    "treasureMod": 21103041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10305,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10305,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10306,
+    "desc": "When granting a buff to an ally, that ally additionally gains <Highlight>+50%</> Damage Dealt and <Highlight>-30%</> Damage Taken.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Warm Bread on a Cold Night",
+    "simpleDesc": "Granting a buff to an ally also increases their Damage Dealt and reduces their Damage Taken.",
+    "treasureGroup": 1,
+    "treasureId": 10306,
+    "treasureMod": 21103061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 10307,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_31",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 1,
+    "treasureId": 10307,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 11201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 11,
+    "treasureId": 11201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 11202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 11,
+    "treasureId": 11202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 12201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 12,
+    "treasureId": 12201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 12202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 12,
+    "treasureId": 12202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 13201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 13,
+    "treasureId": 13201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 13202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 13,
+    "treasureId": 13202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 14201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 14,
+    "treasureId": 14201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 14202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 14,
+    "treasureId": 14202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 15201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 15,
+    "treasureId": 15201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 15202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 15,
+    "treasureId": 15202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 16201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 16,
+    "treasureId": 16201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 16202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 16,
+    "treasureId": 16202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 17101,
+    "canSell": 1,
+    "desc": "Dealing damage with a Consonance Weapon restores <Highlight>1</> Sanity.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Reverie of the Crimson Beast",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Dealing damage with a Consonance Weapon restores Sanity.",
+    "treasureGroup": 17,
+    "treasureId": 17101,
+    "treasureMod": 21171011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 17201,
+    "canSell": 1,
+    "desc": "Dealing damage with a Consonance Weapon increases Skill DMG by <Highlight>30%</> for <Highlight>5</>s. Cooldown: <Highlight>5</>s.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Lament of the Crimson Beast",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Dealing damage with a Consonance Weapon increases Skill DMG.",
+    "treasureGroup": 17,
+    "treasureId": 17201,
+    "treasureMod": 21172011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 18101,
+    "desc": "Restores <Highlight>1</> Sanity every <Highlight>2</>s while an ally is within <Highlight>20</>m.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Song of Plumes Entwined",
+    "simpleDesc": "Continuously restores Sanity while an ally is nearby.",
+    "treasureGroup": 18,
+    "treasureId": 18101,
+    "treasureMod": 21181011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 18201,
+    "desc": "Restores HP equal to <Highlight>3%</> of Max HP every <Highlight>2</>s while an ally is within <Highlight>20</>m.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Shade of Plumes Entwined",
+    "simpleDesc": "Continuously restores HP while an ally is nearby.",
+    "treasureGroup": 18,
+    "treasureId": 18201,
+    "treasureMod": 21182011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 18301,
+    "desc": "Grants <Highlight>5</> Embers every <Highlight>2</>s while an ally is within <Highlight>20</>m.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "Nurture of Plumes Entwined",
+    "simpleDesc": "Continuously grants Embers while an ally is nearby.",
+    "treasureGroup": 18,
+    "treasureId": 18301,
+    "treasureMod": 21183011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 19101,
+    "canSell": 1,
+    "desc": "While shielded, Damage Taken -<Highlight>$1</>.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_34",
+    "modEquip": "Role",
+    "name": "Guardian Knight's Shield",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Reduces Damage Taken while shielded.",
+    "treasureGroup": 19,
+    "treasureId": 19101,
+    "treasureMod": 21191011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 19201,
+    "canSell": 1,
+    "desc": "While shielded, Damage Dealt +<Highlight>$1</>.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_33",
+    "modEquip": "Role",
+    "name": "Guardian Knight's Sword",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases Damage Dealt while shielded.",
+    "treasureGroup": 19,
+    "treasureId": 19201,
+    "treasureMod": 21192011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20001,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      1
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20001,
+    "treasureId": 20001,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20002,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      2
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "It is a hymn known to all—praising the merciful gods who guide lost souls. Devout believers of Elysium hum its heart-wrenching melody in the abyss, begging the gods to lead them from suffering to the promised land. The gilded melody carries them into eternal slumber, still dreaming of salvation.",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20002,
+    "treasureId": 20002,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20003,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      3
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Abyssoids close in from all sides. The Knight charges alone into the darkness, carving a path of hope. After the Abyssoids recede, the Healer Priest drags the Knight's broken body from the black void. \n\"I will save her,\" the Healer Priest vows. To mend the wounds of the valiant is a healer's duty.",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20003,
+    "treasureId": 20003,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20004,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      4
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "The road ahead is arduous, and the truth always hurts. When the evening bell rings, why does the wandering bird refuse to return to its nest? \nBecause he knows no tower marks the Continent's center, no gods hold all the answers. He chooses to walk his own path, even if it means wearing shackles for life.",
+    "icon": "T_Rouge_Treasure_21",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20004,
+    "treasureId": 20004,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20005,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      5
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
+    "icon": "T_Rouge_Treasure_32",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20005,
+    "treasureId": 20005,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20006,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      6
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Since childhood, she idolized her sister—the brilliant Knight who could conquer any challenge. \nWhile legends warned that none return alive from the abyss beneath the sacred lake, her sister proved them wrong. \nShe lived… in terrible silence.",
+    "icon": "T_Rouge_Treasure_42",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20006,
+    "treasureId": 20006,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20007,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "effect": [
+      7
+    ],
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Grown-ups whisper that my sister offended the gods in the sacred lake, so they took a piece of her soul as punishment. \nNo, my sister is a true Knight, devout and honorable. Her soul was lost there by accident. If no one else will believe, I'll make them see. \nThe abyss awaits, but I will return with the piece missing.",
+    "icon": "T_Rouge_Treasure_43",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 20007,
+    "treasureId": 20007,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20101,
+    "canSell": 1,
+    "desc": "Each time you use a Skill, Melee Weapon DMG increases by 20%. This effect stacks up to 20 times and loses 1 stack every 5s.\nSkill DMG and Ranged Weapon DMG are reduced by 50%.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "Bird-Masked Freak's Toy (Ⅰ)",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Using a Skill increases Melee Weapon DMG.",
+    "treasureGroup": 20,
+    "treasureId": 20101,
+    "treasureMod": 21201011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20102,
+    "canSell": 1,
+    "desc": "Each time you use a Skill, Ranged Weapon DMG increases by 20%. This effect stacks up to 20 times and loses 1 stack every 5s.\nSkill DMG and Melee Weapon DMG are reduced by 50%.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "Bird-Masked Freak's Toy (Ⅱ)",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Using a Skill increases Ranged Weapon DMG.",
+    "treasureGroup": 20,
+    "treasureId": 20102,
+    "treasureMod": 21201021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 20201,
+    "canSell": 1,
+    "desc": "Each time you use a Skill, Skill DMG increases by 20%. This effect stacks up to 20 times and loses 1 stack every 5s.\nMelee Weapon DMG and Ranged Weapon DMG are reduced by 50%.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "Bird-Masked Freak's Toy (Ⅲ)",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Using a Skill increases Skill DMG.",
+    "treasureGroup": 20,
+    "treasureId": 20201,
+    "treasureMod": 21202011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 21101,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_35",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 21,
+    "treasureId": 21101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 21201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_36",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 21,
+    "treasureId": 21201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 21301,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_37",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 21,
+    "treasureId": 21301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 22101,
+    "canSell": 1,
+    "desc": "When dealing damage, there's a <Highlight>$1</> chance to deal bonus Pyro Damage equal to <Highlight>$2</> of Character ATK.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_38",
+    "modEquip": "Role",
+    "name": "Blazing Seal",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Damage dealt may trigger bonus Pyro Damage.",
+    "treasureGroup": 22,
+    "treasureId": 22101,
+    "treasureMod": 21221011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 22102,
+    "canSell": 1,
+    "desc": "When dealing damage, there's a <Highlight>$1</> chance to deal bonus Hydro Damage equal to <Highlight>$2</> of Character ATK.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_39",
+    "modEquip": "Role",
+    "name": "Flowing Seal",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Damage dealt may trigger bonus Hydro Damage.",
+    "treasureGroup": 22,
+    "treasureId": 22102,
+    "treasureMod": 21221021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 22103,
+    "canSell": 1,
+    "desc": "When dealing damage, there's a <Highlight>$1</> chance to deal bonus Anemo Damage equal to <Highlight>$2</> of Character ATK.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_40",
+    "modEquip": "Role",
+    "name": "Gale-Etched Seal",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Damage dealt may trigger bonus Anemo Damage.",
+    "treasureGroup": 22,
+    "treasureId": 22103,
+    "treasureMod": 21221031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 22104,
+    "canSell": 1,
+    "desc": "When dealing damage, there's a <Highlight>$1</> chance to deal bonus Electro Damage equal to <Highlight>$2</> of Character ATK.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_41",
+    "modEquip": "Role",
+    "name": "Thunderstruck Seal",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Damage dealt may trigger bonus Electro Damage.",
+    "treasureGroup": 22,
+    "treasureId": 22104,
+    "treasureMod": 21221041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 23101,
+    "canSell": 1,
+    "desc": "Grants +<Highlight>$2</> Damage Dealt at the cost of -<Highlight>$1</> Skill Efficiency.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_42",
+    "modEquip": "Role",
+    "name": "Penitent Knight's Gauntlets",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "Increases Damage Dealt at the cost of reduced Skill Efficiency.",
+    "treasureGroup": 23,
+    "treasureId": 23101,
+    "treasureMod": 21231011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 23201,
+    "canSell": 1,
+    "desc": "Grants +<Highlight>$2</> Damage Dealt at the cost of -<Highlight>$1</> Melee Weapon DMG.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_43",
+    "modEquip": "Role",
+    "name": "Penitent Knight's Rusted Sword",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases Damage Dealt at the cost of reduced Melee Weapon DMG.",
+    "treasureGroup": 23,
+    "treasureId": 23201,
+    "treasureMod": 21232011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 23202,
+    "canSell": 1,
+    "desc": "Grants +<Highlight>$2</> Damage Dealt at the cost of -<Highlight>$1</> Ranged Weapon DMG.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_44",
+    "modEquip": "Role",
+    "name": "Penitent Knight's Worn Rifle",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "Increases Damage Dealt at the cost of reduced Ranged Weapon DMG.",
+    "treasureGroup": 23,
+    "treasureId": 23202,
+    "treasureMod": 21232021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 23301,
+    "canSell": 1,
+    "desc": "Grants +<Highlight>$2</> Damage Dealt at the cost of +<Highlight>$1</> Damage Taken.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_45",
+    "modEquip": "Role",
+    "name": "Penitent Knight's Pendant",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "Increases Damage Dealt at the cost of increased Damage Taken.",
+    "treasureGroup": 23,
+    "treasureId": 23301,
+    "treasureMod": 21233011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 24101,
+    "desc": "When an enemy's [Stance] is above <Highlight>$1</>, your character restores <Highlight>$2</> Sanity upon dealing damage. Cooldown: <Highlight>$3</>s.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_53",
+    "modEquip": "Role",
+    "name": "Longbow of the Forlorn Sorceress",
+    "simpleDesc": "Restores Sanity when dealing damage to enemies with high [Stance].",
+    "treasureGroup": 24,
+    "treasureId": 24101,
+    "treasureMod": 21241011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 24201,
+    "desc": "When an enemy's [Stance] falls below <Highlight>$1</>, your character gains +<Highlight>$2</> Damage Dealt.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_52",
+    "modEquip": "Role",
+    "name": "Broken Arrow of the Forlorn Sorceress",
+    "simpleDesc": "Increases Damage Dealt against enemies with low [Stance].",
+    "treasureGroup": 24,
+    "treasureId": 24201,
+    "treasureMod": 21242011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 25301,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_46",
+    "modEquip": "Role",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 25,
+    "treasureId": 25301,
+    "treasureMod": 21253011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 25302,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_47",
+    "modEquip": "Role",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 25,
+    "treasureId": 25302,
+    "treasureMod": 21253021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 25303,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_48",
+    "modEquip": "Role",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 25,
+    "treasureId": 25303,
+    "treasureMod": 21253031,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 25304,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_49",
+    "modEquip": "Role",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 25,
+    "treasureId": 25304,
+    "treasureMod": 21253041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 25305,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_50",
+    "modEquip": "Role",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 25,
+    "treasureId": 25305,
+    "treasureMod": 21253051,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 25306,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_51",
+    "modEquip": "Role",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 25,
+    "treasureId": 25306,
+    "treasureMod": 21253061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 26101,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 26,
+    "treasureId": 26101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 26201,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 26,
+    "treasureId": 26201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 26202,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 26,
+    "treasureId": 26202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  },
+  {
+    "id": 26301,
+    "desc": "Grants a <Highlight>@1</> discount at the Abyssal Merchant's stall.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "Abyssal Merchant's Coupon",
+    "simpleDesc": "Grants a discount at the Abyssal Merchant's stall.",
+    "treasureGroup": 26,
+    "treasureId": 26301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "Artefact not unlocked"
+  }
+]

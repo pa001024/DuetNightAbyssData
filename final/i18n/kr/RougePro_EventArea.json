@@ -1,0 +1,251 @@
+[
+  {
+    "id": 1,
+    "cowStaticPoint": [
+      116001,
+      116002,
+      116003
+    ],
+    "defenceRewardBoxStaticPoint": 112001,
+    "enterTriggerBox": 1001,
+    "exitTriggerBox": 1101,
+    "exterminateRewardBoxStaticPoint": 112001,
+    "exterminateStaticPointId": [
+      111201,
+      111202,
+      111203,
+      111204,
+      111205
+    ],
+    "killEliteMobRewardBoxStaticPoint": 112001,
+    "occupationRewardBoxStaticPoint": 112001,
+    "occupationStaticPointId": [
+      111701
+    ],
+    "sabotageProRewardBoxStaticPoint": 112001,
+    "sabotageProStaticPointId": [
+      111500,
+      111501,
+      111502,
+      111503
+    ],
+    "survivalProRewardBoxStaticPoint": 112001,
+    "survivalProStaticPointId": [
+      111101
+    ]
+  },
+  {
+    "id": 2,
+    "cowStaticPoint": [
+      126001,
+      126002,
+      126003
+    ],
+    "defenceRewardBoxStaticPoint": 122001,
+    "enterTriggerBox": 1002,
+    "exitTriggerBox": 1102,
+    "exterminateRewardBoxStaticPoint": 122001,
+    "exterminateStaticPointId": [
+      121201,
+      121202,
+      121203,
+      121204,
+      121205,
+      121206,
+      121207
+    ],
+    "killEliteMobRewardBoxStaticPoint": 122001,
+    "occupationRewardBoxStaticPoint": 122001,
+    "occupationStaticPointId": [
+      121701
+    ],
+    "sabotageProRewardBoxStaticPoint": 122001,
+    "sabotageProStaticPointId": [
+      121500,
+      121501,
+      121502,
+      121503
+    ],
+    "survivalProRewardBoxStaticPoint": 122001,
+    "survivalProStaticPointId": [
+      121101
+    ]
+  },
+  {
+    "id": 3,
+    "cowStaticPoint": [
+      136001,
+      136002,
+      136003
+    ],
+    "defenceRewardBoxStaticPoint": 132001,
+    "enterTriggerBox": 1003,
+    "exitTriggerBox": 1103,
+    "exterminateRewardBoxStaticPoint": 132001,
+    "exterminateStaticPointId": [
+      131201,
+      131202,
+      131203,
+      131204,
+      131205,
+      131206,
+      131207,
+      131208
+    ],
+    "killEliteMobRewardBoxStaticPoint": 132001,
+    "occupationRewardBoxStaticPoint": 132001,
+    "occupationStaticPointId": [
+      131701
+    ],
+    "sabotageProRewardBoxStaticPoint": 132001,
+    "sabotageProStaticPointId": [
+      131500,
+      131501,
+      131502,
+      131503
+    ],
+    "survivalProRewardBoxStaticPoint": 132001,
+    "survivalProStaticPointId": [
+      131101
+    ]
+  },
+  {
+    "id": 4,
+    "cowStaticPoint": [
+      146001,
+      146002,
+      146003
+    ],
+    "defenceRewardBoxStaticPoint": 142001,
+    "enterTriggerBox": 1004,
+    "exitTriggerBox": 1104,
+    "exterminateRewardBoxStaticPoint": 142001,
+    "exterminateStaticPointId": [
+      141201,
+      141202,
+      141203,
+      141204,
+      141205
+    ],
+    "killEliteMobRewardBoxStaticPoint": 142001,
+    "killEliteMobStaticPointId": [
+      141601
+    ],
+    "occupationRewardBoxStaticPoint": 142001,
+    "occupationStaticPointId": [
+      141701
+    ],
+    "sabotageProRewardBoxStaticPoint": 142001,
+    "sabotageProStaticPointId": [
+      141500,
+      141501,
+      141502,
+      141503
+    ],
+    "survivalProRewardBoxStaticPoint": 142001,
+    "survivalProStaticPointId": [
+      141101
+    ]
+  },
+  {
+    "id": 5,
+    "cowStaticPoint": [
+      156001,
+      156002,
+      156003
+    ],
+    "defenceRewardBoxStaticPoint": 152001,
+    "enterTriggerBox": 1005,
+    "exitTriggerBox": 1105,
+    "exterminateRewardBoxStaticPoint": 152001,
+    "exterminateStaticPointId": [
+      151201,
+      151202,
+      151203,
+      151204,
+      151205,
+      151206
+    ],
+    "killEliteMobRewardBoxStaticPoint": 152001,
+    "occupationRewardBoxStaticPoint": 152001,
+    "occupationStaticPointId": [
+      151701
+    ],
+    "sabotageProRewardBoxStaticPoint": 152001,
+    "sabotageProStaticPointId": [
+      151500,
+      151501,
+      151502,
+      151503
+    ],
+    "survivalProRewardBoxStaticPoint": 152001,
+    "survivalProStaticPointId": [
+      151101
+    ]
+  },
+  {
+    "id": 6,
+    "cowStaticPoint": [
+      166001,
+      166002,
+      166003
+    ],
+    "defenceRewardBoxStaticPoint": 162001,
+    "defenceStaticPointId": [
+      161301
+    ],
+    "enterTriggerBox": 1006,
+    "exitTriggerBox": 1106,
+    "exterminateRewardBoxStaticPoint": 162001,
+    "exterminateStaticPointId": [
+      161201,
+      161202,
+      161203,
+      161204,
+      161205,
+      161206,
+      161207
+    ],
+    "killEliteMobRewardBoxStaticPoint": 162001,
+    "occupationRewardBoxStaticPoint": 162001,
+    "occupationStaticPointId": [
+      161701
+    ],
+    "sabotageProRewardBoxStaticPoint": 162001,
+    "sabotageProStaticPointId": [
+      161500,
+      161501,
+      161502,
+      161503
+    ],
+    "survivalProRewardBoxStaticPoint": 162001,
+    "survivalProStaticPointId": [
+      161101
+    ]
+  },
+  {
+    "id": 7,
+    "cowStaticPoint": [
+      176001,
+      176002,
+      176003
+    ],
+    "defenceRewardBoxStaticPoint": 172001,
+    "defenceStaticPointId": [
+      171301
+    ],
+    "enterTriggerBox": 1007,
+    "exitTriggerBox": 1107,
+    "exterminateRewardBoxStaticPoint": 172001,
+    "killEliteMobRewardBoxStaticPoint": 172001,
+    "killEliteMobStaticPointId": [
+      171601
+    ],
+    "occupationRewardBoxStaticPoint": 172001,
+    "sabotageProRewardBoxStaticPoint": 172001,
+    "survivalProRewardBoxStaticPoint": 172001,
+    "survivalProStaticPointId": [
+      171101
+    ]
+  }
+]

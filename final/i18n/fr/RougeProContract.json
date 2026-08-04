@@ -1,0 +1,94 @@
+[
+  {
+    "id": 101,
+    "desc": "Réduit les soins reçus de <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "globalPassiveId": 30101001,
+    "heatValue": 1,
+    "icon": "T_Rou_Contract_Char_HealDown",
+    "maxLevel": 20,
+    "name": "Domaine de suffocation",
+    "startHeat": 1
+  },
+  {
+    "id": 102,
+    "desc": "Réduit l’ATQ du personnage de <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30101002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_SpDown",
+    "maxLevel": 5,
+    "name": "Domaine de stagnation",
+    "startHeat": 2
+  },
+  {
+    "id": 103,
+    "desc": "Augmente les PV max des ennemis de <Highlight>40.0%</>.",
+    "descValues": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "Domaine de croissance maligne",
+    "startHeat": 3
+  },
+  {
+    "id": 104,
+    "desc": "Augmente l’ATQ des ennemis de <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon__AtkUp",
+    "maxLevel": 5,
+    "name": "Domaine de tourment",
+    "startHeat": 4
+  },
+  {
+    "id": 105,
+    "desc": "Réduit les dégâts subis par les ennemis de <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "globalPassiveId": 30102003,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "Domaine d’engourdissement",
+    "startHeat": 5
+  },
+  {
+    "id": 106,
+    "desc": "Le coût en Braises des achats chez le Marchand abyssal augmente de <Highlight>50 %</>.",
+    "heatValue": 10,
+    "icon": "T_Rou_Contract_Mechanics_CostUp",
+    "maxLevel": 1,
+    "name": "Domaine d’assèchement",
+    "startHeat": 6
+  },
+  {
+    "id": 107,
+    "desc": "À chaque choix, le nombre d’options disponibles est réduit de <Highlight>1</>.",
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Mechanics_LessChoice",
+    "maxLevel": 1,
+    "name": "Domaine d’aveuglement",
+    "startHeat": 7
+  },
+  {
+    "id": 108,
+    "desc": "Chaque décision est désormais déterminée aléatoirement.",
+    "heatValue": 15,
+    "icon": "T_Rou_Contract_Mechanics_RandomChoice",
+    "maxLevel": 1,
+    "name": "Domaine de folie",
+    "startHeat": 8
+  }
+]

@@ -2,3362 +2,2452 @@
   {
     "id": 101,
     "name": "鍛冶の刃",
-    "desc": "近接武器の攻撃力が<Highlight>#1</>アップする。",
-    "simple_desc": "近接武器の攻撃力がアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "近接武器の攻撃力が<Highlight>30.0%</>アップする。",
+    "simpleDesc": "近接武器の攻撃力がアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 1,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 1,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 102,
     "name": "連続の刃",
-    "desc": "近接武器の発動確率が<Highlight>#1</>アップする。",
-    "simple_desc": "近接武器の<Highlight>発動確率</>がアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "近接武器の発動確率が<Highlight>135.0%</>アップする。",
+    "simpleDesc": "近接武器の<Highlight>発動確率</>がアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 2,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 2,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 103,
     "name": "闘争の刃",
-    "desc": "近接武器の<Highlight>通常攻撃ダメージ</>が<Highlight>$1</>アップする。",
-    "simple_desc": "近接武器の<Highlight>通常攻撃ダメージ</>がアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "近接武器の<Highlight>通常攻撃ダメージ</>が<Highlight>15.0%</>アップする。",
+    "simpleDesc": "近接武器の<Highlight>通常攻撃ダメージ</>がアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 3,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 3,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 104,
     "name": "炉心の賜物",
-    "desc": "<Highlight>$2</>メートル以内の敵が倒されるたびに、自身のHPが<Highlight>>$1</>回復する。",
-    "simple_desc": "<Highlight>近く</>の敵が倒される時、自身のHPが回復する。",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>8.0</>メートル以内の敵が倒されるたびに、自身のHPが<Highlight>>4.5%</>回復する。",
+    "simpleDesc": "<Highlight>近く</>の敵が倒される時、自身のHPが回復する。",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 4,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 4,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 105,
     "name": "製錬の儀式",
-    "desc": "周囲<Highlight>$2</>メートル以内、または「熔炎」を持つ敵からのダメージが<Highlight>$1</>ダウンする。",
-    "simple_desc": "「熔炎」を持つ敵、または近距離からの攻撃による被ダメージがダウン。",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "周囲<Highlight>8.0</>メートル以内、または「熔炎」を持つ敵からのダメージが<Highlight>20.0%</>ダウンする。",
+    "simpleDesc": "「熔炎」を持つ敵、または近距離からの攻撃による被ダメージがダウン。",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 5,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 5,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 106,
     "name": "再燃の炎",
-    "desc": "<Highlight>ダメージを受けた時、周囲<Highlight>8</>メートル以内の敵に<Highlight>1</>スタックの「熔炎」を付与する。この効果は<Highlight>$1</>秒ごとに最大1回発動可能。",
-    "simple_desc": "ダメージを受けると近距離の敵に「熔炎」を付与。",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>ダメージを受けた時、周囲<Highlight>8</>メートル以内の敵に<Highlight>1</>スタックの「熔炎」を付与する。この効果は<Highlight>1.0</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "ダメージを受けると近距離の敵に「熔炎」を付与。",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 6,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 6,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 107,
     "name": "巧みの刃",
-    "desc": "近接武器の<Highlight>クリティカル率</>が<Highlight>#1</>アップする。",
-    "simple_desc": "近接武器の<Highlight>クリティカル率</>がアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "近接武器の<Highlight>クリティカル率</>が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "近接武器の<Highlight>クリティカル率</>がアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 7,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 7,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 108,
     "name": "武勇の刃",
-    "desc": "近接武器の<Highlight>クリティカルダメージ</>が<Highlight>#1</>アップする。",
-    "simple_desc": "近接武器の<Highlight>クリティカルダメージ</>がアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "近接武器の<Highlight>クリティカルダメージ</>が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "近接武器の<Highlight>クリティカルダメージ</>がアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 8,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 8,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 109,
     "name": "怒りの刃",
-    "desc": "近接武器の<Highlight>落下攻撃、溜め攻撃、スライディング攻撃のダメージが<Highlight>$1</>アップする。",
-    "simple_desc": "近接武器の<Highlight>落下攻撃、溜め攻撃、スライディング攻撃</>のダメージがアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "近接武器の<Highlight>落下攻撃、溜め攻撃、スライディング攻撃のダメージが<Highlight>37.5%</>アップする。",
+    "simpleDesc": "近接武器の<Highlight>落下攻撃、溜め攻撃、スライディング攻撃</>のダメージがアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 9,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 9,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 110,
     "name": "消えぬ焔",
-    "desc": "<Highlight>$1</>秒ごとに周囲<Highlight>8</>メートル以内の敵に<Highlight>1</>スタックの「熔炎」を付与する。",
-    "simple_desc": "一定間隔で近距離の敵に「熔炎」を付与。",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>1.0</>秒ごとに周囲<Highlight>8</>メートル以内の敵に<Highlight>1</>スタックの「熔炎」を付与する。",
+    "simpleDesc": "一定間隔で近距離の敵に「熔炎」を付与。",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 10,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 10,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 111,
     "name": "鍛冶の贈物",
-    "desc": "<Highlight>$3</>スタック以上の「溶炎」を持つ敵にダメージを与える時、自身のHPが<Highlight>$1</>回復する。この効果は<Highlight>$2</>秒ごとに最大1回発動可能。",
-    "simple_desc": "「熔炎」を持つ敵にダメージを与えるとHPを回復。",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>2.0</>スタック以上の「溶炎」を持つ敵にダメージを与える時、自身のHPが<Highlight>3.0%</>回復する。この効果は<Highlight>0.5</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "「熔炎」を持つ敵にダメージを与えるとHPを回復。",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 11,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 11,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 112,
     "name": "自由奔放の刃",
-    "desc": "近接武器の<Highlight>攻撃速度</>が<Highlight>#1</>アップし、<Highlight>攻撃範囲</>が<Highlight>#2</>アップする。",
-    "simple_desc": "近接武器の<Highlight>攻撃速度</>と<Highlight>攻撃範囲</>がアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "近接武器の<Highlight>攻撃速度</>が<Highlight>60.0%</>アップし、<Highlight>攻撃範囲</>が<Highlight>2.25</>アップする。",
+    "simpleDesc": "近接武器の<Highlight>攻撃速度</>と<Highlight>攻撃範囲</>がアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 12,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 12,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 113,
     "name": "アサルトバースト",
-    "desc": "ダメージで対象のHPが<Highlight>$3</>未満になる時、追加で<Highlight>$1</>キャラ攻撃のダメージを与える。同一対象には<Highlight>$2</>秒ごとに1回まで。",
-    "simple_desc": "いずれかのダメージによって目標のHPが<Highlight>かなり低下</>した時、<Highlight>追加で</>ダメージを与える。",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ダメージで対象のHPが<Highlight>30.0%</>未満になる時、追加で<Highlight>5400.0%</>キャラ攻撃のダメージを与える。同一対象には<Highlight>10.0</>秒ごとに1回まで。",
+    "simpleDesc": "いずれかのダメージによって目標のHPが<Highlight>かなり低下</>した時、<Highlight>追加で</>ダメージを与える。",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 13,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 13,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 114,
     "name": "熾烈なる火",
-    "desc": "近接武器でダメージを与える時、対象の「熔炎」が<Highlight>$2</>スタック以上なら、追加で<Highlight>$1</>キャラ攻撃のダメージを与える。",
-    "simple_desc": "近接武器は「熔炎」スタックの多い敵に追加ダメージを与える。",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "近接武器でダメージを与える時、対象の「熔炎」が<Highlight>4.0</>スタック以上なら、追加で<Highlight>90.0%</>キャラ攻撃のダメージを与える。",
+    "simpleDesc": "近接武器は「熔炎」スタックの多い敵に追加ダメージを与える。",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5042,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 14,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 14,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 115,
     "name": "鍛冶の儀式",
-    "desc": "自身の周囲<Highlight>8</>メートル範囲内の敵が少ないほど、与ダメージがアップする（最大<Highlight>$1</>までアップ）。",
-    "simple_desc": "<Highlight>近く</>の敵が少ないほど、与ダメージがアップする。",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "自身の周囲<Highlight>8</>メートル範囲内の敵が少ないほど、与ダメージがアップする（最大<Highlight>90.0%</>までアップ）。",
+    "simpleDesc": "<Highlight>近く</>の敵が少ないほど、与ダメージがアップする。",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5042,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 15,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 15,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 201,
     "name": "飢えた狙撃手",
-    "desc": "遠隔武器の<Highlight>攻撃力</>が<Highlight>#1</>アップする。",
-    "simple_desc": "遠隔武器の<Highlight>攻撃力</>がアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "遠隔武器の<Highlight>攻撃力</>が<Highlight>30.0%</>アップする。",
+    "simpleDesc": "遠隔武器の<Highlight>攻撃力</>がアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 16,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 16,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 202,
     "name": "影の狩人",
-    "desc": "遠隔武器の<Highlight>発動確率</>が<Highlight>#1</>アップする。",
-    "simple_desc": "遠隔武器の<Highlight>発動確率</>がアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "遠隔武器の<Highlight>発動確率</>が<Highlight>135.0%</>アップする。",
+    "simpleDesc": "遠隔武器の<Highlight>発動確率</>がアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 17,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 17,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 203,
     "name": "捕食の触手",
-    "desc": "遠隔武器でダメージを与える時、「弾薬補給箱」を生成する。この効果は<Highlight>$1</>秒ごとに最大1回発動可能。ランクⅡ効果がすでに発動している場合、追加で<Highlight>1</>個の「小型水面の月」を生成する。",
-    "simple_desc": "遠隔武器がダメージを与えると、「弾薬補給箱」を生成する。",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "遠隔武器でダメージを与える時、「弾薬補給箱」を生成する。この効果は<Highlight>5.0</>秒ごとに最大1回発動可能。ランクⅡ効果がすでに発動している場合、追加で<Highlight>1</>個の「小型水面の月」を生成する。",
+    "simpleDesc": "遠隔武器がダメージを与えると、「弾薬補給箱」を生成する。",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 18,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 18,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 204,
     "name": "浮遊する防壁",
-    "desc": "ドロップアイテムを拾うと、過負荷シールドを<Highlight>$1</>獲得する。この効果は<Highlight>5</>秒ごとに最大1回発動可能。",
-    "simple_desc": "ドロップアイテムを拾ったら、過負荷シールドを獲得する。",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ドロップアイテムを拾うと、過負荷シールドを<Highlight>45.0</>獲得する。この効果は<Highlight>5</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "ドロップアイテムを拾ったら、過負荷シールドを獲得する。",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 19,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 19,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 205,
     "name": "深海の貯蔵",
-    "desc": "ダメージを与える時、「気つけ薬」または「結露」を生成する。この効果は<Highlight>$1</>秒ごとに最大1回発動可能。「水面の月」のランクⅡ効果が発動する時、追加で<Highlight>1</>個の「小型水面の月」をドロップする。",
-    "simple_desc": "ダメージを与える時、「気つけ薬」や「結露」を生成する。",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ダメージを与える時、「気つけ薬」または「結露」を生成する。この効果は<Highlight>6.0</>秒ごとに最大1回発動可能。「水面の月」のランクⅡ効果が発動する時、追加で<Highlight>1</>個の「小型水面の月」をドロップする。",
+    "simpleDesc": "ダメージを与える時、「気つけ薬」や「結露」を生成する。",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 20,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 20,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 206,
     "name": "深海の警告",
-    "desc": "自身<Highlight>20</>メートル範囲内に敵がいる時、ランクⅢ効果がすでに発動している場合、攻撃力+<Highlight>$1</>、そうでなければ+<Highlight>$2</>。",
-    "simple_desc": "周囲に敵が存在する時、キャラ攻撃力アップ。",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "自身<Highlight>20</>メートル範囲内に敵がいる時、ランクⅢ効果がすでに発動している場合、攻撃力+<Highlight>30.0%</>、そうでなければ+<Highlight>15.0%</>。",
+    "simpleDesc": "周囲に敵が存在する時、キャラ攻撃力アップ。",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5025,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 21,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 21,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 207,
     "name": "致命的な狩り人",
-    "desc": "遠隔武器の<Highlight>クリティカル率</>が<Highlight>#1</>アップする。",
-    "simple_desc": "遠隔武器の<Highlight>クリティカル率</>がアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "遠隔武器の<Highlight>クリティカル率</>が<Highlight>100.0%</>アップする。",
+    "simpleDesc": "遠隔武器の<Highlight>クリティカル率</>がアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 22,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 22,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 208,
     "name": "複合毒素",
-    "desc": "遠隔武器の<Highlight>クリティカルダメージ</>が<Highlight>#1</>アップする。",
-    "simple_desc": "遠隔武器の<Highlight>クリティカルダメージ</>がアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "遠隔武器の<Highlight>クリティカルダメージ</>が<Highlight>100.0%</>アップする。",
+    "simpleDesc": "遠隔武器の<Highlight>クリティカルダメージ</>がアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 23,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 23,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 209,
     "name": "深海の贈り物",
-    "desc": "HP割合またはSP割合が<Highlight>$2</>未満の時、<Highlight>「深海の貯蔵」</>が対応する補給を生成する確率+<Highlight>$1</>。\n HP割合、SP割合、弾薬残量が<Highlight>$2</>未満の時、生成する「小型水面の月」数が+<Highlight>100%</>。",
-    "simple_desc": "HPやSPが低い場合、「深海の貯蔵」の補給のドロップ率がアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "HP割合またはSP割合が<Highlight>50.0%</>未満の時、<Highlight>「深海の貯蔵」</>が対応する補給を生成する確率+<Highlight>100.0%</>。\n HP割合、SP割合、弾薬残量が<Highlight>50.0%</>未満の時、生成する「小型水面の月」数が+<Highlight>100%</>。",
+    "simpleDesc": "HPやSPが低い場合、「深海の貯蔵」の補給のドロップ率がアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5025,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 24,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 24,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 210,
     "name": "深海の息吹",
-    "desc": "ドロップアイテムを拾ったら、追加でSPが<Highlight>$1</>回復する。",
-    "simple_desc": "ドロップアイテムを拾ったら、追加でSPが回復する。",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ドロップアイテムを拾ったら、追加でSPが<Highlight>6.0</>回復する。",
+    "simpleDesc": "ドロップアイテムを拾ったら、追加でSPが回復する。",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 25,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 25,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 211,
     "name": "深海の呼び声",
-    "desc": "ジェネモン支援のクールダウンが<Highlight>$1</>秒減少する。",
-    "simple_desc": "ジェネモン支援のクールダウンが減少。",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ジェネモン支援のクールダウンが<Highlight>50.0%</>秒減少する。",
+    "simpleDesc": "ジェネモン支援のクールダウンが減少。",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 26,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 26,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 212,
     "name": "五色の触角",
-    "desc": "遠隔武器の<Highlight>多重射撃</>が<Highlight>#1</>アップする。",
-    "simple_desc": "遠隔武器の<Highlight>多重射撃</>アップ。",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "遠隔武器の<Highlight>多重射撃</>が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "遠隔武器の<Highlight>多重射撃</>アップ。",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 27,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 27,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 213,
     "name": "敏捷なる狩人",
-    "desc": "遠隔武器の<Highlight>攻撃速度</>が<Highlight>#1</>アップする。",
-    "simple_desc": "遠隔武器の<Highlight>攻撃速度</>がアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "遠隔武器の<Highlight>攻撃速度</>が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "遠隔武器の<Highlight>攻撃速度</>がアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 28,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 28,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 214,
     "name": "深海の棘",
-    "desc": "自身から<Highlight>$2</>m以上離れた敵に遠隔武器ダメージを与えると、遠隔武器被ダメージアップ<Highlight>$1</>を1スタック付与。最大<Highlight>$3</>まで。",
-    "simple_desc": "遠距離の敵に遠隔武器ダメージを与えると、その敵の被ダメージが徐々にアップ。",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "自身から<Highlight>8.0</>m以上離れた敵に遠隔武器ダメージを与えると、遠隔武器被ダメージアップ<Highlight>2.4%</>を1スタック付与。最大<Highlight>120.0%</>まで。",
+    "simpleDesc": "遠距離の敵に遠隔武器ダメージを与えると、その敵の被ダメージが徐々にアップ。",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5063,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 29,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 29,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 215,
     "name": "ステルススナイパー",
-    "desc": "<Highlight>2</>秒以上に持続的に移動すると、移動停止まで自身の被ダメージが<Highlight>$1</>ダウンする。\n移動停止から<Highlight>2</>秒経つと、移動開始まで自身の与ダメージが<Highlight>$2</>アップする。",
-    "simple_desc": "<Highlight>2</>秒以上に持続的に移動すると、移動停止まで自身の被ダメージがダウンする。\n移動停止から<Highlight>2</>秒経つと、移動開始まで自身の与ダメージがアップする。",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>2</>秒以上に持続的に移動すると、移動停止まで自身の被ダメージが<Highlight>40.0%</>ダウンする。\n移動停止から<Highlight>2</>秒経つと、移動開始まで自身の与ダメージが<Highlight>90.0%</>アップする。",
+    "simpleDesc": "<Highlight>2</>秒以上に持続的に移動すると、移動停止まで自身の被ダメージがダウンする。\n移動停止から<Highlight>2</>秒経つと、移動開始まで自身の与ダメージがアップする。",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 30,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 30,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 301,
     "name": "星の巡り",
-    "desc": "スキル範囲が<Highlight>#1</>拡大する。",
-    "simple_desc": "スキル範囲アップ。",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキル範囲が<Highlight>45.0%</>拡大する。",
+    "simpleDesc": "スキル範囲アップ。",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 31,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 31,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 302,
     "name": "自然の彫刻",
-    "desc": "スキル耐久が<Highlight>#1</>アップする。",
-    "simple_desc": "スキル耐久アップ。",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキル耐久が<Highlight>45.0%</>アップする。",
+    "simpleDesc": "スキル耐久アップ。",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 32,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 32,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 303,
     "name": "彩り流し",
-    "desc": "スキル効率が<Highlight>#1</>アップする。",
-    "simple_desc": "スキルを発動するとスキル効率アップ。",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキル効率が<Highlight>22.5%</>アップする。",
+    "simpleDesc": "スキルを発動するとスキル効率アップ。",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 33,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 33,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 304,
     "name": "潤う触れ合い",
-    "desc": "スキルを発動する時、SPが<Highlight>$1</>回復する。この効果は<Highlight>$2</>秒ごとに最大1回発動可能。",
-    "simple_desc": "スキルを発動するとSP回復。",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "スキルを発動する時、SPが<Highlight>6.0</>回復する。この効果は<Highlight>5.0</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "スキルを発動するとSP回復。",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 34,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 34,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 305,
     "name": "きらめく触れ合い",
-    "desc": "スキルを発動する時、最大シールドが<Highlight>$1</>回復する。この効果は<Highlight>$2</>秒ごとに最大1回発動可能。",
-    "simple_desc": "スキルを発動するとシールド回復。",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "スキルを発動する時、最大シールドが<Highlight>15.0%</>回復する。この効果は<Highlight>5.0</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "スキルを発動するとシールド回復。",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 35,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 35,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 306,
     "name": "石中の脈動",
-    "desc": "スキル速度が<Highlight>$1</>アップする。",
-    "simple_desc": "スキル速度アップ。",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "スキル速度が<Highlight>15.0%</>アップする。",
+    "simpleDesc": "スキル速度アップ。",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5033
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 36,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 36,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 307,
     "name": "瑠璃の幻色",
-    "desc": "最大SPが<Highlight>#1</>アップする。",
-    "simple_desc": "最大SPアップ。",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "最大SPが<Highlight>120.0%</>アップする。",
+    "simpleDesc": "最大SPアップ。",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 37,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 37,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 308,
     "name": "金剛接触",
-    "desc": "SP割合が<Highlight>$2</>未満の場合、被ダメージが<Highlight>$1</>ダウンする。",
-    "simple_desc": "SP割合が低い場合、被ダメージダウン。",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "SP割合が<Highlight>50.0%</>未満の場合、被ダメージが<Highlight>30.0%</>ダウンする。",
+    "simpleDesc": "SP割合が低い場合、被ダメージダウン。",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 38,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 38,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 309,
     "name": "凝光",
-    "desc": "SP割合が<Highlight>$3</>以下の場合、<Highlight>$4</>秒間、1秒ごとにSPが<Highlight>$1</>回復する。この効果は<Highlight>$2</>秒ごとに最大1回発動可能。",
-    "simple_desc": "SP割合が低い場合、1秒ごとにSP回復。",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "SP割合が<Highlight>50.0%</>以下の場合、<Highlight>5.0</>秒間、1秒ごとにSPが<Highlight>12.0</>回復する。この効果は<Highlight>20.0</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "SP割合が低い場合、1秒ごとにSP回復。",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 39,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 39,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 310,
     "name": "プリズム・リフレクション",
-    "desc": "スキルを発動する時、<Highlight>$1</>スタックの「輝光」を得る。",
-    "simple_desc": "スキルを発動する時、いくつかの<Highlight>「輝光」</>を得る。",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "スキルを発動する時、<Highlight>15.0</>スタックの「輝光」を得る。",
+    "simpleDesc": "スキルを発動する時、いくつかの<Highlight>「輝光」</>を得る。",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 40,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 40,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 311,
     "name": "百花繚乱",
-    "desc": "「キラキラ」状態中、毎秒SPを<Highlight>$1</>回復。",
-    "simple_desc": "「キラキラ」状態中、毎秒SPを回復。",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「キラキラ」状態中、毎秒SPを<Highlight>6.0</>回復。",
+    "simpleDesc": "「キラキラ」状態中、毎秒SPを回復。",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10103_Radiance"
-    ],
-    "rl_archive_id": 41,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 41,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 312,
     "name": "スピネル共鳴",
-    "desc": "スキル威力が<Highlight>#1</>アップする",
-    "simple_desc": "スキル威力アップ",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキル威力が<Highlight>120.0%</>アップする",
+    "simpleDesc": "スキル威力アップ",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 42,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 42,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 313,
     "name": "オーロラ・リフレクション",
-    "desc": "スキルダメージが目標の防御力を<Highlight>$1</>無視する。",
-    "simple_desc": "スキルダメージが目標の防御力を一部無視。",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキルダメージが目標の防御力を<Highlight>90.0%</>無視する。",
+    "simpleDesc": "スキルダメージが目標の防御力を一部無視。",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 43,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 43,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 314,
     "name": "エッジ・コンタクト",
-    "desc": "「キラキラ」状態によるスキルダメージ増加効果が<Highlight>$1</>アップ。",
-    "simple_desc": "「キラキラ」状態によるスキルダメージ増加効果アップ。",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「キラキラ」状態によるスキルダメージ増加効果が<Highlight>225.0%</>アップ。",
+    "simpleDesc": "「キラキラ」状態によるスキルダメージ増加効果アップ。",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10103_Radiance"
-    ],
-    "rl_archive_id": 44,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 44,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 315,
     "name": "アーク・ディセント",
-    "desc": "「放射」の発動間隔が<Highlight>$1</>秒に短縮。",
-    "simple_desc": "「放射」の発動間隔が短縮。",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「放射」の発動間隔が<Highlight>1.0</>秒に短縮。",
+    "simpleDesc": "「放射」の発動間隔が短縮。",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5035
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10103_Emission"
-    ],
-    "rl_archive_id": 45,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 45,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 401,
     "name": "命の伝播",
-    "desc": "ダメージを与える時、<Highlight>$1</>の確率で1つの「流明の種」を召喚する。この効果は<Highlight>$2</>秒ごとに最大1回発動可能。",
-    "simple_desc": "ダメージを与えると確率で「流明の種」を召喚。",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ダメージを与える時、<Highlight>15.0%</>の確率で1つの「流明の種」を召喚する。この効果は<Highlight>3.0</>秒ごとに最大1回発動可能。",
+    "simpleDesc": "ダメージを与えると確率で「流明の種」を召喚。",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 46,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 46,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 402,
     "name": "自然の鼓動",
-    "desc": "スキルを発動する時、<Highlight>$2</>秒間スキル威力が<Highlight>$1</>アップする（最大<Highlight>$3</>スタックまで重ねがけ可）。",
-    "simple_desc": "召喚ユニットを召喚時、自身のスキル威力アップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "スキルを発動する時、<Highlight>10.0</>秒間スキル威力が<Highlight>7.5%</>アップする（最大<Highlight>3.0</>スタックまで重ねがけ可）。",
+    "simpleDesc": "召喚ユニットを召喚時、自身のスキル威力アップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 47,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 47,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 403,
     "name": "自然の轟鳴",
-    "desc": "召喚ユニットを召喚するたびに、<Highlight>$2</>秒間自身の攻撃力が<Highlight>$1</>アップする（最大<Highlight>$3</>スタック）",
-    "simple_desc": "召喚ユニットを召喚するたびに、自身の攻撃力アップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "召喚ユニットを召喚するたびに、<Highlight>10.0</>秒間自身の攻撃力が<Highlight>7.5%</>アップする（最大<Highlight>3.0</>スタック）",
+    "simpleDesc": "召喚ユニットを召喚するたびに、自身の攻撃力アップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 48,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 48,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 404,
     "name": "大地の恵み",
-    "desc": "受ける回復効果が<Highlight>$1</>アップする。",
-    "simple_desc": "被回復効果アップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "受ける回復効果が<Highlight>60.0%</>アップする。",
+    "simpleDesc": "被回復効果アップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 49,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 49,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 405,
     "name": "自然療法",
-    "desc": "召喚ユニットを召喚する時、自身が最大HPの<Highlight>$1</>を回復する。",
-    "simple_desc": "召喚ユニットを召喚する時、HPが回復する。",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "召喚ユニットを召喚する時、自身が最大HPの<Highlight>3.0%</>を回復する。",
+    "simpleDesc": "召喚ユニットを召喚する時、HPが回復する。",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 50,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 50,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 406,
     "name": "自然のあがき",
-    "desc": "召喚ユニットを召喚する時、自身のSPが<Highlight>$1</>回復する。",
-    "simple_desc": "召喚ユニットを召喚する時、SPが回復する。",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "召喚ユニットを召喚する時、自身のSPが<Highlight>6.0</>回復する。",
+    "simpleDesc": "召喚ユニットを召喚する時、SPが回復する。",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 51,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 51,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 407,
     "name": "生命の鼓動",
-    "desc": "<Highlight>$1</>秒ごとに「流明の種」を召喚。",
-    "simple_desc": "一定間隔で「流明の種」を召喚。",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>3.0</>秒ごとに「流明の種」を召喚。",
+    "simpleDesc": "一定間隔で「流明の種」を召喚。",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 52,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 52,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 408,
     "name": "生存の本能",
-    "desc": "ダメージを受けると<Highlight>$1</>の確率で「流明の種」を召喚、この効果は<Highlight>$2</>秒ごとに1回まで発動する。",
-    "simple_desc": "ダメージを受けると確率で「流明の種」を召喚。",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ダメージを受けると<Highlight>75.0%</>の確率で「流明の種」を召喚、この効果は<Highlight>2.0</>秒ごとに1回まで発動する。",
+    "simpleDesc": "ダメージを受けると確率で「流明の種」を召喚。",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 53,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 53,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 409,
     "name": "自然の庇護",
-    "desc": "周囲<Highlight>8</>メートル範囲内に召喚ユニットが存在する場合、被ダメージが<Highlight>$1</>ダウンする。",
-    "simple_desc": "周囲に召喚ユニットが存在する場合、被ダメージがダウンする。",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "周囲<Highlight>8</>メートル範囲内に召喚ユニットが存在する場合、被ダメージが<Highlight>30.0%</>ダウンする。",
+    "simpleDesc": "周囲に召喚ユニットが存在する場合、被ダメージがダウンする。",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 54,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 54,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 410,
     "name": "密林の拡張",
-    "desc": "回復を受けると、自身の与ダメージ+<Highlight>$1</>、<Highlight>$2</>秒継続。",
-    "simple_desc": "回復を受けると短い間与ダメージアップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "回復を受けると、自身の与ダメージ+<Highlight>37.5%</>、<Highlight>3.0</>秒継続。",
+    "simpleDesc": "回復を受けると短い間与ダメージアップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 55,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 55,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 411,
     "name": "逆性発根",
     "desc": "召喚ユニット召喚時、6m以内の敵に体勢削り効果。",
-    "simple_desc": "召喚ユニット召喚時、周囲の敵に体勢削り効果。",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "召喚ユニット召喚時、周囲の敵に体勢削り効果。",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 56,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 56,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 412,
     "name": "自然の怒り",
-    "desc": "周囲<Highlight>8</>メートル範囲内に召喚ユニット1つあるごとに自身の与ダメージが<Highlight>$2</>アップする（最大<Highlight>$1</>スタックまで重ねがけ可）。",
-    "simple_desc": "周囲の召喚ユニット多ければ多いほど、与ダメージがアップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "周囲<Highlight>8</>メートル範囲内に召喚ユニット1つあるごとに自身の与ダメージが<Highlight>18.0%</>アップする（最大<Highlight>5.0</>スタックまで重ねがけ可）。",
+    "simpleDesc": "周囲の召喚ユニット多ければ多いほど、与ダメージがアップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 57,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 57,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 413,
     "name": "自然の重み",
-    "desc": "召喚ユニットの攻撃力が<Highlight>$1</>アップする。",
-    "simple_desc": "召喚ユニットの攻撃力アップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "召喚ユニットの攻撃力が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "召喚ユニットの攻撃力アップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 58,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 58,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 414,
     "name": "自然の法則",
     "desc": "明の枝シリーズではない召喚ユニットをを召喚する時、召喚した位置に1回爆発衝撃を引き起こす。キャラクターの攻撃力<Highlight>270%</>に相当するダメージを与える。",
-    "simple_desc": "流明の枝シリーズではない召喚ユニットを召喚時、その場で1回爆発を引き起こす。",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "流明の枝シリーズではない召喚ユニットを召喚時、その場で1回爆発を引き起こす。",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 59,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 59,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 415,
     "name": "緑狂い",
     "desc": "「流明の種」が「流明の枝」に進化する確率が<Highlight>100%</>にアップ。",
-    "simple_desc": "「流明の種」が「流明の枝」に進化する確率が<Highlight>100%</>にアップ。",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "「流明の種」が「流明の枝」に進化する確率が<Highlight>100%</>にアップ。",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5038,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       50
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed",
-      "Term_Rou_10104_Lumileaf"
-    ],
-    "rl_archive_id": 60,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 60,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 501,
     "name": "飛翔する者",
-    "desc": "スピンジャンプをしたとき、<Highlight>$2</>秒間攻撃力が<Highlight>$1</>アップし、「奈落」を<Highlight>$3</>スタック獲得する。",
-    "simple_desc": "スピンジャンプ時、攻撃アップと「奈落」を獲得。",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スピンジャンプをしたとき、<Highlight>3.0</>秒間攻撃力が<Highlight>18.0%</>アップし、「奈落」を<Highlight>1.0</>スタック獲得する。",
+    "simpleDesc": "スピンジャンプ時、攻撃アップと「奈落」を獲得。",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne"
-    ],
-    "rl_archive_id": 57,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 57,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 502,
     "name": "ひらひら舞う者",
-    "desc": "スライディング時、「風翼」を3つ生成し、敵命中時<Highlight>$1</>キャラ攻撃力のダメージを与え、「奈落」を<Highlight>$2</>スタックを獲得する。",
-    "simple_desc": "スライディング時、「風翼」を3つ生成し、「奈落」を獲得。",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "スライディング時、「風翼」を3つ生成し、敵命中時<Highlight>90.0%</>キャラ攻撃力のダメージを与え、「奈落」を<Highlight>1.0</>スタックを獲得する。",
+    "simpleDesc": "スライディング時、「風翼」を3つ生成し、「奈落」を獲得。",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_WindWings"
-    ],
-    "rl_archive_id": 58,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 58,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 503,
     "name": "蛹を破る者",
-    "desc": "回避時、被ダメージダウン<Highlight>$1</>を獲得、<Highlight>$2</>秒継続。さらに「奈落」を<Highlight>$3</>スタックを獲得する。",
-    "simple_desc": "回避時、被ダメージダウンと「奈落」を獲得。",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "回避時、被ダメージダウン<Highlight>15.0%</>を獲得、<Highlight>3.0</>秒継続。さらに「奈落」を<Highlight>1.0</>スタックを獲得する。",
+    "simpleDesc": "回避時、被ダメージダウンと「奈落」を獲得。",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne"
-    ],
-    "rl_archive_id": 59,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 59,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 504,
     "name": "まばゆい紋様",
-    "desc": "最大SPが<Highlight>#1</>アップする。",
-    "simple_desc": "最大SPアップ",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "最大SPが<Highlight>45.0%</>アップする。",
+    "simpleDesc": "最大SPアップ",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 60,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 60,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 505,
     "name": "風に舞う者",
-    "desc": "スキル速度+<Highlight>$1</>。",
-    "simple_desc": "スキル速度アップ",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキル速度+<Highlight>15.0%</>。",
+    "simpleDesc": "スキル速度アップ",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 61,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 61,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 506,
     "name": "渦巻く波動",
-    "desc": "落下攻撃でダメージを与えると「鱗粉」領域を生成し、その中の敵に毎秒<Highlight>$2</>キャラ攻撃力のダメージを与える。さらに「奈落」を<Highlight>$3</>スタックを獲得。効果は<Highlight>$1</>秒ごとに1回まで。",
-    "simple_desc": "落下攻撃でダメージを与えると「鱗粉」領域を生成し、「奈落」を獲得。",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "落下攻撃でダメージを与えると「鱗粉」領域を生成し、その中の敵に毎秒<Highlight>400.0%</>キャラ攻撃力のダメージを与える。さらに「奈落」を<Highlight>8.0</>スタックを獲得。効果は<Highlight>8.0</>秒ごとに1回まで。",
+    "simpleDesc": "落下攻撃でダメージを与えると「鱗粉」領域を生成し、「奈落」を獲得。",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_Powder"
-    ],
-    "rl_archive_id": 62,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 62,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 507,
     "name": "衝撃の波動",
-    "desc": "落下攻撃ダメージが<Highlight>$1</>アップする。",
-    "simple_desc": "落下攻撃ダメージアップ",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "落下攻撃ダメージが<Highlight>37.5%</>アップする。",
+    "simpleDesc": "落下攻撃ダメージアップ",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 63,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 63,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 508,
     "name": "分散の波動",
-    "desc": "近接攻撃範囲が<Highlight>#1</>拡大する。",
-    "simple_desc": "近接攻撃範囲アップ",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "近接攻撃範囲が<Highlight>1.5</>拡大する。",
+    "simpleDesc": "近接攻撃範囲アップ",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 64,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 64,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 509,
     "name": "身軽い波動",
-    "desc": "最大回避回数が<Highlight>#1</>回増加する。",
-    "simple_desc": "最大回避回数増加。",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "最大回避回数が<Highlight>3.0</>回増加する。",
+    "simpleDesc": "最大回避回数増加。",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 65,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 65,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 510,
     "name": "舞い散る鱗粉",
-    "desc": "回避時、「鱗粉」領域を生成し、その中の敵に毎秒<Highlight>$2</>キャラ攻撃力のダメージを与える。効果は<Highlight>$1</>秒ごとに1回まで。",
-    "simple_desc": "回避時、「鱗粉」領域を生成。",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "回避時、「鱗粉」領域を生成し、その中の敵に毎秒<Highlight>400.0%</>キャラ攻撃力のダメージを与える。効果は<Highlight>5.0</>秒ごとに1回まで。",
+    "simpleDesc": "回避時、「鱗粉」領域を生成。",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10105_Powder"
-    ],
-    "rl_archive_id": 66,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 66,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 511,
     "name": "乱れた波動",
-    "desc": "<Highlight>$1</>秒ごとに「奈落」<Highlight>$2</>スタック獲得。「奈落」が<Highlight>$3</>スタック以上の時、この祝福で「奈落」を得ると「刃翼」を1枚発射し、命中した敵に<Highlight>$4</>キャラ攻撃力のダメージを与える。",
-    "simple_desc": "一定間隔で「奈落」を獲得。「奈落」が一定スタック以上ある時、追加で「刃翼」を1発射。",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "<Highlight>3.0</>秒ごとに「奈落」<Highlight>1.0</>スタック獲得。「奈落」が<Highlight>30.0</>スタック以上の時、この祝福で「奈落」を得ると「刃翼」を1枚発射し、命中した敵に<Highlight>1200.0%</>キャラ攻撃力のダメージを与える。",
+    "simpleDesc": "一定間隔で「奈落」を獲得。「奈落」が一定スタック以上ある時、追加で「刃翼」を1発射。",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_BladeWings"
-    ],
-    "rl_archive_id": 67,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 67,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 512,
     "name": "視界攪乱",
-    "desc": "最大回避回数1回ごとに、最大SPが<Highlight>$1</>アップする。",
-    "simple_desc": "最大回避回数に応じて、最大SPアップ。",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "最大回避回数1回ごとに、最大SPが<Highlight>45.0%</>アップする。",
+    "simpleDesc": "最大回避回数に応じて、最大SPアップ。",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 68,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 68,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 513,
     "name": "蝶羽の刃",
-    "desc": "キャラ攻撃力が<Highlight>#1</>アップ",
-    "simple_desc": "キャラ攻撃力アップ",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "キャラ攻撃力が<Highlight>120.0%</>アップ",
+    "simpleDesc": "キャラ攻撃力アップ",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 69,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 69,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 514,
     "name": "風を纏う者",
-    "desc": "攻撃速度が<Highlight>$1</>アップ",
-    "simple_desc": "攻撃速度アップ",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "攻撃速度が<Highlight>90.0%</>アップ",
+    "simpleDesc": "攻撃速度アップ",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 70,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 70,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 515,
     "name": "蛹を破る者",
-    "desc": "回避後、攻撃力が<Highlight>$2</>秒間<Highlight>$1</>アップする。",
-    "simple_desc": "回避時に攻撃力アップ",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "回避後、攻撃力が<Highlight>3.0</>秒間<Highlight>90.0%</>アップする。",
+    "simpleDesc": "回避時に攻撃力アップ",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5040
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 71,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 71,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 601,
     "name": "ゆらゆらした旅",
-    "desc": "スキル範囲が<Highlight>#1</>拡大する。",
-    "simple_desc": "スキル範囲アップ。",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "スキル範囲が<Highlight>45.0%</>拡大する。",
+    "simpleDesc": "スキル範囲アップ。",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 76,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 76,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 602,
     "name": "光に導かれる旅",
-    "desc": "ダメージを与えると<Highlight>$1</>の確率で「曳光虫」を1獲得。",
-    "simple_desc": "ダメージを与えると確率で「曳光虫」を獲得。",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ダメージを与えると<Highlight>7.5%</>の確率で「曳光虫」を1獲得。",
+    "simpleDesc": "ダメージを与えると確率で「曳光虫」を獲得。",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 77,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 77,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 603,
     "name": "闇を払う旅",
-    "desc": "<Highlight>$1</>秒ごとに「曳光虫」を1獲得。",
-    "simple_desc": "<Highlight>10</>秒ごとに「曳光虫」を獲得。",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>7.0</>秒ごとに「曳光虫」を1獲得。",
+    "simpleDesc": "<Highlight>10</>秒ごとに「曳光虫」を獲得。",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 78,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 78,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 604,
     "name": "陽動のシグナル",
-    "desc": "「曳光虫」未所持時、遠隔武器のクリティカル率が<Highlight>$1</>アップする。\n「曳光虫」所持時、遠隔武器のクリティカル率が<Highlight>$2</>アップする。",
-    "simple_desc": "遠隔武器のクリティカル率がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」未所持時、遠隔武器のクリティカル率が<Highlight>7.5%</>アップする。\n「曳光虫」所持時、遠隔武器のクリティカル率が<Highlight>37.5%</>アップする。",
+    "simpleDesc": "遠隔武器のクリティカル率がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 79,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 79,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 605,
     "name": "フラッシュシグナル",
-    "desc": "「曳光虫」未所持時、遠隔武器のクリティカルダメージが<Highlight>$1</>アップする。\n「曳光虫」所持時、遠隔武器のクリティカルダメージが<Highlight>$2</>アップする。",
-    "simple_desc": "遠隔武器のクリティカルダメージがアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」未所持時、遠隔武器のクリティカルダメージが<Highlight>7.5%</>アップする。\n「曳光虫」所持時、遠隔武器のクリティカルダメージが<Highlight>37.5%</>アップする。",
+    "simpleDesc": "遠隔武器のクリティカルダメージがアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 80,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 80,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 606,
     "name": "ウィスプシャイン",
-    "desc": "「曳光虫」未所持時、遠隔武器の発動確率が<Highlight>$1</>アップする。\n「曳光虫」所持時、遠隔武器の発動確率が<Highlight>$2</>アップする。",
-    "simple_desc": "遠隔武器の発動確率がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」未所持時、遠隔武器の発動確率が<Highlight>30.0%</>アップする。\n「曳光虫」所持時、遠隔武器の発動確率が<Highlight>135.0%</>アップする。",
+    "simpleDesc": "遠隔武器の発動確率がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 81,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 81,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 607,
     "name": "引導のシグナル",
-    "desc": "召喚ユニットの与ダメージが<Highlight>$1</>アップ。",
-    "simple_desc": "召喚ユニットの与ダメージアップ。",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "召喚ユニットの与ダメージが<Highlight>37.5%</>アップ。",
+    "simpleDesc": "召喚ユニットの与ダメージアップ。",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 82,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 82,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 608,
     "name": "カウンターフラッシュ",
-    "desc": "ダメージを受けるか召喚ユニットを召喚すると、「曳光虫」を<Highlight>1</>獲得。効果は<Highlight>$1</>秒ごとに1回まで。",
-    "simple_desc": "ダメージを受けるか召喚ユニットを召喚すると、「曳光虫」を獲得。",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "ダメージを受けるか召喚ユニットを召喚すると、「曳光虫」を<Highlight>1</>獲得。効果は<Highlight>3.0</>秒ごとに1回まで。",
+    "simpleDesc": "ダメージを受けるか召喚ユニットを召喚すると、「曳光虫」を獲得。",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 83,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 83,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 609,
     "name": "エーテルストリーム",
-    "desc": "スキル効率が<Highlight>#1</>アップ。",
-    "simple_desc": "スキル効率アップ。",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "スキル効率が<Highlight>37.5%</>アップ。",
+    "simpleDesc": "スキル効率アップ。",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 84,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 84,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 610,
     "name": "星の如き命",
-    "desc": "「曳光虫」未所持時、遠隔武器の多重射撃が<Highlight>$1</>アップする。\n「曳光虫」所持時、遠隔武器の多重射撃が<Highlight>$2</>アップする。",
-    "simple_desc": "遠隔武器の多重射撃がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」未所持時、遠隔武器の多重射撃が<Highlight>7.5%</>アップする。\n「曳光虫」所持時、遠隔武器の多重射撃が<Highlight>37.5%</>アップする。",
+    "simpleDesc": "遠隔武器の多重射撃がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 85,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 85,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 611,
     "name": "輪廻する巡遊",
-    "desc": "復活回数+<Highlight>#1</>。「曳光虫」所持中は被ダメージ<Highlight>$1</>ダウン。次の復活後にこの効果はなくなる。",
-    "simple_desc": "復活回数を追加獲得。「曳光虫」を所持中は被ダメージダウン。次の復活したら、この効果を失う。",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "復活回数+<Highlight>1.0</>。「曳光虫」所持中は被ダメージ<Highlight>30.0%</>ダウン。次の復活後にこの効果はなくなる。",
+    "simpleDesc": "復活回数を追加獲得。「曳光虫」を所持中は被ダメージダウン。次の復活したら、この効果を失う。",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 86,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 86,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 612,
     "name": "安らかな別れ",
-    "desc": "「曳光虫」を所持していない時、全属性貫通が<Highlight>$1</>アップする。\n「曳光虫」を所持している時、全属性貫通が<Highlight>$2</>アップする。",
-    "simple_desc": "全属性貫通アップ。「曳光虫」所持時、その効果はさらに強くなる。",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」を所持していない時、全属性貫通が<Highlight>18.0%</>アップする。\n「曳光虫」を所持している時、全属性貫通が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "全属性貫通アップ。「曳光虫」所持時、その効果はさらに強くなる。",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 87,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 87,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 613,
     "name": "防御のシグナル",
-    "desc": "「曳光虫」を所持していない時、高揚が<Highlight>$1</>アップする。\n「曳光虫」を所持している時、高揚が<Highlight>$2</>アップする。",
-    "simple_desc": "高揚がアップする。「曳光虫」所持時、その効果はさらに強くなる。",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」を所持していない時、高揚が<Highlight>18.0%</>アップする。\n「曳光虫」を所持している時、高揚が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "高揚がアップする。「曳光虫」所持時、その効果はさらに強くなる。",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 88,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 88,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 614,
     "name": "群集のシグナル",
-    "desc": "周囲に敵がいる時、「曳光虫」の攻撃間隔が大幅に短縮される。<Highlight>$2</>秒間持続。この効果は<Highlight>$1</>秒ごとに1回のみ発動可能。",
-    "simple_desc": "周囲に敵がいる時、「曳光虫」の攻撃間隔が大幅に短縮される。",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "周囲に敵がいる時、「曳光虫」の攻撃間隔が大幅に短縮される。<Highlight>5.0</>秒間持続。この効果は<Highlight>10.0</>秒ごとに1回のみ発動可能。",
+    "simpleDesc": "周囲に敵がいる時、「曳光虫」の攻撃間隔が大幅に短縮される。",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5007,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 89,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 89,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 615,
     "name": "揺らめく微光",
-    "desc": "「曳光虫」の与ダメージが<Highlight>$1</>アップ。",
-    "simple_desc": "「曳光虫」の与ダメージアップ。",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "「曳光虫」の与ダメージが<Highlight>90.0%</>アップ。",
+    "simpleDesc": "「曳光虫」の与ダメージアップ。",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5007,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 90,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 90,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 701,
     "name": "血の貯蔵",
-    "desc": "スキル耐久が<Highlight>#1</>アップする。",
-    "simple_desc": "スキル耐久アップ。",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "スキル耐久が<Highlight>45.0%</>アップする。",
+    "simpleDesc": "スキル耐久アップ。",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 91,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 91,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 702,
     "name": "真紅の花",
-    "desc": "HP割合が<Highlight>100%</>未満の場合、SP自然回復量が<Highlight>$2</>アップする。HP割合が<Highlight>100%</>の場合、SP自然回復量が<Highlight>$1</>アップする。",
-    "simple_desc": "SP自然回復量がアップする。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "HP割合が<Highlight>100%</>未満の場合、SP自然回復量が<Highlight>9.0</>アップする。HP割合が<Highlight>100%</>の場合、SP自然回復量が<Highlight>3.0</>アップする。",
+    "simpleDesc": "SP自然回復量がアップする。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 92,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 92,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 703,
     "name": "血の澱み",
-    "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器の発動確率が<Highlight>$2</>アップする。HP割合が<Highlight>100%</>の場合、近接武器の発動確率が<Highlight>$1</>アップする。",
-    "simple_desc": "近接武器の発動確率がアップする。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器の発動確率が<Highlight>180.0%</>アップする。HP割合が<Highlight>100%</>の場合、近接武器の発動確率が<Highlight>90.0%</>アップする。",
+    "simpleDesc": "近接武器の発動確率がアップする。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 93,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 93,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 704,
     "name": "足掻きの本能",
-    "desc": "最大HPが<Highlight>#1</>アップ。",
-    "simple_desc": "最大HPアップ。",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "最大HPが<Highlight>30.0%</>アップ。",
+    "simpleDesc": "最大HPアップ。",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 94,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 94,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 705,
     "name": "アザミの葉",
-    "desc": "防御力+<Highlight>#1</>。ダメージを受ける時、<Highlight>2</>秒間与ダメージが<Highlight>$1</>アップする。この効果は<Highlight>3</>秒ごとに1回のみ発動可能。",
-    "simple_desc": "防御アップ。ダメージを受けた時、与ダメージがアップする。",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "防御力+<Highlight>90.0%</>。ダメージを受ける時、<Highlight>2</>秒間与ダメージが<Highlight>30.0%</>アップする。この効果は<Highlight>3</>秒ごとに1回のみ発動可能。",
+    "simpleDesc": "防御アップ。ダメージを受けた時、与ダメージがアップする。",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 95,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 95,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 706,
     "name": "貪欲なる根",
-    "desc": "ダメージを与えると、ターゲットの位置に自身最大HP<Highlight>$1</>の範囲ダメージを追加で与える。効果は<Highlight>$2</>秒ごとに1回まで。",
-    "simple_desc": "ダメージを与えた時、目標の位置に自身の最大HPに基づき、追加で範囲ダメージを与える。",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "ダメージを与えると、ターゲットの位置に自身最大HP<Highlight>30.0%</>の範囲ダメージを追加で与える。効果は<Highlight>1.0</>秒ごとに1回まで。",
+    "simpleDesc": "ダメージを与えた時、目標の位置に自身の最大HPに基づき、追加で範囲ダメージを与える。",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 96,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 96,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 707,
     "name": "血の脈動",
-    "desc": "HP割合が<Highlight>100%</>未満の場合、スキル威力が<Highlight>$2</>アップする。HP割合が<Highlight>100%</>の場合、スキル威力が<Highlight>$1</>アップする。",
-    "simple_desc": "スキル威力がアップする。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP割合が<Highlight>100%</>未満の場合、スキル威力が<Highlight>60.0%</>アップする。HP割合が<Highlight>100%</>の場合、スキル威力が<Highlight>30.0%</>アップする。",
+    "simpleDesc": "スキル威力がアップする。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 97,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 97,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 708,
     "name": "血に飢えし欲望",
-    "desc": "与ダメージが<Highlight>$1</>アップする。HP割合が<Highlight>1%</>ダウンするごとに、効果倍率が<Highlight>1%</>アップする（最大<Highlight>$2</>まで）。",
-    "simple_desc": "与ダメージがアップする。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "与ダメージが<Highlight>30.0%</>アップする。HP割合が<Highlight>1%</>ダウンするごとに、効果倍率が<Highlight>1%</>アップする（最大<Highlight>60.0%</>まで）。",
+    "simpleDesc": "与ダメージがアップする。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 98,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 98,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 709,
     "name": "摂食本能",
-    "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器のクリティカル率が<Highlight>$2</>アップする。HP割合が<Highlight>100%</>の場合、近接武器のクリティカル率が<Highlight>$1</>アップする。",
-    "simple_desc": "近接武器のクリティカル率がアップする。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器のクリティカル率が<Highlight>135.0%</>アップする。HP割合が<Highlight>100%</>の場合、近接武器のクリティカル率が<Highlight>67.5%</>アップする。",
+    "simpleDesc": "近接武器のクリティカル率がアップする。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 99,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 99,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 710,
     "name": "狂乱の本能",
-    "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器のクリティカルダメージが<Highlight>$2</>アップする。HP割合が<Highlight>100%</>の場合、近接武器のクリティカルダメージが<Highlight>$1</>アップする。",
-    "simple_desc": "近接武器のクリティカルダメージがアップする。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器のクリティカルダメージが<Highlight>135.0%</>アップする。HP割合が<Highlight>100%</>の場合、近接武器のクリティカルダメージが<Highlight>67.5%</>アップする。",
+    "simpleDesc": "近接武器のクリティカルダメージがアップする。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 100,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 100,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 711,
     "name": "血の庇護",
-    "desc": "被ダメージ時、過負荷シールド<Highlight>$1</>を獲得。効果は<Highlight>$2</>秒ごとに1回まで。",
-    "simple_desc": "ダメージを受けた時、過負荷シールドを獲得する。",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "被ダメージ時、過負荷シールド<Highlight>135.0</>を獲得。効果は<Highlight>5.0</>秒ごとに1回まで。",
+    "simpleDesc": "ダメージを受けた時、過負荷シールドを獲得する。",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 101,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 101,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 712,
     "name": "生存本能",
-    "desc": "1回の被ダメージは自身最大HPの<Highlight>#1</>を超えない。最大HPの<Highlight>$2</>を超えるダメージを受けた場合、<Highlight>$3</>秒間、毎秒最大HPの<Highlight>$1</>を回復。",
-    "simple_desc": "一度に受けるダメージを制限し、高ダメージを受けた後に持続的にHP回復。",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "1回の被ダメージは自身最大HPの<Highlight>25.0%</>を超えない。最大HPの<Highlight>20.0%</>を超えるダメージを受けた場合、<Highlight>5.0</>秒間、毎秒最大HPの<Highlight>3.0%</>を回復。",
+    "simpleDesc": "一度に受けるダメージを制限し、高ダメージを受けた後に持続的にHP回復。",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 102,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 102,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 713,
     "name": "奪い取る欲望",
-    "desc": "「必殺技」を発動する時、防御を全て失い、失った値の<Highlight>$1</>を攻撃力に変換、<Highlight>$2</>秒継続。この効果は<Highlight>$3</>秒ごとに1回のみ発動できる。",
-    "simple_desc": "「必殺技」を発動する時、防御を全て失い、攻撃力に変換。",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "「必殺技」を発動する時、防御を全て失い、失った値の<Highlight>240.0%</>を攻撃力に変換、<Highlight>15.0</>秒継続。この効果は<Highlight>30.0</>秒ごとに1回のみ発動できる。",
+    "simpleDesc": "「必殺技」を発動する時、防御を全て失い、攻撃力に変換。",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 103,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 103,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 714,
     "name": "朽ち果てる種",
-    "desc": "HP割合が<Highlight>100%</>未満の場合、スキルダメージが目標の防御を<Highlight>$2</>無視する。HP割合が<Highlight>100%</>の場合、スキルダメージが目標の防御を<Highlight>$1</>無視する。",
-    "simple_desc": "スキルダメージが目標の防御力を一部無視する。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP割合が<Highlight>100%</>未満の場合、スキルダメージが目標の防御を<Highlight>90.0%</>無視する。HP割合が<Highlight>100%</>の場合、スキルダメージが目標の防御を<Highlight>45.0%</>無視する。",
+    "simpleDesc": "スキルダメージが目標の防御力を一部無視する。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 104,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 104,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   },
   {
     "id": 715,
     "name": "絡みつくツタ",
-    "desc": "HP割合が<Highlight>40%</>未満の場合、背水が<Highlight>$2</>アップする。HP割合が<Highlight>40%</>以上の場合、背水が<Highlight>$1</>アップする。",
-    "simple_desc": "背水がアップ。HP割合が低い場合はその効果がさらに強くなる。",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "HP割合が<Highlight>40%</>未満の場合、背水が<Highlight>36.0%</>アップする。HP割合が<Highlight>40%</>以上の場合、背水が<Highlight>18.0%</>アップする。",
+    "simpleDesc": "背水がアップ。HP割合が低い場合はその効果がさらに強くなる。",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5062
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 105,
-    "unlock_condition_text": "キャンドルの芯未解放",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 105,
+    "unlockConditionText": "キャンドルの芯未解放",
+    "canSell": 1
   }
 ]

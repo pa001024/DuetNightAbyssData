@@ -1,0 +1,207 @@
+[
+  {
+    "id": 11,
+    "activateNeed": [
+      11201,
+      11202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
+    "groupId": 11,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "ミディオレンの探究"
+  },
+  {
+    "id": 12,
+    "activateNeed": [
+      12201,
+      12202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
+    "groupId": 12,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "アイギスの勇猛"
+  },
+  {
+    "id": 13,
+    "activateNeed": [
+      13201,
+      13202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
+    "groupId": 13,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "ディオプラの巧技"
+  },
+  {
+    "id": 14,
+    "activateNeed": [
+      14201,
+      14202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
+    "groupId": 14,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "サエクルムの開創"
+  },
+  {
+    "id": 15,
+    "activateNeed": [
+      15201,
+      15202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
+    "groupId": 15,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "ドラクマの賢明"
+  },
+  {
+    "id": 16,
+    "activateNeed": [
+      16201,
+      16202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
+    "groupId": 16,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "ロゴスの洞察"
+  },
+  {
+    "id": 17,
+    "activateNeed": [
+      17101,
+      17201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "同調武器の与ダメージ<Highlight>100%</>アップ",
+    "groupId": 17,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "深紅の囚われし獣"
+  },
+  {
+    "id": 18,
+    "activateNeed": [
+      18101,
+      18201,
+      18301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "チーム全員の互いの距離が<Highlight>30</>以内の時、全員の与ダメージが<Highlight>100%</>アップする。",
+    "groupId": 18,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "連羽の群鳥"
+  },
+  {
+    "id": 19,
+    "activateNeed": [
+      19101,
+      19201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "[護衛騎士]のレリックを全<Highlight>2</>件集めると、<Highlight>10</>秒ごとに自身の最大HP<Highlight>10%</>分の過負荷シールドを獲得する。",
+    "groupId": 19,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "護衛騎士"
+  },
+  {
+    "id": 20,
+    "activateNeed": [
+      20101,
+      20102,
+      20201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "スキル、近接武器、遠隔武器のダメージが低下しなくなる。",
+    "groupId": 20,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "鳥面怪人"
+  },
+  {
+    "id": 21,
+    "activateNeed": [
+      21101,
+      21201,
+      21301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "groupEffectDesc": "（待包装）繁荣之神的描述",
+    "groupId": 21,
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "name": "繁栄の神"
+  },
+  {
+    "id": 22,
+    "activateNeed": [
+      22101,
+      22102,
+      22103,
+      22104
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "groupEffectDesc": "[四象の銘印]のレリックを全<Highlight>4</>件集めると、発動確率が<Highlight>50%</>にアップし、ダメージ倍率が100%</>にアップする。さらに与えるダメージが固定ダメージになる。",
+    "groupId": 22,
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "name": "四象の銘印"
+  },
+  {
+    "id": 23,
+    "activateNeed": [
+      23101,
+      23201,
+      23202,
+      23301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "groupEffectDesc": "[贖罪の騎士]のレリックを全<Highlight>4</>件集めると、代償が不要になり、合計ダメージ上昇量が<Highlight>400%</>になる。",
+    "groupId": 23,
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "name": "贖罪の騎士"
+  },
+  {
+    "id": 24,
+    "activateNeed": [
+      24101,
+      24201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "groupEffectDesc": "[幽惘の術士]のレリックを全<Highlight>2</>件集めると、[体勢]の削り効率が<Highlight>100%</>アップし、敵が[アスクパニッシュ]に入った後のダメージが<Highlight>100%</>アップする。",
+    "groupId": 24,
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "name": "幽惘の術士"
+  },
+  {
+    "id": 25,
+    "activateNeed": [
+      25301,
+      25302,
+      25303,
+      25304,
+      25305,
+      25306
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）圣迹残像的描述",
+    "groupId": 25,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "聖跡の残像"
+  },
+  {
+    "id": 26,
+    "activateNeed": [
+      26101,
+      26201,
+      26202,
+      26301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）闲逸学者的描述",
+    "groupId": 26,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "静かな学者"
+  }
+]

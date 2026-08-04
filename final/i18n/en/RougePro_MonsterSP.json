@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "completeRewardDropBox": 11,
+    "completeScore": 20000,
+    "completeToken": 500,
+    "rewardBoxStaticPoint": 109001,
+    "staticPointId": [
+      109001
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 2,
+    "completeRewardDropBox": 11,
+    "completeScore": 20000,
+    "completeToken": 500,
+    "rewardBoxStaticPoint": 109002,
+    "staticPointId": [
+      109002
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 3,
+    "completeRewardDropBox": 11,
+    "completeScore": 20000,
+    "completeToken": 500,
+    "rewardBoxStaticPoint": 109003,
+    "staticPointId": [
+      109003
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 4,
+    "completeRewardDropBox": 12,
+    "completeScore": 40000,
+    "completeToken": 1000,
+    "rewardBoxStaticPoint": 109001,
+    "staticPointId": [
+      109001
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 5,
+    "completeRewardDropBox": 12,
+    "completeScore": 40000,
+    "completeToken": 1000,
+    "rewardBoxStaticPoint": 109002,
+    "staticPointId": [
+      109002
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 6,
+    "completeRewardDropBox": 12,
+    "completeScore": 40000,
+    "completeToken": 1000,
+    "rewardBoxStaticPoint": 109003,
+    "staticPointId": [
+      109003
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 7,
+    "completeScore": 60000,
+    "rewardBoxStaticPoint": 109001,
+    "staticPointId": [
+      109001
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 8,
+    "completeScore": 60000,
+    "rewardBoxStaticPoint": 109002,
+    "staticPointId": [
+      109002
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 9,
+    "completeScore": 60000,
+    "rewardBoxStaticPoint": 109003,
+    "staticPointId": [
+      109003
+    ],
+    "type": "RougePro_Boss"
+  },
+  {
+    "id": 51,
+    "completeRewardDropBox": 21,
+    "monsterScore": 5,
+    "rewardBoxStaticPoint": 109001,
+    "roundId": 1,
+    "roundScoreFix": 0.1,
+    "strongScore": 200,
+    "type": "RougePro_Extra"
+  },
+  {
+    "id": 101,
+    "completeRewardDropBox": 31,
+    "completeScore": 500,
+    "rewardBoxStaticPoint": 8,
+    "staticPointId": [
+      8
+    ],
+    "type": "RougePro_Class_1"
+  },
+  {
+    "id": 111,
+    "monsterRewardDropBox": 41,
+    "monsterScore": 1,
+    "roundId": 2,
+    "roundScoreFix": 0,
+    "strongRewardDropBox": 42,
+    "strongScore": 20,
+    "type": "RougePro_Class_2"
+  }
+]

@@ -1,0 +1,1764 @@
+[
+  {
+    "id": 10101,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_01",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10102,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      14
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10102,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10103,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，生命恢复最大值的y%",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_05",
+    "modEquip": "Role",
+    "name": "眷族の浄化石鹼",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，生命恢复最大值的y%",
+    "treasureGroup": 1,
+    "treasureId": 10103,
+    "treasureMod": 21101031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10104,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，神智恢复y",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_06",
+    "modEquip": "Role",
+    "name": "眷族の目覚め石鹼",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，神智恢复y",
+    "treasureGroup": 1,
+    "treasureId": 10104,
+    "treasureMod": 21101041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10105,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10105,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10106,
+    "canSell": 1,
+    "desc": "HPの割合が<Highlight>$1</>未満まで低下した後、<Highlight>$2</>秒間、ダメージを受けてものけ反らず、被ダメージが<Highlight>$3</>低下する。この効果は<Highlight>$4</>秒ごとに最大1回発動する。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_21",
+    "modEquip": "Role",
+    "name": "苦行僧の足枷",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "HPが減少した後、ダメージを受けてものけ反らなくなり、被ダメージがダウンする。",
+    "treasureGroup": 1,
+    "treasureId": 10106,
+    "treasureMod": 21101061,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10107,
+    "canSell": 1,
+    "desc": "ジェネモン支援を発動した後、自身が与えるダメージが<Highlight>$1</>アップする、<Highlight>$2</>秒間持続。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_28",
+    "modEquip": "Role",
+    "name": "ポケット型連れの乾物",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "ジェネモン支援発動後、ダメージアップ。",
+    "treasureGroup": 1,
+    "treasureId": 10107,
+    "treasureMod": 21101071,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10108,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_03",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10108,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10109,
+    "canSell": 1,
+    "desc": "キャラクター最大回避回数が<Highlight>2.0</>回増加。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_19",
+    "modEquip": "Role",
+    "name": "斥候の靴",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "キャラクター最大回避回数増加。",
+    "treasureGroup": 1,
+    "treasureId": 10109,
+    "treasureMod": 21101091,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10110,
+    "canSell": 1,
+    "desc": "レリックを獲得後、復活するたびに自身の与ダメージが<Highlight>$1</>アップする。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_24",
+    "modEquip": "Role",
+    "name": "狂信者の指環",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "レリックを獲得後、復活するたびに与ダメージアップ。",
+    "treasureGroup": 1,
+    "treasureId": 10110,
+    "treasureMod": 21101101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10111,
+    "canSell": 1,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10111,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10112,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10112,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10113,
+    "canSell": 1,
+    "desc": "遠隔武器でダメージを与えると、[弾薬補給箱]を生成する。この効果は<Highlight>$1</>秒ごとに最大1回発動する。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "レンジャーの銀弾",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "遠隔武器がダメージを与えると、[弾薬補給箱]を生成する。",
+    "treasureGroup": 1,
+    "treasureId": 10113,
+    "treasureMod": 21101131,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10202,
+    "canSell": 1,
+    "desc": "キャラクターがスキルを発動した後、SPを<Highlight>$1</>回復する。クールタイム<Highlight>$2</>秒。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_22",
+    "modEquip": "Role",
+    "name": "仄暗き月信者の聖杯",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "キャラクターがスキルを発動するとSP回復。",
+    "treasureGroup": 1,
+    "treasureId": 10202,
+    "treasureMod": 21102021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10203,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_23",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10203,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10204,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_17",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10204,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10205,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_20",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10205,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10206,
+    "canSell": 1,
+    "desc": "武器でクリティカルを発生させた時、クリティカルダメージが<Highlight>25%</>の確率で<Highlight>20%</>低下し、<Highlight>70%</>の確率で<Highlight>30%</>上昇し、<Highlight>5%</>の確率で<Highlight>100%</>上昇する。いずれも5スタックまで重ねがけ可。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_30",
+    "modEquip": "Role",
+    "name": "道化的励まし",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "武器でクリティカルを発生させた時、クリティカルダメージがアップすることがある。",
+    "treasureGroup": 1,
+    "treasureId": 10206,
+    "treasureMod": 21102061,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10207,
+    "canSell": 1,
+    "desc": "SP自然回復量が<Highlight>4.0</>アップ。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_10",
+    "modEquip": "Role",
+    "name": "聖療司祭のピアス",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "SP自然回復量アップ。",
+    "treasureGroup": 1,
+    "treasureId": 10207,
+    "treasureMod": 21102071,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10208,
+    "canSell": 1,
+    "desc": "ダメージを受けた後、HPが<Highlight>50%</>未満の場合、SPを<Highlight>100%</>回復する。\n SPが減少した後、<Highlight>50%</>未満の場合、HPを<Highlight>100%</>回復する。\n 上記効果は<Highlight>120</>秒以内に最大1回まで発動し、発動回数を共有する。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_15",
+    "modEquip": "Role",
+    "name": "鳥面怪人のカードゲーム",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "HPが低い時にSPを回復し、SPが低い時にHPを回復する。",
+    "treasureGroup": 1,
+    "treasureId": 10208,
+    "treasureMod": 21102081,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10209,
+    "canSell": 1,
+    "desc": "溜め攻撃時、追加で聖剣召喚による攻撃を1回発生させ、攻撃力<Highlight>50%</>分のダメージを与える。クールタイム<Highlight>5</>秒。\n 聖剣召喚を20回行うと、攻撃力<Highlight>50%</>分の追加攻撃を1回発生させる。\n 聖剣召喚を50回行うと、攻撃力<Highlight>150%</>分の追加攻撃を1回発生させる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "威圧騎士の聖剣",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "チャージ時に聖剣を召喚して攻撃できる。",
+    "treasureGroup": 1,
+    "treasureId": 10209,
+    "treasureMod": 21102091,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10210,
+    "canSell": 1,
+    "desc": "空中にいる時、射撃ダメージが<Highlight>200%</>アップする。<Highlight>10</>回発動後にクールタイムに入り、クールタイムは<Highlight>5</>秒。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_27",
+    "modEquip": "Role",
+    "name": "レンジャーの弾倉",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "空中射撃ダメージがアップする。",
+    "treasureGroup": 1,
+    "treasureId": 10210,
+    "treasureMod": 21102101,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10211,
+    "canSell": 1,
+    "desc": "ホルダーおよびボスモンスターに与えるダメージが<Highlight>80%</>アップする。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_29",
+    "modEquip": "Role",
+    "name": "ヴァンガードの手甲",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "ホルダーおよびボスモンスターに与えるダメージがアップする。",
+    "treasureGroup": 1,
+    "treasureId": 10211,
+    "treasureMod": 21102111,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10212,
+    "canSell": 1,
+    "desc": "モンスターに発動した追加効果の属性種類が多いほど、受けるダメージがアップする。最大<Highlight>60%</>アップ。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "腐血信仰者の懺悔",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "モンスターに発動した追加効果の属性種類が多いほど、受けるダメージがアップする。",
+    "treasureGroup": 1,
+    "treasureId": 10212,
+    "treasureMod": 21102121,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10213,
+    "canSell": 1,
+    "desc": "いずれかのダメージによって対象のHPが<Highlight>$3</>未満になった時、<Highlight>$1</>キャラクター攻撃力分のダメージを追加で1回与える。この効果は同じ対象に対して<Highlight>$2</>秒ごとに最大1回発動する。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "祈りの反響・炉心の火",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "いずれかのダメージによって対象のHPが<Highlight>低く</>なった時、ダメージを<Highlight>追加で</>与える。",
+    "treasureGroup": 1,
+    "treasureId": 10213,
+    "treasureMod": 21102131,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10214,
+    "canSell": 1,
+    "desc": "自身との距離が<Highlight>$2</>メートルを超える対象に遠隔武器ダメージを与えた時、受ける遠隔武器ダメージが<Highlight>$1</>アップする効果を1スタック付与する。最大<Highlight>$3</>までアップする。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "祈りの反響・水面の月",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "遠距離の敵に遠隔武器ダメージを与えると、その敵の被ダメージが徐々にアップ。",
+    "treasureGroup": 1,
+    "treasureId": 10214,
+    "treasureMod": 21102141,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10215,
+    "canSell": 1,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10215,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10216,
+    "canSell": 1,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10216,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10217,
+    "canSell": 1,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10217,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10218,
+    "canSell": 1,
+    "desc": "自身が召喚ユニットを召喚した後、属性貫通が<Highlight>30%</>アップする。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "祈りの反響・曳光虫",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "自身が召喚ユニットを召喚した後、属性貫通がアップする。",
+    "treasureGroup": 1,
+    "treasureId": 10218,
+    "treasureMod": 21102181,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10219,
+    "canSell": 1,
+    "desc": "高揚と背水を計算する時、自身のHP割合を強制的に<Highlight>1%</>として扱う。高揚が<Highlight>30%</>を超えている場合は発動しない。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "祈りの反響・血を啜る紅蓮",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "高揚と背水を計算する時、自身のHP割合を強制的に<Highlight>1%</>として扱う。高揚が<Highlight>30%</>を超えている場合は発動しない。",
+    "treasureGroup": 1,
+    "treasureId": 10219,
+    "treasureMod": 21102191,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10220,
+    "canSell": 1,
+    "desc": "近接武器でダメージを与えた時、対象が受けるダメージを<Highlight>2.5%</>アップさせる。持続時間<Highlight>5</>秒、最大<Highlight>10</>スタックまで重ねがけ可。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "ヴァンガードの鋭刃",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "近接武器でダメージを与えた時、対象が受けるダメージをアップさせる。",
+    "treasureGroup": 1,
+    "treasureId": 10220,
+    "treasureMod": 21102201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10301,
+    "canSell": 1,
+    "desc": "バトルスキルを使用するたびにサイコロを1回振る。出目が大きいほど得られるダメージアップ効果が高くなり、最大<Highlight>120%</>アップする。バトルスキルを使用しない限り出目は変化せず、初期値は1。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_16",
+    "modEquip": "Role",
+    "name": "鳥面怪人の手品",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "バトルスキルを使用するたびにサイコロを1回振る。出目が大きいほど得られるダメージアップ効果が高くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10301,
+    "treasureMod": 21103011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10302,
+    "canSell": 1,
+    "desc": "レリックを<Highlight>1</>個所持するごとに、与えるダメージが<Highlight>$1</>アップする。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_18",
+    "modEquip": "Role",
+    "name": "チャリティ様のご厚情",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "レリックが多ければ多いほど、与ダメージがアップ。",
+    "treasureGroup": 1,
+    "treasureId": 10302,
+    "treasureMod": 21103021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10303,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_08",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10303,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10304,
+    "canSell": 1,
+    "desc": "与えたダメージが<Highlight>$1</>未満の時、<Highlight>$2</>固定ダメージを1回追加で与える。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_54",
+    "modEquip": "Role",
+    "name": "彷徨の騎士の残夢",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "ダメージが低いとき、追加で固定ダメージを1回与える。",
+    "treasureGroup": 1,
+    "treasureId": 10304,
+    "treasureMod": 21103041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10305,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10305,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10306,
+    "desc": "味方にバフ効果を付与した時、追加で<Highlight>50%</>のダメージアップと<Highlight>30%</>のダメージ軽減を付与する。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "寒い夜の暖かいパン",
+    "simpleDesc": "味方にバフ効果を付与した時、追加でダメージアップとダメージ軽減を付与する。",
+    "treasureGroup": 1,
+    "treasureId": 10306,
+    "treasureMod": 21103061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 10307,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_31",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 1,
+    "treasureId": 10307,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 11201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 11,
+    "treasureId": 11201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 11202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 11,
+    "treasureId": 11202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 12201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 12,
+    "treasureId": 12201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 12202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 12,
+    "treasureId": 12202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 13201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 13,
+    "treasureId": 13201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 13202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 13,
+    "treasureId": 13202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 14201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 14,
+    "treasureId": 14201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 14202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 14,
+    "treasureId": 14202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 15201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 15,
+    "treasureId": 15201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 15202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 15,
+    "treasureId": 15202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 16201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 16,
+    "treasureId": 16201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 16202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 16,
+    "treasureId": 16202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 17101,
+    "canSell": 1,
+    "desc": "同調武器でダメージを与えた時、自身のSPを<Highlight>1</>回復する。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "深紅の囚われし獣の追想",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "同調武器でダメージを与えると、SPが回復する。",
+    "treasureGroup": 17,
+    "treasureId": 17101,
+    "treasureMod": 21171011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 17201,
+    "canSell": 1,
+    "desc": "同調武器でダメージを与えた時、スキルダメージが<Highlight>30%</>アップする。持続時間<Highlight>5</>秒、クールタイム<Highlight>5</>秒。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "深紅の囚われし獣の哀願",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "同調武器でダメージを与えた時、スキルダメージがアップする。",
+    "treasureGroup": 17,
+    "treasureId": 17201,
+    "treasureMod": 21172011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 18101,
+    "desc": "<Highlight>20</>メートル以内に味方がいる時、<Highlight>2</>秒ごとにSPを<Highlight>1</>回復する。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "連羽の群鳥の共鳴",
+    "simpleDesc": "近くに味方がいる時、継続的にSPを回復する。",
+    "treasureGroup": 18,
+    "treasureId": 18101,
+    "treasureMod": 21181011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 18201,
+    "desc": "<Highlight>20</>メートル以内に味方がいる時、<Highlight>2</>秒ごとに最大HPの<Highlight>3%</>を回復する。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "連羽の群鳥の庇護",
+    "simpleDesc": "近くに味方がいる時、継続的にHPを回復する。",
+    "treasureGroup": 18,
+    "treasureId": 18201,
+    "treasureMod": 21182011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 18301,
+    "desc": "<Highlight>20</>メートル以内に味方がいる時、<Highlight>2</>秒ごとに<Highlight>5</>エンバーを獲得する。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "連羽の群鳥の潤養",
+    "simpleDesc": "近くに味方がいる時、継続的にエンバーを獲得する。",
+    "treasureGroup": 18,
+    "treasureId": 18301,
+    "treasureMod": 21183011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 19101,
+    "canSell": 1,
+    "desc": "シールドがある時、被ダメージが<Highlight>$1</>ダウン。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_34",
+    "modEquip": "Role",
+    "name": "護衛騎士の鉄壁",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "シールドがある時、被ダメージダウン。",
+    "treasureGroup": 19,
+    "treasureId": 19101,
+    "treasureMod": 21191011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 19201,
+    "canSell": 1,
+    "desc": "シールドがある時、与ダメージが<Highlight>$1</>アップ。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_33",
+    "modEquip": "Role",
+    "name": "護衛騎士の利剣",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "シールドがある時、与ダメージアップ。",
+    "treasureGroup": 19,
+    "treasureId": 19201,
+    "treasureMod": 21192011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20001,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      1
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20001,
+    "treasureId": 20001,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20002,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      2
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "それは誰もが知る、迷途の子らを導く慈悲の神々を讃える賛歌。エリュシオンの信者らは深淵に佇み、欠けた旋律を紡ぎながら、神々に救済を求め、約束の天蓋へと導くことを乞う。やがて黄金の音色に包まれ、彼らは幸福の微笑みを浮かべたまま、永遠の眠りに就いた。",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20002,
+    "treasureId": 20002,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20003,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      3
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "一行は四方より湧き上がる暗影に包囲された。騎士はただ独り闇に飛び込み、生きる道を切り拓いた。暗影が散った後、聖療司祭は黒き霧の中から、満身創痍になった騎士の体を引きずり出した。\n必ず救って見せると、聖療司祭は心に誓った。癒しの術の真義とは、勇者の犠牲を決して無為に還さぬことだと。",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20003,
+    "treasureId": 20003,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20004,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      4
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "長い旅路の中で、真実は常に苦痛とともにある。夜の鐘が鳴り響く時、流浪の鳥はなぜ巣に帰らないのか？\n高塔は大陸の中心ではない。それは神が万物の根源ではないからだと、彼は信じている。この世界は自分の足で歩いてこそ意味がある。たとえ、一生を鎖につながれたままでも。",
+    "icon": "T_Rouge_Treasure_21",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20004,
+    "treasureId": 20004,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20005,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      5
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "icon": "T_Rouge_Treasure_32",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20005,
+    "treasureId": 20005,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20006,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      6
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "彼女は幼い頃から、騎士である姉に憧れていた。姉は強く聡明で、成せない任務などなかった。\n聖湖の底に広がる深淵こそ、最凶の戦場だと言われる。最強の騎士ですら、生きて帰ってられない場所だと。それでも姉は戻ってきた。\nただ、それから二度と言葉を口にすることはなかった。",
+    "icon": "T_Rouge_Treasure_42",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20006,
+    "treasureId": 20006,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20007,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "effect": [
+      7
+    ],
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "姉は聖湖で神を怒らせ、魂の一部を罰として奪われたと大人たちは言う。\nだが、姉は正しく敬虔な騎士だ。きっと自分の魂の欠片をあそこに置き忘れただけ。誰も信じなくても、私が証明する。\nこの深淵へ降りて、絶対に姉の失われた魂を取り戻してみせる。",
+    "icon": "T_Rouge_Treasure_43",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 20007,
+    "treasureId": 20007,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20101,
+    "canSell": 1,
+    "desc": "スキルを1回使用するたびに、近接武器ダメージが20%アップする。この効果は20スタックまで重ねがけ可能で、5秒ごとに1スタック減少する。\n スキルと遠隔武器のダメージが50%低下する。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "鳥面怪人の玩具・その1",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "スキル使用後、近接武器ダメージがアップする。",
+    "treasureGroup": 20,
+    "treasureId": 20101,
+    "treasureMod": 21201011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20102,
+    "canSell": 1,
+    "desc": "スキルを1回使用するたびに、遠隔武器ダメージが20%アップする。この効果は20スタックまで重ねがけ可能で、5秒ごとに1スタック減少する。\n スキルと近接武器のダメージが50%低下する。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "鳥面怪人の玩具・その2",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "スキル使用後、遠隔武器ダメージがアップする。",
+    "treasureGroup": 20,
+    "treasureId": 20102,
+    "treasureMod": 21201021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 20201,
+    "canSell": 1,
+    "desc": "スキルを1回使用するたびに、スキルダメージが20%アップする。この効果は20スタックまで重ねがけ可能で、5秒ごとに1スタック減少する。\n 近接武器と遠隔武器のダメージが50%低下する。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "鳥面怪人の玩具・その3",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "スキル使用後、スキルダメージがアップする。",
+    "treasureGroup": 20,
+    "treasureId": 20201,
+    "treasureMod": 21202011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 21101,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_35",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 21,
+    "treasureId": 21101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 21201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_36",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 21,
+    "treasureId": 21201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 21301,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_37",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 21,
+    "treasureId": 21301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 22101,
+    "canSell": 1,
+    "desc": "ダメージを与えた時、<Highlight>$1</>の確率で、追加でキャラ攻撃力<Highlight>$2</>分の火属性ダメージを与える。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_38",
+    "modEquip": "Role",
+    "name": "劫火の刻印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "ダメージを与えると確率で追加の火属性ダメージを与える。",
+    "treasureGroup": 22,
+    "treasureId": 22101,
+    "treasureMod": 21221011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 22102,
+    "canSell": 1,
+    "desc": "ダメージを与えた時、<Highlight>$1</>の確率で、追加でキャラ攻撃力<Highlight>$2</>分の水属性ダメージを与える。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_39",
+    "modEquip": "Role",
+    "name": "水蝕の刻印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "ダメージを与えると確率で追加の水属性ダメージを与える。",
+    "treasureGroup": 22,
+    "treasureId": 22102,
+    "treasureMod": 21221021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 22103,
+    "canSell": 1,
+    "desc": "ダメージを与えた時、<Highlight>$1</>の確率で、追加でキャラ攻撃力<Highlight>$2</>分の風属性ダメージを与える。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_40",
+    "modEquip": "Role",
+    "name": "風化の刻印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "ダメージを与えると確率で追加の風属性ダメージを与える。",
+    "treasureGroup": 22,
+    "treasureId": 22103,
+    "treasureMod": 21221031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 22104,
+    "canSell": 1,
+    "desc": "ダメージを与えた時、<Highlight>$1</>の確率で、追加でキャラ攻撃力<Highlight>$2</>分の雷属性ダメージを与える。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_41",
+    "modEquip": "Role",
+    "name": "雷鳴の刻印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "ダメージを与えると確率で追加の雷属性ダメージを与える。",
+    "treasureGroup": 22,
+    "treasureId": 22104,
+    "treasureMod": 21221041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 23101,
+    "canSell": 1,
+    "desc": "スキル効率<Highlight>$1</>ダウンと引き換えに与ダメージ<Highlight>$2</>アップ。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_42",
+    "modEquip": "Role",
+    "name": "贖罪の騎士のアームガード",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "スキル効率ダウンと引き換えに与ダメージアップ。",
+    "treasureGroup": 23,
+    "treasureId": 23101,
+    "treasureMod": 21231011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 23201,
+    "canSell": 1,
+    "desc": "近接武器ダメージ<Highlight>$1</>ダウンと引き換えに与ダメージ<Highlight>$2</>アップ。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_43",
+    "modEquip": "Role",
+    "name": "贖罪の騎士の錆びた剣",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "近接武器ダメージダウンと引き換えに与ダメージアップ。",
+    "treasureGroup": 23,
+    "treasureId": 23201,
+    "treasureMod": 21232011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 23202,
+    "canSell": 1,
+    "desc": "遠隔武器ダメージ<Highlight>$1</>ダウンと引き換えに与ダメージ<Highlight>$2</>アップ。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_44",
+    "modEquip": "Role",
+    "name": "贖罪の騎士の朽ちた拳銃",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "遠隔武器ダメージダウンと引き換えに与ダメージアップ。",
+    "treasureGroup": 23,
+    "treasureId": 23202,
+    "treasureMod": 21232021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 23301,
+    "canSell": 1,
+    "desc": "被ダメージ<Highlight>$1</>アップと引き換えに与ダメージ<Highlight>$2</>アップ。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_45",
+    "modEquip": "Role",
+    "name": "贖罪の騎士のペンダント",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "被ダメージアップと引き換えに与ダメージアップ。",
+    "treasureGroup": 23,
+    "treasureId": 23301,
+    "treasureMod": 21233011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 24101,
+    "desc": "敵の[体勢]が<Highlight>$1</>より高い時、キャラがダメージを与えるとSPを<Highlight>$2</>回復する。クールタイム<Highlight>$3</>秒。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_53",
+    "modEquip": "Role",
+    "name": "幽惘の術士の長弓",
+    "simpleDesc": "敵の[体勢]が高いとき、ダメージを与えるとSPを回復。",
+    "treasureGroup": 24,
+    "treasureId": 24101,
+    "treasureMod": 21241011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 24201,
+    "desc": "敵の[体勢]が<Highlight>$1</>未満の時、キャラが与えるダメージが<Highlight>$2</>アップする。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_52",
+    "modEquip": "Role",
+    "name": "幽惘の術士の折れ矢",
+    "simpleDesc": "敵の[体勢]が低いとき、与ダメージアップ。",
+    "treasureGroup": 24,
+    "treasureId": 24201,
+    "treasureMod": 21242011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 25301,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_46",
+    "modEquip": "Role",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 25,
+    "treasureId": 25301,
+    "treasureMod": 21253011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 25302,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_47",
+    "modEquip": "Role",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 25,
+    "treasureId": 25302,
+    "treasureMod": 21253021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 25303,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_48",
+    "modEquip": "Role",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 25,
+    "treasureId": 25303,
+    "treasureMod": 21253031,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 25304,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_49",
+    "modEquip": "Role",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 25,
+    "treasureId": 25304,
+    "treasureMod": 21253041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 25305,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_50",
+    "modEquip": "Role",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 25,
+    "treasureId": 25305,
+    "treasureMod": 21253051,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 25306,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_51",
+    "modEquip": "Role",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 25,
+    "treasureId": 25306,
+    "treasureMod": 21253061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 26101,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 26,
+    "treasureId": 26101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 26201,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 26,
+    "treasureId": 26201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 26202,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 26,
+    "treasureId": 26202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  },
+  {
+    "id": 26301,
+    "desc": "謎の行商人が扱うすべての商品の価格が<Highlight>@1</>安くなる。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "謎の行商人の割引券",
+    "simpleDesc": "謎の行商人が扱うすべての商品の価格が安くなる。",
+    "treasureGroup": 26,
+    "treasureId": 26301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "レリック未解放"
+  }
+]

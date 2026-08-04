@@ -1,0 +1,1764 @@
+[
+  {
+    "id": 10101,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_01",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10102,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      14
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10102,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10103,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，生命恢复最大值的y%",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_05",
+    "modEquip": "Role",
+    "name": "受賜信徒的祛病皂",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，生命恢复最大值的y%",
+    "treasureGroup": 1,
+    "treasureId": 10103,
+    "treasureMod": 21101031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10104,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，神智恢复y",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_06",
+    "modEquip": "Role",
+    "name": "受賜信徒的醒神皂",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，神智恢复y",
+    "treasureGroup": 1,
+    "treasureId": 10104,
+    "treasureMod": 21101041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10105,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10105,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10106,
+    "canSell": 1,
+    "desc": "生命值百分比下降至小於<Highlight>$1</>後<Highlight>$2</>秒內，受到傷害時不會產生僵直，受到的傷害降低<Highlight>$3</>，效果每<Highlight>$4</>秒最多觸發1次。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_21",
+    "modEquip": "Role",
+    "name": "苦行修士的腳鐐",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "生命降低後，受到傷害時不會產生僵直，受到傷害的降低。",
+    "treasureGroup": 1,
+    "treasureId": 10106,
+    "treasureMod": 21101061,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10107,
+    "canSell": 1,
+    "desc": "釋放魔靈支援後，自身造成的傷害提高<Highlight>$1</>，持續<Highlight>$2</>秒。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_28",
+    "modEquip": "Role",
+    "name": "袖珍旅伴的乾糧",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "釋放魔靈支援後，傷害提高。",
+    "treasureGroup": 1,
+    "treasureId": 10107,
+    "treasureMod": 21101071,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10108,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_03",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10108,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10109,
+    "canSell": 1,
+    "desc": "角色最大閃避次數增加<Highlight>2.0</>次。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_19",
+    "modEquip": "Role",
+    "name": "先驅斥候的戰靴",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "角色最大閃避次數增加。",
+    "treasureGroup": 1,
+    "treasureId": 10109,
+    "treasureMod": 21101091,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10110,
+    "canSell": 1,
+    "desc": "獲得此遺物後，每次復甦後自身疊加1層造成的傷害提高<Highlight>$1</>效果。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_24",
+    "modEquip": "Role",
+    "name": "狂熱信徒的指環",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "獲得此遺物後，每次復甦後使造成的傷害提高。",
+    "treasureGroup": 1,
+    "treasureId": 10110,
+    "treasureMod": 21101101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10111,
+    "canSell": 1,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10111,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10112,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10112,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10113,
+    "canSell": 1,
+    "desc": "遠端武器造成傷害時生成[彈藥補給箱]，效果每<Highlight>$1</>秒最多觸發1次。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "獵風遊俠的銀彈",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "遠端武器造成傷害時生成[彈藥補給箱]。",
+    "treasureGroup": 1,
+    "treasureId": 10113,
+    "treasureMod": 21101131,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10202,
+    "canSell": 1,
+    "desc": "角色釋放技能後，回復<Highlight>$1</>神智，冷卻時間<Highlight>$2</>秒。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_22",
+    "modEquip": "Role",
+    "name": "暗月信徒的聖盃",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "角色釋放技能後，回復神智。",
+    "treasureGroup": 1,
+    "treasureId": 10202,
+    "treasureMod": 21102021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10203,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_23",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10203,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10204,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_17",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10204,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10205,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_20",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10205,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10206,
+    "canSell": 1,
+    "desc": "使用武器造成暴擊時，暴擊傷害<Highlight>25%</>概率下降<Highlight>20%</>，<Highlight>70%</>概率提高<Highlight>30%</>，<Highlight>5%</>概率提高<Highlight>100%</>，均可疊加5層。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_30",
+    "modEquip": "Role",
+    "name": "幸運愚人的鼓勵",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "使用武器造成暴擊時，暴擊傷害可能獲得提高。",
+    "treasureGroup": 1,
+    "treasureId": 10206,
+    "treasureMod": 21102061,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10207,
+    "canSell": 1,
+    "desc": "神智自然恢復量提高<Highlight>4.0</>點。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_10",
+    "modEquip": "Role",
+    "name": "聖療司祭的耳墜",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "神智自然恢復量提高。",
+    "treasureGroup": 1,
+    "treasureId": 10207,
+    "treasureMod": 21102071,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10208,
+    "canSell": 1,
+    "desc": "受到傷害後若生命低於<Highlight>50%</>，恢復<Highlight>100%</>神智。\n神智下降後若低於<Highlight>50%</>，恢復<Highlight>100%</>生命。\n<Highlight>120</>秒內上述效果最多觸發1次，共享觸發次數。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_15",
+    "modEquip": "Role",
+    "name": "鳥面怪人的牌局",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "生命低時回復神智，神智低時回復生命。",
+    "treasureGroup": 1,
+    "treasureId": 10208,
+    "treasureMod": 21102081,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10209,
+    "canSell": 1,
+    "desc": "蓄力攻擊時附加1次額外的聖劍召喚打擊，造成<Highlight>50%</>攻擊力的傷害，冷卻時間<Highlight>5</>秒。\n完成20次聖劍召喚，追加一次<Highlight>50%</>攻擊力傷害的打擊。\n完成50次聖劍召喚，追加一次<Highlight>150%</>攻擊力傷害的打擊。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "懾敵騎士的聖劍",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "蓄力時可召喚聖劍進行攻擊。",
+    "treasureGroup": 1,
+    "treasureId": 10209,
+    "treasureMod": 21102091,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10210,
+    "canSell": 1,
+    "desc": "在空中時，射擊傷害提高<Highlight>200%</>，觸發<Highlight>10</>次後進入冷卻，冷卻時間<Highlight>5</>秒。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_27",
+    "modEquip": "Role",
+    "name": "獵風遊俠的彈匣",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "空中射擊傷害提高。",
+    "treasureGroup": 1,
+    "treasureId": 10210,
+    "treasureMod": 21102101,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10211,
+    "canSell": 1,
+    "desc": "對號令者及首領怪物造成的傷害提高<Highlight>80%</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_29",
+    "modEquip": "Role",
+    "name": "制敵先鋒的手鎧",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "對號令者及首領怪物造成傷害提高。",
+    "treasureGroup": 1,
+    "treasureId": 10211,
+    "treasureMod": 21102111,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10212,
+    "canSell": 1,
+    "desc": "怪物被觸發的額外效果屬性種類越多，受到的傷害越高，最高提高<Highlight>60%</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "腐血信者的懺悔",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "怪物被觸發的額外效果屬性種類越多，受到的傷害越高。",
+    "treasureGroup": 1,
+    "treasureId": 10212,
+    "treasureMod": 21102121,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10213,
+    "canSell": 1,
+    "desc": "任何傷害導致目標生命低於<Highlight>$3</>時，額外造成1次<Highlight>$1</>角色攻擊的傷害，效果對同一目標每<Highlight>$2</>秒最多觸發1次。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "禱言迴響·爐心炎",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "任何傷害導致目標生命<Highlight>較低</>時<Highlight>額外</>造成傷害。",
+    "treasureGroup": 1,
+    "treasureId": 10213,
+    "treasureMod": 21102131,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10214,
+    "canSell": 1,
+    "desc": "對與自身距離大於<Highlight>$2</>米的目標造成遠端武器傷害時，附加1層受到的遠端武器傷害提高<Highlight>$1</>的效果，最多提高到<Highlight>$3</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "禱言迴響·浮海月",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "對與自身距離較遠的目標造成遠端武器傷害時，其受到的遠端武器傷害逐步提高。",
+    "treasureGroup": 1,
+    "treasureId": 10214,
+    "treasureMod": 21102141,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10215,
+    "canSell": 1,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10215,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10216,
+    "canSell": 1,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10216,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10217,
+    "canSell": 1,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10217,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10218,
+    "canSell": 1,
+    "desc": "自身創造召喚物後，屬性穿透提高<Highlight>30%</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "禱言迴響·曳光蟲",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "自身創造召喚物後，屬性穿透提高。",
+    "treasureGroup": 1,
+    "treasureId": 10218,
+    "treasureMod": 21102181,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10219,
+    "canSell": 1,
+    "desc": "計算昂揚和背水時，自身生命值百分比強制視為<Highlight>1%</>，昂揚高於<Highlight>30%</>時不生效。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "禱言迴響·汲血花",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "計算昂揚和背水時，自身生命值百分比強制視為<Highlight>1%</>，昂揚高於<Highlight>30%</>時不生效。",
+    "treasureGroup": 1,
+    "treasureId": 10219,
+    "treasureMod": 21102191,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10220,
+    "canSell": 1,
+    "desc": "近戰武器造成傷害時可使目標受到的傷害提高<Highlight>2.5%</>，持續<Highlight>5</>秒，最多疊加<Highlight>10</>層。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "制敵先鋒的鋒刃",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "近戰武器造成傷害時可使目標受到的傷害提高。",
+    "treasureGroup": 1,
+    "treasureId": 10220,
+    "treasureMod": 21102201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10301,
+    "canSell": 1,
+    "desc": "每次使用戰技將投一次骰子，點數越大獲得的傷害提升效果越好，最多提升<Highlight>120%</>，不使用戰技則點數將不會變化，初始默認為1點。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_16",
+    "modEquip": "Role",
+    "name": "鳥面怪人的魔術",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "每次使用戰技將投一次骰子，點數越大獲得的傷害提升效果越好。",
+    "treasureGroup": 1,
+    "treasureId": 10301,
+    "treasureMod": 21103011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10302,
+    "canSell": 1,
+    "desc": "每擁有<Highlight>1</>件遺物，造成的傷害提高<Highlight>$1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_18",
+    "modEquip": "Role",
+    "name": "慷慨大人的恩典",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "遺物越多，造成的傷害越高。",
+    "treasureGroup": 1,
+    "treasureId": 10302,
+    "treasureMod": 21103021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10303,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_08",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10303,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10304,
+    "canSell": 1,
+    "desc": "造成傷害低於<Highlight>$1</>時，追加1次值為<Highlight>$2</>的真實傷害。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_54",
+    "modEquip": "Role",
+    "name": "彷徨騎士的餘夢",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "造成低傷害時，追加1次真實傷害。",
+    "treasureGroup": 1,
+    "treasureId": 10304,
+    "treasureMod": 21103041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10305,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10305,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10306,
+    "desc": "當你讓隊友獲得增益效果時，額外使其獲得<Highlight>50%</>傷害提升與<Highlight>30%</>傷害減免。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "寒夜余暖的麵包",
+    "simpleDesc": "當你讓隊友獲得增益效果時，額外使其獲得傷害提升與傷害減免。",
+    "treasureGroup": 1,
+    "treasureId": 10306,
+    "treasureMod": 21103061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 10307,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_31",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 1,
+    "treasureId": 10307,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 11201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 11,
+    "treasureId": 11201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 11202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 11,
+    "treasureId": 11202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 12201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 12,
+    "treasureId": 12201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 12202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 12,
+    "treasureId": 12202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 13201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 13,
+    "treasureId": 13201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 13202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 13,
+    "treasureId": 13202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 14201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 14,
+    "treasureId": 14201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 14202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 14,
+    "treasureId": 14202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 15201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 15,
+    "treasureId": 15201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 15202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 15,
+    "treasureId": 15202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 16201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 16,
+    "treasureId": 16201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 16202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 16,
+    "treasureId": 16202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 17101,
+    "canSell": 1,
+    "desc": "使用同律武器造成傷害時，自身回復<Highlight>1</>點神智。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "殷紅困獸的遙想",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "使用同律武器造成傷害時，回復神智。",
+    "treasureGroup": 17,
+    "treasureId": 17101,
+    "treasureMod": 21171011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 17201,
+    "canSell": 1,
+    "desc": "使用同律武器造成傷害時，技能傷害提高<Highlight>30%</>，持續<Highlight>5</>秒，冷卻時間<Highlight>5</>秒。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "殷紅困獸的哀願",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "使用同律武器造成傷害時，技能傷害提高。",
+    "treasureGroup": 17,
+    "treasureId": 17201,
+    "treasureMod": 21172011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 18101,
+    "desc": "<Highlight>20</>米內存在隊友時，每<Highlight>2</>秒回復<Highlight>1</>點神智。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "群鳥連翎的偕鳴",
+    "simpleDesc": "附近有隊友時，持續回復神智。",
+    "treasureGroup": 18,
+    "treasureId": 18101,
+    "treasureMod": 21181011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 18201,
+    "desc": "<Highlight>20</>米內存在隊友時，每<Highlight>2</>秒回復<Highlight>3%</>最大生命。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "群鳥連翎的蔭庇",
+    "simpleDesc": "附近有隊友時，持續回復生命。",
+    "treasureGroup": 18,
+    "treasureId": 18201,
+    "treasureMod": 21182011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 18301,
+    "desc": "<Highlight>20</>米內存在隊友時，每<Highlight>2</>秒獲得<Highlight>5</>餘燼。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "群鳥連翎的濡養",
+    "simpleDesc": "附近有隊友時，持續獲取餘燼。",
+    "treasureGroup": 18,
+    "treasureId": 18301,
+    "treasureMod": 21183011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 19101,
+    "canSell": 1,
+    "desc": "帶有護盾時，受到的傷害降低<Highlight>$1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_34",
+    "modEquip": "Role",
+    "name": "護衛騎士的堅盾",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "帶有護盾時，受到的傷害降低。",
+    "treasureGroup": 19,
+    "treasureId": 19101,
+    "treasureMod": 21191011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 19201,
+    "canSell": 1,
+    "desc": "帶有護盾時，造成的傷害提高<Highlight>$1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_33",
+    "modEquip": "Role",
+    "name": "護衛騎士的利劍",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "帶有護盾時，造成的傷害提高。",
+    "treasureGroup": 19,
+    "treasureId": 19201,
+    "treasureMod": 21192011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20001,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      1
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20001,
+    "treasureId": 20001,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20002,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      2
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "那是一首人盡皆知的頌歌，歌頌為迷途之人指引方向的慈悲諸神。虔誠的艾利西安信徒們在深淵中哼唱破碎的旋律，祈求神明引領他們脫離苦難，前往應許的眾天之天。金色的旋律流淌，他們在幸福的期盼中永遠闔上了雙眼。",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20002,
+    "treasureId": 20002,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20003,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      3
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "幽影從四方湧來，將眾人圍困其中。騎士孤身衝入黑暗，開闢出一線生機。幽影消散後，聖療司祭從漆黑的迷霧中拖回騎士千瘡百孔的身體。\n \n 我一定會救活她，聖療司祭在心裡起誓，療愈之術的意義，就是絕不讓勇敢之人白白犧牲。",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20003,
+    "treasureId": 20003,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20004,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      4
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "長路漫漫，真理總與苦痛參半。當入夜的鍾聲敲響，流浪的飛鳥啊，你為何不願歸巢？\n \n 因高塔並非大陸的中心，因神明並非萬物的本源。他堅信世界只能用自己的雙足丈量，即便要一生困於鐐銬。",
+    "icon": "T_Rouge_Treasure_21",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20004,
+    "treasureId": 20004,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20005,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      5
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "「一切收獲皆有代價」——早就聽厭了的這句教誨，從遊戲的視角重新審視之後，又變得有趣起來。\n \n 魔術師將他的玩具球扔進盒子，「好消息和壞消息，你要先聽哪一個？」",
+    "icon": "T_Rouge_Treasure_32",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20005,
+    "treasureId": 20005,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20006,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      6
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "她從小就崇拜身為騎士的姐姐，姐姐強大而聰慧，沒有什麼任務是她力不能及的。\n \n 人人都說聖湖下的深淵是最凶險的戰場，連最驍勇的騎士也會有去無回，可是她的姐姐活著回來了。\n \n 姐姐活著，只是不再說話了。",
+    "icon": "T_Rouge_Treasure_42",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20006,
+    "treasureId": 20006,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20007,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "effect": [
+      7
+    ],
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "大人們說，姐姐在聖湖中觸怒了神明，所以神明收走了她的一部分靈魂作為懲罰。\n \n 不，姐姐是正直而虔誠的騎士，她一定只是不小心把靈魂丟在了那裡。如果沒有人相信，那就讓我來證明。\n \n 我會進入深淵，將姐姐丟失的靈魂帶回來。",
+    "icon": "T_Rouge_Treasure_43",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 20007,
+    "treasureId": 20007,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20101,
+    "canSell": 1,
+    "desc": "每使用1次技能，近戰武器傷害提高20%，該效果可疊加20層，每5秒削減1層。\n技能與遠程傷害下降50%。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "鳥面怪人的玩具·其一",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "使用技能後近戰武器傷害提高。",
+    "treasureGroup": 20,
+    "treasureId": 20101,
+    "treasureMod": 21201011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20102,
+    "canSell": 1,
+    "desc": "每使用1次技能，遠端武器傷害提高20%，該效果可疊加20層，每5秒削減1層。\n技能與近戰武器傷害下降50%。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "鳥面怪人的玩具·其二",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "使用技能後遠端武器傷害提高。",
+    "treasureGroup": 20,
+    "treasureId": 20102,
+    "treasureMod": 21201021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 20201,
+    "canSell": 1,
+    "desc": "每使用1次技能，技能傷害提高20%，該效果可疊加20層，每5秒削減1層。\n近戰與遠端武器傷害下降50%。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "鳥面怪人的玩具·其三",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "使用技能後技能傷害提高。",
+    "treasureGroup": 20,
+    "treasureId": 20201,
+    "treasureMod": 21202011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 21101,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_35",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 21,
+    "treasureId": 21101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 21201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_36",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 21,
+    "treasureId": 21201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 21301,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_37",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 21,
+    "treasureId": 21301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 22101,
+    "canSell": 1,
+    "desc": "造成傷害時，有<Highlight>$1</>概率額外造成<Highlight>$2</>角色攻擊的火屬性傷害。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_38",
+    "modEquip": "Role",
+    "name": "烈火燒灼的銘印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "造成傷害時，有概率造成額外火屬性傷害。",
+    "treasureGroup": 22,
+    "treasureId": 22101,
+    "treasureMod": 21221011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 22102,
+    "canSell": 1,
+    "desc": "造成傷害時，有<Highlight>$1</>概率額外造成<Highlight>$2</>角色攻擊的水屬性傷害。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_39",
+    "modEquip": "Role",
+    "name": "流水鐫刻的銘印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "造成傷害時，有概率造成額外水屬性傷害。",
+    "treasureGroup": 22,
+    "treasureId": 22102,
+    "treasureMod": 21221021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 22103,
+    "canSell": 1,
+    "desc": "造成傷害時，有<Highlight>$1</>概率額外造成<Highlight>$2</>角色攻擊的風屬性傷害。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_40",
+    "modEquip": "Role",
+    "name": "狂風吹蝕的銘印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "造成傷害時，有概率造成額外風屬性傷害。",
+    "treasureGroup": 22,
+    "treasureId": 22103,
+    "treasureMod": 21221031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 22104,
+    "canSell": 1,
+    "desc": "造成傷害時，有<Highlight>$1</>概率額外造成<Highlight>$2</>角色攻擊的雷屬性傷害。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_41",
+    "modEquip": "Role",
+    "name": "驚雷振擊的銘印",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "造成傷害時，有概率造成額外雷屬性傷害。",
+    "treasureGroup": 22,
+    "treasureId": 22104,
+    "treasureMod": 21221041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 23101,
+    "canSell": 1,
+    "desc": "以技能效益降低<Highlight>$1</>為代價換取造成的傷害提高<Highlight>$2</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_42",
+    "modEquip": "Role",
+    "name": "贖罪騎士的臂甲",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "以技能效益降低為代價換取造成的傷害提高。",
+    "treasureGroup": 23,
+    "treasureId": 23101,
+    "treasureMod": 21231011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 23201,
+    "canSell": 1,
+    "desc": "以近戰武器傷害降低<Highlight>$1</>為代價換取造成的傷害提高<Highlight>$2</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_43",
+    "modEquip": "Role",
+    "name": "贖罪騎士的銹劍",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "以近戰武器傷害降低為代價換取造成的傷害提高。",
+    "treasureGroup": 23,
+    "treasureId": 23201,
+    "treasureMod": 21232011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 23202,
+    "canSell": 1,
+    "desc": "以遠端武器傷害降低<Highlight>$1</>為代價換取造成的傷害提高<Highlight>$2</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_44",
+    "modEquip": "Role",
+    "name": "贖罪騎士的舊槍",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "以遠端武器傷害降低為代價換取造成的傷害提高。",
+    "treasureGroup": 23,
+    "treasureId": 23202,
+    "treasureMod": 21232021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 23301,
+    "canSell": 1,
+    "desc": "以受到的傷害提高<Highlight>$1</>為代價換取造成的傷害提高<Highlight>$2</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_45",
+    "modEquip": "Role",
+    "name": "贖罪騎士的吊墜",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "以受到的傷害提高為代價換取造成的傷害提高。",
+    "treasureGroup": 23,
+    "treasureId": 23301,
+    "treasureMod": 21233011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 24101,
+    "desc": "敵人[戰姿]剩餘量高於<Highlight>$1</>時，角色造成傷害可回復<Highlight>$2</>點神智，冷卻時間<Highlight>$3</>秒。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_53",
+    "modEquip": "Role",
+    "name": "幽惘術士的長弓",
+    "simpleDesc": "敵人[戰姿]剩餘量高時，角色造成傷害可回復神智。",
+    "treasureGroup": 24,
+    "treasureId": 24101,
+    "treasureMod": 21241011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 24201,
+    "desc": "敵人[戰姿]剩餘量低於<Highlight>$1</>時，角色造成傷害提高<Highlight>$2</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_52",
+    "modEquip": "Role",
+    "name": "幽惘術士的斷箭",
+    "simpleDesc": "敵人[戰姿]剩餘量低時，角色造成傷害提高。",
+    "treasureGroup": 24,
+    "treasureId": 24201,
+    "treasureMod": 21242011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 25301,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_46",
+    "modEquip": "Role",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 25,
+    "treasureId": 25301,
+    "treasureMod": 21253011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 25302,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_47",
+    "modEquip": "Role",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 25,
+    "treasureId": 25302,
+    "treasureMod": 21253021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 25303,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_48",
+    "modEquip": "Role",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 25,
+    "treasureId": 25303,
+    "treasureMod": 21253031,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 25304,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_49",
+    "modEquip": "Role",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 25,
+    "treasureId": 25304,
+    "treasureMod": 21253041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 25305,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_50",
+    "modEquip": "Role",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 25,
+    "treasureId": 25305,
+    "treasureMod": 21253051,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 25306,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_51",
+    "modEquip": "Role",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 25,
+    "treasureId": 25306,
+    "treasureMod": 21253061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 26101,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 26,
+    "treasureId": 26101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 26201,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 26,
+    "treasureId": 26201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 26202,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 26,
+    "treasureId": 26202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  },
+  {
+    "id": 26301,
+    "desc": "深淵行商處的所有商品價格降低<Highlight>@1</>。",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "每一次與商人相遇，鳥面的魔術師總會抱怨：「明碼標價多沒意思，加點盲選和概率吧？」\n \n 商人聽從建議，給自己的商店設計了一套折扣券，散布在深淵各處。魔術師看了失望地搖頭：「你的善良比你的生意更無趣。」",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "深淵行商的折扣券",
+    "simpleDesc": "深淵行商處的所有商品價格降低。",
+    "treasureGroup": 26,
+    "treasureId": 26301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "遺物尚未解鎖"
+  }
+]

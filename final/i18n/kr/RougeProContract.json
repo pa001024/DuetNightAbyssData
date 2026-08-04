@@ -1,0 +1,94 @@
+[
+  {
+    "id": 101,
+    "desc": "자신의 받는 치료가 <Highlight>20.0%</> 감소한다.",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "globalPassiveId": 30101001,
+    "heatValue": 1,
+    "icon": "T_Rou_Contract_Char_HealDown",
+    "maxLevel": 20,
+    "name": "질식 지역",
+    "startHeat": 1
+  },
+  {
+    "id": 102,
+    "desc": "자신의 공격이 <Highlight>20.0%</> 감소한다.",
+    "descValues": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30101002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_SpDown",
+    "maxLevel": 5,
+    "name": "곤궁 지역",
+    "startHeat": 2
+  },
+  {
+    "id": 103,
+    "desc": "적의 최대 HP가 <Highlight>40.0%</> 상승한다",
+    "descValues": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "성장 지역",
+    "startHeat": 3
+  },
+  {
+    "id": 104,
+    "desc": "적의 공격이 <Highlight>20.0%</> 상승한다.",
+    "descValues": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon__AtkUp",
+    "maxLevel": 5,
+    "name": "구박 지역",
+    "startHeat": 4
+  },
+  {
+    "id": 105,
+    "desc": "적이 받는 대미지가 <Highlight>20.0%</> 감소한다.",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "globalPassiveId": 30102003,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "무감각 지역",
+    "startHeat": 5
+  },
+  {
+    "id": 106,
+    "desc": "심연 행상인에게 구매 시, 필요한 잿불이 <Highlight>50%</> 상승한다.",
+    "heatValue": 10,
+    "icon": "T_Rou_Contract_Mechanics_CostUp",
+    "maxLevel": 1,
+    "name": "물이 마른 지역",
+    "startHeat": 6
+  },
+  {
+    "id": 107,
+    "desc": "선택할 때마다, 선택 가능한 옵션이 1개 <Highlight>감소</>한다.",
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Mechanics_LessChoice",
+    "maxLevel": 1,
+    "name": "맹목 지역",
+    "startHeat": 7
+  },
+  {
+    "id": 108,
+    "desc": "선택할 때마다, 강제로 랜덤 선택을 진행한다.",
+    "heatValue": 15,
+    "icon": "T_Rou_Contract_Mechanics_RandomChoice",
+    "maxLevel": 1,
+    "name": "미련한 지역",
+    "startHeat": 8
+  }
+]

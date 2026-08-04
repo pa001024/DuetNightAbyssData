@@ -2,2032 +2,1822 @@
   {
     "id": 10111,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>10.0%</>",
     "branch": 1,
     "type": 3,
-    "max_level": 1,
-    "level_up_point": 15,
-    "mod_equip": "Role",
-    "talent_mod": 30101051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 15,
+    "modEquip": "Role",
+    "talentMod": 30101051,
+    "icon": "T_Rouge_Talent_ATK",
+    "iconLoc": [
       0,
       0
     ],
     "unlock": [
       10221,
       10322
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10221,
     "name": "技能耐久提高",
-    "desc": "技能耐久提高<Highlight>#1</>",
+    "desc": "技能耐久提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "Role",
-    "talent_mod": 30101041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "Role",
+    "talentMod": 30101041,
+    "icon": "T_Rouge_Talent_SkillSustainUP",
+    "iconLoc": [
       200,
       130
     ],
     "unlock": [
       10431
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10322,
     "name": "技能威力提高",
-    "desc": "技能威力提高<Highlight>#1</>",
+    "desc": "技能威力提高<Highlight>4.8%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "Role",
-    "talent_mod": 30101011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "Role",
+    "talentMod": 30101011,
+    "icon": "T_Rouge_Talent_SkillIntensityUP",
+    "iconLoc": [
       200,
       -130
     ],
     "unlock": [
       10532,
       10633
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10431,
     "name": "背水提高",
-    "desc": "背水提高<Highlight>#1</>",
+    "desc": "背水提高<Highlight>10.8%</>",
     "branch": 1,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "Role",
-    "talent_mod": 30101062,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Berserker.T_Rouge_Talent_Berserker'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "Role",
+    "talentMod": 30101062,
+    "icon": "T_Rouge_Talent_Berserker",
+    "iconLoc": [
       400,
       130
     ],
     "unlock": [
       10741,
       10842
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10532,
     "name": "技能效益提高",
-    "desc": "技能效益提高<Highlight>#1</>",
+    "desc": "技能效益提高<Highlight>3.0%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "Role",
-    "talent_mod": 30101021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillEfficiencyUP.T_Rouge_Talent_SkillEfficiencyUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "Role",
+    "talentMod": 30101021,
+    "icon": "T_Rouge_Talent_SkillEfficiencyUP",
+    "iconLoc": [
       400,
       -65
     ],
     "unlock": [
       10943
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10633,
     "name": "技能範圍提高",
-    "desc": "技能範圍提高<Highlight>#1</>",
+    "desc": "技能範圍提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "Role",
-    "talent_mod": 30101031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "Role",
+    "talentMod": 30101031,
+    "icon": "T_Rouge_Talent_SkillRangeUP",
+    "iconLoc": [
       400,
       -195
     ],
     "unlock": [
       11044
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10741,
     "name": "技能威力提高",
-    "desc": "技能威力提高<Highlight>#1</>",
+    "desc": "技能威力提高<Highlight>4.8%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30101011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30101011,
+    "icon": "T_Rouge_Talent_SkillIntensityUP",
+    "iconLoc": [
       600,
       195
     ],
     "unlock": [
       11151
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10842,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>10.0%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30101051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30101051,
+    "icon": "T_Rouge_Talent_ATK",
+    "iconLoc": [
       600,
       65
     ],
     "unlock": [
       11252
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 10943,
     "name": "技能效益提高",
-    "desc": "技能效益提高<Highlight>#1</>",
+    "desc": "技能效益提高<Highlight>3.0%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30101021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillEfficiencyUP.T_Rouge_Talent_SkillEfficiencyUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30101021,
+    "icon": "T_Rouge_Talent_SkillEfficiencyUP",
+    "iconLoc": [
       600,
       -65
     ],
     "unlock": [
       11353
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11044,
     "name": "技能耐久提高",
-    "desc": "技能耐久提高<Highlight>#1</>",
+    "desc": "技能耐久提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30101041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30101041,
+    "icon": "T_Rouge_Talent_SkillSustainUP",
+    "iconLoc": [
       600,
       -195
     ],
     "unlock": [
       11454
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11151,
     "name": "技能範圍提高",
-    "desc": "技能範圍提高<Highlight>#1</>",
+    "desc": "技能範圍提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "Role",
-    "talent_mod": 30101031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "Role",
+    "talentMod": 30101031,
+    "icon": "T_Rouge_Talent_SkillRangeUP",
+    "iconLoc": [
       800,
       195
     ],
     "unlock": [
       11561
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11252,
     "name": "技能威力提高+",
-    "desc": "技能威力提高<Highlight>#1</>",
+    "desc": "技能威力提高<Highlight>9.6%</>",
     "branch": 1,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "Role",
-    "talent_mod": 30101072,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "Role",
+    "talentMod": 30101072,
+    "icon": "T_Rouge_Talent_SkillIntensityUP",
+    "iconLoc": [
       800,
       65
     ],
     "unlock": [
       11662
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11353,
     "name": "技能耐久提高",
-    "desc": "技能耐久提高<Highlight>#1</>",
+    "desc": "技能耐久提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "Role",
-    "talent_mod": 30101041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "Role",
+    "talentMod": 30101041,
+    "icon": "T_Rouge_Talent_SkillSustainUP",
+    "iconLoc": [
       800,
       -65
     ],
     "unlock": [
       11763
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11454,
     "name": "技能威力提高",
-    "desc": "技能威力提高<Highlight>#1</>",
+    "desc": "技能威力提高<Highlight>4.8%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "Role",
-    "talent_mod": 30101011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "Role",
+    "talentMod": 30101011,
+    "icon": "T_Rouge_Talent_SkillIntensityUP",
+    "iconLoc": [
       800,
       -195
     ],
     "unlock": [
       11864
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11561,
     "name": "技能耐久提高",
-    "desc": "技能耐久提高<Highlight>#1</>",
+    "desc": "技能耐久提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30101041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillSustainUP.T_Rouge_Talent_SkillSustainUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30101041,
+    "icon": "T_Rouge_Talent_SkillSustainUP",
+    "iconLoc": [
       1000,
       195
     ],
     "unlock": [
       11971
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11662,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>10.0%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30101051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30101051,
+    "icon": "T_Rouge_Talent_ATK",
+    "iconLoc": [
       1000,
       65
     ],
     "unlock": [
       12072
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11763,
     "name": "技能威力提高",
-    "desc": "技能威力提高<Highlight>#1</>",
+    "desc": "技能威力提高<Highlight>4.8%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30101011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30101011,
+    "icon": "T_Rouge_Talent_SkillIntensityUP",
+    "iconLoc": [
       1000,
       -65
     ],
     "unlock": [
       12173
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11864,
     "name": "技能範圍提高",
-    "desc": "技能範圍提高<Highlight>#1</>",
+    "desc": "技能範圍提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30101031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30101031,
+    "icon": "T_Rouge_Talent_SkillRangeUP",
+    "iconLoc": [
       1000,
       -195
     ],
     "unlock": [
       12173
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 11971,
     "name": "技能效益提高",
-    "desc": "技能效益提高<Highlight>#1</>",
+    "desc": "技能效益提高<Highlight>3.0%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "Role",
-    "talent_mod": 30101021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillEfficiencyUP.T_Rouge_Talent_SkillEfficiencyUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "Role",
+    "talentMod": 30101021,
+    "icon": "T_Rouge_Talent_SkillEfficiencyUP",
+    "iconLoc": [
       1200,
       195
     ],
     "unlock": [
       12281
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 12072,
     "name": "技能範圍提高",
-    "desc": "技能範圍提高<Highlight>#1</>",
+    "desc": "技能範圍提高<Highlight>5.4%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "Role",
-    "talent_mod": 30101031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "Role",
+    "talentMod": 30101031,
+    "icon": "T_Rouge_Talent_SkillRangeUP",
+    "iconLoc": [
       1200,
       65
     ],
     "unlock": [
       12382
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 12173,
     "name": "昂揚提高",
-    "desc": "昂揚提高<Highlight>#1</>",
+    "desc": "昂揚提高<Highlight>10.8%</>",
     "branch": 1,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "Role",
-    "talent_mod": 30101082,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Morale.T_Rouge_Talent_Morale'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "Role",
+    "talentMod": 30101082,
+    "icon": "T_Rouge_Talent_Morale",
+    "iconLoc": [
       1200,
       -130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   },
   {
     "id": 12281,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>10.0%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "Role",
-    "talent_mod": 30101051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ATK.T_Rouge_Talent_ATK'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "Role",
+    "talentMod": 30101051,
+    "icon": "T_Rouge_Talent_ATK",
+    "iconLoc": [
       1400,
       195
     ],
     "unlock": [
       12491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 12382,
     "name": "技能威力提高",
-    "desc": "技能威力提高<Highlight>#1</>",
+    "desc": "技能威力提高<Highlight>4.8%</>",
     "branch": 1,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "Role",
-    "talent_mod": 30101011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillIntensityUP.T_Rouge_Talent_SkillIntensityUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "Role",
+    "talentMod": 30101011,
+    "icon": "T_Rouge_Talent_SkillIntensityUP",
+    "iconLoc": [
       1400,
       65
     ],
     "unlock": [
       12491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 12491,
     "name": "造成傷害提高",
-    "desc": "造成的傷害提高<Highlight>#1</>",
+    "desc": "造成的傷害提高<Highlight>12.0%</>",
     "branch": 1,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "Role",
-    "talent_mod": 30101092,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DamageUp.T_Rouge_Talent_DamageUp'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "Role",
+    "talentMod": 30101092,
+    "icon": "T_Rouge_Talent_DamageUp",
+    "iconLoc": [
       1600,
       130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   },
   {
     "id": 20111,
     "name": "最大生命提高",
-    "desc": "最大生命提高<Highlight>#1</>",
+    "desc": "最大生命提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 3,
-    "max_level": 1,
-    "level_up_point": 15,
-    "mod_equip": "Role",
-    "talent_mod": 30102011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 15,
+    "modEquip": "Role",
+    "talentMod": 30102011,
+    "icon": "T_Rouge_Talent_HPUP",
+    "iconLoc": [
       0,
       0
     ],
     "unlock": [
       20221,
       20322
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20221,
     "name": "防禦提高",
-    "desc": "防禦提高<Highlight>#1</>",
+    "desc": "防禦提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "Role",
-    "talent_mod": 30102021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "Role",
+    "talentMod": 30102021,
+    "icon": "T_Rouge_Talent_DEF",
+    "iconLoc": [
       200,
       65
     ],
     "unlock": [
       20431,
       20532
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20322,
     "name": "護盾提高",
-    "desc": "護盾提高<Highlight>#1</>",
+    "desc": "護盾提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "Role",
-    "talent_mod": 30102031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "Role",
+    "talentMod": 30102031,
+    "icon": "T_Rouge_Talent_ESUP",
+    "iconLoc": [
       200,
       -65
     ],
     "unlock": [
       20532,
       20633
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20431,
     "name": "最大神智提高",
-    "desc": "最大神智提高<Highlight>#1</>",
+    "desc": "最大神智提高<Highlight>10.0%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "Role",
-    "talent_mod": 30102041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "Role",
+    "talentMod": 30102041,
+    "icon": "T_Rouge_Talent_SP",
+    "iconLoc": [
       400,
       130
     ],
     "unlock": [
       20741
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20532,
     "name": "行跡",
-    "desc": "行跡獲取量提高<Highlight>@1</>",
+    "desc": "行跡獲取量提高<Highlight>20.0%</>",
     "branch": 2,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "",
-    "talent_mod": 0,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_knapsack.T_Rouge_Talent_knapsack'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "",
+    "talentMod": 0,
+    "icon": "T_Rouge_Talent_knapsack",
+    "iconLoc": [
       400,
       0
     ],
     "unlock": [
       20842,
       20943
-    ],
-    "server_build": [
-      [
-        9
-      ]
-    ],
-    "server_build_value": [
-      "$#RougelikeServerBuild[9].Param[1]*100$%"
     ]
   },
   {
     "id": 20633,
     "name": "護盾提高",
-    "desc": "護盾提高<Highlight>#1</>",
+    "desc": "護盾提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "Role",
-    "talent_mod": 30102031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "Role",
+    "talentMod": 30102031,
+    "icon": "T_Rouge_Talent_ESUP",
+    "iconLoc": [
       400,
       -130
     ],
     "unlock": [
       21044
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20741,
     "name": "護盾提高",
-    "desc": "護盾提高<Highlight>#1</>",
+    "desc": "護盾提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30102031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30102031,
+    "icon": "T_Rouge_Talent_ESUP",
+    "iconLoc": [
       600,
       195
     ],
     "unlock": [
       21151
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20842,
     "name": "最大生命提高",
-    "desc": "最大生命提高<Highlight>#1</>",
+    "desc": "最大生命提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30102011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30102011,
+    "icon": "T_Rouge_Talent_HPUP",
+    "iconLoc": [
       600,
       65
     ],
     "unlock": [
       21252
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 20943,
     "name": "最大神智提高",
-    "desc": "最大神智提高<Highlight>#1</>",
+    "desc": "最大神智提高<Highlight>10.0%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30102041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30102041,
+    "icon": "T_Rouge_Talent_SP",
+    "iconLoc": [
       600,
       -65
     ],
     "unlock": [
       21353
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21044,
     "name": "防禦提高",
-    "desc": "防禦提高<Highlight>#1</>",
+    "desc": "防禦提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "Role",
-    "talent_mod": 30102021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "Role",
+    "talentMod": 30102021,
+    "icon": "T_Rouge_Talent_DEF",
+    "iconLoc": [
       600,
       -195
     ],
     "unlock": [
       21454
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21151,
     "name": "最大神智提高",
-    "desc": "最大神智提高<Highlight>#1</>",
+    "desc": "最大神智提高<Highlight>10.0%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "Role",
-    "talent_mod": 30102041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "Role",
+    "talentMod": 30102041,
+    "icon": "T_Rouge_Talent_SP",
+    "iconLoc": [
       800,
       195
     ],
     "unlock": [
       21561
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21252,
     "name": "防禦提高",
-    "desc": "防禦提高<Highlight>#1</>",
+    "desc": "防禦提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "Role",
-    "talent_mod": 30102021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "Role",
+    "talentMod": 30102021,
+    "icon": "T_Rouge_Talent_DEF",
+    "iconLoc": [
       800,
       65
     ],
     "unlock": [
       21662
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21353,
     "name": "勇者褒獎",
-    "desc": "戰鬥的余燼獲取量提高<Highlight>@1</>",
+    "desc": "戰鬥的余燼獲取量提高<Highlight>20.0%</>",
     "branch": 2,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "",
-    "talent_mod": 0,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_EndPointsUP.T_Rouge_Talent_EndPointsUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "",
+    "talentMod": 0,
+    "icon": "T_Rouge_Talent_EndPointsUP",
+    "iconLoc": [
       800,
       -65
     ],
     "unlock": [
       21763
-    ],
-    "server_build": [
-      [
-        10
-      ]
-    ],
-    "server_build_value": [
-      "$#RougelikeServerBuild[10].Param[1]*100$%"
     ]
   },
   {
     "id": 21454,
     "name": "最大生命提高",
-    "desc": "最大生命提高<Highlight>#1</>",
+    "desc": "最大生命提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "Role",
-    "talent_mod": 30102011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "Role",
+    "talentMod": 30102011,
+    "icon": "T_Rouge_Talent_HPUP",
+    "iconLoc": [
       800,
       -195
     ],
     "unlock": [
       21864
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21561,
     "name": "最大生命提高",
-    "desc": "最大生命提高<Highlight>#1</>",
+    "desc": "最大生命提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30102011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30102011,
+    "icon": "T_Rouge_Talent_HPUP",
+    "iconLoc": [
       1000,
       195
     ],
     "unlock": [
       21971
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21662,
     "name": "最大神智提高",
-    "desc": "最大神智提高<Highlight>#1</>",
+    "desc": "最大神智提高<Highlight>10.0%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30102041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30102041,
+    "icon": "T_Rouge_Talent_SP",
+    "iconLoc": [
       1000,
       65
     ],
     "unlock": [
       21971
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21763,
     "name": "護盾提高",
-    "desc": "護盾提高<Highlight>#1</>",
+    "desc": "護盾提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30102031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30102031,
+    "icon": "T_Rouge_Talent_ESUP",
+    "iconLoc": [
       1000,
       -65
     ],
     "unlock": [
       22072
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21864,
     "name": "防禦提高",
-    "desc": "防禦提高<Highlight>#1</>",
+    "desc": "防禦提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "Role",
-    "talent_mod": 30102021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "Role",
+    "talentMod": 30102021,
+    "icon": "T_Rouge_Talent_DEF",
+    "iconLoc": [
       1000,
       -195
     ],
     "unlock": [
       22173
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 21971,
     "name": "原始資本",
-    "desc": "開始新的探索時，初始即擁有<Highlight>@1余燼</>",
+    "desc": "開始新的探索時，初始即擁有<Highlight>200.0余燼</>",
     "branch": 2,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "",
-    "talent_mod": 0,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_EndPointsUP.T_Rouge_Talent_EndPointsUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "",
+    "talentMod": 0,
+    "icon": "T_Rouge_Talent_EndPointsUP",
+    "iconLoc": [
       1200,
       130
     ],
-    "unlock": [],
-    "server_build": [
-      [
-        2
-      ]
-    ],
-    "server_build_value": [
-      "$#RougelikeServerBuild[2].Param[1]$"
-    ]
+    "unlock": []
   },
   {
     "id": 22072,
     "name": "防禦提高",
-    "desc": "防禦提高<Highlight>#1</>",
+    "desc": "防禦提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "Role",
-    "talent_mod": 30102021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_DEF.T_Rouge_Talent_DEF'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "Role",
+    "talentMod": 30102021,
+    "icon": "T_Rouge_Talent_DEF",
+    "iconLoc": [
       1200,
       -65
     ],
     "unlock": [
       22281
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 22173,
     "name": "最大神智提高",
-    "desc": "最大神智提高<Highlight>#1</>",
+    "desc": "最大神智提高<Highlight>10.0%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "Role",
-    "talent_mod": 30102041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SP.T_Rouge_Talent_SP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "Role",
+    "talentMod": 30102041,
+    "icon": "T_Rouge_Talent_SP",
+    "iconLoc": [
       1200,
       -195
     ],
     "unlock": [
       22382
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 22281,
     "name": "最大生命提高",
-    "desc": "最大生命提高<Highlight>#1</>",
+    "desc": "最大生命提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "Role",
-    "talent_mod": 30102011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_HPUP.T_Rouge_Talent_HPUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "Role",
+    "talentMod": 30102011,
+    "icon": "T_Rouge_Talent_HPUP",
+    "iconLoc": [
       1400,
       -65
     ],
     "unlock": [
       22491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 22382,
     "name": "護盾提高",
-    "desc": "護盾提高<Highlight>#1</>",
+    "desc": "護盾提高<Highlight>4.8%</>",
     "branch": 2,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "Role",
-    "talent_mod": 30102031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_ESUP.T_Rouge_Talent_ESUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "Role",
+    "talentMod": 30102031,
+    "icon": "T_Rouge_Talent_ESUP",
+    "iconLoc": [
       1400,
       -195
     ],
     "unlock": [
       22491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 22491,
     "name": "神秘之儀",
-    "desc": "神智自然恢復量提高<Highlight>#1</>點。",
+    "desc": "神智自然恢復量提高<Highlight>3.0</>點。",
     "branch": 2,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "Role",
-    "talent_mod": 30102052,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_MaxSpUP.T_Rouge_Talent_MaxSpUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "Role",
+    "talentMod": 30102052,
+    "icon": "T_Rouge_Talent_MaxSpUP",
+    "iconLoc": [
       1600,
       -130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   },
   {
     "id": 30111,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 3,
-    "max_level": 1,
-    "level_up_point": 15,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 15,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103011,
+    "icon": "T_Rouge_Talent_Melee_AttackUP",
+    "iconLoc": [
       0,
       0
     ],
     "unlock": [
       30221,
       30322
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30221,
     "name": "觸發概率提高",
-    "desc": "觸發概率提高<Highlight>#1</>",
+    "desc": "觸發概率提高<Highlight>12.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103041,
+    "icon": "T_Rouge_Talent_Qiege",
+    "iconLoc": [
       200,
       130
     ],
     "unlock": [
       30431,
       30532
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30322,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       200,
       -130
     ],
     "unlock": [
       30633
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30431,
     "name": "暴擊率提高",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>4.8%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103021,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       400,
       195
     ],
     "unlock": [
       30741
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30532,
     "name": "暴擊傷害提高",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103031,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       400,
       65
     ],
     "unlock": [
       30842
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30633,
     "name": "攻擊範圍提高",
-    "desc": "攻擊範圍提高<Highlight>#1</>",
+    "desc": "攻擊範圍提高<Highlight>0.8</>",
     "branch": 3,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103062,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_SkillRangeUP.T_Rouge_Talent_SkillRangeUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103062,
+    "icon": "T_Rouge_Talent_SkillRangeUP",
+    "iconLoc": [
       400,
       -130
     ],
     "unlock": [
       30943,
       31044
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30741,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103011,
+    "icon": "T_Rouge_Talent_Melee_AttackUP",
+    "iconLoc": [
       600,
       195
     ],
     "unlock": [
       31151
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30842,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       600,
       65
     ],
     "unlock": [
       31252
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 30943,
     "name": "暴擊傷害提高",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103031,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       600,
       -65
     ],
     "unlock": [
       31353
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31044,
     "name": "觸發概率提高",
-    "desc": "觸發概率提高<Highlight>#1</>",
+    "desc": "觸發概率提高<Highlight>12.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103041,
+    "icon": "T_Rouge_Talent_Qiege",
+    "iconLoc": [
       600,
       -195
     ],
     "unlock": [
       31454
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31151,
     "name": "觸發概率提高",
-    "desc": "觸發概率提高<Highlight>#1</>",
+    "desc": "觸發概率提高<Highlight>12.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103041,
+    "icon": "T_Rouge_Talent_Qiege",
+    "iconLoc": [
       800,
       195
     ],
     "unlock": [
       31561
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31252,
     "name": "暴擊率提高",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>4.8%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103021,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       800,
       65
     ],
     "unlock": [
       31662
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31353,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       800,
       -65
     ],
     "unlock": [
       31763
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31454,
     "name": "暴擊率提高+",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>9.6%</>",
     "branch": 3,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103082,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103082,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       800,
       -195
     ],
     "unlock": [
       31864
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31561,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       1000,
       195
     ],
     "unlock": [
       31971
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31662,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103011,
+    "icon": "T_Rouge_Talent_Melee_AttackUP",
+    "iconLoc": [
       1000,
       65
     ],
     "unlock": [
       31971
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31763,
     "name": "暴擊傷害提高",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103031,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       1000,
       -65
     ],
     "unlock": [
       32072
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31864,
     "name": "暴擊率提高",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>4.8%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103021,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       1000,
       -195
     ],
     "unlock": [
       32173
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 31971,
     "name": "暴擊傷害提高+",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>12.0%</>",
     "branch": 3,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103092,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103092,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       1200,
       130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   },
   {
     "id": 32072,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       1200,
       -65
     ],
     "unlock": [
       32281
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 32173,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103011,
+    "icon": "T_Rouge_Talent_Melee_AttackUP",
+    "iconLoc": [
       1200,
       -195
     ],
     "unlock": [
       32382
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 32281,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Melee_AttackUP.T_Rouge_Talent_Melee_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103011,
+    "icon": "T_Rouge_Talent_Melee_AttackUP",
+    "iconLoc": [
       1400,
       -65
     ],
     "unlock": [
       32491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 32382,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 3,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       1400,
       -195
     ],
     "unlock": [
       32491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 32491,
     "name": "攻擊速度提高",
-    "desc": "攻擊速度提高<Highlight>#1</>",
+    "desc": "攻擊速度提高<Highlight>12.0%</>",
     "branch": 3,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "MeleeWeapon",
-    "talent_mod": 30103072,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Guanchuan.T_Rouge_Talent_Guanchuan'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "MeleeWeapon",
+    "talentMod": 30103072,
+    "icon": "T_Rouge_Talent_Guanchuan",
+    "iconLoc": [
       1600,
       -130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   },
   {
     "id": 40111,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 3,
-    "max_level": 1,
-    "level_up_point": 15,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 15,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104011,
+    "icon": "T_Rouge_Talent_Range_AttackUP",
+    "iconLoc": [
       0,
       0
     ],
     "unlock": [
       40221,
       40322
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40221,
     "name": "觸發概率提高",
-    "desc": "觸發概率提高<Highlight>#1</>",
+    "desc": "觸發概率提高<Highlight>12.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104041,
+    "icon": "T_Rouge_Talent_Qiege",
+    "iconLoc": [
       200,
       130
     ],
     "unlock": [
       40431
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40322,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 20,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 20,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       200,
       -130
     ],
     "unlock": [
       40532,
       40633
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40431,
     "name": "暴擊率提高+",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>9.6%</>",
     "branch": 4,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104082,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104082,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       400,
       130
     ],
     "unlock": [
       40741,
       40842
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40532,
     "name": "暴擊率提高",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>4.8%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104021,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       400,
       -65
     ],
     "unlock": [
       40943
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40633,
     "name": "暴擊傷害提高",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 25,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 25,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104031,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       400,
       -195
     ],
     "unlock": [
       41044
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40741,
     "name": "暴擊傷害提高",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104031,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       600,
       195
     ],
     "unlock": [
       41151
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40842,
     "name": "觸發概率提高",
-    "desc": "觸發概率提高<Highlight>#1</>",
+    "desc": "觸發概率提高<Highlight>12.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104041,
+    "icon": "T_Rouge_Talent_Qiege",
+    "iconLoc": [
       600,
       65
     ],
     "unlock": [
       41252
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 40943,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104011,
+    "icon": "T_Rouge_Talent_Range_AttackUP",
+    "iconLoc": [
       600,
       -65
     ],
     "unlock": [
       41353
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41044,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 30,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 30,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       600,
       -195
     ],
     "unlock": [
       41454
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41151,
     "name": "多重射擊提高",
-    "desc": "多重射擊提高<Highlight>#1</>",
+    "desc": "多重射擊提高<Highlight>18.0%</>",
     "branch": 4,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104072,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_MultiShot.T_Rouge_Talent_MultiShot'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104072,
+    "icon": "T_Rouge_Talent_MultiShot",
+    "iconLoc": [
       800,
       195
     ],
     "unlock": [
       41561
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41252,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       800,
       65
     ],
     "unlock": [
       41662
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41353,
     "name": "暴擊率提高",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>4.8%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104021,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       800,
       -65
     ],
     "unlock": [
       41763
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41454,
     "name": "觸發概率提高",
-    "desc": "觸發概率提高<Highlight>#1</>",
+    "desc": "觸發概率提高<Highlight>12.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 35,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104041,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Qiege.T_Rouge_Talent_Qiege'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 35,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104041,
+    "icon": "T_Rouge_Talent_Qiege",
+    "iconLoc": [
       800,
       -195
     ],
     "unlock": [
       41864
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41561,
     "name": "暴擊傷害提高",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104031,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104031,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       1000,
       195
     ],
     "unlock": [
       41971
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41662,
     "name": "暴擊率提高",
-    "desc": "暴擊率提高<Highlight>#1</>",
+    "desc": "暴擊率提高<Highlight>4.8%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104021,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CriUP.T_Rouge_Talent_CriUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104021,
+    "icon": "T_Rouge_Talent_CriUP",
+    "iconLoc": [
       1000,
       65
     ],
     "unlock": [
       42072
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41763,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       1000,
       -65
     ],
     "unlock": [
       42173
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41864,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 40,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 40,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104011,
+    "icon": "T_Rouge_Talent_Range_AttackUP",
+    "iconLoc": [
       1000,
       -195
     ],
     "unlock": [
       42173
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 41971,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       1200,
       195
     ],
     "unlock": [
       42281
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 42072,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 45,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 45,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104011,
+    "icon": "T_Rouge_Talent_Range_AttackUP",
+    "iconLoc": [
       1200,
       65
     ],
     "unlock": [
       42382
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 42173,
     "name": "暴擊傷害提高+",
-    "desc": "暴擊傷害提高<Highlight>#1</>",
+    "desc": "暴擊傷害提高<Highlight>12.0%</>",
     "branch": 4,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104092,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_CRDUP.T_Rouge_Talent_CRDUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104092,
+    "icon": "T_Rouge_Talent_CRDUP",
+    "iconLoc": [
       1200,
       -130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   },
   {
     "id": 42281,
     "name": "攻擊提高",
-    "desc": "攻擊提高<Highlight>#1</>",
+    "desc": "攻擊提高<Highlight>6.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104011,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Range_AttackUP.T_Rouge_Talent_Range_AttackUP'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104011,
+    "icon": "T_Rouge_Talent_Range_AttackUP",
+    "iconLoc": [
       1400,
       195
     ],
     "unlock": [
       42491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 42382,
     "name": "切割、貫穿、震蕩提高",
-    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>#1</>",
+    "desc": "切割、貫穿、震蕩攻擊提高<Highlight>3.0%</>",
     "branch": 4,
     "type": 1,
-    "max_level": 1,
-    "level_up_point": 50,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104051,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Zhendang.T_Rouge_Talent_Zhendang'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 50,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104051,
+    "icon": "T_Rouge_Talent_Zhendang",
+    "iconLoc": [
       1400,
       65
     ],
     "unlock": [
       42491
-    ],
-    "server_build": [],
-    "server_build_value": []
+    ]
   },
   {
     "id": 42491,
     "name": "攻擊速度提高",
-    "desc": "攻擊速度提高<Highlight>#1</>",
+    "desc": "攻擊速度提高<Highlight>12.0%</>",
     "branch": 4,
     "type": 2,
-    "max_level": 1,
-    "level_up_point": 100,
-    "mod_equip": "RangedWeapon",
-    "talent_mod": 30104062,
-    "icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Talent_Guanchuan.T_Rouge_Talent_Guanchuan'",
-    "icon_loc": [
+    "maxLevel": 1,
+    "levelUpPoint": 100,
+    "modEquip": "RangedWeapon",
+    "talentMod": 30104062,
+    "icon": "T_Rouge_Talent_Guanchuan",
+    "iconLoc": [
       1600,
       130
     ],
-    "unlock": [],
-    "server_build": [],
-    "server_build_value": []
+    "unlock": []
   }
 ]

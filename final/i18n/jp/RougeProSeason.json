@@ -1,0 +1,85 @@
+[
+  {
+    "id": -1,
+    "bossRandomRule": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "bossShowTime": [
+      150,
+      150,
+      150
+    ],
+    "classChooseTime": 60,
+    "classLockTime": 5,
+    "difficultyId": [
+      1
+    ],
+    "maxEventNum": 2,
+    "outerShopTokenId": 215,
+    "roundMainTime": [
+      300,
+      300,
+      300
+    ],
+    "seasonEndTime": 8204817600,
+    "seasonId": -1,
+    "seasonStartTime": 1641009600,
+    "tokenId": 203,
+    "tokenTransform": 12.5
+  },
+  {
+    "id": 1,
+    "bossRandomRule": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "bossShowTime": [
+      150,
+      150,
+      150
+    ],
+    "classChooseTime": 60,
+    "classLockTime": 5,
+    "difficultyId": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "maxEventNum": 2,
+    "outerShopTokenId": 215,
+    "roundMainTime": [
+      300,
+      300,
+      300
+    ],
+    "seasonEndTime": 8204817600,
+    "seasonId": 1,
+    "seasonStartTime": 1641009600,
+    "tokenId": 203,
+    "tokenTransform": 12.5
+  }
+]

@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 1,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  },
+  {
+    "id": 2,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 2,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  },
+  {
+    "id": 3,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 3,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  },
+  {
+    "id": 4,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 4,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  },
+  {
+    "id": 5,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 5,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  },
+  {
+    "id": 6,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 6,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  },
+  {
+    "id": 7,
+    "bossDeliveryDis": 12000,
+    "bossDeliveryPointId": 8001,
+    "collectionList": [
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
+    ],
+    "eventAreaList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "roomId": 7,
+    "roomWeight": 100,
+    "shopNpcList": [
+      107001,
+      107002,
+      107003
+    ]
+  }
+]

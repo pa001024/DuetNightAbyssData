@@ -2,3362 +2,2452 @@
   {
     "id": 101,
     "name": "Lame trempée",
-    "desc": "Augmentation des dégâts des armes de mêlée de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de l’<Highlight>ATQ</> des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "Augmentation des dégâts des armes de mêlée de <Highlight>30.0%</>.",
+    "simpleDesc": "Augmentation de l’<Highlight>ATQ</> des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 1,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 1,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 102,
     "name": "Lame fractale",
-    "desc": "Augmentation de la Chance de déclenchement des armes de mêlée de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la <Highlight>Chance de déclenchement</> des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "Augmentation de la Chance de déclenchement des armes de mêlée de <Highlight>135.0%</>.",
+    "simpleDesc": "Augmentation de la <Highlight>Chance de déclenchement</> des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 2,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 2,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 103,
     "name": "Lame du combattant",
-    "desc": "Augmentation des dégâts des <Highlight>attaques normales</> des armes de mêlée de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des <Highlight>dégâts des attaques normales</> des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation des dégâts des <Highlight>attaques normales</> des armes de mêlée de <Highlight>15.0%</>.",
+    "simpleDesc": "Augmentation des <Highlight>dégâts des attaques normales</> des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 3,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 3,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 104,
     "name": "Don de la fonderie",
-    "desc": "Vaincre un ennemi dans un rayon de <Highlight>$2</> m restaure <Highlight>$1</> PV.",
-    "simple_desc": "Restauration de PV lors de l’élimination d’ennemis à <Highlight>courte portée</>.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Vaincre un ennemi dans un rayon de <Highlight>8.0</> m restaure <Highlight>4.5%</> PV.",
+    "simpleDesc": "Restauration de PV lors de l’élimination d’ennemis à <Highlight>courte portée</>.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 4,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 4,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 105,
     "name": "Rituel de la fonderie",
-    "desc": "Réduit les dégâts subis de <Highlight>$1</> par les ennemis dans un rayon de <Highlight>$2</> m ou affectés par [Flammes ardentes].",
-    "simple_desc": "Réduit les dégâts reçus des ennemis <Highlight>proches</> ou affectés par [Flammes ardentes].",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Réduit les dégâts subis de <Highlight>20.0%</> par les ennemis dans un rayon de <Highlight>8.0</> m ou affectés par [Flammes ardentes].",
+    "simpleDesc": "Réduit les dégâts reçus des ennemis <Highlight>proches</> ou affectés par [Flammes ardentes].",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 5,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 5,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 106,
     "name": "Feu renaissant",
-    "desc": "Subir des dégâts applique <Highlight>1</> cumul de [Flammes ardentes] aux ennemis dans un rayon de <Highlight>8</> m. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s.",
-    "simple_desc": "Subir des dégâts applique [Flammes ardentes] aux ennemis <Highlight>proches</>.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Subir des dégâts applique <Highlight>1</> cumul de [Flammes ardentes] aux ennemis dans un rayon de <Highlight>8</> m. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>1.0</> s.",
+    "simpleDesc": "Subir des dégâts applique [Flammes ardentes] aux ennemis <Highlight>proches</>.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 6,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 6,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 107,
     "name": "Lame de finesse",
-    "desc": "Augmentation du Taux CRIT des armes de mêlée de <Highlight>#1</>.",
-    "simple_desc": "Augmentation du Taux CRIT des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "Augmentation du Taux CRIT des armes de mêlée de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation du Taux CRIT des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 7,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 7,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 108,
     "name": "Lame de vaillance",
-    "desc": "Augmentation des DGT CRIT des armes de mêlée de <Highlight>#1</>.",
-    "simple_desc": "Augmentation des DGT CRIT des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "Augmentation des DGT CRIT des armes de mêlée de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation des DGT CRIT des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 8,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 8,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 109,
     "name": "Lame d’éruption",
-    "desc": "Augmentation des dégâts des attaques plongeantes, chargées et en glissade des armes de mêlée de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des dégâts des attaques plongeantes, chargées et en glissade des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation des dégâts des attaques plongeantes, chargées et en glissade des armes de mêlée de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation des dégâts des attaques plongeantes, chargées et en glissade des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 9,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 9,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 110,
     "name": "Incendie éternel",
-    "desc": "Applique <Highlight>1</> cumul de [Flammes ardentes] aux ennemis dans un rayon de <Highlight>8</> m toutes les <Highlight>$1</> s.",
-    "simple_desc": "Applique périodiquement [Flammes ardentes] aux ennemis <Highlight>proches</>.",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Applique <Highlight>1</> cumul de [Flammes ardentes] aux ennemis dans un rayon de <Highlight>8</> m toutes les <Highlight>1.0</> s.",
+    "simpleDesc": "Applique périodiquement [Flammes ardentes] aux ennemis <Highlight>proches</>.",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 10,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 10,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 111,
     "name": "Don tempéré",
-    "desc": "Infliger des dégâts à un ennemi possédant plus de <Highlight>$3</> cumuls de [Flammes ardentes] restaure <Highlight>$1</> PV. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Restaure des PV lors de dégâts infligés à des ennemis affectés par [Flammes ardentes].",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Infliger des dégâts à un ennemi possédant plus de <Highlight>2.0</> cumuls de [Flammes ardentes] restaure <Highlight>3.0%</> PV. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>0.5</> s.",
+    "simpleDesc": "Restaure des PV lors de dégâts infligés à des ennemis affectés par [Flammes ardentes].",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 11,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 11,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 112,
     "name": "Lame déchaînée",
-    "desc": "Augmentation de la <Highlight>Vitesse d’attaque</> des armes de mêlée de <Highlight>#1</> et de leur <Highlight>Portée d’attaque</> de <Highlight>#2</>.",
-    "simple_desc": "Augmentation de la <Highlight>Vitesse d’attaque</> et de la <Highlight>Portée d’attaque</> des armes de mêlée.",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "Augmentation de la <Highlight>Vitesse d’attaque</> des armes de mêlée de <Highlight>60.0%</> et de leur <Highlight>Portée d’attaque</> de <Highlight>2.25</>.",
+    "simpleDesc": "Augmentation de la <Highlight>Vitesse d’attaque</> et de la <Highlight>Portée d’attaque</> des armes de mêlée.",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 12,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 12,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 113,
     "name": "Assaut fulgurant",
-    "desc": "Si les dégâts réduisent les PV d’une cible en dessous de <Highlight>$3</>, inflige des dégâts supplémentaires équivalents à <Highlight>$1</> de l’ATQ du personnage.\nNe peut se produire qu’une fois toutes les <Highlight>$2</> s sur la même cible.",
-    "simple_desc": "Infliger des <Highlight>dégâts supplémentaires</> lorsque la vie de la cible devient <Highlight>faible</>.",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Si les dégâts réduisent les PV d’une cible en dessous de <Highlight>30.0%</>, inflige des dégâts supplémentaires équivalents à <Highlight>5400.0%</> de l’ATQ du personnage.\nNe peut se produire qu’une fois toutes les <Highlight>10.0</> s sur la même cible.",
+    "simpleDesc": "Infliger des <Highlight>dégâts supplémentaires</> lorsque la vie de la cible devient <Highlight>faible</>.",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 13,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 13,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 114,
     "name": "Feu dévorant",
-    "desc": "Les armes de mêlée infligent des dégâts supplémentaires équivalents à <Highlight>$1</> de l’ATQ du personnage aux ennemis ayant plus de <Highlight>$2</> cumuls de [Flammes ardentes].",
-    "simple_desc": "Les armes de mêlée infligent des dégâts <Highlight>supplémentaires</> aux ennemis avec plus de cumuls de [Flammes ardentes].",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Les armes de mêlée infligent des dégâts supplémentaires équivalents à <Highlight>90.0%</> de l’ATQ du personnage aux ennemis ayant plus de <Highlight>4.0</> cumuls de [Flammes ardentes].",
+    "simpleDesc": "Les armes de mêlée infligent des dégâts <Highlight>supplémentaires</> aux ennemis avec plus de cumuls de [Flammes ardentes].",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5042,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 14,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 14,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 115,
     "name": "Rite du durcissement",
-    "desc": "Moins il y a d’ennemis dans un rayon de <Highlight>8</> mètres, plus les dégâts infligés augmentent, jusqu’à un maximum de <Highlight>$1</>.",
-    "simple_desc": "Moins il y a d’ennemis à <Highlight>courte portée</>, plus les dégâts infligés augmentent.",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Moins il y a d’ennemis dans un rayon de <Highlight>8</> mètres, plus les dégâts infligés augmentent, jusqu’à un maximum de <Highlight>90.0%</>.",
+    "simpleDesc": "Moins il y a d’ennemis à <Highlight>courte portée</>, plus les dégâts infligés augmentent.",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5042,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 15,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 15,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 201,
     "name": "Sniper affamé",
-    "desc": "Augmentation de l’ATQ des armes à distance de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de l’ATQ des armes à distance.",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "Augmentation de l’ATQ des armes à distance de <Highlight>30.0%</>.",
+    "simpleDesc": "Augmentation de l’ATQ des armes à distance.",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 16,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 16,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 202,
     "name": "Sniper invisible",
-    "desc": "Augmentation de la Chance de déclenchement des armes à distance de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Chance de déclenchement des armes à distance.",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "Augmentation de la Chance de déclenchement des armes à distance de <Highlight>135.0%</>.",
+    "simpleDesc": "Augmentation de la Chance de déclenchement des armes à distance.",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 17,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 17,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 203,
     "name": "Tentacules prédatrices",
-    "desc": "Infliger des dégâts avec une arme à distance génère une [Caisse de munitions]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s. Si l’effet de [Lune marine] II est actif, génère également <Highlight>1</> [Mini Lune marine] supplémentaire.",
-    "simple_desc": "Infliger des dégâts avec une arme à distance fait apparaître des [Caisses de munitions].",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Infliger des dégâts avec une arme à distance génère une [Caisse de munitions]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>5.0</> s. Si l’effet de [Lune marine] II est actif, génère également <Highlight>1</> [Mini Lune marine] supplémentaire.",
+    "simpleDesc": "Infliger des dégâts avec une arme à distance fait apparaître des [Caisses de munitions].",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 18,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 18,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 204,
     "name": "Voile protecteur",
-    "desc": "Ramasser un objet confère <Highlight>$1</> points d’Ultra-bouclier. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s max.",
-    "simple_desc": "Ramasser un objet confère un Ultra-bouclier.",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Ramasser un objet confère <Highlight>45.0</> points d’Ultra-bouclier. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>5.0</> s max.",
+    "simpleDesc": "Ramasser un objet confère un Ultra-bouclier.",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 19,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 19,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 205,
     "name": "Cache océanique",
-    "desc": "Infliger des dégâts génère un [Sel volatil stimulant] ou une [Goutte de rosée apaisante]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s. Si l’effet de [Lune marine] II est actif, fait apparaître <Highlight>1</> [Mini Lune marine] supplémentaire.",
-    "simple_desc": "Infliger des dégâts fait apparaître du [Sel volatil stimulant] ou des [Goutte de rosée apaisante].",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Infliger des dégâts génère un [Sel volatil stimulant] ou une [Goutte de rosée apaisante]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>6.0</> s. Si l’effet de [Lune marine] II est actif, fait apparaître <Highlight>1</> [Mini Lune marine] supplémentaire.",
+    "simpleDesc": "Infliger des dégâts fait apparaître du [Sel volatil stimulant] ou des [Goutte de rosée apaisante].",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 20,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 20,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 206,
     "name": "Avertissement océanique",
-    "desc": "Si des ennemis se trouvent dans un rayon de <Highlight>20</> m, augmente l’ATQ du personnage de <Highlight>$1</> si l’effet [III] est actif, sinon l’ATQ augmente de <Highlight>$2</>.",
-    "simple_desc": "ATQ de personnage augmentée lorsque des ennemis se trouvent à proximité.",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Si des ennemis se trouvent dans un rayon de <Highlight>20</> m, augmente l’ATQ du personnage de <Highlight>30.0%</> si l’effet [III] est actif, sinon l’ATQ augmente de <Highlight>15.0%</>.",
+    "simpleDesc": "ATQ de personnage augmentée lorsque des ennemis se trouvent à proximité.",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5025,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 21,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 21,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 207,
     "name": "Sniper létal",
-    "desc": "Augmentation du Taux CRIT des armes à distance de <Highlight>#1</>.",
-    "simple_desc": "Augmentation du Taux CRIT des armes à distance.",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "Augmentation du Taux CRIT des armes à distance de <Highlight>100.0%</>.",
+    "simpleDesc": "Augmentation du Taux CRIT des armes à distance.",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 22,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 22,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 208,
     "name": "Toxines composites",
-    "desc": "Augmentation des DGT CRIT des armes à distance de <Highlight>#1</>.",
-    "simple_desc": "Augmentation des DGT CRIT des armes à distance.",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "Augmentation des DGT CRIT des armes à distance de <Highlight>100.0%</>.",
+    "simpleDesc": "Augmentation des DGT CRIT des armes à distance.",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 23,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 23,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 209,
     "name": "Don de l’océan",
-    "desc": "Lorsque les PV ou la Lucidité passent sous <Highlight>$2</></>, la probabilité que la <Highlight>[Cache océanique]</> produise des ressources correspondantes augmente jusqu’à <Highlight>$1</>.\nLorsque les PV, la Lucidité ou les munitions passent sous <Highlight>$2</></>, le nombre de [Mini Lunes marines] générées augmente de <Highlight>100 %</>.",
-    "simple_desc": "Lorsque les PV ou la Lucidité sont faibles, la probabilité d’obtention de ravitaillements via <Highlight>[Cache océanique]</> augmente.",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque les PV ou la Lucidité passent sous <Highlight>50.0%</></>, la probabilité que la <Highlight>[Cache océanique]</> produise des ressources correspondantes augmente jusqu’à <Highlight>100.0%</>.\nLorsque les PV, la Lucidité ou les munitions passent sous <Highlight>50.0%</></>, le nombre de [Mini Lunes marines] générées augmente de <Highlight>100 %</>.",
+    "simpleDesc": "Lorsque les PV ou la Lucidité sont faibles, la probabilité d’obtention de ravitaillements via <Highlight>[Cache océanique]</> augmente.",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5025,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 24,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 24,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 210,
     "name": "Vitalité océanique",
-    "desc": "Lors de la récupération d’un objet, restaure <Highlight>$1</> de Lucidité supplémentaires.",
-    "simple_desc": "Ramasser un objet restaure de la Lucidité supplémentaire.",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors de la récupération d’un objet, restaure <Highlight>6.0</> de Lucidité supplémentaires.",
+    "simpleDesc": "Ramasser un objet restaure de la Lucidité supplémentaire.",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 25,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 25,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 211,
     "name": "Appel océanique",
-    "desc": "Réduit le temps de recharge du Soutien de Géniemon de <Highlight>$1</>.",
-    "simple_desc": "Réduction du temps de recharge du Soutien de Géniemon.",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Réduit le temps de recharge du Soutien de Géniemon de <Highlight>50.0%</>.",
+    "simpleDesc": "Réduction du temps de recharge du Soutien de Géniemon.",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 26,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 26,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 212,
     "name": "Tentacules chatoyants",
-    "desc": "Augmentation du Tir multiple des armes à distance de <Highlight>#1</>.",
-    "simple_desc": "Augmentation du Tir multiple des armes à distance.",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "Augmentation du Tir multiple des armes à distance de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation du Tir multiple des armes à distance.",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 27,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 27,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 213,
     "name": "Sniper affuté",
-    "desc": "Augmentation de la Vitesse d’attaque des armes à distance de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Vitesse d’attaque des armes à distance.",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "Augmentation de la Vitesse d’attaque des armes à distance de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation de la Vitesse d’attaque des armes à distance.",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 28,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 28,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 214,
     "name": "Piqûre Océanique",
-    "desc": "Infliger des dégâts à distance à une cible située à plus de <Highlight>$2</> m applique un malus augmentant les dégâts à distance subis de <Highlight>$1</>, jusqu’à un maximum de <Highlight>$3</>.",
-    "simple_desc": "Les armes à distance infligent davantage de dégâts plus la cible est éloignée.",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Infliger des dégâts à distance à une cible située à plus de <Highlight>8.0</> m applique un malus augmentant les dégâts à distance subis de <Highlight>2.4%</>, jusqu’à un maximum de <Highlight>120.0%</>.",
+    "simpleDesc": "Les armes à distance infligent davantage de dégâts plus la cible est éloignée.",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5063,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 29,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 29,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 215,
     "name": "Sniper furtif",
-    "desc": "Après avoir maintenu le mouvement pendant plus de <Highlight>2</> secondes, les dégâts subis sont réduits de <Highlight>$1</> jusqu’à l’arrêt.\nAprès être resté immobile pendant plus de <Highlight>2</> secondes, les dégâts infligés augmentent de <Highlight>$2</> jusqu’à la reprise du mouvement.",
-    "simple_desc": "Après avoir maintenu le mouvement pendant plus de <Highlight>2</> secondes, les dégâts subis diminuent jusqu’à l’arrêt.\nAprès être resté immobile pendant plus de <Highlight>2</> secondes, les dégâts infligés augmentent jusqu’à la reprise du mouvement.",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Après avoir maintenu le mouvement pendant plus de <Highlight>2</> secondes, les dégâts subis sont réduits de <Highlight>40.0%</> jusqu’à l’arrêt.\nAprès être resté immobile pendant plus de <Highlight>2</> secondes, les dégâts infligés augmentent de <Highlight>90.0%</> jusqu’à la reprise du mouvement.",
+    "simpleDesc": "Après avoir maintenu le mouvement pendant plus de <Highlight>2</> secondes, les dégâts subis diminuent jusqu’à l’arrêt.\nAprès être resté immobile pendant plus de <Highlight>2</> secondes, les dégâts infligés augmentent jusqu’à la reprise du mouvement.",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 30,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 30,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 301,
     "name": "Rayonnement stellaire",
-    "desc": "Augmentation de la Portée de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Portée de compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de la Portée de compétence de <Highlight>45.0%</>.",
+    "simpleDesc": "Augmentation de la Portée de compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 31,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 31,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 302,
     "name": "Œuvre naturelle",
-    "desc": "Augmentation de la Durée de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Durée de compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de la Durée de compétence de <Highlight>45.0%</>.",
+    "simpleDesc": "Augmentation de la Durée de compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 32,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 32,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 303,
     "name": "Ruban prismatique",
-    "desc": "Augmentation de l’Efficacité de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de l’Efficacité de compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de l’Efficacité de compétence de <Highlight>22.5%</>.",
+    "simpleDesc": "Augmentation de l’Efficacité de compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 33,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 33,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 304,
     "name": "Toucher apaisant",
-    "desc": "Lors de l’utilisation d’une compétence, restaure <Highlight>$1</> de Lucidité. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Restauration de Lucidité lors de l’utilisation d’une compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Lors de l’utilisation d’une compétence, restaure <Highlight>6.0</> de Lucidité. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>5.0</> s.",
+    "simpleDesc": "Restauration de Lucidité lors de l’utilisation d’une compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 34,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 34,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 305,
     "name": "Toucher cristallin",
-    "desc": "Lors de l’utilisation d’une compétence, restaure un montant de Bouclier équivalent à <Highlight>$1</> du Bouclier max. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Restauration de Bouclier lors de l’utilisation d’une compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Lors de l’utilisation d’une compétence, restaure un montant de Bouclier équivalent à <Highlight>15.0%</> du Bouclier max. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>5.0</> s.",
+    "simpleDesc": "Restauration de Bouclier lors de l’utilisation d’une compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 35,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 35,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 306,
     "name": "Lueur dans la pierre",
-    "desc": "Augmentation de la Vitesse de compétence de <Highlight>$1</>.",
-    "simple_desc": "Augmentation de la Vitesse de compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation de la Vitesse de compétence de <Highlight>15.0%</>.",
+    "simpleDesc": "Augmentation de la Vitesse de compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5033
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 36,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 36,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 307,
     "name": "Éclat émeraude",
-    "desc": "Augmentation de la Lucidité maximale de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Lucidité maximale.",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Augmentation de la Lucidité maximale de <Highlight>120.0%</>.",
+    "simpleDesc": "Augmentation de la Lucidité maximale.",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 37,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 37,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 308,
     "name": "Toucher inflexible",
-    "desc": "Lorsque le pourcentage de Lucidité est inférieur à <Highlight>$2</>, les dégâts subis sont réduits de <Highlight>$1</>.",
-    "simple_desc": "Réduction des dégâts subis lorsque la Lucidité est faible.",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Lorsque le pourcentage de Lucidité est inférieur à <Highlight>50.0%</>, les dégâts subis sont réduits de <Highlight>30.0%</>.",
+    "simpleDesc": "Réduction des dégâts subis lorsque la Lucidité est faible.",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 38,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 38,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 309,
     "name": "Lueur de concentration",
-    "desc": "Lorsque le pourcentage de Lucidité tombe sous <Highlight>$3</>, restaure <Highlight>$1</> de Lucidité par seconde pendant <Highlight>$4</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Restauration de Lucidité par seconde lorsque la Lucidité est faible.",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Lorsque le pourcentage de Lucidité tombe sous <Highlight>50.0%</>, restaure <Highlight>12.0</> de Lucidité par seconde pendant <Highlight>5.0</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>20.0</> s.",
+    "simpleDesc": "Restauration de Lucidité par seconde lorsque la Lucidité est faible.",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 39,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 39,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 310,
     "name": "Mirage éclatant",
-    "desc": "Lors de l’utilisation d’une compétence, confère <Highlight>$1</> cumuls de [Lueur].",
-    "simple_desc": "Octroi d’un certain nombre de cumul de [Lueur] lors de l’utilisation d’une compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors de l’utilisation d’une compétence, confère <Highlight>15.0</> cumuls de [Lueur].",
+    "simpleDesc": "Octroi d’un certain nombre de cumul de [Lueur] lors de l’utilisation d’une compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 40,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 40,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 311,
     "name": "Floraison éclatante",
-    "desc": "Sous [Éclat], restaure <Highlight>$1</> de Lucidité par seconde.",
-    "simple_desc": "Restaure de la Lucidité chaque seconde sous [Éclat].",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Sous [Éclat], restaure <Highlight>6.0</> de Lucidité par seconde.",
+    "simpleDesc": "Restaure de la Lucidité chaque seconde sous [Éclat].",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10103_Radiance"
-    ],
-    "rl_archive_id": 41,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 41,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 312,
     "name": "Résonance de spinelle",
-    "desc": "Augmentation de la Puissance de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmente la Puissance de compétence.",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de la Puissance de compétence de <Highlight>120.0%</>.",
+    "simpleDesc": "Augmente la Puissance de compétence.",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 42,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 42,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 313,
     "name": "Réfraction lumineuse",
-    "desc": "Les Dégâts de compétence ignorent <Highlight>$1</> de la DÉF de la cible.",
-    "simple_desc": "Les Dégâts de compétence ignorent une partie de la DÉF de la cible.",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Les Dégâts de compétence ignorent <Highlight>90.0%</> de la DÉF de la cible.",
+    "simpleDesc": "Les Dégâts de compétence ignorent une partie de la DÉF de la cible.",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 43,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 43,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 314,
     "name": "Toucher étincelant",
-    "desc": "Augmente le bonus de Dégâts de compétence conféré par [Éclat] à <Highlight>$1</>.",
-    "simple_desc": "Amplifie le bonus de Dégâts de compétence d’[Éclat].",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmente le bonus de Dégâts de compétence conféré par [Éclat] à <Highlight>225.0%</>.",
+    "simpleDesc": "Amplifie le bonus de Dégâts de compétence d’[Éclat].",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10103_Radiance"
-    ],
-    "rl_archive_id": 44,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 44,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 315,
     "name": "Descente d’arc-lumière",
-    "desc": "Réduit l’intervalle de déclenchement d’[Émission] à <Highlight>$1</> s.",
-    "simple_desc": "[Émission] se déclenche plus fréquemment.",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Réduit l’intervalle de déclenchement d’[Émission] à <Highlight>1.0</> s.",
+    "simpleDesc": "[Émission] se déclenche plus fréquemment.",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5035
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10103_Emission"
-    ],
-    "rl_archive_id": 45,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 45,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 401,
     "name": "Propagation de la vie",
-    "desc": "Infliger des dégâts a <Highlight>$1</> de chances d’invoquer 1 [Graine de Lumen]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Infliger des dégâts a une chance d’invoquer 1 [Graine de Lumen].",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Infliger des dégâts a <Highlight>15.0%</> de chances d’invoquer 1 [Graine de Lumen]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>3.0</> s.",
+    "simpleDesc": "Infliger des dégâts a une chance d’invoquer 1 [Graine de Lumen].",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 46,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 46,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 402,
     "name": "Rythme de la nature",
-    "desc": "Lorsqu’un familier est invoqué, la Puissance de compétence augmente de <Highlight>$1</> pendant <Highlight>$2</> s, cumulable jusqu’à <Highlight>$3</> fois.",
-    "simple_desc": "L’invocation d’un familier augmente la Puissance de compétence.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsqu’un familier est invoqué, la Puissance de compétence augmente de <Highlight>7.5%</> pendant <Highlight>10.0</> s, cumulable jusqu’à <Highlight>3.0</> fois.",
+    "simpleDesc": "L’invocation d’un familier augmente la Puissance de compétence.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 47,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 47,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 403,
     "name": "Rugissement de la nature",
-    "desc": "Lors de l’invocation d’un familier, l’ATQ du personnage augmente de <Highlight>$1</> pendant <Highlight>$2</> s. Cet effet peut se cumuler jusqu’à <Highlight>$3</> fois.",
-    "simple_desc": "Augmentation de l’ATQ lors de l’invocation de familier.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors de l’invocation d’un familier, l’ATQ du personnage augmente de <Highlight>7.5%</> pendant <Highlight>10.0</> s. Cet effet peut se cumuler jusqu’à <Highlight>3.0</> fois.",
+    "simpleDesc": "Augmentation de l’ATQ lors de l’invocation de familier.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 48,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 48,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 404,
     "name": "Enrichissement des sols",
-    "desc": "Augmentation des soins reçus de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des soins reçus.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation des soins reçus de <Highlight>60.0%</>.",
+    "simpleDesc": "Augmentation des soins reçus.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 49,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 49,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 405,
     "name": "Remède naturel",
-    "desc": "Lors de l’invocation d’un familier, restaure des PV équivalents à <Highlight>$1</> des PV max.",
-    "simple_desc": "Restauration de PV lors de l’invocation de familier.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors de l’invocation d’un familier, restaure des PV équivalents à <Highlight>3.0%</> des PV max.",
+    "simpleDesc": "Restauration de PV lors de l’invocation de familier.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 50,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 50,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 406,
     "name": "Vitalité naturelle",
-    "desc": "Lors de l’invocation d’un familier, restaure <Highlight>$1</> de Lucidité.",
-    "simple_desc": "Restauration de Lucidité lors de l’invocation de familier.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors de l’invocation d’un familier, restaure <Highlight>6.0</> de Lucidité.",
+    "simpleDesc": "Restauration de Lucidité lors de l’invocation de familier.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 51,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 51,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 407,
     "name": "Pulsation de vie",
-    "desc": "Toutes les <Highlight>$1</> s, invoque 1 [Graine de Lumen].",
-    "simple_desc": "Invoque périodiquement 1 [Graine de Lumen].",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Toutes les <Highlight>3.0</> s, invoque 1 [Graine de Lumen].",
+    "simpleDesc": "Invoque périodiquement 1 [Graine de Lumen].",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 52,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 52,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 408,
     "name": "Instinct de vie",
-    "desc": "Subir des dégâts a <Highlight>$1</> de chances d’invoquer 1 [Graine de Lumen]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Subir des dégâts a une chance d’invoquer 1 [Graine de Lumen].",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Subir des dégâts a <Highlight>75.0%</> de chances d’invoquer 1 [Graine de Lumen]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>2.0</> s.",
+    "simpleDesc": "Subir des dégâts a une chance d’invoquer 1 [Graine de Lumen].",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 53,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 53,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 409,
     "name": "Sanctuaire de la nature",
-    "desc": "Lorsque des invocations se trouvent dans un rayon de <Highlight>8</> mètres, les dégâts subis sont réduits de <Highlight>$1</>.",
-    "simple_desc": "Réduction des dégâts subis lorsqu’une invocation se trouve à proximité.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque des invocations se trouvent dans un rayon de <Highlight>8</> mètres, les dégâts subis sont réduits de <Highlight>30.0%</>.",
+    "simpleDesc": "Réduction des dégâts subis lorsqu’une invocation se trouve à proximité.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 54,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 54,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 410,
     "name": "Expansion sylvestre",
-    "desc": "Lorsqu’un soin est reçu, augmente les dégâts infligés de <Highlight>$1</> pendant <Highlight>$2</> s.",
-    "simple_desc": "Recevoir un soin augmente temporairement les dégâts infligés.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsqu’un soin est reçu, augmente les dégâts infligés de <Highlight>37.5%</> pendant <Highlight>3.0</> s.",
+    "simpleDesc": "Recevoir un soin augmente temporairement les dégâts infligés.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 55,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 55,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 411,
     "name": "Enracinement inversé",
     "desc": "Lors de l’invocation d’un familier, réduit la Posture des ennemis dans un rayon de <Highlight>6</> m autour de la zone d’invocation.",
-    "simple_desc": "Réduit la Posture des ennemis proches lors de l’invocation d’un familier.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "Réduit la Posture des ennemis proches lors de l’invocation d’un familier.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 56,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 56,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 412,
     "name": "Colère de la nature",
-    "desc": "Dans un rayon de <Highlight>8</> mètres, chaque invocation confère <Highlight>1</> cumul augmentant les dégâts infligés de <Highlight>$2</>.\nCet effet peut se cumuler jusqu’à <Highlight>$1</> fois.",
-    "simple_desc": "Plus il y a d’invocations à proximité, plus les dégâts infligés augmentent.",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Dans un rayon de <Highlight>8</> mètres, chaque invocation confère <Highlight>1</> cumul augmentant les dégâts infligés de <Highlight>18.0%</>.\nCet effet peut se cumuler jusqu’à <Highlight>5.0</> fois.",
+    "simpleDesc": "Plus il y a d’invocations à proximité, plus les dégâts infligés augmentent.",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 57,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 57,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 413,
     "name": "Masse de la nature",
-    "desc": "Augmentation de l’<Highlight>ATQ</> des invocations de <Highlight>$1</>.",
-    "simple_desc": "Augmentation de l’ATQ des invocations.",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation de l’<Highlight>ATQ</> des invocations de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation de l’ATQ des invocations.",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 58,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 58,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 414,
     "name": "Loi de la nature",
-    "desc": "Lors de l’invocation d’un familier ne faisant pas partie de la lignée [Rameau lumineux], une explosion est déclenchée à son emplacement, infligeant des dégâts équivalents à <Highlight>$1</> de l’ATQ du personnage.",
-    "simple_desc": "Chaque invocation d’un familier autre que ceux de la lignée [Rameau lumineux] déclenche une explosion à la position d’invocation.",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors de l’invocation d’un familier ne faisant pas partie de la lignée [Rameau lumineux], une explosion est déclenchée à son emplacement, infligeant des dégâts équivalents à <Highlight>3000.0%</> de l’ATQ du personnage.",
+    "simpleDesc": "Chaque invocation d’un familier autre que ceux de la lignée [Rameau lumineux] déclenche une explosion à la position d’invocation.",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 59,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 59,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 415,
     "name": "Croissance luxuriante",
     "desc": "Augmente la probabilité d’évolution d’une [Graine de Lumen] en [Feuille de Lumen] à <Highlight>100 %</>.",
-    "simple_desc": "Augmente la probabilité d’évolution d’une [Graine de Lumen] en [Feuille de Lumen] à <Highlight>100 %</>.",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "Augmente la probabilité d’évolution d’une [Graine de Lumen] en [Feuille de Lumen] à <Highlight>100 %</>.",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5038,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       50
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed",
-      "Term_Rou_10104_Lumileaf"
-    ],
-    "rl_archive_id": 60,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 60,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 501,
     "name": "Glisseur céleste",
-    "desc": "Effectuer un Bond Cyclonique augmente l’ATQ de <Highlight>$1</> pendant <Highlight>$2</> s et octroie <Highlight>$3</> cumuls de [Dévoreur d’ombre].",
-    "simple_desc": "Effectuer un Bond Cyclonique augmente l’ATQ et octroie 1 cumul de [Dévoreur d’ombre].",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Effectuer un Bond Cyclonique augmente l’ATQ de <Highlight>18.0%</> pendant <Highlight>3.0</> s et octroie <Highlight>1.0</> cumuls de [Dévoreur d’ombre].",
+    "simpleDesc": "Effectuer un Bond Cyclonique augmente l’ATQ et octroie 1 cumul de [Dévoreur d’ombre].",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne"
-    ],
-    "rl_archive_id": 57,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 57,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 502,
     "name": "Danse aérienne",
-    "desc": "Effectuer une Glissade génère 3 [Ailes de vent]. Chaque aile inflige des dégâts équivalents à <Highlight>$1</> de l’ATQ du personnage à l’impact et confère <Highlight>$2</> cumuls de [Dévoreur d’ombre].",
-    "simple_desc": "Effectuer une Glissade génère 3 [Ailes de vent] et octroie 1 cumul de [Dévoreur d’ombre].",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Effectuer une Glissade génère 3 [Ailes de vent]. Chaque aile inflige des dégâts équivalents à <Highlight>90.0%</> de l’ATQ du personnage à l’impact et confère <Highlight>1.0</> cumuls de [Dévoreur d’ombre].",
+    "simpleDesc": "Effectuer une Glissade génère 3 [Ailes de vent] et octroie 1 cumul de [Dévoreur d’ombre].",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_WindWings"
-    ],
-    "rl_archive_id": 58,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 58,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 503,
     "name": "Forme de chrysalide",
-    "desc": "Esquiver réduit les dégâts subis de <Highlight>$1</> pendant <Highlight>$2</> s et octroie <Highlight>$3</> cumuls de [Dévoreur d’ombre].",
-    "simple_desc": "Esquiver réduit les dégâts subis et octroie 1 cumul de [Dévoreur d’ombre].",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Esquiver réduit les dégâts subis de <Highlight>15.0%</> pendant <Highlight>3.0</> s et octroie <Highlight>1.0</> cumuls de [Dévoreur d’ombre].",
+    "simpleDesc": "Esquiver réduit les dégâts subis et octroie 1 cumul de [Dévoreur d’ombre].",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne"
-    ],
-    "rl_archive_id": 59,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 59,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 504,
     "name": "Motifs irisés",
-    "desc": "Augmentation de la Lucidité maximale de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Lucidité maximale.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Augmentation de la Lucidité maximale de <Highlight>45.0%</>.",
+    "simpleDesc": "Augmentation de la Lucidité maximale.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 60,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 60,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 505,
     "name": "Cavalier du vent",
-    "desc": "Augmente la Vitesse de compétence de <Highlight>$1</>.",
-    "simple_desc": "Augmente la Vitesse de compétence.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmente la Vitesse de compétence de <Highlight>15.0%</>.",
+    "simpleDesc": "Augmente la Vitesse de compétence.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 61,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 61,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 506,
     "name": "Flux tourbillonnant",
-    "desc": "Les Attaques plongeantes infligeant des dégâts créent une zone [Poudre d’écaille] qui inflige chaque seconde des dégâts équivalents à <Highlight>$2</> de l’ATQ du personnage aux ennemis à l’intérieur, et octroie <Highlight>$3</> cumuls de [Dévoreur d’ombre]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s.",
-    "simple_desc": "Les Attaques plongeantes infligeant des dégâts créent une zone [Poudre d’écaille] et octroient 1 cumul de [Dévoreur d’ombre].",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Les Attaques plongeantes infligeant des dégâts créent une zone [Poudre d’écaille] qui inflige chaque seconde des dégâts équivalents à <Highlight>400.0%</> de l’ATQ du personnage aux ennemis à l’intérieur, et octroie <Highlight>8.0</> cumuls de [Dévoreur d’ombre]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>8.0</> s.",
+    "simpleDesc": "Les Attaques plongeantes infligeant des dégâts créent une zone [Poudre d’écaille] et octroient 1 cumul de [Dévoreur d’ombre].",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_Powder"
-    ],
-    "rl_archive_id": 62,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 62,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 507,
     "name": "Onde de choc",
-    "desc": "Augmentation des dégâts des attaques plongeantes de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des dégâts des attaques plongeantes.",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation des dégâts des attaques plongeantes de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation des dégâts des attaques plongeantes.",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 63,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 63,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 508,
     "name": "Flux dispersif",
-    "desc": "Augmentation de la Portée d’attaque de mêlée de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Portée d’attaque de mêlée.",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de la Portée d’attaque de mêlée de <Highlight>1.5</>.",
+    "simpleDesc": "Augmentation de la Portée d’attaque de mêlée.",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 64,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 64,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 509,
     "name": "Brise légère",
-    "desc": "Augmentation du nombre maximum d’esquives de <Highlight>#1</>.",
-    "simple_desc": "Augmentation du nombre maximal d’esquives.",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Augmentation du nombre maximum d’esquives de <Highlight>3.0</>.",
+    "simpleDesc": "Augmentation du nombre maximal d’esquives.",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 65,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 65,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 510,
     "name": "Écailles éparpillées",
-    "desc": "Esquiver crée une zone [Poudre d’écaille], infligeant chaque seconde des dégâts équivalents à <Highlight>$2</> de l’ATQ du personnage aux ennemis à l’intérieur. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s.",
-    "simple_desc": "Esquiver crée une zone [Poudre d’écaille].",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Esquiver crée une zone [Poudre d’écaille], infligeant chaque seconde des dégâts équivalents à <Highlight>400.0%</> de l’ATQ du personnage aux ennemis à l’intérieur. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>5.0</> s.",
+    "simpleDesc": "Esquiver crée une zone [Poudre d’écaille].",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10105_Powder"
-    ],
-    "rl_archive_id": 66,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 66,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 511,
     "name": "Vagues turbulentes",
-    "desc": "Obtient <Highlight>$2</> cumuls de [Dévoreur d’ombre] toutes les <Highlight>$1</> s. Lorsque le nombre de cumuls dépasse <Highlight>$3</>, chaque cumul supplémentaire octroie également le tir d’une [Aile-lame] infligeant des dégâts équivalents à <Highlight>$4</> de l’ATQ du personnage.",
-    "simple_desc": "Obtient périodiquement 1 cumul de [Dévoreur d’ombre]. Lorsque les cumuls dépassent un certain seuil, tire 1 [Aile-lame] supplémentaire.",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Obtient <Highlight>1.0</> cumuls de [Dévoreur d’ombre] toutes les <Highlight>3.0</> s. Lorsque le nombre de cumuls dépasse <Highlight>30.0</>, chaque cumul supplémentaire octroie également le tir d’une [Aile-lame] infligeant des dégâts équivalents à <Highlight>1200.0%</> de l’ATQ du personnage.",
+    "simpleDesc": "Obtient périodiquement 1 cumul de [Dévoreur d’ombre]. Lorsque les cumuls dépassent un certain seuil, tire 1 [Aile-lame] supplémentaire.",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_BladeWings"
-    ],
-    "rl_archive_id": 67,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 67,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 512,
     "name": "Silhouette éblouissante",
-    "desc": "Chaque esquive supplémentaire augmente la Lucidité maximale de <Highlight>$1</>.",
-    "simple_desc": "Augmentation de la Lucidité maximale en fonction du nombre maximal d’esquives.",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Chaque esquive supplémentaire augmente la Lucidité maximale de <Highlight>45.0%</>.",
+    "simpleDesc": "Augmentation de la Lucidité maximale en fonction du nombre maximal d’esquives.",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 68,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 68,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 513,
     "name": "Ailes acérées",
-    "desc": "ATQ du personnage +<Highlight>#1</>.",
-    "simple_desc": "Augmente l’ATQ du personnage.",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "ATQ du personnage +<Highlight>120.0%</>.",
+    "simpleDesc": "Augmente l’ATQ du personnage.",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 69,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 69,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 514,
     "name": "Invocateur de tempête",
-    "desc": "Vitesse d’attaque +<Highlight>$1</>.",
-    "simple_desc": "Augmente la Vitesse d’attaque.",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Vitesse d’attaque +<Highlight>90.0%</>.",
+    "simpleDesc": "Augmente la Vitesse d’attaque.",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 70,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 70,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 515,
     "name": "Briseur de cocons",
-    "desc": "Lors d’une esquive, l’ATQ augmente de <Highlight>$1</> pendant <Highlight>$2</> secondes.",
-    "simple_desc": "Augmentation de l’ATQ lors d’une esquive.",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lors d’une esquive, l’ATQ augmente de <Highlight>90.0%</> pendant <Highlight>3.0</> secondes.",
+    "simpleDesc": "Augmentation de l’ATQ lors d’une esquive.",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5040
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 71,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 71,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 601,
     "name": "Patrouille errante",
-    "desc": "Augmentation de la Portée de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Portée de compétence.",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation de la Portée de compétence de <Highlight>45.0%</>.",
+    "simpleDesc": "Augmentation de la Portée de compétence.",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 76,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 76,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 602,
     "name": "Chasseur de lumière",
-    "desc": "Infliger des dégâts a <Highlight>$1</> de chances de faire apparaître 1 [Luciole brillante].",
-    "simple_desc": "Infliger des dégâts a une chance de faire apparaître 1 [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Infliger des dégâts a <Highlight>7.5%</> de chances de faire apparaître 1 [Luciole brillante].",
+    "simpleDesc": "Infliger des dégâts a une chance de faire apparaître 1 [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 77,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 77,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 603,
     "name": "Chasseur des ombres",
-    "desc": "Fait apparaître 1 [Luciole brillante] toutes les <Highlight>$1</> s.",
-    "simple_desc": "Obtient 1 [Luciole brillante] toutes les <Highlight>10</> s.",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Fait apparaître 1 [Luciole brillante] toutes les <Highlight>7.0</> s.",
+    "simpleDesc": "Obtient 1 [Luciole brillante] toutes les <Highlight>10</> s.",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 78,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 78,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 604,
     "name": "Signal de feinte",
-    "desc": "Lorsque aucune [Luciole brillante] n’est présente, le Taux CRIT des armes à distance augmente de <Highlight>$1</>.\nLorsqu’une [Luciole brillante] est présente, le Taux CRIT des armes à distance augmente de <Highlight>$2</>.",
-    "simple_desc": "Augmentation du Taux CRIT des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque aucune [Luciole brillante] n’est présente, le Taux CRIT des armes à distance augmente de <Highlight>7.5%</>.\nLorsqu’une [Luciole brillante] est présente, le Taux CRIT des armes à distance augmente de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation du Taux CRIT des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 79,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 79,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 605,
     "name": "Signal d’embrasement",
-    "desc": "Lorsque aucune [Luciole brillante] n’est présente, les DGT CRIT des armes à distance augmentent de <Highlight>$1</>.\nLorsqu’une [Luciole brillante] est présente, les DGT CRIT des armes à distance augmentent de <Highlight>$2</>.",
-    "simple_desc": "Augmentation des DGT CRIT des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque aucune [Luciole brillante] n’est présente, les DGT CRIT des armes à distance augmentent de <Highlight>7.5%</>.\nLorsqu’une [Luciole brillante] est présente, les DGT CRIT des armes à distance augmentent de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation des DGT CRIT des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 80,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 80,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 606,
     "name": "Lueur vacillante",
-    "desc": "Lorsque aucune [Luciole brillante] n’est présente, la Chance de déclenchement des armes à distance augmente de <Highlight>$1</>.\nLorsqu’une [Luciole brillante] est présente, la Chance de déclenchement des armes à distance augmente de <Highlight>$2</>.",
-    "simple_desc": "Augmentation de la Chance de déclenchement des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque aucune [Luciole brillante] n’est présente, la Chance de déclenchement des armes à distance augmente de <Highlight>30.0%</>.\nLorsqu’une [Luciole brillante] est présente, la Chance de déclenchement des armes à distance augmente de <Highlight>135.0%</>.",
+    "simpleDesc": "Augmentation de la Chance de déclenchement des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 81,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 81,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 607,
     "name": "Signal de ralliement",
-    "desc": "Augmentation des dégâts infligés par les invocations de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des dégâts infligés par les invocations.",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation des dégâts infligés par les invocations de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation des dégâts infligés par les invocations.",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 82,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 82,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 608,
     "name": "Lumière réactive",
-    "desc": "Subir des dégâts ou invoquer un familier fait apparaître 1 [Luciole brillante]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s.",
-    "simple_desc": "Subir des dégâts ou invoquer un familier octroie 1 [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Subir des dégâts ou invoquer un familier fait apparaître 1 [Luciole brillante]. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>3.0</> s.",
+    "simpleDesc": "Subir des dégâts ou invoquer un familier octroie 1 [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 83,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 83,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 609,
     "name": "Lumières dansantes",
-    "desc": "Augmentation de l’Efficacité de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de l’Efficacité de compétence.",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmentation de l’Efficacité de compétence de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation de l’Efficacité de compétence.",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 84,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 84,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 610,
     "name": "Créature stellaire",
-    "desc": "Lorsque aucune [Luciole brillante] n’est présente, le Tir multiple des armes à distance augmente de <Highlight>$1</>.\nLorsqu’une [Luciole brillante] est présente, le Tir multiple des armes à distance augmente de <Highlight>$2</>.",
-    "simple_desc": "Augmentation du Tir multiple des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque aucune [Luciole brillante] n’est présente, le Tir multiple des armes à distance augmente de <Highlight>7.5%</>.\nLorsqu’une [Luciole brillante] est présente, le Tir multiple des armes à distance augmente de <Highlight>37.5%</>.",
+    "simpleDesc": "Augmentation du Tir multiple des armes à distance. Effet renforcé en présence d’une [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 85,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 85,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 611,
     "name": "Patrouille cyclique",
-    "desc": "+<Highlight>#1</> réanimations. Tant que vous portez des [Lucioles brillantes], les dégâts subis sont réduits de <Highlight>$1</>. Cet effet est dissipé lors de la prochaine réanimation.",
-    "simple_desc": "Octroie une chance de réanimation supplémentaire. Tant que vous portez des [Lucioles brillantes], les dégâts subis sont réduits. Cet effet est consommé à la prochaine réanimation.",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "+<Highlight>1.0</> réanimations. Tant que vous portez des [Lucioles brillantes], les dégâts subis sont réduits de <Highlight>30.0%</>. Cet effet est dissipé lors de la prochaine réanimation.",
+    "simpleDesc": "Octroie une chance de réanimation supplémentaire. Tant que vous portez des [Lucioles brillantes], les dégâts subis sont réduits. Cet effet est consommé à la prochaine réanimation.",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 86,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 86,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 612,
     "name": "Adieu silencieux",
-    "desc": "Lorsque aucune [Luciole brillante] n’est présente, la Pénétration de tous les attributs augmente de <Highlight>$1</>.\nLorsqu’une [Luciole brillante] est présente, la Pénétration de tous les attributs augmente de <Highlight>$2</>.",
-    "simple_desc": "Augmentation de la Pénétration de tous les attributs. Effet renforcé en présence d’une [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque aucune [Luciole brillante] n’est présente, la Pénétration de tous les attributs augmente de <Highlight>18.0%</>.\nLorsqu’une [Luciole brillante] est présente, la Pénétration de tous les attributs augmente de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation de la Pénétration de tous les attributs. Effet renforcé en présence d’une [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 87,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 87,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 613,
     "name": "Phéromone défensive",
-    "desc": "Lorsque aucune [Luciole brillante] n’est présente, la Vigueur augmente de <Highlight>$1</>.\nLorsqu’une [Luciole brillante] est présente, la Vigueur augmente de <Highlight>$2</>.",
-    "simple_desc": "Augmentation de la Vigueur. Effet renforcé en présence d’une [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque aucune [Luciole brillante] n’est présente, la Vigueur augmente de <Highlight>18.0%</>.\nLorsqu’une [Luciole brillante] est présente, la Vigueur augmente de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation de la Vigueur. Effet renforcé en présence d’une [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 88,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 88,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 614,
     "name": "Phéromone de nuée",
-    "desc": "Lorsque des ennemis se trouvent à proximité, les [Lucioles brillantes] attaquent beaucoup plus fréquemment pendant <Highlight>$2</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$1</> s.",
-    "simple_desc": "Réduction importante de l’intervalle d’attaque de la [Luciole brillante] lorsque des ennemis se trouvent à proximité.",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Lorsque des ennemis se trouvent à proximité, les [Lucioles brillantes] attaquent beaucoup plus fréquemment pendant <Highlight>5.0</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>10.0</> s.",
+    "simpleDesc": "Réduction importante de l’intervalle d’attaque de la [Luciole brillante] lorsque des ennemis se trouvent à proximité.",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5007,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 89,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 89,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 615,
     "name": "Lueur vacillante",
-    "desc": "Les dégâts infligés par la [Luciole brillante] augmentent de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des dégâts infligés par la [Luciole brillante].",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Les dégâts infligés par la [Luciole brillante] augmentent de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation des dégâts infligés par la [Luciole brillante].",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5007,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 90,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 90,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 701,
     "name": "Réserve sanguine",
-    "desc": "Augmentation de la Durée de compétence de <Highlight>#1</>.",
-    "simple_desc": "Augmentation de la Durée de compétence.",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de la Durée de compétence de <Highlight>45.0%</>.",
+    "simpleDesc": "Augmentation de la Durée de compétence.",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 91,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 91,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 702,
     "name": "Fleur écarlate",
-    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, la régénération naturelle de Lucidité augmente de <Highlight>$2</>.\nLorsque les PV sont à <Highlight>100 %</>, la régénération naturelle de Lucidité augmente de <Highlight>$1</>.",
-    "simple_desc": "Augmentation de la Régénération auto de Lucidité, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, la régénération naturelle de Lucidité augmente de <Highlight>9.0</>.\nLorsque les PV sont à <Highlight>100 %</>, la régénération naturelle de Lucidité augmente de <Highlight>3.0</>.",
+    "simpleDesc": "Augmentation de la Régénération auto de Lucidité, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 92,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 92,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 703,
     "name": "Stagnation sanguine",
-    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, la Chance de déclenchement des armes de mêlée augmente de <Highlight>$2</>.\nLorsque les PV sont à <Highlight>100 %</>, la Chance de déclenchement des armes de mêlée augmente de <Highlight>$1</>.",
-    "simple_desc": "Augmentation de la Chance de déclenchement des armes de mêlée, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, la Chance de déclenchement des armes de mêlée augmente de <Highlight>180.0%</>.\nLorsque les PV sont à <Highlight>100 %</>, la Chance de déclenchement des armes de mêlée augmente de <Highlight>90.0%</>.",
+    "simpleDesc": "Augmentation de la Chance de déclenchement des armes de mêlée, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 93,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 93,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 704,
     "name": "Instinct de combativité",
-    "desc": "Augmentation des PV max de <Highlight>#1</>.",
-    "simple_desc": "Augmentation des PV max.",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Augmentation des PV max de <Highlight>30.0%</>.",
+    "simpleDesc": "Augmentation des PV max.",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 94,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 94,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 705,
     "name": "Feuilles épineuses",
-    "desc": "Augmentation de la DÉF de <Highlight>#1</>. En subissant des dégâts, les dégâts infligés augmentent de <Highlight>$1</> pendant <Highlight>$2</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$3</> s.",
-    "simple_desc": "Augmentation de la DÉF. Subir des dégâts augmente les dégâts infligés.",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation de la DÉF de <Highlight>90.0%</>. En subissant des dégâts, les dégâts infligés augmentent de <Highlight>30.0%</> pendant <Highlight>10.0</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>20.0</> s.",
+    "simpleDesc": "Augmentation de la DÉF. Subir des dégâts augmente les dégâts infligés.",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 95,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 95,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 706,
     "name": "Racines dévorantes",
-    "desc": "Infliger des dégâts déclenche également une explosion infligeant des Dégâts de zone équivalents à <Highlight>$1</> des PV max du personnage à la position de la cible. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Infliger des dégâts provoque des Dégâts de zone supplémentaires basés sur les PV max.",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Infliger des dégâts déclenche également une explosion infligeant des Dégâts de zone équivalents à <Highlight>30.0%</> des PV max du personnage à la position de la cible. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>1.0</> s.",
+    "simpleDesc": "Infliger des dégâts provoque des Dégâts de zone supplémentaires basés sur les PV max.",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 96,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 96,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 707,
     "name": "Afflux de sang",
-    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, la Puissance de compétence augmente de <Highlight>$2</>.\nLorsque les PV sont à <Highlight>100 %</>, la Puissance de compétence augmente de <Highlight>$1</>.",
-    "simple_desc": "Augmentation de la Puissance de compétence, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, la Puissance de compétence augmente de <Highlight>60.0%</>.\nLorsque les PV sont à <Highlight>100 %</>, la Puissance de compétence augmente de <Highlight>30.0%</>.",
+    "simpleDesc": "Augmentation de la Puissance de compétence, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 97,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 97,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 708,
     "name": "Soif de sang",
-    "desc": "Augmentation des dégâts infligés de <Highlight>$1</>. Pour chaque <Highlight>1 %</> de PV perdu, l’effet est renforcé de <Highlight>1 %</>, jusqu’à un maximum de <Highlight>$2</>.",
-    "simple_desc": "Augmentation des dégâts infligés, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Augmentation des dégâts infligés de <Highlight>30.0%</>. Pour chaque <Highlight>1 %</> de PV perdu, l’effet est renforcé de <Highlight>1 %</>, jusqu’à un maximum de <Highlight>60.0%</>.",
+    "simpleDesc": "Augmentation des dégâts infligés, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 98,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 98,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 709,
     "name": "Instinct de prédation",
-    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, le Taux CRIT des armes de mêlée augmente de <Highlight>$2</>.\nLorsque les PV sont à <Highlight>100 %</>, le Taux CRIT des armes de mêlée augmente de <Highlight>$1</>.",
-    "simple_desc": "Augmentation du Taux CRIT des armes de mêlée, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, le Taux CRIT des armes de mêlée augmente de <Highlight>135.0%</>.\nLorsque les PV sont à <Highlight>100 %</>, le Taux CRIT des armes de mêlée augmente de <Highlight>67.5%</>.",
+    "simpleDesc": "Augmentation du Taux CRIT des armes de mêlée, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 99,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 99,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 710,
     "name": "Instinct frénétique",
-    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, les DGT CRIT des armes de mêlée augmentent de <Highlight>$2</>.\nLorsque les PV sont à <Highlight>100 %</>, les DGT CRIT des armes de mêlée augmentent de <Highlight>$1</>.",
-    "simple_desc": "Augmentation des DGT CRIT des armes de mêlée, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, les DGT CRIT des armes de mêlée augmentent de <Highlight>135.0%</>.\nLorsque les PV sont à <Highlight>100 %</>, les DGT CRIT des armes de mêlée augmentent de <Highlight>67.5%</>.",
+    "simpleDesc": "Augmentation des DGT CRIT des armes de mêlée, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 100,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 100,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 711,
     "name": "Sanctuaire du sang",
-    "desc": "Subir des dégâts confère <Highlight>$1</> points d’Ultra-bouclier. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s.",
-    "simple_desc": "Subir des dégâts confère un Ultra-bouclier.",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Subir des dégâts confère <Highlight>135.0</> points d’Ultra-bouclier. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>5.0</> s.",
+    "simpleDesc": "Subir des dégâts confère un Ultra-bouclier.",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 101,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 101,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 712,
     "name": "Instinct de survie",
-    "desc": "Les dégâts reçus par coup ne peuvent excéder <Highlight>#1</> des PV max.\nAprès avoir subi des dégâts supérieurs à <Highlight>$2</> des PV max, restaure <Highlight>$1</> des PV max par seconde pendant <Highlight>$3</> s.",
-    "simple_desc": "Limite les dégâts subis par coup et restaure des PV après avoir encaissé de lourds dégâts.",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "Les dégâts reçus par coup ne peuvent excéder <Highlight>25.0%</> des PV max.\nAprès avoir subi des dégâts supérieurs à <Highlight>20.0%</> des PV max, restaure <Highlight>3.0%</> des PV max par seconde pendant <Highlight>5.0</> s.",
+    "simpleDesc": "Limite les dégâts subis par coup et restaure des PV après avoir encaissé de lourds dégâts.",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 102,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 102,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 713,
     "name": "Instinct d’absorption",
-    "desc": "Lors de l’utilisation d’une Compétence ultime, la DÉF est entièrement consommée, puis <Highlight>$1</> de cette valeur est converti en ATQ du personnage pendant <Highlight>$2</> s.\nCet effet ne peut se déclencher qu’une fois toutes les <Highlight>$3</> s.",
-    "simple_desc": "Lors de l’activation de la compétence ultime, toute la DÉF est consommée et convertie en ATQ.",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Lors de l’utilisation d’une Compétence ultime, la DÉF est entièrement consommée, puis <Highlight>240.0%</> de cette valeur est converti en ATQ du personnage pendant <Highlight>15.0</> s.\nCet effet ne peut se déclencher qu’une fois toutes les <Highlight>30.0</> s.",
+    "simpleDesc": "Lors de l’activation de la compétence ultime, toute la DÉF est consommée et convertie en ATQ.",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 103,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 103,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 714,
     "name": "Graines du déclin",
-    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, les Dégâts de compétence ignorent <Highlight>$2</> de la DÉF de la cible.\nLorsque les PV sont à <Highlight>100 %</>, ils ignorent <Highlight>$1</> de la DÉF.",
-    "simple_desc": "Les Dégâts de compétence ignorent une partie de la DÉF de la cible, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "Lorsque les PV sont inférieurs à <Highlight>100 %</>, les Dégâts de compétence ignorent <Highlight>90.0%</> de la DÉF de la cible.\nLorsque les PV sont à <Highlight>100 %</>, ils ignorent <Highlight>45.0%</> de la DÉF.",
+    "simpleDesc": "Les Dégâts de compétence ignorent une partie de la DÉF de la cible, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 104,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 104,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   },
   {
     "id": 715,
     "name": "Vignes enchevêtrées",
-    "desc": "Augmente la Ténacité de <Highlight>$2</> lorsque les PV sont inférieurs à <Highlight>40 %</>, ou de <Highlight>$1</> lorsque les PV sont supérieurs ou égaux à <Highlight>40 %</>.",
-    "simple_desc": "Augmentation de la Ténacité, effet renforcé lorsque les PV sont faibles.",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "Augmente la Ténacité de <Highlight>36.0%</> lorsque les PV sont inférieurs à <Highlight>40 %</>, ou de <Highlight>18.0%</> lorsque les PV sont supérieurs ou égaux à <Highlight>40 %</>.",
+    "simpleDesc": "Augmentation de la Ténacité, effet renforcé lorsque les PV sont faibles.",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5062
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 105,
-    "unlock_condition_text": "Lucimèche non débloquée",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 105,
+    "unlockConditionText": "Lucimèche non débloquée",
+    "canSell": 1
   }
 ]

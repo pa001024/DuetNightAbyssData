@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "bondEffect": [
+      9
+    ],
+    "desc": "（待包装）米笛奥伦之索求的描述",
+    "effect": [
+      8
+    ],
+    "name": "Pursuit of Midioren",
+    "weight": 500
+  },
+  {
+    "id": 2,
+    "bondEffect": [
+      9
+    ],
+    "desc": "（待包装）艾伊基斯之勇猛的描述",
+    "effect": [
+      8
+    ],
+    "name": "Valour of Aegis",
+    "weight": 500
+  },
+  {
+    "id": 3,
+    "bondEffect": [
+      9
+    ],
+    "desc": "（待包装）狄欧普拉之巧艺的描述",
+    "effect": [
+      8
+    ],
+    "name": "Craft of Dioptra",
+    "weight": 300
+  },
+  {
+    "id": 4,
+    "bondEffect": [
+      9
+    ],
+    "desc": "（待包装）塞库勒姆之开创的描述",
+    "effect": [
+      8
+    ],
+    "name": "Genesis of Saeculum",
+    "weight": 200
+  },
+  {
+    "id": 5,
+    "bondEffect": [
+      13,
+      12
+    ],
+    "desc": "（待包装）德拉克玛之精明的描述",
+    "effect": [
+      10,
+      11
+    ],
+    "name": "Acumen of Drakhma",
+    "weight": 200
+  },
+  {
+    "id": 6,
+    "bondEffect": [
+      9
+    ],
+    "desc": "（待包装）逻各斯之洞见的描述",
+    "effect": [
+      5,
+      8
+    ],
+    "name": "Insight of Logos",
+    "weight": 100
+  }
+]

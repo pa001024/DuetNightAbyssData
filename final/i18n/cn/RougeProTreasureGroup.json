@@ -1,0 +1,207 @@
+[
+  {
+    "id": 11,
+    "activateNeed": [
+      11201,
+      11202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
+    "groupId": 11,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "米笛奥伦之索求"
+  },
+  {
+    "id": 12,
+    "activateNeed": [
+      12201,
+      12202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
+    "groupId": 12,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "艾伊基斯之勇猛"
+  },
+  {
+    "id": 13,
+    "activateNeed": [
+      13201,
+      13202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
+    "groupId": 13,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "狄欧普拉之巧艺"
+  },
+  {
+    "id": 14,
+    "activateNeed": [
+      14201,
+      14202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
+    "groupId": 14,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "塞库勒姆之开创"
+  },
+  {
+    "id": 15,
+    "activateNeed": [
+      15201,
+      15202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
+    "groupId": 15,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "德拉克玛之精明"
+  },
+  {
+    "id": 16,
+    "activateNeed": [
+      16201,
+      16202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
+    "groupId": 16,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "逻各斯之洞见"
+  },
+  {
+    "id": 17,
+    "activateNeed": [
+      17101,
+      17201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "同律武器造成的伤害提高<Highlight>100%</>。",
+    "groupId": 17,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "殷红困兽"
+  },
+  {
+    "id": 18,
+    "activateNeed": [
+      18101,
+      18201,
+      18301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "全队互相距离不超过<Highlight>30</>时，全员造成的伤害提高<Highlight>100%</>。",
+    "groupId": 18,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "群鸟连翎"
+  },
+  {
+    "id": 19,
+    "activateNeed": [
+      19101,
+      19201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "收集[护卫骑士]的全部<Highlight>2</>件遗物后，每<Highlight>10</>秒获得自身最大生命<Highlight>10%</>的超限护盾。",
+    "groupId": 19,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "护卫骑士"
+  },
+  {
+    "id": 20,
+    "activateNeed": [
+      20101,
+      20102,
+      20201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "技能、近战武器、远程武器伤害不再下降。",
+    "groupId": 20,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "鸟面怪人"
+  },
+  {
+    "id": 21,
+    "activateNeed": [
+      21101,
+      21201,
+      21301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "groupEffectDesc": "（待包装）繁荣之神的描述",
+    "groupId": 21,
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "name": "繁荣之神"
+  },
+  {
+    "id": 22,
+    "activateNeed": [
+      22101,
+      22102,
+      22103,
+      22104
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "groupEffectDesc": "收集[四象铭印]的全部<Highlight>4</>件遗物后，触发概率提高至<Highlight>50%</>，伤害倍率提高至<Highlight>100%</>，且造成伤害变为真实伤害。",
+    "groupId": 22,
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "name": "四象铭印"
+  },
+  {
+    "id": 23,
+    "activateNeed": [
+      23101,
+      23201,
+      23202,
+      23301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "groupEffectDesc": "收集[赎罪骑士]的全部<Highlight>4</>件遗物后不再需要代价，且总共提高伤害变为<Highlight>400%</>。",
+    "groupId": 23,
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "name": "赎罪骑士"
+  },
+  {
+    "id": 24,
+    "activateNeed": [
+      24101,
+      24201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "groupEffectDesc": "收集[幽惘术士]的全部<Highlight>2</>件遗物后，[战姿]削减效率提高<Highlight>100%</>，敌人进入[埃斯刻惩戒]后伤害提高<Highlight>100%</>。",
+    "groupId": 24,
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "name": "幽惘术士"
+  },
+  {
+    "id": 25,
+    "activateNeed": [
+      25301,
+      25302,
+      25303,
+      25304,
+      25305,
+      25306
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）圣迹残像的描述",
+    "groupId": 25,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "圣迹残像"
+  },
+  {
+    "id": 26,
+    "activateNeed": [
+      26101,
+      26201,
+      26202,
+      26301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）闲逸学者的描述",
+    "groupId": 26,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "闲逸学者"
+  }
+]

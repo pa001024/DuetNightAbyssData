@@ -1,0 +1,929 @@
+[
+  {
+    "id": 1,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0.3,
+      0.3
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1004
+      ],
+      [
+        1004
+      ],
+      [
+        1004
+      ]
+    ],
+    "rewardToken": [
+      100,
+      100,
+      100
+    ]
+  },
+  {
+    "id": 11,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "3": 500
+    }
+  },
+  {
+    "id": 12,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 500
+    }
+  },
+  {
+    "id": 21,
+    "rewardBoxMechanismId": [
+      37004
+    ],
+    "rewardBoxRate": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 31,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 32,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 1500
+    }
+  },
+  {
+    "id": 41,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.02,
+      0.01,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 42,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.2,
+      0.1
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1101,
+    "rewardBoxMechanismId": [
+      37001
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ]
+    ],
+    "rewardToken": [
+      100
+    ]
+  },
+  {
+    "id": 1102,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.25,
+      0.2,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 1103,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1104,
+    "rewardBoxMechanismId": {
+      "2": 37002,
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0.3,
+      0.5
+    ],
+    "rewardBoxTreasureRandom": {
+      "2": [
+        2,
+        8
+      ],
+      "3": [
+        5,
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "2": 200,
+      "3": 300
+    }
+  },
+  {
+    "id": 1105,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 300
+    }
+  },
+  {
+    "id": 1201,
+    "rewardBoxMechanismId": [
+      37001
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ]
+    ],
+    "rewardToken": [
+      100
+    ]
+  },
+  {
+    "id": 1202,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.25,
+      0.2,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 1203,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1204,
+    "rewardBoxMechanismId": {
+      "2": 37002,
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0.3,
+      0.5
+    ],
+    "rewardBoxTreasureRandom": {
+      "2": [
+        2,
+        8
+      ],
+      "3": [
+        5,
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "2": 200,
+      "3": 300
+    }
+  },
+  {
+    "id": 1205,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 300
+    }
+  },
+  {
+    "id": 1301,
+    "rewardBoxMechanismId": [
+      37001
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ]
+    ],
+    "rewardToken": [
+      100
+    ]
+  },
+  {
+    "id": 1302,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.25,
+      0.2,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 1303,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1304,
+    "rewardBoxMechanismId": {
+      "2": 37002,
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0.3,
+      0.5
+    ],
+    "rewardBoxTreasureRandom": {
+      "2": [
+        2,
+        8
+      ],
+      "3": [
+        5,
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "2": 200,
+      "3": 300
+    }
+  },
+  {
+    "id": 1305,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 300
+    }
+  },
+  {
+    "id": 1401,
+    "rewardBoxMechanismId": [
+      37001
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ]
+    ],
+    "rewardToken": [
+      100
+    ]
+  },
+  {
+    "id": 1402,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.25,
+      0.2,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 1403,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1404,
+    "rewardBoxMechanismId": {
+      "2": 37002,
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0.3,
+      0.5
+    ],
+    "rewardBoxTreasureRandom": {
+      "2": [
+        2,
+        8
+      ],
+      "3": [
+        5,
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "2": 200,
+      "3": 300
+    }
+  },
+  {
+    "id": 1405,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 300
+    }
+  },
+  {
+    "id": 1501,
+    "rewardBoxMechanismId": [
+      37001
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ]
+    ],
+    "rewardToken": [
+      100
+    ]
+  },
+  {
+    "id": 1502,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.25,
+      0.2,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 1503,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1504,
+    "rewardBoxMechanismId": {
+      "2": 37002,
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0.3,
+      0.5
+    ],
+    "rewardBoxTreasureRandom": {
+      "2": [
+        2,
+        8
+      ],
+      "3": [
+        5,
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "2": 200,
+      "3": 300
+    }
+  },
+  {
+    "id": 1505,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 300
+    }
+  },
+  {
+    "id": 1601,
+    "rewardBoxMechanismId": [
+      37001
+    ],
+    "rewardBoxRate": [
+      0.3,
+      0,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ]
+    ],
+    "rewardToken": [
+      100
+    ]
+  },
+  {
+    "id": 1602,
+    "rewardBoxMechanismId": [
+      37001,
+      37002
+    ],
+    "rewardBoxRate": [
+      0.25,
+      0.2,
+      0
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200
+    ]
+  },
+  {
+    "id": 1603,
+    "rewardBoxMechanismId": [
+      37001,
+      37002,
+      37003
+    ],
+    "rewardBoxRate": [
+      0.1,
+      0.3,
+      0.2
+    ],
+    "rewardBoxTreasureRandom": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        5,
+        12,
+        11
+      ]
+    ],
+    "rewardToken": [
+      100,
+      200,
+      300
+    ]
+  },
+  {
+    "id": 1604,
+    "rewardBoxMechanismId": {
+      "2": 37002,
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0.3,
+      0.5
+    ],
+    "rewardBoxTreasureRandom": {
+      "2": [
+        2,
+        8
+      ],
+      "3": [
+        5,
+        3,
+        11
+      ]
+    },
+    "rewardToken": {
+      "2": 200,
+      "3": 300
+    }
+  },
+  {
+    "id": 1605,
+    "rewardBoxMechanismId": {
+      "3": 37003
+    },
+    "rewardBoxRate": [
+      0,
+      0,
+      1
+    ],
+    "rewardBoxTreasureRandom": {
+      "3": [
+        9
+      ]
+    },
+    "rewardToken": {
+      "3": 300
+    }
+  }
+]

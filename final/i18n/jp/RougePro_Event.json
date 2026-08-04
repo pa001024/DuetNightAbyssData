@@ -1,0 +1,170 @@
+[
+  {
+    "id": 101,
+    "area": 1,
+    "eventSubId": 1402,
+    "eventType": "RougePro_Occupation",
+    "weight": 1
+  },
+  {
+    "id": 102,
+    "area": 1,
+    "eventSubId": 1403,
+    "eventType": "RougePro_Occupation",
+    "weight": 1
+  },
+  {
+    "id": 103,
+    "area": 1,
+    "eventSubId": 1404,
+    "eventType": "RougePro_Occupation",
+    "weight": 1
+  },
+  {
+    "id": 104,
+    "area": 1,
+    "eventSubId": 1405,
+    "eventType": "RougePro_Occupation",
+    "weight": 1
+  },
+  {
+    "id": 201,
+    "area": 2,
+    "eventSubId": 1501,
+    "eventType": "RougePro_SabotagePro",
+    "weight": 1
+  },
+  {
+    "id": 202,
+    "area": 2,
+    "eventSubId": 1502,
+    "eventType": "RougePro_SabotagePro",
+    "weight": 1
+  },
+  {
+    "id": 301,
+    "area": 3,
+    "eventSubId": 1201,
+    "eventType": "RougePro_Exterminate",
+    "weight": 1
+  },
+  {
+    "id": 302,
+    "area": 3,
+    "eventSubId": 1202,
+    "eventType": "RougePro_Exterminate",
+    "weight": 1
+  },
+  {
+    "id": 303,
+    "area": 3,
+    "eventSubId": 1203,
+    "eventType": "RougePro_Exterminate",
+    "weight": 1
+  },
+  {
+    "id": 304,
+    "area": 3,
+    "eventSubId": 1204,
+    "eventType": "RougePro_Exterminate",
+    "weight": 1
+  },
+  {
+    "id": 401,
+    "area": 4,
+    "eventSubId": 1601,
+    "eventType": "RougePro_KillEliteMob",
+    "weight": 1
+  },
+  {
+    "id": 402,
+    "area": 4,
+    "eventSubId": 1602,
+    "eventType": "RougePro_KillEliteMob",
+    "weight": 1
+  },
+  {
+    "id": 403,
+    "area": 4,
+    "eventSubId": 1603,
+    "eventType": "RougePro_KillEliteMob",
+    "weight": 1
+  },
+  {
+    "id": 404,
+    "area": 4,
+    "eventSubId": 1604,
+    "eventType": "RougePro_KillEliteMob",
+    "weight": 1
+  },
+  {
+    "id": 501,
+    "area": 5,
+    "eventSubId": 1502,
+    "eventType": "RougePro_SabotagePro",
+    "weight": 1
+  },
+  {
+    "id": 502,
+    "area": 5,
+    "eventSubId": 1503,
+    "eventType": "RougePro_SabotagePro",
+    "weight": 1
+  },
+  {
+    "id": 503,
+    "area": 5,
+    "eventSubId": 1504,
+    "eventType": "RougePro_SabotagePro",
+    "weight": 1
+  },
+  {
+    "id": 504,
+    "area": 5,
+    "eventSubId": 1505,
+    "eventType": "RougePro_SabotagePro",
+    "weight": 1
+  },
+  {
+    "id": 601,
+    "area": 6,
+    "eventSubId": 1401,
+    "eventType": "RougePro_Occupation",
+    "weight": 1
+  },
+  {
+    "id": 602,
+    "area": 6,
+    "eventSubId": 1205,
+    "eventType": "RougePro_Exterminate",
+    "weight": 1
+  },
+  {
+    "id": 701,
+    "area": 7,
+    "eventSubId": 1301,
+    "eventType": "RougePro_Defence",
+    "weight": 1
+  },
+  {
+    "id": 702,
+    "area": 7,
+    "eventSubId": 1302,
+    "eventType": "RougePro_Defence",
+    "weight": 1
+  },
+  {
+    "id": 703,
+    "area": 7,
+    "eventSubId": 1303,
+    "eventType": "RougePro_Defence",
+    "weight": 1
+  },
+  {
+    "id": 704,
+    "area": 7,
+    "eventSubId": 1304,
+    "eventType": "RougePro_Defence",
+    "weight": 1
+  }
+]

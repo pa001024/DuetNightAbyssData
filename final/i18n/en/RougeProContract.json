@@ -1,0 +1,94 @@
+[
+  {
+    "id": 101,
+    "desc": "Decreases Healing Received by <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "globalPassiveId": 30101001,
+    "heatValue": 1,
+    "icon": "T_Rou_Contract_Char_HealDown",
+    "maxLevel": 20,
+    "name": "Domain of Suffocation",
+    "startHeat": 1
+  },
+  {
+    "id": 102,
+    "desc": "Decreases ATK by <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30101002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_SpDown",
+    "maxLevel": 5,
+    "name": "Domain of Stagnation",
+    "startHeat": 2
+  },
+  {
+    "id": 103,
+    "desc": "Increases the enemy's Max HP by <Highlight>40.0%</>.",
+    "descValues": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "Domain of Malignant Growth",
+    "startHeat": 3
+  },
+  {
+    "id": 104,
+    "desc": "Increases the enemy's ATK by <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon__AtkUp",
+    "maxLevel": 5,
+    "name": "Domain of Torment",
+    "startHeat": 4
+  },
+  {
+    "id": 105,
+    "desc": "Decreases the enemy's Damage Taken by <Highlight>20.0%</>.",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "globalPassiveId": 30102003,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "Domain of Numbness",
+    "startHeat": 5
+  },
+  {
+    "id": 106,
+    "desc": "Increases prices at Abyssal Merchant by <Highlight>50%</> Embers.",
+    "heatValue": 10,
+    "icon": "T_Rou_Contract_Mechanics_CostUp",
+    "maxLevel": 1,
+    "name": "Domain of Desiccation",
+    "startHeat": 6
+  },
+  {
+    "id": 107,
+    "desc": "<Highlight>Decreases</> available options by 1.",
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Mechanics_LessChoice",
+    "maxLevel": 1,
+    "name": "Domain of Blindness",
+    "startHeat": 7
+  },
+  {
+    "id": 108,
+    "desc": "All choices become randomized.",
+    "heatValue": 15,
+    "icon": "T_Rou_Contract_Mechanics_RandomChoice",
+    "maxLevel": 1,
+    "name": "Domain of Folly",
+    "startHeat": 8
+  }
+]

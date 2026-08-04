@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1201,
+    "completeNeedKillNum": 100,
+    "eventScore": 70,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1201,
+    "spawnMonsterId": [
+      2010201
+    ]
+  },
+  {
+    "id": 1202,
+    "completeNeedKillNum": 100,
+    "eventScore": 140,
+    "levelAddExtra": 5,
+    "rewardDropBoxId": 1202,
+    "spawnMonsterId": [
+      2010201
+    ]
+  },
+  {
+    "id": 1203,
+    "completeNeedKillNum": 100,
+    "eventScore": 210,
+    "levelAddExtra": 10,
+    "rewardDropBoxId": 1203,
+    "spawnMonsterId": [
+      2010201
+    ]
+  },
+  {
+    "id": 1204,
+    "completeNeedKillNum": 100,
+    "eventScore": 280,
+    "levelAddExtra": 15,
+    "rewardDropBoxId": 1204,
+    "spawnMonsterId": [
+      2010201
+    ]
+  },
+  {
+    "id": 1205,
+    "completeNeedKillNum": 100,
+    "eventScore": 350,
+    "levelAddExtra": 20,
+    "rewardDropBoxId": 1205,
+    "spawnMonsterId": [
+      2010201
+    ]
+  }
+]

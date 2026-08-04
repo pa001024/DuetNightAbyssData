@@ -1,0 +1,126 @@
+[
+  {
+    "id": -1,
+    "treasureRandom": -1
+  },
+  {
+    "id": 1,
+    "randomType": 1,
+    "treasureRandom": 1,
+    "treasureRarity": [
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "randomType": 1,
+    "treasureRandom": 2,
+    "treasureRarity": [
+      2
+    ]
+  },
+  {
+    "id": 3,
+    "randomType": 1,
+    "treasureRandom": 3,
+    "treasureRarity": [
+      3
+    ]
+  },
+  {
+    "id": 4,
+    "randomType": 1,
+    "treasureRandom": 4,
+    "treasureRarity": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 5,
+    "randomType": 1,
+    "treasureRandom": 5,
+    "treasureRarity": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 6,
+    "randomType": 1,
+    "treasureRandom": 6,
+    "treasureRarity": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 7,
+    "randomType": 2,
+    "treasureRandom": 7,
+    "treasureRarity": [
+      1
+    ]
+  },
+  {
+    "id": 8,
+    "randomType": 2,
+    "treasureRandom": 8,
+    "treasureRarity": [
+      2
+    ]
+  },
+  {
+    "id": 9,
+    "randomType": 2,
+    "treasureRandom": 9,
+    "treasureRarity": [
+      3
+    ]
+  },
+  {
+    "id": 10,
+    "randomType": 2,
+    "treasureRandom": 10,
+    "treasureRarity": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 11,
+    "randomType": 2,
+    "treasureRandom": 11,
+    "treasureRarity": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 12,
+    "randomType": 2,
+    "treasureRandom": 12,
+    "treasureRarity": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 1001,
+    "treasureRandom": 1001
+  },
+  {
+    "id": 1002,
+    "treasureRandom": 1002
+  },
+  {
+    "id": 1003,
+    "treasureRandom": 1003
+  },
+  {
+    "id": 1004,
+    "treasureRandom": 1004
+  }
+]

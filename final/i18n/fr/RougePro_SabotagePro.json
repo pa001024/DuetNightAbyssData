@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1501,
+    "eventScore": 70,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1501,
+    "spawnMonsterId": [
+      2010501
+    ]
+  },
+  {
+    "id": 1502,
+    "eventScore": 140,
+    "levelAddExtra": 5,
+    "rewardDropBoxId": 1502,
+    "spawnMonsterId": [
+      2010502
+    ]
+  },
+  {
+    "id": 1503,
+    "eventScore": 210,
+    "levelAddExtra": 10,
+    "rewardDropBoxId": 1503,
+    "spawnMonsterId": [
+      2010502
+    ]
+  },
+  {
+    "id": 1504,
+    "eventScore": 280,
+    "levelAddExtra": 15,
+    "rewardDropBoxId": 1504,
+    "spawnMonsterId": [
+      2010502
+    ]
+  },
+  {
+    "id": 1505,
+    "eventScore": 350,
+    "levelAddExtra": 20,
+    "rewardDropBoxId": 1505,
+    "spawnMonsterId": [
+      2010502
+    ]
+  }
+]

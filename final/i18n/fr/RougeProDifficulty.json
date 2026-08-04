@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "completeScore": 0,
+    "endPointsRate": 1,
+    "recommendLevel": 0,
+    "roomLevel": [
+      10
+    ],
+    "unlockLevel": 0
+  },
+  {
+    "id": 101,
+    "completeScore": 3000,
+    "endPointsRate": 1,
+    "recommendLevel": 30,
+    "roomLevel": [
+      30
+    ],
+    "unlockLevel": 15
+  },
+  {
+    "id": 102,
+    "completeScore": 4500,
+    "endPointsRate": 1,
+    "recommendLevel": 40,
+    "roomLevel": [
+      40
+    ],
+    "unlockLevel": 25
+  },
+  {
+    "id": 103,
+    "completeScore": 6500,
+    "endPointsRate": 1,
+    "recommendLevel": 50,
+    "roomLevel": [
+      50
+    ],
+    "unlockLevel": 35
+  },
+  {
+    "id": 104,
+    "completeScore": 9500,
+    "endPointsRate": 1,
+    "recommendLevel": 60,
+    "roomLevel": [
+      60
+    ],
+    "unlockLevel": 45
+  },
+  {
+    "id": 105,
+    "completeScore": 14000,
+    "endPointsRate": 1,
+    "recommendLevel": 70,
+    "roomLevel": [
+      70
+    ],
+    "unlockLevel": 55
+  },
+  {
+    "id": 106,
+    "completeScore": 22000,
+    "endPointsRate": 1,
+    "recommendLevel": 80,
+    "roomLevel": [
+      80
+    ],
+    "unlockLevel": 60
+  }
+]

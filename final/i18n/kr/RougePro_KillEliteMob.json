@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1601,
+    "eliteId": [
+      6002015
+    ],
+    "eventScore": 70,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1601
+  },
+  {
+    "id": 1602,
+    "eliteId": [
+      6002016
+    ],
+    "eventScore": 140,
+    "levelAddExtra": 5,
+    "rewardDropBoxId": 1602
+  },
+  {
+    "id": 1603,
+    "eliteId": [
+      6002017
+    ],
+    "eventScore": 210,
+    "levelAddExtra": 10,
+    "rewardDropBoxId": 1603
+  },
+  {
+    "id": 1604,
+    "eliteId": [
+      6002018
+    ],
+    "eventScore": 280,
+    "levelAddExtra": 15,
+    "rewardDropBoxId": 1604
+  },
+  {
+    "id": 1605,
+    "eliteId": [
+      6002019
+    ],
+    "eventScore": 350,
+    "levelAddExtra": 20,
+    "rewardDropBoxId": 1605
+  }
+]

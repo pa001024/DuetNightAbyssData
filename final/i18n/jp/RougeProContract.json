@@ -1,0 +1,94 @@
+[
+  {
+    "id": 101,
+    "desc": "自身の受ける回復効果が<Highlight>20.0%</>ダウン。",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "globalPassiveId": 30101001,
+    "heatValue": 1,
+    "icon": "T_Rou_Contract_Char_HealDown",
+    "maxLevel": 20,
+    "name": "窒息の域",
+    "startHeat": 1
+  },
+  {
+    "id": 102,
+    "desc": "自身の攻撃力が<Highlight>20.0%</>ダウン。",
+    "descValues": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30101002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_SpDown",
+    "maxLevel": 5,
+    "name": "疲労の域",
+    "startHeat": 2
+  },
+  {
+    "id": 103,
+    "desc": "敵の最大HPが<Highlight>40.0%</>アップ。",
+    "descValues": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "繁栄の域",
+    "startHeat": 3
+  },
+  {
+    "id": 104,
+    "desc": "敵の攻撃力が<Highlight>20.0%</>アップ。",
+    "descValues": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon__AtkUp",
+    "maxLevel": 5,
+    "name": "苦痛の域",
+    "startHeat": 4
+  },
+  {
+    "id": 105,
+    "desc": "敵の被ダメージが<Highlight>20.0%</>ダウン。",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "globalPassiveId": 30102003,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "鈍感の域",
+    "startHeat": 5
+  },
+  {
+    "id": 106,
+    "desc": "謎の行商人のもとで取引をする時、必要なエンバーが<Highlight>50%</>増加。",
+    "heatValue": 10,
+    "icon": "T_Rou_Contract_Mechanics_CostUp",
+    "maxLevel": 1,
+    "name": "枯渇の域",
+    "startHeat": 6
+  },
+  {
+    "id": 107,
+    "desc": "選択時、選択肢が1つ<Highlight>減少</>。",
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Mechanics_LessChoice",
+    "maxLevel": 1,
+    "name": "盲目の域",
+    "startHeat": 7
+  },
+  {
+    "id": 108,
+    "desc": "選択時、選択肢がランダムに強制決定。",
+    "heatValue": 15,
+    "icon": "T_Rou_Contract_Mechanics_RandomChoice",
+    "maxLevel": 1,
+    "name": "愚痴の域",
+    "startHeat": 8
+  }
+]

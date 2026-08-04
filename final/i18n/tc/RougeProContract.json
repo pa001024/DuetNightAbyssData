@@ -1,0 +1,94 @@
+[
+  {
+    "id": 101,
+    "desc": "自身受到的治療降低<Highlight>20.0%</>。",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    ],
+    "globalPassiveId": 30101001,
+    "heatValue": 1,
+    "icon": "T_Rou_Contract_Char_HealDown",
+    "maxLevel": 20,
+    "name": "窒息之域",
+    "startHeat": 1
+  },
+  {
+    "id": 102,
+    "desc": "自身攻擊降低<Highlight>20.0%</>。",
+    "descValues": [
+      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30101002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Char_SpDown",
+    "maxLevel": 5,
+    "name": "困頓之域",
+    "startHeat": 2
+  },
+  {
+    "id": 103,
+    "desc": "敵人最大生命提高<Highlight>40.0%</>。",
+    "descValues": [
+      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102001,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "滋長之域",
+    "startHeat": 3
+  },
+  {
+    "id": 104,
+    "desc": "敵人攻擊提高<Highlight>20.0%</>。",
+    "descValues": [
+      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    ],
+    "globalPassiveId": 30102002,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon__AtkUp",
+    "maxLevel": 5,
+    "name": "折磨之域",
+    "startHeat": 4
+  },
+  {
+    "id": 105,
+    "desc": "敵人受到的傷害降低<Highlight>20.0%</>。",
+    "descValues": [
+      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    ],
+    "globalPassiveId": 30102003,
+    "heatValue": 2,
+    "icon": "T_Rou_Contract_Mon_HpUp",
+    "maxLevel": 5,
+    "name": "麻木之域",
+    "startHeat": 5
+  },
+  {
+    "id": 106,
+    "desc": "在深淵行商處購買時，所需余燼提高<Highlight>50%</>。",
+    "heatValue": 10,
+    "icon": "T_Rou_Contract_Mechanics_CostUp",
+    "maxLevel": 1,
+    "name": "乾涸之域",
+    "startHeat": 6
+  },
+  {
+    "id": 107,
+    "desc": "每次抉擇時，可選抉擇<Highlight>減少</>1個。",
+    "heatValue": 5,
+    "icon": "T_Rou_Contract_Mechanics_LessChoice",
+    "maxLevel": 1,
+    "name": "盲目之域",
+    "startHeat": 7
+  },
+  {
+    "id": 108,
+    "desc": "每次抉擇時，強制進行隨機抉擇。",
+    "heatValue": 15,
+    "icon": "T_Rou_Contract_Mechanics_RandomChoice",
+    "maxLevel": 1,
+    "name": "癡愚之域",
+    "startHeat": 8
+  }
+]

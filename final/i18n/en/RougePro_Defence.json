@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1301,
+    "defenceRound": 3,
+    "eventScore": 70,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1301,
+    "spawnMonsterId": [
+      2010301
+    ]
+  },
+  {
+    "id": 1302,
+    "defenceRound": 3,
+    "eventScore": 140,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1302,
+    "spawnMonsterId": [
+      2010301
+    ]
+  },
+  {
+    "id": 1303,
+    "defenceRound": 3,
+    "eventScore": 210,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1303,
+    "spawnMonsterId": [
+      2010301
+    ]
+  },
+  {
+    "id": 1304,
+    "defenceRound": 3,
+    "eventScore": 280,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1304,
+    "spawnMonsterId": [
+      2010301
+    ]
+  },
+  {
+    "id": 1305,
+    "defenceRound": 3,
+    "eventScore": 350,
+    "levelAddExtra": 0,
+    "rewardDropBoxId": 1305,
+    "spawnMonsterId": [
+      2010301
+    ]
+  }
+]

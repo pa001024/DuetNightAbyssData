@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "rarity": [
+      1,
+      2
+    ],
+    "shopRandom": 1,
+    "treasure": [
+      3,
+      4
+    ]
+  },
+  {
+    "id": 2,
+    "rarity": [
+      1,
+      2,
+      3
+    ],
+    "shopRandom": 2,
+    "treasure": [
+      4,
+      5
+    ]
+  },
+  {
+    "id": 3,
+    "rarity": [
+      1,
+      2,
+      3
+    ],
+    "shopRandom": 3,
+    "treasure": [
+      5,
+      7
+    ]
+  },
+  {
+    "id": 101,
+    "rarity": [
+      2
+    ],
+    "shopRandom": 101,
+    "treasure": [
+      4,
+      5
+    ]
+  },
+  {
+    "id": 102,
+    "rarity": [
+      2,
+      3
+    ],
+    "shopRandom": 102,
+    "treasure": [
+      5,
+      6
+    ]
+  },
+  {
+    "id": 103,
+    "rarity": [
+      3
+    ],
+    "shopRandom": 103,
+    "treasure": [
+      4,
+      5
+    ]
+  }
+]

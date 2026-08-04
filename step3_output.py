@@ -78,6 +78,7 @@ from processor.treasure_hunt_story_dungeon_processor import (
     TreasureHuntStoryDungeonProcessor,
 )
 from processor.rouge_processor import (
+    ROUGE_PRO_PROCESSOR_CLASSES,
     RougeLikeBlessingProcessor,
     RougeLikeContractProcessor,
     RougeLikeRoomProcessor,
@@ -375,6 +376,7 @@ class FinalProcessor:
             "TreasureHuntStoryDungeon": TreasureHuntStoryDungeonProcessor,
             # Add other processor classes here as they are implemented
         }
+        self.processor_classes.update(ROUGE_PRO_PROCESSOR_CLASSES)
 
     def get_processor(self, file_type):
         """获取指定文件类型的处理器实例，每个调用创建新实例"""
@@ -545,6 +547,7 @@ if __name__ == "__main__":
         "TreasureHuntRepeatDungeon",
         "TreasureHuntStoryDungeon",
     ]
+    default_file_types.extend(ROUGE_PRO_PROCESSOR_CLASSES)
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表
     FILE_TYPES = args.file_types if args.file_types else default_file_types

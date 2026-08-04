@@ -1,0 +1,1764 @@
+[
+  {
+    "id": 10101,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_01",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10102,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      14
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10102,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10103,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，生命恢复最大值的y%",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_05",
+    "modEquip": "Role",
+    "name": "하사받은 신자의 병을 없애는 비누",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，生命恢复最大值的y%",
+    "treasureGroup": 1,
+    "treasureId": 10103,
+    "treasureMod": 21101031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10104,
+    "canSell": 1,
+    "desc": "（待包装）每隔x秒，神智恢复y",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_06",
+    "modEquip": "Role",
+    "name": "하사받은 신자를 각성시키는 비누",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "（待包装简）每隔x秒，神智恢复y",
+    "treasureGroup": 1,
+    "treasureId": 10104,
+    "treasureMod": 21101041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10105,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10105,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10106,
+    "canSell": 1,
+    "desc": "HP 비율이 <Highlight>$1</> 이하로 감소할 경우, <Highlight>$2</>초 동안 대미지를 받아도 경직되지 않으며 받는 대미지가 <Highlight>$3</> 감소한다. 해당 효과는 <Highlight>$4</>초마다 최대 1회 발동한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_21",
+    "modEquip": "Role",
+    "name": "고행자의 족쇄",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "HP 감소 후, 대미지를 입을 때 경직되지 않고, 받는 대미지가 감소한다.",
+    "treasureGroup": 1,
+    "treasureId": 10106,
+    "treasureMod": 21101061,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10107,
+    "canSell": 1,
+    "desc": "마령 지원 시전 후, 자신이 입히는 대미지가 <Highlight>$1</> 상승한다. 지속 시간 <Highlight>$2</>초.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_28",
+    "modEquip": "Role",
+    "name": "꼬마 길동무의 군량미",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "마령 지원 시전 후, 대미지 상승.",
+    "treasureGroup": 1,
+    "treasureId": 10107,
+    "treasureMod": 21101071,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10108,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_03",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10108,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10109,
+    "canSell": 1,
+    "desc": "캐릭터 최대 회피 횟수 <Highlight>2.0</> 증가.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_19",
+    "modEquip": "Role",
+    "name": "선구 정찰병의 전투화",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "캐릭터 최대 회피 횟수 증가.",
+    "treasureGroup": 1,
+    "treasureId": 10109,
+    "treasureMod": 21101091,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10110,
+    "canSell": 1,
+    "desc": "해당 유물 획득 후, 부활할 때마다 자신이 입히는 대미지 <Highlight>$1</> 상승 효과 1단계를 획득한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_24",
+    "modEquip": "Role",
+    "name": "광신도의 반지",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "해당 유물 획득 후, 부활할 때마다 입히는 대미지 상승.",
+    "treasureGroup": 1,
+    "treasureId": 10110,
+    "treasureMod": 21101101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10111,
+    "canSell": 1,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10111,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10112,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10112,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10113,
+    "canSell": 1,
+    "desc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자] 생성, 효과는 <Highlight>$1</>초마다 최대 1회 발동.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "바람 사냥꾼의 은 탄환",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자] 생성.",
+    "treasureGroup": 1,
+    "treasureId": 10113,
+    "treasureMod": 21101131,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10202,
+    "canSell": 1,
+    "desc": "캐릭터 스킬 시전 후, 정신력 <Highlight>$1</> 회복. 쿨타임 <Highlight>$2</>초.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_22",
+    "modEquip": "Role",
+    "name": "암월 신자의 성배",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "캐릭터 스킬 시전 후, 정신력 회복.",
+    "treasureGroup": 1,
+    "treasureId": 10202,
+    "treasureMod": 21102021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10203,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_23",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10203,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10204,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_17",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10204,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10205,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_20",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10205,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10206,
+    "canSell": 1,
+    "desc": "무기로 크리티컬 대미지를 입힐 시, 크리티컬 대미지가 <Highlight>25%</> 확률로 <Highlight>20%</> 감소, <Highlight>70%</> 확률로 <Highlight>30%</> 상승, <Highlight>5%</> 확률로 <Highlight>100%</> 상승한다. 각각 최대 5단계 중첩 가능.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_30",
+    "modEquip": "Role",
+    "name": "운 좋은 바보의 격려",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "무기로 크리티컬 대미지를 입힐 시, 크리티컬 대미지가 상승할 수 있다.",
+    "treasureGroup": 1,
+    "treasureId": 10206,
+    "treasureMod": 21102061,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10207,
+    "canSell": 1,
+    "desc": "정신력 자연 회복량 <Highlight>4.0</> 상승.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_10",
+    "modEquip": "Role",
+    "name": "치유 사제의 귀걸이",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "정신력 자연 회복량 상승.",
+    "treasureGroup": 1,
+    "treasureId": 10207,
+    "treasureMod": 21102071,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10208,
+    "canSell": 1,
+    "desc": "대미지를 받은 후 HP가 <Highlight>50%</> 미만이면 정신력을 <Highlight>100%</> 회복한다.\n정신력이 하락하여 <Highlight>50%</> 미만이 되면 HP를 <Highlight>100%</> 회복한다.\n위 효과는 <Highlight>120</>초 내에 최대 1회 발동되며, 발동 횟수를 공유한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_15",
+    "modEquip": "Role",
+    "name": "괴짜 버드맨의 카드 게임",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "HP가 낮을 시 정신력을 회복하고, 정신력이 낮을 시 HP를 회복한다.",
+    "treasureGroup": 1,
+    "treasureId": 10208,
+    "treasureMod": 21102081,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10209,
+    "canSell": 1,
+    "desc": "차지 공격 시 성검 소환 공격이 추가 1회 부여되어 공격력 <Highlight>50%</>의 대미지를 입힌다. 쿨타임 <Highlight>5</>초.\n성검 소환 20회 완료 시, 공격력 <Highlight>50%</> 대미지의 공격을 추가한다.\n성검 소환 50회 완료 시, 공격력 <Highlight>150%</> 대미지의 공격을 추가한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "적을 제압하는 기사의 성검",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "차지 시 성검을 소환하여 공격할 수 있다.",
+    "treasureGroup": 1,
+    "treasureId": 10209,
+    "treasureMod": 21102091,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10210,
+    "canSell": 1,
+    "desc": "공중에 있을 때 사격 대미지가 <Highlight>200%</> 상승하며, <Highlight>10</>회 발동 후 쿨타임에 진입한다. 쿨타임 <Highlight>5</>초.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_27",
+    "modEquip": "Role",
+    "name": "바람 사냥꾼의 탄창",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "공중 사격 대미지가 상승한다.",
+    "treasureGroup": 1,
+    "treasureId": 10210,
+    "treasureMod": 21102101,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10211,
+    "canSell": 1,
+    "desc": "지휘자 및 보스 몬스터에게 입히는 대미지가 <Highlight>80%</> 상승한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_29",
+    "modEquip": "Role",
+    "name": "선봉자의 완갑",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "지휘자 및 보스 몬스터에게 입히는 대미지가 상승한다.",
+    "treasureGroup": 1,
+    "treasureId": 10211,
+    "treasureMod": 21102111,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10212,
+    "canSell": 1,
+    "desc": "몬스터에게 발동된 추가 효과 속성의 종류가 많을수록 받는 대미지가 상승한다. 최대 <Highlight>60%</> 상승.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "부패한 피의 신자가 남긴 참회록",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "몬스터에게 발동된 추가 효과 속성의 종류가 많을수록 받는 대미지가 상승한다.",
+    "treasureGroup": 1,
+    "treasureId": 10212,
+    "treasureMod": 21102121,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10213,
+    "canSell": 1,
+    "desc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>$3</> 이하로 감소하면 추가로 캐릭터 공격력 <Highlight>$1</>의 대미지를 1회 입힌다. 해당 효과는 같은 대상에게 <Highlight>$2</>초마다 최대 1회 발동한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "기도의 메아리·화롯불",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>낮을</> 때 <Highlight>추가</> 대미지를 입힌다.",
+    "treasureGroup": 1,
+    "treasureId": 10213,
+    "treasureMod": 21102131,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10214,
+    "canSell": 1,
+    "desc": "자신과의 거리가 <Highlight>$2</>m 이상인 대상에게 원거리 무기 대미지를 입힐 시, 받는 원거리 무기 대미지 <Highlight>$1</> 상승 효과 1단계를 부여한다. 최대 <Highlight>$3</>까지 상승.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "기도의 메아리·부유하는 달",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "자신과의 거리가 먼 대상에게 원거리 무기 대미지를 입힐 시, 대상이 받는 원거리 대미지가 점점 상승한다.",
+    "treasureGroup": 1,
+    "treasureId": 10214,
+    "treasureMod": 21102141,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10215,
+    "canSell": 1,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10215,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10216,
+    "canSell": 1,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10216,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10217,
+    "canSell": 1,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10217,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10218,
+    "canSell": 1,
+    "desc": "자신이 소환물을 생성한 후 속성 관통이 <Highlight>30%</> 상승한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "기도의 메아리·빛을 품는 벌레",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "자신이 소환물을 생성한 후 속성 관통이 상승한다.",
+    "treasureGroup": 1,
+    "treasureId": 10218,
+    "treasureMod": 21102181,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10219,
+    "canSell": 1,
+    "desc": "격양과 필사를 계산할 때 자신의 HP 비율을 강제로 <Highlight>1%</>로 간주한다. 격양이 <Highlight>30%</>보다 높을 때는 적용되지 않는다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "기도의 메아리·흡혈 꽃",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "격양과 필사를 계산할 때 자신의 HP 비율을 강제로 <Highlight>1%</>로 간주한다. 격양이 <Highlight>30%</>보다 높을 때는 적용되지 않는다.",
+    "treasureGroup": 1,
+    "treasureId": 10219,
+    "treasureMod": 21102191,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10220,
+    "canSell": 1,
+    "desc": "근접 무기로 대미지를 입힐 시 대상이 받는 대미지가 <Highlight>2.5%</> 상승한다. 지속 시간 <Highlight>5</>초, 최대 <Highlight>10</>단계 중첩.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "선봉자의 칼날",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "근접 무기로 대미지를 입힐 때 대상이 받는 대미지를 상승시킬 수 있다.",
+    "treasureGroup": 1,
+    "treasureId": 10220,
+    "treasureMod": 21102201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10301,
+    "canSell": 1,
+    "desc": "전투 스킬을 사용할 때마다 주사위를 한 번 굴리며, 숫자가 클수록 더 높은 대미지 상승 효과를 얻는다. 최대 <Highlight>120%</> 상승. 전투 스킬을 사용하지 않으면 숫자는 변하지 않는다. 초기 기본값은 1.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_16",
+    "modEquip": "Role",
+    "name": "괴짜 버드맨의 마술",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "전투 스킬을 사용할 때마다 주사위를 한 번 굴린다. 나온 숫자가 클수록 더 높은 대미지 상승 효과를 얻는다.",
+    "treasureGroup": 1,
+    "treasureId": 10301,
+    "treasureMod": 21103011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10302,
+    "canSell": 1,
+    "desc": "유물을 <Highlight>1</>개 보유할 때마다 입히는 대미지가 <Highlight>$1</> 상승한다.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_18",
+    "modEquip": "Role",
+    "name": "'관대' 님의 은혜",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "유물이 많을수록, 입히는 대미지가 높아진다.",
+    "treasureGroup": 1,
+    "treasureId": 10302,
+    "treasureMod": 21103021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10303,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_08",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10303,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10304,
+    "canSell": 1,
+    "desc": "입힌 대미지가 <Highlight>$1</> 이하일 시, <Highlight>$2</>의 고정 대미지를 추가로 1회 입힌다.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_54",
+    "modEquip": "Role",
+    "name": "방황하는 기사의 꿈",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "입힌 대미지가 일정 수치 이하일 시, 고정 대미지를 추가로 1회 입힌다.",
+    "treasureGroup": 1,
+    "treasureId": 10304,
+    "treasureMod": 21103041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10305,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10305,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10306,
+    "desc": "자신이 아군에게 버프 효과를 부여할 때, <Highlight>50%</> 대미지 상승과 <Highlight>30%</> 대미지 감소를 추가로 획득한다.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "추운 밤의 따스한 빵",
+    "simpleDesc": "자신이 아군에게 버프 효과를 부여할 때, 대미지 상승과 대미지 감소 효과를 추가로 획득한다.",
+    "treasureGroup": 1,
+    "treasureId": 10306,
+    "treasureMod": 21103061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 10307,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_31",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 1,
+    "treasureId": 10307,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 11201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 11,
+    "treasureId": 11201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 11202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 11,
+    "treasureId": 11202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 12201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 12,
+    "treasureId": 12201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 12202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 12,
+    "treasureId": 12202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 13201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 13,
+    "treasureId": 13201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 13202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 13,
+    "treasureId": 13202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 14201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 14,
+    "treasureId": 14201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 14202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 14,
+    "treasureId": 14202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 15201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 15,
+    "treasureId": 15201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 15202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 15,
+    "treasureId": 15202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 16201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_13",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 16,
+    "treasureId": 16201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 16202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_14",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 16,
+    "treasureId": 16202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 17101,
+    "canSell": 1,
+    "desc": "동조 무기로 대미지를 입힐 시 자신의 정신력을 <Highlight>1</> 회복한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "진홍의 짐승: 회상",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "동조 무기로 대미지를 입힐 시 정신력을 회복한다.",
+    "treasureGroup": 17,
+    "treasureId": 17101,
+    "treasureMod": 21171011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 17201,
+    "canSell": 1,
+    "desc": "동조 무기로 대미지를 입힐 시 스킬 대미지가 <Highlight>30%</> 상승한다. 지속 시간 <Highlight>5</>초, 쿨타임 <Highlight>5</>초.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "진홍의 짐승: 애원",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "동조 무기로 대미지를 입힐 시 스킬 대미지가 상승한다.",
+    "treasureGroup": 17,
+    "treasureId": 17201,
+    "treasureMod": 21172011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 18101,
+    "desc": "팀원이 <Highlight>20</>m 내에 있을 때 <Highlight>2</>초마다 정신력을 <Highlight>1</> 회복한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "새들의 비상: 울부짖음",
+    "simpleDesc": "근처에 팀원이 있을 때, 지속적으로 정신력을 회복한다.",
+    "treasureGroup": 18,
+    "treasureId": 18101,
+    "treasureMod": 21181011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 18201,
+    "desc": "팀원이 <Highlight>20</>m 내에 있을 때 <Highlight>2</>초마다 최대 HP의 <Highlight>3%</>를 회복한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "새들의 비상 - 비호",
+    "simpleDesc": "근처에 팀원이 있을 때, 지속적으로 HP를 회복한다.",
+    "treasureGroup": 18,
+    "treasureId": 18201,
+    "treasureMod": 21182011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 18301,
+    "desc": "팀원이 <Highlight>20</>m 내에 있을 때 <Highlight>2</>초마다 <Highlight>5</>개의 잿불을 획득한다.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "modEquip": "Role",
+    "name": "새들의 비상 - 양육",
+    "simpleDesc": "근처에 동료가 있을 때, 지속적으로 잿불을 회복한다.",
+    "treasureGroup": 18,
+    "treasureId": 18301,
+    "treasureMod": 21183011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 19101,
+    "canSell": 1,
+    "desc": "실드 보유 시 받는 대미지가 <Highlight>$1</> 감소한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_34",
+    "modEquip": "Role",
+    "name": "호위 기사의 방패",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "실드 보유 시 받는 대미지가 감소한다.",
+    "treasureGroup": 19,
+    "treasureId": 19101,
+    "treasureMod": 21191011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 19201,
+    "canSell": 1,
+    "desc": "실드 보유 시 입히는 대미지가 <Highlight>$1</> 상승한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_33",
+    "modEquip": "Role",
+    "name": "호위 기사의 날카로운 검",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "실드 보유 시 입히는 대미지가 상승한다.",
+    "treasureGroup": 19,
+    "treasureId": 19201,
+    "treasureMod": 21192011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20001,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      1
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_02",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20001,
+    "treasureId": 20001,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20002,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      2
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "그것은 길을 잃은 자를 인도하는 자비로운 신들을 찬양하는 송가로, 세상에 모르는 이가 없다. 경건한 엘리시안 신자들은 심연에서 조각난 선율을 흥얼거리며, 신들이 그들을 인도해, 고난에서 약속의 하늘로 데려가 주기를 기도한다. 금빛 선율이 흐르고, 그들은 행복한 기대 속에서 영원히 눈을 감는다.",
+    "icon": "T_Rouge_Treasure_07",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20002,
+    "treasureId": 20002,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20003,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      3
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "그림자가 사방에서 몰려와 무리를 에워쌌다. 기사는 홀로 어둠 속으로 뛰어들어, 한 가닥 살길을 열었다. 치유 사제는 캄캄한 안개 속에서 만신창이가 된 기사의 몸을 이끌고 돌아왔다.\n'나는 반드시 그녀를 살릴 것이다.' 치유 사제는 마음속으로 맹세했다. 치유술의 의의는, 용감한 사람의 희생이 결코 헛되지 않게 하는 것이니까.",
+    "icon": "T_Rouge_Treasure_09",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20003,
+    "treasureId": 20003,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20004,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      4
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "먼 길에는 진리와 고통이 섞여 있다. 밤의 종소리가 울리거늘, 떠돌이 새는 왜 둥지로 돌아가려 하지 않는가?\n높은 탑은 대륙의 중심이 아니고, 신은 만물의 근원이 아니기 때문이다. 설령 평생 족쇄와 수갑이 채워진다 해도, 그는 오직 자신의 세계로만 세상을 가늠할 수 있다고 믿고 있다.",
+    "icon": "T_Rouge_Treasure_21",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20004,
+    "treasureId": 20004,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20005,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      5
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
+    "icon": "T_Rouge_Treasure_32",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20005,
+    "treasureId": 20005,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20006,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      6
+    ],
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "그녀는 어렸을 때부터 기사인 언니를 숭배했다. 언니는 강하고 똑똑해서, 어떤 임무든 맡아서 척척 해냈다.\n사람들은 성스러운 호수 아래 심연이 가장 위험한 전쟁터이며, 가장 용맹한 기사도 돌아올 수 없다고 입을 모아 말했다. 하지만 그녀의 언니는 살아서 돌아왔다.\n다만, 언니는 살아있지만, 말을 하지 않게 됐다.",
+    "icon": "T_Rouge_Treasure_42",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20006,
+    "treasureId": 20006,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20007,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "effect": [
+      7
+    ],
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "어른들은 언니가 성스러운 호수에서 신을 노하게 하는 바람에, 신이 언니의 영혼을 가져갔다고 했다.\n그럴 리 없다. 언니는 정직하고 경건한 기사였으므로, 분명히 실수로 영혼을 잃었을 것이다. 아무도 믿지 않는다면, 내가 증명할 것이다.\n내가 심연에 들어가, 언니의 잃어버린 영혼을 되찾아 올 것이다.",
+    "icon": "T_Rouge_Treasure_43",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 20007,
+    "treasureId": 20007,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20101,
+    "canSell": 1,
+    "desc": "스킬을 1회 사용할 때마다 근접 무기 대미지가 20% 상승한다. 효과는 최대 20단계 중첩되고, 5초마다 1단계씩 감소한다.\n스킬과 원거리 대미지가 50% 감소한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "괴짜 버드맨의 장난감 Ⅰ",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "스킬 사용 후 근접 무기 대미지가 상승한다.",
+    "treasureGroup": 20,
+    "treasureId": 20101,
+    "treasureMod": 21201011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20102,
+    "canSell": 1,
+    "desc": "스킬을 1회 사용할 때마다 원거리 무기 대미지가 20% 상승한다. 효과는 최대 20단계 중첩되고, 5초마다 1단계씩 감소한다.\n스킬과 근접 무기 대미지가 50% 감소한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "괴짜 버드맨의 장난감 Ⅱ",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "스킬 사용 후 원거리 무기 대미지가 상승한다.",
+    "treasureGroup": 20,
+    "treasureId": 20102,
+    "treasureMod": 21201021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 20201,
+    "canSell": 1,
+    "desc": "스킬을 1회 사용할 때마다 스킬 대미지가 20% 상승한다. 효과는 최대 20단계 중첩되고, 5초마다 1단계씩 감소한다.\n근접 및 원거리 무기 대미지가 50% 감소한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_32",
+    "modEquip": "Role",
+    "name": "괴짜 버드맨의 장난감 Ⅲ",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "스킬 사용 후 스킬 대미지가 상승한다.",
+    "treasureGroup": 20,
+    "treasureId": 20201,
+    "treasureMod": 21202011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 21101,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_35",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 21,
+    "treasureId": 21101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 21201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_36",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 21,
+    "treasureId": 21201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 21301,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_37",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 21,
+    "treasureId": 21301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 22101,
+    "canSell": 1,
+    "desc": "대미지를 입힐 시, <Highlight>$1</> 확률로 캐릭터 공격력 <Highlight>$2</>의 추가 불 속성 대미지를 입힌다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_38",
+    "modEquip": "Role",
+    "name": "불타는 듯한 명인",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 불 속성 대미지를 입힌다.",
+    "treasureGroup": 22,
+    "treasureId": 22101,
+    "treasureMod": 21221011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 22102,
+    "canSell": 1,
+    "desc": "대미지를 입힐 시, <Highlight>$1</> 확률로 캐릭터 공격력 <Highlight>$2</>의 추가 물 속성 대미지를 입힌다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_39",
+    "modEquip": "Role",
+    "name": "흐르는 물에 새겨진 명인",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 물 속성 대미지를 입힌다.",
+    "treasureGroup": 22,
+    "treasureId": 22102,
+    "treasureMod": 21221021,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 22103,
+    "canSell": 1,
+    "desc": "대미지를 입힐 시, <Highlight>$1</> 확률로 캐릭터 공격력 <Highlight>$2</>의 추가 바람 속성 대미지를 입힌다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_40",
+    "modEquip": "Role",
+    "name": "광풍에 부식된 각인",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 바람 속성 대미지를 입힌다.",
+    "treasureGroup": 22,
+    "treasureId": 22103,
+    "treasureMod": 21221031,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 22104,
+    "canSell": 1,
+    "desc": "대미지를 입힐 시, <Highlight>$1</> 확률로 캐릭터 공격력 <Highlight>$2</>의 추가 번개 속성 대미지를 입힌다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_41",
+    "modEquip": "Role",
+    "name": "천둥과 번개를 치는 명인",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 번개 속성 대미지를 입힌다.",
+    "treasureGroup": 22,
+    "treasureId": 22104,
+    "treasureMod": 21221041,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 23101,
+    "canSell": 1,
+    "desc": "스킬 효율이 <Highlight>$1</> 감소하는 대신, 입히는 대미지가 <Highlight>$2</> 상승한다.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_42",
+    "modEquip": "Role",
+    "name": "속죄하는 기사의 비갑",
+    "shopPrices": 200,
+    "shopWeight": 1000,
+    "simpleDesc": "스킬 효율이 감소하는 대신, 입히는 대미지가 상승한다.",
+    "treasureGroup": 23,
+    "treasureId": 23101,
+    "treasureMod": 21231011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 23201,
+    "canSell": 1,
+    "desc": "근접 무기 대미지가 <Highlight>$1</> 감소하는 대신, 입히는 대미지가 <Highlight>$2</> 상승한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_43",
+    "modEquip": "Role",
+    "name": "속죄하는 기사의 녹슨 검",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "근접 무기 대미지가 감소하는 대신, 입히는 대미지가 상승한다.",
+    "treasureGroup": 23,
+    "treasureId": 23201,
+    "treasureMod": 21232011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 23202,
+    "canSell": 1,
+    "desc": "원거리 무기 대미지가 <Highlight>$1</> 감소하는 대신, 입히는 대미지가 <Highlight>$2</> 상승한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_44",
+    "modEquip": "Role",
+    "name": "속죄하는 기사의 낡은 총",
+    "shopPrices": 400,
+    "shopWeight": 500,
+    "simpleDesc": "원거리 무기 대미지가 감소하는 대신, 입히는 대미지가 상승한다.",
+    "treasureGroup": 23,
+    "treasureId": 23202,
+    "treasureMod": 21232021,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 23301,
+    "canSell": 1,
+    "desc": "받는 대미지가 <Highlight>$1</> 상승하는 대신, 입히는 대미지가 <Highlight>$2</> 상승한다.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_45",
+    "modEquip": "Role",
+    "name": "속죄하는 기사의 펜던트",
+    "shopPrices": 800,
+    "shopWeight": 200,
+    "simpleDesc": "받는 대미지가 상승하는 대신, 입히는 대미지가 상승한다.",
+    "treasureGroup": 23,
+    "treasureId": 23301,
+    "treasureMod": 21233011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 24101,
+    "desc": "적의 남은 [전투 태세]가 <Highlight>$1</> 이상일 시, 캐릭터가 대미지를 입힐 때 정신력을 <Highlight>$2</> 회복한다. 쿨타임 <Highlight>$3</>초.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_53",
+    "modEquip": "Role",
+    "name": "유망술사의 장궁",
+    "simpleDesc": "적의 남은 [전투 태세]가 일정 수치 이상일 시, 캐릭터가 대미지를 입힐 때 정신력을 회복한다.",
+    "treasureGroup": 24,
+    "treasureId": 24101,
+    "treasureMod": 21241011,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 24201,
+    "desc": "적의 남은 [전투 태세]가 <Highlight>$1</> 이하일 시, 캐릭터가 입히는 대미지가 <Highlight>$2</> 상승한다.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_52",
+    "modEquip": "Role",
+    "name": "유망술사의 부러진 화살",
+    "simpleDesc": "적의 남은 [전투 태세]가 일정 수치 이하일 시, 캐릭터가 입히는 대미지가 상승한다.",
+    "treasureGroup": 24,
+    "treasureId": 24201,
+    "treasureMod": 21242011,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 25301,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_46",
+    "modEquip": "Role",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 25,
+    "treasureId": 25301,
+    "treasureMod": 21253011,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 25302,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_47",
+    "modEquip": "Role",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 25,
+    "treasureId": 25302,
+    "treasureMod": 21253021,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 25303,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_48",
+    "modEquip": "Role",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 25,
+    "treasureId": 25303,
+    "treasureMod": 21253031,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 25304,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_49",
+    "modEquip": "Role",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 25,
+    "treasureId": 25304,
+    "treasureMod": 21253041,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 25305,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_50",
+    "modEquip": "Role",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 25,
+    "treasureId": 25305,
+    "treasureMod": 21253051,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 25306,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_51",
+    "modEquip": "Role",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 25,
+    "treasureId": 25306,
+    "treasureMod": 21253061,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 26101,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      10
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 26,
+    "treasureId": 26101,
+    "treasureRarity": 1,
+    "treasureWeight": 1000,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 26201,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 26,
+    "treasureId": 26201,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 26202,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      20
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 26,
+    "treasureId": 26202,
+    "treasureRarity": 2,
+    "treasureWeight": 500,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  },
+  {
+    "id": 26301,
+    "desc": "심연 행상인의 모든 상품 가격 <Highlight>@1</> 감소.",
+    "endPoints": [
+      40
+    ],
+    "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
+    "icon": "T_Rouge_Treasure_04",
+    "name": "심연 행상인의 할인 쿠폰",
+    "simpleDesc": "심연 행상인의 모든 상품 가격 감소.",
+    "treasureGroup": 26,
+    "treasureId": 26301,
+    "treasureRarity": 3,
+    "treasureWeight": 200,
+    "unique": true,
+    "unlockConditionText": "유물 미해제"
+  }
+]

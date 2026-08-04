@@ -2,3362 +2,2452 @@
   {
     "id": 101,
     "name": "담금질한 칼날",
-    "desc": "근접 무기 공격이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "근접 무기 <Highlight>공격</> 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "근접 무기 공격이 <Highlight>30.0%</> 상승한다.",
+    "simpleDesc": "근접 무기 <Highlight>공격</> 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 1,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 1,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 102,
     "name": "연쇄의 칼날",
-    "desc": "근접 무기 발동 확률이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "근접 무기 <Highlight>발동 확률</> 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "근접 무기 발동 확률이 <Highlight>135.0%</> 상승한다.",
+    "simpleDesc": "근접 무기 <Highlight>발동 확률</> 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 2,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 2,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 103,
     "name": "격투의 칼날",
-    "desc": "근접 무기 <Highlight>기본 공격 대미지</>가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "근접 무기 <Highlight>기본 공격 대미지</> 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "근접 무기 <Highlight>기본 공격 대미지</>가 <Highlight>15.0%</> 상승한다.",
+    "simpleDesc": "근접 무기 <Highlight>기본 공격 대미지</> 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 3,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 3,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 104,
     "name": "용광로의 선물",
-    "desc": "<Highlight>$2</>m 내의 적이 처치될 시, 자신이 HP를 <Highlight>$1</> 회복한다.",
-    "simple_desc": "<Highlight>가까운</> 적 처치 시, 자신의 HP 회복",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>8.0</>m 내의 적이 처치될 시, 자신이 HP를 <Highlight>4.5%</> 회복한다.",
+    "simpleDesc": "<Highlight>가까운</> 적 처치 시, 자신의 HP 회복",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 4,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 4,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 105,
     "name": "용광로의 의식",
-    "desc": "자신 주변 <Highlight>$2</>m 내에 있거나 [염화]를 보유한 적으로부터 받는 대미지가 <Highlight>$1</> 감소한다.",
-    "simple_desc": "<Highlight>가까운 곳</>에 있거나 [염화]를 보유한 적으로부터 받는 대미지가 감소한다.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신 주변 <Highlight>8.0</>m 내에 있거나 [염화]를 보유한 적으로부터 받는 대미지가 <Highlight>20.0%</> 감소한다.",
+    "simpleDesc": "<Highlight>가까운 곳</>에 있거나 [염화]를 보유한 적으로부터 받는 대미지가 감소한다.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 5,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 5,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 106,
     "name": "되살아난 들불",
-    "desc": "대미지를 받을 때 자신 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다. 해당 효과는 <Highlight>$1</>초마다 최대 1회 발동한다.",
-    "simple_desc": "대미지를 받을 시 <Highlight>가까운 곳</>의 적에게 [염화]를 부여한다.",
-    "blessing_group": 1,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "대미지를 받을 때 자신 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다. 해당 효과는 <Highlight>1.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "대미지를 받을 시 <Highlight>가까운 곳</>의 적에게 [염화]를 부여한다.",
+    "blessingGroup": 1,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 6,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 6,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 107,
     "name": "기교의 칼날",
-    "desc": "근접 무기의 <Highlight>크리티컬 확률</>이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "근접 무기 <Highlight>크리티컬 확률</> 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "근접 무기의 <Highlight>크리티컬 확률</>이 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "근접 무기 <Highlight>크리티컬 확률</> 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 7,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 7,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 108,
     "name": "용사의 칼날",
-    "desc": "근접 무기의 <Highlight>크리티컬 대미지</>가 <Highlight>#1</> 상승한다.",
-    "simple_desc": "근접 무기 <Highlight>크리티컬 대미지</> 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "근접 무기의 <Highlight>크리티컬 대미지</>가 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "근접 무기 <Highlight>크리티컬 대미지</> 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 8,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 8,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 109,
     "name": "분출의 칼날",
-    "desc": "근접 무기 <Highlight>낙하 공격, 차지 공격, 슬라이드 공격 대미지</>가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "근접 무기 <Highlight>낙하 공격, 차지 공격, 슬라이드 공격 대미지</> 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "근접 무기 <Highlight>낙하 공격, 차지 공격, 슬라이드 공격 대미지</>가 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "근접 무기 <Highlight>낙하 공격, 차지 공격, 슬라이드 공격 대미지</> 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 9,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 9,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 110,
     "name": "꺼지지 않는 들불",
-    "desc": "<Highlight>$1</>초마다 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다.",
-    "simple_desc": "일정 시간마다 <Highlight>가까운 곳</>의 적에게 [염화]를 부여한다.",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>1.0</>초마다 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다.",
+    "simpleDesc": "일정 시간마다 <Highlight>가까운 곳</>의 적에게 [염화]를 부여한다.",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 10,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 10,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 111,
     "name": "담금질 선물",
-    "desc": "<Highlight>$3</>단계 이상의 [염화]를 보유한 적에게 대미지를 입힐 시, 자신이 HP를 <Highlight>$1</> 회복한다. 해당 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "[염화]를 보유한 적에게 대미지를 입힐 시, HP를 회복한다.",
-    "blessing_group": 1,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>2.0</>단계 이상의 [염화]를 보유한 적에게 대미지를 입힐 시, 자신이 HP를 <Highlight>3.0%</> 회복한다. 해당 효과는 <Highlight>0.5</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "[염화]를 보유한 적에게 대미지를 입힐 시, HP를 회복한다.",
+    "blessingGroup": 1,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5041,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 11,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 11,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 112,
     "name": "종횡 칼날",
-    "desc": "근접 무기 <Highlight>공격 속도</>가 <Highlight>#1</> 상승하고, <Highlight>공격 범위</>가 <Highlight>#2</> 증가한다.",
-    "simple_desc": "근접 무기 <Highlight>공격 속도</>와 <Highlight>공격 범위</> 증가",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [
+    "desc": "근접 무기 <Highlight>공격 속도</>가 <Highlight>60.0%</> 상승하고, <Highlight>공격 범위</>가 <Highlight>2.25</> 증가한다.",
+    "simpleDesc": "근접 무기 <Highlight>공격 속도</>와 <Highlight>공격 범위</> 증가",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 12,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 12,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 113,
     "name": "진격 분출",
-    "desc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>$3</> 이하로 감소하면 추가로 캐릭터 공격력 <Highlight>$1</>의 대미지를 1회 입힌다. 해당 효과는 같은 대상에게 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>낮을</> 때 <Highlight>추가</> 대미지 부여",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>30.0%</> 이하로 감소하면 추가로 캐릭터 공격력 <Highlight>5400.0%</>의 대미지를 1회 입힌다. 해당 효과는 같은 대상에게 <Highlight>10.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>낮을</> 때 <Highlight>추가</> 대미지 부여",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 13,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 13,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 114,
     "name": "맹렬한 들불",
-    "desc": "근접 무기로 대미지를 입힐 시, 대상의 [염화]가 <Highlight>$2</>단계 이상일 때 추가로 캐릭터 공격력 <Highlight>$1</>의 대미지를 입힌다.",
-    "simple_desc": "근접 무기가 [염화] 단계가 높은 적에게 <Highlight>추가로</> 대미지를 입힌다.",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "근접 무기로 대미지를 입힐 시, 대상의 [염화]가 <Highlight>4.0</>단계 이상일 때 추가로 캐릭터 공격력 <Highlight>90.0%</>의 대미지를 입힌다.",
+    "simpleDesc": "근접 무기가 [염화] 단계가 높은 적에게 <Highlight>추가로</> 대미지를 입힌다.",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5042,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10101_MoltenBlaze"
-    ],
-    "rl_archive_id": 14,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 14,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 115,
     "name": "담금질의 의식",
-    "desc": "자신의 주위에 <Highlight>8</>m 내 적이 적을수록, 입히는 대미지가 높아진다. 최대 <Highlight>$1</> 상승",
-    "simple_desc": "<Highlight>가까운</> 적이 적을수록, 입히는 대미지 상승",
-    "blessing_group": 1,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신의 주위에 <Highlight>8</>m 내 적이 적을수록, 입히는 대미지가 높아진다. 최대 <Highlight>90.0%</> 상승",
+    "simpleDesc": "<Highlight>가까운</> 적이 적을수록, 입히는 대미지 상승",
+    "blessingGroup": 1,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5042,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeB.T_Rouge_BlessingType_MeleeB",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeB",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 15,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 15,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 201,
     "name": "굶주린 사냥꾼",
-    "desc": "원거리 무기 <Highlight>공격</>이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "원거리 무기 <Highlight>공격</> 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "원거리 무기 <Highlight>공격</>이 <Highlight>30.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 <Highlight>공격</> 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 16,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 16,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 202,
     "name": "무형의 사냥꾼",
-    "desc": "원거리 무기 <Highlight>발동 확률</>이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "원거리 무기 <Highlight>발동 확률</> 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "원거리 무기 <Highlight>발동 확률</>이 <Highlight>135.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 <Highlight>발동 확률</> 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 17,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 17,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 203,
     "name": "탐식의 촉수",
-    "desc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자]를 생성한다. 해당 효과는 <Highlight>$1</>초마다 최대 1회 발동한다. [Ⅱ 단계] 효과 활성화 시, 추가로 [초소형 부유하는 달] <Highlight>1</>개를 생성한다.",
-    "simple_desc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자] 생성",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자]를 생성한다. 해당 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다. [Ⅱ 단계] 효과 활성화 시, 추가로 [초소형 부유하는 달] <Highlight>1</>개를 생성한다.",
+    "simpleDesc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자] 생성",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 18,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 18,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 204,
     "name": "부유하는 우산",
-    "desc": "드롭 아이템 습득 시, <Highlight>$1</> 오버로드 실드를 획득한다. 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "드롭 아이템을 습득 시, 오버로드 실드를 획득한다.",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "드롭 아이템 습득 시, <Highlight>45.0</> 오버로드 실드를 획득한다. 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "드롭 아이템을 습득 시, 오버로드 실드를 획득한다.",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 19,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 19,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 205,
     "name": "사막의 자원",
-    "desc": "대미지를 입힐 시 [활성화된 스멜링 솔트] 또는 [정신 집중의 이슬]을 생성한다. 효과는 <Highlight>$1</>초마다 최대 1회 발동한다. [부유하는 달] Ⅱ 효과 활성화 시, 추가로 <Highlight>1</>발의 [초소형 부유하는 달]을 생성한다.",
-    "simple_desc": "대미지를 입힐 시 [활성화된 스멜링 솔트] 또는 [정신 집중의 이슬] 생성",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "대미지를 입힐 시 [활성화된 스멜링 솔트] 또는 [정신 집중의 이슬]을 생성한다. 효과는 <Highlight>6.0</>초마다 최대 1회 발동한다. [부유하는 달] Ⅱ 효과 활성화 시, 추가로 <Highlight>1</>발의 [초소형 부유하는 달]을 생성한다.",
+    "simpleDesc": "대미지를 입힐 시 [활성화된 스멜링 솔트] 또는 [정신 집중의 이슬] 생성",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 20,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 20,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 206,
     "name": "사막의 경고",
-    "desc": "자신 <Highlight>20</>m 범위 내에 적이 있을 때, [Ⅲ 단계] 효과가 활성화된 경우, 캐릭터 공격력이 <Highlight>$1</> 상승한다. 그렇지 않을 경우 <Highlight>$2</> 상승한다.",
-    "simple_desc": "자신 주변 일정 범위 내에 적이 있을 시, 캐릭터 공격력이 상승한다.",
-    "blessing_group": 2,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신 <Highlight>20</>m 범위 내에 적이 있을 때, [Ⅲ 단계] 효과가 활성화된 경우, 캐릭터 공격력이 <Highlight>30.0%</> 상승한다. 그렇지 않을 경우 <Highlight>15.0%</> 상승한다.",
+    "simpleDesc": "자신 주변 일정 범위 내에 적이 있을 시, 캐릭터 공격력이 상승한다.",
+    "blessingGroup": 2,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5025,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 21,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 21,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 207,
     "name": "치명적인 사냥꾼",
-    "desc": "원거리 무기의 <Highlight>크리티컬 확률</>이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "원거리 무기 <Highlight>크리티컬 확률</> 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "원거리 무기의 <Highlight>크리티컬 확률</>이 <Highlight>100.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 <Highlight>크리티컬 확률</> 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 22,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 22,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 208,
     "name": "복합 독소",
-    "desc": "원거리 무기의 <Highlight>크리티컬 대미지</>가 <Highlight>#1</> 상승한다.",
-    "simple_desc": "원거리 무기 <Highlight>크리티컬 대미지</> 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "원거리 무기의 <Highlight>크리티컬 대미지</>가 <Highlight>100.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 <Highlight>크리티컬 대미지</> 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 23,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 23,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 209,
     "name": "사막의 선물",
-    "desc": "HP 백분율 또는 정신력 백분율이 <Highlight>$2</> 이하일 시, <Highlight>[사막의 자원]</>의 보급 생성 확률이 <Highlight>$1</>까지 상승한다.\nHP 백분율, 정신력 백분율 또는 탄약 비축이 <Highlight>$2</> 이하일 시, [초소형 부유하는 달]의 생성 수량이 <Highlight>100%</> 상승한다.",
-    "simple_desc": "HP 또는 정신력이 낮을 시, [사막의 자원]이 상응하는 보급의 드롭 확률 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "HP 백분율 또는 정신력 백분율이 <Highlight>50.0%</> 이하일 시, <Highlight>[사막의 자원]</>의 보급 생성 확률이 <Highlight>100.0%</>까지 상승한다.\nHP 백분율, 정신력 백분율 또는 탄약 비축이 <Highlight>50.0%</> 이하일 시, [초소형 부유하는 달]의 생성 수량이 <Highlight>100%</> 상승한다.",
+    "simpleDesc": "HP 또는 정신력이 낮을 시, [사막의 자원]이 상응하는 보급의 드롭 확률 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5025,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10102_MiniSeaborneMoons"
-    ],
-    "rl_archive_id": 24,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 24,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 210,
     "name": "사막의 희망",
-    "desc": "드롭 아이템을 습득 시, 추가로 <Highlight>$1</>의 정신력을 회복한다.",
-    "simple_desc": "드롭 아이템을 습득 시, 추가로 정신력 회복",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "드롭 아이템을 습득 시, 추가로 <Highlight>6.0</>의 정신력을 회복한다.",
+    "simpleDesc": "드롭 아이템을 습득 시, 추가로 정신력 회복",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 25,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 25,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 211,
     "name": "사막의 부름",
-    "desc": "마령 지원 쿨타임 시간이 <Highlight>$1</> 단축된다.",
-    "simple_desc": "마령 지원 쿨타임 시간 감소",
-    "blessing_group": 2,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "마령 지원 쿨타임 시간이 <Highlight>50.0%</> 단축된다.",
+    "simpleDesc": "마령 지원 쿨타임 시간 감소",
+    "blessingGroup": 2,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 26,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 26,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 212,
     "name": "알록달록한 촉수",
-    "desc": "원거리 무기의 <Highlight>다중 사격</>이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "원거리 무기 <Highlight>다중 사격</> 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "원거리 무기의 <Highlight>다중 사격</>이 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 <Highlight>다중 사격</> 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 27,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 27,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 213,
     "name": "예리한 사냥꾼",
-    "desc": "원거리 무기의 <Highlight>공격 속도</>가 <Highlight>#1</> 상승한다.",
-    "simple_desc": "원거리 무기 <Highlight>공격 속도</> 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "RangedWeapon",
-    "room_condition": [
+    "desc": "원거리 무기의 <Highlight>공격 속도</>가 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 <Highlight>공격 속도</> 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "RangedWeapon",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 28,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 28,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 214,
     "name": "사막의 가시",
-    "desc": "자신과의 거리가 <Highlight>$2</>m 이상인 대상에게 원거리 무기 대미지를 입힐 시, 받는 원거리 무기 대미지 <Highlight>$1</> 상승 효과 1단계를 부여한다. 최대 <Highlight>$3</>까지 상승.",
-    "simple_desc": "자신과의 거리가 먼 대상에게 원거리 무기 대미지를 입힐 시, 대상이 받는 원거리 대미지가 점점 상승한다.",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신과의 거리가 <Highlight>8.0</>m 이상인 대상에게 원거리 무기 대미지를 입힐 시, 받는 원거리 무기 대미지 <Highlight>2.4%</> 상승 효과 1단계를 부여한다. 최대 <Highlight>120.0%</>까지 상승.",
+    "simpleDesc": "자신과의 거리가 먼 대상에게 원거리 무기 대미지를 입힐 시, 대상이 받는 원거리 대미지가 점점 상승한다.",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5063,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 29,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 29,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 215,
     "name": "잠복 사냥꾼",
-    "desc": "<Highlight>2</>초 이상 이동하면, 이동이 멈출 때까지, 자신이 받는 대미지가 <Highlight>$1</> 감소한다.\n<Highlight>2</>초 이상 이동을 멈추면, 이동할 때까지, 자신이 입히는 대미지가 <Highlight>$2</> 상승한다.",
-    "simple_desc": "<Highlight>2</>초 이상 이동하면, 이동이 멈출 때까지, 자신이 받는 대미지 감소\n<Highlight>2</>초 이상 이동을 멈추면, 이동할 때까지, 자신이 입히는 대미지 상승",
-    "blessing_group": 2,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>2</>초 이상 이동하면, 이동이 멈출 때까지, 자신이 받는 대미지가 <Highlight>40.0%</> 감소한다.\n<Highlight>2</>초 이상 이동을 멈추면, 이동할 때까지, 자신이 입히는 대미지가 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "<Highlight>2</>초 이상 이동하면, 이동이 멈출 때까지, 자신이 받는 대미지 감소\n<Highlight>2</>초 이상 이동을 멈추면, 이동할 때까지, 자신이 입히는 대미지 상승",
+    "blessingGroup": 2,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_CharA.T_Rouge_BlessingType_CharA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_CharA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 30,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 30,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 301,
     "name": "성광 효과",
-    "desc": "스킬 범위가 <Highlight>#1</> 상승한다.",
-    "simple_desc": "스킬 범위 상승",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 범위가 <Highlight>45.0%</> 상승한다.",
+    "simpleDesc": "스킬 범위 상승",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 31,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 31,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 302,
     "name": "천연 조각",
-    "desc": "스킬 지속이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "스킬 지속 상승",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 지속이 <Highlight>45.0%</> 상승한다.",
+    "simpleDesc": "스킬 지속 상승",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 32,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 32,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 303,
     "name": "유채광 띠",
-    "desc": "스킬 효율이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "스킬 시전 시, 스킬 효율 상승 효과 획득",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 효율이 <Highlight>22.5%</> 상승한다.",
+    "simpleDesc": "스킬 시전 시, 스킬 효율 상승 효과 획득",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 33,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 33,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 304,
     "name": "온화한 터치",
-    "desc": "스킬 시전 시, <Highlight>$1</>의 정신력을 회복한다. 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "스킬 시전 시, 정신력 회복",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "스킬 시전 시, <Highlight>6.0</>의 정신력을 회복한다. 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "스킬 시전 시, 정신력 회복",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 34,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 34,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 305,
     "name": "반짝이는 터치",
-    "desc": "스킬 시전 시, 최대 실드의 <Highlight>$1</>만큼의 실드를 회복한다. 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "스킬 시전 시, 실드 회복",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "스킬 시전 시, 최대 실드의 <Highlight>15.0%</>만큼의 실드를 회복한다. 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "스킬 시전 시, 실드 회복",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 35,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 35,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 306,
     "name": "석중 광채",
-    "desc": "스킬 속도가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "스킬 속도 상승",
-    "blessing_group": 3,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "스킬 속도가 <Highlight>15.0%</> 상승한다.",
+    "simpleDesc": "스킬 속도 상승",
+    "blessingGroup": 3,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5033
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 36,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 36,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 307,
     "name": "아름다운 비취색",
-    "desc": "최대 정신력이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "최대 정신력 상승",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "최대 정신력이 <Highlight>120.0%</> 상승한다.",
+    "simpleDesc": "최대 정신력 상승",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 37,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 37,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 308,
     "name": "강성 터치",
-    "desc": "정신력 비율이 <Highlight>$2</> 미만일 때, 받는 대미지가 <Highlight>$1</> 감소한다.",
-    "simple_desc": "정신력 비율이 낮을 시, 받는 대미지 감소",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "정신력 비율이 <Highlight>50.0%</> 미만일 때, 받는 대미지가 <Highlight>30.0%</> 감소한다.",
+    "simpleDesc": "정신력 비율이 낮을 시, 받는 대미지 감소",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 38,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 38,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 309,
     "name": "집중 형광",
-    "desc": "정신력 비율이 <Highlight>$3</>까지 감소하면, <Highlight>$4</>초 내 매초 <Highlight>$1</>의 정신력을 회복한다. 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "정신력 비율이 낮을 시, 매초 정신력 회복",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "정신력 비율이 <Highlight>50.0%</>까지 감소하면, <Highlight>5.0</>초 내 매초 <Highlight>12.0</>의 정신력을 회복한다. 효과는 <Highlight>20.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "정신력 비율이 낮을 시, 매초 정신력 회복",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 39,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 39,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 310,
     "name": "휘황찬란한 굴절",
-    "desc": "스킬 시전 시, <Highlight>$1</>단계의 [화광]을 획득한다.",
-    "simple_desc": "스킬 시전 시, 일정 중첩의 <Highlight>[화광]</> 획득",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "스킬 시전 시, <Highlight>15.0</>단계의 [화광]을 획득한다.",
+    "simpleDesc": "스킬 시전 시, 일정 중첩의 <Highlight>[화광]</> 획득",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 40,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 40,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 311,
     "name": "꽃망울 만개",
-    "desc": "[반짝임] 상태에서 매초 정신력을 <Highlight>$1</> 회복한다.",
-    "simple_desc": "[반짝임] 상태에서 매초 정신력을 회복한다.",
-    "blessing_group": 3,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[반짝임] 상태에서 매초 정신력을 <Highlight>6.0</> 회복한다.",
+    "simpleDesc": "[반짝임] 상태에서 매초 정신력을 회복한다.",
+    "blessingGroup": 3,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10103_Radiance"
-    ],
-    "rl_archive_id": 41,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 41,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 312,
     "name": "첨정 공명",
-    "desc": "스킬 위력이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "스킬 위력이 상승한다.",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 위력이 <Highlight>120.0%</> 상승한다.",
+    "simpleDesc": "스킬 위력이 상승한다.",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 42,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 42,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 313,
     "name": "눈부신 굴절",
-    "desc": "스킬 대미지가 대상의 방어를 <Highlight>$1</> 무시한다.",
-    "simple_desc": "스킬 대미지가 대상의 일부 방어 무시",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 대미지가 대상의 방어를 <Highlight>90.0%</> 무시한다.",
+    "simpleDesc": "스킬 대미지가 대상의 일부 방어 무시",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 43,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 43,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 314,
     "name": "서슬 퍼런 터치",
-    "desc": "[반짝임] 상태가 제공하는 스킬 대미지 상승 효과가 <Highlight>$1</>까지 상승한다.",
-    "simple_desc": "[반짝임] 상태가 제공하는 스킬 대미지 상승 효과가 상승한다.",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[반짝임] 상태가 제공하는 스킬 대미지 상승 효과가 <Highlight>225.0%</>까지 상승한다.",
+    "simpleDesc": "[반짝임] 상태가 제공하는 스킬 대미지 상승 효과가 상승한다.",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5034
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10103_Radiance"
-    ],
-    "rl_archive_id": 44,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 44,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 315,
     "name": "호광 강탄",
-    "desc": "[방사]의 발동 간격이 <Highlight>$1</>까지 감소한다.",
-    "simple_desc": "[방사]의 발동 간격이 감소한다.",
-    "blessing_group": 3,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[방사]의 발동 간격이 <Highlight>1.0</>까지 감소한다.",
+    "simpleDesc": "[방사]의 발동 간격이 감소한다.",
+    "blessingGroup": 3,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5035
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_MeleeA.T_Rouge_BlessingType_MeleeA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_MeleeA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10103_Emission"
-    ],
-    "rl_archive_id": 45,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 45,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 401,
     "name": "생명의 전파",
-    "desc": "대미지를 입힐 때, <Highlight>$1</> 확률로 [루멘 씨앗] 1개를 소환한다. 해당 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "대미지를 입힐 시, 일정 확률로 [루멘 씨앗] 1개를 소환한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "대미지를 입힐 때, <Highlight>15.0%</> 확률로 [루멘 씨앗] 1개를 소환한다. 해당 효과는 <Highlight>3.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "대미지를 입힐 시, 일정 확률로 [루멘 씨앗] 1개를 소환한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 46,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 46,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 402,
     "name": "자연의 율동",
-    "desc": "소환물 소환 시, 자신의 스킬 위력이 <Highlight>$1</> 상승한다. 효과 지속 시간 <Highlight>$2</>초, 최대 <Highlight>$3</>단계 중첩.",
-    "simple_desc": "소환물 소환 시, 자신의 스킬 위력이 상승한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "소환물 소환 시, 자신의 스킬 위력이 <Highlight>7.5%</> 상승한다. 효과 지속 시간 <Highlight>10.0</>초, 최대 <Highlight>3.0</>단계 중첩.",
+    "simpleDesc": "소환물 소환 시, 자신의 스킬 위력이 상승한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 47,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 47,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 403,
     "name": "자연의 울림",
-    "desc": "소환물 소환 시, 자신의 공격력이 <Highlight>$1</> 상승한다. 효과 지속 시간 <Highlight>$2</>초, 최대 <Highlight>$3</>단계 중첩.",
-    "simple_desc": "소환물 소환 시, 자신의 공격력 상승",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "소환물 소환 시, 자신의 공격력이 <Highlight>7.5%</> 상승한다. 효과 지속 시간 <Highlight>10.0</>초, 최대 <Highlight>3.0</>단계 중첩.",
+    "simpleDesc": "소환물 소환 시, 자신의 공격력 상승",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 48,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 48,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 404,
     "name": "옥토 개량",
-    "desc": "받는 치료 효과가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "받는 치료 효과 상승",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "받는 치료 효과가 <Highlight>60.0%</> 상승한다.",
+    "simpleDesc": "받는 치료 효과 상승",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 49,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 49,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 405,
     "name": "자연의 치유",
-    "desc": "소환물 소환 시, 자신은 최대 HP의 <Highlight>$1</>만큼의 HP를 회복한다.",
-    "simple_desc": "소환물 소환 시, HP 회복",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "소환물 소환 시, 자신은 최대 HP의 <Highlight>3.0%</>만큼의 HP를 회복한다.",
+    "simpleDesc": "소환물 소환 시, HP 회복",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 50,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 50,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 406,
     "name": "자연의 생기",
-    "desc": "소환물 소환 시, 자신은 <Highlight>$1</>의 정신력을 회복한다.",
-    "simple_desc": "소환물 소환 시, 정신력 회복",
-    "blessing_group": 4,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "소환물 소환 시, 자신은 <Highlight>6.0</>의 정신력을 회복한다.",
+    "simpleDesc": "소환물 소환 시, 정신력 회복",
+    "blessingGroup": 4,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 51,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 51,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 407,
     "name": "생명의 선동",
-    "desc": "<Highlight>$1</>초마다 [루멘 씨앗] 1개를 소환한다.",
-    "simple_desc": "일정 시간마다 [루멘 씨앗] 1개를 소환한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>3.0</>초마다 [루멘 씨앗] 1개를 소환한다.",
+    "simpleDesc": "일정 시간마다 [루멘 씨앗] 1개를 소환한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 52,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 52,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 408,
     "name": "생명의 본능",
-    "desc": "대미지를 받을 때, <Highlight>$1</> 확률로 [루멘 씨앗] 1개를 소환한다. 해당 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "대미지를 받을 때, 일정 확률로 [루멘 씨앗] 1개를 소환한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "대미지를 받을 때, <Highlight>75.0%</> 확률로 [루멘 씨앗] 1개를 소환한다. 해당 효과는 <Highlight>2.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "대미지를 받을 때, 일정 확률로 [루멘 씨앗] 1개를 소환한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed"
-    ],
-    "rl_archive_id": 53,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 53,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 409,
     "name": "자연의 비호",
-    "desc": "자신의 주위 <Highlight>8</>m 범위 내 소환물이 있으면, 받는 대미지가 <Highlight>$1</> 감소한다.",
-    "simple_desc": "자신의 주위에 소환물이 있으면, 받는 대미지 감소",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신의 주위 <Highlight>8</>m 범위 내 소환물이 있으면, 받는 대미지가 <Highlight>30.0%</> 감소한다.",
+    "simpleDesc": "자신의 주위에 소환물이 있으면, 받는 대미지 감소",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 54,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 54,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 410,
     "name": "정글 확장",
-    "desc": "치료를 받을 시, 자신이 입히는 대미지가 <Highlight>$1</> 상승한다. 지속 시간 $2초.",
-    "simple_desc": "치료를 받을 시, 단시간 내 입히는 대미지가 상승한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "치료를 받을 시, 자신이 입히는 대미지가 <Highlight>37.5%</> 상승한다. 지속 시간 3.0초.",
+    "simpleDesc": "치료를 받을 시, 단시간 내 입히는 대미지가 상승한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 55,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 55,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 411,
     "name": "역행적 정착",
     "desc": "소환물 소환 시, 소환 위치 <Highlight>6</>m 내의 적에게 전투 태세 약화 효과를 부여한다.",
-    "simple_desc": "소환물 소환 시, 소환 위치 주변의 적에게 전투 태세 약화 효과를 부여한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "소환물 소환 시, 소환 위치 주변의 적에게 전투 태세 약화 효과를 부여한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 56,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 56,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 412,
     "name": "자연의 분노",
-    "desc": "자신의 주위 <Highlight>8</>m 범위 내 소환물이 1개 있을 때마다, 자신은 1단계의 대미지 <Highlight>$2</> 상승 효과를 획득한다. 최대 <Highlight>$1</>단계 중첩.",
-    "simple_desc": "자신의 주위에 소환물이 많을수록, 자신이 입히는 대미지 상승",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신의 주위 <Highlight>8</>m 범위 내 소환물이 1개 있을 때마다, 자신은 1단계의 대미지 <Highlight>18.0%</> 상승 효과를 획득한다. 최대 <Highlight>5.0</>단계 중첩.",
+    "simpleDesc": "자신의 주위에 소환물이 많을수록, 자신이 입히는 대미지 상승",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 57,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 57,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 413,
     "name": "자연의 중후",
-    "desc": "소환물의 공격이 <Highlight>$1</> 상승한다.",
-    "simple_desc": "소환물의 공격 상승",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "소환물의 공격이 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "소환물의 공격 상승",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 58,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 58,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 414,
     "name": "자연의 법칙",
-    "desc": "루멘 가지 시리즈가 아닌 소환물을 소환할 때마다 소환 위치에 폭발 충격을 1회 발동해 캐릭터 공격력 <Highlight>$1</>의 대미지를 입힌다.",
-    "simple_desc": "루멘 가지 시리즈가 아닌 소환물을 소환할 때마다 소환 위치에 폭발 충격을 1회 발동한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "루멘 가지 시리즈가 아닌 소환물을 소환할 때마다 소환 위치에 폭발 충격을 1회 발동해 캐릭터 공격력 <Highlight>3000.0%</>의 대미지를 입힌다.",
+    "simpleDesc": "루멘 가지 시리즈가 아닌 소환물을 소환할 때마다 소환 위치에 폭발 충격을 1회 발동한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 59,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 59,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 415,
     "name": "무성한 성장",
     "desc": "[루멘 씨앗]이 [루멘 잎]으로 진화할 확률이 <Highlight>100%</>까지 상승한다.",
-    "simple_desc": "[루멘 씨앗]이 [루멘 잎]으로 진화할 확률이 <Highlight>100%</>까지 상승한다.",
-    "blessing_group": 4,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "simpleDesc": "[루멘 씨앗]이 [루멘 잎]으로 진화할 확률이 <Highlight>100%</>까지 상승한다.",
+    "blessingGroup": 4,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5038,
       5065
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_LifeTree.T_Rouge_BlessingType_LifeTree",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_LifeTree",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       50
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10104_Lumiseed",
-      "Term_Rou_10104_Lumileaf"
-    ],
-    "rl_archive_id": 60,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 60,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 501,
     "name": "활공 자세",
-    "desc": "스파이럴 점프 시, 공격력 <Highlight>$1</> 상승 효과를 획득한다. 지속 시간 <Highlight>$2</>초. 동시에 [잠식의 그림자] <Highlight>$3</>단계를 획득한다.",
-    "simple_desc": "스파이럴 점프 시 공격력 상승 효과와 [잠식의 그림자]를 획득한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스파이럴 점프 시, 공격력 <Highlight>18.0%</> 상승 효과를 획득한다. 지속 시간 <Highlight>3.0</>초. 동시에 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다.",
+    "simpleDesc": "스파이럴 점프 시 공격력 상승 효과와 [잠식의 그림자]를 획득한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne"
-    ],
-    "rl_archive_id": 57,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 57,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 502,
     "name": "나풀대는 자태",
-    "desc": "슬라이드 진입 시, [바람의 날개] 3개를 생성하고, 적 명중 시 캐릭터 공격 <Highlight>$1</>의 대미지를 입힌다. 또한 [잠식의 그림자] <Highlight>$2</>단계를 획득한다.",
-    "simple_desc": "슬라이드 진입 시 [바람의 날개] 3개를 생성하고 [잠식의 그림자]를 획득한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "슬라이드 진입 시, [바람의 날개] 3개를 생성하고, 적 명중 시 캐릭터 공격 <Highlight>90.0%</>의 대미지를 입힌다. 또한 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다.",
+    "simpleDesc": "슬라이드 진입 시 [바람의 날개] 3개를 생성하고 [잠식의 그림자]를 획득한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_WindWings"
-    ],
-    "rl_archive_id": 58,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 58,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 503,
     "name": "고치의 자세",
-    "desc": "회피 시, 받는 대미지 <Highlight>$1</> 감소 효과를 획득한다. 지속 시간 <Highlight>$2</>초. 동시에 [잠식의 그림자] <Highlight>$3</>단계를 획득한다.",
-    "simple_desc": "회피 시 받는 대미지 감소 효과와 [잠식의 그림자]를 획득한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "회피 시, 받는 대미지 <Highlight>15.0%</> 감소 효과를 획득한다. 지속 시간 <Highlight>3.0</>초. 동시에 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다.",
+    "simpleDesc": "회피 시 받는 대미지 감소 효과와 [잠식의 그림자]를 획득한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne"
-    ],
-    "rl_archive_id": 59,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 59,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 504,
     "name": "기묘한 얼룩무늬",
-    "desc": "최대 정신력이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "최대 정신력 상승",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "최대 정신력이 <Highlight>45.0%</> 상승한다.",
+    "simpleDesc": "최대 정신력 상승",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 60,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 60,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 505,
     "name": "바람을 타는 모습",
-    "desc": "스킬 속도가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "스킬 속도가 상승한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 속도가 <Highlight>15.0%</> 상승한다.",
+    "simpleDesc": "스킬 속도가 상승한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 61,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 61,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 506,
     "name": "소용돌이 기류",
-    "desc": "낙하 공격이 적에게 대미지를 입힐 시, [비늘 가루] 영역 1개를 생성하여 영역 내의 적에게 매초 캐릭터 공격력 <Highlight>$2</>의 대미지를 입히고 [잠식의 그림자] <Highlight>$3</>단계를 획득한다. 해당 효과는 <Highlight>$1</>초마다 1회 발동한다.",
-    "simple_desc": "낙하 공격이 적에게 대미지를 입히는 동시에 [비늘 가루] 영역 1개를 생성하고, [잠식의 그림자]를 획득한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "낙하 공격이 적에게 대미지를 입힐 시, [비늘 가루] 영역 1개를 생성하여 영역 내의 적에게 매초 캐릭터 공격력 <Highlight>400.0%</>의 대미지를 입히고 [잠식의 그림자] <Highlight>8.0</>단계를 획득한다. 해당 효과는 <Highlight>8.0</>초마다 1회 발동한다.",
+    "simpleDesc": "낙하 공격이 적에게 대미지를 입히는 동시에 [비늘 가루] 영역 1개를 생성하고, [잠식의 그림자]를 획득한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_Powder"
-    ],
-    "rl_archive_id": 62,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 62,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 507,
     "name": "충격 기류",
-    "desc": "낙하 공격 대미지가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "낙하 공격의 대미지 상승",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "낙하 공격 대미지가 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "낙하 공격의 대미지 상승",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 63,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 63,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 508,
     "name": "방산 기류",
-    "desc": "근접 공격 범위가 <Highlight>#1</> 상승한다.",
-    "simple_desc": "근접 공격 범위 상승",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "MeleeWeapon",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "근접 공격 범위가 <Highlight>1.5</> 상승한다.",
+    "simpleDesc": "근접 공격 범위 상승",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "MeleeWeapon",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 64,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 64,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 509,
     "name": "완만한 기류",
-    "desc": "최대 회피 횟수가 <Highlight>#1</>회 증가한다.",
-    "simple_desc": "최대 회피 횟수 증가",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "최대 회피 횟수가 <Highlight>3.0</>회 증가한다.",
+    "simpleDesc": "최대 회피 횟수 증가",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 65,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 65,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 510,
     "name": "흩날리는 비늘 가루",
-    "desc": "회피 시, [비늘 가루] 영역 1개를 생성하여 영역 내의 적에게 매초 캐릭터 공격력 <Highlight>$2</>의 대미지를 입힌다. 해당 효과는 <Highlight>$1</>초마다 1회 발동한다.",
-    "simple_desc": "회피 시 [비늘 가루] 영역 1개를 생성한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "회피 시, [비늘 가루] 영역 1개를 생성하여 영역 내의 적에게 매초 캐릭터 공격력 <Highlight>400.0%</>의 대미지를 입힌다. 해당 효과는 <Highlight>5.0</>초마다 1회 발동한다.",
+    "simpleDesc": "회피 시 [비늘 가루] 영역 1개를 생성한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10105_Powder"
-    ],
-    "rl_archive_id": 66,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 66,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 511,
     "name": "혼돈 기류",
-    "desc": "<Highlight>$1</>초마다 [잠식의 그림자] <Highlight>$2</>단계를 획득한다. 자신의 [잠식의 그림자]가 <Highlight>$3</>단계 이상일 때, 해당 축복으로 [잠식의 그림자] 획득 시 [칼날의 날개] 1개를 발사하여 명중한 적에게 캐릭터 공격력 <Highlight>$4</>의 대미지를 입힌다.",
-    "simple_desc": "일정 시간마다 [잠식의 그림자]를 획득한다. 자신의 [잠식의 그림자]가 일정 단계 이상일 시, 추가로 [칼날의 날개] 1개를 발사한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "<Highlight>3.0</>초마다 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다. 자신의 [잠식의 그림자]가 <Highlight>30.0</>단계 이상일 때, 해당 축복으로 [잠식의 그림자] 획득 시 [칼날의 날개] 1개를 발사하여 명중한 적에게 캐릭터 공격력 <Highlight>1200.0%</>의 대미지를 입힌다.",
+    "simpleDesc": "일정 시간마다 [잠식의 그림자]를 획득한다. 자신의 [잠식의 그림자]가 일정 단계 이상일 시, 추가로 [칼날의 날개] 1개를 발사한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10105_Nocturne",
-      "Term_Rou_10105_BladeWings"
-    ],
-    "rl_archive_id": 67,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 67,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 512,
     "name": "눈부신 자태",
-    "desc": "최대 회피 횟수 1회당 최대 정신력이 <Highlight>$1</> 증가한다.",
-    "simple_desc": "최대 회피 횟수에 따라, 최대 정신력 증가 효과 획득",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "최대 회피 횟수 1회당 최대 정신력이 <Highlight>45.0%</> 증가한다.",
+    "simpleDesc": "최대 회피 횟수에 따라, 최대 정신력 증가 효과 획득",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 68,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 68,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 513,
     "name": "날카로운 나비 날개",
-    "desc": "캐릭터 공격력이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "캐릭터 공격력이 상승한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "캐릭터 공격력이 <Highlight>120.0%</> 상승한다.",
+    "simpleDesc": "캐릭터 공격력이 상승한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 69,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 69,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 514,
     "name": "바람을 부르는 모습",
-    "desc": "공격 속도가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "공격 속도가 상승한다.",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "공격 속도가 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "공격 속도가 상승한다.",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 70,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 70,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 515,
     "name": "허물을 벗는 모습",
-    "desc": "회피 시 공격이 <Highlight>$1</> 상승한다. 지속 시간 <Highlight>$2</>초.",
-    "simple_desc": "회피 시 공격 상승",
-    "blessing_group": 5,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "회피 시 공격이 <Highlight>90.0%</> 상승한다. 지속 시간 <Highlight>3.0</>초.",
+    "simpleDesc": "회피 시 공격 상승",
+    "blessingGroup": 5,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5040
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_HelixLeap.T_Rouge_BlessingType_HelixLeap",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_HelixLeap",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 71,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 71,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 601,
     "name": "흔들리는 순회",
-    "desc": "스킬 범위가 <Highlight>#1</> 증가한다.",
-    "simple_desc": "스킬 범위 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "스킬 범위가 <Highlight>45.0%</> 증가한다.",
+    "simpleDesc": "스킬 범위 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 76,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 76,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 602,
     "name": "빛을 쫓는 순회",
-    "desc": "대미지를 입힐 시, <Highlight>$1</> 확률로 [빛을 품는 벌레] <Highlight>1</>마리를 획득한다.",
-    "simple_desc": "대미지를 입힐 때마다 일정 확률로 [빛을 품는 벌레]를 획득한다.",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "대미지를 입힐 시, <Highlight>7.5%</> 확률로 [빛을 품는 벌레] <Highlight>1</>마리를 획득한다.",
+    "simpleDesc": "대미지를 입힐 때마다 일정 확률로 [빛을 품는 벌레]를 획득한다.",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 77,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 77,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 603,
     "name": "어둠을 쫓는 순회",
-    "desc": "<Highlight>$1</>초마다 [빛을 품는 벌레] <Highlight>1</>마리를 획득한다.",
-    "simple_desc": "<Highlight>10</>초마다 [빛을 품는 벌레]를 획득한다.",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "<Highlight>7.0</>초마다 [빛을 품는 벌레] <Highlight>1</>마리를 획득한다.",
+    "simpleDesc": "<Highlight>10</>초마다 [빛을 품는 벌레]를 획득한다.",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 78,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 78,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 604,
     "name": "양공 신호",
-    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 크리티컬 확률이 <Highlight>$1</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 크리티컬 확률이 <Highlight>$2</> 상승한다.",
-    "simple_desc": "원거리 무기 크리티컬 확률 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 크리티컬 확률이 <Highlight>7.5%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 크리티컬 확률이 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "원거리 무기 크리티컬 확률 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 79,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 79,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 605,
     "name": "번쩍이는 신호",
-    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 크리티컬 대미지가 <Highlight>$1</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 크리티컬 대미지가 <Highlight>$2</> 상승한다.",
-    "simple_desc": "원거리 무기 크리티컬 대미지 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 크리티컬 대미지가 <Highlight>7.5%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 크리티컬 대미지가 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "원거리 무기 크리티컬 대미지 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 80,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 80,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 606,
     "name": "은은한 빛",
-    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 발동 확률이 <Highlight>$1</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 발동 확률이 <Highlight>$2</> 상승한다.",
-    "simple_desc": "원거리 무기 발동 확률 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 발동 확률이 <Highlight>30.0%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 발동 확률이 <Highlight>135.0%</> 상승한다.",
+    "simpleDesc": "원거리 무기 발동 확률 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 81,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 81,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 607,
     "name": "동반 신호",
-    "desc": "소환물 입히는 대미지가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "소환물 입히는 대미지 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "소환물 입히는 대미지가 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "소환물 입히는 대미지 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 82,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 82,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 608,
     "name": "스트레스 섬광",
-    "desc": "대미지를 받거나 소환물 소환 시, [빛을 품는 벌레] <Highlight>1</>마리를 획득한다. 해당 효과는 <Highlight>$1</>초마다 최대 1회 발동한다.",
-    "simple_desc": "대미지를 받거나 소환물 소환 시, [빛을 품는 벌레]를 획득한다.",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "대미지를 받거나 소환물 소환 시, [빛을 품는 벌레] <Highlight>1</>마리를 획득한다. 해당 효과는 <Highlight>3.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "대미지를 받거나 소환물 소환 시, [빛을 품는 벌레]를 획득한다.",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 83,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 83,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 609,
     "name": "민첩한 광채",
-    "desc": "스킬 효율이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "스킬 효율 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "스킬 효율이 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "스킬 효율 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 84,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 84,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 610,
     "name": "무수한 별처럼",
-    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 다중 사격이 <Highlight>$1</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 다중 사격이 <Highlight>$2</> 상승한다.",
-    "simple_desc": "원거리 무기 다중 사격 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 다중 사격이 <Highlight>7.5%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 다중 사격이 <Highlight>37.5%</> 상승한다.",
+    "simpleDesc": "원거리 무기 다중 사격 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 85,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 85,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 611,
     "name": "윤회의 순회",
-    "desc": "부활 횟수를 <Highlight>#1</>회 획득한다. [빛을 품는 벌레] 보유 시, 받는 대미지가 <Highlight>$1</> 감소한다. 다음 부활 후 해당 효과는 사라진다.",
-    "simple_desc": "추가 부활 횟수를 획득하고, [빛을 품는 벌레] 보유 시 받는 대미지가 감소한다. 다음 부활 후 해당 효과는 사라진다.",
-    "blessing_group": 6,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 1,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "부활 횟수를 <Highlight>1.0</>회 획득한다. [빛을 품는 벌레] 보유 시, 받는 대미지가 <Highlight>30.0%</> 감소한다. 다음 부활 후 해당 효과는 사라진다.",
+    "simpleDesc": "추가 부활 횟수를 획득하고, [빛을 품는 벌레] 보유 시 받는 대미지가 감소한다. 다음 부활 후 해당 효과는 사라진다.",
+    "blessingGroup": 6,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 1,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       20
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 86,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 86,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 612,
     "name": "고요한 작별",
-    "desc": "[빛을 품는 벌레] 미휴대 시, 모든 속성의 관통이 <Highlight>$1</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 모든 속성의 관통이 <Highlight>$2</> 상승한다.",
-    "simple_desc": "모든 속성 관통 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레] 미휴대 시, 모든 속성의 관통이 <Highlight>18.0%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 모든 속성의 관통이 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "모든 속성 관통 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 87,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 87,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 613,
     "name": "견제 신호",
-    "desc": "[빛을 품는 벌레] 미휴대 시, 격양이 <Highlight>$1</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 격양이 <Highlight>$2</> 상승한다.",
-    "simple_desc": "격양 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레] 미휴대 시, 격양이 <Highlight>18.0%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 격양이 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "격양 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 88,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 88,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 614,
     "name": "군집 신호",
-    "desc": "자신의 주변에 적이 있을 때, [빛을 품는 벌레]의 공격 간격이 대폭 단축된다. 지속 시간 <Highlight>$2</>초, 해당 효과는 <Highlight>$1</>초마다 최대 1회 발동한다.",
-    "simple_desc": "자신의 주위에 적이 있을 때, [빛을 품는 벌레]의 공격 간격 대폭 단축",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "자신의 주변에 적이 있을 때, [빛을 품는 벌레]의 공격 간격이 대폭 단축된다. 지속 시간 <Highlight>5.0</>초, 해당 효과는 <Highlight>10.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "자신의 주위에 적이 있을 때, [빛을 품는 벌레]의 공격 간격 대폭 단축",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5007,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 89,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 89,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 615,
     "name": "흔들리는 빛",
-    "desc": "[빛을 품는 벌레]가 입히는 대미지가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "[빛을 품는 벌레]가 입히는 대미지 상승",
-    "blessing_group": 6,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "[빛을 품는 벌레]가 입히는 대미지가 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "[빛을 품는 벌레]가 입히는 대미지 상승",
+    "blessingGroup": 6,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5007,
       5064
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_DanmakuA.T_Rouge_BlessingType_DanmakuA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_DanmakuA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [
-      "Term_Rou_10106_Glimmerfly"
-    ],
-    "rl_archive_id": 90,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 90,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 701,
     "name": "선혈의 저장",
-    "desc": "스킬 지속이 <Highlight>#1</> 상승한다.",
-    "simple_desc": "스킬 지속 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "스킬 지속이 <Highlight>45.0%</> 상승한다.",
+    "simpleDesc": "스킬 지속 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 91,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 91,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 702,
     "name": "진홍의 꽃",
-    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 정신력 자연 회복량이 <Highlight>$2</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 정신력 자연 회복량이 <Highlight>$1</> 상승한다.",
-    "simple_desc": "정신력 자연 회복량 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_SP.T_Rouge_BlessingBuffType_SP",
-    "end_points": [
+    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 정신력 자연 회복량이 <Highlight>9.0</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 정신력 자연 회복량이 <Highlight>3.0</> 상승한다.",
+    "simpleDesc": "정신력 자연 회복량 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_SP",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 92,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 92,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 703,
     "name": "선혈의 막힘",
-    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 발동 확률이 <Highlight>$2</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 발동 확률이 <Highlight>$1</> 상승한다.",
-    "simple_desc": "근접 무기 발동 확률 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 발동 확률이 <Highlight>180.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 발동 확률이 <Highlight>90.0%</> 상승한다.",
+    "simpleDesc": "근접 무기 발동 확률 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 93,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 93,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 704,
     "name": "사투 본능",
-    "desc": "최대 HP가 <Highlight>#1</> 상승한다.",
-    "simple_desc": "최대 HP 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "최대 HP가 <Highlight>30.0%</> 상승한다.",
+    "simpleDesc": "최대 HP 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 94,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 94,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 705,
     "name": "가시나무 잎",
-    "desc": "방어력이 <Highlight>#1</> 상승한다. 대미지를 입을 때, 입히는 대미지 <Highlight>$1</> 상승 효과를 획득한다. 지속 시간 <Highlight>$2</>초, 효과는 <Highlight>$3</>초마다 최대 1회 발동한다.",
-    "simple_desc": "방어력 상승, 대미지를 입을 때, 입히는 대미지 상승 효과 획득",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "방어력이 <Highlight>90.0%</> 상승한다. 대미지를 입을 때, 입히는 대미지 <Highlight>30.0%</> 상승 효과를 획득한다. 지속 시간 <Highlight>10.0</>초, 효과는 <Highlight>20.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "방어력 상승, 대미지를 입을 때, 입히는 대미지 상승 효과 획득",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 95,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 95,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 706,
     "name": "포식의 뿌리",
-    "desc": "대미지를 입힐 시, 대상 위치에 자신 최대 HP <Highlight>$1</>의 범위 대미지를 추가로 1회 입힌다. 해당 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "대미지를 입힐 시, 대상 위치에 추가로 자신의 최대 HP의 범위 대미지 부여",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "대미지를 입힐 시, 대상 위치에 자신 최대 HP <Highlight>30.0%</>의 범위 대미지를 추가로 1회 입힌다. 해당 효과는 <Highlight>1.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "대미지를 입힐 시, 대상 위치에 추가로 자신의 최대 HP의 범위 대미지 부여",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 96,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 96,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 707,
     "name": "선혈의 용솟음",
-    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 스킬 위력이 <Highlight>$2</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 스킬 위력이 <Highlight>$1</> 상승한다.",
-    "simple_desc": "스킬 위력 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 스킬 위력이 <Highlight>60.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 스킬 위력이 <Highlight>30.0%</> 상승한다.",
+    "simpleDesc": "스킬 위력 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 97,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 97,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 708,
     "name": "선혈의 갈망",
-    "desc": "입히는 대미지가 <Highlight>$1</> 상승하고, HP 비율이 <Highlight>1%</> 감소할 때마다, 효과 배율이 <Highlight>1%</> 증가하고, 최대 <Highlight>$2</>까지 증가한다.",
-    "simple_desc": "입히는 대미지 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "입히는 대미지가 <Highlight>30.0%</> 상승하고, HP 비율이 <Highlight>1%</> 감소할 때마다, 효과 배율이 <Highlight>1%</> 증가하고, 최대 <Highlight>60.0%</>까지 증가한다.",
+    "simpleDesc": "입히는 대미지 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 98,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 98,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 709,
     "name": "섭취 본능",
-    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 크리티컬 확률이 <Highlight>$2</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 크리티컬 확률이 <Highlight>$1</> 상승한다.",
-    "simple_desc": "근접 무기 크리티컬 확률 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 크리티컬 확률이 <Highlight>135.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 크리티컬 확률이 <Highlight>67.5%</> 상승한다.",
+    "simpleDesc": "근접 무기 크리티컬 확률 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 99,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 99,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 710,
     "name": "광란 본능",
-    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 크리티컬 대미지가 <Highlight>$2</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 크리티컬 대미지가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "근접 무기 크리티컬 대미지 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 2,
-    "blessing_weight": 300,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 크리티컬 대미지가 <Highlight>135.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 크리티컬 대미지가 <Highlight>67.5%</> 상승한다.",
+    "simpleDesc": "근접 무기 크리티컬 대미지 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 2,
+    "blessingWeight": 300,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       20,
       35
     ],
-    "level_up_prices": [
-      300
-    ],
-    "shop_prices": 400,
-    "shop_weight": 500,
-    "refresh_weight_add": 12,
-    "weight_add": 6,
-    "group_priority": 2,
-    "explanation_id": [],
-    "rl_archive_id": 100,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 400,
+    "rlArchiveId": 100,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 711,
     "name": "선혈의 비호",
-    "desc": "대미지를 받을 시, <Highlight>$1</>의 오버로드 실드를 획득한다. 해당 효과는 <Highlight>$2</>초마다 최대 1회 발동한다.",
-    "simple_desc": "대미지를 입을 때, 오버로드 실드 획득",
-    "blessing_group": 7,
-    "blessing_rarity": 1,
-    "blessing_weight": 1000,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "대미지를 받을 시, <Highlight>135.0</>의 오버로드 실드를 획득한다. 해당 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "대미지를 입을 때, 오버로드 실드 획득",
+    "blessingGroup": 7,
+    "blessingRarity": 1,
+    "blessingWeight": 1000,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       10,
       15
     ],
-    "level_up_prices": [
-      150
-    ],
-    "shop_prices": 200,
-    "shop_weight": 1000,
-    "refresh_weight_add": 6,
-    "weight_add": 3,
-    "group_priority": 1,
-    "explanation_id": [],
-    "rl_archive_id": 101,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 200,
+    "rlArchiveId": 101,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 712,
     "name": "생존 본능",
-    "desc": "한 번에 받는 대미지가 자신 최대 HP의 <Highlight>#1</>을(를) 초과하지 않는다. 최대 HP의 <Highlight>$2</>보다 많은 대미지를 받을 경우, <Highlight>$3</>초 동안 매초 최대 HP의 <Highlight>$1</>만큼 회복한다.",
-    "simple_desc": "자신이 1회에 받는 대미지를 제한하고, 높은 대미지를 받은 후, 지속적으로 HP 회복",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_DEF.T_Rouge_BlessingBuffType_DEF",
-    "end_points": [
+    "desc": "한 번에 받는 대미지가 자신 최대 HP의 <Highlight>25.0%</>을(를) 초과하지 않는다. 최대 HP의 <Highlight>20.0%</>보다 많은 대미지를 받을 경우, <Highlight>5.0</>초 동안 매초 최대 HP의 <Highlight>3.0%</>만큼 회복한다.",
+    "simpleDesc": "자신이 1회에 받는 대미지를 제한하고, 높은 대미지를 받은 후, 지속적으로 HP 회복",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_DEF",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 102,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 102,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 713,
     "name": "흡수 본능",
-    "desc": "[종결 스킬] 시전 시 모든 방어력을 잃고 해당 수치의 <Highlight>$1</>을(를) 캐릭터 공격으로 전환한다. 지속 시간 <Highlight>$2</>초. 해당 효과는 <Highlight>$3</>초마다 최대 1회 발동한다.",
-    "simple_desc": "[종결 스킬] 시전 시, 모든 방어력을 잃고 해당 수치를 캐릭터 공격력으로 전환",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "[종결 스킬] 시전 시 모든 방어력을 잃고 해당 수치의 <Highlight>240.0%</>을(를) 캐릭터 공격으로 전환한다. 지속 시간 <Highlight>15.0</>초. 해당 효과는 <Highlight>30.0</>초마다 최대 1회 발동한다.",
+    "simpleDesc": "[종결 스킬] 시전 시, 모든 방어력을 잃고 해당 수치를 캐릭터 공격력으로 전환",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 103,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 103,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 714,
     "name": "메마른 씨앗",
-    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 스킬 대미지는 대상의 <Highlight>$2</>의 방어를 무시한다. HP 비율이 <Highlight>100%</>일 때, 스킬 대미지는 대상의 <Highlight>$1</>의 방어를 무시한다.",
-    "simple_desc": "스킬 대미지가 대상의 일정 방어를 무시, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 스킬 대미지는 대상의 <Highlight>90.0%</>의 방어를 무시한다. HP 비율이 <Highlight>100%</>일 때, 스킬 대미지는 대상의 <Highlight>45.0%</>의 방어를 무시한다.",
+    "simpleDesc": "스킬 대미지가 대상의 일정 방어를 무시, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [],
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 104,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 104,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   },
   {
     "id": 715,
     "name": "얽힌 줄기",
-    "desc": "HP 비율이 <Highlight>40%</> 미만일 때, 필사가 <Highlight>$2</> 상승한다. HP 비율이 <Highlight>40%</> 이상일 때, 필사가 <Highlight>$1</> 상승한다.",
-    "simple_desc": "필사 상승, HP 비율이 낮을 시 효과 상승",
-    "blessing_group": 7,
-    "blessing_rarity": 3,
-    "blessing_weight": 100,
-    "max_level": 2,
-    "mod_equip": "Role",
-    "room_condition": [
+    "desc": "HP 비율이 <Highlight>40%</> 미만일 때, 필사가 <Highlight>36.0%</> 상승한다. HP 비율이 <Highlight>40%</> 이상일 때, 필사가 <Highlight>18.0%</> 상승한다.",
+    "simpleDesc": "필사 상승, HP 비율이 낮을 시 효과 상승",
+    "blessingGroup": 7,
+    "blessingRarity": 3,
+    "blessingWeight": 100,
+    "maxLevel": 2,
+    "modEquip": "Role",
+    "roomCondition": [
       5062
     ],
-    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_BlessingType_SurvivalA.T_Rouge_BlessingType_SurvivalA",
-    "type_icon": "/Game/UI/Texture/Dynamic/Atlas/RougeLike/T_Rouge_BlessingBuffType_ATK.T_Rouge_BlessingBuffType_ATK",
-    "end_points": [
+    "icon": "T_Rouge_BlessingType_SurvivalA",
+    "typeIcon": "T_Rouge_BlessingBuffType_ATK",
+    "endPoints": [
       40,
       60
     ],
-    "level_up_prices": [
-      600
-    ],
-    "shop_prices": 800,
-    "shop_weight": 200,
-    "refresh_weight_add": 24,
-    "weight_add": 12,
-    "group_priority": 3,
-    "explanation_id": [],
-    "rl_archive_id": 105,
-    "unlock_condition_text": "심지 미해제",
-    "can_sell": 1
+    "shopPrices": 800,
+    "rlArchiveId": 105,
+    "unlockConditionText": "심지 미해제",
+    "canSell": 1
   }
 ]

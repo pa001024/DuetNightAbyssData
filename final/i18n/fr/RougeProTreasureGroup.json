@@ -1,0 +1,207 @@
+[
+  {
+    "id": 11,
+    "activateNeed": [
+      11201,
+      11202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
+    "groupId": 11,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Quête de Midioren"
+  },
+  {
+    "id": 12,
+    "activateNeed": [
+      12201,
+      12202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
+    "groupId": 12,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Vaillance d’Aegis"
+  },
+  {
+    "id": 13,
+    "activateNeed": [
+      13201,
+      13202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
+    "groupId": 13,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Ingéniosité de Diopra"
+  },
+  {
+    "id": 14,
+    "activateNeed": [
+      14201,
+      14202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
+    "groupId": 14,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Innovation de Saeculum"
+  },
+  {
+    "id": 15,
+    "activateNeed": [
+      15201,
+      15202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
+    "groupId": 15,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Sagacité de Drakhma"
+  },
+  {
+    "id": 16,
+    "activateNeed": [
+      16201,
+      16202
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
+    "groupId": 16,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Clairvoyance du Logos"
+  },
+  {
+    "id": 17,
+    "activateNeed": [
+      17101,
+      17201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "Les dégâts infligés par les Armes de Consonance augmentent de <Highlight>100 %</>.",
+    "groupId": 17,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Bête écarlate acculée"
+  },
+  {
+    "id": 18,
+    "activateNeed": [
+      18101,
+      18201,
+      18301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "Lorsque tous les membres de l’équipe se trouvent à moins de <Highlight>30</> m les uns des autres, les dégâts infligés par toute l’équipe augmentent de <Highlight>100 %</>.",
+    "groupId": 18,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Plumes entrelacées"
+  },
+  {
+    "id": 19,
+    "activateNeed": [
+      19101,
+      19201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "Une fois les <Highlight>2</> Artéfacts de [Chevalier gardien] réunis, gagne un Ultra-bouclier équivalent à <Highlight>10 %</> des PV max toutes les <Highlight>10</> s.",
+    "groupId": 19,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Chevalier gardien"
+  },
+  {
+    "id": 20,
+    "activateNeed": [
+      20101,
+      20102,
+      20201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "Les Dégâts de compétence, les DGT d’arme de mêlée et les DGT d’arme à distance ne diminuent plus.",
+    "groupId": 20,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "L’Homme au masque d’oiseau"
+  },
+  {
+    "id": 21,
+    "activateNeed": [
+      21101,
+      21201,
+      21301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "groupEffectDesc": "（待包装）繁荣之神的描述",
+    "groupId": 21,
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "name": "Dieu de la Prospérité"
+  },
+  {
+    "id": 22,
+    "activateNeed": [
+      22101,
+      22102,
+      22103,
+      22104
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "groupEffectDesc": "Une fois les <Highlight>4</> Artéfacts de [Sceau des Quatre Éléments] réunis, la Chance de déclenchement est fixée à <Highlight>50 %</>, le Multiplicateur de dégâts à <Highlight>100 %</>, et tous les dégâts sont convertis en Dégâts purs.",
+    "groupId": 22,
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "name": "Sceau des Quatre Éléments"
+  },
+  {
+    "id": 23,
+    "activateNeed": [
+      23101,
+      23201,
+      23202,
+      23301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "groupEffectDesc": "Une fois les <Highlight>4</> Artéfacts de [Chevalier pénitent] réunis, la contrepartie est annulée, et le bonus total de dégâts passe à <Highlight>400 %</>.",
+    "groupId": 23,
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "name": "Chevalier pénitent"
+  },
+  {
+    "id": 24,
+    "activateNeed": [
+      24101,
+      24201
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "groupEffectDesc": "Une fois les <Highlight>2</> Artéfacts de [Sorcière éplorée] réunis, l’affaiblissement de la posture augmente de <Highlight>100 %</>, et les dégâts infligés aux ennemis sous [Châtiment d’Ask] augmentent de <Highlight>100 %</>.",
+    "groupId": 24,
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "name": "Sorcière éplorée"
+  },
+  {
+    "id": 25,
+    "activateNeed": [
+      25301,
+      25302,
+      25303,
+      25304,
+      25305,
+      25306
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）圣迹残像的描述",
+    "groupId": 25,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Vestiges sacrés"
+  },
+  {
+    "id": 26,
+    "activateNeed": [
+      26101,
+      26201,
+      26202,
+      26301
+    ],
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "groupEffectDesc": "（待包装）闲逸学者的描述",
+    "groupId": 26,
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "name": "Érudit oisif"
+  }
+]

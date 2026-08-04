@@ -1,369 +1,369 @@
 [
   {
     "id": 1,
-    "story_event_name": "最初与最终的",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "最初与最终的",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5167
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story15.T_Rouge_Story15'",
-    "event_moment": 3,
-    "event_min_room": 0,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story15.T_Rouge_Story15'",
+    "eventMoment": 3,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_SeasonFirst01",
-    "rl_archive_sub_id": 20000101,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_SeasonFirst01",
+    "rlArchiveSubId": 20000101,
+    "cutOffEvent": false
   },
   {
     "id": 2,
-    "story_event_name": "不可沉眠",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "不可沉眠",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5151
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story01.T_Rouge_Story01'",
-    "event_moment": 2,
-    "event_min_room": 1,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story01.T_Rouge_Story01'",
+    "eventMoment": 2,
+    "eventMinRoom": 1,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryFailed01",
-    "rl_archive_sub_id": 20000201,
-    "cut_off_event": true
+    "eventStoryline": "Rogue/RouEvent_StoryFailed01",
+    "rlArchiveSubId": 20000201,
+    "cutOffEvent": true
   },
   {
     "id": 3,
-    "story_event_name": "混沌之心",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "混沌之心",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5152
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story02.T_Rouge_Story02'",
-    "event_moment": 1,
-    "event_min_room": 8,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story02.T_Rouge_Story02'",
+    "eventMoment": 1,
+    "eventMinRoom": 8,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StorySuccess01",
-    "rl_archive_sub_id": 20000301,
-    "cut_off_event": true
+    "eventStoryline": "Rogue/RouEvent_StorySuccess01",
+    "rlArchiveSubId": 20000301,
+    "cutOffEvent": true
   },
   {
     "id": 4,
-    "story_event_name": "深渊行商·烛芯与灯",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·烛芯与灯",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_1",
-    "rl_archive_sub_id": 20000401,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_1",
+    "rlArchiveSubId": 20000401,
+    "cutOffEvent": false
   },
   {
     "id": 5,
-    "story_event_name": "深渊行商·未熄的火",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·未熄的火",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_2",
-    "rl_archive_sub_id": 20000402,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_2",
+    "rlArchiveSubId": 20000402,
+    "cutOffEvent": false
   },
   {
     "id": 6,
-    "story_event_name": "深渊行商·时间囚徒",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·时间囚徒",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_3",
-    "rl_archive_sub_id": 20000403,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_3",
+    "rlArchiveSubId": 20000403,
+    "cutOffEvent": false
   },
   {
     "id": 7,
-    "story_event_name": "深渊行商·荒诞剧",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·荒诞剧",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_4",
-    "rl_archive_sub_id": 20000404,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_4",
+    "rlArchiveSubId": 20000404,
+    "cutOffEvent": false
   },
   {
     "id": 8,
-    "story_event_name": "深渊行商·野薄荷",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·野薄荷",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_5",
-    "rl_archive_sub_id": 20000405,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_5",
+    "rlArchiveSubId": 20000405,
+    "cutOffEvent": false
   },
   {
     "id": 9,
-    "story_event_name": "深渊行商·神的步音",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·神的步音",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_6",
-    "rl_archive_sub_id": 20000406,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_6",
+    "rlArchiveSubId": 20000406,
+    "cutOffEvent": false
   },
   {
     "id": 10,
-    "story_event_name": "深渊行商·银白梦乡",
-    "story_event_type": "剧情",
-    "event_condition": [],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "event_moment": -1,
-    "event_min_room": 0,
-    "event_probability": [
+    "storyEventName": "深渊行商·银白梦乡",
+    "storyEventType": "剧情",
+    "eventCondition": [],
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
+    "eventMoment": -1,
+    "eventMinRoom": 0,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_StoryShop_7",
-    "rl_archive_sub_id": 20000407,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_StoryShop_7",
+    "rlArchiveSubId": 20000407,
+    "cutOffEvent": false
   },
   {
     "id": 11,
-    "story_event_name": "飞鸟坠落深渊·其一",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "飞鸟坠落深渊·其一",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5064,
       5155,
       5075
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story07.T_Rouge_Story07'",
-    "event_moment": 0,
-    "event_min_room": 2,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story07.T_Rouge_Story07'",
+    "eventMoment": 0,
+    "eventMinRoom": 2,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_Story11",
-    "rl_archive_sub_id": 20000501,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_Story11",
+    "rlArchiveSubId": 20000501,
+    "cutOffEvent": false
   },
   {
     "id": 12,
-    "story_event_name": "孤雏行于荒野·其一",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "孤雏行于荒野·其一",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5103,
       5155,
       5076
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story05.T_Rouge_Story05'",
-    "event_moment": 0,
-    "event_min_room": 6,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story05.T_Rouge_Story05'",
+    "eventMoment": 0,
+    "eventMinRoom": 6,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_Story12",
-    "rl_archive_sub_id": 20000601,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_Story12",
+    "rlArchiveSubId": 20000601,
+    "cutOffEvent": false
   },
   {
     "id": 13,
-    "story_event_name": "孤雏行于荒野·其二",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "孤雏行于荒野·其二",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5104,
       5155,
       5077
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story06.T_Rouge_Story06'",
-    "event_moment": 0,
-    "event_min_room": 10,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story06.T_Rouge_Story06'",
+    "eventMoment": 0,
+    "eventMinRoom": 10,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story13",
-    "rl_archive_sub_id": 20000602,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story13",
+    "rlArchiveSubId": 20000602,
+    "cutOffEvent": false
   },
   {
     "id": 14,
-    "story_event_name": "飞鸟坠落深渊·其二",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "飞鸟坠落深渊·其二",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5065,
       5105,
       5195,
       5075
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story04.T_Rouge_Story04'",
-    "event_moment": 0,
-    "event_min_room": 2,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story04.T_Rouge_Story04'",
+    "eventMoment": 0,
+    "eventMinRoom": 2,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story21",
-    "rl_archive_sub_id": 20000502,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story21",
+    "rlArchiveSubId": 20000502,
+    "cutOffEvent": false
   },
   {
     "id": 15,
-    "story_event_name": "哀啼枯唤黎明·其一",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "哀啼枯唤黎明·其一",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5196,
       5195,
       5078
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story08.T_Rouge_Story08'",
-    "event_moment": 0,
-    "event_min_room": 8,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story08.T_Rouge_Story08'",
+    "eventMoment": 0,
+    "eventMinRoom": 8,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story22",
-    "rl_archive_sub_id": 20000701,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story22",
+    "rlArchiveSubId": 20000701,
+    "cutOffEvent": false
   },
   {
     "id": 16,
-    "story_event_name": "哀啼枯唤黎明·其二",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "哀啼枯唤黎明·其二",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5197,
       5195,
       5079
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story09.T_Rouge_Story09'",
-    "event_moment": 0,
-    "event_min_room": 14,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story09.T_Rouge_Story09'",
+    "eventMoment": 0,
+    "eventMinRoom": 14,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story23",
-    "rl_archive_sub_id": 20000702,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story23",
+    "rlArchiveSubId": 20000702,
+    "cutOffEvent": false
   },
   {
     "id": 17,
-    "story_event_name": "飞鸟坠落深渊·其三",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "飞鸟坠落深渊·其三",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5066,
       5202,
       5198,
       5075
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story10.T_Rouge_Story10'",
-    "event_moment": 0,
-    "event_min_room": 2,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story10.T_Rouge_Story10'",
+    "eventMoment": 0,
+    "eventMinRoom": 2,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story31",
-    "rl_archive_sub_id": 20000503,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story31",
+    "rlArchiveSubId": 20000503,
+    "cutOffEvent": false
   },
   {
     "id": 18,
-    "story_event_name": "素羽浸染血色·其一",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "素羽浸染血色·其一",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5199,
       5198,
       5080
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story11.T_Rouge_Story11'",
-    "event_moment": 0,
-    "event_min_room": 11,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story11.T_Rouge_Story11'",
+    "eventMoment": 0,
+    "eventMinRoom": 11,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story32",
-    "rl_archive_sub_id": 20000801,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story32",
+    "rlArchiveSubId": 20000801,
+    "cutOffEvent": false
   },
   {
     "id": 19,
-    "story_event_name": "素羽浸染血色·其二",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "素羽浸染血色·其二",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5200,
       5198,
       5081
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story12.T_Rouge_Story12'",
-    "event_moment": 0,
-    "event_min_room": 20,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story12.T_Rouge_Story12'",
+    "eventMoment": 0,
+    "eventMinRoom": 20,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story33",
-    "rl_archive_sub_id": 20000802,
-    "cut_off_event": false
+    "eventStoryline": "Rogue/RouEvent_story33",
+    "rlArchiveSubId": 20000802,
+    "cutOffEvent": false
   },
   {
     "id": 20,
-    "story_event_name": "愿有清风在翼",
-    "story_event_type": "剧情",
-    "event_condition": [
+    "storyEventName": "愿有清风在翼",
+    "storyEventType": "剧情",
+    "eventCondition": [
       5201,
       5198
     ],
-    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story14.T_Rouge_Story14'",
-    "event_moment": 1,
-    "event_min_room": 20,
-    "event_probability": [
+    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story14.T_Rouge_Story14'",
+    "eventMoment": 1,
+    "eventMinRoom": 20,
+    "eventProbability": [
       1,
       0.1
     ],
-    "event_storyline": "Rogue/RouEvent_story34",
-    "rl_archive_sub_id": 20000901,
-    "cut_off_event": true
+    "eventStoryline": "Rogue/RouEvent_story34",
+    "rlArchiveSubId": 20000901,
+    "cutOffEvent": true
   }
 ]
