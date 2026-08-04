@@ -1046,7 +1046,7 @@ return ReadOnly("SystemGuide", {
   [2123] = {
     GuideChannel = "SystemGuideWithUI",
     GuideEnd = 0,
-    GuideSkip = 1,
+    GuideSkip = 0,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_AutoChessinfinity.story",
     IsInRegion = 1,

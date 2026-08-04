@@ -30,6 +30,17 @@ local function GetSequence(SequencePath)
   if CombGenderSequence then
     return CombGenderSequence
   end
+  local ReverseEXGender = "EF" == EXGender and "EM" or "EF"
+  local ReverseEXGenderSequencePath = SequencePath .. "_" .. ReverseEXGender
+  local ReverseEXGenderSequence = UE4.LoadObject(ReverseEXGenderSequencePath)
+  if ReverseEXGenderSequence then
+    return ReverseEXGenderSequence
+  end
+  local ReverseCombGenderSequencePath = SequencePath .. "_" .. Gender .. ReverseEXGender
+  local ReverseCombGenderSequence = UE4.LoadObject(ReverseCombGenderSequencePath)
+  if ReverseCombGenderSequence then
+    return ReverseCombGenderSequence
+  end
   return nil
 end
 
