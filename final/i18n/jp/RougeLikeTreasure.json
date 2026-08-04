@@ -6,11 +6,11 @@
     "simpleDesc": "追加の「更新」機会を獲得、初回更新は「エンバー」を消費しない。",
     "ipDesc": "灯火は子供らの頬に笑みを浮かべ、凍える世界に希望を灯した。だが俗世の炎はいつか消える運命である。だから彼女はただ、朽ちる蠟燭の度に新たな火を掲げ続けるしかなかった。\n聖湖の深奥で、キャンドル職人はついに不滅の炎を錬成した。\nしかし、もはやその輝きを待つ人は、誰一人として残されていない。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_01",
     "endPoints": [
       10
@@ -18,9 +18,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 1,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10102,
@@ -29,11 +27,11 @@
     "simpleDesc": "謎の行商人の全アイテム価格が割引。",
     "ipDesc": "鳥面の魔術師は商人と会うたび、必ずこう愚痴った。「最初から値段をつけるなんてつまらない。ランダム性や確率要素を追加したらどうだ？」\n商人はその提案を受け入れ、深淵の片隅に「割引券」をばらまいた。魔術師はがっかりしたように首を振った。「あんたの善意は、その平凡な商才すら霞むほど退屈だな。」",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_02",
     "endPoints": [
       10
@@ -41,9 +39,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 2,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10103,
@@ -52,11 +48,11 @@
     "simpleDesc": "次のフロアに入る時、HPが回復する。",
     "ipDesc": "彼女こそ最も敬虔たる信者であった。その言動は、いかなる時も神々の教えを忠実に守る。たとえ誰の目も届かぬところでも、決して戒めも破ることはない。貧しき者には手を差し伸べ、道端にうずくまる者には懐の全てを晒し、異端を唱える者に対しても、九神の恩寵を感得せよと寛容の心で諭した。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20104001,
+    "mod": 20104001,
     "icon": "T_Rouge_Treasure_05",
     "endPoints": [
       10
@@ -64,9 +60,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 3,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10104,
@@ -75,11 +69,11 @@
     "simpleDesc": "次のフロアに入る時、SPが回復する。",
     "ipDesc": "「仮に神々があなたの描くような完全な存在ではなかったら、その行為に意義はあるのか？」相手は彼女を詰問した。\n「もちろんあるわ」と彼女は懐から溢れるような笑みを浮かべ、「信仰とは与えられるためのものではなく、己を律するためのもの。この胸に一片のやましさもない限り、神の真偽も、神の善悪も、私には何の関係もない。」",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20105001,
+    "mod": 20105001,
     "icon": "T_Rouge_Treasure_06",
     "endPoints": [
       10
@@ -87,9 +81,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 4,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10105,
@@ -98,11 +90,11 @@
     "simpleDesc": "足跡の獲得量アップ。",
     "ipDesc": "それは誰もが知る、迷途の子らを導く慈悲の神々を讃える賛歌。エリュシオンの信者らは深淵に佇み、欠けた旋律を紡ぎながら、神々に救済を求め、約束の天蓋へと導くことを乞う。やがて黄金の音色に包まれ、彼らは幸福の微笑みを浮かべたまま、永遠の眠りに就いた。",
     "treasureGroup": 2,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       10
@@ -110,9 +102,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 5,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10106,
@@ -121,11 +111,11 @@
     "simpleDesc": "復活回数増加。",
     "ipDesc": "一行は四方より湧き上がる暗影に包囲された。騎士はただ独り闇に飛び込み、生きる道を切り拓いた。暗影が散った後、聖療司祭は黒き霧の中から、満身創痍になった騎士の体を引きずり出した。\n必ず救って見せると、聖療司祭は心に誓った。癒しの術の真義とは、勇者の犠牲を決して無為に還さぬことだと。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20107001,
+    "mod": 20107001,
     "icon": "T_Rouge_Treasure_09",
     "endPoints": [
       10
@@ -133,9 +123,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 6,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10107,
@@ -144,11 +132,11 @@
     "simpleDesc": "HPが減少した後、ダメージを受けてものけ反らなくなり、被ダメージがダウンする。",
     "ipDesc": "長い旅路の中で、真実は常に苦痛とともにある。夜の鐘が鳴り響く時、流浪の鳥はなぜ巣に帰らないのか？\n高塔は大陸の中心ではない。それは神が万物の根源ではないからだと、彼は信じている。この世界は自分の足で歩いてこそ意味がある。たとえ、一生を鎖につながれたままでも。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20101001,
+    "mod": 20101001,
     "icon": "T_Rouge_Treasure_21",
     "endPoints": [
       10
@@ -156,9 +144,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 7,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10108,
@@ -167,11 +153,11 @@
     "simpleDesc": "スキルダメージアップ、近接武器ダメージダウン。",
     "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20108001,
+    "mod": 20108001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -179,9 +165,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 8,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10109,
@@ -190,11 +174,11 @@
     "simpleDesc": "スキルダメージアップ、遠隔武器ダメージダウン。",
     "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20109001,
+    "mod": 20109001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -202,9 +186,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 9,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10110,
@@ -213,11 +195,11 @@
     "simpleDesc": "近接武器ダメージアップ、スキルダメージダウン。",
     "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20110001,
+    "mod": 20110001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -225,9 +207,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 10,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10111,
@@ -236,11 +216,11 @@
     "simpleDesc": "近接武器ダメージアップ、遠隔武器ダメージダウン。",
     "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20111001,
+    "mod": 20111001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -248,9 +228,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 11,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10112,
@@ -259,11 +237,11 @@
     "simpleDesc": "遠隔武器ダメージアップ、スキルダメージダウン。",
     "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20112001,
+    "mod": 20112001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -271,9 +249,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 12,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10113,
@@ -282,11 +258,11 @@
     "simpleDesc": "遠隔武器ダメージアップ、近接武器ダメージダウン。",
     "ipDesc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20113001,
+    "mod": 20113001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -294,9 +270,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 13,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10114,
@@ -305,11 +279,11 @@
     "simpleDesc": "ジェネモン支援発動後、ダメージアップ。",
     "ipDesc": "前を進むその時も、共に深淵へと飛び込んだ小さな仲間たちを忘れるな。さあ、缶を開けよう、彼らへの賛歌と糧のために！",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20120001,
+    "mod": 20120001,
     "icon": "T_Rouge_Treasure_28",
     "endPoints": [
       10
@@ -317,9 +291,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 14,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10201,
@@ -328,11 +300,11 @@
     "simpleDesc": "ランダムにレアリティが<Highlight>レア</>、または<Highlight>レジェンド</>のキャンドルの芯を獲得。",
     "ipDesc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -340,9 +312,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 15,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10202,
@@ -351,11 +321,11 @@
     "simpleDesc": "ランダムにレアリティが<Highlight>レア</>、または<Highlight>レジェンド</>のレリックを獲得。",
     "ipDesc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -363,9 +333,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 16,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10203,
@@ -374,11 +342,11 @@
     "simpleDesc": "キャラクター最大回避回数増加。",
     "ipDesc": "機敏な子よ、誰よりも早く山頂へ登り、仲間たちの模範となれ。\n勇敢たる戦士よ、最初に戦場へ踏み込み、後続の者の道標となれ。\n高潔な信者よ、真っ先に地獄へ飛び込み、聖なる大地を穢から守れ。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20103001,
+    "mod": 20103001,
     "icon": "T_Rouge_Treasure_19",
     "endPoints": [
       20
@@ -386,9 +354,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 17,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10204,
@@ -397,11 +363,11 @@
     "simpleDesc": "スキル発動時、SP回復。\n 「暗影」中のみ有効。",
     "ipDesc": "二つの貌を持つ神よ、我らの祈りを聞き給え―白き羽根を刃で散らせ、鼓動する心臓が針に貫かれても、この偽りの運命から脱することさえできるなら、満月が逆さまになるまで、我らも静寂の祈りを捧げ続ける。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20102001,
+    "mod": 20102001,
     "icon": "T_Rouge_Treasure_22",
     "endPoints": [
       20
@@ -409,9 +375,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 18,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10205,
@@ -420,11 +384,11 @@
     "simpleDesc": "レリックを獲得後、復活するたびに与ダメージアップ。",
     "ipDesc": "呪われた籠の鳥よ、落ち葉はあなたの枕ではなく、暮れ色もあなたの夢郷ではない。死さえも安らぎを与えぬだろう。ならば、目覚めよ―死を味わい、痛みを噛み締め、この理不尽な運命が汝に屈するまで抗え。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20114001,
+    "mod": 20114001,
     "icon": "T_Rouge_Treasure_24",
     "endPoints": [
       20
@@ -432,9 +396,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 19,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10206,
@@ -443,11 +405,11 @@
     "simpleDesc": "スキルダメージが目標の防御力を無視する。異なる種類のキャンドルの芯を所持するごとに効果がダウン。",
     "ipDesc": "学びに成ることを望むならば、まず己の志すところを明らかにせよ。然る後は一意専心、刻苦勉励すべし。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20115001,
+    "mod": 20115001,
     "icon": "T_Rouge_Treasure_25",
     "endPoints": [
       20
@@ -455,9 +417,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 20,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10207,
@@ -466,11 +426,11 @@
     "simpleDesc": "次のフロアに入るたび、少量のエンバーを消費してそのフロアで受けるダメージをダウンさせる。",
     "ipDesc": "皆が下を向くときは、あなただけ顔を上げろ。皆がひざまずくときは、あなただけまっすぐ立て。皆が賛美するときは、あなただけ疑問をぶつけろ。皆が幸せに酔うときは、あなただけ狂え。\nそうすれば、満月の鎖は解け、運命の裏側に、ふと真実が見えてくるだろう。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20116001,
+    "mod": 20116001,
     "icon": "T_Rouge_Treasure_23",
     "endPoints": [
       20
@@ -478,9 +438,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 21,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10209,
@@ -489,11 +447,11 @@
     "simpleDesc": "朦朧と離散の暗影で<Highlight>ノーマル</>品質のキャンドルの芯を選択し、即時ににアップグレードする。",
     "ipDesc": "鳥は空を望むが、深淵には空はない。鳥は止まり木を求めるが、深淵に広がるのは恐怖の枝のみ。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_17",
     "endPoints": [
       20
@@ -501,9 +459,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 22,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10210,
@@ -512,11 +468,11 @@
     "simpleDesc": "一定数のホルダーを倒すとエンバー獲得。",
     "ipDesc": "幾度も転生を重ね、幾度も絶望に沈む。方角も時も、自我すら失われてゆく。疲れ果てた旅人は果てしない闇を歩む。付き纏うのは孤独と恐怖のみ。ただ、その底知れぬ闇の中に、彼の足跡を静かに見守る誰かの眼差しがあることにはまだ気づいていない。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_20",
     "endPoints": [
       20
@@ -524,9 +480,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 23,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10211,
@@ -535,11 +489,11 @@
     "simpleDesc": "次に朦朧と離散の暗影でキャンドルの芯を選択する際、<Highlight>レジェンド</>品質以上が確定で出現する。",
     "ipDesc": "いつの間にかバッグにメモが入っていた。どうやら警戒心をもう少し持った方が良さそうだ。幸いにもこのメモには、毒も呪いもかけられていなかった。そこに書かれていたのは、ただ心からの祝福の一言だ：「旅路の平安と幸運を祈る―あなたの友より」",
     "treasureGroup": 10211,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_30",
     "endPoints": [
       20
@@ -547,9 +501,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 24,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10212,
@@ -558,11 +510,11 @@
     "simpleDesc": "このレリックを獲得する時、追加で<Highlight>1</>のキャンドルの芯が手に入る。所持数が最も多いカテゴリから優先的に獲得する。",
     "ipDesc": "世界万物には必ず何らかの繋がりがある。論理的思考を駆使し、帰納法と演繹法を組み合わせれば、新しい発見が生まれるかもしれない。",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_12",
     "endPoints": [
       20
@@ -570,9 +522,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 25,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10213,
@@ -581,11 +531,11 @@
     "simpleDesc": "「炉心の火」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -596,9 +546,7 @@
       5064
     ],
     "rlArchiveId": 26,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10214,
@@ -607,11 +555,11 @@
     "simpleDesc": "「水面の月」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -622,9 +570,7 @@
       5065
     ],
     "rlArchiveId": 27,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10215,
@@ -633,11 +579,11 @@
     "simpleDesc": "「蛍光石」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -647,9 +593,7 @@
       5046
     ],
     "rlArchiveId": 28,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10216,
@@ -658,11 +602,11 @@
     "simpleDesc": "「流明の枝」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -673,9 +617,7 @@
       5065
     ],
     "rlArchiveId": 29,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10217,
@@ -684,11 +626,11 @@
     "simpleDesc": "「奈落の黒蝶」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -698,9 +640,7 @@
       5048
     ],
     "rlArchiveId": 30,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10218,
@@ -709,11 +649,11 @@
     "simpleDesc": "「曵光虫」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -724,9 +664,7 @@
       5064
     ],
     "rlArchiveId": 31,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10219,
@@ -735,11 +673,11 @@
     "simpleDesc": "「血を啜る紅蓮」の出現率が少しアップし、即時に<Highlight>1</>個獲得する。",
     "ipDesc": "燭芯祭司は通霊の術に長け、亡者の力を己のものとして扱える。彼は死者を友と見なし、決して恐れることはなかった。だが、この深淵に足を踏み入れた時―燭光に映った暗影は、いったい何者なのか？なぜ、その魂は苦しんでいるのか？そしてなぜ……彼らは振り返れ、進むなと訴えるのか？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -749,9 +687,7 @@
       5050
     ],
     "rlArchiveId": 32,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10220,
@@ -760,11 +696,11 @@
     "simpleDesc": "足跡の獲得量大幅アップ。",
     "ipDesc": "それは誰もが知る、迷途の子らを導く慈悲の神々を讃える賛歌。エリュシオンの信者らは深淵に佇み、欠けた旋律を紡ぎながら、神々に救済を求め、約束の天蓋へと導くことを乞う。やがて黄金の音色に包まれ、彼らは幸福の微笑みを浮かべたまま、永遠の眠りに就いた。",
     "treasureGroup": 10220,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       20
@@ -772,9 +708,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 62,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10301,
@@ -783,11 +717,11 @@
     "simpleDesc": "ランダムにレアリティが<Highlight>レジェンド</>、または<Highlight>エピック</>のキャンドルの芯を獲得。",
     "ipDesc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -795,9 +729,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 33,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10302,
@@ -806,11 +738,11 @@
     "simpleDesc": "ランダムにレアリティが<Highlight>レジェンド</>、または<Highlight>エピック</>のレリックを獲得。",
     "ipDesc": "水、乾物、火打ち石、そして皺になっている地図。その持ち主はチョークで地図に自分たちの足跡を描こうとしたが、線は交錯して重なり、ついに地図の縁をはみ出している。何度も同じ場所をぐるぐると回るように描かれた線は、ついに方向を見失い、最後には歪んだ疑問符だけがぽつりと残されていた。",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -818,9 +750,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 34,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10303,
@@ -829,11 +759,11 @@
     "simpleDesc": "SP自然回復量アップ。",
     "ipDesc": "「なぜ私を救った？」目を見開いた騎士が、地獄の業火のような視線で迫る。「狂う前にせめてこの魂だけは\n無垢のままで黄泉に還りたかったのに！」\n聖療司祭が必死に救い戻したその体を引きずり、騎士は再び闇へと足を踏み入れる。もはや、いったい誰を救えばよいというのか？",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20106001,
+    "mod": 20106001,
     "icon": "T_Rouge_Treasure_10",
     "endPoints": [
       20
@@ -841,9 +771,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 35,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10304,
@@ -852,11 +780,11 @@
     "simpleDesc": "全てのキャンドルの芯をランダムなキャンドルの芯に置換する。所持しているキャンドルの芯の数に応じてエンバーを獲得する。",
     "ipDesc": "「あの石頭の商人が店のルールを変えないなら、私から特別サービスを提供しようじゃないか！」魔術師はトランプを裏返して広げた。「さあ、心ゆくまで引くといい！」",
     "treasureGroup": 10304,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_15",
     "endPoints": [
       40
@@ -864,9 +792,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10305,
@@ -875,11 +801,11 @@
     "simpleDesc": "全てのレリックをランダムなレリックに置換。",
     "ipDesc": "「怪人」などという俗っぽい呼び名より、「魔術師」の方が彼の好みだった。このどんよりした退屈な空間で、刹那の快楽を紡ぎ出すことこそ、彼が生きる最後の目的である。快楽の代償だって？考えるまでもない。失うものなど、とっくに何も残っていないのだから。",
     "treasureGroup": 10305,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_16",
     "endPoints": [
       40
@@ -887,9 +813,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10306,
@@ -898,11 +822,11 @@
     "simpleDesc": "レリックが多ければ多いほど、与ダメージがアップ。",
     "ipDesc": "富を憎む者などいない。だが、財宝を山と積むだけなら、それはただの退屈な人生に過ぎないだろう。金貨を人々の笑顔に鋳替えよ。さすれば、千年の時を超えても我が名は感謝の詩に刻まれるだろう―この賛美こそが、真の財産となるのだ。",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20118001,
+    "mod": 20118001,
     "icon": "T_Rouge_Treasure_18",
     "endPoints": [
       40
@@ -910,9 +834,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 36,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10307,
@@ -921,11 +843,11 @@
     "simpleDesc": "異なる種類のキャンドルの芯を所持するごとに全属性貫通アップ。",
     "ipDesc": "知への道は、まず無数の書物と向き合うことから始まる。それらを血肉と同化させ、肉体という檻を打ち破れ。さすれば、自ずと視界は地平線の彼方まで広がっていくのだ。",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20119001,
+    "mod": 20119001,
     "icon": "T_Rouge_Treasure_26",
     "endPoints": [
       40
@@ -933,9 +855,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 37,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10308,
@@ -944,11 +864,11 @@
     "simpleDesc": "同種類のキャンドルの芯セット効果をアクティブするために必要な数が減少。",
     "ipDesc": "真実は簡潔なり、深慮すれば、小知も大助け。",
     "treasureGroup": 10308,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_11",
     "endPoints": [
       40
@@ -956,11 +876,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 38,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {
-      "groupDiscount": -1
-    }
+    "canSell": 0
   },
   {
     "id": 10309,
@@ -969,11 +885,11 @@
     "simpleDesc": "復活回数が尽きる時、エンバーの消費で追加の復活回数を獲得。",
     "ipDesc": "果てしない闇があなたを飲み込もうとしたその時、残り火から一筋の光が奇跡的に輝いた。もし深淵に意志があるなら、それはきっとあなたの命がここで消えることを望んでいないのだろう。",
     "treasureGroup": 10309,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_08",
     "endPoints": [
       40
@@ -981,9 +897,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 39,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10310,
@@ -992,11 +906,11 @@
     "simpleDesc": "近接攻撃で敵にダメージを与えると、周囲に剣気を放ち、命中した敵に光属性ダメージを与える。",
     "ipDesc": "銀の剣を手にした騎士が敵陣を切り抜ける。白き輝きは満月のごとく戦場を照らし、力尽きた兵士たちの瞳を再び開かせた。\n ああ――これは運命の神の導き！奇跡の光に涙し、人々の四肢は信仰の力で再び軽やかになる。彼らは立ち上がり、光を追って進軍を続けた。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20130001,
+    "mod": 20130001,
     "icon": "T_Rouge_Treasure_46",
     "endPoints": [
       40
@@ -1004,9 +918,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 53,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10311,
@@ -1015,11 +927,11 @@
     "simpleDesc": "スキルで敵にダメージを与えると、自身の周囲に爆発を起こし、敵に闇属性ダメージを与える。",
     "ipDesc": "闇が初めて聖なる湖を蝕んだ時、エリュシオンの最も勇敢たる騎士たちは自らその中へと足を踏み入れた。\n 大半は命を落とし、生き残った者も夢を永遠に失った。ひとたび目を閉じれば、闇が思考を奪い、底なしの深淵へと引きずり込むのだ。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20131001,
+    "mod": 20131001,
     "icon": "T_Rouge_Treasure_47",
     "endPoints": [
       40
@@ -1027,9 +939,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 54,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10312,
@@ -1038,11 +948,11 @@
     "simpleDesc": "敵にダメージを与えると追尾弾を放ち、命中した敵に風属性ダメージを与える。",
     "ipDesc": "出征の前夜、気負う若き騎士は羽のように広がる聖痕を銀の鎧で覆い隠した。ただ召集の前に、もう一度エリュシオンに勝利を捧げるために。\n だがその勝利は、突如出現した巨大な穢獣によって無に帰した。騎士もまた行方不明となる――彼に翼が生え、空へ飛び立ちエリュシオンを見捨てたと言う者もいれば、暗月に心を蝕まれ、穢獣と一体となったと語る者もいた。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20132001,
+    "mod": 20132001,
     "icon": "T_Rouge_Treasure_48",
     "endPoints": [
       40
@@ -1050,9 +960,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 55,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10313,
@@ -1061,11 +969,11 @@
     "simpleDesc": "召喚ユニットが召喚された時、召喚位置で一度ダメージを放ち、命中した敵に水属性ダメージを与える。",
     "ipDesc": "つま先が聖なる湖の水面に触れたとき、光なき波紋が広がり、まるで暗月が水底から浮かび上がるようだった。もしこの湖面が本当に天の楽土へ通じているのなら、なぜ自分の姿すら映し出せないのか。\n 一瞬にして奔流が湧き立ち、聖徒の疑念もその姿もまた、漆黒の渦へと呑み込まれた。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20133001,
+    "mod": 20133001,
     "icon": "T_Rouge_Treasure_49",
     "endPoints": [
       40
@@ -1073,9 +981,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 56,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10314,
@@ -1084,11 +990,11 @@
     "simpleDesc": "遠隔攻撃で敵にダメージを与えると、前方扇形範囲の敵に火属性ダメージを与える。",
     "ipDesc": "その貴族は言った、自らに流れるのは神聖なる血脈、民を救うために身を捧げねばならぬと。\n 戴冠の日、彼女は長い髪を炎と化し、神聖なる儀式を烈火の刑場へと変えた。聖堂も、そこに集った貴族たちもすべて焼き尽くされる。火柱は天を突き、太陽すら凌ぐ輝きに、人々は息を呑み仰ぎ見た。\n 彼女は己を捧げ、そして万民を救ったのだ。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20134001,
+    "mod": 20134001,
     "icon": "T_Rouge_Treasure_50",
     "endPoints": [
       40
@@ -1096,9 +1002,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 57,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10315,
@@ -1107,11 +1011,11 @@
     "simpleDesc": "スキル発動時、前方に落雷を放ち、命中した敵に雷属性ダメージを与える。",
     "ipDesc": "私は暗き時代を生きた。異端者は群れをなし、塔を倒さんとした。\n 私は見た、数千の棘が塔より垂れ下がり、空を覆う光景を。\n 信仰厚き者よ、恐れるな。神々が罰するのは罪ある者のみ。棘がすべての悪を滅ぼした後、血にまみれて訪れるのは必ず幸福なる新時代だ。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20135001,
+    "mod": 20135001,
     "icon": "T_Rouge_Treasure_51",
     "endPoints": [
       40
@@ -1119,9 +1023,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 58,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10316,
@@ -1130,11 +1032,11 @@
     "simpleDesc": "ダメージが低いとき、追加で固定ダメージを1回与える。",
     "ipDesc": "彼女は気づいていた、静かに広がる闇に。それでも道を見失った今、何かを奪い、何かを消し去ることなどできなかった。\n だから彼女は差し出したのだ、一粒の透明な飴玉を――それが刹那の幻夢でも、欺瞞の嘘でもいい。友がわずかに笑顔を見せられるなら、それで十分だった。",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20121001,
+    "mod": 20121001,
     "icon": "T_Rouge_Treasure_54",
     "endPoints": [
       40
@@ -1142,9 +1044,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 61,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11101,
@@ -1153,11 +1053,11 @@
     "simpleDesc": "シールドがある時、被ダメージダウン。",
     "ipDesc": "十九歳で初めて戦場に立った時、穢獣の長い爪が知り合ったばかりの仲間を串刺しにした。間に合わなかった盾には、鮮血の花がべっとりと咲いていた。どれだけ洗っても、かすかな傷跡は残り続ける。\n\n彼は何のために戦うのか？信仰のためか、正義のためか、いつかこの傷跡を忘れられる日のためか。",
     "treasureGroup": 101,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20171001,
+    "mod": 20171001,
     "icon": "T_Rouge_Treasure_34",
     "endPoints": [
       10
@@ -1165,9 +1065,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 40,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11201,
@@ -1176,11 +1074,11 @@
     "simpleDesc": "シールドがある時、与ダメージアップ。",
     "ipDesc": "十四歳で初めて訓練を受けた日、武器商人に勧められた初心者装備の中から、彼は真っ先にこの長剣を手に取った。友人は「銃の方が使いやすいのに！」と彼を笑った。\n「騎士はみんな剣を持つものだ。」彼は絵本の英雄を真似て長剣を頭の上に掲げ、「エリュシオンのために！」と叫んだ。",
     "treasureGroup": 101,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20172001,
+    "mod": 20172001,
     "icon": "T_Rouge_Treasure_33",
     "endPoints": [
       20
@@ -1188,9 +1086,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 41,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 12101,
@@ -1199,11 +1095,11 @@
     "simpleDesc": "選択した更新の消費が増加。指定した階数を通過すると上限に達し、エンバーを獲得する。",
     "ipDesc": "完璧を求めるのは決して賢明ではない。機会が訪れたら、即座に行動すべきである。躊躇すれば、幸運を逃すことになる。",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_35",
     "endPoints": [
       10
@@ -1211,9 +1107,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 42,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12102,
@@ -1222,11 +1116,11 @@
     "simpleDesc": "謎の行商人のすべての商品の価格が上がっている。指定した階数を通過すると上限に達し、エンバーを獲得する。",
     "ipDesc": "俗世の物に執着するは愚かである。私欲は必ず腐敗を生む。収穫を望む者は、まず種蒔きの代価を数えよ。",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_36",
     "endPoints": [
       10
@@ -1234,9 +1128,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 43,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12201,
@@ -1245,11 +1137,11 @@
     "simpleDesc": "与ダメージダウン。一定フロア踏破すると解除されエンバーを獲得。",
     "ipDesc": "忍耐は最も尊い美徳である。草木が朝日を待つように、神の恵みが降るのを待ち続ける。俗世の雑念を捨て、敬虔な心で光の道を歩む。",
     "treasureGroup": 102,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20161001,
+    "mod": 20161001,
     "icon": "T_Rouge_Treasure_37",
     "endPoints": [
       20
@@ -1257,9 +1149,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 44,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13101,
@@ -1268,11 +1158,11 @@
     "simpleDesc": "ダメージを与えると確率で追加の火属性ダメージを与える。",
     "ipDesc": "揺らめく蝋燭の光でも、暖炉の炎でもない。\n山林を呑み込む業火となり、行く先を阻むものを灰に変えよう。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20181001,
+    "mod": 20181001,
     "icon": "T_Rouge_Treasure_38",
     "endPoints": [
       10
@@ -1280,9 +1170,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 45,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13102,
@@ -1291,11 +1179,11 @@
     "simpleDesc": "ダメージを与えると確率で追加の水属性ダメージを与える。",
     "ipDesc": "春の雨でも、せせらぎの水でもない。\n我は町を吞み込む津波となり、前に塞がるもの粉砕して見せる。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20182001,
+    "mod": 20182001,
     "icon": "T_Rouge_Treasure_39",
     "endPoints": [
       10
@@ -1303,9 +1191,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 46,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13103,
@@ -1314,11 +1200,11 @@
     "simpleDesc": "ダメージを与えると確率で追加の風属性ダメージを与える。",
     "ipDesc": "優しい吐息でも、そよ風でもない。\n我は屋根を吹き飛ばす狂風となり、\n前に塞がるものを引き裂いてみせる。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20183001,
+    "mod": 20183001,
     "icon": "T_Rouge_Treasure_40",
     "endPoints": [
       10
@@ -1326,9 +1212,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 47,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13104,
@@ -1337,11 +1221,11 @@
     "simpleDesc": "ダメージを与えると確率で追加の雷属性ダメージを与える。",
     "ipDesc": "かすかな電光でも、火花の瞬きでもない。\n我は暗き夜を引き裂く無音の雷鳴となり、前に塞がるものを震え上がらせ、魂ごと砕いてみせる。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20184001,
+    "mod": 20184001,
     "icon": "T_Rouge_Treasure_41",
     "endPoints": [
       10
@@ -1349,9 +1233,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 48,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14101,
@@ -1360,11 +1242,11 @@
     "simpleDesc": "スキル効率ダウンと引き換えに与ダメージアップ。",
     "ipDesc": "彼女は幼い頃から、騎士である姉に憧れていた。姉は強く聡明で、成せない任務などなかった。\n聖湖の底に広がる深淵こそ、最凶の戦場だと言われる。最強の騎士ですら、生きて帰ってられない場所だと。それでも姉は戻ってきた。\nただ、それから二度と言葉を口にすることはなかった。",
     "treasureGroup": 104,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20151001,
+    "mod": 20151001,
     "icon": "T_Rouge_Treasure_42",
     "endPoints": [
       10
@@ -1372,9 +1254,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 49,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14201,
@@ -1383,11 +1263,11 @@
     "simpleDesc": "近接武器ダメージダウンと引き換えに与ダメージアップ。",
     "ipDesc": "姉は聖湖で神を怒らせ、魂の一部を罰として奪われたと大人たちは言う。\nだが、姉は正しく敬虔な騎士だ。きっと自分の魂の欠片をあそこに置き忘れただけ。誰も信じなくても、私が証明する。\nこの深淵へ降りて、絶対に姉の失われた魂を取り戻してみせる。",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20152001,
+    "mod": 20152001,
     "icon": "T_Rouge_Treasure_43",
     "endPoints": [
       20
@@ -1395,9 +1275,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 50,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14202,
@@ -1406,11 +1284,11 @@
     "simpleDesc": "遠隔武器ダメージダウンと引き換えに与ダメージアップ。",
     "ipDesc": "姉さん……あなたなの？どうして、こんな姿に……？なぜ、私に剣を向けるの？\n「嘘つき……嘘つき……」漆黒の暗影が、鋭く耳を劈く声で繰り返す。「正義なんてない……ただの偽りだ。」\nふと、彼女は思い出した。姉がこっそりと語った言葉を――「騎士団を辞めて、普通の人になりたい。」",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20153001,
+    "mod": 20153001,
     "icon": "T_Rouge_Treasure_44",
     "endPoints": [
       20
@@ -1418,9 +1296,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 51,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14301,
@@ -1429,11 +1305,11 @@
     "simpleDesc": "被ダメージアップと引き換えに与ダメージアップ。",
     "ipDesc": "暗影は、まるで最初から存在しなかったかのように消え去った。彼女は悟った。姉の失われた魂は、もう二度と戻らないのだ。\nもし私があんなに姉に憧れていなかったら、もし姉が選ばれた時、あんなに喜んでいなかったら、姉は死なずに済んだのかな？姉を殺したのは…私？\n深淵は彼女の涙を吞み込み、何事もなかったように黙していた。",
     "treasureGroup": 104,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20154001,
+    "mod": 20154001,
     "icon": "T_Rouge_Treasure_45",
     "endPoints": [
       40
@@ -1441,9 +1317,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 52,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15101,
@@ -1452,11 +1326,11 @@
     "simpleDesc": "敵の「体勢」が高いとき、ダメージを与えるとSPを回復。",
     "ipDesc": "ならば今、彼女はなぜ傷だらけの体を引きずり、この終わりなき迷宮を進み続けるのか？\n なぜならどんな隅に隠れても、ケイシーは必ず彼女を見つけるから。どんな荒唐な言い訳でも、フーリンは決して怒らないから。\n そして彼女の手には血に染まった徽章が握られていた。それは誰かの完全な信頼と託しを背負っていた。\n 彼女には……もう諦められない理由があった。",
     "treasureGroup": 105,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20156001,
+    "mod": 20156001,
     "icon": "T_Rouge_Treasure_53",
     "endPoints": [
       10
@@ -1464,9 +1338,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 59,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15201,
@@ -1475,11 +1347,11 @@
     "simpleDesc": "敵の「体勢」が低いとき、与ダメージアップ。",
     "ipDesc": "幼い頃から彼女はいつも諦めてきた。学び舎では聖樹学院の選抜を欠席し、騎士団に入っても昇格試験に一度も挑まなかった。\n 誰もが上を目指せるわけではない。頂に辿り着けば必ず落ちる日が来る。それなら初めから留まり続ける方がいいと、彼女は選んだのだ。",
     "treasureGroup": 105,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20157001,
+    "mod": 20157001,
     "icon": "T_Rouge_Treasure_52",
     "endPoints": [
       20
@@ -1487,8 +1359,6 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 60,
-    "unlockConditionText": "レリック未解放",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   }
 ]

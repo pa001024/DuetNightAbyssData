@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "護衛騎士",
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "activateNeed": [
+      11101,
+      11201
+    ],
+    "groupEffectDesc": "收集[護衛騎士]的全部<Highlight>2</>件遺物後，[幽影]中每<Highlight>10</>秒獲得自身最大生命<Highlight>10%</>的超限護盾直到通過[幽影]。"
+  },
+  {
+    "id": 102,
+    "name": "繁榮之神",
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "activateNeed": [
+      12101,
+      12102,
+      12201
+    ],
+    "groupEffectDesc": "收集[繁榮之神的契約]的全部<Highlight>3</>件遺物後，每擁有<Highlight>100</>余燼傷害提高<Highlight>10%</>。\n若余燼少於<Highlight>200</>，受到傷害降低<Highlight>30%</>。"
+  },
+  {
+    "id": 103,
+    "name": "四象銘印",
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "activateNeed": [
+      13101,
+      13102,
+      13103,
+      13104
+    ],
+    "groupEffectDesc": "收集[四象銘印]的全部<Highlight>4</>件遺物後，觸發概率提高至<Highlight>50%</>，傷害倍率提高至<Highlight>100%</>，且造成傷害變為真實傷害。"
+  },
+  {
+    "id": 104,
+    "name": "贖罪騎士",
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "activateNeed": [
+      14101,
+      14201,
+      14202,
+      14301
+    ],
+    "groupEffectDesc": "收集[贖罪騎士]的全部<Highlight>4</>件遺物後不再需要代價，且總共提高傷害變為<Highlight>400%</>。"
+  },
+  {
+    "id": 105,
+    "name": "幽惘術士",
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "activateNeed": [
+      15101,
+      15201
+    ],
+    "groupEffectDesc": "收集[幽惘術士]的全部<Highlight>2</>件遺物後，[戰姿]削減效率提高<Highlight>100%</>，敵人進入[埃斯刻懲戒]後傷害提高<Highlight>100%</>。"
+  }
+]

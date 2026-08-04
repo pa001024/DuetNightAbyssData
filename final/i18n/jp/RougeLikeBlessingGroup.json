@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "炉心の火",
+    "icon": "T_Tab_Rouge_Fire",
+    "bigIcon": "T_Rouge_BlessingType_MeleeB",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "近接武器強化"
+  },
+  {
+    "id": 2,
+    "name": "水面の月",
+    "icon": "T_Tab_Rouge_Jellyfish",
+    "bigIcon": "T_Rouge_BlessingType_CharA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "遠隔武器強化"
+  },
+  {
+    "id": 3,
+    "name": "蛍光石",
+    "icon": "T_Tab_Rouge_Stone",
+    "bigIcon": "T_Rouge_BlessingType_MeleeA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "スキル効果強化"
+  },
+  {
+    "id": 4,
+    "name": "流明の枝",
+    "icon": "T_Tab_Rouge_Tree",
+    "bigIcon": "T_Rouge_BlessingType_LifeTree",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "召喚ユニット特化"
+  },
+  {
+    "id": 5,
+    "name": "奈落の黒蝶",
+    "icon": "T_Tab_Rouge_Butterfly",
+    "bigIcon": "T_Rouge_BlessingType_HelixLeap",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "機動力強化"
+  },
+  {
+    "id": 6,
+    "name": "曵光虫",
+    "icon": "T_Tab_Rouge_Firefly",
+    "bigIcon": "T_Rouge_BlessingType_DanmakuA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "生体誘導ミサイル"
+  },
+  {
+    "id": 7,
+    "name": "血を啜る紅蓮",
+    "icon": "T_Tab_Rouge_Thorns",
+    "bigIcon": "T_Rouge_BlessingType_SurvivalA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "生存能力が上がり、狂暴能力を付与する。"
+  }
+]

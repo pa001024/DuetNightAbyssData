@@ -5,8 +5,8 @@
     "desc": "近戰武器攻擊提高<Highlight>30.0%</>。",
     "simpleDesc": "近戰武器攻擊提高。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -20,7 +20,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 1,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -29,8 +28,8 @@
     "desc": "近戰武器觸發概率提高<Highlight>135.0%</>。",
     "simpleDesc": "近戰武器<Highlight>觸發概率</>提高。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -44,7 +43,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 2,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -53,8 +51,8 @@
     "desc": "近戰武器<Highlight>普通攻擊傷害</>提高<Highlight>15.0%</>。",
     "simpleDesc": "近戰武器<Highlight>普通攻擊傷害</>提高。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -68,7 +66,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 3,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -77,8 +74,8 @@
     "desc": "<Highlight>8.0</>米內敵人被擊敗時，自身回復<Highlight>4.5%</>生命。",
     "simpleDesc": "<Highlight>近處</>敵人被擊敗時，自身回復生命。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -92,7 +89,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 4,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -101,8 +97,8 @@
     "desc": "受到來自自身周圍<Highlight>8.0</>米內或帶有[熔炎]敵人的傷害降低<Highlight>20.0%</>。",
     "simpleDesc": "受到<Highlight>近處</>或帶有[熔炎]敵人的傷害降低。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -117,7 +113,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 5,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -126,8 +121,8 @@
     "desc": "受到傷害時為自身周圍<Highlight>8</>米內的敵人附加<Highlight>1</>層[熔炎]，效果每<Highlight>1.0</>秒最多觸發1次。",
     "simpleDesc": "受到傷害時為<Highlight>近處</>敵人附加[熔炎]。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -142,7 +137,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 6,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -151,8 +145,8 @@
     "desc": "近戰武器<Highlight>暴擊率</>提高<Highlight>90.0%</>。",
     "simpleDesc": "近戰武器<Highlight>暴擊率</>提高。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -166,7 +160,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 7,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -175,8 +168,8 @@
     "desc": "近戰武器<Highlight>暴擊傷害</>提高<Highlight>90.0%</>。",
     "simpleDesc": "近戰武器<Highlight>暴擊傷害</>提高。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -190,7 +183,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 8,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -199,8 +191,8 @@
     "desc": "近戰武器<Highlight>下落攻擊、蓄力攻擊、滑行攻擊傷害</>提高<Highlight>37.5%</>。",
     "simpleDesc": "近戰武器<Highlight>下落攻擊、蓄力攻擊、滑行攻擊傷害</>提高。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -214,7 +206,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 9,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -223,8 +214,8 @@
     "desc": "每<Highlight>1.0</>秒為周圍<Highlight>8</>米內的敵人附加<Highlight>1</>層[熔炎]。",
     "simpleDesc": "每隔一段時間為<Highlight>近處</>敵人附加[熔炎]。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -239,7 +230,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 10,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -248,8 +238,8 @@
     "desc": "對帶有超過<Highlight>2.0</>層[熔炎]的敵人造成傷害時，自身回復<Highlight>3.0%</>生命，效果每<Highlight>0.5</>秒最多觸發1次。",
     "simpleDesc": "對帶有[熔炎]的敵人造成傷害時，恢復生命。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -264,7 +254,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 11,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -273,8 +262,8 @@
     "desc": "近戰武器<Highlight>攻擊速度</>提高<Highlight>60.0%</>，<Highlight>攻擊範圍</>提高<Highlight>2.25</>。",
     "simpleDesc": "近戰武器<Highlight>攻擊速度</>與<Highlight>攻擊範圍</>提高。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -288,7 +277,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 12,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -297,8 +285,8 @@
     "desc": "任何傷害導致目標生命低於<Highlight>30.0%</>時，額外造成1次<Highlight>5400.0%</>角色攻擊的傷害，效果對同一目標每<Highlight>10.0</>秒最多觸發1次。",
     "simpleDesc": "任何傷害導致目標生命<Highlight>較低</>時<Highlight>額外</>造成傷害。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -312,7 +300,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 13,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -321,8 +308,8 @@
     "desc": "近戰武器造成傷害時，如果目標[熔炎]超過<Highlight>4.0</>層，額外造成<Highlight>90.0%</>角色攻擊的傷害。",
     "simpleDesc": "近戰武器對[熔炎]層數較高的敵人<Highlight>額外</>造成傷害。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -337,7 +324,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 14,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -346,8 +332,8 @@
     "desc": "自身周圍<Highlight>8</>米內敵人越少，造成的傷害越高，最多提高<Highlight>90.0%</>。",
     "simpleDesc": "<Highlight>近處</>敵人越少，造成的傷害越高。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -362,7 +348,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 15,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -371,8 +356,8 @@
     "desc": "遠端武器<Highlight>攻擊</>提高<Highlight>30.0%</>。",
     "simpleDesc": "遠端武器<Highlight>攻擊</>提高。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -386,7 +371,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 16,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -395,8 +379,8 @@
     "desc": "遠端武器<Highlight>觸發概率</>提高<Highlight>135.0%</>。",
     "simpleDesc": "遠端武器<Highlight>觸發概率</>提高。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -410,7 +394,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 17,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -419,8 +402,8 @@
     "desc": "遠端武器造成傷害時生成[彈藥補給箱]，效果每<Highlight>5.0</>秒最多觸發1次。已激活[II階]效果時，額外生成<Highlight>1</>枚[微型浮海月]。",
     "simpleDesc": "遠端武器造成傷害時生成[彈藥補給箱]。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -434,7 +417,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 18,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -443,8 +425,8 @@
     "desc": "成功拾取掉落物時，獲得<Highlight>45.0</>超限護盾，效果每<Highlight>5.0</>秒最多觸發1次。",
     "simpleDesc": "成功拾取掉落物時，獲得超限護盾。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -458,7 +440,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 19,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -467,8 +448,8 @@
     "desc": "造成傷害時生成[活化嗅鹽]或[凝神露滴]，效果每<Highlight>6.0</>秒最多觸發1次。已激活[浮海月]II階效果時，額外掉落<Highlight>1</>枚[微型浮海月]。",
     "simpleDesc": "造成傷害時生成[活化嗅鹽]或[凝神露滴]。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -482,7 +463,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 20,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -491,8 +471,8 @@
     "desc": "自身<Highlight>20</>米範圍內有敵人時，若已激活[III階]效果，角色攻擊提高<Highlight>30.0%</>，否則提高<Highlight>15.0%</>。",
     "simpleDesc": "自身周圍一定範圍內有敵人時，角色攻擊提高。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -506,7 +486,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 21,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -515,8 +494,8 @@
     "desc": "遠端武器<Highlight>暴擊率</>提高<Highlight>100.0%</>。",
     "simpleDesc": "遠端武器<Highlight>暴擊率</>提高。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -530,7 +509,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 22,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -539,8 +517,8 @@
     "desc": "遠端武器<Highlight>暴擊傷害</>提高<Highlight>100.0%</>。",
     "simpleDesc": "遠端武器<Highlight>暴擊傷害</>提高。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -554,7 +532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 23,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -563,8 +540,8 @@
     "desc": "生命值百分比或神智百分比低於<Highlight>50.0%</>時，<Highlight>[瀚海的貯存]</>生成對應補給的概率提高至<Highlight>100.0%</>。\n生命值百分比、神智百分比或彈藥儲備低於<Highlight>50.0%</>時，生成[微型浮海月]的數量提高<Highlight>100%</>。",
     "simpleDesc": "生命或神智較低時，[瀚海的貯存]掉落對應補給的概率提高。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -579,7 +556,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 24,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -588,8 +564,8 @@
     "desc": "成功拾取掉落物時，額外回復<Highlight>6.0</>點神智。",
     "simpleDesc": "成功拾取掉落物時，額外回復神智。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -603,7 +579,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 25,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -612,8 +587,8 @@
     "desc": "魔靈支援冷卻時間減少<Highlight>50.0%</>。",
     "simpleDesc": "魔靈支援冷卻時間減少。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -627,7 +602,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 26,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -636,8 +610,8 @@
     "desc": "遠端武器<Highlight>多重射擊</>提高<Highlight>90.0%</>。",
     "simpleDesc": "遠端武器<Highlight>多重射擊</>提高。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -651,7 +625,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 27,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -660,8 +633,8 @@
     "desc": "遠端武器<Highlight>攻擊速度</>提高<Highlight>90.0%</>。",
     "simpleDesc": "遠端武器<Highlight>攻擊速度</>提高。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -675,7 +648,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 28,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -684,8 +656,8 @@
     "desc": "對與自身距離大於<Highlight>8.0</>米的目標造成遠端武器傷害時，附加1層受到的遠端武器傷害提高<Highlight>2.4%</>的效果，最多提高到<Highlight>120.0%</>。",
     "simpleDesc": "對與自身距離較遠的目標造成遠端武器傷害時，其受到的遠端武器傷害逐步提高。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -700,7 +672,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 29,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -709,8 +680,8 @@
     "desc": "保持移動超過<Highlight>2</>秒後，自身受到的傷害降低<Highlight>40.0%</>，直到停止移動為止。\n \n 停止移動超過<Highlight>2</>秒後，自身造成的傷害提高<Highlight>90.0%</>，直到移動為止。",
     "simpleDesc": "保持移動超過<Highlight>2</>秒後，自身受到的傷害降低，直到停止移動為止。\n \n 停止移動超過<Highlight>2</>秒後，自身造成的傷害提高，直到移動為止。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -724,7 +695,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 30,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -733,8 +703,8 @@
     "desc": "技能範圍提高<Highlight>45.0%</>。",
     "simpleDesc": "技能範圍提高。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -746,7 +716,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 31,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -755,8 +724,8 @@
     "desc": "技能耐久提高<Highlight>45.0%</>。",
     "simpleDesc": "技能耐久提高。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -768,7 +737,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 32,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -777,8 +745,8 @@
     "desc": "技能效益提高<Highlight>22.5%</>。",
     "simpleDesc": "技能效益提高。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -790,7 +758,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 33,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -799,8 +766,8 @@
     "desc": "釋放技能時，回復<Highlight>6.0</>點神智，效果每<Highlight>5.0</>秒最多觸發1次。",
     "simpleDesc": "釋放技能時，回復神智。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -812,7 +779,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 34,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -821,8 +787,8 @@
     "desc": "釋放技能時，回復最大護盾<Highlight>15.0%</>的護盾，效果每<Highlight>5.0</>秒最多觸發1次。",
     "simpleDesc": "釋放技能時，回復護盾。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -834,7 +800,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 35,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -843,8 +808,8 @@
     "desc": "技能速度提高<Highlight>15.0%</>。",
     "simpleDesc": "技能速度提高。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -858,7 +823,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 36,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -867,8 +831,8 @@
     "desc": "最大神智提高<Highlight>120.0%</>。",
     "simpleDesc": "最大神智提高。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -880,7 +844,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 37,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -889,8 +852,8 @@
     "desc": "神智百分比小於<Highlight>50.0%</>時，受到的傷害降低<Highlight>30.0%</>。",
     "simpleDesc": "神智百分比較低時，受到傷害降低。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -902,7 +865,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 38,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -911,8 +873,8 @@
     "desc": "神智百分比下降至<Highlight>50.0%</>以下時，在<Highlight>5.0</>秒內每秒回復<Highlight>12.0</>點神智，效果每<Highlight>20.0</>秒最多觸發1次。",
     "simpleDesc": "神智百分比較低時，每秒回復神智。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -924,7 +886,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 39,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -933,8 +894,8 @@
     "desc": "釋放技能時，獲得<Highlight>15.0</>層[華光]。",
     "simpleDesc": "釋放技能時，獲得一定層數的<Highlight>[華光]</>。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -948,7 +909,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 40,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -957,8 +917,8 @@
     "desc": "[閃耀]狀態中，每秒回復<Highlight>6.0</>點神智。",
     "simpleDesc": "[閃耀]狀態中，每秒回復神智。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -972,7 +932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 41,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -981,8 +940,8 @@
     "desc": "技能威力提高<Highlight>120.0%</>。",
     "simpleDesc": "技能威力提高。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -994,7 +953,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 42,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1003,8 +961,8 @@
     "desc": "技能傷害無視目標<Highlight>90.0%</>防禦。",
     "simpleDesc": "技能傷害無視目標部分防禦。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1016,7 +974,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 43,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1025,8 +982,8 @@
     "desc": "[閃耀]狀態提供的技能傷害提高效果提高至<Highlight>225.0%</>。",
     "simpleDesc": "[閃耀]狀態提供的技能傷害提提高效果提高。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1040,7 +997,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 44,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1049,8 +1005,8 @@
     "desc": "[放射]的觸發間隔降低至<Highlight>1.0</>秒。",
     "simpleDesc": "[放射]的觸發的間隔降低。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1064,7 +1020,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 45,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1073,8 +1028,8 @@
     "desc": "造成傷害時，有<Highlight>15.0%</>的概率召喚1個[流明種]，效果每<Highlight>3.0</>秒最多觸發1次。",
     "simpleDesc": "造成傷害，有概率召喚1個[流明種]。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1088,7 +1043,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 46,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1097,8 +1051,8 @@
     "desc": "召喚召喚物時，自身技能威力提高<Highlight>7.5%</>，效果持續<Highlight>10.0</>秒，最多疊加<Highlight>3.0</>層。",
     "simpleDesc": "召喚召喚物時，自身技能威力提高。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1112,7 +1066,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 47,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1121,8 +1074,8 @@
     "desc": "召喚召喚物時，自身攻擊提高<Highlight>7.5%</>，效果持續<Highlight>10.0</>秒，最多疊加<Highlight>3.0</>層。",
     "simpleDesc": "召喚召喚物時，自身攻擊提高。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1136,7 +1089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 48,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1145,8 +1097,8 @@
     "desc": "受到的治療提高<Highlight>60.0%</>。",
     "simpleDesc": "受到的治療提高。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1160,7 +1112,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 49,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1169,8 +1120,8 @@
     "desc": "召喚召喚物時，自身回復最大生命<Highlight>3.0%</>的生命。",
     "simpleDesc": "召喚召喚物時，回復生命。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1184,7 +1135,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 50,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1193,8 +1143,8 @@
     "desc": "召喚召喚物時，自身回復<Highlight>6.0</>點神智。",
     "simpleDesc": "召喚召喚物時，回復神智。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1208,7 +1158,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 51,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1217,8 +1166,8 @@
     "desc": "每<Highlight>3.0</>秒召喚1個[流明種]。",
     "simpleDesc": "每隔一段時間召喚1個[流明種]。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1232,7 +1181,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 52,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1241,8 +1189,8 @@
     "desc": "受到傷害時，有<Highlight>75.0%</>的概率召喚1個[流明種]，效果每<Highlight>2.0</>秒最多觸發1次。",
     "simpleDesc": "受到傷害時，有概率召喚1個[流明種]。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1256,7 +1204,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 53,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1265,8 +1212,8 @@
     "desc": "自身周圍<Highlight>8</>米範圍內有召喚物時，受到的傷害降低<Highlight>30.0%</>。",
     "simpleDesc": "自身周圍有召喚物時，受到的傷害降低。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1280,7 +1227,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 54,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1289,8 +1235,8 @@
     "desc": "受到治療時，自身造成的傷害提高<Highlight>37.5%</>，持續3.0秒。",
     "simpleDesc": "受到治療時，短時間內造成的傷害提高。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1304,7 +1250,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 55,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1313,8 +1258,8 @@
     "desc": "召喚召喚物時，對召喚位置<Highlight>6</>米內的敵人造成戰姿削減效果。",
     "simpleDesc": "召喚召喚物時，對召喚位置附近的敵人造成戰姿削減效果。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1327,7 +1272,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 56,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1336,8 +1280,8 @@
     "desc": "自身周圍<Highlight>8</>米範圍內每有1個召喚物，自身獲得1層傷害提高<Highlight>18.0%</>效果，最多疊加<Highlight>5.0</>層。",
     "simpleDesc": "自身周圍召喚物越多，自身造成的傷害越高。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1351,7 +1295,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 57,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1360,8 +1303,8 @@
     "desc": "召喚物的攻擊提高<Highlight>90.0%</>。",
     "simpleDesc": "召喚物的攻擊提高。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1375,7 +1318,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 58,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1384,8 +1326,8 @@
     "desc": "每次召喚非流明枝係列召喚物時，在召喚位置觸發1次爆炸衝擊，造成<Highlight>3000.0%</>角色攻擊的傷害。",
     "simpleDesc": "每次召喚非流明枝係列召喚物時，在召喚位置觸發1次爆炸衝擊。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1399,7 +1341,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 59,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1408,8 +1349,8 @@
     "desc": "[流明種]進化為[流明枝葉]的概率提高至<Highlight>100%</>。",
     "simpleDesc": "[流明種]進化為[流明枝葉]的概率提高至<Highlight>100%</>。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1423,7 +1364,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 60,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1432,8 +1372,8 @@
     "desc": "螺旋飛躍時，獲得攻擊提高<Highlight>18.0%</>效果，持續<Highlight>3.0</>秒，並獲得<Highlight>1.0</>層[噬影]。",
     "simpleDesc": "螺旋飛躍時，獲得攻擊提高效果，並獲得[噬影]。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1445,7 +1385,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 57,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1454,8 +1393,8 @@
     "desc": "進入滑行時，生成3枚[風翼]，命中敵人造成<Highlight>90.0%</>角色攻擊的傷害，並獲得<Highlight>1.0</>層[噬影]。",
     "simpleDesc": "進入滑行時，生成3枚[風翼]，並獲得[噬影]。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1467,7 +1406,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 58,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1476,8 +1414,8 @@
     "desc": "閃避時，獲得受到的傷害降低<Highlight>15.0%</>的效果，持續<Highlight>3.0</>秒，並獲得<Highlight>1.0</>層[噬影]。",
     "simpleDesc": "閃避時，獲得受到的傷害降低效果，並獲得[噬影]。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1489,7 +1427,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 59,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1498,8 +1435,8 @@
     "desc": "最大神智提高<Highlight>45.0%</>。",
     "simpleDesc": "最大神智提高",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1511,7 +1448,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 60,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1520,8 +1456,8 @@
     "desc": "技能速度提高<Highlight>15.0%</>。",
     "simpleDesc": "技能速度提高",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1533,7 +1469,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 61,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1542,8 +1477,8 @@
     "desc": "下落攻擊對敵人造成傷害時會生成1個[鱗粉]領域，對其中的敵人每秒造成<Highlight>400.0%</>角色攻擊的傷害，並獲得<Highlight>8.0</>層[噬影]。效果每<Highlight>8.0</>秒最多觸發1次。",
     "simpleDesc": "下落攻擊對敵人造成傷害時會生成1個[鱗粉]領域，並獲得[噬影]。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1555,7 +1490,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 62,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1564,8 +1498,8 @@
     "desc": "下落攻擊的傷害提高<Highlight>37.5%</>。",
     "simpleDesc": "下落攻擊的傷害提高",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1577,7 +1511,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 63,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1586,8 +1519,8 @@
     "desc": "近戰攻擊範圍提高<Highlight>1.5</>。",
     "simpleDesc": "近戰攻擊範圍提高",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [],
@@ -1599,7 +1532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 64,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1608,8 +1540,8 @@
     "desc": "最大閃避次數增加<Highlight>3.0</>次。",
     "simpleDesc": "最大閃避次數增加。",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1621,7 +1553,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 65,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1630,8 +1561,8 @@
     "desc": "閃避時，生成1個[鱗粉]領域，對其中的敵人每秒造成<Highlight>400.0%</>角色攻擊的傷害。效果每<Highlight>5.0</>秒最多觸發1次。",
     "simpleDesc": "閃避時，生成1個[鱗粉]領域。",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1642,7 +1573,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 66,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1651,8 +1581,8 @@
     "desc": "每<Highlight>3.0</>秒獲得<Highlight>1.0</>層[噬影]。自身的[噬影]大於<Highlight>30.0</>層時，通過此祝福獲得[噬影]時，還會發射1顆[刃翼]，命中敵人造成<Highlight>1200.0%</>角色攻擊的傷害。",
     "simpleDesc": "每隔一段時間獲得[噬影]。自身[噬影]大於一定層數時會額外發射1枚[刃翼]。",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1664,7 +1594,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 67,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1673,8 +1602,8 @@
     "desc": "每有1次最大閃避次數，最大神智增加<Highlight>45.0%</>。",
     "simpleDesc": "按照最大閃避次數，獲得最大神智增加。",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1686,7 +1615,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 68,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1695,8 +1623,8 @@
     "desc": "角色攻擊提高<Highlight>120.0%</>。",
     "simpleDesc": "角色攻擊提高。",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1708,7 +1636,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 69,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1717,8 +1644,8 @@
     "desc": "攻擊速度提高<Highlight>90.0%</>。",
     "simpleDesc": "攻擊速度提高。",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1730,7 +1657,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 70,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1739,8 +1665,8 @@
     "desc": "閃避時攻擊提高<Highlight>90.0%</>，持續<Highlight>3.0</>秒。",
     "simpleDesc": "閃避時攻擊提高",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1754,7 +1680,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 71,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1763,8 +1688,8 @@
     "desc": "技能範圍提高<Highlight>45.0%</>。",
     "simpleDesc": "技能範圍提高。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1778,7 +1703,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 76,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1787,8 +1711,8 @@
     "desc": "造成傷害時，有<Highlight>7.5%</>概率獲得<Highlight>1</>隻[曳光蟲]。",
     "simpleDesc": "每次造成傷害有概率獲得[曳光蟲]。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1802,7 +1726,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 77,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1811,8 +1734,8 @@
     "desc": "每<Highlight>7.0</>秒獲得<Highlight>1</>隻[曳光蟲]。",
     "simpleDesc": "每<Highlight>10</>秒獲得[曳光蟲]。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1826,7 +1749,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 78,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1835,8 +1757,8 @@
     "desc": "未攜帶[曳光蟲]時，遠端武器暴擊率提高<Highlight>7.5%</>。\n攜帶[曳光蟲]時，遠端武器暴擊率提高<Highlight>37.5%</>。",
     "simpleDesc": "遠端武器暴擊率提高，攜帶[曳光蟲]時效果更強。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1850,7 +1772,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 79,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1859,8 +1780,8 @@
     "desc": "未攜帶[曳光蟲]時，遠端武器暴擊傷害提高<Highlight>7.5%</>。\n攜帶[曳光蟲]時，遠端武器暴擊傷害提高<Highlight>37.5%</>。",
     "simpleDesc": "遠端武器暴擊傷害提高，攜帶[曳光蟲]時效果更強。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1874,7 +1795,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 80,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1883,8 +1803,8 @@
     "desc": "未攜帶[曳光蟲]時，遠端武器觸發概率提高<Highlight>30.0%</>。\n攜帶[曳光蟲]時，遠端武器觸發概率提高<Highlight>135.0%</>。",
     "simpleDesc": "遠端武器觸發概率提高，擁有[曳光蟲]時效果更強。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1898,7 +1818,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 81,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1907,8 +1826,8 @@
     "desc": "召喚物造成的傷害提高<Highlight>37.5%</>。",
     "simpleDesc": "召喚物造成的傷害提高。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1922,7 +1841,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 82,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1931,8 +1849,8 @@
     "desc": "受到傷害或召喚召喚物時，獲得<Highlight>1</>隻[曳光蟲]，效果每<Highlight>3.0</>秒最多觸發1次。",
     "simpleDesc": "受到傷害或召喚召喚物時，獲得[曳光蟲]。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1946,7 +1864,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 83,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1955,8 +1872,8 @@
     "desc": "技能效益提高<Highlight>37.5%</>。",
     "simpleDesc": "技能效益提高。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1970,7 +1887,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 84,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -1979,8 +1895,8 @@
     "desc": "未攜帶[曳光蟲]時，遠端武器多重射擊提高<Highlight>7.5%</>。\n攜帶[曳光蟲]時，遠端武器多重射擊提高<Highlight>37.5%</>。",
     "simpleDesc": "遠端武器多重射擊提高，擁有[曳光蟲]時效果更強。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1994,7 +1910,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 85,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2003,8 +1918,8 @@
     "desc": "獲得<Highlight>1.0</>次復蘇次數。攜帶[曳光蟲]時，受到的傷害降低<Highlight>30.0%</>，下一次復蘇後失去此效果。",
     "simpleDesc": "獲得額外復蘇次數，攜帶[曳光蟲]時，受到的傷害降低，下一次復蘇後失去此效果。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -2017,7 +1932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 86,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2026,8 +1940,8 @@
     "desc": "未攜帶[曳光蟲]時，全屬性穿透提高<Highlight>18.0%</>。\n攜帶[曳光蟲]時，全屬性穿透提高<Highlight>90.0%</>。",
     "simpleDesc": "全屬性穿透提高，擁有[曳光蟲]時效果更強。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2041,7 +1955,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 87,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2050,8 +1963,8 @@
     "desc": "未攜帶[曳光蟲]時，昂揚提高<Highlight>18.0%</>。\n攜帶[曳光蟲]時，昂揚提高<Highlight>90.0%</>。",
     "simpleDesc": "昂揚提高，攜帶[曳光蟲]時效果更強。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2065,7 +1978,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 88,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2074,8 +1986,8 @@
     "desc": "自身周圍有敵人時，[曳光蟲]攻擊間隔大幅縮短，持續<Highlight>5.0</>秒，效果每<Highlight>10.0</>秒最多觸發1次。",
     "simpleDesc": "自身周圍有敵人時，[曳光蟲]攻擊間隔大幅縮短。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2090,7 +2002,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 89,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2099,8 +2010,8 @@
     "desc": "[曳光蟲]造成的傷害提高<Highlight>90.0%</>。",
     "simpleDesc": "[曳光蟲]造成的傷害提高。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2115,7 +2026,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 90,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2124,8 +2034,8 @@
     "desc": "技能耐久提高<Highlight>45.0%</>。",
     "simpleDesc": "技能耐久提高。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2137,7 +2047,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 91,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2146,8 +2055,8 @@
     "desc": "生命值百分比小於<Highlight>100%</>時，神智自然恢復量提高<Highlight>9.0</>點；生命值百分比為<Highlight>100%</>時，神智自然恢復量提高<Highlight>3.0</>點。",
     "simpleDesc": "神智自然恢復量提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2159,7 +2068,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 92,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2168,8 +2076,8 @@
     "desc": "生命值百分比小於<Highlight>100%</>時，近戰武器觸發概率提高<Highlight>180.0%</>；生命值百分比為<Highlight>100%</>時，近戰武器觸發概率提高<Highlight>90.0%</>。",
     "simpleDesc": "近戰武器觸發概率提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2181,7 +2089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 93,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2190,8 +2097,8 @@
     "desc": "最大生命提高<Highlight>30.0%</>。",
     "simpleDesc": "最大生命提高。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2203,7 +2110,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 94,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2212,8 +2118,8 @@
     "desc": "防禦提高<Highlight>90.0%</>。受到傷害時，獲得造成的傷害提高<Highlight>30.0%</>效果，持續<Highlight>10.0</>秒，效果每<Highlight>20.0</>秒最多觸發1次。",
     "simpleDesc": "防禦提高，受到傷害時，獲得造成的傷害提高效果。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2225,7 +2131,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 95,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2234,8 +2139,8 @@
     "desc": "造成傷害時，在目標位置額外造成1次自身最大生命<Highlight>30.0%</>的範圍傷害，效果每<Highlight>1.0</>秒最多觸發1次。",
     "simpleDesc": "造成傷害時，在目標位置額外造成基於自身最大生命的範圍傷害。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2247,7 +2152,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 96,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2256,8 +2160,8 @@
     "desc": "生命值百分比小於<Highlight>100%</>時，技能威力提高<Highlight>60.0%</>；生命值百分比為<Highlight>100%</>時，技能威力提高<Highlight>30.0%</>。",
     "simpleDesc": "技能威力提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2269,7 +2173,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 97,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2278,8 +2181,8 @@
     "desc": "造成的傷害提高<Highlight>30.0%</>，生命值百分比每降低<Highlight>1%</>，效果倍率增加<Highlight>1%</>，最多增加至<Highlight>60.0%</>。",
     "simpleDesc": "造成的傷害提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2291,7 +2194,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 98,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2300,8 +2202,8 @@
     "desc": "生命值百分比小於<Highlight>100%</>時，近戰武器暴擊率提高<Highlight>135.0%</>；生命值百分比為<Highlight>100%</>時，近戰武器暴擊率提高<Highlight>67.5%</>。",
     "simpleDesc": "近戰武器暴擊率提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2313,7 +2215,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 99,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2322,8 +2223,8 @@
     "desc": "生命值百分比小於<Highlight>100%</>時，近戰武器暴擊傷害提高<Highlight>135.0%</>；生命值百分比為<Highlight>100%</>時，近戰武器暴擊傷害提高<Highlight>67.5%</>。",
     "simpleDesc": "近戰武器暴擊傷害提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2335,7 +2236,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 100,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2344,8 +2244,8 @@
     "desc": "受到傷害時，獲得<Highlight>135.0</>超限護盾，效果每<Highlight>5.0</>秒最多觸發1次。",
     "simpleDesc": "受到傷害時，獲得超限護盾。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2357,7 +2257,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 101,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2366,8 +2265,8 @@
     "desc": "受到的單次傷害不會高於自身最大生命的<Highlight>25.0%</>，受到超過最大生命<Highlight>20.0%</>的傷害後<Highlight>5.0</>秒內，每秒回復最大生命<Highlight>3.0%</>的生命。",
     "simpleDesc": "限製自身受到的單次傷害，受到高額傷害後，持續回復生命。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2379,7 +2278,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 102,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2388,8 +2286,8 @@
     "desc": "釋放[終結技]時，失去全部防禦，將失去值的<Highlight>240.0%</>轉化為角色攻擊，持續<Highlight>15.0</>秒，效果每<Highlight>30.0</>秒最多觸發1次。",
     "simpleDesc": "釋放[終結技]時，失去全部防禦，轉化為角色攻擊。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2401,7 +2299,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 103,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2410,8 +2307,8 @@
     "desc": "生命值百分比小於<Highlight>100%</>時，技能傷害無視目標<Highlight>90.0%</>防禦；生命值百分比為<Highlight>100%</>時，技能傷害無視目標<Highlight>45.0%</>防禦。",
     "simpleDesc": "技能傷害無視目標一定防禦，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2423,7 +2320,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 104,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   },
   {
@@ -2432,8 +2328,8 @@
     "desc": "生命值百分比小於<Highlight>40%</>時，背水提高<Highlight>36.0%</>；生命值百分比大於等於<Highlight>40%</>時，背水提高<Highlight>18.0%</>。",
     "simpleDesc": "背水提高，生命百分比較低時效果更強。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2447,7 +2343,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 105,
-    "unlockConditionText": "燭芯尚未解鎖",
     "canSell": 1
   }
 ]

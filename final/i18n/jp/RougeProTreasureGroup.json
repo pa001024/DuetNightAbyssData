@@ -7,7 +7,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
-    "groupId": 11,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "ミディオレンの探究"
   },
@@ -19,7 +18,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
-    "groupId": 12,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "アイギスの勇猛"
   },
@@ -31,7 +29,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
-    "groupId": 13,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "ディオプラの巧技"
   },
@@ -43,7 +40,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
-    "groupId": 14,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "サエクルムの開創"
   },
@@ -55,7 +51,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
-    "groupId": 15,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "ドラクマの賢明"
   },
@@ -67,7 +62,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
-    "groupId": 16,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "ロゴスの洞察"
   },
@@ -79,7 +73,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "同調武器の与ダメージ<Highlight>100%</>アップ",
-    "groupId": 17,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "深紅の囚われし獣"
   },
@@ -92,7 +85,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "チーム全員の互いの距離が<Highlight>30</>以内の時、全員の与ダメージが<Highlight>100%</>アップする。",
-    "groupId": 18,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "連羽の群鳥"
   },
@@ -104,7 +96,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "[護衛騎士]のレリックを全<Highlight>2</>件集めると、<Highlight>10</>秒ごとに自身の最大HP<Highlight>10%</>分の過負荷シールドを獲得する。",
-    "groupId": 19,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "護衛騎士"
   },
@@ -117,7 +108,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "スキル、近接武器、遠隔武器のダメージが低下しなくなる。",
-    "groupId": 20,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "鳥面怪人"
   },
@@ -130,7 +120,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_2",
     "groupEffectDesc": "（待包装）繁荣之神的描述",
-    "groupId": 21,
     "icon": "T_Rouge_TreasureGroup_2_1",
     "name": "繁栄の神"
   },
@@ -144,7 +133,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_3",
     "groupEffectDesc": "[四象の銘印]のレリックを全<Highlight>4</>件集めると、発動確率が<Highlight>50%</>にアップし、ダメージ倍率が100%</>にアップする。さらに与えるダメージが固定ダメージになる。",
-    "groupId": 22,
     "icon": "T_Rouge_TreasureGroup_3_1",
     "name": "四象の銘印"
   },
@@ -158,7 +146,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_4",
     "groupEffectDesc": "[贖罪の騎士]のレリックを全<Highlight>4</>件集めると、代償が不要になり、合計ダメージ上昇量が<Highlight>400%</>になる。",
-    "groupId": 23,
     "icon": "T_Rouge_TreasureGroup_4_1",
     "name": "贖罪の騎士"
   },
@@ -170,7 +157,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_5",
     "groupEffectDesc": "[幽惘の術士]のレリックを全<Highlight>2</>件集めると、[体勢]の削り効率が<Highlight>100%</>アップし、敵が[アスクパニッシュ]に入った後のダメージが<Highlight>100%</>アップする。",
-    "groupId": 24,
     "icon": "T_Rouge_TreasureGroup_5_1",
     "name": "幽惘の術士"
   },
@@ -186,7 +172,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）圣迹残像的描述",
-    "groupId": 25,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "聖跡の残像"
   },
@@ -200,7 +185,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）闲逸学者的描述",
-    "groupId": 26,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "静かな学者"
   }

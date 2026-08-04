@@ -6,11 +6,11 @@
     "simpleDesc": "Octroie une [Actualisation] supplémentaire. La première utilisation ne consomme pas de Braises.",
     "ipDesc": "La lueur des bougies faisait naître des sourires sur les visages des enfants, dissipait le froid et apportait l’espoir.\nMais les flammes du monde mortel finissent toujours par s’éteindre ; alors, encore et encore, elle rallumait de nouvelles bougies.\nAu plus profond du Lac Sacré, l’artisan de Lucimèches forgea enfin une flamme qui ne s’éteindrait jamais.\nPourtant, ceux qui attendaient jadis sa lumière avaient depuis longtemps disparu.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_01",
     "endPoints": [
       10
@@ -18,9 +18,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 1,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10102,
@@ -29,11 +27,11 @@
     "simpleDesc": "Les prix de tous les articles du Marchand abyssal sont réduits.",
     "ipDesc": "À chacune de leurs rencontres, le magicien au masque d’oiseau se plaignait :\n« Les prix fixes, c’est d’un ennui... Ajoutez donc un peu de hasard et de probabilités ! »\nLe marchand suivit son conseil et conçut des bons de réduction, qu’il dispersa dans l’Abysse. Le magicien secoua la tête, déçu :\n« Votre bonté est encore plus ennuyeuse que votre commerce. »",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_02",
     "endPoints": [
       10
@@ -41,9 +39,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 2,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10103,
@@ -52,11 +48,11 @@
     "simpleDesc": "Restauration de PV à chaque entrée dans une nouvelle profondeur.",
     "ipDesc": "Elle était la plus fervente des croyantes. Chacun de ses mots, chacun de ses gestes suivait scrupuleusement les préceptes divins, même là où nul regard mortel ne pouvait la voir.\nElle tendait la main aux nécessiteux, ouvrait sa bourse aux démunis, et face à ceux qui doutaient, elle répondait avec patience, les exhortant à se souvenir de la miséricorde des Neuf Dieux.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20104001,
+    "mod": 20104001,
     "icon": "T_Rouge_Treasure_05",
     "endPoints": [
       10
@@ -64,9 +60,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 3,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10104,
@@ -75,11 +69,11 @@
     "simpleDesc": "Restauration de Lucidité à chaque entrée dans une nouvelle profondeur.",
     "ipDesc": "« Et si les dieux n’étaient pas aussi parfaits que vous l’imaginez, ce que vous faites aurait-il encore un sens ? » lui demanda-t-on.\n« Bien sûr, » répondit-elle avec un sourire serein.\n« La foi n’est pas une quête de récompense, mais une discipline. Tant que mes actes sont en accord avec ma conscience, qu’importe que les dieux soient réels, justes... ou imparfaits ? »",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20105001,
+    "mod": 20105001,
     "icon": "T_Rouge_Treasure_06",
     "endPoints": [
       10
@@ -87,9 +81,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 4,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10105,
@@ -98,11 +90,11 @@
     "simpleDesc": "Augmentation des Points d’empreinte obtenus.",
     "ipDesc": "C’est un hymne que tous connaissent, louant les dieux compatissants qui guident les âmes égarées.\nDans l’Abysse, les fidèles d’Élysium fredonnent cette mélodie brisée, implorant les dieux de les mener hors de la souffrance, vers le Paradis des Paradis.\nLa musique dorée s’écoule, et dans l’attente du bonheur, leurs yeux se ferment à jamais.",
     "treasureGroup": 2,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       10
@@ -110,9 +102,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 5,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10106,
@@ -121,11 +111,11 @@
     "simpleDesc": "Augmentation du nombre de tentatives de réanimation possibles.",
     "ipDesc": "Les Umbrés surgirent de toutes parts, encerclant le groupe. Le chevalier s’élança seul dans les ténèbres, ouvrant un passage vers l’espoir.\nLorsque les Umbrés se dissipèrent, la prêtresse guérisseuse traîna hors du brouillard noir le corps meurtri du chevalier.\n« Je la sauverai », se jura-t-elle en silence.\nCar le sens de la guérison est de ne jamais laisser les braves mourir en vain.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20107001,
+    "mod": 20107001,
     "icon": "T_Rouge_Treasure_09",
     "endPoints": [
       10
@@ -133,9 +123,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 6,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10107,
@@ -144,11 +132,11 @@
     "simpleDesc": "Lorsque les PV diminuent, confère une immunité aux interruptions et réduit les dégâts subis.",
     "ipDesc": "La route est longue, et la vérité s’accompagne toujours de souffrance. Lorsque la cloche du soir retentit, oiseau errant, pourquoi refuses-tu de rentrer au nid ? Parce que la tour n’est pas le centre du continent. Parce que les dieux ne sont pas l’origine de toute chose.\nIl croyait que le monde ne pouvait être mesuré qu’à la force de ses propres pas, même si cela devait l’enchaîner pour la vie.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20101001,
+    "mod": 20101001,
     "icon": "T_Rouge_Treasure_21",
     "endPoints": [
       10
@@ -156,9 +144,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 7,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10108,
@@ -167,11 +153,11 @@
     "simpleDesc": "Augmentation des Dégâts de compétence, réduction des dégâts des armes de mêlée.",
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20108001,
+    "mod": 20108001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -179,9 +165,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 8,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10109,
@@ -190,11 +174,11 @@
     "simpleDesc": "Augmentation des Dégâts de compétence, réduction des dégâts des armes à distance.",
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20109001,
+    "mod": 20109001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -202,9 +186,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 9,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10110,
@@ -213,11 +195,11 @@
     "simpleDesc": "Augmentation des dégâts des armes de mêlée, réduction des Dégâts de compétence.",
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20110001,
+    "mod": 20110001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -225,9 +207,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 10,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10111,
@@ -236,11 +216,11 @@
     "simpleDesc": "Augmentation des dégâts des armes de mêlée, réduction des dégâts des armes à distance.",
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20111001,
+    "mod": 20111001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -248,9 +228,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 11,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10112,
@@ -259,11 +237,11 @@
     "simpleDesc": "Augmentation des dégâts des armes à distance, réduction des Dégâts de compétence.",
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20112001,
+    "mod": 20112001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -271,9 +249,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 12,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10113,
@@ -282,11 +258,11 @@
     "simpleDesc": "Augmentation des dégâts des armes à distance, réduction des dégâts des armes de mêlée.",
     "ipDesc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20113001,
+    "mod": 20113001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -294,9 +270,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 13,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10114,
@@ -305,11 +279,11 @@
     "simpleDesc": "Après l’activation du Soutien de Géniemon, les dégâts infligés augmentent.",
     "ipDesc": "En poursuivant votre route, n’oubliez pas les courageux petits compagnons qui vous accompagnent dans l’Abysse. Ouvrez une conserve et récompensez-les comme il se doit !",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20120001,
+    "mod": 20120001,
     "icon": "T_Rouge_Treasure_28",
     "endPoints": [
       10
@@ -317,9 +291,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 14,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10201,
@@ -328,11 +300,11 @@
     "simpleDesc": "Obtient aléatoirement une Lucimèche de qualité <Highlight>rare</> ou <Highlight>épique</>.",
     "ipDesc": "De l’eau, des rations, un silex... et une carte froissée. Son propriétaire tenta autrefois d’y tracer son chemin au fusain : les lignes se croisent, se superposent, débordent des limites de la carte. Après avoir tourné en rond encore et encore, les marques s’interrompent brusquement, ne laissant qu’un point d’interrogation de travers.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -340,9 +312,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 15,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10202,
@@ -351,11 +321,11 @@
     "simpleDesc": "Obtient aléatoirement un Artéfact de qualité <Highlight>rare</> ou <Highlight>épique</>.",
     "ipDesc": "De l’eau, des rations, un silex... et une carte froissée. Son propriétaire tenta autrefois d’y tracer son chemin au fusain : les lignes se croisent, se superposent, débordent des limites de la carte. Après avoir tourné en rond encore et encore, les marques s’interrompent brusquement, ne laissant qu’un point d’interrogation de travers.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -363,9 +333,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 16,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10203,
@@ -374,11 +342,11 @@
     "simpleDesc": "Augmentation du nombre maximal d’esquives du personnage.",
     "ipDesc": "Ô enfant vigilant, sois le premier à gravir le sommet, afin de servir d’exemple à tes compagnons ;\nÔ guerrier courageux, sois le premier à fouler le champ de bataille, afin d’ouvrir la voie à ceux qui suivront ;\nÔ fidèle immaculé, sois le premier à plonger en enfer, afin de préserver la terre sacrée de toute souillure.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20103001,
+    "mod": 20103001,
     "icon": "T_Rouge_Treasure_19",
     "endPoints": [
       20
@@ -386,9 +354,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 17,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10204,
@@ -397,11 +363,11 @@
     "simpleDesc": "Restaure de la Lucidité après l’utilisation d’une compétence. Effet actif uniquement dans les [Umbrés].",
     "ipDesc": "Ô divinité aux deux visages, entends notre prière — Puissent les lames trancher ces ailes immaculées, puissent les poignards percer ce cœur battant, afin que nous nous affranchissions de ce destin mensonger et attendions, en silence, que la pleine lune inverse sa course.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20102001,
+    "mod": 20102001,
     "icon": "T_Rouge_Treasure_22",
     "endPoints": [
       20
@@ -409,9 +375,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 18,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10205,
@@ -420,11 +384,11 @@
     "simpleDesc": "Chaque réanimation augmente les dégâts infligés.",
     "ipDesc": "Âme maudite, oiseau captif sans repos — les feuilles mortes ne sont pas ton oreiller, le crépuscule n’est pas ton refuge, et même la mort t’est refusée comme sommeil.\nAlors lève-toi — goûte à la mort, mâche la souffrance, jusqu’à ce que le destin absurde lui-même baisse les bras.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20114001,
+    "mod": 20114001,
     "icon": "T_Rouge_Treasure_24",
     "endPoints": [
       20
@@ -432,9 +396,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 19,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10206,
@@ -443,11 +405,11 @@
     "simpleDesc": "Les Dégâts de compétence ignorent la DÉF de la cible. Cet effet diminue pour chaque type de Lucimèche possédé.",
     "ipDesc": "Pour atteindre la maîtrise, il faut d’abord connaître sa voie, puis s’y consacrer corps et âme, sans jamais faiblir.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20115001,
+    "mod": 20115001,
     "icon": "T_Rouge_Treasure_25",
     "endPoints": [
       20
@@ -455,9 +417,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 20,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10207,
@@ -466,11 +426,11 @@
     "simpleDesc": "À chaque entrée dans une nouvelle profondeur, consomme une faible quantité de Braises et confère, pour cette profondeur, une réduction des dégâts subis.",
     "ipDesc": "Lorsque tous baissent les yeux, relevez le regard. Lorsque tous s’agenouillent, tenez-vous debout. Lorsque tous chantent des louanges, osez questionner.\nLorsque tous se réjouissent, laissez éclater la folie.\nAlors seulement vous briserez les chaînes de la pleine lune et apercevrez l’autre visage du destin.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20116001,
+    "mod": 20116001,
     "icon": "T_Rouge_Treasure_23",
     "endPoints": [
       20
@@ -478,9 +438,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 21,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10209,
@@ -489,11 +447,11 @@
     "simpleDesc": "Après avoir sélectionné une Lucimèche <Highlight>rare</> dans Umbrés vacillants ou Umbrés dispersés, celle-ci est immédiatement améliorée.",
     "ipDesc": "L’oiseau aspire au ciel, mais l’Abysse n’a pas de firmament. Il cherche une branche où se poser, mais ne trouve que la peur tendant ses rameaux.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_17",
     "endPoints": [
       20
@@ -501,9 +459,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 22,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10210,
@@ -512,11 +468,11 @@
     "simpleDesc": "Après avoir vaincu un certain nombre d’Ordonnateurs, obtient des Braises.",
     "ipDesc": "Égaré dans d’innombrables cycles, sombrant peu à peu dans le désespoir,\nle voyageur perd direction, temps et identité. Il avance dans une obscurité sans fin, accompagné seulement de la solitude et de la peur, ignorant que, dans les ténèbres les plus profondes, une paire d’yeux observe silencieusement chacun de ses pas.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_20",
     "endPoints": [
       20
@@ -524,9 +480,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 23,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10211,
@@ -535,11 +489,11 @@
     "simpleDesc": "Lors de la prochaine sélection de Lucimèche dans Umbrés vacillants ou Umbrés dispersés, la qualité sera au minimum <Highlight>épique</>.",
     "ipDesc": "Un billet glissé dans votre sac à votre insu. Peut-être devriez-vous redoubler de vigilance. Heureusement, nul poison ni malédiction — seulement une bénédiction sincère : « Bon voyage, et que tout vous réussisse ! — Votre ami »",
     "treasureGroup": 10211,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_30",
     "endPoints": [
       20
@@ -547,9 +501,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 24,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10212,
@@ -558,11 +510,11 @@
     "simpleDesc": "Lors de l’obtention de cet Artéfact, gagne <Highlight>1</> Lucimèche supplémentaire, prioritairement issue du type le plus représenté.",
     "ipDesc": "Toute chose est liée. Manier la logique, l’induction et la déduction peut mener à des révélations inattendues.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_12",
     "endPoints": [
       20
@@ -570,9 +522,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 25,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10213,
@@ -581,11 +531,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Cœur de feu] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -596,9 +546,7 @@
       5064
     ],
     "rlArchiveId": 26,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10214,
@@ -607,11 +555,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Lune marine] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -622,9 +570,7 @@
       5065
     ],
     "rlArchiveId": 27,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10215,
@@ -633,11 +579,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Luménite] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -647,9 +593,7 @@
       5046
     ],
     "rlArchiveId": 28,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10216,
@@ -658,11 +602,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Rameau lumineux] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -673,9 +617,7 @@
       5065
     ],
     "rlArchiveId": 29,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10217,
@@ -684,11 +626,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Papillon nocturne] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -698,9 +640,7 @@
       5048
     ],
     "rlArchiveId": 30,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10218,
@@ -709,11 +649,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Luciole brillante] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -724,9 +664,7 @@
       5064
     ],
     "rlArchiveId": 31,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10219,
@@ -735,11 +673,11 @@
     "simpleDesc": "Obtient immédiatement <Highlight>1</> Lucimèche [Fleur vampirique] et augmente légèrement la probabilité d’apparition de ce type.",
     "ipDesc": "Le Prêtre gardien des flammes maîtrise les arts nécromantiques, puisant sa force dans les âmes des défunts. Il les considérait comme des alliés, sans jamais craindre leur présence... jusqu’à ce qu’il pénètre dans l’Abysse.\nQui sont ces silhouettes projetées par la lueur vacillante des bougies ? Pourquoi leurs âmes hurlent-elles de douleur ? Et pourquoi... le supplient-elles de rebrousser chemin ?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -749,9 +687,7 @@
       5050
     ],
     "rlArchiveId": 32,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10220,
@@ -760,11 +696,11 @@
     "simpleDesc": "Augmentation importante des Points d’empreinte obtenus.",
     "ipDesc": "C’est un hymne que tous connaissent, louant les dieux compatissants qui guident les âmes égarées.\nDans l’Abysse, les fidèles d’Élysium fredonnent cette mélodie brisée, implorant les dieux de les mener hors de la souffrance, vers le Paradis des Paradis.\nLa musique dorée s’écoule, et dans l’attente du bonheur, leurs yeux se ferment à jamais.",
     "treasureGroup": 10220,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       20
@@ -772,9 +708,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 62,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10301,
@@ -783,11 +717,11 @@
     "simpleDesc": "Obtient aléatoirement une Lucimèche de qualité <Highlight>épique</> ou <Highlight>légendaire</>.",
     "ipDesc": "De l’eau, des rations, un silex... et une carte froissée. Son propriétaire tenta autrefois d’y tracer son chemin au fusain : les lignes se croisent, se superposent, débordent des limites de la carte. Après avoir tourné en rond encore et encore, les marques s’interrompent brusquement, ne laissant qu’un point d’interrogation de travers.",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -795,9 +729,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 33,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10302,
@@ -806,11 +738,11 @@
     "simpleDesc": "Obtient aléatoirement un Artéfact de qualité <Highlight>épique</> ou <Highlight>légendaire</>.",
     "ipDesc": "De l’eau, des rations, un silex... et une carte froissée. Son propriétaire tenta autrefois d’y tracer son chemin au fusain : les lignes se croisent, se superposent, débordent des limites de la carte. Après avoir tourné en rond encore et encore, les marques s’interrompent brusquement, ne laissant qu’un point d’interrogation de travers.",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -818,9 +750,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 34,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10303,
@@ -829,11 +759,11 @@
     "simpleDesc": "Augmentation de la Régénération auto de Lucidité.",
     "ipDesc": "« Pourquoi m’avoir sauvé ? » gronda le chevalier revenu à lui, les yeux si grands ouverts qu’ils semblaient vouloir s’arracher à son visage blême.\n« Je voulais seulement mourir avant de sombrer dans la folie... au moins, j’aurais gardé mon âme intacte ! ». Le chevalier, traînant ce corps que la prêtresse guérisseuse avait arraché à la mort au prix d’efforts insensés, retourna une fois de plus dans les ténèbres. À présent... qui devait-il sauver, désormais ?",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20106001,
+    "mod": 20106001,
     "icon": "T_Rouge_Treasure_10",
     "endPoints": [
       20
@@ -841,9 +771,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 35,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10304,
@@ -852,11 +780,11 @@
     "simpleDesc": "Remplace toutes les Lucimèches par des Lucimèches aléatoires et confère des [Braises] en fonction du nombre de Lucimèches possédées.",
     "ipDesc": "« Puisque ce marchand obtus refuse de changer les règles de sa boutique, laissez-moi vous offrir un peu de service après-vente. »\nLe magicien sortit un paquet de cartes, toutes mélangées face cachée.\n« Allez... tirons sans retenue. »",
     "treasureGroup": 10304,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_15",
     "endPoints": [
       40
@@ -864,9 +792,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10305,
@@ -875,11 +801,11 @@
     "simpleDesc": "Remplace tous les Artéfacts par des Artéfacts aléatoires.",
     "ipDesc": "Plutôt que « monstre », il préfère qu’on l’appelle « magicien ». Dans cet espace morne et sans saveur, créer de la joie est son unique raison d’être.\nQuant au prix de cette joie... il n’en tient plus compte — après tout, il n’a plus rien à perdre.",
     "treasureGroup": 10305,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_16",
     "endPoints": [
       40
@@ -887,9 +813,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10306,
@@ -898,11 +822,11 @@
     "simpleDesc": "Plus vous possédez d’Artéfacts, plus les dégâts infligés augmentent.",
     "ipDesc": "Les richesses, bien sûr, sont meilleures en abondance... mais les amasser sans fin, quelle simplicité ennuyeuse. Qu’elles prennent des formes plus nobles ; que le monde m’en soit reconnaissant, qu’il chante mes louanges pour les bénédictions de ma générosité. Recevez ce présent — il ajoutera une nouvelle ligne à mon mérite.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20118001,
+    "mod": 20118001,
     "icon": "T_Rouge_Treasure_18",
     "endPoints": [
       40
@@ -910,9 +834,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 36,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10307,
@@ -921,11 +843,11 @@
     "simpleDesc": "Chaque type de Lucimèche possédé augmente la Pénétration de tous les attributs.",
     "ipDesc": "Qui veut savoir doit d’abord lire sans relâche, tout accueillir, tout assimiler.\nC’est ainsi seulement que l’esprit s’élargit — et cesse d’être prisonnier de ses propres limites.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20119001,
+    "mod": 20119001,
     "icon": "T_Rouge_Treasure_26",
     "endPoints": [
       40
@@ -933,9 +855,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 37,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10308,
@@ -944,11 +864,11 @@
     "simpleDesc": "Le nombre de Lucimèches d’un même type requis pour activer l’effet de set diminue.",
     "ipDesc": "La vérité, le plus souvent, se tient dans la simplicité. Réfléchir avec rigueur, peser chaque idée... même un savoir limité peut offrir une aide précieuse.",
     "treasureGroup": 10308,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_11",
     "endPoints": [
       40
@@ -956,11 +876,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 38,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {
-      "groupDiscount": -1
-    }
+    "canSell": 0
   },
   {
     "id": 10309,
@@ -969,11 +885,11 @@
     "simpleDesc": "Lorsque les tentatives de réanimation sont épuisées, peut consommer des Braises pour en obtenir de nouvelles.",
     "ipDesc": "L’obscurité sans limite semble vouloir vous engloutir tout entier... et pourtant, un filament de lueur renaît, miraculeusement, au creux des Braises.\nSi l’Abysse possède réellement une volonté... peut-être ne souhaite-t-Elle pas non plus que votre vie s’éteigne ici, dans le silence.",
     "treasureGroup": 10309,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_08",
     "endPoints": [
       40
@@ -981,9 +897,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 39,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10310,
@@ -992,11 +906,11 @@
     "simpleDesc": "Les attaques de mêlée projettent des ondes tranchantes infligeant des Dégâts Lumino.",
     "ipDesc": "L’épée d’argent fendit les lignes ennemies, et sa clarté se déploya sur le champ de bataille comme une pleine lune ascendante. Les soldats épuisés relevèrent les yeux.\n« Ah... la volonté de la Déesse du Destin ! »\nLes larmes coulèrent, la foi allégea les corps meurtris, et tous se relevèrent pour suivre la lumière.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20130001,
+    "mod": 20130001,
     "icon": "T_Rouge_Treasure_46",
     "endPoints": [
       40
@@ -1004,9 +918,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 53,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10311,
@@ -1015,11 +927,11 @@
     "simpleDesc": "Les compétences déclenchent une explosion autour du personnage, infligeant des Dégâts Umbro aux ennemis proches.",
     "ipDesc": "Lorsque les ténèbres souillèrent pour la première fois le Lac Sacré, les plus braves chevaliers d’Élysium s’y avancèrent de leur plein gré.\nLa plupart y laissèrent la vie ; ceux qui survécurent perdirent à jamais le droit de rêver. Car sitôt les paupières closes, l’obscurité saisit leurs pensées et les traîne de nouveau vers l’Abysse sans fond.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20131001,
+    "mod": 20131001,
     "icon": "T_Rouge_Treasure_47",
     "endPoints": [
       40
@@ -1027,9 +939,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 54,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10312,
@@ -1038,11 +948,11 @@
     "simpleDesc": "Infliger des dégâts tire des projectiles à tête chercheuse, infligeant des Dégâts Anémo.",
     "ipDesc": "La veille du départ, un jeune chevalier, ardent et sûr de lui, revêtit une armure d’argent pour dissimuler les stigmates sacrés qui s’étendaient sur son dos comme des ailes. Il ne demandait qu’une chose avant de répondre à l’Appel : offrir à Élysium une victoire de plus.\nMais cette victoire perdit tout sens lorsqu’un gigantesque Souillé surgit soudain au cœur même des lignes d’Élysium. Le jeune chevalier disparut dès lors sans laisser de trace — certains jurent qu’il fit naître des ailes et s’envola, abandonnant Élysium ; d’autres prétendent que la Lune Noire envoûta son esprit... et qu’il ne fit plus qu’un avec le monstre.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20132001,
+    "mod": 20132001,
     "icon": "T_Rouge_Treasure_48",
     "endPoints": [
       40
@@ -1050,9 +960,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 55,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10313,
@@ -1061,11 +969,11 @@
     "simpleDesc": "L’apparition d’une invocation déclenche une attaque à son emplacement, infligeant des Dégâts Hydro.",
     "ipDesc": "Lorsque ses orteils effleurèrent la surface du Lac Sacré, des ondulations sans lumière s’y propagèrent, comme une Lune Noire remontant des profondeurs. Si ces eaux menaient au Paradis des Paradis, pourquoi refusaient-elles jusqu’à refléter son propre visage ?\nL’instant d’après, les courants se déchaînèrent ; et la question du saint, comme son ombre, fut engloutie par un tourbillon d’un noir absolu.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20133001,
+    "mod": 20133001,
     "icon": "T_Rouge_Treasure_49",
     "endPoints": [
       40
@@ -1073,9 +981,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 56,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10314,
@@ -1084,11 +990,11 @@
     "simpleDesc": "Les attaques à distance infligent aussi des Dégâts Pyro dans une zone en cône devant le personnage.",
     "ipDesc": "La noble affirmait qu’un sang sacré coulait dans ses veines — qu’elle était destinée au sacrifice, afin de sauver le peuple tout entier. Ainsi, le jour du couronnement, elle embrasa sa longue chevelure, et fit de la cérémonie un bûcher de jugement. Le sanctuaire, avec les nobles présents, fut réduit en cendres. Les flammes montèrent jusqu’au ciel, plus éclatantes que le soleil, arrachant aux travailleurs courbés un silence émerveillé.\nElle s’offrit. Elle donna. Elle sauva.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20134001,
+    "mod": 20134001,
     "icon": "T_Rouge_Treasure_50",
     "endPoints": [
       40
@@ -1096,9 +1002,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 57,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10315,
@@ -1107,11 +1011,11 @@
     "simpleDesc": "Utiliser une compétence invoque des éclairs devant le personnage, infligeant des Dégâts Électro.",
     "ipDesc": "J’ai vécu l’âge des ténèbres, quand les hérétiques, d’un même élan, jurèrent la ruine de la Tour. J’ai vu des milliers d’épines se déverser de ses cimes, voilant le ciel et noyant le monde d’ombre.\nÔ fidèles, ne redoutez rien : les dieux ne punissent que les coupables.\nLorsque les épines auront étranglé toute faute, alors s’élèvera — baigné de sang — un nouvel âge, radieux de la grâce promise.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20135001,
+    "mod": 20135001,
     "icon": "T_Rouge_Treasure_51",
     "endPoints": [
       40
@@ -1119,9 +1023,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 58,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10316,
@@ -1130,11 +1032,11 @@
     "simpleDesc": "Infliger de faibles dégâts déclenche des Dégâts purs supplémentaires.",
     "ipDesc": "Elle avait senti les ténèbres se répandre, en silence. Mais la route derrière eux s’était déjà perdue ; et elle n’eut pas le cœur d’arracher encore, d’éteindre encore.\nAlors elle tendit un bonbon translucide — qu’il ne soit qu’un rêve fugace, qu’il ne soit qu’un mensonge pour se rassurer... tant qu’il pouvait encore offrir à son amie l’ombre d’un sourire, cela suffisait.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20121001,
+    "mod": 20121001,
     "icon": "T_Rouge_Treasure_54",
     "endPoints": [
       40
@@ -1142,9 +1044,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 61,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11101,
@@ -1153,11 +1053,11 @@
     "simpleDesc": "Réduit les dégâts subis lorsqu’un bouclier est actif.",
     "ipDesc": "À dix-neuf ans, il monta pour la première fois sur un champ de bataille. Les longues griffes d’un Souillé transpercèrent le corps d’un camarade qu’il venait à peine de rencontrer, imprimant sur son bouclier levé trop tard une fleur écarlate en pleine floraison. Même après l’avoir nettoyé et poli, une fine entaille demeura, indélébile.\nPour quoi se bat-il encore ?\nPour la foi, pour la justice... ou pour espérer qu’un jour, cette marque cesse de le hanter.",
     "treasureGroup": 101,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20171001,
+    "mod": 20171001,
     "icon": "T_Rouge_Treasure_34",
     "endPoints": [
       10
@@ -1165,9 +1065,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 40,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11201,
@@ -1176,11 +1074,11 @@
     "simpleDesc": "Augmente les dégâts infligés lorsqu’un bouclier est actif.",
     "ipDesc": "À quatorze ans, lors de son tout premier entraînement, il choisit cette épée parmi les équipements pour débutants recommandés par le marchand d’armes. Ses amis se moquèrent de lui, le jugeant dépassé : « Les pistolets sont bien plus pratiques que les épées ! »\n« Qu’est-ce que tu en sais ? Dans les livres d’images, les chevaliers portent toujours une épée. » Imitant les héros de ses récits, il leva la lame bien haut au-dessus de sa tête : « Pour Élysium ! »",
     "treasureGroup": 101,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20172001,
+    "mod": 20172001,
     "icon": "T_Rouge_Treasure_33",
     "endPoints": [
       20
@@ -1188,9 +1086,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 41,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 12101,
@@ -1199,11 +1095,11 @@
     "simpleDesc": "Le coût des actualisations de sélection augmente. Après avoir atteint une certaine profondeur, cette augmentation cesse et octroie des Braises.",
     "ipDesc": "Ne recherchez pas la perfection, car telle n’est pas la voie de la sagesse. Sachez agir quand l’heure est venue, de peur de sombrer dans l’hésitation et de laisser la bénédiction vous échapper.",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_35",
     "endPoints": [
       10
@@ -1211,9 +1107,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 42,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12102,
@@ -1222,11 +1116,11 @@
     "simpleDesc": "Les prix de tous les articles du Marchand abyssal augmentent. Après avoir atteint une certaine profondeur, cette augmentation cesse et octroie des Braises.",
     "ipDesc": "Convoiter les biens du monde est pure folie, car le désir engendre la corruption.\nQue celui qui espère récolter commence par mesurer le prix des semences.",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_36",
     "endPoints": [
       10
@@ -1234,9 +1128,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 43,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12201,
@@ -1245,11 +1137,11 @@
     "simpleDesc": "Réduit les dégâts infligés. L’effet disparaît après plusieurs profondeurs, octroyant des Braises.",
     "ipDesc": "La patience constante est la plus haute des vertus. Attendez comme l’herbe attend l’aurore, car la grâce divine tombera telle une pluie de printemps.\nRejetez les distractions du monde, et avancez sur le sentier de lumière, le cœur empli de dévotion.",
     "treasureGroup": 102,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20161001,
+    "mod": 20161001,
     "icon": "T_Rouge_Treasure_37",
     "endPoints": [
       20
@@ -1257,9 +1149,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 44,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13101,
@@ -1268,11 +1158,11 @@
     "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Pyro supplémentaires.",
     "ipDesc": "Ni lueur vacillante de bougie, ni chaleur paisible d’un foyer.\nJe serai l’incendie dévorant les montagnes, réduisant en cendres tout ce qui se dresse sur ma route.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20181001,
+    "mod": 20181001,
     "icon": "T_Rouge_Treasure_38",
     "endPoints": [
       10
@@ -1280,9 +1170,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 45,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13102,
@@ -1291,11 +1179,11 @@
     "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Hydro supplémentaires.",
     "ipDesc": "Ni pluie délicate du printemps, ni murmure d’un ruisseau.\nJe serai la vague titanesque engloutissant les cités, brisant et effaçant tout obstacle sans laisser de trace.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20182001,
+    "mod": 20182001,
     "icon": "T_Rouge_Treasure_39",
     "endPoints": [
       10
@@ -1303,9 +1191,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 46,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13103,
@@ -1314,11 +1200,11 @@
     "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Anémo supplémentaires.",
     "ipDesc": "Ni souffle léger, ni brise caressante.\nJe serai la tempête rugissante, arrachant les toits, brisant et lacérant tout ce qui ose se dresser sur ma route.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20183001,
+    "mod": 20183001,
     "icon": "T_Rouge_Treasure_40",
     "endPoints": [
       10
@@ -1326,9 +1212,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 47,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13104,
@@ -1337,11 +1221,11 @@
     "simpleDesc": "Infliger des dégâts peut déclencher des Dégâts Électro supplémentaires.",
     "ipDesc": "Ni faible étincelle, ni éclair furtif.\nJe serai le tonnerre muet qui déchire la nuit, ébranlant les âmes et terrifiant tout ce qui se dresse sur son passage.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20184001,
+    "mod": 20184001,
     "icon": "T_Rouge_Treasure_41",
     "endPoints": [
       10
@@ -1349,9 +1233,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 48,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14101,
@@ -1360,11 +1242,11 @@
     "simpleDesc": "Augmente les dégâts infligés au prix d’une Efficacité de compétence réduite.",
     "ipDesc": "Depuis l’enfance, elle admirait sa sœur chevalier. Forte, brillante, aucune mission ne semblait hors de sa portée.\nOn disait que l’Abysse sous le Lac Sacré était le champ de bataille le plus funeste : même les plus vaillants n’en revenaient pas.\nPourtant, sa sœur est revenue vivante. Vivante... mais muette à jamais.",
     "treasureGroup": 104,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20151001,
+    "mod": 20151001,
     "icon": "T_Rouge_Treasure_42",
     "endPoints": [
       10
@@ -1372,9 +1254,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 49,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14201,
@@ -1383,11 +1263,11 @@
     "simpleDesc": "Augmente les dégâts infligés au prix de dégâts réduits pour les armes de mêlée.",
     "ipDesc": "Les adultes murmuraient que sa sœur avait offensé les dieux dans le Lac Sacré, et qu’ils lui avaient arraché une part de son âme en châtiment.\nNon. Sa sœur était droite et pieuse. Elle n’avait rien offensé : elle avait seulement égaré son âme, là-bas. Si personne n’y croit... alors je le prouverai.\nJ’entrerai dans l’Abysse et je ramènerai l’âme que ma sœur y a perdue.",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20152001,
+    "mod": 20152001,
     "icon": "T_Rouge_Treasure_43",
     "endPoints": [
       20
@@ -1395,9 +1275,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 50,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14202,
@@ -1406,11 +1284,11 @@
     "simpleDesc": "Augmente les dégâts infligés au prix de dégâts réduits pour les armes à distance.",
     "ipDesc": "Ma sœur... est-ce toi ? Pourquoi es-tu devenue ainsi ? Pourquoi lèves-tu ton épée contre moi ?\n— « Mensonge... mensonge... » répète l’ombre noire d’une voix stridente.\n« Il n’existe pas de justice, seulement des mensonges. »\nAlors le souvenir lui revient : sa sœur lui avait un jour confié, en secret, vouloir quitter l’ordre des chevaliers... pour devenir une personne ordinaire.",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20153001,
+    "mod": 20153001,
     "icon": "T_Rouge_Treasure_44",
     "endPoints": [
       20
@@ -1418,9 +1296,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 51,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14301,
@@ -1429,11 +1305,11 @@
     "simpleDesc": "Augmente les dégâts infligés au prix d’une augmentation des dégâts subis.",
     "ipDesc": "L’ombre se dissipe, comme si elle n’avait jamais existé. Elle comprend enfin : l’âme perdue de sa sœur ne reviendra jamais.\nSi je ne t’avais pas autant admirée...\nSi je n’avais pas été si heureuse lorsque tu as été choisie...\nSerais-tu restée ? Est-ce moi qui t’ai menée à la mort, ma sœur ?\nSeul l’Abysse silencieux entend ses sanglots.",
     "treasureGroup": 104,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20154001,
+    "mod": 20154001,
     "icon": "T_Rouge_Treasure_45",
     "endPoints": [
       40
@@ -1441,9 +1317,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 52,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15101,
@@ -1452,11 +1326,11 @@
     "simpleDesc": "Infliger des dégâts restaure de la Lucidité lorsque la valeur de Posture de l’ennemi est élevée.",
     "ipDesc": "Alors pourquoi, à présent, traîne-t-elle ce corps meurtri dans un labyrinthe sans fin, avançant avec l’obstination de l’inutile ?\nParce que, quel que soit l’angle où elle se cache, Cathy finit toujours par la trouver. Parce que, aussi absurde que soit l’excuse, Flynn ne se fâche jamais.\nParce qu’elle serre encore ce badge taché de sang, lourd de la confiance entière et du mandat d’un autre.\nParce qu’elle a déjà... une raison qu’elle ne peut plus abandonner.",
     "treasureGroup": 105,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20156001,
+    "mod": 20156001,
     "icon": "T_Rouge_Treasure_53",
     "endPoints": [
       10
@@ -1464,9 +1338,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 59,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15201,
@@ -1475,11 +1347,11 @@
     "simpleDesc": "Les dégâts infligés augmentent lorsque la valeur de Posture de l’ennemi est faible.",
     "ipDesc": "Depuis l’enfance, elle n’a cessé d’abandonner. À l’école, elle manqua volontairement la sélection de l’Académie de l’Arbre Sacré ; après avoir rejoint l’ordre des chevaliers, elle ne se présenta jamais à la moindre épreuve de promotion.\nPersonne ne peut grimper éternellement. Plutôt que de poursuivre un sommet qui, un jour, précipite au fond du ravin, elle préféra rester là où tout avait commencé.",
     "treasureGroup": 105,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20157001,
+    "mod": 20157001,
     "icon": "T_Rouge_Treasure_52",
     "endPoints": [
       20
@@ -1487,8 +1359,6 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 60,
-    "unlockConditionText": "Artéfact non débloqué",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   }
 ]

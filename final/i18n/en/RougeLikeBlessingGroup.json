@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Core Flame",
+    "icon": "T_Tab_Rouge_Fire",
+    "bigIcon": "T_Rouge_BlessingType_MeleeB",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Melee Weapon Enhancements"
+  },
+  {
+    "id": 2,
+    "name": "Seaborne Moon",
+    "icon": "T_Tab_Rouge_Jellyfish",
+    "bigIcon": "T_Rouge_BlessingType_CharA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Ranged Weapon Enhancements"
+  },
+  {
+    "id": 3,
+    "name": "Luminite",
+    "icon": "T_Tab_Rouge_Stone",
+    "bigIcon": "T_Rouge_BlessingType_MeleeA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Skill Enhancements"
+  },
+  {
+    "id": 4,
+    "name": "Lumitwig",
+    "icon": "T_Tab_Rouge_Tree",
+    "bigIcon": "T_Rouge_BlessingType_LifeTree",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Specialised Summons"
+  },
+  {
+    "id": 5,
+    "name": "Nocturne Moth",
+    "icon": "T_Tab_Rouge_Butterfly",
+    "bigIcon": "T_Rouge_BlessingType_HelixLeap",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Mobility Enhancements"
+  },
+  {
+    "id": 6,
+    "name": "Glimmerfly",
+    "icon": "T_Tab_Rouge_Firefly",
+    "bigIcon": "T_Rouge_BlessingType_DanmakuA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Seeking Missile"
+  },
+  {
+    "id": 7,
+    "name": "Vamprose",
+    "icon": "T_Tab_Rouge_Thorns",
+    "bigIcon": "T_Rouge_BlessingType_SurvivalA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "Enhances survivability and grants Rage status."
+  }
+]

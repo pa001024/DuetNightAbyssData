@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "技能强化",
+    "subTitle": "灯盖：荣誉赐福",
+    "icon": "T_Rouge_TalentBranch_Skill"
+  },
+  {
+    "id": 2,
+    "name": "适性强化",
+    "subTitle": "提手：光明赐福",
+    "icon": "T_Rouge_TalentBranch_Adaptability"
+  },
+  {
+    "id": 3,
+    "name": "近战强化",
+    "subTitle": "灯身：勇气赐福",
+    "icon": "T_Rouge_Talent_Melee_AttackUP"
+  },
+  {
+    "id": 4,
+    "name": "远程强化",
+    "subTitle": "灯座：正义赐福",
+    "icon": "T_Rouge_Talent_Range_AttackUP"
+  }
+]

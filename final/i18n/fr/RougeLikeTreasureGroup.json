@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "Chevalier gardien",
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "activateNeed": [
+      11101,
+      11201
+    ],
+    "groupEffectDesc": "Une fois les <Highlight>2</> Artéfacts de [Chevalier gardien] réunis, gagne des points d’Ultra-bouclier équivalents à <Highlight>10 %</> des PV max toutes les <Highlight>10</> s dans les [Umbrés], jusqu’à quitter les [Umbrés]."
+  },
+  {
+    "id": 102,
+    "name": "Dieu de la Prospérité",
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "activateNeed": [
+      12101,
+      12102,
+      12201
+    ],
+    "groupEffectDesc": "Une fois les <Highlight>3</> Artéfacts de [Pacte du Dieu de la Prospérité] réunis, les dégâts infligés augmentent de <Highlight>10 %</> tous les <Highlight>100</> Braises possédées.\nSi les Braises sont inférieures à <Highlight>200</>, les dégâts subis sont réduits de <Highlight>30 %</>."
+  },
+  {
+    "id": 103,
+    "name": "Sceau des Quatre Éléments",
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "activateNeed": [
+      13101,
+      13102,
+      13103,
+      13104
+    ],
+    "groupEffectDesc": "Une fois les <Highlight>4</> Artéfacts de [Sceau des Quatre Éléments] réunis, la Chance de déclenchement est fixée à <Highlight>50 %</>, le Multiplicateur de dégâts à <Highlight>100 %</>, et tous les dégâts sont convertis en Dégâts purs."
+  },
+  {
+    "id": 104,
+    "name": "Chevalier pénitent",
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "activateNeed": [
+      14101,
+      14201,
+      14202,
+      14301
+    ],
+    "groupEffectDesc": "Une fois les <Highlight>4</> Artéfacts de [Chevalier pénitent] réunis, la contrepartie est annulée, et le bonus total de dégâts passe à <Highlight>400 %</>."
+  },
+  {
+    "id": 105,
+    "name": "Sorcière éplorée",
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "activateNeed": [
+      15101,
+      15201
+    ],
+    "groupEffectDesc": "Une fois les <Highlight>2</> Artéfacts de [Sorcière éplorée] réunis, l’affaiblissement de la posture augmente de <Highlight>100 %</>, et les dégâts infligés aux ennemis sous [Châtiment d’Ask] augmentent de <Highlight>100 %</>."
+  }
+]

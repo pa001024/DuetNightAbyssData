@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "스킬 강화",
+    "subTitle": "등불 덮개: 명예의 축복",
+    "icon": "T_Rouge_TalentBranch_Skill"
+  },
+  {
+    "id": 2,
+    "name": "적성 강화",
+    "subTitle": "손잡이: 빛의 축복",
+    "icon": "T_Rouge_TalentBranch_Adaptability"
+  },
+  {
+    "id": 3,
+    "name": "근접 강화",
+    "subTitle": "등불 본체: 용기의 축복",
+    "icon": "T_Rouge_Talent_Melee_AttackUP"
+  },
+  {
+    "id": 4,
+    "name": "원거리 강화",
+    "subTitle": "등불 받침대: 정의의 축복",
+    "icon": "T_Rouge_Talent_Range_AttackUP"
+  }
+]

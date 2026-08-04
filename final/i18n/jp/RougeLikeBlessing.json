@@ -5,8 +5,8 @@
     "desc": "近接武器の攻撃力が<Highlight>30.0%</>アップする。",
     "simpleDesc": "近接武器の攻撃力がアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -20,7 +20,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 1,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -29,8 +28,8 @@
     "desc": "近接武器の発動確率が<Highlight>135.0%</>アップする。",
     "simpleDesc": "近接武器の<Highlight>発動確率</>がアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -44,7 +43,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 2,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -53,8 +51,8 @@
     "desc": "近接武器の<Highlight>通常攻撃ダメージ</>が<Highlight>15.0%</>アップする。",
     "simpleDesc": "近接武器の<Highlight>通常攻撃ダメージ</>がアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -68,7 +66,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 3,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -77,8 +74,8 @@
     "desc": "<Highlight>8.0</>メートル以内の敵が倒されるたびに、自身のHPが<Highlight>>4.5%</>回復する。",
     "simpleDesc": "<Highlight>近く</>の敵が倒される時、自身のHPが回復する。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -92,7 +89,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 4,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -101,8 +97,8 @@
     "desc": "周囲<Highlight>8.0</>メートル以内、または「熔炎」を持つ敵からのダメージが<Highlight>20.0%</>ダウンする。",
     "simpleDesc": "「熔炎」を持つ敵、または近距離からの攻撃による被ダメージがダウン。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -117,7 +113,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 5,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -126,8 +121,8 @@
     "desc": "<Highlight>ダメージを受けた時、周囲<Highlight>8</>メートル以内の敵に<Highlight>1</>スタックの「熔炎」を付与する。この効果は<Highlight>1.0</>秒ごとに最大1回発動可能。",
     "simpleDesc": "ダメージを受けると近距離の敵に「熔炎」を付与。",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -142,7 +137,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 6,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -151,8 +145,8 @@
     "desc": "近接武器の<Highlight>クリティカル率</>が<Highlight>90.0%</>アップする。",
     "simpleDesc": "近接武器の<Highlight>クリティカル率</>がアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -166,7 +160,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 7,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -175,8 +168,8 @@
     "desc": "近接武器の<Highlight>クリティカルダメージ</>が<Highlight>90.0%</>アップする。",
     "simpleDesc": "近接武器の<Highlight>クリティカルダメージ</>がアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -190,7 +183,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 8,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -199,8 +191,8 @@
     "desc": "近接武器の<Highlight>落下攻撃、溜め攻撃、スライディング攻撃のダメージが<Highlight>37.5%</>アップする。",
     "simpleDesc": "近接武器の<Highlight>落下攻撃、溜め攻撃、スライディング攻撃</>のダメージがアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -214,7 +206,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 9,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -223,8 +214,8 @@
     "desc": "<Highlight>1.0</>秒ごとに周囲<Highlight>8</>メートル以内の敵に<Highlight>1</>スタックの「熔炎」を付与する。",
     "simpleDesc": "一定間隔で近距離の敵に「熔炎」を付与。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -239,7 +230,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 10,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -248,8 +238,8 @@
     "desc": "<Highlight>2.0</>スタック以上の「溶炎」を持つ敵にダメージを与える時、自身のHPが<Highlight>3.0%</>回復する。この効果は<Highlight>0.5</>秒ごとに最大1回発動可能。",
     "simpleDesc": "「熔炎」を持つ敵にダメージを与えるとHPを回復。",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -264,7 +254,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 11,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -273,8 +262,8 @@
     "desc": "近接武器の<Highlight>攻撃速度</>が<Highlight>60.0%</>アップし、<Highlight>攻撃範囲</>が<Highlight>2.25</>アップする。",
     "simpleDesc": "近接武器の<Highlight>攻撃速度</>と<Highlight>攻撃範囲</>がアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -288,7 +277,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 12,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -297,8 +285,8 @@
     "desc": "ダメージで対象のHPが<Highlight>30.0%</>未満になる時、追加で<Highlight>5400.0%</>キャラ攻撃のダメージを与える。同一対象には<Highlight>10.0</>秒ごとに1回まで。",
     "simpleDesc": "いずれかのダメージによって目標のHPが<Highlight>かなり低下</>した時、<Highlight>追加で</>ダメージを与える。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -312,7 +300,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 13,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -321,8 +308,8 @@
     "desc": "近接武器でダメージを与える時、対象の「熔炎」が<Highlight>4.0</>スタック以上なら、追加で<Highlight>90.0%</>キャラ攻撃のダメージを与える。",
     "simpleDesc": "近接武器は「熔炎」スタックの多い敵に追加ダメージを与える。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -337,7 +324,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 14,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -346,8 +332,8 @@
     "desc": "自身の周囲<Highlight>8</>メートル範囲内の敵が少ないほど、与ダメージがアップする（最大<Highlight>90.0%</>までアップ）。",
     "simpleDesc": "<Highlight>近く</>の敵が少ないほど、与ダメージがアップする。",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -362,7 +348,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 15,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -371,8 +356,8 @@
     "desc": "遠隔武器の<Highlight>攻撃力</>が<Highlight>30.0%</>アップする。",
     "simpleDesc": "遠隔武器の<Highlight>攻撃力</>がアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -386,7 +371,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 16,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -395,8 +379,8 @@
     "desc": "遠隔武器の<Highlight>発動確率</>が<Highlight>135.0%</>アップする。",
     "simpleDesc": "遠隔武器の<Highlight>発動確率</>がアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -410,7 +394,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 17,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -419,8 +402,8 @@
     "desc": "遠隔武器でダメージを与える時、「弾薬補給箱」を生成する。この効果は<Highlight>5.0</>秒ごとに最大1回発動可能。ランクⅡ効果がすでに発動している場合、追加で<Highlight>1</>個の「小型水面の月」を生成する。",
     "simpleDesc": "遠隔武器がダメージを与えると、「弾薬補給箱」を生成する。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -434,7 +417,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 18,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -443,8 +425,8 @@
     "desc": "ドロップアイテムを拾うと、過負荷シールドを<Highlight>45.0</>獲得する。この効果は<Highlight>5</>秒ごとに最大1回発動可能。",
     "simpleDesc": "ドロップアイテムを拾ったら、過負荷シールドを獲得する。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -458,7 +440,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 19,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -467,8 +448,8 @@
     "desc": "ダメージを与える時、「気つけ薬」または「結露」を生成する。この効果は<Highlight>6.0</>秒ごとに最大1回発動可能。「水面の月」のランクⅡ効果が発動する時、追加で<Highlight>1</>個の「小型水面の月」をドロップする。",
     "simpleDesc": "ダメージを与える時、「気つけ薬」や「結露」を生成する。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -482,7 +463,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 20,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -491,8 +471,8 @@
     "desc": "自身<Highlight>20</>メートル範囲内に敵がいる時、ランクⅢ効果がすでに発動している場合、攻撃力+<Highlight>30.0%</>、そうでなければ+<Highlight>15.0%</>。",
     "simpleDesc": "周囲に敵が存在する時、キャラ攻撃力アップ。",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -506,7 +486,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 21,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -515,8 +494,8 @@
     "desc": "遠隔武器の<Highlight>クリティカル率</>が<Highlight>100.0%</>アップする。",
     "simpleDesc": "遠隔武器の<Highlight>クリティカル率</>がアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -530,7 +509,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 22,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -539,8 +517,8 @@
     "desc": "遠隔武器の<Highlight>クリティカルダメージ</>が<Highlight>100.0%</>アップする。",
     "simpleDesc": "遠隔武器の<Highlight>クリティカルダメージ</>がアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -554,7 +532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 23,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -563,8 +540,8 @@
     "desc": "HP割合またはSP割合が<Highlight>50.0%</>未満の時、<Highlight>「深海の貯蔵」</>が対応する補給を生成する確率+<Highlight>100.0%</>。\n HP割合、SP割合、弾薬残量が<Highlight>50.0%</>未満の時、生成する「小型水面の月」数が+<Highlight>100%</>。",
     "simpleDesc": "HPやSPが低い場合、「深海の貯蔵」の補給のドロップ率がアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -579,7 +556,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 24,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -588,8 +564,8 @@
     "desc": "ドロップアイテムを拾ったら、追加でSPが<Highlight>6.0</>回復する。",
     "simpleDesc": "ドロップアイテムを拾ったら、追加でSPが回復する。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -603,7 +579,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 25,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -612,8 +587,8 @@
     "desc": "ジェネモン支援のクールダウンが<Highlight>50.0%</>秒減少する。",
     "simpleDesc": "ジェネモン支援のクールダウンが減少。",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -627,7 +602,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 26,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -636,8 +610,8 @@
     "desc": "遠隔武器の<Highlight>多重射撃</>が<Highlight>90.0%</>アップする。",
     "simpleDesc": "遠隔武器の<Highlight>多重射撃</>アップ。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -651,7 +625,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 27,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -660,8 +633,8 @@
     "desc": "遠隔武器の<Highlight>攻撃速度</>が<Highlight>90.0%</>アップする。",
     "simpleDesc": "遠隔武器の<Highlight>攻撃速度</>がアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -675,7 +648,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 28,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -684,8 +656,8 @@
     "desc": "自身から<Highlight>8.0</>m以上離れた敵に遠隔武器ダメージを与えると、遠隔武器被ダメージアップ<Highlight>2.4%</>を1スタック付与。最大<Highlight>120.0%</>まで。",
     "simpleDesc": "遠距離の敵に遠隔武器ダメージを与えると、その敵の被ダメージが徐々にアップ。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -700,7 +672,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 29,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -709,8 +680,8 @@
     "desc": "<Highlight>2</>秒以上に持続的に移動すると、移動停止まで自身の被ダメージが<Highlight>40.0%</>ダウンする。\n移動停止から<Highlight>2</>秒経つと、移動開始まで自身の与ダメージが<Highlight>90.0%</>アップする。",
     "simpleDesc": "<Highlight>2</>秒以上に持続的に移動すると、移動停止まで自身の被ダメージがダウンする。\n移動停止から<Highlight>2</>秒経つと、移動開始まで自身の与ダメージがアップする。",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -724,7 +695,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 30,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -733,8 +703,8 @@
     "desc": "スキル範囲が<Highlight>45.0%</>拡大する。",
     "simpleDesc": "スキル範囲アップ。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -746,7 +716,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 31,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -755,8 +724,8 @@
     "desc": "スキル耐久が<Highlight>45.0%</>アップする。",
     "simpleDesc": "スキル耐久アップ。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -768,7 +737,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 32,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -777,8 +745,8 @@
     "desc": "スキル効率が<Highlight>22.5%</>アップする。",
     "simpleDesc": "スキルを発動するとスキル効率アップ。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -790,7 +758,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 33,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -799,8 +766,8 @@
     "desc": "スキルを発動する時、SPが<Highlight>6.0</>回復する。この効果は<Highlight>5.0</>秒ごとに最大1回発動可能。",
     "simpleDesc": "スキルを発動するとSP回復。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -812,7 +779,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 34,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -821,8 +787,8 @@
     "desc": "スキルを発動する時、最大シールドが<Highlight>15.0%</>回復する。この効果は<Highlight>5.0</>秒ごとに最大1回発動可能。",
     "simpleDesc": "スキルを発動するとシールド回復。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -834,7 +800,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 35,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -843,8 +808,8 @@
     "desc": "スキル速度が<Highlight>15.0%</>アップする。",
     "simpleDesc": "スキル速度アップ。",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -858,7 +823,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 36,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -867,8 +831,8 @@
     "desc": "最大SPが<Highlight>120.0%</>アップする。",
     "simpleDesc": "最大SPアップ。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -880,7 +844,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 37,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -889,8 +852,8 @@
     "desc": "SP割合が<Highlight>50.0%</>未満の場合、被ダメージが<Highlight>30.0%</>ダウンする。",
     "simpleDesc": "SP割合が低い場合、被ダメージダウン。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -902,7 +865,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 38,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -911,8 +873,8 @@
     "desc": "SP割合が<Highlight>50.0%</>以下の場合、<Highlight>5.0</>秒間、1秒ごとにSPが<Highlight>12.0</>回復する。この効果は<Highlight>20.0</>秒ごとに最大1回発動可能。",
     "simpleDesc": "SP割合が低い場合、1秒ごとにSP回復。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -924,7 +886,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 39,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -933,8 +894,8 @@
     "desc": "スキルを発動する時、<Highlight>15.0</>スタックの「輝光」を得る。",
     "simpleDesc": "スキルを発動する時、いくつかの<Highlight>「輝光」</>を得る。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -948,7 +909,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 40,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -957,8 +917,8 @@
     "desc": "「キラキラ」状態中、毎秒SPを<Highlight>6.0</>回復。",
     "simpleDesc": "「キラキラ」状態中、毎秒SPを回復。",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -972,7 +932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 41,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -981,8 +940,8 @@
     "desc": "スキル威力が<Highlight>120.0%</>アップする",
     "simpleDesc": "スキル威力アップ",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -994,7 +953,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 42,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1003,8 +961,8 @@
     "desc": "スキルダメージが目標の防御力を<Highlight>90.0%</>無視する。",
     "simpleDesc": "スキルダメージが目標の防御力を一部無視。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1016,7 +974,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 43,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1025,8 +982,8 @@
     "desc": "「キラキラ」状態によるスキルダメージ増加効果が<Highlight>225.0%</>アップ。",
     "simpleDesc": "「キラキラ」状態によるスキルダメージ増加効果アップ。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1040,7 +997,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 44,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1049,8 +1005,8 @@
     "desc": "「放射」の発動間隔が<Highlight>1.0</>秒に短縮。",
     "simpleDesc": "「放射」の発動間隔が短縮。",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1064,7 +1020,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 45,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1073,8 +1028,8 @@
     "desc": "ダメージを与える時、<Highlight>15.0%</>の確率で1つの「流明の種」を召喚する。この効果は<Highlight>3.0</>秒ごとに最大1回発動可能。",
     "simpleDesc": "ダメージを与えると確率で「流明の種」を召喚。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1088,7 +1043,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 46,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1097,8 +1051,8 @@
     "desc": "スキルを発動する時、<Highlight>10.0</>秒間スキル威力が<Highlight>7.5%</>アップする（最大<Highlight>3.0</>スタックまで重ねがけ可）。",
     "simpleDesc": "召喚ユニットを召喚時、自身のスキル威力アップ。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1112,7 +1066,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 47,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1121,8 +1074,8 @@
     "desc": "召喚ユニットを召喚するたびに、<Highlight>10.0</>秒間自身の攻撃力が<Highlight>7.5%</>アップする（最大<Highlight>3.0</>スタック）",
     "simpleDesc": "召喚ユニットを召喚するたびに、自身の攻撃力アップ。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1136,7 +1089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 48,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1145,8 +1097,8 @@
     "desc": "受ける回復効果が<Highlight>60.0%</>アップする。",
     "simpleDesc": "被回復効果アップ。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1160,7 +1112,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 49,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1169,8 +1120,8 @@
     "desc": "召喚ユニットを召喚する時、自身が最大HPの<Highlight>3.0%</>を回復する。",
     "simpleDesc": "召喚ユニットを召喚する時、HPが回復する。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1184,7 +1135,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 50,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1193,8 +1143,8 @@
     "desc": "召喚ユニットを召喚する時、自身のSPが<Highlight>6.0</>回復する。",
     "simpleDesc": "召喚ユニットを召喚する時、SPが回復する。",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1208,7 +1158,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 51,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1217,8 +1166,8 @@
     "desc": "<Highlight>3.0</>秒ごとに「流明の種」を召喚。",
     "simpleDesc": "一定間隔で「流明の種」を召喚。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1232,7 +1181,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 52,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1241,8 +1189,8 @@
     "desc": "ダメージを受けると<Highlight>75.0%</>の確率で「流明の種」を召喚、この効果は<Highlight>2.0</>秒ごとに1回まで発動する。",
     "simpleDesc": "ダメージを受けると確率で「流明の種」を召喚。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1256,7 +1204,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 53,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1265,8 +1212,8 @@
     "desc": "周囲<Highlight>8</>メートル範囲内に召喚ユニットが存在する場合、被ダメージが<Highlight>30.0%</>ダウンする。",
     "simpleDesc": "周囲に召喚ユニットが存在する場合、被ダメージがダウンする。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1280,7 +1227,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 54,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1289,8 +1235,8 @@
     "desc": "回復を受けると、自身の与ダメージ+<Highlight>37.5%</>、<Highlight>3.0</>秒継続。",
     "simpleDesc": "回復を受けると短い間与ダメージアップ。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1304,7 +1250,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 55,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1313,8 +1258,8 @@
     "desc": "召喚ユニット召喚時、6m以内の敵に体勢削り効果。",
     "simpleDesc": "召喚ユニット召喚時、周囲の敵に体勢削り効果。",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1327,7 +1272,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 56,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1336,8 +1280,8 @@
     "desc": "周囲<Highlight>8</>メートル範囲内に召喚ユニット1つあるごとに自身の与ダメージが<Highlight>18.0%</>アップする（最大<Highlight>5.0</>スタックまで重ねがけ可）。",
     "simpleDesc": "周囲の召喚ユニット多ければ多いほど、与ダメージがアップ。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1351,7 +1295,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 57,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1360,8 +1303,8 @@
     "desc": "召喚ユニットの攻撃力が<Highlight>90.0%</>アップする。",
     "simpleDesc": "召喚ユニットの攻撃力アップ。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1375,7 +1318,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 58,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1384,8 +1326,8 @@
     "desc": "明の枝シリーズではない召喚ユニットをを召喚する時、召喚した位置に1回爆発衝撃を引き起こす。キャラクターの攻撃力<Highlight>270%</>に相当するダメージを与える。",
     "simpleDesc": "流明の枝シリーズではない召喚ユニットを召喚時、その場で1回爆発を引き起こす。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1399,7 +1341,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 59,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1408,8 +1349,8 @@
     "desc": "「流明の種」が「流明の枝」に進化する確率が<Highlight>100%</>にアップ。",
     "simpleDesc": "「流明の種」が「流明の枝」に進化する確率が<Highlight>100%</>にアップ。",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1423,7 +1364,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 60,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1432,8 +1372,8 @@
     "desc": "スピンジャンプをしたとき、<Highlight>3.0</>秒間攻撃力が<Highlight>18.0%</>アップし、「奈落」を<Highlight>1.0</>スタック獲得する。",
     "simpleDesc": "スピンジャンプ時、攻撃アップと「奈落」を獲得。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1445,7 +1385,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 57,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1454,8 +1393,8 @@
     "desc": "スライディング時、「風翼」を3つ生成し、敵命中時<Highlight>90.0%</>キャラ攻撃力のダメージを与え、「奈落」を<Highlight>1.0</>スタックを獲得する。",
     "simpleDesc": "スライディング時、「風翼」を3つ生成し、「奈落」を獲得。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1467,7 +1406,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 58,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1476,8 +1414,8 @@
     "desc": "回避時、被ダメージダウン<Highlight>15.0%</>を獲得、<Highlight>3.0</>秒継続。さらに「奈落」を<Highlight>1.0</>スタックを獲得する。",
     "simpleDesc": "回避時、被ダメージダウンと「奈落」を獲得。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1489,7 +1427,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 59,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1498,8 +1435,8 @@
     "desc": "最大SPが<Highlight>45.0%</>アップする。",
     "simpleDesc": "最大SPアップ",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1511,7 +1448,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 60,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1520,8 +1456,8 @@
     "desc": "スキル速度+<Highlight>15.0%</>。",
     "simpleDesc": "スキル速度アップ",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1533,7 +1469,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 61,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1542,8 +1477,8 @@
     "desc": "落下攻撃でダメージを与えると「鱗粉」領域を生成し、その中の敵に毎秒<Highlight>400.0%</>キャラ攻撃力のダメージを与える。さらに「奈落」を<Highlight>8.0</>スタックを獲得。効果は<Highlight>8.0</>秒ごとに1回まで。",
     "simpleDesc": "落下攻撃でダメージを与えると「鱗粉」領域を生成し、「奈落」を獲得。",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1555,7 +1490,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 62,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1564,8 +1498,8 @@
     "desc": "落下攻撃ダメージが<Highlight>37.5%</>アップする。",
     "simpleDesc": "落下攻撃ダメージアップ",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1577,7 +1511,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 63,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1586,8 +1519,8 @@
     "desc": "近接攻撃範囲が<Highlight>1.5</>拡大する。",
     "simpleDesc": "近接攻撃範囲アップ",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [],
@@ -1599,7 +1532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 64,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1608,8 +1540,8 @@
     "desc": "最大回避回数が<Highlight>3.0</>回増加する。",
     "simpleDesc": "最大回避回数増加。",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1621,7 +1553,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 65,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1630,8 +1561,8 @@
     "desc": "回避時、「鱗粉」領域を生成し、その中の敵に毎秒<Highlight>400.0%</>キャラ攻撃力のダメージを与える。効果は<Highlight>5.0</>秒ごとに1回まで。",
     "simpleDesc": "回避時、「鱗粉」領域を生成。",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1642,7 +1573,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 66,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1651,8 +1581,8 @@
     "desc": "<Highlight>3.0</>秒ごとに「奈落」<Highlight>1.0</>スタック獲得。「奈落」が<Highlight>30.0</>スタック以上の時、この祝福で「奈落」を得ると「刃翼」を1枚発射し、命中した敵に<Highlight>1200.0%</>キャラ攻撃力のダメージを与える。",
     "simpleDesc": "一定間隔で「奈落」を獲得。「奈落」が一定スタック以上ある時、追加で「刃翼」を1発射。",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1664,7 +1594,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 67,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1673,8 +1602,8 @@
     "desc": "最大回避回数1回ごとに、最大SPが<Highlight>45.0%</>アップする。",
     "simpleDesc": "最大回避回数に応じて、最大SPアップ。",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1686,7 +1615,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 68,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1695,8 +1623,8 @@
     "desc": "キャラ攻撃力が<Highlight>120.0%</>アップ",
     "simpleDesc": "キャラ攻撃力アップ",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1708,7 +1636,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 69,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1717,8 +1644,8 @@
     "desc": "攻撃速度が<Highlight>90.0%</>アップ",
     "simpleDesc": "攻撃速度アップ",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1730,7 +1657,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 70,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1739,8 +1665,8 @@
     "desc": "回避後、攻撃力が<Highlight>3.0</>秒間<Highlight>90.0%</>アップする。",
     "simpleDesc": "回避時に攻撃力アップ",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1754,7 +1680,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 71,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1763,8 +1688,8 @@
     "desc": "スキル範囲が<Highlight>45.0%</>拡大する。",
     "simpleDesc": "スキル範囲アップ。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1778,7 +1703,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 76,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1787,8 +1711,8 @@
     "desc": "ダメージを与えると<Highlight>7.5%</>の確率で「曳光虫」を1獲得。",
     "simpleDesc": "ダメージを与えると確率で「曳光虫」を獲得。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1802,7 +1726,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 77,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1811,8 +1734,8 @@
     "desc": "<Highlight>7.0</>秒ごとに「曳光虫」を1獲得。",
     "simpleDesc": "<Highlight>10</>秒ごとに「曳光虫」を獲得。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1826,7 +1749,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 78,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1835,8 +1757,8 @@
     "desc": "「曳光虫」未所持時、遠隔武器のクリティカル率が<Highlight>7.5%</>アップする。\n「曳光虫」所持時、遠隔武器のクリティカル率が<Highlight>37.5%</>アップする。",
     "simpleDesc": "遠隔武器のクリティカル率がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1850,7 +1772,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 79,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1859,8 +1780,8 @@
     "desc": "「曳光虫」未所持時、遠隔武器のクリティカルダメージが<Highlight>7.5%</>アップする。\n「曳光虫」所持時、遠隔武器のクリティカルダメージが<Highlight>37.5%</>アップする。",
     "simpleDesc": "遠隔武器のクリティカルダメージがアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1874,7 +1795,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 80,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1883,8 +1803,8 @@
     "desc": "「曳光虫」未所持時、遠隔武器の発動確率が<Highlight>30.0%</>アップする。\n「曳光虫」所持時、遠隔武器の発動確率が<Highlight>135.0%</>アップする。",
     "simpleDesc": "遠隔武器の発動確率がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1898,7 +1818,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 81,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1907,8 +1826,8 @@
     "desc": "召喚ユニットの与ダメージが<Highlight>37.5%</>アップ。",
     "simpleDesc": "召喚ユニットの与ダメージアップ。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1922,7 +1841,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 82,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1931,8 +1849,8 @@
     "desc": "ダメージを受けるか召喚ユニットを召喚すると、「曳光虫」を<Highlight>1</>獲得。効果は<Highlight>3.0</>秒ごとに1回まで。",
     "simpleDesc": "ダメージを受けるか召喚ユニットを召喚すると、「曳光虫」を獲得。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1946,7 +1864,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 83,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1955,8 +1872,8 @@
     "desc": "スキル効率が<Highlight>37.5%</>アップ。",
     "simpleDesc": "スキル効率アップ。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1970,7 +1887,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 84,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -1979,8 +1895,8 @@
     "desc": "「曳光虫」未所持時、遠隔武器の多重射撃が<Highlight>7.5%</>アップする。\n「曳光虫」所持時、遠隔武器の多重射撃が<Highlight>37.5%</>アップする。",
     "simpleDesc": "遠隔武器の多重射撃がアップする。「曳光虫」を持つ場合、その効果はさらに強くなる。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1994,7 +1910,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 85,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2003,8 +1918,8 @@
     "desc": "復活回数+<Highlight>1.0</>。「曳光虫」所持中は被ダメージ<Highlight>30.0%</>ダウン。次の復活後にこの効果はなくなる。",
     "simpleDesc": "復活回数を追加獲得。「曳光虫」を所持中は被ダメージダウン。次の復活したら、この効果を失う。",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -2017,7 +1932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 86,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2026,8 +1940,8 @@
     "desc": "「曳光虫」を所持していない時、全属性貫通が<Highlight>18.0%</>アップする。\n「曳光虫」を所持している時、全属性貫通が<Highlight>90.0%</>アップする。",
     "simpleDesc": "全属性貫通アップ。「曳光虫」所持時、その効果はさらに強くなる。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2041,7 +1955,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 87,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2050,8 +1963,8 @@
     "desc": "「曳光虫」を所持していない時、高揚が<Highlight>18.0%</>アップする。\n「曳光虫」を所持している時、高揚が<Highlight>90.0%</>アップする。",
     "simpleDesc": "高揚がアップする。「曳光虫」所持時、その効果はさらに強くなる。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2065,7 +1978,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 88,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2074,8 +1986,8 @@
     "desc": "周囲に敵がいる時、「曳光虫」の攻撃間隔が大幅に短縮される。<Highlight>5.0</>秒間持続。この効果は<Highlight>10.0</>秒ごとに1回のみ発動可能。",
     "simpleDesc": "周囲に敵がいる時、「曳光虫」の攻撃間隔が大幅に短縮される。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2090,7 +2002,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 89,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2099,8 +2010,8 @@
     "desc": "「曳光虫」の与ダメージが<Highlight>90.0%</>アップ。",
     "simpleDesc": "「曳光虫」の与ダメージアップ。",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2115,7 +2026,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 90,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2124,8 +2034,8 @@
     "desc": "スキル耐久が<Highlight>45.0%</>アップする。",
     "simpleDesc": "スキル耐久アップ。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2137,7 +2047,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 91,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2146,8 +2055,8 @@
     "desc": "HP割合が<Highlight>100%</>未満の場合、SP自然回復量が<Highlight>9.0</>アップする。HP割合が<Highlight>100%</>の場合、SP自然回復量が<Highlight>3.0</>アップする。",
     "simpleDesc": "SP自然回復量がアップする。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2159,7 +2068,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 92,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2168,8 +2076,8 @@
     "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器の発動確率が<Highlight>180.0%</>アップする。HP割合が<Highlight>100%</>の場合、近接武器の発動確率が<Highlight>90.0%</>アップする。",
     "simpleDesc": "近接武器の発動確率がアップする。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2181,7 +2089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 93,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2190,8 +2097,8 @@
     "desc": "最大HPが<Highlight>30.0%</>アップ。",
     "simpleDesc": "最大HPアップ。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2203,7 +2110,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 94,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2212,8 +2118,8 @@
     "desc": "防御力+<Highlight>90.0%</>。ダメージを受ける時、<Highlight>2</>秒間与ダメージが<Highlight>30.0%</>アップする。この効果は<Highlight>3</>秒ごとに1回のみ発動可能。",
     "simpleDesc": "防御アップ。ダメージを受けた時、与ダメージがアップする。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2225,7 +2131,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 95,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2234,8 +2139,8 @@
     "desc": "ダメージを与えると、ターゲットの位置に自身最大HP<Highlight>30.0%</>の範囲ダメージを追加で与える。効果は<Highlight>1.0</>秒ごとに1回まで。",
     "simpleDesc": "ダメージを与えた時、目標の位置に自身の最大HPに基づき、追加で範囲ダメージを与える。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2247,7 +2152,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 96,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2256,8 +2160,8 @@
     "desc": "HP割合が<Highlight>100%</>未満の場合、スキル威力が<Highlight>60.0%</>アップする。HP割合が<Highlight>100%</>の場合、スキル威力が<Highlight>30.0%</>アップする。",
     "simpleDesc": "スキル威力がアップする。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2269,7 +2173,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 97,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2278,8 +2181,8 @@
     "desc": "与ダメージが<Highlight>30.0%</>アップする。HP割合が<Highlight>1%</>ダウンするごとに、効果倍率が<Highlight>1%</>アップする（最大<Highlight>60.0%</>まで）。",
     "simpleDesc": "与ダメージがアップする。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2291,7 +2194,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 98,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2300,8 +2202,8 @@
     "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器のクリティカル率が<Highlight>135.0%</>アップする。HP割合が<Highlight>100%</>の場合、近接武器のクリティカル率が<Highlight>67.5%</>アップする。",
     "simpleDesc": "近接武器のクリティカル率がアップする。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2313,7 +2215,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 99,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2322,8 +2223,8 @@
     "desc": "HP割合が<Highlight>100%</>未満の場合、近接武器のクリティカルダメージが<Highlight>135.0%</>アップする。HP割合が<Highlight>100%</>の場合、近接武器のクリティカルダメージが<Highlight>67.5%</>アップする。",
     "simpleDesc": "近接武器のクリティカルダメージがアップする。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2335,7 +2236,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 100,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2344,8 +2244,8 @@
     "desc": "被ダメージ時、過負荷シールド<Highlight>135.0</>を獲得。効果は<Highlight>5.0</>秒ごとに1回まで。",
     "simpleDesc": "ダメージを受けた時、過負荷シールドを獲得する。",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2357,7 +2257,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 101,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2366,8 +2265,8 @@
     "desc": "1回の被ダメージは自身最大HPの<Highlight>25.0%</>を超えない。最大HPの<Highlight>20.0%</>を超えるダメージを受けた場合、<Highlight>5.0</>秒間、毎秒最大HPの<Highlight>3.0%</>を回復。",
     "simpleDesc": "一度に受けるダメージを制限し、高ダメージを受けた後に持続的にHP回復。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2379,7 +2278,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 102,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2388,8 +2286,8 @@
     "desc": "「必殺技」を発動する時、防御を全て失い、失った値の<Highlight>240.0%</>を攻撃力に変換、<Highlight>15.0</>秒継続。この効果は<Highlight>30.0</>秒ごとに1回のみ発動できる。",
     "simpleDesc": "「必殺技」を発動する時、防御を全て失い、攻撃力に変換。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2401,7 +2299,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 103,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2410,8 +2307,8 @@
     "desc": "HP割合が<Highlight>100%</>未満の場合、スキルダメージが目標の防御を<Highlight>90.0%</>無視する。HP割合が<Highlight>100%</>の場合、スキルダメージが目標の防御を<Highlight>45.0%</>無視する。",
     "simpleDesc": "スキルダメージが目標の防御力を一部無視する。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2423,7 +2320,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 104,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   },
   {
@@ -2432,8 +2328,8 @@
     "desc": "HP割合が<Highlight>40%</>未満の場合、背水が<Highlight>36.0%</>アップする。HP割合が<Highlight>40%</>以上の場合、背水が<Highlight>18.0%</>アップする。",
     "simpleDesc": "背水がアップ。HP割合が低い場合はその効果がさらに強くなる。",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2447,7 +2343,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 105,
-    "unlockConditionText": "キャンドルの芯未解放",
     "canSell": 1
   }
 ]

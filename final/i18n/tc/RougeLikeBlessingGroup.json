@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "爐心炎",
+    "icon": "T_Tab_Rouge_Fire",
+    "bigIcon": "T_Rouge_BlessingType_MeleeB",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "近戰武器強化"
+  },
+  {
+    "id": 2,
+    "name": "浮海月",
+    "icon": "T_Tab_Rouge_Jellyfish",
+    "bigIcon": "T_Rouge_BlessingType_CharA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "遠端武器強化"
+  },
+  {
+    "id": 3,
+    "name": "輝螢石",
+    "icon": "T_Tab_Rouge_Stone",
+    "bigIcon": "T_Rouge_BlessingType_MeleeA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "技能效果強化"
+  },
+  {
+    "id": 4,
+    "name": "流明枝",
+    "icon": "T_Tab_Rouge_Tree",
+    "bigIcon": "T_Rouge_BlessingType_LifeTree",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "召喚物特化"
+  },
+  {
+    "id": 5,
+    "name": "噬影蝶",
+    "icon": "T_Tab_Rouge_Butterfly",
+    "bigIcon": "T_Rouge_BlessingType_HelixLeap",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "機動能力強化"
+  },
+  {
+    "id": 6,
+    "name": "曳光蟲",
+    "icon": "T_Tab_Rouge_Firefly",
+    "bigIcon": "T_Rouge_BlessingType_DanmakuA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "索敵飛彈"
+  },
+  {
+    "id": 7,
+    "name": "汲血花",
+    "icon": "T_Tab_Rouge_Thorns",
+    "bigIcon": "T_Rouge_BlessingType_SurvivalA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "生存能力提升並提供狂暴能力"
+  }
+]

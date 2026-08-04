@@ -7,7 +7,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）米笛奥伦之索求的描述",
-    "groupId": 11,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Pursuit of Midioren"
   },
@@ -19,7 +18,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）艾伊基斯之勇猛的描述",
-    "groupId": 12,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Valour of Aegis"
   },
@@ -31,7 +29,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）狄欧普拉之巧艺的描述",
-    "groupId": 13,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Craft of Dioptra"
   },
@@ -43,7 +40,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）塞库勒姆之开创的描述",
-    "groupId": 14,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Genesis of Saeculum"
   },
@@ -55,7 +51,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）德拉克玛之精明的描述",
-    "groupId": 15,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Acumen of Drakhma"
   },
@@ -67,7 +62,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）逻各斯之洞见的描述",
-    "groupId": 16,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Insight of Logos"
   },
@@ -79,7 +73,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "Damage dealt by Consonance Weapons is increased by <Highlight>100%</>.",
-    "groupId": 17,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Crimson Beasts"
   },
@@ -92,7 +85,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "While all allies are within <Highlight>30</>m of one another, all allies' Damage Dealt is increased by <Highlight>100%</>.",
-    "groupId": 18,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Plumes Entwined"
   },
@@ -104,7 +96,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "With all <Highlight>2</> [Guardian Knight] Artefacts collected, your character gains Ultra Shield points equal to <Highlight>10%</> Max HP every <Highlight>10</>s.",
-    "groupId": 19,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Guardian Knight"
   },
@@ -117,7 +108,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "Skill DMG, Melee Weapon DMG, and Ranged Weapon DMG are no longer reduced.",
-    "groupId": 20,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Bird-Masked Freak"
   },
@@ -130,7 +120,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_2",
     "groupEffectDesc": "（待包装）繁荣之神的描述",
-    "groupId": 21,
     "icon": "T_Rouge_TreasureGroup_2_1",
     "name": "God of Abundance"
   },
@@ -144,7 +133,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_3",
     "groupEffectDesc": "With all <Highlight>4</> [Four Elemental Seals] Artefacts collected, Trigger Probability is set to <Highlight>50%</>, Damage Multiplier is set to <Highlight>100%</>, and all damage is converted to True Damage.",
-    "groupId": 22,
     "icon": "T_Rouge_TreasureGroup_3_1",
     "name": "Four Elemental Seals"
   },
@@ -158,7 +146,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_4",
     "groupEffectDesc": "With all <Highlight>4</> [Penitent Knight] Artefacts collected, removes the penalty and increases total damage bonus to <Highlight>400%</>.",
-    "groupId": 23,
     "icon": "T_Rouge_TreasureGroup_4_1",
     "name": "Penitent Knight"
   },
@@ -170,7 +157,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_5",
     "groupEffectDesc": "With all <Highlight>2</> [Forlorn Sorceress] Artefacts collected, increases [Stance] reduction by <Highlight>100%</>, and Damage Dealt to enemies under [Ask's Retribution] by <Highlight>100%</>.",
-    "groupId": 24,
     "icon": "T_Rouge_TreasureGroup_5_1",
     "name": "Forlorn Sorceress"
   },
@@ -186,7 +172,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）圣迹残像的描述",
-    "groupId": 25,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Sacred Vestiges"
   },
@@ -200,7 +185,6 @@
     ],
     "bigIcon": "T_Rouge_TreasureGroup_1",
     "groupEffectDesc": "（待包装）闲逸学者的描述",
-    "groupId": 26,
     "icon": "T_Rouge_TreasureGroup_1_1",
     "name": "Scholar's Leisure"
   }

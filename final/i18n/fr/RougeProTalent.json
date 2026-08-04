@@ -4,476 +4,287 @@
     "branch": 1,
     "desc": "ATQ +<Highlight>10.0%</>",
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      0,
-      0
-    ],
-    "levelUpPoint": 15,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation d’ATQ",
-    "talentId": 10111,
-    "talentMod": 30101051,
     "type": 3,
-    "unlock": [
-      10221,
-      10322
-    ]
+    "point": 15,
+    "mod": 30101051
   },
   {
     "id": 10221,
     "branch": 1,
     "desc": "Durée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      200,
-      130
-    ],
-    "levelUpPoint": 20,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Durée de compétence",
-    "talentId": 10221,
-    "talentMod": 30101041,
     "type": 1,
-    "unlock": [
-      10431
-    ]
+    "point": 20,
+    "mod": 30101041
   },
   {
     "id": 10322,
     "branch": 1,
     "desc": "Puissance de compétence +<Highlight>4.8%</>",
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      200,
-      -130
-    ],
-    "levelUpPoint": 20,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Puissance de compétence",
-    "talentId": 10322,
-    "talentMod": 30101011,
     "type": 1,
-    "unlock": [
-      10532,
-      10633
-    ]
+    "point": 20,
+    "mod": 30101011
   },
   {
     "id": 10431,
     "branch": 1,
     "desc": "Ténacité +<Highlight>10.8%</>",
     "icon": "T_Rouge_Talent_Berserker",
-    "iconLoc": [
-      400,
-      130
-    ],
-    "levelUpPoint": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de Ténacité",
-    "talentId": 10431,
-    "talentMod": 30101062,
     "type": 2,
-    "unlock": [
-      10741,
-      10842
-    ]
+    "point": 100,
+    "mod": 30101062
   },
   {
     "id": 10532,
     "branch": 1,
     "desc": "Efficacité de compétence +<Highlight>3.0%</>",
     "icon": "T_Rouge_Talent_SkillEfficiencyUP",
-    "iconLoc": [
-      400,
-      -65
-    ],
-    "levelUpPoint": 25,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de l’Efficacité de compétence",
-    "talentId": 10532,
-    "talentMod": 30101021,
     "type": 1,
-    "unlock": [
-      10943
-    ]
+    "point": 25,
+    "mod": 30101021
   },
   {
     "id": 10633,
     "branch": 1,
     "desc": "Portée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      400,
-      -195
-    ],
-    "levelUpPoint": 25,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Portée de compétence",
-    "talentId": 10633,
-    "talentMod": 30101031,
     "type": 1,
-    "unlock": [
-      11044
-    ]
+    "point": 25,
+    "mod": 30101031
   },
   {
     "id": 10741,
     "branch": 1,
     "desc": "Puissance de compétence +<Highlight>4.8%</>",
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      600,
-      195
-    ],
-    "levelUpPoint": 30,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Puissance de compétence",
-    "talentId": 10741,
-    "talentMod": 30101011,
     "type": 1,
-    "unlock": [
-      11151
-    ]
+    "point": 30,
+    "mod": 30101011
   },
   {
     "id": 10842,
     "branch": 1,
     "desc": "ATQ +<Highlight>10.0%</>",
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      600,
-      65
-    ],
-    "levelUpPoint": 30,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation d’ATQ",
-    "talentId": 10842,
-    "talentMod": 30101051,
     "type": 1,
-    "unlock": [
-      11252
-    ]
+    "point": 30,
+    "mod": 30101051
   },
   {
     "id": 10943,
     "branch": 1,
     "desc": "Efficacité de compétence +<Highlight>3.0%</>",
     "icon": "T_Rouge_Talent_SkillEfficiencyUP",
-    "iconLoc": [
-      600,
-      -65
-    ],
-    "levelUpPoint": 30,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de l’Efficacité de compétence",
-    "talentId": 10943,
-    "talentMod": 30101021,
     "type": 1,
-    "unlock": [
-      11353
-    ]
+    "point": 30,
+    "mod": 30101021
   },
   {
     "id": 11044,
     "branch": 1,
     "desc": "Durée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      600,
-      -195
-    ],
-    "levelUpPoint": 30,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Durée de compétence",
-    "talentId": 11044,
-    "talentMod": 30101041,
     "type": 1,
-    "unlock": [
-      11454
-    ]
+    "point": 30,
+    "mod": 30101041
   },
   {
     "id": 11151,
     "branch": 1,
     "desc": "Portée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      800,
-      195
-    ],
-    "levelUpPoint": 35,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Portée de compétence",
-    "talentId": 11151,
-    "talentMod": 30101031,
     "type": 1,
-    "unlock": [
-      11561
-    ]
+    "point": 35,
+    "mod": 30101031
   },
   {
     "id": 11252,
     "branch": 1,
     "desc": "Puissance de compétence +<Highlight>9.6%</>",
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      800,
-      65
-    ],
-    "levelUpPoint": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Puissance de compétence (II)",
-    "talentId": 11252,
-    "talentMod": 30101072,
     "type": 2,
-    "unlock": [
-      11662
-    ]
+    "point": 100,
+    "mod": 30101072
   },
   {
     "id": 11353,
     "branch": 1,
     "desc": "Durée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      800,
-      -65
-    ],
-    "levelUpPoint": 35,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Durée de compétence",
-    "talentId": 11353,
-    "talentMod": 30101041,
     "type": 1,
-    "unlock": [
-      11763
-    ]
+    "point": 35,
+    "mod": 30101041
   },
   {
     "id": 11454,
     "branch": 1,
     "desc": "Puissance de compétence +<Highlight>4.8%</>",
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      800,
-      -195
-    ],
-    "levelUpPoint": 35,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Puissance de compétence",
-    "talentId": 11454,
-    "talentMod": 30101011,
     "type": 1,
-    "unlock": [
-      11864
-    ]
+    "point": 35,
+    "mod": 30101011
   },
   {
     "id": 11561,
     "branch": 1,
     "desc": "Durée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      1000,
-      195
-    ],
-    "levelUpPoint": 40,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Durée de compétence",
-    "talentId": 11561,
-    "talentMod": 30101041,
     "type": 1,
-    "unlock": [
-      11971
-    ]
+    "point": 40,
+    "mod": 30101041
   },
   {
     "id": 11662,
     "branch": 1,
     "desc": "ATQ +<Highlight>10.0%</>",
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      1000,
-      65
-    ],
-    "levelUpPoint": 40,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation d’ATQ",
-    "talentId": 11662,
-    "talentMod": 30101051,
     "type": 1,
-    "unlock": [
-      12072
-    ]
+    "point": 40,
+    "mod": 30101051
   },
   {
     "id": 11763,
     "branch": 1,
     "desc": "Puissance de compétence +<Highlight>4.8%</>",
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      1000,
-      -65
-    ],
-    "levelUpPoint": 40,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Puissance de compétence",
-    "talentId": 11763,
-    "talentMod": 30101011,
     "type": 1,
-    "unlock": [
-      12173
-    ]
+    "point": 40,
+    "mod": 30101011
   },
   {
     "id": 11864,
     "branch": 1,
     "desc": "Portée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      1000,
-      -195
-    ],
-    "levelUpPoint": 40,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Portée de compétence",
-    "talentId": 11864,
-    "talentMod": 30101031,
     "type": 1,
-    "unlock": [
-      12173
-    ]
+    "point": 40,
+    "mod": 30101031
   },
   {
     "id": 11971,
     "branch": 1,
     "desc": "Efficacité de compétence +<Highlight>3.0%</>",
     "icon": "T_Rouge_Talent_SkillEfficiencyUP",
-    "iconLoc": [
-      1200,
-      195
-    ],
-    "levelUpPoint": 45,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de l’Efficacité de compétence",
-    "talentId": 11971,
-    "talentMod": 30101021,
     "type": 1,
-    "unlock": [
-      12281
-    ]
+    "point": 45,
+    "mod": 30101021
   },
   {
     "id": 12072,
     "branch": 1,
     "desc": "Portée de compétence +<Highlight>5.4%</>",
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      1200,
-      65
-    ],
-    "levelUpPoint": 45,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Portée de compétence",
-    "talentId": 12072,
-    "talentMod": 30101031,
     "type": 1,
-    "unlock": [
-      12382
-    ]
+    "point": 45,
+    "mod": 30101031
   },
   {
     "id": 12173,
     "branch": 1,
     "desc": "Vigueur +<Highlight>10.8%</>",
     "icon": "T_Rouge_Talent_Morale",
-    "iconLoc": [
-      1200,
-      -130
-    ],
-    "levelUpPoint": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de Vigueur",
-    "talentId": 12173,
-    "talentMod": 30101082,
-    "type": 2
+    "type": 2,
+    "point": 100,
+    "mod": 30101082
   },
   {
     "id": 12281,
     "branch": 1,
     "desc": "ATQ +<Highlight>10.0%</>",
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      1400,
-      195
-    ],
-    "levelUpPoint": 50,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation d’ATQ",
-    "talentId": 12281,
-    "talentMod": 30101051,
     "type": 1,
-    "unlock": [
-      12491
-    ]
+    "point": 50,
+    "mod": 30101051
   },
   {
     "id": 12382,
     "branch": 1,
     "desc": "Puissance de compétence +<Highlight>4.8%</>",
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      1400,
-      65
-    ],
-    "levelUpPoint": 50,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation de la Puissance de compétence",
-    "talentId": 12382,
-    "talentMod": 30101011,
     "type": 1,
-    "unlock": [
-      12491
-    ]
+    "point": 50,
+    "mod": 30101011
   },
   {
     "id": 12491,
     "branch": 1,
     "desc": "Dégâts infligés +<Highlight>12.0%</>",
     "icon": "T_Rouge_Talent_DamageUp",
-    "iconLoc": [
-      1600,
-      130
-    ],
-    "levelUpPoint": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "name": "Augmentation des dégâts infligés",
-    "talentId": 12491,
-    "talentMod": 30101092,
-    "type": 2
+    "type": 2,
+    "point": 100,
+    "mod": 30101092
   }
 ]

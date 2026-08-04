@@ -6,11 +6,11 @@
     "simpleDesc": "Grants an extra [Refresh]. The first refresh costs no [Embers].",
     "ipDesc": "Her candlelight chases the chill, painting hope and smiles on children's faces. Yet all mortal flames must die, so again and again she lights new candles. \nIn the sacred lake's depths, a wicksmith forged an eternal flame - only to find no one left waiting in the darkness for her light.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_01",
     "endPoints": [
       10
@@ -18,9 +18,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 1,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10102,
@@ -29,11 +27,11 @@
     "simpleDesc": "Enjoys a discount at the Abyssal Merchant's stall.",
     "ipDesc": "Each time they meet, the bird-masked Illusionist would complain: \"Fixed prices suck all the fun away! Where's the thrill of chance and mystery?\" \nThe merchant takes the advice, scattering discount coupons he designed for his shop through the abyss. The Illusionist shakes his head in dismay: \"Your kindness makes for poorer entertainment than your business.\"",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_02",
     "endPoints": [
       10
@@ -41,9 +39,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 2,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10103,
@@ -52,11 +48,11 @@
     "simpleDesc": "Restores HP when advancing to the next level.",
     "ipDesc": "She is the most devout of believers, aligns every word and deed meticulously with divine doctrine, maintaining perfect piety even when no mortal eyes could witness. To the struggling she extends aid; to the destitute she gives generously; even to dissenters she offers patient counsel, urging them to appreciate the Great Nine's mercy.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20104001,
+    "mod": 20104001,
     "icon": "T_Rouge_Treasure_05",
     "endPoints": [
       10
@@ -64,9 +60,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 3,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10104,
@@ -75,11 +69,11 @@
     "simpleDesc": "Restores Sanity when advancing to the next level.",
     "ipDesc": "\"What if the gods aren't as perfect as you believe? Would your devotion still matter?\" people challenged. \n\"Of course,\" she smiles serenely. \"True faith seeks no reward, it disciplines. So long as my actions align with my conscience, what difference does it make whether the gods are real or righteous?\"",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20105001,
+    "mod": 20105001,
     "icon": "T_Rouge_Treasure_06",
     "endPoints": [
       10
@@ -87,9 +81,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 4,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10105,
@@ -98,11 +90,11 @@
     "simpleDesc": "Increases Trace Points received.",
     "ipDesc": "It is a hymn known to all—praising the merciful gods who guide lost souls. Devout believers of Elysium hum its heart-wrenching melody in the abyss, begging the gods to lead them from suffering to the promised land. The gilded melody carries them into eternal slumber, still dreaming of salvation.",
     "treasureGroup": 2,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       10
@@ -110,9 +102,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 5,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10106,
@@ -121,11 +111,11 @@
     "simpleDesc": "Increases Max Revival.",
     "ipDesc": "Abyssoids close in from all sides. The Knight charges alone into the darkness, carving a path of hope. After the Abyssoids recede, the Healer Priest drags the Knight's broken body from the black void. \n\"I will save her,\" the Healer Priest vows. To mend the wounds of the valiant is a healer's duty.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20107001,
+    "mod": 20107001,
     "icon": "T_Rouge_Treasure_09",
     "endPoints": [
       10
@@ -133,9 +123,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 6,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10107,
@@ -144,11 +132,11 @@
     "simpleDesc": "When HP drops, grants Hitstun immunity and decreases Damage Taken.",
     "ipDesc": "The road ahead is arduous, and the truth always hurts. When the evening bell rings, why does the wandering bird refuse to return to its nest? \nBecause he knows no tower marks the Continent's center, no gods hold all the answers. He chooses to walk his own path, even if it means wearing shackles for life.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20101001,
+    "mod": 20101001,
     "icon": "T_Rouge_Treasure_21",
     "endPoints": [
       10
@@ -156,9 +144,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 7,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10108,
@@ -167,11 +153,11 @@
     "simpleDesc": "Increases Skill DMG and decreases Melee Weapon DMG.",
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20108001,
+    "mod": 20108001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -179,9 +165,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 8,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10109,
@@ -190,11 +174,11 @@
     "simpleDesc": "Increases Skill DMG and decreases Ranged Weapon DMG.",
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20109001,
+    "mod": 20109001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -202,9 +186,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 9,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10110,
@@ -213,11 +195,11 @@
     "simpleDesc": "Increases Melee Weapon DMG and decreases Skill DMG.",
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20110001,
+    "mod": 20110001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -225,9 +207,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 10,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10111,
@@ -236,11 +216,11 @@
     "simpleDesc": "Increases Melee Weapon Damage and decreases Ranged Weapon Damage.",
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20111001,
+    "mod": 20111001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -248,9 +228,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 11,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10112,
@@ -259,11 +237,11 @@
     "simpleDesc": "Increases Ranged Weapon DMG and decreases Skill DMG.",
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20112001,
+    "mod": 20112001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -271,9 +249,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 12,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10113,
@@ -282,11 +258,11 @@
     "simpleDesc": "Increases Ranged Weapon DMG and decreases Melee Weapon DMG.",
     "ipDesc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20113001,
+    "mod": 20113001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -294,9 +270,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 13,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10114,
@@ -305,11 +279,11 @@
     "simpleDesc": "With Geniemon Support, increases Damage Dealt.",
     "ipDesc": "As you journey onward, don't forget the brave little companions who follow you into the abyss. Crack open a treat to reward their courage!",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20120001,
+    "mod": 20120001,
     "icon": "T_Rouge_Treasure_28",
     "endPoints": [
       10
@@ -317,9 +291,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 14,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10201,
@@ -328,11 +300,11 @@
     "simpleDesc": "Grants a random <Highlight>Blue</>-tier or <Highlight>Purple</>-tier [Lampwick].",
     "ipDesc": "Water, rations, a flint… and a crumpled map. Its owner once tried tracing their path with charcoal—lines crossing, overlapping, even spilling beyond the map's edges. The marks spiral into futile circles before stopping abruptly, leaving only a crooked question mark.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -340,9 +312,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 15,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10202,
@@ -351,11 +321,11 @@
     "simpleDesc": "Grants a random <Highlight>Blue</>-tier or <Highlight>Purple</>-tier [Artefact].",
     "ipDesc": "Water, rations, a flint… and a crumpled map. Its owner once tried tracing their path with charcoal—lines crossing, overlapping, even spilling beyond the map's edges. The marks spiral into futile circles before stopping abruptly, leaving only a crooked question mark.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -363,9 +333,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 16,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10203,
@@ -374,11 +342,11 @@
     "simpleDesc": "Increases the character's Max Dodge Attempts.",
     "ipDesc": "My keen child, be the first to scale the peak and light the way;\nMy valiant warrior, be the first to breach the fray and chart the path;\nMy purest disciple, be the first to leap into hell and purge the land.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20103001,
+    "mod": 20103001,
     "icon": "T_Rouge_Treasure_19",
     "endPoints": [
       20
@@ -386,9 +354,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 17,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10204,
@@ -397,11 +363,11 @@
     "simpleDesc": "Restores Sanity after using a skill.\n Active only in [Abyssoids].",
     "ipDesc": "O twin-faced deity, hear our prayer—may blades clip these white wings, may daggers pierce this beating heart, that we might transcend this false fate and await the full moon reverse its course.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20102001,
+    "mod": 20102001,
     "icon": "T_Rouge_Treasure_22",
     "endPoints": [
       20
@@ -409,9 +375,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 18,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10205,
@@ -420,11 +384,11 @@
     "simpleDesc": "Each revival increases Damage Dealt.",
     "ipDesc": "The little caged bird, damned and restless—no pillow of leaves, no dreams at sundown, not even death may grant you peace. So wake up—bite into suffering, swallow pain whole, and watch fate raise its hands in defeat.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20114001,
+    "mod": 20114001,
     "icon": "T_Rouge_Treasure_24",
     "endPoints": [
       20
@@ -432,9 +396,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 19,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10206,
@@ -443,11 +405,11 @@
     "simpleDesc": "Ignores the target's DEF when dealing Skill DMG. This effect decreases with each type of Lampwick owned.",
     "ipDesc": "To master your craft, first find your purpose—then pursue it with relentless focus.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20115001,
+    "mod": 20115001,
     "icon": "T_Rouge_Treasure_25",
     "endPoints": [
       20
@@ -455,9 +417,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 20,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10207,
@@ -466,11 +426,11 @@
     "simpleDesc": "Entering the next level costs a small amount of Embers to decrease Damage Taken on that level.",
     "ipDesc": "When others bow their heads, lift your eyes. When others kneel, stand tall. When others praise, question. When others rejoice, rage. \nOnly then will you break the chains of the full moon and see the truth fate hides.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20116001,
+    "mod": 20116001,
     "icon": "T_Rouge_Treasure_23",
     "endPoints": [
       20
@@ -478,9 +438,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 21,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10209,
@@ -489,11 +447,11 @@
     "simpleDesc": "Select a <Highlight>Blue</>-tier Lampwick from Flickered or Scattered Abyssoids to instantly upgrade it.",
     "ipDesc": "The bird longs to soar, but the abyss knows no sky. It seeks a branch to rest but finds only fear's gnarled limbs.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_17",
     "endPoints": [
       20
@@ -501,9 +459,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 22,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10210,
@@ -512,11 +468,11 @@
     "simpleDesc": "Defeats a certain number of Primanders to get Embers.",
     "ipDesc": "Lost in cycle after cycle, despairing with each faltering step—direction gone, time undone, self erased. The weary traveler trudges through endless darkness, accompanied only by loneliness and dread, unaware that in the deeper shadows, a pair of eyes silently traces their every move.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_20",
     "endPoints": [
       20
@@ -524,9 +480,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 23,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10211,
@@ -535,11 +489,11 @@
     "simpleDesc": "Your next Lampwick pick from Flickered or Scattered Abyssoids will be at least <Highlight>Purple</>-tier Quality.",
     "ipDesc": "A note slipped into your backpack at some unknown hour. Perhaps you should be more cautious. Fortunately, it bears neither poison nor curse, just a sincere blessing: \"Safe travels and good fortune! —Your friend\"",
     "treasureGroup": 10211,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_30",
     "endPoints": [
       20
@@ -547,9 +501,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 24,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10212,
@@ -558,11 +510,11 @@
     "simpleDesc": "Acquiring this Artefact grants <Highlight>1</> extra Lampwick of your most abundant category.",
     "ipDesc": "All things are interconnected. Applying logic with both induction and deduction may just yield unexpected revelations.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_12",
     "endPoints": [
       20
@@ -570,9 +522,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 25,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10213,
@@ -581,11 +531,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Core Flame] Lampwick and slightly increases your chance of discovering them.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -596,9 +546,7 @@
       5064
     ],
     "rlArchiveId": 26,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10214,
@@ -607,11 +555,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Seaborne Moon] Lampwick and slightly increases your chance of discovering them.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -622,9 +570,7 @@
       5065
     ],
     "rlArchiveId": 27,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10215,
@@ -633,11 +579,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Luminite] Lampwick and slightly increases your chance of discovering them.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -647,9 +593,7 @@
       5046
     ],
     "rlArchiveId": 28,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10216,
@@ -658,11 +602,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Lumitwig] Lampwick and slightly increases the spawn rate of [Lumitwig] items.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -673,9 +617,7 @@
       5065
     ],
     "rlArchiveId": 29,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10217,
@@ -684,11 +626,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Nocturne Moth] Lampwick and slightly increases your chance of discovering them.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -698,9 +640,7 @@
       5048
     ],
     "rlArchiveId": 30,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10218,
@@ -709,11 +649,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Glimmerfly] Lampwick and slightly increases your chance of discovering them.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -724,9 +664,7 @@
       5064
     ],
     "rlArchiveId": 31,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10219,
@@ -735,11 +673,11 @@
     "simpleDesc": "Immediately grants <Highlight>1</> [Vamprose] Lampwick and slightly increases your chance of discovering them.",
     "ipDesc": "The Flamekeeper Priest is a master of necromancy, weaving dead souls into his power. To him, the deceased are allies… until the abyss. Whose shadows stretch in candlelight? Why do their souls scream in torment? And why… did they tell him to turn back?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -749,9 +687,7 @@
       5050
     ],
     "rlArchiveId": 32,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10220,
@@ -760,11 +696,11 @@
     "simpleDesc": "Greatly increases Trace Points gained.",
     "ipDesc": "It is a hymn known to all, praising the merciful gods who guide lost souls. Devout followers of Elysium hum its heartrending melody in the abyss, praying for the gods to lead them from suffering to the promised land. Its gilded strains carry them into eternal slumber, still dreaming of salvation.",
     "treasureGroup": 10220,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       20
@@ -772,9 +708,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 62,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10301,
@@ -783,11 +717,11 @@
     "simpleDesc": "Grants a random <Highlight>Purple</>-tier or <Highlight>Golden</>-tier [Lampwick].",
     "ipDesc": "Water, rations, a flint… and a crumpled map. Its owner once tried tracing their path with charcoal—lines crossing, overlapping, even spilling beyond the map's edges. The marks spiral into futile circles before stopping abruptly, leaving only a crooked question mark.",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -795,9 +729,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 33,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10302,
@@ -806,11 +738,11 @@
     "simpleDesc": "Grants a random <Highlight>Purple</>-tier or <Highlight>Golden</>-tier [Artefact].",
     "ipDesc": "Water, rations, a flint… and a crumpled map. Its owner once tried tracing their path with charcoal—lines crossing, overlapping, even spilling beyond the map's edges. The marks spiral into futile circles before stopping abruptly, leaving only a crooked question mark.",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -818,9 +750,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 34,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10303,
@@ -829,11 +759,11 @@
     "simpleDesc": "Increases Sanity Auto-Recovery.",
     "ipDesc": "\"Why save me?\" The revived Knight's bulging eyes threaten to escape his ghostly face. \"I wanted to die with my soul intact - before the madness took me!\" \nAgainst all healing, he returned to the shadows. The Knight steps back into the darkness, his body barely pieced together by the Healer Priest's tireless care. Who now needs his sword?",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20106001,
+    "mod": 20106001,
     "icon": "T_Rouge_Treasure_10",
     "endPoints": [
       20
@@ -841,9 +771,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 35,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10304,
@@ -852,11 +780,11 @@
     "simpleDesc": "Replaces all Lampwicks with random ones and grants Embers based on the number of Lampwicks held.",
     "ipDesc": "\"If that stubborn shopkeeper refuses to change his ways, allow me to provide some special customer care.\" The Illusionist scattered a deck of cards across the table, backs up. \"Go ahead—take your pick, as many as you like!\"",
     "treasureGroup": 10304,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_15",
     "endPoints": [
       40
@@ -864,9 +792,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10305,
@@ -875,11 +801,11 @@
     "simpleDesc": "Replaces all Artefacts with random ones.",
     "ipDesc": "He'd rather be known as \"the Illusionist\" than \"that freak\". In this bleak, monotonous void, conjuring joy is his only pursuit—the cost of that joy matters little, for he has nothing left to lose.",
     "treasureGroup": 10305,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_16",
     "endPoints": [
       40
@@ -887,9 +813,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10306,
@@ -898,11 +822,11 @@
     "simpleDesc": "The more the Artefacts, the higher the Damage Dealt.",
     "ipDesc": "Wealth is best in abundance—yet mere accumulation is simply dull. Let riches take nobler forms, let the masses sing praises of my generosity! Accept this gift… and add another verse to my legend.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20118001,
+    "mod": 20118001,
     "icon": "T_Rouge_Treasure_18",
     "endPoints": [
       40
@@ -910,9 +834,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 36,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10307,
@@ -921,11 +843,11 @@
     "simpleDesc": "Increases all Attribute PENs for each type of Lampwick held.",
     "ipDesc": "True knowledge demands a feast of pages—taste every text, or remain starved of understanding.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20119001,
+    "mod": 20119001,
     "icon": "T_Rouge_Treasure_26",
     "endPoints": [
       40
@@ -933,9 +855,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 37,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10308,
@@ -944,11 +864,11 @@
     "simpleDesc": "Decreases the number of Lampwicks of the same type needed to activate Artefact set effects.",
     "ipDesc": "Truth thrives in simplicity—profound contemplation and careful deliberation can yield invaluable insights even from limited knowledge.",
     "treasureGroup": 10308,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_11",
     "endPoints": [
       40
@@ -956,11 +876,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 38,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {
-      "groupDiscount": -1
-    }
+    "canSell": 0
   },
   {
     "id": 10309,
@@ -969,11 +885,11 @@
     "simpleDesc": "When revivals are exhausted, spend Embers to get extra Revivals.",
     "ipDesc": "Endless darkness threatens to consume you whole, yet miraculously, a feeble flame flickers back to life from the embers. If the abyss truly has a will… perhaps even it refuses to let your story end here.",
     "treasureGroup": 10309,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_08",
     "endPoints": [
       40
@@ -981,9 +897,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 39,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10310,
@@ -992,11 +906,11 @@
     "simpleDesc": "Melee attacks unleash Swordwaves that deal Lumino DMG to enemies on hit.",
     "ipDesc": "A knight with a silver blade cut through the enemy ranks, his radiance spilling across the battlefield like a rising full moon. The exhausted soldiers stirred once more beneath its glow.\n Ah... the guidance of the Goddess of Fate! Moved by the miracle, the people wept with joy. Faith rekindled strength in weary limbs, and so they rose, following the light into the fray.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20130001,
+    "mod": 20130001,
     "icon": "T_Rouge_Treasure_46",
     "endPoints": [
       40
@@ -1004,9 +918,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 53,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10311,
@@ -1015,11 +927,11 @@
     "simpleDesc": "When skills deal damage, triggers an explosion centred on the user, dealing Umbro DMG to nearby enemies.",
     "ipDesc": "When darkness first defiled the sacred lake, Elysium's bravest knights stepped forth.\n Most never returned. Those who survived lost their dreams forever — the instant their eyes closed, the Abyss reclaimed them, dragging their minds into darkness.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20131001,
+    "mod": 20131001,
     "icon": "T_Rouge_Treasure_47",
     "endPoints": [
       40
@@ -1027,9 +939,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 54,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10312,
@@ -1038,11 +948,11 @@
     "simpleDesc": "When dealing damage, fires homing projectiles that deal Anemo DMG to enemies on hit.",
     "ipDesc": "On the eve of battle, a young knight, brimming with vigour and resolve, donned silver armour to hide the holy markings unfurling like wings across his back. One final victory for Elysium — that was all he asked, before answering the call.\n But the triumph proved hollow. A colossal Filthoid tore through Elysium's lines, and the knight vanished without a trace. Some say wings carried him skyward, forsaking his homeland. Others believe the Dark Moon claimed his mind, and he became one with the beast.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20132001,
+    "mod": 20132001,
     "icon": "T_Rouge_Treasure_48",
     "endPoints": [
       40
@@ -1050,9 +960,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 55,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10313,
@@ -1061,11 +969,11 @@
     "simpleDesc": "When a summon spawns, triggers an attack at its location that deals Hydro DMG to nearby enemies on hit.",
     "ipDesc": "Her toes brushed the surface of the sacred lake, sending ripples across the water — lightless and still — as though a dark moon were surfacing from the depths. If this lake truly led to the realm of all happiness, why did it not even offer a reflection?\n In an instant, a fierce current arose, and the saint's doubts, along with their very self — were swallowed by the pitch-black whirlpool.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20133001,
+    "mod": 20133001,
     "icon": "T_Rouge_Treasure_49",
     "endPoints": [
       40
@@ -1073,9 +981,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 56,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10314,
@@ -1084,11 +990,11 @@
     "simpleDesc": "When ranged attacks deal damage, additionally deals Pyro DMG to enemies in a frontal cone.",
     "ipDesc": "The noblewoman claimed divine blood coursed through her veins — that she was born to sacrifice herself, to save her people.\n On the day of coronation, she set her long hair alight, transforming the sacred rite into a blazing execution. The temple — and all nobles within — turned to ash. The flames roared heavenward, brighter than the sun. Those toiling below paused in awe to witness the light.\n She burned. She gave. She saved.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20134001,
+    "mod": 20134001,
     "icon": "T_Rouge_Treasure_50",
     "endPoints": [
       40
@@ -1096,9 +1002,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 57,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10315,
@@ -1107,11 +1011,11 @@
     "simpleDesc": "Upon using a skill, unleashes lightning strikes ahead, dealing Electro DMG to enemies on hit.",
     "ipDesc": "I lived through the age of darkness — when heretics rose as one to bring the Tower to ruin.\n I saw it then: thousands of thorns cascading from its heights, veiling the heavens in thorned shadow. Be not afraid, O faithful. The gods punish only the guilty. When the thorns have strangled every sin, a new age shall rise — blood-drenched, yet radiant with promised grace.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20135001,
+    "mod": 20135001,
     "icon": "T_Rouge_Treasure_51",
     "endPoints": [
       40
@@ -1119,9 +1023,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 58,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10316,
@@ -1130,11 +1032,11 @@
     "simpleDesc": "Dealing low damage triggers bonus True Damage.",
     "ipDesc": "She saw the darkness creeping in. But the path was already lost — how could she bear to take anything more from them?\n So she offered a glimmering candy — a fleeting dream, perhaps a lie — anything that might bring a smile to her friend's face.\n If it did, even once, that was enough.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20121001,
+    "mod": 20121001,
     "icon": "T_Rouge_Treasure_54",
     "endPoints": [
       40
@@ -1142,9 +1044,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 61,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11101,
@@ -1153,11 +1053,11 @@
     "simpleDesc": "While shielded, reduces Damage Taken.",
     "ipDesc": "At nineteen, war claimed him the moment the claws of a Filthoid tore through a fellow teammate he just met before his shield could rise, leaving a crimson bloom and a faint scratch no scrubbing could erase. \nSo what is he still fighting for? For faith, for justice, or just to outrun the past.",
     "treasureGroup": 101,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20171001,
+    "mod": 20171001,
     "icon": "T_Rouge_Treasure_34",
     "endPoints": [
       10
@@ -1165,9 +1065,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 40,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11201,
@@ -1176,11 +1074,11 @@
     "simpleDesc": "While shielded, increases Damage Dealt.",
     "ipDesc": "Fourteen and on his first training day, he selected this sword from the merchant's pile of beginner gear— old-fashioned, his friends teased. \"Guns are way more practical!\" \n\"Knights don't carry pistols,\" he retorted, hoisting the blade overhead like in the storybooks. \"For Elysium!\"",
     "treasureGroup": 101,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20172001,
+    "mod": 20172001,
     "icon": "T_Rouge_Treasure_33",
     "endPoints": [
       20
@@ -1188,9 +1086,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 41,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 12101,
@@ -1199,11 +1095,11 @@
     "simpleDesc": "Increases the refresh cost for selection but stops after clearing a certain number of levels and grants Embers.",
     "ipDesc": "Seek not flawless paths, for wisdom walks between. Strike when the hour is right, or lose what might have been.",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_35",
     "endPoints": [
       10
@@ -1211,9 +1107,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 42,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12102,
@@ -1222,11 +1116,11 @@
     "simpleDesc": "Increases the prices of the items at Abyssal Merchant but stops after clearing a certain number of depths and grants Embers.",
     "ipDesc": "Foolish is he who covets material things, for desire breeds corruption. Let him who would reap first count the cost of sowing.",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_36",
     "endPoints": [
       10
@@ -1234,9 +1128,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 43,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12201,
@@ -1245,11 +1137,11 @@
     "simpleDesc": "Loses Damage Dealt. Clear a set number of depths to remove this effect and gain Embers.",
     "ipDesc": "Steadfast patience is the highest virtue. Wait as the grass for morning dew, for divine grace shall descend as spring rain. Cast away worldly cares, and walk the radiant path with devout heart.",
     "treasureGroup": 102,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20161001,
+    "mod": 20161001,
     "icon": "T_Rouge_Treasure_37",
     "endPoints": [
       20
@@ -1257,9 +1149,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 44,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13101,
@@ -1268,11 +1158,11 @@
     "simpleDesc": "When dealing damage, may trigger bonus Pyro Damage.",
     "ipDesc": "Not gentle glow, nor crackling campfire. \nLike a raging inferno, I will burn through all that stands in my way.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20181001,
+    "mod": 20181001,
     "icon": "T_Rouge_Treasure_38",
     "endPoints": [
       10
@@ -1280,9 +1170,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 45,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13102,
@@ -1291,11 +1179,11 @@
     "simpleDesc": "When dealing damage, may trigger bonus Hydro Damage.",
     "ipDesc": "Not spring's gentle rain, nor babbling brook. \nI am the tsunami that drowns cities, leaving no obstacle standing.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20182001,
+    "mod": 20182001,
     "icon": "T_Rouge_Treasure_39",
     "endPoints": [
       10
@@ -1303,9 +1191,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 46,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13103,
@@ -1314,11 +1200,11 @@
     "simpleDesc": "When dealing damage, may trigger bonus Anemo Damage.",
     "ipDesc": "Not a gentle breeze, nor a whispering wind. \nI shall be the howling gale that tears roofs asunder, tearing through all barriers.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20183001,
+    "mod": 20183001,
     "icon": "T_Rouge_Treasure_40",
     "endPoints": [
       10
@@ -1326,9 +1212,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 47,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13104,
@@ -1337,11 +1221,11 @@
     "simpleDesc": "When dealing damage, may trigger bonus Electro Damage.",
     "ipDesc": "Not a flicker of light, nor spark in the dark. \nI am the silent thunder splitting the night, striking terror into all who stand before me.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20184001,
+    "mod": 20184001,
     "icon": "T_Rouge_Treasure_41",
     "endPoints": [
       10
@@ -1349,9 +1233,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 48,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14101,
@@ -1360,11 +1242,11 @@
     "simpleDesc": "Increases Damage Dealt at the cost of reduced Skill Efficiency.",
     "ipDesc": "Since childhood, she idolized her sister—the brilliant Knight who could conquer any challenge. \nWhile legends warned that none return alive from the abyss beneath the sacred lake, her sister proved them wrong. \nShe lived… in terrible silence.",
     "treasureGroup": 104,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20151001,
+    "mod": 20151001,
     "icon": "T_Rouge_Treasure_42",
     "endPoints": [
       10
@@ -1372,9 +1254,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 49,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14201,
@@ -1383,11 +1263,11 @@
     "simpleDesc": "Increases Damage Dealt at the cost of reduced Melee Weapon DMG.",
     "ipDesc": "Grown-ups whisper that my sister offended the gods in the sacred lake, so they took a piece of her soul as punishment. \nNo, my sister is a true Knight, devout and honorable. Her soul was lost there by accident. If no one else will believe, I'll make them see. \nThe abyss awaits, but I will return with the piece missing.",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20152001,
+    "mod": 20152001,
     "icon": "T_Rouge_Treasure_43",
     "endPoints": [
       20
@@ -1395,9 +1275,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 50,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14202,
@@ -1406,11 +1284,11 @@
     "simpleDesc": "Increases Damage Dealt at the cost of reduced Ranged Weapon DMG.",
     "ipDesc": "Sister… is that you? What happened to you? Why are you pointing your sword at me? \n\"Liar... liar...\" The dark shadow repeats in a shrill, piercing voice, \"There's no justice, only lies.\" \nIt's all coming back to her—her sister's whispered wish to quit the order and live a simple life.",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20153001,
+    "mod": 20153001,
     "icon": "T_Rouge_Treasure_44",
     "endPoints": [
       20
@@ -1418,9 +1296,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 51,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14301,
@@ -1429,11 +1305,11 @@
     "simpleDesc": "Increases Damage Dealt at the cost of increased Damage Taken.",
     "ipDesc": "The shadow fades as if it never was. At last she sees—her sister's missing piece is gone forever. \nDid my worship become your curse? If I hadn't been so overjoyed when you were chosen, would you still be here? Was it me who ended your life? \nHer sorrowful cries echo in the silent abyss.",
     "treasureGroup": 104,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20154001,
+    "mod": 20154001,
     "icon": "T_Rouge_Treasure_45",
     "endPoints": [
       40
@@ -1441,9 +1317,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 52,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15101,
@@ -1452,11 +1326,11 @@
     "simpleDesc": "Character restores Sanity when dealing damage to enemies with high [Stance].",
     "ipDesc": "Why does she drag her battered body through this endless maze, pressing on despite knowing it's all for nothing?\n Because no matter where she hides, Kathy always finds her. Because no matter how absurd the excuse, Flynn never gets angry. Because she still grips that bloodstained badge — heavy with the weight of someone's unshakable trust.\n Because now... she carries something she cannot walk away from.",
     "treasureGroup": 105,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20156001,
+    "mod": 20156001,
     "icon": "T_Rouge_Treasure_53",
     "endPoints": [
       10
@@ -1464,9 +1338,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 59,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15201,
@@ -1475,11 +1347,11 @@
     "simpleDesc": "Character deals increased damage to enemies with low [Stance].",
     "ipDesc": "All her life, she's chosen the path of a quitter. She skipped the Sacred Tree Academy's selection, and after joining the knight order, never once sought promotion.\n No one climbs forever. Better to stay where she first stood, than chase a summit she was bound to fall from.",
     "treasureGroup": 105,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20157001,
+    "mod": 20157001,
     "icon": "T_Rouge_Treasure_52",
     "endPoints": [
       20
@@ -1487,8 +1359,6 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 60,
-    "unlockConditionText": "Artefact not unlocked",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   }
 ]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "护卫骑士",
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "activateNeed": [
+      11101,
+      11201
+    ],
+    "groupEffectDesc": "收集[护卫骑士]的全部<Highlight>2</>件遗物后，[幽影]中每<Highlight>10</>秒获得自身最大生命<Highlight>10%</>的超限护盾直到通过[幽影]。"
+  },
+  {
+    "id": 102,
+    "name": "繁荣之神",
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "activateNeed": [
+      12101,
+      12102,
+      12201
+    ],
+    "groupEffectDesc": "收集[繁荣之神的契约]的全部<Highlight>3</>件遗物后，每拥有<Highlight>100</>余烬伤害提高<Highlight>10%</>。\n若余烬少于<Highlight>200</>，受到伤害降低<Highlight>30%</>。"
+  },
+  {
+    "id": 103,
+    "name": "四象铭印",
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "activateNeed": [
+      13101,
+      13102,
+      13103,
+      13104
+    ],
+    "groupEffectDesc": "收集[四象铭印]的全部<Highlight>4</>件遗物后，触发概率提高至<Highlight>50%</>，伤害倍率提高至<Highlight>100%</>，且造成伤害变为真实伤害。"
+  },
+  {
+    "id": 104,
+    "name": "赎罪骑士",
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "activateNeed": [
+      14101,
+      14201,
+      14202,
+      14301
+    ],
+    "groupEffectDesc": "收集[赎罪骑士]的全部<Highlight>4</>件遗物后不再需要代价，且总共提高伤害变为<Highlight>400%</>。"
+  },
+  {
+    "id": 105,
+    "name": "幽惘术士",
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "activateNeed": [
+      15101,
+      15201
+    ],
+    "groupEffectDesc": "收集[幽惘术士]的全部<Highlight>2</>件遗物后，[战姿]削减效率提高<Highlight>100%</>，敌人进入[埃斯刻惩戒]后伤害提高<Highlight>100%</>。"
+  }
+]

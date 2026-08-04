@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "技能強化",
+    "subTitle": "燈蓋：榮譽賜福",
+    "icon": "T_Rouge_TalentBranch_Skill"
+  },
+  {
+    "id": 2,
+    "name": "適性強化",
+    "subTitle": "提手：光明賜福",
+    "icon": "T_Rouge_TalentBranch_Adaptability"
+  },
+  {
+    "id": 3,
+    "name": "近戰強化",
+    "subTitle": "燈身：勇氣賜福",
+    "icon": "T_Rouge_Talent_Melee_AttackUP"
+  },
+  {
+    "id": 4,
+    "name": "遠程強化",
+    "subTitle": "燈座：正義賜福",
+    "icon": "T_Rouge_Talent_Range_AttackUP"
+  }
+]

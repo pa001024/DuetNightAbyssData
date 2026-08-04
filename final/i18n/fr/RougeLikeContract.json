@@ -2,9 +2,13 @@
   {
     "id": 101,
     "name": "Domaine de suffocation",
-    "desc": "Réduit les soins reçus de <Highlight>20.0%</>.",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    "desc": "Réduit les soins reçus de <Highlight>10.0%</>.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101001,
     "heatValue": 2,
@@ -14,9 +18,13 @@
   {
     "id": 102,
     "name": "Domaine de stagnation",
-    "desc": "Réduit l’ATQ du personnage de <Highlight>20.0%</>.",
-    "descValues": [
-      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    "desc": "Réduit l’ATQ du personnage de <Highlight>10.0%</>.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101002,
     "heatValue": 2,
@@ -26,9 +34,18 @@
   {
     "id": 103,
     "name": "Domaine de croissance maligne",
-    "desc": "Augmente les PV max des ennemis de <Highlight>40.0%</>.",
-    "descValues": [
-      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    "desc": "Augmente les PV max des ennemis de <Highlight>20.0%</>.",
+    "descLevels": [
+      "20.0%",
+      "40.0%",
+      "60.0%",
+      "80.0%",
+      "100.0%",
+      "120.0%",
+      "140.0%",
+      "160.0%",
+      "180.0%",
+      "200.0%"
     ],
     "globalPassiveId": 30102001,
     "heatValue": 2,
@@ -38,9 +55,18 @@
   {
     "id": 104,
     "name": "Domaine de tourment",
-    "desc": "Augmente l’ATQ des ennemis de <Highlight>20.0%</>.",
-    "descValues": [
-      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    "desc": "Augmente l’ATQ des ennemis de <Highlight>10.0%</>.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%",
+      "60.0%",
+      "70.0%",
+      "80.0%",
+      "90.0%",
+      "100.0%"
     ],
     "globalPassiveId": 30102002,
     "heatValue": 2,
@@ -50,9 +76,13 @@
   {
     "id": 105,
     "name": "Domaine d’engourdissement",
-    "desc": "Réduit les dégâts subis par les ennemis de <Highlight>20.0%</>.",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    "desc": "Réduit les dégâts subis par les ennemis de <Highlight>10.0%</>.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30102003,
     "heatValue": 3,
@@ -63,7 +93,7 @@
     "id": 106,
     "name": "Domaine de prolifération",
     "desc": "Vaincre un ennemi normal déclenche une explosion dans un rayon de <Highlight>4</> mètres, infligeant des Dégâts de zone.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 30102004,
     "heatValue": 5,
     "icon": "T_Rou_Contract_Mon_Explode",
@@ -72,9 +102,11 @@
   {
     "id": 107,
     "name": "Domaine d’agitation",
-    "desc": "<Highlight>2.0</> Ordonnateurs supplémentaires apparaissent dans Combat — Umbré vacillant et Combat — Umbré dispersé.",
-    "descValues": [
-      "$#GlobalPassiveData[30103001].Vars.Count$"
+    "desc": "<Highlight>1.0</> Ordonnateurs supplémentaires apparaissent dans Combat — Umbré vacillant et Combat — Umbré dispersé.",
+    "descLevels": [
+      "1.0",
+      "2.0",
+      "3.0"
     ],
     "globalPassiveId": 30103001,
     "heatValue": 5,
@@ -84,9 +116,10 @@
   {
     "id": 108,
     "name": "Domaine de clameur",
-    "desc": "<Highlight>2.0</> ennemis d’élites supplémentaires apparaissent dans Combat — Umbré insondable.",
-    "descValues": [
-      "$#GlobalPassiveData[30103002].Vars.Count$"
+    "desc": "<Highlight>1.0</> ennemis d’élites supplémentaires apparaissent dans Combat — Umbré insondable.",
+    "descLevels": [
+      "1.0",
+      "2.0"
     ],
     "globalPassiveId": 30103002,
     "heatValue": 5,
@@ -97,9 +130,7 @@
     "id": 109,
     "name": "Domaine de construction",
     "desc": "<Highlight>1.0</> mécanismes hostiles apparaissent durant les combats.",
-    "descValues": [
-      "$#GlobalPassiveData[30103003].Vars.Count$"
-    ],
+    "descLevels": [],
     "globalPassiveId": 30103003,
     "heatValue": 3,
     "icon": "T_Rou_Contract_Room_ExtraMech",
@@ -109,7 +140,7 @@
     "id": 110,
     "name": "Domaine d’assèchement",
     "desc": "Le coût en Braises des achats chez le Marchand abyssal augmente de <Highlight>50 %</>.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 12,
     "icon": "T_Rou_Contract_Mechanics_CostUp",
@@ -119,7 +150,7 @@
     "id": 111,
     "name": "Domaine d’aveuglement",
     "desc": "À chaque choix, le nombre d’options disponibles est réduit de <Highlight>1</>.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 9,
     "icon": "T_Rou_Contract_Mechanics_LessChoice",
@@ -129,7 +160,7 @@
     "id": 112,
     "name": "Domaine de folie",
     "desc": "Chaque décision est désormais déterminée aléatoirement.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 21,
     "icon": "T_Rou_Contract_Mechanics_RandomChoice",

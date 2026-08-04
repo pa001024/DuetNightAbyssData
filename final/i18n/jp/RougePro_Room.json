@@ -1,8 +1,6 @@
 [
   {
     "id": 1,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -25,18 +23,15 @@
       6,
       7
     ],
-    "roomId": 1,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   },
   {
     "id": 2,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -59,18 +54,15 @@
       6,
       7
     ],
-    "roomId": 2,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   },
   {
     "id": 3,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -93,18 +85,15 @@
       6,
       7
     ],
-    "roomId": 3,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   },
   {
     "id": 4,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -127,18 +116,15 @@
       6,
       7
     ],
-    "roomId": 4,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   },
   {
     "id": 5,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -161,18 +147,15 @@
       6,
       7
     ],
-    "roomId": 5,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   },
   {
     "id": 6,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -195,18 +178,15 @@
       6,
       7
     ],
-    "roomId": 6,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   },
   {
     "id": 7,
-    "bossDeliveryDis": 12000,
-    "bossDeliveryPointId": 8001,
     "collectionList": [
       1101,
       1102,
@@ -229,12 +209,11 @@
       6,
       7
     ],
-    "roomId": 7,
-    "roomWeight": 100,
     "shopNpcList": [
       107001,
       107002,
       107003
-    ]
+    ],
+    "weight": 100
   }
 ]

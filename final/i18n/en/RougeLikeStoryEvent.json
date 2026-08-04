@@ -1,369 +1,2608 @@
 [
   {
     "id": 1,
-    "storyEventName": "The Beginning and the End",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "The Beginning and the End",
+    "type": "Story",
+    "icon": "T_Rouge_Story15",
+    "condition": [
       5167
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story15.T_Rouge_Story15'",
-    "eventMoment": 3,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "moment": 3,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_SeasonFirst01",
-    "rlArchiveSubId": 20000101,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17407355325341221165",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17407355325341221163"
+        ],
+        "dialogues": [
+          {
+            "id": 6201401,
+            "content": "Darkness... darkness... and darkness yet deeper—\nYou drift in silence, submerged beneath still waters,\ncarried ever downward along a river without end.",
+            "next": 6201402
+          },
+          {
+            "id": 6201402,
+            "content": "And then, from afar, a light begins to draw near.\nIt is a <H>Lantern</>.",
+            "next": 6201403
+          },
+          {
+            "id": 6201403,
+            "content": "\"You have returned. I always knew you would.\"\nThe flickering flame reveals the face of its bearer — an aged woman.",
+            "speakerName": "Elderly Woman",
+            "options": [
+              {
+                "id": 6201404,
+                "content": "Do you know me?",
+                "next": 6201405
+              }
+            ]
+          },
+          {
+            "id": 6201405,
+            "content": "\"Yes.\"\nHer clouded eyes kindle with light, like dead wood bursting into bloom.\n\"I have waited for you... for a very, very long time.\"",
+            "speakerName": "Elderly Woman",
+            "options": [
+              {
+                "id": 6201406,
+                "content": "I can't remember who I am.",
+                "next": 6201407
+              }
+            ]
+          },
+          {
+            "id": 6201407,
+            "content": "\"The path we walk is <H>a circle</>.\"\nShe smiles.\n\"And now that you've come full circle — all you have forgotten shall soon return.\"",
+            "speakerName": "Elderly Woman",
+            "options": [
+              {
+                "id": 6201408,
+                "content": "What should I do next?",
+                "next": 6201409
+              }
+            ]
+          },
+          {
+            "id": 6201409,
+            "content": "\"Leave this place. Leave the <H>Abyss</>. That has ever been the wish of <H>every you</> that has ever walked this path.\"\nShe places the Lantern in your hands. Her fingers are cold as a ghost's — yet the Lantern burns golden, bright, and warm.\nSet into its frame is a dial, etched with fine <H>gradations</>.",
+            "speakerName": "Elderly Woman",
+            "options": [
+              {
+                "id": 6201410,
+                "content": "How can I leave this place?",
+                "next": 6201411
+              }
+            ]
+          },
+          {
+            "id": 6201411,
+            "content": "\"This Lantern carries a divine blessing.\"\n\"Restore it with enough <H>Pure Glazeystal</>, and it shall part the depths of the Abyss, opening a path before you.\"\n\"Should you face mortal peril... turn the dial in <H>reverse</>.\"",
+            "speakerName": "Elderly Woman",
+            "next": 6201412
+          },
+          {
+            "id": 6201412,
+            "content": "\"Before you set out, perhaps you would like to hear a tale or two of this Abyss.\"\nShe smiles again, serene and still.\n\"These are but fragments — driftwood upon the river of time. As I have told you, the path we tread is a circle. To you, these stories may be of your 'past'... or of your 'future'.\"\n\"Yet this much is certain: <H>they are your stories</>.\"",
+            "speakerName": "Elderly Woman"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 2,
-    "storyEventName": "Shall Not Succumb to Slumber",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Shall Not Succumb to Slumber",
+    "type": "Story",
+    "icon": "T_Rouge_Story01",
+    "condition": [
       5151
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story01.T_Rouge_Story01'",
-    "eventMoment": 2,
-    "eventMinRoom": 1,
-    "eventProbability": [
+    "moment": 2,
+    "minRoom": 1,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryFailed01",
-    "rlArchiveSubId": 20000201,
-    "cutOffEvent": true
+    "cutOffEvent": true,
+    "eventStoryline": [
+      {
+        "id": "1749707917144524449",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1749707917144524447"
+        ],
+        "dialogues": [
+          {
+            "id": 6200501,
+            "content": "Endless battles drain your strength.\nThe last ember slips through your fingers — direction lost in the void.",
+            "next": 6200502
+          },
+          {
+            "id": 6200502,
+            "content": "The lantern falls to the ground, its crystal shattering with a sound like blades cutting through the silent darkness.\nSplintered shadows rush toward you from every direction, corroding your flesh and biting at your nerves.",
+            "next": 6200503
+          },
+          {
+            "id": 6200503,
+            "content": "As your senses merge with the darkness, you stop resisting. It embraces you gently, tending your wounds, and soothing your weariness.",
+            "next": 6200504
+          },
+          {
+            "id": 6200504,
+            "content": "Perhaps this is meant to be. The darkness whispers to you —\n\"You've held on long enough.\"",
+            "next": 6200505
+          },
+          {
+            "id": 6200505,
+            "content": "Indeed… You've fought hard enough. Cycle after solitary cycle, you battle and struggle, drinking despair like fine wine while drowning in endless pain — yet dawn's light remains beyond reach.",
+            "next": 6200506
+          },
+          {
+            "id": 6200506,
+            "content": "Weariness claims you. Let it end here.",
+            "next": 6200507
+          },
+          {
+            "id": 6200507,
+            "content": "You feel yourself drifting into the dark cradle of sleep — until a distant figure surfaces in your mind. Though its face eludes you, this vague memory cuts through your numbness like a blade, jolting you awake. It churns the sea of your thoughts, stirring relentless tides.",
+            "next": 6200508
+          },
+          {
+            "id": 6200508,
+            "content": "That figure — the one who vowed to conquer the darkness with you, to escape the abyss together, and the architect of your torment.",
+            "next": 6200509
+          },
+          {
+            "id": 6200509,
+            "content": "You still haven't found them. Yes… now you remember.\nDon't you dare close your eyes. No matter how sweet the darkness beckons, this is not the ending you seek.\nFight on — for the journey's end, for your promise, for breaking this cursed cycle.",
+            "options": [
+              {
+                "id": 6200510,
+                "content": "Rotate the dial",
+                "next": 6200511
+              }
+            ]
+          },
+          {
+            "id": 6200511,
+            "content": "Again, you turn the lantern's dial back to where the story begins."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 3,
-    "storyEventName": "Heart of Chaos",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Heart of Chaos",
+    "type": "Story",
+    "icon": "T_Rouge_Story02",
+    "condition": [
       5152
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story02.T_Rouge_Story02'",
-    "eventMoment": 1,
-    "eventMinRoom": 8,
-    "eventProbability": [
+    "moment": 1,
+    "minRoom": 8,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StorySuccess01",
-    "rlArchiveSubId": 20000301,
-    "cutOffEvent": true
+    "cutOffEvent": true,
+    "eventStoryline": [
+      {
+        "id": "1749707917146524728",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1749707917146524726"
+        ],
+        "dialogues": [
+          {
+            "id": 6200601,
+            "content": "Directions warp constantly in the abyss. You can't always tell if you're moving forward or backward.\nSometimes you feel trapped in an ouroboros spiral, circling without hope of escape.",
+            "next": 6200602
+          },
+          {
+            "id": 6200602,
+            "content": "Yet when this colossal entity appears before you, instinct screams — this is the abyss's \"beating heart.\"",
+            "next": 6200603
+          },
+          {
+            "id": 6200603,
+            "content": "You raise the lantern, but its feeble light drowns the moment it grazes His edges.\nThe chaotic darkness swirls like ink, converging toward a single point.",
+            "next": 6200604
+          },
+          {
+            "id": 6200604,
+            "content": "The earth shudders and splits, swallowing you whole.\nYour body dissolves into the churning dark — limbs scattering like ink in water, pulled toward the devouring heart.",
+            "next": 6200605
+          },
+          {
+            "id": 6200605,
+            "content": "A deafening silence crushes your skull. Survival instinct screams: Turn back now.",
+            "options": [
+              {
+                "id": 6200606,
+                "content": "Don't look away.",
+                "next": 6200607
+              },
+              {
+                "id": 6200615,
+                "content": "Turn back",
+                "next": 6200616
+              }
+            ]
+          },
+          {
+            "id": 6200607,
+            "content": "You refuse to back down.\nRising from the void, lantern held high — your stance declares what words cannot: this darkness holds no terror for you.",
+            "next": 6200608
+          },
+          {
+            "id": 6200616,
+            "content": "A wise choice.\nTurn back. Step away. Instinct screams for retreat though you know you can never retrace your footsteps.",
+            "next": 6200617
+          },
+          {
+            "id": 6200608,
+            "content": "Gradually, something fractures the darkness — a sliver of fissure appears, slipping something into your veins. Unthinkable, yet you comprehend its whispers.",
+            "next": 6200609
+          },
+          {
+            "id": 6200617,
+            "content": "Out of nowhere, a presence prickles between your shoulder blades — silent, watching, aching with the weight of your departure.",
+            "next": 6200618
+          },
+          {
+            "id": 6200609,
+            "content": "These are human emotions: doubt, fury, anguish, despair, and crushing sorrow.\nA sorrow so overwhelming it feels as if the very abyss itself is longing for an end.",
+            "next": 6200610
+          },
+          {
+            "id": 6200618,
+            "content": "\"Do you want me to turn back?\" Your heart whispers the question into the dark.",
+            "next": 6200619
+          },
+          {
+            "id": 6200610,
+            "content": "The question burns in your throat: \"How can I help you?\"",
+            "next": 6200611
+          },
+          {
+            "id": 6200619,
+            "content": "No. Walk your path, It speaks. At the cycle's end, we'll meet again.",
+            "next": 6200620
+          },
+          {
+            "id": 6200611,
+            "content": "Keep on. Your lantern's flame still falters in the dark. It says. Your answer awaits at the cycle's end.",
+            "next": 6200612
+          },
+          {
+            "id": 6200620,
+            "content": "\"Where does it end?\" You ask.",
+            "next": 6200621
+          },
+          {
+            "id": 6200612,
+            "content": "\"Where does it end?\" You ask.",
+            "next": 6200613
+          },
+          {
+            "id": 6200621,
+            "content": "Only silence answers. Darkness flows over your shoulder, gently saturating the space around you, until only your lantern's light persists in the void.",
+            "next": 6200622
+          },
+          {
+            "id": 6200613,
+            "content": "Only silence answers. Darkness cradles you tenderly, until only your lantern's light persists in the void.",
+            "next": 6200614
+          },
+          {
+            "id": 6200622,
+            "content": "So you turn the dial on the lantern, rewinding time once more."
+          },
+          {
+            "id": 6200614,
+            "content": "So you turn the dial on the lantern, rewinding time once more."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 4,
-    "storyEventName": "Abyssal Merchant: Lampwicks and the Lantern",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: Lampwicks and the Lantern",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_1",
-    "rlArchiveSubId": 20000401,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17455729469881304103",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17455729469881304101"
+        ],
+        "dialogues": [
+          {
+            "id": 6200701,
+            "content": "A mysterious young man stands by the campfire. In truth, you cannot be sure of his age — you only guess from the sound of his voice.\nThis is not your first encounter.",
+            "next": 6200702
+          },
+          {
+            "id": 6200702,
+            "content": "\"We meet again, brave traveller.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6200703
+          },
+          {
+            "id": 6200703,
+            "content": "He greets you with quiet courtesy.\nYou cannot see his eyes — a sharp-edged mask of metal covers his face from brow to cheek.",
+            "next": 6200704
+          },
+          {
+            "id": 6200704,
+            "content": "\"Those who wander the Abyss for too long often lose their way — until, at last, they become one of the Abyssoids.\"\n\"But the <H>light</> within these objects will guide you, lest your path be swallowed by the darkness,\" he says. \"Place them within your Lantern, as its Lampwick.\"\nWhere his eyes should be, the firelight shimmers faintly, caught in the steel.",
+            "speakerName": "Abyssal Merchant",
+            "next": 6200705
+          },
+          {
+            "id": 6200705,
+            "content": "\"But I do not think you ever truly forget. For you are <H>always</> fated to return here.\"\n\"As always, I have laid out supplies by the campfire. Take what you need, whenever the need arises.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6200706,
+                "content": "Who are you?",
+                "next": 6200707
+              }
+            ]
+          },
+          {
+            "id": 6200707,
+            "content": "\"That question again. You've asked it many times. Forgive me — I cannot answer, not now.\"\n\"Not because I would hide the truth... but because I, too, am unsure — here and now — what name I ought to claim.\"\nHe lets out a soft laugh.",
+            "speakerName": "Abyssal Merchant",
+            "next": 6200708
+          },
+          {
+            "id": 6200708,
+            "content": "\"Then let us keep it simple — think of me as a humble <H>merchant</>.\"\n\"Just as you so often say of yourself: 'I am but a humble traveller.'\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6200709,
+                "content": "I must be on my way.",
+                "next": 6200710
+              }
+            ]
+          },
+          {
+            "id": 6200710,
+            "content": "\"Farewell, brave traveller,\" he says. \"May the flame of your Lantern shine ever unceasing upon your path.\"\nYou still cannot see his face. Perhaps, behind the mask, the firelight flickers in his eyes.",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 5,
-    "storyEventName": "Abyssal Merchant: The Flame That Remains",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: The Flame That Remains",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_2",
-    "rlArchiveSubId": 20000402,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17455729853492415467",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17455729853492415465"
+        ],
+        "dialogues": [
+          {
+            "id": 6200801,
+            "content": "The Abyssal Merchant stands beside the fire — just as he always has.\nNo howls of Abyssoids; only silence enfolds this place.",
+            "next": 6200802
+          },
+          {
+            "id": 6200802,
+            "content": "\"We meet again, wandering traveller.\"\n\"You've come for the faint <H>glow</>.\"\nHis voice is calm and steady, like a still lake untouched by wind.\n\"And I remain... to set a new wick within your Lantern's flame.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6200803,
+                "content": "Why can't you just give it to me?",
+                "next": 6200804
+              }
+            ]
+          },
+          {
+            "id": 6200804,
+            "content": "\"As you can see, I no longer possess such power.\"\nHe shakes his head.\n\"All that remains to me is a humble spell — to weave your Embers into a wick of light.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6200805
+          },
+          {
+            "id": 6200805,
+            "content": "The Merchant takes your Lantern.\nIn his hands, the Embers stir — like fireflies taking flight — until at last, they gather into a single, shining wick.",
+            "options": [
+              {
+                "id": 6200806,
+                "content": "Then... thank you.",
+                "next": 6200807
+              }
+            ]
+          },
+          {
+            "id": 6200807,
+            "content": "You give the lantern a gentle shake. With its new wick, the once-faint glow now burns a little brighter.\nIn this vast and gloomy Abyss, it is your only companion — the one light that keeps you from losing your way.",
+            "options": [
+              {
+                "id": 6200808,
+                "content": "I must be on my way.",
+                "next": 6200809
+              }
+            ]
+          },
+          {
+            "id": 6200809,
+            "content": "\"Farewell, wandering traveller,\" he says. \"May the flame of your Lantern shine ever unceasing upon your path.\"",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 6,
-    "storyEventName": "Abyssal Merchant: Prisoner of Time",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: Prisoner of Time",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_3",
-    "rlArchiveSubId": 20000403,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17455730091213526812",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17455730091213526810"
+        ],
+        "dialogues": [
+          {
+            "id": 6200901,
+            "content": "Once again, you find yourself here.\nIf there is a haven in the dark, this is the closest thing to it.",
+            "options": [
+              {
+                "id": 6200902,
+                "content": "You're still here.",
+                "next": 6200903
+              }
+            ]
+          },
+          {
+            "id": 6200903,
+            "content": "\"I am.\"\nThe Merchant's voice is calm, ever gentle.\n\"Until I can aid you in ending this darkness, I shall remain.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6200904,
+                "content": "But no one else remembers me.",
+                "next": 6200905
+              }
+            ]
+          },
+          {
+            "id": 6200905,
+            "content": "\"Those... ghosts of the Abyss, and the few humans who remain — when I turn the dial and return to the past, they forget me, as though we had never met, never spoken.\"\n\"Even if I manage to save someone, most still perish the next time.\"\n\"Though I meet many along the way... in the end, I remain alone.\"",
+            "npc": 910004,
+            "next": 6200906
+          },
+          {
+            "id": 6200906,
+            "content": "\"Yes. The Abyss moves like the tide, ever returning all things to yesterday.\"\n\"But you are different. As the owner of the dial, you now stand beyond the current of time.\"\nHe lets out a quiet sigh.",
+            "speakerName": "Abyssal Merchant",
+            "next": 6200907
+          },
+          {
+            "id": 6200907,
+            "content": "\"Here in the Abyss, time bends to your will. You alone are <H>eternal</> — wielding a sceptre once meant only for the gods.\"\n\"Yet that sceptre leads not to a throne, but to a prison. It binds you to witness, again and again, as all things are torn from you — never to be held.\"\nThere's the faintest quiver in his otherwise calm voice.\n\"And still... it is the only way to defy the Abyss.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6200908,
+                "content": "I must be on my way.",
+                "next": 6200909
+              }
+            ]
+          },
+          {
+            "id": 6200909,
+            "content": "\"Farewell, lonely traveller,\" he says. \"May the flame of your Lantern shine ever unceasing upon your path.\"",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 7,
-    "storyEventName": "Abyssal Merchant: A Pathetic Joke",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: A Pathetic Joke",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_4",
-    "rlArchiveSubId": 20000404,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548952813542289120",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548952813542289118"
+        ],
+        "dialogues": [
+          {
+            "id": 6201001,
+            "content": "Once again, you find a fleeting moment of respite.\nNo Abyssoids give chase. No wailing souls. At last — a place of safety.\nYou sink slowly to the ground, resting against a broken wall.",
+            "options": [
+              {
+                "id": 6201002,
+                "content": "I'm tired.",
+                "next": 6201003
+              }
+            ]
+          },
+          {
+            "id": 6201003,
+            "content": "\"Again and again I push forward. Again and again I start over.\"\n\"I know this battle is mine... but I don't know how much longer it will last.\"",
+            "npc": 910004,
+            "next": 6201004
+          },
+          {
+            "id": 6201004,
+            "content": "\"When the divine blessing — <H>Pure Glazeystal</> — is gathered once more, and the Lantern restored, a miracle shall be revealed.\"\n\"Then shall you bear a light strong enough to cleave this darkness.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6201005,
+                "content": "That's not what I meant.",
+                "next": 6201006
+              }
+            ]
+          },
+          {
+            "id": 6201006,
+            "content": "\"I don't even know how long I've wandered here — ten years? Twenty? Or longer still? All I can count is how many times I've turned the dial.\"\n\"And still the Lantern's glow remains so faint... as if all I've done were in vain.\"\n\"What if it's never made whole — not until I'm already gone? Then everything I've done... what would it all be for?\"\n\"Would it all just be some pathetic joke?\"",
+            "npc": 910004,
+            "next": 6201007
+          },
+          {
+            "id": 6201007,
+            "content": "\"Yes.\"\nHe does not deny it. The starkness of the answer catches you off guard.",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201008
+          },
+          {
+            "id": 6201008,
+            "content": "\"I have seen you raise your blade, again and again,\ndriving back the Abyssoids — just as I have seen thousands of masons hewing stone, laying the foundations of a temple.\"\n\"I have seen a girl toss pebbles into the flame, again and again — just as I have seen thousands of farmers scatter seed, year after year.\"\n\"All effort, all struggle... only for the cycle to begin anew.\nNot just you and I — but the souls of the Abyss, and the living above — all are bound within this endless tragedy.\"\n\"And if that burden proves too great for you to carry... you may always lay it down. And then — it would end.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6201009,
+                "content": "Refuse.",
+                "next": 6201010
+              }
+            ]
+          },
+          {
+            "id": 6201010,
+            "content": "To end it all would be to become one of those drifting souls.\nYour gentle heart would fade. You'd no longer fear solitude, no longer feel the torment of this endless cycle. But... would that truly be happiness?",
+            "next": 6201011
+          },
+          {
+            "id": 6201011,
+            "content": "\"No.\" You take up your blade once more. \n\"I'll keep fighting. I'll keep chasing those damned Glazeystal shards.\"",
+            "npc": 910004,
+            "options": [
+              {
+                "id": 6201012,
+                "content": "I must be on my way.",
+                "next": 6201013
+              }
+            ]
+          },
+          {
+            "id": 6201013,
+            "content": "\"Farewell, steadfast traveller,\" he says. \"May the flame of your Lantern shine ever unceasing upon your path.\"",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 8,
-    "storyEventName": "Abyssal Merchant: Wild Mint",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: Wild Mint",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_5",
-    "rlArchiveSubId": 20000405,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548953041323485126",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548953041323485124"
+        ],
+        "dialogues": [
+          {
+            "id": 6201101,
+            "content": "The Abyssal Merchant takes the Lantern from your hands. Without a word, you trade Embers for a Lampwick with him.\nThis time, you have no intention of lingering.",
+            "options": [
+              {
+                "id": 6201102,
+                "content": "I must be on my way.",
+                "next": 6201103
+              }
+            ]
+          },
+          {
+            "id": 6201103,
+            "content": "\"Take this.\"\nA young voice speaks softly from behind you. He presses something into your hand.\n\"It gives no light, so no Ember is needed.\"\nA piece of candy — clear, translucent — rests in your blood-stained palm.",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201104
+          },
+          {
+            "id": 6201104,
+            "content": "You place it on your tongue and let it melt. The taste is wild mint — sharp, cool, piercing. For the first time in ages, your mind clears... and you remember what it is to be human.\nNo longer do Abyssoids haunt your thoughts. Instead, memories return: a tower that pierced the clouds; the oak you could never resist climbing; the chill of cream on a silver plate; the swing swaying in the backyard.\nThese memories — proof that you have lived.",
+            "next": 6201105
+          },
+          {
+            "id": 6201105,
+            "content": "And what of the mysterious Abyssal Merchant? Was he human, or phantom? Does he like the taste of candy? Does it wound him, being bound to this Abyss? Did he once walk in sunlight, in the world above — and live, as you did?\nBut there is no time to linger.\nYou must fight on. Without end.",
+            "next": 6201106
+          },
+          {
+            "id": 6201106,
+            "content": "Farewell, level-headed traveller,\" he says. \"May the flame of your Lantern shine ever unceasing upon your path.\"",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 9,
-    "storyEventName": "Abyssal Merchant: Echoes of the Divine Footfall",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: Echoes of the Divine Footfall",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_6",
-    "rlArchiveSubId": 20000406,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548953265534681328",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548953265534681326"
+        ],
+        "dialogues": [
+          {
+            "id": 6201201,
+            "content": "Lately, the weariness weighs on you less. You even chat with some of the Abyssoids now.\nYou cannot tell if your heart is hardening, growing numb — or if this is the fracture before collapse.\nFor now, at least, you do not feel so bad.",
+            "next": 6201202
+          },
+          {
+            "id": 6201202,
+            "content": "\"I met two zealots today — one sworn to Selenism, the other to Noclunism.\"\n\"One claimed to serve the light, the other the dark. The irony was this: when you told them you cared nothing for their gods, both spat the same profanities.\"\n\"And you? Do you follow a god?\"",
+            "npc": 910004,
+            "next": 6201203
+          },
+          {
+            "id": 6201203,
+            "content": "\"I serve Fusa.\" \nFor the first time, the Merchant answers a question about himself.\n\"I speak Her name, hail Her grace, and honour the light of the Full Moon.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201204
+          },
+          {
+            "id": 6201204,
+            "content": "His words surprise you — you had expected something more arcane, more intriguing.",
+            "next": 6201205
+          },
+          {
+            "id": 6201205,
+            "content": "\"So... you believe in all that Elysian Orthodox teaching?\nThat if you pray devoutly to the Goddess of the Full Moon, She will weave threads of blessing, and draw us from the dark?\"",
+            "npc": 910004,
+            "next": 6201206
+          },
+          {
+            "id": 6201206,
+            "content": "\"No. I <H>follow</> Fusa, but I do not <H>believe in</> Her.\" \n\"I only needed something — something certain — to justify the path I chose to walk.\"",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6201207,
+                "content": "I don't understand.",
+                "next": 6201208
+              }
+            ]
+          },
+          {
+            "id": 6201208,
+            "content": "\"We should give, not take.\"\n\"We should love, not hate.\"\n\"We should embrace, not wound.\"\n\"This is what I hold to be right. Yet if I believe in freedom of the human mind, I cannot prove what I believe to be true.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201209
+          },
+          {
+            "id": 6201209,
+            "content": "\"So I cast aside 'freedom' and chose Fusa, who achieves utmost transcendence. In that way, what I held as right became truth — flawless, unquestioned, beyond the need of proof.\"\nHe lets out a sigh.\n\"In a sense... perhaps I am Her ultimate transgressor.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201210
+          },
+          {
+            "id": 6201210,
+            "content": "\"So what you're saying is...\" \nYou search for words. \n\"If I wanted to keep pressing on in this Abyss, I might as well invent a... god of walking — just to convince myself I must go on?\"",
+            "npc": 910004,
+            "next": 6201211
+          },
+          {
+            "id": 6201211,
+            "content": "\"Mmm... You could say that.\" \nHe chuckles softly.",
+            "speakerName": "Abyssal Merchant",
+            "options": [
+              {
+                "id": 6201212,
+                "content": "What a kook. But I've lingered too long. I should be on my way.",
+                "next": 6201213
+              }
+            ]
+          },
+          {
+            "id": 6201213,
+            "content": "\"Farewell, wise traveller,\" he says. \"May the flame of your Lantern shine ever unceasing upon your path.\"",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 10,
-    "storyEventName": "Abyssal Merchant: A Moonlit Dream",
-    "storyEventType": "Story",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Abyssal Merchant: A Moonlit Dream",
+    "type": "Story",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_7",
-    "rlArchiveSubId": 20000407,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548953718965877802",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548953718965877800"
+        ],
+        "dialogues": [
+          {
+            "id": 6201301,
+            "content": "\"It has been long since last I rested.\"\nYou've already planned the trade before you come here.\n\"Could I buy something from you — a dream?\"\n\"If such a thing is possible.\"",
+            "npc": 910004,
+            "next": 6201302
+          },
+          {
+            "id": 6201302,
+            "content": "\"I am no dream-weaver. I cannot promise it will be what you seek.\"\nHe shakes his head slowly.\n\"But perhaps I may try.\"\n\"Long ago, when I told stories to my little sister, she would always sleep well.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201303
+          },
+          {
+            "id": 6201303,
+            "content": "You gather a heap of straw, softening it as best you can.\nWeariness settles over you once more. You yearn for a dream — for just a brief rest.",
+            "next": 6201304
+          },
+          {
+            "id": 6201304,
+            "content": "\"Once upon a time,\" he said, \"there was a boy — a young goldsmith — who fell in love with the Moon.\"\n\"In secret he measured her shape and size, planning to forge a necklace from the finest gems the world could offer — a gift for the crescent Moon he adored.\"\n\"But when the work was done, the Moon had grown rounder, and the necklace no longer fit.\"\n\"So he began again, setting every jewel he had ever gathered. Yet when he returned, the Moon was rounder still — full as a silver dish upon the sky.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201305
+          },
+          {
+            "id": 6201305,
+            "content": "It is an old fairytale. You dimly recall your mother once telling it to you.\nSleep begins to drift over you.",
+            "next": 6201306
+          },
+          {
+            "id": 6201306,
+            "content": "\"'Then I shall make three necklaces in different sizes,' thought the goldsmith. 'Surely one will fit her.'\"\n\"But when he brought his offerings to the Moon he loved,\nshe was gone.\"\n\"The sky lay black, with only stars upon it — as if the Moon had never been there at all.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201307
+          },
+          {
+            "id": 6201307,
+            "content": "You sink into a moonlit dream.",
+            "next": 6201308
+          },
+          {
+            "id": 6201308,
+            "content": "\"...And so the goldsmith who had lost the Moon struck his hammer day after day, forging necklaces that would never be worn.\"\n\"His tears fell upon the earth, and from them grew glittering trees, heavy with fruit, each one shining like the Moon he loved.\"\n\"In time, people named the trees Heaventree, and the fruit Phoxene...\"\n\"Weary traveller... have you drifted off? Sweat dreams, then.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201309
+          },
+          {
+            "id": 6201309,
+            "content": "In your first dream, a swing drifts in a garden courtyard. \nYou are small again. The old butler stands beside it, arms open, waiting for you to run into them. \n\"Welcome back, my ▇▇.\" \n...",
+            "next": 6201310
+          },
+          {
+            "id": 6201310,
+            "content": "In the second dream, young knights stand upon a hillside of blooming thyme.\nThey raise a banner of golden iris; their hair streams in the wind as they call your name, smiling.\n\"Let us set out, Lord ▇▇.\" \n...",
+            "next": 6201311
+          },
+          {
+            "id": 6201311,
+            "content": "In the third dream, you see another traveller — carrying a lantern like yours. You have seen {性别：him|her} three times now.\n{性别：His|Her} figure drifts farther and farther, fading into the dark.\nYou run, heart pounding, chasing with all your strength.",
+            "next": 6201312
+          },
+          {
+            "id": 6201312,
+            "content": "\"Could you stay?\"\nYour hoarse cry is more desperate than in any battle.",
+            "npc": 910004,
+            "next": 6201313
+          },
+          {
+            "id": 6201313,
+            "content": "\"I'm sorry, ▇▇.\"\n{性别：He|She} turns, the lantern's flame wavering across {性别：his|her} face — yet you cannot see it clearly.\n\"Our paths run in <H>opposite directions</>. That's why... I have to go.\"",
+            "speakerName": "???",
+            "next": 6201314
+          },
+          {
+            "id": 6201314,
+            "content": "\"But — I don't want to be alone anymore!\" \nYou reach for the hem of {性别：his|her} coat — like a petulant child begging for the last piece of candy — but catch only air.\nTears spill down your cheeks. How long has it been since you last cried?",
+            "npc": 910004,
+            "next": 6201315
+          },
+          {
+            "id": 6201315,
+            "content": "\"Don't cry, ▇▇.\"\n{性别：He|She} brushes your cheek, tender and merciful, wiping your tears away. You feel {性别：his|her} breath — the unmistakable warmth of another human.\n\"Our journey is <H>a circle</>. Even walking in opposite directions, we are bound to meet again.\"",
+            "speakerName": "???",
+            "next": 6201316
+          },
+          {
+            "id": 6201316,
+            "content": "You see the lantern in {性别：his|her} hand begin to glow with silver-white radiance — brighter, ever brighter, like a full moon casting its silver threads of light...\nAnd {性别：he|she} steps into the blinding silver glow.\n...\n...\nYou wake to the scent of wild mint.",
+            "next": 6201317
+          },
+          {
+            "id": 6201317,
+            "content": "\"Was it a sweet dream?\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201318
+          },
+          {
+            "id": 6201318,
+            "content": "\"Yes... it felt long. As though many years had passed.\"",
+            "npc": 910004,
+            "next": 6201319
+          },
+          {
+            "id": 6201319,
+            "content": "\"That's good. You are fortunate still, to be able to dream.\"",
+            "speakerName": "Abyssal Merchant",
+            "next": 6201320
+          },
+          {
+            "id": 6201320,
+            "content": "You rise, Lantern in hand. Your battle continues — an endless, solitary road.",
+            "options": [
+              {
+                "id": 6201321,
+                "content": "Thank you. I should be going.",
+                "next": 6201322
+              }
+            ]
+          },
+          {
+            "id": 6201322,
+            "content": "\"Farewell, steadfast traveller,\" he says.\n\"May there come a day when you no longer walk this road alone.\"",
+            "speakerName": "Abyssal Merchant"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 11,
-    "storyEventName": "Falling Birds, Bottomless Depths (Ⅰ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Falling Birds, Bottomless Depths (Ⅰ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story07",
+    "condition": [
       5064,
       5155,
       5075
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story07.T_Rouge_Story07'",
-    "eventMoment": 0,
-    "eventMinRoom": 2,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 2,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_Story11",
-    "rlArchiveSubId": 20000501,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370335783171628455",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370335783171628453"
+        ],
+        "dialogues": [
+          {
+            "id": 6200101,
+            "content": "Youthful chatter carries through the gloom — a sound you haven't heard in the abyss for ages. Vibrant. Alive. Untainted by the creeping darkness.\nYou know with absolute certainty these aren't souls or illusions, but living, breathing humans. The tone of their conversation suggests they've only just arrived.",
+            "next": 6200102
+          },
+          {
+            "id": 6200102,
+            "content": "You can't resist following the sound. You push forward as the mist begins to part — revealing four young Knights standing before you.\nTheir attire and gear vary, yet each bears the fleur-de-lis emblem of Elysium.",
+            "next": 6200103
+          },
+          {
+            "id": 6200103,
+            "content": "\"Are you sure this is the right way, Captain?\"\nThe blonde Knight bounds up the ancient staircase and leaps back down in one fluid motion.\n\"It's just another pile of rubble.\"",
+            "speakerName": "Cathy",
+            "next": 6200104
+          },
+          {
+            "id": 6200104,
+            "content": "\"At least I know we haven't been here before.\"\nThe young captain strides past her with measured steps.\n\"Navigating the Sacred Lake is impossible. We'll just have to take it step by step.\"",
+            "speakerName": "Flynn",
+            "next": 6200105
+          },
+          {
+            "id": 6200105,
+            "content": "\"And, don't you ever get tired bouncing around like that, Cathy?\"\nThe young captain sighs as he watches his hyperactive teammate.\n\"Save your energy. This place is dangerous. Let's not take unnecessary risks.\"",
+            "speakerName": "Flynn",
+            "next": 6200106
+          },
+          {
+            "id": 6200106,
+            "content": "\"I have lots of energy to spare! You're the one who's lugging around that massive sword and shield.\"\nWith a flick of her wrist, she spins the gun deftly on her index finger. \n\"So why call this Sacred Lake? These Filthoids and Phantasms don't really scream holy.\"",
+            "speakerName": "Cathy",
+            "next": 6200107
+          },
+          {
+            "id": 6200107,
+            "content": "\"Watch your words, Cathy.\"\nThe male Caron Priest grips his staff firmly.\n\"The Sacred Lake remains hallowed ground where the chosen receive divine grace. Though darkness now taints it, we of Elysium must still keep reverence in our hearts.\"",
+            "speakerName": "Milton",
+            "next": 6200108
+          },
+          {
+            "id": 6200108,
+            "content": "The fourth member — a cloaked female Sorceress with a longbow strapped to her back — gives a dismissive chuckle at his words. Her black hood shadows her face, hiding any expression.",
+            "next": 6200109
+          },
+          {
+            "id": 6200109,
+            "content": "The young captain opens his mouth to defuse the tension, but no words come. Just as he struggles for a solution, his gaze lands on you.",
+            "next": 6200110
+          },
+          {
+            "id": 6200110,
+            "content": "\"No knightly crest marks you. Did you wander here by chance?\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200111,
+                "content": "I am a traveler.",
+                "next": 6200112
+              }
+            ]
+          },
+          {
+            "id": 6200112,
+            "content": "\"A traveler…?\" Confusion flickers across the young man's face before giving way to patient concern. \"Then you may not know. This is Elysium's sacred ground. Dangerous circumstances now make it unfit for visitors.\"",
+            "speakerName": "Flynn",
+            "next": 6200113
+          },
+          {
+            "id": 6200113,
+            "content": "\"I'm Flynn, a Knight of the Wingfeather Order under The Elysian Church.\" He gestures to his team. \"We'd be honored to escort you to safety if you'll permit us.\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200114,
+                "content": "That won't be necessary. I still have unfinished business here.",
+                "next": 6200115
+              }
+            ]
+          },
+          {
+            "id": 6200115,
+            "content": "\"I must warn you. This is hallowed ground — and forbidden territory. Our knightly oath compels us to remove trespassers.\"",
+            "speakerName": "Milton",
+            "next": 6200116
+          },
+          {
+            "id": 6200116,
+            "content": "\"…How exactly are we supposed to do that?\" The cloaked Sorceress lets out a sneer. \"Last I checked, even we're trapped in this place.\"\nHer words cut like winter's first frost against bare skin.",
+            "speakerName": "Calista",
+            "next": 6200117
+          },
+          {
+            "id": 6200117,
+            "content": "\"Alright, alright.\" The blonde Knight interjects in mediation. \"Our 'traveler' here seems capable enough, and certainly no blasphemer. No harm in going our separate ways and pretending we never crossed paths, yes?\"",
+            "speakerName": "Cathy",
+            "next": 6200118
+          },
+          {
+            "id": 6200118,
+            "content": "\"Say, traveler.\" She nudges Flynn aside, leaning into you. \"You wouldn't happen to have seen a girl around here? Thirteen, maybe fourteen — pink hair, wielding a giant sword?\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200119,
+                "content": "…No, I haven't.",
+                "next": 6200120
+              }
+            ]
+          },
+          {
+            "id": 6200120,
+            "content": "\"I see… If you do meet her, please tell her — Squad <H>Hushed Dusk</> is looking for her. We'd be so grateful!\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200121,
+                "content": "Why do you seek her?",
+                "next": 6200122
+              }
+            ]
+          },
+          {
+            "id": 6200122,
+            "content": "\"This is awkward to admit, but she's technically our… commanding officer. Though I shouldn't elaborate — Milton will have my head if I say more.\"",
+            "speakerName": "Cathy",
+            "next": 6200123
+          },
+          {
+            "id": 6200123,
+            "content": "\"Then hold your tongue.\" The Priest's brow darkens. \"No more distractions. On with our mission.\"",
+            "speakerName": "Milton",
+            "next": 6200124
+          },
+          {
+            "id": 6200124,
+            "content": "\"Are you certain you don't need our help?\" The young man's gaze lingers with concern. \"This is a very dangerous place — at least travel with us.\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200125,
+                "content": "No, I'm fine on my own.",
+                "next": 6200126
+              }
+            ]
+          },
+          {
+            "id": 6200126,
+            "content": "\"Very well. If your resolve is set…\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200127,
+                "content": "Aren't you afraid, if it's so dangerous here?",
+                "next": 6200128
+              }
+            ]
+          },
+          {
+            "id": 6200128,
+            "content": "\"Faith shields the devout from fear.\" The young man flashes a steadfast smile. \"Till our paths cross again. May the God of Full Moon bless your journey.\"",
+            "speakerName": "Flynn",
+            "next": 6200129
+          },
+          {
+            "id": 6200129,
+            "content": "The Knights depart together, leaving only endless mist before you."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 12,
-    "storyEventName": "Where the Orphan Treads the Barrens (Ⅰ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Where the Orphan Treads the Barrens (Ⅰ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story05",
+    "condition": [
       5103,
       5155,
       5076
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story05.T_Rouge_Story05'",
-    "eventMoment": 0,
-    "eventMinRoom": 6,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 6,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_Story12",
-    "rlArchiveSubId": 20000601,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370336555793086238",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370336555793086236"
+        ],
+        "dialogues": [
+          {
+            "id": 6200201,
+            "content": "The young Knight emerges from the shadows, her golden hair cutting through the gloom like liquid light.\nShe is different from the last time you met — tattered edges and dark stains upon her clothes whisper stories of their own tales.",
+            "next": 6200202
+          },
+          {
+            "id": 6200202,
+            "content": "\"Ah, my wandering friend returns!\" Fatigue tugs at her stance, yet her arm swings wide in eager greeting.",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200203,
+                "content": "Where are your friends?",
+                "next": 6200204
+              }
+            ]
+          },
+          {
+            "id": 6200204,
+            "content": "\"Well… We just ran into quite a few Filthoids, and ghosts — I mean those shadows lurking in the dark…\"",
+            "speakerName": "Cathy",
+            "next": 6200205
+          },
+          {
+            "id": 6200205,
+            "content": "\"I fought them off with everything I had. But when the dust settles, everyone's gone. Have you seen them?\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200206,
+                "content": "No.",
+                "next": 6200207
+              }
+            ]
+          },
+          {
+            "id": 6200207,
+            "content": "Her eyes lower like a veil drawn across dawn.",
+            "next": 6200208
+          },
+          {
+            "id": 6200208,
+            "content": "\"Flynn keeps lecturing me about formations and watching each other's backs… Ah, if only I'd listened instead of charging ahead.\"",
+            "speakerName": "Cathy",
+            "next": 6200209
+          },
+          {
+            "id": 6200209,
+            "content": "\"I had no idea the Sacred Lake would be like this. Back home, even if I wander off, I always find my way back. But here… paths rewrite themselves the moment you turn away. It's almost like…\"\nHer fists clench.\n\"It's like the shadows snatched them away… erasing every trace they ever left behind.\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200210,
+                "content": "Don't worry. You'll find each other. You found me, right?",
+                "next": 6200211
+              }
+            ]
+          },
+          {
+            "id": 6200211,
+            "content": "Cathy blinks in surprise and stares at you for a moment.",
+            "next": 6200212
+          },
+          {
+            "id": 6200212,
+            "content": "\"Have we met before?\"\nHer bright eyes mirror your face — a reflection that feels unsettlingly unfamiliar.",
+            "speakerName": "Cathy",
+            "next": 6200213
+          },
+          {
+            "id": 6200213,
+            "content": "\"There's something familiar about you… Not from our last meeting, but further back — before we ever set foot in the Sacred Lake.\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200214,
+                "content": "Just your mind playing tricks on you.",
+                "next": 6200215
+              }
+            ]
+          },
+          {
+            "id": 6200215,
+            "content": "\"You're probably right.\"\nA faint smile tugs at her lips like sunlight struggling through storm clouds.",
+            "speakerName": "Cathy",
+            "next": 6200216
+          },
+          {
+            "id": 6200216,
+            "content": "\"After losing them, I wandered alone for ages. Meeting you now it's the first proof that I'm not damned to walk this hellscape for eternity.\"",
+            "speakerName": "Cathy",
+            "next": 6200217
+          },
+          {
+            "id": 6200217,
+            "content": "\"Perhaps I've just missed the warmth of another <H>living soul</>.\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200218,
+                "content": "I hope you'll find your friends soon.",
+                "next": 6200219
+              }
+            ]
+          },
+          {
+            "id": 6200219,
+            "content": "\"Thanks! But don't worry — they're elite Knights. They'll survive without me. I'm the one who needs to reach them…\"",
+            "speakerName": "Cathy",
+            "next": 6200220
+          },
+          {
+            "id": 6200220,
+            "content": "\"Farewell, traveler. May your path lead you to what you seek.\"",
+            "speakerName": "Cathy",
+            "next": 6200221
+          },
+          {
+            "id": 6200221,
+            "content": "Kaysie waves farewell and disappears.\nThe light fades with her, plunging everything back into the endless night."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 13,
-    "storyEventName": "Where the Orphan Treads the Barrens (Ⅱ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Where the Orphan Treads the Barrens (Ⅱ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story06",
+    "condition": [
       5104,
       5155,
       5077
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story06.T_Rouge_Story06'",
-    "eventMoment": 0,
-    "eventMinRoom": 10,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 10,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story13",
-    "rlArchiveSubId": 20000602,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370337590115274595",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370337590115274593"
+        ],
+        "dialogues": [
+          {
+            "id": 6200301,
+            "content": "Another wasteland of rubble.\nThis is nothing new — you've walked these ruins a thousand times before in the abyss.",
+            "next": 6200302
+          },
+          {
+            "id": 6200302,
+            "content": "Not just broken walls and collapsed towers, but abandoned weapons, half-buried bodies barely visible beneath the wreckage. The air reeks of blood and ashes.\nYou've seen this too often. More offerings to the so-called \"Sacred Lake\", whether they came willingly or not.",
+            "next": 6200303
+          },
+          {
+            "id": 6200303,
+            "content": "Suddenly a bloodied emblem catches your eye — the fleur-de-lis, unmistakable. You've seen this emblem not so long ago.",
+            "next": 6200304
+          },
+          {
+            "id": 6200304,
+            "content": "You push aside the rubble and find a bloodstained sword. It's still standing upright — like its owner refused to fall even in death.",
+            "next": 6200305
+          },
+          {
+            "id": 6200305,
+            "content": "Then you see them — shattered staffs, broken arrows, ruined pistols.\nNow you know the names behind these fallen souls.",
+            "next": 6200306
+          },
+          {
+            "id": 6200306,
+            "content": "\"Faith shields the devout from fear.\" But does it truly spare them death's agony when the end comes?\nYou'll never know, and you don't need to.",
+            "next": 6200307
+          },
+          {
+            "id": 6200307,
+            "content": "The next turn of the dial will erase all of this.\nMourning and praying are pointless. Not planning to stay, you close their eyes, then turn away without looking back.",
+            "next": 6200308
+          },
+          {
+            "id": 6200308,
+            "content": "\"I'm the one who needs to reach them…\"\nHer words flash through your thoughts, calling out to you as if trying to remind you of something important.",
+            "next": 6200309
+          },
+          {
+            "id": 6200309,
+            "content": "You look back at the wreckage. This time, you notice something strange — while the four young Knights lie cold, only Cathy's clothes remain untouched by the black ash.\nHer armor bears only the layered stains of dried and fresh Filthoid blood.",
+            "options": [
+              {
+                "id": 6200310,
+                "content": "That's when you realise she came late to this fight, just as you did.",
+                "next": 6200311
+              }
+            ]
+          },
+          {
+            "id": 6200311,
+            "content": "By the time she found them, her friends were already unrecognizable remains in the rubble.",
+            "next": 6200312
+          },
+          {
+            "id": 6200312,
+            "content": "So she stayed, fighting to the end beside those she once lost.\nWas it to protect her fallen friends, to atone for \"abandoning\" them, or simply to uphold your knightly vows?\nHad the endless darkness finally crushed her last hope, leaving her to beg for death's mercy?",
+            "next": 6200313
+          },
+          {
+            "id": 6200313,
+            "content": "Silence is all that remains."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 14,
-    "storyEventName": "Falling Birds, Bottomless Depths (Ⅱ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Falling Birds, Bottomless Depths (Ⅱ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story04",
+    "condition": [
       5065,
       5105,
       5195,
       5075
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story04.T_Rouge_Story04'",
-    "eventMoment": 0,
-    "eventMinRoom": 2,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 2,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story21",
-    "rlArchiveSubId": 20000502,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370338708858923226",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370338708858923224"
+        ],
+        "dialogues": [
+          {
+            "id": 6200401,
+            "content": "Youthful chatter carries through the gloom — a sound you haven't heard in the abyss for ages. Vibrant. Alive. Untainted by the creeping darkness.\nYou know with absolute certainty these aren't souls or illusions, but living, breathing humans.",
+            "next": 6200402
+          },
+          {
+            "id": 6200402,
+            "content": "You recognize them.",
+            "next": 6200403
+          },
+          {
+            "id": 6200403,
+            "content": "Following the sound, you push forward as the mist begins to part — revealing those four young Knights standing before you.\nTheir armors are still unstained by time or battle. The sacred fleur-de-lis emblem on their clothes gleams like captured sunlight, defying the abyss with its radiance.",
+            "next": 6200404
+          },
+          {
+            "id": 6200404,
+            "content": "\"Are you sure this is the right way, Captain?\"\nThe blonde Knight bounds up the ancient staircase and leaps back down in one fluid motion.\n\"It's just another pile of rubble.\"",
+            "speakerName": "Cathy",
+            "next": 6200405
+          },
+          {
+            "id": 6200405,
+            "content": "\"At least I know we haven't been here before.\"\nThe young captain strides past her with measured steps.\n\"Navigating the Sacred Lake is impossible. We'll just have to take it step by step.\"",
+            "speakerName": "Flynn",
+            "next": 6200406
+          },
+          {
+            "id": 6200406,
+            "content": "\"And, don't you ever get tired bouncing around like that, Cathy?\"\nThe young captain sighs as he watches his hyperactive teammate.\n\"Save your energy. This place is dangerous. Let's not take unnecessary risks.\"",
+            "speakerName": "Flynn",
+            "next": 6200407
+          },
+          {
+            "id": 6200407,
+            "content": "\"I have lots of energy to spare! You're the one who—\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200408,
+                "content": "He's got a point.",
+                "next": 6200409
+              }
+            ]
+          },
+          {
+            "id": 6200409,
+            "content": "The girl stops mid-sentence, turning to you with wide eyes.",
+            "next": 6200410
+          },
+          {
+            "id": 6200410,
+            "content": "\"You are…?\"",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200411,
+                "content": "A traveler. I've been here longer than you have. Trust me—this place is far more dangerous than you think.",
+                "next": 6200412
+              }
+            ]
+          },
+          {
+            "id": 6200412,
+            "content": "\"A traveler…?\" The young Knight's expression flickers with familiar confusion, just like last time. \"But this is Elysium's sacred ground… How did you get in?\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200413,
+                "content": "I have my reasons — and a purpose to fulfil. Just like you.",
+                "next": 6200414
+              }
+            ]
+          },
+          {
+            "id": 6200414,
+            "content": "\"Hmm…?\"",
+            "speakerName": "Calista",
+            "next": 6200415
+          },
+          {
+            "id": 6200415,
+            "content": "This time, the cloaked Sorceress finally shows a flicker of interest in you.\nShe lifts her head. You finally see her eyes — dark, doubtful, searching, like bubbles surfacing in shadowed waters.",
+            "next": 6200416
+          },
+          {
+            "id": 6200416,
+            "content": "\"It sounds like you know truths about this abyss — truths we've yet to uncover.\"",
+            "speakerName": "Calista",
+            "next": 6200417
+          },
+          {
+            "id": 6200417,
+            "content": "\"Calista…! Only heretics speak such blasphemy! This is sacred ground, our Sacred Lake!\"",
+            "speakerName": "Milton",
+            "next": 6200418
+          },
+          {
+            "id": 6200418,
+            "content": "Calista ignores his rebuke, her gaze steady on you, waiting for an answer.",
+            "next": 6200419
+          },
+          {
+            "id": 6200419,
+            "content": "What will you say? What can you say?",
+            "next": 6200420
+          },
+          {
+            "id": 6200420,
+            "content": "Tell them to turn back now? You know their faith forbids it.\nFaith — such a heavy word. It holds more weight than a stranger's warning or the plea of a face grown unfamiliar.",
+            "next": 6200421
+          },
+          {
+            "id": 6200421,
+            "content": "For those raised in faith's radiance, unwanted truths burn like staring at the sun — leaving only daylight's cruel tattoo upon the soul.",
+            "next": 6200422
+          },
+          {
+            "id": 6200422,
+            "content": "You shake your head, avoiding her gaze.",
+            "options": [
+              {
+                "id": 6200423,
+                "content": "It's easy to get lost in the abyss. Stay close to your friends, Cathy.",
+                "next": 6200424
+              }
+            ]
+          },
+          {
+            "id": 6200424,
+            "content": "\"Huh? Why single me out?\"",
+            "speakerName": "Cathy",
+            "next": 6200425
+          },
+          {
+            "id": 6200425,
+            "content": "\"Means you should reflect. Even strangers can see you're the most restless one.\"",
+            "speakerName": "Flynn",
+            "next": 6200426
+          },
+          {
+            "id": 6200426,
+            "content": "\"As if! I'd find you all in no time if we got separated.\" The girl pouts.",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200427,
+                "content": "Next time might be too late.",
+                "next": 6200428
+              }
+            ]
+          },
+          {
+            "id": 6200428,
+            "content": "Cathy freezes, caught off guard by your grave tone.",
+            "next": 6200429
+          },
+          {
+            "id": 6200429,
+            "content": "Flynn steps forward — a true Knight of Elysium indeed. For a noble knight, piety alone is not enough; prudence too must be his virtue. He understands the delicate balance of curiosity — enough to gather information, yet not so much as to invite calamity. Like when you find a locked door in the sacred hall left slightly ajar, the wisest choice is to pause, turn away, and pretend you never saw it.",
+            "next": 6200430
+          },
+          {
+            "id": 6200430,
+            "content": "\"Though we don't know your true identity, you're clearly here for a reason. Forgive us — duty calls us elsewhere.\" He bows solemnly. \"May the God of Full Moon bless your journey.\"",
+            "speakerName": "Flynn",
+            "next": 6200431
+          },
+          {
+            "id": 6200431,
+            "content": "The Knights depart together, leaving only endless mist before you."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 15,
-    "storyEventName": "Wails Toward the Dawn (Ⅰ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Wails Toward the Dawn (Ⅰ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story08",
+    "condition": [
       5196,
       5195,
       5078
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story08.T_Rouge_Story08'",
-    "eventMoment": 0,
-    "eventMinRoom": 8,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 8,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story22",
-    "rlArchiveSubId": 20000701,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17549052019767075239",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17549052019767075237"
+        ],
+        "dialogues": [
+          {
+            "id": 6201501,
+            "content": "Footsteps echo in the dark — dull, dragging, tapering into a gritty scrape.\nYou follow the sound. Four figures emerge at last: the Knights of Hushed Dusk. Your paths cross again. They stand unscathed, yet their faces bear none of the light they wore when last you met.",
+            "next": 6201502
+          },
+          {
+            "id": 6201502,
+            "content": "\"Are we truly still walking...? How long has it been?\"\nThe Sorceress's voice hangs heavy with fatigue, as if the cloak on her shoulders were a slab of stone.",
+            "speakerName": "Calista",
+            "next": 6201503
+          },
+          {
+            "id": 6201503,
+            "content": "\"Four days... five, perhaps... longer still. My pocket watch has stopped.\"\nThe Priest's voice rasps like a blade on frayed paper. Even a man of faith can no longer summon his usual reverence.",
+            "speakerName": "Milton",
+            "next": 6201504
+          },
+          {
+            "id": 6201504,
+            "content": "\"Then let's stop here a while. You can rest — I'll keep watch.\"\nThe young man speaks with quiet care for his companions, though weariness seeps into his words.",
+            "speakerName": "Milton",
+            "next": 6201505
+          },
+          {
+            "id": 6201505,
+            "content": "\"I'll keep watch with you. If either of us drifts off, the other can wake them!\"\nShe presses false brightness into her tone, cutting Flynn short with a glance before he can whisper an apology.",
+            "speakerName": "Cathy",
+            "next": 6201506
+          },
+          {
+            "id": 6201506,
+            "content": "They find a patch of level ground, set down their packs, and make a rough camp.\nOnce Calista and Milton have lain down, Flynn and Kathy wander a short distance aside. Silence drapes across their backs, the moment frozen like a still frame.\nFlynn lowers his head and sighs softly, a breath so low it reaches no ears but Kathy's.",
+            "next": 6201507
+          },
+          {
+            "id": 6201507,
+            "content": "\"Aww, it's rare to hear you sigh.\" Smiling, she pulls a crumpled paper packet from her pocket. \"Candy? I smuggled these in. Just two left — let's share them.\"",
+            "speakerName": "Cathy",
+            "next": 6201508
+          },
+          {
+            "id": 6201508,
+            "content": "\"...No, thank you. You've a sweet tooth. Best you keep them.\"",
+            "speakerName": "Flynn",
+            "next": 6201509
+          },
+          {
+            "id": 6201509,
+            "content": "\"Candy's always sweeter when you share it with a friend.\"",
+            "speakerName": "Cathy",
+            "next": 6201510
+          },
+          {
+            "id": 6201510,
+            "content": "She slips one into her mouth, then presses the last piece — wrapper and all — into Flynn's hand. He only lowers his head in silence, unmoving.\nSo she waits, saying no more, letting the candy melt on her tongue as she waits for her friend to collect his thoughts and find his words.",
+            "next": 6201511
+          },
+          {
+            "id": 6201511,
+            "content": "\"Did you see it... that Abyssoid, the one with the sword?\"\nAt last, Flynn speaks in a low voice.",
+            "speakerName": "Flynn",
+            "next": 6201512
+          },
+          {
+            "id": 6201512,
+            "content": "\"You mean the one who cut down everything — even his own kind? Of course I saw him. That silver sword of his was so bright it near blinded me. It was just like the weapon your idol bore in the tales...\"\nShe falters, turning to Flynn.\n\"Wait... you don't mean — the <H>Moonrise</> Knight?\"",
+            "speakerName": "Cathy",
+            "next": 6201513
+          },
+          {
+            "id": 6201513,
+            "content": "\"...Yes. It was him. I've pored over his likeness a thousand times, in portraits and illustrations. I could never mistake him.\"\nThe young man exhales, burying his face in his hands.\n\"Truth is... the moment I recognised him, I was scared. If even he could be overcome by the Abyss... what chance have we? And what if that's how I fall as well? What if one day I turn my blade... on those I call comrades?\"",
+            "speakerName": "Flynn",
+            "next": 6201514
+          },
+          {
+            "id": 6201514,
+            "content": "\"Yeah... we never imagined the Abyss would be so terrifying. But even so, I believe — whatever comes — the will of humankind can endure it.\"\nKathy pats her friend's back, gentle yet firm.\n\"Think of it. That Knight struck at even other Abyssoids. Doesn't that mean he hadn't yielded? Even in a ghostly form, he still clung to his first purpose — didn't he?\"",
+            "speakerName": "Cathy",
+            "next": 6201515
+          },
+          {
+            "id": 6201515,
+            "content": "\"Mm...\"",
+            "speakerName": "Flynn",
+            "next": 6201516
+          },
+          {
+            "id": 6201516,
+            "content": "This does not feel the moment to intrude, and you mean to leave them their brief reprieve.\nBut as you turn away, Kathy catches sight of you.",
+            "next": 6201517
+          },
+          {
+            "id": 6201517,
+            "content": "\"Huh!?\" She brightens, rushing over. \"You're that traveller from before! I can't believe it — you're safe! That's great!\"",
+            "speakerName": "Cathy",
+            "next": 6201518
+          },
+          {
+            "id": 6201518,
+            "content": "Flynn follows, surprise plain upon his face.\n\"So it's true — you're no ordinary soul. You entered the Abyss before us... How have you endured so long?\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201519,
+                "content": "I... just grew used to it.",
+                "next": 6201527
+              }
+            ]
+          },
+          {
+            "id": 6201527,
+            "content": " I've felt lost, regretful, hopeless... but now, I've come to terms with it.",
+            "npc": 910004,
+            "next": 6201520
+          },
+          {
+            "id": 6201520,
+            "content": "His surprise softens slowly into admiration.\n\"Then tell me — how do you see the Abyss? Do you believe mankind can prevail?\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201521,
+                "content": "We will.",
+                "next": 6201522
+              },
+              {
+                "id": 6201524,
+                "content": "I'm not sure.",
+                "next": 6201525
+              }
+            ]
+          },
+          {
+            "id": 6201522,
+            "content": "\"See? Even the traveller believes it. We'll finish this mission. So chin up, all right?\"",
+            "speakerName": "Cathy",
+            "next": 6201523
+          },
+          {
+            "id": 6201525,
+            "content": "\"Even you... cannot say for certain?\"\nThe young man's gaze falters. Yet soon he lifts his head once more, his voice ringing with rekindled resolve — whether to steel himself or to deceive himself, you cannot tell.\n\"Still... we are Knights of Elysium. Even if all hope is gone, we will fight to the very end.\"",
+            "speakerName": "Flynn",
+            "next": 6201526
+          },
+          {
+            "id": 6201523,
+            "content": "But she misunderstands you. The \"triumph\" you hold to is not the mission laid upon them by the Church.\nYou know too well: only pain and despair await them. Again and again they will fall, never knowing they already tread in hell.\nYet you say nothing. If the future cannot be altered, perhaps ignorance is mercy enough."
+          },
+          {
+            "id": 6201526,
+            "content": "You know too well: only pain and despair await them. Again and again they will fall, never knowing they already tread in hell. \nYet when you meet the Knight's unwavering eyes, you cannot bring yourself to speak the cruel truth."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 16,
-    "storyEventName": "Wails Toward the Dawn (Ⅱ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Wails Toward the Dawn (Ⅱ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story09",
+    "condition": [
       5197,
       5195,
       5079
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story09.T_Rouge_Story09'",
-    "eventMoment": 0,
-    "eventMinRoom": 14,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 14,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story23",
-    "rlArchiveSubId": 20000702,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17549052293298272094",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17549052293298272092"
+        ],
+        "dialogues": [
+          {
+            "id": 6201601,
+            "content": "A sharp clash of steel rings out in the darkness. Somewhere ahead, a battle rages.\nThrough the gloom you glimpse a young Knight, longsword lifted with what strength remains, striking down the Abyssoid before him.",
+            "next": 6201602
+          },
+          {
+            "id": 6201602,
+            "content": "Then — a slim shadow sweeps past. By instinct he raises his shield, catching the strike. An arrow juts from the cracked wood. When he sees it clearly, he freezes.\nIts fletching bears the golden Iris of Elysium — but the base is stained black. There is only one archer who would do that...",
+            "next": 6201603
+          },
+          {
+            "id": 6201603,
+            "content": "\"Calista...?\"",
+            "speakerName": "Flynn",
+            "next": 6201604
+          },
+          {
+            "id": 6201604,
+            "content": "The Abyssoid presses closer, its limbs gnawed by the darkness, until they seem to blur into the cloak that shrouds it. \"She\" gives no answer to Flynn's call — only draws the bowstring taut once more.",
+            "next": 6201605
+          },
+          {
+            "id": 6201605,
+            "content": "From their very first steps into the Abyss, they are horrified to see familiar figures among the hostile, human-like Abyssoids. Many were once Knights of Elysium, who had marched here to bring down the Abyss — only to be claimed by it in death, reborn as part of its darkness, and set against their former comrades.",
+            "next": 6201606
+          },
+          {
+            "id": 6201606,
+            "content": "This is the Abyss's cruellest curse: to live is itself a curse. Those who fall swiftly may still become mere phantoms, resembling what they were in life.",
+            "next": 6201607
+          },
+          {
+            "id": 6201607,
+            "content": "But if one refuses to die and struggles on, then every passing moment the darkness gnaws at their will. In the end, each battle becomes a gamble: should their resolve falter even for an instant, the Abyss devours their mind, leaving only a mindless beast driven to slaughter.",
+            "next": 6201608
+          },
+          {
+            "id": 6201608,
+            "content": "Just like the one who stands before Flynn now.",
+            "next": 6201609
+          },
+          {
+            "id": 6201609,
+            "content": "\"No... don't do this... I don't want to hurt you... please...\" His hands shake upon the hilt of his sword. \"Milton's already gone. If I lose you too...\"",
+            "speakerName": "Flynn",
+            "next": 6201610
+          },
+          {
+            "id": 6201610,
+            "content": "But the arrow comes anyway, swift for his heart. He wrenches up his shield. Another hisses past — slashing his cheek, spilling blood.",
+            "next": 6201611
+          },
+          {
+            "id": 6201611,
+            "content": "\"Aaaah—!\"",
+            "speakerName": "Flynn",
+            "next": 6201612
+          },
+          {
+            "id": 6201612,
+            "content": "With a cry, he swings his blade — once, twice, again — until the Abyssoid at last dissolves into ash.\nHis body trembles, held up only by the sword. Before the dust that was once his comrade, he breaks, his voice torn by grief, and weeps aloud.",
+            "next": 6201613
+          },
+          {
+            "id": 6201613,
+            "content": "When the weeping finally ebbs, an eerie silence fills the hollow air. The battle is over — yet the girl who once fought beside him, always bounding, always loud and full of life, does not return with her usual grin. Not this time.",
+            "next": 6201614
+          },
+          {
+            "id": 6201614,
+            "content": "\"Kathy...? Kathy, are you all right?\"\nHe staggers towards her, dragging his battered body.",
+            "speakerName": "Flynn",
+            "next": 6201615
+          },
+          {
+            "id": 6201615,
+            "content": "She does not seem to hear his call. She stands rooted in place, her arms hanging limp. Her breathing comes in sharp, frantic gasps, as though she were drowning, struggling in vain to hold on to the air.\nFrom her wounds seeps a baleful black mist. It coils about her limbs, darkens her shining hair, and at last devours her whole form.",
+            "next": 6201616
+          },
+          {
+            "id": 6201616,
+            "content": "The sword slips from his grasp, sinking into mud mixed with blood and tears. He falls to his knees.",
+            "next": 6201617
+          },
+          {
+            "id": 6201617,
+            "content": "\"I... surrender. Do you hear me?\" \nHe closes his eyes, face upturned to the sky — if such darkness can be called sky. His voice is calm as stagnant water.\n\"Whoever you are... whatever your reason to torment us like this... I am fed up. I am weary. Enough. Take me as well...\"",
+            "speakerName": "Flynn",
+            "next": 6201618
+          },
+          {
+            "id": 6201618,
+            "content": "Something stirs in the dark — rustling, drawing near. He does not open his eyes, simply waits, ready for the end.\nThen — a pair of hands lifts his fallen blade, and presses the hilt back into his grasp.",
+            "next": 6201619
+          },
+          {
+            "id": 6201619,
+            "content": "\"Really now — have a little more faith in me, won't you?\"\nHer voice cleaves the darkness, gentle, warm. A shadow brushes away his tears, cradles his bowed head, shields his broken form.\n\"Don't worry. Whatever happens... I promise you this — I will not change.\"",
+            "speakerName": "Cathy",
+            "next": 6201620
+          },
+          {
+            "id": 6201620,
+            "content": "\"...Yeah. I believe you.\" \nHe lifts his arms, and embraces the dark.",
+            "speakerName": "Flynn",
+            "next": 6201621
+          },
+          {
+            "id": 6201621,
+            "content": "You know it is false hope. You know it can only lead them to greater suffering. And yet — you cannot restrain yourself.\nYou raise your Lantern and rush to their side. In the glow of Glazeystal, the darkness recoils. Her hair, once drowned in shadow, shines golden once more.\nThe two Knights look up at you, dazed.",
+            "next": 6201622
+          },
+          {
+            "id": 6201622,
+            "content": "\"Traveller...? Did you save us?\" \nKathy stares at her hands, whole and unblemished. Astonishment lights her eyes.\n\"Thank you...! I always knew you were no ordinary soul — but I never dreamt you held such power.\"",
+            "speakerName": "Cathy",
+            "next": 6201623
+          },
+          {
+            "id": 6201623,
+            "content": "\"Hah...\" \nFlynn exhales, unsteady, as though still unsure this is real.",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201624,
+                "content": "No need to thank me. What are your plans from here?",
+                "next": 6201625
+              }
+            ]
+          },
+          {
+            "id": 6201625,
+            "content": "\"Now that we're safe? We carry on, of course! But first — Flynn needs some patching up.\"",
+            "speakerName": "Cathy",
+            "next": 6201626
+          },
+          {
+            "id": 6201626,
+            "content": "She catches the worry in your eyes, and answers it with a bright smile.",
+            "next": 6201627
+          },
+          {
+            "id": 6201627,
+            "content": "\"Traveller — do you remember the question Flynn asked you last time we met? I think I finally understand.\" Her tone is calm, resolute. \"The Abyss will not be defeated by one battle, nor by some mighty hero. It will be defeated by all of us — by our efforts, joined together. If we keep adding to them, again and again, then one day... something must change. So it doesn't matter how we end. What matters is that we go on. Even the smallest step forward is our share toward that final victory.\"",
+            "speakerName": "Cathy",
+            "next": 6201628
+          },
+          {
+            "id": 6201628,
+            "content": "\"Heh... Kathy. Never thought I'd hear something so wise from you. Makes me seem a poor captain beside you.\"\nAt last, Flynn regains his senses. With her support, he rises — and straightens his back.\n\"The Abyss spreads with every moment. If left unchecked, it will consume all of Elysium. Even if we can only delay it, we must fight to the end. Besides... we still haven't found Dame Lisbell.\"",
+            "speakerName": "Flynn",
+            "next": 6201629
+          },
+          {
+            "id": 6201629,
+            "content": "\"Right! We've still got to bring her home. So, Traveller — walk your path. Don't worry about us. Do not bear our burden. Only carry our blessing with you.\"\nShe presses her hand over her heart, meeting your eyes,\nand speaks with solemn sincerity:\n\"<H>May the Goddess of Fate bathe you in a thousand beams of moonlight, and may your wings shine for ever, flawless as the full moon.</>\"",
+            "speakerName": "Cathy",
+            "next": 6201630
+          },
+          {
+            "id": 6201630,
+            "content": "It is a blessing most solemn. In Elysium, such words are given only to one you may never see again.\nYet it is no farewell of despair. It is calm acceptance of fate.\n\"I wish you safe passage on the road ahead... and accept that it may mean we are parted, in life or in death, forevermore.\"",
+            "next": 6201631
+          },
+          {
+            "id": 6201631,
+            "content": "You give Kathy a silent nod. Raising your Lantern, you step once more onto the path before you."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 17,
-    "storyEventName": "Falling Birds, Bottomless Depths (Ⅲ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Falling Birds, Bottomless Depths (Ⅲ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story10",
+    "condition": [
       5066,
       5202,
       5198,
       5075
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story10.T_Rouge_Story10'",
-    "eventMoment": 0,
-    "eventMinRoom": 2,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 2,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story31",
-    "rlArchiveSubId": 20000503,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17549052579549469196",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17549052579549469194"
+        ],
+        "dialogues": [
+          {
+            "id": 6201701,
+            "content": "The voices of young men and women drift through the Abyss. It has been so long since you last heard such sounds here — lively, vibrant, untouched by darkness.\nAnd you know: these are no phantoms, no echoes of the dead, but living human beings.",
+            "next": 6201702
+          },
+          {
+            "id": 6201702,
+            "content": "Once more, you cross paths with them.",
+            "next": 6201703
+          },
+          {
+            "id": 6201703,
+            "content": "As before, the four young Knights emerge together from the mist.\nYet their blood-stained figures linger sharp in your memory. For a moment, you cannot tell which is crueller — for them, doomed to die in despair time after time... or for you, condemned to watch them die again and again.",
+            "next": 6201704
+          },
+          {
+            "id": 6201704,
+            "content": "\"Is this the right way, Captain?\"\nThe young blonde Knight bounds up the ancient steps in a rush, then leaps down in one swift motion.\n\"It just looks like a ruin to me.\"",
+            "speakerName": "Cathy",
+            "next": 6201705
+          },
+          {
+            "id": 6201705,
+            "content": "\"At least I know we haven't been here before.\"\nThe young captain strides past her with measured steps.\n\"Navigating the Sacred Lake is impossible. We'll just have to take it step by step.\"",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201706,
+                "content": "Turn back... while you still can.",
+                "next": 6201707
+              },
+              {
+                "id": 6201716,
+                "content": "Brave Knights, may the Goddess of the Full Moon watch over your journey.",
+                "next": 6201717
+              }
+            ]
+          },
+          {
+            "id": 6201707,
+            "content": "\"Hmm? And you are...?\"",
+            "speakerName": "Flynn",
+            "next": 6201708
+          },
+          {
+            "id": 6201717,
+            "content": "\"Hm?\"\nYour sudden blessing leaves the young man bewildered.\n\"And you are...?\"",
+            "speakerName": "Flynn",
+            "next": 6201718
+          },
+          {
+            "id": 6201708,
+            "content": "\"You're friends of Lisbell, right? She asked me to warn you: the Abyss is far more perilous than you imagine. No single squad can withstand it. Go back — do not throw your lives away.\"\nYou do not care if it is nothing but a lie. So long as they survive <W>this time</>, it is worth it.",
+            "npc": 910004,
+            "next": 6201709
+          },
+          {
+            "id": 6201718,
+            "content": "\"You're friends of Lisbell, right? She asked me to warn you: the Abyss is far more perilous than you imagine. You will face trials beyond anything you know. Be prepared.\"",
+            "npc": 910004,
+            "next": 6201719
+          },
+          {
+            "id": 6201709,
+            "content": "\"Really!? You know Dame Lisbell? Is she safe? Where is she?\"",
+            "speakerName": "Cathy",
+            "next": 6201710
+          },
+          {
+            "id": 6201719,
+            "content": "\"Really!? You know Dame Lisbell? Is she safe? Where is she?\"",
+            "speakerName": "Cathy",
+            "next": 6201720
+          },
+          {
+            "id": 6201710,
+            "content": "\"Hold on, Kathy.\"\nThe Priest draws her back, his eyes narrowing with suspicion.\n\"Dame Lisbell is not one to falter. Please do not use her name to deceive us. Besides, this campaign was decreed by His Holiness the Pope himself. Even if the road before us is hell itself, we will not retreat.\"",
+            "speakerName": "Milton",
+            "next": 6201711
+          },
+          {
+            "id": 6201720,
+            "content": "\"Hold on, Kathy. It's not wise to trust someone we've just met.\"\nThe Priest draws her back, his eyes narrowing with suspicion.\n\"Dame Lisbell is not of such a sober temperament. I can scarcely imagine her speaking with such gravity. Besides, this campaign was decreed by His Holiness the Pope himself. We will do our utmost. We need no further reminder.\"",
+            "speakerName": "Milton",
+            "next": 6201721
+          },
+          {
+            "id": 6201711,
+            "content": "You let out a quiet sigh.\nSo often, when people speak of \"hell,\" they scarcely grasp its true meaning.",
+            "next": 6201712
+          },
+          {
+            "id": 6201721,
+            "content": "\"I, for one, believe this traveller speaks truth. Dwell in this place long enough, and even madness itself begins to seem ordinary — what is a shift in temperament compared to that?\"\nThe Sorceress lifts her head, fixing her deep eyes upon you as though to unravel a riddle.\n\"Who are you, truly? I cannot shake the feeling... that I have seen you before.\"",
+            "speakerName": "Calista",
+            "next": 6201722
+          },
+          {
+            "id": 6201712,
+            "content": "\"You tell us to turn back...\"\nThe cloaked Sorceress fixes you with her deep gaze, her voice cold as ever.\n\"But really... it wouldn't make a difference, would it?\"",
+            "speakerName": "Calista",
+            "next": 6201713
+          },
+          {
+            "id": 6201722,
+            "content": "\"...My name doesn't matter.\"\nYou look upon the young Knights and offer an earnest smile.\n\"All you need to know is that my blessing is sincere. Even if the end has already been written... I pray you may still find meaning in the journey.\"",
+            "npc": 910004
+          },
+          {
+            "id": 6201713,
+            "content": "It is a question you cannot answer.\nShe is right. Even if they turn back, they will never find their way again. In this Abyss, \"forward\" and \"backward\" are nothing but self-deception.\nTo truly save them, there is only one path — to end this cycle of despair.",
+            "next": 6201714
+          },
+          {
+            "id": 6201714,
+            "content": "\"My friends...\"\nYou place a hand solemnly over your chest and look upon the young Knights.\n\"<H>May the Goddess of Fate bathe you in a thousand beams of moonlight, and may your wings shine for ever, flawless as the full moon.</>\"",
+            "npc": 910004,
+            "next": 6201715
+          },
+          {
+            "id": 6201715,
+            "content": "At your words of blessing, a faint, sorrowful smile touches Calista's lips. And in that moment you realise: perhaps what she truly wished... was for you to contradict her. Even with a lie."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 18,
-    "storyEventName": "Crimson upon the Snow-White Pinion: (Ⅰ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Crimson upon the Snow-White Pinion: (Ⅰ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story11",
+    "condition": [
       5199,
       5198,
       5080
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story11.T_Rouge_Story11'",
-    "eventMoment": 0,
-    "eventMinRoom": 11,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 11,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story32",
-    "rlArchiveSubId": 20000801,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "175490527999910666452",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "175490527999910666450"
+        ],
+        "dialogues": [
+          {
+            "id": 6201801,
+            "content": "From a distance, you glimpse two familiar figures hemmed in by a horde of Abyssoids — Milton and Calista.\nThey fight in perfect accord, cutting through wave after wave, yet still the tide does not relent.\nYou lift your Lantern and advance. At the Glazeystal's radiant glow, the Abyssoids recoil — if only for a moment.",
+            "next": 6201802
+          },
+          {
+            "id": 6201802,
+            "content": "\"You... you are the one from before.\"\nThe Priest startles, then drops his gaze in quiet shame.\n\"I spoke harshly before, yet still you came to our aid. I pray you, accept both my apology and my gratitude, mysterious traveller.\"",
+            "speakerName": "Milton",
+            "next": 6201803
+          },
+          {
+            "id": 6201803,
+            "content": "\"So it's true... you're no ordinary soul. My thanks.\"\nThe Sorceress lowers her hood in greeting, the same jet-black hair tumbling free.\n\"That lantern you carry... is it some holy relic? By what power does it drive the Abyssoids away?\"",
+            "speakerName": "Calista",
+            "options": [
+              {
+                "id": 6201804,
+                "content": "Someone entrusted it to me.",
+                "next": 6201805
+              }
+            ]
+          },
+          {
+            "id": 6201805,
+            "content": "\"If that is so, I shall not pry. Yet with such a lantern, our way through the Abyss would be far lighter. Might we walk at your side?\"",
+            "speakerName": "Calista",
+            "next": 6201806
+          },
+          {
+            "id": 6201806,
+            "content": "\"I don't mind. But know this — my path is not yours. I'm only here to restore the lantern, gathering shards of Glazeystal.\"",
+            "npc": 910004,
+            "next": 6201807
+          },
+          {
+            "id": 6201807,
+            "content": "\"At this point, our mission scarcely matters... Yet something tells me that with you, we stand a better chance of uncovering the truth of the Abyss.\"",
+            "speakerName": "Calista",
+            "next": 6201808
+          },
+          {
+            "id": 6201808,
+            "content": "\"What nonsense is that, Calista?\" \nBefore you can reply, the Priest cuts in sharply.\n\"Though parted from the others, we are still Knights of Elysium. Even if but one remains, our duty endures!\"",
+            "speakerName": "Milton",
+            "next": 6201809
+          },
+          {
+            "id": 6201809,
+            "content": "\"Heh... duty. Is your head filled with nothing but hollow oaths?\"\nThe Sorceress's voice flares, quiver rattling with each sharp movement.\n\"Look at what we have faced here — Filthoids, Phantasms, wandering shades and spirits. If those above are right, and the Sacred Lake really leads to the Heaven above Heavens... then what are these Abyssoids we must cut down? Does this not resemble more a demon's den, as the Noclunism once—\"",
+            "speakerName": "Calista",
+            "next": 6201810
+          },
+          {
+            "id": 6201810,
+            "content": "\"Y—You are mad! You speak like a heretic!\"\nHe clings to his composure, yet a faint hesitation threads his voice.\n\"Those Abyssoids... perhaps their faith faltered, and they failed the last trial. If we sweep aside these obstacles, the Sacred Lake may yet be restored. Perhaps this is the trial ordained by the Great Nine Themselves — and if we remain steadfast, their protection shall shield us from harm...\"",
+            "speakerName": "Milton",
+            "next": 6201811
+          },
+          {
+            "id": 6201811,
+            "content": "\"If your gods truly cared, they'd descend themselves to cleanse this hell.\"\nA bitter laugh breaks from her, fading into a weary sigh.\n\"Perhaps we were sent only to die. The purge was never the point — what mattered was sacrifice upon sacrifice, to sate the Abyss. Many of the Abyssoids we have faced... were Knights sent before us.\"",
+            "speakerName": "Calista",
+            "next": 6201812
+          },
+          {
+            "id": 6201812,
+            "content": "\"They were veterans — older, stronger, wiser, tempered by countless wars. Yet they too fell, and now they haunt us as Abyssoids. There is no escape. Madness or death awaits us all — sooner or later.\"",
+            "speakerName": "Calista",
+            "next": 6201813
+          },
+          {
+            "id": 6201813,
+            "content": "The Priest's lips press tight, his face drawn. He grips his staff to mask the tremor in his hands.\nAt length, he speaks again, his voice outwardly composed.\n\"...Given the circumstances, I shall pretend I never heard those words. Flynn is absent, and by rank the command falls to me. I order you: cease your slander of the Doctrine and the Saints, and fulfil your duty as a Knight.\"",
+            "speakerName": "Milton",
+            "next": 6201814
+          },
+          {
+            "id": 6201814,
+            "content": "\"...Very well. Dying sooner is no ill fate.\"\nShe bows her head and draws her hood once more, as though yielding to her fate.\n\"Even so... as your friend, I must ask — if your faith rests upon falsehoods, is it truly worth dying for?\"",
+            "speakerName": "Calista",
+            "next": 6201815
+          },
+          {
+            "id": 6201815,
+            "content": "\"...\" \nThe Priest gives no answer, only shakes his head in silence. At last he steps forward and bows to you. \n\"Forgive our unseemly quarrel. We are resolved now. Once we have taken our rest, we shall continue onward. Farewell, kind traveller. May the Goddess of the Full Moon watch over your journey.\"",
+            "speakerName": "Milton",
+            "options": [
+              {
+                "id": 6201816,
+                "content": "May the Goddess of the Full Moon watch over yours as well.",
+                "next": 6201817
+              },
+              {
+                "id": 6201818,
+                "content": "I fear the Goddess of the Full Moon has little aid left for me.",
+                "next": 6201819
+              },
+              {
+                "id": 6201820,
+                "content": "I think... perhaps what truly matters is not faith, but courage.",
+                "next": 6201821
+              }
+            ]
+          },
+          {
+            "id": 6201817,
+            "content": "At your words, Milton smiles faintly, as though at peace. Calista turns aside in silence, her face hidden.\nWith a final nod, you turn and walk away."
+          },
+          {
+            "id": 6201819,
+            "content": "At your words, Milton averts his eyes, clearly uneasy, but remains silent. Calista gives a sorrowful smile, then lowers her head in weary resignation.\nWith a final nod, you turn and walk away."
+          },
+          {
+            "id": 6201821,
+            "content": "At your words, Milton and Calista trade a surprised glance, then sink into thoughtful silence.\nYou add nothing more — for the words were not your own, and even now their meaning eludes you.\nWith a final nod, you turn and walk away."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 19,
-    "storyEventName": "Crimson upon the Snow-White Pinion: (Ⅱ)",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "Crimson upon the Snow-White Pinion: (Ⅱ)",
+    "type": "Story",
+    "icon": "T_Rouge_Story12",
+    "condition": [
       5200,
       5198,
       5081
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story12.T_Rouge_Story12'",
-    "eventMoment": 0,
-    "eventMinRoom": 20,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 20,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story33",
-    "rlArchiveSubId": 20000802,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "175490530825311863970",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "175490530825311863968"
+        ],
+        "dialogues": [
+          {
+            "id": 6201901,
+            "content": "A sharp, ominous tang of blood drifts from ahead.\nThe depthless dark, the crushing silence — everything warns there is nothing here worth seeking. And yet, a strange premonition stirs within you... as though something waits, willing you to venture into the void. And so, you step forward.",
+            "next": 6201902
+          },
+          {
+            "id": 6201902,
+            "content": "Suddenly, pale gleams break across the dark — no, not light. You peer closer, and see them for what they are: the bleached husks of Filthoids, piled one upon another, as if some heretic painter had hurled his strokes in a drunken frenzy.\nYou flinch back — and two familiar figures take shape beside you.",
+            "next": 6201903
+          },
+          {
+            "id": 6201903,
+            "content": "\"Cough... cough... This just never ends...\"\nThe Sorceress wipes the blood from her lips, her longbow slipping from her grasp.\n\"That was my last arrow. It's magic or nothing now. Ha... that should count as devotion to your gods. Just don't throw me into some mass grave. Let my body at least remain whole.\"",
+            "speakerName": "Calista",
+            "next": 6201904
+          },
+          {
+            "id": 6201904,
+            "content": "\"Don't say that — look out!\"\nThe Priest lashes his staff through the dark, its tip bursting with light.\n\"Tch... more Abyssoids...\"",
+            "speakerName": "Milton",
+            "next": 6201905
+          },
+          {
+            "id": 6201905,
+            "content": "You wheel around with Calista, watching them surge forward, rolling over the shattered Filthoid husks like another stroke of ruin across a grotesque canvas.\nYou raise your Lantern in haste — but it does nothing. And then you see it: the Lantern's glow passes straight through Milton's staff.",
+            "next": 6201906
+          },
+          {
+            "id": 6201906,
+            "content": "And it strikes you — this is no reality, but the echo of a memory. You stand at their side, yet powerless, forced only to watch as they bleed, falter, and fall.",
+            "next": 6201907
+          },
+          {
+            "id": 6201907,
+            "content": "The Abyssoids dwindle. Four remain... then three... two... one. If either Knight had a breath of strength left.\nIf their comrades had reached them in time. If a single shard of Glazeystal had lain close at hand... They might have won. They might have lived.\nBut no. Nothing. All that remains is you — the bystander who came too late.",
+            "next": 6201908
+          },
+          {
+            "id": 6201908,
+            "content": "A human-shaped Abyssoid lurches near — once their senior, comrade, perhaps even friend. His black spear thrusts straight for Calista's heart.\nYou shut your eyes, unwilling to see.",
+            "next": 6201909
+          },
+          {
+            "id": 6201909,
+            "content": "\"Milton...!? You... why...?\"",
+            "speakerName": "Calista",
+            "next": 6201910
+          },
+          {
+            "id": 6201910,
+            "content": "You open them again — the spear has pierced Milton's chest instead. The Abyssoid dissolves into mist, and he crumples, blood soaking the immaculate robes he had kept so carefully.",
+            "next": 6201911
+          },
+          {
+            "id": 6201911,
+            "content": "\"What... what have you done...? You...\"\nThe Sorceress falls to her knees beside him, frantic, weaving a healing spell — in vain.\n\"Did you not call me a heretic...? Then why... why waste your life on me? Weren't you so bent on proving your faith? Then why cast your life away like this?\"",
+            "speakerName": "Calista",
+            "next": 6201912
+          },
+          {
+            "id": 6201912,
+            "content": "\"Because my faith taught me... to protect my comrades. Doubt it if you must... but of this I am certain.\"\nFor the first time, the stern Priest's face softens — a smile warm and human, belonging wholly to the man himself.\n\"I have given the gods enough already... so let me speak once for myself. Calista... cast aside the oaths, the duty. Leave this place. Live.\"",
+            "speakerName": "Milton",
+            "next": 6201913
+          },
+          {
+            "id": 6201913,
+            "content": "\"What...?\"",
+            "speakerName": "Calista",
+            "next": 6201914
+          },
+          {
+            "id": 6201914,
+            "content": "\"Once I am gone, you will be your own commander. Free to act as you will. As you always said... run. Escape the Abyss. Or seek out that traveller. Whatever it takes — live.\"",
+            "speakerName": "Milton",
+            "next": 6201915
+          },
+          {
+            "id": 6201915,
+            "content": "Tears streak down her pale cheeks, falling onto his robes, softening the clotted blood.\n\"But now that I'm all alone... how far could I possibly go...?\"",
+            "speakerName": "Calista",
+            "next": 6201916
+          },
+          {
+            "id": 6201916,
+            "content": "\"You're speaking nonsense again...\"\nWith trembling fingers — the same hand that once gripped his staff with unyielding strength — he unfastens the insignia from his chest and presses it into her palm.\n\"You were always the best among us. From the day we entered this place, you were the first to see the truth, the first to question it with courage. You... can endure. I believe in you...\"",
+            "speakerName": "Milton",
+            "next": 6201917
+          },
+          {
+            "id": 6201917,
+            "content": "The Phantasms fade before Calista can answer.\nIn the stillness, you find the Priest's body — cold, lifeless. Black mist seeps from his wound. Soon, he too will rise as a restless Abyssoid.",
+            "options": [
+              {
+                "id": 6201918,
+                "content": "(Help him end his suffering.)",
+                "next": 6201919
+              },
+              {
+                "id": 6201920,
+                "content": "(You cannot bring yourself to strike.)",
+                "next": 6201921
+              }
+            ]
+          },
+          {
+            "id": 6201919,
+            "content": "Before the transformation completes, you raise your Lantern and grant him release.\n\"Thank you...\"\nPerhaps you truly heard the words. Or perhaps they were only in your mind — a comfort you chose to believe."
+          },
+          {
+            "id": 6201921,
+            "content": "You step back, unable to raise your hand.\nBut the Abyssoid stirs. That pale hand — once fallen limp from his friend's grasp — closes once more around his staff, lashing out at you.\nWith a weary sigh, you lift your blade and strike him down. As always."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 20,
-    "storyEventName": "May the Wind Guide Your Wings",
-    "storyEventType": "Story",
-    "eventCondition": [
+    "name": "May the Wind Guide Your Wings",
+    "type": "Story",
+    "icon": "T_Rouge_Story14",
+    "condition": [
       5201,
       5198
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story14.T_Rouge_Story14'",
-    "eventMoment": 1,
-    "eventMinRoom": 20,
-    "eventProbability": [
+    "moment": 1,
+    "minRoom": 20,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story34",
-    "rlArchiveSubId": 20000901,
-    "cutOffEvent": true
+    "cutOffEvent": true,
+    "eventStoryline": [
+      {
+        "id": "175490533304413061627",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "175490533304413061625"
+        ],
+        "dialogues": [
+          {
+            "id": 6202001,
+            "content": "Once again, you reach the cycle's end.\nThe Glazeystal you hold is still too little to face the heart of the Abyss. You must rewind time once more.",
+            "next": 6202002
+          },
+          {
+            "id": 6202002,
+            "content": "You drift through the torrent of chaos. You have met Its gaze too many times to fear it; you simply endure the final minutes in calm...\nUntil a familiar figure emerges before you.",
+            "next": 6202003
+          },
+          {
+            "id": 6202003,
+            "content": "\"Ah... it's you... So you're still alive, after all.\"\nShe leans against a shattered wall, her ragged cloak failing to hide the wounds that score her body.\n\"Who... are you? Why is there no fear in your eyes, even after all you have seen?\"",
+            "speakerName": "Calista",
+            "options": [
+              {
+                "id": 6202004,
+                "content": "I have faced It many times, across countless cycles.",
+                "next": 6202005
+              },
+              {
+                "id": 6202006,
+                "content": "Ignorance is bliss.",
+                "next": 6202007
+              }
+            ]
+          },
+          {
+            "id": 6202005,
+            "content": "\"Cycles?\"\nHer eyes kindle with sudden light, like a scholar grasping a riddle at last.\n\"Ah... I see. Now it all makes sense. No wonder your eyes looked on us with such... mercy. You have watched our end, again and again... haven't you? Then soon, I shall be with them once more. If that is true... death no longer seems so frightening.\"",
+            "speakerName": "Calista",
+            "next": 6202008
+          },
+          {
+            "id": 6202007,
+            "content": "\"Heh... you are right. I cannot fathom what you have endured, to bear a calm so... dreadful, and so strong.\"\nHer dark eyes linger on you — gentle, peaceful, like an old friend at parting.\n\"I always felt... you were holding something back. But I believe you had your reasons, just as they had their faith.\"",
+            "speakerName": "Calista",
+            "next": 6202008
+          },
+          {
+            "id": 6202008,
+            "content": "\"Please... take this. Carry it with you, if you can. It is my final request...\"\nWith a trembling hand she presses a worn notebook into yours.\n\"Milton told me to run... but I know I will not make it back. So at the very least... let this life leave behind some worth.\"",
+            "speakerName": "Calista",
+            "next": 6202009
+          },
+          {
+            "id": 6202009,
+            "content": "\"In this Abyss... I spent so long questioning which faith was true. The Goddess of the Full Moon, or the Goddess of the Dark Moon — who was real? I never found the answer, and quarrelled with my friends over it again and again.\"\nShe sighs, half in self-mockery.\n\"Only now do I see: the truth of faith itself matters little. What matters is what its believers do. My friends proved their faith through action — and I believe they did the right thing. So in the end, I choose to give you my blessing... in the name of their faith, true or not.\"",
+            "speakerName": "Calista",
+            "next": 6202010
+          },
+          {
+            "id": 6202010,
+            "content": "\"Then... Traveller...\"\nHer trembling pale hand presses to her chest. Eyes glazed with fading light, she struggles to hold your form in view.\n\"<H>May the Goddess of Fate bathe you in a thousand beams of moonlight, and may your wings shine for ever, flawless as the full moon.</>\"",
+            "speakerName": "Calista",
+            "next": 6202011
+          },
+          {
+            "id": 6202011,
+            "content": "Her breath slips away.\nYou close her eyes with care. A gentle smile lingers on her lips, as though she merely drifted into sleep.",
+            "next": 6202012
+          },
+          {
+            "id": 6202012,
+            "content": "You unfold the notebook she placed in your hands. Though smudged with blood and dirt, the writing is still legible.\n\"I, Calista of the 'Hushed Dusk' squad of the Wingfeather Order under the Elysian Church, set down here what I have observed concerning the Sacred Lake. Should someone find this notebook, may these notes lend the smallest aid to your journey.\"",
+            "next": 6202013
+          },
+          {
+            "id": 6202013,
+            "content": "By lantern-light you skim the pages. Hasty scrawls, likely scratched in the dark, chart Abyssoids and Phantasms — their weaknesses, the means to drive them away. \nOne page arrests your gaze.\n\"It is certain now: the scriptures of the <H>Noclunism</> are not wholly false... The Sacred Lake has no tie to the Heaven above Heavens. The so-called 'summoning' is closer to sacrifice. This place brims with the malice of the dead — a vessel of their lingering spite.\"\n\"My family were devotees of the Noclunism. They worshipped the Abyss and the Goddess of the Dark Moon, and believed that one of the Seven Virtues, <H>Shaliel</>, never ascended to the Heaven above Heavens, but became instead the <H>Demon King</> beneath the lake — the very heart of the Abyss. He devours souls, offering them to Nepha.\"",
+            "next": 6202014
+          },
+          {
+            "id": 6202014,
+            "content": "\"In past years I clung to the Orthodoxy, refusing to believe such horrors. Yet the Abyss questions me at every turn: what if the Noclunism's scriptures were true...? What if our world's end is truly darkness and nothingness?\"\n\"Then... could the Abyss truly be invincible?\"\n\"Alas, this frail body will not endure long enough to learn the answer.\"",
+            "next": 6202015
+          },
+          {
+            "id": 6202015,
+            "content": "Milton once told me about a <H>Holy Sword</> <H>named Koranu</>, shattered here at the Sacred Lake by accident long ago. It was a relic of the Church, said to bear immense power... And I once saw a traveller whose lantern could drive back the Abyssoids.\"\n\"If anything can defeat the Abyss... it may be those two.\"",
+            "next": 6202016
+          },
+          {
+            "id": 6202016,
+            "content": "You find more pages waiting. You turn them quickly, eager to see what further truths she may have set down.\nYet soon you realise these records speak no more of the Abyss.",
+            "next": 6202017
+          },
+          {
+            "id": 6202017,
+            "content": "\"To the one reading this... thank you for coming so far. I ask only this: remember them for me.\"",
+            "next": 6202018
+          },
+          {
+            "id": 6202018,
+            "content": "For a fleeting moment, her words carry you elsewhere, far from the Abyss — to the Elysian Knights' camp.\nA small, lamplit dormitory, warm with quiet light. You open a young Knight's journal... and find the story of her and three companions.",
+            "next": 6202019
+          },
+          {
+            "id": 6202019,
+            "content": "They trained together:\n\"'You four are practically a squad,' the instructor always said. So Flynn took it seriously and insisted we choose a squad name. Kathy, of course, chimed in — those two were always fooling around. But I never thought Milton would humour them. Does he secretly nurse some kind of hero complex?\"\n\"'Hushed Dusk' versus 'Valiant Potatoes' — Flynn's and Kathy's suggestions. Milton and I chose the first without hesitation. Considering the day's lunch was potato stew, I suspect Kathy coined hers on the spot.\"\n\"As for Flynn's 'Dusk'... outsiders might not see it, but we all knew it was a secret homage to his beloved Moonrise Knight.\"",
+            "next": 6202020
+          },
+          {
+            "id": 6202020,
+            "content": "They fought together:\n\"On marches, Kathy would always vanish. At first we panicked, but she always turned up again in the strangest places, giving us a fright. In time, we grew used to it. Still... how does she manage it? She's hardly the type to master teleportation magic...\"\n\"Milton, that hopeless bookworm, actually carried books onto the battlefield, claiming he'd read in spare moments. Unbelievable...\"\n\"Later, one of the Empire's fire arrows burned the lot to ash. He sulked for an entire day. Honestly, he should have thanked that soldier — his pack was at least two-thirds lighter afterwards.\"",
+            "next": 6202021
+          },
+          {
+            "id": 6202021,
+            "content": "They undertook the mission together:\n\"To avoid arguments, I never told my parents I'd signed up for the Abyss expedition — only my brother. But even he scolded me, calling it a Church plot, swearing the Demon King would make sacrifices of us... Ugh. All that nagging was exhausting.\"\n\"Truthfully, I never cared about fighting the Abyss. But Flynn was so eager, I couldn't turn him down. In our past battles we were never at the front — we lost more often than we won. He must have longed for a chance to prove himself... So I signed up too — just to help him chase that dream of being a true Knight. As long as we stick together, it doesn't matter where we go.\"",
+            "next": 6202022
+          },
+          {
+            "id": 6202022,
+            "content": "...",
+            "next": 6202023
+          },
+          {
+            "id": 6202023,
+            "content": "You reach the final page.",
+            "next": 6202024
+          },
+          {
+            "id": 6202024,
+            "content": "\"O silent gods — if, as Milton believed, Your gaze is truly upon us... then I beg You: grant me one last mercy.\"\n\"Let my soul be reunited with theirs.\"\n\"Then I will forgive You — Your indifference, Your cruelty. I will forgive every trial You set before us, every lie You wove.\"",
+            "next": 6202025
+          },
+          {
+            "id": 6202025,
+            "content": "<H>\"My wings no longer need the radiance of the full moon. I ask only for a soft wind, to bear me home — to where they wait.\"</>",
+            "next": 6202026
+          },
+          {
+            "id": 6202026,
+            "content": "You close the notebook. The warmth of its pages lingers against your fingertips.",
+            "next": 6202027
+          },
+          {
+            "id": 6202027,
+            "content": "\"I promise... I will break this cycle. And when the full moon shines, it will guide you back to one another.\"",
+            "npc": 910004
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Skill Boost",
+    "subTitle": "Lantern Lid: Blessing of Glory",
+    "icon": "T_Rouge_TalentBranch_Skill"
+  },
+  {
+    "id": 2,
+    "name": "Adaptability Boost",
+    "subTitle": "Lantern Handle: Blessing of Light",
+    "icon": "T_Rouge_TalentBranch_Adaptability"
+  },
+  {
+    "id": 3,
+    "name": "Melee Attack Boost",
+    "subTitle": "Lantern Frame: Blessing of Courage",
+    "icon": "T_Rouge_Talent_Melee_AttackUP"
+  },
+  {
+    "id": 4,
+    "name": "Ranged Attack Boost",
+    "subTitle": "Lantern Base: Blessing of Justice",
+    "icon": "T_Rouge_Talent_Range_AttackUP"
+  }
+]

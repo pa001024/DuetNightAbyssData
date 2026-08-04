@@ -5,8 +5,8 @@
     "desc": "근접 무기 공격이 <Highlight>30.0%</> 상승한다.",
     "simpleDesc": "근접 무기 <Highlight>공격</> 상승",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -20,7 +20,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 1,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -29,8 +28,8 @@
     "desc": "근접 무기 발동 확률이 <Highlight>135.0%</> 상승한다.",
     "simpleDesc": "근접 무기 <Highlight>발동 확률</> 상승",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -44,7 +43,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 2,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -53,8 +51,8 @@
     "desc": "근접 무기 <Highlight>기본 공격 대미지</>가 <Highlight>15.0%</> 상승한다.",
     "simpleDesc": "근접 무기 <Highlight>기본 공격 대미지</> 상승",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -68,7 +66,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 3,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -77,8 +74,8 @@
     "desc": "<Highlight>8.0</>m 내의 적이 처치될 시, 자신이 HP를 <Highlight>4.5%</> 회복한다.",
     "simpleDesc": "<Highlight>가까운</> 적 처치 시, 자신의 HP 회복",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -92,7 +89,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 4,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -101,8 +97,8 @@
     "desc": "자신 주변 <Highlight>8.0</>m 내에 있거나 [염화]를 보유한 적으로부터 받는 대미지가 <Highlight>20.0%</> 감소한다.",
     "simpleDesc": "<Highlight>가까운 곳</>에 있거나 [염화]를 보유한 적으로부터 받는 대미지가 감소한다.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -117,7 +113,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 5,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -126,8 +121,8 @@
     "desc": "대미지를 받을 때 자신 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다. 해당 효과는 <Highlight>1.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "대미지를 받을 시 <Highlight>가까운 곳</>의 적에게 [염화]를 부여한다.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -142,7 +137,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 6,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -151,8 +145,8 @@
     "desc": "근접 무기의 <Highlight>크리티컬 확률</>이 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "근접 무기 <Highlight>크리티컬 확률</> 상승",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -166,7 +160,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 7,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -175,8 +168,8 @@
     "desc": "근접 무기의 <Highlight>크리티컬 대미지</>가 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "근접 무기 <Highlight>크리티컬 대미지</> 상승",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -190,7 +183,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 8,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -199,8 +191,8 @@
     "desc": "근접 무기 <Highlight>낙하 공격, 차지 공격, 슬라이드 공격 대미지</>가 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "근접 무기 <Highlight>낙하 공격, 차지 공격, 슬라이드 공격 대미지</> 상승",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -214,7 +206,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 9,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -223,8 +214,8 @@
     "desc": "<Highlight>1.0</>초마다 주변 <Highlight>8</>m 내의 적에게 [염화] <Highlight>1</>단계를 부여한다.",
     "simpleDesc": "일정 시간마다 <Highlight>가까운 곳</>의 적에게 [염화]를 부여한다.",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -239,7 +230,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 10,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -248,8 +238,8 @@
     "desc": "<Highlight>2.0</>단계 이상의 [염화]를 보유한 적에게 대미지를 입힐 시, 자신이 HP를 <Highlight>3.0%</> 회복한다. 해당 효과는 <Highlight>0.5</>초마다 최대 1회 발동한다.",
     "simpleDesc": "[염화]를 보유한 적에게 대미지를 입힐 시, HP를 회복한다.",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -264,7 +254,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 11,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -273,8 +262,8 @@
     "desc": "근접 무기 <Highlight>공격 속도</>가 <Highlight>60.0%</> 상승하고, <Highlight>공격 범위</>가 <Highlight>2.25</> 증가한다.",
     "simpleDesc": "근접 무기 <Highlight>공격 속도</>와 <Highlight>공격 범위</> 증가",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -288,7 +277,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 12,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -297,8 +285,8 @@
     "desc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>30.0%</> 이하로 감소하면 추가로 캐릭터 공격력 <Highlight>5400.0%</>의 대미지를 1회 입힌다. 해당 효과는 같은 대상에게 <Highlight>10.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "어떠한 대미지로 인해 대상의 HP가 <Highlight>낮을</> 때 <Highlight>추가</> 대미지 부여",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -312,7 +300,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 13,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -321,8 +308,8 @@
     "desc": "근접 무기로 대미지를 입힐 시, 대상의 [염화]가 <Highlight>4.0</>단계 이상일 때 추가로 캐릭터 공격력 <Highlight>90.0%</>의 대미지를 입힌다.",
     "simpleDesc": "근접 무기가 [염화] 단계가 높은 적에게 <Highlight>추가로</> 대미지를 입힌다.",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -337,7 +324,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 14,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -346,8 +332,8 @@
     "desc": "자신의 주위에 <Highlight>8</>m 내 적이 적을수록, 입히는 대미지가 높아진다. 최대 <Highlight>90.0%</> 상승",
     "simpleDesc": "<Highlight>가까운</> 적이 적을수록, 입히는 대미지 상승",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -362,7 +348,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 15,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -371,8 +356,8 @@
     "desc": "원거리 무기 <Highlight>공격</>이 <Highlight>30.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 <Highlight>공격</> 상승",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -386,7 +371,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 16,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -395,8 +379,8 @@
     "desc": "원거리 무기 <Highlight>발동 확률</>이 <Highlight>135.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 <Highlight>발동 확률</> 상승",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -410,7 +394,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 17,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -419,8 +402,8 @@
     "desc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자]를 생성한다. 해당 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다. [Ⅱ 단계] 효과 활성화 시, 추가로 [초소형 부유하는 달] <Highlight>1</>개를 생성한다.",
     "simpleDesc": "원거리 무기로 대미지를 입힐 시 [탄약 보급 상자] 생성",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -434,7 +417,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 18,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -443,8 +425,8 @@
     "desc": "드롭 아이템 습득 시, <Highlight>45.0</> 오버로드 실드를 획득한다. 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "드롭 아이템을 습득 시, 오버로드 실드를 획득한다.",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -458,7 +440,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 19,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -467,8 +448,8 @@
     "desc": "대미지를 입힐 시 [활성화된 스멜링 솔트] 또는 [정신 집중의 이슬]을 생성한다. 효과는 <Highlight>6.0</>초마다 최대 1회 발동한다. [부유하는 달] Ⅱ 효과 활성화 시, 추가로 <Highlight>1</>발의 [초소형 부유하는 달]을 생성한다.",
     "simpleDesc": "대미지를 입힐 시 [활성화된 스멜링 솔트] 또는 [정신 집중의 이슬] 생성",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -482,7 +463,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 20,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -491,8 +471,8 @@
     "desc": "자신 <Highlight>20</>m 범위 내에 적이 있을 때, [Ⅲ 단계] 효과가 활성화된 경우, 캐릭터 공격력이 <Highlight>30.0%</> 상승한다. 그렇지 않을 경우 <Highlight>15.0%</> 상승한다.",
     "simpleDesc": "자신 주변 일정 범위 내에 적이 있을 시, 캐릭터 공격력이 상승한다.",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -506,7 +486,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 21,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -515,8 +494,8 @@
     "desc": "원거리 무기의 <Highlight>크리티컬 확률</>이 <Highlight>100.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 <Highlight>크리티컬 확률</> 상승",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -530,7 +509,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 22,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -539,8 +517,8 @@
     "desc": "원거리 무기의 <Highlight>크리티컬 대미지</>가 <Highlight>100.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 <Highlight>크리티컬 대미지</> 상승",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -554,7 +532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 23,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -563,8 +540,8 @@
     "desc": "HP 백분율 또는 정신력 백분율이 <Highlight>50.0%</> 이하일 시, <Highlight>[사막의 자원]</>의 보급 생성 확률이 <Highlight>100.0%</>까지 상승한다.\nHP 백분율, 정신력 백분율 또는 탄약 비축이 <Highlight>50.0%</> 이하일 시, [초소형 부유하는 달]의 생성 수량이 <Highlight>100%</> 상승한다.",
     "simpleDesc": "HP 또는 정신력이 낮을 시, [사막의 자원]이 상응하는 보급의 드롭 확률 상승",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -579,7 +556,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 24,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -588,8 +564,8 @@
     "desc": "드롭 아이템을 습득 시, 추가로 <Highlight>6.0</>의 정신력을 회복한다.",
     "simpleDesc": "드롭 아이템을 습득 시, 추가로 정신력 회복",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -603,7 +579,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 25,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -612,8 +587,8 @@
     "desc": "마령 지원 쿨타임 시간이 <Highlight>50.0%</> 단축된다.",
     "simpleDesc": "마령 지원 쿨타임 시간 감소",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -627,7 +602,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 26,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -636,8 +610,8 @@
     "desc": "원거리 무기의 <Highlight>다중 사격</>이 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 <Highlight>다중 사격</> 상승",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -651,7 +625,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 27,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -660,8 +633,8 @@
     "desc": "원거리 무기의 <Highlight>공격 속도</>가 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 <Highlight>공격 속도</> 상승",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -675,7 +648,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 28,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -684,8 +656,8 @@
     "desc": "자신과의 거리가 <Highlight>8.0</>m 이상인 대상에게 원거리 무기 대미지를 입힐 시, 받는 원거리 무기 대미지 <Highlight>2.4%</> 상승 효과 1단계를 부여한다. 최대 <Highlight>120.0%</>까지 상승.",
     "simpleDesc": "자신과의 거리가 먼 대상에게 원거리 무기 대미지를 입힐 시, 대상이 받는 원거리 대미지가 점점 상승한다.",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -700,7 +672,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 29,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -709,8 +680,8 @@
     "desc": "<Highlight>2</>초 이상 이동하면, 이동이 멈출 때까지, 자신이 받는 대미지가 <Highlight>40.0%</> 감소한다.\n<Highlight>2</>초 이상 이동을 멈추면, 이동할 때까지, 자신이 입히는 대미지가 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "<Highlight>2</>초 이상 이동하면, 이동이 멈출 때까지, 자신이 받는 대미지 감소\n<Highlight>2</>초 이상 이동을 멈추면, 이동할 때까지, 자신이 입히는 대미지 상승",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -724,7 +695,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 30,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -733,8 +703,8 @@
     "desc": "스킬 범위가 <Highlight>45.0%</> 상승한다.",
     "simpleDesc": "스킬 범위 상승",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -746,7 +716,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 31,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -755,8 +724,8 @@
     "desc": "스킬 지속이 <Highlight>45.0%</> 상승한다.",
     "simpleDesc": "스킬 지속 상승",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -768,7 +737,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 32,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -777,8 +745,8 @@
     "desc": "스킬 효율이 <Highlight>22.5%</> 상승한다.",
     "simpleDesc": "스킬 시전 시, 스킬 효율 상승 효과 획득",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -790,7 +758,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 33,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -799,8 +766,8 @@
     "desc": "스킬 시전 시, <Highlight>6.0</>의 정신력을 회복한다. 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "스킬 시전 시, 정신력 회복",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -812,7 +779,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 34,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -821,8 +787,8 @@
     "desc": "스킬 시전 시, 최대 실드의 <Highlight>15.0%</>만큼의 실드를 회복한다. 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "스킬 시전 시, 실드 회복",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -834,7 +800,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 35,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -843,8 +808,8 @@
     "desc": "스킬 속도가 <Highlight>15.0%</> 상승한다.",
     "simpleDesc": "스킬 속도 상승",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -858,7 +823,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 36,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -867,8 +831,8 @@
     "desc": "최대 정신력이 <Highlight>120.0%</> 상승한다.",
     "simpleDesc": "최대 정신력 상승",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -880,7 +844,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 37,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -889,8 +852,8 @@
     "desc": "정신력 비율이 <Highlight>50.0%</> 미만일 때, 받는 대미지가 <Highlight>30.0%</> 감소한다.",
     "simpleDesc": "정신력 비율이 낮을 시, 받는 대미지 감소",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -902,7 +865,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 38,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -911,8 +873,8 @@
     "desc": "정신력 비율이 <Highlight>50.0%</>까지 감소하면, <Highlight>5.0</>초 내 매초 <Highlight>12.0</>의 정신력을 회복한다. 효과는 <Highlight>20.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "정신력 비율이 낮을 시, 매초 정신력 회복",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -924,7 +886,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 39,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -933,8 +894,8 @@
     "desc": "스킬 시전 시, <Highlight>15.0</>단계의 [화광]을 획득한다.",
     "simpleDesc": "스킬 시전 시, 일정 중첩의 <Highlight>[화광]</> 획득",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -948,7 +909,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 40,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -957,8 +917,8 @@
     "desc": "[반짝임] 상태에서 매초 정신력을 <Highlight>6.0</> 회복한다.",
     "simpleDesc": "[반짝임] 상태에서 매초 정신력을 회복한다.",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -972,7 +932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 41,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -981,8 +940,8 @@
     "desc": "스킬 위력이 <Highlight>120.0%</> 상승한다.",
     "simpleDesc": "스킬 위력이 상승한다.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -994,7 +953,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 42,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1003,8 +961,8 @@
     "desc": "스킬 대미지가 대상의 방어를 <Highlight>90.0%</> 무시한다.",
     "simpleDesc": "스킬 대미지가 대상의 일부 방어 무시",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1016,7 +974,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 43,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1025,8 +982,8 @@
     "desc": "[반짝임] 상태가 제공하는 스킬 대미지 상승 효과가 <Highlight>225.0%</>까지 상승한다.",
     "simpleDesc": "[반짝임] 상태가 제공하는 스킬 대미지 상승 효과가 상승한다.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1040,7 +997,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 44,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1049,8 +1005,8 @@
     "desc": "[방사]의 발동 간격이 <Highlight>1.0</>까지 감소한다.",
     "simpleDesc": "[방사]의 발동 간격이 감소한다.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1064,7 +1020,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 45,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1073,8 +1028,8 @@
     "desc": "대미지를 입힐 때, <Highlight>15.0%</> 확률로 [루멘 씨앗] 1개를 소환한다. 해당 효과는 <Highlight>3.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "대미지를 입힐 시, 일정 확률로 [루멘 씨앗] 1개를 소환한다.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1088,7 +1043,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 46,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1097,8 +1051,8 @@
     "desc": "소환물 소환 시, 자신의 스킬 위력이 <Highlight>7.5%</> 상승한다. 효과 지속 시간 <Highlight>10.0</>초, 최대 <Highlight>3.0</>단계 중첩.",
     "simpleDesc": "소환물 소환 시, 자신의 스킬 위력이 상승한다.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1112,7 +1066,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 47,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1121,8 +1074,8 @@
     "desc": "소환물 소환 시, 자신의 공격력이 <Highlight>7.5%</> 상승한다. 효과 지속 시간 <Highlight>10.0</>초, 최대 <Highlight>3.0</>단계 중첩.",
     "simpleDesc": "소환물 소환 시, 자신의 공격력 상승",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1136,7 +1089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 48,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1145,8 +1097,8 @@
     "desc": "받는 치료 효과가 <Highlight>60.0%</> 상승한다.",
     "simpleDesc": "받는 치료 효과 상승",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1160,7 +1112,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 49,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1169,8 +1120,8 @@
     "desc": "소환물 소환 시, 자신은 최대 HP의 <Highlight>3.0%</>만큼의 HP를 회복한다.",
     "simpleDesc": "소환물 소환 시, HP 회복",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1184,7 +1135,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 50,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1193,8 +1143,8 @@
     "desc": "소환물 소환 시, 자신은 <Highlight>6.0</>의 정신력을 회복한다.",
     "simpleDesc": "소환물 소환 시, 정신력 회복",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1208,7 +1158,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 51,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1217,8 +1166,8 @@
     "desc": "<Highlight>3.0</>초마다 [루멘 씨앗] 1개를 소환한다.",
     "simpleDesc": "일정 시간마다 [루멘 씨앗] 1개를 소환한다.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1232,7 +1181,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 52,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1241,8 +1189,8 @@
     "desc": "대미지를 받을 때, <Highlight>75.0%</> 확률로 [루멘 씨앗] 1개를 소환한다. 해당 효과는 <Highlight>2.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "대미지를 받을 때, 일정 확률로 [루멘 씨앗] 1개를 소환한다.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1256,7 +1204,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 53,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1265,8 +1212,8 @@
     "desc": "자신의 주위 <Highlight>8</>m 범위 내 소환물이 있으면, 받는 대미지가 <Highlight>30.0%</> 감소한다.",
     "simpleDesc": "자신의 주위에 소환물이 있으면, 받는 대미지 감소",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1280,7 +1227,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 54,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1289,8 +1235,8 @@
     "desc": "치료를 받을 시, 자신이 입히는 대미지가 <Highlight>37.5%</> 상승한다. 지속 시간 3.0초.",
     "simpleDesc": "치료를 받을 시, 단시간 내 입히는 대미지가 상승한다.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1304,7 +1250,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 55,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1313,8 +1258,8 @@
     "desc": "소환물 소환 시, 소환 위치 <Highlight>6</>m 내의 적에게 전투 태세 약화 효과를 부여한다.",
     "simpleDesc": "소환물 소환 시, 소환 위치 주변의 적에게 전투 태세 약화 효과를 부여한다.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1327,7 +1272,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 56,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1336,8 +1280,8 @@
     "desc": "자신의 주위 <Highlight>8</>m 범위 내 소환물이 1개 있을 때마다, 자신은 1단계의 대미지 <Highlight>18.0%</> 상승 효과를 획득한다. 최대 <Highlight>5.0</>단계 중첩.",
     "simpleDesc": "자신의 주위에 소환물이 많을수록, 자신이 입히는 대미지 상승",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1351,7 +1295,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 57,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1360,8 +1303,8 @@
     "desc": "소환물의 공격이 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "소환물의 공격 상승",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1375,7 +1318,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 58,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1384,8 +1326,8 @@
     "desc": "루멘 가지 시리즈가 아닌 소환물을 소환할 때마다 소환 위치에 폭발 충격을 1회 발동해 캐릭터 공격력 <Highlight>3000.0%</>의 대미지를 입힌다.",
     "simpleDesc": "루멘 가지 시리즈가 아닌 소환물을 소환할 때마다 소환 위치에 폭발 충격을 1회 발동한다.",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1399,7 +1341,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 59,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1408,8 +1349,8 @@
     "desc": "[루멘 씨앗]이 [루멘 잎]으로 진화할 확률이 <Highlight>100%</>까지 상승한다.",
     "simpleDesc": "[루멘 씨앗]이 [루멘 잎]으로 진화할 확률이 <Highlight>100%</>까지 상승한다.",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1423,7 +1364,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 60,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1432,8 +1372,8 @@
     "desc": "스파이럴 점프 시, 공격력 <Highlight>18.0%</> 상승 효과를 획득한다. 지속 시간 <Highlight>3.0</>초. 동시에 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다.",
     "simpleDesc": "스파이럴 점프 시 공격력 상승 효과와 [잠식의 그림자]를 획득한다.",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1445,7 +1385,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 57,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1454,8 +1393,8 @@
     "desc": "슬라이드 진입 시, [바람의 날개] 3개를 생성하고, 적 명중 시 캐릭터 공격 <Highlight>90.0%</>의 대미지를 입힌다. 또한 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다.",
     "simpleDesc": "슬라이드 진입 시 [바람의 날개] 3개를 생성하고 [잠식의 그림자]를 획득한다.",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1467,7 +1406,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 58,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1476,8 +1414,8 @@
     "desc": "회피 시, 받는 대미지 <Highlight>15.0%</> 감소 효과를 획득한다. 지속 시간 <Highlight>3.0</>초. 동시에 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다.",
     "simpleDesc": "회피 시 받는 대미지 감소 효과와 [잠식의 그림자]를 획득한다.",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1489,7 +1427,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 59,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1498,8 +1435,8 @@
     "desc": "최대 정신력이 <Highlight>45.0%</> 상승한다.",
     "simpleDesc": "최대 정신력 상승",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1511,7 +1448,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 60,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1520,8 +1456,8 @@
     "desc": "스킬 속도가 <Highlight>15.0%</> 상승한다.",
     "simpleDesc": "스킬 속도가 상승한다.",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1533,7 +1469,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 61,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1542,8 +1477,8 @@
     "desc": "낙하 공격이 적에게 대미지를 입힐 시, [비늘 가루] 영역 1개를 생성하여 영역 내의 적에게 매초 캐릭터 공격력 <Highlight>400.0%</>의 대미지를 입히고 [잠식의 그림자] <Highlight>8.0</>단계를 획득한다. 해당 효과는 <Highlight>8.0</>초마다 1회 발동한다.",
     "simpleDesc": "낙하 공격이 적에게 대미지를 입히는 동시에 [비늘 가루] 영역 1개를 생성하고, [잠식의 그림자]를 획득한다.",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1555,7 +1490,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 62,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1564,8 +1498,8 @@
     "desc": "낙하 공격 대미지가 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "낙하 공격의 대미지 상승",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1577,7 +1511,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 63,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1586,8 +1519,8 @@
     "desc": "근접 공격 범위가 <Highlight>1.5</> 상승한다.",
     "simpleDesc": "근접 공격 범위 상승",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [],
@@ -1599,7 +1532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 64,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1608,8 +1540,8 @@
     "desc": "최대 회피 횟수가 <Highlight>3.0</>회 증가한다.",
     "simpleDesc": "최대 회피 횟수 증가",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1621,7 +1553,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 65,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1630,8 +1561,8 @@
     "desc": "회피 시, [비늘 가루] 영역 1개를 생성하여 영역 내의 적에게 매초 캐릭터 공격력 <Highlight>400.0%</>의 대미지를 입힌다. 해당 효과는 <Highlight>5.0</>초마다 1회 발동한다.",
     "simpleDesc": "회피 시 [비늘 가루] 영역 1개를 생성한다.",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1642,7 +1573,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 66,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1651,8 +1581,8 @@
     "desc": "<Highlight>3.0</>초마다 [잠식의 그림자] <Highlight>1.0</>단계를 획득한다. 자신의 [잠식의 그림자]가 <Highlight>30.0</>단계 이상일 때, 해당 축복으로 [잠식의 그림자] 획득 시 [칼날의 날개] 1개를 발사하여 명중한 적에게 캐릭터 공격력 <Highlight>1200.0%</>의 대미지를 입힌다.",
     "simpleDesc": "일정 시간마다 [잠식의 그림자]를 획득한다. 자신의 [잠식의 그림자]가 일정 단계 이상일 시, 추가로 [칼날의 날개] 1개를 발사한다.",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1664,7 +1594,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 67,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1673,8 +1602,8 @@
     "desc": "최대 회피 횟수 1회당 최대 정신력이 <Highlight>45.0%</> 증가한다.",
     "simpleDesc": "최대 회피 횟수에 따라, 최대 정신력 증가 효과 획득",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1686,7 +1615,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 68,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1695,8 +1623,8 @@
     "desc": "캐릭터 공격력이 <Highlight>120.0%</> 상승한다.",
     "simpleDesc": "캐릭터 공격력이 상승한다.",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1708,7 +1636,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 69,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1717,8 +1644,8 @@
     "desc": "공격 속도가 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "공격 속도가 상승한다.",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1730,7 +1657,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 70,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1739,8 +1665,8 @@
     "desc": "회피 시 공격이 <Highlight>90.0%</> 상승한다. 지속 시간 <Highlight>3.0</>초.",
     "simpleDesc": "회피 시 공격 상승",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1754,7 +1680,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 71,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1763,8 +1688,8 @@
     "desc": "스킬 범위가 <Highlight>45.0%</> 증가한다.",
     "simpleDesc": "스킬 범위 상승",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1778,7 +1703,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 76,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1787,8 +1711,8 @@
     "desc": "대미지를 입힐 시, <Highlight>7.5%</> 확률로 [빛을 품는 벌레] <Highlight>1</>마리를 획득한다.",
     "simpleDesc": "대미지를 입힐 때마다 일정 확률로 [빛을 품는 벌레]를 획득한다.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1802,7 +1726,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 77,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1811,8 +1734,8 @@
     "desc": "<Highlight>7.0</>초마다 [빛을 품는 벌레] <Highlight>1</>마리를 획득한다.",
     "simpleDesc": "<Highlight>10</>초마다 [빛을 품는 벌레]를 획득한다.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1826,7 +1749,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 78,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1835,8 +1757,8 @@
     "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 크리티컬 확률이 <Highlight>7.5%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 크리티컬 확률이 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "원거리 무기 크리티컬 확률 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1850,7 +1772,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 79,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1859,8 +1780,8 @@
     "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 크리티컬 대미지가 <Highlight>7.5%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 크리티컬 대미지가 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "원거리 무기 크리티컬 대미지 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1874,7 +1795,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 80,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1883,8 +1803,8 @@
     "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 발동 확률이 <Highlight>30.0%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 발동 확률이 <Highlight>135.0%</> 상승한다.",
     "simpleDesc": "원거리 무기 발동 확률 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1898,7 +1818,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 81,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1907,8 +1826,8 @@
     "desc": "소환물 입히는 대미지가 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "소환물 입히는 대미지 상승",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1922,7 +1841,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 82,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1931,8 +1849,8 @@
     "desc": "대미지를 받거나 소환물 소환 시, [빛을 품는 벌레] <Highlight>1</>마리를 획득한다. 해당 효과는 <Highlight>3.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "대미지를 받거나 소환물 소환 시, [빛을 품는 벌레]를 획득한다.",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1946,7 +1864,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 83,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1955,8 +1872,8 @@
     "desc": "스킬 효율이 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "스킬 효율 상승",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1970,7 +1887,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 84,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -1979,8 +1895,8 @@
     "desc": "[빛을 품는 벌레] 미휴대 시, 원거리 무기 다중 사격이 <Highlight>7.5%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 원거리 무기 다중 사격이 <Highlight>37.5%</> 상승한다.",
     "simpleDesc": "원거리 무기 다중 사격 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1994,7 +1910,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 85,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2003,8 +1918,8 @@
     "desc": "부활 횟수를 <Highlight>1.0</>회 획득한다. [빛을 품는 벌레] 보유 시, 받는 대미지가 <Highlight>30.0%</> 감소한다. 다음 부활 후 해당 효과는 사라진다.",
     "simpleDesc": "추가 부활 횟수를 획득하고, [빛을 품는 벌레] 보유 시 받는 대미지가 감소한다. 다음 부활 후 해당 효과는 사라진다.",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -2017,7 +1932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 86,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2026,8 +1940,8 @@
     "desc": "[빛을 품는 벌레] 미휴대 시, 모든 속성의 관통이 <Highlight>18.0%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 모든 속성의 관통이 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "모든 속성 관통 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2041,7 +1955,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 87,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2050,8 +1963,8 @@
     "desc": "[빛을 품는 벌레] 미휴대 시, 격양이 <Highlight>18.0%</> 상승한다.\n[빛을 품는 벌레] 휴대 시, 격양이 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "격양 상승, [빛을 품는 벌레] 휴대 시 효과 상승",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2065,7 +1978,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 88,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2074,8 +1986,8 @@
     "desc": "자신의 주변에 적이 있을 때, [빛을 품는 벌레]의 공격 간격이 대폭 단축된다. 지속 시간 <Highlight>5.0</>초, 해당 효과는 <Highlight>10.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "자신의 주위에 적이 있을 때, [빛을 품는 벌레]의 공격 간격 대폭 단축",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2090,7 +2002,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 89,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2099,8 +2010,8 @@
     "desc": "[빛을 품는 벌레]가 입히는 대미지가 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "[빛을 품는 벌레]가 입히는 대미지 상승",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2115,7 +2026,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 90,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2124,8 +2034,8 @@
     "desc": "스킬 지속이 <Highlight>45.0%</> 상승한다.",
     "simpleDesc": "스킬 지속 상승",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2137,7 +2047,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 91,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2146,8 +2055,8 @@
     "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 정신력 자연 회복량이 <Highlight>9.0</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 정신력 자연 회복량이 <Highlight>3.0</> 상승한다.",
     "simpleDesc": "정신력 자연 회복량 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2159,7 +2068,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 92,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2168,8 +2076,8 @@
     "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 발동 확률이 <Highlight>180.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 발동 확률이 <Highlight>90.0%</> 상승한다.",
     "simpleDesc": "근접 무기 발동 확률 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2181,7 +2089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 93,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2190,8 +2097,8 @@
     "desc": "최대 HP가 <Highlight>30.0%</> 상승한다.",
     "simpleDesc": "최대 HP 상승",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2203,7 +2110,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 94,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2212,8 +2118,8 @@
     "desc": "방어력이 <Highlight>90.0%</> 상승한다. 대미지를 입을 때, 입히는 대미지 <Highlight>30.0%</> 상승 효과를 획득한다. 지속 시간 <Highlight>10.0</>초, 효과는 <Highlight>20.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "방어력 상승, 대미지를 입을 때, 입히는 대미지 상승 효과 획득",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2225,7 +2131,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 95,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2234,8 +2139,8 @@
     "desc": "대미지를 입힐 시, 대상 위치에 자신 최대 HP <Highlight>30.0%</>의 범위 대미지를 추가로 1회 입힌다. 해당 효과는 <Highlight>1.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "대미지를 입힐 시, 대상 위치에 추가로 자신의 최대 HP의 범위 대미지 부여",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2247,7 +2152,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 96,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2256,8 +2160,8 @@
     "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 스킬 위력이 <Highlight>60.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 스킬 위력이 <Highlight>30.0%</> 상승한다.",
     "simpleDesc": "스킬 위력 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2269,7 +2173,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 97,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2278,8 +2181,8 @@
     "desc": "입히는 대미지가 <Highlight>30.0%</> 상승하고, HP 비율이 <Highlight>1%</> 감소할 때마다, 효과 배율이 <Highlight>1%</> 증가하고, 최대 <Highlight>60.0%</>까지 증가한다.",
     "simpleDesc": "입히는 대미지 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2291,7 +2194,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 98,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2300,8 +2202,8 @@
     "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 크리티컬 확률이 <Highlight>135.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 크리티컬 확률이 <Highlight>67.5%</> 상승한다.",
     "simpleDesc": "근접 무기 크리티컬 확률 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2313,7 +2215,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 99,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2322,8 +2223,8 @@
     "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 근접 무기 크리티컬 대미지가 <Highlight>135.0%</> 상승한다. HP 비율이 <Highlight>100%</>일 때, 근접 무기 크리티컬 대미지가 <Highlight>67.5%</> 상승한다.",
     "simpleDesc": "근접 무기 크리티컬 대미지 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2335,7 +2236,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 100,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2344,8 +2244,8 @@
     "desc": "대미지를 받을 시, <Highlight>135.0</>의 오버로드 실드를 획득한다. 해당 효과는 <Highlight>5.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "대미지를 입을 때, 오버로드 실드 획득",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2357,7 +2257,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 101,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2366,8 +2265,8 @@
     "desc": "한 번에 받는 대미지가 자신 최대 HP의 <Highlight>25.0%</>을(를) 초과하지 않는다. 최대 HP의 <Highlight>20.0%</>보다 많은 대미지를 받을 경우, <Highlight>5.0</>초 동안 매초 최대 HP의 <Highlight>3.0%</>만큼 회복한다.",
     "simpleDesc": "자신이 1회에 받는 대미지를 제한하고, 높은 대미지를 받은 후, 지속적으로 HP 회복",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2379,7 +2278,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 102,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2388,8 +2286,8 @@
     "desc": "[종결 스킬] 시전 시 모든 방어력을 잃고 해당 수치의 <Highlight>240.0%</>을(를) 캐릭터 공격으로 전환한다. 지속 시간 <Highlight>15.0</>초. 해당 효과는 <Highlight>30.0</>초마다 최대 1회 발동한다.",
     "simpleDesc": "[종결 스킬] 시전 시, 모든 방어력을 잃고 해당 수치를 캐릭터 공격력으로 전환",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2401,7 +2299,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 103,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2410,8 +2307,8 @@
     "desc": "HP 비율이 <Highlight>100%</> 미만일 때, 스킬 대미지는 대상의 <Highlight>90.0%</>의 방어를 무시한다. HP 비율이 <Highlight>100%</>일 때, 스킬 대미지는 대상의 <Highlight>45.0%</>의 방어를 무시한다.",
     "simpleDesc": "스킬 대미지가 대상의 일정 방어를 무시, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2423,7 +2320,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 104,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   },
   {
@@ -2432,8 +2328,8 @@
     "desc": "HP 비율이 <Highlight>40%</> 미만일 때, 필사가 <Highlight>36.0%</> 상승한다. HP 비율이 <Highlight>40%</> 이상일 때, 필사가 <Highlight>18.0%</> 상승한다.",
     "simpleDesc": "필사 상승, HP 비율이 낮을 시 효과 상승",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2447,7 +2343,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 105,
-    "unlockConditionText": "심지 미해제",
     "canSell": 1
   }
 ]

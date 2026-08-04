@@ -2,9 +2,6 @@
   {
     "id": 101,
     "desc": "자신의 받는 치료가 <Highlight>20.0%</> 감소한다.",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
-    ],
     "globalPassiveId": 30101001,
     "heatValue": 1,
     "icon": "T_Rou_Contract_Char_HealDown",
@@ -15,9 +12,6 @@
   {
     "id": 102,
     "desc": "자신의 공격이 <Highlight>20.0%</> 감소한다.",
-    "descValues": [
-      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
-    ],
     "globalPassiveId": 30101002,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Char_SpDown",
@@ -28,9 +22,6 @@
   {
     "id": 103,
     "desc": "적의 최대 HP가 <Highlight>40.0%</> 상승한다",
-    "descValues": [
-      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
-    ],
     "globalPassiveId": 30102001,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon_HpUp",
@@ -41,9 +32,6 @@
   {
     "id": 104,
     "desc": "적의 공격이 <Highlight>20.0%</> 상승한다.",
-    "descValues": [
-      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
-    ],
     "globalPassiveId": 30102002,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon__AtkUp",
@@ -54,9 +42,6 @@
   {
     "id": 105,
     "desc": "적이 받는 대미지가 <Highlight>20.0%</> 감소한다.",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
-    ],
     "globalPassiveId": 30102003,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon_HpUp",

@@ -722,6 +722,13 @@ class BaseProcessor:
             if "SpeakNpcId" in dialogue_data and dialogue_data["SpeakNpcId"]:
                 dialogue_item["npc"] = dialogue_data["SpeakNpcId"]
 
+            # SpeakNpcName 是 textmap 键，翻译后作为说话人名称展示
+            speak_npc_name = dialogue_data.get("SpeakNpcName", "")
+            if speak_npc_name:
+                translated_name = self.get_translated_text(speak_npc_name, language)
+                if translated_name and translated_name != speak_npc_name:
+                    dialogue_item["speakerName"] = translated_name
+
             # NextOptions 与 NextDialogue 互斥：有选项时不走 NextDialogue 分支
             if not has_next_options:
                 if next_dialogue_id:

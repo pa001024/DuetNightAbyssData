@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "スキル効果強化",
+    "subTitle": "ランタンカバー：名誉の加護",
+    "icon": "T_Rouge_TalentBranch_Skill"
+  },
+  {
+    "id": 2,
+    "name": "適性強化",
+    "subTitle": "ランタンハンドル：光の恩恵",
+    "icon": "T_Rouge_TalentBranch_Adaptability"
+  },
+  {
+    "id": 3,
+    "name": "近接強化",
+    "subTitle": "ランタンボディ：勇気の祝福",
+    "icon": "T_Rouge_Talent_Melee_AttackUP"
+  },
+  {
+    "id": 4,
+    "name": "遠隔強化",
+    "subTitle": "ランタンベイス：正義の庇護",
+    "icon": "T_Rouge_Talent_Range_AttackUP"
+  }
+]

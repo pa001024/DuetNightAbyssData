@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "Guardian Knight",
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "activateNeed": [
+      11101,
+      11201
+    ],
+    "groupEffectDesc": "With all <Highlight>2</> [Guardian Knight] Artefacts collected, your character gains Ultra Shield points equal to <Highlight>10%</> Max HP every <Highlight>10</>s while within [Abyssoids]."
+  },
+  {
+    "id": 102,
+    "name": "God of Abundance",
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "activateNeed": [
+      12101,
+      12102,
+      12201
+    ],
+    "groupEffectDesc": "With all <Highlight>3</> [Covenant of the God of Abundance] Artefacts collected, your character gains <Highlight>10%</> DMG Increase for every <Highlight>100</> Embers held.\n If Embers are below <Highlight>200</>, reduces Damage Taken by <Highlight>30%</>."
+  },
+  {
+    "id": 103,
+    "name": "Four Elemental Seals",
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "activateNeed": [
+      13101,
+      13102,
+      13103,
+      13104
+    ],
+    "groupEffectDesc": "With all <Highlight>4</> [Four Elemental Seals] Artefacts collected, sets Trigger Probability to <Highlight>50%</> and Damage Multiplier to <Highlight>100%</>, and converts all damage to True Damage."
+  },
+  {
+    "id": 104,
+    "name": "Penitent Knight",
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "activateNeed": [
+      14101,
+      14201,
+      14202,
+      14301
+    ],
+    "groupEffectDesc": "With all <Highlight>4</> [Penitent Knight] Artefacts collected, removes the penalty and increases total damage bonus to <Highlight>400%</>."
+  },
+  {
+    "id": 105,
+    "name": "Forlorn Sorceress",
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "activateNeed": [
+      15101,
+      15201
+    ],
+    "groupEffectDesc": "With all <Highlight>2</> [Forlorn Sorceress] Artefacts collected, increases [Stance] reduction by <Highlight>100%</>, and damage dealt to enemies under [Ask's Retribution] by <Highlight>100%</>."
+  }
+]

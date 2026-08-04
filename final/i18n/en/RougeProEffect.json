@@ -1,177 +1,83 @@
 [
   {
     "id": 1,
-    "buffType": 1,
     "name": "RandomChoice"
   },
   {
     "id": 2,
-    "buffType": 1,
-    "name": "RecoverTimeAdd",
-    "param": [
-      2
-    ]
+    "name": "RecoverTimeAdd"
   },
   {
     "id": 3,
-    "buffType": 1,
-    "name": "ShopDiscount",
-    "param": [
-      0.8
-    ]
+    "name": "ShopDiscount"
   },
   {
     "id": 4,
-    "buffType": 1,
-    "name": "GetToken",
-    "param": [
-      300
-    ]
+    "name": "GetToken"
   },
   {
     "id": 5,
-    "buffType": 1,
-    "name": "GetTreasure",
-    "param": [
-      4
-    ]
+    "name": "GetTreasure"
   },
   {
     "id": 6,
-    "buffType": 1,
-    "name": "ChoiceNumber",
-    "param": [
-      2
-    ]
+    "name": "ChoiceNumber"
   },
   {
     "id": 7,
-    "buffType": 1,
-    "name": "BlockEffect",
-    "param": [
-      [
-        6
-      ]
-    ]
+    "name": "BlockEffect"
   },
   {
     "id": 8,
-    "buffType": 1,
-    "name": "ShopDiscount",
-    "param": [
-      0.5
-    ]
+    "name": "ShopDiscount"
   },
   {
     "id": 9,
-    "buffType": 1,
-    "name": "BlockEffect",
-    "param": [
-      [
-        8
-      ]
-    ]
+    "name": "BlockEffect"
   },
   {
     "id": 10,
-    "buffType": 1,
-    "name": "ShopDiscount",
-    "param": [
-      0.8
-    ]
+    "name": "ShopDiscount"
   },
   {
     "id": 11,
-    "buffType": 1,
-    "name": "GetToken",
-    "param": [
-      300
-    ]
+    "name": "GetToken"
   },
   {
     "id": 12,
-    "buffType": 1,
-    "name": "ShopDiscount",
-    "param": [
-      0.5
-    ]
+    "name": "ShopDiscount"
   },
   {
     "id": 13,
-    "buffType": 1,
-    "name": "BlockEffect",
-    "param": [
-      [
-        10
-      ]
-    ]
+    "name": "BlockEffect"
   },
   {
     "id": 14,
-    "buffType": 1,
-    "name": "ShopDiscount",
-    "param": [
-      0.8
-    ]
+    "name": "ShopDiscount"
   },
   {
     "id": 15,
-    "buffType": 1,
-    "name": "ActiveStaticPoint",
-    "param": {
-      "ownerView": "true",
-      "point": 1703,
-      "tag": "Hunter"
-    }
+    "name": "ActiveStaticPoint"
   },
   {
     "id": 16,
-    "buffType": 1,
-    "name": "ActiveMonsterSP",
-    "param": {
-      "monsterSpId": 8,
-      "ownerView": "true",
-      "tag": "Hunter"
-    }
+    "name": "ActiveMonsterSP"
   },
   {
     "id": 17,
-    "buffType": 1,
-    "name": "GetTokenByTime",
-    "param": [
-      5,
-      3
-    ]
+    "name": "GetTokenByTime"
   },
   {
     "id": 18,
-    "buffType": 1,
-    "name": "CreateCowEvent",
-    "param": {
-      "monsterSpId": 111,
-      "pointRandomList": [
-        1,
-        2,
-        3,
-        4
-      ]
-    }
+    "name": "CreateCowEvent"
   },
   {
     "id": 19,
-    "buffType": 1,
-    "name": "GetModEveryOne",
-    "param": [
-      1003
-    ]
+    "name": "GetModEveryOne"
   },
   {
     "id": 20,
-    "buffType": 1,
-    "name": "AddBuff",
-    "param": [
-      1003
-    ]
+    "name": "AddBuff"
   },
   {
     "id": 999

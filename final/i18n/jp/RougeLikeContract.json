@@ -2,9 +2,13 @@
   {
     "id": 101,
     "name": "窒息の域",
-    "desc": "自身の受ける回復効果が<Highlight>20.0%</>ダウン。",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    "desc": "自身の受ける回復効果が<Highlight>10.0%</>ダウン。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101001,
     "heatValue": 2,
@@ -14,9 +18,13 @@
   {
     "id": 102,
     "name": "疲労の域",
-    "desc": "自身の攻撃力が<Highlight>20.0%</>ダウン。",
-    "descValues": [
-      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    "desc": "自身の攻撃力が<Highlight>10.0%</>ダウン。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101002,
     "heatValue": 2,
@@ -26,9 +34,18 @@
   {
     "id": 103,
     "name": "繁栄の域",
-    "desc": "敵の最大HPが<Highlight>40.0%</>アップ。",
-    "descValues": [
-      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    "desc": "敵の最大HPが<Highlight>20.0%</>アップ。",
+    "descLevels": [
+      "20.0%",
+      "40.0%",
+      "60.0%",
+      "80.0%",
+      "100.0%",
+      "120.0%",
+      "140.0%",
+      "160.0%",
+      "180.0%",
+      "200.0%"
     ],
     "globalPassiveId": 30102001,
     "heatValue": 2,
@@ -38,9 +55,18 @@
   {
     "id": 104,
     "name": "苦痛の域",
-    "desc": "敵の攻撃力が<Highlight>20.0%</>アップ。",
-    "descValues": [
-      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    "desc": "敵の攻撃力が<Highlight>10.0%</>アップ。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%",
+      "60.0%",
+      "70.0%",
+      "80.0%",
+      "90.0%",
+      "100.0%"
     ],
     "globalPassiveId": 30102002,
     "heatValue": 2,
@@ -50,9 +76,13 @@
   {
     "id": 105,
     "name": "鈍感の域",
-    "desc": "敵の被ダメージが<Highlight>20.0%</>ダウン。",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    "desc": "敵の被ダメージが<Highlight>10.0%</>ダウン。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30102003,
     "heatValue": 3,
@@ -63,7 +93,7 @@
     "id": 106,
     "name": "育種の域",
     "desc": "通常の敵が倒されると、半径<Highlight>4</>メートルの爆発を起こしてダメージを与える。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 30102004,
     "heatValue": 5,
     "icon": "T_Rou_Contract_Mon_Explode",
@@ -72,9 +102,11 @@
   {
     "id": 107,
     "name": "騒動の域",
-    "desc": "戦闘・朦朧の暗影と戦闘・離散の暗影に追加で<Highlight>2.0</>体のホルダーが現れる。",
-    "descValues": [
-      "$#GlobalPassiveData[30103001].Vars.Count$"
+    "desc": "戦闘・朦朧の暗影と戦闘・離散の暗影に追加で<Highlight>1.0</>体のホルダーが現れる。",
+    "descLevels": [
+      "1.0",
+      "2.0",
+      "3.0"
     ],
     "globalPassiveId": 30103001,
     "heatValue": 5,
@@ -84,9 +116,10 @@
   {
     "id": 108,
     "name": "喧騒の域",
-    "desc": "戦闘・深遠の幽淵に追加で<Highlight>2.0</>体の精鋭敵が出現。",
-    "descValues": [
-      "$#GlobalPassiveData[30103002].Vars.Count$"
+    "desc": "戦闘・深遠の幽淵に追加で<Highlight>1.0</>体の精鋭敵が出現。",
+    "descLevels": [
+      "1.0",
+      "2.0"
     ],
     "globalPassiveId": 30103002,
     "heatValue": 5,
@@ -97,9 +130,7 @@
     "id": 109,
     "name": "構造の域",
     "desc": "戦闘中に敵対機関が<Highlight>1.0</>個出現。",
-    "descValues": [
-      "$#GlobalPassiveData[30103003].Vars.Count$"
-    ],
+    "descLevels": [],
     "globalPassiveId": 30103003,
     "heatValue": 3,
     "icon": "T_Rou_Contract_Room_ExtraMech",
@@ -109,7 +140,7 @@
     "id": 110,
     "name": "枯渇の域",
     "desc": "謎の行商人のもとで取引をする時、必要なエンバーが<Highlight>50%</>増加。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 12,
     "icon": "T_Rou_Contract_Mechanics_CostUp",
@@ -119,7 +150,7 @@
     "id": 111,
     "name": "盲目の域",
     "desc": "選択時、選択肢が1つ<Highlight>減少</>。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 9,
     "icon": "T_Rou_Contract_Mechanics_LessChoice",
@@ -129,7 +160,7 @@
     "id": 112,
     "name": "愚痴の域",
     "desc": "選択時、選択肢がランダムに強制決定。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 21,
     "icon": "T_Rou_Contract_Mechanics_RandomChoice",

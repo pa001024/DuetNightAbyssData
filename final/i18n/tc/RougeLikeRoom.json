@@ -3,8 +3,7 @@
     "id": 101,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -12,18 +11,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 102,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -31,18 +25,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 103,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -50,18 +39,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 104,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -69,18 +53,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 105,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -88,18 +67,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 106,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -107,18 +81,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 107,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -126,18 +95,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 108,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -145,18 +109,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 109,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -164,18 +123,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 110,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -184,18 +138,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 111,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -204,18 +153,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 112,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -224,18 +168,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 113,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -244,18 +183,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 114,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -264,18 +198,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 115,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -284,18 +213,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 116,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -304,18 +228,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 117,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -324,18 +243,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 118,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -344,18 +258,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 119,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -363,18 +272,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 120,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -382,18 +286,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 121,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -401,18 +300,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 122,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -420,18 +314,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 123,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -439,18 +328,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 124,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -458,18 +342,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 125,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -477,18 +356,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 126,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -496,18 +370,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 127,
     "name": "微茫幽影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -515,18 +384,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 201,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5010
     ],
@@ -534,18 +398,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 202,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5012
     ],
@@ -553,18 +412,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 203,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5017
     ],
@@ -572,18 +426,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 204,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5067
     ],
@@ -591,18 +440,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 205,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5010
     ],
@@ -610,18 +454,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 206,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5012
     ],
@@ -629,18 +468,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 207,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5017
     ],
@@ -648,18 +482,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 208,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5067
     ],
@@ -667,18 +496,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 209,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5013
     ],
@@ -686,18 +510,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 210,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5018
     ],
@@ -705,18 +524,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 211,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5068
     ],
@@ -724,18 +538,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 212,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5013
     ],
@@ -743,18 +552,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 213,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5018
     ],
@@ -762,18 +566,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 214,
     "name": "深邃幽影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5068
     ],
@@ -781,38 +580,72 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 301,
     "name": "湖中照影",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event19.T_Rouge_Event19'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event19.T_Rouge_Event19'",
-    "eventSelect": [
-      1011,
-      1012
-    ],
-    "eventStoryline": "Rogue/RouEvent_301",
-    "rlArchiveSubId": 10000101
+    "eventMainIcon": "T_Rouge_Event19",
+    "eventStoryline": [
+      {
+        "id": "1715072973679414138",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1715072964431413638"
+        ],
+        "dialogues": [
+          {
+            "id": 6100101,
+            "content": "篝火附近不知為何湧出一片長滿水仙花的水域。\n一個女人正低頭端詳著水面上的倒影。那倒影模糊不清，卻美麗動人，似乎連星空也沉醉其中。",
+            "next": 6100102
+          },
+          {
+            "id": 6100102,
+            "content": "「我心愛的人啊，究竟在何方？」\n「我踏遍了阿特拉西亞，在盧卡的蔚藍群島和華胥的蒼翠幽穀找尋，在伊瑟爾微風停駐的林梢找尋，在埃斯加特峽灣春天裡破碎的薄冰找尋。」",
+            "npc": 910005,
+            "speakerName": "美麗的女人",
+            "next": 6100103
+          },
+          {
+            "id": 6100103,
+            "content": "「可是我始終未曾尋得一位心愛之人。」\n「我想與我美貌相配的佳人，正被困在這艾利西安聖湖的湖水之中。」\n她徑自對著湖面的倒影喃喃自言。",
+            "npc": 910005,
+            "speakerName": "美麗的女人",
+            "options": [
+              {
+                "id": 6100104,
+                "content": "「那只是你的倒影而已。」",
+                "next": 6100105
+              },
+              {
+                "id": 6100106,
+                "content": "嚐試摘取湖中的水仙花。"
+              }
+            ]
+          },
+          {
+            "id": 6100105,
+            "content": "「你是誰？路過的旅人嗎？」\n她抬頭，輕輕瞥了你一眼。\n「若你能找到解救她的辦法，再來見我吧。」",
+            "npc": 910005,
+            "speakerName": "美麗的女人"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 302,
     "name": "今夕何夕·其三",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5008,
       5009,
@@ -822,62 +655,231 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1101,
-      1102
-    ],
-    "eventStoryline": "Rogue/RouEvent_302",
-    "rlArchiveSubId": 10000203
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "171851536988011639815",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536988011639813"
+        ],
+        "dialogues": [
+          {
+            "id": 6100201,
+            "content": "不遠處，孤獨的老人在小山般的武器堆旁不斷揮舞著鐵錘。\n鐵錘敲擊一次，萬物沉寂。\n鐵錘敲擊兩次，火光迸發。\n你走近，老人卻沒有抬頭。",
+            "next": 6100202
+          },
+          {
+            "id": 6100202,
+            "content": "「又一個送死的。\n「現在是哪一年？」",
+            "npc": 910005,
+            "speakerName": "孤獨的老人",
+            "options": [
+              {
+                "id": 6100203,
+                "content": "嚐試回答。",
+                "next": 6100204
+              }
+            ]
+          },
+          {
+            "id": 6100204,
+            "content": "你張了張嘴，試圖吐出一個答案。但是——\n現在是哪年……現在應當是哪一年？\n漫長的黑暗中，你早已丟失了測繪時間的尺規。",
+            "next": 6100206
+          },
+          {
+            "id": 6100206,
+            "content": "他沒能等到你的回答。",
+            "next": 6100207
+          },
+          {
+            "id": 6100207,
+            "content": "「看來你也一樣。」他歎了一口氣。\n「我不知道在這兒困了多久，早就什麼也記不得，什麼也抓不到了——除了臉上的皺紋和這把鐵錘。」",
+            "npc": 910005,
+            "speakerName": "孤獨的老人",
+            "next": 6100208
+          },
+          {
+            "id": 6100208,
+            "content": "「趁著火還沒滅……說吧，你想要些什麼。」",
+            "npc": 910005,
+            "speakerName": "孤獨的老人",
+            "options": [
+              {
+                "id": 6100209,
+                "content": "想要從武器堆中挑選一件。"
+              },
+              {
+                "id": 6100210,
+                "content": "想要請他打造一件武器。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 303,
     "name": "織夢師",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event02.T_Rouge_Event02'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event02.T_Rouge_Event02'",
-    "eventSelect": [
-      1021,
-      1022
-    ],
-    "eventStoryline": "Rogue/RouEvent_303",
-    "rlArchiveSubId": 10000301
+    "eventMainIcon": "T_Rouge_Event02",
+    "eventStoryline": [
+      {
+        "id": "171851536988611639917",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536988611639915"
+        ],
+        "dialogues": [
+          {
+            "id": 6100301,
+            "content": "歌聲在寂寥的篝火畔響起。\n一個女人緩步走來。她步履如羽毛般輕，聲音卻如啼鳥般悠揚——",
+            "next": 6100302
+          },
+          {
+            "id": 6100302,
+            "content": "沉沉的睡意湧了上來。\n你眼前的黑暗如紙一般被揉皺，浸濕在水裡。\n……",
+            "next": 6100303
+          },
+          {
+            "id": 6100303,
+            "content": "你徜徉在午後的林泉。\n流水在絨毯般的草地間作響，陽光從繁茂的葉片擠出縫來，束束傾灑。\n安靜啜飲晨露的雪白鼯鼠，海藍山貓和淺黃野兔，並不會因腳步聲驚懼……",
+            "options": [
+              {
+                "id": 6100304,
+                "content": "接取一滴露水。",
+                "next": 6100305
+              },
+              {
+                "id": 6100306,
+                "content": "擁抱一束陽光。",
+                "next": 6100307
+              }
+            ]
+          },
+          {
+            "id": 6100305,
+            "content": "你坐在黃昏的小酒館。\n吟遊詩人拉起風琴，歸航的水手打起拍子合唱。\n和著鹹澀的晚風與香甜的麥芽酒，你走到熱鬧的人群中央，跳起一支歡欣的舞……",
+            "next": 6100308
+          },
+          {
+            "id": 6100307,
+            "content": "你匍匐在聖堂的玻璃窗下。\n巨大繪像上的白衣女神慈悲地俯瞰著你，高大、寂靜而悲傷。\n滿月的神明自斑斕的彩色馬賽克走下，她親吻你的額頭，冰涼的珠冠落在你的臉頰……",
+            "next": 6100308
+          },
+          {
+            "id": 6100308,
+            "content": "咚！\n有人彈了一下你的額頭，疼痛讓你驟然驚醒。",
+            "next": 6100309
+          },
+          {
+            "id": 6100309,
+            "content": "「我可是艾利西安最優秀的織夢師！我辛辛苦苦地編織著美夢，你卻躺在那裡睡大覺，甚至一個銅幣都沒給過我！」",
+            "npc": 910005,
+            "speakerName": "織夢的女人",
+            "next": 6100310
+          },
+          {
+            "id": 6100310,
+            "content": "「給我起來！不許睡了！」\n她氣急敗壞，又在你的腦門彈了一記。",
+            "npc": 910005,
+            "speakerName": "織夢的女人"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 304,
     "name": "提燈交易",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event18.T_Rouge_Event18'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event18.T_Rouge_Event18'",
-    "eventSelect": [
-      1026,
-      1027,
-      1028
-    ],
-    "eventStoryline": "Rogue/RouEvent_304",
-    "rlArchiveSubId": 10000401
+    "eventMainIcon": "T_Rouge_Event18",
+    "eventStoryline": [
+      {
+        "id": "171851536989511640003",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536989511640001"
+        ],
+        "dialogues": [
+          {
+            "id": 6100401,
+            "content": "一位老者走到篝火旁。你留意到，他手中提著一盞燈。",
+            "next": 6100402
+          },
+          {
+            "id": 6100402,
+            "content": "「讓我看看……哦！原來您也有一盞燈！」\n「不過，所有燈終究會熄滅的。您知道，若是在深淵中沒有燈火照耀，就會永遠迷失在黑暗裡。」",
+            "npc": 910005,
+            "speakerName": "提燈的老者",
+            "next": 6100403
+          },
+          {
+            "id": 6100403,
+            "content": "「再買一盞燈以備不時之需吧。小小的光芒，也許能在後續的旅途中救下您的性命。」",
+            "npc": 910005,
+            "speakerName": "提燈的老者",
+            "options": [
+              {
+                "id": 6100404,
+                "content": "買下提燈。",
+                "next": 6100405
+              },
+              {
+                "id": 6100406,
+                "content": "詢問是否有其他有用的物件。",
+                "next": 6100407
+              },
+              {
+                "id": 6100408,
+                "content": "謝絕交易。",
+                "next": 6100409
+              }
+            ]
+          },
+          {
+            "id": 6100405,
+            "content": "「哦……您真是一位慷慨的旅者！願群星之神的祝福與您同在。」\n他眉開眼笑，臉上的每一道溝壑都展開著。",
+            "npc": 910005,
+            "speakerName": "提燈的老者"
+          },
+          {
+            "id": 6100407,
+            "content": "「哦……您真是一位慷慨的旅者！願群星之神的祝福與您同在。」\n他眉開眼笑，臉上的每一道溝壑都展開著。",
+            "npc": 910005,
+            "speakerName": "提燈的老者"
+          },
+          {
+            "id": 6100409,
+            "content": "「哦……天呐，願繁榮之神賜福於您，這樣您就不會如此窮困潦倒，竟為這一點點小錢，連身家性命都不顧了。」\n他滿腹牢騷地離開了。",
+            "npc": 910005,
+            "speakerName": "提燈的老者"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 305,
     "name": "天使唱詩班",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5014
     ],
@@ -885,82 +887,386 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event03.T_Rouge_Event03'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event03.T_Rouge_Event03'",
-    "eventSelect": [
-      1031,
-      1032,
-      1033
-    ],
-    "eventStoryline": "Rogue/RouEvent_305",
-    "rlArchiveSubId": 10000501
+    "eventMainIcon": "T_Rouge_Event03",
+    "eventStoryline": [
+      {
+        "id": "171851536990211640105",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536990211640103"
+        ],
+        "dialogues": [
+          {
+            "id": 6100501,
+            "content": "「迷途的遊子啊，諸神將為你指引方向。」",
+            "npc": 910005,
+            "speakerName": "神聖的歌聲",
+            "next": 6100502
+          },
+          {
+            "id": 6100502,
+            "content": "孩童的合唱在你腦海中驀然響起，篝火微弱的光亮逐漸溶解在一片更大的光明之中，你感到身體變得輕盈起來。\n你飄浮在空中，被一千道輕柔的風吹拂，潔白的雲朵觸手可及，神聖的金色高塔自雲層的縫隙間向你發出莊嚴的邀請。",
+            "next": 6100503
+          },
+          {
+            "id": 6100503,
+            "content": "「來吧，接受諸神的恩典，升入雲彩之上的天空。塵世已不足留戀，無上的幸福等待著你。」",
+            "npc": 910005,
+            "speakerName": "神聖的歌聲",
+            "options": [
+              {
+                "id": 6100504,
+                "content": "留在地上。",
+                "next": 6100505
+              },
+              {
+                "id": 6100506,
+                "content": "接受恩典。",
+                "next": 6100507
+              },
+              {
+                "id": 6100508,
+                "content": "嚐試抓住一片雲彩。",
+                "next": 6100509
+              }
+            ]
+          },
+          {
+            "id": 6100505,
+            "content": "你知道，從天而降的幸福背後必然標著相應的價碼。\n比起空幻無依的天堂之路，你更願意相信自己留下的每一個腳步。"
+          },
+          {
+            "id": 6100507,
+            "content": "雲朵將你擁入懷抱，溫柔一如母親的愛撫。\n金色的大門緩緩敞開，你似乎窺見神明的掠影從門後一閃而過。雲朵散去，你回到了地面上。",
+            "next": 6100510
+          },
+          {
+            "id": 6100509,
+            "content": "你向著天空用力伸手，那看似柔軟的雲朵卻如火焰一般灼傷了你的手指。\n光明消失了，耳邊傳來呼嘯的風聲，你意識到自己正在下墜。",
+            "next": 6100510
+          },
+          {
+            "id": 6100510,
+            "content": "是啊，你忘記了——深淵之中並不存在天空。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 306,
     "name": "渡海客",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event04.T_Rouge_Event04'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event04.T_Rouge_Event04'",
-    "eventSelect": [
-      1036,
-      1037
-    ],
-    "eventStoryline": "Rogue/RouEvent_306",
-    "rlArchiveSubId": 10000601
+    "eventMainIcon": "T_Rouge_Event04",
+    "eventStoryline": [
+      {
+        "id": "171851536991211640208",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536991211640206"
+        ],
+        "dialogues": [
+          {
+            "id": 6100601,
+            "content": "一個瘦小的身影走來。\n她走近了，那是一個個頭不高的女孩兒。",
+            "next": 6100602
+          },
+          {
+            "id": 6100602,
+            "content": "「請問……我可以……在這裡……烤一下火嗎？」\n她瑟縮著。你看到水珠從她的裙擺滴滴滾落——她的連衣裙濕透了。",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "next": 6100603
+          },
+          {
+            "id": 6100603,
+            "content": "「我和媽媽走散了……好冷……請讓我烤一會兒火吧！一會兒……就好……」",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "options": [
+              {
+                "id": 6100604,
+                "content": "同意。",
+                "next": 6100605
+              },
+              {
+                "id": 6100613,
+                "content": "拒絕。",
+                "next": 6100614
+              }
+            ]
+          },
+          {
+            "id": 6100605,
+            "content": "「謝謝您。」\n她顫抖著，從齒隙中擠出謝意。",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "next": 6100606
+          },
+          {
+            "id": 6100614,
+            "content": "「對……對不起……我不該打擾您的。」",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "next": 6100615
+          },
+          {
+            "id": 6100606,
+            "content": "詢問她為什麼會在這裡。",
+            "npc": 910004,
+            "next": 6100607
+          },
+          {
+            "id": 6100615,
+            "content": "女孩顫抖著走開。你身邊只剩下畢畢剝剝的篝火，就像從未有人來過。"
+          },
+          {
+            "id": 6100607,
+            "content": "「為……為什麼……啊……我……我想起來了……」\n「爸爸……媽媽……是……海伯利亞人……我們……逃了出來……想到……艾利西安去……」\n「在海上……船……掉進……黑色的漩渦……」",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "next": 6100608
+          },
+          {
+            "id": 6100608,
+            "content": "黑色的漩渦——你知道，那是黑潮，是饑腸轆轆的深淵將一切有形之物吞入腹中。",
+            "next": 6100609
+          },
+          {
+            "id": 6100609,
+            "content": "詢問她為什麼要冒險去艾利西安。",
+            "npc": 910004,
+            "next": 6100610
+          },
+          {
+            "id": 6100610,
+            "content": "「媽媽說……我們是『惡魔的孩子』……」\n「哪怕是掉進深淵這樣最壞最壞的事……也好過……留在海伯利亞……」",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "next": 6100611
+          },
+          {
+            "id": 6100611,
+            "content": "「謝謝您的篝火……也謝謝您告訴我……我已經不在人世了。」",
+            "npc": 910005,
+            "speakerName": "瘦小的女孩",
+            "next": 6100612
+          },
+          {
+            "id": 6100612,
+            "content": "她消失了。你身邊只剩下畢畢剝剝的篝火，就像從未有人來過。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 307,
     "name": "幸運愚人·其一",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event05.T_Rouge_Event05'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event05.T_Rouge_Event05'",
-    "eventSelect": [
-      1041,
-      1042
-    ],
-    "eventStoryline": "Rogue/RouEvent_307",
-    "rlArchiveSubId": 10000701
+    "eventMainIcon": "T_Rouge_Event05",
+    "eventStoryline": [
+      {
+        "id": "1721630102172388558",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102172388556"
+        ],
+        "dialogues": [
+          {
+            "id": 6100701,
+            "content": "「你好！」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100702
+          },
+          {
+            "id": 6100702,
+            "content": "背著行囊的爽朗青年走到篝火旁，大聲打了個招呼。",
+            "next": 6100703
+          },
+          {
+            "id": 6100703,
+            "content": "「可能有些失禮——但是，你還活著！對吧？」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "options": [
+              {
+                "id": 6100704,
+                "content": "向他點頭致意。",
+                "next": 6100705
+              },
+              {
+                "id": 6100711,
+                "content": "躺下裝死。",
+                "next": 6100712
+              }
+            ]
+          },
+          {
+            "id": 6100705,
+            "content": "「真沒想到還能在這兒碰見活人。看來你和我一樣，也是百裡挑一的幸運兒！」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100706
+          },
+          {
+            "id": 6100712,
+            "content": "「昏倒了？」\n他蹲了下來，試探了一下你的鼻息。\n「該不會，你也和它們一樣——是亡靈？」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100713
+          },
+          {
+            "id": 6100706,
+            "content": "「我十六歲那年和老爹合寫了一首歌謠，被聖裁所判決瀆神。」\n「我本應像倒黴老爹一樣被處死，卻因為劊子手在處刑日被雷劈中得到赦免。」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100707
+          },
+          {
+            "id": 6100713,
+            "content": "你沉默無言。\n他放下行囊，掏出水和食物。",
+            "next": 6100714
+          },
+          {
+            "id": 6100707,
+            "content": "「二十歲那年我加入了一群遊商，在北方森林遭遇洗劫。我們被綁起來，丟在山洞裡。」\n「我以為自己會和同伴一樣餓死。但第七天的清晨，一頭豬把我拱醒，一個女孩給了我食物。我想我見到了天使。」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100708
+          },
+          {
+            "id": 6100714,
+            "content": "「這些留給你吧，可憐的朋友！願第一縷日光照射聖塔的時候，你就會醒來，健康如初。」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年"
+          },
+          {
+            "id": 6100708,
+            "content": "「再後來我作為商人跟隨騎士團來了深淵。他們手裡的燈光一盞盞熄滅，一位騎士老爺摔倒的時候被自己的劍刺穿了喉嚨。而我成為了唯一的生還者。」\n「於是我開始相信，我被命運女神所眷顧。她將賜予我無上的幸運與幸福。」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100709
+          },
+          {
+            "id": 6100709,
+            "content": "「她指引我來此便意味著，這深處一定有獨一無二的至寶等待著我。現在，我該動身去尋找它了。」\n他背起沉重的行囊。",
+            "npc": 910005,
+            "speakerName": "爽朗的青年",
+            "next": 6100710
+          },
+          {
+            "id": 6100710,
+            "content": "「對了，朋友！既然她也讓你活了下來，那麼你一定會遇到屬於你的，獨一無二的好事！」\n他握緊雙拳，大笑了起來。\n「為了我們的幸運！」",
+            "npc": 910005,
+            "speakerName": "爽朗的青年"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 308,
     "name": "花容依舊",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event06.T_Rouge_Event06'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event06.T_Rouge_Event06'",
-    "eventSelect": [
-      1046,
-      1047
-    ],
-    "eventStoryline": "Rogue/RouEvent_308",
-    "rlArchiveSubId": 10000801
+    "eventMainIcon": "T_Rouge_Event06",
+    "eventStoryline": [
+      {
+        "id": "1721630102179388643",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102179388641"
+        ],
+        "dialogues": [
+          {
+            "id": 6100801,
+            "content": "一對並蒂而生的殷紅花朵在黑暗中散發著幽幽光芒。\n你舉起手中的提燈，燈光映出幾縷泛白的金發、幾節蒼白的脊骨——這是一隻人形的穢獸，還是一個即將化為穢獸的人？\n你警惕地握緊了武器，然而它卻並沒有向你發起攻擊，隻是用那雙嵌在漆黑底色裡的殷紅眼瞳無聲地注視著你。",
+            "next": 6100802
+          },
+          {
+            "id": 6100802,
+            "content": "忽然，它的喉嚨中發出了支離破碎的聲響，如同尖銳的石塊互相摩擦產生的噪音，又似乎遵循著某種節奏。不知為何，你能夠理解其中的含義——",
+            "next": 6100803
+          },
+          {
+            "id": 6100803,
+            "content": "「請留步，手執提燈的旅人。懇求您告訴我，我在您燈下所映出的容顏，是否依舊美麗？」",
+            "npc": 910005,
+            "speakerName": "紅瞳的穢獸",
+            "next": 6100804
+          },
+          {
+            "id": 6100804,
+            "content": "「我將發辮梳得柔軟光亮，編成秀麗的發辮。」它撫摸著腦後綻開的皮膚。\n「我將裙褶熨燙整齊，裝點上華貴閃耀的寶石。」它撫摸著深嵌體表的結晶。\n「我戴上愛人贈予的項鏈，懷想他殷切的心意。」它撫摸著頸間延伸的骨節。",
+            "npc": 910005,
+            "speakerName": "紅瞳的穢獸",
+            "options": [
+              {
+                "id": 6100805,
+                "content": "「是的，你很美麗。」",
+                "next": 6100806
+              },
+              {
+                "id": 6100808,
+                "content": "「你是隻可怕的怪物。」",
+                "next": 6100809
+              }
+            ]
+          },
+          {
+            "id": 6100806,
+            "content": "那雙紅色的眼瞳微微顫動，如風中搖曳的花瓣。",
+            "next": 6100807
+          },
+          {
+            "id": 6100809,
+            "content": "那雙紅色的眼瞳被猙獰的利爪覆蓋。",
+            "next": 6100810
+          },
+          {
+            "id": 6100807,
+            "content": "「謝謝您，善良的旅人。請收下我的謝禮。」\n「若您見到我的愛人，請告訴他，我會永遠愛著他。」",
+            "npc": 910005,
+            "speakerName": "紅瞳的穢獸"
+          },
+          {
+            "id": 6100810,
+            "content": "「噢——不！我不願讓愛人見到我這般醜陋的模樣。」\n「慈悲的旅人，請您給予我終結。」",
+            "npc": 910005,
+            "speakerName": "紅瞳的穢獸"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 309,
     "name": "伊人何方",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [
       5179
     ],
@@ -968,41 +1274,181 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event07.T_Rouge_Event07'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event07.T_Rouge_Event07'",
-    "eventSelect": [
-      1051,
-      1052
-    ],
-    "eventStoryline": "Rogue/RouEvent_309",
-    "rlArchiveSubId": 10000901
+    "eventMainIcon": "T_Rouge_Event07",
+    "eventStoryline": [
+      {
+        "id": "1721630102187388745",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102187388743"
+        ],
+        "dialogues": [
+          {
+            "id": 6100901,
+            "content": "「日安，陌生的旅人。」",
+            "npc": 910005,
+            "speakerName": "優雅的青年",
+            "next": 6100902
+          },
+          {
+            "id": 6100902,
+            "content": "一位衣著華麗的青年於篝火搖曳的光影中停下腳步，優雅地向你行禮。",
+            "next": 6100903
+          },
+          {
+            "id": 6100903,
+            "content": "「我在尋找一位擁有紅色眼瞳的淑女，請問您是否見過她的倩影？」",
+            "npc": 910005,
+            "speakerName": "優雅的青年",
+            "next": 6100904
+          },
+          {
+            "id": 6100904,
+            "content": "「她有一副世上最動聽的歌喉，連夜鶯都為之黯然失色。」\n「她有一頭柔順的金色秀發，光潔燦爛如同春日盛開的金盞花。」\n「她身著端莊華貴的連衣裙，裙擺上綴滿星辰般閃耀的寶石。」\n「她還戴著我贈予她的項鏈，殷紅的水晶神秘幽邃一如她凝視我時的雙眸。」",
+            "npc": 910005,
+            "speakerName": "優雅的青年",
+            "next": 6100905
+          },
+          {
+            "id": 6100905,
+            "content": "你並未見過這樣的女性。",
+            "npc": 910004,
+            "next": 6100906
+          },
+          {
+            "id": 6100906,
+            "content": "「是嗎……」\n他黯然垂眸，但很快又恢復優雅的神態，\n「無妨，我會繼續尋找。」",
+            "npc": 910005,
+            "speakerName": "優雅的青年",
+            "next": 6100907
+          },
+          {
+            "id": 6100907,
+            "content": "青年在篝火旁坐下，明亮的火焰映在他清澈的眼眸中。",
+            "next": 6100908
+          },
+          {
+            "id": 6100908,
+            "content": "「我與她早已定下婚約，待她成年之後就將舉辦婚禮。奈何她承蒙神恩，額前的聖痕日漸顯明，於十四歲前夜被使者接走。」\n「她走前留下一封訣別信，讓我另尋佳人。可我早就立下誓言，此生只願與她一同度過。」\n「等我找到她，便要將她帶回人世。滿月之神教世人歌頌愛情之美，一定願意成全我們。」",
+            "npc": 910005,
+            "speakerName": "優雅的青年",
+            "options": [
+              {
+                "id": 6100909,
+                "content": "祝他早日尋到愛人。",
+                "next": 6100910
+              },
+              {
+                "id": 6100911,
+                "content": "「如果神不同意呢？」",
+                "next": 6100912
+              }
+            ]
+          },
+          {
+            "id": 6100910,
+            "content": "「感謝您，善良的旅人。」\n「請收下這份薄禮，願您也能得到心中所求。」",
+            "npc": 910005,
+            "speakerName": "優雅的青年"
+          },
+          {
+            "id": 6100912,
+            "content": "他向你淡淡一笑。\n「那我便將此身獻給聖湖，使我的靈魂永遠與她同在。」",
+            "npc": 910005,
+            "speakerName": "優雅的青年"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 310,
     "name": "永恆詩篇",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event08.T_Rouge_Event08'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event08.T_Rouge_Event08'",
-    "eventSelect": [
-      1056,
-      1057
-    ],
-    "eventStoryline": "Rogue/RouEvent_310",
-    "rlArchiveSubId": 10001001
+    "eventMainIcon": "T_Rouge_Event08",
+    "eventStoryline": [
+      {
+        "id": "1721630102194388830",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102194388828"
+        ],
+        "dialogues": [
+          {
+            "id": 6101001,
+            "content": "篝火旁浮現出一個女人，她將左手伸進熊熊燃燒的篝火蘸取煙灰，於地面上書寫著你無法辨認的文字。",
+            "next": 6101002
+          },
+          {
+            "id": 6101002,
+            "content": "「啊——反抗時間的旅者，你與絕望為伴，死亡如影隨形。」\n她低聲吟詠。",
+            "npc": 910005,
+            "speakerName": "自由的詩人",
+            "options": [
+              {
+                "id": 6101003,
+                "content": "詢問她在做什麼。",
+                "next": 6101004
+              },
+              {
+                "id": 6101005,
+                "content": "「火焰不燙嗎？」",
+                "next": 6101006
+              }
+            ]
+          },
+          {
+            "id": 6101004,
+            "content": "「噢，親愛的朋友。如您所見，我是一位詩人。」\n「我正在創作我的第一千零一首作品——沒錯，一首為您而寫的詩！」",
+            "npc": 910005,
+            "speakerName": "自由的詩人",
+            "next": 6101008
+          },
+          {
+            "id": 6101006,
+            "content": "女人咯咯地笑起來。",
+            "next": 6101007
+          },
+          {
+            "id": 6101008,
+            "content": "詩人再次伸手攪動篝火，纖細的指尖在火焰中穿梭，靈動如同舞者的雙足。",
+            "next": 6101009
+          },
+          {
+            "id": 6101007,
+            "content": "「親愛的朋友，請看。」\n她將手掌平攤在你眼前，白皙的皮膚完好無瑕。\n「如您這般智慧的旅者，應當早就知曉這並非真實的火，我也並非真實的人。」",
+            "npc": 910005,
+            "speakerName": "自由的詩人",
+            "next": 6101008
+          },
+          {
+            "id": 6101009,
+            "content": "「這真是個美妙的地方，不是嗎？」\n「我終於擺脫了肉體之苦，再也不會被無聊瑣事打攪我的創作。我獲得了無上的自由，以及，永恒的時間——！」\n「旅者啊，感謝您在此駐足，為我帶來一線靈光。請收下我的詩篇，願您終能掙脫這無盡輪回，得償所願。」",
+            "npc": 910005,
+            "speakerName": "自由的詩人",
+            "next": 6101010
+          },
+          {
+            "id": 6101010,
+            "content": "詩人向你伸手，飛揚的煙灰如風暴般瞬間侵占了你全部的視野。\n當煙灰散去，詩人早已不知所蹤。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 311,
     "name": "荊棘之書",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5160
     ],
@@ -1010,41 +1456,221 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event09.T_Rouge_Event09'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event09.T_Rouge_Event09'",
-    "eventSelect": [
-      1061,
-      1062
-    ],
-    "eventStoryline": "Rogue/RouEvent_311",
-    "rlArchiveSubId": 10001101
+    "eventMainIcon": "T_Rouge_Event09",
+    "eventStoryline": [
+      {
+        "id": "1739608900306688985",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900306688983"
+        ],
+        "dialogues": [
+          {
+            "id": 6101101,
+            "content": "「您好，請允許我借用您的火光。」",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "next": 6101102
+          },
+          {
+            "id": 6101102,
+            "content": "少年邁著故作正經的稚嫩步伐，緩緩在篝火邊坐下。\n他穿著一身對他而言過於寬大的禮服，襯得他那瘦小的身軀幾乎可憐。他就著火光捧起一本薄薄的書，煞有介事地朗讀起來。",
+            "next": 6101103
+          },
+          {
+            "id": 6101103,
+            "content": "「火焰之神，賜予我們智慧……流水之神，賜予我們豐饒……」",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "options": [
+              {
+                "id": 6101104,
+                "content": "你在讀什麼？",
+                "next": 6101105
+              }
+            ]
+          },
+          {
+            "id": 6101105,
+            "content": "「噢，我在讀哥哥們送給我的書呢。」他羞赧地摸了摸腦袋，「我必須要在見到神明大人之前變得更加聰明才行。」\n「我從小就是家裡最笨的那個孩子，哥哥們都比我優秀得多。但是神明大人卻偏偏選中了我，大家都說這不合理。」\n「哥哥們給了我這本聖歌，囑咐我一定要在覲見九神前好好熟讀，不要給家裡丟臉。」",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "next": 6101106
+          },
+          {
+            "id": 6101106,
+            "content": "少年挪動身體，讓自己坐得離你更近一些，隨後捧起手中的書，向你投來邀請的目光。",
+            "next": 6101107
+          },
+          {
+            "id": 6101107,
+            "content": "「你要和我一起看嗎？」",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "options": [
+              {
+                "id": 6101108,
+                "content": "和他一起看書。",
+                "next": 6101109
+              },
+              {
+                "id": 6101112,
+                "content": "拒絕一起看書",
+                "next": 6101113
+              }
+            ]
+          },
+          {
+            "id": 6101109,
+            "content": "你接受了邀請，將目光移過去。你驚訝地發現，有什麼人用漆黑的筆觸在這本書上寫滿了你從未想象過的惡毒粗鄙之語。\n瞬息之間，文字化作黑色的荊棘穿出紙面瘋長，如捕獵中的毒蛇一般緊緊纏繞你的身體。你的視野越來越暗，越來越模糊。\n出於求生本能，你猛地將身體後仰，讓視線掙脫紙面。",
+            "next": 6101110
+          },
+          {
+            "id": 6101113,
+            "content": "你不是來這裡學習的。",
+            "next": 6101114
+          },
+          {
+            "id": 6101110,
+            "content": "「咦？你怎麼了？書上有什麼可怕的東西嗎？」\n他困惑地看向你，目光如此清澈。",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "next": 6101111
+          },
+          {
+            "id": 6101114,
+            "content": "「好吧，那麼，我就自己一個人看吧……」\n他將書收回自己的膝上。",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "next": 6101115
+          },
+          {
+            "id": 6101111,
+            "content": "你張開嘴唇，卻無法發出聲音。\n黑色的荊棘將少年籠罩、吞噬，直至少年、書和荊棘都消失不見。"
+          },
+          {
+            "id": 6101115,
+            "content": "忽然，書頁中伸出了無數扭動的黑色荊棘。\n你甚至沒有來得及驚訝，黑色的荊棘便將少年籠罩、吞噬，直至少年、書和荊棘都消失不見。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 312,
     "name": "被遺忘的",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event10.T_Rouge_Event10'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event10.T_Rouge_Event10'",
-    "eventSelect": [
-      1066,
-      1067
-    ],
-    "eventStoryline": "Rogue/RouEvent_312",
-    "rlArchiveSubId": 10001201
+    "eventMainIcon": "T_Rouge_Event10",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689092",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689090"
+        ],
+        "dialogues": [
+          {
+            "id": 6101201,
+            "content": "一位中年女人面色凝重地在篝火前坐下，火光並未照亮她陰沉的雙眸。",
+            "next": 6101202
+          },
+          {
+            "id": 6101202,
+            "content": "「你好，陌生人。冒昧一問，這是什麼地方？」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6101203
+          },
+          {
+            "id": 6101203,
+            "content": "回答她。",
+            "next": 6101204
+          },
+          {
+            "id": 6101204,
+            "content": "「聖湖……？深淵……？」她的語氣充滿迷茫與困惑，「可我對這些詞語毫無印象……」\n她注視著自己布滿溝壑的手掌，「我忘記了自己為何而來。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "options": [
+              {
+                "id": 6101205,
+                "content": "告知她聖湖的曆史。",
+                "next": 6101206
+              },
+              {
+                "id": 6101207,
+                "content": "建議她翻看隨身物品。",
+                "next": 6101208
+              }
+            ]
+          },
+          {
+            "id": 6101206,
+            "content": "「身上出現聖痕的人……會被帶來這裡……？」\n「啊……我想起來了。我的孩子就在這裡。她的眼角出現了聖痕，就像一隻將要振翅起飛的蝴蝶。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6101210
+          },
+          {
+            "id": 6101208,
+            "content": "「你說得對。」\n她將手伸進口袋，摸出了一枚銀色的胸針。",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6101209
+          },
+          {
+            "id": 6101210,
+            "content": "女人抬起了頭，此刻，火光清晰地映在她的眼中。",
+            "next": 6101211
+          },
+          {
+            "id": 6101209,
+            "content": "「啊……我想起來了。」她小心翼翼地用袖口將胸針擦拭乾淨，「這是我要送給那孩子的禮物。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6101210
+          },
+          {
+            "id": 6101211,
+            "content": "「我來這裡找我的孩子。」\n「他們趁我不在家的時候，把熟睡的她帶走了。可那孩子從小就怕生，如果醒來見不到熟悉的面孔，她一定會非常害怕。」\n「我要陪著她……沒錯，我是來找她的。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6101212
+          },
+          {
+            "id": 6101212,
+            "content": "「她離開多久了？」",
+            "npc": 910004,
+            "next": 6101213
+          },
+          {
+            "id": 6101213,
+            "content": "「她是十天前……不，十個月……不，十年……啊……我忘記了。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6101214
+          },
+          {
+            "id": 6101214,
+            "content": "女人不說話了；她陷入了一種異常的呆滯，全身一動不動，似乎連呼吸都一同停止了。\n無論你說什麼，她都再也沒有任何反應。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 313,
     "name": "火焰不息",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5159
     ],
@@ -1052,21 +1678,101 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1071,
-      1072
-    ],
-    "eventStoryline": "Rogue/RouEvent_313",
-    "rlArchiveSubId": 10001301
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689200",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689198"
+        ],
+        "dialogues": [
+          {
+            "id": 6101301,
+            "content": "「嘭——」\n忽然間，眼前的篝火燒得更旺了。\n你注意到一位金發少女，她用裙擺兜著一把金黃色的小石子，伸手將它們一顆一顆地丟進篝火中央。",
+            "next": 6101302
+          },
+          {
+            "id": 6101302,
+            "content": "火焰竄得越來越高，像迎來了生命中第一個春天那般瘋狂地抽枝發芽。",
+            "options": [
+              {
+                "id": 6101303,
+                "content": "誇讚火焰的美麗。",
+                "next": 6101304
+              },
+              {
+                "id": 6101305,
+                "content": "詢問少女石頭的來曆。",
+                "next": 6101306
+              }
+            ]
+          },
+          {
+            "id": 6101304,
+            "content": "「是啊！」她的語氣就如火焰一樣熱烈，「很高興您與我擁有相同的想法。」",
+            "npc": 910005,
+            "speakerName": "投石的少女",
+            "next": 6101307
+          },
+          {
+            "id": 6101306,
+            "content": "「這是我在附近撿的石頭。」她解釋道，「我想它們應該是某種火焰魔法結晶。」",
+            "npc": 910005,
+            "speakerName": "投石的少女",
+            "next": 6101307
+          },
+          {
+            "id": 6101307,
+            "content": "少女繼續扔著石子，不知是否是你的錯覺，火焰似乎離少女越來越近，溫柔地舔舐著她金色的發絲。",
+            "next": 6101308
+          },
+          {
+            "id": 6101308,
+            "content": "「到明天，篝火就會恢復原樣，這些小石子也會再次散落在附近。」\n「所以我每天都要把這些石子撿起來重新扔進去。一共一百四十六顆，一顆不多，一顆不少。」",
+            "npc": 910005,
+            "speakerName": "投石的少女",
+            "next": 6101309
+          },
+          {
+            "id": 6101309,
+            "content": "「這不是毫無意義嗎？」",
+            "npc": 910004,
+            "next": 6101310
+          },
+          {
+            "id": 6101310,
+            "content": "少女歪了歪頭，眨眨眼睛，露出了天真的笑容。",
+            "next": 6101311
+          },
+          {
+            "id": 6101311,
+            "content": "「不，我喜歡火。」她說，「我喜歡聽它燃燒的聲音，喜歡看它躍動的身影。」\n「你知道，在這個地方，空間是混亂的。閉上眼前還在篝火邊，一醒來就到了湖水底。」\n「但是這些小石子不一樣，不管環境怎麼變化，它們總會再次出現。一想到明天還能找到它們，我就能安心地入眠。」",
+            "npc": 910005,
+            "speakerName": "投石的少女",
+            "next": 6101312
+          },
+          {
+            "id": 6101312,
+            "content": "「我喜歡確定的東西。」",
+            "npc": 910005,
+            "speakerName": "投石的少女",
+            "next": 6101313
+          },
+          {
+            "id": 6101313,
+            "content": "少女說著扔出了最後一顆石子。\n火光完全籠罩了她，金色的發絲與火焰融為一體，再難分辨邊界。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 314,
     "name": "一片麵包",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5014
     ],
@@ -1074,84 +1780,367 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event12.T_Rouge_Event12'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event12.T_Rouge_Event12'",
-    "eventSelect": [
-      1076,
-      1077
-    ],
-    "eventStoryline": "Rogue/RouEvent_314",
-    "rlArchiveSubId": 10001401
+    "eventMainIcon": "T_Rouge_Event12",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689291",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689289"
+        ],
+        "dialogues": [
+          {
+            "id": 6101401,
+            "content": "「唔……呃……」",
+            "npc": 910005,
+            "speakerName": "虛弱的男人",
+            "next": 6101402
+          },
+          {
+            "id": 6101402,
+            "content": "虛弱的呻吟聲從低處傳來，你注意到一位瘦骨嶙峋的男人倒在篝火邊，看起來似乎餓壞了。",
+            "options": [
+              {
+                "id": 6101403,
+                "content": "分給他一點食物。",
+                "next": 6101404
+              },
+              {
+                "id": 6101409,
+                "content": "什麼也不做。",
+                "next": 6101410
+              }
+            ]
+          },
+          {
+            "id": 6101404,
+            "content": "「……謝謝你，好心的孩子。但我已經不需要食物了。」\n「我被黑潮卷了進來。我已經回不去了，吃再多的食物，也回不去了。」\n「你讓我想起了一個艾利西安的小姑娘……一個和你一樣善良的孩子。」",
+            "npc": 910005,
+            "speakerName": "虛弱的男人",
+            "next": 6101405
+          },
+          {
+            "id": 6101410,
+            "content": "男人看上去確實非常可憐，但你身上的補給也已經所剩無幾。\n在這險惡的深淵中，你必須先確保自己能活下去。"
+          },
+          {
+            "id": 6101405,
+            "content": "「她有一頭金色的頭髮，騎著一隻粉紅色的巨豬。在我饑腸轆轆地走在街頭時，她向我遞來了一片面包……」\n「可那時的我心高氣傲，不願接受傳頌會的施舍。明知小姑娘是善意，卻還大聲地咒罵了她。」",
+            "npc": 910005,
+            "speakerName": "虛弱的男人",
+            "next": 6101406
+          },
+          {
+            "id": 6101406,
+            "content": "「如今，回想起我的一生……我才恍然發覺，她也許是唯一真心對待過我的人。」\n「信仰、種族、出身……人們總是用這些東西……粉飾自己……但再多的頭銜，都無法蓋過真正的善良所發出的光輝……」",
+            "npc": 910005,
+            "speakerName": "虛弱的男人",
+            "next": 6101407
+          },
+          {
+            "id": 6101407,
+            "content": "「如果還能回去，我想要……親自向她道歉……只是，已經……沒機會了……」",
+            "npc": 910005,
+            "speakerName": "虛弱的男人",
+            "next": 6101408
+          },
+          {
+            "id": 6101408,
+            "content": "男人的聲音逐漸變得越來越輕，你眨了眨眼睛，他的身影消失不見。\n空氣中飄來一縷剛出爐的面包的香氣。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 315,
     "name": "金羽毛",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event13.T_Rouge_Event13'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event13.T_Rouge_Event13'",
-    "eventSelect": [
-      1081,
-      1082,
-      1083
-    ],
-    "eventStoryline": "Rogue/RouEvent_315",
-    "rlArchiveSubId": 10001501
+    "eventMainIcon": "T_Rouge_Event13",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689381",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689379"
+        ],
+        "dialogues": [
+          {
+            "id": 6101501,
+            "content": "一道金光自空中閃現，你恍惚以為是太陽升起，定睛一看，原來那是一隻通體金黃的鳥兒。\n它從空中盤旋降落，停落在你身邊，優雅地收攏翅膀，聚起的金色羽毛在篝火的映照下熠熠生輝，比貴族少女們珍藏的金飾還要細密精巧。",
+            "options": [
+              {
+                "id": 6101502,
+                "content": "給鳥兒喂水。",
+                "next": 6101503
+              },
+              {
+                "id": 6101505,
+                "content": "嚐試從鳥兒的尾部拔一根羽毛。",
+                "next": 6101506
+              },
+              {
+                "id": 6101509,
+                "content": "嘗試從鳥兒的頭部拔一根羽毛。",
+                "next": 6101510
+              }
+            ]
+          },
+          {
+            "id": 6101503,
+            "content": "你在掌心倒了一些清水，伸手向鳥兒發出邀請。",
+            "next": 6101504
+          },
+          {
+            "id": 6101506,
+            "content": "你悄悄伸手，趁鳥兒閉眼休息時，從它的尾巴上拔下了一根羽毛——羽毛的質地如同上等的黃金，一定價值不菲。",
+            "next": 6101507
+          },
+          {
+            "id": 6101510,
+            "content": "你悄悄伸手接近鳥兒的腦袋，但還沒來得及用力，它便注意到你的意圖，驀地睜開了眼睛。\n鳥兒發出一聲憤怒的鳴叫，撲扇著翅膀向你飛來。它不遺餘力的一啄如同滾燙的熔金滴落在你的掌心，留下了一道鮮明的紅色印記。",
+            "next": 6101511
+          },
+          {
+            "id": 6101504,
+            "content": "鳥兒歪了歪頭，警惕地觀察著你。片刻之後，它矜持地探出金色的喙，在你的掌心小口啜飲起來。\n喝完水，它愉快地扇了扇美麗的羽毛，向你發出感激的鳴叫，隨後飛上天空，盤旋而去。"
+          },
+          {
+            "id": 6101507,
+            "content": "鳥兒發出一聲憤怒的鳴叫，撲扇著翅膀向你飛來。它不遺餘力的一啄如同滾燙的熔金滴落在你的掌心，留下了一道鮮明的紅色印記。",
+            "next": 6101508
+          },
+          {
+            "id": 6101511,
+            "content": "待你從鑽心的痛楚中回過神來，鳥兒早已盤旋飛遠。"
+          },
+          {
+            "id": 6101508,
+            "content": "待你從鑽心的痛楚中回過神來，鳥兒早已盤旋飛遠。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 316,
     "name": "詛咒之血",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "eventSelect": [
-      1086,
-      1087,
-      1088
-    ],
-    "eventStoryline": "Rogue/RouEvent_316",
-    "rlArchiveSubId": 10001601
+    "eventMainIcon": "T_Rouge_Event14_2",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689489",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689487"
+        ],
+        "dialogues": [
+          {
+            "id": 6101601,
+            "content": "一股腐敗、腥穢的氣息從近處傳來。\n你看到一個小女孩出現在篝火邊。她的臉頰和手臂上都布滿了可怕的膿瘡，若不是那雙眼睛仍在篝火映照下透出生命的光芒，你幾乎要懷疑眼前所見的面是一具屍體。",
+            "options": [
+              {
+                "id": 6101602,
+                "content": "你從背包中找出了一些藥品，遞給女孩。",
+                "next": 6101603
+              },
+              {
+                "id": 6101606,
+                "content": "嚐試治療女孩的傷口。",
+                "next": 6101607
+              },
+              {
+                "id": 6101612,
+                "content": "遠離她。",
+                "next": 6101613
+              }
+            ]
+          },
+          {
+            "id": 6101603,
+            "content": "「感謝您……善良的旅人……」\n她慢慢地抬起頭看向你；你不確定她勾起的嘴角究竟是主動露出的笑容，還是因疼痛而產生的肌肉扭曲。",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6101604
+          },
+          {
+            "id": 6101607,
+            "content": "你小心地接近女孩，試圖查看她身上傷口的情況。",
+            "next": 6101608
+          },
+          {
+            "id": 6101613,
+            "content": "直覺告訴你女孩可能患有某種危險的疫病，於是你起身與她拉開了一段距離。",
+            "next": 6101614
+          },
+          {
+            "id": 6101604,
+            "content": "「但是，請……不必幫助我……」她低聲說道，「司祭大人說，我染上了詛咒，得了深淵病，這是我的罪孽……」\n「我必須誠心懺悔……然後，我就會好起來的……在那之前，我不可以接近任何人。」",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6101605
+          },
+          {
+            "id": 6101608,
+            "content": "「咳、咳……！」\n她猛烈地咳嗽起來，暗紅色的血濺在你伸出的手上，升騰起不祥的黑色煙霧。",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6101609
+          },
+          {
+            "id": 6101614,
+            "content": "「抱歉……讓您受到了驚嚇……我、我這就離開……」",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6101615
+          },
+          {
+            "id": 6101605,
+            "content": "女孩搖搖晃晃地撐起身體，轉身消失在黑暗中。"
+          },
+          {
+            "id": 6101609,
+            "content": "「對、對不起……！」\n她搖搖晃晃地撐起身體，想要退後，卻又不小心跌倒在地。",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6101610
+          },
+          {
+            "id": 6101615,
+            "content": "女孩搖搖晃晃地撐起身體，轉身消失在黑暗中。"
+          },
+          {
+            "id": 6101610,
+            "content": "「司祭大人說，我染上了詛咒，得了深淵病，這是我的罪孽……」\n「我必須誠心懺悔……然後，我就會好起來的……在那之前，我不可以接近任何人。」",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6101611
+          },
+          {
+            "id": 6101611,
+            "content": "女孩再次艱難起身，跌跌撞撞地消失在黑暗中。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 317,
     "name": "惡作劇旋渦",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event15.T_Rouge_Event15'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event15.T_Rouge_Event15'",
-    "eventSelect": [
-      1091,
-      1092,
-      1093
-    ],
-    "eventStoryline": "Rogue/RouEvent_317",
-    "rlArchiveSubId": 10001701
+    "eventMainIcon": "T_Rouge_Event15",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689579",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689577"
+        ],
+        "dialogues": [
+          {
+            "id": 6101701,
+            "content": "你在篝火旁坐下休息，順手將提燈放在腳邊。\n就在你的手指離開提燈的瞬間，地面上忽然泛起了水光。你還來不及作出反應，提燈便被水中卷起的漩渦吞沒了。",
+            "next": 6101702
+          },
+          {
+            "id": 6101702,
+            "content": "一個戴著滑稽的鳥頭面具的人從水裡探出半個身體，甩了甩腦袋，然後張開了雙臂——三盞形狀相同但材質各異的提燈在水面上浮現。",
+            "next": 6101703
+          },
+          {
+            "id": 6101703,
+            "content": "「嗨，親愛的旅人！請問你掉的是這個黃金提燈，還是這個木頭提燈，又或者是這個普通提燈呢？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6101704,
+                "content": "黃金提燈。",
+                "next": 6101705
+              },
+              {
+                "id": 6101707,
+                "content": "木頭提燈。",
+                "next": 6101708
+              },
+              {
+                "id": 6101710,
+                "content": "普通提燈。",
+                "next": 6101711
+              }
+            ]
+          },
+          {
+            "id": 6101705,
+            "content": "「啊哈哈哈！」他發出一陣誇張的大笑，「很好，我很欣賞你！見到好東西，就該不擇手段地爭取才對！」\n「儘管拿走吧，親愛的！誰不喜歡亮閃閃的金子呢——你說是吧！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101706
+          },
+          {
+            "id": 6101708,
+            "content": "「嗯哼？你……很有趣！」他歪著腦袋，黑色的眼窩深不可測，「木頭顯然不能用來做提燈——但為什麼不能呢？這裡可是深淵啊，沒有什麼事是不可能的！」\n「祝福你，親愛的！你一定會踏上一段有趣的旅途。」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101709
+          },
+          {
+            "id": 6101711,
+            "content": "「唉，唉，你們都被傳頌會那幫傢伙教傻了。」他連連歎氣，似乎對你的答案很不滿意，「實話實說多無趣啊——你難道就不想換個其他樣式的提燈？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101712
+          },
+          {
+            "id": 6101706,
+            "content": "那人一頭紮進水中，水面隨即消失了。\n你發現提燈還好好地擺在你的腳下，但它的周圍卻散落著一地餘燼。"
+          },
+          {
+            "id": 6101709,
+            "content": "那人一頭紮進水中，水面隨即消失了。\n你發現提燈還好好地擺在你的腳下，但它的旁邊卻多了一件遺物。"
+          },
+          {
+            "id": 6101712,
+            "content": "「也罷，也罷。」他搖了搖頭，「誠實是美德，對吧？我就按故事說的那樣，給你一點獎勵吧。」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101713
+          },
+          {
+            "id": 6101713,
+            "content": "那人一頭紮進水中，水面隨即消失了。\n你發現提燈還好好地擺在你的腳下，但其中的燭光卻變得更明亮了。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 318,
     "name": "今夕何夕·其二",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5073,
       5074,
@@ -1161,22 +2150,90 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1096,
-      1097,
-      1098
-    ],
-    "eventStoryline": "Rogue/RouEvent_318",
-    "rlArchiveSubId": 10000202
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "1748589441224503615",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441224503613"
+        ],
+        "dialogues": [
+          {
+            "id": 6102001,
+            "content": "你聽見金屬撞擊的聲音。火花飛濺，融化在篝火的光明中。\n你循著聲音的方向看去，老人在簡陋的鍛造台邊用力揮動著鐵錘，汗珠從他的額前滴落。",
+            "next": 6102002
+          },
+          {
+            "id": 6102002,
+            "content": "「年輕人，你好啊！」\n見到你，老人熱情地打招呼。",
+            "npc": 910005,
+            "speakerName": "熱情的老人",
+            "options": [
+              {
+                "id": 6102003,
+                "content": "您好。",
+                "next": 6102004
+              }
+            ]
+          },
+          {
+            "id": 6102004,
+            "content": "「看樣子，你也被困在這地方了吧？」老人指了指自己，「我也是。」",
+            "npc": 910005,
+            "speakerName": "熱情的老人",
+            "options": [
+              {
+                "id": 6102005,
+                "content": "我們又見面了。",
+                "next": 6102006
+              }
+            ]
+          },
+          {
+            "id": 6102006,
+            "content": "「我們見過面嗎？」老人有些困惑，「我倒是不記得了，最近記性越來越差……」",
+            "npc": 910005,
+            "speakerName": "熱情的老人",
+            "next": 6102007
+          },
+          {
+            "id": 6102007,
+            "content": "「這地方危險，我造了些武器，你挑一件帶走吧。」\n老人爽朗地向你展示他的作品。\n「我想著，橫豎都找不到出去的路，不如做回老本行。說不定哪天，我造的武器能幫到某位了不得的騎士大人，把我們帶出這個鬼地方。」",
+            "npc": 910005,
+            "speakerName": "熱情的老人",
+            "options": [
+              {
+                "id": 6102008,
+                "content": "從剛鑄成的新武器中挑選。",
+                "next": 6102011
+              },
+              {
+                "id": 6102009,
+                "content": "從排列整齊的成品中挑選。",
+                "next": 6102011
+              },
+              {
+                "id": 6102010,
+                "content": "從蒙塵的儲藏角落中挑選。",
+                "next": 6102011
+              }
+            ]
+          },
+          {
+            "id": 6102011,
+            "content": "帶著挑選的武器，你在老人親切的道別聲中繼續前進。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 319,
     "name": "今夕何夕·其一",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5015,
       5016,
@@ -1186,21 +2243,90 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1016,
-      1017
-    ],
-    "eventStoryline": "Rogue/RouEvent_319",
-    "rlArchiveSubId": 10000201
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "1748589441224503524",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441224503522"
+        ],
+        "dialogues": [
+          {
+            "id": 6101901,
+            "content": "篝火映出一位老人皺縮的面龐。\n老人手中拿著一把鐵錘，腳下散落著幾柄武器。\n看見你，他的眼中浮現一絲驚喜。",
+            "next": 6101902
+          },
+          {
+            "id": 6101902,
+            "content": "「年輕人，你知道艾利西安在哪個方向嗎？」\n老人開口，聲音枯啞。\n「我在這附近轉了幾圈，怎麼也找不見回家的路……」",
+            "npc": 910005,
+            "speakerName": "迷茫的老人",
+            "options": [
+              {
+                "id": 6101903,
+                "content": "沉默。",
+                "next": 6101904
+              }
+            ]
+          },
+          {
+            "id": 6101904,
+            "content": "「是嗎……你也迷路了嗎。唉……」\n老人長歎一聲，垂下了頭。",
+            "npc": 910005,
+            "speakerName": "迷茫的老人",
+            "options": [
+              {
+                "id": 6101905,
+                "content": "詢問他是否可以給你一件武器。",
+                "next": 6101906
+              }
+            ]
+          },
+          {
+            "id": 6101906,
+            "content": "「武器？你是說地上的這些？」\n「噢……我想起來了，我是……一名鐵匠。」\n「我為一些人製造了武器，幫助他們逃離，然後——」",
+            "npc": 910005,
+            "speakerName": "迷茫的老人",
+            "next": 6101907
+          },
+          {
+            "id": 6101907,
+            "content": "老人的目光黯淡了一瞬，似是終於想起了自己來到此地的緣由。\n隨後，他輕輕搖了搖頭，向你報以一個滄桑的笑容。",
+            "next": 6101908
+          },
+          {
+            "id": 6101908,
+            "content": "「當然可以，孩子。」\n「請隨意挑選吧，希望它能護你平安。」",
+            "npc": 910005,
+            "speakerName": "迷茫的老人",
+            "options": [
+              {
+                "id": 6101909,
+                "content": "從老人左手邊的武器中挑選。",
+                "next": 6101911
+              },
+              {
+                "id": 6101910,
+                "content": "從老人右手邊的武器中挑選。",
+                "next": 6101911
+              }
+            ]
+          },
+          {
+            "id": 6101911,
+            "content": "你將挑選的武器收入囊中。\n老人似乎已經忘了你的存在，只是一言不發地注視著手中的鐵錘，似是陷入了思考。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 320,
     "name": "永恆詩篇·回環",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5173,
       5064
@@ -1209,21 +2335,96 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event08.T_Rouge_Event08'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event08.T_Rouge_Event08'",
-    "eventSelect": [
-      1106,
-      1107
-    ],
-    "eventStoryline": "Rogue/RouEvent_320",
-    "rlArchiveSubId": 10001002
+    "eventMainIcon": "T_Rouge_Event08",
+    "eventStoryline": [
+      {
+        "id": "1748589441225503726",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441225503724"
+        ],
+        "dialogues": [
+          {
+            "id": 6102101,
+            "content": "篝火明滅，勾勒出詩人低垂的側臉。\n她半跪在篝火旁，伸出手指，在煙灰中緩緩勾勒出蜿蜒的紋路。",
+            "next": 6102102
+          },
+          {
+            "id": 6102102,
+            "content": "「若無處可逃，那便接受命運吧；」\n「若文字無法成為刺破謊言的利刃，那便讓它成為砌築美夢的磚瓦吧——」\n詩人停頓了一下，微微抬起指尖。\n「唔……」",
+            "npc": 910005,
+            "speakerName": "喜悅的詩人",
+            "next": 6102103
+          },
+          {
+            "id": 6102103,
+            "content": "腦海中的回憶忽然被喚醒，你確信自己曾經聽過這首詩。\n一縷煙灰拂過臉頰，幾乎是下意識地，你輕聲念出了那空缺的最後一句——",
+            "options": [
+              {
+                "id": 6102104,
+                "content": "「書寫一個謊言，點燃一束不熄的火光。」",
+                "next": 6102105
+              }
+            ]
+          },
+          {
+            "id": 6102105,
+            "content": "「嗯……？！」\n詩人抬起頭來，驚喜地看著你。\n「多麼美妙的詞句啊，這正是我想要的結尾！沒想到竟能在這裡遇上一位知己，真是幸運。」",
+            "npc": 910005,
+            "speakerName": "喜悅的詩人",
+            "options": [
+              {
+                "id": 6102106,
+                "content": "「其實這是另一個時間的你寫下的。」",
+                "next": 6102107
+              }
+            ]
+          },
+          {
+            "id": 6102107,
+            "content": "「『另一個時間』……？」\n詩人先是露出訝異的神情，然後目光很快變得明亮，像是被那篝火點燃了一般。\n「原來如此……您是特別的——是這首敘事詩的主角，是我將在時間的其他方向再度遇見的人，對嗎？」",
+            "npc": 910005,
+            "speakerName": "喜悅的詩人",
+            "options": [
+              {
+                "id": 6102108,
+                "content": "點頭。",
+                "next": 6102109
+              }
+            ]
+          },
+          {
+            "id": 6102109,
+            "content": "「那麼這句詩究竟算是您寫的，還是我寫的呢？嗬嗬……真是個迷人的疑問，我想聖樹學院的學者們也會為您的故事傾倒。」\n詩人咯咯地笑起來。\n「下次見面的時候，還請允許我為您作一首詩。現在，請伸出手來，收下我的祝福吧。」",
+            "npc": 910005,
+            "speakerName": "喜悅的詩人",
+            "options": [
+              {
+                "id": 6102110,
+                "content": "伸出左手。",
+                "next": 6102112
+              },
+              {
+                "id": 6102111,
+                "content": "伸出右手。",
+                "next": 6102112
+              }
+            ]
+          },
+          {
+            "id": 6102112,
+            "content": "詩人用指尖殘留的煙灰在你的手心寫下了什麼。\n你依舊無法理解這些文字的含義，但你能感覺到它鮮明的溫度，熱烈卻不至於將人灼傷。\n當你再次抬頭，詩人已經不知所蹤。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 321,
     "name": "荊棘之書·斷離",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5174,
       5065
@@ -1232,21 +2433,80 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event09.T_Rouge_Event09'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event09.T_Rouge_Event09'",
-    "eventSelect": [
-      1111,
-      1112
-    ],
-    "eventStoryline": "Rogue/RouEvent_321",
-    "rlArchiveSubId": 10001102
+    "eventMainIcon": "T_Rouge_Event09",
+    "eventStoryline": [
+      {
+        "id": "1754303988206559939",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988206559937"
+        ],
+        "dialogues": [
+          {
+            "id": 6102201,
+            "content": "「那無常的命運之神啊，時而令我們歡喜，時而令我們苦痛……」\n「常懷虔誠之心……祂潔白的紡線終會將我們與那眾天之天的樂土連綴……」\n少年認真而虔誠地朗讀著書本上的詞句，對你的出現渾然不覺。",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "next": 6102202
+          },
+          {
+            "id": 6102202,
+            "content": "你悄然走到少年身邊，飛快地瞥了一眼他手中的書。\n如你記憶中那般，書頁上的聖歌被充滿惡意的漆黑文字覆蓋。\n那文字扭動著，似要掙脫出紙面。",
+            "next": 6102203
+          },
+          {
+            "id": 6102203,
+            "content": "「您好……您也想看書嗎？」\n少年終於注意到你，好奇地抬起了頭。",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "options": [
+              {
+                "id": 6102204,
+                "content": "阻止他繼續讀下去。",
+                "next": 6102205
+              },
+              {
+                "id": 6102208,
+                "content": "沉默。",
+                "next": 6102209
+              }
+            ]
+          },
+          {
+            "id": 6102205,
+            "content": "你將那本書從少年的手中抽出，用力地合上。",
+            "next": 6102206
+          },
+          {
+            "id": 6102209,
+            "content": "你知道，無論你在此刻做出怎樣的行動，都無法真正改變少年的命運。\n你還有更重要的事去做——收集琉璃，徹底結束這個漫長的噩夢。",
+            "next": 6102210
+          },
+          {
+            "id": 6102206,
+            "content": "「您沒事吧？！」\n少年擔憂地站起來，隨機又茫然地看向自己空無一物的雙手。\n「咦？我……不用再讀書了嗎？我……自由了嗎？」",
+            "npc": 910005,
+            "speakerName": "拘謹的少年",
+            "next": 6102207
+          },
+          {
+            "id": 6102210,
+            "content": "頃刻間，黑色的荊棘蔓延，吞噬了少年的身影。\n你輕輕地歎息一聲，繼續前進。"
+          },
+          {
+            "id": 6102207,
+            "content": "你忍住指尖的痛楚，微笑著向他點了點頭，然後將那本書扔進篝火裡。\n火焰猛然升起，黑色的荊棘席卷著火舌一起向你襲來——"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 322,
     "name": "被遺忘的·沉淪",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5175,
       5065
@@ -1255,21 +2515,83 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event10.T_Rouge_Event10'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event10.T_Rouge_Event10'",
-    "eventSelect": [
-      1116,
-      1117
-    ],
-    "eventStoryline": "Rogue/RouEvent_322",
-    "rlArchiveSubId": 10001202
+    "eventMainIcon": "T_Rouge_Event10",
+    "eventStoryline": [
+      {
+        "id": "1754303988207560059",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988207560057"
+        ],
+        "dialogues": [
+          {
+            "id": 6102301,
+            "content": "「孩子……快看，這裡有一堆篝火。」\n火光的對面，孑然一身的女人微笑著抬起頭，火光映出她憔悴的容顏。\n「真暖和呀，謝謝您，好心的陌生人。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "options": [
+              {
+                "id": 6102302,
+                "content": "詢問她所說的孩子在哪裡。",
+                "next": 6102303
+              }
+            ]
+          },
+          {
+            "id": 6102303,
+            "content": "「我的孩子就在這裡呀，您看。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6102304
+          },
+          {
+            "id": 6102304,
+            "content": "順著女人示意的方向，你看到了一塊半人高的、覆滿青苔的岩石。\n在岩石中央偏上的部分，一枚亮閃閃的胸針被鑲嵌在石縫間，四周爬滿了細密的青苔圍繞，如同一顆被埋葬的心。\n女人溫柔地愛撫著岩石的表面，對手上沾染的泥土渾然不覺。",
+            "options": [
+              {
+                "id": 6102305,
+                "content": "指出真相。",
+                "next": 6102306
+              },
+              {
+                "id": 6102308,
+                "content": "附和她。",
+                "next": 6102309
+              }
+            ]
+          },
+          {
+            "id": 6102306,
+            "content": "「您在胡說什麼？！」\n女人的眼中瞬間升起尖銳的敵意，她緊緊地將那塊岩石護在身後，歇斯底裡地大叫起來。\n「這就是我的孩子……她就在這裡，我再也不會讓任何人帶走她……不會……」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6102307
+          },
+          {
+            "id": 6102309,
+            "content": "「謝謝您。這孩子從小就怕生，但她好像很喜歡您呢。」\n女人語氣和藹，雙手仍時不時輕撫那塊岩石。\n「您是一個人出門的嗎？這可不行，您的家人會擔心的……快回家去吧。」",
+            "npc": 910005,
+            "speakerName": "憔悴的女人",
+            "next": 6102310
+          },
+          {
+            "id": 6102307,
+            "content": "你一時啞然。\n或許不該戳破這個美夢的，你早知這毫無意義。\n於是你起身離開，將篝火留給了女人和她的「孩子」。與此同時，潛伏在黑暗中的幽影伺機向你襲來——"
+          },
+          {
+            "id": 6102310,
+            "content": "你禮貌地向她道謝，隨後便起身繼續前進。\n女人和她的「孩子」的身影，漸漸模糊在篝火的陰影中。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 323,
     "name": "火焰不息·無常",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5176,
       5064
@@ -1278,21 +2600,83 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1121,
-      1122
-    ],
-    "eventStoryline": "Rogue/RouEvent_323",
-    "rlArchiveSubId": 10001302
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1754303988207560179",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988207560177"
+        ],
+        "dialogues": [
+          {
+            "id": 6102401,
+            "content": "「不見了……不見了……」\n少女睜著空洞的雙眼，匍匐在地上摸索著，指甲幾乎要嵌入地面。",
+            "npc": 910005,
+            "speakerName": "迷茫的少女",
+            "options": [
+              {
+                "id": 6102402,
+                "content": "詢問她在找什麼。",
+                "next": 6102403
+              }
+            ]
+          },
+          {
+            "id": 6102403,
+            "content": "「我的石頭……石頭……之前明明就在這裡的……」\n她喃喃說著，幾乎是絕望地注視著你腳下的篝火。\n「我的火焰……要熄滅了……怎麼辦……怎麼辦……」",
+            "npc": 910005,
+            "speakerName": "迷茫的少女",
+            "options": [
+              {
+                "id": 6102404,
+                "content": "幫助她。",
+                "next": 6102405
+              },
+              {
+                "id": 6102408,
+                "content": "告訴她世事本就不可能一直如我們所願。",
+                "next": 6102409
+              }
+            ]
+          },
+          {
+            "id": 6102405,
+            "content": "你試著回憶她喜歡的那些石子的模樣。雖然不確定它們的來曆，但你判斷用火焰魔法應該能製造出相似的東西。\n於是你試著利用篝火，凝聚力量——\n頃刻間，金黃色亮閃閃的小石頭如同流星一般墜落，互相碰撞發出清脆悅耳的聲響。",
+            "next": 6102406
+          },
+          {
+            "id": 6102409,
+            "content": "「我知道……我知道。」\n「所以我已經放棄了……我不再看那些書，不再思考魔法的起源，也不再追問那座塔裡有什麼了……」\n「現在我想要的只是一片火光而已，連這也不可以嗎？」",
+            "npc": 910005,
+            "speakerName": "迷茫的少女",
+            "next": 6102410
+          },
+          {
+            "id": 6102406,
+            "content": "「啊……！我的石頭——這就是我的石頭！謝謝您，神明的使者！」\n少女如獲至寶地一顆顆撿起那些石頭，小心翼翼地用裙擺兜起來。",
+            "npc": 910005,
+            "speakerName": "迷茫的少女",
+            "next": 6102407
+          },
+          {
+            "id": 6102410,
+            "content": "你無言以對。\n少女忽然站了起來，在你來得及做出反應之前，毅然踏進了火焰之中。\n慢慢地，少女的身影與火光融為一體，消失不見。\n你轉過身，繼續踏上旅途。"
+          },
+          {
+            "id": 6102407,
+            "content": "那些結晶確實和你此前在少女懷中見到的石子一模一樣，你不禁開始懷疑它們是否從一開始就是你在某次旅途中不經意間留下的痕跡。\n無論如何，少女已經再次找回了她的「確定」，而你，也必須繼續踏上旅途。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 324,
     "name": "火焰不息·餘溫",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5176,
       5064
@@ -1301,21 +2685,81 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1126,
-      1127
-    ],
-    "eventStoryline": "Rogue/RouEvent_324",
-    "rlArchiveSubId": 10001303
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560299",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560297"
+        ],
+        "dialogues": [
+          {
+            "id": 6102501,
+            "content": "篝火安靜地燃燒著，這一次你並未看到任何幻象。\n就在你打算離去的時候，地面上一些閃閃發光的東西引起了你的注意——\n那是一些金黃色的小石子，一顆一顆散落在地，仿若墜入凡塵的星星。",
+            "options": [
+              {
+                "id": 6102502,
+                "content": "撿起石子扔進火焰中。",
+                "next": 6102503
+              },
+              {
+                "id": 6102506,
+                "content": "安靜地觀察。",
+                "next": 6102507
+              }
+            ]
+          },
+          {
+            "id": 6102503,
+            "content": "火焰越燒越旺，然後開始反常地向側面延伸。\n你謹慎地退後了一步，忽然間，一個身影從火焰中顯現出來，你這才看清楚，那向側面延伸的光芒並非火焰，而是少女的發絲。",
+            "next": 6102504
+          },
+          {
+            "id": 6102507,
+            "content": "火焰仍在靜靜燃燒，恍惚間，你似乎從中聽到了一個聲音。",
+            "next": 6102508
+          },
+          {
+            "id": 6102504,
+            "content": "「您好！您發現了我的小石子，是嗎？」\n少女從篝火中跳出來，晃了晃腦袋，金色的石子劈裡啪啦地墜落在地。\n「我再也不用去外面找了——您看，只要走進這火裡，我就可以自己製造小石子了！」",
+            "npc": 910005,
+            "speakerName": "活潑的少女",
+            "next": 6102505
+          },
+          {
+            "id": 6102508,
+            "content": "「是的……是的。我記住了。」\n少女平靜而幸福的聲音透過火焰傳來。\n「疑問要適可而止。火是神明的饋贈，不是物質的反應。就像這些小石子，它們是神明賜予我的寶物，讓我能夠安然入睡……」",
+            "npc": 910005,
+            "speakerName": "活潑的少女",
+            "next": 6102509
+          },
+          {
+            "id": 6102505,
+            "content": "「請原諒我沒有時間與您多作寒暄——我還沒有收集滿一百四十六顆呢。」\n「不過我倒是發現了一些或許對您有用的東西或許，請收下吧，祝您旅途順利！」\n少女將什麼東西塞到你的手中，然後轉身消失在了火焰裡。",
+            "npc": 910005,
+            "speakerName": "活潑的少女",
+            "next": 6102510
+          },
+          {
+            "id": 6102509,
+            "content": "你沉默地轉身離開，一顆石子恰巧滾落在道路前方，你無意間將它踩碎成了粉末。\n神明賜予的寶物，原來如此脆弱。",
+            "next": 6102510
+          },
+          {
+            "id": 6102510,
+            "content": "你忽然想，那片火焰到底是為少女帶來幸福的「確定」，還是將她永遠困在這裡的「枷鎖」呢？\n或許，這二者本來就沒什麼區別。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 325,
     "name": "詛咒之血·空問",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5177,
       5064
@@ -1324,21 +2768,95 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "eventSelect": [
-      1131,
-      1132
-    ],
-    "eventStoryline": "Rogue/RouEvent_325",
-    "rlArchiveSubId": 10001602
+    "eventMainIcon": "T_Rouge_Event14_2",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560419",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560417"
+        ],
+        "dialogues": [
+          {
+            "id": 6102601,
+            "content": "「對不起，都是我的錯……我太笨了，記不全聖歌……我太懶了，沒有堅持聽完布道……」\n「神明大人，請原諒我……」",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6102602
+          },
+          {
+            "id": 6102602,
+            "content": "女孩旁若無人地懺悔著——又或許，是她已經看不見旁人了。\n她的病情看上去比上次更加糟糕，連雙眼都變得黯淡無光。",
+            "next": 6102603
+          },
+          {
+            "id": 6102603,
+            "content": "「您是……那位旅人……已經……過去很久了嗎？」\n女孩終於注意到你，慢慢地轉過頭來。\n「旅人……請您告訴我……為什麼，我日夜不停地向神明祈禱，神明卻從來不回應我？」",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "options": [
+              {
+                "id": 6102604,
+                "content": "鼓勵她繼續祈禱。",
+                "next": 6102605
+              },
+              {
+                "id": 6102608,
+                "content": "告訴她神明不會回應。",
+                "next": 6102609
+              }
+            ]
+          },
+          {
+            "id": 6102605,
+            "content": "既然還沒到改寫結局的時刻，那麼將謊言延續下去也無妨……至少，那也是一種「希望」。\n你告訴她，只要繼續祈禱，總有一天你們都能得到拯救。\n這不完全是謊話——你相信深淵終會被戰勝，只不過她的祈禱無關緊要，真正的答案在於你手中的這盞提燈。",
+            "next": 6102606
+          },
+          {
+            "id": 6102609,
+            "content": "「神明……不會回應我嗎？」\n「是因為我的罪孽太深，已經不值得拯救了嗎？」\n女孩絕望地看著你，淚水順著她布滿膿瘡的臉頰滑落。",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "options": [
+              {
+                "id": 6102610,
+                "content": "「是因為你本來就沒有罪。」",
+                "next": 6102611
+              }
+            ]
+          },
+          {
+            "id": 6102606,
+            "content": "「我明白了……我相信您。」\n女孩雙手交握，繼續低聲祈禱，聲音中多出了幾分堅定。",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6102607
+          },
+          {
+            "id": 6102611,
+            "content": "「咦……？」\n女孩愣住了，眼中浮現出深深的困惑。",
+            "npc": 910005,
+            "speakerName": "染病的女孩",
+            "next": 6102612
+          },
+          {
+            "id": 6102607,
+            "content": "你輕歎了一口氣，握緊手中的提燈，繼續前行。"
+          },
+          {
+            "id": 6102612,
+            "content": "你對她露出一個堅定的微笑，告訴她，你一定會找到辦法結束她的痛苦。\n女孩看著你，似懂非懂地點了點頭。這時你注意到，她的傷口不再流血了。\n於是，你向她揮手作別，握緊手中的提燈，繼續前行。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 326,
     "name": "月之盈",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5065
     ],
@@ -1346,21 +2864,86 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event17_2.T_Rouge_Event17_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event17_2.T_Rouge_Event17_2'",
-    "eventSelect": [
-      1136,
-      1137
-    ],
-    "eventStoryline": "Rogue/RouEvent_326",
-    "rlArchiveSubId": 10001801
+    "eventMainIcon": "T_Rouge_Event17_2",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560539",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560537"
+        ],
+        "dialogues": [
+          {
+            "id": 6102701,
+            "content": "「芙薩，滿月女神——\n「輝光足跡的主宰，命運絲線的編織者……\n「穹頂與月華為證，虔信頌歌向你獻上……」",
+            "npc": 910005,
+            "speakerName": "滿月的信徒",
+            "next": 6102702
+          },
+          {
+            "id": 6102702,
+            "content": "人們的身形自火中浮現，他們齊聲念著獻給神明的禱言。",
+            "next": 6102703
+          },
+          {
+            "id": 6102703,
+            "content": "「你是誰？一位迷路的旅人？」\n一位祈禱者看見了你，她笑著向你伸出手。\n「與我們一起向滿月女神祈禱吧，祂定會為你的前路賜福！」",
+            "npc": 910005,
+            "speakerName": "滿月的信徒",
+            "next": 6102704
+          },
+          {
+            "id": 6102704,
+            "content": "他們的頌歌獻給<H>第九位神明</>，命運之神<H>芙薩</>。\n祂是滿月的主宰，祂抽引月華，織成命運之線。",
+            "options": [
+              {
+                "id": 6102705,
+                "content": "加入他們的祈禱。",
+                "next": 6102706
+              },
+              {
+                "id": 6102709,
+                "content": "不願加入他們的祈禱。",
+                "next": 6102710
+              }
+            ]
+          },
+          {
+            "id": 6102706,
+            "content": "這是幼時的你最不喜歡的場合。你不喜歡那些空洞的溢美之詞，背下來轉頭就忘記。但如今，你卻生出一絲懷念。\n你加入了他們的祈禱。",
+            "next": 6102707
+          },
+          {
+            "id": 6102710,
+            "content": "「拒絕？你——為什麼？」\n祈禱者尖利地叫出聲。\n「異端者——莫非你是暗月派的信徒？涅法的追隨者？」",
+            "npc": 910005,
+            "speakerName": "滿月的信徒",
+            "next": 6102711
+          },
+          {
+            "id": 6102707,
+            "content": "「芙薩，命運無序亂流中恒常劃過天幕的滿月之神。\n「向你致敬，願你護佑你的信徒，\n「賜予我們無可挑剔的幸運與幸福。」",
+            "npc": 910004,
+            "next": 6102708
+          },
+          {
+            "id": 6102711,
+            "content": "聽到那個禁忌的名字，信徒們齊齊轉過臉來，他們的面孔變得扭曲而猙獰。\n你歎了口氣——你得想辦法從他們的團團包圍中抽身了。"
+          },
+          {
+            "id": 6102708,
+            "content": "你閉上雙眼，跟著虔誠的信眾默念。\n最後一句念完，你睜開眼，他們的身影已經消失不見。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 327,
     "name": "月之虛",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5178,
       5065
@@ -1369,21 +2952,99 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event17.T_Rouge_Event17'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event17.T_Rouge_Event17'",
-    "eventSelect": [
-      1141,
-      1142
-    ],
-    "eventStoryline": "Rogue/RouEvent_327",
-    "rlArchiveSubId": 10001901
+    "eventMainIcon": "T_Rouge_Event17",
+    "eventStoryline": [
+      {
+        "id": "1754303988209560659",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988209560657"
+        ],
+        "dialogues": [
+          {
+            "id": 6102801,
+            "content": "「命運紡線之剪，永恒寂靜的主宰者……\n「深淵與長夜為證，請聆聽我卑微的禱言……」",
+            "npc": 910005,
+            "speakerName": "陌生的信徒",
+            "next": 6102802
+          },
+          {
+            "id": 6102802,
+            "content": "人們的身形自火中浮現，他們齊聲念著獻給神明的禱言。\n你靜靜聆聽著。那是你並不熟悉的禱文。",
+            "next": 6102803
+          },
+          {
+            "id": 6102803,
+            "content": "「你是誰？一位迷路的旅人？」\n一位祈禱者看見了你，她笑著向你伸出手。\n「還是說，你也同樣窺破了天機，想要同我們一起投入真正的救主——涅法的懷抱？」",
+            "npc": 910005,
+            "speakerName": "陌生的信徒",
+            "next": 6102804
+          },
+          {
+            "id": 6102804,
+            "content": "<H>涅法</>——你記得這個名字。\n它不常出現在艾利西安正教信眾的筆下，你只在塵封的古老尺牘間見過這個名字。這是一個禁忌的名字，早已被遺忘的<H>第十位神明</>。",
+            "next": 6102805
+          },
+          {
+            "id": 6102805,
+            "content": "祂是滿月與命運之神芙薩的姊妹，暗月與死亡之神。\n她的同胞姐姐紡織命運絲線，她則剪斷命運。\n兩位神明無休止的爭鬥帶來月相盈虛，卷動潮汐。\n那麼，祂的信徒，便應該是……",
+            "options": [
+              {
+                "id": 6102806,
+                "content": "詢問他們的信仰。",
+                "next": 6102807
+              }
+            ]
+          },
+          {
+            "id": 6102807,
+            "content": "「既然出現在這兒，你應該已經知曉，這片深淵不是死物。它活著，不斷生長，不斷延伸。」\n「騎士團的黃金聖劍無法擊退黑暗的浪潮，滿月的光輝不能穿透幽邃的寂靜。」\n「正如一切光芒都向著熄滅飛馳，一切活物都終有一死——消亡是唯一可以確定的東西。我們的深淵，才是世界本真的模樣。」\n「歡迎加入<H>暗月教派</>，親愛的旅人。」",
+            "npc": 910005,
+            "speakerName": "暗月的信徒",
+            "options": [
+              {
+                "id": 6102808,
+                "content": "回應他們的邀請。",
+                "next": 6102809
+              },
+              {
+                "id": 6102811,
+                "content": "拒絕他們的邀請。",
+                "next": 6102812
+              }
+            ]
+          },
+          {
+            "id": 6102809,
+            "content": "即使只是虛影，你也不想觸怒他們，增加無謂的糾纏。\n於是你開始煞有介事地復述起你聽過的那些關於暗月教派的傳言——「死亡的本能」啦，「涅法的救贖」啦，「深淵即永恒」啦……人們的臉上露出微笑，他們不住地點頭，附和起你的高談闊論。",
+            "next": 6102810
+          },
+          {
+            "id": 6102812,
+            "content": "在這場漫長的苦旅中，你也曾多次思考過生的意義，死的意義。你也曾相信死亡便是唯一的解。\n但<H>那幾次意外的相逢</>讓你堅定了你無數次行走在黑暗中的意義——\n你要驅散這片黑暗，以自己的軀殼為薪柴。即使只是短暫的光，你也將灼燒這片凝滯的不朽。",
+            "next": 6102813
+          },
+          {
+            "id": 6102810,
+            "content": "「你的博學令我們感歎，你的智慧令我們折服。請收下這些禮物吧，陌生的朋友！」\n你蒙混過關了。還好，你並非少時的每一場布道和論辯都在走神。",
+            "npc": 910005,
+            "speakerName": "暗月的信徒"
+          },
+          {
+            "id": 6102813,
+            "content": "「深淵並非永恒，你們只是生者留下的虛影。\n你舉起武器。\n「回到你該去的地方吧，亡者們——」",
+            "npc": 910004
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 328,
     "name": "聖像之下",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [
       5065
     ],
@@ -1391,62 +3052,339 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event16.T_Rouge_Event16'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event16.T_Rouge_Event16'",
-    "eventSelect": [
-      1146,
-      1147
-    ],
-    "eventStoryline": "Rogue/RouEvent_328",
-    "rlArchiveSubId": 10002001
+    "eventMainIcon": "T_Rouge_Event16",
+    "eventStoryline": [
+      {
+        "id": "17546503285961385789",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17546503285961385787"
+        ],
+        "dialogues": [
+          {
+            "id": 6103001,
+            "content": "「哦，讓我們唱一首歌兒給<H>沙利葉</>吧！\n「他是艾利西安的聖者。\n「他聆聽芙薩的啟示，教給世人慈悲、寬恕與愛，\n「讓那朱紅的艾利西安大地，重綻和平的新枝。」",
+            "npc": 910005,
+            "speakerName": "瘋癲的詩人",
+            "next": 6103002
+          },
+          {
+            "id": 6103002,
+            "content": "你看到一位吟遊詩人打扮的老者正摩挲著一截斷壁。\n這處斷壁相對完整，借著微弱的燈光，你看到了一幅巨大的壁畫，畫的正是詩人口中的<H>沙利葉</>。\n兩千年的聖者，最初的<H>七美德</>之一，「節製」席。\n詩人徑自唱著歌，對你的到來充耳不聞。",
+            "options": [
+              {
+                "id": 6103003,
+                "content": "繼續聽下去。",
+                "next": 6103004
+              }
+            ]
+          },
+          {
+            "id": 6103004,
+            "content": "「但聖者的心卻始終因一事而痛楚，\n「那便是芙薩給世人的應許，那眾天之天。\n「終於有一天，他在碧波之畔靜坐七十又七日後，\n「他於滿月之下洞悉真理，於湖中抵達永恒。」",
+            "npc": 910005,
+            "speakerName": "瘋癲的詩人",
+            "next": 6103005
+          },
+          {
+            "id": 6103005,
+            "content": "你知道他在唱什麼。\n沙利葉在湖畔得到滿月與命運女神芙薩的啟示，他的靈魂從此前往眾天之天，得到了「永恒」。他也成為第一位「神選者」。\n自他之後，又陸續有人身上顯現出聖痕，那是被神選中的徽記。他們陸續經由聖湖，抵達應許之地。\n這些早期傳頌會曆史你並不陌生。",
+            "options": [
+              {
+                "id": 6103006,
+                "content": "繼續聽下去。",
+                "next": 6103007
+              }
+            ]
+          },
+          {
+            "id": 6103007,
+            "content": "「可兩千年後，當我站在起伏的山巒凝望聖湖，\n「為何那裡只剩下漆黑的漩渦？\n「沙利葉啊，我們智慧的聖者——\n「告訴我，女神應許的樂園究竟在何處？」",
+            "npc": 910005,
+            "speakerName": "瘋癲的詩人",
+            "next": 6103008
+          },
+          {
+            "id": 6103008,
+            "content": "詩人邊唱著，邊落下淚來。他終於從遙遠的曆史，唱到了眼前的現在——這片幽暗的深淵。\n不知從何時起，傳頌會兩千年來最神聖潔淨的聖湖，一夜之間突然為這汙濁的混沌所取代。\n就像一千年前那些棄教的墮落者所言的那樣——「九神已死！」\n要繼續聽下去嗎？",
+            "options": [
+              {
+                "id": 6103009,
+                "content": "繼續聽下去。",
+                "next": 6103010
+              },
+              {
+                "id": 6103013,
+                "content": "離開此地。",
+                "next": 6103014
+              }
+            ]
+          },
+          {
+            "id": 6103010,
+            "content": "「為何那穢濁的深淵沒有言語？\n「那滿月的銀輝遍照我身，為何女神不曾回答？\n「沙利葉啊，難道真的如暗月派的信徒所言——\n「你從未前往眾天之天，而是背向著明月，成為了魔鬼？」",
+            "npc": 910005,
+            "speakerName": "瘋癲的詩人",
+            "next": 6103011
+          },
+          {
+            "id": 6103014,
+            "content": "你打了幾聲招呼，嚐試吸引詩人的注意。你想和他聊聊，但他只是兀自唱著那首古老的歌謠。\n大概無法從他口中得到什麼有價值的情報了，於是你轉身離開。"
+          },
+          {
+            "id": 6103011,
+            "content": "「請等一下——你說什麼？」\n詩人唱出了你始料未及的詞句，那是流傳於異端者中最隱秘的流言——聖湖從不曾神聖，所謂的由沙利葉而始的神選從一開始就是一場盛大的獻祭。\n從<H>某個人</>口中，你聽過相同的推測。",
+            "npc": 910004,
+            "next": 6103012
+          },
+          {
+            "id": 6103012,
+            "content": "可詩人只是繼續旁若無人地撥弄著他的七弦琴，開始唱下一首歌謠，仿佛你並不存在於他的時空。\n他的聲音越來越遠，直到身影消失不見。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 329,
     "name": "月亮墜落千次",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event21.T_Rouge_Event21'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event21.T_Rouge_Event21'",
-    "eventSelect": [
-      1151,
-      1152,
-      1153
-    ],
-    "eventStoryline": "Rogue/RouEvent_329",
-    "rlArchiveSubId": 10009101
+    "eventMainIcon": "T_Rouge_Event21",
+    "eventStoryline": [
+      {
+        "id": "17758149970381652836",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17758149970381652834"
+        ],
+        "dialogues": [
+          {
+            "id": 6103101,
+            "content": "銅鏡自篝火中浮現。",
+            "next": 6103102
+          },
+          {
+            "id": 6103102,
+            "content": "「年輕人，對著我默念『魔鏡啊魔鏡』，並在心中想像你想見到的人，你就能看見那人的身影。」",
+            "npc": 910005,
+            "speakerName": "銅鏡",
+            "options": [
+              {
+                "id": 6103103,
+                "content": "一面會說話的鏡子？",
+                "next": 6103104
+              }
+            ]
+          },
+          {
+            "id": 6103104,
+            "content": "「我是你心中的倒影。」\n銅鏡咯咯笑了起來。\n「我來提醒你，你心中依舊牽掛之物。」",
+            "npc": 910005,
+            "speakerName": "銅鏡",
+            "options": [
+              {
+                "id": 6103105,
+                "content": "迴想家人。",
+                "next": 6103106
+              },
+              {
+                "id": 6103108,
+                "content": "試圖看清自己的倒影。",
+                "next": 6103109
+              },
+              {
+                "id": 6103111,
+                "content": "迴想「那個很重要的人」。",
+                "next": 6103112
+              }
+            ]
+          },
+          {
+            "id": 6103106,
+            "content": "鏡子裡接連浮現出不同身影，你太久沒有見過他們了。\n\n母親的臉溫柔而慈悲，她的聲音很輕，卻有力度。當你玩累了的時候，便會滋溜一下攀上她的衣裙，枕著她柔軟的雙膝酣眠。她撫摸你臉頰的時候，會讓你想起教義中的芙薩女神。",
+            "next": 6103107
+          },
+          {
+            "id": 6103109,
+            "content": "鏡子裡浮現出年輕人的身形。\n你知道那是你自己，但你為此感到恍惚——你太久沒有照過鏡子了，以至於鏡中的倒影與你記憶裡的自己是如此不相符。你清晰地感覺到時間在你身上雕琢的痕跡。",
+            "next": 6103110
+          },
+          {
+            "id": 6103112,
+            "content": "鏡子裡浮現出一個人的容顏。\n\n在如花園小徑般交錯的時間中，你與{性别：他|她}只見過三次面。但{性別：他|她}的身影卻如烙印般刻在你的記憶。",
+            "next": 6103113
+          },
+          {
+            "id": 6103107,
+            "content": "父親似乎時常皺著眉，僕人們提起他的時候總是戰戰兢兢。但你不怕他，因為他總是把你抱起來，讓你摸他的胡茬，你覺得他並不像傳說中那樣嚴厲。\n\n父親很忙，他不常出現在宅邸，所以大多數時候老管家更像你的父親。鬍子老頭兒的話很多，當你跌跌撞撞跑起來的時候他總跟在你後面，你不喜歡他嘮嘮叨叨。但現在，你開始覺得，那嘮叨令人懷念。\n\n你知道，正是這些思念匯聚成幽暗的火，在漫長的戰鬥中給予你暖意與希冀。至少，為了他們，你必須戰鬥下去。\n\n……",
+            "next": 6103114
+          },
+          {
+            "id": 6103110,
+            "content": "時間一直在奔流，永不停歇。它會讓你變高，便強壯，也會漸漸讓你變佝僂，為你的臉上刻下溝壑。\n\n而唯一不變的，只有手中這盞提燈，搖曳著不滅的燈火。\n\n……",
+            "next": 6103114
+          },
+          {
+            "id": 6103113,
+            "content": "你記得{性別：他|她}如一盞燈帶你著少時的你穿越幽邃的深淵，記得{性別：他|她}說自己是最偉大的騎士，記得你們在黑暗中點燃的每一簇篝火，記得你握著{性別：他|她}的手，{性別：他|她}的呼吸越來越微弱，但眼神始終如不屈的火焰。\n\n……",
+            "next": 6103114
+          },
+          {
+            "id": 6103114,
+            "content": "銅鏡消失了。你感到自己的臉頰有些濕潤，你知道你曾為鏡中人哭泣。\n\n但眼淚並不會讓你駐足停留，你站起身，繼續踏上前路——",
+            "next": 6103115
+          },
+          {
+            "id": 6103115,
+            "content": "<H>「縱使月亮墜落千次，我心熾焰依舊不熄。」</>"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 330,
     "name": "海霧搖籃曲",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event22.T_Rouge_Event22'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event22.T_Rouge_Event22'",
-    "eventSelect": [
-      1156,
-      1157
-    ],
-    "eventStoryline": "Rogue/RouEvent_330",
-    "rlArchiveSubId": 10009201
+    "eventMainIcon": "T_Rouge_Event22",
+    "eventStoryline": [
+      {
+        "id": "17758150540093466960",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17758150540093466958"
+        ],
+        "dialogues": [
+          {
+            "id": 6103201,
+            "content": "女人的幻影在篝火間撫著豎琴，琴聲悠揚。",
+            "next": 6103202
+          },
+          {
+            "id": 6103202,
+            "content": "「您好，旅人。」她停下彈奏，向你略微頷首致意。\n\n「我是一名傳頌會<H>司音</>。也許您會需要我的幫助——我將予您夢境，為您帶來神的撫慰。」",
+            "npc": 910005,
+            "speakerName": "彈琴的女人",
+            "next": 6103203
+          },
+          {
+            "id": 6103203,
+            "content": "「司音」——那是傳頌會一類特別的神職人員。\n艾利西安正教相信，夢是人與神溝通的場域。而司音則以音律築造夢境，讓人們得以直接觸碰神意。\n你曾參加過這樣的聖事，並數次聆聽過神的撫慰與告誡。",
+            "options": [
+              {
+                "id": 6103204,
+                "content": "你想要聆聽告慰。",
+                "next": 6103205
+              },
+              {
+                "id": 6103213,
+                "content": "你拒絕聆聽告慰。",
+                "next": 6103214
+              }
+            ]
+          },
+          {
+            "id": 6103205,
+            "content": "「那麼，讓我為您演奏。」\n\n女人輕撫琴弦。\n\n「請閉上眼吧，芙薩的光輝與您同在。」",
+            "npc": 910005,
+            "speakerName": "彈琴的女人",
+            "next": 6103206
+          },
+          {
+            "id": 6103214,
+            "content": "漫長的輪迴與戰鬥中，你已經變得沒有那麼敬奉神明。你認為神的撫慰只是一些冠冕堂皇的大道理而已。\n\n你能夠依靠的也只有你自己。",
+            "next": 6103215
+          },
+          {
+            "id": 6103206,
+            "content": "……\n\n你看到了滿月與命運之神，她佇立在在滿月的銀輝之中。",
+            "next": 6103207
+          },
+          {
+            "id": 6103215,
+            "content": "「在艾利西安，沒有人會拒絕一位司音給予的夢。」\n\n女人有些微的驚訝。\n\n「夢是神的旨意，它會拯救一切苦痛。」\n\n「我聽說有一座島上的人們，拋棄塵世的一切，只為在夢中得到永恆的救贖。」",
+            "npc": 910005,
+            "speakerName": "彈琴的女人",
+            "next": 6103216
+          },
+          {
+            "id": 6103207,
+            "content": "「你可以留在這裡。」 \n\n女神捻動她瑩白的紡線。\n\n「成為我的僕人，得到寬恕。月華將驅散黑暗，你會遺忘深淵的一切。」",
+            "npc": 910005,
+            "speakerName": "芙薩",
+            "next": 6103208
+          },
+          {
+            "id": 6103216,
+            "content": "「我不需要神的救贖，我希望依靠自己的力量走出這裡。」",
+            "npc": 910004,
+            "next": 6103217
+          },
+          {
+            "id": 6103208,
+            "content": "「對不起，我不能留下。」\n\n你搖搖頭，握緊提燈。",
+            "npc": 910004,
+            "next": 6103209
+          },
+          {
+            "id": 6103217,
+            "content": "「自己的力量……」\n\n她重複了一遍，似是略有所思。\n\n「那麼，旅人，願你在神明不在之處，也能有好運相伴。」",
+            "npc": 910005,
+            "speakerName": "彈琴的女人",
+            "next": 6103218
+          },
+          {
+            "id": 6103209,
+            "content": "「為什麼？」\n\n女神垂落的視線依舊悲憫。\n\n「在地上的國度，有一座海島上的凡人，他們拋棄塵世的一切，只為在夢中得到永恆的救贖。」",
+            "npc": 910005,
+            "speakerName": "芙薩",
+            "next": 6103210
+          },
+          {
+            "id": 6103218,
+            "content": "篝火熄滅，女人的幻影也消失不見了。"
+          },
+          {
+            "id": 6103210,
+            "content": "「感恩您的慈悲。但是，我不能自己一人得到救贖。」\n「塵世間仍有人承受著苦難，仍有人在為深淵戰鬥，有人在等我回家，有人在等我履行約定。」\n「我想依靠自己的力量幫助他們。」",
+            "npc": 910004,
+            "next": 6103211
+          },
+          {
+            "id": 6103211,
+            "content": "「極少有人拒絕神明的拯救。」\n\n女神微微笑起來，滿月的銀輝似乎變得沒有那麼冷。\n\n「那麼，勇敢的凡人，我將拭目以待。」",
+            "npc": 910005,
+            "speakerName": "芙薩",
+            "next": 6103212
+          },
+          {
+            "id": 6103212,
+            "content": "……\n\n滿月的光輝漸漸消隱，你的眼前重歸黑暗。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 381,
     "name": "遊戲時間到！",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 50,
+    "weight": 50,
     "roomCondition": [
       5065
     ],
@@ -1454,20 +3392,67 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event20.T_Rouge_Event20'",
-    "eventSelect": [
-      2001
-    ],
-    "eventStoryline": "Rogue/RouEvent_381",
-    "rlArchiveSubId": 10008101
+    "eventMainIcon": "T_Rouge_Event20",
+    "eventStoryline": [
+      {
+        "id": "1736847954553636378",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1736847954553636375"
+        ],
+        "dialogues": [
+          {
+            "id": 6102901,
+            "content": "你在篝火旁坐下休息。\n忽然間，你注意到了一種奇怪的響聲。一開始它好像就在你耳畔，然後漸漸遠了一點，移到了頭頂。\n聲音越來越響，窸窸窣窣，似乎是某種柔軟的東西在互相摩擦。",
+            "next": 6102902
+          },
+          {
+            "id": 6102902,
+            "content": "「嗨！幸運的旅人！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6102903
+          },
+          {
+            "id": 6102903,
+            "content": "色彩斑斕的羽毛從頭頂落下來。你從來沒有一次在深淵裡同時看到這麼多顏色。\n現在，你被包圍在一地羽毛中間，好像被街頭玩整蠱遊戲的小傢伙們偶然選中的倒黴路人，尷尬中還透著一絲微妙的可悲。",
+            "next": 6102904
+          },
+          {
+            "id": 6102904,
+            "content": "「我說，你怎麼一點反應也沒有？你在深淵裡待這麼久了，不覺得無聊嗎？」\n戴著滑稽的鳥頭面具的人從上方倒立著緩緩降落下來，讓自己的視線與你齊平。\n你不知道他是怎麼保持這個動作的，但這不重要，重要的是他面具上的尖嘴快要戳到你的臉了。",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6102905,
+                "content": "我沒空陪你胡鬧。",
+                "next": 6102906
+              }
+            ]
+          },
+          {
+            "id": 6102906,
+            "content": "「別這麼冷淡嘛，傳頌會的老傢伙們應該教過你吧，日行一善會有好報的。」\n「跟我<H>玩個遊戲</>，贏了就給你獎勵，輸了也沒有懲罰。穩賺不賠，怎麼樣？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6102907,
+                "content": "好吧。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 382,
     "name": "遊戲時間到！",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5064
     ],
@@ -1475,55 +3460,102 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event20.T_Rouge_Event20'",
-    "eventSelect": [
-      2003,
-      2004
-    ],
-    "eventStoryline": "Rogue/RouEvent_382",
-    "rlArchiveSubId": 10008102
+    "eventMainIcon": "T_Rouge_Event20",
+    "eventStoryline": [
+      {
+        "id": "1742196066378954315",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1742196066378954313"
+        ],
+        "dialogues": [
+          {
+            "id": 6101801,
+            "content": "你在篝火旁坐下休息。\n忽然間，你注意到了一種奇怪的響聲。一開始它好像就在你耳畔，然後漸漸遠了一點，移到了頭頂。\n聲音越來越響，窸窸窣窣，似乎是某種柔軟的東西在互相摩擦。",
+            "next": 6101802
+          },
+          {
+            "id": 6101802,
+            "content": "「嗨！幸運的旅人！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101803
+          },
+          {
+            "id": 6101803,
+            "content": "色彩斑斕的羽毛從頭頂落下來。你從來沒有一次在深淵裡同時看到這麼多顏色。\n現在，你被包圍在一地羽毛中間，好像被街頭玩整蠱遊戲的小傢伙們偶然選中的倒黴路人，尷尬中還透著一絲微妙的可悲。",
+            "next": 6101804
+          },
+          {
+            "id": 6101804,
+            "content": "「我說，你怎麼一點反應也沒有？你在深淵裡待這麼久了，不覺得無聊嗎？」\n戴著滑稽的鳥頭面具的人從上方倒立著緩緩降落下來，讓自己的視線與你齊平。\n你不知道他是怎麼保持這個動作的，但這不重要，重要的是他面具上的尖嘴快要戳到你的臉了。",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6101805,
+                "content": "我沒空陪你胡鬧。",
+                "next": 6101806
+              }
+            ]
+          },
+          {
+            "id": 6101806,
+            "content": "「別這麼冷淡嘛，傳頌會的老傢伙們應該教過你吧，日行一善會有好報的。」\n「跟我<H>玩個遊戲</>，贏了就給你獎勵，輸了也沒有懲罰。穩賺不賠，怎麼樣？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6101807,
+                "content": "好吧。"
+              },
+              {
+                "id": 6101808,
+                "content": "我真的沒空。",
+                "next": 6101809
+              }
+            ]
+          },
+          {
+            "id": 6101809,
+            "content": "「好吧，好吧，我也不是什麼強人所難的壞傢伙嘛。」\n「那我們下次再見！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 401,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 402,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 403,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5029
     ],
@@ -1531,18 +3563,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 404,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 600,
+    "weight": 600,
     "roomCondition": [
       5030
     ],
@@ -1550,18 +3577,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 405,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5031
     ],
@@ -1569,18 +3591,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 406,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5031
     ],
@@ -1588,18 +3605,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 407,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 2000,
+    "weight": 2000,
     "roomCondition": [
       5032
     ],
@@ -1607,18 +3619,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 408,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 2000,
+    "weight": 2000,
     "roomCondition": [
       5032
     ],
@@ -1626,18 +3633,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 409,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 600,
+    "weight": 600,
     "roomCondition": [
       5061
     ],
@@ -1645,18 +3647,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 410,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5061
     ],
@@ -1664,18 +3661,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 421,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5164
     ],
@@ -1683,18 +3675,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 422,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5163,
       5165,
@@ -1704,18 +3691,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 423,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5180,
       5181,
@@ -1725,18 +3707,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 424,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5183,
       5184,
@@ -1746,18 +3723,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 425,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5186,
       5187,
@@ -1767,18 +3739,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 426,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5189,
       5190,
@@ -1788,18 +3755,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 427,
     "name": "深淵行商",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5192,
       5193,
@@ -1809,18 +3771,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 501,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -1828,18 +3785,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 502,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -1847,18 +3799,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 503,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -1866,18 +3813,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 504,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -1885,18 +3827,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 505,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -1904,18 +3841,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 506,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -1923,18 +3855,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 507,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -1942,18 +3869,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 508,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -1961,18 +3883,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 509,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -1980,18 +3897,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 510,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -1999,18 +3911,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 511,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2018,18 +3925,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 512,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2037,18 +3939,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 513,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -2056,18 +3953,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 514,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -2075,18 +3967,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 515,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2094,18 +3981,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 516,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2113,18 +3995,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 517,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2132,18 +4009,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 518,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2151,18 +4023,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 521,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2170,18 +4037,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 522,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2189,18 +4051,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 523,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2208,18 +4065,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 524,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2227,18 +4079,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 527,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2246,18 +4093,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 528,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2265,18 +4107,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 529,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2284,18 +4121,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 530,
     "name": "至暗幽影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2303,18 +4135,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6001,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2322,18 +4149,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6002,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2341,18 +4163,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6003,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2360,18 +4177,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6004,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2379,18 +4191,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6005,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2398,18 +4205,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6006,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2417,18 +4219,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6007,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2436,18 +4233,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6008,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2455,18 +4247,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6009,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2474,18 +4261,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6011,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2493,18 +4275,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6012,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2512,18 +4289,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6013,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2531,18 +4303,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6014,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2550,18 +4317,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6015,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2569,18 +4331,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6016,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2588,18 +4345,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6017,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2607,18 +4359,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6018,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2626,18 +4373,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6019,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2645,18 +4387,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6021,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2664,18 +4401,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6022,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2683,18 +4415,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6023,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2702,18 +4429,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6024,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2721,18 +4443,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6025,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2740,18 +4457,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6026,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2759,18 +4471,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6027,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2778,18 +4485,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6028,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2797,18 +4499,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6029,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2816,18 +4513,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6101,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2836,18 +4528,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6102,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2856,18 +4543,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6103,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2876,18 +4558,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6104,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2896,18 +4573,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6105,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2916,18 +4588,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6106,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2936,18 +4603,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6107,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2956,18 +4618,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6108,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2976,18 +4633,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6109,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2996,18 +4648,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6110,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3016,18 +4663,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6111,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3036,18 +4678,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6112,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3056,18 +4693,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6114,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3076,18 +4708,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6115,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3096,18 +4723,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6116,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3116,18 +4738,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6117,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3136,18 +4753,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6118,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3156,18 +4768,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6119,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3176,18 +4783,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6120,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3196,18 +4798,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6121,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3216,18 +4813,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6122,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3236,18 +4828,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6123,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3256,18 +4843,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6124,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3276,18 +4858,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6125,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3296,18 +4873,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6127,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3316,18 +4888,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6128,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3336,18 +4903,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6129,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3356,18 +4918,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6130,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3376,18 +4933,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6131,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3396,18 +4948,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6132,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3416,18 +4963,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6133,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3436,18 +4978,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6134,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3456,18 +4993,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6135,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3476,18 +5008,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6136,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3496,18 +5023,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6137,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3516,18 +5038,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6138,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3536,18 +5053,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6201,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3555,18 +5067,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6202,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3574,18 +5081,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6203,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3593,18 +5095,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6204,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3612,18 +5109,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6205,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3631,18 +5123,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6206,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3650,18 +5137,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6207,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3669,18 +5151,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6208,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3688,18 +5165,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6209,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3707,18 +5179,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6210,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3726,18 +5193,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6211,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3745,18 +5207,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6212,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3764,18 +5221,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6213,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3783,18 +5235,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6214,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3802,18 +5249,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6215,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3821,18 +5263,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6216,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3840,18 +5277,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6217,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3859,18 +5291,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6218,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3878,18 +5305,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6219,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3897,18 +5319,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6220,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3916,18 +5333,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6221,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3935,18 +5347,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6222,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3954,18 +5361,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6223,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3973,18 +5375,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6224,
     "name": "離散幽影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3992,10 +5389,6 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   }
 ]

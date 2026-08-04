@@ -5,8 +5,8 @@
     "desc": "Increases Melee Weapon ATK by <Highlight>30.0%</>.",
     "simpleDesc": "Increases Melee Weapon ATK.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -20,7 +20,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 1,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -29,8 +28,8 @@
     "desc": "Increases Melee Weapon Trigger Probability by <Highlight>135.0%</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>Trigger Probability</>.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -44,7 +43,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 2,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -53,8 +51,8 @@
     "desc": "Increases Melee Weapon <Highlight>Normal Attack Damage</> by <Highlight>15.0%</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>Normal Attack Damage</>.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -68,7 +66,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 3,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -77,8 +74,8 @@
     "desc": "Defeating enemies within <Highlight>8.0</>m restores <Highlight>4.5%</> HP.",
     "simpleDesc": "Restores HP when defeating enemies at <Highlight>close range</>.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -92,7 +89,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 4,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -101,8 +97,8 @@
     "desc": "Takes <Highlight>20.0%</> less damage from enemies within <Highlight>8.0</>m, or from those afflicted with [Molten Blaze].",
     "simpleDesc": "Takes reduced damage from <Highlight>nearby</> enemies or those afflicted with [Molten Blaze].",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -117,7 +113,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 5,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -126,8 +121,8 @@
     "desc": "Taking damage applies <Highlight>1</> stack of [Molten Blaze] to enemies within <Highlight>8</>m. Can trigger once every <Highlight>1.0</>s.",
     "simpleDesc": "Taking damage applies [Molten Blaze] to <Highlight>nearby</> enemies.",
     "blessingGroup": 1,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -142,7 +137,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 6,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -151,8 +145,8 @@
     "desc": "Increases Melee Weapon <Highlight>CRIT Chance</> by <Highlight>90.0%</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>CRIT Chance</>.",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -166,7 +160,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 7,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -175,8 +168,8 @@
     "desc": "Increases Melee Weapon <Highlight>CRIT Damage</> by <Highlight>90.0%</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>CRIT Damage</>.",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -190,7 +183,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 8,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -199,8 +191,8 @@
     "desc": "Increases Melee Weapon <Highlight>Plunging Attack Damage, Charged Attack Damage, and Sliding Attack Damage</> by <Highlight>37.5%</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>Plunging Attack Damage, Charged Attack Damage, and Sliding Attack Damage</>.",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -214,7 +206,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 9,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -223,8 +214,8 @@
     "desc": "Applies <Highlight>1</> stack of [Molten Blaze] to enemies within <Highlight>8</>m every <Highlight>1.0</>s.",
     "simpleDesc": "Periodically applies [Molten Blaze] to <Highlight>nearby</> enemies.",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -239,7 +230,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 10,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -248,8 +238,8 @@
     "desc": "Dealing damage to enemies afflicted with more than <Highlight>2.0</> stacks of [Molten Blaze] restores <Highlight>3.0%</> HP. Can trigger once every <Highlight>0.5</>s.",
     "simpleDesc": "Restores HP when dealing damage to enemies afflicted with [Molten Blaze].",
     "blessingGroup": 1,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -264,7 +254,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 11,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -273,8 +262,8 @@
     "desc": "Increases Melee Weapon <Highlight>ATK Speed</> by <Highlight>60.0%</> and <Highlight>ATK Range</> by <Highlight>2.25</>.",
     "simpleDesc": "Increases Melee Weapon <Highlight>ATK Speed</> and <Highlight>ATK Range</>.",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [
@@ -288,7 +277,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 12,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -297,8 +285,8 @@
     "desc": "If damage reduces a target's HP below <Highlight>30.0%</>, deals bonus damage equal to <Highlight>5400.0%</> of Character ATK. Can only trigger once every <Highlight>10.0</>s on the same target.",
     "simpleDesc": "Deals <Highlight>additional</> damage when any damage reduces a target's HP to a <Highlight>lower level</>.",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -312,7 +300,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 13,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -321,8 +308,8 @@
     "desc": "Melee weapons deal bonus damage equal to <Highlight>90.0%</> of Character ATK to targets afflicted with more than <Highlight>4.0</> stacks of [Molten Blaze].",
     "simpleDesc": "Melee weapons deal <Highlight>bonus</> damage to enemies afflicted with more [Molten Blaze] stacks.",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -337,7 +324,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 14,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -346,8 +332,8 @@
     "desc": "The fewer enemies within an <Highlight>8-metre</> range, the higher the Damage Dealt (up to <Highlight>90.0%</>).",
     "simpleDesc": "The fewer enemies at <Highlight>close range</>, the higher the Damage Dealt.",
     "blessingGroup": 1,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -362,7 +348,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 15,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -371,8 +356,8 @@
     "desc": "Increases Ranged Weapon <Highlight>ATK</> by <Highlight>30.0%</>.",
     "simpleDesc": "Increases Ranged Weapon <Highlight>ATK</>.",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -386,7 +371,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 16,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -395,8 +379,8 @@
     "desc": "Increases Ranged Weapon <Highlight>Trigger Probability</> by <Highlight>135.0%</>.",
     "simpleDesc": "Increases Ranged Weapon <Highlight>Trigger Probability</>.",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -410,7 +394,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 17,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -419,8 +402,8 @@
     "desc": "Dealing damage with ranged weapons spawns an [Ammo Supply Chest] (max once per <Highlight>5.0</>s). While [Seaborne Moon] Phase II is active, spawns <Highlight>1</> extra [Mini Seaborne Moon].",
     "simpleDesc": "Dealing damage with Ranged Weapon spawns [Ammo Supply Chests].",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -434,7 +417,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 18,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -443,8 +425,8 @@
     "desc": "Picking up dropped items gains <Highlight>45.0</> Ultra Shields. This effect can only be triggered once every <Highlight>2</>s.",
     "simpleDesc": "Picking up dropped items grants Ultra Shields.",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -458,7 +440,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 19,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -467,8 +448,8 @@
     "desc": "Spawns [Activated Sal Volatile] or [Tranquilizer Dewdrop] when dealing damage. This effect can only be triggered once every <Highlight>6.0</>s. While [Seaborne Moon] Phase II is active, spawns <Highlight>1</> additional [Mini Seaborne Moon].",
     "simpleDesc": "Dealing damage spawns [Activated Sal Volatile] or [Tranquilizer Dewdrop].",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -482,7 +463,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 20,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -491,8 +471,8 @@
     "desc": "If enemies are within <Highlight>20</>m and Phase III is active, increases Character ATK by <Highlight>30.0%</>; otherwise, increases Character ATK by <Highlight>15.0%</>.",
     "simpleDesc": "Character ATK increases when enemies are nearby.",
     "blessingGroup": 2,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -506,7 +486,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 21,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -515,8 +494,8 @@
     "desc": "Increases Ranged Weapon <Highlight>CRIT Chance</> by <Highlight>100.0%</>.",
     "simpleDesc": "Increases Ranged Weapon <Highlight>CRIT Chance</>.",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -530,7 +509,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 22,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -539,8 +517,8 @@
     "desc": "Increases Ranged Weapon <Highlight>CRIT Damage</> by <Highlight>100.0%</>.",
     "simpleDesc": "Increases Ranged Weapon <Highlight>CRIT Damage</>.",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -554,7 +532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 23,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -563,8 +540,8 @@
     "desc": "When HP or Sanity drops below <Highlight>50.0%</>, <Highlight>[Stash of the Ocean]</> is more likely to generate matching supplies (boosted chance: <Highlight>100.0%</>).\nWhen HP, Sanity, or Ammo falls below <Highlight>50.0%</>, increases [Mini Seaborne Moons] spawned by <Highlight>100%</>.",
     "simpleDesc": "Low HP or Sanity increases drop rates for matching supplies from [Stash of the Ocean].",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -579,7 +556,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 24,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -588,8 +564,8 @@
     "desc": "Picking up items restores additional <Highlight>6.0</> points of Sanity.",
     "simpleDesc": "Picking up dropped items restores additional Sanity.",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -603,7 +579,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 25,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -612,8 +587,8 @@
     "desc": "Reduces Geniemon Support cooldown by <Highlight>50.0%</>.",
     "simpleDesc": "Decreases Geniemon Support cooldown.",
     "blessingGroup": 2,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -627,7 +602,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 26,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -636,8 +610,8 @@
     "desc": "Increases Ranged Weapon <Highlight>Multishot</> by <Highlight>90.0%</>.",
     "simpleDesc": "Increases Ranged Weapon <Highlight>Multishot</>.",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -651,7 +625,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 27,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -660,8 +633,8 @@
     "desc": "Increases Ranged Weapon <Highlight>ATK Speed</> by <Highlight>90.0%</>.",
     "simpleDesc": "Increases Ranged Weapon <Highlight>ATK Speed</>.",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "RangedWeapon",
     "roomCondition": [
@@ -675,7 +648,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 28,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -684,8 +656,8 @@
     "desc": "Dealing Ranged Weapon DMG to targets beyond <Highlight>8.0</>m inflicts +<Highlight>2.4%</> Ranged Weapon DMG Taken (up to <Highlight>120.0%</> max).",
     "simpleDesc": "Ranged weapons deal more damage the further away the target is.",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -700,7 +672,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 29,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -709,8 +680,8 @@
     "desc": "Moving continuously for over <Highlight>2</>s decreases Damage Taken by <Highlight>40.0%</> (until stopped). \nStanding still for over <Highlight>2</>s increases Damage Dealt by <Highlight>90.0%</> (until moving).",
     "simpleDesc": "Moving continuously for over <Highlight>2</>s decreases Damage Taken (until stopped). \nStanding still for over <Highlight>2</>s increases Damage Dealt (until moving).",
     "blessingGroup": 2,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -724,7 +695,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 30,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -733,8 +703,8 @@
     "desc": "Increases Skill Range by <Highlight>45.0%</>.",
     "simpleDesc": "Increases Skill Range.",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -746,7 +716,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 31,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -755,8 +724,8 @@
     "desc": "Increases Skill Duration by <Highlight>45.0%</>.",
     "simpleDesc": "Increases Skill Duration.",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -768,7 +737,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 32,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -777,8 +745,8 @@
     "desc": "Increases Skill Efficiency by <Highlight>22.5%</>.",
     "simpleDesc": "Increases Skill Efficiency.",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -790,7 +758,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 33,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -799,8 +766,8 @@
     "desc": "Restores Sanity by <Highlight>6.0</> when using skills. This effect can only be triggered once every <Highlight>5.0</>s.",
     "simpleDesc": "Restores Sanity when using skills.",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -812,7 +779,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 34,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -821,8 +787,8 @@
     "desc": "Restores Shield by <Highlight>15.0%</> of Max Shield when using skills. This effect can only be triggered once every <Highlight>5.0</>s.",
     "simpleDesc": "Restores Shield when using skills.",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -834,7 +800,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 35,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -843,8 +808,8 @@
     "desc": "Increases Skill Speed by <Highlight>15.0%</>.",
     "simpleDesc": "Increases Skill Speed.",
     "blessingGroup": 3,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -858,7 +823,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 36,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -867,8 +831,8 @@
     "desc": "Increases Max Sanity by <Highlight>120.0%</>.",
     "simpleDesc": "Increases Max Sanity.",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -880,7 +844,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 37,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -889,8 +852,8 @@
     "desc": "Decreases Damage Taken by <Highlight>30.0%</> when Sanity drops below <Highlight>50.0%</>.",
     "simpleDesc": "Decreases DMG Taken when Sanity is low.",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -902,7 +865,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 38,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -911,8 +873,8 @@
     "desc": "Restores Sanity by <Highlight>12.0</> per second every <Highlight>5.0</>s when Sanity drops below <Highlight>50.0%</>. This effect can only be triggered once every <Highlight>20.0</>s.",
     "simpleDesc": "Restores Sanity per second when Sanity is low.",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -924,7 +886,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 39,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -933,8 +894,8 @@
     "desc": "Grants <Highlight>15.0</> stack of [Gleam] when using skills.",
     "simpleDesc": "Grants a certain number of <Highlight>[Gleam]</> stacks when using skills.",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -948,7 +909,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 40,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -957,8 +917,8 @@
     "desc": "While under [Radiance], restores ‍<Highlight>6.0</>‍ Sanity per second.",
     "simpleDesc": "Restores Sanity every second while under [Radiance].",
     "blessingGroup": 3,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -972,7 +932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 41,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -981,8 +940,8 @@
     "desc": "Increases Skill Intensity by <Highlight>120.0%</>.",
     "simpleDesc": "Increases Skill Intensity.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -994,7 +953,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 42,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1003,8 +961,8 @@
     "desc": "Ignores the targets' DEF by <Highlight>90.0%</> when dealing Skill DMG.",
     "simpleDesc": "Ignores a certain percentage of the targets' DEF when dealing Skill DMG.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1016,7 +974,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 43,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1025,8 +982,8 @@
     "desc": "The Skill DMG Increase granted by [Radiance] is raised to <Highlight>225.0%</>.",
     "simpleDesc": "[Radiance] now grants higher Skill DMG Increase.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1040,7 +997,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 44,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1049,8 +1005,8 @@
     "desc": "Reduces [Emission] cooldown to <Highlight>1.0</>s.",
     "simpleDesc": "[Emission] triggers more frequently.",
     "blessingGroup": 3,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1064,7 +1020,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 45,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1073,8 +1028,8 @@
     "desc": "Dealing damage has a <Highlight>15.0%</> chance to summon 1 [Lumiseed] (max once per <Highlight>3.0</>s).",
     "simpleDesc": "Dealing damage has a chance to summon 1 [Lumiseed].",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1088,7 +1043,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 46,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1097,8 +1051,8 @@
     "desc": "Summoning grants +<Highlight>7.5%</> Skill Intensity for <Highlight>10.0</>s. Stacks up to <Highlight>3.0</> times.",
     "simpleDesc": "Grants Skill Intensity Increase when summoning.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1112,7 +1066,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 47,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1121,8 +1074,8 @@
     "desc": "Summoning grants +<Highlight>7.5%</> Character ATK for <Highlight>10.0</>s. Stacks up to <Highlight>3.0</> times.",
     "simpleDesc": "Increases your ATK when summoning Summons.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1136,7 +1089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 48,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1145,8 +1097,8 @@
     "desc": "Increases Healing Received by <Highlight>60.0%</>.",
     "simpleDesc": "Increases Healing Received.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1160,7 +1112,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 49,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1169,8 +1120,8 @@
     "desc": "Restores HP by <Highlight>3.0%</> of your Max HP when summoning Summons.",
     "simpleDesc": "Restores HP when summoning Summons.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1184,7 +1135,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 50,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1193,8 +1143,8 @@
     "desc": "Restores Sanity by <Highlight>6.0</> when summoning Summons.",
     "simpleDesc": "Restores Sanity when summoning Summons.",
     "blessingGroup": 4,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1208,7 +1158,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 51,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1217,8 +1166,8 @@
     "desc": "Every <Highlight>3.0</>s, summons 1 [Lumiseed] ",
     "simpleDesc": "Periodically summons 1 [Lumiseed].",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1232,7 +1181,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 52,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1241,8 +1189,8 @@
     "desc": "Taking damage has a <Highlight>75.0%</> chance to summon 1 [Lumiseed] (max once per <Highlight>2.0</>s).",
     "simpleDesc": "Taking damage has a chance to summon 1 [Lumiseed].",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1256,7 +1204,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 53,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1265,8 +1212,8 @@
     "desc": "Decreases Damage Taken by <Highlight>30.0%</> when a summoned item is within an <Highlight>8</>-metre range.",
     "simpleDesc": "Decreases Damage Taken when a summoned item is within range.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1280,7 +1227,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 54,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1289,8 +1235,8 @@
     "desc": "Receiving healing grants +<Highlight>37.5%</> Damage Dealt for 3.0s.",
     "simpleDesc": "Receiving healing increases Damage Dealt for a short period of time.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1304,7 +1250,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 55,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1313,8 +1258,8 @@
     "desc": "Summoning reduces the Stance of enemies within <Highlight>6</>m of the summon location.",
     "simpleDesc": "Summoning reduces the Stance of enemies near the summon location.",
     "blessingGroup": 4,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1327,7 +1272,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 56,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1336,8 +1280,8 @@
     "desc": "Grants 1 stack that increases damage by <Highlight>18.0%</> per summoned item within an <Highlight>8</>-metre range, up to <Highlight>5.0</> stacks.",
     "simpleDesc": "The more the Summons, the higher the Damage Dealt.",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1351,7 +1295,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 57,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1360,8 +1303,8 @@
     "desc": "Increases the Summon's ATK by <Highlight>90.0%</>.",
     "simpleDesc": "Increases the Summon's ATK.",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1375,7 +1318,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 58,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1384,8 +1326,8 @@
     "desc": "Summoning a non-Lumitwig Summon triggers an explosion at its location, dealing damage equal to <Highlight>3000.0%</> ATK.",
     "simpleDesc": "Summoning a non-Lumitwig Summon triggers an explosion at its location.",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1399,7 +1341,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 59,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1408,8 +1349,8 @@
     "desc": "Increases the chance for a [Lumiseed] to evolve into a [Lumileaf] to <Highlight>100%</>.",
     "simpleDesc": "Increases the chance for a [Lumiseed] to evolve into a [Lumileaf] to <Highlight>100%</>.",
     "blessingGroup": 4,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -1423,7 +1364,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 60,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1432,8 +1372,8 @@
     "desc": "Helix Leap grants +<Highlight>18.0%</> ATK for <Highlight>3.0</>s and <Highlight>1.0</> stack(s) of [Umbral Devourer].",
     "simpleDesc": "Performing a Helix Leap grants an ATK Increase and 1 stack of [Umbral Devourer].",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1445,7 +1385,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 57,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1454,8 +1393,8 @@
     "desc": "Sliding spawns 3 [Windwings], each dealing damage equal to <Highlight>90.0%</> of Character ATK on hit. Also grants <Highlight>1.0</> stack(s) of [Umbral Devourer].",
     "simpleDesc": "Performing a Slide spawns 3 [Windwings] and grants 1 stack of [Umbral Devourer].",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1467,7 +1406,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 58,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1476,8 +1414,8 @@
     "desc": "Dodging grants -<Highlight>15.0%</> Damage Taken for <Highlight>3.0</>s and <Highlight>1.0</> stack(s) of [Umbral Devourer].",
     "simpleDesc": "Dodging reduces Damage Taken and grants 1 stack of [Umbral Devourer].",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1489,7 +1427,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 59,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1498,8 +1435,8 @@
     "desc": "Increases Max Sanity by <Highlight>45.0%</>.",
     "simpleDesc": "Increases Max Sanity.",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1511,7 +1448,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 60,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1520,8 +1456,8 @@
     "desc": "Increases Skill Speed by <Highlight>15.0%</>.",
     "simpleDesc": "Increases Skill Speed",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1533,7 +1469,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 61,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1542,8 +1477,8 @@
     "desc": "When dealing damage to an enemy with Plunging Attacks, grants <Highlight>8.0</> stack(s) of [Umbral Devourer] and creates a [Powder] zone on hit, dealing damage equal to <Highlight>400.0%</> of Character ATK per second to enemies inside. Can trigger once every <Highlight>8.0</>s.",
     "simpleDesc": "When dealing damage to an enemy with Plunging Attacks, creates a [Powder] zone on hit and grants 1 stack of [Umbral Devourer].",
     "blessingGroup": 5,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1555,7 +1490,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 62,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1564,8 +1498,8 @@
     "desc": "Increases Plunge Damage by <Highlight>37.5%</>.",
     "simpleDesc": "Increases Plunge Damage.",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1577,7 +1511,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 63,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1586,8 +1519,8 @@
     "desc": "Increases Melee Attack Range by <Highlight>1.5</>.",
     "simpleDesc": "Increases Melee Attack Range.",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "MeleeWeapon",
     "roomCondition": [],
@@ -1599,7 +1532,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 64,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1608,8 +1540,8 @@
     "desc": "Increases Max Dodge Attempts by <Highlight>3.0</>.",
     "simpleDesc": "Increases Max Dodge Attempt.",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1621,7 +1553,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 65,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1630,8 +1561,8 @@
     "desc": "Dodging spawns a [Powder] field, dealing damage equal to <Highlight>400.0%</> of Character ATK per second to enemies inside. Can trigger once every <Highlight>5.0</>s.",
     "simpleDesc": "Dodging creates a [Powder] zone.",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1642,7 +1573,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 66,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1651,8 +1581,8 @@
     "desc": "Gains <Highlight>1.0</> stack(s) of [Umbral Devourer] every <Highlight>3.0</>s. When stacks exceed <Highlight>30.0</>, each new stack granted by this Blessing also launches a [Bladewing] that deals damage equal to <Highlight>1200.0%</> of Character ATK on hit.",
     "simpleDesc": "Periodically grants 1 stack of [Umbral Devourer]. When stacks exceed a threshold, fires an extra [Bladewing].",
     "blessingGroup": 5,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1664,7 +1594,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 67,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1673,8 +1602,8 @@
     "desc": "Increases Max Sanity by <Highlight>45.0%</> per maximum Dodge Attempt.",
     "simpleDesc": "Increases Max Sanity based on your maximum Dodge Attempts.",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1686,7 +1615,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 68,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1695,8 +1623,8 @@
     "desc": "Character ATK +<Highlight>120.0%</>.",
     "simpleDesc": "Increases Character ATK.",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1708,7 +1636,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 69,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1717,8 +1644,8 @@
     "desc": "Increases ATK Speed by <Highlight>90.0%</>.",
     "simpleDesc": "Increases ATK Speed.",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -1730,7 +1657,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 70,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1739,8 +1665,8 @@
     "desc": "Dodging grants ATK Increase by <Highlight>90.0%</> for <Highlight>3.0</>s.",
     "simpleDesc": "Dodging grants ATK Increase.",
     "blessingGroup": 5,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1754,7 +1680,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 71,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1763,8 +1688,8 @@
     "desc": "Increases Skill Range by <Highlight>45.0%</>.",
     "simpleDesc": "Increases Skill Range.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1778,7 +1703,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 76,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1787,8 +1711,8 @@
     "desc": "When dealing damage, there's a <Highlight>7.5%</> chance to spawn <Highlight>1</> Glimmerfly.",
     "simpleDesc": "Dealing damage has a chance to spawn 1 [Glimmerfly].",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1802,7 +1726,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 77,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1811,8 +1734,8 @@
     "desc": "Gains <Highlight>1</> [Glimmerfly] every <Highlight>7.0</>s.",
     "simpleDesc": "Grants 1 [Glimmerfly] every <Highlight>10</>s.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1826,7 +1749,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 78,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1835,8 +1757,8 @@
     "desc": "Increases Ranged Weapon CRIT Chance by <Highlight>7.5%</> when [Glimmerfly] is not around, and by <Highlight>37.5%</> when [Glimmerfly] is around.",
     "simpleDesc": "Increases Ranged Weapon CRIT Chance. The effect intensifies when [Glimmerfly] is around.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1850,7 +1772,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 79,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1859,8 +1780,8 @@
     "desc": "Increases Ranged Weapon CRIT Damage by <Highlight>7.5%</> when [Glimmerfly] is not around, and by <Highlight>37.5%</> when [Glimmerfly] is around.",
     "simpleDesc": "Increases Ranged Weapon CRIT Damage. The effect intensifies when [Glimmerfly] is around.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1874,7 +1795,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 80,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1883,8 +1803,8 @@
     "desc": "Increases Ranged Weapon Trigger Probability by <Highlight>30.0%</> when [Glimmerfly] is not around, and by <Highlight>135.0%</> when when [Glimmerfly] is around.",
     "simpleDesc": "Increases Ranged Weapon Trigger Probability. The effect intensifies when [Glimmerfly] is around.",
     "blessingGroup": 6,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1898,7 +1818,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 81,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1907,8 +1826,8 @@
     "desc": "Increases Damage Dealt by summoned items by <Highlight>37.5%</>.",
     "simpleDesc": "Increases Damage Dealt by summoned items.",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1922,7 +1841,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 82,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1931,8 +1849,8 @@
     "desc": "Taking damage or summoning grants <Highlight>1</> [Glimmerfly] (max once per <Highlight>3.0</>s).",
     "simpleDesc": "Taking damage or summoning grants 1 [Glimmerfly].",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1946,7 +1864,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 83,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1955,8 +1872,8 @@
     "desc": "Increases Skill Efficiency by <Highlight>37.5%</>.",
     "simpleDesc": "Increases Skill Efficiency.",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1970,7 +1887,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 84,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -1979,8 +1895,8 @@
     "desc": "Increases Ranged Weapon Multishot by <Highlight>7.5%</> when [Glimmerfly] is not around, and by <Highlight>37.5%</> when [Glimmerfly] is around.",
     "simpleDesc": "Increases Ranged Weapon Multishot. The effect intensifies when [Glimmerfly] is around.",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -1994,7 +1910,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 85,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2003,8 +1918,8 @@
     "desc": "+<Highlight>1.0</> Revival(s). Reduces Damage Taken by <Highlight>30.0%</> when carrying at least 1 [Glimmerfly]. Effect is consumed on revival.",
     "simpleDesc": "Grants 1 extra Revival. Reduces Damage Taken while carrying [Glimmerflies]. Effect is consumed on revival.",
     "blessingGroup": 6,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 1,
     "modEquip": "Role",
     "roomCondition": [
@@ -2017,7 +1932,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 86,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2026,8 +1940,8 @@
     "desc": "Increases PEN stats by <Highlight>18.0%</> when [Glimmerfly] is not around, and by <Highlight>90.0%</> when [Glimmerfly] is around.",
     "simpleDesc": "Increases all PEN stats. The effect intensifies when [Glimmerfly] is around.",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2041,7 +1955,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 87,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2050,8 +1963,8 @@
     "desc": "Increases Morale by <Highlight>18.0%</> when [Glimmerfly] is not around, and by <Highlight>90.0%</> when [Glimmerfly] is around.",
     "simpleDesc": "Increases Morale. The effect intensifies when [Glimmerfly] is around.",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2065,7 +1978,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 88,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2074,8 +1986,8 @@
     "desc": "[Glimmerflies] attack much more frequently for <Highlight>5.0</>s when an enemy is nearby (max once per <Highlight>10.0</>s).",
     "simpleDesc": "[Glimmerflies] attack much more frequently when enemies are within range.",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2090,7 +2002,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 89,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2099,8 +2010,8 @@
     "desc": "Increases [Glimmerfly]'s Damage Dealt by <Highlight>90.0%</>.",
     "simpleDesc": "Increases [Glimmerfly]'s Damage Dealt.",
     "blessingGroup": 6,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2115,7 +2026,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 90,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2124,8 +2034,8 @@
     "desc": "Increases Skill Duration by <Highlight>45.0%</>.",
     "simpleDesc": "Increases Skill Duration.",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2137,7 +2047,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 91,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2146,8 +2055,8 @@
     "desc": "Increases Sanity Auto-Recovery by <Highlight>9.0</> when HP is below <Highlight>100%</> and by <Highlight>3.0</> when HP is <Highlight>100%</>.",
     "simpleDesc": "Increases Sanity Auto-Recovery. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2159,7 +2068,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 92,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2168,8 +2076,8 @@
     "desc": "Increases Melee Weapon Trigger Probability by <Highlight>180.0%</> when HP is below <Highlight>100%</> and by <Highlight>90.0%</> when HP is <Highlight>100%</>.",
     "simpleDesc": "Increases Melee Weapon Trigger Probability. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2181,7 +2089,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 93,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2190,8 +2097,8 @@
     "desc": "Increases Max HP by <Highlight>30.0%</>.",
     "simpleDesc": "Increases Max HP.",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2203,7 +2110,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 94,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2212,8 +2118,8 @@
     "desc": "+<Highlight>90.0%</> DEF. When taking damage, gains +<Highlight>30.0%</> Damage Dealt for <Highlight>10.0</>s. Can trigger once every <Highlight>20.0</> seconds.",
     "simpleDesc": "Increases DEF. Increases Damage Dealt when taking damage.",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2225,7 +2131,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 95,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2234,8 +2139,8 @@
     "desc": "When dealing damage, also deals bonus AoE DMG equal to <Highlight>30.0%</> Max HP at the target's location (max once per <Highlight>1.0</>s).",
     "simpleDesc": "Deals additional AoE Damage equal to your Max HP at the target's location.",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2247,7 +2152,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 96,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2256,8 +2160,8 @@
     "desc": "Increases Skill Intensity by <Highlight>60.0%</> when HP is below <Highlight>100%</> and by <Highlight>30.0%</> when HP is <Highlight>100%</>.",
     "simpleDesc": "Increases Skill Intensity. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2269,7 +2173,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 97,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2278,8 +2181,8 @@
     "desc": "Increases Damage Dealt by <Highlight>30.0%</>. The effect scales by <Highlight>1%</> for every <Highlight>1%</> of HP lost (up to <Highlight>60.0%)</>.",
     "simpleDesc": "Increases Damage Dealt. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2291,7 +2194,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 98,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2300,8 +2202,8 @@
     "desc": "Increases Melee Weapon CRIT Chance by <Highlight>135.0%</> when HP is below <Highlight>100%</> and by <Highlight>67.5%</> when HP is <Highlight>100%</>.",
     "simpleDesc": "Increases Melee Weapon CRIT Chance. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2313,7 +2215,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 99,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2322,8 +2223,8 @@
     "desc": "Increases Melee Weapon CRIT Damage by <Highlight>135.0%</> when HP is below <Highlight>100%</> and by <Highlight>67.5%</> when HP is <Highlight>100%</>.",
     "simpleDesc": "Increases Melee Weapon CRIT Damage. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 2,
-    "blessingWeight": 300,
+    "rarity": 2,
+    "weight": 300,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2335,7 +2236,6 @@
     ],
     "shopPrices": 400,
     "rlArchiveId": 100,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2344,8 +2244,8 @@
     "desc": "When taking damage, grants <Highlight>135.0</> Ultra Shield points (once every <Highlight>5.0</>s max).",
     "simpleDesc": "Dealing damage grants Ultra Shields.",
     "blessingGroup": 7,
-    "blessingRarity": 1,
-    "blessingWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2357,7 +2257,6 @@
     ],
     "shopPrices": 200,
     "rlArchiveId": 101,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2366,8 +2265,8 @@
     "desc": "Your Damage Taken per hit will not exceed <Highlight>25.0%</> Max HP. After taking damage exceeding <Highlight>20.0%</> Max HP, restores <Highlight>3.0%</> Max HP per second for <Highlight>5.0</>s.",
     "simpleDesc": "Limits max Damage Taken per hit and restores HP after taking heavy damage.",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2379,7 +2278,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 102,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2388,8 +2286,8 @@
     "desc": "Ultimate consumes all DEF, converting <Highlight>240.0%</> of it into Character ATK for <Highlight>15.0</>s. This effect can only be triggered once every <Highlight>30.0</>s on the same target.",
     "simpleDesc": "Using an Ultimate consumes all DEF to boost Character ATK.",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2401,7 +2299,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 103,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2410,8 +2307,8 @@
     "desc": "When dealing Skill DMG, ignore the target's DEF by <Highlight>90.0%</> when HP is below <Highlight>100%</> and by <Highlight>45.0%</> when HP is <Highlight>100%</>.",
     "simpleDesc": "Ignores the target's DEF by a certain amount when dealing Skill DMG. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [],
@@ -2423,7 +2320,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 104,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   },
   {
@@ -2432,8 +2328,8 @@
     "desc": "Increases Resolve by <Highlight>36.0%</> when HP is below <Highlight>40%</> and by <Highlight>18.0%</> when HP equal to or above <Highlight>40%</>.",
     "simpleDesc": "Increases Resolve. The effect intensifies at lower HP.",
     "blessingGroup": 7,
-    "blessingRarity": 3,
-    "blessingWeight": 100,
+    "rarity": 3,
+    "weight": 100,
     "maxLevel": 2,
     "modEquip": "Role",
     "roomCondition": [
@@ -2447,7 +2343,6 @@
     ],
     "shopPrices": 800,
     "rlArchiveId": 105,
-    "unlockConditionText": "Lampwick not unlocked",
     "canSell": 1
   }
 ]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Renforcement des compétences",
+    "subTitle": "Couvercle : Bénédiction d’honneur",
+    "icon": "T_Rouge_TalentBranch_Skill"
+  },
+  {
+    "id": 2,
+    "name": "Renforcement adaptatif",
+    "subTitle": "Poignée : Bénédiction de lumière",
+    "icon": "T_Rouge_TalentBranch_Adaptability"
+  },
+  {
+    "id": 3,
+    "name": "Renforcement de mêlée",
+    "subTitle": "Corps : Bénédiction de courage",
+    "icon": "T_Rouge_Talent_Melee_AttackUP"
+  },
+  {
+    "id": 4,
+    "name": "Renforcement à distance",
+    "subTitle": "Socle : Bénédiction de justice",
+    "icon": "T_Rouge_Talent_Range_AttackUP"
+  }
+]

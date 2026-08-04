@@ -2,9 +2,13 @@
   {
     "id": 101,
     "name": "窒息之域",
-    "desc": "自身受到的治療降低<Highlight>20.0%</>。",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    "desc": "自身受到的治療降低<Highlight>10.0%</>。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101001,
     "heatValue": 2,
@@ -14,9 +18,13 @@
   {
     "id": 102,
     "name": "困頓之域",
-    "desc": "自身攻擊降低<Highlight>20.0%</>。",
-    "descValues": [
-      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    "desc": "自身攻擊降低<Highlight>10.0%</>。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101002,
     "heatValue": 2,
@@ -26,9 +34,18 @@
   {
     "id": 103,
     "name": "滋長之域",
-    "desc": "敵人最大生命提高<Highlight>40.0%</>。",
-    "descValues": [
-      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    "desc": "敵人最大生命提高<Highlight>20.0%</>。",
+    "descLevels": [
+      "20.0%",
+      "40.0%",
+      "60.0%",
+      "80.0%",
+      "100.0%",
+      "120.0%",
+      "140.0%",
+      "160.0%",
+      "180.0%",
+      "200.0%"
     ],
     "globalPassiveId": 30102001,
     "heatValue": 2,
@@ -38,9 +55,18 @@
   {
     "id": 104,
     "name": "折磨之域",
-    "desc": "敵人攻擊提高<Highlight>20.0%</>。",
-    "descValues": [
-      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    "desc": "敵人攻擊提高<Highlight>10.0%</>。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%",
+      "60.0%",
+      "70.0%",
+      "80.0%",
+      "90.0%",
+      "100.0%"
     ],
     "globalPassiveId": 30102002,
     "heatValue": 2,
@@ -50,9 +76,13 @@
   {
     "id": 105,
     "name": "麻木之域",
-    "desc": "敵人受到的傷害降低<Highlight>20.0%</>。",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    "desc": "敵人受到的傷害降低<Highlight>10.0%</>。",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30102003,
     "heatValue": 3,
@@ -63,7 +93,7 @@
     "id": 106,
     "name": "育種之域",
     "desc": "普通敵人被擊敗後產生1次半徑<Highlight>4</>米的爆炸，造成傷害。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 30102004,
     "heatValue": 5,
     "icon": "T_Rou_Contract_Mon_Explode",
@@ -72,9 +102,11 @@
   {
     "id": 107,
     "name": "騷動之域",
-    "desc": "戰鬥·微茫幽影和戰鬥·離散幽影中額外出現<Highlight>2.0</>名號令者。",
-    "descValues": [
-      "$#GlobalPassiveData[30103001].Vars.Count$"
+    "desc": "戰鬥·微茫幽影和戰鬥·離散幽影中額外出現<Highlight>1.0</>名號令者。",
+    "descLevels": [
+      "1.0",
+      "2.0",
+      "3.0"
     ],
     "globalPassiveId": 30103001,
     "heatValue": 5,
@@ -84,9 +116,10 @@
   {
     "id": 108,
     "name": "喧嘩之域",
-    "desc": "戰鬥·深邃幽影中額外出現<Highlight>2.0</>名精英敵人。",
-    "descValues": [
-      "$#GlobalPassiveData[30103002].Vars.Count$"
+    "desc": "戰鬥·深邃幽影中額外出現<Highlight>1.0</>名精英敵人。",
+    "descLevels": [
+      "1.0",
+      "2.0"
     ],
     "globalPassiveId": 30103002,
     "heatValue": 5,
@@ -97,9 +130,7 @@
     "id": 109,
     "name": "構造之域",
     "desc": "戰鬥中出現<Highlight>1.0</>個敵對機關。",
-    "descValues": [
-      "$#GlobalPassiveData[30103003].Vars.Count$"
-    ],
+    "descLevels": [],
     "globalPassiveId": 30103003,
     "heatValue": 3,
     "icon": "T_Rou_Contract_Room_ExtraMech",
@@ -109,7 +140,7 @@
     "id": 110,
     "name": "乾涸之域",
     "desc": "在深淵行商處購買時，所需余燼提高<Highlight>50%</>。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 12,
     "icon": "T_Rou_Contract_Mechanics_CostUp",
@@ -119,7 +150,7 @@
     "id": 111,
     "name": "盲目之域",
     "desc": "每次抉擇時，可選抉擇<Highlight>減少</>1個。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 9,
     "icon": "T_Rou_Contract_Mechanics_LessChoice",
@@ -129,7 +160,7 @@
     "id": 112,
     "name": "癡愚之域",
     "desc": "每次抉擇時，強制進行隨機抉擇。",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 21,
     "icon": "T_Rou_Contract_Mechanics_RandomChoice",

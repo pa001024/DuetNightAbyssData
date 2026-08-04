@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "화롯불",
+    "icon": "T_Tab_Rouge_Fire",
+    "bigIcon": "T_Rouge_BlessingType_MeleeB",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "근접 무기 강화"
+  },
+  {
+    "id": 2,
+    "name": "부유하는 달",
+    "icon": "T_Tab_Rouge_Jellyfish",
+    "bigIcon": "T_Rouge_BlessingType_CharA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "원거리 무기 강화"
+  },
+  {
+    "id": 3,
+    "name": "형광석",
+    "icon": "T_Tab_Rouge_Stone",
+    "bigIcon": "T_Rouge_BlessingType_MeleeA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "스킬 효과 강화"
+  },
+  {
+    "id": 4,
+    "name": "루멘 가지",
+    "icon": "T_Tab_Rouge_Tree",
+    "bigIcon": "T_Rouge_BlessingType_LifeTree",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "소환물 특화"
+  },
+  {
+    "id": 5,
+    "name": "그림자를 삼킨 나비",
+    "icon": "T_Tab_Rouge_Butterfly",
+    "bigIcon": "T_Rouge_BlessingType_HelixLeap",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "기동 능력 강화"
+  },
+  {
+    "id": 6,
+    "name": "빛을 품는 벌레",
+    "icon": "T_Tab_Rouge_Firefly",
+    "bigIcon": "T_Rouge_BlessingType_DanmakuA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "탐지 미사일"
+  },
+  {
+    "id": 7,
+    "name": "흡혈 꽃",
+    "icon": "T_Tab_Rouge_Thorns",
+    "bigIcon": "T_Rouge_BlessingType_SurvivalA",
+    "activateNeed": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "groupEffectDesc": "생존 능력 상승 및 광폭 능력 제공"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "name": "호위 기사",
+    "icon": "T_Rouge_TreasureGroup_1_1",
+    "bigIcon": "T_Rouge_TreasureGroup_1",
+    "activateNeed": [
+      11101,
+      11201
+    ],
+    "groupEffectDesc": "[호위 기사]의 모든 유물 <Highlight>2</>개를 수집한 후, [그림자]에서 <Highlight>10</>초마다 자신 최대 HP의 <Highlight>10%</>에 해당하는 오버로드 실드를 획득한다. [그림자]를 통과할 때까지 지속된다."
+  },
+  {
+    "id": 102,
+    "name": "번영의 신",
+    "icon": "T_Rouge_TreasureGroup_2_1",
+    "bigIcon": "T_Rouge_TreasureGroup_2",
+    "activateNeed": [
+      12101,
+      12102,
+      12201
+    ],
+    "groupEffectDesc": "[번영의 신의 계약]의 모든 유물 <Highlight>3</>개를 수집한 후, <Highlight>100</> 잿불을 보유할 때마다 대미지가 <Highlight>10%</> 상승한다.\n잿불이 <Highlight>200</> 이하일 시, 받는 대미지가 <Highlight>30%</> 감소한다."
+  },
+  {
+    "id": 103,
+    "name": "사상명인",
+    "icon": "T_Rouge_TreasureGroup_3_1",
+    "bigIcon": "T_Rouge_TreasureGroup_3",
+    "activateNeed": [
+      13101,
+      13102,
+      13103,
+      13104
+    ],
+    "groupEffectDesc": "[사상명인]의 모든 유물 <Highlight>4</>개를 수집한 후, 발동 확률이 <Highlight>50%</>까지, 대미지 배율이 <Highlight>100%</>까지 상승하고 입히는 대미지가 고정 대미지로 변경된다."
+  },
+  {
+    "id": 104,
+    "name": "속죄하는 기사",
+    "icon": "T_Rouge_TreasureGroup_4_1",
+    "bigIcon": "T_Rouge_TreasureGroup_4",
+    "activateNeed": [
+      14101,
+      14201,
+      14202,
+      14301
+    ],
+    "groupEffectDesc": "[속죄하는 기사]의 모든 유물 <Highlight>4</>개를 수집한 후, 더 이상 대가를 치르지 않으며, 총 상승하는 대미지가 <Highlight>400%</>로 변경된다."
+  },
+  {
+    "id": 105,
+    "name": "유망술사",
+    "icon": "T_Rouge_TreasureGroup_5_1",
+    "bigIcon": "T_Rouge_TreasureGroup_5",
+    "activateNeed": [
+      15101,
+      15201
+    ],
+    "groupEffectDesc": "[유망술사]의 모든 유물 <Highlight>2</>개를 수집한 후, [전투 태세]의 약화 효율이 <Highlight>100%</> 상승하고, 적이 [아스크의 징벌] 진입 후 대미지가 <Highlight>100%</> 상승한다."
+  }
+]

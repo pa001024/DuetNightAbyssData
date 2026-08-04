@@ -6,14 +6,10 @@
     "branch": 1,
     "type": 3,
     "maxLevel": 1,
-    "levelUpPoint": 15,
+    "point": 15,
     "modEquip": "Role",
-    "talentMod": 30101051,
+    "mod": 30101051,
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      0,
-      0
-    ],
     "unlock": [
       10221,
       10322
@@ -26,14 +22,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "Role",
-    "talentMod": 30101041,
+    "mod": 30101041,
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      200,
-      130
-    ],
     "unlock": [
       10431
     ]
@@ -45,14 +37,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "Role",
-    "talentMod": 30101011,
+    "mod": 30101011,
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      200,
-      -130
-    ],
     "unlock": [
       10532,
       10633
@@ -65,14 +53,10 @@
     "branch": 1,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "Role",
-    "talentMod": 30101062,
+    "mod": 30101062,
     "icon": "T_Rouge_Talent_Berserker",
-    "iconLoc": [
-      400,
-      130
-    ],
     "unlock": [
       10741,
       10842
@@ -85,14 +69,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "Role",
-    "talentMod": 30101021,
+    "mod": 30101021,
     "icon": "T_Rouge_Talent_SkillEfficiencyUP",
-    "iconLoc": [
-      400,
-      -65
-    ],
     "unlock": [
       10943
     ]
@@ -104,14 +84,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "Role",
-    "talentMod": 30101031,
+    "mod": 30101031,
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      400,
-      -195
-    ],
     "unlock": [
       11044
     ]
@@ -123,14 +99,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30101011,
+    "mod": 30101011,
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      600,
-      195
-    ],
     "unlock": [
       11151
     ]
@@ -142,14 +114,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30101051,
+    "mod": 30101051,
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      600,
-      65
-    ],
     "unlock": [
       11252
     ]
@@ -161,14 +129,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30101021,
+    "mod": 30101021,
     "icon": "T_Rouge_Talent_SkillEfficiencyUP",
-    "iconLoc": [
-      600,
-      -65
-    ],
     "unlock": [
       11353
     ]
@@ -180,14 +144,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30101041,
+    "mod": 30101041,
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      600,
-      -195
-    ],
     "unlock": [
       11454
     ]
@@ -199,14 +159,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "Role",
-    "talentMod": 30101031,
+    "mod": 30101031,
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      800,
-      195
-    ],
     "unlock": [
       11561
     ]
@@ -218,14 +174,10 @@
     "branch": 1,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "Role",
-    "talentMod": 30101072,
+    "mod": 30101072,
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      800,
-      65
-    ],
     "unlock": [
       11662
     ]
@@ -237,14 +189,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "Role",
-    "talentMod": 30101041,
+    "mod": 30101041,
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      800,
-      -65
-    ],
     "unlock": [
       11763
     ]
@@ -256,14 +204,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "Role",
-    "talentMod": 30101011,
+    "mod": 30101011,
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      800,
-      -195
-    ],
     "unlock": [
       11864
     ]
@@ -275,14 +219,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30101041,
+    "mod": 30101041,
     "icon": "T_Rouge_Talent_SkillSustainUP",
-    "iconLoc": [
-      1000,
-      195
-    ],
     "unlock": [
       11971
     ]
@@ -294,14 +234,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30101051,
+    "mod": 30101051,
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      1000,
-      65
-    ],
     "unlock": [
       12072
     ]
@@ -313,14 +249,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30101011,
+    "mod": 30101011,
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      1000,
-      -65
-    ],
     "unlock": [
       12173
     ]
@@ -332,14 +264,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30101031,
+    "mod": 30101031,
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      1000,
-      -195
-    ],
     "unlock": [
       12173
     ]
@@ -351,14 +279,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "Role",
-    "talentMod": 30101021,
+    "mod": 30101021,
     "icon": "T_Rouge_Talent_SkillEfficiencyUP",
-    "iconLoc": [
-      1200,
-      195
-    ],
     "unlock": [
       12281
     ]
@@ -370,14 +294,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "Role",
-    "talentMod": 30101031,
+    "mod": 30101031,
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      1200,
-      65
-    ],
     "unlock": [
       12382
     ]
@@ -389,14 +309,10 @@
     "branch": 1,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "Role",
-    "talentMod": 30101082,
+    "mod": 30101082,
     "icon": "T_Rouge_Talent_Morale",
-    "iconLoc": [
-      1200,
-      -130
-    ],
     "unlock": []
   },
   {
@@ -406,14 +322,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "Role",
-    "talentMod": 30101051,
+    "mod": 30101051,
     "icon": "T_Rouge_Talent_ATK",
-    "iconLoc": [
-      1400,
-      195
-    ],
     "unlock": [
       12491
     ]
@@ -425,14 +337,10 @@
     "branch": 1,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "Role",
-    "talentMod": 30101011,
+    "mod": 30101011,
     "icon": "T_Rouge_Talent_SkillIntensityUP",
-    "iconLoc": [
-      1400,
-      65
-    ],
     "unlock": [
       12491
     ]
@@ -444,14 +352,10 @@
     "branch": 1,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "Role",
-    "talentMod": 30101092,
+    "mod": 30101092,
     "icon": "T_Rouge_Talent_DamageUp",
-    "iconLoc": [
-      1600,
-      130
-    ],
     "unlock": []
   },
   {
@@ -461,14 +365,10 @@
     "branch": 2,
     "type": 3,
     "maxLevel": 1,
-    "levelUpPoint": 15,
+    "point": 15,
     "modEquip": "Role",
-    "talentMod": 30102011,
+    "mod": 30102011,
     "icon": "T_Rouge_Talent_HPUP",
-    "iconLoc": [
-      0,
-      0
-    ],
     "unlock": [
       20221,
       20322
@@ -481,14 +381,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "Role",
-    "talentMod": 30102021,
+    "mod": 30102021,
     "icon": "T_Rouge_Talent_DEF",
-    "iconLoc": [
-      200,
-      65
-    ],
     "unlock": [
       20431,
       20532
@@ -501,14 +397,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "Role",
-    "talentMod": 30102031,
+    "mod": 30102031,
     "icon": "T_Rouge_Talent_ESUP",
-    "iconLoc": [
-      200,
-      -65
-    ],
     "unlock": [
       20532,
       20633
@@ -521,14 +413,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "Role",
-    "talentMod": 30102041,
+    "mod": 30102041,
     "icon": "T_Rouge_Talent_SP",
-    "iconLoc": [
-      400,
-      130
-    ],
     "unlock": [
       20741
     ]
@@ -540,14 +428,10 @@
     "branch": 2,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "",
-    "talentMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Talent_knapsack",
-    "iconLoc": [
-      400,
-      0
-    ],
     "unlock": [
       20842,
       20943
@@ -560,14 +444,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "Role",
-    "talentMod": 30102031,
+    "mod": 30102031,
     "icon": "T_Rouge_Talent_ESUP",
-    "iconLoc": [
-      400,
-      -130
-    ],
     "unlock": [
       21044
     ]
@@ -579,14 +459,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30102031,
+    "mod": 30102031,
     "icon": "T_Rouge_Talent_ESUP",
-    "iconLoc": [
-      600,
-      195
-    ],
     "unlock": [
       21151
     ]
@@ -598,14 +474,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30102011,
+    "mod": 30102011,
     "icon": "T_Rouge_Talent_HPUP",
-    "iconLoc": [
-      600,
-      65
-    ],
     "unlock": [
       21252
     ]
@@ -617,14 +489,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30102041,
+    "mod": 30102041,
     "icon": "T_Rouge_Talent_SP",
-    "iconLoc": [
-      600,
-      -65
-    ],
     "unlock": [
       21353
     ]
@@ -636,14 +504,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "Role",
-    "talentMod": 30102021,
+    "mod": 30102021,
     "icon": "T_Rouge_Talent_DEF",
-    "iconLoc": [
-      600,
-      -195
-    ],
     "unlock": [
       21454
     ]
@@ -655,14 +519,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "Role",
-    "talentMod": 30102041,
+    "mod": 30102041,
     "icon": "T_Rouge_Talent_SP",
-    "iconLoc": [
-      800,
-      195
-    ],
     "unlock": [
       21561
     ]
@@ -674,14 +534,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "Role",
-    "talentMod": 30102021,
+    "mod": 30102021,
     "icon": "T_Rouge_Talent_DEF",
-    "iconLoc": [
-      800,
-      65
-    ],
     "unlock": [
       21662
     ]
@@ -693,14 +549,10 @@
     "branch": 2,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "",
-    "talentMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Talent_EndPointsUP",
-    "iconLoc": [
-      800,
-      -65
-    ],
     "unlock": [
       21763
     ]
@@ -712,14 +564,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "Role",
-    "talentMod": 30102011,
+    "mod": 30102011,
     "icon": "T_Rouge_Talent_HPUP",
-    "iconLoc": [
-      800,
-      -195
-    ],
     "unlock": [
       21864
     ]
@@ -731,14 +579,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30102011,
+    "mod": 30102011,
     "icon": "T_Rouge_Talent_HPUP",
-    "iconLoc": [
-      1000,
-      195
-    ],
     "unlock": [
       21971
     ]
@@ -750,14 +594,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30102041,
+    "mod": 30102041,
     "icon": "T_Rouge_Talent_SP",
-    "iconLoc": [
-      1000,
-      65
-    ],
     "unlock": [
       21971
     ]
@@ -769,14 +609,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30102031,
+    "mod": 30102031,
     "icon": "T_Rouge_Talent_ESUP",
-    "iconLoc": [
-      1000,
-      -65
-    ],
     "unlock": [
       22072
     ]
@@ -788,14 +624,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "Role",
-    "talentMod": 30102021,
+    "mod": 30102021,
     "icon": "T_Rouge_Talent_DEF",
-    "iconLoc": [
-      1000,
-      -195
-    ],
     "unlock": [
       22173
     ]
@@ -807,14 +639,10 @@
     "branch": 2,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "",
-    "talentMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Talent_EndPointsUP",
-    "iconLoc": [
-      1200,
-      130
-    ],
     "unlock": []
   },
   {
@@ -824,14 +652,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "Role",
-    "talentMod": 30102021,
+    "mod": 30102021,
     "icon": "T_Rouge_Talent_DEF",
-    "iconLoc": [
-      1200,
-      -65
-    ],
     "unlock": [
       22281
     ]
@@ -843,14 +667,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "Role",
-    "talentMod": 30102041,
+    "mod": 30102041,
     "icon": "T_Rouge_Talent_SP",
-    "iconLoc": [
-      1200,
-      -195
-    ],
     "unlock": [
       22382
     ]
@@ -862,14 +682,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "Role",
-    "talentMod": 30102011,
+    "mod": 30102011,
     "icon": "T_Rouge_Talent_HPUP",
-    "iconLoc": [
-      1400,
-      -65
-    ],
     "unlock": [
       22491
     ]
@@ -881,14 +697,10 @@
     "branch": 2,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "Role",
-    "talentMod": 30102031,
+    "mod": 30102031,
     "icon": "T_Rouge_Talent_ESUP",
-    "iconLoc": [
-      1400,
-      -195
-    ],
     "unlock": [
       22491
     ]
@@ -900,14 +712,10 @@
     "branch": 2,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "Role",
-    "talentMod": 30102052,
+    "mod": 30102052,
     "icon": "T_Rouge_Talent_MaxSpUP",
-    "iconLoc": [
-      1600,
-      -130
-    ],
     "unlock": []
   },
   {
@@ -917,14 +725,10 @@
     "branch": 3,
     "type": 3,
     "maxLevel": 1,
-    "levelUpPoint": 15,
+    "point": 15,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103011,
+    "mod": 30103011,
     "icon": "T_Rouge_Talent_Melee_AttackUP",
-    "iconLoc": [
-      0,
-      0
-    ],
     "unlock": [
       30221,
       30322
@@ -937,14 +741,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103041,
+    "mod": 30103041,
     "icon": "T_Rouge_Talent_Qiege",
-    "iconLoc": [
-      200,
-      130
-    ],
     "unlock": [
       30431,
       30532
@@ -957,14 +757,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103051,
+    "mod": 30103051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      200,
-      -130
-    ],
     "unlock": [
       30633
     ]
@@ -976,14 +772,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103021,
+    "mod": 30103021,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      400,
-      195
-    ],
     "unlock": [
       30741
     ]
@@ -995,14 +787,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103031,
+    "mod": 30103031,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      400,
-      65
-    ],
     "unlock": [
       30842
     ]
@@ -1014,14 +802,10 @@
     "branch": 3,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103062,
+    "mod": 30103062,
     "icon": "T_Rouge_Talent_SkillRangeUP",
-    "iconLoc": [
-      400,
-      -130
-    ],
     "unlock": [
       30943,
       31044
@@ -1034,14 +818,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103011,
+    "mod": 30103011,
     "icon": "T_Rouge_Talent_Melee_AttackUP",
-    "iconLoc": [
-      600,
-      195
-    ],
     "unlock": [
       31151
     ]
@@ -1053,14 +833,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103051,
+    "mod": 30103051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      600,
-      65
-    ],
     "unlock": [
       31252
     ]
@@ -1072,14 +848,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103031,
+    "mod": 30103031,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      600,
-      -65
-    ],
     "unlock": [
       31353
     ]
@@ -1091,14 +863,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103041,
+    "mod": 30103041,
     "icon": "T_Rouge_Talent_Qiege",
-    "iconLoc": [
-      600,
-      -195
-    ],
     "unlock": [
       31454
     ]
@@ -1110,14 +878,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103041,
+    "mod": 30103041,
     "icon": "T_Rouge_Talent_Qiege",
-    "iconLoc": [
-      800,
-      195
-    ],
     "unlock": [
       31561
     ]
@@ -1129,14 +893,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103021,
+    "mod": 30103021,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      800,
-      65
-    ],
     "unlock": [
       31662
     ]
@@ -1148,14 +908,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103051,
+    "mod": 30103051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      800,
-      -65
-    ],
     "unlock": [
       31763
     ]
@@ -1167,14 +923,10 @@
     "branch": 3,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103082,
+    "mod": 30103082,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      800,
-      -195
-    ],
     "unlock": [
       31864
     ]
@@ -1186,14 +938,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103051,
+    "mod": 30103051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      1000,
-      195
-    ],
     "unlock": [
       31971
     ]
@@ -1205,14 +953,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103011,
+    "mod": 30103011,
     "icon": "T_Rouge_Talent_Melee_AttackUP",
-    "iconLoc": [
-      1000,
-      65
-    ],
     "unlock": [
       31971
     ]
@@ -1224,14 +968,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103031,
+    "mod": 30103031,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      1000,
-      -65
-    ],
     "unlock": [
       32072
     ]
@@ -1243,14 +983,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103021,
+    "mod": 30103021,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      1000,
-      -195
-    ],
     "unlock": [
       32173
     ]
@@ -1262,14 +998,10 @@
     "branch": 3,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103092,
+    "mod": 30103092,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      1200,
-      130
-    ],
     "unlock": []
   },
   {
@@ -1279,14 +1011,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103051,
+    "mod": 30103051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      1200,
-      -65
-    ],
     "unlock": [
       32281
     ]
@@ -1298,14 +1026,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103011,
+    "mod": 30103011,
     "icon": "T_Rouge_Talent_Melee_AttackUP",
-    "iconLoc": [
-      1200,
-      -195
-    ],
     "unlock": [
       32382
     ]
@@ -1317,14 +1041,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103011,
+    "mod": 30103011,
     "icon": "T_Rouge_Talent_Melee_AttackUP",
-    "iconLoc": [
-      1400,
-      -65
-    ],
     "unlock": [
       32491
     ]
@@ -1336,14 +1056,10 @@
     "branch": 3,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103051,
+    "mod": 30103051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      1400,
-      -195
-    ],
     "unlock": [
       32491
     ]
@@ -1355,14 +1071,10 @@
     "branch": 3,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "MeleeWeapon",
-    "talentMod": 30103072,
+    "mod": 30103072,
     "icon": "T_Rouge_Talent_Guanchuan",
-    "iconLoc": [
-      1600,
-      -130
-    ],
     "unlock": []
   },
   {
@@ -1372,14 +1084,10 @@
     "branch": 4,
     "type": 3,
     "maxLevel": 1,
-    "levelUpPoint": 15,
+    "point": 15,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104011,
+    "mod": 30104011,
     "icon": "T_Rouge_Talent_Range_AttackUP",
-    "iconLoc": [
-      0,
-      0
-    ],
     "unlock": [
       40221,
       40322
@@ -1392,14 +1100,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104041,
+    "mod": 30104041,
     "icon": "T_Rouge_Talent_Qiege",
-    "iconLoc": [
-      200,
-      130
-    ],
     "unlock": [
       40431
     ]
@@ -1411,14 +1115,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 20,
+    "point": 20,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104051,
+    "mod": 30104051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      200,
-      -130
-    ],
     "unlock": [
       40532,
       40633
@@ -1431,14 +1131,10 @@
     "branch": 4,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104082,
+    "mod": 30104082,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      400,
-      130
-    ],
     "unlock": [
       40741,
       40842
@@ -1451,14 +1147,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104021,
+    "mod": 30104021,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      400,
-      -65
-    ],
     "unlock": [
       40943
     ]
@@ -1470,14 +1162,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 25,
+    "point": 25,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104031,
+    "mod": 30104031,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      400,
-      -195
-    ],
     "unlock": [
       41044
     ]
@@ -1489,14 +1177,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104031,
+    "mod": 30104031,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      600,
-      195
-    ],
     "unlock": [
       41151
     ]
@@ -1508,14 +1192,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104041,
+    "mod": 30104041,
     "icon": "T_Rouge_Talent_Qiege",
-    "iconLoc": [
-      600,
-      65
-    ],
     "unlock": [
       41252
     ]
@@ -1527,14 +1207,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104011,
+    "mod": 30104011,
     "icon": "T_Rouge_Talent_Range_AttackUP",
-    "iconLoc": [
-      600,
-      -65
-    ],
     "unlock": [
       41353
     ]
@@ -1546,14 +1222,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 30,
+    "point": 30,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104051,
+    "mod": 30104051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      600,
-      -195
-    ],
     "unlock": [
       41454
     ]
@@ -1565,14 +1237,10 @@
     "branch": 4,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104072,
+    "mod": 30104072,
     "icon": "T_Rouge_Talent_MultiShot",
-    "iconLoc": [
-      800,
-      195
-    ],
     "unlock": [
       41561
     ]
@@ -1584,14 +1252,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104051,
+    "mod": 30104051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      800,
-      65
-    ],
     "unlock": [
       41662
     ]
@@ -1603,14 +1267,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104021,
+    "mod": 30104021,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      800,
-      -65
-    ],
     "unlock": [
       41763
     ]
@@ -1622,14 +1282,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 35,
+    "point": 35,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104041,
+    "mod": 30104041,
     "icon": "T_Rouge_Talent_Qiege",
-    "iconLoc": [
-      800,
-      -195
-    ],
     "unlock": [
       41864
     ]
@@ -1641,14 +1297,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104031,
+    "mod": 30104031,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      1000,
-      195
-    ],
     "unlock": [
       41971
     ]
@@ -1660,14 +1312,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104021,
+    "mod": 30104021,
     "icon": "T_Rouge_Talent_CriUP",
-    "iconLoc": [
-      1000,
-      65
-    ],
     "unlock": [
       42072
     ]
@@ -1679,14 +1327,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104051,
+    "mod": 30104051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      1000,
-      -65
-    ],
     "unlock": [
       42173
     ]
@@ -1698,14 +1342,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 40,
+    "point": 40,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104011,
+    "mod": 30104011,
     "icon": "T_Rouge_Talent_Range_AttackUP",
-    "iconLoc": [
-      1000,
-      -195
-    ],
     "unlock": [
       42173
     ]
@@ -1717,14 +1357,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104051,
+    "mod": 30104051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      1200,
-      195
-    ],
     "unlock": [
       42281
     ]
@@ -1736,14 +1372,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 45,
+    "point": 45,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104011,
+    "mod": 30104011,
     "icon": "T_Rouge_Talent_Range_AttackUP",
-    "iconLoc": [
-      1200,
-      65
-    ],
     "unlock": [
       42382
     ]
@@ -1755,14 +1387,10 @@
     "branch": 4,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104092,
+    "mod": 30104092,
     "icon": "T_Rouge_Talent_CRDUP",
-    "iconLoc": [
-      1200,
-      -130
-    ],
     "unlock": []
   },
   {
@@ -1772,14 +1400,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104011,
+    "mod": 30104011,
     "icon": "T_Rouge_Talent_Range_AttackUP",
-    "iconLoc": [
-      1400,
-      195
-    ],
     "unlock": [
       42491
     ]
@@ -1791,14 +1415,10 @@
     "branch": 4,
     "type": 1,
     "maxLevel": 1,
-    "levelUpPoint": 50,
+    "point": 50,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104051,
+    "mod": 30104051,
     "icon": "T_Rouge_Talent_Zhendang",
-    "iconLoc": [
-      1400,
-      65
-    ],
     "unlock": [
       42491
     ]
@@ -1810,14 +1430,10 @@
     "branch": 4,
     "type": 2,
     "maxLevel": 1,
-    "levelUpPoint": 100,
+    "point": 100,
     "modEquip": "RangedWeapon",
-    "talentMod": 30104062,
+    "mod": 30104062,
     "icon": "T_Rouge_Talent_Guanchuan",
-    "iconLoc": [
-      1600,
-      130
-    ],
     "unlock": []
   }
 ]

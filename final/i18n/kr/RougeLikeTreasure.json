@@ -6,11 +6,11 @@
     "simpleDesc": "추가로 [리셋] 기회 획득, 최초 리셋은 [잿불] 비소모",
     "ipDesc": "촛불은 아이들을 웃게 하고, 추위를 쫓고, 희망을 준다. 하지만 속세의 불길은 언젠가 꺼지는 법이어서, 그녀는 계속해서 새로운 촛불을 켤 수밖에 없었다.\n성스러운 호수 깊은 곳에서, 심지의 장인은 마침내 영원히 꺼지지 않는 불꽃을 만들어 냈다. 그러나 그녀의 촛불을 기다리는 사람은, 이미 어디도 없었다.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_01",
     "endPoints": [
       10
@@ -18,9 +18,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 1,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10102,
@@ -29,11 +27,11 @@
     "simpleDesc": "심연 행상인의 모든 상품 가격 감소",
     "ipDesc": "상인과 마주칠 때마다 새의 얼굴을 한 마술사는 불평한다. \"정찰가는 재미없잖아요. 랜덤과 확률을 추가해 보는 건 어때요?\"\n상인은 건의를 듣고, 자기 상점의 할인 쿠폰을 디자인해 심연 곳곳에 뿌렸다. 마술사는 실망한 듯 고개를 저었다. \"착한 행동은 정찰가보다 더 재미없네요.\"",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_02",
     "endPoints": [
       10
@@ -41,9 +39,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 2,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10103,
@@ -52,11 +48,11 @@
     "simpleDesc": "다음 층에 진입할 때마다, HP 회복",
     "ipDesc": "그녀는 독실한 신자로, 언제나 신의 가르침대로 행동하며, 설령 다른 이가 보지 않는 곳에서도 법도를 지킨다. 어려운 사람을 만나면, 도움의 손길을 내밀고, 가난한 사람을 만나면, 아낌없이 주머니를 털어준다. 반대 의견을 가진 자를 만나면, 관대한 마음으로 상대에게 아홉 신의 은총을 느끼라고 충고한다.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20104001,
+    "mod": 20104001,
     "icon": "T_Rouge_Treasure_05",
     "endPoints": [
       10
@@ -64,9 +60,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 3,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10104,
@@ -75,11 +69,11 @@
     "simpleDesc": "다음 층에 진입할 때마다, 정신력 회복",
     "ipDesc": "\"만약 신이 상상만큼 완벽하지 않다면, 당신의 행동에 의미가 있을까요?\" 상대방이 그녀에게 물었다.\n\"당연히 의미가 있죠.\" 그녀는 기꺼이 미소 지었다. \"신앙은 남이 요구하는 것이 아니라 자신을 위한 것입니다. 내가 한 일이 양심에 거리낌이 없다면, 신이 진짜인지 가짜인지, 좋은지 나쁜지 무슨 상관이 있겠어요?\"",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20105001,
+    "mod": 20105001,
     "icon": "T_Rouge_Treasure_06",
     "endPoints": [
       10
@@ -87,9 +81,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 4,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10105,
@@ -98,11 +90,11 @@
     "simpleDesc": "행적 획득량 상승",
     "ipDesc": "그것은 길을 잃은 자를 인도하는 자비로운 신들을 찬양하는 송가로, 세상에 모르는 이가 없다. 경건한 엘리시안 신자들은 심연에서 조각난 선율을 흥얼거리며, 신들이 그들을 인도해, 고난에서 약속의 하늘로 데려가 주기를 기도한다. 금빛 선율이 흐르고, 그들은 행복한 기대 속에서 영원히 눈을 감는다.",
     "treasureGroup": 2,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       10
@@ -110,9 +102,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 5,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10106,
@@ -121,11 +111,11 @@
     "simpleDesc": "부활 횟수 증가",
     "ipDesc": "그림자가 사방에서 몰려와 무리를 에워쌌다. 기사는 홀로 어둠 속으로 뛰어들어, 한 가닥 살길을 열었다. 치유 사제는 캄캄한 안개 속에서 만신창이가 된 기사의 몸을 이끌고 돌아왔다.\n'나는 반드시 그녀를 살릴 것이다.' 치유 사제는 마음속으로 맹세했다. 치유술의 의의는, 용감한 사람의 희생이 결코 헛되지 않게 하는 것이니까.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20107001,
+    "mod": 20107001,
     "icon": "T_Rouge_Treasure_09",
     "endPoints": [
       10
@@ -133,9 +123,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 6,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10107,
@@ -144,11 +132,11 @@
     "simpleDesc": "HP 감소 후, 대미지를 받을 때 경직되지 않고, 받는 대미지 감소",
     "ipDesc": "먼 길에는 진리와 고통이 섞여 있다. 밤의 종소리가 울리거늘, 떠돌이 새는 왜 둥지로 돌아가려 하지 않는가?\n높은 탑은 대륙의 중심이 아니고, 신은 만물의 근원이 아니기 때문이다. 설령 평생 족쇄와 수갑이 채워진다 해도, 그는 오직 자신의 세계로만 세상을 가늠할 수 있다고 믿고 있다.",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20101001,
+    "mod": 20101001,
     "icon": "T_Rouge_Treasure_21",
     "endPoints": [
       10
@@ -156,9 +144,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 7,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10108,
@@ -167,11 +153,11 @@
     "simpleDesc": "스킬 대미지 상승, 근접 무기 대미지 감소",
     "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20108001,
+    "mod": 20108001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -179,9 +165,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 8,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10109,
@@ -190,11 +174,11 @@
     "simpleDesc": "스킬 대미지 상승, 원거리 무기 대미지 감소",
     "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20109001,
+    "mod": 20109001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -202,9 +186,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 9,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10110,
@@ -213,11 +195,11 @@
     "simpleDesc": "근접 무기 대미지 상승, 스킬 대미지 감소",
     "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20110001,
+    "mod": 20110001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -225,9 +207,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 10,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10111,
@@ -236,11 +216,11 @@
     "simpleDesc": "근접 무기 대미지 상승, 원거리 무기 대미지 감소",
     "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20111001,
+    "mod": 20111001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -248,9 +228,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 11,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10112,
@@ -259,11 +237,11 @@
     "simpleDesc": "원거리 무기 대미지 상승, 스킬 대미지 감소",
     "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20112001,
+    "mod": 20112001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -271,9 +249,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 12,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10113,
@@ -282,11 +258,11 @@
     "simpleDesc": "원거리 무기 대미지 상승, 근접 무기 대미지 감소",
     "ipDesc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20113001,
+    "mod": 20113001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -294,9 +270,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 13,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10114,
@@ -305,11 +279,11 @@
     "simpleDesc": "마령 지원 시전 후, 대미지 상승",
     "ipDesc": "앞으로 나아갈 때, 당신과 함께 용감하게 심연에 걸어 들어간 길동무를 잊어서는 안 된다. 통조림을 따서 그들의 노고를 위로해 주자!",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20120001,
+    "mod": 20120001,
     "icon": "T_Rouge_Treasure_28",
     "endPoints": [
       10
@@ -317,9 +291,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 14,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10201,
@@ -328,11 +300,11 @@
     "simpleDesc": "[심지] 랜덤 획득, 등급은 <Highlight>파란색</> 또는 <Highlight>보라색</>",
     "ipDesc": "물, 군량미, 부싯돌, 그리고 구겨진 지도 한 장. 이들의 주인은 숯펜으로 지도에 자신의 행적을 기록하며, 지도의 선을 교차하고, 따라가고, 심지어 지도에 표시된 경계를 넘기도 했다. 펜은 제자리에서 몇 번 맴돌다 완전히 방향을 잃었고, 끊어진 지점에 비뚤어진 물음표만 남겼다.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -340,9 +312,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 15,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10202,
@@ -351,11 +321,11 @@
     "simpleDesc": "랜덤 [유물] 획득, 등급은 <Highlight>파란색</> 또는 <Highlight>보라색</>",
     "ipDesc": "물, 군량미, 부싯돌, 그리고 구겨진 지도 한 장. 이들의 주인은 숯펜으로 지도에 자신의 행적을 기록하며, 지도의 선을 교차하고, 따라가고, 심지어 지도에 표시된 경계를 넘기도 했다. 펜은 제자리에서 몇 번 맴돌다 완전히 방향을 잃었고, 끊어진 지점에 비뚤어진 물음표만 남겼다.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -363,9 +333,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 16,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10203,
@@ -374,11 +342,11 @@
     "simpleDesc": "캐릭터 최대 회피 횟수 증가",
     "ipDesc": "너는 기민한 아이이니, 가장 먼저 정상에 올라 동료의 모범이 될지어다.\n너는 용감한 전사이니, 가장 먼저 전장에 뛰어들어, 뒤따라오는 자의 길을 찾을지어다.\n너는 고결한 신자이니, 가장 먼저 지옥에서 뛰어내려, 거룩한 대지의 더러움을 없앨지어다.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20103001,
+    "mod": 20103001,
     "icon": "T_Rouge_Treasure_19",
     "endPoints": [
       20
@@ -386,9 +354,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 17,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10204,
@@ -397,11 +363,11 @@
     "simpleDesc": "캐릭터가 스킬 시전 후, 정신력을 회복한다.\n[그림자] 진입 시에만 적용된다.",
     "ipDesc": "두 얼굴의 신이시여, 우리의 기도를 들어주소서. 날카로운 칼날로 날개를 베고, 뾰족한 칼날로 고동치는 심장을 찌르게 해 주소서. 이 거짓된 운명에서 벗어날 수 있도록, 보름달이 방향을 바꾸기만 기다리나이다.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20102001,
+    "mod": 20102001,
     "icon": "T_Rouge_Treasure_22",
     "endPoints": [
       20
@@ -409,9 +375,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 18,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10205,
@@ -420,11 +384,11 @@
     "simpleDesc": "해당 유물 획득 후, 부활할 때마다 입히는 대미지 상승",
     "ipDesc": "저주받은 새장 속 새여, 낙엽은 그대의 침대가 아니고, 땅거미는 그대의 꿈자리가 아니니, 죽음조차 당신을 편히 잠들게 하지 못하리. 그러니 깨어나라. 죽음을 맛보고, 고통을 잘근잘근 씹으며, 터무니없는 운명이 그대 앞에 무릎 꿇게 하라.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20114001,
+    "mod": 20114001,
     "icon": "T_Rouge_Treasure_24",
     "endPoints": [
       20
@@ -432,9 +396,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 19,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10206,
@@ -443,11 +405,11 @@
     "simpleDesc": "스킬 대미지는 대상의 방어를 무시하고, 다양한 유형의 심지 1개를 보유할 때마다, 해당 효과 감소",
     "ipDesc": "배움을 이루고 싶다면, 목표를 명확히 한 후, 갖은 노력을 다해 연구에 전념해야 한다.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20115001,
+    "mod": 20115001,
     "icon": "T_Rouge_Treasure_25",
     "endPoints": [
       20
@@ -455,9 +417,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 20,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10207,
@@ -466,11 +426,11 @@
     "simpleDesc": "다음 층으로 진입할 때마다, 소량의 잿불 공제. 해당 층에서 받는 대미지 감소 효과 획득",
     "ipDesc": "모두가 눈을 감고 있을 때, 그대는 눈을 떠라. 모두가 엎드려 있을 때, 그대는 일어서라. 모두가 칭송할 때, 그대는 질문하라. 모두가 행복할 때, 그대는 미치광이가 되어라.\n그제야 보름달의 굴레에서 벗어나, 운명 뒤편의 진실을 엿볼 수 있을지어다.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20116001,
+    "mod": 20116001,
     "icon": "T_Rouge_Treasure_23",
     "endPoints": [
       20
@@ -478,9 +438,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 21,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10209,
@@ -489,11 +447,11 @@
     "simpleDesc": "희미한 그림자와 흩어진 그림자 중 <Highlight>파란색</> 등급의 심지를 선택한 후, 바로 업그레이드",
     "ipDesc": "새들은 하늘 높이 날아가고 싶어 하지만, 심연에는 하늘이 없다. 새들은 쉬어갈 나뭇가지를 갈망하지만, 심연에서 가지를 뻗는 것은 두려움뿐이다.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_17",
     "endPoints": [
       20
@@ -501,9 +459,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 22,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10210,
@@ -512,11 +468,11 @@
     "simpleDesc": "일정 수량의 지휘자를 처치할 때마다, 잿불 획득",
     "ipDesc": "윤회 속에서 길을 잃고, 막막함 속에서 절망하며, 방향도 시간도 자신도 잃는다. 지친 나그네는 끝없는 어둠 속을 누빈다. 나그네 곁을 지키는 것은 오직 고통과 공포뿐이나, 보이지 않는 어둠 속에도 묵묵히 그의 행적을 지켜보는 눈이 있음은 알지 못한다.",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_20",
     "endPoints": [
       20
@@ -524,9 +480,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 23,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10211,
@@ -535,11 +489,11 @@
     "simpleDesc": "다음에 희미한 그림자와 흩어진 그림자 중 심지 선택 시, 심지 등급은 최소 <Highlight>보라색</>",
     "ipDesc": "누군가 몰래 배낭에 쑤셔 넣은 쪽지. 아무래도 평소에 좀 더 주의해야 할 것 같다. 다행히 쪽지에 독약이나 저주는 없고, 오직 다음과 같은 진심 어린 축복만이 쓰여 있을 뿐이다.\n\"순조로운 여행이 되길 바랍니다! —당신의 친구가\"",
     "treasureGroup": 10211,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_30",
     "endPoints": [
       20
@@ -547,9 +501,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 24,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10212,
@@ -558,11 +510,11 @@
     "simpleDesc": "해당 유물 획득 시, 추가로 <Highlight>1</>발의 심지 획득. 가장 많은 수량을 보유한 유형 중에서 우선 획득",
     "ipDesc": "만물은 서로 관계가 있다. 귀납법, 연역법을 잘 이용해 논리적으로 사고하면, 의외의 수확을 얻을 수 있을지도 모른다.",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_12",
     "endPoints": [
       20
@@ -570,9 +522,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 25,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10213,
@@ -581,11 +531,11 @@
     "simpleDesc": "[화롯불]의 출현 확률 약간 상승 및 즉시 <Highlight>1</>발 획득",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -596,9 +546,7 @@
       5064
     ],
     "rlArchiveId": 26,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10214,
@@ -607,11 +555,11 @@
     "simpleDesc": "[부유하는 달] 출현 확률 약간 상승 및 즉시 <Highlight>1</>발 획득",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -622,9 +570,7 @@
       5065
     ],
     "rlArchiveId": 27,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10215,
@@ -633,11 +579,11 @@
     "simpleDesc": "[형광석]의 출현 확률 약간 상승 및 즉시 <Highlight>1</>발 획득",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -647,9 +593,7 @@
       5046
     ],
     "rlArchiveId": 28,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10216,
@@ -658,11 +602,11 @@
     "simpleDesc": "[루멘 가지]의 출현 확률을 약간 상승시키고, 즉시 <Highlight>1</>발을 획득한다.",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -673,9 +617,7 @@
       5065
     ],
     "rlArchiveId": 29,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10217,
@@ -684,11 +626,11 @@
     "simpleDesc": "[그림자를 삼킨 나비] 출현 확률 약간 상승 및 즉시 <Highlight>1</>발 획득",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -698,9 +640,7 @@
       5048
     ],
     "rlArchiveId": 30,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10218,
@@ -709,11 +649,11 @@
     "simpleDesc": "[빛을 품는 벌레]의 출현 확률 약간 상승 및 즉시 <Highlight>1</>발 획득",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -724,9 +664,7 @@
       5064
     ],
     "rlArchiveId": 31,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10219,
@@ -735,11 +673,11 @@
     "simpleDesc": "[흡혈 꽃] 출현 확률 약간 상승 및 즉시 <Highlight>1</>발 획득",
     "ipDesc": "호촉 사제는 망령 제어술로 망령의 힘을 빌려 쓸 수 있다. 그는 망자를 벗으로 여기기에, 두려움을 느끼지 않는다. 촛불 아래 비친 그림자는 과연 누구일까? 왜 그들의 영혼은 고통으로 가득 차 있을까? 왜... 그에게 앞으로 가지 말고 뒤돌아보라고 말할까?",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -749,9 +687,7 @@
       5050
     ],
     "rlArchiveId": 32,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10220,
@@ -760,11 +696,11 @@
     "simpleDesc": "행적 획득량이 대폭 상승한다.",
     "ipDesc": "그것은 길을 잃은 자를 인도하는 자비로운 신들을 찬양하는 송가로, 세상에 모르는 이가 없다. 경건한 엘리시안 신자들은 심연에서 조각난 선율을 흥얼거리며, 신들이 그들을 인도해, 고난에서 약속의 하늘로 데려가 주기를 기도한다. 금빛 선율이 흐르고, 그들은 행복한 기대 속에서 영원히 눈을 감는다.",
     "treasureGroup": 10220,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       20
@@ -772,9 +708,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 62,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10301,
@@ -783,11 +717,11 @@
     "simpleDesc": "[심지] 랜덤 획득, 등급은 <Highlight>보라색</> 또는 <Highlight>금색</>",
     "ipDesc": "물, 군량미, 부싯돌, 그리고 구겨진 지도 한 장. 이들의 주인은 숯펜으로 지도에 자신의 행적을 기록하며, 지도의 선을 교차하고, 따라가고, 심지어 지도에 표시된 경계를 넘기도 했다. 펜은 제자리에서 몇 번 맴돌다 완전히 방향을 잃었고, 끊어진 지점에 비뚤어진 물음표만 남겼다.",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -795,9 +729,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 33,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10302,
@@ -806,11 +738,11 @@
     "simpleDesc": "[유물] 랜덤 획득, 등급은 <Highlight>보라색</> 또는 <Highlight>금색</>",
     "ipDesc": "물, 군량미, 부싯돌, 그리고 구겨진 지도 한 장. 이들의 주인은 숯펜으로 지도에 자신의 행적을 기록하며, 지도의 선을 교차하고, 따라가고, 심지어 지도에 표시된 경계를 넘기도 했다. 펜은 제자리에서 몇 번 맴돌다 완전히 방향을 잃었고, 끊어진 지점에 비뚤어진 물음표만 남겼다.",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -818,9 +750,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 34,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10303,
@@ -829,11 +759,11 @@
     "simpleDesc": "정신력 자연 회복량 상승",
     "ipDesc": "\"왜 날 구한 거죠?\" 깨어난 기사가 물었다. 부릅뜬 눈이 창백한 얼굴에서 튀어나올 듯했다. \"난 미치기 전에 죽고 싶었을 뿐이에요. 그랬다면 적어도 온전한 영혼을 가질 수 있었으니까!\"\n기사는 치유 사제가 어렵게 살려낸 몸을 끌고, 다시 어둠 속으로 발길을 돌렸다. 이제, 그는 또 누구를 구해야 할 것인가?",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20106001,
+    "mod": 20106001,
     "icon": "T_Rouge_Treasure_10",
     "endPoints": [
       20
@@ -841,9 +771,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 35,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10304,
@@ -852,11 +780,11 @@
     "simpleDesc": "모든 심지를 랜덤 심지로 교체하고, 보유한 심지 수량에 따라 잿불을 획득",
     "ipDesc": "\"그 융통성 없는 상인이 상점 규칙을 바꾸려 하지 않는군요. 어쩔 수 없이 제가 애프터서비스를 해 드리죠.\" 마술사는 카드 한 묶음을 꺼내더니, 뒷면이 위로 가게 놓고 잘 섞었다. \"자, 이제 신나게 한 번 뽑아 볼까요!\"",
     "treasureGroup": 10304,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_15",
     "endPoints": [
       40
@@ -864,9 +792,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10305,
@@ -875,11 +801,11 @@
     "simpleDesc": "모든 유물을 랜덤 유물로 교체",
     "ipDesc": "그는 '괴짜'보다 '마술사'로 불리는 것을 더 좋아한다. 그의 유일한 목표는 이 답답하고 재미없는 공간에 즐거움을 창조하는 것이며, 즐거움의 대가는 고려 대상이 아니다. 그는 어차피 잃을 것이 없기 때문이다.",
     "treasureGroup": 10305,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_16",
     "endPoints": [
       40
@@ -887,9 +813,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10306,
@@ -898,11 +822,11 @@
     "simpleDesc": "유물이 많을수록, 입히는 대미지 상승",
     "ipDesc": "부는 많을수록 좋지만, 단순히 부를 쌓는 것은 너무 뻔해서 재미가 없다. 부에 더 많은 형태를 부여해, 사람들이 나에게 감사하게 하고, 내가 인간 세상에 뿌린 은덕을 찬양하게 하라! 자, 이 선물을 받아라. 이것이 내 공적에 한 획을 더 보탤 것이니.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20118001,
+    "mod": 20118001,
     "icon": "T_Rouge_Treasure_18",
     "endPoints": [
       40
@@ -910,9 +834,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 36,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10307,
@@ -921,11 +843,11 @@
     "simpleDesc": "다양한 유형의 심지를 1개 보유할 때마다, 모든 속성 관통 상승",
     "ipDesc": "지식을 얻고자 하면 먼저 다양한 책을 읽고, 이를 자기 것으로 받아들여, 시야를 넓히고 자신의 한계를 넘어서야 한다.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20119001,
+    "mod": 20119001,
     "icon": "T_Rouge_Treasure_26",
     "endPoints": [
       40
@@ -933,9 +855,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 37,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10308,
@@ -944,11 +864,11 @@
     "simpleDesc": "같은 유형의 심지 세트 효과 활성화에 필요한 수량 감소",
     "ipDesc": "진리의 본질은 종종 간단하다. 진지하게 고민하고 깊이 헤아리면, 유한한 지식도 귀한 도움을 줄 수 있다.",
     "treasureGroup": 10308,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_11",
     "endPoints": [
       40
@@ -956,11 +876,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 38,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {
-      "groupDiscount": -1
-    }
+    "canSell": 0
   },
   {
     "id": 10309,
@@ -969,11 +885,11 @@
     "simpleDesc": "부활 횟수 소진 시, 잿불을 소모하여 부활 횟수 추가 획득 가능",
     "ipDesc": "끝없는 어둠이 당신의 모든 것을 삼켜버릴 듯했지만, 재 속에서 기적처럼 희미한 불빛이 타올랐다. 만약 심연에 진짜 의지가 있다면, 그 또한 당신의 생명이 여기서 침묵하길 바라지 않을지도 모른다.",
     "treasureGroup": 10309,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_08",
     "endPoints": [
       40
@@ -981,9 +897,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 39,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10310,
@@ -992,11 +906,11 @@
     "simpleDesc": "근접 공격으로 적에게 대미지를 입힐 시, 주변을 향해 검기를 날려 명중된 적에게 빛 속성 대미지 부여",
     "ipDesc": "은빛 검을 든 기사가 적진을 뚫고 나오자, 하얀빛이 보름달처럼 전장을 비춘다. 그 장면에 지친 병사들은 다시금 눈을 뜬다.\n아... 이것은 운명의 신의 인도임이 틀림없다! 사람들은 이 기적과도 같은 빛에 감격의 눈물을 흘리며, 신앙의 힘으로 몸이 다시 가벼워짐을 느꼈다. 그래서 그들은 일어나서 빛을 따라 계속 전진했다.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20130001,
+    "mod": 20130001,
     "icon": "T_Rouge_Treasure_46",
     "endPoints": [
       40
@@ -1004,9 +918,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 53,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10311,
@@ -1015,11 +927,11 @@
     "simpleDesc": "스킬로 적에게 대미지를 입힐 시, 자신 주변에 폭발을 일으켜 적에게 어둠 속성 대미지 부여",
     "ipDesc": "어둠이 처음으로 성스러운 호수를 침식했을 때, 엘리시안의 가장 용맹한 기사들은 자진하여 그 안으로 들어섰다.\n그들 대부분은 목숨을 잃었고, 간신히 살아남은 이들은 영원히 꿈을 잃었다. 눈을 감으면, 어둠이 그들의 생각을 움켜쥐어 끝없는 심연으로 끌어내렸기 때문이다.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20131001,
+    "mod": 20131001,
     "icon": "T_Rouge_Treasure_47",
     "endPoints": [
       40
@@ -1027,9 +939,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 54,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10312,
@@ -1038,11 +948,11 @@
     "simpleDesc": "적에게 대미지를 입힐 시, 추적탄을 발동해 명중된 적에게 바람 속성 대미지 부여",
     "ipDesc": "원정 전날, 혈기 넘치는 소년 기사는 신의 부름을 받기 전까지 한 번 더 엘리시안을 위해 승리를 거두기 위해 은빛 갑옷으로 등에 있는 날개 모양의 성흔을 가렸다.\n하지만 그 승리는 엘리시안 진영 안에 갑자기 나타난 거대 필토이드 때문에 의미를 잃었고, 소년 기사는 그 후 행방이 묘연해졌다... 날개가 생겨난 그가 엘리시안을 버렸다고 하는 이도 있고, 어두운 달에 미혹되어 그 괴물과 하나가 되었다고 하는 이도 있다.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20132001,
+    "mod": 20132001,
     "icon": "T_Rouge_Treasure_48",
     "endPoints": [
       40
@@ -1050,9 +960,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 55,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10313,
@@ -1061,11 +969,11 @@
     "simpleDesc": "소환물 생성 시, 소환 위치에 공격을 1회 발동하고 명중된 적에게 물 속성 대미지 부여",
     "ipDesc": "발끝이 성스러운 호수의 수면에 닿자, 빛 없는 물결 어둠의 달이 물 밑에서 떠오르는 것처럼 출렁인다. 이 수면이 정말로 행복한 천국으로 통한다면, 왜 스스로의 얼굴조차 비추지 못하는 걸까?\n순식간에 급류가 몰아치고 그 의문, 그리고 신도마저 칠흑 같은 소용돌이에 삼켜져 버렸다.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20133001,
+    "mod": 20133001,
     "icon": "T_Rouge_Treasure_49",
     "endPoints": [
       40
@@ -1073,9 +981,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 56,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10314,
@@ -1084,11 +990,11 @@
     "simpleDesc": "원거리 공격으로 적에게 대미지를 입힐 시, 전방 부채꼴 범위의 적에게 불 속성 대미지 부여",
     "ipDesc": "그 귀족은 신성한 피가 흐르는 그녀가 사람들을 구원하기 위해 스스로를 바쳐야 한다고 말했다.\n그리하여 대관식을 치르는 날, 그녀는 긴 머리카락으로 불꽃을 일으켰다. 신성한 의식은 화염의 처형장이 되었고 성당, 그리고 그 자리에 있던 귀족까지 전부 불태워버렸다. 하늘까지 솟구친 불길은 태양보다 더 눈부셨고, 고된 노동에 지쳤던 사람들은 숨을 죽이고 그 광경을 우러러보았다.\n그녀는 스스로를 바쳐 수없는 사람들을 구원했다.",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20134001,
+    "mod": 20134001,
     "icon": "T_Rouge_Treasure_50",
     "endPoints": [
       40
@@ -1096,9 +1002,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 57,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10315,
@@ -1107,11 +1011,11 @@
     "simpleDesc": "스킬 시전 시, 전방 구역에 낙뢰를 발동하여 명중된 적에게 번개 속성 대미지 부여",
     "ipDesc": "나는 어둠의 시대를 겪었노라, 이단자들이 결탁하여 성탑을 무너뜨리려 했도다.\n나는 보았노라, 탑에서 드리워진 수많은 가시가 하늘을 가리었음을. 독실한 신도들이여, 두려워하지 말라. 신들은 오직 죄 있는 자만을 심판하시느니라. 가시가 모든 죄를 묶어 소멸시키는 순간, 피로 물든 행복한 시대가 열리리라!",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20135001,
+    "mod": 20135001,
     "icon": "T_Rouge_Treasure_51",
     "endPoints": [
       40
@@ -1119,9 +1023,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 58,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10316,
@@ -1130,11 +1032,11 @@
     "simpleDesc": "입힌 대미지가 일정 수치 이하일 시, 고정 대미지 1회 추가",
     "ipDesc": "그녀는 조용히 번져가는 어둠을 전혀 눈치채지 못한 것은 아니었다. 하지만 돌아갈 길을 잃은 지금, 그녀는 차마 다시 무엇을 빼앗거나 꺼내지 못했다.\n그래서 그녀는 반짝이는 사탕 한 알을 건넸다. 그것이 찰나에 사라지는 꿈이라 해도, 스스로를 속이는 거짓말이라 해도, 친구가 다시 한번 웃을 수 있다면, 그것만으로도 충분했다.",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20121001,
+    "mod": 20121001,
     "icon": "T_Rouge_Treasure_54",
     "endPoints": [
       40
@@ -1142,9 +1044,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 61,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11101,
@@ -1153,11 +1053,11 @@
     "simpleDesc": "실드 보유 시 받는 대미지가 감소한다.",
     "ipDesc": "열아홉 살 때, 처음 전장에 나갔을 때, 이제 막 얼굴을 알게 된 팀원의 몸을 필토이드의 긴 발톱이 관통했다. 그의 방패는 한발 늦게 도착하며 그 위에 새빨간 꽃 한 송이를 활짝 피웠다. 아무리 깨끗이 문지르고 닦아도, 방패엔 여전히 엷은 흔적이 남아 있다.\n그는 무엇을 위해 싸우는가? 믿음, 정의, 그리고 언젠가 그 흔적을 잊어버리기 위해서.",
     "treasureGroup": 101,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20171001,
+    "mod": 20171001,
     "icon": "T_Rouge_Treasure_34",
     "endPoints": [
       10
@@ -1165,9 +1065,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 40,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11201,
@@ -1176,11 +1074,11 @@
     "simpleDesc": "실드 보유 시 입히는 대미지가 상승한다.",
     "ipDesc": "열네 살 처음으로 훈련에 참가했을 때, 그는 무기 상인이 추천한 수많은 초보자 장비 중에서 이 장검을 골랐다. 친구들은 \"권총이 검보다 훨씬 쓰기 좋지!\"라면서 고지식하다고 비웃었다.\n\"네가 뭘 알아? 그림책의 기사들은 모두 검을 들고 있다고.\" 그는 이야기 속 영웅처럼 장검을 머리 위로 들어 올리며 말했다. \"엘리시안을 위하여!\"",
     "treasureGroup": 101,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20172001,
+    "mod": 20172001,
     "icon": "T_Rouge_Treasure_33",
     "endPoints": [
       20
@@ -1188,9 +1086,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 41,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 12101,
@@ -1199,11 +1095,11 @@
     "simpleDesc": "선택한 리셋 소모 상승, 일정 층을 통과 시 더 이상 상승하지 않고 잿불 획득",
     "ipDesc": "완벽함을 추구하지 말라, 이는 지혜의 길이 아니다. 시기가 오면 행하라, 방황하다가 복을 잃지 않도록.",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_35",
     "endPoints": [
       10
@@ -1211,9 +1107,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 42,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12102,
@@ -1222,11 +1116,11 @@
     "simpleDesc": "선택한 심연 행상인의 모든 상품 가격 상승, 일정 층 통과 시 더 이상 상승하지 않고 잿불 획득",
     "ipDesc": "속세의 것을 탐하는 일은 어리석다. 사리사욕은 반드시 부패를 낳는다. 수확을 원한다면 먼저 파종의 대가를 계산해야 한다.",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_36",
     "endPoints": [
       10
@@ -1234,9 +1128,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 43,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12201,
@@ -1245,11 +1137,11 @@
     "simpleDesc": "대미지가 감소한다. 일정 층수 클리어 후 해당 효과가 제거되며 잿불을 획득한다.",
     "ipDesc": "인내만의 최고의 선이다. 당신이 초목처럼 아침 해를 기다릴 때, 하느님의 은혜가 봄비처럼 적시리라. 속세의 잡념을 버리고, 경건한 마음으로 광명의 길을 걸어라.",
     "treasureGroup": 102,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20161001,
+    "mod": 20161001,
     "icon": "T_Rouge_Treasure_37",
     "endPoints": [
       20
@@ -1257,9 +1149,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 44,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13101,
@@ -1268,11 +1158,11 @@
     "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 불 속성 대미지를 입힌다.",
     "ipDesc": "흔들리는 촛불도, 따사로운 난로도 아니다.\n나는 활활 타오르는 화염으로 숲을 삼키고, 가로막는 모든 것을 잿더미로 만들 것이다.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20181001,
+    "mod": 20181001,
     "icon": "T_Rouge_Treasure_38",
     "endPoints": [
       10
@@ -1280,9 +1170,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 45,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13102,
@@ -1291,11 +1179,11 @@
     "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 물 속성 대미지를 입힌다.",
     "ipDesc": "봄비도 시냇물도 아니다.\n나는 거대한 파도처럼 마을을 덮쳐, 가로막는 모든 것들을 산산조각 낼 것이다.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20182001,
+    "mod": 20182001,
     "icon": "T_Rouge_Treasure_39",
     "endPoints": [
       10
@@ -1303,9 +1191,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 46,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13103,
@@ -1314,11 +1200,11 @@
     "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 바람 속성 대미지를 입힌다.",
     "ipDesc": "부드러운 콧바람도, 산들산들 솔바람도 아니다.\n나는 성난 바람처럼 지붕을 들어 올려, 가로막는 모든 것을 철저히 찢어버릴 것이다.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20183001,
+    "mod": 20183001,
     "icon": "T_Rouge_Treasure_40",
     "endPoints": [
       10
@@ -1326,9 +1212,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 47,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13104,
@@ -1337,11 +1221,11 @@
     "simpleDesc": "대미지를 입힐 시, 일정 확률로 추가 번개 속성 대미지를 입힌다.",
     "ipDesc": "희미한 전깃불도, 번쩍이는 불꽃도 아니다.\n나는 소리 없는 천둥처럼 어둠을 찢어, 가로막는 모든 것이 넋을 잃고 벌벌 떨게 할 것이다.",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20184001,
+    "mod": 20184001,
     "icon": "T_Rouge_Treasure_41",
     "endPoints": [
       10
@@ -1349,9 +1233,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 48,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14101,
@@ -1360,11 +1242,11 @@
     "simpleDesc": "스킬 효율이 감소하는 대신, 입히는 대미지가 상승한다.",
     "ipDesc": "그녀는 어렸을 때부터 기사인 언니를 숭배했다. 언니는 강하고 똑똑해서, 어떤 임무든 맡아서 척척 해냈다.\n사람들은 성스러운 호수 아래 심연이 가장 위험한 전쟁터이며, 가장 용맹한 기사도 돌아올 수 없다고 입을 모아 말했다. 하지만 그녀의 언니는 살아서 돌아왔다.\n다만, 언니는 살아있지만, 말을 하지 않게 됐다.",
     "treasureGroup": 104,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20151001,
+    "mod": 20151001,
     "icon": "T_Rouge_Treasure_42",
     "endPoints": [
       10
@@ -1372,9 +1254,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 49,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14201,
@@ -1383,11 +1263,11 @@
     "simpleDesc": "근접 무기 대미지가 감소하는 대신, 입히는 대미지가 상승한다.",
     "ipDesc": "어른들은 언니가 성스러운 호수에서 신을 노하게 하는 바람에, 신이 언니의 영혼을 가져갔다고 했다.\n그럴 리 없다. 언니는 정직하고 경건한 기사였으므로, 분명히 실수로 영혼을 잃었을 것이다. 아무도 믿지 않는다면, 내가 증명할 것이다.\n내가 심연에 들어가, 언니의 잃어버린 영혼을 되찾아 올 것이다.",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20152001,
+    "mod": 20152001,
     "icon": "T_Rouge_Treasure_43",
     "endPoints": [
       20
@@ -1395,9 +1275,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 50,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14202,
@@ -1406,11 +1284,11 @@
     "simpleDesc": "원거리 무기 대미지가 감소하는 대신, 입히는 대미지가 상승한다.",
     "ipDesc": "언니... 맞아? 왜 이렇게 된 거야? 왜 나한테 검을 겨누는 거야?\n\"거짓말쟁이... 순 거짓말쟁이...\" 시커먼 그림자는 잔인한 말들을 몇 번이고 속삭였다. \"정의는 없어. 온통 거짓말뿐이야.\"\n그녀는 문득, 언니가 기사단을 그만두고 평범한 사람으로 돌아가고 싶다고 말했던 것이 떠올랐다.",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20153001,
+    "mod": 20153001,
     "icon": "T_Rouge_Treasure_44",
     "endPoints": [
       20
@@ -1418,9 +1296,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 51,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14301,
@@ -1429,11 +1305,11 @@
     "simpleDesc": "받는 대미지가 상승하는 대신, 입히는 대미지가 상승한다.",
     "ipDesc": "그림자는 마치 존재하지 않았던 것처럼 흩어졌다. 그녀는 언니의 잃어버린 영혼을 다시는 되찾을 수 없다는 것을 마침내 깨달았다.\n내가 언니를 그렇게 숭배하지 않았다면, 언니가 선택됐을 때 그렇게 기뻐서 폴짝폴짝 뛰지 않았다면, 언니는 떠나지 않았을까? 내가 언니를 죽게 만든 걸까? 그래, 언니?\n그녀의 흐느끼는 소리는, 오직 침묵의 심연에게만 들릴 뿐이다.",
     "treasureGroup": 104,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20154001,
+    "mod": 20154001,
     "icon": "T_Rouge_Treasure_45",
     "endPoints": [
       40
@@ -1441,9 +1317,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 52,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15101,
@@ -1452,11 +1326,11 @@
     "simpleDesc": "적의 남은 [전투 태세]가 일정 수치 이상일 시, 캐릭터가 대미지를 입힐 때 정신력 회복",
     "ipDesc": "그렇다면 지금, 그녀는 왜 상처투성이의 몸을 이끌고 끝이 없는 미궁에서 나아가고 있는 걸까?\n어디에 숨어도 캐시는 그녀를 매번 찾아냈고, 아무리 터무니없는 변명을 해도 플린은 결코 화를 내지 않았다. 그녀의 손에는 여전히 한 사람의 완전한 신뢰와 부탁을 담고 있는 피에 물든 배지가 쥐어져 있었다.\n그녀는 이미… 포기할 수 없는 이유를 가지게 된 것이다.",
     "treasureGroup": 105,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20156001,
+    "mod": 20156001,
     "icon": "T_Rouge_Treasure_53",
     "endPoints": [
       10
@@ -1464,9 +1338,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 59,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15201,
@@ -1475,11 +1347,11 @@
     "simpleDesc": "적의 남은 [전투 태세]가 일정 수치 이하일 시, 캐릭터가 입히는 대미지 상승",
     "ipDesc": "어릴 때부터 그녀는 항상 포기해 왔다. 학창 시절, 일부러 성수 아카데미의 선발 시험에 불참했고, 기사단에 합류한 이후로는 진급 시험을 단 한 번도 응시하지 않았다.\n끝없이 위로만 가는 길은 없다. 결국, 언젠가는 낭떠러지로 떨어질 봉우리를 쫓는 것보단, 차라리 처음부터 제자리걸음을 택한 그녀였다.",
     "treasureGroup": 105,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20157001,
+    "mod": 20157001,
     "icon": "T_Rouge_Treasure_52",
     "endPoints": [
       20
@@ -1487,8 +1359,6 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 60,
-    "unlockConditionText": "유물 미해제",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   }
 ]

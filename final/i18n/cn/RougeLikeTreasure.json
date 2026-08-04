@@ -6,11 +6,11 @@
     "simpleDesc": "获得额外的[刷新]机会，初次刷新不消耗[余烬]。",
     "ipDesc": "烛光让孩童露出笑颜，驱散寒冷，带来希望。可尘世的火焰终有熄灭之时，所以她只得一次又一次点燃新的烛光。\n在圣湖深处，烛芯匠人终于锻造出永不熄灭的火焰，然而等待着她的烛光的人，早已无处可寻。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_01",
     "endPoints": [
       10
@@ -18,9 +18,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 1,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10102,
@@ -29,11 +27,11 @@
     "simpleDesc": "深渊行商处的所有商品价格降低。",
     "ipDesc": "每一次与商人相遇，鸟面的魔术师总会抱怨：“明码标价多没意思，加点盲选和概率吧？”\n商人听从建议，给自己的商店设计了一套折扣券，散布在深渊各处。魔术师看了失望地摇头：“你的善良比你的生意更无趣。”",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_02",
     "endPoints": [
       10
@@ -41,9 +39,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 2,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10103,
@@ -52,11 +48,11 @@
     "simpleDesc": "每次进入下一层时，回复生命。",
     "ipDesc": "她是最虔诚的信徒，一言一行都谨遵诸神教诲，哪怕是在旁人目所不能及之处也不会逾矩半分。遇见困难之人即施以援手，遇见潦倒之人便慷慨解囊；面对持有异见者，她也以宽容之心劝诫对方感念九神恩德。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20104001,
+    "mod": 20104001,
     "icon": "T_Rouge_Treasure_05",
     "endPoints": [
       10
@@ -64,9 +60,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 3,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10104,
@@ -75,11 +69,11 @@
     "simpleDesc": "每次进入下一层时，回复神智。",
     "ipDesc": "“假若神明并非你想象中那般完美，你所行之事还有意义吗？”对方质问她。\n“当然有意义”，她欣然微笑，“信仰不为索取，而为律己。只要我所作所为问心无愧，神明是真是假、是好是坏，又有何妨？”",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20105001,
+    "mod": 20105001,
     "icon": "T_Rouge_Treasure_06",
     "endPoints": [
       10
@@ -87,9 +81,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 4,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10105,
@@ -98,11 +90,11 @@
     "simpleDesc": "行迹获取量提高。",
     "ipDesc": "那是一首人尽皆知的颂歌，歌颂为迷途之人指引方向的慈悲诸神。虔诚的艾利西安信徒们在深渊中哼唱破碎的旋律，祈求神明引领他们脱离苦难，前往应许的众天之天。金色的旋律流淌，他们在幸福的期盼中永远阖上了双眼。",
     "treasureGroup": 2,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       10
@@ -110,9 +102,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 5,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10106,
@@ -121,11 +111,11 @@
     "simpleDesc": "复苏次数增加。",
     "ipDesc": "幽影从四方涌来，将众人围困其中。骑士孤身冲入黑暗，开辟出一线生机。幽影消散后，圣疗司祭从漆黑的迷雾中拖回骑士千疮百孔的身体。\n我一定会救活她，圣疗司祭在心里起誓，疗愈之术的意义，就是绝不让勇敢之人白白牺牲。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20107001,
+    "mod": 20107001,
     "icon": "T_Rouge_Treasure_09",
     "endPoints": [
       10
@@ -133,9 +123,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 6,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10107,
@@ -144,11 +132,11 @@
     "simpleDesc": "生命降低后，受到伤害时不会产生僵直，受到伤害的降低。",
     "ipDesc": "长路漫漫，真理总与苦痛参半。当入夜的钟声敲响，流浪的飞鸟啊，你为何不愿归巢？\n因高塔并非大陆的中心，因神明并非万物的本源。他坚信世界只能用自己的双足丈量，即便要一生困于镣铐。",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20101001,
+    "mod": 20101001,
     "icon": "T_Rouge_Treasure_21",
     "endPoints": [
       10
@@ -156,9 +144,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 7,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10108,
@@ -167,11 +153,11 @@
     "simpleDesc": "技能伤害提高，近战武器伤害降低。",
     "ipDesc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20108001,
+    "mod": 20108001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -179,9 +165,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 8,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10109,
@@ -190,11 +174,11 @@
     "simpleDesc": "技能伤害提高，远程武器伤害降低。",
     "ipDesc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20109001,
+    "mod": 20109001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -202,9 +186,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 9,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10110,
@@ -213,11 +195,11 @@
     "simpleDesc": "近战武器伤害提高，技能伤害降低。",
     "ipDesc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20110001,
+    "mod": 20110001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -225,9 +207,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 10,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10111,
@@ -236,11 +216,11 @@
     "simpleDesc": "近战武器伤害提高，远程武器伤害降低。",
     "ipDesc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20111001,
+    "mod": 20111001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -248,9 +228,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 11,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10112,
@@ -259,11 +237,11 @@
     "simpleDesc": "远程武器伤害提高，技能伤害降低。",
     "ipDesc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20112001,
+    "mod": 20112001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -271,9 +249,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 12,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10113,
@@ -282,11 +258,11 @@
     "simpleDesc": "远程武器伤害提高，近战武器伤害降低。",
     "ipDesc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
     "treasureGroup": 10108,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20113001,
+    "mod": 20113001,
     "icon": "T_Rouge_Treasure_32",
     "endPoints": [
       10
@@ -294,9 +270,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 13,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10114,
@@ -305,11 +279,11 @@
     "simpleDesc": "释放魔灵支援后，伤害提高。",
     "ipDesc": "在前行时，也别忘了那些陪你进入深渊的勇敢的小旅伴们。开一个罐头，犒劳一下它们吧！",
     "treasureGroup": 1,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20120001,
+    "mod": 20120001,
     "icon": "T_Rouge_Treasure_28",
     "endPoints": [
       10
@@ -317,9 +291,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 14,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10201,
@@ -328,11 +300,11 @@
     "simpleDesc": "获得随机[烛芯]，品质为<Highlight>蓝色</>或<Highlight>紫色</>。",
     "ipDesc": "水、干粮、打火石，还有一张皱缩的地图。它们的主人曾试图用炭笔在地图上记录自己的行迹，直到线条交叉、重合，甚至超出地图标注的边界。笔迹在一次又一次原地打转后彻底了迷失方向，中断之处徒留一个歪斜的问号。",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -340,9 +312,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 15,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10202,
@@ -351,11 +321,11 @@
     "simpleDesc": "获得随机[遗物]，品质为<Highlight>蓝色</>或<Highlight>紫色</>。",
     "ipDesc": "水、干粮、打火石，还有一张皱缩的地图。它们的主人曾试图用炭笔在地图上记录自己的行迹，直到线条交叉、重合，甚至超出地图标注的边界。笔迹在一次又一次原地打转后彻底了迷失方向，中断之处徒留一个歪斜的问号。",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       20
@@ -363,9 +333,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 16,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10203,
@@ -374,11 +342,11 @@
     "simpleDesc": "角色最大闪避次数增加。",
     "ipDesc": "你是机敏的孩子，要第一个爬上山顶，为同伴树立榜样；\n你是勇敢的战士，要第一个踏入战场，为来者摸索道路；\n你是高洁的信徒，要第一个跳下地狱，为圣土免除污秽。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20103001,
+    "mod": 20103001,
     "icon": "T_Rouge_Treasure_19",
     "endPoints": [
       20
@@ -386,9 +354,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 17,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10204,
@@ -397,11 +363,11 @@
     "simpleDesc": "角色释放技能后，回复神智。\n仅在[幽影]中生效。",
     "ipDesc": "二重面貌的神明，请倾听我们的祈祷——愿以利刃剪去洁白的羽翼，愿以尖刀刺破鼓动的心脏，只为超脱这虚伪的命运，静待那满月倒转方向。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20102001,
+    "mod": 20102001,
     "icon": "T_Rouge_Treasure_22",
     "endPoints": [
       20
@@ -409,9 +375,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 18,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10205,
@@ -420,11 +384,11 @@
     "simpleDesc": "获得此遗物后，每次复苏后使造成的伤害提高。",
     "ipDesc": "身负诅咒的笼中鸟啊，落叶不是你的枕席，暮色不是你的梦乡，就连死亡也无法予你安眠。那便醒来吧——去品尝死亡，去咀嚼痛苦，让荒谬的命运也向你举手投降。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20114001,
+    "mod": 20114001,
     "icon": "T_Rouge_Treasure_24",
     "endPoints": [
       20
@@ -432,9 +396,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 19,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10206,
@@ -443,11 +405,11 @@
     "simpleDesc": "技能伤害无视目标防御，每拥有一种不同类别烛芯，该效果降低。",
     "ipDesc": "若想学有所成，便要明确自身志向所在，而后一心一意，刻苦钻研。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20115001,
+    "mod": 20115001,
     "icon": "T_Rouge_Treasure_25",
     "endPoints": [
       20
@@ -455,9 +417,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 20,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10207,
@@ -466,11 +426,11 @@
     "simpleDesc": "每次进入下一层时，扣除少量余烬，在该层中获得受到的伤害降低的效果。",
     "ipDesc": "众人垂眸时，你要抬眼；众人匍匐时，你要站立。众人歌颂时，你要发问；众人幸福时，你要癫狂。\n如此，便能挣脱满月之枷锁，窥见命运另一面的真相。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20116001,
+    "mod": 20116001,
     "icon": "T_Rouge_Treasure_23",
     "endPoints": [
       20
@@ -478,9 +438,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 21,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10209,
@@ -489,11 +447,11 @@
     "simpleDesc": "在微茫与离散幽影中选取<Highlight>蓝色</>品质烛芯后，使其直接升级。",
     "ipDesc": "鸟儿渴望飞向天空，可深渊之中没有天空；鸟儿渴望一枝栖息，可深渊之中唯有恐惧伸展枝桠。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_17",
     "endPoints": [
       20
@@ -501,9 +459,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 22,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10210,
@@ -512,11 +468,11 @@
     "simpleDesc": "每击败一定数量号令者，获得余烬。",
     "ipDesc": "在一次次轮回中迷惘，在一次次迷惘中绝望，失去方向、失去时间、失去自我。疲惫的旅者穿行于无边无际的黑暗，身侧唯有孤独和恐惧作伴，却不知在那深不可测的黑暗中亦有一双眼，默然注视着其人的行迹。",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_20",
     "endPoints": [
       20
@@ -524,9 +480,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 23,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10211,
@@ -535,11 +489,11 @@
     "simpleDesc": "下一次在微茫与离散幽影中选取烛芯时，烛芯品质至少为<Highlight>紫色</>。",
     "ipDesc": "不知何时被人塞到背包里的纸条，看来你该适当提高防范意识了。好在这纸条上并没有施加毒药或诅咒，只有一句真诚的祝福：“愿你旅途平安，一切顺利！——你的朋友”",
     "treasureGroup": 10211,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_30",
     "endPoints": [
       20
@@ -547,9 +501,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 24,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10212,
@@ -558,11 +510,11 @@
     "simpleDesc": "获取该遗物时，额外获取<Highlight>1</>枚烛芯，优先从拥有最多数量的类别中获取。",
     "ipDesc": "万事万物皆有联系。善用逻辑，归纳演绎，或许会有意外的收获。",
     "treasureGroup": 3,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_12",
     "endPoints": [
       20
@@ -570,9 +522,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 25,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10213,
@@ -581,11 +531,11 @@
     "simpleDesc": "略微提高[炉心炎]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -596,9 +546,7 @@
       5064
     ],
     "rlArchiveId": 26,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10214,
@@ -607,11 +555,11 @@
     "simpleDesc": "略微提高[浮海月]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -622,9 +570,7 @@
       5065
     ],
     "rlArchiveId": 27,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10215,
@@ -633,11 +579,11 @@
     "simpleDesc": "略微提高[辉萤石]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -647,9 +593,7 @@
       5046
     ],
     "rlArchiveId": 28,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10216,
@@ -658,11 +602,11 @@
     "simpleDesc": "略微提高[流明枝]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -673,9 +617,7 @@
       5065
     ],
     "rlArchiveId": 29,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10217,
@@ -684,11 +626,11 @@
     "simpleDesc": "略微提高[噬影蝶]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -698,9 +640,7 @@
       5048
     ],
     "rlArchiveId": 30,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10218,
@@ -709,11 +649,11 @@
     "simpleDesc": "略微提高[曳光虫]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -724,9 +664,7 @@
       5064
     ],
     "rlArchiveId": 31,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10219,
@@ -735,11 +673,11 @@
     "simpleDesc": "略微提高[汲血花]的出现概率，并立即获得<Highlight>1</>枚。",
     "ipDesc": "护烛司祭通晓通灵之术，能借亡灵的力量化为己用。他视亡者为友，从未因此感到恐惧，直到他踏入这深渊——烛光下映出的幽影到底是谁？为什么他们的灵魂充满苦痛？为什么……他们让他回头、不要前进？",
     "treasureGroup": 4,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_04",
     "endPoints": [
       20
@@ -749,9 +687,7 @@
       5050
     ],
     "rlArchiveId": 32,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10220,
@@ -760,11 +696,11 @@
     "simpleDesc": "行迹获取量较大幅提高。",
     "ipDesc": "那是一首人尽皆知的颂歌，歌颂为迷途之人指引方向的慈悲诸神。虔诚的艾利西安信徒们在深渊中哼唱破碎的旋律，祈求神明引领他们脱离苦难，前往应许的众天之天。金色的旋律流淌，他们在幸福的期盼中永远阖上了双眼。",
     "treasureGroup": 10220,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_07",
     "endPoints": [
       20
@@ -772,9 +708,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 62,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10301,
@@ -783,11 +717,11 @@
     "simpleDesc": "获得随机[烛芯]，品质为<Highlight>紫色</>或<Highlight>金色</>。",
     "ipDesc": "水、干粮、打火石，还有一张皱缩的地图。它们的主人曾试图用炭笔在地图上记录自己的行迹，直到线条交叉、重合，甚至超出地图标注的边界。笔迹在一次又一次原地打转后彻底了迷失方向，中断之处徒留一个歪斜的问号。",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -795,9 +729,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 33,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10302,
@@ -806,11 +738,11 @@
     "simpleDesc": "获得随机[遗物]，品质为<Highlight>紫色</>或<Highlight>金色</>。",
     "ipDesc": "水、干粮、打火石，还有一张皱缩的地图。它们的主人曾试图用炭笔在地图上记录自己的行迹，直到线条交叉、重合，甚至超出地图标注的边界。笔迹在一次又一次原地打转后彻底了迷失方向，中断之处徒留一个歪斜的问号。",
     "treasureGroup": 3,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_03",
     "endPoints": [
       40
@@ -818,9 +750,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 34,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10303,
@@ -829,11 +759,11 @@
     "simpleDesc": "神智自然恢复量提高。",
     "ipDesc": "“为什么救我？”苏醒的骑士质问他，圆睁的双眼几乎要从苍白的脸上挣脱出来，“我只不过想在发疯之前死掉，至少我还能拥有完整的灵魂！”\n骑士拖着圣疗司祭苦心竭力救回来的身体，再次踏入黑暗。现在，他又该去救谁呢？",
     "treasureGroup": 1,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20106001,
+    "mod": 20106001,
     "icon": "T_Rouge_Treasure_10",
     "endPoints": [
       20
@@ -841,9 +771,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 35,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10304,
@@ -852,11 +780,11 @@
     "simpleDesc": "所有烛芯替换为随机烛芯，根据持有烛芯数获得余烬。",
     "ipDesc": "“既然那位死板的商人不愿意改变他商店的规则，就让我来给你提供一些售后服务吧。”魔术师拿出一叠纸牌，背面朝上全部打乱，“来，我们一次抽个痛快！”",
     "treasureGroup": 10304,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_15",
     "endPoints": [
       40
@@ -864,9 +792,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10305,
@@ -875,11 +801,11 @@
     "simpleDesc": "所有遗物替换为随机遗物。",
     "ipDesc": "比起“怪人”，他更喜欢被称作“魔术师”。在这个沉闷无趣的空间里创造快乐是他唯一的目标，至于快乐的代价，那不在他的考虑范围之内——毕竟，他已经没有什么可失去的了。",
     "treasureGroup": 10305,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_16",
     "endPoints": [
       40
@@ -887,9 +813,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 0,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10306,
@@ -898,11 +822,11 @@
     "simpleDesc": "遗物越多，造成的伤害越高。",
     "ipDesc": "财富自然是越多越好，但仅仅积累财富，未免太过简单无趣。要让财富拥有更多的形式，要让世人对我感恩戴德，赞颂我以慷慨赐福人间——收下这份赠礼吧，它将为我的功绩再添一笔。",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20118001,
+    "mod": 20118001,
     "icon": "T_Rouge_Treasure_18",
     "endPoints": [
       40
@@ -910,9 +834,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 36,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10307,
@@ -921,11 +843,11 @@
     "simpleDesc": "每拥有一种不同类别烛芯，全属性穿透提高。",
     "ipDesc": "如欲求知，必先博览群书，兼收并蓄，如此才能开阔眼界，不为自身所限。",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20119001,
+    "mod": 20119001,
     "icon": "T_Rouge_Treasure_26",
     "endPoints": [
       40
@@ -933,9 +855,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 37,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10308,
@@ -944,11 +864,11 @@
     "simpleDesc": "同类别烛芯激活套装效果所需数量减少。",
     "ipDesc": "真理的本质往往简洁，认真思考，仔细揣摩，有限的知识亦能提供珍贵的助益。",
     "treasureGroup": 10308,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_11",
     "endPoints": [
       40
@@ -956,11 +876,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 38,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {
-      "groupDiscount": -1
-    }
+    "canSell": 0
   },
   {
     "id": 10309,
@@ -969,11 +885,11 @@
     "simpleDesc": "复苏次数耗尽时，可消耗余烬获取额外次数。",
     "ipDesc": "无边的黑暗似要吞噬你的所有，可一缕微弱的火光又奇迹般从余烬中亮起。若深渊当真拥有意志，或许祂亦不希望你的生命在此沉寂。",
     "treasureGroup": 10309,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_08",
     "endPoints": [
       40
@@ -981,9 +897,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 39,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 10310,
@@ -992,11 +906,11 @@
     "simpleDesc": "近战攻击对敌人造成伤害时，向周围发射剑气，对命中敌人造成光属性伤害。",
     "ipDesc": "手执银剑的骑士自敌阵中杀出，明亮的白色光辉照彻战场，如满月升起，令力竭的士兵再度睁开双眼。\n啊——是命运之神的指引！人们为这奇迹般的光明留下热泪，四肢因信仰的力量而重新变得轻盈。于是他们站了起来，跟随光辉继续前进。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20130001,
+    "mod": 20130001,
     "icon": "T_Rouge_Treasure_46",
     "endPoints": [
       40
@@ -1004,9 +918,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 53,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10311,
@@ -1015,11 +927,11 @@
     "simpleDesc": "技能对敌人造成伤害时，在自身周围造成爆炸，对敌人造成暗属性伤害。",
     "ipDesc": "当黑暗第一次侵染圣湖，艾利西安最勇敢的骑士们自愿踏入其中。\n他们中的大多数因此失去了生命，而侥幸活下来的人，则永远失去了梦境。一旦闭上双眼，黑暗便会攫住思绪，将他们拖回那片无底的深渊。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20131001,
+    "mod": 20131001,
     "icon": "T_Rouge_Treasure_47",
     "endPoints": [
       40
@@ -1027,9 +939,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 54,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10312,
@@ -1038,11 +948,11 @@
     "simpleDesc": "对敌人造成伤害时，释放追踪弹，对命中的敌人造成风属性伤害。",
     "ipDesc": "出征前夜，意气风发的少年骑士以银甲覆盖背上如羽翼般蔓延的圣痕，只为在蒙召之前，再为艾利西安赢得一场胜利。\n这胜利最终因一头突然在艾利西安阵地内现身的巨型秽兽而失去了意义，少年骑士则从此下落不明——有人说他生出了翅膀，飞上高空弃艾利西安而去；也有人说他被暗月蛊惑心智，与那巨兽融为了一体。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20132001,
+    "mod": 20132001,
     "icon": "T_Rouge_Treasure_48",
     "endPoints": [
       40
@@ -1050,9 +960,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 55,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10313,
@@ -1061,11 +969,11 @@
     "simpleDesc": "召唤物生成时，在召唤位置释放一次伤害，对命中敌人造成水属性伤害。",
     "ipDesc": "脚尖触及圣湖的水面，无光的涟漪荡漾开来，如同一轮暗月自水底浮起。若这水面当真通往那幸福的众天之天，为何它甚至无法映出自己的面容？\n顷刻之间，湍流急起，圣徒心中的疑问与其身影一同，被漆黑的漩涡吞没。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20133001,
+    "mod": 20133001,
     "icon": "T_Rouge_Treasure_49",
     "endPoints": [
       40
@@ -1073,9 +981,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 56,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10314,
@@ -1084,11 +990,11 @@
     "simpleDesc": "远程攻击对敌人造成伤害时，对前方扇形区域的敌人造成火属性伤害。",
     "ipDesc": "那贵族说，她的身上流淌着神圣的血脉，注定要奉献自己，拯救万民。\n于是在加冕之日，她以长发燃起火焰，令神圣的典礼化作了烈火的刑场，将圣堂连同在场的贵族一起焚烧殆尽。火光直冲天际，比太阳更加耀眼，引得埋头劳作的人们屏息仰望。\n她献出了自己，她拯救了万民。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20134001,
+    "mod": 20134001,
     "icon": "T_Rouge_Treasure_50",
     "endPoints": [
       40
@@ -1096,9 +1002,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 57,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10315,
@@ -1107,11 +1011,11 @@
     "simpleDesc": "施放技能时，向前方区域释放落雷，对命中敌人造成雷属性伤害。",
     "ipDesc": "我曾经历黑暗的岁月，异端者结党连群，势要令高塔倾颓。\n我看见，数千荆棘自高塔垂下，遮天蔽日。虔诚的信徒啊，不必惧怕，诸神只会惩戒有罪之人。待荆棘绞灭一切罪恶，浴血到来的必将是幸福的新时代。",
     "treasureGroup": 10310,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20135001,
+    "mod": 20135001,
     "icon": "T_Rouge_Treasure_51",
     "endPoints": [
       40
@@ -1119,9 +1023,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 58,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 10316,
@@ -1130,11 +1032,11 @@
     "simpleDesc": "造成低伤害时，追加1次真实伤害。",
     "ipDesc": "她并非没有察觉到那悄然蔓延的黑暗，可来路既已迷失，她不忍心再去剥夺什么、熄灭什么。\n所以她选择递上一颗晶莹的糖果——是稍纵即逝的幻梦也好，是自欺欺人的谎言也罢，只要还能让友人露出一丝笑容，那就足够了。",
     "treasureGroup": 1,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20121001,
+    "mod": 20121001,
     "icon": "T_Rouge_Treasure_54",
     "endPoints": [
       40
@@ -1142,9 +1044,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 61,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11101,
@@ -1153,11 +1053,11 @@
     "simpleDesc": "带有护盾时，受到的伤害降低。",
     "ipDesc": "十九岁时第一次上战场，秽兽的长爪贯穿才刚认识的队友的身体，在他迟到的盾牌上印下一朵盛放的猩红之花。清洗擦拭过后，依旧残留一道浅浅的刻痕。\n他究竟为何而战？为信仰、为正义、为有朝一日能够忘记那道刻痕。",
     "treasureGroup": 101,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20171001,
+    "mod": 20171001,
     "icon": "T_Rouge_Treasure_34",
     "endPoints": [
       10
@@ -1165,9 +1065,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 40,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 11201,
@@ -1176,11 +1074,11 @@
     "simpleDesc": "带有护盾时，造成的伤害提高。",
     "ipDesc": "十四岁时第一次参加训练，他从武器商人推荐的众多新手装备里选中了这把长剑。友人笑他守旧：“手枪比剑好用多啦！”\n“你懂什么，画册里的骑士都是拿剑的。”他学着故事里的英雄将长剑举过头顶，“为了艾利西安！”",
     "treasureGroup": 101,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20172001,
+    "mod": 20172001,
     "icon": "T_Rouge_Treasure_33",
     "endPoints": [
       20
@@ -1188,9 +1086,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 41,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 12101,
@@ -1199,11 +1095,11 @@
     "simpleDesc": "选取的刷新消耗提高，通过一定层后不再提高并获得余烬。",
     "ipDesc": "不可苛求完满，因这并非智慧之道；当趁时而行，免得彷徨不定，失却福分。",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_35",
     "endPoints": [
       10
@@ -1211,9 +1107,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 42,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12102,
@@ -1222,11 +1116,11 @@
     "simpleDesc": "深渊行商处的所有商品价格提高，通过一定层后不再提高并获得余烬",
     "ipDesc": "贪恋尘世之物是为愚昧，私欲必生出败坏。凡求收获的，当先数算撒种的代价。",
     "treasureGroup": 102,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "",
-    "treasureMod": 0,
+    "mod": 0,
     "icon": "T_Rouge_Treasure_36",
     "endPoints": [
       10
@@ -1234,9 +1128,7 @@
     "shopPrices": 0,
     "roomCondition": [],
     "rlArchiveId": 43,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 0,
-    "clientBuild": {}
+    "canSell": 0
   },
   {
     "id": 12201,
@@ -1245,11 +1137,11 @@
     "simpleDesc": "伤害降低，通过一定层后解除该效果并获得余烬。",
     "ipDesc": "惟恒忍为至善。你当如草木等候朝阳，因神的恩典必如春雨沛降。你当摒弃尘世杂念，心怀虔敬行光明之路。",
     "treasureGroup": 102,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20161001,
+    "mod": 20161001,
     "icon": "T_Rouge_Treasure_37",
     "endPoints": [
       20
@@ -1257,9 +1149,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 44,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13101,
@@ -1268,11 +1158,11 @@
     "simpleDesc": "造成伤害时，有概率造成额外火属性伤害。",
     "ipDesc": "不是摇曳烛光，不是温暖炉火。\n我将如熊熊烈焰吞没山林，让一切阻碍我的化为灰烬。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20181001,
+    "mod": 20181001,
     "icon": "T_Rouge_Treasure_38",
     "endPoints": [
       10
@@ -1280,9 +1170,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 45,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13102,
@@ -1291,11 +1179,11 @@
     "simpleDesc": "造成伤害时，有概率造成额外水属性伤害。",
     "ipDesc": "不是春日细雨，不是潺潺溪水。\n我将如滔天巨浪倾覆城镇，让一切阻碍我的粉碎无形。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20182001,
+    "mod": 20182001,
     "icon": "T_Rouge_Treasure_39",
     "endPoints": [
       10
@@ -1303,9 +1191,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 46,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13103,
@@ -1314,11 +1200,11 @@
     "simpleDesc": "造成伤害时，有概率造成额外风属性伤害。",
     "ipDesc": "不是轻柔鼻息，不是徐徐清风。\n我将如怒号狂岚掀起屋顶，让一切阻碍我的断折撕裂。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20183001,
+    "mod": 20183001,
     "icon": "T_Rouge_Treasure_40",
     "endPoints": [
       10
@@ -1326,9 +1212,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 47,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 13104,
@@ -1337,11 +1221,11 @@
     "simpleDesc": "造成伤害时，有概率造成额外雷属性伤害。",
     "ipDesc": "不是微弱电光，不是火花一闪。\n我将如无声惊雷撕破暗夜，让一切阻碍我的震颤失魂。",
     "treasureGroup": 103,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20184001,
+    "mod": 20184001,
     "icon": "T_Rouge_Treasure_41",
     "endPoints": [
       10
@@ -1349,9 +1233,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 48,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14101,
@@ -1360,11 +1242,11 @@
     "simpleDesc": "以技能效益降低为代价换取造成的伤害提高。",
     "ipDesc": "她从小就崇拜身为骑士的姐姐，姐姐强大而聪慧，没有什么任务是她力不能及的。\n人人都说圣湖下的深渊是最凶险的战场，连最骁勇的骑士也会有去无回，可是她的姐姐活着回来了。\n姐姐活着，只是不再说话了。",
     "treasureGroup": 104,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20151001,
+    "mod": 20151001,
     "icon": "T_Rouge_Treasure_42",
     "endPoints": [
       10
@@ -1372,9 +1254,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 49,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14201,
@@ -1383,11 +1263,11 @@
     "simpleDesc": "以近战武器伤害降低为代价换取造成的伤害提高。",
     "ipDesc": "大人们说，姐姐在圣湖中触怒了神明，所以神明收走了她的一部分灵魂作为惩罚。\n不，姐姐是正直而虔诚的骑士，她一定只是不小心把灵魂丢在了那里。如果没有人相信，那就让我来证明。\n我会进入深渊，将姐姐丢失的灵魂带回来。",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20152001,
+    "mod": 20152001,
     "icon": "T_Rouge_Treasure_43",
     "endPoints": [
       20
@@ -1395,9 +1275,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 50,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14202,
@@ -1406,11 +1284,11 @@
     "simpleDesc": "以远程武器伤害降低为代价换取造成的伤害提高。",
     "ipDesc": "姐姐……是你吗？你为什么变成这样？为什么要向我举起剑？\n“骗子……骗子……”漆黑的幽影一遍遍重复着尖锐刺耳的话语，“没有正义，只有谎言。”\n她忽然想起来，姐姐曾经悄悄对她说过，想退出骑士团，做一个普通人。",
     "treasureGroup": 104,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20153001,
+    "mod": 20153001,
     "icon": "T_Rouge_Treasure_44",
     "endPoints": [
       20
@@ -1418,9 +1296,7 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 51,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 14301,
@@ -1429,11 +1305,11 @@
     "simpleDesc": "以受到的伤害提高为代价换取造成的伤害提高。",
     "ipDesc": "幽影消散，仿佛从未存在。她终于明白，姐姐失去的灵魂再也找不回来了。\n如果我没有那么崇拜你，如果你被选中的时候我没有那样欢欣雀跃，你是不是就不会离开？是我害死了你吗，姐姐？\n听见她悲泣的，只有这沉默的深渊。",
     "treasureGroup": 104,
-    "treasureRarity": 3,
-    "treasureWeight": 200,
+    "rarity": 3,
+    "weight": 200,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20154001,
+    "mod": 20154001,
     "icon": "T_Rouge_Treasure_45",
     "endPoints": [
       40
@@ -1441,9 +1317,7 @@
     "shopPrices": 800,
     "roomCondition": [],
     "rlArchiveId": 52,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15101,
@@ -1452,11 +1326,11 @@
     "simpleDesc": "敌人[战姿]剩余量高时，角色造成伤害可回复神智。",
     "ipDesc": "那么，此刻，她为何要拖着伤痕累累的身体，在这没有尽头的迷宫中徒劳地前行？\n因为无论躲到哪个角落，凯希总能找到她。因为无论借口如何荒唐，弗林永远不生气。因为她的手里还握着那枚染血的徽章，承载着一个人完全的信任与托付。\n她已经……有了不能放弃的理由。",
     "treasureGroup": 105,
-    "treasureRarity": 1,
-    "treasureWeight": 1000,
+    "rarity": 1,
+    "weight": 1000,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20156001,
+    "mod": 20156001,
     "icon": "T_Rouge_Treasure_53",
     "endPoints": [
       10
@@ -1464,9 +1338,7 @@
     "shopPrices": 200,
     "roomCondition": [],
     "rlArchiveId": 59,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   },
   {
     "id": 15201,
@@ -1475,11 +1347,11 @@
     "simpleDesc": "敌人[战姿]剩余量低时，角色造成伤害提高。",
     "ipDesc": "从小到大，她总是在放弃。上学时故意缺席圣树学院的选拔，加入骑士团后从未参与任何一次晋升考核。\n没有人能一直往上走，比起追逐那终有一日会令人跌落谷底的高峰，她宁愿选择从一开始就留在原地。",
     "treasureGroup": 105,
-    "treasureRarity": 2,
-    "treasureWeight": 500,
+    "rarity": 2,
+    "weight": 500,
     "maxLevel": 0,
     "modEquip": "Role",
-    "treasureMod": 20157001,
+    "mod": 20157001,
     "icon": "T_Rouge_Treasure_52",
     "endPoints": [
       20
@@ -1487,8 +1359,6 @@
     "shopPrices": 400,
     "roomCondition": [],
     "rlArchiveId": 60,
-    "unlockConditionText": "遗物尚未解锁",
-    "canSell": 1,
-    "clientBuild": {}
+    "canSell": 1
   }
 ]

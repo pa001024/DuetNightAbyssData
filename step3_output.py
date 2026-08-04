@@ -79,11 +79,14 @@ from processor.treasure_hunt_story_dungeon_processor import (
 )
 from processor.rouge_processor import (
     ROUGE_PRO_PROCESSOR_CLASSES,
+    RougeLikeBlessingGroupProcessor,
     RougeLikeBlessingProcessor,
     RougeLikeContractProcessor,
     RougeLikeRoomProcessor,
     RougeLikeStoryEventProcessor,
+    RougeLikeTalentBranchProcessor,
     RougeLikeTalentProcessor,
+    RougeLikeTreasureGroupProcessor,
     RougeLikeTreasureProcessor,
 )
 
@@ -301,6 +304,9 @@ class FinalProcessor:
             "Event": "EventMain",
             "BackpackPuzzleItem": "PuzzleItemAttr",
             "IronSurvivalMonsterSpawn": "MonsterSpawn",
+            "RougeLikeBlessingGroup": "BlessingGroup",
+            "RougeLikeTreasureGroup": "TreasureGroup",
+            "RougeLikeTalentBranch": "RougeLikeTalentBranch",
         }
 
         # 不在这里创建共享的DataLoader实例，改为每个任务创建独立实例
@@ -364,6 +370,9 @@ class FinalProcessor:
             "RougeLikeStoryEvent": RougeLikeStoryEventProcessor,
             "RougeLikeTalent": RougeLikeTalentProcessor,
             "RougeLikeTreasure": RougeLikeTreasureProcessor,
+            "RougeLikeBlessingGroup": RougeLikeBlessingGroupProcessor,
+            "RougeLikeTreasureGroup": RougeLikeTreasureGroupProcessor,
+            "RougeLikeTalentBranch": RougeLikeTalentBranchProcessor,
             "SoloTreasure": SoloTreasureProcessor,
             "SoloTreasureGamePlay": SoloTreasureGamePlayProcessor,
             "IronTicket": IronTicketProcessor,
@@ -536,6 +545,9 @@ if __name__ == "__main__":
         "RougeLikeStoryEvent",
         "RougeLikeTalent",
         "RougeLikeTreasure",
+        "RougeLikeBlessingGroup",
+        "RougeLikeTreasureGroup",
+        "RougeLikeTalentBranch",
         "SoloTreasure",
         "SoloTreasureGamePlay",
         "IronTicket",

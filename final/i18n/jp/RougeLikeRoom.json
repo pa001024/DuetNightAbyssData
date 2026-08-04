@@ -3,8 +3,7 @@
     "id": 101,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -12,18 +11,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 102,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -31,18 +25,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 103,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -50,18 +39,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 104,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -69,18 +53,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 105,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -88,18 +67,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 106,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -107,18 +81,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 107,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -126,18 +95,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 108,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -145,18 +109,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 109,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -164,18 +123,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 110,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -184,18 +138,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 111,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -204,18 +153,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 112,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -224,18 +168,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 113,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -244,18 +183,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 114,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -264,18 +198,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 115,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -284,18 +213,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 116,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -304,18 +228,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 117,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -324,18 +243,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 118,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -344,18 +258,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 119,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -363,18 +272,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 120,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -382,18 +286,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 121,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -401,18 +300,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 122,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -420,18 +314,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 123,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -439,18 +328,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 124,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -458,18 +342,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 125,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -477,18 +356,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 126,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -496,18 +370,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 127,
     "name": "朦朧の暗影",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -515,18 +384,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 201,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5010
     ],
@@ -534,18 +398,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 202,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5012
     ],
@@ -553,18 +412,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 203,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5017
     ],
@@ -572,18 +426,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 204,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5067
     ],
@@ -591,18 +440,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 205,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5010
     ],
@@ -610,18 +454,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 206,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5012
     ],
@@ -629,18 +468,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 207,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5017
     ],
@@ -648,18 +482,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 208,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5067
     ],
@@ -667,18 +496,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 209,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5013
     ],
@@ -686,18 +510,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 210,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5018
     ],
@@ -705,18 +524,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 211,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5068
     ],
@@ -724,18 +538,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 212,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5013
     ],
@@ -743,18 +552,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 213,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5018
     ],
@@ -762,18 +566,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 214,
     "name": "深淵の影",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5068
     ],
@@ -781,38 +580,72 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 301,
     "name": "湖に映りし影",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event19.T_Rouge_Event19'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event19.T_Rouge_Event19'",
-    "eventSelect": [
-      1011,
-      1012
-    ],
-    "eventStoryline": "Rogue/RouEvent_301",
-    "rlArchiveSubId": 10000101
+    "eventMainIcon": "T_Rouge_Event19",
+    "eventStoryline": [
+      {
+        "id": "1715072973679414138",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1715072964431413638"
+        ],
+        "dialogues": [
+          {
+            "id": 6100101,
+            "content": "原因は分からないが、焚火の近くに水仙花が咲き乱れる水域が現れた。\n そこで一人の女性が俯き、水面に揺れる影を見つめている。その影はぼんやりとしているのに、どこか美しく、星空さえも魅了してしまうように思える。",
+            "next": 6100102
+          },
+          {
+            "id": 6100102,
+            "content": "「私の愛しき人は、一体どこにいるのだろう？」\n 「アトラシア大陸を巡り、ルッカの青き群島と<Default note=\"text:カショ\">華胥</>の翠の幽谷を求め、イーザーの微風が木の葉を囁くたび、春のアースガルド峡湾の氷が砕けて光るたび、そこにあなたの面影を追った。」",
+            "npc": 910005,
+            "speakerName": "美しい女性",
+            "next": 6100103
+          },
+          {
+            "id": 6100103,
+            "content": "「求め続けた愛など、最初から存在しなかった。」\n 「私の美貌にふさわしい佳人は、エリュシオンの聖湖の底に今も縛られているのだろう。」\n 彼女は湖面に映る自分の影に向かって、独り言のように呟いた。",
+            "npc": 910005,
+            "speakerName": "美しい女性",
+            "options": [
+              {
+                "id": 6100104,
+                "content": "「それは、あなたの倒影に過ぎない。」",
+                "next": 6100105
+              },
+              {
+                "id": 6100106,
+                "content": "湖の水仙花を採ってみる。"
+              }
+            ]
+          },
+          {
+            "id": 6100105,
+            "content": "「あなたは誰？通りすがりの旅人さん？」\n 彼女は顔を上げ、ちらりとこちらを見た。\n 「彼女を助ける方法を見つけられるなら、また私のところに来て。」",
+            "npc": 910005,
+            "speakerName": "美しい女性"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 302,
     "name": "今宵の問い・その3",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5008,
       5009,
@@ -822,62 +655,231 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1101,
-      1102
-    ],
-    "eventStoryline": "Rogue/RouEvent_302",
-    "rlArchiveSubId": 10000203
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "171851536988011639815",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536988011639813"
+        ],
+        "dialogues": [
+          {
+            "id": 6100201,
+            "content": "少し離れた場所で、孤独な老人が、積み上げられた武器の間でハンマーを振り続けている。\n ハンマーで一撃、万物は黙し。\n ハンマーで二撃、炎は躍し。\n 近づいても、老人は顔を上げなかった。",
+            "next": 6100202
+          },
+          {
+            "id": 6100202,
+            "content": "「また命知らずな輩が来やがったか。」\n 「今は何年だい？」",
+            "npc": 910005,
+            "speakerName": "孤独な老人",
+            "options": [
+              {
+                "id": 6100203,
+                "content": "尝试回答。",
+                "next": 6100204
+              }
+            ]
+          },
+          {
+            "id": 6100204,
+            "content": "唇を開き、答えを口にしてみる。しかし──\n 今は何年…何年であるべきなのか？\n 長き闇の中で過ごしたせいか、時間に対する感覚すら失っていた。",
+            "next": 6100206
+          },
+          {
+            "id": 6100206,
+            "content": "彼は、返答を待てなかった。",
+            "next": 6100207
+          },
+          {
+            "id": 6100207,
+            "content": "「どうやら、君も同じか。」彼はため息をついた。\n 「ここに囚われて、もうどれくらい経ったのか忘れちまっとる。ここで掴めるもんは、何一つ残っちゃいない──顔に刻まれた皺と、この鉄槌くらいのもんさ。」",
+            "npc": 910005,
+            "speakerName": "孤独な老人",
+            "next": 6100208
+          },
+          {
+            "id": 6100208,
+            "content": "「火が消えないうちに…さあ、話しなさい。何が望みだ？」",
+            "npc": 910005,
+            "speakerName": "孤独な老人",
+            "options": [
+              {
+                "id": 6100209,
+                "content": "武器から一つを選びたい。"
+              },
+              {
+                "id": 6100210,
+                "content": "彼に一つの武器を作ってもらいたい。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 303,
     "name": "夢織り師",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event02.T_Rouge_Event02'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event02.T_Rouge_Event02'",
-    "eventSelect": [
-      1021,
-      1022
-    ],
-    "eventStoryline": "Rogue/RouEvent_303",
-    "rlArchiveSubId": 10000301
+    "eventMainIcon": "T_Rouge_Event02",
+    "eventStoryline": [
+      {
+        "id": "171851536988611639917",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536988611639915"
+        ],
+        "dialogues": [
+          {
+            "id": 6100301,
+            "content": "歌声が焚火の寂しさを払うように響き始めた。\n 一人の女性がゆっくりと歩み寄ってきた。その足取りは羽のようにふわふわとしたが、その声は鳥の鳴き声のようにのびやかだった。",
+            "next": 6100302
+          },
+          {
+            "id": 6100302,
+            "content": "強い眠気に襲われた。\n 目の前の暗闇が紙のようにくしゃくしゃと丸められ、水に浸されていく…",
+            "next": 6100303
+          },
+          {
+            "id": 6100303,
+            "content": "昼下がりの林間の泉をさまよう。\n 絨毯のような草地の間を流れるせせらぎの音、生い茂る木々の葉の隙間から差しこむ陽当りが、一斉にこの地に降り注がれる。\n 朝露を静かに啜る真っ白なムササビ、瑠璃色の山猫、淡黄色の野ウサギ。彼らが足音に驚くことはない…",
+            "options": [
+              {
+                "id": 6100304,
+                "content": "一滴の雫を受け取る。",
+                "next": 6100305
+              },
+              {
+                "id": 6100306,
+                "content": "一筋の日差しを抱きしめる。",
+                "next": 6100307
+              }
+            ]
+          },
+          {
+            "id": 6100305,
+            "content": "あなたは黄昏色に染まった、小さな居酒屋に座っている。\n 吟遊詩人がアコーディオンを奏で、帰港した船乗りたちが手拍子を合わせて合唱する。\n 海の匂いを帯びた夜風と、麦酒の甘い香りに包まれながら、賑やかな人混みの中央へ歩み出し、陽気な踊りを繰り広げる…",
+            "next": 6100308
+          },
+          {
+            "id": 6100307,
+            "content": "あなたは聖堂のステンドグラスの下にうずくまっている。\n 巨大な絵像に描かれた白衣の女神が、慈悲深い眼差しであなたを見下ろす。その姿は壮大で、静かで、そして悲しげだった。\n 満月の神が色とりどりの光から降り立ち、あなたの額に口づけ、冷たい珠冠が頬に触れた…",
+            "next": 6100308
+          },
+          {
+            "id": 6100308,
+            "content": "トン！\n 誰かがあなたの額をはじいた。その痛みでぱっちりと目が覚める。",
+            "next": 6100309
+          },
+          {
+            "id": 6100309,
+            "content": "「私はエリュシオンで最も優秀な夢紡ぎ職人よ！せっかく美しい夢を紡いでいたのに、あなたは寝ぼけてばかり。それに、銅貨ひとつ払ってないじゃない！」",
+            "npc": 910005,
+            "speakerName": "夢を紡ぐ女性",
+            "next": 6100310
+          },
+          {
+            "id": 6100310,
+            "content": "「ほら、起きなさい！もう眠らせたりはしないわ！」\n 彼女はプンスカとまたあなたの額をピシリとはじいた。",
+            "npc": 910005,
+            "speakerName": "夢を紡ぐ女性"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 304,
     "name": "ランタン取引",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event18.T_Rouge_Event18'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event18.T_Rouge_Event18'",
-    "eventSelect": [
-      1026,
-      1027,
-      1028
-    ],
-    "eventStoryline": "Rogue/RouEvent_304",
-    "rlArchiveSubId": 10000401
+    "eventMainIcon": "T_Rouge_Event18",
+    "eventStoryline": [
+      {
+        "id": "171851536989511640003",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536989511640001"
+        ],
+        "dialogues": [
+          {
+            "id": 6100401,
+            "content": "一人の老人が焚火に寄ってきた。彼は手にランタンを持っている。",
+            "next": 6100402
+          },
+          {
+            "id": 6100402,
+            "content": "「ふむ…これはこれは！あなた様も灯りをお持ちで。」\n 「だがな、全ての灯はいつか消える。この深淵で灯火を失えば、永遠に迷い、ずっと暗闇に囚われることになるぞ。」",
+            "npc": 910005,
+            "speakerName": "ランタンの老人",
+            "next": 6100403
+          },
+          {
+            "id": 6100403,
+            "content": "「さあ、予備の灯りをお買いなされ。ほんの小さな明かりでも、これからの旅で、いつかあなたの助けにもなれるかもしれんぞ。」",
+            "npc": 910005,
+            "speakerName": "ランタンの老人",
+            "options": [
+              {
+                "id": 6100404,
+                "content": "ランタンを購入する。",
+                "next": 6100405
+              },
+              {
+                "id": 6100406,
+                "content": "他の品物を尋ねる。",
+                "next": 6100407
+              },
+              {
+                "id": 6100408,
+                "content": "取引を断る",
+                "next": 6100409
+              }
+            ]
+          },
+          {
+            "id": 6100405,
+            "content": "「おお…なんと気前の良い旅人様！星々を司る神の祝福があらんことを。」\n 彼は喜色を皺だらけの貌に浮かべながら、こう言った。",
+            "npc": 910005,
+            "speakerName": "ランタンの老人"
+          },
+          {
+            "id": 6100407,
+            "content": "「おお…なんと気前の良い旅人様！星々を司る神の祝福があらんことを。」\n 彼はパッと皺だらけ顔をほころばせてそう言った。",
+            "npc": 910005,
+            "speakerName": "ランタンの老人"
+          },
+          {
+            "id": 6100409,
+            "content": "「おお！豊穣の神よ、この貧しき魂をお救いください。こんな灯り代のために命すら投げうつとは。」\n 彼はブツブツと文句を言いながら立ち去った。",
+            "npc": 910005,
+            "speakerName": "ランタンの老人"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 305,
     "name": "天籟の合唱団",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5014
     ],
@@ -885,82 +887,386 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event03.T_Rouge_Event03'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event03.T_Rouge_Event03'",
-    "eventSelect": [
-      1031,
-      1032,
-      1033
-    ],
-    "eventStoryline": "Rogue/RouEvent_305",
-    "rlArchiveSubId": 10000501
+    "eventMainIcon": "T_Rouge_Event03",
+    "eventStoryline": [
+      {
+        "id": "171851536990211640105",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536990211640103"
+        ],
+        "dialogues": [
+          {
+            "id": 6100501,
+            "content": "「迷い子よ、神々の指し示す道を行け。」",
+            "npc": 910005,
+            "speakerName": "神聖なる歌声",
+            "next": 6100502
+          },
+          {
+            "id": 6100502,
+            "content": "子供たちの合唱が頭の内側で響き回り、焚火の灯りはより大きな光に溶けていく。体が羽のように軽くなった。\n 柔らかな風に浮かぶあなたの目の前には、潔白な雲が漂っている。黄金の塔にいる神々は雲の隙間から招待状を送ってくる。",
+            "next": 6100503
+          },
+          {
+            "id": 6100503,
+            "content": "「さあ、神々の恩寵を受け入れよ。天の果てにある楽園へ昇れ。下界に未練などないはず。至高な幸福はこの先にある。」",
+            "npc": 910005,
+            "speakerName": "神聖なる歌声",
+            "options": [
+              {
+                "id": 6100504,
+                "content": "地上に留まる",
+                "next": 6100505
+              },
+              {
+                "id": 6100506,
+                "content": "恩寵を受け入れる",
+                "next": 6100507
+              },
+              {
+                "id": 6100508,
+                "content": "雲を掴もうとする",
+                "next": 6100509
+              }
+            ]
+          },
+          {
+            "id": 6100505,
+            "content": "天から降ってくる幸福には、必ず代償が付き物だ。\n 当てもなく、実在するかどうかも分からない天国への道より、自分が歩んだ足跡のほうが確かなものだ。"
+          },
+          {
+            "id": 6100507,
+            "content": "柔らかい雲の抱擁はまるで母の温もり。\n 金色の扉がゆっくりと開くと、隙間から神々の一端がちらりと見えてくる。だが雲が散り、気付けば自分は地面に立っていた。",
+            "next": 6100510
+          },
+          {
+            "id": 6100509,
+            "content": "あの柔らかそうな雲に伸ばした指先が、突然激しい熱に襲われた。\n 光は消え、耳元で風が唸り、初めて自分が落下していることに気づいた。",
+            "next": 6100510
+          },
+          {
+            "id": 6100510,
+            "content": "そうだ、なぜ忘れていたのか。この深淵には、空など端から存在しなかったはずだ。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 306,
     "name": "海を渡る客人",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event04.T_Rouge_Event04'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event04.T_Rouge_Event04'",
-    "eventSelect": [
-      1036,
-      1037
-    ],
-    "eventStoryline": "Rogue/RouEvent_306",
-    "rlArchiveSubId": 10000601
+    "eventMainIcon": "T_Rouge_Event04",
+    "eventStoryline": [
+      {
+        "id": "171851536991211640208",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536991211640206"
+        ],
+        "dialogues": [
+          {
+            "id": 6100601,
+            "content": "小さな影がどんどん近付いてくる。\n 見えてきたのは、背の低い少女。",
+            "next": 6100602
+          },
+          {
+            "id": 6100602,
+            "content": "「あの…私も…火に…あたらせて？」\n その声は震えている。裾から滴り落ちる水が、ぽたぽたと地面に染み込んでいく──ワンピースはずぶ濡れだった。",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "next": 6100603
+          },
+          {
+            "id": 6100603,
+            "content": "「お母さんと…はぐれちゃって…もう…すこし…だけ…」",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "options": [
+              {
+                "id": 6100604,
+                "content": "受け入れる。",
+                "next": 6100605
+              },
+              {
+                "id": 6100613,
+                "content": "断る。",
+                "next": 6100614
+              }
+            ]
+          },
+          {
+            "id": 6100605,
+            "content": "「ありがとう。」\n 彼女は震えながら、感謝の言葉を必死に歯の隙間から絞りだす。",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "next": 6100606
+          },
+          {
+            "id": 6100614,
+            "content": "「ご…こめんなさい…お邪魔よね。」",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "next": 6100615
+          },
+          {
+            "id": 6100606,
+            "content": "「彼女がここにいる理由を尋ねる」",
+            "npc": 910004,
+            "next": 6100607
+          },
+          {
+            "id": 6100615,
+            "content": "少女は震えながら立ち去った。まるで最初から誰もいなかったかのように、隣でパチパチと焚火が音を立てていた。"
+          },
+          {
+            "id": 6100607,
+            "content": "「ど…どうして…ここに？ …ああ…思い出した…」\n 「お父さんと…お母さんは…ヒュペリア人…私たち…そこから逃げて…エリュシオンへ行くつもりだったけど…」\n 「海で船が…黒い渦に…呑み込まれて…」",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "next": 6100608
+          },
+          {
+            "id": 6100608,
+            "content": "黒い渦──心当たりがあった。黒潮のことだ。形あるものをすべて呑み込んだ、飢える深淵。",
+            "next": 6100609
+          },
+          {
+            "id": 6100609,
+            "content": "危険を冒してもエリュシオンへ向かった理由を尋ねる。",
+            "npc": 910004,
+            "next": 6100610
+          },
+          {
+            "id": 6100610,
+            "content": "「私たちは…『悪魔の子』だって…お母さんが。」\n 「たとえ深淵に落ちるような災いが起こっても…ヒュペリアに残るよりはまし…」",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "next": 6100611
+          },
+          {
+            "id": 6100611,
+            "content": "「ありがとう…火を貸してくれて、それから…私が生きていないことを教えてくれて。」",
+            "npc": 910005,
+            "speakerName": "か弱い女の子",
+            "next": 6100612
+          },
+          {
+            "id": 6100612,
+            "content": "彼女は消えた。まるで最初から誰もいなかったかのように、隣でパチパチと焚火が音を立てていた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 307,
     "name": "幸運の愚者・その1",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event05.T_Rouge_Event05'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event05.T_Rouge_Event05'",
-    "eventSelect": [
-      1041,
-      1042
-    ],
-    "eventStoryline": "Rogue/RouEvent_307",
-    "rlArchiveSubId": 10000701
+    "eventMainIcon": "T_Rouge_Event05",
+    "eventStoryline": [
+      {
+        "id": "1721630102172388558",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102172388556"
+        ],
+        "dialogues": [
+          {
+            "id": 6100701,
+            "content": "「こんにちは！」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100702
+          },
+          {
+            "id": 6100702,
+            "content": "荷物を背負った爽やかな青年が、焚火に歩み寄り、元気に挨拶をした。",
+            "next": 6100703
+          },
+          {
+            "id": 6100703,
+            "content": "「ちょっと失礼だけど──君、まだ生きてるよね？」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "options": [
+              {
+                "id": 6100704,
+                "content": "うなずく。",
+                "next": 6100705
+              },
+              {
+                "id": 6100711,
+                "content": "倒れて死んだふりをする。",
+                "next": 6100712
+              }
+            ]
+          },
+          {
+            "id": 6100705,
+            "content": "「まさかこんなところで生きてる人に会えるなんて。どうやら、君は僕と同じ、百人に1人の幸運の持ち主なんだね！」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100706
+          },
+          {
+            "id": 6100712,
+            "content": "「気絶してるのか？」\n 彼はしゃがみ込み、あなたの息を確認しようとした。\n 「まさか、君もやつらと同じ亡霊なのか？」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100713
+          },
+          {
+            "id": 6100706,
+            "content": "「十六歳の時、父親と一緒に作った歌が神への冒涜だと言われて、聖裁所に裁かれたんだ。」\n 「僕も父親みたいに処刑されるはずだったけど、処刑の日に死刑執行人が雷に打たれたおかげで、赦免された。」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100707
+          },
+          {
+            "id": 6100713,
+            "content": "あなたは無言のままだ。\n 彼は荷物を下ろし、水と食べ物を取り出した。",
+            "next": 6100714
+          },
+          {
+            "id": 6100707,
+            "content": "「二十歳の時は商人の一団に加わってたんだけど、北の森で盗賊に襲われて、洞窟に縛りつけられた。」\n 「仲間みたいに餓死するかと思ったけど、7日目の朝、豚が僕を起こしてくれた。近くにいた少女が食べ物をくれたんだ。天使に出会った気分だったね。」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100708
+          },
+          {
+            "id": 6100714,
+            "content": "「かわいそうな友よ、これを置いておくよ！聖塔に最初の日差しが差す頃になれば、きっと君も目を覚まして、元通り健康になれるだろう。」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年"
+          },
+          {
+            "id": 6100708,
+            "content": "「その後、商人として騎士団について深淵に来た。騎士たちの灯りは一つずつ消え、ある騎士は転んだ拍子に自分の剣に喉を刺し貫かれた。生き残ったのは僕だけだ。」\n 「その時から、僕は運命の女神に愛されてるんだって信じてる。彼女から授かった幸運と幸福に恵まれてるってね。」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100709
+          },
+          {
+            "id": 6100709,
+            "content": "「彼女が僕をここまで導いたってことは、きっとこの奥に唯一無二の至宝が待っているに違いない。こうしちゃいられない、探しに行かなくちゃ。」\n 彼は重そうな荷物を背負い直し、立ち去ろうとしている。",
+            "npc": 910005,
+            "speakerName": "爽やかな青年",
+            "next": 6100710
+          },
+          {
+            "id": 6100710,
+            "content": "「そうだ、友よ！君も運命に生かされたってことは、君にもきっと、君だけの幸運が待ってるはずだよ！」\n 彼は拳を握りしめ、高らかに笑った。\n 「僕たちに幸運あれ！」",
+            "npc": 910005,
+            "speakerName": "爽やかな青年"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 308,
     "name": "永久の花色",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event06.T_Rouge_Event06'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event06.T_Rouge_Event06'",
-    "eventSelect": [
-      1046,
-      1047
-    ],
-    "eventStoryline": "Rogue/RouEvent_308",
-    "rlArchiveSubId": 10000801
+    "eventMainIcon": "T_Rouge_Event06",
+    "eventStoryline": [
+      {
+        "id": "1721630102179388643",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102179388641"
+        ],
+        "dialogues": [
+          {
+            "id": 6100801,
+            "content": "闇の中に、双生の赤い花が咲き、微かに光を放っていた。\n ランタンを掲げると、灯りは白みがかった金髪の束と、白い脊椎の数節を照らし出した。これは人型の<Default note=\"text:エジュウ\">穢獣</>なのか、それとも<Default note=\"text:エジュウ\">穢獣</>へと変わりゆく人間なのか？\n 警戒して武器を握り締めるが、それは襲いかかってくる様子もなく、漆黒の背景に埋もれた赤い瞳でただ静かにあなたを見つめている。",
+            "next": 6100802
+          },
+          {
+            "id": 6100802,
+            "content": "突然、その喉から、何か壊れた音が漏れた。硬い岩同士が擦れ合うような噪音でありながら、どこかリズムを伴っている。なぜか分からないが、あなたはその意味を理解していた――",
+            "next": 6100803
+          },
+          {
+            "id": 6100803,
+            "content": "「もうこれ以上近づかないで、ランタンの旅人さん。どうか私に教えください。この灯りに映る私の姿は、まだ美しいでしょうか？」",
+            "npc": 910005,
+            "speakerName": "赤目の穢獣",
+            "next": 6100804
+          },
+          {
+            "id": 6100804,
+            "content": "「私は髪を柔らかく光るように梳かし、美しいお下げに編みました。」それは後頭部に開いた皮膚を撫でながら言った。\n 「私はスカートの折り目にきちんとアイロンかけ、貴く輝く宝石で飾りました。」それは深く体に食い込んだ結晶を撫でながら言った。\n 「私は愛する人が贈ったネックレスを身に付け、彼の熱い思いに耽りました。」それは首筋に伸びた骨節を撫でながら言った。",
+            "npc": 910005,
+            "speakerName": "赤目の穢獣",
+            "options": [
+              {
+                "id": 6100805,
+                "content": "「ええ、あなたは美しい。」",
+                "next": 6100806
+              },
+              {
+                "id": 6100808,
+                "content": "「お前は恐ろしい怪物だ。」",
+                "next": 6100809
+              }
+            ]
+          },
+          {
+            "id": 6100806,
+            "content": "その赤い瞳は風に揺れる花弁のように微かに震えた。",
+            "next": 6100807
+          },
+          {
+            "id": 6100809,
+            "content": "その赤い瞳は獰猛たる爪に覆われる。",
+            "next": 6100810
+          },
+          {
+            "id": 6100807,
+            "content": "「ありがとう、優しい旅人さん。これは私からの謝礼です。」\n 「もし私の愛する人にお会いになったら、ずっと彼を愛していると伝えてください。」",
+            "npc": 910005,
+            "speakerName": "赤目の穢獣"
+          },
+          {
+            "id": 6100810,
+            "content": "「あぁ――いや！愛する人にこんな醜い姿を見せたくない。」\n 「慈悲深き旅人さんよ、どうか私を楽にさせて。」",
+            "npc": 910005,
+            "speakerName": "赤目の穢獣"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 309,
     "name": "愛しき所在",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [
       5179
     ],
@@ -968,41 +1274,181 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event07.T_Rouge_Event07'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event07.T_Rouge_Event07'",
-    "eventSelect": [
-      1051,
-      1052
-    ],
-    "eventStoryline": "Rogue/RouEvent_309",
-    "rlArchiveSubId": 10000901
+    "eventMainIcon": "T_Rouge_Event07",
+    "eventStoryline": [
+      {
+        "id": "1721630102187388745",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102187388743"
+        ],
+        "dialogues": [
+          {
+            "id": 6100901,
+            "content": "「ごきげんよう、見知らぬ旅人さん。」",
+            "npc": 910005,
+            "speakerName": "優雅な青年",
+            "next": 6100902
+          },
+          {
+            "id": 6100902,
+            "content": "派手な服を身に纏った青年が、揺らめく焚火の明かりの前で足を止め、優雅にお辞儀をした。",
+            "next": 6100903
+          },
+          {
+            "id": 6100903,
+            "content": "「私は赤い瞳をした淑女を探しております。彼女の姿を見かけませんでしたか？」",
+            "npc": 910005,
+            "speakerName": "優雅な青年",
+            "next": 6100904
+          },
+          {
+            "id": 6100904,
+            "content": "「彼女はこの世で最も美しい歌声の持ち主で、夜鶯さえも彼女には劣ります。」\n 「柔らかな金色の髪は、春に咲くマリーゴールドのように輝いています。」\n 「気品のあるワンピースを纏い、スカートには星のようにきらめく宝石が縫い込まれています。」\n 「そして私が贈ったネックレスを身につけています。真紅の水晶は、彼女が私を見つめる時の瞳のように神秘的な輝きを放っています。」",
+            "npc": 910005,
+            "speakerName": "優雅な青年",
+            "next": 6100905
+          },
+          {
+            "id": 6100905,
+            "content": "そんな女性は見たことがない。",
+            "npc": 910004,
+            "next": 6100906
+          },
+          {
+            "id": 6100906,
+            "content": "「そうですか…」\n 彼は一瞬項垂れたが、すぐに元の表情に戻った。\n 「構いません、私はこれからも探し続けます。」",
+            "npc": 910005,
+            "speakerName": "優雅な青年",
+            "next": 6100907
+          },
+          {
+            "id": 6100907,
+            "content": "青年は焚火の傍に腰を下ろした。明るい炎が彼の澄んだ瞳に映り込んだ。",
+            "next": 6100908
+          },
+          {
+            "id": 6100908,
+            "content": "「私たちはすでに婚約しており、彼女が成人したら結婚式を挙げる予定でした。しかし彼女は神の恩寵を受け、額の聖痕が次第に明らかになり、十四歳の前夜に使者に連れ去られたのです。」\n 「彼女は別れの手紙を残し、私に他の女性を探すよう勧めました。ですが、私は既に誓いを立てています。この生涯は彼女と共に過ごしたい。」\n 「彼女を見つけたら、絶対に連れ帰ります。満月の神は人々に愛の美しさを謳うよう教えられた方です。きっと私たちを祝福してくださるでしょう。」",
+            "npc": 910005,
+            "speakerName": "優雅な青年",
+            "options": [
+              {
+                "id": 6100909,
+                "content": "恋人を見つけられるよう祈る。",
+                "next": 6100910
+              },
+              {
+                "id": 6100911,
+                "content": "「もし神が許さなかったら？」",
+                "next": 6100912
+              }
+            ]
+          },
+          {
+            "id": 6100910,
+            "content": "「感謝します、優しい旅人さん。」\n 「このささやかな贈り物を受け取ってください。あなたも望みが叶いますように。」",
+            "npc": 910005,
+            "speakerName": "優雅な青年"
+          },
+          {
+            "id": 6100912,
+            "content": "彼はあなたに小さく微笑んだ。\n 「ならば、この身を聖なる湖に捧げましょう。そうすれば、私の魂は永遠に彼女と共にあることができます。」",
+            "npc": 910005,
+            "speakerName": "優雅な青年"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 310,
     "name": "永遠の詩篇",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event08.T_Rouge_Event08'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event08.T_Rouge_Event08'",
-    "eventSelect": [
-      1056,
-      1057
-    ],
-    "eventStoryline": "Rogue/RouEvent_310",
-    "rlArchiveSubId": 10001001
+    "eventMainIcon": "T_Rouge_Event08",
+    "eventStoryline": [
+      {
+        "id": "1721630102194388830",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102194388828"
+        ],
+        "dialogues": [
+          {
+            "id": 6101001,
+            "content": "焚火の傍に女の姿が浮かび上がった。彼女は左手を燃え盛る焚火に差し入れ、煤を指に取り、地面にあなたが読めない文字を書きつけていく。",
+            "next": 6101002
+          },
+          {
+            "id": 6101002,
+            "content": "「ああ――時に抗う旅人よ、君は絶望と共にあり、死は影のごとく付き従う。」\n 彼女はそう囁くように詠んだ。",
+            "npc": 910005,
+            "speakerName": "自由の詩人",
+            "options": [
+              {
+                "id": 6101003,
+                "content": "何をしているのかと尋ねる",
+                "next": 6101004
+              },
+              {
+                "id": 6101005,
+                "content": "「火が熱くないのか？」",
+                "next": 6101006
+              }
+            ]
+          },
+          {
+            "id": 6101004,
+            "content": "「おお、親愛なる友よ。ご覧の通り、私は詩人だ。」\n 「今まさに、私の101首目の作品を創作中さ。そう、あなたに捧げる詩だ！」",
+            "npc": 910005,
+            "speakerName": "自由の詩人",
+            "next": 6101008
+          },
+          {
+            "id": 6101006,
+            "content": "女はくすくすと笑った。",
+            "next": 6101007
+          },
+          {
+            "id": 6101008,
+            "content": "詩人は再び焚火に手を伸ばし、炎を優雅に指先でかき混ぜた。そのしなやかな指の動きは、まるで踊り子の足踏みのようだった。",
+            "next": 6101009
+          },
+          {
+            "id": 6101007,
+            "content": "「親愛なる友よ、これを見て。」\n 彼女は掌をあなたの目の前に広げた。白い肌には傷1つない。\n 「あなたのように賢明な旅人ならとっくにお気づきでしょう。これは本物の炎ではなく、私も本物の人間ではない。」",
+            "npc": 910005,
+            "speakerName": "自由の詩人",
+            "next": 6101008
+          },
+          {
+            "id": 6101009,
+            "content": "「ここは実に素敵な場所だよね？」\n 「私はついに肉体の苦痛から解放され、つまらないことに創作を邪魔されることもなくなった。至上の自由と、永遠の時を手に入れた――！」\n 「旅人よ、ここに足を止めてくれてありがとう。おかげで一片の閃きが得られた。ぜひ私の詩を受け取ってほしい。どうかあなたがこの無限の輪廻から解き放たれ、望みを叶えられますように。」",
+            "npc": 910005,
+            "speakerName": "自由の詩人",
+            "next": 6101010
+          },
+          {
+            "id": 6101010,
+            "content": "詩人があなたに手を差し伸べると、舞い上がるすすが嵐のようにあなたの視界を覆い尽くした。\n すすが散った時、詩人の姿はどこにも見当たらなかった。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 311,
     "name": "棘の書",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5160
     ],
@@ -1010,41 +1456,221 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event09.T_Rouge_Event09'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event09.T_Rouge_Event09'",
-    "eventSelect": [
-      1061,
-      1062
-    ],
-    "eventStoryline": "Rogue/RouEvent_311",
-    "rlArchiveSubId": 10001101
+    "eventMainIcon": "T_Rouge_Event09",
+    "eventStoryline": [
+      {
+        "id": "1739608900306688985",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900306688983"
+        ],
+        "dialogues": [
+          {
+            "id": 6101101,
+            "content": "「こんにちは。どうか、この火を分けてください。」",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "next": 6101102
+          },
+          {
+            "id": 6101102,
+            "content": "少年はわざとらしい格式ばった歩き方で、ゆっくりと焚火の傍に腰を下ろした。\n 彼は大きすぎる礼服を纏い、痩せた小さな体が一層みすぼらしく見えた。火の光を借りて薄い本を捧げ持ち、本を読み始めるその仕草は、妙に気取っているように見えた。",
+            "next": 6101103
+          },
+          {
+            "id": 6101103,
+            "content": "「炎の神よ、我らに知恵を授けたまえ…水の神よ、我らに豊穣を授けたまえ…」",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "options": [
+              {
+                "id": 6101104,
+                "content": "何を読んでいる？",
+                "next": 6101105
+              }
+            ]
+          },
+          {
+            "id": 6101105,
+            "content": "「ああ、これは兄さんたちがくれた本だ。」彼は照れくさそうに頭を掻いた。「神様にお会いする前にもっと賢くならなきゃいけないんだ。」\n 「僕は小さい頃から家族で一番頭の悪い子だった。兄さんたちはみんな僕よりずっと優秀なのに、どういうわけか神様に選ばれたのは僕だった。みんなおかしいって言ってる。」\n 「兄さんたちがこの聖歌集をくれて、九神に拝謁する前にちゃんと覚えて、家族の恥にならないようにしろって言ったんだ。」",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "next": 6101106
+          },
+          {
+            "id": 6101106,
+            "content": "少年は体をずらし、あなたに近づくと、手に持った本を差し出しながら誘うような視線を投げかけた。",
+            "next": 6101107
+          },
+          {
+            "id": 6101107,
+            "content": "「一緒に見ない？」",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "options": [
+              {
+                "id": 6101108,
+                "content": "一緒に本を見る。",
+                "next": 6101109
+              },
+              {
+                "id": 6101112,
+                "content": "一緒に本を読むのを断る",
+                "next": 6101113
+              }
+            ]
+          },
+          {
+            "id": 6101109,
+            "content": "あなたは誘いに乗り、視線を本に向けた。驚いたことに、そこには真っ黒な筆跡で、想像もつかない悪意に満ちた卑俗な言葉がびっしりと書き込まれていた。\n 次の瞬間、文字が黒い棘と化して紙面から飛び出し、獲物を狙う毒蛇のようにあなたの体に絡みついた。視界はどんどん暗く、ぼやけていく。\n 本能的に、あなたは体を反らせて視線を本から引き剥がした。",
+            "next": 6101110
+          },
+          {
+            "id": 6101113,
+            "content": "ここで勉強するつもりはなかったが。",
+            "next": 6101114
+          },
+          {
+            "id": 6101110,
+            "content": "「え？どうしたの？本に何か怖いものでも書いてあった？」\n 彼は純粋な眼差しで、困惑しながらあなたを見つめた。",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "next": 6101111
+          },
+          {
+            "id": 6101114,
+            "content": "「そっか……それじゃ、僕一人で読む。」\n 彼は本を膝の上に戻した。",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "next": 6101115
+          },
+          {
+            "id": 6101111,
+            "content": "あなたは唇を開いたが、声が出ない。\n 黒い棘が少年を包み、吞み込んでいく。少年も、本も、棘も、やがて全てが消え去った。"
+          },
+          {
+            "id": 6101115,
+            "content": "突然、ページの間から無数の黒い棘が蠢き出た。\n 驚く間もなく、黒い棘が少年を包み、吞み込んでいく。少年も、本も、棘も、やがて全てが消え去った。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 312,
     "name": "忘却の間",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event10.T_Rouge_Event10'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event10.T_Rouge_Event10'",
-    "eventSelect": [
-      1066,
-      1067
-    ],
-    "eventStoryline": "Rogue/RouEvent_312",
-    "rlArchiveSubId": 10001201
+    "eventMainIcon": "T_Rouge_Event10",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689092",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689090"
+        ],
+        "dialogues": [
+          {
+            "id": 6101201,
+            "content": "一人の中年女性が焚火の前に深刻な面持ちで腰を下ろした。炎の光は彼女の陰った瞳を照らさなかった。",
+            "next": 6101202
+          },
+          {
+            "id": 6101202,
+            "content": "「こんにちは、見知らぬ方よ。失礼ながらお聞きしたいのですが、ここはどこなのでしょうか？」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6101203
+          },
+          {
+            "id": 6101203,
+            "content": "答える。",
+            "next": 6101204
+          },
+          {
+            "id": 6101204,
+            "content": "「聖湖…？深淵…？」彼女の声は混乱と困惑に満ちていた「でも、私はそういった言葉に全く覚えがなくて…」\n 彼女は自分の皺だらけの手のひらを見つめた。「私は、どうしてここに来たのか忘れてしまったようです。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "options": [
+              {
+                "id": 6101205,
+                "content": "彼女に聖湖の歴史を教える。",
+                "next": 6101206
+              },
+              {
+                "id": 6101207,
+                "content": "自分の持ち物を調べるよう勧める。",
+                "next": 6101208
+              }
+            ]
+          },
+          {
+            "id": 6101206,
+            "content": "「体に聖痕が現れた人は…ここに連れてこられる…？」\n 「ああ…思い出しました。私の子供がここにいるはずです。彼女の目元に、まるで羽ばたこうとする蝶のような聖痕が現れたのです。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6101210
+          },
+          {
+            "id": 6101208,
+            "content": "「あなたの言う通りですね。」\n 彼女はポケットに手を入れ、銀のブローチを取り出した。",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6101209
+          },
+          {
+            "id": 6101210,
+            "content": "女は顔を上げた。今、炎の光がはっきりと彼女の瞳に映っている。",
+            "next": 6101211
+          },
+          {
+            "id": 6101209,
+            "content": "「ああ…思い出しました。」彼女は袖でブローチを丁寧に拭く。「これはあの子に贈るはずのプレゼントでした。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6101210
+          },
+          {
+            "id": 6101211,
+            "content": "「私は子供を探しに来たのです。」\n 「私が留守の間に、眠っている彼女を連れ去られました。あの子は小さい頃から人見知りが激しくて、目を覚ました時に知らない人ばかりだったらきっと怖がるはず。」\n 「彼女のそばにいなければ…そう、私は彼女を探しに来たのです。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6101212
+          },
+          {
+            "id": 6101212,
+            "content": "「彼女がいなくなってからどれくらい経つか？」",
+            "npc": 910004,
+            "next": 6101213
+          },
+          {
+            "id": 6101213,
+            "content": "「十日前…いや、十か月…いえ、十年…ああ…忘れてしまいました。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6101214
+          },
+          {
+            "id": 6101214,
+            "content": "女は黙り込んだ。彼女は異常な放心状態に陥り、全身が静止し、呼吸さえも止まったように見えた。\n 何を言おうと、彼女はもう何の反応も示してくれなかった。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 313,
     "name": "不滅の炎",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5159
     ],
@@ -1052,21 +1678,101 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1071,
-      1072
-    ],
-    "eventStoryline": "Rogue/RouEvent_313",
-    "rlArchiveSubId": 10001301
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689200",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689198"
+        ],
+        "dialogues": [
+          {
+            "id": 6101301,
+            "content": "「ボッ──」\n 突然、目の前の焚火が勢いを増した。\n 金髪の少女がスカートに金色の小石を抱え、一つ一つ火の中に投げ入れているのに気づく。",
+            "next": 6101302
+          },
+          {
+            "id": 6101302,
+            "content": "火の勢いは益々強くなり、まるで最初の春を迎えた植物のように勢い良く、無限に枝を伸ばし始めた。",
+            "options": [
+              {
+                "id": 6101303,
+                "content": "炎の美しさを褒める",
+                "next": 6101304
+              },
+              {
+                "id": 6101305,
+                "content": "石の由来を尋ねる",
+                "next": 6101306
+              }
+            ]
+          },
+          {
+            "id": 6101304,
+            "content": "「ええ！」彼女は炎のように熱烈な声で答えた。「同じ考えの人がいて嬉しいな。」",
+            "npc": 910005,
+            "speakerName": "石投げの少女",
+            "next": 6101307
+          },
+          {
+            "id": 6101306,
+            "content": "「この辺で拾った石よ。」彼女は説明した。「多分、何かの炎魔法の結晶だと思う。」",
+            "npc": 910005,
+            "speakerName": "石投げの少女",
+            "next": 6101307
+          },
+          {
+            "id": 6101307,
+            "content": "少女は石を投げ続ける。錯覚だろうか、炎は少女にますます近づき、金色の髪を優しく舐めるように揺らめいている。",
+            "next": 6101308
+          },
+          {
+            "id": 6101308,
+            "content": "「明日になれば、焚火は元通り。この小石もまた辺りに散らばる。」\n 「だから毎日、石を拾っては投げ入れてるの。146個、多くも少なくもなく。」",
+            "npc": 910005,
+            "speakerName": "石投げの少女",
+            "next": 6101309
+          },
+          {
+            "id": 6101309,
+            "content": "「無意味じゃないか？」",
+            "npc": 910004,
+            "next": 6101310
+          },
+          {
+            "id": 6101310,
+            "content": "少女は首を傾げ、瞬きながら無邪気な笑顔を見せる。",
+            "next": 6101311
+          },
+          {
+            "id": 6101311,
+            "content": "「いいえ、私は火が好き。」彼女は言った。「燃える音も、踊る姿も好き。」\n 「ここの空間は入り乱れている。目を閉じた時は焚火の傍にいても、次に目を開ければ湖の底にいたりする。」\n 「でもこの小石は違う。環境がどう変わろうと、必ずまた現れる。明日も見つけられると思うと、安心して眠れるの。」",
+            "npc": 910005,
+            "speakerName": "石投げの少女",
+            "next": 6101312
+          },
+          {
+            "id": 6101312,
+            "content": "「私は確かなものが好き。」",
+            "npc": 910005,
+            "speakerName": "石投げの少女",
+            "next": 6101313
+          },
+          {
+            "id": 6101313,
+            "content": "少女は最後の石を投げた。\n 炎の光に完全に包まれ、金髪と炎の境界はもはや見分けがつかない。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 314,
     "name": "ひと切れパン",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5014
     ],
@@ -1074,84 +1780,367 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event12.T_Rouge_Event12'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event12.T_Rouge_Event12'",
-    "eventSelect": [
-      1076,
-      1077
-    ],
-    "eventStoryline": "Rogue/RouEvent_314",
-    "rlArchiveSubId": 10001401
+    "eventMainIcon": "T_Rouge_Event12",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689291",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689289"
+        ],
+        "dialogues": [
+          {
+            "id": 6101401,
+            "content": "「う…ぐっ…」",
+            "npc": 910005,
+            "speakerName": "衰弱した男性",
+            "next": 6101402
+          },
+          {
+            "id": 6101402,
+            "content": "か細い呻き声が低い位置から聞こえる。焚火の傍に、飢えに苦しんでいるらしい痩せこけた男が倒れているのに気づいた。",
+            "options": [
+              {
+                "id": 6101403,
+                "content": "食べ物を分ける",
+                "next": 6101404
+              },
+              {
+                "id": 6101409,
+                "content": "何もしない",
+                "next": 6101410
+              }
+            ]
+          },
+          {
+            "id": 6101404,
+            "content": "「…ありがとう、優しい子だね。だが、もう食べ物は必要ないんだ。」\n 「黒潮に呑まれて、もう戻れない以上、どれだけ食べても無意味だ。」\n 「君を見ていると、エリュシオンにいる女の子を思い出す…君と同じように優しい子だった。」",
+            "npc": 910005,
+            "speakerName": "衰弱した男性",
+            "next": 6101405
+          },
+          {
+            "id": 6101410,
+            "content": "男は確かに可哀想に見えるが、自分の持ち物もほとんど残っていない。\n この危険な深淵では、まず自分が生き延びることを最優先にすべきだ。"
+          },
+          {
+            "id": 6101405,
+            "content": "「金髪の女の子で、ピンクの巨大な豚に乗っていた。私が飢えで街を彷徨っていた時、パン一切れを差し出してくれた…」\n 「だが当時の私は高慢で、礼賛会の施しなど受け入れられなかった。子供の善意と知りながら、大声で罵倒してしまった。」",
+            "npc": 910005,
+            "speakerName": "衰弱した男性",
+            "next": 6101406
+          },
+          {
+            "id": 6101406,
+            "content": "「今となって、自分の人生を振り返って…彼女だけが真心から私に接してくれたのだと初めて気づいたよ。」\n 「信仰や種族、出身…人はいつもそんなもので……自分を飾り立てる…だが、どんな肩書も、真の優しさが放つ輝きには勝てない…」",
+            "npc": 910005,
+            "speakerName": "衰弱した男性",
+            "next": 6101407
+          },
+          {
+            "id": 6101407,
+            "content": "「もし戻れたら…直接謝りたかった…ただ…もう…チャンスはないようだ…」",
+            "npc": 910005,
+            "speakerName": "衰弱した男性",
+            "next": 6101408
+          },
+          {
+            "id": 6101408,
+            "content": "男の声は次第に小さくなり、瞬きをすると彼の姿は消えていた。\n 空気中に、焼きたてのパンの香りが漂ってくる。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 315,
     "name": "金の羽根",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event13.T_Rouge_Event13'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event13.T_Rouge_Event13'",
-    "eventSelect": [
-      1081,
-      1082,
-      1083
-    ],
-    "eventStoryline": "Rogue/RouEvent_315",
-    "rlArchiveSubId": 10001501
+    "eventMainIcon": "T_Rouge_Event13",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689381",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689379"
+        ],
+        "dialogues": [
+          {
+            "id": 6101501,
+            "content": "一筋の金色の光が空中に閃いた。一瞬、太陽が昇ったかと思ったが、よく見ればそれは全身が黄金色の小鳥だった。\n 空から旋回しながら降りてきた鳥は、あなたの傍に優雅に着地し、羽を収めた。焚火に照らされた金色の羽はきらめき、貴族の令嬢たちが秘蔵する金細工よりも、精緻な輝きを放っている。",
+            "options": [
+              {
+                "id": 6101502,
+                "content": "鳥に水をやる",
+                "next": 6101503
+              },
+              {
+                "id": 6101505,
+                "content": "鳥の尾羽を抜いてみる",
+                "next": 6101506
+              },
+              {
+                "id": 6101509,
+                "content": "鳥の頭の羽を抜いてみる",
+                "next": 6101510
+              }
+            ]
+          },
+          {
+            "id": 6101503,
+            "content": "手のひらに水を溜め、鳥に差し伸べる。",
+            "next": 6101504
+          },
+          {
+            "id": 6101506,
+            "content": "こっそり手を伸ばし、鳥が目を閉じて休んでいる隙に尾羽を一本抜き取る――羽の質感はまるで上質な黄金のようで、きっと高価に違いない。",
+            "next": 6101507
+          },
+          {
+            "id": 6101510,
+            "content": "そっと手を伸ばし頭の羽を狙うが、力が入る前に鳥はあなたの動向に気づき、ぱっちりと目を見開いた。\n 鳥は怒りの鳴き声をあげ、羽ばたきながらあなたに襲いかかる。その嘴の一撃は、高熱を持つ溶けた金が手のひらに滴り落ちたかのような激痛で、鮮やかな赤い痕を残した。",
+            "next": 6101511
+          },
+          {
+            "id": 6101504,
+            "content": "小鳥は首を傾げ、警戒しながらあなたを観察する。しばらくして、ためらいがちに金色の嘴を降ろし、手のひらの水を少しずつ飲み始めた。\n 水を飲み終えると、羽を楽しげに振るわせて感謝の鳴き声をあげ、空へと舞い上がっていった。"
+          },
+          {
+            "id": 6101507,
+            "content": "鳥は怒りの鳴き声をあげ、羽ばたきながらあなたに襲いかかる。その嘴の一撃は、高熱を持つ溶けた金が手のひらに滴り落ちたかのような激痛で、鮮やかな赤い痕を残した。",
+            "next": 6101508
+          },
+          {
+            "id": 6101511,
+            "content": "激痛が引いた頃には、鳥は遥か上空へ飛び去っていた。"
+          },
+          {
+            "id": 6101508,
+            "content": "激痛が引いた頃には、鳥は遥か上空へ飛び去っていた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 316,
     "name": "呪いの血",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "eventSelect": [
-      1086,
-      1087,
-      1088
-    ],
-    "eventStoryline": "Rogue/RouEvent_316",
-    "rlArchiveSubId": 10001601
+    "eventMainIcon": "T_Rouge_Event14_2",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689489",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689487"
+        ],
+        "dialogues": [
+          {
+            "id": 6101601,
+            "content": "腐敗した生臭い匂いが近くから漂ってきた。\n 焚火の傍に小さな女の子が現れた。彼女の頬や腕には恐ろしい膿瘍が広がっており、焚火の明かりに照らされた瞳だけがかすかな生命の輝きを放っていなければ、目の前の存在が死体だと錯覚するところだった。",
+            "options": [
+              {
+                "id": 6101602,
+                "content": "バッグから薬を取り出し、少女に手渡す。",
+                "next": 6101603
+              },
+              {
+                "id": 6101606,
+                "content": "少女の傷を治療しようとする",
+                "next": 6101607
+              },
+              {
+                "id": 6101612,
+                "content": "距離を取る",
+                "next": 6101613
+              }
+            ]
+          },
+          {
+            "id": 6101603,
+            "content": "「ありがとう…ございます…優しい旅人さん…」\n ゆっくりと顔を上げる少女。その引きつった口元が、笑みなのか痛みによる痙攣なのか、判別できなかった。",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6101604
+          },
+          {
+            "id": 6101607,
+            "content": "慎重に近づき、少女の傷の状態を調べようとする。",
+            "next": 6101608
+          },
+          {
+            "id": 6101613,
+            "content": "直感が少女の病の危険性を告げていた。あなたは立ち上がり、距離を取った。",
+            "next": 6101614
+          },
+          {
+            "id": 6101604,
+            "content": "「でも…どうか…助けなくて結構です…」声をひそめて言った。「司祭様がおっしゃいました。私は呪われて、深淵病にかかっている。これは私の罪だと…」\n 「心から懺悔すれば…きっと治る…それまでは、誰にも近づいてはいけないのです」",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6101605
+          },
+          {
+            "id": 6101608,
+            "content": "「げほっ…げほっ…！」\n 激しい咳込みと共に、どす黒い血があなたの手にかかる。血は不気味な黒煙を立ち上らせた。",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6101609
+          },
+          {
+            "id": 6101614,
+            "content": "「すみません…驚かせてしまって…私…すぐに立ち去ります…」",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6101615
+          },
+          {
+            "id": 6101605,
+            "content": "少女はよろめきながら立ち上がり、闇の中に消えていった。"
+          },
+          {
+            "id": 6101609,
+            "content": "「ご…ごめんなさい…！」\n ふらふらと立ち上がろうとして、またもや地面に倒れ込む。",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6101610
+          },
+          {
+            "id": 6101615,
+            "content": "少女はよろめきながら立ち上がり、闇の中に消えていった。"
+          },
+          {
+            "id": 6101610,
+            "content": "「司祭様がおっしゃいました。私は呪われて、深淵病にかかっている。これは私の罪だと…」\n 「心から懺悔すれば…きっと治る…それまでは、誰にも近づいてはいけないのです」",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6101611
+          },
+          {
+            "id": 6101611,
+            "content": "少女は再び苦しそうに起き上がり、よろめきながら闇に消えた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 317,
     "name": "悪戯の渦",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event15.T_Rouge_Event15'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event15.T_Rouge_Event15'",
-    "eventSelect": [
-      1091,
-      1092,
-      1093
-    ],
-    "eventStoryline": "Rogue/RouEvent_317",
-    "rlArchiveSubId": 10001701
+    "eventMainIcon": "T_Rouge_Event15",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689579",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689577"
+        ],
+        "dialogues": [
+          {
+            "id": 6101701,
+            "content": "あなたは焚火の傍に腰を下ろして休憩を取ることにし、手にしていたランタンを足元に置いた。\n その瞬間、地面が突然、水のような光を放ち始めた。反応する間もなく、ランタンは渦巻く水に吞み込まれてしまった。",
+            "next": 6101702
+          },
+          {
+            "id": 6101702,
+            "content": "滑稽な鳥頭の仮面をした人が水中から上半身を現し、頭を振ると、両手を広げた――水上に、形は同じだが材質の異なる三つのランタンが浮かび上がった。",
+            "next": 6101703
+          },
+          {
+            "id": 6101703,
+            "content": "「おお、親愛なる旅人よ！あなたが落としたのは、この黄金のランタンですか？この木製のランタンですか？それともこの普通のランタンですか？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6101704,
+                "content": "黄金のランタン。",
+                "next": 6101705
+              },
+              {
+                "id": 6101707,
+                "content": "木製のランタン。",
+                "next": 6101708
+              },
+              {
+                "id": 6101710,
+                "content": "普通のランタン。",
+                "next": 6101711
+              }
+            ]
+          },
+          {
+            "id": 6101705,
+            "content": "「あははは！」彼は大げさに笑い、「素晴らしい、気に入ったぞ！良いものを見つけたら、手段を選ばず手に入れるべきだ！」\n 「どうぞ持っていくといい！ピカピカ光る黄金が嫌いな奴なんていない――そうだろう？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101706
+          },
+          {
+            "id": 6101708,
+            "content": "「ふむ？君…面白いね！」彼は首を傾げた。その黒い眼窩は底が見えない空洞のようだった。「木でランタンを作るなんて普通はあり得ない――だが、なぜできないと決めつける？ここは深淵だ、何だって不可能じゃない！」\n 「親愛なる旅人に祝福を！君はきっと面白い旅を迎えるのだろう」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101709
+          },
+          {
+            "id": 6101711,
+            "content": "「あーあ、礼賛会の連中に洗脳されちゃったんだね」彼はしきりに嘆き、あなたの答えに不満そうだった、「正直すぎるってつまらないよ――他のタイプのランタンに変えてみたいとは思わないのかい？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101712
+          },
+          {
+            "id": 6101706,
+            "content": "彼は水中に飛び込み、水面はすぐに消えた。\n 足元にはランタンが元通りに置かれていたが、その周りには灰の残骸が散らばっていた。"
+          },
+          {
+            "id": 6101709,
+            "content": "彼は水中に飛び込み、水面はすぐに消えた。\n 足元にはランタンが元通りに置かれていたが、その横にレリックが一つ増えていた。"
+          },
+          {
+            "id": 6101712,
+            "content": "「まあいいさ」彼は首を振り、「正直は美德だ、そうだろ？物語通り、ちょっとしたご褒美をあげよう」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101713
+          },
+          {
+            "id": 6101713,
+            "content": "彼は水中に飛び込み、水面はすぐに消えた。\n 足元にはランタンが元通りに置かれていたが、中の灯りは以前より明るく輝いていた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 318,
     "name": "今宵の問い・その2",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5073,
       5074,
@@ -1161,22 +2150,90 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1096,
-      1097,
-      1098
-    ],
-    "eventStoryline": "Rogue/RouEvent_318",
-    "rlArchiveSubId": 10000202
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "1748589441224503615",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441224503613"
+        ],
+        "dialogues": [
+          {
+            "id": 6102001,
+            "content": "ふと、金属のぶつかる音が聞こえた。火花が飛び散り、焚き火の明かりに溶けていった。振り向くと、簡素な鍛冶台のそばで、老人が力強くハンマーを振り下ろしている。",
+            "next": 6102002
+          },
+          {
+            "id": 6102002,
+            "content": "「やあ、若いの。」\n あなたを見たら、老人は熱心に声をかけてきた。",
+            "npc": 910005,
+            "speakerName": "情熱的な老人",
+            "options": [
+              {
+                "id": 6102003,
+                "content": "こんにちは。",
+                "next": 6102004
+              }
+            ]
+          },
+          {
+            "id": 6102004,
+            "content": "「どうやら、おぬしもここに閉じ込められとるようじゃな？」老人は自分を指差して、「わしもじゃ。」",
+            "npc": 910005,
+            "speakerName": "情熱的な老人",
+            "options": [
+              {
+                "id": 6102005,
+                "content": "また会いました{性别:なぁ|ね}。",
+                "next": 6102006
+              }
+            ]
+          },
+          {
+            "id": 6102006,
+            "content": "「わしら、会うたことがあるかの？」老人は少し戸惑って、「よう覚えとらんが、わしも年を取ったもんじゃ……」",
+            "npc": 910005,
+            "speakerName": "情熱的な老人",
+            "next": 6102007
+          },
+          {
+            "id": 6102007,
+            "content": "「とにかく、ここは危ないところじゃ。武器をいくつか打ってみたでな、ひとつ持っていきなされ。」\n 老人は気前よく自分の作品を見せてくれた。\n 「まあ、どうせここからは出られんのなら、せっかくだし本職に戻るとしようかの。いつか、わしの打った武器がすごい騎士さまの役に立つことがあれば、こんな腐れた場所から連れ出してくれるやもしれんわい。」",
+            "npc": 910005,
+            "speakerName": "情熱的な老人",
+            "options": [
+              {
+                "id": 6102008,
+                "content": "新しく鍛え上げた武器から選ぶ。",
+                "next": 6102011
+              },
+              {
+                "id": 6102009,
+                "content": "整然と並べている完成品から選ぶ。",
+                "next": 6102011
+              },
+              {
+                "id": 6102010,
+                "content": "片隅で埃にまみれた武器から選ぶ。",
+                "next": 6102011
+              }
+            ]
+          },
+          {
+            "id": 6102011,
+            "content": "選んだ武器を持って、老人の親切な別れの言葉を聞きながら、先へ進んでいく。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 319,
     "name": "今宵の問い・その1",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5015,
       5016,
@@ -1186,21 +2243,90 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1016,
-      1017
-    ],
-    "eventStoryline": "Rogue/RouEvent_319",
-    "rlArchiveSubId": 10000201
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "1748589441224503524",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441224503522"
+        ],
+        "dialogues": [
+          {
+            "id": 6101901,
+            "content": "焚き火が、しわが寄った老人の顔を照らし出していた。\n 老人は手にハンマーを持っており、足元にはいくつもの武器が散らばっていた。\n あなたに気づくと、その瞳にはほのかな喜びが浮かんだ。",
+            "next": 6101902
+          },
+          {
+            "id": 6101902,
+            "content": "「若者よ、エリュシオンはどっちの方向じゃか知ってるかい」\n 老人はかすれた声で話した。\n 「この辺りを何度もぐるぐる回っとるのにのう、どうにも家への道が見つからんでな……」",
+            "npc": 910005,
+            "speakerName": "迷える老人",
+            "options": [
+              {
+                "id": 6101903,
+                "content": "沈黙。",
+                "next": 6101904
+              }
+            ]
+          },
+          {
+            "id": 6101904,
+            "content": "「そうか……おぬしも道に迷うとるか。ままならんのう……」\n 老人は長いため息をつくと、頭を垂れた。",
+            "npc": 910005,
+            "speakerName": "迷える老人",
+            "options": [
+              {
+                "id": 6101905,
+                "content": "武器をひとつもらえないかと老人に尋ねる。",
+                "next": 6101906
+              }
+            ]
+          },
+          {
+            "id": 6101906,
+            "content": "「武器とな？ この地面に転がっとる、この品々のことか？」\n 「ああ……思い出した。わしは……鍛冶屋なんじゃ。」\n 「何人かのために武器を打ってな、逃げる手助けをしとったんじゃ。そしてーー」",
+            "npc": 910005,
+            "speakerName": "迷える老人",
+            "next": 6101907
+          },
+          {
+            "id": 6101907,
+            "content": "老人の視線は一瞬暗くなった。ようやくここに来た理由を思い出したようだ。そして彼は軽く首を振り、あなたに向けて奥深そうに微笑んだ。",
+            "next": 6101908
+          },
+          {
+            "id": 6101908,
+            "content": "「もちろんじゃ。」\n 「好きなのを選びなされ。きっとおぬしを守ってくれよう。」",
+            "npc": 910005,
+            "speakerName": "迷える老人",
+            "options": [
+              {
+                "id": 6101909,
+                "content": "老人の左手側にある武器から選ぶ。",
+                "next": 6101911
+              },
+              {
+                "id": 6101910,
+                "content": "老人の右手側にある武器から選ぶ。",
+                "next": 6101911
+              }
+            ]
+          },
+          {
+            "id": 6101911,
+            "content": "あなたは選んだ武器を収めた。\n 老人はあなたの存在を忘れているようで、物も言わずに手元のハンマーを眺め、何かを深く考え込んでいるようだ。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 320,
     "name": "永遠の詩篇·回環",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5173,
       5064
@@ -1209,21 +2335,96 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event08.T_Rouge_Event08'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event08.T_Rouge_Event08'",
-    "eventSelect": [
-      1106,
-      1107
-    ],
-    "eventStoryline": "Rogue/RouEvent_320",
-    "rlArchiveSubId": 10001002
+    "eventMainIcon": "T_Rouge_Event08",
+    "eventStoryline": [
+      {
+        "id": "1748589441225503726",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441225503724"
+        ],
+        "dialogues": [
+          {
+            "id": 6102101,
+            "content": "焚き火の光が明るくなったり暗くなったりして、うつむいた詩人の横顔を照らし出した。彼女は焚き火のそばにひざまずき、指を伸ばし、灰の上にゆっくりと曲線を描いている。",
+            "next": 6102102
+          },
+          {
+            "id": 6102102,
+            "content": "「逃げる場所がないなら、運命を受け入れよう。」\n 「文字が噓を突き破る刃になれないのなら、それは美しい夢を築くレンガになろうーー」\n 詩人は少し間を置いて、指先を少し上げた。\n 「うん......」",
+            "npc": 910005,
+            "speakerName": "喜ぶ詩人",
+            "next": 6102103
+          },
+          {
+            "id": 6102103,
+            "content": "脳裏の記憶がふっと蘇り、かつてこの詩を読んだことがあるとあなたは確信を持っている。\n 一本の煙が頬をかすれた後、まるで無意識のように、あなたは詩の最後の一句をそっと読み出したーー",
+            "options": [
+              {
+                "id": 6102104,
+                "content": "「噓を紡ぎ、不滅の火光を灯す。」",
+                "next": 6102105
+              }
+            ]
+          },
+          {
+            "id": 6102105,
+            "content": "「うん......？」\n 詩人は顔を上げ、嬉しそうに君を見る。\n 「どれだけ美しい詩句よ、これこそが私が欲しがる結末！まさかここで知己を得たとはね。」",
+            "npc": 910005,
+            "speakerName": "喜ぶ詩人",
+            "options": [
+              {
+                "id": 6102106,
+                "content": "「実はこれが、もう一つのタイムラインのあなたが書いたものよ。」",
+                "next": 6102107
+              }
+            ]
+          },
+          {
+            "id": 6102107,
+            "content": "「もう一つのタイムラインって......？」\n 詩人は最初に信じがたい表情を表したが、すると眼差しから光を放ち、まるで焚き火に燃やされたように。\n 「なるほど......君が特別なのだ。この叙事詩の主役、私がほかのタイムラインで再び会えるかもしれない人、そうでしょう？」",
+            "npc": 910005,
+            "speakerName": "喜ぶ詩人",
+            "options": [
+              {
+                "id": 6102108,
+                "content": "うなずく。",
+                "next": 6102109
+              }
+            ]
+          },
+          {
+            "id": 6102109,
+            "content": "「そしたらこの詩はあなたが書いたものなのか、それとも私なのか？ふふ......迷っちゃうね、聖樹学院の学者たちも君の物語に酔いしれると思うよ。\n 詩人はくっくと笑い始めた。\n 「今度会った時、あなたのために詩を作らせていただくわ。さぁ、手を出して、私の祝福を受け取りなさい。」",
+            "npc": 910005,
+            "speakerName": "喜ぶ詩人",
+            "options": [
+              {
+                "id": 6102110,
+                "content": "左手を出す。",
+                "next": 6102112
+              },
+              {
+                "id": 6102111,
+                "content": "右手を出す。",
+                "next": 6102112
+              }
+            ]
+          },
+          {
+            "id": 6102112,
+            "content": "詩人は、指先についた灰で、あなたの手のひらに何かを書いた。\n 文字の意味は相変わらず分からないが、人を傷つけるものではない情熱の、確かなぬくもりだけは感じ取れる。\n あなたがふたたび顔を上げると、詩人の姿はもうここになかった。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 321,
     "name": "棘の書·断絶",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5174,
       5065
@@ -1232,21 +2433,80 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event09.T_Rouge_Event09'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event09.T_Rouge_Event09'",
-    "eventSelect": [
-      1111,
-      1112
-    ],
-    "eventStoryline": "Rogue/RouEvent_321",
-    "rlArchiveSubId": 10001102
+    "eventMainIcon": "T_Rouge_Event09",
+    "eventStoryline": [
+      {
+        "id": "1754303988206559939",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988206559937"
+        ],
+        "dialogues": [
+          {
+            "id": 6102201,
+            "content": "「儚い運命の神よ、時には私たちを喜ばせ、時には私たちを苦しめる......」\n 「常に敬虔な心を持って......その純白の糸はいずれ、天国へ行く道を示してくれるだろう......」\n 少年は真剣で敬虔な口調で本を読み上げていて、あなたにまったく気づいていない。",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "next": 6102202
+          },
+          {
+            "id": 6102202,
+            "content": "あなたはそっと少年のそばに近づき、その本をちらりと見た。\n 記憶どおり、ページに記された聖歌は、悪意に満ちた漆黒の文字で覆われている。\n その文字はうごめき、今にも本から逃げ出しそうだ。",
+            "next": 6102203
+          },
+          {
+            "id": 6102203,
+            "content": "「こんにちは......あなたも本を読みたいでしょうか？」\n 少年はついにあなたの存在に気づき、興味深そうに顔を上げた。",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "options": [
+              {
+                "id": 6102204,
+                "content": "彼が読み続けるのを止める。",
+                "next": 6102205
+              },
+              {
+                "id": 6102208,
+                "content": "沈黙。",
+                "next": 6102209
+              }
+            ]
+          },
+          {
+            "id": 6102205,
+            "content": "あなたが少年の手の中から本を奪い、思いっきり閉じる。",
+            "next": 6102206
+          },
+          {
+            "id": 6102209,
+            "content": "あなたは知っている。どんな行動を取っても、少年の運命を本当に変えることはできない。あなたにとってもっと大事なことがあるーー瑠璃を集め、この末永く続く悪夢を徹底的に終わらせること。",
+            "next": 6102210
+          },
+          {
+            "id": 6102206,
+            "content": "「あなた、大丈夫でしょうか？！」\n 少年は心配そうに立ち上がり、空っぽになった両手に呆然と視線を落とした。\n 「あれ？私......もう本を読まなくてもいいのですか？私......自由になりましたのか？」",
+            "npc": 910005,
+            "speakerName": "慎み深い少年",
+            "next": 6102207
+          },
+          {
+            "id": 6102210,
+            "content": "瞬く間に、黒い棘が広がり、少年の姿を飲み込んでいった。\n あなたは軽くため息をつき、前に進み続ける。"
+          },
+          {
+            "id": 6102207,
+            "content": "あなたは指先の痛みに耐えながら、微笑んでうなずき、本を焚き火に投げ入れた。すると、炎が高く噴き上がり、黒い棘と一緒にあなたに襲いかかってきたーー"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 322,
     "name": "忘却の間·沈淪",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5175,
       5065
@@ -1255,21 +2515,83 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event10.T_Rouge_Event10'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event10.T_Rouge_Event10'",
-    "eventSelect": [
-      1116,
-      1117
-    ],
-    "eventStoryline": "Rogue/RouEvent_322",
-    "rlArchiveSubId": 10001202
+    "eventMainIcon": "T_Rouge_Event10",
+    "eventStoryline": [
+      {
+        "id": "1754303988207560059",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988207560057"
+        ],
+        "dialogues": [
+          {
+            "id": 6102301,
+            "content": "「そこの子......ほら見て、ここに焚き火があるのよ。」\n 火の光の向こう側で、一人の女性が微笑みながら顔を上げた。火の光が彼女のやつれた頬を照らしていた。\n 「本当に暖かいわ。ありがとう、親切な見知らぬ人よ」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "options": [
+              {
+                "id": 6102302,
+                "content": "彼女の言う子供はどこにいるのかを尋ねる。",
+                "next": 6102303
+              }
+            ]
+          },
+          {
+            "id": 6102303,
+            "content": "「今ここにいるよ、見て。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6102304
+          },
+          {
+            "id": 6102304,
+            "content": "彼女が示す方向に目を向けると、腰ほど高さの苔に覆われた岩があった。\n 岩の真ん中から少し上の隙間には、きらきらと光る一枚のブローチがはめ込まれていて、周りに苔が這いまわっている。まるで、埋もれた心のようだ。\n 彼女は手についた泥にはまったく気づかなく、優しく岩の表面をなでていた。",
+            "options": [
+              {
+                "id": 6102305,
+                "content": "真実を教える。",
+                "next": 6102306
+              },
+              {
+                "id": 6102308,
+                "content": "彼女を認める。",
+                "next": 6102309
+              }
+            ]
+          },
+          {
+            "id": 6102306,
+            "content": "「何を言っているの？！」\n 彼女の目から敵意の光が一瞬放ち、あの岩を背後に強く庇いながら、声を振り絞って叫んだ。\n 「これは私の子なの......彼女は今ここにいるんのよ、もう誰にも連れ去らせない......絶対に.....」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6102307
+          },
+          {
+            "id": 6102309,
+            "content": "「ありがとう。この子は小さい頃から人見知りなのに、どうやらあなたのことが好きみたいね。」\n 彼女は優しい口調で言い、時おり岩をそっと撫でていた。\n 「あなた、ひとりで旅をしているの？だめだよ、家族が心配なさるわ.....早く家にお帰りなさい。」",
+            "npc": 910005,
+            "speakerName": "憔悴した女性",
+            "next": 6102310
+          },
+          {
+            "id": 6102307,
+            "content": "あなたは一瞬言葉を失う。\n 美しい夢から人を呼び覚ますなんて、残酷で意味のないことだ.――それはとっくにわかっているのに。\n そしてあなたは立ち上がり、焚き火を彼女と彼女の「子供」に残してこの場を離れようとした。\n その瞬間、暗闇に潜んでいた暗影があなたを狙って襲いかかってくるーー"
+          },
+          {
+            "id": 6102310,
+            "content": "あなたは丁寧に礼を言い、身を起こして先へ進んだ。\n 彼女とその「子」の姿は、次第に火の陰に霞んでいった。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 323,
     "name": "絶えぬ炎・無常",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5176,
       5064
@@ -1278,21 +2600,83 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1121,
-      1122
-    ],
-    "eventStoryline": "Rogue/RouEvent_323",
-    "rlArchiveSubId": 10001302
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1754303988207560179",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988207560177"
+        ],
+        "dialogues": [
+          {
+            "id": 6102401,
+            "content": "「なくなった…… なくなった……」\n 少女は虚ろな目を開け、地面を這って、何かを探している。爪はほとんど土に食い込みそうだ。",
+            "npc": 910005,
+            "speakerName": "迷いを抱える少女",
+            "options": [
+              {
+                "id": 6102402,
+                "content": "彼女が何を探しているのかを尋ねる。",
+                "next": 6102403
+              }
+            ]
+          },
+          {
+            "id": 6102403,
+            "content": "「私の石.....石......さっきまでここにあったのに......」\n 彼女は呟きながら、絶望したように、あなたの足元にある焚き火を見つめている。\n 「私の火は......消えそう......どうしよう......どうしょう......」",
+            "npc": 910005,
+            "speakerName": "迷いを抱える少女",
+            "options": [
+              {
+                "id": 6102404,
+                "content": "彼女を助ける。",
+                "next": 6102405
+              },
+              {
+                "id": 6102408,
+                "content": "世の中は、いつも私たちの思う通りにはならないと彼女に言う。",
+                "next": 6102409
+              }
+            ]
+          },
+          {
+            "id": 6102405,
+            "content": "あなたは、彼女が好んでいた石の様子を思い出そうと試みた。その由来は確かめられないが、炎魔法で似たものを作れるだろうと、あなたは判断した。\n それで、焚き火を利用して、力を集中させるとーー\n 瞬く間に、きらめく金色の小石が流星のように降り注ぎ、ぶつかり合って清らかな音を立てた。",
+            "next": 6102406
+          },
+          {
+            "id": 6102409,
+            "content": "「分かってる......分かってるの。」\n 「だからもう諦めたの......本も読まないし、魔法の起源なんて考えないし、あの塔の中に何があるかなんて問いかけないの......」\n 「今はただ火がほしいだけなのに......それもだめなの？」",
+            "npc": 910005,
+            "speakerName": "迷いを抱える少女",
+            "next": 6102410
+          },
+          {
+            "id": 6102406,
+            "content": "「あっ......！私の石ーーこれは私の石だ！ありがとう、神の使者様！」\n 少女は宝物を得たように一つ一つ拾い上げ、大事にスカートの裾で包んだ。",
+            "npc": 910005,
+            "speakerName": "迷いを抱える少女",
+            "next": 6102407
+          },
+          {
+            "id": 6102410,
+            "content": "あなたは言葉に詰まった。\n 少女は立ち上がり、あなたが応える間もなく、思い切って炎の中へ踏み入った。\n ゆっくりと、少女の姿は火の光に溶け、やがて消えていった。\n あなたは踵を返し、旅を続けた。"
+          },
+          {
+            "id": 6102407,
+            "content": "その結晶は、以前少女の懐に見た石とそっくりだった。それが、あなたが旅の途中でうっかり残した痕跡なのかどうか、疑問が浮かんだ。\n どちらにせよ、少女は再び自分の「確定」を取り戻した。そして、あなたは旅を続けなければならない。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 324,
     "name": "絶えぬ炎・余韻",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5176,
       5064
@@ -1301,21 +2685,81 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1126,
-      1127
-    ],
-    "eventStoryline": "Rogue/RouEvent_324",
-    "rlArchiveSubId": 10001303
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560299",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560297"
+        ],
+        "dialogues": [
+          {
+            "id": 6102501,
+            "content": "焚き火は静かに燃え続けていて、今度はどんなミラージュも見えなかった。\n あなたが立ち去ろうとした時に、地面にきらめくものが目に入ったーー黄金色の小石が一つ一つ散らばっていて、まるで空から落ちた星のようだ。",
+            "options": [
+              {
+                "id": 6102502,
+                "content": "石ころを拾って炎の中に放り投げる。",
+                "next": 6102503
+              },
+              {
+                "id": 6102506,
+                "content": "静かに観察する。",
+                "next": 6102507
+              }
+            ]
+          },
+          {
+            "id": 6102503,
+            "content": "炎がますます勢いを増し、それから異常に横に伸び始めた。\n あなたは慎重に一歩後ずさりして、炎の中から一つの姿が突然現れた。あなたはようやくわかったのだ。横に伸びていた光は炎ではなく、少女の髪の毛だった。",
+            "next": 6102504
+          },
+          {
+            "id": 6102507,
+            "content": "炎はまだ静かに燃えていて、恍惚の中で、どこかから声を聞こえたようだ。",
+            "next": 6102508
+          },
+          {
+            "id": 6102504,
+            "content": "「こんにちは！私の石を見つけてくれたの？」\n 少女は焚き火の中から飛び出し、頭を左右に振り、金色の石がバラバラと地面に落ちた。\n 「もう外に探しにいかなくていいのーー見て、この火の中に入れば、自分で石ころを作れるから。」",
+            "npc": 910005,
+            "speakerName": "元気な少女",
+            "next": 6102505
+          },
+          {
+            "id": 6102508,
+            "content": "「うん......うん。覚えている。」\n 少女の穏やかで幸せに溢れる声が炎を通して伝わってくる。\n 「疑問を持つにもほどがある。火は神様の贈り物で、物質の反応じゃない。これらの石たちも、神様から頂いた宝物で、いつも安らかに眠れるようにしてくれてる.....」",
+            "npc": 910005,
+            "speakerName": "元気な少女",
+            "next": 6102509
+          },
+          {
+            "id": 6102505,
+            "content": "「ごめん、あなたとゆっくり話せる時間がなくてーーまだ１４６個集めていないの。」\n 「でも、あなたに役に立つかもしれないものを見つけたよ。これを受け取って。そして、良い旅を！」\n 少女が何かをあなたに渡すと、振り向いて炎の中に消えていった。",
+            "npc": 910005,
+            "speakerName": "元気な少女",
+            "next": 6102510
+          },
+          {
+            "id": 6102509,
+            "content": "あなたは黙って背を向けて立ち去った。一つの石ころがたまたま道の先に転がっていて、あなたは無意識に踏みつけて粉々にしてしまった。\n 神様からの贈り物は、こんなに脆いのだ。",
+            "next": 6102510
+          },
+          {
+            "id": 6102510,
+            "content": "その炎が少女にもたらすのは、幸福を与える「確定」なのか、それとも永遠にここに閉じ込める「枷」なのか？\n あるいは、この両者は元々、それほどの違いがないのだろう。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 325,
     "name": "呪いの血・虚無の問い",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5177,
       5064
@@ -1324,21 +2768,95 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "eventSelect": [
-      1131,
-      1132
-    ],
-    "eventStoryline": "Rogue/RouEvent_325",
-    "rlArchiveSubId": 10001602
+    "eventMainIcon": "T_Rouge_Event14_2",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560419",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560417"
+        ],
+        "dialogues": [
+          {
+            "id": 6102601,
+            "content": "「ごめんなさい、全部私のせい.....頭が悪いから、聖歌を全部覚えられない.....怠けていたから、宣教が終わるまで聞き続けられなかった.....」\n 「神様、どうか許してください.....」",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6102602
+          },
+          {
+            "id": 6102602,
+            "content": "少女は周りの人を無視して懺悔しているーーもしくは、もう他人が見えなくなっているのかもしれない。\n 彼女の様子は前よりも明らかに悪くなっていて、目までもくすんで光を失った。",
+            "next": 6102603
+          },
+          {
+            "id": 6102603,
+            "content": "「あなたは.....あの旅人……？もう……だいぶ時間が経ったのか？」\n 少女はようやくあなたの存在に気づき、ゆっくりとこちらを振り向いた。\n 「旅人よ......教えてください......なぜ、私は昼も夜も神様に祈っていたのに、神様は一度たりとも応えてくれなかったの？」",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "options": [
+              {
+                "id": 6102604,
+                "content": "彼女に祈り続けるよう励ます。",
+                "next": 6102605
+              },
+              {
+                "id": 6102608,
+                "content": "神様は応えないと彼女に告げる。",
+                "next": 6102609
+              }
+            ]
+          },
+          {
+            "id": 6102605,
+            "content": "結末を書き変える時がまだ来ていないのなら、噓を続けても構わなく.....少なくとも、これも一種の「希望」だから。\n あなたは彼女に、祈り続ければ、いつか二人とも必ず救われるだろうと伝えた。\n これは完全な嘘ではないーー彼女の祈祷にも関わらず、深淵はいつか必ず破れられ、その答はあなたが今持っているランタンにあるのだとあなたはいつも信じている。",
+            "next": 6102606
+          },
+          {
+            "id": 6102609,
+            "content": "「神様は.....応えてくれないのか？」\n 「私の罪は深すぎて、もう救われる価値もないのか？」\n 彼女は絶望した表情であなたを見つめ、膿瘍の広がる頬から涙が滴り落ちた。",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "options": [
+              {
+                "id": 6102610,
+                "content": "「あなたにはもともと罪などないからだ。」",
+                "next": 6102611
+              }
+            ]
+          },
+          {
+            "id": 6102606,
+            "content": "「分かった.....信じる。」\n 少女は手を合わせ、さらにしっかりとした調子で祈り続けた。",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6102607
+          },
+          {
+            "id": 6102611,
+            "content": "「えっ......？」\n 彼女は呆れて、目の中に深い困惑が浮かんだ。",
+            "npc": 910005,
+            "speakerName": "病を患った女の子",
+            "next": 6102612
+          },
+          {
+            "id": 6102607,
+            "content": "あなたはそっとため息をつき、手元のランタンを握りしめて、進み続ける。"
+          },
+          {
+            "id": 6102612,
+            "content": "あなたはしっかりとした微笑みを浮かべ、必ず彼女の苦しみを終わらせる方法を見つけるんのだと言った。少女はあなたを見つめ、なんとなく頷いた。その時、あなたは気付いた。彼女の傷口はもう血を流さなくなっていた。あなたは手を振って別れを告げ、ランタンを握りしめ、進み続けた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 326,
     "name": "月の満ち",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5065
     ],
@@ -1346,21 +2864,86 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event17_2.T_Rouge_Event17_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event17_2.T_Rouge_Event17_2'",
-    "eventSelect": [
-      1136,
-      1137
-    ],
-    "eventStoryline": "Rogue/RouEvent_326",
-    "rlArchiveSubId": 10001801
+    "eventMainIcon": "T_Rouge_Event17_2",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560539",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560537"
+        ],
+        "dialogues": [
+          {
+            "id": 6102701,
+            "content": "「満月の神・フサよーー」\n 「煌めく足跡の主宰、運命の糸の紡ぎ手よ......」\n 「空と月の輝きを証とし、敬虔な讃歌を捧げよ......」",
+            "npc": 910005,
+            "speakerName": "満月の信徒",
+            "next": 6102702
+          },
+          {
+            "id": 6102702,
+            "content": "人々の姿が火の中から浮かび上がり、彼らは一斉に神様への祝詞を歌っていた。",
+            "next": 6102703
+          },
+          {
+            "id": 6102703,
+            "content": "「あなたは誰ですか？道に迷った旅人？」\n 一人の祈祷者があなたを気付き、笑顔で手を伸ばしてきた。\n 「私たちと一緒に満月の神に祈りましょう。きっとあなたの前路に祝福を与えてくださるでしょう。」",
+            "npc": 910005,
+            "speakerName": "満月の信徒",
+            "next": 6102704
+          },
+          {
+            "id": 6102704,
+            "content": "彼らの讃歌は<H>第九位の神</>、運命の神である<H>フサ</>に捧げられていた。\n フサは満月を司り、月の輝きを練り合わせ、運命の糸をおる存在だ。",
+            "options": [
+              {
+                "id": 6102705,
+                "content": "彼らの祈りに加わる。",
+                "next": 6102706
+              },
+              {
+                "id": 6102709,
+                "content": "彼らの祈りに加わるのを拒む。",
+                "next": 6102710
+              }
+            ]
+          },
+          {
+            "id": 6102706,
+            "content": "これは幼い頃のあなたがいちばん嫌いだった場面だった。空虚な賛美の言葉など、覚えてもすぐに忘れてしまった。だが今では、いくらか懐かしさすら覚える。\n あなたは彼らの祈りに加わった。",
+            "next": 6102707
+          },
+          {
+            "id": 6102710,
+            "content": "「断る？貴様――なぜだ？」\n 祈祷師は甲高い声で叫んだ。\n 「異端者――まさか、貴様は闇月派の信徒か？ネーファの信徒か？」",
+            "npc": 910005,
+            "speakerName": "満月の信徒",
+            "next": 6102711
+          },
+          {
+            "id": 6102707,
+            "content": "「フサ様、無秩序な運命の流れの中で常に大空を横切る満月の神よ。\n 「あなたに敬意を捧げよう、あなたの信者をかばってください。\n 最高の幸運と幸せを与えてください。」",
+            "npc": 910004,
+            "next": 6102708
+          },
+          {
+            "id": 6102711,
+            "content": "その禁忌の名を耳にすると、祈祷師たちは一斉に顔を歪めた。\n あなたはため息をついた――どうやらここから抜け出す方法を考えなければならない。"
+          },
+          {
+            "id": 6102708,
+            "content": "あなたは目を閉じ、敬虔な信者と一緒に祈った。\n 最後の一節を唱い終えると、あなたは目を開け、彼らの姿はもう消えていた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 327,
     "name": "月の欠け",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5178,
       5065
@@ -1369,21 +2952,99 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event17.T_Rouge_Event17'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event17.T_Rouge_Event17'",
-    "eventSelect": [
-      1141,
-      1142
-    ],
-    "eventStoryline": "Rogue/RouEvent_327",
-    "rlArchiveSubId": 10001901
+    "eventMainIcon": "T_Rouge_Event17",
+    "eventStoryline": [
+      {
+        "id": "1754303988209560659",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988209560657"
+        ],
+        "dialogues": [
+          {
+            "id": 6102801,
+            "content": "「運命の糸を断ち切る鋏、永遠と静寂の主宰よ......」\n 「深淵と長夜の証の下で、私のへりくだった祝詞を聞いてくれませんか......」",
+            "npc": 910005,
+            "speakerName": "見知らぬ信徒",
+            "next": 6102802
+          },
+          {
+            "id": 6102802,
+            "content": "人々の姿が火の中から浮かび上がり、彼らは一斉に神様への祝詞を読み上げている。あなたは静かに聞いていた。それらはあなたの知らない祝詞だった。",
+            "next": 6102803
+          },
+          {
+            "id": 6102803,
+            "content": "「あなたは誰ですか？道に迷った旅人ですか？」\n 一人の祈祷者があなたに気付き、笑顔で手を伸ばしてきた。\n 「それとも、あなたも同じように天の秘密を看破し、真の救世主であるネーファのもとに入りたいのですか？」",
+            "npc": 910005,
+            "speakerName": "見知らぬ信徒",
+            "next": 6102804
+          },
+          {
+            "id": 6102804,
+            "content": "<H>ネーファ</>ーーこの名前はあなたが覚えている。\n この名前はエリュシオン正教の信者の筆の下であまり登場せず、あなたは埃を被った古い書簡の中でだけこの名前を見たことがある。これは禁忌の名前で、すでに忘れ去られた<H>第十位の神だ</>。",
+            "next": 6102805
+          },
+          {
+            "id": 6102805,
+            "content": "ネーファは、満月と運命の神であるフサの姉妹で、闇月と死の神だ。\n 同胞の姉は運命の糸をの織るに対し、ネーファは運命を断つのだ。\n 二人の神はきりのない争いで月の満ち欠けをもたらし、潮汐を巻き起こしていた。\n そしたら、ネーファの信者は......",
+            "options": [
+              {
+                "id": 6102806,
+                "content": "彼らの信仰について尋ねる。",
+                "next": 6102807
+              }
+            ]
+          },
+          {
+            "id": 6102807,
+            "content": "「ここに現れたのだから、あなたも知っているはずだが、この深淵は死んだものではない。それは生きていて、どんどん成長し、広がっている。」\n 「騎士団の黄金の聖剣も暗闇の波を退けることができず、満月の輝きも底が見えない静寂を貫くことができない。」\n 「すべての光が消えるべく駆け、すべての生き物が必ず死ぬようにーー消滅こそが唯一確かなものだ。我らの深淵こそ、世界の本来の姿なのだ。」\n 「<H>闇月教派</>へようこそ、愛しい旅人よ。」",
+            "npc": 910005,
+            "speakerName": "闇月の信徒",
+            "options": [
+              {
+                "id": 6102808,
+                "content": "彼らの誘いに応じる。",
+                "next": 6102809
+              },
+              {
+                "id": 6102811,
+                "content": "彼らの誘いを断る。",
+                "next": 6102812
+              }
+            ]
+          },
+          {
+            "id": 6102809,
+            "content": "たとえただの幻にすぎなくても、彼らを怒らせて無意味な争いを増やしたくはない。\n そこで、あなたはいかにも本気らしく、闇月教派について耳にした噂を繰り返し語った。『死の本能』『ネーファの救済』『深淵こそ永遠』……\n あなたの話を聞くと、彼らは顔に笑みを広げ、しきりにうなずき、あなたの大げさな言葉にも同意した。",
+            "next": 6102810
+          },
+          {
+            "id": 6102812,
+            "content": "この長い苦しみの旅の中で、あなたは何度も生と死の意味を考えていた。死こそが唯一の答えだと信じた時期もあった。\n しかし、<H>あの思いがけない出会いで</>、あなたが迷わずに暗闇の中で進み続けられる意を固めてくれたーー\n たとえ自らの身を薪にしてでも、この闇を追い払う。たとえ一本の微光しか届かなくても、この不滅を燃や尽くしてやる。",
+            "next": 6102813
+          },
+          {
+            "id": 6102810,
+            "content": "「あなたの博学と知恵に心から感服しました。これを受け取ってくれ。見知らぬ友よ！」\n あなたはなんとかごまかした。幸い、幼いころの宣教と論弁の記憶は、全部がぼんやりしていたわけではなかった、とあなたは考えた。",
+            "npc": 910005,
+            "speakerName": "闇月の信徒"
+          },
+          {
+            "id": 6102813,
+            "content": "「深淵は永遠ではない。お前たちはただ、生きていた生者たちの幻に過ぎない。」\n あなたは武器を構えた。\n 「さあ、亡霊たちよ。行くべき場所に戻れーー」",
+            "npc": 910004
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 328,
     "name": "聖像の下",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [
       5065
     ],
@@ -1391,62 +3052,339 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event16.T_Rouge_Event16'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event16.T_Rouge_Event16'",
-    "eventSelect": [
-      1146,
-      1147
-    ],
-    "eventStoryline": "Rogue/RouEvent_328",
-    "rlArchiveSubId": 10002001
+    "eventMainIcon": "T_Rouge_Event16",
+    "eventStoryline": [
+      {
+        "id": "17546503285961385789",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17546503285961385787"
+        ],
+        "dialogues": [
+          {
+            "id": 6103001,
+            "content": "「さあ、<H>サリエル</>のために、一緒に歌を歌いましょう！」\n 「彼はエリュシオンの聖者、\n フサの啓示を聞き、人々に慈悲と寛恕と愛を教えて。\n 朱色のエリュシオンの大地に、再び平和を芽生えさせた。」",
+            "npc": 910005,
+            "speakerName": "狂った詩人",
+            "next": 6103002
+          },
+          {
+            "id": 6103002,
+            "content": "吟遊詩人のような老者が、崩れ落ちた壁の一部を撫でている。\n この壁は比較的まともな状態で、かかすかな明かりに照らされ、大きな壁画が姿を現す。かれているのは、まさに詩人が歌っていた<H>「サリエル」</>だ。\n 二千年前の聖者で、最初の<H>セブンヴァーチェス</>の一つである「節制」の座にあった存在である。\n 詩人は一人で歌い続けていて、あなたが来たことにはまったく気づいていない。",
+            "options": [
+              {
+                "id": 6103003,
+                "content": "聞き続ける。",
+                "next": 6103004
+              }
+            ]
+          },
+          {
+            "id": 6103004,
+            "content": "「だが、聖者の心は、ずっと一つの事で痛んでいた。」\n 「それはフサが人々に約束した、あの天国のことだ。」\n 「ついにある日、彼は碧波の畔で七十七日間座り続けた後、\n 満月の下で真理を悟ったーー湖の中で「永遠」にたどり着けた。」",
+            "npc": 910005,
+            "speakerName": "狂った詩人",
+            "next": 6103005
+          },
+          {
+            "id": 6103005,
+            "content": "あなたは彼が何を歌っているかを知っている。\n サリエルは、碧波の畔で満月と運命の神であるフサの啓示を受け、魂が天国へ赴き、「永遠」を手に入れた。彼は神に選ばれた最初の人となった。\n その後、次々と人々の身に聖痕が現れた —— それは神に選ばれたしるしだ。彼らは聖湖を経て、約束された地へと到達した。\n これらの礼賛会初期の歴史は、あなたには馴染み深いものだ。",
+            "options": [
+              {
+                "id": 6103006,
+                "content": "聞き続ける。",
+                "next": 6103007
+              }
+            ]
+          },
+          {
+            "id": 6103007,
+            "content": "「だが、二千年後、起伏のある山々の上に立って、聖湖を眺めると。\n なぜそこに漆黒の渦波しか残っていないのか？」\n サリエルよ、我々の知恵の聖者よーー\n 教えてくれ、女神が約束した楽園は、いったいどこにあるのか？」",
+            "npc": 910005,
+            "speakerName": "狂った詩人",
+            "next": 6103008
+          },
+          {
+            "id": 6103008,
+            "content": "詩人は歌いながら，涙を流した。彼はようやく遠い昔の物語から、目の前にあるこの幽暗な深淵のことまで、歌ってきた。\n 二千年以来、礼賛会にとって最も神聖で清らかな聖湖が、一夜にしてこの汚れた混沌に替えられた。\n まるで千年前に、信仰を捨てた墜落者が言っていたようにーー「神はすでに死んだ！」\n 聞き続けるか？",
+            "options": [
+              {
+                "id": 6103009,
+                "content": "聞き続ける。",
+                "next": 6103010
+              },
+              {
+                "id": 6103013,
+                "content": "ここを離れる。",
+                "next": 6103014
+              }
+            ]
+          },
+          {
+            "id": 6103010,
+            "content": "「なぜその穢れた深淵は言葉を発しないのか？\n 「満月の銀の輝きが我が身に満ちても、なぜ女神は答えてくれないのか？」\n 「サリエルよ、まさか暗月派の信徒たちが言うように──\n あなたは天国に赴かず、月に背を向けて悪魔となったのか？」",
+            "npc": 910005,
+            "speakerName": "狂った詩人",
+            "next": 6103011
+          },
+          {
+            "id": 6103014,
+            "content": "あなたは、詩人の注意をひこうと、何度か声をかけた。彼と話をしてみたかったが、彼はその古い歌謡を歌い続けるばかりだった。\n 彼からほかに価値のある情報は得られないだろうと判断し、あなたは背を向けて立ち去ろうとした。"
+          },
+          {
+            "id": 6103011,
+            "content": "「ちょっと待ってーー何と言ったか？」\n 詩人は思いがけない詩句を歌いあげた。それは異端者の中で流れる最も秘められた流言だーー聖湖はかつて神聖だったことはなく、サリエルから始まった神選びは、最初から盛大な生贄だけだった。\n <H>誰か</>の口から、同じような推測を聞いたことがある。",
+            "npc": 910004,
+            "next": 6103012
+          },
+          {
+            "id": 6103012,
+            "content": "詩人は、まるであなたと別の時空にいるかのように、傍若無人に彼の七弦琴を弾き続け、次の歌へと移っていった。\n 彼の歌声が次第に遠ざかり、姿が消えると共に聞こえなくなった。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 329,
     "name": "月は千度墜つ",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event21.T_Rouge_Event21'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event21.T_Rouge_Event21'",
-    "eventSelect": [
-      1151,
-      1152,
-      1153
-    ],
-    "eventStoryline": "Rogue/RouEvent_329",
-    "rlArchiveSubId": 10009101
+    "eventMainIcon": "T_Rouge_Event21",
+    "eventStoryline": [
+      {
+        "id": "17758149970381652836",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17758149970381652834"
+        ],
+        "dialogues": [
+          {
+            "id": 6103101,
+            "content": "焚き火の中から、一面の銅鏡が浮かび上がった。",
+            "next": 6103102
+          },
+          {
+            "id": 6103102,
+            "content": "「若き者よ、私に向かって『鏡よ、鏡』と唱えるがいい。そして心に会いたい者を思い描けば、その者の姿を見ることができるだろう」",
+            "npc": 910005,
+            "speakerName": "銅鏡",
+            "options": [
+              {
+                "id": 6103103,
+                "content": "喋る鏡……？",
+                "next": 6103104
+              }
+            ]
+          },
+          {
+            "id": 6103104,
+            "content": "「私はお前の心の写し鏡……」\n  銅鏡はクスクスと笑い声を上げた。\n  「お前が今もなお、心にかけ続けているものを思い出させてやろう」",
+            "npc": 910005,
+            "speakerName": "銅鏡",
+            "options": [
+              {
+                "id": 6103105,
+                "content": "家族を思い浮かべる。",
+                "next": 6103106
+              },
+              {
+                "id": 6103108,
+                "content": "自分の姿を見つめる。",
+                "next": 6103109
+              },
+              {
+                "id": 6103111,
+                "content": "「あのかけがえのない人」を思い浮かべる。",
+                "next": 6103112
+              }
+            ]
+          },
+          {
+            "id": 6103106,
+            "content": "鏡の中には、見覚えのある姿が次々と浮かんできた。あまりにも長い間、目にすることのなかった顔ぶれだ。\n  母の顔は慈愛に満ち、その声は静かだが力強かった。遊び疲れると、あなたは彼女の衣にすがりつき、柔らかな膝を枕にして眠りについた。彼女が頬を撫でてくれるたび、教義に記された女神フサを思い出したものだ。",
+            "next": 6103107
+          },
+          {
+            "id": 6103109,
+            "content": "鏡の中には、一人の若者の姿が映し出されていた。\n  それが自分であることは分かっている。だが、あなたはどこか<up text=\"ぼうぜんじしつ\">茫然自失</>とした思いだった——あまりにも長い間鏡を見ていなかったせいで、映し出された姿と記憶の中の自分との<up text=\"かいり\">乖離</>に、戸惑いを隠せなかったのだ。刻まれた時間の痕跡を、あなたははっきりと肌で感じた。",
+            "next": 6103110
+          },
+          {
+            "id": 6103112,
+            "content": "鏡の中に、ある人物の顔が浮かび上がった。\n  庭園の小道のように入り組んだ時間の中で、あなたと{性别：彼|彼女}が顔を合わせたのは、わずか三度きりだった。しかし、その面影は焼き付いた印のように、あなたの記憶に刻まれている。",
+            "next": 6103113
+          },
+          {
+            "id": 6103107,
+            "content": "父はいつも<up text=\"みけん\">眉間</>に皺を寄せていたようで、使用人たちは彼の名を耳にするだけでおどおどとしていた。だが、あなたは父を怖がらなかった。彼はいつもあなたを抱き上げ、<up text=\"むしょうひげ\">無精髭</>を触らせてくれたからだ。噂されるほど厳しい人ではないことを、あなたは知っていた。\n  父は忙しく、屋敷にいることは稀だった。そのため、多くの時間を共に過ごした老執事の方が、あなたにとっては父親に近い存在だった。あの髭の老人は実によく喋り、あなたがよちよちと走り回る後ろをいつも追いかけてきた。当時はその小言が疎ましくてならなかったが……今となっては、あの小言さえも懐かしく感じられる。\n  それらの思慕が幽暗な火となり、長きにわたる戦いの中であなたに温もりと希望を与えていたのだ。少なくとも彼らのために、あなたは戦い続けなければならない。\n  ……",
+            "next": 6103114
+          },
+          {
+            "id": 6103110,
+            "content": "時間は奔流のごとく流れ続け、決して止まることはない。それは人を成長させ、強くし、そしていつかは背を曲げ、顔に深い皺を刻んでいく。\n  唯一変わらないのは、その手に握られたランタンの中で揺らめく、不滅の灯火だけだった。\n  ……",
+            "next": 6103114
+          },
+          {
+            "id": 6103113,
+            "content": "{性别：彼|彼女}が一筋の灯火となり、幼いあなたを連れて深淵を突き進んだこと。自らを最も偉大な騎士だと<up text=\"ごうご\">豪語</>していたこと。暗闇の中で灯した数多の焚き火。そして、あなたが{性别：彼|彼女}の手を握った時、その呼吸は次第に弱まりながらも、瞳には決して屈することのない炎が宿っていたこと。\n  ……",
+            "next": 6103114
+          },
+          {
+            "id": 6103114,
+            "content": "銅鏡は消え去った。頬が少し濡れていることに気づき、あなたは鏡の人に涙を流したのだと悟る。\n  だが、涙で足が止まることはない。あなたは立ち上がり、再び前へと歩み出す——",
+            "next": 6103115
+          },
+          {
+            "id": 6103115,
+            "content": "<H>「たとえ月が千度墜ちようとも、我が心の焔は消えず」</>"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 330,
     "name": "海霧の子守唄",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event22.T_Rouge_Event22'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event22.T_Rouge_Event22'",
-    "eventSelect": [
-      1156,
-      1157
-    ],
-    "eventStoryline": "Rogue/RouEvent_330",
-    "rlArchiveSubId": 10009201
+    "eventMainIcon": "T_Rouge_Event22",
+    "eventStoryline": [
+      {
+        "id": "17758150540093466960",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17758150540093466958"
+        ],
+        "dialogues": [
+          {
+            "id": 6103201,
+            "content": "焚き火の傍らで、女の幻影がハープを奏でている。調べは悠々と響き渡る。",
+            "next": 6103202
+          },
+          {
+            "id": 6103202,
+            "content": "「ごきげんよう、旅人さん」と彼女は演奏を止め、あなたに軽く会釈した。\n  「私は礼賛会の<up text=\"しおん\">司音</>です。私の助けが必要かもしれません——あなたに夢を授け、神の癒やしをもたらしましょう」",
+            "npc": 910005,
+            "speakerName": "曲を弾いてる女性",
+            "next": 6103203
+          },
+          {
+            "id": 6103203,
+            "content": "「<up text=\"しおん\">司音</>」——それは礼賛会における特殊な聖職者の一種である。\n  エリュシオン正教では、夢は人と神が通じ合う場であると信じられている。そして<up text=\"しおん\">司音</>は調べによって夢を築き、人々が神意に直接触れられるようにするのだ。\n  あなたもかつてこのような聖儀に参列し、何度か神の癒やしと<up text=\"いまし\">戒</>めを授かったことがある。",
+            "options": [
+              {
+                "id": 6103204,
+                "content": "慰めを授かりたい。",
+                "next": 6103205
+              },
+              {
+                "id": 6103213,
+                "content": "慰めを拒絶する。",
+                "next": 6103214
+              }
+            ]
+          },
+          {
+            "id": 6103205,
+            "content": "「では、お聴きください」\n  女は静かに弦を弾く。\n  「目を閉じて。フサの加護が、あなたと共にありますように」",
+            "npc": 910005,
+            "speakerName": "曲を弾いてる女性",
+            "next": 6103206
+          },
+          {
+            "id": 6103214,
+            "content": "長きにわたる輪廻と戦いの中で、あなたの神への信仰心は薄れていた。神の癒やしなど、所詮は耳当たりの良い綺麗事に過ぎないと考えているのだ。\n  頼れるのは自分自身のみである。",
+            "next": 6103215
+          },
+          {
+            "id": 6103206,
+            "content": "……\n  あなたの前に、満月と運命を司る女神が現れた。彼女は満月の銀光の中に佇んでいる。",
+            "next": 6103207
+          },
+          {
+            "id": 6103215,
+            "content": "「エリュシオンにおいて、<up text=\"しおん\">司音</>が授ける夢を拒む者などおりません」\n  彼女はわずかに驚きの色を見せた。\n  「夢は神の意志であり、あらゆる苦痛を救うものなのです」\n  「ある島の人々は、夢の中での永遠の救済のために現世のすべてを捨てたというのに」",
+            "npc": 910005,
+            "speakerName": "曲を弾いてる女性",
+            "next": 6103216
+          },
+          {
+            "id": 6103207,
+            "content": "「ここに留まってもよいのですよ」 \n  女神は純白の紡ぎ糸を手繰り寄せる。\n  「私の使徒となり、赦しを得なさい。月光が闇を払い、深淵での記憶はすべて消え去るでしょう」",
+            "npc": 910005,
+            "speakerName": "フサ",
+            "next": 6103208
+          },
+          {
+            "id": 6103216,
+            "content": "「神の救済は必要ない。私は自分の力でここを切り抜ける」",
+            "npc": 910004,
+            "next": 6103217
+          },
+          {
+            "id": 6103208,
+            "content": "「……すみませんが、ここに留まることはできません」\n  あなたは首を振り、ランタンを強く握りしめた。",
+            "npc": 910004,
+            "next": 6103209
+          },
+          {
+            "id": 6103217,
+            "content": "「自分の力、ですか……」\n  彼女はそう繰り返すと、何かに思いを馳せるような素振りを見せた。\n  「ならば旅人さん、神の及ばぬ地にあっても、あなたに幸運が巡ってきますように」",
+            "npc": 910005,
+            "speakerName": "曲を弾いてる女性",
+            "next": 6103218
+          },
+          {
+            "id": 6103209,
+            "content": "「なぜかしら？」\n  見下ろす女神の視線には、変わらぬ慈悲が宿っている。\n  「地上の国には、ある島で現世のすべてを捨て、夢の中だけで永遠の救済を得ようとする人々さえいるというのに」",
+            "npc": 910005,
+            "speakerName": "フサ",
+            "next": 6103210
+          },
+          {
+            "id": 6103218,
+            "content": "焚き火は消え、女の幻影も姿を消した。"
+          },
+          {
+            "id": 6103210,
+            "content": "「慈悲に感謝いたします。ですが、私一人が救われるわけにはいかないのです」\n  「現世では今も苦難に耐え、深淵で戦い続けている者がいます。私の帰りを待つ人が、約束の時を待つ人がいるのです」\n  「私は自分の力で、彼らを助けたいのです」",
+            "npc": 910004,
+            "next": 6103211
+          },
+          {
+            "id": 6103211,
+            "content": "「神の救いを拒む者は、そう滅多にいるものではないわ」\n  女神は微かに微笑んだ。満月の銀光が、少しだけ和らいだように見えた。\n  「では、勇敢な人間よ。あなたの行く末を見守るとしましょう」",
+            "npc": 910005,
+            "speakerName": "フサ",
+            "next": 6103212
+          },
+          {
+            "id": 6103212,
+            "content": "……\n  満月の輝きは次第に遠のき、視界は再び闇に包まれた。"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 381,
     "name": "遊びの時間",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 50,
+    "weight": 50,
     "roomCondition": [
       5065
     ],
@@ -1454,20 +3392,67 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event20.T_Rouge_Event20'",
-    "eventSelect": [
-      2001
-    ],
-    "eventStoryline": "Rogue/RouEvent_381",
-    "rlArchiveSubId": 10008101
+    "eventMainIcon": "T_Rouge_Event20",
+    "eventStoryline": [
+      {
+        "id": "1736847954553636378",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1736847954553636375"
+        ],
+        "dialogues": [
+          {
+            "id": 6102901,
+            "content": "あなたは焚き火のそばに腰を下ろし、しばしの休息をとる。\n そのとき、不意に奇妙な音が耳に届いた。最初はすぐ耳元から聞こえたように思えたが、徐々に頭上へと移動していく。\n その音は次第に大きくなり――ざわ、ざわ……何か柔らかいもの同士が擦れ合うような、そんな不気味な気配が辺りを包みはじめた。",
+            "next": 6102902
+          },
+          {
+            "id": 6102902,
+            "content": "「やぁ！幸運な旅人さん！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6102903
+          },
+          {
+            "id": 6102903,
+            "content": "色とりどりの羽根が、頭上からはらはらと舞い落ちてきた。深淵の中で、これほど多くの色彩を同時に目にしたのは、初めてのことだ。気づけば、あなたの足元には羽根が山のように積もっている。まるで街角のイタズラ好きな子どもたちに選ばれてしまった、運の悪い通行人のようだ――気まずさとともに、どこか言いようのない哀れさが、静かに漂っていた。",
+            "next": 6102904
+          },
+          {
+            "id": 6102904,
+            "content": "「つまんないなぁ、ちょっとは反応してくれてもいいんじゃない？こんなに長く深淵にいて、退屈じゃないの？」そう言いながら、ひょろりと現れたのは、滑稽な鳥の仮面を被った人物。逆さまの姿勢のまま、ふわりと降りてきて、ちょうどあなたと視線が合う高さで止まった。どうやってその体勢を保っているのかは謎だが、そんなことは今はどうでもいい。何より気になるのは、その仮面の尖ったクチバシが、今にもあなたの顔に触れそうなほど、ぐいっと近づいていることだった。",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6102905,
+                "content": "悪いけど、あなたに構ってる暇ないから。",
+                "next": 6102906
+              }
+            ]
+          },
+          {
+            "id": 6102906,
+            "content": "「そんなに冷たくしないでよ～。礼賛会のじじいたちに教わらなかった？日々善行を積めば、いつか報われるってさ」\n 「ね、<H>ひとつゲームしようよ</>。勝ったらごほうびをあげるし、負けても罰はなし。損することなんて、なーんにもない。どう？やる気出てきた？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6102907,
+                "content": "いいよ。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 382,
     "name": "遊びの時間",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5064
     ],
@@ -1475,55 +3460,102 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event20.T_Rouge_Event20'",
-    "eventSelect": [
-      2003,
-      2004
-    ],
-    "eventStoryline": "Rogue/RouEvent_382",
-    "rlArchiveSubId": 10008102
+    "eventMainIcon": "T_Rouge_Event20",
+    "eventStoryline": [
+      {
+        "id": "1742196066378954315",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1742196066378954313"
+        ],
+        "dialogues": [
+          {
+            "id": 6101801,
+            "content": "あなたは焚き火のそばに腰を下ろし、しばしの休息をとる。\n そのとき、不意に奇妙な音が耳に届いた。最初はすぐ耳元から聞こえたように思えたが、徐々に頭上へと移動していく。\n その音は次第に大きくなり――ざわ、ざわ……何か柔らかいもの同士が擦れ合うような、そんな不気味な気配が辺りを包みはじめた。",
+            "next": 6101802
+          },
+          {
+            "id": 6101802,
+            "content": "「やぁ！幸運な旅人さん！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "next": 6101803
+          },
+          {
+            "id": 6101803,
+            "content": "色とりどりの羽根が、頭上からはらはらと舞い落ちてきた。深淵の中で、これほど多くの色彩を同時に目にしたのは、初めてのことだ。気づけば、あなたの足元には羽根が山のように積もっている。まるで街角のイタズラ好きな子どもたちに選ばれてしまった、運の悪い通行人のようだ――気まずさとともに、どこか言いようのない哀れさが、静かに漂っていた。",
+            "next": 6101804
+          },
+          {
+            "id": 6101804,
+            "content": "「つまんないなぁ、ちょっとは反応してくれてもいいんじゃない？こんなに長く深淵にいて、退屈じゃないの？」そう言いながら、ひょろりと現れたのは、滑稽な鳥の仮面を被った人物。逆さまの姿勢のまま、ふわりと降りてきて、ちょうどあなたと視線が合う高さで止まった。どうやってその体勢を保っているのかは謎だが、そんなことは今はどうでもいい。何より気になるのは、その仮面の尖ったクチバシが、今にもあなたの顔に触れそうなほど、ぐいっと近づいていることだった。",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6101805,
+                "content": "悪いけど、あなたに構ってる暇ないから。",
+                "next": 6101806
+              }
+            ]
+          },
+          {
+            "id": 6101806,
+            "content": "「そんなに冷たくしないでよ～。礼賛会のじじいたちに教わらなかった？日々善行を積めば、いつか報われるってさ」\n 「ね、<H>ひとつゲームしようよ</>。勝ったらごほうびをあげるし、負けても罰はなし。損することなんて、なーんにもない。どう？やる気出てきた？」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人",
+            "options": [
+              {
+                "id": 6101807,
+                "content": "いいよ。"
+              },
+              {
+                "id": 6101808,
+                "content": "本当に忙しい。",
+                "next": 6101809
+              }
+            ]
+          },
+          {
+            "id": 6101809,
+            "content": "「はいはい、わかったよ～。ワタシだって、無理強いするような悪いヤツじゃないしね」\n 「じゃあ、また今度会おうね！」",
+            "npc": 910005,
+            "speakerName": "鳥面怪人"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 401,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 402,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 403,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5029
     ],
@@ -1531,18 +3563,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 404,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 600,
+    "weight": 600,
     "roomCondition": [
       5030
     ],
@@ -1550,18 +3577,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 405,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5031
     ],
@@ -1569,18 +3591,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 406,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5031
     ],
@@ -1588,18 +3605,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 407,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 2000,
+    "weight": 2000,
     "roomCondition": [
       5032
     ],
@@ -1607,18 +3619,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 408,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 2000,
+    "weight": 2000,
     "roomCondition": [
       5032
     ],
@@ -1626,18 +3633,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 409,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 600,
+    "weight": 600,
     "roomCondition": [
       5061
     ],
@@ -1645,18 +3647,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 410,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5061
     ],
@@ -1664,18 +3661,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 421,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5164
     ],
@@ -1683,18 +3675,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 422,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5163,
       5165,
@@ -1704,18 +3691,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 423,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5180,
       5181,
@@ -1725,18 +3707,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 424,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5183,
       5184,
@@ -1746,18 +3723,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 425,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5186,
       5187,
@@ -1767,18 +3739,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 426,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5189,
       5190,
@@ -1788,18 +3755,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 427,
     "name": "謎の行商人",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5192,
       5193,
@@ -1809,18 +3771,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 501,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -1828,18 +3785,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 502,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -1847,18 +3799,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 503,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -1866,18 +3813,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 504,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -1885,18 +3827,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 505,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -1904,18 +3841,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 506,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -1923,18 +3855,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 507,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -1942,18 +3869,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 508,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -1961,18 +3883,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 509,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -1980,18 +3897,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 510,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -1999,18 +3911,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 511,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2018,18 +3925,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 512,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2037,18 +3939,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 513,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -2056,18 +3953,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 514,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -2075,18 +3967,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 515,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2094,18 +3981,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 516,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2113,18 +3995,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 517,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2132,18 +4009,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 518,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2151,18 +4023,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 521,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2170,18 +4037,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 522,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2189,18 +4051,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 523,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2208,18 +4065,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 524,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2227,18 +4079,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 527,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2246,18 +4093,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 528,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2265,18 +4107,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 529,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2284,18 +4121,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 530,
     "name": "最深の影",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2303,18 +4135,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6001,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2322,18 +4149,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6002,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2341,18 +4163,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6003,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2360,18 +4177,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6004,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2379,18 +4191,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6005,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2398,18 +4205,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6006,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2417,18 +4219,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6007,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2436,18 +4233,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6008,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2455,18 +4247,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6009,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2474,18 +4261,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6011,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2493,18 +4275,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6012,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2512,18 +4289,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6013,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2531,18 +4303,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6014,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2550,18 +4317,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6015,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2569,18 +4331,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6016,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2588,18 +4345,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6017,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2607,18 +4359,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6018,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2626,18 +4373,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6019,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2645,18 +4387,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6021,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2664,18 +4401,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6022,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2683,18 +4415,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6023,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2702,18 +4429,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6024,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2721,18 +4443,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6025,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2740,18 +4457,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6026,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2759,18 +4471,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6027,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2778,18 +4485,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6028,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2797,18 +4499,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6029,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2816,18 +4513,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6101,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2836,18 +4528,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6102,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2856,18 +4543,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6103,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2876,18 +4558,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6104,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2896,18 +4573,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6105,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2916,18 +4588,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6106,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2936,18 +4603,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6107,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2956,18 +4618,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6108,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2976,18 +4633,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6109,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2996,18 +4648,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6110,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3016,18 +4663,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6111,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3036,18 +4678,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6112,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3056,18 +4693,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6114,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3076,18 +4708,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6115,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3096,18 +4723,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6116,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3116,18 +4738,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6117,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3136,18 +4753,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6118,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3156,18 +4768,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6119,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3176,18 +4783,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6120,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3196,18 +4798,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6121,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3216,18 +4813,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6122,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3236,18 +4828,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6123,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3256,18 +4843,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6124,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3276,18 +4858,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6125,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3296,18 +4873,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6127,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3316,18 +4888,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6128,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3336,18 +4903,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6129,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3356,18 +4918,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6130,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3376,18 +4933,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6131,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3396,18 +4948,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6132,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3416,18 +4963,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6133,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3436,18 +4978,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6134,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3456,18 +4993,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6135,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3476,18 +5008,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6136,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3496,18 +5023,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6137,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3516,18 +5038,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6138,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3536,18 +5053,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6201,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3555,18 +5067,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6202,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3574,18 +5081,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6203,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3593,18 +5095,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6204,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3612,18 +5109,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6205,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3631,18 +5123,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6206,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3650,18 +5137,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6207,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3669,18 +5151,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6208,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3688,18 +5165,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6209,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3707,18 +5179,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6210,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3726,18 +5193,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6211,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3745,18 +5207,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6212,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3764,18 +5221,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6213,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3783,18 +5235,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6214,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3802,18 +5249,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6215,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3821,18 +5263,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6216,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3840,18 +5277,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6217,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3859,18 +5291,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6218,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3878,18 +5305,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6219,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3897,18 +5319,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6220,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3916,18 +5333,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6221,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3935,18 +5347,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6222,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3954,18 +5361,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6223,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3973,18 +5375,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6224,
     "name": "離散の暗影",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3992,10 +5389,6 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   }
 ]

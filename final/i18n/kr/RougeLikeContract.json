@@ -2,9 +2,13 @@
   {
     "id": 101,
     "name": "질식 지역",
-    "desc": "자신의 받는 치료가 <Highlight>20.0%</> 감소한다.",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30101001].Vars.HealRate*100)$%"
+    "desc": "자신의 받는 치료가 <Highlight>10.0%</> 감소한다.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101001,
     "heatValue": 2,
@@ -14,9 +18,13 @@
   {
     "id": 102,
     "name": "곤궁 지역",
-    "desc": "자신의 공격이 <Highlight>20.0%</> 감소한다.",
-    "descValues": [
-      "$math.ceil(-#Buff[30101002].AddAttrs[1].Rate*100)$%"
+    "desc": "자신의 공격이 <Highlight>10.0%</> 감소한다.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30101002,
     "heatValue": 2,
@@ -26,9 +34,18 @@
   {
     "id": 103,
     "name": "성장 지역",
-    "desc": "적의 최대 HP가 <Highlight>40.0%</> 상승한다",
-    "descValues": [
-      "$math.ceil(#Buff[30102001].AddAttrs[1].Rate*100)$%"
+    "desc": "적의 최대 HP가 <Highlight>20.0%</> 상승한다",
+    "descLevels": [
+      "20.0%",
+      "40.0%",
+      "60.0%",
+      "80.0%",
+      "100.0%",
+      "120.0%",
+      "140.0%",
+      "160.0%",
+      "180.0%",
+      "200.0%"
     ],
     "globalPassiveId": 30102001,
     "heatValue": 2,
@@ -38,9 +55,18 @@
   {
     "id": 104,
     "name": "구박 지역",
-    "desc": "적의 공격이 <Highlight>20.0%</> 상승한다.",
-    "descValues": [
-      "$math.ceil(#Buff[30102002].AddAttrs[1].Rate*100)$%"
+    "desc": "적의 공격이 <Highlight>10.0%</> 상승한다.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%",
+      "60.0%",
+      "70.0%",
+      "80.0%",
+      "90.0%",
+      "100.0%"
     ],
     "globalPassiveId": 30102002,
     "heatValue": 2,
@@ -50,9 +76,13 @@
   {
     "id": 105,
     "name": "무감각 지역",
-    "desc": "적이 받는 대미지가 <Highlight>20.0%</> 감소한다.",
-    "descValues": [
-      "$math.ceil(#GlobalPassiveData[30102003].Vars.DamagedRate*100)$%"
+    "desc": "적이 받는 대미지가 <Highlight>10.0%</> 감소한다.",
+    "descLevels": [
+      "10.0%",
+      "20.0%",
+      "30.0%",
+      "40.0%",
+      "50.0%"
     ],
     "globalPassiveId": 30102003,
     "heatValue": 3,
@@ -63,7 +93,7 @@
     "id": 106,
     "name": "육종 지역",
     "desc": "일반 적이 처치되면 반경 <Highlight>4</>m의 폭발이 1회 생성되어, 대미지를 입힌다.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 30102004,
     "heatValue": 5,
     "icon": "T_Rou_Contract_Mon_Explode",
@@ -72,9 +102,11 @@
   {
     "id": 107,
     "name": "소동 지역",
-    "desc": "전투·희미한 그림자와 전투·흩어진 그림자에서 추가로 <Highlight>2.0</>명의 지휘자가 나타난다.",
-    "descValues": [
-      "$#GlobalPassiveData[30103001].Vars.Count$"
+    "desc": "전투·희미한 그림자와 전투·흩어진 그림자에서 추가로 <Highlight>1.0</>명의 지휘자가 나타난다.",
+    "descLevels": [
+      "1.0",
+      "2.0",
+      "3.0"
     ],
     "globalPassiveId": 30103001,
     "heatValue": 5,
@@ -84,9 +116,10 @@
   {
     "id": 108,
     "name": "떠들썩한 지역",
-    "desc": "전투·아득한 그림자에서 추가로 <Highlight>2.0</>명의 엘리트 적이 나타난다.",
-    "descValues": [
-      "$#GlobalPassiveData[30103002].Vars.Count$"
+    "desc": "전투·아득한 그림자에서 추가로 <Highlight>1.0</>명의 엘리트 적이 나타난다.",
+    "descLevels": [
+      "1.0",
+      "2.0"
     ],
     "globalPassiveId": 30103002,
     "heatValue": 5,
@@ -97,9 +130,7 @@
     "id": 109,
     "name": "구조 지역",
     "desc": "전투에서 <Highlight>1.0</>개의 적대 장치가 나타난다.",
-    "descValues": [
-      "$#GlobalPassiveData[30103003].Vars.Count$"
-    ],
+    "descLevels": [],
     "globalPassiveId": 30103003,
     "heatValue": 3,
     "icon": "T_Rou_Contract_Room_ExtraMech",
@@ -109,7 +140,7 @@
     "id": 110,
     "name": "물이 마른 지역",
     "desc": "심연 행상인에게 구매 시, 필요한 잿불이 <Highlight>50%</> 상승한다.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 12,
     "icon": "T_Rou_Contract_Mechanics_CostUp",
@@ -119,7 +150,7 @@
     "id": 111,
     "name": "맹목 지역",
     "desc": "선택할 때마다, 선택 가능한 옵션이 1개 <Highlight>감소</>한다.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 9,
     "icon": "T_Rou_Contract_Mechanics_LessChoice",
@@ -129,7 +160,7 @@
     "id": 112,
     "name": "미련한 지역",
     "desc": "선택할 때마다, 강제로 랜덤 선택을 진행한다.",
-    "descValues": [],
+    "descLevels": [],
     "globalPassiveId": 0,
     "heatValue": 21,
     "icon": "T_Rou_Contract_Mechanics_RandomChoice",

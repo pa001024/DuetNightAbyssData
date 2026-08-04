@@ -1,369 +1,2608 @@
 [
   {
     "id": 1,
-    "storyEventName": "Le Commencement et la Fin",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Le Commencement et la Fin",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story15",
+    "condition": [
       5167
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story15.T_Rouge_Story15'",
-    "eventMoment": 3,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "moment": 3,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_SeasonFirst01",
-    "rlArchiveSubId": 20000101,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17407355325341221165",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17407355325341221163"
+        ],
+        "dialogues": [
+          {
+            "id": 6201401,
+            "content": "Ténèbres... ténèbres... ténèbres plus profondes encore.\nTu dérives, englouti sous les eaux immobiles, porté toujours plus bas par un fleuve sans fin.",
+            "next": 6201402
+          },
+          {
+            "id": 6201402,
+            "content": "Puis, de loin, une lueur approche.\nUne <H>lanterne</>.",
+            "next": 6201403
+          },
+          {
+            "id": 6201403,
+            "content": "« Tu es revenu. Je le savais... tu reviendrais. »\nLa flamme tremblante éclaire son visage ridé.",
+            "speakerName": "La vieille femme",
+            "options": [
+              {
+                "id": 6201404,
+                "content": "<I>Vous me connaissez ?</>",
+                "next": 6201405
+              }
+            ]
+          },
+          {
+            "id": 6201405,
+            "content": "« Oui. »\nSes yeux voilés brillent soudain, comme du bois mort où renaît une fleur.\n« Je t’ai attendu... si longtemps. »",
+            "speakerName": "La vieille femme",
+            "options": [
+              {
+                "id": 6201406,
+                "content": "<I>Je crois avoir oublié qui je suis.</>",
+                "next": 6201407
+              }
+            ]
+          },
+          {
+            "id": 6201407,
+            "content": "« Le chemin que nous parcourons est <H>un cercle</>. »\nElle sourit.\n« Maintenant que tu es revenu ici, tout ce que tu avais oublié va te revenir. »",
+            "speakerName": "La vieille femme",
+            "options": [
+              {
+                "id": 6201408,
+                "content": "<I>Que dois-je faire, désormais ?</>",
+                "next": 6201409
+              }
+            ]
+          },
+          {
+            "id": 6201409,
+            "content": "« Quitte cet endroit. Quitte l’<H>Abysse</>. C’est le vœu de <H>tous les toi</> qui ont foulé ce chemin. »\nElle te tend la lanterne. Ses doigts sont glacés, presque fantomatiques. Mais la flamme, elle, rayonne d’un or chaud et brûlant.\nTu remarques sur son cadre un cadran gravé de fines <H>graduations</>.",
+            "speakerName": "La vieille femme",
+            "options": [
+              {
+                "id": 6201410,
+                "content": "<I>Comment puis-je quitter cet endroit ?</>",
+                "next": 6201411
+              }
+            ]
+          },
+          {
+            "id": 6201411,
+            "content": "« Cette lanterne porte la bénédiction des dieux. »\n« Restaure-la avec assez de <H>Lumistella</>, et elle ouvrira une voie dans l’océan de l’Abysse.\n« Et si jamais tu fais face à un péril mortel... alors <H>retourne</> le cadran. »",
+            "speakerName": "La vieille femme",
+            "next": 6201412
+          },
+          {
+            "id": 6201412,
+            "content": "Elle sourit encore, silencieuse et sereine.\n« Avant de partir, peut-être veux-tu entendre encore quelques histoires de l’Abysse. »\n« Elles sont comme des éclats de bois flottant sur le fleuve du temps. »\n« Je te l’ai dit : notre chemin est un cercle. Ces récits sont peut-être ton \"passé\"... peut-être ton \"avenir\". »\n« Mais sans doute possible : <H>ce sont tes histoires</>. »",
+            "speakerName": "La vieille femme"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 2,
-    "storyEventName": "Nul repos n’est permis",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Nul repos n’est permis",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story01",
+    "condition": [
       5151
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story01.T_Rouge_Story01'",
-    "eventMoment": 2,
-    "eventMinRoom": 1,
-    "eventProbability": [
+    "moment": 2,
+    "minRoom": 1,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryFailed01",
-    "rlArchiveSubId": 20000201,
-    "cutOffEvent": true
+    "cutOffEvent": true,
+    "eventStoryline": [
+      {
+        "id": "1749707917144524449",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1749707917144524447"
+        ],
+        "dialogues": [
+          {
+            "id": 6200501,
+            "content": "Les combats sans fin t’ont vidé de tes forces.\nLa dernière braise s’éteint dans ta paume. Ton chemin s’efface.",
+            "next": 6200502
+          },
+          {
+            "id": 6200502,
+            "content": "La lanterne tombe, son verre éclatant dans un fracas tranchant, comme une lame déchirant la nuit.\nDe toutes parts, les ombres se ruent, lacérant ton corps, rongeant tes nerfs.",
+            "next": 6200503
+          },
+          {
+            "id": 6200503,
+            "content": "Puis vient l’abandon.\nTes sens se fondent dans l’obscurité, qui te berce doucement. Elle enveloppe tes plaies, apaise ta fatigue.",
+            "next": 6200504
+          },
+          {
+            "id": 6200504,
+            "content": "Peut-être est-ce ainsi que tout doit finir. Dans un souffle, la nuit te murmure :\n« Tu as assez tenu. »",
+            "next": 6200505
+          },
+          {
+            "id": 6200505,
+            "content": "Oui... tu as lutté de toutes tes forces. À chaque cycle, tu as combattu, souffert, bu le désespoir comme un vin amer.\nToujours {性别:seul|seule}. Toujours sans lumière.",
+            "next": 6200506
+          },
+          {
+            "id": 6200506,
+            "content": "Tu es {性别:épuisé|épuisée}. Laisse-toi aller.",
+            "next": 6200507
+          },
+          {
+            "id": 6200507,
+            "content": "Le sommeil t’emporte dans son berceau d’ombre... Mais soudain, un visage perce ta conscience. Tu ne distingues plus ses traits, pourtant ce souvenir indistinct tranche ta torpeur comme une lame.\nIl secoue ton esprit, soulève une marée.",
+            "next": 6200508
+          },
+          {
+            "id": 6200508,
+            "content": "C’était lui.\nCelui qui avait juré de vaincre les ténèbres à tes côtés.\nCelui qui a fait de toi une victime des cycles.",
+            "next": 6200509
+          },
+          {
+            "id": 6200509,
+            "content": "Tu ne l’as pas encore retrouvé. Tu ne peux pas céder.\nAussi douce soit son étreinte, l’obscurité n’est pas ton destin.\nTu dois continuer. Pour ton but. Pour ta promesse. Pour briser ce cercle absurde.",
+            "options": [
+              {
+                "id": 6200510,
+                "content": "Tourner le cadran",
+                "next": 6200511
+              }
+            ]
+          },
+          {
+            "id": 6200511,
+            "content": "Tu tournes le cadran. Et l’histoire recommence, depuis son origine."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 3,
-    "storyEventName": "Cœur du Chaos",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Cœur du Chaos",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story02",
+    "condition": [
       5152
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story02.T_Rouge_Story02'",
-    "eventMoment": 1,
-    "eventMinRoom": 8,
-    "eventProbability": [
+    "moment": 1,
+    "minRoom": 8,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StorySuccess01",
-    "rlArchiveSubId": 20000301,
-    "cutOffEvent": true
+    "cutOffEvent": true,
+    "eventStoryline": [
+      {
+        "id": "1749707917146524728",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1749707917146524726"
+        ],
+        "dialogues": [
+          {
+            "id": 6200601,
+            "content": "Les directions se dérobent sans cesse dans l’Abysse. Tu ne sais jamais si tu avances... ou si tu recules.\nParfois, l’impression d’être enfermé dans une spirale sans fin t’écrase : un cercle fermé, un ouroboros sans échappatoire.",
+            "next": 6200602
+          },
+          {
+            "id": 6200602,
+            "content": "Mais quand cette silhouette colossale surgit dans ton champ de vision, ton instinct le crie aussitôt : voilà le « cœur battant » de l’Abysse.",
+            "next": 6200603
+          },
+          {
+            "id": 6200603,
+            "content": "Tu lèves ta lanterne. Sa lumière fragile s’écrase contre l’immensité de ses contours et disparaît, engloutie sans merci.\nTout autour, les ténèbres se soulèvent comme une encre trouble, se déversant vers un même centre.",
+            "next": 6200604
+          },
+          {
+            "id": 6200604,
+            "content": "La terre gronde, le sol se rompt sous tes pieds, et tu chutes dans le noir.\nUn instant, tu sens ton propre corps se dissoudre, se mêler à ce flot impur, se délier et couler vers l’Être qui dévore tout.",
+            "next": 6200605
+          },
+          {
+            "id": 6200605,
+            "content": "Un silence strident broie ton crâne. Ton instinct de survie hurle : « fuis ! »",
+            "options": [
+              {
+                "id": 6200606,
+                "content": "<I>Continuer à le fixer</>",
+                "next": 6200607
+              },
+              {
+                "id": 6200615,
+                "content": "<I>Faire demi-tour</>",
+                "next": 6200616
+              }
+            ]
+          },
+          {
+            "id": 6200607,
+            "content": "Tu refuses pourtant.\nTu te redresses dans le vide, la lanterne brandie bien haut, et ton geste seul proclame : « je ne te crains pas. »",
+            "next": 6200608
+          },
+          {
+            "id": 6200616,
+            "content": "Sage décision.\nTu recules, tu pivotes, tu fuis. L’instinct t’arrache au gouffre, même si tu sais qu’aucun chemin ne ramènera tes pas.",
+            "next": 6200617
+          },
+          {
+            "id": 6200608,
+            "content": "Alors, peu à peu, quelque chose fissure ce chaos. Une brèche.\nDe l’insondable obscurité s’infiltre en toi... et, incroyable, tu comprends ce qu’elle te transmet.",
+            "next": 6200609
+          },
+          {
+            "id": 6200617,
+            "content": "Soudain, une présence te glace l’échine. Il est là, derrière toi, muet... et triste de te voir partir.",
+            "next": 6200618
+          },
+          {
+            "id": 6200609,
+            "content": "Des émotions humaines : le doute. La colère. La douleur. Le désespoir.\nEt, par-dessus tout... une tristesse écrasante.\nComme si l’Abysse elle-même aspirait à une fin.",
+            "next": 6200610
+          },
+          {
+            "id": 6200618,
+            "content": "« Veux-tu que je reste ? » chuchotes-tu dans ton cœur.",
+            "next": 6200619
+          },
+          {
+            "id": 6200610,
+            "content": "« Comment puis-je t’aider ? » La question t’échappe, brûlante.",
+            "next": 6200611
+          },
+          {
+            "id": 6200619,
+            "content": "Non. Suis ta route, répond-Il. Au terme du cycle, nous nous reverrons.",
+            "next": 6200620
+          },
+          {
+            "id": 6200611,
+            "content": "Cette lanterne n’éclaire pas assez. Continue ton chemin, murmure-t-Il. Au terme du cycle, tu trouveras la réponse.",
+            "next": 6200612
+          },
+          {
+            "id": 6200620,
+            "content": "« Où s’achève-t-il ? »",
+            "next": 6200621
+          },
+          {
+            "id": 6200612,
+            "content": "« Où s’achève-t-il ? »",
+            "next": 6200613
+          },
+          {
+            "id": 6200621,
+            "content": "La nuit franchit ton épaule et vient emplir l’espace de sa tendresse.\nIl ne reste plus que la lueur vacillante de ta lanterne.",
+            "next": 6200622
+          },
+          {
+            "id": 6200613,
+            "content": "Aucune réponse.\nSeulement cette obscurité qui t’entoure doucement, et la lueur de ta lanterne qui demeure seule, suspendue dans le vide.",
+            "next": 6200614
+          },
+          {
+            "id": 6200622,
+            "content": "Alors tu tournes le cadran. Et le temps s’inverse encore une fois."
+          },
+          {
+            "id": 6200614,
+            "content": "Alors tu tournes le cadran. Et le temps s’inverse encore une fois."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 4,
-    "storyEventName": "Le Marchand abyssal — Lucimèche et Lanterne",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — Lucimèche et Lanterne",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_1",
-    "rlArchiveSubId": 20000401,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17455729469881304103",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17455729469881304101"
+        ],
+        "dialogues": [
+          {
+            "id": 6200701,
+            "content": "Un jeune homme énigmatique se tient près du feu de camp.\nDifficile d’estimer son âge — seule sa voix te le laisse deviner.\nCe n’est pas votre première rencontre.",
+            "next": 6200702
+          },
+          {
+            "id": 6200702,
+            "content": "« Nous revoici, {性别:courageux voyageur|courageuse voyageuse}. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6200703
+          },
+          {
+            "id": 6200703,
+            "content": "Il te salue avec courtoisie.\nTu ne distingues pas ses yeux : un masque de métal anguleux dissimule son visage du front aux joues.",
+            "next": 6200704
+          },
+          {
+            "id": 6200704,
+            "content": "« Ceux qui errent trop longtemps dans l’Abysse se perdent, et finissent par devenir des Umbrés. »\n« Mais la <H>lumière</> de ces objets te guidera, pour que tu ne sois pas englouti.\nDépose-les dans ta lanterne — qu’ils en deviennent des Lucimèches. »\nÀ la place de son regard, le feu se reflète sur l’acier poli.",
+            "speakerName": "Marchand abyssal",
+            "next": 6200705
+          },
+          {
+            "id": 6200705,
+            "content": "« Mais je crois que tu ne l’as jamais oublié. Car tu <H>finis toujours</> par revenir ici. »\n« Comme toujours, j’ai disposé quelques provisions près du feu. Prends ce dont tu as besoin. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6200706,
+                "content": "<I>Qui êtes-vous ?</>",
+                "next": 6200707
+              }
+            ]
+          },
+          {
+            "id": 6200707,
+            "content": "« Encore cette question. Tu me l’as posée tant de fois. Pardonne-moi, je ne puis y répondre. »\n« Non par volonté de cacher la vérité, mais parce que moi-même, ici et maintenant, j’ignore quel nom me convient. »\nIl rit doucement.",
+            "speakerName": "Marchand abyssal",
+            "next": 6200708
+          },
+          {
+            "id": 6200708,
+            "content": "« Alors faisons simple : considère-moi comme un humble <H>marchand</>.\nTout comme toi, tu te dis souvent : \"Je ne suis qu’{性别:un humble voyageur|une humble voyageuse}.\" »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6200709,
+                "content": "<I>Je dois partir.</>",
+                "next": 6200710
+              }
+            ]
+          },
+          {
+            "id": 6200710,
+            "content": "« Adieu, {性别:courageux voyageur|courageuse voyageuse}. Que la flamme de ta lanterne ne s’éteigne jamais. »\nSon visage demeure invisible. \nMais peut-être, derrière le masque, ses yeux abritent-ils eux aussi le reflet vacillant du feu.",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 5,
-    "storyEventName": "Le Marchand abyssal — La Flamme persistante",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — La Flamme persistante",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_2",
-    "rlArchiveSubId": 20000402,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17455729853492415467",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17455729853492415465"
+        ],
+        "dialogues": [
+          {
+            "id": 6200801,
+            "content": "Le Marchand de l’Abysse se tient près du feu de camp, comme à chacune de vos rencontres.\nNulle plainte spectrale, nulle rumeur d’Umbrés : seulement le silence, qui cerne cet endroit.",
+            "next": 6200802
+          },
+          {
+            "id": 6200802,
+            "content": "« Nous revoici, {性别:voyageur égaré|voyageuse égarée}. »\n« Tu es venu pour cette faible <H>lueur</>. »\nSa voix est calme et posée, telle l’eau d’un lac immobile.\n« Et moi, j’attends, pour ajouter à ta lanterne une nouvelle Lucimèche. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6200803,
+                "content": "<I>Pourquoi ne pas simplement me la donner ?</>",
+                "next": 6200804
+              }
+            ]
+          },
+          {
+            "id": 6200804,
+            "content": "« Comme tu le vois, je n’ai plus ce pouvoir. »\nIl secoue la tête.\n« Tout ce que je puis faire désormais, c’est d’user d’un sort modeste pour changer tes quelques Braises en une Lucimèche. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6200805
+          },
+          {
+            "id": 6200805,
+            "content": "Le Marchand prend la lanterne.\nDans ses mains, les Braises s’animent, semblables à des lucioles qui s’envolent, jusqu’à se fondre en une Lucimèche.",
+            "options": [
+              {
+                "id": 6200806,
+                "content": "<I>Merci.</>",
+                "next": 6200807
+              }
+            ]
+          },
+          {
+            "id": 6200807,
+            "content": "Tu secoues doucement la lanterne : grâce à la mèche, la lueur vacillante s’est faite plus claire.\nC’est ton unique compagne. Dans l’obscurité insondable de l’Abysse, elle seule t’empêche de perdre ta route.",
+            "options": [
+              {
+                "id": 6200808,
+                "content": "<I>Je dois partir.</>",
+                "next": 6200809
+              }
+            ]
+          },
+          {
+            "id": 6200809,
+            "content": "« Adieu, {性别:voyageur égaré|voyageuse égarée}. »\n« Que la flamme de ta lanterne ne s’éteigne jamais. »",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 6,
-    "storyEventName": "Le Marchand abyssal — Prisonnière du temps",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — Prisonnière du temps",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_3",
-    "rlArchiveSubId": 20000403,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17455730091213526812",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17455730091213526810"
+        ],
+        "dialogues": [
+          {
+            "id": 6200901,
+            "content": "Encore une fois, tu es revenu ici.\nSi l’Abysse offre un lieu où ton cœur puisse trouver un instant de répit, c’est bien celui-là.",
+            "options": [
+              {
+                "id": 6200902,
+                "content": "<I>Vous êtes toujours là.</>",
+                "next": 6200903
+              }
+            ]
+          },
+          {
+            "id": 6200903,
+            "content": "« Oui. »\nSa voix est égale, douce.\n« Je resterai jusqu’à pouvoir t’aider à mettre fin à ces ténèbres. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6200904,
+                "content": "<I>Mais personne d’autre ne se souviendra de moi.</>",
+                "next": 6200905
+              }
+            ]
+          },
+          {
+            "id": 6200905,
+            "content": "« Les spectres de l’Abysse, les quelques humains qui subsistent... Quand je tourne le cadran pour revenir en arrière, ils m’oublient. Comme si nous ne nous étions jamais rencontrés, jamais parlé. »\n« Même si je sauve quelqu’un, il meurt la fois suivante. »\n« Même si je rencontre beaucoup d’âmes, je finis toujours {性别:seul|seule}. »",
+            "npc": 910004,
+            "next": 6200906
+          },
+          {
+            "id": 6200906,
+            "content": "« Oui. Dans l’Abysse, tout revient, vague après vague, rejeté vers le passé. »\n« Mais toi, tu es {性别:différent|différente}. En tenant ce cadran, tu t’es placé hors du cours du temps. »\nIl laisse échapper un léger soupir.",
+            "speakerName": "Marchand abyssal",
+            "next": 6200907
+          },
+          {
+            "id": 6200907,
+            "content": "{性别:« Ici, dans l’Abysse, tu commandes au temps. Toi seul es <H>éternel</>, avec un pouvoir qui n’appartenait jadis qu’aux dieux. »\n« Mais ce pouvoir n’offre pas un trône : il fait de toi un prisonnier. Tu es condamné à voir tout ce qui t’entoure disparaître, encore et encore, sans jamais le retenir. »|« Ici, dans l’Abysse, tu commandes au temps. Toi seule es <H>éternelle</>, avec un pouvoir qui n’appartenait jadis qu’aux dieux. »\n« Mais ce pouvoir n’offre pas un trône : il fait de toi une prisonnière. Tu es condamnée à voir tout ce qui t’entoure disparaître, encore et encore, sans jamais le retenir. »}\nDans sa voix calme tremble une nuance imperceptible.\n« Pourtant, c’est le seul moyen d’affronter l’Abysse. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6200908,
+                "content": "<I>Je dois partir.</>",
+                "next": 6200909
+              }
+            ]
+          },
+          {
+            "id": 6200909,
+            "content": "« Adieu, {性别:voyageur solitaire|voyageuse solitaire}. »\n« Que la flamme de ta lanterne ne s’éteigne jamais. »",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 7,
-    "storyEventName": "Le Marchand abyssal — Une farce tragique",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — Une farce tragique",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_4",
-    "rlArchiveSubId": 20000404,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548952813542289120",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548952813542289118"
+        ],
+        "dialogues": [
+          {
+            "id": 6201001,
+            "content": "Tu trouves encore un court répit.\nPas d’Umbrés, pas de plaintes d’âmes perdues. Ici, tu es en sécurité.\nTu glisses lentement contre un mur brisé et t’assieds.",
+            "options": [
+              {
+                "id": 6201002,
+                "content": "<I>Je suis {性别:fatigué|fatiguée}.</>",
+                "next": 6201003
+              }
+            ]
+          },
+          {
+            "id": 6201003,
+            "content": "« Encore et encore, j’avance. Encore et encore, je recommence. »\n« Je sais que ce combat est le mien... mais combien de temps durera-t-il encore ? »",
+            "npc": 910004,
+            "next": 6201004
+          },
+          {
+            "id": 6201004,
+            "content": "« Lorsque la bénédiction divine — la <H>Lumistella</> — se rassemblera, et que la lanterne sera restaurée, alors un miracle se manifestera. »\n« Tu porteras une lumière assez forte pour déchirer ces ténèbres. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6201005,
+                "content": "<I>Non. Ce n’est pas ce que je veux savoir.</>",
+                "next": 6201006
+              }
+            ]
+          },
+          {
+            "id": 6201006,
+            "content": "« J’ignore depuis combien de temps je marche ici... Dix ans ? Vingt ? Plus encore ? La seule chose que je compte, c’est le nombre de fois où j’ai tourné le cadran. »\n« Et pourtant, la lanterne brille toujours si faiblement... comme si tout ce que j’ai fait n’avait aucun sens. »\n« Et si je mourais avant de la réparer ? Alors tout ce que j’ai traversé... qu’aurait-ce été ? »\n« Une farce stupide et tragique ? »",
+            "npc": 910004,
+            "next": 6201007
+          },
+          {
+            "id": 6201007,
+            "content": "« Oui. »\nIl ne nie pas, et cela t’étonne.",
+            "speakerName": "Marchand abyssal",
+            "next": 6201008
+          },
+          {
+            "id": 6201008,
+            "content": "« Je t’ai vu lever ton arme encore et encore, chasser les ombres, comme j’ai vu des milliers d’ouvriers tailler la pierre, poser les fondations d’un temple. »\n« J’ai vu une fille jeter des cailloux dans le feu, encore et encore, comme j’ai vu des milliers de paysans semer les champs, année après année. »\n« Tout labeur, toute lutte, pour que tout recommence. Pas seulement toi et moi : les âmes de l’Abysse, les vivants d’en haut — tous rejouent sans fin cette tragédie. »\n« Si cela t’est trop lourd, tu peux à tout moment poser ce fardeau. Alors tout s’achèvera. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6201009,
+                "content": "<I>Refuser</>",
+                "next": 6201010
+              }
+            ]
+          },
+          {
+            "id": 6201010,
+            "content": "Mettre fin à tout — ce serait devenir comme ces spectres errants.\nTon cœur tendre n’existerait plus. Tu ne craindrais plus la solitude, tu ne souffrirais plus de cette absurdité sans fin.\nMais... serait-ce vraiment le bonheur ?",
+            "next": 6201011
+          },
+          {
+            "id": 6201011,
+            "content": "« Non. » Tu reprends ton arme.\n« Je continuerai à me battre. À chercher ces maudits fragments de Lumistella. »",
+            "npc": 910004,
+            "options": [
+              {
+                "id": 6201012,
+                "content": "<I>Je dois partir.</>",
+                "next": 6201013
+              }
+            ]
+          },
+          {
+            "id": 6201013,
+            "content": "« Adieu, {性别:voyageur inflexible|voyageuse inflexible} »\n« Que la flamme de ta lanterne ne s’éteigne jamais. »",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 8,
-    "storyEventName": "Le Marchand abyssal — Menthe sauvage",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — Menthe sauvage",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_5",
-    "rlArchiveSubId": 20000405,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548953041323485126",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548953041323485124"
+        ],
+        "dialogues": [
+          {
+            "id": 6201101,
+            "content": "Le marchand prend ta lanterne. Sans un mot, vous échangez Braises et Lucimèches.\nMais cette fois, tu n’as pas l’intention de t’attarder.",
+            "options": [
+              {
+                "id": 6201102,
+                "content": "<I>Je dois partir.</>",
+                "next": 6201103
+              }
+            ]
+          },
+          {
+            "id": 6201103,
+            "content": "« Tiens, prends ceci. »\nSa voix s’élève derrière toi. Il dépose un objet dans ta main.\n« Cela ne brille pas, il ne requiert donc aucune Braise. »\nC’est un bonbon, limpide, translucide, qui repose dans ta paume tachée de sang et de cendre.",
+            "speakerName": "Marchand abyssal",
+            "next": 6201104
+          },
+          {
+            "id": 6201104,
+            "content": "Tu le poses sur ta langue et le laisses fondre. Le goût de menthe sauvage t’envahit : vif, glacé, pénétrant. Pour la première fois depuis longtemps, ton esprit s’éclaircit... Tu redeviens humain.\nLes Umbrés cessent d’envahir tes pensées. Au contraire, des souvenirs reviennent : une tour dressée jusqu’aux nuages, le chêne qu’enfant tu ne pouvais t’empêcher d’escalader, la crème glacée sur une assiette d’argent, la balançoire qui grinçait dans la cour.\nPreuve que tu as bel et bien vécu.",
+            "next": 6201105
+          },
+          {
+            "id": 6201105,
+            "content": "Et ce mystérieux marchand ? Était-il un homme, ou un spectre ? Aime-t-il le goût du sucre ? Souffre-t-il d’être prisonnier de l’Abysse ? A-t-il lui aussi vécu un jour à la surface, sous la lumière du soleil ?\nTu n’as pas le temps d’y songer.\nIl faut continuer à combattre. Sans fin.",
+            "next": 6201106
+          },
+          {
+            "id": 6201106,
+            "content": "« Adieu, {性别:voyageur lucide|voyageuse lucide} »\n« Que la flamme de ta lanterne ne s’éteigne jamais. »",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 9,
-    "storyEventName": "Le Marchand abyssal — L’écho des pas divins",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — L’écho des pas divins",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_6",
-    "rlArchiveSubId": 20000406,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548953265534681328",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548953265534681326"
+        ],
+        "dialogues": [
+          {
+            "id": 6201201,
+            "content": "Dernièrement, la lassitude t’accable moins. Tu t’es même {性别:surpris|surprise} à échanger quelques mots avec ces spectres qui rôdent.\nEst-ce ton cœur qui s’endurcit, qui s’engourdit... ou bien le signe avant-coureur d’une chute ?\nQu’importe. Pour l’heure, ton esprit est étrangement léger.",
+            "next": 6201202
+          },
+          {
+            "id": 6201202,
+            "content": "« Aujourd’hui, j’ai croisé des adeptes du Sélénisme et du Noctilunisme. »\n« L’un jurait servir la lumière, l’autre les ténèbres. Le plus drôle, c’est que lorsque je leur ai dit que je me fichais de leurs dieux, tous deux ont craché les mêmes insultes. »\n« Et vous ? Croyez-vous en un dieu ? »",
+            "npc": 910004,
+            "next": 6201203
+          },
+          {
+            "id": 6201203,
+            "content": "« Je sers Fusa. »\nC’est la première fois que le marchand répond à une question sur lui-même.\n« Je prononce Son nom, je loue Sa grâce, je célèbre l’éclat de la Pleine Lune. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201204
+          },
+          {
+            "id": 6201204,
+            "content": "Tu hausses les sourcils — tu t’attendais à quelque chose de plus mystérieux, de plus déroutant.",
+            "next": 6201205
+          },
+          {
+            "id": 6201205,
+            "content": "« Donc vous adhérez aux dogmes de l’Orthodoxie Élyséenne ? »\n« Quiconque prie avec ferveur la Déesse de la Pleine Lune serait sauvé, porté par les fils lumineux qu’Elle tisse ? »",
+            "npc": 910004,
+            "next": 6201206
+          },
+          {
+            "id": 6201206,
+            "content": "« Non. Je <H>suis les pas</> de Fusa, mais je ne <H>crois pas</> en Fusa. »\n« J’avais seulement besoin d’un repère sûr, d’un point fixe qui justifie la route que j’ai choisie. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6201207,
+                "content": "<I>Je ne comprends pas.</>",
+                "next": 6201208
+              }
+            ]
+          },
+          {
+            "id": 6201208,
+            "content": "« Nous devons donner, non prendre. »\n« Aimer, non haïr. »\n« Accueillir, non blesser. »\n« Voilà ce que je crois juste. Mais si je crois à la liberté des consciences, alors je n’ai aucune preuve que ces choix soient justes. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201209
+          },
+          {
+            "id": 6201209,
+            "content": "« Alors j’ai renoncé à la \"liberté\". J’ai placé Fusa au-dessus de tout. Ainsi, ce que je tenais pour juste est devenu vérité — irréfutable, sans faille, affranchie du doute. »\nIl soupire doucement.\n« D’une certaine manière... je suis peut-être celui qui L’offense le plus. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201210
+          },
+          {
+            "id": 6201210,
+            "content": "« Donc... ce que vous dites, c’est que... »\n« Si je voulais me convaincre d’avancer encore dans cet Abysse, je pourrais inventer un... dieu de la marche, juste pour me persuader de continuer ? »",
+            "npc": 910004,
+            "next": 6201211
+          },
+          {
+            "id": 6201211,
+            "content": "Le marchand rit doucement.\n« Hmm... tu pourrais le voir ainsi. »",
+            "speakerName": "Marchand abyssal",
+            "options": [
+              {
+                "id": 6201212,
+                "content": "Tu secoues la tête.\n« Vous êtes décidément un être à part... mais j’ai déjà trop traîné. Il est temps de partir. »",
+                "next": 6201213
+              }
+            ]
+          },
+          {
+            "id": 6201213,
+            "content": "« Adieu, {性别:voyageur avisé|voyageuse avisée} »\n« Que la flamme de ta lanterne ne s’éteigne jamais. »",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 10,
-    "storyEventName": "Le Marchand abyssal — Le songe d’argent",
-    "storyEventType": "Histoire",
-    "eventCondition": [],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story03.T_Rouge_Story03'",
-    "eventMoment": -1,
-    "eventMinRoom": 0,
-    "eventProbability": [
+    "name": "Le Marchand abyssal — Le songe d’argent",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story03",
+    "condition": [],
+    "moment": -1,
+    "minRoom": 0,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_StoryShop_7",
-    "rlArchiveSubId": 20000407,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17548953718965877802",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17548953718965877800"
+        ],
+        "dialogues": [
+          {
+            "id": 6201301,
+            "content": "« Je n’ai pas fermé l’œil depuis longtemps. »\nTu y pensais déjà en venant : cette fois, ta requête serait particulière.\n« Pourrais-je vous acheter quelque chose... un rêve ? »\n« Si c’est en votre pouvoir. »",
+            "npc": 910004,
+            "next": 6201302
+          },
+          {
+            "id": 6201302,
+            "content": "« Je ne suis pas un tisseur de rêves. Je ne puis promettre qu’il soit tel que tu le désires. »\nIl secoue lentement la tête.\n« Mais je peux essayer. »\n« Autrefois, quand je racontais des histoires à ma petite sœur, elle dormait toujours d’un sommeil paisible. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201303
+          },
+          {
+            "id": 6201303,
+            "content": "Tu amasses un peu de paille, la disposes tant bien que mal.\nLa fatigue retombe sur toi comme une chape. Tu désires un rêve, une halte, ne serait-ce qu’un instant.",
+            "next": 6201304
+          },
+          {
+            "id": 6201304,
+            "content": "« Il était une fois, » dit-il, « un jeune orfèvre, qui tomba amoureux de la Lune. »\n« En secret, il en mesura les contours, projetant de forger un collier avec les plus précieuses gemmes, et de l’offrir à la lune croissante qu’il chérissait. »\n« Mais lorsque l’ouvrage fut achevé, la Lune avait grandi — le collier ne lui allait plus. Alors il recommença, sertissant toutes les pierres qu’il possédait. Mais lorsqu’il leva les yeux, la Lune avait encore enflé — pleine et ronde comme un plat d’argent. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201305
+          },
+          {
+            "id": 6201305,
+            "content": "Tu reconnais ce conte. Ta mère te l’avait déjà narré, autrefois.\nLe sommeil t’envahit, tiède et doux.",
+            "next": 6201306
+          },
+          {
+            "id": 6201306,
+            "content": "« ... Alors, songea l’orfèvre, je forgerai trois colliers, de tailles différentes. L’un d’eux, au moins, lui ira. »\n« Mais quand il revint vers l’astre aimé, la Lune avait disparu. »\n« Le ciel n’était plus que ténèbres, piquetées d’étoiles. Comme si la Lune n’avait jamais existé. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201307
+          },
+          {
+            "id": 6201307,
+            "content": "Tu sombres dans un rêve argenté.",
+            "next": 6201308
+          },
+          {
+            "id": 6201308,
+            "content": "« ... Ainsi, l’orfèvre qui avait perdu la Lune frappa le métal jour après jour, forgeant des colliers que jamais nul ne porterait. » \n« Ses larmes tombèrent sur la terre — et de ces larmes naquirent des arbres de cristal, dont les fruits brillaient comme la Lune disparue. » \n« Avec le temps, les mortels les appelèrent Arbres Célestes, et les fruits, Phoxènes... »\n« {性别:Voyageur fatigué|Voyageuse fatiguée}... dors-tu déjà ? Alors dors bien, et rêve en paix. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201309
+          },
+          {
+            "id": 6201309,
+            "content": "Premier rêve : une balançoire se balance dans le jardin d’une cour.\nTu es redevenu enfant. Le vieux majordome t’attend, bras ouverts, prêt à t’accueillir.\n« Bienvenue chez toi, mon ▇▇. »\n...",
+            "next": 6201310
+          },
+          {
+            "id": 6201310,
+            "content": "Deuxième rêve : de jeunes chevaliers se tiennent sur une colline où fleurit le thym.\nIls brandissent l’étendard à l’iris d’or, leurs chevelures fouettées par le vent. Ils rient, ils crient ton nom.\n« En avant, mon seigneur ▇▇ ! »",
+            "next": 6201311
+          },
+          {
+            "id": 6201311,
+            "content": "Troisième rêve : tu aperçois {性别:un autre voyageur|une autre voyageuse}, portant une lanterne semblable à la tienne. Tu l’as croisé trois fois déjà.\nSa silhouette s’éloigne, s’efface dans les ténèbres.\nTu cours de toutes tes forces, haletant.",
+            "next": 6201312
+          },
+          {
+            "id": 6201312,
+            "content": "« Reste ! »\nTa voix rauque tremble de détresse, plus encore que dans tes combats.",
+            "npc": 910004,
+            "next": 6201313
+          },
+          {
+            "id": 6201313,
+            "content": "« Je suis {性别:désolé|désolée}, ▇▇. »\n{性别:Le voyageur|La voyageuse} se retourne, mais la flamme vacillante de sa lanterne ne révèle pas son visage.\n« Nos routes vont en <H>sens inverse</>. Alors je dois partir. »",
+            "speakerName": "???",
+            "next": 6201314
+          },
+          {
+            "id": 6201314,
+            "content": "« Mais... je ne veux plus être seul ! »\nTu tends la main, comme un enfant réclamant la dernière friandise. Tu n’attrapes que le vide.\nEt tu pleures. Depuis combien de temps n’avais-tu pas pleuré ?",
+            "npc": 910004,
+            "next": 6201315
+          },
+          {
+            "id": 6201315,
+            "content": "« Ne pleure pas, ▇▇. »\nSa main effleure ta joue, essuie tes larmes avec une douceur infinie. Tu sens son souffle, la chaleur d’un être vivant.\n« Nos routes forment <H>un cercle</>. Même si nos pas suivent des chemins opposés, nous nous retrouverons. »",
+            "speakerName": "???",
+            "next": 6201316
+          },
+          {
+            "id": 6201316,
+            "content": "Sa lanterne s’illumine d’un éclat argenté — plus vif, toujours plus vif, comme une pleine lune versant ses rayons.\n{性别:Il|Elle} s’avance dans cette lumière aveuglante.\n...\n...\nTu t’éveilles au parfum de menthe sauvage.",
+            "next": 6201317
+          },
+          {
+            "id": 6201317,
+            "content": "« Était-ce un beau rêve ? »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201318
+          },
+          {
+            "id": 6201318,
+            "content": "« Oui... il était si long. Comme si des années avaient passé. »",
+            "npc": 910004,
+            "next": 6201319
+          },
+          {
+            "id": 6201319,
+            "content": "« Tant mieux. Tu as encore la chance de pouvoir rêver. »",
+            "speakerName": "Marchand abyssal",
+            "next": 6201320
+          },
+          {
+            "id": 6201320,
+            "content": "Tu te relèves, serrant la lanterne. Ton combat reprend — une route sans fin, une solitude sans rivage.",
+            "options": [
+              {
+                "id": 6201321,
+                "content": "« Merci. Je dois y aller. »",
+                "next": 6201322
+              }
+            ]
+          },
+          {
+            "id": 6201322,
+            "content": "« Adieu, {性别:voyageur endurant|voyageuse endurante} »\n« Puisse venir un jour où ton chemin ne soit plus solitaire. »",
+            "speakerName": "Marchand abyssal"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 11,
-    "storyEventName": "Chute des Oiseaux dans l’Abysse (I)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Chute des Oiseaux dans l’Abysse (I)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story07",
+    "condition": [
       5064,
       5155,
       5075
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story07.T_Rouge_Story07'",
-    "eventMoment": 0,
-    "eventMinRoom": 2,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 2,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_Story11",
-    "rlArchiveSubId": 20000501,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370335783171628455",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370335783171628453"
+        ],
+        "dialogues": [
+          {
+            "id": 6200101,
+            "content": "Le brouhaha de jeunes voix résonne au loin, un son que tu n’avais pas entendu depuis bien longtemps dans l’Abysse.\nDes voix ardentes, vibrantes, encore indemnes de la noirceur rampante.\nTu en es sûr : ce ne sont ni des spectres, ni des illusions, mais bien des humains de chair et d’os.\nÀ les entendre, ils n’ont pas dû mettre les pieds ici depuis bien longtemps.",
+            "next": 6200102
+          },
+          {
+            "id": 6200102,
+            "content": "Tu suis le son malgré toi. Peu à peu, la brume se déchire, et tu aperçois quatre jeunes chevaliers.\nChacun porte armes et atours différents, mais tous arborent l’iris sacré d’Élysium sur leur poitrine.",
+            "next": 6200103
+          },
+          {
+            "id": 6200103,
+            "content": "« Capitaine, on est bien dans la bonne direction ? »\nLa jeune chevalière blonde grimpe trois marches d’un vieil escalier, bondit d’un élan, et redescend aussitôt.\n« Ça ne ressemble qu’à des ruines... »",
+            "speakerName": "Cathy",
+            "next": 6200104
+          },
+          {
+            "id": 6200104,
+            "content": "« Une chose est sûre : on n’est encore jamais venus ici. »\nLe jeune capitaine avance d’un pas posé, dépassant Cathy.\n« Dans le Lac Sacré, on perd vite tout repère. Il ne reste qu’à avancer pas à pas. »",
+            "speakerName": "Flynn",
+            "next": 6200105
+          },
+          {
+            "id": 6200105,
+            "content": "« Et toi, Cathy, tu ne te fatigues pas à sautiller comme ça ? »\nIl laisse échapper un soupir résigné en voyant son amie virevolter.\n« Ménage tes forces. Ce lieu est dangereux, inutile de gaspiller ton énergie hors du combat. »",
+            "speakerName": "Flynn",
+            "next": 6200106
+          },
+          {
+            "id": 6200106,
+            "content": "« Fatiguée ? Pas du tout ! Je n’ai pas ton épée et ton bouclier énormes à traîner. »\nElle fait tourner son pistolet sur son doigt avec aisance.\n« D’ailleurs... pourquoi ça s’appelle \"Lac Sacré\" ? Entre ces Souillés et ces illusions, je ne vois rien de bien sacré. »",
+            "speakerName": "Cathy",
+            "next": 6200107
+          },
+          {
+            "id": 6200107,
+            "content": "« Cathy, modère tes paroles. »\nLe prêtre Charon, tenant son bâton, prend un air grave.\n« Le Lac Sacré est un lieu béni, choisi par les dieux pour les élus. Même corrompu par les ténèbres, il demeure un sanctuaire que nous, enfants d’Élysium, devons respecter. »",
+            "speakerName": "Milton",
+            "next": 6200108
+          },
+          {
+            "id": 6200108,
+            "content": "La quatrième, une sorcière drapée d’un manteau sombre, un long arc dans le dos, ricane doucement, d’un ton moqueur. Son capuchon noir dissimule son visage, rendant toute expression invisible.",
+            "next": 6200109
+          },
+          {
+            "id": 6200109,
+            "content": "Flynn s’apprête à intervenir pour apaiser la tension, mais ses mots se meurent.\nC’est alors qu’il te remarque.",
+            "next": 6200110
+          },
+          {
+            "id": 6200110,
+            "content": "« Vous n’avez pas l’air de faire partie de l’Ordre. Seriez-vous {性别:un voyageur égaré|une voyageuse égarée} en ces lieux ? »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200111,
+                "content": "Je suis {性别:un voyageur|une voyageuse}.",
+                "next": 6200112
+              }
+            ]
+          },
+          {
+            "id": 6200112,
+            "content": "« {性别:Un voyageur|Une voyageuse}... ? » L’étonnement traverse son visage, vite remplacé par une douceur prévenante.\n« Alors sans doute ignorez-vous que ce lieu, la terre sainte d’Élysium, est aujourd’hui trop dangereux pour s’y aventurer. »",
+            "speakerName": "Flynn",
+            "next": 6200113
+          },
+          {
+            "id": 6200113,
+            "content": "« Je me présente : Flynn, chevalier de l’Ordre des Plumes-Célestes, sous l’Église Élyséenne. »\nIl désigne ses compagnons.\n« Nous pourrions vous raccompagner si vous le souhaitez. »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200114,
+                "content": "Inutile. J’ai encore quelque chose à accomplir ici.",
+                "next": 6200115
+              }
+            ]
+          },
+          {
+            "id": 6200115,
+            "content": "« Alors je dois vous prévenir : cette terre sainte est aussi un lieu interdit. Notre devoir nous commande d’en chasser les intrus. »",
+            "speakerName": "Milton",
+            "next": 6200116
+          },
+          {
+            "id": 6200116,
+            "content": "La sorcière en capuchon éclate d’un rire amer.\n« Chasser ? Et comment, je te prie ? Même nous, nous ne savons pas comment en sortir. »\nSes mots tombent, glacials, comme des flocons qui fouettent le visage.",
+            "speakerName": "Calista",
+            "next": 6200117
+          },
+          {
+            "id": 6200117,
+            "content": "« Allez, allez. » La jeune chevalière blonde s’interpose pour calmer le jeu.\n« Ce {性别:voyageur n’est pas un blasphémateur|voyageuse n’est pas une blasphématrice}, et {性别:il|elle} se débrouille visiblement très bien. Autant faire comme si on n’avait rien vu. »",
+            "speakerName": "Cathy",
+            "next": 6200118
+          },
+          {
+            "id": 6200118,
+            "content": "Puis, avec une étincelle dans les yeux, elle se penche vers toi :\n« D’ailleurs, {性别:voyageur|voyageuse}, auriez-vous aperçu une épéiste de treize ou quatorze ans, aux cheveux roses et portant une immense épée dans le dos ? »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200119,
+                "content": "... Non.",
+                "next": 6200120
+              }
+            ]
+          },
+          {
+            "id": 6200120,
+            "content": "« Je vois... Alors, si vous la croisez, dites-lui que l’escouade du <H>Crépuscule Silencieux</> la recherche. Vous nous rendriez un grand service ! »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200121,
+                "content": "Pourquoi la cherchez-vous ?",
+                "next": 6200122
+              }
+            ]
+          },
+          {
+            "id": 6200122,
+            "content": "« Eh bien... c’est, disons, notre commandante. Mais chut, je n’en dirai pas plus, ou Milton me fera la morale. »",
+            "speakerName": "Cathy",
+            "next": 6200123
+          },
+          {
+            "id": 6200123,
+            "content": "« Ça suffit, Cathy. » Le prêtre fronce les sourcils.\n« Finissons notre mission. »",
+            "speakerName": "Milton",
+            "next": 6200124
+          },
+          {
+            "id": 6200124,
+            "content": "« Êtes-vous sûr de ne pas vouloir de notre aide ? Ce lieu est dangereux, peut-être pourriez-vous marcher avec nous... »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200125,
+                "content": "Non, je préfère avancer {性别:seul|seule}.",
+                "next": 6200126
+              }
+            ]
+          },
+          {
+            "id": 6200126,
+            "content": "« Bien. Puisque telle est votre volonté... »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200127,
+                "content": "Et dans un endroit pareil, vous n’avez pas peur ?",
+                "next": 6200128
+              }
+            ]
+          },
+          {
+            "id": 6200128,
+            "content": "Il esquisse un sourire sûr de lui.\n« La foi écarte la peur. Jusqu’à notre prochaine rencontre, {性别:voyageur|voyageuse}, que le Dieu de la Pleine Lune veille sur votre route. »",
+            "speakerName": "Flynn",
+            "next": 6200129
+          },
+          {
+            "id": 6200129,
+            "content": "Les chevaliers s’éloignent ensemble, te laissant {性别:seul|seule} face à la brume infinie."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 12,
-    "storyEventName": "L’Orpheline chemine dans les terres désolées (I)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "L’Orpheline chemine dans les terres désolées (I)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story05",
+    "condition": [
       5103,
       5155,
       5076
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story05.T_Rouge_Story05'",
-    "eventMoment": 0,
-    "eventMinRoom": 6,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 6,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_Story12",
-    "rlArchiveSubId": 20000601,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370336555793086238",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370336555793086236"
+        ],
+        "dialogues": [
+          {
+            "id": 6200201,
+            "content": "La chevalière blonde surgit des ténèbres, sa chevelure d’or traçant dans l’ombre un sillage lumineux.\nMais elle n’est plus tout à fait la même : son vêtement est déchiré, taché d’un rouge sombre.",
+            "next": 6200202
+          },
+          {
+            "id": 6200202,
+            "content": "« Ah, {性别:voyageur|voyageuse}... nos chemins se croisent à nouveau ! »\nElle agite la main, fatiguée mais joyeuse.",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200203,
+                "content": "Et vos compagnons ?",
+                "next": 6200204
+              }
+            ]
+          },
+          {
+            "id": 6200204,
+            "content": "« Eh bien... des Souillés, des spectres — enfin, ces ombres, nous sont tombés dessus. »",
+            "speakerName": "Cathy",
+            "next": 6200205
+          },
+          {
+            "id": 6200205,
+            "content": "« Je les ai combattus, mais quand tout s’est dissipé... ils avaient disparu. Vous ne les auriez pas vus ? »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200206,
+                "content": "Non.",
+                "next": 6200207
+              }
+            ]
+          },
+          {
+            "id": 6200207,
+            "content": "Son regard se baisse, tel un voile qui recouvre le soleil.",
+            "next": 6200208
+          },
+          {
+            "id": 6200208,
+            "content": "« Flynn me répète toujours de rester en formation... Si seulement je l’avais écouté, au lieu de foncer tête baissée... »",
+            "speakerName": "Cathy",
+            "next": 6200209
+          },
+          {
+            "id": 6200209,
+            "content": "« Je n’aurais jamais imaginé que le Lac Sacré soit un endroit pareil... D’ordinaire, même si je me perds, je finis toujours par retrouver les autres. Mais ici... Les lieux changent dès qu’on détourne les yeux. Ce chemin, je viens pourtant de l’emprunter, et il est déjà devenu méconnaissable. C’est comme si... »\nSes poings se serrent.\n« Comme si ces ombres les avaient emportés... effaçant jusqu’à la moindre trace de leur passage. »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200210,
+                "content": "« Ne vous inquiétez pas. Vous finirez par les retrouver... Comme vous m’avez trouvé. »",
+                "next": 6200211
+              }
+            ]
+          },
+          {
+            "id": 6200211,
+            "content": "Elle cligne des yeux, un peu surprise.",
+            "next": 6200212
+          },
+          {
+            "id": 6200212,
+            "content": "« Nous nous serions déjà rencontrés ? »\nSes yeux brillants reflètent ton visage, un reflet qui t’apparaît étrangement étranger.",
+            "speakerName": "Cathy",
+            "next": 6200213
+          },
+          {
+            "id": 6200213,
+            "content": "« J’ai l’impression de vous avoir croisé bien avant notre rencontre au Lac Sacré... »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200214,
+                "content": "Juste une impression.",
+                "next": 6200215
+              }
+            ]
+          },
+          {
+            "id": 6200215,
+            "content": "« Oui, sans doute. »\nUn sourire discret, comme un rayon qui perce les nuages.",
+            "speakerName": "Cathy",
+            "next": 6200216
+          },
+          {
+            "id": 6200216,
+            "content": "« Après m’être perdue, j’ai marché seule si longtemps... Vous rencontrer m’a prouvé que je n’étais pas condamnée à errer seule dans cet enfer. »",
+            "speakerName": "Cathy",
+            "next": 6200217
+          },
+          {
+            "id": 6200217,
+            "content": "« Peut-être que ce n’est qu’un désir... le souffle d’une autre <H>vie vivante</>. »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200218,
+                "content": "J’espère que vous retrouverez vite vos compagnons.",
+                "next": 6200219
+              }
+            ]
+          },
+          {
+            "id": 6200219,
+            "content": "« Merci. Ne vous inquiétez pas, ce sont des chevaliers d’exception. Même sans moi, ils s’en sortiront. C’est à moi de les retrouver... »",
+            "speakerName": "Cathy",
+            "next": 6200220
+          },
+          {
+            "id": 6200220,
+            "content": "Elle t’adresse un dernier sourire :\n« Adieu, {性别:voyageur|voyageuse}. Que vous puissiez, vous aussi, accomplir ce qui vous attend. »",
+            "speakerName": "Cathy",
+            "next": 6200221
+          },
+          {
+            "id": 6200221,
+            "content": "Cathy agite la main et s’éloigne. Autour de toi, la nuit reprend ses droits, comme si l’aube n’avait jamais existé."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 13,
-    "storyEventName": "L’Orpheline chemine dans les terres désolées (II)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "L’Orpheline chemine dans les terres désolées (II)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story06",
+    "condition": [
       5104,
       5155,
       5077
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story06.T_Rouge_Story06'",
-    "eventMoment": 0,
-    "eventMinRoom": 10,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 10,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story13",
-    "rlArchiveSubId": 20000602,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370337590115274595",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370337590115274593"
+        ],
+        "dialogues": [
+          {
+            "id": 6200301,
+            "content": "Encore des ruines, des murs effondrés, des tours brisées.\nUn spectacle mille fois répété dans l’Abysse.",
+            "next": 6200302
+          },
+          {
+            "id": 6200302,
+            "content": "Mais ce ne sont pas que des pierres : des armes abandonnées, des corps à demi enfouis, l’odeur âcre du sang et de la cendre.\nTu as trop souvent croisé semblable vision, d’autres âmes offertes au « Lac Sacré », de gré ou de force.",
+            "next": 6200303
+          },
+          {
+            "id": 6200303,
+            "content": "Un éclat attire ton regard : un insigne maculé de sang, l’iris sacré d’Élysium. Tu l’as vu récemment, bien trop récemment.",
+            "next": 6200304
+          },
+          {
+            "id": 6200304,
+            "content": "Tu dégages les pierres éparses. Là, une épée rougie s’élève encore, fichée droit dans le sol, comme si la main qui la serrait avait refusé de céder, même dans l’agonie.",
+            "next": 6200305
+          },
+          {
+            "id": 6200305,
+            "content": "Autour, les restes parlent d’eux-mêmes : un bâton brisé, des flèches dispersées, un pistolet tordu.\nAlors tu comprends : tu connais ces âmes.",
+            "next": 6200306
+          },
+          {
+            "id": 6200306,
+            "content": "« La foi écarte la peur », répétaient-ils... Mais, au dernier souffle, leur croyance les a-t-elle vraiment délivrés de la douleur ?\nTu ne le sauras jamais. Tu n’as pas besoin de le savoir.",
+            "next": 6200307
+          },
+          {
+            "id": 6200307,
+            "content": "Tu refermes leurs yeux et détournes les talons. Le deuil est inutile : le prochain tour du cadran effacera tout.",
+            "next": 6200308
+          },
+          {
+            "id": 6200308,
+            "content": "... Mais une voix s’élève dans ta mémoire, claire, insistante :\n« C’est à moi de les retrouver... »",
+            "next": 6200309
+          },
+          {
+            "id": 6200309,
+            "content": "Tu te retournes. Et soudain, tu perçois l’anomalie : sur quatre corps figés, un seul échappe à la cendre noire.\nCathy. Ses vêtements sont tachés seulement du sang des Souillés.",
+            "options": [
+              {
+                "id": 6200310,
+                "content": "Alors tu comprends. Comme toi, elle est arrivée trop tard.",
+                "next": 6200311
+              }
+            ]
+          },
+          {
+            "id": 6200311,
+            "content": "Quand elle a retrouvé ses compagnons, ils n’étaient déjà plus que des dépouilles dans les décombres.",
+            "next": 6200312
+          },
+          {
+            "id": 6200312,
+            "content": "Alors elle est restée.\nÀ garder leurs dépouilles.\nÀ racheter son « abandon ».\nÀ défendre, jusqu’au dernier battement, le serment des chevaliers.\n... Ou peut-être que les ténèbres ont fini par consumer son dernier espoir, et qu’elle a supplié la mort de l’emporter.",
+            "next": 6200313
+          },
+          {
+            "id": 6200313,
+            "content": "Désormais, elle ne peut plus te répondre."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 14,
-    "storyEventName": "Chute des Oiseaux dans l’Abysse (II)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Chute des Oiseaux dans l’Abysse (II)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story04",
+    "condition": [
       5065,
       5105,
       5195,
       5075
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story04.T_Rouge_Story04'",
-    "eventMoment": 0,
-    "eventMinRoom": 2,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 2,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story21",
-    "rlArchiveSubId": 20000502,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17370338708858923226",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17370338708858923224"
+        ],
+        "dialogues": [
+          {
+            "id": 6200401,
+            "content": "Des voix s’élèvent au loin, des voix jeunes, animées.\nVoilà si longtemps que tu n’as pas entendu une telle chaleur dans l’Abysse : vibrantes, pleines de vie, encore intactes, épargnées par l’ombre rampante.\nTu sais d’instinct qu’il ne s’agit ni de spectres ni d’illusions : ce sont bien des êtres de chair et de sang.",
+            "next": 6200402
+          },
+          {
+            "id": 6200402,
+            "content": "Tu sais aussi qui ils sont.",
+            "next": 6200403
+          },
+          {
+            "id": 6200403,
+            "content": "Tu avances dans la direction du bruit. La brume se déchire peu à peu... et les voilà : quatre jeunes chevaliers.\nLeurs tenues n’ont pas encore connu la poussière, leurs armes nulle souillure. L’iris sacré de leurs insignes resplendit d’un éclat doré, défiant les ténèbres de son éclat immaculé.",
+            "next": 6200404
+          },
+          {
+            "id": 6200404,
+            "content": "« Capitaine, on est bien dans la bonne direction ? »\nLa jeune chevalière blonde grimpe trois marches d’un vieil escalier, bondit d’un élan, et redescend aussitôt.\n« Ça ne ressemble qu’à des ruines... »",
+            "speakerName": "Cathy",
+            "next": 6200405
+          },
+          {
+            "id": 6200405,
+            "content": "« Une chose est sûre : on n’est encore jamais venus ici. »\nLe jeune capitaine avance d’un pas posé, dépassant Cathy.\n« Dans le Lac Sacré, on perd vite tout repère. Il ne reste qu’à avancer pas à pas. »",
+            "speakerName": "Flynn",
+            "next": 6200406
+          },
+          {
+            "id": 6200406,
+            "content": "« Et toi, Cathy, tu ne te fatigues pas à sautiller comme ça ? »\nIl laisse échapper un soupir résigné en voyant son amie virevolter.\n« Ménage tes forces. Ce lieu est dangereux, inutile de gaspiller ton énergie hors du combat. »",
+            "speakerName": "Flynn",
+            "next": 6200407
+          },
+          {
+            "id": 6200407,
+            "content": "« Fatiguée ? Pas du tout— »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200408,
+                "content": "Il n’a pas tort.",
+                "next": 6200409
+              }
+            ]
+          },
+          {
+            "id": 6200409,
+            "content": "Elle s’arrête net, les yeux écarquillés, tournée vers toi.",
+            "next": 6200410
+          },
+          {
+            "id": 6200410,
+            "content": "« Vous êtes... ? »",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200411,
+                "content": "« {性别:Un voyageur|Une voyageuse}. Je parcours ces lieux depuis plus longtemps que vous. Croyez-moi : cet endroit est bien plus terrible que vous ne l’imaginez. »",
+                "next": 6200412
+              }
+            ]
+          },
+          {
+            "id": 6200412,
+            "content": "« {性别:Un voyageur|Une voyageuse}... ? » L’étonnement traverse son visage, le même qu’à votre dernière rencontre.\n« Mais ici, c’est la terre sainte d’Élysium... Comment êtes-vous entré ? »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6200413,
+                "content": "J’ai mes raisons. Et un but à accomplir. Tout comme vous.",
+                "next": 6200414
+              }
+            ]
+          },
+          {
+            "id": 6200414,
+            "content": "« ... ? »",
+            "speakerName": "Calista",
+            "next": 6200415
+          },
+          {
+            "id": 6200415,
+            "content": "La sorcière, jusque-là muette, relève enfin la tête.\nPour la première fois, tu croises son regard : sombre, méfiant, scrutateur, tel une bulle remontant à la surface d’un lac noir.",
+            "next": 6200416
+          },
+          {
+            "id": 6200416,
+            "content": "« On dirait que vous connaissez une vérité qui nous échappe... Une vérité de l’Abysse. »",
+            "speakerName": "Calista",
+            "next": 6200417
+          },
+          {
+            "id": 6200417,
+            "content": "« Calista ! Voilà des paroles impies, indignes d’une fille d’Élysium ! Ici, c’est le Lac Sacré — le Lac Sacré ! »",
+            "speakerName": "Milton",
+            "next": 6200418
+          },
+          {
+            "id": 6200418,
+            "content": "Calista l’ignore, fixant toujours ton visage, dans l’attente de ta réponse.",
+            "next": 6200419
+          },
+          {
+            "id": 6200419,
+            "content": "Que pourrais-tu dire ?",
+            "next": 6200420
+          },
+          {
+            "id": 6200420,
+            "content": "Les mettre en garde, leur ordonner de rebrousser chemin ? Mais tu sais qu’ils n’écouteraient pas. Leur foi le leur interdit.\nLa foi.\nUn mot plus lourd que n’importe quelle exhortation, plus puissant qu’un avertissement, plus implacable qu’un souvenir.",
+            "next": 6200421
+          },
+          {
+            "id": 6200421,
+            "content": "Pour ceux qui ont grandi sous la lumière de cette croyance, entendre une vérité de trop revient à fixer le soleil : une brûlure à jamais gravée dans l’âme.",
+            "next": 6200422
+          },
+          {
+            "id": 6200422,
+            "content": "Alors tu détournes les yeux.",
+            "options": [
+              {
+                "id": 6200423,
+                "content": "L’Abysse est trompeur. Ne te laisse pas distancer, Cathy.",
+                "next": 6200424
+              }
+            ]
+          },
+          {
+            "id": 6200424,
+            "content": "« Hein ? Pourquoi moi ? »",
+            "speakerName": "Cathy",
+            "next": 6200425
+          },
+          {
+            "id": 6200425,
+            "content": "« Parce que c’est évident. Même {性别:un étranger|une étrangère} voit bien que tu es la plus imprudente du groupe. »",
+            "speakerName": "Flynn",
+            "next": 6200426
+          },
+          {
+            "id": 6200426,
+            "content": "« Mais pas du tout ! Et même si je me perds, je vous retrouve aussitôt. »\nElle gonfle les joues.",
+            "speakerName": "Cathy",
+            "options": [
+              {
+                "id": 6200427,
+                "content": "Pas toujours...",
+                "next": 6200428
+              }
+            ]
+          },
+          {
+            "id": 6200428,
+            "content": "Un frisson passe sur son visage, surprise par la gravité de ton ton.",
+            "next": 6200429
+          },
+          {
+            "id": 6200429,
+            "content": "Flynn intervient aussitôt, digne représentant des Chevaliers d’Élysium.\nIl sait que la foi ne suffit pas : la prudence est aussi une vertu.\nAssez de curiosité pour apprendre, mais jamais au point de courtiser le désastre.\nComme devant une porte interdite entrouverte dans une cathédrale : la sagesse est de détourner le regard et feindre de n’avoir rien vu.",
+            "next": 6200430
+          },
+          {
+            "id": 6200430,
+            "content": "« Nous ignorons qui vous êtes vraiment, mais il est clair que vous avez votre propre chemin. Quant à nous, notre mission nous attend. »\nIl incline la tête avec gravité.\n« Que le Dieu de la Pleine Lune guide vos pas. »",
+            "speakerName": "Flynn",
+            "next": 6200431
+          },
+          {
+            "id": 6200431,
+            "content": "Les chevaliers s’éloignent ensemble, te laissant {性别:seul|seule} face à la brume infinie."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 15,
-    "storyEventName": "Gémissements vers l’Aube (I)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Gémissements vers l’Aube (I)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story08",
+    "condition": [
       5196,
       5195,
       5078
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story08.T_Rouge_Story08'",
-    "eventMoment": 0,
-    "eventMinRoom": 8,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 8,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story22",
-    "rlArchiveSubId": 20000701,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17549052019767075239",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17549052019767075237"
+        ],
+        "dialogues": [
+          {
+            "id": 6201501,
+            "content": "Des pas résonnent dans l’obscurité — lourds, traînants, finissant en un frottement râpeux.\nTu avances vers la source. Quatre silhouettes se dessinent : les chevaliers du Crépuscule Silencieux. Vos routes se croisent à nouveau. Ils ne portent pas de blessures, mais leurs visages n’ont plus rien de la lumière qui les animait lors de votre dernière rencontre.",
+            "next": 6201502
+          },
+          {
+            "id": 6201502,
+            "content": "« Nous devons encore marcher ? Combien de temps a-t-on déjà erré ainsi ? »\nLa voix de la sorcière est saturée de fatigue, comme si la cape sur ses épaules était une dalle de pierre.",
+            "speakerName": "Calista",
+            "next": 6201503
+          },
+          {
+            "id": 6201503,
+            "content": "« Quatre jours... cinq, peut-être ? Ou davantage... Ma montre de poche s’est arrêtée. »\nSa voix râpe comme une lame sur du papier effiloché. Même un prêtre aussi fervent que lui n’arrive plus à préserver sa ferveur habituelle.",
+            "speakerName": "Milton",
+            "next": 6201504
+          },
+          {
+            "id": 6201504,
+            "content": "« Puisque nous sommes tous épuisés, arrêtons-nous ici. Dormez un peu. Je veillerai. »\nLe jeune homme propose avec douceur, bien que sa propre voix trahisse la lassitude.",
+            "speakerName": "Milton",
+            "next": 6201505
+          },
+          {
+            "id": 6201505,
+            "content": "« Je reste avec toi ! Comme ça, si l’un de nous s’assoupit, l’autre pourra le réveiller. »\nElle force la légèreté, et d’un regard, l’empêche de murmurer ses excuses.",
+            "speakerName": "Cathy",
+            "next": 6201506
+          },
+          {
+            "id": 6201506,
+            "content": "Ils déposent leurs sacs sur un sol à peu près plat, improvisant un camp rudimentaire. Tandis que Calista et Milton s’allongent, Flynn et Cathy s’écartent un peu. \nLe silence s’accroche à leurs dos, comme une image figée. \nFlynn baisse la tête, soupirant à voix basse — si bas que seule Cathy l’entend.",
+            "next": 6201507
+          },
+          {
+            "id": 6201507,
+            "content": "« Tiens donc... rare de t’entendre soupirer. »\nSouriante, elle sort un petit paquet froissé.\n« Tu veux un bonbon ? J’en ai fait passer en cachette. Il n’en reste que deux. On partage. »",
+            "speakerName": "Cathy",
+            "next": 6201508
+          },
+          {
+            "id": 6201508,
+            "content": "« ... Non, merci. Tu les aimes, garde-les. »",
+            "speakerName": "Flynn",
+            "next": 6201509
+          },
+          {
+            "id": 6201509,
+            "content": "« C’est toujours meilleur quand on partage avec un ami. »",
+            "speakerName": "Cathy",
+            "next": 6201510
+          },
+          {
+            "id": 6201510,
+            "content": "Elle croque un bonbon, puis glisse l’autre — encore emballé — dans la main de Flynn.\nIl reste muet, la tête basse. \nElle attend, silencieuse, laissant fondre le bonbon sur sa langue, le temps qu’il trouve ses mots.",
+            "next": 6201511
+          },
+          {
+            "id": 6201511,
+            "content": "« As-tu vu... cet Umbré, l’épée à la main ? »\nEnfin, le jeune homme rompt le silence, la voix basse.",
+            "speakerName": "Flynn",
+            "next": 6201512
+          },
+          {
+            "id": 6201512,
+            "content": "« Celui qui frappait tout, même les siens ? Bien sûr que je l’ai vu ! Sa lame d’argent brillait comme dans les légendes... comme celle de ton idole... »\nElle s’interrompt, le regard soudain fixé sur Flynn.\n« Dis-moi pas que c’était... le <H>Chevalier de l’Aube Lunaire</> ? »",
+            "speakerName": "Cathy",
+            "next": 6201513
+          },
+          {
+            "id": 6201513,
+            "content": "« ... Oui. C’était lui. Je connais son visage, ses portraits, ses gravures... Je ne pouvais me tromper. »\nIl enfouit son visage entre ses mains.\n« Et quand je l’ai reconnu... j’ai eu peur. Si même lui a succombé à l’Abysse... alors nous ? Et si moi aussi, un jour, je tournais mon épée contre mes camarades ? »",
+            "speakerName": "Flynn",
+            "next": 6201514
+          },
+          {
+            "id": 6201514,
+            "content": "Elle lui tapote doucement le dos.\n« C’est vrai, l’Abysse est plus terrible que tout ce qu’on imaginait... Mais je crois que la volonté humaine peut l’emporter. »\nSon sourire s’adoucit.\n« Réfléchis : il frappait même les autres Umbrés. Cela ne veut-il pas dire qu’il résistait encore ? Même changé, il se souvenait de son but premier. »",
+            "speakerName": "Cathy",
+            "next": 6201515
+          },
+          {
+            "id": 6201515,
+            "content": "« Mmh... »",
+            "speakerName": "Flynn",
+            "next": 6201516
+          },
+          {
+            "id": 6201516,
+            "content": "Tu détournes le regard, décidé à les laisser en paix. Mais Cathy t’aperçoit.",
+            "next": 6201517
+          },
+          {
+            "id": 6201517,
+            "content": "« Oh ! C’est vous, {性别:le voyageur|la voyageuse} d’avant ! Quelle chance, vous êtes {性别:sain et sauf|saine et sauve} ! »",
+            "speakerName": "Cathy",
+            "next": 6201518
+          },
+          {
+            "id": 6201518,
+            "content": "Flynn s’approche, surpris.\n« Vous n’êtes pas {性别:un homme|une femme} ordinaire. Vous êtes entré dans l’Abysse avant nous... Comment avez-vous gardé une volonté si ferme ? »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201519,
+                "content": "<I>{性别:Je m’y suis simplement accoutumé.|Je m’y suis simplement accoutumée.}</>",
+                "next": 6201527
+              }
+            ]
+          },
+          {
+            "id": 6201527,
+            "content": "<I>{性别:J’ai été perdu, j’ai regretté, j’ai désespéré... mais j’ai fini par accepter.|J’ai été perdue, j’ai regretté, j’ai désespéré... mais j’ai fini par accepter.}</>",
+            "npc": 910004,
+            "next": 6201520
+          },
+          {
+            "id": 6201520,
+            "content": "Flynn hoche la tête, admiratif.\n« Alors... dites-moi. Pensez-vous que nous vaincrons l’Abysse ? »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201521,
+                "content": "<I>Oui.</>",
+                "next": 6201522
+              },
+              {
+                "id": 6201524,
+                "content": "<I>Je... je ne sais pas.</>",
+                "next": 6201525
+              }
+            ]
+          },
+          {
+            "id": 6201522,
+            "content": "« Tu vois ? Même le voyageur le croit. On réussira notre mission. Alors reprends courage ! »",
+            "speakerName": "Cathy",
+            "next": 6201523
+          },
+          {
+            "id": 6201525,
+            "content": "« Même vous... vous n’avez pas cette certitude ? »\nLe regard du jeune homme s’assombrit. Puis, soudain, il se redresse, la voix vibrante d’une résolution fébrile — tu ignores s’il cherche à s’encourager, ou à se mentir.\n« Qu’importe. Nous sommes des chevaliers d’Élysium. Même sans espoir, nous combattrons jusqu’au bout. »",
+            "speakerName": "Flynn",
+            "next": 6201526
+          },
+          {
+            "id": 6201523,
+            "content": "Mais elle se trompe.\nLa « victoire » à laquelle tu crois n’est pas celle que l’Église leur a assignée.\nTu sais trop bien ce qui les attend : douleur et désespoir, encore et encore.\nIls mourront mille fois sans jamais savoir qu’ils vivent déjà en enfer.\nTu ne dis rien pourtant.\nSi l’avenir ne peut être changé... alors peut-être que l’ignorance est une forme de grâce."
+          },
+          {
+            "id": 6201526,
+            "content": "Tu sais trop bien ce qui les attend : douleur et désespoir, encore et encore.\nIls mourront mille fois sans jamais savoir qu’ils vivent déjà en enfer.\nMais face à ses yeux brûlants de conviction, tu n’as pas le cœur de briser son illusion."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 16,
-    "storyEventName": "Gémissements vers l’Aube (II)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Gémissements vers l’Aube (II)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story09",
+    "condition": [
       5197,
       5195,
       5079
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story09.T_Rouge_Story09'",
-    "eventMoment": 0,
-    "eventMinRoom": 14,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 14,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story23",
-    "rlArchiveSubId": 20000702,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17549052293298272094",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17549052293298272092"
+        ],
+        "dialogues": [
+          {
+            "id": 6201601,
+            "content": "Un fracas d’acier jaillit des ténèbres : quelque part devant toi, une bataille fait rage.\nDans l’ombre, tu distingues un jeune chevalier. Rassemblant ses dernières forces, il lève son épée longue et abat l’Umbré qui lui fait face.",
+            "next": 6201602
+          },
+          {
+            "id": 6201602,
+            "content": "Soudain, une ombre file. D’instinct, il brandit son bouclier — une flèche s’y plante. Il se fige : l’empennage porte l’iris doré d’Élysium, mais taché de noir. Une seule archère pouvait décocher cela.",
+            "next": 6201603
+          },
+          {
+            "id": 6201603,
+            "content": "« Calista... ? »",
+            "speakerName": "Flynn",
+            "next": 6201604
+          },
+          {
+            "id": 6201604,
+            "content": "L’Umbré avance, muet, ses membres rongés par l’obscurité se fondant déjà dans sa cape. À l’appel de Flynn, « elle » ne répond pas, bandant une nouvelle fois son arc.",
+            "next": 6201605
+          },
+          {
+            "id": 6201605,
+            "content": "Depuis leurs premiers pas dans l’Abysse, ils ont découvert, horrifiés, que nombre des silhouettes hostiles leur étaient familières. Anciens chevaliers d’Élysium, partis jadis combattre l’Abysse, et qui, après leur mort, furent absorbés, changés en ombres, dressés contre leurs propres compagnons.",
+            "next": 6201606
+          },
+          {
+            "id": 6201606,
+            "content": "C’est là la plus cruelle des malédictions de l’Abysse : vivre est déjà une condamnation. Ceux qui meurent vite deviennent des spectres ordinaires, reflets de leur vie passée. ",
+            "next": 6201607
+          },
+          {
+            "id": 6201607,
+            "content": "Mais ceux qui persistent, refusant de tomber... chaque seconde qui s’écoule les ronge davantage. Le moindre doute, une seule faille dans leur volonté, et les ténèbres s’emparent de leur esprit, les transformant en bêtes démentes, réduits à frapper aveuglément.",
+            "next": 6201608
+          },
+          {
+            "id": 6201608,
+            "content": "Comme celle qui se tient maintenant devant Flynn.",
+            "next": 6201609
+          },
+          {
+            "id": 6201609,
+            "content": "« Non... non, pas toi... je t’en supplie... »\nLes mains crispées sur la garde de son épée commencent à trembler.\n« Milton est déjà tombé... si toi aussi... »",
+            "speakerName": "Flynn",
+            "next": 6201610
+          },
+          {
+            "id": 6201610,
+            "content": "Mais la flèche siffle vers son cœur. Il lève son bouclier. Une seconde flèche passe, lui ouvrant la joue d’un trait de sang.",
+            "next": 6201611
+          },
+          {
+            "id": 6201611,
+            "content": "« Aaaah ! »",
+            "speakerName": "Flynn",
+            "next": 6201612
+          },
+          {
+            "id": 6201612,
+            "content": "Dans un cri, il lève son épée et frappe — encore, encore, encore — jusqu’à ce que l’Umbré se dissolve enfin en cendres. Vacillant, il s’appuie sur sa lame plantée au sol. Devant ce qu’il reste de son ancienne compagne, il s’effondre, sanglotant à s’en briser la voix.",
+            "next": 6201613
+          },
+          {
+            "id": 6201613,
+            "content": "Quand les sanglots s’apaisent enfin, un silence étrange retombe. Le combat est bel et bien terminé, pourtant, l’amie qui combattait à ses côtés — cette fille toujours à bondir, bruyante et pleine de vie — ne revient pas, le sourire aux lèvres, comme à l’accoutumée.",
+            "next": 6201614
+          },
+          {
+            "id": 6201614,
+            "content": "« Cathy... Cathy ? Tu vas bien ? »\nIl s’avance vers elle en traînant son corps couvert de blessures, chaque pas plus lourd que le précédent.",
+            "speakerName": "Flynn",
+            "next": 6201615
+          },
+          {
+            "id": 6201615,
+            "content": "Un silence lourd s’abat. Mais Cathy ne revient pas. Elle reste figée, les bras pendants, haletante comme une noyée. Des volutes sombres s’échappent de ses plaies, s’enroulent à ses membres, noircissent ses cheveux d’or, jusqu’à engloutir son corps tout entier.",
+            "next": 6201616
+          },
+          {
+            "id": 6201616,
+            "content": "Son épée s’écrase dans la boue mêlée de sang et de larmes. Lui-même s’effondre à genoux, brisé.",
+            "next": 6201617
+          },
+          {
+            "id": 6201617,
+            "content": "« Je... j’abandonne. Tu m’entends ? »\nIl ferme les yeux, la tête levée vers le ciel, si cette profondeur d’ombre peut encore s’appeler un ciel, et sa voix tombe, lisse et immobile comme une eau morte.\n« Qui que tu sois... quelles que soient tes raisons de nous infliger cela... j’en ai assez. Je suis épuisé. C’en est assez. Emporte-moi aussi. »",
+            "speakerName": "Flynn",
+            "next": 6201618
+          },
+          {
+            "id": 6201618,
+            "content": "Devant lui, quelque chose rampe dans l’ombre, s’approche. Il ferme les yeux, prêt à accueillir la mort. Mais deux mains soulèvent son épée tombée, et la lui remettent.",
+            "next": 6201619
+          },
+          {
+            "id": 6201619,
+            "content": "« Tu as donc si peu de foi en moi ? »\nSa voix fend la nuit, douce et claire. Une silhouette efface ses larmes, enlace sa tête penchée, couvre son corps ensanglanté d’une étreinte apaisante.\n« Rassure-toi... quoi qu’il arrive, je ne changerai pas. »",
+            "speakerName": "Cathy",
+            "next": 6201620
+          },
+          {
+            "id": 6201620,
+            "content": "« ... Oui. Je te crois. »\nIl ouvre les bras, prêt à embrasser l’obscurité elle-même.",
+            "speakerName": "Flynn",
+            "next": 6201621
+          },
+          {
+            "id": 6201621,
+            "content": "Tu sais que ce n’est qu’un faux espoir, que cela ne leur apportera que plus de souffrance. \nPourtant tu ne peux t’en empêcher : tu lèves ta lanterne et accours.\nSous la lumière du Lumistella, l’ombre se dissipe. Les cheveux de Cathy reprennent leur éclat doré.\nLes deux chevaliers te fixent, pétrifiés.",
+            "next": 6201622
+          },
+          {
+            "id": 6201622,
+            "content": "« {性别:Voyageur|Voyageuse}... ? C’est bien vous ? Vous nous avez sauvés ? »\nLa jeune fille contemple ses mains retrouvées intactes, les tournant comme pour s’assurer qu’elles sont bien réelles. L’étonnement se peint sur son visage, presque incrédule.\n« Merci... ! J’ai toujours su que vous n’étiez pas quelqu’un d’ordinaire... mais jamais je n’aurais imaginé que vous portiez une force pareille. »",
+            "speakerName": "Cathy",
+            "next": 6201623
+          },
+          {
+            "id": 6201623,
+            "content": "« Hah... » souffle Flynn, encore hébété, comme si la scène lui échappait.",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201624,
+                "content": "<I>Inutile de me remercier. Dites-moi plutôt : que comptez-vous faire maintenant ?</>",
+                "next": 6201625
+              }
+            ]
+          },
+          {
+            "id": 6201625,
+            "content": "« Continuer, évidemment ! Mais d’abord, soignons Flynn. »",
+            "speakerName": "Cathy",
+            "next": 6201626
+          },
+          {
+            "id": 6201626,
+            "content": "Elle perçoit ton inquiétude, et lui oppose un sourire éclatant.",
+            "next": 6201627
+          },
+          {
+            "id": 6201627,
+            "content": "« Voyageur, vous souvenez-vous de la question que Flynn vous avait posée, la dernière fois que nous nous sommes rencontrés ? Je crois que j’ai enfin trouvé ma réponse. »\nSa voix est calme, assurée, chaque mot pesé.\n« L’Abysse ne sera pas vaincu par une seule bataille, ni par un seul héros. Il sera vaincu par nous tous, par l’accumulation de tous nos efforts. Tant que nous avançons, même d’un pas infime, nous ajoutons notre part à ce combat. »\n« Un jour... un jour, cela finira par changer quelque chose. Alors il n’est pas nécessaire de craindre notre propre fin : ce qui importe, c’est de continuer à avancer, d’apporter ne serait-ce qu’une goutte à l’océan de la victoire finale. »",
+            "speakerName": "Cathy",
+            "next": 6201628
+          },
+          {
+            "id": 6201628,
+            "content": "« Cathy... je ne pensais pas t’entendre dire ça. À côté de toi, je parais un bien piètre capitaine. »\nIl reprend ses esprits, se redresse grâce à elle.\n« L’Abysse s’étend sans cesse. Si nous n’agissons pas, il engloutira tout Élysium. Même si ce n’est que pour gagner du temps, nous devons combattre jusqu’au bout. Et nous n’avons pas encore retrouvé Dame Lisbell. »",
+            "speakerName": "Flynn",
+            "next": 6201629
+          },
+          {
+            "id": 6201629,
+            "content": "« Exactement ! Nous devons la ramener avec nous. {性别:Voyageur|Voyageuse}, poursuis ton chemin. Ne prends pas notre fardeau. Reçois seulement notre bénédiction. »\nLa main sur le cœur, ses yeux plongent dans les tiens, solennels :\n« <H>Que la Déesse du Destin t’enveloppe de mille rayons de lune, et que tes ailes brillent à jamais, pures et immaculées comme la Pleine Lune.</> »",
+            "speakerName": "Cathy",
+            "next": 6201630
+          },
+          {
+            "id": 6201630,
+            "content": "C’est une bénédiction rare et grave. À Élysium, on ne l’adresse qu’à ceux que l’on pense ne jamais revoir. Ce n’est pas un adieu désespéré : c’est une acceptation sereine du destin.\n« Je souhaite que ton chemin soit sûr... et j’accepte que ce vœu soit peut-être notre dernier adieu. »",
+            "next": 6201631
+          },
+          {
+            "id": 6201631,
+            "content": "Tu inclines la tête, reprends ta lanterne, et avances de nouveau dans la nuit."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 17,
-    "storyEventName": "Chute des Oiseaux dans l’Abysse (III)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Chute des Oiseaux dans l’Abysse (III)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story10",
+    "condition": [
       5066,
       5202,
       5198,
       5075
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story10.T_Rouge_Story10'",
-    "eventMoment": 0,
-    "eventMinRoom": 2,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 2,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story31",
-    "rlArchiveSubId": 20000503,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "17549052579549469196",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17549052579549469194"
+        ],
+        "dialogues": [
+          {
+            "id": 6201701,
+            "content": "Des voix s’élèvent au loin, des voix jeunes, animées.\nVoilà si longtemps que tu n’as pas entendu une telle chaleur dans l’Abysse : vibrantes, pleines de vie, encore intactes, épargnées par l’ombre rampante.\nTu sais d’instinct qu’il ne s’agit ni de spectres ni d’illusions : ce sont bien des êtres de chair et de sang.",
+            "next": 6201702
+          },
+          {
+            "id": 6201702,
+            "content": "Une fois encore, tu croises leur route.",
+            "next": 6201703
+          },
+          {
+            "id": 6201703,
+            "content": "Comme chaque fois, les quatre jeunes chevaliers émergent ensemble de la brume.\nMais leurs silhouettes couvertes de sang hantent toujours ta mémoire. Et tu te demandes : qui est le plus à plaindre ?\nEux, condamnés à mourir encore et encore dans le désespoir ?\nOu toi, condamné à les voir périr à chaque cycle ?",
+            "next": 6201704
+          },
+          {
+            "id": 6201704,
+            "content": "« Capitaine, on est bien dans la bonne direction ? »\nLa jeune chevalière blonde grimpe trois marches d’un vieil escalier, bondit d’un élan, et redescend aussitôt.\n« Ça ne ressemble qu’à des ruines... »",
+            "speakerName": "Cathy",
+            "next": 6201705
+          },
+          {
+            "id": 6201705,
+            "content": "« Une chose est sûre : on n’est encore jamais venus ici. »\nLe jeune capitaine avance d’un pas posé, dépassant Cathy.\n« Dans le Lac Sacré, on perd vite tout repère. Il ne reste qu’à avancer pas à pas. »",
+            "speakerName": "Flynn",
+            "options": [
+              {
+                "id": 6201706,
+                "content": "<I>Rebroussez chemin... tant qu’il est encore temps.</>",
+                "next": 6201707
+              },
+              {
+                "id": 6201716,
+                "content": "<I>Braves chevaliers, que la Déesse de la Pleine Lune protège votre voyage.</>",
+                "next": 6201717
+              }
+            ]
+          },
+          {
+            "id": 6201707,
+            "content": "« Hmm ? Qui êtes-vous... ? »",
+            "speakerName": "Flynn",
+            "next": 6201708
+          },
+          {
+            "id": 6201717,
+            "content": "« Hmm ? »\nTa bénédiction soudaine le laisse interdit.\n« Qui êtes-vous... ? »",
+            "speakerName": "Flynn",
+            "next": 6201718
+          },
+          {
+            "id": 6201708,
+            "content": "« Vous êtes bien les compagnons de Dame Lisbell, n’est-ce pas ? Elle m’a chargé de vous prévenir : l’Abysse est infiniment plus dangereux que tout ce que nous imaginions. Aucune escouade, même valeureuse, ne peut y survivre. Rentrez, je vous en prie. Ne sacrifiez pas vos vies pour rien. »\nQu’importe si ce n’est qu’un mensonge. Tant qu’au moins, <W>cette fois</>, ils peuvent vivre.",
+            "npc": 910004,
+            "next": 6201709
+          },
+          {
+            "id": 6201718,
+            "content": "« Vous êtes les compagnons de Dame Lisbell, n’est-ce pas ? Elle m’a confié ce message : l’Abysse est bien plus terrible que tout ce que vous croyez. Vous affronterez des épreuves redoutables. Soyez prêts. »",
+            "npc": 910004,
+            "next": 6201719
+          },
+          {
+            "id": 6201709,
+            "content": "« Quoi ?! Vous savez où est Dame Lisbell ? Elle va bien ? Où est-elle ? »",
+            "speakerName": "Cathy",
+            "next": 6201710
+          },
+          {
+            "id": 6201719,
+            "content": "« Quoi ?! Vous savez où est Dame Lisbell ? Elle va bien ? Où est-elle ? »",
+            "speakerName": "Cathy",
+            "next": 6201720
+          },
+          {
+            "id": 6201710,
+            "content": "« Attends, Cathy. »\nLe prêtre l’arrête, ses yeux pleins de méfiance posés sur toi.\n« Dame Lisbell n’est pas de celles qui reculent. Ne profanez pas son nom pour nous tromper. Et puis, n’oubliez pas : cette croisade fut ordonnée par Sa Sainteté le Pape lui-même. Même si la route devant nous mène droit en enfer, nous ne reculerons pas. »",
+            "speakerName": "Milton",
+            "next": 6201711
+          },
+          {
+            "id": 6201720,
+            "content": "« Attends, Cathy. Ne crois pas si vite quelqu’un dont nous ignorons tout. »\nLe prêtre t’arrête, son regard empli de suspicion.\n« Dame Lisbell n’a pas une nature si grave. Je doute qu’elle ait jamais parlé de la sorte. Et puis, cette croisade fut décrétée par le Pape en personne. Nous ferons notre devoir, sans qu’on nous le rappelle. »",
+            "speakerName": "Milton",
+            "next": 6201721
+          },
+          {
+            "id": 6201711,
+            "content": "Tu soupires intérieurement.\nLes mortels prononcent parfois le mot « enfer » sans jamais en comprendre le poids véritable.",
+            "next": 6201712
+          },
+          {
+            "id": 6201721,
+            "content": "« Pour ma part, je crois {性别:ce voyageur|cette voyageuse}. Ici, on s’habitue à la folie, un simple changement de caractère n’a rien d’étonnant... »\nElle relève la tête et t’observe longuement, comme pour résoudre une énigme.\n« Mais vous... qui êtes-vous vraiment ? J’ai l’impression... que je vous ai déjà rencontré. »",
+            "speakerName": "Calista",
+            "next": 6201722
+          },
+          {
+            "id": 6201712,
+            "content": "« Vous nous dites de rebrousser chemin... »\nLa sorcière au manteau sombre te fixe de ses yeux insondables, sa voix glaciale.\n« Mais en vérité... cela ne servirait à rien, n’est-ce pas ? »",
+            "speakerName": "Calista",
+            "next": 6201713
+          },
+          {
+            "id": 6201722,
+            "content": "« ... Qui je suis n’a aucune importance. »\nTu offres un sourire apaisé aux jeunes chevaliers.\n« Tout ce que vous devez savoir, c’est que ma bénédiction est sincère. Même si la fin est déjà écrite... je souhaite que vous trouviez un sens à votre route. »",
+            "npc": 910004
+          },
+          {
+            "id": 6201713,
+            "content": "Tu ne réponds pas.\nElle a raison. Même s’ils reculaient maintenant, ils ne retrouveraient jamais la sortie. Dans l’Abysse, « avancer » ou « reculer » ne sont que des illusions.\nLes sauver vraiment... cela n’aurait qu’un seul sens : mettre fin à ce cycle de désespoir.",
+            "next": 6201714
+          },
+          {
+            "id": 6201714,
+            "content": "« Mes amis... »\nTu poses solennellement ta main sur ton cœur et les contemples.\n« <H>Que la Déesse du Destin vous enveloppe de mille rayons de lune, et que vos ailes brillent à jamais, pures et immaculées comme la Pleine Lune.</> »",
+            "npc": 910004,
+            "next": 6201715
+          },
+          {
+            "id": 6201715,
+            "content": "À tes mots, un sourire empreint de tristesse passe sur le visage de Calista. Et soudain, tu comprends : ce qu’elle espérait vraiment, c’était que tu la contredises. Même par un mensonge."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 18,
-    "storyEventName": "Ailes immaculées tachées de sang (I)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Ailes immaculées tachées de sang (I)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story11",
+    "condition": [
       5199,
       5198,
       5080
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story11.T_Rouge_Story11'",
-    "eventMoment": 0,
-    "eventMinRoom": 11,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 11,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story32",
-    "rlArchiveSubId": 20000801,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "175490527999910666452",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "175490527999910666450"
+        ],
+        "dialogues": [
+          {
+            "id": 6201801,
+            "content": "Au loin, tu aperçois deux silhouettes familières, encerclées par une nuée d’Umbrés : Milton et Calista.\nIls combattent dos à dos, taillant vague après vague, mais l’assaut ne cesse de croître.\nAlors tu lèves ta lanterne. Sous l’éclat glacé du Lumistella, les ombres reculent — un répit, rien de plus.",
+            "next": 6201802
+          },
+          {
+            "id": 6201802,
+            "content": "« Vous... vous êtes {性别:celui|celle} que nous avons croisé. »\nLe prêtre sursaute, puis baisse les yeux, honteux.\n« J’ai douté de vous, je vous ai jugé à tort... et malgré cela, vous venez nous secourir. Je vous dois mes excuses, et ma gratitude, {性别:voyageur|voyageuse}. »",
+            "speakerName": "Milton",
+            "next": 6201803
+          },
+          {
+            "id": 6201803,
+            "content": "Elle rabat sa capuche et s’incline légèrement. Ses cheveux d’un noir de jais s’échappent de l’ombre du tissu.\n« Comme je le pensais... vous n’êtes pas un simple mortel. Merci pour votre aide.\nCette lanterne que vous portez... serait-ce un artéfact sacré ? Comment parvient-elle à disperser les Umbrés ? »",
+            "speakerName": "Calista",
+            "options": [
+              {
+                "id": 6201804,
+                "content": "<I>C’est un objet qu’on m’a confié.</>",
+                "next": 6201805
+              }
+            ]
+          },
+          {
+            "id": 6201805,
+            "content": "« Dans ce cas, je n’en demanderai pas davantage. Mais avec elle, nous pourrions traverser l’Abysse plus sûrement. Accepteriez-vous que nous marchions à vos côtés ? »",
+            "speakerName": "Calista",
+            "next": 6201806
+          },
+          {
+            "id": 6201806,
+            "content": "« Cela m’est égal. Mais sachez-le : nos buts diffèrent. Je cherche seulement à réparer cette lanterne, en rassemblant les fragments de Lumistella. »",
+            "npc": 910004,
+            "next": 6201807
+          },
+          {
+            "id": 6201807,
+            "content": "« Qu’importe nos missions... Mon instinct me dit qu’en voyageant à vos côtés, nous serons plus près de la vérité de l’Abysse. »",
+            "speakerName": "Calista",
+            "next": 6201808
+          },
+          {
+            "id": 6201808,
+            "content": "« Calista, qu’est-ce que tu racontes ! »\nAvant même que tu ne répondes, le prêtre s’interpose, furieux.\n« Même séparés des autres, nous restons des chevaliers d’Élysium. Même seul, on ne renonce pas au devoir ! »",
+            "speakerName": "Milton",
+            "next": 6201809
+          },
+          {
+            "id": 6201809,
+            "content": "Son ton s’enflamme, et les flèches de son carquois frémissent contre sa cape.\n« Le devoir, toujours le devoir... Il ne reste que ça dans ta tête ? Regarde ce que nous affrontons ici : Souillés, illusions, spectres errants... Si le Lac Sacré est bien la porte du Paradis des Paradis, comme on nous l’enseigne, alors dis-moi : que sont ces Umbrés ?\nNe ressemble-t-il pas plutôt à la tanière du démon, comme le proclament les Noctilunistes ? »",
+            "speakerName": "Calista",
+            "next": 6201810
+          },
+          {
+            "id": 6201810,
+            "content": "« Tu... tu divagues ! Tu parles comme une hérétique ! »\nIl s’efforce de garder contenance, mais sa voix trahit un doute.\n« Ces Umbrés... ce sont peut-être des âmes qui ont échoué à l’ultime épreuve, dont la foi a vacillé. En les purifiant, nous restaurerons peut-être le Lac Sacré. N’est-ce pas une épreuve imposée par les Neuf ? S’ils nous jugent dignes et constants, ils nous protégeront. »",
+            "speakerName": "Milton",
+            "next": 6201811
+          },
+          {
+            "id": 6201811,
+            "content": "Un rire amer lui échappe, bientôt étouffé par un soupir las.\n« Si tes dieux se souciaient vraiment de nous, ils seraient descendus eux-mêmes pour purifier ce lieu. Mais non... On nous a envoyés ici en offrande. Le but n’était pas de vaincre, mais de nourrir l’Abysse de sacrifices. »\n« Regarde les Umbrés que nous avons croisées : combien étaient des chevaliers comme nous, envoyés avant nous ? »",
+            "speakerName": "Calista",
+            "next": 6201812
+          },
+          {
+            "id": 6201812,
+            "content": "« Des vétérans — plus âgés, forgés par d’innombrables guerres, plus forts et plus sages que nous. Et pourtant, eux aussi sont tombés, changés en spectres errants. Il n’y a pas d’issue. La folie ou la mort... tôt ou tard, ce sera notre sort. »",
+            "speakerName": "Calista",
+            "next": 6201813
+          },
+          {
+            "id": 6201813,
+            "content": "Ses lèvres se pincent, son visage se tend. Ses doigts crispés sur le bâton trahissent son tremblement.\nEnfin, il reprend, d’une voix forcée mais calme.\n« ... Compte tenu des circonstances, je vais faire comme si je n’avais rien entendu. Flynn est absent : c’est à moi que revient le commandement. »\n« Je t’ordonne de cesser tes blasphèmes et de remplir ton devoir de chevalier. »",
+            "speakerName": "Milton",
+            "next": 6201814
+          },
+          {
+            "id": 6201814,
+            "content": "Elle baisse la tête, résignée, et rabat sa capuche.\n« ... Soit. Mourir plus tôt ou plus tard ne change rien. Mais, en amie, je te le demande : si tout ce en quoi tu crois n’est qu’un mensonge, cela vaut-il vraiment la peine d’y sacrifier ta vie ? »",
+            "speakerName": "Calista",
+            "next": 6201815
+          },
+          {
+            "id": 6201815,
+            "content": "Il ne répond pas, secoue doucement la tête, puis s’avance d’un pas et t’incline un salut.\n« Pardonnez-nous cette querelle. Nous allons reprendre la route dès que nous aurons repris nos forces. »\n« Adieu, noble {性别:voyageur|voyageuse}. Que la Déesse de la Pleine Lune veille sur votre chemin. »",
+            "speakerName": "Milton",
+            "options": [
+              {
+                "id": 6201816,
+                "content": "<I>Que la Déesse de la Pleine Lune veille aussi sur le vôtre.</>",
+                "next": 6201817
+              },
+              {
+                "id": 6201818,
+                "content": "<I>Je doute que la Déesse de la Pleine Lune ait encore la force de m’aider.</>",
+                "next": 6201819
+              },
+              {
+                "id": 6201820,
+                "content": "<I>Je crois... que ce n’est pas la foi qui importe, mais notre courage.</>",
+                "next": 6201821
+              }
+            ]
+          },
+          {
+            "id": 6201817,
+            "content": "Milton esquisse un sourire apaisé. Calista détourne le visage, silencieuse.\nTu leur rends un signe de tête, puis reprends ta route."
+          },
+          {
+            "id": 6201819,
+            "content": "Milton détourne les yeux, mal à l’aise, mais se tait. Calista t’adresse un sourire triste, puis baisse la tête.\nTu leur rends un signe de tête, puis reprends ta route."
+          },
+          {
+            "id": 6201821,
+            "content": "Surpris, Milton et Calista échangent un regard. Puis le silence les enveloppe, lourd de réflexion.\nTu n’ajoutes rien. Après tout, ces mots ne sont pas vraiment les tiens — et toi-même, tu n’en saisis pas encore tout le sens.\nTu leur rends un signe de tête, puis reprends ta route."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 19,
-    "storyEventName": "Ailes immaculées tachées de sang (II)",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Ailes immaculées tachées de sang (II)",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story12",
+    "condition": [
       5200,
       5198,
       5081
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story12.T_Rouge_Story12'",
-    "eventMoment": 0,
-    "eventMinRoom": 20,
-    "eventProbability": [
+    "moment": 0,
+    "minRoom": 20,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story33",
-    "rlArchiveSubId": 20000802,
-    "cutOffEvent": false
+    "cutOffEvent": false,
+    "eventStoryline": [
+      {
+        "id": "175490530825311863970",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "175490530825311863968"
+        ],
+        "dialogues": [
+          {
+            "id": 6201901,
+            "content": "Une âcre odeur de sang plane dans l’air, lourde et menaçante.\nCette obscurité sans fond, ce silence oppressant — tout te dit que tu ne trouveras rien de ce que tu cherches.\nEt pourtant... une étrange prémonition t’étreint : comme si quelqu’un, quelque chose, t’appelait à franchir ce seuil.\nAlors, tu avances.",
+            "next": 6201902
+          },
+          {
+            "id": 6201902,
+            "content": "Soudain, des éclats blancs jaillissent dans les ténèbres.\nNon... pas de la lumière.\nEn y regardant mieux, tu distingues des carapaces blanchâtres, celles des Souillés, entassées les unes sur les autres comme les toiles frénétiques d’un peintre hérétique enivré.\nInstinctivement, tu recules d’un pas — et deux silhouettes familières se dressent à tes côtés.",
+            "next": 6201903
+          },
+          {
+            "id": 6201903,
+            "content": "« <I>Kof... kof...</> ça n’en finit jamais... »\nCalista essuie le sang qui perle à ses lèvres et laisse son arc tomber à terre.\n« C’était ma dernière flèche... désormais, il ne reste que la magie. »\n« Hé... j’ai bien mérité ma place auprès de vos dieux, non ? Alors, je vous en conjure : quand je tomberai, ne jetez pas mon corps dans une fosse commune. Laissez-moi au moins un corps intact. »",
+            "speakerName": "Calista",
+            "next": 6201904
+          },
+          {
+            "id": 6201904,
+            "content": "« Ne dis pas n’importe quoi — derrière toi ! »\nMilton abat son bâton d’un geste furieux, une lueur jaillit, déchirant l’ombre.\n« Tch... encore des Umbrés... »",
+            "speakerName": "Milton",
+            "next": 6201905
+          },
+          {
+            "id": 6201905,
+            "content": "Tu pivotes en même temps que Calista : une marée d’ombres déferle sur vous, enjambant les cadavres des Souillés, comme si l’artiste fou avait renversé un nouveau seau d’encre noire sur sa toile.\nTu lèves la lanterne à la hâte — mais rien ne se passe. Et soudain tu comprends : la lumière traverse le bâton de Milton, comme s’il n’était pas là.",
+            "next": 6201906
+          },
+          {
+            "id": 6201906,
+            "content": "Alors la vérité t’éclaire : ce n’est pas le présent. Rien de tout cela n’est réel, sinon une réminiscence, une ombre de mémoire.\nTu es à leurs côtés, oui — mais {性别:impuissant|impuissante}.\nImmobile, spectateur condamné, tu n’as d’autre choix que de les voir s’épuiser, se blesser, s’effondrer.",
+            "next": 6201907
+          },
+          {
+            "id": 6201907,
+            "content": "Les Umbrés tombent, un à un. Quatre restaient... puis trois... deux... enfin un.\nS’il restait à l’un d’eux un souffle pour contre-attaquer.\nSi leurs compagnons les avaient rejoints à temps.\nSi un éclat de Lumistella avait scintillé non loin... alors peut-être. Peut-être auraient-ils survécu.\nMais non. Rien.\nRien que toi — témoin trop tardif.",
+            "next": 6201908
+          },
+          {
+            "id": 6201908,
+            "content": "Une silhouette humaine s’avance. Un Umbré — ancien camarade, peut-être mentor, peut-être ami.\nSa lance noire se tend droit vers le cœur de Calista.\nTu fermes les yeux. Tu refuses de voir.",
+            "next": 6201909
+          },
+          {
+            "id": 6201909,
+            "content": "« Milton... ?! Toi... pourquoi... ? »",
+            "speakerName": "Calista",
+            "next": 6201910
+          },
+          {
+            "id": 6201910,
+            "content": "Tu les rouvres. Et la lance perce la poitrine du prêtre.\nL’ombre se dissout. Milton s’effondre, et le sang éclabousse l’austère blancheur de sa tunique — toujours impeccable, même dans la mort.",
+            "next": 6201911
+          },
+          {
+            "id": 6201911,
+            "content": "« Qu’as-tu fait... ? Pourquoi... ? »\nCalista tombe à genoux, les mains tremblantes, jetant des sorts de guérison dérisoires.\n« N’étais-je pas ton hérétique, à tes yeux ? Pourquoi risquer ta vie pour moi ? N’avais-tu pas une foi à prouver ? Alors pourquoi... pourquoi l’avoir jetée ainsi ? »",
+            "speakerName": "Calista",
+            "next": 6201912
+          },
+          {
+            "id": 6201912,
+            "content": "« Parce que ma foi m’ordonnait... de protéger mes compagnons. Tu peux la mettre en doute, mais cela — j’en suis sûr. »\nPour la première fois, son visage sévère se détend. Un sourire naît, non plus celui du prêtre, mais celui de l’homme.\n« J’ai déjà assez donné aux dieux. Alors, une fois au moins, laisse-moi parler pour moi. Calista... oublie ces serments, ces devoirs. Quitte cet endroit. Vis. »",
+            "speakerName": "Milton",
+            "next": 6201913
+          },
+          {
+            "id": 6201913,
+            "content": "« Hein... ? »",
+            "speakerName": "Calista",
+            "next": 6201914
+          },
+          {
+            "id": 6201914,
+            "content": "« Une fois que je serai parti, tu seras ton propre capitaine. Libre de suivre ton choix. Comme tu l’as toujours dit... fuis. Sors de cet Abysse. Ou cherche {性别:le voyageur|la voyageuse}. Peu importe. Mais vis. »",
+            "speakerName": "Milton",
+            "next": 6201915
+          },
+          {
+            "id": 6201915,
+            "content": "Les larmes roulent sur les joues pâles de Calista, tombant sur la tunique du prêtre, réchauffant un instant le sang déjà figé.\n« Mais... seule... où pourrais-je aller...? »",
+            "speakerName": "Calista",
+            "next": 6201916
+          },
+          {
+            "id": 6201916,
+            "content": "« Tu divagues encore... »\nDe sa main tremblante — celle qui maniait jadis le bâton avec une fermeté inébranlable — Milton détache l’insigne de sa poitrine et le dépose dans la sienne.\n« Tu as toujours été la meilleure d’entre nous. La première à voir la vérité ici. La première à la questionner avec courage. Toi... tu peux y arriver. Tu survivras... »",
+            "speakerName": "Milton",
+            "next": 6201917
+          },
+          {
+            "id": 6201917,
+            "content": "L’illusion se dissipe avant qu’elle n’ait le temps de répondre.\nLe silence retombe. Tu retrouves le corps du prêtre, glacé, inerte.\nDe son flanc, l’ombre suinte, noire et épaisse. Bientôt, lui aussi se relèvera, privé de repos, pour errer comme les autres.",
+            "options": [
+              {
+                "id": 6201918,
+                "content": "<I>Mettre fin à sa souffrance</>",
+                "next": 6201919
+              },
+              {
+                "id": 6201920,
+                "content": "<I>Refuser d’agir</>",
+                "next": 6201921
+              }
+            ]
+          },
+          {
+            "id": 6201919,
+            "content": "Avant que la corruption n’achève son œuvre, tu lèves la lanterne et lui offres le repos.\n« Merci... »\nAs-tu vraiment entendu cette voix ? Ou n’était-ce qu’un écho que ton esprit inventa, pour s’apaiser ?"
+          },
+          {
+            "id": 6201921,
+            "content": "Tu recules, incapable de lever la main.\nMais déjà, l’Umbré se dresse. Cette main livide que son ami venait de laisser échapper, se referme de nouveau sur le bâton.\nIl t’attaque.\nTu pousses un long soupir, lames levées, et l’abats. Comme toujours."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 20,
-    "storyEventName": "Que le vent guide tes ailes",
-    "storyEventType": "Histoire",
-    "eventCondition": [
+    "name": "Que le vent guide tes ailes",
+    "type": "Histoire",
+    "icon": "T_Rouge_Story14",
+    "condition": [
       5201,
       5198
     ],
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Story14.T_Rouge_Story14'",
-    "eventMoment": 1,
-    "eventMinRoom": 20,
-    "eventProbability": [
+    "moment": 1,
+    "minRoom": 20,
+    "probability": [
       1,
       0.1
     ],
-    "eventStoryline": "Rogue/RouEvent_story34",
-    "rlArchiveSubId": 20000901,
-    "cutOffEvent": true
+    "cutOffEvent": true,
+    "eventStoryline": [
+      {
+        "id": "175490533304413061627",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "175490533304413061625"
+        ],
+        "dialogues": [
+          {
+            "id": 6202001,
+            "content": "Encore une fois, tu es parvenu au terme du cycle.\nLes éclats de Lumistella que tu as réunis sont trop faibles pour affronter le cœur de l’Abysse.\nIl te faut, une fois encore, remonter le temps.",
+            "next": 6202002
+          },
+          {
+            "id": 6202002,
+            "content": "Tu erres dans le flot du chaos, sans but.\nTu as croisé Son regard tant de fois qu’il ne t’effraie plus, tu accueilles simplement, en silence, les dernières minutes de ce cycle.\nSoudain, une silhouette familière se détache de l’ombre.",
+            "next": 6202003
+          },
+          {
+            "id": 6202003,
+            "content": "« Ah... c’est vous... vous êtes donc encore en vie. »\nCalista s’appuie contre un pan de mur effondré. Son manteau en lambeaux ne dissimule plus les plaies qui labourent son corps.\n« Qui êtes-vous, en réalité ? Pourquoi... pourquoi n’y a-t-il aucune peur dans vos yeux après tout ce que vous avez vu ? »",
+            "speakerName": "Calista",
+            "options": [
+              {
+                "id": 6202004,
+                "content": "<I>Je l’ai déjà affronté tant de fois... dans tant de cycles.</>",
+                "next": 6202005
+              },
+              {
+                "id": 6202006,
+                "content": "<I>Il est des vérités qu’il vaut mieux ignorer.</>",
+                "next": 6202007
+              }
+            ]
+          },
+          {
+            "id": 6202005,
+            "content": "« Des cycles... ? »\nDans ses yeux passe une lueur, comme chez un érudit qui comprend enfin l’énigme.\n« Ah... je vois. Tout s’explique. Voilà pourquoi votre regard sur nous était si... plein de compassion. Vous avez déjà vu, mille fois, notre fin... n’est-ce pas ? Alors bientôt je les rejoindrai à nouveau... et, à y penser ainsi, la mort semble soudain moins terrible. »",
+            "speakerName": "Calista",
+            "next": 6202008
+          },
+          {
+            "id": 6202007,
+            "content": "Calista esquisse un sourire las.\n« Vous avez raison... Je n’ose imaginer ce qu’il vous a fallu traverser pour posséder un calme à la fois si redoutable... et si puissant. »\nSes yeux noirs se posent sur toi, d’une douceur inattendue, comme ceux d’une amie au moment des adieux.\n« J’ai toujours senti que vous nous cachiez quelque chose... Mais je veux croire que vous aviez vos raisons, comme eux avaient leur foi. »",
+            "speakerName": "Calista",
+            "next": 6202008
+          },
+          {
+            "id": 6202008,
+            "content": "« Prenez ceci... S’il vous plaît... gardez-le avec vous. Considérez que c’est ma dernière requête. »\nD’une main tremblante, elle te tend un carnet usé.\n« Milton m’a dit de fuir... mais je sais que je ne rentrerai pas. Alors, au moins, que cette vie serve encore à quelque chose. »",
+            "speakerName": "Calista",
+            "next": 6202009
+          },
+          {
+            "id": 6202009,
+            "content": "« Dans cet Abysse... j’ai passé tant de temps à me demander quelle foi était la vraie. La Déesse de la Pleine Lune ou celle de la Lune Noire ? Je n’ai jamais trouvé la réponse. Je me suis même querellée avec mes compagnons. »\nElle pousse un soupir, mi-ironique, mi-accablé.\n« Aujourd’hui je comprends enfin : la vérité d’une foi importe peu. Ce qui compte, c’est ce que font ceux qui y croient. Mes compagnons l’ont prouvé par leurs actes — et j’ai trouvé cela juste. Alors, pour finir, je vous offre ma bénédiction... au nom de leur foi, qu’elle soit vraie ou non. »",
+            "speakerName": "Calista",
+            "next": 6202010
+          },
+          {
+            "id": 6202010,
+            "content": "« Alors... Voyageur... »\nSa main pâle tremble contre sa poitrine. Ses yeux déjà voilés s’efforcent de saisir ta silhouette.\n« <H>Que la Déesse du Destin t’enveloppe de mille rayons de lune, et que tes ailes brillent à jamais, pures et immaculées comme la Pleine Lune.</> »",
+            "speakerName": "Calista",
+            "next": 6202011
+          },
+          {
+            "id": 6202011,
+            "content": "Son souffle s’éteint.\nTu refermes doucement ses paupières.\nUn sourire paisible demeure sur ses lèvres, comme si elle s’était simplement endormie.",
+            "next": 6202012
+          },
+          {
+            "id": 6202012,
+            "content": "Tu ouvres le carnet qu’elle t’a confié.\nLe papier est taché de poussière et de sang, mais l’écriture reste lisible.\n« Moi, Calista, membre du Crépuscule Silencieux de l’Ordre des Plumes-Célestes sous l’Église Élyséenne, consigne ici tout ce que j’ai observé du Lac Sacré. Si quelqu’un trouve ce carnet, puisse-t-il lui offrir ne serait-ce qu’un mince secours pour sortir d’ici. »",
+            "next": 6202013
+          },
+          {
+            "id": 6202013,
+            "content": "À la lumière de ta lanterne, tu parcours ces pages tracées à la hâte dans la pénombre.\nElles recensent des Umbrés et des illusions : leurs faiblesses, et les moyens de les dissiper.\nPuis une page retient ton attention :\n« Il est certain désormais que les écrits du <H>Noctilunisme</H> ne sont pas entièrement faux... Le Lac Sacré n’a aucun lien avec le Paradis des Paradis. Le prétendu \"appel divin\" n’est en réalité qu’un sacrifice. Cet endroit est saturé de la rancune et des malédictions des morts. »\n« Ma famille servait la Déesse de la Lune Noire et le cœur de l’Abysse. Elle croyait qu’une des Sept Vertus, <H>Shaliel</>, n’est jamais montée aux Paradis des Paradis mais est devenue le <H>Roi Démon</> sous ce lac — le cœur même de l’Abysse. Il dévore les âmes pour les offrir à Nepha. »",
+            "next": 6202014
+          },
+          {
+            "id": 6202014,
+            "content": "« Longtemps je me suis raccrochée à l’Orthodoxie, refusant d’y croire. Mais chaque recoin de l’Abysse me demande : et si les écrits du Noctilunisme disaient vrai ? Si la fin du monde n’était que ténèbres et néant ? »\n« Alors... l’Abysse est-il invincible ? »\n« Hélas, mon corps épuisé ne tiendra pas assez pour trouver la réponse. »",
+            "next": 6202015
+          },
+          {
+            "id": 6202015,
+            "content": "« Milton m’a raconté qu’une <H>Épée Sainte</>, <H>Koranu</>, s’est brisée jadis dans le Lac Sacré. C’était une relique de l’Église, dotée d’un pouvoir hors du commun...\nEt j’ai vu, dans cet Abysse, un voyageur portant une lanterne capable de chasser les Umbrés. »\n« S’il existe quelque chose qui puisse vaincre l’Abysse, je crois que ce sont ces deux choses. »",
+            "next": 6202016
+          },
+          {
+            "id": 6202016,
+            "content": "Tu vois qu’il reste encore beaucoup de pages. Ton impatience te pousse à les tourner à toute vitesse — qu’avait-elle donc encore découvert ?\nMais bientôt, tu comprends : le reste de ses notes ne parle plus de l’Abysse.",
+            "next": 6202017
+          },
+          {
+            "id": 6202017,
+            "content": "« À toi qui lis ces lignes, merci d’être allé si loin. Je t’en prie, souviens-toi d’eux pour moi. »",
+            "next": 6202018
+          },
+          {
+            "id": 6202018,
+            "content": "Ses mots t’arrachent un instant à l’Abysse, et t’emportent ailleurs :\nun petit dortoir dans le camp des chevaliers d’Élysium, baigné de lumière dorée.\nTu ouvres le journal d’une jeune chevalière, et son histoire, celle de ses trois compagnons, t’y attend.",
+            "next": 6202019
+          },
+          {
+            "id": 6202019,
+            "content": "Ils s’étaient entraînés ensemble :\n« Vous formez presque une escouade, tous les quatre ! — le maître d’armes nous avait répété ça tant de fois que Flynn avait fini par le prendre au sérieux et proposé de nous trouver un nom. Cathy, évidemment, avait suivi aussitôt — ces deux-là étaient toujours en train de chahuter. Mais je n’aurais jamais cru que Milton se prêterait à ce jeu. »\n« Avait-il, lui aussi, des rêves de héros cachés ? »\n« \"Crépuscule Silencieux\" ou \"Patates Vaillantes\" — c’étaient les deux noms proposés par Flynn et Cathy. Milton et moi avons voté sans hésiter pour le premier. Étant donné que le repas du jour était un ragoût de pommes de terre, je soupçonne fortement Cathy d’avoir improvisé le sien en mangeant. »\n« Quant à Flynn et son \"Crépuscule\"... Personne d’autre n’aurait remarqué. Mais nous savions tous qu’il rendait là un hommage discret à son chevalier préféré, le \"Chevalier de l’Aube Lunaire\".",
+            "next": 6202020
+          },
+          {
+            "id": 6202020,
+            "content": "Ils avaient combattu ensemble :\n« En marche, Cathy disparaissait toujours sans qu’on s’en aperçoive. Au début, on s’inquiétait, mais elle réapparaissait chaque fois à l’endroit le plus improbable pour nous faire sursauter. À force, on n’y faisait plus attention. Mais comment faisait-elle ? Son cerveau n’est clairement pas taillé pour apprendre une magie de téléportation... »\n« Milton, ce rat de bibliothèque, avait même emporté des livres au front en disant qu’il les lirait pendant ses temps libres. Incroyable... »\n« Puis un jour, une flèche enflammée de l’Empire a réduit sa pile en cendres. Il traîna toute la journée une mine sombre comme la nuit... Franchement, il aurait dû remercier ce soldat de l’Empire : son paquetage avait au moins perdu les deux tiers de son poids. »",
+            "next": 6202021
+          },
+          {
+            "id": 6202021,
+            "content": "Ils avaient accepté leur mission ensemble :\n« Pour éviter les ennuis, je n’ai rien dit à mes parents de mon inscription à l’expédition contre l’Abysse — seulement à mon frère. Mais lui aussi s’est mis à me sermonner, parlant de complot de l’Église et jurant que le Roi Démon ferait de nous tous des sacrifices... C’était épuisant. »\n« En vérité, l’idée d’affronter l’Abysse ne m’attirait pas du tout. Mais Flynn était tellement enthousiaste que je n’ai pas eu le cœur de refuser. Dans les campagnes précédentes, nous n’avions jamais été en première ligne, nous perdions plus que nous ne gagnions. Il devait rêver d’avoir enfin l’occasion de se prouver... Alors je l’ai suivi, pour l’aider à réaliser son rêve de chevalier. Après tout, tant qu’on reste ensemble, peu importe où l’on va. »",
+            "next": 6202022
+          },
+          {
+            "id": 6202022,
+            "content": "...",
+            "next": 6202023
+          },
+          {
+            "id": 6202023,
+            "content": "Tu tournes encore quelques pages, et atteins la dernière.",
+            "next": 6202024
+          },
+          {
+            "id": 6202024,
+            "content": "« Ô dieux silencieux — si, comme Milton le croyait, Votre regard est réellement posé sur nous... accordez-moi cette dernière grâce. »\n« Laissez mon âme rejoindre la leur. »\n« Alors je Vous pardonnerai — Votre indifférence, Votre cruauté. Je pardonnerai chaque épreuve que Vous nous avez imposée, chaque mensonge que Vous avez tissé. »",
+            "next": 6202025
+          },
+          {
+            "id": 6202025,
+            "content": "<H>« Mes ailes n’ont plus besoin de la clarté de la Pleine Lune. Qu’un vent léger, seulement, me porte là où ils m’attendent. »</>",
+            "next": 6202026
+          },
+          {
+            "id": 6202026,
+            "content": "Tu refermes le carnet. La chaleur de ses pages subsiste encore au bout de tes doigts.",
+            "next": 6202027
+          },
+          {
+            "id": 6202027,
+            "content": "« Je vous le promets... je briserai ce cycle. Et, sous l’éclat de la Pleine Lune, vous serez réunis. »",
+            "npc": 910004
+          }
+        ]
+      }
+    ]
   }
 ]

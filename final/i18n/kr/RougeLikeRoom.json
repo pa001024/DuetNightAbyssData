@@ -3,8 +3,7 @@
     "id": 101,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -12,18 +11,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 102,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -31,18 +25,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 103,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -50,18 +39,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 104,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -69,18 +53,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 105,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -88,18 +67,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 106,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -107,18 +81,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 107,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -126,18 +95,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 108,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -145,18 +109,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 109,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -164,18 +123,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 110,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -184,18 +138,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 111,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -204,18 +153,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 112,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -224,18 +168,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 113,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -244,18 +183,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 114,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -264,18 +198,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 115,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -284,18 +213,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 116,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -304,18 +228,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 117,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -324,18 +243,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 118,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -344,18 +258,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 119,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -363,18 +272,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 120,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -382,18 +286,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 121,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -401,18 +300,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 122,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -420,18 +314,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 123,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -439,18 +328,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 124,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -458,18 +342,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 125,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -477,18 +356,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 126,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -496,18 +370,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 127,
     "name": "희미한 그림자",
     "roomType": 1,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -515,18 +384,13 @@
     "tokenAward": 160,
     "endPointsBase": 800,
     "endPointsExtras": 200,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 201,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5010
     ],
@@ -534,18 +398,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 202,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5012
     ],
@@ -553,18 +412,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 203,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5017
     ],
@@ -572,18 +426,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 204,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5067
     ],
@@ -591,18 +440,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 205,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5010
     ],
@@ -610,18 +454,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 206,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5012
     ],
@@ -629,18 +468,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 207,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5017
     ],
@@ -648,18 +482,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 208,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5067
     ],
@@ -667,18 +496,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 209,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5013
     ],
@@ -686,18 +510,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 210,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5018
     ],
@@ -705,18 +524,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 211,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5068
     ],
@@ -724,18 +538,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 212,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5013
     ],
@@ -743,18 +552,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 213,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5018
     ],
@@ -762,18 +566,13 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 214,
     "name": "아득한 그림자",
     "roomType": 2,
-    "roomSubType": 1,
-    "roomWeight": 100000,
+    "weight": 100000,
     "roomCondition": [
       5068
     ],
@@ -781,38 +580,72 @@
     "tokenAward": 360,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 301,
     "name": "호수에 비친 그림자",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event19.T_Rouge_Event19'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event19.T_Rouge_Event19'",
-    "eventSelect": [
-      1011,
-      1012
-    ],
-    "eventStoryline": "Rogue/RouEvent_301",
-    "rlArchiveSubId": 10000101
+    "eventMainIcon": "T_Rouge_Event19",
+    "eventStoryline": [
+      {
+        "id": "1715072973679414138",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1715072964431413638"
+        ],
+        "dialogues": [
+          {
+            "id": 6100101,
+            "content": "모닥불 부근에서 왠지 모르게 수선화가 가득 핀 물이 솟아오른다.\n한 여인이 수면에 비친 그림자를 내려다보고 있다. 흐릿하지만 아름다운 그 그림자는 마치 별빛에 취한 듯하다.",
+            "next": 6100102
+          },
+          {
+            "id": 6100102,
+            "content": "\"내가 사랑하는 사람은, 도대체 어디에 있나요?\"\n\"아트라시아 전체를 돌아다녔고, 루카 공화국의 푸른 섬과 화서의 푸르른 골짜기를 찾아 헤맸고, 이스엘의 바람이 머무는 숲속을 찾아 헤맸고, 아스카드 봄날에 부서진 살얼음을 찾아 헤맸어요.\"",
+            "npc": 910005,
+            "speakerName": "아름다운 여인",
+            "next": 6100103
+          },
+          {
+            "id": 6100103,
+            "content": "\"하지만 아직도 사랑하는 사람을 찾지 못했어요.\"\n\"저만큼이나 아름다운 미인이, 이 엘리시안의 성스러운 호수에 갇혀 있는 것 같아요.\"\n그녀는 호수 면에 비친 그림자를 보고 중얼중얼 혼잣말을 한다.",
+            "npc": 910005,
+            "speakerName": "아름다운 여인",
+            "options": [
+              {
+                "id": 6100104,
+                "content": "\"그건 단지 당신의 그림자일 뿐이에요.\"",
+                "next": 6100105
+              },
+              {
+                "id": 6100106,
+                "content": "호수에서 수선화를 따려고 시도한다."
+              }
+            ]
+          },
+          {
+            "id": 6100105,
+            "content": "\"당신은 누구죠? 지나가는 여행자인가요?\"\n그녀는 고개를 들어, 살짝 당신을 힐끗 본다.\n\"만약 그녀를 구할 방법을 찾는다면, 다시 저를 만나러 오세요.\"",
+            "npc": 910005,
+            "speakerName": "아름다운 여인"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 302,
     "name": "알 수 없는 오늘 Ⅲ",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5008,
       5009,
@@ -822,62 +655,231 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1101,
-      1102
-    ],
-    "eventStoryline": "Rogue/RouEvent_302",
-    "rlArchiveSubId": 10000203
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "171851536988011639815",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536988011639813"
+        ],
+        "dialogues": [
+          {
+            "id": 6100201,
+            "content": "외로운 노인이 산처럼 쌓인 무기 더미 옆에서 쉬지 않고 망치를 휘두른다.\n망치를 한 번 두드리자, 만물이 가라앉는다.\n망치를 두 번 두드리자, 불꽃이 튄다.\n당신이 다가갔지만, 노인은 고개를 들지 않는다.",
+            "next": 6100202
+          },
+          {
+            "id": 6100202,
+            "content": "\"또 하나가 죽는구나.\"\n\"지금이 몇 년도지?\"",
+            "npc": 910005,
+            "speakerName": "고독한 노인",
+            "options": [
+              {
+                "id": 6100203,
+                "content": "대답한다.",
+                "next": 6100204
+              }
+            ]
+          },
+          {
+            "id": 6100204,
+            "content": "당신은 입을 벌리고, 답을 말하려 하지만...\n지금이 몇 년도... 지금이 어느 해더라?\n긴 어둠 속에서, 당신은 이미 시간의 감각을 잊어버렸다.",
+            "next": 6100206
+          },
+          {
+            "id": 6100206,
+            "content": "그는 당신의 대답을 기다리지 못한다.",
+            "next": 6100207
+          },
+          {
+            "id": 6100207,
+            "content": "\"보아하니 자네도 똑같구먼.\" 그는 한숨을 쉰다.\n\"난 여기에서 얼마나 오래 갇혀있었는지 기억도 나지 않아. 아무것도 잡지 못했지, 얼굴 주름이랑 이 망치 빼고는.\"",
+            "npc": 910005,
+            "speakerName": "고독한 노인",
+            "next": 6100208
+          },
+          {
+            "id": 6100208,
+            "content": "\"불이 꺼지기 전에... 말해 봐, 뭘 원하지?\"",
+            "npc": 910005,
+            "speakerName": "고독한 노인",
+            "options": [
+              {
+                "id": 6100209,
+                "content": "쌓여 있는 무기 중 하나를 고른다."
+              },
+              {
+                "id": 6100210,
+                "content": "하나 만들어 달라고 부탁한다."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 303,
     "name": "직몽사",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event02.T_Rouge_Event02'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event02.T_Rouge_Event02'",
-    "eventSelect": [
-      1021,
-      1022
-    ],
-    "eventStoryline": "Rogue/RouEvent_303",
-    "rlArchiveSubId": 10000301
+    "eventMainIcon": "T_Rouge_Event02",
+    "eventStoryline": [
+      {
+        "id": "171851536988611639917",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536988611639915"
+        ],
+        "dialogues": [
+          {
+            "id": 6100301,
+            "content": "노랫소리가 적막한 모닥불가에 울려 퍼진다.\n한 여자가 느릿느릿 걸어온다. 그녀의 발걸음은 깃털처럼 가볍지만, 목소리는 새처럼 은은하다.",
+            "next": 6100302
+          },
+          {
+            "id": 6100302,
+            "content": "깊은 졸음이 쏟아진다.\n당신 눈앞의 어둠이 종이처럼 구겨져, 물에 젖는다.\n......",
+            "next": 6100303
+          },
+          {
+            "id": 6100303,
+            "content": "당신은 오후의 숲과 샘을 거닌다.\n흐르는 물은 융단 같은 풀밭 사이에서 소리를 내고, 햇빛은 무성한 잎사귀 틈을 비집고 나와 다발로 쏟아진다.\n조용히 아침이슬을 홀짝이는 흰 날다람쥐, 바다고양이, 노란 산토끼는 발자국 소리에 놀라지 않는다. 당신은...",
+            "options": [
+              {
+                "id": 6100304,
+                "content": "이슬 한 방울을 받는다.",
+                "next": 6100305
+              },
+              {
+                "id": 6100306,
+                "content": "한 줄기의 햇살을 안는다.",
+                "next": 6100307
+              }
+            ]
+          },
+          {
+            "id": 6100305,
+            "content": "당신은 황혼의 선술집에 앉아 있다.\n음유시인은 풍금을 연주하고, 귀항 선원은 박자를 맞추며 합창을 한다.\n짭조름한 저녁 바람에 달콤한 맥아주를 마시며, 당신은 북적이는 군중 속으로 걸어가 흥겨운 춤을 춘다. 당신은...",
+            "next": 6100308
+          },
+          {
+            "id": 6100307,
+            "content": "당신은 성당의 유리창 아래로 엎드린다.\n거대한 그림 위의 백의 여신은 자비롭게 당신을 내려다본다. 높고, 고요하고, 슬프게.\n만월의 신이 알록달록한 모자이크 아래로 내려와, 당신의 이마에 입 맞추고, 당신의 뺨에 차가운 보석 관을 씌운다...",
+            "next": 6100308
+          },
+          {
+            "id": 6100308,
+            "content": "퉁!\n누군가가 당신의 이마를 튕긴다. 당신은 통증에 깜짝 놀라 일어난다.",
+            "next": 6100309
+          },
+          {
+            "id": 6100309,
+            "content": "\"이 엘리시안 최고의 직몽가가 고생고생해서 꿈을 짓고 있는데, 당신은 거기 누워서 잠을 자면서도 쿠퍼 하나도 내놓지 않는군요!\"",
+            "npc": 910005,
+            "speakerName": "꿈을 짓는 여인",
+            "next": 6100310
+          },
+          {
+            "id": 6100310,
+            "content": "\"얼른 일어나요! 자면 안 돼요!\"\n그녀는 화를 내며, 또 당신의 이마를 한 대 때린다.",
+            "npc": 910005,
+            "speakerName": "꿈을 짓는 여인"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 304,
     "name": "랜턴 거래",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event18.T_Rouge_Event18'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event18.T_Rouge_Event18'",
-    "eventSelect": [
-      1026,
-      1027,
-      1028
-    ],
-    "eventStoryline": "Rogue/RouEvent_304",
-    "rlArchiveSubId": 10000401
+    "eventMainIcon": "T_Rouge_Event18",
+    "eventStoryline": [
+      {
+        "id": "171851536989511640003",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536989511640001"
+        ],
+        "dialogues": [
+          {
+            "id": 6100401,
+            "content": "한 노인이 모닥불 옆으로 걸어간다. 그의 손에 랜턴이 들려 있는 것이 보인다.",
+            "next": 6100402
+          },
+          {
+            "id": 6100402,
+            "content": "\"어디 보자... 오! 자네도 랜턴이 하나 있었군!\"\n\"하지만 모든 불은 결국 꺼질 거네. 알다시피, 만약 심연에서 랜턴이 비치지 않는다면, 영원히 어둠 속에서 길을 잃게 될 테지.\"",
+            "npc": 910005,
+            "speakerName": "랜턴의 노인",
+            "next": 6100403
+          },
+          {
+            "id": 6100403,
+            "content": "\"랜턴을 하나 더 사서 만일의 사태에 대비하게. 작은 빛 하나가, 자네 목숨을 구해 줄지도 몰라.\"",
+            "npc": 910005,
+            "speakerName": "랜턴의 노인",
+            "options": [
+              {
+                "id": 6100404,
+                "content": "랜턴을 산다.",
+                "next": 6100405
+              },
+              {
+                "id": 6100406,
+                "content": "다른 유용한 물건이 있는지 없는지 묻는다.",
+                "next": 6100407
+              },
+              {
+                "id": 6100408,
+                "content": "거래를 거절한다.",
+                "next": 6100409
+              }
+            ]
+          },
+          {
+            "id": 6100405,
+            "content": "\"오... 자네는 정말 통 큰 여행자로군! 별의 신의 축복이 자네와 함께하기를 바라네.\"\n그는 주름마저 보이지 않을 만큼 활짝 웃는다.",
+            "npc": 910005,
+            "speakerName": "랜턴의 노인"
+          },
+          {
+            "id": 6100407,
+            "content": "\"오... 자네는 정말 통 큰 여행자로군! 별의 신의 축복이 자네와 함께하기를 바라네.\"\n그는 주름마저 보이지 않을 만큼 활짝 웃는다.",
+            "npc": 910005,
+            "speakerName": "랜턴의 노인"
+          },
+          {
+            "id": 6100409,
+            "content": "\"오... 맙소사, 얼마 되지도 않는 돈 때문에 목숨마저 돌보지 않을 만큼 가난했던 건가. 부디 번영의 신께서 축복을 내리길 바라네...\"\n그는 불만 가득한 얼굴로 떠났다.",
+            "npc": 910005,
+            "speakerName": "랜턴의 노인"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 305,
     "name": "천사 성가대",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5014
     ],
@@ -885,82 +887,386 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event03.T_Rouge_Event03'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event03.T_Rouge_Event03'",
-    "eventSelect": [
-      1031,
-      1032,
-      1033
-    ],
-    "eventStoryline": "Rogue/RouEvent_305",
-    "rlArchiveSubId": 10000501
+    "eventMainIcon": "T_Rouge_Event03",
+    "eventStoryline": [
+      {
+        "id": "171851536990211640105",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536990211640103"
+        ],
+        "dialogues": [
+          {
+            "id": 6100501,
+            "content": "\"길 잃은 여행자들이여, 신들이 길을 인도하리.\"",
+            "npc": 910005,
+            "speakerName": "신성한 노랫소리",
+            "next": 6100502
+          },
+          {
+            "id": 6100502,
+            "content": "아이들의 합창이 당신의 머릿속에서 울려 퍼지고, 모닥불의 희미한 빛이 점점 더 큰 빛 속으로 녹아들면서, 당신은 몸이 가벼워지는 것을 느낀다.\n당신은 공중에 뜬 채로, 천 줄기 부드러운 바람에 흔들린다. 손 닿을 거리에 새하얀 구름이 있고, 거룩한 금빛 탑은 구름 사이에서 당신을 엄숙히 초대한다.",
+            "next": 6100503
+          },
+          {
+            "id": 6100503,
+            "content": "\"오라, 신의 은총을 받아, 구름 위 하늘로 오르노라. 속세에 미련 없으리, 더없는 행복이 기다릴지어다.\"",
+            "npc": 910005,
+            "speakerName": "신성한 노랫소리",
+            "options": [
+              {
+                "id": 6100504,
+                "content": "지상에 남는다.",
+                "next": 6100505
+              },
+              {
+                "id": 6100506,
+                "content": "은총을 받아들인다.",
+                "next": 6100507
+              },
+              {
+                "id": 6100508,
+                "content": "구름 한 점을 잡아 본다.",
+                "next": 6100509
+              }
+            ]
+          },
+          {
+            "id": 6100505,
+            "content": "알다시피 하늘에서 떨어지는 행복 뒤에는, 반드시 그에 따른 대가가 있다.\n허황된 천국의 길보다, 당신은 자신이 남긴 발자국 하나하나를 믿으려 한다."
+          },
+          {
+            "id": 6100507,
+            "content": "어머니의 부드러운 포옹처럼, 구름이 당신을 감싸안는다.\n금빛 대문이 천천히 열리고, 당신은 신의 그림자가 문 뒤로 스쳐 지나가는 것을 본 듯하다. 구름이 걷히고 당신은 지상으로 돌아온다.",
+            "next": 6100510
+          },
+          {
+            "id": 6100509,
+            "content": "당신은 하늘을 향해 힘껏 손을 뻗어 보지만, 부드러워 보이는 구름은 당신의 손가락을 활활 태운다.\n빛은 사라지고, 귓가에 바람 소리가 윙윙거린다. 당신은 자신이 추락하고 있다는 것을 깨닫는다.",
+            "next": 6100510
+          },
+          {
+            "id": 6100510,
+            "content": "맞다, 당신은 잊고 있었다. 심연 속에 하늘은 존재하지 않는다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 306,
     "name": "바다 손님",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event04.T_Rouge_Event04'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event04.T_Rouge_Event04'",
-    "eventSelect": [
-      1036,
-      1037
-    ],
-    "eventStoryline": "Rogue/RouEvent_306",
-    "rlArchiveSubId": 10000601
+    "eventMainIcon": "T_Rouge_Event04",
+    "eventStoryline": [
+      {
+        "id": "171851536991211640208",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "171851536991211640206"
+        ],
+        "dialogues": [
+          {
+            "id": 6100601,
+            "content": "야위고 작은 그림자가 걸어온다.\n가까이 온 그녀는, 키가 크지 않은 소녀였다.",
+            "next": 6100602
+          },
+          {
+            "id": 6100602,
+            "content": "\"실례합니다... 혹시... 여기서... 불 좀 쬘 수 있을까요?\"\n소녀는 오들오들 떨고 있다. 치맛자락에서 물방울이 뚝뚝 떨어지는 것이 보인다. 드레스가 흠뻑 젖어 있다.",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "next": 6100603
+          },
+          {
+            "id": 6100603,
+            "content": "\"엄마를 잃어버렸어요... 추워요... 불 좀 쬐게 해주세요! 잠깐이면 돼요.\"",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "options": [
+              {
+                "id": 6100604,
+                "content": "동의한다.",
+                "next": 6100605
+              },
+              {
+                "id": 6100613,
+                "content": "거절한다.",
+                "next": 6100614
+              }
+            ]
+          },
+          {
+            "id": 6100605,
+            "content": "\"감사합니다.\"\n그녀는 오돌오돌 떨며, 감사의 인사를 한다.",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "next": 6100606
+          },
+          {
+            "id": 6100614,
+            "content": "\"죄... 죄송합니다... 귀찮게 해서 죄송합니다.\"",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "next": 6100615
+          },
+          {
+            "id": 6100606,
+            "content": "왜 여기에 온 건지 묻는다.",
+            "npc": 910004,
+            "next": 6100607
+          },
+          {
+            "id": 6100615,
+            "content": "소녀는 덜덜 떨면서 가버렸다. 아무도 오지 않았던 것처럼, 당신 곁에는 활활 타오르는 모닥불만이 남아 있다."
+          },
+          {
+            "id": 6100607,
+            "content": "\"왜... 왜요...? 아... 생각났어요...\"\n\"아빠랑... 엄마... 는 휘페르보레아 사람인데... 엘리시안으로... 도망...\"\n\"바다에서... 배가... 검은 소용돌이에...\"",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "next": 6100608
+          },
+          {
+            "id": 6100608,
+            "content": "검은 소용돌이. 당신도 알다시피, 그것은 흑조다. 배고픈 심연이 형체를 가진 모든 것을 뱃속으로 삼키는 것이다.",
+            "next": 6100609
+          },
+          {
+            "id": 6100609,
+            "content": "왜 엘리시안에 가려고 하는지 묻는다.",
+            "npc": 910004,
+            "next": 6100610
+          },
+          {
+            "id": 6100610,
+            "content": "\"엄마 말이... 우린 '악마의 아이'라고...\"\n\"최악의 상황으로 심연에 떨어진다고 해도... 휘페르보레아에 남는 것보다는... 나을 테니까...\"",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "next": 6100611
+          },
+          {
+            "id": 6100611,
+            "content": "\"불을 쬐게 해 주셔서 감사하고... 알려주셔서 감사해요... 저는 이미 이 세상에 없어요.\"",
+            "npc": 910005,
+            "speakerName": "왜소한 소녀",
+            "next": 6100612
+          },
+          {
+            "id": 6100612,
+            "content": "그녀는 사라졌다. 처음부터 아무도 없었던 것처럼, 당신 곁에는 바싹바싹 타오르는 모닥불만이 남아 있다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 307,
     "name": "운 좋은 바보 Ⅰ",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event05.T_Rouge_Event05'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event05.T_Rouge_Event05'",
-    "eventSelect": [
-      1041,
-      1042
-    ],
-    "eventStoryline": "Rogue/RouEvent_307",
-    "rlArchiveSubId": 10000701
+    "eventMainIcon": "T_Rouge_Event05",
+    "eventStoryline": [
+      {
+        "id": "1721630102172388558",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102172388556"
+        ],
+        "dialogues": [
+          {
+            "id": 6100701,
+            "content": "\"안녕하세요!\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100702
+          },
+          {
+            "id": 6100702,
+            "content": "배낭을 멘 쾌활한 청년이 모닥불 옆으로 다가와, 큰소리로 인사를 한다.",
+            "next": 6100703
+          },
+          {
+            "id": 6100703,
+            "content": "\"좀 실례되는 말이지만, 당신은 아직 살아있군요! 맞죠?\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "options": [
+              {
+                "id": 6100704,
+                "content": "고개를 끄덕인다.",
+                "next": 6100705
+              },
+              {
+                "id": 6100711,
+                "content": "누워서 죽은 척한다.",
+                "next": 6100712
+              }
+            ]
+          },
+          {
+            "id": 6100705,
+            "content": "\"여기서 살아있는 사람을 만날 줄은 정말 몰랐어요. 당신도 저처럼, 엄청난 행운아네요!\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100706
+          },
+          {
+            "id": 6100712,
+            "content": "\"기절했나?\"\n그는 쪼그리고 앉아, 당신이 숨을 쉬는지 코에 손을 댄다.\n\"설마, 당신도 그들과 같은 망령인가요?\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100713
+          },
+          {
+            "id": 6100706,
+            "content": "\"저는 열여섯 살 되던 해에 아버지와 함께 노래를 한 곡 썼는데, 성재로부터 신성 모독 판결을 받았어요.\"\n\"재수라곤 더럽게 없는 아버지처럼 저도 목이 날아갈 뻔했는데, 사형 집행인이 처형일에 벼락을 맞아 사면됐죠.\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100707
+          },
+          {
+            "id": 6100713,
+            "content": "당신은 침묵한다.\n그는 배낭을 내려놓고, 물과 음식을 꺼낸다.",
+            "next": 6100714
+          },
+          {
+            "id": 6100707,
+            "content": "\"스무 살 되던 해에 유랑 상인 무리에 합류했는데, 북쪽 숲에서 강도를 당했어요. 납치돼서 동굴에 버려졌죠.\"\n\"동료들처럼 굶어 죽나 했는데, 일주일째 되는 날 아침 돼지 한 마리가 깨우더니, 한 소녀가 먹을 걸 주더라고요. 천사를 만난 줄 알았죠.\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100708
+          },
+          {
+            "id": 6100714,
+            "content": "\"불쌍한 친구, 이걸 놓고 갈게요! 성탑에 첫 번째 햇살이 비출 때, 당신이 깨어나서 처음처럼 건강해지기를 바라요.\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년"
+          },
+          {
+            "id": 6100708,
+            "content": "\"그 후 전 상인으로서 기사단을 따라 심연으로 왔어요. 손에 든 랜턴이 하나둘 꺼졌고, 기사 나리 하나는 넘어지면서 자신의 검에 목을 찔렸어요. 제가 유일한 생존자였죠.\"\n\"그래서 전 운명의 여신을 믿게 됐어요. 여신께선 제게 더없는 행운과 행복을 주실 거예요.\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100709
+          },
+          {
+            "id": 6100709,
+            "content": "\"그분이 절 인도했다는 건, 이곳 깊숙이 유일무이한 보물이 절 기다리고 있다는 뜻이죠. 이제, 전 그걸 찾아서 떠나야 해요.\"\n그가 무거운 배낭을 짊어진다.",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년",
+            "next": 6100710
+          },
+          {
+            "id": 6100710,
+            "content": "\"참, 저기요! 그분께서 당신을 살아남게 했으니, 당신도 당신만의 유일무이한 행운을 만나게 될 거예요!\"\n그는 두 주먹을 불끈 쥐고, 크게 웃는다.\n\"우리의 행복을 위하여!\"",
+            "npc": 910005,
+            "speakerName": "시원시원한 청년"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 308,
     "name": "꽃다운 모습 그대로",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event06.T_Rouge_Event06'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event06.T_Rouge_Event06'",
-    "eventSelect": [
-      1046,
-      1047
-    ],
-    "eventStoryline": "Rogue/RouEvent_308",
-    "rlArchiveSubId": 10000801
+    "eventMainIcon": "T_Rouge_Event06",
+    "eventStoryline": [
+      {
+        "id": "1721630102179388643",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102179388641"
+        ],
+        "dialogues": [
+          {
+            "id": 6100801,
+            "content": "같은 줄기에서 자라난 검붉은 꽃 한 쌍이 어둠 속에서 그윽한 빛을 발하고 있다.\n당신이 랜턴을 들자, 희끗희끗한 금발머리 몇 가닥과 몇 마디의 창백한 등뼈가 비친다. 이건 사람 모양의 필토이드일까? 아니면 곧 필토이드가 될 사람일까?\n당신은 경계하며 무기를 움켜쥐지만, 그것은 당신을 공격하지 않는다. 다만 어둠 속에 박힌 검붉은 눈동자로, 당신을 소리 없이 주시하고 있을 뿐이다.",
+            "next": 6100802
+          },
+          {
+            "id": 6100802,
+            "content": "갑자기, 그것이 목에서 뭔가 산산조각 나는 소리를 낸다. 날카로운 돌멩이들이 서도 부딪치며 내는 소리 같기도 하고, 어떤 리듬을 타는 것 같기도 하다. 이유는 모르지만, 당신은 그 의미를 이해할 수 있을 것 같다.",
+            "next": 6100803
+          },
+          {
+            "id": 6100803,
+            "content": "\"랜턴을 든 여행자님, 가지 마세요. 당신의 랜턴에 비친 제 모습이 여전히 아름다운가요? 제발 알려주세요.\"",
+            "npc": 910005,
+            "speakerName": "붉은 눈동자 필토이드",
+            "next": 6100804
+          },
+          {
+            "id": 6100804,
+            "content": "\"전 윤기 나게 머리를 빗고 곱게 땋았어요.\" 필토이드가 머리 뒤의 갈라진 피부를 어루만진다.\n\"치마의 주름도 가지런히 다려, 화려한 보석으로 장식했어요.\" 필토이드가 표면에 깊이 박힌 결정을 어루만진다.\n\"사랑하는 이가 준 목걸이를 목에 걸고, 그의 간절한 마음을 생각해요.\" 필토이드가 목 사이로 뻗은 뼈마디를 어루만진다.",
+            "npc": 910005,
+            "speakerName": "붉은 눈동자 필토이드",
+            "options": [
+              {
+                "id": 6100805,
+                "content": "\"네, 아름답습니다.\"",
+                "next": 6100806
+              },
+              {
+                "id": 6100808,
+                "content": "\"당신은 무서운 괴물입니다.\"",
+                "next": 6100809
+              }
+            ]
+          },
+          {
+            "id": 6100806,
+            "content": "마치 바람에 흔들리는 꽃잎처럼, 붉은 눈동자가 가늘게 떨린다.",
+            "next": 6100807
+          },
+          {
+            "id": 6100809,
+            "content": "험상궂은 발톱이 그 붉은 눈동자를 덮는다.",
+            "next": 6100810
+          },
+          {
+            "id": 6100807,
+            "content": "\"감사합니다, 친절한 여행자님. 제 감사의 선물을 받아 주세요.\"\n\"혹시 제 애인을 만난다면, 제가 영원히 사랑할 거라고 전해 주세요.\"",
+            "npc": 910005,
+            "speakerName": "붉은 눈동자 필토이드"
+          },
+          {
+            "id": 6100810,
+            "content": "\"오, 안 돼! 이렇게 못생긴 내 모습을 사랑하는 사람에게 보여주고 싶지 않아요.\"\n\"자비로운 여행자님, 저를 끝내주세요.\"",
+            "npc": 910005,
+            "speakerName": "붉은 눈동자 필토이드"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 309,
     "name": "그리운 연인",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [
       5179
     ],
@@ -968,41 +1274,181 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event07.T_Rouge_Event07'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event07.T_Rouge_Event07'",
-    "eventSelect": [
-      1051,
-      1052
-    ],
-    "eventStoryline": "Rogue/RouEvent_309",
-    "rlArchiveSubId": 10000901
+    "eventMainIcon": "T_Rouge_Event07",
+    "eventStoryline": [
+      {
+        "id": "1721630102187388745",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102187388743"
+        ],
+        "dialogues": [
+          {
+            "id": 6100901,
+            "content": "\"안녕하세요, 낯선 여행자님.\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년",
+            "next": 6100902
+          },
+          {
+            "id": 6100902,
+            "content": "화려한 옷차림의 한 청년이 모닥불에 흔들리는 빛과 그림자 속에서 걸음을 멈추고, 당신을 향해 우아하게 인사한다.",
+            "next": 6100903
+          },
+          {
+            "id": 6100903,
+            "content": "\"전 빨간 눈동자를 가진 여인을 찾고 있어요. 혹시 그녀가 얼마나 아름다운지 본 적 있으세요?\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년",
+            "next": 6100904
+          },
+          {
+            "id": 6100904,
+            "content": "\"그녀는 세상에서 가장 아름다운 목소리를 가지고 있어요. 나이팅게일도 무색할 정도죠.\"\n\"그녀는 봄날에 피는 금잔화처럼, 부드럽고 아름다운 금빛 머리카락을 가지고 있어요.\"\n\"그녀는 화려하면서도 단아한 원피스를 입고 있어요. 치맛자락에는 별처럼 빛나는 보석이 가득 달려 있죠.\"\n\"그녀는 제가 선물한 목걸이를 하고 있어요. 신비롭고 그윽한 검붉은 색 수정이 마치 절 응시하는 그녀의 눈처럼 보이죠.\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년",
+            "next": 6100905
+          },
+          {
+            "id": 6100905,
+            "content": "그런 여인을 본 적이 없다.",
+            "npc": 910004,
+            "next": 6100906
+          },
+          {
+            "id": 6100906,
+            "content": "\"그래요...\"\n그는 우울하게 눈을 내리깔지만, 곧 우아한 모습으로 돌아온다.\n\"괜찮아요, 계속 찾아보면 되니까요.\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년",
+            "next": 6100907
+          },
+          {
+            "id": 6100907,
+            "content": "청년이 모닥불 옆에 앉자, 밝은 불길이 그의 눈동자에 비친다.",
+            "next": 6100908
+          },
+          {
+            "id": 6100908,
+            "content": "\"저는 그녀와 오래전에 약혼했어요. 성인이 되면 혼례를 올리기로 했죠. 그런데 그녀가 신의 은총을 입어, 이마의 성흔이 점점 뚜렷해지더니, 열네 살 생일 전날 밤 사자가 찾아와서 데려갔어요.\"\n\"그녀는 떠나기 전에 저에게 다른 짝을 찾으라는 편지를 남겼죠. 하지만 전 맹세했어요. 이번 생은 오직 그녀와 함께하겠다고요.\"\n\"그녀를 찾으면, 다시 이 세상에 데려올 거예요. 만월의 신께선 사람들에게 사랑의 아름다움을 노래하라고 가르치셨으니, 반드시 저희를 도와주실 거예요.\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년",
+            "options": [
+              {
+                "id": 6100909,
+                "content": "하루빨리 연인을 찾기를 바란다.",
+                "next": 6100910
+              },
+              {
+                "id": 6100911,
+                "content": "\"만약 신이 동의하지 않으면요?\"",
+                "next": 6100912
+              }
+            ]
+          },
+          {
+            "id": 6100910,
+            "content": "\"정말 고맙습니다, 친절한 여행자님.\"\n\"작은 선물이지만 받아주세요. 당신도 원하는 것을 얻길 바랍니다.\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년"
+          },
+          {
+            "id": 6100912,
+            "content": "그는 당신을 향해 담담하게 미소 짓는다.\n\"그러면 이 몸을 성스러운 호수에 바쳐, 영혼이나마 영원히 그녀와 함께하겠습니다.\"",
+            "npc": 910005,
+            "speakerName": "우아한 청년"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 310,
     "name": "영원한 시편",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event08.T_Rouge_Event08'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event08.T_Rouge_Event08'",
-    "eventSelect": [
-      1056,
-      1057
-    ],
-    "eventStoryline": "Rogue/RouEvent_310",
-    "rlArchiveSubId": 10001001
+    "eventMainIcon": "T_Rouge_Event08",
+    "eventStoryline": [
+      {
+        "id": "1721630102194388830",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1721630102194388828"
+        ],
+        "dialogues": [
+          {
+            "id": 6101001,
+            "content": "모닥불 옆에 한 여인이 나타난다. 그녀는 활활 타오르는 모닥불에 왼손을 뻗어 재를 묻히고, 바닥에 당신이 알아볼 수 없는 글을 쓴다.",
+            "next": 6101002
+          },
+          {
+            "id": 6101002,
+            "content": "\"아, 시간을 거스르는 여행자여, 그대의 동반자는 절망이요, 죽음은 그림자처럼 따라다닌다네.\"\n그녀가 낮은 소리로 읊조린다.",
+            "npc": 910005,
+            "speakerName": "자유의 시인",
+            "options": [
+              {
+                "id": 6101003,
+                "content": "뭘 하고 있는지 묻는다.",
+                "next": 6101004
+              },
+              {
+                "id": 6101005,
+                "content": "\"불꽃이 뜨겁지 않나요?\"",
+                "next": 6101006
+              }
+            ]
+          },
+          {
+            "id": 6101004,
+            "content": "\"오, 친구여! 보시다시피, 저는 시인입니다.\"\n\"저는 지금 제 1001번째 작품을 창작하고 있어요. 맞습니다. 당신을 위한 시죠!\"",
+            "npc": 910005,
+            "speakerName": "자유의 시인",
+            "next": 6101008
+          },
+          {
+            "id": 6101006,
+            "content": "여자가 깔깔거리며 웃는다.",
+            "next": 6101007
+          },
+          {
+            "id": 6101008,
+            "content": "시인이 다시 손을 뻗어 모닥불을 휘젓는다. 가느다란 손끝이 무용수의 두 발처럼 날렵하게 불 속을 누빈다.",
+            "next": 6101009
+          },
+          {
+            "id": 6101007,
+            "content": "\"잘 보세요, 친구.\"\n그녀가 당신의 눈앞에 손바닥을 편다. 하얀 손은 흠결 없이 멀쩡하다.\n\"당신처럼 지혜로운 여행자는, 이 불이 진짜가 아니라는 걸 눈치챘겠죠. 저도 마찬가지로 진짜가 아니고요.\"",
+            "npc": 910005,
+            "speakerName": "자유의 시인",
+            "next": 6101008
+          },
+          {
+            "id": 6101009,
+            "content": "\"이곳은 정말 아름다운 곳이죠, 그렇지 않나요?\"\n\"저는 마침내 육체적인 고통에서 벗어났어요. 다시는 지루한 일들로 제 창작을 방해받지 않게 됐죠. 전 무한한 자유와 영원한 시간을 얻었어요.\"\n\"여행자님, 여기 멈춰서 한 줄기 빛을 가져다주셔서 감사해요. 제 시를 받아주세요. 반드시 이 끝없는 윤회에서 벗어나, 소망을 이루시길 바랄게요.\"",
+            "npc": 910005,
+            "speakerName": "자유의 시인",
+            "next": 6101010
+          },
+          {
+            "id": 6101010,
+            "content": "시인이 손을 뻗자, 연기가 폭풍처럼 순식간에 눈앞을 가린다.\n연기가 흩어지자, 시인은 이미 사라진 뒤였다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 311,
     "name": "가시덩굴의 서",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5160
     ],
@@ -1010,41 +1456,221 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event09.T_Rouge_Event09'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event09.T_Rouge_Event09'",
-    "eventSelect": [
-      1061,
-      1062
-    ],
-    "eventStoryline": "Rogue/RouEvent_311",
-    "rlArchiveSubId": 10001101
+    "eventMainIcon": "T_Rouge_Event09",
+    "eventStoryline": [
+      {
+        "id": "1739608900306688985",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900306688983"
+        ],
+        "dialogues": [
+          {
+            "id": 6101101,
+            "content": "\"안녕하세요, 혹시 당신의 빛을 좀 빌려주실 수 있을까요.\"",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "next": 6101102
+          },
+          {
+            "id": 6101102,
+            "content": "소년이 어리숙한 걸음으로 짐짓 점잖은 체하며, 천천히 모닥불 옆에 앉는다.\n너무 큰 턱시도를 입고 있어, 앙상한 체구가 안쓰러워 보일 정도다. 그는 불빛 아래 얇은 책 한 권을 들고, 아주 그럴듯하게 낭독하기 시작한다.",
+            "next": 6101103
+          },
+          {
+            "id": 6101103,
+            "content": "\"화염의 신이여, 우리에게 지혜를 주소서... 물의 신이시여, 우리에게 풍요를 주소서...\"",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "options": [
+              {
+                "id": 6101104,
+                "content": "뭘 읽는 건가요?",
+                "next": 6101105
+              }
+            ]
+          },
+          {
+            "id": 6101105,
+            "content": "\"아, 형들이 준 책을 읽고 있어요.\" 소년은 부끄러워하며 머리를 쓰다듬는다. \"신을 뵙기 전에 더 똑똑해져야 하거든요.\"\n\"전 어릴 때부터 집안에서 가장 맹한 아이였어요. 형들은 저보다 훨씬 똑똑했죠. 그런데 신께서 하필이면 절 뽑으신 거예요. 다들 말도 안 된다고 했죠.\"\n\"형들이 이 성가책을 주면서 아홉 신을 뵙기 전에 잘 읽으라고 했어요. 집안 망신시키지 않도록요.\"",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "next": 6101106
+          },
+          {
+            "id": 6101106,
+            "content": "소년이 몸을 움직여 당신 곁에 더 가까이 앉는다. 그리곤 책을 치켜들고, 같이 보자는 눈짓을 한다.",
+            "next": 6101107
+          },
+          {
+            "id": 6101107,
+            "content": "\"저랑 같이 보실래요?\"",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "options": [
+              {
+                "id": 6101108,
+                "content": "함께 책을 읽는다.",
+                "next": 6101109
+              },
+              {
+                "id": 6101112,
+                "content": "함께 읽기를 거절한다.",
+                "next": 6101113
+              }
+            ]
+          },
+          {
+            "id": 6101109,
+            "content": "당신은 제안을 받아들여 책으로 시선을 옮긴다. 놀랍게도 책장엔 누군가가 시커먼 펜으로 쓴, 당신이 상상조차 하지 못할 악담과 상스러운 말들로 뒤덮여 있다.\n글자는 순식간에 검은 가시덤불이 되어, 책장을 뚫고 나와, 사냥에 나선 독사처럼 몸을 휘감는다. 시야가 천천히 흐려진다.\n당신은 살아남기 위해 본능적으로 몸을 뒤로 젖혀, 시선을 책장 밖으로 옮긴다.",
+            "next": 6101110
+          },
+          {
+            "id": 6101113,
+            "content": "당신은 여기에 공부하러 온 것이 아니다.",
+            "next": 6101114
+          },
+          {
+            "id": 6101110,
+            "content": "\"어? 왜 그러세요? 책에 무서운 거라도 있나요?\"\n소년은 당신을 곤혹스럽게 바라보지만, 눈빛은 여전히 맑고 투명하다.",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "next": 6101111
+          },
+          {
+            "id": 6101114,
+            "content": "\"알았어요. 그럼 저 혼자 읽을게요...\"\n소년이 책을 다시 무릎 위에 놓는다.",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "next": 6101115
+          },
+          {
+            "id": 6101111,
+            "content": "당신은 입을 열지만, 아무 소리도 내지 못한다.\n검은 가시덤불은 소년을 뒤덮어 삼켰다. 곧이어 소년과 책, 가시덤불은 모두 사라져 버렸다."
+          },
+          {
+            "id": 6101115,
+            "content": "갑자기 책에서 검은 가시덤불이 뻗어 나온다.\n놀랄 새도 없이, 가시덤불은 소년을 뒤덮어 삼켰다. 곧이어 소년과 책, 가시덤불은 모두 사라져 버렸다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 312,
     "name": "잊혀진 기억",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event10.T_Rouge_Event10'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event10.T_Rouge_Event10'",
-    "eventSelect": [
-      1066,
-      1067
-    ],
-    "eventStoryline": "Rogue/RouEvent_312",
-    "rlArchiveSubId": 10001201
+    "eventMainIcon": "T_Rouge_Event10",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689092",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689090"
+        ],
+        "dialogues": [
+          {
+            "id": 6101201,
+            "content": "한 중년 여인이 침울한 얼굴로 모닥불 앞에 앉았으나, 불빛은 그녀의 어두운 눈을 비추지 못했다.",
+            "next": 6101202
+          },
+          {
+            "id": 6101202,
+            "content": "\"안녕하세요, 낯선 분. 실례지만 여기가 어디인가요?\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6101203
+          },
+          {
+            "id": 6101203,
+            "content": "대답한다.",
+            "next": 6101204
+          },
+          {
+            "id": 6101204,
+            "content": "\"성스러운 호수...? 심연...?\" 그녀의 말투는 막막함과 당혹스러움으로 가득 차 있다. \"전 어째서 그런 말들을 들어본 적 없는 것 같죠...\"\n그녀는 주름 골이 가득한 자신의 손바닥을 바라본다. \"제가 여기 왜 왔는지 잊어버렸어요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "options": [
+              {
+                "id": 6101205,
+                "content": "성스러운 호수의 역사를 알려준다.",
+                "next": 6101206
+              },
+              {
+                "id": 6101207,
+                "content": "소지품을 살펴보라고 조언한다.",
+                "next": 6101208
+              }
+            ]
+          },
+          {
+            "id": 6101206,
+            "content": "\"몸에 성흔이 생긴 사람은... 이곳으로 오게 된다고요...?\"\n\"아... 생각났어요. 제 아이가 여기 있어요. 아이의 눈가에 날개를 퍼덕이며 날아오르려는 나비 같은 성흔이 나타났어요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6101210
+          },
+          {
+            "id": 6101208,
+            "content": "\"그 말이 맞아요.\"\n그녀는 손을 주머니에 넣어, 은색 브로치 하나를 더듬어 꺼낸다.",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6101209
+          },
+          {
+            "id": 6101210,
+            "content": "고개를 든 여자의 눈에, 불빛이 또렷이 비친다.",
+            "next": 6101211
+          },
+          {
+            "id": 6101209,
+            "content": "\"아... 생각났어요.\" 그녀는 조심스럽게 소매 끝으로 브로치를 깨끗이 닦는다. \"이건 제가 그 아이에게 준 선물이에요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6101210
+          },
+          {
+            "id": 6101211,
+            "content": "\"전 제 아이를 찾기 위해 여기 왔어요.\"\n\"그들은 제가 집에 없는 틈을 타, 깊이 잠든 아이를 데리고 갔어요. 그 아이는 어려서부터 낯을 가리는 아이예요. 깨어났을 때 낯익은 얼굴이 보이지 않으면 무서워할 거예요.\"\n\"제가 곁에 있어 줘야 해요... 맞아요, 전 아이를 찾으러 왔어요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6101212
+          },
+          {
+            "id": 6101212,
+            "content": "\"아이가 떠난 지 얼마나 됐나요?\"",
+            "npc": 910004,
+            "next": 6101213
+          },
+          {
+            "id": 6101213,
+            "content": "\"10일 전... 아니, 10달... 아니, 10년... 아... 생각이 안 나요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6101214
+          },
+          {
+            "id": 6101214,
+            "content": "여인은 말을 잃은 채, 멍한 얼굴로, 꼼짝도 하지 않는다. 마치 호흡마저 멈춘 것 같다.\n당신이 무슨 말을 해도, 그녀는 아무런 반응이 없다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 313,
     "name": "꺼지지 않는 화염",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5159
     ],
@@ -1052,21 +1678,101 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1071,
-      1072
-    ],
-    "eventStoryline": "Rogue/RouEvent_313",
-    "rlArchiveSubId": 10001301
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689200",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689198"
+        ],
+        "dialogues": [
+          {
+            "id": 6101301,
+            "content": "\"펑!\"\n갑자기 눈앞의 모닥불이 더 활활 타오른다.\n금발 소녀가 치맛자락에 황금빛 자갈을 싸서, 자갈을 모닥불 한가운데 하나씩 던져 넣는 게 보인다.",
+            "next": 6101302
+          },
+          {
+            "id": 6101302,
+            "content": "불빛은 마치 생애 첫 봄을 맞아 미친 듯이 가지를 뻗어 싹을 피우는 초목처럼 점점 거세게 타오른다.",
+            "options": [
+              {
+                "id": 6101303,
+                "content": "불길의 아름다움을 칭찬한다.",
+                "next": 6101304
+              },
+              {
+                "id": 6101305,
+                "content": "돌이 어디서 났는지 묻는다.",
+                "next": 6101306
+              }
+            ]
+          },
+          {
+            "id": 6101304,
+            "content": "\"맞아요!\" 그녀가 불길처럼 뜨겁게 말한다. \"저와 같은 생각을 하는 사람을 만나서 기뻐요.\"",
+            "npc": 910005,
+            "speakerName": "투석의 소녀",
+            "next": 6101307
+          },
+          {
+            "id": 6101306,
+            "content": "\"근처에서 주운 돌이에요.\" 그녀가 설명한다. \"제 생각엔 이 돌들이 어떤 화염 마법 수정이 아닌가 싶어요.\"",
+            "npc": 910005,
+            "speakerName": "투석의 소녀",
+            "next": 6101307
+          },
+          {
+            "id": 6101307,
+            "content": "소녀는 계속 돌멩이를 던진다. 착시인지는 몰라도, 불길이 소녀에게 점점 다가오며, 금빛 머리카락을 부드럽게 핥는 듯하다.",
+            "next": 6101308
+          },
+          {
+            "id": 6101308,
+            "content": "\"내일이면 모닥불은 원래대로 돌아가고, 이 자갈들은 다시 근처에 흩어질 거예요.\"\n\"그래서 전 이 돌을 매일 주워서 다시 던져야 해요. 총 146개에서 한 개도 빠지면 안 돼요.\"",
+            "npc": 910005,
+            "speakerName": "투석의 소녀",
+            "next": 6101309
+          },
+          {
+            "id": 6101309,
+            "content": "\"무의미한 일 아닐까요?\"",
+            "npc": 910004,
+            "next": 6101310
+          },
+          {
+            "id": 6101310,
+            "content": "소녀는 고개를 갸웃하더니, 눈을 깜박이며, 천진난만한 미소를 짓는다.",
+            "next": 6101311
+          },
+          {
+            "id": 6101311,
+            "content": "\"아뇨, 저는 불을 좋아해요.\" 그녀가 말한다. \"저는 불이 춤추듯 타오를 때의 모습을 보며 거센 불길 소리를 듣는 게 좋아요.\"\n\"아시겠지만 여긴 혼란스러운 공간이잖아요. 눈을 감아도 모닥불이 곁에 있고, 깨어나 보면 호수 밑바닥에 있죠.\"\n\"하지만 이 돌멩이들은 달라요. 주변이 어떻게 변하든, 이것들은 항상 다시 나타나죠. 내일도 이 돌멩이들을 찾아낼 수 있다고 생각하면 안심하고 잠들 수 있어요.\"",
+            "npc": 910005,
+            "speakerName": "투석의 소녀",
+            "next": 6101312
+          },
+          {
+            "id": 6101312,
+            "content": "\"저는 확실한 것들이 좋아요.\"",
+            "npc": 910005,
+            "speakerName": "투석의 소녀",
+            "next": 6101313
+          },
+          {
+            "id": 6101313,
+            "content": "소녀는 그 말과 함께 마지막 돌을 던진다.\n불빛이 그녀를 완전히 감싸고, 금빛 머리카락이 불꽃과 하나가 되어 더 이상 경계를 분간할 수 없게 되었다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 314,
     "name": "빵 한 조각",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5014
     ],
@@ -1074,84 +1780,367 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event12.T_Rouge_Event12'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event12.T_Rouge_Event12'",
-    "eventSelect": [
-      1076,
-      1077
-    ],
-    "eventStoryline": "Rogue/RouEvent_314",
-    "rlArchiveSubId": 10001401
+    "eventMainIcon": "T_Rouge_Event12",
+    "eventStoryline": [
+      {
+        "id": "1739608900307689291",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900307689289"
+        ],
+        "dialogues": [
+          {
+            "id": 6101401,
+            "content": "\"우... 어...\"",
+            "npc": 910005,
+            "speakerName": "허약한 남자",
+            "next": 6101402
+          },
+          {
+            "id": 6101402,
+            "content": "아래쪽에서 약한 신음소리가 들려온다. 뼈만 앙상하게 남은 남자가 모닥불 옆에 쓰러져 있는 게 보인다. 오랫동안 굶은 것 같다.",
+            "options": [
+              {
+                "id": 6101403,
+                "content": "음식을 조금 나누어 준다.",
+                "next": 6101404
+              },
+              {
+                "id": 6101409,
+                "content": "아무것도 하지 않는다.",
+                "next": 6101410
+              }
+            ]
+          },
+          {
+            "id": 6101404,
+            "content": "\"...고맙습니다, 좋은 분이시네요. 하지만 저는 음식이 필요 없어요.\"\n\"전 검은 물결에 휩쓸려 들어왔어요. 이미 돌아갈 수 없죠. 음식을 아무리 먹어도 돌아갈 수 없어요.\"\n\"당신을 보니 엘리시안 소녀 한 명이 생각나네요... 당신처럼 착한 아이였죠.\"",
+            "npc": 910005,
+            "speakerName": "허약한 남자",
+            "next": 6101405
+          },
+          {
+            "id": 6101410,
+            "content": "불쌍해 보이긴 하지만, 당신도 보급품이 얼마 남지 않았다.\n이 험난한 심연에선, 먼저 자신부터 살아남아야 한다."
+          },
+          {
+            "id": 6101405,
+            "content": "\"금발 머리를 하고 분홍색 돼지를 타고 있었죠. 제가 허기진 채 길을 걷고 있을 때, 저한테 빵 한 조각을 건네줬어요...\"\n\"하지만 그때 전 오만해서, 교회의 자비를 받고 싶지 않았어요. 소녀가 선의란 걸 알면서도 큰 소리로 욕했죠.\"",
+            "npc": 910005,
+            "speakerName": "허약한 남자",
+            "next": 6101406
+          },
+          {
+            "id": 6101406,
+            "content": "\"제 삶을 돌이켜 보면... 저한테 진심으로 대해준 사람은 그 소녀가 유일했어요.\"\n\"신앙, 인종, 출신... 사람들은 항상 이런 걸로... 자신을 미화하죠... 하지만 아무리 대단한 이름을 가져도, 진정한 선이 가져다주는 빛을 덮을 수는 없어요...\"",
+            "npc": 910005,
+            "speakerName": "허약한 남자",
+            "next": 6101407
+          },
+          {
+            "id": 6101407,
+            "content": "\"다시 돌아갈 수 있다면... 그 소녀에게 직접 사과하고 싶어요... 하지만, 이미... 기회가 없겠죠...\"",
+            "npc": 910005,
+            "speakerName": "허약한 남자",
+            "next": 6101408
+          },
+          {
+            "id": 6101408,
+            "content": "남자의 목소리는 점점 가벼워졌고, 당신이 눈을 깜빡이자 그의 모습은 사라졌다.\n공기 중에 갓 구운 빵의 향기가 풍겨온다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 315,
     "name": "금빛 깃털",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event13.T_Rouge_Event13'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event13.T_Rouge_Event13'",
-    "eventSelect": [
-      1081,
-      1082,
-      1083
-    ],
-    "eventStoryline": "Rogue/RouEvent_315",
-    "rlArchiveSubId": 10001501
+    "eventMainIcon": "T_Rouge_Event13",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689381",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689379"
+        ],
+        "dialogues": [
+          {
+            "id": 6101501,
+            "content": "한 줄기 금빛이 공중에서 번뜩인다. 태양이 떠오르는 줄 알았지만 자세히 보니 온몸이 황금빛인 새 한 마리다.\n새는 공중을 빙빙 돌며 내려와 당신 곁에 우아하게 날개를 접고 앉는다. 금빛 깃털이 모닥불에 비쳐, 귀족 소녀가 아끼는 금장식보다 더 섬세하게 빛난다.",
+            "options": [
+              {
+                "id": 6101502,
+                "content": "새에게 물을 먹인다.",
+                "next": 6101503
+              },
+              {
+                "id": 6101505,
+                "content": "새의 꽁무니에서 깃털 하나를 뽑는다.",
+                "next": 6101506
+              },
+              {
+                "id": 6101509,
+                "content": "새의 머리에서 깃털 하나를 뽑는다.",
+                "next": 6101510
+              }
+            ]
+          },
+          {
+            "id": 6101503,
+            "content": "당신은 손바닥에 물을 조금 붓고, 새에게 오라고 손짓한다.",
+            "next": 6101504
+          },
+          {
+            "id": 6101506,
+            "content": "새가 눈을 감고 쉬고 있을 때, 조용히 손을 뻗어 꼬리 깃털 하나를 뽑는다. 상등품 황금 같은 깃털이니 분명히 가치가 훌륭할 것이다.",
+            "next": 6101507
+          },
+          {
+            "id": 6101510,
+            "content": "살며시 새의 머리 가까이 손을 뻗어보지만, 힘을 주기도 전에 새가 당신의 의도를 알아채고 눈을 뜬다.\n새는 화가 나서 소리를 지르고, 날개를 퍼덕이며 날아든다. 그리곤 당신의 손바닥에 금으로 된 용암을 떨어뜨리듯 온 힘을 다해 쪼아대, 손바닥에 선명한 붉은 자국을 남긴다.",
+            "next": 6101511
+          },
+          {
+            "id": 6101504,
+            "content": "새는 고개를 갸웃거리며 경계 태세로 당신을 관찰한다. 잠시 후 새는 금빛 부리를 내밀고 손바닥 위의 물을 작은 입으로 홀짝홀짝 마신다.\n물을 다 마시자, 새는 즐겁게 깃털을 펄럭이고, 당신에게 감사하다는 듯 소리를 낸 후, 하늘로 빙빙 돌아 날아간다."
+          },
+          {
+            "id": 6101507,
+            "content": "새는 화가 나서 소리를 지르고, 날개를 퍼덕이며 날아든다. 그리곤 당신의 손바닥에 금으로 된 용암을 떨어뜨리듯 온 힘을 다해 쪼아대, 손바닥에 선명한 붉은 자국을 남긴다.",
+            "next": 6101508
+          },
+          {
+            "id": 6101511,
+            "content": "지독한 고통에서 정신을 차렸을 때, 새는 이미 먼 곳으로 날아가 버렸다."
+          },
+          {
+            "id": 6101508,
+            "content": "지독한 고통에서 정신을 차렸을 때, 새는 이미 먼 곳으로 날아가 버렸다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 316,
     "name": "저주의 피",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "eventSelect": [
-      1086,
-      1087,
-      1088
-    ],
-    "eventStoryline": "Rogue/RouEvent_316",
-    "rlArchiveSubId": 10001601
+    "eventMainIcon": "T_Rouge_Event14_2",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689489",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689487"
+        ],
+        "dialogues": [
+          {
+            "id": 6101601,
+            "content": "근처에서 더러운 썩은 내가 풍겨온다.\n쳐다보니 어린 소녀가 모닥불 가까이에서 나타나는 게 보인다. 빰과 팔뚝은 무시무시한 종기가 가득하다. 모닥불에 반사된 눈동자의 생명의 빛이 아니었다면, 당신은 눈앞에 보이는 게 시체라고 생각했을 것이다.",
+            "options": [
+              {
+                "id": 6101602,
+                "content": "당신은 배낭에서 약을 찾아내, 소녀에게 건네준다.",
+                "next": 6101603
+              },
+              {
+                "id": 6101606,
+                "content": "소녀의 상처를 치료해 본다.",
+                "next": 6101607
+              },
+              {
+                "id": 6101612,
+                "content": "그녀에게서 멀리 떨어진다.",
+                "next": 6101613
+              }
+            ]
+          },
+          {
+            "id": 6101603,
+            "content": "\"감사합니다... 친절한 여행자님...\"\n그녀는 천천히 고개를 들어 당신을 바라본다. 입가에 맺힌 미소가 진짜 웃음인지, 아니면 통증으로 인한 근육의 뒤틀림인지 확실하지 않다.",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6101604
+          },
+          {
+            "id": 6101607,
+            "content": "당신은 조심스럽게 소녀에게 다가가, 그녀의 몸에 난 상처의 상태를 확인하려고 한다.",
+            "next": 6101608
+          },
+          {
+            "id": 6101613,
+            "content": "당신은 소녀가 어떤 위험한 병에 걸렸을 수도 있음을 직감하고, 얼른 일어나서 그녀에게서 떨어진다.",
+            "next": 6101614
+          },
+          {
+            "id": 6101604,
+            "content": "\"하지만 도와주지... 않으셔도 돼요...\" 그녀가 낮은 목소리로 말한다. \"사제님께서, 전 저주를 받아 심연병에 걸린 거라고 하셨어요. 제가 받아야 할 죄업이래요...\"\n\"저는 진심으로 참회해야 해요... 그러면, 다 나을 거예요... 그전까진 누구에게도 가까이 가면 안 돼요.\"",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6101605
+          },
+          {
+            "id": 6101608,
+            "content": "\"콜록, 콜록...!\"\n그녀가 강하게 기침을 하자, 검붉은 피가 당신이 내민 손에 튀며, 불길한 검은 연기가 피어오른다.",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6101609
+          },
+          {
+            "id": 6101614,
+            "content": "\"놀라게 해서 죄송해요... 어, 얼른 다른 곳으로 갈게요...\"",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6101615
+          },
+          {
+            "id": 6101605,
+            "content": "소녀는 비틀거리며 몸을 일으켜, 어둠 속으로 사라졌다."
+          },
+          {
+            "id": 6101609,
+            "content": "\"죄, 죄송해요...!\"\n그녀는 비틀거리며 몸을 일으켜 뒤로 물러나려 하지만, 또 실수로 땅에 넘어지고 만다.",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6101610
+          },
+          {
+            "id": 6101615,
+            "content": "소녀는 비틀거리며 몸을 일으켜, 어둠 속으로 사라졌다."
+          },
+          {
+            "id": 6101610,
+            "content": "\"사제님께서, 전 저주를 받아 심연병에 걸린 거라고 하셨어요. 제가 받아야 할 죄업이래요...\"\n\"저는 진심으로 참회해야 해요... 그러면, 다 나을 거예요... 그전까진 누구에게도 가까이 가면 안 돼요.\"",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6101611
+          },
+          {
+            "id": 6101611,
+            "content": "소녀는 다시 힘겹게 일어나 비틀거리며, 어둠 속으로 사라졌다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 317,
     "name": "장난 소용돌이",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event15.T_Rouge_Event15'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event15.T_Rouge_Event15'",
-    "eventSelect": [
-      1091,
-      1092,
-      1093
-    ],
-    "eventStoryline": "Rogue/RouEvent_317",
-    "rlArchiveSubId": 10001701
+    "eventMainIcon": "T_Rouge_Event15",
+    "eventStoryline": [
+      {
+        "id": "1739608900308689579",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1739608900308689577"
+        ],
+        "dialogues": [
+          {
+            "id": 6101701,
+            "content": "당신은 모닥불 옆에 앉아서 쉬며, 들고 있던 랜턴을 발 옆에 놓는다.\n손가락을 랜턴에서 떼는 순간, 땅에 갑자기 물빛이 번진다. 반응할 겨를도 없이, 램프가 물속에서 소용돌이치며 삼켜진다.",
+            "next": 6101702
+          },
+          {
+            "id": 6101702,
+            "content": "우스꽝스러운 새 마스크를 쓴 사람이 물속에서 몸을 반쯤 내밀고 머리를 흔들더니, 두 팔을 벌린다. 그러자 모양은 같고 재질이 다른 세 개의 랜턴이 물 위에 떠오른다.",
+            "next": 6101703
+          },
+          {
+            "id": 6101703,
+            "content": "\"안녕? 친애하는 여행자! 실례지만 네가 떨어뜨린 것은 이 황금 랜턴일까? 아니면 이 나무 랜턴일까? 아니면 이 일반 랜턴일까?\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "options": [
+              {
+                "id": 6101704,
+                "content": "황금 랜턴.",
+                "next": 6101705
+              },
+              {
+                "id": 6101707,
+                "content": "나무 랜턴.",
+                "next": 6101708
+              },
+              {
+                "id": 6101710,
+                "content": "일반 랜턴.",
+                "next": 6101711
+              }
+            ]
+          },
+          {
+            "id": 6101705,
+            "content": "\"아하하하!\" 그가 한바탕 과장되게 크게 웃는다. \"좋아, 마음에 들어! 좋은 물건을 만나면, 수단과 방법을 가리지 않고 쟁취해야지!\"\n\"마음대로 가져가, 여행자! 누가 반짝이는 금을 싫어하겠어. 안 그래?\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "next": 6101706
+          },
+          {
+            "id": 6101708,
+            "content": "\"오? 재미있는 친구네!\" 그는 고개를 갸웃거리며 예측할 수 없는 눈빛을 보인다. \"나무는 확실히 랜턴으로 사용할 수 없어. 하지만 여기는 심연인데 안 될 게 뭐 있지? 불가능한 일은 없어!\"\n\"축복할게, 여행자! 넌 반드시 재미있는 여행길에 오를 거야.\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "next": 6101709
+          },
+          {
+            "id": 6101711,
+            "content": "\"예, 예, 너희들은 모두 교회에서 바보 같은 가르침을 받았구나.\" 그는 당신의 대답이 매우 불만인지 연신 한숨을 쉰다. \"솔직히 말하면, 정말 재미없어. 다른 랜턴으로 바꾸고 싶지 않아?\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "next": 6101712
+          },
+          {
+            "id": 6101706,
+            "content": "그는 물속으로 뛰어들었고, 수면은 곧 사라졌다.\n아래를 보니 랜턴은 아직 당신의 발밑에 멀쩡히 놓여 있었지만, 주위에는 온통 잿불이 흩어져 있었다."
+          },
+          {
+            "id": 6101709,
+            "content": "그는 물속으로 뛰어들었고, 수면은 곧 사라졌다.\n아래를 보니 랜턴은 아직 당신의 발밑에 멀쩡히 놓여 있었지만, 주위에는 온통 유물이 흩어져 있었다."
+          },
+          {
+            "id": 6101712,
+            "content": "\"알았어, 알았어.\" 그가 고개를 가로젓는다. \"솔직한 게 미덕인 거지? 처음 말한 대로 약간의 보상을 줄게.\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "next": 6101713
+          },
+          {
+            "id": 6101713,
+            "content": "그는 물속으로 뛰어들었고, 수면은 곧 사라졌다.\n아래를 보니 랜턴은 아직 당신의 발밑에 멀쩡히 놓여 있었지만, 랜턴의 빛은 확실히 더 밝아졌다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 318,
     "name": "알 수 없는 오늘 Ⅱ",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5073,
       5074,
@@ -1161,22 +2150,90 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1096,
-      1097,
-      1098
-    ],
-    "eventStoryline": "Rogue/RouEvent_318",
-    "rlArchiveSubId": 10000202
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "1748589441224503615",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441224503613"
+        ],
+        "dialogues": [
+          {
+            "id": 6102001,
+            "content": "금속이 부딪치는 소리가 울려 퍼지고, 튀어 오른 불꽃이 모닥불 빛 속으로 녹아든다.\n소리가 들려오는 쪽을 바라보자, 땀을 비 오듯 흘리는 한 노인이 허름한 작업대 앞에서 쇠망치질에 여념이 없다.",
+            "next": 6102002
+          },
+          {
+            "id": 6102002,
+            "content": "\"반갑네, 젊은이!\"\n노인이 호쾌하게 인사를 건넨다.",
+            "npc": 910005,
+            "speakerName": "열정적인 노인",
+            "options": [
+              {
+                "id": 6102003,
+                "content": "안녕하세요.",
+                "next": 6102004
+              }
+            ]
+          },
+          {
+            "id": 6102004,
+            "content": "\"자네도 이곳에 발이 묶인 모양이지?\" 노인이 자신을 가리키며 말한다. \"나도 같은 처지라네.\"",
+            "npc": 910005,
+            "speakerName": "열정적인 노인",
+            "options": [
+              {
+                "id": 6102005,
+                "content": "또 만났네요, 어르신.",
+                "next": 6102006
+              }
+            ]
+          },
+          {
+            "id": 6102006,
+            "content": "\"우리가 구면이었나?\" 노인이 살짝 당혹스러워하며 말한다. \"내가 요즘 들어갈수록 기억력이 영 시원치 않구먼...\"",
+            "npc": 910005,
+            "speakerName": "열정적인 노인",
+            "next": 6102007
+          },
+          {
+            "id": 6102007,
+            "content": "\"이곳은 위험하니, 내가 만든 무기 중 하나를 가져가게나.\"\n노인이 호탕하게 자신의 작품들을 보여 준다.\n\"아무리 용을 써 봐야 여기선 못 나갈 테니, 내 본업에 충실하기로 했다네. 혹시 아나? 내 무기가 어떤 훌륭한 기사님께 도움이 돼서, 우리를 이 지긋지긋한 곳에서 데리고 나가 줄지.\"",
+            "npc": 910005,
+            "speakerName": "열정적인 노인",
+            "options": [
+              {
+                "id": 6102008,
+                "content": "갓 완성된 새 무기 중 하나를 고른다.",
+                "next": 6102011
+              },
+              {
+                "id": 6102009,
+                "content": "가지런히 정리된 무기 중 하나를 고른다.",
+                "next": 6102011
+              },
+              {
+                "id": 6102010,
+                "content": "먼지 쌓인 구석에 보관된 무기 중 하나를 고른다.",
+                "next": 6102011
+              }
+            ]
+          },
+          {
+            "id": 6102011,
+            "content": "노인의 따뜻한 배웅을 받으며, 당신은 무기를 챙겨 다시 길을 나섰다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 319,
     "name": "알 수 없는 오늘 Ⅰ",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5015,
       5016,
@@ -1186,21 +2243,90 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event01.T_Rouge_Event01'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event01.T_Rouge_Event01'",
-    "eventSelect": [
-      1016,
-      1017
-    ],
-    "eventStoryline": "Rogue/RouEvent_319",
-    "rlArchiveSubId": 10000201
+    "eventMainIcon": "T_Rouge_Event01",
+    "eventStoryline": [
+      {
+        "id": "1748589441224503524",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441224503522"
+        ],
+        "dialogues": [
+          {
+            "id": 6101901,
+            "content": "타오르는 모닥불 너머로, 노인의 주름진 얼굴이 드러난다.\n손에 쇠망치를 쥔 노인의 발치에는 무기 몇 자루가 흩어져 있다.\n당신을 보자, 노인의 눈이 미묘하게 커진다.",
+            "next": 6101902
+          },
+          {
+            "id": 6101902,
+            "content": "\"젊은이, 혹시 엘리시안으로 가는 길이 어느 쪽인지 아나?\"\n노인이 입을 열자, 메마르고 잠긴 목소리가 새어 나온다.\n\"이 근처를 몇 바퀴나 돌았는데, 도무지 집으로 가는 길을 찾을 수가 없구먼...\"",
+            "npc": 910005,
+            "speakerName": "방황하는 노인",
+            "options": [
+              {
+                "id": 6101903,
+                "content": "아무 말도 하지 않는다.",
+                "next": 6101904
+              }
+            ]
+          },
+          {
+            "id": 6101904,
+            "content": "\"그런가... 자네도 길을 잃었나 보구먼...\"\n노인은 길게 한숨을 내쉬며, 힘없이 고개를 떨군다.",
+            "npc": 910005,
+            "speakerName": "방황하는 노인",
+            "options": [
+              {
+                "id": 6101905,
+                "content": "노인에게 무기를 하나 줄 수 있는지 묻는다.",
+                "next": 6101906
+              }
+            ]
+          },
+          {
+            "id": 6101906,
+            "content": "\"무기? 바닥에 있는 이것들 말인가?\"\n\"으흠... 이제야 기억이 나는군. 난... 대장장이야.\"\n\"사람들이 도망칠 수 있게 무기를 만들어 줬지. 그리고...\"",
+            "npc": 910005,
+            "speakerName": "방황하는 노인",
+            "next": 6101907
+          },
+          {
+            "id": 6101907,
+            "content": "순간, 자신이 이곳에 온 이유가 생각난 듯, 노인의 눈빛이 순간 흐릿해진다.\n그는 곧 고개를 가로젓고는, 씁쓸한 미소를 지어 보인다.",
+            "next": 6101908
+          },
+          {
+            "id": 6101908,
+            "content": "\"당연히 줄 수 있다네, 젊은이.\"\n\"마음 가는 대로 고르게나. 그 무기가 자네를 지켜 줄 수 있기를 바라지.\"",
+            "npc": 910005,
+            "speakerName": "방황하는 노인",
+            "options": [
+              {
+                "id": 6101909,
+                "content": "노인의 왼쪽에 있는 무기 중 하나를 고른다.",
+                "next": 6101911
+              },
+              {
+                "id": 6101910,
+                "content": "노인의 오른쪽에 있는 무기 중 하나를 고른다.",
+                "next": 6101911
+              }
+            ]
+          },
+          {
+            "id": 6101911,
+            "content": "무기를 하나 골라 가방에 챙겼다.\n노인은 이미 당신이 있다는 사실도 잊은 듯, 손에 쥔 쇠망치를 응시하며, 말없이 생각에 잠겨 있다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 320,
     "name": "영원한 시편·루프",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5173,
       5064
@@ -1209,21 +2335,96 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event08.T_Rouge_Event08'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event08.T_Rouge_Event08'",
-    "eventSelect": [
-      1106,
-      1107
-    ],
-    "eventStoryline": "Rogue/RouEvent_320",
-    "rlArchiveSubId": 10001002
+    "eventMainIcon": "T_Rouge_Event08",
+    "eventStoryline": [
+      {
+        "id": "1748589441225503726",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1748589441225503724"
+        ],
+        "dialogues": [
+          {
+            "id": 6102101,
+            "content": "꺼질 듯한 불빛이 고개 숙인 시인의 옆얼굴을 비춘다.\n여자는 모닥불 옆에 반쯤 무릎을 꿇고 앉아, 손끝으로 천천히 잿더미를 휘저으며 구불구불한 문양을 새긴다.",
+            "next": 6102102
+          },
+          {
+            "id": 6102102,
+            "content": "\"피할 수 없다면, 운명을 받아들여라.\"\n\"글이 거짓을 꿰뚫는 칼날이 될 수 없다면, 아름다운 꿈을 쌓아 올릴 벽돌이 되어라...\"\n시인은 잠시 읊조림을 멈추고, 살며시 손끝을 들어 올린다.\n \"으음...\"",
+            "npc": 910005,
+            "speakerName": "기뻐하는 시인",
+            "next": 6102103
+          },
+          {
+            "id": 6102103,
+            "content": "깊숙이 잠들어 있던 기억이 불현듯 떠오르며, 귀에 익은 시라는 확신이 든다.\n한 줄기 연기와 재가 뺨을 스치자, 당신은 무의식적으로 마지막 빈 구절을 읊는다...",
+            "options": [
+              {
+                "id": 6102104,
+                "content": "\"거짓을 써 내려가, 꺼지지 않는 불꽃을 피워 올려라.\"",
+                "next": 6102105
+              }
+            ]
+          },
+          {
+            "id": 6102105,
+            "content": "\"어...?!\"\n시인이 고개를 들어, 놀랍다는 표정으로 바라본다.\n\"정말 아름다운 구절이군요! 제가 바라던 마무리였어요! 이런 곳에서 마음이 통하는 분을 만나다니, 정말 행운이네요.\"",
+            "npc": 910005,
+            "speakerName": "기뻐하는 시인",
+            "options": [
+              {
+                "id": 6102106,
+                "content": "\"사실 방금 그 구절은 다른 시간대의 당신이 쓴 거예요.\"",
+                "next": 6102107
+              }
+            ]
+          },
+          {
+            "id": 6102107,
+            "content": "\"'다른 시간대'요...?\"\n의아한 표정을 짓던 시인의 눈동자가, 모닥불이 옮겨붙은 듯 반짝인다.\n\"그런 거였군요... 당신은 이 서사시의 주인공이자, 제가 앞으로 어딘가에서 다시 만나게 될 특별한 인물인 거예요, 그렇죠?\"",
+            "npc": 910005,
+            "speakerName": "기뻐하는 시인",
+            "options": [
+              {
+                "id": 6102108,
+                "content": "고개를 끄덕인다.",
+                "next": 6102109
+              }
+            ]
+          },
+          {
+            "id": 6102109,
+            "content": "\"그렇다면 이 시는 당신이 쓴 걸까요, 아니면 제가 쓴 걸까요? 후후... 정말 매력적인 질문이네요. 성수 아카데미의 학자들도 푹 빠져 버릴 만한 이야기예요.\"\n시인이 재미있다는 듯 소리 내어 웃는다.\n\"다음에 만나면, 시를 한 수 지어 드릴게요. 지금은, 손을 내밀어 제 축복을 받아 주세요.\"",
+            "npc": 910005,
+            "speakerName": "기뻐하는 시인",
+            "options": [
+              {
+                "id": 6102110,
+                "content": "왼손을 내민다.",
+                "next": 6102112
+              },
+              {
+                "id": 6102111,
+                "content": "오른손을 내민다.",
+                "next": 6102112
+              }
+            ]
+          },
+          {
+            "id": 6102112,
+            "content": "시인은 손끝에 남은 잿가루로 당신의 손바닥에 무언가를 적는다.\n글자의 의미는 여전히 헤아릴 수 없지만, 뜨거우면서도 데지 않을 만큼의 선명한 온기가 전해져 온다.\n다시 고개를 들어 보니, 시인은 연기처럼 사라져 버렸다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 321,
     "name": "가시덩굴의 서·단절",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5174,
       5065
@@ -1232,21 +2433,80 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event09.T_Rouge_Event09'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event09.T_Rouge_Event09'",
-    "eventSelect": [
-      1111,
-      1112
-    ],
-    "eventStoryline": "Rogue/RouEvent_321",
-    "rlArchiveSubId": 10001102
+    "eventMainIcon": "T_Rouge_Event09",
+    "eventStoryline": [
+      {
+        "id": "1754303988206559939",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988206559937"
+        ],
+        "dialogues": [
+          {
+            "id": 6102201,
+            "content": "\"변덕스러운 운명의 신이시여, 때로는 기쁨을, 때로는 고통을 내리시니...\"\n\"항상 경건한 마음을 잃지 않으면... 순백의 실을 내려 우리를 제천의 하늘 위 낙원으로 이끌어 주시리라...\"\n소년은 당신의 존재조차 알아차리지 못한 채, 진지하고 경건하게 책을 낭독하고 있다.",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "next": 6102202
+          },
+          {
+            "id": 6102202,
+            "content": "당신은 슬그머니 소년의 곁으로 다가가, 재빨리 책을 곁눈질한다.\n당신의 기억 그대로, 책장에 쓰인 성가는 악의에 찬 새카만 글자로 뒤덮여 있다.\n그 글자들은, 종이 밖으로 빠져나오려는 듯 꿈틀거린다.",
+            "next": 6102203
+          },
+          {
+            "id": 6102203,
+            "content": "\"안녕하세요... 혹시 이 책을 읽고 싶으세요?\"\n마침내 인기척을 느낀 소년이 호기심 가득한 눈으로 고개를 든다.",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "options": [
+              {
+                "id": 6102204,
+                "content": "소년이 책을 더 읽지 못하게 막는다.",
+                "next": 6102205
+              },
+              {
+                "id": 6102208,
+                "content": "아무 말도 하지 않는다.",
+                "next": 6102209
+              }
+            ]
+          },
+          {
+            "id": 6102205,
+            "content": "당신은 소년에게서 책을 빼앗아, 힘껏 덮어 버린다.",
+            "next": 6102206
+          },
+          {
+            "id": 6102209,
+            "content": "당신은 지금의 행동으로 소년의 운명을 결코 바꿀 수 없다는 사실을 알고 있다.\n게다가 더 중요한 임무가 남아 있다. 당신은 유리를 모아 이 기나긴 악몽을 끝내야만 한다.",
+            "next": 6102210
+          },
+          {
+            "id": 6102206,
+            "content": "\"괜찮으세요?!\"\n걱정스러운 표정으로 일어난 소년의 시선이, 이내 텅 빈 자기 손으로 향한다.\n\"어? 나... 이제 책 안 읽어도 돼? 나... 이제 자유야?\"",
+            "npc": 910005,
+            "speakerName": "어색한 소년",
+            "next": 6102207
+          },
+          {
+            "id": 6102210,
+            "content": "순식간에 퍼져 나간 검은 가시덩굴이 소년의 모습을 집어삼킨다.\n당신은 얕은 한숨을 내쉬고, 다시 앞으로 발걸음을 옮겼다."
+          },
+          {
+            "id": 6102207,
+            "content": "당신은 손끝의 고통을 삼킨 채, 소년에게 미소를 지으며 고개를 끄덕인 후, 책을 모닥불 속에 던져 넣는다.\n불길이 치솟아 오르고, 화염을 휘감은 검은 가시덩굴이 덮쳐 온다..."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 322,
     "name": "잊혀진 기억·몰락",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5175,
       5065
@@ -1255,21 +2515,83 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event10.T_Rouge_Event10'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event10.T_Rouge_Event10'",
-    "eventSelect": [
-      1116,
-      1117
-    ],
-    "eventStoryline": "Rogue/RouEvent_322",
-    "rlArchiveSubId": 10001202
+    "eventMainIcon": "T_Rouge_Event10",
+    "eventStoryline": [
+      {
+        "id": "1754303988207560059",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988207560057"
+        ],
+        "dialogues": [
+          {
+            "id": 6102301,
+            "content": "\"아가... 이리 와 보렴. 모닥불이 있단다.\"\n불빛 건너편에 홀로 서 있던 여인이 미소와 함께 고개를 들자, 수척한 얼굴이 불빛에 어린다.\n\"마음씨가 참 고우시네요. 정말 따뜻해요. 감사합니다.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "options": [
+              {
+                "id": 6102302,
+                "content": "아이는 어디에 있는지 묻는다.",
+                "next": 6102303
+              }
+            ]
+          },
+          {
+            "id": 6102303,
+            "content": "\"바로 여기 있는걸요. 자, 보세요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6102304
+          },
+          {
+            "id": 6102304,
+            "content": "여인이 가리키는 곳으로 시선을 옮기자, 사람 키 절반만 한 바위 하나가 이끼에 뒤덮여 있다.\n바위 중심보다 조금 위, 갈라진 틈 사이에 브로치 하나가 박혀 있고, 그 주위로 이끼가 빽빽이 자라나, 마치 심장을 감싼 듯 보인다.\n여인은 손에 흙이 묻는 줄도 모른 채, 바위 표면을 부드럽게 어루만진다.",
+            "options": [
+              {
+                "id": 6102305,
+                "content": "사실대로 말해 준다.",
+                "next": 6102306
+              },
+              {
+                "id": 6102308,
+                "content": "여자의 말에 맞장구친다.",
+                "next": 6102309
+              }
+            ]
+          },
+          {
+            "id": 6102306,
+            "content": "\"무슨 황당한 소리를 하는 건가요?!\"\n순식간에 여인의 눈에 적의가 번뜩인다. 그녀는 아이를 감싸듯 바위를 등 뒤에 숨긴 후, 히스테릭하게 소리치기 시작한다.\n\"이건 내 아이예요... 바로 여기 있잖아요. 이젠 아무한테도 빼앗기지 않을 거예요... 절대로...\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6102307
+          },
+          {
+            "id": 6102309,
+            "content": "\"고마워요. 원래 낯을 많이 가리는 아이인데, 당신은 마음에 드나 봐요.\"\n여인은 틈틈이 바위를 쓰다듬으며 더없이 온화하게 말한다.\n\"혼자 다니시는 건가요? 저런, 가족들이 많이 걱정하겠네요... 어서 돌아가세요.\"",
+            "npc": 910005,
+            "speakerName": "초췌한 여인",
+            "next": 6102310
+          },
+          {
+            "id": 6102307,
+            "content": "당신은 순간적으로 말문이 막힌다.\n저 달콤한 꿈을 헤집는 것은 부질없는 일이었다.\n결국 당신은 여인과 그녀의 '아이'에게 모닥불을 내주려 자리에서 몸을 일으켰다. 바로 그 순간, 어둠 속에 도사리던 그림자가 때를 기다렸다는 듯 덮쳐 온다..."
+          },
+          {
+            "id": 6102310,
+            "content": "당신은 정중히 감사 인사를 건네고 몸을 일으켜 자리를 떠난다.\n등 뒤로, 여인과 그녀의 '아이'의 모습이 모닥불 속으로 점차 희미해진다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 323,
     "name": "꺼지지 않는 화염·덧없음",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5176,
       5064
@@ -1278,21 +2600,83 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1121,
-      1122
-    ],
-    "eventStoryline": "Rogue/RouEvent_323",
-    "rlArchiveSubId": 10001302
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1754303988207560179",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988207560177"
+        ],
+        "dialogues": [
+          {
+            "id": 6102401,
+            "content": "\"없어져 버렸어... 안 보여...\"\n텅 빈 눈의 소녀가 땅에 엎드린 채, 손톱으로 땅을 파헤치듯 흙바닥을 더듬고 있다.",
+            "npc": 910005,
+            "speakerName": "방황하는 소녀",
+            "options": [
+              {
+                "id": 6102402,
+                "content": "뭘 찾고 있는지 물어본다.",
+                "next": 6102403
+              }
+            ]
+          },
+          {
+            "id": 6102403,
+            "content": "\"내 돌멩이... 돌멩이를 찾고 있어... 분명 여기 있었는데...\"\n소녀가 힘없이 중얼거리며, 절망 어린 눈으로 당신 발치의 모닥불을 본다.\n\"내 불꽃이... 꺼지려고 해... 어쩌지... 어떡하면 좋지...\"",
+            "npc": 910005,
+            "speakerName": "방황하는 소녀",
+            "options": [
+              {
+                "id": 6102404,
+                "content": "소녀를 도와준다.",
+                "next": 6102405
+              },
+              {
+                "id": 6102408,
+                "content": "세상일은 늘 뜻대로 되지 않는다고 말해 준다.",
+                "next": 6102409
+              }
+            ]
+          },
+          {
+            "id": 6102405,
+            "content": "소녀가 아끼던 돌멩이의 모양을 떠올려 본다. 어디서 난 건지는 몰라도, 불꽃 마법을 사용하면 비슷한 걸 만들 수 있을 것 같다.\n당신은 모닥불의 기운을 빌려 힘을 모은다...\n금세, 금빛으로 반짝이는 작은 돌들이 유성처럼 쏟아져 내리며, 서로 부딪혀 맑은 소리를 낸다.",
+            "next": 6102406
+          },
+          {
+            "id": 6102409,
+            "content": "\"알아... 나도 안다고.\"\n\"그래서 다 포기했잖아. 이제 책 같은 건 들여다보지도 않고, 마법의 기원 따위를 궁금해하지도 않아. 저 탑에 뭐가 있는지도 더는 묻지 않는다고...\"\n\"이제 내가 바라는 건 작은 불빛 하나뿐인데, 이것도 안 되는 거야?\"",
+            "npc": 910005,
+            "speakerName": "방황하는 소녀",
+            "next": 6102410
+          },
+          {
+            "id": 6102406,
+            "content": "\"아...! 내 돌멩이! 바로 이거야! 고마워, 신의 전령!\"\n소녀는 마치 소중한 보물을 다루듯, 돌멩이를 하나하나 주워 치맛자락에 조심스레 갈무리한다.",
+            "npc": 910005,
+            "speakerName": "방황하는 소녀",
+            "next": 6102407
+          },
+          {
+            "id": 6102410,
+            "content": "당신은 아무 말도 해 줄 수 없다.\n순간, 소녀가 자리에서 벌떡 일어나더니, 어떻게 해 볼 새도 없이 결연히 불길 속으로 걸어 들어간다.\n이윽고, 소녀의 모습은 이지러지는 불꽃과 하나 되어 사라졌다.\n당신은 몸을 돌려, 다시 갈 길을 재촉한다."
+          },
+          {
+            "id": 6102407,
+            "content": "소녀가 품에 안고 있던 돌과 꼭 닮은 결정들을 보니, 문득 저 돌멩이들은 당신이 어느 여정에서 무심결에 흘린 흔적에서 비롯된 건 아닐까 하는 생각이 스친다.\n어쨌든 소녀는 자신만의 '확신'을 되찾았다. 그리고 당신도, 당신의 여정을 계속해야 한다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 324,
     "name": "꺼지지 않는 화염·잔불",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5176,
       5064
@@ -1301,21 +2685,81 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event11.T_Rouge_Event11'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event11.T_Rouge_Event11'",
-    "eventSelect": [
-      1126,
-      1127
-    ],
-    "eventStoryline": "Rogue/RouEvent_324",
-    "rlArchiveSubId": 10001303
+    "eventMainIcon": "T_Rouge_Event11",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560299",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560297"
+        ],
+        "dialogues": [
+          {
+            "id": 6102501,
+            "content": "모닥불이 고요히 타오르고, 이번에는 어떤 환영도 비치지 않는다.\n막 자리를 뜨려는 순간, 바닥에서 반짝이는 무언가가 시선을 사로잡는다.\n마치 땅으로 떨어진 별들처럼 여기저기 흩뿌려진 금빛 돌멩이들이다.",
+            "options": [
+              {
+                "id": 6102502,
+                "content": "돌멩이를 주워 불길 속으로 던진다.",
+                "next": 6102503
+              },
+              {
+                "id": 6102506,
+                "content": "조용히 지켜본다.",
+                "next": 6102507
+              }
+            ]
+          },
+          {
+            "id": 6102503,
+            "content": "불길이 거세게 타오르더니, 이내 비정상적으로 퍼져나가기 시작한다.\n당신이 조심스럽게 한 걸음 물러서자, 화염 속에서 어떤 형체가 나타난다. 당신은 그제야 옆으로 뻗어 나가던 빛은 불꽃이 아니라, 소녀의 머리칼이었음을 깨닫는다.",
+            "next": 6102504
+          },
+          {
+            "id": 6102507,
+            "content": "불길은 여전히 소리 없이 너울거리고, 그 일렁임 속에서 어렴풋이 어떤 소리가 들려온다.",
+            "next": 6102508
+          },
+          {
+            "id": 6102504,
+            "content": "\"안녕! 내 돌멩이 찾았구나, 맞지?\"\n소녀가 모닥불 속에서 훌쩍 뛰쳐나와 고개를 흔들자, 금빛 돌멩이들이 짤랑이며 쏟아져 내린다.\n\"이제 밖에서 안 찾아다녀도 돼! 불 속으로 걸어 들어가기만 하면, 나 혼자서도 돌멩이를 만들 수 있거든!\"",
+            "npc": 910005,
+            "speakerName": "활발한 소녀",
+            "next": 6102505
+          },
+          {
+            "id": 6102508,
+            "content": "\"응... 그래. 기억할게.\"\n불길 너머로 소녀의 행복에 젖은 평온한 목소리가 들려온다.\n\"궁금증도 적당히 해야 하니까. 불은 신의 선물이지, 물질의 반응이 아니야. 이 돌멩이들처럼 말이지. 난 신께서 주신 이 보물들 덕분에, 편히 잠들 수 있어...\"",
+            "npc": 910005,
+            "speakerName": "활발한 소녀",
+            "next": 6102509
+          },
+          {
+            "id": 6102505,
+            "content": "\"미안, 길게 얘기할 시간이 없어. 146개를 다 못 모았거든.\"\n\"하지만 쓸모 있을 만한 걸 좀 찾았어. 자, 받아. 여행 잘해!\"\n소녀는 내게 무언가를 억지로 쥐여 주더니, 몸을 휙 돌려 다시 불길 속으로 사라진다.",
+            "npc": 910005,
+            "speakerName": "활발한 소녀",
+            "next": 6102510
+          },
+          {
+            "id": 6102509,
+            "content": "말없이 몸을 돌려 내디딘 첫걸음에, 마침 발치로 굴러온 돌멩이 하나가 힘없이 바스러진다.\n신이 내린 보물은, 이렇게나 연약했던 것이다.",
+            "next": 6102510
+          },
+          {
+            "id": 6102510,
+            "content": "문득 저 불꽃이 소녀에게 행복한 '확신'을 안겨 준 것인지, 아니면 그녀를 이곳에 영원히 옭아맬 '족쇄'가 된 것인지 궁금해진다.\n어쩌면, 그 둘 사이엔 처음부터 아무 차이가 없었는지도 모른다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 325,
     "name": "저주의 피·공허한 질문",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [
       5177,
       5064
@@ -1324,21 +2768,95 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event14_2.T_Rouge_Event14_2'",
-    "eventSelect": [
-      1131,
-      1132
-    ],
-    "eventStoryline": "Rogue/RouEvent_325",
-    "rlArchiveSubId": 10001602
+    "eventMainIcon": "T_Rouge_Event14_2",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560419",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560417"
+        ],
+        "dialogues": [
+          {
+            "id": 6102601,
+            "content": "\"죄송해요. 제가 다 잘못했어요... 멍청해서 성가도 다 못 외우고... 게을러서 설교도 끝까지 못 들었어요...\"\n\"신이시여, 부디 절 용서해 주세요...\"",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6102602
+          },
+          {
+            "id": 6102602,
+            "content": "소녀는 자신만의 세계에 갇혀 기도에 매달리고 있다. 어쩌면, 정말 이제 더는 다른 이가 보이지 않게 된 건지도 모른다.\n한층 깊어진 병세로 소녀의 두 눈은 생기라곤 찾아볼 수 없는 잿빛이 되었다.",
+            "next": 6102603
+          },
+          {
+            "id": 6102603,
+            "content": "\"혹시... 그때 그 여행자님이세요? 벌써... 시간이 많이 흐른 거예요?\"\n마침내 인기척을 느낀 소녀가 천천히 고개를 돌린다.\n\"여행자님... 제발 가르쳐 주세요... 밤낮으로 신께 기도드리고 있는데, 왜 단 한 번도 답해 주시지 않는 걸까요?\"",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "options": [
+              {
+                "id": 6102604,
+                "content": "계속 기도하라고 응원한다.",
+                "next": 6102605
+              },
+              {
+                "id": 6102608,
+                "content": "신은 응답하지 않을 것이라고 말한다.",
+                "next": 6102609
+              }
+            ]
+          },
+          {
+            "id": 6102605,
+            "content": "아직 결말을 고쳐 쓸 때가 아니라면, 거짓을 이어 나가는 편이 나으리라... 적어도 일종의 '희망'이니까.\n당신은 소녀에게 계속 기도하면 언젠가 다들 구원받을 것이라 말한다.\n언젠가는 심연을 이겨낼 테니, 아주 틀린 말은 아니다. 단지, 소녀의 기도는 무의미하고, 진정한 해답은 당신이 손에 든 이 랜턴에 있을 뿐이다.",
+            "next": 6102606
+          },
+          {
+            "id": 6102609,
+            "content": "\"아무 답도... 해 주지 않으실 거라고요?\"\n\"제 죄가 너무 깊어서, 구원받을 자격조차 없는 거예요?\"\n절망에 찬 눈으로 당신을 바라보는 소녀의 고름과 딱지가 가득한 뺨 위로 눈물이 흘러내린다.",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "options": [
+              {
+                "id": 6102610,
+                "content": "\"넌 애초에 죄를 짓지 않았으니까.\"",
+                "next": 6102611
+              }
+            ]
+          },
+          {
+            "id": 6102606,
+            "content": "\"알겠어요... 믿을게요.\"\n소녀는 굳은 의지를 실은 채, 두 손을 마주 잡고 다시 나지막이 기도를 올린다.",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6102607
+          },
+          {
+            "id": 6102611,
+            "content": "\"네...?\"\n소녀의 두 눈이 잠시 멍해졌다가, 당혹스러움이 감돈다.",
+            "npc": 910005,
+            "speakerName": "감염된 소녀",
+            "next": 6102612
+          },
+          {
+            "id": 6102607,
+            "content": "당신은 가볍게 한숨을 내쉬고, 랜턴을 힘껏 쥔 채 앞으로 나아간다."
+          },
+          {
+            "id": 6102612,
+            "content": "당신은 반드시 이 고통을 끝낼 방법을 찾아내겠다는 무언의 맹세를 담아, 소녀를 향해 결의에 찬 미소를 지어 보인다.\n알 듯 말 듯 고개를 끄덕이는 소녀의 상처에서, 더는 피가 배어 나오지 않는다.\n당신은 손을 흔들어 소녀에게 작별을 고한 뒤, 손안의 랜턴을 단단히 움켜쥔 채 다시 앞으로 나아간다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 326,
     "name": "달이 차오를 때",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5065
     ],
@@ -1346,21 +2864,86 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event17_2.T_Rouge_Event17_2'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event17_2.T_Rouge_Event17_2'",
-    "eventSelect": [
-      1136,
-      1137
-    ],
-    "eventStoryline": "Rogue/RouEvent_326",
-    "rlArchiveSubId": 10001801
+    "eventMainIcon": "T_Rouge_Event17_2",
+    "eventStoryline": [
+      {
+        "id": "1754303988208560539",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988208560537"
+        ],
+        "dialogues": [
+          {
+            "id": 6102701,
+            "content": "\"만월의 여신 포르소시여...\"\n\"찬란한 발자취의 주인이자, 운명의 실을 잣는 분이시여...\"\n\"드높은 하늘과 달빛 아래, 경건한 믿음의 노래를 바치나이다...\"",
+            "npc": 910005,
+            "speakerName": "만월의 신도",
+            "next": 6102702
+          },
+          {
+            "id": 6102702,
+            "content": "일렁이는 불길 너머 사람들의 형체가 어른거리고, 신을 향한 기도가 하나의 목소리가 되어 울려 퍼진다.",
+            "next": 6102703
+          },
+          {
+            "id": 6102703,
+            "content": "\"누구시죠? 혹시 길을 잃으셨나요?\"\n기도하던 사람 중 하나가 당신을 발견하곤, 미소 지으며 손을 내민다.\n\"저희와 함께 만월의 여신님께 기도드리지 않겠어요? 당신의 앞길을 축복해 주실 거예요!\"",
+            "npc": 910005,
+            "speakerName": "만월의 신도",
+            "next": 6102704
+          },
+          {
+            "id": 6102704,
+            "content": "이들은 <H>아홉 번째 신</>이자 운명의 신 <H>포르소</>에게 찬가를 바치고 있었다.\n만월의 주인 포르소는, 달빛을 모아 운명의 실을 잣는 신이다.",
+            "options": [
+              {
+                "id": 6102705,
+                "content": "기도에 동참한다.",
+                "next": 6102706
+              },
+              {
+                "id": 6102709,
+                "content": "기도에 동참하지 않는다.",
+                "next": 6102710
+              }
+            ]
+          },
+          {
+            "id": 6102706,
+            "content": "어릴 적엔 가장 싫어하던 시간이었다. 아름답지만 무의미한 말들의 집합이라고 치부하며, 외우자마자 잊어버렸던 기도가 지금은 왠지 그리워진다.\n당신은 그들과 함께 기도를 시작한다.",
+            "next": 6102707
+          },
+          {
+            "id": 6102710,
+            "content": "\"거절하겠다고요? 어째서죠?\"\n기도하던 사람 중 하나가 날카롭게 외친다.\n\"이단이다! 암월파의 신도냐? 아니면 네파의 추종자냐?\"",
+            "npc": 910005,
+            "speakerName": "만월의 신도",
+            "next": 6102711
+          },
+          {
+            "id": 6102707,
+            "content": "\"포르소, 무질서한 운명의 흐름에서 영원히 창공을 가로지르는 만월의 신이시여.\"\n\"바라옵건대, 당신의 신도들을 굽어살피시고.\"\n\"저희에게 위없는 행운과 복을 내려 주시옵소서.\"",
+            "npc": 910004,
+            "next": 6102708
+          },
+          {
+            "id": 6102711,
+            "content": "결코 입에 담아서는 안 될 이름이 들리자, 신도들이 살기 등등한 얼굴로 일제히 당신을 돌아본다.\n당신은 한숨을 내쉰다. 어떻게든 이 포위망을 빠져나가야 한다."
+          },
+          {
+            "id": 6102708,
+            "content": "당신은 두 눈을 감고 경건한 신도들을 따라 속으로 기도를 읊조린다.\n마지막 구절이 끝나고 눈을 뜨자, 그들은 흔적도 없이 사라진 채였다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 327,
     "name": "달이 기울 때",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5178,
       5065
@@ -1369,21 +2952,99 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event17.T_Rouge_Event17'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event17.T_Rouge_Event17'",
-    "eventSelect": [
-      1141,
-      1142
-    ],
-    "eventStoryline": "Rogue/RouEvent_327",
-    "rlArchiveSubId": 10001901
+    "eventMainIcon": "T_Rouge_Event17",
+    "eventStoryline": [
+      {
+        "id": "1754303988209560659",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1754303988209560657"
+        ],
+        "dialogues": [
+          {
+            "id": 6102801,
+            "content": "\"운명의 실타래를 끊는 가위이자, 영원한 고요의 주인이시여...\"\n\"심연과 긴 밤 아래, 이 미천한 기도를 주시옵소서...\"",
+            "npc": 910005,
+            "speakerName": "낯선 신도",
+            "next": 6102802
+          },
+          {
+            "id": 6102802,
+            "content": "일렁이는 불길 너머 사람들의 형체가 어른거리고, 신을 향한 기도가 하나의 목소리가 되어 울려 퍼진다.\n가만히 귀를 기울이니, 전혀 들어 본 적 없는 기도문이다.",
+            "next": 6102803
+          },
+          {
+            "id": 6102803,
+            "content": "\"누구시죠? 혹시 길을 잃으셨나요?\"\n기도하던 사람 중 하나가 당신을 발견하곤, 미소 지으며 손을 내민다.\n\"그게 아니라면, 그쪽도 하늘의 뜻을 헤아리고, 저희와 함께 진정한 구원자이신 네파님의 품에 안기려 하는 건가요?\"",
+            "npc": 910005,
+            "speakerName": "낯선 신도",
+            "next": 6102804
+          },
+          {
+            "id": 6102804,
+            "content": "<H>네파</>... 기억난다.\n엘리시안 정교회의 기록에서는 좀처럼 찾아볼 수 없고, 먼지 쌓인 고문서에서나 발견할 수 있는, 금기시된 이름이자, 오래전에 잊힌 <H>열 번째 신</>이다.",
+            "next": 6102805
+          },
+          {
+            "id": 6102805,
+            "content": "네파는 만월과 운명의 신 포르소의 자매이자, 어두운 달과 죽음의 신이다.\n언니가 운명의 실을 잣는다면, 동생은 그 운명을 가차 없이 끊어 낸다.\n두 신의 끊임없는 반목은 달을 차고 이지러지게 만들고, 밀물과 썰물을 자아낸다.\n그런 네파의 추종자들이라면, 아마...",
+            "options": [
+              {
+                "id": 6102806,
+                "content": "그들의 신앙에 대해 묻는다.",
+                "next": 6102807
+              }
+            ]
+          },
+          {
+            "id": 6102807,
+            "content": "\"이곳에 오신 걸 보면, 이미 아시겠지만, 심연은 살아 있어요. 끊임없이 자라고, 뻗어 나가고 있죠.\"\n\"기사단의 황금 성검은 어둠의 파도를 막을 수 없고, 만월은 그윽한 고요를 꿰뚫지 못해요.\n\"모든 빛이 꺼지기 위해 타오르고, 모든 생명은 죽음을 향해 나아가듯, 소멸은 단 하나의 확고한 진리예요. 저희가 속한 이 심연이야말로, 이 세상의 본모습인 거죠.\"\n\"<H>암월 교단</>에 오신 걸 환영해요, 여행자님.\"",
+            "npc": 910005,
+            "speakerName": "암월의 신도",
+            "options": [
+              {
+                "id": 6102808,
+                "content": "초대를 받아들인다.",
+                "next": 6102809
+              },
+              {
+                "id": 6102811,
+                "content": "초대를 거절한다.",
+                "next": 6102812
+              }
+            ]
+          },
+          {
+            "id": 6102809,
+            "content": "환영일 뿐이지만, 쓸데없는 마찰을 빚고 싶지는 않다.\n그래서 당신은 '죽음의 본능'이니 '네파의 구원'이니 '심연은 곧 영원이니'하는 어깨너머로 주워들었던 암월 교단의 소문들을 그럴싸하게 늘어놓는다... 제법 먹혀들었는지, 그들은 연신 고개를 끄덕이며 내 말에 맞장구를 친다.",
+            "next": 6102810
+          },
+          {
+            "id": 6102812,
+            "content": "기나긴 고행 속에서, 당신 또한 삶과 죽음의 의미를 수없이 되뇌었으며, 죽음만이 유일한 안식이라 믿었던 적도 있었다.\n하지만 <H>예기치 못한 만남들</> 덕분에, 당신은 이미 어둠 속을 수없이 헤매는 의미를 깨달았다.\n몸을 장작으로 불태워 찰나의 빛으로 스러진다고 해도, 당신은 이 어둠을 몰아내고, 이 굳어진 불멸을 불태울 것이다.",
+            "next": 6102813
+          },
+          {
+            "id": 6102810,
+            "content": "\"정말 감탄이 나올 정도로 박식하고 지혜로우시네요. 부디 이 선물을 받아 주세요!\"\n어릴 적 설교나 논쟁 시간에 매번 졸기만 한 건 아니었는지, 다행히 그들을 속여 넘길 수 있었다.",
+            "npc": 910005,
+            "speakerName": "암월의 신도"
+          },
+          {
+            "id": 6102813,
+            "content": "\"심연은 영원하지 않아. 너희는 산 사람이 남긴 환영일 뿐이야.\"\n당신은 무기를 쥔다.\n\"죽은 자는, 죽은 자가 있어야 할 곳으로 돌아가도록 해...\"",
+            "npc": 910004
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 328,
     "name": "성상 아래에서",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 200,
+    "weight": 200,
     "roomCondition": [
       5065
     ],
@@ -1391,62 +3052,339 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event16.T_Rouge_Event16'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event16.T_Rouge_Event16'",
-    "eventSelect": [
-      1146,
-      1147
-    ],
-    "eventStoryline": "Rogue/RouEvent_328",
-    "rlArchiveSubId": 10002001
+    "eventMainIcon": "T_Rouge_Event16",
+    "eventStoryline": [
+      {
+        "id": "17546503285961385789",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17546503285961385787"
+        ],
+        "dialogues": [
+          {
+            "id": 6103001,
+            "content": "\"오, 다 함께 <H>사리엘</>을 위해 노래하세!\n\"엘리시안의 성자 사리엘.\"\n\"포르소의 계시를 받고 이 세상에 자비와 용서와 사랑을 전하시고.\"\n\"주홍빛 엘리시안의 대지에 평화의 새싹을 틔우셨네!\"",
+            "npc": 910005,
+            "speakerName": "실성한 시인",
+            "next": 6103002
+          },
+          {
+            "id": 6103002,
+            "content": "음유시인 차림의 노인 하나가 부서진 벽의 일부를 어루만진다.\n그나마 온전한 벽면 위로, 희미한 불빛을 받아 시인의 노래에 등장하는 <H>사리엘</>의 거대한 벽화가 모습을 드러낸다.\n사리엘은 2천 년 전의 성자이자, 최초의 <H>세븐 버튜스</> 중 '절제'를 맡았던 인물이다.\n시인은 당신에게는 아랑곳하지 않은 채, 열심히 노래를 이어 나간다.",
+            "options": [
+              {
+                "id": 6103003,
+                "content": "계속 듣는다.",
+                "next": 6103004
+              }
+            ]
+          },
+          {
+            "id": 6103004,
+            "content": "\"그러나 늘 한 가지가 성자의 가슴을 옥죄였으니.\"\n\"포르소께서 약속하신, 제천의 하늘이 바로 그것이라.\"\n\"푸른 물결의 호숫가에서 일흔하고도 이레를 앉아 지낸 어느 날.\"\n\"드디어 만월 아래 진리를 깨닫고, 호수 속에서 영원에 도달했네.\"",
+            "npc": 910005,
+            "speakerName": "실성한 시인",
+            "next": 6103005
+          },
+          {
+            "id": 6103005,
+            "content": "무슨 노래인지 짐작이 간다.\n사리엘이 호숫가에서 만월과 운명의 여신 포르소의 계시를 받아, 영혼이 제천의 하늘에 도달해 '영원'을 얻고, 첫 번째 '신에게 선택받은 자'가 되었다는 이야기일 것이다.\n사리엘을 시작으로 사람들의 몸에는 성흔이 나타나기 시작했고, 이는 신의 부름을 받았다는 증표였다. 그들은 차례대로 성스러운 호수를 통해 약속의 땅에 이르렀다.\n내게도 낯설지 않은, 교회의 초창기 역사이다.",
+            "options": [
+              {
+                "id": 6103006,
+                "content": "계속 듣는다.",
+                "next": 6103007
+              }
+            ]
+          },
+          {
+            "id": 6103007,
+            "content": "\"그렇지만 2천 년이 지난 후, 내가 이 겹겹의 산 위에서 성스러운 호수를 바라보니.\"\n\"어찌하여 칠흑 같은 소용돌이만 남아 있는가?\"\n\"사리엘, 우리의 지혜로운 성자여...\"\n\"여신께서 약속한 낙원은 대체 어디에 있단 말인가?\"",
+            "npc": 910005,
+            "speakerName": "실성한 시인",
+            "next": 6103008
+          },
+          {
+            "id": 6103008,
+            "content": "머나먼 역사를 거슬러 올라간 시인의 노래가 마침내 어두운 심연이라는 비극에 닿자, 그의 눈에서 소리 없이 눈물이 흘러내린다.\n2천 년 동안 교회에서 가장 신성하고 순수하다 여긴 성스러운 호수가, 언제부터인지 이 더러운 혼돈으로 뒤바뀌어 버린 것이다.\n마치 천 년 전 교회를 버린 타락자들의 예견이 현실이 된 것만 같은 광경이다... \"아홉 신은 죽었다!\"\n계속 들어 볼까?",
+            "options": [
+              {
+                "id": 6103009,
+                "content": "계속 듣는다.",
+                "next": 6103010
+              },
+              {
+                "id": 6103013,
+                "content": "이곳을 떠난다.",
+                "next": 6103014
+              }
+            ]
+          },
+          {
+            "id": 6103010,
+            "content": "\"저 더러운 심연은 어찌하여 침묵하는가?\"\n\"만월의 광휘가 당신을 비추건만, 여신께선 어찌 답이 없으신가?\"\n\"사리엘이여, 설마 암월파 신도들의 말처럼...\"\n\"제천의 하늘에 오른 적 없이, 밝은 달을 등지고 마귀가 되었단 말인가?\"",
+            "npc": 910005,
+            "speakerName": "실성한 시인",
+            "next": 6103011
+          },
+          {
+            "id": 6103014,
+            "content": "대화를 나눠 보려 몇 번이나 인사를 건네 봤지만, 시인은 조금 전의 그 오래된 노래만 부를 뿐이다.\n아무래도 시인에게서 유용한 정보를 얻기는 힘들어 보여, 당신은 몸을 돌려 자리를 떠난다."
+          },
+          {
+            "id": 6103011,
+            "content": "\"잠깐만요... 뭐라고요?\"\n시인이 뜻밖의 구절을 노래한다. 성스러운 호수는 성스러운 적도 없었고, 사리엘 또한 신에게 선택받은 자가 아니라 거대한 희생제에 바쳐진 제물이었다는... 이단들 사이에서 가장 은밀하게 떠돌던 소문이다.\n당신은 <H>누군가</>에게서 똑같은 추측을 들은 적이 있다.",
+            "npc": 910004,
+            "next": 6103012
+          },
+          {
+            "id": 6103012,
+            "content": "하지만 시인은 당신은 안중에도 없다는 듯, 리라를 연주하며 다음 노래를 시작한다.\n그의 노랫소리는 점차 멀어져 가고, 이내 그의 모습마저 사라진다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 329,
     "name": "달은 수천 번 추락하고",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 750,
+    "weight": 750,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event21.T_Rouge_Event21'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event21.T_Rouge_Event21'",
-    "eventSelect": [
-      1151,
-      1152,
-      1153
-    ],
-    "eventStoryline": "Rogue/RouEvent_329",
-    "rlArchiveSubId": 10009101
+    "eventMainIcon": "T_Rouge_Event21",
+    "eventStoryline": [
+      {
+        "id": "17758149970381652836",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17758149970381652834"
+        ],
+        "dialogues": [
+          {
+            "id": 6103101,
+            "content": "구리거울이 모닥불 속에서 나타난다.",
+            "next": 6103102
+          },
+          {
+            "id": 6103102,
+            "content": "\"젊은이여, 나를 향해 '마법의 거울아, 마법의 거울아'라고 속으로 외치며 마음속으로 만나고 싶은 사람을 떠올려 보아라. 그러면 그 사람의 모습을 볼 수 있을 것이다.\"",
+            "npc": 910005,
+            "speakerName": "구리거울",
+            "options": [
+              {
+                "id": 6103103,
+                "content": "말하는 거울?",
+                "next": 6103104
+              }
+            ]
+          },
+          {
+            "id": 6103104,
+            "content": "\"나는 네 마음속 그림자다.\"\n구리거울이 킬킬 웃어댄다.\n\"네가 마음속으로 걱정하고 있는 게 뭔지 일깨워 주지.\"",
+            "npc": 910005,
+            "speakerName": "구리거울",
+            "options": [
+              {
+                "id": 6103105,
+                "content": "가족을 떠올린다.",
+                "next": 6103106
+              },
+              {
+                "id": 6103108,
+                "content": "자기 모습을 똑똑히 바라본다.",
+                "next": 6103109
+              },
+              {
+                "id": 6103111,
+                "content": "'소중한 그 사람'을 떠올린다.",
+                "next": 6103112
+              }
+            ]
+          },
+          {
+            "id": 6103106,
+            "content": "거울 속에 연이어 다른 모습들이 떠올랐다. 정말 오랫동안 보지 못한 얼굴이었다.\n어머니의 얼굴은 온화하고 자비로웠으며, 목소리는 가벼우면서도 힘이 있었다. 당신은 놀다 지칠 때면 살그머니 어머니의 치마 위로 올라가 부드러운 무릎을 베고 깊이 잠들곤 했다. 어머니가 당신의 뺨을 어루만질 때면 교리 속 포르소 여신이 떠올랐다.",
+            "next": 6103107
+          },
+          {
+            "id": 6103109,
+            "content": "거울 속에 젊은이의 모습이 떠올랐다.\n비록 그것이 자신이라는 것을 알고 있지만, 그럼에도 황홀감이 느껴진다. 너무 오랫동안 거울을 보지 않아, 거울 속 모습과 기억 속 자신이 이토록 다르다는 사실이 놀랍다. 시간이 자신에게 새긴 흔적이 선명하게 느껴진다.",
+            "next": 6103110
+          },
+          {
+            "id": 6103112,
+            "content": "거울 속에 한 사람의 얼굴이 떠오른다.\n정원의 오솔길처럼 얽힌 시간 속에서, 당신은 {性别:그|그녀}와 단 세 번을 만났다. 그러나 {性别:그|그녀}의 모습은 낙인처럼 당신의 기억에 새겨져 있다.",
+            "next": 6103113
+          },
+          {
+            "id": 6103107,
+            "content": "아버지는 늘 미간을 찌푸리고 있는 것 같았고, 하인들은 아버지를 언급할 때마다 전전긍긍했다. 하지만 당신은 아버지가 두렵지 않았다. 항상 당신을 안아 올려 수염을 만지게 해주셨기 때문에, 당신은 아버지가 그렇게 엄격하지 않다고 생각했다.\n아버지는 바빴고, 저택에 자주 나타나지 않았기 때문에, 대부분의 시간 동안에는 늙은 집사가 더 아버지 같았다. 수염 난 노인은 말이 많았고, 당신이 이리저리 뛰어다닐 때면 항상 뒤따라오며 잔소리를 했다. 당신은 그의 잔소리를 좋아하지 않았지만 지금은 그 잔소리가 그리워진다.\n당신은 알고 있다. 바로 이런 그리움들이 모여 어둠 속의 불꽃이 되어, 긴 전투 속에서 당신에게 따스함과 희망을 주었다는 것을. 적어도 그들을 위해서라도 당신은 계속 싸워나가야 한다.\n......",
+            "next": 6103114
+          },
+          {
+            "id": 6103110,
+            "content": "시간은 멈추지 않고 끊임없이 흘러간다. 시간은 당신을 키우고 강하게 만들지만, 점차 당신을 구부정하게 만들고, 얼굴에 주름을 새겨넣는다.\n그리고 변하지 않는 것은 오직 하나, 꺼지지 않는 불꽃을 흔들고 있는 손안의 이 랜턴뿐이다.\n......",
+            "next": 6103114
+          },
+          {
+            "id": 6103113,
+            "content": "당신은 {性别:그|그녀}가 등불처럼 어린 시절의 당신을 이끌고 깊은 심연을 건넜던 것을 기억하고, 자신이 가장 위대한 기사라고 말했던 것을 기억한다. 어둠 속에서 함께 피워올린 모든 모닥불을 기억하고, {性别:그|그녀}의 손을 잡았던 것을 기억한다. 약해지는 숨결 속에서도, {性别:그|그녀}의 눈빛만은 끝까지 불굴의 불꽃 같았던 것을 기억한다.\n......",
+            "next": 6103114
+          },
+          {
+            "id": 6103114,
+            "content": "구리거울이 사라지고, 뺨이 약간 젖어 있는 게 느껴진다. 당신은 거울 속 사람을 위해 울었던 것이다.\n하지만 눈물도 발걸음을 멈추지는 못한다. 당신은 일어서서 다시 앞길을 향해 나아간다.",
+            "next": 6103115
+          },
+          {
+            "id": 6103115,
+            "content": "<H>\"달이 천 번 떨어져도, 내 마음의 타오르는 불꽃은 꺼지지 않으리라.\"</>"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 330,
     "name": "해무의 자장가",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 500,
+    "weight": 500,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event22.T_Rouge_Event22'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event22.T_Rouge_Event22'",
-    "eventSelect": [
-      1156,
-      1157
-    ],
-    "eventStoryline": "Rogue/RouEvent_330",
-    "rlArchiveSubId": 10009201
+    "eventMainIcon": "T_Rouge_Event22",
+    "eventStoryline": [
+      {
+        "id": "17758150540093466960",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "17758150540093466958"
+        ],
+        "dialogues": [
+          {
+            "id": 6103201,
+            "content": "여인의 환영이 모닥불 사이에서 하프를 어루만지며, 선율이 유유히 흘러나온다.",
+            "next": 6103202
+          },
+          {
+            "id": 6103202,
+            "content": "\"안녕하세요, 여행자님.\"\n그녀가 연주를 멈추고 당신에게 살짝 고개를 숙여 인사한다.\n\"저는 엘리시안 교회의 <H>에코</>라고 해요. 아마 제 도움이 필요하실 것 같네요. 당신에게 꿈을 선사하여 신의 위로를 가져다드릴게요.\"",
+            "npc": 910005,
+            "speakerName": "연주하는 여인",
+            "next": 6103203
+          },
+          {
+            "id": 6103203,
+            "content": "'에코', 그것은 엘리시안 교회의 특별한 성직자 계급이다.\n엘리시안 교회는 꿈이 인간과 신이 소통하는 장소라고 믿는다. 그리고 에코는 선율로 꿈의 세계를 빚어내, 사람들이 직접 신의 뜻에 닿을 수 있게 한다.\n당신은 그런 성사에 참여하여, 여러 번 신의 위로와 경고를 들었던 기억이 있다.",
+            "options": [
+              {
+                "id": 6103204,
+                "content": "위로를 들려 달라고 한다.",
+                "next": 6103205
+              },
+              {
+                "id": 6103213,
+                "content": "위로의 말을 듣기를 거부한다.",
+                "next": 6103214
+              }
+            ]
+          },
+          {
+            "id": 6103205,
+            "content": "\"그럼 연주해 드릴게요.\"\n여인이 현을 가볍게 어루만진다.\n\"눈을 감아 주세요. 포르소의 광휘가 당신과 함께하길.\"",
+            "npc": 910005,
+            "speakerName": "연주하는 여인",
+            "next": 6103206
+          },
+          {
+            "id": 6103214,
+            "content": "긴 윤회와 전투 속에서 당신은 이미 그렇게 신을 경외하지 않게 되었다. 신의 위로란 그저 그럴듯한 대의명분에 불과할 뿐이다.\n당신이 의지할 수 있는 건 오직 당신 자신뿐이다.",
+            "next": 6103215
+          },
+          {
+            "id": 6103206,
+            "content": "......\n보름달의 은빛 광휘 속에 서 있는 만월과 운명의 신이 보인다.",
+            "next": 6103207
+          },
+          {
+            "id": 6103215,
+            "content": "\"엘리시안에서는 아무도 에코가 주는 꿈을 거부하지 않아요.\"\n여인이 약간 놀라워한다.\n\"꿈은 신의 뜻이고, 모든 고통을 구원할 거예요.\"\n\"어떤 섬의 사람들은 현세의 모든 것을 버리고, 오직 꿈속에서 영원한 구원을 얻기 위해서만 산다고 들었어요.\"",
+            "npc": 910005,
+            "speakerName": "연주하는 여인",
+            "next": 6103216
+          },
+          {
+            "id": 6103207,
+            "content": "\"여기 머물러도 좋습니다.\"\n여신이 새하얀 실을 비비며 말한다.\n\"나의 종이 되어 용서를 받으세요. 달빛이 어둠을 몰아내고, 당신은 심연의 모든 것을 잊게 될 것입니다.\"",
+            "npc": 910005,
+            "speakerName": "포르소",
+            "next": 6103208
+          },
+          {
+            "id": 6103216,
+            "content": "\"전 신의 구원이 필요하지 않아요. 제힘으로 이곳에서 나가고 싶어요.\"",
+            "npc": 910004,
+            "next": 6103217
+          },
+          {
+            "id": 6103208,
+            "content": "\"죄송하지만, 머물 수 없습니다.\"\n당신은 고개를 저으며 랜턴을 꽉 쥔다.",
+            "npc": 910004,
+            "next": 6103209
+          },
+          {
+            "id": 6103217,
+            "content": "\"자신의 힘이라...\"\n그녀가 무언가 생각에 잠긴 듯 한 번 더 되뇐다.\n\"그렇다면, 여행자여, 신이 없는 곳에서도 당신에게 행운이 함께하기를.\"",
+            "npc": 910005,
+            "speakerName": "연주하는 여인",
+            "next": 6103218
+          },
+          {
+            "id": 6103209,
+            "content": "\"왜죠?\"\n여신은 여전히 자비로운 눈빛으로 내려다본다.\n\"지상의 나라에는, 바다 위의 한 섬에 사는 사람들이 있습니다. 그들은 현세의 모든 것을 버리고, 오직 꿈속에서 영원한 구원을 얻기 위해서만 살아갑니다.\"",
+            "npc": 910005,
+            "speakerName": "포르소",
+            "next": 6103210
+          },
+          {
+            "id": 6103218,
+            "content": "모닥불이 꺼지고, 여인의 환영도 사라져 버렸다."
+          },
+          {
+            "id": 6103210,
+            "content": "\"자비에 감사드립니다. 하지만 저 혼자서만 구원받을 순 없습니다.\"\n\"현세에는 여전히 고통받는 사람들이 있고, 여전히 심연과 싸우는 사람들이 있고, 제가 집으로 돌아가기를 기다리는 사람들과, 제가 약속을 지키길 기다리는 사람들이 있습니다.\"\n\"저는 제힘으로 그들을 돕고 싶습니다.\"",
+            "npc": 910004,
+            "next": 6103211
+          },
+          {
+            "id": 6103211,
+            "content": "\"신의 구원을 거부하는 자는 극히 드뭅니다.\"\n여신이 미소 짓는다. 보름달의 은빛 광휘가 그리 차갑지 않게 느껴진다.\n\"그렇다면, 용감한 인간이여, 지켜보겠습니다.\"",
+            "npc": 910005,
+            "speakerName": "포르소",
+            "next": 6103212
+          },
+          {
+            "id": 6103212,
+            "content": "......\n만월의 광휘가 점점 사라지고, 당신의 눈앞에 다시 어둠이 찾아왔다."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 381,
     "name": "게임 타임!",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 50,
+    "weight": 50,
     "roomCondition": [
       5065
     ],
@@ -1454,20 +3392,67 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event20.T_Rouge_Event20'",
-    "eventSelect": [
-      2001
-    ],
-    "eventStoryline": "Rogue/RouEvent_381",
-    "rlArchiveSubId": 10008101
+    "eventMainIcon": "T_Rouge_Event20",
+    "eventStoryline": [
+      {
+        "id": "1736847954553636378",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1736847954553636375"
+        ],
+        "dialogues": [
+          {
+            "id": 6102901,
+            "content": "당신은 모닥불 옆에 앉아 휴식을 취하고 있다.\n갑자기, 어디선가 이상한 소리가 들려온다. 소리는 바로 귓가에서 들려오는 듯하다가, 이내 점점 멀어져 머리 위로 옮겨간다.\n그리곤 조금씩 커지며, 부드러운 무언가가 사락대는 소리를 낸다.",
+            "next": 6102902
+          },
+          {
+            "id": 6102902,
+            "content": "\"안녕! 운 좋은 여행자!\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "next": 6102903
+          },
+          {
+            "id": 6102903,
+            "content": "알록달록한 깃털이 머리 위에서 팔랑팔랑 떨어져 내린다. 심연에서 이렇게 다양한 색깔을 보는 건 이번이 처음이다.\n바닥에 수북이 쌓인 깃털 더미에 둘러싸인 지금 모습을 보니, 마치 거리의 장난꾸러기 꼬마들에게 걸려든 운 없는 행인 같아 어색하기도 하고, 왠지 처량함도 느껴진다.",
+            "next": 6102904
+          },
+          {
+            "id": 6102904,
+            "content": "\"아니, 왜 이렇게 반응이 없어? 심연에 이렇게 오래 있었는데, 지겹지도 않아?\"\n우스꽝스러운 새 머리 가면을 쓴 사람이 위에서부터 스르륵 내려와, 당신과 눈높이를 맞춘다.\n대체 어떻게 저런 자세를 유지하는 건지는 알 수 없지만, 그건 중요하지 않다. 중요한 건, 저 가면의 뾰족한 뿌리가 당신의 얼굴을 찌를 것만 같다는 사실이다.",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "options": [
+              {
+                "id": 6102905,
+                "content": "그쪽이랑 같이 놀아 줄 시간 없어요.",
+                "next": 6102906
+              }
+            ]
+          },
+          {
+            "id": 6102906,
+            "content": "\"너무 쌀쌀맞게 그러지 마. 교회 늙은이들이 하루에 착한 일을 하나 하면, 그게 다 복으로 돌아온다고 알려 줬을 거 아냐.\"\n\"나하고 <H>게임</> 하자. 이기면 상을 줄 거고, 져도 아무런 벌칙은 없어. 완전히 남는 장사잖아, 어때?\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "options": [
+              {
+                "id": 6102907,
+                "content": "알겠어요."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 382,
     "name": "게임 타임!",
     "roomType": 3,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5064
     ],
@@ -1475,55 +3460,102 @@
     "tokenAward": 0,
     "endPointsBase": 90,
     "endPointsExtras": 0,
-    "eventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
-    "settlementEventMainIcon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event20.T_Rouge_Event20'",
-    "eventSelect": [
-      2003,
-      2004
-    ],
-    "eventStoryline": "Rogue/RouEvent_382",
-    "rlArchiveSubId": 10008102
+    "eventMainIcon": "T_Rouge_Event20",
+    "eventStoryline": [
+      {
+        "id": "1742196066378954315",
+        "type": "TalkNode",
+        "name": "对话节点",
+        "next": [
+          "1742196066378954313"
+        ],
+        "dialogues": [
+          {
+            "id": 6101801,
+            "content": "당신은 모닥불 옆에 앉아 휴식을 취하고 있다.\n갑자기, 어디선가 이상한 소리가 들려온다. 소리는 바로 귓가에서 들려오는 듯하다가, 이내 점점 멀어져 머리 위로 옮겨간다.\n그리곤 조금씩 커지며, 부드러운 무언가가 사락대는 소리를 낸다.",
+            "next": 6101802
+          },
+          {
+            "id": 6101802,
+            "content": "\"안녕! 운 좋은 여행자!\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "next": 6101803
+          },
+          {
+            "id": 6101803,
+            "content": "알록달록한 깃털이 머리 위에서 팔랑팔랑 떨어져 내린다. 심연에서 이렇게 다양한 색깔을 보는 건 이번이 처음이다.\n바닥에 수북이 쌓인 깃털 더미에 둘러싸인 지금 모습을 보니, 마치 거리의 장난꾸러기 꼬마들에게 걸려든 운 없는 행인 같아 어색하기도 하고, 왠지 처량함도 느껴진다.",
+            "next": 6101804
+          },
+          {
+            "id": 6101804,
+            "content": "\"아니, 왜 이렇게 반응이 없어? 심연에 이렇게 오래 있었는데, 지겹지도 않아?\"\n우스꽝스러운 새 머리 가면을 쓴 사람이 위에서부터 스르륵 내려와, 당신과 눈높이를 맞춘다.\n대체 어떻게 저런 자세를 유지하는 건지는 알 수 없지만, 그건 중요하지 않다. 중요한 건, 저 가면의 뾰족한 뿌리가 당신의 얼굴을 찌를 것만 같다는 사실이다.",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "options": [
+              {
+                "id": 6101805,
+                "content": "그쪽이랑 같이 놀아 줄 시간 없어요.",
+                "next": 6101806
+              }
+            ]
+          },
+          {
+            "id": 6101806,
+            "content": "\"너무 쌀쌀맞게 그러지 마. 교회 늙은이들이 하루에 착한 일을 하나 하면, 그게 다 복으로 돌아온다고 알려 줬을 거 아냐.\"\n\"나하고 <H>게임</> 하자. 이기면 상을 줄 거고, 져도 아무런 벌칙은 없어. 완전히 남는 장사잖아, 어때?\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨",
+            "options": [
+              {
+                "id": 6101807,
+                "content": "알겠어요."
+              },
+              {
+                "id": 6101808,
+                "content": "저 진짜 시간 없어요.",
+                "next": 6101809
+              }
+            ]
+          },
+          {
+            "id": 6101809,
+            "content": "\"그래, 알겠어. 나도 싫다는 사람 억지로 시키는 그런 못된 녀석은 아니야.\"\n\"그럼 나중에 또 보자고!\"",
+            "npc": 910005,
+            "speakerName": "괴짜 버드맨"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 401,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 402,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [],
     "blessingAward": 0,
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 403,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5029
     ],
@@ -1531,18 +3563,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 404,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 600,
+    "weight": 600,
     "roomCondition": [
       5030
     ],
@@ -1550,18 +3577,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 405,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5031
     ],
@@ -1569,18 +3591,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 406,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 1000,
+    "weight": 1000,
     "roomCondition": [
       5031
     ],
@@ -1588,18 +3605,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 407,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 2000,
+    "weight": 2000,
     "roomCondition": [
       5032
     ],
@@ -1607,18 +3619,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 408,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 2000,
+    "weight": 2000,
     "roomCondition": [
       5032
     ],
@@ -1626,18 +3633,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 409,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 600,
+    "weight": 600,
     "roomCondition": [
       5061
     ],
@@ -1645,18 +3647,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 410,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 300,
+    "weight": 300,
     "roomCondition": [
       5061
     ],
@@ -1664,18 +3661,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 421,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5164
     ],
@@ -1683,18 +3675,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 422,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5163,
       5165,
@@ -1704,18 +3691,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 423,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5180,
       5181,
@@ -1725,18 +3707,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 424,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5183,
       5184,
@@ -1746,18 +3723,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 425,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5186,
       5187,
@@ -1767,18 +3739,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 426,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5189,
       5190,
@@ -1788,18 +3755,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 427,
     "name": "심연 행상인",
     "roomType": 4,
-    "roomSubType": 1,
-    "roomWeight": 5000,
+    "weight": 5000,
     "roomCondition": [
       5192,
       5193,
@@ -1809,18 +3771,13 @@
     "tokenAward": 0,
     "endPointsBase": 0,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 501,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -1828,18 +3785,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 502,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -1847,18 +3799,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 503,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -1866,18 +3813,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 504,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -1885,18 +3827,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 505,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -1904,18 +3841,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 506,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -1923,18 +3855,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 507,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -1942,18 +3869,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 508,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -1961,18 +3883,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 509,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -1980,18 +3897,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 510,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -1999,18 +3911,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 511,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2018,18 +3925,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 512,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2037,18 +3939,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 513,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5019
     ],
@@ -2056,18 +3953,13 @@
     "tokenAward": 0,
     "endPointsBase": 2500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 514,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5020
     ],
@@ -2075,18 +3967,13 @@
     "tokenAward": 0,
     "endPointsBase": 3700,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 515,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2094,18 +3981,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 516,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2113,18 +3995,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 517,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2132,18 +4009,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 518,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2151,18 +4023,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 521,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2170,18 +4037,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 522,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2189,18 +4051,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 523,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2208,18 +4065,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 524,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2227,18 +4079,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 527,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5021
     ],
@@ -2246,18 +4093,13 @@
     "tokenAward": 0,
     "endPointsBase": 5500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 528,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5022
     ],
@@ -2265,18 +4107,13 @@
     "tokenAward": 0,
     "endPointsBase": 8000,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 529,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5023
     ],
@@ -2284,18 +4121,13 @@
     "tokenAward": 0,
     "endPointsBase": 12500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 530,
     "name": "어둠의 그림자",
     "roomType": 5,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5071
     ],
@@ -2303,18 +4135,13 @@
     "tokenAward": 0,
     "endPointsBase": 16500,
     "endPointsExtras": 0,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6001,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2322,18 +4149,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6002,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2341,18 +4163,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6003,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2360,18 +4177,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6004,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2379,18 +4191,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6005,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2398,18 +4205,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6006,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2417,18 +4219,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6007,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2436,18 +4233,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6008,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2455,18 +4247,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6009,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2474,18 +4261,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6011,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2493,18 +4275,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6012,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2512,18 +4289,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6013,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2531,18 +4303,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6014,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2550,18 +4317,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6015,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2569,18 +4331,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6016,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2588,18 +4345,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6017,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2607,18 +4359,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6018,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2626,18 +4373,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6019,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5170
     ],
@@ -2645,18 +4387,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6021,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2664,18 +4401,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6022,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2683,18 +4415,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6023,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2702,18 +4429,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6024,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2721,18 +4443,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6025,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2740,18 +4457,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6026,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2759,18 +4471,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6027,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2778,18 +4485,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6028,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2797,18 +4499,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6029,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5170
     ],
@@ -2816,18 +4513,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6101,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2836,18 +4528,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6102,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2856,18 +4543,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6103,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2876,18 +4558,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6104,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2896,18 +4573,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6105,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2916,18 +4588,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6106,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2936,18 +4603,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6107,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2956,18 +4618,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6108,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2976,18 +4633,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6109,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -2996,18 +4648,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6110,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3016,18 +4663,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6111,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3036,18 +4678,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6112,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3056,18 +4693,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6114,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3076,18 +4708,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6115,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3096,18 +4723,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6116,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3116,18 +4738,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6117,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3136,18 +4753,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6118,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3156,18 +4768,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6119,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3176,18 +4783,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6120,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3196,18 +4798,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6121,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3216,18 +4813,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6122,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3236,18 +4828,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6123,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3256,18 +4843,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6124,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3276,18 +4858,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6125,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5169,
       5172
@@ -3296,18 +4873,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6127,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3316,18 +4888,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6128,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3336,18 +4903,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6129,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3356,18 +4918,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6130,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3376,18 +4933,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6131,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3396,18 +4948,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6132,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3416,18 +4963,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6133,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3436,18 +4978,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6134,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3456,18 +4993,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6135,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3476,18 +5008,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6136,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3496,18 +5023,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6137,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3516,18 +5038,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6138,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5169,
       5172
@@ -3536,18 +5053,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6201,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3555,18 +5067,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6202,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3574,18 +5081,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6203,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3593,18 +5095,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6204,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3612,18 +5109,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6205,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3631,18 +5123,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6206,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3650,18 +5137,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6207,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3669,18 +5151,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6208,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3688,18 +5165,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6209,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3707,18 +5179,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6210,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3726,18 +5193,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6211,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3745,18 +5207,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6212,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3764,18 +5221,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6213,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3783,18 +5235,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6214,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3802,18 +5249,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6215,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3821,18 +5263,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6216,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 100,
+    "weight": 100,
     "roomCondition": [
       5171
     ],
@@ -3840,18 +5277,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6217,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3859,18 +5291,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6218,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3878,18 +5305,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6219,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3897,18 +5319,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6220,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3916,18 +5333,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6221,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3935,18 +5347,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6222,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3954,18 +5361,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6223,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3973,18 +5375,13 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   },
   {
     "id": 6224,
     "name": "흩어진 그림자",
     "roomType": 6,
-    "roomSubType": 1,
-    "roomWeight": 450,
+    "weight": 450,
     "roomCondition": [
       5171
     ],
@@ -3992,10 +5389,6 @@
     "tokenAward": 200,
     "endPointsBase": 1200,
     "endPointsExtras": 300,
-    "eventMainIcon": "",
-    "settlementEventMainIcon": "",
-    "eventSelect": [],
-    "eventStoryline": "",
-    "rlArchiveSubId": 0
+    "eventMainIcon": ""
   }
 ]
