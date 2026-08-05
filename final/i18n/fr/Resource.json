@@ -12591,6 +12591,48 @@
     "select": 350025
   },
   {
+    "id": 110062,
+    "name": "Sceau démoniaque — Pactisant Anémo",
+    "icon": "T_Pack_RandomMod_11",
+    "rarity": 5,
+    "pack": 350031
+  },
+  {
+    "id": 110063,
+    "name": "Sceau démoniaque — Pactisant Pyro",
+    "icon": "T_Pack_RandomMod_16",
+    "rarity": 5,
+    "pack": 350032
+  },
+  {
+    "id": 110064,
+    "name": "Sceau démoniaque — Pactisant Électro",
+    "icon": "T_Pack_RandomMod_12",
+    "rarity": 5,
+    "pack": 350033
+  },
+  {
+    "id": 110065,
+    "name": "Sceau démoniaque — Pactisant Hydro",
+    "icon": "T_Pack_RandomMod_13",
+    "rarity": 5,
+    "pack": 350034
+  },
+  {
+    "id": 110066,
+    "name": "Sceau démoniaque — Pactisant Lumino",
+    "icon": "T_Pack_RandomMod_14",
+    "rarity": 5,
+    "pack": 350035
+  },
+  {
+    "id": 110067,
+    "name": "Sceau démoniaque — Pactisant Umbro",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5,
+    "pack": 350036
+  },
+  {
     "id": 120001,
     "name": "Bon d’Héritage paternel",
     "icon": "T_Resource_DiscountTicket_01",

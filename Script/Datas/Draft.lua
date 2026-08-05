@@ -167,350 +167,342 @@ T.RT_36 = {
   "MonsterStrong",
   "Shop_Rouge",
   "Walnut",
-  "Text_Mod_1.4Qiyuezhe"
+  "Dungeon_ModTab_70"
 }
 T.RT_37 = {
   [101] = 100000
 }
 T.RT_38 = {
-  "Shop_Main",
-  "Forging",
-  "MonsterStrong",
-  "Shop_Rouge",
-  "Walnut",
-  "Dungeon_ModTab_70"
-}
-T.RT_39 = {
   Id = 42001,
   Num = 3,
   Type = "Mod"
 }
-T.RT_40 = {
+T.RT_39 = {
   Id = 42003,
   Num = 3,
   Type = "Mod"
 }
-T.RT_41 = {
+T.RT_40 = {
   Id = 42006,
   Num = 1,
   Type = "Mod"
 }
-T.RT_42 = {
+T.RT_41 = {
   Id = 43001,
   Num = 3,
   Type = "Mod"
 }
-T.RT_43 = {
+T.RT_42 = {
   Id = 44001,
   Num = 1,
   Type = "Mod"
 }
-T.RT_44 = {
+T.RT_43 = {
   Id = 44004,
   Num = 1,
   Type = "Mod"
 }
-T.RT_45 = {
+T.RT_44 = {
   Id = 44002,
   Num = 1,
   Type = "Mod"
 }
-T.RT_46 = {
+T.RT_45 = {
   Id = 31001,
   Num = 10,
   Type = "Mod"
 }
-T.RT_47 = {
-  [1] = T.RT_46
+T.RT_46 = {
+  [1] = T.RT_45
 }
-T.RT_48 = {
+T.RT_47 = {
   Id = 31301,
   Num = 10,
   Type = "Mod"
 }
-T.RT_49 = {
+T.RT_48 = {
   Id = 20021,
   Num = 20,
   Type = "Resource"
 }
-T.RT_50 = {
+T.RT_49 = {
   Id = 31002,
   Num = 10,
   Type = "Mod"
 }
-T.RT_51 = {
-  [1] = T.RT_50
+T.RT_50 = {
+  [1] = T.RT_49
 }
-T.RT_52 = {
+T.RT_51 = {
   Id = 20024,
   Num = 20,
   Type = "Resource"
 }
-T.RT_53 = {
+T.RT_52 = {
   [101] = 100
 }
-T.RT_54 = {
+T.RT_53 = {
   [101] = 200
 }
-T.RT_55 = {
+T.RT_54 = {
   [101] = 20000
 }
-T.RT_56 = {
+T.RT_55 = {
   [101] = 30000
 }
-T.RT_57 = {
+T.RT_56 = {
   Id = 20009,
   Num = 75,
   Type = "Resource"
 }
-T.RT_58 = {
+T.RT_57 = {
   Id = 20002,
   Num = 75,
   Type = "Resource"
 }
-T.RT_59 = {
+T.RT_58 = {
   Id = 20005,
   Num = 75,
   Type = "Resource"
 }
-T.RT_60 = {
-  [1] = T.RT_57,
-  [2] = T.RT_58,
-  [3] = T.RT_59
+T.RT_59 = {
+  [1] = T.RT_56,
+  [2] = T.RT_57,
+  [3] = T.RT_58
 }
-T.RT_61 = {
+T.RT_60 = {
   Id = 20011,
   Num = 75,
   Type = "Resource"
 }
-T.RT_62 = {
-  [1] = T.RT_57,
-  [2] = T.RT_58,
-  [3] = T.RT_61
+T.RT_61 = {
+  [1] = T.RT_56,
+  [2] = T.RT_57,
+  [3] = T.RT_60
 }
-T.RT_63 = {
+T.RT_62 = {
   Id = 20012,
   Num = 75,
   Type = "Resource"
 }
-T.RT_64 = {
-  [1] = T.RT_58,
-  [2] = T.RT_63,
-  [3] = T.RT_59
+T.RT_63 = {
+  [1] = T.RT_57,
+  [2] = T.RT_62,
+  [3] = T.RT_58
 }
-T.RT_65 = {
+T.RT_64 = {
   [1] = T.RT_12,
   [2] = T.RT_14,
   [3] = T.RT_13
 }
+T.RT_65 = {
+  [1] = T.RT_62,
+  [2] = T.RT_58,
+  [3] = T.RT_60
+}
 T.RT_66 = {
-  [1] = T.RT_63,
-  [2] = T.RT_59,
-  [3] = T.RT_61
+  [1] = T.RT_62,
+  [2] = T.RT_58,
+  [3] = T.RT_56
 }
 T.RT_67 = {
-  [1] = T.RT_63,
-  [2] = T.RT_59,
-  [3] = T.RT_57
+  Id = 20014,
+  Num = 75,
+  Type = "Resource"
 }
 T.RT_68 = {
-  Id = 20014,
+  Id = 20019,
   Num = 75,
   Type = "Resource"
 }
 T.RT_69 = {
-  Id = 20019,
-  Num = 75,
-  Type = "Resource"
-}
-T.RT_70 = {
   Id = 20017,
   Num = 75,
   Type = "Resource"
 }
-T.RT_71 = {
-  [1] = T.RT_68,
-  [2] = T.RT_69,
-  [3] = T.RT_70
+T.RT_70 = {
+  [1] = T.RT_67,
+  [2] = T.RT_68,
+  [3] = T.RT_69
 }
-T.RT_72 = {
+T.RT_71 = {
   Id = 20020,
   Num = 75,
   Type = "Resource"
 }
-T.RT_73 = {
-  [1] = T.RT_68,
-  [2] = T.RT_69,
-  [3] = T.RT_72
+T.RT_72 = {
+  [1] = T.RT_67,
+  [2] = T.RT_68,
+  [3] = T.RT_71
 }
-T.RT_74 = {
+T.RT_73 = {
   Id = 20014,
   Num = 50,
   Type = "Resource"
 }
-T.RT_75 = {
+T.RT_74 = {
   Id = 20019,
+  Num = 50,
+  Type = "Resource"
+}
+T.RT_75 = {
+  Id = 20018,
   Num = 50,
   Type = "Resource"
 }
 T.RT_76 = {
   Id = 20018,
-  Num = 50,
-  Type = "Resource"
-}
-T.RT_77 = {
-  Id = 20018,
   Num = 75,
   Type = "Resource"
 }
+T.RT_77 = {
+  [1] = T.RT_71,
+  [2] = T.RT_76,
+  [3] = T.RT_67
+}
 T.RT_78 = {
-  [1] = T.RT_72,
-  [2] = T.RT_77,
-  [3] = T.RT_68
+  [1] = T.RT_71,
+  [2] = T.RT_76,
+  [3] = T.RT_69
 }
 T.RT_79 = {
-  [1] = T.RT_72,
-  [2] = T.RT_77,
-  [3] = T.RT_70
+  [1] = T.RT_67,
+  [2] = T.RT_76,
+  [3] = T.RT_69
 }
 T.RT_80 = {
-  [1] = T.RT_68,
-  [2] = T.RT_77,
-  [3] = T.RT_70
+  [1] = T.RT_56,
+  [2] = T.RT_57,
+  [3] = T.RT_62
 }
 T.RT_81 = {
-  [1] = T.RT_57,
-  [2] = T.RT_58,
-  [3] = T.RT_63
-}
-T.RT_82 = {
   Id = 4010012,
   Num = 10,
   Type = "Resource"
 }
-T.RT_83 = {
+T.RT_82 = {
   Id = 4010004,
   Num = 20,
   Type = "Resource"
 }
-T.RT_84 = {
-  [1] = T.RT_82,
-  [2] = T.RT_83,
+T.RT_83 = {
+  [1] = T.RT_81,
+  [2] = T.RT_82,
   [3] = T.RT_15,
   [4] = T.RT_12
 }
-T.RT_85 = {
+T.RT_84 = {
   [101] = 40000
 }
-T.RT_86 = {
+T.RT_85 = {
   [1] = T.RT_3,
   [2] = T.RT_4
 }
-T.RT_87 = {
+T.RT_86 = {
   [1] = T.RT_7,
   [2] = T.RT_8
 }
-T.RT_88 = {
+T.RT_87 = {
   Id = 20005,
   Num = 100,
   Type = "Resource"
 }
-T.RT_89 = {
+T.RT_88 = {
   Id = 20002,
   Num = 100,
   Type = "Resource"
 }
-T.RT_90 = {
+T.RT_89 = {
   Id = 4010009,
   Num = 40,
   Type = "Resource"
 }
-T.RT_91 = {
+T.RT_90 = {
   Id = 4010006,
   Num = 60,
   Type = "Resource"
 }
-T.RT_92 = {
+T.RT_91 = {
   Id = 20011,
   Num = 100,
   Type = "Resource"
 }
-T.RT_93 = {
+T.RT_92 = {
   Id = 20012,
   Num = 100,
   Type = "Resource"
 }
-T.RT_94 = {
-  [1] = T.RT_90,
-  [2] = T.RT_91,
-  [3] = T.RT_92,
-  [4] = T.RT_93
+T.RT_93 = {
+  [1] = T.RT_89,
+  [2] = T.RT_90,
+  [3] = T.RT_91,
+  [4] = T.RT_92
 }
-T.RT_95 = {
+T.RT_94 = {
   Id = 4010001,
   Num = 15,
   Type = "Resource"
 }
-T.RT_96 = {
+T.RT_95 = {
   Id = 4010003,
   Num = 15,
   Type = "Resource"
 }
-T.RT_97 = {
+T.RT_96 = {
   Id = 20009,
   Num = 100,
   Type = "Resource"
 }
-T.RT_98 = {
+T.RT_97 = {
   Id = 4010016,
   Num = 20,
   Type = "Resource"
 }
-T.RT_99 = {
+T.RT_98 = {
   Id = 4010015,
   Num = 10,
   Type = "Resource"
 }
-T.RT_100 = {
+T.RT_99 = {
   Id = 4010017,
   Num = 20,
   Type = "Resource"
 }
-T.RT_101 = {
+T.RT_100 = {
   Id = 4010018,
   Num = 10,
   Type = "Resource"
 }
-T.RT_102 = {
+T.RT_101 = {
   Id = 20020,
   Num = 50,
   Type = "Resource"
 }
-T.RT_103 = {
+T.RT_102 = {
   [1] = T.RT_7
 }
-T.RT_104 = {
+T.RT_103 = {
   Id = 4020003,
   Num = 30,
   Type = "Resource"
 }
-T.RT_105 = {
+T.RT_104 = {
   Id = 4010005,
   Num = 30,
   Type = "Resource"
 }
-T.RT_106 = {
+T.RT_105 = {
   [101] = 280000
 }
-T.RT_107 = {
+T.RT_106 = {
   Id = 20027,
   Num = 2,
   Type = "Resource"
 }
-T.RT_108 = {
+T.RT_107 = {
   [101] = 500000
 }
-T.RT_109 = {
+T.RT_108 = {
   Id = 20028,
   Num = 2,
   Type = "Resource"
@@ -1202,7 +1194,7 @@ return ReadOnly("Draft", {
   [2011] = {
     Batch = true,
     DraftId = 2011,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Wind03.T_BreakRes_Wind03",
     IsInfinity = true,
     ProductId = 10002,
@@ -1225,7 +1217,7 @@ return ReadOnly("Draft", {
   [2012] = {
     Batch = true,
     DraftId = 2012,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Wind04.T_BreakRes_Wind04",
     IsInfinity = true,
     ProductId = 10003,
@@ -1271,7 +1263,7 @@ return ReadOnly("Draft", {
   [2021] = {
     Batch = true,
     DraftId = 2021,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Fire03.T_BreakRes_Fire03",
     IsInfinity = true,
     ProductId = 10006,
@@ -1294,7 +1286,7 @@ return ReadOnly("Draft", {
   [2022] = {
     Batch = true,
     DraftId = 2022,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Fire04.T_BreakRes_Fire04",
     IsInfinity = true,
     ProductId = 10007,
@@ -1340,7 +1332,7 @@ return ReadOnly("Draft", {
   [2031] = {
     Batch = true,
     DraftId = 2031,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Water03.T_BreakRes_Water03",
     IsInfinity = true,
     ProductId = 10010,
@@ -1363,7 +1355,7 @@ return ReadOnly("Draft", {
   [2032] = {
     Batch = true,
     DraftId = 2032,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Water04.T_BreakRes_Water04",
     IsInfinity = true,
     ProductId = 10011,
@@ -1409,7 +1401,7 @@ return ReadOnly("Draft", {
   [2041] = {
     Batch = true,
     DraftId = 2041,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Thunder03.T_BreakRes_Thunder03",
     IsInfinity = true,
     ProductId = 10014,
@@ -1432,7 +1424,7 @@ return ReadOnly("Draft", {
   [2042] = {
     Batch = true,
     DraftId = 2042,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Thunder04.T_BreakRes_Thunder04",
     IsInfinity = true,
     ProductId = 10015,
@@ -1478,7 +1470,7 @@ return ReadOnly("Draft", {
   [2051] = {
     Batch = true,
     DraftId = 2051,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Light03.T_BreakRes_Light03",
     IsInfinity = true,
     ProductId = 10018,
@@ -1501,7 +1493,7 @@ return ReadOnly("Draft", {
   [2052] = {
     Batch = true,
     DraftId = 2052,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Light04.T_BreakRes_Light04",
     IsInfinity = true,
     ProductId = 10019,
@@ -1547,7 +1539,7 @@ return ReadOnly("Draft", {
   [2061] = {
     Batch = true,
     DraftId = 2061,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Dark03.T_BreakRes_Dark03",
     IsInfinity = true,
     ProductId = 10022,
@@ -1570,7 +1562,7 @@ return ReadOnly("Draft", {
   [2062] = {
     Batch = true,
     DraftId = 2062,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Dark04.T_BreakRes_Dark04",
     IsInfinity = true,
     ProductId = 10023,
@@ -1616,7 +1608,7 @@ return ReadOnly("Draft", {
   [4001] = {
     Batch = true,
     DraftId = 4001,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part04.T_Draft_Weapon_Part04",
     IsInfinity = true,
     ProductId = 11002,
@@ -1639,7 +1631,7 @@ return ReadOnly("Draft", {
   [4002] = {
     Batch = true,
     DraftId = 4002,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part04.T_Draft_Weapon_Part04",
     IsInfinity = true,
     ProductId = 11003,
@@ -1662,7 +1654,7 @@ return ReadOnly("Draft", {
   [4003] = {
     Batch = true,
     DraftId = 4003,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part05.T_Draft_Weapon_Part05",
     IsInfinity = true,
     ProductId = 11005,
@@ -1685,7 +1677,7 @@ return ReadOnly("Draft", {
   [4004] = {
     Batch = true,
     DraftId = 4004,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part05.T_Draft_Weapon_Part05",
     IsInfinity = true,
     ProductId = 11006,
@@ -1708,7 +1700,7 @@ return ReadOnly("Draft", {
   [4005] = {
     Batch = true,
     DraftId = 4005,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part06.T_Draft_Weapon_Part06",
     IsInfinity = true,
     ProductId = 11008,
@@ -1731,7 +1723,7 @@ return ReadOnly("Draft", {
   [4006] = {
     Batch = true,
     DraftId = 4006,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part06.T_Draft_Weapon_Part06",
     IsInfinity = true,
     ProductId = 11009,
@@ -1754,7 +1746,7 @@ return ReadOnly("Draft", {
   [4007] = {
     Batch = true,
     DraftId = 4007,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part01.T_Draft_Weapon_Part01",
     IsInfinity = true,
     ProductId = 11011,
@@ -1777,7 +1769,7 @@ return ReadOnly("Draft", {
   [4008] = {
     Batch = true,
     DraftId = 4008,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part01.T_Draft_Weapon_Part01",
     IsInfinity = true,
     ProductId = 11012,
@@ -1800,7 +1792,7 @@ return ReadOnly("Draft", {
   [4009] = {
     Batch = true,
     DraftId = 4009,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part02.T_Draft_Weapon_Part02",
     IsInfinity = true,
     ProductId = 11014,
@@ -1823,7 +1815,7 @@ return ReadOnly("Draft", {
   [4010] = {
     Batch = true,
     DraftId = 4010,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part02.T_Draft_Weapon_Part02",
     IsInfinity = true,
     ProductId = 11015,
@@ -1846,7 +1838,7 @@ return ReadOnly("Draft", {
   [4011] = {
     Batch = true,
     DraftId = 4011,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part03.T_Draft_Weapon_Part03",
     IsInfinity = true,
     ProductId = 11017,
@@ -1869,7 +1861,7 @@ return ReadOnly("Draft", {
   [4012] = {
     Batch = true,
     DraftId = 4012,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Weapon_Part03.T_Draft_Weapon_Part03",
     IsInfinity = true,
     ProductId = 11018,
@@ -3544,7 +3536,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [151727] = {
-    AccessKey = T.RT_36,
+    AccessKey = T.RT_32,
     Batch = true,
     DraftId = 151727,
     FoundryCost = T.RT_1,
@@ -4048,7 +4040,7 @@ return ReadOnly("Draft", {
     Time = 60
   },
   [151757] = {
-    AccessKey = T.RT_36,
+    AccessKey = T.RT_32,
     Batch = true,
     DraftId = 151757,
     FoundryCost = T.RT_1,
@@ -4800,7 +4792,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152001] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152001,
     FoundryCost = T.RT_1,
@@ -4811,7 +4803,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_39
+      [1] = T.RT_38
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -4821,7 +4813,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152004] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152004,
     FoundryCost = T.RT_1,
@@ -4846,7 +4838,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152005] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152005,
     FoundryCost = T.RT_1,
@@ -4871,7 +4863,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152007] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152007,
     FoundryCost = T.RT_1,
@@ -4901,7 +4893,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152008] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152008,
     FoundryCost = T.RT_1,
@@ -4912,8 +4904,8 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_40,
-      [2] = T.RT_41
+      [1] = T.RT_39,
+      [2] = T.RT_40
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -4964,7 +4956,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 140,
     Resource = {
-      [1] = T.RT_40,
+      [1] = T.RT_39,
       [2] = {
         Id = 42412,
         Num = 1,
@@ -4990,7 +4982,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 140,
     Resource = {
-      [1] = T.RT_39,
+      [1] = T.RT_38,
       [2] = {
         Id = 42401,
         Num = 1,
@@ -5005,7 +4997,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152101] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152101,
     FoundryCost = T.RT_1,
@@ -5016,7 +5008,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_39,
+      [1] = T.RT_38,
       [2] = {
         Id = 32101,
         Num = 5,
@@ -5031,7 +5023,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152102] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152102,
     FoundryCost = T.RT_1,
@@ -5042,7 +5034,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_39,
+      [1] = T.RT_38,
       [2] = {
         Id = 32102,
         Num = 5,
@@ -5057,7 +5049,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [152103] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 152103,
     FoundryCost = T.RT_1,
@@ -5068,7 +5060,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_39,
+      [1] = T.RT_38,
       [2] = {
         Id = 32103,
         Num = 5,
@@ -5099,7 +5091,7 @@ return ReadOnly("Draft", {
         Num = 3,
         Type = "Mod"
       },
-      [2] = T.RT_41
+      [2] = T.RT_40
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -5139,7 +5131,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153001] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153001,
     FoundryCost = T.RT_1,
@@ -5150,7 +5142,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_42
+      [1] = T.RT_41
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -5160,7 +5152,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153004] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153004,
     FoundryCost = T.RT_1,
@@ -5185,7 +5177,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153005] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153005,
     FoundryCost = T.RT_1,
@@ -5215,7 +5207,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153007] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153007,
     FoundryCost = T.RT_1,
@@ -5245,7 +5237,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153008] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153008,
     FoundryCost = T.RT_1,
@@ -5425,7 +5417,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153101] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153101,
     FoundryCost = T.RT_1,
@@ -5436,7 +5428,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_42,
+      [1] = T.RT_41,
       [2] = {
         Id = 33101,
         Num = 5,
@@ -5451,7 +5443,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153102] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153102,
     FoundryCost = T.RT_1,
@@ -5462,7 +5454,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_42,
+      [1] = T.RT_41,
       [2] = {
         Id = 33102,
         Num = 5,
@@ -5477,7 +5469,7 @@ return ReadOnly("Draft", {
     Time = 30
   },
   [153103] = {
-    AccessKey = T.RT_38,
+    AccessKey = T.RT_36,
     Batch = true,
     DraftId = 153103,
     FoundryCost = T.RT_1,
@@ -5488,7 +5480,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_42,
+      [1] = T.RT_41,
       [2] = {
         Id = 33103,
         Num = 5,
@@ -5669,7 +5661,7 @@ return ReadOnly("Draft", {
         Num = 2,
         Type = "Mod"
       },
-      [2] = T.RT_43
+      [2] = T.RT_42
     },
     ResourceToCoinType = 215,
     ResourceValue = 3750,
@@ -5770,7 +5762,7 @@ return ReadOnly("Draft", {
         Num = 2,
         Type = "Mod"
       },
-      [2] = T.RT_43
+      [2] = T.RT_42
     },
     ResourceToCoinType = 215,
     ResourceValue = 3750,
@@ -5796,7 +5788,7 @@ return ReadOnly("Draft", {
         Num = 2,
         Type = "Mod"
       },
-      [2] = T.RT_44
+      [2] = T.RT_43
     },
     ResourceToCoinType = 215,
     ResourceValue = 3750,
@@ -5822,7 +5814,7 @@ return ReadOnly("Draft", {
         Num = 2,
         Type = "Mod"
       },
-      [2] = T.RT_44
+      [2] = T.RT_43
     },
     ResourceToCoinType = 215,
     ResourceValue = 3750,
@@ -5848,7 +5840,7 @@ return ReadOnly("Draft", {
         Num = 2,
         Type = "Mod"
       },
-      [2] = T.RT_45
+      [2] = T.RT_44
     },
     ResourceToCoinType = 215,
     ResourceValue = 3750,
@@ -5874,7 +5866,7 @@ return ReadOnly("Draft", {
         Num = 2,
         Type = "Mod"
       },
-      [2] = T.RT_45
+      [2] = T.RT_44
     },
     ResourceToCoinType = 215,
     ResourceValue = 3750,
@@ -6119,7 +6111,7 @@ return ReadOnly("Draft", {
     ProductType = "Mod",
     Rarity = 5,
     ReleaseVersion = 140,
-    Resource = T.RT_47,
+    Resource = T.RT_46,
     ResourceToCoinType = 102,
     ResourceValue = 50,
     ShowInBag = 1,
@@ -6144,8 +6136,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_49
+      [2] = T.RT_47,
+      [3] = T.RT_48
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6165,7 +6157,7 @@ return ReadOnly("Draft", {
     ProductType = "Mod",
     Rarity = 5,
     ReleaseVersion = 140,
-    Resource = T.RT_51,
+    Resource = T.RT_50,
     ResourceToCoinType = 102,
     ResourceValue = 50,
     ShowInBag = 1,
@@ -6190,8 +6182,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_52
+      [2] = T.RT_47,
+      [3] = T.RT_51
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6242,8 +6234,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_49
+      [2] = T.RT_47,
+      [3] = T.RT_48
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6294,8 +6286,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_52
+      [2] = T.RT_47,
+      [3] = T.RT_51
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6346,8 +6338,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_49
+      [2] = T.RT_47,
+      [3] = T.RT_48
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6367,7 +6359,7 @@ return ReadOnly("Draft", {
     ProductType = "Mod",
     Rarity = 5,
     ReleaseVersion = 120,
-    Resource = T.RT_47,
+    Resource = T.RT_46,
     ResourceToCoinType = 102,
     ResourceValue = 50,
     ShowInBag = 1,
@@ -6392,8 +6384,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_52
+      [2] = T.RT_47,
+      [3] = T.RT_51
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6444,8 +6436,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_49
+      [2] = T.RT_47,
+      [3] = T.RT_48
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6496,8 +6488,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_52
+      [2] = T.RT_47,
+      [3] = T.RT_51
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6548,8 +6540,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_49
+      [2] = T.RT_47,
+      [3] = T.RT_48
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6569,7 +6561,7 @@ return ReadOnly("Draft", {
     ProductType = "Mod",
     Rarity = 5,
     ReleaseVersion = 130,
-    Resource = T.RT_51,
+    Resource = T.RT_50,
     ResourceToCoinType = 102,
     ResourceValue = 50,
     ShowInBag = 1,
@@ -6594,8 +6586,8 @@ return ReadOnly("Draft", {
         Num = 1,
         Type = "Mod"
       },
-      [2] = T.RT_48,
-      [3] = T.RT_52
+      [2] = T.RT_47,
+      [3] = T.RT_51
     },
     ResourceToCoinType = 102,
     ResourceValue = 50,
@@ -6606,7 +6598,7 @@ return ReadOnly("Draft", {
   },
   [310001] = {
     DraftId = 310001,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowChick",
     ProductId = 10001,
     ProductNum = 1,
@@ -6625,14 +6617,14 @@ return ReadOnly("Draft", {
   },
   [310002] = {
     DraftId = 310002,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_WhiteChick",
     ProductId = 10002,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_60,
+    Resource = T.RT_59,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6640,14 +6632,14 @@ return ReadOnly("Draft", {
   },
   [310003] = {
     DraftId = 310003,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_BrownChick",
     ProductId = 10003,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_62,
+    Resource = T.RT_61,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6655,14 +6647,14 @@ return ReadOnly("Draft", {
   },
   [310004] = {
     DraftId = 310004,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_BlackChick",
     ProductId = 10004,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_64,
+    Resource = T.RT_63,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6670,9 +6662,24 @@ return ReadOnly("Draft", {
   },
   [310005] = {
     DraftId = 310005,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Sprout",
     ProductId = 10005,
+    ProductNum = 1,
+    ProductType = "CharAccessory",
+    Rarity = 3,
+    ReleaseVersion = 100,
+    Resource = T.RT_64,
+    ResourceValue = -1,
+    ShowInBag = 1,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 5
+  },
+  [310006] = {
+    DraftId = 310006,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowSprout",
+    ProductId = 10006,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 3,
@@ -6683,11 +6690,11 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [310006] = {
-    DraftId = 310006,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_YellowSprout",
-    ProductId = 10006,
+  [310007] = {
+    DraftId = 310007,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_BlueSprout",
+    ProductId = 10007,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 3,
@@ -6698,31 +6705,16 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [310007] = {
-    DraftId = 310007,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_BlueSprout",
-    ProductId = 10007,
-    ProductNum = 1,
-    ProductType = "CharAccessory",
-    Rarity = 3,
-    ReleaseVersion = 100,
-    Resource = T.RT_67,
-    ResourceValue = -1,
-    ShowInBag = 1,
-    Sound = "SOUND_ITEM_PAPER",
-    Time = 5
-  },
   [310008] = {
     DraftId = 310008,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_RedSprout",
     ProductId = 10008,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 3,
     ReleaseVersion = 100,
-    Resource = T.RT_71,
+    Resource = T.RT_70,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6730,14 +6722,14 @@ return ReadOnly("Draft", {
   },
   [310009] = {
     DraftId = 310009,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Wuwu",
     ProductId = 10009,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_73,
+    Resource = T.RT_72,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6745,7 +6737,7 @@ return ReadOnly("Draft", {
   },
   [310010] = {
     DraftId = 310010,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Bow",
     ProductId = 10010,
     ProductNum = 1,
@@ -6753,9 +6745,9 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_74,
-      [2] = T.RT_75,
-      [3] = T.RT_76
+      [1] = T.RT_73,
+      [2] = T.RT_74,
+      [3] = T.RT_75
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -6764,9 +6756,24 @@ return ReadOnly("Draft", {
   },
   [310011] = {
     DraftId = 310011,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_SilverBow",
     ProductId = 10011,
+    ProductNum = 1,
+    ProductType = "CharAccessory",
+    Rarity = 4,
+    ReleaseVersion = 100,
+    Resource = T.RT_77,
+    ResourceValue = -1,
+    ShowInBag = 1,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 5
+  },
+  [310012] = {
+    DraftId = 310012,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_RedBow",
+    ProductId = 10012,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -6777,11 +6784,11 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [310012] = {
-    DraftId = 310012,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_RedBow",
-    ProductId = 10012,
+  [310013] = {
+    DraftId = 310013,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_PinkBow",
+    ProductId = 10013,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -6792,14 +6799,14 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [310013] = {
-    DraftId = 310013,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_PinkBow",
-    ProductId = 10013,
+  [310014] = {
+    DraftId = 310014,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Dinosaur",
+    ProductId = 10014,
     ProductNum = 1,
     ProductType = "CharAccessory",
-    Rarity = 4,
+    Rarity = 5,
     ReleaseVersion = 100,
     Resource = T.RT_80,
     ResourceValue = -1,
@@ -6807,31 +6814,16 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [310014] = {
-    DraftId = 310014,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Dinosaur",
-    ProductId = 10014,
-    ProductNum = 1,
-    ProductType = "CharAccessory",
-    Rarity = 5,
-    ReleaseVersion = 100,
-    Resource = T.RT_81,
-    ResourceValue = -1,
-    ShowInBag = 1,
-    Sound = "SOUND_ITEM_PAPER",
-    Time = 5
-  },
   [310015] = {
     DraftId = 310015,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_EggJiao",
     ProductId = 10015,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 5,
     ReleaseVersion = 100,
-    Resource = T.RT_84,
+    Resource = T.RT_83,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6839,14 +6831,14 @@ return ReadOnly("Draft", {
   },
   [310016] = {
     DraftId = 310016,
-    FoundryCost = T.RT_85,
+    FoundryCost = T.RT_84,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Bubble",
     ProductId = 10016,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_86,
+    Resource = T.RT_85,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6854,14 +6846,14 @@ return ReadOnly("Draft", {
   },
   [310017] = {
     DraftId = 310017,
-    FoundryCost = T.RT_85,
+    FoundryCost = T.RT_84,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Snow",
     ProductId = 10017,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_86,
+    Resource = T.RT_85,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6869,14 +6861,14 @@ return ReadOnly("Draft", {
   },
   [310018] = {
     DraftId = 310018,
-    FoundryCost = T.RT_85,
+    FoundryCost = T.RT_84,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_Rain",
     ProductId = 10018,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_86,
+    Resource = T.RT_85,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6891,7 +6883,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_87,
+    Resource = T.RT_86,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6917,8 +6909,8 @@ return ReadOnly("Draft", {
         Num = 40,
         Type = "Resource"
       },
-      [3] = T.RT_88,
-      [4] = T.RT_89
+      [3] = T.RT_87,
+      [4] = T.RT_88
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -6928,14 +6920,14 @@ return ReadOnly("Draft", {
   },
   [310021] = {
     DraftId = 310021,
-    FoundryCost = T.RT_85,
+    FoundryCost = T.RT_84,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_GoldenMask",
     ProductId = 10021,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_86,
+    Resource = T.RT_85,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6943,14 +6935,14 @@ return ReadOnly("Draft", {
   },
   [310022] = {
     DraftId = 310022,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head_SilverMask",
     ProductId = 10022,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_73,
+    Resource = T.RT_72,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6983,7 +6975,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_94,
+    Resource = T.RT_93,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -6991,7 +6983,7 @@ return ReadOnly("Draft", {
   },
   [310025] = {
     DraftId = 310025,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head09.T_Fashion_Head09",
     ProductId = 10030,
     ProductNum = 1,
@@ -6999,10 +6991,10 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_95,
-      [2] = T.RT_96,
-      [3] = T.RT_63,
-      [4] = T.RT_57
+      [1] = T.RT_94,
+      [2] = T.RT_95,
+      [3] = T.RT_62,
+      [4] = T.RT_56
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7012,7 +7004,7 @@ return ReadOnly("Draft", {
   },
   [310026] = {
     DraftId = 310026,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head21",
     ProductId = 10029,
     ProductNum = 1,
@@ -7030,8 +7022,8 @@ return ReadOnly("Draft", {
         Num = 30,
         Type = "Resource"
       },
-      [3] = T.RT_59,
-      [4] = T.RT_58
+      [3] = T.RT_58,
+      [4] = T.RT_57
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7041,7 +7033,7 @@ return ReadOnly("Draft", {
   },
   [310027] = {
     DraftId = 310027,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head17",
     ProductId = 10028,
     ProductNum = 1,
@@ -7054,9 +7046,9 @@ return ReadOnly("Draft", {
         Num = 30,
         Type = "Resource"
       },
-      [2] = T.RT_95,
-      [3] = T.RT_61,
-      [4] = T.RT_63
+      [2] = T.RT_94,
+      [3] = T.RT_60,
+      [4] = T.RT_62
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7084,8 +7076,8 @@ return ReadOnly("Draft", {
         Num = 20,
         Type = "Resource"
       },
-      [3] = T.RT_89,
-      [4] = T.RT_92
+      [3] = T.RT_88,
+      [4] = T.RT_91
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7103,14 +7095,14 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_90,
+      [1] = T.RT_89,
       [2] = {
         Id = 4010010,
         Num = 40,
         Type = "Resource"
       },
-      [3] = T.RT_97,
-      [4] = T.RT_88
+      [3] = T.RT_96,
+      [4] = T.RT_87
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7128,14 +7120,14 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_91,
+      [1] = T.RT_90,
       [2] = {
         Id = 4010012,
         Num = 20,
         Type = "Resource"
       },
-      [3] = T.RT_93,
-      [4] = T.RT_97
+      [3] = T.RT_92,
+      [4] = T.RT_96
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7153,10 +7145,10 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_98,
-      [2] = T.RT_99,
-      [3] = T.RT_97,
-      [4] = T.RT_88
+      [1] = T.RT_97,
+      [2] = T.RT_98,
+      [3] = T.RT_96,
+      [4] = T.RT_87
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7174,10 +7166,10 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_100,
-      [2] = T.RT_101,
-      [3] = T.RT_93,
-      [4] = T.RT_97
+      [1] = T.RT_99,
+      [2] = T.RT_100,
+      [3] = T.RT_92,
+      [4] = T.RT_96
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7205,8 +7197,8 @@ return ReadOnly("Draft", {
         Num = 15,
         Type = "Resource"
       },
-      [3] = T.RT_92,
-      [4] = T.RT_93
+      [3] = T.RT_91,
+      [4] = T.RT_92
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7217,7 +7209,7 @@ return ReadOnly("Draft", {
   [310201] = {
     Batch = true,
     DraftId = 310201,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Zhanshi02.T_BreakRes_Zhanshi02",
     IsInfinity = true,
     ProductId = 10201,
@@ -7240,7 +7232,7 @@ return ReadOnly("Draft", {
   [310202] = {
     Batch = true,
     DraftId = 310202,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Zhanshi03.T_BreakRes_Zhanshi03",
     IsInfinity = true,
     ProductId = 10202,
@@ -7263,7 +7255,7 @@ return ReadOnly("Draft", {
   [310204] = {
     Batch = true,
     DraftId = 310204,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Fashi02.T_BreakRes_Fashi02",
     IsInfinity = true,
     ProductId = 10204,
@@ -7286,7 +7278,7 @@ return ReadOnly("Draft", {
   [310205] = {
     Batch = true,
     DraftId = 310205,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Fashi03.T_BreakRes_Fashi03",
     IsInfinity = true,
     ProductId = 10205,
@@ -7309,7 +7301,7 @@ return ReadOnly("Draft", {
   [310207] = {
     Batch = true,
     DraftId = 310207,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Fuzhu02.T_BreakRes_Fuzhu02",
     IsInfinity = true,
     ProductId = 10207,
@@ -7332,7 +7324,7 @@ return ReadOnly("Draft", {
   [310208] = {
     Batch = true,
     DraftId = 310208,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Fuzhu03.T_BreakRes_Fuzhu03",
     IsInfinity = true,
     ProductId = 10208,
@@ -7355,7 +7347,7 @@ return ReadOnly("Draft", {
   [310210] = {
     Batch = true,
     DraftId = 310210,
-    FoundryCost = T.RT_53,
+    FoundryCost = T.RT_52,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Sheshou02.T_BreakRes_Sheshou02",
     IsInfinity = true,
     ProductId = 10210,
@@ -7378,7 +7370,7 @@ return ReadOnly("Draft", {
   [310211] = {
     Batch = true,
     DraftId = 310211,
-    FoundryCost = T.RT_54,
+    FoundryCost = T.RT_53,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_BreakRes_Sheshou03.T_BreakRes_Sheshou03",
     IsInfinity = true,
     ProductId = 10211,
@@ -7400,7 +7392,7 @@ return ReadOnly("Draft", {
   },
   [320001] = {
     DraftId = 320001,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Glasses",
     ProductId = 20001,
     ProductNum = 1,
@@ -7408,9 +7400,9 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_102,
-      [2] = T.RT_76,
-      [3] = T.RT_74
+      [1] = T.RT_101,
+      [2] = T.RT_75,
+      [3] = T.RT_73
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7419,9 +7411,24 @@ return ReadOnly("Draft", {
   },
   [320002] = {
     DraftId = 320002,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_RedGlasses",
     ProductId = 20002,
+    ProductNum = 1,
+    ProductType = "CharAccessory",
+    Rarity = 4,
+    ReleaseVersion = 100,
+    Resource = T.RT_78,
+    ResourceValue = -1,
+    ShowInBag = 1,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 5
+  },
+  [320003] = {
+    DraftId = 320003,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_TransparentGlasses",
+    ProductId = 20003,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -7432,11 +7439,11 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [320003] = {
-    DraftId = 320003,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_TransparentGlasses",
-    ProductId = 20003,
+  [320004] = {
+    DraftId = 320004,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_HawksbillGlasses",
+    ProductId = 20004,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -7447,24 +7454,9 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [320004] = {
-    DraftId = 320004,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_HawksbillGlasses",
-    ProductId = 20004,
-    ProductNum = 1,
-    ProductType = "CharAccessory",
-    Rarity = 4,
-    ReleaseVersion = 100,
-    Resource = T.RT_81,
-    ResourceValue = -1,
-    ShowInBag = 1,
-    Sound = "SOUND_ITEM_PAPER",
-    Time = 5
-  },
   [320005] = {
     DraftId = 320005,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_EyeMask",
     ProductId = 20005,
     ProductNum = 1,
@@ -7483,14 +7475,14 @@ return ReadOnly("Draft", {
   },
   [320006] = {
     DraftId = 320006,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_WhiteBandage",
     ProductId = 20006,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_62,
+    Resource = T.RT_61,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7498,9 +7490,24 @@ return ReadOnly("Draft", {
   },
   [320007] = {
     DraftId = 320007,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_RedBandage",
     ProductId = 20007,
+    ProductNum = 1,
+    ProductType = "CharAccessory",
+    Rarity = 4,
+    ReleaseVersion = 100,
+    Resource = T.RT_63,
+    ResourceValue = -1,
+    ShowInBag = 1,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 5
+  },
+  [320008] = {
+    DraftId = 320008,
+    FoundryCost = T.RT_54,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Butterfly01",
+    ProductId = 20008,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -7511,11 +7518,11 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [320008] = {
-    DraftId = 320008,
+  [320009] = {
+    DraftId = 320009,
     FoundryCost = T.RT_55,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Butterfly01",
-    ProductId = 20008,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_WhiteButterfly01",
+    ProductId = 20009,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -7526,11 +7533,11 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [320009] = {
-    DraftId = 320009,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_WhiteButterfly01",
-    ProductId = 20009,
+  [320010] = {
+    DraftId = 320010,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_PinkButterfly01",
+    ProductId = 20010,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -7541,31 +7548,16 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [320010] = {
-    DraftId = 320010,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_PinkButterfly01",
-    ProductId = 20010,
-    ProductNum = 1,
-    ProductType = "CharAccessory",
-    Rarity = 4,
-    ReleaseVersion = 100,
-    Resource = T.RT_67,
-    ResourceValue = -1,
-    ShowInBag = 1,
-    Sound = "SOUND_ITEM_PAPER",
-    Time = 5
-  },
   [320011] = {
     DraftId = 320011,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_BlackButterfly01",
     ProductId = 20011,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_71,
+    Resource = T.RT_70,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7573,7 +7565,7 @@ return ReadOnly("Draft", {
   },
   [320012] = {
     DraftId = 320012,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Butterfly02",
     ProductId = 20012,
     ProductNum = 1,
@@ -7581,9 +7573,9 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_74,
-      [2] = T.RT_75,
-      [3] = T.RT_102
+      [1] = T.RT_73,
+      [2] = T.RT_74,
+      [3] = T.RT_101
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7592,7 +7584,7 @@ return ReadOnly("Draft", {
   },
   [320013] = {
     DraftId = 320013,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_CyanButterfly02",
     ProductId = 20013,
     ProductNum = 1,
@@ -7600,9 +7592,9 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_68,
-      [2] = T.RT_69,
-      [3] = T.RT_77
+      [1] = T.RT_67,
+      [2] = T.RT_68,
+      [3] = T.RT_76
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7611,9 +7603,24 @@ return ReadOnly("Draft", {
   },
   [320014] = {
     DraftId = 320014,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_RedButterfly02",
     ProductId = 20014,
+    ProductNum = 1,
+    ProductType = "CharAccessory",
+    Rarity = 4,
+    ReleaseVersion = 100,
+    Resource = T.RT_77,
+    ResourceValue = -1,
+    ShowInBag = 1,
+    Sound = "SOUND_ITEM_PAPER",
+    Time = 5
+  },
+  [320015] = {
+    DraftId = 320015,
+    FoundryCost = T.RT_55,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_GreyButterfly02",
+    ProductId = 20015,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
@@ -7624,24 +7631,9 @@ return ReadOnly("Draft", {
     Sound = "SOUND_ITEM_PAPER",
     Time = 5
   },
-  [320015] = {
-    DraftId = 320015,
-    FoundryCost = T.RT_56,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_GreyButterfly02",
-    ProductId = 20015,
-    ProductNum = 1,
-    ProductType = "CharAccessory",
-    Rarity = 4,
-    ReleaseVersion = 100,
-    Resource = T.RT_79,
-    ResourceValue = -1,
-    ShowInBag = 1,
-    Sound = "SOUND_ITEM_PAPER",
-    Time = 5
-  },
   [320016] = {
     DraftId = 320016,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Bandage",
     ProductId = 20016,
     ProductNum = 1,
@@ -7649,8 +7641,8 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_74,
-      [2] = T.RT_76,
+      [1] = T.RT_73,
+      [2] = T.RT_75,
       [3] = {
         Id = 20017,
         Num = 50,
@@ -7664,14 +7656,14 @@ return ReadOnly("Draft", {
   },
   [320017] = {
     DraftId = 320017,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_BlackBandage",
     ProductId = 20017,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_81,
+    Resource = T.RT_80,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7679,14 +7671,14 @@ return ReadOnly("Draft", {
   },
   [320018] = {
     DraftId = 320018,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_PinkBandage",
     ProductId = 20018,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_60,
+    Resource = T.RT_59,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7694,14 +7686,14 @@ return ReadOnly("Draft", {
   },
   [320019] = {
     DraftId = 320019,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_BlueBandage",
     ProductId = 20019,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_62,
+    Resource = T.RT_61,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7709,7 +7701,7 @@ return ReadOnly("Draft", {
   },
   [320020] = {
     DraftId = 320020,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_ArmyMask",
     ProductId = 20020,
     ProductNum = 1,
@@ -7745,7 +7737,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_87,
+    Resource = T.RT_86,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7753,14 +7745,14 @@ return ReadOnly("Draft", {
   },
   [320022] = {
     DraftId = 320022,
-    FoundryCost = T.RT_85,
+    FoundryCost = T.RT_84,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_RedFlower",
     ProductId = 20022,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_86,
+    Resource = T.RT_85,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7768,14 +7760,14 @@ return ReadOnly("Draft", {
   },
   [320023] = {
     DraftId = 320023,
-    FoundryCost = T.RT_85,
+    FoundryCost = T.RT_84,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_WhiteFlower",
     ProductId = 20023,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_86,
+    Resource = T.RT_85,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7783,14 +7775,14 @@ return ReadOnly("Draft", {
   },
   [320024] = {
     DraftId = 320024,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Beard",
     ProductId = 20024,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_71,
+    Resource = T.RT_70,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7798,7 +7790,7 @@ return ReadOnly("Draft", {
   },
   [320025] = {
     DraftId = 320025,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face_Valve",
     ProductId = 20025,
     ProductNum = 1,
@@ -7806,14 +7798,14 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_96,
+      [1] = T.RT_95,
       [2] = {
         Id = 4010002,
         Num = 30,
         Type = "Resource"
       },
-      [3] = T.RT_58,
-      [4] = T.RT_61
+      [3] = T.RT_57,
+      [4] = T.RT_60
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -7830,7 +7822,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_103,
+    Resource = T.RT_102,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7845,7 +7837,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_103,
+    Resource = T.RT_102,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7860,7 +7852,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_103,
+    Resource = T.RT_102,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7875,7 +7867,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_94,
+    Resource = T.RT_93,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7883,14 +7875,14 @@ return ReadOnly("Draft", {
   },
   [320030] = {
     DraftId = 320030,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face05.T_Fashion_Face05",
     ProductId = 20030,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 3,
     ReleaseVersion = 100,
-    Resource = T.RT_84,
+    Resource = T.RT_83,
     ResourceValue = -1,
     ShowInBag = 1,
     ShowInDraftArchive = true,
@@ -7899,7 +7891,7 @@ return ReadOnly("Draft", {
   },
   [330001] = {
     DraftId = 330001,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back_Lantern",
     ProductId = 30001,
     ProductNum = 1,
@@ -7907,8 +7899,8 @@ return ReadOnly("Draft", {
     Rarity = 3,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_104,
-      [2] = T.RT_105,
+      [1] = T.RT_103,
+      [2] = T.RT_104,
       [3] = T.RT_11,
       [4] = T.RT_15
     },
@@ -7927,7 +7919,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_87,
+    Resource = T.RT_86,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7942,7 +7934,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 3,
     ReleaseVersion = 100,
-    Resource = T.RT_103,
+    Resource = T.RT_102,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -7950,7 +7942,7 @@ return ReadOnly("Draft", {
   },
   [330004] = {
     DraftId = 330004,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Waist03.T_Fashion_Waist03",
     ProductId = 30005,
     ProductNum = 1,
@@ -7963,7 +7955,7 @@ return ReadOnly("Draft", {
         Num = 20,
         Type = "Resource"
       },
-      [2] = T.RT_104,
+      [2] = T.RT_103,
       [3] = T.RT_12,
       [4] = T.RT_13
     },
@@ -7975,7 +7967,7 @@ return ReadOnly("Draft", {
   },
   [330005] = {
     DraftId = 330005,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Waist04.T_Fashion_Waist04",
     ProductId = 30006,
     ProductNum = 1,
@@ -7988,7 +7980,7 @@ return ReadOnly("Draft", {
         Num = 10,
         Type = "Resource"
       },
-      [2] = T.RT_105,
+      [2] = T.RT_104,
       [3] = T.RT_14,
       [4] = T.RT_11
     },
@@ -8000,14 +7992,14 @@ return ReadOnly("Draft", {
   },
   [330006] = {
     DraftId = 330006,
-    FoundryCost = T.RT_55,
+    FoundryCost = T.RT_54,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Waist05.T_Fashion_Waist05",
     ProductId = 30009,
     ProductNum = 1,
     ProductType = "CharAccessory",
     Rarity = 4,
     ReleaseVersion = 100,
-    Resource = T.RT_94,
+    Resource = T.RT_93,
     ResourceValue = -1,
     ShowInBag = 1,
     ShowInDraftArchive = true,
@@ -8024,10 +8016,10 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_100,
-      [2] = T.RT_101,
-      [3] = T.RT_88,
-      [4] = T.RT_89
+      [1] = T.RT_99,
+      [2] = T.RT_100,
+      [3] = T.RT_87,
+      [4] = T.RT_88
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -8067,7 +8059,7 @@ return ReadOnly("Draft", {
     ProductType = "CharAccessory",
     Rarity = 5,
     ReleaseVersion = 100,
-    Resource = T.RT_87,
+    Resource = T.RT_86,
     ResourceValue = -1,
     ShowInBag = 1,
     Sound = "SOUND_ITEM_PAPER",
@@ -8075,7 +8067,7 @@ return ReadOnly("Draft", {
   },
   [340003] = {
     DraftId = 340003,
-    FoundryCost = T.RT_56,
+    FoundryCost = T.RT_55,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back03.T_Fashion_Back03",
     ProductId = 40003,
     ProductNum = 1,
@@ -8093,8 +8085,8 @@ return ReadOnly("Draft", {
         Num = 15,
         Type = "Resource"
       },
-      [3] = T.RT_57,
-      [4] = T.RT_59
+      [3] = T.RT_56,
+      [4] = T.RT_58
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -8112,10 +8104,10 @@ return ReadOnly("Draft", {
     Rarity = 4,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_98,
-      [2] = T.RT_99,
-      [3] = T.RT_89,
-      [4] = T.RT_92
+      [1] = T.RT_97,
+      [2] = T.RT_98,
+      [3] = T.RT_88,
+      [4] = T.RT_91
     },
     ResourceValue = -1,
     ShowInBag = 1,
@@ -8125,7 +8117,7 @@ return ReadOnly("Draft", {
   },
   [910101] = {
     DraftId = 910101,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Broadsword_Huipo.T_Draft_Broadsword_Huipo",
     ProductId = 10101,
     ProductNum = 1,
@@ -8133,7 +8125,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12068,
         Num = 1,
@@ -8153,7 +8145,7 @@ return ReadOnly("Draft", {
   },
   [910102] = {
     DraftId = 910102,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Broadsword_Guzi.T_Draft_Broadsword_Guzi",
     ProductId = 10102,
     ProductNum = 1,
@@ -8161,7 +8153,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12040,
         Num = 1,
@@ -8181,7 +8173,7 @@ return ReadOnly("Draft", {
   },
   [910103] = {
     DraftId = 910103,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Sword_Zhuiyi.T_Draft_Sword_Zhuiyi",
     ProductId = 10103,
     ProductNum = 1,
@@ -8189,7 +8181,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12070,
         Num = 1,
@@ -8209,7 +8201,7 @@ return ReadOnly("Draft", {
   },
   [910104] = {
     DraftId = 910104,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Sword_Huimou.T_Draft_Sword_Huimou",
     ProductId = 10104,
     ProductNum = 1,
@@ -8217,7 +8209,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12001,
         Num = 1,
@@ -8237,7 +8229,7 @@ return ReadOnly("Draft", {
   },
   [910105] = {
     DraftId = 910105,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Sword_Liulang.T_Draft_Sword_Liulang",
     ProductId = 10105,
     ProductNum = 1,
@@ -8245,7 +8237,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12085,
         Num = 1,
@@ -8265,7 +8257,7 @@ return ReadOnly("Draft", {
   },
   [910107] = {
     DraftId = 910107,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Sword_Qiuniao.T_Draft_Sword_Qiuniao",
     ProductId = 10107,
     ProductNum = 1,
@@ -8273,7 +8265,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 140,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12155,
         Num = 1,
@@ -8293,7 +8285,7 @@ return ReadOnly("Draft", {
   },
   [910201] = {
     DraftId = 910201,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Polearm_Sairen.T_Draft_Polearm_Sairen",
     ProductId = 10201,
     ProductNum = 1,
@@ -8301,7 +8293,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12022,
         Num = 1,
@@ -8321,7 +8313,7 @@ return ReadOnly("Draft", {
   },
   [910202] = {
     DraftId = 910202,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Polearm_Chunjue.T_Draft_Polearm_Chunjue",
     ProductId = 10202,
     ProductNum = 1,
@@ -8329,7 +8321,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12072,
         Num = 1,
@@ -8349,7 +8341,7 @@ return ReadOnly("Draft", {
   },
   [910203] = {
     DraftId = 910203,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Polearm_Zuiqian.T_Draft_Polearm_Zuiqian",
     ProductId = 10203,
     ProductNum = 1,
@@ -8357,7 +8349,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 120,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12024,
         Num = 1,
@@ -8377,7 +8369,7 @@ return ReadOnly("Draft", {
   },
   [910204] = {
     DraftId = 910204,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Scythe_Xiji.T_Draft_Scythe_Xiji",
     ProductId = 10204,
     ProductNum = 1,
@@ -8385,7 +8377,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12053,
         Num = 1,
@@ -8405,7 +8397,7 @@ return ReadOnly("Draft", {
   },
   [910206] = {
     DraftId = 910206,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Scythe_Chixing.T_Draft_Scythe_Chixing",
     ProductId = 10206,
     ProductNum = 1,
@@ -8413,7 +8405,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12110,
         Num = 1,
@@ -8433,7 +8425,7 @@ return ReadOnly("Draft", {
   },
   [910208] = {
     DraftId = 910208,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Scythe_Yihe.T_Draft_Scythe_Yihe",
     ProductId = 10208,
     ProductNum = 1,
@@ -8441,7 +8433,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 110,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12133,
         Num = 1,
@@ -8461,7 +8453,7 @@ return ReadOnly("Draft", {
   },
   [910209] = {
     DraftId = 910209,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Polearm_Zhuixin.T_Draft_Polearm_Zhuixin",
     ProductId = 10209,
     ProductNum = 1,
@@ -8469,7 +8461,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 150,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12168,
         Num = 1,
@@ -8489,7 +8481,7 @@ return ReadOnly("Draft", {
   },
   [910299] = {
     DraftId = 910299,
-    FoundryCost = T.RT_108,
+    FoundryCost = T.RT_107,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Polearm_Yemei.T_Draft_Polearm_Yemei",
     ProductId = 10299,
     ProductNum = 1,
@@ -8516,7 +8508,7 @@ return ReadOnly("Draft", {
   },
   [910301] = {
     DraftId = 910301,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Chengjie",
     ProductId = 10301,
     ProductNum = 1,
@@ -8524,7 +8516,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12042,
         Num = 1,
@@ -8544,7 +8536,7 @@ return ReadOnly("Draft", {
   },
   [910302] = {
     DraftId = 910302,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Rimian.T_Draft_Claymore_Rimian",
     ProductId = 10302,
     ProductNum = 1,
@@ -8552,7 +8544,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12074,
         Num = 1,
@@ -8572,7 +8564,7 @@ return ReadOnly("Draft", {
   },
   [910303] = {
     DraftId = 910303,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Chixing.T_Draft_Claymore_Chixing",
     ProductId = 10303,
     ProductNum = 1,
@@ -8580,7 +8572,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12112,
         Num = 1,
@@ -8600,7 +8592,7 @@ return ReadOnly("Draft", {
   },
   [910304] = {
     DraftId = 910304,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Wangu.T_Draft_Claymore_Wangu",
     ProductId = 10304,
     ProductNum = 1,
@@ -8608,7 +8600,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 120,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12055,
         Num = 1,
@@ -8628,7 +8620,7 @@ return ReadOnly("Draft", {
   },
   [910305] = {
     DraftId = 910305,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Mingjin.T_Draft_Claymore_Mingjin",
     ProductId = 10305,
     ProductNum = 1,
@@ -8636,7 +8628,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 130,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12150,
         Num = 1,
@@ -8656,7 +8648,7 @@ return ReadOnly("Draft", {
   },
   [910399] = {
     DraftId = 910399,
-    FoundryCost = T.RT_108,
+    FoundryCost = T.RT_107,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Claymore_Yemei.T_Draft_Claymore_Yemei",
     ProductId = 10399,
     ProductNum = 1,
@@ -8683,7 +8675,7 @@ return ReadOnly("Draft", {
   },
   [910401] = {
     DraftId = 910401,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Dualblade_Shixiang.T_Draft_Dualblade_Shixiang",
     ProductId = 10401,
     ProductNum = 1,
@@ -8691,7 +8683,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12044,
         Num = 1,
@@ -8716,7 +8708,7 @@ return ReadOnly("Draft", {
   },
   [910402] = {
     DraftId = 910402,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Dualblade_Liujin.T_Draft_Dualblade_Liujin",
     ProductId = 10402,
     ProductNum = 1,
@@ -8724,7 +8716,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12082,
         Num = 1,
@@ -8749,7 +8741,7 @@ return ReadOnly("Draft", {
   },
   [910403] = {
     DraftId = 910403,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Dualblade_Yousha.T_Draft_Dualblade_Yousha",
     ProductId = 10403,
     ProductNum = 1,
@@ -8757,7 +8749,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12087,
         Num = 1,
@@ -8782,7 +8774,7 @@ return ReadOnly("Draft", {
   },
   [910404] = {
     DraftId = 910404,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Dualblade_Fengyun.T_Draft_Dualblade_Fengyun",
     ProductId = 10404,
     ProductNum = 1,
@@ -8790,7 +8782,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 120,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12138,
         Num = 1,
@@ -8815,7 +8807,7 @@ return ReadOnly("Draft", {
   },
   [910501] = {
     DraftId = 910501,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Swordwhip_Buyu",
     ProductId = 10501,
     ProductNum = 1,
@@ -8823,7 +8815,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12026,
         Num = 1,
@@ -8843,7 +8835,7 @@ return ReadOnly("Draft", {
   },
   [910502] = {
     DraftId = 910502,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Swordwhip_Zeshi.T_Draft_Swordwhip_Zeshi",
     ProductId = 10502,
     ProductNum = 1,
@@ -8851,7 +8843,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 110,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12057,
         Num = 1,
@@ -8871,7 +8863,7 @@ return ReadOnly("Draft", {
   },
   [910503] = {
     DraftId = 910503,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Swordwhip_Chixing.T_Draft_Swordwhip_Chixing",
     ProductId = 10503,
     ProductNum = 1,
@@ -8879,7 +8871,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12114,
         Num = 1,
@@ -8899,7 +8891,7 @@ return ReadOnly("Draft", {
   },
   [910504] = {
     DraftId = 910504,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Swordwhip_Canghu.T_Draft_Swordwhip_Canghu",
     ProductId = 10504,
     ProductNum = 1,
@@ -8907,7 +8899,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12090,
         Num = 1,
@@ -8927,7 +8919,7 @@ return ReadOnly("Draft", {
   },
   [910601] = {
     DraftId = 910601,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Katana_Feiqie",
     ProductId = 10601,
     ProductNum = 1,
@@ -8935,7 +8927,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12003,
         Num = 1,
@@ -8960,7 +8952,7 @@ return ReadOnly("Draft", {
   },
   [910602] = {
     DraftId = 910602,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Katana_Chixing.T_Draft_Katana_Chixing",
     ProductId = 10602,
     ProductNum = 1,
@@ -8968,7 +8960,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12116,
         Num = 1,
@@ -8993,7 +8985,7 @@ return ReadOnly("Draft", {
   },
   [910603] = {
     DraftId = 910603,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Katana_Yuli.T_Draft_Katana_Yuli",
     ProductId = 10603,
     ProductNum = 1,
@@ -9001,7 +8993,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12092,
         Num = 1,
@@ -9026,7 +9018,7 @@ return ReadOnly("Draft", {
   },
   [910604] = {
     DraftId = 910604,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Katana_Tieyu.T_Draft_Katana_Tieyu",
     ProductId = 10604,
     ProductNum = 1,
@@ -9034,7 +9026,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 140,
     Resource = {
-      [1] = T.RT_107,
+      [1] = T.RT_106,
       [2] = {
         Id = 12157,
         Num = 1,
@@ -9059,7 +9051,7 @@ return ReadOnly("Draft", {
   },
   [920101] = {
     DraftId = 920101,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Pistol_Wuxu.T_Draft_Pistol_Wuxu",
     ProductId = 20101,
     ProductNum = 1,
@@ -9067,7 +9059,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12028,
         Num = 1,
@@ -9092,7 +9084,7 @@ return ReadOnly("Draft", {
   },
   [920102] = {
     DraftId = 920102,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Pistol_Chixing.T_Draft_Pistol_Chixing",
     ProductId = 20102,
     ProductNum = 1,
@@ -9100,7 +9092,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12119,
         Num = 1,
@@ -9125,7 +9117,7 @@ return ReadOnly("Draft", {
   },
   [920103] = {
     DraftId = 920103,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Pistol_Gaoyu.T_Draft_Pistol_Gaoyu",
     ProductId = 20103,
     ProductNum = 1,
@@ -9133,7 +9125,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12095,
         Num = 1,
@@ -9158,7 +9150,7 @@ return ReadOnly("Draft", {
   },
   [920104] = {
     DraftId = 920104,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Pistol_Shengxue.T_Draft_Pistol_Shengxue",
     ProductId = 20104,
     ProductNum = 1,
@@ -9166,7 +9158,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 150,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12163,
         Num = 1,
@@ -9191,7 +9183,7 @@ return ReadOnly("Draft", {
   },
   [920201] = {
     DraftId = 920201,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Crossbow_Chixing.T_Draft_Crossbow_Chixing",
     ProductId = 20201,
     ProductNum = 1,
@@ -9199,7 +9191,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12122,
         Num = 1,
@@ -9219,7 +9211,7 @@ return ReadOnly("Draft", {
   },
   [920203] = {
     DraftId = 920203,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Crossbow_Lanse",
     ProductId = 20203,
     ProductNum = 1,
@@ -9227,7 +9219,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12031,
         Num = 1,
@@ -9247,7 +9239,7 @@ return ReadOnly("Draft", {
   },
   [920205] = {
     DraftId = 920205,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Crossbow_Gaoyu.T_Draft_Crossbow_Gaoyu",
     ProductId = 20205,
     ProductNum = 1,
@@ -9255,7 +9247,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12098,
         Num = 1,
@@ -9275,7 +9267,7 @@ return ReadOnly("Draft", {
   },
   [920207] = {
     DraftId = 920207,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Crossbow_Leyuan.T_Draft_Crossbow_Leyuan",
     ProductId = 20207,
     ProductNum = 1,
@@ -9283,7 +9275,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 150,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12166,
         Num = 1,
@@ -9303,7 +9295,7 @@ return ReadOnly("Draft", {
   },
   [920301] = {
     DraftId = 920301,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Cannon_Qunxing.T_Draft_Cannon_Qunxing",
     ProductId = 20301,
     ProductNum = 1,
@@ -9311,7 +9303,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12006,
         Num = 1,
@@ -9336,7 +9328,7 @@ return ReadOnly("Draft", {
   },
   [920302] = {
     DraftId = 920302,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Cannon_Chiqiang.T_Draft_Cannon_Chiqiang",
     ProductId = 20302,
     ProductNum = 1,
@@ -9344,7 +9336,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 140,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12059,
         Num = 1,
@@ -9369,7 +9361,7 @@ return ReadOnly("Draft", {
   },
   [920303] = {
     DraftId = 920303,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Cannon_Chixing",
     ProductId = 20303,
     ProductNum = 1,
@@ -9377,7 +9369,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12124,
         Num = 1,
@@ -9402,7 +9394,7 @@ return ReadOnly("Draft", {
   },
   [920304] = {
     DraftId = 920304,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Cannon_Guixu.T_Draft_Cannon_Guixu",
     ProductId = 20304,
     ProductNum = 1,
@@ -9410,7 +9402,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12047,
         Num = 1,
@@ -9430,7 +9422,7 @@ return ReadOnly("Draft", {
   },
   [920305] = {
     DraftId = 920305,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Cannon_Yinbai.T_Draft_Cannon_Yinbai",
     ProductId = 20305,
     ProductNum = 1,
@@ -9438,7 +9430,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12076,
         Num = 1,
@@ -9463,7 +9455,7 @@ return ReadOnly("Draft", {
   },
   [920401] = {
     DraftId = 920401,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Chixing.T_Draft_Shotgun_Chixing",
     ProductId = 20401,
     ProductNum = 1,
@@ -9471,7 +9463,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12127,
         Num = 1,
@@ -9496,7 +9488,7 @@ return ReadOnly("Draft", {
   },
   [920402] = {
     DraftId = 920402,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Banzi",
     ProductId = 20402,
     ProductNum = 1,
@@ -9504,7 +9496,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12009,
         Num = 1,
@@ -9529,7 +9521,7 @@ return ReadOnly("Draft", {
   },
   [920403] = {
     DraftId = 920403,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Shengcai.T_Draft_Shotgun_Shengcai",
     ProductId = 20403,
     ProductNum = 1,
@@ -9537,7 +9529,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12100,
         Num = 1,
@@ -9562,7 +9554,7 @@ return ReadOnly("Draft", {
   },
   [920405] = {
     DraftId = 920405,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Baopo.T_Draft_Shotgun_Baopo",
     ProductId = 20405,
     ProductNum = 1,
@@ -9570,7 +9562,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12033,
         Num = 1,
@@ -9595,7 +9587,7 @@ return ReadOnly("Draft", {
   },
   [920406] = {
     DraftId = 920406,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Qiege.T_Draft_Shotgun_Qiege",
     ProductId = 20406,
     ProductNum = 1,
@@ -9603,7 +9595,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 130,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12152,
         Num = 1,
@@ -9628,7 +9620,7 @@ return ReadOnly("Draft", {
   },
   [920407] = {
     DraftId = 920407,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Shotgun_Guchu.T_Draft_Shotgun_Guchu",
     ProductId = 20407,
     ProductNum = 1,
@@ -9636,7 +9628,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 130,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12144,
         Num = 1,
@@ -9661,7 +9653,7 @@ return ReadOnly("Draft", {
   },
   [920501] = {
     DraftId = 920501,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Chixing.T_Draft_Machinegun_Chixing",
     ProductId = 20501,
     ProductNum = 1,
@@ -9669,7 +9661,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12130,
         Num = 1,
@@ -9694,7 +9686,7 @@ return ReadOnly("Draft", {
   },
   [920502] = {
     DraftId = 920502,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Fangzhu",
     ProductId = 20502,
     ProductNum = 1,
@@ -9702,7 +9694,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12012,
         Num = 1,
@@ -9727,7 +9719,7 @@ return ReadOnly("Draft", {
   },
   [920503] = {
     DraftId = 920503,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Qiqing.T_Draft_Machinegun_Qiqing",
     ProductId = 20503,
     ProductNum = 1,
@@ -9735,7 +9727,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12079,
         Num = 1,
@@ -9760,7 +9752,7 @@ return ReadOnly("Draft", {
   },
   [920504] = {
     DraftId = 920504,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Poxiao",
     ProductId = 20504,
     ProductNum = 1,
@@ -9768,7 +9760,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12015,
         Num = 1,
@@ -9793,7 +9785,7 @@ return ReadOnly("Draft", {
   },
   [920505] = {
     DraftId = 920505,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Sanjiao.T_Draft_Machinegun_Sanjiao",
     ProductId = 20505,
     ProductNum = 1,
@@ -9801,7 +9793,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 120,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12141,
         Num = 1,
@@ -9826,7 +9818,7 @@ return ReadOnly("Draft", {
   },
   [920506] = {
     DraftId = 920506,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Quewu.T_Draft_Machinegun_Quewu",
     ProductId = 20506,
     ProductNum = 1,
@@ -9834,7 +9826,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 110,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12135,
         Num = 1,
@@ -9859,7 +9851,7 @@ return ReadOnly("Draft", {
   },
   [920507] = {
     DraftId = 920507,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Yinlang",
     ProductId = 20507,
     ProductNum = 1,
@@ -9867,7 +9859,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12050,
         Num = 1,
@@ -9892,7 +9884,7 @@ return ReadOnly("Draft", {
   },
   [920509] = {
     DraftId = 920509,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Zhimeng.T_Draft_Machinegun_Zhimeng",
     ProductId = 20509,
     ProductNum = 1,
@@ -9900,7 +9892,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12065,
         Num = 1,
@@ -9925,7 +9917,7 @@ return ReadOnly("Draft", {
   },
   [920510] = {
     DraftId = 920510,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Ruohua.T_Draft_Machinegun_Ruohua",
     ProductId = 20510,
     ProductNum = 1,
@@ -9933,7 +9925,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 110,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12062,
         Num = 1,
@@ -9958,7 +9950,7 @@ return ReadOnly("Draft", {
   },
   [920511] = {
     DraftId = 920511,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Bomu.T_Draft_Machinegun_Bomu",
     ProductId = 20511,
     ProductNum = 1,
@@ -9966,7 +9958,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 140,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12160,
         Num = 1,
@@ -9991,7 +9983,7 @@ return ReadOnly("Draft", {
   },
   [920512] = {
     DraftId = 920512,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Beizhong.T_Draft_Machinegun_Beizhong",
     ProductId = 20512,
     ProductNum = 1,
@@ -9999,7 +9991,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 130,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12147,
         Num = 1,
@@ -10024,7 +10016,7 @@ return ReadOnly("Draft", {
   },
   [920599] = {
     DraftId = 920599,
-    FoundryCost = T.RT_108,
+    FoundryCost = T.RT_107,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Machinegun_Yemei.T_Draft_Machinegun_Yemei",
     ProductId = 20599,
     ProductNum = 1,
@@ -10051,7 +10043,7 @@ return ReadOnly("Draft", {
   },
   [920601] = {
     DraftId = 920601,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Bow_Shashi.T_Draft_Bow_Shashi",
     ProductId = 20601,
     ProductNum = 1,
@@ -10059,7 +10051,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12106,
         Num = 1,
@@ -10084,7 +10076,7 @@ return ReadOnly("Draft", {
   },
   [920602] = {
     DraftId = 920602,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Bow_Huguang",
     ProductId = 20602,
     ProductNum = 1,
@@ -10092,7 +10084,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12036,
         Num = 1,
@@ -10117,7 +10109,7 @@ return ReadOnly("Draft", {
   },
   [920603] = {
     DraftId = 920603,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Bow_Yinbu.T_Draft_Bow_Yinbu",
     ProductId = 20603,
     ProductNum = 1,
@@ -10125,7 +10117,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12018,
         Num = 1,
@@ -10150,7 +10142,7 @@ return ReadOnly("Draft", {
   },
   [920604] = {
     DraftId = 920604,
-    FoundryCost = T.RT_106,
+    FoundryCost = T.RT_105,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Draft/T_Draft_Bow_Chixing.T_Draft_Bow_Chixing",
     ProductId = 20604,
     ProductNum = 1,
@@ -10158,7 +10150,7 @@ return ReadOnly("Draft", {
     Rarity = 5,
     ReleaseVersion = 100,
     Resource = {
-      [1] = T.RT_109,
+      [1] = T.RT_108,
       [2] = {
         Id = 12103,
         Num = 1,

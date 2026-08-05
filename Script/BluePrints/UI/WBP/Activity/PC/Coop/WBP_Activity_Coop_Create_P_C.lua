@@ -152,10 +152,13 @@ function M:InitReward()
   local RewardIdSet = {}
   local RewardIdList = {}
   for key, value in pairs(DataMgr.AsyncCombat) do
-    local RewardId = value.ID
-    if RewardId and not RewardIdSet[RewardId] then
-      RewardIdSet[RewardId] = true
-      table.insert(RewardIdList, RewardId)
+    if value.Invalid then
+    else
+      local RewardId = value.ID
+      if RewardId and not RewardIdSet[RewardId] then
+        RewardIdSet[RewardId] = true
+        table.insert(RewardIdList, RewardId)
+      end
     end
   end
   local SelectedRewardId
@@ -602,7 +605,7 @@ function M:RefreshBigReward(Id)
     self.CurCount = nil
     for key, value in pairs(DataMgr.AsyncCombat) do
       local Info = DataMgr.AsyncCombat[key]
-      if Info.ID == Id and Info.Level == self.CurLevel.Level then
+      if Info.ID == Id and Info.Level == self.CurLevel.Level and not Info.Invalid then
         self.RoomId = key
         self.CurCount = Info.Count
         break

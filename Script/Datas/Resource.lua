@@ -59,8 +59,11 @@ T.RT_18 = {
 T.RT_19 = {
   "Text_Mod_1.4Qiyuezhe"
 }
-T.RT_20 = {"Walnut"}
-T.RT_21 = {
+T.RT_20 = {
+  "Dungeon_ModTab_70"
+}
+T.RT_21 = {"Walnut"}
+T.RT_22 = {
   "Dungeon",
   "Shop_Abyss",
   "Shop_Main",
@@ -68,7 +71,7 @@ T.RT_21 = {
   "ImpressionShop",
   "Text_IronSurvival"
 }
-T.RT_22 = {
+T.RT_23 = {
   "Dungeon",
   "Shop_Abyss",
   "Shop_Main",
@@ -76,14 +79,14 @@ T.RT_22 = {
   "ImpressionShop",
   "Text_SellWeapon"
 }
-T.RT_23 = {
+T.RT_24 = {
   "Dungeon",
   "Shop_Abyss",
   "Shop_Main",
   "Forging",
   "ImpressionShop"
 }
-T.RT_24 = {
+T.RT_25 = {
   "Dungeon",
   "Shop_Abyss",
   "Shop_Main",
@@ -91,79 +94,79 @@ T.RT_24 = {
   "ImpressionShop",
   "Text_IronSurvivalCoin"
 }
-T.RT_25 = {
+T.RT_26 = {
   "ImpressionShop"
 }
-T.RT_26 = {"Text_Task"}
-T.RT_27 = {
+T.RT_27 = {"Text_Task"}
+T.RT_28 = {
   "Dungeon",
   "Shop_Main",
   "Text_Monster"
 }
-T.RT_28 = {"Forging"}
-T.RT_29 = {
+T.RT_29 = {"Forging"}
+T.RT_30 = {
   "Text_ReputationTask"
 }
-T.RT_30 = {"Text_Rouge"}
-T.RT_31 = {"Abyss"}
-T.RT_32 = {
+T.RT_31 = {"Text_Rouge"}
+T.RT_32 = {"Abyss"}
+T.RT_33 = {
   "Text_Raid_Reward"
 }
-T.RT_33 = {
+T.RT_34 = {
   "Text_HardMonster"
 }
-T.RT_34 = {
+T.RT_35 = {
   "Shop_Fishing"
 }
-T.RT_35 = {
+T.RT_36 = {
   [1] = 508
 }
-T.RT_36 = {
+T.RT_37 = {
   [1] = "UI_DO_NOT_PASS_CONDITION"
 }
-T.RT_37 = {
+T.RT_38 = {
   "Shop_SoloTreasure"
 }
-T.RT_38 = {
+T.RT_39 = {
   [1] = 509
 }
-T.RT_39 = {
+T.RT_40 = {
   "Text_Collecting_Prologue01"
 }
-T.RT_40 = {
+T.RT_41 = {
   "Text_Collecting_Icelake03"
 }
-T.RT_41 = {
+T.RT_42 = {
   "Text_Collecting_East03"
 }
-T.RT_42 = {
+T.RT_43 = {
   "Text_Collecting_East02"
 }
-T.RT_43 = {
+T.RT_44 = {
   "Text_Collecting_Icelake04",
   "Text_Collecting_Kuangkeng"
 }
-T.RT_44 = {
+T.RT_45 = {
   [1] = 500,
   [2] = 67
 }
-T.RT_45 = {
+T.RT_46 = {
   [1] = "UI_DO_NOT_PASS_CONDITION",
   [2] = "UI_DO_NOT_PASS_CONDITION"
 }
-T.RT_46 = {
+T.RT_47 = {
   "Text_LevelReward"
 }
-T.RT_47 = {
+T.RT_48 = {
   [1] = 12
 }
-T.RT_48 = {
+T.RT_49 = {
   [1] = 507
 }
-T.RT_49 = {
+T.RT_50 = {
   [1] = "Mount_Lock_Toast"
 }
-T.RT_50 = {"Text_Fish"}
+T.RT_51 = {"Text_Fish"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -505,7 +508,7 @@ return ReadOnly("Resource", {
     UseParam = 60
   },
   [205] = {
-    AccessKey = T.RT_30,
+    AccessKey = T.RT_31,
     DetailDes = "RESOURCE_DESC_205",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -643,7 +646,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [214] = {
-    AccessKey = T.RT_31,
+    AccessKey = T.RT_32,
     DetailDes = "RESOURCE_DESC_214",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -658,7 +661,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [215] = {
-    AccessKey = T.RT_30,
+    AccessKey = T.RT_31,
     DetailDes = "RESOURCE_DESC_215",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -707,7 +710,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [218] = {
-    AccessKey = T.RT_32,
+    AccessKey = T.RT_33,
     DetailDes = "RESOURCE_TEXT_218",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -736,7 +739,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [220] = {
-    AccessKey = T.RT_32,
+    AccessKey = T.RT_33,
     DetailDes = "RESOURCE_TEXT_218",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -766,7 +769,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [222] = {
-    AccessKey = T.RT_31,
+    AccessKey = T.RT_32,
     DetailDes = "RESOURCE_DESC_222",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -992,7 +995,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [2000] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     DetailDes = "RESOURCE_DESC_2001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -1013,7 +1016,7 @@ return ReadOnly("Resource", {
     UseParam = 1
   },
   [2001] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     DetailDes = "RESOURCE_DESC_2001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -1278,7 +1281,7 @@ return ReadOnly("Resource", {
     UseParam = 20000
   },
   [2015] = {
-    AccessKey = T.RT_29,
+    AccessKey = T.RT_30,
     DetailDes = "RESOURCE_DESC_2015",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -1297,7 +1300,7 @@ return ReadOnly("Resource", {
     UseParam = 1
   },
   [2016] = {
-    AccessKey = T.RT_29,
+    AccessKey = T.RT_30,
     DetailDes = "RESOURCE_DESC_2016",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -1554,7 +1557,7 @@ return ReadOnly("Resource", {
     UseParam = 3014
   },
   [3015] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_3015",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2862,7 +2865,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12001] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2880,7 +2883,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12002] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2898,7 +2901,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12003] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12003",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2916,7 +2919,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12004] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12004",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2934,7 +2937,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12005] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12005",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2952,7 +2955,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12006] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12006",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2970,7 +2973,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12007] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12007",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -2988,7 +2991,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12008] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12008",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3006,7 +3009,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12009] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12009",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3024,7 +3027,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12010] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3042,7 +3045,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12011] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12011",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3060,7 +3063,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12012] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12012",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3078,7 +3081,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12013] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12013",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3096,7 +3099,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12014] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12014",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3114,7 +3117,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12015] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12015",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3132,7 +3135,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12016] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12016",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3150,7 +3153,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12017] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12017",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3168,7 +3171,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12018] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12018",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3186,7 +3189,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12019] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12019",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3204,7 +3207,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12020] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3222,7 +3225,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12021] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12021",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3240,7 +3243,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12022] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12022",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3258,7 +3261,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12023] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12023",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3276,7 +3279,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12024] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12024",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3294,7 +3297,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12025] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12025",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3312,7 +3315,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12026] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12026",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3330,7 +3333,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12027] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12027",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3348,7 +3351,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12028] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12028",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3366,7 +3369,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12029] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12029",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3384,7 +3387,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12030] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3402,7 +3405,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12031] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12031",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3420,7 +3423,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12032] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12032",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3438,7 +3441,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12033] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12033",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3456,7 +3459,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12034] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12034",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3474,7 +3477,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12035] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12035",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3492,7 +3495,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12036] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12036",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3510,7 +3513,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12037] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12037",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3528,7 +3531,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12038] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12038",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3546,7 +3549,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12039] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12039",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3564,7 +3567,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12040] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3582,7 +3585,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12041] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12041",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3600,7 +3603,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12042] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12042",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3618,7 +3621,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12043] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12043",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3636,7 +3639,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12044] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12044",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3654,7 +3657,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12045] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12045",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3672,7 +3675,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12046] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12046",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3690,7 +3693,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12047] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12047",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3708,7 +3711,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12048] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12048",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3726,7 +3729,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12049] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12049",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3744,7 +3747,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12050] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3762,7 +3765,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12051] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12051",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3780,7 +3783,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12052] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12052",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3798,7 +3801,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12053] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12053",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3816,7 +3819,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12054] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12054",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3834,7 +3837,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12055] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12055",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3852,7 +3855,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12056] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12056",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3870,7 +3873,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12057] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12057",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3888,7 +3891,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12058] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12058",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3906,7 +3909,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12059] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12059",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3924,7 +3927,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12060] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12060",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3942,7 +3945,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12061] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12061",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3960,7 +3963,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12062] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12062",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3978,7 +3981,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12063] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12063",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -3996,7 +3999,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12064] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12064",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4014,7 +4017,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12065] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12065",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4032,7 +4035,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12066] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12066",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4050,7 +4053,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12067] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12067",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4068,7 +4071,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12068] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12068",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4086,7 +4089,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12069] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12069",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4104,7 +4107,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12070] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12070",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4122,7 +4125,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12071] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12071",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4140,7 +4143,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12072] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12072",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4158,7 +4161,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12073] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12073",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4176,7 +4179,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12074] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12074",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4194,7 +4197,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12075] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12075",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4212,7 +4215,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12076] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12076",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4230,7 +4233,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12077] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12077",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4248,7 +4251,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12078] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12078",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4266,7 +4269,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12079] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12079",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4284,7 +4287,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12080] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12080",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4302,7 +4305,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12081] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12081",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4320,7 +4323,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12082] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12082",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4338,7 +4341,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12083] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12083",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4356,7 +4359,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12084] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12084",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4374,7 +4377,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12085] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12085",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4392,7 +4395,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12086] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12086",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4410,7 +4413,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12087] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12087",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4428,7 +4431,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12088] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12088",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4446,7 +4449,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12089] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12089",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4464,7 +4467,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12090] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12090",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4482,7 +4485,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12091] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12091",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4500,7 +4503,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12092] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12092",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4518,7 +4521,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12093] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12093",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4536,7 +4539,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12094] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12094",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4554,7 +4557,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12095] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12095",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4572,7 +4575,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12096] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12096",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4590,7 +4593,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12097] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12097",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4608,7 +4611,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12098] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12098",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4626,7 +4629,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12099] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12099",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4644,7 +4647,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12100] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12100",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4662,7 +4665,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12101] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12101",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4680,7 +4683,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12102] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12102",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4698,7 +4701,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12103] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12103",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4716,7 +4719,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12104] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12104",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4734,7 +4737,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12105] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12105",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4752,7 +4755,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12106] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12106",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4770,7 +4773,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12107] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12107",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4788,7 +4791,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12108] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12108",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4806,7 +4809,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12109] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12109",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4824,7 +4827,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12110] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12110",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4842,7 +4845,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12111] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12111",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4860,7 +4863,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12112] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12112",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4878,7 +4881,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12113] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12113",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4896,7 +4899,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12114] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12114",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4914,7 +4917,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12115] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12115",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4932,7 +4935,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12116] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12116",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4950,7 +4953,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12117] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12117",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4968,7 +4971,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12118] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12118",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -4986,7 +4989,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12119] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12119",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5004,7 +5007,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12120] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12120",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5022,7 +5025,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12121] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12121",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5040,7 +5043,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12122] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12122",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5058,7 +5061,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12123] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12123",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5076,7 +5079,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12124] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12124",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5094,7 +5097,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12125] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12125",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5112,7 +5115,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12126] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12126",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5130,7 +5133,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12127] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12127",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5148,7 +5151,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12128] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12128",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5166,7 +5169,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12129] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12129",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5184,7 +5187,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12130] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12130",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5202,7 +5205,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12131] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12131",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5220,7 +5223,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12132] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12132",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5238,7 +5241,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12133] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12133",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5256,7 +5259,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12134] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12134",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5274,7 +5277,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12135] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12135",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5292,7 +5295,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12136] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12136",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5310,7 +5313,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12137] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12137",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5328,7 +5331,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12138] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12138",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5346,7 +5349,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12139] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12139",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5364,7 +5367,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12140] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12140",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5382,7 +5385,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12141] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12141",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5400,7 +5403,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12142] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12142",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5418,7 +5421,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12143] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12143",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5436,7 +5439,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12144] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12144",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5454,7 +5457,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12145] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12145",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5472,7 +5475,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12146] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12146",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5490,7 +5493,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12147] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12147",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5508,7 +5511,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12148] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12148",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5526,7 +5529,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12149] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12149",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5544,7 +5547,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12150] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12150",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5562,7 +5565,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12151] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12151",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5580,7 +5583,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12152] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12152",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5598,7 +5601,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12153] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12153",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5616,7 +5619,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12154] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12154",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5634,7 +5637,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12155] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12155",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5652,7 +5655,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12156] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12156",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5670,7 +5673,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12157] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12157",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5688,7 +5691,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12158] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12158",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5706,7 +5709,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12159] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12159",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5724,7 +5727,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12160] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12160",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5742,7 +5745,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12161] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12161",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5760,7 +5763,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12162] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12162",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5778,7 +5781,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12163] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12163",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5796,7 +5799,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12164] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12164",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5814,7 +5817,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12165] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12165",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5832,7 +5835,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12166] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12166",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5850,7 +5853,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12167] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12167",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5868,7 +5871,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12168] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12168",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5886,7 +5889,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [12169] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12169",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5904,7 +5907,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15001] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5922,7 +5925,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15002] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5940,7 +5943,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15003] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5958,7 +5961,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15004] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5976,7 +5979,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15005] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -5994,7 +5997,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15006] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6012,7 +6015,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15007] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6030,7 +6033,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15008] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6048,7 +6051,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15009] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6066,7 +6069,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15010] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6084,7 +6087,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15011] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6102,7 +6105,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15012] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6120,7 +6123,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15013] = {
-    AccessKey = T.RT_21,
+    AccessKey = T.RT_22,
     DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6138,7 +6141,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15014] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6156,7 +6159,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15015] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6174,7 +6177,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15016] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6192,7 +6195,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15017] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6210,7 +6213,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15018] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6228,7 +6231,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15019] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6246,7 +6249,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15020] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6264,7 +6267,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15021] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6282,7 +6285,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15022] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6300,7 +6303,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15023] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6318,7 +6321,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15024] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6336,7 +6339,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15025] = {
-    AccessKey = T.RT_22,
+    AccessKey = T.RT_23,
     DetailDes = "RESOURCE_DESC_WEAPONPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6480,7 +6483,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15031] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEM_Water",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6498,7 +6501,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15032] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEM_Fire",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6516,7 +6519,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15033] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEM_Wind",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6534,7 +6537,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15034] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEM_Thunder",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6552,7 +6555,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15035] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEM_Light",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6570,7 +6573,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15036] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEM_Dark",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6588,7 +6591,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15037] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_ATTRITEMRARE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6606,7 +6609,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15038] = {
-    AccessKey = T.RT_23,
+    AccessKey = T.RT_24,
     DetailDes = "RESOURCE_DESC_TICKET",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6624,7 +6627,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15039] = {
-    AccessKey = T.RT_24,
+    AccessKey = T.RT_25,
     DetailDes = "RESOURCE_DESC_TICKETPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6642,7 +6645,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [15040] = {
-    AccessKey = T.RT_24,
+    AccessKey = T.RT_25,
     DetailDes = "RESOURCE_DESC_TICKETPIECE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6660,7 +6663,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [19000] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19000",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6679,7 +6682,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19001] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6698,7 +6701,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19002] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6717,7 +6720,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19003] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19003",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6736,7 +6739,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19004] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19004",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6755,7 +6758,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19005] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19005",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6774,7 +6777,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19006] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19006",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6793,7 +6796,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19007] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19007",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6812,7 +6815,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [19008] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     DetailDes = "RESOURCE_DESC_19008",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6831,7 +6834,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20001] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6850,7 +6853,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20002] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6869,7 +6872,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20003] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20003",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6888,7 +6891,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20004] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20004",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6907,7 +6910,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20005] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20005",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6926,7 +6929,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20006] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20006",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6945,7 +6948,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20007] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20007",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6964,7 +6967,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20008] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20008",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -6983,7 +6986,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20009] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20009",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7002,7 +7005,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20010] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7021,7 +7024,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20011] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20011",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7040,7 +7043,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20012] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20012",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7078,7 +7081,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20014] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20014",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7097,7 +7100,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20015] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20015",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7116,7 +7119,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20016] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20016",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7135,7 +7138,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20017] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20017",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7154,7 +7157,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20018] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20018",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7173,7 +7176,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20019] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20019",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7192,7 +7195,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20020] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7230,7 +7233,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20022] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20022",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7249,7 +7252,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20023] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20023",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7287,7 +7290,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20025] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20025",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7306,7 +7309,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20026] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20026",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7325,7 +7328,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [20027] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20027",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7344,7 +7347,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [20028] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20028",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7363,7 +7366,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [20029] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20029",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7382,7 +7385,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [20030] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7401,7 +7404,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [20031] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20031",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -7420,7 +7423,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [20032] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20032",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8181,7 +8184,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [30001] = {
-    AccessKey = T.RT_33,
+    AccessKey = T.RT_34,
     DetailDes = "RESOURCE_DESC_30001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8200,7 +8203,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [30002] = {
-    AccessKey = T.RT_33,
+    AccessKey = T.RT_34,
     DetailDes = "RESOURCE_DESC_30002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8580,10 +8583,10 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [40001] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     BattleItemLimit = 5,
-    CombatConditionID = T.RT_35,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_36,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8601,10 +8604,10 @@ return ReadOnly("Resource", {
     UseParam = 1
   },
   [40002] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     BattleItemLimit = 10,
-    CombatConditionID = T.RT_35,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_36,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8622,10 +8625,10 @@ return ReadOnly("Resource", {
     UseParam = 1
   },
   [40003] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     BattleItemLimit = 10,
-    CombatConditionID = T.RT_35,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_36,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40003",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8643,10 +8646,10 @@ return ReadOnly("Resource", {
     UseParam = 1
   },
   [40011] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     BattleItemLimit = 5,
-    CombatConditionID = T.RT_35,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_36,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8664,10 +8667,10 @@ return ReadOnly("Resource", {
     UseParam = 6
   },
   [40012] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     BattleItemLimit = 10,
-    CombatConditionID = T.RT_35,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_36,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8685,10 +8688,10 @@ return ReadOnly("Resource", {
     UseParam = 3
   },
   [40013] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     BattleItemLimit = 10,
-    CombatConditionID = T.RT_35,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_36,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40003",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8706,10 +8709,10 @@ return ReadOnly("Resource", {
     UseParam = 3
   },
   [40014] = {
-    AccessKey = T.RT_37,
+    AccessKey = T.RT_38,
     BattleItemLimit = 3,
-    CombatConditionID = T.RT_38,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_39,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40014",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8727,10 +8730,10 @@ return ReadOnly("Resource", {
     UseParam = 10
   },
   [40015] = {
-    AccessKey = T.RT_37,
+    AccessKey = T.RT_38,
     BattleItemLimit = 3,
-    CombatConditionID = T.RT_38,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_39,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_40014",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8750,8 +8753,8 @@ return ReadOnly("Resource", {
   [41001] = {
     AccessKey = {"Text_Event"},
     CameraName = "Char_Kaorou",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41001",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Kaorou.T_Resource_Gesture_Kaorou",
@@ -8768,10 +8771,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41002] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     CameraName = "Char_Zhixiang_01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41002",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Zhixiang.T_Resource_Gesture_Zhixiang",
@@ -8787,10 +8790,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41003] = {
-    AccessKey = T.RT_46,
+    AccessKey = T.RT_47,
     CameraName = "Char_Saoba",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41003",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Saozhou.T_Resource_Gesture_Saozhou",
@@ -8806,10 +8809,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41004] = {
-    AccessKey = T.RT_46,
+    AccessKey = T.RT_47,
     CameraName = "Char_Caocong",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41004",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Caocong.T_Resource_Gesture_Caocong",
@@ -8826,10 +8829,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41005] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     CameraName = "Char_Zhixiang_02",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41005",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Zhixiang.T_Resource_Gesture_Zhixiang",
@@ -8845,10 +8848,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41006] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     CameraName = "Char_Zhixiang_03",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41006",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Zhixiang.T_Resource_Gesture_Zhixiang",
@@ -8864,7 +8867,7 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41007] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     CameraName = "Char_MeleeWeapon",
     CombatConditionID = {
       [1] = 500,
@@ -8892,10 +8895,10 @@ return ReadOnly("Resource", {
     Type = "InfiniteBattleItem"
   },
   [41008] = {
-    AccessKey = T.RT_25,
+    AccessKey = T.RT_26,
     CameraName = "Char_RangeWeapon",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41008",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_RangeWeapon.T_Resource_Gesture_RangeWeapon",
@@ -8911,8 +8914,8 @@ return ReadOnly("Resource", {
   },
   [41009] = {
     CameraName = "Char_Gesture_Idle",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41009",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Idle.T_Resource_Gesture_Idle",
@@ -8927,10 +8930,10 @@ return ReadOnly("Resource", {
     Type = "InfiniteBattleItem"
   },
   [41010] = {
-    AccessKey = T.RT_46,
+    AccessKey = T.RT_47,
     CameraName = "Char_Yaoren",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -8949,8 +8952,8 @@ return ReadOnly("Resource", {
   },
   [41011] = {
     CameraName = "Char_Bed",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41011",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Bed.T_Resource_Gesture_Bed",
@@ -8968,8 +8971,8 @@ return ReadOnly("Resource", {
   [41012] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Violin",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41012",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_ViolinDarkIndigo.T_Resource_Gesture_ViolinDarkIndigo",
@@ -8985,10 +8988,10 @@ return ReadOnly("Resource", {
     UseBPFunction = "Gesture"
   },
   [41013] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     CameraName = "Char_Fishing",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41013",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Angling.T_Resource_Gesture_Angling",
@@ -9007,8 +9010,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Car_01",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41014",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Skin_SaiqiCar01.Shop_Skin_SaiqiCar01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9034,8 +9037,8 @@ return ReadOnly("Resource", {
   [41015] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Violin_02",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41015",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_ViolinCaramel.T_Resource_Gesture_ViolinCaramel",
@@ -9053,8 +9056,8 @@ return ReadOnly("Resource", {
   [41016] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Violin_03",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41016",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Violin.T_Resource_Gesture_Violin",
@@ -9073,8 +9076,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Car_02",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41017",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Skin_SaiqiCar01.Shop_Skin_SaiqiCar01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9100,8 +9103,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Car_03",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41018",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Skin_SaiqiCar01.Shop_Skin_SaiqiCar01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9126,8 +9129,8 @@ return ReadOnly("Resource", {
   [41019] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Bubblegun",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41019",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Bubblegun.T_Resource_Gesture_Bubblegun",
@@ -9146,8 +9149,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Beach_01",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41020",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Baiheng01.Shop_Action_Baiheng01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9174,8 +9177,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Beach_02",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41021",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Baiheng01.Shop_Action_Baiheng01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9202,8 +9205,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Beach_03",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41022",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Baiheng01.Shop_Action_Baiheng01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9228,8 +9231,8 @@ return ReadOnly("Resource", {
   },
   [41023] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41023",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Show.T_Resource_Gesture_Show",
@@ -9246,8 +9249,8 @@ return ReadOnly("Resource", {
   },
   [41024] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41024",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Hello.T_Resource_Gesture_Hello",
@@ -9264,8 +9267,8 @@ return ReadOnly("Resource", {
   },
   [41025] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41025",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Nice.T_Resource_Gesture_Nice",
@@ -9285,8 +9288,8 @@ return ReadOnly("Resource", {
   },
   [41026] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41026",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_NoNoNo.T_Resource_Gesture_NoNoNo",
@@ -9306,8 +9309,8 @@ return ReadOnly("Resource", {
   },
   [41027] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41027",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -9327,8 +9330,8 @@ return ReadOnly("Resource", {
   },
   [41028] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41028",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_SkillGomoku.T_Resource_Gesture_SkillGomoku",
@@ -9345,8 +9348,8 @@ return ReadOnly("Resource", {
   },
   [41029] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41029",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_PunchLeft.T_Resource_Gesture_PunchLeft",
@@ -9363,8 +9366,8 @@ return ReadOnly("Resource", {
   },
   [41030] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41030",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_PunchRight.T_Resource_Gesture_PunchRight",
@@ -9381,8 +9384,8 @@ return ReadOnly("Resource", {
   },
   [41031] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41031",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_06.T_Resource_Gesture_06",
@@ -9401,8 +9404,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Longyi",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41032",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Zhiliu01.Shop_Action_Zhiliu01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9427,8 +9430,8 @@ return ReadOnly("Resource", {
   [41033] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Shu",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41033",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_SuyiPose.T_Resource_Gesture_SuyiPose",
@@ -9446,8 +9449,8 @@ return ReadOnly("Resource", {
   [41034] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Shu",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41034",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_PeachBlossom.T_Resource_Gesture_PeachBlossom",
@@ -9464,8 +9467,8 @@ return ReadOnly("Resource", {
   },
   [41035] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41035",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -9484,8 +9487,8 @@ return ReadOnly("Resource", {
   },
   [41036] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41036",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Youya.T_Resource_Gesture_Youya",
@@ -9558,8 +9561,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Longyi",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41040",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Zhiliu01.Shop_Action_Zhiliu01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9585,8 +9588,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Longyi",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41041",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Zhiliu01.Shop_Action_Zhiliu01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9682,8 +9685,8 @@ return ReadOnly("Resource", {
   },
   [41046] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41046",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_02.T_Resource_Gesture_02",
@@ -9700,8 +9703,8 @@ return ReadOnly("Resource", {
   },
   [41047] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41047",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_01.T_Resource_Gesture_01",
@@ -9718,8 +9721,8 @@ return ReadOnly("Resource", {
   },
   [41048] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41048",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Beg.T_Resource_Gesture_Beg",
@@ -9736,8 +9739,8 @@ return ReadOnly("Resource", {
   },
   [41049] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41049",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Fire.T_Resource_Gesture_Fire",
@@ -9757,8 +9760,8 @@ return ReadOnly("Resource", {
   },
   [41050] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41050",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Spin.T_Resource_Gesture_Spin",
@@ -9780,8 +9783,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Gaoda",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41051",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Suyi01.Shop_Action_Suyi01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9806,8 +9809,8 @@ return ReadOnly("Resource", {
   },
   [41052] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41052",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Sit01.T_Resource_Gesture_Sit01",
@@ -9824,8 +9827,8 @@ return ReadOnly("Resource", {
   },
   [41053] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41053",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Sit02.T_Resource_Gesture_Sit02",
@@ -9844,8 +9847,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Gaoda",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41054",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Suyi01.Shop_Action_Suyi01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9872,8 +9875,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Gaoda",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41055",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Suyi01.Shop_Action_Suyi01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9898,8 +9901,8 @@ return ReadOnly("Resource", {
   },
   [41056] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41056",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Daquan.T_Resource_Gesture_Daquan",
@@ -9916,8 +9919,8 @@ return ReadOnly("Resource", {
   },
   [41057] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41057",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Jump.T_Resource_Gesture_Jump",
@@ -9936,8 +9939,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Fuluo",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41058",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Fuluo01.Shop_Action_Fuluo01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -9963,8 +9966,8 @@ return ReadOnly("Resource", {
   },
   [41059] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41059",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_07.T_Resource_Gesture_07'",
@@ -9981,8 +9984,8 @@ return ReadOnly("Resource", {
   },
   [41060] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41060",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_Dida.T_Resource_Gesture_Dida",
@@ -9999,8 +10002,8 @@ return ReadOnly("Resource", {
   },
   [41061] = {
     AccessKey = T.RT_4,
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41061",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Action/T_Resource_Gesture_08.T_Resource_Gesture_08'",
@@ -10019,8 +10022,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Fuluo",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41062",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Fuluo01.Shop_Action_Fuluo01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -10048,8 +10051,8 @@ return ReadOnly("Resource", {
     AccessKey = T.RT_4,
     CameraName = "Char_Fuluo",
     CharColorVar = "Skin01",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41063",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Fuluo01.Shop_Action_Fuluo01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -10076,8 +10079,8 @@ return ReadOnly("Resource", {
   [41064] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Chuxue",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41064",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Eve01.Shop_Action_Eve01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -10103,8 +10106,8 @@ return ReadOnly("Resource", {
   [41065] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Liuli",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41065",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10124,8 +10127,8 @@ return ReadOnly("Resource", {
   [41066] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Shenzhan",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41066",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10145,8 +10148,8 @@ return ReadOnly("Resource", {
   [41067] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Chuxue",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41067",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Eve01.Shop_Action_Eve01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -10172,8 +10175,8 @@ return ReadOnly("Resource", {
   [41068] = {
     AccessKey = T.RT_4,
     CameraName = "Char_Chuxue",
-    CombatConditionID = T.RT_44,
-    CombatConditionToast = T.RT_45,
+    CombatConditionID = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_41068",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_Eve01.Shop_Action_Eve01'",
     FunctionDes = "RESOURCE_FUNCTION_ACTION",
@@ -10197,8 +10200,8 @@ return ReadOnly("Resource", {
     UseParam = 41064
   },
   [42001] = {
-    CombatConditionID = T.RT_47,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_48,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_42001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10216,8 +10219,8 @@ return ReadOnly("Resource", {
     UseParam = 42001
   },
   [42002] = {
-    CombatConditionID = T.RT_47,
-    CombatConditionToast = T.RT_36,
+    CombatConditionID = T.RT_48,
+    CombatConditionToast = T.RT_37,
     DetailDes = "RESOURCE_DESC_42002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10235,8 +10238,8 @@ return ReadOnly("Resource", {
     UseParam = 42002
   },
   [49985] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49985",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10255,8 +10258,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49986] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49986",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10275,8 +10278,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49987] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49987",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10295,8 +10298,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49988] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49988",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10315,8 +10318,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49989] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49989",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10335,8 +10338,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49990] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49990",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10355,8 +10358,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49991] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49991",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10375,8 +10378,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49992] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49995",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10395,8 +10398,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49993] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49995",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10415,8 +10418,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49994] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49995",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10435,8 +10438,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49995] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49995",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10455,8 +10458,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49996] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49996",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10475,8 +10478,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49997] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49997",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10495,8 +10498,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49998] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49998",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -10515,8 +10518,8 @@ return ReadOnly("Resource", {
     UseBPFunction = "MountOn"
   },
   [49999] = {
-    CombatConditionID = T.RT_48,
-    CombatConditionToast = T.RT_49,
+    CombatConditionID = T.RT_49,
+    CombatConditionToast = T.RT_50,
     DetailDes = "RESOURCE_DESC_49999",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -11312,7 +11315,7 @@ return ReadOnly("Resource", {
     UseParam = 5009
   },
   [110061] = {
-    AccessKey = T.RT_19,
+    AccessKey = T.RT_20,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_FUNCTION_110061",
@@ -11326,6 +11329,102 @@ return ReadOnly("Resource", {
     Type = "Rare",
     UseEffectType = "SelectResource",
     UseParam = 350025
+  },
+  [110062] = {
+    AccessKey = T.RT_20,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110045",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_11.T_Pack_RandomMod_11'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110062,
+    ResourceName = "RESOURCE_NAME_110062",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350031
+  },
+  [110063] = {
+    AccessKey = T.RT_20,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110046",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_16.T_Pack_RandomMod_16'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110063,
+    ResourceName = "RESOURCE_NAME_110063",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350032
+  },
+  [110064] = {
+    AccessKey = T.RT_20,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110047",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_12.T_Pack_RandomMod_12'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110064,
+    ResourceName = "RESOURCE_NAME_110064",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350033
+  },
+  [110065] = {
+    AccessKey = T.RT_20,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110048",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_13.T_Pack_RandomMod_13'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110065,
+    ResourceName = "RESOURCE_NAME_110065",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350034
+  },
+  [110066] = {
+    AccessKey = T.RT_20,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110049",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_14.T_Pack_RandomMod_14'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110066,
+    ResourceName = "RESOURCE_NAME_110066",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350035
+  },
+  [110067] = {
+    AccessKey = T.RT_20,
+    ExcludeCollect = true,
+    ExcludeCollectServer = true,
+    FunctionDes = "RESOURCE_FUNCTION_110050",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_RandomMod_15.T_Pack_RandomMod_15'",
+    MaterialClassify = 7,
+    Rarity = 5,
+    ResourceId = 110067,
+    ResourceName = "RESOURCE_NAME_110067",
+    ResourceValue = -1,
+    Sound = "SOUND_ITEM_NORMAL",
+    Type = "Rare",
+    UseEffectType = "RandomSelectPack",
+    UseParam = 350036
   },
   [120001] = {
     DetailDes = "RESOURCE_DESC_VOUCHER_1",
@@ -15118,7 +15217,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [3000013] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12079",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15135,7 +15234,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [3000014] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12080",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15152,7 +15251,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [3000015] = {
-    AccessKey = T.RT_20,
+    AccessKey = T.RT_21,
     DetailDes = "RESOURCE_DESC_12081",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15169,7 +15268,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [3000016] = {
-    AccessKey = T.RT_28,
+    AccessKey = T.RT_29,
     DetailDes = "RESOURCE_DESC_20023",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15186,7 +15285,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [3000017] = {
-    AccessKey = T.RT_27,
+    AccessKey = T.RT_28,
     DetailDes = "RESOURCE_DESC_20010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15457,7 +15556,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010007] = {
-    AccessKey = T.RT_39,
+    AccessKey = T.RT_40,
     DetailDes = "RESOURCE_DESC_4010007",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15475,7 +15574,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010008] = {
-    AccessKey = T.RT_40,
+    AccessKey = T.RT_41,
     DetailDes = "RESOURCE_DESC_4010008",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15622,7 +15721,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010015] = {
-    AccessKey = T.RT_41,
+    AccessKey = T.RT_42,
     DetailDes = "RESOURCE_DESC_4010015",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15681,7 +15780,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010018] = {
-    AccessKey = T.RT_42,
+    AccessKey = T.RT_43,
     DetailDes = "RESOURCE_DESC_4010018",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15722,7 +15821,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4010020] = {
-    AccessKey = T.RT_41,
+    AccessKey = T.RT_42,
     DetailDes = "RESOURCE_DESC_4010020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15740,7 +15839,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020001] = {
-    AccessKey = T.RT_39,
+    AccessKey = T.RT_40,
     DetailDes = "RESOURCE_DESC_4020001",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15758,7 +15857,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020002] = {
-    AccessKey = T.RT_39,
+    AccessKey = T.RT_40,
     DetailDes = "RESOURCE_DESC_4020002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15776,7 +15875,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020003] = {
-    AccessKey = T.RT_43,
+    AccessKey = T.RT_44,
     DetailDes = "RESOURCE_DESC_4020003",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15794,7 +15893,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020004] = {
-    AccessKey = T.RT_43,
+    AccessKey = T.RT_44,
     DetailDes = "RESOURCE_DESC_4020004",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15812,7 +15911,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020005] = {
-    AccessKey = T.RT_40,
+    AccessKey = T.RT_41,
     DetailDes = "RESOURCE_DESC_4020005",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15830,7 +15929,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [4020006] = {
-    AccessKey = T.RT_42,
+    AccessKey = T.RT_43,
     DetailDes = "RESOURCE_DESC_4020006",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15960,7 +16059,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5011010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15978,7 +16077,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5011010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -15996,7 +16095,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5011020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16014,7 +16113,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5011020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16032,7 +16131,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5011030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16050,7 +16149,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5011031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5011030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16068,7 +16167,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5012010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16086,7 +16185,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5012010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16104,7 +16203,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5012020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16122,7 +16221,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5012020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16140,7 +16239,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5012030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16158,7 +16257,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5012031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5012030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16176,7 +16275,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5013010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16194,7 +16293,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5013010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16212,7 +16311,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5013020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16230,7 +16329,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5013020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16248,7 +16347,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5013030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16266,7 +16365,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5013031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5013030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16284,7 +16383,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16302,7 +16401,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16320,7 +16419,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16338,7 +16437,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16356,7 +16455,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16374,7 +16473,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16392,7 +16491,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16410,7 +16509,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16428,7 +16527,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16446,7 +16545,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5021051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5021050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16464,7 +16563,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16482,7 +16581,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16500,7 +16599,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16518,7 +16617,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16536,7 +16635,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16554,7 +16653,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16572,7 +16671,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16590,7 +16689,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16608,7 +16707,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16626,7 +16725,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5022051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5022050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16644,7 +16743,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16662,7 +16761,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16680,7 +16779,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16698,7 +16797,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16716,7 +16815,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16734,7 +16833,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16752,7 +16851,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16770,7 +16869,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16788,7 +16887,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16806,7 +16905,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5023051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5023050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16824,7 +16923,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16842,7 +16941,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16860,7 +16959,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16878,7 +16977,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16896,7 +16995,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16914,7 +17013,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16932,7 +17031,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16950,7 +17049,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16968,7 +17067,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -16986,7 +17085,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5024051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5024050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17004,7 +17103,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17022,7 +17121,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17040,7 +17139,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17058,7 +17157,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17076,7 +17175,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17094,7 +17193,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17112,7 +17211,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17130,7 +17229,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17148,7 +17247,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17166,7 +17265,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5025051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5025050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17184,7 +17283,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17202,7 +17301,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17220,7 +17319,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17238,7 +17337,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17256,7 +17355,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17274,7 +17373,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17292,7 +17391,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17310,7 +17409,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17328,7 +17427,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17346,7 +17445,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5026051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5026050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17364,7 +17463,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17382,7 +17481,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17400,7 +17499,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17418,7 +17517,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17436,7 +17535,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17454,7 +17553,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17472,7 +17571,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17490,7 +17589,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17508,7 +17607,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17526,7 +17625,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5027051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5027050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17544,7 +17643,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17562,7 +17661,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17580,7 +17679,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17598,7 +17697,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17616,7 +17715,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17634,7 +17733,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17652,7 +17751,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17670,7 +17769,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17688,7 +17787,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17706,7 +17805,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5028051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5028050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17724,7 +17823,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17742,7 +17841,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17760,7 +17859,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17778,7 +17877,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17796,7 +17895,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17814,7 +17913,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17832,7 +17931,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17850,7 +17949,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17868,7 +17967,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17886,7 +17985,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5029051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5029050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17904,7 +18003,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17922,7 +18021,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17940,7 +18039,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17958,7 +18057,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17976,7 +18075,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -17994,7 +18093,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18012,7 +18111,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18030,7 +18129,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18048,7 +18147,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18066,7 +18165,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5030051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5030050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18084,7 +18183,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18102,7 +18201,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18120,7 +18219,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18138,7 +18237,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18156,7 +18255,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18174,7 +18273,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18192,7 +18291,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18210,7 +18309,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18228,7 +18327,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18246,7 +18345,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5031051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5031050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18264,7 +18363,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032010] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18282,7 +18381,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032011] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032010",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18300,7 +18399,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032020] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18318,7 +18417,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032021] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032020",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18336,7 +18435,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032030] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18354,7 +18453,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032031] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032030",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18372,7 +18471,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032040] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18390,7 +18489,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032041] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032040",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18408,7 +18507,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032050] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18426,7 +18525,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5032051] = {
-    AccessKey = T.RT_50,
+    AccessKey = T.RT_51,
     DetailDes = "RESOURCE_DESC_5032050",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18444,7 +18543,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110100] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110100",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18461,7 +18560,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110200] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110200",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18478,7 +18577,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110300] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110300",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18495,7 +18594,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110400] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110400",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18512,7 +18611,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110500] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110500",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18529,7 +18628,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110601] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110601",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18546,7 +18645,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5110602] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5110602",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18563,7 +18662,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210100] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5210100",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18580,7 +18679,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210200] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5210200",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18597,7 +18696,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210300] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5210300",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18614,7 +18713,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [5210400] = {
-    AccessKey = T.RT_34,
+    AccessKey = T.RT_35,
     DetailDes = "RESOURCE_DESC_5210400",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18649,7 +18748,7 @@ return ReadOnly("Resource", {
       [1] = 12,
       [2] = 500
     },
-    CombatConditionToast = T.RT_45,
+    CombatConditionToast = T.RT_46,
     DetailDes = "RESOURCE_DESC_6000002",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18694,7 +18793,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [6000005] = {
-    AccessKey = T.RT_37,
+    AccessKey = T.RT_38,
     DetailDes = "RESOURCE_DESC_6000005",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
@@ -18737,7 +18836,7 @@ return ReadOnly("Resource", {
     Type = "Rare"
   },
   [6100001] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18751,7 +18850,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100002] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18765,7 +18864,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100003] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18779,7 +18878,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100004] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18793,7 +18892,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100005] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18810,7 +18909,7 @@ return ReadOnly("Resource", {
     UseParam = 5
   },
   [6100006] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18827,7 +18926,7 @@ return ReadOnly("Resource", {
     UseParam = 6
   },
   [6100007] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18844,7 +18943,7 @@ return ReadOnly("Resource", {
     UseParam = 7
   },
   [6100008] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18861,7 +18960,7 @@ return ReadOnly("Resource", {
     UseParam = 8
   },
   [6100009] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18878,7 +18977,7 @@ return ReadOnly("Resource", {
     UseParam = 9
   },
   [6100010] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18895,7 +18994,7 @@ return ReadOnly("Resource", {
     UseParam = 10
   },
   [6100011] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18912,7 +19011,7 @@ return ReadOnly("Resource", {
     UseParam = 11
   },
   [6100012] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18929,7 +19028,7 @@ return ReadOnly("Resource", {
     UseParam = 12
   },
   [6100013] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18946,7 +19045,7 @@ return ReadOnly("Resource", {
     UseParam = 13
   },
   [6100014] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18963,7 +19062,7 @@ return ReadOnly("Resource", {
     UseParam = 14
   },
   [6100015] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18980,7 +19079,7 @@ return ReadOnly("Resource", {
     UseParam = 15
   },
   [6100016] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -18997,7 +19096,7 @@ return ReadOnly("Resource", {
     UseParam = 16
   },
   [6100017] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19014,7 +19113,7 @@ return ReadOnly("Resource", {
     UseParam = 17
   },
   [6100018] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19031,7 +19130,7 @@ return ReadOnly("Resource", {
     UseParam = 18
   },
   [6100019] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19048,7 +19147,7 @@ return ReadOnly("Resource", {
     UseParam = 19
   },
   [6100020] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19065,7 +19164,7 @@ return ReadOnly("Resource", {
     UseParam = 20
   },
   [6100021] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19082,7 +19181,7 @@ return ReadOnly("Resource", {
     UseParam = 21
   },
   [6100022] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19099,7 +19198,7 @@ return ReadOnly("Resource", {
     UseParam = 22
   },
   [6100023] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19116,7 +19215,7 @@ return ReadOnly("Resource", {
     UseParam = 23
   },
   [6100024] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19130,7 +19229,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100025] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19147,7 +19246,7 @@ return ReadOnly("Resource", {
     UseParam = 25
   },
   [6100026] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19164,7 +19263,7 @@ return ReadOnly("Resource", {
     UseParam = 26
   },
   [6100027] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19181,7 +19280,7 @@ return ReadOnly("Resource", {
     UseParam = 27
   },
   [6100028] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19198,7 +19297,7 @@ return ReadOnly("Resource", {
     UseParam = 28
   },
   [6100029] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19215,7 +19314,7 @@ return ReadOnly("Resource", {
     UseParam = 29
   },
   [6100030] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19229,7 +19328,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100031] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19246,7 +19345,7 @@ return ReadOnly("Resource", {
     UseParam = 31
   },
   [6100032] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19260,7 +19359,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100033] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19277,7 +19376,7 @@ return ReadOnly("Resource", {
     UseParam = 33
   },
   [6100034] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19294,7 +19393,7 @@ return ReadOnly("Resource", {
     UseParam = 34
   },
   [6100035] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19308,7 +19407,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100036] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19325,7 +19424,7 @@ return ReadOnly("Resource", {
     UseParam = 36
   },
   [6100037] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19342,7 +19441,7 @@ return ReadOnly("Resource", {
     UseParam = 37
   },
   [6100038] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19359,7 +19458,7 @@ return ReadOnly("Resource", {
     UseParam = 38
   },
   [6100039] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100001",
@@ -19376,7 +19475,7 @@ return ReadOnly("Resource", {
     UseParam = 39
   },
   [6100101] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19389,7 +19488,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100102] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19402,7 +19501,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100103] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19418,7 +19517,7 @@ return ReadOnly("Resource", {
     UseParam = 3
   },
   [6100104] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19434,7 +19533,7 @@ return ReadOnly("Resource", {
     UseParam = 4
   },
   [6100105] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19450,7 +19549,7 @@ return ReadOnly("Resource", {
     UseParam = 5
   },
   [6100106] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19466,7 +19565,7 @@ return ReadOnly("Resource", {
     UseParam = 6
   },
   [6100107] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19482,7 +19581,7 @@ return ReadOnly("Resource", {
     UseParam = 7
   },
   [6100108] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19498,7 +19597,7 @@ return ReadOnly("Resource", {
     UseParam = 8
   },
   [6100109] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19511,7 +19610,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100110] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19524,7 +19623,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100111] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19540,7 +19639,7 @@ return ReadOnly("Resource", {
     UseParam = 11
   },
   [6100112] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19556,7 +19655,7 @@ return ReadOnly("Resource", {
     UseParam = 12
   },
   [6100113] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19572,7 +19671,7 @@ return ReadOnly("Resource", {
     UseParam = 13
   },
   [6100114] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19588,7 +19687,7 @@ return ReadOnly("Resource", {
     UseParam = 14
   },
   [6100115] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19604,7 +19703,7 @@ return ReadOnly("Resource", {
     UseParam = 15
   },
   [6100116] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19617,7 +19716,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100117] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19630,7 +19729,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100118] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19646,7 +19745,7 @@ return ReadOnly("Resource", {
     UseParam = 18
   },
   [6100119] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19662,7 +19761,7 @@ return ReadOnly("Resource", {
     UseParam = 19
   },
   [6100120] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19678,7 +19777,7 @@ return ReadOnly("Resource", {
     UseParam = 20
   },
   [6100121] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19707,7 +19806,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100123] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19723,7 +19822,7 @@ return ReadOnly("Resource", {
     UseParam = 22
   },
   [6100124] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100101",
@@ -19751,7 +19850,7 @@ return ReadOnly("Resource", {
     Type = "Ordinary"
   },
   [6100126] = {
-    AccessKey = T.RT_26,
+    AccessKey = T.RT_27,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_DESC_6100122",

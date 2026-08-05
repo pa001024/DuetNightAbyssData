@@ -1,7 +1,7 @@
 [
   {
     "id": 101,
-    "desc": "Decreases Healing Received by <Highlight>20.0%</>.",
+    "desc": "Decreases Healing Received by <Highlight>10.0%</>.",
     "globalPassiveId": 30101001,
     "heatValue": 1,
     "icon": "T_Rou_Contract_Char_HealDown",
@@ -11,7 +11,7 @@
   },
   {
     "id": 102,
-    "desc": "Decreases ATK by <Highlight>20.0%</>.",
+    "desc": "Decreases ATK by <Highlight>10.0%</>.",
     "globalPassiveId": 30101002,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Char_SpDown",
@@ -21,7 +21,7 @@
   },
   {
     "id": 103,
-    "desc": "Increases the enemy's Max HP by <Highlight>40.0%</>.",
+    "desc": "Increases the enemy's Max HP by <Highlight>20.0%</>.",
     "globalPassiveId": 30102001,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon_HpUp",
@@ -31,7 +31,7 @@
   },
   {
     "id": 104,
-    "desc": "Increases the enemy's ATK by <Highlight>20.0%</>.",
+    "desc": "Increases the enemy's ATK by <Highlight>10.0%</>.",
     "globalPassiveId": 30102002,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon__AtkUp",
@@ -41,7 +41,7 @@
   },
   {
     "id": 105,
-    "desc": "Decreases the enemy's Damage Taken by <Highlight>20.0%</>.",
+    "desc": "Decreases the enemy's Damage Taken by <Highlight>10.0%</>.",
     "globalPassiveId": 30102003,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon_HpUp",

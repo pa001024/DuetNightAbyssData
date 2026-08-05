@@ -118,7 +118,13 @@ return ReadOnly("ModSelectDungeon", {
       7005,
       7006,
       7007,
-      7008
+      7008,
+      7009,
+      7010,
+      7011,
+      7012,
+      7013,
+      7014
     },
     Name = "UI_DungeonMod_Tab_70",
     Sequence = 90

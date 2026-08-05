@@ -109,7 +109,7 @@ QuestNodeKey:]] .. NodeId
   self.HasStarted = true
   self.HasFinished = false
   local StorySubsystem = self:GetStorySubsystem()
-  if StorySubsystem then
+  if self.QuestChainId > 0 and StorySubsystem then
     StorySubsystem:CaptureGlobalQuestVarSnapshot(self.QuestChainId)
   end
   self:HandleActivateSkill(self.QuestId, "Start")
@@ -293,7 +293,7 @@ StoryNodeKey:]] .. self.Data.key
   self.HasStarted = false
   self:ClearNodeWhenQuestFinish(bSucceeded)
   local StorySubsystem = self:GetStorySubsystem()
-  if StorySubsystem then
+  if self.QuestChainId > 0 and StorySubsystem then
     if bSucceeded then
       if self.QuestData and self.QuestData.bIsEndQuest then
         StorySubsystem:ClearGlobalQuestVarsByQuestChainId(self.QuestChainId)

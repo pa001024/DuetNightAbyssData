@@ -589,7 +589,13 @@ T.RT_8 = {
   615003,
   615004,
   615005,
-  615006
+  615006,
+  615007,
+  615008,
+  615009,
+  615010,
+  615011,
+  615012
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x

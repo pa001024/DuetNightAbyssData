@@ -16749,6 +16749,66 @@
     ]
   },
   {
+    "id": 91149,
+    "child": [
+      {
+        "id": 110065,
+        "t": "Resource",
+        "n": "Sceau démoniaque — Pactisant Hydro"
+      }
+    ]
+  },
+  {
+    "id": 91150,
+    "child": [
+      {
+        "id": 110063,
+        "t": "Resource",
+        "n": "Sceau démoniaque — Pactisant Pyro"
+      }
+    ]
+  },
+  {
+    "id": 91151,
+    "child": [
+      {
+        "id": 110064,
+        "t": "Resource",
+        "n": "Sceau démoniaque — Pactisant Électro"
+      }
+    ]
+  },
+  {
+    "id": 91152,
+    "child": [
+      {
+        "id": 110062,
+        "t": "Resource",
+        "n": "Sceau démoniaque — Pactisant Anémo"
+      }
+    ]
+  },
+  {
+    "id": 91153,
+    "child": [
+      {
+        "id": 110067,
+        "t": "Resource",
+        "n": "Sceau démoniaque — Pactisant Umbro"
+      }
+    ]
+  },
+  {
+    "id": 91154,
+    "child": [
+      {
+        "id": 110066,
+        "t": "Resource",
+        "n": "Sceau démoniaque — Pactisant Lumino"
+      }
+    ]
+  },
+  {
     "id": 91201,
     "child": [
       {

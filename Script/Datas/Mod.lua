@@ -1315,7 +1315,7 @@ T.RT_391 = {
 T.RT_392 = {Highlander = 1}
 T.RT_393 = {1716}
 T.RT_394 = {
-  "Text_Mod_1.4Qiyuezhe"
+  "Dungeon_ModTab_70"
 }
 T.RT_395 = {
   AllowModMultiplier = "Dark",
@@ -7935,6 +7935,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Blue.T_Mod_FeatheredSnake01_Blue",
     Id = 41725,
     MaxLevel = 5,
+    ModConvert = T.RT_295,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1725",
     OpenVersion = 15,
@@ -7967,6 +7968,7 @@ return ReadOnly("Mod", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mod/T_Mod_FeatheredSnake01_Blue.T_Mod_FeatheredSnake01_Blue",
     Id = 41726,
     MaxLevel = 5,
+    ModConvert = T.RT_295,
     ModDescribe = "MOD_DES_1001",
     Name = "MOD_NAME_1726",
     OpenVersion = 15,

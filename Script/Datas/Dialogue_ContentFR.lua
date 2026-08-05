@@ -1050,7 +1050,7 @@ local Data = {
         },
         [6101005] = {
           Content = "“火焰不烫吗？”",
-          ContentFR = "<I>« Le feu ne brûle donc pas ?</>",
+          ContentFR = "<I>« Le feu ne brûle donc pas ? »</>",
           DialogueId = 6101005,
           GUID = "0F45F222",
           IsKeyOption = true,
@@ -7703,7 +7703,7 @@ Une <H>lanterne</>.]],
         [10011906] = {
           Camera = "-126.563477,-288.416992,141.312988,0.000402,-1.39551,62.961685,35.0,140.0,false,Manual,2.8,16:9 Digital Film",
           Content = "这个女孩正是当年失踪的“零号”。",
-          ContentFR = "Cette fille est bien le \"n° 0\" disparu à l’époque.",
+          ContentFR = "Cette fille est bien le « n° 0 » disparu à l’époque.",
           DefaultLookAt = "KeepState",
           DialogueId = 10011906,
           DisableMouth = 1,
@@ -8061,7 +8061,7 @@ Une <H>lanterne</>.]],
         },
         [10012105] = {
           Content = "“和鸣之力”和“零号”一起重现……到底意味着什么……",
-          ContentFR = "... La réapparition simultanée du pouvoir de \"Résonance\" et du \"n° 0\"... que cela signifie-t-il ?",
+          ContentFR = "... La réapparition simultanée du pouvoir de « Résonance » et du « n° 0 »... que cela signifie-t-il ?",
           DialogueId = 10012105,
           Duration = 3,
           GUID = "191072D0",
@@ -8235,7 +8235,7 @@ Une <H>lanterne</>.]],
         [10012701] = {
           Camera = "524.417969,-273.097656,72.024963,0.000254,10.998483,156.973907,35.0,100000.0,false,Manual,22.0,16:9 Digital Film",
           Content = "你回来了。{nickname}……我的半身、我的倒影、我的回声。",
-          ContentFR = "Tu es revenu, {nickname}... Ma moitié, mon reflet, mon écho. ",
+          ContentFR = "Tu es revenu, {nickname}... Ma moitié, mon reflet, mon écho. ",
           DialogueId = 10012701,
           Duration = 5,
           ExStoryInfo = "EXPlayer",
@@ -8256,7 +8256,7 @@ Une <H>lanterne</>.]],
         [10012702] = {
           Camera = "317.9375,-203.148438,165.504761,0.000249,2.998658,152.974579,35.0,100000.0,false,Manual,22.0,16:9 Digital Film",
           Content = "你听到了我的声音。你找回了那份属于你的力量。“和鸣”。",
-          ContentFR = "Tu as entendu ma voix. Tu as retrouvé le pouvoir qui t’appartient, la « Résonance ».",
+          ContentFR = "Tu as entendu ma voix. Tu as retrouvé le pouvoir qui t’appartient, la « Résonance ». ",
           DialogueId = 10012702,
           Duration = 5,
           ExStoryInfo = "EXPlayer",
@@ -8644,7 +8644,7 @@ Une <H>lanterne</>.]],
         },
         [10018701] = {
           Content = "——“我是谁？”",
-          ContentFR = "« Qui suis-je ? »",
+          ContentFR = "« Qui suis-je ? »",
           DialogueId = 10018701,
           Duration = 3,
           ExStoryInfo = "Player",
@@ -9137,7 +9137,7 @@ Une <H>lanterne</>.]],
         },
         [10029401] = {
           Content = "要再休息一会儿吗？",
-          ContentFR = "Veux-tu te reposer encore un peu ?",
+          ContentFR = "Veux-tu te reposer encore un peu ?",
           DialogueId = 10029401,
           GUID = "1914AD4E",
           SpeakNpcId = 100003
@@ -52223,7 +52223,7 @@ PlayAnimation{_delay{5.5},ActorId{200011},AnimationId{"Think_Start"},Duration{2}
         [10102508] = {
           Camera = "-200.542847,-222.323242,136.585938,0.000182,1.001258,46.588379,70.000015,435.191498,false,Manual,6.0,16:9 Digital Film",
           Content = "“情报就是金钱”！对对对，全冰湖城的垃圾桶都归我管，如果我以后翻到什么好玩的消息，第一时间告诉您，可以吧？",
-          ContentFR = "« L’information, c’est de l’or » ! Oui c’est ça, je gère tous les poubelles de Givrelac, alors si je tombe sur des infos intéressantes, vous serez la première à les savoir, d’accord ?",
+          ContentFR = "« L’information, c’est de l’or » ! Oui, c’est ça. Comme je m’occupe de toutes les poubelles de Givrelac, si je tombe sur des infos intéressantes, vous serez la première informée, d’accord ?",
           DialogueId = 10102508,
           FacialId = {
             [1] = "200003:Smile01"
@@ -69570,7 +69570,7 @@ PlayAnimation{ActorId{200002},AnimationId{"Angry01_Start"},Duration{1}}
         },
         [10113026] = {
           Content = "（冷静下来，保持沉默——你不能继续引起军团怀疑了。） ",
-          ContentFR = "<I>– Rester calme et se taire, inutile d’attirer plus encore l’attention de la Légion.</>",
+          ContentFR = "<I>Rester calme et se taire, inutile d’attirer plus encore l’attention de la Légion.</>",
           DialogueId = 10113026,
           GUID = "10113026",
           ImprPlusId = 1006,
@@ -69598,7 +69598,7 @@ PlayAnimation{ActorId{200002},AnimationId{"Angry01_Start"},Duration{1}}
         },
         [10113028] = {
           Content = "（继续说下去——即使面临风险，你也决意为赛琪正名。）",
-          ContentFR = "<I>– Prendre la parole malgré le danger, tu veux à tout prix rendre justice à Psyche.</>",
+          ContentFR = "<I>Prendre la parole malgré le danger, tu veux à tout prix rendre justice à Psyche.</>",
           DialogueId = 10113028,
           GUID = "10113028",
           ImprPlusId = 1007,
@@ -76912,7 +76912,7 @@ EventPath{"event:/sfx/common/story/ex01/evilvo"},PlayAs2D{true}},PostProcess{Mat
         },
         [11010105] = {
           Content = "（够了。从我的脑子里滚出去。）",
-          ContentFR = "<I>– Ça suffit. Sors de ma tête.</>",
+          ContentFR = "<I>Ça suffit. Sors de ma tête.</>",
           DialogueId = 11010105,
           GUID = "1B90095A",
           NextDialogue = 11010106
@@ -77073,7 +77073,7 @@ PARA{PlayNormalSound{EventPath{"event:/sfx/common/story/ex01/evilvo"},PlayAs2D{t
         },
         [11010209] = {
           Content = "（给我闭嘴！我没有！）",
-          ContentFR = "<I>– Tais-toi ! Ce n’est pas ce que je ressens !</>",
+          ContentFR = "<I>Tais-toi ! Ce n’est pas ce que je ressens !</>",
           DialogueId = 11010209,
           GUID = "1B901A6A",
           NextDialogue = 11010210
@@ -144037,7 +144037,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12060827] = {
           Content = "这支队伍由悬衡派弟子中的后起之秀组成，可谓是今年的全明星阵容，妥妥的夺冠热门选手——",
-          ContentFR = "Ils sont composés des jeunes prodiges de la Secte Xuanheng. Leur formation est digne d’une finale.\n",
+          ContentFR = "Ils sont composés des jeunes prodiges de la Secte Xuanheng. Leur formation est digne d’une finale.",
           DialogueId = 12060827,
           GUID = "1E316849",
           NextDialogue = 12060821,
@@ -161451,7 +161451,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
         },
         [51000002] = {
           Content = "（拒绝）",
-          ContentFR = "(Refuser)",
+          ContentFR = "Refuser",
           DialogueId = 51000002,
           GUID = "7FAC53D4",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
@@ -175980,7 +175980,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51007503] = {
           Content = "（注意到他穿着考究的制服，似乎还是一名学生。）",
-          ContentFR = "<I>– Il porte un uniforme soigné, on dirait un élève.</>",
+          ContentFR = "<I>Il porte un uniforme soigné, on dirait un élève.</>",
           DialogueId = 51007503,
           GUID = "7FB12276",
           ImprPlusId = 1003,
@@ -176010,7 +176010,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51007506] = {
           Content = "（担心他一个人会遭遇危险。）",
-          ContentFR = "<I>– Ce n’est pas très sûr pour un enfant d’être dehors tout seul.</>",
+          ContentFR = "<I>Ce n’est pas très sûr pour un enfant d’être dehors tout seul.</>",
           DialogueId = 51007506,
           GUID = "7FB122F4",
           ImprPlusId = 1004,
@@ -178460,7 +178460,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
         },
         [51007905] = {
           Content = "（虽然有种不好的预感，但只要奖励足够丰厚，那体验一下也无妨。）",
-          ContentFR = "<I>– Même si j’ai un mauvais pressentiment... si la récompense est suffisamment alléchante, autant tenter l’expérience.</>",
+          ContentFR = "<I>Même si j’ai un mauvais pressentiment... si la récompense est suffisamment alléchante, autant tenter l’expérience.</>",
           DialogueId = 51007905,
           GUID = "7FB1646A",
           ImprPlusId = 1001,
@@ -197270,7 +197270,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51103003] = {
           Content = "（震动似乎遵循着什么规律，仔细查看一下吧。）",
-          ContentFR = "<I>– Ces vibrations semblent suivre un certain rythme. Les examiner de plus près.</>",
+          ContentFR = "<I>Ces vibrations semblent suivre un certain rythme. Les examiner de plus près.</>",
           DialogueId = 51103003,
           GUID = "7FEE5645",
           ImprPlusId = 1203,
@@ -197286,7 +197286,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51103005] = {
           Content = "（这玩意该不会要爆炸了吧，赶紧扔掉！）",
-          ContentFR = "<I>– Ce truc ne va quand même pas exploser ? Le jeter au loin, vite !</>",
+          ContentFR = "<I>Ce truc ne va quand même pas exploser ? Le jeter au loin, vite !</>",
           DialogueId = 51103005,
           GUID = "7FEE566F",
           ImprPlusId = 1205,
@@ -204654,7 +204654,7 @@ Explorer !]],
         },
         [51110002] = {
           Content = "（离远点，别是有什么病吧。）",
-          ContentFR = "<I>– Mieux vaut garder ses distances... sait-on jamais.</>",
+          ContentFR = "<I>Mieux vaut garder ses distances... sait-on jamais.</>",
           DialogueId = 51110002,
           GUID = "7FF2D2B4",
           ImprPlusId = 1206,
@@ -209152,7 +209152,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
         },
         [51122004] = {
           Content = "（难道是要给我推销？）",
-          ContentFR = "<I>– Il veut sûrement me vendre quelque chose...</>",
+          ContentFR = "<I>Il veut sûrement me vendre quelque chose...</>",
           DialogueId = 51122004,
           GUID = "7FFA83C8",
           ImprPlusId = 1206,
@@ -279988,7 +279988,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60140001] = {
           Content = "……呵，困兽之斗。",
-          ContentFR = "Pff... la lutte pathétique d’une bête acculée.",
+          ContentFR = "<I>Pff...</> la lutte pathétique d’une bête acculée.",
           DialogueId = 60140001,
           Duration = 4,
           GUID = "968DDEEA",
@@ -280052,7 +280052,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60140203] = {
           Content = "啊啊——",
-          ContentFR = "Aaah... !",
+          ContentFR = "<I>Aaah... !</>",
           DialogueId = 60140203,
           Duration = 4,
           GUID = "968E000E",
@@ -280060,7 +280060,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60140204] = {
           Content = "呃啊啊啊啊——",
-          ContentFR = "Urrrgh... !",
+          ContentFR = "<I>Urrrgh... !</>",
           DialogueId = 60140204,
           Duration = 4,
           GUID = "968E0038",
@@ -280076,7 +280076,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60140206] = {
           Content = "……啊啊……",
-          ContentFR = "... Aaah...",
+          ContentFR = "<I>... Aaah...</>",
           DialogueId = 60140206,
           Duration = 2,
           GUID = "968E008C",
@@ -280502,7 +280502,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60170001] = {
           Content = "死……死！",
-          ContentFR = "Meurs... MEEEUUURS !",
+          ContentFR = "Meurs... <I>MEEEUUURS</> !",
           DialogueId = 60170001,
           Duration = 1.5,
           GUID = "96A118CA",
@@ -280510,7 +280510,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60170002] = {
           Content = "吼……呃……啊啊啊啊……",
-          ContentFR = "Raaagh... Urrhh... AAAARGH !",
+          ContentFR = "<I>Raaagh... Urrhh... AAAARGH !</>",
           DialogueId = 60170002,
           Duration = 1.5,
           GUID = "96A118F4",
@@ -280518,7 +280518,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60170003] = {
           Content = "嘎嗷嗷嗷……吼……吼！！",
-          ContentFR = "GRRRR... RAAH... ROOOAR !",
+          ContentFR = "<I>GRRRR... RAAH... ROOOAR !</>",
           DialogueId = 60170003,
           Duration = 4,
           GUID = "96A1191E",
@@ -280534,7 +280534,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60180002] = {
           Content = "吼————",
-          ContentFR = "ROAAAH !",
+          ContentFR = "<I>ROAAAH !</>",
           DialogueId = 60180002,
           Duration = 3,
           GUID = "9834E966",
@@ -280558,7 +280558,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [60180005] = {
           Content = "吼————",
-          ContentFR = "ROAAAR !",
+          ContentFR = "<I>ROAAAR !</>",
           DialogueId = 60180005,
           Duration = 5,
           GUID = "9834E969",
@@ -281828,7 +281828,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [70016002] = {
           Content = "厚厚的点名册，详细地记录了每位工作人员一天的行程，除了排练，连吃饭睡觉和如厕的行程都被记录在内。\n不知是剧团长狠心地将所有人“软禁”在剧院之内，还是剧团长为了保护自己的演员，而不得不时刻关注每个人的动向。",
-          ContentFR = "Un registre épais où chaque membre du personnel voit son emploi du temps consigné dans le moindre détail : répétitions, repas, sommeil, même les passages aux toilettes.\nOn ignore si la directrice du théâtre a véritablement \"enfermé\" ses comédiens avec une sévérité impitoyable, ou si elle n’a fait que les surveiller de près pour mieux les protéger.",
+          ContentFR = "Un registre épais où chaque membre du personnel voit son emploi du temps consigné dans le moindre détail : répétitions, repas, sommeil, même les passages aux toilettes.\n On ignore si la directrice du théâtre a véritablement « enfermé » ses comédiens avec une sévérité impitoyable, ou si elle n’a fait que les surveiller de près pour mieux les protéger.",
           DialogueId = 70016002,
           GUID = "AF471854"
         },
@@ -281954,7 +281954,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [70016107] = {
           Camera = "-71.794922,628.722656,135.195312,0.000076,12.199674,-90.596268,17.78793,100000.0,false,Manual,22.0,16:9 Digital Film",
           Content = "※“一角鲸”分队士兵凯鲁姆的证词\n“我看到‘狮鹫’小队的队长{nickname2}独自从▇▇▇▇出来，胸口沾了▇▇▇▇。”\n“{性别2：他|她}示意我们守在▇▇▇▇不要擅自行动，并表示自己将去▇▇▇▇查看是否有躲藏的同盟成员。“\n“大约两分钟后我听到▇▇▇▇传来的警报声，便与法露茜长官一起前去查看。我们发现‘雪狼’分队的阿瓦尔队长倒在血泊中，而▇▇▇▇已经启动。”\n",
-          ContentFR = "※ Témoignage de Calem (unité des Narvals)\n« J’ai vu {性别2:le|la} Capitaine {nickname2} des Griffons sortir {性别2:seul|seule} de ████, le torse couvert de ████. »\n\n« {性别2:Il|Elle} nous a ordonné de rester en position, affirmant qu’{性别2:il|elle} allait vérifier ████ pour repérer d’éventuels Déchus cachés. »\n\n« Deux minutes plus tard, l’alarme s’est déclenchée. La Capitaine Falsi et moi avons accouru : le Capitaine Avar des Loups Blancs gisait dans une mare de sang. ████ était déjà enclenché. »",
+          ContentFR = "※ Témoignage de Calem (unité des Narvals)\n « J’ai vu {性别2:le|la} Capitaine {nickname2} des Griffons sortir {性别2:seul|seule} de ████, le torse couvert de ████. »\n \n « {性别2:Il|Elle} nous a ordonné de rester en position, affirmant qu’{性别2:il|elle} allait vérifier ████ pour repérer d’éventuels Déchus cachés. »\n \n « Deux minutes plus tard, l’alarme s’est déclenchée. L’Officier Falsi et moi avons accouru : le Commandant Avar des Loups Blancs gisait dans une mare de sang. ████ était déjà enclenché. »",
           DialogueId = 70016107,
           GUID = "AF47298E"
         },
@@ -350910,7 +350910,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [101002152] = {
           Content = "（无法信任陌生人。）",
-          ContentFR = "<I>– Je ne peux pas faire confiance à des inconnues.</>",
+          ContentFR = "<I>Je ne peux pas faire confiance à des inconnues.</>",
           DialogueId = 101002152,
           GUID = "101002152",
           ImprPlusId = 1008,
@@ -352613,7 +352613,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [200005261] = {
           Content = "（便宜的价格，令人心动。）",
-          ContentFR = "<I>– Un prix aussi bas... ça donne envie.</>",
+          ContentFR = "<I>Un prix aussi bas... ça donne envie.</>",
           DialogueId = 200005261,
           GUID = "200005261",
           ImprPlusId = 1001,
@@ -352621,7 +352621,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [200005262] = {
           Content = "（无事献殷勤，令人不安。）",
-          ContentFR = "<I>– Trop beau pour être vrai... Méfiance.</>",
+          ContentFR = "<I>Trop beau pour être vrai... Méfiance.</>",
           DialogueId = 200005262,
           GUID = "200005262",
           ImprPlusId = 1003,
@@ -352652,7 +352652,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [200008091] = {
           Content = "（留意到她有些无精打采——她好像有什么心事。）",
-          ContentFR = "<I>– Tu remarques qu’elle a l’air abattue, comme si quelque chose la tracassait.</>",
+          ContentFR = "<I>Tu remarques qu’elle a l’air abattue, comme si quelque chose la tracassait.</>",
           DialogueId = 200008091,
           GUID = "200008091",
           ImprPlusId = 1004,
@@ -352660,7 +352660,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [200008092] = {
           Content = "（留意到她刚才在照看的花——她刚才似乎就是对着这些花叹气。）",
-          ContentFR = "<I>– Tu remarques les fleurs qu’elle observait, c’est sans doute à elles qu’elle soupirait.</>",
+          ContentFR = "<I>Tu remarques les fleurs qu’elle observait, c’est sans doute à elles qu’elle soupirait.</>",
           DialogueId = 200008092,
           GUID = "200008092",
           ImprPlusId = 1003,
@@ -352727,7 +352727,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [200008411] = {
           Content = "（你对“特别的土壤”也有些兴趣。）",
-          ContentFR = "<I>– Je suis {性别:intrigué|intriguée} par cette « terre spéciale ».</>",
+          ContentFR = "<I>Je suis {性别:intrigué|intriguée} par cette « terre spéciale ».</>",
           DialogueId = 200008411,
           GUID = "200008411",
           ImprPlusId = 1001,
@@ -352735,7 +352735,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [200008412] = {
           Content = "（你决定帮助赛琪。）",
-          ContentFR = "<I>– Je vais l’aider.</>",
+          ContentFR = "<I>Je vais l’aider.</>",
           DialogueId = 200008412,
           GUID = "200008412",
           ImprPlusId = 1002,
@@ -353633,7 +353633,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [510016021] = {
           Content = "（此人脾气有点暴躁，摸一摸他的恶魔角安抚下吧。）",
-          ContentFR = "<I>– Il a l’air colérique... Peut-être que lui toucher les cornes le calmerait.</>",
+          ContentFR = "<I>Il a l’air colérique... Peut-être que lui toucher les cornes le calmerait.</>",
           DialogueId = 510016021,
           GUID = "510016021",
           ImprPlusId = 1005,
@@ -354095,7 +354095,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [510035051] = {
           Content = "这么敷衍老师可不行，当心被她记小本本哦。",
-          ContentFR = "Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.",
+          ContentFR = "<I>Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.</>",
           DialogueId = 510035051,
           GUID = "510035051",
           ImprPlusId = 1001,
@@ -354193,7 +354193,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [510036161] = {
           Content = "贝琳达似乎意有所指……",
-          ContentFR = "<I>– Belinda semble faire allusion à...</>",
+          ContentFR = "<I>Belinda semble faire allusion à...</>",
           DialogueId = 510036161,
           FailDialogue = 51003617,
           GUID = "510036161",
@@ -355939,19 +355939,19 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710001001] = {
           Content = "（它看起来很饿，去帮忙找点吃的吧。）",
-          ContentFR = "<I>– Il a l’air affamé... Allons lui trouver de quoi manger.</>",
+          ContentFR = "<I>Il a l’air affamé... Allons lui trouver de quoi manger.</>",
           DialogueId = 710001001,
           GUID = "710001001"
         },
         [710001002] = {
           Content = "（它看起来很寂寞，陪它玩一会吧。）",
-          ContentFR = "<I>– Il semble bien seul... Je pourrais rester un peu pour jouer avec lui.</>",
+          ContentFR = "<I>Il semble bien seul... Je pourrais rester un peu pour jouer avec lui.</>",
           DialogueId = 710001002,
           GUID = "710001002"
         },
         [710001003] = {
           Content = "（还有很多人饿着肚子，就别管猫了吧。）",
-          ContentFR = "<I>– Tant de gens ont déjà le ventre vide... Ce n’est pas le moment de s’occuper d’un chat.</>",
+          ContentFR = "<I>Tant de gens ont déjà le ventre vide... Ce n’est pas le moment de s’occuper d’un chat.</>",
           DialogueId = 710001003,
           GUID = "710001003"
         },
@@ -356437,13 +356437,13 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710055031] = {
           Content = "（声音可以传播很远。再往前看看吧。）",
-          ContentFR = "<I>– Rien ici. Le bruit vient de plus loin. Ça vaut le coup de vérifier plus en profondeur.</>",
+          ContentFR = "<I>Rien ici. Le bruit vient de plus loin. Ça vaut le coup de vérifier plus en profondeur.</>",
           DialogueId = 710055031,
           GUID = "710055061"
         },
         [710055032] = {
           Content = "（水道旁有什么东西在闪闪发光，先过去看看吧。）",
-          ContentFR = "<I>– Quelque chose près du cours d’eau brille, il faudrait y jeter un œil.</>",
+          ContentFR = "<I>Quelque chose près du cours d’eau brille, il faudrait y jeter un œil.</>",
           DialogueId = 710055032,
           GUID = "710055062"
         },

@@ -1,7 +1,7 @@
 [
   {
     "id": 101,
-    "desc": "自身受到的治疗降低<Highlight>20.0%</>。",
+    "desc": "自身受到的治疗降低<Highlight>10.0%</>。",
     "globalPassiveId": 30101001,
     "heatValue": 1,
     "icon": "T_Rou_Contract_Char_HealDown",
@@ -11,7 +11,7 @@
   },
   {
     "id": 102,
-    "desc": "自身攻击降低<Highlight>20.0%</>。",
+    "desc": "自身攻击降低<Highlight>10.0%</>。",
     "globalPassiveId": 30101002,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Char_SpDown",
@@ -21,7 +21,7 @@
   },
   {
     "id": 103,
-    "desc": "敌人最大生命提高<Highlight>40.0%</>。",
+    "desc": "敌人最大生命提高<Highlight>20.0%</>。",
     "globalPassiveId": 30102001,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon_HpUp",
@@ -31,7 +31,7 @@
   },
   {
     "id": 104,
-    "desc": "敌人攻击提高<Highlight>20.0%</>。",
+    "desc": "敌人攻击提高<Highlight>10.0%</>。",
     "globalPassiveId": 30102002,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon__AtkUp",
@@ -41,7 +41,7 @@
   },
   {
     "id": 105,
-    "desc": "敌人受到的伤害降低<Highlight>20.0%</>。",
+    "desc": "敌人受到的伤害降低<Highlight>10.0%</>。",
     "globalPassiveId": 30102003,
     "heatValue": 2,
     "icon": "T_Rou_Contract_Mon_HpUp",

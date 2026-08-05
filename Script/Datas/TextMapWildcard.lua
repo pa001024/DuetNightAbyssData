@@ -1257,6 +1257,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Title_10084",
     WildcardClassification = "Story"
   },
+  Title_10114 = {
+    TextMapId = "Title_10114",
+    WildcardClassification = "Story"
+  },
+  Title_10115 = {
+    TextMapId = "Title_10115",
+    WildcardClassification = "Story"
+  },
   Title_10116 = {
     TextMapId = "Title_10116",
     WildcardClassification = "Story"

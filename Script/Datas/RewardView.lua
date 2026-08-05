@@ -4415,6 +4415,48 @@ return ReadOnly("RewardView", {
     RewardViewId = 91148,
     Type = T.RT_195
   },
+  [91149] = {
+    Id = {
+      [1] = 110065
+    },
+    RewardViewId = 91149,
+    Type = T.RT_18
+  },
+  [91150] = {
+    Id = {
+      [1] = 110063
+    },
+    RewardViewId = 91150,
+    Type = T.RT_18
+  },
+  [91151] = {
+    Id = {
+      [1] = 110064
+    },
+    RewardViewId = 91151,
+    Type = T.RT_18
+  },
+  [91152] = {
+    Id = {
+      [1] = 110062
+    },
+    RewardViewId = 91152,
+    Type = T.RT_18
+  },
+  [91153] = {
+    Id = {
+      [1] = 110067
+    },
+    RewardViewId = 91153,
+    Type = T.RT_18
+  },
+  [91154] = {
+    Id = {
+      [1] = 110066
+    },
+    RewardViewId = 91154,
+    Type = T.RT_18
+  },
   [91201] = {
     DropType = T.RT_273,
     Id = {

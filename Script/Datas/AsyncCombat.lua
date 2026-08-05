@@ -355,6 +355,7 @@ return ReadOnly("AsyncCombat", {
     DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
     DungeonID = 40601,
     ID = 110061,
+    Invalid = true,
     Key = 25,
     Level = 50,
     Type = "Resource"
@@ -367,6 +368,7 @@ return ReadOnly("AsyncCombat", {
     DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
     DungeonID = 40602,
     ID = 110061,
+    Invalid = true,
     Key = 26,
     Level = 70,
     Type = "Resource"
@@ -379,6 +381,7 @@ return ReadOnly("AsyncCombat", {
     DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
     DungeonID = 40603,
     ID = 110061,
+    Invalid = true,
     Key = 27,
     Level = 90,
     Type = "Resource"
@@ -391,6 +394,7 @@ return ReadOnly("AsyncCombat", {
     DungeonBuff = "0:2500101,40:2500102,80:2500103,120:2500104,160:2500105",
     DungeonID = 40604,
     ID = 110061,
+    Invalid = true,
     Key = 28,
     Level = 110,
     Type = "Resource"

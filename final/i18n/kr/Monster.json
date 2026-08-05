@@ -4731,6 +4731,25 @@
     ]
   },
   {
+    "id": 9001011,
+    "n": "와일드비 칼날·서리",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Frozen",
+      "Mon.Elite"
+    ]
+  },
+  {
     "id": 9001013,
     "n": "와일드비 칼날·침식",
     "t": "Elite_Monster",
@@ -4785,6 +4804,25 @@
       "Mon.Melee",
       "Mon.Reward.B",
       "Mon.Strong.Shield",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9001020,
+    "n": "와일드비 칼날·잔불",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Reflect",
       "Mon.Elite"
     ]
   },
@@ -4957,6 +4995,44 @@
       "Mon.Ranged",
       "Mon.Reward.B",
       "Mon.Strong.IceOrb",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9002021,
+    "n": "와일드비 불의의 화살·희생",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9002022,
+    "n": "와일드비 불의의 화살·전뢰",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.ThunderLaser",
       "Mon.Elite"
     ]
   },
@@ -5342,6 +5418,44 @@
       "Mon.Ranged",
       "Mon.Reward.B",
       "Mon.Strong.Burst",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9007016,
+    "n": "와일드비 요원·메마름",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9007017,
+    "n": "와일드비 요원·수호",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Shield",
       "Mon.Elite"
     ]
   },

@@ -23,10 +23,13 @@ function M:GetAsyncCombatRoomRewardIdList()
     local RewardIdSet = {}
     local RewardIdList = {}
     for key, value in pairs(DataMgr.AsyncCombat) do
-      local RewardId = value.ID
-      if RewardId and not RewardIdSet[RewardId] then
-        RewardIdSet[RewardId] = true
-        table.insert(RewardIdList, RewardId)
+      if value.Invalid then
+      else
+        local RewardId = value.ID
+        if RewardId and not RewardIdSet[RewardId] then
+          RewardIdSet[RewardId] = true
+          table.insert(RewardIdList, RewardId)
+        end
       end
     end
     self.RewardIdList = RewardIdList
@@ -49,10 +52,13 @@ function M:GetAsyncCombatRoomLevelList()
     local LevelSet = {}
     local RoomLevelList = {}
     for _, value in pairs(DataMgr.AsyncCombat) do
-      local RewardId = value.Level
-      if LevelSet and not LevelSet[RewardId] then
-        LevelSet[RewardId] = true
-        table.insert(RoomLevelList, RewardId)
+      if value.Invalid then
+      else
+        local RewardId = value.Level
+        if LevelSet and not LevelSet[RewardId] then
+          LevelSet[RewardId] = true
+          table.insert(RoomLevelList, RewardId)
+        end
       end
     end
     table.sort(RoomLevelList)

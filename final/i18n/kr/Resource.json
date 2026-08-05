@@ -7483,7 +7483,7 @@
   },
   {
     "id": 15004,
-    "name": "피로 물든 날개옷의 원형",
+    "name": "피로 물든 깃털의 원형",
     "icon": "T_Weapon_Crossbow_Zaie",
     "rarity": 5,
     "desc": "전설 속 재앙 무기의 원형 중 하나이다.\n그의 마지막은 쑥처럼 쓰고, 양날의 검처럼 날카로웠다.\n특수한 경로를 통해 획득하며, 재앙 무기 용해에 사용할 수 있다.",
@@ -12589,6 +12589,48 @@
     "icon": "T_Pack_RandomMod_15",
     "rarity": 5,
     "select": 350025
+  },
+  {
+    "id": 110062,
+    "name": "메피스토 악마의 쐐기·바람",
+    "icon": "T_Pack_RandomMod_11",
+    "rarity": 5,
+    "pack": 350031
+  },
+  {
+    "id": 110063,
+    "name": "메피스토 악마의 쐐기·불",
+    "icon": "T_Pack_RandomMod_16",
+    "rarity": 5,
+    "pack": 350032
+  },
+  {
+    "id": 110064,
+    "name": "메피스토 악마의 쐐기·번개",
+    "icon": "T_Pack_RandomMod_12",
+    "rarity": 5,
+    "pack": 350033
+  },
+  {
+    "id": 110065,
+    "name": "메피스토 악마의 쐐기·물",
+    "icon": "T_Pack_RandomMod_13",
+    "rarity": 5,
+    "pack": 350034
+  },
+  {
+    "id": 110066,
+    "name": "메피스토 악마의 쐐기·빛",
+    "icon": "T_Pack_RandomMod_14",
+    "rarity": 5,
+    "pack": 350035
+  },
+  {
+    "id": 110067,
+    "name": "메피스토 악마의 쐐기·어둠",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5,
+    "pack": 350036
   },
   {
     "id": 120001,

@@ -7921,7 +7921,8 @@
       {
         "id": 11012501,
         "content": "<W>Oui... c’est bien... serre fort la garde de ton épée. Voilà, comme ça. Maintenant, vise sa gorge...</>",
-        "voice": "story/1002/110125/1B919272"
+        "voice": "story/1002/110125/1B919272",
+        "speakerName": "???"
       },
       {
         "id": 11012505,
@@ -7932,7 +7933,8 @@
       {
         "id": 11012509,
         "content": "<W>Oui... renonce à cette raison inutile, et suis ma voix...</>",
-        "voice": "story/1002/110125/1B9193C2"
+        "voice": "story/1002/110125/1B9193C2",
+        "speakerName": "???"
       },
       {
         "id": 11012603,
@@ -8313,18 +8315,21 @@
         "id": 11012435,
         "content": "<W>Ta tête te fait mal, pas vrai ? Écoute... Les paroles de cette folle grouillent dans ton crâne comme des sangsues affamées, rongeant ton crâne, suçotant ta cervelle.</>",
         "voice": "story/1002/110124/1B91879E",
+        "speakerName": "???",
         "next": 11012436
       },
       {
         "id": 11012436,
         "content": "<W>Regarde. Dans ta main, ton épée... oui, ta fidèle lame. La garde est encore tiède de ta paume. Tu connais par cœur la sensation, la chair qui cède, la résistance infime quand l’acier s’enfonce.</>",
         "voice": "story/1002/110124/1B9187C8",
+        "speakerName": "???",
         "next": 11012437
       },
       {
         "id": 11012437,
         "content": "<W>Un geste, et tu pourrais lui trancher la gorge. Sa bouche immonde ne vomirait plus que des gargouillis de douleur.</>",
         "voice": "story/1002/110124/1B9187F2",
+        "speakerName": "???",
         "next": 11012438
       },
       {
@@ -8370,12 +8375,14 @@
         "id": 11012442,
         "content": "<W>Je suis ton plus ancien instinct, l’élan qui sommeille en toi. Ne me rejette pas. C’est moi qui t’ai donné ta force, celle qui t’a rendu invincible au combat.</>",
         "voice": "story/1002/110124/1B9188C4",
+        "speakerName": "???",
         "next": 11012443
       },
       {
         "id": 11012443,
         "content": "<W>Sors ton épée. Cette lame acérée qui n’attend que ça.</>",
         "voice": "story/1002/110124/1B9188EE",
+        "speakerName": "???",
         "options": [
           {
             "id": 11012444,
@@ -8400,12 +8407,14 @@
         "id": 11012447,
         "content": "<W>Ne tergiverse plus ! Ton épée t’appelle ! Elle réclame la douce ivresse que seule la chair et le sang peuvent lui offrir.</>",
         "voice": "story/1002/110124/1B918996",
+        "speakerName": "???",
         "next": 11012448
       },
       {
         "id": 11012448,
         "content": "<W>Dépêche-toi ! Fais-la taire à jamais !</>",
         "voice": "story/1002/110124/1B9189C0",
+        "speakerName": "???",
         "options": [
           {
             "id": 11012449,
@@ -9017,7 +9026,8 @@
       {
         "id": 11012501,
         "content": "<W>Oui... c’est bien... serre fort la garde de ton épée. Voilà, comme ça. Maintenant, vise sa gorge...</>",
-        "voice": "story/1002/110125/1B919272"
+        "voice": "story/1002/110125/1B919272",
+        "speakerName": "???"
       },
       {
         "id": 11012505,
@@ -9028,7 +9038,8 @@
       {
         "id": 11012509,
         "content": "<W>Oui... renonce à cette raison inutile, et suis ma voix...</>",
-        "voice": "story/1002/110125/1B9193C2"
+        "voice": "story/1002/110125/1B9193C2",
+        "speakerName": "???"
       },
       {
         "id": 11012603,
@@ -9409,18 +9420,21 @@
         "id": 11012435,
         "content": "<W>Ta tête te fait mal, pas vrai ? Écoute... Les paroles de cette folle grouillent dans ton crâne comme des sangsues affamées, rongeant ton crâne, suçotant ta cervelle.</>",
         "voice": "story/1002/110124/1B91879E",
+        "speakerName": "???",
         "next": 11012436
       },
       {
         "id": 11012436,
         "content": "<W>Regarde. Dans ta main, ton épée... oui, ta fidèle lame. La garde est encore tiède de ta paume. Tu connais par cœur la sensation, la chair qui cède, la résistance infime quand l’acier s’enfonce.</>",
         "voice": "story/1002/110124/1B9187C8",
+        "speakerName": "???",
         "next": 11012437
       },
       {
         "id": 11012437,
         "content": "<W>Un geste, et tu pourrais lui trancher la gorge. Sa bouche immonde ne vomirait plus que des gargouillis de douleur.</>",
         "voice": "story/1002/110124/1B9187F2",
+        "speakerName": "???",
         "next": 11012438
       },
       {
@@ -9466,12 +9480,14 @@
         "id": 11012442,
         "content": "<W>Je suis ton plus ancien instinct, l’élan qui sommeille en toi. Ne me rejette pas. C’est moi qui t’ai donné ta force, celle qui t’a rendu invincible au combat.</>",
         "voice": "story/1002/110124/1B9188C4",
+        "speakerName": "???",
         "next": 11012443
       },
       {
         "id": 11012443,
         "content": "<W>Sors ton épée. Cette lame acérée qui n’attend que ça.</>",
         "voice": "story/1002/110124/1B9188EE",
+        "speakerName": "???",
         "options": [
           {
             "id": 11012444,
@@ -9496,12 +9512,14 @@
         "id": 11012447,
         "content": "<W>Ne tergiverse plus ! Ton épée t’appelle ! Elle réclame la douce ivresse que seule la chair et le sang peuvent lui offrir.</>",
         "voice": "story/1002/110124/1B918996",
+        "speakerName": "???",
         "next": 11012448
       },
       {
         "id": 11012448,
         "content": "<W>Dépêche-toi ! Fais-la taire à jamais !</>",
         "voice": "story/1002/110124/1B9189C0",
+        "speakerName": "???",
         "options": [
           {
             "id": 11012449,
@@ -11175,7 +11193,8 @@
         "id": 20005505,
         "content": "<I>Groin, groin !</>",
         "voice": "story/2001/200055/3214E92A",
-        "npc": 200086
+        "npc": 200086,
+        "speakerName": "Filbert"
       }
     ]
   },
@@ -11208,6 +11227,121 @@
       26183
     ],
     "talks": [
+      {
+        "id": 10109701,
+        "options": [
+          {
+            "id": 10109702,
+            "content": "<I>La voilà, tiens.</>",
+            "next": 10109703
+          }
+        ]
+      },
+      {
+        "id": 10109703,
+        "content": "Tu peux l’ouvrir ?",
+        "voice": "story/1002/101097/194EFEFC",
+        "npc": 200006,
+        "next": 10109704
+      },
+      {
+        "id": 10109704,
+        "content": "C’est...",
+        "voice": "story/1002/101097/194EFF26",
+        "npc": 100001,
+        "next": 10109705
+      },
+      {
+        "id": 10109705,
+        "content": "C’est un appareil photo, un trésor inestimable.",
+        "voice": "story/1002/101097/194EFF50",
+        "npc": 200006,
+        "next": 10109706
+      },
+      {
+        "id": 10109706,
+        "content": "Mon père me l’avait offert pour mes quatre ans. Cette année-là, il avait réussi à faire pousser de magnifiques clochettes du Lac du Deuil. Un riche citadin de la cité intérieure, émerveillé, lui avait offert cet appareil en remerciement. Papa me l’avait donné comme cadeau d’anniversaire.",
+        "voice": "story/1002/101097/194EFF7A",
+        "npc": 200006,
+        "next": 10109707
+      },
+      {
+        "id": 10109707,
+        "content": "Mais je l’aimais trop pour oser m’en servir. Je croyais qu’en l’enterrant, il pousserait... et que nous aurions plein d’appareils photo à la récolte. Alors, notre famille deviendrait riche, et mes parents n’auraient plus besoin de se tuer à la tâche.",
+        "voice": "story/1002/101097/194EFFA4",
+        "npc": 200006,
+        "next": 10109708
+      },
+      {
+        "id": 10109708,
+        "content": "Alors je l’ai caché là, comme si je l’avais « planté »... Quelle enfant naïve j’étais, à ce moment-là.",
+        "voice": "story/1002/101097/194EFFCE",
+        "npc": 200006,
+        "next": 10109709
+      },
+      {
+        "id": 10109709,
+        "content": "Plus tard, quand mes parents l’ont découvert, ils n’ont pas été fâchés. Ils m’ont dit : « Alors, garde-le enterré jusqu’à ton passage à l’âge adulte. Ce sera ton cadeau pour l’avenir. »",
+        "voice": "story/1002/101097/194EFFF8",
+        "npc": 200006,
+        "options": [
+          {
+            "id": 10109710,
+            "content": "<I>C’était une idée adorable.</>",
+            "next": 10109712
+          },
+          {
+            "id": 10109711,
+            "content": "<I>On fait tous des choses un peu idiotes, quand on est enfant.</>",
+            "next": 10109712
+          }
+        ]
+      },
+      {
+        "id": 10109712,
+        "content": "{nickname}... Merci pour ces jours passés ensemble. Je n’ai rien de précieux à t’offrir... Mais prends cet appareil photo, je voudrais qu’il soit ton cadeau.",
+        "voice": "story/1002/101097/194F0022",
+        "npc": 200006,
+        "options": [
+          {
+            "id": 10109713,
+            "content": "<I>Mais c’est ton trésor ! Je ne peux pas accepter, c’est trop précieux.</>",
+            "next": 10109715
+          },
+          {
+            "id": 10109714,
+            "content": "<I>Tu m’as déjà offert un cadeau... Cette fleur. Elle n’a pas de prix.</>",
+            "next": 10109715
+          }
+        ]
+      },
+      {
+        "id": 10109715,
+        "content": "Mes yeux n’en auront plus l’usage... Mais ton voyage est encore long.",
+        "voice": "story/1002/101097/194F004C",
+        "npc": 200006,
+        "next": 10109716
+      },
+      {
+        "id": 10109716,
+        "content": "Alors, regarde ce monde à ma place.",
+        "voice": "story/1002/101097/194F0076",
+        "npc": 200006,
+        "next": 10109717
+      },
+      {
+        "id": 10109717,
+        "content": "...",
+        "voice": "story/1002/101097/194F00A0",
+        "npc": 100001,
+        "next": 10109718
+      },
+      {
+        "id": 10109718,
+        "content": "Puisque nous sommes là, promenons-nous encore un peu sur le lac, veux-tu ?",
+        "voice": "story/1002/101097/194F00CA",
+        "npc": 200006
+      },
       {
         "id": 51007930,
         "content": "Brumelac n’a aucune attraction. Il doit bien y avoir un marché inexploité quelque part. Je trouverai la solution... tôt ou tard...",
@@ -12078,6 +12212,143 @@
         "content": "{nickname}, as-tu encore quelque chose à me demander ? N’hésite pas. Je te répondrai dans la mesure du possible.",
         "npc": 210115,
         "next": 12025425
+      },
+      {
+        "id": 12025425,
+        "options": [
+          {
+            "id": 12025402,
+            "content": "<I>Vous avez l’air de quelqu’un d’important.</>",
+            "next": 12025403
+          },
+          {
+            "id": 12025406,
+            "content": "<I>Quel genre de guilde est Éternel Printemps ?</>",
+            "next": 12025407
+          },
+          {
+            "id": 12025411,
+            "content": "<I>Le Fléau de Zhuyin peut-il vraiment être résolu ?</>",
+            "next": 12025412
+          },
+          {
+            "id": 12025417,
+            "content": "<I>Comment puis-je me rendre au marché noir pour récupérer les outils ?</>",
+            "next": 12025418
+          },
+          {
+            "id": 12025422,
+            "content": "<I>Je n’ai plus de questions.</>",
+            "next": 12025423
+          }
+        ]
+      },
+      {
+        "id": 12025403,
+        "content": "Hm... ce ne sont que des titres sans réelle substance. J’ai depuis longtemps dépassé l’âge où l’on se réjouit de la gloire ou de profits éphémères.",
+        "npc": 210115,
+        "next": 12025404
+      },
+      {
+        "id": 12025407,
+        "content": "Son histoire est aussi ancienne que celle des Tisse-Étoiles. Elle remonte aux premiers jours de la fondation de Huaxu.",
+        "npc": 210115,
+        "next": 12025408
+      },
+      {
+        "id": 12025412,
+        "content": "Plutôt que de te donner une réponse toute faite, je préfère croire que tout dépend de l’action humaine.",
+        "npc": 210115,
+        "next": 12025413
+      },
+      {
+        "id": 12025418,
+        "content": "Lors d’une première visite, il est impératif de passer par la grotte côtière, en portant à la ceinture un pendentif bien précis. S’ils reconnaissent ce signe, ils sauront que tu es des leurs.",
+        "npc": 210115,
+        "next": 12025419
+      },
+      {
+        "id": 12025423,
+        "content": "{nickname}, tu pars déjà ?",
+        "npc": 210115,
+        "next": 12025424
+      },
+      {
+        "id": 12025404,
+        "content": "Patronne Zhiliu... puis-je me permettre une question indiscrète ? Quel âge avez-vous ?",
+        "npc": 100001,
+        "next": 12025405
+      },
+      {
+        "id": 12025408,
+        "content": "À l’origine, Éternel Printemps n’était qu’une chambre de commerce parmi d’autres. Mais avec le temps, elle a fini par exercer une influence comparable à celle d’une véritable guilde des Tisse-Étoiles.",
+        "npc": 210115,
+        "next": 12025409
+      },
+      {
+        "id": 12025413,
+        "content": "Cela dit... même si le Fléau de Zhuyin est redoutable, les membres d’Éternel Printemps ont effectué de longs préparatifs. Et désormais, tu es à nos côtés. Pour toutes ces raisons, je pense que la situation peut être maîtrisée.",
+        "npc": 210115,
+        "next": 12025414
+      },
+      {
+        "id": 12025419,
+        "content": "Pourquoi ce détour par la grotte ? Impossible d’emprunter la route principale ?",
+        "npc": 100001,
+        "next": 12025420
+      },
+      {
+        "id": 12025424,
+        "content": "Prends garde à toi. Je t’attendrai ici, à ton retour.",
+        "npc": 210115
+      },
+      {
+        "id": 12025405,
+        "content": "<I>Hmm...</> voilà une question dangereuse. Camilla ne t’a donc jamais enseigné ce principe ? Gardons plutôt une part de mystère entre nous.",
+        "npc": 210115,
+        "next": 12025425
+      },
+      {
+        "id": 12025409,
+        "content": "Plus tard, l’État l’a intégrée à son administration. Éternel Printemps s’est alors vu confier de nombreuses fonctions publiques : délivrer des permis de commerce, accorder des prêts... et bien davantage encore.",
+        "npc": 210115,
+        "next": 12025410
+      },
+      {
+        "id": 12025414,
+        "content": "Vous semblez très sûre de vous.",
+        "npc": 100001,
+        "next": 12025415
+      },
+      {
+        "id": 12025420,
+        "content": "Comme je l’ai dit, cela fait partie du code.",
+        "npc": 210115,
+        "next": 12025421
+      },
+      {
+        "id": 12025410,
+        "content": "Pour les détails précis, tu peux t’adresser à ma secrétaire, Wangchun. Elle saura t’expliquer tout cela en profondeur.",
+        "npc": 210115,
+        "next": 12025425
+      },
+      {
+        "id": 12025415,
+        "content": "Y a-t-il quelque chose que vous n’avez jamais réussi à accomplir ? Cela m’intrigue.",
+        "npc": 100001,
+        "next": 12025416
+      },
+      {
+        "id": 12025421,
+        "content": "Nombreux sont ceux qui tentent de s’infiltrer au marché noir sous divers prétextes. Sans un moyen fiable d’identifier les initiés, leur chef aurait bien du mal à maintenir l’ordre.",
+        "npc": 210115,
+        "next": 12025425
+      },
+      {
+        "id": 12025416,
+        "content": "<I>Hmm...</> à ton avis ?",
+        "npc": 210115,
+        "next": 12025425
       }
     ]
   },
@@ -12096,6 +12367,114 @@
       {
         "id": 12025502,
         "content": "La Patronne Zhiliu est habituellement très occupée, toujours prise par les affaires, et elle a rarement un moment de répit. Si jamais quelque chose vous semble manquer ou vous cause le moindre désagrément, venez me voir : je m’en chargerai personnellement.",
+        "npc": 210116,
+        "next": 12025521
+      },
+      {
+        "id": 12025521,
+        "options": [
+          {
+            "id": 12025503,
+            "content": "<I>Quel genre de guilde est Éternel Printemps ?</>",
+            "next": 12025504
+          },
+          {
+            "id": 12025508,
+            "content": "<I>Le Décret d’Interdiction a-t-il eu un fort impact sur la population ?</>",
+            "next": 12025509
+          },
+          {
+            "id": 12025512,
+            "content": "<I>Comment est la Patronne Zhiliu, au juste ?</>",
+            "next": 12025513
+          },
+          {
+            "id": 12025519,
+            "content": "<I>Je n’ai plus de questions.</>",
+            "next": 12025520
+          }
+        ]
+      },
+      {
+        "id": 12025504,
+        "content": "Non seulement à Port-des-Brumes, mais dans toute Haojing, Éternel Printemps est la plus grande des chambres de commerce.",
+        "npc": 210116,
+        "next": 12025505
+      },
+      {
+        "id": 12025509,
+        "content": "Il a certes causé quelques désagréments... mais c’était inévitable. Il vise principalement les régions intérieures affectées par les Bi’an obscurs.",
+        "npc": 210116,
+        "next": 12025510
+      },
+      {
+        "id": 12025513,
+        "content": "Oh, la patronne est... incroyable ! Peu importe la difficulté, elle trouve toujours une solution, et sans jamais perdre son sang-froid.",
+        "npc": 210116,
+        "next": 12025514
+      },
+      {
+        "id": 12025520,
+        "content": "Si jamais vous avez besoin de quoi que ce soit, revenez me voir. Je serai toujours ici pour vous assister.",
+        "npc": 210116
+      },
+      {
+        "id": 12025505,
+        "content": "La vie des habitants de Huaxu en dépend profondément : qu’il s’agisse de produits du quotidien, de marchandises rares venues d’outre-mer, de l’acheminement des épices, ou même des démarches pour devenir Tisse-Étoiles... tout passe par Éternel Printemps.",
+        "npc": 210116,
+        "next": 12025506
+      },
+      {
+        "id": 12025510,
+        "content": "Après tout, la sécurité de chacun est la priorité absolue d’Éternel Printemps. Je suis convaincue que, lorsque la patronne aura trouvé un moyen de sceller de nouveau Zhuyin, la vie reprendra rapidement son cours normal.",
+        "npc": 210116,
+        "next": 12025511
+      },
+      {
+        "id": 12025514,
+        "content": "Elle est le Haut Chancelier de Longyuan, assiste le Bureau de la Fortune Céleste, et dirige Éternel Printemps... Rien que d’y penser, on peine à imaginer tout ce qu’elle doit gérer. À la place de quiconque d’autre, le poids serait déjà écrasant.",
+        "npc": 210116,
+        "next": 12025515
+      },
+      {
+        "id": 12025506,
+        "content": "Comme vous pouvez le constater, les étals devant nous proposent des marchandises venues des quatre coins du monde. Vous êtes libre d’y faire vos achats. Toutes les transactions sont garanties par le Bureau de la Fortune Céleste et les Neuf Chapitres de Dafeng.",
+        "npc": 210116,
+        "next": 12025507
+      },
+      {
+        "id": 12025511,
+        "content": "Avec votre aide, ce jour arrivera sans doute bien plus tôt.",
+        "npc": 210116,
+        "next": 12025521
+      },
+      {
+        "id": 12025515,
+        "content": "Mais pour elle, tout cela semble aller de soi. Chaque fois que je la vois, elle est calme, assurée, parfaitement maîtresse de la situation. Rien que sa présence apaise les esprits.",
+        "npc": 210116,
+        "next": 12025516
+      },
+      {
+        "id": 12025507,
+        "content": "Et si vous souhaitez devenir Tisse-Étoiles, un guichet se trouve juste à côté pour déposer votre dossier. Nous proposons de nombreux programmes de soutien : prêts de départ, formations complètes à la navigation commerciale... le tout sans frais.",
+        "npc": 210116,
+        "next": 12025521
+      },
+      {
+        "id": 12025516,
+        "content": "Ah... je me rends compte que je parle sans m’arrêter.",
+        "npc": 210116,
+        "next": 12025517
+      },
+      {
+        "id": 12025517,
+        "content": "C’est un peu embarrassant à admettre, mais... j’admire profondément la patronne.",
+        "npc": 210116,
+        "next": 12025518
+      },
+      {
+        "id": 12025518,
+        "content": "Elle semble d’ailleurs vous porter une attention toute particulière. Or, les invités de la patronne sont les invités d’Éternel Printemps. Alors n’hésitez pas : si vous avez besoin de quoi que ce soit, je ferai tout mon possible pour vous aider.",
         "npc": 210116,
         "next": 12025521
       }
@@ -12126,11 +12505,13 @@
       {
         "id": 12025604,
         "content": "Alors, petit larbin... tu admires l’œuvre magistrale de ton Roi Démon ?",
+        "speakerName": "Snow",
         "next": 12025605
       },
       {
         "id": 12025605,
         "content": "Si tu veux, je peux aussi te dessiner un magnifique graffiti Luno sur le visage ! Après tout, tant que ça vient de mon petit larbin, aucun souhait n’est trop extravagant !",
+        "speakerName": "Snow",
         "next": 12025606
       },
       {
@@ -12199,6 +12580,165 @@
         "content": "De l’écorce de mandarine affinée cent ans, tout juste infusée. Humecte-toi la gorge, puis raconte-moi ton voyage.",
         "npc": 210119,
         "next": 12025828
+      },
+      {
+        "id": 12025828,
+        "options": [
+          {
+            "id": 12025803,
+            "content": "<I>Pourquoi collectionnez-vous autant d’antiquités ?</>",
+            "next": 12025804
+          },
+          {
+            "id": 12025809,
+            "content": "<I>On dit que vous êtes d’une avidité sans bornes.</>",
+            "next": 12025810
+          },
+          {
+            "id": 12025816,
+            "content": "<I>Qui est Maître Gongshang ?</>",
+            "next": 12025817
+          },
+          {
+            "id": 12025821,
+            "content": "<I>Êtes-vous allié à la Patronne Zhiliu ?</>",
+            "next": 12025822
+          },
+          {
+            "id": 51155701,
+            "content": "<I>À propos des « Coups de Grâce » du Marché Voilé...</>",
+            "next": 51155702
+          },
+          {
+            "id": 12025826,
+            "content": "<I>Je vais y aller.</>",
+            "next": 12025827
+          }
+        ]
+      },
+      {
+        "id": 12025804,
+        "content": "Le désir est une chose profonde. Vouloir, c’est chercher à posséder — c’est l’instinct le plus sincère de toute forme de vie.",
+        "npc": 210119,
+        "next": 12025805
+      },
+      {
+        "id": 12025810,
+        "content": "Sans bornes ? J’aime beaucoup ce qualificatif.",
+        "npc": 210119,
+        "next": 12025811
+      },
+      {
+        "id": 12025817,
+        "content": "Un prodige excentrique de la Secte Jishu... que je soutiens financièrement.",
+        "npc": 210119,
+        "next": 12025818
+      },
+      {
+        "id": 12025822,
+        "content": "Si tu appelles « alliance » une relation fondée sur l’intérêt mutuel... alors oui.",
+        "npc": 210119,
+        "next": 12025823
+      },
+      {
+        "id": 51155702,
+        "content": "Ha ha ha... J’ai entendu parler de cette histoire de « Coup de Grâce ». Inutile de t’excuser. Après tout... ce genre d’anecdote savoureuse ne court pas les rues.",
+        "npc": 210119
+      },
+      {
+        "id": 12025827,
+        "content": "Va. Je ne te raccompagne pas.",
+        "npc": 210119
+      },
+      {
+        "id": 12025805,
+        "content": "Et puis, les antiquités ne sont pas de simples objets inertes. Chacune a vécu dans l’histoire de quelqu’un. Dire qu’elles portent en elles des siècles entiers n’a rien d’exagéré.",
+        "npc": 210119,
+        "next": 12025806
+      },
+      {
+        "id": 12025811,
+        "content": "Si je n’étais pas avide, ce serait un gâchis. D’innombrables trésors et secrets resteraient enfouis dans le passé, à jamais oubliés.",
+        "npc": 210119,
+        "next": 12025812
+      },
+      {
+        "id": 12025818,
+        "content": "On dit qu’un homme sans obsession n’est pas digne de compagnie. Et lui est, de tous ceux que j’ai rencontrés, le plus obsessionnel... et le plus déviant.",
+        "npc": 210119,
+        "next": 12025819
+      },
+      {
+        "id": 12025823,
+        "content": "Et si un jour elle ne pouvait plus vous offrir ce que vous cherchez... la trahiriez-vous ?",
+        "npc": 100001,
+        "next": 12025824
+      },
+      {
+        "id": 12025806,
+        "content": "C’est... assez abstrait. Pas facile à saisir.",
+        "npc": 100001,
+        "next": 12025807
+      },
+      {
+        "id": 12025812,
+        "content": "Refuser le désir, c’est nier la loi la plus simple de ce monde : le désir fait avancer l’homme, il est le moteur même de l’évolution.",
+        "npc": 210119,
+        "next": 12025813
+      },
+      {
+        "id": 12025819,
+        "content": "L’excentricité ne me dérange pas. La médiocrité, si. Son talent en matière de mécanismes est sans égal. S’il n’avait pas méprisé les méthodes du Bureau des Travaux, il n’aurait jamais quitté leurs rangs... ni eu besoin de moi.",
+        "npc": 210119,
+        "next": 12025820
+      },
+      {
+        "id": 12025824,
+        "content": "Ha ha ! Voilà une question bien naïve, {性别:mon jeune ami|ma jeune amie}. Il n’existe ni amis éternels, ni ennemis éternels. Les positions changent sans cesse. Parler de trahison n’a donc guère de sens.",
+        "npc": 210119,
+        "next": 12025825
+      },
+      {
+        "id": 12025807,
+        "content": "Cette dague, par exemple : elle a repoussé des envahisseurs, assassiné un souverain, puis suivi son maître dans la mort.\nEt ce bol fêlé : il a accueilli un voyageur, vu partir un être cher, avant d’être renversé lors d’un pari littéraire.",
+        "npc": 210119,
+        "next": 12025808
+      },
+      {
+        "id": 12025813,
+        "content": "Tout le monde ne partage pas ce point de vue.",
+        "npc": 100001,
+        "next": 12025814
+      },
+      {
+        "id": 12025820,
+        "content": "Un homme comme lui pourrait m’insulter en face que je n’en rirais que davantage.",
+        "npc": 210119,
+        "next": 12025828
+      },
+      {
+        "id": 12025825,
+        "content": "Mais sois rassuré : ta Patronne Zhiliu est une femme avisée. Elle sait lier les autres à elle par l’intérêt, solidement, sur un même navire. Le jour que tu évoques n’arrivera probablement jamais.",
+        "npc": 210119,
+        "next": 12025828
+      },
+      {
+        "id": 12025808,
+        "content": "Quand je touche ces objets, j’ai l’impression que nous ne sommes pas seuls ici.\nSept ou huit scènes, une douzaine de visages, des siècles entiers réunis dans une même pièce. Voilà pourquoi je les collectionne. Et pourquoi je ne m’arrêterai jamais.",
+        "npc": 210119,
+        "next": 12025828
+      },
+      {
+        "id": 12025814,
+        "content": "Peu importe. Tu peux appeler cela une justification éhontée. Moi, j’y vois simplement une fidélité à soi-même, une liberté assumée.",
+        "npc": 210119,
+        "next": 12025815
+      },
+      {
+        "id": 12025815,
+        "content": "Beaucoup rêvent de devenir comme moi... mais n’osent pas l’être. À force de se cacher derrière règles et principes, ils ne deviennent même plus eux-mêmes. Ils préfèrent m’insulter de loin. Pathétique.",
+        "npc": 210119,
+        "next": 12025802
       }
     ]
   },
@@ -12222,11 +12762,13 @@
       {
         "id": 12025903,
         "content": "Rassurez-vous, rassurez-vous ! Ici, on est entre amis ! Je veillerai sur elle comme sur la prunelle de mes yeux, pas un cheveu ne sera déplacé, je vous le jure !",
+        "speakerName": "Marchand du marché noir",
         "next": 12025904
       },
       {
         "id": 12025904,
-        "content": "Oh, par pitié, je vous en supplie... allez donc voir Maître Qiu. Ne le faites pas attendre trop longtemps. Tant que vous restez ici, elle n’arrivera pas à se reposer tranquillement."
+        "content": "Oh, par pitié, je vous en supplie... allez donc voir Maître Qiu. Ne le faites pas attendre trop longtemps. Tant que vous restez ici, elle n’arrivera pas à se reposer tranquillement.",
+        "speakerName": "Marchand du marché noir"
       }
     ]
   },
@@ -12240,6 +12782,143 @@
         "id": 12026001,
         "content": "Alors, honorable {性别:apprenti|apprentie}, qu’est-ce que tu souhaites me demander ?",
         "npc": 210121,
+        "next": 12026025
+      },
+      {
+        "id": 12026025,
+        "options": [
+          {
+            "id": 12026002,
+            "content": "<I>Peux-tu m’expliquer à nouveau ce qu’est la Poussière-corrompue ?</>",
+            "next": 12026003
+          },
+          {
+            "id": 12026008,
+            "content": "<I>Peux-tu réexpliquer comment utiliser le Nexus mécanique ?</>",
+            "next": 12026009
+          },
+          {
+            "id": 12026016,
+            "content": "<I>Pourquoi la Secte Jishu a-t-elle décliné ?</>",
+            "next": 12026017
+          },
+          {
+            "id": 12026023,
+            "content": "<I>J’ai encore beaucoup de questions... laisse-moi réfléchir.</>",
+            "next": 12026024
+          }
+        ]
+      },
+      {
+        "id": 12026003,
+        "content": "Ah... autrefois, une mémoire infaillible était la base même pour entrer dans la Secte Jishu. Les esprits trop lents étaient recalés dès l’enfance.",
+        "npc": 210121,
+        "next": 12026004
+      },
+      {
+        "id": 12026009,
+        "content": "Hmm ? J’ai rédigé des centaines de pages de manuel, conservées avec le Nexus mécanique chez Qin Qiu. Il ne vous les a pas transmises ?",
+        "npc": 210121,
+        "next": 12026010
+      },
+      {
+        "id": 12026017,
+        "content": "Dans la Secte Jishu, la première chose que l’on apprend, c’est à observer le monde avec un esprit dialectique. Dis-moi donc : qu’appelles-tu un déclin ?",
+        "npc": 210121,
+        "next": 12026018
+      },
+      {
+        "id": 12026024,
+        "content": "Tu ne lâches pas prise tant que tu n’as pas compris le fond des choses... voilà un bon potentiel. Bien. J’ai à faire, et toi, n’oublie pas tes exercices quotidiens.",
+        "npc": 210121
+      },
+      {
+        "id": 12026004,
+        "content": "Enfin... inutile de s’acharner. On ne force pas le talent. Ta soif de savoir n’est pas chose commune. Je vais donc te l’expliquer une fois encore.",
+        "npc": 210121,
+        "next": 12026005
+      },
+      {
+        "id": 12026010,
+        "content": "Non. Il m’a simplement envoyé te poser la question.",
+        "npc": 100001,
+        "next": 12026011
+      },
+      {
+        "id": 12026018,
+        "content": "Nos créations sont disséminées dans tout Huaxu, du sud au nord. Quel port n’emploie pas des chevaux mécaniques pour le transport des marchandises ? Et le Bureau des Travaux demeure l’un des trois grands bureaux de l’Empire. Appelles-tu cela un déclin ?",
+        "npc": 210121,
+        "next": 12026019
+      },
+      {
+        "id": 12026005,
+        "content": "L’air est imprégné d’une substance appelée Taixu, invisible et intangible. Et naturellement, tu te demandes : puisqu’on ne peut ni la voir ni la toucher, comment être certain qu’elle existe ?",
+        "npc": 210121,
+        "next": 12026006
+      },
+      {
+        "id": 12026011,
+        "content": "... Ce vieux renard. Je le savais. Il s’est sans doute dit que tu ne lirais pas un manuel aussi long, et qu’il était inutile de te le donner. Comme si {性别:un apprenti d’honneur de la Secte Jishu pouvait être aussi peu sérieux|une apprentie d’honneur de la Secte Jishu pouvait être aussi peu sérieuse} !",
+        "npc": 210121,
+        "next": 12026012
+      },
+      {
+        "id": 12026019,
+        "content": "Euh... mais n’est-ce pas toi qui m’as dit que la Secte Jishu peinait à recruter de nouveaux disciples ?",
+        "npc": 100001,
+        "next": 12026020
+      },
+      {
+        "id": 12026006,
+        "content": "Nous, chercheurs, disposons de méthodes pour l’observer indirectement. Et la Poussière-corrompue en est la preuve la plus manifeste—",
+        "npc": 210121,
+        "next": 12026007
+      },
+      {
+        "id": 12026012,
+        "content": "Peu importe. Je vais faire simple. C’est très facile : tu appuies sur ce bouton, tu vises la Poussière-corrompue... et tu aspires. Voilà.",
+        "npc": 210121,
+        "next": 12026013
+      },
+      {
+        "id": 12026020,
+        "content": "Bien vu. Voilà l’autre facette du raisonnement dialectique.",
+        "npc": 210121,
+        "next": 12026021
+      },
+      {
+        "id": 12026007,
+        "content": "Sous l’influence du Fléau de Zhuyin, le Taixu présent dans l’air se transforme, se solidifie, et devient cette fine poudre qui se dépose à la surface des objets. Cette substance, nocive pour la plupart des formes de vie, voilà ce que nous appelons la Poussière-corrompue. Est-ce plus clair, à présent ?",
+        "npc": 210121,
+        "next": 12026025
+      },
+      {
+        "id": 12026013,
+        "content": "C’est tout ?",
+        "npc": 100001,
+        "next": 12026014
+      },
+      {
+        "id": 12026021,
+        "content": "Le monde a perdu son désir d’apprendre. Plus personne ne souhaite rejoindre la Secte Jishu. Quant aux vieillards du Bureau des Travaux, ils se contentent de travailler en vase clos, sans plus chercher à comprendre les lois ultimes des choses... voilà le véritable déclin.",
+        "npc": 210121,
+        "next": 12026022
+      },
+      {
+        "id": 12026014,
+        "content": "C’est tout. Tu t’attendais à ce que je t’explique aussi les principes théoriques, peut-être ?",
+        "npc": 210121,
+        "next": 12026015
+      },
+      {
+        "id": 12026022,
+        "content": "Alors, pourquoi la Secte Jishu a-t-elle décliné ? À cause de la Secte Xuanheng. Ils redoutent que la puissance née du savoir échappe à leur contrôle. Ils ont donc affaibli la Secte Jishu. C’est aussi simple que cela.",
+        "npc": 210121,
+        "next": 12026025
+      },
+      {
+        "id": 12026015,
+        "content": "Non, non, ça me va très bien comme ça. Merci, maître !",
         "next": 12026025
       }
     ]
@@ -12302,6 +12981,67 @@
       {
         "id": 12026202,
         "content": "L’attitude de Zhiliu ne diffère guère de l’ordinaire. Et pourtant, vous croyez percevoir chez elle une fatigue subtile... Est-ce seulement votre imagination ?",
+        "next": 12026213
+      },
+      {
+        "id": 12026213,
+        "options": [
+          {
+            "id": 12026203,
+            "content": "<I>Patronne Zhiliu, quels sont vos projets à présent ?</>",
+            "next": 12026204
+          },
+          {
+            "id": 12026207,
+            "content": "<I>La crise qu’a traversée Éternel Printemps était vraiment dangereuse.</>",
+            "next": 12026208
+          },
+          {
+            "id": 12026211,
+            "content": "<I>...</>",
+            "next": 12026212
+          }
+        ]
+      },
+      {
+        "id": 12026204,
+        "content": "Grâce aux Écailles de Zhuyin que tu as rapportées, les préparatifs pour le scellement sont achevés. Je dois désormais m’y consacrer pleinement. Il se peut donc que je ne puisse pas vous recevoir pendant un temps. Permets-moi de m’en excuser par avance.",
+        "npc": 210123,
+        "next": 12026205
+      },
+      {
+        "id": 12026208,
+        "content": "En effet. Et tu y as largement contribué. Je te remercie, {nickname}.",
+        "npc": 210123,
+        "next": 12026209
+      },
+      {
+        "id": 12026212,
+        "content": "Je vais maintenant m’occuper des dernières étapes du scellement de Zhuyin. Tu es libre pour le moment : va donc te promener. Tout ce que tu dépenseras sera porté à mon compte. N’aie aucune retenue.",
+        "npc": 210123
+      },
+      {
+        "id": 12026205,
+        "content": "Êtes-vous certaine de ne pas avoir besoin de mon aide ?",
+        "npc": 100001,
+        "next": 12026206
+      },
+      {
+        "id": 12026209,
+        "content": "Je n’ai pas fait grand-chose. C’est vous qui avez su rassembler tout le monde, et réagir avec une telle rapidité.",
+        "npc": 100001,
+        "next": 12026210
+      },
+      {
+        "id": 12026206,
+        "content": "Hé hé... ton intention est louable. Mais je ne peux pas te laisser tout assumer seul.\nSi une situation réellement épineuse se présente, je ferai de nouveau appel à vous.",
+        "npc": 210123,
+        "next": 12026213
+      },
+      {
+        "id": 12026210,
+        "content": "Hé hé... hésiter à chaque pas, craindre d’agir... comment pourrait-on alors répondre aux attentes de tous ?",
+        "npc": 210123,
         "next": 12026213
       }
     ]
@@ -12394,6 +13134,221 @@
       {
         "id": 12026603,
         "content": "Tu peux te promener librement. Considère cet endroit comme ta propre demeure.",
+        "npc": 210127,
+        "next": 12026640
+      },
+      {
+        "id": 12026640,
+        "options": [
+          {
+            "id": 12026604,
+            "content": "<I>En dehors de soigner les gens, que fais-tu pendant ton temps libre ?</>",
+            "next": 12026605
+          },
+          {
+            "id": 12026614,
+            "content": "<I>Ces derniers temps, je ne me sens pas très bien.</>",
+            "next": 12026615
+          },
+          {
+            "id": 12026624,
+            "content": "<I>Depuis que tu es revenue de la Faille de l’Oubli, quelque chose semble te tracasser.</>",
+            "next": 12026625
+          },
+          {
+            "id": 12026632,
+            "content": "<I>Tu viens vraiment d’il y a cent ans ?</>",
+            "next": 12026633
+          },
+          {
+            "id": 12026638,
+            "content": "<I>Je vais y aller.</>",
+            "next": 12026639
+          }
+        ]
+      },
+      {
+        "id": 12026605,
+        "content": "Prendre soin des patients occupe la majeure partie de mes journées. Si, par hasard, il m’arrive de voler quelques instants de répit... je relis les ouvrages médicaux que ma sœur a laissés derrière elle.",
+        "npc": 210127,
+        "next": 12026606
+      },
+      {
+        "id": 12026615,
+        "content": "Que se passe-t-il ? As-tu mal quelque part ? Te serais-tu {性别:blessé|blessée} en courant dans Port-des-Brumes ? Donne-moi ta main, je vais examiner cela attentivement.",
+        "npc": 210127,
+        "next": 12026616
+      },
+      {
+        "id": 12026625,
+        "content": "Tu l’as remarqué... Merci de t’en soucier.",
+        "npc": 210127,
+        "next": 12026626
+      },
+      {
+        "id": 12026633,
+        "content": "Oui... Comme je te l’ai déjà expliqué, afin de ralentir l’évolution de ma maladie, ma sœur a scellé mon corps dans le sommeil. Ce n’est que récemment que je me suis éveillée après cent années de torpeur.",
+        "npc": 210127,
+        "next": 12026634
+      },
+      {
+        "id": 12026639,
+        "content": "Va t’occuper de tes affaires. Et prends soin de ta santé.",
+        "npc": 210127
+      },
+      {
+        "id": 12026606,
+        "content": "Mais... c’est encore soigner des gens, non ?",
+        "npc": 100001,
+        "next": 12026607
+      },
+      {
+        "id": 12026616,
+        "content": "Haha... Fushu, tu es vraiment tendue.",
+        "npc": 100001,
+        "next": 12026617
+      },
+      {
+        "id": 12026626,
+        "content": "{nickname}, toi aussi, tu as sans doute des proches qui comptent plus que tout pour toi. Si, par maladresse, tu disais quelque chose qui blessait l’un d’eux... que ferais-tu ?",
+        "npc": 210127,
+        "next": 12026627
+      },
+      {
+        "id": 12026634,
+        "content": "Ce monde te paraît-il étranger, désormais ?",
+        "npc": 100001,
+        "next": 12026635
+      },
+      {
+        "id": 12026607,
+        "content": "Lorsque le malade est devant moi, mon esprit s’agite et peine à se poser. Il m’est alors difficile d’étudier sereinement les liens subtils entre les remèdes. En revanche, ouvrir un livre au hasard, m’attarder sur ses passages obscurs... et soudain comprendre — cette sensation-là est une joie à part entière.",
+        "npc": 210127,
+        "next": 12026608
+      },
+      {
+        "id": 12026617,
+        "content": "Rien de grave, je me réveille juste souvent avec le dos et les épaules endoloris.",
+        "npc": 100001,
+        "next": 12026618
+      },
+      {
+        "id": 12026627,
+        "content": "Quand il s’agit de la famille, aucun conflit n’est impossible à résoudre. Si cela arrivait, je ferais tout pour m’excuser. Je suis {性别:sûr|sûre} qu’elle finirait par me pardonner.",
+        "npc": 100001,
+        "next": 12026628
+      },
+      {
+        "id": 12026635,
+        "content": "Peut-être. À mon réveil, j’avais l’impression que les nuages, les herbes, chaque chose sous le ciel... n’avaient plus rien à voir avec moi.",
+        "npc": 210127,
+        "next": 12026636
+      },
+      {
+        "id": 12026608,
+        "content": "Tu n’as vraiment pas d’autres loisirs ?",
+        "npc": 100001,
+        "next": 12026609
+      },
+      {
+        "id": 12026618,
+        "content": "La santé est une affaire sérieuse. Même les petits maux ne doivent pas être négligés. Je peux t’enseigner les Cinq Jeux des Animaux, une pratique qui assouplit le corps et renforce la vitalité.",
+        "npc": 210127,
+        "next": 12026619
+      },
+      {
+        "id": 12026628,
+        "content": "Et si cette personne n’était plus de ce monde... si tes excuses n’avaient plus d’oreille pour les entendre... que ferais-tu alors ?",
+        "npc": 210127,
+        "next": 12026629
+      },
+      {
+        "id": 12026636,
+        "content": "Mais avec le temps, j’ai fini par rencontrer des {性别:amis|amies} comme toi.",
+        "npc": 210127,
+        "next": 12026637
+      },
+      {
+        "id": 12026609,
+        "content": "Laisse-moi réfléchir... jouer quelques airs au qin, ou passer du temps à m’amuser avec Yunchi. C’étaient là les plaisirs de ma jeunesse.",
+        "npc": 210127,
+        "next": 12026610
+      },
+      {
+        "id": 12026619,
+        "content": "Pour en saisir pleinement l’esprit, cet exercice doit commencer à l’aube, lorsque les coqs chantent et que la nuit n’a pas encore tout à fait cédé sa place. Quand le soleil se lèvera et que la brise du matin effleurera ton visage, tu ressentiras un bien-être profond, du corps comme de l’esprit...",
+        "npc": 210127,
+        "next": 12026620
+      },
+      {
+        "id": 12026629,
+        "content": "Fushu...",
+        "npc": 100001,
+        "next": 12026630
+      },
+      {
+        "id": 12026637,
+        "content": "Les multiples visages du monde actuel, tout comme les progrès de la médecine, éveillent en moi une certaine curiosité. En y regardant autrement... c’est aussi une chance.",
+        "npc": 210127,
+        "next": 12026640
+      },
+      {
+        "id": 12026610,
+        "content": "Alors, la prochaine fois, joue-moi un morceau.",
+        "npc": 100001,
+        "next": 12026611
+      },
+      {
+        "id": 12026620,
+        "content": "N-non, ça ira !",
+        "npc": 100001,
+        "next": 12026621
+      },
+      {
+        "id": 12026630,
+        "content": "Pardonne-moi. Je n’aurais pas dû t’imposer mes propres tourments.",
+        "npc": 210127,
+        "next": 12026631
+      },
+      {
+        "id": 12026611,
+        "content": "... Oui. Comment ai-je pu l’oublier ? Le plus grand des plaisirs reste finalement la compagnie d’un ami. Qu’il s’agisse d’écouter de la musique ou de discuter librement, tout cela a une saveur particulière.",
+        "npc": 210127,
+        "next": 12026612
+      },
+      {
+        "id": 12026621,
+        "content": "En y repensant, je vais très bien. Même mieux que jamais ! Je n’ai jamais été aussi en forme de toute ma vie. Alors... merci pour ta proposition, mais inutile de la mettre en pratique !",
+        "npc": 100001,
+        "next": 12026622
+      },
+      {
+        "id": 12026631,
+        "content": "Ce n’est rien. Si quelque chose te pèse, viens m’en parler. Je serai toujours là.",
+        "npc": 100001,
+        "next": 12026640
+      },
+      {
+        "id": 12026612,
+        "content": "{nickname}, tu peux venir me rendre visite ici quand tu le souhaites. Ta présence me fera plaisir.",
+        "npc": 210127,
+        "next": 12026613
+      },
+      {
+        "id": 12026622,
+        "content": "<I>Soupir...</> franchement.",
+        "npc": 210127,
+        "next": 12026623
+      },
+      {
+        "id": 12026613,
+        "content": "Marché conclu !",
+        "npc": 100001,
+        "next": 12026640
+      },
+      {
+        "id": 12026623,
+        "content": "Très bien, pour cette fois, je te laisse t’en tirer ainsi. Mais si tu te sens de nouveau mal, ne fais pas preuve d’un courage inutile. Viens me voir, je m’en occuperai.",
         "npc": 210127,
         "next": 12026640
       }
@@ -14218,7 +15173,8 @@
       {
         "id": 51000812,
         "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
-        "npc": 700032
+        "npc": 700032,
+        "speakerName": "Alice"
       }
     ]
   },
@@ -15539,7 +16495,7 @@
         "options": [
           {
             "id": 510035051,
-            "content": "Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.",
+            "content": "<I>Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.</>",
             "next": 510035054,
             "impr": [
               1011,
@@ -15652,7 +16608,7 @@
           },
           {
             "id": 51000002,
-            "content": "(Refuser)"
+            "content": "Refuser"
           }
         ]
       },
@@ -16215,7 +17171,7 @@
           },
           {
             "id": 51000002,
-            "content": "(Refuser)"
+            "content": "Refuser"
           }
         ]
       },
@@ -16531,7 +17487,7 @@
         "options": [
           {
             "id": 510016021,
-            "content": "<I>– Il a l’air colérique... Peut-être que lui toucher les cornes le calmerait.</>",
+            "content": "<I>Il a l’air colérique... Peut-être que lui toucher les cornes le calmerait.</>",
             "next": 51001603,
             "impr": [
               1011,
@@ -17380,7 +18336,7 @@
         "options": [
           {
             "id": 510036161,
-            "content": "<I>– Belinda semble faire allusion à...</>",
+            "content": "<I>Belinda semble faire allusion à...</>",
             "next": 51003618,
             "imprCheck": [
               1011,
@@ -18743,7 +19699,8 @@
       },
       {
         "id": 51005946,
-        "content": "Salut, {性别:Super Frères|Super Frère et Super Sœur} !"
+        "content": "Salut, {性别:Super Frères|Super Frère et Super Sœur} !",
+        "speakerName": "Le trio de l’Empire"
       }
     ]
   },
@@ -18958,12 +19915,14 @@
         "id": 51006841,
         "content": "Même si la route est incertaine, avance avec détermination.",
         "npc": 700133,
+        "speakerName": "Dame Nifle",
         "next": 51006842
       },
       {
         "id": 51006842,
         "content": "Que la Mère Embla t’accorde sa bénédiction.",
-        "npc": 700133
+        "npc": 700133,
+        "speakerName": "Dame Nifle"
       }
     ]
   },
@@ -19557,12 +20516,14 @@
       {
         "id": 51000812,
         "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
-        "npc": 700032
+        "npc": 700032,
+        "speakerName": "Alice"
       },
       {
         "id": 51000815,
         "content": "Quand ma mère ira mieux, je l’emmènerai voir la beauté du vaste monde !",
-        "npc": 700032
+        "npc": 700032,
+        "speakerName": "Annie"
       }
     ]
   },
@@ -20159,6 +21120,7 @@
         "content": "Je suis... le premier chercheur en Géniemon de Givrelac ! Si vous avez des questions sur ces créatures, vous pouvez me demander — Ah, c’est toi... Euh, je peux t’aider ?",
         "voice": "story/2001/200071/3215EF02",
         "npc": 200075,
+        "speakerName": "Chercheur en Géniemon",
         "options": [
           {
             "id": 200071011,
@@ -20181,6 +21143,7 @@
         "content": "Tu veux parler de ce Géniemon réputé pour son intelligence ?",
         "voice": "story/2001/200071/3215EF2C",
         "npc": 200075,
+        "speakerName": "Chercheur en Géniemon",
         "next": 20007103
       },
       {
@@ -20188,6 +21151,7 @@
         "content": "Bien mieux que celle d’un chasseur de Géniemon. Maintenant, des gens viennent me poser des questions, j’ai l’air d’un vrai savant.",
         "voice": "story/2001/200071/3215EFAA",
         "npc": 200075,
+        "speakerName": "Chercheur en Géniemon",
         "next": 20007106
       },
       {
@@ -20195,19 +21159,22 @@
         "content": "Les archives sont très maigres. Je ne l’ai vu qu’une seule fois. On raconte qu’il ne se montre qu’à ceux qu’il juge dignes.",
         "voice": "story/2001/200071/3215EF56",
         "npc": 200075,
+        "speakerName": "Chercheur en Géniemon",
         "next": 20007104
       },
       {
         "id": 20007106,
         "content": "Merci d’avoir été indulgent avec moi, toi et Truffle. Vraiment, merci.",
         "voice": "story/2001/200071/3215EFD4",
-        "npc": 200075
+        "npc": 200075,
+        "speakerName": "Chercheur en Géniemon"
       },
       {
         "id": 20007104,
         "content": "En revanche, tu devrais pouvoir le localiser en suivant les traces qu’il laisse.",
         "voice": "story/2001/200071/3215EF80",
-        "npc": 200075
+        "npc": 200075,
+        "speakerName": "Chercheur en Géniemon"
       }
     ]
   },
@@ -29299,7 +30266,7 @@
           },
           {
             "id": 51110002,
-            "content": "<I>– Mieux vaut garder ses distances... sait-on jamais.</>",
+            "content": "<I>Mieux vaut garder ses distances... sait-on jamais.</>",
             "next": 51110004,
             "impr": [
               1041,
@@ -30460,11 +31427,13 @@
       {
         "id": 51116019,
         "content": "Cui-cui ?!",
+        "speakerName": "Oiseau",
         "next": 51116020
       },
       {
         "id": 51116020,
         "content": "Hiiiin !",
+        "speakerName": "Cerf",
         "next": 51116021
       },
       {
@@ -31639,7 +32608,7 @@
           },
           {
             "id": 51122004,
-            "content": "<I>– Il veut sûrement me vendre quelque chose...</>",
+            "content": "<I>Il veut sûrement me vendre quelque chose...</>",
             "next": 51122006,
             "impr": [
               1041,
@@ -33643,6 +34612,131 @@
         "content": "Vous revoilà. Vous vouliez en savoir plus sur le Panneau aux Mille Étoiles, n’est-ce pas ?",
         "npc": 701051,
         "next": 51126430
+      },
+      {
+        "id": 51126430,
+        "options": [
+          {
+            "id": 51126409,
+            "content": "<I>Quelle est son origine ?</>",
+            "next": 51126410
+          },
+          {
+            "id": 51126415,
+            "content": "<I>Seuls les Tisse-Étoiles en possèdent-ils ?</>",
+            "next": 51126416
+          },
+          {
+            "id": 51126421,
+            "content": "<I>Quelles sont les fonctions du Panneau aux Mille Étoiles ?</>",
+            "next": 51126422
+          },
+          {
+            "id": 51126427,
+            "content": "<I>Je n’ai plus de questions.</>",
+            "next": 51126428
+          }
+        ]
+      },
+      {
+        "id": 51126410,
+        "content": "Ah... vaste sujet. Les Panneaux aux Mille Étoiles remontent à une époque antérieure même à la fondation de Huaxu, à l’ère de Ju et de Yang. C’était un temps où cent écoles de pensée coexistaient, parmi lesquelles la Secte Bingzhu, spécialisée dans l’observation des astres.",
+        "npc": 701051,
+        "next": 51126411
+      },
+      {
+        "id": 51126416,
+        "content": "À vrai dire, si l’on souhaite en acquérir un, ce n’est pas impossible. Mais posséder un Panneau et savoir l’utiliser sont deux choses bien différentes.",
+        "npc": 701051,
+        "next": 51126417
+      },
+      {
+        "id": 51126422,
+        "content": "À l’origine, il ne servait qu’à la navigation. Mais au fil du temps, les Tisse-Étoiles l’ont perfectionné, lui ajoutant d’autres usages.",
+        "npc": 701051,
+        "next": 51126423
+      },
+      {
+        "id": 51126428,
+        "content": "Depuis des générations, les Tisse-Étoiles versent chaque année des offrandes à la Secte Bingzhu, berceau de l’Art des Mille Étoiles. On pourrait dire que c’est une forme de reconnaissance pour leur savoir.",
+        "npc": 701051,
+        "next": 51126429
+      },
+      {
+        "id": 51126411,
+        "content": "Selon eux, le ciel étoilé dissimulait une menace capable d’anéantir le monde. Pour y faire face, ils développèrent l’Art des Mille Étoiles, cherchant dans les constellations une issue au désastre.",
+        "npc": 701051,
+        "next": 51126412
+      },
+      {
+        "id": 51126417,
+        "content": "Regardez. Je vais activer celui-ci. Dites-moi si vous parvenez à en comprendre le fonctionnement.",
+        "npc": 701051,
+        "next": 51126418
+      },
+      {
+        "id": 51126423,
+        "content": "Par exemple, l’observation météorologique. En étudiant le mouvement et la disposition des étoiles, on peut prédire le temps à venir — extrêmement utile lorsque l’on transporte des marchandises sensibles à l’humidité.",
+        "npc": 701051,
+        "next": 51126424
+      },
+      {
+        "id": 51126429,
+        "content": "Si l’occasion se présente, allez leur rendre visite. Vous découvrirez peut-être quelles nouvelles révélations ils ont tirées des étoiles.",
+        "npc": 701051
+      },
+      {
+        "id": 51126412,
+        "content": "Et pourtant, de cette même école émergea un esprit singulier : Beiluo. Il trouvait bien ennuyeux de ne songer qu’aux étoiles, au futur et au néant.",
+        "npc": 701051,
+        "next": 51126413
+      },
+      {
+        "id": 51126418,
+        "content": "Il déploie le Panneau aux Mille Étoiles sur sa paume. Les blocs imbriqués s’élèvent et tournent lentement, couche après couche, jusqu’à ce qu’un fragment semble flotter entre eux. Le plus petit carré, au sommet, s’immobilise.",
+        "next": 51126419
+      },
+      {
+        "id": 51126424,
+        "content": "Il permet aussi d’évaluer la fortune. Les Tisse-Étoiles estiment que les mouvements célestes sont intimement liés aux affaires du monde, notamment au commerce et aux projets de déplacement.",
+        "npc": 701051,
+        "next": 51126425
+      },
+      {
+        "id": 51126413,
+        "content": "Il préférait parcourir les rues avec ses amis... parmi lesquels se trouvait Ju, à l’époque où il n’avait pas encore quitté Huaxu.",
+        "npc": 701051,
+        "next": 51126414
+      },
+      {
+        "id": 51126419,
+        "content": "Voilà. L’activation est réussie. L’appareil ajuste ses rotations selon l’orientation. Seuls les Tisse-Étoiles apprennent à interpréter ces angles pour en tirer des indications directionnelles.",
+        "npc": 701051,
+        "next": 51126420
+      },
+      {
+        "id": 51126425,
+        "content": "Ils choisissent ainsi des jours favorables pour voyager ou prendre des décisions importantes, et évitent toute transaction lorsque les étoiles sont de mauvais augure.",
+        "npc": 701051,
+        "next": 51126426
+      },
+      {
+        "id": 51126414,
+        "content": "C’est ainsi que, grâce à leur collaboration, le tout premier Panneau aux Mille Étoiles vit le jour — semblable à celui que je tiens ici. À l’origine, il ne servait qu’à la navigation, mais en ce temps-là, c’était déjà révolutionnaire.",
+        "npc": 701051,
+        "next": 51126430
+      },
+      {
+        "id": 51126420,
+        "content": "En théorie, tout le monde peut apprendre... mais dans les faits, c’est loin d’être simple.",
+        "npc": 701051,
+        "next": 51126430
+      },
+      {
+        "id": 51126426,
+        "content": "Cela dit, plus un Panneau est sophistiqué, plus il est difficile à manier. La navigation reste sa fonction essentielle : simple, efficace... et présente dans presque tous les foyers.",
+        "npc": 701051,
+        "next": 51126430
       }
     ]
   },
@@ -33787,6 +34881,110 @@
         "content": "Tu crois que tout le monde est comme toi ? {性别:Voyageur|Voyageuse}, y a-t-il un précepte que tu n’as pas compris ? Je peux t’expliquer.",
         "npc": 701053,
         "next": 51126542
+      },
+      {
+        "id": 51126542,
+        "options": [
+          {
+            "id": 51126521,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir la richesse pour gloire, mais la droiture. »</>",
+            "next": 51126522
+          },
+          {
+            "id": 51126523,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir le faste pour noblesse, mais la vertu. »</>",
+            "next": 51126524
+          },
+          {
+            "id": 51126525,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir le bas prix pour valeur, mais la qualité. »</>",
+            "next": 51126526
+          },
+          {
+            "id": 51126527,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir la ruse pour intelligence, mais la sincérité. »</>",
+            "next": 51126528
+          },
+          {
+            "id": 51126529,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir la rareté pour trésor, mais l’adéquation. »</>",
+            "next": 51126530
+          },
+          {
+            "id": 51126531,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir l’accumulation pour richesse, mais la bienveillance. »</>",
+            "next": 51126532
+          },
+          {
+            "id": 51126533,
+            "content": "<I>Je ne comprends pas très bien ce que signifie : « Ne pas tenir l’éloquence pour vérité, mais les faits. »</>",
+            "next": 51126534
+          },
+          {
+            "id": 51126535,
+            "content": "<I>Tout est clair.</>",
+            "next": 51126536
+          }
+        ]
+      },
+      {
+        "id": 51126522,
+        "content": "Ça veut dire qu’un marchand ne doit pas être fier de gagner beaucoup d’argent, mais de faire les choses correctement. L’important, c’est l’éthique commerciale. C’est aussi pour ça que tant de marchands font des dons et soutiennent l’agrandissement d’Éternel Printemps.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126524,
+        "content": "Autrement dit, on ne vaut pas plus que les autres parce qu’on est riche ou bien habillé. Ce qui compte vraiment, c’est la conduite et la moralité. Et puis, il y aura toujours quelqu’un de plus riche que soi.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126526,
+        "content": "Ça veut dire qu’un marchand ne doit pas chercher uniquement à vendre au prix le plus bas. Il faut surtout veiller à la qualité des marchandises. Sinon, tôt ou tard, ça finit par causer de gros problèmes.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126528,
+        "content": "En clair, il ne faut pas croire que tromper les autres, c’est être malin. Ce qui fait vraiment la différence, c’est la sincérité. Quand la réputation est bonne, les clients viennent d’eux-mêmes — voilà la vraie habileté.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126530,
+        "content": "Ce n’est pas parce qu’un objet est rare qu’il faut le vendre à tout prix. Ce qui compte, c’est s’il répond réellement aux besoins du marché. Et surtout, pas question de stocker volontairement pour manipuler les prix ou monter des arnaques.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126532,
+        "content": "Un marchand ne devrait pas chercher à garder tout l’argent pour lui. Il faut aussi savoir faire preuve de générosité et utiliser ses ressources à bon escient. C’est ça, la véritable richesse.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126534,
+        "content": "Ça veut dire que lorsqu’un marchand donne sa parole, il doit la tenir — surtout en affaires. Pas de promesses en l’air, pas de faux-semblants, pas de prix gonflés sans raison. Ce sont les actes qui font foi.",
+        "npc": 701053,
+        "next": 51126542
+      },
+      {
+        "id": 51126536,
+        "content": "Tu vois ? Même {性别:un voyageur|une voyageuse} comprend plus vite que toi.",
+        "npc": 701053,
+        "next": 51126537
+      },
+      {
+        "id": 51126537,
+        "content": "Hé... si je fais du commerce, c’est justement parce que les livres et moi, ça fait deux ! Et voilà qu’il faudrait tout retenir par cœur ? Qiaofeng, tu me connais pourtant... on a grandi ensemble !",
+        "npc": 701052,
+        "next": 51126538
+      },
+      {
+        "id": 51126538,
+        "content": "Qui a grandi avec toi ? Ne raconte pas n’importe quoi !",
+        "npc": 701053
       }
     ]
   },
@@ -33829,6 +35027,91 @@
         "id": 51126618,
         "content": "Je vous souhaite une excellente continuation. N’hésitez pas à revenir me voir si besoin.",
         "npc": 701054
+      },
+      {
+        "id": 51126619,
+        "options": [
+          {
+            "id": 51126604,
+            "content": "<I>Éternel Printemps porte bien son nom ? Cet endroit est vraiment aussi ancien ?</>",
+            "next": 51126605
+          },
+          {
+            "id": 51126608,
+            "content": "<I>Quels services propose Éternel Printemps ?</>",
+            "next": 51126609
+          },
+          {
+            "id": 51126613,
+            "content": "<I>Quel est votre lien avec le Bureau de la Fortune Céleste ?</>",
+            "next": 51126614
+          },
+          {
+            "id": 51126617,
+            "content": "<I>Je n’ai plus de questions.</>",
+            "next": 51126618
+          }
+        ]
+      },
+      {
+        "id": 51126605,
+        "content": "Héhé ! Malgré son nom, Éternel Printemps n’est pas qu’une belle appellation. Son histoire remonte aux origines mêmes de Huaxu, alors qu’il faisait déjà partie des guildes marchandes de Port-des-Brumes.",
+        "npc": 701054,
+        "next": 51126606
+      },
+      {
+        "id": 51126609,
+        "content": "Cela dépend de vos besoins. Souhaitez-vous commander des épices de Huaxu ? Faire transporter vos marchandises par les Tisse-Étoiles ? Ou bien effectuer une demande de prêt ?",
+        "npc": 701054,
+        "next": 51126610
+      },
+      {
+        "id": 51126614,
+        "content": "Les Tisse-Étoiles sont une organisation marchande reconnue et approuvée par le Bureau de la Fortune Céleste, jouissant d’une excellente réputation. Tout Tisse-Étoiles souhaitant commercer à l’étranger doit obtenir leur autorisation de sortie et d’entrée.",
+        "npc": 701054,
+        "next": 51126615
+      },
+      {
+        "id": 51126606,
+        "content": "À cette époque, Éternel Printemps n’avait encore aucun lien direct avec les Tisse-Étoiles. C’était simplement un lieu prisé pour négocier des affaires — son nom inspirait confiance, et l’endroit offrait de vastes espaces.",
+        "npc": 701054,
+        "next": 51126607
+      },
+      {
+        "id": 51126610,
+        "content": "Les Tisse-Étoiles gèrent leur propre maison d’encens, la Maison Boshan. Le choix y est vaste et les volumes importants, mais nous ne traitons que des commandes en grande quantité. Si cela vous intéresse, je peux vous y conduire personnellement.",
+        "npc": 701054,
+        "next": 51126611
+      },
+      {
+        "id": 51126615,
+        "content": "La plupart du temps, les Tisse-Étoiles connaissent leurs limites et respectent les règles. Les autorisations sont donc généralement accordées sans difficulté. Mais si une transaction paraît suspecte, le Bureau n’hésitera pas à enquêter.",
+        "npc": 701054,
+        "next": 51126616
+      },
+      {
+        "id": 51126607,
+        "content": "Plus tard, à mesure que le nombre de Tisse-Étoiles augmentait et que leurs activités prospéraient, nous avons racheté Éternel Printemps. Aujourd’hui, il est devenu, sans exagération, le véritable cœur de leurs opérations.",
+        "npc": 701054,
+        "next": 51126619
+      },
+      {
+        "id": 51126611,
+        "content": "Pour le transport, les Tisse-Étoiles, maîtres de l’Art des Mille Étoiles, sont un choix idéal. Je vous conseille de vous rendre au Relais des Routes Stellaires, où un agent vous expliquera les détails.",
+        "npc": 701054,
+        "next": 51126612
+      },
+      {
+        "id": 51126616,
+        "content": "En somme, le Bureau de la Fortune Céleste est la racine, et les Tisse-Étoiles en sont les branches. Nous dépendons les uns des autres, pour un bénéfice commun.",
+        "npc": 701054,
+        "next": 51126619
+      },
+      {
+        "id": 51126612,
+        "content": "Concernant les prêts, vous pouvez passer par le Mont-de-Piété de Huaxu. Cela dit, ce n’est pas une activité traditionnelle des Tisse-Étoiles, et les demandes émanant d’étrangers sont examinées avec une rigueur particulière.",
+        "npc": 701054,
+        "next": 51126619
       }
     ]
   },
@@ -34560,9 +35843,65 @@
         "npc": 701062
       },
       {
+        "id": 51127220,
+        "options": [
+          {
+            "id": 51127206,
+            "content": "<I>Qu’a-t-il de si spécial, cet arbre ?</>",
+            "next": 51127207
+          },
+          {
+            "id": 51127209,
+            "content": "<I>Depuis combien de temps existe-t-il ?</>",
+            "next": 51127210
+          },
+          {
+            "id": 51127212,
+            "content": "<I>Il est plutôt beau, cet arbre.</>",
+            "next": 51127213
+          }
+        ]
+      },
+      {
         "id": 51127217,
         "content": "Mais bon, si ça ne t’intéresse pas, tant pis. Moi, je vais continuer à réfléchir à cet arbre. Va discuter avec d’autres Wishen !",
         "npc": 701062
+      },
+      {
+        "id": 51127207,
+        "content": "Tu ne le vois pas ? Rien que sa forme est différente. Et sa couleur... on dirait presque l’Arbre Céleste ? C’est comme ça qu’on l’appelle, non ? Même si, à Huaxu, les Arbres Célestes poussent sous terre...",
+        "npc": 701062,
+        "next": 51127208
+      },
+      {
+        "id": 51127210,
+        "content": "C’est justement ce que j’essaie de comprendre. J’ai interrogé beaucoup de Wishen : tous disent que, lorsqu’ils sont arrivés, l’arbre était déjà aussi grand. Or le plus ancien d’entre eux datait de la fondation même de Huaxu.",
+        "npc": 701062,
+        "next": 51127211
+      },
+      {
+        "id": 51127213,
+        "content": "Oui ! Moi aussi, je trouve. Je disais souvent à Jie que, si nous avions encore un corps, on cueillerait ses feuilles pour se faire des chapeaux.",
+        "npc": 701062,
+        "next": 51127214
+      },
+      {
+        "id": 51127208,
+        "content": "À Huaxu, il y a toutes sortes d’arbres : des fruitiers, des arbres à encens, des arbres ordinaires. Chaque arbre a son utilité. Mais celui-ci... rien. Il ne fleurit pas, ne donne aucun fruit. Son seul rôle, c’est d’être là.",
+        "npc": 701062,
+        "next": 51127220
+      },
+      {
+        "id": 51127211,
+        "content": "Alors dis-moi... et si cet arbre était plus ancien que Huaxu ? Pourquoi une chose aussi vieille ne disparaît-elle pas, alors que nous, les Wishen, finissons par nous dissiper ?",
+        "npc": 701062,
+        "next": 51127220
+      },
+      {
+        "id": 51127214,
+        "content": "<I>Hmm...</> mais on raconte que, dès qu’on arrache une feuille, elle se fane très vite. Je me demande si elle serait encore jolie après... En tout cas, n’en cueille pas, d’accord ? Les vivants disent que ça porte malheur.",
+        "npc": 701062,
+        "next": 51127220
       }
     ]
   },
@@ -35102,6 +36441,137 @@
         "content": "Te revoilà, {性别:gamin|gamine}. Tu viens bavarder ou poser des questions ?",
         "npc": 701067,
         "next": 51127633
+      },
+      {
+        "id": 51127633,
+        "options": [
+          {
+            "id": 51127611,
+            "content": "<I>Qu’a-t-il de spécial, ce bateau ?</>",
+            "next": 51127612
+          },
+          {
+            "id": 51127616,
+            "content": "<I>Tu es un artisan de la Secte Jishu ?</>",
+            "next": 51127617
+          },
+          {
+            "id": 51127620,
+            "content": "<I>Quel âge a ce bateau ?</>",
+            "next": 51127621
+          },
+          {
+            "id": 51127624,
+            "content": "<I>D’où vient-il ?</>",
+            "next": 51127625
+          },
+          {
+            "id": 51127631,
+            "content": "Je n’ai plus rien à demander.",
+            "next": 51127632
+          }
+        ]
+      },
+      {
+        "id": 51127612,
+        "content": "Son âge. C’est ça, sa valeur. Parmi les antiquités de Maître Qiu, ce n’est peut-être pas la plus ancienne... mais c’est sûrement la plus grande.",
+        "npc": 701067,
+        "next": 51127613
+      },
+      {
+        "id": 51127617,
+        "content": "Bien vu. J’y ai appris un temps. Mais les poupées mécaniques qui bougent toutes seules, très peu pour moi. J’aime travailler ce qui reste immobile.",
+        "npc": 701067,
+        "next": 51127618
+      },
+      {
+        "id": 51127621,
+        "content": "Je ne me suis jamais penché dessus de très près, mais à en juger par l’état du bois, elle doit bien avoir une centaine d’années... au bas mot. Après, ce genre de chose, ça reste difficile à affirmer.",
+        "npc": 701067,
+        "next": 51127622
+      },
+      {
+        "id": 51127625,
+        "content": "Difficile à dire. Si on écarte les histoires de fantômes... ou celles, tout aussi invraisemblables, d’arrangements secrets entre le Bureau de la Fortune Céleste et le Marché Voilé... deux versions tiennent la route.",
+        "npc": 701067,
+        "next": 51127626
+      },
+      {
+        "id": 51127632,
+        "content": "Tu t’en vas, {性别:gamin|gamine} ? Reviens me voir à l’occasion. À mon âge, on aime bien discuter avec les jeunes.",
+        "npc": 701067
+      },
+      {
+        "id": 51127613,
+        "content": "On raconte qu’il était déjà là avant même la fondation du Marché Voilé. Il aurait dérivé jusqu’ici, échoué sur la rive. Puis, avec le temps, les gens se sont installés, et on l’a réutilisé.",
+        "npc": 701067,
+        "next": 51127614
+      },
+      {
+        "id": 51127618,
+        "content": "L’architecture de Huaxu est pleine de subtilités : avant-toits en vol, consoles imbriquées, balustrades sculptées... Si je pouvais tout maîtriser avant de mourir, je partirais l’esprit en paix.",
+        "npc": 701067,
+        "next": 51127619
+      },
+      {
+        "id": 51127622,
+        "content": "Avant Maître Qiu, il y a sûrement eu d’autres amateurs d’antiquités qui l’ont restauré de fond en comble.",
+        "npc": 701067,
+        "next": 51127623
+      },
+      {
+        "id": 51127626,
+        "content": "La première dit que, lors du chaos causé par le Dragon Noir, le Seigneur Dragon d’Argent l’a écrasé. À ce moment-là, un navire de Tisse-Étoiles, de retour au port, se trouvait dans les parages — et n’a pas résisté à la colère divine.",
+        "npc": 701067,
+        "next": 51127627
+      },
+      {
+        "id": 51127614,
+        "content": "Il semble avoir appartenu aux Tisse-Étoiles. Ils avaient l’habitude d’installer un immense Panneau aux Mille Étoiles sur le pont. Celui-ci a été retiré, par quelqu’un.",
+        "npc": 701067,
+        "next": 51127615
+      },
+      {
+        "id": 51127619,
+        "content": "Mais bon, faut manger. Et Maître Qiu paie bien. Une commande de lui, et je tiens l’année.",
+        "npc": 701067,
+        "next": 51127633
+      },
+      {
+        "id": 51127623,
+        "content": "Mais une chose est sûre : seuls les premiers Tisse-Étoiles auraient laissé un espace aussi large sur le pont pour un Panneau aux Mille Étoiles.",
+        "npc": 701067,
+        "next": 51127633
+      },
+      {
+        "id": 51127627,
+        "content": "Une vague colossale l’a retournée. Tout l’équipage est mort. Le navire a dérivé jusqu’à s’échouer ici.",
+        "npc": 701067,
+        "next": 51127628
+      },
+      {
+        "id": 51127615,
+        "content": "Peut-être récupéré par les Tisse-Étoiles. J’ai posé la question à Maître Qiu... il n’a pas voulu en dire plus.",
+        "npc": 701067,
+        "next": 51127633
+      },
+      {
+        "id": 51127628,
+        "content": "L’autre version... tu sais que les gens d’ici ne sont pas tendres, hein ?",
+        "npc": 701067,
+        "next": 51127629
+      },
+      {
+        "id": 51127629,
+        "content": "On dit qu’un homme d’une cruauté extrême se serait infiltré parmi les Tisse-Étoiles... et aurait massacré tout l’équipage, maquillant le tout en naufrage.",
+        "npc": 701067,
+        "next": 51127630
+      },
+      {
+        "id": 51127630,
+        "content": "Bah... des histoires pour passer le temps. En réalité, ce n’est sans doute que la collection d’un ancien.",
+        "npc": 701067,
+        "next": 51127633
       }
     ]
   },
@@ -35138,6 +36608,102 @@
       {
         "id": 51127705,
         "content": "Ah, ça me rappelle ceux qui sont venus à mon étal récemment. Ils annonçaient les prix à voix haute, en chiffres bien clairs, sans même utiliser les mots codés. Une totale ignorance des usages.",
+        "npc": 701068,
+        "next": 51127727
+      },
+      {
+        "id": 51127727,
+        "options": [
+          {
+            "id": 51127706,
+            "content": "<I>Vous avez donc des règles, vous aussi ?</>",
+            "next": 51127707
+          },
+          {
+            "id": 51127711,
+            "content": "<I>Je croyais que le Marché Voilé était un marché noir. Un marché noir aurait des règles ?</>",
+            "next": 51127712
+          },
+          {
+            "id": 51127716,
+            "content": "<I>Et pourquoi accepter ces règles ?</>",
+            "next": 51127717
+          },
+          {
+            "id": 51127725,
+            "content": "<I>Je n’ai plus rien à ajouter.</>",
+            "next": 51127726
+          }
+        ]
+      },
+      {
+        "id": 51127707,
+        "content": "Et toi, t’es qui, {性别:le morveux|la morveuse} ?",
+        "npc": 701069,
+        "next": 51127708
+      },
+      {
+        "id": 51127712,
+        "content": "À l’origine, non. À l’époque, le Marché Voilé n’avait même pas de nom. C’était juste un lieu où se retrouvaient des gens sans attaches ni scrupules, chacun faisait ses affaires comme il l’entendait.",
+        "npc": 701068,
+        "next": 51127713
+      },
+      {
+        "id": 51127717,
+        "content": "Je vais te donner un exemple. Une grosse transaction peut rapporter dix parts de bénéfice. Mais si, en interne, on complote, on se bat, on se sabote, les pertes montent à quinze parts. Résultat : même si l’affaire aboutit, on est perdants.",
+        "npc": 701068,
+        "next": 51127718
+      },
+      {
+        "id": 51127726,
+        "content": "Déjà ? Tu pars sans échanger davantage ?",
+        "npc": 701068
+      },
+      {
+        "id": 51127708,
+        "content": "Hé, doucement. Regarde mieux : c’est {性别:un invité|une invitée} de Maître Qiu.",
+        "npc": 701068,
+        "next": 51127709
+      },
+      {
+        "id": 51127713,
+        "content": "Et même si les Neuf Chapitres de Dafeng t’attrapaient, tu perdais peut-être un bras ou une jambe. Tant que tu gardais la vie et quelques pièces, l’existence restait plutôt agréable.",
+        "npc": 701068,
+        "next": 51127714
+      },
+      {
+        "id": 51127718,
+        "content": "Alors dis-moi : une telle affaire, est-ce qu’on la fait ?",
+        "npc": 701068,
+        "next": 51127719
+      },
+      {
+        "id": 51127709,
+        "content": "Vraiment ? Et pourquoi Maître Qiu inviterait-il {性别:un gamin|une gamine} qui sent encore le lait ?",
+        "npc": 701069,
+        "next": 51127710
+      },
+      {
+        "id": 51127714,
+        "content": "Agréable, tu parles. Tous ceux qui survivent ici sont des avides prêts à risquer leur peau. Avec le temps, ils ont commencé à se disputer les territoires, à tendre des pièges, à user de coups tordus... C’était le chaos, jour après jour.",
+        "npc": 701069,
+        "next": 51127715
+      },
+      {
+        "id": 51127719,
+        "content": "Seul un idiot accepterait ! Dans ce cas-là, autant commencer par virer tous ceux qui ne respectent pas les règles.",
+        "npc": 701069,
+        "next": 51127727
+      },
+      {
+        "id": 51127710,
+        "content": "Bah... {性别:il|elle} doit bien avoir quelque chose de particulier. Maître Qiu a toujours ses raisons. Inutile de spéculer. Dis-nous plutôt : que viens-tu faire ici ?",
+        "npc": 701068,
+        "next": 51127727
+      },
+      {
+        "id": 51127715,
+        "content": "D’où la nécessité de règles. Tant que vivre dans ces limites reste supportable, autant s’y tenir.",
         "npc": 701068,
         "next": 51127727
       }
@@ -35577,6 +37143,70 @@
         "content": "Ah ! Là-dessus, je suis bien placée pour vous répondre. Ça fait si longtemps que je travaille dans le coin que j’ai fini par comprendre une bonne partie de l’histoire du lieu... et de ce fichu phénomène d’Altération.",
         "npc": 701072,
         "next": 51128122
+      },
+      {
+        "id": 51128122,
+        "options": [
+          {
+            "id": 51128110,
+            "content": "<I>À quoi ressemblait cet endroit avant ?</>",
+            "next": 51128111
+          },
+          {
+            "id": 51128113,
+            "content": "<I>Alors pourquoi cet endroit est-il devenu ainsi ?</>",
+            "next": 51128114
+          },
+          {
+            "id": 51128117,
+            "content": "<I>L’Altération, c’est quoi exactement ?</>",
+            "next": 51128118
+          },
+          {
+            "id": 51128120,
+            "content": "Je vais m’arrêter là.",
+            "next": 51128121
+          }
+        ]
+      },
+      {
+        "id": 51128111,
+        "content": "Autrefois... enfin, d’après mon arrière-grand-mère. Elle disait que c’était un endroit splendide : montagnes et rivières à perte de vue, des paysages dignes d’un tableau, et un printemps qui durait toute l’année. À l’époque, ce n’était pas encore aussi aride. Des gens cultivaient même la Demi-Pas-d’Immortel sur les pentes.",
+        "npc": 701072,
+        "next": 51128112
+      },
+      {
+        "id": 51128114,
+        "content": "À cause de quoi, à votre avis ? Du Fléau de Zhuyin, évidemment. Cette bête immonde n’a jamais cessé de nuire : à chaque souffle, elle rejetait une brume noire qui s’est propagée depuis la mer vers l’intérieur des terres, jusqu’à recouvrir toute la région.",
+        "npc": 701072,
+        "next": 51128115
+      },
+      {
+        "id": 51128118,
+        "content": "<I>Hmm...</> ce n’est pas facile à expliquer. Mais selon mes premières hypothèses, la brume noire contient une sorte de poussière cristalline. Invisible à l’œil nu, mais que l’on inhale sans s’en rendre compte en respirant.",
+        "npc": 701072,
+        "next": 51128119
+      },
+      {
+        "id": 51128112,
+        "content": "Quand ces fleurs s’ouvraient, toute la montagne devenait rouge éclatant. Le parfum était si entêtant qu’il donnait le tournis — au point que les Tisse-Étoiles de passage s’en plaignaient, disant qu’en empruntant cette route, on risquait de s’évanouir à force d’en respirer l’odeur.",
+        "npc": 701072
+      },
+      {
+        "id": 51128115,
+        "content": "Et cette brume était profondément malsaine. Là où elle passait, le froid et la chaleur s’alternaient sans cesse. Les roches n’y ont pas résisté — elles se sont fissurées, pulvérisées. Les plantes ont cessé de pousser, recouvertes d’une croûte inconnue.",
+        "npc": 701072,
+        "next": 51128116
+      },
+      {
+        "id": 51128119,
+        "content": "Les êtres vivants affectés par cette poussière voient leur forme originelle se détériorer. Le mécanisme exact ? ... Aucune idée. Mais c’est terriblement étrange — même les Bi’an n’y résistent pas.",
+        "npc": 701072
+      },
+      {
+        "id": 51128116,
+        "content": "Ce phénomène, on l’appelle l’Altération. Et c’est précisément ce que j’étudie ici.",
+        "npc": 701072
       }
     ]
   },
@@ -37624,6 +39254,149 @@
         "content": "Bien sûr ! Nous proposons trois saveurs : sucrée, salée et acidulée. Qu’est-ce qui vous ferait plaisir ?",
         "npc": 701128,
         "next": 51158323
+      },
+      {
+        "id": 51158323,
+        "options": [
+          {
+            "id": 51158304,
+            "content": "<I>Quelque chose de sucré.</>",
+            "next": 51158305
+          },
+          {
+            "id": 51158308,
+            "content": "<I>Quelque chose de salé.</>",
+            "next": 51158309
+          },
+          {
+            "id": 51158312,
+            "content": "<I>Quelque chose d’acidulé.</>",
+            "next": 51158313
+          },
+          {
+            "id": 51158320,
+            "content": "<I>J’ai autre chose à faire, je vais y aller.</>",
+            "next": 51158321
+          }
+        ]
+      },
+      {
+        "id": 51158305,
+        "content": "Dans ce cas, permettez-moi de vous recommander nos Roulés de melon à la cannelle !",
+        "npc": 701128,
+        "next": 51158306
+      },
+      {
+        "id": 51158309,
+        "content": "Dans ce cas, je me dois de vous recommander nos Boulettes d’Émeraude !",
+        "npc": 701128,
+        "next": 51158310
+      },
+      {
+        "id": 51158313,
+        "content": "Dans ce cas, permettez-moi de vous recommander nos Pattes de phénix marinées !",
+        "npc": 701128,
+        "next": 51158314
+      },
+      {
+        "id": 51158321,
+        "content": "Très bien, prenez soin de vous. N’hésitez pas à revenir — nous serons ravis de vous accueillir !",
+        "npc": 701128
+      },
+      {
+        "id": 51158306,
+        "content": "Nous utilisons des melons sucrés de l’ouest de Huaxu, dont le jus est incorporé à la pâte. Celle-ci est ensuite façonnée en petites portions, puis cuite à la vapeur, avant d’être généreusement saupoudrée de cannelle.",
+        "npc": 701128,
+        "next": 51158307
+      },
+      {
+        "id": 51158310,
+        "content": "De la plante Wan finement hachée est mélangée à de la viande de porc avec divers assaisonnements, afin que les saveurs s’imprègnent parfaitement. Une fois les boulettes cuites à la vapeur, elles sont enveloppées d’une fine couche de pâte de riz gluant légèrement salée.",
+        "npc": 701128,
+        "next": 51158311
+      },
+      {
+        "id": 51158314,
+        "content": "Nous faisons d’abord cuire les pattes, puis les passons dans de l’eau glacée avant d’en retirer les os. Elles sont ensuite assaisonnées avec soin, puis disposées sur de la Givrefeuille. Enfin, nous les plaçons sur de la glace conservée durant l’hiver et les laissons reposer tout un après-midi avant de les servir.",
+        "npc": 701128,
+        "next": 51158315
+      },
+      {
+        "id": 51158307,
+        "content": "Alors, souhaitez-vous commander ce plat ?",
+        "npc": 701128,
+        "options": [
+          {
+            "id": 51158316,
+            "content": "<I>Je vais prendre celui-ci.</>",
+            "next": 51158317
+          },
+          {
+            "id": 51158318,
+            "content": "<I>Attendez... je voudrais changer.</>",
+            "next": 51158319
+          },
+          {
+            "id": 51158320,
+            "content": "<I>J’ai autre chose à faire, je vais y aller.</>",
+            "next": 51158321
+          }
+        ]
+      },
+      {
+        "id": 51158311,
+        "content": "Alors, souhaitez-vous commander ce plat ?",
+        "npc": 701128,
+        "options": [
+          {
+            "id": 51158316,
+            "content": "<I>Je vais prendre celui-ci.</>",
+            "next": 51158317
+          },
+          {
+            "id": 51158318,
+            "content": "<I>Attendez... je voudrais changer.</>",
+            "next": 51158319
+          },
+          {
+            "id": 51158320,
+            "content": "<I>J’ai autre chose à faire, je vais y aller.</>",
+            "next": 51158321
+          }
+        ]
+      },
+      {
+        "id": 51158315,
+        "content": "Alors, souhaitez-vous commander ce plat ?",
+        "npc": 701128,
+        "options": [
+          {
+            "id": 51158316,
+            "content": "<I>Je vais prendre celui-ci.</>",
+            "next": 51158317
+          },
+          {
+            "id": 51158318,
+            "content": "<I>Attendez... je voudrais changer.</>",
+            "next": 51158319
+          },
+          {
+            "id": 51158320,
+            "content": "<I>J’ai autre chose à faire, je vais y aller.</>",
+            "next": 51158321
+          }
+        ]
+      },
+      {
+        "id": 51158317,
+        "content": "Très bien, cela fera mille pièces. Nous n’avons malheureusement plus de places assises pour le moment. Souhaitez-vous que je vous le prépare à emporter ?",
+        "npc": 701128
+      },
+      {
+        "id": 51158319,
+        "content": "Bien sûr. Quelle saveur souhaitez-vous découvrir cette fois-ci ?",
+        "npc": 701128,
+        "next": 51158323
       }
     ]
   },
@@ -39455,6 +41228,7 @@
       {
         "id": 51159902,
         "content": "Ton père est parti... il est parti...",
+        "speakerName": "Mère de Wan",
         "next": 51159903
       },
       {
@@ -39471,7 +41245,8 @@
       },
       {
         "id": 51159905,
-        "content": "Il est parti... comment a-t-il pu me laisser..."
+        "content": "Il est parti... comment a-t-il pu me laisser...",
+        "speakerName": "Mère de Wan"
       },
       {
         "id": 51159906,
@@ -39596,6 +41371,7 @@
       {
         "id": 51160109,
         "content": "Qu’est-ce que tu racontes ? Faire jouer du suona lors d’un enterrement, c’est une tradition ! Ton grand-oncle a travaillé toute sa vie — on ne va pas l’accompagner dans le silence quand même !",
+        "speakerName": "Shubai",
         "next": 51160110
       },
       {
@@ -39607,6 +41383,7 @@
       {
         "id": 51160111,
         "content": "Je les ai contactés il y a longtemps déjà ! J’ai même versé un acompte. Les voisins sont au courant. Je refuse de croire que les gens ont oublié les traditions au point de se plaindre d’un enterrement !",
+        "speakerName": "Shubai",
         "next": 51160112
       },
       {
@@ -39618,6 +41395,7 @@
       {
         "id": 51160113,
         "content": "Les artisans du Pavillon des Artisans ont dit que dès qu’ils auront mis au point leur dispositif de purification de fumée, on pourra à nouveau en tirer !",
+        "speakerName": "Shubai",
         "next": 51160114
       },
       {
@@ -39628,7 +41406,8 @@
       },
       {
         "id": 51160115,
-        "content": "Arrête de dire n’importe quoi ! Ce sera prêt cette année ! On pourra à nouveau lancer des feux d’artifice à Haojing, tu verras ! Fais-moi confiance !"
+        "content": "Arrête de dire n’importe quoi ! Ce sera prêt cette année ! On pourra à nouveau lancer des feux d’artifice à Haojing, tu verras ! Fais-moi confiance !",
+        "speakerName": "Shubai"
       }
     ]
   },
@@ -40094,6 +41873,7 @@
       {
         "id": 51160502,
         "content": "N’importe quoi ! Et si c’était simplement l’oiseau qui était intelligent ? Il l’a entendu une fois et l’a retenu, comme mon petit-fils. Ce gamin comprend tout du premier coup.",
+        "speakerName": "Vieux Zhang",
         "next": 51160503
       },
       {
@@ -40105,11 +41885,13 @@
       {
         "id": 51160504,
         "content": "Moi, Zhang, j’ai toujours vécu droit et honnête ! Je n’ai jamais dit un seul mensonge !",
+        "speakerName": "Vieux Zhang",
         "next": 51160505
       },
       {
         "id": 51160505,
         "content": "Bon, ça suffit... À votre âge, vous allez continuer à vous chamailler toute la journée ? Parlons plutôt d’autre chose. Mes pinsons gazouilleurs ont déménagé ce matin — ils ont fait leur nid dans le vieux sophora à l’entrée.",
+        "speakerName": "Grand-mère Jin",
         "next": 51160506
       },
       {
@@ -40121,16 +41903,19 @@
       {
         "id": 51160507,
         "content": "Mais dites-moi... vous savez ce qui lui prend, au vieux Li ? Il est allé attraper un...",
+        "speakerName": "Grand-mère Jin",
         "next": 51160508
       },
       {
         "id": 51160508,
         "content": "Un héron pêcheur, oui ! Ce type devient de plus en plus étrange ! Nos petits-fils sont dans la même classe, alors j’ai voulu discuter avec lui de leurs études, et il ne m’a même pas accordé un regard !",
+        "speakerName": "Vieux Zhang",
         "next": 51160509
       },
       {
         "id": 51160509,
         "content": "Ça m’a tellement énervé qu’on s’est disputés, et aujourd’hui le voilà encore en train de se donner en spectacle.",
+        "speakerName": "Vieux Zhang",
         "next": 51160510
       },
       {
@@ -40142,11 +41927,13 @@
       {
         "id": 51160511,
         "content": "Qu’est-ce que tu veux dire par là ?",
+        "speakerName": "Vieux Zhang",
         "next": 51160512
       },
       {
         "id": 51160512,
-        "content": "Allez, ça suffit maintenant..."
+        "content": "Allez, ça suffit maintenant...",
+        "speakerName": "Grand-mère Jin"
       }
     ]
   },
@@ -40433,11 +42220,13 @@
       {
         "id": 51160901,
         "content": "Ces derniers temps, je n’ai pas vraiment le temps. Mon fils et sa femme se disputent du matin au soir. Je me couche dès la tombée de la nuit, mais je me fais réveiller en pleine nuit par leurs querelles... Enfin, ce sont leurs affaires, en tant qu’aînés, on ne peut pas trop s’en mêler.",
+        "speakerName": "Wang Xiulian",
         "next": 51160902
       },
       {
         "id": 51160902,
         "content": "Alors je reste là à écouter jusqu’à l’aube... Ah... je me fais vieille. Une seule nuit blanche et tout le corps me fait souffrir le lendemain...",
+        "speakerName": "Wang Xiulian",
         "next": 51160903
       },
       {
@@ -40449,11 +42238,13 @@
       {
         "id": 51160904,
         "content": "Quand j’en aurai l’occasion, je leur en parlerai. Et s’ils partent, vous viendrez tous chez moi jouer aux dominos.",
+        "speakerName": "Wang Xiulian",
         "next": 51160905
       },
       {
         "id": 51160905,
         "content": "J’ai même trouvé récemment un jeu en jade blanc de première qualité. Doux et chaud au toucher. Il faudra jouer trois jours et trois nuits !",
+        "speakerName": "Wang Xiulian",
         "next": 51160906
       },
       {
@@ -40465,6 +42256,7 @@
       {
         "id": 51160907,
         "content": "Ce n’est pas pareil ! Alors, tu joues ou pas ? Madame Chen me doit encore une épingle à cheveux depuis la dernière partie... Qui sait ce qu’elle perdra cette fois.",
+        "speakerName": "Wang Xiulian",
         "next": 51160908
       },
       {
@@ -41036,6 +42828,7 @@
       {
         "id": 51161501,
         "content": "Stop, stop ! Avant de rêver à tes vacances idéales, tu pourrais déjà finir tout le travail qu’on a pour la Cérémonie de l’Encens ?",
+        "speakerName": "Lin Xia",
         "next": 51161502
       },
       {
@@ -41047,6 +42840,7 @@
       {
         "id": 51161503,
         "content": "Très bien... quand tu arriveras auprès du Seigneur Dragon d’Argent, pense à lui demander s’il est satisfait des marchandises achetées pour la cérémonie. Et tant que tu y es, vois s’il peut aussi finir le travail que tu as laissé en plan.",
+        "speakerName": "Lin Xia",
         "next": 51161504
       },
       {
@@ -41058,6 +42852,7 @@
       {
         "id": 51161505,
         "content": "Tu te trompes. Ce n’est pas moi qui lui demande — c’est toi qui as encore une montagne de travail, mais qui préfères rêvasser ici.",
+        "speakerName": "Lin Xia",
         "next": 51161506
       },
       {
@@ -41194,6 +42989,7 @@
       {
         "id": 51161701,
         "content": "Je me disais que vous étiez déjà débordés... alors pour ce genre de petits soucis, autant régler ça nous-mêmes... histoire de ne pas vous déranger...",
+        "speakerName": "Yu Xian",
         "next": 51161702
       },
       {
@@ -41211,6 +43007,7 @@
       {
         "id": 51161704,
         "content": "Je... c’était vraiment involontaire... je ne pensais pas avoir un sens de l’orientation aussi mauvais... j’étais pourtant sûr de creuser vers le bas...",
+        "speakerName": "Yu Xian",
         "next": 51161705
       },
       {
@@ -41357,6 +43154,7 @@
       {
         "id": 51162001,
         "content": "Tu es allé leur parler ? Ils t’ont dit à quoi servaient toutes ces affaires ?",
+        "speakerName": "Gu Gu",
         "next": 51162002
       },
       {
@@ -41373,7 +43171,8 @@
       },
       {
         "id": 51162004,
-        "content": "C’est étrange, oui... mais ça pourrait aussi être lié à la Cérémonie de l’Encens cette année. On ne sait jamais. Le mieux serait d’aller en parler aux autorités, voir ce qu’ils en pensent."
+        "content": "C’est étrange, oui... mais ça pourrait aussi être lié à la Cérémonie de l’Encens cette année. On ne sait jamais. Le mieux serait d’aller en parler aux autorités, voir ce qu’ils en pensent.",
+        "speakerName": "Gu Gu"
       }
     ]
   },
@@ -41486,6 +43285,7 @@
       {
         "id": 51162202,
         "content": "Tiens... qu’est-ce qui t’a pris d’aller là-bas sans raison ?",
+        "speakerName": "Xiang Shi",
         "next": 51162203
       },
       {
@@ -41497,6 +43297,7 @@
       {
         "id": 51162204,
         "content": "Ah, oui, j’en ai entendu parler... tu ne crois pas que ce serait... des Vagabonds... ?",
+        "speakerName": "Xiang Shi",
         "next": 51162205
       },
       {
@@ -41508,6 +43309,7 @@
       {
         "id": 51162206,
         "content": "C’est vrai... mais à part eux, qui pourrait poser problème à Huaxu... ? Alors, qu’est-ce que tu as trouvé ?",
+        "speakerName": "Xiang Shi",
         "next": 51162207
       },
       {
@@ -41525,6 +43327,7 @@
       {
         "id": 51162209,
         "content": "Tu as déjà bien assez fait. Repose-toi, je vais aller faire le rapport à ta place.",
+        "speakerName": "Xiang Shi",
         "next": 51162210
       },
       {
@@ -41554,6 +43357,7 @@
       {
         "id": 51162211,
         "content": "C’est ça. Je les ai transportés depuis le Port-des-Brumes. C’est un... peintre, je crois, ici à Haojing, qui a passé commande.",
+        "speakerName": "Shi Ge",
         "next": 51162212
       },
       {
@@ -41565,6 +43369,7 @@
       {
         "id": 51162213,
         "content": "Eh bien... vous m’en demandez trop. Moi, je ne suis que batelier. Si même vous, vous ne savez pas, comment voulez-vous que moi, je le sache ?",
+        "speakerName": "Shi Ge",
         "next": 51162214
       },
       {
@@ -41582,6 +43387,7 @@
       {
         "id": 51162216,
         "content": "Qu-quoi ? Mais qu’est-ce qu’on fait alors ? Ces oiseaux valent une fortune ! On ne peut pas les laisser se promener dans toute la ville !",
+        "speakerName": "Shi Ge",
         "next": 51162217
       },
       {
@@ -41592,7 +43398,8 @@
       },
       {
         "id": 51162218,
-        "content": "Oui, oui ! Très bien ! Faisons comme ça !"
+        "content": "Oui, oui ! Très bien ! Faisons comme ça !",
+        "speakerName": "Shi Ge"
       }
     ]
   },
@@ -41841,6 +43648,7 @@
       {
         "id": 51162502,
         "content": "Et maintenant, on fait quoi ? Ce pinson d’émeraude se comporte comme s’il était chez lui, à squatter le toit des gens et à...",
+        "speakerName": "Shan Yaliu",
         "next": 51162503
       },
       {
@@ -41852,6 +43660,7 @@
       {
         "id": 51162504,
         "content": "Facile à dire ! Mais comment on s’y prend ? Dès qu’on monte, il se met à crier et s’enfuit dans l’autre sens. On n’ose pas trop s’approcher, de peur qu’il disparaisse complètement.",
+        "speakerName": "Shan Yaliu",
         "next": 51162505
       },
       {
@@ -41863,6 +43672,7 @@
       {
         "id": 51162506,
         "content": "On a déjà essayé ! Il descend, oui... mais dès qu’on se jette sur lui pour l’attraper, hop ! Il s’envole à nouveau !",
+        "speakerName": "Shan Yaliu",
         "next": 51162507
       },
       {
@@ -41897,6 +43707,7 @@
       {
         "id": 51162510,
         "content": "... Pas peur ? Tu veux dire qu’ils ne s’enfuient pas, qu’ils ne paniquent pas en te voyant ?",
+        "speakerName": "Shan Yaliu",
         "next": 51162511
       },
       {
@@ -41926,11 +43737,13 @@
       {
         "id": 51162521,
         "content": "C’est ingénieux ! Maintenant que tu le dis, j’ai déjà fait ça quand j’étais gamin... mais c’était juste pour s’amuser.",
+        "speakerName": "Shan Yaliu",
         "next": 51162522
       },
       {
         "id": 51162513,
         "content": "Non, attends ! S’ils font la roue devant {性别:lui|elle}... c’est peut-être qu’{性别:il|elle} est en réalité... un paon femelle métamorphosé !",
+        "speakerName": "Shan Yaliu",
         "next": 51162514
       },
       {
@@ -41947,7 +43760,8 @@
       },
       {
         "id": 51162523,
-        "content": "J’en ai un pour le riz chez moi ! Je vais aller le chercher !"
+        "content": "J’en ai un pour le riz chez moi ! Je vais aller le chercher !",
+        "speakerName": "Shan Yaliu"
       },
       {
         "id": 51162515,
@@ -42564,11 +44378,13 @@
       {
         "id": 51167001,
         "content": "Chut, chut ! Parlez moins fort ! La guide nous a bien dit de ne pas discuter du prix entre nous ! Moi non plus, je n’y croyais pas au début... mais cette petite qui se dit cheffe de groupe nous a assuré, la main sur le cœur, qu’elle ne nous tromperait pas.",
+        "speakerName": "Su Guang",
         "next": 51167002
       },
       {
         "id": 51167002,
         "content": "Je me suis dit... si elle le garantit ainsi, elle ne doit pas mentir. Les Neuf Chapitres de Dafeng ne sont pas là pour faire joli — à Huaxu, tromper les gens, c’est s’exposer à la sanction des Bi’an.",
+        "speakerName": "Su Guang",
         "next": 51167003
       },
       {
@@ -42580,11 +44396,13 @@
       {
         "id": 51167004,
         "content": "Voilà pourquoi je me suis inscrite. Après tout, trois cent quatre-vingt-dix-neuf, ce n’est pas une somme énorme. Et puis, cette guide est vraiment attentionnée. Sur le bateau, plusieurs personnes ont eu le mal de mer — elle courait partout pour leur apporter du thé et de l’eau, sans jamais se ménager.",
+        "speakerName": "Su Guang",
         "next": 51167005
       },
       {
         "id": 51167005,
         "content": "Parfois, je me dis... une gamine qui se donne autant de mal pour si peu... même si elle nous emmène dans une boutique de souvenirs, ce ne serait pas si grave de lui acheter quelque chose.",
+        "speakerName": "Su Guang",
         "next": 51167006
       },
       {
@@ -42595,7 +44413,8 @@
       },
       {
         "id": 51167007,
-        "content": "Oui, oui, je sais. Je suis âgée, pas idiote. Je sais que vous vous inquiétez pour moi. Ne vous en faites pas, je saurai faire la part des choses."
+        "content": "Oui, oui, je sais. Je suis âgée, pas idiote. Je sais que vous vous inquiétez pour moi. Ne vous en faites pas, je saurai faire la part des choses.",
+        "speakerName": "Su Guang"
       }
     ]
   },
@@ -42723,6 +44542,7 @@
       {
         "id": 51167202,
         "content": "Très bien, maître. Mais... vous pensez pouvoir nous la rendre quand ? Je m’inquiète un peu...",
+        "speakerName": "Qingque",
         "next": 51167203
       },
       {
@@ -42740,6 +44560,7 @@
       {
         "id": 51167205,
         "content": "Tu parles de la pompe à eau ? C’est l’engin qu’on sort pour éteindre les incendies quand une maison prend feu.",
+        "speakerName": "Qingque",
         "next": 51167206
       },
       {
@@ -42843,7 +44664,8 @@
       },
       {
         "id": 51167223,
-        "content": "Euh... haha... je n’ai absolument rien entendu !"
+        "content": "Euh... haha... je n’ai absolument rien entendu !",
+        "speakerName": "Qingque"
       }
     ]
   },
@@ -42867,6 +44689,7 @@
       {
         "id": 51167302,
         "content": "Oui. Devons-nous leur allouer le même budget de maintenance que les années précédentes ?",
+        "speakerName": "Lü Yan",
         "next": 51167303
       },
       {
@@ -42884,6 +44707,7 @@
       {
         "id": 51167305,
         "content": "Je vois... Les entrepôts sont pleins de rats qui viennent grignoter...",
+        "speakerName": "Lü Yan",
         "next": 51167306
       },
       {
@@ -43523,6 +45347,7 @@
       {
         "id": 51167701,
         "content": "Allons donc... tu ne vas pas me dire que la mousse pousse parce qu’ils ont arrêté la roue ?",
+        "speakerName": "Mai Mi",
         "next": 51167702
       },
       {
@@ -43540,6 +45365,7 @@
       {
         "id": 51167704,
         "content": "Ce que tu dis n’est pas complètement faux. Mais dis-moi : les supports immergés, eux, comment le courant enlève la mousse ?",
+        "speakerName": "Mai Mi",
         "next": 51167705
       },
       {
@@ -43551,11 +45377,13 @@
       {
         "id": 51167706,
         "content": "Ah... l’eau du Port des Astres Séparés vient en grande partie de la rivière du Village de Jiaolan. Elle est pleine d’algues. Une fois que ça s’accroche au bois, la mousse finit forcément par pousser.",
+        "speakerName": "Mai Mi",
         "next": 51167707
       },
       {
         "id": 51167707,
         "content": "La rotation peut ralentir un peu le phénomène, mais elle ne l’empêche pas.",
+        "speakerName": "Mai Mi",
         "next": 51167708
       },
       {
@@ -43566,7 +45394,8 @@
       },
       {
         "id": 51167709,
-        "content": "Mais... je voulais juste t’expliquer, je ne cherchais pas à me vanter... Hé ! Hé ! Ne te bouche pas les oreilles ! Tu m’écoutes, au moins ?"
+        "content": "Mais... je voulais juste t’expliquer, je ne cherchais pas à me vanter... Hé ! Hé ! Ne te bouche pas les oreilles ! Tu m’écoutes, au moins ?",
+        "speakerName": "Mai Mi"
       }
     ]
   },
@@ -43675,6 +45504,7 @@
       {
         "id": 51167904,
         "content": "Hum... Monsieur, calmez-vous, je vous en prie. Les navires de nuit suivent les marées — et les marées n’attendent personne. Nous n’avions pas anticipé que cela perturberait à ce point votre repos. Combien de temps cela dure-t-il, en général ?",
+        "speakerName": "Fonctionnaire du Bureau des Navires",
         "next": 51167905
       },
       {
@@ -43686,16 +45516,19 @@
       {
         "id": 51167906,
         "content": "C’est un manque de prévoyance de notre part. Nous avons privilégié l’efficacité du commerce sans tenir compte du repos des habitants.",
+        "speakerName": "Fonctionnaire du Bureau des Navires",
         "next": 51167907
       },
       {
         "id": 51167907,
         "content": "Soyez assuré que nous allons convoquer les responsables dès aujourd’hui. Une solution appropriée vous sera proposée dans la semaine.",
+        "speakerName": "Fonctionnaire du Bureau des Navires",
         "next": 51167908
       },
       {
         "id": 51167908,
         "content": "Non... mieux encore. Nous allons immédiatement publier un avis : interdiction formelle de crier pour les navires arrivant de nuit. Nous affinerons les mesures par la suite. Qu’en dites-vous ?",
+        "speakerName": "Fonctionnaire du Bureau des Navires",
         "next": 51167909
       },
       {
@@ -44010,6 +45843,7 @@
       {
         "id": 51168202,
         "content": "Ma fille est rentrée, et son père a voulu faire le malin en cuisine... oh là là, un désastre ! J’ai dû refaire tout un repas derrière.",
+        "speakerName": "Honglei",
         "next": 51168203
       },
       {
@@ -44021,6 +45855,7 @@
       {
         "id": 51168204,
         "content": "Son cousin l’a embarquée je ne sais où. Ils ont grandi ensemble, ça faisait des années qu’ils ne s’étaient pas vus... tu imagines comme ils sont contents.",
+        "speakerName": "Honglei",
         "next": 51168205
       },
       {
@@ -44032,6 +45867,7 @@
       {
         "id": 51168206,
         "content": "C’est elle qui le voulait. Elle disait que pour apprendre le théâtre, il fallait aller à Luca, que l’ambiance académique y était meilleure... Elle est grande maintenant. Tant qu’on peut l’aider, autant la laisser suivre son chemin.",
+        "speakerName": "Honglei",
         "next": 51168207
       },
       {
@@ -44043,6 +45879,7 @@
       {
         "id": 51168208,
         "content": "Mai est raisonnable et excellente élève. Son école lui a accordé une exonération de frais, et elle travaille à côté. Et puis, son père et moi, on ne dépense pas beaucoup... on s’en sort.",
+        "speakerName": "Honglei",
         "next": 51168209
       },
       {
@@ -44053,7 +45890,8 @@
       },
       {
         "id": 51168210,
-        "content": "Avec plaisir !"
+        "content": "Avec plaisir !",
+        "speakerName": "Honglei"
       }
     ]
   },
@@ -44077,21 +45915,25 @@
       {
         "id": 51168302,
         "content": "<I>snff</> N-non... je ne l’ai pas vu en sortant de chez moi...",
+        "speakerName": "Morveux",
         "next": 51168303
       },
       {
         "id": 51168303,
         "content": "Morveux, je t’avais dit de le traîner dehors en venant ! Sinon il ne sort jamais !",
+        "speakerName": "Canaille",
         "next": 51168304
       },
       {
         "id": 51168304,
         "content": "Facile à dire... regarde sa carrure, et regarde-moi... <I>snff</> Vas-y toi-même !",
+        "speakerName": "Morveux",
         "next": 51168305
       },
       {
         "id": 51168305,
         "content": "Bon, ça suffit, arrêtez de vous disputer. On peut jouer à quatre, non ? Ce n’est pas si grave.",
+        "speakerName": "Princesse Jade",
         "next": 51168306
       },
       {
@@ -44103,6 +45945,7 @@
       {
         "id": 51168307,
         "content": "Présent ! <I>snff</>",
+        "speakerName": "Morveux",
         "next": 51168308
       },
       {
@@ -44114,6 +45957,7 @@
       {
         "id": 51168309,
         "content": "Mais... pourquoi faire ?",
+        "speakerName": "Canaille",
         "next": 51168310
       },
       {
@@ -44125,6 +45969,7 @@
       {
         "id": 51168311,
         "content": "Présent !",
+        "speakerName": "Canaille",
         "next": 51168312
       },
       {
@@ -44136,6 +45981,7 @@
       {
         "id": 51168313,
         "content": "Général... vous n’allez quand même pas...",
+        "speakerName": "Princesse Jade",
         "next": 51168314
       },
       {
@@ -44365,6 +46211,7 @@
       {
         "id": 51169301,
         "content": "Désolé. L’accès au Pavillon de l’Arbitrage est strictement interdit au public.",
+        "speakerName": "Gardien du pavillon",
         "next": 51169302
       },
       {
@@ -44376,6 +46223,7 @@
       {
         "id": 51169303,
         "content": "Monsieur... je suis vraiment navré... mais je ne peux pas vous laisser passer.",
+        "speakerName": "Gardien du pavillon",
         "next": 51169304
       },
       {
@@ -44387,21 +46235,25 @@
       {
         "id": 51169305,
         "content": "C’est impossible... Qu’est-ce que je suis censé faire... ? Il ne veut vraiment pas partir...",
+        "speakerName": "Gardien du pavillon",
         "next": 51169306
       },
       {
         "id": 51169306,
         "content": "Monsieur, nous comprenons parfaitement votre dévotion envers le Seigneur Taihao. Toutefois, le Pavillon de l’Arbitrage obéit à des règles strictes : seuls les cas d’une importance majeure y sont jugés.",
+        "speakerName": "Médiateur",
         "next": 51169307
       },
       {
         "id": 51169307,
         "content": "De plus, le Seigneur Dragon est accaparé par d’innombrables responsabilités. Même si vous parveniez à entrer de force, il serait peu probable que vous puissiez le voir.",
+        "speakerName": "Médiateur",
         "next": 51169308
       },
       {
         "id": 51169308,
         "content": "Si vous possédez réellement un talent exceptionnel, pourquoi ne pas aspirer à devenir candidat au titre de Haut Chancelier de Longyuan ? Vous seriez alors invité au Pavillon pour passer les épreuves... et pourriez contempler le Seigneur en personne.",
+        "speakerName": "Médiateur",
         "next": 51169309
       },
       {
@@ -44413,11 +46265,13 @@
       {
         "id": 51169310,
         "content": "Vous voyez... il n’y a vraiment aucun moyen de le raisonner...",
+        "speakerName": "Gardien du pavillon",
         "next": 51169311
       },
       {
         "id": 51169311,
-        "content": "Haa... Chaque année, on en voit passer quelques-uns, des comme lui..."
+        "content": "Haa... Chaque année, on en voit passer quelques-uns, des comme lui...",
+        "speakerName": "Médiateur"
       }
     ]
   },
@@ -44868,11 +46722,13 @@
       {
         "id": 51169706,
         "content": "Ah, l’histoire de Haojing ! Vous tombez bien, c’est mon domaine ! Il y a plus de mille ans, cet endroit ne s’appelait même pas Haojing. Ce n’était qu’un petit village dirigé par notre ancêtre, Yang.",
+        "speakerName": "Vieux Luo",
         "next": 51169707
       },
       {
         "id": 51169718,
         "content": "J’arrive, j’arrive ! Pas la peine de me presser ! Alors, {性别:mon petit|ma petite}, tu veux parler de culture ? Tu es bien tombé.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169719
       },
       {
@@ -44884,11 +46740,13 @@
       {
         "id": 51169707,
         "content": "À cette époque, Huaxu était ravagé par les Souillés. Les gens erraient sans foyer, se disputant les maigres ressources... il n’y avait pas un instant de répit.",
+        "speakerName": "Vieux Luo",
         "next": 51169708
       },
       {
         "id": 51169719,
         "content": "Bon, pour être honnête, je ne saurais pas vraiment définir ce que c’est, la « culture »... mais ma fille, qui étudie au loin, m’a dit que c’était ce qui rend un endroit unique. Ce qu’on ne trouve nulle part ailleurs.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169720
       },
       {
@@ -44900,11 +46758,13 @@
       {
         "id": 51169708,
         "content": "Heureusement, notre grand ancêtre Yang éveilla un art extraordinaire : l’Art de la Division de l’Encens. Une fois maîtrisé, il permettait de contenir les Souillés dans toute cette région... mais la force d’une seule personne restait limitée.",
+        "speakerName": "Vieux Luo",
         "next": 51169709
       },
       {
         "id": 51169720,
         "content": "Alors j’ai réfléchi... et j’ai trouvé trois choses qui rendent Haojing vraiment spécial. Écoute bien !",
+        "speakerName": "Grand-mère Qian",
         "next": 51169721
       },
       {
@@ -44916,11 +46776,13 @@
       {
         "id": 51169709,
         "content": "C’est ainsi que furent fondés les Neuf Chapitres de Dafeng, afin de transmettre cet art et de le faire prospérer. Et c’est ici même, sous le Pavillon de l’Arbitrage, que les fondations furent posées... donnant naissance à Haojing.",
+        "speakerName": "Vieux Luo",
         "next": 51169710
       },
       {
         "id": 51169721,
         "content": "La première, c’est le Pavillon de l’Arbitrage, là où réside le Seigneur Dragon. Suspendu au sommet de la ville, avec le dragon qui tourne dans les airs... ça, tu ne verras ça nulle part ailleurs.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169722
       },
       {
@@ -44932,11 +46794,13 @@
       {
         "id": 51169710,
         "content": "Au départ, la ville ne faisait que la moitié de sa taille actuelle. Avec l’essor de la Secte Xuanheng, les habitants des environs s’y sont peu à peu installés. Les Descendants draconiques étudiaient l’Art de la Division de l’Encens, tandis que d’autres cultivaient les matières nécessaires.",
+        "speakerName": "Vieux Luo",
         "next": 51169711
       },
       {
         "id": 51169722,
         "content": "La deuxième, c’est notre façon de vivre. Tu as dû le remarquer en arrivant : ici, une famille, ce n’est pas seulement un petit foyer. C’est tout un clan qui vit sous le même toit.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169723
       },
       {
@@ -44959,11 +46823,13 @@
       {
         "id": 51169711,
         "content": "C’est ainsi que le Village de Jiaolan vit le jour. Encore aujourd’hui, c’est un haut lieu de culture de l’encens. Là-bas, les habitants vivent pour l’encens, travaillent l’encens... ils s’y connaissent sans doute mieux que nous autres citadins !",
+        "speakerName": "Vieux Luo",
         "next": 51169712
       },
       {
         "id": 51169723,
         "content": "On vit serrés, on se croise du matin au soir... et quand quelqu’un a un problème, toute la famille s’en mêle. Ailleurs, c’est devenu rare.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169724
       },
       {
@@ -44979,21 +46845,25 @@
       {
         "id": 51169712,
         "content": "Les Neuf Chapitres de Dafeng ont apporté la paix à Huaxu... et avec la paix, la population n’a cessé d’augmenter. Depuis, Haojing a connu deux grandes phases d’expansion, ainsi qu’innombrables rénovations.",
+        "speakerName": "Vieux Luo",
         "next": 51169713
       },
       {
         "id": 51169724,
         "content": "La troisième... eh bien... je n’ai pas encore tout à fait décidé. J’avais pensé à l’encens, mais Huaxu en est rempli, alors ce n’est pas si particulier. Le commerce, peut-être ? Mais Port-des-Brumes est sans doute plus prospère.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169725
       },
       {
         "id": 51169713,
         "content": "Aujourd’hui, Haojing a pris de l’âge. Beaucoup de jeunes sont partis ailleurs... mais cette ville a été témoin de mille ans de paix. C’est, sans conteste, la première cité de Huaxu !",
+        "speakerName": "Vieux Luo",
         "next": 51169714
       },
       {
         "id": 51169725,
         "content": "À mon avis, ce qui fait la force de Haojing, c’est son mélange. On y trouve de tout : nourriture, divertissements... tout ce qui existe aux quatre coins de Huaxu. Cette ville sait retenir les gens. Et même ceux qui partent veulent toujours ramener chez eux ce qu’ils ont vu ailleurs.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169726
       },
       {
@@ -45005,11 +46875,13 @@
       {
         "id": 51169726,
         "content": "Alors, à force d’assembler tout cela... on obtient ce Haojing si unique.",
+        "speakerName": "Grand-mère Qian",
         "next": 51169727
       },
       {
         "id": 51169715,
-        "content": "Oh, vous m’embarrassez ! Ma femme et moi l’avons répété plusieurs fois, en effet."
+        "content": "Oh, vous m’embarrassez ! Ma femme et moi l’avons répété plusieurs fois, en effet.",
+        "speakerName": "Vieux Luo"
       },
       {
         "id": 51169727,
@@ -45019,7 +46891,8 @@
       },
       {
         "id": 51169728,
-        "content": "Oh, vous exagérez, Han ! J’ai encore beaucoup à apprendre !"
+        "content": "Oh, vous exagérez, Han ! J’ai encore beaucoup à apprendre !",
+        "speakerName": "Grand-mère Qian"
       }
     ]
   },
@@ -45233,6 +47106,7 @@
       {
         "id": 51170002,
         "content": "Comment ça, je ne regardais pas ?! Je lui criais de s’écarter depuis loin, mais elle n’a rien entendu ! Avec une charge pareille, je ne pouvais pas m’arrêter net !",
+        "speakerName": "Cheng Yu",
         "next": 51170003
       },
       {
@@ -45244,6 +47118,7 @@
       {
         "id": 51170004,
         "content": "Tout s’est passé trop vite ! Je n’ai fait que crier, à m’en briser la voix ! Si elle n’a rien entendu, ce n’est pas ma faute !",
+        "speakerName": "Cheng Yu",
         "next": 51170005
       },
       {
@@ -45255,6 +47130,7 @@
       {
         "id": 51170006,
         "content": "Messieurs, calmez-vous. Permettez-moi d’abord de vous poser une question : comment se porte votre mère après l’accident ? A-t-elle reçu des soins ?",
+        "speakerName": "Médiateur",
         "next": 51170007
       },
       {
@@ -45266,11 +47142,13 @@
       {
         "id": 51170008,
         "content": "Souhaitez-vous que nous demandions aux médecins de la Pharmacie Zesheng de l’examiner ?",
+        "speakerName": "Médiateur",
         "next": 51170009
       },
       {
         "id": 51170009,
         "content": "Elle n’a même pas la peau éraflée, pas une goutte de sang ! Pourquoi consulter ? Si elle avait été vraiment blessée, les Bi’an seraient déjà venus me chercher !",
+        "speakerName": "Cheng Yu",
         "next": 51170010
       },
       {
@@ -45288,11 +47166,13 @@
       {
         "id": 51170012,
         "content": "Tu cherches juste à me soutirer de l’argent !",
+        "speakerName": "Cheng Yu",
         "next": 51170013
       },
       {
         "id": 51170013,
-        "content": "Assez ! Je vais consigner l’affaire. Rentrez chez vous pour l’instant. Un agent prendra en charge le dossier dans quelques jours. Nous viendrons enquêter chez chacun de vous afin d’établir les faits et rendre une décision équitable."
+        "content": "Assez ! Je vais consigner l’affaire. Rentrez chez vous pour l’instant. Un agent prendra en charge le dossier dans quelques jours. Nous viendrons enquêter chez chacun de vous afin d’établir les faits et rendre une décision équitable.",
+        "speakerName": "Médiateur"
       }
     ]
   },
@@ -45462,6 +47342,7 @@
       {
         "id": 51170204,
         "content": "Maître, vous trichez ! On voulait une histoire amusante, pas encore un sermon sur les études !",
+        "speakerName": "Écolier",
         "next": 51170205
       },
       {
@@ -45716,6 +47597,7 @@
       {
         "id": 51170402,
         "content": "Maître... je ne comprends pas. Comment tout pourrait-il être un seul et même principe ? Vous et moi... nous serions identiques ?",
+        "speakerName": "Bei Mei",
         "next": 51170403
       },
       {
@@ -45733,6 +47615,7 @@
       {
         "id": 51170405,
         "content": "Mais maître... ce « principe »... qu’est-ce que c’est, au juste ?",
+        "speakerName": "Bei Mei",
         "next": 51170406
       },
       {
@@ -45744,6 +47627,7 @@
       {
         "id": 51170407,
         "content": "Je... je ne comprends toujours pas...",
+        "speakerName": "Bei Mei",
         "next": 51170408
       },
       {
@@ -45767,6 +47651,7 @@
       {
         "id": 51170411,
         "content": "Je crois que... peut-être... en quelque sorte... j’ai un peu compris...",
+        "speakerName": "Bei Mei",
         "next": 51170412
       },
       {
@@ -45922,6 +47807,7 @@
       {
         "id": 51170602,
         "content": "Pas du tout. Ce « principe » dont tu parles est invisible et insaisissable. On ne peut l’appréhender qu’à travers les choses concrètes, en observant les distinctions — c’est ainsi seulement qu’on en perçoit la réalité.",
+        "speakerName": "Wen Qi",
         "next": 51170603
       },
       {
@@ -45933,6 +47819,7 @@
       {
         "id": 51170604,
         "content": "Et sans les choses concrètes pour lui donner forme, ton « principe » n’est qu’un château en l’air. C’est en partant des distinctions que l’on remonte au principe !",
+        "speakerName": "Wen Qi",
         "next": 51170605
       },
       {
@@ -45944,6 +47831,7 @@
       {
         "id": 51170606,
         "content": "Et moi je te demande : sans pratique ni réflexion, comment peux-tu comprendre ce principe ? On commence par observer les liens entre les choses, puis on en dégage une règle générale.",
+        "speakerName": "Wen Qi",
         "next": 51170607
       },
       {
@@ -45955,6 +47843,7 @@
       {
         "id": 51170608,
         "content": "Des comparaisons bancales et des arguments flous... Je n’ai plus envie de débattre avec toi.",
+        "speakerName": "Wen Qi",
         "next": 51170609
       },
       {
@@ -45966,6 +47855,7 @@
       {
         "id": 51170610,
         "content": "Tu vois bien : c’est parce que j’ai arrêté de discuter que tu en conclus que tu as gagné. Alors je te repose la question : qu’est-ce qui vient en premier, le principe ou les distinctions ?",
+        "speakerName": "Wen Qi",
         "next": 51170611
       },
       {
@@ -45995,16 +47885,19 @@
       {
         "id": 51170702,
         "content": "S’il te plaît, encore deux jours ! La toux de ma mère a empiré, je veux l’emmener à la Pharmacie Zesheng après les cours.",
+        "speakerName": "Juan Ke",
         "next": 51170703
       },
       {
         "id": 51170703,
         "content": "Arrête de raconter n’importe quoi. Mon père t’a vu l’autre jour au stand de fruits confits à l’ouest de la ville. Il t’a même parlé, et tu as fait semblant de ne pas l’entendre. Tu savais très bien que tu étais en faute.",
+        "speakerName": "Zhang Zhizhi",
         "next": 51170704
       },
       {
         "id": 51170704,
         "content": "N’importe quoi ! Ma mère avait mal à la gorge, je lui achetais des fruits confits pour accompagner son remède.",
+        "speakerName": "Juan Ke",
         "next": 51170705
       },
       {
@@ -46016,11 +47909,13 @@
       {
         "id": 51170706,
         "content": "Merci, tu es vraiment la meilleure ! Je vais aller tout lui expliquer !",
+        "speakerName": "Juan Ke",
         "next": 51170707
       },
       {
         "id": 51170707,
-        "content": "Tu te fais avoir... Il profite juste de ta gentillesse. Tu es trop facile à berner."
+        "content": "Tu te fais avoir... Il profite juste de ta gentillesse. Tu es trop facile à berner.",
+        "speakerName": "Zhang Zhizhi"
       }
     ]
   },
@@ -46044,6 +47939,7 @@
       {
         "id": 51174602,
         "content": "Ton frère ? Le Tisse-Étoiles qui n’est pas revenu depuis des années ?",
+        "speakerName": "Xu An",
         "next": 51174603
       },
       {
@@ -46055,6 +47951,7 @@
       {
         "id": 51174604,
         "content": "Euh... mon père en a parlé... l’Empire... Hyper... Boré... un truc comme ça ?",
+        "speakerName": "Xu An",
         "next": 51174605
       },
       {
@@ -46066,6 +47963,7 @@
       {
         "id": 51174606,
         "content": "Tu exagères... Mon père dit que cet empereur est aussi puissant que le Seigneur Dragon d’Argent. Même lui ne ferait même pas attention à ton frère, alors pourquoi l’empereur le ferait ?",
+        "speakerName": "Xu An",
         "next": 51174607
       },
       {
@@ -46095,6 +47993,7 @@
       {
         "id": 51170802,
         "content": "Oui, je lui ai demandé. Il a quelque chose à faire, il ne vient pas aujourd’hui.",
+        "speakerName": "Qi Zhi",
         "next": 51170803
       },
       {
@@ -46106,6 +48005,7 @@
       {
         "id": 51170804,
         "content": "Et ce n’est pas le seul. Zhen est malade aujourd’hui, elle ne vient pas non plus.",
+        "speakerName": "Qi Zhi",
         "next": 51170805
       },
       {
@@ -46117,6 +48017,7 @@
       {
         "id": 51170806,
         "content": "Impossible de faire un vrai match. Vous pouvez toujours jouer entre vous, juste pour vous amuser.",
+        "speakerName": "Qi Zhi",
         "next": 51170807
       },
       {
@@ -46128,6 +48029,7 @@
       {
         "id": 51170808,
         "content": "Dans ce cas... Zhen veut aller se promener à la campagne dans deux jours. Tu veux venir ?",
+        "speakerName": "Qi Zhi",
         "next": 51170809
       },
       {
@@ -46139,6 +48041,7 @@
       {
         "id": 51170810,
         "content": "Qianqian vient aussi. Alors ?",
+        "speakerName": "Qi Zhi",
         "next": 51170811
       },
       {
@@ -46150,6 +48053,7 @@
       {
         "id": 51170812,
         "content": "Parfait. Ton après-midi est tout trouvé. Zhen veut des pâtisseries du Marché de l’Est. Il y a toujours la queue, et la boutique ferme souvent sans prévenir. Comme elle est ouverte aujourd’hui, va faire la file.",
+        "speakerName": "Qi Zhi",
         "next": 51170813
       },
       {
@@ -46161,6 +48065,7 @@
       {
         "id": 51170814,
         "content": "Comme tu veux. Mais n’oublie pas : c’est toi qui lui as promis. Si elle jouait au cuju avec toi, tu lui offrirais des pâtisseries pendant un mois.",
+        "speakerName": "Qi Zhi",
         "next": 51170815
       },
       {
@@ -46321,6 +48226,7 @@
       {
         "id": 51171002,
         "content": "Tu ne veux vraiment pas y réfléchir encore ? Si c’est une question de salaire, je peux en parler. Une augmentation est tout à fait envisageable.",
+        "speakerName": "Xuan Wu",
         "next": 51171003
       },
       {
@@ -46332,6 +48238,7 @@
       {
         "id": 51171004,
         "content": "Dans ce cas, prends simplement quelques jours de congé. Rentre chez toi un moment, puis reviens après la Cérémonie de l’Encens.",
+        "speakerName": "Xuan Wu",
         "next": 51171005
       },
       {
@@ -46343,6 +48250,7 @@
       {
         "id": 51171006,
         "content": "Je n’ai jamais réussi à te faire changer d’avis. Très bien, fais comme tu l’entends.",
+        "speakerName": "Xuan Wu",
         "next": 51171007
       },
       {
@@ -46518,11 +48426,13 @@
       {
         "id": 51171104,
         "content": "Je ne suis pas d’accord avec vous ! Ces soi-disant « Wenzhu » — non, de simples Vagabondes criminelles — ne font que répondre à la violence par la violence et intimider les autres. Cela ne contribue en rien à la paix de Huaxu.",
+        "speakerName": "Xue Minglang",
         "next": 51171105
       },
       {
         "id": 51171105,
         "content": "Répondre à la violence par la violence ne fait que la perpétuer. La peur se propage, et avec elle l’instabilité. Même si cela peut contenir certains troubles à court terme, cela ne fait que semer les graines de futurs désordres.",
+        "speakerName": "Xue Minglang",
         "next": 51171106
       },
       {
@@ -46534,21 +48444,25 @@
       {
         "id": 51171107,
         "content": "Vous évoquiez justement l’ordre. Comme vous l’avez dit, la paix de Huaxu repose sur l’ordre établi par les Neuf Chapitres de Dafeng — un ordre éprouvé par des générations, et non de simples paroles en l’air.",
+        "speakerName": "Xue Minglang",
         "next": 51171108
       },
       {
         "id": 51171108,
         "content": "Lorsque cet ordre existe déjà, la vengeance ne résout rien — elle ne fait que créer de nouvelles victimes.",
+        "speakerName": "Xue Minglang",
         "next": 51171109
       },
       {
         "id": 51171109,
         "content": "Si le bien et le mal, que la loi ne peut trancher, sont laissés au jugement personnel, alors la violence ne fera que se répandre. Elle finit par nuire à tous — et dans ces conditions, quelle paix peut-il encore y avoir ?",
+        "speakerName": "Xue Minglang",
         "next": 51171110
       },
       {
         "id": 51171110,
-        "content": "Très bien ! Fin de la première manche. Veuillez prendre un moment de repos. La seconde manche débutera au signal du gong."
+        "content": "Très bien ! Fin de la première manche. Veuillez prendre un moment de repos. La seconde manche débutera au signal du gong.",
+        "speakerName": "Administrateur de l’Académie"
       }
     ]
   },
@@ -46844,6 +48758,7 @@
       {
         "id": 51171402,
         "content": "Ah bon ? Dis donc, Huilan, voilà que tu visites quelques plantations et achètes quelques lots, et te voilà déjà à défendre les autres !",
+        "speakerName": "Lan Ting",
         "next": 51171403
       },
       {
@@ -46855,6 +48770,7 @@
       {
         "id": 51171404,
         "content": "Quels outils ? Vas-y, raconte.",
+        "speakerName": "Lan Ting",
         "next": 51171405
       },
       {
@@ -46878,6 +48794,7 @@
       {
         "id": 51171408,
         "content": "Même ainsi, Huilan, la méthode de culture ne détermine pas forcément la qualité de l’encens...",
+        "speakerName": "Lan Ting",
         "next": 51171409
       },
       {
@@ -46907,6 +48824,7 @@
       {
         "id": 51171502,
         "content": "Oui, oui~ Mais... Shuyao, est-ce que je pourrais participer aux achats cette année ?",
+        "speakerName": "Chen Nanqing",
         "next": 51171503
       },
       {
@@ -46918,6 +48836,7 @@
       {
         "id": 51171504,
         "content": "Vraiment ?! Super ! Shuyao, tu es la meilleure !",
+        "speakerName": "Chen Nanqing",
         "next": 51171505
       },
       {
@@ -46929,16 +48848,19 @@
       {
         "id": 51171506,
         "content": "Mais enfin... Shuyao~ Tu sais bien à quel point notre travail est monotone... Tous les jours, manipuler tout cet encens, les faire sécher, les traiter...",
+        "speakerName": "Chen Nanqing",
         "next": 51171507
       },
       {
         "id": 51171507,
         "content": "Ça fait un an — non, plus d’un an ! — et je fais toujours la même chose ! C’est tellement ennuyeux~",
+        "speakerName": "Chen Nanqing",
         "next": 51171508
       },
       {
         "id": 51171508,
         "content": "Alors si je peux participer aux achats, ça veut dire sortir, non ? Voir des choses nouvelles ? Intéressantes ? Amusantes !",
+        "speakerName": "Chen Nanqing",
         "next": 51171509
       },
       {
@@ -46950,6 +48872,7 @@
       {
         "id": 51171510,
         "content": "Hein ?! Mais c’est nul ! Je n’ai plus envie d’y aller !",
+        "speakerName": "Chen Nanqing",
         "next": 51171511
       },
       {
@@ -46966,7 +48889,8 @@
       },
       {
         "id": 51171513,
-        "content": "Mais non~ je ne veux pas~ Shuyao, tu es cruelle~"
+        "content": "Mais non~ je ne veux pas~ Shuyao, tu es cruelle~",
+        "speakerName": "Chen Nanqing"
       }
     ]
   },
@@ -47129,6 +49053,7 @@
       {
         "id": 51171626,
         "content": "Excusez-moi, seriez-vous l’émissaire de Yinyuan ?",
+        "speakerName": "???",
         "next": 51171627
       },
       {
@@ -47546,6 +49471,7 @@
       {
         "id": 51172002,
         "content": "Vous n’êtes pas au courant ? On dit qu’un incident s’est produit récemment au Pavillon, attirant plusieurs Bi’an obscurs.",
+        "speakerName": "Yu Wei",
         "next": 51172003
       },
       {
@@ -47557,6 +49483,7 @@
       {
         "id": 51172004,
         "content": "Apparemment, deux des renforts recrutés sur place sont intervenus et ont réussi à repousser les Bi’an. Sans eux, la situation aurait pu empirer.",
+        "speakerName": "Yu Wei",
         "next": 51172005
       },
       {
@@ -47592,6 +49519,7 @@
       {
         "id": 51172102,
         "content": "Tout est prêt. Nous avons également emprunté des appareils de mesure de la densité aromatique au Pavillon des Artisans et les avons distribués aux officiants de service aujourd’hui.",
+        "speakerName": "Li Rui",
         "next": 51172103
       },
       {
@@ -47880,11 +49808,13 @@
       {
         "id": 51172302,
         "content": "Maître, ce que je ne comprends pas, c’est le rôle exact de l’Art de la Division de l’Encens dans la fabrication.",
+        "speakerName": "Bao Sheng",
         "next": 51172303
       },
       {
         "id": 51172303,
         "content": "J’ai parcouru le <I>Traité de l’Encens</> plusieurs fois, mais à mes yeux, le procédé ne diffère en rien de celui utilisé en dehors du Pavillon.",
+        "speakerName": "Bao Sheng",
         "next": 51172304
       },
       {
@@ -47902,6 +49832,7 @@
       {
         "id": 51172306,
         "content": "Le Yueheng... Il aime la chaleur et résiste à la sécheresse. Son calice est utilisé en médecine. Il est couvert de fin duvet, qu’il faut retirer avec une pince après l’avoir lavé avant de l’utiliser en encens. On dit qu’il embellit le teint, clarifie l’esprit et renforce les facultés mentales.",
+        "speakerName": "Bao Sheng",
         "next": 51172307
       },
       {
@@ -47913,6 +49844,7 @@
       {
         "id": 51172308,
         "content": "Oui. Pendant un temps, je n’ai travaillé que sur des formules où il servait de base. À force d’en respirer toute la journée, j’en avais la tête qui tournait... alors pour l’effet clarifiant, on repassera !",
+        "speakerName": "Bao Sheng",
         "next": 51172309
       },
       {
@@ -47924,6 +49856,7 @@
       {
         "id": 51172310,
         "content": "Quoi ? Vous voulez dire que cet art ne sert pas seulement à distinguer les ingrédients, mais à en extraire pleinement les propriétés ?",
+        "speakerName": "Bao Sheng",
         "next": 51172311
       },
       {
@@ -47935,6 +49868,7 @@
       {
         "id": 51172312,
         "content": "Ça a l’air incroyable... Mais alors, pourquoi ne puis-je pas encore l’apprendre ? Je connais déjà bien les ingrédients.",
+        "speakerName": "Bao Sheng",
         "next": 51172313
       },
       {
@@ -47946,6 +49880,7 @@
       {
         "id": 51172314,
         "content": "Quoi ?! Et ce n’est que le début ?",
+        "speakerName": "Bao Sheng",
         "next": 51172315
       },
       {
@@ -47981,6 +49916,7 @@
       {
         "id": 51172402,
         "content": "Arrête un peu. Une Luno officiant ? Avec leur taille, elles arrivent seulement à atteindre le bord des brûle-encens ?",
+        "speakerName": "Jiu Mo",
         "next": 51172403
       },
       {
@@ -47992,6 +49928,7 @@
       {
         "id": 51172404,
         "content": "Pff~ Et elle ferait quoi, là-bas ? À mon avis, ils veulent juste faire parler d’eux.",
+        "speakerName": "Jiu Mo",
         "options": [
           {
             "id": 51172405,
@@ -48003,6 +49940,7 @@
       {
         "id": 51172406,
         "content": "Moi ? Qu’est-ce que j’ai dit ?",
+        "speakerName": "Jiu Mo",
         "options": [
           {
             "id": 51172407,
@@ -48054,16 +49992,19 @@
       {
         "id": 51172415,
         "content": "Je... je ne voulais pas...",
+        "speakerName": "Jiu Mo",
         "next": 51172416
       },
       {
         "id": 51172416,
         "content": "D’accord... c’est moi qui ai tort. J’ai laissé mes préjugés sur les Lunariens influencer mon jugement... et j’ai parlé à tort et à travers.",
+        "speakerName": "Jiu Mo",
         "next": 51172417
       },
       {
         "id": 51172417,
         "content": "Je vais me renseigner correctement. Tant que je ne connaîtrai pas toute l’histoire, je ne jugerai plus à la légère.",
+        "speakerName": "Jiu Mo",
         "options": [
           {
             "id": 51172418,
@@ -48109,6 +50050,7 @@
       {
         "id": 51172502,
         "content": "Espèce d’imbécile borné, qu’est-ce que tu racontes ? Pourquoi une Luno ne pourrait-elle pas être officiant ?",
+        "speakerName": "Hua Tianzhu",
         "next": 51172503
       },
       {
@@ -48120,6 +50062,7 @@
       {
         "id": 51172504,
         "content": "Cette Luno travaille depuis longtemps à la Maison Boshan. Tous les clients disent qu’elle connaît les ingrédients sur le bout des doigts — certains affirment même qu’elle surpasse les officiants de l’encens du Pavillon.",
+        "speakerName": "Hua Tianzhu",
         "next": 51172505
       },
       {
@@ -48136,7 +50079,8 @@
       },
       {
         "id": 51172507,
-        "content": "Que ça marche ou non, ce n’est pas à toi d’en décider. Espèce de borné — j’en ai assez de discuter avec toi !"
+        "content": "Que ça marche ou non, ce n’est pas à toi d’en décider. Espèce de borné — j’en ai assez de discuter avec toi !",
+        "speakerName": "Hua Tianzhu"
       }
     ]
   },
@@ -48166,11 +50110,13 @@
       {
         "id": 51172603,
         "content": "Oncle Boyuan, l’épreuve des talents de cette année sera plus importante que les précédentes. Lorsque le Bureau de la Fortune Céleste est venu en discuter, ils ont dit que nous pouvions demander un budget supplémentaire.",
+        "speakerName": "Zong Rui",
         "next": 51172604
       },
       {
         "id": 51172604,
         "content": "Mais j’ai consulté le dossier que nous avons soumis... et il n’y a strictement aucune marge. Tu dis toujours que ces moments où tout le monde se retrouve sont rares, alors pourquoi ne pas...",
+        "speakerName": "Zong Rui",
         "next": 51172605
       },
       {
@@ -48182,6 +50128,7 @@
       {
         "id": 51172606,
         "content": "Je ne disais pas de faire quoi que ce soit de mal ! Je pensais juste... qu’on pourrait ajouter un petit supplément — pour offrir de quoi boire aux maîtres, ou quelques présents en guise de remerciement...",
+        "speakerName": "Zong Rui",
         "next": 51172607
       },
       {
@@ -48198,7 +50145,8 @@
       },
       {
         "id": 51172609,
-        "content": "Vraiment ?! Génial ! Oncle Boyuan, quelle générosité ! Je vais annoncer la bonne nouvelle tout de suite !"
+        "content": "Vraiment ?! Génial ! Oncle Boyuan, quelle générosité ! Je vais annoncer la bonne nouvelle tout de suite !",
+        "speakerName": "Zong Rui"
       }
     ]
   },
@@ -48222,11 +50170,13 @@
       {
         "id": 51172702,
         "content": "Pas la peine de t’excuser. S’il y a un problème, on le répare. C’est mon travail.",
+        "speakerName": "Du Yue",
         "next": 51172703
       },
       {
         "id": 51172703,
         "content": "Ce brûle-encens... tu l’as utilisé en continu, puis refroidi brusquement avec de l’eau ?",
+        "speakerName": "Du Yue",
         "next": 51172704
       },
       {
@@ -48238,6 +50188,7 @@
       {
         "id": 51172705,
         "content": "C’est bien ce que je pensais. Je vais ajouter une couche isolante. Une fois de retour, il devrait fonctionner correctement. Mais fais attention à ce que je viens de te dire.",
+        "speakerName": "Du Yue",
         "next": 51172706
       },
       {
@@ -48249,6 +50200,7 @@
       {
         "id": 51172707,
         "content": "Tu t’excuses encore ? Si tu te sens vraiment coupable... approche un peu.",
+        "speakerName": "Du Yue",
         "next": 51172708
       },
       {
@@ -48260,6 +50212,7 @@
       {
         "id": 51172709,
         "content": "Haha ! Tu étais gênée, non ? Voilà qui t’aidera à t’en souvenir~",
+        "speakerName": "Du Yue",
         "next": 51172710
       },
       {
@@ -48270,7 +50223,8 @@
       },
       {
         "id": 51172711,
-        "content": "Parfait. Comme ça, on est quittes. La prochaine fois qu’il y a un problème, viens directement me voir — et je t’en donnerai une autre."
+        "content": "Parfait. Comme ça, on est quittes. La prochaine fois qu’il y a un problème, viens directement me voir — et je t’en donnerai une autre.",
+        "speakerName": "Du Yue"
       }
     ]
   },
@@ -48289,6 +50243,7 @@
       {
         "id": 51174802,
         "content": "Ah là là... à force de t’entendre râler toute la journée, j’en ai la tête qui bourdonne...",
+        "speakerName": "Song Wanwan",
         "next": 51174803
       },
       {
@@ -48474,16 +50429,19 @@
       {
         "id": 51175002,
         "content": "Hmpf. Et ça sert à quoi, exactement ? Mon père dit toujours que vous autres du Pavillon des Artisans, vous êtes bons à rien... sauf à semer le désordre.",
+        "speakerName": "Lianlian",
         "next": 51175003
       },
       {
         "id": 51175003,
         "content": "Ce truc fonce comme ça — et s’il percute quelqu’un ? Et même sans ça, s’il va s’écraser contre un stand ou un bâtiment ?",
+        "speakerName": "Lianlian",
         "next": 51175004
       },
       {
         "id": 51175004,
         "content": "Vous avez vraiment la tête aussi dure que du bois ! Pourquoi ne pas apprendre du Pavillon de l’Encens d’en face et faire un travail sérieux ? Toute la journée à agiter vos bouts de bois pour attirer les enfants, puis à essayer de les enrôler... c’est ridicule !",
+        "speakerName": "Lianlian",
         "next": 51175005
       },
       {
@@ -48495,6 +50453,7 @@
       {
         "id": 51175006,
         "content": "Pff~ T’es vraiment inutile. Je m’en vais. Va donc discuter avec tes bouts de bois !",
+        "speakerName": "Lianlian",
         "next": 51175007
       },
       {
@@ -48633,6 +50592,7 @@
       {
         "id": 51175102,
         "content": "Oh ? Ça t’intéresse ? C’est l’une de mes meilleures créations. Allez, prends-le.",
+        "speakerName": "Zhentian",
         "next": 51175103
       },
       {
@@ -48644,6 +50604,7 @@
       {
         "id": 51175104,
         "content": "Impossible ! Mes oiseaux mécaniques sont parfaitement sûrs. Tiens, regarde — touche ici. Tu sens ce petit mécanisme à l’arrière ?",
+        "speakerName": "Zhentian",
         "next": 51175105
       },
       {
@@ -48655,6 +50616,7 @@
       {
         "id": 51175106,
         "content": "Tourne-le doucement, voilà... essaie.",
+        "speakerName": "Zhentian",
         "next": 51175107
       },
       {
@@ -48671,6 +50633,7 @@
       {
         "id": 51175109,
         "content": "Impressionnant, hein ? Héhé~ Mais celui-ci, je ne peux pas te le donner gratuitement.",
+        "speakerName": "Zhentian",
         "next": 51175110
       },
       {
@@ -48682,6 +50645,7 @@
       {
         "id": 51175111,
         "content": "Héhé~ Si tu veux un oiseau comme celui-là, il faudra te vendre à la Secte Jishu, passer toute ta vie à étudier les mécanismes... et à la fin, tu pourras en fabriquer un toi-même !",
+        "speakerName": "Zhentian",
         "next": 51175112
       },
       {
@@ -48692,7 +50656,8 @@
       },
       {
         "id": 51175113,
-        "content": "Hé ! Non ! Ce n’est pas ça ! Je voulais dire... rejoindre la Secte Jishu... non... attends... ne pleure pas !"
+        "content": "Hé ! Non ! Ce n’est pas ça ! Je voulais dire... rejoindre la Secte Jishu... non... attends... ne pleure pas !",
+        "speakerName": "Zhentian"
       }
     ]
   },
@@ -49031,11 +50996,13 @@
       {
         "id": 51173203,
         "content": "<I>Hum... hum...</> Hmm...",
+        "speakerName": "Mu Yu",
         "next": 51173204
       },
       {
         "id": 51173204,
         "content": "Je sens bien l’odeur... on dirait qu’il a séché longtemps au soleil, il y a comme une chaleur qui s’en dégage... comment ça pourrait ne pas être suffisant ?",
+        "speakerName": "Mu Yu",
         "next": 51173205
       },
       {
@@ -49047,6 +51014,7 @@
       {
         "id": 51173206,
         "content": "Non... mm... non... ah — si ! Si ! Je la sens ! Comme l’odeur d’une maison après la pluie !",
+        "speakerName": "Mu Yu",
         "next": 51173207
       },
       {
@@ -49058,6 +51026,7 @@
       {
         "id": 51173208,
         "content": "Aïe ! Ça fait mal ! Arrête de me taper la tête !",
+        "speakerName": "Mu Yu",
         "next": 51173209
       },
       {
@@ -49099,6 +51068,7 @@
       {
         "id": 51173304,
         "content": "Je... je suis désolé... tu peux me punir...",
+        "speakerName": "Zehan",
         "next": 51173305
       },
       {
@@ -49110,6 +51080,7 @@
       {
         "id": 51173306,
         "content": "Quand on a ramené les lys célestes ce jour-là, le temps n’était pas bon. Je me suis dit que les mettre à sécher tout de suite risquait d’altérer leur qualité... alors j’ai voulu attendre que le soleil revienne... et puis... j’ai oublié...",
+        "speakerName": "Zehan",
         "next": 51173307
       },
       {
@@ -49322,6 +51293,7 @@
       {
         "id": 51174705,
         "content": "Tu t’es encore trompé sur le feu ? Tu l’as laissé trop fort tout du long, c’est ça ?",
+        "speakerName": "Liang",
         "next": 51174706
       },
       {
@@ -49333,6 +51305,7 @@
       {
         "id": 51174707,
         "content": "N’importe quoi ! Cette couche fibreuse doit être retirée à la main ! Qui t’a dit de la brûler ?",
+        "speakerName": "Liang",
         "next": 51174708
       },
       {
@@ -49343,7 +51316,8 @@
       },
       {
         "id": 51174709,
-        "content": "C’est pour ça que ton four explose tous les jours ! Allez, assez parlé, emmène-moi voir ça tout de suite !"
+        "content": "C’est pour ça que ton four explose tous les jours ! Allez, assez parlé, emmène-moi voir ça tout de suite !",
+        "speakerName": "Liang"
       }
     ]
   },
@@ -49456,6 +51430,7 @@
       {
         "id": 51173603,
         "content": "Laquelle ? L’encens de Lune Profonde pour le Pavillon de l’Encens, ou l’encens Luosheng commandé par les Tisse-Étoiles du Port-des-Brumes ?",
+        "speakerName": "Xia Li",
         "next": 51173604
       },
       {
@@ -49467,6 +51442,7 @@
       {
         "id": 51173605,
         "content": "Je pensais qu’ils venaient chercher autre chose, je ne savais pas que c’était ça. Mais l’encens Luosheng n’a toujours pas été livré. Tu devrais aller demander à Liang.",
+        "speakerName": "Xia Li",
         "next": 51173606
       },
       {
@@ -49484,6 +51460,7 @@
       {
         "id": 51173608,
         "content": "Qiao est juste un peu joueur, c’est tout. Ne t’inquiète pas dès qu’il est impliqué — cette fois, il ne fera pas la même bêtise que la dernière fois.",
+        "speakerName": "Xia Li",
         "next": 51173609
       },
       {
@@ -50731,6 +52708,7 @@
       {
         "id": 51175702,
         "content": "« Vert est le col, profond est mon cœur... » Dans ce vaste monde... serais-je vraiment condamné à ne jamais trouver quelqu’un pour partager ma vie ?",
+        "speakerName": "Homme étrange",
         "next": 51175703
       },
       {
@@ -50741,16 +52719,19 @@
       {
         "id": 51175704,
         "content": "Quel triste destin ! Né avec une beauté incomparable, et pourtant personne ne parvient à dépasser mon apparence parfaite pour contempler la limpidité de mon âme !",
+        "speakerName": "Homme étrange",
         "next": 51175705
       },
       {
         "id": 51175705,
         "content": "Quelle tragédie, quelle désolation... Les gens de ce monde sont dépourvus de clairvoyance : ils ne voient ni la poésie en mon cœur, ni les horizons lointains, ni l’espoir... ni les frimas qui m’habitent.",
+        "speakerName": "Homme étrange",
         "next": 51175706
       },
       {
         "id": 51175706,
         "content": "Ô Seigneur Dragon d’Argent ! Exaucez ma prière ! Si vous veillez réellement sur vos fidèles, alors lorsque j’ouvrirai les yeux, faites apparaître devant moi celle qui m’est destinée !",
+        "speakerName": "Homme étrange",
         "next": 51175707
       },
       {
@@ -50761,6 +52742,7 @@
       {
         "id": 51175708,
         "content": "C... c’est... un miracle ?! Est-ce là l’âme sœur que m’envoie le Seigneur Dragon d’Argent ?!",
+        "speakerName": "Homme étrange",
         "next": 51175709
       },
       {
@@ -51140,16 +53122,19 @@
       {
         "id": 51175802,
         "content": "Si je le tue... tout le monde applaudira à coup sûr... et si j’en élimine un autre au passage...",
+        "speakerName": "Homme bizarre",
         "next": 51175803
       },
       {
         "id": 51175803,
         "content": "Mais une mort aussi simple... c’est brusque, inattendu peut-être, mais sans cette douleur qui marque à jamais. C’est d’un ennui...",
+        "speakerName": "Homme bizarre",
         "next": 51175804
       },
       {
         "id": 51175804,
         "content": "Et si je ne le tue pas, alors pas de moment fort, pas d’évolution. Juste de quoi satisfaire les attentes du public... c’est terriblement commercial !",
+        "speakerName": "Homme bizarre",
         "next": 51175805
       },
       {
@@ -51160,6 +53145,7 @@
       {
         "id": 51175806,
         "content": "Hélas... cela me plonge dans un dilemme. Certes, je suis son père, mais au moment de décider de sa vie ou de sa mort... je n’arrive pas à trancher.",
+        "speakerName": "Homme bizarre",
         "next": 51175807
       },
       {
@@ -51202,11 +53188,13 @@
       {
         "id": 51175814,
         "content": "Moi ? Tuer quelqu’un ? Hahaha ! Je crois que vous avez mal compris.",
+        "speakerName": "Homme bizarre",
         "next": 51175815
       },
       {
         "id": 51175812,
         "content": "Attendez, jeune {性别:ami|amie} ! Vous êtes là à écouter depuis un moment... dites-moi, devrais-je le tuer ou non ?",
+        "speakerName": "Homme bizarre",
         "next": 51175813
       },
       {
@@ -51224,16 +53212,19 @@
       {
         "id": 51175816,
         "content": "Qu’ai-je bien pu dire tout à l’heure... laissez-moi réfléchir... Ah ! Je parlais de meurtre, de la manière de tuer, n’est-ce pas ?",
+        "speakerName": "Homme bizarre",
         "next": 51175817
       },
       {
         "id": 51175817,
         "content": "Il est donc naturel que vous ayez mal interprété mes propos.",
+        "speakerName": "Homme bizarre",
         "next": 51175818
       },
       {
         "id": 51175818,
         "content": "Rassurez-vous, je ne suis pas un dangereux assassin. Et puis, à Huaxu, ce genre d’individu ne se promène pas librement, n’est-ce pas ?",
+        "speakerName": "Homme bizarre",
         "next": 51175819
       },
       {
@@ -54028,6 +56019,7 @@
       {
         "id": 51178605,
         "content": "Vous êtes vraiment méchant ! À chaque fois, vous nous laissez sur notre faim ! La dernière fois, votre histoire de Zhuyin troublant la mer, vous l’avez arrêtée en plein milieu pour nous chasser. Vous le faites exprès !",
+        "speakerName": "Enfant",
         "next": 51178606
       },
       {
@@ -54039,6 +56031,7 @@
       {
         "id": 51178607,
         "content": "<I>Pff !</> Peu importe ! Vous nous racontez des histoires pour nous embobiner. À moins que demain, quand je reviendrai, vous m’offriez des bonbons... alors peut-être que je vous pardonnerai !",
+        "speakerName": "Enfant",
         "next": 51178608
       },
       {
@@ -54050,6 +56043,7 @@
       {
         "id": 51178609,
         "content": "Je n’écoute pas ! C’est promis ! Demain, je viens chercher mes bonbons ! J’y vais !",
+        "speakerName": "Enfant",
         "next": 51178610
       },
       {
@@ -55321,6 +57315,7 @@
       {
         "id": 51017000,
         "content": "Quelle mentalité étrange, en Hyperborea... Ça ne peut quand même pas être uniquement à cause de ma barbe, si ? Yan n’arrête pas de dire qu’elle est affreuse et qu’en plus elle pique, mais de là à ce que les gens me regardent comme si j’étais un revenant...",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017001
       },
       {
@@ -55332,26 +57327,31 @@
       {
         "id": 51017002,
         "content": "Ah, ne m’en parlez pas. Je suis venu à Hyperborea pour affaires. Un de mes partenaires commerciaux organisait un banquet dans la demeure de sa famille.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017003
       },
       {
         "id": 51017003,
         "content": "Et vous savez ce qui s’est passé ? J’étais en tenue de cérémonie, avec mon serviteur, invitation en main... et malgré ça, à l’entrée, on m’a quand même demandé si je ne m’étais pas trompé d’adresse. Le banquet avait déjà commencé, et moi, l’invité, j’étais encore bloqué dehors. Vous trouvez pas ça absurde ?",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017004
       },
       {
         "id": 51017004,
         "content": "Le domestique m’a retenu à la porte pendant une bonne demi-heure, à vérifier toutes sortes de papiers et de justificatifs. Au final, il a fallu que mon partenaire vienne lui-même me chercher pour qu’on me laisse enfin entrer.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017005
       },
       {
         "id": 51017005,
         "content": "Alors oui, son attitude restait polie en apparence... mais son regard, lui, mettait franchement mal à l’aise. Il n’y avait là-dedans que peur et méfiance, comme si je lui avais fait du tort.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017006
       },
       {
         "id": 51017006,
         "content": "Je n’ai accepté de faire tout ce chemin que parce que mon partenaire m’a invité à maintes reprises... Je ne pensais pas venir jusque-là pour me faire humilier.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "options": [
           {
             "id": 51017007,
@@ -55369,11 +57369,13 @@
       {
         "id": 51017009,
         "content": "Dis donc, {性别:jeune homme|jeune femme}, à vous entendre, on dirait que vous avez déjà mis les pieds à Huaxu. Venez donc, racontez-moi ça.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017010
       },
       {
         "id": 51017010,
         "content": "Alors, qu’est-ce que vous pensez de Huaxu ?",
+        "speakerName": "Marchand de Huaxu désabusé",
         "options": [
           {
             "id": 51017011,
@@ -55410,16 +57412,19 @@
       {
         "id": 51017012,
         "content": "Allons donc, je n’y crois pas une seconde. Vous me racontez des histoires, {性别:petit garnement|petite maligne}.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017017
       },
       {
         "id": 51017014,
         "content": "Si jeune, et déjà si fin gourmet. Pas mal.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017017
       },
       {
         "id": 51017016,
         "content": "Héhé, vous avez bon goût !",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017017
       },
       {
@@ -55431,11 +57436,13 @@
       {
         "id": 51017018,
         "content": "Vous en revenez à peine ? J’ai entendu dire qu’il s’y était passé quelque chose d’énorme récemment. Quel dommage que j’aie été sur les routes pour mon commerce, sans pouvoir voir ce qu’il s’est vraiment passé de mes propres yeux.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017019
       },
       {
         "id": 51017019,
         "content": "En parlant d’histoire... Je me nomme Zheng Feishi. Je fais du commerce à grande échelle, et je nourris aussi une passion pour les livres anciens et les écrits célèbres.",
+        "speakerName": "Marchand de Huaxu désabusé",
         "next": 51017020
       },
       {
@@ -58000,6 +60007,7 @@
       {
         "id": 51205711,
         "content": "Hé toi ! T’es qui, l’imposteur ? On a déjà dit qu’on ne recrutait pas n’importe qui ! C’est toi qui utilises notre nom pour arnaquer les gens et empocher l’argent ?",
+        "speakerName": "???",
         "next": 51205712
       },
       {
@@ -60905,6 +62913,77 @@
     "type": "Normal",
     "talks": [
       {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72003102,
+        "content": "Que cherches-tu ?",
+        "npc": 820000,
+        "next": 72003103
+      },
+      {
+        "id": 72003103,
+        "content": "Si ce n’est pas moi, je peux t’aider à trouver.",
+        "npc": 820000,
+        "next": 72003104
+      },
+      {
+        "id": 72003302,
+        "content": "Beaucoup sont venus... Beaucoup sont repartis.",
+        "npc": 820000,
+        "next": 72003303
+      },
+      {
+        "id": 72003303,
+        "content": "Trop d’odeurs, je n’arrive pas à toutes les retenir... Et toi, tu t’en souviens ?",
+        "npc": 820000,
+        "next": 72003304
+      },
+      {
+        "id": 72003402,
+        "content": "Voici mon trésor ! Seuls ceux qui triomphent de l’épreuve de sagesse peuvent entrer !",
+        "npc": 820000,
+        "next": 72003403
+      },
+      {
+        "id": 72003403,
+        "content": "Alors dis-moi... ici, dans cette forteresse... quelle couleur te laisse passer ?",
+        "npc": 820000
+      },
+      {
+        "id": 72003502,
+        "content": "<I>Aïe, aïe !</> La vapeur m’a frappé !",
+        "npc": 820000,
+        "next": 72003503
+      },
+      {
+        "id": 72003503,
+        "content": "Elle est méchante... je la déteste. Toi non plus, ne deviens pas son ami.",
+        "npc": 820000,
+        "next": 72003504
+      },
+      {
+        "id": 72003602,
+        "content": "Ici... ça sent un peu comme dehors. Ça sent la joie, la grandeur.",
+        "npc": 820000,
+        "next": 72003603
+      },
+      {
+        "id": 72003603,
+        "content": "Rien à voir avec ces lieux saturés de cris et de bagarres.",
+        "npc": 820000,
+        "next": 72003604
+      },
+      {
         "id": 72003407,
         "content": "Exact ! Tu as choisi la couleur du passage ! Alors je t’ouvre la voie !",
         "npc": 820000,
@@ -60917,6 +62996,11 @@
         "next": 72003409
       },
       {
+        "id": 72003702,
+        "content": "Alors... si Miaouzz compte comme une voiture... combien y en a-t-il dans cette pièce ?",
+        "npc": 820000
+      },
+      {
         "id": 72003706,
         "content": "<I>Yiiiip ! </>Recompte encore, pour être sûr.",
         "npc": 820000,
@@ -60927,6 +63011,54 @@
         "content": "Exact ! Mais dis-moi... qui est venu en premier : les voitures, ou Miaouzz ?",
         "npc": 820000,
         "next": 72003708
+      },
+      {
+        "id": 72000602,
+        "content": "Tourne... tourne... ouh, j’ai le tournis...",
+        "npc": 820000,
+        "next": 72000603
+      },
+      {
+        "id": 72000603,
+        "content": "Ce machin est dangereux ! Rempli de Phoxichor, et pourtant il ne cesse de tourner. Serait-ce... un piège ?",
+        "npc": 820000,
+        "next": 72000604
+      },
+      {
+        "id": 72000702,
+        "content": "Un groupe fuit, un autre poursuit...",
+        "npc": 820000,
+        "next": 72000703
+      },
+      {
+        "id": 72000703,
+        "content": "Les humains aiment aussi jouer à cache-cache ? Mais vous... vous n’avez pas l’air de vous amuser.",
+        "npc": 820000,
+        "next": 72000704
+      },
+      {
+        "id": 72000802,
+        "content": "Trois soldats s’en vont au zoo... Deux soldats courent après le soleil...",
+        "npc": 820000,
+        "next": 72000803
+      },
+      {
+        "id": 72000803,
+        "content": "Et un seul... connaîtra la paix.",
+        "npc": 820000,
+        "next": 72000804
+      },
+      {
+        "id": 72000902,
+        "content": "Voilà, plus personne ne s’assoit de travers.",
+        "npc": 820000,
+        "next": 72000903
+      },
+      {
+        "id": 72000903,
+        "content": "Et plus de genoux cognés... même pour les grandes jambes.",
+        "npc": 820000,
+        "next": 72000904
       }
     ]
   },
@@ -60937,6 +63069,77 @@
     "type": "Normal",
     "talks": [
       {
+        "id": 72000002,
+        "content": "兄弟，你好",
+        "npc": 820000,
+        "next": 72000003
+      },
+      {
+        "id": 72000003,
+        "content": "很高兴见到你",
+        "npc": 820000,
+        "next": 72000004
+      },
+      {
+        "id": 72003102,
+        "content": "Que cherches-tu ?",
+        "npc": 820000,
+        "next": 72003103
+      },
+      {
+        "id": 72003103,
+        "content": "Si ce n’est pas moi, je peux t’aider à trouver.",
+        "npc": 820000,
+        "next": 72003104
+      },
+      {
+        "id": 72003302,
+        "content": "Beaucoup sont venus... Beaucoup sont repartis.",
+        "npc": 820000,
+        "next": 72003303
+      },
+      {
+        "id": 72003303,
+        "content": "Trop d’odeurs, je n’arrive pas à toutes les retenir... Et toi, tu t’en souviens ?",
+        "npc": 820000,
+        "next": 72003304
+      },
+      {
+        "id": 72003402,
+        "content": "Voici mon trésor ! Seuls ceux qui triomphent de l’épreuve de sagesse peuvent entrer !",
+        "npc": 820000,
+        "next": 72003403
+      },
+      {
+        "id": 72003403,
+        "content": "Alors dis-moi... ici, dans cette forteresse... quelle couleur te laisse passer ?",
+        "npc": 820000
+      },
+      {
+        "id": 72003502,
+        "content": "<I>Aïe, aïe !</> La vapeur m’a frappé !",
+        "npc": 820000,
+        "next": 72003503
+      },
+      {
+        "id": 72003503,
+        "content": "Elle est méchante... je la déteste. Toi non plus, ne deviens pas son ami.",
+        "npc": 820000,
+        "next": 72003504
+      },
+      {
+        "id": 72003602,
+        "content": "Ici... ça sent un peu comme dehors. Ça sent la joie, la grandeur.",
+        "npc": 820000,
+        "next": 72003603
+      },
+      {
+        "id": 72003603,
+        "content": "Rien à voir avec ces lieux saturés de cris et de bagarres.",
+        "npc": 820000,
+        "next": 72003604
+      },
+      {
         "id": 72003407,
         "content": "Exact ! Tu as choisi la couleur du passage ! Alors je t’ouvre la voie !",
         "npc": 820000,
@@ -60949,6 +63152,11 @@
         "next": 72003409
       },
       {
+        "id": 72003702,
+        "content": "Alors... si Miaouzz compte comme une voiture... combien y en a-t-il dans cette pièce ?",
+        "npc": 820000
+      },
+      {
         "id": 72003706,
         "content": "<I>Yiiiip ! </>Recompte encore, pour être sûr.",
         "npc": 820000,
@@ -60959,6 +63167,54 @@
         "content": "Exact ! Mais dis-moi... qui est venu en premier : les voitures, ou Miaouzz ?",
         "npc": 820000,
         "next": 72003708
+      },
+      {
+        "id": 72000602,
+        "content": "Tourne... tourne... ouh, j’ai le tournis...",
+        "npc": 820000,
+        "next": 72000603
+      },
+      {
+        "id": 72000603,
+        "content": "Ce machin est dangereux ! Rempli de Phoxichor, et pourtant il ne cesse de tourner. Serait-ce... un piège ?",
+        "npc": 820000,
+        "next": 72000604
+      },
+      {
+        "id": 72000702,
+        "content": "Un groupe fuit, un autre poursuit...",
+        "npc": 820000,
+        "next": 72000703
+      },
+      {
+        "id": 72000703,
+        "content": "Les humains aiment aussi jouer à cache-cache ? Mais vous... vous n’avez pas l’air de vous amuser.",
+        "npc": 820000,
+        "next": 72000704
+      },
+      {
+        "id": 72000802,
+        "content": "Trois soldats s’en vont au zoo... Deux soldats courent après le soleil...",
+        "npc": 820000,
+        "next": 72000803
+      },
+      {
+        "id": 72000803,
+        "content": "Et un seul... connaîtra la paix.",
+        "npc": 820000,
+        "next": 72000804
+      },
+      {
+        "id": 72000902,
+        "content": "Voilà, plus personne ne s’assoit de travers.",
+        "npc": 820000,
+        "next": 72000903
+      },
+      {
+        "id": 72000903,
+        "content": "Et plus de genoux cognés... même pour les grandes jambes.",
+        "npc": 820000,
+        "next": 72000904
       }
     ]
   },
@@ -62410,10 +64666,11 @@
         "id": 11010208,
         "content": "<W>Tes mains sont couvertes de ce liquide gluant, tu ne sais plus si c’est du mucus du Souillé ou ses entrailles. Pourtant, une étrange joie parcourt ton âme.</>",
         "voice": "story/1002/110102/1B901A40",
+        "speakerName": "???",
         "options": [
           {
             "id": 11010209,
-            "content": "<I>– Tais-toi ! Ce n’est pas ce que je ressens !</>",
+            "content": "<I>Tais-toi ! Ce n’est pas ce que je ressens !</>",
             "next": 11010210
           }
         ]
@@ -62422,6 +64679,7 @@
         "id": 11010210,
         "content": "<W>Ne résiste pas. Je suis ce que tu es vraiment, ton instinct de mort. Un jour, tu suivras mon chemin et obéiras à la volonté ancestrale...</>",
         "voice": "story/1002/110102/1B901A94",
+        "speakerName": "???",
         "options": [
           {
             "id": 11010211,
@@ -62438,7 +64696,7 @@
       },
       {
         "id": 10029401,
-        "content": "Veux-tu te reposer encore un peu ?",
+        "content": "Veux-tu te reposer encore un peu ?",
         "npc": 100003
       }
     ]
@@ -67120,6 +69378,7 @@
         "content": "Écoute, {性别:gamin|gamine}... Je suis Luno, la forgeronne. Je parcours le monde sans attache, sans foyer. Et si... tu me laissais t’accompagner quelque temps ?",
         "voice": "story/2001/200005/3211B7F8",
         "npc": 200024,
+        "speakerName": "Luno, la forgeronne",
         "next": 20000524
       },
       {
@@ -67127,6 +69386,7 @@
         "content": "<H>D’Hyperborea</> jusqu’à Élysium, j’ai forgé des centaines d’armes. Si tu veux créer une lame digne de ce nom, laisse donc cela entre mes mains.",
         "voice": "story/2001/200005/3211B822",
         "npc": 200024,
+        "speakerName": "Luno, la forgeronne",
         "next": 20000525
       },
       {
@@ -67140,7 +69400,8 @@
         "id": 20000526,
         "content": "Mes tarifs sont bien plus raisonnables que ceux des forges de la cité. Tout ce que je demande, c’est d’avoir le loisir d’étudier cette épée à mes heures perdues. Héhé...",
         "voice": "story/2001/200005/3211B876",
-        "npc": 200024
+        "npc": 200024,
+        "speakerName": "Luno, la forgeronne"
       },
       {
         "id": 51004962,
@@ -67159,6 +69420,96 @@
         "id": 20000820,
         "content": "Peux-tu l’observer encore un peu, s’il te plaît ? C’est important pour bien en prendre soin.",
         "voice": "story/2001/200008/3211E888",
+        "npc": 200027,
+        "next": 20000848
+      },
+      {
+        "id": 20000848,
+        "options": [
+          {
+            "id": 200008201,
+            "content": "<I>Observer la couleur</>",
+            "next": 20000821
+          },
+          {
+            "id": 200008202,
+            "content": "<I>Examiner la forme</>",
+            "next": 20000823
+          },
+          {
+            "id": 200008203,
+            "content": "<I>Regarder les pétales de près</>",
+            "next": 20000827
+          }
+        ]
+      },
+      {
+        "id": 20000821,
+        "content": "Elle est d’un jaune vif... une couleur pleine de vie.",
+        "voice": "story/2001/200008/3211E8B2",
+        "npc": 100001,
+        "next": 20000822
+      },
+      {
+        "id": 20000823,
+        "content": "Le bord des pétales n’est pas lisse... Il y a plein de petites entailles irrégulières.",
+        "voice": "story/2001/200008/3211E906",
+        "npc": 100001,
+        "next": 20000824
+      },
+      {
+        "id": 20000827,
+        "content": "On distingue de fines stries, qui partent du cœur vers l’extérieur... un peu comme les nervures d’une feuille. Mais elles paraissent fragiles...",
+        "voice": "story/2001/200008/3211E9AE",
+        "npc": 100001,
+        "next": 20000828
+      },
+      {
+        "id": 20000822,
+        "content": "Oui... J’adore les fleurs jaunes. Elles me rappellent le soleil, elles réchauffent le cœur...",
+        "voice": "story/2001/200008/3211E8DC",
+        "npc": 200027,
+        "next": 20000848
+      },
+      {
+        "id": 20000824,
+        "content": "Exactement... Tu devrais les toucher doucement. J’aime effleurer leurs contours : chaque pétale raconte une histoire différente au bout de mes doigts...",
+        "voice": "story/2001/200008/3211E930",
+        "npc": 200027,
+        "next": 20000825
+      },
+      {
+        "id": 20000828,
+        "content": "Ces lignes transportent les nutriments, comme les nervures d’une feuille.",
+        "voice": "story/2001/200008/3211E9D8",
+        "npc": 200027,
+        "next": 20000829
+      },
+      {
+        "id": 20000825,
+        "content": "Mais ceux-ci ont perdu leur éclat. Leurs bords sont assombris, recroquevillés... comme brûlés.",
+        "voice": "story/2001/200008/3211E95A",
+        "npc": 100001,
+        "next": 20000826
+      },
+      {
+        "id": 20000829,
+        "content": "On remarque toujours la fleur, mais en réalité, fleurs et feuilles respirent et grandissent de la même façon.",
+        "voice": "story/2001/200008/3211EA02",
+        "npc": 200027,
+        "next": 20000830
+      },
+      {
+        "id": 20000826,
+        "content": "Hmm... sans doute qu’elles manquent d’eau.",
+        "voice": "story/2001/200008/3211E984",
+        "npc": 200027,
+        "next": 20000848
+      },
+      {
+        "id": 20000830,
+        "content": "Si elles sont trop fines... c’est peut-être un manque de nutriments.",
+        "voice": "story/2001/200008/3211EA2C",
         "npc": 200027,
         "next": 20000848
       },
@@ -69536,6 +71887,161 @@
         "content": "L90",
         "npc": 74114785,
         "next": 741149728
+      },
+      {
+        "id": 741149702,
+        "content": "L180",
+        "npc": 74114785,
+        "next": 741149703
+      },
+      {
+        "id": 741149703,
+        "content": "R90",
+        "npc": 74114785,
+        "next": 741149704
+      },
+      {
+        "id": 741149704,
+        "content": "R180",
+        "npc": 74114785,
+        "next": 741149705
+      },
+      {
+        "id": 741149705,
+        "content": "Agree",
+        "npc": 74114785,
+        "next": 741149706
+      },
+      {
+        "id": 741149706,
+        "content": "Angry01_Start",
+        "npc": 74114785,
+        "next": 741149707
+      },
+      {
+        "id": 741149707,
+        "content": "Angry01_End",
+        "npc": 74114785,
+        "next": 741149708
+      },
+      {
+        "id": 741149708,
+        "content": "Confident_Start",
+        "npc": 74114785,
+        "next": 741149709
+      },
+      {
+        "id": 741149709,
+        "content": "Confident_End",
+        "npc": 74114785,
+        "next": 741149710
+      },
+      {
+        "id": 741149710,
+        "content": "Disagree",
+        "npc": 74114785,
+        "next": 741149711
+      },
+      {
+        "id": 741149711,
+        "content": "Explain01_Start",
+        "npc": 74114785,
+        "next": 741149712
+      },
+      {
+        "id": 741149712,
+        "content": "Explain01_End",
+        "npc": 74114785,
+        "next": 741149713
+      },
+      {
+        "id": 741149713,
+        "content": "Explain02_Start",
+        "npc": 74114785,
+        "next": 741149714
+      },
+      {
+        "id": 741149714,
+        "content": "Explain02_End",
+        "npc": 74114785,
+        "next": 741149715
+      },
+      {
+        "id": 741149715,
+        "content": "Give",
+        "npc": 74114785,
+        "next": 741149716
+      },
+      {
+        "id": 741149716,
+        "content": "Shock_Start",
+        "npc": 74114785,
+        "next": 741149717
+      },
+      {
+        "id": 741149717,
+        "content": "Shock_End",
+        "npc": 74114785,
+        "next": 741149718
+      },
+      {
+        "id": 741149718,
+        "content": "Sigh_Start",
+        "npc": 74114785,
+        "next": 741149719
+      },
+      {
+        "id": 741149719,
+        "content": "Sigh_End",
+        "npc": 74114785,
+        "next": 741149720
+      },
+      {
+        "id": 741149720,
+        "content": "Talk01_Start",
+        "npc": 74114785,
+        "next": 741149721
+      },
+      {
+        "id": 741149721,
+        "content": "Talk01_End",
+        "npc": 74114785,
+        "next": 741149722
+      },
+      {
+        "id": 741149722,
+        "content": "Talk02_Start",
+        "npc": 74114785,
+        "next": 741149723
+      },
+      {
+        "id": 741149723,
+        "content": "Talk02_End",
+        "npc": 74114785,
+        "next": 741149724
+      },
+      {
+        "id": 741149724,
+        "content": "Talk03_Start",
+        "npc": 74114785,
+        "next": 741149725
+      },
+      {
+        "id": 741149725,
+        "content": "Talk03_End",
+        "npc": 74114785,
+        "next": 741149726
+      },
+      {
+        "id": 741149726,
+        "content": "Think_Start",
+        "npc": 74114785,
+        "next": 741149727
+      },
+      {
+        "id": 741149727,
+        "content": "Think_End",
+        "npc": 74114785
       }
     ]
   },
