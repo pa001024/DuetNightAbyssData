@@ -1641,7 +1641,7 @@ T.RT_366 = {
   BaseAttr = "ATK",
   DamageTag = T.RT_352,
   Function = "Damage",
-  Rate = 1
+  Rate = 0.2
 }
 T.RT_367 = {
   BaseAttr = "ATK",
@@ -27574,12 +27574,7 @@ return ReadOnly("SkillEffects", {
   [851287] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = {
-        BaseAttr = "ATK",
-        DamageTag = T.RT_352,
-        Function = "Damage",
-        Rate = 0.2
-      },
+      [1] = T.RT_366,
       [2] = T.RT_186,
       [3] = {Function = "PlaySE", SEId = 851210}
     },
@@ -39586,12 +39581,17 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_353,
+      [1] = {
+        BaseAttr = "ATK_Ranged",
+        DamageTag = T.RT_352,
+        Function = "Damage",
+        Rate = 0.07
+      },
       [2] = T.RT_363,
       [3] = {
         CauseHit = "HeavyHit_120",
         Function = "CutToughness",
-        Value = 100
+        Value = 2
       },
       [4] = T.RT_355
     },
@@ -39627,10 +39627,10 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_366,
       [2] = {
-        BossValue = 100,
+        BossValue = 4,
         CauseHit = "HitFly_XY0Z800",
         Function = "CutToughness",
-        Value = 100
+        Value = 20
       },
       [3] = {FXId = 2010401, Function = "PlayFX"}
     },
@@ -39651,10 +39651,10 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_366,
       [2] = {
-        BossValue = 100,
+        BossValue = 4,
         CauseHit = "HitDown02",
         Function = "CutToughness",
-        Value = 100
+        Value = 20
       },
       [3] = {FXId = 2010402, Function = "PlayFX"}
     },
