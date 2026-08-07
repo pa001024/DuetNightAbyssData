@@ -20,16 +20,16 @@ return ReadOnly("RaceLotteryInsideBuff", {
     InsideBuffEffect = 0,
     InsideBuffId = 2001,
     InsideBuffName = "InsideBuffName_2001",
-    RandomWeight = 5
+    RandomWeight = 15
   },
   [2002] = {
     BuffEffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/GamePlay/NS_Pet_Race_Speed_Puase.NS_Pet_Race_Speed_Puase'",
-    BuffUnlockDay = 5,
+    BuffUnlockDay = 2,
     InsideBuffDes = "InsideBuffDes_2002",
     InsideBuffEffect = 0,
     InsideBuffId = 2002,
     InsideBuffName = "InsideBuffName_2002",
-    RandomWeight = 10
+    RandomWeight = 15
   },
   [3001] = {
     BuffEffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/GamePlay/NS_Pet_Race_Speed_Buff.NS_Pet_Race_Speed_Buff'",
@@ -51,7 +51,7 @@ return ReadOnly("RaceLotteryInsideBuff", {
   },
   [3003] = {
     BuffEffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/GamePlay/NS_Pet_Race_Speed_Buff.NS_Pet_Race_Speed_Buff'",
-    BuffUnlockDay = 5,
+    BuffUnlockDay = 2,
     InsideBuffDes = "InsideBuffDes_3003",
     InsideBuffEffect = 2,
     InsideBuffId = 3003,
@@ -69,7 +69,7 @@ return ReadOnly("RaceLotteryInsideBuff", {
   },
   [4002] = {
     BuffEffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/GamePlay/NS_Pet_Race_Speed_Debuff.NS_Pet_Race_Speed_Debuff'",
-    BuffUnlockDay = 5,
+    BuffUnlockDay = 2,
     InsideBuffDes = "InsideBuffDes_4002",
     InsideBuffEffect = 0.5,
     InsideBuffId = 4002,
@@ -83,15 +83,15 @@ return ReadOnly("RaceLotteryInsideBuff", {
     InsideBuffEffect = -1,
     InsideBuffId = 5001,
     InsideBuffName = "InsideBuffName_5001",
-    RandomWeight = 5
+    RandomWeight = 10
   },
   [5002] = {
     BuffEffectPath = "NiagaraSystem'/Game/Asset/Effect/Niagara/GamePlay/NS_Pet_Race_Speed_Stun.NS_Pet_Race_Speed_Stun'",
-    BuffUnlockDay = 5,
+    BuffUnlockDay = 2,
     InsideBuffDes = "InsideBuffDes_6001",
     InsideBuffEffect = -1,
     InsideBuffId = 5002,
     InsideBuffName = "InsideBuffName_6001",
-    RandomWeight = 10
+    RandomWeight = 20
   }
 })

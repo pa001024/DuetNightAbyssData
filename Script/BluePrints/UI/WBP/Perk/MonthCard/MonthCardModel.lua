@@ -45,8 +45,8 @@ function M:GetMonthCardLeftTimes()
   local Avatar = self:GetAvatar()
   if Avatar then
     local NowTime = TimeUtils.NowTime()
-    local LastTime = Avatar.MonthlyCardExpireTime - NowTime
-    return math.floor(LastTime / CommonConst.DayTime)
+    local LeftTimes = TimeUtils.GetIntervalDay(NowTime, Avatar.MonthlyCardExpireTime - 1)
+    return math.max(LeftTimes, 0)
   else
     return 0
   end
@@ -90,7 +90,7 @@ end
 
 function M:HasMonthCard()
   local Avatar = self:GetAvatar()
-  if Avatar and Avatar.MonthlyCardExpireTime > TimeUtils.NowTime() and self:GetMonthCardLeftTimes() > 0 then
+  if Avatar and Avatar.MonthlyCardExpireTime > TimeUtils.NowTime() then
     return true
   end
   return false

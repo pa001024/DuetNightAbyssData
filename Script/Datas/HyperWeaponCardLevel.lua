@@ -147,7 +147,7 @@ return ReadOnly("HyperWeaponCardLevel", {
       CollectRewardExp = 200,
       ResourceId = {
         [1] = 15006,
-        [2] = 15031,
+        [2] = 15035,
         [3] = 20027,
         [4] = 15030,
         [5] = 15027
@@ -162,7 +162,7 @@ return ReadOnly("HyperWeaponCardLevel", {
       CollectRewardExp = 200,
       ResourceId = {
         [1] = 15006,
-        [2] = 15031,
+        [2] = 15035,
         [3] = 15037,
         [4] = 202,
         [5] = 15030,
@@ -178,7 +178,7 @@ return ReadOnly("HyperWeaponCardLevel", {
       CollectRewardExp = 200,
       ResourceId = {
         [1] = 15006,
-        [2] = 15031,
+        [2] = 15035,
         [3] = 15037,
         [4] = 20027,
         [5] = 15030,
@@ -194,7 +194,7 @@ return ReadOnly("HyperWeaponCardLevel", {
       CollectRewardExp = 200,
       ResourceId = {
         [1] = 15006,
-        [2] = 15031,
+        [2] = 15035,
         [3] = 15037,
         [4] = 1006,
         [5] = 15030,

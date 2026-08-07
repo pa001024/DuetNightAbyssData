@@ -84,6 +84,13 @@ function M:OnRefreshInNextDay()
   DebugPrint("Yihan@ OnRefreshInNextDay", PopMain)
   if not PopMain then
     self:TryPopUpMonthSignIn()
+  end
+end
+
+function M:OnMonthSignInDataRefresh()
+  local PopMain = UIManager(self):GetUIObj("MonthSignInPopMain")
+  if not PopMain then
+    self:TryPopUpMonthSignIn()
   else
     EventManager:FireEvent(MonthSignInCommon.EventId.RefreshInNextDay)
   end

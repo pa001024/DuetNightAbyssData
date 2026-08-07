@@ -17,7 +17,7 @@ end
 function Component:_OnPropChangeMonthlyCheck()
   local LoginMainPage = UIManager(self):GetUIObj("LoginMainPage")
   if not LoginMainPage then
-    MonthSignInController:TryPopUpMonthSignIn()
+    MonthSignInController:OnMonthSignInDataRefresh()
   end
 end
 
