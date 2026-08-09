@@ -906,6 +906,8 @@ class WeaponProcessor(BaseProcessor):
                     ):
                         furnace_addon["追加伤害"] = skill_addon["追加伤害"]
                         skill_row.pop("描述", None)
+                    if "属性穿透" in skill_addon:
+                        furnace_addon["属性穿透"] = skill_addon["属性穿透"]
                     if skill_addon:
                         skill_row["加成"] = skill_addon
 
@@ -1034,7 +1036,7 @@ class WeaponProcessor(BaseProcessor):
                     attr_name_key = attr_config.get("Name", "")
                     if not attr_name_key:
                         continue
-                    translated_name = self.get_translated_text(attr_name_key)
+                    translated_name = self.get_translated_text(attr_name_key, "cn")
                     if not translated_name:
                         continue
                     value = attr.get("Value", attr.get("Rate"))

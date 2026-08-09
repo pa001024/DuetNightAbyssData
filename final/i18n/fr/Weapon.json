@@ -3232,7 +3232,8 @@
     "触发": 0.22,
     "加成": {
       "技能威力": 0.45,
-      "攻击": 0.9
+      "攻击": 0.9,
+      "属性穿透": 0.2
     },
     "突破": [
       {
@@ -3450,7 +3451,7 @@
             "icon": "T_Rouge_Talent_AttrPenetration",
             "描述": "Pénétration de tous les attributs +20.0%.",
             "加成": {
-              "Pénétration de tous les attributs": 0.2
+              "属性穿透": 0.2
             },
             "解锁": {
               "Prototype : Braise souveraine": 30,

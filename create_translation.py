@@ -179,6 +179,52 @@ EX_T = {
     "下落增伤": "下落攻击伤害",
 }
 
+CHAR_TAG_LOCATIONS = {}
+
+
+def load_char_tags_into_ex_t(base_path: Path):
+    """从中文角色数据中收集标签，并一次性加入EX_T。"""
+    global CHAR_TAG_LOCATIONS
+
+    char_file = base_path / "cn" / "Char.json"
+    char_data = load_json_data(char_file)
+    if not char_data:
+        return
+
+    char_tag_mapping = {}
+    CHAR_TAG_LOCATIONS = {}
+    for char in char_data:
+        tags = char.get("标签", [])
+        if not isinstance(tags, list):
+            continue
+
+        for index, tag in enumerate(tags):
+            if isinstance(tag, str) and tag:
+                char_tag_mapping[tag] = f"tag.{tag}"
+                CHAR_TAG_LOCATIONS.setdefault(tag, (char.get("id"), index))
+
+    EX_T.update(char_tag_mapping)
+
+
+def load_char_tag_translations(base_path: Path, lang_code: str) -> Dict[str, str]:
+    """读取目标语言角色标签翻译。"""
+    if not CHAR_TAG_LOCATIONS:
+        return {}
+
+    target_data = load_json_data(base_path / lang_code / "Char.json")
+    target_by_id = {item.get("id"): item for item in target_data}
+    translations = {}
+
+    for tag, (char_id, index) in CHAR_TAG_LOCATIONS.items():
+        target_tags = target_by_id.get(char_id, {}).get("标签", [])
+        if isinstance(target_tags, list) and index < len(target_tags):
+            target_value = target_tags[index]
+            if isinstance(target_value, str):
+                translations[tag] = target_value
+
+    return translations
+
+
 # 是否在输出时添加字段前缀 (例如: "效果:xxx" -> "Effect:xxx")
 # 对于嵌套对象,前缀格式为 "字段名:键名" (如 "奖励:委托密函线索")
 ADD_FIELD_PREFIX = False
@@ -679,7 +725,11 @@ def process_ex_t(base_path: Path, lang_code: str):
     ex_t_mapping = {}
 
     if lang_code == "cn":
-        ex_t_mapping.update(EX_T)
+        for key, output_path in EX_T.items():
+            if "." in output_path:
+                set_nested_mapping(ex_t_mapping, output_path, key)
+            else:
+                ex_t_mapping[key] = output_path
     else:
         textmap_file = Path("./out/TextMap_I18n.json")
         if not textmap_file.exists():
@@ -689,12 +739,23 @@ def process_ex_t(base_path: Path, lang_code: str):
         with open(textmap_file, "r", encoding="utf-8") as f:
             textmap_data = json.load(f)
 
-        for key, cn_value in EX_T.items():
-            target_value = find_translation_by_cn_value(
-                textmap_data, cn_value, lang_code
-            )
-            if target_value and target_value != key:
-                ex_t_mapping[key] = target_value.replace("{空格}", " ")
+        char_tag_translations = load_char_tag_translations(base_path, lang_code)
+        for key, output_path in EX_T.items():
+            cn_value = key if "." in output_path else output_path
+            target_value = char_tag_translations.get(key)
+            if not target_value:
+                target_value = find_translation_by_cn_value(
+                    textmap_data, cn_value, lang_code
+                )
+            if target_value and ("." in output_path or target_value != key):
+                if "." in output_path:
+                    set_nested_mapping(
+                        ex_t_mapping,
+                        output_path,
+                        target_value.replace("{空格}", " "),
+                    )
+                else:
+                    ex_t_mapping[key] = target_value.replace("{空格}", " ")
                 print(f"  找到EX_T翻译: {key} -> {target_value}")
 
     if not ex_t_mapping:
@@ -705,7 +766,7 @@ def process_ex_t(base_path: Path, lang_code: str):
         try:
             with open(output_file, "r", encoding="utf-8") as f:
                 existing_data = json.load(f)
-            existing_data.update(ex_t_mapping)
+            merge_translation_mapping(existing_data, ex_t_mapping)
             ex_t_mapping = existing_data
             print(f"  合并EX_T到现有文件: 共 {len(ex_t_mapping)} 个条目")
         except Exception as e:
@@ -715,6 +776,28 @@ def process_ex_t(base_path: Path, lang_code: str):
         json.dump(ex_t_mapping, f, ensure_ascii=False, indent=2)
 
     print(f"  已保存EX_T映射: {output_file.name} ({len(ex_t_mapping)} 个条目)")
+
+
+def set_nested_mapping(mapping: Dict, path: str, value: str):
+    """按点号路径设置嵌套翻译值。"""
+    parts = path.split(".")
+    current = mapping
+    for part in parts[:-1]:
+        child = current.get(part)
+        if not isinstance(child, dict):
+            child = {}
+            current[part] = child
+        current = child
+    current[parts[-1]] = value
+
+
+def merge_translation_mapping(target: Dict, source: Dict):
+    """递归合并翻译映射，保留已有嵌套条目。"""
+    for key, value in source.items():
+        if isinstance(value, dict) and isinstance(target.get(key), dict):
+            merge_translation_mapping(target[key], value)
+        else:
+            target[key] = value
 
 
 def find_translation_by_cn_value(textmap_data: Dict, cn_value: str, lang_code: str):
@@ -914,6 +997,9 @@ def main():
         return
 
     print(f"找到JSON文件: {[f.name for f in json_files]}")
+
+    # 只扫描一次中文角色标签，并将其加入EX_T
+    load_char_tags_into_ex_t(base_path)
 
     # 提取最外层的键值对
     root_key_values = extract_root_keys_and_values(base_path)
