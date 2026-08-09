@@ -167,6 +167,9 @@ EX_FIELDS = [
     "提灯",
     "深潜",
     "深潜深度",
+    "海伯利亚帝国",
+    "无阵营",
+    "卢卡共和国",
 ]
 
 EX_T = {
@@ -242,6 +245,21 @@ def load_json_data(file_path: Path) -> List[Dict]:
     except Exception as e:
         print(f"错误: 无法读取文件 {file_path}: {e}")
         return []
+
+
+def remove_untranslated_entries(mapping: Dict) -> Dict:
+    """递归移除键和值相同的未翻译条目。"""
+    cleaned_mapping = {}
+    for key, value in mapping.items():
+        if isinstance(value, dict):
+            cleaned_value = remove_untranslated_entries(value)
+            if cleaned_value:
+                cleaned_mapping[key] = cleaned_value
+        elif isinstance(key, str) and isinstance(value, str) and key == value:
+            continue
+        else:
+            cleaned_mapping[key] = value
+    return cleaned_mapping
 
 
 def extract_field_mapping(
@@ -561,9 +579,10 @@ def extract_field_mapping(
         # 处理普通字符串字段
         elif cn_value_type == "string" and target_value_type == "string":
             # 如果不是字典或列表类型,按原来的逻辑处理
-            key = f"{field_name}:{cn_value}" if ADD_FIELD_PREFIX else cn_value
-            mapping[key] = target_value
-            matched_count += 1
+            if cn_value != target_value:
+                key = f"{field_name}:{cn_value}" if ADD_FIELD_PREFIX else cn_value
+                mapping[key] = target_value
+                matched_count += 1
 
     print(f"    匹配 {field_name}: {matched_count} 个条目")
     return mapping
@@ -609,6 +628,7 @@ def process_file_type(base_path: Path, file_name: str, lang_code: str):
             try:
                 with open(output_file, "r", encoding="utf-8") as f:
                     existing_data = json.load(f)
+                existing_data = remove_untranslated_entries(existing_data)
                 existing_data.update(field_mapping)
                 field_mapping = existing_data
                 print(f"    合并到现有文件: 共 {len(field_mapping)} 个条目")
@@ -693,6 +713,7 @@ def process_ex_fields(base_path: Path, lang_code: str):
             try:
                 with open(output_file, "r", encoding="utf-8") as f:
                     existing_data = json.load(f)
+                existing_data = remove_untranslated_entries(existing_data)
                 existing_data.update(ex_mapping)
                 ex_mapping = existing_data
                 print(f"  合并扩展字段到现有文件: 共 {len(ex_mapping)} 个条目")
@@ -731,19 +752,19 @@ def process_ex_t(base_path: Path, lang_code: str):
             else:
                 ex_t_mapping[key] = output_path
     else:
-        textmap_file = Path("./out/TextMap_I18n.json")
-        if not textmap_file.exists():
-            print(f"  跳过: TextMap_I18n.json 文件不存在")
-            return
-
-        with open(textmap_file, "r", encoding="utf-8") as f:
-            textmap_data = json.load(f)
+        textmap_data = {}
+        textmap_file = Path(__file__).resolve().parent / "out" / "TextMap_I18n.json"
+        if textmap_file.exists():
+            with open(textmap_file, "r", encoding="utf-8") as f:
+                textmap_data = json.load(f)
+        else:
+            print("  TextMap_I18n.json 不存在，仅使用角色标签数据")
 
         char_tag_translations = load_char_tag_translations(base_path, lang_code)
         for key, output_path in EX_T.items():
             cn_value = key if "." in output_path else output_path
             target_value = char_tag_translations.get(key)
-            if not target_value:
+            if not target_value and textmap_data:
                 target_value = find_translation_by_cn_value(
                     textmap_data, cn_value, lang_code
                 )
@@ -766,6 +787,7 @@ def process_ex_t(base_path: Path, lang_code: str):
         try:
             with open(output_file, "r", encoding="utf-8") as f:
                 existing_data = json.load(f)
+            existing_data = remove_untranslated_entries(existing_data)
             merge_translation_mapping(existing_data, ex_t_mapping)
             ex_t_mapping = existing_data
             print(f"  合并EX_T到现有文件: 共 {len(ex_t_mapping)} 个条目")
@@ -942,6 +964,7 @@ def process_root_keys(base_path: Path, lang_code: str, root_key_values: Dict[str
             try:
                 with open(output_file, "r", encoding="utf-8") as f:
                     existing_data = json.load(f)
+                existing_data = remove_untranslated_entries(existing_data)
                 existing_data.update(root_mapping)
                 root_mapping = existing_data
                 print(f"  合并键值对到现有文件: 共 {len(root_mapping)} 个条目")
