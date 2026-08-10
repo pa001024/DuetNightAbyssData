@@ -584,6 +584,8 @@ class WeaponProcessor(BaseProcessor):
         combo = 0.0
         skill_effect_link = 0.0
         shooting_interval = 0.0
+        cancel_windows = []
+        combo_windows = []
 
         try:
             with open(anim_path, "r", encoding="utf-8") as f:
@@ -637,10 +639,18 @@ class WeaponProcessor(BaseProcessor):
                                 cancel = max(cancel, float(stripped))
                             except ValueError:
                                 pass
+                    end_link = notify.get("EndLink")
+                    end_value = (
+                        end_link.get("LinkValue") if isinstance(end_link, dict) else None
+                    )
+                    link_number = self._parse_anim_link_value(link_value)
+                    end_number = self._parse_anim_link_value(end_value)
+                    if link_number is not None and end_number is not None:
+                        cancel_windows.append((link_number, end_number))
                 if notify.get("NotifyName") == "BP_NextCombo_C":
                     link_value = notify.get("LinkValue")
+                    end_link = notify.get("EndLink")
                     if link_value in (None, ""):
-                        end_link = notify.get("EndLink")
                         if isinstance(end_link, dict):
                             link_value = end_link.get("LinkValue")
                     if isinstance(link_value, (int, float)):
@@ -652,6 +662,13 @@ class WeaponProcessor(BaseProcessor):
                                 combo = max(combo, float(stripped))
                             except ValueError:
                                 pass
+                    end_value = (
+                        end_link.get("LinkValue") if isinstance(end_link, dict) else None
+                    )
+                    link_number = self._parse_anim_link_value(link_value)
+                    end_number = self._parse_anim_link_value(end_value)
+                    if link_number is not None and end_number is not None:
+                        combo_windows.append((link_number, end_number))
                 if notify.get("NotifyName") == "BP_SkillEffect_C":
                     link_value = notify.get("LinkValue")
                     if isinstance(link_value, (int, float)):
@@ -666,6 +683,19 @@ class WeaponProcessor(BaseProcessor):
                             except ValueError:
                                 pass
 
+            # 当连段触发点落在取消窗口内，且其EndLink已提前结束时，
+            # 动画片段长度不是实际射击间隔，应使用该连段触发点。
+            for combo_link, combo_end_link in combo_windows:
+                if not (
+                    combo_end_link < combo_link
+                    and any(
+                        cancel_start <= combo_link < cancel_end
+                        for cancel_start, cancel_end in cancel_windows
+                    )
+                ):
+                    continue
+                shooting_interval = min(shooting_interval, combo_link)
+
         except Exception as e:
             print(f"读取动画文件错误: {e}", flush=True)
 
@@ -677,6 +707,20 @@ class WeaponProcessor(BaseProcessor):
         )
         self._anim_meta_cache[anim_path] = result
         return result
+
+    @staticmethod
+    def _parse_anim_link_value(value):
+        """解析动画通知链接值，用于识别通知之间的时间窗口。"""
+        if isinstance(value, (int, float)):
+            return float(value)
+        if isinstance(value, str):
+            stripped = value.strip()
+            if stripped:
+                try:
+                    return float(stripped)
+                except ValueError:
+                    pass
+        return None
 
     def _process_add_attr(self, battle_weapon, weapon_id):
         """处理武器属性加成"""
