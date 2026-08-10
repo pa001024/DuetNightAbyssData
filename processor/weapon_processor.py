@@ -386,6 +386,8 @@ class WeaponProcessor(BaseProcessor):
                 hit_stop = skill_effects_info.get("卡肉", 0)
                 if cut_toughness:
                     item["削韧"] = cut_toughness
+                if skill_effects_info.get("Boss削韧") is not None:
+                    item["Boss削韧"] = skill_effects_info["Boss削韧"]
                 if delay:
                     item["延迟"] = delay
                 if hit_stop:
@@ -1391,6 +1393,11 @@ class WeaponProcessor(BaseProcessor):
                     value = task_effect.get("Value")
                     if value is not None:
                         result["削韧"] = value
+                        boss_value = task_effect.get("BossValue")
+                        if boss_value is not None and boss_value != value:
+                            result["Boss削韧"] = boss_value
+                        else:
+                            result.pop("Boss削韧", None)
                 if task_effect.get("Function") == "Damage":
                     result["is_damage"] = True
 

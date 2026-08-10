@@ -1838,6 +1838,8 @@ class CharProcessor(BaseProcessor):
             field_combat_meta = self._resolve_field_combat_meta(desc_values[i])
             if field_combat_meta.get("削韧"):
                 item["削韧"] = field_combat_meta["削韧"]
+            if field_combat_meta.get("Boss削韧") is not None:
+                item["Boss削韧"] = field_combat_meta["Boss削韧"]
             field_cancel = field_combat_meta.get("取消")
             field_combo = field_combat_meta.get("连段")
 
@@ -1946,7 +1948,13 @@ class CharProcessor(BaseProcessor):
                         previous_value = (
                             previous if isinstance(previous, (int, float)) else 0
                         )
-                        result["削韧"] = max(previous_value, value)
+                        if "削韧" not in result or value > previous_value:
+                            result["削韧"] = value
+                            boss_value = task_effect.get("BossValue")
+                            if boss_value is not None and boss_value != value:
+                                result["Boss削韧"] = boss_value
+                            else:
+                                result.pop("Boss削韧", None)
 
         if not has_damage:
             return result
