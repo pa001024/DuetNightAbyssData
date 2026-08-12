@@ -88,7 +88,7 @@ return ReadOnly("RaceLotteryConstant", {
   },
   RaceTimeOutTime = {
     Constant = "RaceTimeOutTime",
-    ConstantValue = "30"
+    ConstantValue = "100"
   },
   RaceTimeOutTimeBuff = {
     Constant = "RaceTimeOutTimeBuff",

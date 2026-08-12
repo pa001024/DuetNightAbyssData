@@ -678,7 +678,7 @@ T.RT_215 = {
 T.RT_216 = {
   [1] = T.RT_167,
   [2] = T.RT_161,
-  [3] = T.RT_17
+  [3] = T.RT_1
 }
 T.RT_217 = {
   [1] = "Resource",
@@ -48760,7 +48760,7 @@ return ReadOnly("Reward", {
     Id = {
       [1] = 100,
       [2] = 2025,
-      [3] = 20027
+      [3] = 1003
     },
     Mode = "Fixed",
     RewardId = 10302601,
@@ -48771,7 +48771,7 @@ return ReadOnly("Reward", {
     Id = {
       [1] = 100,
       [2] = 2013,
-      [3] = 20028
+      [3] = 1003
     },
     Mode = "Fixed",
     RewardId = 10302602,
@@ -48781,12 +48781,12 @@ return ReadOnly("Reward", {
     Count = {
       [1] = T.RT_167,
       [2] = T.RT_161,
-      [3] = T.RT_1
+      [3] = T.RT_31
     },
     Id = {
       [1] = 100,
       [2] = 2018,
-      [3] = 1003
+      [3] = 1009
     },
     Mode = "Fixed",
     RewardId = 10302603,
@@ -48801,7 +48801,7 @@ return ReadOnly("Reward", {
     Id = {
       [1] = 100,
       [2] = 2011,
-      [3] = 1003
+      [3] = 1006
     },
     Mode = "Fixed",
     RewardId = 10302604,
@@ -48830,15 +48830,11 @@ return ReadOnly("Reward", {
     Type = T.RT_217
   },
   [10302607] = {
-    Count = {
-      [1] = T.RT_144,
-      [2] = T.RT_161,
-      [3] = T.RT_31
-    },
+    Count = T.RT_218,
     Id = {
       [1] = 100,
       [2] = 2015,
-      [3] = 1009
+      [3] = 20027
     },
     Mode = "Fixed",
     RewardId = 10302607,
@@ -48848,19 +48844,19 @@ return ReadOnly("Reward", {
     Count = {
       [1] = T.RT_1,
       [2] = T.RT_161,
-      [3] = T.RT_1
+      [3] = T.RT_17
     },
     Id = {
-      [1] = 1006,
+      [1] = 30164,
       [2] = 2007,
-      [3] = 30164
+      [3] = 20028
     },
     Mode = "Fixed",
     RewardId = 10302608,
     Type = {
-      [1] = "Resource",
+      [1] = "HeadSculpture",
       [2] = "Walnut",
-      [3] = "HeadSculpture"
+      [3] = "Resource"
     }
   },
   [10302609] = {

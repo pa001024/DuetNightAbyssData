@@ -99436,10 +99436,10 @@
         "n": "Mandat scellé : Déchire-âme"
       },
       {
-        "id": 20027,
+        "id": 1003,
         "t": "Resource",
-        "c": 4,
-        "n": "Élixir d’aiguisage"
+        "c": 1,
+        "n": "Sablier prismatique"
       }
     ]
   },
@@ -99460,10 +99460,10 @@
         "n": "Mandat scellé : Ombre fanée"
       },
       {
-        "id": 20028,
+        "id": 1003,
         "t": "Resource",
-        "c": 4,
-        "n": "Projectile explosif"
+        "c": 1,
+        "n": "Sablier prismatique"
       }
     ]
   },
@@ -99484,10 +99484,10 @@
         "n": "Mandat scellé : Désintégrateur"
       },
       {
-        "id": 1003,
+        "id": 1009,
         "t": "Resource",
-        "c": 1,
-        "n": "Sablier prismatique"
+        "c": 2,
+        "n": "Fil stellaire"
       }
     ]
   },
@@ -99508,10 +99508,10 @@
         "n": "Mandat scellé : Étreinte brisée"
       },
       {
-        "id": 1003,
+        "id": 1006,
         "t": "Resource",
         "c": 1,
-        "n": "Sablier prismatique"
+        "n": "Moule de fusion"
       }
     ]
   },
@@ -99580,10 +99580,10 @@
         "n": "Mandat scellé : Dépouilleur"
       },
       {
-        "id": 1009,
+        "id": 20027,
         "t": "Resource",
-        "c": 2,
-        "n": "Fil stellaire"
+        "c": 4,
+        "n": "Élixir d’aiguisage"
       }
     ]
   },
@@ -99592,10 +99592,10 @@
     "m": "Fixed",
     "child": [
       {
-        "id": 1006,
-        "t": "Resource",
+        "id": 30164,
+        "t": "HeadSculpture",
         "c": 1,
-        "n": "Moule de fusion"
+        "n": "Faire ses preuves"
       },
       {
         "id": 2007,
@@ -99604,10 +99604,10 @@
         "n": "Mandat scellé : Désir incandescent"
       },
       {
-        "id": 30164,
-        "t": "HeadSculpture",
-        "c": 1,
-        "n": "Faire ses preuves"
+        "id": 20028,
+        "t": "Resource",
+        "c": 4,
+        "n": "Projectile explosif"
       }
     ]
   },

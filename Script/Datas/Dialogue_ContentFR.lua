@@ -80677,7 +80677,7 @@ CameraMoveTo{TargetPosition{"-43.35791,-89.382812,127.603882,-1.999999,-4.399707
         [11011542] = {
           Camera = "-140.854004,198.513672,147.002014,1.0,-9.599516,-74.977852,28.000006,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "我在听。西蒙，你在哪里？",
-          ContentFR = "Je vous écoute. Simon, où êtes‑vous ?",
+          ContentFR = "Je vous écoute. Simon, où êtes-vous ?",
           DialogueId = 11011542,
           ExStoryInfo = "EXPlayer",
           FinalCamera = "-133.268555,200.566406,146.866943,0.999995,-9.599516,-74.977119,28.000006,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
@@ -80730,7 +80730,7 @@ CameraMoveTo{TargetPosition{"-43.35791,-89.382812,127.603882,-1.999999,-4.399707
         [11011546] = {
           Camera = "170.827637,-188.957031,121.458923,0.000164,-2.399261,154.39566,28.0,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "我也收到了另一队士兵汇报位置的信号，就在刚结束富尔维斯通讯的时候。{nickname2}，你怎么打算？",
-          ContentFR = "J’ai reçu le signal d’une autre escouade juste après ton appel avec Fulvis. {nickname2}, que proposes‑tu ?",
+          ContentFR = "J’ai reçu le signal d’une autre escouade juste après ton appel avec Fulvis. {nickname2}, que proposes-tu ?",
           DialogueId = 11011546,
           Duration = 3,
           ExStoryInfo = "EXPlayer",
@@ -80897,7 +80897,7 @@ CameraMoveTo{TargetPosition{"-43.35791,-89.382812,127.603882,-1.999999,-4.399707
         [11011558] = {
           Camera = "-3.358398,-61.634766,129.081787,0.000143,-6.799255,-81.393669,28.000006,100000.0,false,DoNotOverride,2.8,16:9 Digital Film",
           Content = "就这么办吧。如果你那边顺利，等下就到4号炮台来。",
-          ContentFR = "C’est décidé. Si tout se passe bien pour toi, rejoins‑moi à la tourelle 4.",
+          ContentFR = "C’est décidé. Si tout se passe bien pour toi, rejoins-moi à la tourelle 4.",
           DialogueId = 11011558,
           GUID = "1B90F76A",
           SpeakNpcId = 110010,
@@ -82623,6 +82623,7 @@ PlayAnimation{ActorId{110010},AnimationId{"Call_End"},Duration{0}}
         },
         [11012005] = {
           Content = "当心秽兽！",
+          ContentFR = "Attention aux Souillés !",
           DialogueId = 11012005,
           Duration = 3,
           GUID = "1B914112",
@@ -97419,7 +97420,7 @@ PlayAnimation{ActorId{220017},AnimationId{"Talk03_Start"},Duration{1.5}}
         [12001339] = {
           Camera = "-57.685547,314.981934,-15.996094,0.000085,3.003138,-74.771889,45.0,229.807159,false,Manual,8.0,16:9 Digital Film",
           Content = "什么人？说话好凶……这是对光之魔王大人应该有的态度吗！",
-          ContentFR = "Qui es‑tu ? Et pourquoi ce ton si sec... C’est ainsi qu’on traite le Grand Roi Démon de la Lumière ?",
+          ContentFR = "Qui es-tu ? Et pourquoi ce ton si sec... C’est ainsi qu’on traite le Grand Roi Démon de la Lumière ?",
           DialogueId = 12001339,
           FacialId = {
             [1] = "200002:Angry01"
@@ -98839,7 +98840,7 @@ PlayAnimation{_delay{1},ActorId{100001},AnimationId{"Talk02_End"},Duration{1}}
         },
         [12001553] = {
           Content = "今日午夜归还……发布这则寻物启事的人怎么这么傻，万一没被看到，这个人岂不是要在电话亭里枯等一夜。你说是吧，小仆从？",
-          ContentFR = "Ce soir à minuit... Comment l’auteur de cette annonce a‑t‑il pu être si bête ? Si personne ne la voit, cette personne risque de rester à la cabine toute la nuit. J’ai raison, petit larbin ?",
+          ContentFR = "Ce soir à minuit... Comment l’auteur de cette annonce a-t-il pu être si bête ? Si personne ne la voit, cette personne risque de rester à la cabine toute la nuit. J’ai raison, petit larbin ?",
           DefaultLookAt = "TalkNpc",
           DialogueId = 12001553,
           FacialId = {
@@ -98953,7 +98954,7 @@ PlayAnimation{ActorId{200002},AnimationId{"BaiTX_Story_RubForehead_Start"},Durat
         [12001702] = {
           Camera = "231.329102,370.69043,84.921143,0.000096,1.799058,-174.790344,35.000008,324.411682,false,DoNotOverride,2.202561,16:9 Digital Film",
           Content = "……白，你怎么在这里？",
-          ContentFR = "... Snow, que fais‑tu ici ?",
+          ContentFR = "... Snow, que fais-tu ici ?",
           DialogueId = 12001702,
           FacialId = {
             [1] = "100001:Doubt01"
@@ -288761,6 +288762,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72002902] = {
           Content = "咿呀——！请不要拿走这个宝箱。",
+          ContentFR = "<I>Yiiiip !</> S’il te plaît, ne prends pas ce coffre.",
           DialogueId = 72002902,
           FacialId = {
             [1] = "820000:PetPan_Wink"
@@ -288771,6 +288773,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72002903] = {
           Content = "我的家被坏老鼠占领了，我正打算用这些钱去雇一只勇敢的小猫，帮我赶跑老鼠。",
+          ContentFR = "Ma maison a été envahie par de vilaines souris... Je voulais utiliser cet argent pour engager un courageux petit chat, afin qu’il m’aide à les chasser.",
           DialogueId = 72002903,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -288804,6 +288807,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72003002] = {
           Content = "哇，你好厉害，唰唰——咻咻——几下就把附近的老鼠全消灭了。",
+          ContentFR = "Ouah, tu es incroyable ! Fchhh, fchhh... Ziiiu, ziiiu... En quelques gestes, tu as éliminé toutes les souris des environs.",
           DialogueId = 72003002,
           FacialId = {
             [1] = "820000:PetPan_Smile"
@@ -288814,6 +288818,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72003003] = {
           Content = "那么，这个宝箱就送给你啦。",
+          ContentFR = "Alors, ce coffre est à toi.",
           DialogueId = 72003003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289257,6 +289262,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72003902] = {
           Content = "会动的鸟，不会动的鸟，还有不会动的人都还在这里。",
+          ContentFR = "Les oiseaux qui bougent, les oiseaux qui ne bougent pas, et les gens qui ne bougent pas sont encore ici.",
           DialogueId = 72003902,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289268,6 +289274,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72003903] = {
           Content = "但是会动的人都离开了，他们还会回来吗？",
+          ContentFR = "Mais les gens qui bougent sont tous partis... Est-ce qu’ils reviendront un jour ?",
           DialogueId = 72003903,
           FacialId = {
             [1] = "820000:PetPan_Speechless"
@@ -289302,6 +289309,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004002] = {
           Content = "每一盏熄灭的灯都是一个没有回家的人……",
+          ContentFR = "Chaque lampe éteinte, c’est quelqu’un qui n’est pas rentré chez lui...",
           DialogueId = 72004002,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289312,6 +289320,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004003] = {
           Content = "那么每一盏亮起的灯都会是一个回到了家的人吧？",
+          ContentFR = "Alors chaque lampe allumée, c’est quelqu’un qui est rentré à la maison, pas vrai ?",
           DialogueId = 72004003,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289346,6 +289355,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004102] = {
           Content = "咿呀！你怎么把我的小窝打碎了。",
+          ContentFR = "<I>Yiiiip !</> Pourquoi as-tu cassé mon petit nid ?",
           DialogueId = 72004102,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -289357,6 +289367,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004103] = {
           Content = "据说睡在硬邦邦的床上可以磨炼意志力哦。",
+          ContentFR = "On dit que dormir sur un lit tout dur permet de forger sa volonté.",
           DialogueId = 72004103,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289391,6 +289402,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004202] = {
           Content = "箱子堆在这么高的地方有什么用呢？",
+          ContentFR = "À quoi ça sert, d’empiler des caisses aussi haut ?",
           DialogueId = 72004202,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289402,6 +289414,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004203] = {
           Content = "不如就让给我当房子吧。",
+          ContentFR = "Autant me les laisser pour en faire une maison.",
           DialogueId = 72004203,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289436,6 +289449,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004302] = {
           Content = "飘啊飘，我是一只自由的小鸭子~",
+          ContentFR = "Je flotte, je flotte... Je suis un petit canard libre~",
           DialogueId = 72004302,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289447,6 +289461,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004303] = {
           Content = "咿呀！你怎么把我游泳池里的水放掉了？",
+          ContentFR = "<I>Yiiiip !</> Pourquoi as-tu vidé l’eau de ma piscine ?",
           DialogueId = 72004303,
           FacialId = {
             [1] = "820000:PetPan_Dizzy"
@@ -289481,6 +289496,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004402] = {
           Content = "咿呀，采蘑菇的小人类你好~",
+          ContentFR = "<I>Yiiiip !</> Bonjour, petit humain cueilleur de champignons~",
           DialogueId = 72004402,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289491,6 +289507,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004403] = {
           Content = "蘑菇虽然美味，但一定要等完全煮熟以后再吃哦。",
+          ContentFR = "Les champignons sont délicieux, mais il faut toujours attendre qu’ils soient bien cuits avant de les manger.",
           DialogueId = 72004403,
           FacialId = {
             [1] = "820000:PetPan_Cry"
@@ -289525,6 +289542,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004502] = {
           Content = "咚咚，咚咚咚！",
+          ContentFR = "Boum boum, boum boum boum !",
           DialogueId = 72004502,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289535,6 +289553,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004503] = {
           Content = "我正在学习演奏这台管道琴。",
+          ContentFR = "J’apprends à jouer de cet orgue de tuyaux.",
           DialogueId = 72004503,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289569,6 +289588,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004602] = {
           Content = "咿呀，恭喜你发现了我的秘密基地~",
+          ContentFR = "<I>Yiiiip !</> Félicitations, tu as découvert ma base secrète~",
           DialogueId = 72004602,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -289579,6 +289599,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72004603] = {
           Content = "藤蔓、水草、池塘和我，是一个小小生态圈。",
+          ContentFR = "Les lianes, les plantes aquatiques, l’étang et moi, on forme un tout petit écosystème.",
           DialogueId = 72004603,
           FacialId = {
             [1] = "820000:PetPan_Common"
@@ -354710,7 +354731,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [510051113] = {
           Content = "哪儿搞的！带我一个！",
-          ContentFR = "<I>Où as‑tu trouvé ça ? Je veux voir !</>",
+          ContentFR = "<I>Où as-tu trouvé ça ? Je veux voir !</>",
           DialogueId = 510051113,
           GUID = "510051113",
           ImprPlusId = 1005,

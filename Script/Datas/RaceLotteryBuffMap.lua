@@ -6,6 +6,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("RaceLotteryBuffMap", {
   [1001] = {
+    BannedWhenValueHigherThan = 1.4,
     BuffMap = "+",
     MaxStake = "BuffText_1001",
     PValueEffect = 1.05,
@@ -13,6 +14,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 1001
   },
   [1002] = {
+    BannedWhenValueHigherThan = 1.33,
     BuffMap = "+",
     MaxStake = "BuffText_1002",
     PValueEffect = 1.1,
@@ -20,6 +22,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 1002
   },
   [1003] = {
+    BannedWhenValueHigherThan = 1.26,
     BuffMap = "+",
     MaxStake = "BuffText_1003",
     PValueEffect = 1.15,
@@ -27,7 +30,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 1003
   },
   [1004] = {
-    BannedWhenValueHigherThan = 3,
+    BannedWhenValueHigherThan = 1.19,
     BuffMap = "++",
     MaxStake = "BuffText_1004",
     PValueEffect = 1.2,
@@ -35,7 +38,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 1004
   },
   [1005] = {
-    BannedWhenValueHigherThan = 2,
+    BannedWhenValueHigherThan = 1.12,
     BuffMap = "++",
     MaxStake = "BuffText_1005",
     PValueEffect = 1.3,
@@ -43,7 +46,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 1005
   },
   [1006] = {
-    BannedWhenValueHigherThan = 2.5,
+    BannedWhenValueHigherThan = 1.05,
     BuffMap = "+++",
     MaxStake = "BuffText_1006",
     PValueEffect = 2,
@@ -51,6 +54,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 1006
   },
   [2001] = {
+    BannedWhenValueLowerThan = 0.6,
     BuffMap = "-",
     MaxStake = "BuffText_2001",
     PValueEffect = 0.95,
@@ -58,6 +62,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 2001
   },
   [2002] = {
+    BannedWhenValueLowerThan = 0.67,
     BuffMap = "-",
     MaxStake = "BuffText_2002",
     PValueEffect = 0.91,
@@ -65,6 +70,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 2002
   },
   [2003] = {
+    BannedWhenValueLowerThan = 0.74,
     BuffMap = "-",
     MaxStake = "BuffText_2003",
     PValueEffect = 0.87,
@@ -72,7 +78,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 2003
   },
   [2004] = {
-    BannedWhenValueLowerThan = 0.3,
+    BannedWhenValueLowerThan = 0.81,
     BuffMap = "--",
     MaxStake = "BuffText_2004",
     PValueEffect = 0.83,
@@ -80,7 +86,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 2004
   },
   [2005] = {
-    BannedWhenValueLowerThan = 0.5,
+    BannedWhenValueLowerThan = 0.88,
     BuffMap = "--",
     MaxStake = "BuffText_2005",
     PValueEffect = 0.77,
@@ -88,7 +94,7 @@ return ReadOnly("RaceLotteryBuffMap", {
     RumorId = 2005
   },
   [2006] = {
-    BannedWhenValueLowerThan = 0.4,
+    BannedWhenValueLowerThan = 0.95,
     BuffMap = "---",
     MaxStake = "BuffText_2006",
     PValueEffect = 0.5,

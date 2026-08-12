@@ -20,6 +20,7 @@ function M:Init(Params)
   self.PreviewLevelActorReceiver = nil
   self.bPreviewSceneLoaded = false
   self.IsPreviewSceneLoading = false
+  self.bPendingLightingUpdate = false
   self.SceneCoroutineMap = {}
   self.SceneCoroutineArray = {}
 end
@@ -382,6 +383,7 @@ function M:UnloadScene()
   local PreviewLevelName = self.PreviewLevelName or self:GetPreviewLevelName()
   DebugPrint(string.format("PreviewSceneService: UnloadScene begin level=%s", tostring(PreviewLevelName)))
   self.bPreviewSceneLoaded = false
+  self.bPendingLightingUpdate = false
   DecreasePreviewSceneRefCount(PreviewLevelName)
   if IsPreviewSceneHasRef(PreviewLevelName) then
     DebugPrint(string.format("PreviewSceneService: UnloadScene keepLoaded level=%s refStillExists=true", tostring(PreviewLevelName)))
@@ -432,6 +434,20 @@ function M:GetEnvirSystemActor()
   end
   local EnvirSystemActor = PreviewLevelActor and PreviewLevelActor.GetEnvirSystemActor and PreviewLevelActor:GetEnvirSystemActor()
   return EnvirSystemActor
+end
+
+function M:IsLightingTargetReady()
+  if not self.bPreviewSceneLoaded or not self.ArmoryHelper then
+    return false
+  end
+  local PreviewLevelActor = self.ArmoryHelper:GetPreviewLevelActor()
+  if not PreviewLevelActor then
+    return false
+  end
+  if PreviewLevelActor.GetGroundActor then
+    return PreviewLevelActor:GetGroundActor() ~= nil
+  end
+  return true
 end
 
 function M:WaitForPreviewSceneLoadFinished()
@@ -538,13 +554,17 @@ function M:DelayUpdateLighting()
 end
 
 function M:NotifyHelperUpdateLighting()
-  if self.ArmoryHelper then
-    self.ArmoryHelper.SkyBoxIndex = self.SkyBoxIndex or 0
-    self.ArmoryHelper:UpdateDirLight(true)
-    if self.bPreviewSceneLoaded then
-      self.ArmoryHelper:UpdateLighting()
-    end
+  if not self.ArmoryHelper then
+    return
   end
+  if not self:IsLightingTargetReady() then
+    self.bPendingLightingUpdate = true
+    return
+  end
+  self.bPendingLightingUpdate = false
+  self.ArmoryHelper.SkyBoxIndex = self.SkyBoxIndex or 0
+  self.ArmoryHelper:UpdateDirLight(true)
+  self.ArmoryHelper:UpdateLighting()
 end
 
 function M:RefreshUIArtNiagara()
@@ -594,6 +614,10 @@ function M:OnPreviewSceneLoaded()
   self.IsPreviewSceneLoading = false
   self:DoDeferredSceneBehavior()
   self:RefreshUIArtNiagara()
+  if self.bPendingLightingUpdate then
+    self.ArmoryHelper:RemoveTimer("DelayUpdateSceneLighting")
+    self:NotifyHelperUpdateLighting()
+  end
 end
 
 function M:Dispose()
